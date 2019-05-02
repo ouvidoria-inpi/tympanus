@@ -1,14 +1,14 @@
 {
-    "about": "about.html",
-    "developer": {
-        "aba1": "aba1.html",
-        "aba2": "aba2.html",
-        "aba3": "aba3.html",
-        "aba4": "aba4.html"
-    },
-    "designer": {
-        "aba1": "abad1.html",
-        "aba2": "abad2.html",
-        "aba3": "abad3.html"
-    }
+  "about": "about.html",
+  "developer": {
+    "Aba 1 Dev": "aba1.html",
+    "Aba 2 Dev": "Aba2.html",
+    "Aba 3 Dev": "Aba3.html",
+    "Aba 4 Dev": "aba4.html"
+  },
+  "designer": {
+    "Aba 1 Designer": "abad1.html",
+    "Aba 2 Designer": "abad2.html",
+    "Aba 3 Designer": "abad3.html"
+  }
 }
