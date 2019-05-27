@@ -1,0 +1,18 @@
+{
+  "name": "componentes.gov.br",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ng": "ng",
+    "watch-scss": "node-sass --watch **/* -o **/*",
+    "build-scss": "node-sass -r componentes -o componentes",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1"
+  }
+}
