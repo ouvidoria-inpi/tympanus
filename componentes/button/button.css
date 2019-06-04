@@ -36,16 +36,16 @@
 }
 
 .br-btn-primary:focus, .br-btn-primary.focus {
-  outline: none;
-  -webkit-box-shadow: 0 3px 6px -3px #1351b4;
-          box-shadow: 0 3px 6px -3px #1351b4;
+  outline: none !important;
+  -webkit-box-shadow: 0 3px 6px -3px #1351b4 !important;
+          box-shadow: 0 3px 6px -3px #1351b4 !important;
 }
 
 .br-btn-primary:hover, .br-btn-primary.hover {
-  background: #2b74e9;
-  border-color: #2b74e9;
-  color: #fff;
-  text-decoration: none;
+  background: #2b74e9 !important;
+  border-color: #2b74e9 !important;
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 .br-btn-primary:disabled, .br-btn-primary.disabled {
@@ -78,16 +78,16 @@
 }
 
 .br-btn-secondary:focus, .br-btn-secondary.focus {
-  outline: none;
-  -webkit-box-shadow: 0 3px 6px -3px #1351b4;
-          box-shadow: 0 3px 6px -3px #1351b4;
+  outline: none !important;
+  -webkit-box-shadow: 0 3px 6px -3px #1351b4 !important;
+          box-shadow: 0 3px 6px -3px #1351b4 !important;
 }
 
 .br-btn-secondary:hover, .br-btn-secondary.hover {
-  background: #2b74e9;
-  border-color: #2b74e9;
-  color: #fff;
-  text-decoration: none;
+  background: #2b74e9 !important;
+  border-color: #2b74e9 !important;
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 .br-btn-secondary:disabled, .br-btn-secondary.disabled {
@@ -107,12 +107,12 @@
 }
 
 .br-btn-tertiary:focus, .br-btn-tertiary.focus {
-  outline: none;
-  text-shadow: 0 3px 6px currentColor;
+  outline: none !important;
+  text-shadow: 0 3px 6px currentColor !important;
 }
 
 .br-btn-tertiary:hover, .br-btn-tertiary.hover {
-  color: #2b74e9;
+  color: #2b74e9 !important;
 }
 
 .br-btn-tertiary:disabled, .br-btn-tertiary.disabled {
@@ -129,12 +129,12 @@
 }
 
 .br-btn-cancel:focus, .br-btn-cancel.focus {
-  outline: none;
-  text-shadow: 0 3px 6px currentColor;
+  outline: none !important;
+  text-shadow: 0 3px 6px currentColor !important;
 }
 
 .br-btn-cancel:hover, .br-btn-cancel.hover {
-  color: #2b74e9;
+  color: #2b74e9 !important;
 }
 
 .br-btn-cancel:disabled, .br-btn-cancel.disabled {

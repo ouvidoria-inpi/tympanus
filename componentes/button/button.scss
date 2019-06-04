@@ -51,15 +51,15 @@ $btn-disabled: gov-color(gray, 3);
     }
     &:focus,
     &.focus {
-      outline: none;
-      box-shadow: 0 3px 6px -3px $btn-active;
+      outline: none !important;
+      box-shadow: 0 3px 6px -3px $btn-active !important;
     }
     &:hover,
     &.hover {
-      background: $btn-hover;
-      border-color: $btn-hover;
-      color: $btn-color;
-      text-decoration: none;
+      background: $btn-hover !important;;
+      border-color: $btn-hover !important;
+      color: $btn-color !important;
+      text-decoration: none !important;
     }
     &:disabled,
     &.disabled {
@@ -81,12 +81,12 @@ $btn-disabled: gov-color(gray, 3);
     text-decoration: underline;
     &:focus,
     &.focus {
-      outline: none;
-      text-shadow: 0 3px 6px currentColor;
+      outline: none !important;
+      text-shadow: 0 3px 6px currentColor !important;
     }
     &:hover,
     &.hover {
-      color: $btn-hover;
+      color: $btn-hover !important;
     }
     &:disabled,
     &.disabled {
