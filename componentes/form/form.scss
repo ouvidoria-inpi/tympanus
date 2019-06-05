@@ -6,6 +6,7 @@
 
 // Aplicar usando prefixo
 .#{$prefix}form {
+  font-family: $form-font-family;
   // Agrupador de controles
   .field {
     margin: $field-margin;

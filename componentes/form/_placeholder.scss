@@ -1,0 +1,9 @@
+// Definições
+$placeholder-font-size: 13px;
+$placeholder-font-style: italic;
+
+// Estilo base
+%placeholder {
+  font-size: $placeholder-font-size;
+  font-style: $placeholder-font-style;
+}

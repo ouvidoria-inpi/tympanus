@@ -1,0 +1,128 @@
+// Definições
+$check-font-size: 14px;
+$check-font-weight: 500;
+$check-size: 20px;
+$check-padding: $spacer;
+$check-vertical-align: top;
+$check-radius: 4px;
+$check-border-size: 1px;
+$check-border-color: #888;
+$check-checked: $form-active;
+$check-hover: rgba($form-active, 0.45);
+$check-hover-size: 4px;
+$check-invalid: $form-invalid;
+$check-disabled: $form-disabled;
+
+// Com hover
+%check-hover {
+  box-shadow: inset 0 0 0 $check-border-size $check-border-color, 0 0 0 ($check-hover-size) $check-hover;
+}
+
+// Com focus
+%check-focus {
+  outline: 1px dotted currentColor;
+  outline-offset: 4px;
+}
+
+// Checado
+%check-checked {
+  background: $check-checked;
+}
+
+// Invalid
+%check-invalid {
+  box-shadow: inset 0 0 0 $check-border-size $check-invalid, 0 0 0 $check-border-size $check-invalid;
+}
+
+// Desabilitado
+%check-disabled {
+  background: $check-disabled;
+  box-shadow: inset 0 0 0 $check-border-size $check-border-color;
+}
+
+// Estilo base
+@mixin check($type) {
+  // Aplicar usando prefixo
+  .#{$prefix}checkbox {
+    display: inline-block;
+    position: relative;
+    // Remover o checkbox padrão do navegador
+    input[type="#{$type}"] {
+      position: absolute;
+      opacity: 0;
+      // Texto do label
+      & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0 0 0 ($check-size + $check-padding);
+        font-size: $check-font-size;
+        font-weight: $check-font-weight;
+      }
+      // Estilo do componente
+      & + label:before {
+        content: "";
+        margin-right: $check-padding;
+        margin-left: -($check-size + $check-padding);
+        display: inline-block;
+        vertical-align: $check-vertical-align;
+        width: $check-size;
+        height: $check-size;
+        background: transparent;
+        box-shadow: inset 0 0 0 $check-border-size $check-border-color;
+        @if ($type == radio) {
+          border-radius: 50%;
+        } @else {
+          border-radius: $check-radius;
+        }
+      }
+      // Estados
+      &:hover + label:before {
+        @extend %check-hover;
+      }
+      &:focus + label {
+        @extend %check-focus;
+      }
+      &:checked + label:before {
+        @extend %check-checked;
+        @if ($type == radio) {
+          box-shadow: inset 0 0 0 $spacer-half gov-color(white), 0 0 0 $check-border-size $check-checked;
+        } @else {
+          box-shadow: inset 0 0 0 $check-border-size $check-checked;
+        }
+      }
+      &:invalid + label:before {
+        @extend %check-invalid;
+      }
+      &:invalid + label {
+        color: $check-invalid;
+      }
+      &:disabled + label:before {
+        @extend %check-disabled;
+      }
+    }
+    // Estados
+    &.hover input[type="#{$type}"] + label:before {
+      @extend %check-hover;
+    }
+    &.focus input[type="#{$type}"] + label {
+      @extend %check-focus;
+    }
+    &.checked input[type="#{$type}"] + label:before {
+      @extend %check-checked;
+      @if ($type == radio) {
+        box-shadow: inset 0 0 0 $spacer-half gov-color(white), 0 0 0 $check-border-size $check-checked;
+      } @else {
+        box-shadow: inset 0 0 0 $check-border-size $check-checked;
+      }
+    }
+    &.invalid input[type="#{$type}"] + label:before {
+      @extend %check-invalid;
+    }
+    &.invalid input[type="#{$type}"] + label {
+      color: $check-invalid;
+    }
+    &.disabled input[type="#{$type}"] + label:before {
+      @extend %check-disabled;
+    }
+  }
+}

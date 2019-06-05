@@ -1,3 +1,10 @@
+.br-form .field label {
+  color: #555;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
 .br-form .field input {
   background: #fff;
   border: 1px solid #888;
@@ -54,12 +61,8 @@
   font-style: italic;
 }
 
-.br-form .field label {
-  color: #555;
+.br-form {
   font-family: "rawline", "raleway", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 4px;
 }
 
 .br-form .field {

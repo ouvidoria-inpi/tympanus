@@ -1,0 +1,23 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base.scss";
+
+// Carregar as dependências
+@import "../form/form-base";
+
+@include check(checkbox);
+@include check(radio);
+
+// Item checado
+input[type="checkbox"] {
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: $check-font-size / 2;
+    top: $check-font-size / 5;
+    border: solid gov-color(white);
+    border-width: 0 2px 2px 0;
+    width: $check-font-size / 2;
+    height: $check-font-size / 1.25;
+    transform: rotate(45deg);
+  }
+}

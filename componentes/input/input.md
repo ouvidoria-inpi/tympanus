@@ -41,8 +41,8 @@ Repare que ao usar o container a classe `br-input` não é necessária, pois o c
 O input pode assumir novos estados. A lista de estados disponíveis é a seguinte:
 
 - focus
-- valid,
-- invalid,
+- valid
+- invalid
 - disabled
 
 Os estados também podem ser aplicados por classe. Exemplo:
