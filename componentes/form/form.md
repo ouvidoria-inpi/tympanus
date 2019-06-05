@@ -74,9 +74,9 @@ Os botões de ação do formulário devem ficar dentro da classe `actions`.
 ```html
 <div class="br-form">
   <div class="actions">
-    <button class="br-btn br-btn-primary">Ação principal</button>
-    <button class="br-btn br-btn-secondary">Ação secundária</button>
-    <button class="br-btn br-btn-cancel">Cancelar</button>
+    <button class="br-btn btn-primary">Ação principal</button>
+    <button class="br-btn btn-secondary">Ação secundária</button>
+    <button class="br-btn btn-cancel">Cancelar</button>
   </div>
 </div>
 ```

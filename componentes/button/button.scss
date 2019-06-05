@@ -34,64 +34,68 @@ $btn-disabled: gov-color(gray, 3);
 
 // Estilo do botão pílula
 @mixin btn-pill($type, $color, $background) {
-  .#{$prefix}btn-#{$type} {
-    background: $color;
-    color: $background;
-    border: $btn-border-width $btn-border-style $btn-active;
-    border-radius: $btn-radius;
-    font-size: $btn-font-size;
-    padding: $btn-padding;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    @include media-breakpoint-up(sm) {
-      min-width: 144px;
-      max-width: 100%;
-      width: auto;
-    }
-    &:focus,
-    &.focus {
-      outline: none !important;
-      box-shadow: 0 3px 6px -3px $btn-active !important;
-    }
-    &:hover,
-    &.hover {
-      background: $btn-hover !important;;
-      border-color: $btn-hover !important;
-      color: $btn-color !important;
-      text-decoration: none !important;
-    }
-    &:disabled,
-    &.disabled {
-      background: $btn-disabled !important;
-      color: $btn-color !important;
-      border-color: $btn-disabled !important;
-      box-shadow: none !important;
+  .#{$prefix}btn {
+    &.btn-#{$type} {
+      background: $color;
+      color: $background;
+      border: $btn-border-width $btn-border-style $btn-active;
+      border-radius: $btn-radius;
+      font-size: $btn-font-size;
+      padding: $btn-padding;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      @include media-breakpoint-up(sm) {
+        min-width: 144px;
+        max-width: 100%;
+        width: auto;
+      }
+      &:focus,
+      &.focus {
+        outline: none !important;
+        box-shadow: 0 3px 6px -3px $btn-active !important;
+      }
+      &:hover,
+      &.hover {
+        background: $btn-hover !important;;
+        border-color: $btn-hover !important;
+        color: $btn-color !important;
+        text-decoration: none !important;
+      }
+      &:disabled,
+      &.disabled {
+        background: $btn-disabled !important;
+        color: $btn-color !important;
+        border-color: $btn-disabled !important;
+        box-shadow: none !important;
+      }
     }
   }
 }
 
 // Estilo do botão link
 @mixin btn-link($type, $color) {
-  .#{$prefix}btn-#{$type} {
-    background: transparent;
-    border: 0;
-    color: $color;
-    padding: 0;
-    text-decoration: underline;
-    &:focus,
-    &.focus {
-      outline: none !important;
-      text-shadow: 0 3px 6px currentColor !important;
-    }
-    &:hover,
-    &.hover {
-      color: $btn-hover !important;
-    }
-    &:disabled,
-    &.disabled {
-      color: $btn-disabled !important;
-      text-shadow: none !important;
+  .#{$prefix}btn {
+    &.btn-#{$type} {
+      background: transparent;
+      border: 0;
+      color: $color;
+      padding: 0;
+      text-decoration: underline;
+      &:focus,
+      &.focus {
+        outline: none !important;
+        text-shadow: 0 3px 6px currentColor !important;
+      }
+      &:hover,
+      &.hover {
+        color: $btn-hover !important;
+      }
+      &:disabled,
+      &.disabled {
+        color: $btn-disabled !important;
+        text-shadow: none !important;
+      }
     }
   }
 }

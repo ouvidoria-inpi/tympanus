@@ -23,15 +23,15 @@ Cor no botão sinaliza uma chamada à ação, por isso o botão **Cancelar** pos
 
 O botão do DS-Gov pode ser usado em tags de `<button>` ou `<a>`. São necessárias 2 classes para uso:
 - `br-btn`: necessário para a formatação padrão do componente;
-- `br-btn-[tipo]`: necessário para formatar de forma específica o botão. Os tipos disponíveis são `primary`, `secondary`, `tertiary` ou `cancel`.
+- `btn-[tipo]`: necessário para formatar de forma específica o botão. Os tipos disponíveis são `primary`, `secondary`, `tertiary` ou `cancel`.
 
 ## Exemplos de uso
 
 ```html
-<button class="br-btn br-btn-primary">Entrar</button>
-<button class="br-btn br-btn-secondary">Cadastrar</button>
-<button class="br-btn br-btn-tertiary">Adicionar</button>
-<button class="br-btn br-btn-cancel">Cancelar</button>
+<button class="br-btn btn-primary">Entrar</button>
+<button class="br-btn btn-secondary">Cadastrar</button>
+<button class="br-btn btn-tertiary">Adicionar</button>
+<button class="br-btn btn-cancel">Cancelar</button>
 ```
 
 ## Regras especiais dos botões
