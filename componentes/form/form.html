@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>form</title>
   <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="../button/button.css">
   <link rel="stylesheet" href="form.css">
 </head>
@@ -18,15 +20,23 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="field">
-            <label for="item-2">label</label>
+          <div class="field invalid">
+            <label for="item-2">Com erro</label>
             <input id="item-2" type="text" placeholder="Insira um texto">
+            <div class="feedback">
+              <i class="fas fa-times"></i>
+              <span class="message">Texto inválido</span>
+            </div>
           </div>
         </div>
         <div class="col">
-          <div class="field">
-            <label for="item-3">label</label>
+          <div class="field valid">
+            <label for="item-3">Validado</label>
             <input id="item-3" type="text" placeholder="Insira um texto">
+            <div class="feedback">
+              <i class="fas fa-check"></i>
+              <span class="message">Texto válido</span>
+            </div>
           </div>
         </div>
       </div>

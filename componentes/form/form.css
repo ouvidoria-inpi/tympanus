@@ -66,6 +66,12 @@
   margin: 0 0 32px;
 }
 
+.br-form .field .feedback {
+  font-size: 12px;
+  font-style: italic;
+  padding: 4px;
+}
+
 .br-form .field.focus input {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
@@ -78,10 +84,18 @@
           box-shadow: 0 0 0 1px #168821;
 }
 
+.br-form .field.valid .feedback {
+  color: #168821;
+}
+
 .br-form .field.invalid input {
   border-color: #f33;
   -webkit-box-shadow: 0 0 0 1px #f33;
           box-shadow: 0 0 0 1px #f33;
+}
+
+.br-form .field.invalid .feedback {
+  color: #f33;
 }
 
 .br-form .field.disabled input {

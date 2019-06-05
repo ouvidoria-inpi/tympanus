@@ -45,6 +45,28 @@ Use a Grid para separar `field` de uma mesma linha. Exemplo:
 </div>
 ```
 
+## Validações em fields
+
+Aplique as classes de validações diretamente em cada `field`. A mensagem de retorno para o usuário possue um template próprio e deve ser inserido logo após o `input`. Veja no exemplo a seguir.
+
+```html
+<div class="field invalid">
+  <label for="item-2">Com erro</label>
+  <input id="item-2" type="text" placeholder="Insira um texto">
+  <div class="feedback">
+    <i class="fas fa-times"></i>
+    <span class="message">Texto inválido</span>
+  </div>
+</div>
+```
+
+Para os ícones use a família de ícones Fontawesome - [https://fontawesome.com/](https://fontawesome.com/)
+
+Algumas convenções de ícones:
+
+- Retorno negativo: `fas fa-times`
+- Retorno positivo: `fas fa-check`
+
 ## Uso de actions
 
 Os botões de ação do formulário devem ficar dentro da classe `actions`.

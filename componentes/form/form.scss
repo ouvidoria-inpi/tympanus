@@ -17,22 +17,42 @@
     input {
       @extend %input;
     }
+    // Mensagem de retorno
+    .feedback {
+      font-size: $feedback-font-size;
+      font-style: $feedback-font-style;
+      padding: $feedback-padding;
+    }
     // Estados
-    &.focus input {
-      border-color: $input-bg-focus;
-      box-shadow: 0 0 0 1px $input-bg-focus;
+    &.focus {
+      input {
+        border-color: $input-bg-focus;
+        box-shadow: 0 0 0 1px $input-bg-focus;
+      }
     }
-    &.valid input {
-      border-color: $input-bg-valid;
-      box-shadow: 0 0 0 1px $input-bg-valid;
+    &.valid {
+      input {
+        border-color: $input-bg-valid;
+        box-shadow: 0 0 0 1px $input-bg-valid;
+      }
+      .feedback {
+        color: $input-bg-valid;
+      }
     }
-    &.invalid input {
-      border-color: $input-bg-invalid;
-      box-shadow: 0 0 0 1px $input-bg-invalid;
+    &.invalid {
+      input {
+        border-color: $input-bg-invalid;
+        box-shadow: 0 0 0 1px $input-bg-invalid;
+      }
+      .feedback {
+        color: $input-bg-invalid;
+      }
     }
-    &.disabled input {
-      background: $input-bg-disabled;
-      color: $input-color-disabled;
+    &.disabled {
+      input {
+        background: $input-bg-disabled;
+        color: $input-color-disabled;
+      }
     }
   }
   // Agrupador de botões
