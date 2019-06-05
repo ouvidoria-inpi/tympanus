@@ -1,0 +1,90 @@
+.br-input-action input {
+  background: #fff;
+  border: 1px solid #888;
+  border-radius: 6px;
+  color: #555;
+  display: block;
+  font-family: "rawline", "raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.br-input-action input:focus, .br-input-action input.focus {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+          box-shadow: 0 0 0 1px #2b74e9;
+}
+
+.br-input-action input.valid {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
+}
+
+.br-input-action input:invalid, .br-input-action input.invalid {
+  border-color: #f33;
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+}
+
+.br-input-action input:disabled, .br-input-action input.disabled {
+  background: #EDEDED;
+  color: #888;
+}
+
+.br-input-action ::-webkit-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input-action :-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input-action ::-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input-action ::placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input-action {
+  position: relative;
+}
+
+.br-input-action input:first-child {
+  padding-right: 48px;
+}
+
+.br-input-action input:last-child {
+  padding-left: 48px;
+}
+
+.br-input-action .action {
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  margin: 0 16px;
+  min-width: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: auto;
+}
+
+.br-input-action .action:first-child {
+  left: 0;
+}
+
+.br-input-action .action:last-child {
+  right: 0;
+}
+/*# sourceMappingURL=input-action.css.map */

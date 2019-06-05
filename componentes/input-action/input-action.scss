@@ -1,0 +1,44 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base.scss";
+
+// Carregar as dependências
+@import "../form/form-base";
+
+$action-padding: $spacer * 2;
+$action-margin: $spacer * 6;
+
+// Aplicar usando prefixo
+.#{$prefix}input-action {
+  position: relative;
+  input {
+    @extend %input;
+    &:first-child {
+      padding-right: $action-margin;
+    }
+    &:last-child {
+      padding-left: $action-margin;
+    }
+  }
+  .action {
+    background: transparent;
+    border: 0;
+    font-size: $input-font-size;
+    margin: 0 $action-padding;
+    min-width: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: auto;
+    &:first-child {
+      left: 0;
+    }
+    &:last-child {
+      right: 0;
+    }
+  }
+
+  ::placeholder {
+    @extend %placeholder;
+  }
+}
