@@ -1,0 +1,207 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base.scss";
+
+// Carregar componentes do DS-Gov
+@import "../../componentes/button/button.scss";
+
+// Background da página
+.page-background {
+  @include media-breakpoint-up(sm) {
+    background: linear-gradient(to right, gov-color(light) 50%,gov-color(white) 50%);
+  }
+}
+
+// Navegação principal
+$navigation-font-size: 17px;
+.page-navigation {
+  a {
+    font-size: $navigation-font-size;
+  }
+}
+
+// Tabs
+.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tab-item {
+  display: flex;
+  border-bottom: 1px solid gov-color(gray,4);
+  flex-direction: column;
+  padding: 0 ($spacer * 4);
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    padding: 0 ($spacer * 4);
+  }
+  &.is-active {
+    font-weight: 700;
+    .tab-name {
+      color: gov-color(primary);
+      box-shadow: inset 0 -4px 0 0 gov-color(primary);
+    }
+  }
+}
+.tab-link {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+.tab-icon {
+  align-self: center;
+  margin-top: $spacer * 4;
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+  & + .tab-name {
+    padding-top: $spacer;
+    @include media-breakpoint-up(lg) {
+      margin-left: ($spacer * 2);
+      margin-top: 0;
+      padding-top: $spacer * 4;
+    }
+  }
+}
+.tab-name {
+  color: gov-color(dark);
+  flex: 1;
+  padding: ($spacer * 4) 0;
+  @include media-breakpoint-up(lg) {
+    margin-left: 32px + ($spacer * 2);
+  }
+}
+
+// Navs
+.nav {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+// Acessibilidade
+.accessibility {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  justify-content: end;
+  li:not(:last-child) {
+    margin-right: $spacer * 3;
+  }
+  a {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    color: gov-color(dark);
+  }
+  img {
+    @include media-breakpoint-up(sm) {
+      max-width: 16px;
+    }
+  }
+}
+
+// Logo
+.logo {
+  &-image {
+    flex-shrink: 0;
+  }
+}
+
+// Descrição da página
+.nav-description {
+  text-align: right;
+}
+
+// Cabeçalho do conteúdo principal
+$content-title-color: gov-color(primary);
+$content-title-font-size: 20px;
+$content-title-font-weight: 500;
+$content-title-sm-font-size: 32px;
+.content-title {
+  color: $content-title-color;
+  font-size: $content-title-font-size;
+  font-weight: $content-title-font-weight;
+  margin-bottom: 0;
+  @include media-breakpoint-up(sm) {
+    font-size: $content-title-sm-font-size;
+  }
+}
+
+// Esqueceu a senha
+$forgot-password: 12px;
+.forgot-password {
+  font-size: $forgot-password;
+}
+
+// Conteúdo de midia
+.media {
+  display: flex;
+  align-items: center;
+  &-left {
+    & + .media-content {
+      margin-left: $spacer;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    & + .media-right {
+      margin-left: $spacer;
+    }
+  }
+}
+
+// Navegação para smartphones
+.content-navigation a {
+  // font-size: 10px;
+  text-decoration: none;
+  color: gov-color(dark);
+}
+
+// Divisores de conteúdo
+$hr-font-size: 13px;
+.hr-horizontal {
+  border-bottom: 1px solid gov-color(gray, 3);
+  display: flex;
+  justify-content: center;
+  margin: 0 0 ($spacer * 3);
+  text-transform: uppercase;
+  @include media-breakpoint-up(sm) {
+    text-transform: none;
+  }
+  .hr-text {
+    background: gov-color(white);
+    font-size: $hr-font-size;
+    padding: 0 ($spacer * 2);
+    position: relative;
+    top: 0.75em;
+    + .hr-text {
+      padding-left: 0;
+      margin-left: -0.75em;
+    }
+  }
+}
+.hr-vertical {
+  border-right: 1px solid gov-color(gray, 3);
+}
+
+// Login com redes sociais
+.login-social-network {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  img {
+    max-width: 28px;
+    @include media-breakpoint-up(sm) {
+      max-width: 100%;
+    }
+  }
+}
