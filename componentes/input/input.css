@@ -5,6 +5,7 @@
   color: #555;
   display: block;
   font-family: "rawline", "raleway", sans-serif;
+  font-size: 16px;
   font-weight: 600;
   padding: 8px 16px;
   width: 100%;
@@ -31,5 +32,25 @@
 .br-input:disabled, .disabled.br-input {
   background: #EDEDED;
   color: #888;
+}
+
+.br-input::-webkit-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input:-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input::-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input::placeholder {
+  font-size: 13px;
+  font-style: italic;
 }
 /*# sourceMappingURL=input.css.map */

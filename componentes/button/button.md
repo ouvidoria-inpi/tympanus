@@ -51,3 +51,5 @@ Os 3 estados também podem ser aplicados por classe. Exemplo:
 ```html
 <button class="br-btn br-btn-secondary hover">Cadastrar</button>
 ```
+
+Caso os botões estejam declarados dentro de um `field` do formulário do DS-Gov o ordenamento pode variar. Veja a documentação de formulários para mais detalhes.

@@ -7,4 +7,8 @@
 // Aplicar usando prefixo
 .#{$prefix}input {
   @extend %input;
+
+  &::placeholder {
+    @extend %placeholder;
+  }
 }

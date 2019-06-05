@@ -1,0 +1,55 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base.scss";
+
+// Carregar as dependências
+@import "form-base";
+
+// Aplicar usando prefixo
+.#{$prefix}form {
+  // Agrupador de controles
+  .field {
+    margin: $field-margin;
+    // Labels
+    label {
+      @extend %label;
+    }
+    // Inputs
+    input {
+      @extend %input;
+    }
+    // Estados
+    &.focus input {
+      border-color: $input-bg-focus;
+      box-shadow: 0 0 0 1px $input-bg-focus;
+    }
+    &.valid input {
+      border-color: $input-bg-valid;
+      box-shadow: 0 0 0 1px $input-bg-valid;
+    }
+    &.invalid input {
+      border-color: $input-bg-invalid;
+      box-shadow: 0 0 0 1px $input-bg-invalid;
+    }
+    &.disabled input {
+      background: $input-bg-disabled;
+      color: $input-color-disabled;
+    }
+  }
+  // Agrupador de botões
+  .actions {
+    margin: $field-margin;
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      .#{$prefix}btn + .#{$prefix}btn {
+        margin-left: 0;
+        margin-right: $spacer * 3;
+      }
+    }
+  }
+
+  ::placeholder {
+    @extend %placeholder;
+  }
+}

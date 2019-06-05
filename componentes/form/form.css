@@ -1,0 +1,114 @@
+.br-form .field input {
+  background: #fff;
+  border: 1px solid #888;
+  border-radius: 6px;
+  color: #555;
+  display: block;
+  font-family: "rawline", "raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.br-form .field input:focus, .br-form .field input.focus {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+          box-shadow: 0 0 0 1px #2b74e9;
+}
+
+.br-form .field input.valid {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
+}
+
+.br-form .field input:invalid, .br-form .field input.invalid {
+  border-color: #f33;
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+}
+
+.br-form .field input:disabled, .br-form .field input.disabled {
+  background: #EDEDED;
+  color: #888;
+}
+
+.br-form ::-webkit-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-form :-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-form ::-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-form ::placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-form .field label {
+  color: #555;
+  font-family: "rawline", "raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.br-form .field {
+  margin: 0 0 32px;
+}
+
+.br-form .field.focus input {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+          box-shadow: 0 0 0 1px #2b74e9;
+}
+
+.br-form .field.valid input {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
+}
+
+.br-form .field.invalid input {
+  border-color: #f33;
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+}
+
+.br-form .field.disabled input {
+  background: #EDEDED;
+  color: #888;
+}
+
+.br-form .actions {
+  margin: 0 0 32px;
+}
+
+@media (min-width: 576px) {
+  .br-form .actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .br-form .actions .br-btn + .br-btn {
+    margin-left: 0;
+    margin-right: 24px;
+  }
+}
+/*# sourceMappingURL=form.css.map */
