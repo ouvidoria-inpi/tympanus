@@ -1,0 +1,10 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base.scss";
+
+// Carregar as dependências
+@import "../form/form-base";
+
+// Aplicar usando prefixo
+.#{$prefix}input {
+  @extend %input;
+}

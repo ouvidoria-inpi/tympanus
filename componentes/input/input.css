@@ -1,0 +1,35 @@
+.br-input {
+  background: #fff;
+  border: 1px solid #888;
+  border-radius: 6px;
+  color: #555;
+  display: block;
+  font-family: "rawline", "raleway", sans-serif;
+  font-weight: 600;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.br-input:focus, .focus.br-input {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+          box-shadow: 0 0 0 1px #2b74e9;
+}
+
+.valid.br-input {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
+}
+
+.br-input:invalid, .invalid.br-input {
+  border-color: #f33;
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+}
+
+.br-input:disabled, .disabled.br-input {
+  background: #EDEDED;
+  color: #888;
+}
+/*# sourceMappingURL=input.css.map */
