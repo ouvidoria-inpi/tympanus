@@ -20,6 +20,7 @@ $btn-disabled: gov-color(gray, 3);
 .#{$prefix}btn {
   display: inline-block;
   font-family: $rawline, sans-serif;
+  font-weight: $btn-font-weight;
   & + & {
     margin-top: $spacer * 2;
   }
@@ -39,7 +40,6 @@ $btn-disabled: gov-color(gray, 3);
     border: $btn-border-width $btn-border-style $btn-active;
     border-radius: $btn-radius;
     font-size: $btn-font-size;
-    font-weight: $btn-font-weight;
     padding: $btn-padding;
     text-align: center;
     text-decoration: none;
