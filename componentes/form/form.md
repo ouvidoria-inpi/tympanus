@@ -1,12 +1,12 @@
 ## Formulários (form)
 
-Os forms do DS-Gov formatam seus componentes internos no padrão de forma automática.
+Para usar os componentes comuns de formulários no DS-Gov use a classe `br-form`.
 
-Alguns dos componentes isolados de formulário podem ser usados fora do container `br-form`.
+Para cada entrada de informação do usuário use a classe `field`.
 
-Recomendamos o uso de `field` para agrupar campos de informações em formularios e `action` para agrupar os botões de ação do formulário.
+Ao final do formulário use a classe `action` para agrupar os botões de ações.
 
-Veja os exemplos a seguir.
+Veja como usar `field` e `action` nos exemplos a seguir.
 
 ## Uso de field
 
@@ -21,7 +21,7 @@ Use sempre a classe `field` para agrupar labels e inputs.
 </div>
 ```
 
-Use a Grid para separar `field` de uma mesma linha. Exemplo:
+Use a Grid para separar `field` numa mesma linha. Exemplo:
 
 ```html
 <div class="br-form">
@@ -81,8 +81,8 @@ Os botões de ação do formulário devem ficar dentro da classe `actions`.
 </div>
 ```
 
-O agrupador `actions` possui uma regra especial. Para _smartphones_ os botões, além de ocuparem toda a largura disponível, seguem o ordenamento normal. Para outros dispositivos com larguras maiores o ordenamento dos botões é invertido.
+O agrupador `actions` possui uma regra especial. Para _smartphones_ os botões, além de ocuparem toda a largura disponível, seguem o ordenamento normal. Nos outros dispositivos com larguras maiores o ordenamento dos botões é invertido.
 
-> O botão de ação principal sempre deve ser declarado primeiro.
+> **Atenção**! O botão de ação principal sempre deve ser declarado primeiro.
 
-O alinhamento interno dos `actions` pode ser modificado com as classes **Flex** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content](https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content).
+O alinhamento (esquerda ou direita) dos `actions` pode ser modificado com as classes **Flex** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content](https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content).

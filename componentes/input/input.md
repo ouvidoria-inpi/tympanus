@@ -17,7 +17,7 @@ O input do DS-Gov é compatível com vários tipos de input do HTML 5. Segue a l
 
 Alguns dos tipos listado acima possui um comportamento diferenciado de acordo com o dispositivo do usuário.
 
-Você poderá usar o input de forma isolada ou dentro de um container. Os exemplos a seguir mostram as 2 formas de uso do input.
+Você poderá usar o input de forma isolada ou dentro da classe `field` do `br-form`. Os exemplos a seguir mostram as 2 formas de uso do input.
 
 ## Uso do input de forma isolada
 
@@ -25,16 +25,18 @@ Você poderá usar o input de forma isolada ou dentro de um container. Os exempl
 <input class="br-input" type="text" placeholder="Insira um texto">
 ```
 
-## Uso do input dentro de container (field)
+## Uso do input dentro de um field
 
 ```html
-<div class="br-field">
+<div class="br-form">
+  <div class="field">
     <label for="">label</label>
     <input type="text" placeholder="Insira um texto">
+  </div>
 </div>
 ```
 
-Repare que ao usar o container a classe `br-input` não é necessária, pois o container irá deixar todos os componentes internos configurados para o DS-Gov.
+Repare que ao usar o `br-form` e `field` a classe `br-input` não é necessária, pois o form do DS-Gov já prepara seus componentes internos configurados para o formato DS-Gov.
 
 ## Estados do input
 
@@ -54,6 +56,6 @@ Os estados também podem ser aplicados por classe. Exemplo:
 
 No exemplo acima, a aplicação do estilo de input desabilitado está sendo feito de 2 formas.
 
-> O primeiro exemplo apenas aplica o visual de desabilitado. Para esses casos é necessário complementar o input com scripts para desabilitar o componente.
-> 
-> O segundo exemplo desabilita de fato o input e é a **forma correta de uso**.
+O primeiro exemplo apenas aplica o visual de desabilitado. Para esses casos é necessário complementar o input com scripts para desabilitar o componente.
+ 
+O segundo exemplo desabilita de fato o input e é a **forma correta de uso**.
