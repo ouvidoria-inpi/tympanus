@@ -1,0 +1,26 @@
+variables:
+  GIT_SSL_NO_VERIFY: "true"
+
+image: node:latest
+
+stages:
+  - build
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+
+validate_html:
+  stage: test
+  script: 
+    - npm run validate:html
+    - npm run validate:sass
