@@ -22,7 +22,3 @@ install_dependencies:
 validate_html:
   stage: test
   script: npm run validate:html
-
-validate_sass:
-  stage: test
-  script: npm run validate:sass
