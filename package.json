@@ -7,12 +7,14 @@
     "ng": "ng",
     "watch-scss": "node-sass --watch **/* -o **/*",
     "build-scss": "node-sass -r componentes -o componentes",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate:sass": "node_modules/.bin/sass-lint -c .sass-lint.yml -v -q"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.12.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "sass-lint": "^1.13.1"
   }
 }
