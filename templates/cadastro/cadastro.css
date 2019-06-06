@@ -1,0 +1,154 @@
+@media (min-width: 576px) {
+  .page-background {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #f8f8f8), color-stop(50%, #fff));
+    background: linear-gradient(to right, #f8f8f8 50%, #fff 50%);
+  }
+}
+
+.menu {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.menu-title {
+  display: block;
+  text-align: right;
+}
+
+.menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 0;
+}
+
+.menu-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.menu-icon + .menu-name {
+  margin-left: 16px;
+}
+
+.menu-name {
+  color: #555;
+  font-size: 20px;
+  margin-left: 48px;
+}
+
+.accessibility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.accessibility li:not(:last-child) {
+  margin-right: 24px;
+}
+
+.accessibility a {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+}
+
+@media (min-width: 576px) {
+  .accessibility img {
+    max-width: 16px;
+  }
+}
+
+.logo-image {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.content-title {
+  color: #1351b4;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .content-title {
+    font-size: 32px;
+  }
+}
+
+.hr-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  .hr-horizontal {
+    text-transform: none;
+  }
+}
+
+.hr-horizontal:after, .hr-horizontal:before {
+  content: "";
+  background: #9d9d9d;
+  display: block;
+  height: 1px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.hr-horizontal:after {
+  right: 0;
+}
+
+.hr-horizontal:before {
+  left: 0;
+}
+
+.hr-horizontal .hr-text {
+  font-size: 13px;
+  margin: 0 16px;
+}
+
+.hr-vertical {
+  border-right: 1px solid #9d9d9d;
+}
+
+.login-social-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.login-social-network img {
+  max-width: 28px;
+}
+
+@media (min-width: 576px) {
+  .login-social-network img {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=cadastro.css.map */
