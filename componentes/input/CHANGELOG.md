@@ -5,6 +5,11 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.0.3] - 2019-06-05-10
+### Added
+- mixin **input-states** para reuso
+- mixin **placeholder** para reuso
+
 ## [0.0.2] - 2019-06-05-10
 ### Added
 - Arquivo CHANGELOG.md
