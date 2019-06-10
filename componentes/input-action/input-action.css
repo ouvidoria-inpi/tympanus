@@ -1,8 +1,16 @@
-.br-input-action input {
+@charset "UTF-8";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente input
+ * Versão 0.0.2
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+.br-input, .br-input-action input {
   background: #fff;
   border: 1px solid #888;
   border-radius: 6px;
-  color: #555;
+  color: #333;
   display: block;
   font-family: "rawline", "raleway", sans-serif;
   font-size: 16px;
@@ -11,49 +19,81 @@
   width: 100%;
 }
 
-.br-input-action input:focus, .br-input-action input.focus {
+.br-input:focus, .br-input-action input:focus, .is-focus.br-input, .br-input-action input.is-focus {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
 }
 
-.br-input-action input.valid {
+.is-valid.br-input, .br-input-action input.is-valid {
+  border-color: #168821;
+}
+
+.is-valid.br-input:focus, .br-input-action input.is-valid:focus {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
+  outline: none;
 }
 
-.br-input-action input:invalid, .br-input-action input.invalid {
+.is-valid.br-input + .feedback, .br-input-action input.is-valid + .feedback {
+  color: #168821;
+}
+
+.br-input:invalid, .br-input-action input:invalid, .is-invalid.br-input, .br-input-action input.is-invalid {
+  border-color: #f33;
+}
+
+.br-input:invalid:focus, .br-input-action input:invalid:focus, .is-invalid.br-input:focus, .br-input-action input.is-invalid:focus {
   border-color: #f33;
   -webkit-box-shadow: 0 0 0 1px #f33;
           box-shadow: 0 0 0 1px #f33;
+  outline: none;
 }
 
-.br-input-action input:disabled, .br-input-action input.disabled {
-  background: #EDEDED;
-  color: #888;
+.br-input:invalid + .feedback, .br-input-action input:invalid + .feedback, .is-invalid.br-input + .feedback, .br-input-action input.is-invalid + .feedback {
+  color: #f33;
 }
 
-.br-input-action ::-webkit-input-placeholder {
+.br-input:disabled, .br-input-action input:disabled, .is-disabled.br-input, .br-input-action input.is-disabled {
+  background: #ededed;
+}
+
+.br-input + .feedback, .br-input-action input + .feedback {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.br-input::-webkit-input-placeholder {
   font-size: 13px;
   font-style: italic;
 }
 
-.br-input-action :-ms-input-placeholder {
+.br-input:-ms-input-placeholder {
   font-size: 13px;
   font-style: italic;
 }
 
-.br-input-action ::-ms-input-placeholder {
+.br-input::-ms-input-placeholder {
   font-size: 13px;
   font-style: italic;
 }
 
-.br-input-action ::placeholder {
+.br-input::placeholder {
   font-size: 13px;
   font-style: italic;
 }
 
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente input-action
+ * Versão 0.0.1
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
 .br-input-action {
   position: relative;
 }

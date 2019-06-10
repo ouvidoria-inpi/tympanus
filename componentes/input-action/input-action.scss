@@ -2,12 +2,21 @@
 @import "../../estilos/scss/dsgov-base.scss";
 
 // Carregar as dependências
-@import "../form/form-base";
+@import "../input/input.scss";
 
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente input-action
+ * Versão 0.0.1
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+
+ // Definições
 $action-padding: $spacer * 2;
 $action-margin: $spacer * 6;
 
-// Aplicar usando prefixo
+// Estilos específicos
 .#{$prefix}input-action {
   position: relative;
   input {
@@ -36,9 +45,5 @@ $action-margin: $spacer * 6;
     &:last-child {
       right: 0;
     }
-  }
-
-  ::placeholder {
-    @extend %placeholder;
   }
 }
