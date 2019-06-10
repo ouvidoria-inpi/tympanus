@@ -12,7 +12,7 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Versionamento no **scss**
 
 ### Changed
-- Novo formato de uso - Ver arquivo button.md
+- Aplicação dos estilos de estados com prefixo: `is-[estado]`
 
 ## [0.0.2] - 2019-06-05
 ### Added
