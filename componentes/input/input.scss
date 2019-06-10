@@ -85,7 +85,7 @@ $feedback-font-weight: 500;
   }
 }
 
-%input {
+@mixin input {
   background: $input-bg;
   border: $input-border-width $input-border-style $input-border-color;
   border-radius: $input-radius;
@@ -99,20 +99,20 @@ $feedback-font-weight: 500;
 }
 
 // Placeholder
-%placeholder {
+@mixin placeholder {
   font-size: $placeholder-font-size;
   font-style: $placeholder-font-style;
 }
 
 // Estilos específicos
 .#{$prefix}input {
-  @extend %input;
+  @include input;
   // Estados
   @include input-states;
   // Feedback
   @include feedback;
   // Placeholder
   &::placeholder {
-    @extend %placeholder;
+    @include placeholder;
   }
 }
