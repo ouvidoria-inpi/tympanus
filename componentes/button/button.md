@@ -23,15 +23,15 @@ Cor no botão sinaliza uma chamada à ação, por isso o botão **Cancelar** pos
 
 O botão do DS-Gov pode ser usado em tags de `<button>` ou `<a>`. São necessárias 2 classes para uso:
 - `br-btn`: necessário para a formatação padrão do componente;
-- `btn-[tipo]`: necessário para formatar de forma específica o botão. Os tipos disponíveis são `primary`, `secondary`, `tertiary` ou `cancel`.
+- `is-[tipo]`: necessário para formatar de forma específica o botão. Os tipos disponíveis são `primary`, `secondary`, `tertiary` ou `cancel`.
 
 ## Exemplos de uso
 
 ```html
-<button class="br-btn btn-primary">Entrar</button>
-<button class="br-btn btn-secondary">Cadastrar</button>
-<button class="br-btn btn-tertiary">Adicionar</button>
-<button class="br-btn btn-cancel">Cancelar</button>
+<button class="br-btn is-primary">Entrar</button>
+<button class="br-btn is-secondary">Cadastrar</button>
+<button class="br-btn is-tertiary">Adicionar</button>
+<button class="br-btn is-cancel">Cancelar</button>
 ```
 
 ## Regras especiais dos botões
@@ -46,10 +46,12 @@ Existem 3 estados aplicáveis aos botões independente do tipo usado:
 - `hover`: o botão está com o cursor ativado (Navegação por mouse);
 - `disabled`: o botão está desativado.
 
-Os 3 estados também podem ser aplicados por classe. Exemplo:
+Os 3 estados também podem ser aplicados por classe. O uso via classe deve ser usado com o prefixo `is-` Exemplo:
 
 ```html
-<button class="br-btn br-btn-secondary hover">Cadastrar</button>
+<button class="br-btn is-secondary is-hover">Cadastrar</button>
 ```
+
+> **Atenção**! O estado **disabled** na tag `<button>` deve ser aplicado usando a propriedade `disabled` e não usando classe `is-disabled`. 
 
 Caso os botões estejam declarados dentro de um `field` do formulário do DS-Gov o ordenamento pode variar. Veja a documentação de formulários para mais detalhes.
