@@ -1,6 +1,10 @@
 // Carregar variáveis do DS-Gov
 @import "../../estilos/scss/dsgov-base.scss";
 
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
 /*!
  * Design System de Governo - DS-Gov
  * Componente input
@@ -8,101 +12,6 @@
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
-
-// Definições
-$input-font-family: $fonts;
-$input-font-size: 16px;
-$input-font-weight: 600;
-
-$input-padding: ($spacer) ($spacer * 2);
-
-$input-border-color: #888;
-$input-border-width: 1px;
-$input-border-style: solid;
-$input-radius: 6px;
-
-$input-bg: $white;
-$input-bg-disabled: br-color(gray, 6);
-$input-color: br-color(gray, 1);
-
-$placeholder-font-size: 13px;
-$placeholder-font-style: italic;
-
-$feedback-padding: $spacer-half;
-$feedback-font-size: 13px;
-$feedback-font-style: italic;
-$feedback-font-weight: 500;
-
-// Base
-@mixin input-focus($color) {
-  border-color: $color;
-  box-shadow: 0 0 0 1px $color;
-  outline: none;
-}
-
-@mixin input-states {
-  &:focus,
-  &.is-focus {
-    @include input-focus($active);
-  }
-  &.is-valid {
-    border-color: $valid;
-    &:focus {
-      @include input-focus($valid);
-    }
-    & + .feedback {
-      color: $valid;
-    }
-  }
-  &:invalid,
-  &.is-invalid {
-    border-color: $invalid;
-    &:focus {
-      @include input-focus($invalid);
-    }
-    & + .feedback {
-      color: $invalid;
-    }
-  }
-  &:disabled,
-  &.is-disabled {
-    background: $input-bg-disabled;
-  }
-}
-
-@mixin feedback {
-  & + .feedback {
-    font-size: $feedback-font-size;
-    font-style: $feedback-font-style;
-    font-weight: $feedback-font-weight;
-    padding: $feedback-padding;
-    .is-valid & {
-      color: $valid;
-    }
-    .is-invalid & {
-      color: $invalid;
-    }
-  }
-}
-
-@mixin input {
-  background: $input-bg;
-  border: $input-border-width $input-border-style $input-border-color;
-  border-radius: $input-radius;
-  color: $input-color;
-  display: block;
-  font-family: $input-font-family;
-  font-size: $input-font-size;
-  font-weight: $input-font-weight;
-  padding: $input-padding;
-  width: 100%;
-}
-
-// Placeholder
-@mixin placeholder {
-  font-size: $placeholder-font-size;
-  font-style: $placeholder-font-style;
-}
 
 // Estilos específicos
 .#{$prefix}input {
