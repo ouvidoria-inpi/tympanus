@@ -1,10 +1,99 @@
 // Carregar variáveis do DS-Gov
 @import "../../estilos/scss/dsgov-base.scss";
 
-// Carregar as dependências
-@import "../form/form-base";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente input
+ * Versão 0.0.2
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
 
-// Aplicar usando prefixo
+// Definições
+$input-font-family: $fonts;
+$input-font-size: 16px;
+$input-font-weight: 600;
+
+$input-padding: ($spacer) ($spacer * 2);
+
+$input-border-color: #888;
+$input-border-width: 1px;
+$input-border-style: solid;
+$input-radius: 6px;
+
+$input-bg: $white;
+$input-bg-disabled: br-color(gray, 6);
+$input-color: br-color(gray, 1);
+
+$placeholder-font-size: 13px;
+$placeholder-font-style: italic;
+
+$feedback-padding: $spacer-half;
+$feedback-font-size: 13px;
+$feedback-font-style: italic;
+$feedback-font-weight: 500;
+
+// Base
+@mixin input-focus($color) {
+  border-color: $color;
+  box-shadow: 0 0 0 1px $color;
+  outline: none;
+}
+
+%input {
+  background: $input-bg;
+  border: $input-border-width $input-border-style $input-border-color;
+  border-radius: $input-radius;
+  color: $input-color;
+  display: block;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  padding: $input-padding;
+  width: 100%;
+  &:focus,
+  &.is-focus {
+    @include input-focus($active);
+  }
+  &.is-valid {
+    border-color: $valid;
+    &:focus {
+      @include input-focus($valid);
+    }
+    & + .feedback {
+      color: $valid;
+    }
+  }
+  &:invalid,
+  &.is-invalid {
+    border-color: $invalid;
+    &:focus {
+      @include input-focus($invalid);
+    }
+    & + .feedback {
+      color: $invalid;
+    }
+  }
+  &:disabled,
+  &.is-disabled {
+    background: $input-bg-disabled;
+  }
+  // Mensagem de retorno
+  & + .feedback {
+    font-size: $feedback-font-size;
+    font-style: $feedback-font-style;
+    font-weight: $feedback-font-weight;
+    padding: $feedback-padding;
+  }
+}
+
+// Placeholder
+%placeholder {
+  font-size: $placeholder-font-size;
+  font-style: $placeholder-font-style;
+}
+
+// Estilos específicos
 .#{$prefix}input {
   @extend %input;
 
