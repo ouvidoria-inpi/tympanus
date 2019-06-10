@@ -2,7 +2,7 @@
 /*!
  * Design System de Governo - DS-Gov
  * Componente input
- * Versão 0.0.2
+ * Versão 0.0.3
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
@@ -65,6 +65,14 @@
   font-style: italic;
   font-weight: 500;
   padding: 4px;
+}
+
+.is-valid .br-input + .feedback {
+  color: #168821;
+}
+
+.is-invalid .br-input + .feedback {
+  color: #f33;
 }
 
 .br-input::-webkit-input-placeholder {

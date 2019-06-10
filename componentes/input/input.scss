@@ -4,7 +4,7 @@
 /*!
  * Design System de Governo - DS-Gov
  * Componente input
- * Versão 0.0.2
+ * Versão 0.0.3
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
@@ -40,17 +40,7 @@ $feedback-font-weight: 500;
   outline: none;
 }
 
-%input {
-  background: $input-bg;
-  border: $input-border-width $input-border-style $input-border-color;
-  border-radius: $input-radius;
-  color: $input-color;
-  display: block;
-  font-family: $input-font-family;
-  font-size: $input-font-size;
-  font-weight: $input-font-weight;
-  padding: $input-padding;
-  width: 100%;
+@mixin input-states {
   &:focus,
   &.is-focus {
     @include input-focus($active);
@@ -78,13 +68,38 @@ $feedback-font-weight: 500;
   &.is-disabled {
     background: $input-bg-disabled;
   }
-  // Mensagem de retorno
+}
+
+@mixin feedback {
   & + .feedback {
     font-size: $feedback-font-size;
     font-style: $feedback-font-style;
     font-weight: $feedback-font-weight;
     padding: $feedback-padding;
+    .is-valid & {
+      color: $valid;
+    }
+    .is-invalid & {
+      color: $invalid;
+    }
   }
+}
+
+%input {
+  background: $input-bg;
+  border: $input-border-width $input-border-style $input-border-color;
+  border-radius: $input-radius;
+  color: $input-color;
+  display: block;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  padding: $input-padding;
+  width: 100%;
+  // Estados
+  @include input-states;
+  // Mensagem de retorno
+  @include feedback;
 }
 
 // Placeholder
