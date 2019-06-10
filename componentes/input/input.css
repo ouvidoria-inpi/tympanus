@@ -19,62 +19,6 @@
   width: 100%;
 }
 
-.br-input:focus, .is-focus.br-input {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-          box-shadow: 0 0 0 1px #2b74e9;
-  outline: none;
-}
-
-.is-valid.br-input {
-  border-color: #168821;
-}
-
-.is-valid.br-input:focus {
-  border-color: #168821;
-  -webkit-box-shadow: 0 0 0 1px #168821;
-          box-shadow: 0 0 0 1px #168821;
-  outline: none;
-}
-
-.is-valid.br-input + .feedback {
-  color: #168821;
-}
-
-.br-input:invalid, .is-invalid.br-input {
-  border-color: #f33;
-}
-
-.br-input:invalid:focus, .is-invalid.br-input:focus {
-  border-color: #f33;
-  -webkit-box-shadow: 0 0 0 1px #f33;
-          box-shadow: 0 0 0 1px #f33;
-  outline: none;
-}
-
-.br-input:invalid + .feedback, .is-invalid.br-input + .feedback {
-  color: #f33;
-}
-
-.br-input:disabled, .is-disabled.br-input {
-  background: #ededed;
-}
-
-.br-input + .feedback {
-  font-size: 13px;
-  font-style: italic;
-  font-weight: 500;
-  padding: 4px;
-}
-
-.is-valid .br-input + .feedback {
-  color: #168821;
-}
-
-.is-invalid .br-input + .feedback {
-  color: #f33;
-}
-
 .br-input::-webkit-input-placeholder {
   font-size: 13px;
   font-style: italic;
@@ -93,5 +37,61 @@
 .br-input::placeholder {
   font-size: 13px;
   font-style: italic;
+}
+
+.br-input:focus, .br-input.is-focus {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+          box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
+}
+
+.br-input.is-valid {
+  border-color: #168821;
+}
+
+.br-input.is-valid:focus {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
+  outline: none;
+}
+
+.br-input.is-valid + .feedback {
+  color: #168821;
+}
+
+.br-input:invalid, .br-input.is-invalid {
+  border-color: #f33;
+}
+
+.br-input:invalid:focus, .br-input.is-invalid:focus {
+  border-color: #f33;
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+  outline: none;
+}
+
+.br-input:invalid + .feedback, .br-input.is-invalid + .feedback {
+  color: #f33;
+}
+
+.br-input:disabled, .br-input.is-disabled {
+  background: #ededed;
+}
+
+.br-input + .feedback {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.is-valid .br-input + .feedback {
+  color: #168821;
+}
+
+.is-invalid .br-input + .feedback {
+  color: #f33;
 }
 /*# sourceMappingURL=input.css.map */

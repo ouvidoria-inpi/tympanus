@@ -96,10 +96,6 @@ $feedback-font-weight: 500;
   font-weight: $input-font-weight;
   padding: $input-padding;
   width: 100%;
-  // Estados
-  @include input-states;
-  // Mensagem de retorno
-  @include feedback;
 }
 
 // Placeholder
@@ -111,7 +107,11 @@ $feedback-font-weight: 500;
 // Estilos específicos
 .#{$prefix}input {
   @extend %input;
-
+  // Estados
+  @include input-states;
+  // Feedback
+  @include feedback;
+  // Placeholder
   &::placeholder {
     @extend %placeholder;
   }
