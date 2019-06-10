@@ -1,0 +1,113 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base.scss";
+
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente Botão (button)
+ * Versão 0.0.3
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+
+// Definições
+$btn-font-weight: 700;
+$btn-margin-horizontal: 24px;
+$btn-margin-vertical: 16px;
+
+$btn-pill-font-size: 16px;
+$btn-pill-radius: 100px;
+$btn-pill-padding: $spacer;
+$btn-pill-min-width: 144px;
+$btn-pill-bg: 16px;
+
+$btn-link-font-size: 14px;
+
+// Base de botões pílula
+%btn-pill {
+  background: $white;
+  border: 1px solid $primary;
+  border-radius: $btn-pill-radius;
+  color: $primary;
+  cursor: pointer;
+  font-size: $btn-pill-font-size;
+  display: inline-block;
+  padding: $btn-pill-padding;
+  text-align: center;
+  width: 100%;
+  @include media-breakpoint-up(sm) {
+    min-width: $btn-pill-min-width;
+    width: auto;
+  }
+  &:focus,
+  &.is-focus {
+    outline: 0;
+    box-shadow: 0 3px 6px -3px $primary;
+  }
+  &:hover,
+  &.is-hover {
+    background-color: $active;
+    border-color: $active;
+    color: $white;
+    text-decoration: none;
+  }
+  &:disabled,
+  &.is-disabled {
+    background: $disabled;
+    border-color: $disabled;
+    color: $white;
+  }
+}
+
+// Base de botões link
+%btn-link {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  color: $primary;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $btn-link-font-size;
+  padding: 0;
+  &:focus,
+  &.is-focus {
+    outline: 0;
+    text-shadow: 0 3px 6px currentColor;
+  }
+  &:hover,
+  &.is-hover {
+    color: $active;
+    text-decoration: none;
+  }
+  &:disabled,
+  &.is-disabled {
+    color: $disabled;
+  }
+}
+
+// Estilos de botões
+.#{$prefix}btn {
+  font-weight: $btn-font-weight;
+  &.is-primary {
+    @extend %btn-pill;
+    background: $primary;
+    border-color: $primary;
+    color: $white;
+  }
+  &.is-secondary {
+    @extend %btn-pill;
+  }
+  &.is-tertiary {
+    @extend %btn-link;
+  }
+  &.is-cancel {
+    @extend %btn-link;
+    color: $dark;
+  }
+  & + & {
+    margin-top: $btn-margin-vertical;
+    @include media-breakpoint-up(sm) {
+      margin-left: $btn-margin-horizontal;
+      margin-top: 0;
+    }
+  }
+}

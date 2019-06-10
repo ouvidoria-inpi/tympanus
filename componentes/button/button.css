@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente Botão (button)
+ * Versão 0.0.3
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+.br-btn.is-primary, .br-btn.is-secondary {
+  background: #fff;
+  border: 1px solid #1351b4;
+  border-radius: 100px;
+  color: #1351b4;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  padding: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .br-btn.is-primary, .br-btn.is-secondary {
+    min-width: 144px;
+    width: auto;
+  }
+}
+
+.br-btn.is-primary:focus, .br-btn.is-secondary:focus, .is-focus.br-btn.is-primary, .is-focus.br-btn.is-secondary {
+  outline: 0;
+  -webkit-box-shadow: 0 3px 6px -3px #1351b4;
+          box-shadow: 0 3px 6px -3px #1351b4;
+}
+
+.br-btn.is-primary:hover, .br-btn.is-secondary:hover, .is-hover.br-btn.is-primary, .is-hover.br-btn.is-secondary {
+  background-color: #2b74e9;
+  border-color: #2b74e9;
+  color: #fff;
+  text-decoration: none;
+}
+
+.br-btn.is-primary:disabled, .br-btn.is-secondary:disabled, .is-disabled.br-btn.is-primary, .is-disabled.br-btn.is-secondary {
+  background: #888;
+  border-color: #888;
+  color: #fff;
+}
+
+.br-btn.is-tertiary, .br-btn.is-cancel {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  color: #1351b4;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 0;
+}
+
+.br-btn.is-tertiary:focus, .br-btn.is-cancel:focus, .is-focus.br-btn.is-tertiary, .is-focus.br-btn.is-cancel {
+  outline: 0;
+  text-shadow: 0 3px 6px currentColor;
+}
+
+.br-btn.is-tertiary:hover, .br-btn.is-cancel:hover, .is-hover.br-btn.is-tertiary, .is-hover.br-btn.is-cancel {
+  color: #2b74e9;
+  text-decoration: none;
+}
+
+.br-btn.is-tertiary:disabled, .br-btn.is-cancel:disabled, .is-disabled.br-btn.is-tertiary, .is-disabled.br-btn.is-cancel {
+  color: #888;
+}
+
+.br-btn {
+  font-weight: 700;
+}
+
+.br-btn.is-primary {
+  background: #1351b4;
+  border-color: #1351b4;
+  color: #fff;
+}
+
+.br-btn.is-cancel {
+  color: #555;
+}
+
+.br-btn + .br-btn {
+  margin-top: 16px;
+}
+
+@media (min-width: 576px) {
+  .br-btn + .br-btn {
+    margin-left: 24px;
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=button.css.map */
