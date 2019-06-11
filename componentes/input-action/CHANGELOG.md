@@ -5,7 +5,7 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
-## [0.0.1] - 2019-06-05-10
+## [0.0.1] - 2019-06-10
 ### Added
 - Arquivo CHANGELOG.md
 - Versionamento no **scss**
