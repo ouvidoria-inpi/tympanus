@@ -1,3 +1,11 @@
+@charset "UTF-8";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente checkbox/radio button
+ * Versão 0.0.2
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
 .br-checkbox input[type="checkbox"]:hover + label:before, .br-checkbox.hover input[type="checkbox"] + label:before, .br-checkbox input[type="radio"]:hover + label:before, .br-checkbox.hover input[type="radio"] + label:before {
   -webkit-box-shadow: inset 0 0 0 1px #888, 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: inset 0 0 0 1px #888, 0 0 0 4px rgba(43, 116, 233, 0.45);
@@ -106,8 +114,8 @@
 }
 
 .br-checkbox input[type="radio"]:checked + label:before {
-  -webkit-box-shadow: inset 0 0 0 4px #fff, 0 0 0 1px #2b74e9;
-          box-shadow: inset 0 0 0 4px #fff, 0 0 0 1px #2b74e9;
+  -webkit-box-shadow: inset 0 0 0 4px gov-color(white), 0 0 0 1px #2b74e9;
+          box-shadow: inset 0 0 0 4px gov-color(white), 0 0 0 1px #2b74e9;
 }
 
 .br-checkbox input[type="radio"]:invalid + label {
@@ -115,8 +123,8 @@
 }
 
 .br-checkbox.checked input[type="radio"] + label:before {
-  -webkit-box-shadow: inset 0 0 0 4px #fff, 0 0 0 1px #2b74e9;
-          box-shadow: inset 0 0 0 4px #fff, 0 0 0 1px #2b74e9;
+  -webkit-box-shadow: inset 0 0 0 4px gov-color(white), 0 0 0 1px #2b74e9;
+          box-shadow: inset 0 0 0 4px gov-color(white), 0 0 0 1px #2b74e9;
 }
 
 .br-checkbox.invalid input[type="radio"] + label {
@@ -128,7 +136,7 @@ input[type="checkbox"]:checked + label:after {
   position: absolute;
   left: 7px;
   top: 2.8px;
-  border: solid #fff;
+  border: solid gov-color(white);
   border-width: 0 2px 2px 0;
   width: 7px;
   height: 11.2px;
