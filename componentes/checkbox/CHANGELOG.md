@@ -10,6 +10,9 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Arquivo CHANGELOG.md
 - Versionamento no **scss**
 
+### Changed
+- Aplicação dos estilos de estados com prefixo: `is-[estado]`
+
 ## [0.0.1] - 2019-06-05
 ### Added
 - Documentação inicial

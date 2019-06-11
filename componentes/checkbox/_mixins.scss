@@ -1,0 +1,164 @@
+// Estilo base para checkbox e radio button
+// - Como o modelo serve para os 2 tipos de input é necessário informar o tipo
+// via argumento
+@mixin check($type) {
+  .#{$prefix}check {
+    display: inline-block;
+    position: relative;
+    // Remover o checkbox padrão do navegador
+    input[type="#{$type}"] {
+      position: absolute;
+      opacity: 0;
+      // Texto do label
+      @include check-label;
+      // Modelo do componente
+      @include check-model($type);
+      @include check-focus;
+      @include check-checked;
+      &:hover:not(:disabled) + label:before {
+        @include check-hover;
+      }
+      &:invalid  {
+        & + label:before {
+          border-color: $invalid;
+          box-shadow: 0 0 0 $check-border-size $invalid;
+        }
+        &:hover + label:before {
+          @include check-hover($invalid);
+        }
+      }
+      &:disabled {
+        @include check-checked($disabled);
+      }
+    }
+    // Estados
+    &.is-hover {
+      input[type="#{$type}"] {
+        & + label:before {
+          @include check-hover;
+        }
+      }
+    }
+    &.is-invalid {
+      input[type="#{$type}"] {
+        & + label:before {
+          box-shadow: 0 0 0 $check-border-size $invalid;
+        }
+        @include check-model($type, $invalid);
+        @include check-checked($invalid);
+        &:hover:not(:disabled) + label:before {
+          @include check-hover($invalid);
+        }
+      }
+      &.is-hover {
+        input[type="#{$type}"] {
+          & + label:before {
+            @include check-hover($invalid);
+          }
+        }
+      }
+    }
+    &.is-valid {
+      input[type="#{$type}"] {
+        @include check-model($type, $valid);
+        @include check-checked($valid);
+        &:hover:not(:disabled) + label:before {
+          @include check-hover($valid);
+        }
+      }
+      &.is-hover {
+        input[type="#{$type}"] {
+          & + label:before {
+            @include check-hover($valid);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Estilo do texto de label
+// - A cor pode ser modificada via argumento
+@mixin check-label($color: $dark) {
+  & + label {
+    color: $color;
+    cursor: pointer;
+    font-size: $check-font-size;
+    font-weight: $check-font-weight;
+    padding: 0 0 0 ($check-size + $spacer);
+    position: relative;
+  }
+}
+
+// Modelo para de checkbox e radio button
+// - A cor da borda pode ser modificada via argumento
+// - No estado disabled a com de fundo é cinza
+@mixin check-model($type, $color: br-color(disabled)) {
+  & + label:before {
+    background: transparent;
+    border: $check-border-size solid $color;
+    @if ($type == radio) {
+      border-radius: 50%;
+    }
+    @if ($type == checkbox) {
+      border-radius: $check-radius;
+    }
+    content: "";
+    height: $check-size - $check-border-size;
+    left: 0;
+    position: absolute;
+    top: 0;
+    vertical-align: text-top;
+    width: $check-size - $check-border-size;
+  }
+  &:disabled + label:before {
+    background: br-color(gray, 6);
+  }
+  @if ($type == checkbox) {
+    &:checked + label:after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 3px;
+      border: solid $white;
+      border-width: 0 2px 2px 0;
+      width: 6px;
+      height: 10px;
+      transform: rotate(45deg);
+    }
+  }
+  @if ($type == radio) {
+    &:checked + label:after {
+      content: "";
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 $check-border-size $color, inset 0 0 0 ($check-border-size + $spacer-half) br-color(white);
+      height: ($check-size - $check-border-size);
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: ($check-size - $check-border-size);
+    }
+  }
+}
+
+// Estilo para focus
+@mixin check-focus {
+  &:focus + label {
+    outline: 1px dotted currentColor;
+  }
+}
+
+// O estilo hover não é aplicado para o estado desabilitado
+// - A cor pode ser modificada via argumento
+@mixin check-hover($color: $active) {
+  box-shadow: 0 0 0 ($check-border-size * 4) rgba($color, 0.45);
+}
+
+// Aplica a cor para estado checked
+// - A cor pode ser modificada via argumento
+@mixin check-checked($color: $active) {
+  &:checked + label:before {
+    background: $color;
+    border-color: $color;
+  }
+}

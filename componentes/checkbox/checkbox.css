@@ -6,129 +6,359 @@
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
-.br-checkbox input[type="checkbox"]:hover + label:before, .br-checkbox.hover input[type="checkbox"] + label:before, .br-checkbox input[type="radio"]:hover + label:before, .br-checkbox.hover input[type="radio"] + label:before {
-  -webkit-box-shadow: inset 0 0 0 1px #888, 0 0 0 4px rgba(43, 116, 233, 0.45);
-          box-shadow: inset 0 0 0 1px #888, 0 0 0 4px rgba(43, 116, 233, 0.45);
-}
-
-.br-checkbox input[type="checkbox"]:focus + label, .br-checkbox.focus input[type="checkbox"] + label, .br-checkbox input[type="radio"]:focus + label, .br-checkbox.focus input[type="radio"] + label {
-  outline: 1px dotted currentColor;
-  outline-offset: 4px;
-}
-
-.br-checkbox input[type="checkbox"]:checked + label:before, .br-checkbox.checked input[type="checkbox"] + label:before, .br-checkbox input[type="radio"]:checked + label:before, .br-checkbox.checked input[type="radio"] + label:before {
-  background: #2b74e9;
-}
-
-.br-checkbox input[type="checkbox"]:invalid + label:before, .br-checkbox.invalid input[type="checkbox"] + label:before, .br-checkbox input[type="radio"]:invalid + label:before, .br-checkbox.invalid input[type="radio"] + label:before {
-  -webkit-box-shadow: inset 0 0 0 1px #f33, 0 0 0 1px #f33;
-          box-shadow: inset 0 0 0 1px #f33, 0 0 0 1px #f33;
-}
-
-.br-checkbox input[type="checkbox"]:disabled + label:before, .br-checkbox.disabled input[type="checkbox"] + label:before, .br-checkbox input[type="radio"]:disabled + label:before, .br-checkbox.disabled input[type="radio"] + label:before {
-  background: #EDEDED;
-  -webkit-box-shadow: inset 0 0 0 1px #888;
-          box-shadow: inset 0 0 0 1px #888;
-}
-
-.br-checkbox {
+.br-check {
   display: inline-block;
   position: relative;
 }
 
-.br-checkbox input[type="checkbox"] {
+.br-check input[type="checkbox"] {
   position: absolute;
   opacity: 0;
 }
 
-.br-checkbox input[type="checkbox"] + label {
-  position: relative;
+.br-check input[type="checkbox"] + label {
+  color: #555;
   cursor: pointer;
-  padding: 0 0 0 28px;
   font-size: 14px;
   font-weight: 500;
+  padding: 0 0 0 28px;
+  position: relative;
 }
 
-.br-checkbox input[type="checkbox"] + label:before {
-  content: "";
-  margin-right: 8px;
-  margin-left: -28px;
-  display: inline-block;
-  vertical-align: top;
-  width: 20px;
-  height: 20px;
+.br-check input[type="checkbox"] + label:before {
   background: transparent;
-  -webkit-box-shadow: inset 0 0 0 1px #888;
-          box-shadow: inset 0 0 0 1px #888;
+  border: 1px solid #888;
   border-radius: 4px;
+  content: "";
+  height: 19px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: text-top;
+  width: 19px;
 }
 
-.br-checkbox input[type="checkbox"]:checked + label:before {
-  -webkit-box-shadow: inset 0 0 0 1px #2b74e9;
-          box-shadow: inset 0 0 0 1px #2b74e9;
+.br-check input[type="checkbox"]:disabled + label:before {
+  background: #ededed;
 }
 
-.br-checkbox input[type="checkbox"]:invalid + label {
-  color: #f33;
+.br-check input[type="checkbox"]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  width: 6px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
-.br-checkbox.checked input[type="checkbox"] + label:before {
-  -webkit-box-shadow: inset 0 0 0 1px #2b74e9;
-          box-shadow: inset 0 0 0 1px #2b74e9;
+.br-check input[type="checkbox"]:focus + label {
+  outline: 1px dotted currentColor;
 }
 
-.br-checkbox.invalid input[type="checkbox"] + label {
-  color: #f33;
+.br-check input[type="checkbox"]:checked + label:before {
+  background: #2b74e9;
+  border-color: #2b74e9;
 }
 
-.br-checkbox {
+.br-check input[type="checkbox"]:hover:not(:disabled) + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+          box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+}
+
+.br-check input[type="checkbox"]:invalid + label:before {
+  border-color: #f33;
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+}
+
+.br-check input[type="checkbox"]:invalid:hover + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+}
+
+.br-check input[type="checkbox"]:disabled:checked + label:before {
+  background: #888;
+  border-color: #888;
+}
+
+.br-check.is-hover input[type="checkbox"] + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+          box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+}
+
+.br-check.is-invalid input[type="checkbox"] + label:before {
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+}
+
+.br-check.is-invalid input[type="checkbox"] + label:before {
+  background: transparent;
+  border: 1px solid #f33;
+  border-radius: 4px;
+  content: "";
+  height: 19px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: text-top;
+  width: 19px;
+}
+
+.br-check.is-invalid input[type="checkbox"]:disabled + label:before {
+  background: #ededed;
+}
+
+.br-check.is-invalid input[type="checkbox"]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  width: 6px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.br-check.is-invalid input[type="checkbox"]:checked + label:before {
+  background: #f33;
+  border-color: #f33;
+}
+
+.br-check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+}
+
+.br-check.is-invalid.is-hover input[type="checkbox"] + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+}
+
+.br-check.is-valid input[type="checkbox"] + label:before {
+  background: transparent;
+  border: 1px solid #168821;
+  border-radius: 4px;
+  content: "";
+  height: 19px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: text-top;
+  width: 19px;
+}
+
+.br-check.is-valid input[type="checkbox"]:disabled + label:before {
+  background: #ededed;
+}
+
+.br-check.is-valid input[type="checkbox"]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  width: 6px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.br-check.is-valid input[type="checkbox"]:checked + label:before {
+  background: #168821;
+  border-color: #168821;
+}
+
+.br-check.is-valid input[type="checkbox"]:hover:not(:disabled) + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+          box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+}
+
+.br-check.is-valid.is-hover input[type="checkbox"] + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+          box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+}
+
+.br-check {
   display: inline-block;
   position: relative;
 }
 
-.br-checkbox input[type="radio"] {
+.br-check input[type="radio"] {
   position: absolute;
   opacity: 0;
 }
 
-.br-checkbox input[type="radio"] + label {
-  position: relative;
+.br-check input[type="radio"] + label {
+  color: #555;
   cursor: pointer;
-  padding: 0 0 0 28px;
   font-size: 14px;
   font-weight: 500;
+  padding: 0 0 0 28px;
+  position: relative;
 }
 
-.br-checkbox input[type="radio"] + label:before {
-  content: "";
-  margin-right: 8px;
-  margin-left: -28px;
-  display: inline-block;
-  vertical-align: top;
-  width: 20px;
-  height: 20px;
+.br-check input[type="radio"] + label:before {
   background: transparent;
-  -webkit-box-shadow: inset 0 0 0 1px #888;
-          box-shadow: inset 0 0 0 1px #888;
+  border: 1px solid #888;
   border-radius: 50%;
+  content: "";
+  height: 19px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: text-top;
+  width: 19px;
 }
 
-.br-checkbox input[type="radio"]:checked + label:before {
-  -webkit-box-shadow: inset 0 0 0 4px gov-color(white), 0 0 0 1px #2b74e9;
-          box-shadow: inset 0 0 0 4px gov-color(white), 0 0 0 1px #2b74e9;
+.br-check input[type="radio"]:disabled + label:before {
+  background: #ededed;
 }
 
-.br-checkbox input[type="radio"]:invalid + label {
-  color: #f33;
+.br-check input[type="radio"]:checked + label:after {
+  content: "";
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 0 1px #888, inset 0 0 0 5px #fff;
+          box-shadow: inset 0 0 0 1px #888, inset 0 0 0 5px #fff;
+  height: 19px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 19px;
 }
 
-.br-checkbox.checked input[type="radio"] + label:before {
-  -webkit-box-shadow: inset 0 0 0 4px gov-color(white), 0 0 0 1px #2b74e9;
-          box-shadow: inset 0 0 0 4px gov-color(white), 0 0 0 1px #2b74e9;
+.br-check input[type="radio"]:focus + label {
+  outline: 1px dotted currentColor;
 }
 
-.br-checkbox.invalid input[type="radio"] + label {
-  color: #f33;
+.br-check input[type="radio"]:checked + label:before {
+  background: #2b74e9;
+  border-color: #2b74e9;
+}
+
+.br-check input[type="radio"]:hover:not(:disabled) + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+          box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+}
+
+.br-check input[type="radio"]:invalid + label:before {
+  border-color: #f33;
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+}
+
+.br-check input[type="radio"]:invalid:hover + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+}
+
+.br-check input[type="radio"]:disabled:checked + label:before {
+  background: #888;
+  border-color: #888;
+}
+
+.br-check.is-hover input[type="radio"] + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+          box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+}
+
+.br-check.is-invalid input[type="radio"] + label:before {
+  -webkit-box-shadow: 0 0 0 1px #f33;
+          box-shadow: 0 0 0 1px #f33;
+}
+
+.br-check.is-invalid input[type="radio"] + label:before {
+  background: transparent;
+  border: 1px solid #f33;
+  border-radius: 50%;
+  content: "";
+  height: 19px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: text-top;
+  width: 19px;
+}
+
+.br-check.is-invalid input[type="radio"]:disabled + label:before {
+  background: #ededed;
+}
+
+.br-check.is-invalid input[type="radio"]:checked + label:after {
+  content: "";
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 0 1px #f33, inset 0 0 0 5px #fff;
+          box-shadow: inset 0 0 0 1px #f33, inset 0 0 0 5px #fff;
+  height: 19px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 19px;
+}
+
+.br-check.is-invalid input[type="radio"]:checked + label:before {
+  background: #f33;
+  border-color: #f33;
+}
+
+.br-check.is-invalid input[type="radio"]:hover:not(:disabled) + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+}
+
+.br-check.is-invalid.is-hover input[type="radio"] + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+}
+
+.br-check.is-valid input[type="radio"] + label:before {
+  background: transparent;
+  border: 1px solid #168821;
+  border-radius: 50%;
+  content: "";
+  height: 19px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: text-top;
+  width: 19px;
+}
+
+.br-check.is-valid input[type="radio"]:disabled + label:before {
+  background: #ededed;
+}
+
+.br-check.is-valid input[type="radio"]:checked + label:after {
+  content: "";
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #fff;
+          box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #fff;
+  height: 19px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 19px;
+}
+
+.br-check.is-valid input[type="radio"]:checked + label:before {
+  background: #168821;
+  border-color: #168821;
+}
+
+.br-check.is-valid input[type="radio"]:hover:not(:disabled) + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+          box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+}
+
+.br-check.is-valid.is-hover input[type="radio"] + label:before {
+  -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+          box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
 
 input[type="checkbox"]:checked + label:after {
