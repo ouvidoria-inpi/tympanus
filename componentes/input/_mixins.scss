@@ -21,25 +21,25 @@
 @mixin input-states {
   &:focus,
   &.is-focus {
-    @include input-focus($active);
+    @include input-focus($color-primary-lighten-15);
   }
   &.is-valid {
-    border-color: $valid;
+    border-color: $color-success;
     &:focus {
-      @include input-focus($valid);
+      @include input-focus($color-success);
     }
     & + .feedback {
-      color: $valid;
+      color: $color-success;
     }
   }
   &:invalid,
   &.is-invalid {
-    border-color: $invalid;
+    border-color: $color-danger;
     &:focus {
-      @include input-focus($invalid);
+      @include input-focus($color-danger);
     }
     & + .feedback {
-      color: $invalid;
+      color: $color-danger;
     }
   }
   &:disabled,
@@ -56,10 +56,10 @@
     font-weight: $feedback-font-weight;
     padding: $feedback-padding;
     .is-valid & {
-      color: $valid;
+      color: $color-success;
     }
     .is-invalid & {
-      color: $invalid;
+      color: $color-danger;
     }
   }
 }

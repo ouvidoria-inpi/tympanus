@@ -5,14 +5,14 @@ $input-font-weight: 600;
 
 $input-padding: ($spacer) ($spacer * 2);
 
-$input-border-color: #888;
+$input-border-color: $color-gray-5;
 $input-border-width: 1px;
 $input-border-style: solid;
 $input-radius: 6px;
 
-$input-bg: $white;
-$input-bg-disabled: br-color(gray, 6);
-$input-color: br-color(gray, 1);
+$input-bg: $color-white;
+$input-bg-disabled: $color-gray-6;
+$input-color: $color-gray-7;
 
 $placeholder-font-size: 13px;
 $placeholder-font-style: italic;
