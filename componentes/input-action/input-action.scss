@@ -1,17 +1,26 @@
 // Carregar variáveis do DS-Gov
 @import "../../estilos/scss/dsgov-base.scss";
 
-// Carregar as dependências
-@import "../form/form-base";
+// Carregar dependências
+@import "../input/configs";
+@import "../input/mixins";
+@import "configs";
 
-$action-padding: $spacer * 2;
-$action-margin: $spacer * 6;
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente input-action
+ * Versão 0.0.1
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
 
-// Aplicar usando prefixo
+// Estilos específicos
 .#{$prefix}input-action {
   position: relative;
+  // Input
   input {
-    @extend %input;
+    @include input;
+    @include input-states;
     &:first-child {
       padding-right: $action-margin;
     }
@@ -19,6 +28,7 @@ $action-margin: $spacer * 6;
       padding-left: $action-margin;
     }
   }
+  // Botão de ação
   .action {
     background: transparent;
     border: 0;
@@ -37,8 +47,6 @@ $action-margin: $spacer * 6;
       right: 0;
     }
   }
-
-  ::placeholder {
-    @extend %placeholder;
-  }
+  // Feedback
+  @include feedback;
 }

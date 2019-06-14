@@ -1,8 +1,20 @@
+@charset "UTF-8";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente input-action
+ * Versão 0.0.1
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+.br-input-action {
+  position: relative;
+}
+
 .br-input-action input {
   background: #fff;
   border: 1px solid #888;
   border-radius: 6px;
-  color: #555;
+  color: #333;
   display: block;
   font-family: "rawline", "raleway", sans-serif;
   font-size: 16px;
@@ -11,51 +23,45 @@
   width: 100%;
 }
 
-.br-input-action input:focus, .br-input-action input.focus {
+.br-input-action input:focus, .br-input-action input.is-focus {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
 }
 
-.br-input-action input.valid {
+.br-input-action input.is-valid {
+  border-color: #168821;
+}
+
+.br-input-action input.is-valid:focus {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
+  outline: none;
 }
 
-.br-input-action input:invalid, .br-input-action input.invalid {
+.br-input-action input.is-valid + .feedback {
+  color: #168821;
+}
+
+.br-input-action input:invalid, .br-input-action input.is-invalid {
+  border-color: #f33;
+}
+
+.br-input-action input:invalid:focus, .br-input-action input.is-invalid:focus {
   border-color: #f33;
   -webkit-box-shadow: 0 0 0 1px #f33;
           box-shadow: 0 0 0 1px #f33;
+  outline: none;
 }
 
-.br-input-action input:disabled, .br-input-action input.disabled {
-  background: #EDEDED;
-  color: #888;
+.br-input-action input:invalid + .feedback, .br-input-action input.is-invalid + .feedback {
+  color: #f33;
 }
 
-.br-input-action ::-webkit-input-placeholder {
-  font-size: 13px;
-  font-style: italic;
-}
-
-.br-input-action :-ms-input-placeholder {
-  font-size: 13px;
-  font-style: italic;
-}
-
-.br-input-action ::-ms-input-placeholder {
-  font-size: 13px;
-  font-style: italic;
-}
-
-.br-input-action ::placeholder {
-  font-size: 13px;
-  font-style: italic;
-}
-
-.br-input-action {
-  position: relative;
+.br-input-action input:disabled, .br-input-action input.is-disabled {
+  background: #ededed;
 }
 
 .br-input-action input:first-child {
@@ -86,5 +92,20 @@
 
 .br-input-action .action:last-child {
   right: 0;
+}
+
+.br-input-action + .feedback {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.is-valid .br-input-action + .feedback {
+  color: #168821;
+}
+
+.is-invalid .br-input-action + .feedback {
+  color: #f33;
 }
 /*# sourceMappingURL=input-action.css.map */
