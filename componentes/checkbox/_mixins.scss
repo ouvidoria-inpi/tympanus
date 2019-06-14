@@ -20,15 +20,15 @@
       }
       &:invalid  {
         & + label:before {
-          border-color: $invalid;
-          box-shadow: 0 0 0 $check-border-size $invalid;
+          border-color: $color-danger;
+          box-shadow: 0 0 0 $check-border-size $color-danger;
         }
         &:hover + label:before {
-          @include check-hover($invalid);
+          @include check-hover($color-danger);
         }
       }
       &:disabled {
-        @include check-checked($disabled);
+        @include check-checked($color-gray-5);
       }
     }
     // Estados
@@ -42,34 +42,34 @@
     &.is-invalid {
       input[type="#{$type}"] {
         & + label:before {
-          box-shadow: 0 0 0 $check-border-size $invalid;
+          box-shadow: 0 0 0 $check-border-size $color-danger;
         }
-        @include check-model($type, $invalid);
-        @include check-checked($invalid);
+        @include check-model($type, $color-danger);
+        @include check-checked($color-danger);
         &:hover:not(:disabled) + label:before {
-          @include check-hover($invalid);
+          @include check-hover($color-danger);
         }
       }
       &.is-hover {
         input[type="#{$type}"] {
           & + label:before {
-            @include check-hover($invalid);
+            @include check-hover($color-danger);
           }
         }
       }
     }
     &.is-valid {
       input[type="#{$type}"] {
-        @include check-model($type, $valid);
-        @include check-checked($valid);
+        @include check-model($type, $color-success);
+        @include check-checked($color-success);
         &:hover:not(:disabled) + label:before {
-          @include check-hover($valid);
+          @include check-hover($color-success);
         }
       }
       &.is-hover {
         input[type="#{$type}"] {
           & + label:before {
-            @include check-hover($valid);
+            @include check-hover($color-success);
           }
         }
       }
@@ -79,7 +79,7 @@
 
 // Estilo do texto de label
 // - A cor pode ser modificada via argumento
-@mixin check-label($color: $dark) {
+@mixin check-label($color: $color-gray-6) {
   & + label {
     color: $color;
     cursor: pointer;
@@ -93,7 +93,7 @@
 // Modelo para de checkbox e radio button
 // - A cor da borda pode ser modificada via argumento
 // - No estado disabled a com de fundo é cinza
-@mixin check-model($type, $color: br-color(disabled)) {
+@mixin check-model($type, $color: $color-gray-5) {
   & + label:before {
     background: transparent;
     border: $check-border-size solid $color;
@@ -112,7 +112,7 @@
     width: $check-size - $check-border-size;
   }
   &:disabled + label:before {
-    background: br-color(gray, 6);
+    background: $color-gray-6;
   }
   @if ($type == checkbox) {
     &:checked + label:after {
@@ -120,7 +120,7 @@
       position: absolute;
       left: 7px;
       top: 3px;
-      border: solid $white;
+      border: solid $color-white;
       border-width: 0 2px 2px 0;
       width: 6px;
       height: 10px;
@@ -131,7 +131,7 @@
     &:checked + label:after {
       content: "";
       border-radius: 50%;
-      box-shadow: inset 0 0 0 $check-border-size $color, inset 0 0 0 ($check-border-size + $spacer-half) br-color(white);
+      box-shadow: inset 0 0 0 $check-border-size $color, inset 0 0 0 ($check-border-size + $spacer-half) $color-white;
       height: ($check-size - $check-border-size);
       left: 0px;
       position: absolute;
@@ -150,13 +150,13 @@
 
 // O estilo hover não é aplicado para o estado desabilitado
 // - A cor pode ser modificada via argumento
-@mixin check-hover($color: $active) {
+@mixin check-hover($color: $color-primary-lighten-15) {
   box-shadow: 0 0 0 ($check-border-size * 4) rgba($color, 0.45);
 }
 
 // Aplica a cor para estado checked
 // - A cor pode ser modificada via argumento
-@mixin check-checked($color: $active) {
+@mixin check-checked($color: $color-primary-lighten-15) {
   &:checked + label:before {
     background: $color;
     border-color: $color;
