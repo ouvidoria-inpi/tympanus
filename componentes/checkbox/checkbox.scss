@@ -1,9 +1,19 @@
 // Carregar variáveis do DS-Gov
 @import "../../estilos/scss/dsgov-base.scss";
 
-// Carregar as dependências
-@import "../form/form-base";
+// Carregar dependências
+@import "configs";
+@import "mixins";
 
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente checkbox/radio button
+ * Versão 0.0.2
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+
+ // Estilos específicos
 @include check(checkbox);
 @include check(radio);
 
