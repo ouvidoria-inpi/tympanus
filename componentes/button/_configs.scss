@@ -13,10 +13,10 @@ $btn-link-font-size: 14px;
 
 // Base de botões pílula
 %btn-pill {
-  background: $white;
-  border: 1px solid $primary;
+  background: $color-white;
+  border: 1px solid $color-primary;
   border-radius: $btn-pill-radius;
-  color: $primary;
+  color: $color-primary;
   cursor: pointer;
   font-size: $btn-pill-font-size;
   display: inline-block;
@@ -30,20 +30,20 @@ $btn-link-font-size: 14px;
   &:focus,
   &.is-focus {
     outline: 0;
-    box-shadow: 0 3px 6px -3px $primary;
+    box-shadow: 0 3px 6px -3px $color-primary;
   }
   &:hover,
   &.is-hover {
-    background-color: $active;
-    border-color: $active;
-    color: $white;
+    background-color: $color-primary-lighten-15;
+    border-color: $color-primary-lighten-15;
+    color: $color-white;
     text-decoration: none;
   }
   &:disabled,
   &.is-disabled {
-    background: $disabled;
-    border-color: $disabled;
-    color: $white;
+    background: $color-gray-5;
+    border-color: $color-gray-5;
+    color: $color-white;
   }
 }
 
@@ -52,7 +52,7 @@ $btn-link-font-size: 14px;
   background: transparent;
   border: 0;
   border-bottom: 1px solid currentColor;
-  color: $primary;
+  color: $color-primary;
   cursor: pointer;
   display: inline-block;
   font-size: $btn-link-font-size;
@@ -64,11 +64,11 @@ $btn-link-font-size: 14px;
   }
   &:hover,
   &.is-hover {
-    color: $active;
+    color: $color-primary-lighten-15;
     text-decoration: none;
   }
   &:disabled,
   &.is-disabled {
-    color: $disabled;
+    color: $color-gray-5;
   }
 }

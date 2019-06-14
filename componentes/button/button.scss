@@ -17,9 +17,9 @@
   font-weight: $btn-font-weight;
   &.is-primary {
     @extend %btn-pill;
-    background: $primary;
-    border-color: $primary;
-    color: $white;
+    background: $color-primary;
+    border-color: $color-primary;
+    color: $color-white;
   }
   &.is-secondary {
     @extend %btn-pill;
@@ -29,7 +29,7 @@
   }
   &.is-cancel {
     @extend %btn-link;
-    color: $dark;
+    color: $color-gray-6;
   }
   & + & {
     margin-top: $btn-margin-vertical;
