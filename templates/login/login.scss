@@ -1,13 +1,10 @@
 // Carregar variáveis do DS-Gov
-@import "../../estilos/scss/dsgov-base.scss";
-
-// Carregar componentes do DS-Gov
-@import "../../componentes/button/button.scss";
+@import "../../estilos/scss/dsgov-base";
 
 // Background da página
 .page-background {
   @include media-breakpoint-up(sm) {
-    background: linear-gradient(to right, gov-color(light) 50%,gov-color(white) 50%);
+    background: linear-gradient(to right, $color-gray-1 50%, $color-white 50%);
   }
 }
 
@@ -27,7 +24,7 @@ $navigation-font-size: 17px;
 }
 .tab-item {
   display: flex;
-  border-bottom: 1px solid gov-color(gray,4);
+  border-bottom: 1px solid $color-gray-3;
   flex-direction: column;
   padding: 0 ($spacer * 4);
   @include media-breakpoint-up(lg) {
@@ -37,8 +34,8 @@ $navigation-font-size: 17px;
   &.is-active {
     font-weight: 700;
     .tab-name {
-      color: gov-color(primary);
-      box-shadow: inset 0 -4px 0 0 gov-color(primary);
+      color: $color-primary;
+      box-shadow: inset 0 -4px 0 0 $color-primary;
     }
   }
 }
@@ -69,7 +66,7 @@ $navigation-font-size: 17px;
   }
 }
 .tab-name {
-  color: gov-color(dark);
+  color: $color-gray-6;
   flex: 1;
   padding: ($spacer * 4) 0;
   @include media-breakpoint-up(lg) {
@@ -98,7 +95,7 @@ $navigation-font-size: 17px;
     text-transform: uppercase;
     font-size: 11px;
     font-weight: 700;
-    color: gov-color(dark);
+    color: $color-gray-7;
   }
   img {
     @include media-breakpoint-up(sm) {
@@ -120,7 +117,7 @@ $navigation-font-size: 17px;
 }
 
 // Cabeçalho do conteúdo principal
-$content-title-color: gov-color(primary);
+$content-title-color: $color-primary;
 $content-title-font-size: 20px;
 $content-title-font-weight: 500;
 $content-title-sm-font-size: 32px;
@@ -162,13 +159,13 @@ $forgot-password: 12px;
 .content-navigation a {
   // font-size: 10px;
   text-decoration: none;
-  color: gov-color(dark);
+  color: $color-gray-6;
 }
 
 // Divisores de conteúdo
 $hr-font-size: 13px;
 .hr-horizontal {
-  border-bottom: 1px solid gov-color(gray, 3);
+  border-bottom: 1px solid $color-gray-5;
   display: flex;
   justify-content: center;
   margin: 0 0 ($spacer * 3);
@@ -177,7 +174,7 @@ $hr-font-size: 13px;
     text-transform: none;
   }
   .hr-text {
-    background: gov-color(white);
+    background: $color-white;
     font-size: $hr-font-size;
     padding: 0 ($spacer * 2);
     position: relative;
@@ -189,7 +186,7 @@ $hr-font-size: 13px;
   }
 }
 .hr-vertical {
-  border-right: 1px solid gov-color(gray, 3);
+  border-right: 1px solid $color-gray-5;
 }
 
 // Login com redes sociais
