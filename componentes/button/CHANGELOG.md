@@ -6,7 +6,11 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [Unreleased]
 - Botões de estados (**danger**, **success**, **warning**).
 
-## [0.0.3] - 2019-06-05-10
+## [0.1.4] - 2019-06-17
+### Changed
+- Mixins para aplicação de estilos
+
+## [0.0.3] - 2019-06-10
 ### Added
 - Arquivo CHANGELOG.md
 - Versionamento no **scss**

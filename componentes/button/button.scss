@@ -1,35 +1,32 @@
 // Carregar variáveis do DS-Gov
-@import "../../estilos/scss/dsgov-base.scss";
-
-// Carregar dependências
-@import "configs";
+@import "../../estilos/scss/dsgov-base";
 
 /*!
  * Design System de Governo - DS-Gov
  * Componente Botão (button)
- * Versão 0.0.3
+ * Versão 0.1.4
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
 
 // Estilos de botões
 .#{$prefix}btn {
   font-weight: $btn-font-weight;
   &.is-primary {
-    @extend %btn-pill;
-    background: $color-primary;
-    border-color: $color-primary;
-    color: $color-white;
+    @include btn-pill($color-primary, $color-primary, $color-white);
   }
   &.is-secondary {
-    @extend %btn-pill;
+    @include btn-pill;
   }
   &.is-tertiary {
-    @extend %btn-link;
+    @include btn-link;
   }
   &.is-cancel {
-    @extend %btn-link;
-    color: $color-gray-6;
+    @include btn-link($color-gray-6);
   }
   & + & {
     margin-top: $btn-margin-vertical;
