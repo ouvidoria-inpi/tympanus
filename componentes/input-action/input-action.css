@@ -16,7 +16,6 @@
   border-radius: 6px;
   color: #333333;
   display: block;
-  font-family: "rawline", "raleway", sans-serif;
   font-size: 16px;
   font-weight: 600;
   padding: 8px 16px;
@@ -41,10 +40,6 @@
   outline: none;
 }
 
-.br-input-action input:invalid + .feedback {
-  color: #ff3333;
-}
-
 .br-input-action input:disabled {
   background: #ededed;
 }
@@ -55,6 +50,26 @@
 
 .br-input-action input:last-child {
   padding-left: 48px;
+}
+
+.br-input-action input::-webkit-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input-action input:-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input-action input::-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.br-input-action input::placeholder {
+  font-size: 13px;
+  font-style: italic;
 }
 
 .br-input-action .action {
@@ -80,18 +95,11 @@
 }
 
 .br-input-action + .feedback {
+  color: #555555;
   font-size: 13px;
   font-style: italic;
   font-weight: 500;
   padding: 4px;
-}
-
-.is-valid .br-input-action + .feedback {
-  color: #168821;
-}
-
-.is-invalid .br-input-action + .feedback {
-  color: #ff3333;
 }
 
 .br-input-action.is-focus input {
@@ -112,8 +120,12 @@
   outline: none;
 }
 
-.br-input-action.is-invalid input + .feedback {
+.br-input-action.is-invalid + .feedback {
   color: #ff3333;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
 }
 
 .br-input-action.is-valid input {
@@ -127,7 +139,11 @@
   outline: none;
 }
 
-.br-input-action.is-valid input + .feedback {
+.br-input-action.is-valid + .feedback {
   color: #168821;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
 }
 /*# sourceMappingURL=input-action.css.map */

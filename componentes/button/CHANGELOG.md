@@ -1,5 +1,5 @@
 # Changelog
-Todas as modificações do componente **button** estão descritas neste arquivo.
+Todas as modificações do componente **br-button** estão descritas neste arquivo.
 
 O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) e o versionamento deste componente segue o [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -7,6 +7,9 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Botões de estados (**danger**, **success**, **warning**).
 
 ## [0.1.4] - 2019-06-17
+### Added
+- Padding interno nas laterais
+
 ### Changed
 - Mixins para aplicação de estilos
 

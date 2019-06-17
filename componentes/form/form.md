@@ -1,16 +1,16 @@
 ## Formulários (form)
 
-Para usar os componentes comuns de formulários no DS-Gov use a classe `br-form`.
+Para uso de formulários no DS-Gov use o componente `br-form`.
 
-Para cada entrada de informação do usuário use a classe `field`.
+Cada entrada de informação do usuário use o agrupador `field`.
 
-Ao final do formulário use a classe `action` para agrupar os botões de ações.
+Ao final do formulário use o agrupador `action` para os botões de ação.
 
 Veja como usar `field` e `action` nos exemplos a seguir.
 
 ## Uso de field
 
-Use sempre a classe `field` para agrupar labels e inputs.
+Use o agrupador `field` para labels e inputs.
 
 ```html
 <div class="br-form">
@@ -21,7 +21,11 @@ Use sempre a classe `field` para agrupar labels e inputs.
 </div>
 ```
 
-Use a Grid para separar `field` numa mesma linha. Exemplo:
+> **Atenção**! Os inputs dentro de `field` não precisam da classe `br-input`. Eles serão automaticamente estilizados. Outros componentes devem permanecer com suas respectivas classes, tais como `br-check`.
+
+### Uso da Grid
+
+Use a Grid do DS-Gov para vários `field` em mesma linha. Exemplo:
 
 ```html
 <div class="br-form">
@@ -45,17 +49,41 @@ Use a Grid para separar `field` numa mesma linha. Exemplo:
 </div>
 ```
 
-## Validações em fields
+### Estados
 
-Aplique as classes de validações diretamente em cada `field`. A mensagem de retorno para o usuário possue um template próprio e deve ser inserido logo após o `input`. Veja no exemplo a seguir.
+O `field` pode assumir novos estados. A lista de estados disponíveis é a seguinte:
+
+- focus
+- valid
+- invalid
+- disabled
+
+Os estados também podem ser aplicados por classe. O uso via classe deve ser usado com o prefixo `is-`. Exemplo:
 
 ```html
-<div class="field invalid">
-  <label for="item-2">Com erro</label>
-  <input id="item-2" type="text" placeholder="Insira um texto">
-  <div class="feedback">
-    <i class="fas fa-times"></i>
-    <span class="message">Texto inválido</span>
+<div class="br-form">
+  <div class="field is-valid">
+    <label for="item-3">Validado</label>
+    <input id="item-3" type="text" placeholder="Insira um texto">
+</div>
+</div>
+```
+
+> **Atenção**! O estado `disabled` é aplicado somente quando a propriedade está aplicada no input.
+
+### Mensagens de feedback
+
+Nos casos de erros ou retorno positivo do campo é possível usar um template de mensagem dentro do `field`. Veja a seguir um exemplo:
+
+```html
+<div class="br-form">
+  <div class="field is-invalid">
+    <label for="item-2">Com erro</label>
+    <input id="item-2" type="text" placeholder="Insira um texto">
+    <div class="feedback">
+      <i class="fas fa-times"></i>
+      <span class="message">Texto inválido</span>
+    </div>
   </div>
 </div>
 ```
@@ -64,12 +92,12 @@ Para os ícones use a família de ícones Fontawesome - [https://fontawesome.com
 
 Algumas convenções de ícones:
 
-- Retorno negativo: `fas fa-times`
-- Retorno positivo: `fas fa-check`
+- Retorno negativo: `fas fa-times-circle`
+- Retorno positivo: `fas fa-check-circle`
 
 ## Uso de actions
 
-Os botões de ação do formulário devem ficar dentro da classe `actions`.
+Os botões de ação do formulário devem ficar dentro de `actions`.
 
 ```html
 <div class="br-form">

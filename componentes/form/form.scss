@@ -1,76 +1,81 @@
 // Carregar variáveis do DS-Gov
-@import "../../estilos/scss/dsgov-base.scss";
+@import "../../estilos/scss/dsgov-base";
 
-// Carregar as dependências
-@import "form-base";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente forms
+ * Versão 0.1.0
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+
+// Carregar dependências
+@import "../button/configs";
+@import "../input/configs";
+@import "../input/mixins";
+@import "../checkbox/configs";
+@import "../checkbox/mixins";
+@import "configs";
 
 // Aplicar usando prefixo
 .#{$prefix}form {
-  font-family: $form-font-family;
   // Agrupador de controles
   .field {
     margin: $field-margin;
     // Labels
     label {
-      @extend %label;
+      font-size: $label-font-size;
+      font-weight: $label-font-weight;
     }
     // Inputs
     input {
-      @extend %input;
+      @include input;
+      @include input-states;
+      // Placeholder
+      &::placeholder {
+        @include placeholder;
+      }
     }
-    // Mensagem de retorno
+    // Feedback
     .feedback {
-      font-size: $feedback-font-size;
-      font-style: $feedback-font-style;
-      padding: $feedback-padding;
+      @include feedback;
     }
     // Estados
-    &.focus {
+    &.is-focus {
       input {
-        border-color: $input-bg-focus;
-        box-shadow: 0 0 0 1px $input-bg-focus;
+        @include input-focus($color-primary-lighten-15);
       }
     }
-    &.valid {
+    &.is-invalid {
       input {
-        border-color: $input-bg-valid;
-        box-shadow: 0 0 0 1px $input-bg-valid;
+        @include input-state($color-danger);
       }
       .feedback {
-        color: $input-bg-valid;
+        @include feedback($color-danger);
       }
     }
-    &.invalid {
+    &.is-valid {
       input {
-        border-color: $input-bg-invalid;
-        box-shadow: 0 0 0 1px $input-bg-invalid;
+        @include input-state($color-success);
       }
       .feedback {
-        color: $input-bg-invalid;
-      }
-    }
-    &.disabled {
-      input {
-        background: $input-bg-disabled;
-        color: $input-color-disabled;
+        @include feedback($color-success);
       }
     }
   }
   // Agrupador de botões
   .actions {
     margin: $field-margin;
+    text-align: center;
     @include media-breakpoint-up(sm) {
+      align-items: baseline;
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-end;
       .#{$prefix}btn + .#{$prefix}btn {
         margin-left: 0;
-        margin-right: $spacer * 3;
+        margin-right: $btn-margin-horizontal;
       }
     }
-  }
-
-  ::placeholder {
-    @extend %placeholder;
   }
 }

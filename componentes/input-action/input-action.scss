@@ -28,6 +28,10 @@
     &:last-child {
       padding-left: $action-margin;
     }
+    // Placeholder
+    &::placeholder {
+      @include placeholder;
+    }
   }
   // Botão de ação
   .action {
@@ -49,7 +53,9 @@
     }
   }
   // Feedback
-  @include feedback;
+  & + .feedback {
+    @include feedback;
+  }
   // Estados
   &.is-focus {
     input {
@@ -60,10 +66,16 @@
     input {
       @include input-state($color-danger);
     }
+    & + .feedback {
+      @include feedback($color-danger);
+    }
   }
   &.is-valid {
     input {
       @include input-state($color-success);
+    }
+    & + .feedback {
+      @include feedback($color-success);
     }
   }
 }
