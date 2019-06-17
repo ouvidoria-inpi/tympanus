@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.3] - 2019-06-11
+### Changed
+- html de exemplo de uso
+
 ## [0.0.2] - 2019-06-11
 ### Added
 - Arquivo CHANGELOG.md
