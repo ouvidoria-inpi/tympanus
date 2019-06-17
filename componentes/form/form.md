@@ -95,6 +95,26 @@ Algumas convenções de ícones:
 - Retorno negativo: `fas fa-times-circle`
 - Retorno positivo: `fas fa-check-circle`
 
+### Mensagens de ajuda
+
+Nos casos em que for necessário incluir um texto explicativo para auxiliar o usuário a preencher a informação use a classe `help`.
+
+Coloque o texto após o feedback do sistema. Dê preferência a tag html `<p>`.
+
+```html
+<div class="br-form">
+  <div class="field is-invalid">
+    <label for="item-2">Com erro</label>
+    <input id="item-2" type="text" placeholder="Insira um texto">
+    <div class="feedback">
+      <i class="fas fa-times"></i>
+      <span class="message">Texto inválido</span>
+    </div>
+    <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+  </div>
+</div>
+```
+
 ## Uso de actions
 
 Os botões de ação do formulário devem ficar dentro de `actions`.
