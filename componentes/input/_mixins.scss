@@ -18,32 +18,24 @@
   outline: none;
 }
 
+@mixin input-state($color) {
+  border-color: $color;
+  &:focus {
+    @include input-focus($color);
+  }
+  & + .feedback {
+    color: $color;
+  }
+}
+
 @mixin input-states {
-  &:focus,
-  &.is-focus {
+  &:focus {
     @include input-focus($color-primary-lighten-15);
   }
-  &.is-valid {
-    border-color: $color-success;
-    &:focus {
-      @include input-focus($color-success);
-    }
-    & + .feedback {
-      color: $color-success;
-    }
+  &:invalid {
+    @include input-state($color-danger);
   }
-  &:invalid,
-  &.is-invalid {
-    border-color: $color-danger;
-    &:focus {
-      @include input-focus($color-danger);
-    }
-    & + .feedback {
-      color: $color-danger;
-    }
-  }
-  &:disabled,
-  &.is-disabled {
+  &:disabled {
     background: $input-bg-disabled;
   }
 }

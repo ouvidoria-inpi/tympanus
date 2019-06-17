@@ -18,6 +18,15 @@
   @include input;
   // Estados
   @include input-states;
+  &.is-focus {
+    @include input-focus($color-primary-lighten-15);
+  }
+  &.is-invalid {
+    @include input-state($color-danger);
+  }
+  &.is-valid {
+    @include input-state($color-success);
+  }
   // Feedback
   @include feedback;
   // Placeholder
