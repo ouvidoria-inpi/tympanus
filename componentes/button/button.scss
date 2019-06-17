@@ -1,107 +1,38 @@
 // Carregar variáveis do DS-Gov
-@import "../../estilos/scss/dsgov-base.scss";
+@import "../../estilos/scss/dsgov-base";
 
-$prefix: "br-";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente Botão (button)
+ * Versão 0.1.4
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
 
-$btn-font-size: 16px;
-$btn-font-weight: 700;
-$btn-padding: ($spacer) ($spacer * 2);
-$btn-max-width: 144px;
-$btn-border-width: 1px;
-$btn-border-style: solid;
-$btn-radius: 100px;
-$btn-color: gov-color(white);
-$btn-link: gov-color(dark);
-$btn-active: gov-color(primary);
-$btn-hover: lighten($btn-active, 15);
-$btn-disabled: gov-color(gray, 3);
+// Carregar dependências
+@import "configs";
+@import "mixins";
 
-// Regra de espaçamento entre botões
+// Estilos de botões
 .#{$prefix}btn {
-  display: inline-block;
-  font-family: $rawline, sans-serif;
   font-weight: $btn-font-weight;
+  &.is-primary {
+    @include btn-pill($color-primary, $color-primary, $color-white);
+  }
+  &.is-secondary {
+    @include btn-pill;
+  }
+  &.is-tertiary {
+    @include btn-link;
+  }
+  &.is-cancel {
+    @include btn-link($color-gray-6);
+  }
   & + & {
-    margin-top: $spacer * 2;
-  }
-  @include media-breakpoint-up(sm) {
-    & + & {
+    margin-top: $btn-margin-vertical;
+    @include media-breakpoint-up(sm) {
+      margin-left: $btn-margin-horizontal;
       margin-top: 0;
-      margin-left: $spacer * 3;
     }
   }
 }
-
-// Estilo do botão pílula
-@mixin btn-pill($type, $color, $background) {
-  .#{$prefix}btn {
-    &.btn-#{$type} {
-      background: $color;
-      color: $background;
-      border: $btn-border-width $btn-border-style $btn-active;
-      border-radius: $btn-radius;
-      font-size: $btn-font-size;
-      padding: $btn-padding;
-      text-align: center;
-      text-decoration: none;
-      width: 100%;
-      @include media-breakpoint-up(sm) {
-        min-width: 144px;
-        max-width: 100%;
-        width: auto;
-      }
-      &:focus,
-      &.focus {
-        outline: none !important;
-        box-shadow: 0 3px 6px -3px $btn-active !important;
-      }
-      &:hover,
-      &.hover {
-        background: $btn-hover !important;;
-        border-color: $btn-hover !important;
-        color: $btn-color !important;
-        text-decoration: none !important;
-      }
-      &:disabled,
-      &.disabled {
-        background: $btn-disabled !important;
-        color: $btn-color !important;
-        border-color: $btn-disabled !important;
-        box-shadow: none !important;
-      }
-    }
-  }
-}
-
-// Estilo do botão link
-@mixin btn-link($type, $color) {
-  .#{$prefix}btn {
-    &.btn-#{$type} {
-      background: transparent;
-      border: 0;
-      color: $color;
-      padding: 0;
-      text-decoration: underline;
-      &:focus,
-      &.focus {
-        outline: none !important;
-        text-shadow: 0 3px 6px currentColor !important;
-      }
-      &:hover,
-      &.hover {
-        color: $btn-hover !important;
-      }
-      &:disabled,
-      &.disabled {
-        color: $btn-disabled !important;
-        text-shadow: none !important;
-      }
-    }
-  }
-}
-
-// Aplicação dos estilos
-@include btn-pill(primary, $btn-active, $btn-color);
-@include btn-pill(secondary, $btn-color, $btn-active);
-@include btn-link(tertiary, $btn-active);
-@include btn-link(cancel, $btn-link);

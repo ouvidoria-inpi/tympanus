@@ -1,8 +1,16 @@
+@charset "UTF-8";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente input
+ * Versão 0.1.4
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
 .br-input {
-  background: #fff;
-  border: 1px solid #888;
+  background: #ffffff;
+  border: 1px solid #888888;
   border-radius: 6px;
-  color: #555;
+  color: #333333;
   display: block;
   font-family: "rawline", "raleway", sans-serif;
   font-size: 16px;
@@ -11,27 +19,82 @@
   width: 100%;
 }
 
-.br-input:focus, .focus.br-input {
+.br-input:focus {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
 }
 
-.valid.br-input {
+.br-input:invalid {
+  border-color: #ff3333;
+}
+
+.br-input:invalid:focus {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
+  outline: none;
+}
+
+.br-input:invalid + .feedback {
+  color: #ff3333;
+}
+
+.br-input:disabled {
+  background: #ededed;
+}
+
+.br-input.is-focus {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+          box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
+}
+
+.br-input.is-invalid {
+  border-color: #ff3333;
+}
+
+.br-input.is-invalid:focus {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
+  outline: none;
+}
+
+.br-input.is-invalid + .feedback {
+  color: #ff3333;
+}
+
+.br-input.is-valid {
+  border-color: #168821;
+}
+
+.br-input.is-valid:focus {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
+  outline: none;
 }
 
-.br-input:invalid, .invalid.br-input {
-  border-color: #f33;
-  -webkit-box-shadow: 0 0 0 1px #f33;
-          box-shadow: 0 0 0 1px #f33;
+.br-input.is-valid + .feedback {
+  color: #168821;
 }
 
-.br-input:disabled, .disabled.br-input {
-  background: #EDEDED;
-  color: #888;
+.br-input + .feedback {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.is-valid .br-input + .feedback {
+  color: #168821;
+}
+
+.is-invalid .br-input + .feedback {
+  color: #ff3333;
 }
 
 .br-input::-webkit-input-placeholder {

@@ -1,0 +1,23 @@
+// Definições
+$input-font-family: $fonts;
+$input-font-size: 16px;
+$input-font-weight: 600;
+
+$input-padding: spacer(1) spacer(3);
+
+$input-border-color: $color-gray-5;
+$input-border-width: 1px;
+$input-border-style: solid;
+$input-radius: 6px;
+
+$input-bg: $color-white;
+$input-bg-disabled: $color-gray-2;
+$input-color: $color-gray-7;
+
+$placeholder-font-size: 13px;
+$placeholder-font-style: italic;
+
+$feedback-padding: spacer(half);
+$feedback-font-size: 13px;
+$feedback-font-style: italic;
+$feedback-font-weight: 500;
