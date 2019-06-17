@@ -21,7 +21,7 @@
 .#{$prefix}form {
   // Agrupador de controles
   .field {
-    margin: $field-margin;
+    margin-bottom: $field-margin;
     // Labels
     label {
       font-size: $label-font-size;
@@ -65,7 +65,7 @@
   }
   // Agrupador de botões
   .actions {
-    margin: $field-margin;
+    margin-bottom: $field-margin;
     text-align: center;
     @include media-breakpoint-up(sm) {
       align-items: baseline;
