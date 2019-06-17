@@ -5,7 +5,7 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
-## [0.1.3] - 2019-06-11
+## [0.1.3] - 2019-06-17
 ### Changed
 - html de exemplo de uso
 
