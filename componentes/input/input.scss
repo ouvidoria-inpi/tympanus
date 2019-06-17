@@ -23,12 +23,20 @@
   }
   &.is-invalid {
     @include input-state($color-danger);
+    & + .feedback {
+      @include feedback($color-danger);
+    }
   }
   &.is-valid {
     @include input-state($color-success);
+    & + .feedback {
+      @include feedback($color-success);
+    }
   }
   // Feedback
-  @include feedback;
+  & + .feedback {
+    @include feedback;
+  }
   // Placeholder
   &::placeholder {
     @include placeholder;

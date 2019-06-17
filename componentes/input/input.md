@@ -38,9 +38,9 @@ Você poderá usar o input de forma isolada ou dentro da classe `field` do `br-f
 
 Repare que ao usar o `br-form` e `field` a classe `br-input` não é necessária, pois o form do DS-Gov já prepara seus componentes internos configurados para o formato DS-Gov.
 
-## Estados do input
+## Estados
 
-O input pode assumir novos estados. A lista de estados disponíveis é a seguinte:
+O `br-input` pode assumir novos estados. A lista de estados disponíveis é a seguinte:
 
 - focus
 - valid
@@ -50,21 +50,17 @@ O input pode assumir novos estados. A lista de estados disponíveis é a seguint
 Os estados também podem ser aplicados por classe. O uso via classe deve ser usado com o prefixo `is-`. Exemplo:
 
 ```html
-<input class="br-input is-disabled" type="text" placeholder="Insira um texto">
-<input class="br-input" type="text" placeholder="Insira um texto" disabled>
+<input class="br-input is-valid" type="text" placeholder="Insira um texto">
 ```
 
-No exemplo acima, a aplicação do estilo de input desabilitado está sendo feito de 2 formas.
+> **Atenção**! O estado `disabled` é aplicado somente quando a propriedade está aplicada no input.
 
-O primeiro exemplo apenas aplica o visual de desabilitado. Para esses casos é necessário complementar o input com scripts para desabilitar o componente.
- 
-O segundo exemplo desabilita de fato o input e é a **forma correta de uso**.
+## Mensagens de feedback
 
-## Mensagens de feedback nos inputs
-
-Nos casos de erros ou retorno positivo do campo é possível usar um template de mensagem logo após o input. Veja a seguir um exemplo:
+Nos casos de erros ou retorno positivo do campo é possível usar um template de mensagem logo após o `br-input`. Veja a seguir um exemplo:
 
 ```html
+<label for="invalido">Label</label>
 <input class="br-input is-invalid" id="invalido" type="text" placeholder="Insira um texto">
 <div class="feedback">
   <i class="fas fa-times-circle"></i>
@@ -78,7 +74,3 @@ Algumas convenções de ícones:
 
 - Retorno negativo: `fas fa-times-circle`
 - Retorno positivo: `fas fa-check-circle`
-
-> **Atenção**! Há uma regra especial no template de feedback. Ele sempre deve vir logo após o `<input class="br-input">`. Do contrário o template não será estilizado corretamente.
-
-Para usar o template de feedback de forma livre use o `br-form`, neste caso a regra acima não se aplica.
