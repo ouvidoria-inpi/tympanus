@@ -7,12 +7,13 @@
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
 .br-form .field {
-  margin-bottom: 16px;
+  margin-bottom: 36px;
 }
 
 .br-form .field label {
   font-size: 14px;
   font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .br-form .field input {
@@ -77,6 +78,11 @@
   padding: 4px;
 }
 
+.br-form .field .help {
+  color: #333333;
+  font-size: 13px;
+}
+
 .br-form .field.is-focus input {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
@@ -123,7 +129,7 @@
 }
 
 .br-form .actions {
-  margin-bottom: 16px;
+  margin-bottom: 36px;
   text-align: center;
 }
 

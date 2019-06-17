@@ -26,6 +26,7 @@
     label {
       font-size: $label-font-size;
       font-weight: $label-font-weight;
+      margin-bottom: spacer(half);
     }
     // Inputs
     input {
@@ -39,6 +40,11 @@
     // Feedback
     .feedback {
       @include feedback;
+    }
+    // Texto de ajuda
+    .help {
+      color: $help-color;
+      font-size: $help-font-size;
     }
     // Estados
     &.is-focus {
