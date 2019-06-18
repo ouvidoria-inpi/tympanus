@@ -28,9 +28,11 @@ $navigation-font-size: 17px;
   padding: 0 spacer(3);
   &.is-active {
     .tab-link {
-      box-shadow: inset 0 -4px 0 0 $color-primary;
       color: $color-primary;
       font-weight: 700;
+    }
+    .tab-name {
+      box-shadow: inset 0 -4px 0 0 $color-primary;
     }
   }
 }
@@ -39,7 +41,7 @@ $navigation-font-size: 17px;
   display: flex;
   flex: 1;
   font-weight: 500;
-  padding: spacer(3) 0;
+  padding: 0;
   &:hover {
     text-decoration: none;
   }
@@ -48,12 +50,14 @@ $navigation-font-size: 17px;
   align-self: center;
   justify-content: center;
   & + .tab-name {
-    margin-left: spacer(half);
+    margin-left: 0;
   }
 }
 .tab-name {
-  padding: 0 spacer(1) 0 0;
-  margin-left: 32px + spacer(half);
+  flex: 1;
+  margin-left: 32px;
+  margin-right: spacer(5);
+  padding: spacer(3) spacer(1);
 }
 
 // Navs
