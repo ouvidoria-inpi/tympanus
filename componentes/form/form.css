@@ -7,7 +7,13 @@
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
 .br-form .field {
-  margin-bottom: 36px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 576px) {
+  .br-form .field {
+    margin-bottom: 36px;
+  }
 }
 
 .br-form .field label {
@@ -129,8 +135,14 @@
 }
 
 .br-form .actions {
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   text-align: center;
+}
+
+@media (min-width: 576px) {
+  .br-form .actions {
+    margin-bottom: 36px;
+  }
 }
 
 @media (min-width: 576px) {

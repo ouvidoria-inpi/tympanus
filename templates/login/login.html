@@ -42,11 +42,11 @@
       <div class="container">
         <div class="row">
           <!-- Lado esquerdo -->
-          <div class="col-sm-3 col-lg-5">
+          <div class="col-sm-5">
             <div class="row justify-content-end">
-              <div class="col-lg-8 col-xl-7">
+              <div class="col-sm-9 col-md-7 col-lg-7 col-xl-6">
                 <!-- Logo -->
-                <a id="nav-logo" class="logo p-4 d-none d-sm-flex justify-content-center" href="#">
+                <a id="nav-logo" class="logo d-none d-sm-flex py-8" href="#">
                   <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
                   <!-- <span class="logo-title"></span> -->
                   <!-- <span class="logo-description"></span> -->
@@ -93,136 +93,134 @@
               </div>
             </div>
           </div>
-          <!-- LAdo direito -->
-          <div class="col-sm-9 col-lg-7 bg-white">
-            <div class="container pl-sm-4">
-              <!-- Cabeçalho da página -->
-              <header id="header" class="page-header pt-2">
-                <!-- Acessibilidade -->
-                <ul class="accessibility pb-3">
-                  <li class="accessibility-contrast">
-                    <a id="contrast" href="#" accesskey="6">
-                      <img src="../../assets/images/alto-contraste.png" alt="Alto contraste">
-                      <span class="d-none d-sm-inline">Alto Contraste</span>
-                    </a>
-                  </li>
-                  <li class="accessibility-vlibras">
-                    <a id="vlibras" href="http://www.vlibras.gov.br/">
-                      <img src="../../assets/images/vlibras.png" alt="VLibras">
-                      <span class="d-none d-sm-inline">VLibras</span>
-                    </a>
-                  </li>
-                </ul>
-                <!-- Logo -->
-                <a id="logo" class="logo d-sm-none" href="#">
-                  <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
-                  <!-- <span class="logo-title"></span> -->
-                  <!-- <span class="logo-description"></span> -->
-                </a>
-                <!-- Descrição da página -->
-                <!-- <p class="page-description d-none d-sm-block pt-3">
-                  <i>
-                    Este Login garante a identificação de cada cidadão<br>
-                    que acessa os serviços digitais do governo.
-                  </i>
-                </p> -->
+          <!-- Lado direito -->
+          <div class="col bg-white">
+            <!-- Cabeçalho da página -->
+            <header id="header" class="page-header pt-1">
+              <!-- Acessibilidade -->
+              <ul class="accessibility">
+                <li class="accessibility-contrast">
+                  <a id="contrast" href="#" accesskey="6">
+                    <img src="../../assets/images/alto-contraste.png" alt="Alto contraste">
+                    <span class="d-none d-sm-inline">Alto Contraste</span>
+                  </a>
+                </li>
+                <li class="accessibility-vlibras">
+                  <a id="vlibras" href="http://www.vlibras.gov.br/">
+                    <img src="../../assets/images/vlibras.png" alt="VLibras">
+                    <span class="d-none d-sm-inline">VLibras</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Logo -->
+              <a id="logo" class="logo d-sm-none" href="#">
+                <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
+                <!-- <span class="logo-title"></span> -->
+                <!-- <span class="logo-description"></span> -->
+              </a>
+              <!-- Descrição da página -->
+              <!-- <p class="page-description d-none d-sm-block pt-3">
+                <i>
+                  Este Login garante a identificação de cada cidadão<br>
+                  que acessa os serviços digitais do governo.
+                </i>
+              </p> -->
+            </header>
+            <!-- Conteúdo principal -->
+            <main id="content" class="page-content pl-sm-8">
+              <!-- Cabeçalho do conteúdo principal -->
+              <header class="content-header pt-3">
+                <h1 class="content-title pb-3">Acesse sua conta</h1>
               </header>
-              <!-- Conteúdo principal -->
-              <main id="content" class="page-content">
-                <!-- Cabeçalho do conteúdo principal -->
-                <header class="content-header pt-3">
-                  <h1 class="content-title pb-3">Acesse sua conta</h1>
-                </header>
 
-                <div class="row">
-                  <div class="col-sm-9 col-md-6 col-lg-7 col-xl-6">
-                    <!-- Área de preenchimento do usuário -->
-                    <section class="br-form">
-                      <!-- Informar CPF -->
-                      <div class="field">
-                        <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" placeholder="Digite somente números">
+              <div class="row">
+                <div class="col">
+                  <!-- Área de preenchimento do usuário -->
+                  <section class="br-form">
+                    <!-- Informar CPF -->
+                    <div class="field">
+                      <label for="cpf">CPF</label>
+                      <input type="text" id="cpf" placeholder="Digite somente números">
+                    </div>
+                    <!-- Informar a senha -->
+                    <div class="field">
+                      <label for="password">Senha</label>
+                      <div class="br-input-action">
+                        <input type="password" id="password" placeholder="Digite sua senha de 8 a 11 dígitos">
+                        <button onclick="mostrarEsconder()" class="action">
+                          <span class="sr-only">Mostrar senha</span>
+                          <i id="password-icon" class="fas fa-eye"></i>
+                        </button>
                       </div>
-                      <!-- Informar a senha -->
-                      <div class="field">
-                        <label for="password">Senha</label>
-                        <div class="br-input-action">
-                          <input type="password" id="password" placeholder="Digite sua senha de 8 a 11 dígitos">
-                          <button onclick="mostrarEsconder()" class="action">
-                            <span class="sr-only">Mostrar senha</span>
-                            <i id="password-icon" class="fas fa-eye"></i>
-                          </button>
+                    </div>
+                    <!-- Facilidades de senha -->
+                    <div class="row justify-content-between mb-5">
+                      <div class="col-auto">
+                        <a class="br-btn is-tertiary forgot-password" href="#">Esqueceu a Senha?</a>
+                      </div>
+                      <div class="col-auto">
+                        <div class="br-check">
+                          <input type="checkbox" id="manter-logado">
+                          <label for="manter-logado">Manter logado</label>
                         </div>
                       </div>
-                      <!-- Facilidades de senha -->
-                      <div class="row justify-content-between mb-7">
-                        <div class="col-auto">
-                          <a class="br-btn is-tertiary forgot-password" href="#">Esqueceu a Senha?</a>
-                        </div>
-                        <div class="col-auto">
-                          <div class="br-check">
-                            <input type="checkbox" id="manter-logado">
-                            <label for="manter-logado">Manter logado</label>
+                    </div>
+                    <!-- Botões de ação -->
+                    <div class="actions justify-content-center">
+                      <button class="br-btn is-primary">Entrar</button>
+                      <button class="br-btn is-secondary">Cadastrar</button>
+                    </div>
+                  </section>
+                  <!-- Navegação para smartphones -->
+                  <nav class="content-navigation d-sm-none pt-2 pb-5">
+                    <div class="row">
+                      <div class="col">
+                        <div class="media">
+                          <div class="media-left align-self-center">
+                            <img src="../../assets/images/certificado-digital.png" alt="Certificado Digital">
+                          </div>
+                          <div class="media-content">
+                            <a href="#">Entrar com Certificado Digital</a>
                           </div>
                         </div>
                       </div>
-                      <!-- Botões de ação -->
-                      <div class="actions">
-                        <button class="br-btn is-primary">Entrar</button>
-                        <button class="br-btn is-secondary">Cadastrar</button>
-                      </div>
-                    </section>
-                    <!-- Navegação para smartphones -->
-                    <nav class="content-navigation d-sm-none pt-2 pb-3">
-                      <div class="row">
-                        <div class="col-7">
-                          <div class="media">
-                            <div class="media-left align-self-center">
-                              <img src="../../assets/images/certificado-digital.png" alt="Certificado Digital">
-                            </div>
-                            <div class="media-content">
-                              <a href="#">Entrar com Certificado Digital</a>
-                            </div>
+                      <div class="col">
+                        <div class="media">
+                          <div class="media-left align-self-center">
+                            <img src="../../assets/images/neoid.png" alt="NeoID">
                           </div>
-                        </div>
-                        <div class="col-5">
-                          <div class="media">
-                            <div class="media-left align-self-center">
-                              <img src="../../assets/images/neoid.png" alt="NeoID">
-                            </div>
-                            <div class="media-content">
-                              <a href="#">Entrar com NeoID</a>
-                            </div>
+                          <div class="media-content">
+                            <a href="#">Entrar com NeoID</a>
                           </div>
                         </div>
                       </div>
-                    </nav>
-                    <!-- Outras opções de login -->
-                    <aside class="content-aside pt-sm-3 pb-3 pb-sm-8">
-                      <!-- Divisor de conteúdo personalizado -->
-                      <div class="hr-horizontal">
-                        <span class="hr-text">Ou</span>
-                        <span class="hr-text d-none d-sm-inline"> conecte-se com</span>
-                      </div>
-                      <!-- Login com redes sociais -->
-                      <ul class="login-social-network justify-content-center pt-sm-3">
-                        <li>
-                          <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/facebook.png"
-                              alt="Facebook"></a>
-                        </li>
-                        <li>
-                          <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/twitter.png" alt="Twitter"></a>
-                        </li>
-                        <li>
-                          <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/googleplus.png"
-                              alt="Google+"></a>
-                        </li>
-                      </ul>
-                    </aside>
-                  </div>
+                    </div>
+                  </nav>
+                  <!-- Outras opções de login -->
+                  <aside class="content-aside pt-sm-3 pb-3 pb-sm-8">
+                    <!-- Divisor de conteúdo personalizado -->
+                    <div class="hr-horizontal">
+                      <span class="hr-text">Ou</span>
+                      <span class="hr-text d-none d-sm-inline"> conecte-se com</span>
+                    </div>
+                    <!-- Login com redes sociais -->
+                    <ul class="login-social-network justify-content-center py-3 pt-sm-3">
+                      <li>
+                        <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/facebook.png"
+                            alt="Facebook"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/twitter.png" alt="Twitter"></a>
+                      </li>
+                      <li>
+                        <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/google.png"
+                            alt="Google"></a>
+                      </li>
+                    </ul>
+                  </aside>
                 </div>
-              </main>
-            </div>
+              </div>
+            </main>
           </div>
         </div>
       </div>
