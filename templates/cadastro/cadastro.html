@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>login</title>
+  <title>Cadastro</title>
   <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../componentes/form/form.css">
   <link rel="stylesheet" href="../../componentes/input-action/input-action.css">
   <link rel="stylesheet" href="../../componentes/checkbox/checkbox.css">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="cadastro.css">
 </head>
 
 <body>
@@ -52,44 +52,57 @@
                   <!-- <span class="logo-description"></span> -->
                 </a>
                 <!-- Descrição da página -->
-                <p class="nav-description d-none d-md-block pr-3 pb-3">
+                <!-- <p class="nav-description d-none d-md-block pr-3 pb-3">
                   <i>
                     Este Login garante a identificação de cada cidadão
                     que acessa os serviços digitais do governo.
                   </i>
+                </p> -->
+                <!-- Outras opções de cadastro -->
+                <nav class="cadastre-se d-none d-sm-block pt-3">
+                  <p class="d-sm-flex justify-content-center text-primary mb-5">Cadastre-se com</p>
+                  <div class="mb-5">
+                    <a href="#" class="media mb-2">
+                      <div class="media-left">
+                        <img src="../../assets/images/certificado-digital.png" alt="Certificado Digital">
+                      </div>
+                      <div class="media-content">
+                        <span>Certificado Digital</span>
+                      </div>
+                    </a>
+                    <a href="#" class="media">
+                      <div class="media-left">
+                        <img src="../../assets/images/neoid.png" alt="NeoID">
+                      </div>
+                      <div class="media-content">
+                        <span>NeoID</span>
+                      </div>
+                    </a>
+                  </div>
+                </nav>
+                <p class="text-center d-none d-sm-block mb-8 mt-6">
+                  <a href="" class="br-btn is-tertiary">Saiba como obter Certificado Digital</a>
                 </p>
-                <!-- Menu de navegação -->
-                <nav id="navigation" class="page-navigation d-none d-sm-block">
-                  <ul class="tabs flex-column">
-                    <li class="tab-item is-active">
-                      <a href="#" class="tab-link">
-                        <div class="tab-name">
-                          <span>Entrar com CPF</span>
-                        </div>
-                      </a>
+                <aside class="d-none d-sm-block mx-sm-1 mx-md-3 mx-lg-4 mb-3">
+                  <!-- Divisor de conteúdo personalizado -->
+                  <div class="hr-horizontal">
+                    <span class="hr-text">Ou</span>
+                  </div>
+                  <!-- Login com redes sociais -->
+                  <ul class="login-social-network justify-content-center py-3 pt-sm-3">
+                    <li>
+                      <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/facebook.png"
+                          alt="Facebook"></a>
                     </li>
-                    <li class="tab-item">
-                      <a href="#" class="tab-link">
-                        <div class="tab-icon">
-                          <img src="../../assets/images/certificado-digital.png" alt="Certificado Digital">
-                        </div>
-                        <div class="tab-name">
-                          <span>Entrar com Certificado Digital</span>
-                        </div>
-                      </a>
+                    <li>
+                      <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/twitter.png" alt="Twitter"></a>
                     </li>
-                    <li class="tab-item">
-                      <a href="#" class="tab-link">
-                        <div class="tab-icon">
-                          <img src="../../assets/images/neoid.png" alt="NeoID">
-                        </div>
-                        <div class="tab-name">
-                          <span>Entrar com NeoID</span>
-                        </div>
-                      </a>
+                    <li>
+                      <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/google.png"
+                          alt="Google"></a>
                     </li>
                   </ul>
-                </nav>
+                </aside>
               </div>
             </div>
           </div>
@@ -134,7 +147,7 @@
             <main id="content" class="page-content pl-sm-8 pt-sm-8">
               <!-- Cabeçalho do conteúdo principal -->
               <header class="content-header pb-5 pb-sm-8 pt-3 pl-md-8">
-                <h1 class="content-title">Acesse sua conta</h1>
+                <h1 class="content-title">Cadastre-se</h1>
               </header>
 
               <div class="row pl-md-8">
@@ -148,7 +161,7 @@
                     </div>
                     <!-- Informar a senha -->
                     <div class="field">
-                      <label for="password">Senha</label>
+                      <label for="password">Crie sua senha</label>
                       <div class="br-input-action">
                         <input type="password" id="password" placeholder="Digite sua senha de 8 a 11 dígitos">
                         <button onclick="mostrarEsconder()" class="action">
@@ -156,56 +169,23 @@
                           <i id="password-icon" class="fas fa-eye"></i>
                         </button>
                       </div>
+                      <p class="help">Sua senha deve ter entre 8 e 11 dígitos</p>
                     </div>
                     <!-- Facilidades de senha -->
-                    <div class="row justify-content-between mb-5 mb-sm-6">
-                      <div class="col-auto">
-                        <a class="br-btn is-tertiary forgot-password" href="#">Esqueceu a Senha?</a>
-                      </div>
-                      <div class="col-auto">
-                        <div class="br-check">
-                          <input type="checkbox" id="manter-logado">
-                          <label for="manter-logado">Manter logado</label>
-                        </div>
-                      </div>
+                    <div class="field">
+                      <p>Já tem conta? <a href="">Fazer login</a></p>
                     </div>
                     <!-- Botões de ação -->
-                    <div class="actions justify-content-center">
-                      <button class="br-btn is-primary">Entrar</button>
-                      <button class="br-btn is-secondary">Cadastrar</button>
+                    <div class="actions justify-content-start">
+                      <button class="br-btn is-primary" disabled>Avançar</button>
+                      <!-- <button class="br-btn is-secondary">Cadastrar</button> -->
                     </div>
                   </section>
-                  <!-- Navegação para smartphones -->
-                  <nav class="content-navigation d-sm-none pt-2 pb-5">
-                    <div class="row">
-                      <div class="col">
-                        <div class="media">
-                          <div class="media-left align-self-center">
-                            <img src="../../assets/images/certificado-digital.png" alt="Certificado Digital">
-                          </div>
-                          <div class="media-content">
-                            <a href="#">Entrar com Certificado Digital</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="media">
-                          <div class="media-left align-self-center">
-                            <img src="../../assets/images/neoid.png" alt="NeoID">
-                          </div>
-                          <div class="media-content">
-                            <a href="#">Entrar com NeoID</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </nav>
-                  <!-- Outras opções de login -->
-                  <aside class="content-aside pt-sm-3 pb-3 pb-sm-8">
+                  <!-- Outras opções de cadastro -->
+                  <aside class="content-aside d-sm-none pt-sm-3 pb-3 pb-sm-8">
                     <!-- Divisor de conteúdo personalizado -->
                     <div class="hr-horizontal">
                       <span class="hr-text">Ou</span>
-                      <span class="hr-text d-none d-sm-inline"> conecte-se com</span>
                     </div>
                     <!-- Login com redes sociais -->
                     <ul class="login-social-network justify-content-center py-3 pt-sm-3">

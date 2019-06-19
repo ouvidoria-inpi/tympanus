@@ -15,7 +15,6 @@
 
 // Estilos de botões
 .#{$prefix}btn {
-  font-weight: $btn-font-weight;
   &.is-primary {
     @include btn-pill($color-primary, $color-primary, $color-white);
   }

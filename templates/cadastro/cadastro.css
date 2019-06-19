@@ -1,0 +1,158 @@
+@media (min-width: 576px) {
+  .page-background {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #f8f8f8), color-stop(50%, #ffffff));
+    background: linear-gradient(to right, #f8f8f8 50%, #ffffff 50%);
+  }
+}
+
+.media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.media-left + .media-content {
+  margin-left: 8px;
+}
+
+.media-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.media-content + .media-right {
+  margin-left: 8px;
+}
+
+.accessibility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.accessibility li:not(:last-child) {
+  margin-right: 24px;
+}
+
+.accessibility a {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  color: #333333;
+}
+
+@media (min-width: 576px) {
+  .accessibility img {
+    max-width: 16px;
+  }
+}
+
+.logo {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo-image {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.content-title {
+  color: #1351b4;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.page-content a {
+  background: transparent;
+  border: 0;
+  color: #1351b4;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.page-content a:focus, .page-content a.is-focus {
+  outline: 0;
+  text-shadow: 0 3px 6px currentColor;
+}
+
+.page-content a:hover, .page-content a.is-hover {
+  color: #2b74e9;
+  text-decoration: underline;
+}
+
+.page-content a:disabled, .page-content a.is-disabled {
+  color: #888888;
+  cursor: default;
+}
+
+.hr-horizontal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.hr-horizontal:after, .hr-horizontal:before {
+  content: "";
+  background: #888888;
+  height: 1px;
+  width: 100%;
+}
+
+.hr-horizontal .hr-text {
+  font-size: 13px;
+  padding: 0 16px;
+}
+
+.hr-vertical {
+  border-right: 1px solid #888888;
+}
+
+.login-social-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cadastre-se {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.cadastre-se a {
+  color: #555555;
+}
+
+.cadastre-se a:hover {
+  color: #2b74e9;
+  text-decoration: none;
+}
+/*# sourceMappingURL=cadastro.css.map */
