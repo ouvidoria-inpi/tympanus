@@ -1,0 +1,128 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+// Carregar configurações adicionais
+@import "../../componentes/button/configs";
+@import "../../componentes/button/mixins";
+
+// Background da página
+.page-background {
+  @include media-breakpoint-up(sm) {
+    background: linear-gradient(to right, $color-gray-1 50%, $color-white 50%);
+  }
+}
+
+// Conteúdo de midia
+.media {
+  display: flex;
+  align-items: center;
+  &-left {
+    & + .media-content {
+      margin-left: $spacer;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    & + .media-right {
+      margin-left: $spacer;
+    }
+  }
+}
+
+// Acessibilidade
+.accessibility {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  justify-content: flex-end;
+  li:not(:last-child) {
+    margin-right: $spacer * 3;
+  }
+  a {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    color: $color-gray-7;
+  }
+  img {
+    @include media-breakpoint-up(sm) {
+      max-width: 16px;
+    }
+  }
+}
+
+// Logo
+.logo {
+  justify-content: center;
+  &-image {
+    flex-shrink: 0;
+  }
+}
+
+// Cabeçalho do conteúdo principal
+$content-title-color: $color-primary;
+$content-title-font-size: 32px;
+$content-title-font-weight: 500;
+.content-title {
+  color: $content-title-color;
+  font-size: $content-title-font-size;
+  font-weight: $content-title-font-weight;
+  margin-bottom: 0;
+}
+
+// Conteúdo
+.page-content {
+  a {
+    @include btn-link;
+  }
+}
+
+// Divisores de conteúdo
+$hr-font-size: 13px;
+$hr-margin: 0 0 spacer(1);
+$hr-text-padding: spacer(3);
+$hr-color: $color-gray-5;
+.hr-horizontal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: $hr-margin;
+  text-transform: uppercase;
+  &:after,
+  &:before {
+    content: "";
+    background: $hr-color;
+    height: 1px;
+    width: 100%;
+  }
+  .hr-text {
+    font-size: $hr-font-size;
+    padding: 0 $hr-text-padding;
+  }
+}
+.hr-vertical {
+  border-right: 1px solid $hr-color;
+}
+
+// Login com redes sociais
+.login-social-network {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Cadastre-se
+.cadastre-se {
+  font-size: 20px;
+  font-weight: 500;
+  a {
+    color: $color-gray-6;
+    &:hover {
+      color: $color-primary-lighten-15;
+      text-decoration: none;
+    }
+  }
+}
