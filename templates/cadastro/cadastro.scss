@@ -15,6 +15,7 @@
 }
 
 // Check com inputs
+$input-max-size: 250px;
 .br-check-input {
   border-top: 1px solid $color-gray-2;
   display: flex;
@@ -30,16 +31,52 @@
     label {
       margin-right: spacer(1);
     }
+    &.is-active {
+      .input {
+        label {
+          display: none;
+        }
+        input {
+          visibility: visible;
+        }
+      }
+    }
   }
-  .input,
-  .check {
+  .check,
+  .icon,
+  .input {
     align-items: center;
     display: flex;
   }
   .check {
-    order: 1;
     @include check(checkbox, right);
     @include check(radio, right);
+    input[type="checkbox"],
+    input[type="radio"] {
+      // Esconder label do check
+      & + label {
+        color: transparent;
+        width: spacer(1);
+      }
+      // Item checado
+      &:checked {
+        & ~ .input input {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  .icon {
+    justify-content: center;
+    width: 32px;
+  }
+  .input {
+    flex: 1;
+    // Input
+    input {
+      visibility: hidden;
+      max-width: $input-max-size;
+    }
   }
 }
 

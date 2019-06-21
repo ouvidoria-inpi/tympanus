@@ -36,8 +36,17 @@
   margin-right: 8px;
 }
 
-.br-check-input .input,
-.br-check-input .check {
+.br-check-input .field.is-active .input label {
+  display: none;
+}
+
+.br-check-input .field.is-active .input input {
+  visibility: visible;
+}
+
+.br-check-input .check,
+.br-check-input .icon,
+.br-check-input .input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -47,9 +56,6 @@
 }
 
 .br-check-input .check {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
   display: inline-block;
   position: relative;
   display: inline-block;
@@ -99,7 +105,7 @@
 .br-check-input .check input[type="checkbox"]:checked + label:after {
   content: "";
   position: absolute;
-  left: 7px;
+  right: 7px;
   top: 3px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
@@ -126,8 +132,21 @@
 }
 
 .br-check-input .check input[type="checkbox"]:disabled:checked + label:before {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #888888;
+  border-color: #888888;
+}
+
+.br-check-input .check input[type="checkbox"]:disabled:checked + label:after {
+  content: "";
+  position: absolute;
+  right: 7px;
+  top: 3px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  width: 6px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .br-check-input .check.is-hover input[type="checkbox"] + label:before {
@@ -165,7 +184,7 @@
 .br-check-input .check.is-invalid input[type="checkbox"]:checked + label:after {
   content: "";
   position: absolute;
-  left: 7px;
+  right: 7px;
   top: 3px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
@@ -210,7 +229,7 @@
 .br-check-input .check.is-valid input[type="checkbox"]:checked + label:after {
   content: "";
   position: absolute;
-  left: 7px;
+  right: 7px;
   top: 3px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
@@ -276,7 +295,7 @@
   -webkit-box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
   height: 19px;
-  left: 0px;
+  right: 0px;
   position: absolute;
   top: 0px;
   width: 19px;
@@ -299,8 +318,20 @@
 }
 
 .br-check-input .check input[type="radio"]:disabled:checked + label:before {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #888888;
+  border-color: #888888;
+}
+
+.br-check-input .check input[type="radio"]:disabled:checked + label:after {
+  content: "";
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
+          box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
+  height: 19px;
+  right: 0px;
+  position: absolute;
+  top: 0px;
+  width: 19px;
 }
 
 .br-check-input .check.is-hover input[type="radio"] + label:before {
@@ -341,7 +372,7 @@
   -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
   height: 19px;
-  left: 0px;
+  right: 0px;
   position: absolute;
   top: 0px;
   width: 19px;
@@ -385,7 +416,7 @@
   -webkit-box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
   height: 19px;
-  left: 0px;
+  right: 0px;
   position: absolute;
   top: 0px;
   width: 19px;
@@ -399,6 +430,35 @@
 .br-check-input .check.is-valid.is-hover input[type="radio"] + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+}
+
+.br-check-input .check input[type="checkbox"] + label,
+.br-check-input .check input[type="radio"] + label {
+  color: transparent;
+  width: 8px;
+}
+
+.br-check-input .check input[type="checkbox"]:checked ~ .input input,
+.br-check-input .check input[type="radio"]:checked ~ .input input {
+  visibility: visible;
+}
+
+.br-check-input .icon {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+}
+
+.br-check-input .input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.br-check-input .input input {
+  visibility: hidden;
+  max-width: 250px;
 }
 
 .media {
