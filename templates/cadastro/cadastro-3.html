@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ative sua conta</title>
+  <title>Verifique seu celular</title>
   <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -88,59 +88,39 @@
             <main id="content" class="page-content pl-sm-8 pt-sm-8">
               <!-- Cabeçalho do conteúdo principal -->
               <header class="content-header pb-5 pb-sm-8 pt-3 pl-md-8">
-                <h1 class="content-title">Ative sua conta</h1>
+                <h1 class="content-title">Verifique seu celular</h1>
               </header>
 
               <div class="row pl-md-8">
                 <div class="col">
                   <!-- Área de preenchimento do usuário -->
                   <section class="br-form">
-                    <p>Para ativar sua conta enviaremos um <strong>código</strong> para você. Como prefere recebê-lo?</p>
-                    <!-- Seleção com input -->
-                    <div class="br-check-input">
-                      <div class="field">
-                        <div class="icon">
-                          <i class="far fa-envelope"></i>
-                        </div>
-                        <div class="input">
-                          <label for="email">E-mail</label>
-                          <input type="text" id="email" placeholder="Ex: fulano@email.com">
-                        </div>
-                        <div class="check">
-                          <input name="preferencia" type="radio" id="email-check">
-                          <label for="email-check">E-mail</label>
-                        </div>
-                      </div>
-                      <div class="field is-active">
-                        <div class="icon">
-                          <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="input">
-                          <label for="celular">Celular</label>
-                          <input type="text" id="celular" placeholder="Ex: (xx) x xxxx-xxxx">
-                        </div>
-                        <div class="check">
-                          <input name="preferencia" type="radio" id="celular-check" checked>
-                          <label for="celular-check">Celular</label>
-                        </div>
+                      <p>Um código foi enviado para <strong>(61) 1234-5678</strong>.</p>
+                      <p>Por favor, digite-o no campo abaixo:</p>
+                    <!-- Código -->
+                    <div class="row field mb-7">
+                      <div class="col-sm-4">
+                        <label for="codigo">Código de 04 dígitos</label>
+                        <input type="text" id="codigo" placeholder="xxxx">
                       </div>
                     </div>
-                    <!-- Receber código -->
+                    <p class="field mb-7">
+                      <button type="button" class="br-btn is-tertiary">Reenviar código</button>
+                    </p>
                     <div class="field">
-                      <p class="mb-2">Receber Código por:</p>
-                      <div class="br-check d-block">
-                        <input name="codigo" type="radio" id="mensagem">
-                        <label for="mensagem">Mensagem SMS</label>
-                      </div>
-                      <div class="br-check d-block">
-                        <input name="codigo" type="radio" id="ligacao">
-                        <label for="ligacao">Ligação</label>
+                      <p class="mb-0">Não recebeu o código? Verifique sua caixa de spam.</p>
+                      <button type="button" class="br-btn is-tertiary">Informou o número errado?</button>
+                    </div>
+                    <div class="row field">
+                      <div class="col-sm-5">
+                      	<label for="celular">Celular</label>
+                      	<input type="text" id="celular" placeholder="Ex: (xx) x xxxx-xxxx">
                       </div>
                     </div>
                     <!-- Botões de ação -->
                     <div class="actions my-10">
-                      <button class="br-btn is-primary" disabled>Avançar</button>
-                      <button class="br-btn is-cancel">Cancelar</button>
+                      <button type="button" class="br-btn is-primary">Atualizar e reenviar código</button>
+                      <button type="button" class="br-btn is-secondary">Voltar</button>
                     </div>
                   </section>
                 </div>
