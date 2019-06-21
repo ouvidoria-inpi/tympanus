@@ -51,58 +51,6 @@
                   <!-- <span class="logo-title"></span> -->
                   <!-- <span class="logo-description"></span> -->
                 </a>
-                <!-- Descrição da página -->
-                <!-- <p class="nav-description d-none d-md-block pr-3 pb-3">
-                  <i>
-                    Este Login garante a identificação de cada cidadão
-                    que acessa os serviços digitais do governo.
-                  </i>
-                </p> -->
-                <!-- Outras opções de cadastro -->
-                <nav class="cadastre-se d-none d-sm-block pt-3">
-                  <p class="d-sm-flex justify-content-center text-primary mb-5">Cadastre-se com</p>
-                  <div class="mb-5">
-                    <a href="#" class="media mb-2">
-                      <div class="media-left">
-                        <img src="../../assets/images/certificado-digital.png" alt="Certificado Digital">
-                      </div>
-                      <div class="media-content">
-                        <span>Certificado Digital</span>
-                      </div>
-                    </a>
-                    <a href="#" class="media">
-                      <div class="media-left">
-                        <img src="../../assets/images/neoid.png" alt="NeoID">
-                      </div>
-                      <div class="media-content">
-                        <span>NeoID</span>
-                      </div>
-                    </a>
-                  </div>
-                </nav>
-                <p class="text-center d-none d-sm-block my-6">
-                  <a href="" class="br-btn is-tertiary">Saiba como obter Certificado Digital</a>
-                </p>
-                <aside class="d-none d-sm-block mx-sm-1 mx-md-3 mx-lg-4 mb-3">
-                  <!-- Divisor de conteúdo personalizado -->
-                  <div class="hr-horizontal">
-                    <span class="hr-text">Ou</span>
-                  </div>
-                  <!-- Login com redes sociais -->
-                  <ul class="login-social-network justify-content-center py-3 pt-sm-3">
-                    <li>
-                      <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/facebook.png"
-                          alt="Facebook"></a>
-                    </li>
-                    <li>
-                      <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/twitter.png" alt="Twitter"></a>
-                    </li>
-                    <li>
-                      <a href="#" class="mx-1 mx-sm-2"><img src="../../assets/images/google.png"
-                          alt="Google"></a>
-                    </li>
-                  </ul>
-                </aside>
               </div>
             </div>
           </div>
@@ -135,13 +83,6 @@
                 <!-- <span class="logo-title"></span> -->
                 <!-- <span class="logo-description"></span> -->
               </a>
-              <!-- Descrição da página -->
-              <!-- <p class="page-description d-none d-sm-block pt-3">
-                <i>
-                  Este Login garante a identificação de cada cidadão<br>
-                  que acessa os serviços digitais do governo.
-                </i>
-              </p> -->
             </header>
             <!-- Conteúdo principal -->
             <main id="content" class="page-content pl-sm-8 pt-sm-8">
@@ -158,42 +99,48 @@
                     <!-- Seleção com input -->
                     <div class="br-check-input">
                       <div class="field">
-                        <div class="check">
-                          <input name="preferencia" type="radio" id="email-check">
-                          <label for="email-check">E-mail</label>
+                        <div class="icon">
+                          <i class="far fa-envelope"></i>
                         </div>
                         <div class="input">
                           <label for="email">E-mail</label>
                           <input type="text" id="email" placeholder="Ex: fulano@email.com">
                         </div>
-                      </div>
-                      <div class="field">
                         <div class="check">
-                          <input name="preferencia" type="radio" id="celular-check">
-                          <label for="celular-check">Celular</label>
+                          <input name="preferencia" type="radio" id="email-check">
+                          <label for="email-check">E-mail</label>
+                        </div>
+                      </div>
+                      <div class="field is-active">
+                        <div class="icon">
+                          <i class="fas fa-mobile-alt"></i>
                         </div>
                         <div class="input">
                           <label for="celular">Celular</label>
                           <input type="text" id="celular" placeholder="Ex: (xx) x xxxx-xxxx">
                         </div>
+                        <div class="check">
+                          <input name="preferencia" type="radio" id="celular-check" checked>
+                          <label for="celular-check">Celular</label>
+                        </div>
                       </div>
                     </div>
                     <!-- Receber código -->
                     <div class="field">
-                      <p>Receber Código por:</p>
+                      <p class="mb-2">Receber Código por:</p>
                       <div class="br-check d-block">
-                        <input type="radio" id="mensagem">
+                        <input name="codigo" type="radio" id="mensagem">
                         <label for="mensagem">Mensagem SMS</label>
                       </div>
                       <div class="br-check d-block">
-                        <input type="radio" id="ligacao">
+                        <input name="codigo" type="radio" id="ligacao">
                         <label for="ligacao">Ligação</label>
                       </div>
                     </div>
                     <!-- Botões de ação -->
                     <div class="actions justify-content-start">
                       <button class="br-btn is-primary" disabled>Avançar</button>
-                      <!-- <button class="br-btn is-secondary">Cadastrar</button> -->
+                      <button class="br-btn is-cancel">Cancelar</button>
                     </div>
                   </section>
                   <!-- Outras opções de cadastro -->
