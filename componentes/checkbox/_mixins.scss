@@ -13,7 +13,7 @@
     // Modelo do componente
     @include check-model($type, $side);
     @include check-focus;
-    @include check-checked($type);
+    @include check-checked($type, $side);
     &:hover:not(:disabled) + label:before {
       @include check-hover;
     }
@@ -27,7 +27,7 @@
       }
     }
     &:disabled {
-      @include check-checked($color-gray-5);
+      @include check-checked($type, $side, $color-gray-5);
     }
   }
   // Estados
@@ -44,7 +44,7 @@
         box-shadow: 0 0 0 $check-border-size $color-danger;
       }
       @include check-model($type, $side, $color-danger);
-      @include check-checked($type, $color-danger);
+      @include check-checked($type, $side, $color-danger);
       &:hover:not(:disabled) + label:before {
         @include check-hover($color-danger);
       }
@@ -60,7 +60,7 @@
   &.is-valid {
     input[type="#{$type}"] {
       @include check-model($type, $side, $color-success);
-      @include check-checked($type, $color-success);
+      @include check-checked($type, $side, $color-success);
       &:hover:not(:disabled) + label:before {
         @include check-hover($color-success);
       }
@@ -139,7 +139,7 @@
 
 // Aplica a cor para estado checked
 // - A cor pode ser modificada via argumento
-@mixin check-checked($type, $color: $color-primary-lighten-15) {
+@mixin check-checked($type, $side, $color: $color-primary-lighten-15) {
   &:checked + label:before {
     background: $color;
     border-color: $color;
@@ -148,7 +148,12 @@
     &:checked + label:after {
       content: "";
       position: absolute;
-      left: 7px;
+      @if ($side == left) {
+        left: 7px;
+      }
+      @if ($side == right) {
+        right: 7px;
+      }
       top: 3px;
       border: solid $color-white;
       border-width: 0 2px 2px 0;
@@ -163,7 +168,12 @@
       border-radius: 50%;
       box-shadow: inset 0 0 0 $check-border-size $color, inset 0 0 0 ($check-border-size + spacer(half)) $color-white;
       height: ($check-size - $check-border-size);
-      left: 0px;
+      @if ($side == left) {
+        left: 0px;
+      }
+      @if ($side == right) {
+        right: 0px;
+      }
       position: absolute;
       top: 0px;
       width: ($check-size - $check-border-size);
