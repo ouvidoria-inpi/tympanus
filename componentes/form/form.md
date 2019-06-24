@@ -81,7 +81,7 @@ Nos casos de erros ou retorno positivo do campo é possível usar um template de
     <label for="item-2">Com erro</label>
     <input id="item-2" type="text" placeholder="Insira um texto">
     <div class="feedback">
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times-circle"></i>
       <span class="message">Texto inválido</span>
     </div>
   </div>
@@ -107,7 +107,7 @@ Coloque o texto após o feedback do sistema. Dê preferência a tag html `<p>`.
     <label for="item-2">Com erro</label>
     <input id="item-2" type="text" placeholder="Insira um texto">
     <div class="feedback">
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times-circle"></i>
       <span class="message">Texto inválido</span>
     </div>
     <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
