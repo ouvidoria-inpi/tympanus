@@ -44,9 +44,9 @@
   visibility: visible;
 }
 
-.br-check-input .check,
 .br-check-input .icon,
-.br-check-input .input {
+.br-check-input .input,
+.br-check-input .check {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -55,11 +55,31 @@
   display: flex;
 }
 
+.br-check-input .icon {
+  color: #1351b4;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+}
+
+.br-check-input .input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.br-check-input .input input {
+  visibility: hidden;
+  max-width: 250px;
+}
+
 .br-check-input .check {
   display: inline-block;
   position: relative;
   display: inline-block;
   position: relative;
+  margin-top: -24px;
 }
 
 .br-check-input .check input[type="checkbox"] {
@@ -430,35 +450,6 @@
 .br-check-input .check.is-valid.is-hover input[type="radio"] + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
-}
-
-.br-check-input .check input[type="checkbox"] + label,
-.br-check-input .check input[type="radio"] + label {
-  color: transparent;
-  width: 8px;
-}
-
-.br-check-input .check input[type="checkbox"]:checked ~ .input input,
-.br-check-input .check input[type="radio"]:checked ~ .input input {
-  visibility: visible;
-}
-
-.br-check-input .icon {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 32px;
-}
-
-.br-check-input .input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.br-check-input .input input {
-  visibility: hidden;
-  max-width: 250px;
 }
 
 .media {

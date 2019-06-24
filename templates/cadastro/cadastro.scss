@@ -42,41 +42,28 @@ $input-max-size: 250px;
       }
     }
   }
-  .check,
   .icon,
-  .input {
+  .input,
+  .check {
     align-items: center;
     display: flex;
   }
-  .check {
-    @include check(checkbox, right);
-    @include check(radio, right);
-    input[type="checkbox"],
-    input[type="radio"] {
-      // Esconder label do check
-      & + label {
-        color: transparent;
-        width: spacer(1);
-      }
-      // Item checado
-      &:checked {
-        & ~ .input input {
-          visibility: visible;
-        }
-      }
-    }
-  }
   .icon {
+    color: $color-primary;
     justify-content: center;
     width: 32px;
   }
   .input {
     flex: 1;
-    // Input
     input {
       visibility: hidden;
       max-width: $input-max-size;
     }
+  }
+  .check {
+    @include check(checkbox, right);
+    @include check(radio, right);
+    margin-top: - spacer(5);
   }
 }
 
