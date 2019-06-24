@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.4] - 2019-06-19
+### Added
+- Opção de check do lado direito
+
 ## [0.1.3] - 2019-06-17
 ### Changed
 - html de exemplo de uso
