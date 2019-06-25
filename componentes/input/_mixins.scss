@@ -19,6 +19,7 @@
 
 @mixin input-state($color) {
   border-color: $color;
+  box-shadow: 0 0 0 1px $color;
   &:focus {
     @include input-focus($color);
   }
