@@ -18,16 +18,13 @@
       @include check-hover;
     }
     &:invalid  {
-      & + label:before {
-        border-color: $color-danger;
-        box-shadow: 0 0 0 $check-border-size $color-danger;
-      }
-      &:hover + label:before {
-        @include check-hover($color-danger);
-      }
+      @include check-state($color-danger);
     }
     &:disabled {
       @include check-checked($type, $side, $color-gray-5);
+      & + label {
+        cursor: default;
+      }
     }
   }
   // Estados
@@ -40,37 +37,14 @@
   }
   &.is-invalid {
     input[type="#{$type}"] {
-      & + label:before {
-        box-shadow: 0 0 0 $check-border-size $color-danger;
-      }
-      @include check-model($type, $side, $color-danger);
       @include check-checked($type, $side, $color-danger);
-      &:hover:not(:disabled) + label:before {
-        @include check-hover($color-danger);
-      }
-    }
-    &.is-hover {
-      input[type="#{$type}"] {
-        & + label:before {
-          @include check-hover($color-danger);
-        }
-      }
+      @include check-state($color-danger);
     }
   }
   &.is-valid {
     input[type="#{$type}"] {
-      @include check-model($type, $side, $color-success);
       @include check-checked($type, $side, $color-success);
-      &:hover:not(:disabled) + label:before {
-        @include check-hover($color-success);
-      }
-    }
-    &.is-hover {
-      input[type="#{$type}"] {
-        & + label:before {
-          @include check-hover($color-success);
-        }
-      }
+      @include check-state($color-success);
     }
   }
 }
@@ -120,7 +94,7 @@
     width: $check-size - $check-border-size;
   }
   &:disabled + label:before {
-    background: $color-gray-6;
+    background: $color-gray-2;
   }
 }
 
@@ -178,5 +152,15 @@
       top: 0px;
       width: ($check-size - $check-border-size);
     }
+  }
+}
+
+@mixin check-state($color) {
+  & + label:before {
+    border-color: $color;
+    box-shadow: 0 0 0 $check-border-size $color;
+  }
+  &:hover:not(:disabled) + label:before {
+    @include check-hover($color);
   }
 }
