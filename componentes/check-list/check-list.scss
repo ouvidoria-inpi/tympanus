@@ -1,0 +1,24 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente check-input
+ * Versão 0.1.0
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+
+// Carregar dependências
+@import "../input/configs";
+@import "../input/mixins";
+@import "../checkbox/configs";
+@import "../checkbox/mixins";
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+
+.#{$prefix}check-input {
+  @include check-input;
+}

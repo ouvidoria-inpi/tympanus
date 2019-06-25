@@ -1,0 +1,124 @@
+// Estilo base para check com input
+@mixin check-input() {
+  border-top: $check-input-border-size $check-input-border-style $check-input-border-color;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $check-input-margin;
+  .field {
+    @include check-field;
+    @include check-states;
+    &.is-disabled {
+      // @include check-checked($type, $side, $color-gray-5);
+    }
+  }
+  .icon,
+  .input,
+  .check {
+    align-items: center;
+    display: flex;
+  }
+  .icon {
+    @include check-icons($icon-color);
+  }
+  .input {
+    @include check-inputs;
+  }
+  .check {
+    @include check-checks;
+  }
+}
+
+// Linha agrupadora
+@mixin check-field {
+  align-items: center;
+  border-bottom: $check-input-border-size $check-input-border-style $check-input-border-color;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: $field-padding;
+  &.is-active {
+    @include check-active;
+  }
+}
+
+// Linha ativa
+@mixin check-active {
+  .input {
+    label {
+      display: none;
+    }
+    input {
+      visibility: visible;
+    }
+  }
+}
+
+@mixin check-icons($color) {
+  color: $color;
+  justify-content: center;
+  width: $icon-size;
+}
+
+@mixin check-inputs {
+  flex: 1;
+  label {
+    margin: 0;
+  }
+  input {
+    @include input;
+    @include input-states;
+    &::placeholder {
+      @include placeholder;
+    }
+    max-width: $input-max-size;
+    visibility: hidden;
+  }
+}
+
+@mixin check-checks {
+  @include check(checkbox, right);
+  @include check(radio, right);
+  margin-top: - spacer(6);
+  margin-right: spacer(1);
+  label {
+    margin: 0;
+  }
+}
+
+// Estados
+@mixin check-states {
+  &.is-focus {
+    input {
+      @include input-focus($color-primary-lighten-15);
+    }
+  }
+  &.is-invalid {
+    input {
+      @include input-state($color-danger);
+    }
+    input[type="checkbox"] {
+      @include check-checked(checkbox, right, $color-danger);
+      @include check-state($color-danger);
+    }
+    input[type="radio"] {
+      @include check-checked(radio, right, $color-danger);
+      @include check-state($color-danger);
+    }
+  }
+  &.is-valid {
+    input {
+      @include input-state($color-success);
+    }
+    input[type="checkbox"] {
+      @include check-checked(checkbox, right, $color-success);
+      @include check-state($color-success);
+    }
+    input[type="radio"] {
+      @include check-checked(radio, right, $color-success);
+      @include check-state($color-success);
+    }
+  }
+  &.is-disabled {
+
+  }
+}
