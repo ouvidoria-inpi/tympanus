@@ -7,9 +7,6 @@
   .field {
     @include check-field;
     @include check-states;
-    &.is-disabled {
-      // @include check-checked($type, $side, $color-gray-5);
-    }
   }
   .icon,
   .input,
@@ -78,8 +75,8 @@
 @mixin check-checks {
   @include check(checkbox, right);
   @include check(radio, right);
-  margin-top: - spacer(6);
-  margin-right: spacer(1);
+  margin-top: - $spacing-6;
+  margin-right: $spacing-1;
   label {
     margin: 0;
   }
@@ -117,8 +114,5 @@
       @include check-checked(radio, right, $color-success);
       @include check-state($color-success);
     }
-  }
-  &.is-disabled {
-
   }
 }
