@@ -6,6 +6,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [Unreleased]
 - Botões de estados (**danger**, **success**, **warning**).
 
+## [0.1.5] - 2019-06-26
+### Changed
+- Aplicação dos tokens de espaçamento
+
 ## [0.1.4] - 2019-06-17
 ### Added
 - Padding interno nas laterais

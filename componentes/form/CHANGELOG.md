@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.1] - 2019-06-26
+### Changed
+- Aplicação dos tokens de espaçamento
+
 ## [0.1.0] - 2019-06-17
 ### Added
 - Arquivo CHANGELOG.md

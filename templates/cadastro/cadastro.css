@@ -110,7 +110,7 @@
 }
 
 .br-check-input .check input[type="checkbox"]:disabled + label:before {
-  background: #555555;
+  background: #ededed;
 }
 
 .br-check-input .check input[type="checkbox"]:focus + label {
@@ -146,7 +146,7 @@
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-input .check input[type="checkbox"]:invalid:hover + label:before {
+.br-check-input .check input[type="checkbox"]:invalid:hover:not(:disabled) + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
@@ -169,31 +169,13 @@
           transform: rotate(45deg);
 }
 
+.br-check-input .check input[type="checkbox"]:disabled + label {
+  cursor: default;
+}
+
 .br-check-input .check.is-hover input[type="checkbox"] + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-}
-
-.br-check-input .check.is-invalid input[type="checkbox"] + label:before {
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
-}
-
-.br-check-input .check.is-invalid input[type="checkbox"] + label:before {
-  background: transparent;
-  border: 1px solid #ff3333;
-  border-radius: 4px;
-  content: "";
-  height: 19px;
-  right: 0;
-  position: absolute;
-  top: 0;
-  vertical-align: text-top;
-  width: 19px;
-}
-
-.br-check-input .check.is-invalid input[type="checkbox"]:disabled + label:before {
-  background: #555555;
 }
 
 .br-check-input .check.is-invalid input[type="checkbox"]:checked + label:before {
@@ -214,31 +196,15 @@
           transform: rotate(45deg);
 }
 
+.br-check-input .check.is-invalid input[type="checkbox"] + label:before {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
+}
+
 .br-check-input .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-}
-
-.br-check-input .check.is-invalid.is-hover input[type="checkbox"] + label:before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-}
-
-.br-check-input .check.is-valid input[type="checkbox"] + label:before {
-  background: transparent;
-  border: 1px solid #168821;
-  border-radius: 4px;
-  content: "";
-  height: 19px;
-  right: 0;
-  position: absolute;
-  top: 0;
-  vertical-align: text-top;
-  width: 19px;
-}
-
-.br-check-input .check.is-valid input[type="checkbox"]:disabled + label:before {
-  background: #555555;
 }
 
 .br-check-input .check.is-valid input[type="checkbox"]:checked + label:before {
@@ -259,12 +225,13 @@
           transform: rotate(45deg);
 }
 
-.br-check-input .check.is-valid input[type="checkbox"]:hover:not(:disabled) + label:before {
-  -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
-          box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+.br-check-input .check.is-valid input[type="checkbox"] + label:before {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
 }
 
-.br-check-input .check.is-valid.is-hover input[type="checkbox"] + label:before {
+.br-check-input .check.is-valid input[type="checkbox"]:hover:not(:disabled) + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
@@ -297,7 +264,7 @@
 }
 
 .br-check-input .check input[type="radio"]:disabled + label:before {
-  background: #555555;
+  background: #ededed;
 }
 
 .br-check-input .check input[type="radio"]:focus + label {
@@ -332,7 +299,7 @@
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-input .check input[type="radio"]:invalid:hover + label:before {
+.br-check-input .check input[type="radio"]:invalid:hover:not(:disabled) + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
@@ -354,31 +321,13 @@
   width: 19px;
 }
 
+.br-check-input .check input[type="radio"]:disabled + label {
+  cursor: default;
+}
+
 .br-check-input .check.is-hover input[type="radio"] + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-}
-
-.br-check-input .check.is-invalid input[type="radio"] + label:before {
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
-}
-
-.br-check-input .check.is-invalid input[type="radio"] + label:before {
-  background: transparent;
-  border: 1px solid #ff3333;
-  border-radius: 50%;
-  content: "";
-  height: 19px;
-  right: 0;
-  position: absolute;
-  top: 0;
-  vertical-align: text-top;
-  width: 19px;
-}
-
-.br-check-input .check.is-invalid input[type="radio"]:disabled + label:before {
-  background: #555555;
 }
 
 .br-check-input .check.is-invalid input[type="radio"]:checked + label:before {
@@ -398,31 +347,15 @@
   width: 19px;
 }
 
+.br-check-input .check.is-invalid input[type="radio"] + label:before {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
+}
+
 .br-check-input .check.is-invalid input[type="radio"]:hover:not(:disabled) + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-}
-
-.br-check-input .check.is-invalid.is-hover input[type="radio"] + label:before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-}
-
-.br-check-input .check.is-valid input[type="radio"] + label:before {
-  background: transparent;
-  border: 1px solid #168821;
-  border-radius: 50%;
-  content: "";
-  height: 19px;
-  right: 0;
-  position: absolute;
-  top: 0;
-  vertical-align: text-top;
-  width: 19px;
-}
-
-.br-check-input .check.is-valid input[type="radio"]:disabled + label:before {
-  background: #555555;
 }
 
 .br-check-input .check.is-valid input[type="radio"]:checked + label:before {
@@ -442,12 +375,13 @@
   width: 19px;
 }
 
-.br-check-input .check.is-valid input[type="radio"]:hover:not(:disabled) + label:before {
-  -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
-          box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+.br-check-input .check.is-valid input[type="radio"] + label:before {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
 }
 
-.br-check-input .check.is-valid.is-hover input[type="radio"] + label:before {
+.br-check-input .check.is-valid input[type="radio"]:hover:not(:disabled) + label:before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }

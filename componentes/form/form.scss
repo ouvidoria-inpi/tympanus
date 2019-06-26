@@ -4,7 +4,7 @@
 /*!
  * Design System de Governo - DS-Gov
  * Componente forms
- * Versão 0.1.0
+ * Versão 0.1.1
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
@@ -26,7 +26,7 @@
     label {
       font-size: $label-font-size;
       font-weight: $label-font-weight;
-      margin-bottom: spacer(half);
+      margin-bottom: $spacing-half;
     }
     // Inputs
     input {
