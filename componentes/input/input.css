@@ -2,7 +2,7 @@
 /*!
  * Design System de Governo - DS-Gov
  * Componente input
- * Versão 0.1.4
+ * Versão 0.1.5
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
@@ -27,6 +27,8 @@
 
 .br-input:invalid {
   border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
 }
 
 .br-input:invalid:focus {
@@ -49,6 +51,8 @@
 
 .br-input.is-invalid {
   border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
 }
 
 .br-input.is-invalid:focus {
@@ -68,6 +72,8 @@
 
 .br-input.is-valid {
   border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
 }
 
 .br-input.is-valid:focus {
