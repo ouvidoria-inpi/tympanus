@@ -25,7 +25,7 @@ $navigation-font-size: 17px;
 .tab-item {
   display: flex;
   border-bottom: 1px solid $color-gray-3;
-  padding: 0 spacer(3);
+  padding: 0 $spacing-3;
   &.is-active {
     .tab-link {
       color: $color-primary;
@@ -56,8 +56,8 @@ $navigation-font-size: 17px;
 .tab-name {
   flex: 1;
   margin-left: 32px;
-  margin-right: spacer(5);
-  padding: spacer(3) spacer(1);
+  margin-right: $spacing-5;
+  padding: $spacing-6 $spacing-1;
 }
 
 // Navs
