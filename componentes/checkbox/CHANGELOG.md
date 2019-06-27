@@ -5,6 +5,14 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.6] - 2019-06-26
+### Changed
+- Aplicação dos tokens de espaçamento
+
+## [0.1.5] - 2019-06-25
+### Fixed
+- Cor de fundo para disabled
+
 ## [0.1.4] - 2019-06-19
 ### Added
 - Opção de check do lado direito

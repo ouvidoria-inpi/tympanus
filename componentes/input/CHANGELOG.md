@@ -4,6 +4,15 @@ Todas as modificações do componente **br-input** estão descritas neste arquiv
 O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) e o versionamento deste componente segue o [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.1.6] - 2019-06-26
+### Changed
+- Aplicação dos tokens de espaçamento
+
+## [0.1.5] - 2019-06-25
+### Changed
+- Borda de itens validados no mesmo estilo do focus
+
 ## [0.1.4] - 2019-06-17
 ### Fixed 
 - Cor de fundo para input desabilitado

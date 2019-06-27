@@ -20,16 +20,16 @@ $input-max-size: 250px;
   border-top: 1px solid $color-gray-2;
   display: flex;
   flex-direction: column;
-  margin-bottom: spacer(5);
+  margin-bottom: $spacing-5;
   .field {
     align-items: center;
     border-bottom: 1px solid $color-gray-2;
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: spacer(1) 0;
+    padding: $spacing-1 0;
     label {
-      margin-right: spacer(1);
+      margin-right: $spacing-1;
     }
     &.is-active {
       .input {
@@ -63,7 +63,7 @@ $input-max-size: 250px;
   .check {
     @include check(checkbox, right);
     @include check(radio, right);
-    margin-top: - spacer(5);
+    margin-top: - $spacing-5;
   }
 }
 
@@ -136,8 +136,8 @@ $content-title-font-weight: 500;
 
 // Divisores de conteúdo
 $hr-font-size: 13px;
-$hr-margin: 0 0 spacer(1);
-$hr-text-padding: spacer(3);
+$hr-margin: 0 0 $spacing-1;
+$hr-text-padding: $spacing-3;
 $hr-color: $color-gray-5;
 .hr-horizontal {
   align-items: center;
