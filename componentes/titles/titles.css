@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente Titles 
+ * Versão 0.1.0
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+@font-face {
+  font-family: "RawlineThin";
+  src: url("../../estilos/vendors/rawline/font/rawline-100.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-100.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-100.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-100.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-100.svg#RawlineThin") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineThinItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-100i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-100i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-100i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-100i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-100i.svg#RawlineThinItalic") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineExtraLight";
+  src: url("../../estilos/vendors/rawline/font/rawline-200.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-200.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-200.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-200.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-200.svg#RawlineExtraLight") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineExtraLightItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-200i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-200i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-200i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-200i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-200i.svg#RawlineExtraLightItalic") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineLight";
+  src: url("../../estilos/vendors/rawline/font/rawline-300.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-300.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-300.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-300.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-300.svg#RawlineLight") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineLightItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-300i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-300i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-300i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-300i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-300i.svg#RawlineLightItalic") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineRegular";
+  src: url("../../estilos/vendors/rawline/font/rawline-400.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-400.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-400.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-400.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-400.svg#RawlineRegular") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineRegularItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-400i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-400i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-400i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-400i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-400i.svg#RawlineRegularItalic") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineMedium";
+  src: url("../../estilos/vendors/rawline/font/rawline-500.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-500.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-500.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-500.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-500.svg#RawlineMedium") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineMediumItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-500i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-500i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-500i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-500i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-500i.svg#RawlineMediumItalic") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineSemiBold";
+  src: url("../../estilos/vendors/rawline/font/rawline-600.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-600.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-600.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-600.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-600.svg#RawlineSemiBold") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineSemiBoldItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-600i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-600i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-600i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-600i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-600i.svg#RawlineSemiBoldItalic") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineBold";
+  src: url("../../estilos/vendors/rawline/font/rawline-700.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-700.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-700.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-700.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-700.svg#RawlineBold") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineBoldItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-700i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-700i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-700i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-700i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-700i.svg#RawlineBoldItalic") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineExtraBold";
+  src: url("../../estilos/vendors/rawline/font/rawline-800.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-800.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-800.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-800.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-800.svg#RawlineExtraBold") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineExtraBoldItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-800i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-800i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-800i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-800i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-800i.svg#RawlineExtraBoldItalic") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineBlack";
+  src: url("../../estilos/vendors/rawline/font/rawline-900.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-900.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-900.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-900.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-900.svg#RawlineBlack") format("svg");
+}
+
+@font-face {
+  font-family: "RawlineBlackItalic";
+  src: url("../../estilos/vendors/rawline/font/rawline-900i.eot?") format("eot"), url("../../estilos/vendors/rawline/font/rawline-900i.woff2") format("woff2"), url("../../estilos/vendors/rawline/font/rawline-900i.woff") format("woff"), url("../../estilos/vendors/rawline/font/rawline-900i.ttf") format("truetype"), url("../../estilos/vendors/rawline/font/rawline-900i.svg#RawlineBlackItalic") format("svg");
+}
+
+h1.title-1, h2.title-1, h3.title-1, h4.title-1, h5.title-1, h6.title-1 {
+  font-family: RawlineSemiBold;
+  font-size: "32px" !important;
+  color: #1351b4;
+}
+
+span.text-1, p.text-1 {
+  font-family: RawlineRegular;
+  font-size: "12px" !important;
+  color: #333333;
+}
+
+span.text-2, p.text-2 {
+  font-family: RawlineRegularItalic;
+  font-size: "16px" !important;
+  color: #555555;
+}
+/*# sourceMappingURL=titles.css.map */

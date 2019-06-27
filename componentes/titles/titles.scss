@@ -1,0 +1,30 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente Titles 
+ * Versão 0.1.0
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos para Títulos
+h1,h2,h3,h4,h5,h6 {
+  &.title-1 {
+    @include title($size32, $color-primary, RawlineSemiBold);
+  }
+}
+// Estilos para Textos
+span,p {
+  &.text-1 {
+    @include title($size12, $color-gray-7, RawlineRegular);
+  }
+  &.text-2 {
+    @include title($size16, $color-gray-6, RawlineRegularItalic);
+  }
+}
