@@ -1,5 +1,4 @@
-// Font-Face
-
+// Base Font-Face
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
 	$src: null;
 
@@ -27,7 +26,7 @@
 	}
 }
 
-
+// Base Font-Face
 @include font-face(RawlineThin, $raw-line-thin);
 @include font-face(RawlineThinItalic, $raw-line-thin-italic);
 @include font-face(RawlineExtraLight, $raw-line-extra-light);
