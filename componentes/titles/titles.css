@@ -98,19 +98,19 @@
 
 h1.title-1, h2.title-1, h3.title-1, h4.title-1, h5.title-1, h6.title-1 {
   font-family: RawlineSemiBold;
-  font-size: "32px" !important;
+  font-size: 36px;
   color: #1351b4;
 }
 
 span.text-1, p.text-1 {
   font-family: RawlineRegular;
-  font-size: "12px" !important;
+  font-size: 12px;
   color: #333333;
 }
 
 span.text-2, p.text-2 {
   font-family: RawlineRegularItalic;
-  font-size: "16px" !important;
+  font-size: 16px;
   color: #555555;
 }
 /*# sourceMappingURL=titles.css.map */

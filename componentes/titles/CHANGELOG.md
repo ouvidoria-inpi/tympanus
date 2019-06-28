@@ -8,3 +8,8 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Classe para título 1 **title-1**
 - Classe para texto 1 **text-1**
 - Classe para texto 2 **text-2**
+
+## [0.1.0] - 2019-06-27
+### Changed- Classe para título 1 **title-1**
+- Classe para texto 1 **text-1**
+- Classe para texto 2 **text-2**

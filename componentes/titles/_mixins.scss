@@ -26,37 +26,16 @@
 	}
 }
 
-// Base Font-Face
-@include font-face(RawlineThin, $raw-line-thin);
-@include font-face(RawlineThinItalic, $raw-line-thin-italic);
-@include font-face(RawlineExtraLight, $raw-line-extra-light);
-@include font-face(RawlineExtraLightItalic, $raw-line-extra-light-italic);
-@include font-face(RawlineLight, $raw-line-light);
-@include font-face(RawlineLightItalic, $raw-line-light-italic);
-@include font-face(RawlineRegular, $raw-line-regular);
-@include font-face(RawlineRegularItalic, $raw-line-regular-italic);
-@include font-face(RawlineMedium, $raw-line-medium);
-@include font-face(RawlineMediumItalic, $raw-line-medium-italic);
-@include font-face(RawlineSemiBold, $raw-line-semi-bold);
-@include font-face(RawlineSemiBoldItalic, $raw-line-semi-bold-italic);
-@include font-face(RawlineBold, $raw-line-bold);
-@include font-face(RawlineBoldItalic, $raw-line-bold-italic);
-@include font-face(RawlineExtraBold, $raw-line-extra-bold);
-@include font-face(RawlineExtraBoldItalic, $raw-line-extra-bold-italic);
-@include font-face(RawlineBlack, $raw-line-black);
-@include font-face(RawlineBlackItalic, $raw-line-black-italic);
-
-
 // Base Title
 @mixin title($size, $color, $family) {
     font-family: $family;
-    font-size: $size !important;
+    font-size: $size;
     color: $color;
 }
 
 // Base Texts
 @mixin text($size, $color, $family) {
   font-family: $family;
-  font-size: $size !important;
+  font-size: $size;
   color: $color;
 }

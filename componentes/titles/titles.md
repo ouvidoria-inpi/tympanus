@@ -1,6 +1,6 @@
 # Escala Tipográfica
 
-Estão definidos 15 tamanhos para utilização em títulos e textos associados às suas respectivas variáveis, são eles:
+Estão definidos 14 tamanhos para utilização em títulos e textos associados às suas respectivas variáveis, são eles:
 
 ``$size12: "12px";``
 ``$size14: "14px";``
@@ -10,7 +10,6 @@ Estão definidos 15 tamanhos para utilização em títulos e textos associados �
 ``$size22: "22px";``
 ``$size24: "24px";``
 ``$size28: "28px";``
-``$size32: "32px";``
 ``$size36: "36px";``
 ``$size40: "40px";``
 ``$size46: "46px";``
