@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.2] - 2019-06-28
+### Added
+- Estilo do `<textarea>`
+
 ## [0.1.1] - 2019-06-26
 ### Changed
 - Aplicação dos tokens de espaçamento
