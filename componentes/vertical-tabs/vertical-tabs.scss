@@ -1,0 +1,24 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente de Vertical Tabs 
+ * Versão 0.1.0
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos para Lista de Itens
+// Tabs
+.#{$prefix}tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include tab-item;
+}
+
