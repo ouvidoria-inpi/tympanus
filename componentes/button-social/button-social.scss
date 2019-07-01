@@ -1,0 +1,19 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente button-social
+ * Versão 0.1.0
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos de botões
+.#{$prefix}button-social {
+  @include button-social;
+}

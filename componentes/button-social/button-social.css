@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente button-social
+ * Versão 0.1.0
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+.br-button-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.br-button-social li {
+  padding: 0 8px;
+}
+/*# sourceMappingURL=button-social.css.map */
