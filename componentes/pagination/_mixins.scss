@@ -1,0 +1,111 @@
+@mixin pagination($size: md) {
+  align-items: center;
+  display: flex;
+  margin: $pagination-margin;
+  padding: 0;
+  li {
+    display: none;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+    @if ($size == lg) {
+      font-size: $pagination-font-size-lg;
+    }
+    @else {
+      font-size: $pagination-font-size;
+    }
+    list-style: none;
+    margin: 0;
+    &:first-child {
+      a {
+        padding-left: 0;
+      }
+    }
+    &:last-child {
+      a {
+        padding-right: 0;
+      }
+    }
+  }
+  a {
+    align-items: center;
+    color: $pagination-link;
+    display: flex;
+    font-weight: $pagination-font-weight;
+    justify-content: center;
+    @if ($size == lg) {
+      padding: $pagination-padding-lg;
+    }
+    @else {
+      padding: $pagination-padding;
+    }
+    position: relative;
+    &:hover {
+      text-decoration: none;
+      &:before {
+        background-color: $pagination-hover;
+      }
+    }
+    &:before {
+      content: "";
+      background: transparent;
+      border-radius: 50%;
+      @if ($size == lg) {
+        height: $pagination-circle-lg;
+        width: $pagination-circle-lg;
+      }
+      @else {
+        height: $pagination-circle;
+        width: $pagination-circle;
+      }
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  .is-active {
+    display: block;
+    a {
+      color: $color-white;
+      &::before {
+        background-color: $pagination-link;
+      }
+    }
+  }
+  .is-first,
+  .is-last {
+    display: block;
+    a {
+      &:before {
+        content: none;
+      }
+    }
+    i {
+      &:first-child {
+        margin-right: $spacing-1;
+      }
+      &:last-child {
+        margin-left: $spacing-1;
+      }
+    }
+    span {
+      border-radius: 100px;
+      padding: $spacing-half $spacing-1;
+    }
+    &:not(.is-disabled) {
+      a {
+        &:hover {
+          span {
+            background: $pagination-hover;
+            color: $pagination-link;
+          }
+        }
+      }
+    }
+  }
+  .is-disabled {
+    a {
+      color: $pagination-text;
+      cursor: default;
+    }
+  }
+}
