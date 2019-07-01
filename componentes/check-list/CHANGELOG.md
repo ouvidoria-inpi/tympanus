@@ -5,6 +5,13 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.1] - 2019-06-28
+### Added
+- Script para aplicar classe na linha selecionada
+
+### Changed
+- Código do template para carregar o script
+
 ## [0.1.0] - 2019-06-25
 ### Added
 - Documentação inicial
