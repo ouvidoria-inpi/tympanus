@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*!
+ * Design System de Governo - DS-Gov
+ * Componente separator
+ * Versão 0.1.0
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP/SEDEP
+ */
+.br-separator {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+.br-separator:after, .br-separator:before {
+  content: "";
+  background: #888888;
+  height: 1px;
+  width: 100%;
+}
+
+.br-separator .hr-text {
+  color: #1351b4;
+  font-size: 13px;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=separator.css.map */
