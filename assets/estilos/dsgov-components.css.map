@@ -453,7 +453,7 @@
         "../../estilos/scss/configs/_defaults.scss",
         "../../componentes/separator/_configs.scss",
         "../../componentes/separator/_mixins.scss",
-        "../../componentes/vertical-tabs/vertical-tabs.scss",
+        "../../componentes/tabs/tabs.scss",
         "../../estilos/scss/_dsgov-base.scss",
         "../../estilos/scss/_tokens.scss",
         "../../estilos/scss/configs/_functions.scss",
@@ -500,8 +500,8 @@
         "../../estilos/node_modules/bootstrap/scss/mixins/_grid.scss",
         "../../estilos/node_modules/bootstrap/scss/mixins/_float.scss",
         "../../estilos/scss/configs/_defaults.scss",
-        "../../componentes/vertical-tabs/_configs.scss",
-        "../../componentes/vertical-tabs/_mixins.scss"
+        "../../componentes/tabs/_configs.scss",
+        "../../componentes/tabs/_mixins.scss"
     ],
     "names": [],
     "file": "dsgov-components.css"

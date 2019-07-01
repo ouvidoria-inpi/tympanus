@@ -1,8 +1,15 @@
 // Lista de Itens de Abas 
 @mixin tab-item() {
+  border-bottom: $tab-border-bottom-default;
+  display: flex;
+  &.flex-column {
+    border-bottom: 0;
+    .tab-item {
+      border-bottom: $tab-border-bottom-default;
+    }
+  }
   .tab-item {
     display: flex;
-    border-bottom: $tab-border-bottom-default;
     padding: $tab-space-item;
     &.is-active {
       .tab-link {
