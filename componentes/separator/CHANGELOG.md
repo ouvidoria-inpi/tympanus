@@ -5,6 +5,13 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.1] - 2019-07-01
+### Added
+- Arquivo minificado
+
+### Changed
+- Formato de versionamento
+
 ## [0.1.0] - 2019-06-28
 ### Added
 - Documentação inicial

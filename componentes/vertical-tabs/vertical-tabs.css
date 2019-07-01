@@ -1,11 +1,5 @@
-@charset "UTF-8";
 /*!
- * Design System de Governo - DS-Gov
- * Componente de Vertical Tabs 
- * Versão 0.1.0
- * Suporte:
-   - Serpro: DIDES/SUPSE/SESEP/SEDEP
- */
+ * vertical-tabs - 0.1.1 */
 .br-tabs {
   list-style: none;
   margin: 0;
