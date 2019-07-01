@@ -5,6 +5,13 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.7] - 2019-07-01
+### Added
+- Arquivo minificado
+
+### Changed
+- Formato de versionamento
+
 ## [0.1.6] - 2019-06-26
 ### Changed
 - Aplicação dos tokens de espaçamento
