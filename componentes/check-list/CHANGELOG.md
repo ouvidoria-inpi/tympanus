@@ -5,8 +5,9 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
-## [0.1.3] - 2019-07-02
+## [0.2.0] - 2019-07-02
 ### Changed
+- Nome da classe do componente
 - Aplicação da tipografia dos tokens
 
 ## [0.1.2] - 2019-07-01

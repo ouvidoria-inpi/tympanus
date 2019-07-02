@@ -1,5 +1,5 @@
 // Estilo base para check com input
-@mixin check-input() {
+@mixin check-list() {
   border-top: $check-input-border-size $check-input-border-style $check-input-border-color;
   display: flex;
   flex-direction: column;
