@@ -6,13 +6,13 @@
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
 
+ @import "../../componentes/form/form.scss";
+ @import "../../componentes/input/input.scss";
+ @import "../../componentes/input-action/input-action.scss";
+ @import "../../componentes/checkbox/checkbox.scss";
+ @import "../../componentes/check-list/check-list.scss";
 @import "../../componentes/button/button.scss";
 @import "../../componentes/button-social/button-social.scss";
-@import "../../componentes/check-list/check-list.scss";
-@import "../../componentes/checkbox/checkbox.scss";
-@import "../../componentes/form/form.scss";
-@import "../../componentes/input/input.scss";
-@import "../../componentes/input-action/input-action.scss";
 @import "../../componentes/pagination/pagination.scss";
 @import "../../componentes/separator/separator.scss";
 @import "../../componentes/tabs/tabs.scss";

@@ -10,6 +10,9 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Nome da classe do componente
 - Aplicação da tipografia dos tokens
 
+### Fixed
+- Margin do componente
+
 ## [0.1.2] - 2019-07-01
 ### Added
 - Arquivo minificado

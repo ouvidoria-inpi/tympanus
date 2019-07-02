@@ -3,7 +3,7 @@
   border-top: $check-input-border-size $check-input-border-style $check-input-border-color;
   display: flex;
   flex-direction: column;
-  margin-bottom: $check-input-margin;
+  margin: $check-input-margin;
   .field {
     @include check-field;
     @include check-states;
