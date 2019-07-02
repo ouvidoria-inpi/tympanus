@@ -5,13 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Verifique seu celular</title>
+  <title>starter</title>
   <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
   <link rel="stylesheet" href="../../assets/estilos/dsgov-components.min.css">
-  <link rel="stylesheet" href="../../templates/starter/starter.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="stylesheet" href="cadastro.css">
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="starter.css">
 </head>
 
 <body>
@@ -45,6 +44,42 @@
                 <a id="nav-logo" class="logo d-none d-sm-flex py-8" href="#">
                   <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
                 </a>
+                <!-- Descrição da página -->
+                <p class="nav-description d-none d-md-block pr-3 pb-3">
+                  Área de descrição do template no lado da navegação.
+                </p>
+                <!-- Menu de navegação -->
+                <nav id="navigation" class="page-navigation d-none d-sm-block mr-n1 mr-lg-n2 mr-xl-n3">
+                  <ul class="br-tabs flex-column">
+                    <li class="tab-item">
+                      <a href="#" class="tab-link">
+                        <div class="tab-name">
+                          <span>item sem ícone</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="tab-item is-active">
+                      <a href="#" class="tab-link">
+                        <div class="tab-icon">
+                          <img src="../../assets/images/certificado-digital.png" alt="Certificado Digital">
+                        </div>
+                        <div class="tab-name">
+                          <span>item com ícone</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="tab-item">
+                      <a href="#" class="tab-link">
+                        <div class="tab-icon">
+                          <img src="../../assets/images/neoid.png" alt="NeoID">
+                        </div>
+                        <div class="tab-name">
+                          <span>item com ícone</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
@@ -75,53 +110,24 @@
               <a id="logo" class="logo d-sm-none" href="#">
                 <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
               </a>
+              <!-- Descrição da página -->
+              <p class="page-description d-sm-none pt-3">
+                <i>Área de descrição do template no lado do conteúdo.</i>
+              </p>
             </header>
             <!-- Conteúdo principal -->
             <main id="content" class="page-content pl-sm-10 pt-sm-8">
               <!-- Cabeçalho do conteúdo principal -->
               <header class="content-header pb-5 pb-sm-8 pt-3">
-                <h1 class="content-title">Verifique seu celular</h1>
+                <h1 class="content-title">Título da página</h1>
               </header>
-
-              <div class="row">
-                <div class="col-sm-9 col-md-7 col-lg-8 col-xl-7">
-                  <!-- Área de preenchimento do usuário -->
-                  <section class="br-form">
-                    <p>Um código foi enviado para <strong>(61) 1234-5678</strong>.</p>
-                    <p>Por favor, digite-o no campo abaixo:</p>
-                    <!-- Código -->
-                    <div class="field mb-7">
-                      <label for="codigo">Código de 04 dígitos</label>
-                      <div class="row">
-                        <div class="col-6 col-sm-4">
-                          <input type="text" id="codigo" placeholder="xxxx">
-                        </div>
-                      </div>
-                    </div>
-                    <p class="field mb-7">
-                      <button type="button" class="br-btn is-tertiary">Reenviar código</button>
-                    </p>
-                    <div class="field">
-                      <p class="mb-0">Não recebeu o código? Verifique sua caixa de spam.</p>
-                      <button type="button" class="br-btn is-tertiary">Informou o número errado?</button>
-                    </div>
-                    <div class="field">
-                      <label for="celular">Celular</label>
-                      <div class="row">
-                        <div class="col-sm-5">
-                        	<input type="text" id="celular" placeholder="Ex: (xx) x xxxx-xxxx">
-                        </div>
-                      </div>
-                      <button type="button" class="br-btn is-tertiary">Atualizar e Reenviar Código</button>
-                    </div>
-                    <!-- Botões de ação -->
-                    <div class="actions justify-content-start">
-                      <button type="button" class="br-btn is-primary" disabled>Cadastrar</button>
-                      <button type="button" class="br-btn is-secondary">Voltar</button>
-                    </div>
-                  </section>
-                </div>
-              </div>
+              <section>
+                Conteúdo principal
+              </section>
+              <!-- Navegação adicional para celular -->
+              <nav class="content-navigation"></nav>
+              <!-- Conteúdo acessório -->
+              <aside class="content-aside"></aside>
             </main>
           </div>
         </div>

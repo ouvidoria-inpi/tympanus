@@ -7,24 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Verifique seu celular</title>
   <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
+  <link rel="stylesheet" href="../../assets/estilos/dsgov-components.min.css">
+  <link rel="stylesheet" href="../../templates/starter/starter.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../componentes/button/button.css">
-  <link rel="stylesheet" href="../../componentes/form/form.css">
-  <link rel="stylesheet" href="../../componentes/input-action/input-action.css">
-  <link rel="stylesheet" href="../../componentes/checkbox/checkbox.css">
   <link rel="stylesheet" href="cadastro.css">
 </head>
 
 <body>
   <!-- Atalhos para conteúdo -->
-  <!-- <ul id="skip-menu" class="skip-menu">
-      <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
-      <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
-      <li><a accesskey="3" href="#searchbox">Ir para a busca</a></li>
-      <li><a accesskey="4" href="#footer">Ir para o rodapé</a></li>
-      <li><a accesskey="6" href="#contrast">Ativar alto contraste</a></li>
-    </ul> -->
+  <ul id="skip-menu" class="skip-menu">
+    <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
+    <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
+    <li><a accesskey="3" href="#footer-brasil">Ir para o rodapé</a></li>
+  </ul>
 
   <!-- Barra de governo -->
   <div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
@@ -48,8 +44,6 @@
                 <!-- Logo -->
                 <a id="nav-logo" class="logo d-none d-sm-flex py-8" href="#">
                   <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
-                  <!-- <span class="logo-title"></span> -->
-                  <!-- <span class="logo-description"></span> -->
                 </a>
               </div>
             </div>
@@ -57,42 +51,40 @@
           <!-- Lado direito -->
           <div class="col bg-white">
             <!-- Cabeçalho da página -->
-            <header id="header" class="page-header pt-1 pt-sm-3 pr-sm-3">
+            <header id="header" class="page-header pl-sm-10 pr-sm-3 pt-1 pt-sm-3">
               <!-- Acessibilidade -->
               <div class="accessibility">
-                <a id="contrast" class="media" href="#" accesskey="6">
-                  <div class="media-left">
+                <a id="contrast" href="#" accesskey="6">
+                  <span class="accessibility-icon">
                     <img src="../../assets/images/alto-contraste.png" alt="Alto contraste">
-                  </div>
-                  <div class="media-content d-none d-sm-inline">
+                  </span>
+                  <span class="accessibility-text d-none d-sm-inline">
                     <span class="">Alto Contraste</span>
-                  </div>
+                  </span>
                 </a>
-                <a id="vlibras" class="media ml-3" href="http://www.vlibras.gov.br/">
-                  <div class="media-left">
+                <a id="vlibras" href="http://www.vlibras.gov.br/">
+                  <span class="accessibility-icon">
                     <img src="../../assets/images/vlibras.png" alt="VLibras">
-                  </div>
-                  <div class="media-content d-none d-sm-inline">
+                  </span>
+                  <span class="accessibility-text d-none d-sm-inline">
                     <span class="">VLibras</span>
-                  </div>
+                  </span>
                 </a>
               </div>
               <!-- Logo -->
               <a id="logo" class="logo d-sm-none" href="#">
                 <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
-                <!-- <span class="logo-title"></span> -->
-                <!-- <span class="logo-description"></span> -->
               </a>
             </header>
             <!-- Conteúdo principal -->
-            <main id="content" class="page-content pl-sm-8 pt-sm-8">
+            <main id="content" class="page-content pl-sm-10 pt-sm-8">
               <!-- Cabeçalho do conteúdo principal -->
-              <header class="content-header pb-5 pb-sm-8 pt-3 pl-md-8">
+              <header class="content-header pb-5 pb-sm-8 pt-3">
                 <h1 class="content-title">Verifique seu celular</h1>
               </header>
 
-              <div class="row pl-md-8">
-                <div class="col">
+              <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-8 col-xl-7">
                   <!-- Área de preenchimento do usuário -->
                   <section class="br-form">
                     <p>Um código foi enviado para <strong>(61) 1234-5678</strong>.</p>
@@ -107,14 +99,14 @@
                       </div>
                     </div>
                     <p class="field mb-7">
-                        <button type="button" class="br-btn is-tertiary">Reenviar código</button>
+                      <button type="button" class="br-btn is-tertiary">Reenviar código</button>
                     </p>
                     <div class="field">
                       <p class="mb-0">Não recebeu o código? Verifique sua caixa de spam.</p>
                       <button type="button" class="br-btn is-tertiary">Informou o número errado?</button>
                     </div>
                     <!-- Botões de ação -->
-                    <div class="actions my-10">
+                    <div class="actions justify-content-start">
                       <button type="button" class="br-btn is-primary" disabled>Cadastrar</button>
                       <button type="button" class="br-btn is-secondary">Voltar</button>
                     </div>
@@ -129,7 +121,7 @@
   </div>
 
   <!-- Rodapé de governo -->
-  <div id="footer-brasil" class="page-footer"></div>
+  <div id="footer-brasil" class="page-footer mt-5 mt-sm-0"></div>
 
   <!-- Script da barra de governo -->
   <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>

@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "AAIA,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;CAapB;;AAZE,AACC,WADI,GACA,cAAc,CAAC;EACjB,WAAW,EEkoBL,GAAG;CFjoBV;;AAEF,AAAD,cAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CAIvB;;AANA,AAGC,cAHO,GAGH,YAAY,CAAC;EACf,WAAW,EE2nBL,GAAG;CF1nBV;;AAKL,AAAA,YAAY,CAAC;EACX,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CAQjB;;AAVD,AAGE,YAHU,CAGV,CAAC,CAAC;EACA,KAAK,EEOM,OAAO;CFFnB;;AATH,AAKI,YALQ,CAGV,CAAC,AAEE,MAAM,CAAC;EACN,KAAK,EEvBgB,OAAO;EFwB5B,eAAe,EAAE,IAAI;CACtB",
+    "mappings": "AAIA,AAAA,MAAM,AAAC,CACL,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CAiBpB,AAhBE,AACC,WADI,CACA,cAAc,AAAC,CACjB,WAAW,CEkoBL,GAAG,CFjoBV,AAEF,AAAD,cAAS,AAAC,CACR,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CAIvB,AANA,AAGC,cAHO,CAGH,YAAY,AAAC,CACf,WAAW,CE2nBL,GAAG,CF1nBV,AAbL,AAeE,MAfI,CAeJ,CAAC,AAAC,CACA,KAAK,CEaM,IAAO,CFZlB,eAAe,CAAE,IAAI,CACtB",
     "sources": [
-        "cadastro.scss",
+        "login.scss",
         "../../estilos/scss/_dsgov-base.scss",
         "../../estilos/scss/_tokens.scss",
         "../../estilos/scss/configs/_functions.scss",
@@ -51,5 +51,5 @@
         "../../estilos/scss/configs/_defaults.scss"
     ],
     "names": [],
-    "file": "cadastro.css"
+    "file": "login.min.css"
 }
