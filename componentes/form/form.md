@@ -21,7 +21,10 @@ Use o agrupador `field` para labels e inputs.
 </div>
 ```
 
-> **Atenção**! Os inputs dentro de `field` não precisam da classe `br-input`. Eles serão automaticamente estilizados. Outros componentes devem permanecer com suas respectivas classes, tais como `br-check`.
+O agrupador `field` estiliza automaticamente os seguintes elementos:
+- `<label>`
+- `<input>`
+- `<textarea>`
 
 ### Uso da Grid
 
@@ -122,9 +125,9 @@ Os botões de ação do formulário devem ficar dentro de `actions`.
 ```html
 <div class="br-form">
   <div class="actions">
-    <button class="br-btn btn-primary">Ação principal</button>
-    <button class="br-btn btn-secondary">Ação secundária</button>
-    <button class="br-btn btn-cancel">Cancelar</button>
+    <button class="br-btn is-primary">Ação principal</button>
+    <button class="br-btn is-secondary">Ação secundária</button>
+    <button class="br-btn is-cancel">Cancelar</button>
   </div>
 </div>
 ```

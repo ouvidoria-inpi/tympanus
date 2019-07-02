@@ -23,7 +23,8 @@
       margin-bottom: $spacing-half;
     }
     // Inputs
-    input {
+    input,
+    textarea {
       @include input;
       @include input-states;
       // Placeholder
@@ -41,12 +42,14 @@
     }
     // Estados
     &.is-focus {
-      input {
+      input,
+      textarea {
         @include input-focus($color-primary-lighten-15);
       }
     }
     &.is-invalid {
-      input {
+      input,
+      textarea {
         @include input-state($color-danger);
       }
       .feedback {
@@ -54,7 +57,8 @@
       }
     }
     &.is-valid {
-      input {
+      input,
+      textarea {
         @include input-state($color-success);
       }
       .feedback {

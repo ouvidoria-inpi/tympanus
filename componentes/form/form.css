@@ -14,7 +14,8 @@
   margin-bottom: 4px;
 }
 
-.br-form .field input {
+.br-form .field input,
+.br-form .field textarea {
   font-size: 16px;
   line-height: 28px;
   color: #555555;
@@ -30,31 +31,36 @@
   width: 100%;
 }
 
-.br-form .field input:focus {
+.br-form .field input:focus,
+.br-form .field textarea:focus {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
 
-.br-form .field input:invalid {
+.br-form .field input:invalid,
+.br-form .field textarea:invalid {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-form .field input:invalid:focus {
+.br-form .field input:invalid:focus,
+.br-form .field textarea:invalid:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
   outline: none;
 }
 
-.br-form .field input:disabled {
+.br-form .field input:disabled,
+.br-form .field textarea:disabled {
   background: #ededed;
 }
 
-.br-form .field input::-webkit-input-placeholder {
+.br-form .field input::-webkit-input-placeholder,
+.br-form .field textarea::-webkit-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -63,7 +69,8 @@
   font-family: Rawline;
 }
 
-.br-form .field input:-ms-input-placeholder {
+.br-form .field input:-ms-input-placeholder,
+.br-form .field textarea:-ms-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -72,7 +79,8 @@
   font-family: Rawline;
 }
 
-.br-form .field input::-ms-input-placeholder {
+.br-form .field input::-ms-input-placeholder,
+.br-form .field textarea::-ms-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -81,7 +89,8 @@
   font-family: Rawline;
 }
 
-.br-form .field input::placeholder {
+.br-form .field input::placeholder,
+.br-form .field textarea::placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -107,20 +116,23 @@
   font-family: Rawline;
 }
 
-.br-form .field.is-focus input {
+.br-form .field.is-focus input,
+.br-form .field.is-focus textarea {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
 
-.br-form .field.is-invalid input {
+.br-form .field.is-invalid input,
+.br-form .field.is-invalid textarea {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-form .field.is-invalid input:focus {
+.br-form .field.is-invalid input:focus,
+.br-form .field.is-invalid textarea:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
@@ -135,13 +147,15 @@
   padding: 4px;
 }
 
-.br-form .field.is-valid input {
+.br-form .field.is-valid input,
+.br-form .field.is-valid textarea {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-form .field.is-valid input:focus {
+.br-form .field.is-valid input:focus,
+.br-form .field.is-valid textarea:focus {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
