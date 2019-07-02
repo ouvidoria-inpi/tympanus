@@ -1,23 +1,31 @@
 /*!
- * form - 0.1.2 */
+ * form - 0.1.3 */
 .br-form .field {
   margin-bottom: 24px;
 }
 
 .br-form .field label {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 600;
+  font-family: Rawline;
   margin-bottom: 4px;
 }
 
 .br-form .field input {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
   background: #ffffff;
   border: 1px solid #888888;
   border-radius: 6px;
-  color: #333333;
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  line-height: 1.5;
   padding: 8px 16px;
   width: 100%;
 }
@@ -47,23 +55,39 @@
 }
 
 .br-form .field input::-webkit-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field input:-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field input::-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field input::placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field .feedback {
@@ -75,8 +99,12 @@
 }
 
 .br-form .field .help {
-  color: #333333;
   font-size: 13px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field.is-focus input {

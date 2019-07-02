@@ -2,7 +2,7 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * form - 0.1.2 */
+ * form - 0.1.3 */
 
 // Carregar dependências
 @import "../button/configs";
@@ -19,8 +19,7 @@
     margin-bottom: $field-margin;
     // Labels
     label {
-      font-size: $label-font-size;
-      font-weight: $label-font-weight;
+      @include font-input-label;
       margin-bottom: $spacing-half;
     }
     // Inputs
@@ -38,8 +37,7 @@
     }
     // Texto de ajuda
     .help {
-      color: $help-color;
-      font-size: $help-font-size;
+      @include font-suport-texto-for-input;
     }
     // Estados
     &.is-focus {

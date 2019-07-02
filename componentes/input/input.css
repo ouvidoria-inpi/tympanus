@@ -1,13 +1,17 @@
 /*!
- * input - 0.1.7 */
+ * input - 0.1.8 */
 .br-input {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
   background: #ffffff;
   border: 1px solid #888888;
   border-radius: 6px;
-  color: #333333;
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  line-height: 1.5;
   padding: 8px 16px;
   width: 100%;
 }
@@ -94,22 +98,38 @@
 }
 
 .br-input::-webkit-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input:-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input::-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input::placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 /*# sourceMappingURL=input.css.map */

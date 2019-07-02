@@ -12,14 +12,17 @@
   background: #1351b4;
   border: 1px solid #1351b4;
   border-radius: 100px;
-  color: #ffffff;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
   display: inline-block;
   padding: 8px 24px;
   text-align: center;
   width: 100%;
+  font-size: 16px;
+  line-height: normal;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-family: Rawline;
 }
 
 @media (min-width: 576px) {
@@ -53,14 +56,17 @@
   background: #ffffff;
   border: 1px solid #1351b4;
   border-radius: 100px;
-  color: #1351b4;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
   display: inline-block;
   padding: 8px 24px;
   text-align: center;
   width: 100%;
+  font-size: 16px;
+  line-height: normal;
+  color: #1351b4;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Rawline;
 }
 
 @media (min-width: 576px) {
@@ -96,7 +102,13 @@
   color: #1351b4;
   cursor: pointer;
   padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1351b4;
   text-decoration: underline;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Rawline;
 }
 
 .br-btn.is-tertiary:focus, .br-btn.is-tertiary.is-focus {
@@ -120,7 +132,14 @@
   color: #555555;
   cursor: pointer;
   padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1351b4;
   text-decoration: underline;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Rawline;
+  color: #555555;
 }
 
 .br-btn.is-cancel:focus, .br-btn.is-cancel.is-focus {
@@ -151,7 +170,7 @@
 
 /*!
  * button-social - 0.1.1 */
-.br-button-social {
+.br-btn-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +182,7 @@
   padding: 0;
 }
 
-.br-button-social li {
+.br-btn-social li {
   padding: 0 8px;
 }
 
@@ -233,7 +252,7 @@
   content: "";
   position: absolute;
   right: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -266,7 +285,7 @@
   height: 19px;
   right: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -303,7 +322,7 @@
   content: "";
   position: absolute;
   right: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -336,7 +355,7 @@
   height: 19px;
   right: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -377,17 +396,28 @@
 }
 
 .br-check-input .input label {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+  line-height: 1.5;
   margin: 0;
 }
 
 .br-check-input .input input {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
   background: #ffffff;
   border: 1px solid #888888;
   border-radius: 6px;
-  color: #333333;
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  line-height: 1.5;
   padding: 8px 16px;
   width: 100%;
   max-width: 250px;
@@ -419,23 +449,39 @@
 }
 
 .br-check-input .input input::-webkit-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-check-input .input input:-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-check-input .input input::-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-check-input .input input::placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-check-input .check {
@@ -443,7 +489,7 @@
   position: relative;
   display: inline-block;
   position: relative;
-  margin-top: -32px;
+  margin-top: -44px;
   margin-right: 8px;
 }
 
@@ -453,10 +499,14 @@
 }
 
 .br-check-input .check input[type="checkbox"] + label {
+  font-size: 16px;
+  line-height: 28px;
   color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+  line-height: 1.5;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
   padding: 0 28px 0 0;
   position: relative;
 }
@@ -469,7 +519,7 @@
   height: 19px;
   right: 0;
   position: absolute;
-  top: 0;
+  top: 5px;
   vertical-align: text-top;
   width: 19px;
 }
@@ -491,7 +541,7 @@
   content: "";
   position: absolute;
   right: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -525,7 +575,7 @@
   content: "";
   position: absolute;
   right: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -552,7 +602,7 @@
   content: "";
   position: absolute;
   right: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -581,7 +631,7 @@
   content: "";
   position: absolute;
   right: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -607,10 +657,14 @@
 }
 
 .br-check-input .check input[type="radio"] + label {
+  font-size: 16px;
+  line-height: 28px;
   color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+  line-height: 1.5;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
   padding: 0 28px 0 0;
   position: relative;
 }
@@ -623,7 +677,7 @@
   height: 19px;
   right: 0;
   position: absolute;
-  top: 0;
+  top: 5px;
   vertical-align: text-top;
   width: 19px;
 }
@@ -649,7 +703,7 @@
   height: 19px;
   right: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -682,7 +736,7 @@
   height: 19px;
   right: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -708,7 +762,7 @@
   height: 19px;
   right: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -736,7 +790,7 @@
   height: 19px;
   right: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -770,10 +824,14 @@
 }
 
 .br-check input[type="checkbox"] + label {
+  font-size: 16px;
+  line-height: 28px;
   color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+  line-height: 1.5;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
   padding: 0 0 0 28px;
   position: relative;
 }
@@ -786,7 +844,7 @@
   height: 19px;
   left: 0;
   position: absolute;
-  top: 0;
+  top: 5px;
   vertical-align: text-top;
   width: 19px;
 }
@@ -808,7 +866,7 @@
   content: "";
   position: absolute;
   left: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -842,7 +900,7 @@
   content: "";
   position: absolute;
   left: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -869,7 +927,7 @@
   content: "";
   position: absolute;
   left: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -898,7 +956,7 @@
   content: "";
   position: absolute;
   left: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -924,10 +982,14 @@
 }
 
 .br-check input[type="radio"] + label {
+  font-size: 16px;
+  line-height: 28px;
   color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+  line-height: 1.5;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
   padding: 0 0 0 28px;
   position: relative;
 }
@@ -940,7 +1002,7 @@
   height: 19px;
   left: 0;
   position: absolute;
-  top: 0;
+  top: 5px;
   vertical-align: text-top;
   width: 19px;
 }
@@ -966,7 +1028,7 @@
   height: 19px;
   left: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -999,7 +1061,7 @@
   height: 19px;
   left: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -1025,7 +1087,7 @@
   height: 19px;
   left: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -1053,7 +1115,7 @@
   height: 19px;
   left: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -1075,19 +1137,27 @@
 }
 
 .br-form .field label {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 600;
+  font-family: Rawline;
   margin-bottom: 4px;
 }
 
 .br-form .field input {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
   background: #ffffff;
   border: 1px solid #888888;
   border-radius: 6px;
-  color: #333333;
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  line-height: 1.5;
   padding: 8px 16px;
   width: 100%;
 }
@@ -1117,23 +1187,39 @@
 }
 
 .br-form .field input::-webkit-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field input:-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field input::-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field input::placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field .feedback {
@@ -1145,8 +1231,12 @@
 }
 
 .br-form .field .help {
-  color: #333333;
   font-size: 13px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-form .field.is-focus input {
@@ -1228,13 +1318,17 @@
 /*!
  * input - 0.1.7 */
 .br-input {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
   background: #ffffff;
   border: 1px solid #888888;
   border-radius: 6px;
-  color: #333333;
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  line-height: 1.5;
   padding: 8px 16px;
   width: 100%;
 }
@@ -1321,23 +1415,39 @@
 }
 
 .br-input::-webkit-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input:-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input::-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input::placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 /*!
@@ -1347,13 +1457,17 @@
 }
 
 .br-input-action input {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
   background: #ffffff;
   border: 1px solid #888888;
   border-radius: 6px;
-  color: #333333;
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  line-height: 1.5;
   padding: 8px 16px;
   width: 100%;
 }
@@ -1391,23 +1505,39 @@
 }
 
 .br-input-action input::-webkit-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input-action input:-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input-action input::-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input-action input::placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input-action .action {
@@ -1757,13 +1887,24 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  border-bottom: 1px solid #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.br-tabs.flex-column {
+  border-bottom: 0;
+}
+
+.br-tabs.flex-column .tab-item {
+  border-bottom: 1px solid #cccccc;
 }
 
 .br-tabs .tab-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #cccccc;
   padding: 0 16px;
 }
 
