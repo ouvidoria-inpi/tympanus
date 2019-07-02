@@ -5,6 +5,11 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.2.0] - 2019-07-02
+### Changed
+- Nome da classe de aplicação do estilo
+- Aplicação da tipografia dos tokens
+
 ## [0.1.1] - 2019-07-01
 ### Added
 - Arquivo minificado
