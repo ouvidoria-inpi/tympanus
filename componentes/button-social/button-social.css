@@ -1,6 +1,6 @@
 /*!
- * button-social - 0.1.1 */
-.br-button-social {
+ * button-social - 0.2.0 */
+.br-btn-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,7 +12,7 @@
   padding: 0;
 }
 
-.br-button-social li {
+.br-btn-social li {
   padding: 0 8px;
 }
 /*# sourceMappingURL=button-social.css.map */

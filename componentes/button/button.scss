@@ -2,7 +2,7 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * button - 0.1.6 */
+ * button - 0.1.7 */
 
 // Carregar dependências
 @import "configs";
@@ -12,15 +12,20 @@
 .#{$prefix}btn {
   &.is-primary {
     @include btn-pill($color-primary, $color-primary, $color-white);
+    @include font-primary-button;
   }
   &.is-secondary {
     @include btn-pill;
+    @include font-secondary-button;
   }
   &.is-tertiary {
     @include btn-link;
+    @include font-tertiary-button;
   }
   &.is-cancel {
     @include btn-link($color-gray-6);
+    @include font-tertiary-button;
+    color: $color-gray-6;
   }
   & + & {
     margin-top: $btn-margin-vertical;

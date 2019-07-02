@@ -19,8 +19,7 @@
     margin-bottom: $field-margin;
     // Labels
     label {
-      font-size: $label-font-size;
-      font-weight: $label-font-weight;
+      @include font-input-label;
       margin-bottom: $spacing-half;
     }
     // Inputs
@@ -39,8 +38,7 @@
     }
     // Texto de ajuda
     .help {
-      color: $help-color;
-      font-size: $help-font-size;
+      @include font-suport-texto-for-input;
     }
     // Estados
     &.is-focus {

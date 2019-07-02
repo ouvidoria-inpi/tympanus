@@ -1,17 +1,21 @@
 /*!
- * input-action - 0.1.4 */
+ * input-action - 0.1.5 */
 .br-input-action {
   position: relative;
 }
 
 .br-input-action input {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
   background: #ffffff;
   border: 1px solid #888888;
   border-radius: 6px;
-  color: #333333;
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  line-height: 1.5;
   padding: 8px 16px;
   width: 100%;
 }
@@ -49,23 +53,39 @@
 }
 
 .br-input-action input::-webkit-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input-action input:-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input-action input::-ms-input-placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input-action input::placeholder {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
   font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 .br-input-action .action {

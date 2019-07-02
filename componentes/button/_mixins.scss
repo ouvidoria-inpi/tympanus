@@ -3,10 +3,7 @@
   background: $background;
   border: 1px solid $border;
   border-radius: $btn-pill-radius;
-  color: $color;
   cursor: pointer;
-  font-size: $btn-pill-font-size;
-  font-weight: $btn-font-weight;
   display: inline-block;
   padding: $btn-pill-padding;
   text-align: center;
@@ -43,7 +40,6 @@
   color: $color;
   cursor: pointer;
   padding: 0;
-  text-decoration: underline;
   &:focus,
   &.is-focus {
     outline: 0;

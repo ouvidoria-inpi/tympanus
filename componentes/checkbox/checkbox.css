@@ -1,5 +1,5 @@
 /*!
- * check - 0.1.7 */
+ * check - 0.1.8 */
 .br-check {
   display: inline-block;
   position: relative;
@@ -13,10 +13,14 @@
 }
 
 .br-check input[type="checkbox"] + label {
+  font-size: 16px;
+  line-height: 28px;
   color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+  line-height: 1.5;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
   padding: 0 0 0 28px;
   position: relative;
 }
@@ -29,7 +33,7 @@
   height: 19px;
   left: 0;
   position: absolute;
-  top: 0;
+  top: 5px;
   vertical-align: text-top;
   width: 19px;
 }
@@ -51,7 +55,7 @@
   content: "";
   position: absolute;
   left: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -85,7 +89,7 @@
   content: "";
   position: absolute;
   left: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -112,7 +116,7 @@
   content: "";
   position: absolute;
   left: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -141,7 +145,7 @@
   content: "";
   position: absolute;
   left: 7px;
-  top: 3px;
+  top: 8px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   width: 6px;
@@ -167,10 +171,14 @@
 }
 
 .br-check input[type="radio"] + label {
+  font-size: 16px;
+  line-height: 28px;
   color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+  line-height: 1.5;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
   padding: 0 0 0 28px;
   position: relative;
 }
@@ -183,7 +191,7 @@
   height: 19px;
   left: 0;
   position: absolute;
-  top: 0;
+  top: 5px;
   vertical-align: text-top;
   width: 19px;
 }
@@ -209,7 +217,7 @@
   height: 19px;
   left: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -242,7 +250,7 @@
   height: 19px;
   left: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -268,7 +276,7 @@
   height: 19px;
   left: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 
@@ -296,7 +304,7 @@
   height: 19px;
   left: 0px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   width: 19px;
 }
 

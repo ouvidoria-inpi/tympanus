@@ -2,7 +2,7 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * check-input - 0.1.2 */
+ * check-input - 0.2.0 */
 
 // Carregar dependências
 @import "../input/configs";
@@ -14,6 +14,6 @@
 
 // Estilos específicos
 
-.#{$prefix}check-input {
-  @include check-input;
+.#{$prefix}check-list {
+  @include check-list;
 }

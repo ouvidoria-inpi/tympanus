@@ -2,13 +2,13 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * button-social - 0.1.1 */
+ * button-social - 0.2.0 */
 
 // Carregar dependências
 @import "configs";
 @import "mixins";
 
 // Estilos de botões
-.#{$prefix}button-social {
+.#{$prefix}btn-social {
   @include button-social;
 }

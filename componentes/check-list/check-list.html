@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div class="br-check-input">
+  <div class="br-check-list">
     <div class="field">
       <div class="icon">
         <i class="far fa-envelope"></i>
@@ -23,7 +23,7 @@
         <input type="text" id="radio-email" placeholder="Ex: fulano@email.com">
       </div>
       <div class="check">
-        <input name="preferencia" type="radio" id="radio-email-check" onclick="toggleActiveField(this, 'br-check-input')">
+        <input name="preferencia" type="radio" id="radio-email-check" onclick="toggleActiveField(this, 'br-check-list')">
         <label for="radio-email-check"><span class="sr-only">E-mail</span></label>
       </div>
     </div>
@@ -36,12 +36,12 @@
         <input type="text" id="radio-celular" placeholder="Ex: (xx) xxxxx-xxxx">
       </div>
       <div class="check">
-        <input name="preferencia" type="radio" id="radio-celular-check" onclick="toggleActiveField(this, 'br-check-input')" checked>
+        <input name="preferencia" type="radio" id="radio-celular-check" onclick="toggleActiveField(this, 'br-check-list')" checked>
         <label for="radio-celular-check"><span class="sr-only">Celular</span></label>
       </div>
     </div>
   </div>
-  <div class="br-check-input mt-10">
+  <div class="br-check-list mt-10">
     <div class="field">
       <div class="icon">
         <i class="far fa-envelope"></i>
@@ -51,7 +51,7 @@
         <input type="text" id="box-email" placeholder="Ex: fulano@email.com">
       </div>
       <div class="check">
-        <input type="checkbox" id="box-email-check" onclick="toggleActiveField(this, 'br-check-input')">
+        <input type="checkbox" id="box-email-check" onclick="toggleActiveField(this, 'br-check-list')">
         <label for="box-email-check"><span class="sr-only">E-mail</span></label>
       </div>
     </div>
@@ -64,7 +64,7 @@
         <input type="text" id="box-celular" placeholder="Ex: (xx) xxxxx-xxxx" disabled>
       </div>
       <div class="check">
-        <input type="checkbox" id="box-celular-check" onclick="toggleActiveField(this, 'br-check-input')" checked disabled>
+        <input type="checkbox" id="box-celular-check" onclick="toggleActiveField(this, 'br-check-list')" checked disabled>
         <label for="box-celular-check"><span class="sr-only">Celular</span></label>
       </div>
     </div>

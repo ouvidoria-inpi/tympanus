@@ -1,9 +1,9 @@
 // Estilo base para check com input
-@mixin check-input() {
+@mixin check-list() {
   border-top: $check-input-border-size $check-input-border-style $check-input-border-color;
   display: flex;
   flex-direction: column;
-  margin-bottom: $check-input-margin;
+  margin: $check-input-margin;
   .field {
     @include check-field;
     @include check-states;
@@ -59,6 +59,8 @@
 @mixin check-inputs {
   flex: 1;
   label {
+    @include font-system-default-text;
+    line-height: 1.5;
     margin: 0;
   }
   input {
@@ -75,7 +77,7 @@
 @mixin check-checks {
   @include check(checkbox, right);
   @include check(radio, right);
-  margin-top: - $spacing-6;
+  margin-top: - $spacing-9;
   margin-right: $spacing-1;
   label {
     margin: 0;

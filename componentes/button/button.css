@@ -1,17 +1,20 @@
 /*!
- * button - 0.1.6 */
+ * button - 0.1.7 */
 .br-btn.is-primary {
   background: #1351b4;
   border: 1px solid #1351b4;
   border-radius: 100px;
-  color: #ffffff;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
   display: inline-block;
   padding: 8px 24px;
   text-align: center;
   width: 100%;
+  font-size: 16px;
+  line-height: normal;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-family: Rawline;
 }
 
 @media (min-width: 576px) {
@@ -45,14 +48,17 @@
   background: #ffffff;
   border: 1px solid #1351b4;
   border-radius: 100px;
-  color: #1351b4;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
   display: inline-block;
   padding: 8px 24px;
   text-align: center;
   width: 100%;
+  font-size: 16px;
+  line-height: normal;
+  color: #1351b4;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Rawline;
 }
 
 @media (min-width: 576px) {
@@ -88,7 +94,13 @@
   color: #1351b4;
   cursor: pointer;
   padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1351b4;
   text-decoration: underline;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Rawline;
 }
 
 .br-btn.is-tertiary:focus, .br-btn.is-tertiary.is-focus {
@@ -112,7 +124,14 @@
   color: #555555;
   cursor: pointer;
   padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1351b4;
   text-decoration: underline;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Rawline;
+  color: #555555;
 }
 
 .br-btn.is-cancel:focus, .br-btn.is-cancel.is-focus {

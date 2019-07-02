@@ -53,10 +53,9 @@
 // - A cor pode ser modificada via argumento
 @mixin check-label($side, $color: $color-gray-6) {
   & + label {
-    color: $color;
+    @include font-system-default-text;
+    line-height: 1.5;
     cursor: pointer;
-    font-size: $check-font-size;
-    font-weight: $check-font-weight;
     @if ($side == left) {
       padding: 0 0 0 ($check-size + $spacing-1);
     }
@@ -89,7 +88,7 @@
       right: 0;
     }
     position: absolute;
-    top: 0;
+    top: 5px;
     vertical-align: text-top;
     width: $check-size - $check-border-size;
   }
@@ -128,7 +127,7 @@
       @if ($side == right) {
         right: 7px;
       }
-      top: 3px;
+      top: 8px;
       border: solid $color-white;
       border-width: 0 2px 2px 0;
       width: 6px;
@@ -149,7 +148,7 @@
         right: 0px;
       }
       position: absolute;
-      top: 0px;
+      top: 5px;
       width: ($check-size - $check-border-size);
     }
   }
