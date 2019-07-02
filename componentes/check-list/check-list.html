@@ -23,7 +23,7 @@
         <input type="text" id="radio-email" placeholder="Ex: fulano@email.com">
       </div>
       <div class="check">
-        <input name="preferencia" type="radio" id="radio-email-check">
+        <input name="preferencia" type="radio" id="radio-email-check" onclick="toggleActiveField(this, 'br-check-input')">
         <label for="radio-email-check"><span class="sr-only">E-mail</span></label>
       </div>
     </div>
@@ -36,7 +36,7 @@
         <input type="text" id="radio-celular" placeholder="Ex: (xx) xxxxx-xxxx">
       </div>
       <div class="check">
-        <input name="preferencia" type="radio" id="radio-celular-check" checked>
+        <input name="preferencia" type="radio" id="radio-celular-check" onclick="toggleActiveField(this, 'br-check-input')" checked>
         <label for="radio-celular-check"><span class="sr-only">Celular</span></label>
       </div>
     </div>
@@ -51,7 +51,7 @@
         <input type="text" id="box-email" placeholder="Ex: fulano@email.com">
       </div>
       <div class="check">
-        <input type="checkbox" id="box-email-check">
+        <input type="checkbox" id="box-email-check" onclick="toggleActiveField(this, 'br-check-input')">
         <label for="box-email-check"><span class="sr-only">E-mail</span></label>
       </div>
     </div>
@@ -64,11 +64,13 @@
         <input type="text" id="box-celular" placeholder="Ex: (xx) xxxxx-xxxx" disabled>
       </div>
       <div class="check">
-        <input type="checkbox" id="box-celular-check" checked disabled>
+        <input type="checkbox" id="box-celular-check" onclick="toggleActiveField(this, 'br-check-input')" checked disabled>
         <label for="box-celular-check"><span class="sr-only">Celular</span></label>
       </div>
     </div>
   </div>
+
+  <script src="check-list.js"></script>
 </body>
 
 </html>

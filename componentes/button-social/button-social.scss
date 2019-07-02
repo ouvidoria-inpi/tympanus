@@ -1,0 +1,14 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * button-social - 0.1.1 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos de botões
+.#{$prefix}button-social {
+  @include button-social;
+}

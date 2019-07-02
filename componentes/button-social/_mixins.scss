@@ -1,0 +1,10 @@
+@mixin button-social() {
+  display: flex;
+  justify-content: $button-social-alignment;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: $button-social-padding;
+  }
+}

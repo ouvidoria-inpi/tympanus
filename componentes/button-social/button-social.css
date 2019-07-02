@@ -1,0 +1,18 @@
+/*!
+ * button-social - 0.1.1 */
+.br-button-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.br-button-social li {
+  padding: 0 8px;
+}
+/*# sourceMappingURL=button-social.css.map */
