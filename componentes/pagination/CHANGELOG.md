@@ -5,6 +5,13 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.2] - 2019-07-01
+### Added
+- Seletor de página para mobile
+
+### Changed
+- Aplicação do estilo grande somente para resolução acima de mobile
+
 ## [0.1.1] - 2019-07-01
 ### Added
 - Arquivo minificado
