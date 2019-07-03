@@ -1,16 +1,18 @@
-// Border Bottom
-$tab-border-bottom-active: inset 0 -4px 0 0 $color-primary;
-$tab-border-bottom-default: 1px solid $color-gray-3;
+$tab-border: $color-gray-3;
+$tab-padding: $spacing-3;
 
-// Margin Left
-$tab-margin-left-icon: 0;
-$tab-margin-left: 32px;
+$tab-font-size: 18px;
+$tab-font-weight: 600;
 
-// Font Weight
-$tab-font-weight-default: 500;
-$tab-font-weight-active: 700;
+$tab-item-padding: $spacing-1;
+$tab-item-color: $color-gray-4;
 
-// Spacing Itens
-$tab-space-item: 0 $spacing-3;
-$tab-space-link: 0;
+$tab-icon-size: 32px;
+$tab-icon-color: $color-primary;
 
+$tab-results-margin: $spacing-1;
+$tab-results-font-size: 14px;
+$tab-results-color: $color-primary;
+
+$tab-active-border: inset 0 -4px 0 0 $color-primary;
+$tab-active-color: $color-primary-darken-25;
