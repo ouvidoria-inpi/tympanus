@@ -94,6 +94,7 @@
     content: "";
     width: 150px;
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -101,35 +102,19 @@
     -webkit-box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
             box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
   }
-  .br-table {
-    margin-left: 150px;
-  }
   .br-table tbody tr:first-child th:first-child {
     margin-top: 1px;
   }
   .br-table {
     margin-left: 150px;
   }
-  .br-table thead tr,
-  .br-table tbody tr {
-    position: relative;
-  }
   .br-table thead tr th:first-child,
   .br-table tbody tr th:first-child {
     width: 150px;
     position: absolute;
-    top: 0;
-    bottom: 0;
     left: 0;
-    z-index: 999;
+    z-index: 2;
     border: none;
-    border-bottom: 1px solid #C5D4EB;
-    margin-left: -150px;
-  }
-  .br-table thead tr th.active,
-  .br-table tbody tr th.active {
-    background: #2b74e9;
-    border-color: #2b74e9;
   }
   .br-table thead.show-table th,
   .br-table tbody.show-table th {

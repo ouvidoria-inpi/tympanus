@@ -87,6 +87,7 @@
           content: "";
           width: $table-responsive-first-col;
           position: absolute;
+          z-index: 1;
           top: 0;
           bottom: 0;
           left: 0;
@@ -97,7 +98,7 @@
     }
 
     .#{$prefix}table {
-      margin-left: $table-responsive-first-col;
+      // margin-left: $table-responsive-first-col;
       tbody {
         tr:first-child {
           th {
@@ -114,22 +115,23 @@
       thead,
       tbody {
         tr {
-          position: relative;
+          // display: block;
+          // position: relative;
           th {
             &:first-child {
               width: $table-responsive-first-col;
               position: absolute;
-              top: 0;
-              bottom: 0;
+              // top: 0;
+              // bottom: 0;
               left: 0;
-              z-index: 999;
+              z-index: 2;
               border: none;
-              border-bottom: $table-border-thead-size solid $table-border-thead-color;
-              margin-left: - $table-responsive-first-col;
+              // border-bottom: $table-border-thead-size solid $table-border-thead-color;
+              // margin-left: - $table-responsive-first-col;
             }
             &.active {
-              background: $color-primary-lighten-15;
-              border-color: $color-primary-lighten-15;
+              // background: $color-primary-lighten-15;
+              // border-color: $color-primary-lighten-15;
             }
           }
         }
