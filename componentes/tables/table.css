@@ -85,9 +85,6 @@
   .br-table-responsive {
     display: block;
     width: 100%;
-    position: relative;
-  }
-  .br-table-responsive div {
     overflow-x: auto;
   }
   .br-table tbody tr:first-child th:first-child {
