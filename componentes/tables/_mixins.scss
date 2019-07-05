@@ -83,27 +83,18 @@
       position: relative;
       div {
         overflow-x: auto;
-        &::before {
-          content: "";
-          width: $table-responsive-first-col;
-          position: absolute;
-          z-index: 1;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          background: $color-white;
-          box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
-        }
       }
     }
 
     .#{$prefix}table {
-      // margin-left: $table-responsive-first-col;
       tbody {
         tr:first-child {
           th {
             &:first-child {
               margin-top: 1px;
+              background: $color-gray-1;
+              border-bottom: 1px solid $table-border-thead-color;
+              box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
             }
           }
         }
@@ -115,23 +106,20 @@
       thead,
       tbody {
         tr {
-          // display: block;
-          // position: relative;
           th {
             &:first-child {
               width: $table-responsive-first-col;
               position: absolute;
-              // top: 0;
-              // bottom: 0;
               left: 0;
               z-index: 2;
               border: none;
-              // border-bottom: $table-border-thead-size solid $table-border-thead-color;
-              // margin-left: - $table-responsive-first-col;
+              background: $color-gray-1;
+              border-bottom: 1px solid $table-border-thead-color;
+              box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
             }
             &.active {
-              // background: $color-primary-lighten-15;
-              // border-color: $color-primary-lighten-15;
+              background: $color-primary-lighten-15;
+              border-color: $color-primary-lighten-15;
             }
           }
         }
@@ -150,6 +138,8 @@
         th {
           &:first-child {
             margin-top: 0;
+            border-top: 1px solid $table-border-thead-color;
+            border-bottom: 1px solid $table-border-thead-color;
           }
         }
       }

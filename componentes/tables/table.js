@@ -43,20 +43,8 @@ function setActive(el){
     }
 }
 
-// Resize Window
-/*
-var addEvent = function(object, type, callback) {
-    if (object == null || typeof(object) == 'undefined') return;
-    if (object.addEventListener) {
-        object.addEventListener(type, callback, false);
-    } else if (object.attachEvent) {
-        object.attachEvent("on" + type, callback);
-    } else {
-        object["on"+type] = callback;
-    }
-};
-
-addEvent(window, "resize", function(event) {
-    console.log('oi');
-  });
-*/
+//Correção da altura das colunas na tabela responsiva;
+var target = document.getElementsByTagName("tr");
+for (i = 0; i < target.length; i++) {
+    target[i].children[0].style.height = target[i].children[1].offsetHeight+'px';
+}

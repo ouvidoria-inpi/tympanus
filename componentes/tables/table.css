@@ -90,20 +90,12 @@
   .br-table-responsive div {
     overflow-x: auto;
   }
-  .br-table-responsive div::before {
-    content: "";
-    width: 150px;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background: #ffffff;
-    -webkit-box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
-            box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
-  }
   .br-table tbody tr:first-child th:first-child {
     margin-top: 1px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #C5D4EB;
+    -webkit-box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
   }
   .br-table {
     margin-left: 150px;
@@ -115,6 +107,15 @@
     left: 0;
     z-index: 2;
     border: none;
+    background: #f8f8f8;
+    border-bottom: 1px solid #C5D4EB;
+    -webkit-box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
+  }
+  .br-table thead tr th.active,
+  .br-table tbody tr th.active {
+    background: #2b74e9;
+    border-color: #2b74e9;
   }
   .br-table thead.show-table th,
   .br-table tbody.show-table th {
@@ -124,6 +125,8 @@
 
 .br-table thead tr th:first-child {
   margin-top: 0;
+  border-top: 1px solid #C5D4EB;
+  border-bottom: 1px solid #C5D4EB;
 }
 
 .br-table tbody tr th:first-child i,
