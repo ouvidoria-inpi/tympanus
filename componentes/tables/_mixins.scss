@@ -1,5 +1,5 @@
 @mixin table-title(){
-  h3.#{$prefix}table-title{
+  h1.#{$prefix}table-title{
     font-size: 20px;
     font-weight: 500;
     color: $color-gray-6;
@@ -61,13 +61,13 @@
         background: $color-primary-lighten-15;
       }
   
-      &.showTable{
+      &.show-table{
         th{
           display: none;
         }
         display: table-row;
       }
-      &.hideTable{
+      &.hide-table{
         display: none;
       }
      }
@@ -127,7 +127,7 @@
               background: $color-primary-lighten-15;
             }
           }
-          &.showTable{
+          &.show-table{
             th{
               display: table-cell;
             }

@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <h3 class="br-table-title">Exemplo de Título para Tabela</h3>
+  <h1 class="br-table-title">Exemplo de Título para Tabela</h1>
   <div class="br-table-responsive">
     <div>
       <table class="br-table br-table-hover">
@@ -35,8 +35,8 @@
             <td class="text-center">Suspendisse</td>
             <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
           </tr>
-          <tr class="rowContent hideTable" >
-            <th></th>
+          <tr class="row-content hide-table" >
+            <th scope="col"></th>
             <td colspan="6">
               <p>Lorem ipsum dolor sit amet, lacinia nec turpis vestibulum lacinia proin amet, ipsum pharetra velit, nisl luctus dolor nulla. Laoreet interdum mauris quisque platea ante. Sit pede gravida aliquam felis enim, erat in ac omnis facilisis velit, cras aenean nunc. Quis scelerisque rutrum lobortis lacinia</p>
             </td>
@@ -49,14 +49,14 @@
               <td class="text-center">Suspendisse</td>
               <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
           </tr>
-          <tr class="rowContent hideTable" >
-              <th></th>  
+          <tr class="row-content hide-table" >
+              <th scope="col"></th>
               <td colspan="6">
                   <p>Lorem ipsum dolor sit amet, lacinia nec turpis vestibulum lacinia proin amet, ipsum pharetra velit, nisl luctus dolor nulla. Laoreet interdum mauris quisque platea ante. Sit pede gravida aliquam felis enim, erat in ac omnis facilisis velit, cras aenean nunc. Quis scelerisque rutrum lobortis lacinia</p>
               </td>
             </tr>
           <tr>
-              <th class="text-center" scope="row"><input onclick="setActive(this)" type="checkbox"></th>
+              <th class="text-center" scope="row"><label class="sr-only">Marcar Linha</label><input onclick="setActive(this)" type="checkbox"></th>
               <td class="text-center">Lorem ipsum</td>
               <td class="text-center">100%</td>
               <td class="text-center">30</td>
@@ -64,7 +64,7 @@
               <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
           </tr>
           <tr>
-              <th class="text-center" scope="row"><input onclick="setActive(this)" type="checkbox"></th>
+              <th class="text-center" scope="row"><label class="sr-only">Marcar Linha</label><input onclick="setActive(this)" type="checkbox"></th>
               <td class="text-center">Lorem ipsum</td>
               <td class="text-center">100%</td>
               <td class="text-center">30</td>
@@ -75,7 +75,6 @@
       </table>
     </div>
   </div>
-
+  <script type="text/javascript" src="table.js"></script>
 </body>
-<script type="text/javascript" src="table.js"></script>
 </html>

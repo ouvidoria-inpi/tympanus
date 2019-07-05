@@ -14,15 +14,15 @@ function ShowHideTable(el) {
     parentE2 = parentEl.parentNode;
     nextEl = parentE2.nextElementSibling;
     if(nextEl != null){
-        if (hasClass(nextEl, 'showTable') && hasClass(nextEl, 'rowContent')) {
-            nextEl.classList.remove('showTable');
-            nextEl.className = "rowContent hideTable";
+        if (hasClass(nextEl, 'show-table') && hasClass(nextEl, 'row-content')) {
+            nextEl.classList.remove('show-table');
+            nextEl.className = "row-content hide-table";
             el.classList.remove('fa-minus');
             el.className = "fas fa-plus";
 
-        }else if(hasClass(nextEl, 'hideTable') && hasClass(nextEl, 'rowContent')) {
-            nextEl.classList.remove('hideTable');
-            nextEl.className = "rowContent showTable";
+        }else if(hasClass(nextEl, 'hide-table') && hasClass(nextEl, 'row-content')) {
+            nextEl.classList.remove('hide-table');
+            nextEl.className = "row-content show-table";
             el.classList.remove('fa-plus');
             el.className = "fas fa-minus";
         }
