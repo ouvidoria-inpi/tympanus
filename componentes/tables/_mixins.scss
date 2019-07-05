@@ -1,5 +1,5 @@
-@mixin table-title(){
-  h1.#{$prefix}table-title{
+@mixin table-title() {
+  .#{$prefix}table-title {
     font-size: 20px;
     font-weight: 500;
     color: $color-gray-6;
@@ -8,17 +8,17 @@
     margin-bottom: $table-title-margin-bottom;
   }
 }
-@mixin thead(){
+@mixin thead() {
   .#{$prefix}table-responsive {
     display: block;
     width: $table-responsive-width;
   }
-  
+
   .#{$prefix}table {
     width: $table-width;
-    thead{
+    thead {
       background: $color-gray-1;
-      tr th{
+      tr th {
         padding: $table-pading-thead-cell;
         text-align: center;
         border-top: $table-border-thead-size solid $table-border-thead-color;
@@ -29,140 +29,141 @@
   }
 }
 
-@mixin tbody(){
+@mixin tbody() {
   .#{$prefix}table {
-    tbody{
-      tr{
+    tbody {
+      tr {
         border-bottom: $table-border-tbody-size solid $table-border-tbody-color;
         &:hover {
-        cursor: pointer;
-        background: #DBE8FB;
-      }
-      th,
-      td{
-        padding: $table-pading-tbody-cell;
-        color: $color-gray-6;
-        i{
           cursor: pointer;
-          margin: $table-margin-icons;
-          color: $color-primary;
+          background: #dbe8fb;
         }
-      }
-      
-      &.active,
-      &:active,
-      &:focus{
-        th i,
-        td i,
-        th, 
-        td{
-          color: $color-white;
+        th,
+        td {
+          padding: $table-pading-tbody-cell;
+          color: $color-gray-6;
+          i {
+            cursor: pointer;
+            margin: $table-margin-icons;
+            color: $color-primary;
+          }
         }
-        background: $color-primary-lighten-15;
-      }
-  
-      &.show-table{
-        th{
+
+        &.active,
+        &:active,
+        &:focus {
+          th i,
+          td i,
+          th,
+          td {
+            color: $color-white;
+          }
+          background: $color-primary-lighten-15;
+        }
+
+        &.show-table {
+          th {
+            display: none;
+          }
+          display: table-row;
+        }
+        &.hide-table {
           display: none;
         }
-        display: table-row;
       }
-      &.hide-table{
-        display: none;
-      }
-     }
     }
   }
 }
 
-@mixin tableResponsive(){
+@mixin tableResponsive() {
   @media (max-width: 576px) {
     .#{$prefix}table-responsive {
       display: block;
       width: $table-responsive-width;
       position: relative;
-      div{
+      div {
         overflow-x: auto;
-        &::before{
-            content: "";
-            width: 150px;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            background: $color-white;
-            box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2)    
+        &::before {
+          content: "";
+          width: $table-responsive-first-col;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          background: $color-white;
+          box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
         }
+      }
     }
 
-    }
-    
     .#{$prefix}table {
       margin-left: $table-responsive-first-col;
-      tbody{
-       tr:first-child{
-        th{
-            &:first-child{
+      tbody {
+        tr:first-child {
+          th {
+            &:first-child {
               margin-top: 1px;
             }
           }
-        } 
-      } 
+        }
+      }
     }
 
     .#{$prefix}table {
       margin-left: $table-responsive-first-col;
       thead,
-      tbody{
-       tr th{
-            &:first-child{
+      tbody {
+        tr {
+          position: relative;
+          th {
+            &:first-child {
               width: $table-responsive-first-col;
               position: absolute;
-              top: auto;
+              top: 0;
+              bottom: 0;
               left: 0;
               z-index: 999;
               border: none;
+              border-bottom: $table-border-thead-size solid $table-border-thead-color;
+              margin-left: - $table-responsive-first-col;
             }
-            &.active{
+            &.active {
               background: $color-primary-lighten-15;
+              border-color: $color-primary-lighten-15;
             }
           }
-          &.show-table{
-            th{
-              display: table-cell;
-            }
+        }
+        &.show-table {
+          th {
+            display: table-cell;
           }
-
-        } 
-      } 
+        }
+      }
     }
-
-    .#{$prefix}table {
-      thead{
-        tr{
-         th{
-            &:first-child{
-               margin-top: 0;
-
-             }
-           }
-         }
-       }
-    }
-
-    .#{$prefix}table {
-      tbody{
-        tr{
-         th{
-            &:first-child i,
-            &:first-child input[type='checkbox']{
-               margin-top: 16px;
-             }
-           }
-         }
-       }
-    }
-
-
   }
 
+  .#{$prefix}table {
+    thead {
+      tr {
+        th {
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .#{$prefix}table {
+    tbody {
+      tr {
+        th {
+          &:first-child i,
+          &:first-child input[type="checkbox"] {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+}

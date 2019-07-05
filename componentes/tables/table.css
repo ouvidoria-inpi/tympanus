@@ -1,6 +1,6 @@
 /*!
  * table - 0.1.0 */
-h1.br-table-title {
+.br-table-title {
   font-size: 20px;
   font-weight: 500;
   color: #555555;
@@ -36,7 +36,7 @@ h1.br-table-title {
 
 .br-table tbody tr:hover {
   cursor: pointer;
-  background: #DBE8FB;
+  background: #dbe8fb;
 }
 
 .br-table tbody tr th,
@@ -110,18 +110,26 @@ h1.br-table-title {
   .br-table {
     margin-left: 150px;
   }
+  .br-table thead tr,
+  .br-table tbody tr {
+    position: relative;
+  }
   .br-table thead tr th:first-child,
   .br-table tbody tr th:first-child {
     width: 150px;
     position: absolute;
-    top: auto;
+    top: 0;
+    bottom: 0;
     left: 0;
     z-index: 999;
     border: none;
+    border-bottom: 1px solid #C5D4EB;
+    margin-left: -150px;
   }
   .br-table thead tr th.active,
   .br-table tbody tr th.active {
     background: #2b74e9;
+    border-color: #2b74e9;
   }
   .br-table thead.show-table th,
   .br-table tbody.show-table th {
@@ -134,7 +142,7 @@ h1.br-table-title {
 }
 
 .br-table tbody tr th:first-child i,
-.br-table tbody tr th:first-child input[type='checkbox'] {
+.br-table tbody tr th:first-child input[type="checkbox"] {
   margin-top: 16px;
 }
 /*# sourceMappingURL=table.css.map */
