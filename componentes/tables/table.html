@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Table</title>
+  <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="table.css">
+</head>
+<body>
+
+  <h3 class="br-table-title">Exemplo de Título para Tabela</h3>
+  <div class="br-table-responsive">
+    <div>
+      <table class="br-table br-table-hover">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Coluna 1</th>
+            <th scope="col">Coluna 2</th>
+            <th scope="col">Coluna 3</th>
+            <th scope="col">Coluna 4</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-center" scope="row"><i onclick="ShowHideTable(this)" class="fas fa-plus"></i></th>
+            <td class="text-center">Lorem ipsum</td>
+            <td class="text-center">100%</td>
+            <td class="text-center">30</td>
+            <td class="text-center">Suspendisse</td>
+            <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr class="rowContent hideTable" >
+            <th></th>
+            <td colspan="6">
+              <p>Lorem ipsum dolor sit amet, lacinia nec turpis vestibulum lacinia proin amet, ipsum pharetra velit, nisl luctus dolor nulla. Laoreet interdum mauris quisque platea ante. Sit pede gravida aliquam felis enim, erat in ac omnis facilisis velit, cras aenean nunc. Quis scelerisque rutrum lobortis lacinia</p>
+            </td>
+          </tr>
+          <tr>
+              <th class="text-center" scope="row"><i onclick="ShowHideTable(this)" class="fas fa-plus"></i></th>
+              <td class="text-center">Lorem ipsum</td>
+              <td class="text-center">100%</td>
+              <td class="text-center">30</td>
+              <td class="text-center">Suspendisse</td>
+              <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr class="rowContent hideTable" >
+              <th></th>  
+              <td colspan="6">
+                  <p>Lorem ipsum dolor sit amet, lacinia nec turpis vestibulum lacinia proin amet, ipsum pharetra velit, nisl luctus dolor nulla. Laoreet interdum mauris quisque platea ante. Sit pede gravida aliquam felis enim, erat in ac omnis facilisis velit, cras aenean nunc. Quis scelerisque rutrum lobortis lacinia</p>
+              </td>
+            </tr>
+          <tr>
+              <th class="text-center" scope="row"><input onclick="setActive(this)" type="checkbox"></th>
+              <td class="text-center">Lorem ipsum</td>
+              <td class="text-center">100%</td>
+              <td class="text-center">30</td>
+              <td class="text-center">Suspendisse</td>
+              <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+              <th class="text-center" scope="row"><input onclick="setActive(this)" type="checkbox"></th>
+              <td class="text-center">Lorem ipsum</td>
+              <td class="text-center">100%</td>
+              <td class="text-center">30</td>
+              <td class="text-center">Suspendisse</td>
+              <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+<script type="text/javascript" src="table.js"></script>
+</html>
