@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../templates/starter/starter.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="signin.css">
 </head>
 
 <body>
@@ -90,12 +90,16 @@
                     <p>Um código foi enviado para <strong>(61) 1234-5678</strong>.</p>
                     <p>Por favor, digite-o no campo abaixo:</p>
                     <!-- Código -->
-                    <div class="field mb-7">
+                    <div class="field mb-7 is-valid">
                       <label for="codigo">Código de 04 dígitos</label>
                       <div class="row">
                         <div class="col-6 col-sm-4">
-                          <input type="text" id="codigo" placeholder="xxxx">
+                          <input type="text" id="codigo" placeholder="xxxx" value="5494">
                         </div>
+                      </div>
+                      <div class="feedback">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="message">Código correto</span>
                       </div>
                     </div>
                     <p class="field mb-7">
@@ -109,14 +113,14 @@
                       <label for="celular">Celular</label>
                       <div class="row">
                         <div class="col-sm-5">
-                        	<input type="text" id="celular" placeholder="Ex: (xx) x xxxx-xxxx">
+                        	<input type="text" id="celular" placeholder="Ex: (xx) x xxxx-xxxx" value="(81) 99999-9777">
                         </div>
                       </div>
                       <button type="button" class="br-btn is-tertiary">Atualizar e Reenviar Código</button>
                     </div>
                     <!-- Botões de ação -->
                     <div class="actions justify-content-start">
-                      <button type="button" class="br-btn is-primary" disabled>Cadastrar</button>
+                      <button type="button" class="br-btn is-primary">Cadastrar</button>
                       <button type="button" class="br-btn is-secondary">Voltar</button>
                     </div>
                   </section>
