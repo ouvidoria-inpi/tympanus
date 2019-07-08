@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.6] - 2019-07-08
+### Added
+- Mixin para gerar estilo do componente
+
 ## [0.1.5] - 2019-07-02
 ### Changed
 - Aplicação da tipografia dos tokens
