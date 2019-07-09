@@ -1,4 +1,4 @@
-# Botão social
+# Login social
 
 Botões para login com redes sociais. Este componente é montado em conjunto com o componente **separador de conteúdo**.
 

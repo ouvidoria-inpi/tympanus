@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "AAGA;2BAC2B,AAO3B,AAAA,cAAc,AAAQ,CgDVpB,OAAO,CAAE,IAAI,CACb,eAAe,CDCS,MAAM,CCA9B,UAAU,CAAE,IAAI,CAChB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,ChDQX,AAFD,AgDLE,chDKY,CgDLZ,EAAE,AAAC,CACD,OAAO,CDLa,CAAC,C7CyoBb,GAAG,C8CnoBZ",
+    "mappings": "AAGA;0BAC0B,AAO1B,AAAA,gBAAgB,AAAQ,CgDVtB,OAAO,CAAE,IAAI,CACb,eAAe,CDCS,MAAM,CCA9B,UAAU,CAAE,IAAI,CAChB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,ChDQX,AAFD,AgDLE,gBhDKc,CgDLd,EAAE,AAAC,CACD,OAAO,CDLa,CAAC,C7CyoBb,GAAG,C8CnoBZ",
     "sources": [
-        "button-social.scss",
+        "login-social.scss",
         "../../estilos/scss/_dsgov-base.scss",
         "../../estilos/scss/_tokens.scss",
         "../../estilos/scss/configs/_functions.scss",
@@ -53,5 +53,5 @@
         "_mixins.scss"
     ],
     "names": [],
-    "file": "button-social.min.css"
+    "file": "login-social.min.css"
 }
