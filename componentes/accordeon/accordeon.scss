@@ -2,18 +2,13 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * tabs - 0.1.1 */
+ * accordeon - 0.1.0 */
 
 // Carregar dependências
 @import "configs";
 @import "mixins";
 
-// Estilos para Lista de Itens
-// Tabs
-.#{$prefix}tabs {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  @include tab-item;
+// Estilos específicos
+.#{$prefix}accordeon {
+  @include accordeon;
 }
-
