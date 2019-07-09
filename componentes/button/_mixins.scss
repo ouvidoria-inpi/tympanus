@@ -56,3 +56,16 @@
     cursor: default;
   }
 }
+
+// Botão redondo
+@mixin btn-circle {
+  border-radius: 50% !important;
+  padding: 0 !important;
+  height: $btn-circle-size !important;
+  width: $btn-circle-size !important;
+  @include media-breakpoint-up(sm) {
+    min-width: 0;
+    height: $btn-circle-size !important;
+    width: $btn-circle-size !important;
+  }
+}

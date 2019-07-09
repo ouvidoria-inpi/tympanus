@@ -2,7 +2,7 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * button - 0.1.7 */
+ * button - 0.1.8 */
 
 // Carregar dependências
 @import "configs";
@@ -26,6 +26,9 @@
     @include btn-link($color-gray-6);
     @include font-tertiary-button;
     color: $color-gray-6;
+  }
+  &.is-circle {
+    @include btn-circle;
   }
   & + & {
     margin-top: $btn-margin-vertical;

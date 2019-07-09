@@ -1,5 +1,5 @@
 /*!
- * button - 0.1.7 */
+ * button - 0.1.8 */
 .br-btn.is-primary {
   background: #1351b4;
   border: 1px solid #1351b4;
@@ -147,6 +147,21 @@
 .br-btn.is-cancel:disabled, .br-btn.is-cancel.is-disabled {
   color: #888888;
   cursor: default;
+}
+
+.br-btn.is-circle {
+  border-radius: 50% !important;
+  padding: 0 !important;
+  height: 32px !important;
+  width: 32px !important;
+}
+
+@media (min-width: 576px) {
+  .br-btn.is-circle {
+    min-width: 0;
+    height: 32px !important;
+    width: 32px !important;
+  }
 }
 
 .br-btn + .br-btn {

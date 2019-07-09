@@ -6,6 +6,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [Unreleased]
 - Botões de estados (**danger**, **success**, **warning**).
 
+## [0.1.8] - 2019-07-09
+### Added
+- Estilo de botão redondo
+
 ## [0.1.7] - 2019-07-02
 ### Changed
 - Aplicação da tipografia dos tokens
