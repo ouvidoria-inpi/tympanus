@@ -1,0 +1,101 @@
+// Lista de Itens de Abas 
+@mixin input-select() {
+  &.select-small{
+    height: $select-height-small;
+    padding: $select-padding-small;
+    & li{
+      font-size: 1$select-font-size-small;
+    }
+    &::before{
+      font-size: $select-font-size-small;
+    }
+  }
+  &.select-medium{
+    height: $select-height-medium;
+    padding: $select-padding-medium;
+    & li{
+      font-size: $select-font-size-medium;
+    }
+    &::before{
+      font-size: $select-font-size-medium;
+    }
+  }
+  &.select-large{
+    height: $select-height-large;
+    padding: $select-padding-large;
+    & li{
+      font-size: $select-font-size-large;
+    }
+    &::before{
+      font-size: $select-font-size-large;
+    }
+  }
+
+  &.select-disable{
+    cursor: default;
+    background: $color-gray-2;
+    &::before{
+      color: $color-gray-4;
+    }
+    & li{
+      color: $color-gray-5;
+    }
+  }
+  margin-bottom: $select-margin-bottom;
+  border: $select-border-size solid $color-gray-5;
+  border-radius: $select-border-radius;
+  background: $color-white;
+  overflow: hidden; 
+  box-sizing: border-box;
+  
+  &::before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: $select-icon;
+    display: inline-block;
+    float: right;
+    margin-right: -10px;
+    margin-top: 1px;
+    font-style: normal;
+    font-variant: normal;
+    color: $color-primary-lighten-15;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  & select{
+    display: none;
+  }
+  & ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  & li{
+    color: $color-gray-6;
+    &:first-child{
+      font-style: italic;
+    }
+  }
+  &.focus{
+    border: $select-border-focus;
+    & ul{
+      display: block;
+      position: absolute;
+      z-index: 99;
+      margin-left: -24px;
+      margin-top: 31px;
+      border: $select-border-dropdown;
+      border-radius: 4px;
+      background: $color-white;
+      box-shadow: $select-box-shadow;
+      & li{
+        font-weight: 500;
+        padding: 8px 24px;
+        &:hover{
+          cursor: pointer;
+          background: $select-background;
+        }
+      }
+    }
+  }
+}
