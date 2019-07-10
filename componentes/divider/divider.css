@@ -1,6 +1,6 @@
 /*!
- * separator - 0.1.1 */
-.br-separator {
+ * divider - 0.2.0 */
+.br-divider {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -14,17 +14,18 @@
   text-transform: uppercase;
 }
 
-.br-separator:after, .br-separator:before {
+.br-divider:after, .br-divider:before {
   content: "";
   background: #888888;
   height: 1px;
   width: 100%;
 }
 
-.br-separator .hr-text {
+.br-divider .content {
   color: #1351b4;
   font-size: 13px;
+  margin: 0;
   padding: 0 16px;
   white-space: nowrap;
 }
-/*# sourceMappingURL=separator.css.map */
+/*# sourceMappingURL=divider.css.map */

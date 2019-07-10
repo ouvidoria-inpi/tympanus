@@ -139,4 +139,4 @@ Este componente apresenta os seguintes estados:
 
 # Regras especiais
 
-Nenhuma.
+Nenhuma regra especial.

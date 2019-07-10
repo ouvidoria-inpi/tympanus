@@ -2,13 +2,13 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * separator - 0.1.1 */
+ * divider - 0.2.0 */
 
 // Carregar dependências
 @import "configs";
 @import "mixins";
 
 // Estilos específicos
-.#{$prefix}separator {
-  @include separator;
+.#{$prefix}divider {
+  @include divider;
 }

@@ -1,4 +1,4 @@
-@mixin separator($color: $hr-text-color) {
+@mixin divider($color: $hr-text-color) {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -11,9 +11,10 @@
     height: 1px;
     width: 100%;
   }
-  .hr-text {
+  .content {
     color: $color;
     font-size: $hr-text-font-size;
+    margin: 0;
     padding: 0 $hr-padding;
     white-space: nowrap;
   }
