@@ -1,46 +1,33 @@
 // Carregar variáveis do DS-Gov
 @import "../../estilos/scss/dsgov-base";
 
-// Carregar dependências de componentes
-@import "../../componentes/input/configs";
-@import "../../componentes/input/mixins";
-@import "../../componentes/input-action/configs";
-@import "../../componentes/input-action/mixins";
+// Listagem de resultados
+.result {
+  &-list {
+    padding: $spacing-5;
+  }
+  &-item {
+    & + .result-item {
+      margin-top: $spacing-5;
+      padding-top: $spacing-5;
+      border-top: 1px solid $color-gray-4;
+    }
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
-// Busca com autocomplete
-.br-search {
+.go-top {
+  border-top: 1px solid $color-gray-3;
+  padding: $spacing-3 $spacing-5 $spacing-5;
   display: flex;
-  .search {
-    &-container {
-      // Reaproveitar estilo do input-action
-      @include input-action;
-      flex: 1;
-      // Forçar ícone da busca para direita
-      .action {
-        right: 0;
-      }
-    }
-    // Listagem dos itens do autocomplete
-    &-items {
-      background: $color-white;
-      box-shadow: 0 3px 6px rgba($color-black, 0.22);
-      position: absolute;
-      z-index: 1;
-      top: 100%;
-      left: 0;
-      right: 0;
-      div {
-        padding: $spacing-1 $spacing-3;
-        cursor: pointer;
-        &:hover {
-          background-color: $color-primary-pastel;
-        }
-      }
-    }
-    // Estilo do item navegado por teclado
-    &-active {
-      background-color: $color-primary-lighten-15 !important;
-      color: $color-white;
-    }
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  span {
+    margin-right: $spacing-1;
   }
 }
