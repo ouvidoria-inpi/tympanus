@@ -14,7 +14,14 @@
   <label for="password">Senha</label>
   <div class="br-input-action">
     <input type="password" id="password" placeholder="Digite sua senha de 8 a 11 dígitos">
-    <button onclick="mostrarEsconder()" class="action" type="button">
+    <button onclick="toggleInputAction(this, 'br-input-action')" class="action" type="button">
+      <span class="sr-only">Mostrar senha</span>
+      <i id="password-icon" class="fas fa-eye"></i>
+    </button>
+  </div>
+  <div class="br-input-action">
+    <input type="password" id="password" placeholder="Digite sua senha de 8 a 11 dígitos">
+    <button onclick="toggleInputAction(this, 'br-input-action')" class="action" type="button">
       <span class="sr-only">Mostrar senha</span>
       <i id="password-icon" class="fas fa-eye"></i>
     </button>
