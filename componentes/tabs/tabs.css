@@ -53,6 +53,11 @@
   margin: 0 24px;
 }
 
+.br-tabs .item a,
+.br-tabs .item button {
+  text-decoration: none;
+}
+
 .br-tabs .item a:hover .icon,
 .br-tabs .item a:hover .name,
 .br-tabs .item a:hover .results, .br-tabs .item a:focus .icon,

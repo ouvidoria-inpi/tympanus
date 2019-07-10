@@ -15,6 +15,9 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Simplificação de elementos internos
 - Reescrita da documentação
 
+### Fixed
+- Remoção do sublinhado nas abas
+
 ## [0.1.2] - 2019-07-03
 ### Added
 - Quantidade de resultados

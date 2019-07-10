@@ -35,6 +35,7 @@
     margin: 0 $tab-padding;
     a,
     button {
+      text-decoration: none;
       &:hover,
       &:focus {
         .icon,
