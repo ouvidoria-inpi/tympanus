@@ -239,6 +239,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 0;
   border-radius: 50% !important;
   display: -webkit-inline-box !important;
   display: -ms-inline-flexbox !important;
@@ -259,6 +260,10 @@
   }
 }
 
+.br-button.is-circle img {
+  width: 100%;
+}
+
 .br-button.is-circle:not(.is-primary):not(.is-secondary) {
   border-color: transparent;
 }
@@ -267,6 +272,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 0;
   border-radius: 50% !important;
   display: -webkit-inline-box !important;
   display: -ms-inline-flexbox !important;
@@ -286,6 +292,10 @@
     height: 64px !important;
     width: 64px !important;
   }
+}
+
+.br-button.is-social-media img {
+  width: 100%;
 }
 
 .br-button.is-go-top {

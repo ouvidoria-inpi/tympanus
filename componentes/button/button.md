@@ -223,4 +223,6 @@ Em _smartphones_ o botão terá a largura da tela. Será aplicado espaçamento v
 
 Nos demais dispositivos os botões terão tamanho mínimo de 144px. Será aplicado automáticamente o espaçamento de 24px.
 
-Botões dentro do elemento `actions` do componente `br-form` possuem regras próprias. Leia mais na documentação de `br-form`.
+Botões dentro do elemento `actions` do componente `br-form` possuem regras próprias.
+
+Botões dentro do componente `br-login-social` possuem regras próprias.

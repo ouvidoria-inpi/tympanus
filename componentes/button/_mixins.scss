@@ -60,6 +60,7 @@
 // Botão redondo
 @mixin btn-circle($size: $btn-circle) {
   align-items: center;
+  border: 0;
   border-radius: 50% !important;
   display: inline-flex !important;
   justify-content: center;
@@ -70,6 +71,9 @@
     min-width: 0;
     height: $size !important;
     width: $size !important;
+  }
+  img {
+    width: 100%;
   }
 }
 

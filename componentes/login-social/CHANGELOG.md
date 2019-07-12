@@ -5,9 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
-## [0.3.0] - 2019-07-09
+## [0.3.0] - 2019-07-12
 ### Changed
 - Nome do componente
+- Reescrita da documentação
 
 ## [0.2.0] - 2019-07-02
 ### Changed
