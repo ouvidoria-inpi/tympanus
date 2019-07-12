@@ -8,7 +8,7 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [0.2.0] - 2019-07-09
 ### Changed
 - Nome do componente
-- Nome do container do conteúdo
+- Container do conteúdo
 - Reescrita da documentação
 
 ## [0.1.1] - 2019-07-01
