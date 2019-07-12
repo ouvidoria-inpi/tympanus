@@ -6,9 +6,21 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [Unreleased]
 - Botões de estados (**danger**, **success**, **warning**).
 
+## [0.2.0] - 2019-07-11
+### Added
+- Botão **Call to action**
+- Botão **Voltar ao topo**
+- Botão **Filtrar**
+- Botão **Rede social**
+- Estado de carregando para os botões primário, secundário, circular e call to action
+
+### Changed
+- Nome do componente
+- Reescrita da documentação
+
 ## [0.1.8] - 2019-07-09
 ### Added
-- Estilo de botão redondo
+- Botão redondo
 
 ## [0.1.7] - 2019-07-02
 ### Changed

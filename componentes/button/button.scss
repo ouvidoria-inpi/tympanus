@@ -2,14 +2,14 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * button - 0.1.8 */
+ * button - 0.2.0 */
 
 // Carregar dependências
 @import "configs";
 @import "mixins";
 
 // Estilos de botões
-.#{$prefix}btn {
+.#{$prefix}button {
   &.is-primary {
     @include btn-pill($color-primary, $color-primary, $color-white);
     @include font-primary-button;
@@ -27,8 +27,46 @@
     @include font-tertiary-button;
     color: $color-gray-6;
   }
+  &.is-call-to-action {
+    @include btn-pill($color-secondary, $color-secondary, $color-white);
+    @include font-primary-button;
+    box-shadow: 0 0 0 $spacing-3 $color-gray-2;
+    margin-bottom: $spacing-3 !important;
+    margin-top: $spacing-3 !important;
+    &:focus,
+    &.is-focus {
+      box-shadow: 0 3px 6px -3px $color-secondary, 0 0 0 $spacing-3 $color-gray-2;
+    }
+    &:hover,
+    &.is-hover {
+      background-color: $color-teal;
+      border-color: $color-teal;
+      color: $color-white;
+      text-decoration: none;
+      &:focus,
+      &.is-focus {
+        box-shadow: 0 3px 6px -3px $color-teal, 0 0 0 $spacing-3 $color-gray-2;
+      }
+    }
+  }
   &.is-circle {
     @include btn-circle;
+    &:not(.is-primary):not(.is-secondary) {
+      border-color: transparent;
+    }
+  }
+  &.is-social-media {
+    @include btn-social-media;
+    border-color: transparent;
+  }
+  &.is-go-top {
+    @include go-top;
+  }
+  &.is-filter {
+    @include has-filter;
+  }
+  &.is-loading {
+    @include btn-loading;
   }
   & + & {
     margin-top: $btn-margin-vertical;
