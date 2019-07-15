@@ -10,4 +10,12 @@
     order: 1;
     width: 100%;
   }
+  .action {
+    display: none;
+  }
+  @include media-breakpoint-up(sm) {
+    .action {
+      display: block;
+    }
+  }
 }

@@ -24,4 +24,14 @@
           order: 1;
   width: 100%;
 }
+
+.br-search .action {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .br-search .action {
+    display: block;
+  }
+}
 /*# sourceMappingURL=search.css.map */
