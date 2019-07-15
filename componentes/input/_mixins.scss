@@ -1,4 +1,50 @@
 // Base
+@mixin input-component {
+  position: relative;
+  label {
+    @include font-input-label;
+  }
+  input,
+  textarea {
+    @include input;
+    // Estados
+    @include input-states;
+    // Placeholder
+    &::placeholder {
+      @include placeholder;
+    }
+  }
+  // Ícone decorativo
+  .icon {
+    color: $color-primary;
+    margin: 0 $action-padding;
+    position: absolute;
+    right: 0;
+    transform: translate(0, -34px);
+    img {
+      max-width: $input-icon-image;
+      min-width: $input-icon-image;
+      transform: translate(0, -4px);
+    }
+  }
+  // Input com botão de ação
+  &.is-action {
+    @include input-action;
+  }
+  // Input com autocomplete
+  &.is-autocomplete {
+    input {
+      padding-right: $action-padding * 3;
+    }
+    .search {
+      // Listagem dos itens do autocomplete
+      @include search-itens;
+      // Estilo do item navegado por teclado
+      @include search-active;
+    }
+  }
+}
+
 @mixin input {
   @include font-system-default-text;
   background: $input-bg;
@@ -17,7 +63,8 @@
 }
 
 @mixin input-state($color) {
-  input {
+  input,
+  textarea {
     border-color: $color;
     box-shadow: 0 0 0 1px $color;
     &:focus {

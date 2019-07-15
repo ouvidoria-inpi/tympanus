@@ -5,6 +5,13 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.4] - 2019-07-15
+### Added
+- Suporte a componentes simplificados sem prefixo
+
+### Changed
+- Reescrita da documentação
+
 ## [0.1.3] - 2019-07-01
 ### Added
 - Arquivo minificado

@@ -2,10 +2,11 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * form - 0.1.3 */
+ * form - 0.1.4 */
 
 // Carregar dependências
 @import "../button/configs";
+@import "../button/mixins";
 @import "../input/configs";
 @import "../input/mixins";
 @import "../checkbox/configs";
@@ -17,52 +18,46 @@
   // Agrupador de controles
   .field {
     margin-bottom: $field-margin;
-    // Labels
-    label {
-      @include font-input-label;
-      margin-bottom: $spacing-half;
-    }
     // Inputs
-    input,
-    textarea {
-      @include input;
-      @include input-states;
-      // Placeholder
-      &::placeholder {
-        @include placeholder;
-      }
-    }
-    // Feedback
-    .feedback {
-      @include feedback;
-    }
-    // Texto de ajuda
+    @include input-component;
+    // Texto de ajuda  
     .help {
       @include font-suport-texto-for-input;
     }
-    // Estados
+    // Checkbox e radio
+    .check {
+      @include check(checkbox);
+      @include check(radio);
+    }
+    // Estados com prefixo
     &.is-focus {
       input,
       textarea {
         @include input-focus($color-primary-lighten-15);
       }
+      .action,
+      .icon {
+        color: $color-primary-lighten-15;
+      }
     }
     &.is-invalid {
-      input,
-      textarea {
-        @include input-state($color-danger);
-      }
+      @include input-state($color-danger);
       .feedback {
         @include feedback($color-danger);
       }
+      .action,
+      .icon {
+        color: $color-danger;
+      }
     }
     &.is-valid {
-      input,
-      textarea {
-        @include input-state($color-success);
-      }
+      @include input-state($color-success);
       .feedback {
         @include feedback($color-success);
+      }
+      .action,
+      .icon {
+        color: $color-success;
       }
     }
   }
@@ -70,12 +65,43 @@
   .actions {
     margin-bottom: $field-margin;
     text-align: center;
+    // Botões
+    .button {
+      &.is-primary {
+        @include btn-pill($color-primary, $color-primary, $color-white);
+        @include font-primary-button;
+      }
+      &.is-secondary {
+        @include btn-pill;
+        @include font-secondary-button;
+      }
+      &.is-tertiary {
+        @include btn-link;
+        @include font-tertiary-button;
+      }
+      &.is-cancel {
+        @include btn-link($color-gray-6);
+        @include font-tertiary-button;
+        color: $color-gray-6;
+      }
+      &.is-loading {
+        @include btn-loading;
+      }
+      & + .button {
+        margin-top: $btn-margin-vertical;
+        @include media-breakpoint-up(sm) {
+          margin-left: $btn-margin-horizontal;
+          margin-top: 0;
+        }
+      }
+    }
     @include media-breakpoint-up(sm) {
       align-items: baseline;
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-end;
-      .#{$prefix}btn + .#{$prefix}btn {
+      .button + .button,
+      .#{$prefix}button + .#{$prefix}button {
         margin-left: 0;
         margin-right: $btn-margin-horizontal;
       }
