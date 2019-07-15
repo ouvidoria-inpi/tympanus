@@ -8,20 +8,21 @@
   <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="../input/input.min.css">
   <link rel="stylesheet" href="../button/button.min.css">
   <link rel="stylesheet" href="search.css">
 </head>
 <body>
-  <label for="search-autocomplete">Busca</label>
   <div class="br-search">
-    <div class="field">
+    <div class="br-input is-autocomplete">
+      <label for="password" class="sr-only">Autocomplete</label>
       <input id="search-autocomplete" type="text" placeholder="Digite um país">
       <span class="icon">
         <i class="fas fa-search"></i>
       </span>
     </div>
-    <div class="actions">
-      <button class="br-btn is-primary ml-3" type="button">Buscar</button>
+    <div class="action">
+      <button class="br-button is-primary ml-3" type="button">Buscar</button>
     </div>
   </div>
   <script src="search.js"></script>

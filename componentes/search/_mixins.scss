@@ -1,89 +1,13 @@
 @mixin search {
   display: flex;
   flex-wrap: wrap;
-  .field {
-    @include search-container;
+  align-items: flex-end;
+  .br-input {
+    flex: 1;
   }
-  .search {
-    // Listagem dos itens do autocomplete
-    @include search-itens;
-    // Estilo do item navegado por teclado
-    @include search-active;
-  }
-  .feedback {
-    @include feedback;
+  .feedback,
+  .help {
+    order: 1;
     width: 100%;
-  }
-  &.is-invalid {
-    .field {
-      input {
-        @include input-state($color-danger);
-      }
-    }
-    .feedback {
-      @include feedback($color-danger);
-    }
-  }
-  &.is-valid {
-    .field {
-      input {
-        @include input-state($color-success);
-      }
-    }
-    .feedback {
-      @include feedback($color-success);
-    }
-  }
-}
-
-@mixin search-container {
-  position: relative;
-  flex: 1;
-  input {
-    @include input;
-    @include input-states;
-    padding-right: $action-margin;
-    &::placeholder {
-      @include placeholder;
-    }
-  }
-  .icon {
-    background: transparent;
-    border: 0;
-    font-size: $input-font-size;
-    margin: 0 $action-padding;
-    min-width: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: auto;
-    right: 0;
-  }
-}
-
-@mixin search-itens {
-  &-items {
-    background: $color-white;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22);
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 0;
-    right: 0;
-    div {
-      padding: $spacing-1 $spacing-3;
-      cursor: pointer;
-      &:hover {
-        background-color: $color-primary-pastel;
-      }
-    }
-  }
-}
-
-@mixin search-active {
-  &-active {
-    background-color: $color-primary-lighten-15 !important;
-    color: $color-white;
   }
 }

@@ -2,7 +2,7 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * input - 0.1.8 */
+ * input - 0.2.0 */
 
 // Carregar dependências
 @import "configs";
@@ -10,16 +10,75 @@
 
 // Estilos específicos
 .#{$prefix}input {
-  @include input;
-  // Estados
-  @include input-states;
+  position: relative;
+  label {
+    @include font-input-label;
+  }
+  input {
+    @include input;
+    // Estados
+    @include input-states;
+    // Feedback
+    & + .feedback {
+      @include feedback;
+    }
+    // Placeholder
+    &::placeholder {
+      @include placeholder;
+    }
+  }
+  // Ícone decorativo
+  .icon {
+    color: $color-primary;
+    margin: 0 $action-padding;
+    position: absolute;
+    right: 0;
+    transform: translate(0, -34px);
+    img {
+      max-width: $input-icon-image;
+      min-width: $input-icon-image;
+      transform: translate(0, -4px);
+    }
+  }
+  // Input com botão de ação
+  &.is-action {
+    @include input-action;
+  }
+  // Input com autocomplete
+  &.is-autocomplete {
+    input {
+      padding-right: $action-padding * 3;
+    }
+    .search {
+      // Listagem dos itens do autocomplete
+      @include search-itens;
+      // Estilo do item navegado por teclado
+      @include search-active;
+    }
+  }
+  // Texto de ajuda  
+  & + .help,
+  & + .feedback + .help {
+    @include font-suport-texto-for-input;
+  }
+  // Estados com prefixo
   &.is-focus {
-    @include input-focus($color-primary-lighten-15);
+    input {
+      @include input-focus($color-primary-lighten-15);
+    }
+    .action,
+    .icon {
+      color: $color-primary-lighten-15;
+    }
   }
   &.is-invalid {
     @include input-state($color-danger);
     & + .feedback {
       @include feedback($color-danger);
+    }
+    .action,
+    .icon {
+      color: $color-danger;
     }
   }
   &.is-valid {
@@ -27,13 +86,9 @@
     & + .feedback {
       @include feedback($color-success);
     }
-  }
-  // Feedback
-  & + .feedback {
-    @include feedback;
-  }
-  // Placeholder
-  &::placeholder {
-    @include placeholder;
+    .action,
+    .icon {
+      color: $color-success;
+    }
   }
 }
