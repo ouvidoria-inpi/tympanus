@@ -1,0 +1,27 @@
+{
+    "components": [
+        { "name": "accordeon", "label": "Acordeão" },
+        { "name": "button", "label": "Botão" },
+        { "name": "button-social", "label": "Botão Social" },
+        { "name": "check-list", "label": "Check-list" },
+        { "name": "checkbox", "label": "Checkbox" },
+        { "name": "form", "label": "Formulário" },
+        { "name": "input", "label": "Input" },
+        { "name": "input-action", "label": "Input-action" },
+        { "name": "pagination", "label": "Paginação" },
+        { "name": "separator", "label": "Separador" },
+        { "name": "tabs", "label": "Abas" }
+    ],
+    "wikis": {
+        "DEV": [
+            {
+                "name": "acessibilidade-no-codigo-html",
+                "label": "Acessibilidade no Código HTML"
+            },
+            { "name": "construcao-do-css", "label": "Construção do CSS" },
+            { "name": "construcao-do-html", "label": "Construção do HTML" },
+            { "name": "uso-do-wai-aria", "label": "Uso do WAI-ARIA" }
+        ],
+        "UX": [{ "name": "principios-de-design", "label": "Princípios de Design" }]
+    }
+}

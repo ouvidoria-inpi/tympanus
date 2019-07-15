@@ -1,0 +1,61 @@
+// Lista de Itens de Abas 
+@mixin tab-item() {
+  border-bottom: 1px solid $tab-border;
+  display: flex;
+  overflow: auto;
+  &.flex-column {
+    border-bottom: 0;
+    .tab-item {
+      border-bottom: 1px solid $tab-border;
+      padding-right: $tab-icon-size;
+    }
+    .tab-name {
+      margin-left: $tab-icon-size;
+      text-align: left;
+    }
+  }
+  .tab-item {
+    display: flex;
+    &.is-active {
+      .tab-link {
+        color: $tab-active-color;
+      }
+      .tab-name {
+        box-shadow: $tab-active-border;
+      }
+      .tab-results {
+        color: $tab-results-color;
+      }
+    }
+  }
+  .tab-link {
+    color: $tab-item-color;
+    display: flex;
+    flex: 1;
+    font-size: $tab-font-size;
+    font-weight: $tab-font-weight;
+    margin: 0 $tab-padding;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .tab-icon {
+    color: $tab-icon-color;
+    align-self: center;
+    justify-content: center;
+    width: $tab-icon-size;
+    & + .tab-name {
+      margin-left: 0;
+    }
+  }
+  .tab-name {
+    flex: 1;
+    padding: $tab-padding;
+    text-align: center;
+  }
+  .tab-results {
+    font-size: $tab-results-font-size;
+    margin-left: $tab-results-margin;
+  }
+}

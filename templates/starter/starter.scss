@@ -1,0 +1,92 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+// Atalhos para conteúdo
+.skip-menu {
+  width: 100%;
+  position: absolute;
+  list-style: none;
+  a {
+    position: absolute;
+    top: -200em;
+    color: #fff;
+    &:focus {
+      background: $color-secondary;
+      border-radius: 100px;
+      left: 20px;
+      outline: 0;
+      padding: 8px 24px;
+      position: absolute;
+      top: auto;
+      z-index: 11;
+    }
+  }
+}
+
+// Background da página
+.page-background {
+  @include media-breakpoint-up(sm) {
+    background: linear-gradient(to right, $color-gray-1 50%, $color-white 50%);
+  }
+}
+
+// Acessibilidade
+.accessibility {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  justify-content: flex-end;
+  a {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    color: $color-gray-7;
+    &:not(:last-child) {
+      margin-right: $spacing-3;
+    }
+    &:hover {
+      text-decoration: none;
+      .accessibility-text {
+        text-decoration: underline;
+      }
+    }
+  }
+  img {
+    @include media-breakpoint-up(sm) {
+      max-width: 16px;
+    }
+  }
+}
+
+// Logo
+.logo {
+  justify-content: center;
+  &-image {
+    flex-shrink: 0;
+  }
+}
+
+// Descrição opcional
+.nav-description,
+.page-description {
+  @include font-optional-text-registration-login;
+}
+.page-description {
+  text-align: left;
+}
+
+// Título da página
+.content-title {
+  @include font-title-registration-login;
+}
+
+// Texto padrão
+.page-content {
+  @include font-system-default-text;
+}
+
+// Link padrão
+.page-content a {
+  @include font-link;
+}

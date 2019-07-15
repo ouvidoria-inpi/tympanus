@@ -1,0 +1,135 @@
+/*!
+ * input - 0.1.8 */
+.br-input {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+  background: #ffffff;
+  border: 1px solid #888888;
+  border-radius: 6px;
+  display: block;
+  line-height: 1.5;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.br-input:focus {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+          box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
+}
+
+.br-input:invalid {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
+}
+
+.br-input:invalid:focus {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
+  outline: none;
+}
+
+.br-input:disabled {
+  background: #ededed;
+}
+
+.br-input.is-focus {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+          box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
+}
+
+.br-input.is-invalid {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
+}
+
+.br-input.is-invalid:focus {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+          box-shadow: 0 0 0 1px #ff3333;
+  outline: none;
+}
+
+.br-input.is-invalid + .feedback {
+  color: #ff3333;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.br-input.is-valid {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
+}
+
+.br-input.is-valid:focus {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+          box-shadow: 0 0 0 1px #168821;
+  outline: none;
+}
+
+.br-input.is-valid + .feedback {
+  color: #168821;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.br-input + .feedback {
+  color: #555555;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.br-input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-input::placeholder {
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
+}
+/*# sourceMappingURL=input.css.map */

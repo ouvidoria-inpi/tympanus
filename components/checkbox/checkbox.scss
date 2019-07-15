@@ -1,0 +1,16 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * check - 0.1.8 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+
+.#{$prefix}check {
+  @include check(checkbox);
+  @include check(radio);
+}

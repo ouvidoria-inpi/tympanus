@@ -1,0 +1,51 @@
+// Base
+@mixin input {
+  @include font-system-default-text;
+  background: $input-bg;
+  border: $input-border-width $input-border-style $input-border-color;
+  border-radius: $input-radius;
+  display: block;
+  line-height: 1.5;
+  padding: $input-padding;
+  width: 100%;
+}
+
+@mixin input-focus($color) {
+  border-color: $color;
+  box-shadow: 0 0 0 1px $color;
+  outline: none;
+}
+
+@mixin input-state($color) {
+  border-color: $color;
+  box-shadow: 0 0 0 1px $color;
+  &:focus {
+    @include input-focus($color);
+  }
+}
+
+@mixin input-states {
+  &:focus {
+    @include input-focus($color-primary-lighten-15);
+  }
+  &:invalid {
+    @include input-state($color-danger);
+  }
+  &:disabled {
+    background: $input-bg-disabled;
+  }
+}
+
+// Feedback
+@mixin feedback($color: $color-gray-6) {
+  color: $color;
+  font-size: $feedback-font-size;
+  font-style: $feedback-font-style;
+  font-weight: $feedback-font-weight;
+  padding: $feedback-padding;
+}
+
+// Placeholder
+@mixin placeholder {
+  @include font-placeholder;
+}

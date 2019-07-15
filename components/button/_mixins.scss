@@ -1,0 +1,58 @@
+// Base de botões pílula
+@mixin btn-pill($background: $color-white, $border:$color-primary, $color: $color-primary) {
+  background: $background;
+  border: 1px solid $border;
+  border-radius: $btn-pill-radius;
+  cursor: pointer;
+  display: inline-block;
+  padding: $btn-pill-padding;
+  text-align: center;
+  width: 100%;
+  @include media-breakpoint-up(sm) {
+    min-width: $btn-pill-min-width;
+    width: auto;
+  }
+  &:focus,
+  &.is-focus {
+    outline: 0;
+    box-shadow: 0 3px 6px -3px $color-primary;
+  }
+  &:hover,
+  &.is-hover {
+    background-color: $color-primary-lighten-15;
+    border-color: $color-primary-lighten-15;
+    color: $color-white;
+    text-decoration: none;
+  }
+  &:disabled,
+  &.is-disabled {
+    background: $color-gray-5;
+    border-color: $color-gray-5;
+    color: $color-white;
+    cursor: default;
+  }
+}
+
+// Base de botões link
+@mixin btn-link($color: $color-primary) {
+  background: transparent;
+  border: 0;
+  color: $color;
+  cursor: pointer;
+  padding: 0;
+  &:focus,
+  &.is-focus {
+    outline: 0;
+    text-shadow: 0 3px 6px currentColor;
+  }
+  &:hover,
+  &.is-hover {
+    color: $color-primary-lighten-15;
+    text-decoration: underline;
+  }
+  &:disabled,
+  &.is-disabled {
+    color: $color-gray-5;
+    cursor: default;
+  }
+}

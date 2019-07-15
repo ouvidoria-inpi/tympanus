@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>form</title>
+  <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="../button/button.css">
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="br-form">
+      <div class="field">
+        <label for="item-1">label</label>
+        <input id="item-1" type="text" placeholder="Insira um texto">
+        <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+      </div>
+      <div class="field">
+        <label for="item-textarea">label</label>
+        <textarea id="item-textarea"></textarea>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="field is-invalid">
+            <label for="item-2">Com erro</label>
+            <input id="item-2" type="text" placeholder="Insira um texto">
+            <div class="feedback">
+              <i class="fas fa-times-circle"></i>
+              <span class="message">Texto inválido</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="field is-valid">
+            <label for="item-3">Validado</label>
+            <input id="item-3" type="text" placeholder="Insira um texto">
+            <div class="feedback">
+              <i class="fas fa-check-circle"></i>
+              <span class="message">Texto válido</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="br-btn is-primary" type="button">Ação principal</button>
+        <button class="br-btn is-secondary" type="button">Ação secundária grande</button>
+        <button class="br-btn is-cancel" type="button">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * input - 0.1.8 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+.#{$prefix}input {
+  @include input;
+  // Estados
+  @include input-states;
+  &.is-focus {
+    @include input-focus($color-primary-lighten-15);
+  }
+  &.is-invalid {
+    @include input-state($color-danger);
+    & + .feedback {
+      @include feedback($color-danger);
+    }
+  }
+  &.is-valid {
+    @include input-state($color-success);
+    & + .feedback {
+      @include feedback($color-success);
+    }
+  }
+  // Feedback
+  & + .feedback {
+    @include feedback;
+  }
+  // Placeholder
+  &::placeholder {
+    @include placeholder;
+  }
+}
