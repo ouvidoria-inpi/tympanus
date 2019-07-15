@@ -4,8 +4,8 @@ Botões para login com redes sociais.
 
 ## Dependências
 
-- **br-divider**
-- **br-button** (Redes Sociais)
+- componente `br-divider`
+- componente `br-button` (Redes Sociais)
 
 ## Código básico
 

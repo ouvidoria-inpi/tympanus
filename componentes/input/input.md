@@ -281,3 +281,7 @@ Exemplo de uso:
   <input class="br-input" id="desabilitado" type="text" placeholder="Insira um texto" disabled>
 </div>
 ```
+
+# Regras especiais
+
+Nenhuma regra especial.

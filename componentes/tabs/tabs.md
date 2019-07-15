@@ -34,9 +34,9 @@ Este componente é formado pelos seguintes elementos:
 
 - `br-tabs`: container do componente
 - `item`: cada aba da lista
-- `icon`: ícone da aba (item opcional)
+- `icon`: ícone da aba (opcional)
 - `name`: nome da aba
-- `results`: número de itens de resultados da aba (usado em telas de buscas)
+- `results`: número de itens de resultados da aba (opcional)
 
 ## `br-tabs`
 
