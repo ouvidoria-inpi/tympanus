@@ -31,7 +31,11 @@
     @include input-focus($color-primary-lighten-15);
   }
   &:invalid {
-    @include input-state($color-danger);
+    border-color: $color-danger;
+    box-shadow: 0 0 0 1px $color-danger;
+    &:focus {
+      @include input-focus($color-danger);
+    }
   }
   &:disabled {
     background: $input-bg-disabled;
