@@ -6,9 +6,9 @@
   "scripts": {
     "ng": "ng",
     "watch-scss": "node-sass --watch **/* -o **/*",
-    "build-scss": "node-sass -r componentes -o componentes",
+    "build-scss": "node-sass -r components -o components",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "validate:html": "node_modules/.bin/html-validate componentes/**/*.html"
+    "validate:html": "node_modules/.bin/html-validate components/**/*.html"
   },
   "author": "",
   "license": "ISC",
