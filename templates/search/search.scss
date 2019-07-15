@@ -17,17 +17,3 @@
     }
   }
 }
-
-.go-top {
-  border-top: 1px solid $color-gray-3;
-  padding: $spacing-3 $spacing-5 $spacing-5;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  span {
-    margin-right: $spacing-1;
-  }
-}
