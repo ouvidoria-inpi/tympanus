@@ -1,0 +1,16 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * table - 0.1.0 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos de tabela
+
+@include table-title;
+@include thead;
+@include tbody;
+@include tableResponsive;
