@@ -12,6 +12,7 @@
   .#{$prefix}table-responsive {
     display: block;
     width: $table-responsive-width;
+    overflow-x: auto;
   }
 
   .#{$prefix}table {
@@ -80,10 +81,7 @@
     .#{$prefix}table-responsive {
       display: block;
       width: $table-responsive-width;
-      position: relative;
-      div {
-        overflow-x: auto;
-      }
+      overflow-x: auto;
     }
 
     .#{$prefix}table {
@@ -94,7 +92,7 @@
               margin-top: 1px;
               background: $color-gray-1;
               border-bottom: 1px solid $table-border-thead-color;
-              box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
+              box-shadow: $table-shadow-responsive-first-column;
             }
           }
         }
@@ -106,7 +104,8 @@
       thead,
       tbody {
         tr {
-          th {
+          th,
+          td {
             &:first-child {
               width: $table-responsive-first-col;
               position: absolute;
@@ -115,7 +114,7 @@
               border: none;
               background: $color-gray-1;
               border-bottom: 1px solid $table-border-thead-color;
-              box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
+              box-shadow: $table-shadow-responsive-first-column;
             }
             &.active {
               background: $color-primary-lighten-15;
