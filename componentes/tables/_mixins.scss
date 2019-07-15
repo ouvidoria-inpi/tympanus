@@ -12,6 +12,7 @@
   .#{$prefix}table-responsive {
     display: block;
     width: $table-responsive-width;
+    overflow-x: auto;
   }
 
   .#{$prefix}table {
@@ -103,7 +104,8 @@
       thead,
       tbody {
         tr {
-          th {
+          th,
+          td {
             &:first-child {
               width: $table-responsive-first-col;
               position: absolute;

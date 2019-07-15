@@ -12,6 +12,7 @@
 .br-table-responsive {
   display: block;
   width: 100%;
+  overflow-x: auto;
 }
 
 .br-table {
@@ -98,7 +99,9 @@
     margin-left: 150px;
   }
   .br-table thead tr th:first-child,
-  .br-table tbody tr th:first-child {
+  .br-table thead tr td:first-child,
+  .br-table tbody tr th:first-child,
+  .br-table tbody tr td:first-child {
     width: 150px;
     position: absolute;
     left: 0;
@@ -110,7 +113,9 @@
             box-shadow: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
   }
   .br-table thead tr th.active,
-  .br-table tbody tr th.active {
+  .br-table thead tr td.active,
+  .br-table tbody tr th.active,
+  .br-table tbody tr td.active {
     background: #2b74e9;
     border-color: #2b74e9;
   }
