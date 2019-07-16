@@ -395,4 +395,14 @@
     margin-top: 0;
   }
 }
+
+.br-button.is-facebook {
+  background: #3b5998;
+  color: #ffffff;
+}
+
+.br-button.is-twitter {
+  background: #00aced;
+  color: #ffffff;
+}
 /*# sourceMappingURL=button.css.map */

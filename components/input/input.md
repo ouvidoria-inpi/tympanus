@@ -188,7 +188,7 @@ Exemplo de uso:
 
 ```html
 <div class="br-input is-autocomplete">
-  <label for="password">Autocomplete</label>
+  <label for="search-autocomplete">Autocomplete</label>
   <input id="search-autocomplete" type="text" placeholder="Digite um país">
   <span class="icon">
     <i class="fas fa-search"></i>

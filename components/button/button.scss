@@ -75,4 +75,12 @@
       margin-top: 0;
     }
   }
+  &.is-facebook {
+    background: $facebook-bg;
+    color: $color-white;
+  }
+  &.is-twitter {
+    background: $twitter-bg;
+    color: $color-white;
+  }
 }

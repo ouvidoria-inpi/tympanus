@@ -16,10 +16,10 @@ Botões para login com redes sociais.
     <span class="content">Ou</span>
   </div>
   <!-- Redes Sociais -->
-  <button style="background: #3b5998; color: #fff;" class="br-button is-social-media" type="button">
+  <button class="br-button is-social-media is-facebook" type="button">
     <i class="fab fa-facebook-f fa-lg"></i>
   </button>
-  <button style="background: #00aced; color: #fff;" class="br-button is-social-media" type="button">
+  <button class="br-button is-social-media is-twitter" type="button">
     <i class="fab fa-twitter fa-lg"></i>
   </button>
   <button class="br-button is-social-media" type="button">
