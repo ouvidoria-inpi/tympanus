@@ -92,9 +92,7 @@
     }
   }
   &.is-invalid {
-    input {
-      @include input-state($color-danger);
-    }
+    @include input-state($color-danger);
     input[type="checkbox"] {
       @include check-checked(checkbox, right, $color-danger);
       @include check-state($color-danger);
@@ -105,9 +103,7 @@
     }
   }
   &.is-valid {
-    input {
-      @include input-state($color-success);
-    }
+    @include input-state($color-success);
     input[type="checkbox"] {
       @include check-checked(checkbox, right, $color-success);
       @include check-state($color-success);

@@ -8,4 +8,22 @@ $btn-pill-radius: 100px;
 $btn-pill-padding: $spacing-1 $spacing-5;
 $btn-pill-min-width: 144px;
 
-$btn-link-font-size: 14px;
+$btn-circle: 36px;
+$btn-circle-lg: 64px;
+
+$go-top-padding: $spacing-3 $spacing-5 $spacing-5;
+$go-top-font-size: 12px;
+$go-top-font-weight: 800;
+$go-top-text-transform: uppercase;
+
+$facebook-bg: #3b5998;
+$twitter-bg: #00aced;
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(359deg)
+  }
+}

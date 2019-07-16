@@ -42,13 +42,15 @@
   outline: none;
 }
 
-.br-check-list .field.is-invalid input {
+.br-check-list .field.is-invalid input,
+.br-check-list .field.is-invalid textarea {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .field.is-invalid input:focus {
+.br-check-list .field.is-invalid input:focus,
+.br-check-list .field.is-invalid textarea:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
@@ -112,13 +114,15 @@
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-check-list .field.is-valid input {
+.br-check-list .field.is-valid input,
+.br-check-list .field.is-valid textarea {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-check-list .field.is-valid input:focus {
+.br-check-list .field.is-valid input:focus,
+.br-check-list .field.is-valid textarea:focus {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;

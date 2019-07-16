@@ -5,6 +5,15 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.2.0] - 2019-07-12
+### Added
+- Input com botão de ação
+- Input com ícone decorativo
+- Input com autocomplete
+
+### Changed
+- Reescrita da documentação
+
 ## [0.1.8] - 2019-07-02
 ### Changed
 - Aplicação da tipografia dos tokens

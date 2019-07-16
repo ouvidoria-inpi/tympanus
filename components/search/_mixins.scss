@@ -1,0 +1,21 @@
+@mixin search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  .br-input {
+    flex: 1;
+  }
+  .feedback,
+  .help {
+    order: 1;
+    width: 100%;
+  }
+  .action {
+    display: none;
+  }
+  @include media-breakpoint-up(sm) {
+    .action {
+      display: block;
+    }
+  }
+}

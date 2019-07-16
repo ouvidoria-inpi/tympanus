@@ -1,0 +1,31 @@
+/*!
+ * portlet - 0.1.0 */
+.br-portlet {
+  background: #ffffff;
+  margin-bottom: 24px;
+}
+
+.br-portlet .header {
+  border-bottom: 1px solid #cccccc;
+  font-weight: 700;
+  padding: 24px;
+}
+
+.br-portlet .content {
+  padding: 24px;
+}
+
+.br-portlet .content hr {
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+  margin: 24px -24px;
+}
+
+.br-portlet .content .br-btn {
+  width: 100%;
+}
+
+.br-portlet p:last-child {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=portlet.css.map */

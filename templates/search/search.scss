@@ -1,0 +1,19 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+// Listagem de resultados
+.result {
+  &-list {
+    padding: $spacing-5;
+  }
+  &-item {
+    & + .result-item {
+      margin-top: $spacing-5;
+      padding-top: $spacing-5;
+      border-top: 1px solid $color-gray-4;
+    }
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

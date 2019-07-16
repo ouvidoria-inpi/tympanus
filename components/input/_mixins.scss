@@ -1,4 +1,50 @@
 // Base
+@mixin input-component {
+  position: relative;
+  label {
+    @include font-input-label;
+  }
+  input,
+  textarea {
+    @include input;
+    // Estados
+    @include input-states;
+    // Placeholder
+    &::placeholder {
+      @include placeholder;
+    }
+  }
+  // Ícone decorativo
+  .icon {
+    color: $color-primary;
+    margin: 0 $action-padding;
+    position: absolute;
+    right: 0;
+    transform: translate(0, -34px);
+    img {
+      max-width: $input-icon-image;
+      min-width: $input-icon-image;
+      transform: translate(0, -4px);
+    }
+  }
+  // Input com botão de ação
+  &.is-action {
+    @include input-action;
+  }
+  // Input com autocomplete
+  &.is-autocomplete {
+    input {
+      padding-right: $action-padding * 3;
+    }
+    .search {
+      // Listagem dos itens do autocomplete
+      @include search-itens;
+      // Estilo do item navegado por teclado
+      @include search-active;
+    }
+  }
+}
+
 @mixin input {
   @include font-system-default-text;
   background: $input-bg;
@@ -17,10 +63,13 @@
 }
 
 @mixin input-state($color) {
-  border-color: $color;
-  box-shadow: 0 0 0 1px $color;
-  &:focus {
-    @include input-focus($color);
+  input,
+  textarea {
+    border-color: $color;
+    box-shadow: 0 0 0 1px $color;
+    &:focus {
+      @include input-focus($color);
+    }
   }
 }
 
@@ -29,10 +78,66 @@
     @include input-focus($color-primary-lighten-15);
   }
   &:invalid {
-    @include input-state($color-danger);
+    border-color: $color-danger;
+    box-shadow: 0 0 0 1px $color-danger;
+    &:focus {
+      @include input-focus($color-danger);
+    }
   }
   &:disabled {
     background: $input-bg-disabled;
+  }
+}
+
+// Versão com botão de ação
+@mixin input-action {
+  input {
+    padding-right: $action-padding * 3;
+  }
+  // Botão de ação
+  .action {
+    background: transparent;
+    border: 0;
+    color: $color-primary;
+    font-size: $input-font-size;
+    margin: 0 $action-padding;
+    min-width: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    transform: translate(0, -34px);
+    width: auto;
+    img {
+      max-width: $input-icon-image;
+      min-width: $input-icon-image;
+      transform: translate(0, -4px);
+    }
+  }
+}
+
+// Autocomplete
+@mixin search-itens {
+  &-items {
+    background: $color-white;
+    box-shadow: 0 3px 6px rgba($color-black, 0.22);
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    right: 0;
+    div {
+      padding: $spacing-1 $spacing-3;
+      cursor: pointer;
+      &:hover {
+        background-color: $color-primary-pastel;
+      }
+    }
+  }
+}
+
+@mixin search-active {
+  &-active {
+    background-color: $color-primary-pastel !important;
   }
 }
 

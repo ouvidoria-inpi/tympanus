@@ -1,0 +1,14 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * divider - 0.2.0 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+.#{$prefix}divider {
+  @include divider;
+}

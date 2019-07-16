@@ -3,59 +3,87 @@
   border-bottom: 1px solid $tab-border;
   display: flex;
   overflow: auto;
+  padding: 0;
   &.flex-column {
     border-bottom: 0;
-    .tab-item {
+    .item {
       border-bottom: 1px solid $tab-border;
-      padding-right: $tab-icon-size;
+      margin: 0;
+      padding: 0;
+      padding-right: $tab-icon-size + ($tab-results-margin * 2);
+      &.is-active {
+        box-shadow: none;
+        .name {
+          box-shadow: $tab-active-border;
+          color: $tab-results-color;
+        }
+        .results {
+          color: $tab-results-color;
+        }
+      }
     }
-    .tab-name {
-      margin-left: $tab-icon-size;
+    .name {
+      display: inline-block;
+      margin-left: $tab-icon-size + ($tab-results-margin * 2);
+      padding: $tab-item-padding ($tab-results-margin / 2);
       text-align: left;
     }
   }
-  .tab-item {
+  .item {
     display: flex;
+    padding: $tab-item-padding 0;
+    margin: 0 $tab-padding;
+    a,
+    button {
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        .icon,
+        .name,
+        .results {
+          color: $tab-item-hover;
+        }
+    }
+    }
     &.is-active {
-      .tab-link {
+      box-shadow: $tab-active-border;
+      .name {
         color: $tab-active-color;
       }
-      .tab-name {
-        box-shadow: $tab-active-border;
-      }
-      .tab-results {
+      .results {
         color: $tab-results-color;
       }
     }
   }
-  .tab-link {
+  .icon {
     color: $tab-item-color;
-    display: flex;
-    flex: 1;
-    font-size: $tab-font-size;
-    font-weight: $tab-font-weight;
-    margin: 0 $tab-padding;
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  .tab-icon {
-    color: $tab-icon-color;
     align-self: center;
     justify-content: center;
+    margin: 0 $tab-results-margin;
     width: $tab-icon-size;
-    & + .tab-name {
+    & + .name {
       margin-left: 0;
     }
   }
-  .tab-name {
+  .name {
+    color: $tab-item-color;
     flex: 1;
-    padding: $tab-padding;
+    font-weight: $tab-font-weight;
     text-align: center;
   }
-  .tab-results {
+  .results {
+    color: $tab-item-color;
     font-size: $tab-results-font-size;
+    font-weight: $tab-font-weight;
     margin-left: $tab-results-margin;
+  }
+  a,
+  button {
+    display: flex;
+    align-items: baseline;
+    flex: 1;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

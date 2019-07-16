@@ -1,0 +1,14 @@
+.result-list {
+  padding: 24px;
+}
+
+.result-item + .result-item {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #9e9d9d;
+}
+
+.result-item > *:last-child {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=search.css.map */

@@ -1,6 +1,20 @@
 /*!
- * input - 0.1.8 */
+ * input - 0.2.0 */
 .br-input {
+  position: relative;
+}
+
+.br-input label {
+  font-size: 16px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 600;
+  font-family: Rawline;
+}
+
+.br-input input,
+.br-input textarea {
   font-size: 16px;
   line-height: 28px;
   color: #555555;
@@ -16,44 +30,176 @@
   width: 100%;
 }
 
-.br-input:focus {
+.br-input input:focus,
+.br-input textarea:focus {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
 
-.br-input:invalid {
+.br-input input:invalid,
+.br-input textarea:invalid {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-input:invalid:focus {
+.br-input input:invalid:focus,
+.br-input textarea:invalid:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
   outline: none;
 }
 
-.br-input:disabled {
+.br-input input:disabled,
+.br-input textarea:disabled {
   background: #ededed;
 }
 
-.br-input.is-focus {
+.br-input input::-webkit-input-placeholder,
+.br-input textarea::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-input input:-ms-input-placeholder,
+.br-input textarea:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-input input::-ms-input-placeholder,
+.br-input textarea::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-input input::placeholder,
+.br-input textarea::placeholder {
+  font-size: 14px;
+  line-height: normal;
+  color: #555555;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-input .icon {
+  color: #1351b4;
+  margin: 0 16px;
+  position: absolute;
+  right: 0;
+  -webkit-transform: translate(0, -34px);
+          transform: translate(0, -34px);
+}
+
+.br-input .icon img {
+  max-width: 24px;
+  min-width: 24px;
+  -webkit-transform: translate(0, -4px);
+          transform: translate(0, -4px);
+}
+
+.br-input.is-action input {
+  padding-right: 48px;
+}
+
+.br-input.is-action .action {
+  background: transparent;
+  border: 0;
+  color: #1351b4;
+  font-size: 16px;
+  margin: 0 16px;
+  min-width: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  -webkit-transform: translate(0, -34px);
+          transform: translate(0, -34px);
+  width: auto;
+}
+
+.br-input.is-action .action img {
+  max-width: 24px;
+  min-width: 24px;
+  -webkit-transform: translate(0, -4px);
+          transform: translate(0, -4px);
+}
+
+.br-input.is-autocomplete input {
+  padding-right: 48px;
+}
+
+.br-input.is-autocomplete .search-items {
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.br-input.is-autocomplete .search-items div {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.br-input.is-autocomplete .search-items div:hover {
+  background-color: #dbe8fb;
+}
+
+.br-input.is-autocomplete .search-active {
+  background-color: #dbe8fb !important;
+}
+
+.br-input + .help,
+.br-input + .feedback + .help {
+  font-size: 13px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-input.is-focus input,
+.br-input.is-focus textarea {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
 
-.br-input.is-invalid {
+.br-input.is-focus .action,
+.br-input.is-focus .icon {
+  color: #2b74e9;
+}
+
+.br-input.is-invalid input,
+.br-input.is-invalid textarea {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-input.is-invalid:focus {
+.br-input.is-invalid input:focus,
+.br-input.is-invalid textarea:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
@@ -68,13 +214,20 @@
   padding: 4px;
 }
 
-.br-input.is-valid {
+.br-input.is-invalid .action,
+.br-input.is-invalid .icon {
+  color: #ff3333;
+}
+
+.br-input.is-valid input,
+.br-input.is-valid textarea {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-input.is-valid:focus {
+.br-input.is-valid input:focus,
+.br-input.is-valid textarea:focus {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
@@ -89,47 +242,8 @@
   padding: 4px;
 }
 
-.br-input + .feedback {
-  color: #555555;
-  font-size: 13px;
-  font-style: italic;
-  font-weight: 500;
-  padding: 4px;
-}
-
-.br-input::-webkit-input-placeholder {
-  font-size: 14px;
-  line-height: normal;
-  color: #555555;
-  font-style: italic;
-  font-weight: 400;
-  font-family: Rawline;
-}
-
-.br-input:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: normal;
-  color: #555555;
-  font-style: italic;
-  font-weight: 400;
-  font-family: Rawline;
-}
-
-.br-input::-ms-input-placeholder {
-  font-size: 14px;
-  line-height: normal;
-  color: #555555;
-  font-style: italic;
-  font-weight: 400;
-  font-family: Rawline;
-}
-
-.br-input::placeholder {
-  font-size: 14px;
-  line-height: normal;
-  color: #555555;
-  font-style: italic;
-  font-weight: 400;
-  font-family: Rawline;
+.br-input.is-valid .action,
+.br-input.is-valid .icon {
+  color: #168821;
 }
 /*# sourceMappingURL=input.css.map */

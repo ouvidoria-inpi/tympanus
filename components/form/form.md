@@ -1,139 +1,124 @@
-## Formulários (form)
+## Formulário
 
-Para uso de formulários no DS-Gov use o componente `br-form`.
+Use para criar formulários de forma mais simples.
 
-Cada entrada de informação do usuário use o agrupador `field`.
+## Dependências
 
-Ao final do formulário use o agrupador `action` para os botões de ação.
+Nenhuma dependência.
 
-Veja como usar `field` e `action` nos exemplos a seguir.
+## Código básico
 
-## Uso de field
+```html
+<div class="br-form">
+  <div class="field">...</div>
+  <div class="field">...</div>
+  <div class="field">...</div>
+  <div class="actions">...</div>
+</div>
+```
 
-Use o agrupador `field` para labels e inputs.
+# Anatomia do componente
+
+Este componente é formado pelos seguintes elementos:
+
+- `br-form`: container do componente
+- `field`: linha agrupadora para entrada de dados
+- `actions`: agrupador de botões de ação
+
+## `field`
+
+**Elemento obrigatório**!
+
+Para cada linha de formulário DEVE ser criado um `field`.
+
+Este elemento dá suporte a alguns componentes de forma simplificada.
+
+Isso não exclui usar a versão original de cada componente. Ambos os formatos são suportados.
+
+### Componente Input básico
+
+Original -> `br-input`. Versão simplificada -> `input`.
+
+Exemplo de uso:
 
 ```html
 <div class="br-form">
   <div class="field">
-    <label for="texto">label</label>
-    <input id="texto" type="text" placeholder="Insira um texto">
-  </div>
-</div>
-```
-
-O agrupador `field` estiliza automaticamente os seguintes elementos:
-- `<label>`
-- `<input>`
-- `<textarea>`
-
-### Uso da Grid
-
-Use a Grid do DS-Gov para vários `field` em mesma linha. Exemplo:
-
-```html
-<div class="br-form">
-  <!-- Informar nome completo -->
-  <div class="row">
-    <!-- Primeiro nome -->
-    <div class="col-sm-3">
-      <div class="field">
-        <label for="first-name">Primeiro nome</label>
-        <input type="text" id="first-name">
-      </div>
-    </div>
-    <!-- Último nome -->
-    <div class="col-sm-3">
-      <div class="form-field">
-        <label for="last-name">Ùltimo nome</label>
-        <input type="text" id="last-name">
-      </div>
+    <div class="input">
+      <label for="input-base">Input básico</label>
+      <input id="input-base" type="text" placeholder="Texto de exemplo">
     </div>
   </div>
+  <div class="actions">...</div>
 </div>
 ```
 
-### Estados
+Você PODE usar `feedback` e `help` nesta versão simplificada.
 
-O `field` pode assumir novos estados. A lista de estados disponíveis é a seguinte:
+Atenção! A versão simplificada não é compatível com **Input com botão de ação** e **Input com autocomplete**.
 
-- focus
-- valid
-- invalid
-- disabled
+### Componente Checkbox
 
-Os estados também podem ser aplicados por classe. O uso via classe deve ser usado com o prefixo `is-`. Exemplo:
+Original --> `br-check`. Versão simplificada --> `check`.
 
-```html
-<div class="br-form">
-  <div class="field is-valid">
-    <label for="item-3">Validado</label>
-    <input id="item-3" type="text" placeholder="Insira um texto">
-</div>
-</div>
-```
-
-> **Atenção**! O estado `disabled` é aplicado somente quando a propriedade está aplicada no input.
-
-### Mensagens de feedback
-
-Nos casos de erros ou retorno positivo do campo é possível usar um template de mensagem dentro do `field`. Veja a seguir um exemplo:
+Exemplo de uso:
 
 ```html
 <div class="br-form">
-  <div class="field is-invalid">
-    <label for="item-2">Com erro</label>
-    <input id="item-2" type="text" placeholder="Insira um texto">
-    <div class="feedback">
-      <i class="fas fa-times-circle"></i>
-      <span class="message">Texto inválido</span>
+  <div class="field">
+    <!-- Checkbox -->
+    <div class="check">
+      <input type="checkbox" id="checkbox-padrao">
+      <label for="checkbox-padrao">Padrão</label>
+    </div>
+    <!-- Radio button -->
+    <div class="check">
+      <input name="radio" type="radio" id="radio-padrao">
+      <label for="radio-padrao">Padrão</label>
     </div>
   </div>
+  <div class="actions">...</div>
 </div>
 ```
 
-Para os ícones use a família de ícones Fontawesome - [https://fontawesome.com/](https://fontawesome.com/)
+## `actions`
 
-Algumas convenções de ícones:
+**Elemento obrigatório**!
 
-- Retorno negativo: `fas fa-times-circle`
-- Retorno positivo: `fas fa-check-circle`
+Os botões de ação do formulário devem ser inseridos dentro de `actions`.
 
-### Mensagens de ajuda
+Este elemento dá suporte aos 4 botões de uso comum de forma simplificada:
 
-Nos casos em que for necessário incluir um texto explicativo para auxiliar o usuário a preencher a informação use a classe `help`.
+- Primário
+- Secundário
+- Terciário
+- Cancelar
 
-Coloque o texto após o feedback do sistema. Dê preferência a tag html `<p>`.
+Original --> `br-button`. Versão simplificada --> `button`.
 
-```html
-<div class="br-form">
-  <div class="field is-invalid">
-    <label for="item-2">Com erro</label>
-    <input id="item-2" type="text" placeholder="Insira um texto">
-    <div class="feedback">
-      <i class="fas fa-times-circle"></i>
-      <span class="message">Texto inválido</span>
-    </div>
-    <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
-  </div>
-</div>
-```
-
-## Uso de actions
-
-Os botões de ação do formulário devem ficar dentro de `actions`.
+Exemplo de uso:
 
 ```html
 <div class="br-form">
+  <div class="field">...</div>
   <div class="actions">
-    <button class="br-btn is-primary">Ação principal</button>
-    <button class="br-btn is-secondary">Ação secundária</button>
-    <button class="br-btn is-cancel">Cancelar</button>
+    <button class="button is-primary" type="button">Ação principal</button>
+    <button class="button is-secondary" type="button">Ação secundária grande</button>
+    <button class="button is-cancel" type="button">Cancelar</button>
   </div>
 </div>
 ```
+
+Isso não exclui usar a versão original dos botões. Ambos os formatos são suportados.
+
+# Estados
+
+Nenhum estado adicional.
+
+# Regras especiais
 
 O agrupador `actions` possui uma regra especial. Para _smartphones_ os botões, além de ocuparem toda a largura disponível, seguem o ordenamento normal. Nos outros dispositivos com larguras maiores o ordenamento dos botões é invertido.
 
-> **Atenção**! O botão de ação principal sempre deve ser declarado primeiro.
+**Atenção**! O botão de ação principal sempre deve ser declarado primeiro.
 
 O alinhamento (esquerda ou direita) dos `actions` pode ser modificado com as classes **Flex** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content](https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content).

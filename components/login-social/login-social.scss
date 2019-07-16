@@ -1,0 +1,20 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * login-social - 0.3.0 */
+
+// Carregar dependências
+@import "../button/configs";
+@import "../button/mixins";
+@import "configs";
+@import "mixins";
+
+// Estilos de botões
+.#{$prefix}login-social {
+  @include login-social;
+  .br-button + .br-button {
+    margin-top: 0;
+    margin-left: $btn-margin-horizontal;
+  }
+}
