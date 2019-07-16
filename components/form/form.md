@@ -119,6 +119,6 @@ Nenhum estado adicional.
 
 O agrupador `actions` possui uma regra especial. Para _smartphones_ os botões, além de ocuparem toda a largura disponível, seguem o ordenamento normal. Nos outros dispositivos com larguras maiores o ordenamento dos botões é invertido.
 
-> **Atenção**! O botão de ação principal sempre deve ser declarado primeiro.
+**Atenção**! O botão de ação principal sempre deve ser declarado primeiro.
 
 O alinhamento (esquerda ou direita) dos `actions` pode ser modificado com as classes **Flex** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content](https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content).
