@@ -14,7 +14,7 @@
   // Texto de ajuda  
   & + .help,
   & + .feedback + .help {
-    @include font-suport-texto-for-input;
+    @include font-suport-text-for-input;
   }
   // Estados com prefixo
   &.is-focus {

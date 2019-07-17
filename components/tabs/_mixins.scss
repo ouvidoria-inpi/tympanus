@@ -1,5 +1,5 @@
 // Lista de Itens de Abas 
-@mixin tab-item() {
+@mixin tab-item {
   border-bottom: 1px solid $tab-border;
   display: flex;
   overflow: auto;
@@ -31,8 +31,8 @@
   }
   .item {
     display: flex;
-    padding: $tab-item-padding 0;
     margin: 0 $tab-padding;
+    padding: $tab-item-padding 0;
     a,
     button {
       text-decoration: none;
@@ -56,8 +56,8 @@
     }
   }
   .icon {
-    color: $tab-item-color;
     align-self: center;
+    color: $tab-item-color;
     justify-content: center;
     margin: 0 $tab-results-margin;
     width: $tab-icon-size;
@@ -79,8 +79,8 @@
   }
   a,
   button {
-    display: flex;
     align-items: baseline;
+    display: flex;
     flex: 1;
     &:hover {
       text-decoration: none;

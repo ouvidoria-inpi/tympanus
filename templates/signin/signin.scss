@@ -3,18 +3,18 @@
 
 // Conteúdo de midia
 .media {
-  display: flex;
   align-items: center;
+  display: flex;
   &-left {
     & + .media-content {
-      margin-left: $spacer;
+      margin-left: $spacing-1;
     }
   }
   &-content {
     display: flex;
     flex-direction: column;
     & + .media-right {
-      margin-left: $spacer;
+      margin-left: $spacing-1;
     }
   }
 }

@@ -5,17 +5,16 @@
   margin: $pagination-margin;
   padding: 0;
   li {
-    display: none;
     @include media-breakpoint-up(sm) {
       display: block;
     }
+    display: none;
     @if ($size == lg) {
-      font-size: $pagination-font-size;
       @include media-breakpoint-up(sm) {
         font-size: $pagination-font-size-lg;
       }
-    }
-    @else {
+      font-size: $pagination-font-size;
+    } @else {
       font-size: $pagination-font-size;
     }
     list-style: none;
@@ -34,35 +33,33 @@
     font-weight: $pagination-font-weight;
     justify-content: center;
     @if ($size == lg) {
-      padding: 0 $pagination-padding;
       @include media-breakpoint-up(sm) {
         padding: 0 $pagination-padding-lg;
       }
-    }
-    @else {
+      padding: 0 $pagination-padding;
+    } @else {
       padding: 0 $pagination-padding;
     }
     position: relative;
     text-decoration: none !important;
     &:hover {
       text-decoration: none;
-      &:before {
+      &::before {
         background-color: $pagination-hover;
       }
     }
-    &:before {
-      content: "";
+    &::before {
       background: transparent;
       border-radius: 50%;
+      content: "";
       @if ($size == lg) {
-        height: $pagination-circle;
-        width: $pagination-circle;
         @include media-breakpoint-up(sm) {
           height: $pagination-circle-lg;
           width: $pagination-circle-lg;
         }
-      }
-      @else {
+        height: $pagination-circle;
+        width: $pagination-circle;
+      } @else {
         height: $pagination-circle;
         width: $pagination-circle;
       }
@@ -89,7 +86,7 @@
   .is-last {
     display: block;
     a {
-      &:before {
+      &::before {
         content: none;
       }
     }

@@ -1,10 +1,10 @@
 @mixin portlet {
-  background: $portlet-bg;
-  margin-bottom: $portlet-margin;
   @include portlet-header;
   @include portlet-content;
+  background: $portlet-bg;
+  margin-bottom: $portlet-margin;
   // Hacks e correções
-  p:last-child {
+  p:last-child { // sass-lint:disable-line force-pseudo-nesting
     margin-bottom: 0;
   }
 }
@@ -20,11 +20,6 @@
 @mixin portlet-content {
   .content {
     padding: $portlet-padding;
-    hr {
-      border: 0;
-      border-bottom: $portlet-border;
-      margin: ($portlet-padding) (- $portlet-padding);
-    }
     .br-btn {
       width: 100%;
     }
