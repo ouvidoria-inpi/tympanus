@@ -3,13 +3,13 @@
 
 // Atalhos para conteúdo
 .skip-menu {
-  width: 100%;
-  position: absolute;
   list-style: none;
+  position: absolute;
+  width: 100%;
   a {
+    color: $color-white;
     position: absolute;
     top: -200em;
-    color: #fff;
     &:focus {
       background: $color-secondary;
       border-radius: 100px;
@@ -33,15 +33,15 @@
 // Acessibilidade
 .accessibility {
   display: flex;
+  justify-content: flex-end;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  justify-content: flex-end;
   a {
-    text-transform: uppercase;
+    color: $color-gray-7;
     font-size: 11px;
     font-weight: 700;
-    color: $color-gray-7;
+    text-transform: uppercase;
     &:not(:last-child) {
       margin-right: $spacing-3;
     }
@@ -81,12 +81,7 @@
   @include font-title-registration-login;
 }
 
-// Texto padrão
 .page-content {
+  // Texto padrão
   @include font-system-default-text;
-}
-
-// Link padrão
-.page-content a {
-  @include font-link;
 }

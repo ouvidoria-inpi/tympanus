@@ -14,7 +14,7 @@
 .#{$prefix}login-social {
   @include login-social;
   .br-button + .br-button {
-    margin-top: 0;
     margin-left: $btn-margin-horizontal;
+    margin-top: 0;
   }
 }

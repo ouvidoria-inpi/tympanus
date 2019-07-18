@@ -1,99 +1,98 @@
 // Lista de Itens de Abas 
-@mixin input-select() {
-  &.select-small{
+@mixin input-select {
+  background: $color-white;
+  border: $select-border-size solid $color-gray-5;
+  border-radius: $select-border-radius;
+  box-sizing: border-box;
+  margin-bottom: $select-margin-bottom;
+  overflow: hidden;
+  &.select-small {
     height: $select-height-small;
     padding: $select-padding-small;
-    & li{
+    & li {
       font-size: 1$select-font-size-small;
     }
-    &::before{
+    &::before {
       font-size: $select-font-size-small;
     }
   }
-  &.select-medium{
+  &.select-medium {
     height: $select-height-medium;
     padding: $select-padding-medium;
-    & li{
+    & li {
       font-size: $select-font-size-medium;
     }
-    &::before{
+    &::before {
       font-size: $select-font-size-medium;
     }
   }
-  &.select-large{
+  &.select-large {
     height: $select-height-large;
     padding: $select-padding-large;
-    & li{
+    & li {
       font-size: $select-font-size-large;
     }
-    &::before{
+    &::before {
       font-size: $select-font-size-large;
     }
   }
-
-  &.select-disable{
-    cursor: default;
+  &.select-disable {
     background: $color-gray-2;
-    &::before{
+    cursor: default;
+    &::before {
       color: $color-gray-4;
     }
-    & li{
+    & li {
       color: $color-gray-5;
     }
   }
-  margin-bottom: $select-margin-bottom;
-  border: $select-border-size solid $color-gray-5;
-  border-radius: $select-border-radius;
-  background: $color-white;
-  overflow: hidden; 
-  box-sizing: border-box;
-  
-  &::before{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900; 
+  &::before {
+    -webkit-font-smoothing: antialiased;
+    color: $color-primary-lighten-15;
     content: $select-icon;
     display: inline-block;
     float: right;
-    margin-right: -10px;
-    margin-top: 1px;
+    font-family: "Font Awesome 5 Free";
     font-style: normal;
     font-variant: normal;
-    color: $color-primary-lighten-15;
+    font-weight: 900;
+    margin-right: -10px;
+    margin-top: 1px;
     text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
   }
-  & select{
+  & select {
     display: none;
   }
-  & ul, li{
+  & ul,
+  li {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
   }
-  & li{
+  & li {
     color: $color-gray-6;
-    &:first-child{
+    &:first-child {
       font-style: italic;
     }
   }
-  &.focus{
+  &.focus {
     border: $select-border-focus;
-    & ul{
-      display: block;
-      position: absolute;
-      z-index: 99;
-      margin-left: -24px;
-      margin-top: 31px;
+    & ul {
+      background: $color-white;
       border: $select-border-dropdown;
       border-radius: 4px;
-      background: $color-white;
       box-shadow: $select-box-shadow;
-      & li{
+      display: block;
+      margin-left: -24px;
+      margin-top: 31px;
+      position: absolute;
+      z-index: 99;
+      & li {
         font-weight: 500;
         padding: 8px 24px;
-        &:hover{
-          cursor: pointer;
+        &:hover {
           background: $select-background;
+          cursor: pointer;
         }
       }
     }

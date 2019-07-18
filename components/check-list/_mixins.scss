@@ -1,5 +1,5 @@
 // Estilo base para check com input
-@mixin check-list() {
+@mixin check-list {
   border-top: $check-input-border-size $check-input-border-style $check-input-border-color;
   display: flex;
   flex-direction: column;
@@ -66,19 +66,19 @@
   input {
     @include input;
     @include input-states;
+    max-width: $input-max-size;
+    visibility: hidden;
     &::placeholder {
       @include placeholder;
     }
-    max-width: $input-max-size;
-    visibility: hidden;
   }
 }
 
 @mixin check-checks {
   @include check(checkbox, right);
   @include check(radio, right);
-  margin-top: - $spacing-9;
   margin-right: $spacing-1;
+  margin-top: - $spacing-9;
   label {
     margin: 0;
   }
@@ -93,24 +93,28 @@
   }
   &.is-invalid {
     @include input-state($color-danger);
-    input[type="checkbox"] {
-      @include check-checked(checkbox, right, $color-danger);
-      @include check-state($color-danger);
-    }
-    input[type="radio"] {
-      @include check-checked(radio, right, $color-danger);
-      @include check-state($color-danger);
+    input {
+      &[type="checkbox"] {
+        @include check-checked(checkbox, right, $color-danger);
+        @include check-state($color-danger);
+      }
+      &[type="radio"] {
+        @include check-checked(radio, right, $color-danger);
+        @include check-state($color-danger);
+      }
     }
   }
   &.is-valid {
     @include input-state($color-success);
-    input[type="checkbox"] {
-      @include check-checked(checkbox, right, $color-success);
-      @include check-state($color-success);
-    }
-    input[type="radio"] {
-      @include check-checked(radio, right, $color-success);
-      @include check-state($color-success);
+    input {
+      &[type="checkbox"] {
+        @include check-checked(checkbox, right, $color-success);
+        @include check-state($color-success);
+      }
+      &[type="radio"] {
+        @include check-checked(radio, right, $color-success);
+        @include check-state($color-success);
+      }
     }
   }
 }

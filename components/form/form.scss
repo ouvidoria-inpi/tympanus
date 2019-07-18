@@ -17,12 +17,12 @@
 .#{$prefix}form {
   // Agrupador de controles
   .field {
-    margin-bottom: $field-margin;
     // Inputs
     @include input-component;
+    margin-bottom: $field-margin;
     // Texto de ajuda  
     .help {
-      @include font-suport-texto-for-input;
+      @include font-suport-text-for-input;
     }
     // Checkbox e radio
     .check {
@@ -88,11 +88,11 @@
         @include btn-loading;
       }
       & + .button {
-        margin-top: $btn-margin-vertical;
         @include media-breakpoint-up(sm) {
           margin-left: $btn-margin-horizontal;
           margin-top: 0;
         }
+        margin-top: $btn-margin-vertical;
       }
     }
     @include media-breakpoint-up(sm) {

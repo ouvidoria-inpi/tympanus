@@ -8,11 +8,11 @@
   }
   &-item {
     & + .result-item {
+      border-top: 1px solid $color-gray-4;
       margin-top: $spacing-5;
       padding-top: $spacing-5;
-      border-top: 1px solid $color-gray-4;
     }
-    > *:last-child {
+    > *:last-child { // sass-lint:disable-line no-universal-selectors
       margin-bottom: 0;
     }
   }

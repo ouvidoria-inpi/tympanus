@@ -1,5 +1,9 @@
 // Base de botões pílula
-@mixin btn-pill($background: $color-white, $border:$color-primary, $color: $color-primary) {
+@mixin btn-pill($background: $color-white, $border: $color-primary, $color: $color-primary) {
+  @include media-breakpoint-up(sm) {
+    min-width: $btn-pill-min-width;
+    width: auto;
+  }
   background: $background;
   border: 1px solid $border;
   border-radius: $btn-pill-radius;
@@ -8,14 +12,10 @@
   padding: $btn-pill-padding;
   text-align: center;
   width: 100%;
-  @include media-breakpoint-up(sm) {
-    min-width: $btn-pill-min-width;
-    width: auto;
-  }
   &:focus,
   &.is-focus {
-    outline: 0;
     box-shadow: 0 3px 6px -3px $color-primary;
+    outline: 0;
   }
   &:hover,
   &.is-hover {
@@ -59,19 +59,19 @@
 
 // Botão redondo
 @mixin btn-circle($size: $btn-circle) {
+  @include media-breakpoint-up(sm) {
+    height: $size !important;
+    min-width: 0;
+    width: $size !important;
+  }
   align-items: center;
   border: 0;
   border-radius: 50% !important;
   display: inline-flex !important;
+  height: $size !important;
   justify-content: center;
   padding: 0 !important;
-  height: $size !important;
   width: $size !important;
-  @include media-breakpoint-up(sm) {
-    min-width: 0;
-    height: $size !important;
-    width: $size !important;
-  }
   img {
     width: 100%;
   }
@@ -120,8 +120,8 @@
   margin: 0;
   padding: 0;
   .fas {
-    margin-left: $spacing-1;
     color: $color-primary;
+    margin-left: $spacing-1;
   }
   &:hover,
   &:focus {
@@ -140,7 +140,7 @@
   color: transparent !important;
   pointer-events: none;
   position: relative;
-  &:after {
+  &::after {
     animation: spinAround 500ms infinite linear;
     border: 2px solid currentColor;
     border-radius: 50%;
@@ -149,20 +149,19 @@
     content: "";
     display: block;
     height: 1em;
-    position: relative;
-    width: 1em;
     left: calc(50% - (1em / 2));
-    top: calc(50% - (1em / 2));
     position: absolute !important;
+    top: calc(50% - (1em / 2));
+    width: 1em;
   }
   &.is-primary,
   &.is-call-to-action {
-    &:after {
+    &::after {
       border-color: transparent transparent $color-white $color-white !important;
     }
   }
   &.is-secondary {
-    &:after {
+    &::after {
       border-color: transparent transparent $color-primary $color-primary !important;
     }
   }

@@ -119,15 +119,15 @@
 @mixin search-itens {
   &-items {
     background: $color-white;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22);
-    position: absolute;
-    z-index: 1;
-    top: 100%;
+    box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
     left: 0;
+    position: absolute;
     right: 0;
+    top: 100%;
+    z-index: 1;
     div {
-      padding: $spacing-1 $spacing-3;
       cursor: pointer;
+      padding: $spacing-1 $spacing-3;
       &:hover {
         background-color: $color-primary-pastel;
       }

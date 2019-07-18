@@ -41,9 +41,9 @@
   }
   .title {
     color: $accordeon-title-color;
+    flex: 1;
     font-weight: $accordeon-title-font-weight;
     padding: 0 $accordeon-title-padding;
-    flex: 1;
     &:first-child {
       padding-left: 0;
     }
@@ -54,8 +54,8 @@
   .content {
     display: none;
     font-size: $accordeon-content-font-size;
-    padding: $accordeon-content-padding;
     margin: 0 ($accordeon-title-padding * 2);
+    padding: $accordeon-content-padding;
     p {
       &:last-child {
         margin-bottom: 0;

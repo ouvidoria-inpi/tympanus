@@ -1,7 +1,7 @@
 @mixin search {
+  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
   .br-input {
     flex: 1;
   }

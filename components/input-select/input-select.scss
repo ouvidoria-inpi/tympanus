@@ -12,6 +12,6 @@
 // Input Select
 
 .#{$prefix}input-select {
-    @include input-select();
+  @include input-select;
 }
 
