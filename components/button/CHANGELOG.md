@@ -6,6 +6,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [Unreleased]
 - Botões de estados (**danger**, **success**, **warning**).
 
+## [0.2.1] - 2019-07-19
+### Fixed
+- Borda do Botão Redondo
+
 ## [0.2.0] - 2019-07-11
 ### Added
 - Botão **Call to action**
