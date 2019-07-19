@@ -1,6 +1,6 @@
 /*!
- * check-input - 0.2.0 */
-.br-check-list {
+ * check-input - 0.3.0 */
+.br-checklist {
   border-top: 1px solid #ededed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,10 +9,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 0 24px;
+  margin: 0 0 16px;
 }
 
-.br-check-list .field {
+.br-checklist .field {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -25,77 +25,78 @@
           justify-content: space-between;
   margin: 0;
   padding: 8px 0;
+  margin-bottom: 0;
 }
 
-.br-check-list .field.is-active .input label {
+.br-checklist .field.is-active .input label {
   display: none;
 }
 
-.br-check-list .field.is-active .input input {
+.br-checklist .field.is-active .input input {
   visibility: visible;
 }
 
-.br-check-list .field.is-focus input {
+.br-checklist .field.is-focus input {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
 
-.br-check-list .field.is-invalid input,
-.br-check-list .field.is-invalid textarea {
+.br-checklist .field.is-invalid input,
+.br-checklist .field.is-invalid textarea {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .field.is-invalid input:focus,
-.br-check-list .field.is-invalid textarea:focus {
+.br-checklist .field.is-invalid input:focus,
+.br-checklist .field.is-invalid textarea:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
   outline: none;
 }
 
-.br-check-list .field.is-invalid input[type="checkbox"]:checked + label:before {
+.br-checklist .field.is-invalid input[type="checkbox"]:checked + label::before {
   background: #ff3333;
   border-color: #ff3333;
 }
 
-.br-check-list .field.is-invalid input[type="checkbox"]:checked + label:after {
+.br-checklist .field.is-invalid input[type="checkbox"]:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   right: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-check-list .field.is-invalid input[type="checkbox"] + label:before {
+.br-checklist .field.is-invalid input[type="checkbox"] + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .field.is-invalid input[type="checkbox"]:hover:not(:disabled) + label:before {
+.br-checklist .field.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-check-list .field.is-invalid input[type="radio"]:checked + label:before {
+.br-checklist .field.is-invalid input[type="radio"]:checked + label::before {
   background: #ff3333;
   border-color: #ff3333;
 }
 
-.br-check-list .field.is-invalid input[type="radio"]:checked + label:after {
-  content: "";
+.br-checklist .field.is-invalid input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   right: 0px;
   position: absolute;
@@ -103,71 +104,71 @@
   width: 19px;
 }
 
-.br-check-list .field.is-invalid input[type="radio"] + label:before {
+.br-checklist .field.is-invalid input[type="radio"] + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .field.is-invalid input[type="radio"]:hover:not(:disabled) + label:before {
+.br-checklist .field.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-check-list .field.is-valid input,
-.br-check-list .field.is-valid textarea {
+.br-checklist .field.is-valid input,
+.br-checklist .field.is-valid textarea {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-check-list .field.is-valid input:focus,
-.br-check-list .field.is-valid textarea:focus {
+.br-checklist .field.is-valid input:focus,
+.br-checklist .field.is-valid textarea:focus {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
   outline: none;
 }
 
-.br-check-list .field.is-valid input[type="checkbox"]:checked + label:before {
+.br-checklist .field.is-valid input[type="checkbox"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
 
-.br-check-list .field.is-valid input[type="checkbox"]:checked + label:after {
+.br-checklist .field.is-valid input[type="checkbox"]:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   right: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-check-list .field.is-valid input[type="checkbox"] + label:before {
+.br-checklist .field.is-valid input[type="checkbox"] + label::before {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-check-list .field.is-valid input[type="checkbox"]:hover:not(:disabled) + label:before {
+.br-checklist .field.is-valid input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
 
-.br-check-list .field.is-valid input[type="radio"]:checked + label:before {
+.br-checklist .field.is-valid input[type="radio"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
 
-.br-check-list .field.is-valid input[type="radio"]:checked + label:after {
-  content: "";
+.br-checklist .field.is-valid input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   right: 0px;
   position: absolute;
@@ -175,43 +176,18 @@
   width: 19px;
 }
 
-.br-check-list .field.is-valid input[type="radio"] + label:before {
+.br-checklist .field.is-valid input[type="radio"] + label::before {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-check-list .field.is-valid input[type="radio"]:hover:not(:disabled) + label:before {
+.br-checklist .field.is-valid input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
 
-.br-check-list .icon,
-.br-check-list .input,
-.br-check-list .check {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.br-check-list .icon {
-  color: #1351b4;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 32px;
-}
-
-.br-check-list .input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.br-check-list .input label {
+.br-checklist .field .input label {
   font-size: 16px;
   line-height: 28px;
   color: #555555;
@@ -219,10 +195,42 @@
   font-weight: 400;
   font-family: Rawline;
   line-height: 1.5;
+}
+
+.br-checklist .icon,
+.br-checklist .input,
+.br-checklist .check {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.br-checklist .icon {
+  color: #1351b4;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+}
+
+.br-checklist .icon img {
+  margin: 0 4px;
+}
+
+.br-checklist .input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.br-checklist .input label {
   margin: 0;
 }
 
-.br-check-list .input input {
+.br-checklist .input input {
   font-size: 16px;
   line-height: 28px;
   color: #555555;
@@ -240,31 +248,31 @@
   visibility: hidden;
 }
 
-.br-check-list .input input:focus {
+.br-checklist .input input:focus {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
 
-.br-check-list .input input:invalid {
+.br-checklist .input input:invalid {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .input input:invalid:focus {
+.br-checklist .input input:invalid:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
   outline: none;
 }
 
-.br-check-list .input input:disabled {
+.br-checklist .input input:disabled {
   background: #ededed;
 }
 
-.br-check-list .input input::-webkit-input-placeholder {
+.br-checklist .input input::-webkit-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -273,7 +281,7 @@
   font-family: Rawline;
 }
 
-.br-check-list .input input:-ms-input-placeholder {
+.br-checklist .input input:-ms-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -282,7 +290,7 @@
   font-family: Rawline;
 }
 
-.br-check-list .input input::-ms-input-placeholder {
+.br-checklist .input input::-ms-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -291,7 +299,7 @@
   font-family: Rawline;
 }
 
-.br-check-list .input input::placeholder {
+.br-checklist .input input::placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -300,34 +308,38 @@
   font-family: Rawline;
 }
 
-.br-check-list .check {
+.br-checklist .input input {
+  width: 90%;
+}
+
+.br-checklist .check {
   display: inline-block;
   position: relative;
   display: inline-block;
   position: relative;
-  margin-top: -44px;
   margin-right: 8px;
+  margin-top: -44px;
 }
 
-.br-check-list .check input[type="checkbox"] {
-  position: absolute;
+.br-checklist .check input[type="checkbox"] {
   opacity: 0;
+  position: absolute;
 }
 
-.br-check-list .check input[type="checkbox"] + label {
+.br-checklist .check input[type="checkbox"] + label {
   font-size: 16px;
   line-height: 28px;
   color: #555555;
   font-style: normal;
   font-weight: 400;
   font-family: Rawline;
-  line-height: 1.5;
   cursor: pointer;
+  line-height: 1.5;
   padding: 0 28px 0 0;
   position: relative;
 }
 
-.br-check-list .check input[type="checkbox"] + label:before {
+.br-checklist .check input[type="checkbox"] + label::before {
   background: transparent;
   border: 1px solid #888888;
   border-radius: 4px;
@@ -340,152 +352,152 @@
   width: 19px;
 }
 
-.br-check-list .check input[type="checkbox"]:disabled + label:before {
+.br-checklist .check input[type="checkbox"]:disabled + label::before {
   background: #ededed;
 }
 
-.br-check-list .check input[type="checkbox"]:focus + label {
+.br-checklist .check input[type="checkbox"]:focus + label {
   outline: 1px dotted currentColor;
 }
 
-.br-check-list .check input[type="checkbox"]:checked + label:before {
+.br-checklist .check input[type="checkbox"]:checked + label::before {
   background: #2b74e9;
   border-color: #2b74e9;
 }
 
-.br-check-list .check input[type="checkbox"]:checked + label:after {
+.br-checklist .check input[type="checkbox"]:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   right: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-check-list .check input[type="checkbox"]:hover:not(:disabled) + label:before {
+.br-checklist .check input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
 
-.br-check-list .check input[type="checkbox"]:invalid + label:before {
+.br-checklist .check input[type="checkbox"]:invalid + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .check input[type="checkbox"]:invalid:hover:not(:disabled) + label:before {
+.br-checklist .check input[type="checkbox"]:invalid:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-check-list .check input[type="checkbox"]:disabled:checked + label:before {
+.br-checklist .check input[type="checkbox"]:disabled:checked + label::before {
   background: #888888;
   border-color: #888888;
 }
 
-.br-check-list .check input[type="checkbox"]:disabled:checked + label:after {
+.br-checklist .check input[type="checkbox"]:disabled:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   right: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-check-list .check input[type="checkbox"]:disabled + label {
+.br-checklist .check input[type="checkbox"]:disabled + label {
   cursor: default;
 }
 
-.br-check-list .check.is-hover input[type="checkbox"] + label:before {
+.br-checklist .check.is-hover input[type="checkbox"] + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
 
-.br-check-list .check.is-invalid input[type="checkbox"]:checked + label:before {
+.br-checklist .check.is-invalid input[type="checkbox"]:checked + label::before {
   background: #ff3333;
   border-color: #ff3333;
 }
 
-.br-check-list .check.is-invalid input[type="checkbox"]:checked + label:after {
+.br-checklist .check.is-invalid input[type="checkbox"]:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   right: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-check-list .check.is-invalid input[type="checkbox"] + label:before {
+.br-checklist .check.is-invalid input[type="checkbox"] + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label:before {
+.br-checklist .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-check-list .check.is-valid input[type="checkbox"]:checked + label:before {
+.br-checklist .check.is-valid input[type="checkbox"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
 
-.br-check-list .check.is-valid input[type="checkbox"]:checked + label:after {
+.br-checklist .check.is-valid input[type="checkbox"]:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   right: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-check-list .check.is-valid input[type="checkbox"] + label:before {
+.br-checklist .check.is-valid input[type="checkbox"] + label::before {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-check-list .check.is-valid input[type="checkbox"]:hover:not(:disabled) + label:before {
+.br-checklist .check.is-valid input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
 
-.br-check-list .check input[type="radio"] {
-  position: absolute;
+.br-checklist .check input[type="radio"] {
   opacity: 0;
+  position: absolute;
 }
 
-.br-check-list .check input[type="radio"] + label {
+.br-checklist .check input[type="radio"] + label {
   font-size: 16px;
   line-height: 28px;
   color: #555555;
   font-style: normal;
   font-weight: 400;
   font-family: Rawline;
-  line-height: 1.5;
   cursor: pointer;
+  line-height: 1.5;
   padding: 0 28px 0 0;
   position: relative;
 }
 
-.br-check-list .check input[type="radio"] + label:before {
+.br-checklist .check input[type="radio"] + label::before {
   background: transparent;
   border: 1px solid #888888;
   border-radius: 50%;
@@ -498,24 +510,24 @@
   width: 19px;
 }
 
-.br-check-list .check input[type="radio"]:disabled + label:before {
+.br-checklist .check input[type="radio"]:disabled + label::before {
   background: #ededed;
 }
 
-.br-check-list .check input[type="radio"]:focus + label {
+.br-checklist .check input[type="radio"]:focus + label {
   outline: 1px dotted currentColor;
 }
 
-.br-check-list .check input[type="radio"]:checked + label:before {
+.br-checklist .check input[type="radio"]:checked + label::before {
   background: #2b74e9;
   border-color: #2b74e9;
 }
 
-.br-check-list .check input[type="radio"]:checked + label:after {
-  content: "";
+.br-checklist .check input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   right: 0px;
   position: absolute;
@@ -523,32 +535,32 @@
   width: 19px;
 }
 
-.br-check-list .check input[type="radio"]:hover:not(:disabled) + label:before {
+.br-checklist .check input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
 
-.br-check-list .check input[type="radio"]:invalid + label:before {
+.br-checklist .check input[type="radio"]:invalid + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .check input[type="radio"]:invalid:hover:not(:disabled) + label:before {
+.br-checklist .check input[type="radio"]:invalid:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-check-list .check input[type="radio"]:disabled:checked + label:before {
+.br-checklist .check input[type="radio"]:disabled:checked + label::before {
   background: #888888;
   border-color: #888888;
 }
 
-.br-check-list .check input[type="radio"]:disabled:checked + label:after {
-  content: "";
+.br-checklist .check input[type="radio"]:disabled:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   right: 0px;
   position: absolute;
@@ -556,25 +568,25 @@
   width: 19px;
 }
 
-.br-check-list .check input[type="radio"]:disabled + label {
+.br-checklist .check input[type="radio"]:disabled + label {
   cursor: default;
 }
 
-.br-check-list .check.is-hover input[type="radio"] + label:before {
+.br-checklist .check.is-hover input[type="radio"] + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
 
-.br-check-list .check.is-invalid input[type="radio"]:checked + label:before {
+.br-checklist .check.is-invalid input[type="radio"]:checked + label::before {
   background: #ff3333;
   border-color: #ff3333;
 }
 
-.br-check-list .check.is-invalid input[type="radio"]:checked + label:after {
-  content: "";
+.br-checklist .check.is-invalid input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   right: 0px;
   position: absolute;
@@ -582,27 +594,27 @@
   width: 19px;
 }
 
-.br-check-list .check.is-invalid input[type="radio"] + label:before {
+.br-checklist .check.is-invalid input[type="radio"] + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-check-list .check.is-invalid input[type="radio"]:hover:not(:disabled) + label:before {
+.br-checklist .check.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-check-list .check.is-valid input[type="radio"]:checked + label:before {
+.br-checklist .check.is-valid input[type="radio"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
 
-.br-check-list .check.is-valid input[type="radio"]:checked + label:after {
-  content: "";
+.br-checklist .check.is-valid input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   right: 0px;
   position: absolute;
@@ -610,18 +622,44 @@
   width: 19px;
 }
 
-.br-check-list .check.is-valid input[type="radio"] + label:before {
+.br-checklist .check.is-valid input[type="radio"] + label::before {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-check-list .check.is-valid input[type="radio"]:hover:not(:disabled) + label:before {
+.br-checklist .check.is-valid input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
 
-.br-check-list .check label {
+.br-checklist .check label {
   margin: 0;
 }
-/*# sourceMappingURL=check-list.css.map */
+
+.br-checklist + .help,
+.br-checklist + .feedback + .help {
+  font-size: 13px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
+}
+
+.br-checklist.is-invalid + .feedback {
+  color: #ff3333;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.br-checklist.is-valid + .feedback {
+  color: #168821;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+/*# sourceMappingURL=checklist.css.map */
