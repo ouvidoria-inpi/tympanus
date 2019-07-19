@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Busca</title>
   <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
-  <link rel="stylesheet" href="../../assets/estilos/dsgov-components.min.css">
+  <link rel="stylesheet" href="../../assets/styles/dsgov-components.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="../starter/starter.css">
@@ -19,6 +19,7 @@
     <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
     <li><a accesskey="3" href="#footer-brasil">Ir para o rodapé</a></li>
   </ul>
+
   <!-- Barra de governo -->
   <div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
     <ul id="menu-barra-temp" style="list-style:none;">
@@ -28,7 +29,8 @@
       </li>
     </ul>
   </div>
-  <header id="header" class="page-header">
+
+  <header id="header" class="page-header pt-1 pt-sm-3">
     <div class="bg-white">
       <div class="container">
         <!-- Acessibilidade -->
@@ -37,7 +39,7 @@
             <span class="accessibility-icon">
               <img src="../../assets/images/alto-contraste.png" alt="Alto contraste">
             </span>
-            <span class="accessibility-text d-none">
+            <span class="accessibility-text d-none d-sm-inline">
               <span class="">Alto Contraste</span>
             </span>
           </a>
@@ -45,7 +47,7 @@
             <span class="accessibility-icon">
               <img src="../../assets/images/vlibras.png" alt="VLibras">
             </span>
-            <span class="accessibility-text d-none">
+            <span class="accessibility-text d-none d-sm-inline">
               <span class="">VLibras</span>
             </span>
           </a>
@@ -61,7 +63,7 @@
         <!-- Busca  -->
         <div class="br-search">
           <div class="br-input is-autocomplete">
-            <label for="password" class="sr-only">Autocomplete</label>
+            <label for="search-autocomplete" class="sr-only">Autocomplete</label>
             <input id="search-autocomplete" type="text" placeholder="Digite um país">
             <span class="icon">
               <i class="fas fa-search"></i>
@@ -75,11 +77,12 @@
         <ul class="br-breadcrumb">
           <li class="home"><a href="#"><span class="sr-only">Página inicial</span><i class="fas fa-home"></i></a></li>
           <li><a href="#">Busca</a></li>
-          <li>Resultado da Busca</li>
+          <li class="is-active">Resultado da Busca</li>
         </ul>
       </div>
     </div>
   </header>
+
   <!-- Conteúdo principal -->
   <main id="content" class="page-content bg-gray-1">
     <div class="container">
@@ -309,8 +312,10 @@
       </div>
     </div>
   </main>
+
   <!-- Rodapé de governo -->
   <div id="footer-brasil" class="page-footer mt-5 mt-sm-0"></div>
+
   <!-- Script da barra de governo -->
   <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>
   <script src="../../componentes/search/search.js"></script>

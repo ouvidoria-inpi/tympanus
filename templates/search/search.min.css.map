@@ -1,18 +1,18 @@
 {
     "version": 3,
-    "mappings": "AAKG,AAAD,YAAM,AAAC,CACL,OAAO,CEyoBC,IAAI,CFxoBb,AACA,AACC,YADI,CACA,YAAY,AAAC,CACf,UAAU,CEqoBJ,IAAI,CFpoBV,WAAW,CEooBL,IAAI,CFnoBV,UAAU,CAAE,GAAG,CAAC,KAAK,CEmBZ,OAAO,CFlBjB,AALF,AAMC,YANI,CAMF,CAAC,AAAA,WAAW,AAAC,CACb,aAAa,CAAE,CAAC,CACjB",
+    "mappings": "AAKG,AAAD,YAAM,AAAC,CACL,OAAO,CE4oBC,IAAI,CF3oBb,AACA,AACC,YADI,CACA,YAAY,AAAC,CACf,UAAU,CAAE,GAAG,CAAC,KAAK,CEwBZ,OAAO,CFvBhB,UAAU,CEuoBJ,IAAI,CFtoBV,WAAW,CEsoBL,IAAI,CFroBX,AALF,AAMC,YANI,CAMF,CAAC,AAAA,WAAW,AAAC,CACb,aAAa,CAAE,CAAC,CACjB",
     "sources": [
         "search.scss",
         "../../estilos/scss/_dsgov-base.scss",
         "../../estilos/scss/_tokens.scss",
-        "../../estilos/scss/configs/_functions.scss",
-        "../../estilos/scss/configs/_mixins.scss",
-        "../../estilos/scss/mixins/_colors.scss",
-        "../../estilos/scss/mixins/_fonts.scss",
         "../../estilos/scss/configs/_fonts.scss",
+        "../../estilos/scss/configs/_typography.scss",
         "../../estilos/scss/configs/_colors.scss",
         "../../estilos/scss/configs/_spacing.scss",
         "../../estilos/scss/configs/_grid.scss",
+        "../../estilos/scss/configs/_prefix.scss",
+        "../../estilos/scss/mixins/_fonts.scss",
+        "../../estilos/scss/mixins/_colors.scss",
         "../../estilos/node_modules/bootstrap/scss/_functions.scss",
         "../../estilos/node_modules/bootstrap/scss/_variables.scss",
         "../../estilos/node_modules/bootstrap/scss/_mixins.scss",
@@ -47,8 +47,7 @@
         "../../estilos/node_modules/bootstrap/scss/mixins/_clearfix.scss",
         "../../estilos/node_modules/bootstrap/scss/mixins/_grid-framework.scss",
         "../../estilos/node_modules/bootstrap/scss/mixins/_grid.scss",
-        "../../estilos/node_modules/bootstrap/scss/mixins/_float.scss",
-        "../../estilos/scss/configs/_defaults.scss"
+        "../../estilos/node_modules/bootstrap/scss/mixins/_float.scss"
     ],
     "names": [],
     "file": "search.min.css"
