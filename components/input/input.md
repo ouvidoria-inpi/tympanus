@@ -48,7 +48,7 @@ Exemplo de uso:
 
 ## `feedback`
 
-Em situações de erro ou retorno positivo use o `feedback`. Ele deve ser inserido imediatamente após o `<br-input>`.
+Em situações de erro ou retorno positivo use o `feedback`. Ele deve ser inserido imediatamente após o `br-input`.
 
 O texto de feedback deve ser inserido dentro de `message`.
 
@@ -84,7 +84,7 @@ Exemplo de uso:
 
 ## `help`
 
-Uma mensagem de ajuda PODE ser incluída. Ela deve ser inserida imediatamente após o `<br-input>`.
+Uma mensagem de ajuda PODE ser incluída. Ela deve ser inserida imediatamente após o `br-input`.
 
 Exemplo de uso:
 

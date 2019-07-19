@@ -52,14 +52,14 @@
   text-decoration: none;
 }
 
-.br-pagination a:hover:before {
-  background-color: #DBE7FC;
+.br-pagination a:hover::before {
+  background-color: #dbe8fb;
 }
 
-.br-pagination a:before {
-  content: "";
+.br-pagination a::before {
   background: transparent;
   border-radius: 50%;
+  content: "";
   height: 28px;
   width: 28px;
   left: 50%;
@@ -88,8 +88,8 @@
   display: block;
 }
 
-.br-pagination .is-first a:before,
-.br-pagination .is-last a:before {
+.br-pagination .is-first a::before,
+.br-pagination .is-last a::before {
   content: none;
 }
 
@@ -111,7 +111,7 @@
 
 .br-pagination .is-first:not(.is-disabled) a:hover span,
 .br-pagination .is-last:not(.is-disabled) a:hover span {
-  background: #DBE7FC;
+  background: #dbe8fb;
   color: #1351b4;
 }
 
@@ -184,14 +184,14 @@
   text-decoration: none;
 }
 
-.br-pagination.is-large a:hover:before {
-  background-color: #DBE7FC;
+.br-pagination.is-large a:hover::before {
+  background-color: #dbe8fb;
 }
 
-.br-pagination.is-large a:before {
-  content: "";
+.br-pagination.is-large a::before {
   background: transparent;
   border-radius: 50%;
+  content: "";
   height: 28px;
   width: 28px;
   left: 50%;
@@ -203,7 +203,7 @@
 }
 
 @media (min-width: 576px) {
-  .br-pagination.is-large a:before {
+  .br-pagination.is-large a::before {
     height: 32px;
     width: 32px;
   }
@@ -227,8 +227,8 @@
   display: block;
 }
 
-.br-pagination.is-large .is-first a:before,
-.br-pagination.is-large .is-last a:before {
+.br-pagination.is-large .is-first a::before,
+.br-pagination.is-large .is-last a::before {
   content: none;
 }
 
@@ -250,7 +250,7 @@
 
 .br-pagination.is-large .is-first:not(.is-disabled) a:hover span,
 .br-pagination.is-large .is-last:not(.is-disabled) a:hover span {
-  background: #DBE7FC;
+  background: #dbe8fb;
   color: #1351b4;
 }
 

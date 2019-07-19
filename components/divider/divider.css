@@ -14,9 +14,9 @@
   text-transform: uppercase;
 }
 
-.br-divider:after, .br-divider:before {
-  content: "";
+.br-divider::after, .br-divider::before {
   background: #888888;
+  content: "";
   height: 1px;
   width: 100%;
 }

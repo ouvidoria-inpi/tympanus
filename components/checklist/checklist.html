@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>checklist</title>
+  <link rel="stylesheet" href="../../estilos/dist/css/dsgov.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="checklist.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="br-checklist is-invalid">
+      <div class="field">
+        <div class="icon">
+          <i class="far fa-envelope"></i>
+        </div>
+        <div class="input">
+          <label for="radio-email">E-mail</label>
+          <input type="text" id="radio-email" placeholder="Ex: fulano@email.com">
+        </div>
+        <div class="check">
+          <input name="preferencia" type="radio" id="radio-email-check" onclick="toggleActiveField(this, 'br-checklist')">
+          <label for="radio-email-check"><span class="sr-only">E-mail</span></label>
+        </div>
+      </div>
+      <div class="field is-active is-invalid">
+        <div class="icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <div class="input">
+          <label for="radio-celular">Celular</label>
+          <input type="text" id="radio-celular" placeholder="Ex: (xx) xxxxx-xxxx">
+        </div>
+        <div class="check">
+          <input name="preferencia" type="radio" id="radio-celular-check" onclick="toggleActiveField(this, 'br-checklist')" checked>
+          <label for="radio-celular-check"><span class="sr-only">Celular</span></label>
+        </div>
+      </div>
+    </div>
+    <div class="feedback">
+      <i class="fas fa-times-circle"></i>
+      <span class="message">Preencha o campo de texto</span>
+    </div>
+    <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+    <div class="br-checklist mt-10">
+      <div class="field">
+        <div class="icon">
+          <i class="far fa-envelope"></i>
+        </div>
+        <div class="input">
+          <label for="box-email">E-mail</label>
+          <input type="text" id="box-email" placeholder="Ex: fulano@email.com">
+        </div>
+        <div class="check">
+          <input type="checkbox" id="box-email-check" onclick="toggleActiveField(this, 'br-checklist')">
+          <label for="box-email-check"><span class="sr-only">E-mail</span></label>
+        </div>
+      </div>
+      <div class="field is-active is-disabled">
+        <div class="icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <div class="input">
+          <label for="box-celular">Celular</label>
+          <input type="text" id="box-celular" placeholder="Ex: (xx) xxxxx-xxxx" disabled>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="box-celular-check" onclick="toggleActiveField(this, 'br-checklist')" checked disabled>
+          <label for="box-celular-check"><span class="sr-only">Celular</span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="checklist.js"></script>
+</body>
+
+</html>

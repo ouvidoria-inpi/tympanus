@@ -7,21 +7,47 @@
   .field {
     @include check-field;
     @include check-states;
+    margin-bottom: 0;
+    .input {
+      label {
+        @include font-system-default-text;
+        line-height: 1.5;
+      }
+    }
   }
   .icon,
   .input,
   .check {
     align-items: center;
-    display: flex;
+    display: inline-flex;
   }
   .icon {
     @include check-icons($icon-color);
   }
   .input {
     @include check-inputs;
+    input {
+      width: 90%;
+    }
   }
   .check {
     @include check-checks;
+  }
+  // Texto de ajuda 
+  & + .help,
+  & + .feedback + .help {
+    @include font-suport-text-for-input;
+  }
+  // Estados
+  &.is-invalid {
+    & + .feedback {
+      @include feedback($color-danger);
+    }
+  }
+  &.is-valid {
+    & + .feedback {
+      @include feedback($color-success);
+    }
   }
 }
 
@@ -54,13 +80,14 @@
   color: $color;
   justify-content: center;
   width: $icon-size;
+  img {
+    margin: 0 $spacing-half;
+  }
 }
 
 @mixin check-inputs {
   flex: 1;
   label {
-    @include font-system-default-text;
-    line-height: 1.5;
     margin: 0;
   }
   input {

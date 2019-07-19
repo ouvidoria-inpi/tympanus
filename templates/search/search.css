@@ -3,9 +3,9 @@
 }
 
 .result-item + .result-item {
+  border-top: 1px solid #9e9d9d;
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 1px solid #9e9d9d;
 }
 
 .result-item > *:last-child {
