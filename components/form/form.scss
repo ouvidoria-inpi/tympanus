@@ -2,7 +2,7 @@
 @import "../../estilos/scss/dsgov-base";
 
 /*!
- * form - 0.1.4 */
+ * form - 0.1.5 */
 
 // Carregar dependências
 @import "../button/configs";
@@ -18,7 +18,9 @@
   // Agrupador de controles
   .field {
     // Inputs
-    @include input-component;
+    .input {
+      @include input-component;
+    }
     margin-bottom: $field-margin;
     // Texto de ajuda  
     .help {

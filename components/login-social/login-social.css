@@ -43,12 +43,12 @@
 }
 
 .br-login-social li {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .br-login-social .br-button + .br-button {
-  margin-top: 0;
   margin-left: 24px;
+  margin-top: 0;
 }
 /*# sourceMappingURL=login-social.css.map */

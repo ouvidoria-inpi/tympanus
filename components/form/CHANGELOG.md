@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.5] - 2019-07-19
+### Fixed
+- Input dentro de `input`
+
 ## [0.1.4] - 2019-07-15
 ### Added
 - Suporte a componentes simplificados sem prefixo

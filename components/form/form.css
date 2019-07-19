@@ -1,5 +1,5 @@
 /*!
- * form - 0.1.4 */
+ * form - 0.1.5 */
 @-webkit-keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
@@ -23,10 +23,13 @@
 
 .br-form .field {
   margin-bottom: 24px;
+}
+
+.br-form .field .input {
   position: relative;
 }
 
-.br-form .field label {
+.br-form .field .input label {
   font-size: 16px;
   line-height: normal;
   color: #333333;
@@ -35,8 +38,8 @@
   font-family: Rawline;
 }
 
-.br-form .field input,
-.br-form .field textarea {
+.br-form .field .input input,
+.br-form .field .input textarea {
   font-size: 16px;
   line-height: 28px;
   color: #555555;
@@ -52,36 +55,36 @@
   width: 100%;
 }
 
-.br-form .field input:focus,
-.br-form .field textarea:focus {
+.br-form .field .input input:focus,
+.br-form .field .input textarea:focus {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
           box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
 
-.br-form .field input:invalid,
-.br-form .field textarea:invalid {
+.br-form .field .input input:invalid,
+.br-form .field .input textarea:invalid {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-form .field input:invalid:focus,
-.br-form .field textarea:invalid:focus {
+.br-form .field .input input:invalid:focus,
+.br-form .field .input textarea:invalid:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
   outline: none;
 }
 
-.br-form .field input:disabled,
-.br-form .field textarea:disabled {
+.br-form .field .input input:disabled,
+.br-form .field .input textarea:disabled {
   background: #ededed;
 }
 
-.br-form .field input::-webkit-input-placeholder,
-.br-form .field textarea::-webkit-input-placeholder {
+.br-form .field .input input::-webkit-input-placeholder,
+.br-form .field .input textarea::-webkit-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -90,8 +93,8 @@
   font-family: Rawline;
 }
 
-.br-form .field input:-ms-input-placeholder,
-.br-form .field textarea:-ms-input-placeholder {
+.br-form .field .input input:-ms-input-placeholder,
+.br-form .field .input textarea:-ms-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -100,8 +103,8 @@
   font-family: Rawline;
 }
 
-.br-form .field input::-ms-input-placeholder,
-.br-form .field textarea::-ms-input-placeholder {
+.br-form .field .input input::-ms-input-placeholder,
+.br-form .field .input textarea::-ms-input-placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -110,8 +113,8 @@
   font-family: Rawline;
 }
 
-.br-form .field input::placeholder,
-.br-form .field textarea::placeholder {
+.br-form .field .input input::placeholder,
+.br-form .field .input textarea::placeholder {
   font-size: 14px;
   line-height: normal;
   color: #555555;
@@ -120,7 +123,7 @@
   font-family: Rawline;
 }
 
-.br-form .field .icon {
+.br-form .field .input .icon {
   color: #1351b4;
   margin: 0 16px;
   position: absolute;
@@ -129,18 +132,18 @@
           transform: translate(0, -34px);
 }
 
-.br-form .field .icon img {
+.br-form .field .input .icon img {
   max-width: 24px;
   min-width: 24px;
   -webkit-transform: translate(0, -4px);
           transform: translate(0, -4px);
 }
 
-.br-form .field.is-action input {
+.br-form .field .input.is-action input {
   padding-right: 48px;
 }
 
-.br-form .field.is-action .action {
+.br-form .field .input.is-action .action {
   background: transparent;
   border: 0;
   color: #1351b4;
@@ -155,38 +158,38 @@
   width: auto;
 }
 
-.br-form .field.is-action .action img {
+.br-form .field .input.is-action .action img {
   max-width: 24px;
   min-width: 24px;
   -webkit-transform: translate(0, -4px);
           transform: translate(0, -4px);
 }
 
-.br-form .field.is-autocomplete input {
+.br-form .field .input.is-autocomplete input {
   padding-right: 48px;
 }
 
-.br-form .field.is-autocomplete .search-items {
+.br-form .field .input.is-autocomplete .search-items {
   background: #ffffff;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
-  position: absolute;
-  z-index: 1;
-  top: 100%;
   left: 0;
+  position: absolute;
   right: 0;
+  top: 100%;
+  z-index: 1;
 }
 
-.br-form .field.is-autocomplete .search-items div {
-  padding: 8px 16px;
+.br-form .field .input.is-autocomplete .search-items div {
   cursor: pointer;
+  padding: 8px 16px;
 }
 
-.br-form .field.is-autocomplete .search-items div:hover {
+.br-form .field .input.is-autocomplete .search-items div:hover {
   background-color: #dbe8fb;
 }
 
-.br-form .field.is-autocomplete .search-active {
+.br-form .field .input.is-autocomplete .search-active {
   background-color: #dbe8fb !important;
 }
 
@@ -207,8 +210,8 @@
 }
 
 .br-form .field .check input[type="checkbox"] {
-  position: absolute;
   opacity: 0;
+  position: absolute;
 }
 
 .br-form .field .check input[type="checkbox"] + label {
@@ -218,13 +221,13 @@
   font-style: normal;
   font-weight: 400;
   font-family: Rawline;
-  line-height: 1.5;
   cursor: pointer;
+  line-height: 1.5;
   padding: 0 0 0 28px;
   position: relative;
 }
 
-.br-form .field .check input[type="checkbox"] + label:before {
+.br-form .field .check input[type="checkbox"] + label::before {
   background: transparent;
   border: 1px solid #888888;
   border-radius: 4px;
@@ -237,7 +240,7 @@
   width: 19px;
 }
 
-.br-form .field .check input[type="checkbox"]:disabled + label:before {
+.br-form .field .check input[type="checkbox"]:disabled + label::before {
   background: #ededed;
 }
 
@@ -245,128 +248,128 @@
   outline: 1px dotted currentColor;
 }
 
-.br-form .field .check input[type="checkbox"]:checked + label:before {
+.br-form .field .check input[type="checkbox"]:checked + label::before {
   background: #2b74e9;
   border-color: #2b74e9;
 }
 
-.br-form .field .check input[type="checkbox"]:checked + label:after {
+.br-form .field .check input[type="checkbox"]:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   left: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-form .field .check input[type="checkbox"]:hover:not(:disabled) + label:before {
+.br-form .field .check input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
 
-.br-form .field .check input[type="checkbox"]:invalid + label:before {
+.br-form .field .check input[type="checkbox"]:invalid + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-form .field .check input[type="checkbox"]:invalid:hover:not(:disabled) + label:before {
+.br-form .field .check input[type="checkbox"]:invalid:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-form .field .check input[type="checkbox"]:disabled:checked + label:before {
+.br-form .field .check input[type="checkbox"]:disabled:checked + label::before {
   background: #888888;
   border-color: #888888;
 }
 
-.br-form .field .check input[type="checkbox"]:disabled:checked + label:after {
+.br-form .field .check input[type="checkbox"]:disabled:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   left: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
 .br-form .field .check input[type="checkbox"]:disabled + label {
   cursor: default;
 }
 
-.br-form .field .check.is-hover input[type="checkbox"] + label:before {
+.br-form .field .check.is-hover input[type="checkbox"] + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
 
-.br-form .field .check.is-invalid input[type="checkbox"]:checked + label:before {
+.br-form .field .check.is-invalid input[type="checkbox"]:checked + label::before {
   background: #ff3333;
   border-color: #ff3333;
 }
 
-.br-form .field .check.is-invalid input[type="checkbox"]:checked + label:after {
+.br-form .field .check.is-invalid input[type="checkbox"]:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   left: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-form .field .check.is-invalid input[type="checkbox"] + label:before {
+.br-form .field .check.is-invalid input[type="checkbox"] + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-form .field .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label:before {
+.br-form .field .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-form .field .check.is-valid input[type="checkbox"]:checked + label:before {
+.br-form .field .check.is-valid input[type="checkbox"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
 
-.br-form .field .check.is-valid input[type="checkbox"]:checked + label:after {
+.br-form .field .check.is-valid input[type="checkbox"]:checked + label::after {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
   content: "";
+  height: 10px;
   position: absolute;
   left: 7px;
   top: 8px;
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  width: 6px;
-  height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-form .field .check.is-valid input[type="checkbox"] + label:before {
+.br-form .field .check.is-valid input[type="checkbox"] + label::before {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-form .field .check.is-valid input[type="checkbox"]:hover:not(:disabled) + label:before {
+.br-form .field .check.is-valid input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
 
 .br-form .field .check input[type="radio"] {
-  position: absolute;
   opacity: 0;
+  position: absolute;
 }
 
 .br-form .field .check input[type="radio"] + label {
@@ -376,13 +379,13 @@
   font-style: normal;
   font-weight: 400;
   font-family: Rawline;
-  line-height: 1.5;
   cursor: pointer;
+  line-height: 1.5;
   padding: 0 0 0 28px;
   position: relative;
 }
 
-.br-form .field .check input[type="radio"] + label:before {
+.br-form .field .check input[type="radio"] + label::before {
   background: transparent;
   border: 1px solid #888888;
   border-radius: 50%;
@@ -395,7 +398,7 @@
   width: 19px;
 }
 
-.br-form .field .check input[type="radio"]:disabled + label:before {
+.br-form .field .check input[type="radio"]:disabled + label::before {
   background: #ededed;
 }
 
@@ -403,16 +406,16 @@
   outline: 1px dotted currentColor;
 }
 
-.br-form .field .check input[type="radio"]:checked + label:before {
+.br-form .field .check input[type="radio"]:checked + label::before {
   background: #2b74e9;
   border-color: #2b74e9;
 }
 
-.br-form .field .check input[type="radio"]:checked + label:after {
-  content: "";
+.br-form .field .check input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   left: 0px;
   position: absolute;
@@ -420,32 +423,32 @@
   width: 19px;
 }
 
-.br-form .field .check input[type="radio"]:hover:not(:disabled) + label:before {
+.br-form .field .check input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
 
-.br-form .field .check input[type="radio"]:invalid + label:before {
+.br-form .field .check input[type="radio"]:invalid + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-form .field .check input[type="radio"]:invalid:hover:not(:disabled) + label:before {
+.br-form .field .check input[type="radio"]:invalid:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-form .field .check input[type="radio"]:disabled:checked + label:before {
+.br-form .field .check input[type="radio"]:disabled:checked + label::before {
   background: #888888;
   border-color: #888888;
 }
 
-.br-form .field .check input[type="radio"]:disabled:checked + label:after {
-  content: "";
+.br-form .field .check input[type="radio"]:disabled:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   left: 0px;
   position: absolute;
@@ -457,21 +460,21 @@
   cursor: default;
 }
 
-.br-form .field .check.is-hover input[type="radio"] + label:before {
+.br-form .field .check.is-hover input[type="radio"] + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
           box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
 
-.br-form .field .check.is-invalid input[type="radio"]:checked + label:before {
+.br-form .field .check.is-invalid input[type="radio"]:checked + label::before {
   background: #ff3333;
   border-color: #ff3333;
 }
 
-.br-form .field .check.is-invalid input[type="radio"]:checked + label:after {
-  content: "";
+.br-form .field .check.is-invalid input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   left: 0px;
   position: absolute;
@@ -479,27 +482,27 @@
   width: 19px;
 }
 
-.br-form .field .check.is-invalid input[type="radio"] + label:before {
+.br-form .field .check.is-invalid input[type="radio"] + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
           box-shadow: 0 0 0 1px #ff3333;
 }
 
-.br-form .field .check.is-invalid input[type="radio"]:hover:not(:disabled) + label:before {
+.br-form .field .check.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
           box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
 
-.br-form .field .check.is-valid input[type="radio"]:checked + label:before {
+.br-form .field .check.is-valid input[type="radio"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
 
-.br-form .field .check.is-valid input[type="radio"]:checked + label:after {
-  content: "";
+.br-form .field .check.is-valid input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
           box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
+  content: "";
   height: 19px;
   left: 0px;
   position: absolute;
@@ -507,13 +510,13 @@
   width: 19px;
 }
 
-.br-form .field .check.is-valid input[type="radio"] + label:before {
+.br-form .field .check.is-valid input[type="radio"] + label::before {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
           box-shadow: 0 0 0 1px #168821;
 }
 
-.br-form .field .check.is-valid input[type="radio"]:hover:not(:disabled) + label:before {
+.br-form .field .check.is-valid input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
           box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
@@ -617,9 +620,9 @@
 }
 
 .br-form .actions .button.is-primary:focus, .br-form .actions .button.is-primary.is-focus {
-  outline: 0;
   -webkit-box-shadow: 0 3px 6px -3px #1351b4;
           box-shadow: 0 3px 6px -3px #1351b4;
+  outline: 0;
 }
 
 .br-form .actions .button.is-primary:hover, .br-form .actions .button.is-primary.is-hover {
@@ -661,9 +664,9 @@
 }
 
 .br-form .actions .button.is-secondary:focus, .br-form .actions .button.is-secondary.is-focus {
-  outline: 0;
   -webkit-box-shadow: 0 3px 6px -3px #1351b4;
           box-shadow: 0 3px 6px -3px #1351b4;
+  outline: 0;
 }
 
 .br-form .actions .button.is-secondary:hover, .br-form .actions .button.is-secondary.is-hover {
@@ -747,7 +750,7 @@
   position: relative;
 }
 
-.br-form .actions .button.is-loading:after {
+.br-form .actions .button.is-loading::after {
   -webkit-animation: spinAround 500ms infinite linear;
           animation: spinAround 500ms infinite linear;
   border: 2px solid currentColor;
@@ -757,18 +760,17 @@
   content: "";
   display: block;
   height: 1em;
-  position: relative;
-  width: 1em;
   left: calc(50% - (1em / 2));
-  top: calc(50% - (1em / 2));
   position: absolute !important;
+  top: calc(50% - (1em / 2));
+  width: 1em;
 }
 
-.br-form .actions .button.is-loading.is-primary:after, .br-form .actions .button.is-loading.is-call-to-action:after {
+.br-form .actions .button.is-loading.is-primary::after, .br-form .actions .button.is-loading.is-call-to-action::after {
   border-color: transparent transparent #ffffff #ffffff !important;
 }
 
-.br-form .actions .button.is-loading.is-secondary:after {
+.br-form .actions .button.is-loading.is-secondary::after {
   border-color: transparent transparent #1351b4 #1351b4 !important;
 }
 
