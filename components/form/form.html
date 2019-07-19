@@ -12,84 +12,94 @@
   <link rel="stylesheet" href="form.css">
 </head>
 <body>
-  <div class="br-form">
-    <div class="field">
-      <label for="item-1">label</label>
-      <input id="item-1" type="text" placeholder="Insira um texto">
-      <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
-    </div>
-    <div class="field">
-      <label for="item-textarea">label</label>
-      <textarea id="item-textarea" placeholder="Insira um texto"></textarea>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="field is-invalid">
-          <label for="item-2">Com erro</label>
-          <input id="item-2" type="text" placeholder="Insira um texto">
-          <div class="feedback">
-            <i class="fas fa-times-circle"></i>
-            <span class="message">Texto inválido</span>
+  <div class="container-fluid">
+    <div class="br-form">
+      <div class="field">
+        <div class="input">
+          <label for="item-1">label</label>
+          <input id="item-1" type="text" placeholder="Insira um texto">
+        </div>
+        <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+      </div>
+      <div class="field">
+        <div class="input">
+          <label for="item-textarea">label</label>
+          <textarea id="item-textarea" placeholder="Insira um texto"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="field is-invalid">
+            <div class="input">
+              <label for="item-2">Com erro</label>
+              <input id="item-2" type="text" placeholder="Insira um texto">
+            </div>
+            <div class="feedback">
+              <i class="fas fa-times-circle"></i>
+              <span class="message">Texto inválido</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="field is-valid">
+            <div class="input">
+              <label for="item-3">Validado</label>
+              <input id="item-3" type="text" placeholder="Insira um texto">
+            </div>
+            <div class="feedback">
+              <i class="fas fa-check-circle"></i>
+              <span class="message">Texto válido</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="field is-valid">
-          <label for="item-3">Validado</label>
-          <input id="item-3" type="text" placeholder="Insira um texto">
-          <div class="feedback">
-            <i class="fas fa-check-circle"></i>
-            <span class="message">Texto válido</span>
+      <div class="row">
+        <div class="col">
+          <div class="field">
+            <div class="check">
+              <input type="checkbox" id="checkbox-padrao">
+              <label for="checkbox-padrao">Padrão</label>
+            </div>
+            <div class="check ml-7">
+              <input type="checkbox" id="checkbox-checado" checked>
+              <label for="checkbox-checado">Checado</label>
+            </div>
+            <div class="check is-invalid ml-7">
+              <input type="checkbox" id="checkbox-invalido">
+              <label for="checkbox-invalido">Inválido</label>
+            </div>
+            <div class="check is-valid ml-7">
+              <input type="checkbox" id="checkbox-valido">
+              <label for="checkbox-valido">Válido</label>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="field">
+            <div class="check">
+              <input name="radio" type="radio" id="radio-padrao">
+              <label for="radio-padrao">Padrão</label>
+            </div>
+            <div class="check ml-7">
+              <input name="radio" type="radio" id="radio-checado" checked>
+              <label for="radio-checado">Checado</label>
+            </div>
+            <div class="check is-invalid ml-7">
+              <input name="radio" type="radio" id="radio-invalido">
+              <label for="radio-invalido">Inválido</label>
+            </div>
+            <div class="check is-valid ml-7">
+              <input name="radio" type="radio" id="radio-valido">
+              <label for="radio-valido">Válido</label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="field">
-          <div class="check">
-            <input type="checkbox" id="checkbox-padrao">
-            <label for="checkbox-padrao">Padrão</label>
-          </div>
-          <div class="check ml-7">
-            <input type="checkbox" id="checkbox-checado" checked>
-            <label for="checkbox-checado">Checado</label>
-          </div>
-          <div class="check is-invalid ml-7">
-            <input type="checkbox" id="checkbox-invalido">
-            <label for="checkbox-invalido">Inválido</label>
-          </div>
-          <div class="check is-valid ml-7">
-            <input type="checkbox" id="checkbox-valido">
-            <label for="checkbox-valido">Válido</label>
-          </div>
-        </div>
+      <div class="actions">
+        <button class="button is-primary" type="button">Ação principal</button>
+        <button class="button is-secondary" type="button">Ação secundária grande</button>
+        <button class="button is-cancel" type="button">Cancelar</button>
       </div>
-      <div class="col">
-        <div class="field">
-          <div class="check">
-            <input name="radio" type="radio" id="radio-padrao">
-            <label for="radio-padrao">Padrão</label>
-          </div>
-          <div class="check ml-7">
-            <input name="radio" type="radio" id="radio-checado" checked>
-            <label for="radio-checado">Checado</label>
-          </div>
-          <div class="check is-invalid ml-7">
-            <input name="radio" type="radio" id="radio-invalido">
-            <label for="radio-invalido">Inválido</label>
-          </div>
-          <div class="check is-valid ml-7">
-            <input name="radio" type="radio" id="radio-valido">
-            <label for="radio-valido">Válido</label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="actions">
-      <button class="button is-primary" type="button">Ação principal</button>
-      <button class="button is-secondary" type="button">Ação secundária grande</button>
-      <button class="button is-cancel" type="button">Cancelar</button>
     </div>
   </div>
 </body>
