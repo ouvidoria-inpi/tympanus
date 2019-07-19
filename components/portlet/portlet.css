@@ -1,5 +1,5 @@
 /*!
- * portlet - 0.1.0 */
+ * portlet - 0.1.1 */
 .br-portlet {
   background: #ffffff;
   margin-bottom: 24px;
@@ -16,13 +16,8 @@
 }
 
 .br-portlet .content hr {
-  border: 0;
-  border-bottom: 1px solid #cccccc;
-  margin: 24px -24px;
-}
-
-.br-portlet .content .br-btn {
-  width: 100%;
+  margin-left: -24px;
+  margin-right: -24px;
 }
 
 .br-portlet p:last-child {

@@ -20,8 +20,9 @@
 @mixin portlet-content {
   .content {
     padding: $portlet-padding;
-    .br-btn {
-      width: 100%;
+    hr {
+      margin-left: - $portlet-padding;
+      margin-right: - $portlet-padding;
     }
   }
 }
