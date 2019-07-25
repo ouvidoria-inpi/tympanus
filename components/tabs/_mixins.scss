@@ -11,8 +11,22 @@
       margin: 0;
       padding: 0;
       padding-right: $tab-icon-size + ($tab-results-margin * 2);
+      a,
+      button {
+        flex-direction: row;
+        padding: 0;
+      }
+      &:hover {
+        background: $color-primary-pastel;
+      }
       &.is-active {
         box-shadow: none;
+        a,
+        button {
+          &:hover {
+            box-shadow: none;
+          }
+        }
         .name {
           box-shadow: $tab-active-border;
           color: $tab-results-color;
@@ -25,33 +39,39 @@
     .name {
       display: inline-block;
       margin-left: $tab-icon-size + ($tab-results-margin * 2);
-      padding: $tab-item-padding ($tab-results-margin / 2);
+      padding: ($tab-item-padding * 1) ($tab-results-margin / 2);
       text-align: left;
     }
   }
   .item {
     display: flex;
     margin: 0 $tab-padding;
-    padding: $tab-item-padding 0;
     a,
     button {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
       text-decoration: none;
-      &:hover,
-      &:focus {
-        .icon,
-        .name,
-        .results {
-          color: $tab-item-hover;
-        }
-    }
+      padding: ($tab-item-padding * 0.5) ($tab-item-padding ) $tab-item-padding;
+      &:hover {
+        background: $color-primary-pastel;
+      }
     }
     &.is-active {
       box-shadow: $tab-active-border;
+      a,
+      button {
+        &:hover {
+          box-shadow: $tab-active-border;
+        }
+      }
       .name {
         color: $tab-active-color;
+        font-weight: $tab-active-font-weight;
       }
       .results {
         color: $tab-results-color;
+        font-weight: $tab-active-font-weight;
       }
     }
   }
@@ -75,7 +95,6 @@
     color: $tab-item-color;
     font-size: $tab-results-font-size;
     font-weight: $tab-font-weight;
-    margin-left: $tab-results-margin;
   }
   a,
   button {

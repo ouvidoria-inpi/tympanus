@@ -7,6 +7,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Área de conteúdo
 - Abas com subitens
 
+## [0.2.1] - 2019-07-25
+### Fixed
+- Espaçamentos dos itens
+
 ## [0.2.0] - 2019-07-09
 ### Added
 - Efeito de hover/focus nas abas
