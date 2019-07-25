@@ -9,16 +9,16 @@ Nenhuma dependência.
 ## Código básico
 
 ```html
-<button class="br-btn" type="button">Botão</button>
+<button class="br-button" type="button">Botão</button>
 ```
 
-# Anatomia do componente
+## Detalhamento
 
 Este componente é formado pelos seguintes elementos:
 
 - `br-button`: container do componente
 
-# Variações
+## Variações
 
 Estão disponíveis 9 tipos de botões. Cada tipo é aplicado com o prefixo `is-`.
 
@@ -37,9 +37,11 @@ Estão disponíveis 9 tipos de botões. Cada tipo é aplicado com o prefixo `is-
 - Voltar ao Topo
 - Filtrar
 
-## Botão Primário
+### Botão Primário
 
-Toda **ação principal** na tela deve usar o **Botão Primário**. NUNCA use mais de 1 Botão Primário, pois confunde o usuário em sua tomada de decisão.
+Toda **ação principal** na tela deve usar o **Botão Primário**.
+
+NUNCA use mais de 1 Botão Primário, pois confunde o usuário em sua tomada de decisão.
 
 Exemplo de uso:
 
@@ -47,7 +49,7 @@ Exemplo de uso:
 <button class="br-button is-primary" type="button">Ação</button>
 ```
 
-## Botão Secundário
+### Botão Secundário
 
 Para **ações subjetivas** ou de **menor importância** use **Botão Secundário**. Este botão PODE ser usado quantas vezes forem necessárias na tela.
 
@@ -57,7 +59,7 @@ Exemplo de uso:
 <button class="br-button is-secondary" type="button">Ação</button>
 ```
 
-## Botão Terciário
+### Botão Terciário
 
 Nas situações em que o botão deverá se comportar como um **link** use o **Botão Terciário**.
 
@@ -67,7 +69,7 @@ Exemplo de uso:
 <button class="br-button is-tertiary" type="button">Ação</button>
 ```
 
-## Botão Cancelar
+### Botão Cancelar
 
 Para cancelar use o **Botão Cancelar**.
 
@@ -81,7 +83,7 @@ Exemplo de uso:
 <button class="br-button is-cancel" type="button">Cancelar</button>
 ```
 
-## Botão Call to Action
+### Botão Call to Action
 
 Usado em situações que necessitem atenção especial. Ele é diferente do Botão Primário.
 
@@ -91,17 +93,15 @@ Exemplo de uso:
 <button class="br-button is-call-to-action" type="button">Ação</button>
 ```
 
-## Botão Circular
+### Botão Circular
 
 Use apenas ícones nestes botões.
 
 O ícone pode ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome - `<i class="fas">`.
 
+Imagens serão redimencionadas automaticamente dentro do botão. Nos ícones do Fontawesome use **cor primária** ou **cor secundária**.
+
 Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](https://fontawesome.com/).
-
-Imagens serão redimencionadas automaticamente dentro do botão.
-
-Nos ícones do Fontawesome use **cor primária** ou **cor secundária**.
 
 Exemplo de uso:
 
@@ -117,7 +117,7 @@ Exemplo de uso:
 </button>
 ```
 
-## Botão Redes Sociais
+### Botão Redes Sociais
 
 Botões para login com redes sociais. A regra é a mesma dos botões circulares.
 
@@ -137,7 +137,7 @@ Exemplo de uso:
 </button>
 ```
 
-## Botão Voltar ao Topo
+### Botão Voltar ao Topo
 
 Usado geralmente ao final de conteúdos para facilitar a rolagem de tela.
 
@@ -160,7 +160,7 @@ Exemplo de uso:
 </script>
 ```
 
-## Botão Filtrar
+### Botão Filtrar
 
 Usado especial para uso de filtros.
 
@@ -173,17 +173,12 @@ Exemplo de uso:
 </button>
 ```
 
-# Estados
+## Estados
 
-Este componente apresenta os seguintes estados:
+### `focus` e `hover`
 
-- focus e hover
-- disabled
-- loading
-
-## `focus` e `hover`
-
-São aplicados automaticamente no elemento. Podem ser aplicados diretamente usando o prefixo `is-`.
+- São aplicados automaticamente no elemento
+- Podem ser aplicados diretamente usando o prefixo `is-`
 
 Exemplo de uso:
 
@@ -192,9 +187,10 @@ Exemplo de uso:
 <button class="br-button is-primary is-focus" type="button">Ação</button>
 ```
 
-## disabled
+### disabled
 
-Deve ser aplicado como propriedade no componente quando for tag do tipo `<button>` ou `<input>`. Pode ser aplicado diretamente usando o prefixo `is-`, porém a aplicação por classe apenas modifica o estilo e não desabilita o componente de fato.
+- Deve ser aplicado como propriedade no componente quando for tag do tipo `<button>` ou `<input>`
+- Pode ser aplicado diretamente usando o prefixo `is-`, porém a aplicação por classe apenas modifica o estilo e não desabilita o componente de fato
 
 Exemplo de uso:
 
@@ -203,13 +199,11 @@ Exemplo de uso:
 <a href="" class="br-button is-primary is-disabled">Ação</a>
 ```
 
-## loading
+### loading
 
-Sempre que necessário aplique o estado de `loading` nos botões para sinalizar ao usuário que o sistema está operando.
-
-Este estado é recomendados para os tipos **Botão Primário**, **Botão Secundário**, **Botão Call to Action** e **Botão Circular**.
-
-Deve ser aplicado diretamente no componente usando o prefixo `is-`.
+- Sempre que necessário aplique o estado de `loading` nos botões para sinalizar ao usuário que o sistema está operando
+- Este estado é recomendados para os tipos **Botão Primário**, **Botão Secundário**, **Botão Call to Action** e **Botão Circular**
+- Deve ser aplicado diretamente no componente usando o prefixo `is-`
 
 Exemplo de uso:
 
@@ -217,7 +211,7 @@ Exemplo de uso:
 <button class="br-button is-primary is-loading" type="button">Ação</button>
 ```
 
-# Regras especiais
+## Regras especiais
 
 Em _smartphones_ o botão terá a largura da tela. Será aplicado espaçamento vertical automático de 16px entre eles.
 

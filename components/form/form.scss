@@ -17,11 +17,11 @@
 .#{$prefix}form {
   // Agrupador de controles
   .field {
+    margin-bottom: $field-margin;
     // Inputs
     .input {
       @include input-component;
     }
-    margin-bottom: $field-margin;
     // Texto de ajuda  
     .help {
       @include font-suport-text-for-input;
@@ -30,6 +30,8 @@
     .check {
       @include check(checkbox);
       @include check(radio);
+      display: inline-block;
+      position: relative;
     }
     // Estados com prefixo
     &.is-focus {
@@ -78,13 +80,10 @@
         @include font-secondary-button;
       }
       &.is-tertiary {
-        @include btn-link;
-        @include font-tertiary-button;
+        @include btn-link($font-link-color);
       }
       &.is-cancel {
         @include btn-link($color-gray-6);
-        @include font-tertiary-button;
-        color: $color-gray-6;
       }
       &.is-loading {
         @include btn-loading;

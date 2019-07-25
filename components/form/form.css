@@ -1,148 +1,144 @@
 /*!
  * form - 0.1.5 */
+
+
 @-webkit-keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
+
 @keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
+
 
 .br-form .field {
   margin-bottom: 24px;
 }
-
 .br-form .field .input {
   position: relative;
 }
-
 .br-form .field .input label {
-  font-size: 16px;
-  line-height: normal;
   color: #333333;
+  font-family: Rawline;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  font-family: Rawline;
+  line-height: normal;
 }
-
 .br-form .field .input input,
 .br-form .field .input textarea {
-  font-size: 16px;
-  line-height: 28px;
-  color: #555555;
-  font-style: normal;
-  font-weight: 400;
-  font-family: Rawline;
   background: #ffffff;
   border: 1px solid #888888;
   border-radius: 6px;
+  color: #555555;
   display: block;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
   padding: 8px 16px;
   width: 100%;
 }
-
 .br-form .field .input input:focus,
 .br-form .field .input textarea:focus {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
-          box-shadow: 0 0 0 1px #2b74e9;
+  box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
-
 .br-form .field .input input:invalid,
 .br-form .field .input textarea:invalid {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
 }
-
 .br-form .field .input input:invalid:focus,
 .br-form .field .input textarea:invalid:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
   outline: none;
 }
-
 .br-form .field .input input:disabled,
 .br-form .field .input textarea:disabled {
   background: #ededed;
 }
-
 .br-form .field .input input::-webkit-input-placeholder,
 .br-form .field .input textarea::-webkit-input-placeholder {
-  font-size: 14px;
-  line-height: normal;
   color: #555555;
+  font-family: Rawline;
+  font-size: 14px;
   font-style: italic;
   font-weight: 400;
-  font-family: Rawline;
+  line-height: normal;
 }
-
+.br-form .field .input input::-moz-placeholder,
+.br-form .field .input textarea::-moz-placeholder {
+  color: #555555;
+  font-family: Rawline;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
 .br-form .field .input input:-ms-input-placeholder,
 .br-form .field .input textarea:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: normal;
   color: #555555;
+  font-family: Rawline;
+  font-size: 14px;
   font-style: italic;
   font-weight: 400;
-  font-family: Rawline;
+  line-height: normal;
 }
-
 .br-form .field .input input::-ms-input-placeholder,
 .br-form .field .input textarea::-ms-input-placeholder {
-  font-size: 14px;
-  line-height: normal;
   color: #555555;
+  font-family: Rawline;
+  font-size: 14px;
   font-style: italic;
   font-weight: 400;
-  font-family: Rawline;
+  line-height: normal;
 }
-
 .br-form .field .input input::placeholder,
 .br-form .field .input textarea::placeholder {
-  font-size: 14px;
-  line-height: normal;
   color: #555555;
+  font-family: Rawline;
+  font-size: 14px;
   font-style: italic;
   font-weight: 400;
-  font-family: Rawline;
+  line-height: normal;
 }
-
 .br-form .field .input .icon {
   color: #1351b4;
   margin: 0 16px;
   position: absolute;
   right: 0;
   -webkit-transform: translate(0, -34px);
-          transform: translate(0, -34px);
+  transform: translate(0, -34px);
 }
-
 .br-form .field .input .icon img {
   max-width: 24px;
   min-width: 24px;
   -webkit-transform: translate(0, -4px);
-          transform: translate(0, -4px);
+  transform: translate(0, -4px);
 }
-
 .br-form .field .input.is-action input {
   padding-right: 48px;
 }
-
 .br-form .field .input.is-action .action {
   background: transparent;
   border: 0;
@@ -154,79 +150,62 @@
   position: absolute;
   right: 0;
   -webkit-transform: translate(0, -34px);
-          transform: translate(0, -34px);
+  transform: translate(0, -34px);
   width: auto;
 }
-
 .br-form .field .input.is-action .action img {
   max-width: 24px;
   min-width: 24px;
   -webkit-transform: translate(0, -4px);
-          transform: translate(0, -4px);
+  transform: translate(0, -4px);
 }
-
 .br-form .field .input.is-autocomplete input {
   padding-right: 48px;
 }
-
 .br-form .field .input.is-autocomplete .search-items {
   background: #ffffff;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
   left: 0;
   position: absolute;
   right: 0;
   top: 100%;
   z-index: 1;
 }
-
 .br-form .field .input.is-autocomplete .search-items div {
   cursor: pointer;
   padding: 8px 16px;
 }
-
 .br-form .field .input.is-autocomplete .search-items div:hover {
   background-color: #dbe8fb;
 }
-
 .br-form .field .input.is-autocomplete .search-active {
   background-color: #dbe8fb !important;
 }
-
 .br-form .field .help {
-  font-size: 13px;
-  line-height: normal;
   color: #333333;
+  font-family: Rawline;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  font-family: Rawline;
+  line-height: normal;
 }
-
 .br-form .field .check {
   display: inline-block;
   position: relative;
-  display: inline-block;
-  position: relative;
 }
-
 .br-form .field .check input[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
-
 .br-form .field .check input[type="checkbox"] + label {
-  font-size: 16px;
-  line-height: 28px;
   color: #555555;
-  font-style: normal;
-  font-weight: 400;
-  font-family: Rawline;
   cursor: pointer;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
   padding: 0 0 0 28px;
   position: relative;
 }
-
 .br-form .field .check input[type="checkbox"] + label::before {
   background: transparent;
   border: 1px solid #888888;
@@ -239,152 +218,126 @@
   vertical-align: text-top;
   width: 19px;
 }
-
 .br-form .field .check input[type="checkbox"]:disabled + label::before {
   background: #ededed;
 }
-
 .br-form .field .check input[type="checkbox"]:focus + label {
   outline: 1px dotted currentColor;
 }
-
 .br-form .field .check input[type="checkbox"]:checked + label::before {
   background: #2b74e9;
   border-color: #2b74e9;
 }
-
 .br-form .field .check input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   content: "";
   height: 10px;
-  position: absolute;
   left: 7px;
+  position: absolute;
   top: 8px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 6px;
 }
-
 .br-form .field .check input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-          box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
-
 .br-form .field .check input[type="checkbox"]:invalid + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
 }
-
 .br-form .field .check input[type="checkbox"]:invalid:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
-
 .br-form .field .check input[type="checkbox"]:disabled:checked + label::before {
   background: #888888;
   border-color: #888888;
 }
-
 .br-form .field .check input[type="checkbox"]:disabled:checked + label::after {
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   content: "";
   height: 10px;
-  position: absolute;
   left: 7px;
+  position: absolute;
   top: 8px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 6px;
 }
-
 .br-form .field .check input[type="checkbox"]:disabled + label {
   cursor: default;
 }
-
 .br-form .field .check.is-hover input[type="checkbox"] + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-          box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
-
 .br-form .field .check.is-invalid input[type="checkbox"]:checked + label::before {
   background: #ff3333;
   border-color: #ff3333;
 }
-
 .br-form .field .check.is-invalid input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   content: "";
   height: 10px;
-  position: absolute;
   left: 7px;
+  position: absolute;
   top: 8px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 6px;
 }
-
 .br-form .field .check.is-invalid input[type="checkbox"] + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
 }
-
 .br-form .field .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
-
 .br-form .field .check.is-valid input[type="checkbox"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
-
 .br-form .field .check.is-valid input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   content: "";
   height: 10px;
-  position: absolute;
   left: 7px;
+  position: absolute;
   top: 8px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 6px;
 }
-
 .br-form .field .check.is-valid input[type="checkbox"] + label::before {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
-          box-shadow: 0 0 0 1px #168821;
+  box-shadow: 0 0 0 1px #168821;
 }
-
 .br-form .field .check.is-valid input[type="checkbox"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
-          box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+  box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
-
 .br-form .field .check input[type="radio"] {
   opacity: 0;
   position: absolute;
 }
-
 .br-form .field .check input[type="radio"] + label {
-  font-size: 16px;
-  line-height: 28px;
   color: #555555;
-  font-style: normal;
-  font-weight: 400;
-  font-family: Rawline;
   cursor: pointer;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
   padding: 0 0 0 28px;
   position: relative;
 }
-
 .br-form .field .check input[type="radio"] + label::before {
   background: transparent;
   border: 1px solid #888888;
@@ -397,24 +350,20 @@
   vertical-align: text-top;
   width: 19px;
 }
-
 .br-form .field .check input[type="radio"]:disabled + label::before {
   background: #ededed;
 }
-
 .br-form .field .check input[type="radio"]:focus + label {
   outline: 1px dotted currentColor;
 }
-
 .br-form .field .check input[type="radio"]:checked + label::before {
   background: #2b74e9;
   border-color: #2b74e9;
 }
-
 .br-form .field .check input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
-          box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   left: 0px;
@@ -422,32 +371,27 @@
   top: 5px;
   width: 19px;
 }
-
 .br-form .field .check input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-          box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
-
 .br-form .field .check input[type="radio"]:invalid + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
 }
-
 .br-form .field .check input[type="radio"]:invalid:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
-
 .br-form .field .check input[type="radio"]:disabled:checked + label::before {
   background: #888888;
   border-color: #888888;
 }
-
 .br-form .field .check input[type="radio"]:disabled:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
-          box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   left: 0px;
@@ -455,25 +399,21 @@
   top: 5px;
   width: 19px;
 }
-
 .br-form .field .check input[type="radio"]:disabled + label {
   cursor: default;
 }
-
 .br-form .field .check.is-hover input[type="radio"] + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-          box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
 }
-
 .br-form .field .check.is-invalid input[type="radio"]:checked + label::before {
   background: #ff3333;
   border-color: #ff3333;
 }
-
 .br-form .field .check.is-invalid input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
-          box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   left: 0px;
@@ -481,27 +421,23 @@
   top: 5px;
   width: 19px;
 }
-
 .br-form .field .check.is-invalid input[type="radio"] + label::before {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
 }
-
 .br-form .field .check.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-          box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
 }
-
 .br-form .field .check.is-valid input[type="radio"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
-
 .br-form .field .check.is-valid input[type="radio"]:checked + label::after {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
-          box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   left: 0px;
@@ -509,46 +445,39 @@
   top: 5px;
   width: 19px;
 }
-
 .br-form .field .check.is-valid input[type="radio"] + label::before {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
-          box-shadow: 0 0 0 1px #168821;
+  box-shadow: 0 0 0 1px #168821;
 }
-
 .br-form .field .check.is-valid input[type="radio"]:hover:not(:disabled) + label::before {
   -webkit-box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
-          box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+  box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
 }
-
 .br-form .field.is-focus input,
 .br-form .field.is-focus textarea {
   border-color: #2b74e9;
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
-          box-shadow: 0 0 0 1px #2b74e9;
+  box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
 }
-
 .br-form .field.is-focus .action,
 .br-form .field.is-focus .icon {
   color: #2b74e9;
 }
-
 .br-form .field.is-invalid input,
 .br-form .field.is-invalid textarea {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
 }
-
 .br-form .field.is-invalid input:focus,
 .br-form .field.is-invalid textarea:focus {
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
-          box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
   outline: none;
 }
-
 .br-form .field.is-invalid .feedback {
   color: #ff3333;
   font-size: 13px;
@@ -556,27 +485,23 @@
   font-weight: 500;
   padding: 4px;
 }
-
 .br-form .field.is-invalid .action,
 .br-form .field.is-invalid .icon {
   color: #ff3333;
 }
-
 .br-form .field.is-valid input,
 .br-form .field.is-valid textarea {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
-          box-shadow: 0 0 0 1px #168821;
+  box-shadow: 0 0 0 1px #168821;
 }
-
 .br-form .field.is-valid input:focus,
 .br-form .field.is-valid textarea:focus {
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
-          box-shadow: 0 0 0 1px #168821;
+  box-shadow: 0 0 0 1px #168821;
   outline: none;
 }
-
 .br-form .field.is-valid .feedback {
   color: #168821;
   font-size: 13px;
@@ -584,32 +509,29 @@
   font-weight: 500;
   padding: 4px;
 }
-
 .br-form .field.is-valid .action,
 .br-form .field.is-valid .icon {
   color: #168821;
 }
-
 .br-form .actions {
   margin-bottom: 24px;
   text-align: center;
 }
-
 .br-form .actions .button.is-primary {
   background: #1351b4;
   border: 1px solid #1351b4;
   border-radius: 100px;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
+  font-family: Rawline;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   padding: 8px 24px;
   text-align: center;
   width: 100%;
-  font-size: 16px;
-  line-height: normal;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: 600;
-  font-family: Rawline;
 }
 
 @media (min-width: 576px) {
@@ -619,41 +541,41 @@
   }
 }
 
-.br-form .actions .button.is-primary:focus, .br-form .actions .button.is-primary.is-focus {
+.br-form .actions .button.is-primary:focus,
+.br-form .actions .button.is-primary.is-focus {
   -webkit-box-shadow: 0 3px 6px -3px #1351b4;
-          box-shadow: 0 3px 6px -3px #1351b4;
+  box-shadow: 0 3px 6px -3px #1351b4;
   outline: 0;
 }
-
-.br-form .actions .button.is-primary:hover, .br-form .actions .button.is-primary.is-hover {
+.br-form .actions .button.is-primary:hover,
+.br-form .actions .button.is-primary.is-hover {
   background-color: #2b74e9;
   border-color: #2b74e9;
   color: #ffffff;
   text-decoration: none;
 }
-
-.br-form .actions .button.is-primary:disabled, .br-form .actions .button.is-primary.is-disabled {
+.br-form .actions .button.is-primary:disabled,
+.br-form .actions .button.is-primary.is-disabled {
   background: #888888;
   border-color: #888888;
   color: #ffffff;
   cursor: default;
 }
-
 .br-form .actions .button.is-secondary {
   background: #ffffff;
   border: 1px solid #1351b4;
   border-radius: 100px;
+  color: #1351b4;
   cursor: pointer;
   display: inline-block;
+  font-family: Rawline;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   padding: 8px 24px;
   text-align: center;
   width: 100%;
-  font-size: 16px;
-  line-height: normal;
-  color: #1351b4;
-  font-style: normal;
-  font-weight: 500;
-  font-family: Rawline;
 }
 
 @media (min-width: 576px) {
@@ -663,96 +585,78 @@
   }
 }
 
-.br-form .actions .button.is-secondary:focus, .br-form .actions .button.is-secondary.is-focus {
+.br-form .actions .button.is-secondary:focus,
+.br-form .actions .button.is-secondary.is-focus {
   -webkit-box-shadow: 0 3px 6px -3px #1351b4;
-          box-shadow: 0 3px 6px -3px #1351b4;
+  box-shadow: 0 3px 6px -3px #1351b4;
   outline: 0;
 }
-
-.br-form .actions .button.is-secondary:hover, .br-form .actions .button.is-secondary.is-hover {
+.br-form .actions .button.is-secondary:hover,
+.br-form .actions .button.is-secondary.is-hover {
   background-color: #2b74e9;
   border-color: #2b74e9;
   color: #ffffff;
   text-decoration: none;
 }
-
-.br-form .actions .button.is-secondary:disabled, .br-form .actions .button.is-secondary.is-disabled {
+.br-form .actions .button.is-secondary:disabled,
+.br-form .actions .button.is-secondary.is-disabled {
   background: #888888;
   border-color: #888888;
   color: #ffffff;
   cursor: default;
 }
-
 .br-form .actions .button.is-tertiary {
   background: transparent;
   border: 0;
   color: #1351b4;
   cursor: pointer;
   padding: 0;
-  font-size: 16px;
-  line-height: 24px;
-  color: #1351b4;
-  text-decoration: underline;
-  font-style: normal;
-  font-weight: 500;
-  font-family: Rawline;
 }
-
-.br-form .actions .button.is-tertiary:focus, .br-form .actions .button.is-tertiary.is-focus {
+.br-form .actions .button.is-tertiary:focus,
+.br-form .actions .button.is-tertiary.is-focus {
   outline: 0;
   text-shadow: 0 3px 6px currentColor;
 }
-
-.br-form .actions .button.is-tertiary:hover, .br-form .actions .button.is-tertiary.is-hover {
+.br-form .actions .button.is-tertiary:hover,
+.br-form .actions .button.is-tertiary.is-hover {
   color: #2b74e9;
   text-decoration: underline;
 }
-
-.br-form .actions .button.is-tertiary:disabled, .br-form .actions .button.is-tertiary.is-disabled {
+.br-form .actions .button.is-tertiary:disabled,
+.br-form .actions .button.is-tertiary.is-disabled {
   color: #888888;
   cursor: default;
 }
-
 .br-form .actions .button.is-cancel {
   background: transparent;
   border: 0;
   color: #555555;
   cursor: pointer;
   padding: 0;
-  font-size: 16px;
-  line-height: 24px;
-  color: #1351b4;
-  text-decoration: underline;
-  font-style: normal;
-  font-weight: 500;
-  font-family: Rawline;
-  color: #555555;
 }
-
-.br-form .actions .button.is-cancel:focus, .br-form .actions .button.is-cancel.is-focus {
+.br-form .actions .button.is-cancel:focus,
+.br-form .actions .button.is-cancel.is-focus {
   outline: 0;
   text-shadow: 0 3px 6px currentColor;
 }
-
-.br-form .actions .button.is-cancel:hover, .br-form .actions .button.is-cancel.is-hover {
+.br-form .actions .button.is-cancel:hover,
+.br-form .actions .button.is-cancel.is-hover {
   color: #2b74e9;
   text-decoration: underline;
 }
-
-.br-form .actions .button.is-cancel:disabled, .br-form .actions .button.is-cancel.is-disabled {
+.br-form .actions .button.is-cancel:disabled,
+.br-form .actions .button.is-cancel.is-disabled {
   color: #888888;
   cursor: default;
 }
-
 .br-form .actions .button.is-loading {
   color: transparent !important;
   pointer-events: none;
   position: relative;
 }
-
 .br-form .actions .button.is-loading::after {
   -webkit-animation: spinAround 500ms infinite linear;
-          animation: spinAround 500ms infinite linear;
+  animation: spinAround 500ms infinite linear;
   border: 2px solid currentColor;
   border-radius: 50%;
   border-right-color: transparent;
@@ -765,15 +669,13 @@
   top: calc(50% - (1em / 2));
   width: 1em;
 }
-
-.br-form .actions .button.is-loading.is-primary::after, .br-form .actions .button.is-loading.is-call-to-action::after {
+.br-form .actions .button.is-loading.is-primary::after,
+.br-form .actions .button.is-loading.is-call-to-action::after {
   border-color: transparent transparent #ffffff #ffffff !important;
 }
-
 .br-form .actions .button.is-loading.is-secondary::after {
   border-color: transparent transparent #1351b4 #1351b4 !important;
 }
-
 .br-form .actions .button + .button {
   margin-top: 16px;
 }
@@ -787,19 +689,19 @@
 
 @media (min-width: 576px) {
   .br-form .actions {
+    align-items: baseline;
     -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: end;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-align: baseline;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
   .br-form .actions .button + .button,
   .br-form .actions .br-button + .br-button {
@@ -807,4 +709,5 @@
     margin-right: 24px;
   }
 }
+
 /*# sourceMappingURL=form.css.map */

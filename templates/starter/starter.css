@@ -3,13 +3,11 @@
   position: absolute;
   width: 100%;
 }
-
 .skip-menu a {
   color: #ffffff;
   position: absolute;
   top: -200em;
 }
-
 .skip-menu a:focus {
   background: #268744;
   border-radius: 100px;
@@ -21,6 +19,7 @@
   z-index: 11;
 }
 
+
 @media (min-width: 576px) {
   .page-background {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #f8f8f8), color-stop(50%, #ffffff));
@@ -28,33 +27,30 @@
   }
 }
 
+
 .accessibility {
+  -webkit-box-pack: end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-
 .accessibility a {
   color: #333333;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
 }
-
 .accessibility a:not(:last-child) {
   margin-right: 16px;
 }
-
 .accessibility a:hover {
   text-decoration: none;
 }
-
 .accessibility a:hover .accessibility-text {
   text-decoration: underline;
 }
@@ -65,47 +61,48 @@
   }
 }
 
+
 .logo {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .logo-image {
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .nav-description,
 .page-description {
-  font-size: 16px;
-  line-height: 28px;
-  text-align: right;
   color: #555555;
+  font-family: Rawline;
+  font-size: 16px;
   font-style: italic;
   font-weight: 400;
-  font-family: Rawline;
+  line-height: 28px;
+  text-align: right;
 }
-
 .page-description {
   text-align: left;
 }
 
 .content-title {
-  font-size: 32px;
-  line-height: 36px;
   color: #1351b4;
+  font-family: Rawline;
+  font-size: 32px;
   font-style: normal;
   font-weight: 500;
-  font-family: Rawline;
+  line-height: 36px;
 }
 
 .page-content {
-  font-size: 16px;
-  line-height: 28px;
   color: #555555;
+  font-family: Rawline;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  font-family: Rawline;
+  line-height: 28px;
 }
+
 /*# sourceMappingURL=starter.css.map */

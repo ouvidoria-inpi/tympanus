@@ -2,8 +2,6 @@
 // - Como o modelo serve para os 2 tipos de input é necessário informar o tipo
 // via argumento
 @mixin check($type, $side: left) {
-  display: inline-block;
-  position: relative;
   input {
     &[type="#{$type}"] {
       @include check-label($side);
@@ -55,9 +53,10 @@
 // - A cor pode ser modificada via argumento
 @mixin check-label($side, $color: $color-gray-6) {
   & + label {
-    @include font-system-default-text;
+    color: $font-system-default-text-color;
     cursor: pointer;
-    line-height: 1.5;
+    font-size: $font-system-default-text-font-size;
+    font-weight: $font-system-default-text-font-weight;
     @if ($side == left) {
       padding: 0 0 0 ($check-size + $spacing-1);
     }

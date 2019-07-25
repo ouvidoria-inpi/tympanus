@@ -5,16 +5,41 @@
   "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "watch-scss": "node-sass --watch -rw ./* -o ./*",
-    "build-scss": "node-sass -r components -o components",
+    "css": "npm-run-all css-compile css-prefix css-minify",
+    "css-compile": "npm-run-all --parallel css-compile-*",
+    "css-compile-assets": "node-sass --output-style expanded -r assets -o assets",
+    "css-compile-components": "node-sass --output-style expanded -r components -o components",
+    "css-compile-templates": "node-sass --output-style expanded -r templates -o templates",
+    "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output assets/styles/dsgov-components.min.css assets/styles/dsgov-components.css",
+    "css-prefix": "npm-run-all --parallel css-prefix-*",
+    "css-prefix-assets": "postcss -r \"assets/styles/*.css\" \"!assets/styles/*.min.css\" -m",
+    "css-prefix-components": "postcss -r \"components/**/*.css\" \"!components/**/*.min.css\" -m",
+    "css-prefix-templates": "postcss -r \"templates/**/*.css\" \"!templates/**/*.min.css\" -m",
+    "start": "npm-run-all watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "validate:html": "node_modules/.bin/html-validate components/**/*.html"
+    "validate:html": "node_modules/.bin/html-validate components/**/*.html",
+    "validate:sass": "node_modules/.bin/sass-lint -c .sass-lint.yml -v -q",
+    "watch": "npm-run-all --parallel watch-*",
+    "watch-css-assets": "nodemon --watch assets/ --ext scss --exec \"npm run css-compile-assets && npm run css-prefix-assets\"",
+    "watch-css-components": "nodemon --watch components/ --ext scss --exec \"npm run css-compile-components && npm run css-prefix-components && npm run css-compile-assets && npm run css-prefix-assets",
+    "watch-css-templates": "nodemon --watch templates/ --ext scss --exec \"npm run css-compile-templates && npm run css-prefix-templates"
   },
   "author": "",
+  "browserslist": [
+    "last 2 version",
+    "> 5% in BR"
+  ],
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "clean-css-cli": "^4.3.0",
     "html-validate": "^1.1.0",
     "node-sass": "^4.12.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-between": "^1.0.2",
+    "postcss-cli": "^6.1.3",
+    "postcss-sorting": "^5.0.1",
+    "sass-lint": "^1.13.1"
   }
 }

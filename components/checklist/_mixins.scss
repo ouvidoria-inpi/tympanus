@@ -10,8 +10,9 @@
     margin-bottom: 0;
     .input {
       label {
-        @include font-system-default-text;
-        line-height: 1.5;
+        color: $font-system-default-text-color;
+        font-size: $font-system-default-text-font-size;
+        font-weight: $font-system-default-text-font-weight;
       }
     }
   }

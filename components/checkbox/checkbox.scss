@@ -13,4 +13,6 @@
 .#{$prefix}check {
   @include check(checkbox);
   @include check(radio);
+  display: inline-block;
+  position: relative;
 }

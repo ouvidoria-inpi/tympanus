@@ -46,12 +46,13 @@
 }
 
 @mixin input {
-  @include font-system-default-text;
   background: $input-bg;
   border: $input-border-width $input-border-style $input-border-color;
   border-radius: $input-radius;
+  color: $font-system-default-text-color;
   display: block;
-  line-height: 1.5;
+  font-size: $font-system-default-text-font-size;
+  font-weight: $font-system-default-text-font-weight;
   padding: $input-padding;
   width: 100%;
 }
