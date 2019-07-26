@@ -1,27 +1,290 @@
 {
-    "components": [
-        { "name": "accordeon", "label": "Acordeão" },
-        { "name": "button", "label": "Botão" },
-        { "name": "button-social", "label": "Botão Social" },
-        { "name": "check-list", "label": "Check-list" },
-        { "name": "checkbox", "label": "Checkbox" },
-        { "name": "form", "label": "Formulário" },
-        { "name": "input", "label": "Input" },
-        { "name": "input-action", "label": "Input-action" },
-        { "name": "pagination", "label": "Paginação" },
-        { "name": "separator", "label": "Separador" },
-        { "name": "tabs", "label": "Abas" }
-    ],
-    "wikis": {
-        "DEV": [
-            {
-                "name": "acessibilidade-no-codigo-html",
-                "label": "Acessibilidade no Código HTML"
-            },
-            { "name": "construcao-do-css", "label": "Construção do CSS" },
-            { "name": "construcao-do-html", "label": "Construção do HTML" },
-            { "name": "uso-do-wai-aria", "label": "Uso do WAI-ARIA" }
-        ],
-        "UX": [{ "name": "principios-de-design", "label": "Princípios de Design" }]
+  "Componentes": [
+    {
+      "label": "Acordeão",
+      "name": "acordeao",
+      "path": "components/accordeon/accordeon"
+    },
+    {
+      "label": "Breadcrumb",
+      "name": "breadcrumb",
+      "path": "components/breadcrumb/breadcrumb"
+    },
+    {
+      "label": "Botão",
+      "name": "button",
+      "path": "components/button/button"
+    },
+    {
+      "label": "Checkbox",
+      "name": "checkbox",
+      "path": "components/checkbox/checkbox"
+    },
+    {
+      "label": "Checklist",
+      "name": "checklist",
+      "path": "components/checklist/checklist"
+    },
+    {
+      "label": "Divider",
+      "name": "divider",
+      "path": "components/divider/divider"
+    },
+    {
+      "label": "Formulário",
+      "name": "form",
+      "path": "components/form/form"
+    },
+    {
+      "label": "Input",
+      "name": "input",
+      "path": "components/input/input"
+    },
+    {
+      "label": "Input-select",
+      "name": "input-select",
+      "path": "components/input/input-select"
+    },
+    {
+      "label": "Login-social",
+      "name": "login-social",
+      "path": "components/login-social/login-social"
+    },
+    {
+      "label": "Paginação",
+      "name": "pagination",
+      "path": "components/pagination/pagination"
+    },
+    {
+      "label": "Portlet",
+      "name": "portlet",
+      "path": "components/portlet/portlet"
+    },
+    {
+      "label": "Busca",
+      "name": "search",
+      "path": "components/search/search"
+    },
+    {
+      "label": "Tabela",
+      "name": "table",
+      "path": "components/table/table"
+    },
+    {
+      "label": "Abas",
+      "name": "tabs",
+      "path": "components/tabs/tabs"
     }
+  ],
+  "Documentação": [
+    {
+      "label": "Desenvolvimento",
+      "name": "Desenvolvimento",
+      "children": [
+        {
+          "label": "Acessibilidade no Código HTML",
+          "name": "acessibilidade-no-codigo-htm",
+          "path": "docs/documentacao/acessibilidade-no-codigo-html"
+        },
+        {
+          "label": "Construção do CSS",
+          "name": "construcao-do-css",
+          "path": "docs/documentacao/construcao-do-css"
+        },
+        {
+          "label": "Construção do HTML",
+          "name": "construcao-do-html",
+          "path": "docs/documentacao/construcao-do-html"
+        },
+        {
+          "label": "Uso do WAI-ARIA",
+          "name": "uso-do-wai-aria",
+          "path": "docs/documentacao/uso-do-wai-aria"
+        }
+      ]
+    },
+    {
+      "label": "UX",
+      "name": "UX",
+      "children": [
+        {
+          "label": "Princípios de Design",
+          "name": "principios-de-design",
+          "path": "docs/documentacao/principios-de-design"
+        }
+      ]
+    }
+  ],
+  "Sobre": [
+    {
+      "label": "O Design System (objetivos e vantagens)",
+      "name": "ds",
+      "path": "docs/sobre/ds"
+    },
+    {
+      "label": "Princípios",
+      "name": "principios",
+      "path": "docs/sobre/principios"
+    },
+    {
+      "label": "Linguagem Cidadã",
+      "name": "Linguagem Cidadã",
+      "children": [
+        {
+          "label": "Labels botões documentos títulos",
+          "name": "lbdt",
+          "path": "docs/sobre/lbdt"
+        },
+        {
+          "label": "Guia Editorial",
+          "name": "guiaeditorial",
+          "path": "docs/sobre/guiaeditorial"
+        }
+      ]
+    },
+    {
+      "label": "Comunidade",
+      "name": "Comunidade",
+      "children": [
+        {
+          "label": "Contato/Suporte",
+          "name": "contato",
+          "path": "docs/sobre/contato"
+        },
+        {
+          "label": "Contribuição",
+          "name": "contribuicao",
+          "path": "docs/sobre/contribuicao"
+        }
+      ]
+    },
+    {
+      "label": "Diretrizes",
+      "name": "Diretrizes",
+      "children": [
+        {
+          "label": "E-mag",
+          "name": "emag",
+          "path": "docs/sobre/emag"
+        },
+        {
+          "label": "IDG",
+          "name": "idg",
+          "path": "docs/sobre/idg"
+        }
+      ]
+    },
+    {
+      "label": "Roadmap",
+      "name": "roadmap",
+      "path": "docs/sobre/roadmap"
+    }
+  ],
+  "Estilos": [
+    {
+      "label": "Cores",
+      "name": "cores",
+      "path": "docs/estilos/cores"
+    },
+    {
+      "label": "Tipografia",
+      "name": "tipografia",
+      "path": "docs/estilos/tipografia"
+    },
+    {
+      "label": "Ícones",
+      "name": "icones",
+      "path": "docs/estilos/icones"
+    },
+    {
+      "label": "Grid",
+      "name": "grid",
+      "path": "docs/estilos/grid"
+    }
+  ],
+  "Padrões": [
+    {
+      "label": "Autenticação",
+      "name": "autenticacao",
+      "path": "docs/padroes/autenticacao"
+    },
+    {
+      "label": "Criação de conta",
+      "name": "criacao",
+      "path": "docs/padroes/criacao"
+    },
+    {
+      "label": "Contato",
+      "name": "contato",
+      "path": "docs/padroes/contato"
+    },
+    {
+      "label": "Busca",
+      "name": "busca",
+      "path": "docs/padroes/busca"
+    },
+    {
+      "label": "Pagamento",
+      "name": "pagamento",
+      "path": "docs/estilos/pagamento"
+    },
+    {
+      "label": "Avaliação",
+      "name": "avaliacao",
+      "path": "docs/estilos/avaliacao"
+    }
+  ],
+  "Templates": [
+    {
+      "label": "Login",
+      "name": "login",
+      "templateUrl": "templates/login/login"
+    },
+    {
+      "label": "Landing Page",
+      "name": "page",
+      "templateUrl": "templates/page/page"
+    },
+    {
+      "label": "Resultado de Busca",
+      "name": "search",
+      "templateUrl": "templates/search/search"
+    },
+    {
+      "label": "Sigin",
+      "name": "Sigin",
+      "flavors": [
+        {
+          "label": "Signin",
+          "name": "signin",
+          "templateUrl": "templates/signin/signin"
+        },
+        {
+          "label": "Signin-1",
+          "name": "signin-1",
+          "templateUrl": "templates/signin/signin-1"
+        },
+        {
+          "label": "Signin-2",
+          "name": "signin-2",
+          "templateUrl": "templates/signin/signin-2"
+        },
+        {
+          "label": "Signin-3",
+          "name": "signin-3",
+          "templateUrl": "templates/signin/signin-3"
+        },
+        {
+          "label": "Signin-4",
+          "name": "signin-4",
+          "templateUrl": "templates/signin/signin-4"
+        }
+      ]
+    },
+    {
+      "label": "Starter",
+      "name": "starter",
+      "templateUrl": "templates/starter/starter"
+    }
+  ]
 }
