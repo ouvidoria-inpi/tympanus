@@ -1,0 +1,105 @@
+@mixin select {
+  position: relative;
+  select {
+    display: none;
+  }
+  // Box select
+  .select-selected {
+    @include input;
+    @include arrow;
+    @include input-states;
+    position: relative;
+    text-align-last: left;
+    &:focus {
+      @include arrow($color-primary-lighten-15);
+    }
+  }
+  // Lista de opções
+  .select-items {
+    @include select-list;
+  }
+  // Estados com prefixo
+  @include select-states;
+  // Esconder elemento
+  .select-hide {
+    display: none;
+  }
+  // Texto de ajuda  
+  & + .help,
+  & + .feedback + .help {
+    @include font-suport-text-for-input;
+  }
+}
+
+@mixin arrow($color: $color-primary) {
+  &::after {
+    color: $color ;
+    content: "\f078";
+    font-family: Fontawesome;
+    position: absolute;
+    right: $spacing-3;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin select-list {
+  background: $color-white;
+  box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
+  left: $spacing-half;
+  position: absolute;
+  right: $spacing-half;
+  z-index: 1;
+  button {
+    background: $color-white;
+    border: 0;
+    display: block;
+    font-weight: 500;
+    padding: $spacing-half $spacing-3;
+    text-align: left;
+    width: 100%;
+    &:hover,
+    &:focus {
+      background: $color-primary-pastel;
+    }
+    &.same-as-selected {
+      background: $color-primary-lighten-15;
+      color: $color-white;
+    }
+  }
+}
+
+@mixin select-states {
+  &.is-focus {
+    .select-selected {
+      @include input-focus($color-primary-lighten-15);
+      @include arrow($color-primary-lighten-15);
+    }
+  }
+  &.is-disabled {
+    .select-selected {
+      @include arrow($color-gray-5);
+      background: $color-gray-2;
+    }
+  }
+  &.is-invalid {
+    .select-selected {
+      @include arrow($color-danger);
+      border-color: $color-danger;
+      box-shadow: 0 0 0 1px $color-danger;
+    }
+    & + .feedback {
+      @include feedback($color-danger);
+    }
+  }
+  &.is-valid {
+    .select-selected {
+      @include arrow($color-success);
+      border-color: $color-success;
+      box-shadow: 0 0 0 1px $color-success;
+    }
+    & + .feedback {
+      @include feedback($color-success);
+    }
+  }
+}

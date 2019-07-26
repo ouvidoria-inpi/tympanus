@@ -1,0 +1,175 @@
+/*!
+ * input - 0.1.0 */
+.br-select {
+  position: relative;
+}
+.br-select select {
+  display: none;
+}
+.br-select .select-selected {
+  background: #ffffff;
+  border: 1px solid #888888;
+  border-radius: 6px;
+  color: #555555;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px 16px;
+  position: relative;
+  -moz-text-align-last: left;
+  text-align-last: left;
+  width: 100%;
+}
+.br-select .select-selected::after {
+  color: #1351b4;
+  content: "\f078";
+  font-family: Fontawesome;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.br-select .select-selected:focus {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+  box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
+}
+.br-select .select-selected:invalid {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
+}
+.br-select .select-selected:invalid:focus {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
+  outline: none;
+}
+.br-select .select-selected:disabled {
+  background: #ededed;
+}
+.br-select .select-selected:focus::after {
+  color: #2b74e9;
+  content: "\f078";
+  font-family: Fontawesome;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.br-select .select-items {
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+  left: 4px;
+  position: absolute;
+  right: 4px;
+  z-index: 1;
+}
+.br-select .select-items button {
+  background: #ffffff;
+  border: 0;
+  display: block;
+  font-weight: 500;
+  padding: 4px 16px;
+  text-align: left;
+  width: 100%;
+}
+.br-select .select-items button:hover,
+.br-select .select-items button:focus {
+  background: #dbe8fb;
+}
+.br-select .select-items button.same-as-selected {
+  background: #2b74e9;
+  color: #ffffff;
+}
+.br-select.is-focus .select-selected {
+  border-color: #2b74e9;
+  -webkit-box-shadow: 0 0 0 1px #2b74e9;
+  box-shadow: 0 0 0 1px #2b74e9;
+  outline: none;
+}
+.br-select.is-focus .select-selected::after {
+  color: #2b74e9;
+  content: "\f078";
+  font-family: Fontawesome;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.br-select.is-disabled .select-selected {
+  background: #ededed;
+}
+.br-select.is-disabled .select-selected::after {
+  color: #888888;
+  content: "\f078";
+  font-family: Fontawesome;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.br-select.is-invalid .select-selected {
+  border-color: #ff3333;
+  -webkit-box-shadow: 0 0 0 1px #ff3333;
+  box-shadow: 0 0 0 1px #ff3333;
+}
+.br-select.is-invalid .select-selected::after {
+  color: #ff3333;
+  content: "\f078";
+  font-family: Fontawesome;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.br-select.is-invalid + .feedback {
+  color: #ff3333;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+.br-select.is-valid .select-selected {
+  border-color: #168821;
+  -webkit-box-shadow: 0 0 0 1px #168821;
+  box-shadow: 0 0 0 1px #168821;
+}
+.br-select.is-valid .select-selected::after {
+  color: #168821;
+  content: "\f078";
+  font-family: Fontawesome;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.br-select.is-valid + .feedback {
+  color: #168821;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
+}
+.br-select .select-hide {
+  display: none;
+}
+.br-select + .help,
+.br-select + .feedback + .help {
+  color: #333333;
+  font-family: Rawline;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=select.css.map */

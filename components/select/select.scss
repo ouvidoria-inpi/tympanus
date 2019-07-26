@@ -1,0 +1,16 @@
+// Carregar variáveis do DS-Gov
+@import "../../estilos/scss/dsgov-base";
+
+/*!
+ * input - 0.1.0 */
+
+// Carregar dependências
+@import "../input/configs";
+@import "../input/mixins";
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+.#{$prefix}select {
+  @include select;
+}
