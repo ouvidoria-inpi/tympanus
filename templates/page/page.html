@@ -30,7 +30,7 @@
   <!-- Cabeçalho da página -->
   <header id="header" class="page-header">
     <!-- Versão desktop -->
-    <div class="d-none d-sm-block">
+    <div class="desktop-header d-none d-sm-block">
       <!-- Logo com busca e acessibilidade -->
       <div class="bg-gray-2">
         <div class="container">
@@ -804,57 +804,50 @@
       </div>
     </div>
     <!-- Versão mobile -->
-    <!-- Barra navegação -->
-    <div class="color-gray-1">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="sidemenu-trigger"></div>
-          </div>
-          <div class="col">
-            <!-- Acessibilidade -->
-            <div class="accessibility">
-              <a id="contrast" href="#" accesskey="6">
-                <span class="accessibility-icon">
-                  <i class="fas fa-adjust fa-lg"></i>
-                </span>
-                <span class="accessibility-text d-none d-sm-inline">
-                  <span class="">Alto Contraste</span>
-                </span>
-              </a>
-              <a id="vlibras" href="http://www.vlibras.gov.br/">
-                <span class="accessibility-icon">
-                  <i class="fas fa-assistive-listening-systems fa-lg"></i>
-                </span>
-                <span class="accessibility-text d-none d-sm-inline">
-                  <span class="">VLibras</span>
-                </span>
-              </a>
+    <div class="mobile-header d-sm-none">
+      <!-- Barra navegação -->
+      <div class="color-gray-1">
+        <div class="container">
+          <div class="row mobile-subheader justify-content-end align-items-center">
+            <div class="col-auto mr-auto">
+              <!-- Abre o sidemenu -->
+              <button type="button" class="sidemenu-trigger">
+                <i class="fas fa-bars"></i>
+              </button>
             </div>
-            <!-- Busca geral -->
-            <div class="col br-search py-half">
-              <div class="br-input">
-                <label for="search" class="sr-only">Autocomplete</label>
-                <input id="search" type="text" placeholder="O que você procura?">
-              </div>
-              <div class="action">
-                <button class="br-button is-primary is-circle" type="button">
-                  <i class="fas fa-search"></i>
+            <div class="col-auto">
+              <!-- Acessibilidade -->
+              <div class="accessibility">
+                <button class="br-button is-secondary is-circle" type="button">
+                  <i class="fas fa-adjust"></i>
                 </button>
                 <button class="br-button is-secondary is-circle" type="button">
-                  <i class="fas fa-times"></i>
+                  <i class="fas fa-assistive-listening-systems"></i>
+                </button>
+                <button class="br-button is-primary is-circle" type="button">
+                  <i class="fas fa-search fa-lg"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Canvas com opacidade -->
-    <div class="canvas d-none"></div>
-    <!-- Menu -->
-    <div class="d-none">
-      <div class="sidemenu">
+      <!-- Busca mobile -->
+      <div class="br-search d-none">
+        <div class="br-input">
+          <label for="search" class="sr-only">Autocomplete</label>
+          <input id="search" type="text" placeholder="O que você procura?">
+        </div>
+        <div class="action">
+          <button class="br-button is-primary is-circle" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Canvas com opacidade -->
+      <div class="canvas d-none"></div>
+      <!-- Menu -->
+      <div class="sidemenu d-none">
         <div class="container-fluid wrapper">
           <!-- Nome do sistema e avatar -->
           <div class="row align-items-center">

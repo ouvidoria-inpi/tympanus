@@ -80,11 +80,34 @@
       max-width: 16px;
     }
   }
+  .mobile-header & {
+    .br-button {
+      border-color: transparent;
+      &:focus {
+        box-shadow: none;
+      }
+      &.is-primary {
+        background: transparent;
+        color: $color-primary;
+      }
+      &.is-secondary {
+        color: $color-gray-6;
+        &:hover {
+          background: transparent;
+        }
+      }
+      & + .br-button {
+        margin-left: $spacing-2;
+        margin-top: 0;
+      }
+    }
+  }
 }
 
-.page-header {
-  // Busca
-  .br-search {
+// Busca
+.br-search {
+  // Versão desktop
+  .desktop-header & {
     align-items: center;
     display: flex;
     .br-input {
@@ -104,6 +127,9 @@
       }
     }
     .br-button {
+      &:focus {
+        box-shadow: none;
+      }
       &.is-primary {
         &,
         &:hover {
@@ -128,6 +154,23 @@
       }
     }
   }
+  // Versão mobile
+  .mobile-header & {
+    flex-direction: column;
+    .br-input {
+      order: 1;
+      width: 100%;
+      input {
+        border-radius: 0;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.page-header {
   // Abas
   .br-tabs {
     border: 0;
@@ -372,6 +415,12 @@
   width: 100vw;
 }
 
+// Barra de navegação mobile
+.mobile-subheader {
+  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+  height: 56px;
+}
+
 // Versão mobile do menu
 .sidemenu {
   background: $color-white;
@@ -381,6 +430,11 @@
   position: fixed;
   top: 0;
   width: 84%;
+  // Botão que abre o menu
+  &-trigger {
+    background: transparent;
+    border: 0;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
