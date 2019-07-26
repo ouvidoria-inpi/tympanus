@@ -24,6 +24,8 @@
   .select-hide {
     display: none;
   }
+  // Tamanhos
+  @include select-sizes;
   // Texto de ajuda  
   & + .help,
   & + .feedback + .help {
@@ -100,6 +102,21 @@
     }
     & + .feedback {
       @include feedback($color-success);
+    }
+  }
+}
+
+@mixin select-sizes {
+  &.is-medium {
+    .select-selected {
+      padding-bottom: $spacing-half;
+      padding-top: $spacing-half;
+    }
+  }
+  &.is-small {
+    .select-selected {
+      padding-bottom: 0;
+      padding-top: 0;
     }
   }
 }
