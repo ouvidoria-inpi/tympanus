@@ -364,7 +364,7 @@
 
 // Canvas
 .canvas {
-  background: rgba($color-black, 0.49);
+  background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
   height: 100vh;
   left: 0;
   position: fixed;

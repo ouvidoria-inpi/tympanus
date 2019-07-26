@@ -51,8 +51,8 @@
       align-items: center;
       display: flex;
       flex-direction: column;
-      text-decoration: none;
       padding: ($tab-item-padding * 0.5) ($tab-item-padding ) $tab-item-padding;
+      text-decoration: none;
       &:hover {
         background: $color-primary-pastel;
       }
