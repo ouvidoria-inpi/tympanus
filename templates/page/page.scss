@@ -537,8 +537,3 @@
 .content-title {
   @include font-title-registration-login;
 }
-
-.page-content {
-  // Texto padrão
-  @include font-system-default-text;
-}
