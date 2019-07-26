@@ -1,23 +1,23 @@
 # Esta documentação está organizada no seguinte formato
 
-1. [Pré-processador de CSS](#pr%C3%A9-processador-de-css)
-1. [Sass](#sass)
-1. [Criar uma biblioteca de mixins utilitários para reaproveitamento de código](#criar-uma-biblioteca-de-mixins-utilit%C3%A1rios-para-reaproveitamento-de-c%C3%B3digo)
-1. [Mudar a cor do texto de acordo com a cor de fundo de um elemento](#mudar-a-cor-do-texto-de-acordo-com-a-cor-de-fundo-de-um-elemento)
-1. [Uso avançado de Maps](#uso-avan%C3%A7ado-de-maps)
-1. [Less](#less)
-1. [Reset CSS](#reset-css)
-1. [Arquitetura](#arquitetura)
-1. [Comentários](#coment%C3%A1rios)
-1. [Media Queries](#media-queries)
-1. [Linters](#linters)
-1. [Linters online](#linters-online)
-1. [Linters para configurar em projetos](#linters-para-configurar-em-projetos)
-1. [Organização dos arquivos](#organiza%C3%A7%C3%A3o-dos-arquivos)
-1. [Formatação e sintaxe](#formata%C3%A7%C3%A3o-e-sintaxe)
-1. [Regra geral](#regra-geral)
-1. [Pré-processadores](#pr%C3%A9-processadores)
-1. [Links interessantes](#links-interessantes)
+1. Pré-processador de CSS
+1. Sass
+1. Criar uma biblioteca de mixins utilitários para reaproveitamento de código
+1. Mudar a cor do texto de acordo com a cor de fundo de um elemento
+1. Uso avançado de Maps
+1. Less
+1. Reset CSS
+1. Arquitetura
+1. Comentários
+1. Media Queries
+1. Linters
+1. Linters online
+1. Linters para configurar em projetos
+1. Organização dos arquivos
+1. Formatação e sintaxe
+1. Regra geral
+1. Pré-processadores
+1. Links interessantes
 
 ## Pré-processador de CSS
 
