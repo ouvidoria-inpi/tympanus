@@ -170,9 +170,9 @@
   }
 }
 
-.page-header {
-  // Abas
-  .br-tabs {
+// Abas
+.br-tabs {
+  .desktop-header & {
     border: 0;
     .item {
       &:first-child {
@@ -180,10 +180,11 @@
       }
     }
   }
-  // Sombra
-  .shadow-bottom {
-    box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
-  }
+}
+
+// Sombra
+.shadow-bottom {
+  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
 }
 
 .page-subheader {
@@ -417,7 +418,6 @@
 
 // Barra de navegação mobile
 .mobile-subheader {
-  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
   height: 56px;
 }
 
@@ -531,4 +531,14 @@
     font-size: 12px;
     font-weight: 500;
   }
+}
+
+// Título da página
+.content-title {
+  @include font-title-registration-login;
+}
+
+.page-content {
+  // Texto padrão
+  @include font-system-default-text;
 }

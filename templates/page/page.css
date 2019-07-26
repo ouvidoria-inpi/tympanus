@@ -182,14 +182,14 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-
-.page-header .br-tabs {
+.desktop-header .br-tabs {
   border: 0;
 }
-.page-header .br-tabs .item:first-child {
+.desktop-header .br-tabs .item:first-child {
   margin-left: 0;
 }
-.page-header .shadow-bottom {
+
+.shadow-bottom {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
@@ -428,8 +428,6 @@
 }
 
 .mobile-subheader {
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   height: 56px;
 }
 
@@ -544,6 +542,24 @@
 .timeout .timer {
   font-size: 12px;
   font-weight: 500;
+}
+
+.content-title {
+  color: #1351b4;
+  font-family: Rawline;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.page-content {
+  color: #555555;
+  font-family: Rawline;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
 }
 
 /*# sourceMappingURL=page.css.map */

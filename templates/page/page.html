@@ -30,7 +30,7 @@
   <!-- Cabeçalho da página -->
   <header id="header" class="page-header">
     <!-- Versão desktop -->
-    <div class="desktop-header d-none d-sm-block">
+    <div class="desktop-header d-none d-md-block">
       <!-- Logo com busca e acessibilidade -->
       <div class="bg-gray-2">
         <div class="container">
@@ -804,9 +804,9 @@
       </div>
     </div>
     <!-- Versão mobile -->
-    <div class="mobile-header d-sm-none">
+    <div class="mobile-header d-md-none">
       <!-- Barra navegação -->
-      <div class="color-gray-1">
+      <div class="color-gray-1 shadow-bottom">
         <div class="container">
           <div class="row mobile-subheader justify-content-end align-items-center">
             <div class="col-auto mr-auto">
@@ -980,19 +980,21 @@
     </div>
   </header>
   <!-- Conteúdo principal -->
-  <main id="content" class="page-content">
-    <!-- Cabeçalho do conteúdo principal -->
-    <header class="content-header pb-5 pb-sm-8 pt-3">
-      <h1 class="content-title">Título da página</h1>
-    </header>
-    <section>
-      Conteúdo principal
-    </section>
-    <!-- Navegação adicional para celular -->
-    <nav class="content-navigation"></nav>
-    <!-- Conteúdo acessório -->
-    <aside class="content-aside"></aside>
-  </main>
+  <div class="container my-6">
+    <main id="content" class="page-content">
+      <!-- Cabeçalho do conteúdo principal -->
+      <header class="content-header pb-5 pb-sm-8 pt-3">
+        <h1 class="content-title">Título da página</h1>
+      </header>
+      <section>
+        Conteúdo principal
+      </section>
+      <!-- Navegação adicional para celular -->
+      <nav class="content-navigation"></nav>
+      <!-- Conteúdo acessório -->
+      <aside class="content-aside"></aside>
+    </main>
+  </div>
   <!-- Rodapé de governo -->
   <div id="footer-brasil" class="page-footer mt-5 mt-sm-0"></div>
   <!-- Script da barra de governo -->
