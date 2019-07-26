@@ -1,0 +1,33 @@
+
+
+## O Design System
+
+O Design System do Governo Federal do Brasil
+
+### Template Básico
+
+Porquê unificar a experiência dos cidadãos brasileiros quando estão em contato com o governo brasileiro por meio digital?
+
+ O sentimento comum era da necessidade de uma visão singular do cidadão em relação aos produtos e serviços que o governo lhe disponibiliza ou solicita.
+ 
+O cenário era garantir esta visão singular de uma experiência única que não exija do cidadão aprender a se relacionar com o governo em cada contato.
+
+Diante desta visão, iniciamos a construção de um Design System que se propõe facilitar que todos que se envolvam na construção destes produtos alcancem este objetivo.
+
+---
+### Afinal, o que é Design System?
+
+> *"Um Design System não é um projeto, é um produto que serve produtos"*
+ Nathan Curtis
+``
+
+Este é um documento vivo com diversos componentes e propriedades de um produto ou serviço para facilitar a comunicação com os diversos times.
+
+Isso beneficia tanto o resultado que se almeja alcançar com o software como a comunicação, as pessoas, os negócios e as empresas.
+
+A ideia é que esse produto seja utilizado para consulta, para se tomar decisões, para novas features,novas interfaces e novas propriedades dos produtos do governo.
+
+
+### GitLab Orange Heading
+{: .gitlab-orange}
+
