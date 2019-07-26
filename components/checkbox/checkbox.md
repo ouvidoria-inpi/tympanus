@@ -1,6 +1,12 @@
 # Checkbox e Radio Button
 
-Veja no exemplo a seguir como usar o checkbox ou radio button do DS-Gov.
+Este componente é compatível com checkboxes e radio buttons.
+
+## Dependências
+
+Nenhuma dependência.
+
+## Código básico
 
 ```html
 <!-- checkbox -->
@@ -15,89 +21,103 @@ Veja no exemplo a seguir como usar o checkbox ou radio button do DS-Gov.
 </div>
 ```
 
+## Detalhamento
+
+Este componente é formado pelos seguintes elementos:
+
+- `br-check`: container do componente
+
 A natureza de comportamento do componente é `inline-block`. Isso significa que ao usar vários checkbox ou radio button em sequência eles ficarão lado a lado.
 
-## Alinhamento vertical
+### Alinhamento vertical
 
 Você poderá modificar o comportamento padrão do `br-check` usando as classes **Display** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/display/](https://getbootstrap.com/docs/4.3/utilities/display/). A aplicação deve ser feita diretamente no elemento. O exemplo a seguir configura os checkboxes um abaixo do outro:
 
+Exemplo de uso:
+
 ```html
-<div class="br-check d-block">
-  <input type="checkbox" id="opcao-1">
-  <label for="opcao-1">Opção 1</label>
-</div>
-<div class="br-check d-block">
-  <input type="checkbox" id="opcao-2">
-  <label for="opcao-2">Opção 2</label>
+<div class="br-check d-block">...</div>
+<div class="br-check d-block mt-1">...</div>
+```
+
+## Estados
+
+### `hover`
+
+- É aplicado automaticamente no elemento
+
+### `checked`
+
+- É aplicado automaticamente no elemento quando possuir o atributo `checked`
+
+Exemplo de uso:
+
+```html
+<div class="br-check">
+  <input ... checked>
+  <label ...>
 </div>
 ```
 
-## Espaçamentos
+### `disabled`
+
+- É aplicado automaticamente no elemento quando possuir o atributo `disabled`
+
+Exemplo de uso:
+
+```html
+<div class="br-check">
+  <input ... disabled>
+  <label ...>
+</div>
+```
+
+### `invalid` e `valid`
+
+- Deve ser aplicado no componente usando o prefixo `is-`
+
+Exemplo de uso:
+
+```html
+<div class="br-check is-invalid">...</div>
+<div class="br-check is-valid">...</div>
+```
+
+## Regras especiais
+
+### Espaçamentos
 
 O espaçamento entre vários `br-check`, seja ele horizontal ou vertical, deverá ser feito de forma manual. Recomendamos o uso do utilitário **Spacing** do Bootstrap - [https://getbootstrap.com/docs/4.3/utilities/spacing/](https://getbootstrap.com/docs/4.3/utilities/spacing/).
 
 Exemplo de espaçamento horizontal entre checkboxes:
 
 ```html
-<div class="br-check">
-  <input type="checkbox" id="opcao-1">
-  <label for="opcao-1">Opção 1</label>
-</div>
-<div class="br-check ml-3">
-  <input type="checkbox" id="opcao-2">
-  <label for="opcao-2">Opção 2</label>
-</div>
-<div class="br-check ml-3">
-  <input type="checkbox" id="opcao-3">
-  <label for="opcao-3">Opção 3</label>
-</div>
+<div class="br-check">...</div>
+<div class="br-check ml-6">...</div>
+<div class="br-check ml-6">...</div>
 ```
 
 Exemplo de espaçamento vertical entre radio buttons:
 
 ```html
-<div class="br-check d-block">
-  <input name="radio" type="radio" id="opcao-1">
-  <label for="opcao-1">Opção 1</label>
-</div>
-<div class="br-check d-block mt-3">
-  <input name="radio" type="radio" id="opcao-2">
-  <label for="opcao-2">Opção 2</label>
-</div>
-<div class="br-check d-block mt-3">
-  <input name="radio" type="radio" id="opcao-3">
-  <label for="opcao-3">Opção 3</label>
-</div>
+<div class="br-check d-block">...</div>
+<div class="br-check d-block mt-1">...</div>
+<div class="br-check d-block mt-1">...</div>
 ```
 
-## Estados
+O espaçamento horizontal para o componente na orientação vertal deve ser feito usando a grid.
 
-O componente pode assumir novos estados. A lista de estados disponíveis é a seguinte:
-
-- checked
-- hover
-- invalid
-- valid
-- disabled
-
-Os estados **hover**, **invalid** e **valid** podem ser aplicados por classe. O uso via classe deve ser usado com o prefixo `is-`. Exemplo:
+Exemplo de uso:
 
 ```html
-<div class="br-check is-valid">
-  <input type="checkbox" id="manter-valid">
-  <label for="manter-valid">Validado</label>
-</div>
-```
-
-Os estados **checked** e **disabled** são aplicados somente quando estas propriedades estão presentes no input. Exemplo:
-
-```html
-<div class="br-check">
-  <input type="checkbox" id="manter-checado" checked>
-  <label for="manter-checado">Ativado</label>
-</div>
-<div class="br-check">
-  <input type="checkbox" id="manter-desativado" disabled>
-  <label for="manter-desativado">Desativado</label>
+<div class="row">
+  <div class="col">
+    <div class="br-check d-block">...</div>
+    <div class="br-check d-block mt-1">...</div>
+  </div>
+  <div class="col">
+    <div class="br-check d-block">...</div>
+    <div class="br-check d-block mt-1">...</div>
+  </div>
 </div>
 ```

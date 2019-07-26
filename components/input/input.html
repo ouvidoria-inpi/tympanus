@@ -16,12 +16,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <p>Tipos de inputs</p>
         <div class="mb-3">
           <div class="br-input">
             <label for="simples">Normal</label>
             <input id="simples" type="text" placeholder="Insira um texto">
           </div>
+          <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
         </div>
         <div class="mb-3">
           <div class="br-input is-action">
@@ -44,32 +44,10 @@
         </div>
       </div>
       <div class="col">
-        <p>Estados disponíveis</p>
         <div class="mb-3">
           <div class="br-input is-focus">
             <label for="focus">Focus</label>
             <input id="focus" type="text" placeholder="Insira um texto">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input is-invalid">
-            <label for="invalido">Inválido</label>
-            <input id="invalido" type="text" placeholder="Insira um texto">
-          </div>
-          <div class="feedback">
-            <i class="fas fa-times-circle"></i>
-            <span class="message">Texto inválido</span>
-          </div>
-          <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
-        </div>
-        <div class="mb-3">
-          <div class="br-input is-valid">
-            <label for="valido">Válido</label>
-            <input id="valido" type="text" placeholder="Insira um texto">
-          </div>
-          <div class="feedback">
-            <i class="fas fa-check-circle"></i>
-            <span class="message">Texto válido</span>
           </div>
         </div>
         <div class="mb-3">
@@ -80,84 +58,30 @@
         </div>
       </div>
       <div class="col">
-        <p>Inputs compatíveis</p>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-text">type-text</label>
-            <input id="type-text" type="text" placeholder="Insira um texto">
+          <div class="mb-3">
+            <div class="br-input is-invalid">
+              <label for="invalido">Inválido</label>
+              <input id="invalido" type="text" placeholder="Insira um texto">
+            </div>
+            <div class="feedback">
+              <i class="fas fa-times-circle"></i>
+              <span class="message">Texto inválido</span>
+            </div>
           </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-password">type-password</label>
-            <input id="type-password" type="password" placeholder="Insira uma senha">
+          <div class="mb-3">
+            <div class="br-input is-valid">
+              <label for="valido">Válido</label>
+              <input id="valido" type="text" placeholder="Insira um texto">
+            </div>
+            <div class="feedback">
+              <i class="fas fa-check-circle"></i>
+              <span class="message">Texto válido</span>
+            </div>
           </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-date">type-date</label>
-            <input id="type-date" type="date" placeholder="Insira uma data">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-datetime-local">type-datetime-local</label>
-            <input id="type-datetime-local" type="datetime-local" placeholder="Insira uma data com hora">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-email">type-email</label>
-            <input id="type-email" type="email" placeholder="Insira um e-mail">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-month">type-month</label>
-            <input id="type-month" type="month" placeholder="Insira um mês">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-number">type-number</label>
-            <input id="type-number" type="number" placeholder="Insira um número">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-search">type-search</label>
-            <input id="type-search" type="search" placeholder="Insira uma pesquisa">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-tel">type-tel</label>
-            <input id="type-tel" type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Insira um número telefônico">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-time">type-time</label>
-            <input id="type-time" type="time" placeholder="Insira um horário">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-url">type-url</label>
-            <input id="type-url" type="url" placeholder="Insira uma url">
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="br-input">
-            <label for="type-week">type-week</label>
-            <input id="type-week" type="week" placeholder="Insira uma semana">
-          </div>
-        </div>
       </div>
     </div>
   </div>
-  <script src="input-password.js"></script>
-  <script src="input-autocomplete.js"></script>
+  <script src="input.js"></script>
   <script>
     const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
     autocomplete(document.getElementById("search-autocomplete"), countries);

@@ -2502,7 +2502,7 @@
 }
 
 /*!
- * tabs - 0.2.0 */
+ * tabs - 0.2.1 */
 .br-tabs {
   border-bottom: 1px solid #cccccc;
   display: -webkit-box;
@@ -2522,7 +2522,23 @@
   padding: 0;
   padding-right: 48px;
 }
+.br-tabs.flex-column .item a,
+.br-tabs.flex-column .item button {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 0;
+}
+.br-tabs.flex-column .item:hover {
+  background: #dbe8fb;
+}
 .br-tabs.flex-column .item.is-active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.br-tabs.flex-column .item.is-active a:hover,
+.br-tabs.flex-column .item.is-active button:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2545,35 +2561,42 @@
   display: -ms-flexbox;
   display: flex;
   margin: 0 24px;
-  padding: 16px 0;
 }
 .br-tabs .item a,
 .br-tabs .item button {
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 8px 16px 16px;
   text-decoration: none;
 }
-.br-tabs .item a:hover .icon,
-.br-tabs .item a:hover .name,
-.br-tabs .item a:hover .results,
-.br-tabs .item a:focus .icon,
-.br-tabs .item a:focus .name,
-.br-tabs .item a:focus .results,
-.br-tabs .item button:hover .icon,
-.br-tabs .item button:hover .name,
-.br-tabs .item button:hover .results,
-.br-tabs .item button:focus .icon,
-.br-tabs .item button:focus .name,
-.br-tabs .item button:focus .results {
-  color: #2b74e9;
+.br-tabs .item a:hover,
+.br-tabs .item button:hover {
+  background: #dbe8fb;
 }
 .br-tabs .item.is-active {
   -webkit-box-shadow: inset 0 -4px 0 0 #1351b4;
   box-shadow: inset 0 -4px 0 0 #1351b4;
 }
+.br-tabs .item.is-active a:hover,
+.br-tabs .item.is-active button:hover {
+  -webkit-box-shadow: inset 0 -4px 0 0 #1351b4;
+  box-shadow: inset 0 -4px 0 0 #1351b4;
+}
 .br-tabs .item.is-active .name {
   color: #071d41;
+  font-weight: 600;
 }
 .br-tabs .item.is-active .results {
   color: #1351b4;
+  font-weight: 600;
 }
 .br-tabs .icon {
   align-self: center;
@@ -2593,14 +2616,14 @@
   color: #888888;
   -ms-flex: 1;
   flex: 1;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
+  white-space: nowrap;
 }
 .br-tabs .results {
   color: #888888;
   font-size: 14px;
-  font-weight: 600;
-  margin-left: 8px;
+  font-weight: 500;
 }
 .br-tabs a,
 .br-tabs button {
