@@ -60,6 +60,16 @@
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
+.br-select .select-selected:disabled::after {
+  color: #9e9d9d;
+  content: "\f078";
+  font-family: Fontawesome;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
 .br-select .select-items {
   background: #ffffff;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
@@ -94,19 +104,6 @@
 }
 .br-select.is-focus .select-selected::after {
   color: #2b74e9;
-  content: "\f078";
-  font-family: Fontawesome;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-}
-.br-select.is-disabled .select-selected {
-  background: #ededed;
-}
-.br-select.is-disabled .select-selected::after {
-  color: #888888;
   content: "\f078";
   font-family: Fontawesome;
   position: absolute;
