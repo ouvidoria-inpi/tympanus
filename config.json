@@ -2,114 +2,93 @@
   "Componentes": [
     {
       "label": "Acordeão",
-      "name": "accordeon",
       "path": "components/accordeon/accordeon"
     },
     {
       "label": "Breadcrumb",
-      "name": "breadcrumb",
       "path": "components/breadcrumb/breadcrumb"
     },
     {
       "label": "Botão",
-      "name": "button",
       "path": "components/button/button"
     },
     {
       "label": "Checkbox",
-      "name": "checkbox",
       "path": "components/checkbox/checkbox"
     },
     {
       "label": "Checklist",
-      "name": "checklist",
       "path": "components/checklist/checklist"
     },
     {
       "label": "Divider",
-      "name": "divider",
       "path": "components/divider/divider"
     },
     {
       "label": "Formulário",
-      "name": "form",
       "path": "components/form/form"
     },
     {
       "label": "Input",
-      "name": "input",
       "path": "components/input/input"
     },
     {
-      "label": "Select",
-      "name": "select",
-      "path": "components/input/select"
+      "label": "Input-select",
+      "path": "components/input-select/input-select"
     },
+    { "label": "Select", "path": "components/select/select" },
     {
       "label": "Login-social",
-      "name": "login-social",
       "path": "components/login-social/login-social"
     },
     {
       "label": "Paginação",
-      "name": "pagination",
       "path": "components/pagination/pagination"
     },
     {
       "label": "Portlet",
-      "name": "portlet",
       "path": "components/portlet/portlet"
     },
     {
       "label": "Busca",
-      "name": "search",
       "path": "components/search/search"
     },
     {
       "label": "Tabela",
-      "name": "table",
       "path": "components/table/table"
     },
     {
       "label": "Abas",
-      "name": "tabs",
       "path": "components/tabs/tabs"
     }
   ],
   "Documentação": [
     {
       "label": "Desenvolvimento",
-      "name": "Desenvolvimento",
       "children": [
         {
           "label": "Acessibilidade no Código HTML",
-          "name": "acessibilidade-no-codigo-htm",
           "path": "docs/documentacao/acessibilidade-no-codigo-html"
         },
         {
           "label": "Construção do CSS",
-          "name": "construcao-do-css",
           "path": "docs/documentacao/construcao-do-css"
         },
         {
           "label": "Construção do HTML",
-          "name": "construcao-do-html",
           "path": "docs/documentacao/construcao-do-html"
         },
         {
           "label": "Uso do WAI-ARIA",
-          "name": "uso-do-wai-aria",
           "path": "docs/documentacao/uso-do-wai-aria"
         }
       ]
     },
     {
       "label": "UX",
-      "name": "UX",
       "children": [
         {
           "label": "Princípios de Design",
-          "name": "principios-de-design",
           "path": "docs/documentacao/principios-de-design"
         }
       ]
@@ -118,173 +97,159 @@
   "Sobre": [
     {
       "label": "O Design System (objetivos e vantagens)",
-      "name": "ds",
       "path": "docs/sobre/ds"
     },
     {
       "label": "Princípios",
-      "name": "principios",
       "path": "docs/sobre/principios"
     },
     {
       "label": "Linguagem Cidadã",
-      "name": "Linguagem Cidadã",
       "children": [
         {
           "label": "Labels botões documentos títulos",
-          "name": "lbdt",
           "path": "docs/sobre/lbdt"
         },
         {
           "label": "Guia Editorial",
-          "name": "guiaeditorial",
           "path": "docs/sobre/guiaeditorial"
         }
       ]
     },
     {
       "label": "Comunidade",
-      "name": "Comunidade",
       "children": [
         {
           "label": "Contato/Suporte",
-          "name": "contato",
           "path": "docs/sobre/contato"
         },
         {
           "label": "Contribuição",
-          "name": "contribuicao",
           "path": "docs/sobre/contribuicao"
         }
       ]
     },
     {
       "label": "Diretrizes",
-      "name": "Diretrizes",
       "children": [
         {
           "label": "E-mag",
-          "name": "emag",
           "path": "docs/sobre/emag"
         },
         {
           "label": "IDG",
-          "name": "idg",
           "path": "docs/sobre/idg"
         }
       ]
     },
     {
       "label": "Roadmap",
-      "name": "roadmap",
       "path": "docs/sobre/roadmap"
     }
   ],
   "Estilos": [
     {
       "label": "Cores",
-      "name": "cores",
       "path": "docs/estilos/cores"
     },
     {
       "label": "Tipografia",
-      "name": "tipografia",
       "path": "docs/estilos/tipografia"
     },
     {
       "label": "Ícones",
-      "name": "icones",
       "path": "docs/estilos/icones"
     },
     {
       "label": "Grid",
-      "name": "grid",
       "path": "docs/estilos/grid"
     }
   ],
   "Padrões": [
     {
       "label": "Autenticação",
-      "name": "autenticacao",
       "path": "docs/padroes/autenticacao"
     },
     {
       "label": "Criação de conta",
-      "name": "criacao",
       "path": "docs/padroes/criacao"
     },
     {
       "label": "Contato",
-      "name": "contato",
       "path": "docs/padroes/contato"
     },
     {
       "label": "Busca",
-      "name": "busca",
       "path": "docs/padroes/busca"
     },
     {
       "label": "Pagamento",
-      "name": "pagamento",
-      "path": "docs/estilos/pagamento"
+      "path": "docs/padroes/pagamento"
     },
     {
       "label": "Avaliação",
-      "name": "avaliacao",
-      "path": "docs/estilos/avaliacao"
+      "path": "docs/padroes/avaliacao"
     }
   ],
   "Templates": [
     {
       "label": "Login",
-      "name": "login",
-      "templateUrl": "templates/login/login"
+      "path": "templates/login/login",
+      "newWindow": true,
+      "noRoute": true
     },
     {
       "label": "Landing Page",
-      "name": "page",
-      "templateUrl": "templates/page/page"
+      "path": "templates/page/page",
+      "newWindow": true,
+      "noRoute": true
     },
     {
       "label": "Resultado de Busca",
-      "name": "search",
-      "templateUrl": "templates/search/search"
+      "path": "templates/search/search",
+      "newWindow": true,
+      "noRoute": true
     },
     {
       "label": "Sigin",
-      "name": "Sigin",
-      "flavors": [
+      "children": [
         {
           "label": "Signin",
-          "name": "signin",
-          "templateUrl": "templates/signin/signin"
+          "path": "templates/signin/signin",
+          "newWindow": true,
+          "noRoute": true
         },
         {
           "label": "Signin-1",
-          "name": "signin-1",
-          "templateUrl": "templates/signin/signin-1"
+          "path": "templates/signin/signin-1",
+          "newWindow": true,
+          "noRoute": true
         },
         {
           "label": "Signin-2",
-          "name": "signin-2",
-          "templateUrl": "templates/signin/signin-2"
+          "path": "templates/signin/signin-2",
+          "newWindow": true,
+          "noRoute": true
         },
         {
           "label": "Signin-3",
-          "name": "signin-3",
-          "templateUrl": "templates/signin/signin-3"
+          "path": "templates/signin/signin-3",
+          "newWindow": true,
+          "noRoute": true
         },
         {
           "label": "Signin-4",
-          "name": "signin-4",
-          "templateUrl": "templates/signin/signin-4"
+          "path": "templates/signin/signin-4",
+          "newWindow": true,
+          "noRoute": true
         }
       ]
     },
     {
       "label": "Starter",
-      "name": "starter",
-      "templateUrl": "templates/starter/starter"
+      "path": "templates/starter/starter",
+      "newWindow": true,
+      "noRoute": true
     }
   ]
 }
