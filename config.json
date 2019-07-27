@@ -36,6 +36,7 @@
       "label": "Input-select",
       "path": "components/input-select/input-select"
     },
+    { "label": "Select", "path": "components/select/select" },
     {
       "label": "Login-social",
       "path": "components/login-social/login-social"
