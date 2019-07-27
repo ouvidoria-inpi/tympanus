@@ -1,5 +1,8 @@
 @mixin select {
   position: relative;
+  label {
+    @include font-input-label;
+  }
   select {
     display: none;
   }
@@ -15,6 +18,11 @@
     }
     &:disabled {
       @include arrow($color-gray-4);
+    }
+    &.unselected {
+      @include font-placeholder;
+      padding-bottom: 10px;
+      padding-top: 10px;
     }
   }
   // Lista de opções
@@ -41,6 +49,7 @@
     color: $color ;
     content: "\f078";
     font-family: Fontawesome;
+    font-style: normal;
     position: absolute;
     right: $spacing-3;
     top: 50%;

@@ -7,7 +7,7 @@ for (i = 0; i < container.length; i++) {
   console.log(selElmnt);
   /* For each element, create a new BUTTON that will act as the selected item: */
   select = document.createElement("BUTTON");
-  select.setAttribute("class", "select-selected");
+  select.setAttribute("class", "select-selected unselected");
   if (selElmnt.disabled) {
     select.setAttribute("disabled", "disabled");
   }
@@ -31,6 +31,7 @@ for (i = 0; i < container.length; i++) {
         if (s.options[i].innerHTML == this.innerHTML) {
           s.selectedIndex = i;
           h.innerHTML = this.innerHTML;
+          h.setAttribute("class", "select-selected");
           y = this.parentNode.getElementsByClassName("same-as-selected");
           for (k = 0; k < y.length; k++) {
             y[k].removeAttribute("class");

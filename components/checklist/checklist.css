@@ -235,6 +235,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-checklist .input input::-moz-placeholder {
   color: #555555;
@@ -243,6 +244,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-checklist .input input:-ms-input-placeholder {
   color: #555555;
@@ -251,6 +253,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-checklist .input input::-ms-input-placeholder {
   color: #555555;
@@ -259,6 +262,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-checklist .input input::placeholder {
   color: #555555;
@@ -267,6 +271,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-checklist .input input {
   width: 90%;

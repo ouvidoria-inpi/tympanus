@@ -3,6 +3,14 @@
 .br-select {
   position: relative;
 }
+.br-select label {
+  color: #333333;
+  font-family: Rawline;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 .br-select select {
   display: none;
 }
@@ -24,6 +32,7 @@
   color: #1351b4;
   content: "\f078";
   font-family: Fontawesome;
+  font-style: normal;
   position: absolute;
   right: 16px;
   top: 50%;
@@ -54,6 +63,7 @@
   color: #2b74e9;
   content: "\f078";
   font-family: Fontawesome;
+  font-style: normal;
   position: absolute;
   right: 16px;
   top: 50%;
@@ -64,11 +74,22 @@
   color: #9e9d9d;
   content: "\f078";
   font-family: Fontawesome;
+  font-style: normal;
   position: absolute;
   right: 16px;
   top: 50%;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
+}
+.br-select .select-selected.unselected {
+  color: #555555;
+  font-family: Rawline;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .br-select .select-items {
   background: #ffffff;
@@ -106,6 +127,7 @@
   color: #2b74e9;
   content: "\f078";
   font-family: Fontawesome;
+  font-style: normal;
   position: absolute;
   right: 16px;
   top: 50%;
@@ -121,6 +143,7 @@
   color: #ff3333;
   content: "\f078";
   font-family: Fontawesome;
+  font-style: normal;
   position: absolute;
   right: 16px;
   top: 50%;
@@ -143,6 +166,7 @@
   color: #168821;
   content: "\f078";
   font-family: Fontawesome;
+  font-style: normal;
   position: absolute;
   right: 16px;
   top: 50%;
