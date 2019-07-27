@@ -1,66 +1,20 @@
 {
   "Componentes": [
-    {
-      "label": "Acordeão",
-      "path": "components/accordeon/accordeon"
-    },
-    {
-      "label": "Breadcrumb",
-      "path": "components/breadcrumb/breadcrumb"
-    },
-    {
-      "label": "Botão",
-      "path": "components/button/button"
-    },
-    {
-      "label": "Checkbox",
-      "path": "components/checkbox/checkbox"
-    },
-    {
-      "label": "Checklist",
-      "path": "components/checklist/checklist"
-    },
-    {
-      "label": "Divider",
-      "path": "components/divider/divider"
-    },
-    {
-      "label": "Formulário",
-      "path": "components/form/form"
-    },
-    {
-      "label": "Input",
-      "path": "components/input/input"
-    },
-    {
-      "label": "Input-select",
-      "path": "components/input-select/input-select"
-    },
+    { "label": "Acordeão", "path": "components/accordeon/accordeon" },
+    { "label": "Breadcrumb", "path": "components/breadcrumb/breadcrumb" },
+    { "label": "Botão", "path": "components/button/button" },
+    { "label": "Checkbox", "path": "components/checkbox/checkbox" },
+    { "label": "Checklist", "path": "components/checklist/checklist" },
+    { "label": "Divider", "path": "components/divider/divider" },
+    { "label": "Formulário", "path": "components/form/form" },
+    { "label": "Input", "path": "components/input/input" },
     { "label": "Select", "path": "components/select/select" },
-    {
-      "label": "Login-social",
-      "path": "components/login-social/login-social"
-    },
-    {
-      "label": "Paginação",
-      "path": "components/pagination/pagination"
-    },
-    {
-      "label": "Portlet",
-      "path": "components/portlet/portlet"
-    },
-    {
-      "label": "Busca",
-      "path": "components/search/search"
-    },
-    {
-      "label": "Tabela",
-      "path": "components/table/table"
-    },
-    {
-      "label": "Abas",
-      "path": "components/tabs/tabs"
-    }
+    { "label": "Login-social", "path": "components/login-social/login-social" },
+    { "label": "Paginação", "path": "components/pagination/pagination" },
+    { "label": "Portlet", "path": "components/portlet/portlet" },
+    { "label": "Busca", "path": "components/search/search" },
+    { "label": "Tabela", "path": "components/table/table" },
+    { "label": "Abas", "path": "components/tabs/tabs" }
   ],
   "Documentação": [
     {
@@ -99,10 +53,7 @@
       "label": "O Design System (objetivos e vantagens)",
       "path": "docs/sobre/ds"
     },
-    {
-      "label": "Princípios",
-      "path": "docs/sobre/principios"
-    },
+    { "label": "Princípios", "path": "docs/sobre/principios" },
     {
       "label": "Linguagem Cidadã",
       "children": [
@@ -142,54 +93,21 @@
         }
       ]
     },
-    {
-      "label": "Roadmap",
-      "path": "docs/sobre/roadmap"
-    }
+    { "label": "Roadmap", "path": "docs/sobre/roadmap" }
   ],
   "Estilos": [
-    {
-      "label": "Cores",
-      "path": "docs/estilos/cores"
-    },
-    {
-      "label": "Tipografia",
-      "path": "docs/estilos/tipografia"
-    },
-    {
-      "label": "Ícones",
-      "path": "docs/estilos/icones"
-    },
-    {
-      "label": "Grid",
-      "path": "docs/estilos/grid"
-    }
+    { "label": "Cores", "path": "docs/estilos/cores" },
+    { "label": "Tipografia", "path": "docs/estilos/tipografia" },
+    { "label": "Ícones", "path": "docs/estilos/icones" },
+    { "label": "Grid", "path": "docs/estilos/grid" }
   ],
   "Padrões": [
-    {
-      "label": "Autenticação",
-      "path": "docs/padroes/autenticacao"
-    },
-    {
-      "label": "Criação de conta",
-      "path": "docs/padroes/criacao"
-    },
-    {
-      "label": "Contato",
-      "path": "docs/padroes/contato"
-    },
-    {
-      "label": "Busca",
-      "path": "docs/padroes/busca"
-    },
-    {
-      "label": "Pagamento",
-      "path": "docs/padroes/pagamento"
-    },
-    {
-      "label": "Avaliação",
-      "path": "docs/padroes/avaliacao"
-    }
+    { "label": "Autenticação", "path": "docs/padroes/autenticacao" },
+    { "label": "Criação de conta", "path": "docs/padroes/criacao" },
+    { "label": "Contato", "path": "docs/padroes/contato" },
+    { "label": "Busca", "path": "docs/padroes/busca" },
+    { "label": "Pagamento", "path": "docs/padroes/pagamento" },
+    { "label": "Avaliação", "path": "docs/padroes/avaliacao" }
   ],
   "Templates": [
     {
