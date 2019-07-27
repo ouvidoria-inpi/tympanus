@@ -41,9 +41,9 @@
       "path": "components/input/input"
     },
     {
-      "label": "Input-select",
-      "name": "input-select",
-      "path": "components/input/input-select"
+      "label": "Select",
+      "name": "select",
+      "path": "components/input/select"
     },
     {
       "label": "Login-social",
