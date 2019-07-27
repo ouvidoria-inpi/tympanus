@@ -187,9 +187,17 @@
   padding-bottom: 4px;
   padding-top: 4px;
 }
+.br-select.is-medium .select-selected.unselected {
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
 .br-select.is-small .select-selected {
   padding-bottom: 0;
   padding-top: 0;
+}
+.br-select.is-small .select-selected.unselected {
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
 .br-select + .help,
 .br-select + .feedback + .help {
