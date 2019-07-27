@@ -1,5 +1,8 @@
 @mixin select {
   position: relative;
+  label {
+    @include font-input-label;
+  }
   select {
     display: none;
   }
@@ -12,6 +15,14 @@
     text-align-last: left;
     &:focus {
       @include arrow($color-primary-lighten-15);
+    }
+    &:disabled {
+      @include arrow($color-gray-4);
+    }
+    &.unselected {
+      @include font-placeholder;
+      padding-bottom: 10px;
+      padding-top: 10px;
     }
   }
   // Lista de opções
@@ -38,6 +49,7 @@
     color: $color ;
     content: "\f078";
     font-family: Fontawesome;
+    font-style: normal;
     position: absolute;
     right: $spacing-3;
     top: 50%;
@@ -76,12 +88,6 @@
     .select-selected {
       @include input-focus($color-primary-lighten-15);
       @include arrow($color-primary-lighten-15);
-    }
-  }
-  &.is-disabled {
-    .select-selected {
-      @include arrow($color-gray-5);
-      background: $color-gray-2;
     }
   }
   &.is-invalid {

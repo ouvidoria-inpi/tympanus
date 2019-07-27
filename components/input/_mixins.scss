@@ -154,4 +154,5 @@
 // Placeholder
 @mixin placeholder {
   @include font-placeholder;
+  opacity: 1;
 }

@@ -1,45 +1,51 @@
-var x, i, j, selElmnt, a, b, c;
+var container, i, j, selElmnt, select, selectList, selectListItem;
 /* Look for any elements with the class "br-select": */
-x = document.getElementsByClassName("br-select");
-for (i = 0; i < x.length; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  /* For each element, create a new button that will act as the selected item: */
-  a = document.createElement("button");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
+container = document.getElementsByClassName("br-select");
+
+for (i = 0; i < container.length; i++) {
+  selElmnt = container[i].getElementsByTagName("select")[0];
+  console.log(selElmnt);
+  /* For each element, create a new BUTTON that will act as the selected item: */
+  select = document.createElement("BUTTON");
+  select.setAttribute("class", "select-selected unselected");
+  if (selElmnt.disabled) {
+    select.setAttribute("disabled", "disabled");
+  }
+  select.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  container[i].appendChild(select);
   /* For each element, create a new DIV that will contain the option list: */
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
+  selectList = document.createElement("DIV");
+  selectList.setAttribute("class", "select-items select-hide");
   for (j = 1; j < selElmnt.length; j++) {
     /* For each option in the original select element,
-    create a new button that will act as an option item: */
-    c = document.createElement("button");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /* When an item is clicked, update the original select box,
-        and the selected item: */
-        var y, i, k, s, h;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < s.length; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            for (k = 0; k < y.length; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
+    create a new BUTTON that will act as an option item: */
+    selectListItem = document.createElement("BUTTON");
+    selectListItem.innerHTML = selElmnt.options[j].innerHTML;
+    selectListItem.addEventListener("click", function(e) {
+      /* When an item is clicked, update the original select box,
+      and the selected item: */
+      var y, i, k, s, h;
+      s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+      h = this.parentNode.previousSibling;
+      for (i = 0; i < s.length; i++) {
+        if (s.options[i].innerHTML == this.innerHTML) {
+          s.selectedIndex = i;
+          h.innerHTML = this.innerHTML;
+          h.setAttribute("class", "select-selected");
+          y = this.parentNode.getElementsByClassName("same-as-selected");
+          for (k = 0; k < y.length; k++) {
+            y[k].removeAttribute("class");
           }
+          this.setAttribute("class", "same-as-selected");
+          break;
         }
-        h.click();
+      }
+      h.click();
     });
-    b.appendChild(c);
+    selectList.appendChild(selectListItem);
   }
-  x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
+  container[i].appendChild(selectList);
+  select.addEventListener("click", function(e) {
     /* When the select box is clicked, close any other select boxes,
     and open/close the current select box: */
     e.stopPropagation();
@@ -52,19 +58,19 @@ for (i = 0; i < x.length; i++) {
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
-  var x, y, i, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  for (i = 0; i < y.length; i++) {
-    if (elmnt == y[i]) {
+  var selectList, select, i, arrNo = [];
+  selectList = document.getElementsByClassName("select-items");
+  select = document.getElementsByClassName("select-selected");
+  for (i = 0; i < select.length; i++) {
+    if (elmnt == select[i]) {
       arrNo.push(i)
     } else {
-      y[i].classList.remove("select-arrow-active");
+      select[i].classList.remove("select-arrow-active");
     }
   }
-  for (i = 0; i < x.length; i++) {
+  for (i = 0; i < selectList.length; i++) {
     if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
+      selectList[i].classList.add("select-hide");
     }
   }
 }

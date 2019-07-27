@@ -85,6 +85,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-form .field .input input::-moz-placeholder,
 .br-form .field .input textarea::-moz-placeholder {
@@ -94,6 +95,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-form .field .input input:-ms-input-placeholder,
 .br-form .field .input textarea:-ms-input-placeholder {
@@ -103,6 +105,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-form .field .input input::-ms-input-placeholder,
 .br-form .field .input textarea::-ms-input-placeholder {
@@ -112,6 +115,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-form .field .input input::placeholder,
 .br-form .field .input textarea::placeholder {
@@ -121,6 +125,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  opacity: 1;
 }
 .br-form .field .input .icon {
   color: #1351b4;
