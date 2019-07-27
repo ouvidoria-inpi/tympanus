@@ -21,8 +21,8 @@
     }
     &.unselected {
       @include font-placeholder;
-      padding-bottom: 10px;
-      padding-top: 10px;
+      padding-bottom: $spacing-1 + 2px;
+      padding-top: $spacing-1 + 2px;
     }
   }
   // Lista de opções
@@ -47,8 +47,8 @@
 @mixin arrow($color: $color-primary) {
   &::after {
     color: $color ;
-    content: "\f078";
-    font-family: Fontawesome;
+    content: $select-arrow-content;
+    font-family: $select-arrow-font-family;
     font-style: normal;
     position: absolute;
     right: $spacing-3;
@@ -74,11 +74,11 @@
     width: 100%;
     &:hover,
     &:focus {
-      background: $color-primary-pastel;
+      background: $select-list-item-hover;
     }
     &.same-as-selected {
-      background: $color-primary-lighten-15;
-      color: $color-white;
+      background: $select-list-item-active-bg;
+      color: $select-list-item-active-color;
     }
   }
 }

@@ -1631,7 +1631,7 @@
 }
 .br-select .select-selected::after {
   color: #1351b4;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -1662,7 +1662,7 @@
 }
 .br-select .select-selected:focus::after {
   color: #2b74e9;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -1673,7 +1673,7 @@
 }
 .br-select .select-selected:disabled::after {
   color: #9e9d9d;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -1726,7 +1726,7 @@
 }
 .br-select.is-focus .select-selected::after {
   color: #2b74e9;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -1742,7 +1742,7 @@
 }
 .br-select.is-invalid .select-selected::after {
   color: #ff3333;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -1765,7 +1765,7 @@
 }
 .br-select.is-valid .select-selected::after {
   color: #168821;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
