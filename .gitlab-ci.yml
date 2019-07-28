@@ -1,7 +1,7 @@
 variables:
   GIT_SSL_NO_VERIFY: "true"
 
-image: node:latest
+image: hub.estaleiro.serpro/pipeline/node:latest
 
 stages:
   - build

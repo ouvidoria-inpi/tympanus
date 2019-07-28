@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * input - 0.1.0 */
 .br-select {
@@ -30,7 +31,7 @@
 }
 .br-select .select-selected::after {
   color: #1351b4;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -61,7 +62,7 @@
 }
 .br-select .select-selected:focus::after {
   color: #2b74e9;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -72,7 +73,7 @@
 }
 .br-select .select-selected:disabled::after {
   color: #9e9d9d;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -125,7 +126,7 @@
 }
 .br-select.is-focus .select-selected::after {
   color: #2b74e9;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -141,7 +142,7 @@
 }
 .br-select.is-invalid .select-selected::after {
   color: #ff3333;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -164,7 +165,7 @@
 }
 .br-select.is-valid .select-selected::after {
   color: #168821;
-  content: "\f078";
+  content: "";
   font-family: Fontawesome;
   font-style: normal;
   position: absolute;
@@ -187,9 +188,17 @@
   padding-bottom: 4px;
   padding-top: 4px;
 }
+.br-select.is-medium .select-selected.unselected {
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
 .br-select.is-small .select-selected {
   padding-bottom: 0;
   padding-top: 0;
+}
+.br-select.is-small .select-selected.unselected {
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
 .br-select + .help,
 .br-select + .feedback + .help {
