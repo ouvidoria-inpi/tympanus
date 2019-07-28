@@ -26,7 +26,6 @@ São botões que facilitam o acesso aos sistemas através de um login prévio at
 
 ![Botão Acesso Gov.Br](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-acesso-govbr.png)
 
-
 ### Botões Internos
 
 **Botão de ação (call to action)**
@@ -53,7 +52,6 @@ São botões que assistem a navegação do usuário.
 **Links**
 ![Links](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/link.png)
 
-
 # Estados
 
 Os estados dos botões servem para dar feedback ao usuário sobre as ações que estão acontecendo quando há uma interação com o botão.
@@ -61,6 +59,7 @@ Os estados dos botões servem para dar feedback ao usuário sobre as ações que
 **Normal**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Foco**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Hover**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Pressionado**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Inativo**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Progresso**
 
 ---
+
 ![Estado](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botoes-estado.png)
 
 **Normal**
