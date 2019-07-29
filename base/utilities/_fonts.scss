@@ -1,0 +1,49 @@
+// Fonte Rawline
+@include make-font($rawline, $rawline-directory, "rawline-100", 100, normal);
+@include make-font($rawline, $rawline-directory, "rawline-100i", 100, italic);
+@include make-font($rawline, $rawline-directory, "rawline-200", 200, normal);
+@include make-font($rawline, $rawline-directory, "rawline-200i", 200, italic);
+@include make-font($rawline, $rawline-directory, "rawline-300", 300, normal);
+@include make-font($rawline, $rawline-directory, "rawline-300i", 300, italic);
+@include make-font($rawline, $rawline-directory, "rawline-400", 400, normal);
+@include make-font($rawline, $rawline-directory, "rawline-400i", 400, italic);
+@include make-font($rawline, $rawline-directory, "rawline-500", 500, normal);
+@include make-font($rawline, $rawline-directory, "rawline-500i", 500, italic);
+@include make-font($rawline, $rawline-directory, "rawline-600", 600, normal);
+@include make-font($rawline, $rawline-directory, "rawline-600i", 600, italic);
+@include make-font($rawline, $rawline-directory, "rawline-700", 700, normal);
+@include make-font($rawline, $rawline-directory, "rawline-700i", 700, italic);
+@include make-font($rawline, $rawline-directory, "rawline-800", 800, normal);
+@include make-font($rawline, $rawline-directory, "rawline-800i", 800, italic);
+@include make-font($rawline, $rawline-directory, "rawline-900", 900, normal);
+@include make-font($rawline, $rawline-directory, "rawline-900i", 900, italic);
+
+// Aplicar a fonte Rawline
+.font-rawline {
+  font-family: $rawline, serif !important;
+}
+
+// Fonte Raleway
+@include make-font($raleway, $raleway-directory, "Raleway-Thin", 100, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-Thin-Italic", 100, italic);
+@include make-font($raleway, $raleway-directory, "Raleway-ExtraLight", 200, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-ExtraLight-Italic", 200, italic);
+@include make-font($raleway, $raleway-directory, "Raleway-Light", 300, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-Light-Italic", 300, italic);
+@include make-font($raleway, $raleway-directory, "Raleway-Regular", 400, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-Regular-Italic", 400, italic);
+@include make-font($raleway, $raleway-directory, "Raleway-Medium", 500, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-Medium-Italic", 500, italic);
+@include make-font($raleway, $raleway-directory, "Raleway-SemiBold", 600, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-SemiBold-Italic", 600, italic);
+@include make-font($raleway, $raleway-directory, "Raleway-Bold", 700, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-Bold-Italic", 700, italic);
+@include make-font($raleway, $raleway-directory, "Raleway-ExtraBold", 800, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-ExtraBold-Italic", 800, italic);
+@include make-font($raleway, $raleway-directory, "Raleway-Black", 900, normal);
+@include make-font($raleway, $raleway-directory, "Raleway-Black-Italic", 900, italic);
+
+// Aplicar a fonte Raleway
+.font-raleway {
+  font-family: $raleway, serif !important;
+}

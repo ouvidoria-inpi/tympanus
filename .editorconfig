@@ -9,3 +9,8 @@ charset = utf-8
 [*.{html,css,scss,sass}]
 indent_style = space
 indent_size = 2
+
+# Arquivos de documentação
+[*.md]
+indent_style = space
+indent_size = 4

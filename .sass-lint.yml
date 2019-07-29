@@ -14,11 +14,10 @@ options:
 # File Options
 files:
   include:
-    - 'assets/styles/*.s+(a|c)ss'
+    - 'assets/styles/**/*.s+(a|c)ss'
+    - 'base/**/*.s+(a|c)ss'
     - 'components/**/*.s+(a|c)ss'
     - 'templates/**/*.s+(a|c)ss'
-  ignore:
-    - 'estilos/**/*.*'
 # Rule Configuration
 rules:
   attribute-quotes:
