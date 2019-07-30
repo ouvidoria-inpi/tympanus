@@ -61,7 +61,20 @@
           <label for="box-email-check"><span class="sr-only">E-mail</span></label>
         </div>
       </div>
-      <div class="field is-active is-disabled">
+      <div class="field is-active">
+        <div class="icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="input">
+          <label for="box-phone">Telefone</label>
+          <input type="text" id="box-phone" placeholder="Ex: fulano@phone.com">
+        </div>
+        <div class="check">
+          <input type="checkbox" id="box-phone-check" onclick="toggleActiveField(this, 'br-checklist')">
+          <label for="box-phone-check"><span class="sr-only">Telefone</span></label>
+        </div>
+      </div>
+      <div class="field is-disabled">
         <div class="icon">
           <i class="fas fa-mobile-alt"></i>
         </div>
@@ -70,7 +83,7 @@
           <input type="text" id="box-celular" placeholder="Ex: (xx) xxxxx-xxxx" disabled>
         </div>
         <div class="check">
-          <input type="checkbox" id="box-celular-check" onclick="toggleActiveField(this, 'br-checklist')" checked disabled>
+          <input type="checkbox" id="box-celular-check" onclick="toggleActiveField(this, 'br-checklist')" disabled>
           <label for="box-celular-check"><span class="sr-only">Celular</span></label>
         </div>
       </div>

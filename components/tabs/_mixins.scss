@@ -4,8 +4,9 @@
   display: flex;
   overflow: auto;
   padding: 0;
-  &.flex-column {
+  &.is-vertical {
     border-bottom: 0;
+    flex-direction: column;
     .item {
       border-bottom: 1px solid $tab-border;
       margin: 0;

@@ -161,7 +161,6 @@ class Menu {
             this.elementsLinks.forEach(function(linkMenu) {
                 linkMenu.addEventListener('click',this.clickLinkItem.bind(linkMenu),false);
             }.bind(this))
-            debugger
             this.menuPreferences[0].addEventListener('click',this.clickUserPreferences.bind(this),false);
             
     }
