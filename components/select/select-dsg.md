@@ -4,15 +4,15 @@
 
 São elementos usados pelos usuários para escolher uma opção em um grupo de dados. Devem ser acompanhados de rótulos que descrevam a informação que o usuário deve digitar.
 
-![Select Anatomia](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/select/select-anatomia.png)
+![Select Anatomia](../../assets/images/components_img/select/select-anatomia.png)
 
-![Select uso](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/select/select-uso.png)
+![Select uso](../../assets/images/components_img/select/select-usos.png)
 
 ## ESTADOS
 
 Os Select podem estar nos estados: habilitado; desabilitado; opção selecionada; campo com foco e dropdown aberto.
 
-![Select Estados](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/select/select-estados.png)
+![Select Estados](../../assets/images/components_img/select/select-estados.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -34,7 +34,7 @@ O label, o placeholder e os demais comportamentos permanecem iguais.
 
 No caso de uso em Tabelas e Filtro em portal, o label pode ser suprimido, mas nesse caso o uso do placeholder é imprescindível.
 
-![Select Alturas](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/select/select-alturas.png)
+![Select Alturas](../../assets/images/components_img/select/selects-tamanhos.png)
 
 ## COMPOSIÇÃO E DISTRIBUIÇÃO DO COMPONENTE NA TELA
 

@@ -1,5 +1,5 @@
 // Carregar variáveis do DS-Gov
-@import "../../assets/styles/dsgov-base.scss";
+@import "../../base/dsgov-base";
 
 // Atalhos para conteúdo
 .skip-menu {
@@ -156,11 +156,10 @@
       }
     }
     //botão de limpar
-    .clear-button{
-      border: 0;
+    .clear-button {
       background: transparent;
+      border: 0;
     }
-    
   }
   // Versão mobile
   .mobile-header & {
