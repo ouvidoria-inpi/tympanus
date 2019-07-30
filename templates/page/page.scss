@@ -110,6 +110,7 @@
   .desktop-header & {
     align-items: center;
     display: flex;
+    //caixa de texto
     .br-input {
       input {
         background: transparent;
@@ -126,6 +127,7 @@
         }
       }
     }
+    //botão de busca
     .br-button {
       &:focus {
         box-shadow: none;
@@ -153,6 +155,12 @@
         margin-left: 0;
       }
     }
+    //botão de limpar
+    .clear-button{
+      border: 0;
+      background: transparent;
+    }
+    
   }
   // Versão mobile
   .mobile-header & {
