@@ -55,7 +55,7 @@
                     <button class="br-button is-primary is-circle" type="button">
                       <i class="fas fa-search"></i>
                     </button>
-                    <button class="br-button is-secondary is-circle" type="button">
+                    <button class="clear-button" type="button">
                       <i class="fas fa-times"></i>
                     </button>
                   </div>
@@ -933,6 +933,28 @@
                 <button class="trigger" type="button">
                   <i class="fas fa-plus"></i>
                 </button>
+                <ul class="subnav d-none">
+                  <li class="item">
+                    <a href="#" class="link">
+                      <span class="name">Submenu 01</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link is-active">
+                      <span class="name">Submenu 02</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">
+                      <span class="name">Submenu 03</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">
+                      <span class="name">Submenu 04</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="item">
                 <a href="#" class="link">
@@ -946,7 +968,7 @@
               </li>
             </ul>
             <!-- Menu do usuário -->
-            <div class="user-menu">
+            <div class="user-menu d-none">
               <div class="menu">
                 <span class="header">
                   <i class="fas fa-cog text-primary mr-half"></i>
@@ -999,6 +1021,7 @@
   <div id="footer-brasil" class="page-footer mt-5 mt-sm-0"></div>
   <!-- Script da barra de governo -->
   <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>
+  <script src="page.js"></script>
   <script src="../../componentes/input-action/input-password.js"></script>
 </body>
 </html>
