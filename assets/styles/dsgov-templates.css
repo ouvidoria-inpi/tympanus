@@ -16845,6 +16845,10 @@ a.text-dark:focus {
 .desktop-header .br-search .br-button + .br-button {
   margin-left: 0;
 }
+.desktop-header .br-search .clear-button {
+  background: transparent;
+  border: 0;
+}
 .mobile-header .br-search {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
