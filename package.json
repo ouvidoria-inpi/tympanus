@@ -26,9 +26,10 @@
     "validate:html": "node_modules/.bin/html-validate components/**/*.html",
     "validate:sass": "node_modules/.bin/sass-lint -c .sass-lint.yml -v -q",
     "watch": "npm-run-all --parallel watch-*",
-    "watch-css-base": "nodemon --watch base/ --ext scss --exec \"npm run css-compile-base && npm run css-prefix-base && npm run css-minify-base\"",
-    "watch-css-components": "nodemon --watch components/ --ext scss --exec \"npm run css-compile-components && npm run css-prefix-components && npm run css-minify-components\"",
-    "watch-css-templates": "nodemon --watch templates/ --ext scss --exec \"npm run css-compile-templates && npm run css-prefix-templates && npm run css-minify-templates\""
+    "watch-css-assets": "nodemon --watch assets/styles/ --ext scss --exec \"npm run css-compile-assets && npm run css-prefix-assets && npm run css-minify\"",
+    "watch-css-base": "nodemon --watch base/ --ext scss --exec \"npm run css-compile-base && npm run css-prefix-base && npm run css-minify\"",
+    "watch-css-components": "nodemon --watch components/ --ext scss --exec \"npm run css-compile-components && npm run css-prefix-components && npm run css-minify\"",
+    "watch-css-templates": "nodemon --watch templates/ --ext scss --exec \"npm run css-compile-templates && npm run css-prefix-templates && npm run css-minify\""
   },
   "author": "",
   "browserslist": [
