@@ -28,7 +28,6 @@ class ToggleElemnt {
 
     closeClick(event,element) {
         if (event.target.closest(".is-active")) {
-            console.log("clicado dentro do menu");
         } else {
             this.removeClass(element);
             window.document.removeEventListener("click", _listener);
@@ -93,7 +92,6 @@ class Auxiliary {
     addEvent(){
             this.elements = document.querySelectorAll(this.element_class)
             this.targets_class.forEach(function(item,index){
-                console.log(index)
                 this.elements_target.push(document.querySelectorAll(item)[0])
             }.bind(this));
             
@@ -227,9 +225,9 @@ class InputSearch{
 
       menuClass = new Menu()
       menuClass.addEvent();
+      var toggleMobileMenu = new Auxiliary('click','.mobile-header .sidemenu-trigger',['.mobile-header .canvas','.mobile-header .sidemenu'],'d-none')
 
   }
 
-  var toggleMobileMenu = new Auxiliary('click','.mobile-header .sidemenu-trigger',['.mobile-header .canvas','.mobile-header .sidemenu'],'d-none')
 
  
