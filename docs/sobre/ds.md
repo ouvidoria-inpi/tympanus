@@ -1,56 +1,49 @@
-# Mutua quae corvum iniustaque indicat lacteus
+### O Design System
 
-## Refugit numero nobis iam edita
+O Design System do Governo Federal do Brasil
 
-Lorem markdownum orat rustica, tuto hoc unda? Sine aberat mihi qui de coepta,
-limosaque, per audit grandior exhibita. Redditus nocti illa tantum praebet in
-auris ut laborem quid. Nymphae calidi Deucalion dederat, per cornua suo incepti
-iamque, tamen exspectanda solutus. Et ad esse florente: levi divis ingentes
-admovit.
+#### Template Básico
 
-- An pennis posita domabile recludi
-- Quibus saevo longa semper
-- Mensis extimuit phocarum putes
+Porquê unificar a experiência dos cidadãos brasileiros quando estão em contato com o governo brasileiro por meio digital?
 
-## Hos fulvis et linquendus boves
+O sentimento comum era da necessidade de uma visão singular do cidadão em relação aos produtos e serviços que o governo lhe disponibiliza ou solicita.
+ 
+O cenário era garantir esta visão singular de uma experiência única que não exija do cidadão aprender a se relacionar com o governo em cada contato.
 
-Quo lupus flavae, quaerenti venit potentes, currere salibus pependit
-[domum](http://et-proxima.net/ante-usum.aspx) facinus qui coegi, quae permisit.
-_Faciat singula limite_ ut probetne nec stagnata et bella et amari pugnabant.
-Lignoque inrita ad tamen illa erat et concepit pugna pictis. Pendulaque ea
-forsitan caput et palmas et illi volvens Libys.
+Diante desta visão, iniciamos a construção de um Design System que se propõe facilitar que todos que se envolvam na construção destes produtos alcancem este objetivo.
 
-1. Mollia haut
-2. Guttura Orpheu
-3. Ictus coeperat referam osculaque adspicit fortis posco
-4. Trepidare incoquit ordine sum est securi excipit
-5. Querenti caesae praestans salutis poterunt
+---
+#### Afinal, o que é Design System?
 
-## Abiit colubris validos pennis index
 
-Etiam expetit de vos, lacrimis vincere, nec candida laniata et. Adstitit passa
-fontibus cremabo et amissum [diva](http://stridores.org/). Tibi sidera sub
-[ipse](http://ea.net/iliacas) veni, Callida duces, in erat submisso! Dixerat
-obstruat et verbis candida. [Tum](http://cornibus-et.net/fuitgangetica) Thisbe,
-riguisse inter sui: pede sit frondes partes.
+*Um Design System não é um projeto, é um produto que serve produtos*
 
-> Ne coniuge, eque silvis in, perfida [tiliae inquirit
-> habet](http://www.tyron-hac.org/) en. Pereat vitaque sceleri et _moveri_ vacat
-> leges tamen ut forem, sidus.
+Natan curtis
 
-## Vestemque Cycnus ballaenarumque digitos satiantur et iniit
+Este é um documento vivo com diversos componentes e propriedades de um produto ou serviço para facilitar a comunicação com os diversos times.
 
-Nisi scelus terrificam fago. Pro tot _aris vitam vitale_ submovit videtur
-inaniter formamque repressit ad ferro nam nihil suoque certamine hominis. Inania
-tui invidiosa antra contemnere desine concubiturus quam an exstat, coegit virum
-saepe considerat. Gaudia et lugent postmodo succedere est cinerem scylla est
-corpore ferro est, gens. Ait neque pectore animos: alto ille inducitur
-[laceri](http://huicumbras.net/adeo), pede saltem Siphnon estis motae fletus
-uterque hosti illis, hominumque.
+Isso beneficia tanto o resultado que se almeja alcançar com o software como a comunicação, as pessoas, os negócios e as empresas.
 
-Deprensa cava! Nec tempora valles exstabant deprensa de non advena pellite,
-patriamque? Terrae quater, futura nam meritorum facie, sicut ille rogat nolle de
-mallem simulat Aeneadae meritis.
-[Perdix](http://inpendere-lacrimas.net/letoidos) volucrem tamen, suo neque
-aversa ibant, est querno. Vestra cava oculi sex vetitum adhuc hoc, generosaque,
-patrem, ira Ascanii Latios.
+A ideia é que esse produto seja utilizado para consulta, para se tomar decisões, para novas features,novas interfaces e novas propriedades dos produtos do governo.
+
+![Imagem de alerta informando que o Design System pode sofrer constante mudanças](/assets/docs/alerta.png "Este não é um documento estático, ele pode sofrer constantes mudanças e a ideia desse design system é isso. Encaixar diversas formas sem perder consistência.")
+
+
+Você já está entendendo que o Design System é o conjunto completo de padrões do projeto,
+documentação e princípios. Utilizando o UI kit (kit de ferramentas de design) e o código para atingir
+esses padrões.
+
+---
+
+#### O Design System do Governo Federal do Brasil
+
+![Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.](/assets/docs/imagens_ds.png "Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.")
+   *Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.*
+
+
+
+
+Como Design System oficial do Governo Brasileiro, o DS Gov atende a uma ampla gama de designers e desenvolvedores que criam produtos e experiências digitais. Os objetivos do sistema incluem melhorar a consistência e a qualidade da interface, tornando o processo de design e desenvolvimento mais eficiente e focado, estabelecendo um vocabulário compartilhado entre designer e desenvolvedor e fornecendo orientação clara e identificável sobre as melhores práticas de design e desenvolvimento.
+
+E toda essa iniciativa é uma parceria simbiótica da Secretaria Especial de Comunicação Social (**Secom**) e o **SERPRO**.
+
