@@ -4,15 +4,15 @@
 
 São elementos usados pelos usuários para digitar textos. Devem ser acompanhados de rótulos que descrevam a informação que o usuário deve digitar.
 
-![Input Estrutura](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/inputs/input-anatomia.png)
+![Input Estrutura](../../assets/images/components_img/inputs/input-anatomia.png)
 
-![Input Utilização](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/inputs/input-utilizacao-tabela.png)
+![Input Utilização](../../assets/images/components_img/inputs/input-utilizacao-tabela.png)
 
 ## ESTADOS
 
 Os campos de texto podem estar nos estados: habilitado; ativo com foco e desabilitado.
 
-![Input Estados](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/inputs/input-estados.png)
+![Input Estados](../../assets/images/components_img/inputs/input-estados.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -32,7 +32,7 @@ Alguns também podem ter um ícone no canto direito. Por exemplo: o input de sen
 
 As alturas dos campos de input devem variar em função de seus usos:
 
-![Input Alturas](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/inputs/input-alturas.png)
+![Input Alturas](../../assets/images/components_img/inputs/input-alturas.png)
 
 ## RÓTULO E INFORMAÇÕES ADICIONAIS
 
@@ -40,7 +40,7 @@ Sempre que possível o rótulo do campo de texto deve ser o mais sucinto e claro
 
 Entretanto, quando necessário, ele também pode exibir um texto com informações adicionais para auxiliar o preenchimento.
 
-![Input com Texto Auxiliar](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/inputs/input-texto-auxiliar.png)
+![Input com Texto Auxiliar](../../assets/images/components_img/inputs/input-texto-auxiliar.png)
 
 ## MENSAGEM DE FEEDBACK CONTEXTUAL
 
@@ -48,10 +48,10 @@ Entretanto, quando necessário, ele também pode exibir um texto com informaçõ
 
 A mensagem de erro (feedback contextual) deve ser o mais sucinto possível, de preferência não ultrapassando uma linha da mesma largura do campo de texto.
 
-![Input com Mensagem de Feedback Contextual](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/inputs/input-feedback-contextual.png)
+![Input com Mensagem de Feedback Contextual](../../assets/images/components_img/inputs/input-feedback-contextual.png)
 
 ### MENSAGEM CRÍTICA
 
 A validação dos campos de texto deve exibir a mensagem de suporte abaixo do campo, juntamente com o ícone correspondente.
 
-![Input Espaçamento](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/inputs/input-espacamento.png)
+![Input Espaçamento](../../assets/images/components_img/inputs/input-espacamento.png)
