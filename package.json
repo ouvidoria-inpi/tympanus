@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm-run-all get-tokens css",
+    "build": "npm-run-all get-rawline get-tokens css",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "npm-run-all --parallel css-compile-*",
     "css-compile-assets": "node-sass --output-style expanded -r assets/styles -o assets/styles",
@@ -20,6 +20,7 @@
     "css-prefix-base": "postcss -r \"assets/styles/dsgov-base.css\" -m",
     "css-prefix-components": "postcss -r \"components/**/*.css\" -m",
     "css-prefix-templates": "postcss -r \"templates/**/*.css\" -m",
+    "get-rawline": "rm -rf assets/fonts/rawline && git clone https://github.com/h-ibaldo/Raleway_Fixed_Numerals.git assets/fonts/rawline",
     "get-tokens": "gulp styles",
     "start": "npm-run-all watch",
     "test": "echo \"Error: no test specified\" && exit 1",
