@@ -2,15 +2,6 @@
 
 Esse documento propõe um padrão de codificação para a linguagem **HTML5**.
 
-## Índice
-
--   [A Linguagem HTML5](#1-a-linguagem-html5)
--   [Padrão de Codificação HTML](#2-padr%C3%A3o-de-codifica%C3%A7%C3%A3o-html)
-    -   [Documento HTML](#21-documento-html)
-    -   [Comentários](#coment%C3%A1rios)
-    -   [Formatação](#formata%C3%A7%C3%A3o)
--   [Referências](#refer%C3%AAncias)
-
 ## A Linguagem HTML5
 
 A linguagem HTML é definida pelo [World Wide Web Consortium - W3C][1] e sua especificação técnica e diretrizes estão publicadas na seção de Web Design e Applications.

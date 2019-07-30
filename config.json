@@ -49,10 +49,6 @@
     }
   ],
   "Sobre": [
-    {
-      "label": "O Design System (objetivos e vantagens)",
-      "path": "docs/sobre/ds"
-    },
     { "label": "Princípios", "path": "docs/sobre/principios" },
     {
       "label": "Linguagem Cidadã",
@@ -112,62 +108,44 @@
   "Templates": [
     {
       "label": "Login",
-      "path": "templates/login/login",
-      "newWindow": true,
-      "noRoute": true
+      "path": "templates/login/login"
     },
     {
       "label": "Landing Page",
-      "path": "templates/page/page",
-      "newWindow": true,
-      "noRoute": true
+      "path": "templates/page/page"
     },
     {
       "label": "Resultado de Busca",
-      "path": "templates/search/search",
-      "newWindow": true,
-      "noRoute": true
+      "path": "templates/search/search"
     },
     {
       "label": "Sigin",
       "children": [
         {
           "label": "Signin",
-          "path": "templates/signin/signin",
-          "newWindow": true,
-          "noRoute": true
+          "path": "templates/signin/signin"
         },
         {
           "label": "Signin-1",
-          "path": "templates/signin/signin-1",
-          "newWindow": true,
-          "noRoute": true
+          "path": "templates/signin/signin-1"
         },
         {
           "label": "Signin-2",
-          "path": "templates/signin/signin-2",
-          "newWindow": true,
-          "noRoute": true
+          "path": "templates/signin/signin-2"
         },
         {
           "label": "Signin-3",
-          "path": "templates/signin/signin-3",
-          "newWindow": true,
-          "noRoute": true
+          "path": "templates/signin/signin-3"
         },
         {
           "label": "Signin-4",
-          "path": "templates/signin/signin-4",
-          "newWindow": true,
-          "noRoute": true
+          "path": "templates/signin/signin-4"
         }
       ]
     },
     {
       "label": "Starter",
-      "path": "templates/starter/starter",
-      "newWindow": true,
-      "noRoute": true
+      "path": "templates/starter/starter"
     }
   ]
 }
