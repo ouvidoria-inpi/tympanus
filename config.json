@@ -43,49 +43,6 @@
       ]
     }
   ],
-  "Sobre": [
-    { "label": "Princípios", "path": "docs/sobre/principios" },
-    {
-      "label": "Linguagem Cidadã",
-      "children": [
-        {
-          "label": "Labels botões documentos títulos",
-          "path": "docs/sobre/lbdt"
-        },
-        {
-          "label": "Guia Editorial",
-          "path": "docs/sobre/guiaeditorial"
-        }
-      ]
-    },
-    {
-      "label": "Comunidade",
-      "children": [
-        {
-          "label": "Contato/Suporte",
-          "path": "docs/sobre/contato"
-        },
-        {
-          "label": "Contribuição",
-          "path": "docs/sobre/contribuicao"
-        }
-      ]
-    },
-    {
-      "label": "Diretrizes",
-      "children": [
-        {
-          "label": "E-mag",
-          "path": "docs/sobre/emag"
-        },
-        {
-          "label": "IDG",
-          "path": "docs/sobre/idg"
-        }
-      ]
-    },
-    { "label": "Roadmap", "path": "docs/sobre/roadmap" }
-  ],
   "Fundamentos de Design": [
     {
       "label": "Princípios de Design",
@@ -95,14 +52,6 @@
     { "label": "Tipografia", "path": "docs/estilos/tipografia" },
     { "label": "Ícones", "path": "docs/estilos/icones" },
     { "label": "Grid", "path": "docs/estilos/grid" }
-  ],
-  "Padrões": [
-    { "label": "Autenticação", "path": "docs/padroes/autenticacao" },
-    { "label": "Criação de conta", "path": "docs/padroes/criacao" },
-    { "label": "Contato", "path": "docs/padroes/contato" },
-    { "label": "Busca", "path": "docs/padroes/busca" },
-    { "label": "Pagamento", "path": "docs/padroes/pagamento" },
-    { "label": "Avaliação", "path": "docs/padroes/avaliacao" }
   ],
   "Templates": [
     {
