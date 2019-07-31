@@ -9033,11 +9033,12 @@ a.text-dark:focus {
   text-transform: none;
 }
 #portal-footer .coluna-menu .rodape-navigation li a {
-  display: block;
+  display: inline-block;
   font-size: 16px;
   font-weight: 600;
   min-height: 50px;
   padding-right: 20px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 #portal-footer .logo-acesso-footer {
@@ -9110,7 +9111,7 @@ a.text-dark:focus {
   }
   #portal-footer .coluna-menu .rodape-navigation li.plain {
     border-top: 1px solid #fff;
-    display: block;
+    display: inline-block;
     padding: 12px 0;
     position: relative;
     width: 100%;
@@ -9157,7 +9158,7 @@ a.text-dark:focus {
     display: inline-block;
     margin: 15px 0 15px 0;
     text-align: left;
-    width: 36px;
+    width: 34px;
   }
 
   .logo {

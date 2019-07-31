@@ -740,11 +740,12 @@
       & li{
         & a{
           font-weight: 600;
-          display: block;
+          display: inline-block;
           padding-right: 20px;
           font-size: 16px;
           text-transform: uppercase;
           min-height: 50px;
+          text-decoration:none;
         }
       } 
     }
@@ -824,7 +825,7 @@
           flex: auto;
           &.plain{
             position: relative;
-            display: block;
+            display: inline-block;
             width: 100%;
             padding: 12px 0;
             border-top: 1px solid #fff;
@@ -871,7 +872,7 @@
     border: none;
   }
   .header-icons{
-    width:36px;
+    width:34px;
     text-align: left;
     display: inline-block;
     margin: 15px 0 15px 0;

@@ -1,4 +1,8 @@
-{
+{"Princípios de design":[
+  {
+    "label": "Princípios de Design",
+    "path": "docs/estilos/principios-de-design"
+  }],
   "Componentes": [
     { "label": "Acordeão", "path": "components/accordeon/accordeon" },
     { "label": "Breadcrumb", "path": "components/breadcrumb/breadcrumb" },
@@ -43,11 +47,7 @@
       ]
     }
   ],
-  "Fundamentos de Design": [
-    {
-      "label": "Princípios de Design",
-      "path": "docs/estilos/principios-de-design"
-    },
+  "Fundamentos Visuais": [
     { "label": "Cores", "path": "docs/estilos/cores" },
     { "label": "Tipografia", "path": "docs/estilos/tipografia" },
     { "label": "Ícones", "path": "docs/estilos/icones" },
@@ -59,38 +59,38 @@
       "path": "templates/login/login"
     },
     {
-      "label": "Page",
+      "label": "Área Logada - Sistemas",
       "path": "templates/page/page"
     },
     {
-      "label": "Landing Page",
-      "path": "templates/page/page"
+      "label": "Site",
+      "path": "templates/portal/portal"
     },
     {
       "label": "Resultado de Busca",
       "path": "templates/search/search"
     },
     {
-      "label": "Sigin",
+      "label": "Cadastro de usuário",
       "children": [
         {
-          "label": "Signin",
+          "label": "1 - Início do Cadastro",
           "path": "templates/signin/signin"
         },
         {
-          "label": "Signin-1",
+          "label": "2 - Ativação da Conta",
           "path": "templates/signin/signin-1"
         },
         {
-          "label": "Signin-2",
+          "label": "3 - Verificação do código recebido",
           "path": "templates/signin/signin-2"
         },
         {
-          "label": "Signin-3",
+          "label": "4 - Correção do número do celular",
           "path": "templates/signin/signin-3"
         },
         {
-          "label": "Signin-4",
+          "label": "5 - Conclusão do Cadastro",
           "path": "templates/signin/signin-4"
         }
       ]
