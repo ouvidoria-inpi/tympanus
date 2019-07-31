@@ -4,7 +4,6 @@ container = document.getElementsByClassName('br-select')
 
 for (i = 0; i < container.length; i++) {
   selElmnt = container[i].getElementsByTagName('select')[0]
-  console.log(selElmnt)
   /* For each element, create a new BUTTON that will act as the selected item: */
   select = document.createElement('BUTTON')
   select.setAttribute('class', 'select-selected unselected')
