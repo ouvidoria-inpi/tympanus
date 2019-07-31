@@ -41,15 +41,6 @@
           "path": "docs/documentacao/uso-do-wai-aria"
         }
       ]
-    },
-    {
-      "label": "UX",
-      "children": [
-        {
-          "label": "Princípios de Design",
-          "path": "docs/documentacao/principios-de-design"
-        }
-      ]
     }
   ],
   "Sobre": [
@@ -96,6 +87,10 @@
     { "label": "Roadmap", "path": "docs/sobre/roadmap" }
   ],
   "Fundamentos de Design": [
+    {
+      "label": "Princípios de Design",
+      "path": "docs/estilos/principios-de-design"
+    },
     { "label": "Cores", "path": "docs/estilos/cores" },
     { "label": "Tipografia", "path": "docs/estilos/tipografia" },
     { "label": "Ícones", "path": "docs/estilos/icones" },
@@ -113,6 +108,10 @@
     {
       "label": "Login",
       "path": "templates/login/login"
+    },
+    {
+      "label": "Page",
+      "path": "templates/page/page"
     },
     {
       "label": "Landing Page",
