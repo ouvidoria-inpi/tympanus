@@ -1,4 +1,4 @@
-# Paginador
+# Paginação
 
 Este componente responsável pela paginação. Para manter a semântica do código, recomendamos usar o paginador dentro da tag `<nav>`.
 
