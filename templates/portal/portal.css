@@ -8404,7 +8404,7 @@ a.text-dark:focus {
   text-align: right;
 }
 .header-accessibility li.language-selection a.currentLanguage::after {
-  background: transparent url(img/angle-down.png) no-repeat 50%;
+  background: transparent url(../../assets/images/components_img/portal/angle-down.png) no-repeat 50%;
   content: "";
   display: inline-block;
   height: 14px;
@@ -8444,7 +8444,7 @@ a.text-dark:focus {
 }
 .header-accessibility li.language-selection a.language-pt-br,
 .header-accessibility li.language-selection li.language-pt-br a {
-  background-image: url(img/flag-br.png);
+  background-image: url(../../assets/images/components_img/portal/flag-br.png);
   background-position: 16px;
   background-repeat: no-repeat;
   background-size: 28px 21px;
@@ -8994,7 +8994,7 @@ a.text-dark:focus {
   color: #fff;
 }
 #portal-footer .govbr-logo {
-  background-image: url(img/govbr.png);
+  background-image: url(../../assets/images/components_img/portal/govbr.png);
   background-size: cover;
   height: 60px;
   margin-bottom: 50px;
@@ -9067,25 +9067,25 @@ a.text-dark:focus {
   text-transform: uppercase;
 }
 #portal-footer .portalredes-twitter {
-  background-image: url(img/sprite.png);
+  background-image: url(../../assets/images/components_img/portal/sprite.png);
   background-position: -99px -159px;
   height: 28px;
   width: 27px;
 }
 #portal-footer .portalredes-youtube {
-  background-image: url(img/sprite.png);
+  background-image: url(../../assets/images/components_img/portal/sprite.png);
   background-position: -67px -159px;
   height: 28px;
   width: 32px;
 }
 #portal-footer .portalredes-facebook {
-  background-image: url(img/sprite.png);
+  background-image: url(../../assets/images/components_img/portal/sprite.png);
   background-position: -153px -159px;
   height: 28px;
   width: 25px;
 }
 #portal-footer .portalredes-flickr {
-  background-image: url(img/sprite.png);
+  background-image: url(../../assets/images/components_img/portal/sprite.png);
   background-position: -58px -194px;
   height: 29px;
   width: 29px;

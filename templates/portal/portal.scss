@@ -129,7 +129,7 @@
         text-align: right;
         &::after{
           content: "";
-          background: transparent url(img/angle-down.png) no-repeat 50%;
+          background: transparent url(../../assets/images/components_img/portal/angle-down.png) no-repeat 50%;
           display: inline-block;
           width: 9px;
           height: 14px;
@@ -171,7 +171,7 @@
     &.language-selection a.language-pt-br, 
     &.language-selection li.language-pt-br a{
       display: inline-block;
-      background-image: url(img/flag-br.png);
+      background-image: url(../../assets/images/components_img/portal/flag-br.png);
       background-size: 28px 21px;
       background-repeat: no-repeat;
       background-position: 16px;
@@ -702,7 +702,7 @@
     width: 165px;
     height: 60px;
     margin-bottom: 50px;
-    background-image: url(img/govbr.png);
+    background-image: url(../../assets/images/components_img/portal/govbr.png);
     background-size: cover;
 
   }
@@ -782,25 +782,25 @@
     } 
   }
   & .portalredes-twitter{
-    background-image: url(img/sprite.png);
+    background-image: url(../../assets/images/components_img/portal/sprite.png);
     background-position: -99px -159px;
     width: 27px;
     height: 28px;
   }
   & .portalredes-youtube{
-    background-image: url(img/sprite.png);
+    background-image: url(../../assets/images/components_img/portal/sprite.png);
     background-position: -67px -159px;
     width: 32px;
     height: 28px;
   }
   & .portalredes-facebook{
-    background-image: url(img/sprite.png);
+    background-image: url(../../assets/images/components_img/portal/sprite.png);
     background-position: -153px -159px;
     width: 25px;
     height: 28px;
   }
   & .portalredes-flickr{
-    background-image: url(img/sprite.png);
+    background-image: url(../../assets/images/components_img/portal/sprite.png);
     background-position: -58px -194px;
     width: 29px;
     height: 29px;
