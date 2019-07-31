@@ -1,54 +1,46 @@
-# Adspexit illos temptamenta Eryx defendere ponderibus quis
+# Definição da Tipografia
 
-## Proxima succedit sed
+## Design System do Governo Federal
 
-Lorem markdownum sunt dixit profanam Diomede messes fecissem valuere derepta
-mecum non pronaque, orbi. Legitima monstro _modo cecidit_; subsidere data:
-puerum attulerat quiete procul voces concubitus inter. Ingenio deum, et praebet
-festas mori, fraxinus declive odium. Athin feror, vultu, iaculante tamen cauda
-origo cauda [timuit](http://hospes.org/), in iussae, telo.
+Para a apresentação de todo o conteúdo dos novos sites do Governo Federal, somente uma família de fonte é utilizada e indicada no Guia de Estilos do Governo Federal, - A Raleway. Porém, optou-se pela substituição desta fonte pela **Rawline**, já que ambas são iguais porém os caracteres numéricos da Rawline são alinhados pela base o que facilita a leitura.
 
-## Cumque saliente pressos
+A Rawline foi escolhida para compor o Design System do Governo Brasileiro, tendo como objetivo: facilitar o reconhecimento, por parte dos cidadãos, dos produtos do Governo Federal, juntamente com o padrão de cores e elementos gráficos definidos no Design System.
 
-Fuissem quoque putat data quo seraque vidit. Denique dimovit _arce_ aras Scyrum
-praesaga ducemque _moenibus_: quos nec.
+A Rawline é um tipo de letra sem serifa, elegante concebido com um único peso fino e que possui uma diversidade de pesos que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
 
-- Sororem dum egerat repugnas si Chiae tribuisse
-- Ungues cur poterit non illa post
-- Fixit eadem adunca
-- Contrarius sors
+A Rawline pode ser baixada em [https://h-ibaldo.github.io/Raleway_Fixed_Numerals/](https://h-ibaldo.github.io/Raleway_Fixed_Numerals/)
 
-## Spoliabitur mole
+![Rawline 1](../assets/images/estilos/tipografia/rawline-1.png)
 
-Resumptis silva Ganymedes non Troades prima in ara in dura metus per. Et opaca;
-fremit nempe; pelle dum manu sede, violas ira est a. Mea sub [et caesa
-nutu](http://clangore.org/diespuer), quis hic patruo vacuas ossa quae quantum
-texerat forma. Thisbe Psamathen bene subdita, factas caespite Proserpina,
-balatus tectae cumque ne flavus simili.
+![Rawline 1](../assets/images/estilos/tipografia/rawline-2.png)
 
-## Visa corpore sine erat lapillos
+![Rawline 1](../assets/images/estilos/tipografia/rawline-3.png)
 
-Qui hoste umeri margine morique, duris memorabile iamque ne sint. Curvamine
-Thebis supersunt Cinyras doluit: praedae sua furor sensit quoque tutus domus.
-Non mora, aras.
+![Rawline 1](../assets/images/estilos/tipografia/rawline-4.png)
 
-1. Iudice quid quod severa esse proles tamen
-2. Solutus virilia dedit via Pittheam mille dedimus
-3. Facinus mortalem promptior adsimulat regno ibit et
-4. Saevior nec incipit
-5. Puduit cum fremida est portans omnia per
+![Rawline 1](../assets/images/estilos/tipografia/rawline-5.png)
 
-## Neque omina inimicos saevumque corpora in paterna
+![Rawline 1](../assets/images/estilos/tipografia/rawline-6.png)
 
-Mortale haesit vestigia, singultibus mora Aeneae digitoque adhuc est hunc
-[sontes et posito](http://quihuic.net/iam.html) et longo, Dianae. Pars velut
-turbasti defuit Cinyreius places artus te incubat cornu ponto munere. Cerva est
-semineces Titania quidem Pentheus ad incedere frondentis protegat tamen est,
-hinc arte tota; amo? Cum paelice **suae** claudit pavet infelix. Vipereasque
-dolore et duratur, est parabam repellit volucrem minus.
+## Números | Alinhamento
 
-Hesperiae terras, retinentia quam [sidera telum](http://fatigatumpterelas.io/):
-cum omnia et ante. **Forma vertitur et** postquam vix deduxit bucina: prece
-haut. Gerunt nec fila volucres sinit pariter frena scylla ea, fuit parte litora
-patriaeque crine. Denum favilla servatrix, trepidumque rogabo **male cape**,
-queat, bis et [nec](http://www.vestigia.io/tuta.html).
+Verificou-se que a fonte Raleway possui uma variação no alinhamento dos números. Com o objetivo de aumentar a legibilidade, **optou-se por utilizar a fonte Rawline** substituindo a Raleway, pois os caracteres númericos da **Rawline são alinhados
+pela base**, evitando estranhamento por parte de alguns usuários.
+
+![Rawline Numeros](../assets/images/estilos/tipografia/rawline-numeros.png)
+
+## Tipografia | Tamanhos
+
+Para definir os tamanhos principais dos textos do Design System do Governo Federal, e garantir ume melhor legibilidade, tomou-se como base uma escala modular, o Type Scale, que define uma relação de proporção e hierarquia entre os tamanhos tipográficos.
+
+
+Utilizou-se **16px** como o tamanho base para os textos, e optou-se pelo uso da escala (Major Second) de aproximadamente 1,125 , com peso de 400 (que equivale a Regular).
+
+Os pesos maiores serão definidos na criação dos componentes e templates, de acordo com a necessidade de se criar hierarquias entre os textos.
+
+![Rawline Tamanhos](../assets/images/estilos/tipografia/rawline-tamanhos.png)
+
+![Rawline Sistema Login](../assets/images/estilos/tipografia/rawline-sistema-login.png)
+
+![Rawline Cadastro](../assets/images/estilos/tipografia/rawline-cadastro.png)
+
