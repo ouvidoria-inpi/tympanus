@@ -21,6 +21,10 @@
       "label": "Desenvolvimento",
       "children": [
         {
+          "label": "Como Começar",
+          "path": "docs/documentacao/uso-do-css"
+        },
+        {
           "label": "Acessibilidade no Código HTML",
           "path": "docs/documentacao/acessibilidade-no-codigo-html"
         },
@@ -91,7 +95,7 @@
     },
     { "label": "Roadmap", "path": "docs/sobre/roadmap" }
   ],
-  "Estilos": [
+  "Fundamentos de Design": [
     { "label": "Cores", "path": "docs/estilos/cores" },
     { "label": "Tipografia", "path": "docs/estilos/tipografia" },
     { "label": "Ícones", "path": "docs/estilos/icones" },
