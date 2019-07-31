@@ -9,22 +9,22 @@ Existem, por padrão, 02 grupos de botões:
 **Botão Principal ou Primário** (alta ênfase)
 São botões que possuem maior ênfase pela sua importância. São representados com preenchimento de cor e(ou) sombra.
 
-![Botão Finalístico](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-finalistico.png)
+![Botão Finalístico](../../assets/images/components_img/botoes/botao-finalistico.png)
 
 **Botão Secundário ou Delineado** (média ênfase)
 São usados para dar uma ênfase intermediária, menor que os botões principais, além de serem representados visualmente pelo seu contorno delimitado por uma linha fina, sem cor, e sem preenchimento (vazado). Também chamados de "botões fantasmas".
 
-![Botão Secundário ou Delineado](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-secundario.png)
+![Botão Secundário ou Delineado](../../assets/images/components_img/botoes/botao-secundario.png)
 
 **Botão Terciário** (baixa ênfase)
 São botões que possuem características de hiperlinks. 
 
-![Botão Terciário](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-terciario.png)
+![Botão Terciário](../../assets/images/components_img/botoes/botao-terciario.png)
 
 **Botão Acesso Gov.Br**
 São botões que facilitam o acesso aos sistemas através de um login prévio através do **gov.br**.
 
-![Botão Acesso Gov.Br](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-acesso-govbr.png)
+![Botão Acesso Gov.Br](../../assets/images/components_img/botoes/botao-acesso-govbr.png)
 
 ### Botões Internos
 
@@ -33,24 +33,24 @@ São botões usados para incitar um visitante a realizar determinada ação dent
 
 Possue características de construção (cor, forma, dimensão) diferenciada. São representados com preenchimento de cor e uma borda que ajuda a ancorá-lo em qualquer lugar da tela. 
 
-![Botão de ação (call to action)](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-solicitar.png)
+![Botão de ação (call to action)](../../assets/images/components_img/botoes/botao-solicitar.png)
 
 **Botões Contextuais** (baixa ênfase)
 São botões que assistem a navegação do usuário.
 
 **Botão de ação de flutuação**
 
-**voltar ao topo** ![Botão de ação de flutuação](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-flutuante.png)
+**voltar ao topo** ![Botão de ação de flutuação](../../assets/images/components_img/botoes/botao-flutuante.png)
 
 **Botões com ícones**
 
-**Filtrar** ![Botões com ícones](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-icone.png)
+**Filtrar** ![Botões com ícones](../../assets/images/components_img/botoes/botao-icone.png)
 
 **Rede social**
-![Botões de rede social](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botao-rede-social.png)
+![Botões de rede social](../../assets/images/components_img/botoes/botao-rede-social.png)
 
 **Links**
-![Links](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/link.png)
+![Links](../../assets/images/components_img/botoes/link.png)
 
 # Estados
 
@@ -60,7 +60,7 @@ Os estados dos botões servem para dar feedback ao usuário sobre as ações que
 
 ---
 
-![Estado](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/botoes-estado.png)
+![Estado](../../assets/images/components_img/botoes/botoes-estado.png)
 
 **Normal**
 O estado padrão do botão, como ele é exibido naturalmente na interface. 
@@ -111,16 +111,16 @@ Os textos dos botões precisam ser formatados em letras minúsculas com a primei
 Podem ser posicionados de acordo com a necessidade das ações.
 
 ## Tipografia
-![Tipografia](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/tipografia.png)
+![Tipografia](../../assets/images/components_img/botoes/tipografia.png)
 
 ## Sombra Iluminação
-![Sombra Iluminação](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/sombra-iluminacao.png)
+![Sombra Iluminação](../../assets/images/components_img/botoes/sombra-iluminacao.png)
 
 ## Dimensão
-![Dimensão](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/dimensao.png)
+![Dimensão](../../assets/images/components_img/botoes/dimensao.png)
 
 ## Arredondamento
-![Arredondamento](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/arredondamento.png)
+![Arredondamento](../../assets/images/components_img/botoes/arredondamento.png)
 
 ## Espaçamento mínimo sugerido entre botões
-![Espaço mínimo entre botões](https://git.serpro/ds-gov/componentes/raw/develop/assets/images/components_img/botoes/espaco-minimo-botoes.png)
+![Espaço mínimo entre botões](../../assets/images/components_img/botoes/espaco-minimo-botoes.png)
