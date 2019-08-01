@@ -19,7 +19,9 @@ São usados para dar uma ênfase intermediária, menor que os botões principais
 **Botão Terciário** (baixa ênfase)
 São botões que possuem características de hiperlinks. 
 
-![Botão Terciário](../../assets/images/components_img/botoes/botao-terciario.png)
+![Botão Terciário Normal](../../assets/images/components_img/botoes/bt-terciario-normal.png)
+
+![Botão Cancelar Normal](../../assets/images/components_img/botoes/bt-cancelar-normal.png)
 
 **Botão Acesso Gov.Br**
 São botões que facilitam o acesso aos sistemas através de um login prévio através do **gov.br**.
