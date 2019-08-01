@@ -51,58 +51,54 @@
 //Fonte Personalizada
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../../assets/fonts/icomoon/icomoon.eot?vao738');
-  src:  url('../../assets/fonts/icomoon/icomoon.eot?vao738#iefix') format('embedded-opentype'),
-    url('../../assets/fonts/icomoon/icomoon.ttf?vao738') format('truetype'),
-    url('../../assets/fonts/icomoon/icomoon.woff?vao738') format('woff'),
-    url('../../assets/fonts/icomoon/icomoon.svg?vao738#icomoon') format('svg');
-  font-weight: normal;
+  font-family: "icomoon";
   font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/icomoon/icomoon.ttf?vao738") format("truetype");
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
+[class^="icon-"], [class*=" icon-"] { // sass-lint:disable-line single-line-per-selector
+  // Better Font Rendering
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+
 }
 
-.fas.fa-adjust::before,
-.icon-alto-contraste:before {
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+.fas.fa-adjust::before, .icon-alto-contraste::before { // sass-lint:disable-line force-element-nesting, force-pseudo-nesting, single-line-per-selector
+  color: $color-gray-7;
   content: "\e904";
-  color:#333;
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
 }
-.icon-icon-acesso:before {
+.icon-icon-acesso::before { // sass-lint:disable-line force-pseudo-nesting
+  color: $color-gray-7;
   content: "\e903";
-  color:#333;
 }
-.icon-icon-close:before {
+.icon-icon-close::before { // sass-lint:disable-line force-pseudo-nesting
+  color: $color-gray-7;
   content: "\e900";
-  color:#333;
 }
-.icon-icon-planalto:before {
+.icon-icon-planalto::before { // sass-lint:disable-line force-pseudo-nesting
+  color: $color-gray-7;
   content: "\e901";
-  color:#333;
 }
-.icon-icon-tropas:before {
+.icon-icon-tropas::before { // sass-lint:disable-line force-pseudo-nesting
+  color: $color-gray-7;
   content: "\e902";
-  color:#333;
 }
 
 
