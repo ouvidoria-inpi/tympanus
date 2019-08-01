@@ -1,7 +1,7 @@
 {"Princípios de design":[
   {
     "label": "Princípios de Design",
-    "path": "docs/principios/principios-de-design"
+    "path": "docs/estilos/principios-de-design"
   }],
   "Componentes": [
     { "label": "Acordeão", "path": "components/accordeon/accordeon" },
