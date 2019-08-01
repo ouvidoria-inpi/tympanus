@@ -3,7 +3,14 @@
     "label": "Princípios de Design",
     "path": "docs/estilos/principios-de-design"
   }],
+  "Fundamentos Visuais": [
+    { "label": "Cores", "path": "docs/estilos/cores" },
+    { "label": "Tipografia", "path": "docs/estilos/tipografia" },
+    { "label": "Ícones", "path": "docs/estilos/icones" },
+    { "label": "Grid", "path": "docs/estilos/grid" }
+  ],
   "Componentes": [
+    { "label": "Status dos Componentes", "path": "docs/overview-components" },
     { "label": "Acordeão", "path": "components/accordeon/accordeon" },
     { "label": "Breadcrumb", "path": "components/breadcrumb/breadcrumb" },
     { "label": "Botão", "path": "components/button/button" },
@@ -20,40 +27,8 @@
     { "label": "Tabela", "path": "components/table/table" },
     { "label": "Abas", "path": "components/tabs/tabs" }
   ],
-  "Documentação": [
-    {
-      "label": "Desenvolvimento",
-      "children": [
-        {
-          "label": "Como Começar",
-          "path": "docs/documentacao/uso-do-css"
-        },
-        {
-          "label": "Acessibilidade no Código HTML",
-          "path": "docs/documentacao/acessibilidade-no-codigo-html"
-        },
-        {
-          "label": "Construção do CSS",
-          "path": "docs/documentacao/construcao-do-css"
-        },
-        {
-          "label": "Construção do HTML",
-          "path": "docs/documentacao/construcao-do-html"
-        },
-        {
-          "label": "Uso do WAI-ARIA",
-          "path": "docs/documentacao/uso-do-wai-aria"
-        }
-      ]
-    }
-  ],
-  "Fundamentos Visuais": [
-    { "label": "Cores", "path": "docs/estilos/cores" },
-    { "label": "Tipografia", "path": "docs/estilos/tipografia" },
-    { "label": "Ícones", "path": "docs/estilos/icones" },
-    { "label": "Grid", "path": "docs/estilos/grid" }
-  ],
   "Templates": [
+    { "label": "Status dos Templates", "path": "docs/overview-templates" },
     {
       "label": "Login",
       "path": "templates/login/login"
@@ -98,6 +73,33 @@
     {
       "label": "Starter",
       "path": "templates/starter/starter"
+    }
+  ],
+  "Boas Práticas": [
+    {
+      "label": "Desenvolvimento",
+      "children": [
+        {
+          "label": "Como Começar",
+          "path": "docs/documentacao/uso-do-css"
+        },
+        {
+          "label": "Acessibilidade no Código HTML",
+          "path": "docs/documentacao/acessibilidade-no-codigo-html"
+        },
+        {
+          "label": "Construção do CSS",
+          "path": "docs/documentacao/construcao-do-css"
+        },
+        {
+          "label": "Construção do HTML",
+          "path": "docs/documentacao/construcao-do-html"
+        },
+        {
+          "label": "Uso do WAI-ARIA",
+          "path": "docs/documentacao/uso-do-wai-aria"
+        }
+      ]
     }
   ]
 }
