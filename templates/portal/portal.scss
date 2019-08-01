@@ -1,5 +1,5 @@
 // Carregar variáveis do DS-Gov
-@import "../../assets/styles/dsgov-base.scss";
+@import "../../assets/styles/dsgov-base";
 
 // Atalhos para conteúdo
 .skip-menu {
@@ -44,7 +44,7 @@
     font-size: 26px;
     font-weight: 400;
   }
-  .name-bold{
+  .name-bold {
     font-weight: 600;
   }
   .description {
@@ -55,21 +55,21 @@
 }
 
 //Menu Hamburguer
-.header-icons{
-  text-align: center;
+.header-icons {
   margin: 15px 10px 15px 0;
-  & .ico-navegacao{
-    text-decoration: none;
-    color: #333 !important;
+  text-align: center;
+  & .ico-navegacao {
+    color: $color-gray-7 !important;
     cursor: pointer;
     display: inline-block;
-    width: 28px;
-    height: 25px;
     font-size: 22px;
-    & .fa{
+    height: 25px;
+    text-decoration: none;
+    width: 28px;
+    & .fa {
       font-weight: 900;
     }
-    & .fa-times{
+    & .fa-times {
       display: none;
     }
   }
@@ -82,7 +82,7 @@
   list-style: none;
   margin: 0;
   padding-left: 0;
-  padding-top:14px;
+  padding-top: 14px;
   a {
     color: $color-gray-7;
     font-size: 11px;
@@ -98,90 +98,90 @@
       }
     }
   }
-  ul{
-    margin: 0;
-    padding: 0;
+  ul {
     list-style: none;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
-  li{
-    margin: 0;
-    padding: 0;
+  li {
+    display: inline-block;
     list-style: none;
     list-style-type: none;
-    display: inline-block;
+    margin: 0;
+    padding: 0;
     & .link-contraste,
-    & .link-vlibras{
+    & .link-vlibras {
+      border-right: 1px solid $color-gray-3;
       display: inline-block;
-      border-right: 1px solid #ccc;
       padding: 5px 15px;
-      & i{
+      & i {
         font-size: 18px;
         font-weight: 900;
       }
     }
-    &.language-selection{
-      & a.currentLanguage{
-        padding: 0 0 0 36px;
-        margin-left: 15px;
+    &.language-selection {
+      & a.current-language {  // sass-lint:disable-line force-element-nesting
         background-position: 0;
+        margin-left: 15px;
+        padding: 0 0 0 36px;
         position: relative;
         text-align: right;
-        &::after{
+        &::after {
+          background: transparent url("../../assets/images/components_img/portal/angle-down.png") no-repeat 50%;
           content: "";
-          background: transparent url(../../assets/images/components_img/portal/angle-down.png) no-repeat 50%;
           display: inline-block;
-          width: 9px;
           height: 14px;
+          width: 9px;
         }
       }
-      & ul{
-        & li{
-          & a{
+      & ul {
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22); // sass-lint:disable-line no-color-literals
+        background-color: $color-white;
+        border-top: 1px solid $color-warning;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22); // sass-lint:disable-line no-color-literals
+        display: none;
+        font-size: 16px;
+        padding: 0;
+        position: absolute;
+        right: 296px;
+        text-align: left;
+        top: 100%;
+        z-index: 160;
+        & li {
+          display: block;
+          margin-right: 20px;
+          text-transform: none;
+          white-space: nowrap;
+          & a {
             font-size: 14px;
           }
-          white-space: nowrap;
-          display: block;
-          text-transform: none;
-          margin-right: 20px;
         }
-        & .title{
+        & .title {
+          border-bottom: 1px solid $color-gray-3;
+          color: $color-primary-darken-25;
           font-size: 14px;
-          font-weight: 600;
           font-style: italic;
-          color: #071d41;
+          font-weight: 600;
           margin: 10px 20px 0;
           padding-bottom: 4px;
-          border-bottom: 1px solid #ccc;
         }
-        display: none;
-        position: absolute;
-        z-index: 160;
-        top: 100%;
-        border-top: 1px solid #ffcd07;
-        -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.22);
-        box-shadow: 0 3px 6px rgba(0,0,0,.22);
-        padding: 0;
-        background-color: #fff;
-        font-size: 16px;
-        text-align: left;
-        right: 296px;
       }
     }
-    &.language-selection a.language-pt-br, 
-    &.language-selection li.language-pt-br a{
-      display: inline-block;
-      background-image: url(../../assets/images/components_img/portal/flag-br.png);
-      background-size: 28px 21px;
-      background-repeat: no-repeat;
+    &.language-selection a.language-pt-br, // sass-lint:disable-line force-element-nesting
+    &.language-selection li.language-pt-br a { // sass-lint:disable-line force-element-nesting
+      background-image: url("../../assets/images/components_img/portal/flag-br.png");
       background-position: 16px;
-      text-align: left;
-      padding: 9px 0;
-      padding-left: 49px;
-      margin-left: 0;
+      background-repeat: no-repeat;
+      background-size: 28px 21px;
+      display: inline-block;
       font-size: 16px;
       font-weight: 500;
       line-height: 21px;
+      margin-left: 0;
+      padding: 9px 0;
+      padding-left: 49px;
+      text-align: left;
     }
   }
   img {
@@ -215,13 +215,13 @@
 
 // Busca
 
-.desktop-header{
-  & .shadow-bottom{
-    & .container{
+.desktop-header {
+  & .shadow-bottom {
+    & .container {
       height: 64px;
     }
   }
-  & .br-search{
+  & .br-search {
     height: 64px;
   }
 }
@@ -243,12 +243,12 @@
           box-shadow: none;
         }
         &::placeholder {
-          color: $color-black;
+          // color: $color-black;
+          color: $color-gray-6;
           font-size: 16px;
-          font-weight: 400;
-          color: #555;
-          text-align: right;
           font-style: italic;
+          font-weight: 400;
+          text-align: right;
         }
       }
     }
@@ -281,11 +281,10 @@
       }
     }
     //botão de limpar
-    .clear-button{
-      border: 0;
+    .clear-button {
       background: transparent;
+      border: 0;
     }
-    
   }
   // Versão mobile
   .mobile-header & {
@@ -672,221 +671,206 @@
 }
 
 
-#portal-footer{
-    clear: both;
-    color: #fff;
-    background-color: #071d41;
-    padding: 60px 32px;
-    margin-bottom: 0;
-    font-size: 75%;
+#portal-footer {
+  background-color: $color-primary-darken-25;
+  clear: both;
+  color: $color-white;
+  font-size: 75%;
+  margin-bottom: 0;
+  padding: 60px 32px;
 
-  & ul{
+  & ul {
     margin: 0;
     padding: 0;
-    & li{
+    & li {
+      display: block;
       margin: 0;
       padding: 0;
     }
-    &.submenu li{
+    &.submenu li { // sass-lint:disable-line force-element-nesting
       float: none;
     }
-    & li{
-      display: block;
-    }
-  } 
-    
-  & a{
-    color: #fff;
   }
-  & .govbr-logo{
-    width: 165px;
+  & a {
+    color: $color-white;
+  }
+  & .govbr-logo {
+    background-image: url("../../assets/images/components_img/portal/govbr.png");
+    background-size: cover;
     height: 60px;
     margin-bottom: 50px;
-    background-image: url(../../assets/images/components_img/portal/govbr.png);
-    background-size: cover;
+    width: 165px;
 
   }
-  & .coluna-menu{
-    & .rodape-navigation{
-      flex-wrap: wrap;
+  & .coluna-menu {
+    & .rodape-navigation {
       display: flex;
-      & li{
-        margin: 0 12px;
+      flex-wrap: wrap;
+      & li {
         -webkit-box-flex: 1;
         flex: 1;
-        & .submenu li{
-          width: 100%;
+        margin: 0 12px;
+        & .submenu li { // sass-lint:disable-line force-element-nesting
           margin: 8px 0;
-          & a{
-            line-height: 1.4;
-            font-weight: 400;
-            margin-right: 0;
+          width: 100%;
+          & a {
             font-size: 14px;
-            text-transform: none;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-right: 0;
             min-height: auto;
+            text-transform: none;
           }
         }
-        & a{
-          font-weight: 400;
+        & a {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 600;
           margin-right: 0;
-          font-size: 14px;
-          text-transform: none;
-          min-height: auto;
+          min-height: 50px;
+          padding-right: 20px;
+          text-decoration: none;
+          text-transform: uppercase;
         }
       }
-    } 
-
-    & .rodape-navigation {
-      & li{
-        & a{
-          font-weight: 600;
-          display: inline-block;
-          padding-right: 20px;
-          font-size: 16px;
-          text-transform: uppercase;
-          min-height: 50px;
-          text-decoration:none;
-        }
-      } 
     }
-  } 
-  & .logo-acesso-footer{
-    width: 117px;
+  }
+  & .logo-acesso-footer {
+    display: inline-block;
     height: 49px;
-    display: inline-block;
     margin-right: 45px;
+    width: 117px;
   }
-  & .logo-governo-federal{
-    width: 149px;
-    height: 42px;
+  & .logo-governo-federal {
     display: inline-block;
+    height: 42px;
+    width: 149px;
   }
 
 
-  & .redes-e-logos{
-    & .redes-sociais{
-      & .portal-redes li{
+  & .redes-e-logos {
+    & .redes-sociais {
+      & .portal-redes li { // sass-lint:disable-line force-element-nesting
         display: inline-block;
         margin-right: 45px;
-        & a{
-          text-indent: -3000px;
+        & a {
           display: inline-block;
-          width: 34px;
           height: 33px;
+          text-indent: -3000px;
+          width: 34px;
         }
       }
-      & h3{
+      & h3 {
+        font-weight: 600;
         margin-bottom: 15px;
         text-transform: uppercase;
-        font-weight: 600; 
       }
-    } 
+    }
   }
-  & .portalredes-twitter{
-    background-image: url(../../assets/images/components_img/portal/sprite.png);
+  & .portalredes-twitter {
+    background-image: url("../../assets/images/components_img/portal/sprite.png");
     background-position: -99px -159px;
+    height: 28px;
     width: 27px;
-    height: 28px;
   }
-  & .portalredes-youtube{
-    background-image: url(../../assets/images/components_img/portal/sprite.png);
+  & .portalredes-youtube {
+    background-image: url("../../assets/images/components_img/portal/sprite.png");
     background-position: -67px -159px;
+    height: 28px;
     width: 32px;
-    height: 28px;
   }
-  & .portalredes-facebook{
-    background-image: url(../../assets/images/components_img/portal/sprite.png);
+  & .portalredes-facebook {
+    background-image: url("../../assets/images/components_img/portal/sprite.png");
     background-position: -153px -159px;
-    width: 25px;
     height: 28px;
+    width: 25px;
   }
-  & .portalredes-flickr{
-    background-image: url(../../assets/images/components_img/portal/sprite.png);
+  & .portalredes-flickr {
+    background-image: url("../../assets/images/components_img/portal/sprite.png");
     background-position: -58px -194px;
-    width: 29px;
     height: 29px;
+    width: 29px;
   }
-  & .logos-footer{
+  & .logos-footer {
     text-align: right;
   }
-  & .colunas-rodape{
+  & .colunas-rodape {
     flex-wrap: wrap;
     margin-bottom: 60px;
   }
 }
 
-@media (max-width: 1024px){
-  #portal-footer{
-    & .coluna-menu{
-      & .rodape-navigation{
+@media (max-width: 1024px) {
+  #portal-footer {
+    & .coluna-menu {
+      & .rodape-navigation {
         width: 100%;
-        & li{
+        & li {
           -webkit-box-flex: 1;
           flex: auto;
-          &.plain{
-            position: relative;
+          &.plain {
+            border-top: 1px solid $color-white;
             display: inline-block;
-            width: 100%;
             padding: 12px 0;
-            border-top: 1px solid #fff;
-            & ul{
+            position: relative;
+            width: 100%;
+            & ul {
               display: none;
             }
-            &.dropdown-submenu{
-              &.opened::after{
+            &.dropdown-submenu {
+              cursor: pointer;
+              &.opened::after { // sass-lint:disable-line force-pseudo-nesting
                 content: "\F068";
               }
-              &::after{
+              &::after {
+                content: "\F067";
                 font-family: Font Awesome\ 5 Free;
                 font-size: 14px;
                 font-weight: 900;
-                content: "\F067";
                 position: absolute;
-                top: 25px;
                 right: 10px;
+                top: 25px;
               }
-              cursor: pointer;
             }
-          }
-            
           }
         }
       }
-    & .logos-footer{
+    }
+    & .logos-footer {
       text-align: left;
     }
-    .redes-sociais{
+    .redes-sociais {
       margin-bottom: 40px;
     }
   }
 }
 
 
-@media (max-width: 996px){
-  .br-button.is-primary{
+@media (max-width: 996px) {
+  .br-button.is-primary { // sass-lint:disable-line force-element-nesting
     background: none;
-    border: none;
-    color: #1351b4;
+    border: 0;
+    color: $color-primary;
   }
-  .br-button.is-secondary{
-    border: none;
+  .br-button.is-secondary { // sass-lint:disable-line force-element-nesting
+    border: 0;
   }
-  .header-icons{
-    width:34px;
-    text-align: left;
+  .header-icons {
     display: inline-block;
-    margin: 15px 0 15px 0;
+    margin: 15px 0;
+    text-align: left;
+    width: 34px;
   }
-  .logo{
+  .logo {
     display: inline-block;
   }
 }
 
-@media (max-width: 640px){
-  .br-button.is-primary{
+@media (max-width: 640px) {
+  .br-button.is-primary { // sass-lint:disable-line force-element-nesting
     margin-top: 0;
   }
-  .br-button.is-secondary{
+  .br-button.is-secondary { // sass-lint:disable-line force-element-nesting
     display: none !important;
   }
 }
