@@ -1,5 +1,15 @@
-function _listener() {
-  //don't remove this function
+function closeMenu(event){
+  var dropdown =  event.target.nodeName!='HTML'?event.target.parentNode.classList.contains('is-active') || event.target.parentNode.parentNode.classList.contains('is-active'):false
+  if(!dropdown){
+      document.querySelectorAll('.dropdown.is-active').forEach(function(item) {
+        item.classList.remove('is-active')
+      })
+      window.document.removeEventListener(
+        'click',
+          closeMenu
+      )
+  }
+
 }
 
 class ToggleElemnt {
@@ -14,9 +24,7 @@ class ToggleElemnt {
 
     window.document.addEventListener(
       'click',
-      function _listener() {
-        this.closeClick(event, element)
-      }.bind(this, element),
+        closeMenu,
       false
     )
   }
@@ -27,14 +35,6 @@ class ToggleElemnt {
 
   isActive(element) {
     return element.classList.contains('is-active')
-  }
-
-  closeClick(event, element) {
-    if (event.target.closest('.is-active')) {
-    } else {
-      this.removeClass(element)
-      window.document.removeEventListener('click', _listener)
-    }
   }
 
   async toggle(element) {
