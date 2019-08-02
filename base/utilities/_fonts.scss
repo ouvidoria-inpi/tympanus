@@ -47,3 +47,58 @@
 .font-raleway {
   font-family: $raleway, serif !important;
 }
+
+//Fonte Personalizada
+
+@font-face {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/icomoon/icomoon.ttf?vao738") format("truetype");
+}
+
+[class^="icon-"], [class*=" icon-"] { // sass-lint:disable-line single-line-per-selector
+  // Better Font Rendering
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+
+}
+
+.fas.fa-adjust::before, .icon-alto-contraste::before { // sass-lint:disable-line force-element-nesting, force-pseudo-nesting, single-line-per-selector
+  color: $color-gray-7;
+  content: "\e904";
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+.icon-icon-acesso::before { // sass-lint:disable-line force-pseudo-nesting
+  color: $color-gray-7;
+  content: "\e903";
+}
+.icon-icon-close::before { // sass-lint:disable-line force-pseudo-nesting
+  color: $color-gray-7;
+  content: "\e900";
+}
+.icon-icon-planalto::before { // sass-lint:disable-line force-pseudo-nesting
+  color: $color-gray-7;
+  content: "\e901";
+}
+.icon-icon-tropas::before { // sass-lint:disable-line force-pseudo-nesting
+  color: $color-gray-7;
+  content: "\e902";
+}
+
+
