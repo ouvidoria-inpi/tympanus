@@ -45,6 +45,7 @@
 }
 
 @mixin arrow($color: $color-primary) {
+  padding-right: $spacing-8;
   &::after {
     color: $color ;
     content: $select-arrow-content;

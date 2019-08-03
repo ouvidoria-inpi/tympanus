@@ -24,6 +24,7 @@
   font-size: 16px;
   font-weight: 400;
   padding: 8px 16px;
+  padding-right: 40px;
   position: relative;
   -moz-text-align-last: left;
   text-align-last: left;
@@ -60,6 +61,9 @@
 .br-select .select-selected:disabled {
   background: #ededed;
 }
+.br-select .select-selected:focus {
+  padding-right: 40px;
+}
 .br-select .select-selected:focus::after {
   color: #2b74e9;
   content: "";
@@ -70,6 +74,9 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
+}
+.br-select .select-selected:disabled {
+  padding-right: 40px;
 }
 .br-select .select-selected:disabled::after {
   color: #9e9d9d;
@@ -123,6 +130,7 @@
   -webkit-box-shadow: 0 0 0 1px #2b74e9;
   box-shadow: 0 0 0 1px #2b74e9;
   outline: none;
+  padding-right: 40px;
 }
 .br-select.is-focus .select-selected::after {
   color: #2b74e9;
@@ -139,6 +147,7 @@
   border-color: #ff3333;
   -webkit-box-shadow: 0 0 0 1px #ff3333;
   box-shadow: 0 0 0 1px #ff3333;
+  padding-right: 40px;
 }
 .br-select.is-invalid .select-selected::after {
   color: #ff3333;
@@ -162,6 +171,7 @@
   border-color: #168821;
   -webkit-box-shadow: 0 0 0 1px #168821;
   box-shadow: 0 0 0 1px #168821;
+  padding-right: 40px;
 }
 .br-select.is-valid .select-selected::after {
   color: #168821;
