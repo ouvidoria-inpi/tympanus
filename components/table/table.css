@@ -1,5 +1,32 @@
 /*!
- * table - 0.1.0 */
+ * table - 0.1.1 */
+.br-table .search {
+  -webkit-box-pack: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin: 8px 0;
+}
+.br-table .search > * {
+  align-items: center;
+  -webkit-box-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  margin-left: 16px;
+}
+.br-table .search > * label {
+  font-weight: 400;
+  margin-right: 8px;
+}
+.br-table .search > * .icon {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
 .br-table-title {
   border-bottom: 2px solid #cccccc;
   color: #555555;

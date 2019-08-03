@@ -2,14 +2,32 @@
 @import "../../base/dsgov-base";
 
 /*!
- * table - 0.1.0 */
+ * table - 0.1.1 */
 
 // Carregar dependências
 @import "configs";
 @import "mixins";
 
-// Estilos de tabela
-
+// Estilos específicos
+.#{$prefix}table {
+  .search {
+    display: flex;
+    justify-content: flex-end;
+    margin: $spacing-1 0;
+    > * {
+      align-items: center;
+      display: flex;
+      margin-left: $spacing-3;
+      label {
+        font-weight: 400;
+        margin-right: $spacing-1;
+      }
+      .icon {
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
 @include table-title;
 @include thead;
 @include tbody;
