@@ -3,8 +3,7 @@
   @include crumb-item;
   @include crumb-separator;
   @include crumb-active;
-  align-items: center;
-  display: flex;
+  display: block;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -25,9 +24,8 @@
 
 @mixin crumb-item {
   li {
-    align-items: center;
     color: $breadcrumb-color;
-    display: flex;
+    display: inline;
     font-size: $breadcrumb-font-size;
     font-weight: $breadcrumb-font-weight;
     a {
