@@ -114,7 +114,9 @@
   font-weight: 700;
 }
 .br-table table .actions {
-  display: inline;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   position: relative;
 }
 .br-table table .actions a,
