@@ -1,24 +1,45 @@
-// Definições
+// Título da tabela
+$table-caption-font-size: 20px;
+$table-caption-margin: $spacing-1;
+$table-caption-padding: $spacing-1;
+
+// Estilos básicos da tabela
 $table-width: 100%;
-$table-responsive-width: 100%;
-$table-responsive-first-col: 150px;
+$table-fixed-column-width: 150px;
 
-$table-border-thead-size: 1px;
-$table-border-thead-color: $color-gray-3;
+$table-border: 1px solid $color-gray-3;
 
-$table-border-tbody-size: 1px;
-$table-border-tbody-color: $color-gray-3;
+$table-column-color: $color-gray-5;
+$table-column-font-size: 14px;
+$table-column-font-weight: 500;
+$table-column-padding: $spacing-3;
+$table-column-vertical-align: top;
 
-$table-pading-thead-cell: 30px 25px;
-$table-pading-tbody-cell: 20px 25px;
-
-$table-margin-icons: 0 8px;
-
-$table-title-margin-bottom: 40px;
-$table-title-padding-bottom: 10px;
-$table-title-border-size: 2px;
+$table-thead-background: $color-gray-1;
+$table-thead-color: $color-primary-darken-15;
+$table-thead-font-size: 16px;
+$table-thead-font-weight: 700;
+$table-thead-tablet-padding: $spacing-4;
+$table-thead-desktop-padding: $spacing-5;
+$table-thead-tv-padding: $spacing-6;
 
 $table-hover: $color-primary-pastel;
+$table-hover-text: $color-gray-7;
 
-$table-shadow-responsive-first-column: 4px 0px 2px -1px rgba(0, 0, 0, 0.2);
+$table-active: $color-primary-lighten-15;
+$table-active-inverse: $color-white;
 
+// Coluna de ações
+$table-actions-color: $color-primary;
+$table-actions-mobile-padding: $spacing-2;
+$table-actions-desktop-padding: $spacing-1;
+
+$table-actions-list-background: $color-white;
+$table-actions-list-font-size: 16px;
+$table-actions-list-shadow: 0 6px 6px rgba($color-black, 0.08);
+$table-actions-list-width: 120px;
+$table-actions-list-zindex: 1;
+
+// Seleção de linhas da tabela
+$table-length-label: 400;
+$table-length-margin: $spacing-1 0;
