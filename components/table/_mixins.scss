@@ -9,6 +9,10 @@
     .br-check {
       margin: (- $table-column-padding) 0;
     }
+    .br-input {
+      display: flex;
+      margin: (- $table-column-padding * 0.5) 0;
+    }
   }
 }
 

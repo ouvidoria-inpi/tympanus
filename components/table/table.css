@@ -192,6 +192,12 @@
 .br-table table .br-check {
   margin: -16px 0;
 }
+.br-table table .br-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -8px 0;
+}
 .br-table .caption {
   border-bottom: 1px solid #cccccc;
   font-size: 20px;
