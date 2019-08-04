@@ -6,12 +6,35 @@
     @include table-actions;
     border-top: $table-border;
     width: $table-width;
+    .br-check {
+      margin: (- $table-column-padding) 0;
+    }
   }
 }
 
 @mixin table-row {
   tbody {
     tr {
+      // Força menu action abrir para cima nas últimas 4 linhas
+      &:nth-last-child(-n + 4) {
+        .actions {
+          .list {
+            bottom: 100%;
+            top: auto;
+          }
+        }
+      }
+      // Força menu action inline abrir pra cima na última linha
+      &:nth-last-child(n + 2) {
+        .actions {
+          &.is-inline {
+            .list {
+              bottom: auto;
+              top: 100%;
+            }
+          }
+        }
+      }
       &:hover {
         background: $table-hover;
         th,
@@ -21,23 +44,36 @@
           color: $table-hover-text;
         }
       }
-    }
-  }
-  tr {
-    &:nth-last-child(-n + 4) {
-      .actions {
-        .list {
-          bottom: 100%;
-          top: auto;
+      // Linha marcada
+      &.is-active {
+        &:hover {
+          background: inherit;
+          th,
+          td {
+            box-shadow: none;
+            color: $table-active-inverse;
+          }
         }
-      }
-    }
-    &:nth-last-child(n + 2) {
-      .actions {
-        &.is-inline {
-          .list {
-            bottom: auto;
-            top: 100%;
+        th,
+        td {
+          background: $table-active;
+          border-color: $table-active;
+          color: $table-active-inverse;
+        }
+        .actions {
+          > * {
+            color: $table-active-inverse;
+          }
+        }
+        .br-check {
+          input[type="checkbox"]:checked + label {
+            &::before {
+              background: $table-active-inverse;
+              border-color: $table-active-inverse;
+            }
+            &::after {
+              border-color: $table-active;
+            }
           }
         }
       }
@@ -86,13 +122,16 @@
   .actions {
     display: inline;
     position: relative;
-    .trigger {
+    a,
+    button {
       background: transparent;
-      border: 0;
       color: $table-actions-color;
+      border: 0;
+      text-decoration: none;
+    }
+    .trigger {
       margin: (- $table-column-padding) 0;
       padding: $table-actions-mobile-padding $table-column-padding;
-      text-decoration: none;
     }
     .list {
       background: $table-actions-list-background;

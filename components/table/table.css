@@ -31,6 +31,14 @@
   border-top: 1px solid #cccccc;
   width: 100%;
 }
+.br-table table tbody tr:nth-last-child(-n + 4) .actions .list {
+  bottom: 100%;
+  top: auto;
+}
+.br-table table tbody tr:nth-last-child(n + 2) .actions.is-inline .list {
+  bottom: auto;
+  top: 100%;
+}
 .br-table table tbody tr:hover {
   background: #dbe8fb;
 }
@@ -41,13 +49,30 @@
   box-shadow: 0 -2px 0 #2b74e9;
   color: #333333;
 }
-.br-table table tr:nth-last-child(-n + 4) .actions .list {
-  bottom: 100%;
-  top: auto;
+.br-table table tbody tr.is-active:hover {
+  background: inherit;
 }
-.br-table table tr:nth-last-child(n + 2) .actions.is-inline .list {
-  bottom: auto;
-  top: 100%;
+.br-table table tbody tr.is-active:hover th,
+.br-table table tbody tr.is-active:hover td {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #ffffff;
+}
+.br-table table tbody tr.is-active th,
+.br-table table tbody tr.is-active td {
+  background: #2b74e9;
+  border-color: #2b74e9;
+  color: #ffffff;
+}
+.br-table table tbody tr.is-active .actions > * {
+  color: #ffffff;
+}
+.br-table table tbody tr.is-active .br-check input[type="checkbox"]:checked + label::before {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.br-table table tbody tr.is-active .br-check input[type="checkbox"]:checked + label::after {
+  border-color: #2b74e9;
 }
 .br-table table thead th {
   background: #f8f8f8;
@@ -92,13 +117,16 @@
   display: inline;
   position: relative;
 }
-.br-table table .actions .trigger {
+.br-table table .actions a,
+.br-table table .actions button {
   background: transparent;
   border: 0;
   color: #1351b4;
+  text-decoration: none;
+}
+.br-table table .actions .trigger {
   margin: -16px 0;
   padding: 12px 16px;
-  text-decoration: none;
 }
 .br-table table .actions .list {
   background: #ffffff;
@@ -158,6 +186,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.br-table table .br-check {
+  margin: -16px 0;
 }
 .br-table .caption {
   border-bottom: 1px solid #cccccc;
