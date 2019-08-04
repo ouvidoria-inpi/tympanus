@@ -57,6 +57,7 @@
     cursor: pointer;
     font-size: $font-system-default-text-font-size;
     font-weight: $font-system-default-text-font-weight;
+    min-height: 0.7rem; // fix para check sem label
     @if ($side == left) {
       padding: 0 0 0 ($check-size + $spacing-1);
     }

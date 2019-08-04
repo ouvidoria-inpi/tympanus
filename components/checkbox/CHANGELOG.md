@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.9] - 2019-08-04
+### Fixed
+- Check sem label
+
 ## [0.1.8] - 2019-07-02
 ### Changed
 - Aplicação da tipografia dos tokens
