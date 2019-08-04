@@ -73,7 +73,7 @@
 // - No estado disabled a com de fundo é cinza
 @mixin check-model($type, $side, $color: $color-gray-5) {
   & + label::before { // sass-lint:disable-line force-pseudo-nesting
-    background: transparent;
+    background: $color-white;
     border: $check-border-size solid $color;
     @if ($type == radio) {
       border-radius: 50%;

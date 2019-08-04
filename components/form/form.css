@@ -213,7 +213,7 @@
   position: relative;
 }
 .br-form .field .check input[type="checkbox"] + label::before {
-  background: transparent;
+  background: #ffffff;
   border: 1px solid #888888;
   border-radius: 4px;
   content: "";
@@ -346,7 +346,7 @@
   position: relative;
 }
 .br-form .field .check input[type="radio"] + label::before {
-  background: transparent;
+  background: #ffffff;
   border: 1px solid #888888;
   border-radius: 50%;
   content: "";

@@ -8,6 +8,7 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [0.1.9] - 2019-08-04
 ### Fixed
 - Check sem label
+- Fundo branco no check
 
 ## [0.1.8] - 2019-07-02
 ### Changed
