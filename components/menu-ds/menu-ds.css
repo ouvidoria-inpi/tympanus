@@ -87,7 +87,7 @@
   font-weight: 400;
   padding-left: 20px;
 }
-.ds-menu-lateral .level-1 button:after {
+.ds-menu-lateral .level-1 button::after {
   border-color: #888888;
 }
 .ds-menu-lateral .level-2 a,

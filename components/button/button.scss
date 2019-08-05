@@ -2,7 +2,7 @@
 @import "../../base/dsgov-base";
 
 /*!
- * button - 0.2.1 */
+ * button - 0.2.2 */
 
 // Carregar dependências
 @import "configs";
@@ -25,25 +25,23 @@
     @include btn-link($color-gray-6);
   }
   &.is-call-to-action {
-    @include btn-pill($color-secondary, $color-secondary, $color-white);
+    @include btn-pill($color-secondary, $color-gray-2, $color-white);
     @include font-primary-button;
-    box-shadow: 0 0 0 $spacing-3 $color-gray-2;
-    margin-bottom: $spacing-3 !important;
-    margin-top: $spacing-3 !important;
+    @include media-breakpoint-up(sm) {
+      // Compensar o tamanho maior da borda do botão
+      min-width: $btn-pill-min-width + ($spacing-3 * 2);
+    }
+    border-width: $spacing-3;
     &:focus,
     &.is-focus {
-      box-shadow: 0 3px 6px -3px $color-secondary, 0 0 0 $spacing-3 $color-gray-2;
+      box-shadow: 0 3px 6px -3px $color-secondary;
     }
     &:hover,
     &.is-hover {
       background-color: $color-teal;
-      border-color: $color-teal;
+      border-color: $color-gray-2;
       color: $color-white;
       text-decoration: none;
-      &:focus,
-      &.is-focus {
-        box-shadow: 0 3px 6px -3px $color-teal, 0 0 0 $spacing-3 $color-gray-2;
-      }
     }
   }
   &.is-circle {

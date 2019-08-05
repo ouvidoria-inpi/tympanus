@@ -1,5 +1,5 @@
 /*!
- * button - 0.2.1 */
+ * button - 0.2.2 */
 
 
 @-webkit-keyframes spinAround {
@@ -165,10 +165,9 @@
 
 .br-button.is-call-to-action {
   background: #268744;
-  border: 1px solid #268744;
+  border: 1px solid #ededed;
   border-radius: 100px;
-  -webkit-box-shadow: 0 0 0 16px #ededed;
-  box-shadow: 0 0 0 16px #ededed;
+  border-width: 16px;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
@@ -177,8 +176,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 16px !important;
-  margin-top: 16px !important;
   padding: 8px 24px;
   text-align: center;
   width: 100%;
@@ -211,24 +208,24 @@
   color: #ffffff;
   cursor: default;
 }
+
+@media (min-width: 576px) {
+  .br-button.is-call-to-action {
+    min-width: 176px;
+  }
+}
+
 .br-button.is-call-to-action:focus,
 .br-button.is-call-to-action.is-focus {
-  -webkit-box-shadow: 0 3px 6px -3px #268744, 0 0 0 16px #ededed;
-  box-shadow: 0 3px 6px -3px #268744, 0 0 0 16px #ededed;
+  -webkit-box-shadow: 0 3px 6px -3px #268744;
+  box-shadow: 0 3px 6px -3px #268744;
 }
 .br-button.is-call-to-action:hover,
 .br-button.is-call-to-action.is-hover {
   background-color: #36a191;
-  border-color: #36a191;
+  border-color: #ededed;
   color: #ffffff;
   text-decoration: none;
-}
-.br-button.is-call-to-action:hover:focus,
-.br-button.is-call-to-action:hover.is-focus,
-.br-button.is-call-to-action.is-hover:focus,
-.br-button.is-call-to-action.is-hover.is-focus {
-  -webkit-box-shadow: 0 3px 6px -3px #36a191, 0 0 0 16px #ededed;
-  box-shadow: 0 3px 6px -3px #36a191, 0 0 0 16px #ededed;
 }
 
 .br-button.is-circle {
