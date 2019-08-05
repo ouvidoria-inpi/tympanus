@@ -1,4 +1,8 @@
-{"Princípios de design":[
+{"Introdução":[
+  {
+    "label": "Sobre o Design System",
+    "path": "docs/sobre/sobre"
+  },
   {
     "label": "Princípios de Design",
     "path": "docs/estilos/principios-de-design"
@@ -80,7 +84,7 @@
       "label": "Desenvolvimento",
       "children": [
         {
-          "label": "Como Começar",
+          "label": "Uso do css",
           "path": "docs/documentacao/uso-do-css"
         },
         {
