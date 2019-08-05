@@ -130,7 +130,7 @@
 }
 
 /*!
- * button - 0.2.1 */
+ * button - 0.2.2 */
 
 
 @-webkit-keyframes spinAround {
@@ -339,10 +339,22 @@
   color: #ffffff;
   cursor: default;
 }
+
+@media (min-width: 576px) {
+  .br-button.is-call-to-action {
+    min-width: 176px;
+  }
+}
+
+.br-button.is-call-to-action:focus,
+.br-button.is-call-to-action.is-focus {
+  -webkit-box-shadow: 0 3px 6px -3px #268744;
+  box-shadow: 0 3px 6px -3px #268744;
+}
 .br-button.is-call-to-action:hover,
 .br-button.is-call-to-action.is-hover {
   background-color: #36a191;
-  border-color: inherit;
+  border-color: #ededed;
   color: #ffffff;
   text-decoration: none;
 }
