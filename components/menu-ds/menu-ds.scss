@@ -6,8 +6,8 @@
     padding: 0 $spacing-5;
   }
   @include media-breakpoint-up(md) {
-    padding: 0 $spacing-6;
     margin-bottom: $spacing-6;
+    padding: 0 $spacing-6;
   }
   @include media-breakpoint-up(lg) {
     padding: 0 $spacing-10;
@@ -17,8 +17,8 @@
   // Item pode ser link ou botão
   a,
   button {
-    border: 0;
     background: transparent;
+    border: 0;
     color: $color-primary;
     flex: 1;
     font-weight: 400;
@@ -73,7 +73,7 @@
       padding-left: $spacing-4;
     }
     button {
-      &:after {
+      &::after {
         border-color: $color-gray-5;
       }
     }

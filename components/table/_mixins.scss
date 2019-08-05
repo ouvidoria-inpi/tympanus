@@ -67,12 +67,12 @@
         }
         .collapse,
         .actions {
-          > * {
+          > * { // sass-lint:disable-line no-universal-selectors
             color: $table-active-inverse;
           }
         }
         .br-check {
-          input[type="checkbox"]:checked + label {
+          input[type="checkbox"]:checked + label { // sass-lint:disable-line force-attribute-nesting, force-pseudo-nesting
             &::before {
               background: $table-active-inverse;
               border-color: $table-active-inverse;
@@ -90,9 +90,6 @@
 @mixin table-header {
   thead {
     th {
-      background: $table-thead-background;
-      color: $table-thead-color;
-      font-size: $table-thead-font-size;
       @include media-breakpoint-up(md) {
         padding-bottom: $table-thead-tablet-padding;
         padding-top: $table-thead-tablet-padding;
@@ -105,6 +102,9 @@
         padding-bottom: $table-thead-tv-padding;
         padding-top: $table-thead-tv-padding;
       }
+      background: $table-thead-background;
+      color: $table-thead-color;
+      font-size: $table-thead-font-size;
     }
   }
 }
@@ -131,8 +131,8 @@
     a,
     button {
       background: transparent;
-      color: $table-actions-color;
       border: 0;
+      color: $table-actions-color;
       text-decoration: none;
     }
     .trigger {
@@ -196,7 +196,7 @@
     button {
       background: transparent;
       border: 0;
-      color: $color-primary;;
+      color: $color-primary;
       text-decoration: none;
     }
   }
