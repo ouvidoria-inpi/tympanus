@@ -1,37 +1,20 @@
 .ds-menu-lateral {
-  margin: 8px 0 20px;
-  padding: 0 8px;
+  background: #ffffff;
+  padding: 0;
+  position: relative;
+  z-index: 1;
 }
-
-@media (min-width: 576px) {
-  .ds-menu-lateral {
-    padding: 0 24px;
-  }
-}
-
-@media (min-width: 998px) {
-  .ds-menu-lateral {
-    margin-bottom: 32px;
-    padding: 0 32px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .ds-menu-lateral {
-    padding: 0 56px;
-  }
-}
-
 .ds-menu-lateral a,
 .ds-menu-lateral button {
   background: transparent;
   border: 0;
+  border-bottom: 1px solid #1351b4;
   -webkit-box-flex: 1;
   color: #1351b4;
   -ms-flex: 1;
   flex: 1;
   font-weight: 400;
-  padding: 8px 4px;
+  padding: 8px 16px;
   text-align: left;
   width: 100%;
 }
@@ -61,7 +44,6 @@
   width: 8px;
 }
 .ds-menu-lateral .menu-item {
-  border-bottom: 2px solid #268744;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   display: -webkit-box;
@@ -82,18 +64,19 @@
 }
 .ds-menu-lateral .level-1 a,
 .ds-menu-lateral .level-1 button {
+  border: 0;
   color: #333333;
   font-size: 16px;
   font-weight: 400;
-  padding-left: 20px;
+  padding-left: 16px;
 }
 .ds-menu-lateral .level-1 button::after {
   border-color: #888888;
 }
 .ds-menu-lateral .level-2 a,
 .ds-menu-lateral .level-2 button {
-  font-size: 14px;
-  font-weight: 600;
+  border: 0;
+  font-weight: 400;
   padding-left: 36px;
 }
 .ds-menu-lateral .is-open::after {
@@ -105,7 +88,6 @@
   display: block;
 }
 .ds-menu-lateral .submenu {
-  border-top: 2px solid #268744;
   display: none;
   list-style: none;
   margin: 0;
