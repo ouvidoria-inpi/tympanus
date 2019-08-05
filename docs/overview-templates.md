@@ -80,12 +80,6 @@ Acompanhe a evolução dos templates do Design System
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
-        <tr>
-          <td><a href="/ds/showcase/templates/starter">Starter</a></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
-          <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
-          <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
-        </tr>
       </tbody>
     </table>
   </div>
