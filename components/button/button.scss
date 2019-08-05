@@ -11,10 +11,18 @@
 // Estilos de botões
 .#{$prefix}button {
   &.is-primary {
+    & span{
+      font-weight: 900;
+      font-stretch: ultra-condensed;
+    }
     @include btn-pill($color-primary, $color-primary, $color-white);
     @include font-primary-button;
   }
   &.is-secondary {
+    & span{
+      font-weight: 900;
+      font-stretch: ultra-condensed;
+    }
     @include btn-pill;
     @include font-secondary-button;
   }
