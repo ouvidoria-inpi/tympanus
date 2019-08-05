@@ -88,6 +88,10 @@
           "path": "docs/documentacao/construcao-do-css"
         },
         {
+          "label": "Manutenção do CSS",
+          "path": "docs/documentacao/manutencao-do-css"
+        },
+        {
           "label": "Construção do HTML",
           "path": "docs/documentacao/construcao-do-html"
         },
