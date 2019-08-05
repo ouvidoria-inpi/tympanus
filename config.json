@@ -73,10 +73,6 @@
           "path": "templates/signin/signin-4"
         }
       ]
-    },
-    {
-      "label": "Starter",
-      "path": "templates/starter/starter"
     }
   ],
   "Boas Práticas": [

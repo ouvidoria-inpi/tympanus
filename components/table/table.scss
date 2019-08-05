@@ -2,15 +2,23 @@
 @import "../../base/dsgov-base";
 
 /*!
- * table - 0.1.0 */
+ * table - 0.2.0 */
 
 // Carregar dependências
+@import "../button/configs";
+@import "../button/mixins";
+@import "../checkbox/configs";
+@import "../checkbox/mixins";
 @import "configs";
 @import "mixins";
 
-// Estilos de tabela
-
-@include table-title;
-@include thead;
-@include tbody;
-@include table-responsive;
+// Estilos específicos
+.#{$prefix}table {
+  @include table;
+  @include table-caption;
+  @include table-row-actions;
+  @include table-length;
+  .table {
+    overflow-x: auto;
+  }
+}

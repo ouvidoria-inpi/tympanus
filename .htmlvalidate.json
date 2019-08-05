@@ -72,7 +72,7 @@
     "no-dup-class": 2,
     "no-dup-id": 2,
     "no-implicit-closed": 0,
-    "no-inline-style": 2,
+    "no-inline-style": 0,
     "no-raw-characters": 0,
     "no-trailing-whitespace": 2,
     "prefer-button": 2,

@@ -1,5 +1,5 @@
 /*!
- * check - 0.1.8 */
+ * check - 0.1.9 */
 .br-check {
   display: inline-block;
   position: relative;
@@ -13,11 +13,12 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
+  min-height: 0.7rem;
   padding: 0 0 0 28px;
   position: relative;
 }
 .br-check input[type="checkbox"] + label::before {
-  background: transparent;
+  background: #ffffff;
   border: 1px solid #888888;
   border-radius: 4px;
   content: "";
@@ -145,11 +146,12 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
+  min-height: 0.7rem;
   padding: 0 0 0 28px;
   position: relative;
 }
 .br-check input[type="radio"] + label::before {
-  background: transparent;
+  background: #ffffff;
   border: 1px solid #888888;
   border-radius: 50%;
   content: "";

@@ -14,7 +14,7 @@
       padding-right: $tab-icon-size + ($tab-results-margin * 2);
       a,
       button,
-      input[type="submit"] {
+      input[type="submit"] { // sass-lint:disable-line force-attribute-nesting
         flex-direction: row;
         padding: 0;
       }
@@ -25,7 +25,7 @@
         box-shadow: none;
         a,
         button,
-        input[type="submit"] {
+        input[type="submit"] { // sass-lint:disable-line force-attribute-nesting
           &:hover {
             box-shadow: none;
           }
@@ -53,7 +53,7 @@
       box-shadow: $tab-active-border;
       a,
       button,
-      input[type="submit"] {
+      input[type="submit"] { // sass-lint:disable-line force-attribute-nesting
         &:hover {
           box-shadow: $tab-active-border;
         }
@@ -98,7 +98,7 @@
   }
   a,
   button,
-  input[type="submit"] {
+  input[type="submit"] { // sass-lint:disable-line force-attribute-nesting
     align-items: center;
     background: transparent;
     border: 0;

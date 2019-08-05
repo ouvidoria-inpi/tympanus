@@ -1345,23 +1345,18 @@ a.text-dark:focus {
 
 
 @font-face {
-  font-family: 'icomoon';
+  font-family: "icomoon";
   font-style: normal;
   font-weight: normal;
-  src: url("../../assets/fonts/icomoon/icomoon.eot?vao738");
-  src: url("../../assets/fonts/icomoon/icomoon.eot?vao738#iefix") format("embedded-opentype"), url("../../assets/fonts/icomoon/icomoon.ttf?vao738") format("truetype"), url("../../assets/fonts/icomoon/icomoon.woff?vao738") format("woff"), url("../../assets/fonts/icomoon/icomoon.svg?vao738#icomoon") format("svg");
+  src: url("../../assets/fonts/icomoon/icomoon.ttf?vao738") format("truetype");
 }
 
 
 [class^="icon-"],
 [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
+  font-family: "icomoon" !important;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -1371,10 +1366,10 @@ a.text-dark:focus {
 }
 
 .fas.fa-adjust::before,
-.icon-alto-contraste:before {
-  color: #333;
+.icon-alto-contraste::before {
+  color: #333333;
   content: "\e904";
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -1383,23 +1378,23 @@ a.text-dark:focus {
   text-transform: none;
 }
 
-.icon-icon-acesso:before {
-  color: #333;
+.icon-icon-acesso::before {
+  color: #333333;
   content: "\e903";
 }
 
-.icon-icon-close:before {
-  color: #333;
+.icon-icon-close::before {
+  color: #333333;
   content: "\e900";
 }
 
-.icon-icon-planalto:before {
-  color: #333;
+.icon-icon-planalto::before {
+  color: #333333;
   content: "\e901";
 }
 
-.icon-icon-tropas:before {
-  color: #333;
+.icon-icon-tropas::before {
+  color: #333333;
   content: "\e902";
 }
 

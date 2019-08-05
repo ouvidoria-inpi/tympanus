@@ -1,5 +1,7 @@
 // Base
 @mixin input-component {
+  display: flex;
+  flex-direction: column;
   position: relative;
   label {
     @include font-input-label;
@@ -16,11 +18,11 @@
   }
   // Ícone decorativo
   .icon {
+    bottom: $spacing-1;
     color: $color-primary;
     margin: 0 $action-padding;
     position: absolute;
     right: 0;
-    transform: translate(0, -34px);
     img {
       max-width: $input-icon-image;
       min-width: $input-icon-image;
@@ -99,6 +101,7 @@
   .action {
     background: transparent;
     border: 0;
+    bottom: $spacing-1;
     color: $color-primary;
     font-size: $input-font-size;
     margin: 0 $action-padding;
@@ -106,7 +109,6 @@
     padding: 0;
     position: absolute;
     right: 0;
-    transform: translate(0, -34px);
     width: auto;
     img {
       max-width: $input-icon-image;
