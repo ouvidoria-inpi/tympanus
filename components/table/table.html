@@ -47,8 +47,8 @@
         <div class="col-auto">
           <div class="length">
             <div class="br-select">
-              <label for="simples">Exibir:</label>
-              <select id="simples">
+              <label for="length-top">Exibir:</label>
+              <select id="length-top">
                 <option value="0">0</option>
                 <option value="opcao-1" selected>10</option>
                 <option value="opcao-2">15</option>
@@ -63,17 +63,17 @@
         <table>
           <thead>
             <tr>
-              <th class="text-center">
+              <th class="text-center" scope="col">
                 <div class="br-check">
                   <input type="checkbox" id="select-all">
                   <label for="select-all"><span class="sr-only">checkbox</span></label>
                 </div>
               </th>
-              <th>Coluna 1 <i class="fas fa-sort text-primary"></i></th>
-              <th style="min-width: 300px">Coluna 2 <i class="fas fa-sort text-primary"></i></th>
-              <th>Coluna 3 <i class="fas fa-sort text-primary"></i></th>
-              <th>Coluna 4 <i class="fas fa-sort text-primary"></i></th>
-              <th class="text-center">Ações</th>
+              <th scope="col">Coluna 1 <i class="fas fa-sort text-primary"></i></th>
+              <th style="min-width: 300px" scope="col">Coluna 2 <i class="fas fa-sort text-primary"></i></th>
+              <th scope="col">Coluna 3 <i class="fas fa-sort text-primary"></i></th>
+              <th scope="col">Coluna 4 <i class="fas fa-sort text-primary"></i></th>
+              <th class="text-center" scope="col">Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -215,26 +215,26 @@
               </td>
               <td>
                 <div class="br-input">
-                  <label class="mb-0" for="input-coluna-1"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-1" type="text" placeholder="Insira um texto">
+                  <label class="mb-0" for="input-2-coluna-1"><span class="sr-only">Label</span></label>
+                  <input id="input-2-coluna-1" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label class="mb-0" for="input-coluna-2"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-2" type="text" placeholder="Insira um texto">
+                  <label class="mb-0" for="input-2-coluna-2"><span class="sr-only">Label</span></label>
+                  <input id="input-2-coluna-2" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label class="mb-0" for="input-coluna-3"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-3" type="text" placeholder="Insira um texto">
+                  <label class="mb-0" for="input-2-coluna-3"><span class="sr-only">Label</span></label>
+                  <input id="input-2-coluna-3" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label class="mb-0" for="input-coluna-4"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-4" type="text" placeholder="Insira um texto">
+                  <label class="mb-0" for="input-2-coluna-4"><span class="sr-only">Label</span></label>
+                  <input id="input-2-coluna-4" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td class="text-center">
@@ -259,26 +259,26 @@
               </td>
               <td>
                 <div class="br-input">
-                  <label class="mb-0" for="input-coluna-1"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-1" type="text" placeholder="Insira um texto">
+                  <label class="mb-0" for="input-3-coluna-1"><span class="sr-only">Label</span></label>
+                  <input id="input-3-coluna-1" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label class="mb-0" for="input-coluna-2"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-2" type="text" placeholder="Insira um texto">
+                  <label class="mb-0" for="input-3-coluna-2"><span class="sr-only">Label</span></label>
+                  <input id="input-3-coluna-2" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label class="mb-0" for="input-coluna-3"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-3" type="text" placeholder="Insira um texto">
+                  <label class="mb-0" for="input-3-coluna-3"><span class="sr-only">Label</span></label>
+                  <input id="input-3-coluna-3" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label class="mb-0" for="input-coluna-4"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-4" type="text" placeholder="Insira um texto">
+                  <label class="mb-0" for="input-3-coluna-4"><span class="sr-only">Label</span></label>
+                  <input id="input-3-coluna-4" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td class="text-center">
@@ -297,7 +297,7 @@
             <tr>
               <td class="text-center">
                 <div class="collapse">
-                  <button>
+                  <button type="button">
                     <i class="fas fa-plus"></i>
                     <span class="sr-only">
                       Mais informações
@@ -325,7 +325,7 @@
             <tr>
               <td class="text-center">
                 <div class="collapse">
-                  <button>
+                  <button type="button">
                     <i class="fas fa-plus"></i>
                     <span class="sr-only">
                       Mais informações
@@ -353,7 +353,7 @@
             <tr class="is-active">
               <td class="text-center">
                 <div class="collapse">
-                  <button>
+                  <button type="button">
                     <i class="fas fa-minus"></i>
                     <span class="sr-only">
                       Fechar informações
@@ -500,8 +500,8 @@
         <div class="col-auto">
           <div class="length">
             <div class="br-select">
-              <label for="simples">Exibir:</label>
-              <select id="simples">
+              <label for="length-bottom">Exibir:</label>
+              <select id="length-bottom">
                 <option value="0">0</option>
                 <option value="opcao-1" selected>10</option>
                 <option value="opcao-2">15</option>
