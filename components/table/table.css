@@ -64,6 +64,7 @@
   border-color: #2b74e9;
   color: #ffffff;
 }
+.br-table table tbody tr.is-active .collapse > *,
 .br-table table tbody tr.is-active .actions > * {
   color: #ffffff;
 }
@@ -188,6 +189,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.br-table table .collapse a,
+.br-table table .collapse button {
+  background: transparent;
+  border: 0;
+  color: #1351b4;
+  text-decoration: none;
 }
 .br-table table .br-check {
   margin: -16px 0;

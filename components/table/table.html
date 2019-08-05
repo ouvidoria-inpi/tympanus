@@ -63,22 +63,22 @@
         <table>
           <thead>
             <tr>
-              <th>
+              <th class="text-center">
                 <div class="br-check">
                   <input type="checkbox" id="select-all">
                   <label for="select-all"><span class="sr-only">checkbox</span></label>
                 </div>
               </th>
-              <th>Coluna 1</th>
-              <th style="min-width: 300px">Coluna 2</th>
-              <th>Coluna 3</th>
-              <th>Coluna 4</th>
+              <th>Coluna 1 <i class="fas fa-sort text-primary"></i></th>
+              <th style="min-width: 300px">Coluna 2 <i class="fas fa-sort text-primary"></i></th>
+              <th>Coluna 3 <i class="fas fa-sort text-primary"></i></th>
+              <th>Coluna 4 <i class="fas fa-sort text-primary"></i></th>
               <th class="text-center">Ações</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
+              <td class="text-center">
                 <div class="br-check">
                   <input type="checkbox" id="check-1">
                   <label for="check-1"><span class="sr-only">checkbox</span></label>
@@ -114,7 +114,7 @@
               </td>
             </tr>
             <tr>
-              <td>
+              <td class="text-center">
                 <div class="br-check">
                   <input type="checkbox" id="check-2">
                   <label for="check-2"><span class="sr-only">checkbox</span></label>
@@ -139,7 +139,7 @@
               </td>
             </tr>
             <tr>
-              <td>
+              <td class="text-center">
                 <div class="br-check">
                   <input type="checkbox" id="check-3">
                   <label for="check-3"><span class="sr-only">checkbox</span></label>
@@ -151,92 +151,107 @@
               <td>Em Processamento</td>
               <td class="text-center">
                 <div class="actions">
-                  <button class="trigger" type="button">
-                    <i class="fas fa-ellipsis-h"></i>
+                  <button type="button">
+                    <span class="sr-only">Visualizar</span>
+                    <i class="fas fa-eye"></i>
                   </button>
-                  <div class="list">
-                    <button type="button">Ação 1</button>
-                    <button type="button">Ação 2</button>
-                    <button type="button">Ação 3</button>
-                    <button type="button">Ação 4</button>
-                  </div>
+                  <button type="button">
+                    <span class="sr-only">Editar</span>
+                    <i class="fas fa-edit"></i>
+                  </button>
                 </div>
               </td>
             </tr>
             <tr>
-              <td>
+              <td class="text-center">
                 <div class="br-check">
                   <input type="checkbox" id="check-4">
                   <label for="check-4"><span class="sr-only">checkbox</span></label>
                 </div>
               </td>
-              <td>0001AC201900016</td>
-              <td>Emitir Documento de Arrecadação da Receita Federal</td>
-              <td>09/07/2009</td>
-              <td>Concluído</td>
+              <td>
+                <div class="br-input">
+                  <label class="mb-0" for="input-coluna-1"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-1" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label class="mb-0" for="input-coluna-2"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-2" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label class="mb-0" for="input-coluna-3"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-3" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label class="mb-0" for="input-coluna-4"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-4" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
               <td class="text-center">
-                <div class="actions is-inline">
-                  <button class="trigger" type="button">
-                    <i class="fas fa-ellipsis-h"></i>
+                <div class="actions">
+                  <button type="button">
+                    <span class="sr-only">Visualizar</span>
+                    <i class="fas fa-eye"></i>
                   </button>
-                  <div class="list">
-                    <button type="button">
-                      <span class="sr-only">Visualizar</span>
-                      <i class="fas fa-eye"></i>
-                    </button>
-                    <button type="button">
-                      <span class="sr-only">Editar</span>
-                      <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button">
-                      <i class="fas fa-envelope-open-text"></i>
-                    </button>
-                    <button type="button">
-                      <span class="sr-only">Apagar</span>
-                      <i class="fas fa-trash"></i>
-                    </button>
-                  </div>
+                  <button type="button">
+                    <span class="sr-only">Editar</span>
+                    <i class="fas fa-edit"></i>
+                  </button>
                 </div>
               </td>
             </tr>
             <tr>
-              <td>
+              <td class="text-center">
                 <div class="br-check">
                   <input type="checkbox" id="check-5">
                   <label for="check-5"><span class="sr-only">checkbox</span></label>
                 </div>
               </td>
-              <td>0001AC201900016</td>
-              <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
-              <td>09/07/2009</td>
-              <td>Em Processamento</td>
+              <td>
+                <div class="br-input">
+                  <label class="mb-0" for="input-coluna-1"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-1" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label class="mb-0" for="input-coluna-2"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-2" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label class="mb-0" for="input-coluna-3"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-3" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label class="mb-0" for="input-coluna-4"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-4" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
               <td class="text-center">
-                <div class="actions is-inline">
-                  <button class="trigger" type="button">
-                    <i class="fas fa-ellipsis-h"></i>
+                <div class="actions">
+                  <button type="button">
+                    <span class="sr-only">Visualizar</span>
+                    <i class="fas fa-eye"></i>
                   </button>
-                  <div class="list">
-                    <button type="button">
-                      <span class="sr-only">Visualizar</span>
-                      <i class="fas fa-eye"></i>
-                    </button>
-                    <button type="button">
-                      <span class="sr-only">Editar</span>
-                      <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button">
-                      <i class="fas fa-envelope-open-text"></i>
-                    </button>
-                    <button type="button">
-                      <span class="sr-only">Apagar</span>
-                      <i class="fas fa-trash"></i>
-                    </button>
-                  </div>
+                  <button type="button">
+                    <span class="sr-only">Editar</span>
+                    <i class="fas fa-edit"></i>
+                  </button>
                 </div>
               </td>
             </tr>
             <tr class="is-active">
-              <td>
+              <td class="text-center">
                 <div class="br-check">
                   <input type="checkbox" id="check-6" checked>
                   <label for="check-6"><span class="sr-only">checkbox</span></label>
@@ -244,25 +259,25 @@
               </td>
               <td>
                 <div class="br-input">
-                  <label for="input-coluna-1"><span class="sr-only">Label</span></label>
+                  <label class="mb-0" for="input-coluna-1"><span class="sr-only">Label</span></label>
                   <input id="input-coluna-1" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label for="input-coluna-2"><span class="sr-only">Label</span></label>
+                  <label class="mb-0" for="input-coluna-2"><span class="sr-only">Label</span></label>
                   <input id="input-coluna-2" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label for="input-coluna-3"><span class="sr-only">Label</span></label>
+                  <label class="mb-0" for="input-coluna-3"><span class="sr-only">Label</span></label>
                   <input id="input-coluna-3" type="text" placeholder="Insira um texto">
                 </div>
               </td>
               <td>
                 <div class="br-input">
-                  <label for="input-coluna-4"><span class="sr-only">Label</span></label>
+                  <label class="mb-0" for="input-coluna-4"><span class="sr-only">Label</span></label>
                   <input id="input-coluna-4" type="text" placeholder="Insira um texto">
                 </div>
               </td>
@@ -280,10 +295,14 @@
               </td>
             </tr>
             <tr>
-              <td>
-                <div class="br-check">
-                  <input type="checkbox" id="check-7">
-                  <label for="check-7"><span class="sr-only">checkbox</span></label>
+              <td class="text-center">
+                <div class="collapse">
+                  <button>
+                    <i class="fas fa-plus"></i>
+                    <span class="sr-only">
+                      Mais informações
+                    </span>
+                  </button>
                 </div>
               </td>
               <td>0001AC201900016</td>
@@ -304,36 +323,20 @@
               </td>
             </tr>
             <tr>
-              <td>
-                <div class="br-check">
-                  <input type="checkbox" id="check-8">
-                  <label for="check-8"><span class="sr-only">checkbox</span></label>
+              <td class="text-center">
+                <div class="collapse">
+                  <button>
+                    <i class="fas fa-plus"></i>
+                    <span class="sr-only">
+                      Mais informações
+                    </span>
+                  </button>
                 </div>
               </td>
-              <td>
-                <div class="br-input">
-                  <label for="input-coluna-1"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-1" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input">
-                  <label for="input-coluna-2"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-2" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input">
-                  <label for="input-coluna-3"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-3" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input">
-                  <label for="input-coluna-4"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-4" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
+              <td>0001AC201900016</td>
+              <td>Emitir Documento de Arrecadação da Receita Federal</td>
+              <td>09/07/2009</td>
+              <td>Concluído</td>
               <td class="text-center">
                 <div class="actions">
                   <button type="button">
@@ -347,11 +350,15 @@
                 </div>
               </td>
             </tr>
-            <tr>
-              <td>
-                <div class="br-check">
-                  <input type="checkbox" id="check-9">
-                  <label for="check-9"><span class="sr-only">checkbox</span></label>
+            <tr class="is-active">
+              <td class="text-center">
+                <div class="collapse">
+                  <button>
+                    <i class="fas fa-minus"></i>
+                    <span class="sr-only">
+                      Fechar informações
+                    </span>
+                  </button>
                 </div>
               </td>
               <td>0001AC201900016</td>
@@ -372,7 +379,15 @@
               </td>
             </tr>
             <tr>
-              <td>
+              <td></td>
+              <td colspan="5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laboriosam mollitia eius a porro, magni molestiae nihil repellendus officiis autem ullam cumque saepe culpa non iste amet inventore quas fuga?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sit aspernatur labore, temporibus possimus distinctio doloribus recusandae vitae voluptate dolore odit ducimus molestiae aliquid, reiciendis cumque voluptates dolor natus ex!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non suscipit commodi eius ducimus magnam laborum in quae laudantium sapiente, minima necessitatibus modi iusto pariatur quaerat? A vitae eos totam fugit!</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">
                 <div class="br-check">
                   <input type="checkbox" id="check-10">
                   <label for="check-10"><span class="sr-only">checkbox</span></label>
@@ -497,187 +512,8 @@
           </div>
         </div>
       </div>
-      <div class="table">
-        <table class="br-table-hover">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Coluna 1</th>
-              <th scope="col">Coluna 2</th>
-              <th scope="col">Coluna 3</th>
-              <th scope="col">Coluna 4</th>
-              <th scope="col">Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th class="text-center" scope="row"><i onclick="ShowHideTable(this)" class="fas fa-plus"></i></th>
-              <td class="text-center">A</td>
-              <td class="text-center">100%</td>
-              <td class="text-center">30</td>
-              <td class="text-center">C</td>
-              <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
-            </tr>
-            <tr class="row-content hide-table">
-              <th scope="col"></th>
-              <td colspan="6">
-                <p>Lorem ipsum dolor sit amet, lacinia nec turpis vestibulum lacinia proin amet, ipsum pharetra velit, nisl
-                  luctus dolor nulla. Laoreet interdum mauris quisque platea ante. Sit pede gravida aliquam felis enim, erat
-                  in ac omnis facilisis velit, cras aenean nunc. Quis scelerisque rutrum lobortis lacinia</p>
-              </td>
-            </tr>
-            <tr>
-              <th class="text-center" scope="row"><i onclick="ShowHideTable(this)" class="fas fa-plus"></i></th>
-              <td class="text-center">Z</td>
-              <td class="text-center">35%</td>
-              <td class="text-center">40</td>
-              <td class="text-center">A</td>
-              <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
-            </tr>
-            <tr class="row-content hide-table">
-              <th scope="col"></th>
-              <td colspan="6">
-                <p>Lorem ipsum dolor sit amet, lacinia nec turpis vestibulum lacinia proin amet, ipsum pharetra velit, nisl
-                  luctus dolor nulla. Laoreet interdum mauris quisque platea ante. Sit pede gravida aliquam felis enim, erat
-                  in ac omnis facilisis velit, cras aenean nunc. Quis scelerisque rutrum lobortis lacinia</p>
-              </td>
-            </tr>
-            <tr>
-              <th class="text-center" scope="row"><label for="marcar-linha-1" class="sr-only">Marcar Linha</label><input
-                  id="marcar-linha-1" onclick="setActive(this)" type="checkbox"></th>
-              <td class="text-center"><span class="sr-only">checkbox</span></td>
-              <td class="text-center">87%</td>
-              <td class="text-center">10</td>
-              <td class="text-center">D</td>
-              <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
-            </tr>
-            <tr>
-              <th class="text-center" scope="row"><label for="marcar-linha-2" class="sr-only">Marcar Linha</label><input
-                  id="marcar-linha-2" onclick="setActive(this)" type="checkbox"></th>
-              <td class="text-center"><span class="sr-only">checkbox</span></td>
-              <td class="text-center">97%</td>
-              <td class="text-center">17</td>
-              <td class="text-center">B</td>
-              <td class="text-center"><i class="fas fa-eye"></i><i class="fas fa-edit"></i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="caption mt-10">Tabela com Colunas Ordenáveis</p>
-      <div class="table">
-        <table class="br-table-hover sortable-table">
-          <thead>
-            <tr>
-              <th scope="col">Token</th>
-              <th scope="col">Symbol</th>
-              <th scope="col" class="numeric-sort">Volume <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Price <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Change <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Required <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Nodes <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Coins <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Worth <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Daily <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Weekly <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Monthly <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">Yearly <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">ROI % (annual) <i class="fa fa-sort"></i></th>
-              <th scope="col" class="numeric-sort">ROI days <i class="fa fa-sort"></i></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a>Dash</a></td>
-              <td>DASH</td>
-              <td>$210,097,837</td>
-              <td>$212.36</td>
-              <td>-2.52%</td>
-              <td>1,000.0</td>
-              <td>3,616</td>
-              <td>0.19</td>
-              <td>$212,360.00</td>
-              <td>$40.35</td>
-              <td>$282.44</td>
-              <td>$1,210.45</td>
-              <td>$14,727.17</td>
-              <td>6.935%</td>
-              <td>5264</td>
-            </tr>
-            <tr>
-              <td><a>ZCoin</a></td>
-              <td>XZC</td>
-              <td>$654,600</td>
-              <td>$14.32</td>
-              <td>9.42%</td>
-              <td>1,000.0</td>
-              <td>3,497</td>
-              <td>0.67</td>
-              <td>$14,323.30</td>
-              <td>$9.60</td>
-              <td>$67.18</td>
-              <td>$287.90</td>
-              <td>$3,502.76</td>
-              <td>24.455%</td>
-              <td>1493</td>
-            </tr>
-            <tr>
-              <td><a>Alqo</a></td>
-              <td>ALQO</td>
-              <td>$18,110</td>
-              <td>$0.10</td>
-              <td>3.94%</td>
-              <td>10,000.0</td>
-              <td>3,693</td>
-              <td>22.44</td>
-              <td>$962.00</td>
-              <td>$2.16</td>
-              <td>$15.11</td>
-              <td>$64.76</td>
-              <td>$787.94</td>
-              <td>81.906%</td>
-              <td>446</td>
-            </tr>
-            <tr>
-              <td><a>Gincoin</a></td>
-              <td>GIN</td>
-              <td>$80,169</td>
-              <td>$4.69</td>
-              <td>2.00%</td>
-              <td>1,000.0</td>
-              <td>1,928</td>
-              <td>3.52</td>
-              <td>$4,685.70</td>
-              <td>$16.49</td>
-              <td>$115.46</td>
-              <td>$494.81</td>
-              <td>$6,020.19</td>
-              <td>128.480%</td>
-              <td>285</td>
-            </tr>
-            <tr>
-              <td><a>Infinex</a></td>
-              <td>IFX</td>
-              <td>$7,419</td>
-              <td>$0.52</td>
-              <td>0.00%</td>
-              <td>1,000.0</td>
-              <td>1,458</td>
-              <td>3.11</td>
-              <td>$518.60</td>
-              <td>$1.61</td>
-              <td>$11.29</td>
-              <td>$48.39</td>
-              <td>$588.69</td>
-              <td>113.515%</td>
-              <td>322</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </div>
   </div>
   <script src="../select/select.js"></script>
-  <!-- <script type="text/javascript" src="table.js"></script> -->
-  <!-- <script type="text/javascript" src="table-sortable.min.js"></script> -->
 </body>
 </html>

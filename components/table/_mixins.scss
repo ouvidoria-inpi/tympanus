@@ -4,6 +4,7 @@
     @include table-header;
     @include table-column;
     @include table-column-actions;
+    @include table-collapse;
     border-top: $table-border;
     width: $table-width;
     .br-check {
@@ -64,6 +65,7 @@
           border-color: $table-active;
           color: $table-active-inverse;
         }
+        .collapse,
         .actions {
           > * {
             color: $table-active-inverse;
@@ -184,6 +186,18 @@
       .list {
         display: flex;
       }
+    }
+  }
+}
+
+@mixin table-collapse {
+  .collapse {
+    a,
+    button {
+      background: transparent;
+      border: 0;
+      color: $color-primary;;
+      text-decoration: none;
     }
   }
 }
