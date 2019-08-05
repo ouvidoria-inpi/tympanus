@@ -29,6 +29,17 @@
   border-bottom: 6px solid $color-primary-lighten-15;
 }
 
+// Menu sanduiche
+.menu-hamburger {
+  background: transparent;
+  border: 0;
+  font-size: 25px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 // Logo
 .logo {
   a {
@@ -543,4 +554,9 @@
 // Título da página
 .content-title {
   @include font-title-registration-login;
+}
+
+// Rodapé
+.page-footer {
+  border-bottom: 6px solid $color-primary;
 }

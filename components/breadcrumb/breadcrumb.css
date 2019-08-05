@@ -11,7 +11,7 @@
 }
 .br-breadcrumb .home a:hover,
 .br-breadcrumb .home a:focus {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: none;
 }
 .br-breadcrumb li {
@@ -37,11 +37,11 @@
   padding: 0 12px;
 }
 .br-breadcrumb .is-active {
-  color: #2b74e9;
+  color: #2670e8;
   font-weight: 600;
 }
 .br-breadcrumb .is-active a {
-  color: #2b74e9;
+  color: #2670e8;
   font-weight: 600;
   text-decoration: none;
 }

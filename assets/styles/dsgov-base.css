@@ -141,7 +141,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: underline;
 }
 a:not([href]):not([tabindex]) {
@@ -826,11 +826,11 @@ a.text-dark:focus {
 }
 
 .bg-primary-lighten-15 {
-  background-color: #2b74e9 !important;
+  background-color: #2670e8 !important;
 }
 
 .text-primary-lighten-15 {
-  color: #2b74e9 !important;
+  color: #2670e8 !important;
 }
 
 .bg-primary-lighten-25 {

@@ -42,9 +42,9 @@
   transform: translate(0, -50%);
 }
 .br-select .select-selected:focus {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-select .select-selected:invalid {
@@ -65,7 +65,7 @@
   padding-right: 40px;
 }
 .br-select .select-selected:focus::after {
-  color: #2b74e9;
+  color: #2670e8;
   content: "";
   font-family: Fontawesome;
   font-style: normal;
@@ -122,18 +122,18 @@
   background: #dbe8fb;
 }
 .br-select .select-items button.same-as-selected {
-  background: #2b74e9;
+  background: #2670e8;
   color: #ffffff;
 }
 .br-select.is-focus .select-selected {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
   padding-right: 40px;
 }
 .br-select.is-focus .select-selected::after {
-  color: #2b74e9;
+  color: #2670e8;
   content: "";
   font-family: Fontawesome;
   font-style: normal;

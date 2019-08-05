@@ -32,9 +32,9 @@
 }
 .br-input input:focus,
 .br-input textarea:focus {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-input input:invalid,
@@ -173,14 +173,14 @@
 }
 .br-input.is-focus input,
 .br-input.is-focus textarea {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-input.is-focus .action,
 .br-input.is-focus .icon {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-input.is-invalid input,
 .br-input.is-invalid textarea {

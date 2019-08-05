@@ -44,9 +44,9 @@
 }
 .br-table table tbody tr:hover th,
 .br-table table tbody tr:hover td {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 -2px 0 #2b74e9;
-  box-shadow: 0 -2px 0 #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 -2px 0 #2670e8;
+  box-shadow: 0 -2px 0 #2670e8;
   color: #333333;
 }
 .br-table table tbody tr.is-active:hover {
@@ -60,8 +60,8 @@
 }
 .br-table table tbody tr.is-active th,
 .br-table table tbody tr.is-active td {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
 }
 .br-table table tbody tr.is-active .collapse > *,
@@ -73,7 +73,7 @@
   border-color: #ffffff;
 }
 .br-table table tbody tr.is-active .br-check input[type="checkbox"]:checked + label::after {
-  border-color: #2b74e9;
+  border-color: #2670e8;
 }
 .br-table table thead th {
   background: #f8f8f8;
@@ -169,7 +169,7 @@
 .br-table table .actions .list a:hover,
 .br-table table .actions .list button:hover {
   background: #dbe8fb;
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: none;
 }
 .br-table table .actions.is-inline .list {
@@ -180,10 +180,10 @@
   padding: 0 12px;
 }
 .br-table table .actions.is-inline .list button {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-table table .actions.is-active .trigger {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-table table .actions.is-active .list {
   display: -webkit-box;

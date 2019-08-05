@@ -42,7 +42,7 @@
   width: 100%;
 }
 .br-accordeon .header:hover {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: none;
 }
 .br-accordeon .header:hover .title {
@@ -94,7 +94,7 @@
 }
 .br-breadcrumb .home a:hover,
 .br-breadcrumb .home a:focus {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: none;
 }
 .br-breadcrumb li {
@@ -120,11 +120,11 @@
   padding: 0 12px;
 }
 .br-breadcrumb .is-active {
-  color: #2b74e9;
+  color: #2670e8;
   font-weight: 600;
 }
 .br-breadcrumb .is-active a {
-  color: #2b74e9;
+  color: #2670e8;
   font-weight: 600;
   text-decoration: none;
 }
@@ -190,8 +190,8 @@
 }
 .br-button.is-primary:hover,
 .br-button.is-primary.is-hover {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
   text-decoration: none;
 }
@@ -235,8 +235,8 @@
 }
 .br-button.is-secondary:hover,
 .br-button.is-secondary.is-hover {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
   text-decoration: none;
 }
@@ -262,7 +262,7 @@
 }
 .br-button.is-tertiary:hover,
 .br-button.is-tertiary.is-hover {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: underline;
 }
 .br-button.is-tertiary:disabled,
@@ -285,7 +285,7 @@
 }
 .br-button.is-cancel:hover,
 .br-button.is-cancel.is-hover {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: underline;
 }
 .br-button.is-cancel:disabled,
@@ -327,8 +327,8 @@
 }
 .br-button.is-call-to-action:hover,
 .br-button.is-call-to-action.is-hover {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
   text-decoration: none;
 }
@@ -439,8 +439,8 @@
 }
 .br-button.is-go-top:hover .br-button,
 .br-button.is-go-top:focus .br-button {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
 }
 .br-button.is-go-top:disabled .br-button {
   background: #888888;
@@ -465,7 +465,7 @@
 }
 .br-button.is-filter:hover .fas,
 .br-button.is-filter:focus .fas {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-button.is-filter:disabled .fas {
   color: #888888;
@@ -557,8 +557,8 @@
   outline: 1px dotted currentColor;
 }
 .br-check input[type="checkbox"]:checked + label::before {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #2670e8;
+  border-color: #2670e8;
 }
 .br-check input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
@@ -573,8 +573,8 @@
   width: 6px;
 }
 .br-check input[type="checkbox"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-check input[type="checkbox"]:invalid + label::before {
   border-color: #ff3333;
@@ -605,8 +605,8 @@
   cursor: default;
 }
 .br-check.is-hover input[type="checkbox"] + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-check.is-invalid input[type="checkbox"]:checked + label::before {
   background: #ff3333;
@@ -690,13 +690,13 @@
   outline: 1px dotted currentColor;
 }
 .br-check input[type="radio"]:checked + label::before {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #2670e8;
+  border-color: #2670e8;
 }
 .br-check input[type="radio"]:checked + label::after {
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
-  box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   left: 0px;
@@ -705,8 +705,8 @@
   width: 19px;
 }
 .br-check input[type="radio"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-check input[type="radio"]:invalid + label::before {
   border-color: #ff3333;
@@ -736,8 +736,8 @@
   cursor: default;
 }
 .br-check.is-hover input[type="radio"] + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-check.is-invalid input[type="radio"]:checked + label::before {
   background: #ff3333;
@@ -823,9 +823,9 @@
   visibility: visible;
 }
 .br-checklist .field.is-focus input {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-checklist .field.is-invalid input,
@@ -999,9 +999,9 @@
   width: 100%;
 }
 .br-checklist .input input:focus {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-checklist .input input:invalid {
@@ -1102,8 +1102,8 @@
   outline: 1px dotted currentColor;
 }
 .br-checklist .check input[type="checkbox"]:checked + label::before {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #2670e8;
+  border-color: #2670e8;
 }
 .br-checklist .check input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
@@ -1118,8 +1118,8 @@
   width: 6px;
 }
 .br-checklist .check input[type="checkbox"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-checklist .check input[type="checkbox"]:invalid + label::before {
   border-color: #ff3333;
@@ -1150,8 +1150,8 @@
   cursor: default;
 }
 .br-checklist .check.is-hover input[type="checkbox"] + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-checklist .check.is-invalid input[type="checkbox"]:checked + label::before {
   background: #ff3333;
@@ -1235,13 +1235,13 @@
   outline: 1px dotted currentColor;
 }
 .br-checklist .check input[type="radio"]:checked + label::before {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #2670e8;
+  border-color: #2670e8;
 }
 .br-checklist .check input[type="radio"]:checked + label::after {
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
-  box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   position: absolute;
@@ -1250,8 +1250,8 @@
   width: 19px;
 }
 .br-checklist .check input[type="radio"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-checklist .check input[type="radio"]:invalid + label::before {
   border-color: #ff3333;
@@ -1281,8 +1281,8 @@
   cursor: default;
 }
 .br-checklist .check.is-hover input[type="radio"] + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-checklist .check.is-invalid input[type="radio"]:checked + label::before {
   background: #ff3333;
@@ -1439,9 +1439,9 @@
 }
 .br-form .field .input input:focus,
 .br-form .field .input textarea:focus {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-form .field .input input:invalid,
@@ -1613,8 +1613,8 @@
   outline: 1px dotted currentColor;
 }
 .br-form .field .check input[type="checkbox"]:checked + label::before {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #2670e8;
+  border-color: #2670e8;
 }
 .br-form .field .check input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
@@ -1629,8 +1629,8 @@
   width: 6px;
 }
 .br-form .field .check input[type="checkbox"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-form .field .check input[type="checkbox"]:invalid + label::before {
   border-color: #ff3333;
@@ -1661,8 +1661,8 @@
   cursor: default;
 }
 .br-form .field .check.is-hover input[type="checkbox"] + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-form .field .check.is-invalid input[type="checkbox"]:checked + label::before {
   background: #ff3333;
@@ -1746,13 +1746,13 @@
   outline: 1px dotted currentColor;
 }
 .br-form .field .check input[type="radio"]:checked + label::before {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #2670e8;
+  border-color: #2670e8;
 }
 .br-form .field .check input[type="radio"]:checked + label::after {
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
-  box-shadow: inset 0 0 0 1px #2b74e9, inset 0 0 0 5px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   left: 0px;
@@ -1761,8 +1761,8 @@
   width: 19px;
 }
 .br-form .field .check input[type="radio"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-form .field .check input[type="radio"]:invalid + label::before {
   border-color: #ff3333;
@@ -1792,8 +1792,8 @@
   cursor: default;
 }
 .br-form .field .check.is-hover input[type="radio"] + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
-  box-shadow: 0 0 0 4px rgba(43, 116, 233, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
+  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-form .field .check.is-invalid input[type="radio"]:checked + label::before {
   background: #ff3333;
@@ -1845,14 +1845,14 @@
 }
 .br-form .field.is-focus input,
 .br-form .field.is-focus textarea {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-form .field.is-focus .action,
 .br-form .field.is-focus .icon {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-form .field.is-invalid input,
 .br-form .field.is-invalid textarea {
@@ -1938,8 +1938,8 @@
 }
 .br-form .actions .button.is-primary:hover,
 .br-form .actions .button.is-primary.is-hover {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
   text-decoration: none;
 }
@@ -1982,8 +1982,8 @@
 }
 .br-form .actions .button.is-secondary:hover,
 .br-form .actions .button.is-secondary.is-hover {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
   text-decoration: none;
 }
@@ -2008,7 +2008,7 @@
 }
 .br-form .actions .button.is-tertiary:hover,
 .br-form .actions .button.is-tertiary.is-hover {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: underline;
 }
 .br-form .actions .button.is-tertiary:disabled,
@@ -2030,7 +2030,7 @@
 }
 .br-form .actions .button.is-cancel:hover,
 .br-form .actions .button.is-cancel.is-hover {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: underline;
 }
 .br-form .actions .button.is-cancel:disabled,
@@ -2133,9 +2133,9 @@
 }
 .br-input input:focus,
 .br-input textarea:focus {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-input input:invalid,
@@ -2274,14 +2274,14 @@
 }
 .br-input.is-focus input,
 .br-input.is-focus textarea {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-input.is-focus .action,
 .br-input.is-focus .icon {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-input.is-invalid input,
 .br-input.is-invalid textarea {
@@ -2709,9 +2709,9 @@
   transform: translate(0, -50%);
 }
 .br-select .select-selected:focus {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 .br-select .select-selected:invalid {
@@ -2732,7 +2732,7 @@
   padding-right: 40px;
 }
 .br-select .select-selected:focus::after {
-  color: #2b74e9;
+  color: #2670e8;
   content: "";
   font-family: Fontawesome;
   font-style: normal;
@@ -2789,18 +2789,18 @@
   background: #dbe8fb;
 }
 .br-select .select-items button.same-as-selected {
-  background: #2b74e9;
+  background: #2670e8;
   color: #ffffff;
 }
 .br-select.is-focus .select-selected {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 0 0 1px #2b74e9;
-  box-shadow: 0 0 0 1px #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 0 0 1px #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
   outline: none;
   padding-right: 40px;
 }
 .br-select.is-focus .select-selected::after {
-  color: #2b74e9;
+  color: #2670e8;
   content: "";
   font-family: Fontawesome;
   font-style: normal;
@@ -2921,9 +2921,9 @@
 }
 .br-table table tbody tr:hover th,
 .br-table table tbody tr:hover td {
-  border-color: #2b74e9;
-  -webkit-box-shadow: 0 -2px 0 #2b74e9;
-  box-shadow: 0 -2px 0 #2b74e9;
+  border-color: #2670e8;
+  -webkit-box-shadow: 0 -2px 0 #2670e8;
+  box-shadow: 0 -2px 0 #2670e8;
   color: #333333;
 }
 .br-table table tbody tr.is-active:hover {
@@ -2937,8 +2937,8 @@
 }
 .br-table table tbody tr.is-active th,
 .br-table table tbody tr.is-active td {
-  background: #2b74e9;
-  border-color: #2b74e9;
+  background: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
 }
 .br-table table tbody tr.is-active .collapse > *,
@@ -2950,7 +2950,7 @@
   border-color: #ffffff;
 }
 .br-table table tbody tr.is-active .br-check input[type="checkbox"]:checked + label::after {
-  border-color: #2b74e9;
+  border-color: #2670e8;
 }
 .br-table table thead th {
   background: #f8f8f8;
@@ -3046,7 +3046,7 @@
 .br-table table .actions .list a:hover,
 .br-table table .actions .list button:hover {
   background: #dbe8fb;
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: none;
 }
 .br-table table .actions.is-inline .list {
@@ -3057,10 +3057,10 @@
   padding: 0 12px;
 }
 .br-table table .actions.is-inline .list button {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-table table .actions.is-active .trigger {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-table table .actions.is-active .list {
   display: -webkit-box;

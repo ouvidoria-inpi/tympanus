@@ -59,8 +59,8 @@
 }
 .br-button.is-primary:hover,
 .br-button.is-primary.is-hover {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
   text-decoration: none;
 }
@@ -104,8 +104,8 @@
 }
 .br-button.is-secondary:hover,
 .br-button.is-secondary.is-hover {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
   text-decoration: none;
 }
@@ -131,7 +131,7 @@
 }
 .br-button.is-tertiary:hover,
 .br-button.is-tertiary.is-hover {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: underline;
 }
 .br-button.is-tertiary:disabled,
@@ -154,7 +154,7 @@
 }
 .br-button.is-cancel:hover,
 .br-button.is-cancel.is-hover {
-  color: #2b74e9;
+  color: #2670e8;
   text-decoration: underline;
 }
 .br-button.is-cancel:disabled,
@@ -196,8 +196,8 @@
 }
 .br-button.is-call-to-action:hover,
 .br-button.is-call-to-action.is-hover {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
   color: #ffffff;
   text-decoration: none;
 }
@@ -308,8 +308,8 @@
 }
 .br-button.is-go-top:hover .br-button,
 .br-button.is-go-top:focus .br-button {
-  background-color: #2b74e9;
-  border-color: #2b74e9;
+  background-color: #2670e8;
+  border-color: #2670e8;
 }
 .br-button.is-go-top:disabled .br-button {
   background: #888888;
@@ -334,7 +334,7 @@
 }
 .br-button.is-filter:hover .fas,
 .br-button.is-filter:focus .fas {
-  color: #2b74e9;
+  color: #2670e8;
 }
 .br-button.is-filter:disabled .fas {
   color: #888888;
