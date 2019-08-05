@@ -204,16 +204,7 @@
   margin-bottom: 8px;
   padding-bottom: 8px;
 }
-.br-table .length {
-  -webkit-box-pack: end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin: 8px 0;
-}
-.br-table .length > * {
+.br-table .actions .br-select {
   align-items: center;
   -webkit-box-align: center;
   display: -webkit-box;
@@ -221,16 +212,28 @@
   display: flex;
   -ms-flex-align: center;
 }
-.br-table .length > *:not(:first-child) {
-  margin-left: 16px;
-}
-.br-table .length > * label {
-  font-weight: 400;
+.br-table .actions .br-select label {
   margin-right: 8px;
 }
-.br-table .length > * .icon {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
+.br-table .length {
+  -webkit-box-pack: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.br-table .length .br-select {
+  align-items: center;
+  -webkit-box-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+}
+.br-table .length .br-select label {
+  font-weight: 400;
+  margin-right: 8px;
 }
 .br-table .table {
   overflow-x: auto;

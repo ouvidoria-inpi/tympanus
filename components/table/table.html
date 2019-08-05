@@ -18,16 +18,45 @@
   <div class="container-fluid">
     <div class="br-table">
       <p class="caption">Exemplo de título da tabela</p>
-      <div class="length">
-        <div class="br-select">
-          <label for="simples">Exibir:</label>
-          <select id="simples">
-            <option value="0">0</option>
-            <option value="opcao-1" selected>10</option>
-            <option value="opcao-2">15</option>
-            <option value="opcao-3">20</option>
-            <option value="opcao-4">25</option>
-          </select>
+      <div class="row mb-1">
+        <div class="col-sm-2">
+          <div class="actions ml-3">
+            <div class="br-select">
+              <label for="acoes-em-massa"><i class="fas fa-share"></i></label>
+              <select id="acoes-em-massa">
+                <option value="0">Ações em massa</option>
+                <option value="opcao-1">Ação 1</option>
+                <option value="opcao-2">Ação 2</option>
+                <option value="opcao-3">Ação 3</option>
+                <option value="opcao-4">Ação 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 ml-auto">
+          <div class="search">
+            <div class="br-input">
+              <label class="mb-0" for="search"><span class="sr-only">Busca</span></label>
+              <input id="search" type="search">
+              <span class="icon">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="length">
+            <div class="br-select">
+              <label for="simples">Exibir:</label>
+              <select id="simples">
+                <option value="0">0</option>
+                <option value="opcao-1" selected>10</option>
+                <option value="opcao-2">15</option>
+                <option value="opcao-3">20</option>
+                <option value="opcao-4">25</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
       <div class="table">
@@ -281,10 +310,30 @@
                   <label for="check-8"><span class="sr-only">checkbox</span></label>
                 </div>
               </td>
-              <td>0001AC201900016</td>
-              <td>Emitir Documento de Arrecadação da Receita Federal</td>
-              <td>09/07/2009</td>
-              <td>Concluído</td>
+              <td>
+                <div class="br-input">
+                  <label for="input-coluna-1"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-1" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label for="input-coluna-2"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-2" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label for="input-coluna-3"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-3" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
+              <td>
+                <div class="br-input">
+                  <label for="input-coluna-4"><span class="sr-only">Label</span></label>
+                  <input id="input-coluna-4" type="text" placeholder="Insira um texto">
+                </div>
+              </td>
               <td class="text-center">
                 <div class="actions">
                   <button type="button">
@@ -349,99 +398,105 @@
           </tbody>
         </table>
       </div>
-      <div class="length">
-        <div class="br-select">
-          <label for="simples">Exibir:</label>
-          <select id="simples">
-            <option value="0">0</option>
-            <option value="opcao-1" selected>10</option>
-            <option value="opcao-2">15</option>
-            <option value="opcao-3">20</option>
-            <option value="opcao-4">25</option>
-          </select>
+      <div class="row mt-1">
+        <div class="col">
+          <ul class="br-pagination">
+            <li class="is-first is-disabled">
+              <a href="javascript:void(0)">
+                <i class="fas fa-angle-double-left"></i>
+                <span>Anterior</span>
+              </a>
+            </li>
+            <li class="d-flex d-sm-none">
+              <label for="page-select-default"><span class="sr-only">Selecione a página</span></label>
+              <select id="page-select-default">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <span class="ml-2">de</span>
+              <a href="">10</a>
+            </li>
+            <li class="is-active">
+              <a href="javascript:void(0)">
+                <span>1</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>2</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>3</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>4</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>5</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>6</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>7</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>8</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>9</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <span>10</span>
+              </a>
+            </li>
+            <li class="is-last">
+              <a href="javascript:void(0)">
+                <span>Próxima</span>
+                <i class="fas fa-angle-double-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto">
+          <div class="length">
+            <div class="br-select">
+              <label for="simples">Exibir:</label>
+              <select id="simples">
+                <option value="0">0</option>
+                <option value="opcao-1" selected>10</option>
+                <option value="opcao-2">15</option>
+                <option value="opcao-3">20</option>
+                <option value="opcao-4">25</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
-      <ul class="br-pagination justify-content-sm-start justify-content-md-center ml-sm-4 ml-md-0 mt-sm-n9">
-        <li class="is-first is-disabled">
-          <a href="javascript:void(0)">
-            <i class="fas fa-angle-double-left"></i>
-            <span>Anterior</span>
-          </a>
-        </li>
-        <li class="d-flex d-sm-none">
-          <label for="page-select-default"><span class="sr-only">Selecione a página</span></label>
-          <select id="page-select-default">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <span class="ml-2">de</span>
-          <a href="">10</a>
-        </li>
-        <li class="is-active">
-          <a href="javascript:void(0)">
-            <span>1</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>2</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>3</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>4</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>5</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>6</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>7</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>8</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>9</span>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">
-            <span>10</span>
-          </a>
-        </li>
-        <li class="is-last">
-          <a href="javascript:void(0)">
-            <span>Próxima</span>
-            <i class="fas fa-angle-double-right"></i>
-          </a>
-        </li>
-      </ul>
       <div class="table">
         <table class="br-table-hover">
           <thead>

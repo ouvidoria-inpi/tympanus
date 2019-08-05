@@ -3,7 +3,7 @@
     @include table-row;
     @include table-header;
     @include table-column;
-    @include table-actions;
+    @include table-column-actions;
     border-top: $table-border;
     width: $table-width;
     .br-check {
@@ -122,7 +122,7 @@
   }
 }
 
-@mixin table-actions {
+@mixin table-column-actions {
   .actions {
     display: inline-flex;
     position: relative;
@@ -197,23 +197,28 @@
   }
 }
 
+@mixin table-row-actions {
+  .actions {
+    .br-select {
+      align-items: center;
+      display: flex;
+      label {
+        margin-right: $spacing-1;
+      }
+    }
+  }
+}
+
 @mixin table-length {
   .length {
     display: flex;
     justify-content: flex-end;
-    margin: $table-length-margin;
-    > * {
+    .br-select {
       align-items: center;
       display: flex;
-      &:not(:first-child) {
-        margin-left: $spacing-3;
-      }
       label {
         font-weight: $table-length-label;
         margin-right: $spacing-1;
-      }
-      .icon {
-        transform: translate(0, 0);
       }
     }
   }
