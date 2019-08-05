@@ -1,201 +1,113 @@
-.ds-menu-lateral{
-  & ul, ul li{
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+.ds-menu-lateral {
+  @include media-breakpoint-up(sm) {
+    padding: 0 $spacing-5;
+  }
+  @include media-breakpoint-up(md) {
+    padding: 0 $spacing-6;
+    margin-bottom: $spacing-6;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 0 $spacing-10;
+  }
+  margin: $spacing-1 0 $spacing-4;
+  padding: 0 $spacing-1;
+  // Item pode ser link ou botão
+  a,
+  button {
+    border: 0;
+    background: transparent;
+    color: $color-primary;
+    flex: 1;
+    font-weight: 400;
+    padding: $spacing-1 $spacing-half;
+    text-align: left;
+    width: 100%;
+    &:hover {
+      background: $color-primary-pastel;
+      text-decoration: none;
+    }
+  }
+  // Botões possuem subitens
+  button {
+    align-items: center;
+    display: flex;
+    &::after {
+      border-color: $color-primary;
+      border-style: solid;
+      border-width: 2px 2px 0 0;
+      content: "";
+      height: $spacing-1;
+      margin-left: auto;
+      margin-right: $spacing-half;
+      transform: rotate(135deg);
+      width: $spacing-1;
+    }
+  }
+  // Item de menu
+  .menu-item {
+    border-bottom: 2px solid $color-secondary;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  // Primeiro nível
+  .level-1 {
+    .menu-item {
+      border-bottom: 1px solid $color-gray-3;
+      // Remover borda do último item
+      &:last-child {
+        border: 0 !important;
+      }
+    }
+    .submenu {
+      border-top: 1px solid $color-gray-3;
+    }
+    a,
+    button {
+      color: $color-gray-7;
+      font-size: 16px;
+      font-weight: 400;
+      padding-left: $spacing-4;
+    }
+    button {
+      &:after {
+        border-color: $color-gray-5;
+      }
+    }
+  }
+  // Segundo nível
+  .level-2 {
+    a,
+    button {
+      font-size: 14px;
+      font-weight: 600;
+      padding-left: $spacing-7;
+    }
+  }
+  // Menu aberto
+  .is-open {
+    &::after {
+      margin-top: 8px;
+      transform: rotate(315deg);
+    }
+    & + .submenu {
+      display: block;
+    }
+  }
+  // Submenu só aparece quando pai estiver ativo
+  .submenu {
+    border-top: 2px solid $color-secondary;
+    display: none;
     list-style: none;
-    list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  & ul{
-    & li{
-      & ul{
-        & li{
-          & a{
-            padding-left: 55px;
-          }
-        }
-      }
-      & a{
-        font-family: "RawlineMedium", Arial, sans-serif;
-        color: #333;
-        font-size: 16px;
-
-        &:hover{
-          color: #fff;
-          background: #1351B4;
-          text-decoration: none;
-        }
-        padding: 14px 25px;
-        border-bottom: 1px solid #C5D4EB;
-      }
-    }
+  // Item ativo
+  .is-active {
+    background: $color-primary-lighten-15 !important;
+    color: $color-white !important;
   }
-  & h1, h2, h3, h4{
-    font-family: "RawlineSemiBold", Arial, sans-serif;
-    color: #1351b4;
-  }
-  & h2{
-    &:hover i {
-      background: #69c6d1;
-    }
-    & a{
-      text-decoration: none;
-    }
-    & i{
-      width: 32px;
-      height: 60px;
-      line-height: 61px;
-      text-align: center;
-      float: right;
-      margin-right: 4px;
-      margin-top: -20px;
-      display: inline-block;
-      background: #aad4d9;
-      transform: rotate(180deg);
-      color: #fff;
-    }
-    font-family: "RawlineSemiBold", Arial, sans-serif;
-    height: 68px;
-    color: #0090a8;
-    margin: 0 -40px 40px -40px;
-    padding: 24px 0 24px 40px;
-    font-size: 14px;
-    background: #e5e5e5;
-    cursor: pointer;
-  }
-  & h3{
-    &:hover{
-      &::after{
-        color: #fff;
-      }
-      color: #fff;
-      background: #1351B4;
-    }
-    &::after{
-      font-family: Font Awesome\ 5 Free;
-      font-size: 14px;
-      font-weight: 900;
-      content: "\f077";
-      position: absolute;
-      right: 60px;
-    }
-    font-family: "RawlineSemiBold", Arial, sans-serif;
-    font-size: 16px;
-    padding-bottom: 8px;
-    color: #1351b4;
-    padding: 14px 25px;
-    margin-top: 0;
-    margin-bottom: 0;
-    border-bottom: 1px solid #333;
-    text-transform: uppercase;
-  }
-  & h4{
-    &:hover{
-      &::after{
-        color: #fff;
-      }
-      color: #fff;
-      background: #1351B4;
-    }
-    &::after{
-      font-family: Font Awesome\ 5 Free;
-      font-size: 16px;
-      font-weight: 900;
-      content: "\f077";
-      position: absolute;
-      right: 60px;
-      color: #1351b4;
-    }
-    font-family: "RawlineMedium", Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-    font-weight: normal;
-    padding: 14px 25px;
-    margin-top: 0;
-    margin-bottom: 0;
-    border-bottom: 1px solid #C5D4EB;
-  }
-  padding: 20px 40px 40px;
-  background: #f8f8f8;
-  box-shadow: 0 6px 3px 0 rgba(0, 0, 0, 0.16);
-}
-
-.hidemenu {
-  & h3, ul, h5{
-    display: none;
-  }
-  position: relative;
-  left: -30px;
-}
-
-.label-mob-opened {
-  display: inline;
-}
-
-.label-mob-closed,
-.hidemenu .label-mob-closed,
-.hidemenu .label-mob-opened {
-  display: none;
-}
-
-@media (max-width: 992px) {
-  .ds-menu-lateral{
-    height: auto;
-    min-height: 68px;
-
-    & h2{
-      & i{
-        width: 60px;
-        height: 32px;
-        line-height: 36px;
-        margin-right: -10px;
-        margin-top: -6px;
-        transform: rotate(-90deg);
-      }
-    }
-    & h3{
-      display: none;
-    }
-    & h5{
-      display: none;
-    }
-    & ul{
-      display: none;
-    }
-    
-  }
-  
-  .hidemenu{
-    & .ds-menu-lateral{
-      & h2{
-        & i{
-          height: 32px;
-          line-height: 32px;
-          margin-right: -10px;
-          margin-top: -6px;
-          transform: rotate(90deg);
-        }
-      }
-      & h3{
-        display: block;
-      }
-      & ul{
-        display: block;
-      }
-    }
-  } 
-}
-
-@media (max-width: 992px) {
-  .label-mob-closed,
-  .hidemenu .label-mob-opened {
-    display: none;
-  }
-  .label-mob-opened,
-  .hidemenu .label-mob-closed {
-    display: inline;
-  }
-}
-
-a.menu-item {
-  display: block;
 }
