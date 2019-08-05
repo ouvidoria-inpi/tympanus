@@ -31,6 +31,13 @@
   margin-bottom: 24px;
 }
 .br-form .field .input {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
 }
 .br-form .field .input label {
@@ -128,12 +135,11 @@
   opacity: 1;
 }
 .br-form .field .input .icon {
+  bottom: 8px;
   color: #1351b4;
   margin: 0 16px;
   position: absolute;
   right: 0;
-  -webkit-transform: translate(0, -34px);
-  transform: translate(0, -34px);
 }
 .br-form .field .input .icon img {
   max-width: 24px;
@@ -147,6 +153,7 @@
 .br-form .field .input.is-action .action {
   background: transparent;
   border: 0;
+  bottom: 8px;
   color: #1351b4;
   font-size: 16px;
   margin: 0 16px;
@@ -154,8 +161,6 @@
   padding: 0;
   position: absolute;
   right: 0;
-  -webkit-transform: translate(0, -34px);
-  transform: translate(0, -34px);
   width: auto;
 }
 .br-form .field .input.is-action .action img {

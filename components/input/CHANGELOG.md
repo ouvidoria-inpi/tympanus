@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-08-04
+### Fixed
+- Alinhamento do input com label oculto
+
 ## [0.2.0] - 2019-07-12
 ### Added
 - Input com botão de ação
