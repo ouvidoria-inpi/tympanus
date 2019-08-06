@@ -12,7 +12,7 @@ Observe que a versão da linguagem HTML nessa especificação é 5.2. Porém ire
 
 ## Padrão de Codificação HTML
 
-A seguir é apresentado o padrão de codificação HTML utilizado no design system de governo. Sua intenção é estabelecer um código HTML com qualidade, facilitando a colaboração e a infraestrutura de suporte.
+A seguir é apresentado o padrão de codificação HTML utilizado no Design System de governo. Sua intenção é estabelecer um código HTML com qualidade, facilitando a colaboração e a infraestrutura de suporte.
 
 ### Documento HTML
 
