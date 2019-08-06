@@ -1,0 +1,34 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+.not-found-title {
+  color: $color-primary-lighten-15;
+  display: block;
+  font-size: 110px;
+  font-weight: 700;
+}
+.not-found-message {
+  color: $color-gray-6;
+  font-size: 24px;
+  font-weight: 500;
+}
+.not-found-hint-icon {
+  color: $color-primary-lighten-15;
+}
+.not-found-hint-title {
+  color: $color-primary-darken-15;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.not-found-hint-message {
+  color: $color-gray-6;
+  font-size: 16px;
+  font-weight: 500;
+}
+.vertical-divider-right {
+  @include media-breakpoint-up(md) {
+    border-right: 1px solid;
+  }
+}
