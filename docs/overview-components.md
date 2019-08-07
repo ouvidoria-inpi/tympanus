@@ -27,91 +27,91 @@ Acompanhe a evolução dos componentes do Design System
       </thead>
       <tbody>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Accordeon</a></td>
+          <td><a href="/ds/componentes/accordeon">Accordeon</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Breadcrumb</a></td>
+          <td><a href="/ds/componentes/accordeon">Breadcrumb</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Button</a></td>
+          <td><a href="/ds/componentes/accordeon">Button</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Checkbox</a></td>
+          <td><a href="/ds/componentes/accordeon">Checkbox</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Checklist</a></td>
+          <td><a href="/ds/componentes/accordeon">Checklist</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Divider</a></td>
+          <td><a href="/ds/componentes/accordeon">Divider</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Formulário</a></td>
+          <td><a href="/ds/componentes/accordeon">Formulário</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Input</a></td>
+          <td><a href="/ds/componentes/accordeon">Input</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Login-social</a></td>
+          <td><a href="/ds/componentes/accordeon">Login-social</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Paginação</a></td>
+          <td><a href="/ds/componentes/accordeon">Paginação</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Portlet</a></td>
+          <td><a href="/ds/componentes/accordeon">Portlet</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Busca</a></td>
+          <td><a href="/ds/componentes/accordeon">Busca</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Select</a></td>
+          <td><a href="/ds/componentes/accordeon">Select</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Tabela</a></td>
+          <td><a href="/ds/componentes/accordeon">Tabela</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/componentes/accordeon">Abas</a></td>
+          <td><a href="/ds/componentes/accordeon">Abas</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
