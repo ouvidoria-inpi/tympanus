@@ -1,5 +1,5 @@
 @mixin alert {
-  box-shadow: 0 3px 6px rgba($color-black, 0.16);
+  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
   display: flex;
   .icon {
     align-items: center;
@@ -22,15 +22,15 @@
     a {
       text-decoration: underline;
     }
-    * {
+    * { // sass-lint:disable-line no-universal-selectors
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
   .close {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     button {
       background: transparent;
       border: 0;
@@ -44,7 +44,7 @@
 }
 
 @mixin alert-states {
-  @each $state, $color in (success,$color-success),(danger,$color-danger),(warning,$color-warning),(info,$color-info) {
+  @each $state, $color in (success, $color-success), (danger, $color-danger), (warning, $color-warning), (info, $color-info) {
     &.is-#{$state} {
       .icon {
         background: $color;
@@ -85,7 +85,7 @@
         color: $color-white;
       }
     }
-    @each $state, $color in (success,$color-success),(danger,$color-danger),(warning,$color-warning),(info,$color-info) {
+    @each $state, $color in (success, $color-success), (danger, $color-danger), (warning, $color-warning), (info, $color-info) {
       &.is-#{$state} {
         .content {
           background: $color;
@@ -105,6 +105,6 @@
           }
         }
       }
-    } 
+    }
   }
 }
