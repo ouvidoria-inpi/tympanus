@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "zip-components": "for i in components/*; do zip -r ${i%/}.zip $i; done",
+    "zip-templates": "for i in templates/*; do zip -r ${i%/}.zip $i; done",
+    "zip-base": "zip -r base.zip base",
     "build": "npm-run-all get-tokens css",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "npm-run-all --parallel css-compile-*",
