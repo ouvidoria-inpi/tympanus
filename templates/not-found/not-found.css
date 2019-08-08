@@ -1,19 +1,35 @@
 .not-found {
   background-image: url("../../assets/images/unhappy-face.png");
-  background-position: 50% 0;
+  background-position: 50% 40px;
   background-repeat: no-repeat;
   background-size: 80%;
-  padding-top: 140px;
 }
+
+@media (min-width: 576px) {
+  .not-found {
+    background-position: 16px 40px;
+    background-size: 46%;
+  }
+}
+
+@media (min-width: 998px) {
+  .not-found {
+    background-position: 15% 40px;
+    background-size: 35%;
+  }
+}
+
 .not-found .not-found-title {
   color: #2670e8;
   font-size: 40px;
   font-weight: 700;
+  padding-top: 160px;
 }
 
 @media (min-width: 576px) {
   .not-found .not-found-title {
-    font-size: 110px;
+    font-size: 58px;
+    padding-top: 0;
   }
 }
 
@@ -23,18 +39,42 @@
   font-weight: 500;
 }
 
+@media (min-width: 576px) {
+  .not-found .not-found-message {
+    font-size: 18px;
+  }
+}
+
+
 .hint .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.hint hr {
-  color: #333333;
+
+@media (min-width: 576px) {
+  .hint .box {
+    display: block;
+  }
 }
+
 .hint .icon {
   color: #2670e8;
   width: 60px;
 }
+
+@media (min-width: 576px) {
+  .hint .icon {
+    display: inline;
+  }
+}
+
+@media (min-width: 576px) {
+  .hint .content {
+    display: inline;
+  }
+}
+
 .hint .title {
   color: #0c326f;
   display: block;
@@ -42,15 +82,22 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+
+@media (min-width: 576px) {
+  .hint .title {
+    display: inline;
+  }
+}
+
 .hint .message {
   color: #555555;
   font-size: 14px;
   font-weight: 500;
 }
 
-@media (min-width: 998px) {
+@media (min-width: 576px) {
   .hint .vertical-divider {
-    border-right: 1px solid;
+    border-right: 1px solid #cccccc;
   }
 }
 

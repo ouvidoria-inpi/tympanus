@@ -2,20 +2,32 @@
 @import "../../base/dsgov-base";
 
 .not-found {
+  @include media-breakpoint-up(sm) {
+    background-position: 16px 40px;
+    background-size: 46%;
+  }
+  @include media-breakpoint-up(md) {
+    background-position: 15% 40px;
+    background-size: 35%;
+  }
   background-image: url("../../assets/images/unhappy-face.png");
-  background-position: 50% 0;
+  background-position: 50% 40px;
   background-repeat: no-repeat;
   background-size: 80%;
-  padding-top: 140px;
   .not-found-title {
+    @include media-breakpoint-up(sm) {
+      font-size: 58px;
+      padding-top: 0;
+    }
     color: $color-primary-lighten-15;
     font-size: 40px;
     font-weight: 700;
-    @include media-breakpoint-up(sm) {
-      font-size: 110px;
-    }
+    padding-top: 160px;
   }
   .not-found-message {
+    @include media-breakpoint-up(sm) {
+      font-size: 18px;
+    }
     color: $color-gray-6;
     font-size: 16px;
     font-weight: 500;
@@ -23,16 +35,27 @@
 }
 .hint {
   .box {
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
     display: flex;
   }
-  hr {
-    color: $color-gray-7;
-  }
   .icon {
+    @include media-breakpoint-up(sm) {
+      display: inline;
+    }
     color: $color-primary-lighten-15;
     width: 60px;
   }
+  .content {
+    @include media-breakpoint-up(sm) {
+      display: inline;
+    }
+  }
   .title {
+    @include media-breakpoint-up(sm) {
+      display: inline;
+    }
     color: $color-primary-darken-15;
     display: block;
     font-size: 16px;
@@ -45,8 +68,8 @@
     font-weight: 500;
   }
   .vertical-divider {
-    @include media-breakpoint-up(md) {
-      border-right: 1px solid;
+    @include media-breakpoint-up(sm) {
+      border-right: 1px solid $color-gray-3;
     }
   }
 }
