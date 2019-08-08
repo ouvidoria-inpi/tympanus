@@ -767,9 +767,16 @@
 .not-found .not-found-title {
   color: #2670e8;
   display: block;
-  font-size: 110px;
+  font-size: 55px;
   font-weight: 700;
 }
+
+@media (min-width: 576px) {
+  .not-found .not-found-title {
+    font-size: 110px;
+  }
+}
+
 .not-found .not-found-message {
   color: #555555;
   font-size: 24px;
