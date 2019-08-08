@@ -762,37 +762,21 @@
 }
 
 .not-found {
-  background-image: url("../../assets/images/unhappy-face.png");
-  background-position: 50% 40px;
-  background-repeat: no-repeat;
-  background-size: 80%;
+  margin: 0 auto;
+  max-width: 992px;
 }
-
-@media (min-width: 576px) {
-  .not-found {
-    background-position: 16px 40px;
-    background-size: 46%;
-  }
+.not-found img {
+  max-width: 100%;
 }
-
-@media (min-width: 998px) {
-  .not-found {
-    background-position: 15% 40px;
-    background-size: 35%;
-  }
-}
-
 .not-found .not-found-title {
   color: #2670e8;
   font-size: 40px;
   font-weight: 700;
-  padding-top: 160px;
 }
 
 @media (min-width: 576px) {
   .not-found .not-found-title {
     font-size: 58px;
-    padding-top: 0;
   }
 }
 

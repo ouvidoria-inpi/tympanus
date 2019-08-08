@@ -293,7 +293,7 @@
   <!-- Conteúdo principal -->
   <div class="container-fluid">
     <div class="row no-gutters">
-      <div class="col-md-3 d-none">
+      <div class="col-md-3 d-none d-sm-block">
         <nav class="ds-menu-lateral py-1 py-md-3">
           <div class="menu-item">
             <button class="is-open" type="button"><span>Título Item</span></button>
@@ -317,7 +317,7 @@
       </div>
       <div class="col">
         <!-- Menu logado com foto -->
-        <div class="shadow-bottom d-none">
+        <div class="shadow-bottom d-none d-sm-block">
           <div class="container-fluid">
             <div class="row page-subheader justify-content-end">
               <div class="col">
@@ -441,50 +441,55 @@
             </div>
           </div>
         </div>
-        <main id="content" class="page-content not-found p-3">
-          <div class="row">
-            <div class="col-sm-6 text-center text-sm-left ml-auto">
-              <p class="not-found-title">Desculpe!</p>
-              <p class="not-found-message mt-3">A página que você está procurando não existe.<br class="d-none"> Pesquise o que deseja ou acesse os links sugeridos.</p>
-            </div>
-          </div>
-          <div class="row mt-8 hint justify-content-around">
-            <div class="col-sm-auto">
-              <div class="box">
-                <div class="icon text-center">
-                  <i class="fas fa-home fa-2x" aria-hidden="true"></i>
-                </div>
-                <div class="content">
-                  <span class="title">Home</span>
-                  <p class="message mb-0 mt-1">
-                    <span class="d-sm-none">Página inicial</span>
-                    <span class="d-none d-sm-block">Acesse a Página inicial</span>
-                  </p>
-                </div>
+        <main id="content" class="page-content p-3">
+          <div class="not-found">
+            <div class="row justify-content-center">
+              <div class="col-sm mt-3">
+                <img src="../../assets/images/unhappy-face.png" alt="Não encontrado...">
+              </div>
+              <div class="col-sm text-center text-sm-left">
+                <p class="not-found-title">Desculpe!</p>
+                <p class="not-found-message mt-3">A página que você está procurando não existe.<br class="d-none"> Pesquise o que deseja ou acesse os links sugeridos.</p>
               </div>
             </div>
-            <div class="col-sm-auto vertical-divider">
-              <hr class="d-block d-sm-none">
-            </div>
-            <div class="col-sm-auto">
-              <div class="box">
-                <div class="icon text-center">
-                  <i class="fas fa-question fa-2x" aria-hidden="true"></i>
-                </div>
-                <div class="content">
-                  <span class="title">Ajuda</span>
-                  <p class="message mb-0 mt-1">
-                    <span class="d-sm-none">Tópicos para ajudar você</span>
-                    <span class="d-none d-sm-block">
-                      Acesse tópicos pra ajudar você<br>
-                      a encontrar o que deseja
-                    </span>
-                  </p>
+            <div class="row mt-8 hint justify-content-around">
+              <div class="col-sm-auto">
+                <div class="box">
+                  <div class="icon text-center">
+                    <i class="fas fa-home fa-2x" aria-hidden="true"></i>
+                  </div>
+                  <div class="content">
+                    <span class="title">Home</span>
+                    <p class="message mb-0 mt-1">
+                      <span class="d-sm-none">Página inicial</span>
+                      <span class="d-none d-sm-block">Acesse a Página inicial</span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-auto d-sm-none">
-              <hr class="d-block d-sm-none">
+              <div class="col-sm-auto vertical-divider">
+                <hr class="d-block d-sm-none">
+              </div>
+              <div class="col-sm-auto">
+                <div class="box">
+                  <div class="icon text-center">
+                    <i class="fas fa-question fa-2x" aria-hidden="true"></i>
+                  </div>
+                  <div class="content">
+                    <span class="title">Ajuda</span>
+                    <p class="message mb-0 mt-1">
+                      <span class="d-sm-none">Tópicos para ajudar você</span>
+                      <span class="d-none d-sm-block">
+                        Acesse tópicos pra ajudar você<br>
+                        a encontrar o que deseja
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-auto d-sm-none">
+                <hr class="d-block d-sm-none">
+              </div>
             </div>
           </div>
         </main>
