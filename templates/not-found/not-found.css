@@ -1,10 +1,13 @@
-.not-found .not-found-image {
-  width: 100%;
+.not-found {
+  background-image: url("../../assets/images/unhappy-face.png");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  padding-top: 140px;
 }
 .not-found .not-found-title {
   color: #2670e8;
-  display: block;
-  font-size: 55px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -16,31 +19,37 @@
 
 .not-found .not-found-message {
   color: #555555;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.not-found-hint hr {
-  color: #333333;
-}
-.not-found-hint .not-found-hint-icon {
-  color: #2670e8;
-}
-.not-found-hint .not-found-hint-title {
-  color: #0c326f;
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.not-found-hint .not-found-hint-message {
-  color: #555555;
   font-size: 16px;
   font-weight: 500;
 }
 
+.hint .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hint hr {
+  color: #333333;
+}
+.hint .icon {
+  color: #2670e8;
+  width: 60px;
+}
+.hint .title {
+  color: #0c326f;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hint .message {
+  color: #555555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 @media (min-width: 998px) {
-  .not-found-hint .vertical-divider {
+  .hint .vertical-divider {
     border-right: 1px solid;
   }
 }

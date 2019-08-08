@@ -293,7 +293,7 @@
   <!-- Conteúdo principal -->
   <div class="container-fluid">
     <div class="row no-gutters">
-      <div class="col-md-3">
+      <div class="col-md-3 d-none">
         <nav class="ds-menu-lateral py-1 py-md-3">
           <div class="menu-item">
             <button class="is-open" type="button"><span>Título Item</span></button>
@@ -317,7 +317,7 @@
       </div>
       <div class="col">
         <!-- Menu logado com foto -->
-        <div class="shadow-bottom">
+        <div class="shadow-bottom d-none">
           <div class="container-fluid">
             <div class="row page-subheader justify-content-end">
               <div class="col">
@@ -442,26 +442,43 @@
           </div>
         </div>
         <main id="content" class="page-content p-3">
-          <div class="row pb-10 not-found justify-content-center">
-            <div class="col-md-auto text-center text-md-left">
-              <img class="not-found-image mt-10" src="../../assets/images/unhappy-face.png" alt=":(">
-            </div>
-            <div class="col-md-auto text-center text-md-left">
-              <span class="not-found-title mb-3">Desculpe!</span>
-              <p class="not-found-message mb-9">A página que você está procurando não existe.<br>Acesse os links sugeridos.</p>
+          <div class="row not-found justify-content-center">
+            <div class="text-center">
+              <span class="not-found-title">Desculpe!</span>
+              <p class="not-found-message mt-3">A página que você está procurando não existe.<br class="d-none"> Pesquise o que deseja ou acesse os links sugeridos.</p>
             </div>
           </div>
-          <div class="row pt-10 not-found-hint justify-content-around">
+          <div class="row mt-8 hint justify-content-around">
             <div class="col-md-auto">
-              <span class="not-found-hint-title mb-1"><i class="fas fa-home fa-2x mr-1 not-found-hint-icon" aria-hidden="true"></i>Home</span>
-              <p class="not-found-hint-message">Acesse a tela inicial</p>
+              <div class="box">
+                <div class="icon text-center">
+                  <i class="fas fa-home fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="content">
+                  <span class="title">Home</span>
+                  <p class="message mb-0">
+                    <span>Página inicial</span>
+                    <span class="d-none">Acesse a tela inicial</span>
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="col-md-auto vertical-divider">
               <hr class="d-block d-md-none">
             </div>
             <div class="col-md-auto">
-              <span class="not-found-hint-title mb-1"><i class="fas fa-question fa-2x mr-1 not-found-hint-icon" aria-hidden="true"></i>Ajuda</span>
-              <p class="not-found-hint-message">Acesso tópicos pra ajudar<br class="d-none d-md-block">você encontrar o que deseja</p>
+              <div class="box">
+                <div class="icon text-center">
+                  <i class="fas fa-question fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="content">
+                  <span class="title">Ajuda</span>
+                  <p class="message mb-0">
+                    <span>Tópicos para ajudar você</span>
+                    <span class="d-none">Acesso tópicos pra ajudar</span>
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="col-md-auto">
               <hr class="d-block d-md-none">

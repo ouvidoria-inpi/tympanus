@@ -2,43 +2,46 @@
 @import "../../base/dsgov-base";
 
 .not-found {
-  .not-found-image {
-    width: 100%;
-  }
+  background-image: url("../../assets/images/unhappy-face.png");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  padding-top: 140px;
   .not-found-title {
     color: $color-primary-lighten-15;
-    display: block;
+    font-size: 40px;
     font-weight: 700;
-    @include media-breakpoint-up(xs) {
-      font-size: 55px;
-    }
     @include media-breakpoint-up(sm) {
       font-size: 110px;
     }
   }
   .not-found-message {
     color: $color-gray-6;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500;
   }
 }
-.not-found-hint {
+.hint {
+  .box {
+    display: flex;
+  }
   hr {
     color: $color-gray-7;
   }
-  .not-found-hint-icon {
+  .icon {
     color: $color-primary-lighten-15;
+    width: 60px;
   }
-  .not-found-hint-title {
+  .title {
     color: $color-primary-darken-15;
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
   }
-  .not-found-hint-message {
+  .message {
     color: $color-gray-6;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
   }
   .vertical-divider {
