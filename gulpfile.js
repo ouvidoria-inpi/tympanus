@@ -8,7 +8,7 @@ const scssFile = '_tokens.scss';
 const scssFolder = 'base/';
 const scssURL = 'https://assets.brand.ai/dsgov/tema-principal/_style-params.scss?key=7QApNQG6j';
 
-gulp.task('get-tokens', function() {
+gulp.task('get-tokens', () => {
   return download({
     file: scssFile,
     url: scssURL
@@ -16,13 +16,14 @@ gulp.task('get-tokens', function() {
   .pipe(gulp.dest(scssFolder));
 });
 
-gulp.task('clean-tokens', function() {
+gulp.task('clean-tokens', (done) => {
   gulp.src(scssFolder + scssFile)
   .pipe(stripCssComments())
   .pipe(header('// sass-lint:disable empty-args\n'))
   .pipe(header('// sass-lint:disable property-sort-order\n'))
   .pipe(header('// sass-lint:disable hex-length\n'))
   .pipe(gulp.dest(scssFolder));
+  done();
 });
 
 gulp.task('styles', gulp.series('get-tokens', 'clean-tokens'));
