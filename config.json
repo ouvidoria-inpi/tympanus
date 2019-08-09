@@ -29,7 +29,8 @@
     { "label": "Portlet", "path": "components/portlet/portlet" },
     { "label": "Busca", "path": "components/search/search" },
     { "label": "Tabela", "path": "components/table/table" },
-    { "label": "Abas", "path": "components/tabs/tabs" }
+    { "label": "Abas", "path": "components/tabs/tabs" },
+    { "label": "Alertas", "path": "components/alert/alert" }
   ],
   "Templates": [
     { "label": "Status dos Templates", "path": "docs/overview-templates" },
