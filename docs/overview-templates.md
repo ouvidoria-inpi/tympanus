@@ -27,55 +27,55 @@ Acompanhe a evolução dos templates do Design System
       </thead>
       <tbody>
         <tr>
-          <td><a href="/ds/showcase/templates/login">Login</a></td>
+          <td><a href="/ds/templates/login">Login</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/templates/page">Área Logada - Sistemas</a></td>
+          <td><a href="/ds/templates/page">Área Logada - Sistemas</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/templates/portal">Site</a></td>
+          <td><a href="/ds/templates/portal">Site</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/templates/search">Resultado de Busca</a></td>
+          <td><a href="/ds/templates/search">Resultado de Busca</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/templates/signin">Cadastro de Usuário - Início do Cadastro</a></td>
+          <td><a href="/ds/templates/signin">Cadastro de Usuário - Início do Cadastro</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/templates/signin-1">Cadastro de Usuário - Ativação da Conta</a></td>
+          <td><a href="/ds/templates/signin-1">Cadastro de Usuário - Ativação da Conta</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/templates/signin-2">Cadastro de Usuário - Verificação do Código Recebido</a></td>
+          <td><a href="/ds/templates/signin-2">Cadastro de Usuário - Verificação do Código Recebido</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/templates/signin-3">Cadastro de Usuário - Correção do Número do Celular</a></td>
+          <td><a href="/ds/templates/signin-3">Cadastro de Usuário - Correção do Número do Celular</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/showcase/templates/signin-4">Cadastro de Usuário - Conclusão do Cadastro</a></td>
+          <td><a href="/ds/templates/signin-4">Cadastro de Usuário - Conclusão do Cadastro</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>

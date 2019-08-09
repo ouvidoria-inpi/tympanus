@@ -1,0 +1,110 @@
+@mixin alert {
+  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+  display: flex;
+  .icon {
+    align-items: center;
+    background: $color-gray-7;
+    color: $color-white;
+    display: flex;
+    font-size: 175%;
+    justify-content: center;
+    width: $alert-icon-width;
+    img {
+      max-width: 32px;
+    }
+  }
+  .content {
+    flex: 1;
+    padding: $alert-padding;
+    strong {
+      font-weight: 600;
+    }
+    a {
+      text-decoration: underline;
+    }
+    * { // sass-lint:disable-line no-universal-selectors
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .close {
+    align-items: flex-start;
+    display: flex;
+    button {
+      background: transparent;
+      border: 0;
+      padding: $alert-close-padding;
+    }
+  }
+  // Estados
+  @include alert-states;
+  // Todo da mesma cor
+  @include alert-inverted;
+}
+
+@mixin alert-states {
+  @each $state, $color in (success, $color-success), (danger, $color-danger), (warning, $color-warning), (info, $color-info) {
+    &.is-#{$state} {
+      .icon {
+        background: $color;
+        @if ($state == warning) {
+          color: $color-gray-7;
+        } @else {
+          color: $color-white;
+        }
+      }
+      .content {
+        color: $color-gray-7;
+      }
+      .close {
+        button {
+          @if ($state == warning) {
+            color: $color-gray-7;
+          } @else {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin alert-inverted {
+  &.is-inverted {
+    .content {
+      background: $color-gray-7;
+      color: $color-white;
+      a {
+        color: $color-white;
+      }
+    }
+    .close {
+      background: $color-gray-7;
+      button {
+        color: $color-white;
+      }
+    }
+    @each $state, $color in (success, $color-success), (danger, $color-danger), (warning, $color-warning), (info, $color-info) {
+      &.is-#{$state} {
+        .content {
+          background: $color;
+          @if ($state == warning) {
+            color: $color-gray-7;
+            a {
+              color: $color-gray-7;
+            }
+          }
+        }
+        .close {
+          background: $color;
+          button {
+            @if ($state == warning) {
+              color: $color-gray-7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
