@@ -51,7 +51,6 @@
     "autoprefixer": "^9.6.1",
     "clean-css-cli": "^4.3.0",
     "gulp": "^4.0.2",
-    "gulp-decompress": "^2.0.2",
     "gulp-downloader": "^1.0.4",
     "gulp-header": "^2.0.9",
     "gulp-rename": "^1.4.0",
