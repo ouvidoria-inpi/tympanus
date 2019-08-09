@@ -17,7 +17,6 @@ install_dependencies:
     - rm -rf package-lock.json
     - rm -rf node_modules
     - rm -rf .cache
-    - npm cache clean
     - npm install
   artifacts:
     paths:
