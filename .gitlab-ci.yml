@@ -16,7 +16,7 @@ install_dependencies:
   script:
     - rm -rf package-lock.json
     - rm -rf node_modules
-    - tail 100 -f /root/.npm/_logs/*.log
+    - ls -la
     - npm install
   artifacts:
     paths:
