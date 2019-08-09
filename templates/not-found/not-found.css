@@ -1,0 +1,44 @@
+.not-found .not-found-image {
+  width: 100%;
+}
+
+.not-found .not-found-title {
+  color: #2670e8;
+  display: block;
+  font-size: 110px;
+  font-weight: 700;
+}
+
+.not-found .not-found-message {
+  color: #555555;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.not-found-hint hr {
+  color: #333333;
+}
+
+.not-found-hint .not-found-hint-icon {
+  color: #2670e8;
+}
+
+.not-found-hint .not-found-hint-title {
+  color: #0c326f;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.not-found-hint .not-found-hint-message {
+  color: #555555;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (min-width: 998px) {
+  .not-found-hint .vertical-divider {
+    border-right: 1px solid;
+  }
+}
