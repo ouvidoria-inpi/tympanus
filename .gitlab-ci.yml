@@ -16,8 +16,6 @@ install_dependencies:
   script:
     - rm -rf package-lock.json
     - rm -rf node_modules
-    - npm install postcss-cli@6.1.3
-    - ls -la
     - npm install
   artifacts:
     paths:
