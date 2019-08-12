@@ -32,7 +32,7 @@
 .navigation-wrapper {
   background: #ffffff;
   box-shadow: 0 8px 6px -6px #cccccc;
-  color: #707070;
+  color: #555555;
   display: none;
   position: absolute;
   width: 100%;
@@ -68,7 +68,6 @@
 #main-navigation .list-navigation {
   border-bottom: 1px solid #ededed;
   margin: 0;
-  /*-5px 0*/
   padding: 25px 0;
   width: 100%;
 }
@@ -84,7 +83,7 @@
 }
 
 #main-navigation .list-navigation li.selected > a {
-  color: #fff;
+  color: #ffffff;
 }
 
 #main-navigation .list-navigation li:hover > ul {
@@ -95,7 +94,6 @@
   align-items: center;
   color: #555555;
   display: flex;
-  /*block*/
   font-size: 16px;
   padding: 5px;
   position: relative;
@@ -106,8 +104,8 @@
   align-items: center;
   background-color: #1351b4;
   color: #ffffff !important;
-  font-weight: 600;
   display: flex;
+  font-weight: 600;
 }
 
 #main-navigation .list-navigation li.dropdown-submenu > a::after {
@@ -207,8 +205,8 @@
   font-weight: 900;
   height: 30px;
   justify-content: center;
-  position: absolute;
   pointer-events: none;
+  position: absolute;
   width: 30px;
 }
 
@@ -228,7 +226,6 @@
   content: "\f16e";
 }
 
-/* - */
 @media (max-width: 1600px) {
   .navigation-wrapper.ativo .navigation-content {
     width: 1152px;
@@ -305,7 +302,6 @@
     overflow-y: auto;
     padding: 25px 0 !important;
     width: 100%;
-    /* calc(100% - 30px); */
   }
   .navigation-wrapper #main-navigation .list-navigation li {
     width: 100%;
