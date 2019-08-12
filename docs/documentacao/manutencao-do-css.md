@@ -1,6 +1,6 @@
 # Manutenção do CSS
 
-Esse documento é destinado para **manutenção das folhas de estilo** do DS-Gov.
+Esse documento é destinado para manutenção das folhas de estilo do DS-Gov.
 
 Todos os estilos foram escritos usando **SCSS**. Nunca altere os arquivos de CSS do diretório `assets`, pois eles são gerados automaticamente.
 
@@ -12,37 +12,16 @@ Todos os estilos foram escritos usando **SCSS**. Nunca altere os arquivos de CSS
 - node (versão 12)
 - nvm (opcional)
 
-**Estrutura de arquivos**
-
-```text
-repositorio/
-├── assets/
-│   └── ...
-├── base/
-│   └── ...
-├── components/
-│   └── ...
-├── templates/
-│   └── ...
-├── ...
-├── package.json
-└── ...
-```
-
-O arquivo `package.json` possui vários scripts que auxiliam na manutenção do ambiente.
-
-Para começar siga o passo a passo:
-
-**Preparar ambiente de desenvolvimento**:
+Preparar ambiente de desenvolvimento:
 
 ```bash
-git clone git@git.serpro:ds-gov/componentes.git
-cd componentes
+git clone git@git.serpro:ds-gov/design-system.git
+cd design-system
 npm install
 npm run build
 ```
 
-**Rodar watch para compilar arquivos a cada modificação**:
+Rodar watch para compilar arquivos a cada modificação:
 
 ```bash
 npm run watch
@@ -53,7 +32,7 @@ npm run watch
 O SCSS do DS-Gov foi dividido em partes.
 
 ```text
-repositorio/
+design-system/
 ├── base/
 │   ├── configs/
 │   ├── mixins/
@@ -86,7 +65,7 @@ Exemplo de uso:
 // Arquivo components/button/button.scss
 
 // Carregar variáveis do DS-Gov
-@import "../../assets/styles/dsgov-base.scss";
+@import "design-system/base/dsgov-base.scss";
 ...
 ```
 
@@ -159,18 +138,3 @@ Assim como variações de tamanho.
   ...
 }
 ```
-
-### Tabela de prefixos
-
-Componente | Tipo | Cor | Estado | Tamanho
---- | --- | --- | ---| ---
-**accordeon** | tipo único | cor única | `is-active` (usado em linha ativa) | tamanho único
-**breadcrumb** | tipo único | cor única | `is-active` (usado em crumb ativo) | tamanho único
-**button** | `is-primary`<br>`is-secondary`<br>`is-tertiary`<br> `is-cancel`<br>`is-call-to-action`<br>`is-circle`<br>`is-social-media`<br>`is-go-top`<br>`is-filter` | `is-facebook`<br>`is-twitter` | `is-focus`<br>`is-hover`<br>`is-disabled`<br>`is-loading` | tamanho único
-**checkbox** | sem prefixo<br>`input[type="checkbox"]`<br>`input[type="radio"]` | cor única | `is-focus`<br>`is-hover`<br>`is-disabled`<br>`is-valid`<br>`is-invalid` | tamanho único
-**checklist** | tipo único | cor única | (usado em linha ativa)<br>`is-active`<br>(usado no componente e na linha)<br>`is-valid` <br>`is-invalid` | tamanho único
-**form** | (usados nos botões dentro de `actions`)<br>`is-primary`<br>`is-secondary`<br>`is-tertiary`<br> `is-cancel` | cor única | (usados em `field`)<br>`is-focus`<br>`is-valid`<br>`is-invalid`<br>(usados nos botões dentro de `actions`)<br>`is-loading` | tamanho único
-**input** | (o padrão não precisa de prefixo)<br>`is-action`<br>`is-autocomplete` | cor única | `is-focus`<br>`is-valid`<br>`is-invalid` | tamanho único
-**pagination** | `is-first`<br>`is-last` | cor única | `is-active` (usado em página ativa)<br>`is-disabled` (usar para desativar link) | (o padrão não precisa de prefixo)<br>`is-large`
-**select** | tipo único | cor única | `is-focus`<br>`is-valid`<br>`is-invalid` | (o padrão não precisa de prefixo)<br>`is-medium`<br>`is-small`
-**tabs** | o padrão é horizontal<br>`is-vertical` | cor única | `is-active` (usado na aba ativa) | tamanho único

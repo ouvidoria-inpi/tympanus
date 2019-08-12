@@ -1,6 +1,6 @@
 # Construção do CSS
 
-Esse documento **propõe um padrão de codificação** para folhas de estilo.
+Esse documento propõe um padrão de codificação para folhas de estilo.
 
 ## Pré-processador de CSS
 

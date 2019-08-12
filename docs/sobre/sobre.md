@@ -1,8 +1,8 @@
-### O Design System
+# Sobre o Design System
 
 O Design System do Governo Federal do Brasil
 
-#### Template Básico
+## Template Básico
 
 Por que unificar a experiência dos cidadãos brasileiros quando estão em contato com o Governo do Brasil por meio digital?
 
@@ -12,9 +12,8 @@ O cenário era garantir esta visão singular de uma experiência única que não
 
 Diante desta visão, iniciamos a construção de um Design System que tem como objetivo resolver os problemas citados acima e guiar todos os responsáveis pela construção desses produtos.
 
----
 
-#### Afinal, o que é Design System?
+## Afinal, o que é Design System?
 
 > _Um Design System não é um projeto, é um produto que serve produtos_
 > -- <cite>[Natan curtis]</cite>
@@ -31,11 +30,11 @@ Você já está entendendo que o Design System é o conjunto completo de padrõe
 documentação e princípios. Utilizando o UI kit (kit de ferramentas de design) e o código para atingir
 esses padrões.
 
----
 
-#### O Design System do Governo Federal do Brasil
+## O Design System do Governo Federal do Brasil
 
 ![Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.](/assets/docs/imagens_ds.png 'Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.')
+
 _Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo._
 
 Como Design System oficial do Governo Brasileiro, o DS Gov atende a uma ampla gama de designers e desenvolvedores que criam produtos e experiências digitais. Os objetivos do sistema incluem melhorar a consistência e a qualidade da interface, tornando o processo de design e desenvolvimento mais eficiente e focado, estabelecendo um vocabulário compartilhado entre designer e desenvolvedor, fornecendo orientação clara e identificável sobre as melhores práticas de design e desenvolvimento.
