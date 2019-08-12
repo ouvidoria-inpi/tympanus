@@ -1,44 +1,102 @@
-.not-found .not-found-image {
-  width: 100%;
+.not-found {
+  margin: 0 auto;
+  max-width: 992px;
+}
+.not-found img {
+  max-width: 100%;
 }
 
 .not-found .not-found-title {
   color: #2670e8;
-  display: block;
-  font-size: 110px;
+  font-size: 40px;
   font-weight: 700;
 }
 
+<<<<<<< HEAD
+@media (min-width: 576px) {
+  .not-found .not-found-title {
+    font-size: 58px;
+  }
+}
+
+=======
+>>>>>>> b42f1d592dae0d92945bbb47f8b2110944ff7e5a
 .not-found .not-found-message {
-  color: #555555;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.not-found-hint hr {
-  color: #333333;
-}
-
-.not-found-hint .not-found-hint-icon {
-  color: #2670e8;
-}
-
-.not-found-hint .not-found-hint-title {
-  color: #0c326f;
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.not-found-hint .not-found-hint-message {
   color: #555555;
   font-size: 16px;
   font-weight: 500;
 }
 
-@media (min-width: 998px) {
-  .not-found-hint .vertical-divider {
-    border-right: 1px solid;
+@media (min-width: 576px) {
+  .not-found .not-found-message {
+    font-size: 18px;
+  }
+}
+
+
+.hint .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 576px) {
+  .hint .box {
+    display: block;
+  }
+}
+
+<<<<<<< HEAD
+.hint .icon {
+=======
+.not-found-hint .not-found-hint-icon {
+>>>>>>> b42f1d592dae0d92945bbb47f8b2110944ff7e5a
+  color: #2670e8;
+  width: 60px;
+}
+
+@media (min-width: 576px) {
+  .hint .icon {
+    display: inline;
+  }
+}
+
+@media (min-width: 576px) {
+  .hint .content {
+    display: inline;
+  }
+}
+
+<<<<<<< HEAD
+.hint .title {
+=======
+.not-found-hint .not-found-hint-title {
+>>>>>>> b42f1d592dae0d92945bbb47f8b2110944ff7e5a
+  color: #0c326f;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+<<<<<<< HEAD
+@media (min-width: 576px) {
+  .hint .title {
+    display: inline;
+  }
+}
+
+.hint .message {
+=======
+.not-found-hint .not-found-hint-message {
+>>>>>>> b42f1d592dae0d92945bbb47f8b2110944ff7e5a
+  color: #555555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  .hint .vertical-divider {
+    border-right: 1px solid #cccccc;
   }
 }
