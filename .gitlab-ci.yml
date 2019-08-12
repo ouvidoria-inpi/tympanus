@@ -14,6 +14,9 @@ cache:
 install_dependencies:
   stage: build
   script:
+    - npm set strict-ssl false
+    - npm config set registry http://nexus.aic.serpro/repository/npm-group/
+    - npm config set @serpro:registry http://nexus.aic.serpro/repository/npm-private/
     - npm install
   artifacts:
     paths:
