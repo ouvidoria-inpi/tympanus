@@ -1,4 +1,4 @@
-# Sistam de Grid
+# Sistema de Grid
 
 ## Design System do Governo Federal
 

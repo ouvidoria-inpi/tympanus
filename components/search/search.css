@@ -2,26 +2,20 @@
  * search - 0.1.0 */
 .br-search {
   align-items: flex-end;
-  -webkit-box-align: end;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: end;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
 .br-search .br-input {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
+
 .br-search .feedback,
 .br-search .help {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
   order: 1;
   width: 100%;
 }
+
 .br-search .action {
   display: none;
 }

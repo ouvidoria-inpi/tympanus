@@ -2,24 +2,19 @@
  * divider - 0.2.0 */
 .br-divider {
   align-items: center;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin: 0 0 24px;
   text-transform: uppercase;
 }
-.br-divider::after,
-.br-divider::before {
+
+.br-divider::after, .br-divider::before {
   background: #888888;
   content: "";
   height: 1px;
   width: 100%;
 }
+
 .br-divider .content {
   color: #1351b4;
   font-size: 18px;

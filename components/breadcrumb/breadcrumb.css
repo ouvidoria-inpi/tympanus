@@ -6,29 +6,34 @@
   margin: 0;
   padding: 0;
 }
+
 .br-breadcrumb .home a {
   color: #333333;
 }
-.br-breadcrumb .home a:hover,
-.br-breadcrumb .home a:focus {
+
+.br-breadcrumb .home a:hover, .br-breadcrumb .home a:focus {
   color: #2670e8;
   text-decoration: none;
 }
+
 .br-breadcrumb li {
   color: #333333;
   display: inline;
   font-size: 14px;
   font-weight: 500;
 }
+
 .br-breadcrumb li a {
   color: #333333;
   font-weight: 500;
   text-decoration: none;
 }
+
 .br-breadcrumb li a:hover {
   color: inherit;
   text-decoration: underline;
 }
+
 .br-breadcrumb li + li::before {
   color: #9e9d9d;
   content: ">";
@@ -36,10 +41,12 @@
   font-weight: 400;
   padding: 0 12px;
 }
+
 .br-breadcrumb .is-active {
   color: #2670e8;
   font-weight: 600;
 }
+
 .br-breadcrumb .is-active a {
   color: #2670e8;
   font-weight: 600;
