@@ -30,8 +30,8 @@
 }
 
 .navigation-wrapper {
-  background: #fff;
-  box-shadow: 0 8px 6px -6px #ccc;
+  background: #ffffff;
+  box-shadow: 0 8px 6px -6px #cccccc;
   color: #707070;
   display: none;
   position: absolute;
@@ -66,7 +66,7 @@
 }
 
 #main-navigation .list-navigation {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ededed;
   margin: 0;
   /*-5px 0*/
   padding: 25px 0;
@@ -93,7 +93,7 @@
 
 #main-navigation .list-navigation li a {
   align-items: center;
-  color: #555;
+  color: #555555;
   display: flex;
   /*block*/
   font-size: 16px;
@@ -105,13 +105,13 @@
 #main-navigation .list-navigation li.selected > a {
   align-items: center;
   background-color: #1351b4;
-  color: #fff !important;
+  color: #ffffff !important;
   font-weight: 600;
   display: flex;
 }
 
 #main-navigation .list-navigation li.dropdown-submenu > a::after {
-  color: #333 !important;
+  color: #333333 !important;
   content: "\f054";
   font-family: "Font Awesome 5 Free";
   font-size: 9px;
@@ -122,7 +122,7 @@
 }
 
 #main-navigation .list-navigation li.dropdown-submenu.selected > a::after {
-  color: #fff !important;
+  color: #ffffff !important;
   content: "\f054";
   font-family: "Font Awesome 5 Free";
   position: absolute;
@@ -130,7 +130,7 @@
 
 #main-navigation .list-navigation ul {
   background: #f8f8f8;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #ededed;
   box-sizing: border-box;
   display: none;
   height: calc(100% - 1px);
@@ -152,12 +152,12 @@
 
 #main-navigation .list-navigation ul li:hover > a {
   background-color: #1351b4;
-  color: #fff !important;
+  color: #ffffff !important;
   font-weight: 600;
 }
 
 #main-navigation .list-navigation ul li:hover > a::after {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 #main-navigation .list-navigation ul li:hover > ul {
@@ -181,7 +181,7 @@
 }
 
 #main-navigation .redes-sociais h3 {
-  color: BLUE;
+  color: #1351b4;
   display: inline;
   font-size: 14px;
   margin: 0;
@@ -201,7 +201,7 @@
 
 #main-navigation .redes-sociais .portal-redes li::before {
   align-items: center;
-  color: BLUE;
+  color: #1351b4;
   display: flex;
   font-family: "Font Awesome 5 Brands";
   font-weight: 900;
@@ -268,7 +268,7 @@
     left: 25px !important;
   }
   .navigation-wrapper {
-    box-shadow: 8px 8px 6px -6px #ccc;
+    box-shadow: 8px 8px 6px -6px #cccccc;
   }
   .navigation-wrapper.ativo .navigation-content {
     margin: 0 20px;
@@ -279,8 +279,8 @@
   }
   .navigation-wrapper .resp-nav-title {
     background: #f8f8f8;
-    box-shadow: 8px 0 6px -6px #ccc;
-    color: #333;
+    box-shadow: 8px 0 6px -6px #cccccc;
+    color: #333333;
     display: none;
     font-size: 26px;
     font-weight: 600;
@@ -358,7 +358,7 @@
 }
 
 body > div.resp-nav-blocker {
-  background: #ddd;
+  background: #ededed;
   bottom: 0;
   display: block;
   left: 0;

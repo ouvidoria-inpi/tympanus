@@ -1,3 +1,6 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
 .header-icons {
   text-align: center;
 
@@ -31,10 +34,23 @@
   }
 }
 .navigation-wrapper {
+  background: $color-white;
+  box-shadow: 0 8px 6px -6px $color-gray-3;
+  color: #707070;
+  display: none;
+  position: absolute;
+  width: 100%;
   &.ativo {
+    border-top: 2px solid $color-warning;
+    display: block;
+    z-index: 103;
     & .navigation-content {
+      margin: 0 auto;
+      max-width: 100%;
+      position: relative;
+      width: 1440px;
       &::before {
-        color: #1351b4;
+        color: $color-primary;
         content: "\25B2";
         font-size: 20px;
         left: 5px;
@@ -42,21 +58,8 @@
         position: absolute;
         top: -19px;
       }
-      margin: 0 auto;
-      max-width: 100%;
-      position: relative;
-      width: 1440px;
     }
-    border-top: 2px solid #ffcd07;
-    display: block;
-    z-index: 103;
   }
-  background: #fff;
-  box-shadow: 0 8px 6px -6px #ccc;
-  color: #707070;
-  display: none;
-  position: absolute;
-  width: 100%;
 }
 
 #main-navigation {
@@ -65,7 +68,7 @@
   }
 
   .list-navigation {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $color-gray-2;
     margin: 0; /*-5px 0*/
     padding: 25px 0;
     width: 100%;
@@ -76,7 +79,7 @@
       width: 230px;
 
       &.selected {
-        background-color: #0c326f !important;
+        background-color: $color-primary-darken-15 !important;
 
         & > a {
           color: #fff;
@@ -91,7 +94,7 @@
 
       a {
         align-items: center;
-        color: #555;
+        color: $color-gray-6;
         display: flex; /*block*/
         font-size: 16px;
         padding: 5px;
@@ -102,8 +105,8 @@
       &.selected {
         & > a {
           align-items: center;
-          background-color: #1351b4;
-          color: #fff !important;
+          background-color: $color-primary;
+          color: $color-white !important;
           font-weight: 600;
           display: flex;
         }
@@ -112,7 +115,7 @@
       &.dropdown-submenu {
         & > a {
           &::after {
-            color: #333 !important;
+            color: $color-gray-7 !important;
             content: "\f054";
             font-family: "Font Awesome 5 Free";
             font-size: 9px;
@@ -128,7 +131,7 @@
         &.selected {
           & > a {
             &::after {
-              color: #fff !important;
+              color: $color-white !important;
               content: "\f054";
               font-family: "Font Awesome 5 Free";
               position: absolute;
@@ -139,8 +142,8 @@
     }
 
     ul {
-      background: #f8f8f8;
-      border-left: 1px solid #ddd;
+      background: $color-gray-1;
+      border-left: 1px solid $color-gray-2;
       box-sizing: border-box;
       display: none;
       height: calc(100% - 1px);
@@ -162,17 +165,17 @@
 
         &:hover {
           & > a {
-            background-color: #1351b4;
-            color: #fff !important;
+            background-color: $color-primary;
+            color: $color-white !important;
             font-weight: 600;
 
             &::after {
-              color: #fff !important;
+              color: $color-white !important;
             }
           }
 
           & > ul {
-            background: #f8f8f8;
+            background: $color-gray-1;
             display: block;
           }
         }
@@ -197,7 +200,7 @@
     padding-top: 15px;
 
     h3 {
-      color: BLUE;
+      color: $color-primary;
       display: inline;
       font-size: 14px;
       margin: 0;
@@ -215,7 +218,7 @@
 
         &::before {
           align-items: center;
-          color: BLUE;
+          color: $color-primary;
           display: flex;
           font-family: "Font Awesome 5 Brands";
           font-weight: 900;
@@ -308,7 +311,7 @@
   }
 
   .navigation-wrapper {
-    box-shadow: 8px 8px 6px -6px #ccc;
+    box-shadow: 8px 8px 6px -6px $color-gray-3;
     &.ativo {
       & .navigation-content {
         margin: 0 20px;
@@ -320,9 +323,9 @@
     }
 
     .resp-nav-title {
-      background: #f8f8f8;
-      box-shadow: 8px 0 6px -6px #ccc;
-      color: #333;
+      background: $color-gray-1;
+      box-shadow: 8px 0 6px -6px $color-gray-3;
+      color: $color-gray-7;
       display: none;
       font-size: 26px;
       font-weight: 600;
@@ -338,7 +341,7 @@
       width: 100%;
      
       i {
-        color: #1351b4;
+        color: $color-primary;
         cursor: pointer;
         font-size: 22px;
         margin-right: 16px;
@@ -420,7 +423,7 @@
 }
 
 body > div.resp-nav-blocker {
-  background: #ddd;
+  background: $color-gray-2;
   bottom: 0;
   display: block;
   left: 0;
