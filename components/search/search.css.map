@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+{"version":3,"sources":["search.css"],"names":[],"mappings":"AAAA;mBACmB;AACnB;EACE,qBAAqB;EAArB,sBAAqB;EACrB,oBAAa;EAAb,oBAAa;EAAb,aAAa;EADb,mBAAqB;EAErB,mBAAe;EAAf,eAAe;AACjB;AAEA;EACE,mBAAO;EAAP,WAAO;EAAP,OAAO;AACT;AAEA;;EAEE,4BAAQ;EAAR,iBAAQ;EAAR,QAAQ;EACR,WAAW;AACb;AAEA;EACE,aAAa;AACf;;AAEA;EACE;IACE,cAAc;EAChB;AACF","file":"search.css","sourcesContent":["/*!\r\n * search - 0.1.0 */\n.br-search {\n  align-items: flex-end;\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.br-search .br-input {\n  flex: 1;\n}\n\n.br-search .feedback,\n.br-search .help {\n  order: 1;\n  width: 100%;\n}\n\n.br-search .action {\n  display: none;\n}\n\n@media (min-width: 576px) {\n  .br-search .action {\n    display: block;\n  }\n}\n"]}
+=======
 {
 	"version": 3,
 	"file": "search.css",
@@ -56,3 +59,4 @@
 	"names": [],
 	"mappings": "AAGA;oBACoB;AASpB,AAAA,UAAU,CAAQ;EiDZhB,WAAW,EAAE,QAAQ;EACrB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;CjDYhB;;AAFD,AiDTE,UjDSQ,CiDTR,SAAS,CAAC;EACR,IAAI,EAAE,CAAC;CACR;;AjDOH,AiDNE,UjDMQ,CiDNR,SAAS;AjDMX,UAAU,CiDLR,KAAK,CAAC;EACJ,KAAK,EAAE,CAAC;EACR,KAAK,EAAE,IAAI;CACZ;;AjDEH,AiDDE,UjDCQ,CiDDR,OAAO,CAAC;EACN,OAAO,EAAE,IAAI;CACd;;AjC8CC,MAAM,EAAE,SAAS,EAAE,KAAK;EhB/C5B,AiDGI,UjDHM,CiDGN,OAAO,CAAC;IACN,OAAO,EAAE,KAAK;GACf"
 }
+>>>>>>> b42f1d592dae0d92945bbb47f8b2110944ff7e5a

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+{"version":3,"sources":["portlet.css"],"names":[],"mappings":"AAAA;oBACoB;AACpB;EACE,mBAAmB;EACnB,mBAAmB;AACrB;AAEA;EACE,gCAAgC;EAChC,gBAAgB;EAChB,aAAa;AACf;AAEA;EACE,aAAa;AACf;AAEA;EACE,kBAAkB;EAClB,mBAAmB;AACrB;AAEA;EACE,gBAAgB;AAClB","file":"portlet.css","sourcesContent":["/*!\r\n * portlet - 0.1.1 */\n.br-portlet {\n  background: #ffffff;\n  margin-bottom: 24px;\n}\n\n.br-portlet .header {\n  border-bottom: 1px solid #cccccc;\n  font-weight: 700;\n  padding: 24px;\n}\n\n.br-portlet .content {\n  padding: 24px;\n}\n\n.br-portlet .content hr {\n  margin-left: -24px;\n  margin-right: -24px;\n}\n\n.br-portlet p:last-child {\n  margin-bottom: 0;\n}\n"]}
+=======
 {
 	"version": 3,
 	"file": "portlet.css",
@@ -54,3 +57,4 @@
 	"names": [],
 	"mappings": "AAGA;qBACqB;AAOrB,AAAA,WAAW,CAAQ;E+CRjB,UAAU,E7C2BE,OAAO;E6C1BnB,aAAa,E7C8oBH,IAAI;CFroBf;;AAFD,A+CCE,W/CDS,C+CCT,OAAO,CAAC;EACN,aAAa,EDVA,GAAG,CAAC,KAAK,C5C8BX,OAAO;E6CnBlB,WAAW,EDRc,GAAG;ECS5B,OAAO,E7CmoBC,IAAI;C6CloBb;;A/CLH,A+CSE,W/CTS,C+CST,QAAQ,CAAC;EACP,OAAO,E7C6nBC,IAAI;C6CxnBb;;A/CfH,A+CWI,W/CXO,C+CST,QAAQ,CAEN,EAAE,CAAC;EACD,WAAW,E7C2nBL,KAAI;E6C1nBV,YAAY,E7C0nBN,KAAI;C6CznBX;;A/CdL,A+CLE,W/CKS,C+CLT,CAAC,AAAA,WAAW,CAAC;EACX,aAAa,EAAE,CAAC;CACjB"
 }
+>>>>>>> b42f1d592dae0d92945bbb47f8b2110944ff7e5a

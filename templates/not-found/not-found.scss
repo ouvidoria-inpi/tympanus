@@ -2,43 +2,65 @@
 @import "../../base/dsgov-base";
 
 .not-found {
-  .not-found-image {
-    width: 100%;
+  margin: 0 auto;
+  max-width: map-get($container-max-widths, md);
+  img {
+    max-width: 100%;
   }
   .not-found-title {
+    @include media-breakpoint-up(sm) {
+      font-size: 58px;
+    }
     color: $color-primary-lighten-15;
-    display: block;
-    font-size: 110px;
+    font-size: 40px;
     font-weight: 700;
   }
   .not-found-message {
-    color: $color-gray-6;
-    font-size: 24px;
-    font-weight: 500;
-  }
-}
-.not-found-hint {
-  hr {
-    color: $color-gray-7;
-  }
-  .not-found-hint-icon {
-    color: $color-primary-lighten-15;
-  }
-  .not-found-hint-title {
-    color: $color-primary-darken-15;
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .not-found-hint-message {
+    @include media-breakpoint-up(sm) {
+      font-size: 18px;
+    }
     color: $color-gray-6;
     font-size: 16px;
     font-weight: 500;
   }
+}
+.hint {
+  .box {
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+    display: flex;
+  }
+  .icon {
+    @include media-breakpoint-up(sm) {
+      display: inline;
+    }
+    color: $color-primary-lighten-15;
+    width: 60px;
+  }
+  .content {
+    @include media-breakpoint-up(sm) {
+      display: inline;
+    }
+  }
+  .title {
+    @include media-breakpoint-up(sm) {
+      display: inline;
+    }
+    color: $color-primary-darken-15;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .message {
+    color: $color-gray-6;
+    font-size: 14px;
+    font-weight: 500;
+  }
   .vertical-divider {
-    @include media-breakpoint-up(md) {
-      border-right: 1px solid;
+    @include media-breakpoint-up(sm) {
+      border-right: 1px solid $color-gray-3;
     }
   }
 }
