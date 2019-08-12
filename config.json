@@ -1,24 +1,26 @@
-{"Introdução":[
-  {
-    "label": "Sobre o Design System",
-    "path": "docs/sobre/sobre"
-  },
-  {
-    "label": "Princípios de Design",
-    "path": "docs/estilos/principios-de-design"
-  }],
+{
+  "Introdução": [
+    {
+      "label": "Sobre o Design System",
+      "path": "docs/sobre/sobre"
+    },
+    {
+      "label": "Princípios de Design",
+      "path": "docs/estilos/principios-de-design"
+    }
+  ],
   "Fundamentos Visuais": [
-    { "label": "Cores", "path": "docs/estilos/cores" },
-    { "label": "Tipografia", "path": "docs/estilos/tipografia" },
-    { "label": "Ícones", "path": "docs/estilos/icones" },
-    { "label": "Grid", "path": "docs/estilos/grid" }
+    { "label": "Cores", "path": "docs/estilos/co" },
+    { "label": "Tipografia", "path": "docs/estilos/tipgrafa" },
+    { "label": "Ícones", "path": "docs/estilos/icoes" },
+    { "label": "Grid", "path": "docs/estilos/grd" }
   ],
   "Componentes": [
     { "label": "Status dos Componentes", "path": "docs/overview-components" },
-    { "label": "Acordeão", "path": "components/accordeon/accordeon" },
-    { "label": "Breadcrumb", "path": "components/breadcrumb/breadcrumb" },
-    { "label": "Botão", "path": "components/button/button" },
-    { "label": "Checkbox", "path": "components/checkbox/checkbox" },
+    { "label": "Acordeão", "path": "components/accordeon/accoreon" },
+    { "label": "Breadcrumb", "path": "components/breadcrumb/bradcrumb" },
+    { "label": "Botão", "path": "components/button/buttn" },
+    { "label": "Checkbox", "path": "components/checkbox/chkbox" },
     { "label": "Checklist", "path": "components/checklist/checklist" },
     { "label": "Divider", "path": "components/divider/divider" },
     { "label": "Formulário", "path": "components/form/form" },
@@ -36,15 +38,15 @@
     { "label": "Status dos Templates", "path": "docs/overview-templates" },
     {
       "label": "Login",
-      "path": "templates/login/login"
+      "path": "templates/login/adasd"
     },
     {
       "label": "Área Logada - Sistemas",
-      "path": "templates/page/page"
+      "path": "templates/page/pge"
     },
     {
       "label": "Site",
-      "path": "templates/portal/portal"
+      "path": "templates/portal/potal"
     },
     {
       "label": "Resultado de Busca",
@@ -72,6 +74,10 @@
         {
           "label": "5 - Conclusão do Cadastro",
           "path": "templates/signin/signin-4"
+        },
+        {
+          "label": "6 - Conclusão do Cadastro",
+          "path": "templates/signin/sigasdasdasd4"
         }
       ]
     }
