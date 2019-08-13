@@ -1,5 +1,5 @@
 /*!
- * table - 0.2.0 */
+ * table - 0.2.1 */
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -31,7 +31,7 @@
 .br-table table tbody tr:hover th,
 .br-table table tbody tr:hover td {
   border-color: #2670e8;
-  box-shadow: 0 -2px 0 #2670e8;
+  box-shadow: 0 -1px 0 #2670e8;
   color: #333333;
 }
 

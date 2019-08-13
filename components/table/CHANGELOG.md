@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-08-12
+### Fixed
+- Borda da linha no `:hover`
+
 ## [0.2.0] - 2019-08-03
 ### Changed
 - Reescrita do componente
