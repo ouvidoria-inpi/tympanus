@@ -563,6 +563,8 @@
   font-style: normal;
   font-weight: 500;
   font-family: Rawline;
+  margin-bottom: 32px;
+  margin-top: 24px;
 }
 
 .page-footer {

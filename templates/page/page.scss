@@ -554,6 +554,8 @@
 // Título da página
 .content-title {
   @include font-title-registration-login;
+  margin-bottom: $spacing-6;
+  margin-top: $spacing-5;
 }
 
 // Rodapé

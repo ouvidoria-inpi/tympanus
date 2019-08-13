@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-{"version":3,"sources":["divider.css"],"names":[],"mappings":"AAAA;oBACoB;AACpB;EACE,mBAAmB;EAAnB,yBAAmB;EAEnB,wBAAuB;EADvB,oBAAa;EAAb,oBAAa;EAAb,aAAa;EADb,sBAAmB;EAEnB,qBAAuB;EAAvB,uBAAuB;EACvB,gBAAgB;EAChB,yBAAyB;AAC3B;AAEA;;EACE,mBAAmB;EACnB,WAAW;EACX,WAAW;EACX,WAAW;AACb;AAEA;EACE,cAAc;EACd,eAAe;EACf,gBAAgB;EAChB,SAAS;EACT,eAAe;EACf,mBAAmB;AACrB","file":"divider.css","sourcesContent":["/*!\r\n * divider - 0.2.0 */\n.br-divider {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  margin: 0 0 24px;\n  text-transform: uppercase;\n}\n\n.br-divider::after, .br-divider::before {\n  background: #888888;\n  content: \"\";\n  height: 1px;\n  width: 100%;\n}\n\n.br-divider .content {\n  color: #1351b4;\n  font-size: 18px;\n  font-weight: 500;\n  margin: 0;\n  padding: 0 16px;\n  white-space: nowrap;\n}\n"]}
-=======
 {
 	"version": 3,
 	"file": "divider.css",
@@ -57,4 +54,3 @@
 	"names": [],
 	"mappings": "AAGA;qBACqB;AAOrB,AAAA,WAAW,CAAQ;E+CVjB,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,MAAM,EDJI,CAAC,CAAC,CAAC,C5CkpBH,IAAI;E6C7oBd,cAAc,EAAE,SAAS;C/CQ1B;;AAFD,A+CLE,W/CKS,A+CLR,OAAO,E/CKV,WAAW,A+CJR,QAAQ,CAAC;EACR,UAAU,E7C2BC,OAAO;E6C1BlB,OAAO,EAAE,EAAE;EACX,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,IAAI;CACZ;;A/CDH,A+CEE,W/CFS,C+CET,QAAQ,CAAC;EACP,KAAK,E7CPO,OAAO;E6CQnB,SAAS,EDVO,IAAI;ECWpB,WAAW,EDVO,GAAG;ECWrB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC,C7C8nBF,IAAI;E6C7nBZ,WAAW,EAAE,MAAM;CACpB"
 }
->>>>>>> b42f1d592dae0d92945bbb47f8b2110944ff7e5a

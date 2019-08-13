@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-{"version":3,"sources":["login-social.css"],"names":[],"mappings":"AAAA;yBACyB;;;AACzB;EACE;IACE,+BAAuB;IAAvB,uBAAuB;EACzB;;EACA;IACE,iCAAyB;IAAzB,yBAAyB;EAC3B;AACF;;AAPA;EACE;IACE,+BAAuB;IAAvB,uBAAuB;EACzB;;EACA;IACE,iCAAyB;IAAzB,yBAAyB;EAC3B;AACF;;;AAEA;EAGE,wBAAuB;EAFvB,oBAAa;EAAb,oBAAa;EAAb,aAAa;EAEb,qBAAuB;EADvB,mBAAe;EAAf,eAAe;EACf,uBAAuB;AACzB;AAEA;EACE,WAAW;AACb;AAEA;EACE,gBAAgB;EAChB,SAAS;EACT,UAAU;AACZ;AAEA;EACE,SAAS;EACT,UAAU;AACZ;AAEA;EACE,iBAAiB;EACjB,aAAa;AACf","file":"login-social.css","sourcesContent":["/*!\r\n * login-social - 0.3.0 */\n@keyframes spinAround {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(359deg);\n  }\n}\n\n.br-login-social {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\n.br-login-social .br-divider {\n  width: 100%;\n}\n\n.br-login-social ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.br-login-social li {\n  margin: 0;\n  padding: 0;\n}\n\n.br-login-social .br-button + .br-button {\n  margin-left: 24px;\n  margin-top: 0;\n}\n"]}
-=======
 {
 	"version": 3,
 	"file": "login-social.css",
@@ -59,4 +56,3 @@
 	"names": [],
 	"mappings": "AAGA;0BAC0B;A8CiB1B,UAAU,CAAV,UAAU;EACR,IAAI;IACF,SAAS,EAAE,YAAY;;EAEzB,EAAE;IACA,SAAS,EAAE,cAAc;;;;A9Cb7B,AAAA,gBAAgB,CAAQ;EiDZtB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;CjDgBxB;;AAND,AiDTE,gBjDSc,CiDTd,WAAW,CAAC;EACV,KAAK,EAAE,IAAI;CACZ;;AjDOH,AiDNE,gBjDMc,CiDNd,EAAE,CAAC;EACD,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AjDEH,AiDDE,gBjDCc,CiDDd,EAAE,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AjDFH,AAEE,gBAFc,CAEd,UAAU,GAAG,UAAU,CAAC;EACtB,WAAW,EEkoBH,IAAI;EFjoBZ,UAAU,EAAE,CAAC;CACd"
 }
->>>>>>> b42f1d592dae0d92945bbb47f8b2110944ff7e5a

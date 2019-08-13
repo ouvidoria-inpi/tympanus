@@ -528,7 +528,7 @@
 }
 
 /*!
- * check - 0.1.9 */
+ * check - 0.1.10 */
 .br-check {
   display: inline-block;
   position: relative;
@@ -542,7 +542,8 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  min-height: 0.7rem;
+  margin-bottom: 0;
+  min-height: 1rem;
   padding: 0 0 0 28px;
   position: relative;
 }
@@ -675,7 +676,8 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  min-height: 0.7rem;
+  margin-bottom: 0;
+  min-height: 1rem;
   padding: 0 0 0 28px;
   position: relative;
 }
@@ -1087,7 +1089,8 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  min-height: 0.7rem;
+  margin-bottom: 0;
+  min-height: 1rem;
   padding: 0 28px 0 0;
   position: relative;
 }
@@ -1220,7 +1223,8 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  min-height: 0.7rem;
+  margin-bottom: 0;
+  min-height: 1rem;
   padding: 0 28px 0 0;
   position: relative;
 }
@@ -1598,7 +1602,8 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  min-height: 0.7rem;
+  margin-bottom: 0;
+  min-height: 1rem;
   padding: 0 0 0 28px;
   position: relative;
 }
@@ -1731,7 +1736,8 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  min-height: 0.7rem;
+  margin-bottom: 0;
+  min-height: 1rem;
   padding: 0 0 0 28px;
   position: relative;
 }
@@ -1911,7 +1917,7 @@
   color: #168821;
 }
 .br-form .actions {
-  margin-bottom: 24px;
+  margin: 36px 0 24px;
   text-align: center;
 }
 .br-form .actions .button.is-primary {
@@ -2896,7 +2902,7 @@
 }
 
 /*!
- * table - 0.2.0 */
+ * table - 0.2.1 */
 
 
 @keyframes spinAround {
@@ -2930,8 +2936,8 @@
 .br-table table tbody tr:hover th,
 .br-table table tbody tr:hover td {
   border-color: #2670e8;
-  -webkit-box-shadow: 0 -2px 0 #2670e8;
-  box-shadow: 0 -2px 0 #2670e8;
+  -webkit-box-shadow: 0 -1px 0 #2670e8;
+  box-shadow: 0 -1px 0 #2670e8;
   color: #333333;
 }
 .br-table table tbody tr.is-active:hover {
@@ -3379,20 +3385,21 @@
 }
 
 /*!
- * alert - 0.1.0 */
+ * alert - 0.1.1 */
 .br-alert {
+  background: #333333;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 20px;
 }
 .br-alert .icon {
   align-items: center;
-  background: #333333;
   -webkit-box-align: center;
   -webkit-box-pack: center;
-  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3415,6 +3422,7 @@
   font-weight: 600;
 }
 .br-alert .content a {
+  color: #ffffff;
   text-decoration: underline;
 }
 .br-alert .content *:last-child {
@@ -3431,89 +3439,114 @@
 .br-alert .close button {
   background: transparent;
   border: 0;
+  color: #ffffff;
   padding: 8px 16px;
 }
-.br-alert.is-success .icon {
+
+@media (min-width: 576px) {
+  .br-alert {
+    background: transparent;
+    color: #333333;
+  }
+  .br-alert .icon {
+    background: #333333;
+    color: #ffffff;
+  }
+  .br-alert .content a {
+    color: #1351b4;
+  }
+  .br-alert .content a:hover {
+    color: #2670e8;
+  }
+  .br-alert .close button {
+    color: #333333;
+  }
+}
+
+.br-alert.is-success {
   background: #168821;
-  color: #ffffff;
 }
-.br-alert.is-success .content {
-  color: #333333;
+
+@media (min-width: 576px) {
+  .br-alert.is-success {
+    background: transparent;
+  }
+  .br-alert.is-success .icon {
+    background: #168821;
+  }
+  .br-alert.is-success .close button {
+    color: #168821;
+  }
 }
-.br-alert.is-success .close button {
-  color: #168821;
-}
-.br-alert.is-danger .icon {
+
+
+.br-alert.is-danger {
   background: #ff3333;
-  color: #ffffff;
 }
-.br-alert.is-danger .content {
-  color: #333333;
+
+@media (min-width: 576px) {
+  .br-alert.is-danger {
+    background: transparent;
+  }
+  .br-alert.is-danger .icon {
+    background: #ff3333;
+  }
+  .br-alert.is-danger .close button {
+    color: #ff3333;
+  }
 }
-.br-alert.is-danger .close button {
-  color: #ff3333;
-}
-.br-alert.is-warning .icon {
+
+
+.br-alert.is-warning {
   background: #ffcd07;
-  color: #333333;
 }
-.br-alert.is-warning .content {
-  color: #333333;
+
+@media (min-width: 576px) {
+  .br-alert.is-warning {
+    background: transparent;
+  }
+  .br-alert.is-warning .icon {
+    background: #ffcd07;
+  }
+  .br-alert.is-warning .close button {
+    color: #ffcd07;
+  }
+  .br-alert.is-warning .icon {
+    color: #333333;
+  }
+  .br-alert.is-warning .close button {
+    color: #333333;
+  }
 }
+
+.br-alert.is-warning,
+.br-alert.is-warning .content a,
 .br-alert.is-warning .close button {
   color: #333333;
 }
-.br-alert.is-info .icon {
-  background: #155bcb;
-  color: #ffffff;
+
+@media (min-width: 576px) {
+  .br-alert.is-warning .content a {
+    color: #1351b4;
+  }
+  .br-alert.is-warning .content a:hover {
+    color: #2670e8;
+  }
 }
-.br-alert.is-info .content {
-  color: #333333;
-}
-.br-alert.is-info .close button {
-  color: #155bcb;
-}
-.br-alert.is-inverted .content {
-  background: #333333;
-  color: #ffffff;
-}
-.br-alert.is-inverted .content a {
-  color: #ffffff;
-}
-.br-alert.is-inverted .close {
-  background: #333333;
-}
-.br-alert.is-inverted .close button {
-  color: #ffffff;
-}
-.br-alert.is-inverted.is-success .content {
-  background: #168821;
-}
-.br-alert.is-inverted.is-success .close {
-  background: #168821;
-}
-.br-alert.is-inverted.is-danger .content {
-  background: #ff3333;
-}
-.br-alert.is-inverted.is-danger .close {
-  background: #ff3333;
-}
-.br-alert.is-inverted.is-warning .content {
-  background: #ffcd07;
-  color: #333333;
-}
-.br-alert.is-inverted.is-warning .content a {
-  color: #333333;
-}
-.br-alert.is-inverted.is-warning .close {
-  background: #ffcd07;
-}
-.br-alert.is-inverted.is-warning .close button {
-  color: #333333;
-}
-.br-alert.is-inverted.is-info .content {
+
+
+.br-alert.is-info {
   background: #155bcb;
 }
-.br-alert.is-inverted.is-info .close {
-  background: #155bcb;
+
+@media (min-width: 576px) {
+  .br-alert.is-info {
+    background: transparent;
+  }
+  .br-alert.is-info .icon {
+    background: #155bcb;
+  }
+  .br-alert.is-info .close button {
+    color: #155bcb;
+  }
 }

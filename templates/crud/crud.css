@@ -1,0 +1,12 @@
+fieldset legend,
+.fieldset {
+  color: #1351b4;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 24px 0;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
