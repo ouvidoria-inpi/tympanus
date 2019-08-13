@@ -30,9 +30,9 @@
 }
 
 .navigation-wrapper {
-  background: #fff;
-  box-shadow: 0 8px 6px -6px #ccc;
-  color: #707070;
+  background: #ffffff;
+  box-shadow: 0 8px 6px -6px #cccccc;
+  color: #555555;
   display: none;
   position: absolute;
   width: 100%;
@@ -66,9 +66,8 @@
 }
 
 #main-navigation .list-navigation {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ededed;
   margin: 0;
-  /*-5px 0*/
   padding: 25px 0;
   width: 100%;
 }
@@ -84,7 +83,11 @@
 }
 
 #main-navigation .list-navigation li.selected > a {
-  color: #fff;
+  align-items: center;
+  background-color: #1351b4;
+  color: #ffffff !important;
+  display: flex;
+  font-weight: 600;
 }
 
 #main-navigation .list-navigation li:hover > ul {
@@ -93,25 +96,23 @@
 
 #main-navigation .list-navigation li a {
   align-items: center;
-  color: #555;
+  color: #555555;
   display: flex;
-  /*block*/
   font-size: 16px;
   padding: 5px;
   position: relative;
   text-decoration: none;
 }
 
-#main-navigation .list-navigation li.selected > a {
-  align-items: center;
-  background-color: #1351b4;
-  color: #fff !important;
-  font-weight: 600;
-  display: flex;
+#main-navigation .list-navigation li.dropdown-submenu.selected > a::after {
+  color: #ffffff !important;
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
 }
 
 #main-navigation .list-navigation li.dropdown-submenu > a::after {
-  color: #333 !important;
+  color: #333333 !important;
   content: "\f054";
   font-family: "Font Awesome 5 Free";
   font-size: 9px;
@@ -121,16 +122,9 @@
   top: 12px;
 }
 
-#main-navigation .list-navigation li.dropdown-submenu.selected > a::after {
-  color: #fff !important;
-  content: "\f054";
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-}
-
 #main-navigation .list-navigation ul {
   background: #f8f8f8;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #ededed;
   box-sizing: border-box;
   display: none;
   height: calc(100% - 1px);
@@ -152,12 +146,12 @@
 
 #main-navigation .list-navigation ul li:hover > a {
   background-color: #1351b4;
-  color: #fff !important;
+  color: #ffffff !important;
   font-weight: 600;
 }
 
 #main-navigation .list-navigation ul li:hover > a::after {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 #main-navigation .list-navigation ul li:hover > ul {
@@ -181,7 +175,7 @@
 }
 
 #main-navigation .redes-sociais h3 {
-  color: BLUE;
+  color: #1351b4;
   display: inline;
   font-size: 14px;
   margin: 0;
@@ -201,14 +195,14 @@
 
 #main-navigation .redes-sociais .portal-redes li::before {
   align-items: center;
-  color: BLUE;
+  color: #1351b4;
   display: flex;
   font-family: "Font Awesome 5 Brands";
   font-weight: 900;
   height: 30px;
   justify-content: center;
-  position: absolute;
   pointer-events: none;
+  position: absolute;
   width: 30px;
 }
 
@@ -228,7 +222,6 @@
   content: "\f16e";
 }
 
-/* - */
 @media (max-width: 1600px) {
   .navigation-wrapper.ativo .navigation-content {
     width: 1152px;
@@ -264,11 +257,11 @@
     max-width: 100%;
     transform: none;
   }
-  header#main-header .navigation-content:before {
+  header#main-header .navigation-content::before {
     left: 25px !important;
   }
   .navigation-wrapper {
-    box-shadow: 8px 8px 6px -6px #ccc;
+    box-shadow: 8px 8px 6px -6px #cccccc;
   }
   .navigation-wrapper.ativo .navigation-content {
     margin: 0 20px;
@@ -279,8 +272,8 @@
   }
   .navigation-wrapper .resp-nav-title {
     background: #f8f8f8;
-    box-shadow: 8px 0 6px -6px #ccc;
-    color: #333;
+    box-shadow: 8px 0 6px -6px #cccccc;
+    color: #333333;
     display: none;
     font-size: 26px;
     font-weight: 600;
@@ -305,7 +298,6 @@
     overflow-y: auto;
     padding: 25px 0 !important;
     width: 100%;
-    /* calc(100% - 30px); */
   }
   .navigation-wrapper #main-navigation .list-navigation li {
     width: 100%;
@@ -319,7 +311,7 @@
   .navigation-wrapper #main-navigation .list-navigation a {
     padding: 5px 20px 5px 10px;
   }
-  .navigation-wrapper #main-navigation .list-navigation a:after {
+  .navigation-wrapper #main-navigation .list-navigation a::after {
     right: 20px;
   }
   .navigation-wrapper #main-navigation .list-navigation ul {
@@ -342,10 +334,6 @@
 }
 
 @media (max-width: 500px) {
-  #main-navigation .header-accessibility {
-    margin: 16px 0 8px 20px;
-    text-align: left;
-  }
   #main-navigation .redes-sociais h3 {
     font-weight: 600;
     margin-left: 30px;
@@ -355,10 +343,14 @@
     margin-left: 10px;
     margin-top: 10px;
   }
+  #main-navigation .header-accessibility {
+    margin: 16px 0 8px 20px;
+    text-align: left;
+  }
 }
 
 body > div.resp-nav-blocker {
-  background: #ddd;
+  background: #ededed;
   bottom: 0;
   display: block;
   left: 0;
