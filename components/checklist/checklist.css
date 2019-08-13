@@ -254,7 +254,8 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  min-height: 0.7rem;
+  margin-bottom: 0;
+  min-height: 1rem;
   padding: 0 28px 0 0;
   position: relative;
 }
@@ -397,7 +398,8 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  min-height: 0.7rem;
+  margin-bottom: 0;
+  min-height: 1rem;
   padding: 0 28px 0 0;
   position: relative;
 }
