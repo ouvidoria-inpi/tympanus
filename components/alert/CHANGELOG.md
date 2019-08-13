@@ -5,6 +5,14 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.1] - 2019-08-13
+
+### Added
+- Script para fechar o alerta
+
+### Changed
+- Estilo **inverted** é aplicado somente aos celulares
+
 ## [0.1.0] - 2019-08-07
 ### Added
 - Documentação inicial
