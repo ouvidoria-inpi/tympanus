@@ -67,7 +67,7 @@
   }
   // Agrupador de botões
   .actions {
-    margin-bottom: $field-margin;
+    margin: ($field-margin * 1.5) 0 $field-margin;
     text-align: center;
     // Botões
     .button {
