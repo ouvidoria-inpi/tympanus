@@ -306,12 +306,16 @@ window.onload = function() {
 
   menuClass = new Menu()
   menuClass.addEvent()
-  var toggleMobileMenu = new Auxiliary(
+
+
+  var toggleDesktopMenu = new Auxiliary(
     'click',
-    '.mobile-header .sidemenu-trigger',
-    ['.mobile-header .canvas', '.mobile-header .sidemenu'],
-    'd-none'
+    '.desktop-header .menu-hamburger',
+    ['.menu-hamburger i.fa-bars','.menu-hamburger i.fa-times', '.container-fluid .col-md-3:first-child'],
+    'd-sm-block'
   )
+  toggleDesktopMenu.addEvent()
+
 }
 
 let collapseList = document.querySelectorAll('button[data-toggle="collapse"]');
