@@ -27,10 +27,28 @@ Acompanhe a evolução dos componentes do Design System
       </thead>
       <tbody>
         <tr>
-          <td><a href="/ds/componentes/accordeon">Accordeon</a></td>
+          <td><a href="/ds/componentes/accordeon">Abas</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
+        </tr>
+        <tr>
+          <td><a href="/ds/componentes/accordeon">Acordeão</a></td>
+          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
+          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
+          <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
+        </tr>
+        <tr>
+          <td><a href="/ds/componentes/accordeon">Alertas</a></td>
+          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
+          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
+          <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
+        </tr>
+        <tr>
+          <td><a href="/ds/componentes/accordeon">Botão</a></td>
+          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
+          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
+          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
         </tr>
         <tr>
           <td><a href="/ds/componentes/accordeon">Breadcrumb</a></td>
@@ -39,10 +57,10 @@ Acompanhe a evolução dos componentes do Design System
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/componentes/accordeon">Button</a></td>
+          <td><a href="/ds/componentes/accordeon">Busca</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
+          <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
         <tr>
           <td><a href="/ds/componentes/accordeon">Checkbox</a></td>
@@ -87,18 +105,6 @@ Acompanhe a evolução dos componentes do Design System
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
         </tr>
         <tr>
-          <td><a href="/ds/componentes/accordeon">Portlet</a></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
-          <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
-        </tr>
-        <tr>
-          <td><a href="/ds/componentes/accordeon">Busca</a></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
-          <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
-        </tr>
-        <tr>
           <td><a href="/ds/componentes/accordeon">Select</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
@@ -107,16 +113,28 @@ Acompanhe a evolução dos componentes do Design System
         <tr>
           <td><a href="/ds/componentes/accordeon">Tabela</a></td>
           <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
-        </tr>
-        <tr>
-          <td><a href="/ds/componentes/accordeon">Abas</a></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
-          <td class="text-center"><i class="fas fa-check text-success"></i><span class="sr-only">Acessível</span></td>
           <td class="text-center"><i class="fas fa-sync text-orange"></i><span class="sr-only">Em Progresso</span></td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+
+## Tabela de prefixos dos componentes
+
+Componente | Tipo | Cor | Estado | Tamanho
+--- | --- | --- | ---| ---
+**Abas** | o padrão é horizontal<br>`is-vertical` | - | `is-active` (usado na aba ativa) | -
+**Acordeão** | - | - | `is-active` (usado em linha ativa) | -
+**Breadcrumb** | - | - | `is-active` (usado em crumb ativo) | -
+**Botão** | `is-primary`<br>`is-secondary`<br>`is-tertiary`<br> `is-cancel`<br>`is-call-to-action`<br>`is-circle`<br>`is-social-media`<br>`is-go-top`<br>`is-filter` | `is-facebook`<br>`is-twitter` | `is-focus`<br>`is-hover`<br>`is-disabled`<br>`is-loading` | -
+**Busca** | - | - | - | -
+**Checkbox** | é aplicado automaticamente nos tipos<br>`input[type="checkbox"]`<br>`input[type="radio"]` | - | `is-focus`<br>`is-hover`<br>`is-disabled`<br>`is-valid`<br>`is-invalid` | -
+**Checklist** | - | - | (usado em linha ativa)<br>`is-active`<br>(usado no componente e na linha)<br>`is-valid` <br>`is-invalid` | -
+**Divider** | - | - | - | -
+**Formulário** | (usados nos botões dentro de `actions`)<br>`is-primary`<br>`is-secondary`<br>`is-tertiary`<br> `is-cancel` | - | (usados em `field`)<br>`is-focus`<br>`is-valid`<br>`is-invalid`<br>(usados nos botões dentro de `actions`)<br>`is-loading` | -
+**Input** | (o padrão não precisa de prefixo)<br>`is-action`<br>`is-autocomplete` | - | `is-focus`<br>`is-valid`<br>`is-invalid` | -
+**Login-social** | - | - | - | -
+**Paginação** | `is-first`<br>`is-last` | - | `is-active` (usado em página ativa)<br>`is-disabled` (usar para desativar link) | (o padrão não precisa de prefixo)<br>`is-large`
+**Select** | - | - | `is-focus`<br>`is-valid`<br>`is-invalid` | (o padrão não precisa de prefixo)<br>`is-medium`<br>`is-small`
