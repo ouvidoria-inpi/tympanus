@@ -1,7 +1,4 @@
-(15:27:29) augusto.almeida@sim.serpro.gov.br: 
-# Definição da Tipografia
-
-## Design System do Governo Federal
+# Tipografia
 
 Para a apresentação de todo o conteúdo dos novos sites do Governo Federal, somente uma família de fonte é utilizada e indicada no Guia de Estilos do Governo Federal, - A Raleway. Porém, optou-se pela substituição desta fonte pela **Rawline**, já que ambas são iguais porém os caracteres numéricos da Rawline são alinhados pela base o que facilita a leitura.
 
@@ -18,17 +15,15 @@ pela base**, evitando estranhamento por parte de alguns usuários.
 
 ![Rawline Numeros](../assets/images/estilos/tipografia/rawline-numeros.png)
 
-## Tipografia | Tamanhos
+## Tamanhos | Pesos
 
 Para definir os tamanhos principais dos textos do Design System do Governo Federal, e garantir ume melhor legibilidade, tomou-se como base uma escala modular, o Type Scale, que define uma relação de proporção e hierarquia entre os tamanhos tipográficos.
-
 
 Utilizou-se **16px** como o tamanho base para os textos, e optou-se pelo uso da escala (Major Second) de aproximadamente 1,125 , com peso de 400 (que equivale a Regular).
 
 Os pesos maiores serão definidos na criação dos componentes e templates, de acordo com a necessidade de se criar hierarquias entre os textos.
 
-<h2 style="text-transform: uppercase;">Sistema - Login</h2>
-<h3><strong>Tela Inicial</strong></h3>
+### Tela de Login
 
 <div class="br-table">
   <div class="table">
@@ -60,8 +55,7 @@ Os pesos maiores serão definidos na criação dos componentes e templates, de a
   </div>
 </div>
 
-<h2 style="text-transform: uppercase;">Cadastro</h2>
-<h3><strong>Tela Inicial</strong></h3>
+### Tela de Cadastro
 
 <div class="br-table">
   <div class="table">
@@ -114,7 +108,7 @@ Os pesos maiores serão definidos na criação dos componentes e templates, de a
   </div>
 </div>
 
-<h3><strong>Tela Ativação da Conta</strong></h3>
+### Tela de Ativação da Conta
 
 <div class="br-table">
   <div class="table">
