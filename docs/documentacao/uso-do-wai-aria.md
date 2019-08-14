@@ -2,8 +2,6 @@
 
 Esse documento apresenta uma breve introdução ao [Accessible Rich Internet Application - ARIA][1], desenvolvido pela [Web Accessibility Initiative - WAI][2].
 
-## Índice
-
 ## O que é WAI-ARIA
 
 O WAI-ARIA é uma especificação técnica que provê um framework para melhorar a acessibilidade e interoperabilidade dos conteúdos web e aplicações.

@@ -2,11 +2,11 @@
 
 O sistema de Grid do Design System de Governo se adequa a 4 breakpoints de referência, abrangendo resoluções para Mobile, Tablet, Desktop e resoluções superiores. São elas:
 
-- SmartPhone Portrait (**xs**): até **576px**
-- SmartPhone Landscape e Tablet Portrait (**sm**): a partir de **576px**
-- Tablet Landscape (**md**): a partir de **992px**
-- Desktop (**lg**): a partir de **1280px**
-- Big Desktop e TV (**xl**): a partir de **1600px**
+- Smartphone: até **576px**
+- Tablet e Smartphone Landscape: a partir de **576px**
+- Desktop pequeno e Tablet Landscape: a partir de **992px**
+- Desktop padrão: a partir de **1280px**
+- TV e Desktop grande: a partir de **1600px**
 
 Para tanto, será utilizado o **Sistema de 12 Colunas** como norteador na estrutura geral, além da **Grade de 8 Pontos** - <https://spec.fm/specifics/8-pt-grid> - para definir dimensões, preenchimento e margem de elementos em bloco e em linha.
 
@@ -35,9 +35,13 @@ Exemplo de uso:
 
 Tabela de configurações da Grid
 
-Breakpoints | Containers | Gutters
---- | --- | ---
-xs: **até 576px**<br>sm: **a partir de 576px**<br>md: **a partir de 992px**<br>lg: **a partir de 1280px**<br> xl:  **a partir de 1600px** | xs, sm e md: **100% da largura**<br>lg: **máximo de 1152px**<br>xl: **máximo de 1440px** | xs, sm e md: **16px**<br>lg: **24px**<br>xl: **32px**
+Dispositivo | Breakpoints | Containers | Gutters
+--- | --- | --- | ---
+Smartphone (**xs**) | até 576px | 100% da largura | 16px
+Tablet e Smartphone Landscape (**sm**) | a partir de 576px | 100% da largura | 16px
+Desktop pequeno e Tablet Landscape (**md**) | a partir de 992px | 100% da largura | 16px
+Desktop padrão (**lg**) | a partir de 1280px | máximo de 1152px | 24px
+TV e Desktop grande (**xl**) | a partir de 1600px | máximo de 1440px | 32px
 
 ## Aplicação na prática
 
