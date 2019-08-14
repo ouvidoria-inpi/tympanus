@@ -52,19 +52,6 @@ Exemplo de uso:
 
 Veja mais informações em [**Fundamentos Visuais --> Cores**](ds/fundamentosvisuais/cores).
 
-### Tipografia
-
-Você poderá forçar o uso de fonte Raleway ou Rawline, caso haja necessidade, usando as seguintes classes `.font-raleway` e `.font-rawline` em seu código HTML.
-
-Exemplo de uso:
-
-```html
-<p class="font-raleway">123456789</p>
-<p class="font-rawline">123456789</p>
-```
-
-Veja mais informações em [**Fundamentos Visuais --> Tipografia**](ds/fundamentosvisuais/tipografia).
-
 ### Grid
 
 A Grid do DS-Gov é a mesma grid Bootstrap, portanto sua forma de uso é a mesma. Os tamanhos de breakpoints, containers e gutters possuem valores diferenciados.
