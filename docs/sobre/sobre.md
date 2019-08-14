@@ -1,19 +1,32 @@
-# Sobre o Design System
+### O Design System
 
-O Design System do Governo Federal do Brasil
-
-## Template Básico
-
-Por que unificar a experiência dos cidadãos brasileiros quando estão em contato com o Governo do Brasil por meio digital?
-
-O sentimento comum era da necessidade de uma visão singular do cidadão em relação aos produtos e serviços que o governo disponibiliza ou solicita.
-
-O cenário era garantir esta visão singular de uma experiência única que não demandasse do cidadão aprender a se relacionar com o governo em cada contato.
-
-Diante desta visão, iniciamos a construção de um Design System que tem como objetivo resolver os problemas citados acima e guiar todos os responsáveis pela construção desses produtos.
+O Design System do Governo Federal apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação com os sistemas interativos do Governo Federal.
 
 
-## Afinal, o que é Design System?
+**Por que unificar a experiência dos cidadãos brasileiros quando estão em contato com o Governo Federal por meio digital?**
+
+
+A proposta surgiu a partir do sentimento comum acerca da necessidade de oferecer uma experiência única ao cidadão que se relaciona com o governo para acessar produtos e serviços públicos.
+
+
+A iniciativa potencializa a eficiência e a eficácia dos usuários na utilização de interfaces para acesso aos serviços e aos sistemas de Governo, possibilitando uma única curva de aprendizado e garantindo a previsibilidade na utilização dos diferentes sistemas.
+
+---
+
+#### Histórico:
+O projeto atual se refere a uma evolução do trabalho desenvolvido para a construção da Identidade Digital de Governo (IDG) e da IDG de Serviços, iniciativas que buscavam padronizar os portais dos órgãos públicos federais e alinhar as informações para otimizar a comunicação e simplificar as interfaces de oferta de informações para o cidadão.
+
+O diferencial dessa versão está na possibilidade de realizar download de templates, códigos e componentes, propiciando o reaproveitamento de diferentes elementos necessários ao desenvolvimento de interfaces. Com isso, amplia-se a eficiência e a produtividade de desenvolvedores e designers, além de facilitar o desenvolvimento alinhado à experiência única do cidadão.
+
+
+Diante dessa visão, o Governo Federal desenvolveu um Design System que tem como objetivo guiar todos os responsáveis pela construção de interfaces interativas orientadas à experiência única do usuário, considerando a acessibilidade e a usabilidade dos sistemas.
+
+
+A iniciativa foi desenvolvida no âmbito do Projeto de Unificação de Canais Digitais do Governo Federal, que envolveu a participação da Secretaria de Governo Digital do Ministério da Economia (**SGD**), a Secretaria Especial de Modernização do Estado (**SEME**), a Secretaria Especial de Comunicação Social da Presidência da República (**SECOM**) e o Serviço Federal de Processamento de Dados (**SERPRO**).
+
+---
+
+#### Afinal, o que é Design System?
 
 > _Um Design System não é um projeto, é um produto que serve produtos_
 > -- <cite>[Natan curtis]</cite>
@@ -30,13 +43,11 @@ Você já está entendendo que o Design System é o conjunto completo de padrõe
 documentação e princípios. Utilizando o UI kit (kit de ferramentas de design) e o código para atingir
 esses padrões.
 
+---
 
-## O Design System do Governo Federal do Brasil
+#### O Design System do Governo Federal do Brasil
 
 ![Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.](/assets/docs/imagens_ds.png 'Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.')
-
 _Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo._
 
-Como Design System oficial do Governo Brasileiro, o DS Gov atende a uma ampla gama de designers e desenvolvedores que criam produtos e experiências digitais. Os objetivos do sistema incluem melhorar a consistência e a qualidade da interface, tornando o processo de design e desenvolvimento mais eficiente e focado, estabelecendo um vocabulário compartilhado entre designer e desenvolvedor, fornecendo orientação clara e identificável sobre as melhores práticas de design e desenvolvimento.
-
-Essa iniciativa é uma parceria simbiótica da Secretaria de Governo Digital do Ministério da Economia (**SGD**), Secretaria Especial de Comunicação Social da Presidência da República (**SECOM**) e do Serviço Federal de Processamento de Dados **SERPRO**.
+Como Design System oficial do Governo Brasileiro, ele atende a uma ampla gama de designers e desenvolvedores que criam produtos e experiências digitais. Os objetivos do sistema incluem melhorar a consistência e a qualidade da interface, tornando o processo de design e desenvolvimento mais eficiente e focado, estabelecendo um vocabulário compartilhado entre designer e desenvolvedor, fornecendo orientação clara e identificável sobre as melhores práticas de design e desenvolvimento.
