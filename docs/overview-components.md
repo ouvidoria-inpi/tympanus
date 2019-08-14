@@ -125,16 +125,17 @@ Acompanhe a evolução dos componentes do Design System
 
 Componente | Tipo | Cor | Estado | Tamanho
 --- | --- | --- | ---| ---
-**Abas** | o padrão é horizontal<br>`is-vertical` | - | `is-active` (usado na aba ativa) | -
-**Acordeão** | - | - | `is-active` (usado em linha ativa) | -
-**Breadcrumb** | - | - | `is-active` (usado em crumb ativo) | -
+**Abas** | **o padrão é horizontal**<br>`is-vertical` | - | **Aplicar na aba**:<br>`is-active` | -
+**Acordeão** | - | - | **Aplicar na linha**:<br>`is-active` | -
+**Breadcrumb** | - | - | **Aplicar no crumb**:<br>`is-active` | -
 **Botão** | `is-primary`<br>`is-secondary`<br>`is-tertiary`<br> `is-cancel`<br>`is-call-to-action`<br>`is-circle`<br>`is-social-media`<br>`is-go-top`<br>`is-filter` | `is-facebook`<br>`is-twitter` | `is-focus`<br>`is-hover`<br>`is-disabled`<br>`is-loading` | -
 **Busca** | - | - | - | -
 **Checkbox** | é aplicado automaticamente nos tipos<br>`input[type="checkbox"]`<br>`input[type="radio"]` | - | `is-focus`<br>`is-hover`<br>`is-disabled`<br>`is-valid`<br>`is-invalid` | -
-**Checklist** | - | - | (usado em linha ativa)<br>`is-active`<br>(usado no componente e na linha)<br>`is-valid` <br>`is-invalid` | -
+**Checklist** | - | - | **Aplicar na linha**:<br>`is-active`<br><br>**Aplicar no componente e na linha**:<br>`is-valid` <br>`is-invalid` | -
 **Divider** | - | - | - | -
-**Formulário** | (usados nos botões dentro de `actions`)<br>`is-primary`<br>`is-secondary`<br>`is-tertiary`<br> `is-cancel` | - | (usados em `field`)<br>`is-focus`<br>`is-valid`<br>`is-invalid`<br>(usados nos botões dentro de `actions`)<br>`is-loading` | -
-**Input** | (o padrão não precisa de prefixo)<br>`is-action`<br>`is-autocomplete` | - | `is-focus`<br>`is-valid`<br>`is-invalid` | -
+**Formulário** | - | - | **Aplicar no field**:<br>`is-focus`<br>`is-valid`<br>`is-invalid`<br> | -
+**Input** | **o padrão não precisa de prefixo**<br>`is-action`<br>`is-autocomplete` | - | `is-focus`<br>`is-valid`<br>`is-invalid` | -
 **Login-social** | - | - | - | -
-**Paginação** | `is-first`<br>`is-last` | - | `is-active` (usado em página ativa)<br>`is-disabled` (usar para desativar link) | (o padrão não precisa de prefixo)<br>`is-large`
-**Select** | - | - | `is-focus`<br>`is-valid`<br>`is-invalid` | (o padrão não precisa de prefixo)<br>`is-medium`<br>`is-small`
+**Paginação** | **Aplicar no item**:<br>`is-first`<br>`is-last` | - | **Aplicar no item**:<br>`is-active`<br>`is-disabled` | **o padrão não precisa de prefixo**<br>`is-large`
+**Select** | - | - | `is-focus`<br>`is-valid`<br>`is-invalid` | **o padrão não precisa de prefixo**<br>`is-medium`<br>`is-small`
+**Tabela** | - | - | **Linhas**:<br>`is-active`<br><br>**Menu de ações**:<br>`is-inline`<br>`is-active` | -
