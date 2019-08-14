@@ -140,21 +140,6 @@ Exemplo de uso:
 
 Leia a documentação de cada componente na sessão **Componentes** no menu principal.
 
-Tabela de prefixos dos componentes:
-
-Componente | Tipo | Cor | Estado | Tamanho
---- | --- | --- | ---| ---
-**accordeon** | tipo único | cor única | `is-active` (usado em linha ativa) | tamanho único
-**breadcrumb** | tipo único | cor única | `is-active` (usado em crumb ativo) | tamanho único
-**button** | `is-primary`<br>`is-secondary`<br>`is-tertiary`<br> `is-cancel`<br>`is-call-to-action`<br>`is-circle`<br>`is-social-media`<br>`is-go-top`<br>`is-filter` | `is-facebook`<br>`is-twitter` | `is-focus`<br>`is-hover`<br>`is-disabled`<br>`is-loading` | tamanho único
-**checkbox** | é aplicado automaticamente nos tipos<br>`input[type="checkbox"]`<br>`input[type="radio"]` | cor única | `is-focus`<br>`is-hover`<br>`is-disabled`<br>`is-valid`<br>`is-invalid` | tamanho único
-**checklist** | tipo único | cor única | (usado em linha ativa)<br>`is-active`<br>(usado no componente e na linha)<br>`is-valid` <br>`is-invalid` | tamanho único
-**form** | (usados nos botões dentro de `actions`)<br>`is-primary`<br>`is-secondary`<br>`is-tertiary`<br> `is-cancel` | cor única | (usados em `field`)<br>`is-focus`<br>`is-valid`<br>`is-invalid`<br>(usados nos botões dentro de `actions`)<br>`is-loading` | tamanho único
-**input** | (o padrão não precisa de prefixo)<br>`is-action`<br>`is-autocomplete` | cor única | `is-focus`<br>`is-valid`<br>`is-invalid` | tamanho único
-**pagination** | `is-first`<br>`is-last` | cor única | `is-active` (usado em página ativa)<br>`is-disabled` (usar para desativar link) | (o padrão não precisa de prefixo)<br>`is-large`
-**select** | tipo único | cor única | `is-focus`<br>`is-valid`<br>`is-invalid` | (o padrão não precisa de prefixo)<br>`is-medium`<br>`is-small`
-**tabs** | o padrão é horizontal<br>`is-vertical` | cor única | `is-active` (usado na aba ativa) | tamanho único
-
 ## CSS de templates
 
 Esta folha de estilo é um compilado de **todos os templates** criados para o DS-Gov.
