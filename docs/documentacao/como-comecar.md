@@ -1,31 +1,8 @@
 # Como começar
 
-Carregue as folhas de estilo do Deseign System de Governo dentro da tag `<head>` da sua página ou aplicação.
-
-```html
-<link rel="stylesheet" href="dsgov-base.min.css">
-<link rel="stylesheet" href="dsgov-components.min.css">
-<link rel="stylesheet" href="dsgov-templates.min.css">
-```
-
-Alguns componentes possuem scripts para funcionar. Neste caso, carregue-os no final da tag `<body>`.
-
-Exemplo de uso:
-
-```html
-<body>
-  ...
-  <script src="componentex.js"></script>
-</body>
-```
-
-## Informações básicas
-
-Inclua as seguintes configurações em seu código para manter a consistência visual em suas páginas e aplicações.
-
-No cabeçalho das páginas configure o idioma para "português do Brasil", inclua a codificação UTF-8 e o viewport compatível com dispositivos móveis.
-
-Exemplo de uso:
+- No cabeçalho das páginas configure o idioma para "português do Brasil", inclua a codificação UTF-8 e o viewport compatível com dispositivos móveis.
+- Carregue as folhas de estilo do Design System de Governo
+- Alguns componentes possuem scripts para funcionar. Neste caso, carregue-os no final da tag `<body>`.
 
 ```html
 <!DOCTYPE html>
@@ -42,10 +19,18 @@ Exemplo de uso:
   <body>
     ...
     <!-- Scripts de componentes -->
-    <script src="componentex.js"></script>
+    <script src="componente-x.js"></script>
   </body>
 </html>
 ```
+
+
+
+## Documentação
+
+Para informações mais detalhadas sobre Cores, Tipografia, etc acesse o item **Fundamentos Visuais** na navegação principal.
+
+Caso queira precise construir templates e/ou estilos acesse o item **Boas Práticas** na navegação principal.
 
 ## Componentes disponíveis
 

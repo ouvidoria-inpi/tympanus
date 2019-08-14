@@ -55,5 +55,3 @@ Exemplo de uso:
   <p class="text-white">Texto...</p>
 </div>
 ```
-
-Veja como usar as folhas de estilo do Design System de Governo em [**Boas Práticas --> Desenvolvimento --> Uso do CSS**](ds/boaspraticas/uso-do-css).

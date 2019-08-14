@@ -1,5 +1,7 @@
 # Uso do CSS
 
+Este documento explica como usar as folhas de estilo do Design System de Governo.
+
 O CSS do DS-Gov foi dividido em partes.
 
 ```text

@@ -1,16 +1,16 @@
 {
   "Introdução": [
     {
+      "label": "Como começar",
+      "path": "docs/documentacao/como-comecar"
+    },
+    {
       "label": "Sobre o Design System",
       "path": "docs/sobre/sobre"
     },
     {
       "label": "Princípios de Design",
       "path": "docs/estilos/principios-de-design"
-    },
-    {
-      "label": "Como começar",
-      "path": "docs/documentacao/como-comecar"
     }
   ],
   "Fundamentos Visuais": [
