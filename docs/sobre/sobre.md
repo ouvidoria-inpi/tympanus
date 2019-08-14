@@ -1,6 +1,6 @@
 # Sobre o Design System
 
-### O Design System
+## O Design System
 
 O Design System do Governo Federal apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação com os sistemas interativos do Governo Federal.
 
@@ -15,7 +15,7 @@ A iniciativa potencializa a eficiência e a eficácia dos usuários na utilizaç
 
 ---
 
-#### Histórico:
+### Histórico:
 O projeto atual se refere a uma evolução do trabalho desenvolvido para a construção da Identidade Digital de Governo (IDG) e da IDG de Serviços, iniciativas que buscavam padronizar os portais dos órgãos públicos federais e alinhar as informações para otimizar a comunicação e simplificar as interfaces de oferta de informações para o cidadão.
 
 O diferencial dessa versão está na possibilidade de realizar download de templates, códigos e componentes, propiciando o reaproveitamento de diferentes elementos necessários ao desenvolvimento de interfaces. Com isso, amplia-se a eficiência e a produtividade de desenvolvedores e designers, além de facilitar o desenvolvimento alinhado à experiência única do cidadão.
@@ -28,7 +28,7 @@ A iniciativa foi desenvolvida no âmbito do Projeto de Unificação de Canais Di
 
 ---
 
-#### Afinal, o que é Design System?
+## Afinal, o que é Design System?
 
 > _Um Design System não é um projeto, é um produto que serve produtos_
 > -- <cite>[Natan curtis]</cite>
@@ -47,7 +47,7 @@ esses padrões.
 
 ---
 
-#### O Design System do Governo Federal do Brasil
+## O Design System do Governo Federal do Brasil
 
 ![Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.](/assets/docs/imagens_ds.png 'Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.')
 _Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo._
