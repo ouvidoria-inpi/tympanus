@@ -10,7 +10,7 @@
     "zip:all-templates": "zip -r templates/all-templates.zip templates assets/styles",
     "zip:all": "npm-run-all zip:clear zip:all-components zip:components zip:all-templates zip:templates",
     "zip:clear": "rm -rf components/*.zip && rm -rf templates/*.zip",
-    "build": "npm-run-all get-tokens css",
+    "build": "npm-run-all get-tokens css zip:all",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-assets": "npm-run-all css-compile-assets css-prefix css-minify",
     "css-compile": "npm-run-all --parallel css-compile-*",
