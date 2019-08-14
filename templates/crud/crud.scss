@@ -1,5 +1,5 @@
 // Carregar variáveis do DS-Gov
-@import '../../base/dsgov-base';
+@import "../../base/dsgov-base";
 
 // Fieldset - pode ser aplicado usando tab ou classe
 %fieldset {
@@ -8,7 +8,7 @@
   font-weight: 400;
   margin: $spacing-5 0;
 }
-fieldset legend,
+fieldset legend, // sass-lint:disable-line force-element-nesting
 .fieldset {
   @extend %fieldset;
 }
@@ -16,5 +16,5 @@ fieldset legend,
 // Label
 .label {
   font-weight: 600;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }

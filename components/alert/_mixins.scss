@@ -69,7 +69,6 @@
 @mixin alert-states {
   @each $state, $color in (success, $color-success), (danger, $color-danger), (warning, $color-warning), (info, $color-info) {
     &.is-#{$state} {
-      background: $color;
       // Breakpoint acima de sm
       @include media-breakpoint-up(sm) {
         background: transparent;
@@ -92,15 +91,16 @@
           }
         }
       }
+      background: $color;
       // Regra especial para warning
       @if ($state == warning) {
         &,
-        .content a,
-        .close button {
+        .content a, // sass-lint:disable-line force-element-nesting
+        .close button { // sass-lint:disable-line force-element-nesting
           color: $color-gray-7;
         }
         @include media-breakpoint-up(sm) {
-          .content a {
+          .content a { // sass-lint:disable-line force-element-nesting
             color: $link-color;
             &:hover {
               color: $link-hover-color;
