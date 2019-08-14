@@ -16,7 +16,7 @@ Acompanhe a evolução dos componentes do Design System
 
 <div class="br-table">
   <div class="table">
-    <table class="br-table">
+    <table>
       <thead>
         <tr>
           <th>Componente</th>
