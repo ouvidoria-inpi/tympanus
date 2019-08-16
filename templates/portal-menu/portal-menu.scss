@@ -1,56 +1,12 @@
 // Carregar variáveis do DS-Gov
 @import "../../base/dsgov-base";
 
-// Atalhos para conteúdo
-.skip-menu {
-  list-style: none;
-  position: absolute;
-  width: 100%;
-  a {
-    color: $color-white;
-    position: absolute;
-    top: -200em;
-    &:focus {
-      background: $color-secondary;
-      border-radius: 100px;
-      left: 20px;
-      outline: 0;
-      padding: 8px 24px;
-      position: absolute;
-      top: auto;
-      z-index: 11;
-    }
-  }
-}
-
-// Barra de Governo
-#barra-brasil {
-  background: $color-primary-darken-25;
-}
-
-// Logo
-.logo {
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  img {
-    max-width: 120px;
-  }
+// logo
+.portal-logo {
   .name {
-    color: $color-gray-7;
-    display: inline-block;
     font-size: 26px;
     font-weight: 400;
-  }
-  .name-bold {
-    font-weight: 600;
-  }
-  .description {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
+    text-transform: none;
   }
 }
 
@@ -184,33 +140,6 @@
       text-align: left;
     }
   }
-  img {
-    @include media-breakpoint-up(sm) {
-      max-width: 16px;
-    }
-  }
-  .mobile-header & {
-    .br-button {
-      border-color: transparent;
-      &:focus {
-        box-shadow: none;
-      }
-      &.is-primary {
-        background: transparent;
-        color: $color-primary;
-      }
-      &.is-secondary {
-        color: $color-gray-6;
-        &:hover {
-          background: transparent;
-        }
-      }
-      & + .br-button {
-        margin-left: $spacing-2;
-        margin-top: 0;
-      }
-    }
-  }
 }
 
 // Busca
@@ -302,374 +231,217 @@
   }
 }
 
-// Abas
-.br-tabs {
-  .desktop-header & {
-    border: 0;
-    .item {
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-}
-
-// Sombra
-.shadow-bottom {
-  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
-}
-
-.page-subheader {
-  align-items: center;
-  height: 60px;
-}
-
-// Componente de dropdown
-.dropdown {
-  position: relative;
-  .menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    transform: translate($spacing-6, 18px);
-    z-index: 1;
-  }
-  &.is-active {
-    &::after {
-      border-color: transparent transparent $color-gray-7;
-      border-style: solid;
-      border-width: 0 12px 12px;
-      content: "";
-      height: 0;
-      position: absolute;
-      right: 0;
-      transform: translate(5px, 9px);
-      width: 0;
-      z-index: 1;
-    }
-    .menu {
-      display: block;
-    }
-  }
-}
-
-// Menu aberto do dropdown
-.menu {
+// Main menu
+.navigation-wrapper {
   background: $color-white;
-  box-shadow: -2px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
-  .header {
-    color: $color-gray-7;
+  box-shadow: 0 8px 6px -6px $color-gray-3;
+  color: $color-gray-6;
+  display: none;
+  position: absolute;
+  width: 100%;
+  &.is-active {
+    border-top: 2px solid $color-warning;
     display: block;
-    font-size: 16px;
-    font-weight: 600;
-    padding: $spacing-3 $spacing-6;
-    white-space: nowrap;
-  }
-  .item {
-    color: $color-gray-7;
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-    padding: $spacing-1 $spacing-6;
-    text-align: right;
-    &:hover {
-      background: $color-primary-pastel;
-      text-decoration: none;
-    }
-  }
-}
-
-// Área do usuário
-.user {
-  align-items: center;
-  display: flex;
-  // Bloco de ações do usuário
-  .actions {
-    display: flex;
-  }
-  // Botão de ação
-  .trigger {
-    background: $color-white;
-    border: 1px solid $color-gray-3;
-    border-radius: 50%;
-    height: 42px;
-    width: 42px;
-  }
-  // Informações do usuário
-  .info {
-    margin-right: $spacing-5;
-  }
-  .name {
-    color: $color-gray-7;
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .description {
-    display: block;
-    font-size: 12px;
-    font-style: italic;
-    text-align: right;
-  }
-  // Avatar com usuário, pode ser imagem ou ícone
-  .avatar {
-    position: relative;
-    .icon {
-      color: $color-primary;
-      font-size: 20px;
-      & + .badge {
-        transform: translate(-12px, 2px);
-      }
-    }
-    .image {
-      max-width: 40px;
-      & + .badge {
-        transform: translate(-10px, -2px);
+    z-index: 103;
+    .navigation-cell {
+      position: relative;
+      &::before {
+        color: $color-primary;
+        content: "\25B2";
+        font-size: 20px;
+        left: 5px;
+        line-height: 1rem;
+        position: absolute;
+        top: -19px;
       }
     }
   }
-  // Quantidade de notificações
-  .badge {
-    align-items: center;
-    background: $color-danger;
-    border-radius: 50%;
-    color: $color-white;
-    display: flex;
-    font-size: 11px;
-    height: 18px;
-    justify-content: center;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 18px;
-  }
-  // Botão de sair
-  .br-button {
-    font-size: 12px;
-    min-width: 0;
-    padding: $spacing-half $spacing-4;
-  }
 }
+#main-navigation {
+  .header-accessibility {
+    display: none;
+  }
 
-// Menu do usuário
-.user-menu {
-  .trigger {
-    align-items: center;
-    background: $color-gray-2;
-    border: 0;
-    border-radius: 50%;
-    color: $color-primary;
-    display: inline-flex;
-    font-size: 11px;
-    height: 17px;
-    justify-content: center;
-    margin-left: $spacing-1;
-    width: 17px;
-  }
-}
+  .list-navigation {
+    border-bottom: 1px solid $color-gray-2;
+    margin: 0;
+    padding: 25px 0;
+    width: 100%;
 
-// Sistemas do usuário
-.systems-menu {
-  .trigger {
-    background: transparent;
-    border: 0;
-    color: $color-primary;
-    height: auto;
-    margin-left: $spacing-3;
-    margin-right: $spacing-3;
-    width: auto;
-  }
-  .header {
-    font-size: 12px;
-    font-weight: 600;
-    padding-bottom: 0;
-  }
-  .item {
-    padding: $spacing-3 $spacing-6;
-    &:hover {
-      background: transparent;
-    }
-  }
-  .systems {
-    columns: 5;
-  }
-  .system {
-    display: block;
-    margin-bottom: $spacing-3;
-    &:hover {
-      .brand {
-        border-color: $color-primary-lighten-15;
+    li {
+      display: block;
+      margin: 5px 0;
+      width: 230px;
+
+      &.selected {
+        background-color: $color-primary-darken-15 !important;
+        & > a {
+          align-items: center;
+          background-color: $color-primary;
+          color: $color-white !important;
+          display: flex;
+          font-weight: 600;
+        }
       }
-    }
-    a {
+
       &:hover {
+        & > ul {
+          display: block;
+        }
+      }
+
+      a {
+        align-items: center;
+        color: $color-gray-6;
+        display: flex;
+        font-size: 16px;
+        padding: 5px;
+        position: relative;
         text-decoration: none;
       }
-    }
-  }
-  .brand {
-    background: $color-gray-1;
-    border: 1px solid $color-gray-3;
-    height: 42px;
-    width: 58px;
-  }
-  .name {
-    display: block;
-    font-size: 9px;
-    font-weight: 500;
-    margin-top: $spacing-half;
-    text-align: center;
-  }
-  .more {
-    display: block;
-    font-size: 10px;
-    font-weight: 600;
-    padding: 0 $spacing-6 $spacing-6;
-    text-align: center;
-    a {
-      text-decoration: underline;
-    }
-  }
-  &.is-active {
-    &::after {
-      transform: translate(-17px, 9px);
-    }
-  }
-}
 
-// Canvas
-.canvas {
-  background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-}
+      &.dropdown-submenu {
+        &.selected {
+          & > a {
+            &::after {
+              color: $color-white !important;
+              content: "\f054";
+              font-family: "Font Awesome 5 Free";
+              position: absolute;
+            }
+          }
+        }
 
-// Barra de navegação mobile
-.mobile-subheader {
-  height: 56px;
-}
-
-// Versão mobile do menu
-.sidemenu {
-  background: $color-white;
-  display: flex;
-  height: 100vh;
-  padding: $spacing-4 $spacing-2;
-  position: fixed;
-  top: 0;
-  width: 84%;
-  // Botão que abre o menu
-  &-trigger {
-    background: transparent;
-    border: 0;
-  }
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  .overflow {
-    flex: 1;
-    margin-left: - $spacing-4;
-    margin-right: - $spacing-4;
-    overflow-y: auto;
-  }
-  .navigation {
-    margin: 0;
-    padding: 0;
-    .item {
-      display: block;
-      list-style: none;
-      a {
-        &:hover {
-          text-decoration: none;
+        & > a {
+          &::after {
+            color: $color-gray-7 !important;
+            content: "\f054";
+            font-family: "Font Awesome 5 Free";
+            font-size: 9px;
+            font-weight: 600;
+            position: absolute;
+            right: 8px;
+            top: 12px;
+          }
         }
       }
     }
-    .trigger {
-      background: transparent;
-      border: 1px solid transparent;
-      float: right;
-      margin-top: -44px;
-      padding: $spacing-1 $spacing-3;
-    }
-    .name {
-      border-bottom: 1px solid $color-gray-4;
-      color: $color-gray-7;
-      display: block;
-      font-size: 14px;
-      font-weight: 500;
-      padding: $spacing-2 $spacing-4;
-    }
-    .is-active {
-      & + .trigger {
-        color: $color-white;
-      }
-      .name {
-        background: $color-primary-darken-15;
-        color: $color-white;
-      }
-      .subnav {
-        .name {
-          background: $color-white;
-          color: $color-gray-7;
-        }
-      }
-    }
-  }
-  .subnav {
-    margin: 0;
-    padding: 0;
-    .name {
+
+    ul {
       background: $color-gray-1;
-      color: $color-gray-7;
-      font-weight: 500;
-      padding-left: $spacing-6;
-    }
-    .is-active {
-      .name {
-        background: $color-primary;
-        color: $color-white;
+      border-left: 1px solid $color-gray-2;
+      box-sizing: border-box;
+      display: none;
+      height: calc(100% - 1px);
+      left: 230px;
+      margin: -5px 0 0;
+      padding: 25px 0;
+      position: absolute;
+      top: 5px;
+      width: 230px;
+
+      li {
+        a {
+          padding: 5px 20px;
+
+          img {
+            display: none;
+          }
+        }
+
+        &:hover {
+          & > a {
+            background-color: $color-primary;
+            color: $color-white !important;
+            font-weight: 600;
+
+            &::after {
+              color: $color-white !important;
+            }
+          }
+
+          & > ul {
+            background: $color-gray-1;
+            display: block;
+          }
+        }
+
+        ul {
+          height: 100%;
+          top: 5px;
+
+          li {
+            a {
+              background-color: transparent;
+            }
+          }
+        }
       }
     }
   }
-  .menu {
-    background: transparent;
-    box-shadow: none;
-    .header {
-      border-bottom: 1px solid $color-gray-4;
-      padding: $spacing-2 $spacing-4;
+
+  .redes-sociais {
+    float: right;
+    padding-bottom: 10px;
+    padding-top: 15px;
+
+    h3 {
+      color: $color-primary;
+      display: inline;
+      font-size: 14px;
+      margin: 0;
+      text-transform: uppercase;
     }
-    .item {
-      border-bottom: 1px solid $color-gray-4;
-      font-weight: 500;
-      padding: $spacing-2 $spacing-4;
-      text-align: left;
+
+    .portal-redes {
+      display: inline-block;
+      margin-left: 30px;
+
+      li {
+        background-image: none;
+        margin: 0 10px;
+        position: relative;
+
+        &::before {
+          align-items: center;
+          color: $color-primary;
+          display: flex;
+          font-family: "Font Awesome 5 Brands";
+          font-weight: 900;
+          height: 30px;
+          justify-content: center;
+          pointer-events: none;
+          position: absolute;
+          width: 30px;
+        }
+
+        &.portalredes-twitter {
+          &::before {
+            content: "\f099";
+          }
+        }
+
+        &.portalredes-youtube {
+          &::before {
+            content: "\f167";
+          }
+        }
+
+        &.portalredes-facebook {
+          &::before {
+            content: "\f39e";
+          }
+        }
+
+        &.portalredes-flickr {
+          &::before {
+            content: "\f16e";
+          }
+        }
+      }
     }
   }
 }
-
-// Tempo restante de sessão
-.timeout {
-  text-align: right;
-  .session {
-    font-size: 12px;
-    font-weight: 600;
-  }
-  .timer {
-    font-size: 12px;
-    font-weight: 500;
-  }
-}
-
-// Título da página
-.content-title {
-  @include font-title-registration-login;
-}
-
 
 #portal-footer {
   background-color: $color-primary-darken-25;

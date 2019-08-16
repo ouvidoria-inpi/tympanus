@@ -830,7 +830,7 @@
 }
 
 /*!
- * input - 0.2.1 */
+ * input - 0.2.2 */
 .br-input {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -957,9 +957,9 @@
   bottom: 8px;
   color: #1351b4;
   font-size: 16px;
-  margin: 0 16px;
+  margin: 0;
   min-width: 0;
-  padding: 0;
+  padding: 0 16px;
   position: absolute;
   right: 0;
   width: auto;
@@ -1208,9 +1208,9 @@
   bottom: 8px;
   color: #1351b4;
   font-size: 16px;
-  margin: 0 16px;
+  margin: 0;
   min-width: 0;
-  padding: 0;
+  padding: 0 16px;
   position: absolute;
   right: 0;
   width: auto;
@@ -1809,6 +1809,7 @@
 }
 .br-checklist .field.is-active .input input {
   visibility: visible;
+  width: 90%;
 }
 .br-checklist .field.is-focus input {
   border-color: #2670e8;
@@ -2058,7 +2059,7 @@
   opacity: 1;
 }
 .br-checklist .input input {
-  width: 90%;
+  width: 0;
 }
 .br-checklist .check {
   margin-right: 8px;
