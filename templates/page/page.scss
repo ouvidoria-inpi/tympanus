@@ -23,25 +23,7 @@
   }
 }
 
-// Acessibilidade - template 2 colunas
-.accessibility {
-  a {
-    align-items: center;
-    display: flex;
-    &:hover {
-      .content {
-        text-decoration: underline;
-      }
-    }
-  }
-  .content {
-    font-size: 11px;
-    font-weight: 700;
-    margin-left: $spacing-1;
-  }
-}
-
-// Acessibilidade - pagina interna
+// Acessibilidade
 .accessibility {
   display: flex;
   justify-content: flex-end;
@@ -49,7 +31,9 @@
   margin: 0;
   padding-left: 0;
   a {
+    align-items: center;
     color: $color-gray-7;
+    display: flex;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
@@ -58,7 +42,7 @@
     }
     &:hover {
       text-decoration: none;
-      .accessibility-text {
+      .content {
         text-decoration: underline;
       }
     }
@@ -67,6 +51,11 @@
     @include media-breakpoint-up(sm) {
       max-width: 16px;
     }
+  }
+  .content {
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: $spacing-1;
   }
   .mobile-header & {
     .br-button {

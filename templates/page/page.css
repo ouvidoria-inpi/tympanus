@@ -21,21 +21,6 @@
   z-index: 11;
 }
 
-.accessibility a {
-  align-items: center;
-  display: flex;
-}
-
-.accessibility a:hover .content {
-  text-decoration: underline;
-}
-
-.accessibility .content {
-  font-size: 11px;
-  font-weight: 700;
-  margin-left: 8px;
-}
-
 .accessibility {
   display: flex;
   justify-content: flex-end;
@@ -45,7 +30,9 @@
 }
 
 .accessibility a {
+  align-items: center;
   color: #333333;
+  display: flex;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
@@ -59,7 +46,7 @@
   text-decoration: none;
 }
 
-.accessibility a:hover .accessibility-text {
+.accessibility a:hover .content {
   text-decoration: underline;
 }
 
@@ -67,6 +54,12 @@
   .accessibility img {
     max-width: 16px;
   }
+}
+
+.accessibility .content {
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 8px;
 }
 
 .mobile-header .accessibility .br-button {
