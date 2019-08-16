@@ -311,8 +311,8 @@ window.onload = function() {
   var toggleDesktopMenu = new Auxiliary(
     'click',
     '.desktop-header .menu-hamburger',
-    ['.menu-hamburger i.fa-bars','.menu-hamburger i.fa-times', '.container-fluid .col-md-3:first-child'],
-    'd-sm-block'
+    [ '.container-fluid [data-toggle="collapse"]'],
+    'd-md-block'
   )
   toggleDesktopMenu.addEvent()
 
