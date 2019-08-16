@@ -23,110 +23,62 @@ Utilizou-se **16px** como o tamanho base para os textos, e optou-se pelo uso da 
 
 Os pesos maiores serão definidos na criação dos componentes e templates, de acordo com a necessidade de se criar hierarquias entre os textos.
 
-### Tela de Login
+## Tabela de estilos
 
 <div class="br-table">
   <div class="table">
     <table>
       <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Estilo</th>
-          <th>Exemplo</th>
+          <th>Tipo</th>
+          <th>Estilos</th>
+          <th>Descrição</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1º título da Página, acima do formulário de login</td>
-          <td><strong>32px Medium | Entrelinha 36 | Cor #1351B4</strong></td>
-          <td>
-            <span style="line-height: 36px; font-size: 32px; font-weight: 500; color: #1351B4;">Acesse sua conta</span>
-          </td>
+          <td><span style="color: #555555; font-size: 16px">Texto padrão</span></td>
+          <td>16px Regular | Cor #555555</td>
+          <td>Texto padrão, input, textarea e select</td>
         </tr>
         <tr>
-          <td>Texto opcional ao lado direito da tela, abaixo da marca Gov.br</td>
-          <td><strong>16px Italic | Entrelinha 28 | Cor #555555</strong></td>
-          <td>
-            <span style="line-height: 28px; font-size: 16px; font-weight: 400; font-style: italic; color: #555555;">Acesse sua conta</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-### Tela de Cadastro
-
-<div class="br-table">
-  <div class="table">
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Estilo</th>
-          <th>Exemplo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1º título das Páginas</td>
-          <td><strong>32px Medium | Cor #1351B4</strong></td>
-          <td>
-            <span style="font-size: 32px; font-weight: 500; color: #1351B4;">Cadastre-se</span>
-          </td>
+          <td><span style="font-size: 16px"><a href="javascript:void(0)">Link</a></span></td>
+          <td>16px Regular | Cor #1351b4 | Sublinhado</td>
+          <td>Link</td>
         </tr>
         <tr>
-          <td>Texto "Já tem conta" (parágrafo)</td>
-          <td><strong>16px Medium | Cor #555555</strong></td>
-          <td>
-            <span style="font-size: 16px; font-weight: 500; color: #555555;">Já tem conta? <a style="font-size: 16px; font-weight: 500; color: #1351B4">Fazer Login</a></span>
-          </td>
+          <td><span class="main-title">Título da página</span></td>
+          <td>32px Medium | Cor #1351B4</td>
+          <td>Título principal</td>
         </tr>
         <tr>
-          <td>Texto "Fazer Login" (link)</td>
-          <td><strong>16px Medium | Cor #1351B4</strong></td>
-          <td>
-            <span style="font-size: 16px; font-weight: 500; color: #555555;">Já tem conta? <a style="font-size: 16px; font-weight: 500; color: #1351B4">Fazer Login</a></span>
-          </td>
+          <td><span class="fieldset">Legend de fieldset</span></td>
+          <td>22px Regular | Cor #1351b4</td>
+          <td>Legenda do agrupador de campos de formulário</td>
         </tr>
         <tr>
-          <td>Texto acima das opções de cadastrar com certificado </td>
-          <td><strong>20px Semibold | Cor #1351B4</strong></td>
-          <td>
-            <span style="font-size: 20px; font-weight: 600; color: #1351B4;">Cadastre-se com</span>
-          </td>
+          <td><span class="label">Label</span></td>
+          <td>16px Semibold | Cor #333333</td>
+          <td>Rótulo de campos de formulários</td>
         </tr>
         <tr>
-          <td>Link abaixo das opções de cadastrar com certificado</td>
-          <td><strong>16px Medium | Cor #1351B4</strong></td>
-          <td>
-            <a style="font-size: 16px; font-weight: 500; color: #1341B4;">Como obter certificado digital</a>
-          </td>
+          <td><span style="color: #555555; font-size: 14px; font-style: italic;">Placeholder</span></td>
+          <td>14px Regular Itálico | Cor #555555</td>
+          <td>Texto de exemplo dentro de input, textarea e select</td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-### Tela de Ativação da Conta
-
-<div class="br-table">
-  <div class="table">
-    <table>
-      <thead>
         <tr>
-          <th>Nome</th>
-          <th>Estilo</th>
-          <th>Exemplo</th>
+          <td><span style="color: #333333; font-size: 13px;">Texto de auxílio</span></td>
+          <td>13px Regular | Cor #333333</td>
+          <td>Texto auxiliar após campos de formulários para prevenir erros</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
-          <td>Texto Default do Sistema</td>
-          <td><strong>16px Regular | Entrelinha 28 | Cor #555555</strong></td>
-          <td>
-            <span style="line-height: 28px; font-size: 16px; font-weight: 400; color: #555555;">Para ativar sua conta enviaremos um <strong>código</strong> para você.<br>Como prefere recebê-lo?</span>
-          </td>
+          <td><span style="color: #168821; font-size: 13px; font-style: italic;">Feedback positivo</span></td>
+          <td>13px Regular Itálico | Cor #168821</td>
+          <td>Feedback positivo após o campo do formulário</td>
+        </tr>
+        <tr>
+          <td><span style="color: #ff3333; font-size: 13px; font-style: italic;">Feedback negativo</span></td>
+          <td>13px Regular Itálico | Cor #ff3333</td>
+          <td>Feedback negativo após o campo do formulário</td>
         </tr>
       </tbody>
     </table>
