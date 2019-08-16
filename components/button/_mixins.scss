@@ -40,6 +40,7 @@
   color: $color;
   cursor: pointer;
   padding: 0;
+  text-decoration: underline;
   &:focus,
   &.is-focus {
     outline: 0;
@@ -48,7 +49,6 @@
   &:hover,
   &.is-hover {
     color: $color-primary-lighten-15;
-    text-decoration: underline;
   }
   &:disabled,
   &.is-disabled {

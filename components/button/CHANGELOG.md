@@ -6,6 +6,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [Unreleased]
 - Botões de estados (**danger**, **success**, **warning**).
 
+## [0.2.3] - 2019-08-16
+### Fixed
+- Botão terciário com sublinhado
+
 ## [0.2.2] - 2019-08-05
 ### Fixed
 - Tamanho do botão **Call to action**

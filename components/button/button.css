@@ -1,5 +1,5 @@
 /*!
- * button - 0.2.2 */
+ * button - 0.2.3 */
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -111,6 +111,7 @@
   color: #1351b4;
   cursor: pointer;
   padding: 0;
+  text-decoration: underline;
 }
 
 .br-button.is-tertiary:focus, .br-button.is-tertiary.is-focus {
@@ -120,7 +121,6 @@
 
 .br-button.is-tertiary:hover, .br-button.is-tertiary.is-hover {
   color: #2670e8;
-  text-decoration: underline;
 }
 
 .br-button.is-tertiary:disabled, .br-button.is-tertiary.is-disabled {
@@ -134,6 +134,7 @@
   color: #555555;
   cursor: pointer;
   padding: 0;
+  text-decoration: underline;
 }
 
 .br-button.is-cancel:focus, .br-button.is-cancel.is-focus {
@@ -143,7 +144,6 @@
 
 .br-button.is-cancel:hover, .br-button.is-cancel.is-hover {
   color: #2670e8;
-  text-decoration: underline;
 }
 
 .br-button.is-cancel:disabled, .br-button.is-cancel.is-disabled {
