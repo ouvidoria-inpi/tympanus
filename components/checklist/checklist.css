@@ -1,5 +1,5 @@
 /*!
- * check-input - 0.3.0 */
+ * check-input - 0.3.1 */
 .br-checklist {
   border-top: 1px solid #ededed;
   display: flex;
@@ -157,6 +157,10 @@
 
 .br-checklist .field.is-valid input[type="radio"]:hover:not(:disabled) + label::before {
   box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+}
+
+.br-checklist .field .input {
+  flex-direction: row;
 }
 
 .br-checklist .field .input label {

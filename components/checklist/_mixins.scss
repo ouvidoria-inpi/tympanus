@@ -9,6 +9,7 @@
     @include check-states;
     margin-bottom: 0;
     .input {
+      flex-direction: row;
       label {
         color: $font-system-default-text-color;
         font-size: $font-system-default-text-font-size;
