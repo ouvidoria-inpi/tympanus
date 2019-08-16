@@ -1,27 +1,18 @@
 // Carregar variáveis do DS-Gov
 @import "../../base/dsgov-base";
 
-// Barra de governo
-#barra-brasil {
-  background: inherit;
-  border-bottom: inherit;
-}
-
 // Navegação para smartphones
-.media {
+.login-mobile {
   align-items: center;
   display: flex;
-  &-left {
-    & + .media-content {
+  .icon {
+    & + .content {
       margin-left: $spacing-1;
     }
   }
-  &-content {
+  .content {
     display: flex;
     flex-direction: column;
-    & + .media-right {
-      margin-left: $spacing-1;
-    }
   }
   a {
     color: $color-gray-6;

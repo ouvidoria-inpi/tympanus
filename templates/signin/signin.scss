@@ -1,33 +1,30 @@
 // Carregar variáveis do DS-Gov
 @import "../../base/dsgov-base";
 
-// Conteúdo de midia
-.media {
-  align-items: center;
-  display: flex;
-  &-left {
-    & + .media-content {
-      margin-left: $spacing-1;
-    }
-  }
-  &-content {
-    display: flex;
-    flex-direction: column;
-    & + .media-right {
-      margin-left: $spacing-1;
-    }
-  }
+// Título esquerdo
+.signin-title {
+  color: $color-primary;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-// Cadastre-se
-.cadastre-se {
-  font-size: 20px;
-  font-weight: 500;
-  a {
-    color: $color-gray-6;
-    &:hover {
-      color: $color-primary-lighten-15;
-      text-decoration: none;
+// Conteúdo de midia
+.signin-menu {
+  align-items: center;
+  color: $color-gray-6;
+  display: flex;
+  &:hover {
+    color: $color-primary-lighten-15;
+  }
+  .icon {
+    & + .content {
+      margin-left: $spacing-1;
     }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
   }
 }

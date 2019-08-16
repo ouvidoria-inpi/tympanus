@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Cadastro</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <!-- Estilos ds-gov -->
   <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
   <link rel="stylesheet" href="../../assets/styles/dsgov-components.min.css">
   <link rel="stylesheet" href="../../assets/styles/dsgov-templates.min.css">
+  <!-- Ícones fontawesome -->
+  <script src="../../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,6 @@
     <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
     <li><a accesskey="3" href="#footer-brasil">Ir para o rodapé</a></li>
   </ul>
-
   <!-- Barra de governo -->
   <div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
     <ul id="menu-barra-temp" style="list-style:none;">
@@ -30,7 +30,6 @@
       </li>
     </ul>
   </div>
-
   <!-- Wrapper -->
   <div class="page-wrapper container-fluid">
     <div class="page-background row">
@@ -39,37 +38,37 @@
           <!-- Lado esquerdo -->
           <div class="col-sm-4 col-lg-5">
             <div class="row justify-content-end">
-              <div class="col-sm-11 col-md-9 col-lg-7 col-xl-6 pt-sm-8">
+              <div class="col-md-9 col-lg-7 col-xl-6 pt-sm-8">
                 <!-- Logo -->
-                <a id="nav-logo" class="logo d-none d-sm-flex py-8" href="javascript:void(0)">
+                <a id="left-logo" class="logo text-center d-none d-sm-block py-8" href="">
                   <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
                 </a>
                 <!-- Outras opções de cadastro -->
-                <nav class="cadastre-se d-none d-sm-block pt-3">
-                  <p class="d-sm-flex justify-content-center text-primary mb-5">Cadastre-se com</p>
+                <nav class="d-none d-sm-block pt-3">
+                  <p class="signin-title text-center mb-5">Cadastre-se com</p>
                   <div class="mb-5">
-                    <a href="javascript:void(0)" class="media mb-2">
-                      <div class="media-left">
+                    <a href="" class="signin-menu mb-2">
+                      <div class="icon">
                         <img src="../../assets/images/certificado-digital.png" alt="Certificado Digital">
                       </div>
-                      <div class="media-content">
+                      <div class="content">
                         <span>Certificado Digital</span>
                       </div>
                     </a>
-                    <a href="javascript:void(0)" class="media">
-                      <div class="media-left">
+                    <a href="" class="signin-menu">
+                      <div class="icon">
                         <img src="../../assets/images/neoid.png" alt="NeoID">
                       </div>
-                      <div class="media-content">
+                      <div class="content">
                         <span>NeoID</span>
                       </div>
                     </a>
                   </div>
                 </nav>
                 <p class="text-center d-none d-sm-block my-6">
-                  <a href="" class="br-button is-tertiary">Como obter Certificado Digital?</a>
+                  <a href="" class="br-button is-tertiary">Como obter Certificado Digital</a>
                 </p>
-                <aside class="d-none d-sm-block mx-sm-1 mb-5">
+                <aside class="d-none d-sm-block mx-n1 mx-lg-0 mb-8">
                   <div class="br-login-social">
                     <div class="br-divider">
                       <span class="content">Ou</span>
@@ -93,70 +92,64 @@
             <!-- Cabeçalho da página -->
             <header id="header" class="page-header pl-sm-10 pr-sm-3 pt-1 pt-sm-3">
               <!-- Acessibilidade -->
-              <div class="accessibility">
-                <a id="contrast" href="javascript:void(0)" accesskey="6">
-                  <span class="accessibility-icon">
-                    <img src="../../assets/images/alto-contraste.png" alt="Alto contraste">
+              <div class="accessibility float-right float-sm-none mt-1 mt-sm-0">
+                <a id="contrast" href="" accesskey="6">
+                  <span class="icon">
+                    <i class="fas fa-adjust fa-2x"></i>
                   </span>
-                  <span class="accessibility-text d-none d-sm-inline">
+                  <span class="content d-none d-sm-inline">
                     <span class="">Alto Contraste</span>
                   </span>
                 </a>
                 <a id="vlibras" href="http://www.vlibras.gov.br/">
-                  <span class="accessibility-icon">
-                    <img src="../../assets/images/vlibras.png" alt="VLibras">
+                  <span class="icon">
+                    <i class="fas fa-assistive-listening-systems fa-2x"></i>
                   </span>
-                  <span class="accessibility-text d-none d-sm-inline">
+                  <span class="content d-none d-sm-inline">
                     <span class="">VLibras</span>
                   </span>
                 </a>
               </div>
               <!-- Logo -->
-              <a id="logo" class="logo d-sm-none" href="javascript:void(0)">
+              <a id="logo" class="logo d-sm-none" href="">
                 <img src="../../assets/images/logo-color.png" alt="Governo do Brasil" class="logo-image">
               </a>
             </header>
             <!-- Conteúdo principal -->
-            <main id="content" class="page-content pl-sm-10 pt-sm-8">
-              <!-- Cabeçalho do conteúdo principal -->
-              <header class="content-header pb-5 pb-sm-8 pt-3">
-                <h1 class="content-title">Cadastre-se</h1>
-              </header>
-
+            <main id="content" class="page-content pl-sm-10 pt-sm-4">
+              <h1 class="main-title">Cadastre-se</h1>
               <div class="row">
                 <div class="col-sm-9 col-md-7 col-lg-8 col-xl-7">
                   <!-- Área de preenchimento do usuário -->
-                  <section class="br-form">
+                  <div class="br-form">
                     <!-- Informar CPF -->
                     <div class="field">
                       <div class="input">
                         <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" placeholder="Digite somente números">
+                        <input type="text" id="cpf" placeholder="Ex: 123.456.789-99">
                       </div>
+                      <p class="help">Digite somente números</p>
                     </div>
                     <!-- Informar a senha -->
                     <div class="field">
                       <div class="br-input is-action">
                         <label for="password">Crie sua senha</label>
-                        <input type="password" id="password" placeholder="Digite sua senha de 8 a 11 dígitos">
-                        <button class="action" onclick="toggleInputAction(this, 'is-action')">
+                        <input type="password" id="password">
+                        <button class="action" type="button">
                           <span class="sr-only">Mostrar senha</span>
                           <i class="fas fa-eye"></i>
                         </button>
                       </div>
                       <p class="help">Sua senha deve ter entre 8 e 11 dígitos</p>
                     </div>
-                    <!-- Facilidades de senha -->
-                    <div class="field">
-                      <p>Já tem conta? <a href="">Fazer login</a></p>
-                    </div>
+                    <p>Já tem conta? <a href="">Fazer login</a></p>
                     <!-- Botões de ação -->
                     <div class="actions justify-content-start">
-                      <button class="br-button is-primary" disabled>Avançar</button>
+                      <button class="button is-primary" disabled>Avançar</button>
                     </div>
-                  </section>
+                  </div>
                   <!-- Outras opções de cadastro -->
-                  <aside class="content-aside d-sm-none pt-sm-3 pb-3 pb-sm-8">
+                  <aside class="content-aside d-sm-none pt-sm-3 pb-3">
                     <div class="br-login-social">
                       <div class="br-divider">
                         <span class="content">Ou</span>
@@ -180,14 +173,15 @@
       </div>
     </div>
   </div>
-
   <!-- Rodapé de governo -->
-  <div id="footer-brasil" class="page-footer mt-5 mt-sm-0"></div>
-
+  <div class="page-footer mt-5 mt-sm-0 pb-3 text-right">
+    <div class="container-fluid">
+      <img src="../../assets/images/produto-serpro.png" alt="Produto Serpro">
+    </div>
+  </div>
   <!-- Script da barra de governo -->
   <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>
   <script src="../../components/input/input-password.js"></script>
-
 </body>
 
 </html>

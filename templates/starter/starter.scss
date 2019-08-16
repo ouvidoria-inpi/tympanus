@@ -1,82 +1,9 @@
 // Carregar variáveis do DS-Gov
 @import "../../base/dsgov-base";
 
-// Atalhos para conteúdo
-.skip-menu {
-  list-style: none;
-  position: absolute;
-  width: 100%;
-  a {
-    color: $color-white;
-    position: absolute;
-    top: -200em;
-    &:focus {
-      background: $color-secondary;
-      border-radius: 100px;
-      left: 20px;
-      outline: 0;
-      padding: 8px 24px;
-      position: absolute;
-      top: auto;
-      z-index: 11;
-    }
-  }
-}
-
 // Background da página
 .page-background {
   @include media-breakpoint-up(sm) {
     background: linear-gradient(to right, $color-gray-1 50%, $color-white 50%);
   }
-}
-
-// Acessibilidade
-.accessibility {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  a {
-    color: $color-gray-7;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    &:not(:last-child) {
-      margin-right: $spacing-3;
-    }
-    &:hover {
-      text-decoration: none;
-      .accessibility-text {
-        text-decoration: underline;
-      }
-    }
-  }
-  img {
-    @include media-breakpoint-up(sm) {
-      max-width: 16px;
-    }
-  }
-}
-
-// Logo
-.logo {
-  justify-content: center;
-  &-image {
-    flex-shrink: 0;
-  }
-}
-
-// Descrição opcional
-.nav-description,
-.page-description {
-  @include font-optional-text-registration-login;
-}
-.page-description {
-  text-align: left;
-}
-
-// Título da página
-.content-title {
-  @include font-title-registration-login;
 }

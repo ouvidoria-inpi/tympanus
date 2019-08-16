@@ -1,31 +1,26 @@
-.media {
+.signin-title {
+  color: #1351b4;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.signin-menu {
   align-items: center;
+  color: #555555;
   display: flex;
 }
 
-.media-left + .media-content {
+.signin-menu:hover {
+  color: #2670e8;
+}
+
+.signin-menu .icon + .content {
   margin-left: 8px;
 }
 
-.media-content {
+.signin-menu .content {
   display: flex;
   flex-direction: column;
-}
-
-.media-content + .media-right {
-  margin-left: 8px;
-}
-
-.cadastre-se {
   font-size: 20px;
   font-weight: 500;
-}
-
-.cadastre-se a {
-  color: #555555;
-}
-
-.cadastre-se a:hover {
-  color: #2670e8;
-  text-decoration: none;
 }
