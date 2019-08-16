@@ -101,11 +101,15 @@
       ]
     },
     {
-      "label": "Área Logada - Sistemas",
+      "label": "Tela interna para Sistemas",
       "path": "templates/page/page"
     },
     {
-      "label": "Tela de erro",
+      "label": "Formulário para Sistemas",
+      "path": "templates/crud/crud"
+    },
+    {
+      "label": "Tela de erro para Sistemas",
       "children": [
         {
           "label": "Padrão",
