@@ -29,7 +29,7 @@
   .input {
     @include check-inputs;
     input {
-      width: 90%;
+      width: 0;
     }
   }
   .check {
@@ -74,6 +74,7 @@
     }
     input {
       visibility: visible;
+      width: 90%;
     }
   }
 }

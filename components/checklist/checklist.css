@@ -23,6 +23,7 @@
 
 .br-checklist .field.is-active .input input {
   visibility: visible;
+  width: 90%;
 }
 
 .br-checklist .field.is-focus input {
@@ -240,7 +241,7 @@
 }
 
 .br-checklist .input input {
-  width: 90%;
+  width: 0;
 }
 
 .br-checklist .check {

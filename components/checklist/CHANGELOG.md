@@ -8,6 +8,7 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [0.3.1] - 2019-08-16
 ### Fixed
 - Correção para checklist dentro de formulários
+- Quebra de texto nos labels em mobile
 
 ## [0.3.0] - 2019-07-19
 ### Added
