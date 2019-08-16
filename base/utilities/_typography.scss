@@ -1,0 +1,35 @@
+// Texto padrão
+body {
+  color: $font-system-default-text-color;
+  font-family: $font-system-default-text-font-family;
+  font-size: $font-system-default-text-font-size;
+  font-weight: $font-system-default-text-font-weight;
+}
+
+// Links na área de conteúdo
+.page-content {
+  a {
+    text-decoration: underline;
+  }
+}
+
+// Título principal - aplicar preferencialmente em <h1>
+.main-title {
+  @include font-title-registration-login;
+  margin: $spacing-5 0 $spacing-6;
+}
+
+// Rótulos - aplicar preferencialmente em <label>
+.label {
+  @include font-input-label;
+  margin-bottom: $spacing-3;
+}
+
+// Agrupador de formulário - aplicar preferencialmente em <legend> de <fieldset>
+fieldset legend, // sass-lint:disable-line force-element-nesting
+.fieldset {
+  color: $color-primary;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 24px 0;
+}

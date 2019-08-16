@@ -601,6 +601,7 @@
   color: #1351b4;
   cursor: pointer;
   padding: 0;
+  text-decoration: underline;
 }
 
 .br-form .actions .button.is-tertiary:focus, .br-form .actions .button.is-tertiary.is-focus {
@@ -610,7 +611,6 @@
 
 .br-form .actions .button.is-tertiary:hover, .br-form .actions .button.is-tertiary.is-hover {
   color: #2670e8;
-  text-decoration: underline;
 }
 
 .br-form .actions .button.is-tertiary:disabled, .br-form .actions .button.is-tertiary.is-disabled {
@@ -624,6 +624,7 @@
   color: #555555;
   cursor: pointer;
   padding: 0;
+  text-decoration: underline;
 }
 
 .br-form .actions .button.is-cancel:focus, .br-form .actions .button.is-cancel.is-focus {
@@ -633,7 +634,6 @@
 
 .br-form .actions .button.is-cancel:hover, .br-form .actions .button.is-cancel.is-hover {
   color: #2670e8;
-  text-decoration: underline;
 }
 
 .br-form .actions .button.is-cancel:disabled, .br-form .actions .button.is-cancel.is-disabled {

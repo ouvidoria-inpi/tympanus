@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  * Design System de Governo - DS-Gov
- * Versão 0.4.6
+ * Versão 0.4.5
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP/SEDEP
  */
@@ -1241,13 +1241,13 @@ a.text-dark:focus {
 
 @media (min-width: 576px) {
   .container {
-    max-width: 736px;
+    max-width: 1150px;
   }
 }
 
 @media (min-width: 998px) {
   .container {
-    max-width: 992px;
+    max-width: 1151px;
   }
 }
 
@@ -8164,4 +8164,44 @@ a.text-dark:focus {
   .mx-xl-auto {
     margin-left: auto !important;
   }
+}
+
+
+body {
+  color: #555555;
+  font-family: Rawline;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.page-content a {
+  text-decoration: underline;
+}
+
+.main-title {
+  color: #1351b4;
+  font-family: Rawline;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  margin: 24px 0 32px;
+}
+
+.label {
+  color: #333333;
+  font-family: Rawline;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+fieldset legend,
+.fieldset {
+  color: #1351b4;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 24px 0;
 }
