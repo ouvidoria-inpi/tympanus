@@ -104,9 +104,9 @@
     bottom: $spacing-1;
     color: $color-primary;
     font-size: $input-font-size;
-    margin: 0 $action-padding;
+    margin: 0;
     min-width: 0;
-    padding: 0;
+    padding: 0 $action-padding;
     position: absolute;
     right: 0;
     width: auto;
