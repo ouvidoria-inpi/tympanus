@@ -7,6 +7,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Área de conteúdo
 - Abas com subitens
 
+## [0.2.4] - 2019-08-16
+### Fixed
+- Quebra de textos para abas verticais
+
 ## [0.2.3] - 2019-08-02
 ### Fixed
 - Estilo dos itens com `<button>`

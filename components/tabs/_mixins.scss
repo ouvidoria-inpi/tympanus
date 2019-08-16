@@ -44,6 +44,7 @@
       margin-left: $tab-icon-size + ($tab-results-margin * 2);
       padding: ($tab-item-padding * 1) ($tab-results-margin / 2);
       text-align: left;
+      white-space: normal;
     }
   }
   .item {

@@ -1,5 +1,5 @@
 /*!
- * tabs - 0.2.3 */
+ * tabs - 0.2.4 */
 .br-tabs {
   border-bottom: 1px solid #cccccc;
   display: flex;
@@ -56,6 +56,7 @@
   margin-left: 48px;
   padding: 16px 4px;
   text-align: left;
+  white-space: normal;
 }
 
 .br-tabs .item {
