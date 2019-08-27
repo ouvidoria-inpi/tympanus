@@ -1,10 +1,10 @@
-# Princípios de Design
+# Princípios do Design System
 
 ## Objetivos dos Princípios
 
--   guiar decisões de _design_;
--   ser autênticos e específicos, em vez de genéricos;
--   ser facilmente memorizáveis, fáceis de lembrar e utilizáveis no dia a dia.
+- guiar decisões de _design_;
+- ser autênticos e específicos, em vez de genéricos;
+- ser facilmente memorizáveis, fáceis de lembrar e utilizáveis no dia a dia.
 
 ### Experiência Única
 
@@ -25,6 +25,8 @@ Interfaces digitais dos sites, aplicativos e sistemas de governo devem utilizar 
 ### Colaboração
 
 O aprimoramento contínuo dos padrões apresentados pelo _Design System_ deve ser incremental, colaborativo e contínuo, baseado nas necessidades dos cidadãos e na experiência de aplicação já adquirida.
+
+---
 
 ## Boas Práticas
 

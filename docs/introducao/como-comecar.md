@@ -1,8 +1,8 @@
 # Como começar
 
-1. No cabeçalho das páginas configure o idioma para "português do Brasil", inclua a codificação UTF-8 e o viewport compatível com dispositivos móveis.
+1. No cabeçalho das páginas configure o idioma para "português do Brasil", inclua a codificação UTF-8 e o viewport compatível com dispositivos móveis
 1. Carregue as folhas de estilo do Design System de Governo
-1. Alguns componentes possuem scripts para funcionar. Neste caso, carregue-os no final da tag `<body>`.
+1. Alguns componentes possuem scripts para funcionar. Neste caso, carregue-os no final da tag `<body>`
 
 ```html
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ Para informações mais detalhadas sobre Cores, Tipografia, etc acesse o item **
 
 Caso queira precise construir templates e/ou estilos acesse o item **Boas Práticas** na navegação principal.
 
-## Componentes disponíveis
+## Componentes
 
 Acesse a sessão **Componentes** no menu principal e veja a lista de componentes disponíveis.
 

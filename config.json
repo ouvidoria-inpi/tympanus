@@ -2,57 +2,66 @@
   "Introdução": [
     {
       "label": "Como começar",
-      "path": "docs/documentacao/como-comecar"
+      "path": "docs/introducao/como-comecar"
     },
     {
       "label": "Sobre o Design System",
-      "path": "docs/sobre/sobre"
+      "path": "docs/introducao/sobre"
     },
     {
-      "label": "Princípios de Design",
-      "path": "docs/estilos/principios-de-design"
+      "label": "Princípios do Design System",
+      "path": "docs/introducao/principios"
     }
   ],
   "Fundamentos Visuais": [
-    { "label": "Cores", "path": "docs/estilos/cores" },
-    { "label": "Tipografia", "path": "docs/estilos/tipografia" },
-    { "label": "Ícones", "path": "docs/estilos/icones" },
-    { "label": "Sistema de Grid", "path": "docs/estilos/grid" },
-    { "label": "Espaçamentos", "path": "docs/estilos/espacamentos" }
+    { "label": "Cores", "path": "docs/fundamentos-visuais/cores" },
+    { "label": "Tipografia", "path": "docs/fundamentos-visuais/tipografia" },
+    { "label": "Ícones", "path": "docs/fundamentos-visuais/icones" },
+    { "label": "Sistema de Grid", "path": "docs/fundamentos-visuais/grid" },
+    { "label": "Espaçamentos", "path": "docs/fundamentos-visuais/espacamentos" }
   ],
   "Boas Práticas": [
+    {
+      "label": "Design",
+      "children": [
+        {
+          "label": "Aplicação das cores",
+          "path": "docs/boas-praticas/design/aplicacao-das-cores"
+        }
+      ]
+    },
     {
       "label": "Desenvolvimento",
       "children": [
         {
           "label": "Acessibilidade no Código HTML",
-          "path": "docs/documentacao/acessibilidade-no-codigo-html"
+          "path": "docs/boas-praticas/desenvolvimento/acessibilidade-no-codigo-html"
         },
         {
           "label": "Uso do WAI-ARIA",
-          "path": "docs/documentacao/uso-do-wai-aria"
+          "path": "docs/boas-praticas/desenvolvimento/uso-do-wai-aria"
         },
         {
           "label": "Construção do HTML",
-          "path": "docs/documentacao/construcao-do-html"
+          "path": "docs/boas-praticas/desenvolvimento/construcao-do-html"
         },
         {
           "label": "Uso do css",
-          "path": "docs/documentacao/uso-do-css"
+          "path": "docs/boas-praticas/desenvolvimento/uso-do-css"
         },
         {
           "label": "Construção do CSS",
-          "path": "docs/documentacao/construcao-do-css"
+          "path": "docs/boas-praticas/desenvolvimento/construcao-do-css"
         },
         {
           "label": "Manutenção do CSS",
-          "path": "docs/documentacao/manutencao-do-css"
+          "path": "docs/boas-praticas/desenvolvimento/manutencao-do-css"
         }
       ]
     }
   ],
   "Componentes": [
-    { "label": "Status dos Componentes", "path": "docs/overview-components" },
+    { "label": "Status dos Componentes", "path": "components/components" },
     { "label": "Abas", "path": "components/tabs/tabs" },
     { "label": "Acordeão", "path": "components/accordeon/accordeon" },
     { "label": "Alertas", "path": "components/alert/alert" },
@@ -70,7 +79,7 @@
     { "label": "Tabela", "path": "components/table/table" }
   ],
   "Templates": [
-    { "label": "Status dos Templates", "path": "docs/overview-templates" },
+    { "label": "Status dos Templates", "path": "templates/templates" },
     {
       "label": "Login",
       "path": "templates/login/login"
