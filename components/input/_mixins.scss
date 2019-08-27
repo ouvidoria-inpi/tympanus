@@ -128,7 +128,7 @@
     right: 0;
     top: 100%;
     z-index: 1;
-    > * {
+    > * { // sass-lint:disable-line no-universal-selectors
       cursor: pointer;
       padding: $autocomplete-item-padding;
       &:hover {
