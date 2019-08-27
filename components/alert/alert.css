@@ -87,7 +87,7 @@
 }
 
 .br-alert.is-danger {
-  background: #ff3333;
+  background: #e60000;
 }
 
 @media (min-width: 576px) {
@@ -95,10 +95,10 @@
     background: transparent;
   }
   .br-alert.is-danger .icon {
-    background: #ff3333;
+    background: #e60000;
   }
   .br-alert.is-danger .close button {
-    color: #ff3333;
+    color: #e60000;
   }
 }
 
