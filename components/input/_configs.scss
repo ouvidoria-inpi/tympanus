@@ -13,13 +13,20 @@ $input-bg: $color-white;
 $input-bg-disabled: $color-gray-2;
 $input-color: $color-gray-7;
 
-$input-icon-image: 24px;
-
-$action-padding: $spacing-3;
-
 $placeholder-font-size: 13px;
 $placeholder-font-style: italic;
 
+// Input com botão de ação
+$action-icon-size: 24px;
+$action-padding: $spacing-3;
+
+// Input com autocomplete
+$autocomplete-bg: $input-bg;
+$autocomplete-item-padding: $input-padding;
+$autocomplete-item-hover: $color-blue-pastel-1;
+$autocomplete-item-active: $color-blue-pastel-1;
+
+// Mensagem de feedback
 $feedback-padding: $spacing-half;
 $feedback-font-size: 13px;
 $feedback-font-style: italic;

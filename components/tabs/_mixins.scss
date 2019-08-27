@@ -19,7 +19,7 @@
         padding: 0;
       }
       &:hover {
-        background: $color-primary-pastel;
+        background: $tab-item-hover;
       }
       &.is-active {
         box-shadow: none;
@@ -109,7 +109,7 @@
     padding: ($tab-item-padding * 0.5) ($tab-item-padding) $tab-item-padding;
     text-decoration: none;
     &:hover {
-      background: $color-primary-pastel;
+      background: $tab-item-hover;
       text-decoration: none;
     }
   }
