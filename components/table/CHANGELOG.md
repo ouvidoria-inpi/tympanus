@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.2.2] - 2019-08-27
+### Fixed
+- Cor da linha divisora
+
 ## [0.2.1] - 2019-08-12
 ### Fixed
 - Borda da linha no `:hover`

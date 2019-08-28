@@ -586,13 +586,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-check input[type="checkbox"]:invalid + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-check input[type="checkbox"]:invalid:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-check input[type="checkbox"]:disabled:checked + label::before {
   background: #888888;
@@ -618,8 +618,8 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-check.is-invalid input[type="checkbox"]:checked + label::before {
-  background: #ff3333;
-  border-color: #ff3333;
+  background: #e60000;
+  border-color: #e60000;
 }
 .br-check.is-invalid input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
@@ -634,13 +634,13 @@
   width: 6px;
 }
 .br-check.is-invalid input[type="checkbox"] + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-check.is-valid input[type="checkbox"]:checked + label::before {
   background: #168821;
@@ -719,13 +719,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-check input[type="radio"]:invalid + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-check input[type="radio"]:invalid:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-check input[type="radio"]:disabled:checked + label::before {
   background: #888888;
@@ -750,13 +750,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-check.is-invalid input[type="radio"]:checked + label::before {
-  background: #ff3333;
-  border-color: #ff3333;
+  background: #e60000;
+  border-color: #e60000;
 }
 .br-check.is-invalid input[type="radio"]:checked + label::after {
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
-  box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   left: 0px;
@@ -765,13 +765,13 @@
   width: 19px;
 }
 .br-check.is-invalid input[type="radio"] + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-check.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-check.is-valid input[type="radio"]:checked + label::before {
   background: #168821;
@@ -870,15 +870,15 @@
 }
 .br-input input:invalid,
 .br-input textarea:invalid {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-input input:invalid:focus,
 .br-input textarea:invalid:focus {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 .br-input input:disabled,
@@ -983,11 +983,11 @@
   top: 100%;
   z-index: 1;
 }
-.br-input.is-autocomplete .search-items div {
+.br-input.is-autocomplete .search-items > * {
   cursor: pointer;
   padding: 8px 16px;
 }
-.br-input.is-autocomplete .search-items div:hover {
+.br-input.is-autocomplete .search-items > *:hover {
   background-color: #dbe8fb;
 }
 .br-input.is-autocomplete .search-active {
@@ -1015,19 +1015,19 @@
 }
 .br-input.is-invalid input,
 .br-input.is-invalid textarea {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-input.is-invalid input:focus,
 .br-input.is-invalid textarea:focus {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 .br-input.is-invalid + .feedback {
-  color: #ff3333;
+  color: #e60000;
   font-size: 13px;
   font-style: italic;
   font-weight: 500;
@@ -1035,7 +1035,7 @@
 }
 .br-input.is-invalid .action,
 .br-input.is-invalid .icon {
-  color: #ff3333;
+  color: #e60000;
 }
 .br-input.is-valid input,
 .br-input.is-valid textarea {
@@ -1121,15 +1121,15 @@
 }
 .br-form .field .input input:invalid,
 .br-form .field .input textarea:invalid {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-form .field .input input:invalid:focus,
 .br-form .field .input textarea:invalid:focus {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 .br-form .field .input input:disabled,
@@ -1234,11 +1234,11 @@
   top: 100%;
   z-index: 1;
 }
-.br-form .field .input.is-autocomplete .search-items div {
+.br-form .field .input.is-autocomplete .search-items > * {
   cursor: pointer;
   padding: 8px 16px;
 }
-.br-form .field .input.is-autocomplete .search-items div:hover {
+.br-form .field .input.is-autocomplete .search-items > *:hover {
   background-color: #dbe8fb;
 }
 .br-form .field .input.is-autocomplete .search-active {
@@ -1309,13 +1309,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-form .field .check input[type="checkbox"]:invalid + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-form .field .check input[type="checkbox"]:invalid:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-form .field .check input[type="checkbox"]:disabled:checked + label::before {
   background: #888888;
@@ -1341,8 +1341,8 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-form .field .check.is-invalid input[type="checkbox"]:checked + label::before {
-  background: #ff3333;
-  border-color: #ff3333;
+  background: #e60000;
+  border-color: #e60000;
 }
 .br-form .field .check.is-invalid input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
@@ -1357,13 +1357,13 @@
   width: 6px;
 }
 .br-form .field .check.is-invalid input[type="checkbox"] + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-form .field .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-form .field .check.is-valid input[type="checkbox"]:checked + label::before {
   background: #168821;
@@ -1442,13 +1442,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-form .field .check input[type="radio"]:invalid + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-form .field .check input[type="radio"]:invalid:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-form .field .check input[type="radio"]:disabled:checked + label::before {
   background: #888888;
@@ -1473,13 +1473,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-form .field .check.is-invalid input[type="radio"]:checked + label::before {
-  background: #ff3333;
-  border-color: #ff3333;
+  background: #e60000;
+  border-color: #e60000;
 }
 .br-form .field .check.is-invalid input[type="radio"]:checked + label::after {
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
-  box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   left: 0px;
@@ -1488,13 +1488,13 @@
   width: 19px;
 }
 .br-form .field .check.is-invalid input[type="radio"] + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-form .field .check.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-form .field .check.is-valid input[type="radio"]:checked + label::before {
   background: #168821;
@@ -1533,19 +1533,19 @@
 }
 .br-form .field.is-invalid input,
 .br-form .field.is-invalid textarea {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-form .field.is-invalid input:focus,
 .br-form .field.is-invalid textarea:focus {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 .br-form .field.is-invalid .feedback {
-  color: #ff3333;
+  color: #e60000;
   font-size: 13px;
   font-style: italic;
   font-weight: 500;
@@ -1553,7 +1553,7 @@
 }
 .br-form .field.is-invalid .action,
 .br-form .field.is-invalid .icon {
-  color: #ff3333;
+  color: #e60000;
 }
 .br-form .field.is-valid input,
 .br-form .field.is-valid textarea {
@@ -1819,20 +1819,20 @@
 }
 .br-checklist .field.is-invalid input,
 .br-checklist .field.is-invalid textarea {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-checklist .field.is-invalid input:focus,
 .br-checklist .field.is-invalid textarea:focus {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 .br-checklist .field.is-invalid input[type="checkbox"]:checked + label::before {
-  background: #ff3333;
-  border-color: #ff3333;
+  background: #e60000;
+  border-color: #e60000;
 }
 .br-checklist .field.is-invalid input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
@@ -1847,22 +1847,22 @@
   width: 6px;
 }
 .br-checklist .field.is-invalid input[type="checkbox"] + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-checklist .field.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-checklist .field.is-invalid input[type="radio"]:checked + label::before {
-  background: #ff3333;
-  border-color: #ff3333;
+  background: #e60000;
+  border-color: #e60000;
 }
 .br-checklist .field.is-invalid input[type="radio"]:checked + label::after {
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
-  box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   position: absolute;
@@ -1871,13 +1871,13 @@
   width: 19px;
 }
 .br-checklist .field.is-invalid input[type="radio"] + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-checklist .field.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-checklist .field.is-valid input,
 .br-checklist .field.is-valid textarea {
@@ -2000,14 +2000,14 @@
   outline: none;
 }
 .br-checklist .input input:invalid {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-checklist .input input:invalid:focus {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 .br-checklist .input input:disabled {
@@ -2118,13 +2118,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-checklist .check input[type="checkbox"]:invalid + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-checklist .check input[type="checkbox"]:invalid:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-checklist .check input[type="checkbox"]:disabled:checked + label::before {
   background: #888888;
@@ -2150,8 +2150,8 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-checklist .check.is-invalid input[type="checkbox"]:checked + label::before {
-  background: #ff3333;
-  border-color: #ff3333;
+  background: #e60000;
+  border-color: #e60000;
 }
 .br-checklist .check.is-invalid input[type="checkbox"]:checked + label::after {
   border: solid #ffffff;
@@ -2166,13 +2166,13 @@
   width: 6px;
 }
 .br-checklist .check.is-invalid input[type="checkbox"] + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-checklist .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-checklist .check.is-valid input[type="checkbox"]:checked + label::before {
   background: #168821;
@@ -2251,13 +2251,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-checklist .check input[type="radio"]:invalid + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-checklist .check input[type="radio"]:invalid:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-checklist .check input[type="radio"]:disabled:checked + label::before {
   background: #888888;
@@ -2282,13 +2282,13 @@
   box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
 }
 .br-checklist .check.is-invalid input[type="radio"]:checked + label::before {
-  background: #ff3333;
-  border-color: #ff3333;
+  background: #e60000;
+  border-color: #e60000;
 }
 .br-checklist .check.is-invalid input[type="radio"]:checked + label::after {
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
-  box-shadow: inset 0 0 0 1px #ff3333, inset 0 0 0 5px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
+  box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
   content: "";
   height: 19px;
   position: absolute;
@@ -2297,13 +2297,13 @@
   width: 19px;
 }
 .br-checklist .check.is-invalid input[type="radio"] + label::before {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-checklist .check.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
-  -webkit-box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
-  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.45);
+  -webkit-box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 .br-checklist .check.is-valid input[type="radio"]:checked + label::before {
   background: #168821;
@@ -2339,7 +2339,7 @@
   line-height: normal;
 }
 .br-checklist.is-invalid + .feedback {
-  color: #ff3333;
+  color: #e60000;
   font-size: 13px;
   font-style: italic;
   font-weight: 500;
@@ -2736,14 +2736,14 @@
   outline: none;
 }
 .br-select .select-selected:invalid {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 .br-select .select-selected:invalid:focus {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 .br-select .select-selected:disabled {
@@ -2832,13 +2832,13 @@
   transform: translate(0, -50%);
 }
 .br-select.is-invalid .select-selected {
-  border-color: #ff3333;
-  -webkit-box-shadow: 0 0 0 1px #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  -webkit-box-shadow: 0 0 0 1px #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   padding-right: 40px;
 }
 .br-select.is-invalid .select-selected::after {
-  color: #ff3333;
+  color: #e60000;
   content: "";
   font-family: Fontawesome;
   font-style: normal;
@@ -2849,7 +2849,7 @@
   transform: translate(0, -50%);
 }
 .br-select.is-invalid + .feedback {
-  color: #ff3333;
+  color: #e60000;
   font-size: 13px;
   font-style: italic;
   font-weight: 500;
@@ -2926,7 +2926,7 @@
 
 
 .br-table table {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #c5d4eb;
   width: 100%;
 }
 .br-table table tbody tr:nth-last-child(-n + 4) .actions .list {
@@ -3002,7 +3002,7 @@
 
 .br-table table th,
 .br-table table td {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #c5d4eb;
   color: #888888;
   font-size: 14px;
   font-weight: 500;
@@ -3105,7 +3105,7 @@
   margin: -8px 0;
 }
 .br-table .caption {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #c5d4eb;
   font-size: 20px;
   margin-bottom: 8px;
   padding-bottom: 8px;
@@ -3489,7 +3489,7 @@
 
 
 .br-alert.is-danger {
-  background: #ff3333;
+  background: #e60000;
 }
 
 @media (min-width: 576px) {
@@ -3497,10 +3497,10 @@
     background: transparent;
   }
   .br-alert.is-danger .icon {
-    background: #ff3333;
+    background: #e60000;
   }
   .br-alert.is-danger .close button {
-    color: #ff3333;
+    color: #e60000;
   }
 }
 

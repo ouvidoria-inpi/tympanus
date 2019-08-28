@@ -37,14 +37,14 @@
 
 .br-input input:invalid,
 .br-input textarea:invalid {
-  border-color: #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 
 .br-input input:invalid:focus,
 .br-input textarea:invalid:focus {
-  border-color: #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 
@@ -116,12 +116,12 @@
   z-index: 1;
 }
 
-.br-input.is-autocomplete .search-items div {
+.br-input.is-autocomplete .search-items > * {
   cursor: pointer;
   padding: 8px 16px;
 }
 
-.br-input.is-autocomplete .search-items div:hover {
+.br-input.is-autocomplete .search-items > *:hover {
   background-color: #dbe8fb;
 }
 
@@ -153,19 +153,19 @@
 
 .br-input.is-invalid input,
 .br-input.is-invalid textarea {
-  border-color: #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 
 .br-input.is-invalid input:focus,
 .br-input.is-invalid textarea:focus {
-  border-color: #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 
 .br-input.is-invalid + .feedback {
-  color: #ff3333;
+  color: #e60000;
   font-size: 13px;
   font-style: italic;
   font-weight: 500;
@@ -174,7 +174,7 @@
 
 .br-input.is-invalid .action,
 .br-input.is-invalid .icon {
-  color: #ff3333;
+  color: #e60000;
 }
 
 .br-input.is-valid input,

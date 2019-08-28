@@ -5,10 +5,9 @@
 
 
 // Primary Colors
-$color-primary: #1351b4;
-$color-primary-lighten-15: #2670e8;
 $color-primary-lighten-25: #5992ed;
-$color-primary-pastel: #dbe8fb;
+$color-primary-lighten-15: #2670e8;
+$color-primary: #1351b4;
 $color-primary-darken-15: #0c326f;
 $color-primary-darken-25: #071d41;
 
@@ -18,7 +17,7 @@ $color-secondary: #268744;
 // State Colors
 $color-success: #168821;
 $color-warning: #ffcd07;
-$color-danger: #ff3333;
+$color-danger: #e60000;
 $color-info: #155bcb;
 
 // Support Colors
@@ -26,6 +25,8 @@ $color-brown: #a26739;
 $color-teal: #36a191;
 $color-yellow: #f2e317;
 $color-orange: #d84800;
+$color-blue-pastel-1: #dbe8fb;
+$color-blue-pastel-2: #c5d4eb;
 
 // Grayscale Colors
 $color-white: #ffffff;

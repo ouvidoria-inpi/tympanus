@@ -52,7 +52,7 @@ Exemplo de uso:
 </div>
 ```
 
-Veja mais informações em [**Fundamentos Visuais --> Cores**](ds/fundamentosvisuais/cores).
+Veja mais informações em [**Fundamentos Visuais --> Cores**](ds/fundamentos-visuais/cores).
 
 ### Grid
 
@@ -73,7 +73,7 @@ Exemplo de uso:
 </div>
 ```
 
-Veja mais informações em [**Fundamentos Visuais --> Sistema de Grid**](ds/fundamentosvisuais/grid).
+Veja mais informações em [**Fundamentos Visuais --> Sistema de Grid**](ds/fundamentos-visuais/grid).
 
 ### Espaçamentos
 
@@ -92,7 +92,7 @@ Exemplo de uso:
 </header>
 ```
 
-Veja mais informações em [**Fundamentos Visuais --> Espaçamentos**](ds/fundamentosvisuais/espacamentos).
+Veja mais informações em [**Fundamentos Visuais --> Espaçamentos**](ds/fundamentos-visuais/espacamentos).
 
 ### Utilitários
 

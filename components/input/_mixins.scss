@@ -24,8 +24,8 @@
     position: absolute;
     right: 0;
     img {
-      max-width: $input-icon-image;
-      min-width: $input-icon-image;
+      max-width: $action-icon-size;
+      min-width: $action-icon-size;
       transform: translate(0, -4px);
     }
   }
@@ -111,8 +111,8 @@
     right: 0;
     width: auto;
     img {
-      max-width: $input-icon-image;
-      min-width: $input-icon-image;
+      max-width: $action-icon-size;
+      min-width: $action-icon-size;
       transform: translate(0, -4px);
     }
   }
@@ -121,18 +121,18 @@
 // Autocomplete
 @mixin search-itens {
   &-items {
-    background: $color-white;
+    background: $autocomplete-bg;
     box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
     left: 0;
     position: absolute;
     right: 0;
     top: 100%;
     z-index: 1;
-    div {
+    > * { // sass-lint:disable-line no-universal-selectors
       cursor: pointer;
-      padding: $spacing-1 $spacing-3;
+      padding: $autocomplete-item-padding;
       &:hover {
-        background-color: $color-primary-pastel;
+        background-color: $autocomplete-item-hover;
       }
     }
   }
@@ -140,7 +140,7 @@
 
 @mixin search-active {
   &-active {
-    background-color: $color-primary-pastel !important;
+    background-color: $autocomplete-item-active !important;
   }
 }
 

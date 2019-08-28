@@ -51,13 +51,13 @@
 }
 
 .br-select .select-selected:invalid {
-  border-color: #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 
 .br-select .select-selected:invalid:focus {
-  border-color: #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 
@@ -154,12 +154,12 @@
 
 .br-select.is-invalid .select-selected {
   padding-right: 40px;
-  border-color: #ff3333;
-  box-shadow: 0 0 0 1px #ff3333;
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
 }
 
 .br-select.is-invalid .select-selected::after {
-  color: #ff3333;
+  color: #e60000;
   content: "";
   font-family: Fontawesome;
   font-style: normal;
@@ -170,7 +170,7 @@
 }
 
 .br-select.is-invalid + .feedback {
-  color: #ff3333;
+  color: #e60000;
   font-size: 13px;
   font-style: italic;
   font-weight: 500;

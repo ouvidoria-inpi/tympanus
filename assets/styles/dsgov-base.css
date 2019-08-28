@@ -841,14 +841,6 @@ a.text-dark:focus {
   color: #5992ed !important;
 }
 
-.bg-primary-pastel {
-  background-color: #dbe8fb !important;
-}
-
-.text-primary-pastel {
-  color: #dbe8fb !important;
-}
-
 .bg-primary-darken-15 {
   background-color: #0c326f !important;
 }
@@ -890,11 +882,11 @@ a.text-dark:focus {
 }
 
 .bg-danger {
-  background-color: #ff3333 !important;
+  background-color: #e60000 !important;
 }
 
 .text-danger {
-  color: #ff3333 !important;
+  color: #e60000 !important;
 }
 
 .bg-info {
@@ -935,6 +927,22 @@ a.text-dark:focus {
 
 .text-orange {
   color: #d84800 !important;
+}
+
+.bg-blue-pastel-1 {
+  background-color: #dbe8fb !important;
+}
+
+.text-blue-pastel-1 {
+  color: #dbe8fb !important;
+}
+
+.bg-blue-pastel-2 {
+  background-color: #c5d4eb !important;
+}
+
+.text-blue-pastel-2 {
+  color: #c5d4eb !important;
 }
 
 .bg-white {

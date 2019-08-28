@@ -42,14 +42,14 @@ Este componente é formado pelos seguintes elementos:
 
 **Elemento obrigatório**!
 
-Por padrão a visualização das abas é horizontal.
+Por padrão a visualização das abas é **horizontal**.
 
-Para usar a versão vertical aplique a classe `flex-column`.
+Para usar a versão vertical aplique o prefixo `is-vertical`.
 
 Exemplo de uso:
 
 ```html
-<ul class="br-tabs flex-column">
+<ul class="br-tabs is-vertical">
   ...
 </ul>
 ```
