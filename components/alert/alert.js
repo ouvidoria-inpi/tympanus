@@ -1,11 +1,11 @@
-const brAlert = document.querySelectorAll('.br-alert');
+dismissAlert();
 
-function dismissAlert(element) {
-    element.remove();
-}
-
-for (i = 0; i < brAlert.length; i++) {
-    let alert = brAlert[i];
-    let closeButton = brAlert[i].querySelector('.close button');
-    closeButton.addEventListener('click', ()=> dismissAlert(alert));
+function dismissAlert() {
+  let alerts = document.getElementsByClassName('br-alert');
+  for (let alert of alerts) {
+    let dismissAlerts = alert.querySelectorAll('[data-dismiss="alert"]');
+    for (let dismissAlert of dismissAlerts) {
+      dismissAlert.addEventListener('click', () => alert.remove());
+    }  
+  }
 }

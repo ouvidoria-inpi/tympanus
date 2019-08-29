@@ -32,3 +32,33 @@ function toggleAccordeonField(element, className) {
     }
   }
 }
+
+let accordeons = getAccordeons();
+console.log(accordeons);
+let collapses = getCollapses(accordeons);
+console.log(collapses);
+
+for (let collapse of collapses) {
+  collapse.addEventListener("click", function(event) {
+    toggleAccordeonField(collapse, 'br-accordeon')
+  });
+}
+
+function getAccordeons() {
+  let accordeons = document.getElementsByClassName('br-accordeon');
+  return accordeons;
+}
+
+function getCollapses(accordeons) {
+  for (let accordeon of accordeons) {
+    let collapses = accordeon.querySelectorAll('[data-toggle="collapse"]');
+    return collapses;
+  }
+}
+
+// let collapseList = document.querySelectorAll('button[data-toggle="collapse"]');
+// collapseList.forEach(function(collapse) {
+//   collapse.addEventListener("click", function(event) {
+//     event.target.classList.toggle("is-open")
+//   })
+// })
