@@ -7,7 +7,9 @@ for (let brSelect of brSelects) {
     if (defaultSelect.disabled) {
       select.setAttribute('disabled', 'disabled')
     }
-    select.innerHTML = defaultSelect.options[defaultSelect.selectedIndex].innerHTML;
+    let optionText = document.createElement('span');
+    optionText.innerHTML = defaultSelect.options[defaultSelect.selectedIndex].innerHTML;
+    select.appendChild(optionText);
     let icone = document.createElement('i');
     icone.setAttribute('class', 'fas fa-chevron-down');
     select.appendChild(icone);
@@ -16,29 +18,28 @@ for (let brSelect of brSelects) {
     selectOptions.setAttribute('class', 'select-items select-hide');
     for (let option of defaultSelect.options) {
       let selectOption = document.createElement('button');
-      selectOption.innerHTML = option.innerHTML;
+      let optionText = document.createElement('span');
+      optionText.innerHTML = option.innerHTML;
+      selectOption.appendChild(optionText);
       selectOption.addEventListener('click', function(event) {
         let s = this.parentNode.parentNode.getElementsByTagName('select')[0];
         let h = this.parentNode.previousSibling;
         for (i = 0; i < s.length; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
+          if (s.options[i].innerHTML == this.firstChild.innerHTML) {
             s.selectedIndex = i
             h.innerHTML = this.innerHTML
             h.setAttribute('class', 'select-selected')
             let icone = document.createElement('i');
             icone.setAttribute('class', 'fas fa-chevron-down');
             h.appendChild(icone);
-            console.log(h)
             y = this.parentNode.getElementsByClassName('same-as-selected')
             for (k = 0; k < y.length; k++) {
               y[k].removeAttribute('class')
-              y[k].removeChild(icone);
             }
             this.setAttribute('class', 'same-as-selected')
             break
           }
         }
-        h.click()
       });
       selectOptions.appendChild(selectOption);
     }
