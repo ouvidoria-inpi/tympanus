@@ -1,6 +1,4 @@
-// Seta
-$select-arrow-font-family: Fontawesome;
-$select-arrow-content: "\f078";
+$select-arrow-disabled: $color-gray-5;
 
 // Listagem de opções
 $select-list-margin: $spacing-half;
@@ -11,7 +9,3 @@ $select-list-item-padding: $spacing-half $spacing-3;
 $select-list-item-active-bg: $color-primary-lighten-15;
 $select-list-item-active-color: $color-white;
 $select-list-item-hover: $color-blue-pastel-1;
-
-// Tamanhos
-$select-medium: $spacing-half;
-$select-small: 0;
