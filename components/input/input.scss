@@ -2,7 +2,7 @@
 @import "../../base/dsgov-base";
 
 /*!
- * input - 0.2.2 */
+ * input - 0.3.0 */
 
 // Carregar dependências
 @import "configs";
@@ -11,40 +11,20 @@
 // Estilos específicos
 .#{$prefix}input {
   @include input-component;
-  // Texto de ajuda  
-  & + .help,
-  & + .feedback + .help {
-    @include font-suport-text-for-input;
-  }
-  // Estados com prefixo
-  &.is-focus {
-    input,
-    textarea {
-      @include input-focus($color-primary-lighten-15);
-    }
-    .action,
-    .icon {
-      color: $color-primary-lighten-15;
-    }
-  }
-  &.is-invalid {
-    @include input-state($color-danger);
-    & + .feedback {
-      @include feedback($color-danger);
-    }
-    .action,
-    .icon {
-      color: $color-danger;
-    }
-  }
+  // Feedbacks
   &.is-valid {
-    @include input-state($color-success);
     & + .feedback {
       @include feedback($color-success);
     }
-    .action,
-    .icon {
-      color: $color-success;
+  }
+  &.is-invalid {
+    & + .feedback {
+      @include feedback($color-danger);
     }
+  }
+  // Texto de ajuda
+  & + .help,
+  & + .feedback + .help {
+    @include font-suport-text-for-input;
   }
 }

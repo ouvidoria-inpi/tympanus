@@ -24,17 +24,17 @@
           <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
         </div>
         <div class="mb-3">
-          <div class="br-input is-action">
+          <div class="br-input has-icon">
             <label for="password">Senha</label>
             <input type="password" id="password" placeholder="Digite sua senha de 8 a 11 dígitos">
-            <button class="action" type="button" onclick="toggleInputAction(this, 'is-action')">
+            <button class="icon" type="button" onclick="toggleInputAction(this, 'is-action')">
               <span class="sr-only">Mostrar senha</span>
               <i class="fas fa-eye"></i>
             </button>
           </div>
         </div>
         <div class="mb-3">
-          <div class="br-input is-autocomplete">
+          <div class="br-input has-icon">
             <label for="search-autocomplete">Autocomplete</label>
             <input id="search-autocomplete" type="search" placeholder="Digite um país">
             <span class="icon">
@@ -58,26 +58,26 @@
         </div>
       </div>
       <div class="col-sm">
-          <div class="mb-3">
-            <div class="br-input is-invalid">
-              <label for="invalido">Inválido</label>
-              <input id="invalido" type="text" placeholder="Insira um texto">
-            </div>
-            <div class="feedback">
-              <i class="fas fa-times-circle"></i>
-              <span class="message">Texto inválido</span>
-            </div>
+        <div class="mb-3">
+          <div class="br-input is-invalid">
+            <label for="invalido">Inválido</label>
+            <input id="invalido" type="text" placeholder="Insira um texto">
           </div>
-          <div class="mb-3">
-            <div class="br-input is-valid">
-              <label for="valido">Válido</label>
-              <input id="valido" type="text" placeholder="Insira um texto">
-            </div>
-            <div class="feedback">
-              <i class="fas fa-check-circle"></i>
-              <span class="message">Texto válido</span>
-            </div>
+          <div class="feedback">
+            <i class="fas fa-times-circle"></i>
+            <span class="message">Texto inválido</span>
           </div>
+        </div>
+        <div class="mb-3">
+          <div class="br-input is-valid">
+            <label for="valido">Válido</label>
+            <input id="valido" type="text" placeholder="Insira um texto">
+          </div>
+          <div class="feedback">
+            <i class="fas fa-check-circle"></i>
+            <span class="message">Texto válido</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
