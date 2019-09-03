@@ -5,6 +5,14 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.11] - 2019-09-03
+### Added
+- Checkbox e radio button pequeno
+- Checkbox e radio button invertido
+
+### Fixed
+- Remoção da margem no rótulo do check
+
 ## [0.1.10] - 2019-08-13
 ### Fixed
 - Remoção da margem no rótulo do check
