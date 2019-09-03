@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.2.0] - 2019-09-03
+### Removed
+- Versões simplificadas para input, checkboxes e botões
+
 ## [0.1.5] - 2019-07-19
 ### Fixed
 - Input dentro de `input`
