@@ -1,78 +1,91 @@
-let brSelects = document.getElementsByClassName('br-select');
-for (let brSelect of brSelects) {
-  let defaultSelects = brSelect.getElementsByTagName('select');
-  for (let defaultSelect of defaultSelects) {
-    let select = document.createElement('button');
-    select.setAttribute('class', 'select-selected unselected');
+class BRSelect {
+
+  constructor(name) {
+    this.name = name;
+    this.brSelects = this.bringAllBrSelects();
+    this.replaceDefaultSelect();
+  }
+
+  bringAllBrSelects() {
+    return window.document.getElementsByClassName(this.name);
+  }
+
+  replaceDefaultSelect() {
+    for (let brSelect of this.brSelects) {
+     for (let defaultSelect of brSelect.getElementsByTagName('select')) {
+       this.buildCustomSelect(brSelect, defaultSelect)
+     }
+    }
+  }
+
+  buildCustomSelect(brSelect, defaultSelect) {
+    let selectionField = this.createSelectionField(defaultSelect);
+    let optionsList = this.createOptionsList(defaultSelect);
+    brSelect.appendChild(selectionField);
+    brSelect.appendChild(optionsList);
+  }
+
+  createSelectionField(defaultSelect) {
+    let selectionField = window.document.createElement('button');
+    selectionField.setAttribute('class', 'select-selected unselected');
     if (defaultSelect.disabled) {
-      select.setAttribute('disabled', 'disabled')
+      selectionField.setAttribute('disabled', 'disabled');
     }
     let optionText = document.createElement('span');
     optionText.innerHTML = defaultSelect.options[defaultSelect.selectedIndex].innerHTML;
-    select.appendChild(optionText);
-    let icone = document.createElement('i');
-    icone.setAttribute('class', 'fas fa-chevron-down');
-    select.appendChild(icone);
-    brSelect.appendChild(select);
-    let selectOptions = document.createElement('div');
-    selectOptions.setAttribute('class', 'select-items select-hide');
+    selectionField.appendChild(optionText);
+    let _this = this;
+    selectionField.addEventListener('click', function(event) {
+      event.stopPropagation();
+      this.nextElementSibling.classList.toggle('select-hide');
+      _this.closeOthersSelects(this);
+    });
+    document.addEventListener('click', function() {
+      _this.closeOthersSelects();
+    });
+    return selectionField;
+  }
+
+  createOptionsList(defaultSelect) {
+    let optionsList = window.document.createElement('div');
+    optionsList.setAttribute('class', 'select-items select-hide');
     for (let option of defaultSelect.options) {
-      let selectOption = document.createElement('button');
-      let optionText = document.createElement('span');
+      let optionItem = window.document.createElement('button');
+      let optionText = window.document.createElement('span');
       optionText.innerHTML = option.innerHTML;
-      selectOption.appendChild(optionText);
-      selectOption.addEventListener('click', function(event) {
-        let s = this.parentNode.parentNode.getElementsByTagName('select')[0];
-        let h = this.parentNode.previousSibling;
-        for (i = 0; i < s.length; i++) {
-          if (s.options[i].innerHTML == this.firstChild.innerHTML) {
-            s.selectedIndex = i
-            h.innerHTML = this.innerHTML
-            h.setAttribute('class', 'select-selected')
-            let icone = document.createElement('i');
-            icone.setAttribute('class', 'fas fa-chevron-down');
-            h.appendChild(icone);
-            y = this.parentNode.getElementsByClassName('same-as-selected')
-            for (k = 0; k < y.length; k++) {
-              y[k].removeAttribute('class')
+      optionItem.appendChild(optionText);
+      optionItem.addEventListener('click', function() {
+        for (let i = 0; i < defaultSelect.length; i++) {
+          if (defaultSelect.options[i].innerHTML === this.firstChild.innerHTML) {
+            defaultSelect.selectedIndex = i;
+            this.parentNode.previousSibling.firstChild.innerHTML = this.firstChild.innerHTML;
+            this.parentNode.previousSibling.setAttribute('class', 'select-selected');
+            this.parentNode.classList.add('select-hide')
+            for (let item of this.parentNode.getElementsByClassName('same-as-selected')) {
+              item.removeAttribute('class');
             }
-            this.setAttribute('class', 'same-as-selected')
-            break
+            this.setAttribute('class', 'same-as-selected');
           }
         }
-      });
-      selectOptions.appendChild(selectOption);
+      })
+      optionsList.appendChild(optionItem);
     }
-    brSelect.appendChild(selectOptions);
-    select.addEventListener('click', function(event) {
-      event.stopPropagation();
-      closeAllSelect(this)
-      this.nextSibling.classList.toggle('select-hide');
-    });
+    return optionsList;
+  }
+
+  closeOthersSelects(element) {
+    for (let brSelect of this.brSelects) {
+      for (let selectionField of brSelect.getElementsByClassName('select-selected')) {
+        if (element !== selectionField) {
+          for (let listOptions of brSelect.getElementsByClassName('select-items')) {
+            listOptions.classList.add('select-hide');
+          }
+        }  
+      }
+    }
+    let _this = this;
+    document.removeEventListener('click', _this.closeOthersSelects)
   }
 }
 
-function closeAllSelect(elmnt) {
-  /* A function that will close all select boxes in the document,
-  except the current select box: */
-  var selectList,
-    select,
-    i,
-    arrNo = []
-  selectList = document.getElementsByClassName('select-items')
-  select = document.getElementsByClassName('select-selected')
-  for (i = 0; i < select.length; i++) {
-    if (elmnt == select[i]) {
-      arrNo.push(i)
-    }
-  }
-  for (i = 0; i < selectList.length; i++) {
-    if (arrNo.indexOf(i)) {
-      selectList[i].classList.add('select-hide')
-    }
-  }
-}
-
-/* If the user clicks anywhere outside the select box,
-then close all select boxes: */
-document.addEventListener('click', closeAllSelect)
+window.onload = new BRSelect('br-select');
