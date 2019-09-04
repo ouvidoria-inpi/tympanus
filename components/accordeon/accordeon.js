@@ -34,9 +34,7 @@ function toggleAccordeonField(element, className) {
 }
 
 let accordeons = getAccordeons();
-console.log(accordeons);
 let collapses = getCollapses(accordeons);
-console.log(collapses);
 
 for (let collapse of collapses) {
   collapse.addEventListener("click", function(event) {
