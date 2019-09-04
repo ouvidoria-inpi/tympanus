@@ -15,8 +15,6 @@
   }
   // Agrupador de botões
   .actions {
-    margin: ($field-margin * 1.5) 0 $field-margin;
-    text-align: center;
     @include media-breakpoint-up(sm) {
       align-items: baseline;
       display: flex;
@@ -27,5 +25,7 @@
         margin-right: $spacing-5;
       }
     }
+    margin: ($field-margin * 1.5) 0 $field-margin;
+    text-align: center;
   }
 }

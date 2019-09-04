@@ -1,5 +1,5 @@
 @mixin check($type, $side: left) {
-  input[type="#{$type}"] {
+  input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
     @include check-label($side);
     @include check-model($type, $side);
     @include check-focus;
@@ -19,18 +19,18 @@
   }
   // Invertido
   &.is-inverted {
-    input[type="#{$type}"] {
+    input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
       @include check-checked($type, $side, $check-size, $inverted: true);
     }
   }
   // Pequeno
   &.is-small {
-    input[type="#{$type}"] {
+    input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
       @include check-model($type, $side, $check-small);
       @include check-checked($type, $side, $check-small);
     }
     &.is-inverted {
-      input[type="#{$type}"] {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
         @include check-checked($type, $side, $check-small, $inverted: true);
       }
     }
@@ -42,42 +42,42 @@
     }
   }
   &.is-invalid {
-    input[type="#{$type}"] {
+    input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
       @include check-checked($type, $side, $check-size, $color-danger);
       @include check-state($color-danger);
     }
     &.is-inverted {
-      input[type="#{$type}"] {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
         @include check-checked($type, $side, $check-size, $color-danger, $inverted: true);
       }
     }
     &.is-small {
-      input[type="#{$type}"] {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
         @include check-checked($type, $side, $check-small, $color-danger);
       }
       &.is-inverted {
-        input[type="#{$type}"] {
+        input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
           @include check-checked($type, $side, $check-small, $color-danger, $inverted: true);
         }
       }
     }
   }
   &.is-valid {
-    input[type="#{$type}"] {
+    input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
       @include check-checked($type, $side, $check-size, $color-success);
       @include check-state($color-success);
     }
     &.is-inverted {
-      input[type="#{$type}"] {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
         @include check-checked($type, $side, $check-size, $color-success, $inverted: true);
       }
     }
     &.is-small {
-      input[type="#{$type}"] {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
         @include check-checked($type, $side, $check-small, $color-success);
       }
       &.is-inverted {
-        input[type="#{$type}"] {
+        input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
           @include check-checked($type, $side, $check-small, $color-success, $inverted: true);
         }
       }

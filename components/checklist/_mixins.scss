@@ -1,14 +1,14 @@
 @mixin checklist {
-  border-top: $check-input-border-size $check-input-border-style $check-input-border-color;
-  display: flex;
-  flex-direction: column;
-  margin: $check-input-margin;
   // Linha
   @include checklist-field;
   // Tamanhos
   @include checklist-sizes;
   // Estados
   @include checklist-states;
+  border-top: $check-input-border-size $check-input-border-style $check-input-border-color;
+  display: flex;
+  flex-direction: column;
+  margin: $check-input-margin;
   // Texto de ajuda
   & + .help,
   & + .feedback + .help {
@@ -40,8 +40,8 @@
     width: $icon-size;
   }
   .input {
-    display: flex;
     align-items: center;
+    display: flex;
     label {
       margin: 0;
     }
@@ -55,12 +55,12 @@
     display: inline-block;
     margin-left: auto;
     position: relative;
-    input[type="radio"] {
+    input[type="radio"] { // sass-lint:disable-line force-attribute-nesting
       @include check-label(right);
       @include check-model(radio, right);
       @include check-checked(radio, right);
     }
-    input[type="checkbox"] {
+    input[type="checkbox"] { // sass-lint:disable-line force-attribute-nesting
       @include check-label(right);
       @include check-model(checkbox, right);
       @include check-checked(checkbox, right);
@@ -83,12 +83,12 @@
       }
     }
     .check {
-      input[type="radio"] {
+      input[type="radio"] { // sass-lint:disable-line force-attribute-nesting
         @include check-label(right, $check-small);
         @include check-model(radio, right, $check-small);
         @include check-checked(radio, right, $check-small);
       }
-      input[type="checkbox"] {
+      input[type="checkbox"] { // sass-lint:disable-line force-attribute-nesting
         @include check-label(right, $check-small);
         @include check-model(checkbox, right, $check-small);
         @include check-checked(checkbox, right, $check-small);
@@ -106,16 +106,16 @@
           @include input-focus($color-success);
         }
         .icon,
-        button.icon {
+        button.icon { // sass-lint:disable-line force-element-nesting
           @include input-icon($color-success);
         }
       }
       .check {
-        input[type="radio"] {
+        input[type="radio"] { // sass-lint:disable-line force-attribute-nesting
           @include check-checked(radio, right, $check-size, $color-success);
           @include check-state($color-success);
         }
-        input[type="checkbox"] {
+        input[type="checkbox"] { // sass-lint:disable-line force-attribute-nesting
           @include check-checked(checkbox, right, $check-size, $color-success);
           @include check-state($color-success);
         }
@@ -128,16 +128,16 @@
           @include input-focus($color-danger);
         }
         .icon,
-        button.icon {
+        button.icon { // sass-lint:disable-line force-element-nesting
           @include input-icon($color-danger);
         }
       }
       .check {
-        input[type="radio"] {
+        input[type="radio"] { // sass-lint:disable-line force-attribute-nesting
           @include check-checked(radio, right, $check-size, $color-danger);
           @include check-state($color-danger);
         }
-        input[type="checkbox"] {
+        input[type="checkbox"] { // sass-lint:disable-line force-attribute-nesting
           @include check-checked(checkbox, right, $check-size, $color-danger);
           @include check-state($color-danger);
         }
@@ -155,15 +155,15 @@
       &:disabled {
         background: $input-bg-disabled;
         & + .icon,
-        & + button.icon {
+        & + button.icon { // sass-lint:disable-line force-element-nesting
           @include input-icon;
         }
       }
     }
   }
   .check {
-    input[type="radio"],
-    input[type="checkbox"] {
+    input[type="radio"], // sass-lint:disable-line force-attribute-nesting
+    input[type="checkbox"] { // sass-lint:disable-line force-attribute-nesting
       &:focus {
         @include input-focus($color-primary-lighten-15);
       }
@@ -181,20 +181,20 @@
     .field {
       &.is-valid {
         .check {
-          input[type="radio"] {
+          input[type="radio"] { // sass-lint:disable-line force-attribute-nesting
             @include check-checked(radio, right, $check-small, $color-success);
           }
-          input[type="checkbox"] {
+          input[type="checkbox"] { // sass-lint:disable-line force-attribute-nesting
             @include check-checked(checkbox, right, $check-small, $color-success);
           }
         }
       }
       &.is-invalid {
         .check {
-          input[type="radio"] {
+          input[type="radio"] { // sass-lint:disable-line force-attribute-nesting
             @include check-checked(radio, right, $check-small, $color-danger);
           }
-          input[type="checkbox"] {
+          input[type="checkbox"] { // sass-lint:disable-line force-attribute-nesting
             @include check-checked(checkbox, right, $check-small, $color-danger);
           }
         }
