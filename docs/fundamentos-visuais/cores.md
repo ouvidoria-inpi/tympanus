@@ -2,7 +2,9 @@
 
 A aplicação correta da paleta de cores traz consistência ao Design System e contribui para garantir uma interface unificada facilmente reconhecível pelos seus usuários. É fundamentada que essa paleta esteja alinhada aos **Princípios do Design System** e seja aplicada corretamente na biblioteca de componentes contribuindo para o equilíbrio entre as diversos produtos e sistemas do governo.
 
-## Como usar as cores
+## Como usar as cores em Sistemas Web
+
+Carregue as folhas de estilo em seu sistema. Mais informações em [**Introdução --> Como começar**](ds/introducao/como-comecar).
 
 As cores podem ser aplicadas como **cor de texto** ou **cor de fundo**. Use a classe `text-cor` para aplicar a cor ao texto e `bg-cor` para aplicar como cor de fundo, onde **cor é o nome do token** da cor (veja na tabela de cores).
 
@@ -13,8 +15,6 @@ Exemplo de uso:
   Exemplo de aplicação de cor.
 </p>
 ```
-
-Antes de usar as cores leia a documentação de aplicação em [**Boas práticas --> Layout --> Aplicação das cores**](ds/boaspraticas/aplicacao-das-cores).
 
 ## Cores Primárias
 
@@ -34,6 +34,30 @@ São utilizadas nos botões, elementos do cabeçalho, títulos e principais comp
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td>
+          <div class="bg-primary-pastel-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 40px; width: 100px;"></div>
+        </td>
+        <td>
+          <span class="text-nowrap"><strong>#dbe8fb</strong></span> ou 
+          <span class="text-nowrap"><strong>rgb(219, 232, 251)</strong></span> ou 
+          <span class="text-nowrap"><strong>hsl(216, 80%, 92%)</strong></span>
+        </td>
+        <td><span class="text-nowrap">primary-pastel-1</span></td>
+        <td>"Hover" do Background da Linha da Tabela</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="bg-primary-pastel-2" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 40px; width: 100px;"></div>
+        </td>
+        <td>
+          <span class="text-nowrap"><strong>#c5d4eb</strong></span> ou 
+          <span class="text-nowrap"><strong>rgb(197, 212, 235)</strong></span> ou 
+          <span class="text-nowrap"><strong>hsl(216, 49%, 85%)</strong></span>
+        </td>
+        <td><span class="text-nowrap">primary-pastel-2</span></td>
+        <td>Linhas (Separadores) da Tabela</td>
+      </tr>
       <tr>
         <td>
           <div class="bg-primary-lighten-25" style="border-radius: 4px; height: 40px; width: 100px;"></div>
@@ -327,30 +351,6 @@ As cores de apoio podem ser aplicadas quando houver necessidade de variação de
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          <div class="bg-blue-pastel-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 40px; width: 100px;"></div>
-        </td>
-        <td>
-          <span class="text-nowrap"><strong>#dbe8fb</strong></span> ou 
-          <span class="text-nowrap"><strong>rgb(219, 232, 251)</strong></span> ou 
-          <span class="text-nowrap"><strong>hsl(216, 80%, 92%)</strong></span>
-        </td>
-        <td><span class="text-nowrap">blue-pastel-1</span></td>
-        <td>"Hover" do Background da Linha da Tabela</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="bg-blue-pastel-2" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 40px; width: 100px;"></div>
-        </td>
-        <td>
-          <span class="text-nowrap"><strong>#c5d4eb</strong></span> ou 
-          <span class="text-nowrap"><strong>rgb(197, 212, 235)</strong></span> ou 
-          <span class="text-nowrap"><strong>hsl(216, 49%, 85%)</strong></span>
-        </td>
-        <td><span class="text-nowrap">blue-pastel-2</span></td>
-        <td>Linhas (Separadores) da Tabela</td>
-      </tr>
       <tr>
         <td>
           <div class="bg-teal" style="border-radius: 4px; height: 40px; width: 100px;"></div>

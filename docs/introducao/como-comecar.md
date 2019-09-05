@@ -30,7 +30,7 @@
 
 Para informações mais detalhadas sobre Cores, Tipografia, etc acesse o item **Fundamentos Visuais** na navegação principal.
 
-Caso queira precise construir templates e/ou estilos acesse o item **Boas Práticas** na navegação principal.
+Para criação ou manutenção de páginas, templates ou estilos acesse o item **Boas Práticas** na navegação principal.
 
 ## Componentes
 

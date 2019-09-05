@@ -4,6 +4,8 @@
 // Cada cor DEVE possuir respectiva variável no mapa $br-theme
 
 $br-theme: (
+  primary-pastel-1: $color-primary-pastel-1,
+  primary-pastel-2: $color-primary-pastel-2,
   primary: $color-primary,
   primary-lighten-15: $color-primary-lighten-15,
   primary-lighten-25: $color-primary-lighten-25,
@@ -21,8 +23,6 @@ $br-theme: (
   teal: $color-teal,
   yellow: $color-yellow,
   orange: $color-orange,
-  blue-pastel-1: $color-blue-pastel-1,
-  blue-pastel-2: $color-blue-pastel-2,
 
   white: $color-white,
   gray-1: $color-gray-1,

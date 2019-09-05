@@ -30,8 +30,8 @@
 }
 
 .br-checklist .input {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .br-checklist .input label {

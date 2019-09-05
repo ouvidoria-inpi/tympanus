@@ -43,6 +43,70 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
       </tr>
     </thead>
     <tbody>
+          <tr>
+            <td><span class="text-nowrap">primary-pastel-1</span></td>
+            <td><span class="text-nowrap">gray-7</span></td>
+            <td>
+              <div class="d-flex">
+              <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+                <span>AA</span>
+              </div>
+              <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+                <span>AAA</span>
+              </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex">
+                  <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+                    <span>AA</span>
+                    <span>18pt</span>
+                  </div>
+                  <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+                    <span>AAA</span>
+                    <span>18pt</span>
+                  </div>
+              </div>
+            </td>
+            <td>
+              <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+                <i class="fas fa-edit fa-lg"></i>
+              </div>
+            </td>
+            <td><strong>10.19</strong>:1</td>
+          </tr>
+          <tr>
+            <td><span class="text-nowrap">primary-pastel-2</span></td>
+            <td><span class="text-nowrap">gray-7</span></td>
+            <td>
+              <div class="d-flex">
+              <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+                <span>AA</span>
+              </div>
+              <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+                <span>AAA</span>
+              </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex">
+                  <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+                    <span>AA</span>
+                    <span>18pt</span>
+                  </div>
+                  <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+                    <span>AAA</span>
+                    <span>18pt</span>
+                  </div>
+              </div>
+            </td>
+            <td>
+              <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+                <i class="fas fa-edit fa-lg"></i>
+              </div>
+            </td>
+            <td><strong>8.41</strong>:1</td>
+          </tr>
       <tr>
         <td><span class="text-nowrap">primary-lighten-25</span></td>
         <td>white</td>
@@ -644,70 +708,6 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><span class="text-nowrap">blue-pastel-1</span></td>
-            <td><span class="text-nowrap">gray-7</span></td>
-            <td>
-              <div class="d-flex">
-              <div class="bg-blue-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
-                <span>AA</span>
-              </div>
-              <div class="bg-blue-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
-                <span>AAA</span>
-              </div>
-              </div>
-            </td>
-            <td>
-              <div class="d-flex">
-                  <div class="bg-blue-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
-                    <span>AA</span>
-                    <span>18pt</span>
-                  </div>
-                  <div class="bg-blue-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
-                    <span>AAA</span>
-                    <span>18pt</span>
-                  </div>
-              </div>
-            </td>
-            <td>
-              <div class="bg-blue-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
-                <i class="fas fa-edit fa-lg"></i>
-              </div>
-            </td>
-            <td><strong>10.19</strong>:1</td>
-          </tr>
-          <tr>
-            <td><span class="text-nowrap">blue-pastel-2</span></td>
-            <td><span class="text-nowrap">gray-7</span></td>
-            <td>
-              <div class="d-flex">
-              <div class="bg-blue-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
-                <span>AA</span>
-              </div>
-              <div class="bg-blue-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
-                <span>AAA</span>
-              </div>
-              </div>
-            </td>
-            <td>
-              <div class="d-flex">
-                  <div class="bg-blue-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
-                    <span>AA</span>
-                    <span>18pt</span>
-                  </div>
-                  <div class="bg-blue-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
-                    <span>AAA</span>
-                    <span>18pt</span>
-                  </div>
-              </div>
-            </td>
-            <td>
-              <div class="bg-blue-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
-                <i class="fas fa-edit fa-lg"></i>
-              </div>
-            </td>
-            <td><strong>8.41</strong>:1</td>
-          </tr>
           <tr>
             <td>teal</td>
             <td>gray-7</td>
