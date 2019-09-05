@@ -46,7 +46,7 @@ Os pesos maiores serão definidos na criação dos componentes e templates, de a
           <td>Link</td>
         </tr>
         <tr>
-          <td><span class="main-title">Título da página</span></td>
+          <td><span class="main-title text-nowrap">Título da página</span></td>
           <td>32px Medium | Cor #1351B4</td>
           <td>Título principal</td>
         </tr>
