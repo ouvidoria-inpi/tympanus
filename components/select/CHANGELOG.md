@@ -5,6 +5,13 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.2] - 2019-09-03
+### Changed
+- Reescrita do script
+
+### Fixed
+- Posição do ícone de select
+
 ## [0.1.1] - 2019-08-03
 ### Fixed
 - Espaçamento interno

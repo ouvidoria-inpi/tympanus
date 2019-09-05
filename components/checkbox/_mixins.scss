@@ -1,27 +1,37 @@
-// Estilo base para checkbox e radio button
-// - Como o modelo serve para os 2 tipos de input é necessário informar o tipo
-// via argumento
 @mixin check($type, $side: left) {
-  input {
-    &[type="#{$type}"] {
-      @include check-label($side);
-      @include check-model($type, $side);
-      @include check-focus;
-      @include check-checked($type, $side);
-      // Remover o checkbox padrão do navegador
-      opacity: 0;
-      position: absolute;
-      &:hover:not(:disabled) + label::before { // sass-lint:disable-line force-pseudo-nesting
-        @include check-hover;
+  input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+    @include check-label($side);
+    @include check-model($type, $side);
+    @include check-focus;
+    @include check-checked($type, $side);
+    &:hover:not(:disabled) + label::before { // sass-lint:disable-line force-pseudo-nesting
+      @include check-hover;
+    }
+    &:invalid {
+      @include check-state($color-danger);
+    }
+    &:disabled {
+      @include check-checked($type, $side, $check-disabled-bg);
+      & + label {
+        cursor: default;
       }
-      &:invalid  {
-        @include check-state($color-danger);
-      }
-      &:disabled {
-        @include check-checked($type, $side, $color-gray-5);
-        & + label {
-          cursor: default;
-        }
+    }
+  }
+  // Invertido
+  &.is-inverted {
+    input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+      @include check-checked($type, $side, $check-size, $inverted: true);
+    }
+  }
+  // Pequeno
+  &.is-small {
+    input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+      @include check-model($type, $side, $check-small);
+      @include check-checked($type, $side, $check-small);
+    }
+    &.is-inverted {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+        @include check-checked($type, $side, $check-small, $inverted: true);
       }
     }
   }
@@ -32,127 +42,183 @@
     }
   }
   &.is-invalid {
-    input {
-      &[type="#{$type}"] {
-        @include check-checked($type, $side, $color-danger);
-        @include check-state($color-danger);
+    input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+      @include check-checked($type, $side, $check-size, $color-danger);
+      @include check-state($color-danger);
+    }
+    &.is-inverted {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+        @include check-checked($type, $side, $check-size, $color-danger, $inverted: true);
+      }
+    }
+    &.is-small {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+        @include check-checked($type, $side, $check-small, $color-danger);
+      }
+      &.is-inverted {
+        input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+          @include check-checked($type, $side, $check-small, $color-danger, $inverted: true);
+        }
       }
     }
   }
   &.is-valid {
-    input {
-      &[type="#{$type}"] {
-        @include check-checked($type, $side, $color-success);
-        @include check-state($color-success);
+    input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+      @include check-checked($type, $side, $check-size, $color-success);
+      @include check-state($color-success);
+    }
+    &.is-inverted {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+        @include check-checked($type, $side, $check-size, $color-success, $inverted: true);
+      }
+    }
+    &.is-small {
+      input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+        @include check-checked($type, $side, $check-small, $color-success);
+      }
+      &.is-inverted {
+        input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
+          @include check-checked($type, $side, $check-small, $color-success, $inverted: true);
+        }
       }
     }
   }
 }
 
-// Estilo do texto de label
-// - A cor pode ser modificada via argumento
-@mixin check-label($side, $color: $color-gray-6) {
+@mixin check-label($side, $size: $check-size, $color: $color-gray-6) {
+  // Remover o checkbox padrão do navegador
+  opacity: 0;
+  position: absolute;
   & + label {
-    color: $font-system-default-text-color;
+    @if ($side == right) {
+      padding: 0 ($check-size + $spacing-1) $spacing-half 0;
+    } @else {
+      padding: 0 0 $spacing-half ($check-size + $spacing-1);
+    }
+    // fix para check sem label
+    @if ($size == $check-small) {
+      min-height: $check-small;
+    } @else {
+      min-height: $check-size;
+    }
     cursor: pointer;
     font-size: $font-system-default-text-font-size;
     font-weight: $font-system-default-text-font-weight;
     margin-bottom: 0;
-    min-height: 1rem; // fix para check sem label
-    @if ($side == left) {
-      padding: 0 0 0 ($check-size + $spacing-1);
-    }
-    @if ($side == right) {
-      padding: 0 ($check-size + $spacing-1) 0 0;
-    }
     position: relative;
   }
 }
 
-// Modelo para de checkbox e radio button
-// - A cor da borda pode ser modificada via argumento
-// - No estado disabled a com de fundo é cinza
-@mixin check-model($type, $side, $color: $color-gray-5) {
+@mixin check-model($type, $side, $size: $check-size, $color: $color-gray-5) {
   & + label::before { // sass-lint:disable-line force-pseudo-nesting
-    background: $color-white;
-    border: $check-border-size solid $color;
     @if ($type == radio) {
       border-radius: 50%;
     }
     @if ($type == checkbox) {
       border-radius: $check-radius;
     }
-    content: "";
-    height: $check-size - $check-border-size;
-    @if ($side == left) {
-      left: 0;
+    @if ($size == $check-small) {
+      height: $check-small;
+      width: $check-small;
+    } @else {
+      height: $check-size;
+      width: $check-size;
     }
     @if ($side == right) {
       right: 0;
+    } @else {
+      left: 0;
     }
+    background: $color-white;
+    border: $check-border-size solid $color;
+    content: "";
     position: absolute;
-    top: 5px;
+    top: 2px;
     vertical-align: text-top;
-    width: $check-size - $check-border-size;
   }
   &:disabled + label::before { // sass-lint:disable-line force-pseudo-nesting
     background: $color-gray-2;
   }
 }
 
-// Estilo para focus
 @mixin check-focus {
   &:focus + label {
     outline: 1px dotted currentColor;
   }
 }
 
-// O estilo hover não é aplicado para o estado desabilitado
-// - A cor pode ser modificada via argumento
 @mixin check-hover($color: $color-primary-lighten-15) {
   box-shadow: 0 0 0 ($check-border-size * 4) rgba($color, 0.45); // sass-lint:disable-line no-color-literals
 }
 
-// Aplica a cor para estado checked
-// - A cor pode ser modificada via argumento
-@mixin check-checked($type, $side, $color: $color-primary-lighten-15) {
+@mixin check-checked($type, $side, $size: $check-size, $color: $color-primary-lighten-15, $inverted: false) {
   &:checked + label::before { // sass-lint:disable-line force-pseudo-nesting
-    background: $color;
-    border-color: $color;
+    @if ($inverted) {
+      background: $color-white;
+      border-color: $color;
+    } @else {
+      background: $color;
+      border-color: $color;
+    }
   }
   @if ($type == checkbox) {
     &:checked + label::after { // sass-lint:disable-line force-pseudo-nesting
-      border: solid $color-white;
+      @if ($size == $check-small) {
+        top: 6px;
+        @if ($side == right) {
+          right: 7px;
+        } @else {
+          left: 7px;
+        }
+      } @else {
+        top: 8px;
+        @if ($side == right) {
+          right: 9px;
+        } @else {
+          left: 9px;
+        }
+      }
+      @if ($inverted) {
+        border: solid $color;
+      } @else {
+        border: solid $color-white;
+      }
       border-width: 0 2px 2px 0;
       content: "";
       height: 10px;
       position: absolute;
-      @if ($side == left) {
-        left: 7px;
-      }
-      @if ($side == right) {
-        right: 7px;
-      }
-      top: 8px;
       transform: rotate(45deg);
       width: 6px;
     }
   }
   @if ($type == radio) {
     &:checked + label::after { // sass-lint:disable-line force-pseudo-nesting
-      border-radius: 50%;
-      box-shadow: inset 0 0 0 $check-border-size $color, inset 0 0 0 ($check-border-size + $spacing-half) $color-white;
-      content: "";
-      height: ($check-size - $check-border-size);
-      @if ($side == left) {
-        left: 0px;
+      @if ($size == $check-small) {
+        height: $check-small;
+        width: $check-small;
+        @if ($inverted) {
+          box-shadow: inset 0 0 0 $check-border-size $color-white, inset 0 0 0 $check-radio-active-small $color;
+        } @else {
+          box-shadow: inset 0 0 0 $check-border-size $color, inset 0 0 0 $check-radio-active-small $color-white;
+        }
+      } @else {
+        @if ($inverted) {
+          box-shadow: inset 0 0 0 $check-border-size $color-white, inset 0 0 0 $check-radio-active-size $color;
+        } @else {
+          box-shadow: inset 0 0 0 $check-border-size $color, inset 0 0 0 $check-radio-active-size $color-white;
+        }
+        height: $check-size;
+        width: $check-size;
       }
       @if ($side == right) {
         right: 0px;
+      } @else {
+        left: 0px;
       }
+      border-radius: 50%;
+      content: "";
       position: absolute;
-      top: 5px;
-      width: ($check-size - $check-border-size);
+      top: 2px;
     }
   }
 }

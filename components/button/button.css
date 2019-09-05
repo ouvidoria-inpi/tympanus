@@ -1,5 +1,5 @@
 /*!
- * button - 0.2.3 */
+ * button - 0.2.4 */
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -10,12 +10,15 @@
 }
 
 .br-button.is-primary {
+  align-items: center;
   background: #1351b4;
   border: 1px solid #1351b4;
   border-radius: 100px;
   cursor: pointer;
-  display: inline-block;
-  padding: 8px 24px;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  padding: 0 24px;
   text-align: center;
   width: 100%;
   font-size: 16px;
@@ -26,16 +29,20 @@
   font-family: Rawline;
 }
 
-.br-button.is-primary span {
-  font-stretch: ultra-condensed;
-  font-weight: 900;
-}
-
 @media (min-width: 576px) {
   .br-button.is-primary {
     min-width: 144px;
     width: auto;
   }
+}
+
+.br-button.is-primary strong {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.br-button.is-primary.is-small {
+  height: 32px;
 }
 
 .br-button.is-primary:focus, .br-button.is-primary.is-focus {
@@ -58,12 +65,15 @@
 }
 
 .br-button.is-secondary {
+  align-items: center;
   background: #ffffff;
   border: 1px solid #1351b4;
   border-radius: 100px;
   cursor: pointer;
-  display: inline-block;
-  padding: 8px 24px;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  padding: 0 24px;
   text-align: center;
   width: 100%;
   font-size: 16px;
@@ -74,16 +84,20 @@
   font-family: Rawline;
 }
 
-.br-button.is-secondary span {
-  font-stretch: ultra-condensed;
-  font-weight: 900;
-}
-
 @media (min-width: 576px) {
   .br-button.is-secondary {
     min-width: 144px;
     width: auto;
   }
+}
+
+.br-button.is-secondary strong {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.br-button.is-secondary.is-small {
+  height: 32px;
 }
 
 .br-button.is-secondary:focus, .br-button.is-secondary.is-focus {
@@ -152,12 +166,15 @@
 }
 
 .br-button.is-call-to-action {
+  align-items: center;
   background: #268744;
   border: 1px solid #ededed;
   border-radius: 100px;
   cursor: pointer;
-  display: inline-block;
-  padding: 8px 24px;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  padding: 0 24px;
   text-align: center;
   width: 100%;
   font-size: 16px;
@@ -166,7 +183,8 @@
   font-style: normal;
   font-weight: 600;
   font-family: Rawline;
-  border-width: 16px;
+  border-width: 14px;
+  height: 80px;
 }
 
 @media (min-width: 576px) {
@@ -174,6 +192,15 @@
     min-width: 144px;
     width: auto;
   }
+}
+
+.br-button.is-call-to-action strong {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.br-button.is-call-to-action.is-small {
+  height: 32px;
 }
 
 .br-button.is-call-to-action:focus, .br-button.is-call-to-action.is-focus {
@@ -197,7 +224,7 @@
 
 @media (min-width: 576px) {
   .br-button.is-call-to-action {
-    min-width: 176px;
+    min-width: 208px;
   }
 }
 

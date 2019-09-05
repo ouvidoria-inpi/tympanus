@@ -2,7 +2,7 @@
 @import "../../base/dsgov-base";
 
 /*!
- * button - 0.2.3 */
+ * button - 0.2.4 */
 
 // Carregar dependências
 @import "configs";
@@ -11,18 +11,10 @@
 // Estilos de botões
 .#{$prefix}button {
   &.is-primary {
-    & span {
-      font-stretch: ultra-condensed;
-      font-weight: 900;
-    }
     @include btn-pill($color-primary, $color-primary, $color-white);
     @include font-primary-button;
   }
   &.is-secondary {
-    & span {
-      font-stretch: ultra-condensed;
-      font-weight: 900;
-    }
     @include btn-pill;
     @include font-secondary-button;
   }
@@ -37,9 +29,10 @@
     @include font-primary-button;
     @include media-breakpoint-up(sm) {
       // Compensar o tamanho maior da borda do botão
-      min-width: $btn-pill-min-width + ($spacing-3 * 2);
+      min-width: $btn-action-min-width + ($btn-action-shadow * 2);
     }
-    border-width: $spacing-3;
+    border-width: $btn-action-shadow;
+    height: $btn-action-size + ($btn-action-shadow * 2);
     &:focus,
     &.is-focus {
       box-shadow: 0 3px 6px -3px $color-secondary;
@@ -71,6 +64,7 @@
   &.is-loading {
     @include btn-loading;
   }
+  // Botões lado a lado
   & + & {
     @include media-breakpoint-up(sm) {
       margin-left: $btn-margin-horizontal;

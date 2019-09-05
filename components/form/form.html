@@ -8,28 +8,29 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
+  <link rel="stylesheet" href="../../assets/styles/dsgov-components.min.css">
   <link rel="stylesheet" href="form.css">
 </head>
 <body>
   <div class="container-fluid">
     <div class="br-form">
       <div class="field">
-        <div class="input">
+        <div class="br-input">
           <label for="item-1">label</label>
           <input id="item-1" type="text" placeholder="Insira um texto">
         </div>
         <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
       </div>
       <div class="field">
-        <div class="input">
+        <div class="br-input">
           <label for="item-textarea">label</label>
           <textarea id="item-textarea" placeholder="Insira um texto"></textarea>
         </div>
       </div>
       <div class="row">
         <div class="col-sm">
-          <div class="field is-invalid">
-            <div class="input">
+          <div class="field">
+            <div class="br-input is-invalid">
               <label for="item-2">Com erro</label>
               <input id="item-2" type="text" placeholder="Insira um texto">
             </div>
@@ -40,8 +41,8 @@
           </div>
         </div>
         <div class="col-sm">
-          <div class="field is-valid">
-            <div class="input">
+          <div class="field">
+            <div class="br-input is-valid">
               <label for="item-3">Validado</label>
               <input id="item-3" type="text" placeholder="Insira um texto">
             </div>
@@ -55,19 +56,20 @@
       <div class="row">
         <div class="col">
           <div class="field">
-            <div class="check d-block d-sm-inline-block">
+            <p class="label">Grupo de checkboxes</p>
+            <div class="br-check d-block d-sm-inline-block">
               <input type="checkbox" id="checkbox-padrao">
               <label for="checkbox-padrao">Padrão</label>
             </div>
-            <div class="check d-block mt-1 d-sm-inline-block ml-sm-7 mt-sm-0">
+            <div class="br-check d-block mt-1 d-sm-inline-block ml-sm-7 mt-sm-0">
               <input type="checkbox" id="checkbox-checado" checked>
               <label for="checkbox-checado">Checado</label>
             </div>
-            <div class="check d-block mt-1 is-invalid d-sm-inline-block ml-sm-7 mt-sm-0">
+            <div class="br-check d-block mt-1 is-invalid d-sm-inline-block ml-sm-7 mt-sm-0">
               <input type="checkbox" id="checkbox-invalido">
               <label for="checkbox-invalido">Inválido</label>
             </div>
-            <div class="check d-block mt-1 is-valid d-sm-inline-block ml-sm-7 mt-sm-0">
+            <div class="br-check d-block mt-1 is-valid d-sm-inline-block ml-sm-7 mt-sm-0">
               <input type="checkbox" id="checkbox-valido">
               <label for="checkbox-valido">Válido</label>
             </div>
@@ -75,19 +77,20 @@
         </div>
         <div class="col">
           <div class="field">
-            <div class="check d-block d-sm-inline-block">
+            <p class="label">Grupo de radio buttons</p>
+            <div class="br-check d-block d-sm-inline-block">
               <input name="radio" type="radio" id="radio-padrao">
               <label for="radio-padrao">Padrão</label>
             </div>
-            <div class="check d-block mt-1 d-sm-inline-block ml-sm-7 mt-sm-0">
+            <div class="br-check d-block mt-1 d-sm-inline-block ml-sm-7 mt-sm-0">
               <input name="radio" type="radio" id="radio-checado" checked>
               <label for="radio-checado">Checado</label>
             </div>
-            <div class="check d-block mt-1 is-invalid d-sm-inline-block ml-sm-7 mt-sm-0">
+            <div class="br-check d-block mt-1 is-invalid d-sm-inline-block ml-sm-7 mt-sm-0">
               <input name="radio" type="radio" id="radio-invalido">
               <label for="radio-invalido">Inválido</label>
             </div>
-            <div class="check d-block mt-1 is-valid d-sm-inline-block ml-sm-7 mt-sm-0">
+            <div class="br-check d-block mt-1 is-valid d-sm-inline-block ml-sm-7 mt-sm-0">
               <input name="radio" type="radio" id="radio-valido">
               <label for="radio-valido">Válido</label>
             </div>
@@ -95,9 +98,9 @@
         </div>
       </div>
       <div class="actions">
-        <button class="button is-primary" type="button">Ação principal</button>
-        <button class="button is-secondary" type="button">Ação secundária grande</button>
-        <button class="button is-cancel" type="button">Cancelar</button>
+        <button class="br-button is-primary" type="button">Ação principal</button>
+        <button class="br-button is-secondary" type="button">Ação secundária grande</button>
+        <button class="br-button is-cancel" type="button">Cancelar</button>
       </div>
     </div>
   </div>

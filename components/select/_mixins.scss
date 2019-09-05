@@ -6,35 +6,12 @@
   select {
     display: none;
   }
-  // Box select
-  .select-selected {
-    @include input;
-    @include arrow;
-    @include input-states;
-    position: relative;
-    text-align-last: left;
-    &:focus {
-      @include arrow($color-primary-lighten-15);
-    }
-    &:disabled {
-      @include arrow($color-gray-4);
-    }
-    &.unselected {
-      @include font-placeholder;
-      padding-bottom: $spacing-1 + 2px;
-      padding-top: $spacing-1 + 2px;
-    }
-  }
+  // Substituto do select original
+  @include select-box;
   // Lista de opções
-  .select-items {
-    @include select-list;
-  }
-  // Estados com prefixo
+  @include select-list;
+  // Estados
   @include select-states;
-  // Esconder elemento
-  .select-hide {
-    display: none;
-  }
   // Tamanhos
   @include select-sizes;
   // Texto de ajuda  
@@ -44,47 +21,81 @@
   }
 }
 
-@mixin arrow($color: $color-primary) {
-  padding-right: $spacing-8;
-  &::after {
-    color: $color ;
-    content: $select-arrow-content;
-    font-family: $select-arrow-font-family;
-    font-style: normal;
-    position: absolute;
-    right: $spacing-3;
-    top: 50%;
-    transform: translate(0, -50%);
+@mixin select-box {
+  .select-selected {
+    @include text-overflow;
+    @include input;
+    @include arrow;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align-last: left;
   }
 }
 
 @mixin select-list {
-  background: $color-white;
-  box-shadow: $select-list-shadow; // sass-lint:disable-line no-color-literals
-  left: $select-list-margin;
-  position: absolute;
-  right: $select-list-margin;
-  z-index: 1;
-  button {
+  .select-items {
     background: $color-white;
-    border: 0;
-    display: block;
-    font-weight: 500;
-    padding: $select-list-item-padding;
-    text-align: left;
-    width: 100%;
-    &:hover,
-    &:focus {
-      background: $select-list-item-hover;
+    box-shadow: $select-list-shadow; // sass-lint:disable-line no-color-literals
+    left: $select-list-margin;
+    position: absolute;
+    right: $select-list-margin;
+    z-index: 1;
+    button {
+      background: $color-white;
+      border: 0;
+      display: block;
+      font-weight: 500;
+      padding: $select-list-item-padding;
+      text-align: left;
+      width: 100%;
+      &:hover,
+      &:focus {
+        background: $select-list-item-hover;
+      }
+      &.same-as-selected {
+        background: $select-list-item-active-bg;
+        color: $select-list-item-active-color;
+      }
     }
-    &.same-as-selected {
-      background: $select-list-item-active-bg;
-      color: $select-list-item-active-color;
-    }
+  }
+  // Esconder elemento
+  .select-hide {
+    display: none;
+  }
+}
+
+@mixin text-overflow {
+  span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@mixin arrow($color: $color-primary) {
+  i {
+    color: $color;
+    margin-left: $spacing-3;
   }
 }
 
 @mixin select-states {
+  .select-selected {
+    &:focus {
+      @include input-focus($color-primary-lighten-15);
+    }
+    &:focus,
+    &:hover {
+      @include arrow($color-primary-lighten-15);
+    }
+    &:disabled {
+      @include arrow($select-arrow-disabled);
+      background: $input-bg-disabled;
+    }
+  }
   &.is-focus {
     .select-selected {
       @include input-focus($color-primary-lighten-15);
@@ -96,6 +107,9 @@
       @include arrow($color-danger);
       border-color: $color-danger;
       box-shadow: 0 0 0 1px $color-danger;
+      .fas {
+        color: $color-danger;
+      }
     }
     & + .feedback {
       @include feedback($color-danger);
@@ -106,6 +120,9 @@
       @include arrow($color-success);
       border-color: $color-success;
       box-shadow: 0 0 0 1px $color-success;
+      .fas {
+        color: $color-success;
+      }
     }
     & + .feedback {
       @include feedback($color-success);
@@ -114,23 +131,25 @@
 }
 
 @mixin select-sizes {
+  .select-selected {
+    height: $input-height-default;
+    i {
+      font-size: $input-height-default / 3;
+    }
+  }
   &.is-medium {
     .select-selected {
-      padding-bottom: $select-medium;
-      padding-top: $select-medium;
-      &.unselected {
-        padding-bottom: $select-medium + 2px;
-        padding-top: $select-medium + 2px;
+      height: $input-height-medium;
+      i {
+        font-size: $input-height-medium / 3;
       }
     }
   }
   &.is-small {
     .select-selected {
-      padding-bottom: $select-small;
-      padding-top: $select-small;
-      &.unselected {
-        padding-bottom: $select-small + 2px;
-        padding-top: $select-small + 2px;
+      height: $input-height-small;
+      i {
+        font-size: $input-height-small / 3;
       }
     }
   }

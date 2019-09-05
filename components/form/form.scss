@@ -2,15 +2,9 @@
 @import "../../base/dsgov-base";
 
 /*!
- * form - 0.1.5 */
+ * form - 0.2.0 */
 
 // Carregar dependências
-@import "../button/configs";
-@import "../button/mixins";
-@import "../input/configs";
-@import "../input/mixins";
-@import "../checkbox/configs";
-@import "../checkbox/mixins";
 @import "configs";
 
 // Aplicar usando prefixo
@@ -18,94 +12,20 @@
   // Agrupador de controles
   .field {
     margin-bottom: $field-margin;
-    // Inputs
-    .input {
-      @include input-component;
-    }
-    // Texto de ajuda  
-    .help {
-      @include font-suport-text-for-input;
-    }
-    // Checkbox e radio
-    .check {
-      @include check(checkbox);
-      @include check(radio);
-      display: inline-block;
-      position: relative;
-    }
-    // Estados com prefixo
-    &.is-focus {
-      input,
-      textarea {
-        @include input-focus($color-primary-lighten-15);
-      }
-      .action,
-      .icon {
-        color: $color-primary-lighten-15;
-      }
-    }
-    &.is-invalid {
-      @include input-state($color-danger);
-      .feedback {
-        @include feedback($color-danger);
-      }
-      .action,
-      .icon {
-        color: $color-danger;
-      }
-    }
-    &.is-valid {
-      @include input-state($color-success);
-      .feedback {
-        @include feedback($color-success);
-      }
-      .action,
-      .icon {
-        color: $color-success;
-      }
-    }
   }
   // Agrupador de botões
   .actions {
-    margin: ($field-margin * 1.5) 0 $field-margin;
-    text-align: center;
-    // Botões
-    .button {
-      &.is-primary {
-        @include btn-pill($color-primary, $color-primary, $color-white);
-        @include font-primary-button;
-      }
-      &.is-secondary {
-        @include btn-pill;
-        @include font-secondary-button;
-      }
-      &.is-tertiary {
-        @include btn-link($font-link-color);
-      }
-      &.is-cancel {
-        @include btn-link($color-gray-6);
-      }
-      &.is-loading {
-        @include btn-loading;
-      }
-      & + .button {
-        @include media-breakpoint-up(sm) {
-          margin-left: $btn-margin-horizontal;
-          margin-top: 0;
-        }
-        margin-top: $btn-margin-vertical;
-      }
-    }
     @include media-breakpoint-up(sm) {
       align-items: baseline;
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-end;
-      .button + .button,
       .#{$prefix}button + .#{$prefix}button {
         margin-left: 0;
-        margin-right: $btn-margin-horizontal;
+        margin-right: $spacing-5;
       }
     }
+    margin: ($field-margin * 1.5) 0 $field-margin;
+    text-align: center;
   }
 }

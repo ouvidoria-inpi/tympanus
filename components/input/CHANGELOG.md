@@ -5,6 +5,17 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.3.0] - 2019-09-03
+### Added
+- Tamanhos médio e pequeno do input
+- Inputs com ícone são `has-icon`
+
+### Changed
+- `is-autocomplete` e `is-action` passaram a ser somente `has-icon`
+
+### Removed
+- Tipos `is-autocomplete` e `is-action`
+
 ## [0.2.2] - 2019-08-16
 ### Fixed
 - Área clicável do botão de ação

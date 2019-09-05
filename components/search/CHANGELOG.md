@@ -5,6 +5,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased]
 
+## [0.1.1] - 2019-09-03
+### Fixed
+- Alinhamento do botão para o input
+
 ## [0.1.0] - 2019-07-08
 ### Added
 - Documentação inicial

@@ -215,8 +215,6 @@ Exemplo de uso:
 
 Em _smartphones_ o botão terá a largura da tela. Será aplicado espaçamento vertical automático de 16px entre eles.
 
-Nos demais dispositivos os botões terão tamanho mínimo de 144px. Será aplicado automáticamente o espaçamento de 24px.
+Nos demais dispositivos os botões terão tamanho mínimo de 144px. Será aplicado espaçamento horizontal automático de 24px entre botões.
 
-Botões dentro do elemento `actions` do componente `br-form` possuem regras próprias.
-
-Botões dentro do componente `br-login-social` possuem regras próprias.
+Botões dentro do elemento `actions` do componente `br-form` serão ordenados de forma inversa.

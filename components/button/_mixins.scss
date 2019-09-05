@@ -4,14 +4,24 @@
     min-width: $btn-pill-min-width;
     width: auto;
   }
+  align-items: center;
   background: $background;
   border: 1px solid $border;
   border-radius: $btn-pill-radius;
   cursor: pointer;
-  display: inline-block;
-  padding: $btn-pill-padding;
+  display: inline-flex;
+  height: $btn-size;
+  justify-content: center;
+  padding: 0 $btn-pill-padding;
   text-align: center;
   width: 100%;
+  strong {
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  &.is-small {
+    height: $btn-small;
+  }
   &:focus,
   &.is-focus {
     box-shadow: 0 3px 6px -3px $color-primary;

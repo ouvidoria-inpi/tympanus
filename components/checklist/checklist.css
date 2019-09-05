@@ -11,10 +11,8 @@
   align-items: center;
   border-bottom: 1px solid #ededed;
   display: flex;
-  justify-content: space-between;
   margin: 0;
   padding: 8px 0;
-  margin-bottom: 0;
 }
 
 .br-checklist .field.is-active .input label {
@@ -22,173 +20,18 @@
 }
 
 .br-checklist .field.is-active .input input {
-  visibility: visible;
-  width: 90%;
-}
-
-.br-checklist .field.is-focus input {
-  border-color: #2670e8;
-  box-shadow: 0 0 0 1px #2670e8;
-  outline: none;
-}
-
-.br-checklist .field.is-invalid input,
-.br-checklist .field.is-invalid textarea {
-  border-color: #e60000;
-  box-shadow: 0 0 0 1px #e60000;
-}
-
-.br-checklist .field.is-invalid input:focus,
-.br-checklist .field.is-invalid textarea:focus {
-  border-color: #e60000;
-  box-shadow: 0 0 0 1px #e60000;
-  outline: none;
-}
-
-.br-checklist .field.is-invalid input[type="checkbox"]:checked + label::before {
-  background: #e60000;
-  border-color: #e60000;
-}
-
-.br-checklist .field.is-invalid input[type="checkbox"]:checked + label::after {
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  content: "";
-  height: 10px;
-  position: absolute;
-  right: 7px;
-  top: 8px;
-  transform: rotate(45deg);
-  width: 6px;
-}
-
-.br-checklist .field.is-invalid input[type="checkbox"] + label::before {
-  border-color: #e60000;
-  box-shadow: 0 0 0 1px #e60000;
-}
-
-.br-checklist .field.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
-}
-
-.br-checklist .field.is-invalid input[type="radio"]:checked + label::before {
-  background: #e60000;
-  border-color: #e60000;
-}
-
-.br-checklist .field.is-invalid input[type="radio"]:checked + label::after {
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
-  content: "";
-  height: 19px;
-  right: 0px;
-  position: absolute;
-  top: 5px;
-  width: 19px;
-}
-
-.br-checklist .field.is-invalid input[type="radio"] + label::before {
-  border-color: #e60000;
-  box-shadow: 0 0 0 1px #e60000;
-}
-
-.br-checklist .field.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
-}
-
-.br-checklist .field.is-valid input,
-.br-checklist .field.is-valid textarea {
-  border-color: #168821;
-  box-shadow: 0 0 0 1px #168821;
-}
-
-.br-checklist .field.is-valid input:focus,
-.br-checklist .field.is-valid textarea:focus {
-  border-color: #168821;
-  box-shadow: 0 0 0 1px #168821;
-  outline: none;
-}
-
-.br-checklist .field.is-valid input[type="checkbox"]:checked + label::before {
-  background: #168821;
-  border-color: #168821;
-}
-
-.br-checklist .field.is-valid input[type="checkbox"]:checked + label::after {
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  content: "";
-  height: 10px;
-  position: absolute;
-  right: 7px;
-  top: 8px;
-  transform: rotate(45deg);
-  width: 6px;
-}
-
-.br-checklist .field.is-valid input[type="checkbox"] + label::before {
-  border-color: #168821;
-  box-shadow: 0 0 0 1px #168821;
-}
-
-.br-checklist .field.is-valid input[type="checkbox"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
-}
-
-.br-checklist .field.is-valid input[type="radio"]:checked + label::before {
-  background: #168821;
-  border-color: #168821;
-}
-
-.br-checklist .field.is-valid input[type="radio"]:checked + label::after {
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
-  content: "";
-  height: 19px;
-  right: 0px;
-  position: absolute;
-  top: 5px;
-  width: 19px;
-}
-
-.br-checklist .field.is-valid input[type="radio"] + label::before {
-  border-color: #168821;
-  box-shadow: 0 0 0 1px #168821;
-}
-
-.br-checklist .field.is-valid input[type="radio"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
-}
-
-.br-checklist .field .input {
-  flex-direction: row;
-}
-
-.br-checklist .field .input label {
-  color: #555555;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.br-checklist .icon,
-.br-checklist .input,
-.br-checklist .check {
-  align-items: center;
-  display: inline-flex;
+  display: inline-block;
 }
 
 .br-checklist .icon {
   color: #1351b4;
-  justify-content: center;
+  text-align: center;
   width: 32px;
 }
 
-.br-checklist .icon img {
-  margin: 0 4px;
-}
-
 .br-checklist .input {
-  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .br-checklist .input label {
@@ -203,10 +46,392 @@
   display: block;
   font-size: 16px;
   font-weight: 400;
-  padding: 8px 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   width: 100%;
-  max-width: 250px;
-  visibility: hidden;
+  display: none;
+}
+
+.br-checklist .input input::placeholder {
+  color: #555555;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.br-checklist .check {
+  display: inline-block;
+  margin-left: auto;
+  position: relative;
+}
+
+.br-checklist .check input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.br-checklist .check input[type="radio"] + label {
+  padding: 0 32px 4px 0;
+  min-height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.br-checklist .check input[type="radio"] + label::before {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #888888;
+  content: "";
+  position: absolute;
+  top: 2px;
+  vertical-align: text-top;
+}
+
+.br-checklist .check input[type="radio"]:disabled + label::before {
+  background: #ededed;
+}
+
+.br-checklist .check input[type="radio"]:checked + label::before {
+  background: #2670e8;
+  border-color: #2670e8;
+}
+
+.br-checklist .check input[type="radio"]:checked + label::after {
+  box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 6px #ffffff;
+  height: 24px;
+  width: 24px;
+  right: 0px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 2px;
+}
+
+.br-checklist .check input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.br-checklist .check input[type="checkbox"] + label {
+  padding: 0 32px 4px 0;
+  min-height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.br-checklist .check input[type="checkbox"] + label::before {
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #888888;
+  content: "";
+  position: absolute;
+  top: 2px;
+  vertical-align: text-top;
+}
+
+.br-checklist .check input[type="checkbox"]:disabled + label::before {
+  background: #ededed;
+}
+
+.br-checklist .check input[type="checkbox"]:checked + label::before {
+  background: #2670e8;
+  border-color: #2670e8;
+}
+
+.br-checklist .check input[type="checkbox"]:checked + label::after {
+  top: 8px;
+  right: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+.br-checklist .input {
+  min-height: 48px;
+}
+
+.br-checklist .input input {
+  height: 48px;
+}
+
+.br-checklist.is-small .input {
+  min-height: 32px;
+}
+
+.br-checklist.is-small .input input {
+  height: 32px;
+}
+
+.br-checklist.is-small .check input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.br-checklist.is-small .check input[type="radio"] + label {
+  padding: 0 32px 4px 0;
+  min-height: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.br-checklist.is-small .check input[type="radio"] + label::before {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #888888;
+  content: "";
+  position: absolute;
+  top: 2px;
+  vertical-align: text-top;
+}
+
+.br-checklist.is-small .check input[type="radio"]:disabled + label::before {
+  background: #ededed;
+}
+
+.br-checklist.is-small .check input[type="radio"]:checked + label::before {
+  background: #2670e8;
+  border-color: #2670e8;
+}
+
+.br-checklist.is-small .check input[type="radio"]:checked + label::after {
+  height: 20px;
+  width: 20px;
+  box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 5px #ffffff;
+  right: 0px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 2px;
+}
+
+.br-checklist.is-small .check input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.br-checklist.is-small .check input[type="checkbox"] + label {
+  padding: 0 32px 4px 0;
+  min-height: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.br-checklist.is-small .check input[type="checkbox"] + label::before {
+  border-radius: 4px;
+  height: 20px;
+  width: 20px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #888888;
+  content: "";
+  position: absolute;
+  top: 2px;
+  vertical-align: text-top;
+}
+
+.br-checklist.is-small .check input[type="checkbox"]:disabled + label::before {
+  background: #ededed;
+}
+
+.br-checklist.is-small .check input[type="checkbox"]:checked + label::before {
+  background: #2670e8;
+  border-color: #2670e8;
+}
+
+.br-checklist.is-small .check input[type="checkbox"]:checked + label::after {
+  top: 6px;
+  right: 7px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+.br-checklist .field.is-valid .input input,
+.br-checklist .field.is-valid .input textarea {
+  border-color: #168821;
+  box-shadow: 0 0 0 1px #168821;
+  outline: none;
+}
+
+.br-checklist .field.is-valid .input .icon,
+.br-checklist .field.is-valid .input button.icon {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  color: #168821;
+  font-size: 16px;
+  margin: 0;
+  min-width: 0;
+  padding: 0 16px;
+  position: absolute;
+  right: 0;
+  width: auto;
+}
+
+.br-checklist .field.is-valid .input .icon:focus, .br-checklist .field.is-valid .input .icon:hover,
+.br-checklist .field.is-valid .input button.icon:focus,
+.br-checklist .field.is-valid .input button.icon:hover {
+  color: #168821;
+}
+
+.br-checklist .field.is-valid .check input[type="radio"]:checked + label::before {
+  background: #168821;
+  border-color: #168821;
+}
+
+.br-checklist .field.is-valid .check input[type="radio"]:checked + label::after {
+  box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 6px #ffffff;
+  height: 24px;
+  width: 24px;
+  right: 0px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 2px;
+}
+
+.br-checklist .field.is-valid .check input[type="radio"] + label::before {
+  border-color: #168821;
+  box-shadow: 0 0 0 1px #168821;
+}
+
+.br-checklist .field.is-valid .check input[type="radio"]:hover:not(:disabled) + label::before {
+  box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+}
+
+.br-checklist .field.is-valid .check input[type="checkbox"]:checked + label::before {
+  background: #168821;
+  border-color: #168821;
+}
+
+.br-checklist .field.is-valid .check input[type="checkbox"]:checked + label::after {
+  top: 8px;
+  right: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+.br-checklist .field.is-valid .check input[type="checkbox"] + label::before {
+  border-color: #168821;
+  box-shadow: 0 0 0 1px #168821;
+}
+
+.br-checklist .field.is-valid .check input[type="checkbox"]:hover:not(:disabled) + label::before {
+  box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+}
+
+.br-checklist .field.is-invalid .input input,
+.br-checklist .field.is-invalid .input textarea {
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
+  outline: none;
+}
+
+.br-checklist .field.is-invalid .input .icon,
+.br-checklist .field.is-invalid .input button.icon {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  color: #e60000;
+  font-size: 16px;
+  margin: 0;
+  min-width: 0;
+  padding: 0 16px;
+  position: absolute;
+  right: 0;
+  width: auto;
+}
+
+.br-checklist .field.is-invalid .input .icon:focus, .br-checklist .field.is-invalid .input .icon:hover,
+.br-checklist .field.is-invalid .input button.icon:focus,
+.br-checklist .field.is-invalid .input button.icon:hover {
+  color: #e60000;
+}
+
+.br-checklist .field.is-invalid .check input[type="radio"]:checked + label::before {
+  background: #e60000;
+  border-color: #e60000;
+}
+
+.br-checklist .field.is-invalid .check input[type="radio"]:checked + label::after {
+  box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 6px #ffffff;
+  height: 24px;
+  width: 24px;
+  right: 0px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 2px;
+}
+
+.br-checklist .field.is-invalid .check input[type="radio"] + label::before {
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
+}
+
+.br-checklist .field.is-invalid .check input[type="radio"]:hover:not(:disabled) + label::before {
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+}
+
+.br-checklist .field.is-invalid .check input[type="checkbox"]:checked + label::before {
+  background: #e60000;
+  border-color: #e60000;
+}
+
+.br-checklist .field.is-invalid .check input[type="checkbox"]:checked + label::after {
+  top: 8px;
+  right: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+.br-checklist .field.is-invalid .check input[type="checkbox"] + label::before {
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
+}
+
+.br-checklist .field.is-invalid .check input[type="checkbox"]:hover:not(:disabled) + label::before {
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 
 .br-checklist .input input:focus {
@@ -218,11 +443,6 @@
 .br-checklist .input input:invalid {
   border-color: #e60000;
   box-shadow: 0 0 0 1px #e60000;
-}
-
-.br-checklist .input input:invalid:focus {
-  border-color: #e60000;
-  box-shadow: 0 0 0 1px #e60000;
   outline: none;
 }
 
@@ -230,317 +450,122 @@
   background: #ededed;
 }
 
-.br-checklist .input input::placeholder {
-  font-size: 14px;
-  line-height: normal;
+.br-checklist .input input:disabled + .icon,
+.br-checklist .input input:disabled + button.icon {
+  background: transparent;
+  border: 0;
+  bottom: 0;
   color: #555555;
-  font-style: italic;
-  font-weight: 400;
-  font-family: Rawline;
-  opacity: 1;
-}
-
-.br-checklist .input input {
-  width: 0;
-}
-
-.br-checklist .check {
-  margin-right: 8px;
-  margin-top: -8px;
-}
-
-.br-checklist .check input[type="checkbox"] {
-  opacity: 0;
-  position: absolute;
-}
-
-.br-checklist .check input[type="checkbox"] + label {
-  color: #555555;
-  cursor: pointer;
   font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 0;
-  min-height: 1rem;
-  padding: 0 28px 0 0;
-  position: relative;
-}
-
-.br-checklist .check input[type="checkbox"] + label::before {
-  background: #ffffff;
-  border: 1px solid #888888;
-  border-radius: 4px;
-  content: "";
-  height: 19px;
+  margin: 0;
+  min-width: 0;
+  padding: 0 16px;
+  position: absolute;
   right: 0;
-  position: absolute;
-  top: 5px;
-  vertical-align: text-top;
-  width: 19px;
+  width: auto;
 }
 
-.br-checklist .check input[type="checkbox"]:disabled + label::before {
-  background: #ededed;
+.br-checklist .input input:disabled + .icon:focus, .br-checklist .input input:disabled + .icon:hover,
+.br-checklist .input input:disabled + button.icon:focus,
+.br-checklist .input input:disabled + button.icon:hover {
+  color: #555555;
 }
 
-.br-checklist .check input[type="checkbox"]:focus + label {
-  outline: 1px dotted currentColor;
-}
-
-.br-checklist .check input[type="checkbox"]:checked + label::before {
-  background: #2670e8;
+.br-checklist .check input[type="radio"]:focus,
+.br-checklist .check input[type="checkbox"]:focus {
   border-color: #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
+  outline: none;
 }
 
-.br-checklist .check input[type="checkbox"]:checked + label::after {
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  content: "";
-  height: 10px;
-  position: absolute;
-  right: 7px;
-  top: 8px;
-  transform: rotate(45deg);
-  width: 6px;
-}
-
-.br-checklist .check input[type="checkbox"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
-}
-
+.br-checklist .check input[type="radio"]:invalid + label::before,
 .br-checklist .check input[type="checkbox"]:invalid + label::before {
   border-color: #e60000;
   box-shadow: 0 0 0 1px #e60000;
 }
 
+.br-checklist .check input[type="radio"]:invalid:hover:not(:disabled) + label::before,
 .br-checklist .check input[type="checkbox"]:invalid:hover:not(:disabled) + label::before {
   box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 
-.br-checklist .check input[type="checkbox"]:disabled:checked + label::before {
-  background: #888888;
-  border-color: #888888;
-}
-
-.br-checklist .check input[type="checkbox"]:disabled:checked + label::after {
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  content: "";
-  height: 10px;
-  position: absolute;
-  right: 7px;
-  top: 8px;
-  transform: rotate(45deg);
-  width: 6px;
-}
-
+.br-checklist .check input[type="radio"]:disabled + label,
 .br-checklist .check input[type="checkbox"]:disabled + label {
   cursor: default;
 }
 
-.br-checklist .check.is-hover input[type="checkbox"] + label::before {
-  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
-}
-
-.br-checklist .check.is-invalid input[type="checkbox"]:checked + label::before {
-  background: #e60000;
-  border-color: #e60000;
-}
-
-.br-checklist .check.is-invalid input[type="checkbox"]:checked + label::after {
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  content: "";
-  height: 10px;
-  position: absolute;
-  right: 7px;
-  top: 8px;
-  transform: rotate(45deg);
-  width: 6px;
-}
-
-.br-checklist .check.is-invalid input[type="checkbox"] + label::before {
-  border-color: #e60000;
-  box-shadow: 0 0 0 1px #e60000;
-}
-
-.br-checklist .check.is-invalid input[type="checkbox"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
-}
-
-.br-checklist .check.is-valid input[type="checkbox"]:checked + label::before {
+.br-checklist.is-small .field.is-valid .check input[type="radio"]:checked + label::before {
   background: #168821;
   border-color: #168821;
 }
 
-.br-checklist .check.is-valid input[type="checkbox"]:checked + label::after {
-  border: solid #ffffff;
-  border-width: 0 2px 2px 0;
-  content: "";
-  height: 10px;
-  position: absolute;
-  right: 7px;
-  top: 8px;
-  transform: rotate(45deg);
-  width: 6px;
-}
-
-.br-checklist .check.is-valid input[type="checkbox"] + label::before {
-  border-color: #168821;
-  box-shadow: 0 0 0 1px #168821;
-}
-
-.br-checklist .check.is-valid input[type="checkbox"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
-}
-
-.br-checklist .check input[type="radio"] {
-  opacity: 0;
-  position: absolute;
-}
-
-.br-checklist .check input[type="radio"] + label {
-  color: #555555;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 0;
-  min-height: 1rem;
-  padding: 0 28px 0 0;
-  position: relative;
-}
-
-.br-checklist .check input[type="radio"] + label::before {
-  background: #ffffff;
-  border: 1px solid #888888;
-  border-radius: 50%;
-  content: "";
-  height: 19px;
-  right: 0;
-  position: absolute;
-  top: 5px;
-  vertical-align: text-top;
-  width: 19px;
-}
-
-.br-checklist .check input[type="radio"]:disabled + label::before {
-  background: #ededed;
-}
-
-.br-checklist .check input[type="radio"]:focus + label {
-  outline: 1px dotted currentColor;
-}
-
-.br-checklist .check input[type="radio"]:checked + label::before {
-  background: #2670e8;
-  border-color: #2670e8;
-}
-
-.br-checklist .check input[type="radio"]:checked + label::after {
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px #2670e8, inset 0 0 0 5px #ffffff;
-  content: "";
-  height: 19px;
-  right: 0px;
-  position: absolute;
-  top: 5px;
-  width: 19px;
-}
-
-.br-checklist .check input[type="radio"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
-}
-
-.br-checklist .check input[type="radio"]:invalid + label::before {
-  border-color: #e60000;
-  box-shadow: 0 0 0 1px #e60000;
-}
-
-.br-checklist .check input[type="radio"]:invalid:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
-}
-
-.br-checklist .check input[type="radio"]:disabled:checked + label::before {
-  background: #888888;
-  border-color: #888888;
-}
-
-.br-checklist .check input[type="radio"]:disabled:checked + label::after {
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px #888888, inset 0 0 0 5px #ffffff;
-  content: "";
-  height: 19px;
-  right: 0px;
-  position: absolute;
-  top: 5px;
-  width: 19px;
-}
-
-.br-checklist .check input[type="radio"]:disabled + label {
-  cursor: default;
-}
-
-.br-checklist .check.is-hover input[type="radio"] + label::before {
-  box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45);
-}
-
-.br-checklist .check.is-invalid input[type="radio"]:checked + label::before {
-  background: #e60000;
-  border-color: #e60000;
-}
-
-.br-checklist .check.is-invalid input[type="radio"]:checked + label::after {
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
-  content: "";
-  height: 19px;
-  right: 0px;
-  position: absolute;
-  top: 5px;
-  width: 19px;
-}
-
-.br-checklist .check.is-invalid input[type="radio"] + label::before {
-  border-color: #e60000;
-  box-shadow: 0 0 0 1px #e60000;
-}
-
-.br-checklist .check.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
-}
-
-.br-checklist .check.is-valid input[type="radio"]:checked + label::before {
-  background: #168821;
-  border-color: #168821;
-}
-
-.br-checklist .check.is-valid input[type="radio"]:checked + label::after {
-  border-radius: 50%;
+.br-checklist.is-small .field.is-valid .check input[type="radio"]:checked + label::after {
+  height: 20px;
+  width: 20px;
   box-shadow: inset 0 0 0 1px #168821, inset 0 0 0 5px #ffffff;
-  content: "";
-  height: 19px;
   right: 0px;
+  border-radius: 50%;
+  content: "";
   position: absolute;
-  top: 5px;
-  width: 19px;
+  top: 2px;
 }
 
-.br-checklist .check.is-valid input[type="radio"] + label::before {
+.br-checklist.is-small .field.is-valid .check input[type="checkbox"]:checked + label::before {
+  background: #168821;
   border-color: #168821;
-  box-shadow: 0 0 0 1px #168821;
 }
 
-.br-checklist .check.is-valid input[type="radio"]:hover:not(:disabled) + label::before {
-  box-shadow: 0 0 0 4px rgba(22, 136, 33, 0.45);
+.br-checklist.is-small .field.is-valid .check input[type="checkbox"]:checked + label::after {
+  top: 6px;
+  right: 7px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 6px;
 }
 
-.br-checklist + .help,
-.br-checklist + .feedback + .help {
+.br-checklist.is-small .field.is-invalid .check input[type="radio"]:checked + label::before {
+  background: #e60000;
+  border-color: #e60000;
+}
+
+.br-checklist.is-small .field.is-invalid .check input[type="radio"]:checked + label::after {
+  height: 20px;
+  width: 20px;
+  box-shadow: inset 0 0 0 1px #e60000, inset 0 0 0 5px #ffffff;
+  right: 0px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 2px;
+}
+
+.br-checklist.is-small .field.is-invalid .check input[type="checkbox"]:checked + label::before {
+  background: #e60000;
+  border-color: #e60000;
+}
+
+.br-checklist.is-small .field.is-invalid .check input[type="checkbox"]:checked + label::after {
+  top: 6px;
+  right: 7px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+.br-checklist.is-valid + .feedback {
+  color: #168821;
   font-size: 13px;
-  line-height: normal;
-  color: #333333;
-  font-style: normal;
-  font-weight: 400;
-  font-family: Rawline;
+  font-style: italic;
+  font-weight: 500;
+  padding: 4px;
 }
 
 .br-checklist.is-invalid + .feedback {
@@ -551,12 +576,14 @@
   padding: 4px;
 }
 
-.br-checklist.is-valid + .feedback {
-  color: #168821;
+.br-checklist + .help,
+.br-checklist + .feedback + .help {
   font-size: 13px;
-  font-style: italic;
-  font-weight: 500;
-  padding: 4px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Rawline;
 }
 
 /*# sourceMappingURL=checklist.css.map */

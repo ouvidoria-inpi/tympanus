@@ -6,6 +6,17 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [Unreleased]
 - Botões de estados (**danger**, **success**, **warning**).
 
+## [0.2.4] - 2019-09-03
+### Added
+Botão pequeno
+
+### Changed
+Botões usam inline-flex ao invés de inline-block
+
+### Fixed
+- Tamanho padrão dos botões
+- Peso da fonte negrito para botão gov.br
+
 ## [0.2.3] - 2019-08-16
 ### Fixed
 - Botão terciário com sublinhado
