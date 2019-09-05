@@ -31,16 +31,20 @@ class BRSelect {
     if (defaultSelect.disabled) {
       selectionField.setAttribute('disabled', 'disabled');
     }
-    let optionText = document.createElement('span');
+    let optionText = window.document.createElement('span');
     optionText.innerHTML = defaultSelect.options[defaultSelect.selectedIndex].innerHTML;
     selectionField.appendChild(optionText);
+    let icon = window.document.createElement('i');
+    icon.setAttribute('class', 'fas fa-chevron-down');
+    selectionField.appendChild(icon);
+    console.log(icon);
     let _this = this;
     selectionField.addEventListener('click', function(event) {
       event.stopPropagation();
       this.nextElementSibling.classList.toggle('select-hide');
       _this.closeOthersSelects(this);
     });
-    document.addEventListener('click', function() {
+    window.document.addEventListener('click', function() {
       _this.closeOthersSelects();
     });
     return selectionField;
@@ -84,7 +88,7 @@ class BRSelect {
       }
     }
     let _this = this;
-    document.removeEventListener('click', _this.closeOthersSelects)
+    window.document.removeEventListener('click', _this.closeOthersSelects)
   }
 }
 
