@@ -130,7 +130,7 @@
 }
 
 /*!
- * button - 0.2.4 */
+ * button - 0.2.5 */
 
 
 @-webkit-keyframes spinAround {
@@ -508,9 +508,9 @@
   margin: 0;
   padding: 0;
 }
-.br-button.is-filter .fas {
+.br-button.is-filter [class*=fa-] {
   color: #1351b4;
-  margin-left: 8px;
+  margin-left: 16px;
 }
 .br-button.is-filter:hover .fas,
 .br-button.is-filter:focus .fas {

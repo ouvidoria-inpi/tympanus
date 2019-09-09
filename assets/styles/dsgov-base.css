@@ -8186,14 +8186,43 @@ body {
   text-decoration: underline;
 }
 
-.main-title {
+.main-title,
+.portal-title,
+.h1,
+.title-1 {
   color: #1351b4;
   font-family: Rawline;
-  font-size: 32px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 500;
   line-height: 36px;
-  margin: 24px 0 32px;
+  margin: 36px 0;
+}
+
+.portal-big-news-title,
+.h2,
+.title-2 {
+  color: #1351b4;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 36px 0;
+}
+
+.portal-small-news-title,
+.subtitle-1,
+.portal-big-news,
+.portal-feature-news {
+  color: #1351b4;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.subtitle-2 {
+  color: #1351b4;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 .label {

@@ -6,17 +6,49 @@ body {
   font-weight: $font-system-default-text-font-weight;
 }
 
-// Links na área de conteúdo
 .page-content {
+  // Links na área de conteúdo
   a {
     text-decoration: underline;
   }
 }
 
 // Título principal - aplicar preferencialmente em <h1>
-.main-title {
+.main-title,
+.portal-title,
+.h1,
+.title-1 {
   @include font-title-registration-login;
-  margin: $spacing-5 0 $spacing-6;
+  margin: $spacing-7 0;
+}
+
+// Título 2
+.portal-big-news-title,
+.h2,
+.title-2 {
+  color: $color-primary;
+  font-size: 24px;
+  font-weight: 500;
+  margin: $spacing-7 0;
+}
+
+// Subtítulo 1
+.portal-small-news-title,
+.subtitle-1,
+.portal-big-news,
+.portal-feature-news {
+  color: $color-primary;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+// Subtítulo 2
+.subtitle-2 {
+  color: $color-primary;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 // Rótulos - aplicar preferencialmente em <label>
