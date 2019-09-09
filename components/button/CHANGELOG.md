@@ -6,6 +6,11 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ## [Unreleased]
 - Botões de estados (**danger**, **success**, **warning**).
 
+## [0.2.5] - 2019-09-09
+
+### Fixed
+- Ícone do botão filtro
+
 ## [0.2.4] - 2019-09-03
 ### Added
 Botão pequeno

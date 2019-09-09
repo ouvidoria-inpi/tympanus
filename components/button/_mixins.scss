@@ -128,9 +128,9 @@
   display: inline-flex;
   margin: 0;
   padding: 0;
-  .fas {
+  [class*=fa-] {
     color: $color-primary;
-    margin-left: $spacing-1;
+    margin-left: $spacing-3;
   }
   &:hover,
   &:focus {
