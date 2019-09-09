@@ -323,16 +323,16 @@
   padding: 0;
 }
 
-.br-button.is-filter [class*=fa-] {
+.br-button.is-filter [class*="fa-"] {
   color: #1351b4;
   margin-left: 16px;
 }
 
-.br-button.is-filter:hover .fas, .br-button.is-filter:focus .fas {
+.br-button.is-filter:hover [class*="fa-"], .br-button.is-filter:focus [class*="fa-"] {
   color: #2670e8;
 }
 
-.br-button.is-filter:disabled .fas {
+.br-button.is-filter:disabled [class*="fa-"] {
   color: #888888;
 }
 

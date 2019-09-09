@@ -128,18 +128,18 @@
   display: inline-flex;
   margin: 0;
   padding: 0;
-  [class*=fa-] {
+  [class*="fa-"] {
     color: $color-primary;
     margin-left: $spacing-3;
   }
   &:hover,
   &:focus {
-    .fas {
+    [class*="fa-"] {
       color: $color-primary-lighten-15;
     }
   }
   &:disabled {
-    .fas {
+    [class*="fa-"] {
       color: $color-gray-5;
     }
   }
