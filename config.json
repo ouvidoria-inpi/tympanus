@@ -108,12 +108,26 @@
       ]
     },
     {
-      "label": "Tela interna para Sistemas",
-      "path": "templates/page/page"
+      "label": "Sistemas",
+      "children": [
+        {
+          "label": "Template base",
+          "path": "templates/page/page"
+        },
+        {
+          "label": "Exemplo de formulário",
+          "path": "templates/crud/crud"
+        }
+      ]
     },
     {
-      "label": "Formulário para Sistemas",
-      "path": "templates/crud/crud"
+      "label": "Sites e portais",
+      "children": [
+        {
+          "label": "Template base",
+          "path": "templates/portal/portal"
+        }
+      ]
     },
     {
       "label": "Tela de erro para Sistemas",
