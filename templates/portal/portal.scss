@@ -1,544 +1,12 @@
 // Carregar variáveis do DS-Gov
 @import "../../base/dsgov-base";
 
-// Atalhos para conteúdo
-.skip-menu {
-  list-style: none;
-  position: absolute;
-  width: 100%;
-  a {
-    color: $color-white;
-    position: absolute;
-    top: -200em;
-    &:focus {
-      background: $color-secondary;
-      border-radius: 100px;
-      left: 20px;
-      outline: 0;
-      padding: 8px 24px;
-      position: absolute;
-      top: auto;
-      z-index: 11;
-    }
-  }
-}
-
-// Barra de Governo
-#barra-brasil {
-  background: $color-primary-darken-25;
-}
-
-// Logo
-.logo {
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  img {
-    max-width: 120px;
-  }
-  .name {
-    color: $color-gray-7;
-    display: inline-block;
-    font-size: 26px;
-    font-weight: 400;
-  }
-  .name-bold {
-    font-weight: 600;
-  }
-  .description {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-  }
-}
-
-//Menu Hamburguer
-.header-icons {
-  margin: 15px 10px 15px 0;
-  text-align: center;
-  & .ico-navegacao {
-    color: $color-gray-7 !important;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 22px;
-    height: 25px;
-    text-decoration: none;
-    width: 28px;
-    & .fa {
-      font-weight: 900;
-    }
-    & .fa-times {
-      display: none;
-    }
-  }
-}
-
-// Acessibilidade
-.header-accessibility {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  padding-top: 14px;
-  a {
-    color: $color-gray-7;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    &:not(:last-child) {
-      margin-right: $spacing-6;
-    }
-    &:hover {
-      text-decoration: none;
-      .accessibility-text {
-        text-decoration: underline;
-      }
-    }
-  }
-  ul {
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    & .link-contraste,
-    & .link-vlibras {
-      border-right: 1px solid $color-gray-3;
-      display: inline-block;
-      padding: 5px 15px;
-      & i {
-        font-size: 18px;
-        font-weight: 900;
-      }
-    }
-    &.language-selection {
-      & a.current-language {  // sass-lint:disable-line force-element-nesting
-        background-position: 0;
-        margin-left: 15px;
-        padding: 0 0 0 36px;
-        position: relative;
-        text-align: right;
-        &::after {
-          background: transparent url("../../assets/images/components_img/portal/angle-down.png") no-repeat 50%;
-          content: "";
-          display: inline-block;
-          height: 14px;
-          width: 9px;
-        }
-      }
-      & ul {
-        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22); // sass-lint:disable-line no-color-literals
-        background-color: $color-white;
-        border-top: 1px solid $color-warning;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22); // sass-lint:disable-line no-color-literals
-        display: none;
-        font-size: 16px;
-        padding: 0;
-        position: absolute;
-        right: 296px;
-        text-align: left;
-        top: 100%;
-        z-index: 160;
-        & li {
-          display: block;
-          margin-right: 20px;
-          text-transform: none;
-          white-space: nowrap;
-          & a {
-            font-size: 14px;
-          }
-        }
-        & .title {
-          border-bottom: 1px solid $color-gray-3;
-          color: $color-primary-darken-25;
-          font-size: 14px;
-          font-style: italic;
-          font-weight: 600;
-          margin: 10px 20px 0;
-          padding-bottom: 4px;
-        }
-      }
-    }
-    &.language-selection a.language-pt-br, // sass-lint:disable-line force-element-nesting
-    &.language-selection li.language-pt-br a { // sass-lint:disable-line force-element-nesting
-      background-image: url("../../assets/images/components_img/portal/flag-br.png");
-      background-position: 16px;
-      background-repeat: no-repeat;
-      background-size: 28px 21px;
-      display: inline-block;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 21px;
-      margin-left: 0;
-      padding: 9px 0;
-      padding-left: 49px;
-      text-align: left;
-    }
-  }
-  img {
-    @include media-breakpoint-up(sm) {
-      max-width: 16px;
-    }
-  }
-  .mobile-header & {
-    .br-button {
-      border-color: transparent;
-      &:focus {
-        box-shadow: none;
-      }
-      &.is-primary {
-        background: transparent;
-        color: $color-primary;
-      }
-      &.is-secondary {
-        color: $color-gray-6;
-        &:hover {
-          background: transparent;
-        }
-      }
-      & + .br-button {
-        margin-left: $spacing-2;
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-// Busca
-
-.desktop-header {
-  & .shadow-bottom {
-    & .container {
-      height: 64px;
-    }
-  }
-  & .br-search {
-    height: 64px;
-  }
-}
-
-.br-search {
-  // Versão desktop
-  .desktop-header & {
-    align-items: center;
-    display: flex;
-    //caixa de texto
-
-    .br-input {
-      input {
-        background: transparent;
-        border-color: transparent;
-        font-size: 20px;
-        font-weight: 400;
-        &:focus {
-          box-shadow: none;
-        }
-        &::placeholder {
-          // color: $color-black;
-          color: $color-gray-6;
-          font-size: 16px;
-          font-style: italic;
-          font-weight: 400;
-          text-align: right;
-        }
-      }
-    }
-    //botão de busca
-    .br-button {
-      &:focus {
-        box-shadow: none;
-      }
-      &.is-primary {
-        &,
-        &:hover {
-          background: transparent;
-          border-color: transparent transparent transparent $color-gray-6;
-          border-radius: 0 !important;
-          color: $color-primary;
-          margin-left: $spacing-4;
-          padding-left: $spacing-3 !important;
-        }
-      }
-      &.is-secondary {
-        &,
-        &:hover {
-          background: transparent;
-          border-color: transparent;
-          color: $color-gray-6;
-        }
-      }
-      & + .br-button {
-        margin-left: 0;
-      }
-    }
-    //botão de limpar
-    .clear-button {
-      background: transparent;
-      border: 0;
-    }
-  }
-  // Versão mobile
-  .mobile-header & {
-    flex-direction: column;
-    .br-input {
-      order: 1;
-      width: 100%;
-      input {
-        border-radius: 0;
-        &:focus {
-          box-shadow: none;
-        }
-      }
-    }
-  }
-}
-
-// Abas
-.br-tabs {
-  .desktop-header & {
-    border: 0;
-    .item {
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-}
-
-// Sombra
-.shadow-bottom {
-  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
-}
-
-.page-subheader {
-  align-items: center;
-  height: 60px;
-}
-
-// Componente de dropdown
-.dropdown {
+// Cabeçalho da página
+.page-header {
   position: relative;
-  .menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    transform: translate($spacing-6, 18px);
-    z-index: 1;
-  }
-  &.is-active {
-    &::after {
-      border-color: transparent transparent $color-gray-7;
-      border-style: solid;
-      border-width: 0 12px 12px;
-      content: "";
-      height: 0;
-      position: absolute;
-      right: 0;
-      transform: translate(5px, 9px);
-      width: 0;
-      z-index: 1;
-    }
-    .menu {
-      display: block;
-    }
-  }
 }
 
-// Menu aberto do dropdown
-.menu {
-  background: $color-white;
-  box-shadow: -2px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
-  .header {
-    color: $color-gray-7;
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    padding: $spacing-3 $spacing-6;
-    white-space: nowrap;
-  }
-  .item {
-    color: $color-gray-7;
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-    padding: $spacing-1 $spacing-6;
-    text-align: right;
-    &:hover {
-      background: $color-primary-pastel-1;
-      text-decoration: none;
-    }
-  }
-}
-
-// Área do usuário
-.user {
-  align-items: center;
-  display: flex;
-  // Bloco de ações do usuário
-  .actions {
-    display: flex;
-  }
-  // Botão de ação
-  .trigger {
-    background: $color-white;
-    border: 1px solid $color-gray-3;
-    border-radius: 50%;
-    height: 42px;
-    width: 42px;
-  }
-  // Informações do usuário
-  .info {
-    margin-right: $spacing-5;
-  }
-  .name {
-    color: $color-gray-7;
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .description {
-    display: block;
-    font-size: 12px;
-    font-style: italic;
-    text-align: right;
-  }
-  // Avatar com usuário, pode ser imagem ou ícone
-  .avatar {
-    position: relative;
-    .icon {
-      color: $color-primary;
-      font-size: 20px;
-      & + .badge {
-        transform: translate(-12px, 2px);
-      }
-    }
-    .image {
-      max-width: 40px;
-      & + .badge {
-        transform: translate(-10px, -2px);
-      }
-    }
-  }
-  // Quantidade de notificações
-  .badge {
-    align-items: center;
-    background: $color-danger;
-    border-radius: 50%;
-    color: $color-white;
-    display: flex;
-    font-size: 11px;
-    height: 18px;
-    justify-content: center;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 18px;
-  }
-  // Botão de sair
-  .br-button {
-    font-size: 12px;
-    min-width: 0;
-    padding: $spacing-half $spacing-4;
-  }
-}
-
-// Menu do usuário
-.user-menu {
-  .trigger {
-    align-items: center;
-    background: $color-gray-2;
-    border: 0;
-    border-radius: 50%;
-    color: $color-primary;
-    display: inline-flex;
-    font-size: 11px;
-    height: 17px;
-    justify-content: center;
-    margin-left: $spacing-1;
-    width: 17px;
-  }
-}
-
-// Sistemas do usuário
-.systems-menu {
-  .trigger {
-    background: transparent;
-    border: 0;
-    color: $color-primary;
-    height: auto;
-    margin-left: $spacing-3;
-    margin-right: $spacing-3;
-    width: auto;
-  }
-  .header {
-    font-size: 12px;
-    font-weight: 600;
-    padding-bottom: 0;
-  }
-  .item {
-    padding: $spacing-3 $spacing-6;
-    &:hover {
-      background: transparent;
-    }
-  }
-  .systems {
-    columns: 5;
-  }
-  .system {
-    display: block;
-    margin-bottom: $spacing-3;
-    &:hover {
-      .brand {
-        border-color: $color-primary-lighten-15;
-      }
-    }
-    a {
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-  .brand {
-    background: $color-gray-1;
-    border: 1px solid $color-gray-3;
-    height: 42px;
-    width: 58px;
-  }
-  .name {
-    display: block;
-    font-size: 9px;
-    font-weight: 500;
-    margin-top: $spacing-half;
-    text-align: center;
-  }
-  .more {
-    display: block;
-    font-size: 10px;
-    font-weight: 600;
-    padding: 0 $spacing-6 $spacing-6;
-    text-align: center;
-    a {
-      text-decoration: underline;
-    }
-  }
-  &.is-active {
-    &::after {
-      transform: translate(-17px, 9px);
-    }
-  }
-}
-
-// Canvas
+// Canvas overlay
 .canvas {
   background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
   height: 100vh;
@@ -546,331 +14,271 @@
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 1;
 }
 
-// Barra de navegação mobile
-.mobile-subheader {
-  height: 56px;
-}
-
-// Versão mobile do menu
-.sidemenu {
-  background: $color-white;
-  display: flex;
-  height: 100vh;
-  padding: $spacing-4 $spacing-2;
-  position: fixed;
-  top: 0;
-  width: 84%;
-  // Botão que abre o menu
-  &-trigger {
+// Seleção de lingua
+.language {
+  position: relative;
+  z-index: 1;
+  // lingua selecionada
+  &-selected {
+    align-items: center;
     background: transparent;
     border: 0;
+    display: flex;
+    .name {
+      display: none;
+    }
+    .arrow {
+      font-size: 10px;
+      margin-left: $spacing-1;
+    }
   }
-  .wrapper {
+  // Listagem de línguas
+  &-list {
+    background: $color-white;
+    border-top: 1px solid $color-warning;
+    box-shadow: 0 3px 6px rgba($color-black, 0.22);
     display: flex;
     flex-direction: column;
-  }
-  .overflow {
-    flex: 1;
-    margin-left: - $spacing-4;
-    margin-right: - $spacing-4;
-    overflow-y: auto;
-  }
-  .navigation {
-    margin: 0;
-    padding: 0;
-    .item {
-      display: block;
-      list-style: none;
-      a {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-    .trigger {
-      background: transparent;
-      border: 1px solid transparent;
-      float: right;
-      margin-top: -44px;
-      padding: $spacing-1 $spacing-3;
-    }
-    .name {
-      border-bottom: 1px solid $color-gray-4;
-      color: $color-gray-7;
-      display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    // Rótulo da seleção
+    p {
+      border-bottom: 1px solid $color-gray-3;
+      font-style: italic;
       font-size: 14px;
-      font-weight: 500;
-      padding: $spacing-2 $spacing-4;
+      font-weight: 600;
+      padding: 0;
+      margin: $spacing-3 $spacing-3 $spacing-1;
     }
-    .is-active {
-      & + .trigger {
-        color: $color-white;
+    // Item selecionável
+    .item {
+      align-items: center;
+      background: transparent;
+      border: 0;
+      display: flex;
+      flex: 1;
+      padding: $spacing-1 $spacing-3;
+      &:hover {
+        background: $color-primary-pastel-1;
       }
-      .name {
-        background: $color-primary-darken-15;
-        color: $color-white;
-      }
-      .subnav {
-        .name {
-          background: $color-white;
-          color: $color-gray-7;
+      .flag {
+        margin-right: $spacing-3;
+        img {
+          vertical-align: middle;
         }
       }
-    }
-  }
-  .subnav {
-    margin: 0;
-    padding: 0;
-    .name {
-      background: $color-gray-1;
-      color: $color-gray-7;
-      font-weight: 500;
-      padding-left: $spacing-6;
-    }
-    .is-active {
       .name {
-        background: $color-primary;
-        color: $color-white;
+        white-space: nowrap;
       }
     }
-  }
-  .menu {
-    background: transparent;
-    box-shadow: none;
-    .header {
-      border-bottom: 1px solid $color-gray-4;
-      padding: $spacing-2 $spacing-4;
-    }
-    .item {
-      border-bottom: 1px solid $color-gray-4;
-      font-weight: 500;
-      padding: $spacing-2 $spacing-4;
-      text-align: left;
+    // Item selecionado
+    .is-active {
+      color: $color-primary;
     }
   }
 }
 
-// Tempo restante de sessão
-.timeout {
-  text-align: right;
-  .session {
-    font-size: 12px;
-    font-weight: 600;
+// Navegação
+.navigation {
+  // Container
+  &-container {
+    background: $color-white;
+    position: absolute;
+    top: 0;
+    width: 80%;
+    z-index: 2;
   }
-  .timer {
-    font-size: 12px;
-    font-weight: 500;
-  }
-}
-
-// Título da página
-.content-title {
-  @include font-title-registration-login;
-}
-
-
-#portal-footer {
-  background-color: $color-primary-darken-25;
-  clear: both;
-  color: $color-white;
-  font-size: 75%;
-  margin-bottom: 0;
-  padding: 60px 32px;
-
-  & ul {
+  // Item de navegação
+  .item {
     margin: 0;
     padding: 0;
-    & li {
+    a,
+    button {
+      background: transparent;
+      border: 0;
       display: block;
+      padding: $spacing-3 0;
+      text-align: left;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
       margin: 0;
       padding: 0;
     }
-    &.submenu li { // sass-lint:disable-line force-element-nesting
-      float: none;
+  }
+}
+
+// Redes sociais
+.social-network {
+  border-top: 1px solid $color-gray-3;
+  color: $color-primary-darken-15;
+  margin-top: $spacing-10;
+  padding-top: $spacing-3;
+  text-transform: uppercase;
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: $spacing-4;
+  }
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      &:first-child {
+        a {
+          padding-left: 0;
+        }
+      }
+      &:last-child {
+        a {
+          padding-right: 0;
+        }
+      }
+      a {
+        color: $color-primary-darken-15;
+        display: inline-block;
+        padding: $spacing-1 $spacing-3;
+      }
     }
   }
-  & a {
+}
+
+// Licença
+.license {
+  font-size: 12px;
+  a {
+    color: inherit;
+  }
+}
+
+// Reportar erro
+.report-error {
+  font-size: 12px;
+}
+
+// Rodape
+.page-footer {
+  background: $color-primary-darken-25;
+  border-bottom: 0;
+  color: $color-white;
+  a {
     color: $color-white;
   }
-  & .govbr-logo {
-    background-image: url("../../assets/images/components_img/portal/govbr.png");
-    background-size: cover;
+  // Logo
+  .logo {
     height: 60px;
-    margin-bottom: 50px;
-    width: 165px;
-
+    margin-bottom: $spacing-8;
+    margin-top: $spacing-10;
+    width: 166px;
   }
-  & .coluna-menu {
-    & .rodape-navigation {
-      display: flex;
-      flex-wrap: wrap;
-      & li {
-        -webkit-box-flex: 1;
-        flex: 1;
-        margin: 0 12px;
-        & .submenu li { // sass-lint:disable-line force-element-nesting
-          margin: 8px 0;
-          width: 100%;
-          & a {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 1.4;
-            margin-right: 0;
-            min-height: auto;
-            text-transform: none;
-          }
-        }
-        & a {
-          display: inline-block;
-          font-size: 16px;
-          font-weight: 600;
-          margin-right: 0;
-          min-height: 50px;
-          padding-right: 20px;
-          text-decoration: none;
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
-  & .logo-acesso-footer {
-    display: inline-block;
-    height: 49px;
-    margin-right: 45px;
-    width: 117px;
-  }
-  & .logo-governo-federal {
-    display: inline-block;
-    height: 42px;
-    width: 149px;
-  }
-
-
-  & .redes-e-logos {
-    & .redes-sociais {
-      & .portal-redes li { // sass-lint:disable-line force-element-nesting
-        display: inline-block;
-        margin-right: 45px;
-        & a {
-          display: inline-block;
-          height: 33px;
-          text-indent: -3000px;
-          width: 34px;
-        }
-      }
-      & h3 {
-        font-weight: 600;
-        margin-bottom: 15px;
+  // Navegação
+  .navigation {
+    border-top: 1px solid $color-white;
+    // Item de navegação
+    .item {
+      border-bottom: 1px solid $color-white;
+      a,
+      button {
+        color: $color-white;
+        font-weight: 800;
         text-transform: uppercase;
       }
     }
-  }
-  & .portalredes-twitter {
-    background-image: url("../../assets/images/components_img/portal/sprite.png");
-    background-position: -99px -159px;
-    height: 28px;
-    width: 27px;
-  }
-  & .portalredes-youtube {
-    background-image: url("../../assets/images/components_img/portal/sprite.png");
-    background-position: -67px -159px;
-    height: 28px;
-    width: 32px;
-  }
-  & .portalredes-facebook {
-    background-image: url("../../assets/images/components_img/portal/sprite.png");
-    background-position: -153px -159px;
-    height: 28px;
-    width: 25px;
-  }
-  & .portalredes-flickr {
-    background-image: url("../../assets/images/components_img/portal/sprite.png");
-    background-position: -58px -194px;
-    height: 29px;
-    width: 29px;
-  }
-  & .logos-footer {
-    text-align: right;
-  }
-  & .colunas-rodape {
-    flex-wrap: wrap;
-    margin-bottom: 60px;
-  }
-}
-
-@media (max-width: 1024px) {
-  #portal-footer {
-    & .coluna-menu {
-      & .rodape-navigation {
-        width: 100%;
-        & li {
-          -webkit-box-flex: 1;
-          flex: auto;
-          &.plain {
-            border-top: 1px solid $color-white;
-            display: inline-block;
-            padding: 12px 0;
-            position: relative;
-            width: 100%;
-            & ul {
-              display: none;
-            }
-            &.dropdown-submenu {
-              cursor: pointer;
-              &.opened::after { // sass-lint:disable-line force-pseudo-nesting
-                content: "\F068";
-              }
-              &::after {
-                content: "\F067";
-                font-family: Font Awesome\ 5 Free;
-                font-size: 14px;
-                font-weight: 900;
-                position: absolute;
-                right: 10px;
-                top: 25px;
-              }
-            }
+    // Nível 1
+    .level-1 {
+      a,
+      button {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: none;
+      }
+      .item {
+        border-bottom: 0;
+        & + .item {
+          a,
+          button {
+            padding-top: 0;
           }
         }
       }
     }
-    & .logos-footer {
-      text-align: left;
-    }
-    .redes-sociais {
-      margin-bottom: 40px;
+    // Não mostrar a partir de nivel 2
+    .level-2 {
+      display: none;
     }
   }
-}
-
-
-@media (max-width: 996px) {
-  .br-button.is-primary { // sass-lint:disable-line force-element-nesting
-    background: none;
+  // Redes sociais
+  .social-network {
     border: 0;
-    color: $color-primary;
-  }
-  .br-button.is-secondary { // sass-lint:disable-line force-element-nesting
-    border: 0;
-  }
-  .header-icons {
-    display: inline-block;
-    margin: 15px 0;
+    color: $color-white;
+    padding-top: 0;
     text-align: left;
-    width: 34px;
+    span {
+      display: block;
+    }
+    a {
+      color: $color-white;
+    }
   }
-  .logo {
-    display: inline-block;
+  // Marcas do governo
+  #footer-brasil {
+    background: transparent;
+    width: auto;
+    #wrapper-footer-brasil {
+      justify-content: flex-start;
+      max-width: 100%;
+      padding: $spacing-10 0 $spacing-6;
+      width: auto;
+    }
+    .logo-acesso-footer,
+    .logo-governo-federal {
+      filter: invert(100%);
+    }
   }
 }
 
-@media (max-width: 640px) {
-  .br-button.is-primary { // sass-lint:disable-line force-element-nesting
-    margin-top: 0;
+// Versao tablet
+@include media-breakpoint-up(sm) {
+  // Rodape
+  .page-footer {
+    // Redes sociais
+    .social-network {
+      float: left;
+      margin-top: $spacing-8;
+    }
+    // Marcas do governo
+    #footer-brasil {
+      #wrapper-footer-brasil {
+        justify-content: flex-end;
+      }
+    }
   }
-  .br-button.is-secondary { // sass-lint:disable-line force-element-nesting
-    display: none !important;
+}
+
+// Versao desktop
+@include media-breakpoint-up(md) {
+  // Rodape
+  .page-footer {
+    // Navegação
+    .navigation {
+      border-top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      // Item de navegação
+      .item {
+        border-bottom: 0;
+        flex: 0 0 16.66667%;
+      }
+    }
   }
 }
