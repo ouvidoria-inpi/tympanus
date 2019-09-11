@@ -1,20 +1,50 @@
 @mixin search {
-  align-items: center;
+  bottom: 0;
   display: flex;
-  flex-wrap: wrap;
-  .br-input {
+  position: absolute;
+  right: -8px;
+  top: 0;
+  // align-items: center;
+  // display: flex;
+  .field {
+    display: inline-flex;
     flex: 1;
+    input {
+      background: $color-gray-2;
+      border: 0;
+      display: none;
+      flex: 1;
+      padding: $spacing-3;
+    }
+    button {
+      background: transparent;
+      border: 0;
+      color: $color-primary;
+      padding: 0 $spacing-2;
+      &:hover {
+        background: $color-primary-pastel-1;
+      }
+    }
   }
-  .feedback,
-  .help {
-    order: 1;
-    width: 100%;
-  }
-  .action {
+  // Botão externo para fechar a busca
+  .close {
+    background: transparent;
+    border: 0;
     display: none;
+    padding: 0 $spacing-2;
   }
-  @include media-breakpoint-up(sm) {
-    .action {
+  // Busca ativa
+  &.is-active {
+    left: -8px;
+    .field {
+      input {
+        display: block;
+      }
+      button {
+        background: $color-gray-2;
+      }
+    }
+    .close {
       display: block;
     }
   }

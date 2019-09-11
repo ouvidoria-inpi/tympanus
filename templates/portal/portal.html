@@ -35,25 +35,25 @@
     <!-- Logo com busca e acessibilidade -->
     <div class="shadow-bottom">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col">
-            <div class="row align-items-center">
-              <!-- Menu sanduiche -->
-              <div class="col-auto pr-0">
-                <button class="menu-hamburger" type="button">
-                  <i class="fa fa-bars"></i>
-                </button>
-              </div>
-              <!-- Logo -->
-              <div class="col-sm-5 col-md-6 col-lg-7 col-xl-8 logo">
-                <a id="logo" href="">
-                  <span class="name">Logo/Nome</span>
-                </a>
-                <span class="description">Assinatura do Órgão</span>
-              </div>
+        <div class="header-bar">
+          <!-- Logo -->
+          <div class="row align-items-center">
+            <!-- Menu sanduiche -->
+            <div class="col-auto pr-0">
+              <button class="menu-hamburger" type="button">
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <!-- Logo -->
+            <div class="col logo">
+              <a id="logo" href="">
+                <span class="name">Logo/Nome</span>
+              </a>
+              <span class="description">Assinatura do Órgão</span>
             </div>
           </div>
-          <div class="col">
+          <!-- Acessibilidade e idioma -->
+          <div class="d-none d-sm-block">
             <div class="row">
               <!-- Acessibilidade -->
               <div class="col-auto">
@@ -104,65 +104,46 @@
             </div>
           </div>
           <!-- Busca geral -->
-          <div class="col br-search py-half bg-gray-2">
-            <div class="br-input">
+          <div class="br-search">
+            <div class="field">
               <label for="search" class="sr-only">Autocomplete</label>
               <input id="search" type="text" placeholder="O que você procura?">
-            </div>
-            <div class="action">
-              <button class="br-button is-primary is-circle" type="button">
-                <i class="fas fa-search"></i>
-              </button>
-              <button class="clear-button d-none" type="button">
-                <i class="fas fa-times"></i>
+              <button class="" type="button">
+                <i class="fas fa-search fa-lg"></i>
+                <span class="sr-only">buscar</span>
               </button>
             </div>
+            <button class="close" type="button">
+              <i class="fas fa-times fa-lg"></i>
+              <span class="sr-only">fechar a busca</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Breadcrumbs -->
-    <div class="d-none d-sm-block">
-      <div class="container">
-        <ul class="br-breadcrumb pt-3">
-          <li class="home">
-            <a href="">
-              <span class="sr-only">Página inicial</span>
-              <i class="fas fa-home"></i>
-            </a>
-          </li>
-          <li><a href="">Tela anterior</a></li>
-          <li class="is-active"><a href="">Tela atual</a></li>
-        </ul>
-        <hr>
-      </div>
-    </div>
-    <div class="canvas"></div>
+    <div class="canvas d-none"></div>
     <!-- Menu de navegação -->
-    <nav id="navigation" class="navigation-container">
+    <nav id="navigation" class="navigation-wrapper d-none">
       <div class="container">
         <!-- Nome e opção de fechar navegação -->
-        <div class="row align-items-center my-1">
+        <div class="row align-items-center my-2 d-sm-none">
           <!-- Menu sanduiche -->
           <div class="col-auto pr-0">
-            <button class="menu-hamburger" type="button">
+            <button class="menu-hamburger pl-3" type="button">
               <i class="fa fa-times"></i>
             </button>
           </div>
           <!-- Logo -->
           <div class="col logo">
-            <a id="logo" href="">
-              <span class="name">Logo/Nome</span>
-            </a>
+            <span class="name">Logo/Nome</span>
           </div>
         </div>
-        <hr class="text-warning my-2">
         <!-- Itens de navegação -->
         <div class="navigation">
           <div class="item">
             <button type="button" data-toggle="collapse">Serviços</button>
             <ul class="submenu level-1">
-              <li>
+              <li class="item">
                 <button type="button" data-toggle="collapse">Busca serviços por</button>
                 <ul class="submenu level-2">
                   <li class="item"><a href="">Categorias</a></li>
@@ -170,7 +151,7 @@
                   <li class="item"><a href="">Estados</a></li>
                 </ul>
               </li>
-              <li>
+              <li class="item">
                 <button type="button" data-toggle="collapse">Serviços por público alvo</button>
                 <ul class="submenu level-2">
                   <li class="item"><a href="">Cidadãos</a></li>
@@ -209,6 +190,48 @@
             <a href="">Acesse sua conta gov.br</a>
           </div>
         </div>
+        <!-- Acessibilidade e língua no celular -->
+        <div class="quicklinks d-sm-none">
+          <div class="row align-items-end">
+            <div class="col-auto">
+              <a id="contrast" href="" accesskey="6">
+                <span class="icon">
+                  <i class="fas fa-adjust fa-lg"></i>
+                </span>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a id="vlibras" href="http://www.vlibras.gov.br/">
+                <span class="icon">
+                  <i class="fas fa-assistive-listening-systems fa-lg"></i>
+                </span>
+              </a>
+            </div>
+            <div class="col-auto">
+              <div class="language">
+                <button class="language-selected" type="button">
+                  <img class="flag" src="../../assets/images/flag-br.png" alt="Português">
+                  <span class="name">Português (Brasil)</span>
+                </button>
+                <div class="language-list">
+                  <p>Linguagem/Language</p>
+                  <button class="item is-active" type="button">
+                    <img class="flag" src="../../assets/images/flag-br.png" alt="Português">
+                    <span class="name">Português, Brasil</span>
+                  </button>
+                  <button class="item" type="button">
+                    <img class="flag" src="../../assets/images/flag-us.png" alt="English">
+                    <span class="name">English, USA</span>
+                  </button>
+                  <button class="item" type="button">
+                    <img class="flag" src="../../assets/images/flag-es.png" alt="Español">
+                    <span class="name">Español, España</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Redes sociais -->
         <div class="social-network">
           <span>Redes sociais</span>
@@ -241,6 +264,22 @@
         </div>
       </div>
     </nav>
+    <!-- Breadcrumbs -->
+    <div class="d-none d-sm-block">
+      <div class="container">
+        <ul class="br-breadcrumb pt-3">
+          <li class="home">
+            <a href="">
+              <span class="sr-only">Página inicial</span>
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+          <li><a href="">Tela anterior</a></li>
+          <li class="is-active"><a href="">Tela atual</a></li>
+        </ul>
+        <hr>
+      </div>
+    </div>
   </header>
   <!-- Conteúdo principal -->
   <div class="page-wrapper container my-6">

@@ -6,6 +6,15 @@
   position: relative;
 }
 
+// Barra principal do topo
+.header-bar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 68px;
+  position: relative;
+}
+
 // Canvas overlay
 .canvas {
   background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
@@ -82,16 +91,30 @@
   }
 }
 
+// Busca
+
+// Container da navegação
+.navigation-wrapper {
+  background: $color-white;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  z-index: 2;
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 42.6px); // altura da barra de governo
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 // Navegação
 .navigation {
-  // Container
-  &-container {
-    background: $color-white;
-    position: absolute;
-    top: 0;
-    width: 80%;
-    z-index: 2;
-  }
+  border-top: 1px solid $color-warning;
+  flex: 1;
+  overflow: auto;
+  padding: $spacing-2 0;
   // Item de navegação
   .item {
     margin: 0;
@@ -100,10 +123,17 @@
     button {
       background: transparent;
       border: 0;
+      color: $color-gray-6;
       display: block;
-      padding: $spacing-3 0;
+      padding: $spacing-1 $spacing-3;
       text-align: left;
       text-decoration: none;
+      width: 100%;
+      &:hover {
+        background: $color-primary-darken-15;
+        color: $color-white;
+        font-weight: 600;
+      }
     }
     ul {
       list-style: none;
@@ -113,12 +143,30 @@
   }
 }
 
+// Links rápidos de acessibilidade e língua para mobile
+.quicklinks {
+  align-items: center;
+  border-top: 1px solid $color-gray-3;
+  display: flex;
+  padding: $spacing-3;
+  // Ícones de acessibilidade
+  .icon {
+    color: $color-gray-7;
+  }
+  // Reposicionamento da lista de línguas
+  .language-list {
+    bottom: 100%;
+    left: 0;
+    right: auto;
+    top: auto;
+  }
+}
+
 // Redes sociais
 .social-network {
-  border-top: 1px solid $color-gray-3;
   color: $color-primary-darken-15;
-  margin-top: $spacing-10;
-  padding-top: $spacing-3;
+  margin: 0;
+  padding: 0 $spacing-3 $spacing-3;
   text-transform: uppercase;
   span {
     display: block;
@@ -192,6 +240,10 @@
         color: $color-white;
         font-weight: 800;
         text-transform: uppercase;
+        &:hover {
+          background: transparent;
+          color: $color-white;
+        }
       }
     }
     // Nível 1
@@ -249,6 +301,25 @@
 
 // Versao tablet
 @include media-breakpoint-up(sm) {
+  // Canvas overlay
+  .canvas {
+    display: none;
+  }
+  // Container da navegação
+  .navigation-wrapper {
+    margin-top: - $spacing-3;
+    top: auto;
+    width: 100%;
+  }
+  // Redes sociais
+  .social-network {
+    border-top: 1px solid $color-gray-3;
+    padding-bottom: 0;
+    text-align: right;
+    span {
+      display: inline;
+    }
+  }
   // Rodape
   .page-footer {
     // Redes sociais
