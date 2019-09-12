@@ -208,11 +208,6 @@
       text-align: left;
       text-decoration: none;
       width: 100%;
-      &:hover {
-        background: $color-primary-darken-15;
-        color: $color-white;
-        font-weight: 600;
-      }
     }
   }
   .level-1,
@@ -363,6 +358,21 @@
 
 // Versao desktop
 @include media-breakpoint-up(md) {
+  // Faixa do governo
+  .template-site {
+    &::after {
+      background: url(../../assets/images/faixa-br.png);
+      content: "";
+      display: block;
+      height: 86px;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 130px;
+      z-index: 1;
+    }
+  }
   // Barra principal do topo
   .header-bar {
     // Links rápidos de acessibilidade e língua
@@ -376,6 +386,7 @@
     // Busca do portal
     .br-search {
       height: 68px;
+      z-index: 5;
       .field {
         input {
           display: block;
@@ -408,29 +419,69 @@
     border-top: 0;
     display: flex;
     flex-direction: column;
+    overflow: visible;
     padding: $spacing-6 0;
     position: relative;
+    // Seta indicativa de fechamento
+    &::after {
+      border: solid transparent;
+      border-bottom-color: $color-primary;
+      border-width: 12px;
+      bottom: 100%;
+      content: "";
+      height: 0;
+      left: $spacing-3;
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+    }
     // Item de navegação
     .item {
       width: 25%;
+      &:hover,
+      &:active {
+        > a,
+        > button {
+          background: $color-primary-darken-15;
+          color: $color-white;
+          font-weight: 600;
+        }
+      }
+      &:hover {
+        > .submenu {
+          display: block;
+        }
+      }
       .item {
         width: 100%;
+        &:hover,
+        &:active {
+          > a,
+          > button {
+            background: $color-primary;
+          }
+        }
       }
     }
     // Níveis de navegação
     .level-1,
     .level-2,
     .level-3 {
+      background: $color-gray-1;
+      bottom: 0;
+      display: none;
+      padding: $spacing-6 0;
       position: absolute;
       top: 0;
     }
     .level-1 {
-      margin: $spacing-6 0;
+      box-shadow: -2px 0 4px rgba($color-black, 0.08);
       left: 25%;
       width: 25%;
     }
     .level-2,
     .level-3 {
+      box-shadow: -3px 0 4px rgba($color-black, 0.08);
       left: 100%;
       width: 100%;
     }
@@ -443,25 +494,55 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      &::after {
+        content: none;
+      }
       // Item de navegação
       .item {
         border-bottom: 0;
         flex: 0 0 16.66667%;
         width: auto;
+        &:hover,
+        &:active {
+          > a,
+          > button {
+            background: transparent;
+            font-weight: 800;
+          }
+        }
         > a,
         > button {
+          display: inline-block;
+          width: auto;
           &:hover {
             text-decoration: underline;
           }
         }
+        .item {
+          &:hover,
+          &:active {
+            > a,
+            > button {
+              font-weight: 500;
+            }
+          }
+        }
       }
       // Níveis de navegação
-      .level-1,
-      .level-2,
-      .level-3 {
+      .level-1 {
+        background: transparent;
+        display: block;
         margin: 0;
+        padding: 0;
         position: static;
         width: auto;
+        .item {
+          &:hover {
+            .submenu {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

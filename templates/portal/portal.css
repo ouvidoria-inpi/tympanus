@@ -210,13 +210,6 @@
   width: 100%;
 }
 
-.navigation .item a:hover,
-.navigation .item button:hover {
-  background: #0c326f;
-  color: #ffffff;
-  font-weight: 600;
-}
-
 .navigation .level-1,
 .navigation .level-2,
 .navigation .level-3 {
@@ -357,6 +350,18 @@
 }
 
 @media (min-width: 998px) {
+  .template-site::after {
+    background: url(../../assets/images/faixa-br.png);
+    content: "";
+    display: block;
+    height: 86px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 130px;
+    z-index: 1;
+  }
   .header-bar .quicklinks {
     margin-right: 270px;
   }
@@ -365,6 +370,7 @@
   }
   .header-bar .br-search {
     height: 68px;
+    z-index: 5;
   }
   .header-bar .br-search .field input {
     display: block;
@@ -391,28 +397,61 @@
     border-top: 0;
     display: flex;
     flex-direction: column;
+    overflow: visible;
     padding: 32px 0;
     position: relative;
+  }
+  .navigation::after {
+    border: solid transparent;
+    border-bottom-color: #1351b4;
+    border-width: 12px;
+    bottom: 100%;
+    content: "";
+    height: 0;
+    left: 16px;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
   }
   .navigation .item {
     width: 25%;
   }
+  .navigation .item:hover > a,
+  .navigation .item:hover > button, .navigation .item:active > a,
+  .navigation .item:active > button {
+    background: #0c326f;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .navigation .item:hover > .submenu {
+    display: block;
+  }
   .navigation .item .item {
     width: 100%;
+  }
+  .navigation .item .item:hover > a,
+  .navigation .item .item:hover > button, .navigation .item .item:active > a,
+  .navigation .item .item:active > button {
+    background: #1351b4;
   }
   .navigation .level-1,
   .navigation .level-2,
   .navigation .level-3 {
+    background: #f8f8f8;
+    bottom: 0;
+    display: none;
+    padding: 32px 0;
     position: absolute;
     top: 0;
   }
   .navigation .level-1 {
-    margin: 32px 0;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.08);
     left: 25%;
     width: 25%;
   }
   .navigation .level-2,
   .navigation .level-3 {
+    box-shadow: -3px 0 4px rgba(0, 0, 0, 0.08);
     left: 100%;
     width: 100%;
   }
@@ -422,20 +461,43 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+  .page-footer .navigation::after {
+    content: none;
+  }
   .page-footer .navigation .item {
     border-bottom: 0;
     flex: 0 0 16.66667%;
+    width: auto;
+  }
+  .page-footer .navigation .item:hover > a,
+  .page-footer .navigation .item:hover > button, .page-footer .navigation .item:active > a,
+  .page-footer .navigation .item:active > button {
+    background: transparent;
+    font-weight: 800;
+  }
+  .page-footer .navigation .item > a,
+  .page-footer .navigation .item > button {
+    display: inline-block;
     width: auto;
   }
   .page-footer .navigation .item > a:hover,
   .page-footer .navigation .item > button:hover {
     text-decoration: underline;
   }
-  .page-footer .navigation .level-1,
-  .page-footer .navigation .level-2,
-  .page-footer .navigation .level-3 {
+  .page-footer .navigation .item .item:hover > a,
+  .page-footer .navigation .item .item:hover > button, .page-footer .navigation .item .item:active > a,
+  .page-footer .navigation .item .item:active > button {
+    font-weight: 500;
+  }
+  .page-footer .navigation .level-1 {
+    background: transparent;
+    display: block;
     margin: 0;
+    padding: 0;
     position: static;
     width: auto;
+  }
+  .page-footer .navigation .level-1 .item:hover .submenu {
+    display: none;
   }
 }
