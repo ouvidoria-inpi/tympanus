@@ -98,88 +98,6 @@
   }
 }
 
-// Canvas overlay
-.canvas {
-  background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
-  display: none;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
-  // Canvas ativo
-  &.is-active {
-    display: block;
-  }
-}
-
-// Container da navegação
-.navigation-wrapper {
-  background: $color-white;
-  display: none;
-  position: absolute;
-  top: 0;
-  width: 80%;
-  z-index: 2;
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 42.6px); // altura da barra de governo
-    padding-left: 0;
-    padding-right: 0;
-  }
-  // Navegação ativa
-  &.is-active {
-    display: block;
-  }
-  // Links rápidos de acessibilidade e língua
-  .quicklinks {
-    display: flex;
-    // Reposicionamento da lista de línguas
-    .language-list {
-      bottom: 100%;
-      left: 0;
-      right: auto;
-      top: auto;
-    }
-  }
-}
-
-// Navegação
-.navigation {
-  border-top: 1px solid $color-warning;
-  flex: 1;
-  overflow: auto;
-  padding: $spacing-2 0;
-  // Item de navegação
-  .item {
-    margin: 0;
-    padding: 0;
-    a,
-    button {
-      background: transparent;
-      border: 0;
-      color: $color-gray-6;
-      display: block;
-      padding: $spacing-1 $spacing-3;
-      text-align: left;
-      text-decoration: none;
-      width: 100%;
-      &:hover {
-        background: $color-primary-darken-15;
-        color: $color-white;
-        font-weight: 600;
-      }
-    }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-  }
-}
-
 // Redes sociais
 .social-network {
   color: $color-primary-darken-15;
@@ -217,6 +135,92 @@
       }
     }
   }
+}
+
+// Canvas overlay
+.canvas {
+  background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 3;
+  // Canvas ativo
+  &.is-active {
+    display: block;
+  }
+}
+
+// Container da navegação
+.navigation-wrapper {
+  background: $color-white;
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  z-index: 4;
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 42.6px); // altura da barra de governo
+    padding-left: 0;
+    padding-right: 0;
+  }
+  // Navegação ativa
+  &.is-active {
+    display: block;
+  }
+  // Links rápidos de acessibilidade e língua
+  .quicklinks {
+    display: flex;
+    // Reposicionamento da lista de línguas
+    .language-list {
+      bottom: 100%;
+      left: 0;
+      right: auto;
+      top: auto;
+    }
+  }
+}
+
+// Navegação
+.navigation {
+  border-top: 1px solid $color-warning;
+  flex: 1;
+  overflow: auto;
+  padding: $spacing-2 0;
+  ul {
+    list-style: none;
+  }
+  // Item de navegação
+  .item {
+    margin: 0;
+    padding: 0;
+    a,
+    button {
+      background: transparent;
+      border: 0;
+      color: $color-gray-6;
+      display: block;
+      padding: $spacing-1 $spacing-3;
+      text-align: left;
+      text-decoration: none;
+      width: 100%;
+      &:hover {
+        background: $color-primary-darken-15;
+        color: $color-white;
+        font-weight: 600;
+      }
+    }
+  }
+  .level-1,
+  .level-2,
+  .level-3 {
+    margin: 0;
+    padding: 0;
+  } 
 }
 
 // Licença
@@ -365,6 +369,10 @@
     .quicklinks {
       margin-right: 270px;
     }
+    // Seleção de lingua
+    .language {
+      z-index: 5;
+    }
     // Busca do portal
     .br-search {
       height: 68px;
@@ -378,24 +386,82 @@
       }
     }
   }
+  // Canvas overlay
+  .canvas {
+    display: none !important;
+  }
+  // Container da navegação
+  .navigation-wrapper {
+    border-top: 1px solid $color-warning;
+    box-shadow: 0 3px 6px rgba($color-black, 0.32);
+    top: auto;
+    width: 100%;
+    .container {
+      height: auto;
+    }
+    .header-bar {
+      display: none;
+    }
+  }
+  // Navegação
+  .navigation {
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-6 0;
+    position: relative;
+    // Item de navegação
+    .item {
+      width: 25%;
+      .item {
+        width: 100%;
+      }
+    }
+    // Níveis de navegação
+    .level-1,
+    .level-2,
+    .level-3 {
+      position: absolute;
+      top: 0;
+    }
+    .level-1 {
+      margin: $spacing-6 0;
+      left: 25%;
+      width: 25%;
+    }
+    .level-2,
+    .level-3 {
+      left: 100%;
+      width: 100%;
+    }
+  }
   // Rodape
   .page-footer {
     // Navegação
     .navigation {
       border-top: 0;
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       // Item de navegação
       .item {
         border-bottom: 0;
         flex: 0 0 16.66667%;
-      }
-      // Nível 1
-      .level-1 {
-        a,
-        button {
-          padding: $spacing-half 0;
+        width: auto;
+        > a,
+        > button {
+          &:hover {
+            text-decoration: underline;
+          }
         }
+      }
+      // Níveis de navegação
+      .level-1,
+      .level-2,
+      .level-3 {
+        margin: 0;
+        position: static;
+        width: auto;
       }
     }
   }

@@ -857,6 +857,40 @@
   display: flex;
 }
 
+.social-network {
+  color: #0c326f;
+  margin: 0;
+  padding: 0 16px 16px;
+  text-transform: uppercase;
+}
+.social-network span {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.social-network ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.social-network ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.social-network ul li:first-child a {
+  padding-left: 0;
+}
+.social-network ul li:last-child a {
+  padding-right: 0;
+}
+.social-network ul li a {
+  color: #0c326f;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
 .canvas {
   background: rgba(0, 0, 0, 0.49);
   display: none;
@@ -865,7 +899,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 1;
+  z-index: 3;
 }
 .canvas.is-active {
   display: block;
@@ -877,7 +911,7 @@
   position: absolute;
   top: 0;
   width: 80%;
-  z-index: 2;
+  z-index: 4;
 }
 .navigation-wrapper .container {
   -webkit-box-direction: normal;
@@ -914,6 +948,9 @@
   overflow: auto;
   padding: 12px 0;
 }
+.navigation ul {
+  list-style: none;
+}
 .navigation .item {
   margin: 0;
   padding: 0;
@@ -935,44 +972,11 @@
   color: #ffffff;
   font-weight: 600;
 }
-.navigation .item ul {
-  list-style: none;
+.navigation .level-1,
+.navigation .level-2,
+.navigation .level-3 {
   margin: 0;
   padding: 0;
-}
-
-.social-network {
-  color: #0c326f;
-  margin: 0;
-  padding: 0 16px 16px;
-  text-transform: uppercase;
-}
-.social-network span {
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  margin-right: 20px;
-}
-.social-network ul {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-.social-network ul li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-.social-network ul li:first-child a {
-  padding-left: 0;
-}
-.social-network ul li:last-child a {
-  padding-right: 0;
-}
-.social-network ul li a {
-  color: #0c326f;
-  display: inline-block;
-  padding: 8px 16px;
 }
 
 .license {
@@ -1103,6 +1107,9 @@
   .header-bar .quicklinks {
     margin-right: 270px;
   }
+  .header-bar .language {
+    z-index: 5;
+  }
   .header-bar .br-search {
     height: 68px;
   }
@@ -1113,11 +1120,67 @@
     background: #ededed;
   }
 
-  .page-footer .navigation {
+  .canvas {
+    display: none !important;
+  }
+
+  .navigation-wrapper {
+    border-top: 1px solid #ffcd07;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+    top: auto;
+    width: 100%;
+  }
+  .navigation-wrapper .container {
+    height: auto;
+  }
+  .navigation-wrapper .header-bar {
+    display: none;
+  }
+
+  .navigation {
     border-top: 0;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 32px 0;
+    position: relative;
+  }
+  .navigation .item {
+    width: 25%;
+  }
+  .navigation .item .item {
+    width: 100%;
+  }
+  .navigation .level-1,
+  .navigation .level-2,
+  .navigation .level-3 {
+    position: absolute;
+    top: 0;
+  }
+  .navigation .level-1 {
+    left: 25%;
+    margin: 32px 0;
+    width: 25%;
+  }
+  .navigation .level-2,
+  .navigation .level-3 {
+    left: 100%;
+    width: 100%;
+  }
+  .page-footer .navigation {
+    border-top: 0;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
@@ -1126,9 +1189,17 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 16.66667%;
     flex: 0 0 16.66667%;
+    width: auto;
   }
-  .page-footer .navigation .level-1 a,
-  .page-footer .navigation .level-1 button {
-    padding: 4px 0;
+  .page-footer .navigation .item > a:hover,
+  .page-footer .navigation .item > button:hover {
+    text-decoration: underline;
+  }
+  .page-footer .navigation .level-1,
+  .page-footer .navigation .level-2,
+  .page-footer .navigation .level-3 {
+    margin: 0;
+    position: static;
+    width: auto;
   }
 }

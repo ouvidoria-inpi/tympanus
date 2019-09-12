@@ -142,10 +142,10 @@
         <!-- Itens de navegação -->
         <div class="navigation">
           <div class="item">
-            <button type="button" data-toggle="collapse">Serviços</button>
+            <button type="button">Serviços</button>
             <ul class="submenu level-1">
               <li class="item">
-                <button type="button" data-toggle="collapse">Busca serviços por</button>
+                <button type="button">Busca serviços por</button>
                 <ul class="submenu level-2">
                   <li class="item"><a href="">Categorias</a></li>
                   <li class="item"><a href="">Órgãos</a></li>
@@ -153,7 +153,7 @@
                 </ul>
               </li>
               <li class="item">
-                <button type="button" data-toggle="collapse">Serviços por público alvo</button>
+                <button type="button">Serviços por público alvo</button>
                 <ul class="submenu level-2">
                   <li class="item"><a href="">Cidadãos</a></li>
                   <li class="item"><a href="">Empresas</a></li>
@@ -176,7 +176,7 @@
             <a href="">Canais do Poder Executivo Federal</a>
           </div>
           <div class="item">
-            <button class="is-open" type="button" data-toggle="collapse">Navegação</button>
+            <button class="is-open" type="button">Navegação</button>
             <ul class="submenu level-1">
               <li class="item"><a href="">Acessibilidade</a></li>
               <li class="item"><a href="">Mapa do site</a></li>
@@ -329,10 +329,10 @@
       <!-- Itens de navegação -->
       <div class="navigation">
         <div class="item">
-          <button type="button" data-toggle="collapse">Serviços</button>
+          <button type="button">Serviços</button>
           <ul class="submenu level-1">
             <li class="item">
-              <button type="button" data-toggle="collapse">Busca serviços por</button>
+              <button type="button">Busca serviços por</button>
               <ul class="submenu level-2">
                 <li class="item"><a href="">Categorias</a></li>
                 <li class="item"><a href="">Órgãos</a></li>
@@ -340,7 +340,7 @@
               </ul>
             </li>
             <li class="item">
-              <button type="button" data-toggle="collapse">Serviços por público alvo</button>
+              <button type="button">Serviços por público alvo</button>
               <ul class="submenu level-2">
                 <li class="item"><a href="">Cidadãos</a></li>
                 <li class="item"><a href="">Empresas</a></li>
@@ -363,7 +363,7 @@
           <a href="">Canais do Poder Executivo Federal</a>
         </div>
         <div class="item">
-          <button class="is-open" type="button" data-toggle="collapse">Navegação</button>
+          <button class="is-open" type="button">Navegação</button>
           <ul class="submenu level-1">
             <li class="item"><a href="">Acessibilidade</a></li>
             <li class="item"><a href="">Mapa do site</a></li>
@@ -422,19 +422,36 @@
     }
 
     // Navegação
-    const navigationTrigger = document.querySelector('.shadow-bottom .menu-hamburger')
-    const navigationClose = document.querySelector('.navigation-wrapper .menu-hamburger')
-    const navigation = document.querySelector('#navigation')
     const canvas = document.querySelector('.canvas')
+
+    const navigationTrigger = document.querySelector('.shadow-bottom .menu-hamburger')
+
+    const navigation = document.querySelector('#navigation')
+    const navigationClose = navigation.querySelector('.menu-hamburger')
+    const navigationItems = navigation.querySelectorAll('.item')
+
+    const navigationArrow = window.document.createElement('i')
+    navigationArrow.setAttribute('class', 'fas fa-chevron-right')
 
     function toogleNavigation() {
       toogleActive(navigation)
       toogleActive(canvas)
     }
 
+    function addArrow(element) {
+      element.appendChild(navigationArrow)
+    }
+
     navigationTrigger.addEventListener('click', toogleNavigation)
     canvas.addEventListener('click', toogleNavigation)
     navigationClose.addEventListener('click', toogleNavigation)
+
+    for (let item of navigationItems) {
+      console.log(item.childElementCount)
+      if (item.childElementCount > 1) {
+        item.children[0].appendChild(navigationArrow)
+      }
+    }
 
     // Busca
     const search = document.querySelector('.br-search')
