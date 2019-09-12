@@ -53,7 +53,7 @@
             </div>
           </div>
           <!-- Acessibilidade e idioma -->
-          <div class="d-none d-sm-block">
+          <div class="d-none d-sm-block ml-sm-auto mr-sm-8">
             <div class="row">
               <!-- Acessibilidade -->
               <div class="col-auto">
@@ -78,7 +78,7 @@
               </div>
               <!-- Idioma da página -->
               <div class="col-auto">
-                <div class="language">
+                <div class="language is-active">
                   <button class="language-selected" type="button">
                     <img class="flag" src="../../assets/images/flag-br.png" alt="Português">
                     <span class="name">Português (Brasil)</span>
@@ -121,12 +121,12 @@
         </div>
       </div>
     </div>
-    <div class="canvas d-none"></div>
+    <div class="canvas"></div>
     <!-- Menu de navegação -->
-    <nav id="navigation" class="navigation-wrapper d-none">
+    <nav id="navigation" class="navigation-wrapper">
       <div class="container">
         <!-- Nome e opção de fechar navegação -->
-        <div class="row align-items-center my-2 d-sm-none">
+        <div class="row align-items-center header-bar">
           <!-- Menu sanduiche -->
           <div class="col-auto pr-0">
             <button class="menu-hamburger pl-3" type="button">
@@ -136,6 +136,7 @@
           <!-- Logo -->
           <div class="col logo">
             <span class="name">Logo/Nome</span>
+            <span class="description">Assinatura do Órgão</span>
           </div>
         </div>
         <!-- Itens de navegação -->
@@ -212,6 +213,7 @@
                 <button class="language-selected" type="button">
                   <img class="flag" src="../../assets/images/flag-br.png" alt="Português">
                   <span class="name">Português (Brasil)</span>
+                  <i class="fas fa-chevron-down arrow"></i>
                 </button>
                 <div class="language-list">
                   <p>Linguagem/Language</p>
@@ -411,6 +413,48 @@
   </footer>
   <!-- Script da barra de governo -->
   <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>
+  <script>
+    // Classe para ativar elementos e componentes
+    const active = "is-active"
+
+    function toogleActive(element) {
+      element.classList.toggle(active)
+    }
+
+    // Navegação
+    const navigationTrigger = document.querySelector('.shadow-bottom .menu-hamburger')
+    const navigationClose = document.querySelector('.navigation-wrapper .menu-hamburger')
+    const navigation = document.querySelector('#navigation')
+    const canvas = document.querySelector('.canvas')
+
+    function toogleNavigation() {
+      toogleActive(navigation)
+      toogleActive(canvas)
+    }
+
+    navigationTrigger.addEventListener('click', toogleNavigation)
+    canvas.addEventListener('click', toogleNavigation)
+    navigationClose.addEventListener('click', toogleNavigation)
+
+    // Busca
+    const search = document.querySelector('.br-search')
+    const searchTrigger = search.querySelector('.field button')
+    const searchClose = search.querySelector('.close')
+
+    function openSearch() {
+      toogleActive(search)
+      searchTrigger.removeEventListener('click', openSearch)
+    }
+
+    function closeSearch() {
+      toogleActive(search)
+      searchTrigger.addEventListener('click', openSearch)
+    }
+
+    searchTrigger.addEventListener('click', openSearch)
+    searchClose.addEventListener('click', closeSearch)
+
+  </script>
 </body>
 
 </html>

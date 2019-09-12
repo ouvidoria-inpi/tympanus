@@ -18,12 +18,17 @@
 // Canvas overlay
 .canvas {
   background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
+  display: none;
   height: 100vh;
   left: 0;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 1;
+  // Canvas ativo
+  &.is-active {
+    display: block;
+  }
 }
 
 // Seleção de lingua
@@ -49,7 +54,7 @@
     background: $color-white;
     border-top: 1px solid $color-warning;
     box-shadow: 0 3px 6px rgba($color-black, 0.22);
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     right: 0;
@@ -89,13 +94,18 @@
       color: $color-primary;
     }
   }
+  // Lista ativa
+  &.is-active {
+    .language-list {
+      display: flex;
+    }
+  }
 }
-
-// Busca
 
 // Container da navegação
 .navigation-wrapper {
   background: $color-white;
+  display: none;
   position: absolute;
   top: 0;
   width: 80%;
@@ -106,6 +116,10 @@
     height: calc(100vh - 42.6px); // altura da barra de governo
     padding-left: 0;
     padding-right: 0;
+  }
+  // Navegação ativa
+  &.is-active {
+    display: block;
   }
 }
 
@@ -232,6 +246,7 @@
   // Navegação
   .navigation {
     border-top: 1px solid $color-white;
+    padding: 0;
     // Item de navegação
     .item {
       border-bottom: 1px solid $color-white;
@@ -239,6 +254,7 @@
       button {
         color: $color-white;
         font-weight: 800;
+        padding: $spacing-3 0;
         text-transform: uppercase;
         &:hover {
           background: transparent;
@@ -248,20 +264,16 @@
     }
     // Nível 1
     .level-1 {
+      padding-bottom: $spacing-2;
       a,
       button {
         font-size: 14px;
         font-weight: 500;
+        padding: $spacing-1 0;
         text-transform: none;
       }
       .item {
         border-bottom: 0;
-        & + .item {
-          a,
-          button {
-            padding-top: 0;
-          }
-        }
       }
     }
     // Não mostrar a partir de nivel 2
@@ -273,7 +285,7 @@
   .social-network {
     border: 0;
     color: $color-white;
-    padding-top: 0;
+    padding: $spacing-10 0 $spacing-3;
     text-align: left;
     span {
       display: block;
@@ -301,16 +313,6 @@
 
 // Versao tablet
 @include media-breakpoint-up(sm) {
-  // Canvas overlay
-  .canvas {
-    display: none;
-  }
-  // Container da navegação
-  .navigation-wrapper {
-    margin-top: - $spacing-3;
-    top: auto;
-    width: 100%;
-  }
   // Redes sociais
   .social-network {
     border-top: 1px solid $color-gray-3;
@@ -326,6 +328,7 @@
     .social-network {
       float: left;
       margin-top: $spacing-8;
+      padding-top: 0;
     }
     // Marcas do governo
     #footer-brasil {

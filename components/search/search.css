@@ -6,6 +6,7 @@
   position: absolute;
   right: -8px;
   top: 0;
+  z-index: 3;
 }
 
 .br-search .field {

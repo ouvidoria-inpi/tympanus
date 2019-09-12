@@ -12,12 +12,17 @@
 
 .canvas {
   background: rgba(0, 0, 0, 0.49);
+  display: none;
   height: 100vh;
   left: 0;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 1;
+}
+
+.canvas.is-active {
+  display: block;
 }
 
 .language {
@@ -45,7 +50,7 @@
   background: #ffffff;
   border-top: 1px solid #ffcd07;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
-  display: flex;
+  display: none;
   flex-direction: column;
   position: absolute;
   right: 0;
@@ -90,8 +95,13 @@
   color: #1351b4;
 }
 
+.language.is-active .language-list {
+  display: flex;
+}
+
 .navigation-wrapper {
   background: #ffffff;
+  display: none;
   position: absolute;
   top: 0;
   width: 80%;
@@ -104,6 +114,10 @@
   height: calc(100vh - 42.6px);
   padding-left: 0;
   padding-right: 0;
+}
+
+.navigation-wrapper.is-active {
+  display: block;
 }
 
 .navigation {
@@ -232,6 +246,7 @@
 
 .page-footer .navigation {
   border-top: 1px solid #ffffff;
+  padding: 0;
 }
 
 .page-footer .navigation .item {
@@ -242,6 +257,7 @@
 .page-footer .navigation .item button {
   color: #ffffff;
   font-weight: 800;
+  padding: 16px 0;
   text-transform: uppercase;
 }
 
@@ -251,20 +267,20 @@
   color: #ffffff;
 }
 
+.page-footer .navigation .level-1 {
+  padding-bottom: 12px;
+}
+
 .page-footer .navigation .level-1 a,
 .page-footer .navigation .level-1 button {
   font-size: 14px;
   font-weight: 500;
+  padding: 8px 0;
   text-transform: none;
 }
 
 .page-footer .navigation .level-1 .item {
   border-bottom: 0;
-}
-
-.page-footer .navigation .level-1 .item + .item a,
-.page-footer .navigation .level-1 .item + .item button {
-  padding-top: 0;
 }
 
 .page-footer .navigation .level-2 {
@@ -274,7 +290,7 @@
 .page-footer .social-network {
   border: 0;
   color: #ffffff;
-  padding-top: 0;
+  padding: 56px 0 16px;
   text-align: left;
 }
 
@@ -304,14 +320,6 @@
 }
 
 @media (min-width: 576px) {
-  .canvas {
-    display: none;
-  }
-  .navigation-wrapper {
-    margin-top: -16px;
-    top: auto;
-    width: 100%;
-  }
   .social-network {
     border-top: 1px solid #cccccc;
     padding-bottom: 0;
@@ -323,6 +331,7 @@
   .page-footer .social-network {
     float: left;
     margin-top: 40px;
+    padding-top: 0;
   }
   .page-footer #footer-brasil #wrapper-footer-brasil {
     justify-content: flex-end;
