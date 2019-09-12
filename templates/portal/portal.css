@@ -10,19 +10,15 @@
   position: relative;
 }
 
-.canvas {
-  background: rgba(0, 0, 0, 0.49);
+.quicklinks {
+  align-items: center;
+  border-top: 1px solid #cccccc;
   display: none;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
+  padding: 16px;
 }
 
-.canvas.is-active {
-  display: block;
+.quicklinks .icon {
+  color: #333333;
 }
 
 .language {
@@ -99,6 +95,21 @@
   display: flex;
 }
 
+.canvas {
+  background: rgba(0, 0, 0, 0.49);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.canvas.is-active {
+  display: block;
+}
+
 .navigation-wrapper {
   background: #ffffff;
   display: none;
@@ -118,6 +129,17 @@
 
 .navigation-wrapper.is-active {
   display: block;
+}
+
+.navigation-wrapper .quicklinks {
+  display: flex;
+}
+
+.navigation-wrapper .quicklinks .language-list {
+  bottom: 100%;
+  left: 0;
+  right: auto;
+  top: auto;
 }
 
 .navigation {
@@ -155,24 +177,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.quicklinks {
-  align-items: center;
-  border-top: 1px solid #cccccc;
-  display: flex;
-  padding: 16px;
-}
-
-.quicklinks .icon {
-  color: #333333;
-}
-
-.quicklinks .language-list {
-  bottom: 100%;
-  left: 0;
-  right: auto;
-  top: auto;
 }
 
 .social-network {
@@ -320,6 +324,15 @@
 }
 
 @media (min-width: 576px) {
+  .quicklinks {
+    border-top: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: 24px;
+  }
+  .navigation-wrapper .quicklinks {
+    display: none;
+  }
   .social-network {
     border-top: 1px solid #cccccc;
     padding-bottom: 0;
@@ -339,6 +352,18 @@
 }
 
 @media (min-width: 998px) {
+  .header-bar .quicklinks {
+    margin-right: 270px;
+  }
+  .header-bar .br-search {
+    height: 68px;
+  }
+  .header-bar .br-search .field input {
+    display: block;
+  }
+  .header-bar .br-search .field button {
+    background: #ededed;
+  }
   .page-footer .navigation {
     border-top: 0;
     display: flex;
@@ -347,5 +372,9 @@
   .page-footer .navigation .item {
     border-bottom: 0;
     flex: 0 0 16.66667%;
+  }
+  .page-footer .navigation .level-1 a,
+  .page-footer .navigation .level-1 button {
+    padding: 4px 0;
   }
 }

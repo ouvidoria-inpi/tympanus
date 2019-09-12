@@ -15,19 +15,15 @@
   position: relative;
 }
 
-// Canvas overlay
-.canvas {
-  background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
+// Links rápidos de acessibilidade e língua
+.quicklinks {
+  align-items: center;
+  border-top: 1px solid $color-gray-3;
   display: none;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
-  // Canvas ativo
-  &.is-active {
-    display: block;
+  padding: $spacing-3;
+  // Ícones de acessibilidade
+  .icon {
+    color: $color-gray-7;
   }
 }
 
@@ -102,6 +98,22 @@
   }
 }
 
+// Canvas overlay
+.canvas {
+  background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+  // Canvas ativo
+  &.is-active {
+    display: block;
+  }
+}
+
 // Container da navegação
 .navigation-wrapper {
   background: $color-white;
@@ -120,6 +132,17 @@
   // Navegação ativa
   &.is-active {
     display: block;
+  }
+  // Links rápidos de acessibilidade e língua
+  .quicklinks {
+    display: flex;
+    // Reposicionamento da lista de línguas
+    .language-list {
+      bottom: 100%;
+      left: 0;
+      right: auto;
+      top: auto;
+    }
   }
 }
 
@@ -154,25 +177,6 @@
       margin: 0;
       padding: 0;
     }
-  }
-}
-
-// Links rápidos de acessibilidade e língua para mobile
-.quicklinks {
-  align-items: center;
-  border-top: 1px solid $color-gray-3;
-  display: flex;
-  padding: $spacing-3;
-  // Ícones de acessibilidade
-  .icon {
-    color: $color-gray-7;
-  }
-  // Reposicionamento da lista de línguas
-  .language-list {
-    bottom: 100%;
-    left: 0;
-    right: auto;
-    top: auto;
   }
 }
 
@@ -313,6 +317,20 @@
 
 // Versao tablet
 @include media-breakpoint-up(sm) {
+  // Links rápidos de acessibilidade e língua
+  .quicklinks {
+    border-top: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: 24px;
+  }
+  // Container da navegação
+  .navigation-wrapper {
+    // Links rápidos de acessibilidade e língua
+    .quicklinks {
+      display: none;
+    }
+  }
   // Redes sociais
   .social-network {
     border-top: 1px solid $color-gray-3;
@@ -341,6 +359,25 @@
 
 // Versao desktop
 @include media-breakpoint-up(md) {
+  // Barra principal do topo
+  .header-bar {
+    // Links rápidos de acessibilidade e língua
+    .quicklinks {
+      margin-right: 270px;
+    }
+    // Busca do portal
+    .br-search {
+      height: 68px;
+      .field {
+        input {
+          display: block;
+        }
+        button {
+          background: $color-gray-2;
+        }
+      }
+    }
+  }
   // Rodape
   .page-footer {
     // Navegação
@@ -352,6 +389,13 @@
       .item {
         border-bottom: 0;
         flex: 0 0 16.66667%;
+      }
+      // Nível 1
+      .level-1 {
+        a,
+        button {
+          padding: $spacing-half 0;
+        }
       }
     }
   }
