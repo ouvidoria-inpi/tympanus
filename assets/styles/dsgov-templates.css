@@ -1099,7 +1099,7 @@
 
 @media (min-width: 998px) {
   .template-site::after {
-    background: url(../../assets/images/faixa-br.png);
+    background: url("../../assets/images/faixa-br.png");
     content: "";
     display: block;
     height: 86px;

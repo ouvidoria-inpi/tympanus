@@ -55,11 +55,11 @@
 
 .language-list p {
   border-bottom: 1px solid #cccccc;
-  font-style: italic;
   font-size: 14px;
+  font-style: italic;
   font-weight: 600;
-  padding: 0;
   margin: 16px 16px 8px;
+  padding: 0;
 }
 
 .language-list .item {
@@ -351,7 +351,7 @@
 
 @media (min-width: 998px) {
   .template-site::after {
-    background: url(../../assets/images/faixa-br.png);
+    background: url("../../assets/images/faixa-br.png");
     content: "";
     display: block;
     height: 86px;
