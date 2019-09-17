@@ -74,7 +74,8 @@
     { "label": "Input", "path": "components/input/input" },
     { "label": "Paginação", "path": "components/pagination/pagination" },
     { "label": "Select", "path": "components/select/select" },
-    { "label": "Tabela", "path": "components/table/table" }
+    { "label": "Tabela", "path": "components/table/table" },
+    { "label": "Upload", "path": "components/upload/upload" }
   ],
   "Templates": [
     { "label": "Status dos Templates", "path": "templates/templates" },
