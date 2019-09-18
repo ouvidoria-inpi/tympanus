@@ -195,7 +195,7 @@ $logo-desktop: 150px;
   }
 }
 
-// Links rápidos de acessibilidade e idioma
+// Links rápidos
 .quicklinks {
   align-items: center;
   display: flex;
@@ -306,45 +306,6 @@ $logo-desktop: 150px;
     }
     .close {
       display: block;
-    }
-  }
-}
-
-// Redes sociais
-.social-network {
-  color: $color-primary-darken-15;
-  margin: 0;
-  padding: 0 $spacing-3 $spacing-3;
-  text-transform: uppercase;
-  span {
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    margin-right: $spacing-4;
-  }
-  ul {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    li {
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-      &:first-child {
-        a {
-          padding-left: 0;
-        }
-      }
-      &:last-child {
-        a {
-          padding-right: 0;
-        }
-      }
-      a {
-        color: $color-primary-darken-15;
-        display: inline-block;
-        padding: $spacing-1 $spacing-3;
-      }
     }
   }
 }
@@ -591,62 +552,105 @@ $logo-desktop: 150px;
   }
 }
 
-// Canvas overlay
-.canvas {
-  background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
-  display: none;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 3;
-  // Canvas ativo
-  &.is-active {
+// Redes sociais
+.social-network {
+  border-top: 1px solid $color-gray-2;
+  margin: 0;
+  padding: $spacing-1;
+  text-transform: uppercase;
+  span {
     display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: $spacing-4;
   }
-}
-
-// Container da navegação
-.navigation-wrapper {
-  background: $color-white;
-  display: none;
-  position: absolute;
-  top: 0;
-  width: 80%;
-  z-index: 4;
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 42.6px); // altura da barra de governo
-    padding-left: 0;
-    padding-right: 0;
-  }
-  // Navegação ativa
-  &.is-active {
-    display: block;
-  }
-  // Links rápidos de acessibilidade e idioma
-  .quicklinks {
-    display: flex;
-    // Reposicionamento da lista de idiomas
-    .language-list {
-      bottom: 100%;
-      left: 0;
-      right: auto;
-      top: auto;
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      &:first-child {
+        a {
+          padding-left: 0;
+        }
+      }
+      &:last-child {
+        a {
+          padding-right: 0;
+        }
+      }
+      a {
+        color: $color-primary;
+        display: inline-block;
+        padding: $spacing-1 $spacing-3;
+      }
     }
   }
 }
 
 // Navegação
 .navigation {
-  border-top: 1px solid $color-warning;
-  flex: 1;
-  overflow: auto;
-  padding: $spacing-2 0;
+  position: relative;
   ul {
     list-style: none;
+  }
+  // Container da navegação
+  .wrapper {
+    .container {
+      border-top: 1px solid $color-warning;
+      background: $color-white;
+      display: none;
+      flex-direction: column;
+      height: calc(100vh - #{$main-bar-mobile});
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  // Logo
+  .logo {
+    background: $color-gray-1;
+    display: block;
+    margin-left: - $spacing-1;
+    margin-right: - $spacing-1;
+    padding: $spacing-2 $spacing-3;
+    position: static;
+    text-align: left;
+    .name {
+      display: block;
+    }
+    .description {
+      display: block;
+    }
+  }
+  // Menu de navegação
+  .items {
+    background: $color-gray-2;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    margin-left: - $spacing-1;
+    margin-right: - $spacing-1;
+    overflow: auto;
+  }
+  // gov.br
+  .govbr {
+    border-top: 1px solid $color-gray-3;
+    .logo {
+      margin: 0;
+      img {
+        filter: invert(70%);
+        max-width: 64px;
+      }
+      &:hover {
+        img {
+          filter: invert(0);
+        }
+      }
+    }
   }
   // Item de navegação
   .item {
@@ -654,21 +658,81 @@ $logo-desktop: 150px;
     padding: 0;
     a,
     button {
+      align-items: center;
       background: transparent;
       border: 0;
       color: $color-gray-6;
-      display: block;
+      display: flex;
+      font-weight: 400;
+      justify-content: space-between;
       padding: $spacing-1 $spacing-3;
       text-align: left;
       text-decoration: none;
       width: 100%;
+      &:hover {
+        background: $color-primary-darken-15;
+        color: $color-white;
+        font-weight: 600;
+      }
     }
   }
+  // Níveis de navegação
   .level-1,
   .level-2,
   .level-3 {
+    display: none;
     margin: 0;
     padding: 0;
+  }
+  // Links rápidos
+  .quicklinks {
+    margin: $spacing-2 $spacing-1;
+    // Legislação
+    .legislation {
+      color: $color-gray-7;
+      display: inline-block;
+      font-size: 14px;
+      margin: 0;
+    }
+    // Idioma
+    .language {
+      display: inline-block;
+      .trigger {
+        font-size: 14px;
+        color: $color-gray-7;
+      }
+    }
+    // Altocontraste
+    .contrast {
+      display: inline-block;
+    }
+  }
+  // Links úteis
+  .links {
+    border-top: 1px solid $color-gray-2;
+    font-size: 14px;
+    padding: $spacing-1;
+    span {
+      display: block;
+      font-weight: 700;
+      margin: $spacing-1 0;
+    }
+    a {
+      display: flex;
+      padding: $spacing-half 0;
+      [class*="fa-"] {
+        margin-left: $spacing-1;
+      }
+    }
+  }
+  // Navegação ativa
+  &.is-active {
+    // Container da navegação
+    .wrapper {
+      .container {
+        display: flex;
+      }
+    }
   }
 }
 
