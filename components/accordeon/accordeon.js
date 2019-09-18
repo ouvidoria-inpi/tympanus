@@ -7,7 +7,7 @@ class BRAccordeon {
   }
 
   _setBehavior() {
-    for (let button of this.component.querySelectorAll('[data-toggle="collapse"]')) {
+    for (let button of this.component.querySelectorAll('button.header')) {
       button.addEventListener('click', (event) => {
         this._collapse(event);
         this._changeIcon(event);
