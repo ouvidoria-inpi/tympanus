@@ -696,10 +696,16 @@ $logo-desktop: 150px;
   }
   // Logo
   .logo {
-    height: 60px;
-    margin-bottom: $spacing-8;
-    margin-top: $spacing-10;
-    width: 166px;
+    display: block;
+    padding-bottom: $spacing-8;
+    padding-top: $spacing-10;
+    position: static;
+    text-align: left;
+    img {
+      height: 60px;
+      max-width: none;
+      width: 166px;
+    }
   }
   // Navegação
   .navigation {
@@ -711,12 +717,15 @@ $logo-desktop: 150px;
       a,
       button {
         color: $color-white;
+        display: inline-block;
         font-weight: 800;
         padding: $spacing-3 0;
         text-transform: uppercase;
+        width: auto;
         &:hover {
           background: transparent;
           color: $color-white;
+          text-decoration: underline;
         }
       }
     }
@@ -922,6 +931,67 @@ $logo-desktop: 150px;
       }
     }
   }
+  // Rodape
+  .page-footer {
+    // Navegação
+    .navigation {
+      border-top: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &::after {
+        content: none;
+      }
+      // Item de navegação
+      .item {
+        border-bottom: 0;
+        flex: 0 0 16.66667%;
+        padding-right: $spacing-3;
+        width: auto;
+        &:hover,
+        &:active {
+          > a,
+          > button {
+            background: transparent;
+            font-weight: 800;
+          }
+        }
+        > a,
+        > button {
+          display: inline-block;
+          width: auto;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .item {
+          &:hover,
+          &:active {
+            > a,
+            > button {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      // Níveis de navegação
+      .level-1 {
+        background: transparent;
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: static;
+        width: auto;
+        .item {
+          &:hover {
+            .submenu {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 //   // Barra principal do topo
 //   .header-bar {
 //     // Links rápidos de acessibilidade e idiomas
@@ -1034,66 +1104,6 @@ $logo-desktop: 150px;
 //       box-shadow: -3px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
 //       left: 100%;
 //       width: 100%;
-//     }
-//   }
-//   // Rodape
-//   .page-footer {
-//     // Navegação
-//     .navigation {
-//       border-top: 0;
-//       display: flex;
-//       flex-direction: row;
-//       flex-wrap: wrap;
-//       &::after {
-//         content: none;
-//       }
-//       // Item de navegação
-//       .item {
-//         border-bottom: 0;
-//         flex: 0 0 16.66667%;
-//         width: auto;
-//         &:hover,
-//         &:active {
-//           > a,
-//           > button {
-//             background: transparent;
-//             font-weight: 800;
-//           }
-//         }
-//         > a,
-//         > button {
-//           display: inline-block;
-//           width: auto;
-//           &:hover {
-//             text-decoration: underline;
-//           }
-//         }
-//         .item {
-//           &:hover,
-//           &:active {
-//             > a,
-//             > button {
-//               font-weight: 500;
-//             }
-//           }
-//         }
-//       }
-//       // Níveis de navegação
-//       .level-1 {
-//         background: transparent;
-//         display: block;
-//         margin: 0;
-//         padding: 0;
-//         position: static;
-//         width: auto;
-//         .item {
-//           &:hover {
-//             .submenu {
-//               display: none;
-//             }
-//           }
-//         }
-//       }
 //     }
 //   }
 }

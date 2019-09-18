@@ -697,9 +697,16 @@
 }
 
 .page-footer .logo {
+  display: block;
+  padding-bottom: 40px;
+  padding-top: 56px;
+  position: static;
+  text-align: left;
+}
+
+.page-footer .logo img {
   height: 60px;
-  margin-bottom: 40px;
-  margin-top: 56px;
+  max-width: none;
   width: 166px;
 }
 
@@ -715,15 +722,18 @@
 .page-footer .navigation .item a,
 .page-footer .navigation .item button {
   color: #ffffff;
+  display: inline-block;
   font-weight: 800;
   padding: 16px 0;
   text-transform: uppercase;
+  width: auto;
 }
 
 .page-footer .navigation .item a:hover,
 .page-footer .navigation .item button:hover {
   background: transparent;
   color: #ffffff;
+  text-decoration: underline;
 }
 
 .page-footer .navigation .level-1 {
@@ -871,5 +881,51 @@
   }
   .search.is-active .close {
     position: static;
+  }
+  .page-footer .navigation {
+    border-top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .page-footer .navigation::after {
+    content: none;
+  }
+  .page-footer .navigation .item {
+    border-bottom: 0;
+    flex: 0 0 16.66667%;
+    padding-right: 16px;
+    width: auto;
+  }
+  .page-footer .navigation .item:hover > a,
+  .page-footer .navigation .item:hover > button, .page-footer .navigation .item:active > a,
+  .page-footer .navigation .item:active > button {
+    background: transparent;
+    font-weight: 800;
+  }
+  .page-footer .navigation .item > a,
+  .page-footer .navigation .item > button {
+    display: inline-block;
+    width: auto;
+  }
+  .page-footer .navigation .item > a:hover,
+  .page-footer .navigation .item > button:hover {
+    text-decoration: underline;
+  }
+  .page-footer .navigation .item .item:hover > a,
+  .page-footer .navigation .item .item:hover > button, .page-footer .navigation .item .item:active > a,
+  .page-footer .navigation .item .item:active > button {
+    font-weight: 500;
+  }
+  .page-footer .navigation .level-1 {
+    background: transparent;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: static;
+    width: auto;
+  }
+  .page-footer .navigation .level-1 .item:hover .submenu {
+    display: none;
   }
 }
