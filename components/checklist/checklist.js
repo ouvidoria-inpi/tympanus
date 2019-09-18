@@ -4,7 +4,6 @@ class BRChecklist {
     this.name = name;
     this.component = component;
     this._setBehavior();
-    console.log(this);
   }
 
   _setBehavior() {
