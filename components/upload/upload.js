@@ -1,4 +1,5 @@
 const inputElement = document.querySelector('.upload-input');
+const fileList = document.querySelector('.upload-file-list');
 const header = document.querySelector('.upload-header');
 const info = document.querySelector('.upload-info');
 
@@ -18,9 +19,30 @@ function handleFiles(files) {
     files = this.files; 
   } 
   inputElement.files = files;
-  info.style.visibility = 'hidden';
+  info.style.display = 'none';
   header.innerHTML = 'Arquivos Selecionados';
   updateSize();
+  
+  if (!files.length) {
+    fileList.innerHTML = "<p>Sem arquivos selecionados!</p>";
+  } else {
+    fileList.innerHTML = "";
+    const list = document.createElement("ul");
+    fileList.appendChild(list);
+    for (let i = 0; i < files.length; i++) {
+      const li = document.createElement("li");
+      list.appendChild(li);
+      
+      const info = document.createElement("span");
+      info.innerHTML = files[i].name ;
+      li.appendChild(info);
+      
+      const img = document.createElement("i");
+      img.className = 'fa fa-times';
+      li.appendChild(img);
+      
+    }
+  }
 }
 
 function updateSize() {

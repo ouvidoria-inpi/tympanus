@@ -52,6 +52,42 @@
   margin-left: -40px;
 }
 
+.br-upload .upload-file-list {
+  /*
+    max-height: 200px;
+    overflow-y: auto;
+    */
+}
+
+.br-upload .upload-file-list ul {
+  padding-left: 0;
+}
+
+.br-upload .upload-file-list li {
+  list-style: none;
+  color: #155BCB;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0 8px 8px;
+  font-size: 14px;
+  width: 100%;
+  position: relative;
+}
+
+.br-upload .upload-file-list span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  padding-right: 24px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.br-upload .upload-file-list i {
+  position: absolute;
+  line-height: 24px;
+  right: 8px;
+}
+
 .br-upload .upload-add {
   padding-left: 30px;
   margin: 30px 0;
