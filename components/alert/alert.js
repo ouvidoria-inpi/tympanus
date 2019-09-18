@@ -7,7 +7,7 @@ class BRAlert {
   }
 
   _setBehavior() {
-    for (let button of this.component.querySelectorAll('[data-dismiss="alert"]')) {
+    for (let button of this.component.querySelectorAll('div.close button')) {
       button.addEventListener('click', () => {
         this._dismiss(this.component);
       });
