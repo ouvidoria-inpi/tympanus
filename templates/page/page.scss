@@ -10,9 +10,9 @@
     position: relative;
     img {
       bottom: 100%;
+      margin: 0 $spacing-1 $spacing-1 0;
       position: absolute;
       right: 0;
-      margin: 0 $spacing-1 $spacing-1 0;
     }
   }
 }

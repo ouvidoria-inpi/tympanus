@@ -173,7 +173,7 @@
 }
 .language .menu {
   border-top: 1px solid #ffcd07;
-  margin: 8px 0 0 0;
+  margin: 8px 0 0;
   right: 0;
 }
 .language .menu .title {
@@ -805,7 +805,7 @@
     top: 4px;
   }
   .logo a {
-    display: block;
+    display: inline-block;
   }
   .logo .name {
     display: block;
@@ -856,7 +856,7 @@
   .quicklinks {
     margin-right: 0;
     position: absolute;
-    right: 0;
+    right: 12px;
     top: 12px;
   }
   .quicklinks .login span {
@@ -875,6 +875,7 @@
   .search {
     bottom: 12px;
     margin-bottom: 4px;
+    right: 12px;
     top: auto;
   }
   .search .field input {

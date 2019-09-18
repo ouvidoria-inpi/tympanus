@@ -57,11 +57,14 @@ $logo-desktop: 150px;
       text-align: left;
       width: 100%;
     }
-    a.item,
-    button.item {
-      text-decoration: none;
-      &:hover {
-        background: $color-primary-pastel-1;
+    // Regras para botões e links
+    a,
+    button {
+      &.item {
+        text-decoration: none;
+        &:hover {
+          background: $color-primary-pastel-1;
+        }
       }
     }
     // Menu ativo
@@ -169,7 +172,7 @@ $logo-desktop: 150px;
   // Listagem de idiomas
   .menu {
     border-top: 1px solid $color-warning;
-    margin: $spacing-1 0 0 0;
+    margin: $spacing-1 0 0;
     right: 0;
     // Rótulo da seleção
     .title {
@@ -200,9 +203,9 @@ $logo-desktop: 150px;
   margin-right: 48px;
   // Acesso gov.br
   .login {
-    display: inline-flex;
     align-items: center;
     color: $color-gray-7;
+    display: inline-flex;
     &:hover {
       [class*="fa-"] {
         color: $color-primary-lighten-15;
@@ -437,8 +440,8 @@ $logo-desktop: 150px;
     color: $color-primary;
     display: inline-flex;
     font-size: 11px;
-    justify-content: center;
     height: 17px;
+    justify-content: center;
     padding: 0;
     width: 17px;
   }
@@ -462,7 +465,7 @@ $logo-desktop: 150px;
       border-top: 1px solid $color-gray-2;
       display: flex;
       margin: (- $spacing-1) (- $spacing-6);
-      > * {
+      > * { // sass-lint:disable-line no-universal-selectors
         flex: 1;
         &:not(:last-child) {
           border-right: 1px solid $color-gray-2;
@@ -479,16 +482,16 @@ $logo-desktop: 150px;
     }
     // Menu ativo
     &.is-active {
-      &::after{
+      &::after {
         border: solid transparent;
         border-bottom-color: $color-gray-7;
         border-width: 12px;
         bottom: 100%;
         content: "";
         height: 0;
-        right: $spacing-3;
         pointer-events: none;
         position: absolute;
+        right: $spacing-3;
         width: 0;
       }
     }
@@ -505,8 +508,8 @@ $logo-desktop: 150px;
     border-radius: 50%;
     color: $color-primary;
     display: inline-flex;
-    justify-content: center;
     height: 32px;
+    justify-content: center;
     padding: 0;
     width: 32px;
     &:hover {
@@ -527,16 +530,16 @@ $logo-desktop: 150px;
     }
     // Menu ativo
     &.is-active {
-      &::after{
+      &::after {
         border: solid transparent;
         border-bottom-color: $color-gray-7;
         border-width: 12px;
         bottom: 100%;
         content: "";
         height: 0;
-        right: $spacing-3;
         pointer-events: none;
         position: absolute;
+        right: $spacing-3;
         width: 0;
       }
     }
@@ -781,7 +784,7 @@ $logo-desktop: 150px;
     display: block;
     top: $spacing-half;
     a {
-      display: block;
+      display: inline-block;
     }
     .name {
       display: block;
@@ -872,7 +875,7 @@ $logo-desktop: 150px;
   .quicklinks {
     margin-right: 0;
     position: absolute;
-    right: 0;
+    right: $spacing-2;
     top: $spacing-2;
     // Acesso gov.br
     .login {
@@ -897,6 +900,7 @@ $logo-desktop: 150px;
   .search {
     bottom: $spacing-2;
     margin-bottom: $spacing-half;
+    right: $spacing-2;
     top: auto;
     .field {
       input {
