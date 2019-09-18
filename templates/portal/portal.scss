@@ -1,62 +1,178 @@
 // Carregar variáveis do DS-Gov
 @import "../../base/dsgov-base";
 
-// Cabeçalho da página
-.page-header {
-  position: relative;
+// Barra principal
+$main-bar-mobile: 45px;
+$main-bar-tablet: 85px;
+$main-bar-desktop: 150px;
+$main-bar-desktop-fixed: 55px;
+
+$logo-mobile: 64px;
+$logo-desktop: 150px;
+
+// Atalhos para conteúdo
+.skip-menu {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  a {
+    color: $color-white;
+    position: absolute;
+    top: -200em;
+    &:focus {
+      background: $color-secondary;
+      border-radius: 100px;
+      left: 20px;
+      outline: 0;
+      padding: 8px 24px;
+      position: absolute;
+      top: auto;
+      z-index: 11;
+    }
+  }
 }
 
-// Barra principal do topo
+// Dropdown
+.dropdown {
+  position: relative;
+  z-index: 1;
+  .menu {
+    background: $color-white;
+    box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
+    display: none;
+    position: absolute;
+    // Rótulo
+    .title {
+      display: block;
+      font-weight: 600;
+      padding: $spacing-1 $spacing-3;
+    }
+    // Item de menu
+    .item {
+      background: $color-white;
+      border: 0;
+      display: block;
+      padding: $spacing-1 $spacing-3;
+      position: relative;
+      text-align: left;
+      width: 100%;
+    }
+    a.item,
+    button.item {
+      text-decoration: none;
+      &:hover {
+        background: $color-primary-pastel-1;
+      }
+    }
+    // Menu ativo
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+// Sombra
+.shadow-bottom {
+  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+}
+
+// Fixar na tela
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+// Cabeçalho
+.page-header {
+  background: $color-white;
+}
+
+// Barra do cabeçalho
 .header-bar {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  height: 68px;
+  height: $main-bar-mobile;
   position: relative;
 }
 
-// Links rápidos de acessibilidade e língua
-.quicklinks {
-  align-items: center;
-  border-top: 1px solid $color-gray-3;
-  display: none;
-  padding: $spacing-3;
-  // Ícones de acessibilidade
-  .icon {
-    color: $color-gray-7;
+// Menu sanduiche
+.menu-hamburger {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  color: $color-primary;
+  font-size: 25px;
+  left: 0;
+  padding: 0 $spacing-2;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  z-index: 1;
+  &:hover {
+    color: $color-primary-lighten-15;
+    text-decoration: none;
   }
 }
 
-// Seleção de lingua
+// Logo
+.logo {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  a {
+    display: flex;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    max-width: $logo-mobile;
+  }
+  .name {
+    color: $color-primary-darken-25;
+    display: none;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .description {
+    color: $color-gray-6;
+    display: none;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+// Seleção de idioma
 .language {
-  position: relative;
-  z-index: 1;
-  // lingua selecionada
-  &-selected {
+  z-index: 2;
+  // Idioma selecionado e trigger
+  .trigger {
     align-items: center;
     background: transparent;
     border: 0;
     display: flex;
-    .name {
-      display: none;
-    }
+    font-size: 12px;
+    font-weight: 600;
     .arrow {
       font-size: 10px;
       margin-left: $spacing-1;
     }
   }
-  // Listagem de línguas
-  &-list {
-    background: $color-white;
+  // Listagem de idiomas
+  .menu {
     border-top: 1px solid $color-warning;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
-    display: none;
-    flex-direction: column;
-    position: absolute;
+    margin: $spacing-1 0 0 0;
     right: 0;
-    top: 100%;
     // Rótulo da seleção
-    p {
+    .title {
       border-bottom: 1px solid $color-gray-3;
       font-size: 14px;
       font-style: italic;
@@ -66,34 +182,127 @@
     }
     // Item selecionável
     .item {
-      align-items: center;
+      white-space: nowrap;
+      // Item selecionado
+      &.is-active {
+        color: $color-primary;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Links rápidos de acessibilidade e idioma
+.quicklinks {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: 48px;
+  // Acesso gov.br
+  .login {
+    display: inline-flex;
+    align-items: center;
+    color: $color-gray-7;
+    &:hover {
+      [class*="fa-"] {
+        color: $color-primary-lighten-15;
+      }
+    }
+    [class*="fa-"] {
+      color: $color-primary;
+    }
+    span {
+      display: none;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: $spacing-1;
+
+    }
+  }
+  // Legislação
+  .legislation {
+    color: $color-gray-7;
+    display: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: $spacing-4;
+  }
+  // Idioma
+  .language {
+    display: none;
+    margin-left: $spacing-3;
+  }
+  // Altocontraste
+  .contrast {
+    display: none;
+    margin-left: $spacing-3;
+  }
+}
+
+// Busca
+.search {
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  .field {
+    display: inline-flex;
+    flex: 1;
+    input {
+      background: $color-gray-2;
+      border: 0;
+      display: none;
+      flex: 1;
+      padding: $spacing-3;
+      &::placeholder {
+        color: $font-placeholder-color;
+        font-size: $font-placeholder-font-size;
+        font-style: $font-placeholder-font-style;
+        font-weight: $font-placeholder-font-weight;
+        opacity: 1;
+      }
+    }
+    button {
       background: transparent;
       border: 0;
-      display: flex;
-      flex: 1;
-      padding: $spacing-1 $spacing-3;
+      color: $color-primary;
+      padding: 0 $spacing-2;
       &:hover {
         background: $color-primary-pastel-1;
       }
-      .flag {
-        margin-right: $spacing-3;
-        img {
-          vertical-align: middle;
-        }
-      }
-      .name {
-        white-space: nowrap;
-      }
-    }
-    // Item selecionado
-    .is-active {
-      color: $color-primary;
     }
   }
-  // Lista ativa
+  // Botão externo para fechar a busca
+  .close {
+    background: transparent;
+    border: 0;
+    bottom: 0;
+    display: none;
+    padding: 0 $spacing-2;
+    position: absolute;
+    right: $spacing-half;
+    top: 0;
+  }
+  // Busca ativa
   &.is-active {
-    .language-list {
-      display: flex;
+    left: 0;
+    .field {
+      box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      input {
+        display: block;
+      }
+      button {
+        background: $color-gray-2;
+      }
+    }
+    .close {
+      display: block;
     }
   }
 }
@@ -137,6 +346,248 @@
   }
 }
 
+// Tempo restante de sessão
+.timeout {
+  .session {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .timer {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+// Barra de sistema
+.system-bar {
+  align-items: center;
+  height: 60px;
+  // Tempo restante de sessão
+  .timeout {
+    text-align: right;
+  }
+}
+
+// Área do usuário
+.user {
+  align-items: center;
+  display: flex;
+  // Botão de sair
+  .logout {
+    background: transparent;
+    border: 1px solid $color-primary;
+    border-radius: 100px;
+    color: $color-primary;
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 600;
+    height: 32px;
+    margin-left: $spacing-3;
+    padding: 0 $spacing-5;
+    text-align: center;
+    &:hover {
+      background: $color-primary-lighten-15;
+      border-color: $color-primary-lighten-15;
+      color: $color-white;
+    }
+  }
+}
+
+// Avatar com usuário, pode ser imagem ou ícone
+.avatar {
+  position: relative;
+  .no-image {
+    color: $color-primary;
+    font-size: 20px;
+    & + .badge {
+      transform: translate(-12px, 2px);
+    }
+  }
+  .image {
+    max-width: 40px;
+    & + .badge {
+      transform: translate(-10px, -2px);
+    }
+  }
+  // Badge com quantidade de notificações
+  .badge {
+    align-items: center;
+    background: $color-danger;
+    border-radius: 50%;
+    color: $color-white;
+    display: flex;
+    font-size: 11px;
+    height: 18px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 18px;
+  }
+}
+
+// Configurações do usuário
+.configs {
+  margin-left: $spacing-half;
+  // Ativador do menu
+  .trigger {
+    background: $color-gray-2;
+    border: 0;
+    border-radius: 50%;
+    color: $color-primary;
+    display: inline-flex;
+    font-size: 11px;
+    justify-content: center;
+    height: 17px;
+    padding: 0;
+    width: 17px;
+  }
+  // Menu
+  .menu {
+    margin: 19px -19px 0 0;
+    right: 0;
+    // Nome
+    .name {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    // E-mail
+    .email {
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    // Conta
+    .account {
+      border-top: 1px solid $color-gray-2;
+      display: flex;
+      margin: (- $spacing-1) (- $spacing-6);
+      > * {
+        flex: 1;
+        &:not(:last-child) {
+          border-right: 1px solid $color-gray-2;
+        }
+      }
+      a {
+        display: block;
+        padding: $spacing-1 $spacing-3;
+        text-decoration: none;
+        &:hover {
+          background: $color-primary-pastel-1;
+        }
+      }
+    }
+    // Menu ativo
+    &.is-active {
+      &::after{
+        border: solid transparent;
+        border-bottom-color: $color-gray-7;
+        border-width: 12px;
+        bottom: 100%;
+        content: "";
+        height: 0;
+        right: $spacing-3;
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+      }
+    }
+  }
+}
+
+// Favoritos
+.bookmarks {
+  margin-left: $spacing-2;
+  // Ativador do menu
+  .trigger {
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: $color-primary;
+    display: inline-flex;
+    justify-content: center;
+    height: 32px;
+    padding: 0;
+    width: 32px;
+    &:hover {
+      background: $color-primary-pastel-1;
+    }
+  }
+  // Menu
+  .menu {
+    margin: 15px -12px 0 0;
+    padding: $spacing-3;
+    right: 0;
+    // Título do menu
+    .title {
+      font-size: 12px;
+      font-weight: 600;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    // Menu ativo
+    &.is-active {
+      &::after{
+        border: solid transparent;
+        border-bottom-color: $color-gray-7;
+        border-width: 12px;
+        bottom: 100%;
+        content: "";
+        height: 0;
+        right: $spacing-3;
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+      }
+    }
+  }
+  // Lista de favoritos
+  .list {
+    columns: 5;
+    .item {
+      padding: 0;
+    }
+  }
+  // Favorito
+  .bookmark {
+    display: inline-block;
+    margin: $spacing-3 0 0;
+    &:hover {
+      text-decoration: none;
+      .brand {
+        border-color: $color-primary-lighten-15;
+      }
+      .name {
+        color: $color-primary-lighten-15;
+      }
+    }
+  }
+  // Marca
+  .brand {
+    background: $color-gray-1;
+    border: 1px solid $color-gray-3;
+    height: 42px;
+    width: 58px;
+  }
+  // Nome
+  .name {
+    color: $color-gray-6;
+    display: block;
+    font-size: 9px;
+    font-weight: 500;
+    margin-top: $spacing-half;
+    text-align: center;
+  }
+  // Mais opções
+  .more {
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: $spacing-3;
+    text-align: center;
+    text-decoration: underline;
+  }
+}
+
 // Canvas overlay
 .canvas {
   background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
@@ -172,10 +623,10 @@
   &.is-active {
     display: block;
   }
-  // Links rápidos de acessibilidade e língua
+  // Links rápidos de acessibilidade e idioma
   .quicklinks {
     display: flex;
-    // Reposicionamento da lista de línguas
+    // Reposicionamento da lista de idiomas
     .language-list {
       bottom: 100%;
       left: 0;
@@ -236,6 +687,7 @@
   background: $color-primary-darken-25;
   border-bottom: 0;
   color: $color-white;
+  position: relative;
   a {
     color: $color-white;
   }
@@ -316,234 +768,328 @@
 
 // Versao tablet
 @include media-breakpoint-up(sm) {
-  // Links rápidos de acessibilidade e língua
+  // Barra do cabeçalho
+  .header-bar {
+    height: $main-bar-tablet;
+  }
+  // Menu sanduiche
+  .menu-hamburger {
+    bottom: $main-bar-mobile;
+  }
+  // Logo
+  .logo {
+    display: block;
+    top: $spacing-half;
+    a {
+      display: block;
+    }
+    .name {
+      display: block;
+    }
+    .description {
+      display: block;
+      margin-top: $spacing-half;
+    }
+  }
+  // Links rápidos de acessibilidade e idioma
   .quicklinks {
-    border-top: 0;
-    display: flex;
-    margin-left: auto;
-    margin-right: 24px;
+    align-self: flex-start;
+    margin-top: $spacing-1;
   }
-  // Container da navegação
-  .navigation-wrapper {
-    // Links rápidos de acessibilidade e língua
-    .quicklinks {
-      display: none;
-    }
+  // Busca
+  .search {
+    bottom: $main-bar-mobile;
   }
-  // Redes sociais
-  .social-network {
-    border-top: 1px solid $color-gray-3;
-    padding-bottom: 0;
-    text-align: right;
-    span {
-      display: inline;
-    }
-  }
-  // Rodape
-  .page-footer {
-    // Redes sociais
-    .social-network {
-      float: left;
-      margin-top: $spacing-8;
-      padding-top: 0;
-    }
-    // Marcas do governo
-    #footer-brasil {
-      #wrapper-footer-brasil {
-        justify-content: flex-end;
-      }
-    }
-  }
+//   // Links rápidos de acessibilidade e idiomas
+//   .quicklinks {
+//     border-top: 0;
+//     display: flex;
+//     margin-left: auto;
+//     margin-right: 24px;
+//   }
+//   // Container da navegação
+//   .navigation-wrapper {
+//     // Links rápidos de acessibilidade e idiomas
+//     .quicklinks {
+//       display: none;
+//     }
+//   }
+//   // Redes sociais
+//   .social-network {
+//     border-top: 1px solid $color-gray-3;
+//     padding-bottom: 0;
+//     text-align: right;
+//     span {
+//       display: inline;
+//     }
+//   }
+//   // Rodape
+//   .page-footer {
+//     // Redes sociais
+//     .social-network {
+//       float: left;
+//       margin-top: $spacing-8;
+//       padding-top: 0;
+//     }
+//     // Marcas do governo
+//     #footer-brasil {
+//       #wrapper-footer-brasil {
+//         justify-content: flex-end;
+//       }
+//     }
+//   }
 }
 
 // Versao desktop
 @include media-breakpoint-up(md) {
-  // Faixa do governo
-  .template-site {
-    &::after {
-      background: url("../../assets/images/faixa-br.png");
-      content: "";
-      display: block;
-      height: 86px;
-      left: 0;
-      pointer-events: none;
-      position: absolute;
-      top: 0;
-      width: 130px;
-      z-index: 1;
-    }
-  }
-  // Barra principal do topo
+  // Barra do cabeçalho
   .header-bar {
-    // Links rápidos de acessibilidade e língua
-    .quicklinks {
-      margin-right: 270px;
-    }
-    // Seleção de lingua
-    .language {
-      z-index: 5;
-    }
-    // Busca do portal
-    .br-search {
-      height: 68px;
-      z-index: 5;
-      .field {
-        input {
-          display: block;
-        }
-        button {
-          background: $color-gray-2;
-        }
-      }
-    }
+    display: block;
+    height: $main-bar-desktop;
+    padding: $spacing-2;
   }
-  // Canvas overlay
-  .canvas {
-    display: none !important;
-  }
-  // Container da navegação
-  .navigation-wrapper {
-    border-top: 1px solid $color-warning;
-    box-shadow: 0 3px 6px rgba($color-black, 0.32); // sass-lint:disable-line no-color-literals
+  // Menu sanduiche
+  .menu-hamburger {
+    bottom: $spacing-3;
     top: auto;
-    width: 100%;
-    .container {
-      height: auto;
+  }
+  // Logo
+  .logo {
+    position: static;
+    text-align: left;
+    img {
+      max-width: $logo-desktop;
     }
-    .header-bar {
-      display: none;
+    .name {
+      font-size: 24px;
+      margin-left: $spacing-8;
+    }
+    .description {
+      font-size: 18px;
     }
   }
-  // Navegação
-  .navigation {
-    border-top: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-    padding: $spacing-6 0;
-    position: relative;
-    // Seta indicativa de fechamento
-    &::after {
-      border: solid transparent;
-      border-bottom-color: $color-primary;
-      border-width: 12px;
-      bottom: 100%;
-      content: "";
-      height: 0;
-      left: $spacing-3;
-      pointer-events: none;
-      position: absolute;
-      width: 0;
-    }
-    // Item de navegação
-    .item {
-      width: 25%;
-      &:hover,
-      &:active {
-        > a,
-        > button {
-          background: $color-primary-darken-15;
-          color: $color-white;
-          font-weight: 600;
-        }
-      }
-      &:hover {
-        > .submenu {
-          display: block;
-        }
-      }
-      .item {
-        width: 100%;
-        &:hover,
-        &:active {
-          > a,
-          > button {
-            background: $color-primary;
-          }
-        }
+  // Links rápidos de acessibilidade e idioma
+  .quicklinks {
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+    top: $spacing-2;
+    // Acesso gov.br
+    .login {
+      span {
+        display: inline;
       }
     }
-    // Níveis de navegação
-    .level-1,
-    .level-2,
-    .level-3 {
-      background: $color-gray-1;
-      bottom: 0;
-      display: none;
-      padding: $spacing-6 0;
-      position: absolute;
-      top: 0;
+    // Legislação
+    .legislation {
+      display: inline;
     }
-    .level-1 {
-      box-shadow: -2px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
-      left: 25%;
-      width: 25%;
+    // Idioma
+    .language {
+      display: inline-block;
     }
-    .level-2,
-    .level-3 {
-      box-shadow: -3px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
-      left: 100%;
-      width: 100%;
+    // Altocontraste
+    .contrast {
+      display: inline;
     }
   }
-  // Rodape
-  .page-footer {
-    // Navegação
-    .navigation {
-      border-top: 0;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      &::after {
-        content: none;
-      }
-      // Item de navegação
-      .item {
-        border-bottom: 0;
-        flex: 0 0 16.66667%;
-        width: auto;
-        &:hover,
-        &:active {
-          > a,
-          > button {
-            background: transparent;
-            font-weight: 800;
-          }
-        }
-        > a,
-        > button {
-          display: inline-block;
-          width: auto;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-        .item {
-          &:hover,
-          &:active {
-            > a,
-            > button {
-              font-weight: 500;
-            }
-          }
-        }
-      }
-      // Níveis de navegação
-      .level-1 {
-        background: transparent;
+  // Busca
+  .search {
+    bottom: $spacing-2;
+    margin-bottom: $spacing-half;
+    top: auto;
+    .field {
+      input {
         display: block;
-        margin: 0;
-        padding: 0;
+      }
+      button {
+        background: $color-gray-2;
+      }
+    }
+    // Busca ativa
+    &.is-active {
+      left: $spacing-2;
+      .field {
+        box-shadow: 0 0 0 2px $color-white;
         position: static;
-        width: auto;
-        .item {
-          &:hover {
-            .submenu {
-              display: none;
-            }
-          }
-        }
+      }
+      .close {
+        position: static;
       }
     }
   }
+//   // Barra principal do topo
+//   .header-bar {
+//     // Links rápidos de acessibilidade e idiomas
+//     .quicklinks {
+//       margin-right: 270px;
+//     }
+//     // Seleção de idioma
+//     .language {
+//       z-index: 5;
+//     }
+//     // Busca do portal
+//     .br-search {
+//       height: 68px;
+//       z-index: 5;
+//       .field {
+//         input {
+//           display: block;
+//         }
+//         button {
+//           background: $color-gray-2;
+//         }
+//       }
+//     }
+//   }
+//   // Canvas overlay
+//   .canvas {
+//     display: none !important;
+//   }
+//   // Container da navegação
+//   .navigation-wrapper {
+//     border-top: 1px solid $color-warning;
+//     box-shadow: 0 3px 6px rgba($color-black, 0.32); // sass-lint:disable-line no-color-literals
+//     top: auto;
+//     width: 100%;
+//     .container {
+//       height: auto;
+//     }
+//     .header-bar {
+//       display: none;
+//     }
+//   }
+//   // Navegação
+//   .navigation {
+//     border-top: 0;
+//     display: flex;
+//     flex-direction: column;
+//     overflow: visible;
+//     padding: $spacing-6 0;
+//     position: relative;
+//     // Seta indicativa de fechamento
+//     &::after {
+//       border: solid transparent;
+//       border-bottom-color: $color-primary;
+//       border-width: 12px;
+//       bottom: 100%;
+//       content: "";
+//       height: 0;
+//       left: $spacing-3;
+//       pointer-events: none;
+//       position: absolute;
+//       width: 0;
+//     }
+//     // Item de navegação
+//     .item {
+//       width: 25%;
+//       &:hover,
+//       &:active {
+//         > a,
+//         > button {
+//           background: $color-primary-darken-15;
+//           color: $color-white;
+//           font-weight: 600;
+//         }
+//       }
+//       &:hover {
+//         > .submenu {
+//           display: block;
+//         }
+//       }
+//       .item {
+//         width: 100%;
+//         &:hover,
+//         &:active {
+//           > a,
+//           > button {
+//             background: $color-primary;
+//           }
+//         }
+//       }
+//     }
+//     // Níveis de navegação
+//     .level-1,
+//     .level-2,
+//     .level-3 {
+//       background: $color-gray-1;
+//       bottom: 0;
+//       display: none;
+//       overflow: auto;
+//       padding: $spacing-6 0;
+//       position: absolute;
+//       top: 0;
+//     }
+//     .level-1 {
+//       box-shadow: -2px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
+//       left: 25%;
+//       width: 25%;
+//     }
+//     .level-2,
+//     .level-3 {
+//       box-shadow: -3px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
+//       left: 100%;
+//       width: 100%;
+//     }
+//   }
+//   // Rodape
+//   .page-footer {
+//     // Navegação
+//     .navigation {
+//       border-top: 0;
+//       display: flex;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       &::after {
+//         content: none;
+//       }
+//       // Item de navegação
+//       .item {
+//         border-bottom: 0;
+//         flex: 0 0 16.66667%;
+//         width: auto;
+//         &:hover,
+//         &:active {
+//           > a,
+//           > button {
+//             background: transparent;
+//             font-weight: 800;
+//           }
+//         }
+//         > a,
+//         > button {
+//           display: inline-block;
+//           width: auto;
+//           &:hover {
+//             text-decoration: underline;
+//           }
+//         }
+//         .item {
+//           &:hover,
+//           &:active {
+//             > a,
+//             > button {
+//               font-weight: 500;
+//             }
+//           }
+//         }
+//       }
+//       // Níveis de navegação
+//       .level-1 {
+//         background: transparent;
+//         display: block;
+//         margin: 0;
+//         padding: 0;
+//         position: static;
+//         width: auto;
+//         .item {
+//           &:hover {
+//             .submenu {
+//               display: none;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
 }

@@ -2,7 +2,7 @@
   bottom: 0;
   display: flex;
   position: absolute;
-  right: -8px;
+  right: 0;
   top: 0;
   z-index: 3;
   .field {
@@ -29,13 +29,24 @@
   .close {
     background: transparent;
     border: 0;
+    bottom: 0;
     display: none;
     padding: 0 $spacing-2;
+    position: absolute;
+    right: $spacing-half;
+    top: 0;
   }
   // Busca ativa
   &.is-active {
+    bottom: $spacing-3;
     left: -8px;
+    top: auto;
     .field {
+      box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 100%;
       input {
         display: block;
       }
