@@ -22,21 +22,20 @@
     <form name="uploadForm">
       <div class="br-upload">
         <!-- <input type="file" id="input" multiple onchange="handleFiles(this.files)">-->
-        <input class="upload-input" id="uploadInput" type="file" name="myFiles"
-          onchange="handleFiles(this.files);updateSize();" multiple>
-        <h2 class="upload-titulo"> Arraste e solte o(s) arquivo(s) do seu computador</h2>
+        <input class="upload-input" id="uploadInput" type="file" name="myFiles" multiple>
+        <h2 class="upload-header"> Arraste e solte o(s) arquivo(s) do seu computador</h2>
         <spam class="upload-info"> Os arquivos devem ser no formato PNG, JPG ou PDF e ter no máximo 1GB</spam>
-        <label for="uploadInput" class="upload-add">Adicionar um arquivo do seu computador</label>
+        <label for="uploadInput" class="upload-add br-button is-cancel">Adicionar um arquivo do seu computador</label>
         <p class="upload-size">
-          Arquivos Selecionados: <span id="fileNum">0</span>;<br>
+          Arquivos Selecionados: <span id="fileNum">0</span><br>
           Tamanho Total: <span id="fileSize">0</span>
         </p>
-        <button class="br-button is-cancel" type="button">Voltar</button>
-        <button class="br-button is-primary" type="button">Salvar</button>
       </div>
-      <script src="upload.js"></script>
+      <button class="br-button is-cancel" type="button">Voltar</button>
+      <button class="br-button is-primary" type="button">Salvar</button>
     </form>
   </div>
+  <script src="upload.js"></script>
 </body>
 
 </html>

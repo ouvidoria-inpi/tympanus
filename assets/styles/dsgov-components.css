@@ -3215,32 +3215,69 @@
 /*!
  * divider - 0.2.0 */
 .br-upload {
-  /*
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: $hr-margin;
-  text-transform: uppercase;
-  &::after,
-  &::before {
-    background: $hr-color;
-    content: "";
-    height: 1px;
-    width: 100%;
-  }
-  .content {
-    color: $color;
-    font-size: $hr-text-font-size;
-    font-weight: $hr-text-font-weight;
-    margin: 0;
-    padding: 0 $hr-padding;
-    white-space: nowrap;
-  }
-  */
-  background: url("../../assets/images/components_img/upload/upload-fundo.png") #FFFFFF no-repeat;
+  background: url("../../assets/images/components_img/upload/upload-fundo.png") 32px 24px #ffffff no-repeat;
+  border: 1px solid #fff;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  margin-bottom: 20px;
   min-height: 248px;
-  padding-left: 300px;
+  padding-bottom: 16px;
+  padding-left: 360px;
+  padding-right: 48px;
+}
+
+@media (max-width: 997.98px) {
+  .br-upload {
+    background-position: center 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 180px;
+  }
+}
+
+.br-upload:hover {
+  border: 1px solid #2B74E9;
+}
+.br-upload .upload-header {
+  color: #555555;
+  font-size: 24px;
 }
 .br-upload .upload-input {
   display: none;
+}
+.br-upload .upload-info {
+  color: #155bcb;
+  display: block;
+  font-size: 14px;
+  margin: 16px 0;
+  padding-left: 40px;
+}
+.br-upload .upload-info:before {
+  content: "\f05a";
+  font-family: "Font Awesome 5 Free";
+  font-size: 24px;
+  font-weight: 900;
+  margin-left: -40px;
+  padding-right: 10px;
+  position: absolute;
+}
+.br-upload .upload-add {
+  display: block;
+  margin: 30px 0;
+  padding-left: 30px;
+}
+.br-upload .upload-add:before {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  font-weight: 900;
+  margin-left: -30px;
+  margin-top: 4px;
+  padding-right: 10px;
+  position: absolute;
+}
+.br-upload .upload-size {
+  font-size: 10px;
+  text-align: right;
 }

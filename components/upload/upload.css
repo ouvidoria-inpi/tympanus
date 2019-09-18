@@ -1,35 +1,77 @@
 /*!
  * divider - 0.2.0 */
 .br-upload {
-  /*
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: $hr-margin;
-  text-transform: uppercase;
-  &::after,
-  &::before {
-    background: $hr-color;
-    content: "";
-    height: 1px;
-    width: 100%;
-  }
-  .content {
-    color: $color;
-    font-size: $hr-text-font-size;
-    font-weight: $hr-text-font-weight;
-    margin: 0;
-    padding: 0 $hr-padding;
-    white-space: nowrap;
-  }
-  */
-  background: url("../../assets/images/components_img/upload/upload-fundo.png") #FFFFFF no-repeat;
+  background: url("../../assets/images/components_img/upload/upload-fundo.png") 32px 24px #ffffff no-repeat;
   min-height: 248px;
-  padding-left: 300px;
+  padding-left: 360px;
+  padding-right: 48px;
+  padding-bottom: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border: 1px solid #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 997.98px) {
+  .br-upload {
+    background-position: center 0;
+    padding-left: 16px;
+    padding-top: 180px;
+    padding-right: 16px;
+  }
+}
+
+.br-upload:hover {
+  border: 1px solid #2B74E9;
+}
+
+.br-upload .upload-header {
+  color: #555555;
+  font-size: 24px;
 }
 
 .br-upload .upload-input {
   display: none;
+}
+
+.br-upload .upload-info {
+  color: #155bcb;
+  font-size: 14px;
+  margin: 16px 0;
+  display: block;
+  padding-left: 40px;
+}
+
+.br-upload .upload-info:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f05a";
+  padding-right: 10px;
+  font-size: 24px;
+  position: absolute;
+  margin-left: -40px;
+}
+
+.br-upload .upload-add {
+  padding-left: 30px;
+  margin: 30px 0;
+  display: block;
+}
+
+.br-upload .upload-add:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f067";
+  padding-right: 10px;
+  font-size: 18px;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: -30px;
+}
+
+.br-upload .upload-size {
+  font-size: 10px;
+  text-align: right;
 }
 
 /*# sourceMappingURL=upload.css.map */

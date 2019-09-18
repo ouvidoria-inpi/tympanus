@@ -1,34 +1,63 @@
-@mixin upload($color: $hr-text-color) {
-  /*
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: $hr-margin;
-  text-transform: uppercase;
-  &::after,
-  &::before {
-    background: $hr-color;
-    content: "";
-    height: 1px;
-    width: 100%;
+@mixin upload($color: $upl-text-color) {
+  background: url('../../assets/images/components_img/upload/upload-fundo.png') 32px 24px $color-white no-repeat;
+  min-height: $upl-min-height;
+  padding-left: 360px;
+  padding-right: 48px;
+  padding-bottom: 16px;
+  box-shadow: 0 3px 6px rgba($color-black, 0.16);
+  @include media-breakpoint-down(sm) {
+    background-position: center 0;
+    padding-left: 16px;
+    padding-top: 180px;
+    padding-right: 16px;
   }
-  .content {
-    color: $color;
-    font-size: $hr-text-font-size;
-    font-weight: $hr-text-font-weight;
-    margin: 0;
-    padding: 0 $hr-padding;
-    white-space: nowrap;
-  }
-  */
-  background: url('../../assets/images/components_img/upload/upload-fundo.png') #FFFFFF no-repeat;
-  min-height: 248px;
-  padding-left: 300px;
-  .upload-titulo {
-    
+  
+  border: 1px solid #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+  &:hover { border: 1px solid #2B74E9;}
+
+
+  .upload-header {
+    color: $upl-header-color;
+    font-size: $upl-header-font-size;
   }
   .upload-input {
     display: none;
   }
-
+  .upload-info {
+    color: $color-info;
+    font-size: $upl-text-font-size;
+    margin: 16px 0;
+    display: block;
+    padding-left: 40px;
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f05a";
+      padding-right: 10px;
+      font-size: 24px;
+      position: absolute;
+      margin-left: -40px;
+    }
+  }
+  .upload-add{
+    padding-left: 30px;
+    margin: 30px 0;
+    display: block;
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f067";
+      padding-right: 10px;
+      font-size: 18px;
+      position: absolute;
+      margin-top:4px;
+      margin-left: -30px;
+    }
+  }
+  .upload-size{
+    font-size: 10px;
+    text-align: right;
+  }
 }
