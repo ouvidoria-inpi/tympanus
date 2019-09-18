@@ -1,11 +1,28 @@
-dismissAlert();
+class BRAlert {
+  
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    this._setBehavior();
+  }
 
-function dismissAlert() {
-  let alerts = document.getElementsByClassName('br-alert');
-  for (let alert of alerts) {
-    let dismissAlerts = alert.querySelectorAll('[data-dismiss="alert"]');
-    for (let dismissAlert of dismissAlerts) {
-      dismissAlert.addEventListener('click', () => alert.remove());
-    }  
+  _setBehavior() {
+    for (let button of this.component.querySelectorAll('[data-dismiss="alert"]')) {
+      button.addEventListener('click', () => {
+        this._dismiss(this.component);
+      });
+    }
+  }
+
+  _dismiss(component) {
+    component.parentNode.removeChild(component);
   }
 }
+
+let alertList = [];
+
+window.onload = (function() {
+  for (let brAlert of window.document.querySelectorAll('.br-alert')) {
+    alertList.push(new BRAlert('br-alert', brAlert));
+  }
+})();
