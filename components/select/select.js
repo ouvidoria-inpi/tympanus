@@ -1,95 +1,105 @@
 class BRSelect {
 
-  constructor(name) {
+  constructor(name, component) {
     this.name = name;
-    this.brSelects = this.bringAllBrSelects();
-    this.replaceDefaultSelect();
+    this.component = component;
+    this._setUpBrSelect();
   }
 
-  bringAllBrSelects() {
-    return window.document.getElementsByClassName(this.name);
-  }
-
-  replaceDefaultSelect() {
-    for (let brSelect of this.brSelects) {
-     for (let defaultSelect of brSelect.getElementsByTagName('select')) {
-       this.buildCustomSelect(brSelect, defaultSelect)
-     }
+  _setUpBrSelect() {
+    for (let select of this.component.querySelectorAll('select')) {
+      this.component.appendChild(this._buildSelectionField(select));
+      this.component.appendChild(this._buildOptionsList(select));
     }
+    this._setBehavior();
   }
 
-  buildCustomSelect(brSelect, defaultSelect) {
-    let selectionField = this.createSelectionField(defaultSelect);
-    let optionsList = this.createOptionsList(defaultSelect);
-    brSelect.appendChild(selectionField);
-    brSelect.appendChild(optionsList);
-  }
-
-  createSelectionField(defaultSelect) {
+  _buildSelectionField(select) {
     let selectionField = window.document.createElement('button');
     selectionField.setAttribute('class', 'select-selected unselected');
-    if (defaultSelect.disabled) {
+    if (select.disabled) {
       selectionField.setAttribute('disabled', 'disabled');
     }
-    let optionText = window.document.createElement('span');
-    optionText.innerHTML = defaultSelect.options[defaultSelect.selectedIndex].innerHTML;
-    selectionField.appendChild(optionText);
-    let icon = window.document.createElement('i');
-    icon.setAttribute('class', 'fas fa-chevron-down');
-    selectionField.appendChild(icon);
-    console.log(icon);
-    let _this = this;
-    selectionField.addEventListener('click', function(event) {
-      event.stopPropagation();
-      this.nextElementSibling.classList.toggle('select-hide');
-      _this.closeOthersSelects(this);
-    });
-    window.document.addEventListener('click', function() {
-      _this.closeOthersSelects();
-    });
+    selectionField.appendChild(this._buildOptionItem(select.options[select.selectedIndex].innerHTML));
+    selectionField.appendChild(this._buildIcon())
     return selectionField;
   }
 
-  createOptionsList(defaultSelect) {
+  _buildOptionItem(text) {
+    let optionItem = window.document.createElement('span');
+    optionItem.innerHTML = text;
+    return optionItem;
+  }
+
+  _buildIcon() {
+    let icon = window.document.createElement('i');
+    icon.setAttribute('class', 'fas fa-chevron-down')
+    return icon;
+  }
+
+  _buildOptionsList(select) {
     let optionsList = window.document.createElement('div');
     optionsList.setAttribute('class', 'select-items select-hide');
-    for (let option of defaultSelect.options) {
-      let optionItem = window.document.createElement('button');
-      let optionText = window.document.createElement('span');
-      optionText.innerHTML = option.innerHTML;
-      optionItem.appendChild(optionText);
-      optionItem.addEventListener('click', function() {
-        for (let i = 0; i < defaultSelect.length; i++) {
-          if (defaultSelect.options[i].innerHTML === this.firstChild.innerHTML) {
-            defaultSelect.selectedIndex = i;
-            this.parentNode.previousSibling.firstChild.innerHTML = this.firstChild.innerHTML;
-            this.parentNode.previousSibling.setAttribute('class', 'select-selected');
-            this.parentNode.classList.add('select-hide')
-            for (let item of this.parentNode.getElementsByClassName('same-as-selected')) {
-              item.removeAttribute('class');
-            }
-            this.setAttribute('class', 'same-as-selected');
-          }
-        }
-      })
-      optionsList.appendChild(optionItem);
+    for (let option of select.options) {
+      let optionField = window.document.createElement('button');
+      optionField.appendChild(this._buildOptionItem(option.innerHTML));
+      optionsList.appendChild(optionField);      
     }
     return optionsList;
   }
 
-  closeOthersSelects(element) {
-    for (let brSelect of this.brSelects) {
-      for (let selectionField of brSelect.getElementsByClassName('select-selected')) {
-        if (element !== selectionField) {
-          for (let listOptions of brSelect.getElementsByClassName('select-items')) {
-            listOptions.classList.add('select-hide');
+  _setBehavior() {
+    for (let itemSelected of this.component.querySelectorAll('.select-selected')) {
+      itemSelected.addEventListener('click', (event) => {
+        event.stopPropagation();
+        itemSelected.nextElementSibling.classList.toggle('select-hide')
+        this._closeSelects(itemSelected);
+        window.document.addEventListener('click', () => {
+          this._closeSelects();
+        });
+      });
+    }
+    for (let item of this.component.querySelectorAll('.select-items button')) {
+      item.addEventListener('click', (event) => {
+        for (let select of this.component.querySelectorAll('select')) {
+          for (let [index, option] of Array.from(select.options).entries()) {
+            if (option.innerHTML === item.firstChild.innerHTML) {
+              select.selectedIndex = index;
+              item.parentNode.previousSibling.firstChild.innerHTML = item.firstChild.innerHTML;
+              item.parentNode.previousSibling.setAttribute('class', 'select-selected');
+              item.parentNode.classList.add('select-hide');
+              for (let optionItem of item.parentNode.querySelectorAll('button')) {
+                if (optionItem === item) {
+                  optionItem.setAttribute('class', 'same-as-selected');
+                } else {
+                  optionItem.removeAttribute('class');
+                }
+              }
+            }
           }
-        }  
+        }
+      });
+    }
+  }
+
+  _closeSelects(element) {
+    for (let brSelect of window.document.querySelectorAll('.br-select')) {
+      for (let itemSelected of brSelect.querySelectorAll('.select-selected')) {
+        if (itemSelected !== element) {
+          for (let optionsList of brSelect.querySelectorAll('.select-items')) {
+            optionsList.classList.add('select-hide');
+            window.document.removeEventListener('click', this._closeSelects);
+          }
+        }
       }
     }
-    let _this = this;
-    window.document.removeEventListener('click', _this.closeOthersSelects)
   }
 }
 
-window.onload = new BRSelect('br-select');
+let selectList = [];
+
+window.onload = (function() {
+  for (let brSelect of window.document.querySelectorAll('.br-select')) {
+    selectList.push(new BRSelect('br-select', brSelect));
+  }
+})();
