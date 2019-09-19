@@ -1,23 +1,20 @@
 @mixin upload($color: $upl-text-color) {
-  background: url('../../assets/images/components_img/upload/upload-fundo.png') 32px 24px $color-white no-repeat;
-  min-height: $upl-min-height;
-  padding-left: 360px;
-  padding-right: 48px;
-  padding-bottom: 16px;
-  box-shadow: 0 3px 6px rgba($color-black, 0.16);
   @include media-breakpoint-down(sm) {
     background-position: center 0;
     padding-left: 16px;
-    padding-top: 180px;
     padding-right: 16px;
+    padding-top: 180px;
   }
-  
-  border: 1px solid #fff;
-  cursor: pointer;
+  background: url("../../assets/images/components_img/upload/upload-fundo.png") 32px 24px $color-white no-repeat;
+  border: 1px solid $color-white;
+  box-shadow: 0 3px 6px $color-gray-3;
   margin-bottom: 20px;
-  &:hover { border: 1px solid #2B74E9;}
-
-
+  min-height: $upl-min-height;
+  padding-bottom: 16px;
+  padding-left: 360px;
+  padding-right: 48px;
+  padding-top: 32px;
+  &:hover { border: 1px solid $color-primary-lighten-25;}
   .upload-header {
     color: $upl-header-color;
     font-size: $upl-header-font-size;
@@ -27,66 +24,66 @@
   }
   .upload-info {
     color: $color-info;
+    display: block;
     font-size: $upl-text-font-size;
     margin: 16px 0;
-    display: block;
     padding-left: 40px;
-    &:before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
+    &::before {
       content: "\f05a";
-      padding-right: 10px;
+      font-family: "Font Awesome 5 Free";
       font-size: 24px;
-      position: absolute;
+      font-weight: 900;
       margin-left: -40px;
+      padding-right: 10px;
+      position: absolute;
     }
   }
   .upload-file-list {
-
     ul {
       padding-left: 0;
     }
     li {
-      list-style: none;
-      color: #155BCB;
-      border-bottom: 1px solid #ccc;
-      padding: 8px 0 8px 8px;
+      border-bottom: 1px solid $color-gray-3;
+      color: $color-info;
       font-size: 14px;
-      width: 100%;
+      list-style: none;
+      padding: 8px 0 8px 8px;
       position: relative;
+      width: 100%;
     }
     span {
+      display: inline-block;
+      overflow: hidden;
+      padding-right: 24px;
       text-overflow: ellipsis;
       white-space: nowrap;
       width: 100%;
-      padding-right: 24px;
-      display: inline-block;
-      overflow: hidden;
     }
     i {
-      position: absolute;
+      cursor: pointer;
       line-height: 24px;
+      position: absolute;
       right: 8px;
     }
   }
-  .upload-add{
-    padding-left: 30px;
-    margin: 30px 0;
+  .upload-add {
     display: block;
-    &:before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
+    margin: 30px 0;
+    padding-left: 30px;
+    &::before {
       content: "\f067";
-      padding-right: 10px;
+      font-family: "Font Awesome 5 Free";
       font-size: 18px;
-      position: absolute;
-      margin-top:4px;
+      font-weight: 900;
       margin-left: -30px;
+      margin-top: 4px;
+      padding-right: 10px;
+      position: absolute;
     }
   }
-  .upload-size{
-    visibility: hidden;
+  .upload-size {
     font-size: 10px;
     text-align: right;
+    visibility: hidden;
   }
 }

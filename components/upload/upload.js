@@ -26,7 +26,6 @@ function handleFiles(files) {
 
   info.style.display = 'none';
   header.innerHTML = 'Arquivos Selecionados';
-  //console.log (fileArray);
   updateFileList();
 }
 
@@ -62,7 +61,6 @@ function removeFile(index, e) {
   e.stopPropagation();
   e.preventDefault();
   fileArray.splice(index,1);
-  //console.log (fileArray);
   updateFileList();
 }
 
