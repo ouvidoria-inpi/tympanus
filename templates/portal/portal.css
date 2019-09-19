@@ -236,7 +236,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .search .field {
@@ -599,14 +599,23 @@
   list-style: none;
 }
 
-.navigation .wrapper .container {
-  border-top: 1px solid #ffcd07;
+.navigation .wrapper {
   background: #ffffff;
+  border-top: 1px solid #ffcd07;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   display: none;
   flex-direction: column;
-  height: calc(100vh - 45px);
+  min-height: calc(100vh - 45px);
+  left: 0;
   position: absolute;
+  right: 0;
   z-index: 1;
+}
+
+.navigation .wrapper .d-flex .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .navigation .logo {
@@ -630,8 +639,8 @@
 .navigation .items {
   background: #ededed;
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
   justify-content: space-between;
   margin-left: -8px;
   margin-right: -8px;
@@ -651,13 +660,22 @@
   max-width: 64px;
 }
 
-.navigation .govbr .logo:hover img {
+.navigation .govbr .item:hover img, .navigation .govbr .item:focus img, .navigation .govbr .item:active img {
   filter: invert(0);
 }
 
 .navigation .item {
   margin: 0;
   padding: 0;
+}
+
+.navigation .item:hover > a,
+.navigation .item:hover > button, .navigation .item:focus > a,
+.navigation .item:focus > button, .navigation .item:active > a,
+.navigation .item:active > button {
+  background: #0c326f;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .navigation .item a,
@@ -675,11 +693,11 @@
   width: 100%;
 }
 
-.navigation .item a:hover,
-.navigation .item button:hover {
-  background: #0c326f;
-  color: #ffffff;
-  font-weight: 600;
+.navigation .item .item:hover a,
+.navigation .item .item:hover button, .navigation .item .item:focus a,
+.navigation .item .item:focus button, .navigation .item .item:active a,
+.navigation .item .item:active button {
+  background: #1351b4;
 }
 
 .navigation .level-1,
@@ -706,8 +724,8 @@
 }
 
 .navigation .quicklinks .language .trigger {
-  font-size: 14px;
   color: #333333;
+  font-size: 14px;
 }
 
 .navigation .quicklinks .contrast {
@@ -724,9 +742,11 @@
   display: block;
   font-weight: 700;
   margin: 8px 0;
+  text-transform: uppercase;
 }
 
 .navigation .links a {
+  align-items: center;
   display: flex;
   padding: 4px 0;
 }
@@ -735,7 +755,7 @@
   margin-left: 8px;
 }
 
-.navigation.is-active .wrapper .container {
+.navigation.is-active .wrapper {
   display: flex;
 }
 
@@ -882,6 +902,15 @@
   .search {
     bottom: 45px;
   }
+  .navigation .wrapper {
+    height: auto;
+  }
+  .navigation .logo .name {
+    display: none;
+  }
+  .navigation .logo .description {
+    display: none;
+  }
 }
 
 @media (min-width: 998px) {
@@ -902,11 +931,15 @@
     max-width: 150px;
   }
   .logo .name {
+    bottom: 16px;
     font-size: 24px;
+    margin-bottom: 2px;
     margin-left: 40px;
+    position: absolute;
   }
   .logo .description {
     font-size: 18px;
+    position: absolute;
   }
   .quicklinks {
     margin-right: 0;
@@ -938,6 +971,9 @@
   .search .field button {
     background: #ededed;
   }
+  .search .field button:hover {
+    background: #ededed;
+  }
   .search.is-active {
     left: 12px;
   }
@@ -947,6 +983,54 @@
   }
   .search.is-active .close {
     position: static;
+  }
+  .navigation .wrapper {
+    background: #f8f8f8;
+  }
+  .navigation .logo {
+    display: none;
+  }
+  .navigation .items {
+    position: relative;
+  }
+  .navigation .items .local,
+  .navigation .items .govbr {
+    padding: 16px 0;
+    border-right: 1px solid #cccccc;
+    width: 25%;
+  }
+  .navigation .item:hover > .level-1,
+  .navigation .item:hover > .level-2,
+  .navigation .item:hover > .level-3, .navigation .item:focus > .level-1,
+  .navigation .item:focus > .level-2,
+  .navigation .item:focus > .level-3 {
+    display: block;
+  }
+  .navigation .level-1,
+  .navigation .level-2,
+  .navigation .level-3 {
+    bottom: 0;
+    overflow: auto;
+    padding: 16px 0;
+    position: absolute;
+    top: 0;
+  }
+  .navigation .level-1 {
+    left: 25%;
+    width: 25%;
+  }
+  .navigation .quicklinks {
+    display: none;
+  }
+  .navigation .links span {
+    margin-top: 0;
+  }
+  .navigation .links a {
+    display: inline-flex;
+    margin-right: 32px;
+  }
+  .navigation.is-active .wrapper .container {
+    display: block;
   }
   .page-footer .navigation {
     border-top: 0;

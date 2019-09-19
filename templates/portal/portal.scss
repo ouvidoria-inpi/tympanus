@@ -249,7 +249,7 @@ $logo-desktop: 150px;
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   .field {
     display: inline-flex;
     flex: 1;
@@ -599,14 +599,22 @@ $logo-desktop: 150px;
   }
   // Container da navegação
   .wrapper {
-    .container {
-      border-top: 1px solid $color-warning;
-      background: $color-white;
-      display: none;
-      flex-direction: column;
-      height: calc(100vh - #{$main-bar-mobile});
-      position: absolute;
-      z-index: 1;
+    background: $color-white;
+    border-top: 1px solid $color-warning;
+    box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+    display: none;
+    flex-direction: column;
+    min-height: calc(100vh - #{$main-bar-mobile});
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    .d-flex {
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
   }
   // Logo
@@ -629,8 +637,8 @@ $logo-desktop: 150px;
   .items {
     background: $color-gray-2;
     display: flex;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
     justify-content: space-between;
     margin-left: - $spacing-1;
     margin-right: - $spacing-1;
@@ -645,7 +653,11 @@ $logo-desktop: 150px;
         filter: invert(70%);
         max-width: 64px;
       }
-      &:hover {
+    }
+    .item {
+      &:hover,
+      &:focus,
+      &:active {
         img {
           filter: invert(0);
         }
@@ -656,6 +668,16 @@ $logo-desktop: 150px;
   .item {
     margin: 0;
     padding: 0;
+    &:hover,
+    &:focus,
+    &:active {
+      > a,
+      > button {
+        background: $color-primary-darken-15;
+        color: $color-white;
+        font-weight: 600;
+      }
+    }
     a,
     button {
       align-items: center;
@@ -669,10 +691,15 @@ $logo-desktop: 150px;
       text-align: left;
       text-decoration: none;
       width: 100%;
-      &:hover {
-        background: $color-primary-darken-15;
-        color: $color-white;
-        font-weight: 600;
+    }
+    .item {
+      &:hover,
+      &:focus,
+      &:active {
+        a,
+        button {
+          background: $color-primary;
+        }
       }
     }
   }
@@ -698,8 +725,8 @@ $logo-desktop: 150px;
     .language {
       display: inline-block;
       .trigger {
-        font-size: 14px;
         color: $color-gray-7;
+        font-size: 14px;
       }
     }
     // Altocontraste
@@ -716,8 +743,10 @@ $logo-desktop: 150px;
       display: block;
       font-weight: 700;
       margin: $spacing-1 0;
+      text-transform: uppercase;
     }
     a {
+      align-items: center;
       display: flex;
       padding: $spacing-half 0;
       [class*="fa-"] {
@@ -729,9 +758,7 @@ $logo-desktop: 150px;
   &.is-active {
     // Container da navegação
     .wrapper {
-      .container {
-        display: flex;
-      }
+      display: flex;
     }
   }
 }
@@ -876,44 +903,22 @@ $logo-desktop: 150px;
   .search {
     bottom: $main-bar-mobile;
   }
-//   // Links rápidos de acessibilidade e idiomas
-//   .quicklinks {
-//     border-top: 0;
-//     display: flex;
-//     margin-left: auto;
-//     margin-right: 24px;
-//   }
-//   // Container da navegação
-//   .navigation-wrapper {
-//     // Links rápidos de acessibilidade e idiomas
-//     .quicklinks {
-//       display: none;
-//     }
-//   }
-//   // Redes sociais
-//   .social-network {
-//     border-top: 1px solid $color-gray-3;
-//     padding-bottom: 0;
-//     text-align: right;
-//     span {
-//       display: inline;
-//     }
-//   }
-//   // Rodape
-//   .page-footer {
-//     // Redes sociais
-//     .social-network {
-//       float: left;
-//       margin-top: $spacing-8;
-//       padding-top: 0;
-//     }
-//     // Marcas do governo
-//     #footer-brasil {
-//       #wrapper-footer-brasil {
-//         justify-content: flex-end;
-//       }
-//     }
-//   }
+  // Navegação
+  .navigation {
+    // Container da navegação
+    .wrapper {
+      height: auto;
+    }
+    // Logo
+    .logo {
+      .name {
+        display: none;
+      }
+      .description {
+        display: none;
+      }
+    }
+  }
 }
 
 // Versao desktop
@@ -937,11 +942,15 @@ $logo-desktop: 150px;
       max-width: $logo-desktop;
     }
     .name {
+      bottom: $spacing-3;
       font-size: 24px;
+      margin-bottom: 2px;
       margin-left: $spacing-8;
+      position: absolute;
     }
     .description {
       font-size: 18px;
+      position: absolute;
     }
   }
   // Links rápidos de acessibilidade e idioma
@@ -981,6 +990,9 @@ $logo-desktop: 150px;
       }
       button {
         background: $color-gray-2;
+        &:hover {
+          background: $color-gray-2;
+        }
       }
     }
     // Busca ativa
@@ -992,6 +1004,74 @@ $logo-desktop: 150px;
       }
       .close {
         position: static;
+      }
+    }
+  }
+  // Navegação
+  .navigation {
+    // Container da navegação
+    .wrapper {
+      background: $color-gray-1;
+    }
+    // Logo
+    .logo {
+      display: none;
+    }
+    // Menu de navegação
+    .items {
+      position: relative;
+      .local,
+      .govbr {
+        padding: $spacing-3 0;
+        border-right: 1px solid $color-gray-3;
+        width: 25%;
+      }
+    }
+    // Item de navegação
+    .item {
+      &:hover,
+      &:focus {
+        > .level-1,
+        > .level-2,
+        > .level-3 {
+          display: block;
+        }
+      }
+    }
+    // Níveis de navegação
+    .level-1,
+    .level-2,
+    .level-3 {
+      bottom: 0;
+      overflow: auto;
+      padding: $spacing-3 0;
+      position: absolute;
+      top: 0;
+    }
+    .level-1 {
+      left: 25%;
+      width: 25%;
+    }
+    // Links rápidos
+    .quicklinks {
+      display: none;
+    }
+    // Links úteis
+    .links {
+      span {
+        margin-top: 0;
+      }
+      a {
+        display: inline-flex;
+        margin-right: $spacing-6;
+      }
+    }
+    // Navegação ativa
+    &.is-active {
+      .wrapper {
+        .container {
+          display: block;
+        }
       }
     }
   }
@@ -1056,47 +1136,6 @@ $logo-desktop: 150px;
       }
     }
   }
-//   // Barra principal do topo
-//   .header-bar {
-//     // Links rápidos de acessibilidade e idiomas
-//     .quicklinks {
-//       margin-right: 270px;
-//     }
-//     // Seleção de idioma
-//     .language {
-//       z-index: 5;
-//     }
-//     // Busca do portal
-//     .br-search {
-//       height: 68px;
-//       z-index: 5;
-//       .field {
-//         input {
-//           display: block;
-//         }
-//         button {
-//           background: $color-gray-2;
-//         }
-//       }
-//     }
-//   }
-//   // Canvas overlay
-//   .canvas {
-//     display: none !important;
-//   }
-//   // Container da navegação
-//   .navigation-wrapper {
-//     border-top: 1px solid $color-warning;
-//     box-shadow: 0 3px 6px rgba($color-black, 0.32); // sass-lint:disable-line no-color-literals
-//     top: auto;
-//     width: 100%;
-//     .container {
-//       height: auto;
-//     }
-//     .header-bar {
-//       display: none;
-//     }
-//   }
 //   // Navegação
 //   .navigation {
 //     border-top: 0;
