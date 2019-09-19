@@ -3262,12 +3262,6 @@
   padding-right: 10px;
   position: absolute;
 }
-.br-upload .upload-file-list {
-  /*
-    max-height: 200px;
-    overflow-y: auto;
-    */
-}
 .br-upload .upload-file-list ul {
   padding-left: 0;
 }
@@ -3311,4 +3305,5 @@
 .br-upload .upload-size {
   font-size: 10px;
   text-align: right;
+  visibility: hidden;
 }

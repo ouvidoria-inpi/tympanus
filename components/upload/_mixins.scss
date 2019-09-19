@@ -42,10 +42,7 @@
     }
   }
   .upload-file-list {
-    /*
-    max-height: 200px;
-    overflow-y: auto;
-    */
+
     ul {
       padding-left: 0;
     }
@@ -88,6 +85,7 @@
     }
   }
   .upload-size{
+    visibility: hidden;
     font-size: 10px;
     text-align: right;
   }
