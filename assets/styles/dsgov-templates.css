@@ -153,7 +153,7 @@
 }
 
 .language {
-  z-index: 2;
+  z-index: 3;
 }
 .language .trigger {
   align-items: center;
@@ -201,6 +201,7 @@
   -ms-flex-align: center;
   margin-left: auto;
   margin-right: 48px;
+  position: relative;
 }
 .quicklinks .login {
   align-items: center;
@@ -341,6 +342,16 @@
   display: block;
 }
 
+.system-bar {
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  height: 60px;
+}
+
+.timeout {
+  display: none;
+}
 .timeout .session {
   font-size: 12px;
   font-weight: 600;
@@ -350,25 +361,13 @@
   font-weight: 500;
 }
 
-.system-bar {
+.user-bar {
   align-items: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  height: 60px;
-}
-.system-bar .timeout {
-  text-align: right;
-}
-
-.user {
-  align-items: center;
-  -webkit-box-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-align: center;
 }
-.user .logout {
+.user-bar .logout {
   background: transparent;
   border: 1px solid #1351b4;
   border-radius: 100px;
@@ -383,7 +382,7 @@
   padding: 0 24px;
   text-align: center;
 }
-.user .logout:hover {
+.user-bar .logout:hover {
   background: #2670e8;
   border-color: #2670e8;
   color: #ffffff;
@@ -429,7 +428,7 @@
 }
 
 .configs {
-  margin-left: 4px;
+  margin-left: 8px;
 }
 .configs .trigger {
   background: #ededed;
@@ -660,6 +659,9 @@
   position: static;
   text-align: left;
 }
+.navigation .logo a {
+  display: none;
+}
 .navigation .logo .name {
   display: block;
 }
@@ -753,6 +755,9 @@
 }
 .navigation .quicklinks {
   margin: 12px 8px;
+}
+.navigation .quicklinks .login {
+  display: none;
 }
 .navigation .quicklinks .legislation {
   color: #333333;
@@ -935,13 +940,17 @@
   }
 
   .navigation .wrapper {
-    height: auto;
+    min-height: 0;
   }
   .navigation .logo .name {
     display: none;
   }
   .navigation .logo .description {
     display: none;
+  }
+  .navigation .items .local,
+  .navigation .items .govbr {
+    padding: 16px 0;
   }
 }
 
@@ -1022,6 +1031,12 @@
     position: static;
   }
 
+  .user-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .navigation .wrapper {
     background: #f8f8f8;
   }
@@ -1034,7 +1049,6 @@
   .navigation .items .local,
   .navigation .items .govbr {
     border-right: 1px solid #cccccc;
-    padding: 16px 0;
     width: 25%;
   }
   .navigation .item:hover > .level-1,
@@ -1135,13 +1149,9 @@
 .template-system .page-footer {
   background: transparent;
   border-bottom: 6px solid #1351b4;
-  position: relative;
 }
 .template-system .page-footer img {
-  bottom: 100%;
-  margin: 0 8px 8px 0;
-  position: absolute;
-  right: 0;
+  margin-bottom: 8px;
 }
 
 .result-list {

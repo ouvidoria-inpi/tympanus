@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
   <link rel="stylesheet" href="../../assets/styles/dsgov-components.min.css">
   <link rel="stylesheet" href="../../assets/styles/dsgov-templates.min.css">
-  <link rel="stylesheet" href="../../node_modules/flag-icon-css/css/flag-icon.min.css">
   <!-- Ícones fontawesome -->
   <script src="../../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
 </head>
@@ -94,7 +93,7 @@
       </div>
     </div>
   </header>
-  <!-- Conteúdo principal -->
+  <!-- Wrapper principal -->
   <div class="page-wrapper">
     <!-- Menu de navegação -->
     <nav id="navigation" class="navigation">
@@ -102,7 +101,7 @@
         <div class="bg-gray-2 d-flex flex-fill">
           <div class="container">
             <!-- Logo -->
-            <div class="logo"></div>
+            <div class="nav-logo"></div>
             <!-- Menu de navegação -->
             <div class="items">
               <!-- Navegação local -->
@@ -207,34 +206,7 @@
         </div>
         <div class="container">
           <!-- Links rápidos -->
-          <div class="quicklinks">
-            <!-- Legislação -->
-            <a href="" class="legislation">Legislação</a>
-            <!-- Idioma -->
-            <div class="language dropdown">
-              <button class="trigger" type="button">
-                <span class="name">Português</span>
-                <i class="fas fa-chevron-down arrow"></i>
-              </button>
-              <div class="menu">
-                <div class="title">Idioma/Language</div>
-                <button class="item is-active" type="button">
-                  <span class="name">Português</span>
-                </button>
-                <button class="item" type="button">
-                  <span class="name">English</span>
-                </button>
-                <button class="item" type="button">
-                  <span class="name">Español</span>
-                </button>
-              </div>
-            </div>
-            <!-- Altocontraste -->
-            <a href="" id="contrast" class="contrast" accesskey="6">
-              <i class="fas fa-adjust fa-lg"></i>
-              <span class="sr-only">Alto contraste</span>
-            </a>
-          </div>
+          <div class="nav-quicklinks"></div>
           <!-- Links úteis e redes sociais -->
           <div class="row">
             <!-- Links úteis -->
@@ -284,7 +256,7 @@
       </div>
     </nav>
     <!-- Breadcrumbs -->
-    <aside class="">
+    <aside>
       <div class="container">
         <ul class="br-breadcrumb pt-3">
           <li class="home">
@@ -453,75 +425,27 @@
   <!-- Script da barra de governo -->
   <!-- <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script> -->
   <script>
-    // Logo
-    const logoName = document.querySelector('.logo .name')
-    const logoDescription = document.querySelector('.logo .description')
-
-    // Classe para ativar elementos e componentes
-    const active = "is-active"
-
-    function toogleActive(element) {
-      element.classList.toggle(active)
-    }
-
-    // Menu dropdown
-    const dropdown = document.querySelectorAll('.dropdown')
-
-    for (drop of dropdown) {
-      let trigger = drop.querySelector('.trigger')
-      let menu = drop.querySelector('.menu')
-
-      trigger.addEventListener('click', function () {
-        toogleActive(menu)
-      })
-    }
+    // Clonáveis
+    const logo = document.querySelector('.logo')
+    const quicklinks = document.querySelector('.quicklinks')
 
     // Navegação
     const navigationTrigger = document.querySelector('.menu-hamburger')
     const navigation = document.querySelector('#navigation')
 
-    const navLogo = navigation.querySelector('.logo')
+    const navLogo = navigation.querySelector('.nav-logo')
+    const navQuicklinks = navigation.querySelector('.nav-quicklinks')
+
     const navItems = navigation.querySelectorAll('.item')
     const navArrowForward = 'fas fa-chevron-right'
     const navArrowBack = 'fas fa-chevron-left'
 
-    function resetNavLogo() {
-      // Limpa o elemento
-      navLogo.innerHTML = ''
-      // Setar logo original
-      navLogo.appendChild(logoDescription.cloneNode(true))
-      navLogo.appendChild(logoName.cloneNode(true))
+    function navClones() {
+      navLogo.appendChild(logo.cloneNode(true))
+      navQuicklinks.appendChild(quicklinks.cloneNode(true))
     }
 
-    // function setNavLogo(navParentText) {
-    //   // Botão de voltar
-    //   let navBackButton = document.createElement('button')
-    //   navBackButton.appendChild(navParentText)
-
-    //   // Pai atual
-    //   let navParent = document.createElement('span')
-    //   navParent.innerText(navParentText)
-
-    //   // Limpa o elemento
-    //   navLogo.innerHTML = ''
-
-    //   // Setar novo logo
-    //   navLogo.appendChild(navBackButton)
-    //   navLogo.appendChild(navParent)
-
-    //   navBackButton.addEventListener('click', function() {
-    //     resetNavLogo()
-    //   })
-    // }
-
-    // function includeIcon(tagType, icon) {
-    //   let iconElement = document.createElement(tagType)
-    //   iconElement.setAttribute('class', icon)
-
-    //   iconElement.appendChild(iconElement)
-    // }
-
-    resetNavLogo()
+    navClones()
 
     for (item of navItems) {
       if (item.childElementCount > 1) {
@@ -544,6 +468,25 @@
     navigationTrigger.addEventListener('click', function () {
       toogleActive(navigation)
     })
+
+    // Classe para ativar elementos e componentes
+    const active = "is-active"
+
+    function toogleActive(element) {
+      element.classList.toggle(active)
+    }
+
+    // Menu dropdown
+    const dropdown = document.querySelectorAll('.dropdown')
+
+    for (drop of dropdown) {
+      let trigger = drop.querySelector('.trigger')
+      let menu = drop.querySelector('.menu')
+
+      trigger.addEventListener('click', function () {
+        toogleActive(menu)
+      })
+    }
 
     // Busca
     const search = document.querySelector('.search')

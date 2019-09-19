@@ -143,7 +143,7 @@
 }
 
 .language {
-  z-index: 2;
+  z-index: 3;
 }
 
 .language .trigger {
@@ -189,6 +189,7 @@
   display: flex;
   margin-left: auto;
   margin-right: 48px;
+  position: relative;
 }
 
 .quicklinks .login {
@@ -306,6 +307,15 @@
   display: block;
 }
 
+.system-bar {
+  align-items: center;
+  height: 60px;
+}
+
+.timeout {
+  display: none;
+}
+
 .timeout .session {
   font-size: 12px;
   font-weight: 600;
@@ -316,21 +326,12 @@
   font-weight: 500;
 }
 
-.system-bar {
+.user-bar {
   align-items: center;
-  height: 60px;
+  display: none;
 }
 
-.system-bar .timeout {
-  text-align: right;
-}
-
-.user {
-  align-items: center;
-  display: flex;
-}
-
-.user .logout {
+.user-bar .logout {
   background: transparent;
   border: 1px solid #1351b4;
   border-radius: 100px;
@@ -344,7 +345,7 @@
   text-align: center;
 }
 
-.user .logout:hover {
+.user-bar .logout:hover {
   background: #2670e8;
   border-color: #2670e8;
   color: #ffffff;
@@ -387,7 +388,7 @@
 }
 
 .configs {
-  margin-left: 4px;
+  margin-left: 8px;
 }
 
 .configs .trigger {
@@ -628,6 +629,10 @@
   text-align: left;
 }
 
+.navigation .logo a {
+  display: none;
+}
+
 .navigation .logo .name {
   display: block;
 }
@@ -710,6 +715,10 @@
 
 .navigation .quicklinks {
   margin: 12px 8px;
+}
+
+.navigation .quicklinks .login {
+  display: none;
 }
 
 .navigation .quicklinks .legislation {
@@ -903,13 +912,17 @@
     bottom: 45px;
   }
   .navigation .wrapper {
-    height: auto;
+    min-height: 0;
   }
   .navigation .logo .name {
     display: none;
   }
   .navigation .logo .description {
     display: none;
+  }
+  .navigation .items .local,
+  .navigation .items .govbr {
+    padding: 16px 0;
   }
 }
 
@@ -984,6 +997,9 @@
   .search.is-active .close {
     position: static;
   }
+  .user-bar {
+    display: flex;
+  }
   .navigation .wrapper {
     background: #f8f8f8;
   }
@@ -996,7 +1012,6 @@
   .navigation .items .local,
   .navigation .items .govbr {
     border-right: 1px solid #cccccc;
-    padding: 16px 0;
     width: 25%;
   }
   .navigation .item:hover > .level-1,

@@ -19,68 +19,26 @@
   <ul id="skip-menu" class="skip-menu">
     <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
     <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
-    <li><a accesskey="3" href="#footer-brasil">Ir para o rodapé</a></li>
+    <li><a accesskey="3" href="#footer">Ir para o rodapé</a></li>
   </ul>
-  <!-- Barra de governo -->
-  <div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
-    <ul id="menu-barra-temp" style="list-style:none;">
-      <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED">
-        <a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do
-          Governo Brasileiro</a>
-      </li>
-    </ul>
-  </div>
   <!-- Cabeçalho da página -->
   <header id="header" class="page-header">
-    <!-- Cor do topo -->
-    <div class="bg-gray-2">
+    <!-- Sombra do topo -->
+    <div class="shadow-bottom">
       <div class="container-fluid">
         <!-- Barra principal -->
-        <div class="header-bar">
-          <!-- Logo e menu sanduiche -->
-          <div class="row align-items-center">
-            <!-- Menu sanduiche -->
-            <div class="col-auto pr-0">
-              <button class="menu-hamburger" type="button">
-                <i class="fa fa-bars"></i>
-              </button>
-            </div>
-            <!-- Logo -->
-            <div class="col logo">
-              <a id="logo" href="">
-                <span class="name">Logo/Nome</span>
-              </a>
-              <span class="description">Assinatura do Órgão</span>
-            </div>
-          </div>
-          <!-- Acessibilidade e idioma -->
-          <div class="quicklinks">
-            <div class="row">
-              <!-- Acessibilidade -->
-              <div class="col-auto">
-                <div class="accessibility">
-                  <a id="contrast" href="" accesskey="6">
-                    <span class="icon">
-                      <i class="fas fa-adjust fa-2x"></i>
-                    </span>
-                    <span class="content d-none">
-                      <span class="">Alto Contraste</span>
-                    </span>
-                  </a>
-                  <a id="vlibras" href="http://www.vlibras.gov.br/">
-                    <span class="icon">
-                      <i class="fas fa-assistive-listening-systems fa-2x"></i>
-                    </span>
-                    <span class="content d-none">
-                      <span class="">VLibras</span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
+        <div class="header-bar row">
+          <!-- Menu sanduiche -->
+          <button class="menu-hamburger" type="button">
+            <i class="fa fa-bars"></i>
+          </button>
+          <!-- Logo -->
+          <div class="logo">
+            <span class="description">Assinatura do Órgão</span>
+            <a href="" id="logo" class="name">Logo/Nome</a>
           </div>
           <!-- Busca geral -->
-          <div class="br-search">
+          <div class="search">
             <div class="field">
               <label for="search" class="sr-only">Autocomplete</label>
               <input id="search" type="text" placeholder="O que você procura?">
@@ -98,192 +56,377 @@
       </div>
     </div>
   </header>
-  <!-- Wrapper -->
-  <div class="page-wrapper container-fluid">
-    <div class="row no-gutters">
-      <!-- Menu de navegação -->
-      <div class="col-md-3 d-none d-md-block" data-toggle="collapse">
-        <nav class="ds-menu-lateral py-1 py-md-3">
-          <div class="menu-item">
-            <button class="is-open" type="button" data-toggle="collapse">Título Item</button>
-            <ul class="submenu level-1">
-              <!-- Item sem filhos -->
-              <li class="menu-item">
-                <a>Texto link</a>
-              </li>
-              <li>
-                <!-- Item com filhos -->
-                <button class="is-open" type="button" data-toggle="collapse">Sub Título</button>
-                <ul class="submenu level-2">
-                  <li class="menu-item">
-                    <a> Texto link </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <!-- Conteúdo central -->
-      <div class="col">
-        <!-- Barra de sistema -->
-        <div class="shadow-bottom d-none d-md-block">
-          <div class="container-fluid">
-            <div class="row system-bar justify-content-end pl-sm-2">
-              <!-- Breadcrumbs -->
-              <div class="col">
-                <ul class="br-breadcrumb">
-                  <li class="home">
-                    <a href="">
-                      <span class="sr-only">Página inicial</span>
-                      <i class="fas fa-home"></i>
-                    </a>
-                  </li>
-                  <li><a href="">Tela anterior</a></li>
-                  <li class="is-active"><a href="">Tela atual</a></li>
-                </ul>
-              </div>
-              <!-- Timeout -->
-              <div class="col-auto">
-                <div class="timeout">
-                  <i class="fas fa-clock"></i>
-                  <span class="session">Sessão:</span>
-                  <span class="timer">00 min. e 00 seg</span>
+  <!-- Wrapper principal -->
+  <div class="page-wrapper">
+    <!-- Menu de navegação -->
+    <nav id="navigation" class="navigation">
+      <div class="wrapper">
+        <div class="bg-gray-2 d-flex flex-fill">
+          <div class="container">
+            <!-- Logo -->
+            <div class="logo"></div>
+            <!-- Menu de navegação -->
+            <div class="items">
+              <!-- Navegação local -->
+              <div class="local">
+                <div class="item">
+                  <button type="button">Item de nível 1</button>
+                  <ul class="submenu level-1">
+                    <li class="item"><a href="">Notícias</a></li>
+                    <li class="item"><a href="">Agenda do Presidente</a></li>
+                    <li class="item"><a href="">Agenda do Presidente em exercício</a></li>
+                    <li class="item"><a href="">Discursos</a></li>
+                    <li class="item"><a href="">Pronunciamentos</a></li>
+                    <li class="item"><a href="">Notas Oficiais</a></li>
+                    <li class="item"><a href="">Notas</a></li>
+                    <li class="item"><a href="">Entrevistas</a></li>
+                    <li class="item"><a href="">Foto Oficial</a></li>
+                    <li class="item"><a href="">Área de Imprensa</a></li>
+                    <li class="item"><a href="">Porta-voz</a></li>
+                    <li class="item"><a href="">WhatsApp</a></li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <button type="button">Item de nível 1</button>
+                  <ul class="submenu level-1">
+                    <li class="item"><a href="">Biografia do Presidente</a></li>
+                    <li class="item"><a href="">Ministros</a></li>
+                    <li class="item"><a href="">Principais Tropas</a></li>
+                    <li class="item"><a href="">Palácio e Residências</a></li>
+                    <li class="item"><a href="">Acervo</a></li>
+                    <li class="item"><a href="">Ritos e Solenidades</a></li>
+                    <li class="item"><a href="">Presentes recebidos pelo Presidênte da República</a></li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <button type="button">Item de nível 1</button>
+                  <ul class="submenu level-1">
+                    <li class="item"><a href="">Agenda Vice-Presidente</a></li>
+                    <li class="item"><a href="">Agendas do Gabinete Pessoal da Vice-Presidência</a></li>
+                    <li class="item"><a href="">Biografia</a></li>
+                    <li class="item"><a href="">Atribuições</a></li>
+                    <li class="item"><a href="">Discursos e Pronunciamentos</a></li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <button type="button">Item de nível 1</button>
+                  <ul class="submenu level-1">
+                    <li class="item"><a href="">Institucional</a></li>
+                    <li class="item"><a href="">Ações e Programas</a></li>
+                    <li class="item"><a href="">Dados abertos</a></li>
+                    <li class="item"><a href="">Auditorias</a></li>
+                    <li class="item"><a href="">Convênios</a></li>
+                    <li class="item"><a href="">Despesas</a></li>
+                    <li class="item"><a href="">Licitações e contratos</a></li>
+                    <li class="item"><a href="">Servidores</a></li>
+                    <li class="item"><a href="">Informações Classificadas</a></li>
+                    <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <button type="button">Centrais de Conteúdo</button>
+                  <ul class="submenu level-1">
+                    <li class="item"><a href="">Imagens</a></li>
+                    <li class="item"><a href="">Vídeos</a></li>
+                    <li class="item"><a href="">Áudios</a></li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <button type="button">Fale Conosco</button>
+                  <ul class="submenu level-1">
+                    <li class="item"><a href="">Fale com o Presidente</a></li>
+                    <li class="item"><a href="">Ouvidoria</a></li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <a href="">Mensagem do Presidente</a>
                 </div>
               </div>
-              <!-- Menu do usuário -->
-              <div class="col-auto">
-                <div class="user">
-                  <!-- Avatar do usuário -->
-                  <div class="avatar">
-                    <div class="image">
-                      <img src="../../assets/images/avatar.png" alt="Avatar">
-                    </div>
-                    <!-- <div class="no-image">
-                      <i class="fas fa-user-circle"></i>
-                    </div> -->
-                    <span class="badge">5</span>
-                  </div>
-                  <!-- Configurações do usuário -->
-                  <div class="configs dropdown">
-                    <button class="trigger" type="button">
-                      <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="menu">
-                      <div class="title">
-                        <div class="name">Márcia Vinícuis Tavares de Almeida</div>
-                        <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
-                      </div>
-                      <span class="title">Configurações</span>
-                      <a href="" class="item">Configuração 01</a>
-                      <a href="" class="item">Configuração 02</a>
-                      <a href="" class="item">Configuração 03</a>
-                      <div class="item">
-                        <div class="account">
-                          <a href="">
-                            <i class="fas fa-user"></i>
-                            Perfil
-                          </a>
-                          <a href="">
-                            <i class="fas fa-key"></i>
-                            Senha
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Sistemas favoritos do usuário -->
-                  <div class="bookmarks dropdown">
-                    <button class="trigger" type="button">
-                      <i class="fas fa-th-large"></i>
-                    </button>
-                    <div class="menu">
-                      <div class="title">Sistemas</div>
-                      <div class="list">
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 01</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 02</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 03</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 04</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 05</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 06</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 07</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 08</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 09</div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="" class="bookmark">
-                            <div class="brand"></div>
-                            <div class="name">Sistema 10</div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="more">
-                        <a href="">Mais</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Logout -->
-                  <button class="logout" type="button">Sair</button>
+              <!-- Navegação do gov.br -->
+              <div class="govbr">
+                <div class="item">
+                  <button type="button" class="logo">
+                    <img src="../../assets/images/govbrNegativa.svg" alt="gov.br">
+                  </button>
+                  <ul class="submenu level-1">
+                    <li class="item"><a href="">Notícias</a></li>
+                    <li class="item"><a href="">Agenda do Presidente</a></li>
+                    <li class="item"><a href="">Agenda do Presidente em exercício</a></li>
+                    <li class="item"><a href="">Discursos</a></li>
+                    <li class="item"><a href="">Pronunciamentos</a></li>
+                    <li class="item"><a href="">Notas Oficiais</a></li>
+                    <li class="item"><a href="">Notas</a></li>
+                    <li class="item"><a href="">Entrevistas</a></li>
+                    <li class="item"><a href="">Foto Oficial</a></li>
+                    <li class="item"><a href="">Área de Imprensa</a></li>
+                    <li class="item"><a href="">Porta-voz</a></li>
+                    <li class="item"><a href="">WhatsApp</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Conteúdo principal -->
-        <main id="content" class="page-content px-1 pl-sm-4 px-lg-5 py-4">
-          <h1 class="main-title">Título da página</h1>
-          <p>Conteúdo principal</p>
-        </main>
+        <div class="container">
+          <!-- Links rápidos -->
+          <div class="quicklinks">
+            <!-- Legislação -->
+            <a href="" class="legislation">Legislação</a>
+            <!-- Idioma -->
+            <div class="language dropdown">
+              <button class="trigger" type="button">
+                <span class="name">Português</span>
+                <i class="fas fa-chevron-down arrow"></i>
+              </button>
+              <div class="menu">
+                <div class="title">Idioma/Language</div>
+                <button class="item is-active" type="button">
+                  <span class="name">Português</span>
+                </button>
+                <button class="item" type="button">
+                  <span class="name">English</span>
+                </button>
+                <button class="item" type="button">
+                  <span class="name">Español</span>
+                </button>
+              </div>
+            </div>
+            <!-- Altocontraste -->
+            <a href="" id="contrast" class="contrast" accesskey="6">
+              <i class="fas fa-adjust fa-lg"></i>
+              <span class="sr-only">Alto contraste</span>
+            </a>
+          </div>
+          <!-- Links úteis e redes sociais -->
+          <div class="row">
+            <!-- Links úteis -->
+            <div class="col-md">
+              <div class="links">
+                <span>Links úteis</span>
+                <a href="">Acesso à Informação <i class="fas fa-external-link-alt"></i></a>
+                <a href="">Participe <i class="fas fa-external-link-alt"></i></a>
+                <a href="">Órgãos do Governo <i class="fas fa-external-link-alt"></i></a>
+                <a href="">Acessibilidade <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <!-- Redes sociais -->
+            <div class="col-md-auto">
+              <div class="social-network">
+                <span>Redes sociais</span>
+                <ul>
+                  <li>
+                    <a href="https://www.twitter.com/twitter.com/govbr">
+                      <i class="fab fa-twitter fa-lg"></i>
+                      <span class="sr-only">Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/youtube.com/govbr">
+                      <i class="fab fa-youtube fa-lg"></i>
+                      <span class="sr-only">YouTube</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/facebook.com/govbr">
+                      <i class="fab fa-facebook-f fa-lg"></i>
+                      <span class="sr-only">Facebook</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.flickr.com/flickr/govbr">
+                      <i class="fab fa-flickr fa-lg"></i>
+                      <span class="sr-only">Flickr</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </nav>
+    <!-- Conteúdo do sistema -->
+    <div class="container-fluid">
+      <!-- Barra de sistema -->
+      <div class="row system-bar">
+        <!-- Breadcrumbs -->
+        <div class="col">
+          <ul class="br-breadcrumb">
+            <li class="home">
+              <a href="">
+                <span class="sr-only">Página inicial</span>
+                <i class="fas fa-home"></i>
+              </a>
+            </li>
+            <li><a href="">Tela anterior</a></li>
+            <li class="is-active"><a href="">Tela atual</a></li>
+          </ul>
+        </div>
+        <!-- Timeout -->
+        <div class="col-auto">
+          <div class="timeout">
+            <i class="fas fa-clock"></i>
+            <span class="session">Sessão:</span>
+            <span class="timer">00 min. e 00 seg</span>
+          </div>
+        </div>
+        <!-- Barra do usuário -->
+        <div class="col-auto">
+          <div class="user-bar">
+            <!-- Avatar do usuário -->
+            <div class="avatar">
+              <div class="image">
+                <img src="../../assets/images/avatar.png" alt="Avatar">
+              </div>
+              <!-- <div class="no-image">
+                      <i class="fas fa-user-circle"></i>
+                    </div> -->
+              <span class="badge">5</span>
+            </div>
+            <!-- Configurações do usuário -->
+            <div class="configs dropdown">
+              <button class="trigger" type="button">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="menu">
+                <div class="title">
+                  <div class="name">Márcia Vinícuis Tavares de Almeida</div>
+                  <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
+                </div>
+                <span class="title">Configurações</span>
+                <a href="" class="item">Configuração 01</a>
+                <a href="" class="item">Configuração 02</a>
+                <a href="" class="item">Configuração 03</a>
+                <div class="item">
+                  <div class="account">
+                    <a href="">
+                      <i class="fas fa-user"></i>
+                      Perfil
+                    </a>
+                    <a href="">
+                      <i class="fas fa-key"></i>
+                      Senha
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Sistemas favoritos do usuário -->
+            <div class="bookmarks dropdown">
+              <button class="trigger" type="button">
+                <i class="fas fa-th-large"></i>
+              </button>
+              <div class="menu">
+                <div class="title">Sistemas</div>
+                <div class="list">
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 01</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 02</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 03</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 04</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 05</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 06</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 07</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 08</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 09</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 10</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="more">
+                  <a href="">Mais</a>
+                </div>
+              </div>
+            </div>
+            <!-- Logout -->
+            <button class="logout" type="button">Sair</button>
+          </div>
+        </div>
+      </div>
+      <hr class="my-0">
+      <!-- Conteúdo principal -->
+      <main id="content" class="page-content">
+        <h1 class="main-title">Título da página</h1>
+        <p>Conteúdo principal</p>
+        <!-- Voltar ao topo -->
+        <div class="text-right">
+          <hr>
+          <button class="br-button is-go-top" type="button">
+            Voltar ao topo
+            <span class="br-button is-circle is-primary">
+              <i class="fas fa-chevron-up"></i>
+            </span>
+          </button>
+          <hr>
+        </div>
+        <!-- Lincença e reportar erro -->
+        <div class="row">
+          <!-- Licença -->
+          <div class="col-sm">
+            <p class="license">
+              Versão do sistema
+            </p>
+          </div>
+          <!-- Reportar erro -->
+          <div class="col-sm-auto">
+            <p class="report-error">
+              <a href="" class="text-uppercase">Reportar erro</a>
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
   <!-- Rodapé de governo -->
   <div class="page-footer">
-    <div class="container-fluid">
+    <div class="container-fluid text-right">
       <img src="../../assets/images/produto-serpro.png" alt="Produto Serpro">
     </div>
   </div>
@@ -291,6 +434,10 @@
   <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>
   <script src="page.js"></script>
   <script>
+    // Logo
+    const logoName = document.querySelector('.logo .name')
+    const logoDescription = document.querySelector('.logo .description')
+
     // Classe para ativar elementos e componentes
     const active = "is-active"
 
@@ -310,8 +457,77 @@
       })
     }
 
+    // Navegação
+    const navigationTrigger = document.querySelector('.menu-hamburger')
+    const navigation = document.querySelector('#navigation')
+
+    const navLogo = navigation.querySelector('.logo')
+    const navItems = navigation.querySelectorAll('.item')
+    const navArrowForward = 'fas fa-chevron-right'
+    const navArrowBack = 'fas fa-chevron-left'
+
+    function resetNavLogo() {
+      // Limpa o elemento
+      navLogo.innerHTML = ''
+      // Setar logo original
+      navLogo.appendChild(logoDescription.cloneNode(true))
+      navLogo.appendChild(logoName.cloneNode(true))
+    }
+
+    // function setNavLogo(navParentText) {
+    //   // Botão de voltar
+    //   let navBackButton = document.createElement('button')
+    //   navBackButton.appendChild(navParentText)
+
+    //   // Pai atual
+    //   let navParent = document.createElement('span')
+    //   navParent.innerText(navParentText)
+
+    //   // Limpa o elemento
+    //   navLogo.innerHTML = ''
+
+    //   // Setar novo logo
+    //   navLogo.appendChild(navBackButton)
+    //   navLogo.appendChild(navParent)
+
+    //   navBackButton.addEventListener('click', function() {
+    //     resetNavLogo()
+    //   })
+    // }
+
+    // function includeIcon(tagType, icon) {
+    //   let iconElement = document.createElement(tagType)
+    //   iconElement.setAttribute('class', icon)
+
+    //   iconElement.appendChild(iconElement)
+    // }
+
+    resetNavLogo()
+
+    for (item of navItems) {
+      if (item.childElementCount > 1) {
+        // Pai
+        let navParent = item.children[0] // tem filhos
+        let navParentText = navParent.innerText
+
+        // Incluir seta de navegação
+        let iconElement = document.createElement('i')
+        iconElement.setAttribute('class', navArrowForward)
+        navParent.appendChild(iconElement)
+
+        // Navegação entre items
+        navParent.addEventListener('click', function () {
+          setNavLogo(navParentText)
+        })
+      }
+    }
+
+    navigationTrigger.addEventListener('click', function () {
+      toogleActive(navigation)
+    })
+
     // Busca
-    const search = document.querySelector('.br-search')
+    const search = document.querySelector('.search')
     const searchTrigger = search.querySelector('.field button')
     const searchInput = search.querySelector('.field input')
     const searchClose = search.querySelector('.close')

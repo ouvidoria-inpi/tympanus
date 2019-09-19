@@ -155,7 +155,7 @@ $logo-desktop: 150px;
 
 // Seleção de idioma
 .language {
-  z-index: 2;
+  z-index: 3;
   // Idioma selecionado e trigger
   .trigger {
     align-items: center;
@@ -201,6 +201,7 @@ $logo-desktop: 150px;
   display: flex;
   margin-left: auto;
   margin-right: 48px;
+  position: relative;
   // Acesso gov.br
   .login {
     align-items: center;
@@ -310,8 +311,15 @@ $logo-desktop: 150px;
   }
 }
 
+// Barra de sistema
+.system-bar {
+  align-items: center;
+  height: 60px;
+}
+
 // Tempo restante de sessão
 .timeout {
+  display: none;
   .session {
     font-size: 12px;
     font-weight: 600;
@@ -322,20 +330,10 @@ $logo-desktop: 150px;
   }
 }
 
-// Barra de sistema
-.system-bar {
+// Barra do usuário
+.user-bar {
   align-items: center;
-  height: 60px;
-  // Tempo restante de sessão
-  .timeout {
-    text-align: right;
-  }
-}
-
-// Área do usuário
-.user {
-  align-items: center;
-  display: flex;
+  display: none;
   // Botão de sair
   .logout {
     background: transparent;
@@ -392,7 +390,7 @@ $logo-desktop: 150px;
 
 // Configurações do usuário
 .configs {
-  margin-left: $spacing-half;
+  margin-left: $spacing-1;
   // Ativador do menu
   .trigger {
     background: $color-gray-2;
@@ -626,6 +624,9 @@ $logo-desktop: 150px;
     padding: $spacing-2 $spacing-3;
     position: static;
     text-align: left;
+    a {
+      display: none;
+    }
     .name {
       display: block;
     }
@@ -714,6 +715,10 @@ $logo-desktop: 150px;
   // Links rápidos
   .quicklinks {
     margin: $spacing-2 $spacing-1;
+    // Acesso gov.br
+    .login {
+      display: none;
+    }
     // Legislação
     .legislation {
       color: $color-gray-7;
@@ -907,7 +912,7 @@ $logo-desktop: 150px;
   .navigation {
     // Container da navegação
     .wrapper {
-      height: auto;
+      min-height: 0;
     }
     // Logo
     .logo {
@@ -916,6 +921,13 @@ $logo-desktop: 150px;
       }
       .description {
         display: none;
+      }
+    }
+    // Menu de navegação
+    .items {
+      .local,
+      .govbr {
+        padding: $spacing-3 0;
       }
     }
   }
@@ -1007,6 +1019,10 @@ $logo-desktop: 150px;
       }
     }
   }
+  // Barra do usuário
+  .user-bar {
+    display: flex;
+  }
   // Navegação
   .navigation {
     // Container da navegação
@@ -1023,7 +1039,6 @@ $logo-desktop: 150px;
       .local,
       .govbr {
         border-right: 1px solid $color-gray-3;
-        padding: $spacing-3 0;
         width: 25%;
       }
     }
