@@ -605,8 +605,8 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   display: none;
   flex-direction: column;
-  min-height: calc(100vh - 45px);
   left: 0;
+  min-height: calc(100vh - 45px);
   position: absolute;
   right: 0;
   z-index: 1;
@@ -995,8 +995,8 @@
   }
   .navigation .items .local,
   .navigation .items .govbr {
-    padding: 16px 0;
     border-right: 1px solid #cccccc;
+    padding: 16px 0;
     width: 25%;
   }
   .navigation .item:hover > .level-1,

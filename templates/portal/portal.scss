@@ -604,8 +604,8 @@ $logo-desktop: 150px;
     box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
     display: none;
     flex-direction: column;
-    min-height: calc(100vh - #{$main-bar-mobile});
     left: 0;
+    min-height: calc(100vh - #{$main-bar-mobile});
     position: absolute;
     right: 0;
     z-index: 1;
@@ -1022,8 +1022,8 @@ $logo-desktop: 150px;
       position: relative;
       .local,
       .govbr {
-        padding: $spacing-3 0;
         border-right: 1px solid $color-gray-3;
+        padding: $spacing-3 0;
         width: 25%;
       }
     }
@@ -1136,77 +1136,4 @@ $logo-desktop: 150px;
       }
     }
   }
-//   // Navegação
-//   .navigation {
-//     border-top: 0;
-//     display: flex;
-//     flex-direction: column;
-//     overflow: visible;
-//     padding: $spacing-6 0;
-//     position: relative;
-//     // Seta indicativa de fechamento
-//     &::after {
-//       border: solid transparent;
-//       border-bottom-color: $color-primary;
-//       border-width: 12px;
-//       bottom: 100%;
-//       content: "";
-//       height: 0;
-//       left: $spacing-3;
-//       pointer-events: none;
-//       position: absolute;
-//       width: 0;
-//     }
-//     // Item de navegação
-//     .item {
-//       width: 25%;
-//       &:hover,
-//       &:active {
-//         > a,
-//         > button {
-//           background: $color-primary-darken-15;
-//           color: $color-white;
-//           font-weight: 600;
-//         }
-//       }
-//       &:hover {
-//         > .submenu {
-//           display: block;
-//         }
-//       }
-//       .item {
-//         width: 100%;
-//         &:hover,
-//         &:active {
-//           > a,
-//           > button {
-//             background: $color-primary;
-//           }
-//         }
-//       }
-//     }
-//     // Níveis de navegação
-//     .level-1,
-//     .level-2,
-//     .level-3 {
-//       background: $color-gray-1;
-//       bottom: 0;
-//       display: none;
-//       overflow: auto;
-//       padding: $spacing-6 0;
-//       position: absolute;
-//       top: 0;
-//     }
-//     .level-1 {
-//       box-shadow: -2px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
-//       left: 25%;
-//       width: 25%;
-//     }
-//     .level-2,
-//     .level-3 {
-//       box-shadow: -3px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
-//       left: 100%;
-//       width: 100%;
-//     }
-//   }
 }
