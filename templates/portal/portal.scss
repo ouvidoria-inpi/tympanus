@@ -687,7 +687,6 @@ $logo-desktop: 150px;
   }
   // Menu de navegação
   .items {
-    background: $color-gray-2;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -724,16 +723,6 @@ $logo-desktop: 150px;
   .item {
     margin: 0;
     padding: 0;
-    &:hover,
-    &:focus,
-    &:active {
-      > a,
-      > button {
-        background: $color-primary-darken-15;
-        color: $color-white;
-        font-weight: 600;
-      }
-    }
     a,
     button {
       align-items: center;
@@ -747,15 +736,10 @@ $logo-desktop: 150px;
       text-align: left;
       text-decoration: none;
       width: 100%;
-    }
-    .item {
-      &:hover,
-      &:focus,
-      &:active {
-        a,
-        button {
-          background: $color-primary;
-        }
+      &:hover {
+        background: $color-primary-darken-15;
+        color: $color-white;
+        font-weight: 600;
       }
     }
   }
@@ -766,6 +750,12 @@ $logo-desktop: 150px;
     display: none;
     margin: 0;
     padding: 0;
+    a,
+    button {
+      &:hover {
+        background: $color-primary;
+      }
+    }
   }
   // Links rápidos
   .quicklinks {
@@ -799,12 +789,12 @@ $logo-desktop: 150px;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: $spacing-3 $spacing-1;
     .logout {
-      margin-left: 0;
+      margin: $spacing-3 0;
     }
     .timeout {
       display: block;
+      margin: $spacing-3 0;
     }
   }
   // Navegação ativa

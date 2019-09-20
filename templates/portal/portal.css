@@ -699,7 +699,6 @@
 }
 
 .navigation .items {
-  background: #ededed;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -736,15 +735,6 @@
   padding: 0;
 }
 
-.navigation .item:hover > a,
-.navigation .item:hover > button, .navigation .item:focus > a,
-.navigation .item:focus > button, .navigation .item:active > a,
-.navigation .item:active > button {
-  background: #0c326f;
-  color: #ffffff;
-  font-weight: 600;
-}
-
 .navigation .item a,
 .navigation .item button {
   align-items: center;
@@ -760,11 +750,11 @@
   width: 100%;
 }
 
-.navigation .item .item:hover a,
-.navigation .item .item:hover button, .navigation .item .item:focus a,
-.navigation .item .item:focus button, .navigation .item .item:active a,
-.navigation .item .item:active button {
-  background: #1351b4;
+.navigation .item a:hover,
+.navigation .item button:hover {
+  background: #0c326f;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .navigation .level-1,
@@ -773,6 +763,15 @@
   display: none;
   margin: 0;
   padding: 0;
+}
+
+.navigation .level-1 a:hover,
+.navigation .level-1 button:hover,
+.navigation .level-2 a:hover,
+.navigation .level-2 button:hover,
+.navigation .level-3 a:hover,
+.navigation .level-3 button:hover {
+  background: #1351b4;
 }
 
 .navigation .quicklinks {
@@ -807,15 +806,15 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 16px 8px;
 }
 
 .navigation .nav-logout .logout {
-  margin-left: 0;
+  margin: 16px 0;
 }
 
 .navigation .nav-logout .timeout {
   display: block;
+  margin: 16px 0;
 }
 
 .navigation.is-active .wrapper {
