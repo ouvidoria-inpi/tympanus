@@ -155,7 +155,7 @@ $logo-desktop: 150px;
 
 // Seleção de idioma
 .language {
-  z-index: 3;
+  z-index: 4;
   // Idioma selecionado e trigger
   .trigger {
     align-items: center;
@@ -250,7 +250,7 @@ $logo-desktop: 150px;
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   .field {
     display: inline-flex;
     flex: 1;
@@ -334,25 +334,6 @@ $logo-desktop: 150px;
 .user-bar {
   align-items: center;
   display: none;
-  // Botão de sair
-  .logout {
-    background: transparent;
-    border: 1px solid $color-primary;
-    border-radius: 100px;
-    color: $color-primary;
-    display: inline-flex;
-    font-size: 12px;
-    font-weight: 600;
-    height: 32px;
-    margin-left: $spacing-3;
-    padding: 0 $spacing-5;
-    text-align: center;
-    &:hover {
-      background: $color-primary-lighten-15;
-      border-color: $color-primary-lighten-15;
-      color: $color-white;
-    }
-  }
 }
 
 // Avatar com usuário, pode ser imagem ou ícone
@@ -393,6 +374,7 @@ $logo-desktop: 150px;
   margin-left: $spacing-1;
   // Ativador do menu
   .trigger {
+    align-items: center;
     background: $color-gray-2;
     border: 0;
     border-radius: 50%;
@@ -423,7 +405,7 @@ $logo-desktop: 150px;
     .account {
       border-top: 1px solid $color-gray-2;
       display: flex;
-      margin: (- $spacing-1) (- $spacing-6);
+      margin: (- $spacing-1) (- $spacing-3);
       > * { // sass-lint:disable-line no-universal-selectors
         flex: 1;
         &:not(:last-child) {
@@ -457,11 +439,33 @@ $logo-desktop: 150px;
   }
 }
 
+// Botão de sair
+.logout {
+  align-items: center;
+  background: transparent;
+  border: 1px solid $color-primary;
+  border-radius: 100px;
+  color: $color-primary;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  height: 32px;
+  margin-left: $spacing-3;
+  padding: 0 $spacing-5;
+  text-align: center;
+  &:hover {
+    background: $color-primary-lighten-15;
+    border-color: $color-primary-lighten-15;
+    color: $color-white;
+  }
+}
+
 // Favoritos
 .bookmarks {
   margin-left: $spacing-2;
   // Ativador do menu
   .trigger {
+    align-items: center;
     background: transparent;
     border: 0;
     border-radius: 50%;
@@ -589,9 +593,32 @@ $logo-desktop: 150px;
   }
 }
 
+// Links úteis
+.links {
+  position: relative;
+  border-top: 1px solid $color-gray-2;
+  font-size: 14px;
+  padding: $spacing-1;
+  span {
+    display: block;
+    font-weight: 700;
+    margin: $spacing-1 0;
+    text-transform: uppercase;
+  }
+  a {
+    align-items: center;
+    display: flex;
+    padding: $spacing-half 0;
+    [class*="fa-"] {
+      margin-left: $spacing-1;
+    }
+  }
+}
+
 // Navegação
 .navigation {
   position: relative;
+  z-index: 2;
   ul {
     list-style: none;
   }
@@ -603,25 +630,14 @@ $logo-desktop: 150px;
     display: none;
     flex-direction: column;
     left: 0;
-    min-height: calc(100vh - #{$main-bar-mobile});
     position: absolute;
     right: 0;
     z-index: 1;
-    .d-flex {
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-    }
   }
   // Logo
   .logo {
-    background: $color-gray-1;
     display: block;
-    margin-left: - $spacing-1;
-    margin-right: - $spacing-1;
-    padding: $spacing-2 $spacing-3;
+    padding: 0 $spacing-1;
     position: static;
     text-align: left;
     a {
@@ -634,6 +650,41 @@ $logo-desktop: 150px;
       display: block;
     }
   }
+  // Avatar
+  .nav-avatar {
+    padding: 0 $spacing-1;
+  }
+  // Configurações do usuário
+  .nav-configs {
+    margin-left: - $spacing-1;
+    margin-right: - $spacing-1;
+    .menu {
+      padding-bottom: $spacing-3;
+      .user {
+        .name {
+          font-weight: 600;
+        }
+        .email {
+          font-size: 14px;
+          font-style: italic;
+        }
+      }
+      .title {
+        border-bottom: 1px solid $color-gray-3;
+        display: block;
+        padding: $spacing-2 $spacing-3;
+      }
+      .item {
+        color: $color-gray-6;
+        display: block;
+        padding: $spacing-1 $spacing-3;
+        &:hover {
+          background: $color-primary-pastel-1;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   // Menu de navegação
   .items {
     background: $color-gray-2;
@@ -644,6 +695,10 @@ $logo-desktop: 150px;
     margin-left: - $spacing-1;
     margin-right: - $spacing-1;
     overflow: auto;
+    .local,
+    .govbr {
+      padding: $spacing-3 0;
+    }
   }
   // gov.br
   .govbr {
@@ -739,24 +794,17 @@ $logo-desktop: 150px;
       display: inline-block;
     }
   }
-  // Links úteis
-  .links {
-    border-top: 1px solid $color-gray-2;
-    font-size: 14px;
-    padding: $spacing-1;
-    span {
-      display: block;
-      font-weight: 700;
-      margin: $spacing-1 0;
-      text-transform: uppercase;
+  // Logout
+  .nav-logout {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-3 $spacing-1;
+    .logout {
+      margin-left: 0;
     }
-    a {
-      align-items: center;
-      display: flex;
-      padding: $spacing-half 0;
-      [class*="fa-"] {
-        margin-left: $spacing-1;
-      }
+    .timeout {
+      display: block;
     }
   }
   // Navegação ativa
@@ -807,6 +855,7 @@ $logo-desktop: 150px;
   .navigation {
     border-top: 1px solid $color-white;
     padding: 0;
+    position: static;
     // Item de navegação
     .item {
       border-bottom: 1px solid $color-white;
@@ -899,6 +948,12 @@ $logo-desktop: 150px;
       margin-top: $spacing-half;
     }
   }
+  // Avatar
+  .nav-avatar {
+    position: absolute;
+    right: $spacing-1;
+    top: $spacing-3;
+  }
   // Links rápidos de acessibilidade e idioma
   .quicklinks {
     align-self: flex-start;
@@ -964,6 +1019,10 @@ $logo-desktop: 150px;
       font-size: 18px;
       position: absolute;
     }
+  }
+  // Configurações do usuário
+  .nav-configs {
+    display: none;
   }
   // Links rápidos de acessibilidade e idioma
   .quicklinks {
@@ -1069,6 +1128,10 @@ $logo-desktop: 150px;
     }
     // Links rápidos
     .quicklinks {
+      display: none;
+    }
+    // Botão de sair
+    .nav-logout {
       display: none;
     }
     // Links úteis

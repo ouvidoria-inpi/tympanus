@@ -41,7 +41,7 @@
           <div class="search">
             <div class="field">
               <label for="search" class="sr-only">Autocomplete</label>
-              <input id="search" type="text" placeholder="O que você procura?">
+              <input id="search" type="search" placeholder="O que você procura?">
               <button class="" type="button">
                 <i class="fas fa-search fa-lg"></i>
                 <span class="sr-only">buscar</span>
@@ -61,10 +61,21 @@
     <!-- Menu de navegação -->
     <nav id="navigation" class="navigation">
       <div class="wrapper">
-        <div class="bg-gray-2 d-flex flex-fill">
+        <div class="bg-gray-2">
           <div class="container">
-            <!-- Logo -->
-            <div class="logo"></div>
+            <!-- Logo e avatar -->
+            <div class="row align-items-center justify-content-between bg-gray-1 py-2 py-sm-0">
+              <!-- Logo -->
+              <div class="col-auto">
+                <div class="nav-logo"></div>
+              </div>
+              <!-- Avatar do usuário -->
+              <div class="col-auto">
+                <div class="nav-avatar"></div>
+              </div>
+            </div>
+            <!-- Configurações do usuário -->
+            <div class="nav-configs bg-gray-1"></div>
             <!-- Menu de navegação -->
             <div class="items">
               <!-- Navegação local -->
@@ -123,24 +134,6 @@
                     <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
                   </ul>
                 </div>
-                <div class="item">
-                  <button type="button">Centrais de Conteúdo</button>
-                  <ul class="submenu level-1">
-                    <li class="item"><a href="">Imagens</a></li>
-                    <li class="item"><a href="">Vídeos</a></li>
-                    <li class="item"><a href="">Áudios</a></li>
-                  </ul>
-                </div>
-                <div class="item">
-                  <button type="button">Fale Conosco</button>
-                  <ul class="submenu level-1">
-                    <li class="item"><a href="">Fale com o Presidente</a></li>
-                    <li class="item"><a href="">Ouvidoria</a></li>
-                  </ul>
-                </div>
-                <div class="item">
-                  <a href="">Mensagem do Presidente</a>
-                </div>
               </div>
               <!-- Navegação do gov.br -->
               <div class="govbr">
@@ -169,78 +162,11 @@
         </div>
         <div class="container">
           <!-- Links rápidos -->
-          <div class="quicklinks">
-            <!-- Legislação -->
-            <a href="" class="legislation">Legislação</a>
-            <!-- Idioma -->
-            <div class="language dropdown">
-              <button class="trigger" type="button">
-                <span class="name">Português</span>
-                <i class="fas fa-chevron-down arrow"></i>
-              </button>
-              <div class="menu">
-                <div class="title">Idioma/Language</div>
-                <button class="item is-active" type="button">
-                  <span class="name">Português</span>
-                </button>
-                <button class="item" type="button">
-                  <span class="name">English</span>
-                </button>
-                <button class="item" type="button">
-                  <span class="name">Español</span>
-                </button>
-              </div>
-            </div>
-            <!-- Altocontraste -->
-            <a href="" id="contrast" class="contrast" accesskey="6">
-              <i class="fas fa-adjust fa-lg"></i>
-              <span class="sr-only">Alto contraste</span>
-            </a>
-          </div>
-          <!-- Links úteis e redes sociais -->
-          <div class="row">
-            <!-- Links úteis -->
-            <div class="col-md">
-              <div class="links">
-                <span>Links úteis</span>
-                <a href="">Acesso à Informação <i class="fas fa-external-link-alt"></i></a>
-                <a href="">Participe <i class="fas fa-external-link-alt"></i></a>
-                <a href="">Órgãos do Governo <i class="fas fa-external-link-alt"></i></a>
-                <a href="">Acessibilidade <i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-            <!-- Redes sociais -->
-            <div class="col-md-auto">
-              <div class="social-network">
-                <span>Redes sociais</span>
-                <ul>
-                  <li>
-                    <a href="https://www.twitter.com/twitter.com/govbr">
-                      <i class="fab fa-twitter fa-lg"></i>
-                      <span class="sr-only">Twitter</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.youtube.com/youtube.com/govbr">
-                      <i class="fab fa-youtube fa-lg"></i>
-                      <span class="sr-only">YouTube</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.facebook.com/facebook.com/govbr">
-                      <i class="fab fa-facebook-f fa-lg"></i>
-                      <span class="sr-only">Facebook</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.flickr.com/flickr/govbr">
-                      <i class="fab fa-flickr fa-lg"></i>
-                      <span class="sr-only">Flickr</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="nav-quicklinks"></div>
+          <!-- Logout -->
+          <div class="nav-logout">
+            <div class="nav-buttontimeout"></div>
+            <div class="nav-timeout"></div>
           </div>
         </div>
       </div>
@@ -289,26 +215,19 @@
                 <i class="fas fa-chevron-down"></i>
               </button>
               <div class="menu">
-                <div class="title">
-                  <div class="name">Márcia Vinícuis Tavares de Almeida</div>
+                <!-- Informações do usuário -->
+                <div class="title user">
+                  <div class="name">Márcia Vinícius Tavares de Almeida</div>
                   <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
                 </div>
-                <span class="title">Configurações</span>
+                <!-- Lista de configurações -->
+                <span class="title">
+                  <i class="fas fa-cog"></i>
+                  Configuração/Perfil
+                </span>
                 <a href="" class="item">Configuração 01</a>
                 <a href="" class="item">Configuração 02</a>
                 <a href="" class="item">Configuração 03</a>
-                <div class="item">
-                  <div class="account">
-                    <a href="">
-                      <i class="fas fa-user"></i>
-                      Perfil
-                    </a>
-                    <a href="">
-                      <i class="fas fa-key"></i>
-                      Senha
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
             <!-- Sistemas favoritos do usuário -->
@@ -431,78 +350,52 @@
     </div>
   </div>
   <!-- Script da barra de governo -->
-  <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>
-  <script src="page.js"></script>
   <script>
-    // Logo
-    const logoName = document.querySelector('.logo .name')
-    const logoDescription = document.querySelector('.logo .description')
-
-    // Classe para ativar elementos e componentes
-    const active = "is-active"
-
-    function toogleActive(element) {
-      element.classList.toggle(active)
-    }
-
-    // Menu dropdown
-    const dropdown = document.querySelectorAll('.dropdown')
-
-    for (drop of dropdown) {
-      let trigger = drop.querySelector('.trigger')
-      let menu = drop.querySelector('.menu')
-
-      trigger.addEventListener('click', function () {
-        toogleActive(menu)
-      })
-    }
+    // Clonáveis
+    const logo = document.querySelector('.logo')
+    const quicklinks = document.querySelector('.quicklinks')
+    const avatar = document.querySelector('.avatar')
+    const configs = document.querySelector('.configs .menu')
+    const logout = document.querySelector('.logout')
+    const timeout = document.querySelector('.timeout')
 
     // Navegação
     const navigationTrigger = document.querySelector('.menu-hamburger')
     const navigation = document.querySelector('#navigation')
 
-    const navLogo = navigation.querySelector('.logo')
+    const navlogo = navigation.querySelector('.nav-logo')
+    const navquicklinks = navigation.querySelector('.nav-quicklinks')
+    const navavatar = navigation.querySelector('.nav-avatar')
+    const navconfigs = navigation.querySelector('.nav-configs')
+    const navbuttontimeout = navigation.querySelector('.nav-buttontimeout')
+    const navtimeout = navigation.querySelector('.nav-timeout')
+
     const navItems = navigation.querySelectorAll('.item')
     const navArrowForward = 'fas fa-chevron-right'
     const navArrowBack = 'fas fa-chevron-left'
 
-    function resetNavLogo() {
-      // Limpa o elemento
-      navLogo.innerHTML = ''
-      // Setar logo original
-      navLogo.appendChild(logoDescription.cloneNode(true))
-      navLogo.appendChild(logoName.cloneNode(true))
+    function navClones() {
+      if (logo) {
+        navlogo.appendChild(logo.cloneNode(true))
+      }
+      if (quicklinks) {
+        navquicklinks.appendChild(quicklinks.cloneNode(true))
+      }
+      if (avatar) {
+        navavatar.appendChild(avatar.cloneNode(true))
+      }
+      if (configs) {
+        navconfigs.appendChild(configs.cloneNode(true))
+      }
+      if (logout) {
+        navbuttontimeout.appendChild(logout.cloneNode(true))
+      }
+      if (timeout) {
+        navtimeout.appendChild(timeout.cloneNode(true))
+      }
     }
 
-    // function setNavLogo(navParentText) {
-    //   // Botão de voltar
-    //   let navBackButton = document.createElement('button')
-    //   navBackButton.appendChild(navParentText)
-
-    //   // Pai atual
-    //   let navParent = document.createElement('span')
-    //   navParent.innerText(navParentText)
-
-    //   // Limpa o elemento
-    //   navLogo.innerHTML = ''
-
-    //   // Setar novo logo
-    //   navLogo.appendChild(navBackButton)
-    //   navLogo.appendChild(navParent)
-
-    //   navBackButton.addEventListener('click', function() {
-    //     resetNavLogo()
-    //   })
-    // }
-
-    // function includeIcon(tagType, icon) {
-    //   let iconElement = document.createElement(tagType)
-    //   iconElement.setAttribute('class', icon)
-
-    //   iconElement.appendChild(iconElement)
-    // }
-
-    resetNavLogo()
+    navClones()
 
     for (item of navItems) {
       if (item.childElementCount > 1) {
@@ -525,6 +418,25 @@
     navigationTrigger.addEventListener('click', function () {
       toogleActive(navigation)
     })
+
+    // Classe para ativar elementos e componentes
+    const active = "is-active"
+
+    function toogleActive(element) {
+      element.classList.toggle(active)
+    }
+
+    // Menu dropdown
+    const dropdown = document.querySelectorAll('.dropdown')
+
+    for (drop of dropdown) {
+      let trigger = drop.querySelector('.trigger')
+      let menu = drop.querySelector('.menu')
+
+      trigger.addEventListener('click', function () {
+        toogleActive(menu)
+      })
+    }
 
     // Busca
     const search = document.querySelector('.search')

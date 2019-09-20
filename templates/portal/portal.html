@@ -78,7 +78,7 @@
           <div class="search">
             <div class="field">
               <label for="search" class="sr-only">Autocomplete</label>
-              <input id="search" type="text" placeholder="O que você procura?">
+              <input id="search" type="search" placeholder="O que você procura?">
               <button class="" type="button">
                 <i class="fas fa-search fa-lg"></i>
                 <span class="sr-only">buscar</span>
@@ -98,10 +98,21 @@
     <!-- Menu de navegação -->
     <nav id="navigation" class="navigation">
       <div class="wrapper">
-        <div class="bg-gray-2 d-flex flex-fill">
+        <div class="bg-gray-2">
           <div class="container">
-            <!-- Logo -->
-            <div class="nav-logo"></div>
+            <!-- Logo e avatar -->
+            <div class="row align-items-center justify-content-between bg-gray-1 py-2 py-sm-0">
+              <!-- Logo -->
+              <div class="col-auto">
+                <div class="nav-logo"></div>
+              </div>
+              <!-- Avatar do usuário -->
+              <div class="col-auto">
+                <div class="nav-avatar"></div>
+              </div>
+            </div>
+            <!-- Configurações do usuário -->
+            <div class="nav-configs bg-gray-1"></div>
             <!-- Menu de navegação -->
             <div class="items">
               <!-- Navegação local -->
@@ -207,6 +218,11 @@
         <div class="container">
           <!-- Links rápidos -->
           <div class="nav-quicklinks"></div>
+          <!-- Logout -->
+          <div class="nav-logout">
+            <div class="nav-buttontimeout"></div>
+            <div class="nav-timeout"></div>
+          </div>
           <!-- Links úteis e redes sociais -->
           <div class="row">
             <!-- Links úteis -->
@@ -423,26 +439,49 @@
     </div>
   </footer>
   <!-- Script da barra de governo -->
-  <!-- <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script> -->
   <script>
     // Clonáveis
     const logo = document.querySelector('.logo')
     const quicklinks = document.querySelector('.quicklinks')
+    const avatar = document.querySelector('.avatar')
+    const configs = document.querySelector('.configs .menu')
+    const logout = document.querySelector('.logout')
+    const timeout = document.querySelector('.timeout')
 
     // Navegação
     const navigationTrigger = document.querySelector('.menu-hamburger')
     const navigation = document.querySelector('#navigation')
 
-    const navLogo = navigation.querySelector('.nav-logo')
-    const navQuicklinks = navigation.querySelector('.nav-quicklinks')
+    const navlogo = navigation.querySelector('.nav-logo')
+    const navquicklinks = navigation.querySelector('.nav-quicklinks')
+    const navavatar = navigation.querySelector('.nav-avatar')
+    const navconfigs = navigation.querySelector('.nav-configs')
+    const navbuttontimeout = navigation.querySelector('.nav-buttontimeout')
+    const navtimeout = navigation.querySelector('.nav-timeout')
 
     const navItems = navigation.querySelectorAll('.item')
     const navArrowForward = 'fas fa-chevron-right'
     const navArrowBack = 'fas fa-chevron-left'
 
     function navClones() {
-      navLogo.appendChild(logo.cloneNode(true))
-      navQuicklinks.appendChild(quicklinks.cloneNode(true))
+      if (logo) {
+        navlogo.appendChild(logo.cloneNode(true))
+      }
+      if (quicklinks) {
+        navquicklinks.appendChild(quicklinks.cloneNode(true))
+      }
+      if (avatar) {
+        navavatar.appendChild(avatar.cloneNode(true))
+      }
+      if (configs) {
+        navconfigs.appendChild(configs.cloneNode(true))
+      }
+      if (logout) {
+        navbuttontimeout.appendChild(logout.cloneNode(true))
+      }
+      if (timeout) {
+        navtimeout.appendChild(timeout.cloneNode(true))
+      }
     }
 
     navClones()

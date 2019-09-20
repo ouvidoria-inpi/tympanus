@@ -143,7 +143,7 @@
 }
 
 .language {
-  z-index: 3;
+  z-index: 4;
 }
 
 .language .trigger {
@@ -237,7 +237,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .search .field {
@@ -331,26 +331,6 @@
   display: none;
 }
 
-.user-bar .logout {
-  background: transparent;
-  border: 1px solid #1351b4;
-  border-radius: 100px;
-  color: #1351b4;
-  display: inline-flex;
-  font-size: 12px;
-  font-weight: 600;
-  height: 32px;
-  margin-left: 16px;
-  padding: 0 24px;
-  text-align: center;
-}
-
-.user-bar .logout:hover {
-  background: #2670e8;
-  border-color: #2670e8;
-  color: #ffffff;
-}
-
 .avatar {
   position: relative;
 }
@@ -392,6 +372,7 @@
 }
 
 .configs .trigger {
+  align-items: center;
   background: #ededed;
   border: 0;
   border-radius: 50%;
@@ -423,7 +404,7 @@
 .configs .menu .account {
   border-top: 1px solid #ededed;
   display: flex;
-  margin: -8px -32px;
+  margin: -8px -16px;
 }
 
 .configs .menu .account > * {
@@ -457,11 +438,33 @@
   width: 0;
 }
 
+.logout {
+  align-items: center;
+  background: transparent;
+  border: 1px solid #1351b4;
+  border-radius: 100px;
+  color: #1351b4;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  height: 32px;
+  margin-left: 16px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.logout:hover {
+  background: #2670e8;
+  border-color: #2670e8;
+  color: #ffffff;
+}
+
 .bookmarks {
   margin-left: 12px;
 }
 
 .bookmarks .trigger {
+  align-items: center;
   background: transparent;
   border: 0;
   border-radius: 50%;
@@ -592,8 +595,33 @@
   padding: 8px 16px;
 }
 
+.links {
+  position: relative;
+  border-top: 1px solid #ededed;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.links span {
+  display: block;
+  font-weight: 700;
+  margin: 8px 0;
+  text-transform: uppercase;
+}
+
+.links a {
+  align-items: center;
+  display: flex;
+  padding: 4px 0;
+}
+
+.links a [class*="fa-"] {
+  margin-left: 8px;
+}
+
 .navigation {
   position: relative;
+  z-index: 2;
 }
 
 .navigation ul {
@@ -607,24 +635,14 @@
   display: none;
   flex-direction: column;
   left: 0;
-  min-height: calc(100vh - 45px);
   position: absolute;
   right: 0;
   z-index: 1;
 }
 
-.navigation .wrapper .d-flex .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .navigation .logo {
-  background: #f8f8f8;
   display: block;
-  margin-left: -8px;
-  margin-right: -8px;
-  padding: 12px 16px;
+  padding: 0 8px;
   position: static;
   text-align: left;
 }
@@ -641,6 +659,45 @@
   display: block;
 }
 
+.navigation .nav-avatar {
+  padding: 0 8px;
+}
+
+.navigation .nav-configs {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.navigation .nav-configs .menu {
+  padding-bottom: 16px;
+}
+
+.navigation .nav-configs .menu .user .name {
+  font-weight: 600;
+}
+
+.navigation .nav-configs .menu .user .email {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.navigation .nav-configs .menu .title {
+  border-bottom: 1px solid #cccccc;
+  display: block;
+  padding: 12px 16px;
+}
+
+.navigation .nav-configs .menu .item {
+  color: #555555;
+  display: block;
+  padding: 8px 16px;
+}
+
+.navigation .nav-configs .menu .item:hover {
+  background: #dbe8fb;
+  text-decoration: none;
+}
+
 .navigation .items {
   background: #ededed;
   display: flex;
@@ -650,6 +707,11 @@
   margin-left: -8px;
   margin-right: -8px;
   overflow: auto;
+}
+
+.navigation .items .local,
+.navigation .items .govbr {
+  padding: 16px 0;
 }
 
 .navigation .govbr {
@@ -741,27 +803,19 @@
   display: inline-block;
 }
 
-.navigation .links {
-  border-top: 1px solid #ededed;
-  font-size: 14px;
-  padding: 8px;
-}
-
-.navigation .links span {
-  display: block;
-  font-weight: 700;
-  margin: 8px 0;
-  text-transform: uppercase;
-}
-
-.navigation .links a {
+.navigation .nav-logout {
   align-items: center;
   display: flex;
-  padding: 4px 0;
+  justify-content: space-between;
+  padding: 16px 8px;
 }
 
-.navigation .links a [class*="fa-"] {
-  margin-left: 8px;
+.navigation .nav-logout .logout {
+  margin-left: 0;
+}
+
+.navigation .nav-logout .timeout {
+  display: block;
 }
 
 .navigation.is-active .wrapper {
@@ -808,6 +862,7 @@
 .page-footer .navigation {
   border-top: 1px solid #ffffff;
   padding: 0;
+  position: static;
 }
 
 .page-footer .navigation .item {
@@ -904,6 +959,11 @@
     display: block;
     margin-top: 4px;
   }
+  .nav-avatar {
+    position: absolute;
+    right: 8px;
+    top: 16px;
+  }
   .quicklinks {
     align-self: flex-start;
     margin-top: 8px;
@@ -953,6 +1013,9 @@
   .logo .description {
     font-size: 18px;
     position: absolute;
+  }
+  .nav-configs {
+    display: none;
   }
   .quicklinks {
     margin-right: 0;
@@ -1035,6 +1098,9 @@
     width: 25%;
   }
   .navigation .quicklinks {
+    display: none;
+  }
+  .navigation .nav-logout {
     display: none;
   }
   .navigation .links span {
