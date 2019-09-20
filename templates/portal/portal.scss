@@ -595,10 +595,10 @@ $logo-desktop: 150px;
 
 // Links úteis
 .links {
-  position: relative;
   border-top: 1px solid $color-gray-2;
   font-size: 14px;
   padding: $spacing-1;
+  position: relative;
   span {
     display: block;
     font-weight: 700;
