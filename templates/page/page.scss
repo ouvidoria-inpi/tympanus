@@ -173,7 +173,7 @@ $navigation-width: 320px;
     // Navegação
     .navigation {
       background: $color-gray-1;
-      box-shadow: inset -15px -9px 13px -15px rgba($color-black, 0.16);
+      box-shadow: inset -15px -9px 13px -15px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
       // Container da navegação
       .wrapper {
         background: transparent;
