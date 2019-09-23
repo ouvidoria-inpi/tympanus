@@ -2360,7 +2360,7 @@
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  right: -8px;
+  right: 0;
   top: 0;
   z-index: 3;
 }
@@ -2393,11 +2393,25 @@
 .br-search .close {
   background: transparent;
   border: 0;
+  bottom: 0;
   display: none;
   padding: 0 12px;
+  position: absolute;
+  right: 4px;
+  top: 0;
 }
 .br-search.is-active {
+  bottom: 16px;
   left: -8px;
+  top: auto;
+}
+.br-search.is-active .field {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
 }
 .br-search.is-active .field input {
   display: block;
