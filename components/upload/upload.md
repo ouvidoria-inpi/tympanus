@@ -76,6 +76,7 @@ Exemplo de uso:
   Arraste e solte o(s) arquivo(s) do seu computador
 </h1>
 <span class="upload-info">
+  <i class="fas fa-info-circle"></i>
   Os arquivos devem ser no formato PNG, JPG ou PDF e ter no máximo 1GB
 </span>
 ```
@@ -100,6 +101,7 @@ Exemplo de uso:
 <label 
  for="upload-input" 
  class="upload-add br-button is-cancel">
+ <i class="fas fa-plus"></i>
  Adicionar um arquivo do seu computador
 </label>
 ```

@@ -42,13 +42,9 @@
   padding-left: 40px;
 }
 
-.br-upload .upload-info::before {
-  content: "\f05a";
-  font-family: "Font Awesome 5 Free";
-  font-size: 24px;
-  font-weight: 900;
+.br-upload .upload-info .fa-info-circle {
+  font-size: 26px;
   margin-left: -40px;
-  padding-right: 10px;
   position: absolute;
 }
 
@@ -85,17 +81,13 @@
 .br-upload .upload-add {
   display: block;
   margin: 30px 0;
-  padding-left: 30px;
+  padding-left: 32px;
 }
 
-.br-upload .upload-add::before {
-  content: "\f067";
-  font-family: "Font Awesome 5 Free";
-  font-size: 18px;
-  font-weight: 900;
-  margin-left: -30px;
-  margin-top: 4px;
-  padding-right: 10px;
+.br-upload .upload-add .fa-plus {
+  font-size: 16px;
+  margin-left: -28px;
+  margin-top: 6px;
   position: absolute;
 }
 
