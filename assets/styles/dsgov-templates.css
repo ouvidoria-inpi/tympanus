@@ -720,7 +720,6 @@
   text-decoration: none;
 }
 .navigation .items {
-  background: #ededed;
   -webkit-box-direction: normal;
   -webkit-box-flex: 1;
   -webkit-box-orient: vertical;
@@ -763,16 +762,6 @@
   margin: 0;
   padding: 0;
 }
-.navigation .item:hover > a,
-.navigation .item:hover > button,
-.navigation .item:focus > a,
-.navigation .item:focus > button,
-.navigation .item:active > a,
-.navigation .item:active > button {
-  background: #0c326f;
-  color: #ffffff;
-  font-weight: 600;
-}
 .navigation .item a,
 .navigation .item button {
   align-items: center;
@@ -793,13 +782,11 @@
   text-decoration: none;
   width: 100%;
 }
-.navigation .item .item:hover a,
-.navigation .item .item:hover button,
-.navigation .item .item:focus a,
-.navigation .item .item:focus button,
-.navigation .item .item:active a,
-.navigation .item .item:active button {
-  background: #1351b4;
+.navigation .item a:hover,
+.navigation .item button:hover {
+  background: #0c326f;
+  color: #ffffff;
+  font-weight: 600;
 }
 .navigation .level-1,
 .navigation .level-2,
@@ -807,6 +794,14 @@
   display: none;
   margin: 0;
   padding: 0;
+}
+.navigation .level-1 a:hover,
+.navigation .level-1 button:hover,
+.navigation .level-2 a:hover,
+.navigation .level-2 button:hover,
+.navigation .level-3 a:hover,
+.navigation .level-3 button:hover {
+  background: #1351b4;
 }
 .navigation .quicklinks {
   margin: 12px 8px;
@@ -840,13 +835,13 @@
   -ms-flex-align: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 16px 8px;
 }
 .navigation .nav-logout .logout {
-  margin-left: 0;
+  margin: 16px 0;
 }
 .navigation .nav-logout .timeout {
   display: block;
+  margin: 16px 0;
 }
 .navigation.is-active .wrapper {
   display: -webkit-box;
@@ -1209,6 +1204,39 @@
   }
 }
 
+.template-system .navigation .items {
+  background: #f8f8f8;
+}
+.template-system .navigation .item a,
+.template-system .navigation .item button {
+  border-bottom: 1px solid #268744;
+  color: #1351b4;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.template-system .navigation .item a:hover,
+.template-system .navigation .item button:hover {
+  background: #dbe8fb;
+}
+.template-system .navigation .level-1 a,
+.template-system .navigation .level-1 button,
+.template-system .navigation .level-2 a,
+.template-system .navigation .level-2 button,
+.template-system .navigation .level-3 a,
+.template-system .navigation .level-3 button {
+  border-bottom: 0;
+  color: #555555;
+  font-size: 13px;
+}
+.template-system .navigation .level-2 a,
+.template-system .navigation .level-2 button,
+.template-system .navigation .level-3 a,
+.template-system .navigation .level-3 button {
+  font-size: 12px;
+  font-weight: 700;
+  padding-left: 40px;
+  text-transform: none;
+}
 
 .template-system .page-footer {
   background: transparent;
@@ -1217,6 +1245,171 @@
 .template-system .page-footer img {
   margin-bottom: 8px;
 }
+
+@media (min-width: 576px) {
+  .template-system .header-bar {
+    height: 45px;
+  }
+  .template-system .menu-hamburger {
+    bottom: auto;
+  }
+  .template-system .logo {
+    margin-left: 44px;
+    text-align: left;
+  }
+  .template-system .logo .description {
+    margin: 0;
+  }
+  .template-system .search {
+    bottom: 0;
+  }
+}
+
+@media (min-width: 998px) {
+  .template-system .header-bar {
+    background: #ededed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .template-system .menu-hamburger {
+    float: left;
+    margin: 0;
+    position: static;
+  }
+  .template-system .logo {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    margin: 0;
+    position: static;
+  }
+  .template-system .logo .name {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+    position: static;
+    text-transform: uppercase;
+  }
+  .template-system .logo .description {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    position: static;
+  }
+  .template-system .search {
+    bottom: 16px;
+    margin: 0;
+    right: 40%;
+    top: 16px;
+  }
+  .template-system .search.is-active .field input {
+    background: #ffffff;
+  }
+  .template-system .search.is-active .field button {
+    background: #ffffff;
+  }
+  .template-system .accessibility {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 12px 0 auto;
+    padding-left: 0;
+  }
+  .template-system .accessibility a {
+    align-items: center;
+    -webkit-box-align: center;
+    color: #333333;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .template-system .accessibility a:not(:last-child) {
+    margin-right: 32px;
+  }
+  .template-system .accessibility a:hover {
+    text-decoration: none;
+  }
+  .template-system .accessibility a:hover .content {
+    text-decoration: underline;
+  }
+  .template-system .accessibility a [class*="fa-"] {
+    margin-right: 8px;
+  }
+  .template-system .page-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .template-system .navigation {
+    background: #f8f8f8;
+    -webkit-box-shadow: inset -15px -9px 13px -15px rgba(0, 0, 0, 0.16);
+    box-shadow: inset -15px -9px 13px -15px rgba(0, 0, 0, 0.16);
+  }
+  .template-system .navigation .wrapper {
+    background: transparent;
+    border-top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0 32px;
+    position: static;
+  }
+  .template-system .navigation .nav-avatar {
+    display: none;
+  }
+  .template-system .navigation .items {
+    background: transparent;
+  }
+  .template-system .navigation .items .local,
+  .template-system .navigation .items .govbr {
+    border-right: 0;
+    width: 100%;
+  }
+  .template-system .navigation .item {
+    margin-bottom: 40px;
+  }
+  .template-system .navigation .item:hover > .level-1,
+  .template-system .navigation .item:hover > .level-2,
+  .template-system .navigation .item:hover > .level-3,
+  .template-system .navigation .item:focus > .level-1,
+  .template-system .navigation .item:focus > .level-2,
+  .template-system .navigation .item:focus > .level-3 {
+    display: none;
+  }
+  .template-system .navigation .item .item {
+    margin-bottom: 0;
+  }
+  .template-system .navigation .level-1,
+  .template-system .navigation .level-2,
+  .template-system .navigation .level-3 {
+    padding: 0;
+    position: static;
+  }
+  .template-system .navigation .level-1.is-active,
+  .template-system .navigation .level-2.is-active,
+  .template-system .navigation .level-3.is-active {
+    display: block !important;
+  }
+  .template-system .navigation .level-1 {
+    width: 100%;
+  }
+  .template-system .navigation.is-active {
+    width: 320px;
+  }
+}
+
 
 .result-list {
   padding: 24px;
