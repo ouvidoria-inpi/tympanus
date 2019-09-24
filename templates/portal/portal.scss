@@ -693,7 +693,7 @@ $logo-desktop: 150px;
     justify-content: space-between;
     margin-left: - $spacing-1;
     margin-right: - $spacing-1;
-    overflow: auto;
+    // overflow: auto;
     .local,
     .govbr {
       padding: $spacing-3 0;
@@ -708,11 +708,7 @@ $logo-desktop: 150px;
         filter: invert(70%);
         max-width: 64px;
       }
-    }
-    .item {
-      &:hover,
-      &:focus,
-      &:active {
+      &:hover {
         img {
           filter: invert(0);
         }
@@ -738,6 +734,14 @@ $logo-desktop: 150px;
       width: 100%;
       &:hover {
         background: $color-primary-darken-15;
+        color: $color-white;
+        font-weight: 600;
+      }
+    }
+    &.is-active {
+      a,
+      button {
+        background: $color-primary;
         color: $color-white;
         font-weight: 600;
       }
@@ -1084,6 +1088,7 @@ $logo-desktop: 150px;
     }
     // Menu de navegação
     .items {
+      // background: $color-gray-5;
       position: relative;
       .local,
       .govbr {
@@ -1093,12 +1098,23 @@ $logo-desktop: 150px;
     }
     // Item de navegação
     .item {
-      &:hover,
-      &:focus {
-        > .level-1,
-        > .level-2,
-        > .level-3 {
+      &:hover {
+        > a,
+        > button {
+          background: $color-primary-darken-15;
+          color: $color-white;
+          font-weight: 600;
+        }
+        > .submenu {
           display: block;
+        }
+      }
+      .item {
+        &:hover {
+          > a,
+          > button {
+            background: $color-primary;
+          }
         }
       }
     }
@@ -1107,14 +1123,23 @@ $logo-desktop: 150px;
     .level-2,
     .level-3 {
       bottom: 0;
-      overflow: auto;
+      box-shadow: inset -1px 0 0 0 $color-gray-3;
       padding: $spacing-3 0;
       position: absolute;
       top: 0;
+      // Mostrar subnível ativo
+      &.is-active {
+        display: block !important;
+      }
     }
     .level-1 {
       left: 25%;
+      // overflow-y: auto;
       width: 25%;
+    }
+    .level-2 {
+      left: 100%;
+      width: 100%;
     }
     // Links rápidos
     .quicklinks {
@@ -1187,6 +1212,11 @@ $logo-desktop: 150px;
         }
       }
       // Níveis de navegação
+      .level-1,
+      .level-2,
+      .level-3 {
+        box-shadow: none;
+      }
       .level-1 {
         background: transparent;
         display: block;
