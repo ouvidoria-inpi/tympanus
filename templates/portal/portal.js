@@ -18,8 +18,16 @@ class TemplatePortal {
   _cloneNavigation() {
     for (let navLogo of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo')) {
       for (let logo of this.template.querySelectorAll('.header-bar .logo')) {
-        navLogo.appendChild(logo.cloneNode(true));
+        let clonedLogo = logo.cloneNode(true);
+        clonedLogo.classList.add('is-active');
+        navLogo.appendChild(clonedLogo);
       }
+      let button = window.document.createElement('button');
+      let icon = window.document.createElement('i');
+      icon.setAttribute('class', 'fas fa-chevron-left');
+      button.appendChild(window.document.createTextNode(''));
+      button.appendChild(icon);
+      navLogo.appendChild(button);
     }
     for (let navQuicklinks of this.template.querySelectorAll('.page-wrapper .navigation .nav-quicklinks')) {
       for (let quicklinks of this.template.querySelectorAll('.header-bar .quicklinks')) {
@@ -61,25 +69,35 @@ class TemplatePortal {
       arrowIcon.setAttribute('class', 'fas fa-chevron-right');
       button.appendChild(arrowIcon);
       if (window.screen.width < 1024) {
-        button.addEventListener('click', () => {
-          button.parentElement.parentElement.classList.remove('is-active');
-          button.nextElementSibling.classList.add('is-active');
-          for (let navLogo of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo')) {
-            for (let logo of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo .logo')) {
-              navLogo.removeChild(logo);
-              let icon = window.document.createElement('i');
-              icon.setAttribute('class', 'fas fa-chevron-left')
-              let text = window.document.createElement('span');
-              text.innerHTML = button.innerText;
-              navLogo.appendChild(icon);
-              navLogo.appendChild(text);
-              navLogo.addEventListener('click', () => {
-                button.nextElementSibling.classList.remove('is-active');
-                button.parentElement.parentElement.classList.add('is-active');
-              })
-            }
-          }
+        button.addEventListener('click', (event) => {
+          this._setMenuMobileBehavior(event);
         });
+      }
+    }
+  }
+
+  _setMenuMobileBehavior(event) {
+    let submenuButton = event.currentTarget;
+    for (let button of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo button')) {
+      button.childNodes[0].nodeValue = submenuButton.innerText;
+      button.classList.add('is-active');
+      button.previousElementSibling.classList.remove('is-active');
+      button.addEventListener('click', () => {
+        submenuButton.parentNode.classList.remove('is-active');
+        if (submenuButton.parentNode.parentNode.classList.contains('level-0')) {
+          button.childNodes[0].nodeValue = '';
+          button.classList.remove('is-active');
+          button.previousElementSibling.classList.add('is-active');
+        } else {
+          
+        }
+      });
+    }
+    for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
+      if (button === submenuButton) {
+        button.parentNode.classList.add('is-active');
+      } else {
+        button.parentNode.classList.remove('is-active');
       }
     }
   }

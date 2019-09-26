@@ -198,27 +198,46 @@ $navigation-width: 320px;
       // Item de navegação
       .item {
         margin-bottom: $spacing-8;
-        &:hover,
-        &:focus {
-          > .level-1,
-          > .level-2,
-          > .level-3 {
+        &:hover {
+          > a,
+          > button {
+            background: transparent;
+            &:hover {
+              background: $color-primary-pastel-1;
+            }
+          }
+          > .submenu {
             display: none;
           }
         }
         .item {
           margin-bottom: 0;
+          // > a,
+          // > button {
+          //   color: $color-gray-6;
+          // }
+        }
+        &.is-active {
+          > a,
+          > button {
+            &,
+            &:hover {
+              background: $color-primary;
+              color: $color-white;
+            }
+          }
         }
       }
       // Níveis de navegação
       .level-1,
       .level-2,
       .level-3 {
+        box-shadow: none;
         padding: 0;
         position: static;
-        &.is-active {
-          display: block !important;
-        }
+        // &.is-active {
+        //   display: block !important;
+        // }
       }
       .level-1 {
         width: 100%;

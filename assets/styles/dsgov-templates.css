@@ -735,7 +735,6 @@
   justify-content: space-between;
   margin-left: -8px;
   margin-right: -8px;
-  overflow: auto;
 }
 .navigation .items .local,
 .navigation .items .govbr {
@@ -752,9 +751,7 @@
   filter: invert(70%);
   max-width: 64px;
 }
-.navigation .govbr .item:hover img,
-.navigation .govbr .item:focus img,
-.navigation .govbr .item:active img {
+.navigation .govbr .logo:hover img {
   -webkit-filter: invert(0);
   filter: invert(0);
 }
@@ -785,6 +782,12 @@
 .navigation .item a:hover,
 .navigation .item button:hover {
   background: #0c326f;
+  color: #ffffff;
+  font-weight: 600;
+}
+.navigation .item.is-active a,
+.navigation .item.is-active button {
+  background: #1351b4;
   color: #ffffff;
   font-weight: 600;
 }
@@ -1107,26 +1110,41 @@
     border-right: 1px solid #cccccc;
     width: 25%;
   }
-  .navigation .item:hover > .level-1,
-  .navigation .item:hover > .level-2,
-  .navigation .item:hover > .level-3,
-  .navigation .item:focus > .level-1,
-  .navigation .item:focus > .level-2,
-  .navigation .item:focus > .level-3 {
+  .navigation .item:hover > a,
+  .navigation .item:hover > button {
+    background: #0c326f;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .navigation .item:hover > .submenu {
     display: block;
+  }
+  .navigation .item .item:hover > a,
+  .navigation .item .item:hover > button {
+    background: #1351b4;
   }
   .navigation .level-1,
   .navigation .level-2,
   .navigation .level-3 {
     bottom: 0;
-    overflow: auto;
+    -webkit-box-shadow: inset -1px 0 0 0 #cccccc;
+    box-shadow: inset -1px 0 0 0 #cccccc;
     padding: 16px 0;
     position: absolute;
     top: 0;
   }
+  .navigation .level-1.is-active,
+  .navigation .level-2.is-active,
+  .navigation .level-3.is-active {
+    display: block !important;
+  }
   .navigation .level-1 {
     left: 25%;
     width: 25%;
+  }
+  .navigation .level-2 {
+    left: 100%;
+    width: 100%;
   }
   .navigation .quicklinks {
     display: none;
@@ -1190,6 +1208,12 @@
   .page-footer .navigation .item .item:active > a,
   .page-footer .navigation .item .item:active > button {
     font-weight: 500;
+  }
+  .page-footer .navigation .level-1,
+  .page-footer .navigation .level-2,
+  .page-footer .navigation .level-3 {
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
   .page-footer .navigation .level-1 {
     background: transparent;
@@ -1380,27 +1404,34 @@
   .template-system .navigation .item {
     margin-bottom: 40px;
   }
-  .template-system .navigation .item:hover > .level-1,
-  .template-system .navigation .item:hover > .level-2,
-  .template-system .navigation .item:hover > .level-3,
-  .template-system .navigation .item:focus > .level-1,
-  .template-system .navigation .item:focus > .level-2,
-  .template-system .navigation .item:focus > .level-3 {
+  .template-system .navigation .item:hover > a,
+  .template-system .navigation .item:hover > button {
+    background: transparent;
+  }
+  .template-system .navigation .item:hover > a:hover,
+  .template-system .navigation .item:hover > button:hover {
+    background: #dbe8fb;
+  }
+  .template-system .navigation .item:hover > .submenu {
     display: none;
   }
   .template-system .navigation .item .item {
     margin-bottom: 0;
   }
+  .template-system .navigation .item.is-active > a,
+  .template-system .navigation .item.is-active > a:hover,
+  .template-system .navigation .item.is-active > button,
+  .template-system .navigation .item.is-active > button:hover {
+    background: #1351b4;
+    color: #ffffff;
+  }
   .template-system .navigation .level-1,
   .template-system .navigation .level-2,
   .template-system .navigation .level-3 {
+    -webkit-box-shadow: none;
+    box-shadow: none;
     padding: 0;
     position: static;
-  }
-  .template-system .navigation .level-1.is-active,
-  .template-system .navigation .level-2.is-active,
-  .template-system .navigation .level-3.is-active {
-    display: block !important;
   }
   .template-system .navigation .level-1 {
     width: 100%;

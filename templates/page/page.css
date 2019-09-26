@@ -162,26 +162,32 @@
   .template-system .navigation .item {
     margin-bottom: 40px;
   }
-  .template-system .navigation .item:hover > .level-1,
-  .template-system .navigation .item:hover > .level-2,
-  .template-system .navigation .item:hover > .level-3, .template-system .navigation .item:focus > .level-1,
-  .template-system .navigation .item:focus > .level-2,
-  .template-system .navigation .item:focus > .level-3 {
+  .template-system .navigation .item:hover > a,
+  .template-system .navigation .item:hover > button {
+    background: transparent;
+  }
+  .template-system .navigation .item:hover > a:hover,
+  .template-system .navigation .item:hover > button:hover {
+    background: #dbe8fb;
+  }
+  .template-system .navigation .item:hover > .submenu {
     display: none;
   }
   .template-system .navigation .item .item {
     margin-bottom: 0;
   }
+  .template-system .navigation .item.is-active > a, .template-system .navigation .item.is-active > a:hover,
+  .template-system .navigation .item.is-active > button,
+  .template-system .navigation .item.is-active > button:hover {
+    background: #1351b4;
+    color: #ffffff;
+  }
   .template-system .navigation .level-1,
   .template-system .navigation .level-2,
   .template-system .navigation .level-3 {
+    box-shadow: none;
     padding: 0;
     position: static;
-  }
-  .template-system .navigation .level-1.is-active,
-  .template-system .navigation .level-2.is-active,
-  .template-system .navigation .level-3.is-active {
-    display: block !important;
   }
   .template-system .navigation .level-1 {
     width: 100%;
