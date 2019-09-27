@@ -81,14 +81,9 @@ class TemplatePortal {
   _setMenuMobileBehavior(event) {
     this.ongoingMenu = event.currentTarget;
     let currentMenuLevel = Number(this.ongoingMenu.nextElementSibling.getAttribute('data-level'));
-    for (let levelZero of this.template.querySelectorAll('.page-wrapper .navigation .level-0')) {
-      levelZero.classList.remove('is-active');
-    }
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.add('is-active');
-      } else {
-        button.parentNode.classList.remove('is-active');
       }
     }
     for (let backButton of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo button')) {
@@ -103,7 +98,6 @@ class TemplatePortal {
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.remove('is-active');
-        button.parentNode.parentNode.classList.add('is-active');
         event.currentTarget.setAttribute('data-level', Number(button.parentNode.parentNode.getAttribute('data-level')));
         if (button.parentNode.parentNode.getAttribute('data-level') == 0) {
           event.currentTarget.childNodes[0].nodeValue = '';
