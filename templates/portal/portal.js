@@ -72,7 +72,7 @@ class TemplatePortal {
       let arrowIcon = document.createElement('i');
       arrowIcon.setAttribute('class', 'fas fa-chevron-right');
       button.appendChild(arrowIcon);
-      button.addEventListener('click', () => {
+      button.addEventListener('click', (event) => {
         this._setMenuMobileBehavior(event);
       });
     }
