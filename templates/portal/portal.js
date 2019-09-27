@@ -68,7 +68,7 @@ class TemplatePortal {
         }
       });      
     }
-    for (let button of this.template.querySelectorAll('.page-wrapper .navigation li.item button')) {
+    for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       let arrowIcon = document.createElement('i');
       arrowIcon.setAttribute('class', 'fas fa-chevron-right');
       button.appendChild(arrowIcon);
@@ -81,10 +81,10 @@ class TemplatePortal {
   _setMenuMobileBehavior(event) {
     this.ongoingMenu = event.currentTarget;
     let currentMenuLevel = Number(this.ongoingMenu.nextElementSibling.getAttribute('data-level'));
-    for (let levelZero of this.template.querySelectorAll('.page-wrapper .navigation .item.level-0')) {
+    for (let levelZero of this.template.querySelectorAll('.page-wrapper .navigation .level-0')) {
       levelZero.classList.remove('is-active');
     }
-    for (let button of this.template.querySelectorAll('.page-wrapper .navigation li.item button')) {
+    for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.add('is-active');
       } else {
@@ -100,7 +100,7 @@ class TemplatePortal {
   }
 
   _onBackButtonClick(event) {
-    for (let button of this.template.querySelectorAll('.page-wrapper .navigation li.item button')) {
+    for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.remove('is-active');
         button.parentNode.parentNode.classList.add('is-active');
