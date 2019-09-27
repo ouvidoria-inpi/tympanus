@@ -68,7 +68,7 @@ class TemplatePortal {
         }
       });      
     }
-    for (let button of this.template.querySelectorAll('.page-wrapper .navigation ul.item button')) {
+    for (let button of this.template.querySelectorAll('.page-wrapper .navigation li.item button')) {
       let arrowIcon = document.createElement('i');
       arrowIcon.setAttribute('class', 'fas fa-chevron-right');
       button.appendChild(arrowIcon);
@@ -79,17 +79,17 @@ class TemplatePortal {
   }
 
   _setMenuMobileBehavior(event) {
-    this.menuButtonClicked = event.currentTarget;
-    let currentMenuLevel = Number(event.currentTarget.nextElementSibling.getAttribute('data-level'));
-    for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
-      if (button === event.currentTarget) {
+    this.ongoingMenu = event.currentTarget;
+    let currentMenuLevel = Number(this.ongoingMenu.nextElementSibling.getAttribute('data-level'));
+    for (let button of this.template.querySelectorAll('.page-wrapper .navigation li.item button')) {
+      if (button === this.ongoingMenu) {
         button.parentNode.classList.add('is-active');
       } else {
         button.parentNode.classList.remove('is-active');
       }
     }
     for (let backButton of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo button')) {
-      backButton.childNodes[0].nodeValue = event.currentTarget.innerText;
+      backButton.childNodes[0].nodeValue = this.ongoingMenu.innerText;
       backButton.classList.add('is-active');
       backButton.previousElementSibling.classList.remove('is-active');
       backButton.setAttribute('data-level', currentMenuLevel);
@@ -97,17 +97,22 @@ class TemplatePortal {
   }
 
   _onBackButtonClick(event) {
-    for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
-      if (button === this.menuButtonClicked) {
+    for (let button of this.template.querySelectorAll('.page-wrapper .navigation li.item button')) {
+      if (button === this.ongoingMenu) {
         button.parentNode.classList.remove('is-active');
-        event.currentTarget.setAttribute('data-level', Number(event.currentTarget.getAttribute('data-level')) - 1);
+        button.parentNode.parentNode.classList.add('is-active');
+        event.currentTarget.setAttribute('data-level', Number(button.parentNode.parentNode.getAttribute('data-level')));
+        if (button.parentNode.parentNode.getAttribute('data-level') == 0) {
+          event.currentTarget.childNodes[0].nodeValue = '';
+          event.currentTarget.classList.remove('is-active');
+          event.currentTarget.previousElementSibling.classList.add('is-active');
+          this.ongoingMenu = undefined;
+        } else {
+          this.ongoingMenu = button.parentNode.parentNode.previousElementSibling;
+          event.currentTarget.childNodes[0].nodeValue = this.ongoingMenu.innerText;
+        }
+        break;
       }
-    }
-    if (event.currentTarget.getAttribute('data-level') != 0) {
-      this.menuButtonClicked.parentNode.parentNode.classList.add('is-active');
-    } else {
-      event.currentTarget.classList.remove('is-active');
-      event.currentTarget.previousElementSibling.classList.add('is-active');
     }
   }
 
