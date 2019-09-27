@@ -81,6 +81,9 @@ class TemplatePortal {
   _setMenuMobileBehavior(event) {
     this.ongoingMenu = event.currentTarget;
     let currentMenuLevel = Number(this.ongoingMenu.nextElementSibling.getAttribute('data-level'));
+    for (let levelZero of this.template.querySelectorAll('.page-wrapper .navigation .item.level-0')) {
+      levelZero.classList.remove('is-active');
+    }
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation li.item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.add('is-active');
