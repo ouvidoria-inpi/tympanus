@@ -73,14 +73,13 @@
     padding-right: 0;
   }
   .template-system .menu-hamburger {
-    float: left;
-    margin: 0;
-    position: static;
+    left: 0;
+    position: absolute;
   }
   .template-system .logo {
     display: inline-flex;
     flex-direction: column-reverse;
-    margin: 0;
+    margin: 0 0 0 44px;
     position: static;
   }
   .template-system .logo .name {
