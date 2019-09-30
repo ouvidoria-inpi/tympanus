@@ -7,6 +7,8 @@ $main-bar-tablet: 85px;
 $main-bar-desktop: 150px;
 $main-bar-desktop-fixed: 55px;
 
+$navigation-bar: 64px;
+
 $logo-mobile: 64px;
 $logo-desktop: 150px;
 
@@ -634,7 +636,37 @@ $logo-desktop: 150px;
     right: 0;
     z-index: 1;
   }
+  // Cabeçalho
+  .header-bar {
+    align-items: center;
+    background: $color-gray-1;
+    height: $navigation-bar;
+    justify-content: space-between;
+  }
   // Logo
+  .nav-logo {
+    .logo {
+      display: none;
+      &.is-active {
+        display: block;
+      }
+    }
+    button {
+      align-items: center;
+      background: transparent;
+      border: 0;
+      display: none;
+      flex-direction: row-reverse;
+      font-size: 26px;
+      [class*="fa-"] {
+        color: $color-primary;
+        margin-right: $spacing-3;
+      }
+      &.is-active {
+        display: flex;
+      }
+    }
+  }
   .logo {
     display: block;
     padding: 0 $spacing-1;
@@ -691,12 +723,18 @@ $logo-desktop: 150px;
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: - $spacing-1;
-    margin-right: - $spacing-1;
+    margin: $spacing-3 (- $spacing-1);
+    overflow-y: auto;
+    position: relative;
     // overflow: auto;
     .local,
     .govbr {
-      padding: $spacing-3 0;
+      margin: 0;
+      padding: 0;
+    }
+    .govbr {
+      margin-top: $spacing-3;
+      padding-top: $spacing-3;
     }
   }
   // gov.br
@@ -719,8 +757,9 @@ $logo-desktop: 150px;
   .item {
     margin: 0;
     padding: 0;
-    a,
-    button {
+    // Link ou trigger de primeiro nível
+    > a,
+    > button {
       align-items: center;
       background: transparent;
       border: 0;
@@ -732,34 +771,58 @@ $logo-desktop: 150px;
       text-align: left;
       text-decoration: none;
       width: 100%;
+      [class*="fa-"] {
+        color: $color-primary;
+      }
       &:hover {
         background: $color-primary-darken-15;
         color: $color-white;
         font-weight: 600;
+        [class*="fa-"] {
+          color: $color-white;
+        }
       }
     }
+    .item {
+      // Link ou trigger de níveis seguintes
+      > a,
+      > button {
+        &:hover {
+          background: $color-primary;
+        }
+      }
+    }
+    // Item ativo
     &.is-active {
-      a,
-      button {
+      // Link ou trigger
+      > a,
+      > button {
         background: $color-primary;
         color: $color-white;
         font-weight: 600;
       }
+      // Submenu
+      > .submenu {
+        display: block;
+      }
     }
   }
-  // Níveis de navegação
+  // Submenu
+  .submenu {
+    background: $color-gray-2;
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
   .level-1,
   .level-2,
   .level-3 {
-    display: none;
     margin: 0;
     padding: 0;
-    a,
-    button {
-      &:hover {
-        background: $color-primary;
-      }
-    }
   }
   // Links rápidos
   .quicklinks {
@@ -959,10 +1022,6 @@ $logo-desktop: 150px;
   }
   // Navegação
   .navigation {
-    // Container da navegação
-    .wrapper {
-      min-height: 0;
-    }
     // Logo
     .logo {
       .name {
@@ -970,13 +1029,6 @@ $logo-desktop: 150px;
       }
       .description {
         display: none;
-      }
-    }
-    // Menu de navegação
-    .items {
-      .local,
-      .govbr {
-        padding: $spacing-3 0;
       }
     }
   }
@@ -1082,18 +1134,26 @@ $logo-desktop: 150px;
     .wrapper {
       background: $color-gray-1;
     }
+    // Cabeçalho
+    .header-bar {
+      display: none;
+    }
     // Logo
     .logo {
       display: none;
     }
     // Menu de navegação
     .items {
-      // background: $color-gray-5;
+      // overflow-y: visible
       position: relative;
       .local,
       .govbr {
         border-right: 1px solid $color-gray-3;
+        padding: $spacing-3 0;
         width: 25%;
+      }
+      .govbr {
+        margin-top: 0;
       }
     }
     // Item de navegação
