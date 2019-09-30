@@ -1,62 +1,51 @@
-function toggleAccordeonField(element, className) {
-  var fields = []
+class BRAccordeon {
 
-  for (
-    var accordeon = element;
-    !accordeon.classList.contains(className);
-    accordeon = accordeon.parentNode
-  );
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    this._setBehavior();
+  }
 
-  fields = accordeon.getElementsByClassName('field')
-
-  for (var i = 0; i < fields.length; i++) {
-    field = fields[i].getElementsByTagName('button')[0]
-    icon = field.getElementsByClassName('icon')[0].children[0]
-
-    if (field == element) {
-      if (icon.classList.contains('fa-minus')) {
-        icon.classList.remove('fa-minus')
-        icon.classList.add('fa-plus')
-        fields[i].classList.remove('is-active')
-      } else {
-        icon.classList.remove('fa-plus')
-        icon.classList.add('fa-minus')
-        fields[i].classList.add('is-active')
+  _setBehavior() {
+    for (let button of this.component.querySelectorAll('button.header')) {
+      button.addEventListener('click', (event) => {
+        this._collapse(event);
+        this._changeIcon(event);
+      });
+    }
+  }
+  
+  _collapse(event) {
+    for (let field of this.component.querySelectorAll('.field')) {
+      if (field === event.currentTarget.parentNode) {
+        field.classList.toggle('is-active');
+      } else if (field.classList.contains('is-active')) {
+        field.classList.toggle('is-active');
       }
-    } else {
-      if (accordeon.hasAttribute('single')) {
-        icon.classList.remove('fa-minus')
-        icon.classList.add('fa-plus')
-        fields[i].classList.remove('is-active')
+    }
+  }
+
+  _changeIcon(event) {
+    for (let field of this.component.querySelectorAll('.field')) {
+      if (field.classList.contains('is-active')) {
+        for (let icon of field.querySelectorAll('button .icon i')) {
+          icon.classList.remove('fa-plus');
+          icon.classList.add('fa-minus');
+        }
+      } else {
+        for (let icon of field.querySelectorAll('button .icon i')) {
+          icon.classList.remove('fa-minus');
+          icon.classList.add('fa-plus');
+        }
       }
     }
   }
 }
 
-let accordeons = getAccordeons();
-let collapses = getCollapses(accordeons);
+let accordeonList = [];
 
-for (let collapse of collapses) {
-  collapse.addEventListener("click", function(event) {
-    toggleAccordeonField(collapse, 'br-accordeon')
-  });
-}
-
-function getAccordeons() {
-  let accordeons = document.getElementsByClassName('br-accordeon');
-  return accordeons;
-}
-
-function getCollapses(accordeons) {
-  for (let accordeon of accordeons) {
-    let collapses = accordeon.querySelectorAll('[data-toggle="collapse"]');
-    return collapses;
+window.onload = (function startBrAccordions() {
+  for (let brAccordeon of window.document.querySelectorAll('.br-accordeon')) {
+    accordeonList.push(new BRAccordeon('br-accordeon', brAccordeon));
   }
-}
-
-// let collapseList = document.querySelectorAll('button[data-toggle="collapse"]');
-// collapseList.forEach(function(collapse) {
-//   collapse.addEventListener("click", function(event) {
-//     event.target.classList.toggle("is-open")
-//   })
-// })
+})();

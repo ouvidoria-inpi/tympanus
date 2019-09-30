@@ -8,6 +8,7 @@
 
 // sass-lint:disable clean-import-paths
 
+@import "../../templates/portal/portal.scss";
 @import "../../templates/page/page.scss";
 @import "../../templates/search/search.scss";
 @import "../../templates/starter/starter.scss";
@@ -15,4 +16,3 @@
 @import "../../templates/signin/signin.scss";
 @import "../../templates/not-found/not-found.scss";
 @import "../../templates/crud/crud.scss";
-// @import "../../templates/portal-menu/portal-menu.scss";

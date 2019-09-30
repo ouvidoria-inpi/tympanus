@@ -1,6 +1,15 @@
 // Carregar variáveis do DS-Gov
 @import "../../base/dsgov-base";
 
+// Barra principal
+$main-bar-mobile: 45px;
+$main-bar-tablet: 85px;
+$main-bar-desktop: 150px;
+$main-bar-desktop-fixed: 55px;
+
+$logo-mobile: 64px;
+$logo-desktop: 150px;
+
 // Atalhos para conteúdo
 .skip-menu {
   list-style: none;
@@ -23,293 +32,44 @@
   }
 }
 
-// Barra de Governo
-#barra-brasil {
-  background: $color-primary-darken-25;
-}
-
-// Logo
-.logo {
-  a {
-    &:hover {
-      text-decoration: none;
+// Dropdown
+.dropdown {
+  position: relative;
+  z-index: 1;
+  .menu {
+    background: $color-white;
+    box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
+    display: none;
+    position: absolute;
+    // Rótulo
+    .title {
+      display: block;
+      font-weight: 600;
+      padding: $spacing-1 $spacing-3;
     }
-  }
-  img {
-    max-width: 120px;
-  }
-  .name {
-    color: $color-gray-7;
-    display: inline-block;
-    font-size: 26px;
-    font-weight: 400;
-  }
-  .name-bold {
-    font-weight: 600;
-  }
-  .description {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-  }
-}
-
-//Menu Hamburguer
-.header-icons {
-  margin: 15px 10px 15px 0;
-  text-align: center;
-  & .ico-navegacao {
-    color: $color-gray-7 !important;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 22px;
-    height: 25px;
-    text-decoration: none;
-    width: 28px;
-    & .fa {
-      font-weight: 900;
-    }
-    & .fa-times {
-      display: none;
-    }
-  }
-}
-
-// Acessibilidade
-.header-accessibility {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  padding-top: 14px;
-  a {
-    color: $color-gray-7;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    &:not(:last-child) {
-      margin-right: $spacing-6;
-    }
-    &:hover {
-      text-decoration: none;
-      .accessibility-text {
-        text-decoration: underline;
-      }
-    }
-  }
-  ul {
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    & .link-contraste,
-    & .link-vlibras {
-      border-right: 1px solid $color-gray-3;
-      display: inline-block;
-      padding: 5px 15px;
-      & i {
-        font-size: 18px;
-        font-weight: 900;
-      }
-    }
-    &.language-selection {
-      & a.current-language {  // sass-lint:disable-line force-element-nesting
-        background-position: 0;
-        margin-left: 15px;
-        padding: 0 0 0 36px;
-        position: relative;
-        text-align: right;
-        &::after {
-          background: transparent url("../../assets/images/components_img/portal/angle-down.png") no-repeat 50%;
-          content: "";
-          display: inline-block;
-          height: 14px;
-          width: 9px;
-        }
-      }
-      & ul {
-        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22); // sass-lint:disable-line no-color-literals
-        background-color: $color-white;
-        border-top: 1px solid $color-warning;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22); // sass-lint:disable-line no-color-literals
-        display: none;
-        font-size: 16px;
-        padding: 0;
-        position: absolute;
-        right: 296px;
-        text-align: left;
-        top: 100%;
-        z-index: 160;
-        & li {
-          display: block;
-          margin-right: 20px;
-          text-transform: none;
-          white-space: nowrap;
-          & a {
-            font-size: 14px;
-          }
-        }
-        & .title {
-          border-bottom: 1px solid $color-gray-3;
-          color: $color-primary-darken-25;
-          font-size: 14px;
-          font-style: italic;
-          font-weight: 600;
-          margin: 10px 20px 0;
-          padding-bottom: 4px;
-        }
-      }
-    }
-    &.language-selection a.language-pt-br, // sass-lint:disable-line force-element-nesting
-    &.language-selection li.language-pt-br a { // sass-lint:disable-line force-element-nesting
-      background-image: url("../../assets/images/components_img/portal/flag-br.png");
-      background-position: 16px;
-      background-repeat: no-repeat;
-      background-size: 28px 21px;
-      display: inline-block;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 21px;
-      margin-left: 0;
-      padding: 9px 0;
-      padding-left: 49px;
-      text-align: left;
-    }
-  }
-  img {
-    @include media-breakpoint-up(sm) {
-      max-width: 16px;
-    }
-  }
-  .mobile-header & {
-    .br-button {
-      border-color: transparent;
-      &:focus {
-        box-shadow: none;
-      }
-      &.is-primary {
-        background: transparent;
-        color: $color-primary;
-      }
-      &.is-secondary {
-        color: $color-gray-6;
-        &:hover {
-          background: transparent;
-        }
-      }
-      & + .br-button {
-        margin-left: $spacing-2;
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-// Busca
-
-.desktop-header {
-  & .shadow-bottom {
-    & .container {
-      height: 64px;
-    }
-  }
-  & .br-search {
-    height: 64px;
-  }
-}
-
-.br-search {
-  // Versão desktop
-  .desktop-header & {
-    align-items: center;
-    display: flex;
-    //caixa de texto
-
-    .br-input {
-      input {
-        background: transparent;
-        border-color: transparent;
-        font-size: 20px;
-        font-weight: 400;
-        &:focus {
-          box-shadow: none;
-        }
-        &::placeholder {
-          // color: $color-black;
-          color: $color-gray-6;
-          font-size: 16px;
-          font-style: italic;
-          font-weight: 400;
-          text-align: right;
-        }
-      }
-    }
-    //botão de busca
-    .br-button {
-      &:focus {
-        box-shadow: none;
-      }
-      &.is-primary {
-        &,
-        &:hover {
-          background: transparent;
-          border-color: transparent transparent transparent $color-gray-6;
-          border-radius: 0 !important;
-          color: $color-primary;
-          margin-left: $spacing-4;
-          padding-left: $spacing-3 !important;
-        }
-      }
-      &.is-secondary {
-        &,
-        &:hover {
-          background: transparent;
-          border-color: transparent;
-          color: $color-gray-6;
-        }
-      }
-      & + .br-button {
-        margin-left: 0;
-      }
-    }
-    //botão de limpar
-    .clear-button {
-      background: transparent;
-      border: 0;
-    }
-  }
-  // Versão mobile
-  .mobile-header & {
-    flex-direction: column;
-    .br-input {
-      order: 1;
-      width: 100%;
-      input {
-        border-radius: 0;
-        &:focus {
-          box-shadow: none;
-        }
-      }
-    }
-  }
-}
-
-// Abas
-.br-tabs {
-  .desktop-header & {
-    border: 0;
+    // Item de menu
     .item {
-      &:first-child {
-        margin-left: 0;
+      background: $color-white;
+      border: 0;
+      display: block;
+      padding: $spacing-1 $spacing-3;
+      position: relative;
+      text-align: left;
+      width: 100%;
+    }
+    // Regras para botões e links
+    a,
+    button {
+      &.item {
+        text-decoration: none;
+        &:hover {
+          background: $color-primary-pastel-1;
+        }
       }
+    }
+    // Menu ativo
+    &.is-active {
+      display: block;
     }
   }
 }
@@ -319,117 +79,280 @@
   box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
 }
 
-.page-subheader {
-  align-items: center;
-  height: 60px;
+// Fixar na tela
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-// Componente de dropdown
-.dropdown {
+// Cabeçalho
+.page-header {
+  background: $color-white;
+}
+
+// Barra do cabeçalho
+.header-bar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: $main-bar-mobile;
   position: relative;
-  .menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    transform: translate($spacing-6, 18px);
-    z-index: 1;
+}
+
+// Menu sanduiche
+.menu-hamburger {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  color: $color-primary;
+  font-size: 25px;
+  left: 0;
+  padding: 0 $spacing-2;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  z-index: 1;
+  &:hover {
+    color: $color-primary-lighten-15;
+    text-decoration: none;
   }
+}
+
+// Logo
+.logo {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  a {
+    display: flex;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    max-width: $logo-mobile;
+  }
+  .name {
+    color: $color-primary-darken-25;
+    display: none;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .description {
+    color: $color-gray-6;
+    display: none;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+// Seleção de idioma
+.language {
+  z-index: 4;
+  // Idioma selecionado e trigger
+  .trigger {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    .arrow {
+      font-size: 10px;
+      margin-left: $spacing-1;
+    }
+  }
+  // Listagem de idiomas
+  .menu {
+    border-top: 1px solid $color-warning;
+    margin: $spacing-1 0 0;
+    right: 0;
+    // Rótulo da seleção
+    .title {
+      border-bottom: 1px solid $color-gray-3;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 600;
+      margin: $spacing-3 $spacing-3 $spacing-1;
+      padding: 0;
+    }
+    // Item selecionável
+    .item {
+      white-space: nowrap;
+      // Item selecionado
+      &.is-active {
+        color: $color-primary;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Links rápidos
+.quicklinks {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: 48px;
+  position: relative;
+  // Acesso gov.br
+  .login {
+    align-items: center;
+    color: $color-gray-7;
+    display: inline-flex;
+    &:hover {
+      [class*="fa-"] {
+        color: $color-primary-lighten-15;
+      }
+    }
+    [class*="fa-"] {
+      color: $color-primary;
+    }
+    span {
+      display: none;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: $spacing-1;
+
+    }
+  }
+  // Legislação
+  .legislation {
+    color: $color-gray-7;
+    display: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: $spacing-4;
+  }
+  // Idioma
+  .language {
+    display: none;
+    margin-left: $spacing-3;
+  }
+  // Altocontraste
+  .contrast {
+    display: none;
+    margin-left: $spacing-3;
+  }
+}
+
+// Busca
+.search {
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  .field {
+    display: inline-flex;
+    flex: 1;
+    input {
+      background: $color-gray-2;
+      border: 0;
+      display: none;
+      flex: 1;
+      padding: $spacing-3;
+      &::placeholder {
+        color: $font-placeholder-color;
+        font-size: $font-placeholder-font-size;
+        font-style: $font-placeholder-font-style;
+        font-weight: $font-placeholder-font-weight;
+        opacity: 1;
+      }
+    }
+    button {
+      background: transparent;
+      border: 0;
+      color: $color-primary;
+      padding: 0 $spacing-2;
+      &:hover {
+        background: $color-primary-pastel-1;
+      }
+    }
+  }
+  // Botão externo para fechar a busca
+  .close {
+    background: transparent;
+    border: 0;
+    bottom: 0;
+    display: none;
+    padding: 0 $spacing-2;
+    position: absolute;
+    right: $spacing-half;
+    top: 0;
+  }
+  // Busca ativa
   &.is-active {
-    &::after {
-      border-color: transparent transparent $color-gray-7;
-      border-style: solid;
-      border-width: 0 12px 12px;
-      content: "";
-      height: 0;
+    left: 0;
+    .field {
+      box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+      left: 0;
       position: absolute;
       right: 0;
-      transform: translate(5px, 9px);
-      width: 0;
-      z-index: 1;
+      top: 100%;
+      input {
+        display: block;
+      }
+      button {
+        background: $color-gray-2;
+      }
     }
-    .menu {
+    .close {
       display: block;
     }
   }
 }
 
-// Menu aberto do dropdown
-.menu {
-  background: $color-white;
-  box-shadow: -2px 0 4px rgba($color-black, 0.08); // sass-lint:disable-line no-color-literals
-  .header {
-    color: $color-gray-7;
-    display: block;
-    font-size: 16px;
+// Barra de sistema
+.system-bar {
+  align-items: center;
+  height: 60px;
+}
+
+// Tempo restante de sessão
+.timeout {
+  display: none;
+  .session {
+    font-size: 12px;
     font-weight: 600;
-    padding: $spacing-3 $spacing-6;
-    white-space: nowrap;
   }
-  .item {
-    color: $color-gray-7;
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-    padding: $spacing-1 $spacing-6;
-    text-align: right;
-    &:hover {
-      background: $color-primary-pastel-1;
-      text-decoration: none;
-    }
+  .timer {
+    font-size: 12px;
+    font-weight: 500;
   }
 }
 
-// Área do usuário
-.user {
+// Barra do usuário
+.user-bar {
   align-items: center;
-  display: flex;
-  // Bloco de ações do usuário
-  .actions {
-    display: flex;
-  }
-  // Botão de ação
-  .trigger {
-    background: $color-white;
-    border: 1px solid $color-gray-3;
-    border-radius: 50%;
-    height: 42px;
-    width: 42px;
-  }
-  // Informações do usuário
-  .info {
-    margin-right: $spacing-5;
-  }
-  .name {
-    color: $color-gray-7;
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .description {
-    display: block;
-    font-size: 12px;
-    font-style: italic;
-    text-align: right;
-  }
-  // Avatar com usuário, pode ser imagem ou ícone
-  .avatar {
-    position: relative;
-    .icon {
-      color: $color-primary;
-      font-size: 20px;
-      & + .badge {
-        transform: translate(-12px, 2px);
-      }
-    }
-    .image {
-      max-width: 40px;
-      & + .badge {
-        transform: translate(-10px, -2px);
-      }
+  display: none;
+}
+
+// Avatar com usuário, pode ser imagem ou ícone
+.avatar {
+  position: relative;
+  .no-image {
+    color: $color-primary;
+    font-size: 20px;
+    & + .badge {
+      transform: translate(-12px, 2px);
     }
   }
-  // Quantidade de notificações
+  .image {
+    max-width: 40px;
+    & + .badge {
+      transform: translate(-10px, -2px);
+    }
+  }
+  // Badge com quantidade de notificações
   .badge {
     align-items: center;
     background: $color-danger;
@@ -444,16 +367,12 @@
     top: 0;
     width: 18px;
   }
-  // Botão de sair
-  .br-button {
-    font-size: 12px;
-    min-width: 0;
-    padding: $spacing-half $spacing-4;
-  }
 }
 
-// Menu do usuário
-.user-menu {
+// Configurações do usuário
+.configs {
+  margin-left: $spacing-1;
+  // Ativador do menu
   .trigger {
     align-items: center;
     background: $color-gray-2;
@@ -464,413 +383,855 @@
     font-size: 11px;
     height: 17px;
     justify-content: center;
-    margin-left: $spacing-1;
+    padding: 0;
     width: 17px;
+  }
+  // Menu
+  .menu {
+    margin: 19px -19px 0 0;
+    right: 0;
+    // Nome
+    .name {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    // E-mail
+    .email {
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    // Conta
+    .account {
+      border-top: 1px solid $color-gray-2;
+      display: flex;
+      margin: (- $spacing-1) (- $spacing-3);
+      > * { // sass-lint:disable-line no-universal-selectors
+        flex: 1;
+        &:not(:last-child) {
+          border-right: 1px solid $color-gray-2;
+        }
+      }
+      a {
+        display: block;
+        padding: $spacing-1 $spacing-3;
+        text-decoration: none;
+        &:hover {
+          background: $color-primary-pastel-1;
+        }
+      }
+    }
+    // Menu ativo
+    &.is-active {
+      &::after {
+        border: solid transparent;
+        border-bottom-color: $color-gray-7;
+        border-width: 12px;
+        bottom: 100%;
+        content: "";
+        height: 0;
+        pointer-events: none;
+        position: absolute;
+        right: $spacing-3;
+        width: 0;
+      }
+    }
   }
 }
 
-// Sistemas do usuário
-.systems-menu {
+// Botão de sair
+.logout {
+  align-items: center;
+  background: transparent;
+  border: 1px solid $color-primary;
+  border-radius: 100px;
+  color: $color-primary;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  height: 32px;
+  margin-left: $spacing-3;
+  padding: 0 $spacing-5;
+  text-align: center;
+  &:hover {
+    background: $color-primary-lighten-15;
+    border-color: $color-primary-lighten-15;
+    color: $color-white;
+  }
+}
+
+// Favoritos
+.bookmarks {
+  margin-left: $spacing-2;
+  // Ativador do menu
   .trigger {
+    align-items: center;
     background: transparent;
     border: 0;
+    border-radius: 50%;
     color: $color-primary;
-    height: auto;
-    margin-left: $spacing-3;
-    margin-right: $spacing-3;
-    width: auto;
-  }
-  .header {
-    font-size: 12px;
-    font-weight: 600;
-    padding-bottom: 0;
-  }
-  .item {
-    padding: $spacing-3 $spacing-6;
+    display: inline-flex;
+    height: 32px;
+    justify-content: center;
+    padding: 0;
+    width: 32px;
     &:hover {
-      background: transparent;
+      background: $color-primary-pastel-1;
     }
   }
-  .systems {
-    columns: 5;
+  // Menu
+  .menu {
+    margin: 15px -12px 0 0;
+    padding: $spacing-3;
+    right: 0;
+    // Título do menu
+    .title {
+      font-size: 12px;
+      font-weight: 600;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    // Menu ativo
+    &.is-active {
+      &::after {
+        border: solid transparent;
+        border-bottom-color: $color-gray-7;
+        border-width: 12px;
+        bottom: 100%;
+        content: "";
+        height: 0;
+        pointer-events: none;
+        position: absolute;
+        right: $spacing-3;
+        width: 0;
+      }
+    }
   }
-  .system {
-    display: block;
-    margin-bottom: $spacing-3;
+  // Lista de favoritos
+  .list {
+    columns: 5;
+    .item {
+      padding: 0;
+    }
+  }
+  // Favorito
+  .bookmark {
+    display: inline-block;
+    margin: $spacing-3 0 0;
     &:hover {
+      text-decoration: none;
       .brand {
         border-color: $color-primary-lighten-15;
       }
-    }
-    a {
-      &:hover {
-        text-decoration: none;
+      .name {
+        color: $color-primary-lighten-15;
       }
     }
   }
+  // Marca
   .brand {
     background: $color-gray-1;
     border: 1px solid $color-gray-3;
     height: 42px;
     width: 58px;
   }
+  // Nome
   .name {
+    color: $color-gray-6;
     display: block;
     font-size: 9px;
     font-weight: 500;
     margin-top: $spacing-half;
     text-align: center;
   }
+  // Mais opções
   .more {
-    display: block;
     font-size: 10px;
     font-weight: 600;
-    padding: 0 $spacing-6 $spacing-6;
+    margin-top: $spacing-3;
     text-align: center;
-    a {
-      text-decoration: underline;
-    }
-  }
-  &.is-active {
-    &::after {
-      transform: translate(-17px, 9px);
-    }
+    text-decoration: underline;
   }
 }
 
-// Canvas
-.canvas {
-  background: rgba($color-black, 0.49); // sass-lint:disable-line no-color-literals
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-}
-
-// Barra de navegação mobile
-.mobile-subheader {
-  height: 56px;
-}
-
-// Versão mobile do menu
-.sidemenu {
-  background: $color-white;
-  display: flex;
-  height: 100vh;
-  padding: $spacing-4 $spacing-2;
-  position: fixed;
-  top: 0;
-  width: 84%;
-  // Botão que abre o menu
-  &-trigger {
-    background: transparent;
-    border: 0;
+// Redes sociais
+.social-network {
+  border-top: 1px solid $color-gray-2;
+  margin: 0;
+  padding: $spacing-1;
+  text-transform: uppercase;
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: $spacing-4;
   }
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  .overflow {
-    flex: 1;
-    margin-left: - $spacing-4;
-    margin-right: - $spacing-4;
-    overflow-y: auto;
-  }
-  .navigation {
+  ul {
+    display: inline-block;
     margin: 0;
     padding: 0;
-    .item {
-      display: block;
-      list-style: none;
-      a {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-    .trigger {
-      background: transparent;
-      border: 1px solid transparent;
-      float: right;
-      margin-top: -44px;
-      padding: $spacing-1 $spacing-3;
-    }
-    .name {
-      border-bottom: 1px solid $color-gray-4;
-      color: $color-gray-7;
-      display: block;
-      font-size: 14px;
-      font-weight: 500;
-      padding: $spacing-2 $spacing-4;
-    }
-    .is-active {
-      & + .trigger {
-        color: $color-white;
-      }
-      .name {
-        background: $color-primary-darken-15;
-        color: $color-white;
-      }
-      .subnav {
-        .name {
-          background: $color-white;
-          color: $color-gray-7;
-        }
-      }
-    }
-  }
-  .subnav {
-    margin: 0;
-    padding: 0;
-    .name {
-      background: $color-gray-1;
-      color: $color-gray-7;
-      font-weight: 500;
-      padding-left: $spacing-6;
-    }
-    .is-active {
-      .name {
-        background: $color-primary;
-        color: $color-white;
-      }
-    }
-  }
-  .menu {
-    background: transparent;
-    box-shadow: none;
-    .header {
-      border-bottom: 1px solid $color-gray-4;
-      padding: $spacing-2 $spacing-4;
-    }
-    .item {
-      border-bottom: 1px solid $color-gray-4;
-      font-weight: 500;
-      padding: $spacing-2 $spacing-4;
-      text-align: left;
-    }
-  }
-}
-
-// Tempo restante de sessão
-.timeout {
-  text-align: right;
-  .session {
-    font-size: 12px;
-    font-weight: 600;
-  }
-  .timer {
-    font-size: 12px;
-    font-weight: 500;
-  }
-}
-
-// Título da página
-.content-title {
-  @include font-title-registration-login;
-}
-
-
-#portal-footer {
-  background-color: $color-primary-darken-25;
-  clear: both;
-  color: $color-white;
-  font-size: 75%;
-  margin-bottom: 0;
-  padding: 60px 32px;
-
-  & ul {
-    margin: 0;
-    padding: 0;
-    & li {
-      display: block;
+    li {
+      display: inline-block;
       margin: 0;
       padding: 0;
-    }
-    &.submenu li { // sass-lint:disable-line force-element-nesting
-      float: none;
+      &:first-child {
+        a {
+          padding-left: 0;
+        }
+      }
+      &:last-child {
+        a {
+          padding-right: 0;
+        }
+      }
+      a {
+        color: $color-primary;
+        display: inline-block;
+        padding: $spacing-1 $spacing-3;
+      }
     }
   }
-  & a {
+}
+
+// Links úteis
+.links {
+  border-top: 1px solid $color-gray-2;
+  font-size: 14px;
+  padding: $spacing-1;
+  position: relative;
+  span {
+    display: block;
+    font-weight: 700;
+    margin: $spacing-1 0;
+    text-transform: uppercase;
+  }
+  a {
+    align-items: center;
+    display: flex;
+    padding: $spacing-half 0;
+    [class*="fa-"] {
+      margin-left: $spacing-1;
+    }
+  }
+}
+
+// Navegação
+.navigation {
+  position: relative;
+  z-index: 2;
+  ul {
+    list-style: none;
+  }
+  // Container da navegação
+  .wrapper {
+    background: $color-white;
+    border-top: 1px solid $color-warning;
+    box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+    display: none;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+  // Logo
+  .logo {
+    display: block;
+    padding: 0 $spacing-1;
+    position: static;
+    text-align: left;
+    a {
+      display: none;
+    }
+    .name {
+      display: block;
+    }
+    .description {
+      display: block;
+    }
+  }
+  // Avatar
+  .nav-avatar {
+    padding: 0 $spacing-1;
+  }
+  // Configurações do usuário
+  .nav-configs {
+    margin-left: - $spacing-1;
+    margin-right: - $spacing-1;
+    .menu {
+      padding-bottom: $spacing-3;
+      .user {
+        .name {
+          font-weight: 600;
+        }
+        .email {
+          font-size: 14px;
+          font-style: italic;
+        }
+      }
+      .title {
+        border-bottom: 1px solid $color-gray-3;
+        display: block;
+        padding: $spacing-2 $spacing-3;
+      }
+      .item {
+        color: $color-gray-6;
+        display: block;
+        padding: $spacing-1 $spacing-3;
+        &:hover {
+          background: $color-primary-pastel-1;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  // Menu de navegação
+  .items {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: - $spacing-1;
+    margin-right: - $spacing-1;
+    // overflow: auto;
+    .local,
+    .govbr {
+      padding: $spacing-3 0;
+    }
+  }
+  // gov.br
+  .govbr {
+    border-top: 1px solid $color-gray-3;
+    .logo {
+      margin: 0;
+      img {
+        filter: invert(70%);
+        max-width: 64px;
+      }
+      &:hover {
+        img {
+          filter: invert(0);
+        }
+      }
+    }
+  }
+  // Item de navegação
+  .item {
+    margin: 0;
+    padding: 0;
+    a,
+    button {
+      align-items: center;
+      background: transparent;
+      border: 0;
+      color: $color-gray-6;
+      display: flex;
+      font-weight: 400;
+      justify-content: space-between;
+      padding: $spacing-1 $spacing-3;
+      text-align: left;
+      text-decoration: none;
+      width: 100%;
+      &:hover {
+        background: $color-primary-darken-15;
+        color: $color-white;
+        font-weight: 600;
+      }
+    }
+    &.is-active {
+      a,
+      button {
+        background: $color-primary;
+        color: $color-white;
+        font-weight: 600;
+      }
+    }
+  }
+  // Níveis de navegação
+  .level-1,
+  .level-2,
+  .level-3 {
+    display: none;
+    margin: 0;
+    padding: 0;
+    a,
+    button {
+      &:hover {
+        background: $color-primary;
+      }
+    }
+  }
+  // Links rápidos
+  .quicklinks {
+    margin: $spacing-2 $spacing-1;
+    // Acesso gov.br
+    .login {
+      display: none;
+    }
+    // Legislação
+    .legislation {
+      color: $color-gray-7;
+      display: inline-block;
+      font-size: 14px;
+      margin: 0;
+    }
+    // Idioma
+    .language {
+      display: inline-block;
+      .trigger {
+        color: $color-gray-7;
+        font-size: 14px;
+      }
+    }
+    // Altocontraste
+    .contrast {
+      display: inline-block;
+    }
+  }
+  // Logout
+  .nav-logout {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .logout {
+      margin: $spacing-3 0;
+    }
+    .timeout {
+      display: block;
+      margin: $spacing-3 0;
+    }
+  }
+  // Navegação ativa
+  &.is-active {
+    // Container da navegação
+    .wrapper {
+      display: flex;
+    }
+  }
+}
+
+// Licença
+.license {
+  font-size: 12px;
+  a {
+    color: inherit;
+  }
+}
+
+// Reportar erro
+.report-error {
+  font-size: 12px;
+}
+
+// Rodape
+.page-footer {
+  background: $color-primary-darken-25;
+  border-bottom: 0;
+  color: $color-white;
+  position: relative;
+  a {
     color: $color-white;
   }
-  & .govbr-logo {
-    background-image: url("../../assets/images/components_img/portal/govbr.png");
-    background-size: cover;
-    height: 60px;
-    margin-bottom: 50px;
-    width: 165px;
-
-  }
-  & .coluna-menu {
-    & .rodape-navigation {
-      display: flex;
-      flex-wrap: wrap;
-      & li {
-        -webkit-box-flex: 1;
-        flex: 1;
-        margin: 0 12px;
-        & .submenu li { // sass-lint:disable-line force-element-nesting
-          margin: 8px 0;
-          width: 100%;
-          & a {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 1.4;
-            margin-right: 0;
-            min-height: auto;
-            text-transform: none;
-          }
-        }
-        & a {
-          display: inline-block;
-          font-size: 16px;
-          font-weight: 600;
-          margin-right: 0;
-          min-height: 50px;
-          padding-right: 20px;
-          text-decoration: none;
-          text-transform: uppercase;
-        }
-      }
+  // Logo
+  .logo {
+    display: block;
+    padding-bottom: $spacing-8;
+    padding-top: $spacing-10;
+    position: static;
+    text-align: left;
+    img {
+      height: 60px;
+      max-width: none;
+      width: 166px;
     }
   }
-  & .logo-acesso-footer {
-    display: inline-block;
-    height: 49px;
-    margin-right: 45px;
-    width: 117px;
-  }
-  & .logo-governo-federal {
-    display: inline-block;
-    height: 42px;
-    width: 149px;
-  }
-
-
-  & .redes-e-logos {
-    & .redes-sociais {
-      & .portal-redes li { // sass-lint:disable-line force-element-nesting
+  // Navegação
+  .navigation {
+    border-top: 1px solid $color-white;
+    padding: 0;
+    position: static;
+    // Item de navegação
+    .item {
+      border-bottom: 1px solid $color-white;
+      a,
+      button {
+        color: $color-white;
         display: inline-block;
-        margin-right: 45px;
-        & a {
-          display: inline-block;
-          height: 33px;
-          text-indent: -3000px;
-          width: 34px;
+        font-weight: 800;
+        padding: $spacing-3 0;
+        text-transform: uppercase;
+        width: auto;
+        &:hover {
+          background: transparent;
+          color: $color-white;
+          text-decoration: underline;
         }
       }
-      & h3 {
-        font-weight: 600;
-        margin-bottom: 15px;
-        text-transform: uppercase;
+    }
+    // Nível 1
+    .level-1 {
+      padding-bottom: $spacing-2;
+      a,
+      button {
+        font-size: 14px;
+        font-weight: 500;
+        padding: $spacing-1 0;
+        text-transform: none;
+      }
+      .item {
+        border-bottom: 0;
       }
     }
+    // Não mostrar a partir de nivel 2
+    .level-2 {
+      display: none;
+    }
   }
-  & .portalredes-twitter {
-    background-image: url("../../assets/images/components_img/portal/sprite.png");
-    background-position: -99px -159px;
-    height: 28px;
-    width: 27px;
+  // Redes sociais
+  .social-network {
+    border: 0;
+    color: $color-white;
+    padding: $spacing-10 0 $spacing-3;
+    text-align: left;
+    span {
+      display: block;
+    }
+    a {
+      color: $color-white;
+    }
   }
-  & .portalredes-youtube {
-    background-image: url("../../assets/images/components_img/portal/sprite.png");
-    background-position: -67px -159px;
-    height: 28px;
-    width: 32px;
-  }
-  & .portalredes-facebook {
-    background-image: url("../../assets/images/components_img/portal/sprite.png");
-    background-position: -153px -159px;
-    height: 28px;
-    width: 25px;
-  }
-  & .portalredes-flickr {
-    background-image: url("../../assets/images/components_img/portal/sprite.png");
-    background-position: -58px -194px;
-    height: 29px;
-    width: 29px;
-  }
-  & .logos-footer {
-    text-align: right;
-  }
-  & .colunas-rodape {
-    flex-wrap: wrap;
-    margin-bottom: 60px;
+  // Marcas do governo
+  #footer-brasil {
+    background: transparent;
+    width: auto;
+    #wrapper-footer-brasil {
+      justify-content: flex-start;
+      max-width: 100%;
+      padding: $spacing-10 0 $spacing-6;
+      width: auto;
+    }
+    .logo-acesso-footer,
+    .logo-governo-federal {
+      filter: invert(100%);
+    }
   }
 }
 
-@media (max-width: 1024px) {
-  #portal-footer {
-    & .coluna-menu {
-      & .rodape-navigation {
-        width: 100%;
-        & li {
-          -webkit-box-flex: 1;
-          flex: auto;
-          &.plain {
-            border-top: 1px solid $color-white;
-            display: inline-block;
-            padding: 12px 0;
-            position: relative;
-            width: 100%;
-            & ul {
+// Versao tablet
+@include media-breakpoint-up(sm) {
+  // Barra do cabeçalho
+  .header-bar {
+    height: $main-bar-tablet;
+  }
+  // Menu sanduiche
+  .menu-hamburger {
+    bottom: $main-bar-mobile;
+  }
+  // Logo
+  .logo {
+    display: block;
+    top: $spacing-half;
+    a {
+      display: inline-block;
+    }
+    .name {
+      display: block;
+    }
+    .description {
+      display: block;
+      margin-top: $spacing-half;
+    }
+  }
+  // Avatar
+  .nav-avatar {
+    position: absolute;
+    right: $spacing-1;
+    top: $spacing-3;
+  }
+  // Links rápidos de acessibilidade e idioma
+  .quicklinks {
+    align-self: flex-start;
+    margin-top: $spacing-1;
+  }
+  // Busca
+  .search {
+    bottom: $main-bar-mobile;
+  }
+  // Navegação
+  .navigation {
+    // Container da navegação
+    .wrapper {
+      min-height: 0;
+    }
+    // Logo
+    .logo {
+      .name {
+        display: none;
+      }
+      .description {
+        display: none;
+      }
+    }
+    // Menu de navegação
+    .items {
+      .local,
+      .govbr {
+        padding: $spacing-3 0;
+      }
+    }
+  }
+}
+
+// Versao desktop
+@include media-breakpoint-up(md) {
+  // Barra do cabeçalho
+  .header-bar {
+    display: block;
+    height: $main-bar-desktop;
+    padding: $spacing-2;
+  }
+  // Menu sanduiche
+  .menu-hamburger {
+    bottom: $spacing-3;
+    top: auto;
+  }
+  // Logo
+  .logo {
+    position: static;
+    text-align: left;
+    img {
+      max-width: $logo-desktop;
+    }
+    .name {
+      bottom: $spacing-3;
+      font-size: 24px;
+      margin-bottom: 2px;
+      margin-left: $spacing-8;
+      position: absolute;
+    }
+    .description {
+      font-size: 18px;
+      position: absolute;
+    }
+  }
+  // Configurações do usuário
+  .nav-configs {
+    display: none;
+  }
+  // Links rápidos de acessibilidade e idioma
+  .quicklinks {
+    margin-right: 0;
+    position: absolute;
+    right: $spacing-2;
+    top: $spacing-2;
+    // Acesso gov.br
+    .login {
+      span {
+        display: inline;
+      }
+    }
+    // Legislação
+    .legislation {
+      display: inline;
+    }
+    // Idioma
+    .language {
+      display: inline-block;
+    }
+    // Altocontraste
+    .contrast {
+      display: inline;
+    }
+  }
+  // Busca
+  .search {
+    bottom: $spacing-2;
+    margin-bottom: $spacing-half;
+    right: $spacing-2;
+    top: auto;
+    .field {
+      input {
+        display: block;
+      }
+      button {
+        background: $color-gray-2;
+        &:hover {
+          background: $color-gray-2;
+        }
+      }
+    }
+    // Busca ativa
+    &.is-active {
+      left: $spacing-2;
+      .field {
+        box-shadow: 0 0 0 2px $color-white;
+        position: static;
+      }
+      .close {
+        position: static;
+      }
+    }
+  }
+  // Barra do usuário
+  .user-bar {
+    display: flex;
+  }
+  // Navegação
+  .navigation {
+    // Container da navegação
+    .wrapper {
+      background: $color-gray-1;
+    }
+    // Logo
+    .logo {
+      display: none;
+    }
+    // Menu de navegação
+    .items {
+      // background: $color-gray-5;
+      position: relative;
+      .local,
+      .govbr {
+        border-right: 1px solid $color-gray-3;
+        width: 25%;
+      }
+    }
+    // Item de navegação
+    .item {
+      &:hover {
+        > a,
+        > button {
+          background: $color-primary-darken-15;
+          color: $color-white;
+          font-weight: 600;
+        }
+        > .submenu {
+          display: block;
+        }
+      }
+      .item {
+        &:hover {
+          > a,
+          > button {
+            background: $color-primary;
+          }
+        }
+      }
+    }
+    // Níveis de navegação
+    .level-1,
+    .level-2,
+    .level-3 {
+      bottom: 0;
+      box-shadow: inset -1px 0 0 0 $color-gray-3;
+      padding: $spacing-3 0;
+      position: absolute;
+      top: 0;
+      // Mostrar subnível ativo
+      &.is-active {
+        display: block !important;
+      }
+    }
+    .level-1 {
+      left: 25%;
+      // overflow-y: auto;
+      width: 25%;
+    }
+    .level-2 {
+      left: 100%;
+      width: 100%;
+    }
+    // Links rápidos
+    .quicklinks {
+      display: none;
+    }
+    // Botão de sair
+    .nav-logout {
+      display: none;
+    }
+    // Links úteis
+    .links {
+      span {
+        margin-top: 0;
+      }
+      a {
+        display: inline-flex;
+        margin-right: $spacing-6;
+      }
+    }
+    // Navegação ativa
+    &.is-active {
+      .wrapper {
+        .container {
+          display: block;
+        }
+      }
+    }
+  }
+  // Rodape
+  .page-footer {
+    // Navegação
+    .navigation {
+      border-top: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &::after {
+        content: none;
+      }
+      // Item de navegação
+      .item {
+        border-bottom: 0;
+        flex: 0 0 16.66667%;
+        padding-right: $spacing-3;
+        width: auto;
+        &:hover,
+        &:active {
+          > a,
+          > button {
+            background: transparent;
+            font-weight: 800;
+          }
+        }
+        > a,
+        > button {
+          display: inline-block;
+          width: auto;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .item {
+          &:hover,
+          &:active {
+            > a,
+            > button {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      // Níveis de navegação
+      .level-1,
+      .level-2,
+      .level-3 {
+        box-shadow: none;
+      }
+      .level-1 {
+        background: transparent;
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: static;
+        width: auto;
+        .item {
+          &:hover {
+            .submenu {
               display: none;
             }
-            &.dropdown-submenu {
-              cursor: pointer;
-              &.opened::after { // sass-lint:disable-line force-pseudo-nesting
-                content: "\F068";
-              }
-              &::after {
-                content: "\F067";
-                font-family: Font Awesome\ 5 Free;
-                font-size: 14px;
-                font-weight: 900;
-                position: absolute;
-                right: 10px;
-                top: 25px;
-              }
-            }
           }
         }
       }
     }
-    & .logos-footer {
-      text-align: left;
-    }
-    .redes-sociais {
-      margin-bottom: 40px;
-    }
-  }
-}
-
-
-@media (max-width: 996px) {
-  .br-button.is-primary { // sass-lint:disable-line force-element-nesting
-    background: none;
-    border: 0;
-    color: $color-primary;
-  }
-  .br-button.is-secondary { // sass-lint:disable-line force-element-nesting
-    border: 0;
-  }
-  .header-icons {
-    display: inline-block;
-    margin: 15px 0;
-    text-align: left;
-    width: 34px;
-  }
-  .logo {
-    display: inline-block;
-  }
-}
-
-@media (max-width: 640px) {
-  .br-button.is-primary { // sass-lint:disable-line force-element-nesting
-    margin-top: 0;
-  }
-  .br-button.is-secondary { // sass-lint:disable-line force-element-nesting
-    display: none !important;
   }
 }
