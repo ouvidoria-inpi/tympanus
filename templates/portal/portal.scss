@@ -800,6 +800,9 @@ $logo-desktop: 150px;
         background: $color-primary;
         color: $color-white;
         font-weight: 600;
+        [class*="fa-"] {
+          color: $color-white;
+        }
       }
       // Submenu
       > .submenu {

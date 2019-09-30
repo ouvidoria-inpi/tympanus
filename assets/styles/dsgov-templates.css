@@ -847,6 +847,10 @@
   color: #ffffff;
   font-weight: 600;
 }
+.navigation .item.is-active > a [class*="fa-"],
+.navigation .item.is-active > button [class*="fa-"] {
+  color: #ffffff;
+}
 .navigation .item.is-active > .submenu {
   display: block;
 }
