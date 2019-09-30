@@ -65,7 +65,7 @@
     { "label": "Abas", "path": "components/tabs/tabs" },
     { "label": "Acordeão", "path": "components/accordeon/accordeon" },
     { "label": "Alertas", "path": "components/alert/alert" },
-    { "label": "Botão", "path": "components/button/button" },
+    { "label": "Botão", "path": "components/button/button" , "isPdf":true},
     { "label": "Breadcrumb", "path": "components/breadcrumb/breadcrumb" },
     { "label": "Checkbox", "path": "components/checkbox/checkbox" },
     { "label": "Checklist", "path": "components/checklist/checklist" },
@@ -75,7 +75,7 @@
     { "label": "Paginação", "path": "components/pagination/pagination" },
     { "label": "Select", "path": "components/select/select" },
     { "label": "Tabela", "path": "components/table/table" },
-    { "label": "Upload", "path": "components/upload/upload" }
+    { "label": "Upload", "path": "components/upload/upload", "isPdf":true }
   ],
   "Templates": [
     { "label": "Status dos Templates", "path": "templates/templates" },
