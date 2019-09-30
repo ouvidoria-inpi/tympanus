@@ -72,9 +72,18 @@ class TemplatePortal {
       let arrowIcon = document.createElement('i');
       arrowIcon.setAttribute('class', 'fas fa-chevron-right');
       button.appendChild(arrowIcon);
-      button.addEventListener('click', (event) => {
-        this._setMenuMobileBehavior(event);
-      });
+      if (window.screen.width < 1024) {
+        button.addEventListener('click', (event) => {
+          this._setMenuMobileBehavior(event);
+        });
+      } else {
+        button.addEventListener('mouseenter', () => {
+          button.parentNode.classList.add('is-active');
+        });
+        button.addEventListener('mouseout', () => {
+          button.parentNode.classList.remove('is-active');
+        });
+      }
     }
   }
 
