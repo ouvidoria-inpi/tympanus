@@ -2,7 +2,7 @@
 
 ## ANATOMIA
 
-Upload aparece em forma de Cards e podem ter formatos distintos de acordo com a resolução da tela, mas devem sempre ficar alinhados com os elementos do formulário, seguindo a grid. O tamanho ideal deve ser 760 x 248 px
+Upload aparece em forma de Cards e podem ter formatos distintos de acordo com a resolução da tela, mas devem sempre ficar alinhados com os elementos do formulário, seguindo a grid. O tamanho é responsivo.
 
 Do lado esquerdo do card aparecerá uma imagem ilustrativa, que foi criada a partir dos ícones do fontawesome. Essa imagem servirá de apoio ao entendimento do texto que aparece do lado direito do card.
 
@@ -18,11 +18,9 @@ No upload o card deve ser branch #FFFFFF e o "hover" desse card deve seguir o me
 
 ## ORIENTAÇÕES DE USO
 
-### CARDS DE 770 X 248PX
+### CARDS
 
-Os cards tem altura sempre adaptada a quantidade de texto. A largura mínima deve ser 770px e altura mínima 248px (antes dos arquivos serem selecionados).
-
-### CARDS DE 770 X 248PX
+Os cards tem altura sempre adaptada a quantidade de texto. A largura é adaptavel e a altura mínima 248px (antes dos arquivos serem selecionados).
 
 O upload pode ou não vir acompanhado de um título.
 

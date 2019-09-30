@@ -814,8 +814,18 @@
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
+.content-title {
+  font-size: 36px;
+  line-height: 36px;
+  color: #1351b4;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Rawline;
+=======
 .navigation .nav-logout .logout {
   margin: 16px 0;
+>>>>>>> 3bae23f0b86858c0cee0a4569b6d44c985700226
 }
 
 .navigation .nav-logout .timeout {
