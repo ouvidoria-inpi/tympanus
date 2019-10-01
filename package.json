@@ -68,8 +68,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-push": "echo sas"
-
+            "pre-push": "npm run validate:html"
         }
     }
 }
