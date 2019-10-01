@@ -746,11 +746,11 @@ $logo-desktop: 150px;
         filter: invert(70%);
         max-width: 64px;
       }
-      &:hover {
-        img {
-          filter: invert(0);
-        }
-      }
+      // &:hover {
+      //   img {
+      //     filter: invert(0);
+      //   }
+      // }
     }
   }
   // Item de navegação
@@ -758,8 +758,8 @@ $logo-desktop: 150px;
     margin: 0;
     padding: 0;
     // Link ou trigger de primeiro nível
-    > a,
-    > button {
+    a,
+    button {
       align-items: center;
       background: transparent;
       border: 0;
@@ -774,30 +774,13 @@ $logo-desktop: 150px;
       [class*="fa-"] {
         color: $color-primary;
       }
-      &:hover {
-        background: $color-primary-darken-15;
-        color: $color-white;
-        font-weight: 600;
-        [class*="fa-"] {
-          color: $color-white;
-        }
-      }
-    }
-    .item {
-      // Link ou trigger de níveis seguintes
-      > a,
-      > button {
-        &:hover {
-          background: $color-primary;
-        }
-      }
     }
     // Item ativo
     &.is-active {
       // Link ou trigger
       > a,
       > button {
-        background: $color-primary;
+        background: $color-primary-darken-15;
         color: $color-white;
         font-weight: 600;
         [class*="fa-"] {
@@ -807,6 +790,13 @@ $logo-desktop: 150px;
       // Submenu
       > .submenu {
         display: block;
+      }
+      .is-active {
+        // Link ou trigger
+        > a,
+        > button {
+          background: $color-primary;
+        }
       }
     }
   }
@@ -1133,21 +1123,12 @@ $logo-desktop: 150px;
   }
   // Navegação
   .navigation {
-    // Container da navegação
-    .wrapper {
-      background: $color-gray-1;
-    }
     // Cabeçalho
     .header-bar {
       display: none;
     }
-    // Logo
-    .logo {
-      display: none;
-    }
     // Menu de navegação
     .items {
-      // overflow-y: visible
       position: relative;
       .local,
       .govbr {
@@ -1157,28 +1138,6 @@ $logo-desktop: 150px;
       }
       .govbr {
         margin-top: 0;
-      }
-    }
-    // Item de navegação
-    .item {
-      &:hover {
-        > a,
-        > button {
-          background: $color-primary-darken-15;
-          color: $color-white;
-          font-weight: 600;
-        }
-        > .submenu {
-          display: block;
-        }
-      }
-      .item {
-        &:hover {
-          > a,
-          > button {
-            background: $color-primary;
-          }
-        }
       }
     }
     // Níveis de navegação
@@ -1197,7 +1156,6 @@ $logo-desktop: 150px;
     }
     .level-1 {
       left: 25%;
-      // overflow-y: auto;
       width: 25%;
     }
     .level-2 {
@@ -1222,11 +1180,34 @@ $logo-desktop: 150px;
         margin-right: $spacing-6;
       }
     }
-    // Navegação ativa
-    &.is-active {
-      .wrapper {
-        .container {
-          display: block;
+    // Navegação por hover
+    &[data-children="hover"] {
+      // Item de navegação
+      .item {
+        &:hover {
+          > a,
+          > button {
+            background: $color-primary-darken-15;
+            color: $color-white;
+            font-weight: 600;
+            [class*="fa-"] {
+              color: $color-white;
+            }
+            img {
+              filter: invert(0);
+            }
+          }
+          > .submenu {
+            display: block;
+          }
+        }
+        .item {
+          &:hover {
+            > a,
+            > button {
+              background: $color-primary;
+            }
+          }
         }
       }
     }
