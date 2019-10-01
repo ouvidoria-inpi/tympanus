@@ -24,10 +24,10 @@ class TemplatePortal {
       }
       let backButton = window.document.createElement('button');
       backButton.setAttribute('data-level', 0);
-      let icon = window.document.createElement('i');
-      icon.setAttribute('class', 'fas fa-chevron-left');
-      backButton.appendChild(window.document.createTextNode(''));
-      backButton.appendChild(icon);
+      // let icon = window.document.createElement('i');
+      // icon.setAttribute('class', 'fas fa-chevron-left');
+      // backButton.appendChild(window.document.createTextNode(''));
+      // backButton.appendChild(icon);
       backButton.addEventListener('click', (event) => {
         this._onBackButtonClick(event);
       });
@@ -89,7 +89,11 @@ class TemplatePortal {
       }
     }
     for (let backButton of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo button')) {
-      backButton.childNodes[0].nodeValue = this.ongoingMenu.innerText;
+      backButton.innerHTML = this.ongoingMenu.innerHTML;
+      for (let icon of backButton.querySelectorAll('svg')) {
+        icon.classList.remove('fa-chevron-right');
+        icon.classList.add('fa-chevron-left');
+      }
       backButton.classList.add('is-active');
       backButton.previousElementSibling.classList.remove('is-active');
       backButton.setAttribute('data-level', currentMenuLevel);
