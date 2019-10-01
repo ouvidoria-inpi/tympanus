@@ -1316,8 +1316,12 @@
   background: transparent;
   border-bottom: 6px solid #1351b4;
 }
-.template-system .page-footer img {
+.template-system .page-footer .chancela-serpro {
+  text-align: right;
+}
+.template-system .page-footer .chancela-serpro img {
   margin-bottom: 8px;
+  margin-right: 8px;
 }
 
 @media (min-width: 576px) {
@@ -1439,6 +1443,9 @@
     margin: 0 32px;
     position: static;
   }
+  .template-system .navigation .header-bar {
+    display: none;
+  }
   .template-system .navigation .nav-avatar {
     display: none;
   }
@@ -1453,6 +1460,10 @@
   .template-system .navigation .item {
     margin-bottom: 40px;
   }
+  .template-system .navigation .item [class*="fa-"] {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
   .template-system .navigation .item:hover > a,
   .template-system .navigation .item:hover > button {
     background: transparent;
@@ -1461,22 +1472,23 @@
   .template-system .navigation .item:hover > button:hover {
     background: #dbe8fb;
   }
-  .template-system .navigation .item:hover > .submenu {
-    display: none;
-  }
   .template-system .navigation .item .item {
     margin-bottom: 0;
   }
   .template-system .navigation .item.is-active > a,
-  .template-system .navigation .item.is-active > a:hover,
-  .template-system .navigation .item.is-active > button,
-  .template-system .navigation .item.is-active > button:hover {
-    background: #1351b4;
-    color: #ffffff;
+  .template-system .navigation .item.is-active > button {
+    background: transparent;
+  }
+  .template-system .navigation .item.is-active > a [class*="fa-"],
+  .template-system .navigation .item.is-active > button [class*="fa-"] {
+    color: #1351b4;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
   }
   .template-system .navigation .level-1,
   .template-system .navigation .level-2,
   .template-system .navigation .level-3 {
+    background: transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
     padding: 0;
@@ -1487,6 +1499,15 @@
   }
   .template-system .navigation.is-active {
     width: 320px;
+  }
+  .template-system .page-content {
+    margin-bottom: 56px;
+  }
+  .template-system .page-footer .chancela-serpro {
+    bottom: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
   }
 }
 

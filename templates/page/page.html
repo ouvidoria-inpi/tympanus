@@ -84,7 +84,7 @@
         <div class="overflow-auto">
           <div class="container">
             <!-- Logo e avatar -->
-            <div class="row align-items-center justify-content-between bg-gray-1 py-2 py-sm-0">
+            <div class="row header-bar">
               <!-- Logo -->
               <div class="col-auto">
                 <div class="nav-logo"></div>
@@ -99,13 +99,13 @@
             <!-- Menu de navegação -->
             <div class="items">
               <!-- Navegação local -->
-              <div class="local level-0">
-                <div class="item">
+              <ul class="local" data-level="0">
+                <li class="item">
                   <button type="button">Item de nível 1</button>
-                  <ul class="submenu level-1">
+                  <ul class="submenu level-1" data-level="1">
                     <li class="item">
                       <button type="button">Item de nível 2.1</button>
-                      <ul class="submenu level-2">
+                      <ul class="submenu level-2" data-level="2">
                         <li class="item"><a href="">Item de nível 3.1</a></li>
                         <li class="item"><a href="">Item de nível 3.1</a></li>
                         <li class="item"><a href="">Item de nível 3.1</a></li>
@@ -113,7 +113,7 @@
                     </li>
                     <li class="item">
                       <button type="button">Item de nível 2.2</button>
-                      <ul class="submenu level-2">
+                      <ul class="submenu level-2" data-level="2">
                         <li class="item"><a href="">Item de nível 3.2</a></li>
                         <li class="item"><a href="">Item de nível 3.2</a></li>
                         <li class="item"><a href="">Item de nível 3.2</a></li>
@@ -121,7 +121,7 @@
                     </li>
                     <li class="item">
                       <button type="button">Item de nível 2.3</button>
-                      <ul class="submenu level-2">
+                      <ul class="submenu level-2" data-level="2">
                         <li class="item"><a href="">Item de nível 3.3</a></li>
                         <li class="item"><a href="">Item de nível 3.3</a></li>
                         <li class="item"><a href="">Item de nível 3.3</a></li>
@@ -129,7 +129,7 @@
                     </li>
                     <li class="item">
                       <button type="button">Item de nível 2.4</button>
-                      <ul class="submenu level-2">
+                      <ul class="submenu level-2" data-level="2">
                         <li class="item"><a href="">Item de nível 3.4</a></li>
                         <li class="item"><a href="">Item de nível 3.4</a></li>
                         <li class="item"><a href="">Item de nível 3.4</a></li>
@@ -137,7 +137,7 @@
                     </li>
                     <li class="item">
                       <button type="button">Item de nível 2.5</button>
-                      <ul class="submenu level-2">
+                      <ul class="submenu level-2" data-level="2">
                         <li class="item"><a href="">Item de nível 3.5</a></li>
                         <li class="item"><a href="">Item de nível 3.5</a></li>
                         <li class="item"><a href="">Item de nível 3.5</a></li>
@@ -200,10 +200,10 @@
                       </ul>
                     </li>
                   </ul>
-                </div>
-                <div class="item">
+                </li>
+                <li class="item">
                   <button type="button">Conheça a Presidência</button>
-                  <ul class="submenu level-1">
+                  <ul class="submenu level-1" data-level="1">
                     <li class="item"><a href="">Biografia do Presidente</a></li>
                     <li class="item"><a href="">Ministros</a></li>
                     <li class="item"><a href="">Principais Tropas</a></li>
@@ -212,20 +212,20 @@
                     <li class="item"><a href="">Ritos e Solenidades</a></li>
                     <li class="item"><a href="">Presentes recebidos pelo Presidênte da República</a></li>
                   </ul>
-                </div>
-                <div class="item">
+                </li>
+                <li class="item">
                   <button type="button">Vice-Presidência</button>
-                  <ul class="submenu level-1">
+                  <ul class="submenu level-1" data-level="1">
                     <li class="item"><a href="">Agenda Vice-Presidente</a></li>
                     <li class="item"><a href="">Agendas do Gabinete Pessoal da Vice-Presidência</a></li>
                     <li class="item"><a href="">Biografia</a></li>
                     <li class="item"><a href="">Atribuições</a></li>
                     <li class="item"><a href="">Discursos e Pronunciamentos</a></li>
                   </ul>
-                </div>
-                <div class="item">
+                </li>
+                <li class="item">
                   <button type="button">Acesso à Informação</button>
-                  <ul class="submenu level-1">
+                  <ul class="submenu level-1" data-level="1">
                     <li class="item"><a href="">Institucional</a></li>
                     <li class="item"><a href="">Ações e Programas</a></li>
                     <li class="item"><a href="">Dados abertos</a></li>
@@ -237,8 +237,8 @@
                     <li class="item"><a href="">Informações Classificadas</a></li>
                     <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
                   </ul>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -438,7 +438,7 @@
   </div>
   <!-- Rodapé de governo -->
   <footer id="footer" class="page-footer">
-    <div class="container-fluid text-right">
+    <div class="chancela-serpro">
       <img src="../../assets/images/produto-serpro.png" alt="Produto Serpro">
     </div>
   </footer>
