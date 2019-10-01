@@ -76,13 +76,6 @@ class TemplatePortal {
         button.addEventListener('click', (event) => {
           this._setMenuMobileBehavior(event);
         });
-      } else {
-        button.addEventListener('mouseenter', () => {
-          button.parentNode.classList.add('is-active');
-        });
-        button.addEventListener('mouseout', () => {
-          button.parentNode.classList.remove('is-active');
-        });
       }
     }
   }
