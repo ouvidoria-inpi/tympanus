@@ -15,7 +15,6 @@
     }
   }
   .content {
-    background: red;
     flex: 1;
     padding: $alert-padding;
     strong {
@@ -75,9 +74,6 @@
         background: transparent;
         .icon {
           background: $color;
-        }
-        .content {
-          background: rgba($color, 0.10);
         }
         .close {
           button {
