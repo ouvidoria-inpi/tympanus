@@ -746,19 +746,16 @@
   position: relative;
 }
 
-.navigation .items .local,
-.navigation .items .govbr {
+.navigation .local,
+.navigation .govbr {
   margin: 0;
   padding: 0;
 }
 
-.navigation .items .govbr {
-  margin-top: 16px;
-  padding-top: 16px;
-}
-
 .navigation .govbr {
   border-top: 1px solid #cccccc;
+  margin-top: 16px;
+  padding-top: 16px;
 }
 
 .navigation .govbr .logo {
@@ -1192,12 +1189,14 @@
   }
   .page-footer .navigation {
     border-top: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
   .page-footer .navigation::after {
     content: none;
+  }
+  .page-footer .navigation .local {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .page-footer .navigation .item {
     border-bottom: 0;

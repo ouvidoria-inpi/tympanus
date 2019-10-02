@@ -780,17 +780,15 @@
   overflow-y: auto;
   position: relative;
 }
-.navigation .items .local,
-.navigation .items .govbr {
+.navigation .local,
+.navigation .govbr {
   margin: 0;
   padding: 0;
 }
-.navigation .items .govbr {
-  margin-top: 16px;
-  padding-top: 16px;
-}
 .navigation .govbr {
   border-top: 1px solid #cccccc;
+  margin-top: 16px;
+  padding-top: 16px;
 }
 .navigation .govbr .logo {
   margin: 0;
@@ -1225,6 +1223,11 @@
   }
   .page-footer .navigation {
     border-top: 0;
+  }
+  .page-footer .navigation::after {
+    content: none;
+  }
+  .page-footer .navigation .local {
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;
     display: -webkit-box;
@@ -1234,9 +1237,6 @@
     flex-direction: row;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-  }
-  .page-footer .navigation::after {
-    content: none;
   }
   .page-footer .navigation .item {
     border-bottom: 0;
