@@ -26,14 +26,16 @@
         "css-prefix-assets": "postcss --no-map -r \"assets/styles/*.css\" \"!assets/styles/*.min.css\"",
         "get-tokens": "gulp styles",
         "start": "npm-run-all watch",
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "npm-run-all validate:* ",
         "validate:html": "node_modules/.bin/html-validate components/**/*.html",
         "validate:sass": "node_modules/.bin/sass-lint -c .sass-lint.yml -v -q",
+        "validate:rules": "./node_modules/ds-validate/bin/ds-validate.js components/**/*.html",
         "watch": "npm-run-all --parallel watch-*",
         "watch-css-assets": "nodemon --watch assets/styles/ --ext scss --exec \"npm run css-assets\"",
         "watch-css-base": "nodemon --watch base/ --ext scss --exec \"npm run css-compile-base && npm run css-assets\"",
         "watch-css-components": "nodemon --watch components/ --ext scss --exec \"npm run css-compile-components && npm run css-assets\"",
         "watch-css-templates": "nodemon --watch templates/ --ext scss --exec \"npm run css-compile-templates && npm run css-assets\""
+
     },
     "author": "",
     "browserslist": [
