@@ -52,8 +52,12 @@ $navigation-width: 320px;
   .page-footer {
     background: transparent;
     border-bottom: 6px solid $color-primary;
-    img {
-      margin-bottom: $spacing-1;
+    .chancela-serpro {
+      text-align: right;
+      img {
+        margin-bottom: $spacing-1;
+        margin-right: $spacing-1;
+      }
     }
   }
 }
@@ -181,6 +185,10 @@ $navigation-width: 320px;
         margin: 0 $spacing-6;
         position: static;
       }
+      // Logo
+      .header-bar {
+        display: none;
+      }
       // Avatar
       .nav-avatar {
         display: none;
@@ -197,6 +205,9 @@ $navigation-width: 320px;
       // Item de navegação
       .item {
         margin-bottom: $spacing-8;
+        [class*="fa-"] {
+          transform: rotate(90deg);
+        }
         &:hover {
           > a,
           > button {
@@ -205,24 +216,19 @@ $navigation-width: 320px;
               background: $color-primary-pastel-1;
             }
           }
-          > .submenu {
-            display: none;
-          }
         }
+        // Remover margin para itens internos
         .item {
           margin-bottom: 0;
-          // > a,
-          // > button {
-          //   color: $color-gray-6;
-          // }
         }
+        // Item ativo
         &.is-active {
           > a,
           > button {
-            &,
-            &:hover {
-              background: $color-primary;
-              color: $color-white;
+            background: transparent;
+            [class*="fa-"] {
+              color: $color-primary;
+              transform: rotate(-90deg);
             }
           }
         }
@@ -231,12 +237,10 @@ $navigation-width: 320px;
       .level-1,
       .level-2,
       .level-3 {
+        background: transparent;
         box-shadow: none;
         padding: 0;
         position: static;
-        // &.is-active {
-        //   display: block !important;
-        // }
       }
       .level-1 {
         width: 100%;
@@ -244,6 +248,19 @@ $navigation-width: 320px;
       // Navegação ativa
       &.is-active {
         width: $navigation-width;
+      }
+    }
+    // Conteúdo principal
+    .page-content {
+      margin-bottom: $spacing-10;
+    }
+    // Rodapé
+    .page-footer {
+      .chancela-serpro {
+        bottom: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
       }
     }
   }
