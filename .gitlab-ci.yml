@@ -15,7 +15,6 @@ install_dependencies:
   stage: build
   script:
     - apk add openssh
-    - npm install git+https://git.serpro/ds-gov/ds-gov-html-validate
     - npm set strict-ssl false
     - npm config set registry http://nexus.aic.serpro/repository/npm-group/
     - npm config set @serpro:registry http://nexus.aic.serpro/repository/npm-private/
@@ -26,7 +25,7 @@ install_dependencies:
 
 validate_html:
   stage: test
-  script: npm run validate:html
+  script: npm run validate:htm
 
 validate_sass:
   stage: test
