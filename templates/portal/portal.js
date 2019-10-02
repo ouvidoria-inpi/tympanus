@@ -159,27 +159,12 @@ class TemplatePortal {
       for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
         navigation.classList.add('footer-mobile');
       }
-      for (let button of window.document.querySelectorAll('.page-footer .navigation.footer-mobile div.item button')) {
-        button.addEventListener('click', () => {
-          button.nextElementSibling.classList.toggle('is-active');
+      for (let item of window.document.querySelectorAll('.page-footer .navigation.footer-mobile div.item')) {
+        item.addEventListener('click', () => {
+          item.classList.toggle('is-active');
         });
       }
     }
-    window.addEventListener('resize', function() {
-      if (window.screen.width < 1024) {
-        for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
-          if (!navigation.classList.contains('footer-mobile')) {
-            navigation.classList.add('footer-mobile');
-          }
-        }
-      } else {
-        for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
-          if (navigation.classList.contains('footer-mobile')) {
-            navigation.classList.remove('footer-mobile');
-          }
-        }
-      }
-    })
   }
 }
 
