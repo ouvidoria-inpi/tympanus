@@ -70,7 +70,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-push": "npm run validate:html"
+            "pre-push": "npm run test"
         }
     }
 }
