@@ -662,6 +662,10 @@ $logo-desktop: 150px;
         color: $color-primary;
         margin-right: $spacing-3;
       }
+      img {
+        filter: invert(70%);
+        max-width: 64px;
+      }
       &.is-active {
         display: flex;
       }
@@ -746,11 +750,6 @@ $logo-desktop: 150px;
         filter: invert(70%);
         max-width: 64px;
       }
-      // &:hover {
-      //   img {
-      //     filter: invert(0);
-      //   }
-      // }
     }
   }
   // Item de navegação
@@ -785,6 +784,12 @@ $logo-desktop: 150px;
         font-weight: 600;
         [class*="fa-"] {
           color: $color-white;
+        }
+      }
+      // Menu gov.br
+      .logo {
+        img {
+          filter: invert(0);
         }
       }
       // Submenu

@@ -669,6 +669,11 @@
   margin-right: 16px;
 }
 
+.navigation .nav-logo button img {
+  filter: invert(70%);
+  max-width: 64px;
+}
+
 .navigation .nav-logo button.is-active {
   display: flex;
 }
@@ -800,6 +805,10 @@
 .navigation .item.is-active > a [class*="fa-"],
 .navigation .item.is-active > button [class*="fa-"] {
   color: #ffffff;
+}
+
+.navigation .item.is-active .logo img {
+  filter: invert(0);
 }
 
 .navigation .item.is-active > .submenu {
