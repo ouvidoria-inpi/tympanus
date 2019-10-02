@@ -159,7 +159,7 @@ class TemplatePortal {
       for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
         navigation.classList.add('footer-mobile');
       }
-      for (let item of window.document.querySelectorAll('.page-footer .navigation.footer-mobile div.item')) {
+      for (let item of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item')) {
         item.addEventListener('click', () => {
           item.classList.toggle('is-active');
         });
