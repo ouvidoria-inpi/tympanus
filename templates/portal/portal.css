@@ -946,6 +946,16 @@
   text-decoration: underline;
 }
 
+.page-footer .navigation .item.is-active a,
+.page-footer .navigation .item.is-active button {
+  background: transparent;
+}
+
+.page-footer .navigation .submenu {
+  background: transparent;
+  position: static;
+}
+
 .page-footer .navigation .level-1 {
   padding-bottom: 12px;
 }

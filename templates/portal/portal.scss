@@ -926,6 +926,18 @@ $logo-desktop: 150px;
           text-decoration: underline;
         }
       }
+      // Navegação ativa
+      &.is-active {
+        a,
+        button {
+          background: transparent;
+        }
+      }
+    }
+    // Submenu
+    .submenu {
+      background: transparent;
+      position: static;
     }
     // Nível 1
     .level-1 {
