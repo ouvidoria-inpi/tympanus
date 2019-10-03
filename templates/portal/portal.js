@@ -157,13 +157,14 @@ class TemplatePortal {
     if (window.screen.width < 1024) {
       for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
         navigation.classList.add('footer-mobile');
-        for (let item of navigation.querySelectorAll('.item')) {
+        for (let button of navigation.querySelectorAll('li.item button')) {
           let icon = window.document.createElement('i');
           icon.setAttribute('class', 'fas fa-plus');
-          item.prepend(icon);
+          button.parentNode.prepend(icon);
         }
       }
-      for (let item of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item')) {
+      for (let button of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item button')) {
+        let item = button.parentNode;
         item.addEventListener('click', (event) => {
           item.classList.toggle('is-active');
           if (item.classList.contains('is-active')) {
