@@ -4,7 +4,6 @@ class TemplatePortal {
     this.name = name;
     this.template = template;
     this._setUpTemplatePortal();
-    console.log(this);
   }
 
   _setUpTemplatePortal() {
@@ -158,10 +157,23 @@ class TemplatePortal {
     if (window.screen.width < 1024) {
       for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
         navigation.classList.add('footer-mobile');
+        for (let item of navigation.querySelectorAll('.item')) {
+          let icon = window.document.createElement('i');
+          icon.setAttribute('class', 'fas fa-plus');
+          item.prepend(icon);
+        }
       }
       for (let item of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item')) {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (event) => {
           item.classList.toggle('is-active');
+          if (item.classList.contains('is-active')) {
+            item.firstChild.classList.remove('fa-plus');
+            item.firstChild.classList.add('fa-minus');
+          } else {
+            item.firstChild.classList.remove('fa-minus');
+            item.firstChild.classList.add('fa-plus');
+          }
+          event.stopPropagation();
         });
       }
     }

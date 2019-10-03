@@ -4,7 +4,6 @@ class TemplateSystem {
     this.name = name;
     this.template = template;
     this._setUpTemplatePortal();
-    console.log(this);
   }
 
   _setUpTemplatePortal() {
@@ -24,10 +23,10 @@ class TemplateSystem {
       }
       let backButton = window.document.createElement('button');
       backButton.setAttribute('data-level', 0);
-      let icon = window.document.createElement('i');
-      icon.setAttribute('class', 'fas fa-chevron-left');
-      backButton.appendChild(window.document.createTextNode(''));
-      backButton.appendChild(icon);
+      // let icon = window.document.createElement('i');
+      // icon.setAttribute('class', 'fas fa-chevron-left');
+      // backButton.appendChild(window.document.createTextNode(''));
+      // backButton.appendChild(icon);
       backButton.addEventListener('click', (event) => {
         this._onBackButtonClick(event);
       });
@@ -72,9 +71,11 @@ class TemplateSystem {
       let arrowIcon = document.createElement('i');
       arrowIcon.setAttribute('class', 'fas fa-chevron-right');
       button.appendChild(arrowIcon);
-      button.addEventListener('click', (event) => {
-        this._setMenuMobileBehavior(event);
-      });
+      if (window.screen.width < 1024) {
+        button.addEventListener('click', (event) => {
+          this._setMenuMobileBehavior(event);
+        });
+      }
     }
   }
 
@@ -87,7 +88,11 @@ class TemplateSystem {
       }
     }
     for (let backButton of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo button')) {
-      backButton.childNodes[0].nodeValue = this.ongoingMenu.innerText;
+      backButton.innerHTML = this.ongoingMenu.innerHTML;
+      for (let icon of backButton.querySelectorAll('svg')) {
+        icon.classList.remove('fa-chevron-right');
+        icon.classList.add('fa-chevron-left');
+      }
       backButton.classList.add('is-active');
       backButton.previousElementSibling.classList.remove('is-active');
       backButton.setAttribute('data-level', currentMenuLevel);
@@ -153,27 +158,12 @@ class TemplateSystem {
       for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
         navigation.classList.add('footer-mobile');
       }
-      for (let button of window.document.querySelectorAll('.page-footer .navigation.footer-mobile div.item button')) {
-        button.addEventListener('click', () => {
-          button.nextElementSibling.classList.toggle('is-active');
+      for (let item of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item')) {
+        item.addEventListener('click', () => {
+          item.classList.toggle('is-active');
         });
       }
     }
-    window.addEventListener('resize', function() {
-      if (window.screen.width < 1024) {
-        for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
-          if (!navigation.classList.contains('footer-mobile')) {
-            navigation.classList.add('footer-mobile');
-          }
-        }
-      } else {
-        for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
-          if (navigation.classList.contains('footer-mobile')) {
-            navigation.classList.remove('footer-mobile');
-          }
-        }
-      }
-    })
   }
 }
 
