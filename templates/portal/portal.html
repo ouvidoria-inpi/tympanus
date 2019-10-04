@@ -22,12 +22,12 @@
     <li><a accesskey="3" href="#footer">Ir para o rodapé</a></li>
   </ul>
   <!-- Cabeçalho da página -->
-  <header id="header" class="page-header">
+  <header id="header" class="page-header" data-type="portal">
     <!-- Sombra do topo -->
     <div class="shadow-bottom">
       <div class="container">
         <!-- Barra principal -->
-        <div class="header-bar row">
+        <div class="header-bar">
           <!-- Logo -->
           <div class="logo">
             <a id="logo" href="">
@@ -85,6 +85,9 @@
               <span class="sr-only">fechar a busca</span>
             </button>
           </div>
+          <!-- Barra do usuário -->
+          <div class="user-bar">
+          </div>
           <!-- Menu sanduiche -->
           <button class="menu-hamburger" type="button">
             <i class="fa fa-bars"></i>
@@ -101,15 +104,17 @@
         <div class="bg-gray-2">
           <div class="container">
             <!-- Logo e avatar -->
-            <div class="row header-bar">
-              <!-- Logo -->
-              <div class="col-auto">
-                <div class="nav-logo"></div>
-              </div>
+            <div class="header-bar">
               <!-- Avatar do usuário -->
-              <div class="col-auto">
-                <div class="nav-avatar"></div>
+              <div class="nav-avatar"></div>
+              <!-- Altocontraste -->
+              <div class="nav-contrast">
               </div>
+              <!-- Sistemas favoritos do usuário -->
+              <div class="nav-bookmarks">
+              </div>
+              <!-- Logo -->
+              <div class="nav-logo"></div>
             </div>
             <!-- Configurações do usuário -->
             <div class="nav-configs bg-gray-1"></div>
@@ -354,145 +359,147 @@
   </div>
   <!-- Rodapé de governo -->
   <footer id="footer" class="page-footer">
-    <div class="container">
-      <!-- Logo do rodapé -->
-      <div class="logo">
-        <img src="../../assets/images/govbrNegativa.svg" alt="gov.br">
-      </div>
-      <!-- Itens de navegação -->
-      <div class="navigation">
-        <ul class="local" data-level="0">
-          <li class="item">
-            <button type="button">Item de nível 1</button>
-            <ul class="submenu level-1" data-level="1">
-              <li class="item">
-                <button type="button">Item de nível 2.1</button>
-                <ul class="submenu level-2" data-level="2">
-                  <li class="item"><a href="">Item de nível 3.1</a></li>
-                  <li class="item"><a href="">Item de nível 3.1</a></li>
-                  <li class="item"><a href="">Item de nível 3.1</a></li>
-                </ul>
-              </li>
-              <li class="item">
-                <button type="button">Item de nível 2.2</button>
-                <ul class="submenu level-2" data-level="2">
-                  <li class="item"><a href="">Item de nível 3.2</a></li>
-                  <li class="item"><a href="">Item de nível 3.2</a></li>
-                  <li class="item"><a href="">Item de nível 3.2</a></li>
-                </ul>
-              </li>
-              <li class="item">
-                <button type="button">Item de nível 2.3</button>
-                <ul class="submenu level-2" data-level="2">
-                  <li class="item"><a href="">Item de nível 3.3</a></li>
-                  <li class="item"><a href="">Item de nível 3.3</a></li>
-                  <li class="item"><a href="">Item de nível 3.3</a></li>
-                </ul>
-              </li>
-              <li class="item">
-                <button type="button">Item de nível 2.4</button>
-                <ul class="submenu level-2" data-level="2">
-                  <li class="item"><a href="">Item de nível 3.4</a></li>
-                  <li class="item"><a href="">Item de nível 3.4</a></li>
-                  <li class="item"><a href="">Item de nível 3.4</a></li>
-                </ul>
-              </li>
-              <li class="item">
-                <button type="button">Item de nível 2.5</button>
-                <ul class="submenu level-2" data-level="2">
-                  <li class="item"><a href="">Item de nível 3.5</a></li>
-                  <li class="item"><a href="">Item de nível 3.5</a></li>
-                  <li class="item"><a href="">Item de nível 3.5</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="item">
-            <button type="button">Conheça a Presidência</button>
-            <ul class="submenu level-1" data-level="1">
-              <li class="item"><a href="">Biografia do Presidente</a></li>
-              <li class="item"><a href="">Ministros</a></li>
-              <li class="item"><a href="">Principais Tropas</a></li>
-              <li class="item"><a href="">Palácio e Residências</a></li>
-              <li class="item"><a href="">Acervo</a></li>
-              <li class="item"><a href="">Ritos e Solenidades</a></li>
-              <li class="item"><a href="">Presentes recebidos pelo Presidênte da República</a></li>
-            </ul>
-          </li>
-          <li class="item">
-            <button type="button">Vice-Presidência</button>
-            <ul class="submenu level-1" data-level="1">
-              <li class="item"><a href="">Agenda Vice-Presidente</a></li>
-              <li class="item"><a href="">Agendas do Gabinete Pessoal da Vice-Presidência</a></li>
-              <li class="item"><a href="">Biografia</a></li>
-              <li class="item"><a href="">Atribuições</a></li>
-              <li class="item"><a href="">Discursos e Pronunciamentos</a></li>
-            </ul>
-          </li>
-          <li class="item">
-            <button type="button">Acesso à Informação</button>
-            <ul class="submenu level-1" data-level="1">
-              <li class="item"><a href="">Institucional</a></li>
-              <li class="item"><a href="">Ações e Programas</a></li>
-              <li class="item"><a href="">Dados abertos</a></li>
-              <li class="item"><a href="">Auditorias</a></li>
-              <li class="item"><a href="">Convênios</a></li>
-              <li class="item"><a href="">Despesas</a></li>
-              <li class="item"><a href="">Licitações e contratos</a></li>
-              <li class="item"><a href="">Servidores</a></li>
-              <li class="item"><a href="">Informações Classificadas</a></li>
-              <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
-            </ul>
-          </li>
-          <li class="item">
-            <button type="button">Centrais de Conteúdo</button>
-            <ul class="submenu level-1" data-level="1">
-              <li class="item"><a href="">Imagens</a></li>
-              <li class="item"><a href="">Vídeos</a></li>
-              <li class="item"><a href="">Áudios</a></li>
-            </ul>
-          </li>
-          <li class="item">
-            <button type="button">Fale Conosco</button>
-            <ul class="submenu level-1" data-level="1">
-              <li class="item"><a href="">Fale com o Presidente</a></li>
-              <li class="item"><a href="">Ouvidoria</a></li>
-            </ul>
-          </li>
-          <li class="item">
-            <a href="">Mensagem do Presidente</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Redes sociais -->
-      <div class="social-network">
-        <span>Redes sociais</span>
-        <ul>
-          <li>
-            <a href="https://www.twitter.com/twitter.com/govbr">
-              <i class="fab fa-twitter fa-lg"></i>
-              <span class="sr-only">Twitter</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/youtube.com/govbr">
-              <i class="fab fa-youtube fa-lg"></i>
-              <span class="sr-only">YouTube</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/facebook.com/govbr">
-              <i class="fab fa-facebook-f fa-lg"></i>
-              <span class="sr-only">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.flickr.com/flickr/govbr">
-              <i class="fab fa-flickr fa-lg"></i>
-              <span class="sr-only">Flickr</span>
-            </a>
-          </li>
-        </ul>
+    <div class="bg-primary-darken-25 text-white">
+      <div class="container">
+        <!-- Logo do rodapé -->
+        <div class="logo">
+          <img src="../../assets/images/govbrNegativa.svg" alt="gov.br">
+        </div>
+        <!-- Itens de navegação -->
+        <div class="navigation">
+          <ul class="local" data-level="0">
+            <li class="item">
+              <button type="button">Item de nível 1</button>
+              <ul class="submenu level-1" data-level="1">
+                <li class="item">
+                  <button type="button">Item de nível 2.1</button>
+                  <ul class="submenu level-2" data-level="2">
+                    <li class="item"><a href="">Item de nível 3.1</a></li>
+                    <li class="item"><a href="">Item de nível 3.1</a></li>
+                    <li class="item"><a href="">Item de nível 3.1</a></li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <button type="button">Item de nível 2.2</button>
+                  <ul class="submenu level-2" data-level="2">
+                    <li class="item"><a href="">Item de nível 3.2</a></li>
+                    <li class="item"><a href="">Item de nível 3.2</a></li>
+                    <li class="item"><a href="">Item de nível 3.2</a></li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <button type="button">Item de nível 2.3</button>
+                  <ul class="submenu level-2" data-level="2">
+                    <li class="item"><a href="">Item de nível 3.3</a></li>
+                    <li class="item"><a href="">Item de nível 3.3</a></li>
+                    <li class="item"><a href="">Item de nível 3.3</a></li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <button type="button">Item de nível 2.4</button>
+                  <ul class="submenu level-2" data-level="2">
+                    <li class="item"><a href="">Item de nível 3.4</a></li>
+                    <li class="item"><a href="">Item de nível 3.4</a></li>
+                    <li class="item"><a href="">Item de nível 3.4</a></li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <button type="button">Item de nível 2.5</button>
+                  <ul class="submenu level-2" data-level="2">
+                    <li class="item"><a href="">Item de nível 3.5</a></li>
+                    <li class="item"><a href="">Item de nível 3.5</a></li>
+                    <li class="item"><a href="">Item de nível 3.5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <button type="button">Conheça a Presidência</button>
+              <ul class="submenu level-1" data-level="1">
+                <li class="item"><a href="">Biografia do Presidente</a></li>
+                <li class="item"><a href="">Ministros</a></li>
+                <li class="item"><a href="">Principais Tropas</a></li>
+                <li class="item"><a href="">Palácio e Residências</a></li>
+                <li class="item"><a href="">Acervo</a></li>
+                <li class="item"><a href="">Ritos e Solenidades</a></li>
+                <li class="item"><a href="">Presentes recebidos pelo Presidênte da República</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <button type="button">Vice-Presidência</button>
+              <ul class="submenu level-1" data-level="1">
+                <li class="item"><a href="">Agenda Vice-Presidente</a></li>
+                <li class="item"><a href="">Agendas do Gabinete Pessoal da Vice-Presidência</a></li>
+                <li class="item"><a href="">Biografia</a></li>
+                <li class="item"><a href="">Atribuições</a></li>
+                <li class="item"><a href="">Discursos e Pronunciamentos</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <button type="button">Acesso à Informação</button>
+              <ul class="submenu level-1" data-level="1">
+                <li class="item"><a href="">Institucional</a></li>
+                <li class="item"><a href="">Ações e Programas</a></li>
+                <li class="item"><a href="">Dados abertos</a></li>
+                <li class="item"><a href="">Auditorias</a></li>
+                <li class="item"><a href="">Convênios</a></li>
+                <li class="item"><a href="">Despesas</a></li>
+                <li class="item"><a href="">Licitações e contratos</a></li>
+                <li class="item"><a href="">Servidores</a></li>
+                <li class="item"><a href="">Informações Classificadas</a></li>
+                <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <button type="button">Centrais de Conteúdo</button>
+              <ul class="submenu level-1" data-level="1">
+                <li class="item"><a href="">Imagens</a></li>
+                <li class="item"><a href="">Vídeos</a></li>
+                <li class="item"><a href="">Áudios</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <button type="button">Fale Conosco</button>
+              <ul class="submenu level-1" data-level="1">
+                <li class="item"><a href="">Fale com o Presidente</a></li>
+                <li class="item"><a href="">Ouvidoria</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <a href="">Mensagem do Presidente</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Redes sociais -->
+        <div class="social-network">
+          <span>Redes sociais</span>
+          <ul>
+            <li>
+              <a href="https://www.twitter.com/twitter.com/govbr">
+                <i class="fab fa-twitter fa-lg"></i>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/youtube.com/govbr">
+                <i class="fab fa-youtube fa-lg"></i>
+                <span class="sr-only">YouTube</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/facebook.com/govbr">
+                <i class="fab fa-facebook-f fa-lg"></i>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.flickr.com/flickr/govbr">
+                <i class="fab fa-flickr fa-lg"></i>
+                <span class="sr-only">Flickr</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>

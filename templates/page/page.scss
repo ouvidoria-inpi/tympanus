@@ -1,267 +1,315 @@
-// Carregar variáveis do DS-Gov
-@import "../../base/dsgov-base";
+// // Carregar variáveis do DS-Gov
+// @import "../../base/dsgov-base";
 
-$main-bar-mobile: 45px;
-$main-bar-desktop: 80px;
-$navigation-width: 320px;
+// $main-bar-mobile: 45px;
+// $main-bar-desktop: 150px;
+// $navigation-width: 320px;
 
-// Modificações específicas para template de sistemas
-.template-system {
-  // Navegação
-  .navigation {
-    // Menu de navegação
-    .items {
-      background: $color-gray-1;
-    }
-    // Item de navegação
-    .item {
-      a,
-      button {
-        border-bottom: 1px solid $color-secondary;
-        color: $color-primary;
-        font-weight: 500;
-        text-transform: uppercase;
-        &:hover {
-          background: $color-primary-pastel-1;
-        }
-      }
-    }
-    // Níveis de navegação
-    .level-1,
-    .level-2,
-    .level-3 {
-      a,
-      button {
-        border-bottom: 0;
-        color: $color-gray-6;
-        font-size: 13px;
-      }
-    }
-    .level-2,
-    .level-3 {
-      a,
-      button {
-        font-size: 12px;
-        font-weight: 700;
-        padding-left: $spacing-8;
-        text-transform: none;
-      }
-    }
-  }
-  // Rodapé
-  .page-footer {
-    background: transparent;
-    border-bottom: 6px solid $color-primary;
-    .chancela-serpro {
-      text-align: right;
-      img {
-        margin-bottom: $spacing-1;
-        margin-right: $spacing-1;
-      }
-    }
-  }
-}
+// // Modificações específicas para template de sistemas
+// .template-system {
+//   // Barra principal
+//   .header-bar {
+//     display: block;
+//     height: $main-bar-mobile * 2;
+//   }
+//   // Logo
+//   .logo {
+//     align-items: flex-start;
+//     flex-direction: column-reverse;
+//     height: $main-bar-mobile;
+//     padding: 0 $spacing-3;
+//     position: static;
+//     .description {
+//       display: block;
+//     }
+//     .name {
+//       display: block;
+//     }
+//   }
+//   // Busca geral
+//   .search {
+//     height: $main-bar-mobile;
+//     top: auto;
+//     &.is-active {
+//       top: 0;
+//     }
+//   }
+//   // Menu sanduiche
+//   .menu-hamburger {
+//     height: $main-bar-mobile;
+//     left: $spacing-half;
+//     top: auto;
+//   }
+//   // Navegação
+//   .navigation {
+//     // Cabeçalho
+//     .header-bar {
+//       height: auto;
+//     }
+//     // Logo
+//     .nav-logo {
+//       // display: none;
+//     }
+//     // Menu de navegação
+//     .items {
+//       background: $color-gray-1;
+//     }
+//     // Item de navegação
+//     .item {
+//       a,
+//       button {
+//         border-bottom: 1px solid $color-secondary;
+//         color: $color-primary;
+//         font-weight: 500;
+//         text-transform: uppercase;
+//         &:hover {
+//           background: $color-primary-pastel-1;
+//         }
+//       }
+//     }
+//     // Níveis de navegação
+//     .level-1,
+//     .level-2,
+//     .level-3 {
+//       a,
+//       button {
+//         border-bottom: 0;
+//         color: $color-gray-6;
+//         font-size: 13px;
+//       }
+//     }
+//     .level-2,
+//     .level-3 {
+//       a,
+//       button {
+//         font-size: 12px;
+//         font-weight: 700;
+//         padding-left: $spacing-8;
+//         text-transform: none;
+//       }
+//     }
+//   }
+//   // Barra de sistema
+//   .shadow-bottom {
+//     display: none;
+//   }
+//   // Rodapé
+//   .page-footer {
+//     background: transparent;
+//     border-bottom: 6px solid $color-primary;
+//     .chancela-serpro {
+//       text-align: right;
+//       img {
+//         margin-bottom: $spacing-1;
+//         margin-right: $spacing-1;
+//       }
+//     }
+//   }
+// }
 
-// Versao tablet
-@include media-breakpoint-up(sm) {
-  .template-system {
-    // Barra do cabeçalho
-    .header-bar {
-      height: $main-bar-mobile;
-    }
-    // Menu sanduiche
-    .menu-hamburger {
-      bottom: auto;
-    }
-    // Logo
-    .logo {
-      margin-left: $spacing-9;
-      text-align: left;
-      .description {
-        margin: 0;
-      }
-    }
-    // Busca
-    .search {
-      bottom: 0;
-    }
-  }
-}
+// // Versao tablet
+// @include media-breakpoint-up(sm) {
+//   .template-system {
+//     // Barra do cabeçalho
+//     .header-bar {
+//       height: $main-bar-mobile;
+//     }
+//     // Menu sanduiche
+//     .menu-hamburger {
+//       bottom: auto;
+//     }
+//     // Logo
+//     .logo {
+//       margin-left: $spacing-9;
+//       text-align: left;
+//       .description {
+//         margin: 0;
+//       }
+//     }
+//     // Busca
+//     .search {
+//       bottom: 0;
+//     }
+//   }
+// }
 
-// Versao desktop
-@include media-breakpoint-up(md) {
-  .template-system {
-    // Barra do cabeçalho
-    .header-bar {
-      background: $color-gray-2;
-      display: flex;
-      height: $main-bar-desktop;
-      padding-left: 0;
-      padding-right: 0;
-    }
-    // Menu sanduiche
-    .menu-hamburger {
-      left: 0;
-      position: absolute;
-    }
-    // Logo
-    .logo {
-      display: inline-flex;
-      flex-direction: column-reverse;
-      margin: 0 0 0 44px;
-      position: static;
-      .name {
-        font-size: 20px;
-        font-weight: 900;
-        margin: 0;
-        position: static;
-        text-transform: uppercase;
-      }
-      .description {
-        font-size: 14px;
-        font-weight: 600;
-        margin: 0;
-        position: static;
-      }
-    }
-    // Busca
-    .search {
-      bottom: $spacing-3;
-      margin: 0;
-      right: 40%;
-      top: $spacing-3;
-      // Busca ativa
-      &.is-active {
-        .field {
-          input {
-            background: $color-white;
-          }
-          button {
-            background: $color-white;
-          }
-        }
-      }
-    }
-    // Acessibilidade
-    .accessibility {
-      justify-content: flex-end;
-      list-style: none;
-      margin: 0 $spacing-2 0 auto;
-      padding-left: 0;
-      a {
-        align-items: center;
-        color: $color-gray-7;
-        display: flex;
-        font-size: 11px;
-        font-weight: 600;
-        text-transform: uppercase;
-        &:not(:last-child) {
-          margin-right: $spacing-6;
-        }
-        &:hover {
-          text-decoration: none;
-          .content {
-            text-decoration: underline;
-          }
-        }
-        [class*="fa-"] {
-          margin-right: $spacing-1;
-        }
-      }
-    }
-    // Wrapper principal
-    .page-wrapper {
-      display: flex;
-    }
-    // Navegação
-    .navigation {
-      background: $color-gray-1;
-      box-shadow: inset -15px -9px 13px -15px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
-      // Container da navegação
-      .wrapper {
-        background: transparent;
-        border-top: 0;
-        box-shadow: none;
-        margin: 0 $spacing-6;
-        position: static;
-      }
-      // Logo
-      .header-bar {
-        display: none;
-      }
-      // Avatar
-      .nav-avatar {
-        display: none;
-      }
-      // Menu de navegação
-      .items {
-        background: transparent;
-        .local,
-        .govbr {
-          border-right: 0;
-          width: 100%;
-        }
-      }
-      // Item de navegação
-      .item {
-        margin-bottom: $spacing-8;
-        [class*="fa-"] {
-          transform: rotate(90deg);
-        }
-        &:hover {
-          > a,
-          > button {
-            background: transparent;
-            &:hover {
-              background: $color-primary-pastel-1;
-            }
-          }
-        }
-        // Remover margin para itens internos
-        .item {
-          margin-bottom: 0;
-        }
-        // Item ativo
-        &.is-active {
-          > a,
-          > button {
-            background: transparent;
-            [class*="fa-"] {
-              color: $color-primary;
-              transform: rotate(-90deg);
-            }
-          }
-        }
-      }
-      // Níveis de navegação
-      .level-1,
-      .level-2,
-      .level-3 {
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-        position: static;
-      }
-      .level-1 {
-        width: 100%;
-      }
-      // Navegação ativa
-      &.is-active {
-        width: $navigation-width;
-      }
-    }
-    // Conteúdo principal
-    .page-content {
-      margin-bottom: $spacing-10;
-    }
-    // Rodapé
-    .page-footer {
-      .chancela-serpro {
-        bottom: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-      }
-    }
-  }
-}
+// // Versao desktop
+// @include media-breakpoint-up(md) {
+//   .template-system {
+//     // Barra do cabeçalho
+//     .header-bar {
+//       display: flex;
+//       height: $main-bar-desktop;
+//       padding-left: 0;
+//       padding-right: 0;
+//     }
+//     // Menu sanduiche
+//     .menu-hamburger {
+//       left: 0;
+//       position: absolute;
+//     }
+//     // Logo
+//     .logo {
+//       display: inline-flex;
+//       flex-direction: column-reverse;
+//       margin: 0 0 0 44px;
+//       position: static;
+//       .name {
+//         font-size: 20px;
+//         font-weight: 900;
+//         margin: 0;
+//         position: static;
+//         text-transform: uppercase;
+//       }
+//       .description {
+//         font-size: 14px;
+//         font-weight: 600;
+//         margin: 0;
+//         position: static;
+//       }
+//     }
+//     // Busca
+//     .search {
+//       bottom: $spacing-3;
+//       margin: 0;
+//       right: 40%;
+//       top: $spacing-3;
+//       // Busca ativa
+//       &.is-active {
+//         .field {
+//           input {
+//             background: $color-white;
+//           }
+//           button {
+//             background: $color-white;
+//           }
+//         }
+//       }
+//     }
+//     // Acessibilidade
+//     .accessibility {
+//       justify-content: flex-end;
+//       list-style: none;
+//       margin: 0 $spacing-2 0 auto;
+//       padding-left: 0;
+//       a {
+//         align-items: center;
+//         color: $color-gray-7;
+//         display: flex;
+//         font-size: 11px;
+//         font-weight: 600;
+//         text-transform: uppercase;
+//         &:not(:last-child) {
+//           margin-right: $spacing-6;
+//         }
+//         &:hover {
+//           text-decoration: none;
+//           .content {
+//             text-decoration: underline;
+//           }
+//         }
+//         [class*="fa-"] {
+//           margin-right: $spacing-1;
+//         }
+//       }
+//     }
+//     // Wrapper principal
+//     .page-wrapper {
+//       display: flex;
+//     }
+//     // Navegação
+//     .navigation {
+//       background: $color-gray-1;
+//       box-shadow: inset -15px -9px 13px -15px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+//       // Container da navegação
+//       .wrapper {
+//         background: transparent;
+//         border-top: 0;
+//         box-shadow: none;
+//         margin: 0 $spacing-6;
+//         position: static;
+//       }
+//       // Logo
+//       .header-bar {
+//         display: none;
+//       }
+//       // Avatar
+//       .nav-avatar {
+//         display: none;
+//       }
+//       // Menu de navegação
+//       .items {
+//         background: transparent;
+//         .local,
+//         .govbr {
+//           border-right: 0;
+//           width: 100%;
+//         }
+//       }
+//       // Item de navegação
+//       .item {
+//         margin-bottom: $spacing-8;
+//         [class*="fa-"] {
+//           transform: rotate(90deg);
+//         }
+//         &:hover {
+//           > a,
+//           > button {
+//             background: transparent;
+//             &:hover {
+//               background: $color-primary-pastel-1;
+//             }
+//           }
+//         }
+//         // Remover margin para itens internos
+//         .item {
+//           margin-bottom: 0;
+//         }
+//         // Item ativo
+//         &.is-active {
+//           > a,
+//           > button {
+//             background: transparent;
+//             [class*="fa-"] {
+//               color: $color-primary;
+//               transform: rotate(-90deg);
+//             }
+//           }
+//         }
+//       }
+//       // Níveis de navegação
+//       .level-1,
+//       .level-2,
+//       .level-3 {
+//         background: transparent;
+//         box-shadow: none;
+//         padding: 0;
+//         position: static;
+//       }
+//       .level-1 {
+//         width: 100%;
+//       }
+//       // Navegação ativa
+//       &.is-active {
+//         width: $navigation-width;
+//       }
+//     }
+//     // Barra de sistema
+//     .shadow-bottom {
+//       display: block;
+//     }
+//     // Conteúdo principal
+//     .page-content {
+//       margin-bottom: $spacing-10;
+//     }
+//     // Rodapé
+//     .page-footer {
+//       .chancela-serpro {
+//         bottom: 100%;
+//         left: 0;
+//         position: absolute;
+//         right: 0;
+//       }
+//     }
+//   }
+// }
