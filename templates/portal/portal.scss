@@ -674,8 +674,8 @@ $logo-desktop: 150px;
     box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
     display: none;
     flex-direction: column;
+    min-height: calc(100vh - #{$main-bar-mobile});
     left: 0;
-    min-height: calc(100vh - #{$main-bar-mobile * 2});
     position: absolute;
     right: 0;
     z-index: 1;
@@ -962,6 +962,7 @@ $logo-desktop: 150px;
     // Container da navegação
     .wrapper {
       background: $color-gray-2;
+      min-height: calc(100vh - #{$main-bar-mobile * 2});
     }
     // Cabeçalho
     .header-bar {
@@ -981,30 +982,6 @@ $logo-desktop: 150px;
         display: none;
       }
     }
-    // Item de navegação
-    // .item {
-    //   // Link ou trigger de primeiro nível
-    //   a,
-    //   button {
-    //     color: $color-primary;
-    //     border-bottom: 1px solid $color-primary-pastel-2;
-    //     text-transform: uppercase;
-    //     [class*="fa-"] {
-    //       display: none;
-    //     }
-    //   }
-    //   .item {
-    //     a,
-    //     button {
-    //       border: 0;
-    //       color: $color-gray-6;
-    //       text-transform: none;
-    //       [class*="fa-"] {
-    //         display: block;
-    //       }
-    //     }
-    //   }
-    // }
   }
   // Comportamento do menu
   // Mostrar apenas quem é ativo no nível atual
@@ -1156,10 +1133,35 @@ $logo-desktop: 150px;
   // Barra do cabeçalho
   .header-bar {
     height: $main-bar-tablet;
+    // Versão para sistemas
+    [data-type="system"] & {
+      height: $main-bar-mobile * 2;
+    }
+  }
+  // Logo
+  .logo {
+    // Versão para sistemas
+    [data-type="system"] & {
+      display: flex;
+      .description {
+        margin: 0;
+      }
+    }
+  }
+  // Busca
+  .search {
+    // Versão para sistemas
+    [data-type="system"] & {
+      bottom: 0;
+    }
   }
   // Menu sanduiche
   .menu-hamburger {
     bottom: $main-bar-mobile;
+    // Versão para sistemas
+    [data-type="system"] & {
+      bottom: 0;
+    }
   }
   // Logo
   .logo {
@@ -1176,12 +1178,6 @@ $logo-desktop: 150px;
       margin-top: $spacing-half;
     }
   }
-  // Avatar
-  .nav-avatar {
-    position: absolute;
-    right: $spacing-1;
-    top: $spacing-3;
-  }
   // Links rápidos de acessibilidade e idioma
   .quicklinks {
     align-self: flex-start;
@@ -1193,6 +1189,15 @@ $logo-desktop: 150px;
   }
   // Navegação
   .navigation {
+    // Container da navegação
+    .wrapper {
+      min-height: calc(50vh - #{$main-bar-mobile});
+    }
+    // Barra do cabeçalho
+    .header-bar {
+      height: auto;
+      min-height: auto;
+    }
     // Logo
     .logo {
       .name {
@@ -1200,6 +1205,16 @@ $logo-desktop: 150px;
       }
       .description {
         display: none;
+      }
+      &.is-active {
+        display: none;
+      }
+    }
+    // Navegação de sistemas
+    &[data-type="system"] {
+      // Container da navegação
+      .wrapper {
+        min-height: calc(50vh - #{$main-bar-mobile});
       }
     }
   }
@@ -1209,8 +1224,12 @@ $logo-desktop: 150px;
 @include media-breakpoint-up(md) {
   // Barra do cabeçalho
   .header-bar {
-
     height: $main-bar-desktop;
+    // Versão para sistemas
+    [data-type="system"] & {
+      height: $main-bar-desktop;
+      margin: 0;
+    }
   }
   // Menu sanduiche
   .menu-hamburger {
@@ -1219,7 +1238,8 @@ $logo-desktop: 150px;
   }
   // Logo
   .logo {
-    position: static;
+    left: $spacing-1;
+    position: absolute;
     text-align: left;
     img {
       max-width: $logo-desktop;
@@ -1235,6 +1255,19 @@ $logo-desktop: 150px;
       font-size: 18px;
       position: absolute;
     }
+    // Versão para sistemas
+    [data-type="system"] & {
+      flex: 0 0 50%;
+      height: 50%;
+      padding: 0;
+      .name {
+        margin-left: 0;
+        position: static;
+      }
+      .description {
+        position: static;
+      }
+    }
   }
   // Configurações do usuário
   .nav-configs {
@@ -1242,6 +1275,17 @@ $logo-desktop: 150px;
   }
   // Links rápidos de acessibilidade e idioma
   .quicklinks {
+    margin-right: $spacing-2;
+    ul {
+      display: inline-flex;
+      list-style: none;
+      margin-bottom: 0;
+      margin-right: $spacing-3;
+      li {
+        display: inline-block;
+        margin-left: $spacing-3;
+      }
+    }
     // Acesso gov.br
     .login {
       span {
@@ -1258,7 +1302,20 @@ $logo-desktop: 150px;
     }
     // Altocontraste
     .contrast {
-      display: inline;
+      align-items: center;
+      display: inline-flex;
+      margin-left: $spacing-6;
+      [class*="fa-"] {
+        margin-right: $spacing-1;
+      }
+    }
+    // Versão para sistemas
+    [data-type="system"] & {
+      align-items: center;
+      display: inline-flex;
+      flex: 0 0 50%;
+      height: 50%;
+      margin: 0;
     }
   }
   // Busca
@@ -1289,10 +1346,28 @@ $logo-desktop: 150px;
         position: static;
       }
     }
+    // Versão para sistemas
+    [data-type="system"] & {
+      bottom: auto;
+      margin-bottom: 0;
+      right: 300px;
+      top: 84px;
+      &.is-active {
+        bottom: auto;
+        left: 0;
+        top: 84px;
+      }
+    }
   }
   // Barra do usuário
   .user-bar {
     display: flex;
+    // Versão para sistemas
+    [data-type="system"] & {
+      flex: 1;
+      height: 50%;
+      justify-content: flex-end;
+    }
   }
   // Navegação
   .navigation {
