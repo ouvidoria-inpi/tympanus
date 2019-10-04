@@ -751,11 +751,14 @@
   -webkit-box-align: center;
   -webkit-box-direction: reverse;
   -webkit-box-orient: horizontal;
+  -webkit-box-pack: end;
   display: none;
   -ms-flex-align: center;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  -ms-flex-pack: end;
   font-size: 26px;
+  justify-content: flex-end;
   margin: 0 8px;
 }
 .navigation .nav-logo button [class*="fa-"] {
@@ -878,18 +881,24 @@
   margin: 0;
   padding: 0;
 }
-.navigation .govbr {
-  border-top: 1px solid #cccccc;
-  margin-top: 16px;
-  padding-top: 16px;
-}
 .navigation .govbr .logo {
-  margin: 0;
+  margin-top: 16px;
+  position: relative;
 }
 .navigation .govbr .logo img {
   -webkit-filter: invert(70%);
   filter: invert(70%);
   max-width: 64px;
+}
+.navigation .govbr .logo::before {
+  background: #cccccc;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -8px;
+  width: 100%;
 }
 .navigation .item {
   margin: 0;
@@ -923,6 +932,7 @@
 .navigation .item.is-active > button {
   background: #0c326f;
   color: #ffffff;
+  display: none;
   font-weight: 600;
 }
 .navigation .item.is-active > a [class*="fa-"],
@@ -945,7 +955,6 @@
   bottom: 0;
   display: none;
   left: 0;
-  position: absolute;
   right: 0;
   top: 0;
   z-index: 1;
@@ -988,6 +997,7 @@
   -ms-flex-align: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin: 0 8px;
 }
 .navigation .nav-logout .logout {
   margin: 16px 0;
@@ -996,7 +1006,11 @@
   display: block;
   margin: 16px 0;
 }
+.navigation[data-type="system"] .wrapper {
+  background: #ededed;
+}
 .navigation[data-type="system"] .header-bar {
+  background: transparent;
   height: auto;
 }
 .navigation[data-type="system"] .nav-avatar {
@@ -1007,6 +1021,30 @@
 }
 .navigation[data-type="system"] .logo.is-active {
   display: none;
+}
+.navigation:not([data-level="0"]) [data-level="0"] > .item {
+  display: none;
+}
+.navigation:not([data-level="0"]) [data-level="0"] .is-active {
+  display: block;
+}
+.navigation:not([data-level="1"]) [data-level="1"] > .item {
+  display: none;
+}
+.navigation:not([data-level="1"]) [data-level="1"] .is-active {
+  display: block;
+}
+.navigation:not([data-level="2"]) [data-level="2"] > .item {
+  display: none;
+}
+.navigation:not([data-level="2"]) [data-level="2"] .is-active {
+  display: block;
+}
+.navigation:not([data-level="3"]) [data-level="3"] > .item {
+  display: none;
+}
+.navigation:not([data-level="3"]) [data-level="3"] .is-active {
+  display: block;
 }
 .navigation.is-active .wrapper {
   display: -webkit-box;

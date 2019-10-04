@@ -706,6 +706,7 @@ $logo-desktop: 150px;
       display: none;
       flex-direction: row-reverse;
       font-size: 26px;
+      justify-content: flex-end;
       margin: 0 $spacing-1;
       [class*="fa-"] {
         color: $color-primary;
@@ -807,7 +808,7 @@ $logo-desktop: 150px;
       }
     }
   }
-  // Menu de navegação
+  // Itens de navegação
   .items {
     display: flex;
     flex: 1;
@@ -825,14 +826,22 @@ $logo-desktop: 150px;
   }
   // gov.br
   .govbr {
-    border-top: 1px solid $color-gray-3;
-    margin-top: $spacing-3;
-    padding-top: $spacing-3;
     .logo {
-      margin: 0;
+      margin-top: $spacing-3;
+      position: relative;
       img {
         filter: invert(70%);
         max-width: 64px;
+      }
+      &::before {
+        background: $color-gray-3;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: - $spacing-1;
+        width: 100%;
       }
     }
   }
@@ -865,6 +874,7 @@ $logo-desktop: 150px;
       > button {
         background: $color-primary-darken-15;
         color: $color-white;
+        display: none;
         font-weight: 600;
         [class*="fa-"] {
           color: $color-white;
@@ -895,7 +905,6 @@ $logo-desktop: 150px;
     bottom: 0;
     display: none;
     left: 0;
-    position: absolute;
     right: 0;
     top: 0;
     z-index: 1;
@@ -938,6 +947,7 @@ $logo-desktop: 150px;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin: 0 $spacing-1;
     .logout {
       margin: $spacing-3 0;
     }
@@ -947,9 +957,15 @@ $logo-desktop: 150px;
     }
   }
   // Navegação de sistemas
+  // Algums blocos possuem estilos específicos
   &[data-type="system"] {
+    // Container da navegação
+    .wrapper {
+      background: $color-gray-2;
+    }
     // Cabeçalho
     .header-bar {
+      background: transparent;
       height: auto;
     }
     // Avatar
@@ -963,6 +979,44 @@ $logo-desktop: 150px;
     .logo {
       &.is-active {
         display: none;
+      }
+    }
+    // Item de navegação
+    // .item {
+    //   // Link ou trigger de primeiro nível
+    //   a,
+    //   button {
+    //     color: $color-primary;
+    //     border-bottom: 1px solid $color-primary-pastel-2;
+    //     text-transform: uppercase;
+    //     [class*="fa-"] {
+    //       display: none;
+    //     }
+    //   }
+    //   .item {
+    //     a,
+    //     button {
+    //       border: 0;
+    //       color: $color-gray-6;
+    //       text-transform: none;
+    //       [class*="fa-"] {
+    //         display: block;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+  // Comportamento do menu
+  // Mostrar apenas quem é ativo no nível atual
+  @each $level in (0, 1, 2, 3) {
+    &:not([data-level="#{$level}"]) {
+      [data-level="#{$level}"] {
+        > .item {
+          display: none;
+        }
+        .is-active {
+          display: block;
+        }
       }
     }
   }
