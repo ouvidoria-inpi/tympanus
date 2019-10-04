@@ -688,8 +688,8 @@ $logo-desktop: 150px;
   // Cabeçalho
   .header-bar {
     background: $color-gray-1;
-    min-height: $navigation-bar;
     margin: 0 (- $spacing-1);
+    min-height: $navigation-bar;
   }
   // Logo
   .nav-logo {
@@ -963,9 +963,6 @@ $logo-desktop: 150px;
     .logo {
       &.is-active {
         display: none;
-      }
-      .is-active {
-
       }
     }
   }

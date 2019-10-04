@@ -686,8 +686,8 @@
 
 .navigation .header-bar {
   background: #f8f8f8;
-  min-height: 64px;
   margin: 0 -8px;
+  min-height: 64px;
 }
 
 .navigation .nav-logo .logo {
