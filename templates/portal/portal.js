@@ -64,6 +64,7 @@ class TemplatePortal {
       menuHamburger.addEventListener('click', () => {
         for (let navigation of this.template.querySelectorAll('.navigation')) {
           navigation.classList.toggle('is-active');
+          navigation.setAttribute('data-level', '0');
         }
       });      
     }
@@ -85,6 +86,9 @@ class TemplatePortal {
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.add('is-active');
+        for (let navigation of this.template.querySelectorAll('.page-wrapper .navigation')) {
+          navigation.setAttribute('data-level', button.nextElementSibling.getAttribute('data-level'));
+        }
       }
     }
     for (let backButton of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo button')) {
@@ -103,7 +107,10 @@ class TemplatePortal {
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.remove('is-active');
-        event.currentTarget.setAttribute('data-level', Number(button.parentNode.parentNode.getAttribute('data-level')));
+        for (let navigation of this.template.querySelectorAll('.page-wrapper .navigation')) {
+          navigation.setAttribute('data-level', button.parentNode.parentNode.getAttribute('data-level'));
+        }
+        event.currentTarget.setAttribute('data-level', button.parentNode.parentNode.getAttribute('data-level'));
         if (button.parentNode.parentNode.getAttribute('data-level') == 0) {
           event.currentTarget.childNodes[0].nodeValue = '';
           event.currentTarget.classList.remove('is-active');
