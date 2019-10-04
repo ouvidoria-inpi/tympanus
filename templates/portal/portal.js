@@ -3,10 +3,10 @@ class TemplatePortal {
   constructor(name, template) {
     this.name = name;
     this.template = template;
-    this._setUpTemplatePortal();
+    this._setUpTemplate();
   }
 
-  _setUpTemplatePortal() {
+  _setUpTemplate() {
     this._cloneNavigation();
     this._setMenuBehavior();
     this._setDropdownBehavior();
@@ -23,10 +23,6 @@ class TemplatePortal {
       }
       let backButton = window.document.createElement('button');
       backButton.setAttribute('data-level', 0);
-      // let icon = window.document.createElement('i');
-      // icon.setAttribute('class', 'fas fa-chevron-left');
-      // backButton.appendChild(window.document.createTextNode(''));
-      // backButton.appendChild(icon);
       backButton.addEventListener('click', (event) => {
         this._onBackButtonClick(event);
       });

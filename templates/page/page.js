@@ -3,10 +3,10 @@ class TemplateSystem {
   constructor(name, template) {
     this.name = name;
     this.template = template;
-    this._setUpTemplatePortal();
+    this._setUpTemplate();
   }
 
-  _setUpTemplatePortal() {
+  _setUpTemplate() {
     this._cloneNavigation();
     this._setMenuBehavior();
     this._setDropdownBehavior();
@@ -23,10 +23,6 @@ class TemplateSystem {
       }
       let backButton = window.document.createElement('button');
       backButton.setAttribute('data-level', 0);
-      // let icon = window.document.createElement('i');
-      // icon.setAttribute('class', 'fas fa-chevron-left');
-      // backButton.appendChild(window.document.createTextNode(''));
-      // backButton.appendChild(icon);
       backButton.addEventListener('click', (event) => {
         this._onBackButtonClick(event);
       });
@@ -64,6 +60,7 @@ class TemplateSystem {
       menuHamburger.addEventListener('click', () => {
         for (let navigation of this.template.querySelectorAll('.navigation')) {
           navigation.classList.toggle('is-active');
+          navigation.setAttribute('data-level', '0');
         }
       });      
     }
@@ -85,6 +82,9 @@ class TemplateSystem {
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.add('is-active');
+        for (let navigation of this.template.querySelectorAll('.page-wrapper .navigation')) {
+          navigation.setAttribute('data-level', button.nextElementSibling.getAttribute('data-level'));
+        }
       }
     }
     for (let backButton of this.template.querySelectorAll('.page-wrapper .navigation .nav-logo button')) {
@@ -103,7 +103,10 @@ class TemplateSystem {
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       if (button === this.ongoingMenu) {
         button.parentNode.classList.remove('is-active');
-        event.currentTarget.setAttribute('data-level', Number(button.parentNode.parentNode.getAttribute('data-level')));
+        for (let navigation of this.template.querySelectorAll('.page-wrapper .navigation')) {
+          navigation.setAttribute('data-level', button.parentNode.parentNode.getAttribute('data-level'));
+        }
+        event.currentTarget.setAttribute('data-level', button.parentNode.parentNode.getAttribute('data-level'));
         if (button.parentNode.parentNode.getAttribute('data-level') == 0) {
           event.currentTarget.childNodes[0].nodeValue = '';
           event.currentTarget.classList.remove('is-active');
@@ -157,10 +160,24 @@ class TemplateSystem {
     if (window.screen.width < 1024) {
       for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
         navigation.classList.add('footer-mobile');
+        for (let button of navigation.querySelectorAll('li.item button')) {
+          let icon = window.document.createElement('i');
+          icon.setAttribute('class', 'fas fa-plus');
+          button.parentNode.prepend(icon);
+        }
       }
-      for (let item of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item')) {
-        item.addEventListener('click', () => {
+      for (let button of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item button')) {
+        let item = button.parentNode;
+        item.addEventListener('click', (event) => {
           item.classList.toggle('is-active');
+          if (item.classList.contains('is-active')) {
+            item.firstChild.classList.remove('fa-plus');
+            item.firstChild.classList.add('fa-minus');
+          } else {
+            item.firstChild.classList.remove('fa-minus');
+            item.firstChild.classList.add('fa-plus');
+          }
+          event.stopPropagation();
         });
       }
     }
