@@ -75,11 +75,11 @@
         .icon {
           background: $color;
         }
+        .content,
         .close {
-          button {
-            color: $color;
-          }
+          background: scale-color($color, $lightness: 90%) ;
         }
+        
         @if ($state == warning) {
           .icon {
             color: $color-gray-7;
