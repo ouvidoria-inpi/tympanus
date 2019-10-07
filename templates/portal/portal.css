@@ -690,6 +690,10 @@
   min-height: 64px;
 }
 
+.navigation .nav-logo {
+  width: 100%;
+}
+
 .navigation .nav-logo .logo {
   align-items: flex-start;
   display: none;
@@ -721,7 +725,6 @@
 .navigation .nav-logo .is-active {
   display: flex;
   min-height: 64px;
-  width: 100%;
 }
 
 .navigation .logo {

@@ -733,6 +733,9 @@
   margin: 0 -8px;
   min-height: 64px;
 }
+.navigation .nav-logo {
+  width: 100%;
+}
 .navigation .nav-logo .logo {
   align-items: flex-start;
   -webkit-box-align: start;
@@ -775,7 +778,6 @@
   display: -ms-flexbox;
   display: flex;
   min-height: 64px;
-  width: 100%;
 }
 .navigation .logo {
   display: block;

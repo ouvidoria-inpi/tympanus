@@ -694,6 +694,7 @@ $logo-desktop: 150px;
   }
   // Logo
   .nav-logo {
+    width: 100%;
     .logo {
       align-items: flex-start;
       display: none;
@@ -721,7 +722,6 @@ $logo-desktop: 150px;
     .is-active {
       display: flex;
       min-height: $navigation-bar;
-      width: 100%;
     }
   }
   .logo {
