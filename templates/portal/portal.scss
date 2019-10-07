@@ -675,8 +675,8 @@ $logo-desktop: 150px;
     box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
     display: none;
     flex-direction: column;
-    min-height: calc(100vh - #{$main-bar-mobile});
     left: 0;
+    min-height: calc(100vh - #{$main-bar-mobile});
     position: absolute;
     right: 0;
     z-index: 1;
