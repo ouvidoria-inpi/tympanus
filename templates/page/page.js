@@ -72,6 +72,17 @@ class TemplateSystem {
         button.addEventListener('click', (event) => {
           this._setMenuMobileBehavior(event);
         });
+      } else {
+        for (let navigation of this.template.querySelectorAll('.page-wrapper .navigation')) {
+          if (!navigation.hasAttribute('data-children')) {
+            if (button.parentNode.parentNode.getAttribute('data-level') == 0) {
+              button.parentNode.classList.add('is-active');
+            }
+            button.addEventListener('click', () => {
+              button.classList.toggle('is-active');
+            });
+          }
+        }
       }
     }
   }
