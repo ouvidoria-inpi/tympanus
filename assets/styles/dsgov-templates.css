@@ -1496,6 +1496,10 @@
   .navigation[data-type="system"] .overflow-auto {
     overflow: visible !important;
   }
+  .navigation[data-type="system"] .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .navigation[data-type="system"] .items {
     background: transparent;
     margin: 0;
@@ -1504,18 +1508,21 @@
   .navigation[data-type="system"] .items .local,
   .navigation[data-type="system"] .items .govbr {
     border-right: 0;
+    margin: 0;
     width: 100%;
   }
   .navigation[data-type="system"] .item {
-    margin-bottom: 40px;
     position: relative;
   }
   .navigation[data-type="system"] .item > a,
   .navigation[data-type="system"] .item button {
+    border-top: 1px solid #c5d4eb;
     color: #1351b4;
-    font-weight: 500;
+    font-weight: 600;
   }
   .navigation[data-type="system"] .item [class*="fa-"] {
+    color: #cccccc;
+    font-size: 10px;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
@@ -1532,7 +1539,9 @@
   }
   .navigation[data-type="system"] .item .item > a,
   .navigation[data-type="system"] .item .item > button {
+    border-top: 0;
     color: #555555;
+    font-weight: 500;
   }
   .navigation[data-type="system"] .item .item > a [class*="fa-"],
   .navigation[data-type="system"] .item .item > button [class*="fa-"] {
@@ -1571,14 +1580,24 @@
     position: static;
   }
   .navigation[data-type="system"] .level-1 {
+    border-top: 1px solid #c5d4eb;
+    padding: 0 0 16px;
     width: 100%;
+  }
+  .navigation[data-type="system"] .level-1 > .item:hover a [class*="fa-"],
+  .navigation[data-type="system"] .level-1 > .item:hover button [class*="fa-"] {
+    color: #2670e8;
+  }
+  .navigation[data-type="system"] .level-1 > .item:hover .level-2 {
+    display: table;
   }
   .navigation[data-type="system"] .level-1 > .item.is-active .level-2 {
     display: table;
   }
   .navigation[data-type="system"] .level-2 {
     background: #f8f8f8;
-    left: calc(100% + 12px);
+    left: 100%;
+    margin-top: -16px;
     padding: 16px 0;
     position: absolute;
     z-index: 1;
@@ -1649,6 +1668,14 @@
   }
   .page-footer .navigation .level-1 .item:hover .submenu {
     display: none;
+  }
+
+  .page-footer .chancela-serpro {
+    bottom: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
   }
 }
 

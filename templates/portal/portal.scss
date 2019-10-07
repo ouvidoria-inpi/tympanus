@@ -1485,6 +1485,11 @@ $logo-desktop: 150px;
       .overflow-auto {
         overflow: visible !important;
       }
+      // Container
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
       // Menu de navegação
       .items {
         background: transparent;
@@ -1493,19 +1498,22 @@ $logo-desktop: 150px;
         .local,
         .govbr {
           border-right: 0;
+          margin: 0;
           width: 100%;
         }
       }
       // Item de navegação
       .item {
-        margin-bottom: $spacing-8;
         position: relative;
         > a,
         button {
+          border-top: 1px solid $color-primary-pastel-2;
           color: $color-primary;
-          font-weight: 500;
+          font-weight: 600;
         }
         [class*="fa-"] {
+          color: $color-gray-3;
+          font-size: 10px;
           transform: rotate(90deg);
         }
         &:hover {
@@ -1522,7 +1530,9 @@ $logo-desktop: 150px;
           margin-bottom: 0;
           > a,
           > button {
+            border-top: 0;
             color: $color-gray-6;
+            font-weight: 500;
             [class*="fa-"] {
               transform: rotate(0);
             }
@@ -1565,8 +1575,21 @@ $logo-desktop: 150px;
         position: static;
       }
       .level-1 {
+        border-top: 1px solid $color-primary-pastel-2;
+        padding: 0 0 $spacing-3;
         width: 100%;
         > .item {
+          &:hover {
+            a,
+            button {
+              [class*="fa-"] {
+                color: $color-primary-lighten-15;
+              }
+            }
+            .level-2 {
+              display: table;
+            }
+          }
           &.is-active {
             .level-2 {
               display: table;
@@ -1576,7 +1599,8 @@ $logo-desktop: 150px;
       }
       .level-2 {
         background: $color-gray-1;
-        left: calc(100% + #{$spacing-2});
+        left: 100%;
+        margin-top: - $spacing-3;
         padding: $spacing-3 0;
         position: absolute;
         z-index: 1;
@@ -1654,6 +1678,13 @@ $logo-desktop: 150px;
           }
         }
       }
+    }
+    .chancela-serpro {
+      bottom: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: right;
     }
   }
 }
