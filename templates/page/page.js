@@ -79,7 +79,7 @@ class TemplateSystem {
               button.parentNode.classList.add('is-active');
             }
             button.addEventListener('click', () => {
-              button.classList.toggle('is-active');
+              button.parentNode.classList.toggle('is-active');
             });
           }
         }
