@@ -1233,6 +1233,11 @@
     bottom: 16px;
     top: auto;
   }
+  [data-type="system"] .menu-hamburger {
+    bottom: auto;
+    left: -12px;
+    top: 12px;
+  }
   .logo {
     left: 8px;
     position: absolute;
@@ -1258,10 +1263,11 @@
     padding: 0;
   }
   [data-type="system"] .logo .name {
-    margin-left: 0;
+    margin: 0 0 0 36px;
     position: static;
   }
   [data-type="system"] .logo .description {
+    margin: 0 0 0 36px;
     position: static;
   }
   .nav-configs {
@@ -1348,6 +1354,9 @@
     height: 50%;
     justify-content: flex-end;
   }
+  [data-type="system"] + .page-wrapper {
+    flex-direction: row;
+  }
   .navigation .header-bar {
     display: none;
   }
@@ -1418,6 +1427,102 @@
   .navigation[data-children="hover"] .item .item:hover > a,
   .navigation[data-children="hover"] .item .item:hover > button {
     background: #1351b4;
+  }
+  .navigation[data-type="system"] {
+    background: #ededed;
+  }
+  .navigation[data-type="system"] .wrapper {
+    background: transparent;
+    border-top: 0;
+    box-shadow: none;
+    margin: 0;
+    position: static;
+  }
+  .navigation[data-type="system"] .overflow-auto {
+    overflow: visible !important;
+  }
+  .navigation[data-type="system"] .items {
+    background: transparent;
+    margin: 0;
+    overflow: visible;
+  }
+  .navigation[data-type="system"] .items .local,
+  .navigation[data-type="system"] .items .govbr {
+    border-right: 0;
+    width: 100%;
+  }
+  .navigation[data-type="system"] .item {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .navigation[data-type="system"] .item > a,
+  .navigation[data-type="system"] .item button {
+    color: #1351b4;
+    font-weight: 500;
+  }
+  .navigation[data-type="system"] .item [class*="fa-"] {
+    transform: rotate(90deg);
+  }
+  .navigation[data-type="system"] .item:hover > a,
+  .navigation[data-type="system"] .item:hover > button {
+    background: transparent;
+  }
+  .navigation[data-type="system"] .item:hover > a:hover,
+  .navigation[data-type="system"] .item:hover > button:hover {
+    background: #dbe8fb;
+  }
+  .navigation[data-type="system"] .item .item {
+    margin-bottom: 0;
+  }
+  .navigation[data-type="system"] .item .item > a,
+  .navigation[data-type="system"] .item .item > button {
+    color: #555555;
+  }
+  .navigation[data-type="system"] .item .item > a [class*="fa-"],
+  .navigation[data-type="system"] .item .item > button [class*="fa-"] {
+    transform: rotate(0);
+  }
+  .navigation[data-type="system"] .item.is-active > a,
+  .navigation[data-type="system"] .item.is-active > button {
+    background: transparent;
+    display: flex;
+  }
+  .navigation[data-type="system"] .item.is-active > a [class*="fa-"],
+  .navigation[data-type="system"] .item.is-active > button [class*="fa-"] {
+    color: #1351b4;
+    transform: rotate(-90deg);
+  }
+  .navigation[data-type="system"] .item.is-active .submenu > .item {
+    display: block;
+  }
+  .navigation[data-type="system"] .item.is-active .submenu > .item.is-active > a [class*="fa-"],
+  .navigation[data-type="system"] .item.is-active .submenu > .item.is-active > button [class*="fa-"] {
+    color: #2670e8;
+    transform: rotate(0);
+  }
+  .navigation[data-type="system"] .level-1,
+  .navigation[data-type="system"] .level-2,
+  .navigation[data-type="system"] .level-3 {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    position: static;
+  }
+  .navigation[data-type="system"] .level-1 {
+    width: 100%;
+  }
+  .navigation[data-type="system"] .level-1 > .item.is-active .level-2 {
+    display: table;
+  }
+  .navigation[data-type="system"] .level-2 {
+    background: #f8f8f8;
+    left: calc(100% + 12px);
+    padding: 16px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  .navigation[data-type="system"].is-active {
+    width: 320px;
   }
   .page-footer .navigation {
     border-top: 0;
