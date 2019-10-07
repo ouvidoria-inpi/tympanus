@@ -1424,6 +1424,17 @@
   .navigation .items .govbr {
     margin-top: 0;
   }
+  .navigation .item.is-active > a,
+  .navigation .item.is-active > button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navigation .item.is-active > .submenu > .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .navigation .level-1,
   .navigation .level-2,
   .navigation .level-3 {

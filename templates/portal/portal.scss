@@ -1399,6 +1399,21 @@ $logo-desktop: 150px;
         margin-top: 0;
       }
     }
+    // Item de navegação
+    .item {
+      // Item ativo
+      &.is-active {
+        > a,
+        > button {
+          display: flex;
+        }
+        > .submenu {
+          > .item {
+            display: flex;
+          }
+        }
+      }
+    }
     // Níveis de navegação
     .level-1,
     .level-2,
