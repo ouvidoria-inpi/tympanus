@@ -14,7 +14,11 @@
     }
   ],
   "Fundamentos Visuais": [
-    { "label": "Cores", "path": "docs/fundamentos-visuais/cores" },
+    {
+      "label": "Cores",
+      "path": "docs/fundamentos-visuais/cores",
+      "isPdf": true
+    },
     { "label": "Tipografia", "path": "docs/fundamentos-visuais/tipografia" },
     { "label": "Ícones", "path": "docs/fundamentos-visuais/icones" },
     { "label": "Sistema de Grid", "path": "docs/fundamentos-visuais/grid" },
@@ -62,26 +66,35 @@
   ],
   "Componentes": [
     { "label": "Status dos Componentes", "path": "components/components" },
-    { "label": "Abas", "path": "components/tabs/tabs", "isPdf":false },
-    { "label": "Acordeão", "path": "components/accordeon/accordeon", "isPdf":true },
+    { "label": "Abas", "path": "components/tabs/tabs" },
+    {
+      "label": "Acordeão",
+      "path": "components/accordeon/accordeon",
+      "isPdf": true
+    },
     { "label": "Alertas", "path": "components/alert/alert" },
-    { "label": "Botão", "path": "components/button/button", "isPdf":false },
-    { "label": "Breadcrumb", "path": "components/breadcrumb/breadcrumb", "isPdf":true },
-    { "label": "Checkbox", "path": "components/checkbox/checkbox", "isPdf":false },
+    { "label": "Botão", "path": "components/button/button" },
+    {
+      "label": "Breadcrumb",
+      "path": "components/breadcrumb/breadcrumb",
+      "isPdf": true
+    },
+    { "label": "Checkbox", "path": "components/checkbox/checkbox" },
     { "label": "Checklist", "path": "components/checklist/checklist" },
     { "label": "Divider", "path": "components/divider/divider" },
     { "label": "Formulário", "path": "components/form/form" },
-    { "label": "Input", "path": "components/input/input", "isPdf":false },
-    { "label": "Paginação", "path": "components/pagination/pagination", "isPdf":false },
-    { "label": "Select", "path": "components/select/select", "isPdf":false },
+    { "label": "Input", "path": "components/input/input" },
+    { "label": "Paginação", "path": "components/pagination/pagination" },
+    { "label": "Select", "path": "components/select/select" },
     { "label": "Tabela", "path": "components/table/table" },
-    { "label": "Upload", "path": "components/upload/upload", "isPdf":false }
+    { "label": "Upload", "path": "components/upload/upload" }
   ],
   "Templates": [
     { "label": "Status dos Templates", "path": "templates/templates" },
     {
       "label": "Login",
-      "path": "templates/login/login"
+      "path": "templates/login/login",
+      "isPdf": true
     },
     {
       "label": "Cadastro de usuário",
