@@ -1386,6 +1386,9 @@
   .navigation[data-children="hover"] .item:hover > .submenu {
     display: block;
   }
+  .navigation[data-children="hover"] .item:hover > .submenu > .item {
+    display: flex;
+  }
   .navigation[data-children="hover"] .item .item:hover > a,
   .navigation[data-children="hover"] .item .item:hover > button {
     background: #1351b4;

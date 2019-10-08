@@ -1419,6 +1419,9 @@ $logo-desktop: 150px;
           }
           > .submenu {
             display: block;
+            > .item {
+              display: flex;
+            }
           }
         }
         .item {
