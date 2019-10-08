@@ -73,6 +73,7 @@
     { "label": "Formulário", "path": "components/form/form" },
     { "label": "Input", "path": "components/input/input", "isPdf":false },
     { "label": "Paginação", "path": "components/pagination/pagination", "isPdf":false },
+    { "label": "Radio button", "path": "components/radio/radio", "isPdf":true },
     { "label": "Select", "path": "components/select/select", "isPdf":false },
     { "label": "Tabela", "path": "components/table/table" },
     { "label": "Upload", "path": "components/upload/upload", "isPdf":false }
