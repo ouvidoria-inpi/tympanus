@@ -72,7 +72,11 @@
       "path": "components/accordeon/accordeon",
       "isPdf": true
     },
-    { "label": "Alertas", "path": "components/alert/alert" },
+    { 
+      "label": "Alertas", 
+      "path": "components/alert/alert",
+      "isPdf": true
+    },
     { "label": "Botão", "path": "components/button/button" },
     {
       "label": "Breadcrumb",
