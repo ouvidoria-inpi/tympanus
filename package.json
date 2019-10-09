@@ -35,7 +35,6 @@
         "watch-css-base": "nodemon --watch base/ --ext scss --exec \"npm run css-compile-base && npm run css-assets\"",
         "watch-css-components": "nodemon --watch components/ --ext scss --exec \"npm run css-compile-components && npm run css-assets\"",
         "watch-css-templates": "nodemon --watch templates/ --ext scss --exec \"npm run css-compile-templates && npm run css-assets\""
-
     },
     "author": "",
     "browserslist": [

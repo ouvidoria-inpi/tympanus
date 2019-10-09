@@ -1,147 +1,138 @@
 {
-  "Introdução": [
-    {
-      "label": "Como começar",
-      "path": "docs/introducao/como-comecar"
-    },
-    {
-      "label": "Sobre o Design System",
-      "path": "docs/introducao/sobre"
-    },
-    {
-      "label": "Princípios do Design System",
-      "path": "docs/introducao/principios"
-    }
-  ],
-  "Fundamentos Visuais": [
-    { "label": "Cores", "path": "docs/fundamentos-visuais/cores" },
-    { "label": "Tipografia", "path": "docs/fundamentos-visuais/tipografia" },
-    { "label": "Ícones", "path": "docs/fundamentos-visuais/icones" },
-    { "label": "Sistema de Grid", "path": "docs/fundamentos-visuais/grid" },
-    { "label": "Espaçamentos", "path": "docs/fundamentos-visuais/espacamentos" }
-  ],
-  "Boas Práticas": [
-    {
-      "label": "Design",
-      "children": [
+    "Introdução": [{
+            "label": "Como começar",
+            "path": "docs/introducao/como-comecar"
+        },
         {
-          "label": "Aplicação das cores",
-          "path": "docs/boas-praticas/design/aplicacao-das-cores"
+            "label": "Sobre o Design System",
+            "path": "docs/introducao/sobre"
+        },
+        {
+            "label": "Princípios do Design System",
+            "path": "docs/introducao/principios"
         }
-      ]
-    },
-    {
-      "label": "Desenvolvimento",
-      "children": [
-        {
-          "label": "Acessibilidade no Código HTML",
-          "path": "docs/boas-praticas/desenvolvimento/acessibilidade-no-codigo-html"
+    ],
+    "Fundamentos Visuais": [
+        { "label": "Cores", "path": "docs/fundamentos-visuais/cores" },
+        { "label": "Tipografia", "path": "docs/fundamentos-visuais/tipografia" },
+        { "label": "Ícones", "path": "docs/fundamentos-visuais/icones" },
+        { "label": "Sistema de Grid", "path": "docs/fundamentos-visuais/grid" },
+        { "label": "Espaçamentos", "path": "docs/fundamentos-visuais/espacamentos" }
+    ],
+    "Boas Práticas": [{
+            "label": "Design",
+            "children": [{
+                "label": "Aplicação das cores",
+                "path": "docs/boas-praticas/design/aplicacao-das-cores"
+            }]
         },
         {
-          "label": "Uso do WAI-ARIA",
-          "path": "docs/boas-praticas/desenvolvimento/uso-do-wai-aria"
-        },
-        {
-          "label": "Construção do HTML",
-          "path": "docs/boas-praticas/desenvolvimento/construcao-do-html"
-        },
-        {
-          "label": "Uso do css",
-          "path": "docs/boas-praticas/desenvolvimento/uso-do-css"
-        },
-        {
-          "label": "Construção do CSS",
-          "path": "docs/boas-praticas/desenvolvimento/construcao-do-css"
-        },
-        {
-          "label": "Manutenção do CSS",
-          "path": "docs/boas-praticas/desenvolvimento/manutencao-do-css"
+            "label": "Desenvolvimento",
+            "children": [{
+                    "label": "Acessibilidade no Código HTML",
+                    "path": "docs/boas-praticas/desenvolvimento/acessibilidade-no-codigo-html"
+                },
+                {
+                    "label": "Uso do WAI-ARIA",
+                    "path": "docs/boas-praticas/desenvolvimento/uso-do-wai-aria"
+                },
+                {
+                    "label": "Construção do HTML",
+                    "path": "docs/boas-praticas/desenvolvimento/construcao-do-html"
+                },
+                {
+                    "label": "Uso do css",
+                    "path": "docs/boas-praticas/desenvolvimento/uso-do-css"
+                },
+                {
+                    "label": "Construção do CSS",
+                    "path": "docs/boas-praticas/desenvolvimento/construcao-do-css"
+                },
+                {
+                    "label": "Manutenção do CSS",
+                    "path": "docs/boas-praticas/desenvolvimento/manutencao-do-css"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "Componentes": [
-    { "label": "Status dos Componentes", "path": "components/components" },
-    { "label": "Abas", "path": "components/tabs/tabs", "isPdf":false },
-    { "label": "Acordeão", "path": "components/accordeon/accordeon", "isPdf":true },
-    { "label": "Alertas", "path": "components/alert/alert" },
-    { "label": "Botão", "path": "components/button/button", "isPdf":false },
-    { "label": "Breadcrumb", "path": "components/breadcrumb/breadcrumb", "isPdf":true },
-    { "label": "Checkbox", "path": "components/checkbox/checkbox", "isPdf":false },
-    { "label": "Checklist", "path": "components/checklist/checklist" },
-    { "label": "Divider", "path": "components/divider/divider" },
-    { "label": "Formulário", "path": "components/form/form" },
-    { "label": "Input", "path": "components/input/input", "isPdf":false },
-    { "label": "Paginação", "path": "components/pagination/pagination", "isPdf":false },
-    { "label": "Select", "path": "components/select/select", "isPdf":false },
-    { "label": "Tabela", "path": "components/table/table" },
-    { "label": "Upload", "path": "components/upload/upload", "isPdf":false }
-  ],
-  "Templates": [
-    { "label": "Status dos Templates", "path": "templates/templates" },
-    {
-      "label": "Login",
-      "path": "templates/login/login"
-    },
-    {
-      "label": "Cadastro de usuário",
-      "children": [
+    ],
+    "Componentes": [
+        { "label": "Status dos Componentes", "path": "components/components" },
+        { "label": "Abas", "path": "components/tabs/tabs", "isPdf": false },
+        { "label": "Acordeão", "path": "components/accordeon/accordeon", "isPdf": true },
+        { "label": "Alertas", "path": "components/alert/alert" },
+        { "label": "Botão", "path": "components/button/button", "isPdf": false },
+        { "label": "Breadcrumb", "path": "components/breadcrumb/breadcrumb", "isPdf": true },
+        { "label": "Card", "path": "components/card/card" },
+        { "label": "Checkbox", "path": "components/checkbox/checkbox", "isPdf": false },
+        { "label": "Checklist", "path": "components/checklist/checklist" },
+        { "label": "Divider", "path": "components/divider/divider" },
+        { "label": "Formulário", "path": "components/form/form" },
+        { "label": "Input", "path": "components/input/input", "isPdf": false },
+        { "label": "Paginação", "path": "components/pagination/pagination", "isPdf": false },
+        { "label": "Select", "path": "components/select/select", "isPdf": false },
+        { "label": "Tabela", "path": "components/table/table" },
+        { "label": "Upload", "path": "components/upload/upload", "isPdf": false }
+    ],
+    "Templates": [
+        { "label": "Status dos Templates", "path": "templates/templates" },
         {
-          "label": "1 - Início do Cadastro",
-          "path": "templates/signin/signin"
+            "label": "Login",
+            "path": "templates/login/login"
         },
         {
-          "label": "2 - Ativação da Conta",
-          "path": "templates/signin/signin-1"
+            "label": "Cadastro de usuário",
+            "children": [{
+                    "label": "1 - Início do Cadastro",
+                    "path": "templates/signin/signin"
+                },
+                {
+                    "label": "2 - Ativação da Conta",
+                    "path": "templates/signin/signin-1"
+                },
+                {
+                    "label": "3 - Verificação do código recebido",
+                    "path": "templates/signin/signin-2"
+                },
+                {
+                    "label": "4 - Correção do número do celular",
+                    "path": "templates/signin/signin-3"
+                },
+                {
+                    "label": "5 - Conclusão do Cadastro",
+                    "path": "templates/signin/signin-4"
+                }
+            ]
         },
         {
-          "label": "3 - Verificação do código recebido",
-          "path": "templates/signin/signin-2"
+            "label": "Sistemas",
+            "children": [{
+                    "label": "Template base",
+                    "path": "templates/page/page"
+                },
+                {
+                    "label": "Exemplo de formulário",
+                    "path": "templates/crud/crud"
+                }
+            ]
         },
         {
-          "label": "4 - Correção do número do celular",
-          "path": "templates/signin/signin-3"
+            "label": "Sites e portais",
+            "children": [{
+                "label": "Template base",
+                "path": "templates/portal/portal"
+            }]
         },
         {
-          "label": "5 - Conclusão do Cadastro",
-          "path": "templates/signin/signin-4"
+            "label": "Tela de erro para Sistemas",
+            "children": [{
+                    "label": "Padrão",
+                    "path": "templates/not-found/not-found-2"
+                },
+                {
+                    "label": "Com opção de busca",
+                    "path": "templates/not-found/not-found-1"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "label": "Sistemas",
-      "children": [
-        {
-          "label": "Template base",
-          "path": "templates/page/page"
-        },
-        {
-          "label": "Exemplo de formulário",
-          "path": "templates/crud/crud"
-        }
-      ]
-    },
-    {
-      "label": "Sites e portais",
-      "children": [
-        {
-          "label": "Template base",
-          "path": "templates/portal/portal"
-        }
-      ]
-    },
-    {
-      "label": "Tela de erro para Sistemas",
-      "children": [
-        {
-          "label": "Padrão",
-          "path": "templates/not-found/not-found-2"
-        },
-        {
-          "label": "Com opção de busca",
-          "path": "templates/not-found/not-found-1"
-        }
-      ]
-    }
-  ]
+    ]
 }

@@ -7,12 +7,10 @@
 // Carregar dependências
 @import "configs";
 @import "mixins";
-
 // Estilos para Lista de Itens
 // Tabs
 .#{$prefix}tabs {
-  @include tab-item;
-  list-style: none;
-  margin: 0;
+    @include tab-item;
+    list-style: none;
+    margin: 0;
 }
-
