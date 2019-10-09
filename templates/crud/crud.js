@@ -11,6 +11,7 @@ class TemplateSystem {
     this._setMenuBehavior();
     this._setDropdownBehavior();
     this._setSearchBehavior();
+    this._setFooterBehavior();
   }
 
   _cloneNavigation() {
@@ -161,6 +162,33 @@ class TemplateSystem {
       for (let buttonClose of search.querySelectorAll('button.close')) {
         buttonClose.addEventListener('click', () => {
           search.classList.remove('is-active');
+        });
+      }
+    }
+  }
+
+  _setFooterBehavior() {
+    if (window.screen.width < 1024) {
+      for (let navigation of window.document.querySelectorAll('.page-footer .navigation')) {
+        navigation.classList.add('footer-mobile');
+        for (let button of navigation.querySelectorAll('li.item button')) {
+          let icon = window.document.createElement('i');
+          icon.setAttribute('class', 'fas fa-plus');
+          button.parentNode.prepend(icon);
+        }
+      }
+      for (let button of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item button')) {
+        let item = button.parentNode;
+        item.addEventListener('click', (event) => {
+          item.classList.toggle('is-active');
+          if (item.classList.contains('is-active')) {
+            item.firstChild.classList.remove('fa-plus');
+            item.firstChild.classList.add('fa-minus');
+          } else {
+            item.firstChild.classList.remove('fa-minus');
+            item.firstChild.classList.add('fa-plus');
+          }
+          event.stopPropagation();
         });
       }
     }
