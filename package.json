@@ -45,12 +45,12 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.10.1",
         "bootstrap": "^4.3.1",
+        "ds-validate": "0.0.2",
         "husky": "^3.0.7"
     },
     "devDependencies": {
         "autoprefixer": "^9.6.1",
         "clean-css-cli": "^4.3.0",
-        "ds-validate": "git+https://git.serpro/ds-gov/ds-gov-html-validate",
         "gulp": "^4.0.2",
         "gulp-decompress": "^2.0.2",
         "gulp-download-files": "0.0.3",
