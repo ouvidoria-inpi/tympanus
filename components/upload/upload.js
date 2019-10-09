@@ -47,10 +47,13 @@ function updateFileList () {
       info.innerHTML = fileArray[i].name ;
       li.appendChild(info);
       
+      const del = document.createElement("div");
+      del.addEventListener("click", function(){removeFile(i, event)}, false);
+      del.className = 'del';
       const img = document.createElement("i");
       img.className = 'fa fa-times';
-      img.addEventListener("click", function(){removeFile(i, event)}, false);
-      li.appendChild(img);
+      del.appendChild(img);
+      li.appendChild(del);
     }
   }
   updateSize();
