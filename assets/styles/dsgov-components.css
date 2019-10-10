@@ -3307,6 +3307,13 @@
   position: relative;
   width: 100%;
 }
+.br-upload .upload-file-list li .del {
+  cursor: pointer;
+  display: inline;
+  line-height: 24px;
+  position: absolute;
+  right: 8px;
+}
 .br-upload .upload-file-list span {
   display: inline-block;
   overflow: hidden;
@@ -3314,12 +3321,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
-}
-.br-upload .upload-file-list i {
-  cursor: pointer;
-  line-height: 24px;
-  position: absolute;
-  right: 8px;
 }
 .br-upload .upload-add {
   display: block;
