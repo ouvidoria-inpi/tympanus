@@ -109,6 +109,15 @@
       ]
     },
     {
+      "label": "Recuperação de Senha",
+      "children": [
+        {
+          "label": "1 - Esqueceu sua senha?",
+          "path": "templates/password-recovery/recovery"
+        }
+      ]
+    },
+    {
       "label": "Tela interna para Sistemas",
       "path": "templates/page/page"
     },
