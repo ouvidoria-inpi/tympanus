@@ -77,22 +77,28 @@
       "path": "components/alert/alert",
       "isPdf": true
     },
-    { "label": "Botão", "path": "components/button/button" },
+    { "label": "Badge", "path": "components/badge/badge", "isPdf": true },
+    { "label": "Botão", "path": "components/button/button", "isPdf": true },
     {
       "label": "Breadcrumb",
       "path": "components/breadcrumb/breadcrumb",
       "isPdf": true
     },
-    { "label": "Checkbox", "path": "components/checkbox/checkbox" },
+    { "label": "Checkbox", "path": "components/checkbox/checkbox", "isPdf": true },
     { "label": "Checklist", "path": "components/checklist/checklist" },
+    { "label": "Datepicker", "path": "components/datepicker/datepicker", "isPdf": true },
     { "label": "Divider", "path": "components/divider/divider" },
     { "label": "Formulário", "path": "components/form/form" },
-    { "label": "Input", "path": "components/input/input" },
-    { "label": "Paginação", "path": "components/pagination/pagination" },
-    { "label": "Radio button", "path": "components/radio/radio", "isPdf":true },
-    { "label": "Select", "path": "components/select/select", "isPdf":true },
+    { "label": "Input", "path": "components/input/input", "isPdf": true },
+    { "label": "Modal", "path": "components/modal/modal" },
+    { "label": "Paginação", "path": "components/pagination/pagination", "isPdf": true },
+    { "label": "Radio button", "path": "components/radio/radio", "isPdf": true },
+    { "label": "Scrim", "path": "components/scrim/scrim" },
+    { "label": "Select", "path": "components/select/select", "isPdf": true },
     { "label": "Tabela", "path": "components/table/table" },
-    { "label": "Upload", "path": "components/upload/upload" }
+    { "label": "Tabs", "path": "components/tabs/tabs", "isPdf": true },
+    { "label": "Textarea", "path": "components/textarea/textarea", "isPdf": true },
+    { "label": "Upload", "path": "components/upload/upload", "isPdf": true }
   ],
   "Templates": [
     { "label": "Status dos Templates", "path": "templates/templates" },
@@ -106,32 +112,39 @@
       "children": [
         {
           "label": "1 - Início do Cadastro",
-          "path": "templates/signin/signin"
+          "path": "templates/signin/signin",
+          "isPdf": true
         },
         {
           "label": "2 - Ativação da Conta",
-          "path": "templates/signin/signin-1"
+          "path": "templates/signin/signin-1",
+          "isPdf": true
         },
         {
           "label": "3 - Verificação do código recebido",
-          "path": "templates/signin/signin-2"
+          "path": "templates/signin/signin-2",
+          "isPdf": true
         },
         {
           "label": "4 - Correção do número do celular",
-          "path": "templates/signin/signin-3"
+          "path": "templates/signin/signin-3",
+          "isPdf": true
         },
         {
           "label": "5 - Conclusão do Cadastro",
-          "path": "templates/signin/signin-4"
+          "path": "templates/signin/signin-4",
+          "isPdf": true
         }
       ]
     },
+    { "label": "Recuperar Senha", "path": "templates/recover/recover", "isPdf": true },
     {
       "label": "Sistemas",
       "children": [
         {
           "label": "Template base",
-          "path": "templates/page/page"
+          "path": "templates/page/page",
+          "isPdf": true
         },
         {
           "label": "Exemplo de formulário",
@@ -144,7 +157,8 @@
       "children": [
         {
           "label": "Template base",
-          "path": "templates/portal/portal"
+          "path": "templates/portal/portal",
+          "isPdf": true
         }
       ]
     },
