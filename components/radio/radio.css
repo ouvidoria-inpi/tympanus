@@ -190,6 +190,10 @@
   box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
 }
 
+.br-check.is-invalid input[type="checkbox"] + label {
+  color: #e60000;
+}
+
 .br-check.is-invalid.is-inverted input[type="checkbox"]:checked + label::before {
   background: #ffffff;
   border-color: #e60000;
@@ -495,6 +499,10 @@
 
 .br-check.is-invalid input[type="radio"]:hover:not(:disabled) + label::before {
   box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.45);
+}
+
+.br-check.is-invalid input[type="radio"] + label {
+  color: #e60000;
 }
 
 .br-check.is-invalid.is-inverted input[type="radio"]:checked + label::before {

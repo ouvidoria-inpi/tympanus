@@ -49,8 +49,8 @@
           "path": "docs/boas-praticas/desenvolvimento/construcao-do-css"
         },
         {
-          "label": "Construção do HTML",
-          "path": "docs/boas-praticas/desenvolvimento/construcao-do-html"
+          "label": "Sobre o Design System",
+          "path": "docs/introducao/sobre"
         },
         {
           "label": "Manutenção do CSS",

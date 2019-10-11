@@ -8,6 +8,11 @@
                 "ignoreForeign": true
             }
         ],
+        "indetation": [
+            0,
+            { "style": "lowercase" }
+
+        ],
         "attr-case": [
             2,
             {
