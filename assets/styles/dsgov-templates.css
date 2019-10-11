@@ -1839,6 +1839,9 @@
   }
 }
 
+.not-found .br-search {
+  position: unset;
+}
 
 .hint .box {
   display: -webkit-box;
