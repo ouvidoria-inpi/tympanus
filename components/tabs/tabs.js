@@ -1,4 +1,3 @@
-const tabs2 = document.getElementById('item2').addEventListener("click", console.log("..."), false);
 const tab = dropbox = document.querySelectorAll('.br-tabs .item');
 
 for (let elem of tab) {
