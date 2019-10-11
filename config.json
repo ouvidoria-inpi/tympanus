@@ -257,11 +257,6 @@
       "isPdf": true,
       "label": "Login",
       "path": "templates/login/login"
-    },
-    {
-      "isPdf": true,
-      "label": "Recuperar Senha",
-      "path": "templates/recover/recover"
     }
   ]
 }
