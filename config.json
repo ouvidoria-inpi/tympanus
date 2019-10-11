@@ -113,7 +113,11 @@
       "children": [
         {
           "label": "1 - Esqueceu sua senha?",
-          "path": "templates/password-recovery/recovery"
+          "path": "templates/password-recovery/password-recovery"
+        },
+        {
+          "label": "2 - Verifique seu celular",
+          "path": "templates/password-recovery/password-recovery-1"
         }
       ]
     },

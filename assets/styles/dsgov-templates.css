@@ -746,3 +746,9 @@
     border-right: 1px solid #cccccc;
   }
 }
+
+
+.br-input .codigo,
+.br-input .phone {
+  width: 140px;
+}
