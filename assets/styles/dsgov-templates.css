@@ -764,3 +764,16 @@
   margin: 7px 0 7px 0;
   padding: 0;
 }
+
+.br-highlight {
+  background-color: #E7EDF9;
+  padding: 35px;
+}
+.br-highlight h2 {
+  color: #1351b4;
+  font-size: 24px;
+}
+.br-highlight h3 {
+  color: #1351b4;
+  font-size: 16px;
+}

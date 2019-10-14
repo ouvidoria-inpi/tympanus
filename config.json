@@ -125,7 +125,11 @@
         },
         {
           "label": "4 - Precisa de Ajuda?",
-          "path": "templates/password-recovery/password-recovery-ajuda"
+          "path": "templates/password-recovery/password-recovery-help"
+        },
+        {
+          "label": "5 - Altere sua Senha",
+          "path": "templates/password-recovery/password-recovery-change"
         }
 
       ]
