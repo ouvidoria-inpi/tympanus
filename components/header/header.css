@@ -1,0 +1,263 @@
+/*!
+ * header - 0.1.0 */
+.br-header {
+  background: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.br-header .bar {
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.br-header.is-site .bar {
+  height: 45px;
+}
+
+.br-header.is-system .bar {
+  height: 110px;
+}
+
+.br-header .logo {
+  font-weight: 600;
+}
+
+.br-header .logo .image img {
+  max-height: 24px;
+}
+
+.br-header.is-site .logo {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.br-header.is-site .logo .name {
+  display: none;
+}
+
+.br-header.is-site .logo .description {
+  display: none;
+}
+
+.br-header.is-system .logo {
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: column;
+  height: 65px;
+  justify-content: center;
+}
+
+.br-header.is-system .logo .name {
+  align-self: flex-start;
+  color: #071d41;
+  font-size: 20px;
+}
+
+.br-header.is-system .logo .description {
+  color: #333333;
+  font-size: 12px;
+}
+
+.br-header .quicklinks {
+  display: none;
+}
+
+.br-header .language {
+  display: none;
+}
+
+.br-header .login .icon {
+  align-items: center;
+  color: #1351b4;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+  position: relative;
+}
+
+.br-header .login .icon:hover {
+  color: #2670e8;
+  z-index: 1;
+}
+
+.br-header .login .icon:hover::after {
+  background: #dbe8fb;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 32px;
+  position: absolute;
+  width: 32px;
+  z-index: -1;
+}
+
+.br-header .login span {
+  display: none;
+}
+
+.br-header .contrast {
+  display: none;
+}
+
+.br-header .contrast span {
+  display: none;
+}
+
+.br-header .search {
+  align-items: center;
+  display: flex;
+  height: 45px;
+  margin-right: -8px;
+  position: relative;
+}
+
+.br-header .search .field {
+  align-items: center;
+  display: flex;
+  height: 45px;
+}
+
+.br-header .search .field input {
+  background: transparent;
+  border: 0;
+  display: none;
+  flex: 1;
+  padding: 0 8px;
+}
+
+.br-header .search .field button {
+  align-items: center;
+  color: #1351b4;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+  background: transparent;
+  border: 0;
+  color: #1351b4;
+}
+
+.br-header .search .field button:hover {
+  color: #2670e8;
+  z-index: 1;
+}
+
+.br-header .search .field button:hover::after {
+  background: #dbe8fb;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 32px;
+  position: absolute;
+  width: 32px;
+  z-index: -1;
+}
+
+.br-header .search .close {
+  align-items: center;
+  color: #1351b4;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+  background: transparent;
+  border: 0;
+  display: none;
+}
+
+.br-header .search .close:hover {
+  color: #2670e8;
+  z-index: 1;
+}
+
+.br-header .search .close:hover::after {
+  background: #dbe8fb;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 32px;
+  position: absolute;
+  width: 32px;
+  z-index: -1;
+}
+
+.br-header .search.is-active .field {
+  background: #ededed;
+  flex: 1;
+}
+
+.br-header .search.is-active .field input {
+  display: block;
+}
+
+.br-header .search.is-active .close {
+  display: inline-flex;
+}
+
+.br-header.is-site .search.is-active .field {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 100vw;
+}
+
+.br-header.is-system .search .close {
+  bottom: 45px;
+  height: 45px;
+  position: absolute;
+  right: 0;
+}
+
+.br-header.is-system .search.is-active {
+  flex: 1;
+  margin-left: -8px;
+  z-index: 1;
+}
+
+.br-header .user-bar {
+  display: none;
+}
+
+.br-header .menu-hamburger {
+  align-items: center;
+  color: #1351b4;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+  background: transparent;
+  border: 0;
+  color: #1351b4;
+  left: -8px;
+  position: absolute;
+}
+
+.br-header .menu-hamburger:hover {
+  color: #2670e8;
+  z-index: 1;
+}
+
+.br-header .menu-hamburger:hover::after {
+  background: #dbe8fb;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 32px;
+  position: absolute;
+  width: 32px;
+  z-index: -1;
+}
+
+.br-header.is-system .menu-hamburger {
+  height: 45px;
+  top: 65px;
+}
+
+/*# sourceMappingURL=header.css.map */

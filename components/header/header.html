@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>button</title>
+  <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
+  <link rel="stylesheet" href="header.css">
+  <!-- Ícones fontawesome -->
+  <script src="../../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+</head>
+
+<body class="bg-gray-1">
+  <!-- Cabeçalho de site -->
+  <header class="br-header is-site">
+    <div class="container">
+      <!-- Barra de cabeçalho -->
+      <div class="bar">
+        <!-- Logo -->
+        <div class="logo">
+          <a id="logo" class="image" href="">
+            <img src="../../assets/images/govbr.svg" alt="Governo Federal">
+          </a>
+          <span class="description">Ministério da Economia</span>
+          <span class="name">Secretaria da Receita do Brasil - RFB</span>
+        </div>
+        <!-- Links rápidos -->
+        <ul class="quicklinks">
+          <li><a href="">Acesso à informação</a></li>
+          <li><a href="">Participe</a></li>
+          <li><a href="">Acessibilidade</a></li>
+        </ul>
+        <!-- Idioma -->
+        <div class="language dropdown">
+          <button class="trigger" type="button">
+            <span class="name">Português</span>
+            <i class="fas fa-chevron-down arrow"></i>
+          </button>
+          <div class="menu">
+            <div class="title">Idioma/Language</div>
+            <button class="item is-active" type="button">
+              <span class="name">Português</span>
+            </button>
+            <button class="item" type="button">
+              <span class="name">English</span>
+            </button>
+            <button class="item" type="button">
+              <span class="name">Español</span>
+            </button>
+          </div>
+        </div>
+        <!-- Login -->
+        <a href="" class="login">
+          <span class="icon"><i class="fas fa-user fa-lg"></i></span>
+          <span>Acesso GOV.BR</span>
+        </a>
+        <!-- Altocontraste -->
+        <a href="" class="contrast" accesskey="6">
+          <i class="fas fa-adjust fa-lg"></i>
+          <span>Alto contraste</span>
+        </a>
+        <!-- Busca geral -->
+        <div class="search">
+          <div class="field">
+            <label for="search" class="sr-only">Autocomplete</label>
+            <input id="search" type="search" placeholder="O que você procura?">
+            <button class="" type="button">
+              <i class="fas fa-search fa-lg"></i>
+              <span class="sr-only">buscar</span>
+            </button>
+          </div>
+          <button class="close" type="button">
+            <i class="fas fa-times fa-lg"></i>
+            <span class="sr-only">fechar a busca</span>
+          </button>
+        </div>
+        <!-- Menu sanduiche -->
+        <button class="menu-hamburger" type="button">
+          <i class="fa fa-bars fa-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <hr>
+
+  <!-- Cabeçalho de sistema -->
+  <header class="br-header is-system">
+    <div class="container-fluid">
+      <!-- Barra de cabeçalho -->
+      <div class="bar">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="" id="logo" class="name">Nome do Órgão</a>
+          <span class="description">Assinatura do Órgão</span>
+        </div>
+        <!-- Links rápidos -->
+        <ul class="quicklinks">
+          <li><a href="">Acesso à informação</a></li>
+          <li><a href="">Participe</a></li>
+          <li><a href="">Acessibilidade</a></li>
+        </ul>
+        <!-- Altocontraste -->
+        <a href="" class="contrast" accesskey="6">
+          <i class="fas fa-adjust fa-lg"></i>
+          <span>Alto contraste</span>
+        </a>
+        <!-- Busca geral -->
+        <div class="search">
+          <div class="field">
+            <label for="search" class="sr-only">Autocomplete</label>
+            <input id="search" type="search" placeholder="O que você procura?">
+            <button class="" type="button">
+              <i class="fas fa-search fa-lg"></i>
+              <span class="sr-only">buscar</span>
+            </button>
+          </div>
+          <button class="close" type="button">
+            <i class="fas fa-times fa-lg"></i>
+            <span class="sr-only">fechar a busca</span>
+          </button>
+        </div>
+        <!-- Barra do usuário -->
+        <div class="user-bar">
+          <!-- Configurações do usuário -->
+          <div class="configs dropdown">
+            <button class="trigger" type="button">
+              <!-- Avatar do usuário -->
+              <div class="avatar">
+                <img src="../../assets/images/avatar.png" alt="Avatar">
+                <!-- <i class="fas fa-user-circle"></i> -->
+              </div>
+              <!-- Notificações -->
+              <span class="badge">5</span>
+              <!-- Seta para abrir menu -->
+              <div class="arrow">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="menu">
+              <!-- Informações do usuário -->
+              <div class="title user">
+                <div class="name">Márcia Vinícius Tavares de Almeida</div>
+                <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
+              </div>
+              <!-- Lista de configurações -->
+              <span class="title">
+                <i class="fas fa-cog"></i>
+                Configuração/Perfil
+              </span>
+              <a href="" class="item">Configuração 01</a>
+              <a href="" class="item">Configuração 02</a>
+              <a href="" class="item">Configuração 03</a>
+            </div>
+          </div>
+          <!-- Sistemas favoritos do usuário -->
+          <div class="bookmarks dropdown">
+            <button class="trigger" type="button">
+              <i class="fas fa-th-large"></i>
+            </button>
+            <div class="menu">
+              <div class="title">Sistemas</div>
+              <div class="list">
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 01</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 02</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 03</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 04</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 05</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 06</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 07</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 08</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="" class="bookmark">
+                    <div class="brand"></div>
+                    <div class="name">Sistema 10</div>
+                  </a>
+                </div>
+              </div>
+              <div class="more">
+                <a href="">Mais</a>
+              </div>
+            </div>
+          </div>
+          <!-- Logout -->
+          <button class="logout" type="button">Sair</button>
+        </div>
+        <!-- Menu sanduiche -->
+        <button class="menu-hamburger" type="button">
+          <i class="fa fa-bars fa-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>
