@@ -752,3 +752,15 @@
 .br-input .phone {
   width: 140px;
 }
+
+.br-questions {
+  padding-top: 35px;
+}
+.br-questions ul {
+  padding: 0 0 25px 0;
+}
+.br-questions ul li {
+  list-style: none;
+  margin: 7px 0 7px 0;
+  padding: 0;
+}

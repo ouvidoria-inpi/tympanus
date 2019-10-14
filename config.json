@@ -118,7 +118,16 @@
         {
           "label": "2 - Verifique seu celular",
           "path": "templates/password-recovery/password-recovery-1"
+        },
+        {
+          "label": "3 - Verifique seu celular - Validação",
+          "path": "templates/password-recovery/password-recovery-2"
+        },
+        {
+          "label": "4 - Precisa de Ajuda?",
+          "path": "templates/password-recovery/password-recovery-ajuda"
         }
+
       ]
     },
     {
