@@ -1,5 +1,4 @@
 @mixin header-component {
-  background: $color-white;
   // Sombra do cabeçalho
   @include header-shadow;
   // Barra de cabeçalho
@@ -20,6 +19,7 @@
   @include user-bar;
   // Menu hamburguer
   @include hamburger;
+  background: $color-white;
 }
 
 @mixin header-shadow {
