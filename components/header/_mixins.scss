@@ -194,6 +194,7 @@
     @include media-breakpoint-up(md) {
       .logo {
         flex: 1;
+        justify-content: flex-start;
         .name {
           font-size: $logo-name-desktop;
         }
@@ -247,11 +248,7 @@
       border-top: 1px solid $color-warning;
       margin: $spacing-1 0 0;
       right: 0;
-      // Rótulo da seleção
-      .title {
-        border-bottom: 1px solid $color-gray-3;
-        font-size: 14px;
-      }
+      top: 100%;
     }
   }
   // Desktop
@@ -460,13 +457,41 @@
         z-index: 1;
       }
     }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .search {
+        height: $search-desktop-height;
+        margin-right: 100px;
+        // Caixa de busca
+        .field {
+          background: $search-bg;
+          height: $search-desktop-height;
+          input {
+            display: block;
+          }
+        }
+        // Botão fechar
+        .close {
+          position: static;
+        }
+        // Busca ativa
+        &.is-active {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }
 
 @mixin user-bar {
   .user-bar {
+    @include user-configs;
+    @include user-avatar;
+    @include user-bookmarks;
+    @include user-logout;
     align-items: center;
     display: none;
+    margin-top: $spacing-1;
   }
   // Desktop
   @include media-breakpoint-up(md) {
@@ -497,12 +522,19 @@
       height: $header-site-mobile-height;
       top: $header-system-mobile-height - $header-site-mobile-height;
     }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .menu-hamburger {
+        top: auto;
+      }
+    }
   }
 }
 
 @mixin menu {
   .menu {
     position: relative;
+    z-index: 1;
     .items {
       background: $color-white;
       box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
@@ -512,6 +544,7 @@
     .title {
       border-bottom: 1px solid $color-gray-3;
       display: block;
+      font-size: 14px;
       font-style: italic;
       font-weight: 600;
       padding: $spacing-1 $spacing-3;
@@ -519,6 +552,7 @@
     .item {
       background: $color-white;
       border: 0;
+      color: $color-gray-6;
       display: block;
       padding: $spacing-1 $spacing-3;
       position: relative;
@@ -563,6 +597,181 @@
       position: absolute;
       width: 32px;
       z-index: -1;
+    }
+  }
+}
+
+@mixin user-avatar {
+  .avatar {
+    // color: $color-primary;
+    display: inline-flex;
+    font-size: 40px;
+    position: relative;
+    img {
+      max-width: 40px;
+    }
+    // Badge com quantidade de notificações
+    & + .badge {
+      background: $color-danger;
+      border-radius: 50%;
+      color: $color-white;
+      font-size: 11px;
+      font-weight: 700;
+      height: 18px;
+      left: - $spacing-1;
+      margin-right: - $spacing-1;
+      position: relative;
+      top: - $spacing-2;
+      width: 18px;
+    }
+  }
+}
+
+@mixin user-configs {
+  .configs {
+    .trigger {
+      align-items: center;
+      background: transparent;
+      border: 0;
+      color: $color-primary;
+      display: inline-flex;
+      .arrow {
+        background: $color-gray-2;
+        border-radius: 50%;
+        font-size: 11px;
+        height: 17px;
+        width: 17px;
+      }
+    }
+    // Menu
+    .items {
+      right: 0;
+      // Nome
+      .name {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      // E-mail
+      .email {
+        font-size: 13px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+      // Menu ativo
+      &.is-active {
+        &::after {
+          border: solid transparent;
+          border-bottom-color: $color-gray-7;
+          border-width: 12px;
+          bottom: 100%;
+          content: "";
+          height: 0;
+          pointer-events: none;
+          position: absolute;
+          right: $spacing-3;
+          width: 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin user-bookmarks {
+  .bookmarks {
+    margin-left: $spacing-2;
+    // Ativador do menu
+    .trigger {
+      @include btn-icon;
+      background: transparent;
+      border: 0;
+      position: relative;
+    }
+    // Menu
+    .items {
+      margin: 15px -12px 0 0;
+      right: 0;
+      // Menu ativo
+      &.is-active {
+        &::after {
+          border: solid transparent;
+          border-bottom-color: $color-gray-7;
+          border-width: 12px;
+          bottom: 100%;
+          content: "";
+          height: 0;
+          pointer-events: none;
+          position: absolute;
+          right: $spacing-3;
+          width: 0;
+        }
+      }
+    }
+    // Lista de favoritos
+    .list {
+      padding: 0 $spacing-3;
+      columns: 5;
+      .item {
+        padding: 0;
+      }
+    }
+    // Favorito
+    .bookmark {
+      display: inline-block;
+      margin: $spacing-3 0 0;
+      &:hover {
+        text-decoration: none;
+        .brand {
+          border-color: $color-primary-lighten-15;
+        }
+        .name {
+          color: $color-primary-lighten-15;
+        }
+      }
+    }
+    // Marca
+    .brand {
+      background: $color-gray-1;
+      border: 1px solid $color-gray-3;
+      height: 42px;
+      width: 58px;
+    }
+    // Nome
+    .name {
+      color: $color-gray-6;
+      display: block;
+      font-size: 9px;
+      font-weight: 500;
+      margin-top: $spacing-half;
+      text-align: center;
+    }
+    // Mais opções
+    .more {
+      font-size: 10px;
+      font-weight: 600;
+      margin: $spacing-3 0;
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin user-logout {
+  .logout {
+    align-items: center;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 100px;
+    color: $color-white;
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 600;
+    height: 32px;
+    margin-left: $spacing-3;
+    padding: 0 $spacing-5;
+    text-align: center;
+    &:hover {
+      background: $color-primary-lighten-15;
+      border-color: $color-primary-lighten-15;
     }
   }
 }

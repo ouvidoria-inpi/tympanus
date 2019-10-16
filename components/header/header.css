@@ -157,6 +157,7 @@
 @media (min-width: 998px) {
   .br-header.is-system .logo {
     flex: 1;
+    justify-content: flex-start;
   }
   .br-header.is-system .logo .name {
     font-size: 24px;
@@ -165,6 +166,7 @@
 
 .br-header .menu {
   position: relative;
+  z-index: 1;
 }
 
 .br-header .menu .items {
@@ -177,6 +179,7 @@
 .br-header .menu .title {
   border-bottom: 1px solid #cccccc;
   display: block;
+  font-size: 14px;
   font-style: italic;
   font-weight: 600;
   padding: 8px 16px;
@@ -185,6 +188,7 @@
 .br-header .menu .item {
   background: #ffffff;
   border: 0;
+  color: #555555;
   display: block;
   padding: 8px 16px;
   position: relative;
@@ -253,11 +257,7 @@
   border-top: 1px solid #ffcd07;
   margin: 8px 0 0;
   right: 0;
-}
-
-.br-header .language .items .title {
-  border-bottom: 1px solid #cccccc;
-  font-size: 14px;
+  top: 100%;
 }
 
 @media (min-width: 998px) {
@@ -518,9 +518,218 @@
   z-index: 1;
 }
 
+@media (min-width: 998px) {
+  .br-header.is-system .search {
+    height: 55px;
+    margin-right: 100px;
+  }
+  .br-header.is-system .search .field {
+    background: #ededed;
+    height: 55px;
+  }
+  .br-header.is-system .search .field input {
+    display: block;
+  }
+  .br-header.is-system .search .close {
+    position: static;
+  }
+  .br-header.is-system .search.is-active {
+    margin-left: 0;
+  }
+}
+
 .br-header .user-bar {
   align-items: center;
   display: none;
+  margin-top: 8px;
+}
+
+.br-header .user-bar .configs .trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #1351b4;
+  display: inline-flex;
+}
+
+.br-header .user-bar .configs .trigger .arrow {
+  background: #ededed;
+  border-radius: 50%;
+  font-size: 11px;
+  height: 17px;
+  width: 17px;
+}
+
+.br-header .user-bar .configs .items {
+  right: 0;
+}
+
+.br-header .user-bar .configs .items .name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.br-header .user-bar .configs .items .email {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.br-header .user-bar .configs .items.is-active::after {
+  border: solid transparent;
+  border-bottom-color: #333333;
+  border-width: 12px;
+  bottom: 100%;
+  content: "";
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 16px;
+  width: 0;
+}
+
+.br-header .user-bar .avatar {
+  display: inline-flex;
+  font-size: 40px;
+  position: relative;
+}
+
+.br-header .user-bar .avatar img {
+  max-width: 40px;
+}
+
+.br-header .user-bar .avatar + .badge {
+  background: #e60000;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  height: 18px;
+  left: -8px;
+  margin-right: -8px;
+  position: relative;
+  top: -12px;
+  width: 18px;
+}
+
+.br-header .user-bar .bookmarks {
+  margin-left: 12px;
+}
+
+.br-header .user-bar .bookmarks .trigger {
+  align-items: center;
+  color: #1351b4;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+  background: transparent;
+  border: 0;
+  position: relative;
+}
+
+.br-header .user-bar .bookmarks .trigger:hover {
+  color: #2670e8;
+  z-index: 1;
+}
+
+.br-header .user-bar .bookmarks .trigger:hover::after {
+  background: #dbe8fb;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 32px;
+  position: absolute;
+  width: 32px;
+  z-index: -1;
+}
+
+.br-header .user-bar .bookmarks .items {
+  margin: 15px -12px 0 0;
+  right: 0;
+}
+
+.br-header .user-bar .bookmarks .items.is-active::after {
+  border: solid transparent;
+  border-bottom-color: #333333;
+  border-width: 12px;
+  bottom: 100%;
+  content: "";
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 16px;
+  width: 0;
+}
+
+.br-header .user-bar .bookmarks .list {
+  padding: 0 16px;
+  columns: 5;
+}
+
+.br-header .user-bar .bookmarks .list .item {
+  padding: 0;
+}
+
+.br-header .user-bar .bookmarks .bookmark {
+  display: inline-block;
+  margin: 16px 0 0;
+}
+
+.br-header .user-bar .bookmarks .bookmark:hover {
+  text-decoration: none;
+}
+
+.br-header .user-bar .bookmarks .bookmark:hover .brand {
+  border-color: #2670e8;
+}
+
+.br-header .user-bar .bookmarks .bookmark:hover .name {
+  color: #2670e8;
+}
+
+.br-header .user-bar .bookmarks .brand {
+  background: #f8f8f8;
+  border: 1px solid #cccccc;
+  height: 42px;
+  width: 58px;
+}
+
+.br-header .user-bar .bookmarks .name {
+  color: #555555;
+  display: block;
+  font-size: 9px;
+  font-weight: 500;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.br-header .user-bar .bookmarks .more {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 16px 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.br-header .user-bar .logout {
+  align-items: center;
+  background: #1351b4;
+  border: 1px solid #1351b4;
+  border-radius: 100px;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  height: 32px;
+  margin-left: 16px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.br-header .user-bar .logout:hover {
+  background: #2670e8;
+  border-color: #2670e8;
 }
 
 @media (min-width: 998px) {
@@ -568,6 +777,12 @@
 .br-header.is-system .menu-hamburger {
   height: 45px;
   top: 65px;
+}
+
+@media (min-width: 998px) {
+  .br-header.is-system .menu-hamburger {
+    top: auto;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */
