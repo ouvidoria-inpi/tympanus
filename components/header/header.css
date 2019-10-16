@@ -663,8 +663,8 @@
 }
 
 .br-header .user-bar .bookmarks .list {
-  padding: 0 16px;
   columns: 5;
+  padding: 0 16px;
 }
 
 .br-header .user-bar .bookmarks .list .item {
