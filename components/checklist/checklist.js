@@ -1,29 +1,47 @@
-function toggleActiveField(element, className) {
-  var fields = []
+class BRChecklist {
 
-  while (!element.classList.contains(className)) {
-    element = element.parentNode
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    this._setBehavior();
   }
 
-  fields = element.getElementsByClassName('field')
-
-  for (var i = 0; i < fields.length; i++) {
-    fields[i].querySelectorAll("input[type='radio']").forEach(function(radio) {
-      if (radio.checked) {
-        fields[i].classList.add('is-active')
-      } else {
-        fields[i].classList.remove('is-active')
-      }
-    })
-
-    fields[i]
-      .querySelectorAll("input[type='checkbox']")
-      .forEach(function(checkbox) {
-        if (checkbox.checked) {
-          fields[i].classList.add('is-active')
-        } else {
-          fields[i].classList.remove('is-active')
-        }
+  _setBehavior() {
+    for (let inputRadio of this.component.querySelectorAll('input[type="radio"]')) {
+      inputRadio.addEventListener('click', (event) => {
+        this._switchSole(event);
+      });
+    }
+    for (let inputCheckbox of this.component.querySelectorAll('input[type="checkbox"]')) {
+      inputCheckbox.addEventListener('click', (event) => {
+        this._switchShared(event);
       })
+    }
+  }
+
+  _switchSole(event) {
+    for (let field of this.component.querySelectorAll('.field')) {
+      if (field === event.currentTarget.parentNode.parentNode) {
+        field.classList.add('is-active');
+      } else {
+        field.classList.remove('is-active');
+      }
+    }
+  }
+
+  _switchShared(event) {
+    for (let field of this.component.querySelectorAll('.field')) {
+      if (field === event.currentTarget.parentNode.parentNode) {
+        field.classList.toggle('is-active');
+      }
+    }
   }
 }
+
+let checklistList = [];
+
+window.onload = (function() {
+  for (let brChecklist of window.document.querySelectorAll('.br-checklist')) {
+    checklistList.push(new BRChecklist('br-checklist', brChecklist));
+  }
+})();
