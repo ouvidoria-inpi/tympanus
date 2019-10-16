@@ -5,6 +5,16 @@
   background: #ffffff;
 }
 
+.br-header .break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.br-header .break-column {
+  flex-basis: 100%;
+  width: 0;
+}
+
 .br-header .bar {
   align-items: center;
   display: flex;
@@ -16,6 +26,12 @@
 @media (min-width: 576px) {
   .br-header .bar {
     align-items: flex-start;
+  }
+}
+
+@media (min-width: 998px) {
+  .br-header .bar {
+    padding: 12px 0;
   }
 }
 
@@ -138,6 +154,15 @@
   font-size: 12px;
 }
 
+@media (min-width: 998px) {
+  .br-header.is-system .logo {
+    flex: 1;
+  }
+  .br-header.is-system .logo .name {
+    font-size: 24px;
+  }
+}
+
 .br-header .menu {
   position: relative;
 }
@@ -202,7 +227,7 @@
 @media (min-width: 998px) {
   .br-header .quicklinks {
     display: inline-flex;
-    margin-top: 2px;
+    margin-top: 4px;
     position: relative;
   }
 }
@@ -239,7 +264,7 @@
   .br-header .language {
     display: inline-flex;
     margin-left: 16px;
-    margin-top: 2px;
+    margin-top: 4px;
     position: relative;
   }
 }
@@ -286,7 +311,7 @@
     font-weight: 500;
   }
   .br-header .login span:not(.icon) {
-    margin-top: 2px;
+    margin-top: 4px;
   }
 }
 
@@ -324,8 +349,20 @@
 
 @media (min-width: 998px) {
   .br-header .contrast {
-    display: inline;
+    display: inline-flex;
   }
+}
+
+.br-header.is-system .contrast {
+  margin-left: 24px;
+}
+
+.br-header.is-system .contrast span:not(.icon) {
+  margin-top: 4px;
+}
+
+.br-header.is-system .contrast:hover span:not(.icon) {
+  text-decoration: underline;
 }
 
 .br-header .search {
@@ -446,7 +483,6 @@
     height: 55px;
     justify-content: flex-end;
     margin: 0;
-    width: 100%;
   }
   .br-header.is-site .search .field {
     align-items: center;
@@ -455,6 +491,9 @@
   }
   .br-header.is-site .search .field input {
     display: block;
+  }
+  .br-header.is-site .search.is-active {
+    flex: 1;
   }
   .br-header.is-site .search.is-active .field {
     box-shadow: 0 -4px 0 4px #ffffff;
@@ -480,7 +519,14 @@
 }
 
 .br-header .user-bar {
+  align-items: center;
   display: none;
+}
+
+@media (min-width: 998px) {
+  .br-header .user-bar {
+    display: inline-flex;
+  }
 }
 
 .br-header .menu-hamburger {

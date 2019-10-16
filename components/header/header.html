@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>button</title>
+  <title>header</title>
   <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
   <link rel="stylesheet" href="header.css">
   <!-- Ícones fontawesome -->
@@ -61,6 +61,8 @@
           <span class="icon"><i class="fas fa-adjust fa-lg"></i></span>
           <span class="sr-only">Alto contraste</span>
         </button>
+        <!-- Quebra de linha -->
+        <div class="break"></div>
         <!-- Busca geral -->
         <div class="search">
           <div class="field">
@@ -103,10 +105,12 @@
           <li><a href="">Acessibilidade</a></li>
         </ul>
         <!-- Altocontraste -->
-        <a href="" class="contrast" accesskey="6">
-          <i class="fas fa-adjust fa-lg"></i>
+        <button type="button" class="contrast" accesskey="6">
+          <span class="icon"><i class="fas fa-adjust fa-lg"></i></span>
           <span>Alto contraste</span>
-        </a>
+        </button>
+        <!-- Quebra de linha -->
+        <div class="break"></div>
         <!-- Busca geral -->
         <div class="search">
           <div class="field">
@@ -125,7 +129,7 @@
         <!-- Barra do usuário -->
         <div class="user-bar">
           <!-- Configurações do usuário -->
-          <div class="configs dropdown">
+          <div class="configs menu">
             <button class="trigger" type="button">
               <!-- Avatar do usuário -->
               <span class="avatar">
@@ -139,7 +143,7 @@
                 <i class="fas fa-chevron-down"></i>
               </span>
             </button>
-            <div class="menu">
+            <div class="items">
               <!-- Informações do usuário -->
               <div class="title user">
                 <div class="name">Márcia Vinícius Tavares de Almeida</div>
@@ -156,11 +160,11 @@
             </div>
           </div>
           <!-- Sistemas favoritos do usuário -->
-          <div class="bookmarks dropdown">
+          <div class="bookmarks menu">
             <button class="trigger" type="button">
               <i class="fas fa-th-large"></i>
             </button>
-            <div class="menu">
+            <div class="items">
               <div class="title">Sistemas</div>
               <div class="list">
                 <div class="item">

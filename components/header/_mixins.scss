@@ -1,4 +1,6 @@
 @mixin header-component {
+  // Quebra de linha
+  @include line-break;
   // Sombra do cabeçalho
   @include header-shadow;
   // Barra de cabeçalho
@@ -28,6 +30,17 @@
   box-shadow: $header-shadow;
 }
 
+@mixin line-break {
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+  .break-column {
+    flex-basis: 100%;
+    width: 0;
+  }
+}
+
 @mixin header-bar {
   .bar {
     align-items: center;
@@ -40,6 +53,12 @@
   @include media-breakpoint-up(sm) {
     .bar {
       align-items: flex-start;
+    }
+  }
+  // Desktop
+  @include media-breakpoint-up(md) {
+    .bar {
+      padding: $spacing-2 0;
     }
   }
   // Versão de site
@@ -171,6 +190,15 @@
         font-size: $logo-description-size;
       }
     }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .logo {
+        flex: 1;
+        .name {
+          font-size: $logo-name-desktop;
+        }
+      }
+    }
   }
 }
 
@@ -193,7 +221,7 @@
   @include media-breakpoint-up(md) {
     .quicklinks {
       display: inline-flex;
-      margin-top: 2px;
+      margin-top: $spacing-half;
       position: relative;
     }
   }
@@ -231,7 +259,7 @@
     .language {
       display: inline-flex;
       margin-left: $spacing-3;
-      margin-top: 2px;
+      margin-top: $spacing-half;
       position: relative;
     }
   }
@@ -258,7 +286,7 @@
         display: inline;
         font-weight: 500;
         &:not(.icon) {
-          margin-top: 2px;
+          margin-top: $spacing-half;
         }
       }
     }
@@ -278,7 +306,25 @@
   // Desktop
   @include media-breakpoint-up(md) {
     .contrast {
-      display: inline;
+      display: inline-flex;
+    }
+  }
+  // Versão de sistema
+  &.is-system {
+    .contrast {
+      margin-left: $spacing-5;
+      span {
+        &:not(.icon) {
+          margin-top: $spacing-half;
+        }
+      }
+      &:hover {
+        span {
+          &:not(.icon) {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }
@@ -372,7 +418,6 @@
         height: $search-desktop-height;
         justify-content: flex-end;
         margin: 0;
-        width: 100%;
         // Caixa de busca
         .field {
           align-items: center;
@@ -384,6 +429,7 @@
         }
         // Busca ativa
         &.is-active {
+          flex: 1;
           // Caixa de busca
           .field {
             box-shadow: 0 (- $spacing-half) 0 $spacing-half $color-white;
@@ -419,7 +465,14 @@
 
 @mixin user-bar {
   .user-bar {
+    align-items: center;
     display: none;
+  }
+  // Desktop
+  @include media-breakpoint-up(md) {
+    .user-bar {
+      display: inline-flex;
+    }
   }
 }
 
