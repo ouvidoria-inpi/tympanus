@@ -5,14 +5,15 @@
   background: #ffffff;
 }
 
-.br-header .break {
-  flex-basis: 100%;
-  height: 0;
-}
-
-.br-header .break-column {
-  flex-basis: 100%;
-  width: 0;
+@media (min-width: 998px) {
+  .br-header .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+  .br-header .break-column {
+    flex-basis: 100%;
+    width: 0;
+  }
 }
 
 .br-header .bar {
@@ -169,6 +170,33 @@
   z-index: 1;
 }
 
+.br-header .menu .trigger {
+  align-items: baseline;
+  display: inline-flex;
+}
+
+.br-header .menu .trigger:hover .arrow::after {
+  background: #dbe8fb;
+}
+
+.br-header .menu .arrow {
+  align-items: center;
+  display: inline-flex;
+  font-size: 10px;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.br-header .menu .arrow::after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+  z-index: -1;
+}
+
 .br-header .menu .items {
   background: #ffffff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
@@ -241,16 +269,10 @@
 }
 
 .br-header .language .trigger {
-  align-items: baseline;
   background: transparent;
   border: 0;
   display: flex;
   font-weight: 500;
-}
-
-.br-header .language .trigger .arrow {
-  font-size: 10px;
-  margin-left: 8px;
 }
 
 .br-header .language .items {
@@ -548,16 +570,6 @@
   align-items: center;
   background: transparent;
   border: 0;
-  color: #1351b4;
-  display: inline-flex;
-}
-
-.br-header .user-bar .configs .trigger .arrow {
-  background: #ededed;
-  border-radius: 50%;
-  font-size: 11px;
-  height: 17px;
-  width: 17px;
 }
 
 .br-header .user-bar .configs .items {
