@@ -77,9 +77,8 @@
         }
         .content,
         .close {
-          background: scale-color($color, $lightness: 90%) ;
+          background: scale-color($color, $lightness: 90%);
         }
-        
         @if ($state == warning) {
           .icon {
             color: $color-gray-7;
