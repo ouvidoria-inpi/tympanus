@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>crud</title>
+  <title>Template para sistemas</title>
   <!-- Estilos ds-gov -->
   <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
   <link rel="stylesheet" href="../../assets/styles/dsgov-components.min.css">
@@ -14,273 +14,321 @@
   <script src="../../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
 </head>
 
-<body>
+<body class="template-system">
   <!-- Atalhos para conteúdo -->
   <ul id="skip-menu" class="skip-menu">
     <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
     <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
-    <li><a accesskey="3" href="#footer-brasil">Ir para o rodapé</a></li>
+    <li><a accesskey="3" href="#footer">Ir para o rodapé</a></li>
   </ul>
-  <!-- Barra de governo -->
-  <div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
-    <ul id="menu-barra-temp" style="list-style:none;">
-      <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED">
-        <a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do
-          Governo Brasileiro</a>
-      </li>
-    </ul>
-  </div>
   <!-- Cabeçalho da página -->
-  <header id="header" class="page-header">
-    <!-- Versão desktop -->
-    <div class="desktop-header d-none d-md-block">
-      <!-- Logo com busca e acessibilidade -->
-      <div class="bg-gray-2">
-        <div class="container-fluid">
-          <div class="row align-items-center py-2">
-            <div class="col">
-              <div class="row align-items-center">
-                <!-- Menu sanduiche -->
-                <div class="col-auto pr-0">
-                  <button class="menu-hamburger" type="button">
-                    <i class="fa fa-bars"></i>
-                  </button>
-                </div>
-                <!-- Logo -->
-                <div class="col-sm-5 col-md-6 col-lg-7 col-xl-8 logo">
-                  <a id="logo" href="">
-                    <span class="name">Logo/Nome</span>
-                  </a>
-                  <span class="description">Assinatura do Órgão</span>
-                </div>
-                <!-- Busca geral -->
-                <div class="col br-search py-half">
-                  <div class="br-input">
-                    <label for="search" class="sr-only">Autocomplete</label>
-                    <input id="search" type="text" placeholder="O que você procura?">
-                  </div>
-                  <div class="action">
-                    <button class="br-button is-primary is-circle" type="button">
-                      <i class="fas fa-search"></i>
-                    </button>
-                    <button class="clear-button" type="button">
-                      <i class="fas fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-4 col-xl-3">
-              <!-- Acessibilidade -->
-              <div class="accessibility float-right float-sm-none mt-1 mt-sm-0">
-                <a id="contrast" href="" accesskey="6">
-                  <span class="icon">
-                    <i class="fas fa-adjust fa-2x"></i>
-                  </span>
-                  <span class="content d-none d-sm-inline">
-                    <span class="">Alto Contraste</span>
-                  </span>
-                </a>
-                <a id="vlibras" href="http://www.vlibras.gov.br/">
-                  <span class="icon">
-                    <i class="fas fa-assistive-listening-systems fa-2x"></i>
-                  </span>
-                  <span class="content d-none d-sm-inline">
-                    <span class="">VLibras</span>
-                  </span>
-                </a>
-              </div>
-            </div>
+  <header id="header" class="page-header" data-type="system">
+    <!-- Sombra do topo -->
+    <div class="shadow-bottom">
+      <div class="container-fluid">
+        <!-- Barra principal -->
+        <div class="header-bar">
+          <!-- Logo -->
+          <div class="logo">
+            <span class="description">Assinatura do Órgão</span>
+            <a href="" id="logo" class="name">Nome do Órgão</a>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- Versão mobile -->
-    <div class="mobile-header d-md-none">
-      <!-- Barra navegação -->
-      <div class="color-gray-1 shadow-bottom">
-        <div class="container">
-          <div class="row mobile-subheader justify-content-end align-items-center">
-            <div class="col-auto mr-auto">
-              <!-- Abre o sidemenu -->
-              <button type="button" class="sidemenu-trigger">
-                <i class="fas fa-bars"></i>
+          <!-- Links rápidos -->
+          <div class="quicklinks">
+            <ul>
+              <li><a href="">Acesso à informação</a></li>
+              <li><a href="">Participe</a></li>
+              <li><a href="">Acessibilidade</a></li>
+            </ul>
+            <!-- Altocontraste -->
+            <a href="" id="contrast" class="contrast" accesskey="6">
+              <i class="fas fa-adjust fa-lg"></i>
+              <span class="d-none d-md-block">Alto contraste</span>
+            </a>
+          </div>
+          <!-- Busca geral -->
+          <div class="search">
+            <div class="field">
+              <label for="search" class="sr-only">Autocomplete</label>
+              <input id="search" type="search" placeholder="O que você procura?">
+              <button class="" type="button">
+                <i class="fas fa-search fa-lg"></i>
+                <span class="sr-only">buscar</span>
               </button>
             </div>
-            <div class="col-auto">
-              <!-- Acessibilidade -->
-              <div class="accessibility">
-                <button class="br-button is-secondary is-circle" type="button">
-                  <i class="fas fa-adjust"></i>
-                </button>
-                <button class="br-button is-secondary is-circle" type="button">
-                  <i class="fas fa-assistive-listening-systems"></i>
-                </button>
-                <button class="br-button is-primary is-circle" type="button">
-                  <i class="fas fa-search fa-lg"></i>
-                </button>
+            <button class="close" type="button">
+              <i class="fas fa-times fa-lg"></i>
+              <span class="sr-only">fechar a busca</span>
+            </button>
+          </div>
+          <!-- Barra do usuário -->
+          <div class="user-bar">
+            <!-- Configurações do usuário -->
+            <div class="configs dropdown">
+              <button class="trigger" type="button">
+                <!-- Avatar do usuário -->
+                <div class="avatar">
+                  <img src="../../assets/images/avatar.png" alt="Avatar">
+                  <!-- <i class="fas fa-user-circle"></i> -->
+                </div>
+                <!-- Notificações -->
+                <span class="badge">5</span>
+                <!-- Seta para abrir menu -->
+                <div class="arrow">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </button>
+              <div class="menu">
+                <!-- Informações do usuário -->
+                <div class="title user">
+                  <div class="name">Márcia Vinícius Tavares de Almeida</div>
+                  <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
+                </div>
+                <!-- Lista de configurações -->
+                <span class="title">
+                  <i class="fas fa-cog"></i>
+                  Configuração/Perfil
+                </span>
+                <a href="" class="item">Configuração 01</a>
+                <a href="" class="item">Configuração 02</a>
+                <a href="" class="item">Configuração 03</a>
               </div>
             </div>
+            <!-- Sistemas favoritos do usuário -->
+            <div class="bookmarks dropdown">
+              <button class="trigger" type="button">
+                <i class="fas fa-th-large"></i>
+              </button>
+              <div class="menu">
+                <div class="title">Sistemas</div>
+                <div class="list">
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 01</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 02</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 03</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 04</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 05</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 06</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 07</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 08</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 09</div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="" class="bookmark">
+                      <div class="brand"></div>
+                      <div class="name">Sistema 10</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="more">
+                  <a href="">Mais</a>
+                </div>
+              </div>
+            </div>
+            <!-- Logout -->
+            <button class="logout" type="button">Sair</button>
           </div>
-        </div>
-      </div>
-      <!-- Busca mobile -->
-      <div class="br-search d-none">
-        <div class="br-input">
-          <label for="search" class="sr-only">Autocomplete</label>
-          <input id="search" type="text" placeholder="O que você procura?">
-        </div>
-        <div class="action">
-          <button class="br-button is-primary is-circle" type="button">
-            <i class="fas fa-search"></i>
+          <!-- Menu sanduiche -->
+          <button class="menu-hamburger" type="button">
+            <i class="fa fa-bars"></i>
           </button>
         </div>
       </div>
-      <!-- Canvas com opacidade -->
-      <div class="canvas d-none"></div>
-      <!-- Menu -->
-      <div class="sidemenu d-none">
-        <div class="container-fluid wrapper">
-          <!-- Nome do sistema e avatar -->
-          <div class="row align-items-center">
-            <div class="col">
+    </div>
+  </header>
+  <!-- Wrapper principal -->
+  <div class="page-wrapper">
+    <!-- Menu de navegação -->
+    <nav id="navigation" class="navigation" data-type="system" data-level="0">
+      <div class="wrapper">
+        <div class="overflow-auto">
+          <div class="container">
+            <!-- Logo e avatar -->
+            <div class="header-bar">
+              <!-- Avatar do usuário -->
+              <div class="nav-avatar">
+                <!-- Configurações do usuário -->
+              </div>
+              <!-- Altocontraste -->
+              <div class="nav-contrast">
+              </div>
+              <!-- Sistemas favoritos do usuário -->
+              <div class="nav-bookmarks">
+              </div>
               <!-- Logo -->
-              <div class="logo">
-                <a id="logo" href="">
-                  <span class="name">Logo/Nome</span>
-                </a>
-                <span class="description">Assinatura do Órgão</span>
-              </div>
+              <div class="nav-logo"></div>
             </div>
-            <div class="col-auto">
-              <!-- Avatar -->
-              <div class="user">
-                <div class="avatar">
-                  <div class="image">
-                    <img src="../../assets/images/avatar.png" alt="Avatar">
-                  </div>
-                  <span class="badge">5</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Nome/cargo e botão do usuário -->
-          <div class="row justify-content-between mb-3 mt-6">
-            <div class="col">
-              <div class="user">
-                <div class="info">
-                  <span class="name">Diana Nascimento</span>
-                  <span class="description">(Procuradora)</span>
-                </div>
-              </div>
-            </div>
-            <!-- Menu de configurações -->
-            <div class="col-auto">
-              <div class="user">
-                <div class="actions">
-                  <button class="trigger" type="button">
-                    <i class="fas fa-cog"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="overflow">
             <!-- Menu de navegação -->
-            <ul class="navigation">
-              <li class="item">
-                <a href="" class="link is-active">
-                  <span class="name">Menu 01</span>
-                </a>
-                <button class="trigger" type="button">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <ul class="subnav">
-                  <li class="item">
-                    <a href="" class="link">
-                      <span class="name">Submenu 01</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="" class="link is-active">
-                      <span class="name">Submenu 02</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="" class="link">
-                      <span class="name">Submenu 03</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="" class="link">
-                      <span class="name">Submenu 04</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="item">
-                <a href="" class="link">
-                  <span class="name">Menu 02</span>
-                </a>
-                <button class="trigger" type="button">
-                  <i class="fas fa-plus"></i>
-                </button>
-                <ul class="subnav d-none">
-                  <li class="item">
-                    <a href="" class="link">
-                      <span class="name">Submenu 01</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="" class="link is-active">
-                      <span class="name">Submenu 02</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="" class="link">
-                      <span class="name">Submenu 03</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="" class="link">
-                      <span class="name">Submenu 04</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="item">
-                <a href="" class="link">
-                  <span class="name">Menu 03</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="" class="link">
-                  <span class="name">Menu 04</span>
-                </a>
-              </li>
-            </ul>
-            <!-- Menu do usuário -->
-            <div class="user-menu d-none">
-              <div class="menu">
-                <span class="header">
-                  <i class="fas fa-cog text-primary mr-half"></i>
-                  Configuração / Perfil
-                </span>
-                <a class="item" href="">Configuração 01</a>
-                <a class="item" href="">Configuração 02</a>
-                <a class="item" href="">Configuração 03</a>
-              </div>
+            <div class="items">
+              <!-- Navegação local -->
+              <ul class="local" data-level="0">
+                <li class="item">
+                  <button type="button">Item de nível 1</button>
+                  <ul class="submenu level-1" data-level="1">
+                    <li class="item">
+                      <button type="button">Item de nível 2.1</button>
+                      <ul class="submenu level-2" data-level="2">
+                        <li class="item"><a href="">Item de nível 3.1</a></li>
+                        <li class="item"><a href="">Item de nível 3.1</a></li>
+                        <li class="item"><a href="">Item de nível 3.1</a></li>
+                      </ul>
+                    </li>
+                    <li class="item">
+                      <button type="button">Item de nível 2.2</button>
+                      <ul class="submenu level-2" data-level="2">
+                        <li class="item"><a href="">Item de nível 3.2</a></li>
+                        <li class="item"><a href="">Item de nível 3.2</a></li>
+                        <li class="item"><a href="">Item de nível 3.2</a></li>
+                      </ul>
+                    </li>
+                    <li class="item">
+                      <button type="button">Item de nível 2.3</button>
+                      <ul class="submenu level-2" data-level="2">
+                        <li class="item"><a href="">Item de nível 3.3</a></li>
+                        <li class="item"><a href="">Item de nível 3.3</a></li>
+                        <li class="item"><a href="">Item de nível 3.3</a></li>
+                      </ul>
+                    </li>
+                    <li class="item">
+                      <button type="button">Item de nível 2.4</button>
+                      <ul class="submenu level-2" data-level="2">
+                        <li class="item"><a href="">Item de nível 3.4</a></li>
+                        <li class="item"><a href="">Item de nível 3.4</a></li>
+                        <li class="item"><a href="">Item de nível 3.4</a></li>
+                      </ul>
+                    </li>
+                    <li class="item">
+                      <button type="button">Item de nível 2.5</button>
+                      <ul class="submenu level-2" data-level="2">
+                        <li class="item"><a href="">Item de nível 3.5</a></li>
+                        <li class="item"><a href="">Item de nível 3.5</a></li>
+                        <li class="item"><a href="">Item de nível 3.5</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <button type="button">Conheça a Presidência</button>
+                  <ul class="submenu level-1" data-level="1">
+                    <li class="item"><a href="">Biografia do Presidente</a></li>
+                    <li class="item"><a href="">Ministros</a></li>
+                    <li class="item"><a href="">Principais Tropas</a></li>
+                    <li class="item"><a href="">Palácio e Residências</a></li>
+                    <li class="item"><a href="">Acervo</a></li>
+                    <li class="item"><a href="">Ritos e Solenidades</a></li>
+                    <li class="item"><a href="">Presentes recebidos pelo Presidênte da República</a></li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <button type="button">Vice-Presidência</button>
+                  <ul class="submenu level-1" data-level="1">
+                    <li class="item"><a href="">Agenda Vice-Presidente</a></li>
+                    <li class="item"><a href="">Agendas do Gabinete Pessoal da Vice-Presidência</a></li>
+                    <li class="item"><a href="">Biografia</a></li>
+                    <li class="item"><a href="">Atribuições</a></li>
+                    <li class="item"><a href="">Discursos e Pronunciamentos</a></li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <button type="button">Acesso à Informação</button>
+                  <ul class="submenu level-1" data-level="1">
+                    <li class="item"><a href="">Institucional</a></li>
+                    <li class="item"><a href="">Ações e Programas</a></li>
+                    <li class="item"><a href="">Dados abertos</a></li>
+                    <li class="item"><a href="">Auditorias</a></li>
+                    <li class="item"><a href="">Convênios</a></li>
+                    <li class="item"><a href="">Despesas</a></li>
+                    <li class="item"><a href="">Licitações e contratos</a></li>
+                    <li class="item"><a href="">Servidores</a></li>
+                    <li class="item"><a href="">Informações Classificadas</a></li>
+                    <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </div>
-          <!-- Botão sair e timer -->
-          <div class="row justify-content-between align-items-center mt-3">
-            <div class="col-auto">
-              <div class="user">
-                <div class="actions">
-                  <button class="br-button is-secondary py-1" type="button">Sair</button>
-                </div>
-              </div>
+        </div>
+        <div class="container">
+          <!-- Links rápidos -->
+          <div class="nav-quicklinks"></div>
+          <!-- Logout -->
+          <div class="nav-logout">
+            <div class="nav-timeout">
             </div>
+            <div class="nav-buttontimeout">
+            </div>
+          </div>
+          <!-- Links úteis e redes sociais -->
+          <div class="row">
+            <!-- Links úteis -->
+            <!-- Redes sociais -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="flex-fill">
+      <!-- Sombra do topo -->
+      <div class="">
+        <div class="container-fluid">
+          <!-- Barra de sistema -->
+          <div class="row system-bar">
+            <!-- Breadcrumbs -->
+            <div class="col">
+              <ul class="br-breadcrumb">
+                <li class="home">
+                  <a href="">
+                    <span class="sr-only">Página inicial</span>
+                    <i class="fas fa-home"></i>
+                  </a>
+                </li>
+                <li><a href="">Tela anterior</a></li>
+                <li class="is-active"><a href="">Tela atual</a></li>
+              </ul>
+            </div>
+            <!-- Timeout -->
             <div class="col-auto">
               <div class="timeout">
                 <i class="fas fa-clock"></i>
@@ -291,327 +339,162 @@
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- Wrapper -->
-  <div class="page-wrapper container-fluid">
-    <div class="row no-gutters">
-      <!-- Menu de navegação -->
-      <div class="col-md-3 d-none d-md-block" data-toggle="collapse">
-        <nav class="ds-menu-lateral py-1 py-md-3">
-          <div class="menu-item">
-            <button class="is-open" type="button" data-toggle="collapse">Título Item</button>
-            <ul class="submenu level-1">
-              <!-- Item sem filhos -->
-              <li class="menu-item">
-                <a>Texto link</a>
-              </li>
-              <li>
-                <!-- Item com filhos -->
-                <button class="is-open" type="button" data-toggle="collapse">Sub Título</button>
-                <ul class="submenu level-2">
-                  <li class="menu-item">
-                    <a> Texto link </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+      <hr class="my-0">
+      <!-- Conteúdo principal -->
+      <main id="content" class="page-content px-1 pl-sm-4 px-lg-5 py-4">
+        <!-- Mensagens de sistema -->
+        <aside>
+          <div class="br-alert is-danger">
+            <div class="icon">
+              <i class="fas fa-times-circle"></i>
+              <span class="sr-only">Erro!</span>
+            </div>
+            <div class="content">
+              <strong>Erro.</strong>
+              <span>Mensagem.</span>
+              <a href="">Exemplo de link</a>
+            </div>
+            <div class="close">
+              <button type="button">
+                <i class="fas fa-times"></i>
+                <span class="sr-only">Fechar</span>
+              </button>
+            </div>
           </div>
-        </nav>
-      </div>
-      <!-- Conteúdo central -->
-      <div class="col">
-        <!-- Barra de sistema -->
-        <div class="shadow-bottom d-none d-md-block">
-          <div class="container-fluid">
-            <div class="row page-subheader justify-content-end pl-sm-2">
-              <!-- Breadcrumbs -->
-              <div class="col">
-                <ul class="br-breadcrumb">
-                  <li class="home">
-                    <a href="">
-                      <span class="sr-only">Página inicial</span>
-                      <i class="fas fa-home"></i>
-                    </a>
-                  </li>
-                  <li><a href="">Tela anterior</a></li>
-                  <li class="is-active"><a href="">Tela atual</a></li>
-                </ul>
-              </div>
-              <!-- Timeout -->
-              <div class="col-auto">
-                <div class="timeout">
-                  <i class="fas fa-clock"></i>
-                  <span class="session">Sessão:</span>
-                  <span class="timer">00 min. e 00 seg</span>
+        </aside>
+        <!-- Cabeçalho do conteúdo principal -->
+        <h1 class="main-title">Título da Tela de Formulário</h1>
+        <p>Preencha o formulário com os dados solicitados e ative a sua conta no sistema enviaremos um código para
+          você. Como prefere recebê-lo?</p>
+        <div class="br-form">
+          <fieldset>
+            <legend>Identificação do Trabalhador</legend>
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="field">
+                  <div class="br-input">
+                    <label for="item-1">Nome</label>
+                    <input id="item-1" type="text" placeholder="Insira um texto">
+                  </div>
                 </div>
               </div>
-              <!-- Menu do usuário -->
-              <div class="col-auto">
-                <div class="user">
-                  <div class="avatar">
-                    <div class="image">
-                      <img src="../../assets/images/avatar.png" alt="Avatar">
-                    </div>
-                    <span class="badge">5</span>
-                  </div>
-                  <div class="actions">
-                    <!-- Configurações do usuário -->
-                    <div class="dropdown user-menu">
-                      <button class="trigger trigger-user-menu" type="button">
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
-                      <div class="menu">
-                        <span class="header">Configuração / Perfil</span>
-                        <a class="item" href="">Configuração 01</a>
-                        <a class="item" href="">Configuração 02</a>
-                        <a class="item" href="">Configuração 03</a>
-                      </div>
-                    </div>
-                    <!-- Sistemas do usuário -->
-                    <div class="dropdown systems-menu">
-                      <button class="trigger trigger-user-systems" type="button">
-                        <i class="fas fa-th-large"></i>
-                      </button>
-                      <div class="menu">
-                        <span class="header">Sistemas</span>
-                        <div class="item">
-                          <div class="systems">
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 01</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 02</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 03</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 04</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 05</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 06</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 07</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 08</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 09</div>
-                              </a>
-                            </div>
-                            <div class="system">
-                              <a href="">
-                                <div class="brand"></div>
-                                <div class="name">Sistema 10</div>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="more">
-                          <a href="">Mais</a>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Logout -->
-                    <button class="br-button is-secondary" type="button">Sair</button>
+              <div class="col-sm-4">
+                <div class="field">
+                  <div class="br-input">
+                    <label for="item-1">CPF</label>
+                    <input id="item-1" type="text" placeholder="Insira um texto">
                   </div>
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="field">
+                  <div class="br-input">
+                    <label for="item-textarea">NIS</label>
+                    <input id="item-1" type="text" placeholder="Insira um texto">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="field">
+                  <div class="br-select">
+                    <label for="simples">Sexo</label>
+                    <select id="simples">
+                      <option value="0">Selecione</option>
+                      <option value="opcao-1">opção 1</option>
+                      <option value="opcao-2">opção 2</option>
+                      <option value="opcao-3">opção 3</option>
+                      <option value="opcao-4">opção 4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="field">
+                  <div class="br-select">
+                    <label for="simples">Raça</label>
+                    <select id="simples">
+                      <option value="0">Selecione</option>
+                      <option value="opcao-1">opção 1</option>
+                      <option value="opcao-2">opção 2</option>
+                      <option value="opcao-3">opção 3</option>
+                      <option value="opcao-4">opção 4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="field">
+                  <div class="br-select">
+                    <label for="simples">Estado Civil</label>
+                    <select id="simples">
+                      <option value="0">Selecione</option>
+                      <option value="opcao-1">opção 1</option>
+                      <option value="opcao-2">opção 2</option>
+                      <option value="opcao-3">opção 3</option>
+                      <option value="opcao-4">opção 4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="field">
+                  <p class="label">Primeiro Emprego?</p>
+                  <div class="br-check">
+                    <input name="radio" type="radio" id="radio-padrao">
+                    <label for="radio-padrao">Sim</label>
+                  </div>
+                  <div class="br-check ml-7">
+                    <input name="radio" type="radio" id="radio-checado">
+                    <label for="radio-checado">Não</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="field">
+                  <div class="br-select">
+                    <label for="simples">Grau de Instrução</label>
+                    <select id="simples">
+                      <option value="0">Selecione</option>
+                      <option value="opcao-1">opção 1</option>
+                      <option value="opcao-2">opção 2</option>
+                      <option value="opcao-3">opção 3</option>
+                      <option value="opcao-4">opção 4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="field">
+                  <div class="br-input">
+                    <label for="item-1">Nome Social</label>
+                    <input id="item-1" type="text" placeholder="Insira um texto">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="actions justify-content-start">
+            <button class="br-button is-primary" type="button">Ação principal</button>
+            <button class="br-button is-secondary" type="button">Ação secundária grande</button>
+            <button class="br-button is-cancel" type="button">Cancelar</button>
           </div>
         </div>
-        <!-- Conteúdo principal -->
-        <main id="content" class="page-content px-1 pl-sm-4 px-lg-5 py-4">
-          <!-- Mensagens de sistema -->
-          <aside>
-            <div class="br-alert is-danger">
-              <div class="icon">
-                <i class="fas fa-times-circle"></i>
-                <span class="sr-only">Erro!</span>
-              </div>
-              <div class="content">
-                <strong>Erro.</strong>
-                <span>Mensagem.</span>
-                <a href="">Exemplo de link</a>
-              </div>
-              <div class="close">
-                <button type="button">
-                  <i class="fas fa-times"></i>
-                  <span class="sr-only">Fechar</span>
-                </button>
-              </div>
-            </div>
-          </aside>
-          <!-- Cabeçalho do conteúdo principal -->
-          <h1 class="main-title">Título da Tela de Formulário</h1>
-          <p>Preencha o formulário com os dados solicitados e ative a sua conta no sistema enviaremos um código para
-            você. Como prefere recebê-lo?</p>
-          <div class="br-form">
-            <fieldset>
-              <legend>Identificação do Trabalhador</legend>
-              <div class="row">
-                <div class="col-sm-8">
-                  <div class="field">
-                    <div class="br-input">
-                      <label for="item-1">Nome</label>
-                      <input id="item-1" type="text" placeholder="Insira um texto">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="field">
-                    <div class="br-input">
-                      <label for="item-1">CPF</label>
-                      <input id="item-1" type="text" placeholder="Insira um texto">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="field">
-                    <div class="br-input">
-                      <label for="item-textarea">NIS</label>
-                      <input id="item-1" type="text" placeholder="Insira um texto">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="field">
-                    <div class="br-select">
-                      <label for="simples">Sexo</label>
-                      <select id="simples">
-                        <option value="0">Selecione</option>
-                        <option value="opcao-1">opção 1</option>
-                        <option value="opcao-2">opção 2</option>
-                        <option value="opcao-3">opção 3</option>
-                        <option value="opcao-4">opção 4</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="field">
-                    <div class="br-select">
-                      <label for="simples">Raça</label>
-                      <select id="simples">
-                        <option value="0">Selecione</option>
-                        <option value="opcao-1">opção 1</option>
-                        <option value="opcao-2">opção 2</option>
-                        <option value="opcao-3">opção 3</option>
-                        <option value="opcao-4">opção 4</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="field">
-                    <div class="br-select">
-                      <label for="simples">Estado Civil</label>
-                      <select id="simples">
-                        <option value="0">Selecione</option>
-                        <option value="opcao-1">opção 1</option>
-                        <option value="opcao-2">opção 2</option>
-                        <option value="opcao-3">opção 3</option>
-                        <option value="opcao-4">opção 4</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="field">
-                    <p class="label">Primeiro Emprego?</p>
-                    <div class="br-check">
-                      <input name="radio" type="radio" id="radio-padrao">
-                      <label for="radio-padrao">Sim</label>
-                    </div>
-                    <div class="br-check ml-7">
-                      <input name="radio" type="radio" id="radio-checado">
-                      <label for="radio-checado">Não</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="field">
-                    <div class="br-select">
-                      <label for="simples">Grau de Instrução</label>
-                      <select id="simples">
-                        <option value="0">Selecione</option>
-                        <option value="opcao-1">opção 1</option>
-                        <option value="opcao-2">opção 2</option>
-                        <option value="opcao-3">opção 3</option>
-                        <option value="opcao-4">opção 4</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-8">
-                  <div class="field">
-                    <div class="br-input">
-                      <label for="item-1">Nome Social</label>
-                      <input id="item-1" type="text" placeholder="Insira um texto">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div class="actions">
-              <button class="br-button is-primary" type="button">Ação principal</button>
-              <button class="br-button is-secondary" type="button">Ação secundária grande</button>
-              <button class="br-button is-cancel" type="button">Cancelar</button>
-            </div>
-          </div>
-        </main>
-      </div>
+      </main>
     </div>
   </div>
   <!-- Rodapé de governo -->
-  <div class="page-footer mt-5 mt-sm-0 pb-3 text-right">
-    <div class="container-fluid">
+  <footer id="footer" class="page-footer">
+    <div class="chancela-serpro">
       <img src="../../assets/images/produto-serpro.png" alt="Produto Serpro">
     </div>
-  </div>
-  <!-- Script da barra de governo -->
-  <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>
-  <script src="../../components/select/select.js"></script>
-  <script src="../../components/alert/alert.js"></script>
-  <script src="../page/page.js"></script>
+  </footer>
+  <script src="crud.js"></script>
 </body>
 
 </html>

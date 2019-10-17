@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>radio button</title>
+  <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
+  <link rel="stylesheet" href="radio.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <p class="label">Selecione 1 opção</p>
+    <div class="br-check d-block d-sm-inline-block">
+      <input name="h-radio" type="radio" id="h-radio-padrao">
+      <label for="h-radio-padrao">Padrão</label>
+    </div>
+    <div class="br-check d-block mt-1 d-sm-inline-block ml-sm-7 mt-sm-0">
+      <input name="h-radio" type="radio" id="h-radio-checado" checked>
+      <label for="h-radio-checado">Checado</label>
+    </div>
+    <div class="br-check is-invalid d-block mt-1 d-sm-inline-block ml-sm-7 mt-sm-0">
+      <input name="h-radio" type="radio" id="h-radio-invalido">
+      <label for="h-radio-invalido">Inválido</label>
+    </div>
+    <div class="br-check is-valid d-block mt-1 d-sm-inline-block ml-sm-7 mt-sm-0">
+      <input name="h-radio" type="radio" id="h-radio-valido">
+      <label for="h-radio-valido">Válido</label>
+    </div>
+    <div class="br-check d-block mt-1 d-sm-inline-block ml-sm-7 mt-sm-0">
+      <input name="h-radio" type="radio" id="h-radio-disabled" disabled>
+      <label for="h-radio-disabled">Desativado</label>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-auto">
+        <p class="label">Marque 1 opção</p>
+        <div class="br-check d-block">
+          <input name="v-radio" type="radio" id="v-radio-padrao">
+          <label for="v-radio-padrao">Padrão</label>
+        </div>
+        <div class="br-check d-block mt-1">
+          <input name="v-radio" type="radio" id="v-radio-checado" checked>
+          <label for="v-radio-checado">Checado</label>
+        </div>
+        <div class="br-check d-block is-invalid mt-1">
+          <input name="v-radio" type="radio" id="v-radio-invalido">
+          <label for="v-radio-invalido">Inválido</label>
+        </div>
+        <div class="br-check d-block is-valid mt-1">
+          <input name="v-radio" type="radio" id="v-radio-valido">
+          <label for="v-radio-valido">Válido</label>
+        </div>
+        <div class="br-check d-block mt-1">
+          <input name="v-radio" type="radio" id="v-radio-disabled" disabled>
+          <label for="v-radio-disabled">Desativado</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

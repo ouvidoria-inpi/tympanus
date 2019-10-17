@@ -45,6 +45,9 @@
     input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
       @include check-checked($type, $side, $check-size, $color-danger);
       @include check-state($color-danger);
+      & + label {
+        color: $color-danger;
+      }
     }
     &.is-inverted {
       input[type="#{$type}"] { // sass-lint:disable-line force-attribute-nesting
