@@ -354,10 +354,46 @@ Exemplo de uso:
 ```html
 <button class="menu-hamburger" type="button">
   <i class="fa fa-bars fa-lg"></i>
+  <i class="fa fa-times fa-lg"></i>
   <span class="sr-only">Navegação</span>
 </button>
 ```
 
-A navegação é um componente a parte e não está inclusa dentro do Cabeçalho.
+**A navegação é um componente a parte e não está inclusa dentro do Cabeçalho**. Veja nos templates de Sites e Sistemas como usá-la em conjunto com o Cabeçalho.
 
-No template para sites a Navegação é incluída logo após o Cabeçalho. No template de sistemas a Navegação é carregada no lado esquerdo da tela.
+Quando a Navegação estiver ativa inclua `is-active` no menu hamburguer.
+
+Exemplo de uso:
+
+```html
+<button class="menu-hamburger is-active" type="button">
+  ...
+</button>
+```
+
+## Estados
+
+Alguns elementos do Cabeçalho assumem estados diferentes de acordo com a interação do usuário.
+
+- Idioma do site: mostra outras opções de idioma para o site
+- Busca: abre a caixa de entrada de dados (_smartphones_ e _tablets_), expande a busca (_desktop_)
+- Menus do usuário: abre listagem de opções
+- Menu hamburger: indica que a navegação está ativa
+
+## Regras especiais
+
+**Smartphones**
+
+Para sites a altura de 45px. Estão visíveis apenas a marca do governo, botão de login, busca e menu hamburguer. Os outros elementos irão aparecer dentro da Navegação.
+
+Para sistemas a altura é de 110px. Na parte superior estão visíveis o nome e descrição. A parte inferior é reservada ao menu hamburguer e a busca.
+
+**Tablets**
+
+Para sites a altura de 85px. Além dos itens mostrados nos _smartphones_ estão visíveis também o nome e descrição.
+
+Para sistemas não há diferenciação da versão de _smartphone_.
+
+**Desktop**
+
+O Cabeçalho é mostrado de forma completa.
