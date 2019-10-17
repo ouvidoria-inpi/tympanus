@@ -50,7 +50,7 @@
     }
     .content {
       a {
-        color: $link-color;
+        color: $color-gray-7;
         &:hover {
           color: $link-hover-color;
         }
@@ -101,7 +101,7 @@
         }
         @include media-breakpoint-up(sm) {
           .content a { // sass-lint:disable-line force-element-nesting
-            color: $link-color;
+            color: $color-gray-7;
             &:hover {
               color: $link-hover-color;
             }

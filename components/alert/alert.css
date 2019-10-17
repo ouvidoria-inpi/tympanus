@@ -60,7 +60,7 @@
     color: #ffffff;
   }
   .br-alert .content a {
-    color: #1351b4;
+    color: #333333;
   }
   .br-alert .content a:hover {
     color: #2670e8;
@@ -135,7 +135,7 @@
 
 @media (min-width: 576px) {
   .br-alert.is-warning .content a {
-    color: #1351b4;
+    color: #333333;
   }
   .br-alert.is-warning .content a:hover {
     color: #2670e8;
