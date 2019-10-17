@@ -507,6 +507,29 @@
     color: $color-primary;
     left: - $spacing-1;
     position: absolute;
+    [class*="fa-times"] {
+      display: none;
+    }
+    &.is-active {
+      [class*="fa-bars"] {
+        display: none;
+      }
+      [class*="fa-times"] {
+        display: block;
+      }
+      &::before {
+        border: solid transparent;
+        border-bottom-color: $color-warning;
+        border-width: $spacing-2;
+        bottom: - $spacing-1;
+        content: "";
+        display: block;
+        height: 0;
+        position: absolute;
+        transform: translate(0, 1px);
+        width: 0;
+      }
+    }
   }
   // Desktop
   @include media-breakpoint-up(md) {

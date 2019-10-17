@@ -780,6 +780,31 @@
   z-index: -1;
 }
 
+.br-header .menu-hamburger [class*="fa-times"] {
+  display: none;
+}
+
+.br-header .menu-hamburger.is-active [class*="fa-bars"] {
+  display: none;
+}
+
+.br-header .menu-hamburger.is-active [class*="fa-times"] {
+  display: block;
+}
+
+.br-header .menu-hamburger.is-active::before {
+  border: solid transparent;
+  border-bottom-color: #ffcd07;
+  border-width: 12px;
+  bottom: -8px;
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  transform: translate(0, 1px);
+  width: 0;
+}
+
 @media (min-width: 998px) {
   .br-header .menu-hamburger {
     bottom: 9px;
