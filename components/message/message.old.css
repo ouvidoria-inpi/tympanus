@@ -60,7 +60,7 @@
     color: #ffffff;
   }
   .br-alert .content a {
-    color: #1351b4;
+    color: #333333;
   }
   .br-alert .content a:hover {
     color: #2670e8;
@@ -81,8 +81,9 @@
   .br-alert.is-success .icon {
     background: #168821;
   }
-  .br-alert.is-success .close button {
-    color: #168821;
+  .br-alert.is-success .content,
+  .br-alert.is-success .close {
+    background: #e1fae3;
   }
 }
 
@@ -97,8 +98,9 @@
   .br-alert.is-danger .icon {
     background: #e60000;
   }
-  .br-alert.is-danger .close button {
-    color: #e60000;
+  .br-alert.is-danger .content,
+  .br-alert.is-danger .close {
+    background: #ffe3e3;
   }
 }
 
@@ -113,8 +115,9 @@
   .br-alert.is-warning .icon {
     background: #ffcd07;
   }
-  .br-alert.is-warning .close button {
-    color: #ffcd07;
+  .br-alert.is-warning .content,
+  .br-alert.is-warning .close {
+    background: #fffae6;
   }
   .br-alert.is-warning .icon {
     color: #333333;
@@ -132,7 +135,7 @@
 
 @media (min-width: 576px) {
   .br-alert.is-warning .content a {
-    color: #1351b4;
+    color: #333333;
   }
   .br-alert.is-warning .content a:hover {
     color: #2670e8;
@@ -150,8 +153,9 @@
   .br-alert.is-info .icon {
     background: #155bcb;
   }
-  .br-alert.is-info .close button {
-    color: #155bcb;
+  .br-alert.is-info .content,
+  .br-alert.is-info .close {
+    background: #e5eefc;
   }
 }
 
