@@ -569,6 +569,105 @@
 }
 
 /*!
+ * divider - 0.2.0 */
+.br-badge {
+  float: left;
+  height: 1.5em;
+  margin: 0 0.5em;
+  position: relative;
+  width: 1em;
+}
+.br-badge .count,
+.br-badge .status,
+.br-badge .symbol {
+  background-color: #168821;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  display: block;
+  position: absolute;
+}
+.br-badge .status {
+  height: 8px;
+  left: -4px;
+  top: 0;
+  width: 8px;
+}
+.br-badge .symbol {
+  border-width: 0.08em;
+  font-size: 0.8em;
+  height: 0.8em;
+  left: -0.4em;
+  padding: 0.05em;
+  top: 0;
+  width: 0.82em;
+}
+.br-badge .count {
+  border-radius: 1em;
+  border-width: 0.1em;
+  font-size: 0.4em;
+  font-weight: 600;
+  height: 1.3em;
+  left: -0.4em;
+  line-height: 1em;
+  min-width: 1.2em;
+  padding: 0 0.25em;
+  text-align: center;
+  top: 0;
+  width: auto;
+}
+.br-badge .count.top,
+.br-badge .status.top,
+.br-badge .symbol.top {
+  bottom: auto;
+  top: 0;
+}
+.br-badge .count.bottom,
+.br-badge .status.bottom,
+.br-badge .symbol.bottom {
+  bottom: 0;
+  top: auto;
+}
+.br-badge .count.success,
+.br-badge .status.success,
+.br-badge .symbol.success {
+  background-color: #168821;
+}
+.br-badge .count.warning,
+.br-badge .status.warning,
+.br-badge .symbol.warning {
+  background-color: #ffcd07;
+}
+.br-badge .count.info,
+.br-badge .status.info,
+.br-badge .symbol.info {
+  background-color: #155bcb;
+}
+.br-badge .count.danger,
+.br-badge .status.danger,
+.br-badge .symbol.danger {
+  background-color: #e60000;
+}
+.br-badge .symbol.left {
+  left: -0.4em;
+  right: auto;
+}
+.br-badge .symbol.right {
+  left: auto;
+  right: -0.2em;
+}
+.br-badge .count.left {
+  left: -0.5em;
+}
+.br-badge .count.right {
+  left: 100%;
+  margin-left: -0.5rem;
+}
+.br-badge .fas {
+  font-size: 1em;
+}
+
+/*!
  * check - 0.1.11 */
 .br-check {
   display: inline-block;

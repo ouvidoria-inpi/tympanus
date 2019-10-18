@@ -1,0 +1,93 @@
+@mixin badge($color: $bdg-text-color) {
+  float: left;
+  height: 1.5em;
+  margin: 0 0.5em;
+  position: relative;
+  width: 1em;
+  .count,
+  .status,
+  .symbol {
+    background-color: $color-success;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    color: $color-white;
+    display: block;
+    position: absolute;
+  }
+  .status {
+    height: 8px;
+    left: -4px;
+    top: 0;
+    width: 8px;
+  }
+  .symbol {
+    border-width: 0.08em;
+    font-size: 0.8em;
+    height: 0.8em;
+    left: -0.4em;
+    padding: 0.05em;
+    top: 0;
+    width: 0.82em;
+  }
+  .count {
+    border-radius: 1em;
+    border-width: 0.1em;
+    font-size: 0.4em;
+    font-weight: 600;
+    height: 1.3em;
+    left: -0.4em;
+    line-height: 1em;
+    min-width: 1.2em;
+    padding: 0 0.25em;
+    text-align: center;
+    top: 0;
+    width: auto;
+  }
+  .count,
+  .status,
+  .symbol {
+    &.top {
+      bottom: auto;
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+      top: auto;
+    }
+    &.success {
+      background-color: $color-success;
+    }
+    &.warning {
+      background-color: $color-warning;
+    }
+    &.info {
+      background-color: $color-info;
+    }
+    &.danger {
+      background-color: $color-danger;
+    }
+  }
+  .symbol {
+    &.left {
+      left: -0.4em;
+      right: auto;
+    }
+    &.right {
+      left: auto;
+      right: -0.2em;
+    }
+  }
+  .count {
+    &.left {
+      left: -0.5em;
+    }
+    &.right {
+      left: 100%;
+      margin-left: -0.5rem;
+    }
+  }
+
+  .fas {
+    font-size: 1em;
+  }
+}

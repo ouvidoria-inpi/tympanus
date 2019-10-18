@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Badge</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
+  <link rel="stylesheet" href="badge.css">
+</head>
+
+<body onload="updateSize();">
+  <div class="container-fluid">
+    <div class="row" style="font-size: 20px">
+      <div class="br-badge">
+        <i class="fas fa-user"></i>
+        <div class="status  top success"></div>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-user"></i>
+        <div class="status top warning"></div>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-user"></i>
+        <div class="status bottom info"></div>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-user"></i>
+        <div class="status bottom danger"></div>
+      </div>
+    </div>
+    <div class="row" style="font-size: 36px">
+      <div class="br-badge">
+        <i class="fas fa-file"></i>
+        <i class="fas fa-check symbol"></i>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-file"></i>
+        <i class="fas fa-check symbol left bottom warning"></i>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-file"></i>
+        <i class="fas fa-check symbol right bottom info"></i>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-file"></i>
+        <i class="fas fa-check symbol right top danger"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="br-badge" style="font-size: 18px">
+        <i class="fas fa-file"></i>
+        <i class="fas fa-check symbol"></i>
+      </div>
+      <div class="br-badge" style="font-size: 24px">
+        <i class="fas fa-plane-departure"></i>
+        <i class="fas fa-info symbol left bottom warning"></i>
+      </div>
+      <div class="br-badge" style="font-size: 32px">
+        <i class="fas fa-car"></i>
+        <i class="fas fa-euro-sign symbol right bottom info"></i>
+      </div>
+      <div class="br-badge" style="font-size: 48px">
+        <i class="fas fa-comment"></i>
+        <i class="fas fa-times symbol right top danger"></i>
+      </div>
+    </div>
+    <div class="row" style="font-size: 36px">
+      <div class="br-badge">
+        <i class="fas fa-envelope"></i>
+        <spam class="count danger"></spam>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-envelope"></i>
+        <spam class="count left bottom danger">5</spam>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-envelope"></i>
+        <spam class="count right bottom danger">5</spam>
+      </div>
+      <div class="br-badge">
+        <i class="fas fa-envelope"></i>
+        <spam class="count right top danger">999+</spam>
+      </div>
+    </div>
+  </div>
+  <script src="badge.js"></script>
+  <script src="assets/design-system/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+</body>
+
+</html>
