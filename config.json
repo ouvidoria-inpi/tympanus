@@ -217,34 +217,18 @@
       "label": "Cadastro de usuário"
     },
     {
-      "label": "Recuperação de Senha",
       "children": [
         {
-          "label": "1 - Esqueceu sua senha?",
-          "path": "templates/password-recovery/password-recovery"
+          "isPdf": true,
+          "label": "Template base",
+          "path": "templates/page/page"
         },
         {
-          "label": "2 - Verifique seu celular",
-          "path": "templates/password-recovery/password-recovery-1"
-        },
-        {
-          "label": "3 - Verifique seu celular - Validação",
-          "path": "templates/password-recovery/password-recovery-2"
-        },
-        {
-          "label": "4 - Precisa de Ajuda?",
-          "path": "templates/password-recovery/password-recovery-help"
-        },
-        {
-          "label": "5 - Altere sua Senha",
-          "path": "templates/password-recovery/password-recovery-change"
+          "label": "Exemplo de formulário",
+          "path": "templates/crud/crud"
         }
-
-      ]
-    },
-    {
-      "label": "Tela interna para Sistemas",
-      "path": "templates/page/page"
+      ],
+      "label": "Sistemas"
     },
     {
       "children": [
