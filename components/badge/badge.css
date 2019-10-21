@@ -38,13 +38,13 @@
 
 .br-badge .count {
   border-radius: 1em;
-  border-width: 0.1em;
+  border-width: 0.15em;
   font-size: 0.4em;
   font-weight: 600;
-  height: 1.3em;
+  height: 1.4em;
   left: -0.4em;
   line-height: 1em;
-  min-width: 1.2em;
+  min-width: 1.5em;
   padding: 0 0.25em;
   text-align: center;
   top: 0;
