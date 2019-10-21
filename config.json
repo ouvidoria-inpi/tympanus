@@ -220,17 +220,17 @@
       "children": [
         {
           "isPdf": true,
-          "label": "Opção 0",
+          "label": "Com Lista de Opções",
           "path": "templates/password-recovery/password-recovery"
         },
         {
           "isPdf": true,
-          "label": "Opção 1",
+          "label": "Pelo Celular",
           "path": "templates/password-recovery/password-recovery-1"
         },
         {
           "isPdf": true,
-          "label": "Opção 2",
+          "label": "Campo com Validação",
           "path": "templates/password-recovery/password-recovery-2"
         }
       ],
