@@ -220,6 +220,26 @@
       "children": [
         {
           "isPdf": true,
+          "label": "Opção 0",
+          "path": "templates/password-recovery/password-recovery"
+        },
+        {
+          "isPdf": true,
+          "label": "Opção 1",
+          "path": "templates/password-recovery/password-recovery-1"
+        },
+        {
+          "isPdf": true,
+          "label": "Opção 2",
+          "path": "templates/password-recovery/password-recovery-2"
+        }
+      ],
+      "label": "Recuparação de Senha"
+    },
+    {
+      "children": [
+        {
+          "isPdf": true,
           "label": "Template base",
           "path": "templates/page/page"
         },
