@@ -571,15 +571,13 @@
 /*!
  * divider - 0.2.0 */
 .br-badge {
-  float: left;
   height: 1.5em;
-  margin: 0 0.5em;
+  margin: 0 0.25em;
   position: relative;
   width: 1em;
 }
-.br-badge .count,
-.br-badge .status,
-.br-badge .symbol {
+.br-badge .icon,
+.br-badge .number {
   background-color: #168821;
   border: 1px solid #ffffff;
   border-radius: 50%;
@@ -587,84 +585,77 @@
   display: block;
   position: absolute;
 }
-.br-badge .status {
-  height: 8px;
-  left: -4px;
+.br-badge.is-status .icon,
+.br-badge .icon {
+  height: 0.4em;
+  left: -0.2em;
   top: 0;
-  width: 8px;
+  width: 0.4em;
 }
-.br-badge .symbol {
+.br-badge.is-symbol .icon {
   border-width: 0.08em;
-  font-size: 0.8em;
-  height: 0.8em;
+  font-size: 0.5em !important;
+  height: 1.2em;
   left: -0.4em;
-  padding: 0.05em;
+  line-height: 0.9em !important;
+  padding: 0.1em 0 0;
+  text-align: center;
   top: 0;
-  width: 0.82em;
+  width: 1.2em;
 }
-.br-badge .count {
+.br-badge.is-count .number {
   border-radius: 1em;
-  border-width: 0.15em;
-  font-size: 0.4em;
+  border-width: 0.1em;
+  font-size: 0.5em;
   font-weight: 600;
-  height: 1.4em;
   left: -0.4em;
   line-height: 1em;
-  min-width: 1.5em;
-  padding: 0 0.25em;
+  min-width: 1em;
+  padding: 0 0.3em 0.25em;
   text-align: center;
   top: 0;
   width: auto;
 }
-.br-badge .count.top,
-.br-badge .status.top,
-.br-badge .symbol.top {
+.br-badge.is-top .icon,
+.br-badge.is-top .number {
   bottom: auto;
   top: 0;
 }
-.br-badge .count.bottom,
-.br-badge .status.bottom,
-.br-badge .symbol.bottom {
+.br-badge.is-bottom .icon,
+.br-badge.is-bottom .number {
   bottom: 0;
   top: auto;
 }
-.br-badge .count.success,
-.br-badge .status.success,
-.br-badge .symbol.success {
+.br-badge.is-success .icon,
+.br-badge.is-success .number {
   background-color: #168821;
 }
-.br-badge .count.warning,
-.br-badge .status.warning,
-.br-badge .symbol.warning {
+.br-badge.is-warning .icon,
+.br-badge.is-warning .number {
   background-color: #ffcd07;
 }
-.br-badge .count.info,
-.br-badge .status.info,
-.br-badge .symbol.info {
+.br-badge.is-info .icon,
+.br-badge.is-info .number {
   background-color: #155bcb;
 }
-.br-badge .count.danger,
-.br-badge .status.danger,
-.br-badge .symbol.danger {
+.br-badge.is-danger .icon,
+.br-badge.is-danger .number {
   background-color: #e60000;
 }
-.br-badge .symbol.left {
+.br-badge.is-symbol.is-left .icon {
   left: -0.4em;
   right: auto;
 }
-.br-badge .symbol.right {
+.br-badge.is-symbol.is-right .icon {
   left: auto;
   right: -0.2em;
 }
-.br-badge .count.left {
+.br-badge.is-count.is-left .number {
   left: -0.5em;
 }
-.br-badge .count.right {
+.br-badge.is-count.is-right .number {
   left: 100%;
   margin-left: -0.5rem;
-}
-.br-badge .fas {
-  font-size: 1em;
 }
 
 /*!

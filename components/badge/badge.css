@@ -27,10 +27,10 @@
 .br-badge.is-symbol .icon {
   border-width: 0.08em;
   font-size: 0.5em !important;
-  line-height: 0.9em !important;
   height: 1.2em;
   left: -0.4em;
-  padding: 0.1em 0 0 0;
+  line-height: 0.9em !important;
+  padding: 0.1em 0 0;
   text-align: center;
   top: 0;
   width: 1.2em;
@@ -44,7 +44,7 @@
   left: -0.4em;
   line-height: 1em;
   min-width: 1em;
-  padding: 0 0.3em 0.25em 0.3em;
+  padding: 0 0.3em 0.25em;
   text-align: center;
   top: 0;
   width: auto;
