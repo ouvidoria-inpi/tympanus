@@ -9,6 +9,6 @@
 @import "mixins";
 
 // Estilos específicos
-.#{$prefix}alert {
+.#{$prefix}message {
   @include alert;
 }
