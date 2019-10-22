@@ -1,2 +1,88 @@
+.br-load.is-loading {
+  color: #555555;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.br-load.is-loading::before {
+  animation: spinAround 0.5s infinite linear;
+  border: 3px solid currentColor;
+  border-color: transparent transparent #1351b4 #1351b4 !important;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 2.8em;
+  margin-left: calc(50% - (3em / 2));
+  width: 2.8em;
+}
+
+.br-modal {
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 15px;
+  position: relative;
+  width: 28.8rem;
+}
+
+.br-modal h4 {
+  color: #555555;
+  margin: 0;
+  font-weight: bold;
+}
+
+.br-modal h4.is-inline {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.br-modal .br-modal-header,
+.br-modal .br-modal-body,
+.br-modal .br-modal-footer {
+  flex: 1;
+}
+
+.br-modal .br-modal-header {
+  padding-bottom: 12px;
+}
+
+.br-modal .br-modal-footer {
+  display: flex;
+}
+
+.br-modal .close {
+  background: transparent;
+  border: none;
+  color: #1351b4;
+  position: absolute;
+  right: 8px;
+  top: -19px;
+}
+
+.br-modal .close span {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  .br-modal.is-xsmall {
+    max-width: 200px;
+  }
+  .br-modal.is-small {
+    max-width: 300px;
+  }
+  .br-modal.is-medium {
+    max-width: 500px;
+  }
+  .br-modal.is-large {
+    min-width: 640px;
+    max-width: 800px;
+  }
+}
 
 /*# sourceMappingURL=modal.css.map */
