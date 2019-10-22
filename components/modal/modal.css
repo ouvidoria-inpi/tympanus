@@ -71,7 +71,8 @@
 
 @media (min-width: 576px) {
   .br-modal.is-xsmall {
-    max-width: 200px;
+    min-width: 220px;
+    max-width: 220px;
   }
   .br-modal.is-small {
     max-width: 300px;
@@ -81,7 +82,7 @@
   }
   .br-modal.is-large {
     min-width: 640px;
-    max-width: 800px;
+    max-width: 640px;
   }
 }
 

@@ -3017,7 +3017,8 @@
 
 @media (min-width: 576px) {
   .br-modal.is-xsmall {
-    max-width: 200px;
+    max-width: 220px;
+    min-width: 220px;
   }
 
   .br-modal.is-small {
@@ -3029,7 +3030,7 @@
   }
 
   .br-modal.is-large {
-    max-width: 800px;
+    max-width: 640px;
     min-width: 640px;
   }
 }
