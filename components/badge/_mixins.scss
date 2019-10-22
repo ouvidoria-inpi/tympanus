@@ -1,12 +1,10 @@
 @mixin badge($color: $bdg-text-color) {
-  float: left;
   height: 1.5em;
   margin: 0 0.25em;
   position: relative;
   width: 1em;
-  .count,
-  .status,
-  .symbol {
+  .icon,
+  .number {
     background-color: $color-success;
     border: 1px solid $color-white;
     border-radius: 50%;
@@ -14,80 +12,108 @@
     display: block;
     position: absolute;
   }
-  .status {
-    height: 8px;
-    left: -4px;
-    top: 0;
-    width: 8px;
-  }
-  .symbol {
-    border-width: 0.08em;
-    font-size: 0.8em;
-    height: 0.8em;
-    left: -0.4em;
-    padding: 0.05em;
-    top: 0;
-    width: 0.82em;
-  }
-  .count {
-    border-radius: 1em;
-    border-width: 0.15em;
-    font-size: 0.4em;
-    font-weight: 600;
-    height: 1.4em;
-    left: -0.4em;
-    line-height: 1em;
-    min-width: 1.em;
-    padding: 0 0.25em;
-    text-align: center;
-    top: 0;
-    width: auto;
-  }
-  .count,
-  .status,
-  .symbol {
-    &.top {
-      bottom: auto;
+  &.is-status,
+  & {
+    .icon {
+      height: 0.4em;
+      left: -0.2em;
       top: 0;
-    }
-    &.bottom {
-      bottom: 0;
-      top: auto;
-    }
-    &.success {
-      background-color: $color-success;
-    }
-    &.warning {
-      background-color: $color-warning;
-    }
-    &.info {
-      background-color: $color-info;
-    }
-    &.danger {
-      background-color: $color-danger;
+      width: 0.4em;
     }
   }
-  .symbol {
-    &.left {
+  &.is-symbol {
+    .icon {
+      border-width: 0.08em;
+      font-size: 0.5em !important;
+      line-height: 0.9em !important;
+      height: 1.2em;
       left: -0.4em;
-      right: auto;
-    }
-    &.right {
-      left: auto;
-      right: -0.2em;
+      padding: 0.1em 0 0 0;
+      text-align: center;
+      top: 0;
+      width: 1.2em;
     }
   }
-  .count {
-    &.left {
-      left: -0.5em;
-    }
-    &.right {
-      left: 100%;
-      margin-left: -0.5rem;
+  &.is-count {
+    .number {
+      border-radius: 1em;
+      border-width: 0.1em;
+      font-size: 0.5em;
+      font-weight: 600;
+      left: -0.4em;
+      line-height: 1em;
+      min-width: 1em;
+      padding: 0 0.3em 0.25em 0.3em;
+      text-align: center;
+      top: 0;
+      width: auto;
     }
   }
 
-  .fas {
-    font-size: 1em;
+  &.is-top {
+    .icon,
+    .number {
+      bottom: auto;
+      top: 0;
+    }
+  }
+  &.is-bottom {
+    .icon,
+    .number {
+      bottom: 0;
+      top: auto;
+    }
+  }
+  &.is-success {
+    .icon,
+    .number {
+      background-color: $bdg-bg-color-success;
+    }
+  }
+  &.is-warning {
+    .icon,
+    .number {
+      background-color: $bdg-bg-color-warning;
+    }
+  }
+  &.is-info {
+    .icon,
+    .number {
+      background-color: $bdg-bg-color-info;
+    }
+  }
+  &.is-danger {
+    .icon,
+    .number {
+      background-color: $bdg-bg-color-danger;
+    }
+  }
+
+  &.is-symbol {
+    &.is-left {
+      .icon {
+        left: -0.4em;
+        right: auto;
+      }
+    }
+    &.is-right {
+      .icon {
+        left: auto;
+        right: -0.2em;
+      }
+    }
+  }
+  &.is-count {
+    &.is-left {
+      .number {
+        left: -0.5em;
+      }
+    }
+    &.is-right {
+      .number {
+        left: 100%;
+        margin-left: -0.5rem;
+      }
+    }
   }
 }
