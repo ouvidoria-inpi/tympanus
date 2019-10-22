@@ -108,6 +108,10 @@
       "path": "components/breadcrumb/breadcrumb"
     },
     {
+      "label": "Cabeçalho",
+      "path": "components/header/header"
+    },
+    {
       "label": "Card",
       "path": "components/card/card"
     },
