@@ -7,6 +7,7 @@ class BRHeader {
     this.SEARCH_CLOSE_SELECTOR = '.search .close';
     this.CONFIGS_MENU_TRIGGER_SELECTOR = '.configs.menu button.trigger';
     this.BOOKMARKS_MENU_TRIGGER_SELECTOR = '.bookmarks.menu button.trigger';
+    this.MENU_HAMBURGER_TRIGGER_SELECTOR = '.menu-hamburger';
     this.TOGGLE_CLASS = 'is-active';
     this.name = name;
     this.component = component;
@@ -24,12 +25,14 @@ class BRHeader {
   _setSiteHeaderBehavior() {
     this._setLanguageMenuBehavior();
     this._setSearchMenuBehavior();
+    this._setMenuHamburgerBehavior();
   }
 
   _setSystemHeaderBehavior() {
     this._setConfigsMenuBehavior();
     this._setBookmarksMenuBehavior();
     this._setSearchMenuBehavior();
+    this._setMenuHamburgerBehavior();
   }
 
   _setLanguageMenuBehavior() {
@@ -65,6 +68,14 @@ class BRHeader {
     for (let bookmarksMenuTrigger of this.component.querySelectorAll(this.BOOKMARKS_MENU_TRIGGER_SELECTOR)) {
       bookmarksMenuTrigger.addEventListener('click', (event) => {
         event.currentTarget.parentNode.classList.toggle(this.TOGGLE_CLASS);
+      });
+    }
+  }
+
+  _setMenuHamburgerBehavior() {
+    for (let menuHamburger of this.component.querySelectorAll(this.MENU_HAMBURGER_TRIGGER_SELECTOR)) {
+      menuHamburger.addEventListener('click', (event) => {
+        event.currentTarget.classList.toggle(this.TOGGLE_CLASS);
       });
     }
   }
