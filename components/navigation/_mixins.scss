@@ -3,6 +3,7 @@
   @include logo;
   // Árvore de navegação
   @include tree;
+  // Logout
 }
 
 @mixin logo {
@@ -34,11 +35,26 @@
       padding: $spacing-1 $spacing-3;
       text-transform: uppercase;
     }
+    .trigger {
+      align-items: center;
+      background: transparent;
+      border: 0;
+      color: $color-gray-6;
+      display: inline-flex;
+      flex: 1;
+      justify-content: space-between;
+      padding: $spacing-1 $spacing-3;
+      &:hover {
+        background: $color-primary-darken-15;
+        color: $color-white;
+      }
+    }
     .item {
       display: flex;
       flex-flow: column;
     }
     .govbr {
+      box-shadow: inset 0 1px 0 $color-gray-3;
       font-weight: 900;
       letter-spacing: -1px;
     }
@@ -54,15 +70,8 @@
       list-style: none;
       padding: 0;
     }
-    a,
-    button {
-      align-items: center;
-      background: transparent;
-      border: 0;
+    a {
       color: $color-gray-6;
-      display: inline-flex;
-      flex: 1;
-      justify-content: space-between;
       padding: $spacing-1 $spacing-3;
       &:hover {
         background: $color-primary-darken-15;
@@ -72,6 +81,49 @@
     }
     &.is-hidden {
       display: none;
+    }
+    &.is-active {
+      // Esconder labels
+      .label,
+      .trigger {
+        display: none;
+      }
+      // Itens que não estiverem ativos não são mostrados
+      .item {
+        &:not(.is-active) {
+          display: none;
+        }
+      }
+      // Itens de nível 1 ficam visíveis
+      .level-1 {
+        display: block;
+        > .item {
+          display: flex;
+          > .trigger {
+            display: inline-flex;
+          }
+        }
+      }
+      // Itens de nível 2 ativos
+      &.level-2 {
+        .level-1 {
+          > .item {
+            display: none;
+            &.is-active {
+              display: flex;
+              > .trigger {
+                display: none;
+              }
+              .level-2 {
+                display: block;
+                > .item {
+                  display: flex;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

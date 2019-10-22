@@ -3064,33 +3064,7 @@
   padding: 8px 16px;
   text-transform: uppercase;
 }
-.br-navigation .tree .item {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column;
-  flex-flow: column;
-}
-.br-navigation .tree .govbr {
-  font-weight: 900;
-  letter-spacing: -1px;
-}
-.br-navigation .tree .arrow {
-  font-size: 12px;
-}
-.br-navigation .tree .level-1,
-.br-navigation .tree .level-2 {
-  display: none;
-}
-.br-navigation .tree ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.br-navigation .tree a,
-.br-navigation .tree button {
+.br-navigation .tree .trigger {
   align-items: center;
   background: transparent;
   border: 0;
@@ -3108,12 +3082,85 @@
   justify-content: space-between;
   padding: 8px 16px;
 }
-.br-navigation .tree a:hover,
-.br-navigation .tree button:hover {
+.br-navigation .tree .trigger:hover {
+  background: #0c326f;
+  color: #ffffff;
+}
+.br-navigation .tree .item {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+.br-navigation .tree .govbr {
+  -webkit-box-shadow: inset 0 1px 0 #cccccc;
+  box-shadow: inset 0 1px 0 #cccccc;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.br-navigation .tree .arrow {
+  font-size: 12px;
+}
+.br-navigation .tree .level-1,
+.br-navigation .tree .level-2 {
+  display: none;
+}
+.br-navigation .tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.br-navigation .tree a {
+  color: #555555;
+  padding: 8px 16px;
+}
+.br-navigation .tree a:hover {
   background: #0c326f;
   color: #ffffff;
   text-decoration: none;
 }
 .br-navigation .tree.is-hidden {
   display: none;
+}
+.br-navigation .tree.is-active .label,
+.br-navigation .tree.is-active .trigger {
+  display: none;
+}
+.br-navigation .tree.is-active .item:not(.is-active) {
+  display: none;
+}
+.br-navigation .tree.is-active .level-1 {
+  display: block;
+}
+.br-navigation .tree.is-active .level-1 > .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.br-navigation .tree.is-active .level-1 > .item > .trigger {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.br-navigation .tree.is-active.level-2 .level-1 > .item {
+  display: none;
+}
+.br-navigation .tree.is-active.level-2 .level-1 > .item.is-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.br-navigation .tree.is-active.level-2 .level-1 > .item.is-active > .trigger {
+  display: none;
+}
+.br-navigation .tree.is-active.level-2 .level-1 > .item.is-active .level-2 {
+  display: block;
+}
+.br-navigation .tree.is-active.level-2 .level-1 > .item.is-active .level-2 > .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
