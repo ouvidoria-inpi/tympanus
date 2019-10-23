@@ -232,6 +232,16 @@
           "isPdf": true,
           "label": "Campo com Validação",
           "path": "templates/password-recovery/password-recovery-2"
+        },
+        {
+          "isPdf": true,
+          "label": "Precisa de Ajuda?",
+          "path": "templates/password-recovery/password-recovery-help"
+        },
+        {
+          "isPdf": true,
+          "label": "Mudar Senha",
+          "path": "templates/password-recovery/password-recovery-change"
         }
       ],
       "label": "Recuparação de Senha"
