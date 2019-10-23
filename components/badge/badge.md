@@ -50,9 +50,9 @@ Ou
 Este componente é formado pelos seguintes elementos obrigatórios:
 
 - `br-badge`: container do componente;
-- `is-status`: para badge sinalização;
-- `is-symbol`: para badge sinalização de status com símbolo;
-- `is-count`: para badge contagem;
+- `is-status`: para definir badge sinalização;
+- `is-symbol`: para definir badge sinalização de status com símbolo;
+- `is-count`: para definir badge contagem;
 - `icon`: elemento interno do badge de sinalização que contem o icone a ser exibido;
 - `number`: elemento interno do badge contagem que contem o valor a ser exibido;
 
