@@ -172,7 +172,7 @@
     },
     {
       "isPdf": true,
-      "label": "Textarea",
+      "label": "TextArea",
       "path": "components/textarea/textarea"
     },
     {
