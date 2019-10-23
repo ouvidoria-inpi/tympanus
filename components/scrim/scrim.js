@@ -1,0 +1,1 @@
+document.getElementById('noclick').style.pointerEvents = 'none';
