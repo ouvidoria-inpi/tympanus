@@ -1,4 +1,7 @@
 @mixin textarea($color: $textarea-text-color) {
+  label {
+    @include font-input-label;
+  }
   textarea {
     @include textarea-input;
     @include textarea-placeholder;
@@ -41,24 +44,45 @@
 }
 
 @mixin textarea-states {
-  textarea:focus,
-  &.is-focus textarea {
-    @include textarea-focus($color-primary-lighten-15);
-  }
-  textarea:invalid,
-  &.is-invalid textarea {
-    @include textarea-focus($color-danger);
-  }
-  &.is-valid textarea {
-    @include textarea-focus($color-success);
-  }
-  textarea:disabled,
-  &.is-disabled textarea {
-    background: $textarea-bg-disabled;
-    &:hover,
+  textarea {
     &:focus {
-      box-shadow: none;
-      border-color: $textarea-border-color !important;
+      @include textarea-focus($color-primary-lighten-15);
+    }
+    &:invalid {
+      @include textarea-focus($color-danger);
+    }
+    &:disabled {
+      background: $textarea-bg-disabled;
+      &:hover,
+      &:focus {
+        border-color: $textarea-border-color !important;
+        box-shadow: none;
+      }
+    }
+  }
+  &.is-focus {
+    textarea {
+      @include textarea-focus($color-primary-lighten-15);
+    }
+  }
+  &.is-invalid {
+    textarea {
+      @include textarea-focus($color-danger);
+    }
+  }
+  &.is-valid {
+    textarea {
+      @include textarea-focus($color-success);
+    }
+  }
+  &.is-disabled {
+    textarea {
+      background: $textarea-bg-disabled;
+      &:hover,
+      &:focus {
+        border-color: $textarea-border-color !important;
+        box-shadow: none;
+      }
     }
   }
 }
