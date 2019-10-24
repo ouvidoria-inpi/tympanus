@@ -61,6 +61,12 @@
     .header {
       background: $color-gray-2;
     }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .header {
+        display: none;
+      }
+    }
   }
 }
 
@@ -80,6 +86,12 @@
     .footer {
       background: $color-gray-2;
     }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .footer {
+        display: none;
+      }
+    }
   }
 }
 
@@ -92,10 +104,26 @@
   }
   // Versão de site
   &.is-site {
-    .navigation {
-      .container {
-        min-height: 70vh;
-        overflow: auto;
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .navigation {
+        .container {
+          display: flex;
+          flex-flow: column;
+          min-height: 60vh;
+          overflow: auto;
+        }
+      }
+    }
+  }
+  // Versão de sistema
+  &.is-system {
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .navigation {
+        .container {
+          padding: 0;
+        }
       }
     }
   }
@@ -156,6 +184,7 @@
 @mixin tree {
   .tree {
     background: $itens-bg;
+    margin: 0 (-$spacing-1);
     padding: $spacing-1 0;
     .title {
       display: flex;
@@ -218,10 +247,6 @@
         text-decoration: none;
       }
     }
-    // Separador de menus
-    & + .tree {
-      box-shadow: inset 0 1px 0 $color-gray-3;
-    }
     // Oculto
     &.is-hidden {
       display: none;
@@ -274,9 +299,17 @@
   }
   // Versão de site
   &.is-site {
+    .tree {
+      // Separador de menus
+      & + .tree {
+        box-shadow: inset 0 1px 0 $color-gray-3;
+      }
+    }
     // Desktop
     @include media-breakpoint-up(md) {
       .tree {
+        border-right: 1px solid $color-gray-3;
+        flex: 1;
         width: 25%;
         .item {
           &:hover {
@@ -303,15 +336,19 @@
           }
         }
         .level-1 {
-          bottom: $spacing-1;
-          left: calc(25% + #{$spacing-1});
+          border-right: 1px solid $color-gray-3;
+          bottom: 0;
+          left: 25%;
+          padding: $spacing-1 0;
           position: absolute;
-          top: $spacing-1;
+          top: 0;
           width: 25%;
         }
         .level-2 {
+          border-right: 1px solid $color-gray-3;
           bottom: 0;
           left: 100%;
+          padding: $spacing-1 0;
           position: absolute;
           top: 0;
           width: 100%;
@@ -323,6 +360,78 @@
   &.is-system {
     .tree {
       padding: 0 0 $spacing-3;
+    }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .tree {
+        padding: $spacing-3 0;
+        .level-0 {
+          > .item {
+            box-shadow: inset 0 1px 0 $color-primary-pastel-2;
+            > .trigger {
+              color: $color-primary;
+              font-weight: 600;
+              &:hover {
+                background: transparent;
+                .arrow {
+                  background: $color-primary-pastel-1;
+                }
+              }
+              .arrow {
+                align-items: center;
+                border-radius: 50%;
+                display: inline-flex;
+                height: 24px;
+                justify-content: center;
+                margin-right: -$spacing-1;
+                transform: rotate(-90deg);
+                width: 24px;
+              }
+            }
+            &.is-active {
+              > .trigger {
+                .arrow {
+                  transform: rotate(90deg);
+                }
+              }
+              .level-1 {
+                display: none;
+              }
+            }
+          }
+        }
+        .level-1 {
+          display: block;
+          > .item {
+            &:first-child {
+              box-shadow: inset 0 1px 0 $color-primary-pastel-2;
+            }
+          }
+          .item {
+            position: relative;
+            &:hover {
+              > {
+                .trigger,
+                a {
+                  background: $color-primary-darken-15;
+                  color: $color-white;
+                }
+                ul {
+                  background: $color-gray-1;
+                  display: table;
+                  left: 100%;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+        .level-2 {
+          .item {
+            white-space: nowrap;
+          }
+        }
+      }
     }
   }
 }
@@ -440,7 +549,16 @@
   @include media-breakpoint-up(md) {
     .social-network {
       border-top: 0;
+      display: flex;
+      flex-flow: row wrap;
       margin-top: 0;
+      span {
+        display: block;
+        width: 100%;
+      }
+      a {
+        margin-right: $spacing-3;
+      }
     }
   }
 }
