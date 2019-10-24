@@ -1,6 +1,9 @@
 @mixin navigation-component {
+  @include visibility;
   // Cabeçalho
   @include header;
+  // Navegação
+  @include navigation;
   // Rodapé
   @include footer;
   // Menu dropdown
@@ -29,38 +32,71 @@
   @include user-logout;
   // Tempo restante de sessão
   @include timeout;
-  display: none;
+}
+
+@mixin visibility {
+  display: block;
   &.is-active {
     display: block;
   }
 }
 
 @mixin header {
-  .header-bar {
-    padding: $spacing-1 $spacing-3;
+  .header {
+    padding: $spacing-1 0;
   }
   // Versão de site
   &.is-site {
-    .header-bar {
+    .header {
       background: $color-gray-1;
+    }
+    @include media-breakpoint-up(md) {
+      .header {
+        display: none;
+      }
     }
   }
   // Versão de sistema
   &.is-system {
-    .header-bar {
+    .header {
       background: $color-gray-2;
     }
   }
 }
 
 @mixin footer {
-  .footer-bar {
-    padding: $spacing-1 $spacing-3;
+  .footer {
+    padding: $spacing-1 0;
+  }
+  // Desktop
+  @include media-breakpoint-up(md) {
+    .footer {
+      background: $color-gray-1;
+      padding: 0;
+    }
   }
   // Versão de sistema
   &.is-system {
-    .footer-bar {
+    .footer {
       background: $color-gray-2;
+    }
+  }
+}
+
+@mixin navigation {
+  .navigation {
+    background: $color-gray-2;
+    .container {
+      position: relative;
+    }
+  }
+  // Versão de site
+  &.is-site {
+    .navigation {
+      .container {
+        min-height: 70vh;
+        overflow: auto;
+      }
     }
   }
 }
@@ -81,6 +117,14 @@
     }
     &.is-active {
       display: flex;
+    }
+  }
+  // Versão tablet
+  @include media-breakpoint-up(sm) {
+    .logo {
+      &.is-active {
+        display: none;
+      }
     }
   }
 }
@@ -228,6 +272,53 @@
       }
     }
   }
+  // Versão de site
+  &.is-site {
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .tree {
+        width: 25%;
+        .item {
+          &:hover {
+            > {
+              .trigger,
+              a {
+                background: $color-primary-darken-15;
+                color: $color-white;
+              }
+              ul {
+                display: block;
+              }
+            }
+          }
+          .item {
+            &:hover {
+              > {
+                .trigger,
+                a {
+                  background: $color-primary;
+                }
+              }
+            }
+          }
+        }
+        .level-1 {
+          bottom: $spacing-1;
+          left: calc(25% + #{$spacing-1});
+          position: absolute;
+          top: $spacing-1;
+          width: 25%;
+        }
+        .level-2 {
+          bottom: 0;
+          left: 100%;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
   // Versão de sistema
   &.is-system {
     .tree {
@@ -276,13 +367,22 @@
       }
     }
   }
+  // Versão desktop
+  @include media-breakpoint-up(md) {
+    .language {
+      display: none;
+    }
+  }
 }
 
 @mixin links {
   .links {
-    display: inline-flex;
+    border-top: 1px solid $color-gray-2;
+    display: flex;
     flex-flow: column;
     font-size: 14px;
+    margin: $spacing-2 0 0;
+    padding: $spacing-3 0;
     position: relative;
     span {
       display: block;
@@ -299,11 +399,32 @@
       }
     }
   }
+  // Tablet
+  @include media-breakpoint-up(sm) {
+    .links {
+      display: block;
+      span {
+        width: 100%;
+      }
+      a {
+        margin-right: $spacing-6;
+      }
+    }
+  }
+  // Desktop
+  @include media-breakpoint-up(md) {
+    .links {
+      border-top: 0;
+      margin-top: 0;
+    }
+  }
 }
 
 @mixin social-network {
   .social-network {
+    border-top: 1px solid $color-gray-2;
     margin: 0;
+    padding: $spacing-3 0;
     text-transform: uppercase;
     span {
       display: block;
@@ -313,6 +434,13 @@
     }
     a {
       @include btn-icon;
+    }
+  }
+  // Desktop
+  @include media-breakpoint-up(md) {
+    .social-network {
+      border-top: 0;
+      margin-top: 0;
     }
   }
 }
@@ -433,6 +561,12 @@
     border: 0;
     display: inline-flex;
     position: relative;
+  }
+  // Versão desktop
+  @include media-breakpoint-up(md) {
+    .contrast {
+      display: none;
+    }
   }
 }
 
