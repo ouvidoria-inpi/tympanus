@@ -23,28 +23,100 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 15px;
+  padding: 20px 0 15px;
   position: relative;
   width: 28.8rem;
 }
 
 .br-modal h4 {
   color: #555555;
-  margin: 0;
+  display: -webkit-box;
   font-weight: bold;
+  line-height: 22.5px;
+  margin: 0;
+  max-height: 45px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  width: 80%;
 }
 
 .br-modal h4.is-inline {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 80%;
+  max-height: 22.5px;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+}
+
+.br-modal.scroll .br-modal-body {
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+
+.br-modal.scroll .br-modal-body textarea {
+  border: none;
+  font-size: 14px;
+  resize: none;
+  width: 100%;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.br-modal.scroll .br-modal-body textarea:focus, .br-modal.scroll .br-modal-body textarea:active {
+  outline: none;
+}
+
+.br-modal.scroll .br-modal-body textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.br-modal.scroll .br-modal-body textarea::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+.br-modal.scroll .br-modal-body textarea::-webkit-scrollbar-thumb {
+  background: #888888;
+}
+
+.br-modal.scroll .br-modal-body textarea::-webkit-scrollbar-thumb:hover {
+  background: #555555;
 }
 
 .br-modal .br-modal-header,
 .br-modal .br-modal-body,
 .br-modal .br-modal-footer {
   flex: 1;
+  padding: 0 20px;
+}
+
+.br-modal .br-modal-body {
+  display: flex;
+}
+
+.br-modal .br-modal-body textarea {
+  width: 100%;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.br-modal .br-modal-body textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.br-modal .br-modal-body textarea::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+.br-modal .br-modal-body textarea::-webkit-scrollbar-thumb {
+  background: #888888;
+}
+
+.br-modal .br-modal-body textarea::-webkit-scrollbar-thumb:hover {
+  background: #555555;
 }
 
 .br-modal .br-modal-header {
@@ -65,7 +137,7 @@
 }
 
 .br-modal .close span {
-  font-size: 35px;
+  font-size: 36px;
   font-weight: 500;
 }
 
@@ -75,9 +147,11 @@
     max-width: 220px;
   }
   .br-modal.is-small {
+    min-width: 300px;
     max-width: 300px;
   }
   .br-modal.is-medium {
+    min-width: 500px;
     max-width: 500px;
   }
   .br-modal.is-large {

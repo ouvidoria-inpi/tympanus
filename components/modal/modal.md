@@ -1,6 +1,6 @@
-# Botão
+# Modal
 
-Botões de ação. Aplicável em tags interativas, tais como `<a href="">`, `<button>`, `<input type="submit">` etc.
+Modais são diálogos flexíveis que podem conter informações críticas ou envolver decisões, tomadas pelo usuário, relacionadas a alguma tarefa.
 
 ## Dependências
 
@@ -9,169 +9,203 @@ Nenhuma dependência.
 ## Código básico
 
 ```html
-<button class="br-button" type="button">Botão</button>
+<div class="br-modal is-medium">
+    <div class="br-modal-dialog">
+        <div class="br-modal-content">
+            <div class="br-modal-header">
+                <h4 class="br-modal-title">Título</h4>
+            </div>
+            <div class="br-modal-body">
+                <p>Conteúdo</p>
+            </div>
+            <div class="br-modal-footer justify-content-end">
+                <button class="br-button is-secondary is-small" type="button">Ação 1</button>
+                <button class="br-button is-primary is-small" type="button">Ação 2</button>
+            </div>
+        </div>
+    </div>
+</div>
 ```
 
 ## Detalhamento
 
 Este componente é formado pelos seguintes elementos:
 
-- `br-button`: container do componente
+- `br-modal`: container do componente
+- `br-modal-dialog`: caixa de diálogo do modal (card).
+- `br-modal-header`: caixa de cabeçaçho do modal.
+- `br-modal-body`: caixa de conteúdo do modal.
+- `br-modal-footer`: caixa de rodapé/ações do modal.
 
-## Variações
+## Variações de tamanho
 
-Estão disponíveis 9 tipos de botões. Cada tipo é aplicado com o prefixo `is-`.
+Estão disponíveis 4 tamanhos de modais. Cada tamanho é aplicado com o prefixo `is-`:
 
-4 para uso comum:
+- Muito pequeno `is-xsmall`
+- Pequeno `is-small`
+- Medio `is-medium`
+- Grande `is-large`
 
-- Primário
-- Secundário
-- Terciário
-- Cancelar
+### Muito pequeno
 
-5 para uso específico:
-
-- Call to Action
-- Circular
-- Redes Sociais
-- Voltar ao Topo
-- Filtrar
-
-### Botão Primário
-
-Toda **ação principal** na tela deve usar o **Botão Primário**.
-
-NUNCA use mais de 1 Botão Primário, pois confunde o usuário em sua tomada de decisão.
+O modal **Muito pequeno** ocupa o mínimo/máximo de 3 colunas (220px)
 
 Exemplo de uso:
 
 ```html
-<button class="br-button is-primary" type="button">Ação</button>
+<div class="br-modal is-xsmall">
+    <div class="br-modal-dialog">
+        <div class="br-modal-content">
+            <div class="br-modal-header">
+                <h4 class="br-modal-title">Título</h4>
+            </div>
+            <div class="br-modal-body">
+                <p>Conteúdo</p>
+            </div>
+            <div class="br-modal-footer justify-content-end">
+                <button class="br-button is-secondary is-small" type="button">Ação 1</button>
+                <button class="br-button is-primary is-small" type="button">Ação 2</button>
+            </div>
+        </div>
+    </div>
+</div>
 ```
 
-### Botão Secundário
+### Modal pequeno
 
-Para **ações subjetivas** ou de **menor importância** use **Botão Secundário**. Este botão PODE ser usado quantas vezes forem necessárias na tela.
+O modal **Pequeno** ocupa o mínimo/máximo de 300px.
 
 Exemplo de uso:
 
 ```html
-<button class="br-button is-secondary" type="button">Ação</button>
+<div class="br-modal is-small">
+    <div class="br-modal-dialog">
+        <div class="br-modal-content">
+            <div class="br-modal-header">
+                <h4 class="br-modal-title">Título</h4>
+            </div>
+            <div class="br-modal-body">
+                <p>Conteúdo</p>
+            </div>
+            <div class="br-modal-footer justify-content-end">
+                <button class="br-button is-secondary is-small" type="button">Ação 1</button>
+                <button class="br-button is-primary is-small" type="button">Ação 2</button>
+            </div>
+        </div>
+    </div>
+</div>
 ```
 
-### Botão Terciário
+### Modal médio
 
-Nas situações em que o botão deverá se comportar como um **link** use o **Botão Terciário**.
+O modal **Médio** ocupa o mínimo/máximo de 500px.
 
 Exemplo de uso:
 
 ```html
-<button class="br-button is-tertiary" type="button">Ação</button>
+<div class="br-modal is-medium">
+    <div class="br-modal-dialog">
+        <div class="br-modal-content">
+            <div class="br-modal-header">
+                <h4 class="br-modal-title">Título</h4>
+            </div>
+            <div class="br-modal-body">
+                <p>Conteúdo</p>
+            </div>
+            <div class="br-modal-footer justify-content-end">
+                <button class="br-button is-secondary is-small" type="button">Ação 1</button>
+                <button class="br-button is-primary is-small" type="button">Ação 2</button>
+            </div>
+        </div>
+    </div>
+</div>
 ```
+### Modal largo
 
-### Botão Cancelar
-
-Para cancelar use o **Botão Cancelar**.
-
-Cor no botão sinaliza uma chamada à ação, por isso o **Botão Cancelar** possui a mesma cor de um texto padrão na tela. Além disso, é preciso passar a impressão de que o botão não fará alterações no sistema e será sua fuga da ação.
-
-[https://uxmovement.com/buttons/why-cancel-buttons-should-never-have-a-color/](https://uxmovement.com/buttons/why-cancel-buttons-should-never-have-a-color/)
+O modal **Largo** ocupa o mínimo/máximo 8 colunas(640px).
 
 Exemplo de uso:
 
 ```html
-<button class="br-button is-cancel" type="button">Cancelar</button>
+<div class="br-modal is-large">
+    <div class="br-modal-dialog">
+        <div class="br-modal-content">
+            <div class="br-modal-header">
+                <h4 class="br-modal-title">Título</h4>
+            </div>
+            <div class="br-modal-body">
+                <p>Conteúdo</p>
+            </div>
+            <div class="br-modal-footer justify-content-end">
+                <button class="br-button is-secondary is-small" type="button">Ação 1</button>
+                <button class="br-button is-primary is-small" type="button">Ação 2</button>
+            </div>
+        </div>
+    </div>
+</div>
 ```
+
+## Cabeçalho / Título
+
+O modal pode ter ou não um **Cabeçalho / Título** de acordo com a necessidade. Para remover o cabeçalho/título de um modal basta remover o elemento `br-modal-header` e seu conteúdo, que possui o seguinte código:
+
+```html
+<div class="br-modal-header">
+    <h4 class="br-modal-title">Título</h4>
+</div>
+```
+
+Exemplo de modal sem cabeçalho:
+
+```html
+<div class="br-modal is-large">
+    <div class="br-modal-dialog">
+        <div class="br-modal-content">
+            <div class="br-modal-body">
+                <p>Conteúdo</p>
+            </div>
+            <div class="br-modal-footer justify-content-end">
+                <button class="br-button is-secondary is-small" type="button">Ação 1</button>
+                <button class="br-button is-primary is-small" type="button">Ação 2</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+## Modal com título contraído
+
+O modal pode ter ou não um **Modal com título contraído** de acordo com a necessidade. Para que o modal tenha um título contraído deve ser aplicado a class `is-contracted`. Dessa forma os títulos do modal não poderão quebrar para um segunda linha. Títulos maiores que duas linhas serão contraídos com reticências, e ao passar o mouse sobre o texto contraído é revelado o texto completo pelo uso de um componente <a href="/componentes/tooltip">tooltip</a>.
+
+Exemplo de modal com título contraído:
+
+```html
+<div class="br-modal is-medium">
+    <div class="br-modal-dialog">
+        <div class="br-modal-content">
+            <div class="br-modal-header">
+                <h4 class="br-modal-title is-contracted">Título do modal de exemplo com uso de uma linha</h4>
+                <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="br-modal-body">
+                <p>Texto com uma linha Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="br-modal-footer justify-content-end">
+                <button class="br-button is-secondary is-small" type="button">Ação 1</button>
+                <button class="br-button is-primary is-small" type="button">Ação 2</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+
 
 ### Botão Call to Action
 
-Usado em situações que necessitem atenção especial. Ele é diferente do Botão Primário.
 
-Exemplo de uso:
-
-```html
-<button class="br-button is-call-to-action" type="button">Ação</button>
-```
-
-### Botão Circular
-
-Use apenas ícones nestes botões.
-
-O ícone pode ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome - `<i class="fas">`.
-
-Imagens serão redimencionadas automaticamente dentro do botão. Nos ícones do Fontawesome use **cor primária** ou **cor secundária**.
-
-Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](https://fontawesome.com/).
-
-Exemplo de uso:
-
-```html
-<button class="br-button is-circle" type="button">
-  <img class="icon" src="image.png" alt="Texto descritivo">
-</button>
-<button class="br-button is-circle is-primary" type="button">
-  <i class="fas fa-chevron-up"></i>
-</button>
-<button class="br-button is-circle is-secondary" type="button">
-  <i class="fas fa-chevron-down"></i>
-</button>
-```
-
-### Botão Redes Sociais
-
-Botões para login com redes sociais. A regra é a mesma dos botões circulares.
-
-A maioria dos ícones de redes sociais podem ser encontrados no Fontawesome. Para ícones mais complexos, como o do Google, use imagem.
-
-Exemplo de uso:
-
-```html
-<button class="br-button is-social-media is-facebook" type="button">
-  <i class="fab fa-facebook-f fa-lg"></i>
-</button>
-<button class="br-button is-social-media is-twitter" type="button">
-  <i class="fab fa-twitter fa-lg"></i>
-</button>
-<button class="br-button is-social-media" type="button">
-  <img src="imagem" alt="Texto descritivo">
-</button>
-```
-
-### Botão Voltar ao Topo
-
-Usado geralmente ao final de conteúdos para facilitar a rolagem de tela.
-
-Um script deve ser aplicado ao botão para realizar a ação.
-
-Exemplo de uso:
-
-```html
-<button class="br-button is-go-top" type="button" onclick="topFunction()">
-  Voltar ao topo
-  <span class="br-button is-circle is-primary">
-    <i class="fas fa-chevron-up"></i>
-  </span>
-</button>
-<script>
-  function topFunction() {
-    document.body.scrollTop = 0; // Safari
-    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
-  }
-</script>
-```
-
-### Botão Filtrar
-
-Usado especial para uso de filtros.
-
-Exemplo de uso:
-
-```html
-<button class="br-button is-filter" type="button">
-  Filtrar
-  <i class="fas fa-sliders-h"></i>
-</button>
-```
 
 ## Estados
 

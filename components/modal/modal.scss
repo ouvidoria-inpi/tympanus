@@ -27,25 +27,93 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 15px;
+  padding: 20px 0 15px;
   position: relative;
   width: 28.8rem;
   & h4 {
-    color: $font-portal-services-subtitle-color;
-    margin: 0;
+    color: $font-portal-services-subtitle-color;    
+    display: -webkit-box;
     font-weight: bold;
+    line-height: 22.5px;
+    margin: 0;
+    max-height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;      
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    width: 80%;
+
     &.is-inline {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: 80%;
+      max-height: 22.5px;
+      -webkit-line-clamp: 1; /* number of lines to show */
+    }
+  }
+
+  &.scroll {
+    .br-modal-body {
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+      & textarea {        
+        border: none;
+        font-size: $font-portal-small-news-sticker-font-size;
+        resize: none;
+        width: 100%;
+        &:focus,
+        &:active {
+          outline: none;
+        }
+        /* width */
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: $color-gray-2;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: $color-gray-5;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: $color-gray-6;
+        }
+      }
     }
   }
 
   & .br-modal-header,
   .br-modal-body,
-  .br-modal-footer {    
+  .br-modal-footer {
     flex: 1;
+    padding: 0 20px;
+  }
+
+  .br-modal-body {
+    display: flex;
+    & textarea {
+      width: 100%;
+      /* width */
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: $color-gray-2;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $color-gray-5;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: $color-gray-6;
+      }
+    }
   }
 
   & .br-modal-header {
@@ -53,7 +121,7 @@
   }
 
   & .br-modal-footer {
-      display: flex;
+    display: flex;
   }
 
   .close {
@@ -64,7 +132,7 @@
     right: 8px;
     top: -19px;
     & span {
-      font-size: 35px;
+      font-size: $font-title-registration-login-font-size;
       font-weight: 500;
     }
   }
@@ -73,13 +141,15 @@
 @media (min-width: 576px) {
   .br-modal {
     &.is-xsmall {
-      min-width: 220px;  
+      min-width: 220px;
       max-width: 220px;
     }
     &.is-small {
+      min-width: 300px;
       max-width: 300px;
     }
     &.is-medium {
+      min-width: 500px;
       max-width: 500px;
     }
     &.is-large {

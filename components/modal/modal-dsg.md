@@ -181,7 +181,7 @@ Deve ser centralizado na tela do dispositivo ou pode ser exibido próximo ao ele
 ### Rolagem
 Evite rolagem na modal. Quando necessária, o título é fixado na parte superior, com os botões fixados na parte inferior. Isso garante que o conteúdo selecionado permaneça visível ao lado do título e dos botões, mesmo na rolagem.
 
-Coloque um efeito de sobra na divisão entre o título e os botões sempre que existir conteúdo oculto.
+Coloque um efeito de sombra na divisão entre o título e os botões sempre que existir conteúdo oculto.
 
 ![Rolagem Inicial](../../assets/images/components_img/modal/rolagem_inicial.png)
 
