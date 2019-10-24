@@ -10,20 +10,43 @@
   <link rel="stylesheet" href="navigation.css">
   <!-- Ícones fontawesome -->
   <script src="../../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  <style>
+    #activator .fa-times {
+      display: none;
+    }
+
+    #activator.is-active .fa-bars {
+      display: none;
+    }
+
+    #activator.is-active .fa-times {
+      display: inline;
+    }
+  </style>
 </head>
 
 <body>
+  <button id="site" type="button">Menu site</button>
+  <button id="system" type="button">Menu sistema</button>
+
   <!-- Navegação de site -->
-  <nav class="br-navigation is-site">
+  <nav id="site-nav" class="br-navigation is-site">
     <div class="wrapper">
       <div class="container">
-        <!-- Logo -->
-        <div class="logo">
-          <span class="name">Secretaria da Receita do Brasil - RFB</span>
-          <span class="description">Ministério da Economia</span>
-        </div>
+        <header class="header-bar">
+          <!-- Logo -->
+          <div class="logo is-active">
+            <span class="name">Secretaria da Receita do Brasil - RFB</span>
+            <span class="description">Ministério da Economia</span>
+          </div>
+          <!-- Voltar navegação -->
+          <button type="button" class="go-back">
+            <span class="arrow"><i class="fas fa-chevron-left"></i></span>
+            <span class="node">Alterar Dados Cadastrais</span>
+          </button>
+        </header>
         <!-- Menu de navegação -->
-        <div class="tree is-active level-2">
+        <div class="tree">
           <ul class="level-0">
             <li class="item has-children is-active">
               <button class="trigger" type="button">
@@ -118,9 +141,9 @@
             </li>
           </ul>
         </div>
-        <div class="tree is-hidden">
+        <div class="tree">
           <ul class="level-0">
-            <li class="item has-children">
+            <li class="item has-children is-active">
               <button class="trigger govbr" type="button">
                 <span class="name">gov.br</span>
                 <span class="arrow"><i class="fas fa-chevron-right"></i></span>
@@ -142,180 +165,159 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="container">
-        <!-- Idioma -->
-        <div class="language menu">
-          <button class="trigger" type="button">
-            <span class="name">Português</span>
-            <span class="arrow"><i class="fas fa-chevron-down"></i></span>
-          </button>
-          <div class="items">
-            <div class="title">Idioma/Language</div>
-            <button class="item" type="button">
-              <span class="name">Português</span>
-            </button>
-            <button class="item" type="button">
-              <span class="name">English</span>
-            </button>
-            <button class="item" type="button">
-              <span class="name">Español</span>
-            </button>
+        <footer class="footer-bar">
+          <div class="row align-items-center no-gutters mx-0">
+            <div class="col-auto mr-3">
+              <!-- Idioma -->
+              <div class="language menu">
+                <button class="trigger" type="button">
+                  <span class="name">Português</span>
+                  <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="items">
+                  <div class="title">Idioma/Language</div>
+                  <button class="item" type="button">
+                    <span class="name">Português</span>
+                  </button>
+                  <button class="item" type="button">
+                    <span class="name">English</span>
+                  </button>
+                  <button class="item" type="button">
+                    <span class="name">Español</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <!-- Altocontraste -->
+              <button type="button" class="contrast" accesskey="6">
+                <i class="fas fa-adjust fa-lg"></i>
+              </button>
+            </div>
           </div>
-        </div>
-        <!-- Altocontraste -->
-        <button type="button" class="contrast" accesskey="6">
-          <span class="icon"><i class="fas fa-adjust fa-lg"></i></span>
-          <span class="sr-only">Alto contraste</span>
-        </button>
-        <!-- Links úteis -->
-        <div class="links">
-          <span>Links úteis</span>
-          <a href="">Acesso à Informação <i class="fas fa-external-link-alt"></i></a>
-          <a href="">Participe <i class="fas fa-external-link-alt"></i></a>
-          <a href="">Órgãos do Governo <i class="fas fa-external-link-alt"></i></a>
-          <a href="">Acessibilidade <i class="fas fa-external-link-alt"></i></a>
-        </div>
-        <!-- Redes sociais -->
-        <div class="social-network">
-          <span>Redes sociais</span>
-          <ul>
-            <li class="item">
-              <a href="https://www.twitter.com/twitter.com/govbr">
-                <i class="fab fa-twitter fa-lg"></i>
-                <span class="sr-only">Twitter</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="https://www.youtube.com/youtube.com/govbr">
-                <i class="fab fa-youtube fa-lg"></i>
-                <span class="sr-only">YouTube</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="https://www.facebook.com/facebook.com/govbr">
-                <i class="fab fa-facebook-f fa-lg"></i>
-                <span class="sr-only">Facebook</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="https://www.flickr.com/flickr/govbr">
-                <i class="fab fa-flickr fa-lg"></i>
-                <span class="sr-only">Flickr</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <hr class="my-1 bg-gray-2">
+          <!-- Links úteis -->
+          <div class="links">
+            <span>Links úteis</span>
+            <a href="">Acesso à Informação <i class="fas fa-external-link-alt"></i></a>
+            <a href="">Participe <i class="fas fa-external-link-alt"></i></a>
+            <a href="">Órgãos do Governo <i class="fas fa-external-link-alt"></i></a>
+            <a href="">Acessibilidade <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <hr class="my-1 bg-gray-2">
+          <!-- Redes sociais -->
+          <div class="social-network">
+            <span>Redes sociais</span>
+            <a href="https://www.twitter.com/twitter.com/govbr">
+              <i class="fab fa-twitter fa-lg"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+            <a href="https://www.youtube.com/youtube.com/govbr">
+              <i class="fab fa-youtube fa-lg"></i>
+              <span class="sr-only">YouTube</span>
+            </a>
+            <a href="https://www.facebook.com/facebook.com/govbr">
+              <i class="fab fa-facebook-f fa-lg"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <a href="https://www.flickr.com/flickr/govbr">
+              <i class="fab fa-flickr fa-lg"></i>
+              <span class="sr-only">Flickr</span>
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
   </nav>
 
-  <hr>
-
   <!-- Navegação de sistema -->
-  <nav class="br-navigation is-system">
+  <nav id="system-nav" class="br-navigation is-system">
     <div class="wrapper">
       <div class="overflow-auto">
         <div class="container">
-          <!-- Logo e avatar -->
-          <div class="header-bar">
+          <header class="header-bar">
             <!-- Configurações do usuário -->
-            <div class="configs menu">
-              <button class="trigger" type="button">
-                <!-- Avatar do usuário -->
-                <span class="avatar">
-                  <img src="../../assets/images/avatar.png" alt="Avatar">
-                  <!-- <i class="fas fa-user-circle"></i> -->
-                </span>
-                <!-- Notificações -->
-                <span class="badge">5</span>
-                <!-- Seta para abrir menu -->
-                <span class="arrow">
-                  <i class="fas fa-chevron-down"></i>
-                </span>
-              </button>
-              <div class="items">
-                <!-- Informações do usuário -->
-                <div class="title user">
-                  <div class="name">Márcia Vinícius Tavares de Almeida</div>
-                  <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
+            <div class="row align-items-center no-gutters mx-0">
+              <div class="col">
+                <!-- Configurações do usuário -->
+                <div class="configs menu is-active">
+                  <button class="trigger" type="button">
+                    <!-- Avatar do usuário -->
+                    <span class="avatar">
+                      <img src="../../assets/images/avatar.png" alt="Avatar">
+                      <!-- <i class="fas fa-user-circle"></i> -->
+                    </span>
+                    <!-- Notificações -->
+                    <span class="badge">5</span>
+                    <!-- Seta para abrir menu -->
+                    <span class="arrow">
+                      <i class="fas fa-chevron-down"></i>
+                    </span>
+                  </button>
                 </div>
-                <!-- Lista de configurações -->
-                <span class="title">
-                  <i class="fas fa-cog"></i>
-                  Configuração/Perfil
-                </span>
-                <a href="" class="item">Configuração 01</a>
-                <a href="" class="item">Configuração 02</a>
-                <a href="" class="item">Configuração 03</a>
+              </div>
+              <div class="col-auto">
+                <!-- Altocontraste -->
+                <button type="button" class="contrast" accesskey="6">
+                  <i class="fas fa-adjust fa-lg"></i>
+                </button>
+              </div>
+              <div class="col-auto">
+                <!-- Sistemas favoritos do usuário -->
+                <div class="bookmarks menu">
+                  <button class="trigger" type="button">
+                    <i class="fas fa-th-large"></i>
+                  </button>
+                </div>
               </div>
             </div>
-            <!-- Altocontraste -->
-            <button type="button" class="contrast" accesskey="6">
-              <span class="icon"><i class="fas fa-adjust fa-lg"></i></span>
-              <span class="sr-only">Alto contraste</span>
+            <!-- Voltar navegação -->
+            <button type="button" class="go-back">
+              <span class="arrow"><i class="fas fa-chevron-left"></i></span>
+              <span class="node">Alterar Dados Cadastrais</span>
             </button>
-            <!-- Sistemas favoritos do usuário -->
-            <div class="bookmarks menu">
-              <button class="trigger" type="button">
-                <i class="fas fa-th-large"></i>
-              </button>
-              <div class="tree">
-                <div class="title">Sistemas</div>
-                <div>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 01</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 02</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 03</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 04</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 05</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 06</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 07</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 08</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 09</div>
-                  </a>
-                  <a href="" class="bookmark">
-                    <div class="brand"></div>
-                    <div class="name">Sistema 10</div>
-                  </a>
-                </div>
-                <div class="more">
-                  <a href="">Mais</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </header>
           <!-- Menu de navegação -->
+          <div class="tree is-hidden">
+            <!-- Informações do usuário -->
+            <span class="title">
+              <strong>Márcia Vinícius Tavares de Almeida</strong>
+              <span>marcia-vinicius.almeida@serpro.gov.br</span>
+            </span>
+            <span class="label">
+              <i class="fas fa-cog"></i>
+              Configuração/Perfil
+            </span>
+            <!-- Lista de configurações -->
+            <ul class="level-0">
+              <li class="item"><a href="">Configuração 01</a></li>
+              <li class="item"><a href="">Configuração 02</a></li>
+              <li class="item"><a href="">Configuração 03</a></li>
+            </ul>
+          </div>
+          <div class="tree is-hidden">
+            <span class="label">
+              <i class="fas fa-th-large"></i>
+              Sistemas
+            </span>
+            <ul class="level-0">
+              <li class="item"><a href="">Sistema 01</a></li>
+              <li class="item"><a href="">Sistema 02</a></li>
+              <li class="item"><a href="">Sistema 03</a></li>
+              <li class="item"><a href="">Sistema 04</a></li>
+              <li class="item"><a href="">Sistema 05</a></li>
+              <li class="item"><a href="">Sistema 06</a></li>
+              <li class="item"><a href="">Sistema 07</a></li>
+              <li class="item"><a href="">Sistema 08</a></li>
+              <li class="item"><a href="">Sistema 09</a></li>
+              <li class="item"><a href="">Sistema 10</a></li>
+            </ul>
+          </div>
           <div class="tree">
             <span class="label">Início</span>
             <ul class="level-0">
               <li class="item"><a href="">Alterar Dados Cadastrais</a></li>
-              <li class="item has-children">
+              <li class="item has-children is-active">
                 <button class="trigger" type="button">
                   <span class="name">Alteração de Senha</span>
                   <span class="arrow"><i class="fas fa-chevron-right"></i></span>
@@ -346,20 +348,41 @@
               <li class="item"><a href="">Portal de Serviços</a></li>
             </ul>
           </div>
+          <footer class="footer-bar">
+            <div class="row justify-content-between">
+              <div class="col-auto">
+                <!-- Timeout -->
+                <div class="timeout">
+                  <i class="fas fa-clock"></i>
+                  <span class="session">Sessão:</span>
+                  <span class="timer">00 min. e 00 seg</span>
+                </div>
+              </div>
+              <div class="col-auto">
+                <!-- Logout -->
+                <button class="logout" type="button">Sair</button>
+              </div>
+            </div>
+          </footer>
         </div>
-      </div>
-      <div class="container">
-        <!-- Timeout -->
-        <div class="timeout">
-          <i class="fas fa-clock"></i>
-          <span class="session">Sessão:</span>
-          <span class="timer">00 min. e 00 seg</span>
-        </div>
-        <!-- Logout -->
-        <button class="logout" type="button">Sair</button>
       </div>
     </div>
   </nav>
+
+  <script>
+    const active = 'is-active'
+    function toggleNavigation(element) {
+      let trigger = document.querySelector(element)
+      // console.log(trigger)
+      let nav = document.querySelector(element + '-nav')
+      trigger.addEventListener('click', function () {
+        this.classList.toggle(active)
+        nav.classList.toggle(active)
+      })
+    }
+    toggleNavigation('#site')
+    toggleNavigation('#system')
+  </script>
 </body>
 
 </html>
