@@ -2979,11 +2979,12 @@
 .br-modal .br-form {
   width: 100%;
 }
-.br-modal h4 {
+.br-modal h2 {
   /* number of lines to show */
   -webkit-box-orient: vertical;
   color: #555555;
   display: -webkit-box;
+  font-size: 18px;
   font-weight: bold;
   -webkit-line-clamp: 2;
   line-height: 22.5px;
@@ -2993,7 +2994,7 @@
   text-overflow: ellipsis;
   width: 80%;
 }
-.br-modal h4.is-inline {
+.br-modal h2.is-inline {
   -webkit-line-clamp: 1;
   max-height: 22.5px;
   /* number of lines to show */

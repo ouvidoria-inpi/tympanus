@@ -32,9 +32,10 @@
   width: 100%;
 }
 
-.br-modal h4 {
+.br-modal h2 {
   color: #555555;
   display: -webkit-box;
+  font-size: 18px;
   font-weight: bold;
   line-height: 22.5px;
   margin: 0;
@@ -47,7 +48,7 @@
   width: 80%;
 }
 
-.br-modal h4.is-inline {
+.br-modal h2.is-inline {
   max-height: 22.5px;
   -webkit-line-clamp: 1;
   /* number of lines to show */
