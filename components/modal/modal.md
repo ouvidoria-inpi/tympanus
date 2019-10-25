@@ -302,6 +302,7 @@ Exemplo de Modal de Opção por **Lista**:
                 <div class="br-form">
                     <div class="field">
                         <div class="br-select">
+                            <label for="simples">Opções</label>
                             <select id="simples">
                                 <option value="0">Selecione uma opção</option>
                                 <option value="opcao-1">opção 1</option>
