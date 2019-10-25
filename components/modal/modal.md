@@ -483,86 +483,88 @@ Exemplos de **Modal de Entrada**:
 ```html
 <div class="br-modal is-large mt-9">
     <div class="br-modal-dialog">
-        <div class="br-modal-content">
-            <div class="br-modal-header">
-                <h2 class="br-modal-title">Novo evento</h2>
-                <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="br-modal-body">
-                <div class="br-form">
-                    <div class="row align-items-end">
-                        <div class="col">
-                            <div class="field">
-                                <div class="br-input">
-                                    <label for="simples">Nome do evento</label>
-                                    <input id="simples" type="text" placeholder="Digite o nome do evento">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-5">
-                            <div class="field">
-                                <div class="br-check d-block">
-                                    <input type="checkbox" id="v-checkbox-padrao" checked>
-                                    <label for="v-checkbox-padrao">Marcar como ocupado</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row align-items-end">
-                        <div class="col-6">
-                            <div class="field">
-                                <div class="br-input has-icon">
-                                    <label for="data">Inicial</label>
-                                    <input type="data" id="data" placeholder="Quinta, 13 de setembro de 2019">
-                                    <button class="icon" type="button">
-                                        <i class="fas fa-calendar"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="field">
-                                <div class="br-select">
-                                    <label for="simples4">Hora Inicial</label>
-                                    <select id="simples4">
-                                        <option value="0">11:00</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row align-items-end">
-                        <div class="col-6">
-                            <div class="field">
-                                <div class="br-input has-icon">
-                                    <label for="data">Final</label>
-                                    <input type="data" id="data" placeholder="Data final">
-                                    <button class="icon" type="button">
-                                        <i class="fas fa-calendar"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="field">
-                                <div class="br-select">
-                                    <label for="simples5">Hora Final</label>
-                                    <select id="simples5">
-                                        <option value="0">12:00</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+    <div class="br-modal-content">
+        <div class="br-modal-header">
+        <h2 class="br-modal-title">Novo evento</h2>
+        <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="br-modal-body">
+        <div class="br-form">
+            <div class="field">
+            <div class="row align-items-end">
+                <div class="col">
+                <div class="field">
+                    <div class="br-input">
+                    <label for="simples3">Nome do evento</label>
+                    <input id="simples3" type="text" placeholder="Digite o nome do evento">
                     </div>
                 </div>
+                </div>
+                <div class="col-5">
+                <div class="field">
+                    <div class="br-check d-block">
+                    <input type="checkbox" id="v-checkbox-padrao8" checked>
+                    <label for="v-checkbox-padrao8">Marcar como ocupado</label>
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-secondary is-small" type="button">Cancelar</button>
-                <button class="br-button is-primary is-small" type="button">Entrar</button>
+            </div>
+            <div class="row align-items-end">
+            <div class="col-6">
+                <div class="field">
+                <div class="br-input has-icon">
+                    <label for="data">Inicial</label>
+                    <input type="date" id="data" placeholder="Quinta, 13 de setembro de 2019">
+                    <button class="icon" type="button">
+                    <i class="fas fa-calendar"></i>
+                    </button>
+                </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="field">
+                <div class="br-select">
+                    <label for="simples4">Hora Inicial</label>
+                    <select id="simples4">
+                    <option value="0">11:00</option>
+                    </select>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="row align-items-end">
+            <div class="col-6">
+                <div class="field">
+                <div class="br-input has-icon">
+                    <label for="data1">Final</label>
+                    <input type="date" id="data1" placeholder="Data final">
+                    <button class="icon" type="button">
+                    <i class="fas fa-calendar"></i>
+                    </button>
+                </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="field">
+                <div class="br-select">
+                    <label for="simples5">Hora Final</label>
+                    <select id="simples5">
+                    <option value="0">12:00</option>
+                    </select>
+                </div>
+                </div>
+            </div>
             </div>
         </div>
+        </div>
+        <div class="br-modal-footer justify-content-end">
+        <button class="br-button is-secondary is-small" type="button">Cancelar</button>
+        <button class="br-button is-primary is-small" type="button">Entrar</button>
+        </div>
+    </div>
     </div>
 </div>
 ```
