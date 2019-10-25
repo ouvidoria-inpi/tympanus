@@ -13,7 +13,7 @@ Nenhuma dependência.
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Título</h4>
+                <h2 class="br-modal-title">Título</h4>
             </div>
             <div class="br-modal-body">
                 <p>Conteúdo</p>
@@ -34,7 +34,7 @@ Nenhuma dependência.
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Título</h4>
+                <h2 class="br-modal-title">Título</h4>
                 <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>                
@@ -81,7 +81,7 @@ Exemplo de uso:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Título</h4>
+                <h2 class="br-modal-title">Título</h4>
             </div>
             <div class="br-modal-body">
                 <p>Conteúdo</p>
@@ -106,7 +106,7 @@ Exemplo de uso:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Título</h4>
+                <h2 class="br-modal-title">Título</h4>
             </div>
             <div class="br-modal-body">
                 <p>Conteúdo</p>
@@ -131,7 +131,7 @@ Exemplo de uso:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Título</h4>
+                <h2 class="br-modal-title">Título</h4>
             </div>
             <div class="br-modal-body">
                 <p>Conteúdo</p>
@@ -155,7 +155,7 @@ Exemplo de uso:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Título</h4>
+                <h2 class="br-modal-title">Título</h4>
             </div>
             <div class="br-modal-body">
                 <p>Conteúdo</p>
@@ -177,7 +177,7 @@ O modal pode ter ou não um **Título** de acordo com a necessidade. Para remove
 
 ```html
 <div class="br-modal-header">
-    <h4 class="br-modal-title">Título</h4>
+    <h2 class="br-modal-title">Título</h4>
 </div>
 ```
 
@@ -210,7 +210,7 @@ Exemplo de modal com título contraído:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title is-contracted">Modal de exemplo com uso de uma linha</h4>
+                <h2 class="br-modal-title is-contracted">Modal de exemplo com uso de uma linha</h4>
                 <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -246,7 +246,7 @@ Exemplo de **Modal de Alerta** com título:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Título da modal</h4>
+                <h2 class="br-modal-title">Título da modal</h4>
             </div>            
             <div class="br-modal-body">
                 <p>Modal de alerta com título. Lorem ipsum dolor sit amet.</p>
@@ -293,7 +293,7 @@ Exemplo de Modal de Opção por **Lista**:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Escolha uma conta</h4>
+                <h2 class="br-modal-title">Escolha uma conta</h4>
                 <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -331,7 +331,7 @@ Exemplos de Modal de Opção **por Seleção**:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Buscar pelos estados</h4>
+                <h2 class="br-modal-title">Buscar pelos estados</h4>
                 <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -388,7 +388,7 @@ Exemplos de Modal de Opção **por Seleção**:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Opções de Visualização</h4>
+                <h2 class="br-modal-title">Opções de Visualização</h4>
                 <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -435,7 +435,7 @@ Exemplos de **Modal de Entrada**:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Autenticar pelo Gov.br</h4>
+                <h2 class="br-modal-title">Autenticar pelo Gov.br</h4>
                 <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -484,7 +484,7 @@ Exemplos de **Modal de Entrada**:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Novo evento</h4>
+                <h2 class="br-modal-title">Novo evento</h4>
                 <button type="button" class="close" data-dismiss="br-modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -578,7 +578,7 @@ Exemplo de **Modal com Rolagem**:
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-header">
-                <h4 class="br-modal-title">Concorda com os termos?</h4>
+                <h2 class="br-modal-title">Concorda com os termos?</h4>
             </div>
             <div class="br-modal-body mb-5">
                 <textarea rows="10" >ipsum dolor sit amet, consectetur adipiscing elit. Mauris id gravida nulla. Cras sagittis dapibus felis vitae semper. Donec vel hendrerit ante. Etiam sed blandit nisi. Praesent iaculis, nisl eget rutrum vehicula, lacus tortor feugiat diam, et euismod lacus metus eget nisi. Sed fermentum, nunc nec efficitur pharetra, felis dolor feugiat massa, et semper turpis felis quis ligula. Quisque non metus at risus maximus ultrices. Nam vel massa tellus. Vestibulum lobortis dui et pellentesque porta. Cras rhoncus augue a mauris porttitor, in malesuada metus eleifend. Praesent ac lacinia lorem. Sed cursus nisl ligula, vel ultrices ex pellentesque eu. Curabitur facilisis egestas libero, non pharetra lacus ultricies quis. Mauris non finibus justo, eu varius metus. Donec nec eros semper, consequat turpis id, fermentum dolor.</textarea>
