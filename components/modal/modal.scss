@@ -22,9 +22,12 @@
   }
 }
 
+$br-modal-bg-color: rgba(255, 255, 255, 1);
+$br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
+
 .br-modal {
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-color: $br-modal-bg-color;
+  box-shadow: 0 3px 6px $br-modal-box-shadow-color;
   display: flex;
   flex-direction: column;
   padding: 20px 0 15px;
