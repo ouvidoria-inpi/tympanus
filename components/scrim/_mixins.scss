@@ -1,9 +1,8 @@
-@mixin scrim($color, $opacity, $z-index, $position){
+@mixin scrim($color, $opacity, $position){
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: $z-index;
   position: $position;
-  background-color: rgba($color,$opacity);
+  background-color: rgba($color, $opacity);
 }

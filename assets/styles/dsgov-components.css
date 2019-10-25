@@ -3032,16 +3032,17 @@
 
 /*!
  * scrim - 0.0.0 */
-.scrim-foco {
+#scrim-foco {
   background-color: rgba(0, 0, 0, 0.4);
   bottom: 0;
+  display: none;
   height: 100%;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 2;
 }
 
 .scrim-legibilidade {
@@ -3053,7 +3054,6 @@
   right: 0;
   top: 0;
   width: auto;
-  z-index: 10;
 }
 
 .scrim-inibicao {
@@ -3065,5 +3065,4 @@
   right: 0;
   top: 0;
   width: auto;
-  z-index: 10;
 }

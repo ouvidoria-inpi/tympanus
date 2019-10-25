@@ -1,5 +1,5 @@
 # Scrim
-> Scrims são tratamentos temporarios que podem ser aplicados às superfícies dos elementos de uma interface com o objetivo de tornar o conteúdo menos proeminente.
+> Scrims são tratamentos temporários que podem ser aplicados às superfícies dos elementos de uma interface com o objetivo de tornar o conteúdo menos proeminente.
 > 
 
 ![Exemplo de Scrim](../../assets/images/components_img/scrim/scrim_zoom.png)

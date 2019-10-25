@@ -13,20 +13,22 @@
 //  @include scrim;
 }
 
-.scrim-foco {
-  @include scrim (#000000, 0.4, 10, fixed);
+#scrim-foco {
+  @include scrim ($scrim-color-foc-leg, $scrim-opacity-foc, $scrim-position-foc);
   width: 100%;
   height: 100%;
+  display: none;
+  z-index: 2;
 }
 
 .scrim-legibilidade{
-  @include scrim (#000000, 0.64, 10, relative);
+  @include scrim ($scrim-color-foc-leg, $scrim-opacity-leg-inib, $scrim-position-leg-inib);
   width: auto;
   height: auto;
 }
 
 .scrim-inibicao{
-  @include scrim (white, 0.64, 10, relative);
+  @include scrim ($scrim-color-inib, $scrim-opacity-leg-inib, $scrim-position-leg-inib);
   width: auto;
   height: auto;
 }

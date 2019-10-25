@@ -1,7 +1,7 @@
 ## Scrim
 
 Use para redirecionar a atenção do usuário para outras partes ou elementos da tela.
-Podem existir vários scrims ativos na mesma tela, existindo 3 tipos de scrim: Foco, Legibilidade e Inibição. 
+Podem existir vários scrims ativos na mesma tela. 
 
 ## Dependências
 
