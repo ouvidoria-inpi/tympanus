@@ -525,8 +525,9 @@ Exemplos de **Modal de Entrada**:
                         <div class="col-4">
                             <div class="field">
                                 <div class="br-select">
-                                    <select id="simples">
-                                        <option value="0">Hora inicial</option>
+                                    <label for="simples4">Hora Inicial</label>
+                                    <select id="simples4">
+                                        <option value="0">11:00</option>
                                     </select>
                                 </div>
                             </div>
@@ -547,8 +548,9 @@ Exemplos de **Modal de Entrada**:
                         <div class="col-4">
                             <div class="field">
                                 <div class="br-select">
-                                    <select id="simples">
-                                        <option value="0">Hora final</option>
+                                    <label for="simples5">Hora Final</label>
+                                    <select id="simples5">
+                                        <option value="0">12:00</option>
                                     </select>
                                 </div>
                             </div>
