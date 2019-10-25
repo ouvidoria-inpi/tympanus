@@ -30,6 +30,9 @@
   padding: 20px 0 15px;
   position: relative;
   width: 28.8rem;
+  .br-form {
+    width: 100%;
+  }
   & h4 {
     color: $font-portal-services-subtitle-color;    
     display: -webkit-box;
@@ -49,7 +52,7 @@
     }
   }
 
-  &.scroll {
+  &.is-scroll {
     .br-modal-body {
       box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
       & textarea {        
