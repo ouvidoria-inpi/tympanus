@@ -35,7 +35,7 @@
 }
 
 @mixin visibility {
-  display: block;
+  display: none;
   &.is-active {
     display: block;
   }
@@ -424,9 +424,20 @@
                 }
               }
             }
+            .item {
+              &:hover {
+                > {
+                  .trigger,
+                  a {
+                    background: $color-primary;
+                  }
+                }
+              }
+            }
           }
         }
         .level-2 {
+          box-shadow: 2px 2px 3px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
           .item {
             white-space: nowrap;
           }

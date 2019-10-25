@@ -1,7 +1,7 @@
 /*!
  * navigation - 0.1.0 */
 .br-navigation {
-  display: block;
+  display: none;
 }
 
 .br-navigation.is-active {
@@ -575,6 +575,13 @@
     display: table;
     left: 100%;
     position: absolute;
+  }
+  .br-navigation.is-system .tree .level-1 .item .item:hover > .trigger,
+  .br-navigation.is-system .tree .level-1 .item .item:hover > a {
+    background: #1351b4;
+  }
+  .br-navigation.is-system .tree .level-2 {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.16);
   }
   .br-navigation.is-system .tree .level-2 .item {
     white-space: nowrap;
