@@ -81,7 +81,7 @@
   background: #888888;
 }
 
-.br-modal.is-scroll .br-modal-body .br-card::-webkit-scrollbar-thumb:hover {
+.br-modal.is-scroll .br-modal-body .br-card:hover::-webkit-scrollbar-thumb {
   background: #555555;
 }
 
@@ -112,7 +112,7 @@
   background: #888888;
 }
 
-.br-modal .br-modal-body .br-card::-webkit-scrollbar-thumb:hover {
+.br-modal .br-modal-body .br-card:hover::-webkit-scrollbar-thumb {
   background: #555555;
 }
 
@@ -126,11 +126,11 @@
 
 .br-modal .close {
   background: transparent;
-  border: none;
+  border: 0;
   color: #1351b4;
   position: absolute;
   right: 8px;
-  top: -19px;
+  top: 0;
 }
 
 .br-modal .close span {
