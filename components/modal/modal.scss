@@ -34,6 +34,8 @@
     width: 100%;
   }
   & h2 {
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
     color: $font-portal-services-subtitle-color;    
     display: -webkit-box;
     font-size: 18px;
@@ -42,23 +44,23 @@
     margin: 0;
     max-height: 45px;
     overflow: hidden;
-    text-overflow: ellipsis;      
-    -webkit-line-clamp: 2; /* number of lines to show */
-    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;          
     width: 80%;
 
     &.is-inline {
-      max-height: 22.5px;
       -webkit-line-clamp: 1; /* number of lines to show */
+      max-height: 22.5px;      
     }
   }
 
   &.is-scroll {
     .br-modal-body {
       box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-      & textarea {        
+      & .br-card {        
         border: none;
         font-size: $font-portal-small-news-sticker-font-size;
+        height: 216px;        
+        overflow:auto;
         resize: none;
         width: 100%;
         &:focus,
@@ -145,20 +147,20 @@
 @media (min-width: 576px) {
   .br-modal {
     &.is-xsmall {
-      min-width: 220px;
       max-width: 220px;
+      min-width: 220px;      
     }
     &.is-small {
-      min-width: 300px;
       max-width: 300px;
+      min-width: 300px;      
     }
     &.is-medium {
-      min-width: 500px;
       max-width: 500px;
+      min-width: 500px;      
     }
     &.is-large {
-      min-width: 640px;
       max-width: 640px;
+      min-width: 640px;      
     }
   }
 }
