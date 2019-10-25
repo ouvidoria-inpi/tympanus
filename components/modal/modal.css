@@ -35,7 +35,6 @@
 .br-modal h2 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  /* number of lines to show */
   color: #555555;
   display: -webkit-box;
   font-size: 18px;
@@ -50,7 +49,6 @@
 
 .br-modal h2.is-inline {
   -webkit-line-clamp: 1;
-  /* number of lines to show */
   max-height: 22.5px;
 }
 
@@ -59,16 +57,12 @@
 }
 
 .br-modal.is-scroll .br-modal-body .br-card {
-  border: none;
+  border: 0;
   font-size: 14px;
   height: 216px;
   overflow: auto;
   resize: none;
   width: 100%;
-  /* width */
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
 
 .br-modal.is-scroll .br-modal-body .br-card:focus, .br-modal.is-scroll .br-modal-body .br-card:active {
@@ -102,27 +96,23 @@
   display: flex;
 }
 
-.br-modal .br-modal-body textarea {
+.br-modal .br-modal-body .br-card {
   width: 100%;
-  /* width */
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
 
-.br-modal .br-modal-body textarea::-webkit-scrollbar {
+.br-modal .br-modal-body .br-card::-webkit-scrollbar {
   width: 8px;
 }
 
-.br-modal .br-modal-body textarea::-webkit-scrollbar-track {
+.br-modal .br-modal-body .br-card::-webkit-scrollbar-track {
   background: #ededed;
 }
 
-.br-modal .br-modal-body textarea::-webkit-scrollbar-thumb {
+.br-modal .br-modal-body .br-card::-webkit-scrollbar-thumb {
   background: #888888;
 }
 
-.br-modal .br-modal-body textarea::-webkit-scrollbar-thumb:hover {
+.br-modal .br-modal-body .br-card::-webkit-scrollbar-thumb:hover {
   background: #555555;
 }
 

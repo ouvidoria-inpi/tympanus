@@ -38,8 +38,8 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
   }
   & h2 {
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* number of lines to show */    
-    color: $font-portal-services-subtitle-color;    
+    -webkit-line-clamp: 2;
+    color: $font-portal-services-subtitle-color;
     display: -webkit-box;
     font-size: 18px;
     font-weight: bold;
@@ -47,44 +47,38 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     margin: 0;
     max-height: 45px;
     overflow: hidden;
-    text-overflow: ellipsis;          
+    text-overflow: ellipsis;
     width: 80%;
 
     &.is-inline {
-      -webkit-line-clamp: 1; /* number of lines to show */
-      max-height: 22.5px;      
+      -webkit-line-clamp: 1;
+      max-height: 22.5px;
     }
   }
 
   &.is-scroll {
     .br-modal-body {
-      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-      & .br-card {        
-        border: none;
+      box-shadow: 0px 3px 6px 0px $br-modal-box-shadow-color;
+      & .br-card {
+        border: 0;
         font-size: $font-portal-small-news-sticker-font-size;
-        height: 216px;        
-        overflow:auto;
+        height: 216px;
+        overflow: auto;
         resize: none;
         width: 100%;
         &:focus,
         &:active {
           outline: none;
         }
-        /* width */
         &::-webkit-scrollbar {
           width: 8px;
         }
-        /* Track */
         &::-webkit-scrollbar-track {
           background: $color-gray-2;
         }
-
-        /* Handle */
         &::-webkit-scrollbar-thumb {
           background: $color-gray-5;
         }
-
-        /* Handle on hover */
         &::-webkit-scrollbar-thumb:hover {
           background: $color-gray-6;
         }
@@ -101,24 +95,17 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
 
   .br-modal-body {
     display: flex;
-    & textarea {
+    & .br-card {
       width: 100%;
-      /* width */
       &::-webkit-scrollbar {
         width: 8px;
       }
-
-      /* Track */
       &::-webkit-scrollbar-track {
         background: $color-gray-2;
       }
-
-      /* Handle */
       &::-webkit-scrollbar-thumb {
         background: $color-gray-5;
       }
-
-      /* Handle on hover */
       &::-webkit-scrollbar-thumb:hover {
         background: $color-gray-6;
       }
@@ -151,19 +138,19 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
   .br-modal {
     &.is-xsmall {
       max-width: 220px;
-      min-width: 220px;      
+      min-width: 220px;
     }
     &.is-small {
       max-width: 300px;
-      min-width: 300px;      
+      min-width: 300px;
     }
     &.is-medium {
       max-width: 500px;
-      min-width: 500px;      
+      min-width: 500px;
     }
     &.is-large {
       max-width: 640px;
-      min-width: 640px;      
+      min-width: 640px;
     }
   }
 }
