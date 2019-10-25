@@ -2980,8 +2980,8 @@
   width: 100%;
 }
 .br-modal h2 {
-  /* number of lines to show */
   -webkit-box-orient: vertical;
+  /* number of lines to show */
   color: #555555;
   display: -webkit-box;
   font-size: 18px;

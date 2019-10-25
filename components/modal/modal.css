@@ -33,9 +33,9 @@
 }
 
 .br-modal h2 {
+  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   /* number of lines to show */
-  -webkit-box-orient: vertical;
   color: #555555;
   display: -webkit-box;
   font-size: 18px;
