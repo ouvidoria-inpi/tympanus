@@ -1,5 +1,5 @@
 @mixin scrim ($color, $opacity, $position) {
-  background-color: rgba($color, $opacity);
+  background-color: rgba($color, $opacity); // sass-lint:disable-line no-color-literals
   bottom: 0;
   left: 0;
   position: $position;
