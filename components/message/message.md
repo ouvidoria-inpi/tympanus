@@ -25,22 +25,6 @@ O componente é composto dos seguintes elementos:
 - `content`: conteúdo da mensagem
 - `close`: botão de fechar
 
-### `br-alert`
-
-O comportamento padrão do componente é detacar apenas a área do ícone.
-
-A área de mensagem pode ser destacada adicionando a classe `is-inverted` ao container.
-
-Exemplo de uso:
-
-```html
-<div class="br-alert is-inverted">
-  <div class="icon">...</div>
-  <div class="content">...</div>
-  <div class="close">...</div>
-</div>
-```
-
 ### `icon`
 
 Elemento onde deverá ser informado o ícone ilustrativo da mensagem.

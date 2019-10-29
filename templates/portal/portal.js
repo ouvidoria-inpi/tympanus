@@ -176,17 +176,22 @@ class TemplatePortal {
           icon.setAttribute('class', 'fas fa-plus');
           button.parentNode.prepend(icon);
         }
+        for (let item of navigation.querySelectorAll('ul[data-level="1"] li.item')) {
+          item.classList.remove('is-active');
+        }
       }
       for (let button of window.document.querySelectorAll('.page-footer .navigation.footer-mobile li.item button')) {
         let item = button.parentNode;
         item.addEventListener('click', (event) => {
-          item.classList.toggle('is-active');
-          if (item.classList.contains('is-active')) {
-            item.firstChild.classList.remove('fa-plus');
-            item.firstChild.classList.add('fa-minus');
-          } else {
-            item.firstChild.classList.remove('fa-minus');
-            item.firstChild.classList.add('fa-plus');
+          for (let submenuItem of item.querySelectorAll('ul[data-level="1"] li.item')) {
+            submenuItem.classList.toggle('is-active');
+            if (submenuItem.classList.contains('is-active')) {
+              item.firstChild.classList.remove('fa-plus');
+              item.firstChild.classList.add('fa-minus');
+            } else {
+              item.firstChild.classList.remove('fa-minus');
+              item.firstChild.classList.add('fa-plus');
+            }
           }
           event.stopPropagation();
         });

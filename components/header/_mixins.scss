@@ -290,13 +290,11 @@
 
 @mixin contrast {
   .contrast {
+    @include btn-icon;
     background: transparent;
     border: 0;
     display: none;
-    .icon {
-      @include btn-icon;
-      position: relative;
-    }
+    position: relative;
   }
   // Desktop
   @include media-breakpoint-up(md) {
