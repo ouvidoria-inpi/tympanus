@@ -213,6 +213,36 @@
       "children": [
         {
           "isPdf": true,
+          "label": "Com Lista de Opções",
+          "path": "templates/password-recovery/password-recovery"
+        },
+        {
+          "isPdf": true,
+          "label": "Pelo Celular",
+          "path": "templates/password-recovery/password-recovery-1"
+        },
+        {
+          "isPdf": true,
+          "label": "Campo com Validação",
+          "path": "templates/password-recovery/password-recovery-2"
+        },
+        {
+          "isPdf": true,
+          "label": "Precisa de Ajuda?",
+          "path": "templates/password-recovery/password-recovery-help"
+        },
+        {
+          "isPdf": true,
+          "label": "Mudar Senha",
+          "path": "templates/password-recovery/password-recovery-change"
+        }
+      ],
+      "label": "Recuparação de Senha"
+    },
+    {
+      "children": [
+        {
+          "isPdf": true,
           "label": "Template base",
           "path": "templates/page/page"
         },
