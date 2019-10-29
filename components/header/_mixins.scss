@@ -263,8 +263,7 @@
 @mixin login {
   .login {
     .icon {
-      @include btn-icon;
-      position: relative;
+      color: $color-primary;
     }
     span {
       display: none;
@@ -276,13 +275,14 @@
       color: $color-gray-6;
       display: inline-flex;
       margin-left: $spacing-5;
+      margin-top: $spacing-half;
       position: relative;
       span {
         display: inline;
         font-weight: 500;
-        &:not(.icon) {
-          margin-top: $spacing-half;
-        }
+      }
+      span + span {
+        margin-left: $spacing-1;
       }
     }
   }
@@ -290,11 +290,20 @@
 
 @mixin contrast {
   .contrast {
-    @include btn-icon;
     background: transparent;
     border: 0;
     display: none;
+    margin-top: $spacing-half;
     position: relative;
+    &:hover {
+      text-decoration: underline;
+    }
+    .icon {
+      color: $color-primary;
+    }
+    span + span {
+      margin-left: $spacing-1;
+    }
   }
   // Desktop
   @include media-breakpoint-up(md) {
@@ -302,22 +311,16 @@
       display: inline-flex;
     }
   }
+  // Versão de site
+  &.is-site {
+    .contrast {
+      margin-left: $spacing-3;
+    }
+  }
   // Versão de sistema
   &.is-system {
     .contrast {
       margin-left: $spacing-5;
-      span {
-        &:not(.icon) {
-          margin-top: $spacing-half;
-        }
-      }
-      &:hover {
-        span {
-          &:not(.icon) {
-            text-decoration: underline;
-          }
-        }
-      }
     }
   }
 }
@@ -520,7 +523,7 @@
         border-bottom-color: $color-warning;
         border-width: $spacing-2;
         bottom: - $spacing-1;
-        content: "";
+        content: none;
         display: block;
         height: 0;
         position: absolute;
@@ -533,6 +536,11 @@
   @include media-breakpoint-up(md) {
     .menu-hamburger {
       bottom: 9px;
+      &.is-active {
+        &::before {
+          content: "";
+        }
+      }
     }
   }
   // Versão de sistema
