@@ -9,26 +9,26 @@
 @import "mixins";
 
 // Estilos específicos
-.#{$prefix}scrim {
-//  @include scrim;
-}
+// .#{$prefix}scrim {
+//    @include scrim;
+//}
 
 #scrim-foco {
   @include scrim ($scrim-color-foc-leg, $scrim-opacity-foc, $scrim-position-foc);
-  width: 100%;
-  height: 100%;
   display: none;
+  height: 100%;
+  width: 100%;
   z-index: 2;
 }
 
-.scrim-legibilidade{
+.scrim-legibilidade {
   @include scrim ($scrim-color-foc-leg, $scrim-opacity-leg-inib, $scrim-position-leg-inib);
-  width: auto;
   height: auto;
+  width: auto;
 }
 
-.scrim-inibicao{
+.scrim-inibicao {
   @include scrim ($scrim-color-inib, $scrim-opacity-leg-inib, $scrim-position-leg-inib);
-  width: auto;
   height: auto;
+  width: auto;
 }

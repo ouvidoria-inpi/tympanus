@@ -8,80 +8,22 @@
   <link rel="stylesheet" href="scrim.css">
   <link rel="stylesheet" href="janela.css">
 </head>
-<style>
-.janela{
-    width: auto;
-    padding: 10px;
-    background-color: #fff;
-    font-size: 30px;
-    color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    transform: translate(-50%,-50%);
-     -ms-transform: translate(-50%,-50%);
-}
-
-.bloco1 {
-   margin-bottom: 50px;
-   width: auto;
-   height: 150px;
-   display:block;
-   color: black;
-   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-   background-color: rgb(224, 202, 231); 
-   text-align: center;
-   padding: 20px;
-}
-
-.bloco2{
-   margin-bottom: 50px;
-   width: auto;
-   height: 200px;
-   font-size: 20px;
-   color: white;
-   display:block;
-   background-position: center;
-   background-size: cover;
-   background-image: url(../../assets/images/imagem.png);
-   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-   text-align: center;
-   line-height: 50px;
-   padding: 10px 0;
-}
-
-.bloco3{
-   width: auto;
-   height: 200px;
-   font-size: 20px;
-   color: black;
-   padding: 10px 0;
-   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-   background-color: rgb(202, 211, 231); 
-   display: block;
-   text-align: center;
-}
-
-</style>
 <body>
   <div class="container-fluid">
       <div id="scrim-foco" onclick="off()">
         <div class="janela">Janela Modal</div>
       </div>
-      <div>
-          <h3>Scrim - Foco</h3>
-          <button onclick="on()">Testar Efeito</button>
-        </div>
+      <div class="bloco1">
+          <p>Scrim - Foco</p>
+          <button type="button" onclick="on()">Testar Efeito</button>
+      </div>
    <div class="bloco2">
-      <h3>Scrim - Legibilidade</h3>
-      <div class="scrim-legibilidade text-white">Legibilidade sobre fundo com cor que deixa o texto ilegível. </div>
+      <div class="scrim-legibilidade text-white">Scrim - Legibilidade</div>
     </div>
     <div class="bloco3">
-        <h3>Scrim - Inibição (Clicar no texto abaixo)</h3>
-        <div onclick="alert('Fui Clicado')"> SEM Scrim Inibição</div>  
-        <div onclick="alert('Fui Clicado')" class="scrim-inibicao" id="noclick"> COM Scrim Inibição</div>
+        <p>Scrim - Inibição (Clicar no texto abaixo)</p>
+        <div onclick="alert('Fui Clicado')">- SEM Scrim Inibição</div>
+        <div onclick="alert('Fui Clicado')" class="scrim-inibicao" id="noclick">- COM Scrim Inibição</div>
     </div>
   </div>
   <script src="scrim.js"></script>
