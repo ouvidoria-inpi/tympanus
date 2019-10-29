@@ -3357,33 +3357,7 @@
 }
 
 .br-header .login .icon {
-  align-items: center;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
   color: #1351b4;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  height: 36px;
-  justify-content: center;
-  position: relative;
-  width: 36px;
-}
-.br-header .login .icon:hover {
-  color: #2670e8;
-  z-index: 1;
-}
-.br-header .login .icon:hover::after {
-  background: #dbe8fb;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 32px;
-  position: absolute;
-  width: 32px;
-  z-index: -1;
 }
 .br-header .login span {
   display: none;
@@ -3396,48 +3370,33 @@
     display: -ms-inline-flexbox;
     display: inline-flex;
     margin-left: 24px;
+    margin-top: 4px;
     position: relative;
   }
   .br-header .login span {
     display: inline;
     font-weight: 500;
   }
-  .br-header .login span:not(.icon) {
-    margin-top: 4px;
+  .br-header .login span + span {
+    margin-left: 8px;
   }
 }
 
 .br-header .contrast {
-  align-items: center;
   background: transparent;
   border: 0;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
-  color: #1351b4;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   display: none;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  height: 36px;
-  justify-content: center;
+  margin-top: 4px;
   position: relative;
-  width: 36px;
 }
 .br-header .contrast:hover {
-  color: #2670e8;
-  z-index: 1;
+  text-decoration: underline;
 }
-.br-header .contrast:hover::after {
-  background: #dbe8fb;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 32px;
-  position: absolute;
-  width: 32px;
-  z-index: -1;
+.br-header .contrast .icon {
+  color: #1351b4;
+}
+.br-header .contrast span + span {
+  margin-left: 8px;
 }
 
 @media (min-width: 998px) {
@@ -3448,14 +3407,11 @@
   }
 }
 
+.br-header.is-site .contrast {
+  margin-left: 16px;
+}
 .br-header.is-system .contrast {
   margin-left: 24px;
-}
-.br-header.is-system .contrast span:not(.icon) {
-  margin-top: 4px;
-}
-.br-header.is-system .contrast:hover span:not(.icon) {
-  text-decoration: underline;
 }
 .br-header .search {
   align-items: center;
@@ -3894,7 +3850,7 @@
   border-bottom-color: #ffcd07;
   border-width: 12px;
   bottom: -8px;
-  content: "";
+  content: none;
   display: block;
   height: 0;
   position: absolute;
@@ -3906,6 +3862,9 @@
 @media (min-width: 998px) {
   .br-header .menu-hamburger {
     bottom: 9px;
+  }
+  .br-header .menu-hamburger.is-active::before {
+    content: "";
   }
 }
 

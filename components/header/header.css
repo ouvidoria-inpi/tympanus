@@ -292,29 +292,7 @@
 }
 
 .br-header .login .icon {
-  align-items: center;
   color: #1351b4;
-  display: inline-flex;
-  height: 36px;
-  justify-content: center;
-  width: 36px;
-  position: relative;
-}
-
-.br-header .login .icon:hover {
-  color: #2670e8;
-  z-index: 1;
-}
-
-.br-header .login .icon:hover::after {
-  background: #dbe8fb;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 32px;
-  position: absolute;
-  width: 32px;
-  z-index: -1;
 }
 
 .br-header .login span {
@@ -326,44 +304,36 @@
     color: #555555;
     display: inline-flex;
     margin-left: 24px;
+    margin-top: 4px;
     position: relative;
   }
   .br-header .login span {
     display: inline;
     font-weight: 500;
   }
-  .br-header .login span:not(.icon) {
-    margin-top: 4px;
+  .br-header .login span + span {
+    margin-left: 8px;
   }
 }
 
 .br-header .contrast {
-  align-items: center;
-  color: #1351b4;
-  display: inline-flex;
-  height: 36px;
-  justify-content: center;
-  width: 36px;
   background: transparent;
   border: 0;
   display: none;
+  margin-top: 4px;
   position: relative;
 }
 
 .br-header .contrast:hover {
-  color: #2670e8;
-  z-index: 1;
+  text-decoration: underline;
 }
 
-.br-header .contrast:hover::after {
-  background: #dbe8fb;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 32px;
-  position: absolute;
-  width: 32px;
-  z-index: -1;
+.br-header .contrast .icon {
+  color: #1351b4;
+}
+
+.br-header .contrast span + span {
+  margin-left: 8px;
 }
 
 @media (min-width: 998px) {
@@ -372,16 +342,12 @@
   }
 }
 
+.br-header.is-site .contrast {
+  margin-left: 16px;
+}
+
 .br-header.is-system .contrast {
   margin-left: 24px;
-}
-
-.br-header.is-system .contrast span:not(.icon) {
-  margin-top: 4px;
-}
-
-.br-header.is-system .contrast:hover span:not(.icon) {
-  text-decoration: underline;
 }
 
 .br-header .search {
@@ -794,7 +760,7 @@
   border-bottom-color: #ffcd07;
   border-width: 12px;
   bottom: -8px;
-  content: "";
+  content: none;
   display: block;
   height: 0;
   position: absolute;
@@ -805,6 +771,9 @@
 @media (min-width: 998px) {
   .br-header .menu-hamburger {
     bottom: 9px;
+  }
+  .br-header .menu-hamburger.is-active::before {
+    content: "";
   }
 }
 
