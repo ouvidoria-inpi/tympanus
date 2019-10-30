@@ -88,7 +88,6 @@
       "path": "components/tabs/tabs"
     },
     {
-      "isPdf": true,
       "label": "Acordeão",
       "path": "components/accordeon/accordeon"
     },
@@ -98,12 +97,10 @@
       "path": "components/badge/badge"
     },
     {
-      "isPdf": true,
       "label": "Botão",
       "path": "components/button/button"
     },
     {
-      "isPdf": true,
       "label": "Breadcrumb",
       "path": "components/breadcrumb/breadcrumb"
     },
@@ -121,7 +118,6 @@
       "path": "components/checklist/checklist"
     },
     {
-      "isPdf": true,
       "label": "Datepicker",
       "path": "components/datepicker/datepicker"
     },
@@ -139,7 +135,6 @@
       "path": "components/input/input"
     },
     {
-      "isPdf": true,
       "label": "Mensagens",
       "path": "components/message/message"
     },
@@ -162,7 +157,6 @@
       "path": "components/scrim/scrim"
     },
     {
-      "isPdf": true,
       "label": "Select",
       "path": "components/select/select"
     },
@@ -172,11 +166,10 @@
     },
     {
       "isPdf": true,
-      "label": "Textarea",
+      "label": "TextArea",
       "path": "components/textarea/textarea"
     },
     {
-      "isPdf": true,
       "label": "Upload",
       "path": "components/upload/upload"
     }
@@ -215,6 +208,36 @@
         }
       ],
       "label": "Cadastro de usuário"
+    },
+    {
+      "children": [
+        {
+          "isPdf": true,
+          "label": "Com Lista de Opções",
+          "path": "templates/password-recovery/password-recovery"
+        },
+        {
+          "isPdf": true,
+          "label": "Pelo Celular",
+          "path": "templates/password-recovery/password-recovery-1"
+        },
+        {
+          "isPdf": true,
+          "label": "Campo com Validação",
+          "path": "templates/password-recovery/password-recovery-2"
+        },
+        {
+          "isPdf": true,
+          "label": "Precisa de Ajuda?",
+          "path": "templates/password-recovery/password-recovery-help"
+        },
+        {
+          "isPdf": true,
+          "label": "Mudar Senha",
+          "path": "templates/password-recovery/password-recovery-change"
+        }
+      ],
+      "label": "Recuparação de Senha"
     },
     {
       "children": [
