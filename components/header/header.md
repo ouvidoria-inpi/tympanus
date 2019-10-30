@@ -4,9 +4,11 @@ Cabeçalho para sites e sistemas.
 
 ## Dependências
 
-
+- header.js
 
 ## Código básico
+
+**Header para sites**
 
 ```html
 <header class="br-header is-site">
@@ -22,7 +24,33 @@ Cabeçalho para sites e sistemas.
       <!-- Login para sites -->
       <a href="" class="login">...</a>
       <!-- Altocontraste -->
-      <button type="button" class="contrast" accesskey="6">...</button>
+      <button type="button" class="contrast">...</button>
+      <!-- Quebra de linha em desktop -->
+      <div class="break"></div>
+      <!-- Busca geral -->
+      <div class="search">...</div>
+      <!-- Barra do usuário para sistemas -->
+      <div class="user-bar">...</div>
+      <!-- Menu sanduiche -->
+      <button class="menu-hamburger" type="button">...</button>
+    </div>
+  </div>
+</header>
+```
+
+**Header para sistemas**
+
+```html
+<header class="br-header is-site">
+  <div class="container-fluid">
+    <!-- Barra de cabeçalho -->
+    <div class="bar">
+      <!-- Logo -->
+      <div class="logo">...</div>
+      <!-- Links rápidos -->
+      <ul class="quicklinks">...</ul>
+      <!-- Altocontraste -->
+      <button type="button" class="contrast">...</button>
       <!-- Quebra de linha em desktop -->
       <div class="break"></div>
       <!-- Busca geral -->
@@ -43,15 +71,15 @@ Este componente é formado pelos seguintes elementos:
 - `br-header`: container do componente
 - `bar`: agrupador dos elementos internos
 - `logo`: agrupador dos elementos internos
-  - `image`: marca do governo (**somente em sites**)
+  - `image`: _marca do governo_ (**sites**)
   - `name`: nome do órgão ou sistema
   - `description`: _assinatura do órgão ou descrição do sistema (opcional)_
 - `quicklinks`: _links rápidos (opcional)_
-- `language`: seletor de idioma (**somente em sites**)
-- `login`: botão de login (**somente em sites**)
+- `language`: _seletor de idioma_ (**sites**)
+- `login`: _botão de login_ (**sites**)
 - `contrast`: habilitar alto contraste
 - `search`: caixa de busca
-- `user-bar`: barra de usuário autenticado (**sistemas**)
+- `user-bar`: _barra de usuário autenticado_ (**sistemas**)
 - `menu-hamburger`: agrupador dos elementos internos
 
 Alguns dos elementos ficam escondidos dependendo do dispositivo do usuário, por exemplo, em smartphones o Cabeçalho mostra somente **menu-hamburger**, **logo** e **search**, enquanto que em desktop o Cabeçalho é mostrado completo.
@@ -86,15 +114,15 @@ O Logo possui os seguintes sub-elementos:
 
 - `image`: marca do governo (**somente em sites**)
 - `name`: nome do órgão ou sistema
-- `description`: _assinatura do órgão ou descrição do sistema (opcional)_
+- `description`: assinatura do órgão ou descrição do sistema
 
 **Versão para sites**
 
-Nos sites o uso da marca de governo é obrigatória. Ele deve ser incluída dentro de `image`.
+Nos sites o uso da marca de governo é obrigatória. Ele deve ser incluída dentro de `.image`.
 
-`name` é o nome do site, por exemplo "Secretaria Especial de Desestatização e Desinvestimento".
+`.name` é o nome do site, por exemplo "Secretaria Especial de Desestatização e Desinvestimento".
 
-Dentro de `description` deve ser informada a vinculação do site. Se em `name` foi informado "Secretaria Especial de Desestatização e Desinvestimento" então em `description` deve-se colocar "Ministério da Economia". Este elemento é opcional.
+Dentro de `.description` deve ser informada a vinculação do site. Se em `name` foi informado "Secretaria Especial de Desestatização e Desinvestimento" então em `description` deve-se colocar "Ministério da Economia".
 
 Exemplo de uso:
 
@@ -110,9 +138,9 @@ Exemplo de uso:
 
 **Versão para sistemas**
 
-Informe o nome do sistema em `name`.
+Informe o nome do sistema em `.name`.
 
-`description` é opcional.
+Dentro de `.description` deve ser informada a vinculação do sistema.
 
 Exemplo de uso:
 
@@ -176,7 +204,7 @@ Exemplo de uso:
 
 ```html
 <div class="language menu">
-  ...
+  <button class="trigger">...</button>
   <div class="items">
     ...
     <button class="item is-active" type="button">
@@ -344,6 +372,8 @@ Exemplo de uso:
   ...
 </div>
 ```
+
+Caso o usuário não tenha enviado uma imagem de avatar use o ícone comentado no código.
 
 ### `menu-hamburger`
 
