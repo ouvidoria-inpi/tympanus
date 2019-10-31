@@ -139,6 +139,7 @@
       "path": "components/message/message"
     },
     {
+      "isPdf": false, 
       "label": "Modal",
       "path": "components/modal/modal"
     },
