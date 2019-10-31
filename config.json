@@ -144,6 +144,10 @@
       "path": "components/modal/modal"
     },
     {
+      "label": "Navegação",
+      "path": "components/navigation/navigation"
+    },
+    {
       "isPdf": true,
       "label": "Paginação",
       "path": "components/pagination/pagination"

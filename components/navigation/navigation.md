@@ -37,7 +37,7 @@ Exemplo de uso:
 </nav>
 ```
 
-**Uso em sites**
+#### Uso em sites
 
 Para usar o componente em sites adicione `.is-site` ao container.
 
@@ -49,7 +49,7 @@ Exemplo de uso:
 </nav>
 ```
 
-**Uso em sistemas**
+#### Uso em sistemas
 
 Para usar o componente nos sistemas adicione `.is-system` ao container.
 
@@ -65,7 +65,7 @@ Exemplo de uso:
 
 Dentro deste agrupador estão as informações do cabeçalho da navegação. Estas informações ficam **visíveis somente** quando o usuário estiver acessando via **dispositivo móvel** (smartphone ou tablet).
 
-**Uso em sites**
+#### Uso em sites
 
 Em site adicione a **área de logo** e a **opção de voltar a navegação**.
 
@@ -94,7 +94,7 @@ Exemplo de uso:
 </nav>
 ```
 
-**Uso em sistemas**
+#### Uso em sistemas
 
 Em sistemas adicione a **barra de configurações do usuário** e a **opção de voltar a navegação**.
 
@@ -157,7 +157,7 @@ Cada árvore de navegação deverá obdecer a seguinte estrutura:
 
 ![Árvore de navegação em 3 níveis](../../assets/images/components_img/navigation/arvore.png)
 
-**Uso em sites**
+#### Uso em sites
 
 Em sites a árvore de navegação costuma ser o menu principal.
 
@@ -228,7 +228,7 @@ Exemplo de uso com 2 árvores de navegação:
 </nav>
 ```
 
-**Uso em sistemas**
+#### Uso em sistemas
 
 Em sistemas, além da árvore de navegação principal, são incluídos também os menus da **barra de configurações do usuário**.
 
@@ -309,7 +309,7 @@ Exemplo de uso:
 
 Dentro deste agrupador estão os elementos auxiliares na navegação. Dependendo do dispositivo ou resolução do usuário alguns elementos ficam ocultos.
 
-**Uso em sites**
+#### Uso em sites
 
 Estão disponíveis os seguintes elementos:
 
@@ -389,7 +389,7 @@ Exemplo de uso:
 </nav>
 ```
 
-**Uso em sistemas**
+#### Uso em sistemas
 
 Estão disponíveis os seguintes elementos:
 
