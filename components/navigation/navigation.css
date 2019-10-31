@@ -151,17 +151,24 @@
   display: block;
 }
 
-.br-navigation .avatar {
+.br-navigation .user-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.br-navigation .user-bar .avatar {
+  color: #1351b4;
   display: inline-flex;
   font-size: 40px;
   position: relative;
 }
 
-.br-navigation .avatar img {
+.br-navigation .user-bar .avatar img {
   max-width: 40px;
 }
 
-.br-navigation .avatar + .badge {
+.br-navigation .user-bar .avatar + .badge {
   background: #e60000;
   border-radius: 50%;
   color: #ffffff;
@@ -175,28 +182,28 @@
   width: 18px;
 }
 
-.br-navigation .configs .trigger {
+.br-navigation .user-bar .configs .trigger {
   align-items: center;
   background: transparent;
   border: 0;
 }
 
-.br-navigation .configs .items {
+.br-navigation .user-bar .configs .items {
   right: 0;
 }
 
-.br-navigation .configs .items .name {
+.br-navigation .user-bar .configs .items .name {
   font-weight: 600;
   white-space: nowrap;
 }
 
-.br-navigation .configs .items .email {
+.br-navigation .user-bar .configs .items .email {
   font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
 }
 
-.br-navigation .configs .items.is-active::after {
+.br-navigation .user-bar .configs .items.is-active::after {
   border: solid transparent;
   border-bottom-color: #333333;
   border-width: 12px;
@@ -209,7 +216,7 @@
   width: 0;
 }
 
-.br-navigation .bookmarks .trigger {
+.br-navigation .user-bar .bookmarks .trigger {
   align-items: center;
   color: #1351b4;
   display: inline-flex;
@@ -221,12 +228,12 @@
   position: relative;
 }
 
-.br-navigation .bookmarks .trigger:hover {
+.br-navigation .user-bar .bookmarks .trigger:hover {
   color: #2670e8;
   z-index: 1;
 }
 
-.br-navigation .bookmarks .trigger:hover::after {
+.br-navigation .user-bar .bookmarks .trigger:hover::after {
   background: #dbe8fb;
   border-radius: 50%;
   content: "";
@@ -237,12 +244,12 @@
   z-index: -1;
 }
 
-.br-navigation .bookmarks .items {
+.br-navigation .user-bar .bookmarks .items {
   margin: 15px -12px 0 0;
   right: 0;
 }
 
-.br-navigation .bookmarks .items.is-active::after {
+.br-navigation .user-bar .bookmarks .items.is-active::after {
   border: solid transparent;
   border-bottom-color: #333333;
   border-width: 12px;
@@ -255,40 +262,40 @@
   width: 0;
 }
 
-.br-navigation .bookmarks .list {
+.br-navigation .user-bar .bookmarks .list {
   columns: 5;
   padding: 0 16px;
 }
 
-.br-navigation .bookmarks .list .item {
+.br-navigation .user-bar .bookmarks .list .item {
   padding: 0;
 }
 
-.br-navigation .bookmarks .bookmark {
+.br-navigation .user-bar .bookmarks .bookmark {
   display: inline-block;
   margin: 16px 0 0;
 }
 
-.br-navigation .bookmarks .bookmark:hover {
+.br-navigation .user-bar .bookmarks .bookmark:hover {
   text-decoration: none;
 }
 
-.br-navigation .bookmarks .bookmark:hover .brand {
+.br-navigation .user-bar .bookmarks .bookmark:hover .brand {
   border-color: #2670e8;
 }
 
-.br-navigation .bookmarks .bookmark:hover .name {
+.br-navigation .user-bar .bookmarks .bookmark:hover .name {
   color: #2670e8;
 }
 
-.br-navigation .bookmarks .bookmark .brand {
+.br-navigation .user-bar .bookmarks .bookmark .brand {
   background: #f8f8f8;
   border: 1px solid #cccccc;
   height: 42px;
   width: 58px;
 }
 
-.br-navigation .bookmarks .bookmark .name {
+.br-navigation .user-bar .bookmarks .bookmark .name {
   color: #555555;
   display: block;
   font-size: 9px;
@@ -297,7 +304,7 @@
   text-align: center;
 }
 
-.br-navigation .bookmarks .more {
+.br-navigation .user-bar .bookmarks .more {
   font-size: 10px;
   font-weight: 600;
   margin: 16px 0;
@@ -373,7 +380,7 @@
   background: transparent;
   border: 0;
   color: #555555;
-  display: inline-flex;
+  display: flex;
   flex: 1;
   justify-content: space-between;
   padding: 8px 16px;
@@ -392,11 +399,15 @@
 .br-navigation .tree .label {
   box-shadow: inset 0 1px 0 #c5d4eb, inset 0 -1px 0 #c5d4eb;
   color: #1351b4;
-  display: flex;
+  flex-flow: row;
   font-weight: 600;
   margin: 0;
   padding: 8px 16px;
   text-transform: uppercase;
+}
+
+.br-navigation .tree .label .icon {
+  margin-right: 8px;
 }
 
 .br-navigation .tree .label .arrow {
@@ -595,6 +606,7 @@
   background: transparent;
   border: 0;
   display: inline-flex;
+  margin-left: auto;
   position: relative;
 }
 

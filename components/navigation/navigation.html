@@ -29,11 +29,9 @@
       }
     </style>
   </head>
-
   <body>
     <button id="site" type="button">Menu site</button>
     <button id="system" type="button">Menu sistema</button>
-
     <!-- Navegação de site -->
     <nav id="site-nav" class="br-navigation is-site">
       <header class="header">
@@ -245,44 +243,37 @@
         </div>
       </footer>
     </nav>
-
     <!-- Navegação de sistema -->
     <nav id="system-nav" class="br-navigation is-system">
       <header class="header">
         <div class="container">
           <!-- Configurações do usuário -->
-          <div class="row align-items-center no-gutters mx-0">
-            <div class="col">
-              <!-- Configurações do usuário -->
-              <div class="configs menu is-active">
-                <button class="trigger" type="button">
-                  <!-- Avatar do usuário -->
-                  <span class="avatar">
-                    <img src="../../assets/images/avatar.png" alt="Avatar">
-                    <!-- <i class="fas fa-user-circle"></i> -->
-                  </span>
-                  <!-- Notificações -->
-                  <span class="badge">5</span>
-                  <!-- Seta para abrir menu -->
-                  <span class="arrow">
-                    <i class="fas fa-chevron-down"></i>
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div class="col-auto">
-              <!-- Altocontraste -->
-              <button type="button" class="contrast" accesskey="6">
-                <i class="fas fa-adjust fa-lg"></i>
+          <div class="user-bar">
+            <!-- Configurações do usuário -->
+            <div class="configs menu is-active">
+              <button class="trigger" type="button">
+                <!-- Avatar do usuário -->
+                <span class="avatar">
+                  <img src="../../assets/images/avatar.png" alt="Avatar">
+                  <!-- <i class="fas fa-user-circle"></i> -->
+                </span>
+                <!-- Notificações -->
+                <span class="badge">5</span>
+                <!-- Seta para abrir menu -->
+                <span class="arrow">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
               </button>
             </div>
-            <div class="col-auto">
-              <!-- Sistemas favoritos do usuário -->
-              <div class="bookmarks menu">
-                <button class="trigger" type="button">
-                  <i class="fas fa-th-large"></i>
-                </button>
-              </div>
+            <!-- Altocontraste -->
+            <button type="button" class="contrast" accesskey="6">
+              <i class="fas fa-adjust fa-lg"></i>
+            </button>
+            <!-- Sistemas favoritos do usuário -->
+            <div class="bookmarks menu">
+              <button class="trigger" type="button">
+                <i class="fas fa-th-large"></i>
+              </button>
             </div>
           </div>
           <!-- Voltar navegação -->
@@ -296,35 +287,35 @@
         <div class="container">
           <!-- Informações do usuário -->
           <ul class="tree">
-            <li class="title">
+            <li class="item title is-active">
               <strong>Márcia Vinícius Tavares de Almeida</strong>
               <span>marcia-vinicius.almeida@serpro.gov.br</span>
             </li>
-            <li class="label">
-              <i class="fas fa-cog"></i>
-              Configuração/Perfil
+            <li class="item label is-active">
+              <span class="icon"><i class="fas fa-cog"></i></span>
+              <span class="name">Configuração/Perfil</span>
             </li>
             <!-- Lista de configurações -->
-            <li class="item"><a href="">Configuração 01</a></li>
-            <li class="item"><a href="">Configuração 02</a></li>
-            <li class="item"><a href="">Configuração 03</a></li>
+            <li class="item is-active"><a href="">Configuração 01</a></li>
+            <li class="item is-active"><a href="">Configuração 02</a></li>
+            <li class="item is-active"><a href="">Configuração 03</a></li>
           </ul>
           <!-- Favoritos -->
           <ul class="tree">
-            <li class="label">
-              <i class="fas fa-th-large"></i>
-              Sistemas
+            <li class="item label is-active">
+              <span class="icon"><i class="fas fa-th-large"></i></span>
+              <span class="name">Sistemas</span>
             </li>
-            <li class="item"><a href="">Sistema 01</a></li>
-            <li class="item"><a href="">Sistema 02</a></li>
-            <li class="item"><a href="">Sistema 03</a></li>
-            <li class="item"><a href="">Sistema 04</a></li>
-            <li class="item"><a href="">Sistema 05</a></li>
-            <li class="item"><a href="">Sistema 06</a></li>
-            <li class="item"><a href="">Sistema 07</a></li>
-            <li class="item"><a href="">Sistema 08</a></li>
-            <li class="item"><a href="">Sistema 09</a></li>
-            <li class="item"><a href="">Sistema 10</a></li>
+            <li class="item is-active"><a href="">Sistema 01</a></li>
+            <li class="item is-active"><a href="">Sistema 02</a></li>
+            <li class="item is-active"><a href="">Sistema 03</a></li>
+            <li class="item is-active"><a href="">Sistema 04</a></li>
+            <li class="item is-active"><a href="">Sistema 05</a></li>
+            <li class="item is-active"><a href="">Sistema 06</a></li>
+            <li class="item is-active"><a href="">Sistema 07</a></li>
+            <li class="item is-active"><a href="">Sistema 08</a></li>
+            <li class="item is-active"><a href="">Sistema 09</a></li>
+            <li class="item is-active"><a href="">Sistema 10</a></li>
           </ul>
           <!-- Navegação -->
           <ul class="tree is-active">
@@ -393,7 +384,6 @@
         </div>
       </footer>
     </nav>
-
     <script>
       const active = "is-active";
       function toggleNavigation(element) {
