@@ -1,0 +1,14 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+/*!
+ * alert - 0.1.1 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+.#{$prefix}message {
+  @include alert;
+}
