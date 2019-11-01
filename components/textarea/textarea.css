@@ -1,5 +1,14 @@
 /*!
  * divider - 0.2.0 */
+.br-textarea label {
+  font-size: 16px;
+  line-height: normal;
+  color: #333333;
+  font-style: normal;
+  font-weight: 600;
+  font-family: Rawline;
+}
+
 .br-textarea textarea {
   background: #ffffff;
   border: 1px solid #888888;
@@ -37,14 +46,33 @@
   width: 50em;
 }
 
-.br-textarea textarea:focus,
+.br-textarea textarea:focus {
+  border-color: #2670e8;
+  box-shadow: 0 0 0 1px #2670e8;
+  outline: none;
+}
+
+.br-textarea textarea:invalid {
+  border-color: #e60000;
+  box-shadow: 0 0 0 1px #e60000;
+  outline: none;
+}
+
+.br-textarea textarea:disabled {
+  background: #ededed;
+}
+
+.br-textarea textarea:disabled:hover, .br-textarea textarea:disabled:focus {
+  border-color: #888888 !important;
+  box-shadow: none;
+}
+
 .br-textarea.is-focus textarea {
   border-color: #2670e8;
   box-shadow: 0 0 0 1px #2670e8;
   outline: none;
 }
 
-.br-textarea textarea:invalid,
 .br-textarea.is-invalid textarea {
   border-color: #e60000;
   box-shadow: 0 0 0 1px #e60000;
@@ -57,16 +85,13 @@
   outline: none;
 }
 
-.br-textarea textarea:disabled,
 .br-textarea.is-disabled textarea {
   background: #ededed;
 }
 
-.br-textarea textarea:disabled:hover, .br-textarea textarea:disabled:focus,
-.br-textarea.is-disabled textarea:hover,
-.br-textarea.is-disabled textarea:focus {
-  box-shadow: none;
+.br-textarea.is-disabled textarea:hover, .br-textarea.is-disabled textarea:focus {
   border-color: #888888 !important;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=textarea.css.map */

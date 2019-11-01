@@ -7,8 +7,11 @@
   img {
     max-width: 100%;
   }
-  .not-found-title {
+  .not-found-title {    
     @include media-breakpoint-up(sm) {
+      font-size: 48px;
+    }
+    @include media-breakpoint-up(md) {
       font-size: 58px;
     }
     color: $color-primary-lighten-15;
