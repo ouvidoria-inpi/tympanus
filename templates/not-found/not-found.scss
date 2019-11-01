@@ -7,7 +7,7 @@
   img {
     max-width: 100%;
   }
-  .not-found-title {    
+  .not-found-title {
     @include media-breakpoint-up(sm) {
       font-size: 48px;
     }
