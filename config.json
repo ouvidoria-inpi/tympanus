@@ -238,7 +238,7 @@
           "path": "templates/password-recovery/password-recovery-change"
         }
       ],
-      "label": "Recuparação de Senha"
+      "label": "Recuperação de Senha"
     },
     {
       "children": [
@@ -260,6 +260,11 @@
           "isPdf": true,
           "label": "Template base",
           "path": "templates/portal/portal"
+        },
+        {
+          "isPdf": false,
+          "label": "Template crud",
+          "path": "templates/portal/crud"
         }
       ],
       "label": "Sites e portais"
