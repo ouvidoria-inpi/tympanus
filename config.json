@@ -144,6 +144,10 @@
       "path": "components/message/message"
     },
     {
+      "label": "Menu",
+      "path": "components/navigation/navigation"
+    },
+    {
       "label": "Modal",
       "path": "components/modal/modal"
     },
