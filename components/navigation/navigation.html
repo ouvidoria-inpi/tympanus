@@ -29,11 +29,11 @@
     }
   </style>
 </head>
-
 <body>
-  <button id="site" type="button">Menu site</button>
-  <button id="system" type="button">Menu sistema</button>
-
+  <div class="mb-3">
+    <button class="br-button is-tertiary" id="site" type="button">toggle menu site</button>
+    <button class="br-button is-tertiary" id="system" type="button">toggle menu sistema</button>
+  </div>
   <!-- Navegação de site -->
   <nav id="site-nav" class="br-navigation is-site">
     <header class="header">
@@ -245,44 +245,37 @@
       </div>
     </footer>
   </nav>
-
   <!-- Navegação de sistema -->
   <nav id="system-nav" class="br-navigation is-system">
     <header class="header">
       <div class="container">
         <!-- Configurações do usuário -->
-        <div class="row align-items-center no-gutters mx-0">
-          <div class="col">
-            <!-- Configurações do usuário -->
-            <div class="configs menu">
-              <button class="trigger" type="button">
-                <!-- Avatar do usuário -->
-                <span class="avatar">
-                  <img src="../../assets/images/avatar.png" alt="Avatar">
-                  <!-- <i class="fas fa-user-circle"></i> -->
-                </span>
-                <!-- Notificações -->
-                <span class="badge">5</span>
-                <!-- Seta para abrir menu -->
-                <span class="arrow">
-                  <i class="fas fa-chevron-down"></i>
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="col-auto">
-            <!-- Altocontraste -->
-            <button type="button" class="contrast" accesskey="6">
-              <i class="fas fa-adjust fa-lg"></i>
+        <div class="user-bar">
+          <!-- Configurações do usuário -->
+          <div class="configs menu is-active">
+            <button class="trigger" type="button">
+              <!-- Avatar do usuário -->
+              <span class="avatar">
+                <img src="../../assets/images/avatar.png" alt="Avatar">
+                <!-- <i class="fas fa-user-circle"></i> -->
+              </span>
+              <!-- Notificações -->
+              <span class="badge">5</span>
+              <!-- Seta para abrir menu -->
+              <span class="arrow">
+                <i class="fas fa-chevron-down"></i>
+              </span>
             </button>
           </div>
-          <div class="col-auto">
-            <!-- Sistemas favoritos do usuário -->
-            <div class="bookmarks menu">
-              <button class="trigger" type="button">
-                <i class="fas fa-th-large"></i>
-              </button>
-            </div>
+          <!-- Altocontraste -->
+          <button type="button" class="contrast" accesskey="6">
+            <i class="fas fa-adjust fa-lg"></i>
+          </button>
+          <!-- Sistemas favoritos do usuário -->
+          <div class="bookmarks menu">
+            <button class="trigger" type="button">
+              <i class="fas fa-th-large"></i>
+            </button>
           </div>
         </div>
         <!-- Voltar navegação -->
@@ -444,7 +437,6 @@
       </div>
     </footer>
   </nav>
-
   <script>
     const active = "is-active";
     function toggleNavigation(element) {

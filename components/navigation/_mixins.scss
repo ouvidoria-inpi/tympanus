@@ -8,12 +8,8 @@
   @include footer;
   // Menu dropdown
   @include menu;
-  // Avatar do usuário
-  @include user-avatar;
-  // Configurações do usuário
-  @include user-configs;
-  // Favoritos do usuário
-  @include user-bookmarks;
+  // barra do usuário
+  @include user-bar;
   // Logo
   @include logo;
   // Voltar navegação
@@ -198,7 +194,7 @@
       background: transparent;
       border: 0;
       color: $color-gray-6;
-      display: inline-flex;
+      display: flex;
       flex: 1;
       justify-content: space-between;
       padding: $spacing-1 $spacing-3;
@@ -214,11 +210,14 @@
     .label {
       box-shadow: inset 0 1px 0 $color-primary-pastel-2, inset 0 -1px 0 $color-primary-pastel-2;
       color: $color-primary;
-      display: flex;
+      flex-flow: row;
       font-weight: 600;
       margin: 0;
       padding: $spacing-1 $spacing-3;
       text-transform: uppercase;
+      .icon {
+        margin-right: $spacing-1;
+      }
       .arrow {
         align-items: center;
         border-radius: 50%;
@@ -630,6 +629,7 @@
     background: transparent;
     border: 0;
     display: inline-flex;
+    margin-left: auto;
     position: relative;
   }
   // Versão desktop
@@ -640,9 +640,23 @@
   }
 }
 
+@mixin user-bar {
+  .user-bar {
+    // Avatar do usuário
+    @include user-avatar;
+    // Configurações do usuário
+    @include user-configs;
+    // Favoritos do usuário
+    @include user-bookmarks;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 @mixin user-avatar {
   .avatar {
-    // color: $color-primary;
+    color: $color-primary;
     display: inline-flex;
     font-size: 40px;
     position: relative;
