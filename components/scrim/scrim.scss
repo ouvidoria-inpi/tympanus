@@ -27,7 +27,7 @@
   width: auto;
 }
 
-.scrim-inibicao {
+.scrim-inibicao{
   @include scrim ($scrim-color-inib, $scrim-opacity-leg-inib, $scrim-position-leg-inib);
   height: auto;
   width: auto;
