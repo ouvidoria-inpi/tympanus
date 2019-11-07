@@ -61,7 +61,7 @@ Pode ser usado parcial ou totalmente sobre somente um elemento/componente.
 
 ![Scrim Legibilidade Parcial](../../assets/images/components_img/scrim/legibilidade_parcial.png)
 
-![Scrim Legibilidade TOtal](../../assets/images/components_img/scrim/legibilidade_total.png)
+![Scrim Legibilidade Total](../../assets/images/components_img/scrim/legibilidade_total.png)
 
 O scrim recebe as seguintes especificações:
 * **Cor:** #000000
