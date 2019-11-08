@@ -248,7 +248,7 @@
           "path": "templates/page/page"
         },
         {
-          "label": "Exemplo de formulário",
+          "label": "Exemplo de formulário - 1",
           "path": "templates/crud/crud"
         }
       ],
@@ -262,10 +262,26 @@
           "path": "templates/portal/portal"
         },
         {
-          "isPdf": false,
-          "label": "Template crud",
-          "path": "templates/portal/crud"
+          "label": "1 - Tela de Criação (Cadastro)",
+          "path": "templates/crud/crud"
+        },
+        {
+          "label": "2 - Tela de Leitura (Visualização)",
+          "path": "templates/crud/crud-2"
+        },
+        {
+          "label": "3 - Tela de Atualização (Edição)",
+          "path": "templates/crud/crud-3"
+        },
+        {
+          "label": "4 - Tela de Exclusão",
+          "path": "templates/crud/crud-4"
+        },
+        {
+          "label": "5 - Tela de Visualização de Dados Cadastrados",
+          "path": "templates/crud/crud-4"
         }
+        
       ],
       "label": "Sites e portais"
     },

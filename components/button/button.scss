@@ -64,6 +64,32 @@
   &.is-loading {
     @include btn-loading;
   }
+  // Botão de ação flutuante
+  &.is-floating {
+      & svg {
+        display: none;
+      }
+      @include media-breakpoint-down(xs) {
+        bottom: $btn-floating-bottom;
+        color: transparent;
+        &:hover, &:active, &:focus  { 
+          color: transparent;        
+        }
+        height: $btn-floating-size;
+        padding: 0;
+        position: fixed;        
+        right: $btn-floating-right;
+        width: $btn-floating-size;
+        z-index: 1000;
+        & svg {
+            color: $color-white;
+            display: inline-block;
+            left: $btn-floating-svg-pos;
+            position: absolute;
+            top: $btn-floating-svg-pos;
+        }
+      }
+  }
   // Botões lado a lado
   & + & {
     @include media-breakpoint-up(sm) {
