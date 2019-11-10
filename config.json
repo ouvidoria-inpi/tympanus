@@ -266,22 +266,25 @@
           "path": "templates/crud/crud"
         },
         {
-          "label": "2 - Tela de Leitura (Visualização)",
+          "label": "2 - Tela de Filtragem com Colapse",
           "path": "templates/crud/crud-2"
         },
         {
-          "label": "3 - Tela de Atualização (Edição)",
+          "label": "3 - Tela de Pesquisa com Mensagem de Alerta",
           "path": "templates/crud/crud-3"
         },
         {
-          "label": "4 - Tela de Exclusão",
+          "label": "4 - Tela de Busca com Auto-Complete",
           "path": "templates/crud/crud-4"
         },
         {
           "label": "5 - Tela de Visualização de Dados Cadastrados",
           "path": "templates/crud/crud-4"
-        }
-        
+        },
+        {
+          "label": "6 - Tela de Edição de Dados Cadastrados",
+          "path": "templates/crud/crud-5"
+        }        
       ],
       "label": "Sites e portais"
     },
