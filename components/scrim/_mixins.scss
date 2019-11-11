@@ -1,0 +1,22 @@
+@mixin scrim {
+  background-color: $scrim-background-color;
+  &.is-foco {
+    bottom: 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: $scrim-position;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  &.is-inibicao {
+    height: auto;
+    width: auto;
+  }
+  &.is-legibilidade {
+    height: auto;
+    width: auto;
+  }
+}

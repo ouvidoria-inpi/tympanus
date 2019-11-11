@@ -1,0 +1,29 @@
+/*!
+ * scrim - 0.0.0 */
+.br-scrim {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.br-scrim.is-foco {
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.br-scrim.is-inibicao {
+  height: auto;
+  width: auto;
+}
+
+.br-scrim.is-legibilidade {
+  height: auto;
+  width: auto;
+}
+
+/*# sourceMappingURL=scrim.css.map */
