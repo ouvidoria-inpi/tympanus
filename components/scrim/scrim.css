@@ -1,38 +1,52 @@
 /*!
  * scrim - 0.0.0 */
-#scrim-foco {
+.br-scrim {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.br-scrim.is-foco {
   bottom: 0;
+  display: none;
+  height: 100%;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  display: none;
-  height: 100%;
   width: 100%;
   z-index: 2;
 }
 
-.scrim-legibilidade {
-  background-color: rgba(0, 0, 0, 0.64);
-  bottom: 0;
-  left: 0;
-  position: relative;
-  right: 0;
-  top: 0;
-  height: auto;
-  width: auto;
+.br-scrim.is-foco .br-modal {
+  -ms-transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.scrim-inibicao {
-  background-color: rgba(255, 255, 255, 0.64);
-  bottom: 0;
-  left: 0;
+.br-scrim.is-foco.is-active {
+  display: block;
+}
+
+.br-scrim.is-inibicao {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  opacity: 50%;
   position: relative;
-  right: 0;
-  top: 0;
-  height: auto;
-  width: auto;
+  width: 100%;
+}
+
+.br-scrim.is-legibilidade {
+  position: relative;
+}
+
+.br-scrim.is-legibilidade .scrim-text {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  color: #ffffff;
+  left: 0;
+  padding: 1em 0.5em;
+  position: absolute;
+  width: 100%;
 }
 
 /*# sourceMappingURL=scrim.css.map */

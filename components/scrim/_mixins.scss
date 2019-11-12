@@ -1,8 +1,42 @@
-@mixin scrim ($color, $opacity, $position) {
-  background-color: rgba($color, $opacity); // sass-lint:disable-line no-color-literals
-  bottom: 0;
-  left: 0;
-  position: $position;
-  right: 0;
-  top: 0;
+@mixin scrim {
+  background-color: $scrim-background-color;
+  &.is-foco {
+    bottom: 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: $scrim-position;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    .br-modal {
+      -ms-transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.is-active {
+      display: block;
+    }
+  }
+  &.is-inibicao {
+    background: $scrim-background-color;
+    height: 100%;
+    opacity: 50%;
+    position: relative;
+    width: 100%;
+  }
+  &.is-legibilidade {
+    position: relative;
+    .scrim-text {
+      background-color: $scrim-background-color;
+      bottom: 0;
+      color: $scrim-text-color;
+      left: 0;
+      padding: 1em 0.5em;
+      position: absolute;
+      width: 100%;
+    }
+  }
 }

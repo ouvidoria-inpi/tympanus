@@ -1,7 +1,5 @@
-$scrim-opacity-foc: 0.4;
-$scrim-opacity-leg-inib: 0.64;
-$scrim-color-foc-leg: $color-black;
-$scrim-color-inib: $color-white;
-$scrim-position-foc: fixed;
-$scrim-position-leg-inib: relative;
-$scrim-position-inib: absolute;
+$scrim-opacity: 0.4;
+$scrim-color: $color-black;
+$scrim-text-color: $color-white;
+$scrim-position: fixed;
+$scrim-background-color: rgba($scrim-color, $scrim-opacity);
