@@ -1,9 +1,10 @@
 document.getElementById('noclick').style.pointerEvents = 'none';
+scrim = document.getElementsByClassName("is-foco")[0];
 
 function on() {
-    document.getElementsByClassName("is-foco")[0].style.display = "block";
+    scrim.classList.add("is-active");
   }
   
 function off() {
-    document.getElementsByClassName("is-foco")[0].style.display = "none";
+    scrim.classList.remove("is-active");
 }

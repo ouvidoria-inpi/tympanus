@@ -1,5 +1,7 @@
 @mixin scrim {
   background-color: $scrim-background-color;
+  
+
   &.is-foco {
     bottom: 0;
     display: none;
@@ -16,13 +18,28 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
+    &.is-active {
+      display: block;
+    }
   }
   &.is-inibicao {
-    height: auto;
-    width: auto;
+    position: relative;
+    width:100%;
+    height: 100%;
+    background: #fff;
+    opacity: 50%;
+    
   }
   &.is-legibilidade {
-    height: auto;
-    width: auto;
+    position: relative;
+    .scrim-text {
+      color: #fff;
+      position: absolute;
+      background-color: $scrim-background-color;
+      width: 100%;
+      padding: 1em 0.5em;
+      bottom: 0;
+      left: 0;
+    }
   }
 }

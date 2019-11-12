@@ -23,14 +23,30 @@
   transform: translate(-50%, -50%);
 }
 
+.br-scrim.is-foco.is-active {
+  display: block;
+}
+
 .br-scrim.is-inibicao {
-  height: auto;
-  width: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 50%;
 }
 
 .br-scrim.is-legibilidade {
-  height: auto;
-  width: auto;
+  position: relative;
+}
+
+.br-scrim.is-legibilidade .scrim-text {
+  color: #fff;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  padding: 1em 0.5em;
+  bottom: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=scrim.css.map */
