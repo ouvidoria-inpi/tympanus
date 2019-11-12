@@ -3506,6 +3506,7 @@
 .br-scrim.is-foco .br-modal {
   left: 50%;
   top: 50%;
+  -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -3513,7 +3514,7 @@
   display: block;
 }
 .br-scrim.is-inibicao {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.4);
   height: 100%;
   opacity: 50%;
   position: relative;
@@ -3525,7 +3526,7 @@
 .br-scrim.is-legibilidade .scrim-text {
   background-color: rgba(0, 0, 0, 0.4);
   bottom: 0;
-  color: #fff;
+  color: #ffffff;
   left: 0;
   padding: 1em 0.5em;
   position: absolute;

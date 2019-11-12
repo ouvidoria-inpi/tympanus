@@ -40,7 +40,7 @@
     }
     .bloco3 {
       float: left;
-      width: 46%;
+      width: 48%;
       margin: 1%;
       height: 200px;
       font-size: 20px;
@@ -81,14 +81,13 @@
         <div class="scrim-text">Scrim - Legibilidade</div>
       </div>
     </div>
-    <div class="bloco3">
-      <p>Scrim - Inibição (Clicar no texto abaixo)</p>
-      <div onclick="alert('Fui Clicado')">- SEM Scrim Inibição</div>
+    <h3>Scrim - Inibição (Clicar)</h3>
+    <div class="bloco3" onclick="alert('Fui Clicado')">
+    <div>SEM Scrim Inibição</div>
     </div>
-    <div class="br-scrim is-inibicao">
-      <div class="bloco3">
-        <p>Scrim - Inibição (Clicar no texto abaixo)</p>
-        <div onclick="alert('Fui Clicado')" id="noclick">- COM Scrim Inibição</div>
+    <div class="br-scrim is-inibicao" id="noclick">
+      <div class="bloco3" onclick="alert('Fui Clicado')">
+        <div>COM Scrim Inibição</div>
       </div>
     </div>
   </div>

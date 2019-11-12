@@ -28,11 +28,11 @@
 }
 
 .br-scrim.is-inibicao {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  opacity: 50%;
   position: relative;
   width: 100%;
-  height: 100%;
-  background: #fff;
-  opacity: 50%;
 }
 
 .br-scrim.is-legibilidade {
@@ -40,13 +40,13 @@
 }
 
 .br-scrim.is-legibilidade .scrim-text {
-  color: #fff;
-  position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  padding: 1em 0.5em;
   bottom: 0;
+  color: #ffffff;
   left: 0;
+  padding: 1em 0.5em;
+  position: absolute;
+  width: 100%;
 }
 
 /*# sourceMappingURL=scrim.css.map */
