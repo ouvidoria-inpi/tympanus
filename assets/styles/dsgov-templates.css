@@ -1728,6 +1728,10 @@
 }
 
 
+.br-search .br-input {
+  width: 100%;
+}
+
 .result-list {
   padding: 24px;
 }

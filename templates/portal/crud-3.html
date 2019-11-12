@@ -322,73 +322,79 @@
     <main id="content" class="page-content">
       <div class="container">
         <h1 class="main-title d-flex justify-content-xs-center">Título da Tela de Crud</h1>
-        <div class="br-form">
+        <div class="d-flex justify-content-between mb-3 align-items-center">
           <p class="d-flex justify-content-xs-center">Preencha os campos abaixo e filtre para acessar os dados
             pesquisados</p>
-          <div class="br-filter">
-            <ul>
-              <li>Filtro 1</li>
-              <li>Filtro 2</li>
-            </ul>
-          </div>
-          <div class="d-flex justify-content-end mb-3 align-items-center">
-            <button class="br-button is-call-to-action is-floating" type="button">
-              Adicionar
-              <span class="fas fa-plus"></span>
-            </button>
-          </div>
-          <p class="label">Título do Crud</p>
-                   
-          <div class="field">
-            <p class="label">Título da Tabela</p>
-            <div class="br-table">
-              <div class="col-sm">
-                <table style="width:100%">
-                  <tr>
-                    <th>Coluna 1</th>
-                    <th>Coluna 2</th>
-                    <th>Coluna 3</th>
-                    <th>Coluna 4</th>
-                    <th>Coluna 5</th>
-                    <th>Ações</th>
-                  </tr>                  
-                </table>
-                <p class="mt-10"><strong>Dados não encontrados.</strong> Não foram encontrados dados suficientes para serem exibidos.</p>
+          <button class="br-button is-call-to-action is-floating" type="button">
+            Adicionar
+            <span class="fas fa-plus"></span>
+          </button>
+        </div>
+
+        <div class="field mb-10">
+          <div class="col-sm">
+            <div class="br-search">
+              <div class="br-input has-icon">
+                <label for="search-autocomplete">Label</label>
+                <input id="search-autocomplete" type="text" placeholder="Exemplo de placeholder grande para campo">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
               </div>
             </div>
           </div>
         </div>
-        <!-- Voltar ao topo -->
-        <div class="text-right">
-          <hr>
-          <button class="br-button is-go-top" type="button">
-            Voltar ao topo
-            <span class="br-button is-circle is-primary">
-              <i class="fas fa-chevron-up"></i>
-            </span>
-          </button>
-          <hr>
-        </div>
-        <!-- Lincença e reportar erro -->
-        <div class="row">
-          <!-- Licença -->
-          <div class="col-sm">
-            <p class="license">
-              Todo o conteúdo deste site está publicado sob a licença <a
-                href="https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR">Creative Commons
-                Atribuição-SemDerivações
-                3.0 Não Adaptada</a>.
-            </p>
-          </div>
-          <!-- Reportar erro -->
-          <div class="col-sm-auto">
-            <p class="report-error">
-              <a href="" class="text-uppercase">Reportar erro</a>
-            </p>
+        <div class="field">
+          <p class="label">Título da Tabela</p>
+          <div class="br-table">
+            <div class="col-sm">
+              <table style="width:100%">
+                <tr>
+                  <th>Coluna 1</th>
+                  <th>Coluna 2</th>
+                  <th>Coluna 3</th>
+                  <th>Coluna 4</th>
+                  <th>Coluna 5</th>
+                  <th>Ações</th>
+                </tr>
+              </table>
+              <p class="mt-10"><strong>Dados não encontrados.</strong> Não foram encontrados dados suficientes para
+                serem exibidos.</p>
+            </div>
           </div>
         </div>
       </div>
-    </main>
+      <!-- Voltar ao topo -->
+      <div class="text-right">
+        <hr>
+        <button class="br-button is-go-top" type="button">
+          Voltar ao topo
+          <span class="br-button is-circle is-primary">
+            <i class="fas fa-chevron-up"></i>
+          </span>
+        </button>
+        <hr>
+      </div>
+      <!-- Lincença e reportar erro -->
+      <div class="row">
+        <!-- Licença -->
+        <div class="col-sm">
+          <p class="license">
+            Todo o conteúdo deste site está publicado sob a licença <a
+              href="https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR">Creative Commons
+              Atribuição-SemDerivações
+              3.0 Não Adaptada</a>.
+          </p>
+        </div>
+        <!-- Reportar erro -->
+        <div class="col-sm-auto">
+          <p class="report-error">
+            <a href="" class="text-uppercase">Reportar erro</a>
+          </p>
+        </div>
+      </div>
+  </div>
+  </main>
   </div>
   <!-- Rodapé de governo -->
   <footer id="footer" class="page-footer">

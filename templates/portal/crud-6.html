@@ -322,109 +322,97 @@
     <main id="content" class="page-content">
       <div class="container">
         <h1 class="main-title d-flex justify-content-xs-center">Título da Tela de Crud</h1>
-        <div class="d-flex justify-content-between mb-3 align-items-center">
-          <p class="d-flex justify-content-xs-center">Preencha os campos abaixo e filtre para acessar os dados
-            pesquisados</p>
-          <button class="br-button is-call-to-action is-floating" type="button">
-            Adicionar
-            <span class="fas fa-plus"></span>
+        <div class="br-form">
+          <div class="d-flex justify-content-between mb-3 align-items-center">
+            <p class="d-flex justify-content-xs-center">Preencha os campos abaixo e filtre para acessar os dados
+              pesquisados</p>
+          </div>
+          <h2>Identificação do Trabalhador</h2>
+          <div class="field mt-5">
+            <div class="row">
+              <div class="col-4">
+                <div class="br-input is-focus">
+                  <label for="focus">CPF</label>
+                  <input id="focus" type="text" placeholder="Insira um texto" value="053.97">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="br-input">
+                    <label for="focus">Exemplo de label grande para input de texto</label>
+                  <input id="simples" type="text" placeholder="Exemplo de placeholder grande para campo">
+                </div>
+              </div>
+              <div class="col-4">
+                <p class="label">Primeiro Emprego?</p>
+                <div class="br-check d-sm-inline-block">
+                  <input name="sim" type="radio" id="sim" checked="true">
+                  <label for="sim">Sim</label>
+                </div>
+                <div class="br-check mt-1 d-sm-inline-block ml-md-7 ml-xs-7 mt-sm-0">
+                  <input name="nao" type="radio" id="nao" checked="">
+                  <label for="nao">Não</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="row">
+              <div class="col-4">
+                <div class="br-input is-invalid">
+                  <label for="invalido">Exemplo de label grande para input de texto</label>
+                  <input id="invalido" type="text" placeholder="Exemplo de placeholder grande para campo">
+                </div>
+                <div class="feedback">
+                  <i class="fas fa-times-circle"></i>
+                  <span class="message">Informação incorreta</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="br-select">
+                  <label>Exemplo de label grande para input de texto</label>
+                  <button class="select-selected unselected"><span>Exemplo de placeholder grande para campo</span><i
+                      class="fas fa-chevron-down"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="actions justify-content-start">
+            <button class="br-button is-primary">Adicionar</button>
+            <button class="br-button is-secondary" type="button">Limpar</button>
+            <button class="br-button is-cancel" type="button">Cancelar</button>
+          </div>
+        </div>
+        <!-- Voltar ao topo -->
+        <div class="text-right">
+          <hr>
+          <button class="br-button is-go-top" type="button">
+            Voltar ao topo
+            <span class="br-button is-circle is-primary">
+              <i class="fas fa-chevron-up"></i>
+            </span>
           </button>
+          <hr>
         </div>
-
-        <div class="field mb-10">
+        <!-- Lincença e reportar erro -->
+        <div class="row">
+          <!-- Licença -->
           <div class="col-sm">
-            <div class="br-search">
-              <div class="br-input has-icon">
-                <label for="search-autocomplete">Label</label>
-                <input id="search-autocomplete" type="text" placeholder="Exemplo de placeholder grande para campo">
-                <span class="icon">
-                  <i class="fas fa-search"></i>
-                </span>
-              </div>
-            </div>
+            <p class="license">
+              Todo o conteúdo deste site está publicado sob a licença <a
+                href="https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR">Creative Commons
+                Atribuição-SemDerivações
+                3.0 Não Adaptada</a>.
+            </p>
+          </div>
+          <!-- Reportar erro -->
+          <div class="col-sm-auto">
+            <p class="report-error">
+              <a href="" class="text-uppercase">Reportar erro</a>
+            </p>
           </div>
         </div>
-        <div class="field">
-            <p class="label">Título da Tabela</p>
-            <div class="br-table">
-              <div class="col-sm">
-                <table style="width:100%">
-                  <tr>
-                    <th>Coluna 1</th>
-                    <th>Coluna 2</th>
-                    <th>Coluna 3</th>
-                    <th>Coluna 4</th>
-                    <th>Coluna 5</th>
-                    <th>Ações</th>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum</td>
-                    <td>100%</td>
-                    <td>0</td>
-                    <td>Lorem ipsum</td>
-                    <td>Lorem ipsum</td>
-                    <td>Ações</td>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum</td>
-                    <td>100%</td>
-                    <td>0</td>
-                    <td>Lorem ipsum</td>
-                    <td>Lorem ipsum</td>
-                    <td>Ações</td>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum</td>
-                    <td>100%</td>
-                    <td>0</td>
-                    <td>Lorem ipsum</td>
-                    <td>Lorem ipsum</td>
-                    <td>Ações</td>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum</td>
-                    <td>100%</td>
-                    <td>0</td>
-                    <td>Lorem ipsum</td>
-                    <td>Lorem ipsum</td>
-                    <td>Ações</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
       </div>
-      <!-- Voltar ao topo -->
-      <div class="text-right">
-        <hr>
-        <button class="br-button is-go-top" type="button">
-          Voltar ao topo
-          <span class="br-button is-circle is-primary">
-            <i class="fas fa-chevron-up"></i>
-          </span>
-        </button>
-        <hr>
-      </div>
-      <!-- Lincença e reportar erro -->
-      <div class="row">
-        <!-- Licença -->
-        <div class="col-sm">
-          <p class="license">
-            Todo o conteúdo deste site está publicado sob a licença <a
-              href="https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR">Creative Commons
-              Atribuição-SemDerivações
-              3.0 Não Adaptada</a>.
-          </p>
-        </div>
-        <!-- Reportar erro -->
-        <div class="col-sm-auto">
-          <p class="report-error">
-            <a href="" class="text-uppercase">Reportar erro</a>
-          </p>
-        </div>
-      </div>
-  </div>
-  </main>
+    </main>
   </div>
   <!-- Rodapé de governo -->
   <footer id="footer" class="page-footer">

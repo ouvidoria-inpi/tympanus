@@ -139,7 +139,7 @@
       "path": "components/message/message"
     },
     {
-      "isPdf": false, 
+      "isPdf": false,
       "label": "Modal",
       "path": "components/modal/modal"
     },
@@ -260,7 +260,12 @@
           "isPdf": true,
           "label": "Template base",
           "path": "templates/portal/portal"
-        },
+        }
+      ],
+      "label": "Sites e portais"
+    },
+    {
+      "children": [
         {
           "label": "1 - Tela de Criação (Cadastro)",
           "path": "templates/crud/crud"
@@ -279,14 +284,14 @@
         },
         {
           "label": "5 - Tela de Visualização de Dados Cadastrados",
-          "path": "templates/crud/crud-4"
+          "path": "templates/crud/crud-5"
         },
         {
           "label": "6 - Tela de Edição de Dados Cadastrados",
-          "path": "templates/crud/crud-5"
-        }        
+          "path": "templates/crud/crud-6"
+        }
       ],
-      "label": "Sites e portais"
+      "label": "Template CRUD para Portais"
     },
     {
       "children": [
