@@ -3503,6 +3503,13 @@
   width: 100%;
   z-index: 2;
 }
+.br-scrim.is-foco .br-modal {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .br-scrim.is-inibicao {
   height: auto;
   width: auto;

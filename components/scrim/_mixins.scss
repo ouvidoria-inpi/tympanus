@@ -10,6 +10,12 @@
     top: 0;
     width: 100%;
     z-index: 2;
+    .br-modal {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+    }
   }
   &.is-inibicao {
     height: auto;
