@@ -1,4 +1,4 @@
-## Scrim
+# Scrim
 
 Use para redirecionar a atenção do usuário para outras partes ou elementos da tela.
 Podem existir vários scrims ativos na mesma tela. 
