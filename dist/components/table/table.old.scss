@@ -1,0 +1,24 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+/*!
+ * table - 0.2.2 */
+
+// Carregar dependências
+@import "../button/configs";
+@import "../button/mixins";
+@import "../checkbox/configs";
+@import "../checkbox/mixins";
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+.#{$prefix}table {
+  @include table;
+  @include table-caption;
+  @include table-row-actions;
+  @include table-length;
+  .table {
+    overflow-x: auto;
+  }
+}

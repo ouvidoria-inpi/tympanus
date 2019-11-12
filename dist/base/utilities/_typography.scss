@@ -1,0 +1,67 @@
+// Texto padrão
+body {
+  color: $font-system-default-text-color;
+  font-family: $font-system-default-text-font-family;
+  font-size: $font-system-default-text-font-size;
+  font-weight: $font-system-default-text-font-weight;
+}
+
+.page-content {
+  // Links na área de conteúdo
+  a {
+    text-decoration: underline;
+  }
+}
+
+// Título principal - aplicar preferencialmente em <h1>
+.main-title,
+.portal-title,
+.h1,
+.title-1 {
+  @include font-title-registration-login;
+  margin: $spacing-7 0;
+}
+
+// Título 2
+.portal-big-news-title,
+.h2,
+.title-2 {
+  color: $color-primary;
+  font-size: 24px;
+  font-weight: 500;
+  margin: $spacing-7 0;
+}
+
+// Subtítulo 1
+.portal-small-news-title,
+.subtitle-1,
+.portal-big-news,
+.portal-feature-news {
+  color: $color-primary;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+// Subtítulo 2
+.subtitle-2 {
+  color: $color-primary;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+// Rótulos - aplicar preferencialmente em <label>
+.label {
+  @include font-input-label;
+  margin-bottom: $spacing-3;
+}
+
+// Agrupador de formulário - aplicar preferencialmente em <legend> de <fieldset>
+fieldset legend, // sass-lint:disable-line force-element-nesting
+.fieldset {
+  color: $color-primary;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 24px 0;
+}

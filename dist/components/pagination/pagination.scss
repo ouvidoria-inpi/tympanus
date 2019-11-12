@@ -1,0 +1,18 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+/*!
+ * pagination - 0.1.3 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+.#{$prefix}pagination {
+  @include pagination;
+  // Variações de tamanho
+  &.is-large {
+    @include pagination(lg);
+  }
+}

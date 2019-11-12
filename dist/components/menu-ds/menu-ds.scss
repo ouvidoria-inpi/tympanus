@@ -1,0 +1,106 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+.ds-menu-lateral {
+  background: $color-white;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  // Item pode ser link ou botão
+  a,
+  button {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
+    flex: 1;
+    font-weight: 400;
+    padding: $spacing-1 $spacing-3;
+    text-align: left;
+    width: 100%;
+    &:hover {
+      background: $color-primary-pastel-1;
+      text-decoration: none;
+    }
+  }
+  // Botões possuem subitens
+  button {
+    align-items: center;
+    display: flex;
+    &::after {
+      border-color: $color-primary;
+      border-style: solid;
+      border-width: 2px 2px 0 0;
+      content: "";
+      height: $spacing-1;
+      margin-left: auto;
+      margin-right: $spacing-half;
+      transform: rotate(135deg);
+      width: $spacing-1;
+    }
+  }
+  // Item de menu
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  // Primeiro nível
+  .level-1 {
+    .menu-item {
+      border-bottom: 1px solid $color-gray-3;
+      // Remover borda do último item
+      &:last-child {
+        border: 0 !important;
+      }
+    }
+    .submenu {
+      border-top: 1px solid $color-gray-3;
+    }
+    a,
+    button {
+      border: 0;
+      color: $color-gray-7;
+      font-size: 16px;
+      font-weight: 400;
+      padding-left: $spacing-3;
+    }
+    button {
+      &::after {
+        border-color: $color-gray-5;
+      }
+    }
+  }
+  // Segundo nível
+  .level-2 {
+    a,
+    button {
+      border: 0;
+      font-weight: 400;
+      padding-left: $spacing-7;
+    }
+  }
+  // Menu aberto
+  .is-open {
+    &::after {
+      margin-top: 8px;
+      transform: rotate(315deg);
+    }
+    & + .submenu {
+      display: block;
+    }
+  }
+  // Submenu só aparece quando pai estiver ativo
+  .submenu {
+    // border-top: 2px solid $color-secondary;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  // Item ativo
+  .is-active {
+    background: $color-primary-lighten-15 !important;
+    color: $color-white !important;
+  }
+}

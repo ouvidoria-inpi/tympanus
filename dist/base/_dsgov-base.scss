@@ -1,0 +1,22 @@
+// Atenção!
+// --------
+// Este arquivo tem a finalidade de carregar apenas variáveis, portanto não
+// carregue nenhum código que irá gerar CSS.
+// Use o arquivo assets/styles/dsgov-base.scss para gerar código CSS.
+// Design Tokens
+@import "tokens";
+// Base DS-Gov
+@import "configs/fonts";
+@import "configs/typography";
+@import "configs/colors";
+@import "configs/spacing";
+@import "configs/grid";
+@import "configs/prefix";
+// Mixins DS-Gov
+@import "mixins/fonts";
+@import "mixins/colors";
+// Depedências Bootstrap
+
+@import "node_modules/~bootstrap/scss/functions";
+@import "node_modules/~bootstrap/scss/variables";
+@import "node_modules/~bootstrap/scss/mixins";

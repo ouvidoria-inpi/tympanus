@@ -1,0 +1,122 @@
+@mixin pagination($size: md) {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: $pagination-margin;
+  padding: 0;
+  li {
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+    display: none;
+    @if ($size == lg) {
+      @include media-breakpoint-up(sm) {
+        font-size: $pagination-font-size-lg;
+      }
+      font-size: $pagination-font-size;
+    } @else {
+      font-size: $pagination-font-size;
+    }
+    list-style: none;
+    margin: 0;
+    &:first-child,
+    &:last-child {
+      a {
+        padding: 0;
+      }
+    }
+  }
+  a {
+    align-items: center;
+    color: $pagination-link;
+    display: flex;
+    font-weight: $pagination-font-weight;
+    justify-content: center;
+    @if ($size == lg) {
+      @include media-breakpoint-up(sm) {
+        padding: 0 $pagination-padding-lg;
+      }
+      padding: 0 $pagination-padding;
+    } @else {
+      padding: 0 $pagination-padding;
+    }
+    position: relative;
+    text-decoration: none !important;
+    &:hover {
+      text-decoration: none;
+      &::before {
+        background-color: $pagination-hover;
+      }
+    }
+    &::before {
+      background: transparent;
+      border-radius: 50%;
+      content: "";
+      @if ($size == lg) {
+        @include media-breakpoint-up(sm) {
+          height: $pagination-circle-lg;
+          width: $pagination-circle-lg;
+        }
+        height: $pagination-circle;
+        width: $pagination-circle;
+      } @else {
+        height: $pagination-circle;
+        width: $pagination-circle;
+      }
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translate(-50%, 0);
+      z-index: 0;
+    }
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .is-active {
+    a {
+      color: $color-white;
+      &::before {
+        background-color: $pagination-link;
+      }
+    }
+  }
+  .is-first,
+  .is-last {
+    display: block;
+    a {
+      &::before {
+        content: none;
+      }
+    }
+    i {
+      &:first-child {
+        margin-right: $spacing-1;
+      }
+      &:last-child {
+        margin-left: $spacing-1;
+      }
+    }
+    span {
+      border-radius: 100px;
+      padding: $spacing-half $spacing-1;
+    }
+    &:not(.is-disabled) {
+      a {
+        &:hover {
+          span {
+            background: $pagination-hover;
+            color: $pagination-link;
+          }
+        }
+      }
+    }
+  }
+  .is-disabled {
+    a {
+      color: $pagination-text;
+      cursor: default;
+    }
+  }
+}

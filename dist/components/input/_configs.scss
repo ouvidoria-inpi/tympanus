@@ -1,0 +1,38 @@
+// Definições
+$input-font-size: 16px;
+$input-font-weight: 600;
+
+$input-padding: $spacing-3;
+
+$input-border-color: $color-gray-5;
+$input-border-width: 1px;
+$input-border-style: solid;
+$input-radius: 6px;
+
+$input-bg: $color-white;
+$input-bg-disabled: $color-gray-2;
+$input-color: $font-system-default-text-color;
+
+$placeholder-font-size: 13px;
+$placeholder-font-style: italic;
+
+// Tamanhos
+$input-height-default: 48px;
+$input-height-medium: 40px;
+$input-height-small: 32px;
+
+// Input com botão de ação
+$action-icon-size: 24px;
+$action-padding: $spacing-3;
+
+// Input com autocomplete
+$autocomplete-bg: $input-bg;
+$autocomplete-item-padding: $input-padding;
+$autocomplete-item-hover: $color-primary-pastel-1;
+$autocomplete-item-active: $color-primary-pastel-1;
+
+// Mensagem de feedback
+$feedback-padding: $spacing-half;
+$feedback-font-size: 13px;
+$feedback-font-style: italic;
+$feedback-font-weight: 500;
