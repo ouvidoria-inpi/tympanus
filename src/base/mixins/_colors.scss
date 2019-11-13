@@ -11,3 +11,10 @@
     color: $value !important;
   }
 }
+
+// Criar cores de bordas
+@mixin border-colors($name, $value) {
+  #{$name} {
+    border-color: $value !important;
+  }
+}
