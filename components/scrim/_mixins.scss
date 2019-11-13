@@ -21,11 +21,15 @@
     }
   }
   &.is-inibicao {
-    background: $scrim-background-color-inibicao;
-    height: 100%;
-    opacity: 50%;
     position: relative;
-    width: 100%;
+    .scrim {
+      background: $scrim-background-color-inibicao;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
   }
   &.is-legibilidade {
     position: relative;

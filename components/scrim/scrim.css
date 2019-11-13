@@ -25,10 +25,15 @@
 }
 
 .br-scrim.is-inibicao {
+  position: relative;
+}
+
+.br-scrim.is-inibicao .scrim {
   background: rgba(255, 255, 255, 0.64);
   height: 100%;
-  opacity: 50%;
-  position: relative;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
 }
 
