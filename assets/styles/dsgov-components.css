@@ -3485,10 +3485,8 @@
 
 /*!
  * scrim - 0.0.0 */
-.br-scrim {
-  background-color: rgba(0, 0, 0, 0.4);
-}
 .br-scrim.is-foco {
+  background-color: rgba(0, 0, 0, 0.4);
   bottom: 0;
   display: none;
   height: 100%;
@@ -3509,18 +3507,20 @@
 .br-scrim.is-foco.is-active {
   display: block;
 }
+
 .br-scrim.is-inibicao {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.64);
   height: 100%;
   opacity: 50%;
   position: relative;
   width: 100%;
 }
+
 .br-scrim.is-legibilidade {
   position: relative;
 }
 .br-scrim.is-legibilidade .scrim-text {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.64);
   bottom: 0;
   color: #ffffff;
   left: 0;

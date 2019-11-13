@@ -1,11 +1,11 @@
 @mixin scrim {
-  background-color: $scrim-background-color;
   &.is-foco {
+    background-color: $scrim-background-color-foco;
     bottom: 0;
     display: none;
     height: 100%;
     left: 0;
-    position: $scrim-position;
+    position: fixed;
     right: 0;
     top: 0;
     width: 100%;
@@ -21,7 +21,7 @@
     }
   }
   &.is-inibicao {
-    background: $scrim-background-color;
+    background: $scrim-background-color-inibicao;
     height: 100%;
     opacity: 50%;
     position: relative;
@@ -30,7 +30,7 @@
   &.is-legibilidade {
     position: relative;
     .scrim-text {
-      background-color: $scrim-background-color;
+      background-color: $scrim-background-color-legibilidade;
       bottom: 0;
       color: $scrim-text-color;
       left: 0;
