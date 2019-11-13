@@ -1,22 +1,15 @@
-// Sobrescrita de Spacing do _variables.scss do Bootstrap
+// Espaçamentos seguem a regra da grid8p
 
-// As espaçamentos estão no arquivo _tokens.scss
-// Cada espaçamento DEVE possuir respectiva variável no mapa $spacers
-
-$spacer: $spacing-1;
+$spacer: 8px;
 $spacer-half: $spacer / 2;
+$spacer-variations: 30;
 
 $spacers: (
   0: 0,
-  1: $spacing-1,
-  2: $spacing-2,
-  3: $spacing-3,
-  4: $spacing-4,
-  5: $spacing-5,
-  6: $spacing-6,
-  7: $spacing-7,
-  8: $spacing-8,
-  9: $spacing-9,
-  10: $spacing-10,
-  half: $spacer-half
+  h: $spacer-half
 );
+
+// Incluir os intervalos de espaçamento de $spacer + $spacer-half
+@for $i from 0 through $spacer-variations {
+  $spacers: map-merge(($i + 1: $spacer + $spacer-half * $i), $spacers);
+}
