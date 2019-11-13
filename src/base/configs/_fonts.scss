@@ -1,3 +1,7 @@
 // Fonte Rawline
-$rawline-directory: "../../assets/fonts/rawline";
+@import "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css";
 $rawline: "rawline";
+
+// Fonte Raleway
+@import "https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap";
+$raleway: "Raleway";
