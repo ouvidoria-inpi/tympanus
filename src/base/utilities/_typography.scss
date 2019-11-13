@@ -1,13 +1,5 @@
-// Texto padrão
-body {
-  color: $font-system-default-text-color;
-  font-family: $font-system-default-text-font-family;
-  font-size: $font-system-default-text-font-size;
-  font-weight: $font-system-default-text-font-weight;
-}
-
+// Links na área de conteúdo
 .page-content {
-  // Links na área de conteúdo
   a {
     text-decoration: underline;
   }
@@ -18,18 +10,23 @@ body {
 .portal-title,
 .h1,
 .title-1 {
-  @include font-title-registration-login;
-  margin: $spacing-7 0;
+  color: $headings-color;
+  font-family: $headings-font-family;
+  font-size: $h1-font-size;
+  font-weight: 500;
+  line-height: $headings-line-height;
+  margin-bottom: $headings-margin-bottom;
 }
 
 // Título 2
 .portal-big-news-title,
 .h2,
 .title-2 {
-  color: $color-primary;
-  font-size: 24px;
+  color: $headings-color;
+  font-size: $h2-font-size;
   font-weight: 500;
-  margin: $spacing-7 0;
+  line-height: $headings-line-height;
+  margin: $headings-margin-bottom;
 }
 
 // Subtítulo 1
@@ -37,31 +34,32 @@ body {
 .subtitle-1,
 .portal-big-news,
 .portal-feature-news {
-  color: $color-primary;
-  font-size: 20px;
+  color: $headings-color;
+  font-size: $h3-font-size;
   font-weight: 500;
   margin-bottom: 0;
 }
 
 // Subtítulo 2
 .subtitle-2 {
-  color: $color-primary;
-  font-size: 18px;
+  color: $headings-color;
+  font-size: $h4-font-size;
   font-weight: 600;
   margin-bottom: 0;
 }
 
 // Rótulos - aplicar preferencialmente em <label>
 .label {
-  @include font-input-label;
-  margin-bottom: $spacing-3;
+  color: $label-color;
+  font-weight: $label-font-size;
+  margin-bottom: $label-margin-bottom;
 }
 
 // Agrupador de formulário - aplicar preferencialmente em <legend> de <fieldset>
 fieldset legend, // sass-lint:disable-line force-element-nesting
 .fieldset {
-  color: $color-primary;
-  font-size: 22px;
-  font-weight: 400;
-  margin: 24px 0;
+  color: $fieldset-color;
+  font-size: $fieldset-font-size;
+  font-weight: $fieldset-font-weight;
+  margin-bottom: $fieldset-margin-bottom;
 }

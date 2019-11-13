@@ -1,18 +1,41 @@
-// Sobrescrita de Typography, Body e Links do _variables.scss do Bootstrap
+// Configuração da tipografia do design system
 
 // Família de fontes padrão
-$font-family-base: $rawline, sans-serif;
+$font-family-base: "Rawline", "Raleway", sans-serif;
 
-// Textos e títulos
+// Body
 $body-color: $color-gray-6;
-$font-weight-base: $font-system-default-text-font-weight;
-$headings-color: $color-primary;
+$font-size-base: 1rem; // 16px
+$font-weight-base: 400;
 
 // links
 $link-color: $color-primary;
-$link-hover-color: $color-primary-lighten-15;
+$link-hover-color: $color-primary-lighten-2;
 
-// hr
-$hr-color: $color-gray-3;
-$hr-height: 1px;
-$hr-margin-y: $spacing-3;
+// Títulos
+$headings-color: $color-primary;
+$headings-line-height: 1.5;
+$headings-margin-bottom: $spacer * 5;
+
+$h1-font-size: $font-size-base * 2.25; // 36px
+$h2-font-size: $font-size-base * 1.5; // 24px
+$h3-font-size: $font-size-base * 1.25; // 20px
+$h4-font-size: $font-size-base * 1.125; // 18px
+$h5-font-size: $font-size-base;
+$h6-font-size: $font-size-base;
+
+// Formulários
+$label-color: $color-gray-7;
+$label-font-size: $font-size-base;
+$label-margin-bottom: $spacer * 2;
+
+$input-color: $body-color;
+$input-font-size: $font-size-base;
+
+$placeholder-color: $input-color;
+$placeholder-font-size: $font-size-base * 0.875; // 14px
+
+$fieldset-color: $color-primary;
+$fieldset-font-size: $font-size-base * 1.375; // 22px
+$fieldset-font-weight: $font-weight-base;
+$fieldset-margin-bottom: $spacer * 3; // 24px
