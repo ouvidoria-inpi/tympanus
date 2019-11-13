@@ -5,8 +5,12 @@ function openModal(div) {
     scrim.classList.add("is-active");
 }
 
+function openModalId(id) {
+    scrim = document.getElementById(id);
+    scrim.classList.add("is-active");
+}
+
 function closeModal() {
-    scrim.innerHTML = "";
     scrim.classList.remove("is-active");
 }
 
