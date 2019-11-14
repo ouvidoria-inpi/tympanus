@@ -74,7 +74,7 @@ Exemplo de uso:
 
 Usados como overlay para melhorar constraste do texto sobre qualquer superfície, seja ela imagem ou não.
 
-A legibilidade do texto deve ser feita com o uso da classe `scrim-text`, que se encarregará de dar cor e posicionar o texto corretamente na tela. 
+A legibilidade do texto deve ser feita com o uso da classe `scrim-text`, que se encarregará de posicionar o texto corretamente na tela. 
 
 Exemplo de uso:
 ```html
@@ -97,7 +97,7 @@ Exemplo de uso:
 ```html
 <div class="br-scrim is-inibicao">
   <div onclick="alert('Fui Clicado')">
-    COM Scrim Inibição
+    Com Scrim Inibição
   </div>
 </div>
 ```

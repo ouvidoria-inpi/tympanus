@@ -10,7 +10,7 @@
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 999;
 }
 
 .br-scrim.is-foco .br-modal {
@@ -45,7 +45,6 @@
 .br-scrim.is-legibilidade .scrim-text {
   background-color: rgba(0, 0, 0, 0.64);
   bottom: 0;
-  color: #ffffff;
   left: 0;
   padding: 1em 0.5em;
   position: absolute;
