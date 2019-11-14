@@ -1,86 +1,161 @@
 # Tipografia
 
-Para a apresentação de todo o conteúdo dos novos sites do Governo Federal, somente uma família de fonte é utilizada e indicada no Guia de Estilos do Governo Federal, - A Raleway. Porém, optou-se pela substituição desta fonte pela **Rawline**, já que ambas são iguais porém os caracteres numéricos da Rawline são alinhados pela base o que facilita a leitura.
+## Rawline
 
-A Rawline foi escolhida para compor o Design System do Governo Brasileiro, tendo como objetivo: facilitar o reconhecimento, por parte dos cidadãos, dos produtos do Governo Federal, juntamente com o padrão de cores e elementos gráficos definidos no Design System.
+Para a apresentação dos elementos textuais do Design System do Governo Federal, somente uma família de fonte é utilizada: a **Rawline**. Sua escolha foi feita devido à diversidade de pesos da fonte que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
 
-A Rawline é um tipo de letra sem serifa, elegante concebido com um único peso fino e que possui uma diversidade de pesos que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
+A utilização da Rawline tem como objetivo facilitar o reconhecimento, pelos cidadãos, dos produtos do Governo Federal, juntamente com o padrão de cores e elementos gráficos definidos no Design System.
 
-A Rawline pode ser baixada em [https://h-ibaldo.github.io/Raleway_Fixed_Numerals/](https://h-ibaldo.github.io/Raleway_Fixed_Numerals/)
+A Rawline está disponível em https://h-ibaldo.github.io/Raleway_Fixed_Numerals/
 
-## Números | Alinhamento
+---
 
-Verificou-se que a fonte Raleway possui uma variação no alinhamento dos números. Com o objetivo de aumentar a legibilidade, **optou-se por utilizar a fonte Rawline** substituindo a Raleway, pois os caracteres númericos da **Rawline são alinhados
-pela base**, evitando estranhamento por parte de alguns usuários.
+## Princípios
 
-![Rawline Numeros](../assets/images/estilos/tipografia/rawline-numeros.png)
+### Experiência Única
 
-## Tamanhos | Pesos
+A variedade de estilos da Rawline torna desnecessária a utilização de outra família tipográfica. Sendo assim, junto com os demais elementos do Design System a tipografia cria um reconhecimento mais rápido pelo usuário, na identificação dos produtos do governo.
 
-Para definir os tamanhos principais dos textos do Design System do Governo Federal, e garantir ume melhor legibilidade, tomou-se como base uma escala modular, o Type Scale, que define uma relação de proporção e hierarquia entre os tamanhos tipográficos.
+### Eficiência e Clareza
 
-Utilizou-se **16px** como o tamanho base para os textos, e optou-se pelo uso da escala (Major Second) de aproximadamente 1,125 , com peso de 400 (que equivale a Regular).
+A diversidade de pesos da Rawline facilita a definição de níveis de hierarquias entre os elementos da tela. Isso torna a leitura mais agradável, e também fica mais claro para o usuário o papel que esses elementos ocupam na tela.
 
-Os pesos maiores serão definidos na criação dos componentes e templates, de acordo com a necessidade de se criar hierarquias entre os textos.
+As escalas tipográficas foram definidas para manter uma harmonia e coesão dentro do texto. Dessa forma, nenhuma fonte deve estar fora da escala definida no DS: **Minor Third**. Veja [Escala tipográfica](#) para maiores detalhes.
 
-## Tabela de estilos
+A **Tabela de Estilo Padrão** foi criada para manter a mesma experiência do usuário na maioria dos dispositivos. Caso seja necessário alterar algum valor, deve-se seguir a Escala tipográfica. Além disso, os demais itens da tabela de Estilo devem ser revistos mantendo a escala proporcional, ou seja, aumentando ou diminuindo conforme a necessidade.
 
-<div class="br-table">
-  <div class="table">
-    <table>
-      <thead>
-          <th>Tipo</th>
-          <th>Estilos</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span style="color: #555555; font-size: 16px">Texto padrão</span></td>
-          <td>16px Regular | Cor #555555</td>
-          <td>Texto padrão, input, textarea e select</td>
-        </tr>
-        <tr>
-          <td><span style="font-size: 16px"><a href="javascript:void(0)">Link</a></span></td>
-          <td>16px Regular | Cor #1351b4 | Sublinhado</td>
-          <td>Link</td>
-        </tr>
-        <tr>
-          <td><span class="main-title text-nowrap">Título da página</span></td>
-          <td>32px Medium | Cor #1351B4</td>
-          <td>Título principal</td>
-        </tr>
-        <tr>
-          <td><span class="fieldset">Legend de fieldset</span></td>
-          <td>22px Regular | Cor #1351b4</td>
-          <td>Legenda do agrupador de campos de formulário</td>
-        </tr>
-        <tr>
-          <td><span class="label">Label</span></td>
-          <td>16px Semibold | Cor #333333</td>
-          <td>Rótulo de campos de formulários</td>
-        </tr>
-        <tr>
-          <td><span style="color: #555555; font-size: 14px; font-style: italic;">Placeholder</span></td>
-          <td>14px Regular Itálico | Cor #555555</td>
-          <td>Texto de exemplo dentro de input, textarea e select</td>
-        </tr>
-        <tr>
-          <td><span style="color: #333333; font-size: 13px;">Texto de auxílio</span></td>
-          <td>13px Regular | Cor #333333</td>
-          <td>Texto auxiliar após campos de formulários para prevenir erros</td>
-        </tr>
-        <tr>
-          <td><span style="color: #168821; font-size: 13px; font-style: italic;">Feedback positivo</span></td>
-          <td>13px Regular Itálico | Cor #168821</td>
-          <td>Feedback positivo após o campo do formulário</td>
-        </tr>
-        <tr>
-          <td><span style="color: #ff3333; font-size: 13px; font-style: italic;">Feedback negativo</span></td>
-          <td>13px Regular Itálico | Cor #ff3333</td>
-          <td>Feedback negativo após o campo do formulário</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+### Acessibilidade
+
+As interfaces devem cumprir as diferentes necessidades de acessibilidade. Sendo assim, o tamanho da tipografia e as cores foram aplicadas prevendo-se um nível mínimo de adequação à legibilidade.
+
+Sempre que possível, utilize a tabela de estilo e as cores padrão para texto para manter o conteudo legível/acessível ao usuário.
+
+Veja [Cores](#) para maiores detalhes sobre aplicação de cores nos textos.
+
+A semântica deve ser levada em consideração ao se criar as marcações do texto dentro do HTML para que os dispositivos de leitores de tela consigam distinguir os diferentes elementos do texto.
+
+#### Reutilização e Colaboração
+
+Interfaces digitais do governo devem utilizar a família de fonte definida sempre que possível. Havendo, entretanto, a necessidade de acrescentar ou editar a família tipográfica atual, é necessário validar a nova proposta segundo os princípios e pela equipe de design do DS.
+
+---
+
+## Estilos da Fonte Rawline
+
+![Lista de Estilo](../../assets/images/docs_img/fundamentos/tipografia/estilo.png)
+
+### Peso da fonte (Font-Weight)
+
+Utilize os valores abaixo para representar os diferentes estilos da fonte Raleway em uma interface web.
+
+| Font-Weight | Estilo      |
+| ----------- | ----------- |
+| 100         | Thin        |
+| 200         | Extra-Light |
+| 300         | Light       |
+| 400         | Regular     |
+| 500         | Medium      |
+| 600         | Semi-Bold   |
+| 700         | Bold        |
+| 800         | Extra-bold  |
+| 900         | Black       |
+
+---
+
+## Escala Tipográfica
+
+O estabelecimento de uma escala tipográfica é uma forma de determinar tamanhos tipográficos. A escala é importante porque estabelece a hierarquia e melhora a legibilidade criando harmonia e coesão entre os textos.
+
+Existem muitas escalas diferentes, mas para do Design System do Governo Federal foi escolhida a escala **Minor Third** (1,2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hiearquia de uma interface.
+
+O tamanho **fonte base** é de 14px (1em) e peso da fonte normal (400). A unidade **em** é uma medida relativa que permite que o usuário altere o tamanho de exibição do texto na interface. Com exceção da fonte base, utilize a unidade **em** para todos os outros valores da escala. Assim, caso o valor do tamanho base padrão seja alterado, toda a interface se adapta ao novo valor.
+
+![Escala Tipográfica](../../assets/images/docs_img/fundamentos/tipografia/escala.png)
+
+**Dica:** utilize alguma calculadora [Type Scale](https://type-scale.com/) (como o site [Modular Scale](https://www.modularscale.com)) para calcular os tamanhos dentro da escala.
+
+Caso o tamanho não atenda sua interface, utilize um valor diferente para a fonte base, porém, a escala deve se manter a mesma (ou seja, com a mesma proporção entre os estilos).
+
+> **Cuidado**: Manter um valor de fonte base muito alto ou muito pequeno, pode atrapalhar na legibilidade do conteúdo. Utilize um valor base diferente do recomendado somente em casos que justifique seu uso.
+
+---
+
+## Fonte Base
+
+Em um documento com uma definição de 72 dpi (ou 72 ppi ) dentro de um software gráfico (como Photoshop), **pontos = pixels**, mas isso não é verdade em um navegador. Para uma boa comunicação, sempre indique os tamanhos em pixels para os desenvolvedores da Web que devem converter para **em** ou **rem**.
+
+Atualmente, uma prática recomendada é permitir que um dispositivo (como navegador web) tome as decisões baseadas no tamanho da fonte base. O padrão é que em uma janela com visualização de 96 dpi tenha a fonte base padrão de 16px, mas dificulmente essa regra se aplique em um smart watch.
+
+No Design System do Governo Federal escolhemos a fonte base de 14 pixel por acharmos que esse tamanho seja aplicável na maioria dos dispositivos e situações, porém essa escolha não é definitiva.
+
+Definir um tamanho de uma fonte base (juntamente com a referência do uso de unidades "em" ou "rem") facilitará a hierarquia entre os textos, otimizando o efeito cascata
+
+---
+
+## Tabela de Estilo Padrão
+
+Utilize a tabela de estilo para determinar a hierarquia dos elementos dentro de uma interface. Os valores listados são baseados na escala utilizada no DS e unidade em "**em**", desde modo, caso o valor do tamanho base padrão seja alterado, toda a interface se adapta ao novo valor.
+
+O valor **line-height** (entrelhinhamento) não se refere ao fonte base, e sim ao valor do próprio elemento textual. _**Exemplo:** No H1 a line-height é 115% do valor de 2,986em._
+
+| Tipo                    | Valor (em) | Valor (px) | Estilo                | Line-height | Outros estilos |
+| ----------------------- | ---------- | ---------- | --------------------- | ----------- | -------------- |
+| Texto padrão, Parágrafo | 1          | 14         | Regular (400)         | 1,45        | -              |
+| H1                      | 2,986      | 41,80      | Regular (400)         | 1,15        | -              |
+| H2                      | 2,488      | 34,84      | Regular (400)         | 1,15        | -              |
+| H3                      | 2,074      | 29,03      | Regular (400)         | 1,15        | -              |
+| H4                      | 1,728      | 24,19      | Regular (400)         | 1,15        | -              |
+| H5                      | 1,44       | 20,16      | Semi-bold (600)       | 1,15        | -              |
+| H6                      | 1,2        | 16,80      | Semi-bold (600)       | 1,15        | -              |
+| Label                   | 1          | 14         | Semi-bold (600)       | 1,45        | -              |
+| Fieldset                | 1,44       | 20,16      | Regular (400)         | 1,15        | -              |
+| Placeholder             | 1          | 14         | Regular (400) Itálico | 1,15        | -              |
+| Input                   | 1,2        | 16,80      | Regular (400)         | 1,15        | -              |
+
+---
+
+## Unidades de Espaçamento entre caracteres (Letter Spacing)
+
+Em alguns softwares (como da Adobe), o espaçamento de um bloco de texto (tracking) e o ajuste de espaço entre caracteres adjacentes (Kerning) são medidos em 1/1.000em, uma unidade de medida que é relativa ao tamanho atual da face de tipos. Em uma fonte de 6 pontos, 1em é igual a 6 pontos; em uma fonte de 10 pontos, 1em é igual a 10 pontos. Ou seja, são estritamente proporcionais ao tamanho da face de tipos utilizado.
+
+Para calcular o valor do espaçamento entre os caracteres utilize o seguinte fórmula:
+
+> LetterSpacing(px) = tamanho da fonte(pt ou px) \* tracking da Adobe / 1000.
+
+---
+
+## Tabela de conversão PX, PT, EM e %
+
+A tabela a seguir, tem como referência resolução de 96dpi com fonte base equivalente a 14px.
+Onde 1 pixel = 0,75 pontos e 1 ponto = 1,33333 pixel.
+
+| Ponto    | Pixel | Em       | Porcentagem |
+| -------- | ----- | -------- | ----------- |
+| 6 pt     | 8 px  | 0.57 em  | 57 %        |
+| 6,75 pt  | 9 px  | 0.64 em  | 64 %        |
+| 7,5 pt   | 10 px | 0.71 em  | 71 %        |
+| 8,25 pt  | 11 px | 0.785 em | 78,5 %      |
+| 9 pt     | 12 px | 0.85 em  | 85 %        |
+| 9,75 pt  | 13 px | 0.92 em  | 92 %        |
+| 10,5 pt  | 14 px | 1 em     | 100 %       |
+| 11,25 pt | 15 px | 1,07 em  | 107 %       |
+| 12 pt    | 16 px | 1,14 em  | 114 %       |
+| 12,75 pt | 17 px | 1,21 em  | 121 %       |
+| 13,5 pt  | 18 px | 1,28 em  | 128 %       |
+| 14,25 pt | 19 px | 1,35 em  | 135 %       |
+| 15 pt    | 20 px | 1,42 em  | 142 %       |
+| 15,75 pt | 21 px | 1,5 em   | 150 %       |
+| 16,5 pt  | 22 px | 1,57 em  | 157 %       |
+| 17,25 pt | 23 px | 1,64 em  | 164 %       |
+| 18 pt    | 24 px | 1,71 em  | 171 %       |
+| 18,75 pt | 25 px | 1,785 em | 178,5 %     |
+| 19,5 pt  | 26 px | 1,85 em  | 185 %       |
+| 20,25 pt | 27 px | 1,92 em  | 192 %       |
+| 21 pt    | 28 px | 2 em     | 200 %       |
+| 21,75 pt | 29 px | 2,07 em  | 207 %       |
+| 22,5 pt  | 30 px | 2,14 em  | 214 %       |
+| 23,25 pt | 31 px | 2.21 em  | 221 %       |
+| 24 pt    | 32 px | 2,28 em  | 228 %       |
+| 24,75 pt | 33 px | 2,35 em  | 235 %       |
+| 25,5 pt  | 34 px | 2,42 em  | 242 %       |
+| 26,25 pt | 35 px | 2,5 em   | 250 %       |
