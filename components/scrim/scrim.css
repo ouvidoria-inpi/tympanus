@@ -30,7 +30,7 @@
 
 .br-scrim.is-inibicao::before {
   background: rgba(255, 255, 255, 0.64);
-  content: '';
+  content: "";
   height: 100%;
   left: 0;
   position: absolute;
