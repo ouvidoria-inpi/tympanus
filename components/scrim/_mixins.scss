@@ -22,8 +22,9 @@
   }
   &.is-inibicao {
     position: relative;
-    .scrim {
+    &::before {
       background: $scrim-background-color-inibicao;
+      content: '';
       height: 100%;
       left: 0;
       position: absolute;

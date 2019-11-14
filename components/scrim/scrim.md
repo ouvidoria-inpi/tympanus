@@ -11,7 +11,15 @@ Nenhuma dependência.
 
 ```html
 <div class="br-scrim is-foco"></div>
+```
+
+Ou
+```html
 <div class="br-scrim is-legibilidade"></div>
+```
+
+Ou
+```html
 <div class="br-scrim is-inibicao"></div>
 ```
 ---
@@ -83,12 +91,11 @@ Por possuir um comportamento que impede a interação de elemento soprepostos, o
 
 A principal característica neste modo, é que o elemento que recebe o scrim ficará visualmente desativado, simulando transparência em relação ao fundo.
 
-Seu uso está associado com a classe `scrim`, responsável por realizar o correto posicionamento do scrim inibição no elemento que o contém.
+A tag com a classe `br-scrim is-inibicao`, responsável por realizar o correto posicionamento do scrim inibição, deve encapsular o elemento desejado.
 
 Exemplo de uso:
 ```html
 <div class="br-scrim is-inibicao">
-  <div class="scrim"></div>
   <div onclick="alert('Fui Clicado')">
     COM Scrim Inibição
   </div>
