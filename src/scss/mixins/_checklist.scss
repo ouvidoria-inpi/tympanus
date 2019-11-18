@@ -1,0 +1,243 @@
+@mixin checklist {
+  // Linha
+  @include checklist-field;
+  // Tamanhos
+  @include checklist-sizes;
+  // Estados
+  @include checklist-states;
+  border-top: $check-input-border-size $check-input-border-style
+    $check-input-border-color;
+  display: flex;
+  flex-direction: column;
+  margin: $check-input-margin;
+  // Texto de ajuda
+  & + .help,
+  & + .feedback + .help {
+    color: $help-color;
+    font-size: $help-font-size;
+  }
+}
+
+@mixin checklist-field {
+  .field {
+    align-items: center;
+    border-bottom: $check-input-border-size $check-input-border-style
+      $check-input-border-color;
+    display: flex;
+    margin: 0;
+    padding: $field-padding 0;
+    &.is-active {
+      .input {
+        label {
+          display: none;
+        }
+        input {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .icon {
+    color: $color-primary;
+    text-align: center;
+    width: $icon-size;
+  }
+  .input {
+    align-items: center;
+    display: flex;
+    label {
+      margin: 0;
+    }
+    input {
+      @include input;
+      @include placeholder;
+      display: none;
+    }
+  }
+  .check {
+    display: inline-block;
+    margin-left: auto;
+    position: relative;
+    input[type="radio"] {
+      // sass-lint:disable-line force-attribute-nesting
+      @include check-label(right);
+      @include check-model(radio, right);
+      @include check-checked(radio, right);
+    }
+    input[type="checkbox"] {
+      // sass-lint:disable-line force-attribute-nesting
+      @include check-label(right);
+      @include check-model(checkbox, right);
+      @include check-checked(checkbox, right);
+    }
+  }
+}
+
+@mixin checklist-sizes {
+  .input {
+    min-height: $input-height-default;
+    input {
+      height: $input-height-default;
+    }
+  }
+  &.is-small {
+    .input {
+      min-height: $input-height-small;
+      input {
+        height: $input-height-small;
+      }
+    }
+    .check {
+      input[type="radio"] {
+        // sass-lint:disable-line force-attribute-nesting
+        @include check-label(right, $check-small);
+        @include check-model(radio, right, $check-small);
+        @include check-checked(radio, right, $check-small);
+      }
+      input[type="checkbox"] {
+        // sass-lint:disable-line force-attribute-nesting
+        @include check-label(right, $check-small);
+        @include check-model(checkbox, right, $check-small);
+        @include check-checked(checkbox, right, $check-small);
+      }
+    }
+  }
+}
+
+@mixin checklist-states {
+  .field {
+    &.is-valid {
+      .input {
+        input,
+        textarea {
+          @include input-focus($color-success);
+        }
+        .icon,
+        button.icon {
+          // sass-lint:disable-line force-element-nesting
+          @include input-icon($color-success);
+        }
+      }
+      .check {
+        input[type="radio"] {
+          // sass-lint:disable-line force-attribute-nesting
+          @include check-checked(radio, right, $check-size, $color-success);
+          @include check-state($color-success);
+        }
+        input[type="checkbox"] {
+          // sass-lint:disable-line force-attribute-nesting
+          @include check-checked(checkbox, right, $check-size, $color-success);
+          @include check-state($color-success);
+        }
+      }
+    }
+    &.is-invalid {
+      .input {
+        input,
+        textarea {
+          @include input-focus($color-danger);
+        }
+        .icon,
+        button.icon {
+          // sass-lint:disable-line force-element-nesting
+          @include input-icon($color-danger);
+        }
+      }
+      .check {
+        input[type="radio"] {
+          // sass-lint:disable-line force-attribute-nesting
+          @include check-checked(radio, right, $check-size, $color-danger);
+          @include check-state($color-danger);
+        }
+        input[type="checkbox"] {
+          // sass-lint:disable-line force-attribute-nesting
+          @include check-checked(checkbox, right, $check-size, $color-danger);
+          @include check-state($color-danger);
+        }
+      }
+    }
+  }
+  .input {
+    input {
+      &:focus {
+        @include input-focus($color-primary-lighten-1);
+      }
+      &:invalid {
+        @include input-focus($color-danger);
+      }
+      &:disabled {
+        background: $input-bg-disabled;
+        & + .icon,
+        & + button.icon {
+          // sass-lint:disable-line force-element-nesting
+          @include input-icon;
+        }
+      }
+    }
+  }
+  .check {
+    input[type="radio"], // sass-lint:disable-line force-attribute-nesting
+    input[type="checkbox"] {
+      // sass-lint:disable-line force-attribute-nesting
+      &:focus {
+        @include input-focus($color-primary-lighten-1);
+      }
+      &:invalid {
+        @include check-state($color-danger);
+      }
+      &:disabled {
+        & + label {
+          cursor: default;
+        }
+      }
+    }
+  }
+  &.is-small {
+    .field {
+      &.is-valid {
+        .check {
+          input[type="radio"] {
+            // sass-lint:disable-line force-attribute-nesting
+            @include check-checked(radio, right, $check-small, $color-success);
+          }
+          input[type="checkbox"] {
+            // sass-lint:disable-line force-attribute-nesting
+            @include check-checked(
+              checkbox,
+              right,
+              $check-small,
+              $color-success
+            );
+          }
+        }
+      }
+      &.is-invalid {
+        .check {
+          input[type="radio"] {
+            // sass-lint:disable-line force-attribute-nesting
+            @include check-checked(radio, right, $check-small, $color-danger);
+          }
+          input[type="checkbox"] {
+            // sass-lint:disable-line force-attribute-nesting
+            @include check-checked(
+              checkbox,
+              right,
+              $check-small,
+              $color-danger
+            );
+          }
+        }
+      }
+    }
+  }
+  &.is-valid {
+    & + .feedback {
+      @include feedback($color-success);
+    }
+  }
+  &.is-invalid {
+    & + .feedback {
+      @include feedback($color-danger);
+    }
+  }
+}

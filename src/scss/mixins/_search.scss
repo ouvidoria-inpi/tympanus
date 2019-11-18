@@ -1,0 +1,61 @@
+@mixin search {
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  .field {
+    display: inline-flex;
+    flex: 1;
+    input {
+      background: $color-gray-2;
+      border: 0;
+      display: none;
+      flex: 1;
+      padding: ($spacer * 2);
+    }
+    button {
+      background: transparent;
+      border: 0;
+      color: $color-primary;
+      padding: 0 ($spacer * 1.5);
+      &:hover {
+        background: $color-primary-pastel-1;
+      }
+    }
+  }
+  // Botão externo para fechar a busca
+  .close {
+    background: transparent;
+    border: 0;
+    bottom: 0;
+    display: none;
+    padding: 0 ($spacer * 1.5);
+    position: absolute;
+    right: $spacer-half;
+    top: 0;
+  }
+  // Busca ativa
+  &.is-active {
+    bottom: ($spacer * 2);
+    left: -8px;
+    top: auto;
+    .field {
+      box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      input {
+        display: block;
+      }
+      button {
+        background: $color-gray-2;
+      }
+    }
+    .close {
+      display: block;
+    }
+  }
+}

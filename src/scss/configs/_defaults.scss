@@ -1,0 +1,18 @@
+// Prefixo de uso nos componentes
+$prefix: "br-";
+
+// Margem padrão entre elementos
+$margin-default: $spacer * 2; // 16px
+
+// Bordas
+$border-color: $color-gray-3;
+
+// Inputs
+$input-radius: 6px;
+$input-padding: $spacer * 2;
+
+$input-bg-disabled: $color-gray-2;
+
+$input-height-default: 48px;
+$input-height-medium: 40px;
+$input-height-small: 32px;

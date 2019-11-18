@@ -27,6 +27,7 @@ $h6-font-size: $font-size-base;
 // Formulários
 $label-color: $color-gray-7;
 $label-font-size: $font-size-base;
+$label-font-weight: 600;
 $label-margin-bottom: $spacer * 2;
 
 $input-color: $body-color;
@@ -34,8 +35,16 @@ $input-font-size: $font-size-base;
 
 $placeholder-color: $input-color;
 $placeholder-font-size: $font-size-base * 0.875; // 14px
+$placeholder-font-style: italic;
 
 $fieldset-color: $color-primary;
 $fieldset-font-size: $font-size-base * 1.375; // 22px
 $fieldset-font-weight: $font-weight-base;
 $fieldset-margin-bottom: $spacer * 3; // 24px
+
+$help-color: $color-gray-7;
+$help-font-size: $font-size-base * 0.8125; // 13px
+
+$feedback-font-size: $font-size-base * 0.8125; // 13px
+$feedback-font-style: italic;
+$feedback-font-weight: 500;

@@ -1,0 +1,120 @@
+// Lista de Itens de Abas
+@mixin tab-item {
+  border-bottom: 1px solid $tab-border;
+  display: flex;
+  overflow: auto;
+  padding: 0;
+  &.is-vertical {
+    border-bottom: 0;
+    flex-direction: column;
+    .item {
+      border-bottom: 1px solid $tab-border;
+      margin: 0;
+      padding: 0;
+      padding-right: $tab-icon-size + ($tab-results-margin * 2);
+      a,
+      button,
+      input[type="submit"] {
+        // sass-lint:disable-line force-attribute-nesting
+        flex-direction: row;
+        padding: 0;
+      }
+      &:hover {
+        background: $tab-item-hover;
+      }
+      &.is-active {
+        box-shadow: none;
+        a,
+        button,
+        input[type="submit"] {
+          // sass-lint:disable-line force-attribute-nesting
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        .name {
+          box-shadow: $tab-active-border;
+          color: $tab-results-color;
+        }
+        .results {
+          color: $tab-results-color;
+        }
+      }
+    }
+    .name {
+      display: inline-block;
+      margin-left: $tab-icon-size + ($tab-results-margin * 2);
+      padding: ($tab-item-padding * 1) ($tab-results-margin / 2);
+      text-align: left;
+      white-space: normal;
+    }
+  }
+  .item {
+    display: flex;
+    margin: 0 $tab-padding;
+    &.is-active {
+      box-shadow: $tab-active-border;
+      a,
+      button,
+      input[type="submit"] {
+        // sass-lint:disable-line force-attribute-nesting
+        &:hover {
+          box-shadow: $tab-active-border;
+        }
+      }
+      .name {
+        color: $tab-active-color;
+        font-weight: $tab-active-font-weight;
+      }
+      .results {
+        color: $tab-results-color;
+        font-weight: $tab-active-font-weight;
+      }
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .icon {
+    align-self: center;
+    color: $tab-item-color;
+    justify-content: center;
+    margin: 0 $tab-results-margin;
+    width: $tab-icon-size;
+    & + .name {
+      margin-left: 0;
+    }
+  }
+  .name {
+    color: $tab-item-color;
+    flex: 1;
+    font-weight: $tab-font-weight;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .results {
+    color: $tab-item-color;
+    font-size: $tab-results-font-size;
+    font-weight: $tab-font-weight;
+  }
+  a,
+  button,
+  input[type="submit"] {
+    // sass-lint:disable-line force-attribute-nesting
+    align-items: center;
+    background: transparent;
+    border: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: ($tab-item-padding * 0.5) ($tab-item-padding) $tab-item-padding;
+    text-decoration: none;
+    &:hover {
+      background: $tab-item-hover;
+      text-decoration: none;
+    }
+  }
+}

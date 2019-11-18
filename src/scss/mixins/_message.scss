@@ -1,0 +1,67 @@
+@mixin alert {
+  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+  color: $color-gray-7;
+  display: flex;
+  margin-bottom: $alert-padding;
+  .icon {
+    align-items: center;
+    color: $color-white;
+    display: flex;
+    font-size: 175%;
+    justify-content: center;
+    width: $alert-icon-width;
+    img {
+      max-width: 32px;
+    }
+  }
+  .content {
+    flex: 1;
+    padding: $alert-padding;
+    strong {
+      font-weight: 600;
+    }
+    a {
+      color: $color-gray-7;
+      text-decoration: underline;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+    * {
+      // sass-lint:disable-line no-universal-selectors
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .close {
+    align-items: flex-start;
+    display: flex;
+    button {
+      background: transparent;
+      border: 0;
+      color: $color-gray-7;
+      padding: $alert-close-padding;
+    }
+  }
+  // Estados
+  @include alert-states;
+}
+
+@mixin alert-states {
+  @each $state, $color in (success, $color-success), (danger, $color-danger),
+    (warning, $color-warning), (info, $color-info)
+  {
+    &.is-#{$state} {
+      background: scale-color($color, $lightness: 90%);
+      .icon {
+        background: $color;
+      }
+      @if ($state == warning) {
+        .icon {
+          color: $color-gray-7;
+        }
+      }
+    }
+  }
+}
