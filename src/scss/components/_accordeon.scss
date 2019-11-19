@@ -1,4 +1,4 @@
-@mixin accordeon {
+.#{$prefix}accordeon {
   border-top: 1px solid $border-color;
   margin-bottom: $margin-default;
   .field {
