@@ -1,0 +1,50 @@
+doctype html
+html(lang="pt-BR")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title checkbox
+    // Fonte Rawline
+    link(rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
+    // Design System de Governo
+    link(rel="stylesheet" href="../css/dsgov.css")
+    // Fontawesome
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js")
+  body
+    .container-fluid
+      p.label Selecione 1 ou mais opções
+      .br-checkbox
+        input#h-checkbox-padrao(type='checkbox')
+        label(for='h-checkbox-padrao') Padrão
+      .br-checkbox.ml-10
+        input#h-checkbox-checado(type='checkbox' checked)
+        label(for='h-checkbox-checado') Checado
+      .br-checkbox.is-invalid.ml-10
+        input#h-checkbox-invalido(type='checkbox' required)
+        label(for='h-checkbox-invalido') Inválido
+      .br-checkbox.is-valid.ml-10
+        input#h-checkbox-valido(type='checkbox')
+        label(for='h-checkbox-valido') Válido
+      .br-checkbox.ml-10
+        input#h-checkbox-disabled(type='checkbox' disabled)
+        label(for='h-checkbox-disabled') Desativado
+      hr
+      .row
+        .col-auto
+          p.label Selecione opções
+          .br-checkbox.d-block.mb-1
+            input#v-checkbox-padrao(type='checkbox')
+            label(for='v-checkbox-padrao') Padrão
+          .br-checkbox.d-block.mb-1
+            input#v-checkbox-checado(type='checkbox' checked)
+            label(for='v-checkbox-checado') Checado
+          .br-checkbox.is-invalid.d-block.mb-1
+            input#v-checkbox-invalido(type='checkbox' required)
+            label(for='v-checkbox-invalido') Inválido
+          .br-checkbox.is-valid.d-block.mb-1
+            input#v-checkbox-valido(type='checkbox')
+            label(for='v-checkbox-valido') Válido
+          .br-checkbox.d-block.mb-1
+            input#v-checkbox-disabled(type='checkbox' disabled)
+            label(for='v-checkbox-disabled') Desativado

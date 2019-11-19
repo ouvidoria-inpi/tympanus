@@ -1,0 +1,144 @@
+.#{$prefix}checkbox {
+  display: inline-block;
+  position: relative;
+  input[type="checkbox"] {
+    // Remover o checkbox padrão do navegador
+    opacity: 0;
+    position: absolute;
+    // Texto
+    & + label {
+      align-items: flex-start;
+      cursor: pointer;
+      display: inline-flex;
+      margin-bottom: 0;
+      min-height: $checkbox-default;
+      padding: 0 0 0 ($checkbox-default + $spacer);
+      position: relative;
+      vertical-align: top;
+    }
+    &:disabled + label {
+      cursor: default;
+    }
+    // Caixa
+    & + label::before {
+      background: $color-white;
+      border: 1px solid $color-gray-5;
+      border-radius: $checkbox-radius;
+      content: "";
+      height: $checkbox-default;
+      left: 0;
+      position: absolute;
+      width: $checkbox-default;
+    }
+    // Checado
+    &:checked + label::before {
+      background: $color-primary-lighten-2;
+      border-color: $color-primary-lighten-2;
+    }
+    &:checked + label::after {
+      border: solid $color-white;
+      border-width: 0 2px 2px 0;
+      content: "";
+      height: 10px;
+      left: 9px;
+      position: absolute;
+      top: 6px;
+      transform: rotate(45deg);
+      width: 6px;
+    }
+    // Hover
+    &:hover:not(:disabled) + label::before,
+    &:focus:not(:disabled) + label::before {
+      box-shadow: 0 0 0 4px rgba($color-primary-lighten-2, 0.45);
+    }
+    // Inválido
+    &:invalid {
+      & + label::before {
+        border-color: $color-danger;
+        border-width: 2px;
+      }
+    }
+    // Desativado
+    &:disabled + label::before {
+      background-color: $color-gray-2;
+    }
+    // Checado
+    &:disabled:checked + label::before {
+      background: $color-gray-4;
+      border-color: $color-gray-4;
+    }
+  }
+  // Estados
+  @each $state, $color in (invalid, $color-danger), (valid, $color-success) {
+    &.is-#{$state} {
+      input[type="checkbox"] {
+        & + label {
+          color: $color;
+        }
+        & + label::before {
+          border-color: $color;
+        }
+        // Checado
+        &:checked + label::before {
+          background: $color;
+          border-color: $color;
+        }
+        // Hover
+        &:hover:not(:disabled) + label::before,
+        &:focus:not(:disabled) + label::before {
+          box-shadow: 0 0 0 4px rgba($color, 0.45);
+        }
+      }
+    }
+  }
+  // Invertido
+  &.is-inverted {
+    input[type="checkbox"] {
+      // Checado
+      &:checked + label::before {
+        background: $color-white;
+      }
+      &:checked + label::after {
+        border-color: $color-primary;
+      }
+      &:disabled:checked + label::after {
+        border-color: $color-gray-4;
+      }
+    }
+    &.is-invalid {
+      input[type="checkbox"] {
+        &:checked + label::after {
+          border-color: $color-danger;
+        }
+      }
+    }
+    &.is-valid {
+      input[type="checkbox"] {
+        &:checked + label::after {
+          border-color: $color-success;
+        }
+      }
+    }
+  }
+  // Versão pequena
+  &.is-small {
+    input[type="checkbox"] {
+      // Texto
+      & + label {
+        line-height: $checkbox-small;
+        min-height: $checkbox-small;
+        padding: 0 0 0 ($checkbox-small + $spacer);
+      }
+      // Caixa
+      & + label::before {
+        height: $checkbox-small;
+        width: $checkbox-small;
+      }
+      // Checado
+      &:checked + label::after {
+        left: 7px;
+        top: 3px;
+      }
+    }
+  }
+}
