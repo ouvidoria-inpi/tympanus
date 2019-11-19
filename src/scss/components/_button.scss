@@ -1,0 +1,91 @@
+.#{$prefix}button {
+  &.is-primary {
+    @include button-pill;
+    @include media-breakpoint-up(md) {
+      min-width: $button-min-width;
+    }
+  }
+  &.is-secondary {
+    @include button-pill($color-white, $color-primary);
+    @include media-breakpoint-up(md) {
+      min-width: $button-min-width;
+    }
+  }
+  &.is-call-to-action {
+    @include button-pill($color-secondary, $color-white, $color-gray-2);
+    border-width: $action-border-width;
+    height: $button-height-default + ($action-border-width * 2);
+    &:hover,
+    &:focus {
+      background-color: $color-teal;
+      border-color: $color-gray-2;
+      color: $color-white;
+    }
+    &:disabled {
+      border-color: $color-gray-2;
+    }
+    @include media-breakpoint-up(md) {
+      min-width: $action-min-width;
+    }
+  }
+  &.is-tertiary {
+    @include button-link;
+  }
+  &.is-cancel {
+    @include button-link($body-color);
+  }
+  &.is-small {
+    height: $button-height-small;
+    padding: 0 $button-padding / 2;
+    @include media-breakpoint-up(md) {
+      min-width: 0;
+    }
+  }
+  &.is-circle {
+    height: $button-circle-default;
+    padding: 0;
+    width: $button-circle-default;
+    @include media-breakpoint-up(md) {
+      min-width: 0;
+    }
+    &.is-large {
+      height: $button-circle-large;
+      width: $button-circle-large;
+    }
+  }
+  &.is-loading {
+    color: transparent !important;
+    pointer-events: none;
+    position: relative;
+    &::after {
+      animation: spinAround 500ms infinite linear;
+      border: 2px solid $color-white;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: "";
+      display: block;
+      height: 1em;
+      left: calc(50% - (1em / 2));
+      position: absolute !important;
+      top: calc(50% - (1em / 2));
+      width: 1em;
+    }
+    &.is-secondary {
+      &::after {
+        border-color: $color-primary;
+        border-right-color: transparent;
+        border-top-color: transparent;
+      }
+    }
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

@@ -1,0 +1,44 @@
+doctype html
+html(lang="pt-BR")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title button
+    // Fonte Rawline
+    link(rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
+    // Design System de Governo
+    link(rel="stylesheet" href="../css/dsgov.css")
+    // Fontawesome
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js")
+  body
+    .container-fluid
+      button.br-button.is-primary(type='button') Entrar
+      button.br-button.is-secondary.mt-3.mt-md-0(type='button') Cadastrar
+      button.br-button.is-tertiary.mt-3.mt-md-0(type='button') Adicionar
+      button.br-button.is-cancel.mt-3.mt-md-0(type='button') Cancelar
+      hr
+      button.br-button.is-primary(type='button')
+        span Entrar com 
+        strong gov.br
+      button.br-button.is-secondary(type='button')
+        span Entrar com 
+        strong gov.br
+      hr
+      button.br-button.is-circle.is-primary(type='button')
+        i.fas.fa-chevron-up
+      button.br-button.is-circle.is-secondary(type='button')
+        i.fas.fa-chevron-down
+      button.br-button.is-circle.is-large.is-primary(type='button')
+        i.fab.fa-facebook-f.fa-lg
+      button.br-button.is-circle.is-large.is-secondary(type='button')
+        i.fab.fa-twitter.fa-lg
+      button.br-button.is-call-to-action(type='button') Solicitar
+      hr
+      button.br-button.is-primary.is-loading(type='button') Entrar
+      button.br-button.is-secondary.is-loading(type='button') Cadastrar
+      button.br-button.is-primary.is-circle.is-loading(type='button')
+        i.fas.fa-chevron-up
+      button.br-button.is-secondary.is-circle.is-loading(type='button')
+        i.fas.fa-chevron-down
+      button.br-button.is-call-to-action.is-loading(type='button') Solicitar
