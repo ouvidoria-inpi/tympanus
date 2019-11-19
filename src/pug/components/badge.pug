@@ -1,0 +1,83 @@
+doctype html
+html(lang="pt-BR")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Badge
+    // Fonte Rawline
+    link(rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
+    // Design System de Governo
+    link(rel="stylesheet" href="../css/dsgov.css")
+    // Fontawesome
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js")
+  body
+    .container-fluid
+      .row(style='font-size: 20px;')
+        .col-3
+          .br-badge.is-top.is-sucess
+            i.fas.fa-user
+            span.icon
+        .col-3
+          .br-badge.is-top.is-warning
+            i.fas.fa-user
+            span.icon
+        .col-3
+          .br-badge.is-bottom.is-info
+            i.fas.fa-user
+            span.icon
+        .col-3
+          .br-badge.is-bottom.is-danger
+            i.fas.fa-user
+            span.icon
+      .row(style='font-size: 24px;')
+        .col-3
+          .br-badge.is-symbol
+            i.fas.fa-file
+            i.fas.fa-check.icon
+        .col-3
+          .br-badge.is-symbol.is-left.is-bottom.is-warning
+            i.fas.fa-file
+            i.fas.fa-check.icon
+        .col-3
+          .br-badge.is-symbol.is-right.is-bottom.is-info
+            i.fas.fa-file
+            i.fas.fa-check.icon
+        .col-3
+          .br-badge.is-symbol.is-right.is-top.is-danger
+            i.fas.fa-file
+            i.fas.fa-check.icon
+      .row(style='font-size: 32px;')
+        .col-3
+          .br-badge.is-symbol
+            i.fas.fa-file
+            i.fas.fa-check.icon
+        .col-3
+          .br-badge.is-symbol.left.is-bottom.is-warning
+            i.fas.fa-plane-departure
+            i.fas.fa-info.icon
+        .col-3
+          .br-badge.is-symbol.is-right.is-bottom.is-info
+            i.fas.fa-car
+            i.fas.fa-euro-sign.icon
+        .col-3
+          .br-badge.is-symbol.is-right.is-top.is-danger
+            i.fas.fa-comment
+            i.fas.fa-times.icon
+      .row(style='font-size: 36px;')
+        .col-3
+          .br-badge.is-count.is-danger
+            i.fas.fa-envelope
+            span.number 1
+        .col-3
+          .br-badge.is-count.is-left.is-bottom.is-danger
+            i.fas.fa-envelope
+            span.number 5
+        .col-3
+          .br-badge.is-count.is-right.is-bottom.is-danger
+            i.fas.fa-envelope
+            span.number 5
+        .col-3
+          .br-badge.is-count.is-right.is-top.is-danger
+            i.fas.fa-envelope
+            span.number 999+

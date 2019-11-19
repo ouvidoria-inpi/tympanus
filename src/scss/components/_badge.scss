@@ -1,4 +1,4 @@
-@mixin badge($color: $bdg-text-color) {
+.#{$prefix}badge {
   height: 1.5em;
   margin: 0 0.25em;
   position: relative;
@@ -67,25 +67,25 @@
   &.is-success {
     .icon,
     .number {
-      background-color: $bdg-bg-color-success;
+      background-color: $color-success;
     }
   }
   &.is-warning {
     .icon,
     .number {
-      background-color: $bdg-bg-color-warning;
+      background-color: $color-warning;
     }
   }
   &.is-info {
     .icon,
     .number {
-      background-color: $bdg-bg-color-info;
+      background-color: $color-info;
     }
   }
   &.is-danger {
     .icon,
     .number {
-      background-color: $bdg-bg-color-danger;
+      background-color: $color-danger;
     }
   }
 
