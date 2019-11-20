@@ -13,8 +13,8 @@
   }
   &.is-call-to-action {
     @include button-pill($color-secondary, $color-white, $color-gray-2);
-    border-width: $action-border-width;
-    height: $button-height-default + ($action-border-width * 2);
+    border-width: $button-action-border-width;
+    height: $button-height-default + ($button-action-border-width * 2);
     &:hover,
     &:focus {
       background-color: $color-teal;
@@ -25,7 +25,7 @@
       border-color: $color-gray-2;
     }
     @include media-breakpoint-up(md) {
-      min-width: $action-min-width;
+      min-width: $button-action-min-width;
     }
   }
   &.is-tertiary {

@@ -1,0 +1,18 @@
+.#{$prefix}divider {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: $margin-default;
+  &::after,
+  &::before {
+    background: $border-color;
+    content: "";
+    height: 1px;
+    width: 100%;
+  }
+  .content {
+    margin: 0;
+    padding: 0 ($spacer * 2);
+    white-space: nowrap;
+  }
+}
