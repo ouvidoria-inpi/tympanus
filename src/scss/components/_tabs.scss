@@ -1,6 +1,6 @@
 // Lista de Itens de Abas
-@mixin tab-item {
-  border-bottom: 1px solid $tab-border;
+.#{$prefix}tabs {
+  border-bottom: 1px solid $border-color;
   display: flex;
   overflow: auto;
   padding: 0;
@@ -8,67 +8,63 @@
     border-bottom: 0;
     flex-direction: column;
     .item {
-      border-bottom: 1px solid $tab-border;
+      border-bottom: 1px solid $border-color;
       margin: 0;
       padding: 0;
-      padding-right: $tab-icon-size + ($tab-results-margin * 2);
+      padding-right: $tabs-vertical-icons + ($spacer * 2);
       a,
       button,
       input[type="submit"] {
-        // sass-lint:disable-line force-attribute-nesting
         flex-direction: row;
         padding: 0;
       }
       &:hover {
-        background: $tab-item-hover;
+        background: $color-primary-pastel-1;
       }
       &.is-active {
         box-shadow: none;
         a,
         button,
         input[type="submit"] {
-          // sass-lint:disable-line force-attribute-nesting
           &:hover {
             box-shadow: none;
           }
         }
         .name {
-          box-shadow: $tab-active-border;
-          color: $tab-results-color;
+          box-shadow: inset 0 -4px 0 0 $color-primary;
+          color: $color-primary-darken-2;
         }
         .results {
-          color: $tab-results-color;
+          color: $color-primary-darken-2;
         }
       }
     }
     .name {
       display: inline-block;
-      margin-left: $tab-icon-size + ($tab-results-margin * 2);
-      padding: ($tab-item-padding * 1) ($tab-results-margin / 2);
+      font-weight: $font-weight-base;
+      margin-left: $tabs-vertical-icons + ($spacer * 2);
+      padding: ($spacer * 2) $spacer-half;
       text-align: left;
       white-space: normal;
     }
   }
   .item {
     display: flex;
-    margin: 0 $tab-padding;
+    margin: 0 ($spacer * 2.5);
     &.is-active {
-      box-shadow: $tab-active-border;
+      box-shadow: inset 0 -4px 0 0 $color-primary;
       a,
       button,
       input[type="submit"] {
-        // sass-lint:disable-line force-attribute-nesting
         &:hover {
-          box-shadow: $tab-active-border;
+          box-shadow: inset 0 -4px 0 0 $color-primary;
         }
       }
       .name {
-        color: $tab-active-color;
-        font-weight: $tab-active-font-weight;
+        color: $color-primary-darken-2;
       }
       .results {
-        color: $tab-results-color;
-        font-weight: $tab-active-font-weight;
+        color: $color-primary;
       }
     }
     &:first-child {
@@ -80,41 +76,45 @@
   }
   .icon {
     align-self: center;
-    color: $tab-item-color;
+    color: $body-color;
     justify-content: center;
-    margin: 0 $tab-results-margin;
-    width: $tab-icon-size;
+    margin: 0 $spacer;
+    width: $tabs-vertical-icons;
     & + .name {
       margin-left: 0;
     }
   }
   .name {
-    color: $tab-item-color;
+    color: $body-color;
     flex: 1;
-    font-weight: $tab-font-weight;
+    font-size: $tabs-font-size;
+    font-weight: $tabs-font-weight;
     text-align: center;
     white-space: nowrap;
   }
   .results {
-    color: $tab-item-color;
-    font-size: $tab-results-font-size;
-    font-weight: $tab-font-weight;
+    color: $body-color;
+    font-size: $font-size-base * 0.875;
+    font-weight: $tabs-font-weight;
   }
   a,
   button,
   input[type="submit"] {
-    // sass-lint:disable-line force-attribute-nesting
     align-items: center;
     background: transparent;
     border: 0;
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: ($tab-item-padding * 0.5) ($tab-item-padding) $tab-item-padding;
+    padding: $spacer ($spacer * 2.5) ($spacer * 1.5);
     text-decoration: none;
     &:hover {
-      background: $tab-item-hover;
+      background: $color-primary-pastel-1;
       text-decoration: none;
+      .name,
+      .results {
+        color: $link-hover-color;
+      }
     }
   }
 }
