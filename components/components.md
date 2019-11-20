@@ -313,7 +313,7 @@ Acompanhe a evolução dos componentes do Design System
                         ><span class="sr-only">Acessível</span>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td><a href="/ds/componentes/textarea">Textarea</a></td>
                    <td class="text-center">
                         <i class="fas fa-sync text-orange"></i
@@ -327,7 +327,7 @@ Acompanhe a evolução dos componentes do Design System
                         <i class="fas fa-check text-success"></i
                         ><span class="sr-only">Acessível</span>
                     </td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td><a href="/ds/componentes/upload">Upload</a></td>
                     <td class="text-center">

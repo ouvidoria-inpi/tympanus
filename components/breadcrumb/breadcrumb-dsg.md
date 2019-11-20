@@ -1,5 +1,4 @@
-
-## Breadcrumb ou Migalhas de Pão
+# Breadcrumb ou Migalhas de Pão
 
 Breadcrumbs, breadcrumb navigation ou breadcrumb trail (literalmente, navegação por migalhas de pão ou trilha de migalhas de pão, em alusão à história de João e Maria) é um sistema de navegação estrutural usada para proporcionar ao usuário um meio de localização dentro da estrutura de navegação do site.
 
@@ -34,8 +33,6 @@ Tom de Voz O tom de voz do Breadcrumbs é, essencialmente, como ele vai se comun
 Espaçamento Seguem as métricas definidas para os espaçamentos do Breadcrumbs. Todas as medidas foram definidas com valores múltiplos de 4px.
 
 ![Breadcrumb_Espaçamento](../../assets/images/components_img/breadcrumb/Breadcrumb_Espaçamento.png)
-
-
 
 ### Alinhamento
 

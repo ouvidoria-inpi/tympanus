@@ -157,10 +157,6 @@
       "path": "components/table/table"
     },
     {
-      "label": "Textarea",
-      "path": "components/textarea/textarea"
-    },
-    {
       "label": "Upload",
       "path": "components/upload/upload"
     }
