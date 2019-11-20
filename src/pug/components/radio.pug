@@ -1,0 +1,50 @@
+doctype html
+html(lang="pt-BR")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title radio button
+    // Fonte Rawline
+    link(rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
+    // Design System de Governo
+    link(rel="stylesheet" href="../css/dsgov.css")
+    // Fontawesome
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js")
+  body
+    .container-fluid
+      p.label Selecione 1 opção
+      .br-radio.d-block.d-sm-inline-block
+        input#h-radio-padrao(name='h-radio' type='radio')
+        label(for='h-radio-padrao') Padrão
+      .br-radio.d-block.mt-1.d-sm-inline-block.ml-sm-7.mt-sm-0
+        input#h-radio-checado(name='h-radio' type='radio' checked)
+        label(for='h-radio-checado') Checado
+      .br-radio.is-invalid.d-block.mt-1.d-sm-inline-block.ml-sm-7.mt-sm-0
+        input#h-radio-invalido(name='h-radio' type='radio')
+        label(for='h-radio-invalido') Inválido
+      .br-radio.is-valid.d-block.mt-1.d-sm-inline-block.ml-sm-7.mt-sm-0
+        input#h-radio-valido(name='h-radio' type='radio')
+        label(for='h-radio-valido') Válido
+      .br-radio.d-block.mt-1.d-sm-inline-block.ml-sm-7.mt-sm-0
+        input#h-radio-disabled(name='h-radio' type='radio' disabled)
+        label(for='h-radio-disabled') Desativado
+      hr
+      .row
+        .col-sm-auto
+          p.label Marque 1 opção
+          .br-radio.d-block
+            input#v-radio-padrao(name='v-radio' type='radio')
+            label(for='v-radio-padrao') Padrão
+          .br-radio.d-block.mt-1
+            input#v-radio-checado(name='v-radio' type='radio' checked)
+            label(for='v-radio-checado') Checado
+          .br-radio.d-block.is-invalid.mt-1
+            input#v-radio-invalido(name='v-radio' type='radio')
+            label(for='v-radio-invalido') Inválido
+          .br-radio.d-block.is-valid.mt-1
+            input#v-radio-valido(name='v-radio' type='radio')
+            label(for='v-radio-valido') Válido
+          .br-radio.d-block.mt-1
+            input#v-radio-disabled(name='v-radio' type='radio' disabled)
+            label(for='v-radio-disabled') Desativado
