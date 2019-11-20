@@ -35,15 +35,8 @@ Isso beneficia tanto o resultado que se almeja alcançar com o software como a c
 
 A ideia é que esse produto seja utilizado para consulta, para se tomar decisões, para novas features,novas interfaces e novas propriedades dos produtos do governo.
 
-<div class="br-alert is-warning">
-    <div class="icon">
-        <i class="fas fa-exclamation-triangle"></i>
-        <span class="sr-only">Atenção!</span>
-    </div>
-    <div class="content">
-        <span>Este não é um documento estático, ele pode sofrer constantes mudanças e a ideia desse Design System é isso. Encaixar diversas formas sem perder consistência.</span>
-    </div>
-</div>
+**Atenção**
+Este não é um documento estático, ele pode sofrer constantes mudanças e a ideia desse Design System é isso. Encaixar diversas formas sem perder consistência.
 
 Você já está entendendo que o Design System é o conjunto completo de padrões do projeto,
 documentação e princípios. Utilizando o UI kit (kit de ferramentas de design) e o código para atingir
