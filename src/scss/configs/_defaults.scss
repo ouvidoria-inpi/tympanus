@@ -1,18 +1,33 @@
 // Prefixo de uso nos componentes
 $prefix: "br-";
 
-// Margem padrão entre elementos
-$margin-default: $spacer * 2; // 16px
+// Espaçamentos
+$margin-default: $spacer * 2; // margem entre elementos 16px
+$button-padding: $spacer * 3; // 24px
 
 // Bordas
 $border-color: $color-gray-3;
 
-// Inputs
+$input-border-color: $color-gray-5;
+$input-border-width: 1px;
+
+// Arredondamentos
 $input-radius: 6px;
-$input-padding: $spacer * 2;
+$button-radius: 100px;
+$checkbox-radius: 4px;
 
-$input-bg-disabled: $color-gray-2;
+// Tamanhos
+$button-height-default: 44px;
+$button-height-small: 32px;
+$button-min-width: 144px;
+$button-action-min-width: 180px;
+$button-action-border-width: 14px;
+$button-circle-default: 36px;
+$button-circle-large: 64px;
 
-$input-height-default: 48px;
-$input-height-medium: 40px;
-$input-height-small: 32px;
+$checkbox-default: 24px;
+$checkbox-small: 20px;
+
+$input-default: 48px;
+$input-medium: 40px;
+$input-small: 32px;

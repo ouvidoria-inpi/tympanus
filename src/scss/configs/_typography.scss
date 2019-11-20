@@ -6,7 +6,7 @@ $font-family-base: "Rawline", "Raleway", sans-serif;
 // Body
 $body-color: $color-gray-6;
 $font-size-base: 1rem; // 16px
-$font-weight-base: 400;
+$font-weight-base: 500;
 
 // links
 $link-color: $color-primary;
@@ -24,6 +24,14 @@ $h4-font-size: $font-size-base * 1.125; // 18px
 $h5-font-size: $font-size-base;
 $h6-font-size: $font-size-base;
 
+// Breadcrumbs
+$breadcrumbs-font-size: $font-size-base * 0.75; // 12px
+$breadcrumbs-font-weight: 600;
+
+$breadcrumbs-divider: ">";
+$breadcrumbs-divider-color: $color-gray-4;
+$breadcrumbs-divider-size: $breadcrumbs-font-size;
+
 // Formulários
 $label-color: $color-gray-7;
 $label-font-size: $font-size-base;
@@ -32,10 +40,12 @@ $label-margin-bottom: $spacer * 2;
 
 $input-color: $body-color;
 $input-font-size: $font-size-base;
+$input-font-weight: 600;
 
 $placeholder-color: $input-color;
 $placeholder-font-size: $font-size-base * 0.875; // 14px
 $placeholder-font-style: italic;
+$placeholder-font-weight: 400;
 
 $fieldset-color: $color-primary;
 $fieldset-font-size: $font-size-base * 1.375; // 22px
