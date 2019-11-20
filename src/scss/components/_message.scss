@@ -1,22 +1,22 @@
-@mixin alert {
+.#{$prefix}message {
   box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
   color: $color-gray-7;
   display: flex;
-  margin-bottom: $alert-padding;
+  margin-bottom: $margin-default;
   .icon {
     align-items: center;
     color: $color-white;
     display: flex;
     font-size: 175%;
     justify-content: center;
-    width: $alert-icon-width;
+    width: $message-icon;
     img {
       max-width: 32px;
     }
   }
   .content {
     flex: 1;
-    padding: $alert-padding;
+    padding: $spacer * 2.5;
     strong {
       font-weight: 600;
     }
@@ -41,14 +41,10 @@
       background: transparent;
       border: 0;
       color: $color-gray-7;
-      padding: $alert-close-padding;
+      padding: $spacer $spacer * 2;
     }
   }
   // Estados
-  @include alert-states;
-}
-
-@mixin alert-states {
   @each $state, $color in (success, $color-success), (danger, $color-danger),
     (warning, $color-warning), (info, $color-info)
   {
