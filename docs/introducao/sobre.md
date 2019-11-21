@@ -1,5 +1,3 @@
-# Sobre o Design System
-
 ## O Design System
 
 O Design System do Governo Federal apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação com os sistemas interativos do Governo Federal.

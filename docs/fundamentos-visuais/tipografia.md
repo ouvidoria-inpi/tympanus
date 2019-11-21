@@ -1,5 +1,3 @@
-# Tipografia
-
 ## Rawline
 
 Para a apresentação dos elementos textuais do Design System do Governo Federal, somente uma família de fonte é utilizada: a **Rawline**. Sua escolha foi feita devido à diversidade de pesos da fonte que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.

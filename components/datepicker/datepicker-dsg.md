@@ -1,23 +1,16 @@
-
-## Datepicker
-
-## Definição
-
-Definição É um widget de interface gráfica do usuário que permite ao usuário selecionar uma data de um calendário e/ou hora a partir de um intervalo de tempo. Geralmente é apresentado nos formatos de selecionador de data, calendário pop-up, seletor de data e hora ou um seletor de tempo.
-
 ## Orientação de Uso
 
 ![Datepicker_Orientação](../../assets/images/components_img/datepicker/Datepicker_Orientação.png)
 
-### 1 | Rótulos 
+### 1 | Rótulos
 
-Devem ser acompanhados de rótulos que descrevam as datas que o usuário deve digitar. 
+Devem ser acompanhados de rótulos que descrevam as datas que o usuário deve digitar.
 
-### 2 | Placeholder 
+### 2 | Placeholder
 
-A máscara tem a função de auxiliar o usuário em como preencher as datas solicitadas. dd (significa dia) mm (mês) e aaaa (o ano). A máscara desaparece ao se começar a digitar no campo. E retorna no caso de exclusão da informação. 
+A máscara tem a função de auxiliar o usuário em como preencher as datas solicitadas. dd (significa dia) mm (mês) e aaaa (o ano). A máscara desaparece ao se começar a digitar no campo. E retorna no caso de exclusão da informação.
 
-### 3 | Ícones 
+### 3 | Ícones
 
 Alguns também podem ter um ícone no canto direito. Por exemplo: o input de senha com o ícone de mostrar/ocultar a senha.
 
@@ -31,9 +24,9 @@ Sempre que possível o rótulo do campo de data deve ser o mais sucinto e claro 
 
 ## Mensagens de Feedback Contextual
 
-### Mensagens de Erro 
+### Mensagens de Erro
 
-A mensagem de erro (feedback contextual) deve ser o mais sucinta possível, de preferência não ultrapassando uma linha da mesma largura do campo de texto. 
+A mensagem de erro (feedback contextual) deve ser o mais sucinta possível, de preferência não ultrapassando uma linha da mesma largura do campo de texto.
 Essas validações dos campos de texto deve exibir a mensagem de suporte abaixo do campo, juntamente com o ícone correspondente.
 
 ![Datepicker_Mensagem_Erro](../../assets/images/components_img/datepicker/Datepicker_Mensagem_Erro.png)
@@ -50,14 +43,13 @@ Mensagens de Alerta Se houver necessidade poderá aparecer um tooltip com mais A
 
 ![Datepicker_Funcionalidades_2](../../assets/images/components_img/datepicker/Datepicker_Funcionalidades_2.png)
 
-
-## Estados 
+## Estados
 
 Os campos de data seguem o mesmo comportamento do input, quando está sendo acionado. O contorno aumenta a espessura para 2px e o mesmo assume a cor azul #2B74E9, sinalizando ao usuário onde ele se encontra.
 
 ![Datepícker_Estado](../../assets/images/components_img/datepicker/Datepícker_Estado.png)
 
-## Anatomia 
+## Anatomia
 
 São elementos usados pelos usuários para selecionar uma ou mais datas.
 
@@ -65,7 +57,7 @@ São elementos usados pelos usuários para selecionar uma ou mais datas.
 
 ![Datepicker_Tipografia](../../assets/images/components_img/datepicker/Datepicker_Tipografia.png)
 
-## Hover 
+## Hover
 
 Ao passar o mouse em cima dos meses/anos, aparecerá um background de cantos arredondados nas extremidades e cor #DBE7FC.
 

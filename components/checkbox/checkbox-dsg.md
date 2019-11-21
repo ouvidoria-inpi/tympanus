@@ -1,5 +1,3 @@
-# Checkbox
-
 ## ANATOMIA
 
 São elementos usados para seleção simultânea.
@@ -32,7 +30,7 @@ Dar preferência ao uso do texto em uma coluna, porém se houver necessidade de 
 
 Como, por exemplo, pode ocorrer nos filtros da busca avançada.
 
-* * *
+---
 
 # Radio button
 

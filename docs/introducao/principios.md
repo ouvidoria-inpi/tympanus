@@ -1,5 +1,3 @@
-# Princípios do Design System
-
 ## Objetivos dos Princípios
 
 - guiar decisões de _design_;

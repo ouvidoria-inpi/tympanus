@@ -1,5 +1,3 @@
-# ícones
-
 Os ícones são representações gráficas que podem simbolizar uma ação ou comunicar ao usuário possibilidades de mudanças de estados entre os elementos de uma interface. No caso do Design System, foi escolhida a coleção de ícones **"font awesome"** em sua versão 5.10.2 Solid (versão 5.10.2) por possuírem uma boa variedade de ícones com um layout simples, sintético e amigável.
 
 ---
@@ -8,7 +6,7 @@ Os ícones são representações gráficas que podem simbolizar uma ação ou co
 
 Font Awesome é um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi feito por Dave Gandy para uso com o Twitter Bootstrap e mais tarde foi incorporado no BootstrapCDN.
 
-A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.  
+A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.
 No final desse documento foi incluído as orientações de uso de alguns dos ícones e deve ser seguido para que haja consistência entre os sistemas do governo.
 
 ![Exemplo FontAwesome](../../assets/images/docs_img/fundamentos/icones/DS_Icones_Fontawesome.png)
@@ -19,7 +17,7 @@ No final desse documento foi incluído as orientações de uso de alguns dos íc
 
 ## Ícones Criados
 
-No Design System, foram criados dois ícones para representar certificado digital e NeoID pois não havia na família do fontawesoome algum que representasse bem esses dois conceitos.  
+No Design System, foram criados dois ícones para representar certificado digital e NeoID pois não havia na família do fontawesoome algum que representasse bem esses dois conceitos.
 ![Imagem do Ícone de Certificado Digital e do NEOID](../../assets/images/docs_img/fundamentos/icones/DS_Icones_Certificado_NeoId.png)
 
 ## Princípios

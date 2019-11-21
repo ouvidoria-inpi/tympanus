@@ -1,5 +1,3 @@
-# Aplicação das cores
-
 ## Cores Alinhadas aos Princípios
 
 ### Experiência Única

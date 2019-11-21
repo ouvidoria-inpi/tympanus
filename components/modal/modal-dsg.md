@@ -1,7 +1,3 @@
-# Modal
-
-> Modais são diálogos flexíveis que podem conter informações críticas ou envolver decisões, tomadas pelo usuário, relacionadas a alguma tarefa.
-
 ![Exemplo Modal](../../assets/images/components_img/modal/modal.png)
 
 ## Uso

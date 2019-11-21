@@ -1,5 +1,3 @@
-# Sistema de Grid
-
 ### Experiência Única
 
 O sistema de Grid de 12 colunas possui uma boa flexibilidade para projetos de layouts, pois permite uma diagramação de páginas e telas com colunas múltiplas de 12, além de se adequar aos principais Frameworks CSS, facilitando a escolha na teconologia a ser utilizada. Em Tablets e Smartphones o número de colunas é reduzido ao máximo de 8 e 4 respectivamente, devido à limitação de espaço.
