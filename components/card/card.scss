@@ -1,0 +1,34 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+/*!
+ * card - 0.0.1 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+.br-card {
+  align-items: center;
+  box-shadow: $card-box-shadow;
+  display: flex;
+  flex-direction: column;
+  height: $card-size;
+  justify-content: center;
+  margin: $card-margin;
+  padding: $card-padding;
+  width: $card-size;
+  & .icon {
+    margin-bottom: $card-icon-margin-bottom;
+    & i {
+      color: $color-primary-lighten-15;
+      font-size: $card-icon-size;
+    }
+  }
+  & .title {
+    color: $color-primary-darken-15;
+    font-size: $card-title-font-size;
+    font-weight: $card-title-font-weight;
+    text-transform: uppercase;
+  }
+}
