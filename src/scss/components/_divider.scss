@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: $margin-default;
+  margin-bottom: $margin-default;
   &::after,
   &::before {
     background: $border-color;
@@ -11,8 +11,9 @@
     width: 100%;
   }
   .content {
+    color: $color-primary;
     margin: 0;
-    padding: 0 ($spacer * 2);
+    padding: 0 ($spacer * 2) !important;
     white-space: nowrap;
   }
 }

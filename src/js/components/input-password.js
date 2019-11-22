@@ -5,19 +5,19 @@ function toggleInputAction(element, className) {
     inputAction = inputAction.parentNode
   );
 
-  var icon = element.getElementsByClassName('fas')[0]
+  var icon = element.getElementsByClassName("fas")[0];
 
-  if (icon.classList.contains('fa-eye')) {
+  if (icon.classList.contains("fa-eye")) {
     inputAction
       .querySelector("input[type='password'")
-      .setAttribute('type', 'text')
-    icon.classList.remove('fa-eye')
-    icon.classList.add('fa-eye-slash')
-  } else if (icon.classList.contains('fa-eye-slash')) {
+      .setAttribute("type", "text");
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else if (icon.classList.contains("fa-eye-slash")) {
     inputAction
       .querySelector("input[type='text'")
-      .setAttribute('type', 'password')
-    icon.classList.remove('fa-eye-slash')
-    icon.classList.add('fa-eye')
+      .setAttribute("type", "password");
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
   }
 }

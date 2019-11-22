@@ -1,7 +1,7 @@
 .#{$prefix}accordeon {
   border-top: 1px solid $border-color;
   margin-bottom: $margin-default;
-  .field {
+  .item {
     border-bottom: 1px solid $border-color;
     display: flex;
     flex-direction: column;

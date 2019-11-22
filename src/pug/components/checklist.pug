@@ -1,0 +1,65 @@
+extends ../layouts/_component
+
+block vars
+  - var title = "Checklist";
+
+block scripts
+  script(src="../js/checklist.js")
+
+block content
+  .br-checklist
+    .item
+      .icon
+        i.far.fa-envelope
+      .br-input
+        label(for='radio-email') E-mail
+        input#radio-email(type='text' placeholder='Ex: fulano@email.com')
+      .br-radio
+        input#radio-email-check(name='preferencia' type='radio')
+        label(for='radio-email-check')
+          span.sr-only E-mail
+    .item.is-active
+      .icon.is-invalid
+        i.fas.fa-mobile-alt
+      .br-input.is-invalid
+        label(for='radio-celular') Celular
+        input#radio-celular(type='text' placeholder='Ex: (xx) xxxxx-xxxx')
+      .br-radio.is-invalid
+        input#radio-celular-check(checked name='preferencia' type='radio')
+        label(for='radio-celular-check')
+          span.sr-only Celular
+  .feedback.is-invalid
+    i.fas.fa-times-circle
+    span.message  Preencha o campo de texto
+  p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+  .br-checklist.mt-10
+    .item
+      .icon
+        i.far.fa-envelope
+      .br-input
+        label(for='box-email') E-mail
+        input#box-email(type='text' placeholder='Ex: fulano@email.com')
+      .br-checkbox
+        input#box-email-check(type='checkbox')
+        label(for='box-email-check')
+          span.sr-only E-mail
+    .item.is-active
+      .icon
+        i.fas.fa-phone
+      .br-input
+        label(for='box-phone') Telefone
+        input#box-phone(type='text' placeholder='Ex: fulano@phone.com')
+      .br-checkbox
+        input#box-phone-check(checked type='checkbox')
+        label(for='box-phone-check')
+          span.sr-only Telefone
+    .item
+      .icon
+        i.fas.fa-mobile-alt
+      .br-input
+        label(for='box-celular') Celular
+        input#box-celular(type='text' placeholder='Ex: (xx) xxxxx-xxxx' disabled)
+      .br-checkbox
+        input#box-celular-check(type='checkbox' disabled)
+        label(for='box-celular-check')
+          span.sr-only Celular

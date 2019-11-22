@@ -11,6 +11,7 @@
   font-weight: 600;
   height: $button-height-default;
   padding: 0 $button-padding;
+  width: 100%;
   &:hover,
   &:focus {
     background-color: $color-primary-lighten-2;
@@ -20,11 +21,16 @@
   &:disabled {
     background-color: adjust-color(
       $background,
-      $lightness: 25%,
-      $saturation: -25%
+      $lightness: 35%,
+      $saturation: -35%
     );
-    border-color: adjust-color($border, $lightness: 25%, $saturation: -25%);
-    color: adjust-color($color, $lightness: 25%, $saturation: -25%);
+    border-color: adjust-color($border, $lightness: 35%, $saturation: -35%);
+    color: adjust-color($color, $lightness: 35%, $saturation: -35%);
+  }
+  // Tablet
+  @include media-breakpoint-up(sm) {
+    min-width: $button-min-width;
+    width: auto;
   }
 }
 
@@ -32,7 +38,9 @@
   background: transparent;
   border: 0;
   color: $color;
+  display: inline;
   font-weight: $font-weight-base;
+  padding: 0;
   &:hover,
   &:focus {
     background-color: $color-primary-pastel-1;

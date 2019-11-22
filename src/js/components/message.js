@@ -1,5 +1,4 @@
 class BRAlert {
-  
   constructor(name, component) {
     this.name = name;
     this.component = component;
@@ -7,8 +6,8 @@ class BRAlert {
   }
 
   _setBehavior() {
-    for (let button of this.component.querySelectorAll('div.close button')) {
-      button.addEventListener('click', () => {
+    for (let button of this.component.querySelectorAll("div.close button")) {
+      button.addEventListener("click", () => {
         this._dismiss(this.component);
       });
     }
@@ -22,7 +21,7 @@ class BRAlert {
 let alertList = [];
 
 window.onload = (function() {
-  for (let brAlert of window.document.querySelectorAll('.br-alert')) {
-    alertList.push(new BRAlert('br-alert', brAlert));
+  for (let brAlert of window.document.querySelectorAll(".br-message")) {
+    alertList.push(new BRAlert("br-message", brAlert));
   }
 })();

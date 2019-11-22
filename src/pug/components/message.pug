@@ -1,23 +1,75 @@
-doctype html
-html(lang="pt-BR")
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    title alert
-    link(rel='stylesheet' href='/dist/css/dsgov.css')
-    link(rel='stylesheet' href='message.css')
-    script(src='../../node_modules/@fortawesome/fontawesome-free/js/all.min.js')
-  body
-    .container-fluid
+extends ../layouts/_component
+
+block vars
+  - var title = "Message";
+
+block scripts
+  script(src="../js/message.js")
+
+block content
+  .br-message.is-danger
+    .icon
+      i.fas.fa-times-circle
+      span.sr-only Erro!
+    .content
+      strong Erro.
+      span  Mensagem. 
+      a(href='') Exemplo de link
+    .close
+      button(type='button')
+        i.fas.fa-times
+        span.sr-only Fechar
+  .br-message.is-success
+    .icon
+      i.fas.fa-check-circle
+      span.sr-only Sucesso!
+    .content
+      strong Sucesso.
+      span  Mensagem. 
+      a(href='') Exemplo de link
+    .close
+      button(type='button')
+        i.fas.fa-times
+        span.sr-only Fechar
+  .br-message.is-warning
+    .icon
+      i.fas.fa-exclamation-triangle
+      span.sr-only Atenção!
+    .content
+      strong Atenção.
+      span  Mensagem. 
+      a(href='') Exemplo de link
+    .close
+      button(type='button')
+        i.fas.fa-times
+        span.sr-only Fechar
+  .br-message.is-info
+    .icon
+      i.fas.fa-info-circle
+      span.sr-only Informação!
+    .content
+      strong Informação.
+      span  Mensagem. 
+      a(href='') Exemplo de link
+    .close
+      button(type='button')
+        i.fas.fa-times
+        span.sr-only Fechar
+  .row
+    .col
       .br-message.is-danger
         .icon
           i.fas.fa-times-circle
           span.sr-only Erro!
         .content
-          strong Erro.
-          span  Mensagem. 
-          a(href='') Exemplo de link
+          p
+            strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            br
+            | Voluptatum, illo totam. A neque iusto dolores rem assumenda? Officiis error inventore laudantium quam vel illum nemo nesciunt accusamus. Dolore, aliquid assumenda.
+          p
+            strong Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            br
+            | Ad fuga quod odio laborum sequi aspernatur ut nulla molestiae? Officiis earum, expedita amet optio ex necessitatibus voluptatem sequi accusamus numquam suscipit.
         .close
           button(type='button')
             i.fas.fa-times
@@ -27,21 +79,32 @@ html(lang="pt-BR")
           i.fas.fa-check-circle
           span.sr-only Sucesso!
         .content
-          strong Sucesso.
-          span  Mensagem. 
-          a(href='') Exemplo de link
+          p
+            strong Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            br
+            | Omnis quae laudantium error explicabo amet. Dicta provident sit tempore sed incidunt reprehenderit aliquam iusto, rem architecto quibusdam tempora animi. Odio, ipsa.
+          p
+            strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            br
+            | Exercitationem itaque beatae maxime repudiandae, consequuntur odio necessitatibus facilis nesciunt dicta in id error autem saepe fugiat laboriosam atque nisi dolor? Rem.
         .close
           button(type='button')
             i.fas.fa-times
             span.sr-only Fechar
+    .col
       .br-message.is-warning
         .icon
           i.fas.fa-exclamation-triangle
           span.sr-only Atenção!
         .content
-          strong Atenção.
-          span  Mensagem. 
-          a(href='') Exemplo de link
+          p
+            strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            br
+            | Architecto quasi ex ipsa ipsum in iure quaerat harum, iusto enim, perferendis, accusamus et asperiores cum quis totam modi natus illo esse.
+          p
+            strong Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            br
+            | Hic quam tenetur consequatur ipsam, facere molestias mollitia officia possimus voluptas provident corrupti culpa ullam quo voluptate! Iusto nesciunt temporibus adipisci aut.
         .close
           button(type='button')
             i.fas.fa-times
@@ -51,81 +114,15 @@ html(lang="pt-BR")
           i.fas.fa-info-circle
           span.sr-only Informação!
         .content
-          strong Informação.
-          span  Mensagem. 
-          a(href='') Exemplo de link
+          p
+            strong Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            br
+            | Iste aperiam accusamus fugit itaque ullam temporibus quasi voluptatem ea officia architecto cupiditate qui libero numquam neque, et cumque porro molestiae enim.
+          p
+            strong Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            br
+            | Rem minus dolorum hic, molestias cumque adipisci eos voluptatum mollitia accusantium distinctio nihil sint laboriosam, repudiandae fugit culpa enim asperiores ea labore!
         .close
           button(type='button')
             i.fas.fa-times
             span.sr-only Fechar
-      .row
-        .col
-          .br-message.is-danger
-            .icon
-              i.fas.fa-times-circle
-              span.sr-only Erro!
-            .content
-              p
-                strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                br
-                | Voluptatum, illo totam. A neque iusto dolores rem assumenda? Officiis error inventore laudantium quam vel illum nemo nesciunt accusamus. Dolore, aliquid assumenda.
-              p
-                strong Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                br
-                | Ad fuga quod odio laborum sequi aspernatur ut nulla molestiae? Officiis earum, expedita amet optio ex necessitatibus voluptatem sequi accusamus numquam suscipit.
-            .close
-              button(type='button')
-                i.fas.fa-times
-                span.sr-only Fechar
-          .br-message.is-success
-            .icon
-              i.fas.fa-check-circle
-              span.sr-only Sucesso!
-            .content
-              p
-                strong Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                br
-                | Omnis quae laudantium error explicabo amet. Dicta provident sit tempore sed incidunt reprehenderit aliquam iusto, rem architecto quibusdam tempora animi. Odio, ipsa.
-              p
-                strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                br
-                | Exercitationem itaque beatae maxime repudiandae, consequuntur odio necessitatibus facilis nesciunt dicta in id error autem saepe fugiat laboriosam atque nisi dolor? Rem.
-            .close
-              button(type='button')
-                i.fas.fa-times
-                span.sr-only Fechar
-        .col
-          .br-message.is-warning
-            .icon
-              i.fas.fa-exclamation-triangle
-              span.sr-only Atenção!
-            .content
-              p
-                strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                br
-                | Architecto quasi ex ipsa ipsum in iure quaerat harum, iusto enim, perferendis, accusamus et asperiores cum quis totam modi natus illo esse.
-              p
-                strong Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                br
-                | Hic quam tenetur consequatur ipsam, facere molestias mollitia officia possimus voluptas provident corrupti culpa ullam quo voluptate! Iusto nesciunt temporibus adipisci aut.
-            .close
-              button(type='button')
-                i.fas.fa-times
-                span.sr-only Fechar
-          .br-message.is-info
-            .icon
-              i.fas.fa-info-circle
-              span.sr-only Informação!
-            .content
-              p
-                strong Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                br
-                | Iste aperiam accusamus fugit itaque ullam temporibus quasi voluptatem ea officia architecto cupiditate qui libero numquam neque, et cumque porro molestiae enim.
-              p
-                strong Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                br
-                | Rem minus dolorum hic, molestias cumque adipisci eos voluptatum mollitia accusantium distinctio nihil sint laboriosam, repudiandae fugit culpa enim asperiores ea labore!
-            .close
-              button(type='button')
-                i.fas.fa-times
-                span.sr-only Fechar

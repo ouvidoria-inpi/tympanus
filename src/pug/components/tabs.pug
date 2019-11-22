@@ -1,49 +1,43 @@
-doctype html
-html(lang="pt-BR")
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    title Tabs
-    // Fonte Rawline
-    link(rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
-    // Design System de Governo
-    link(rel="stylesheet" href="../css/dsgov.css")
-    // Fontawesome
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js")
-  body
-    .container-fluid
-      nav
-        ul.br-tabs.is-vertical
-          li.item.is-active
-            a(href='')
-              span.name Entrar com CPF
-          li.item
-            a(href='')
-              img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
-              span.name Entrar com Certificado Digital
-          li.item
-            a(href='')
-              img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
-              span.name Entrar com NeoID
-        ul.br-tabs.mt-10
-          li.item.is-active
-            a(href='')
-              span.name Todos
-              span.results (124)
-          li.item
-            a(href='')
-              span.name Notícias
-              span.results (74)
-          li.item
-            a(href='')
-              span.name Serviços
-              span.results (16)
-          li#item4.item
-            a(href='')
-              span.name Aplicativos
-              span.results (12)
-          li#item5.item
-            a(href='')
-              span.name Mídias
-              span.results (22)
+extends ../layouts/_component
+
+block vars
+  - var title = "Tabs";
+
+block scripts
+  script(src="../js/tabs.js")
+
+block content
+  nav
+    ul.br-tabs.is-vertical
+      li.item.is-active
+        a(href='javascript:void(0)')
+          span.name Entrar com CPF
+      li.item
+        a(href='javascript:void(0)')
+          img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
+          span.name Entrar com Certificado Digital
+      li.item
+        a(href='javascript:void(0)')
+          img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
+          span.name Entrar com NeoID
+    ul.br-tabs.mt-10
+      li.item.is-active
+        a(href='javascript:void(0)')
+          span.name Todos
+          span.results (124)
+      li.item
+        a(href='javascript:void(0)')
+          span.name Notícias
+          span.results (74)
+      li.item
+        a(href='javascript:void(0)')
+          span.name Serviços
+          span.results (16)
+      li#item4.item
+        a(href='javascript:void(0)')
+          span.name Aplicativos
+          span.results (12)
+      li#item5.item
+        a(href='javascript:void(0)')
+          span.name Mídias
+          span.results (22)

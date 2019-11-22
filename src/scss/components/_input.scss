@@ -108,25 +108,6 @@
         box-shadow: 0 0 0 1px $color;
         outline: none;
       }
-      // Feedback
     }
-  }
-  // Feedbacks
-  @each $state, $color in (valid, $color-success), (invalid, $color-danger) {
-    &.is-#{$state} {
-      & + .feedback {
-        color: $color;
-        font-size: $feedback-font-size;
-        font-style: $feedback-font-style;
-        font-weight: $feedback-font-weight;
-        padding: $spacer-half;
-      }
-    }
-  }
-  // Texto de ajuda
-  & + .help,
-  & + .feedback + .help {
-    color: $help-color;
-    font-size: $help-font-size;
   }
 }
