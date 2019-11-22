@@ -9,6 +9,7 @@
   justify-content: center;
   margin: 22px;
   padding: 30px 20px;
+  position: relative;
   width: 240px;
 }
 
@@ -26,6 +27,57 @@
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.br-card .text {
+  color: #ffffff;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  padding: 50px 30px;
+}
+
+.br-card.is-change-content:hover {
+  text-decoration: none;
+}
+
+.br-card.is-change-content:hover .text {
+  background-color: #555555;
+  font-weight: 500;
+  height: 100%;
+  line-height: 25px;
+  opacity: 1;
+  transition: width 0ms 0ms,height 0ms 0ms,opacity .3s ease-in-out .2s;
+  width: 100%;
+}
+
+.br-card.is-arrow::after {
+  color: #2670e8;
+  content: "\f062";
+  font-family: Font Awesome\ 5 Free;
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  transform: rotate(50deg);
+}
+
+.br-card.is-small {
+  height: 216px;
+  width: 216px;
+}
+
+.br-card.is-medium {
+  height: 272px;
+  width: 272px;
+}
+
+.br-card.is-large {
+  height: 168px;
+  width: 368px;
 }
 
 /*# sourceMappingURL=card.css.map */
