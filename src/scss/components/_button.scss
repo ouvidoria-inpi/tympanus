@@ -46,24 +46,18 @@
     @include media-breakpoint-up(sm) {
       min-width: 0;
     }
-    &.is-medium {
-      height: $button-circle-medium;
-      width: $button-circle-medium;
-      img {
-        max-width: $button-circle-medium;
-      }
-      [class*="fa-"] {
-        transform: scale(1.75);
-      }
-    }
-    &.is-large {
-      height: $button-circle-large;
-      width: $button-circle-large;
-      img {
-        max-width: $button-circle-large;
-      }
-      [class*="fa-"] {
-        transform: scale(2.25);
+    @each $size, $value in (medium, $button-circle-medium),
+      (large, $button-circle-large)
+    {
+      &.is-#{$size} {
+        height: $value;
+        width: $value;
+        img {
+          max-width: $value;
+        }
+        [class*="fa-"] {
+          transform: scale(1.75);
+        }
       }
     }
   }

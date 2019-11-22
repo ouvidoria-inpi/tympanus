@@ -1,53 +1,120 @@
-// Background da página
-.page-background {
+// Layout de autenticação
+.template-authentication {
+  .page-content {
+    padding: $spacer;
+  }
+  .page-wrapper {
+    position: relative;
+  }
+  .accessibility {
+    position: absolute;
+    right: $spacer * 2;
+    top: $spacer * 2;
+    .icon {
+      font-size: 150%;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  // Logo
+  .logo {
+    display: block;
+    margin-top: $spacer;
+  }
+  // Marca do Governo
+  .marca {
+    width: 150px;
+  }
+}
+
+// Versão tablet
+@include media-breakpoint-up(sm) {
+  .template-authentication {
+    .left-side {
+      background-color: $color-gray-1;
+      .page-content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .right-side {
+      .page-content {
+        padding-left: 60px;
+      }
+    }
+    // Logo
+    .logo {
+      margin-bottom: 50px;
+      margin-top: 100px;
+      text-align: center;
+    }
+    .accessibility {
+      position: static;
+      text-align: right;
+      .icon {
+        font-size: 100%;
+      }
+    }
+    .main-title {
+      margin-top: 70px;
+    }
+  }
+}
+// Desktop
+@include media-breakpoint-up(md) {
+  .template-authentication {
+    .left-side {
+      .page-content {
+        margin-left: auto;
+        max-width: 267px;
+      }
+    }
+    .right-side {
+      max-width: 632px;
+      .page-content {
+        padding-left: 120px;
+      }
+    }
+  }
+}
+// TV
+@include media-breakpoint-up(lg) {
+  .right-side {
+    max-width: 774px;
+  }
+}
+// 4K
+@include media-breakpoint-up(xl) {
+  .right-side {
+    max-width: 918px;
+  }
+}
+
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "wrapper"
+      "footer";
+    height: 100vh;
+  }
+  // Versão tablet
   @include media-breakpoint-up(sm) {
-    background: linear-gradient(to right, $color-gray-1 50%, $color-white 50%);
-  }
-}
-
-// Título esquerdo
-.signin-title {
-  color: $color-primary;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-// Conteúdo de midia
-.signin-menu {
-  align-items: center;
-  color: $color-gray-6;
-  display: flex;
-  &:hover {
-    color: $color-primary-lighten-1;
-  }
-  .icon {
-    & + .content {
-      margin-left: $spacer;
+    .page-wrapper {
+      display: grid;
+      grid-template-columns: 30vw 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "left-side right-side";
     }
   }
-  .content {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    font-weight: 500;
-  }
-}
-
-// Navegação para smartphones
-.login-mobile {
-  align-items: center;
-  display: flex;
-  .icon {
-    & + .content {
-      margin-left: $spacer;
+  // Versão desktop
+  @include media-breakpoint-up(md) {
+    .page-wrapper {
+      grid-template-columns: 37vw 1fr;
     }
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
-  a {
-    color: $color-gray-6;
-    text-decoration: none;
   }
 }

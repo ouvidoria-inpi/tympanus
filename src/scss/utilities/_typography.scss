@@ -26,7 +26,7 @@
   font-size: $h2-font-size;
   font-weight: 500;
   line-height: $headings-line-height;
-  margin: $headings-margin-bottom;
+  margin-bottom: $headings-margin-bottom;
 }
 
 // Subtítulo 1
@@ -57,10 +57,30 @@
 }
 
 // Agrupador de formulário - aplicar preferencialmente em <legend> de <fieldset>
-fieldset legend, // sass-lint:disable-line force-element-nesting
+fieldset legend,
 .fieldset {
   color: $fieldset-color;
   font-size: $fieldset-font-size;
   font-weight: $fieldset-font-weight;
   margin-bottom: $fieldset-margin-bottom;
+}
+
+// Feedback
+.feedback {
+  font-size: $feedback-font-size;
+  font-style: $feedback-font-style;
+  font-weight: $feedback-font-weight;
+  padding: $spacer-half;
+  &.is-valid {
+    color: $color-success;
+  }
+  &.is-invalid {
+    color: $color-danger;
+  }
+}
+
+// Help
+.help {
+  color: $help-color;
+  font-size: $help-font-size;
 }

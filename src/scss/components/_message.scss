@@ -2,7 +2,7 @@
   box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
   color: $color-gray-7;
   display: flex;
-  margin-bottom: $margin-default;
+  margin-bottom: $margin-default * 2;
   .icon {
     align-items: center;
     color: $color-white;

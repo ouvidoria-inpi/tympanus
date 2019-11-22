@@ -1,0 +1,55 @@
+extends ../layouts/_authentication
+
+block vars
+  - var title = "Acesse sua conta";
+
+block content
+  .row
+    .col-sm-10.col-md-8
+      // Informar CPF
+      .br-input
+        label(for='cpf') CPF
+        input#cpf(type='text' placeholder='Ex: 123.456.789-99')
+      // Informar a senha
+      .br-input.has-icon.mt-3
+        label(for='password') Senha
+        input#password(type='password' placeholder='Digite sua senha de 8 a 11 dígitos')
+        button.icon(onclick="toggleInputAction(this, 'is-action')")
+          span.sr-only Mostrar senha
+          i.fas.fa-eye
+      // Facilidades de senha
+      .row.mt-8.mt-sm-3
+        .col-auto
+          a(href='') Esqueceu a Senha?
+        .col-auto.ml-auto
+          .br-checkbox
+            input#manter-logado(type='checkbox')
+            label(for='manter-logado') Manter logado
+      // Botões de ação
+      .d-flex.flex-wrap.flex-row-reverse.justify-content-center.mt-6.mt-sm-10
+        button.br-button.is-primary Entrar
+        button.br-button.is-primary.mt-3.mt-sm-0.mr-sm-3 Cadastrar
+      // Outras opções de login em smartphones
+      .d-sm-none.mt-12
+        .row
+          .col
+            a.d-inline-flex(href='')
+              .icon
+                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
+              .name Entrar com Certificado Digital
+          .col
+            a.d-inline-flex(href='')
+              .icon
+                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
+              .name Entrar com NeoID
+      // Outras opções de login
+      aside.mt-3.mt-sm-10
+        .br-divider
+          span.content ou
+        .text-center
+          button.br-button.is-circle.is-large.border-facebook.bg-facebook.text-white(type='button')
+            i.fab.fa-facebook-f
+          button.br-button.is-circle.is-large.border-twitter.bg-twitter.text-white.ml-1(type='button')
+            i.fab.fa-twitter
+          button.br-button.is-circle.is-large.border-google-plus.bg-google-plus.text-white.ml-1(type='button')
+            i.fab.fa-google-plus-g
