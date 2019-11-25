@@ -1,0 +1,40 @@
+doctype html
+html(lang="pt-BR")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title textarea
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' crossorigin='anonymous')
+    link(rel='stylesheet' href='/dist/css/dsgov.css')
+    link(rel='stylesheet' href='textarea.css')
+  body(onload="updateSize();")
+    .container-fluid
+      .br-textarea
+        label(for='ex1') Exemplo de TextArea
+        textarea#ex1(placeholder='Exemplo de TextArea')
+      br
+      .br-textarea.is-focus
+        label(for='ex2') Exemplo de TextArea - Hover
+        textarea#ex2(placeholder='Exemplo de TextArea - Hover')
+      br
+      .br-textarea.is-disabled
+        label(for='ex3') Exemplo de TextArea - Disabled
+        textarea#ex3(placeholder='Exemplo de TextArea - Disabled')
+      br
+      .br-textarea.is-valid
+        label(for='ex4') Exemplo de TextArea - Valid
+        textarea#ex4(placeholder='Exemplo de TextArea - Valid')
+      br
+      .br-textarea.is-invalid
+        label(for='ex5') Exemplo de TextArea - Invalid
+        textarea#ex5(placeholder='Exemplo de TextArea - Invalid')
+      br
+      .br-textarea.is-medium
+        label(for='ex6') Exemplo de TextArea Médio
+        textarea#ex6(placeholder='Exemplo de TextArea Médio')
+      br
+      .br-textarea.is-large
+        label(for='ex7') Exemplo de TextArea Grande
+        textarea#ex7(placeholder='Exemplo de TextArea Grande')
+      br
