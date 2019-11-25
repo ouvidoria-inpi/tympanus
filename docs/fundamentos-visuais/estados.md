@@ -26,7 +26,7 @@ Dependendo do fundo aplicado, o estado do componente deve ser revisto para atend
 
 Em alguns casos pode ser necessário aumentar as dimensões do fundo de um elemento ou componente para melhorar a legibilidade de um texto ou a compreensão de um ícone quando um estado é aplicado. Quando isso acontecer, tome cuidado para não soprepor outros elementos: um aumento de 4px ou 8px por exemplo, pode ser suficiente para resolver o problema.
 
-![Legibilidade](../../assets/images/docs_img/fundamentos/estados/aumentando_legibilidade.png)
+![Legibilidade](/assets/design-system/assets/images/docs_img/fundamentos/estados/aumentando_legibilidade.png)
 
 Usuários interagem com a interface de diversas maneiras. Ao projetar um componente, considere o uso de diferentes dispostitivos de entrada tais como:
 
@@ -51,7 +51,7 @@ Seguindo este conceito podemos dizer que o [Scrim](#) é um overlay componentiza
 
 ## Tipos de Estado
 
-![Estados](../../assets/images/docs_img/fundamentos/estados/estados.png)
+![Estados](/assets/design-system/assets/images/docs_img/fundamentos/estados/estados.png)
 
 Abaixo,segue a lista dos principais estados encontrados no DS gov. Alguns estados são específicos de um componente, e como tal serão detalhados na sua respectiva documentação.
 

@@ -40,7 +40,7 @@ Interfaces digitais do governo devem utilizar a família de fonte definida sempr
 
 ## Estilos da Fonte Rawline
 
-![Lista de Estilo](imagens/tipografia/estilo.png)
+![Lista de Estilo](/assets/design-system/assets/images/docs_img/fundamentos/tipografia/estilo.png)
 
 ### Peso da fonte (Font-Weight)
 
@@ -68,7 +68,7 @@ Existem muitas escalas diferentes, mas dentro do Design System do Governo Federa
 
 O tamanho **fonte base** é de 14px (1em) e peso da fonte normal (400). A unidade **em** é uma medida relativa que permite que o usuário altere o tamanho de exibição do texto na interface. Com exceção da fonte base, utilize a unidade **em** para todos os outros valores da escala. Assim, caso o valor do tamanho base padrão seja alterado, toda a interface se adapta ao novo valor.
 
-![Escala Tipográfica](imagens/tipografia/escala.png)
+![Escala Tipográfica](/assets/design-system/assets/images/docs_img/fundamentos/tipografia/escala.png)
 
 **Dica:** utilize alguma calculadora [Type Scale](https://type-scale.com/) (como o site [Modular Scale](https://www.modularscale.com)) para calcular os tamanhos dentro da escala.
 
