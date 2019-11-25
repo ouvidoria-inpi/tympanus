@@ -1,0 +1,237 @@
+extends ../../layouts/component
+
+block vars
+  - var title = "Modal";
+
+block scripts
+  script(src="../js/select.js")
+
+block content
+  .br-modal.is-medium
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title Retornar para página inicial?
+        .br-modal-body
+          p Você está sendo redirecionado para a página inicial do sistema
+        .br-modal-footer.justify-content-end
+          button.br-button.is-cancel.is-small(type='button') Cancelar
+          button.br-button.is-primary.is-small.ml-3(type='button') Retornar
+  .br-modal.is-medium.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title Retornar para página inicial?
+          button.close(type='button' data-dismiss='br-modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .br-modal-body
+          p Você está sendo redirecionado para a página inicial do sistema
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Ação 1
+          button.br-button.is-primary.is-small.ml-3(type='button') Ação 2
+  .br-modal.is-medium.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title
+            | Título do modal de exemplo com uso de duas linhas, título do modal de
+            | exemplo com uso de duas linhas
+          button.close(type='button' data-dismiss='br-modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .br-modal-body
+          p Texto com duas linhas Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Ação 1
+          button.br-button.is-primary.is-small.ml-3(type='button') Ação 2
+  .br-modal.is-medium.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title.is-inline Título do modal de exemplo com uso de uma linha
+          button.close(type='button' data-dismiss='br-modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .br-modal-body
+          p Texto com uma linha Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Ação 1
+          button.br-button.is-primary.is-small.ml-3(type='button') Ação 2
+  .br-modal.is-xsmall.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-body.justify-content-center
+          span.br-load.is-loading.mb-5 Carregando...
+        .br-modal-footer.justify-content-around
+          button.br-button.is-secondary.is-small(type='button') Cancelar
+  .br-modal.is-medium.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-body
+          p
+            | Modal de alerta sem título Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Ação 1
+          button.br-button.is-primary.is-small.ml-3(type='button') Ação 2
+  .br-modal.is-medium.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title Escolha uma conta
+          button.close(type='button' data-dismiss='br-modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .br-modal-body
+          .br-select
+            label(for='simples') Opções
+            select#simples
+              option(value='0') Selecione uma opção
+              option(value='opcao-1') opção 1
+              option(value='opcao-2') opção 2
+              option(value='opcao-3') opção 3
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Cancelar
+          button.br-button.is-primary.is-small.ml-3(type='button') Retornar
+  .br-modal.is-medium.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title Buscar pelos estados
+          button.close(type='button' data-dismiss='br-modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .br-modal-body
+          .br-checkbox.d-block
+            input#v-checkbox-padrao(type='checkbox')
+            label(for='v-checkbox-padrao') Acre(AC)
+          .br-checkbox.d-block.mt-1
+            input#v-checkbox-padrao1(type='checkbox' checked)
+            label(for='v-checkbox-padrao1') Alagoas(AL)
+          .br-checkbox.d-block.mt-1
+            input#v-checkbox-padrao2(type='checkbox')
+            label(for='v-checkbox-padrao2') Amapá(AP)
+          .br-checkbox.d-block.mt-1
+            input#v-checkbox-padrao3(type='checkbox')
+            label(for='v-checkbox-padrao3') Amazonas(AM)
+          .br-checkbox.d-block.mt-1
+            input#v-checkbox-padrao4(type='checkbox' checked)
+            label(for='v-checkbox-padrao4') Bahia(BA)
+          .br-checkbox.d-block.mt-1
+            input#v-checkbox-padrao5(type='checkbox')
+            label(for='v-checkbox-padrao5') Ceará(CE)
+          .br-checkbox.d-block.mt-1
+            input#v-checkbox-padrao6(type='checkbox')
+            label(for='v-checkbox-padrao6') Distrito Federal (DF)
+          .br-checkbox.d-block.mt-1
+            input#v-checkbox-padrao7(type='checkbox')
+            label(for='v-checkbox-padrao7') Espírito Santo (ES)
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Cancelar
+          button.br-button.is-primary.is-small.ml-3(type='button') Retornar
+  .br-modal.is-medium.mt-9
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title Opções de Visualização
+          button.close(type='button' data-dismiss='br-modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .br-modal-body
+          .br-radio.d-block
+            input#v-radio-padrao(name='v-radio' type='radio')
+            label(for='v-radio-padrao') Fotos
+          .br-radio.d-block.mt-1
+            input#v-radio-padrao1(name='v-radio' type='radio' checked)
+            label(for='v-radio-padrao1') Filmes
+          .br-radio.d-block.mt-1
+            input#v-radio-padrao2(name='v-radio' type='radio')
+            label(for='v-radio-padrao2') Áudio
+          .br-radio.d-block.mt-1
+            input#v-radio-padrao3(name='v-radio' type='radio')
+            label(for='v-radio-padrao3') Todas
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Cancelar
+          button.br-button.is-primary.is-small.ml-3(type='button') Retornar
+  .br-modal.is-medium.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title Autenticar pelo Gov.br
+          button.close(type='button' data-dismiss='br-modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .br-modal-body
+          .br-select
+            label(for='simples1') Domínio da autenticação
+            select#simples1
+              option(value='0') Governo Federal do Brasil (Gov.br)
+          .br-input.mt-3
+            label(for='simples2') Usuário
+            input#simples2(type='text' placeholder='Nome do usuário ou E-mail')
+          .br-input.has-icon.mt-3
+            label(for='password') Senha
+            input#password(type='password' placeholder='Digite sua senha de 8 a 11 dígitos')
+            button.icon(type='button' onclick="toggleInputAction(this, 'is-action')")
+              span.sr-only Mostrar senha
+              i.fas.fa-eye
+          .mt-3
+            a(href='#') Esqueceu a senha?
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Cancelar
+          button.br-button.is-primary.is-small.ml-3(type='button') Entrar
+  .br-modal.is-large.mt-9
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title Novo evento
+          button.close(type='button' data-dismiss='br-modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .br-modal-body
+          .row.align-items-end
+            .col
+              .br-input
+                label(for='simples3') Nome do evento
+                input#simples3(type='text' placeholder='Digite o nome do evento')
+            .col-5
+              .br-checkbox.d-block.mb-2
+                input#v-checkbox-padrao8(type='checkbox' checked)
+                label(for='v-checkbox-padrao8') Marcar como ocupado
+          .row.align-items-end
+            .col-6
+              .br-input.has-icon
+                label(for='data') Inicial
+                input#data(type='date' placeholder='Quinta, 13 de setembro de 2019')
+                button.icon(type='button')
+                  i.fas.fa-calendar
+            .col-4
+              .br-select
+                label(for='simples4') Hora Inicial
+                select#simples4
+                  option(value='0') 11:00
+          .row.align-items-end
+            .col-6
+              .br-input.has-icon
+                label(for='data1') Final
+                input#data1(type='date' placeholder='Data final')
+                button.icon(type='button')
+                  i.fas.fa-calendar
+            .col-4
+              .br-select
+                label(for='simples5') Hora Final
+                select#simples5
+                  option(value='0') 12:00
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Cancelar
+          button.br-button.is-primary.is-small.ml-3(type='button') Entrar
+  .br-modal.is-scroll.is-medium.mt-3
+    .br-modal-dialog
+      .br-modal-content
+        .br-modal-header
+          h2.br-modal-title Concorda com os termos?
+        .br-modal-body.mb-5
+          .br-card
+            | Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Mauris id gravida nulla. Cras sagittis dapibus
+            | felis vitae semper. Donec vel hendrerit ante. Etiam sed blandit nisi. Praesent iaculis, nisl eget rutrum
+            | vehicula, lacus tortor feugiat diam, et euismod lacus metus eget nisi. Sed fermentum, nunc nec efficitur
+            | pharetra, felis dolor feugiat massa, et semper turpis felis quis ligula. Quisque non metus at risus
+            | maximus ultrices. Nam vel massa tellus. Vestibulum lobortis dui et pellentesque porta. Cras rhoncus augue
+            | a mauris porttitor, in malesuada metus eleifend. Praesent ac lacinia lorem. Sed cursus nisl ligula, vel
+            | ultrices ex pellentesque eu. Curabitur facilisis egestas libero, non pharetra lacus ultricies quis. Mauris
+            | non finibus justo, eu varius metus. Donec nec eros semper, consequat turpis id, fermentum dolor.
+        .br-modal-footer.justify-content-end
+          button.br-button.is-secondary.is-small(type='button') Negar
+          button.br-button.is-primary.is-disabled.is-small.ml-3(type='button') Aceitar
