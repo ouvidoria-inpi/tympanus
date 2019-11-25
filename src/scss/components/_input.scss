@@ -8,6 +8,7 @@
   }
   input {
     @include placeholder;
+    background: $color-white;
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
     color: $input-color;

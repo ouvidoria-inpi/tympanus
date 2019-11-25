@@ -49,11 +49,11 @@
       }
     }
     &:disabled {
+      background: $color-gray-2;
       [class*="fa-"] {
         color: $color-gray-5;
         margin-left: ($spacer * 2);
       }
-      background: $color-gray-2;
     }
   }
   // Lista de opções

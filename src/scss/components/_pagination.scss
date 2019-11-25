@@ -1,22 +1,14 @@
-@mixin pagination($size: md) {
+.#{$prefix}pagination {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: $pagination-margin;
+  margin: 0 0 ($spacer * 3);
   padding: 0;
   li {
     @include media-breakpoint-up(sm) {
       display: block;
     }
     display: none;
-    @if ($size == lg) {
-      @include media-breakpoint-up(sm) {
-        font-size: $pagination-font-size-lg;
-      }
-      font-size: $pagination-font-size;
-    } @else {
-      font-size: $pagination-font-size;
-    }
     list-style: none;
     margin: 0;
     &:first-child,
@@ -28,45 +20,29 @@
   }
   a {
     align-items: center;
-    color: $pagination-link;
+    color: $color-primary;
     display: flex;
-    font-weight: $pagination-font-weight;
+    font-weight: 400;
     justify-content: center;
-    @if ($size == lg) {
-      @include media-breakpoint-up(sm) {
-        padding: 0 $pagination-padding-lg;
-      }
-      padding: 0 $pagination-padding;
-    } @else {
-      padding: 0 $pagination-padding;
-    }
+    padding: 0 ($spacer * 1.5);
     position: relative;
     text-decoration: none !important;
     &:hover {
       text-decoration: none;
       &::before {
-        background-color: $pagination-hover;
+        background-color: $color-primary-pastel-1;
       }
     }
     &::before {
       background: transparent;
       border-radius: 50%;
       content: "";
-      @if ($size == lg) {
-        @include media-breakpoint-up(sm) {
-          height: $pagination-circle-lg;
-          width: $pagination-circle-lg;
-        }
-        height: $pagination-circle;
-        width: $pagination-circle;
-      } @else {
-        height: $pagination-circle;
-        width: $pagination-circle;
-      }
+      height: 28px;
       left: 50%;
       position: absolute;
       top: 0;
       transform: translate(-50%, 0);
+      width: 28px;
       z-index: 0;
     }
     span {
@@ -78,7 +54,7 @@
     a {
       color: $color-white;
       &::before {
-        background-color: $pagination-link;
+        background-color: $color-primary;
       }
     }
   }
@@ -106,8 +82,8 @@
       a {
         &:hover {
           span {
-            background: $pagination-hover;
-            color: $pagination-link;
+            background: $color-primary-pastel-1;
+            color: $color-primary;
           }
         }
       }
@@ -115,7 +91,7 @@
   }
   .is-disabled {
     a {
-      color: $pagination-text;
+      color: $color-gray-5;
       cursor: default;
     }
   }
