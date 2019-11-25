@@ -1,0 +1,83 @@
+extends ../../layouts/component
+
+block vars
+  - var title = "Select";
+
+block scripts
+  script(src="../js/select.js")
+
+block content
+  .row
+    .col-sm-4
+      .mb-3
+        .br-select
+          label(for='simples') Normal
+          select#simples
+            option(value='0') Selecione
+            option(value='opcao-1') opção 1 opção 1 opção 1 opção 1 opção 1 opção 1
+            option(value='opcao-2') opção 2
+            option(value='opcao-3') opção 3
+            option(value='opcao-4') opção 4
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+      .mb-3
+        .br-select.is-medium
+          label(for='medium') Médio
+          select#medium
+            option(value='0') Selecione
+            option(value='opcao-1') opção 1
+            option(value='opcao-2') opção 2
+            option(value='opcao-3') opção 3
+            option(value='opcao-4') opção 4
+      .mb-3
+        .br-select.is-small
+          label(for='small') Pequeno
+          select#small
+            option(value='0') Selecione
+            option(value='opcao-1') opção 1
+            option(value='opcao-2') opção 2
+            option(value='opcao-3') opção 3
+            option(value='opcao-4') opção 4
+    .col-sm-4
+      .mb-3
+        .br-select.is-focus
+          label(for='focus') Focus
+          select#focus
+            option(value='0') Selecione
+            option(value='opcao-1') opção 1
+            option(value='opcao-2') opção 2
+            option(value='opcao-3') opção 3
+            option(value='opcao-4') opção 4
+      .mb-3
+        .br-select
+          label(for='desabilitado') Desabilitado
+          select#desabilitado(disabled)
+            option(value='0') Selecione
+            option(value='opcao-1') opção 1
+            option(value='opcao-2') opção 2
+            option(value='opcao-3') opção 3
+            option(value='opcao-4') opção 4
+    .col-sm-4
+      .mb-3
+        .br-select.is-invalid
+          label(for='invalido') Inválido
+          select#invalido
+            option(value='0') Selecione
+            option(value='opcao-1') opção 1
+            option(value='opcao-2') opção 2
+            option(value='opcao-3') opção 3
+            option(value='opcao-4') opção 4
+        .feedback.is-invalid
+          i.fas.fa-times-circle
+          span.message  Erro
+      .mb-3
+        .br-select.is-valid
+          label(for='valido') Válido
+          select#valido
+            option(value='0') Selecione
+            option(value='opcao-1') opção 1
+            option(value='opcao-2') opção 2
+            option(value='opcao-3') opção 3
+            option(value='opcao-4') opção 4
+        .feedback.is-valid
+          i.fas.fa-check-circle
+          span.message  Ok

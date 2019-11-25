@@ -1,0 +1,111 @@
+extends ../../layouts/component
+
+block vars
+  - var title = "Acordeão";
+
+block scripts
+  script(src="../js/header.js")
+
+block content
+  header.br-header.is-system
+    .container-fluid
+      // Barra de cabeçalho
+      .bar
+        // Logo
+        .logo
+          a.name(href='') Nome do Órgão
+          span.description Assinatura do Órgão
+        // Links rápidos
+        ul.quicklinks
+          li: a(href='') Acesso á informação
+          li: a(href='') Participe
+          li: a(href='') Acessibilidade
+        // Altocontraste
+        button.contrast(type='button' accesskey='6')
+          span.icon
+            i.fas.fa-adjust.fa-lg
+          span Alto contraste
+        // Quebra de linha em desktop
+        .break
+        // Busca geral
+        .search
+          .field
+            label.sr-only(for='search-system') Buscar
+            input#search-system(type='search' placeholder='O que você procura?')
+            button(type='button')
+              i.fas.fa-search.fa-lg
+              span.sr-only buscar
+          button.close(type='button')
+            i.fas.fa-times.fa-lg
+            span.sr-only fechar a busca
+        // Barra do usuário para sistemas
+        .user-bar
+          // Configurações do usuário
+          .configs.menu
+            button.trigger(type='button')
+              // Avatar do usuário
+              span.avatar
+                <i class="fas fa-user-circle"></i>
+              // Notificações
+              span.badge 5
+              // Seta para abrir menu
+              span.arrow
+                i.fas.fa-chevron-down
+            .items
+              // Informações do usuário
+              .title.user
+                .name Márcia Vinícius Tavares de Almeida
+                .email marcia-vinicius.almeida@serpro.gov.br
+              // Lista de configurações
+              span.title
+                i.fas.fa-cog
+                |  Configuração/Perfil
+              a.item(href='') Configuração 01
+              a.item(href='') Configuração 02
+              a.item(href='') Configuração 03
+          // Sistemas favoritos do usuário
+          .bookmarks.menu
+            button.trigger(type='button')
+              i.fas.fa-th-large
+            .items
+              .title Sistemas
+              .list
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 01
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 02
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 03
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 04
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 05
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 06
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 07
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 08
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 09
+                a.bookmark(href='')
+                  .brand
+                  .name Sistema 10
+              .more
+                a(href='') Mais
+          // Logout
+          button.logout(type='button') Sair
+        // Menu sanduiche
+        button.menu-hamburger(type='button')
+          i.fa.fa-bars.fa-lg
+          i.fa.fa-times.fa-lg
+          span.sr-only Navegação

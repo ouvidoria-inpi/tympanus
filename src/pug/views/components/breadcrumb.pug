@@ -1,0 +1,15 @@
+extends ../../layouts/component
+
+block vars
+  - var title = "Breadcrumb";
+
+block content
+  ul.br-breadcrumb
+    li.home
+      a(href='')
+        span.sr-only Página inicial
+        i.fas.fa-home
+    li
+      a(href='') Tela anterior
+    li.is-active
+      a(href='') Tela atual

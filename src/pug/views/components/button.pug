@@ -1,0 +1,35 @@
+extends ../../layouts/component
+
+block vars
+  - var title = "Button";
+
+block content
+  button.br-button.is-primary(type='button') Entrar
+  button.br-button.is-secondary(type='button') Cadastrar
+  button.br-button.is-tertiary(type='button') Adicionar
+  button.br-button.is-cancel(type='button') Cancelar
+  hr
+  button.br-button.is-primary(type='button')
+    span Entrar com 
+    strong gov.br
+  button.br-button.is-secondary(type='button')
+    span Entrar com 
+    strong gov.br
+  button.br-button.is-call-to-action(type='button') Solicitar
+  hr
+  button.br-button.is-circle.is-primary(type='button')
+    i.fas.fa-chevron-up
+  button.br-button.is-circle.is-secondary(type='button')
+    i.fas.fa-chevron-down
+  button.br-button.is-circle.is-medium.bg-twitter.border-twitter.text-white(type='button')
+    i.fab.fa-twitter
+  button.br-button.is-circle.is-medium.bg-facebook.border-facebook.text-white(type='button')
+    i.fab.fa-facebook-f
+  button.br-button.is-circle.is-large.bg-google-plus.border-google-plus.text-white(type='button')
+    i.fab.fa-google-plus-g
+  button.br-button.is-circle.is-large.is-primary(type='button')
+    .govbr gov.br
+  hr
+  button.br-button.is-primary.is-loading(type='button') Entrar
+  button.br-button.is-secondary.is-loading(type='button') Cadastrar
+  button.br-button.is-call-to-action.is-loading(type='button') Solicitar

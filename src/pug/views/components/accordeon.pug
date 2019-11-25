@@ -1,0 +1,31 @@
+extends ../../layouts/component
+
+block vars
+  - var title = "Acordeão";
+
+block scripts
+  script(src="../js/accordeon.js")
+
+block content
+  .br-accordeon(single)
+    .item
+      button.header(type='button')
+        span.icon
+          i.fas.fa-plus
+        span.title Lorem ipsum dolor sit amet
+      .content
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit amet pariatur deserunt accusamus aut delectus dolorem inventore, earum error veniam molestiae vitae unde aliquid consectetur nam fuga molestias non totam.
+    .item.is-active
+      button.header(type='button')
+        span.icon
+          i.fas.fa-minus
+        span.title Lorem ipsum dolor sit amet
+      .content
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit amet pariatur deserunt accusamus aut delectus dolorem inventore, earum error veniam molestiae vitae unde aliquid consectetur nam fuga molestias non totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deserunt modi et temporibus. Doloribus nulla molestiae iste maiores consequatur ea corrupti deleniti tenetur unde minima, dolorem illo similique repudiandae voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestiae explicabo ducimus quam debitis dolore ratione, vero harum officia reiciendis et? Iste velit in reiciendis odio? Nam molestiae eligendi saepe. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sit, aspernatur nihil minima accusamus vel fugit repudiandae beatae vitae, odit harum eaque quidem rerum officiis explicabo fugiat commodi illum molestiae.
+    .item
+      button.header(type='button')
+        span.icon
+          i.fas.fa-plus
+        span.title Lorem ipsum dolor sit amet
+      .content
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit amet pariatur deserunt accusamus aut delectus dolorem inventore, earum error veniam molestiae vitae unde aliquid consectetur nam fuga molestias non totam.
