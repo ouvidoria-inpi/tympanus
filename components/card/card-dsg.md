@@ -27,8 +27,6 @@ No portal devem ser usados em páginas temáticas, como:
 
 ![Cards Funcao Link](../../assets/images/components_img/cards/cards-funcao-link.png)
 
----
-
 # Card
 
 ## ANATOMIA
@@ -73,8 +71,6 @@ Os cards podem apresentar o hover no caso da web.
 
 ![Cards Hover](../../assets/images/components_img/cards/cards-hover.png)
 
----
-
 # Card
 
 ## ANATOMIA
@@ -97,8 +93,6 @@ Ao passar o mouse em cima do card haverá uma interação de fade. Quando assumi
 
 **Essa versão de "hover" ocorrerá apenas na versão web**
 
----
-
 # Cards com Badge
 
 ![Cards Badge Quadrado](../../assets/images/components_img/cards/cards-badge-quadrado.png)
@@ -118,8 +112,6 @@ O badge funciona apenas como uma etiqueta.
 Os mais usuais deve ser aplicados apenas com o contorno e texto azul #155BCB.
 
 Os outros podem trazer alguma distinção que o destaque dos demais, normalmente temporária. Neste caso se aplica a cor #268744 na forma e texto em negativo #FFFFFF.
-
----
 
 # Cards Retangulares
 
@@ -167,8 +159,6 @@ Com maior possibilidade de aplicação de ícones funcionais, botões primários
 
 ![Card Responsivo](../../assets/images/components_img/cards/cards-responsivo.png)
 
----
-
 # Cards Retangulares
 
 ![Cards Retangulares 2](../../assets/images/components_img/cards/cards-retangulares.png)
@@ -199,8 +189,6 @@ Os cards podem apresentar o hover no caso da web.
 
 ![Card Retangular Hover](../../assets/images/components_img/cards/cards-estados.png)
 
----
-
 # Cards Mini
 
 ![Cards Retangulares Horizontais](../../assets/images/components_img/cards/cards-mini.png)
@@ -219,8 +207,6 @@ Os cards podem apresentar o hover no caso da web.
 
 ![Card Retangular Horizontal Hover](../../assets/images/components_img/cards/cards-retangulares-hover.png)
 
----
-
 # Card Quadrado
 
 ![Card Quadrado](../../assets/images/components_img/cards/cards-quadrados.png)
@@ -232,8 +218,6 @@ Os cards podem apresentar o hover no caso da web.
 Trata-se de uma aplicação do card quadrado.
 
 Com possibilidade de aplicação de imagem, título, texto curto e botão secundário.
-
----
 
 # Cards Horizontais
 

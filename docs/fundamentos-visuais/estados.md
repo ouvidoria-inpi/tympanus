@@ -1,7 +1,5 @@
 > Estados são representações visuais que ajudam os usuários a identificar o estado de um componente ou elemento. Comunicam o estado de uma ação e sugerem a possibilidade ou imposibilidade do usuário interagir com um elemento, estabelecendo confiança entre interface e usuário.
 
----
-
 ## Princípios
 
 ### Experiência Única
@@ -43,8 +41,6 @@ Usuários interagem com a interface de diversas maneiras. Ao projetar um compone
 
 Os estados definidos devem ser utilizados sempre que possível. Caso necessário, é possível acrescentar um novo estado ou regra ao Design System, devendo a nova proposta atender todos os princípios estabelecidos nos estados, além de passar por prévia aprovação da equipe de design do DS.
 
----
-
 ## Overlay
 
 Alguns estados utilizam o conceito de overlay. Overlay é uma aplicação/camada semitransparente sobre um elemento.
@@ -52,8 +48,6 @@ Alguns estados utilizam o conceito de overlay. Overlay é uma aplicação/camada
 Dependendo da cor de um elemento, a opacidade do overlay deve ser revista para que o destaque do elemento seja notado pelo usuário: O valor da opacidade é inversamente proporcional ao brilho do elemento (cor de fundo), ou seja, quanto mais claro a cor do componente, menor será o valor da opacidade necessário para que o usuário perceba o estado.
 
 Seguindo este conceito podemos dizer que o [Scrim](#) é um overlay componentizado do DS Gov.
-
----
 
 ## Tipos de Estado
 
@@ -73,8 +67,6 @@ Abaixo,segue a lista dos principais estados encontrados no DS gov. Alguns estado
 - **Ligado**: Um estado que comunica a opção "ligado" na alternância entre duas opções.
 - **Desligado**: Um estado que comunica a opção "desligado" na alternância entre duas opções.
 
----
-
 ## Destacado
 
 O estado destacado é usado para indicar que um texto possui uma ênfase maior sobre os demais textos de uma interface.
@@ -91,8 +83,6 @@ O destaque é exibido com um overlay sobre o fundo da cor **Orange** com opacida
 
 O texto destacado pode possuir estado interativo.
 
----
-
 ## Interativo
 
 Para o usuário, deve ser claro quais objetos exibidos em uma interface são interativos ou não. No Design system do governo a cor **Blue Primary** é utilizada para identificar que o componente é interativo. Evite o uso desta cor (e outras cores com o matiz parecido) em outros elementos para não confundir o usuário.
@@ -100,8 +90,6 @@ Para o usuário, deve ser claro quais objetos exibidos em uma interface são int
 A cor "Blue Primary" não é aplicável em todas as situações, como no caso de um fundo escuro ou uma interface com grande densidade informacional de itens interativos (gerando monocromia) por exemplo. Neste caso, outros recursos devem ser utilizados para que o elemento seja distinguível dentro da interface. Uso de texto **bold (700)** ou **underline** pode resolver este problema.
 
 > **Exemplo:** Hiperlinks e Botões podem ser bons lugares para usar a cor Blue Primary, porém, uma Lista ou Menu, o uso de bold nos textos (ao invés da cor Blue Primary ou um underline) pode ser mais eficaz na maioria das situações.
-
----
 
 ## Desativado
 
@@ -124,8 +112,6 @@ Alguns elementos da tela, não podem receber o estado desativado. Neste caso, pr
 
 Elementos desativados não sofrem herança, ou seja, não podem ser combinados com qualquer outro estado.
 
----
-
 ## Hover
 
 O Estado hover acontece quando o usuário mantém o cursor do mouse sobre um componente ou elemento interativo. Ele deve ser aplicado, no mínimo, em toda a área interativa do componente, podendo ser em todo ele, nos elementos que o formam ou por alguma área que faz parte do componente.
@@ -138,8 +124,6 @@ Em casos em que o elemento interativo tenha algumas características visuais que
 
 Só pode existir um elemento com hover por vez na tela.
 
----
-
 ## Pressionado
 
 Quando um elemento interativo recebe um toque iniciado pelo usuário, seja ela por cursor, teclado ou método de entrada de voz, recebe o estado de pressionado. Ele deve ser aplicado, no mínimo, em toda a área interativa do componente, podendo ser em todo o componente, nos elementos que formam o componente ou por alguma área que faz parte do componente.
@@ -147,8 +131,6 @@ Quando um elemento interativo recebe um toque iniciado pelo usuário, seja ela p
 Características visuais referentes à elevação do componente na tela, como sombra por exemplo, devem ser retiradas ou amenizadas. O estado pressionado é exibido por um fundo da cor **Blue Primary Darken 15** e o Texto e ícones na cor **White**. Para fundo escuro ou lugares onde o padrão não seja identificável inverta as cores (fundo "White" e nos texto e gráficos a "Blue Primary Darken 15").
 
 Só pode existir um elemento com pressionado por vez na tela.
-
----
 
 ## Foco
 
@@ -160,8 +142,6 @@ Componentes desativados não podem receber foco.
 
 Só pode existir um elemento com foco por vez na tela.
 
----
-
 ## Ativo
 
 O estado ativo indica qual item, de um conjunto de opções, está sendo visualizado no momento, sendo iniciado por padrão ou por uma escolha do usuário utilizando-se dos seguintes métodos de entrada: toque, cursor, teclado ou entrada de voz.
@@ -171,8 +151,6 @@ O estado deve ter uma alta ênfase entre os demais elementos do seu conjunto. El
 Em algumas situações, o elemento ativo pode receber uma ênfase exagerada, se destacando além do necessário da interface. Nestes casos, para diminuir a enfase do componente, o estado pode ser representado com bordas na cor **Blue Primary** que envolvendo o componente. Pode ser uma borda inferior ou algo que envolva todo o componente.
 
 Dentro de um único conjunto de opções, apenas um estado ativado pode estar presente de cada vez.
-
----
 
 ## Selecionado
 
@@ -193,8 +171,6 @@ O estado selecionado não pode ser aplicado nos seguintes componentes:
 
 **Cuidado:** Alguns componentes são construídos por vários outros componentes. Neste caso, seus componentes ainda podem possuir estado de selecionado, por mais que o componente "completo" não possa.
 
----
-
 ## Arrastado
 
 O estado arrastado ocorre quando um usuário pressiona e move um elemento ou componente.
@@ -204,8 +180,6 @@ O estado arrastado não devem distrair o usuário de suas tarefas. São exibidos
 Caso a ênfase do componente ainda esteja alta, distraindo o usuário de suas tarefas, a opacidade do componente pode ser ajustada para 90%.
 
 Pode haver apenas um único estado arrastado de cada vez dentro de um layout.
-
----
 
 ## Ligado e Desligado
 

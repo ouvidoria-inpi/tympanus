@@ -1,7 +1,5 @@
 Os ícones são representações gráficas que podem simbolizar uma ação ou comunicar ao usuário possibilidades de mudanças de estados entre os elementos de uma interface. No caso do Design System, foi escolhida a coleção de ícones **"font awesome"** em sua versão 5.10.2 Solid (versão 5.10.2) por possuírem uma boa variedade de ícones com um layout simples, sintético e amigável.
 
----
-
 ## Font Awesome 5.10.2
 
 Font Awesome é um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi feito por Dave Gandy para uso com o Twitter Bootstrap e mais tarde foi incorporado no BootstrapCDN.
@@ -79,8 +77,6 @@ Se o ícone tiver significado semântico, coloque um atributo title=“meaning�
 
 Interfaces digitais do governo devem ser reutilizáveis pelos diversidade serviços disponíveis, sendo assim o uso da Font Awesome facilita esse reuso, por ser mais fácil de implementar. Caso haja necessidade podem ser incluídos novos ícones, porém é necessário consultar a tabela de orientações de uso, para verificar se já a funcionalidade já foi atribuída a algum ícone e também se há algum dentro do . É interessante que haja um trabalho em conjunto de criação e validação entre a equipe que vai propor novos ícones e a equipe de design para que sejam preservadas as características do padrão gráfico do Design System.
 
----
-
 ## Anatomia e Comportamento
 
 ### Grid do Fontawesome
@@ -106,8 +102,6 @@ A área de toque dos ícones determina que além da área ocupada pelo ícone h�
 A área de toque deve ser de 48 x 48px, garantindo que a experiência do usuário seja satisfatória no momento de acessar as funcionalidades através dos ícones, em dispositivos móveis ou artefatos digitais.
 
 ![Imagem mostrando a área de toque dos ícones: 48 x 48px](../../assets/images/docs_img/fundamentos/icones/DS_Icones_Area_Toque.png)
-
----
 
 ## Orientação de Uso
 

@@ -6,8 +6,6 @@ A utilização da Rawline tem como objetivo facilitar o reconhecimento, pelos ci
 
 A Rawline está disponível em https://h-ibaldo.github.io/Raleway_Fixed_Numerals/
 
----
-
 ## Princípios
 
 ### Experiência Única
@@ -36,8 +34,6 @@ A semântica deve ser levada em consideração ao se criar as marcações do tex
 
 Interfaces digitais do governo devem utilizar a família de fonte definida sempre que possível. Havendo, entretanto, a necessidade de acrescentar ou editar a família tipográfica atual, é necessário validar a nova proposta segundo os princípios e pela equipe de design do DS.
 
----
-
 ## Estilos da Fonte Rawline
 
 ![Lista de Estilo](../../assets/images/docs_img/fundamentos/tipografia/estilo.png)
@@ -58,8 +54,6 @@ Utilize os valores abaixo para representar os diferentes estilos da fonte Ralewa
 | 800         | Extra-bold  |
 | 900         | Black       |
 
----
-
 ## Escala Tipográfica
 
 O estabelecimento de uma escala tipográfica é uma forma de determinar tamanhos tipográficos. A escala é importante porque estabelece a hierarquia e melhora a legibilidade criando harmonia e coesão entre os textos.
@@ -76,8 +70,6 @@ Caso o tamanho não atenda sua interface, utilize um valor diferente para a font
 
 > **Cuidado**: Manter um valor de fonte base muito alto ou muito pequeno, pode atrapalhar na legibilidade do conteúdo. Utilize um valor base diferente do recomendado somente em casos que justifique seu uso.
 
----
-
 ## Fonte Base
 
 Em um documento com uma definição de 72 dpi (ou 72 ppi ) dentro de um software gráfico (como Photoshop), **pontos = pixels**, mas isso não é verdade em um navegador. Para uma boa comunicação, sempre indique os tamanhos em pixels para os desenvolvedores da Web que devem converter para **em** ou **rem**.
@@ -87,8 +79,6 @@ Atualmente, uma prática recomendada é permitir que um dispositivo (como navega
 No Design System do Governo Federal escolhemos a fonte base de 14 pixel por acharmos que esse tamanho seja aplicável na maioria dos dispositivos e situações, porém essa escolha não é definitiva.
 
 Definir um tamanho de uma fonte base (juntamente com a referência do uso de unidades "em" ou "rem") facilitará a hierarquia entre os textos, otimizando o efeito cascata
-
----
 
 ## Tabela de Estilo Padrão
 
@@ -110,8 +100,6 @@ O valor **line-height** (entrelhinhamento) não se refere ao fonte base, e sim a
 | Placeholder             | 1          | 14         | Regular (400) Itálico | 1,15        | -              |
 | Input                   | 1,2        | 16,80      | Regular (400)         | 1,15        | -              |
 
----
-
 ## Unidades de Espaçamento entre caracteres (Letter Spacing)
 
 Em alguns softwares (como da Adobe), o espaçamento de um bloco de texto (tracking) e o ajuste de espaço entre caracteres adjacentes (Kerning) são medidos em 1/1.000em, uma unidade de medida que é relativa ao tamanho atual da face de tipos. Em uma fonte de 6 pontos, 1em é igual a 6 pontos; em uma fonte de 10 pontos, 1em é igual a 10 pontos. Ou seja, são estritamente proporcionais ao tamanho da face de tipos utilizado.
@@ -119,8 +107,6 @@ Em alguns softwares (como da Adobe), o espaçamento de um bloco de texto (tracki
 Para calcular o valor do espaçamento entre os caracteres utilize o seguinte fórmula:
 
 > LetterSpacing(px) = tamanho da fonte(pt ou px) \* tracking da Adobe / 1000.
-
----
 
 ## Tabela de conversão PX, PT, EM e %
 

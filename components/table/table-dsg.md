@@ -12,8 +12,6 @@ As tabelas podem conter:
 
 Nunca utilize foto/imagem dentro de uma tabela. Sempre prefira usar outro componente (como uma [Listas](#)) ou utilize outros recursos (como [botão](#) ou [hiperlinks](#)) para representar/acessar o conteúdo em questão.
 
----
-
 ## Anatomia
 
 ### Desktop e Tablets
@@ -37,8 +35,6 @@ As tabelas são estruturadas em:
 3. **Barra de Paginação** (_opcional_)
 
 ![Tabela Celular](../../assets/images/components_img/tabela/celular.png)
-
----
 
 ## Barra Superior
 
@@ -75,8 +71,6 @@ Quando a Barra Superior se transforma em uma barra contextual, ocorrem as seguin
 
 O Título da tabela pode ser substituido por um texto contextual, neste caso, esse texto não precisa herdar as mesmas característias de formatação.
 
----
-
 ## Cabeçalho e Coluna
 
 O cabeçalho da coluna descreve o tipo de conteúdo exibidos em cada coluna. Cada linha contém dados relacionadas a uma única entidade.
@@ -96,8 +90,6 @@ O texto deve ser conciso de modo a comunicar a sua mensagem de forma mais eficie
 
 > **Dica**: faça uma lista de palavras-chave e depois escolha as mais relevantes para sua necessidade.
 > **Exemplo**: nomes como "Data Inicial" e "Data Final" podem ser utilizados como "Inicial" e "final" respectivamente.
-
----
 
 ## Linhas
 
@@ -120,8 +112,6 @@ Os dados de uma linha podem conter:
 - Componentes de formulários ([checkbox](#), [text](#), [radio](#), [select](#)...)
 - Chips
 
----
-
 ## Cards
 
 Para celulares as colunas e linhas não são as melhores formas de apresentar os dados devido as retrições de espaço. Desde modo, as linhas da tabela devem ser convertidas em Cards, enquanto que o cabeçalho são rótulos para os dados que serão exibidos em uma lista dentro do card.
@@ -142,8 +132,6 @@ Os dados no card são organizados por um componente lista. E são constituidos d
 
 ![Lista](../../assets/images/components_img/tabela/lista.png)
 
----
-
 ## Barra de Paginação
 
 A paginação é exibida na parte inferior de uma tabela.
@@ -158,8 +146,6 @@ Os controles de paginação fornecem acesso rápido a todas as páginas, enquant
 ![Paginação](../../assets/images/components_img/tabela/paginacao.png)
 
 Para celular, a paginação deve mostrar somente a quantidade atual, a quantidade total de páginas e os controles de navegação.
-
----
 
 ## Comportamento
 
@@ -426,8 +412,6 @@ Quando os dados da coluna são atualizados uma mensagem de carregamento deve ser
 O usuário não pode interagir com os elementos da tabela enquanto o carregamento não estiver concluído. Nentes caso, coloque uma opção para cancelar o processamento.
 
 ![Carregando](../../assets/images/components_img/tabela/carregando.png)
-
----
 
 ## Especificação
 

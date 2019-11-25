@@ -1,7 +1,5 @@
 A aplicação correta da paleta de cores traz consistência ao Design System e contribui para garantir uma interface unificada facilmente reconhecível pelos seus usuários. É fundamental que a paleta esteja alinhada aos Princípios do Design System e seja aplicada corretamente na biblioteca de componentes contribuindo para o equilíbrio entre os diversos produtos e sistemas do governo.
 
----
-
 ## Cores Alinhadas aos Princípios
 
 ### Experiência Única
@@ -46,8 +44,6 @@ Neste Design System foi analisada a relação de contraste entre **a cor aplicad
 
 Interfaces digitais do governo devem utilizar as cores existentes sempre que possível, mas caso haja necessidade é possível acrescentar um novo tom à paleta de cores do DS. Porém, faz-se necessário, que a cor seja testada do ponto de vista de acessibilidade e passe por uma prévia aprovação da equipe de design do DS.
 
----
-
 ## Cores Primárias
 
 As cores primárias são exibidas com mais frequência nas telas, aparecem nos componentes e títulos do DS e criam uma identidade única para as interfaces. A cor principal #1351B4 é a mais utilizada e suas variantes podem ser utilizadas para compor o layout e distinguir elementos dentro da interface.
@@ -79,8 +75,6 @@ Seguem abaixo as recomendações de cor de texto/elementos gráficos que devem s
 | Blue Primary (#1351B4)           | #FFFFFF      | ![AAA](../../assets/images/docs_img/fundamentos/cores/primary_textonormal.png)           | ![AAA](../../assets/images/docs_img/fundamentos/cores/primary_textogrande.png)            | 7,3:1     |
 | Blue Primary Darken 15 (#0C326F) | #FFFFFF      | ![AAA](../../assets/images/docs_img/fundamentos/cores/primary-darken-15_textonormal.png) | ![AAA](../../assets/images/docs_img/fundamentos/cores/primary-darken-15_textogrande.png)  | 12,3:1    |
 | Blue Primary Darken 25 (#071D41) | #FFFFFF      | ![AAA](../../assets/images/docs_img/fundamentos/cores/primary-darken-25_textonormal.png) | ![AAA](../../assets/images/docs_img/fundamentos/cores/primary-darken-25_textogrande.png)  | 16,6:1    |
-
----
 
 ## Cores Secundárias
 
@@ -125,8 +119,6 @@ A seguir a relação de contraste entre a cor que deve ser adotada nos textos e 
 | Gray 07 (#333333)         | #FFFFFF      | ![AAA](../../assets/images/docs_img/fundamentos/cores/gray-07_textonormal.png)  | ![AAA](../../assets/images/docs_img/fundamentos/cores/gray-07_textogrande.png)   | 12,6:1    |
 | Black (#000000)           | #FFFFFF      | ![AAA](../../assets/images/docs_img/fundamentos/cores/black_textonormal.png)    | ![AAA](../../assets/images/docs_img/fundamentos/cores/black_textogrande.png)     | 21:1      |
 
----
-
 ## Cores de Aviso
 
 As cores de aviso foram escolhidas para serem aplicadas em situações que exigem mais atenção do usuário, como ocorre nas mensagens de Feedback e estados correlacionados.
@@ -148,8 +140,6 @@ A seguir a relação de contraste entre a cor do texto a serem utilizados sobre 
 | Green Sucess (#168821)   | #FFFFFF      | ![AA](../../assets/images/docs_img/fundamentos/cores/success_textonormal.png)  | ![AAA](../../assets/images/docs_img/fundamentos/cores/success_textogrande.png) | 4,5:1     |
 | Red Danger (#E60000)     | #FFFFFF      | ![AA](../../assets/images/docs_img/fundamentos/cores/danger_textonormal.png)   | ![AAA](../../assets/images/docs_img/fundamentos/cores/danger_textogrande.png)  | 4,8:1     |
 | Blue Info (#155BCB)      | #FFFFFF      | ![AA](../../assets/images/docs_img/fundamentos/cores/info_textonormal.png)     | ![AAA](../../assets/images/docs_img/fundamentos/cores/info_textogrande.png)    | 6,1:1     |
-
----
 
 ## Cores de Apoio
 

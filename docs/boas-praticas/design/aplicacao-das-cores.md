@@ -18,8 +18,6 @@ O sistema de serviços deve cumprir as diferentes necessidades de acessibilidade
 
 Outra característica da neutralidade explorada no DS é a aplicação de tons mais claros do cinza em componentes desabilitados. Essa prática já é bastante difundida no meio digital e por isso foi aplicada no DS, afim de comunicar ao usuário que aquele componente não está disponível para o clique.., ou que há uma outra ação que ele precisa realizar para então habilitar o componente.
 
----
-
 ## Testes com ferramentas
 
 Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas online <https://contrastchecker.com/> e

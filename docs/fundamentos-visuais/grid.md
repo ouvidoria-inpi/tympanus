@@ -23,8 +23,6 @@ O sistema de grid para o Design System do Governo Federal se adequa a 4 breakpoi
 - Large: a partir de 1280px - **Desktop**
 - X-Large a partir de 1600px - **Big Desktop / TV**
 
----
-
 ## Desktop
 
 As **12 colunas** serão divididas em **1152 pixels** de largura com espaçamentos de **24 pixels** entre elas. Esse sistema permite a organização do conteúdo em diversas formatações de coluna e facilita a reorganização dele nos grids das versões tablet e mobile.
@@ -78,8 +76,6 @@ Para resoluções maiores que **1440px** também utiliza-se o padrão de **12 co
 - **32px** de Medianiz
 - **1440px** de container
 - **M** - margem externa variável
-
----
 
 ## Tablets
 
@@ -149,8 +145,6 @@ Nos dispositivos tablets, o conteúdo pode ser reorganizado em até **8 colunas*
 - **24px** de Medianiz
 - **40px** de margem externa
 
----
-
 ## Smartphones
 
 Conteúdo pode ser reorganizado em até **4 colunas** e respeitando a margem de **24px** nas laterais e medianiz de **16px**.
@@ -218,8 +212,6 @@ Para responsividade em sites e portais o ideal é que se use uma diagramação c
 
 - **1** Coluna
 - **24px** de margem externa
-
----
 
 ## Grade de 8 Pontos
 

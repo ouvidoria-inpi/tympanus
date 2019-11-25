@@ -24,8 +24,6 @@ Interfaces digitais dos sites, aplicativos e sistemas de governo devem utilizar 
 
 O aprimoramento contínuo dos padrões apresentados pelo _Design System_ deve ser incremental, colaborativo e contínuo, baseado nas necessidades dos cidadãos e na experiência de aplicação já adquirida.
 
----
-
 ## Boas Práticas
 
 Boas Práticas de estruturação de Serviços foram revistas com o objetivo de garantir uma melhoria no atendimento aos cidadãos.
