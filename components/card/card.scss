@@ -24,7 +24,7 @@
     & i {
       color: $color-primary-lighten-15;
       font-size: $card-icon-size;
-    }    
+    }
   }
   & .title {
     color: $color-primary-darken-15;
@@ -33,39 +33,39 @@
     text-transform: uppercase;
   }
   & .text {
-    color: $card-text-color;    
-    font-size: $card-text-font-size; 
-    position: absolute;
+    color: $card-text-color;
+    font-size: $card-text-font-size;
     left: 0;
-    top: 0;    
     opacity: 0;
     padding: 50px 30px;
+    position: absolute;
+    top: 0;
   }
   &.is-change-content {
-    &:hover {            
-      text-decoration: none;      
+    &:hover {
+      text-decoration: none;
       & .text {
-        background-color: $color-gray-6;        
+        background-color: $color-gray-6;
         font-weight: $card-text-font-weight;
         height: 100%;
         line-height: $card-text-line-height;
         opacity: 1;
-        transition: width 0ms 0ms,height 0ms 0ms,opacity .3s ease-in-out .2s;
+        transition: width 0ms 0ms, height 0ms 0ms, opacity 0.3s ease-in-out 0.2s;
         width: 100%;
       }
     }
   }
   &.is-arrow {
     &::after {
-      color: #2670e8;
+      color: $font-tags-text-color;
       content: "\f062";
-      font-family: Font Awesome\ 5 Free;      
-      font-weight: 900;
+      font-family: Font Awesome\ 5 Free;
       font-size: 20px;
+      font-weight: 900;
       position: absolute;
       right: 5px;
-      top: 0;      
-      transform: rotate(50deg);      
+      top: 0;
+      transform: rotate(50deg);
     }
   }
   &.is-small {
