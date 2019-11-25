@@ -12,11 +12,14 @@ block content
     | .
   p Por favor, digite-o no campo abaixo:
   // Código
-  .br-input.mt-6
+  .br-input.is-valid.mt-6
     label(for='codigo') Código de 04 dígitos
     .row
       .col-6.col-sm-4
-        input#codigo(type='text' placeholder='xxxx')
+        input#codigo(type='text' placeholder='xxxx' value='5494')
+  .feedback.is-valid
+    i.fas.fa-check-circle
+    span.message  Código correto
   // Opção de reenvio
   button.br-button.is-tertiary.mt-3(type='button')
     u Reenviar código
@@ -33,5 +36,5 @@ block content
     u Atualizar e Reenviar Código
   // Botões de ação
   .d-flex.flex-wrap.flex-row-reverse.justify-content-center.justify-content-sm-start.mt-10.mt-sm-10
-    button.br-button.is-primary(type='button' disabled) Cadastrar
+    button.br-button.is-primary(type='button') Cadastrar
     button.br-button.is-secondary.mt-3.mt-sm-0.mr-sm-3(type='button') Voltar

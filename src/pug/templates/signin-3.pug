@@ -24,6 +24,13 @@ block content
   p.mb-0.mt-8 Não recebeu o código? Verifique sua caixa de spam.
   button.br-button.is-tertiary(type='button')
     u Informou o número errado?
+  .br-input.mt-3
+    label(for='celular') Celular
+    .row
+      .col-sm-5
+        input#celular(type='text' placeholder='Ex: (xx) x xxxx-xxxx')
+  button.br-button.is-tertiary.mt-3(type='button')
+    u Atualizar e Reenviar Código
   // Botões de ação
   .d-flex.flex-wrap.flex-row-reverse.justify-content-center.justify-content-sm-start.mt-10.mt-sm-10
     button.br-button.is-primary(type='button' disabled) Cadastrar
