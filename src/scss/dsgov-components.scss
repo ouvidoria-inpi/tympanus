@@ -1,23 +1,15 @@
-// Listagem de componentes
-@import "../components/accordeon/accordeon.scss";
-// @import "../components/badge/badge.scss";
-// @import "../components/breadcrumb/breadcrumb.scss";
-// @import "../components/button/button.scss";
-// @import "../components/checkbox/checkbox.scss";
-// @import "../components/checklist/checklist.scss";
-// @import "../components/divider/divider.scss";
-// @import "../components/form/form.scss";
-// @import "../components/input/input.scss";
-// @import "../components/login-social/login-social.scss";
-// @import "../components/menu-ds/menu-ds.scss";
-// @import "../components/message/message.scss";
-// @import "../components/modal/modal.scss";
-// @import "../components/pagination/pagination.scss";
-// @import "../components/portlet/portlet.scss";
-// @import "../components/radio/radio.scss";
-// @import "../components/search/search.scss";
-// @import "../components/select/select.scss";
-// @import "../components/table/table.old.scss";
-// @import "../components/tabs/tabs.scss";
-// @import "../components/textarea/textarea.scss";
-// @import "../components/upload/upload.scss";
+/*!
+ * Componentes do Design System de Governo
+ * Versão beta
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP
+ */
+
+// Carregar configurações
+@import "base";
+
+// Reset CSS Bootstrap
+@import "../../node_modules/bootstrap/scss/reboot";
+
+// Componentes
+@import "components";

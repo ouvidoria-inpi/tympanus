@@ -33,6 +33,18 @@
       top: 0;
       width: 1.2em;
     }
+    &.is-left {
+      .icon {
+        left: -0.4em;
+        right: auto;
+      }
+    }
+    &.is-right {
+      .icon {
+        left: auto;
+        right: -0.2em;
+      }
+    }
   }
   &.is-count {
     .number {
@@ -47,6 +59,17 @@
       text-align: center;
       top: 0;
       width: auto;
+    }
+    &.is-left {
+      .number {
+        left: -0.5em;
+      }
+    }
+    &.is-right {
+      .number {
+        left: 100%;
+        margin-left: -0.5rem;
+      }
     }
   }
 
@@ -86,34 +109,6 @@
     .icon,
     .number {
       background-color: $color-danger;
-    }
-  }
-
-  &.is-symbol {
-    &.is-left {
-      .icon {
-        left: -0.4em;
-        right: auto;
-      }
-    }
-    &.is-right {
-      .icon {
-        left: auto;
-        right: -0.2em;
-      }
-    }
-  }
-  &.is-count {
-    &.is-left {
-      .number {
-        left: -0.5em;
-      }
-    }
-    &.is-right {
-      .number {
-        left: 100%;
-        margin-left: -0.5rem;
-      }
     }
   }
 }

@@ -94,21 +94,21 @@
 @supports (display: grid) {
   body {
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "header"
       "wrapper"
       "footer";
+    grid-template-columns: 100vw;
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
   }
   // Versão tablet
   @include media-breakpoint-up(sm) {
     .page-wrapper {
       display: grid;
+      grid-template-areas: "left-side right-side";
       grid-template-columns: 30vw 1fr;
       grid-template-rows: 1fr;
-      grid-template-areas: "left-side right-side";
     }
   }
   // Versão desktop

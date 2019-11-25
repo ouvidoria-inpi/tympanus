@@ -51,6 +51,9 @@
 
 // Chancela Serpro
 .chancela-serpro {
+  @include media-breakpoint-up(sm) {
+    text-align: right;
+  }
   border-bottom: 4px solid $color-primary-darken-2;
   bottom: 100%;
   left: 0;
@@ -58,8 +61,4 @@
   position: absolute;
   right: 0;
   text-align: center;
-  // Versao desktop
-  @include media-breakpoint-up(sm) {
-    text-align: right;
-  }
 }

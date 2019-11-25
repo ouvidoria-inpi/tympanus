@@ -30,22 +30,22 @@
     text-decoration: underline;
   }
   &.is-small {
-    height: $button-height-small;
-    padding: 0 $button-padding / 2;
     @include media-breakpoint-up(md) {
       min-width: 0;
     }
+    height: $button-height-small;
+    padding: 0 $button-padding / 2;
   }
   &.is-circle {
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 50%;
-    height: $button-circle-default;
-    padding: 0;
-    width: $button-circle-default;
     @include media-breakpoint-up(sm) {
       min-width: 0;
     }
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    height: $button-circle-default;
+    padding: 0;
+    width: $button-circle-default;
     @each $size, $value in (medium, $button-circle-medium),
       (large, $button-circle-large)
     {

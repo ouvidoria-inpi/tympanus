@@ -39,13 +39,13 @@
       background: $color-primary-lighten-2;
       border: 5px solid $color-white;
       border-radius: 50%;
+      bottom: 0;
       content: "";
       height: $checkbox-default;
       left: 0;
-      right: 0;
       position: absolute;
+      right: 0;
       top: 0;
-      bottom: 0;
       transform: scale(0.9, 0.9);
       width: $checkbox-default;
     }
