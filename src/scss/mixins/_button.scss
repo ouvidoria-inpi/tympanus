@@ -43,8 +43,6 @@
   padding: 0;
   &:hover,
   &:focus {
-    background-color: $color-primary-pastel-1;
-    border-radius: $button-radius;
     color: $link-hover-color;
   }
 }

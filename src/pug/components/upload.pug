@@ -1,0 +1,32 @@
+doctype html
+html(lang="pt-BR")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title upload
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' crossorigin='anonymous')
+    link(rel='stylesheet' href='/dist/css/dsgov.css')
+    link(rel='stylesheet' href='upload.css')
+  body(onload="updateSize();")
+    .container-fluid
+      .br-upload
+        input#input-file.upload-input(type='file' name='myFiles' multiple)
+        h1.upload-header  Arraste e solte o(s) arquivo(s) do seu computador
+        span.upload-info
+          i.fas.fa-info-circle
+          |         Os arquivos devem ser no formato PNG, JPG ou PDF e ter no máximo 1GB
+        .upload-file-list
+        label.upload-add.br-button.is-cancel(for='input-file')
+          i.fas.fa-plus
+          |         Adicionar um arquivo do seu computador
+        p.upload-size
+          | Arquivos selecionados: 
+          span.upload-size-num 0
+          br
+          |         Tamanho total: 
+          span.upload-size-bytes 0
+      button.br-button.is-cancel(type='button') Voltar
+      button.br-button.is-primary(type='button') Salvar
+    script(src='upload.js')
+    script(src='assets/design-system/node_modules/@fortawesome/fontawesome-free/js/all.min.js')
