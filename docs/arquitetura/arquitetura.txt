@@ -1,35 +1,24 @@
 design-system
-  assets
-    fonts
-    images
+  docs
   dist
     css
-      dsgov.css
-      dsgov.min.css
+    js
+    images
     html
-    scss
-      base
       components
       templates
   src
-    base
+    scss
       configs
       mixins
       utilities
-    components
-      accordeon
-        accordeon.pug
-        accordeon.scss
-        accordeon.js
-        accordeon.teste.js
-      button
-      ...
-    templates
+      components
+      templates
+    js
+      components
+      templates
+    images
+    pug
       layouts
-        authentication
-        site
-        system
-        error
-      crud
-      login
-      ...
+      components
+      templates
