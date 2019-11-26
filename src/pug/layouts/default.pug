@@ -1,5 +1,4 @@
 block vars
-  - var title = "Component";
 
 doctype html
 html(lang="pt-BR")
@@ -7,14 +6,13 @@ html(lang="pt-BR")
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    title #{title}
+    title= title ? title : "Template padrão"
     // Fonte Rawline
     link(rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
     // Design System de Governo
     link(rel="stylesheet" href="../css/dsgov.css")
     // Fontawesome
     script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js")
-  body
-    .container-fluid
-      block content
+  body(class= templateClass ? `template-${templateClass}` : "")
+    block template
     block scripts

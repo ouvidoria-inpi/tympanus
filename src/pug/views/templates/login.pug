@@ -1,7 +1,23 @@
-extends ../layouts/_authentication
+extends ../../layouts/authentication
 
-block vars
+append vars
   - var title = "Acesse sua conta";
+
+block auth-menu
+  // Menu de navegação
+  nav#navigation.d-none.d-sm-block
+    ul.br-tabs.is-vertical
+      li.item.is-active
+        a(href="")
+          span.name item sem ícone
+      li.item
+        a(href="")
+          img.icon(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png" alt="Certificado Digital")
+          span.name item com ícone
+      li.item
+        a(href="")
+          img.icon(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png" alt="NeoID")
+          span.name item com ícone
 
 block content
   .row

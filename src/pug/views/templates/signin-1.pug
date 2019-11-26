@@ -1,12 +1,10 @@
-extends ../layouts/_authentication
+extends ../../layouts/authentication
 
-block vars
-  - var title = "Esqueceu sua senha?";
+append vars
+  - var title = "Ative sua conta";
 
-block scripts
+append scripts
   script(src="../js/checklist.js")
-
-block auth-menu
 
 block content
   p
@@ -28,14 +26,14 @@ block content
             input#radio-email-check(name='preferencia' type='radio' onclick="toggleActiveField(this, 'br-checklist')")
             label(for='radio-email-check')
               span.sr-only E-mail
-        .item
+        .item.is-active
           .icon
             i.fas.fa-mobile-alt
           .br-input
             label(for='radio-celular') Celular
             input#radio-celular(type='text' placeholder='Ex: (xx) xxxxx-xxxx')
           .br-radio
-            input#radio-celular-check(name='preferencia' type='radio' onclick="toggleActiveField(this, 'br-checklist')")
+            input#radio-celular-check(name='preferencia' type='radio' onclick="toggleActiveField(this, 'br-checklist')" checked)
             label(for='radio-celular-check')
               span.sr-only Celular
   // Receber código
