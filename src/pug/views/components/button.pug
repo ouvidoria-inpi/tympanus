@@ -1,35 +1,43 @@
 extends ../../layouts/component
 
 append vars
-  - var title = "Button";
+  - var title = "Botão";
 
-block content
-  button.br-button.is-primary(type='button') Entrar
-  button.br-button.is-secondary(type='button') Cadastrar
-  button.br-button.is-tertiary(type='button') Adicionar
-  button.br-button.is-cancel(type='button') Cancelar
+append content
+  +button("is-primary")
+    | Entrar
+  +button("is-secondary ml-3")
+    | Cadastrar
+  +button("is-tertiary ml-3")
+    | Adicionar
+  +button("is-cancel ml-3")
+    | Cancelar
   hr
-  button.br-button.is-primary(type='button')
+  +button("is-primary")
     span Entrar com 
     strong gov.br
-  button.br-button.is-secondary(type='button')
+  +button("is-secondary ml-3")
     span Entrar com 
     strong gov.br
-  button.br-button.is-call-to-action(type='button') Solicitar
+  +button("is-call-to-action ml-3")
+    | Solicitar
   hr
-  button.br-button.is-circle.is-primary(type='button')
+  +button("is-circle is-primary")
     i.fas.fa-chevron-up
-  button.br-button.is-circle.is-secondary(type='button')
+  +button("is-circle is-secondary")
     i.fas.fa-chevron-down
-  button.br-button.is-circle.is-medium.bg-twitter.border-twitter.text-white(type='button')
+  +button("is-circle is-medium text-white bg-twitter border-twitter")
     i.fab.fa-twitter
-  button.br-button.is-circle.is-medium.bg-facebook.border-facebook.text-white(type='button')
+  +button("is-circle is-medium text-white bg-facebook border-facebook")
     i.fab.fa-facebook-f
-  button.br-button.is-circle.is-large.bg-google-plus.border-google-plus.text-white(type='button')
+  +button("is-circle is-large text-white bg-google-plus border-google-plus")
     i.fab.fa-google-plus-g
-  button.br-button.is-circle.is-large.is-primary(type='button')
-    .govbr gov.br
+  +button("is-circle is-large is-primary")
+    strong gov.br
   hr
-  button.br-button.is-primary.is-loading(type='button') Entrar
-  button.br-button.is-secondary.is-loading(type='button') Cadastrar
-  button.br-button.is-call-to-action.is-loading(type='button') Solicitar
+  +button("is-primary is-loading")
+    | Entrar
+  +button("is-secondary ml-3 is-loading")
+    | Cadastro
+  +button("is-call-to-action ml-3 is-loading")
+    | Solicitar

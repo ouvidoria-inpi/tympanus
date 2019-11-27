@@ -1,41 +1,8 @@
-extends ../layouts/_component
-
-block vars
-  - var title = "Checkbox";
-
-block content
-  p.label Selecione 1 ou mais opções
-  .br-checkbox.d-block.d-sm-inline-block
-    input#h-checkbox-padrao(type='checkbox')
-    label(for='h-checkbox-padrao') Padrão
-  .br-checkbox.d-block.mt-1.d-sm-inline-block.ml-sm-7.mt-sm-0
-    input#h-checkbox-checado(type='checkbox' checked)
-    label(for='h-checkbox-checado') Checado
-  .br-checkbox.is-invalid.d-block.mt-1.d-sm-inline-block.ml-sm-7.mt-sm-0
-    input#h-checkbox-invalido(type='checkbox' required)
-    label(for='h-checkbox-invalido') Inválido
-  .br-checkbox.is-valid.d-block.mt-1.d-sm-inline-block.ml-sm-7.mt-sm-0
-    input#h-checkbox-valido(type='checkbox')
-    label(for='h-checkbox-valido') Válido
-  .br-checkbox.d-block.mt-1.d-sm-inline-block.ml-sm-7.mt-sm-0
-    input#h-checkbox-disabled(type='checkbox' disabled)
-    label(for='h-checkbox-disabled') Desativado
-  hr
-  .row
-    .col-auto
-      p.label Selecione opções
-      .br-checkbox.d-block.mb-1
-        input#v-checkbox-padrao(type='checkbox')
-        label(for='v-checkbox-padrao') Padrão
-      .br-checkbox.d-block.mb-1
-        input#v-checkbox-checado(type='checkbox' checked)
-        label(for='v-checkbox-checado') Checado
-      .br-checkbox.is-invalid.d-block.mb-1
-        input#v-checkbox-invalido(type='checkbox' required)
-        label(for='v-checkbox-invalido') Inválido
-      .br-checkbox.is-valid.d-block.mb-1
-        input#v-checkbox-valido(type='checkbox')
-        label(for='v-checkbox-valido') Válido
-      .br-checkbox.d-block.mb-1
-        input#v-checkbox-disabled(type='checkbox' disabled)
-        label(for='v-checkbox-disabled') Desativado
+mixin checkbox(label="Label")
+  .br-checkbox(class=attributes.class)
+    input(
+      id=attributes.id
+      type="checkbox"
+      checked=attributes.checked
+      disabled=attributes.disabled)
+    label(for=attributes.id)=label

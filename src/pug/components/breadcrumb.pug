@@ -1,9 +1,12 @@
-ul.br-breadcrumb
-  li.home
-    a(href='')
-      span.sr-only Página inicial
-      i.fas.fa-home
-  li
-    a(href='') Tela anterior
-  li.is-active
-    a(href='') Tela atual
+mixin breadcrumbs
+  ul.br-breadcrumb
+    li.home
+      a(href='')
+        span.sr-only Página inicial
+        i.fas.fa-home
+    if block
+      block
+
+mixin crumb(name="crumb", className)
+  li(class=className ? className : "")
+    a(href='')=name

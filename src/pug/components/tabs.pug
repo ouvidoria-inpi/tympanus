@@ -1,43 +1,15 @@
-extends ../layouts/_component
-
-block vars
-  - var title = "Tabs";
-
-block scripts
-  script(src="../js/tabs.js")
-
-block content
+mixin tabs(className="")
   nav
-    ul.br-tabs.is-vertical
-      li.item.is-active
-        a(href='javascript:void(0)')
-          span.name Entrar com CPF
-      li.item
-        a(href='javascript:void(0)')
-          img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
-          span.name Entrar com Certificado Digital
-      li.item
-        a(href='javascript:void(0)')
-          img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
-          span.name Entrar com NeoID
-    ul.br-tabs.mt-10
-      li.item.is-active
-        a(href='javascript:void(0)')
-          span.name Todos
-          span.results (124)
-      li.item
-        a(href='javascript:void(0)')
-          span.name Notícias
-          span.results (74)
-      li.item
-        a(href='javascript:void(0)')
-          span.name Serviços
-          span.results (16)
-      li#item4.item
-        a(href='javascript:void(0)')
-          span.name Aplicativos
-          span.results (12)
-      li#item5.item
-        a(href='javascript:void(0)')
-          span.name Mídias
-          span.results (22)
+    ul.br-tabs(class=className)
+      if block
+        block
+      else
+        | Você precisa adicionar tab-item
+
+mixin tab-item(title="aba")
+  li.item(class=attributes.class)
+    a(href="javascript:void(0)")
+      if block
+        block
+      else
+        span.name=title

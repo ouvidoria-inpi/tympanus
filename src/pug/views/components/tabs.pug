@@ -6,38 +6,28 @@ append vars
 append scripts
   script(src="../js/tabs.js")
 
-block content
-  nav
-    ul.br-tabs.is-vertical
-      li.item.is-active
-        a(href='javascript:void(0)')
-          span.name Entrar com CPF
-      li.item
-        a(href='javascript:void(0)')
-          img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
-          span.name Entrar com Certificado Digital
-      li.item
-        a(href='javascript:void(0)')
-          img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
-          span.name Entrar com NeoID
-    ul.br-tabs.mt-10
-      li.item.is-active
-        a(href='javascript:void(0)')
-          span.name Todos
-          span.results (124)
-      li.item
-        a(href='javascript:void(0)')
-          span.name Notícias
-          span.results (74)
-      li.item
-        a(href='javascript:void(0)')
-          span.name Serviços
-          span.results (16)
-      li#item4.item
-        a(href='javascript:void(0)')
-          span.name Aplicativos
-          span.results (12)
-      li#item5.item
-        a(href='javascript:void(0)')
-          span.name Mídias
-          span.results (22)
+append content
+  +tabs("is-vertical")
+    +tab-item("Entrar com CPF")
+    +tab-item(class="is-active")
+      img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
+      span.name Entrar com Certificado Digital
+    +tab-item
+      img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
+      span.name Entrar com NeoID
+  +tabs("mt-10")
+    +tab-item(class="is-active")
+      span.name Todos
+      span.results (124)
+    +tab-item
+      span.name Notícias
+      span.results (74)
+    +tab-item
+      span.name Serviços
+      span.results (16)
+    +tab-item
+      span.name Aplicativos
+      span.results (12)
+    +tab-item
+      span.name Mídias
+      span.results (22)

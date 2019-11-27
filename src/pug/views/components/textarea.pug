@@ -3,19 +3,11 @@ extends ../../layouts/component
 append vars
   - var title = "Textarea";
 
-block content
+append content
   .row
     .col-sm
-      .br-textarea
-        label(for='ex1') Exemplo de TextArea
-        textarea#ex1(placeholder='Exemplo de TextArea')
-      .br-textarea.is-disabled.mt-3
-        label(for='ex3') Exemplo de TextArea - Disabled
-        textarea#ex3(placeholder='Exemplo de TextArea - Disabled' disabled)
+      +textarea("Padrão")(id="default" placeholder="Exemplo de textarea")
+      +textarea("Desativado")(id="disabled" class="mt-3" placeholder='Textarea desativado' disabled)
     .col-sm
-      .br-textarea.is-valid
-        label(for='ex4') Exemplo de TextArea - Valid
-        textarea#ex4(placeholder='Exemplo de TextArea - Valid')
-      .br-textarea.is-invalid.mt-3
-        label(for='ex5') Exemplo de TextArea - Invalid
-        textarea#ex5(placeholder='Exemplo de TextArea - Invalid')
+      +textarea("Válido")(id="valid" class="is-valid" placeholder="Textarea válido")
+      +textarea("Inválido")(id="invalid" class="is-invalid mt-3" placeholder="Textarea inválido")

@@ -77,6 +77,9 @@
         }
         & + label::before {
           border-color: $color;
+          @if ($state == "invalid") {
+            border-width: 2px;
+          }
         }
         // Checado
         &:checked + label::before {

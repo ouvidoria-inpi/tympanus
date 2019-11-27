@@ -8,7 +8,7 @@ append scripts
   script(src="../js/table.js")
   script(src="../js/table-sortable.min.js")
 
-block content
+append content
   .br-table
     p.caption Exemplo de título da tabela
     .row.mb-1
@@ -36,7 +36,7 @@ block content
             label(for='length-top') Exibir:
             select#length-top
               option(value='0') 0
-              option(value='opcao-1' selected='') 10
+              option(value='opcao-1' selected) 10
               option(value='opcao-2') 15
               option(value='opcao-3') 20
               option(value='opcao-4') 25
@@ -375,7 +375,7 @@ block content
             label(for='length-bottom') Exibir:
             select#length-bottom
               option(value='0') 0
-              option(value='opcao-1' selected='') 10
+              option(value='opcao-1' selected) 10
               option(value='opcao-2') 15
               option(value='opcao-3') 20
               option(value='opcao-4') 25

@@ -1,11 +1,5 @@
-extends ../layouts/_component
-
-block vars
-  - var title = "Divider";
-
-block content
-  .br-divider
-    span.content Ou
+mixin divider
   .br-divider
     span.content
-      i.fas.fa-check-circle.fa-2x
+      if block
+        block

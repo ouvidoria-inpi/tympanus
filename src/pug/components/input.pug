@@ -1,54 +1,10 @@
-extends ../layouts/_component
-
-block vars
-  - var title = "Input";
-
-block scripts
-  script(src="../js/input-password.js")
-  script(src="../js/input-autocomplete.js")
-
-block content
-  .row
-    .col-sm
-      .mb-3
-        .br-input
-          label(for='simples') Normal
-          input#simples(type='text' placeholder='Insira um texto')
-        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
-      .mb-3
-        .br-input.has-icon
-          label(for='password') Senha
-          input#password(type='password' placeholder='Digite sua senha de 8 a 11 dígitos')
-          button.icon(type='button' onclick="toggleInputAction(this)")
-            span.sr-only Mostrar senha
-            i.fas.fa-eye
-      .mb-3
-        .br-input.has-icon
-          label(for='search-autocomplete') Autocomplete
-          input#search-autocomplete(type='search' placeholder='Digite um país')
-          span.icon
-            i.fas.fa-search
-    .col-sm
-      .mb-3
-        .br-input.is-focus
-          label(for='focus') Focus
-          input#focus(type='text' placeholder='Insira um texto')
-      .mb-3
-        .br-input
-          label(for='desabilitado') Desabilitado
-          input#desabilitado(disabled type='text' placeholder='Insira um texto')
-    .col-sm
-      .mb-3
-        .br-input.is-invalid
-          label(for='invalido') Inválido
-          input#invalido(type='text' placeholder='Insira um texto')
-        .feedback.is-invalid
-          i.fas.fa-times-circle
-          span.message  Texto inválido
-      .mb-3
-        .br-input.is-valid
-          label(for='valido') Válido
-          input#valido(type='text' placeholder='Insira um texto')
-        .feedback.is-valid
-          i.fas.fa-check-circle
-          span.message  Texto válido
+mixin input(label="Label")
+  .br-input(class=attributes.class)
+    label(for=attributes.id)=label
+    input(
+      id=attributes.id
+      type=attributes.type ? attributes.type : "text"
+      placeholder=attributes.placeholder
+      disabled=attributes.disabled)
+    if block
+      block

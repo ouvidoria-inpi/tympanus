@@ -1,98 +1,71 @@
 .#{$prefix}pagination {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   margin: 0 0 ($spacer * 3);
   padding: 0;
   li {
-    @include media-breakpoint-up(sm) {
-      display: block;
-    }
-    display: none;
+    display: inline-flex;
     list-style: none;
     margin: 0;
-    &:first-child,
-    &:last-child {
-      a {
-        padding: 0;
-      }
-    }
   }
   a {
-    align-items: center;
+    border-radius: $button-radius;
     color: $color-primary;
-    display: flex;
     font-weight: 400;
     justify-content: center;
-    padding: 0 ($spacer * 1.5);
+    min-width: $spacer * 3;
+    padding: 0 ($spacer);
     position: relative;
+    text-align: center;
     text-decoration: none !important;
     &:hover {
+      background-color: $color-primary-pastel-1;
       text-decoration: none;
-      &::before {
-        background-color: $color-primary-pastel-1;
-      }
-    }
-    &::before {
-      background: transparent;
-      border-radius: 50%;
-      content: "";
-      height: 28px;
-      left: 50%;
-      position: absolute;
-      top: 0;
-      transform: translate(-50%, 0);
-      width: 28px;
-      z-index: 0;
-    }
-    span {
-      position: relative;
-      z-index: 1;
     }
   }
   .is-active {
     a {
+      background-color: $color-primary;
       color: $color-white;
-      &::before {
-        background-color: $color-primary;
-      }
     }
   }
-  .is-first,
+  .is-first {
+    &::after {
+      color: $color-gray-3;
+      content: "|";
+    }
+  }
   .is-last {
-    display: block;
-    a {
-      &::before {
-        content: none;
-      }
-    }
-    i {
-      &:first-child {
-        margin-right: $spacer;
-      }
-      &:last-child {
-        margin-left: $spacer;
-      }
-    }
-    span {
-      border-radius: 100px;
-      padding: $spacer-half $spacer;
-    }
-    &:not(.is-disabled) {
-      a {
-        &:hover {
-          span {
-            background: $color-primary-pastel-1;
-            color: $color-primary;
-          }
-        }
-      }
+    &::before {
+      color: $color-gray-3;
+      content: "|";
     }
   }
   .is-disabled {
     a {
       color: $color-gray-5;
       cursor: default;
+      pointer-events: none;
+    }
+  }
+  // Tamanhos
+  &.is-large {
+    @include media-breakpoint-up(sm) {
+      li {
+        font-size: $font-size-base * 1.25;
+      }
+      a {
+        margin: 0 $spacer-half;
+        min-width: $spacer * 3.75;
+      }
+      .is-first {
+        &::after {
+          margin: 0 ($spacer);
+        }
+      }
+      .is-last {
+        &::before {
+          margin: 0 ($spacer);
+        }
+      }
     }
   }
 }

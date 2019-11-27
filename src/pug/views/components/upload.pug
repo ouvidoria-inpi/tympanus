@@ -6,20 +6,5 @@ append vars
 append scripts
   script(src="../js/upload.js")
 
-block content
-  .br-upload
-    input#input-file.upload-input(type='file' name='myFiles' multiple)
-    p.upload-header  Arraste e solte o(s) arquivo(s) do seu computador
-    span.upload-info
-      i.fas.fa-info-circle
-      |         Os arquivos devem ser no formato PNG, JPG ou PDF e ter no máximo 1GB
-    .upload-file-list
-    label.upload-add.br-button.is-cancel(for='input-file')
-      i.fas.fa-plus
-      |         Adicionar um arquivo do seu computador
-    p.upload-size
-      | Arquivos selecionados: 
-      span.upload-size-num 0
-      br
-      |         Tamanho total: 
-      span.upload-size-bytes 0
+append content
+  +upload

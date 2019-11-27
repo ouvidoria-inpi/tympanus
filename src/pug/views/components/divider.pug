@@ -3,9 +3,8 @@ extends ../../layouts/component
 append vars
   - var title = "Divider";
 
-block content
-  .br-divider
-    span.content Ou
-  .br-divider
-    span.content
-      i.fas.fa-check-circle.fa-2x
+append content
+  +divider
+    | ou
+  +divider
+    i.fas.fa-check-circle.fa-2x

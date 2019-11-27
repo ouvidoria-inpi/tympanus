@@ -3,127 +3,27 @@ extends ../../layouts/component
 append vars
   - var title = "Pagination";
 
-block content
-  ul.br-pagination.is-large
-    li.is-first.is-disabled
-      a(href='')
-        i.fas.fa-angle-double-left
-        span Anterior
-    li.d-flex.d-sm-none
-      label(for='page-select-large')
-        span.sr-only Selecione a página
-      select#page-select-large
-        option(value='1') 1
-        option(value='2') 2
-        option(value='3') 3
-        option(value='4') 4
-        option(value='5') 5
-        option(value='6') 6
-        option(value='7') 7
-        option(value='8') 8
-        option(value='9') 9
-        option(value='10') 10
-      span.ml-2 de
-      a(href='') 10
-    li.is-active
-      a(href=''): span 1
-    li
-      a(href=''): span 2
-    li
-      a(href=''): span 3
-    li
-      a(href=''): span 4
-    li
-      a(href=''): span 5
-    li
-      a(href=''): span 6
-    li
-      a(href=''): span 7
-    li
-      a(href=''): span 8
-    li
-      a(href=''): span 9
-    li
-      a(href=''): span 10
-    li.is-last
-      a(href='')
-        span Próxima
-        i.fas.fa-angle-double-right
-  ul.br-pagination
-    li.is-first.is-disabled
-      a(href='')
-        i.fas.fa-angle-double-left
-        span Anterior
-    li.d-flex.d-sm-none
-      label(for='page-select-default')
-        span.sr-only Selecione a página
-      select#page-select-default
-        option(value='1') 1
-        option(value='2') 2
-        option(value='3') 3
-        option(value='4') 4
-        option(value='5') 5
-        option(value='6') 6
-        option(value='7') 7
-        option(value='8') 8
-        option(value='9') 9
-        option(value='10') 10
-      span.ml-2 de
-      a(href='') 10
-    li.is-active
-      a(href=''): span 1
-    li
-      a(href=''): span 2
-    li
-      a(href=''): span 3
-    li
-      a(href=''): span 4
-    li
-      a(href=''): span 5
-    li
-      a(href=''): span 6
-    li
-      a(href=''): span 7
-    li
-      a(href=''): span 8
-    li
-      a(href=''): span 9
-    li
-      a(href=''): span 10
-    li.is-last
-      a(href='')
-        span Próxima
-        i.fas.fa-angle-double-right
-  ul.br-pagination
-    li.is-first.is-disabled
-      a(href='')
-        i.fas.fa-angle-double-left
-        span Anterior
-    li.d-flex.d-sm-none
-      label(for='page-select-min')
-        span.sr-only Selecione a página
-      select#page-select-min
-        option(value='1') 1
-        option(value='2') 2
-        option(value='3') 3
-        option(value='4') 4
-        option(value='5') 5
-        option(value='6') 6
-        option(value='7') 7
-        option(value='8') 8
-        option(value='9') 9
-        option(value='10') 10
-      span.ml-2 de
-      a(href='') 10
-    li.is-active
-      a(href=''): span 1
-    li
-      a(href=''): span 2
-    li
-      span ...
-    li
-      a(href=''): span 10
-    li.is-last
-      a(href='')
-        span Próxima
-        i.fas.fa-angle-double-right
+append content
+  .text-center
+    +pagination(id="large" class="is-large")
+    +pagination(id="default")
+    nav
+      ul.br-pagination
+        li.is-first.is-disabled
+          a(href="")
+            i.fas.fa-chevron-left
+            span.sr-only primeiro
+        li.is-active
+          a(href="") 1
+        li: a(href="") 2
+        li.d-none.d-sm-inline ...
+        li.d-sm-none
+          label.sr-only(for="mini")
+          select(id="mini")
+            each page in [3,4,5,6,7,8,9]
+              option=page
+        li: a(href="") 10
+        li.is-last
+          a(href="")
+            i.fas.fa-chevron-right
+            span.sr-only último
