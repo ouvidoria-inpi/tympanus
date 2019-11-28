@@ -101,6 +101,10 @@
       "path": "components/breadcrumb/breadcrumb"
     },
     {
+      "label": "Cabeçalho",
+      "path": "components/header/header"
+    },
+    {
       "label": "Card",
       "path": "components/card/card"
     },
@@ -156,10 +160,6 @@
     {
       "label": "Tabela",
       "path": "components/table/table"
-    },
-    {
-      "label": "Textarea",
-      "path": "components/textarea/textarea"
     },
     {
       "label": "Upload",
