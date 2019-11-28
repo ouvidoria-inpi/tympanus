@@ -1,9 +1,3 @@
-# Input
-
-## Definição
-
-São componentes que definem a entrada de dados simples por parte do usuário.
-
 ## Orientação de Uso
 
 ![Inputs_Orientação](../../assets/images/components_img/inputs/Inputs_Orientação.png)

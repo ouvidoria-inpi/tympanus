@@ -1,7 +1,3 @@
-# Breadcrumb ou Migalhas de Pão
-
-Breadcrumbs, breadcrumb navigation ou breadcrumb trail (literalmente, navegação por migalhas de pão ou trilha de migalhas de pão, em alusão à história de João e Maria) é um sistema de navegação estrutural usada para proporcionar ao usuário um meio de localização dentro da estrutura de navegação do site.
-
 ### Estrutura
 
 Este componente deve conter uma sequência de links marcando a ordem de acesso nas páginas navegadas. A sequência de links deve ser intercalada com setas do tipo Chevron-Right da família de ícones do Font Awesome O primeiro link é representado pelo ícone Home da bibliioteca de ícones do Font Awesome. Este dá acesso à página inicial do sistema ou portal. O último texto da sequência não deve ter ação de link, pois representa a página atual. O Breadcrumbs deve ser posicionado logo abaixo do cabeçalho do portal ou sistema, alinhado ao título principal.

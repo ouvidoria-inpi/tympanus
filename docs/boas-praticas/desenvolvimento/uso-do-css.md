@@ -1,5 +1,3 @@
-# Uso do CSS
-
 Este documento explica como usar as folhas de estilo do Design System de Governo.
 
 O CSS do DS-Gov foi dividido em partes.
@@ -20,9 +18,9 @@ Exemplo de uso:
 
 ```html
 <head>
-  <link rel="stylesheet" href="dsgov-base.min.css">
-  <link rel="stylesheet" href="dsgov-components.min.css">
-  <link rel="stylesheet" href="dsgov-templates.min.css">
+  <link rel="stylesheet" href="dsgov-base.min.css" />
+  <link rel="stylesheet" href="dsgov-components.min.css" />
+  <link rel="stylesheet" href="dsgov-templates.min.css" />
 </head>
 ```
 

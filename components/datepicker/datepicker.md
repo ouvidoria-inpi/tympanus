@@ -1,0 +1,1 @@
+É um widget de interface gráfica do usuário que permite ao usuário selecionar uma data de um calendário e/ou hora a partir de um intervalo de tempo. Geralmente é apresentado nos formatos de selecionador de data, calendário pop-up, seletor de data e hora ou um seletor de tempo.

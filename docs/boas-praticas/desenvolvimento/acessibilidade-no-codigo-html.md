@@ -1,5 +1,3 @@
-# Acessibilidade no Código HTML
-
 Esse documento tem o objetivo de definir boas práticas de construção do código HTML seguindo as diretrizes do [Modelo de Acessibilidade em Governo Eletrônico - eMAG][1].
 
 ## Modelo de Acessibilidade em Governo Eletrônico - eMAG
@@ -50,11 +48,11 @@ A validação manual é necessária porque nem todos os problemas de acessibilid
 
 #### Benefícios de um HTML válido
 
--   Melhor comunicação e menos chance de má interpretação
--   É mais provável que seja exibido de maneira correta e previsível, independentemente do navegador ou do tipo de dispositivo
--   É mais provável que seja funcional para usuários com problemas de acessibilidade
--   Reduz possíveis interpretações erradas por mecanismos de pesquisa (de dados estruturados, metadados, idioma, codificação, etc.)
--   É mais provável que seja renderizado mais rapidamente em alguns cenários (o usuário pode ver a página mais rapidamente)
+- Melhor comunicação e menos chance de má interpretação
+- É mais provável que seja exibido de maneira correta e previsível, independentemente do navegador ou do tipo de dispositivo
+- É mais provável que seja funcional para usuários com problemas de acessibilidade
+- Reduz possíveis interpretações erradas por mecanismos de pesquisa (de dados estruturados, metadados, idioma, codificação, etc.)
+- É mais provável que seja renderizado mais rapidamente em alguns cenários (o usuário pode ver a página mais rapidamente)
 
 ### Use **HTML semântico**
 
@@ -72,7 +70,7 @@ A [Especificação HTML5 do W3C][8] trás a semantica dos elementos da linguagem
 
 Como exemplo pode-se citar:
 
--   Usar cabeçalhos de acordo com sua hierarquia
+- Usar cabeçalhos de acordo com sua hierarquia
 
 Os níveis de cabeçalho (elementos HTML H1 a H6) devem ser utilizados de forma hierárquica, pois organizam a ordem de importância e subordinação dos conteúdos, facilitando a leitura e compreensão.
 
@@ -87,7 +85,7 @@ Conceitualmente, existem seis níveis de títulos, sendo o H1 o mais alto, ou se
 <h6>6º nível</h6>
 ```
 
--   Usar listas de acordo com sua finalidade
+- Usar listas de acordo com sua finalidade
 
 O elemento HTML `ul` (ou elemento HTML de Lista desordenada) representa uma lista de itens sem ordem rígida, isto é, uma coleção de itens que não trazem uma ordenação numérica e as suas posições, nessa lista, são irrelevantes.
 
@@ -96,16 +94,16 @@ O Elemento HTML `ol` (ou Elemento HTML de lista ordenada) representa uma lista d
 ```html
 <!-- Lista desordenanda -->
 <ul>
-    <li>primeiro item</li>
-    <li>segundo item</li>
-    <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item</li>
+  <li>terceiro item</li>
 </ul>
 
 <!-- Lista ordenanda -->
 <ol>
-    <li>primeiro item</li>
-    <li>segundo item</li>
-    <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item</li>
+  <li>terceiro item</li>
 </ol>
 ```
 
@@ -115,35 +113,35 @@ As tabelas devem ser utilizadas apenas para dados tabulares e não para efeitos 
 
 ```html
 <html>
-    <head> </head>
-    <body>
-        <div id="topo" role="”banner”">
-            <div>
-                <!--barra de acessibilidade-->
-            </div>
-            <h1>Exemplo sem tabelas!</h1>
-        </div>
-        <div id="menu" role="”navigation”">
-            <ul>
-                <li><a href="menu1.html">Menu 1</a></li>
-                <li><a href="menu2.html">Menu 2</a></li>
-                <li><a href="menu3.html">Menu 3</a></li>
-                <li><a href="menu4.html">Menu 4</a></li>
-            </ul>
-        </div>
-        <div id="conteudo" role="main">
-            <!--conteúdo principal da página-->
-            <div id="lateral">
-                <!--conteúdo da lateral da página-->
-            </div>
-            <div id="rodape" role="contentinfo">
-                <!--direitos autorais-->
-                <address>
-                    <!--e-mail de contato-->
-                </address>
-            </div>
-        </div>
-    </body>
+  <head> </head>
+  <body>
+    <div id="topo" role="”banner”">
+      <div>
+        <!--barra de acessibilidade-->
+      </div>
+      <h1>Exemplo sem tabelas!</h1>
+    </div>
+    <div id="menu" role="”navigation”">
+      <ul>
+        <li><a href="menu1.html">Menu 1</a></li>
+        <li><a href="menu2.html">Menu 2</a></li>
+        <li><a href="menu3.html">Menu 3</a></li>
+        <li><a href="menu4.html">Menu 4</a></li>
+      </ul>
+    </div>
+    <div id="conteudo" role="main">
+      <!--conteúdo principal da página-->
+      <div id="lateral">
+        <!--conteúdo da lateral da página-->
+      </div>
+      <div id="rodape" role="contentinfo">
+        <!--direitos autorais-->
+        <address>
+          <!--e-mail de contato-->
+        </address>
+      </div>
+    </div>
+  </body>
 </html>
 ```
 
@@ -157,9 +155,9 @@ Se algum elemento de uma página possuir conteúdo em um idioma diferente do pri
 
 ```html
 <p lang="de">
-    Da dachte der Herr daran, ihn aus dem Futter zu schaffen, aber der Esel merkte, daß kein guter
-    Wind wehte, lief fort und machte sich auf den Weg nach Bremen: dort, meinte er, könnte er ja
-    Stadtmusikant werden.
+  Da dachte der Herr daran, ihn aus dem Futter zu schaffen, aber der Esel
+  merkte, daß kein guter Wind wehte, lief fort und machte sich auf den Weg nach
+  Bremen: dort, meinte er, könnte er ja Stadtmusikant werden.
 </p>
 ```
 
@@ -169,12 +167,15 @@ Deve ser fornecida uma descrição para as imagens da página, utilizando-se, pa
 
 ```html
 <img
-    src="foto-porto-alegre.jpg"
-    alt="Foto de uma bicicleta de carga verde com caixas laranjas encostada numa parede"
+  src="foto-porto-alegre.jpg"
+  alt="Foto de uma bicicleta de carga verde com caixas laranjas encostada numa parede"
 />
 
 <a href="http://www.dominiopublico.gov.br/">
-    <img src="guia.png" alt="Guia de Serviços – Consulte serviços públicos de forma fácil" />
+  <img
+    src="guia.png"
+    alt="Guia de Serviços – Consulte serviços públicos de forma fácil"
+  />
 </a>
 ```
 
@@ -195,14 +196,14 @@ Labels de formulários DEVEM ser usados. Os leitores de tela usam os labels para
 
 ## Referências
 
--   [Modelo de Acessibilidade em Governo Eletrônico - eMAG][1]
--   [World Wide Web Consortium - W3C][2]
--   [Web Content Accessibility Guidelines - WCAG][3]
--   [Web Accessibility Initiative - WAI][4]
--   [Accessible Rich Internet Applications - ARIA][5]
--   [HTML Válido][6]
--   [HTML Semântico][7]
--   [Especificação HTML5 do W3C][8]
+- [Modelo de Acessibilidade em Governo Eletrônico - eMAG][1]
+- [World Wide Web Consortium - W3C][2]
+- [Web Content Accessibility Guidelines - WCAG][3]
+- [Web Accessibility Initiative - WAI][4]
+- [Accessible Rich Internet Applications - ARIA][5]
+- [HTML Válido][6]
+- [HTML Semântico][7]
+- [Especificação HTML5 do W3C][8]
 
 [1]: http://emag.governoeletronico.gov.br/
 [2]: https://www.w3.org/

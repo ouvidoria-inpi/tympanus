@@ -1,7 +1,3 @@
-# Scrim
-
-> Scrims são tratamentos temporarios que podem ser aplicados às superfícies dos elementos de uma interface com o objetivo de tornar o conteúdo menos proeminente.
-
 ![Exemplo de Scrim](../../assets/images/components_img/scrim/scrim_zoom.png)
 
 ## Uso
@@ -16,8 +12,6 @@ Usado fundamentalmente para manipular:
 - **Legibilidade:** quando um texto precisa ser aplicado sobre um superfície e o contraste fundo/texto não é suficiente para gerar contraste acessível;
 - **Inibição:** simular elementos para o estado de desativado;
 
----
-
 ## Anatomia
 
 Um Scrim é uma sobreposição, ou seja, uma forma semi-transparente sobre uma área.
@@ -30,14 +24,10 @@ Em alguns casos, pode ser necessário o **scrim vazado**, cuja característica �
 
 A cor e o valor da opacidade variam de acordo com o tipo de scrim utilizado.
 
----
-
 ## Tipo
 
 Existem 3 tipos de scrim: **Foco**, **Legibilidade** e **Inibição**.
 A escolha deve ser feita baseada na necessidade de uso.
-
----
 
 ### Foco
 
@@ -56,8 +46,6 @@ O scrim recebe as seguintes especificações:
 - **Cor:** #000000
 - **Opacidade:** 40%
 
----
-
 ### Legibilidade
 
 Usados como overlay para melhorar constraste do texto sobre qualquer superfície, seja ela imagem ou não.
@@ -71,8 +59,6 @@ O scrim recebe as seguintes especificações:
 
 - **Cor:** #000000
 - **Opacidade:** 64%
-
----
 
 ### Inibição
 

@@ -1,7 +1,3 @@
-# Modal
-
-> Modais são diálogos flexíveis que podem conter informações críticas ou envolver decisões, tomadas pelo usuário, relacionadas a alguma tarefa.
-
 ![Exemplo Modal](../../assets/images/components_img/modal/modal.png)
 
 ## Uso
@@ -20,8 +16,6 @@ Utilize para:
 
 Modais devem manter uma comunicação direta nas informações e dedicados à conclusão de uma tarefa. Devem aparecer em resposta a uma tarefa ou ação do usuário, com informações relevantes e contextuais.
 
----
-
 ## Anatomia
 
 1. **Card**
@@ -34,8 +28,6 @@ Modais devem manter uma comunicação direta nas informações e dedicados à co
 ![Anatomia 01](../../assets/images/components_img/modal/anatomia_01.png)
 
 ![Anatomia 02](../../assets/images/components_img/modal/anatomia_02.png)
-
----
 
 ### Título
 
@@ -52,13 +44,9 @@ Se necessário, os títulos podem quebrar para um segunda linha. Maiores que dua
 
 ![Título Contraído](../../assets/images/components_img/modal/alerta_titulo_contraido.png)
 
----
-
 ### Conteúdo
 
 Conteúdo pode ter várias representações de acordo com tipo de modal utilizado. Utilize o modal que mais se adeque a necessidade da interface.
-
----
 
 ### Botões
 
@@ -81,13 +69,9 @@ O modal deve conter no máximo dois botões:
 - A ação de confirmação for fornecida, deverá existir a ação de Negação;
 - Não é recomendável fornecer um terceiro botão como "_Saiba mais_", pois ele afasta o usuário do foco principal, deixando a tarefa do modal inacabada. Em vez de adicionar um terceiro botão, um conteúdo de expandivel pode exibir mais informações. Se forem necessárias informações mais extensas, forneça-as antes de entrar no modal.
 
----
-
 ## Tipos
 
 Existem 3 Tipos de modal: **Alerta**, **Opção** e de **Entrada**. A escolha vai depender da tarefa que o usuário deve realizar.
-
----
 
 ## Modal de Alerta
 
@@ -110,8 +94,6 @@ Sempre que uma escolha envolvendo exclusão for realizada pelo usuário (como "D
 ### Tom de voz
 
 Não utilize rótulos de ação que não indique claramente a ação realizada. "Cancelar" e "Excluir" indicam melhor a ação do que o "Não" e "Sim" respectivamente.
-
----
 
 ## Modal de Opção
 
@@ -148,8 +130,6 @@ Exige que o usuário confirme uma opção antes que ela seja submetida, permitin
 - Clicar fora do modal (scrim) cancela a modal;
 - As ações de confirmação e negação são obrigatórios.
 
----
-
 ## Modal de Entrada
 
 Contém ações que requerem uma série de tarefas para serem concluídas tais como campos de entrada, de escolha e outros componentes ligados a formulário. Em resumo, esse modal podem ser usado para tarefas que atendam a qualquer um destes critérios:
@@ -176,8 +156,6 @@ No celular, esse modal é apresentada em tela cheia (fullscreen).
 Use verbos descritivos como "_Salvar_", "_Enviar_", "_Compartilhar_", "_Atualizar_" ou "_Criar_".
 
 Evite termos vagos como "Concluídos", "_Ok_" ou "_Fechar_".
-
----
 
 ## Comportamento
 
@@ -226,8 +204,6 @@ O modal pode ser cancelada:
 - Interagindo com ação "Cancelar";
 - Interagindo com o ícone de cancelar na parte superior a direita.
 - Modal de Alerta nunca deve ser cancelada (via scrim ou ícone de cancelar) mas pode ser fechada por uma ação.
-
----
 
 ## Especificação
 

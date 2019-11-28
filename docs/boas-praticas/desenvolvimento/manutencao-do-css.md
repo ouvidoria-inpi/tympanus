@@ -1,5 +1,3 @@
-# Manutenção do CSS
-
 Esse documento é destinado para manutenção das folhas de estilo do DS-Gov.
 
 Todos os estilos foram escritos usando **SCSS**. Nunca altere os arquivos de CSS do diretório `assets`, pois eles são gerados automaticamente.
@@ -74,7 +72,7 @@ Cada componente/template possui a seguinte estrutura:
 - `_configs.scss`: variáveis de configuração
 - `_mixins.scss`: códigos reaproveitáveis
 - `CHANGELOG.md`: versionamento
-- `arquivo.scss`: **carrega o css de base** e aplica `configs` e  `mixins`
+- `arquivo.scss`: **carrega o css de base** e aplica `configs` e `mixins`
 - `arquivo.html`: código HTML do componente/template
 - `arquivo.md`: documentação para desenvolvedor
 - `arquivo-dsg.md`: documentação para designer

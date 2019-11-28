@@ -1,5 +1,3 @@
-# Aplicação das cores
-
 ## Cores Alinhadas aos Princípios
 
 ### Experiência Única
@@ -19,8 +17,6 @@ Interfaces digitais do governo devem utilizar as cores existentes sempre que pos
 O sistema de serviços deve cumprir as diferentes necessidades de acessibilidade, por causa disso as cores utilizadas no DS foram testadas para que obterem um mínimo contraste e garantissem a legibilidade nas interfaces digitais. Para o texto optou-se pelo uso do cinza #555555 que possui contraste inferior ao preto, mas suficiente para uma boa leitura na tela. O tom neutro, deixa a composição mais leve, tornando a leitura mais agradável.
 
 Outra característica da neutralidade explorada no DS é a aplicação de tons mais claros do cinza em componentes desabilitados. Essa prática já é bastante difundida no meio digital e por isso foi aplicada no DS, afim de comunicar ao usuário que aquele componente não está disponível para o clique.., ou que há uma outra ação que ele precisa realizar para então habilitar o componente.
-
----
 
 ## Testes com ferramentas
 
