@@ -1,4 +1,3 @@
-document.getElementById('noclick').style.pointerEvents = 'none';
 scrim = document.getElementsByClassName("is-foco")[0];
 
 function on() {

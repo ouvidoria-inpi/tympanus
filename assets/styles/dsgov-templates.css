@@ -1728,6 +1728,10 @@
 }
 
 
+.br-search .br-input {
+  width: 100%;
+}
+
 .result-list {
   padding: 24px;
 }
@@ -1822,6 +1826,12 @@
 }
 
 @media (min-width: 576px) {
+  .not-found .not-found-title {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 998px) {
   .not-found .not-found-title {
     font-size: 58px;
   }

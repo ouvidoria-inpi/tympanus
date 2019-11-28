@@ -26,6 +26,11 @@ $btn-action-shadow: 14px;
 $facebook-bg: #3b5998;
 $twitter-bg: #00aced;
 
+$btn-floating-size: 80px;
+$btn-floating-right: 20px;
+$btn-floating-bottom: 110px;
+$btn-floating-svg-pos: 19px;
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg);

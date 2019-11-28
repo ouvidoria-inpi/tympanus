@@ -101,6 +101,10 @@
       "path": "components/breadcrumb/breadcrumb"
     },
     {
+      "label": "Cabeçalho",
+      "path": "components/header/header"
+    },
+    {
       "label": "Card",
       "path": "components/card/card"
     },
@@ -133,6 +137,7 @@
       "path": "components/message/message"
     },
     {
+      "isPdf": false,
       "label": "Modal",
       "path": "components/modal/modal"
     },
@@ -155,10 +160,6 @@
     {
       "label": "Tabela",
       "path": "components/table/table"
-    },
-    {
-      "label": "Textarea",
-      "path": "components/textarea/textarea"
     },
     {
       "label": "Upload",
@@ -218,7 +219,7 @@
           "path": "templates/password-recovery/password-recovery-change"
         }
       ],
-      "label": "Recuparação de Senha"
+      "label": "Recuperação de Senha"
     },
     {
       "children": [
@@ -227,7 +228,7 @@
           "path": "templates/page/page"
         },
         {
-          "label": "Exemplo de formulário",
+          "label": "Exemplo de formulário - 1",
           "path": "templates/crud/crud"
         }
       ],
@@ -241,6 +242,35 @@
         }
       ],
       "label": "Sites e portais"
+    },
+    {
+      "children": [
+        {
+          "label": "1 - Tela de Criação (Cadastro)",
+          "path": "templates/crud/crud"
+        },
+        {
+          "label": "2 - Tela de Filtragem com Colapse",
+          "path": "templates/crud/crud-2"
+        },
+        {
+          "label": "3 - Tela de Pesquisa com Mensagem de Alerta",
+          "path": "templates/crud/crud-3"
+        },
+        {
+          "label": "4 - Tela de Busca com Auto-Complete",
+          "path": "templates/crud/crud-4"
+        },
+        {
+          "label": "5 - Tela de Visualização de Dados Cadastrados",
+          "path": "templates/crud/crud-5"
+        },
+        {
+          "label": "6 - Tela de Edição de Dados Cadastrados",
+          "path": "templates/crud/crud-6"
+        }
+      ],
+      "label": "Template CRUD para Portais"
     },
     {
       "children": [

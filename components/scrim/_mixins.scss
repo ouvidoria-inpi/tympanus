@@ -1,15 +1,15 @@
 @mixin scrim {
-  background-color: $scrim-background-color;
   &.is-foco {
+    background-color: $scrim-background-color-foco;
     bottom: 0;
     display: none;
     height: 100%;
     left: 0;
-    position: $scrim-position;
+    position: fixed;
     right: 0;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 999;
     .br-modal {
       -ms-transform: translate(-50%, -50%);
       left: 50%;
@@ -21,18 +21,22 @@
     }
   }
   &.is-inibicao {
-    background: $scrim-background-color;
-    height: 100%;
-    opacity: 50%;
     position: relative;
-    width: 100%;
+    &::before {
+      background: $scrim-background-color-inibicao;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
   }
   &.is-legibilidade {
     position: relative;
     .scrim-text {
-      background-color: $scrim-background-color;
+      background-color: $scrim-background-color-legibilidade;
       bottom: 0;
-      color: $scrim-text-color;
       left: 0;
       padding: 1em 0.5em;
       position: absolute;

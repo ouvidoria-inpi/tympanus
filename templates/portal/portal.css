@@ -1620,3 +1620,7 @@
     width: 320px;
   }
 }
+
+.br-search .br-input {
+  width: 100%;
+}

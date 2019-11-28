@@ -365,6 +365,33 @@
   border-color: transparent transparent #1351b4 #1351b4 !important;
 }
 
+.br-button.is-floating svg {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .br-button.is-floating {
+    bottom: 110px;
+    color: transparent;
+    height: 80px;
+    padding: 0;
+    position: fixed;
+    right: 20px;
+    width: 80px;
+    z-index: 1000;
+  }
+  .br-button.is-floating:hover, .br-button.is-floating:active, .br-button.is-floating:focus {
+    color: transparent;
+  }
+  .br-button.is-floating svg {
+    color: #ffffff;
+    display: inline-block;
+    left: 19px;
+    position: absolute;
+    top: 19px;
+  }
+}
+
 .br-button + .br-button {
   margin-top: 16px;
 }
