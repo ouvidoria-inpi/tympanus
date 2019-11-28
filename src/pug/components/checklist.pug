@@ -3,15 +3,9 @@ mixin checklist
     if block
       block
 
-mixin check-item(icon)
-  .item(class=attributes.class)
-    if icon
-      .icon
-        i(class=icon ? icon : "fas fa-question-circle")
-    else
-      .icon
-        | Passar o ícone por parâmetro!
+mixin check-item
+  .item
     if block
       block
     else
-      | Incluir INPUT e CHECKBOX/RADIO
+      | Incluir ICON, INPUT e CHECKBOX/RADIO

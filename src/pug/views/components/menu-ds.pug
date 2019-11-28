@@ -7,16 +7,18 @@ append scripts
   script(src="../js/menu-ds.js")
 
 append content
-  nav.ds-menu-lateral
-    .menu-item
-      button.is-open(type='button' data-toggle='collapse') T&iacute;tulo Item
-      ul.submenu.level-1
-        // Item sem filhos
-        li.menu-item
-          a Texto link
-        li
-          // Item com filhos
-          button.is-open(type='button' data-toggle='collapse') Sub T&iacute;tulo
-          ul.submenu.level-2
-            li.menu-item
-              a  Texto link 
+  +menu-ds
+    +menu-folder("Nível 1")(class="is-open")
+      +menu-item("Nível 2")
+      +menu-folder("Nível 2 com menu")
+        +menu-item("Nível 3")
+        +menu-item("Nível 3")
+        +menu-item("Nível 3")
+      +menu-item("Nível 2")
+      +menu-item("Nível 2")
+      +menu-folder("Nível 2 com menu")(class="is-open")
+        +menu-item("Nível 3")
+        +menu-item("Nível 3")
+        +menu-item("Nível 3")
+    +menu-item("Nível 1")
+    +menu-item("Nível 1")
