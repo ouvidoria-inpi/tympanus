@@ -40,7 +40,7 @@ rules:
     - leading-underscore: false
     - filename-extension: false
   declarations-before-nesting: 2
-  empty-args: 
+  empty-args:
     - 2
     - include: false
   empty-line-between-blocks: 0
@@ -52,14 +52,14 @@ rules:
   force-attribute-nesting: 2
   force-element-nesting: 2
   force-pseudo-nesting: 2
-  function-name-format: 
+  function-name-format:
     - 2
     - allow-leading-underscore: false
     - convention: hyphenatedlowercase
   hex-length:
     - 2
     - style: short
-  hex-notation: 
+  hex-notation:
     - 2
     - style: lowercase
   id-name-format:
@@ -104,7 +104,6 @@ rules:
   no-trailing-whitespace: 2
   no-trailing-zero: 2
   no-transition-all: 0
-  no-universal-selectors: 2
   no-url-domains: 2
   no-url-protocols:
     - 2
@@ -123,9 +122,6 @@ rules:
     - ignore-custom-properties: false
   property-units: 0
   pseudo-element: 2
-  quotes:
-    - 2
-    - style: double
   shorthand-values: 1
   single-line-per-selector: 2
   space-after-bang:
@@ -161,6 +157,3 @@ rules:
     - 2
     - allow-leading-underscore: false
     - convention: hyphenatedlowercase
-
-
-  
