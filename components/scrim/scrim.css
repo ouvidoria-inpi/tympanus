@@ -2,6 +2,9 @@
  * scrim - 0.0.0 */
 .br-scrim.is-foco {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.br-scrim.is-foco {
   bottom: 0;
   display: none;
   height: 100%;
@@ -45,6 +48,7 @@
 .br-scrim.is-legibilidade .scrim-text {
   background-color: rgba(0, 0, 0, 0.64);
   bottom: 0;
+  color: #ffffff;
   left: 0;
   padding: 1em 0.5em;
   position: absolute;

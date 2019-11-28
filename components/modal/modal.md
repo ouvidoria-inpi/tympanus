@@ -4,7 +4,13 @@ Modais são diálogos flexíveis que podem conter informações críticas ou env
 
 ## Dependências
 
-Nenhuma dependência.
+O componente deve ser encapsulado pelo componente scrim do tipo foco para que seja visualizado corretamente. Para abrir, controla-se a classe "is-active" por meio de um script. 
+
+```html
+<div class="br-scrim is-foco">
+...
+</div>
+```
 
 ## Código básico
 

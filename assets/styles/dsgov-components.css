@@ -3363,6 +3363,7 @@
   width: 2.8em;
 }
 
+
 .br-modal {
   background-color: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -3598,6 +3599,8 @@
  * scrim - 0.0.0 */
 .br-scrim.is-foco {
   background-color: rgba(0, 0, 0, 0.4);
+}
+.br-scrim.is-foco {
   bottom: 0;
   display: none;
   height: 100%;
