@@ -1,0 +1,155 @@
+@mixin modal {
+  background-color: $br-modal-bg-color;
+  box-shadow: 0 3px 6px $br-modal-box-shadow-color;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 15px;
+  position: relative;
+  width: 28.8rem;
+  .br-form {
+    width: 100%;
+  }
+  & h2 {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: $font-portal-services-subtitle-color;
+    display: -webkit-box;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22.5px;
+    margin: 0;
+    max-height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+
+    &.is-inline {
+      -webkit-line-clamp: 1;
+      max-height: 22.5px;
+    }
+  }
+
+  .br-load {
+    &.is-loading {
+      color: $font-portal-services-subtitle-color;
+      font-size: 18px;
+      margin-bottom: 1rem;
+      &::before {
+        animation: spinAround 0.5s infinite linear;
+        border: 3px solid currentColor;
+        border-color: transparent transparent $font-secondary-button-color $font-secondary-button-color !important;
+        border-radius: 50%;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        content: "";
+        display: block;
+        height: 2.8em;
+        margin-left: calc(50% - (3em / 2));
+        width: 2.8em;
+      }
+    }
+  }
+  &.is-scroll {
+    .br-modal-body {
+      box-shadow: 0px 3px 6px 0px $br-modal-box-shadow-color;
+      & .br-card {
+        border: 0;
+        font-size: $font-portal-small-news-sticker-font-size;
+        height: 216px;
+        overflow: auto;
+        resize: none;
+        width: 100%;
+        &:focus,
+        &:active {
+          outline: none;
+        }
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          background: $color-gray-2;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $color-gray-5;
+        }
+        &:hover {
+          &::-webkit-scrollbar-thumb {
+            background: $color-gray-6;
+          }
+        }
+      }
+    }
+  }
+
+  & .br-modal-header,
+  .br-modal-body,
+  .br-modal-footer {
+    flex: 1;
+    padding: 0 20px;
+  }
+
+  .br-modal-body {
+    display: flex;
+    & .br-card {
+      width: 100%;
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $color-gray-2;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $color-gray-5;
+      }
+      &:hover {
+        &::-webkit-scrollbar-thumb {
+          background: $color-gray-6;
+        }
+      }
+    }
+  }
+
+  & .br-modal-header {
+    padding-bottom: 12px;
+  }
+
+  & .br-modal-footer {
+    display: flex;
+  }
+
+  .close {
+    background: transparent;
+    border: 0;
+    color: $font-title-registration-login-color;
+    position: absolute;
+    right: 8px;
+    top: 0;
+    & span {
+      font-size: $font-title-registration-login-font-size;
+      font-weight: 500;
+    }
+  }
+}
+
+
+
+@media (min-width: 576px) {
+  .br-modal {
+    &.is-xsmall {
+      max-width: 220px;
+      min-width: 220px;
+    }
+    &.is-small {
+      max-width: 300px;
+      min-width: 300px;
+    }
+    &.is-medium {
+      max-width: 500px;
+      min-width: 500px;
+    }
+    &.is-large {
+      max-width: 640px;
+      min-width: 640px;
+    }
+  }
+}

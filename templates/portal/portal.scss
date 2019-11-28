@@ -1,5 +1,5 @@
 // Carregar variáveis do DS-Gov
-@import "../../base/dsgov-base";
+@import '../../base/dsgov-base';
 
 // Barra principal
 $main-bar-mobile: 45px;
@@ -114,7 +114,7 @@ $logo-desktop: 150px;
   display: flex;
   flex-wrap: wrap;
   height: $main-bar-mobile;
-  margin: 0 (- $spacing-1);
+  margin: 0 (-$spacing-1);
   position: relative;
 }
 
@@ -227,11 +227,11 @@ $logo-desktop: 150px;
     color: $color-gray-7;
     display: inline-flex;
     &:hover {
-      [class*="fa-"] {
+      [class*='fa-'] {
         color: $color-primary-lighten-15;
       }
     }
-    [class*="fa-"] {
+    [class*='fa-'] {
       color: $color-primary;
     }
     span {
@@ -239,7 +239,6 @@ $logo-desktop: 150px;
       font-size: 12px;
       font-weight: 600;
       margin-left: $spacing-1;
-
     }
   }
   // Legislação
@@ -372,10 +371,10 @@ $logo-desktop: 150px;
     font-size: 11px;
     font-weight: 700;
     height: 18px;
-    left: - $spacing-1;
-    margin-right: - $spacing-1;
+    left: -$spacing-1;
+    margin-right: -$spacing-1;
     position: relative;
-    top: - $spacing-2;
+    top: -$spacing-2;
     width: 18px;
   }
 }
@@ -415,8 +414,9 @@ $logo-desktop: 150px;
     .account {
       border-top: 1px solid $color-gray-2;
       display: flex;
-      margin: (- $spacing-1) (- $spacing-3);
-      > * { // sass-lint:disable-line no-universal-selectors
+      margin: (-$spacing-1) (-$spacing-3);
+      > * {
+        // sass-lint:disable-line no-universal-selectors
         flex: 1;
         &:not(:last-child) {
           border-right: 1px solid $color-gray-2;
@@ -438,7 +438,7 @@ $logo-desktop: 150px;
         border-bottom-color: $color-gray-7;
         border-width: 12px;
         bottom: 100%;
-        content: "";
+        content: '';
         height: 0;
         pointer-events: none;
         position: absolute;
@@ -507,7 +507,7 @@ $logo-desktop: 150px;
         border-bottom-color: $color-gray-7;
         border-width: 12px;
         bottom: 100%;
-        content: "";
+        content: '';
         height: 0;
         pointer-events: none;
         position: absolute;
@@ -618,7 +618,7 @@ $logo-desktop: 150px;
     align-items: center;
     display: flex;
     padding: $spacing-half 0;
-    [class*="fa-"] {
+    [class*='fa-'] {
       margin-left: $spacing-1;
     }
   }
@@ -652,7 +652,7 @@ $logo-desktop: 150px;
   // Cabeçalho
   .header-bar {
     background: $color-gray-1;
-    margin: 0 (- $spacing-1);
+    margin: 0 (-$spacing-1);
     min-height: $navigation-bar;
   }
   // Logo
@@ -673,7 +673,7 @@ $logo-desktop: 150px;
       font-size: 26px;
       justify-content: flex-end;
       margin: 0 $spacing-1;
-      [class*="fa-"] {
+      [class*='fa-'] {
         color: $color-primary;
         margin-right: $spacing-3;
       }
@@ -743,8 +743,8 @@ $logo-desktop: 150px;
   }
   // Configurações do usuário
   .nav-configs {
-    margin-left: - $spacing-1;
-    margin-right: - $spacing-1;
+    margin-left: -$spacing-1;
+    margin-right: -$spacing-1;
     .menu {
       padding-bottom: $spacing-3;
       .user {
@@ -778,7 +778,7 @@ $logo-desktop: 150px;
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    margin: $spacing-3 (- $spacing-1);
+    margin: $spacing-3 (-$spacing-1);
     overflow-y: auto;
     position: relative;
   }
@@ -799,12 +799,12 @@ $logo-desktop: 150px;
       }
       &::before {
         background: $color-gray-3;
-        content: "";
+        content: '';
         height: 1px;
         left: 0;
         position: absolute;
         right: 0;
-        top: - $spacing-1;
+        top: -$spacing-1;
         width: 100%;
       }
     }
@@ -827,7 +827,7 @@ $logo-desktop: 150px;
       text-align: left;
       text-decoration: none;
       width: 100%;
-      [class*="fa-"] {
+      [class*='fa-'] {
         color: $color-primary;
       }
     }
@@ -840,7 +840,7 @@ $logo-desktop: 150px;
         color: $color-white;
         display: none;
         font-weight: 600;
-        [class*="fa-"] {
+        [class*='fa-'] {
           color: $color-white;
         }
       }
@@ -923,8 +923,8 @@ $logo-desktop: 150px;
   // Comportamento do menu
   // Mostrar apenas quem é ativo no nível atual
   @each $level in (0, 1, 2, 3) {
-    &:not([data-level="#{$level}"]) {
-      [data-level="#{$level}"] {
+    &:not([data-level='#{$level}']) {
+      [data-level='#{$level}'] {
         > .item {
           display: none;
         }
@@ -1066,7 +1066,7 @@ $logo-desktop: 150px;
 }
 
 // Ajustes para sistemas
-[data-type="system"] {
+[data-type='system'] {
   // Barra do cabeçalho
   .header-bar {
     height: $main-bar-mobile * 2;
@@ -1191,7 +1191,7 @@ $logo-desktop: 150px;
     }
   }
   // Ajustes para sistemas
-  [data-type="system"] {
+  [data-type='system'] {
     // Barra do cabeçalho
     .header-bar {
       height: $main-bar-mobile * 2;
@@ -1288,7 +1288,7 @@ $logo-desktop: 150px;
       align-items: center;
       display: inline-flex;
       margin-left: $spacing-6;
-      [class*="fa-"] {
+      [class*='fa-'] {
         margin-right: $spacing-1;
       }
     }
@@ -1401,7 +1401,7 @@ $logo-desktop: 150px;
       }
     }
     // Navegação por hover
-    &[data-children="hover"] {
+    &[data-children='hover'] {
       // Item de navegação
       .item {
         &:hover {
@@ -1410,7 +1410,7 @@ $logo-desktop: 150px;
             background: $color-primary-darken-15;
             color: $color-white;
             font-weight: 600;
-            [class*="fa-"] {
+            [class*='fa-'] {
               color: $color-white;
             }
             img {
@@ -1516,7 +1516,7 @@ $logo-desktop: 150px;
     }
   }
   // Ajustes para sistemas
-  [data-type="system"] {
+  [data-type='system'] {
     // Barra do cabeçalho
     .header-bar {
       height: $main-bar-desktop;
@@ -1565,7 +1565,7 @@ $logo-desktop: 150px;
     // Menu sanduiche
     .menu-hamburger {
       bottom: 22px;
-      left: - $spacing-2;
+      left: -$spacing-2;
       top: auto;
     }
     // Wrapper de sistemas
@@ -1613,7 +1613,7 @@ $logo-desktop: 150px;
           color: $color-primary;
           font-weight: 600;
         }
-        [class*="fa-"] {
+        [class*='fa-'] {
           font-size: 10px;
           transform: rotate(90deg);
         }
@@ -1635,7 +1635,7 @@ $logo-desktop: 150px;
             border-top: 0;
             color: $color-gray-6;
             font-weight: 500;
-            [class*="fa-"] {
+            [class*='fa-'] {
               transform: rotate(0);
             }
           }
@@ -1646,7 +1646,7 @@ $logo-desktop: 150px;
           > button {
             background: transparent;
             display: flex;
-            [class*="fa-"] {
+            [class*='fa-'] {
               color: $color-primary;
               transform: rotate(-90deg);
             }
@@ -1657,7 +1657,7 @@ $logo-desktop: 150px;
               &.is-active {
                 > a,
                 > button {
-                  [class*="fa-"] {
+                  [class*='fa-'] {
                     color: $color-primary-lighten-15;
                     transform: rotate(0);
                   }
@@ -1684,7 +1684,7 @@ $logo-desktop: 150px;
           &:hover {
             a,
             button {
-              [class*="fa-"] {
+              [class*='fa-'] {
                 color: $color-primary-lighten-15;
               }
             }
@@ -1702,7 +1702,7 @@ $logo-desktop: 150px;
       .level-2 {
         background: $color-gray-1;
         left: 100%;
-        margin-top: - $spacing-3;
+        margin-top: -$spacing-3;
         padding: $spacing-3 0;
         position: absolute;
         z-index: 1;
@@ -1712,5 +1712,11 @@ $logo-desktop: 150px;
         width: $navigation-width;
       }
     }
+  }
+}
+
+.br-search {
+  & .br-input {
+    width: 100%;
   }
 }

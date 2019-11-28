@@ -208,16 +208,13 @@ O modal pode ser cancelada:
 ## Especificação
 
 ### Modal de Alerta
-
-[![Especificação Alerta]../../assets/images/components_img/modal/alerta_duasacoes.png)](https://xd.adobe.com/spec/d3080804-6480-4394-6369-ba77a02ab2b3-a539/)
+![Especificação Alerta](../../assets/images/components_img/modal/alerta_duasacoes.png)
 
 ### Modal de Opção
-
-[![Especificação Opção]../../assets/images/components_img/modal/opcao_lista.png)](https://xd.adobe.com/spec/d3080804-6480-4394-6369-ba77a02ab2b3-a539/screen/20d1186a-3882-486e-827e-78e07e6fad7b/Modal-Op-o-tipo-Lista)
+![Especificação Opção](../../assets/images/components_img/modal/opcao_lista.png)
 
 ### Modal de Entrada
-
-[![Especificação Entrada]../../assets/images/components_img/modal/entrada_01.png)](https://xd.adobe.com/spec/d3080804-6480-4394-6369-ba77a02ab2b3-a539/screen/fc44659e-c5ad-450c-b905-adf3db25012f/Modal-Entrada-01)
+![Especificação Entrada](../../assets/images/components_img/modal/entrada_01.png)
 
 ### Tamanho máximo e mínimo
 

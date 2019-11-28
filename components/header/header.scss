@@ -2,15 +2,13 @@
 @import "../../base/dsgov-base";
 
 /*!
- * divider - 0.2.0 */
+ * header - 0.1.0 */
 
 // Carregar dependências
 @import "configs";
 @import "mixins";
-@import "../scrim/configs";
-@import "../scrim/mixins";
 
-// Estilos específicos
-.#{$prefix}modal {
-  @include modal;
+// Estilos do componente
+.#{$prefix}header {
+  @include header-component;
 }

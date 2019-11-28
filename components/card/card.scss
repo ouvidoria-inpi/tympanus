@@ -1,0 +1,83 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+/*!
+ * card - 0.0.1 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+.br-card {
+  align-items: center;
+  box-shadow: $card-box-shadow;
+  display: flex;
+  flex-direction: column;
+  height: $card-size;
+  justify-content: center;
+  margin: $card-margin;
+  padding: $card-padding;
+  position: relative;
+  width: $card-size;
+  & .icon {
+    margin-bottom: $card-icon-margin-bottom;
+    & i {
+      color: $color-primary-lighten-15;
+      font-size: $card-icon-size;
+    }
+  }
+  & .title {
+    color: $color-primary-darken-15;
+    font-size: $card-title-font-size;
+    font-weight: $card-title-font-weight;
+    text-transform: uppercase;
+  }
+  & .text {
+    color: $card-text-color;
+    font-size: $card-text-font-size;
+    left: 0;
+    opacity: 0;
+    padding: 50px 30px;
+    position: absolute;
+    top: 0;
+  }
+  &.is-change-content {
+    &:hover {
+      text-decoration: none;
+      & .text {
+        background-color: $color-gray-6;
+        font-weight: $card-text-font-weight;
+        height: 100%;
+        line-height: $card-text-line-height;
+        opacity: 1;
+        transition: width 0ms 0ms, height 0ms 0ms, opacity 0.3s ease-in-out 0.2s;
+        width: 100%;
+      }
+    }
+  }
+  &.is-arrow {
+    &::after {
+      color: $font-tags-text-color;
+      content: "\f062";
+      font-family: Font Awesome\ 5 Free;
+      font-size: 20px;
+      font-weight: 900;
+      position: absolute;
+      right: 5px;
+      top: 0;
+      transform: rotate(50deg);
+    }
+  }
+  &.is-small {
+    height: $card-small-size;
+    width: $card-small-size;
+  }
+  &.is-medium {
+    height: $card-medium-size;
+    width: $card-medium-size;
+  }
+  &.is-large {
+    height: $card-large-h-size;
+    width: $card-large-w-size;
+  }
+}

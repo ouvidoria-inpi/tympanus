@@ -1,21 +1,22 @@
-.br-load.is-loading {
-  color: #555555;
-  font-size: 18px;
-  margin-bottom: 1rem;
-}
-
-.br-load.is-loading::before {
-  animation: spinAround 0.5s infinite linear;
-  border: 3px solid currentColor;
-  border-color: transparent transparent #1351b4 #1351b4 !important;
-  border-radius: 50%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  content: "";
-  display: block;
-  height: 2.8em;
-  margin-left: calc(50% - (3em / 2));
-  width: 2.8em;
+/*!
+ * divider - 0.2.0 */
+@media (min-width: 576px) {
+  .br-modal.is-xsmall {
+    max-width: 220px;
+    min-width: 220px;
+  }
+  .br-modal.is-small {
+    max-width: 300px;
+    min-width: 300px;
+  }
+  .br-modal.is-medium {
+    max-width: 500px;
+    min-width: 500px;
+  }
+  .br-modal.is-large {
+    max-width: 640px;
+    min-width: 640px;
+  }
 }
 
 .br-modal {
@@ -50,6 +51,26 @@
 .br-modal h2.is-inline {
   -webkit-line-clamp: 1;
   max-height: 22.5px;
+}
+
+.br-modal .br-load.is-loading {
+  color: #555555;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.br-modal .br-load.is-loading::before {
+  animation: spinAround 0.5s infinite linear;
+  border: 3px solid currentColor;
+  border-color: transparent transparent #1351b4 #1351b4 !important;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 2.8em;
+  margin-left: calc(50% - (3em / 2));
+  width: 2.8em;
 }
 
 .br-modal.is-scroll .br-modal-body {
@@ -136,25 +157,6 @@
 .br-modal .close span {
   font-size: 36px;
   font-weight: 500;
-}
-
-@media (min-width: 576px) {
-  .br-modal.is-xsmall {
-    max-width: 220px;
-    min-width: 220px;
-  }
-  .br-modal.is-small {
-    max-width: 300px;
-    min-width: 300px;
-  }
-  .br-modal.is-medium {
-    max-width: 500px;
-    min-width: 500px;
-  }
-  .br-modal.is-large {
-    max-width: 640px;
-    min-width: 640px;
-  }
 }
 
 /*# sourceMappingURL=modal.css.map */
