@@ -1,268 +1,33 @@
-doctype html
-html(lang="pt-BR")
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    title modal
-    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' crossorigin='anonymous')
-    link(rel='stylesheet' href='/dist/css/dsgov.css')
-    link(rel='stylesheet' href='modal.css')
-  body
-    h1 Modal
-    .container-fluid
-      .br-modal.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title Retornar para página inicial?
-            .br-modal-body
-              p Você está sendo redirecionado para a página inicial do sistema
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Cancelar
-              button.br-button.is-primary.is-small(type='button') Retornar
-      h3.my-9 Modal com botão de Fechar
-      .br-modal.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title Retornar para página inicial?
-              button.close(type='button' data-dismiss='br-modal' aria-label='Close')
-                span(aria-hidden='true') &times;
-            .br-modal-body
-              p Você está sendo redirecionado para a página inicial do sistema
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Ação 1
-              button.br-button.is-primary.is-small(type='button') Ação 2
-      h3.my-9 Título do modal de exemplo com uso de duas linhas
-      .br-modal.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title
-                | Título do modal de exemplo com uso de duas linhas, título do modal de
-                | exemplo com uso de duas linhas
-              button.close(type='button' data-dismiss='br-modal' aria-label='Close')
-                span(aria-hidden='true') &times;
-            .br-modal-body
-              p Texto com duas linhas Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Ação 1
-              button.br-button.is-primary.is-small(type='button') Ação 2
-      h3.my-9 Título do modal contraído
-      .br-modal.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title.is-inline Título do modal de exemplo com uso de uma linha
-              button.close(type='button' data-dismiss='br-modal' aria-label='Close')
-                span(aria-hidden='true') &times;
-            .br-modal-body
-              p Texto com uma linha Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Ação 1
-              button.br-button.is-primary.is-small(type='button') Ação 2
-      h3.my-9 Botões
-      .br-modal.is-xsmall
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-body.justify-content-center
-              span.br-load.is-loading.mb-5 Carregando...
-            .br-modal-footer.justify-content-around
-              button.br-button.is-secondary.is-small(type='button') Cancelar
-      h3.my-9 Modal de alerta sem título
-      .br-modal.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-body
-              p
-                | Modal de alerta sem título Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Ação 1
-              button.br-button.is-primary.is-small(type='button') Ação 2
-      h3.my-9 Por lista
-      .br-modal.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title Escolha uma conta
-              button.close(type='button' data-dismiss='br-modal' aria-label='Close')
-                span(aria-hidden='true') &times;
-            .br-modal-body
-              .br-form
-                .field
-                  .br-select
-                    label(for='simples') Opções
-                    select#simples
-                      option(value='0') Selecione uma opção
-                      option(value='opcao-1') opção 1
-                      option(value='opcao-2') opção 2
-                      option(value='opcao-3') opção 3
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Cancelar
-              button.br-button.is-primary.is-small(type='button') Retornar
-      h3.my-9 Por seleção
-      .br-modal.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title Buscar pelos estados
-              button.close(type='button' data-dismiss='br-modal' aria-label='Close')
-                span(aria-hidden='true') &times;
-            .br-modal-body
-              .br-form
-                .field
-                  .br-check.d-block
-                    input#v-checkbox-padrao(type='checkbox')
-                    label(for='v-checkbox-padrao') Acre(AC)
-                  .br-check.d-block
-                    input#v-checkbox-padrao1(type='checkbox' checked)
-                    label(for='v-checkbox-padrao1') Alagoas(AL)
-                  .br-check.d-block
-                    input#v-checkbox-padrao2(type='checkbox')
-                    label(for='v-checkbox-padrao2') Amapá(AP)
-                  .br-check.d-block
-                    input#v-checkbox-padrao3(type='checkbox')
-                    label(for='v-checkbox-padrao3') Amazonas(AM)
-                  .br-check.d-block
-                    input#v-checkbox-padrao4(type='checkbox' checked)
-                    label(for='v-checkbox-padrao4') Bahia(BA)
-                  .br-check.d-block
-                    input#v-checkbox-padrao5(type='checkbox')
-                    label(for='v-checkbox-padrao5') Ceará(CE)
-                  .br-check.d-block
-                    input#v-checkbox-padrao6(type='checkbox')
-                    label(for='v-checkbox-padrao6') Distrito Federal (DF)
-                  .br-check.d-block
-                    input#v-checkbox-padrao7(type='checkbox')
-                    label(for='v-checkbox-padrao7') Espírito Santo (ES)
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Cancelar
-              button.br-button.is-primary.is-small(type='button') Retornar
-      .br-modal.is-medium.mt-9
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title Opções de Visualização
-              button.close(type='button' data-dismiss='br-modal' aria-label='Close')
-                span(aria-hidden='true') &times;
-            .br-modal-body
-              .br-form
-                .field
-                  .br-check.d-block
-                    input#v-radio-padrao(name='v-radio' type='radio')
-                    label(for='v-radio-padrao') Fotos
-                  .br-check.d-block
-                    input#v-radio-padrao1(name='v-radio' type='radio' checked)
-                    label(for='v-radio-padrao1') Filmes
-                  .br-check.d-block
-                    input#v-radio-padrao2(name='v-radio' type='radio')
-                    label(for='v-radio-padrao2') Áudio
-                  .br-check.d-block
-                    input#v-radio-padrao3(name='v-radio' type='radio')
-                    label(for='v-radio-padrao3') Todas
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Cancelar
-              button.br-button.is-primary.is-small(type='button') Retornar
-      h3.my-9 Modal de Entrada
-      .br-modal.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title Autenticar pelo Gov.br
-              button.close(type='button' data-dismiss='br-modal' aria-label='Close')
-                span(aria-hidden='true') &times;
-            .br-modal-body
-              .br-form
-                .field
-                  .br-select
-                    label(for='simples1') Domínio da autenticação
-                    select#simples1
-                      option(value='0') Governo Federal do Brasil (Gov.br)
-                .field
-                  .br-input
-                    label(for='simples2') Usuário
-                    input#simples2(type='text' placeholder='Nome do usuário ou E-mail')
-                .field
-                  .br-input.has-icon
-                    label(for='password') Senha
-                    input#password(type='password' placeholder='Digite sua senha de 8 a 11 dígitos')
-                    button.icon(type='button' onclick="toggleInputAction(this, 'is-action')")
-                      span.sr-only Mostrar senha
-                      i.fas.fa-eye
-                  a(href='#') Esqueceu a senha?
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Cancelar
-              button.br-button.is-primary.is-small(type='button') Entrar
-      .br-modal.is-large.mt-9
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title Novo evento
-              button.close(type='button' data-dismiss='br-modal' aria-label='Close')
-                span(aria-hidden='true') &times;
-            .br-modal-body
-              .br-form
-                .field
-                  .row.align-items-end
-                    .col
-                      .field
-                        .br-input
-                          label(for='simples3') Nome do evento
-                          input#simples3(type='text' placeholder='Digite o nome do evento')
-                    .col-5
-                      .field
-                        .br-check.d-block
-                          input#v-checkbox-padrao8(type='checkbox' checked)
-                          label(for='v-checkbox-padrao8') Marcar como ocupado
-                .row.align-items-end
-                  .col-6
-                    .field
-                      .br-input.has-icon
-                        label(for='data') Inicial
-                        input#data(type='date' placeholder='Quinta, 13 de setembro de 2019')
-                        button.icon(type='button')
-                          i.fas.fa-calendar
-                  .col-4
-                    .field
-                      .br-select
-                        label(for='simples4') Hora Inicial
-                        select#simples4
-                          option(value='0') 11:00
-                .row.align-items-end
-                  .col-6
-                    .field
-                      .br-input.has-icon
-                        label(for='data1') Final
-                        input#data1(type='date' placeholder='Data final')
-                        button.icon(type='button')
-                          i.fas.fa-calendar
-                  .col-4
-                    .field
-                      .br-select
-                        label(for='simples5') Hora Final
-                        select#simples5
-                          option(value='0') 12:00
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Cancelar
-              button.br-button.is-primary.is-small(type='button') Entrar
-      h3.my-9 Rolagem
-      .br-modal.is-scroll.is-medium
-        .br-modal-dialog
-          .br-modal-content
-            .br-modal-header
-              h2.br-modal-title Concorda com os termos?
-            .br-modal-body.mb-5
-              .br-card
-                | Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Mauris id gravida nulla. Cras sagittis dapibus
-                | felis vitae semper. Donec vel hendrerit ante. Etiam sed blandit nisi. Praesent iaculis, nisl eget rutrum
-                | vehicula, lacus tortor feugiat diam, et euismod lacus metus eget nisi. Sed fermentum, nunc nec efficitur
-                | pharetra, felis dolor feugiat massa, et semper turpis felis quis ligula. Quisque non metus at risus
-                | maximus ultrices. Nam vel massa tellus. Vestibulum lobortis dui et pellentesque porta. Cras rhoncus augue
-                | a mauris porttitor, in malesuada metus eleifend. Praesent ac lacinia lorem. Sed cursus nisl ligula, vel
-                | ultrices ex pellentesque eu. Curabitur facilisis egestas libero, non pharetra lacus ultricies quis. Mauris
-                | non finibus justo, eu varius metus. Donec nec eros semper, consequat turpis id, fermentum dolor.
-            .br-modal-footer.justify-content-end
-              button.br-button.is-secondary.is-small(type='button') Negar
-              button.br-button.is-primary.is-disabled.is-small(type='button') Aceitar
-    script(src='/assets/design-system/components/select/select.js')
+mixin modal
+  - var className=attributes.class;
+  .br-modal(class=className ? className : "is-medium")
+    .container-fluid.px-0
+      if block
+        block
+      else
+        .br-modal-body
+          +feedback("Inserir MODAL-BODY e MODAL-FOOTER")
+
+mixin modal-header(title)
+  .br-modal-header
+    .br-modal-title(class=attributes.class title=title)=title
+    if block
+      block
+
+mixin modal-body
+  .br-modal-body(class=attributes.class)
+    if block
+      block
+
+mixin modal-footer
+  - var className=attributes.class
+  .br-modal-footer(class=className ? className : "justify-content-end")
+    if block
+      block
+
+mixin modal-close
+  button.close(
+    type="button"
+    data-dismiss="br-modal"
+    aria-label="Close")
+    i.fas.fa-times

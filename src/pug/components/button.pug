@@ -1,4 +1,7 @@
 mixin button(className)
-  button.br-button(class=attributes.class  type="button")
+  button.br-button(
+    class=attributes.class
+    type="button"
+    disabled=attributes.disabled)
     if block
       block

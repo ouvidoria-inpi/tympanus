@@ -1,7 +1,6 @@
 .br-load {
   &.is-loading {
-    color: $body-color;
-    font-size: 18px;
+    font-size: $font-size-base * 1.125;
     margin-bottom: 1rem;
     &::before {
       animation: spinAround 0.5s infinite linear;
@@ -23,111 +22,76 @@ $br-modal-bg-color: rgba(255, 255, 255, 1);
 $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
 
 .br-modal {
-  background-color: $br-modal-bg-color;
   box-shadow: 0 3px 6px $br-modal-box-shadow-color;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 0 15px;
-  position: relative;
+  padding: $spacer * 2;
   width: 28.8rem;
-  .br-form {
-    width: 100%;
+  &-header {
+    margin-bottom: $spacer * 3.5;
+    position: relative;
+    .close {
+      background: transparent;
+      border: 0;
+      color: $color-primary;
+      font-weight: 500;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: -($spacer-half);
+    }
   }
-  & h2 {
+  &-title {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    color: $body-color;
     display: -webkit-box;
-    font-size: 18px;
+    font-size: $h3-font-size;
     font-weight: bold;
-    line-height: 22.5px;
     margin: 0;
-    max-height: 45px;
+    max-height: $h3-font-size * 3;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 80%;
 
     &.is-inline {
       -webkit-line-clamp: 1;
-      max-height: 22.5px;
+      max-height: $h3-font-size * 2;
     }
   }
-
-  &.is-scroll {
-    .br-modal-body {
-      & .br-card {
-        border: 0;
-        font-size: $font-size-base * 0.875;
-        height: 216px;
-        overflow: auto;
-        resize: none;
-        width: 100%;
-        &:focus,
-        &:active {
-          outline: none;
-        }
-        &::-webkit-scrollbar {
-          width: 8px;
-        }
-        &::-webkit-scrollbar-track {
-          background: $color-gray-2;
-        }
-        &::-webkit-scrollbar-thumb {
-          background: $color-gray-5;
-        }
-        &:hover {
-          &::-webkit-scrollbar-thumb {
-            background: $color-gray-6;
-          }
-        }
-      }
-    }
+  &-body {
+    margin: 0 0 ($spacer * 5);
   }
-
-  & .br-modal-header,
-  .br-modal-body,
-  .br-modal-footer {
-    padding: 0 20px;
-  }
-
-  .br-modal-body {
-    & .br-card {
-      width: 100%;
-      &::-webkit-scrollbar {
-        width: 8px;
-      }
-      &::-webkit-scrollbar-track {
-        background: $color-gray-2;
-      }
-      &::-webkit-scrollbar-thumb {
-        background: $color-gray-5;
-      }
-      &:hover {
-        &::-webkit-scrollbar-thumb {
-          background: $color-gray-6;
-        }
-      }
-    }
-  }
-
-  & .br-modal-header {
-    padding-bottom: 12px;
-  }
-
-  & .br-modal-footer {
+  &-footer {
     display: flex;
   }
-
-  .close {
-    background: transparent;
+  .br-card {
     border: 0;
-    color: $color-primary;
-    position: absolute;
-    right: 8px;
-    top: 0;
-    & span {
-      font-size: $h1-font-size;
-      font-weight: 500;
+    font-size: $font-size-base * 0.875;
+    height: 216px;
+    margin-left: -$spacer * 2;
+    margin-right: -$spacer * 2;
+    padding: 0 ($spacer * 2);
+    overflow: auto;
+    resize: none;
+    width: auto;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $color-gray-2;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-gray-5;
+    }
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        background: $color-gray-6;
+      }
     }
   }
 }
