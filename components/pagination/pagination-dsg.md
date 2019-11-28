@@ -1,5 +1,3 @@
-# Paginação
-
 ## ANATOMIA
 
 ![Pagination Tipografia Maior](../../assets/images/components_img/pagination/pagination-tipografia-maior.png)

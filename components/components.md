@@ -4,12 +4,12 @@
 
 Acompanhe a evolução dos componentes do Design System
 
-<p>
+<div>
     <i checks="fas fa-check text-success"></i>
     <strong>Acessível</strong> - O componente/documentação já pode ser usado*.
     <br/>
     <small>* Por estar em BETA, ainda pode sofrer alterações</small>
-</p>
+</div>
 
 <p>
     <i syncss="fas fa-sync text-orange"></i>

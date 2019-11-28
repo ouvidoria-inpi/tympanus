@@ -1,5 +1,3 @@
-# Construção do CSS
-
 Esse documento propõe um padrão de codificação para folhas de estilo.
 
 ## Pré-processador de CSS
@@ -86,9 +84,9 @@ A sugestão é fazer uso da mais usada em Projetos Web do momento. Atualmente o 
 
 Existem várias arquiteturas de organização de código disponíveis na internet. O mais indicado para uso é aquela que represente melhor o seu projeto.
 
-Seguindo a arquitetura SMACSS (pronuncia-se Smacks) | Seguindo a arquitetura Atomic Design | Seguindo a arquitetura RSCSS | Seguindo a arquitetura ITCSS
---- | --- | --- | ---
-Base, Layout, Module, State, Theme | Atoms, Molecules, Organisms, Templates, Pages | Components, Elements, Variants, Layouts, Helpers | Settings, Tools, Generic, Base, Objects, Components, Trumps
+| Seguindo a arquitetura SMACSS (pronuncia-se Smacks) | Seguindo a arquitetura Atomic Design          | Seguindo a arquitetura RSCSS                     | Seguindo a arquitetura ITCSS                                |
+| --------------------------------------------------- | --------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------- |
+| Base, Layout, Module, State, Theme                  | Atoms, Molecules, Organisms, Templates, Pages | Components, Elements, Variants, Layouts, Helpers | Settings, Tools, Generic, Base, Objects, Components, Trumps |
 
 No DS-Gov são usadas 3 folhas de estilos:
 
@@ -96,9 +94,9 @@ No DS-Gov são usadas 3 folhas de estilos:
 - CSS de componentes
 - CSS de templates
 
-CSS de base | CSS de componentes | CSS de templates
---- | --- | ---
-Configs, Mixins, Utilities | Configs, Mixins, Components | Configs, Mixins, Templates
+| CSS de base                | CSS de componentes          | CSS de templates           |
+| -------------------------- | --------------------------- | -------------------------- |
+| Configs, Mixins, Utilities | Configs, Mixins, Components | Configs, Mixins, Templates |
 
 ## Comentários
 
@@ -116,9 +114,9 @@ Veja no exemplo a seguir o uso dos 2 tipos de comentários em ação:
 * 2. Add ellipsis at the end of the line.
 */
 .ellipsis {
-    white-space: nowrap; /* 1 */
-    text-overflow: ellipsis; /* 2 */
-    overflow: hidden;
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
 }
 ```
 
@@ -304,7 +302,7 @@ Cada componente e template possui a seguinte estrutura:
 - `_configs.scss`: variáveis de configuração
 - `_mixins.scss`: códigos reaproveitáveis
 - `CHANGELOG.md`: versionamento
-- `arquivo.scss`: **carrega o css de base** e aplica `configs` e  `mixins`
+- `arquivo.scss`: **carrega o css de base** e aplica `configs` e `mixins`
 - `arquivo.html`: código HTML do componente/template
 - `arquivo.md`: documentação para desenvolvedor
 - `arquivo-dsg.md`: documentação para designer
