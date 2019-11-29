@@ -3,33 +3,32 @@ extends ../../layouts/authentication
 append vars
   - var title = "Verifique seu celular";
 
-block content
+append content
   p
     | Um código foi enviado para 
     strong (61) 1234-5678
     | .
   p Por favor, digite-o no campo abaixo:
   // Código
-  .br-input.mt-6
-    label(for='codigo') Código de 04 dígitos
-    .row
-      .col-6.col-sm-4
-        input#codigo(type='text' placeholder='xxxx')
+  .row
+    .col-6.col-sm-4
+      +input("Código de 04 dígitos")(id="codigo" placeholder="XXXX")
   // Opção de reenvio
-  button.br-button.is-tertiary.mt-3(type='button')
-    u Reenviar código
+  .mt-3
+    +button(class="is-tertiary")
+      u Reenviar código
   // Opção de alterar número
   p.mb-0.mt-8 Não recebeu o código? Verifique sua caixa de spam.
-  button.br-button.is-tertiary(type='button')
-    u Informou o número errado?
-  .br-input.mt-3
-    label(for='celular') Celular
-    .row
-      .col-sm-5
-        input#celular(type='text' placeholder='Ex: (xx) x xxxx-xxxx')
-  button.br-button.is-tertiary.mt-3(type='button')
-    u Atualizar e Reenviar Código
+  .mt-3
+    +button(class="is-tertiary")
+      u Informou o número errado?
+  .row.mt-3
+    .col-sm-6
+      +input("Celular")(id="celular" placeholder="Ex: (xx) x xxxx-xxxx")
+  .mt-3
+    +button(class="is-tertiary")
+      u Atualizar e Reenviar Código
   // Botões de ação
   .d-flex.flex-wrap.flex-row-reverse.justify-content-center.justify-content-sm-start.mt-10.mt-sm-10
-    button.br-button.is-primary(type='button' disabled) Cadastrar
-    button.br-button.is-secondary.mt-3.mt-sm-0.mr-sm-3(type='button') Voltar
+    +button(class="is-primary" disabled) Cadastrar
+    +button(class="is-secondary mt-3 mt-sm-0 mr-sm-3") Voltar

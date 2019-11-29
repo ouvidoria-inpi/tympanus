@@ -1,6 +1,8 @@
 mixin tabs(className="")
   nav
-    ul.br-tabs(class=className)
+    ul.br-tabs(
+      id=attributes.id
+      class=className)
       if block
         block
       else

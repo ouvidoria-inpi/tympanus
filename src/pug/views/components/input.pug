@@ -30,11 +30,7 @@ append content
     .col-sm
       .mb-3
         +input("Inválido")(id="invalid" class="is-invalid" placeholder="Insira um texto")
-        .feedback.is-invalid
-          i.fas.fa-times-circle
-          span.message  Texto inválido
+        +feedback("Texto inválido")
       .mb-3
         +input("Válido")(id="valid" class="is-valid" placeholder="Insira um texto")
-        .feedback.is-valid
-          i.fas.fa-check-circle
-          span.message  Texto válido
+        +feedback("Texto válido")(class="is-valid")

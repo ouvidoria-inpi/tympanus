@@ -1,6 +1,6 @@
-mixin input(label="Label")
+mixin input(label="Label", className)
   .br-input(class=attributes.class)
-    label(for=attributes.id)=label
+    label(class=className for=attributes.id)=label
     input(
       id=attributes.id
       type=attributes.type ? attributes.type : "text"

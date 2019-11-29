@@ -1,12 +1,12 @@
 extends default
 
-block vars
+append vars
   - var templateClass = "system";
 
-block scripts
-  script(src='../js/page.js')
+append scripts
+  script(src='../js/system.js')
 
-block template
+append template
   // Cabeçalho da página
   header#header.page-header(data-type='system')
     // Atalhos para conteúdo
@@ -56,12 +56,12 @@ block template
             .configs.dropdown
               button.trigger(type='button')
                 // Avatar do usuário
-                .avatar
+                span.avatar
                   <i class="fas fa-user-circle"></i>
                 // Notificações
                 span.badge 5
                 // Seta para abrir menu
-                .arrow
+                span.arrow
                   i.fas.fa-chevron-down
               .menu
                 // Informações do usuário
@@ -290,7 +290,9 @@ block template
       // Conteúdo principal
       main#content.page-content
         .container-fluid
-          h1.main-title #{title}
+          block message
+          block title
+            h1.main-title #{title}
           block content
   // Rodapé de governo
   footer#footer.page-footer

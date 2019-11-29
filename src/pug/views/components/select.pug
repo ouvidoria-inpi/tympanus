@@ -54,9 +54,7 @@ append content
           +option("opção 2", "2")
           +option("opção 3", "3")
           +option("opção 4", "4")
-        .feedback.is-invalid
-          i.fas.fa-times-circle
-          span.message  Erro
+        +feedback("Erro")
       .mb-3
         +select("Válido")(id="valid" class="is-valid")
           +option("Selecione", "0")
@@ -64,6 +62,4 @@ append content
           +option("opção 2", "2")
           +option("opção 3", "3")
           +option("opção 4", "4")
-        .feedback.is-valid
-          i.fas.fa-check-circle
-          span.message  Ok
+        +feedback("Ok")(class="is-valid")

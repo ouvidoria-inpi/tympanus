@@ -21,16 +21,32 @@
   .logo {
     display: block;
     margin-top: $spacer;
+    position: static;
+    text-align: left;
   }
   // Marca do Governo
   .marca {
     width: 150px;
   }
-}
-
-// Versão tablet
-@include media-breakpoint-up(sm) {
-  .template-authentication {
+  // Menu signin
+  .signin-menu {
+    a {
+      align-items: center;
+      color: $body-color;
+      display: flex;
+      margin-bottom: $spacer;
+      margin-left: $spacer * 1.75;
+      text-decoration: none;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+    .icon {
+      margin-right: $spacer;
+    }
+  }
+  // Versão tablet
+  @include media-breakpoint-up(sm) {
     .left-side {
       background-color: $color-gray-1;
       .page-content {
@@ -60,10 +76,8 @@
       margin-top: 70px;
     }
   }
-}
-// Desktop
-@include media-breakpoint-up(md) {
-  .template-authentication {
+  // Desktop
+  @include media-breakpoint-up(md) {
     .left-side {
       .page-content {
         margin-left: auto;
@@ -77,44 +91,36 @@
       }
     }
   }
-}
-// TV
-@include media-breakpoint-up(lg) {
-  .right-side {
-    max-width: 774px;
+  // TV
+  @include media-breakpoint-up(lg) {
+    .right-side {
+      max-width: 774px;
+    }
   }
-}
-// 4K
-@include media-breakpoint-up(xl) {
-  .right-side {
-    max-width: 918px;
+  // 4K
+  @include media-breakpoint-up(xl) {
+    .right-side {
+      max-width: 918px;
+    }
   }
 }
 
 @supports (display: grid) {
-  body {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "wrapper"
-      "footer";
-    grid-template-columns: 100vw;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-  }
-  // Versão tablet
-  @include media-breakpoint-up(sm) {
-    .page-wrapper {
-      display: grid;
-      grid-template-areas: "left-side right-side";
-      grid-template-columns: 30vw 1fr;
-      grid-template-rows: 1fr;
+  .template-authentication {
+    // Versão tablet
+    @include media-breakpoint-up(sm) {
+      .page-wrapper {
+        display: grid;
+        grid-template-areas: "left-side right-side";
+        grid-template-columns: 30vw 1fr;
+        grid-template-rows: 1fr;
+      }
     }
-  }
-  // Versão desktop
-  @include media-breakpoint-up(md) {
-    .page-wrapper {
-      grid-template-columns: 37vw 1fr;
+    // Versão desktop
+    @include media-breakpoint-up(md) {
+      .page-wrapper {
+        grid-template-columns: 37vw 1fr;
+      }
     }
   }
 }

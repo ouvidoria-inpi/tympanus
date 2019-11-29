@@ -68,16 +68,13 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     height: 216px;
     margin-left: -$spacer * 2;
     margin-right: -$spacer * 2;
-    padding: 0 ($spacer * 2);
     overflow: auto;
+    padding: 0 ($spacer * 2);
     resize: none;
     width: auto;
     &:focus,
     &:active {
       outline: none;
-    }
-    &::-webkit-scrollbar {
-      width: 8px;
     }
     &::-webkit-scrollbar {
       width: 8px;

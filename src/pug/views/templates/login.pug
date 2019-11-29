@@ -3,34 +3,25 @@ extends ../../layouts/authentication
 append vars
   - var title = "Acesse sua conta";
 
-block auth-menu
+append auth-menu
   // Menu de navegação
-  nav#navigation.d-none.d-sm-block
-    ul.br-tabs.is-vertical
-      li.item.is-active
-        a(href="")
-          span.name item sem ícone
-      li.item
-        a(href="")
-          img.icon(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png" alt="Certificado Digital")
-          span.name item com ícone
-      li.item
-        a(href="")
-          img.icon(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png" alt="NeoID")
-          span.name item com ícone
+  +tabs("is-vertical")(id="navigation")
+    +tab-item("Entrar com CPF")
+    +tab-item(class="is-active")
+      img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
+      span.name Entrar com Certificado Digital
+    +tab-item
+      img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
+      span.name Entrar com NeoID
 
 block content
   .row
     .col-sm-10.col-md-8
       // Informar CPF
-      .br-input
-        label(for='cpf') CPF
-        input#cpf(type='text' placeholder='Ex: 123.456.789-99')
+      +input("CPF")(id="cpf" placeholder="Ex: 123.456.789-99")
       // Informar a senha
-      .br-input.has-icon.mt-3
-        label(for='password') Senha
-        input#password(type='password' placeholder='Digite sua senha de 8 a 11 dígitos')
-        button.icon(onclick="toggleInputAction(this, 'is-action')")
+      +input("Senha")(id="password" class="has-icon mt-3" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
+        button.icon(type='button' onclick="toggleInputAction(this)")
           span.sr-only Mostrar senha
           i.fas.fa-eye
       // Facilidades de senha
@@ -38,13 +29,11 @@ block content
         .col-auto
           a(href='') Esqueceu a Senha?
         .col-auto.ml-auto
-          .br-checkbox
-            input#manter-logado(type='checkbox')
-            label(for='manter-logado') Manter logado
+          +checkbox("Manter logado?")(id="manter-logado")
       // Botões de ação
       .d-flex.flex-wrap.flex-row-reverse.justify-content-center.mt-6.mt-sm-10
-        button.br-button.is-primary Entrar
-        button.br-button.is-primary.mt-3.mt-sm-0.mr-sm-3 Cadastrar
+        +button(class="is-primary") Entrar
+        +button(class="is-secondary mt-3 mt-sm-0 mr-sm-3") Cadastrar
       // Outras opções de login em smartphones
       .d-sm-none.mt-12
         .row
@@ -60,12 +49,11 @@ block content
               .name Entrar com NeoID
       // Outras opções de login
       aside.mt-3.mt-sm-10
-        .br-divider
-          span.content ou
+        +divider ou
         .text-center
-          button.br-button.is-circle.is-large.border-facebook.bg-facebook.text-white(type='button')
+          +button(class="is-circle is-large border-facebook bg-facebook text-white")
             i.fab.fa-facebook-f
-          button.br-button.is-circle.is-large.border-twitter.bg-twitter.text-white.ml-1(type='button')
+          +button(class="is-circle is-large border-twitter bg-twitter text-white ml-1")
             i.fab.fa-twitter
-          button.br-button.is-circle.is-large.border-google-plus.bg-google-plus.text-white.ml-1(type='button')
+          +button(class="is-circle is-large border-google-plus bg-google-plus text-white ml-1")
             i.fab.fa-google-plus-g

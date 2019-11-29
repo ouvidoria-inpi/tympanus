@@ -3,7 +3,7 @@ extends ../../layouts/authentication
 append vars
   - var title = "Cadastre-se";
 
-block auth-menu
+append auth-menu
   // Menu de navegação
   nav#navigation.d-none.d-sm-block
     p.subtitle-1.text-center Cadastre-se com
@@ -17,33 +17,28 @@ block auth-menu
     p.text-center.mt-8: a(href="") Como obter certificado digital
     // Outras opções de cadastro
     aside.mt-sm-4
-      .br-divider
-        span.content ou
+      +divider ou
       .text-center
-        button.br-button.is-circle.is-medium.border-facebook.bg-facebook.text-white(type='button')
+        +button(class="is-circle is-medium border-facebook bg-facebook text-white")
           i.fab.fa-facebook-f
-        button.br-button.is-circle.is-medium.border-twitter.bg-twitter.text-white.ml-1(type='button')
+        +button(class="is-circle is-medium border-twitter bg-twitter text-white ml-1")
           i.fab.fa-twitter
-        button.br-button.is-circle.is-medium.border-google-plus.bg-google-plus.text-white.ml-1(type='button')
+        +button(class="is-circle is-medium border-google-plus bg-google-plus text-white ml-1")
           i.fab.fa-google-plus-g
-        button.br-button.is-circle.is-medium.border-primary.bg-primary.text-white.ml-1(type='button')
+        +button(class="is-circle is-medium is-primary ml-1")
           span.govbr gov.br
 
-block content
+append content
   // Informar CPF
   .row
     .col-sm-10.col-md-8
-      .br-input
-        label(for='cpf') CPF
-        input#cpf(type='text' placeholder='Ex: 123.456.789-99')
+      +input("CPF")(id="cpf" placeholder="Ex: 123.456.789-99")
   p.help Digite somente números
   // Informar a senha
   .row.mt-6
     .col-sm-10.col-md-8
-      .br-input.has-icon
-        label(for='password') Crie sua senha
-        input#password(type='password')
-        button.icon(type='button')
+      +input("Crie sua senha")(id="password" class="has-icon mt-3" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
+        button.icon(type='button' onclick="toggleInputAction(this)")
           span.sr-only Mostrar senha
           i.fas.fa-eye
   p.help Sua senha deve ter entre 8 e 11 dígitos
@@ -53,17 +48,16 @@ block content
     a(href='') Fazer login
   // Botões de ação
   .d-flex.flex-wrap.flex-row-reverse.justify-content-center.justify-content-sm-start.mt-6.mt-sm-10
-    button.br-button.is-primary(disabled) Avançar
+    +button(class="is-primary" disabled) Avançar
   // Outras opções de cadastro
   aside.d-sm-none.mt-4.mt-sm-10
-    .br-divider
-      span.content ou
+    +divider ou
     .text-center
-      button.br-button.is-circle.is-medium.border-facebook.bg-facebook.text-white(type='button')
+      +button(class="is-circle is-medium border-facebook bg-facebook text-white")
         i.fab.fa-facebook-f
-      button.br-button.is-circle.is-medium.border-twitter.bg-twitter.text-white.ml-1(type='button')
+      +button(class="is-circle is-medium border-twitter bg-twitter text-white ml-1")
         i.fab.fa-twitter
-      button.br-button.is-circle.is-medium.border-google-plus.bg-google-plus.text-white.ml-1(type='button')
+      +button(class="is-circle is-medium border-google-plus bg-google-plus text-white ml-1")
         i.fab.fa-google-plus-g
-      button.br-button.is-circle.is-medium.border-primary.bg-primary.text-white.ml-1(type='button')
+      +button(class="is-circle is-medium is-primary ml-1")
         span.govbr gov.br

@@ -1,13 +1,13 @@
 extends default
 
-block vars
+append vars
   - var templateClass = "site";
 
-block scripts
+append scripts
   script(src="//barra.brasil.gov.br/barra_2.0.js" defer)
-  script(src='../js/page.js')
+  script(src='../js/site.js')
 
-block template
+append template
   // Cabeçalho da página
   header#header.page-header(data-type='portal')
     // Atalhos para conteúdo
@@ -302,31 +302,10 @@ block template
     // Conteúdo principal
     main#content.page-content
       .container
-        h1.main-title #{title}
+        block message
+        block title
+          h1.main-title #{title}
         block content
-        // Voltar ao topo
-        .text-right
-          hr
-          button.br-button.is-go-top(type='button')
-            | Voltar ao topo
-            span.br-button.is-circle.is-primary
-              i.fas.fa-chevron-up
-          hr
-        // Lincença e reportar erro
-        .row
-          // Licença
-          .col-sm
-            p.license
-              | Todo o conteúdo deste site está publicado sob a licença 
-              a(href='https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR')
-                | Creative Commons
-                | Atribuição-SemDerivações
-                | 3.0 Não Adaptada
-              | .
-          // Reportar erro
-          .col-sm-auto
-            p.report-error
-              a.text-uppercase(href='') Reportar erro
   // Rodapé de governo
   footer#footer.page-footer
     .bg-primary-darken-2.text-white
