@@ -19,7 +19,7 @@
     "validate:html": "node_modules/.bin/html-validate dist/**/*.html",
     "validate:sass": "node_modules/.bin/sass-lint -c .sass-lint.yml -v -q",
     "watch": "npm-run-all --parallel watch-*",
-    "watch-css": "node-sass -w -r ./src/scss/ -o ./dist/css",
+    "watch-css": "node-sass -w -r --source-map true ./src/scss/ -o ./dist/css",
     "watch-pug": "pug -w ./src/pug/views/ -o ./dist -P"
   },
   "author": "",

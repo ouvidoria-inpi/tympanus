@@ -1,0 +1,230 @@
+.#{$prefix}header-system {
+  background-color: $color-white;
+  box-shadow: 0 3px 6px rgba($color-black, 0.16);
+  // Agrupador
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: $header-system-mobile-height;
+    position: relative;
+  }
+  // Logo
+  .logo {
+    align-items: flex-start;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    flex-grow: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 0;
+    a {
+      display: flex;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    img {
+      width: $logo-mobile-width;
+    }
+    .name {
+      color: $color-primary-darken-2;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .description {
+      color: $color-gray-6;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+  // Links rápidos
+  .quicklinks {
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+    position: relative;
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-left: ($spacer * 2);
+      }
+    }
+    // Acesso gov.br
+    .login {
+      align-items: center;
+      color: $color-gray-7;
+      display: inline-flex;
+      &:hover {
+        [class*="fa-"] {
+          color: $color-primary-lighten-2;
+        }
+      }
+      [class*="fa-"] {
+        color: $color-primary;
+      }
+      span {
+        display: none;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: $spacer;
+      }
+    }
+    // Legislação
+    .legislation {
+      color: $color-gray-7;
+      display: none;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: ($spacer * 2.5);
+    }
+    // Idioma
+    .language {
+      display: none;
+      margin-left: ($spacer * 2);
+    }
+  }
+  // Busca
+  .search {
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: $header-system-mobile-height / 2;
+    z-index: 3;
+    .field {
+      display: inline-flex;
+      flex: 1;
+      height: $header-system-mobile-height / 2;
+      input {
+        background: $color-gray-2;
+        border: 0;
+        display: none;
+        flex: 1;
+        padding: ($spacer * 2) $spacer;
+        &::placeholder {
+          color: $placeholder-color;
+          font-size: $placeholder-font-size;
+          font-style: $placeholder-font-style;
+          font-weight: $placeholder-font-weight;
+          opacity: 1;
+        }
+      }
+      button {
+        background: transparent;
+        border: 0;
+        color: $color-primary;
+        padding: 0 ($spacer * 1.5);
+        &:hover {
+          background: $color-primary-pastel-1;
+        }
+      }
+    }
+    // Botão externo para fechar a busca
+    .close {
+      background: transparent;
+      border: 0;
+      bottom: 100%;
+      display: none;
+      margin-bottom: $spacer * 2;
+      padding: 0 ($spacer * 1.5);
+      position: absolute;
+      right: $spacer-half;
+    }
+    // Busca ativa
+    &.is-active {
+      left: 0;
+      .field {
+        bottom: 0;
+        box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+        left: 0;
+        position: absolute;
+        right: 0;
+        input {
+          display: block;
+        }
+        button {
+          background: $color-gray-2;
+        }
+      }
+      .close {
+        display: block;
+      }
+    }
+  }
+  // Barra de usuário
+  .user-bar {
+    flex-grow: 0;
+    align-items: center;
+  }
+  // Menu sanduiche
+  .menu-hamburger {
+    background: transparent;
+    border: 0;
+    bottom: 0;
+    color: $color-primary;
+    font-size: 25px;
+    left: 0;
+    padding: 0 $spacer;
+    position: absolute;
+    text-decoration: none;
+    top: $header-system-mobile-height / 2;
+    z-index: 1;
+    &:hover {
+      color: $color-primary-lighten-2;
+      text-decoration: none;
+    }
+  }
+  // Versão desktop
+  @include media-breakpoint-up(md) {
+    // Agrupador
+    .wrapper {
+      height: $header-system-desktop-height;
+    }
+    // Quebra de linha
+    .break {
+      flex-basis: 100%;
+      height: 0;
+    }
+    // Busca
+    .search {
+      align-items: center;
+      flex-grow: 0;
+      margin-left: auto;
+      position: static;
+      .field {
+        height: auto;
+        input {
+          display: block;
+          padding-left: $spacer * 2;
+          padding-right: $spacer * 2;
+        }
+        button {
+          background-color: $color-gray-2;
+          padding-left: $spacer * 2;
+          padding-right: $spacer * 2;
+        }
+      }
+      // Busca ativa
+      &.is-active {
+        flex-grow: 1;
+        .field {
+          box-shadow: none;
+          position: static;
+        }
+        .close {
+          margin: 0;
+          position: static;
+        }
+      }
+    }
+    // Menu sanduiche
+    .menu-hamburger {
+      top: $header-system-desktop-height / 2;
+    }
+  }
+}

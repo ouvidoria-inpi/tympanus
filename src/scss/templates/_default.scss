@@ -91,70 +91,6 @@ $logo-desktop: 150px;
   }
 }
 
-// Atalhos para conteúdo
-.skip-menu {
-  list-style: none;
-  position: absolute;
-  width: 100%;
-  a {
-    color: $color-white;
-    position: absolute;
-    top: -200em;
-    &:focus {
-      background: $color-secondary;
-      border-radius: 100px;
-      left: 20px;
-      outline: 0;
-      padding: 8px 24px;
-      position: absolute;
-      top: auto;
-      z-index: 11;
-    }
-  }
-}
-
-// Dropdown
-.dropdown {
-  position: relative;
-  z-index: 1;
-  .menu {
-    background: $color-white;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
-    display: none;
-    position: absolute;
-    // Rótulo
-    .title {
-      display: block;
-      font-weight: 600;
-      padding: $spacer ($spacer * 2);
-    }
-    // Item de menu
-    .item {
-      background: $color-white;
-      border: 0;
-      display: block;
-      padding: $spacer ($spacer * 2);
-      position: relative;
-      text-align: left;
-      width: 100%;
-    }
-    // Regras para botões e links
-    a,
-    button {
-      &.item {
-        text-decoration: none;
-        &:hover {
-          background: $color-primary-pastel-1;
-        }
-      }
-    }
-    // Menu ativo
-    &.is-active {
-      display: block;
-    }
-  }
-}
-
 // Sombra
 .shadow-bottom {
   box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
@@ -180,59 +116,6 @@ $logo-desktop: 150px;
   height: $main-bar-mobile;
   margin: 0 (-$spacer);
   position: relative;
-}
-
-// Menu sanduiche
-.menu-hamburger {
-  background: transparent;
-  border: 0;
-  bottom: 0;
-  color: $color-primary;
-  font-size: 25px;
-  left: 0;
-  padding: 0 ($spacer * 1.5);
-  position: absolute;
-  text-decoration: none;
-  top: 0;
-  z-index: 1;
-  &:hover {
-    color: $color-primary-lighten-2;
-    text-decoration: none;
-  }
-}
-
-// Logo
-.logo {
-  align-items: center;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  a {
-    display: flex;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  img {
-    width: $logo-mobile;
-  }
-  .name {
-    color: $color-primary-darken-2;
-    display: none;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  .description {
-    color: $color-gray-6;
-    display: none;
-    font-size: 12px;
-    font-weight: 600;
-  }
 }
 
 // Seleção de idioma
@@ -277,122 +160,6 @@ $logo-desktop: 150px;
   }
 }
 
-// Links rápidos
-.quicklinks {
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-  margin-left: auto;
-  margin-right: 48px;
-  position: relative;
-  // Acesso gov.br
-  .login {
-    align-items: center;
-    color: $color-gray-7;
-    display: inline-flex;
-    &:hover {
-      [class*="fa-"] {
-        color: $color-primary-lighten-2;
-      }
-    }
-    [class*="fa-"] {
-      color: $color-primary;
-    }
-    span {
-      display: none;
-      font-size: 12px;
-      font-weight: 600;
-      margin-left: $spacer;
-    }
-  }
-  // Legislação
-  .legislation {
-    color: $color-gray-7;
-    display: none;
-    font-size: 12px;
-    font-weight: 600;
-    margin-left: ($spacer * 2.5);
-  }
-  // Idioma
-  .language {
-    display: none;
-    margin-left: ($spacer * 2);
-  }
-  // Altocontraste
-  .contrast {
-    display: none;
-    margin-left: ($spacer * 2);
-  }
-}
-
-// Busca
-.search {
-  bottom: 0;
-  display: flex;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 3;
-  .field {
-    display: inline-flex;
-    flex: 1;
-    input {
-      background: $color-gray-2;
-      border: 0;
-      display: none;
-      flex: 1;
-      padding: ($spacer * 2);
-      &::placeholder {
-        color: $placeholder-color;
-        font-size: $placeholder-font-size;
-        font-style: $placeholder-font-style;
-        font-weight: $placeholder-font-weight;
-        opacity: 1;
-      }
-    }
-    button {
-      background: transparent;
-      border: 0;
-      color: $color-primary;
-      padding: 0 ($spacer * 1.5);
-      &:hover {
-        background: $color-primary-pastel-1;
-      }
-    }
-  }
-  // Botão externo para fechar a busca
-  .close {
-    background: transparent;
-    border: 0;
-    bottom: 0;
-    display: none;
-    padding: 0 ($spacer * 1.5);
-    position: absolute;
-    right: $spacer-half;
-    top: 0;
-  }
-  // Busca ativa
-  &.is-active {
-    left: 0;
-    .field {
-      box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 100%;
-      input {
-        display: block;
-      }
-      button {
-        background: $color-gray-2;
-      }
-    }
-    .close {
-      display: block;
-    }
-  }
-}
-
 // Barra de sistema
 .system-bar {
   align-items: center;
@@ -410,12 +177,6 @@ $logo-desktop: 150px;
     font-size: 12px;
     font-weight: 500;
   }
-}
-
-// Barra do usuário
-.user-bar {
-  align-items: center;
-  display: none;
 }
 
 // Avatar com usuário, pode ser imagem ou ícone
@@ -1206,30 +967,6 @@ $logo-desktop: 150px;
   .menu-hamburger {
     bottom: $main-bar-mobile;
   }
-  // Logo
-  .logo {
-    display: block;
-    top: $spacer-half;
-    a {
-      display: inline-block;
-    }
-    .name {
-      display: block;
-    }
-    .description {
-      display: block;
-      margin-top: $spacer-half;
-    }
-  }
-  // Links rápidos de acessibilidade e idioma
-  .quicklinks {
-    align-self: flex-start;
-    margin-top: $spacer;
-  }
-  // Busca
-  .search {
-    bottom: $main-bar-mobile;
-  }
   // Navegação
   .navigation {
     // Container da navegação
@@ -1296,99 +1033,9 @@ $logo-desktop: 150px;
     bottom: ($spacer * 2);
     top: auto;
   }
-  // Logo
-  .logo {
-    left: $spacer;
-    position: absolute;
-    text-align: left;
-    img {
-      width: $logo-desktop;
-    }
-    .name {
-      bottom: ($spacer * 2);
-      font-size: 24px;
-      margin-bottom: 2px;
-      margin-left: ($spacer * 5);
-      position: absolute;
-    }
-    .description {
-      font-size: 18px;
-      position: absolute;
-    }
-  }
   // Configurações do usuário
   .nav-configs {
     display: none;
-  }
-  // Links rápidos de acessibilidade e idioma
-  .quicklinks {
-    margin-right: ($spacer * 1.5);
-    ul {
-      display: inline-flex;
-      list-style: none;
-      margin-bottom: 0;
-      margin-right: ($spacer * 2);
-      li {
-        display: inline-block;
-        margin-left: ($spacer * 2);
-      }
-    }
-    // Acesso gov.br
-    .login {
-      span {
-        display: inline;
-      }
-    }
-    // Legislação
-    .legislation {
-      display: inline;
-    }
-    // Idioma
-    .language {
-      display: inline-block;
-    }
-    // Altocontraste
-    .contrast {
-      align-items: center;
-      display: inline-flex;
-      margin-left: ($spacer * 4);
-      [class*="fa-"] {
-        margin-right: $spacer;
-      }
-    }
-  }
-  // Busca
-  .search {
-    bottom: ($spacer * 1.5);
-    margin-bottom: $spacer-half;
-    right: ($spacer * 1.5);
-    top: auto;
-    .field {
-      input {
-        display: block;
-      }
-      button {
-        background: $color-gray-2;
-        &:hover {
-          background: $color-gray-2;
-        }
-      }
-    }
-    // Busca ativa
-    &.is-active {
-      left: ($spacer * 1.5);
-      .field {
-        box-shadow: 0 0 0 2px $color-white;
-        position: static;
-      }
-      .close {
-        position: static;
-      }
-    }
-  }
-  // Barra do usuário
-  .user-bar {
-    display: flex;
   }
   // Navegação
   .navigation {
