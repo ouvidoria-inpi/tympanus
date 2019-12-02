@@ -1,6 +1,6 @@
 # Componentes
 
-Excutar os comandos abaixo para registrar componentes que estão no nexus do serpro
+Excutar os comandos abaixo para registrar componentes que estão no nexus do serpro e depois execute o npm install
 
 **npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/**
 
