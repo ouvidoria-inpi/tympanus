@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checklist</title>
+    <!-- Fonte Rawline-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <!-- Design System de Governo-->
+    <link rel="stylesheet" href="../css/dsgov.css">
+    <!-- Fontawesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="br-checklist">
+        <div class="item">
+          <div class="icon"><i class="far fa-envelope"></i></div>
+          <div class="br-input">
+            <label for="email">E-mail</label>
+            <input id="email" type="text" placeholder="Ex: fulano@email.com">
+          </div>
+          <div class="br-radio">
+            <input id="radio-email" type="radio" name="radio">
+            <label for="radio-email"></label>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon is-invalid"><i class="fas fa-mobile-alt"></i></div>
+          <div class="br-input is-invalid">
+            <label for="celular">Celular</label>
+            <input id="celular" type="text" placeholder="Ex: (xx) xxxxx-xxxx">
+          </div>
+          <div class="br-radio is-invalid">
+            <input id="radio-celular" type="radio" name="radio" checked>
+            <label for="radio-celular"></label>
+          </div>
+        </div>
+      </div>
+      <div class="feedback is-invalid"><i class="fas fa-times-circle"></i>
+        <span>Preencha o campo de texto</span>
+      </div>
+      <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+      <div class="br-checklist mt-10">
+        <div class="item">
+          <div class="icon"><i class="far fa-envelope"></i></div>
+          <div class="br-input">
+            <label for="box-email">E-mail</label>
+            <input id="box-email" type="text" placeholder="Ex: fulano@email.com">
+          </div>
+          <div class="br-checkbox">
+            <input id="checkbox-email" type="checkbox">
+            <label for="checkbox-email"></label>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div class="br-input">
+            <label for="box-phone">Telefone</label>
+            <input id="box-phone" type="text" placeholder="(XX) 1234-5678">
+          </div>
+          <div class="br-checkbox">
+            <input id="checkbox-phone" type="checkbox" checked>
+            <label for="checkbox-phone"></label>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="br-input">
+            <label for="box-cellphone">Celular</label>
+            <input id="box-cellphone" type="text" placeholder="(XX) 91234-5678">
+          </div>
+          <div class="br-checkbox">
+            <input id="checkbox-cellphone" type="checkbox">
+            <label for="checkbox-cellphone"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/checklist.js"></script>
+  </body>
+</html>
