@@ -155,15 +155,9 @@ append template
           .row.system-bar
             // Breadcrumbs
             .col
-              ul.br-breadcrumb
-                li.home
-                  a(href='')
-                    span.sr-only Página inicial
-                    i.fas.fa-home
-                li
-                  a(href='') Tela anterior
-                li.is-active
-                  a(href='') Tela atual
+              +breadcrumb
+                +crumb("Tela anterior")
+                +crumb("tela atual", "is-active")
             // Timeout
             .col-auto
               .timeout

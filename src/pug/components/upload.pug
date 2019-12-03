@@ -1,5 +1,8 @@
 mixin upload
-  .br-upload
+  - let className = attributes.class
+  - let componentClass = prefix + "upload"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
     input#input-file.upload-input(type='file' name='myFiles' multiple)
     p.upload-header  Arraste e solte o(s) arquivo(s) do seu computador
     span.upload-info

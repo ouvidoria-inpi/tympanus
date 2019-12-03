@@ -5,7 +5,7 @@ mixin button
   button.br-button(
     class=className ? className : ""
     type="button"
-    accesskey=accesskey ? accesskey : 0
-    disabled=disabled ? disabled : 0)
+    accesskey=accesskey ? accesskey : false
+    disabled=disabled ? disabled : false)
     if block
       block

@@ -1,5 +1,8 @@
 mixin checkbox(label="Label")
-  .br-checkbox(class=attributes.class)
+  - let className = attributes.class
+  - let componentClass = prefix + "checkbox"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
     input(
       id=attributes.id
       type="checkbox"

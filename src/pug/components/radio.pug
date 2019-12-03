@@ -1,5 +1,8 @@
 mixin radio(label="Label")
-  .br-radio(class=attributes.class)
+  - let className = attributes.class
+  - let componentClass = prefix + "radio"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
     input(
       id=attributes.id
       type="radio"

@@ -1,5 +1,8 @@
 mixin accordeon
-  .br-accordeon
+  - let className = attributes.class
+  - let componentClass = prefix + "accordeon"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
     if block
       block
 

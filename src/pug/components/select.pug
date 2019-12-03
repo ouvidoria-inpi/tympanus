@@ -1,5 +1,8 @@
 mixin select(label="Label")
-  .br-select(class=attributes.class)
+  - let className = attributes.class
+  - let componentClass = prefix + "select"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
     label(for=attributes.id)=label
     select(id=attributes.id
       disabled=attributes.disabled)

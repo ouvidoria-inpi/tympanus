@@ -1,5 +1,8 @@
 mixin textarea(label="Label")
-  .br-textarea(class=attributes.class)
+  - let className = attributes.class
+  - let componentClass = prefix + "textarea"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
     label(for=attributes.id)=label
     textarea(
       id=attributes.id

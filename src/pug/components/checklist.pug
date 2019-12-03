@@ -1,5 +1,8 @@
 mixin checklist
-  .br-checklist(class=attributes.class)
+  - let className = attributes.class
+  - let componentClass = prefix + "checklist"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
     if block
       block
 

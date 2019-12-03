@@ -1,8 +1,11 @@
 mixin pagination
-  - var pages = 10;
-  - var page = 3;
+  - let pages = 10;
+  - let page = 3;
+  - let className = attributes.class
+  - let componentClass = prefix + "pagination"
+  - className = className ? componentClass + " " + className : componentClass
   nav
-    ul.br-pagination(class=attributes.class)
+    ul(class=className)
       li.is-first.is-disabled
         a(href="")
           i.fas.fa-chevron-left
@@ -15,7 +18,7 @@ mixin pagination
         select(id=attributes.id)
           while page < pages
             option=page++
-      - var page = 3;
+      - page = 3;
       while page < pages
         li.d-none.d-sm-inline
           a(href="")=page++

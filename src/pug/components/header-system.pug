@@ -1,5 +1,8 @@
 mixin header-system
-  .br-header-system
+  - let className = attributes.class
+  - let componentClass = prefix + "header-system"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
     .container-fluid
       // Barra principal
       .wrapper
@@ -105,7 +108,7 @@ mixin header-system
               .more
                 a(href='') Mais
           // Logout
-          button.logout(type='button') Sair
+          +button(class="is-small is-primary ml-3") Sair
         // Menu sanduiche
         button.menu-hamburger.ml-n1(type='button')
           i.fa.fa-bars.fa-fw

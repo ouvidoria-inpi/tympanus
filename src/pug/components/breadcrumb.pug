@@ -1,5 +1,8 @@
-mixin breadcrumbs
-  ul.br-breadcrumb
+mixin breadcrumb
+  - let className = attributes.class
+  - let componentClass = prefix + "breadcrumb"
+  - className = className ? componentClass + " " + className : componentClass
+  ul(class=className)
     li.home
       a(href='')
         span.sr-only Página inicial

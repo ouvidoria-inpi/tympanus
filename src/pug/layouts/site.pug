@@ -9,67 +9,11 @@ append scripts
 
 append template
   // Cabeçalho da página
-  header#header.page-header(data-type='portal')
+  header#header.page-header
     // Atalhos para conteúdo
-    ul#skip-menu.skip-menu
-      li
-        a(accesskey='1' href='#content') Ir para o conteúdo
-      li
-        a(accesskey='2' href='#navigation') Ir para o menu
-      li
-        a(accesskey='3' href='#footer') Ir para o rodapé
-    // Sombra do topo
-    .shadow-bottom
-      .container
-        // Barra principal
-        .header-bar
-          // Logo
-          .logo
-            a#logo(href='')
-              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbr.svg' alt='Governo Federal')
-            span.description Ministério da Economia
-            span.name Secretaria da Receita do Brasil - RFB
-          // Links rápidos
-          .quicklinks
-            // Acesso gov.br
-            a.login(href='')
-              i.fas.fa-user.fa-lg
-              span Acesso GOV.BR
-            // Legislação
-            a.legislation(href='') Legislação
-            // Idioma
-            .language.dropdown
-              button.trigger(type='button')
-                span.name Português
-                i.fas.fa-chevron-down.arrow
-              .menu
-                .title Idioma/Language
-                button.item.is-active(type='button')
-                  span.name Português
-                button.item(type='button')
-                  span.name English
-                button.item(type='button')
-                  span.name Español
-            // Altocontraste
-            a#contrast.contrast(href='' accesskey='6')
-              i.fas.fa-adjust.fa-lg
-              span.sr-only Alto contraste
-          // Busca geral
-          .search
-            .field
-              label.sr-only(for='search') Autocomplete
-              input#search(type='search' placeholder='O que você procura?')
-              button(type='button')
-                i.fas.fa-search.fa-lg
-                span.sr-only buscar
-            button.close(type='button')
-              i.fas.fa-times.fa-lg
-              span.sr-only fechar a busca
-          // Barra do usuário
-          .user-bar
-          // Menu sanduiche
-          button.menu-hamburger(type='button')
-            i.fa.fa-bars
+    +skip-menu
+    // header
+    +header-site
   // Wrapper principal
   .page-wrapper
     // Menu de navegação
@@ -289,15 +233,9 @@ append template
     // Breadcrumbs
     div
       .container
-        ul.br-breadcrumb.pt-3
-          li.home
-            a(href='')
-              span.sr-only Página inicial
-              i.fas.fa-home
-          li
-            a(href='') Tela anterior
-          li.is-active
-            a(href='') Tela atual
+        +breadcrumb
+          +crumb("Tela anterior")
+          +crumb("tela atual", "is-active")
         hr
     // Conteúdo principal
     main#content.page-content
