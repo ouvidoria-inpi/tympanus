@@ -1,7 +1,3 @@
-# Radio Button
-
-Este componente é o `check` configurado para aplicar o estilo de **radio button**.
-
 ## Dependências
 
 Nenhuma dependência.
@@ -10,7 +6,7 @@ Nenhuma dependência.
 
 ```html
 <div class="br-check">
-  <input name="radio" type="radio" id="radio">
+  <input name="radio" type="radio" id="radio" />
   <label for="radio">Radio button</label>
 </div>
 ```

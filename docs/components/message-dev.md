@@ -9,7 +9,7 @@ Nenhuma dependência.
 ## Código básico
 
 ```html
-<div class="br-alert">
+<div class="br-message">
   <div class="icon">...</div>
   <div class="content">...</div>
   <div class="close">...</div>
@@ -20,7 +20,7 @@ Nenhuma dependência.
 
 O componente é composto dos seguintes elementos:
 
-- `br-alert`: container do componente
+- `br-message`: container do componente
 - `icon`: icon ilustrativo
 - `content`: conteúdo da mensagem
 - `close`: botão de fechar
@@ -38,7 +38,7 @@ Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](h
 Exemplo de uso:
 
 ```html
-<div class="br-alert">
+<div class="br-message">
   <div class="icon">
     <i class="fas fa-check-circle"></i>
     <span class="sr-only">Sucesso!</span>
@@ -57,7 +57,7 @@ Pode ser inserido deste uma simples mensagem.
 Exemplo de uso:
 
 ```html
-<div class="br-alert">
+<div class="br-message">
   <div class="icon">...</div>
   <div class="content">
     <strong>Erro!</strong>
@@ -72,7 +72,7 @@ Ou uma mensagem com várias linhas.
 Exemplo de uso:
 
 ```html
-<div class="br-alert">
+<div class="br-message">
   <div class="icon">...</div>
   <div class="content">
     <p>...</p>
@@ -91,7 +91,7 @@ Local do botão de fechamento do alerta.
 Exemplo de uso:
 
 ```html
-<div class="br-alert">
+<div class="br-message">
   <div class="icon">...</div>
   <div class="content">...</div>
   <div class="close">
@@ -117,7 +117,7 @@ O tipo deve ser aplicado no container do componente.
 Exemplo de uso:
 
 ```html
-<div class="br-alert">
+<div class="br-message">
   <div class="icon">
     <i class="fas fa-times-circle"></i>
     <span class="sr-only">Erro!</span>

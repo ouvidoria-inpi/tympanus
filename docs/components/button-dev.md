@@ -1,7 +1,3 @@
-# Botão
-
-Botões de ação. Aplicável em tags interativas, tais como `<a href="">`, `<button>`, `<input type="submit">` etc.
-
 ## Dependências
 
 Nenhuma dependência.
@@ -107,7 +103,7 @@ Exemplo de uso:
 
 ```html
 <button class="br-button is-circle" type="button">
-  <img class="icon" src="image.png" alt="Texto descritivo">
+  <img class="icon" src="image.png" alt="Texto descritivo" />
 </button>
 <button class="br-button is-circle is-primary" type="button">
   <i class="fas fa-chevron-up"></i>
@@ -133,7 +129,7 @@ Exemplo de uso:
   <i class="fab fa-twitter fa-lg"></i>
 </button>
 <button class="br-button is-social-media" type="button">
-  <img src="imagem" alt="Texto descritivo">
+  <img src="imagem" alt="Texto descritivo" />
 </button>
 ```
 
@@ -154,8 +150,8 @@ Exemplo de uso:
 </button>
 <script>
   function topFunction() {
-    document.body.scrollTop = 0; // Safari
-    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+    document.body.scrollTop = 0 // Safari
+    document.documentElement.scrollTop = 0 // Chrome, Firefox, IE, Opera
   }
 </script>
 ```
@@ -195,7 +191,9 @@ Exemplo de uso:
 Exemplo de uso:
 
 ```html
-<button class="br-button is-primary" type="button" disabled>Ação desativada</button>
+<button class="br-button is-primary" type="button" disabled>
+  Ação desativada
+</button>
 <a href="" class="br-button is-primary is-disabled">Ação</a>
 ```
 

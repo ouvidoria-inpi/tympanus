@@ -1,7 +1,3 @@
-## Formulário
-
-Use para criar formulários de forma mais simples.
-
 ## Dependências
 
 Nenhuma dependência.
@@ -46,7 +42,7 @@ Exemplo de uso:
   <div class="field">
     <div class="input">
       <label for="input-base">Input básico</label>
-      <input id="input-base" type="text" placeholder="Texto de exemplo">
+      <input id="input-base" type="text" placeholder="Texto de exemplo" />
     </div>
   </div>
   <div class="actions">...</div>
@@ -68,12 +64,12 @@ Exemplo de uso:
   <div class="field">
     <!-- Checkbox -->
     <div class="check">
-      <input type="checkbox" id="checkbox-padrao">
+      <input type="checkbox" id="checkbox-padrao" />
       <label for="checkbox-padrao">Padrão</label>
     </div>
     <!-- Radio button -->
     <div class="check">
-      <input name="radio" type="radio" id="radio-padrao">
+      <input name="radio" type="radio" id="radio-padrao" />
       <label for="radio-padrao">Padrão</label>
     </div>
   </div>
@@ -103,7 +99,9 @@ Exemplo de uso:
   <div class="field">...</div>
   <div class="actions">
     <button class="button is-primary" type="button">Ação principal</button>
-    <button class="button is-secondary" type="button">Ação secundária grande</button>
+    <button class="button is-secondary" type="button">
+      Ação secundária grande
+    </button>
     <button class="button is-cancel" type="button">Cancelar</button>
   </div>
 </div>

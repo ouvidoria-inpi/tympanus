@@ -1,5 +1,3 @@
-# Checkbox
-
 ## ANATOMIA
 
 São elementos usados para seleção simultânea.
@@ -31,8 +29,6 @@ Os checkboxes deve ser usados para **selecionar um ou mais itens** de um conjunt
 Dar preferência ao uso do texto em uma coluna, porém se houver necessidade de mais de uma coluna utilizar a distância mínima entre duas colunas de checkboxes, que deve ser de 100px na web.
 
 Como, por exemplo, pode ocorrer nos filtros da busca avançada.
-
-* * *
 
 # Radio button
 

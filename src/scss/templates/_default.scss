@@ -354,7 +354,7 @@ $logo-desktop: 150px;
       }
       &::before {
         background: $color-gray-3;
-        content: "";
+        content: '';
         height: 1px;
         left: 0;
         position: absolute;
@@ -382,7 +382,7 @@ $logo-desktop: 150px;
       text-align: left;
       text-decoration: none;
       width: 100%;
-      [class*="fa-"] {
+      [class*='fa-'] {
         color: $color-primary;
       }
     }
@@ -395,7 +395,7 @@ $logo-desktop: 150px;
         color: $color-white;
         display: none;
         font-weight: 600;
-        [class*="fa-"] {
+        [class*='fa-'] {
           color: $color-white;
         }
       }
@@ -478,8 +478,8 @@ $logo-desktop: 150px;
   // Comportamento do menu
   // Mostrar apenas quem é ativo no nível atual
   @each $level in (0, 1, 2, 3) {
-    &:not([data-level="#{$level}"]) {
-      [data-level="#{$level}"] {
+    &:not([data-level='#{$level}']) {
+      [data-level='#{$level}'] {
         > .item {
           display: none;
         }
@@ -608,7 +608,7 @@ $logo-desktop: 150px;
 }
 
 // Ajustes para sistemas
-[data-type="system"] {
+[data-type='system'] {
   // Barra do cabeçalho
   .header-bar {
     height: $main-bar-mobile * 2;
@@ -705,7 +705,7 @@ $logo-desktop: 150px;
     }
   }
   // Ajustes para sistemas
-  [data-type="system"] {
+  [data-type='system'] {
     // Barra do cabeçalho
     .header-bar {
       height: $main-bar-mobile * 2;
@@ -820,7 +820,7 @@ $logo-desktop: 150px;
       }
     }
     // Navegação por hover
-    &[data-children="hover"] {
+    &[data-children='hover'] {
       // Item de navegação
       .item {
         &:hover {
@@ -829,7 +829,7 @@ $logo-desktop: 150px;
             background: $color-primary-darken-1;
             color: $color-white;
             font-weight: 600;
-            [class*="fa-"] {
+            [class*='fa-'] {
               color: $color-white;
             }
             img {
@@ -931,7 +931,7 @@ $logo-desktop: 150px;
     }
   }
   // Ajustes para sistemas
-  [data-type="system"] {
+  [data-type='system'] {
     // Barra do cabeçalho
     .header-bar {
       height: $main-bar-desktop;
@@ -1028,7 +1028,7 @@ $logo-desktop: 150px;
           color: $color-primary;
           font-weight: 600;
         }
-        [class*="fa-"] {
+        [class*='fa-'] {
           font-size: 10px;
           transform: rotate(90deg);
         }
@@ -1050,7 +1050,7 @@ $logo-desktop: 150px;
             border-top: 0;
             color: $color-gray-6;
             font-weight: 500;
-            [class*="fa-"] {
+            [class*='fa-'] {
               transform: rotate(0);
             }
           }
@@ -1061,7 +1061,7 @@ $logo-desktop: 150px;
           > button {
             background: transparent;
             display: flex;
-            [class*="fa-"] {
+            [class*='fa-'] {
               color: $color-primary;
               transform: rotate(-90deg);
             }
@@ -1127,5 +1127,11 @@ $logo-desktop: 150px;
         width: $navigation-width;
       }
     }
+  }
+}
+
+.br-search {
+  & .br-input {
+    width: 100%;
   }
 }

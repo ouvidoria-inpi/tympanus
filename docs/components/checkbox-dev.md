@@ -1,7 +1,3 @@
-# Checkbox e Radio Button
-
-Este componente é compatível com checkboxes e radio buttons.
-
 ## Dependências
 
 Nenhuma dependência.
@@ -11,12 +7,12 @@ Nenhuma dependência.
 ```html
 <!-- checkbox -->
 <div class="br-check">
-  <input type="checkbox" id="checkbox">
+  <input type="checkbox" id="checkbox" />
   <label for="checkbox">Checkbox</label>
 </div>
 <!-- radio -->
 <div class="br-check">
-  <input name="radio" type="radio" id="radio">
+  <input name="radio" type="radio" id="radio" />
   <label for="radio">Radio button</label>
 </div>
 ```

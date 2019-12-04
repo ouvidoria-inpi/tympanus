@@ -1,7 +1,3 @@
-# Divisor de conteúdo
-
-Divisor de conteúdo personalizado. Pode conter textos ou ícones.
-
 ## Dependências
 
 Nenhuma dependência.
@@ -37,7 +33,12 @@ Exemplo de uso:
 
 ```html
 <div class="br-divider">
-  <span class="content text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nulla repudiandae dignissimos dolorem quas, maxime libero autem. Nemo nisi voluptatibus, totam itaque ut minima! Maiores sit amet eveniet nulla quidem!</span>
+  <span class="content text-wrap"
+    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nulla
+    repudiandae dignissimos dolorem quas, maxime libero autem. Nemo nisi
+    voluptatibus, totam itaque ut minima! Maiores sit amet eveniet nulla
+    quidem!</span
+  >
 </div>
 ```
 
@@ -48,7 +49,7 @@ Exemplo de uso:
 ```html
 <div class="br-divider">
   <span class="content">
-    <img src="image.png" alt="Texto descritivo">
+    <img src="image.png" alt="Texto descritivo" />
   </span>
 </div>
 ```

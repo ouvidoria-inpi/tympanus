@@ -1,23 +1,16 @@
-
-## Select
-
-### Definição
-
-Os componentes Select são usados ​​para coletar informações fornecidas pelo usuário em uma lista de opções.
-
 ### Orientação de Uso
 
 ![Select_Orientação_Uso](../../assets/images/components_img/select/Select_Orientação_Uso.png)
 
-#### 1 | Rótulos 
+#### 1 | Rótulos
 
-Em contextos comuns de uso devem ser acompanhados de rótulos que descrevam a informação que o usuário deve selecionar. 
+Em contextos comuns de uso devem ser acompanhados de rótulos que descrevam a informação que o usuário deve selecionar.
 
 #### 2 | Placeholder
 
-O placeholder tem a função de auxiliar o usuário a selecionar as opções disponíveis. Para limpar o campo basta selecionar o campo em branco que encabeça a listagem. 
+O placeholder tem a função de auxiliar o usuário a selecionar as opções disponíveis. Para limpar o campo basta selecionar o campo em branco que encabeça a listagem.
 
-#### 3 | Distintas Alturas dos Campos 
+#### 3 | Distintas Alturas dos Campos
 
 De acordo com o contexto de uso as alturas dos campos devem variar para: select em Filtro em portal; select em tabelas e select geral.
 
@@ -25,7 +18,7 @@ De acordo com o contexto de uso as alturas dos campos devem variar para: select 
 
 ### Comportamento
 
-O label, o placeholder e os demais comportamentos permanecem iguais. 
+O label, o placeholder e os demais comportamentos permanecem iguais.
 No caso do uso em Tabelas e Filtro em portal o label pode ser suprimido, mas nesse caso o uso do placeholder é imprescindível.
 
 ![Select_Comportamento](../../assets/images/components_img/select/Select_Comportamento.png)
@@ -72,7 +65,7 @@ Os Selects podem ser representados nos estados: habilitado; desabilitado e campo
 
 ![Select_Estado_Foco_DropDown](../../assets/images/components_img/select/Select_Estado_Foco_DropDown.png)
 
-### Espaçamentos 
+### Espaçamentos
 
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados no componente select. Todas as medidas foram definidas com valores múltiplos de 4px e 8px.
 

@@ -1,7 +1,3 @@
-# Paginação
-
-Este componente responsável pela paginação. Para manter a semântica do código, recomendamos usar o paginador dentro da tag `<nav>`.
-
 ## Exemplo básico
 
 ```html
@@ -14,7 +10,9 @@ Este componente responsável pela paginação. Para manter a semântica do códi
       </a>
     </li>
     <li class="d-flex d-sm-none">
-      <label for="page-select-large"><span class="sr-only">Selecione a página</span></label>
+      <label for="page-select-large"
+        ><span class="sr-only">Selecione a página</span></label
+      >
       <select id="page-select-large">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -24,11 +22,21 @@ Este componente responsável pela paginação. Para manter a semântica do códi
       </select>
       <span class="ml-2">de</span><a href="">5</a>
     </li>
-    <li class="is-active"><a href=""><span>1</span></a></li>
-    <li><a href=""><span>2</span></a></li>
-    <li><a href=""><span>3</span></a></li>
-    <li><a href=""><span>4</span></a></li>
-    <li><a href=""><span>5</span></a></li>
+    <li class="is-active">
+      <a href=""><span>1</span></a>
+    </li>
+    <li>
+      <a href=""><span>2</span></a>
+    </li>
+    <li>
+      <a href=""><span>3</span></a>
+    </li>
+    <li>
+      <a href=""><span>4</span></a>
+    </li>
+    <li>
+      <a href=""><span>5</span></a>
+    </li>
     <li class="is-last">
       <a href="">
         <span>Próxima</span>
@@ -46,10 +54,16 @@ Este componente responsável pela paginação. Para manter a semântica do códi
   <ul class="br-pagination">
     <li class="is-first">...</li>
     <li class="d-flex d-sm-none">...</li>
-    <li class="is-active"><a href=""><span>1</span></a></li>
-    <li><a href=""><span>2</span></a></li>
+    <li class="is-active">
+      <a href=""><span>1</span></a>
+    </li>
+    <li>
+      <a href=""><span>2</span></a>
+    </li>
     <li><span>...</span></li>
-    <li><a href=""><span>10</span></a></li>
+    <li>
+      <a href=""><span>10</span></a>
+    </li>
     <li class="is-last">...</li>
   </ul>
 </nav>
@@ -79,7 +93,9 @@ Você poderá modificar o comportamento padrão usando as classes de **Justify c
 
 ```html
 <nav>
-  <ul class="br-pagination justify-content-start">...</ul>
+  <ul class="br-pagination justify-content-start">
+    ...
+  </ul>
 </nav>
 ```
 

@@ -118,9 +118,6 @@ rules:
     - ignore-custom-properties: false
   property-units: 0
   pseudo-element: 2
-  quotes:
-    - 2
-    - style: double
   shorthand-values: 1
   single-line-per-selector: 2
   space-after-bang:

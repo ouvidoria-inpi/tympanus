@@ -10,6 +10,9 @@
 .portal-title,
 .h1,
 .title-1 {
+  @include media-breakpoint-down(xs) {
+    font-size: $h1-mobile-font-size;
+  }
   color: $headings-color;
   font-family: $headings-font-family;
   font-size: $h1-font-size;
@@ -30,6 +33,7 @@
 }
 
 // Subtítulo 1
+.h3,
 .portal-small-news-title,
 .subtitle-1,
 .portal-big-news,
@@ -41,6 +45,7 @@
 }
 
 // Subtítulo 2
+.h4
 .subtitle-2 {
   color: $headings-color;
   font-size: $h4-font-size;

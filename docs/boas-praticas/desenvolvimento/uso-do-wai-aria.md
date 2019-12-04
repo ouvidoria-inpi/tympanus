@@ -1,5 +1,3 @@
-# Uso do WAI-ARIA
-
 Esse documento apresenta uma breve introdução ao [Accessible Rich Internet Application - ARIA][1], desenvolvido pela [Web Accessibility Initiative - WAI][2].
 
 ## O que é WAI-ARIA
@@ -34,13 +32,13 @@ O WAI-ARIA role é definido em um elemento usando o atributo `role`
 
 A especificação WAI-ARIA define uma taxonomia ([WAI-ARIA role taxonomy][3]) e os comportamentos esperados pelos roles. Ela fornece as seguintes informações:
 
--   Uma informação descritiva sobre o role
--   Informações de hierarquia entre os roles
--   O contexto do role
--   Referências e conceitos relacionados em outras especificações
--   Uso da Web Ontology Language para fornecer uma hierarquia
-    de tipos permitindo herança semântica (semelhante a uma hierarquia de classes)
--   States e prperties suportados para cada role
+- Uma informação descritiva sobre o role
+- Informações de hierarquia entre os roles
+- O contexto do role
+- Referências e conceitos relacionados em outras especificações
+- Uso da Web Ontology Language para fornecer uma hierarquia
+  de tipos permitindo herança semântica (semelhante a uma hierarquia de classes)
+- States e prperties suportados para cada role
 
 > Anexar uma role fornece informações às tecnologias assistivas sobre como lidar com cada elemento.
 
@@ -55,7 +53,9 @@ Quando combinado com **roles**, o agente do usuário pode fornecer às tecnologi
 O exemplo abaixo usa um list item que foi usado para criar um menu com checkbox, e os eventos JavaScript irão capturar os eventos de mouse e teclado para alternar o valor de `aria-checked`. O role é usado para que o comportamento desse widget seja conhecido pelo agente de usuário.
 
 ```html
-<li role="menuitemcheckbox" aria-checked="true">Ordenado pela última modificação</li>
+<li role="menuitemcheckbox" aria-checked="true">
+  Ordenado pela última modificação
+</li>
 ```
 
 Os **states** e **properties** podem ser consultados na seção [WAI-ARIA States and Properties][4]
@@ -70,11 +70,11 @@ Esses **states** e **properties** são usados juntamente com os **roles** e a ta
 
 ## Referências
 
--   [Accessible Rich Internet Application - ARIA][1]
--   [Web Accessibility Initiative - WAI][2]
--   [WAI-ARIA role taxonomy][3]
--   [WAI-ARIA States and Properties][4]
--   [Diagrama de Classes dos Relacionamentos Entre as Roles][5]
+- [Accessible Rich Internet Application - ARIA][1]
+- [Web Accessibility Initiative - WAI][2]
+- [WAI-ARIA role taxonomy][3]
+- [WAI-ARIA States and Properties][4]
+- [Diagrama de Classes dos Relacionamentos Entre as Roles][5]
 
 [1]: https://www.w3.org/TR/wai-aria/
 [2]: https://www.w3.org/WAI/

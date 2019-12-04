@@ -1,11 +1,3 @@
-# Badge
-
-O Componente Badge pode ser de três tipos:
-
-- `1: Sinalização`
-- `2: Sinalização de status com símbolo`
-- `3: Contagem`
-
 ## Dependências
 
 Para diferentes tamanhos deve ser definido o tamanho de fonte (font-size) do componente pai.
@@ -14,7 +6,7 @@ Para diferentes tamanhos deve ser definido o tamanho de fonte (font-size) do com
 
 ```html
 <div class="br-badge">
-    <span class="icon"></span>
+  <span class="icon"></span>
 </div>
 ```
 
@@ -22,7 +14,7 @@ Ou
 
 ```html
 <div class="br-badge is-status">
-    <span class="icon"></span>
+  <span class="icon"></span>
 </div>
 ```
 
@@ -30,18 +22,17 @@ Ou
 
 ```html
 <div class="br-badge is-symbol">
-    <i></i>
-    <i class="fas icon"></i>
+  <i></i>
+  <i class="fas icon"></i>
 </div>
 ```
 
-Ou 
-
+Ou
 
 ```html
 <div class="br-badge is-count">
-    <i></i>
-    <span class="number"> {{valor}} </span>
+  <i></i>
+  <span class="number"> {{valor}} </span>
 </div>
 ```
 
@@ -59,27 +50,30 @@ Este componente é formado pelos seguintes elementos obrigatórios:
 # Estados
 
 ## Cores
+
 Para definir as cores dos bages são usadas as seguintes classes:
-- `is-success` 
+
+- `is-success`
 - `is-warning`
 - `is-info`
 - `is-danger`
 
 ## Posição
+
 Para definir o posicionamento dos bages são usadas as seguintes classes:
+
 - `is-top` ou `is-bottom`
 - `is-left` ou `is-right`
 
-
 ## Exemplo:
-```html 
+
+```html
 <div class="br-badge is-symbol is-left is-bottom is-warning">
-    <i class="fas fa-file"></i>
-    <i class="fas fa-check icon"></i>
+  <i class="fas fa-file"></i>
+  <i class="fas fa-check icon"></i>
 </div>
 ```
 
 # Regras especiais
 
-Os badges de tipo 1 só podem ter definidos o posicionamento superior ou inferior (top ou bottom). 
-
+Os badges de tipo 1 só podem ter definidos o posicionamento superior ou inferior (top ou bottom).

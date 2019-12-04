@@ -1,26 +1,22 @@
-# ícones
-
 Os ícones são representações gráficas que podem simbolizar uma ação ou comunicar ao usuário possibilidades de mudanças de estados entre os elementos de uma interface. No caso do Design System, foi escolhida a coleção de ícones **"font awesome"** em sua versão 5.10.2 Solid (versão 5.10.2) por possuírem uma boa variedade de ícones com um layout simples, sintético e amigável.
-
----
 
 ## Font Awesome 5.10.2
 
 Font Awesome é um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi feito por Dave Gandy para uso com o Twitter Bootstrap e mais tarde foi incorporado no BootstrapCDN.
 
-A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.  
+A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.
 No final desse documento foi incluído as orientações de uso de alguns dos ícones e deve ser seguido para que haja consistência entre os sistemas do governo.
 
-![Exemplo FontAwesome](../../assets/images/docs_img/fundamentos/icones/DS_Icones_Fontawesome.png)
+![Exemplo FontAwesome](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Fontawesome.png)
 
 ### Exemplos de ícones aplicados aos componentes do Design System
 
-![Exemplos de ícones aplicados aos componentes](../../assets/images/docs_img/fundamentos/icones/DS_Exemplo_Icones.png)
+![Exemplos de ícones aplicados aos componentes](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Exemplo_Icones.png)
 
 ## Ícones Criados
 
-No Design System, foram criados dois ícones para representar certificado digital e NeoID pois não havia na família do fontawesoome algum que representasse bem esses dois conceitos.  
-![Imagem do Ícone de Certificado Digital e do NEOID](../../assets/images/docs_img/fundamentos/icones/DS_Icones_Certificado_NeoId.png)
+No Design System, foram criados dois ícones para representar certificado digital e NeoID pois não havia na família do fontawesoome algum que representasse bem esses dois conceitos.
+![Imagem do Ícone de Certificado Digital e do NEOID](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Certificado_NeoId.png)
 
 ## Princípios
 
@@ -44,15 +40,15 @@ Ao usar ícones em sua interface do usuário, existem técnicas manuais e formas
 
 São usados apenas para reforço visual ou de branding. Se forem removidos da página, os usuários ainda entenderiam e poderiam utilizar a página. Se os ícones são puramente decorativos é necessário adicionar manualmente um atributo aria-hidden a cada um deles para que sejam acessíveis.
 
-![<i class=“fas fa-camera-retro” aria-hidden></I>](../../assets/images/docs_img/fundamentos/icones/DS_ariahidden.png)
+![<i class=“fas fa-camera-retro” aria-hidden></I>](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_ariahidden.png)
 
 ##### SVG com JavaScript
 
-![<i class=“fas fa-camera-retro”></I>](../../assets/images/docs_img/fundamentos/icones/DS_Javascript.png)
+![<i class=“fas fa-camera-retro”></I>](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Javascript.png)
 
 A acessibilidade do Font Awesome adiciona automaticamente aria-hidden=true e role=“img” aos seus atributos SVG in-line, para que seus ícones estejam adequadamente acessíveis.
 
-![aria-hidden=true e role=“img”](../../assets/images/docs_img/fundamentos/icones/DS_ariahidden2.png)
+![aria-hidden=true e role=“img”](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_ariahidden2.png)
 
 #### 2 | Ícones Semânticos
 
@@ -63,7 +59,7 @@ São aqueles usados para transmitir um significado, ao invés de apenas decoraç
   para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
 - Atributo title no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
 
-![Icones Semanticos](../../assets/images/docs_img/fundamentos/icones/Ds_iconeSemanticos_ariahidden.png)
+![Icones Semanticos](/assets/design-system/assets/images/docs_img/fundamentos/icones/Ds_iconeSemanticos_ariahidden.png)
 
 ##### SVG com JavaScript
 
@@ -75,13 +71,11 @@ Se o ícone tiver significado semântico, coloque um atributo title=“meaning�
 • Tag titlecom um atributo id adequado
 • Atributo aria-labelledby e conecte-o à uma tag title
 
-![SVG com JavaScript](../../assets/images/docs_img/fundamentos/icones/DS_SVG_Javascript.png)
+![SVG com JavaScript](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_SVG_Javascript.png)
 
 ### Reutilização e Colaboração
 
 Interfaces digitais do governo devem ser reutilizáveis pelos diversidade serviços disponíveis, sendo assim o uso da Font Awesome facilita esse reuso, por ser mais fácil de implementar. Caso haja necessidade podem ser incluídos novos ícones, porém é necessário consultar a tabela de orientações de uso, para verificar se já a funcionalidade já foi atribuída a algum ícone e também se há algum dentro do . É interessante que haja um trabalho em conjunto de criação e validação entre a equipe que vai propor novos ícones e a equipe de design para que sejam preservadas as características do padrão gráfico do Design System.
-
----
 
 ## Anatomia e Comportamento
 
@@ -93,13 +87,13 @@ Os ícones da Fontawesome foram determinados dentro de uma grid de 20 x 16px. En
 
 Os ícones clicáveis do sistema deverão, em sua maioria, ter corpo 16px.
 
-![Imagem do Tamanho dos Ícones: 16 x 16px](../../assets/images/docs_img/fundamentos/icones/DS_Icones_Grid_Fontawesome.png)
+![Imagem do Tamanho dos Ícones: 16 x 16px](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Grid_Fontawesome.png)
 
 #### 1| Área de Clique (Desktop)
 
 A área de clique é a área total delimitada (área preenchida pelo ícone + área de margem do ícone) para que seja possível o clique através do mouse. Essa área no Design System deve ser de 24x24px,
 
-![Imagem mostrando Tamanho Area Clique: 24 x 24px](../../assets/images/docs_img/fundamentos/icones/DS_Icone_Area_Clique.png)
+![Imagem mostrando Tamanho Area Clique: 24 x 24px](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icone_Area_Clique.png)
 
 #### 2 | Área de Toque
 
@@ -107,13 +101,11 @@ A área de toque dos ícones determina que além da área ocupada pelo ícone h�
 
 A área de toque deve ser de 48 x 48px, garantindo que a experiência do usuário seja satisfatória no momento de acessar as funcionalidades através dos ícones, em dispositivos móveis ou artefatos digitais.
 
-![Imagem mostrando a área de toque dos ícones: 48 x 48px](../../assets/images/docs_img/fundamentos/icones/DS_Icones_Area_Toque.png)
-
----
+![Imagem mostrando a área de toque dos ícones: 48 x 48px](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Area_Toque.png)
 
 ## Orientação de Uso
 
 As principais funcionalidades dos sistemas do governo foram mapeadas e foram atribuídas a cada uma delas um símbolo representativo - os ícones da versão sólida da FontAwesome. É fundamental que os desenvolvedores e designers utilizem os ícones abaixo com mesma ação que lhe foi atribuída, Isso garante que cada sistema acessado pelo cidadão utilize o mesma linguagem e significado, tornando mais rápida a experiência e o reconhecimento
 do público ao acessar as funcionalidades dos diversos sistemas do governo federal.
 
-![Orientacoes de Uso dos ícones](../../assets/images/docs_img/fundamentos/icones/DS_Icones_Orientacoes_Uso.png)
+![Orientacoes de Uso dos ícones](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Orientacoes_Uso.png)

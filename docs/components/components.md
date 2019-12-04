@@ -4,12 +4,12 @@
 
 Acompanhe a evolução dos componentes do Design System
 
-<p>
+<div>
     <i checks="fas fa-check text-success"></i>
     <strong>Acessível</strong> - O componente/documentação já pode ser usado*.
     <br/>
     <small>* Por estar em BETA, ainda pode sofrer alterações</small>
-</p>
+</div>
 
 <p>
     <i syncss="fas fa-sync text-orange"></i>
@@ -313,7 +313,7 @@ Acompanhe a evolução dos componentes do Design System
                         ><span class="sr-only">Acessível</span>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td><a href="/ds/componentes/textarea">Textarea</a></td>
                    <td class="text-center">
                         <i class="fas fa-sync text-orange"></i
@@ -327,7 +327,7 @@ Acompanhe a evolução dos componentes do Design System
                         <i class="fas fa-check text-success"></i
                         ><span class="sr-only">Acessível</span>
                     </td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td><a href="/ds/componentes/upload">Upload</a></td>
                     <td class="text-center">

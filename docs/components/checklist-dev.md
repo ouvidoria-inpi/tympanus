@@ -1,9 +1,3 @@
-# Checklist
-
-**Este componente requer script para funcionar corretamente**!
-
-Listagem de itens com opção de seleção e edição de conteúdo.
-
 ## Dependências
 
 - script `checklist.js`
@@ -18,10 +12,15 @@ Listagem de itens com opção de seleção e edição de conteúdo.
     </div>
     <div class="input">
       <label for="radio-email">E-mail</label>
-      <input type="text" id="radio-email" placeholder="Ex: fulano@email.com">
+      <input type="text" id="radio-email" placeholder="Ex: fulano@email.com" />
     </div>
     <div class="check">
-      <input name="preferencia" type="radio" id="radio-email-check" onclick="toggleActiveField(this, 'br-check-list')">
+      <input
+        name="preferencia"
+        type="radio"
+        id="radio-email-check"
+        onclick="toggleActiveField(this, 'br-check-list')"
+      />
       <label for="radio-email-check"><span class="sr-only">E-mail</span></label>
     </div>
   </div>
@@ -95,7 +94,7 @@ Exemplo de uso:
   </div>
   <div class="field">
     <div class="icon">
-      <img class="icon" src="image.png" alt="Texto descritivo">
+      <img class="icon" src="image.png" alt="Texto descritivo" />
     </div>
     <div class="input">...</div>
     <div class="check">...</div>
@@ -120,7 +119,7 @@ Exemplo de uso:
     <div class="icon">...</div>
     <div class="input">
       <label for="radio-email">E-mail</label>
-      <input type="text" id="radio-email" placeholder="Ex: fulano@email.com">
+      <input type="text" id="radio-email" placeholder="Ex: fulano@email.com" />
     </div>
     <div class="check">...</div>
   </div>
@@ -141,7 +140,11 @@ Exemplo de uso:
     <div class="icon">...</div>
     <div class="input">...</div>
     <div class="check">
-      <input type="checkbox" id="box-email-check" onclick="toggleActiveField(this, 'br-check-list')">
+      <input
+        type="checkbox"
+        id="box-email-check"
+        onclick="toggleActiveField(this, 'br-check-list')"
+      />
       <label for="box-email-check"><span class="sr-only">E-mail</span></label>
     </div>
   </div>
@@ -149,8 +152,14 @@ Exemplo de uso:
     <div class="icon">...</div>
     <div class="input">...</div>
     <div class="check">
-      <input type="checkbox" id="box-celular-check" onclick="toggleActiveField(this, 'br-check-list')">
-      <label for="box-celular-check"><span class="sr-only">Celular</span></label>
+      <input
+        type="checkbox"
+        id="box-celular-check"
+        onclick="toggleActiveField(this, 'br-check-list')"
+      />
+      <label for="box-celular-check"
+        ><span class="sr-only">Celular</span></label
+      >
     </div>
   </div>
 </div>
@@ -166,7 +175,12 @@ Exemplo de uso:
     <div class="icon">...</div>
     <div class="input">...</div>
     <div class="check">
-      <input name="preferencia" type="radio" id="radio-email-check" onclick="toggleActiveField(this, 'br-check-list')">
+      <input
+        name="preferencia"
+        type="radio"
+        id="radio-email-check"
+        onclick="toggleActiveField(this, 'br-check-list')"
+      />
       <label for="radio-email-check"><span class="sr-only">E-mail</span></label>
     </div>
   </div>
@@ -174,8 +188,15 @@ Exemplo de uso:
     <div class="icon">...</div>
     <div class="input">...</div>
     <div class="check">
-      <input name="preferencia" type="radio" id="radio-celular-check" onclick="toggleActiveField(this, 'br-check-list')">
-      <label for="radio-celular-check"><span class="sr-only">Celular</span></label>
+      <input
+        name="preferencia"
+        type="radio"
+        id="radio-celular-check"
+        onclick="toggleActiveField(this, 'br-check-list')"
+      />
+      <label for="radio-celular-check"
+        ><span class="sr-only">Celular</span></label
+      >
     </div>
   </div>
 </div>
@@ -209,7 +230,9 @@ Exemplo de uso:
 
 ```html
 <div class="br-checklist">...</div>
-<p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+<p class="help">
+  Texto auxiliar ao preenchimento, tem a função de previnir erros.
+</p>
 ```
 
 Caso exista `feedback` ele deverá ser inserido antes de `help`.
