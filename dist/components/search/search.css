@@ -1,0 +1,73 @@
+/*!
+ * search - 0.1.1 */
+.br-search {
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.br-search .field {
+  display: inline-flex;
+  flex: 1;
+}
+
+.br-search .field input {
+  background: #ededed;
+  border: 0;
+  display: none;
+  flex: 1;
+  padding: 16px;
+}
+
+.br-search .field button {
+  background: transparent;
+  border: 0;
+  color: #1351b4;
+  padding: 0 12px;
+}
+
+.br-search .field button:hover {
+  background: #dbe8fb;
+}
+
+.br-search .close {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  display: none;
+  padding: 0 12px;
+  position: absolute;
+  right: 4px;
+  top: 0;
+}
+
+.br-search.is-active {
+  bottom: 16px;
+  left: -8px;
+  top: auto;
+}
+
+.br-search.is-active .field {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+
+.br-search.is-active .field input {
+  display: block;
+}
+
+.br-search.is-active .field button {
+  background: #ededed;
+}
+
+.br-search.is-active .close {
+  display: block;
+}
+
+/*# sourceMappingURL=search.css.map */

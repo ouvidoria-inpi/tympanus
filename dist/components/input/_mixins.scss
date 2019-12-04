@@ -1,0 +1,194 @@
+// Base
+@mixin input-component {
+  position: relative;
+  label {
+    @include font-input-label;
+  }
+  input,
+  textarea {
+    @include input;
+    @include placeholder;
+  }
+  textarea {
+    padding-bottom: $input-padding * 0.75;
+    padding-top: $input-padding * 0.75;
+  }
+  // Input com ícone
+  &.has-icon {
+    input {
+      padding-right: 48px;
+    }
+    .icon {
+      @include input-icon;
+      img {
+        max-width: $action-icon-size;
+        min-width: $action-icon-size;
+        transform: translate(0, -4px);
+      }
+    }
+    button.icon { // sass-lint:disable-line force-element-nesting
+      @include input-icon($color-primary, $color-primary-lighten-15);
+    }
+  }
+  // Tamanhos
+  @include input-sizes;
+  // Estados
+  @include input-states;
+}
+
+@mixin input {
+  background: $input-bg;
+  border: $input-border-width $input-border-style $input-border-color;
+  border-radius: $input-radius;
+  color: $font-system-default-text-color;
+  display: block;
+  font-size: $font-system-default-text-font-size;
+  font-weight: $font-system-default-text-font-weight;
+  padding-left: $input-padding;
+  padding-right: $input-padding;
+  width: 100%;
+}
+
+@mixin placeholder {
+  &::placeholder {
+    color: $font-placeholder-color;
+    font-size: $font-placeholder-font-size;
+    font-style: $font-placeholder-font-style;
+    font-weight: $font-placeholder-font-weight;
+    opacity: 1;
+  }
+}
+
+@mixin input-icon($color: $font-system-default-text-color, $hover: $color) {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  color: $color;
+  font-size: $input-font-size;
+  margin: 0;
+  min-width: 0;
+  padding: 0 $spacing-3;
+  position: absolute;
+  right: 0;
+  width: auto;
+  &:focus,
+  &:hover {
+    color: $hover;
+  }
+}
+
+@mixin input-focus($color) {
+  border-color: $color;
+  box-shadow: 0 0 0 1px $color;
+  outline: none;
+}
+
+@mixin input-states {
+  input,
+  textarea {
+    &:focus {
+      @include input-focus($color-primary-lighten-15);
+    }
+    &:invalid {
+      @include input-focus($color-danger);
+    }
+    &:disabled {
+      background: $input-bg-disabled;
+      & + .icon,
+      & + button.icon { // sass-lint:disable-line force-element-nesting
+        @include input-icon;
+      }
+    }
+  }
+  &.is-focus {
+    input,
+    textarea {
+      @include input-focus($color-primary-lighten-15);
+    }
+  }
+  &.is-valid {
+    input,
+    textarea {
+      @include input-focus($color-success);
+    }
+    .icon,
+    button.icon { // sass-lint:disable-line force-element-nesting
+      @include input-icon($color-success);
+    }
+  }
+  &.is-invalid {
+    input,
+    textarea {
+      @include input-focus($color-danger);
+    }
+    .icon,
+    button.icon { // sass-lint:disable-line force-element-nesting
+      @include input-icon($color-danger);
+    }
+  }
+}
+
+@mixin input-sizes {
+  input {
+    height: $input-height-default;
+  }
+  .icon {
+    height: $input-height-default;
+    line-height: $input-height-default;
+  }
+  &.is-medium {
+    input {
+      height: $input-height-medium;
+    }
+    .icon {
+      height: $input-height-medium;
+      line-height: $input-height-medium;
+    }
+  }
+  &.is-small {
+    input {
+      height: $input-height-small;
+    }
+    .icon {
+      height: $input-height-small;
+      line-height: $input-height-small;
+    }
+  }
+}
+
+@mixin input-autocomplete {
+  &.is-autocomplete {
+    input {
+      padding-right: $action-padding * 3;
+    }
+    .search {
+      &-items {
+        background: $autocomplete-bg;
+        box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 1;
+        > * { // sass-lint:disable-line no-universal-selectors
+          cursor: pointer;
+          padding: $autocomplete-item-padding;
+          &:hover {
+            background-color: $autocomplete-item-hover;
+          }
+        }
+      }
+      &-active {
+        background-color: $autocomplete-item-active !important;
+      }
+    }
+  }
+}
+
+@mixin feedback($color: $color-gray-6) {
+  color: $color;
+  font-size: $feedback-font-size;
+  font-style: $feedback-font-style;
+  font-weight: $feedback-font-weight;
+  padding: $feedback-padding;
+}

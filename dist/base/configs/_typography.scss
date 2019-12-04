@@ -1,0 +1,18 @@
+// Sobrescrita de Typography, Body e Links do _variables.scss do Bootstrap
+
+// Família de fontes padrão
+$font-family-base: $rawline, sans-serif;
+
+// Textos e títulos
+$body-color: $color-gray-6;
+$font-weight-base: $font-system-default-text-font-weight;
+$headings-color: $color-primary;
+
+// links
+$link-color: $color-primary;
+$link-hover-color: $color-primary-lighten-15;
+
+// hr
+$hr-color: $color-gray-3;
+$hr-height: 1px;
+$hr-margin-y: $spacing-3;

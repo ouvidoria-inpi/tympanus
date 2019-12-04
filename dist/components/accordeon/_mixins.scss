@@ -1,0 +1,65 @@
+@mixin accordeon {
+  border-top: 1px solid $accordeon-border-color;
+  margin: $accordeon-margin;
+  .field {
+    border-bottom: 1px solid $accordeon-border-color;
+    display: flex;
+    flex-direction: column;
+    &.is-active {
+      .content {
+        display: block;
+      }
+    }
+  }
+  .header {
+    background: transparent;
+    border: 0;
+    color: $accordeon-header-color;
+    display: flex;
+    font-size: $accordeon-header-font-size;
+    justify-content: space-between;
+    padding: $accordeon-header-padding;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+    &:hover {
+      color: $accordeon-header-hover;
+      text-decoration: none;
+      .title {
+        color: inherit;
+      }
+    }
+  }
+  .icon {
+    padding: 0 $accordeon-icon-padding;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .title {
+    color: $accordeon-title-color;
+    flex: 1;
+    font-weight: $accordeon-title-font-weight;
+    padding: 0 $accordeon-title-padding;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .content {
+    display: none;
+    font-size: $accordeon-content-font-size;
+    margin: 0 ($accordeon-title-padding * 2);
+    padding: $accordeon-content-padding;
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

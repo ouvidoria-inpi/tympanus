@@ -1,0 +1,156 @@
+@mixin select {
+  position: relative;
+  label {
+    @include font-input-label;
+  }
+  select {
+    display: none;
+  }
+  // Substituto do select original
+  @include select-box;
+  // Lista de opções
+  @include select-list;
+  // Estados
+  @include select-states;
+  // Tamanhos
+  @include select-sizes;
+  // Texto de ajuda  
+  & + .help,
+  & + .feedback + .help {
+    @include font-suport-text-for-input;
+  }
+}
+
+@mixin select-box {
+  .select-selected {
+    @include text-overflow;
+    @include input;
+    @include arrow;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align-last: left;
+  }
+}
+
+@mixin select-list {
+  .select-items {
+    background: $color-white;
+    box-shadow: $select-list-shadow; // sass-lint:disable-line no-color-literals
+    left: $select-list-margin;
+    position: absolute;
+    right: $select-list-margin;
+    z-index: 1;
+    button {
+      background: $color-white;
+      border: 0;
+      display: block;
+      font-weight: 500;
+      padding: $select-list-item-padding;
+      text-align: left;
+      width: 100%;
+      &:hover,
+      &:focus {
+        background: $select-list-item-hover;
+      }
+      &.same-as-selected {
+        background: $select-list-item-active-bg;
+        color: $select-list-item-active-color;
+      }
+    }
+  }
+  // Esconder elemento
+  .select-hide {
+    display: none;
+  }
+}
+
+@mixin text-overflow {
+  span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@mixin arrow($color: $color-primary) {
+  i {
+    color: $color;
+    margin-left: $spacing-3;
+  }
+}
+
+@mixin select-states {
+  .select-selected {
+    &:focus {
+      @include input-focus($color-primary-lighten-15);
+    }
+    &:focus,
+    &:hover {
+      @include arrow($color-primary-lighten-15);
+    }
+    &:disabled {
+      @include arrow($select-arrow-disabled);
+      background: $input-bg-disabled;
+    }
+  }
+  &.is-focus {
+    .select-selected {
+      @include input-focus($color-primary-lighten-15);
+      @include arrow($color-primary-lighten-15);
+    }
+  }
+  &.is-invalid {
+    .select-selected {
+      @include arrow($color-danger);
+      border-color: $color-danger;
+      box-shadow: 0 0 0 1px $color-danger;
+      .fas {
+        color: $color-danger;
+      }
+    }
+    & + .feedback {
+      @include feedback($color-danger);
+    }
+  }
+  &.is-valid {
+    .select-selected {
+      @include arrow($color-success);
+      border-color: $color-success;
+      box-shadow: 0 0 0 1px $color-success;
+      .fas {
+        color: $color-success;
+      }
+    }
+    & + .feedback {
+      @include feedback($color-success);
+    }
+  }
+}
+
+@mixin select-sizes {
+  .select-selected {
+    height: $input-height-default;
+    i {
+      font-size: $input-height-default / 3;
+    }
+  }
+  &.is-medium {
+    .select-selected {
+      height: $input-height-medium;
+      i {
+        font-size: $input-height-medium / 3;
+      }
+    }
+  }
+  &.is-small {
+    .select-selected {
+      height: $input-height-small;
+      i {
+        font-size: $input-height-small / 3;
+      }
+    }
+  }
+}
