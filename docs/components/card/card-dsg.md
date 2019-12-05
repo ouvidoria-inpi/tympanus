@@ -11,7 +11,7 @@ Mas caso o background da tela for outro cinza ou colorido o card será branco.
 Os ícones ilustrativos variam de cor devido a função do card.
 De modo geral #2B7439, e nos casos específicados #OC326F
 
-![Cards Servicos Contextuais](../../assets/images/components_img/cards/cards-servicos-contextuais.png)
+![Cards Servicos Contextuais](images/cards-servicos-contextuais.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -19,13 +19,13 @@ De modo geral #2B7439, e nos casos específicados #OC326F
 
 No portal devem ser usados em páginas temáticas, como:
 
-- cards de serviços contextuais;
-- cards de serviços externos para público específico;
-- cards de links simples.
+-   cards de serviços contextuais;
+-   cards de serviços externos para público específico;
+-   cards de links simples.
 
-![Cards Servicos Externos Publico Especifico](../../assets/images/components_img/cards/cards-servicos-externos-publico-especifico.png)
+![Cards Servicos Externos Publico Especifico](images/cards-servicos-externos-publico-especifico.png)
 
-![Cards Funcao Link](../../assets/images/components_img/cards/cards-funcao-link.png)
+![Cards Funcao Link](images/cards-funcao-link.png)
 
 # Card
 
@@ -43,9 +43,9 @@ Os ícones ilustrativos variam de cor devido a função do card.
 
 De modo geral #2B74E9, e nos casos especificados #OC326F.
 
-![Cards Servicos Amplos](../../assets/images/components_img/cards/cards-servicos-amplos.png)
+![Cards Servicos Amplos](images/cards-servicos-amplos.png)
 
-![Cards Servicos Externos Publico Especifico 2](../../assets/images/components_img/cards/cards-servicos-externos-publico-especifico2.png)
+![Cards Servicos Externos Publico Especifico 2](images/cards-servicos-externos-publico-especifico2.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -69,7 +69,7 @@ Eles podem aumentar a altura em função do texto explicativo que venha publicad
 
 Os cards podem apresentar o hover no caso da web.
 
-![Cards Hover](../../assets/images/components_img/cards/cards-hover.png)
+![Cards Hover](images/cards-hover.png)
 
 # Card
 
@@ -77,9 +77,9 @@ Os cards podem apresentar o hover no caso da web.
 
 Cards de aplicativos podem ter formatos e conjuntos de informações distintos de acordo com a necessidade de informações que ele deva conter.
 
-![Cards Galeria 1](../../assets/images/components_img/cards/cards-galera-1.png)
+![Cards Galeria 1](images/cards-galera-1.png)
 
-![Cards Galeria 2](../../assets/images/components_img/cards/cards-galeria-2.png)
+![Cards Galeria 2](images/cards-galeria-2.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -95,9 +95,9 @@ Ao passar o mouse em cima do card haverá uma interação de fade. Quando assumi
 
 # Cards com Badge
 
-![Cards Badge Quadrado](../../assets/images/components_img/cards/cards-badge-quadrado.png)
+![Cards Badge Quadrado](images/cards-badge-quadrado.png)
 
-![Cards Badge Textual](../../assets/images/components_img/cards/cards-badges-textuais.png)
+![Cards Badge Textual](images/cards-badges-textuais.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -115,7 +115,7 @@ Os outros podem trazer alguma distinção que o destaque dos demais, normalmente
 
 # Cards Retangulares
 
-![Cards Aplicativo Completo](../../assets/images/components_img/cards/cards-apps-completa.png)
+![Cards Aplicativo Completo](images/cards-apps-completa.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -131,7 +131,7 @@ Ao passar o mouse em cima do card haverá uma interação de fade. Quando assumi
 
 **Essa versão de "hover" ocorrerá apenas na versão web.**
 
-![Cards Aplicativo Simplificado](../../assets/images/components_img/cards/cards-apps-simplificada.png)
+![Cards Aplicativo Simplificado](images/cards-apps-simplificada.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -147,7 +147,7 @@ E o hover trás o Título em 2 linhas, texto descritivo com área restrita, tags
 
 Ao passar o mouse em cima do card haverá uma iteração de fade. Quando assumirá a cor #555555 e os textos ficarão na cor branca #FFFFFF;
 
-![Cards Retangulares 1](../../assets/images/components_img/cards/cards-retangulares-possibilidades.png)
+![Cards Retangulares 1](images/cards-retangulares-possibilidades.png)
 
 ## ORIENTAÇÃO DE USO
 
@@ -157,11 +157,11 @@ Trata-se de variações do card retangular de altura fixa.
 
 Com maior possibilidade de aplicação de ícones funcionais, botões primários e secundários.
 
-![Card Responsivo](../../assets/images/components_img/cards/cards-responsivo.png)
+![Card Responsivo](images/cards-responsivo.png)
 
 # Cards Retangulares
 
-![Cards Retangulares 2](../../assets/images/components_img/cards/cards-retangulares.png)
+![Cards Retangulares 2](images/cards-retangulares.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -171,9 +171,9 @@ Trata-se de variações do card retangular de altura fixa.
 
 Com possibilidade de aplicação de ícones ilustrativos e funcionais, títulos, subtítulos, textos mais longos, cerca de 432 caracters e botão primário.
 
-![Cards Retangulares Responsivo](../../assets/images/components_img/cards/cards-retangulares-orientacoes.png)
+![Cards Retangulares Responsivo](images/cards-retangulares-orientacoes.png)
 
-![Cards Retangulares Carrossel](../../assets/images/components_img/cards/cards-retangulares-carrossel.png)
+![Cards Retangulares Carrossel](images/cards-retangulares-carrossel.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -187,11 +187,11 @@ Com possibilidade de aplicação de carrossel e suas variações de diagramaçã
 
 Os cards podem apresentar o hover no caso da web.
 
-![Card Retangular Hover](../../assets/images/components_img/cards/cards-estados.png)
+![Card Retangular Hover](images/cards-estados.png)
 
 # Cards Mini
 
-![Cards Retangulares Horizontais](../../assets/images/components_img/cards/cards-mini.png)
+![Cards Retangulares Horizontais](images/cards-mini.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -205,11 +205,11 @@ Com possibilidades de aplicações de diversas diagramações utilizando ícones
 
 Os cards podem apresentar o hover no caso da web.
 
-![Card Retangular Horizontal Hover](../../assets/images/components_img/cards/cards-retangulares-hover.png)
+![Card Retangular Horizontal Hover](images/cards-retangulares-hover.png)
 
 # Card Quadrado
 
-![Card Quadrado](../../assets/images/components_img/cards/cards-quadrados.png)
+![Card Quadrado](images/cards-quadrados.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -221,7 +221,7 @@ Com possibilidade de aplicação de imagem, título, texto curto e botão secund
 
 # Cards Horizontais
 
-![Cards Horizontais](../../assets/images/components_img/cards/cards-horizontais.png)
+![Cards Horizontais](images/cards-horizontais.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -233,7 +233,7 @@ Com função de link para outras páginas.
 
 Com possibilidade de aplicações de diversas diagramações utilizando ícones ilustrativo, chapéus, títulos e textos curtos de alturas fixas.
 
-![Cards Horizontais Retangulares](../../assets/images/components_img/cards/cards-horizontais-retang.png)
+![Cards Horizontais Retangulares](images/cards-horizontais-retang.png)
 
 ## ORIENTAÇÕES DE USO
 
