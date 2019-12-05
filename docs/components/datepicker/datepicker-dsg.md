@@ -1,6 +1,6 @@
 ## Orientação de Uso
 
-![Datepicker_Orientação](../../assets/images/components_img/datepicker/Datepicker_Orientação.png)
+![Datepicker_Orientação](images/datepicker-orientacao.png)
 
 ### 1 | Rótulos
 
@@ -20,7 +20,7 @@ Sempre que possível o rótulo do campo de data deve ser o mais sucinto e claro 
 
 ### Data Picker com texto auxiliar ao preenchimento
 
-![Datepicker_Texto_Auxiliar](../../assets/images/components_img/datepicker/Datepicker_Texto_Auxiliar.png)
+![Datepicker_Texto_Auxiliar](images/datepicker-texto-auxiliar.png)
 
 ## Mensagens de Feedback Contextual
 
@@ -29,25 +29,25 @@ Sempre que possível o rótulo do campo de data deve ser o mais sucinto e claro 
 A mensagem de erro (feedback contextual) deve ser o mais sucinta possível, de preferência não ultrapassando uma linha da mesma largura do campo de texto.
 Essas validações dos campos de texto deve exibir a mensagem de suporte abaixo do campo, juntamente com o ícone correspondente.
 
-![Datepicker_Mensagem_Erro](../../assets/images/components_img/datepicker/Datepicker_Mensagem_Erro.png)
+![Datepicker_Mensagem_Erro](images/datepicker-mensagem-erro.png)
 
 ### Mensagens de Alerta
 
 Mensagens de Alerta Se houver necessidade poderá aparecer um tooltip com mais Alguma informação complementar ao preenchimento dos campos.
 
-![Datepicker_Mensagem_Alerta](../../assets/images/components_img/datepicker/Datepicker_Mensagem_Alerta.png)
+![Datepicker_Mensagem_Alerta](images/datepicker-mensagem-alerta.png)
 
 ## Funcionalidade do Datepicker
 
-![Datepicker_Funcionalidades_1](../../assets/images/components_img/datepicker/Datepicker_Funcionalidades_1.png)
+![Datepicker_Funcionalidades_1](images/datepicker-funcionalidades-1.png)
 
-![Datepicker_Funcionalidades_2](../../assets/images/components_img/datepicker/Datepicker_Funcionalidades_2.png)
+![Datepicker_Funcionalidades_2](images/datepicker-funcionalidades-2.png)
 
 ## Estados
 
 Os campos de data seguem o mesmo comportamento do input, quando está sendo acionado. O contorno aumenta a espessura para 2px e o mesmo assume a cor azul #2B74E9, sinalizando ao usuário onde ele se encontra.
 
-![Datepícker_Estado](../../assets/images/components_img/datepicker/Datepícker_Estado.png)
+![Datepicker_Estado](images/datepicker-estado.png)
 
 ## Anatomia
 
@@ -55,16 +55,16 @@ São elementos usados pelos usuários para selecionar uma ou mais datas.
 
 ### Tipografia e Cor
 
-![Datepicker_Tipografia](../../assets/images/components_img/datepicker/Datepicker_Tipografia.png)
+![Datepicker_Tipografia](images/datepicker-tipografia.png)
 
 ## Hover
 
 Ao passar o mouse em cima dos meses/anos, aparecerá um background de cantos arredondados nas extremidades e cor #DBE7FC.
 
-![Datepicker_Hover](../../assets/images/components_img/datepicker/Datepicker_Hover.png)
+![Datepicker_Hover](images/datepicker-hover.png)
 
 ## Espaçamentos
 
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados no componente imput.. Todas as medidas foram definidas com valores múltiplos de 4px e 8px.
 
-![Datepicker_Espaçamento](../../assets/images/components_img/datepicker/Datepicker_Espaçamento.png)
+![Datepicker_Espaçamento](images/datepicker-espacamento.png)
