@@ -1,5 +1,3 @@
-# Templates de CRUD
-
 > **CRUD** (acrônimo de Create, Read, Update e Delete na língua Inglesa) para as quatro operações básicas utilizadas em bases de dados relacionais (RDBMS) ou em interface para utilizadores para criação, consulta, atualização e destruição de dados.
 
 **Fonte:** Wikipédia

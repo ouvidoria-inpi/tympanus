@@ -1,7 +1,3 @@
-# Templates
-
-## Status Atual dos Templates
-
 Acompanhe a evolução dos templates do Design System
 
 <p>

@@ -1,7 +1,3 @@
-# Componentes
-
-## Status Atual dos Componentes
-
 Acompanhe a evolução dos componentes do Design System
 
 <div>

@@ -93,7 +93,7 @@
     "type": "component",
     "children": [
       {
-        "label": "Status dos Componentes",
+        "label": "Status Atual dos Componentes",
         "filename": "status",
         "type": "docs"
       },
@@ -215,7 +215,7 @@
     "type": "template",
     "children": [
       {
-        "label": "Status dos Templates",
+        "label": "Status Atual dos Templates",
         "filename": "status",
         "urllabel": "status",
         "type": "docs"
