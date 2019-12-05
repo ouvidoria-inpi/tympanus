@@ -38,11 +38,11 @@ São elementos usados para seleção exclusiva.
 Possui um texto de orientação que auxilia a escolha do usuário.
 Cada opção deve ser acompanhada de um texto que a descreva.
 
-![Radiobutton Formatação Formulário](../../assets/images/components_img/radiobutton/radiobutton-formatacao-formulario.png)
+![Radiobutton Formatação Formulário](../radio/images/radio-formatacao-formulario.png)
 
-![Radiobutton Formatação Mobile](../../assets/images/components_img/radiobutton/radiobutton-formatacao-mobile.png)
+![Radiobutton Formatação Mobile](../radio/images/radio-formatacao-mobile.png)
 
-![Radiobutton Espaçamento](../../assets/images/components_img/radiobutton/radiobutton-espacamento.png)
+![Radiobutton Espaçamento](../radio/images/radio-espacamento.png)
 
 ## ESTADOS
 
@@ -50,9 +50,9 @@ Os radiobuttons podem estar nos estados: habilitados/desselecionados; hover; sel
 
 Os radiobuttons podem vir acompanhados de ícones ou imagens para uma compreensão mais rápida e maior engajamento do usuário.
 
-![Radiobutton Estados Web](../../assets/images/components_img/radiobutton/radiobutton-estados-web.png)
+![Radiobutton Estados Web](../radio/images/radio-estados-web.png)
 
-![Radiobutton Estados Mobile](../../assets/images/components_img/radiobutton/radiobutton-estados-mobile.png)
+![Radiobutton Estados Mobile](../radio/images/radio-estados-mobile.png)
 
 ## USO
 
