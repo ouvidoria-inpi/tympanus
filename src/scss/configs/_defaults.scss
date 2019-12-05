@@ -3,6 +3,7 @@ $prefix: "br-";
 
 // Espaçamentos
 $margin-default: $spacer * 2; // margem entre elementos 16px
+
 $button-padding: $spacer * 3; // 24px
 
 // Bordas
@@ -16,6 +17,8 @@ $search-bg: $color-gray-2;
 
 // Sombras
 $header-shadow: 0 3px 6px rgba($color-black, 0.16);
+$card-box-shadow: 0 3px 6px rgba($color-black, 0.16);
+$modal-shadow: 0 3px 6px rgba($color-black, 0.16);
 
 // Arredondamentos
 $input-radius: 6px;
@@ -54,3 +57,9 @@ $input-small: 32px;
 $message-icon: 64px;
 
 $tabs-vertical-icons: 32px;
+
+$card-size: 240px;
+$card-small-size: 216px;
+$card-medium-size: 272px;
+$card-large-w-size: 368px;
+$card-large-h-size: 168px;

@@ -1,8 +1,4 @@
-# Modal
-
-> Modais são diálogos flexíveis que podem conter informações críticas ou envolver decisões, tomadas pelo usuário, relacionadas a alguma tarefa.
-
-![Exemplo Modal](../../assets/images/components_img/modal/modal.png)
+![Exemplo Modal](/assets/design-system/docs/assets/images/components/modal/modal.png)
 
 ## Uso
 
@@ -20,8 +16,6 @@ Utilize para:
 
 Modais devem manter uma comunicação direta nas informações e dedicados à conclusão de uma tarefa. Devem aparecer em resposta a uma tarefa ou ação do usuário, com informações relevantes e contextuais.
 
----
-
 ## Anatomia
 
 1. **Card**
@@ -31,11 +25,9 @@ Modais devem manter uma comunicação direta nas informações e dedicados à co
 5. **Ícone de cancelar** (_opcional_)
 6. **Scrim**
 
-![Anatomia 01](../../assets/images/components_img/modal/anatomia_01.png)
+![Anatomia 01](/assets/design-system/docs/assets/images/components/modal/anatomia_01.png)
 
-![Anatomia 02](../../assets/images/components_img/modal/anatomia_02.png)
-
----
+![Anatomia 02](/assets/design-system/docs/assets/images/components/modal/anatomia_02.png)
 
 ### Título
 
@@ -48,17 +40,13 @@ Evite termos que expressão ambiguidade, alarmam o usuário como: "_Desculpe pel
 
 Se necessário, os títulos podem quebrar para um segunda linha. Maiores que duas linhas, os textos devem ser contraídos com reticências, e ao passar o mouse sobre o texto contraído é revelado o texto completo pelo uso de [tooltip](#).
 
-![Título Duas Linhas](../../assets/images/components_img/modal/alerta_titulo_duaslinhas.png)
+![Título Duas Linhas](/assets/design-system/docs/assets/images/components/modal/alerta_titulo_duaslinhas.png)
 
-![Título Contraído](../../assets/images/components_img/modal/alerta_titulo_contraido.png)
-
----
+![Título Contraído](/assets/design-system/docs/assets/images/components/modal/alerta_titulo_contraido.png)
 
 ### Conteúdo
 
 Conteúdo pode ter várias representações de acordo com tipo de modal utilizado. Utilize o modal que mais se adeque a necessidade da interface.
-
----
 
 ### Botões
 
@@ -70,7 +58,7 @@ Representam as 3 ações, relativas ao modal, que o usuário poderá interagir. 
 
 Os botões são alinhados por padrão a direita, porém, opcionamente, poderá ser alinhado centralizado no caso de ser a única ação do modal.
 
-![Botão Único](../../assets/images/components_img/modal/botao_unico.png)
+![Botão Único](/assets/design-system/docs/assets/images/components/modal/botao_unico.png)
 
 #### Quantidade de botões
 
@@ -81,19 +69,15 @@ O modal deve conter no máximo dois botões:
 - A ação de confirmação for fornecida, deverá existir a ação de Negação;
 - Não é recomendável fornecer um terceiro botão como "_Saiba mais_", pois ele afasta o usuário do foco principal, deixando a tarefa do modal inacabada. Em vez de adicionar um terceiro botão, um conteúdo de expandivel pode exibir mais informações. Se forem necessárias informações mais extensas, forneça-as antes de entrar no modal.
 
----
-
 ## Tipos
 
 Existem 3 Tipos de modal: **Alerta**, **Opção** e de **Entrada**. A escolha vai depender da tarefa que o usuário deve realizar.
-
----
 
 ## Modal de Alerta
 
 Interrompem os usuário com informações, detalhes ou ações urgentes.
 
-![Alerta](../../assets/images/components_img/modal/alerta_duasacoes.png)
+![Alerta](/assets/design-system/docs/assets/images/components/modal/alerta_duasacoes.png)
 
 ### Comportamento
 
@@ -101,17 +85,15 @@ Interrompem os usuário com informações, detalhes ou ações urgentes.
 - Não utilize o ícone de cancelar;
 - O título é opcional;
 
-![Alerta](../../assets/images/components_img/modal/alerta_semtitulo.png)
+![Alerta](/assets/design-system/docs/assets/images/components/modal/alerta_semtitulo.png)
 
 Sempre que uma escolha envolvendo exclusão for realizada pelo usuário (como "Descartar" ou "Excluir"), permita que ele confirme sua escolha por uma ação de confirmação.
 
-![Alerta de Confirmação](../../assets/images/components_img/modal/alerta_confirmacao.png)
+![Alerta de Confirmação](/assets/design-system/docs/assets/images/components/modal/alerta_confirmacao.png)
 
 ### Tom de voz
 
 Não utilize rótulos de ação que não indique claramente a ação realizada. "Cancelar" e "Excluir" indicam melhor a ação do que o "Não" e "Sim" respectivamente.
-
----
 
 ## Modal de Opção
 
@@ -125,7 +107,7 @@ Exibem uma lista de itens que entram em vigor imediatamente quando selecionados.
 
 Pela característica do modal, utilize esta opção com moderação. Prefira o uso de [dropdown](#) como uma opção menos disruptiva.
 
-![Opção Lista](../../assets/images/components_img/modal/opcao_lista.png)
+![Opção Lista](/assets/design-system/docs/assets/images/components/modal/opcao_lista.png)
 
 #### Comportamento:
 
@@ -137,9 +119,9 @@ Pela característica do modal, utilize esta opção com moderação. Prefira o u
 
 Exige que o usuário confirme uma opção antes que ela seja submetida, permitindo uma chance de alterar sua escolha caso necessário. Uma vez confirmada, a ação será executada.
 
-![Opção Seleção 01](../../assets/images/components_img/modal/opcao_selecao_01.png)
+![Opção Seleção 01](/assets/design-system/docs/assets/images/components/modal/opcao_selecao_01.png)
 
-![Opção Seleção 01](../../assets/images/components_img/modal/opcao_selecao_02.png)
+![Opção Seleção 01](/assets/design-system/docs/assets/images/components/modal/opcao_selecao_02.png)
 
 #### Comportamentos:
 
@@ -147,8 +129,6 @@ Exige que o usuário confirme uma opção antes que ela seja submetida, permitin
 - Para descartar ou cancelar uma escolha o usuário escolhe uma ação de negação.
 - Clicar fora do modal (scrim) cancela a modal;
 - As ações de confirmação e negação são obrigatórios.
-
----
 
 ## Modal de Entrada
 
@@ -158,7 +138,7 @@ Contém ações que requerem uma série de tarefas para serem concluídas tais c
 - Quando as alterações não são salvas instantaneamente;
 - Quando uma modal abrem modais adicionais de alerta ou de opção.
 
-![Entrada 01](../../assets/images/components_img/modal/entrada_01.png)
+![Entrada 01](/assets/design-system/docs/assets/images/components/modal/entrada_01.png)
 
 No celular, esse modal é apresentada em tela cheia (fullscreen).
 
@@ -169,15 +149,13 @@ No celular, esse modal é apresentada em tela cheia (fullscreen).
 - A ação de Confirmação é desativada até que todos os campos obrigatórios sejam preenchidos.
 - Clicar fora do modal (scrim) cancela a modal;
 
-![Entrada 02](../../assets/images/components_img/modal/entrada_02.png)
+![Entrada 02](/assets/design-system/docs/assets/images/components/modal/entrada_02.png)
 
 ### Tom de Voz
 
 Use verbos descritivos como "_Salvar_", "_Enviar_", "_Compartilhar_", "_Atualizar_" ou "_Criar_".
 
 Evite termos vagos como "Concluídos", "_Ok_" ou "_Fechar_".
-
----
 
 ## Comportamento
 
@@ -193,7 +171,7 @@ Esse tipo de modal só pode ser utilizado em situações onde o conteúdo não f
 
 O usuário deve ser capaz de cancelar modal a qualquer momento, por isso o botão de ação de negação é obrigatório.
 
-![Loading](../../assets/images/components_img/modal/loading.png)
+![Loading](/assets/design-system/docs/assets/images/components/modal/loading.png)
 
 Utilize esta opção com moderação. Prefira o uso de [toast](#) como uma opção menos disruptiva.
 
@@ -209,12 +187,12 @@ Evite rolagem na modal. Quando necessária, o título é fixado na parte superio
 
 Coloque um efeito de sombra na divisão entre o título e os botões sempre que existir conteúdo oculto.
 
-![Rolagem Inicial](../../assets/images/components_img/modal/rolagem_inicial.png)
+![Rolagem Inicial](/assets/design-system/docs/assets/images/components/modal/rolagem_inicial.png)
 
 Ações de Conhecimento ou de Confirmação podem estar desativadas até que o usuário consiga rolar até o final da rolagem.
 
-![Rolagem Intermediária](../../assets/images/components_img/modal/rolagem_intermediaria.png)
-![Rolagem Final](../../assets/images/components_img/modal/rolagem_final.png)
+![Rolagem Intermediária](/assets/design-system/docs/assets/images/components/modal/rolagem_intermediaria.png)
+![Rolagem Final](/assets/design-system/docs/assets/images/components/modal/rolagem_final.png)
 
 ### Cancelar
 
@@ -227,26 +205,24 @@ O modal pode ser cancelada:
 - Interagindo com o ícone de cancelar na parte superior a direita.
 - Modal de Alerta nunca deve ser cancelada (via scrim ou ícone de cancelar) mas pode ser fechada por uma ação.
 
----
-
 ## Especificação
 
 ### Modal de Alerta
 
-[![Especificação Alerta]../../assets/images/components_img/modal/alerta_duasacoes.png)](https://xd.adobe.com/spec/d3080804-6480-4394-6369-ba77a02ab2b3-a539/)
+![Especificação Alerta](/assets/design-system/docs/assets/images/components/modal/alerta_duasacoes.png)
 
 ### Modal de Opção
 
-[![Especificação Opção]../../assets/images/components_img/modal/opcao_lista.png)](https://xd.adobe.com/spec/d3080804-6480-4394-6369-ba77a02ab2b3-a539/screen/20d1186a-3882-486e-827e-78e07e6fad7b/Modal-Op-o-tipo-Lista)
+![Especificação Opção](/assets/design-system/docs/assets/images/components/modal/opcao_lista.png)
 
 ### Modal de Entrada
 
-[![Especificação Entrada]../../assets/images/components_img/modal/entrada_01.png)](https://xd.adobe.com/spec/d3080804-6480-4394-6369-ba77a02ab2b3-a539/screen/fc44659e-c5ad-450c-b905-adf3db25012f/Modal-Entrada-01)
+![Especificação Entrada](/assets/design-system/docs/assets/images/components/modal/entrada_01.png)
 
 ### Tamanho máximo e mínimo
 
 De acordo com a grid do ds.gov, o [card](#) do modal pode ocupar uma largura de até **8 colunas** ou **640px**. O tamanho mínimo é de **3 colunas** ou **220px**;
 
-![Tamanho Máximo](../../assets/images/components_img/modal/tamanho_maximo.png)
+![Tamanho Máximo](/assets/design-system/docs/assets/images/components/modal/tamanho_maximo.png)
 
-![Tamanho Mínimo](../../assets/images/components_img/modal/tamanho_minimo.png)
+![Tamanho Mínimo](/assets/design-system/docs/assets/images/components/modal/tamanho_minimo.png)

@@ -1,12 +1,10 @@
-# Paginação
-
 ## ANATOMIA
 
-![Pagination Tipografia Maior](../../assets/images/components_img/pagination/pagination-tipografia-maior.png)
+![Pagination Tipografia Maior](/assets/design-system/docs/assets/images/components/pagination/pagination-tipografia-maior.png)
 
-![Pagination Tipografia Menor](../../assets/images/components_img/pagination/pagination-tipografia-menor.png)
+![Pagination Tipografia Menor](/assets/design-system/docs/assets/images/components/pagination/pagination-tipografia-menor.png)
 
-![Pagination Mobile](../../assets/images/components_img/pagination/pagination-mobile.png)
+![Pagination Mobile](/assets/design-system/docs/assets/images/components/pagination/pagination-mobile.png)
 
 ## ORIENTAÇÕES DE USO
 
@@ -38,6 +36,6 @@ O uso do botão "Carregar mais resultados" é interessante para quando o usuári
 
 ### AS CORES INDICATIVAS DE ESTADOS CONFORME COLOCADO NA ANATOMIA DOS COMPONENTES
 
-![Pagination Estados](../../assets/images/components_img/pagination/pagination-estados.png)
+![Pagination Estados](/assets/design-system/docs/assets/images/components/pagination/pagination-estados.png)
 
-![Pagination Espaçamento](../../assets/images/components_img/pagination/pagination-espacamento.png)
+![Pagination Espaçamento](/assets/design-system/docs/assets/images/components/pagination/pagination-espacamento.png)

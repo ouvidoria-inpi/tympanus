@@ -1,5 +1,3 @@
-# Princípios do Design System
-
 ## Objetivos dos Princípios
 
 - guiar decisões de _design_;
@@ -25,8 +23,6 @@ Interfaces digitais dos sites, aplicativos e sistemas de governo devem utilizar 
 ### Colaboração
 
 O aprimoramento contínuo dos padrões apresentados pelo _Design System_ deve ser incremental, colaborativo e contínuo, baseado nas necessidades dos cidadãos e na experiência de aplicação já adquirida.
-
----
 
 ## Boas Práticas
 

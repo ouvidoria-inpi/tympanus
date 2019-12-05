@@ -1,5 +1,3 @@
-# Tipografia
-
 ## Rawline
 
 Para a apresentação dos elementos textuais do Design System do Governo Federal, somente uma família de fonte é utilizada: a **Rawline**. Sua escolha foi feita devido à diversidade de pesos da fonte que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
@@ -42,7 +40,7 @@ Interfaces digitais do governo devem utilizar a família de fonte definida sempr
 
 ## Estilos da Fonte Rawline
 
-![Lista de Estilo](../../assets/images/docs_img/fundamentos/tipografia/estilo.png)
+![Lista de Estilo](/assets/design-system/docs/assets/images/fundamentos/tipografia/estilo.png)
 
 ### Peso da fonte (Font-Weight)
 
@@ -66,11 +64,11 @@ Utilize os valores abaixo para representar os diferentes estilos da fonte Ralewa
 
 O estabelecimento de uma escala tipográfica é uma forma de determinar tamanhos tipográficos. A escala é importante porque estabelece a hierarquia e melhora a legibilidade criando harmonia e coesão entre os textos.
 
-Existem muitas escalas diferentes, mas para do Design System do Governo Federal foi escolhida a escala **Minor Third** (1,2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hiearquia de uma interface.
+Existem muitas escalas diferentes, mas dentro do Design System do Governo Federal foi escolhida a escala **Minor Third** (1,2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hiearquia de uma interface.
 
 O tamanho **fonte base** é de 14px (1em) e peso da fonte normal (400). A unidade **em** é uma medida relativa que permite que o usuário altere o tamanho de exibição do texto na interface. Com exceção da fonte base, utilize a unidade **em** para todos os outros valores da escala. Assim, caso o valor do tamanho base padrão seja alterado, toda a interface se adapta ao novo valor.
 
-![Escala Tipográfica](../../assets/images/docs_img/fundamentos/tipografia/escala.png)
+![Escala Tipográfica](/assets/design-system/docs/assets/images/fundamentos/tipografia/escala.png)
 
 **Dica:** utilize alguma calculadora [Type Scale](https://type-scale.com/) (como o site [Modular Scale](https://www.modularscale.com)) para calcular os tamanhos dentro da escala.
 
@@ -98,19 +96,19 @@ Utilize a tabela de estilo para determinar a hierarquia dos elementos dentro de 
 
 O valor **line-height** (entrelhinhamento) não se refere ao fonte base, e sim ao valor do próprio elemento textual. _**Exemplo:** No H1 a line-height é 115% do valor de 2,986em._
 
-| Tipo                    | Valor (em) | Valor (px) | Estilo                | Line-height | Outros estilos |
-| ----------------------- | ---------- | ---------- | --------------------- | ----------- | -------------- |
-| Texto padrão, Parágrafo | 1          | 14         | Regular (400)         | 1,45        | -              |
-| H1                      | 2,986      | 41,80      | Regular (400)         | 1,15        | -              |
-| H2                      | 2,488      | 34,84      | Regular (400)         | 1,15        | -              |
-| H3                      | 2,074      | 29,03      | Regular (400)         | 1,15        | -              |
-| H4                      | 1,728      | 24,19      | Regular (400)         | 1,15        | -              |
-| H5                      | 1,44       | 20,16      | Semi-bold (600)       | 1,15        | -              |
-| H6                      | 1,2        | 16,80      | Semi-bold (600)       | 1,15        | -              |
-| Label                   | 1          | 14         | Semi-bold (600)       | 1,45        | -              |
-| Fieldset                | 1,44       | 20,16      | Regular (400)         | 1,15        | -              |
-| Placeholder             | 1          | 14         | Regular (400) Itálico | 1,15        | -              |
-| Input                   | 1,2        | 16,80      | Regular (400)         | 1,15        | -              |
+| Tipo                    | Valor (em) | Valor (px) | Estilo                | Line-height | Outros estilos                                                     |
+| ----------------------- | ---------- | ---------- | --------------------- | ----------- | ------------------------------------------------------------------ |
+| Texto padrão, Parágrafo | 1          | 14         | Regular (400)         | 1,45        | cor: Gray 07, margin-bottom: 16px                                  |
+| H1                      | 2,986      | 41,80      | Regular (400)         | 1,15        | cor: Blue Primary Darken 25, margin-bottom: 32px                   |
+| H2                      | 2,488      | 34,84      | Regular (400)         | 1,15        | cor: Blue Primary Darken 25, margin-bottom: 20px, margin-top: 28px |
+| H3                      | 2,074      | 29,03      | Regular (400)         | 1,15        | cor: Blue Primary Darken 25, margin-bottom: 20px, margin-top: 28px |
+| H4                      | 1,728      | 24,19      | Regular (400)         | 1,15        | cor: Blue Primary Darken 25, margin-bottom: 20px, margin-top: 28px |
+| H5                      | 1,44       | 20,16      | Semi-bold (600)       | 1,15        | cor: Blue Primary Darken 25, margin-bottom: 16px, margin-top: 28px |
+| H6                      | 1,2        | 16,80      | Semi-bold (600)       | 1,15        | cor: Blue Primary Darken 25, margin-bottom: 16px, margin-top: 28px |
+| Label                   | 1          | 14         | Semi-bold (600)       | 1,45        | -                                                                  |
+| Fieldset                | 1,44       | 20,16      | Regular (400)         | 1,15        | -                                                                  |
+| Placeholder             | 1          | 14         | Regular (400) Itálico | 1,15        | -                                                                  |
+| Input                   | 1,2        | 16,80      | Regular (400)         | 1,15        | -                                                                  |
 
 ---
 

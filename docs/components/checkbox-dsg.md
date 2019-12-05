@@ -1,24 +1,22 @@
-# Checkbox
-
 ## ANATOMIA
 
 São elementos usados para seleção simultânea.
 Possui um texto de orientação que auxilia a escolha do usuário.
 Cada opção deve ser acompanhada de um texto que a descreva.
 
-![Checkbox Formatação Formulário](../../assets/images/components_img/checkbox/checkbox-formatacao-formulario.png)
+![Checkbox Formatação Formulário](/assets/design-system/docs/assets/images/components/checkbox/checkbox-formatacao-formulario.png)
 
-![Checkbox Formatação Mobile](../../assets/images/components_img/checkbox/checkbox-formatacao-mobile.png)
+![Checkbox Formatação Mobile](/assets/design-system/docs/assets/images/components/checkbox/checkbox-formatacao-mobile.png)
 
 ## ESTADOS
 
 Os checkboxes podem estar nos estados: habilitados/desselecionado; hover; selecionado e desabilitado.
 
-![Checkbox Estados Web](../../assets/images/components_img/checkbox/checkbox-estados-web.png)
+![Checkbox Estados Web](/assets/design-system/docs/assets/images/components/checkbox/checkbox-estados-web.png)
 
-![Checkbox Estados Mobile](../../assets/images/components_img/checkbox/checkbox-estados-mobile.png)
+![Checkbox Estados Mobile](/assets/design-system/docs/assets/images/components/checkbox/checkbox-estados-mobile.png)
 
-![Checkbox Espaçamento](../../assets/images/components_img/checkbox/checkbox-espacamento.png)
+![Checkbox Espaçamento](/assets/design-system/docs/assets/images/components/checkbox/checkbox-espacamento.png)
 
 ## USO
 
@@ -32,8 +30,6 @@ Dar preferência ao uso do texto em uma coluna, porém se houver necessidade de 
 
 Como, por exemplo, pode ocorrer nos filtros da busca avançada.
 
-* * *
-
 # Radio button
 
 ## ANATOMIA
@@ -42,11 +38,11 @@ São elementos usados para seleção exclusiva.
 Possui um texto de orientação que auxilia a escolha do usuário.
 Cada opção deve ser acompanhada de um texto que a descreva.
 
-![Radiobutton Formatação Formulário](../../assets/images/components_img/radiobutton/radiobutton-formatacao-formulario.png)
+![Radiobutton Formatação Formulário](/assets/design-system/docs/assets/images/components/radiobutton/radiobutton-formatacao-formulario.png)
 
-![Radiobutton Formatação Mobile](../../assets/images/components_img/radiobutton/radiobutton-formatacao-mobile.png)
+![Radiobutton Formatação Mobile](/assets/design-system/docs/assets/images/components/radiobutton/radiobutton-formatacao-mobile.png)
 
-![Radiobutton Espaçamento](../../assets/images/components_img/radiobutton/radiobutton-espacamento.png)
+![Radiobutton Espaçamento](/assets/design-system/docs/assets/images/components/radiobutton/radiobutton-espacamento.png)
 
 ## ESTADOS
 
@@ -54,9 +50,9 @@ Os radiobuttons podem estar nos estados: habilitados/desselecionados; hover; sel
 
 Os radiobuttons podem vir acompanhados de ícones ou imagens para uma compreensão mais rápida e maior engajamento do usuário.
 
-![Radiobutton Estados Web](../../assets/images/components_img/radiobutton/radiobutton-estados-web.png)
+![Radiobutton Estados Web](/assets/design-system/docs/assets/images/components/radiobutton/radiobutton-estados-web.png)
 
-![Radiobutton Estados Mobile](../../assets/images/components_img/radiobutton/radiobutton-estados-mobile.png)
+![Radiobutton Estados Mobile](/assets/design-system/docs/assets/images/components/radiobutton/radiobutton-estados-mobile.png)
 
 ## USO
 
