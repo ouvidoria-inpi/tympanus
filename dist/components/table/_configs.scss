@@ -1,0 +1,45 @@
+// Título da tabela
+$table-caption-font-size: 20px;
+$table-caption-margin: $spacing-1;
+$table-caption-padding: $spacing-1;
+
+// Estilos básicos da tabela
+$table-width: 100%;
+$table-fixed-column-width: 150px;
+
+$table-border: 1px solid $color-primary-pastel-2;
+
+$table-column-color: $color-gray-5;
+$table-column-font-size: 14px;
+$table-column-font-weight: 500;
+$table-column-padding: $spacing-3;
+$table-column-vertical-align: top;
+
+$table-thead-background: $color-gray-1;
+$table-thead-color: $color-primary-darken-15;
+$table-thead-font-size: 16px;
+$table-thead-font-weight: 700;
+$table-thead-tablet-padding: $spacing-4;
+$table-thead-desktop-padding: $spacing-5;
+$table-thead-tv-padding: $spacing-6;
+
+$table-hover: $color-primary-pastel-1;
+$table-hover-text: $color-gray-7;
+
+$table-active: $color-primary-lighten-15;
+$table-active-inverse: $color-white;
+
+// Coluna de ações
+$table-actions-color: $color-primary;
+$table-actions-mobile-padding: $spacing-2;
+$table-actions-desktop-padding: $spacing-1;
+
+$table-actions-list-background: $color-white;
+$table-actions-list-font-size: 16px;
+$table-actions-list-shadow: 0 6px 6px rgba($color-black, 0.08);
+$table-actions-list-width: 120px;
+$table-actions-list-zindex: 1;
+
+// Seleção de linhas da tabela
+$table-length-label: 400;
+$table-length-margin: $spacing-1 0;

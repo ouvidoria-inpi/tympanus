@@ -1,0 +1,30 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+/*!
+ * input - 0.3.0 */
+
+// Carregar dependências
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+.#{$prefix}input {
+  @include input-component;
+  // Feedbacks
+  &.is-valid {
+    & + .feedback {
+      @include feedback($color-success);
+    }
+  }
+  &.is-invalid {
+    & + .feedback {
+      @include feedback($color-danger);
+    }
+  }
+  // Texto de ajuda
+  & + .help,
+  & + .feedback + .help {
+    @include font-suport-text-for-input;
+  }
+}

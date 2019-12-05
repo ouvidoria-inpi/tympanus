@@ -1,0 +1,112 @@
+@mixin alert {
+  background: $color-gray-7;
+  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+  color: $color-white;
+  display: flex;
+  margin-bottom: $alert-padding;
+  .icon {
+    align-items: center;
+    display: flex;
+    font-size: 175%;
+    justify-content: center;
+    width: $alert-icon-width;
+    img {
+      max-width: 32px;
+    }
+  }
+  .content {
+    flex: 1;
+    padding: $alert-padding;
+    strong {
+      font-weight: 600;
+    }
+    a {
+      color: $color-white;
+      text-decoration: underline;
+    }
+    * { // sass-lint:disable-line no-universal-selectors
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .close {
+    align-items: flex-start;
+    display: flex;
+    button {
+      background: transparent;
+      border: 0;
+      color: $color-white;
+      padding: $alert-close-padding;
+    }
+  }
+  // Breakpoint acima de sm
+  @include media-breakpoint-up(sm) {
+    background: transparent;
+    color: $color-gray-7;
+    .icon {
+      background: $color-gray-7;
+      color: $color-white;
+    }
+    .content {
+      a {
+        color: $color-gray-7;
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+    .close {
+      button {
+        color: $color-gray-7;
+      }
+    }
+  }
+  // Estados
+  @include alert-states;
+}
+
+@mixin alert-states {
+  @each $state, $color in (success, $color-success), (danger, $color-danger), (warning, $color-warning), (info, $color-info) {
+    &.is-#{$state} {
+      // Breakpoint acima de sm
+      @include media-breakpoint-up(sm) {
+        background: transparent;
+        .icon {
+          background: $color;
+        }
+        .content,
+        .close {
+          background: scale-color($color, $lightness: 90%);
+        }
+        @if ($state == warning) {
+          .icon {
+            color: $color-gray-7;
+          }
+          .close {
+            button {
+              color: $color-gray-7;
+            }
+          }
+        }
+      }
+      background: $color;
+      // Regra especial para warning
+      @if ($state == warning) {
+        &,
+        .content a, // sass-lint:disable-line force-element-nesting
+        .close button { // sass-lint:disable-line force-element-nesting
+          color: $color-gray-7;
+        }
+        @include media-breakpoint-up(sm) {
+          .content a { // sass-lint:disable-line force-element-nesting
+            color: $color-gray-7;
+            &:hover {
+              color: $link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

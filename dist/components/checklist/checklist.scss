@@ -1,0 +1,19 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+/*!
+ * check-input - 0.3.1 */
+
+// Carregar dependências
+@import "../input/configs";
+@import "../input/mixins";
+@import "../checkbox/configs";
+@import "../checkbox/mixins";
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+
+.#{$prefix}checklist {
+  @include checklist;
+}

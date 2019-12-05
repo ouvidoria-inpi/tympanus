@@ -1,0 +1,38 @@
+/*!
+ * login-social - 0.3.0 */
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.br-login-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.br-login-social .br-divider {
+  width: 100%;
+}
+
+.br-login-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.br-login-social li {
+  margin: 0;
+  padding: 0;
+}
+
+.br-login-social .br-button + .br-button {
+  margin-left: 24px;
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=login-social.css.map */
