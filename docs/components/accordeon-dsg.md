@@ -65,7 +65,7 @@ No acordeão negativo os itens também aparecem separados entre si por uma linha
 
 Seguem as métricas definidas para os espaçamentos dos acordeões. Todas as medidas foram definidas com valores múltiplos de 4px.
 
-![Acordeão_Espaçamentos](/assets/design-system/docs/assets/images/components/accordeon/accordeon_espaçamentos.png)
+![Acordeão_Espaçamentos](/assets/design-system/docs/assets/images/components/accordeon/accordeon_espacamentos.png)
 
 ### Tipografia e Cor
 
