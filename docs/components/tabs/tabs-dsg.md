@@ -16,25 +16,25 @@ Cada aba deve ter um label (rótulo) que a defina de forma clara e sintética. P
 
 ### 1 | Abas Padrão
 
-![Exemplo padrão de abas](../../assets/images/components_img/abas/abas-padrao.png)
+![Exemplo padrão de abas](images/tabs-padrao.png)
 
 ### 2 | Abas com Contadores
 
 Os contadores devem aparecer abaixo dos rótulos e alinhados ao centro com os mesmos.
 
-![Nas abas com contadores os números aparecem abaixo do rótulo](../../assets/images/components_img/abas/abas-contadores.png)
+![Nas abas com contadores os números aparecem abaixo do rótulo](images/tabs-contadores.png)
 
 ### 3 | Abas Deslocáveis
 
 Utilizar essa opção quando a quantidade de abas exceder a largura da tela ou dispositivo. Nesse caso ao passar o mouse em cima da aba da direita todas as outras se deslocarão para esquerda, dando espaço às abas que estavam inicialmente escondidas. Nesse caso, o rótulo da última aba, pode aparecer truncado (com reticências), sinalizando ao usuário que há uma continuação. São bastante úteis para interfaces mobiles.
 
-![Nas abas com contadores os números aparecem abaixo do rótulo](../../assets/images/components_img/abas/abas-delocaveis.png)
+![Nas abas com contadores os números aparecem abaixo do rótulo](images/tabs-delocaveis.png)
 
 ## Estados
 
 Os estados das abas servem para dar feedback ao usuário sobre as ações que estão acontecendo quando há uma interação com o elemento.
 
-![Nas abas com contadores os números aparecem abaixo do rótulo](../../assets/images/components_img/abas/abas-estados.png)
+![Nas abas com contadores os números aparecem abaixo do rótulo](images/tabs-estados.png)
 
 ### A| Normal
 
@@ -68,24 +68,24 @@ Os textos dos botões precisam ser formatados em letras minúsculas com a primei
 
 E o alinhamento entre o rótulo da aba e os contadores deve ser centralizado.
 
-![Alinhamento centralizado entre rótulos e contadores](../../assets/images/components_img/abas/abas-alinhamento.png)
+![Alinhamento centralizado entre rótulos e contadores](images/tabs-alinhamento.png)
 
 ## Espaçamento
 
 Observe as métricas definidas para os espaçamentos das abas.
 
-![Espaçamento externo máximo de 52px entre rótulos e espaçamento interno de 24px no rótulo](../../assets/images/components_img/abas/abas-espacamento-1.png)
+![Espaçamento externo máximo de 52px entre rótulos e espaçamento interno de 24px no rótulo](images/tabs-espacamento-1.png)
 
-![Sugestão de múltiplos 4 para adequar espaçamento entre rótulos](../../assets/images/components_img/abas/abas-espacamento-2.png)
+![Sugestão de múltiplos 4 para adequar espaçamento entre rótulos](images/tabs-espacamento-2.png)
 
-![Espaçamento mínimo de 24px entre cada rótulo](../../assets/images/components_img/abas/abas-espacamento-3.png)
+![Espaçamento mínimo de 24px entre cada rótulo](images/tabs-espacamento-3.png)
 
-![Legendas usadas para ilustrar espaçamentos](../../assets/images/components_img/abas/abas-legendas.png)
+![Legendas usadas para ilustrar espaçamentos](images/tabs-legendas.png)
 
 ## Poucos itens de abas - espaçamento
 
-![Usar espaçamento de 52px entre rótulos para poucos itens](../../assets/images/components_img/abas/abas-espacamento-4.png)
+![Usar espaçamento de 52px entre rótulos para poucos itens](images/tabs-espacamento-4.png)
 
 ## Tipografia e Cor
 
-![Tipografia e Cor das abas](../../assets/images/components_img/abas/abas-tipografia.png)
+![Tipografia e Cor das abas](images/tabs-tipografia.png)
