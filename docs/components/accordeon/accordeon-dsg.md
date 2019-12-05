@@ -4,19 +4,19 @@
 
 O acordeão positivo pode ser aplicado em sistemas e também no Portal Único. Ele deve vir sobre background claro e segue a seguinte formatação:
 
-![Acordeão_Positivo](../../assets/images/components_img/accordeon/Acordeão_Positivo.png)
+![Acordeão_Positivo](images/accordeon-positivo.png)
 
 #### 2 | Acordeão Negativo
 
 O acordeão negativo é aplicado sobre o rodapé do Portal Único. Ele deve vir sobre background azul escuro e a tipografia deve se apresentar de forma maíuscula destacando os itens sobre o background escuro. Os ícones para expandir o item, aparecerem à direita do componente.
 
-![Acordeão_Negativo](../../assets/images/components_img/accordeon/Acordeão_Negativo.png)
+![Acordeão_Negativo](images/accordeon-negativo.png)
 
 ### Estados do Acordeão
 
 Estados do Acordeão Os estados dos acordeão servem para dar feedback ao usuário sobre a intereção do usuário ao expandir, recolher, ou passar o mouse por cima de um item da lista.
 
-![Acordeão_Estado](../../assets/images/components_img/accordeon/Acordeão_Estado.png)
+![Acordeão_Estado](images/accordeon-estado.png)
 
 #### A | Normal
 
@@ -53,26 +53,26 @@ Os textos dos itens expansíveis serão exibidos em maiúsculas, para facilitar 
 
 Os itens aparecem separados por uma linha de contorno cinza e os ícones aparecem alinhados entre si, antes do texto.
 
-![Acordeão_Alinhamento_Positivo](../../assets/images/components_img/accordeon/Acordeão_Alinhamento_Positivo.png)
+![Acordeão_Alinhamento_Positivo](images/accordeon-alinhamento-positivo.png)
 
 #### 2 | Acordeão Negativo
 
 No acordeão negativo os itens também aparecem separados entre si por uma linha de contorno branca e os itens de texto vêm antes que os ícones. Esses aparecem do lado direito do componente.
 
-![Acordeão_Alinhamento_Negativo](../../assets/images/components_img/accordeon/Acordeão_Alinhamento_Negativo.png)
+![Acordeão_Alinhamento_Negativo](images/accordeon-alinhamento-negativo.png)
 
 ### Espaçamentos
 
 Seguem as métricas definidas para os espaçamentos dos acordeões. Todas as medidas foram definidas com valores múltiplos de 4px.
 
-![Acordeão_Espaçamentos](../../assets/images/components_img/accordeon/Acordeão_Espaçamentos.png)
+![Acordeão_Espaçamentos](images/accordeon-espacamentos.png)
 
 ### Tipografia e Cor
 
 #### 1 | Acordeão Positivo
 
-![Acordeão_Positivo_Tipografia](../../assets/images/components_img/accordeon/Acordeão_Positivo_Tipografia.png)
+![Acordeão_Positivo_Tipografia](images/accordeon-positivo-tipografia.png)
 
 #### 2 | Acordeão Negativo
 
-![Acordeão_Negativo_Tipografia](../../assets/images/components_img/accordeon/Acordeão_Negativo_Tipografia.png)
+![Acordeão_Negativo_Tipografia](images/accordeon-negativo-tipografia.png)
