@@ -1,0 +1,286 @@
+// Carregar variáveis do DS-Gov
+@import "../../base/dsgov-base";
+
+/*!
+ * table - 0.3 */
+
+// Carregar dependências
+@import "../button/configs";
+@import "../button/mixins";
+@import "../checkbox/configs";
+@import "../checkbox/mixins";
+@import "configs";
+@import "mixins";
+
+// Estilos específicos
+.#{$prefix}table {
+  @include table;
+  @include table-caption;
+  @include table-row-actions;
+  @include table-length;
+  .table {
+    overflow-x: auto;
+  }
+}
+
+.br-table{
+
+  .selecao{
+    background: $color-primary;
+    color: $color-white;
+    padding: 16px;
+    margin: 0;
+    font-weight: 600;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    &.is-visible{
+      display: flex;
+      transition: display  1s linear;
+    }
+    &.is-invisible{
+      display: none;
+      transition: display  1s linear;
+    }
+  }
+
+  .search-bar{
+    background: $color-primary;
+    padding: 10px;
+    margin: 0;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    &.is-visible{
+      display: flex;
+    }
+    &.is-invisible{
+      display: none;
+    }
+  }
+   
+  #close {
+    position: absolute;
+    right: 3%;
+    top: 20px;
+    cursor: pointer;
+    color:$color-white;
+  }
+  .resultado{
+    width: 96%;
+  }
+  #result {
+    width: 100%;
+    font-weight: 500;
+  }
+  #find {
+    color:$color-primary;
+    position: absolute;
+    z-index: 10;
+    right: 65px;
+    top: 20px;
+    cursor: pointer;
+  }
+  .title-bar{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    &.is-visible{
+      display: flex;
+    }
+    &.is-invisible{
+      display: none;
+    }
+  }
+
+  tr td .br-check input[type="checkbox"]:checked{
+    background: $color-primary-lighten-15;
+    color: $color-white;
+  }
+
+  .divisor-vertical{
+    border-left: 1px solid #ccc;
+    height: 24px;
+    opacity: 1;
+    padding: 0 5px;
+    margin-left: 10px;
+  }
+  .arrows-pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  th{
+    padding: 16px;
+    &:hover{
+      background-color: $color-primary-pastel-1;
+      cursor: pointer;
+    }  
+  }
+  .actions{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-weight: 600;
+    #table-search, #menu-items{
+      color: $color-primary;
+      cursor: pointer;
+      padding: 10px 11px;
+    }
+    #lixeira, #download{
+      padding: 3px 10px;
+      cursor: pointer;
+    }
+  }
+  .table-title{
+    color: $color-gray-6;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+  }
+  #navigation-bar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    span, div{
+      font-size: 14px;
+    }
+    .items-right{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 45%;
+      .fa.fa-angle-right, .fa.fa-angle-left{
+        color: $color-primary;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+      }
+    }
+    .items-left{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 55%;
+    }
+    .items-left, .items-right{
+      .br-select .select-selected{
+        border: none;
+        &:focus{
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px){
+  .br-table table thead th{
+    padding: 16px;
+  }
+}
+
+
+@media (hover:hover){
+  .br-table table tbody tr:hover{
+    background:transparent;
+    cursor: auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+	
+.br-table {
+  table td{
+    border-bottom: none;
+    color: $font-system-default-text-color;
+  }
+  #navigation-bar .items-left{
+    display: none;
+  }
+  .resultado{
+    width: 96%;
+  }
+  #result {
+    width: 100%;
+    font-weight: 500;
+  }
+  #find{
+    right:35px;
+  }
+  .selecao{
+    font-size: 12px;
+  }
+  .table-title{
+    font-size: 15px;
+  }
+}
+
+td[disabled]:hover, tr[disabled]:hover {
+  background: transparent;
+}
+
+// .br-table table tbody tr:hover{
+//   background:transparent;
+//   cursor: auto;
+//   color: $font-portal-title-color;
+// }
+/***faz com que a tabela não seja mais disposta como linha e coluna***/
+.table-responsive table, 
+.table-responsive thead, 
+.table-responsive tbody, 
+.table-responsive th, 
+.table-responsive td, 
+.table-responsive tr { 
+		display: block; 
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+
+  .table-responsive thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+.table-responsive thead th{
+  color: $font-portal-title-color;
+} 
+
+.table-responsive tr { 
+  box-shadow: 0 2px 4px #00000033;
+  margin: 5px 0;
+}
+ 
+.table-responsive td { 
+  /*** Td transforma em linha ***/
+  border: none;
+  border-bottom: none; 
+  position: relative;
+  padding-left: 50%; 
+  white-space: normal;
+  text-align:left;
+  color: $font-system-default-text-color;
+}
+
+// .table-responsive td:hover{
+//   color: $font-system-default-text-color;
+// }
+
+
+.table-responsive td:before { 
+		position: absolute;
+		top: -5px;
+		left: 15px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+    font-weight: bold;
+    content: attr(data-title); 
+    color: $font-portal-title-color;
+	}
+   
+  
+}

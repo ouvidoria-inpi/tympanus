@@ -42,10 +42,10 @@
       }
       &:hover {
         background: $table-hover;
+        cursor: pointer;
         th,
         td {
-          border-color: $table-active;
-          box-shadow: 0 -1px 0 $table-active;
+          border-color: $color-primary-pastel-1;
           color: $table-hover-text;
         }
       }

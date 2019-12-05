@@ -26,12 +26,12 @@
 
 .br-table table tbody tr:hover {
   background: #dbe8fb;
+  cursor: pointer;
 }
 
 .br-table table tbody tr:hover th,
 .br-table table tbody tr:hover td {
-  border-color: #2670e8;
-  box-shadow: 0 -1px 0 #2670e8;
+  border-color: #dbe8fb;
   color: #333333;
 }
 
