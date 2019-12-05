@@ -24,7 +24,7 @@ As tabelas são estruturadas em:
 4. **Linhas**
 5. **Barra de Paginação** (_opcional_)
 
-![Tabela Desktop](images/desktop_tablet.png)
+![Tabela Desktop](images/desktop-tablet.png)
 
 ### Celulares
 
@@ -157,7 +157,7 @@ Evite rolagem em tabelas. Quando necessário, a Barra Superior e o Cabeçalho pe
 
 No caso de celular, tanto a Barra Superior como a Barra de Paginação ficam fixas.
 
-![Rolagem Celular](images/rolagem_celular.png)
+![Rolagem Celular](images/rolagem-celular.png)
 
 Os itens fixos garantem que os dados da tabela podem ser comparados em qualquer contexto de visualização.
 
@@ -167,13 +167,13 @@ Quando uma tela é redimensionada, a exibição dos itens de ações na Barra Su
 
 As ações são movidas para o menu flutuante da direita para a esquerda, tornando a ação mais usada a última a ser movida para o menu flutuante.
 
-![Responsividade Barra Superior](images/responsividade_barrasuperior.png)
+![Responsividade Barra Superior](images/responsividade-barrasuperior.png)
 
 As Linhas da tabela são transformadas em Cards e as Colunas (relacionadas a Linha) em Listas dentro do card.
 
 Textos (tanto do cabeçalho como das linhas) não podem acupar mais de uma linha. Os textos devem ser contraídos com reticências, e ao passar o mouse sobre o texto contraído é revelado o texto completo pelo uso de [tooltip](#). Para celular, não existe esta restrição.
 
-![Responsividade Texto](images/responsividade_texto.png)
+![Responsividade Texto](images/responsividade-texto.png)
 
 ### Coluna Hover
 
@@ -182,7 +182,7 @@ Quando o usuário passa o mouse sobre o cabeçalho de uma coluna:
 -   Um [tooltip](#) pode exibir o nome completo da coluna (caso esteja contraido) ou uma descrição detalhada;
 -   Se a ordenação estiver ativada, um ícone de seta dupla aparecerá ao lado do cabeçalho da coluna;
 
-![Cabeçalho Hover](images/coluna_hover.png)
+![Cabeçalho Hover](images/coluna-hover.png)
 
 ### Linha Hover (Desktop)
 
@@ -192,9 +192,9 @@ As linhas da tabela pode possuir o estado hover, podendo ou não ter uma ação 
 -   Se não tiver ação, o cursor do mouse não deve ser alterado;
 -   Se o cursor do mouse estiver em algum elemento interativo dentro da linha (link ou botão), a linha não deve receber hover enquanto o mouse estiver sobre estes itens;
 
-![Linha Hover](images/linha_hover.png)
+![Linha Hover](images/linha-hover.png)
 
-![Card Hover](images/card_hover.png)
+![Card Hover](images/card-hover.png)
 
 > **Não Faça**: Cards nunca devem ter efeito hover.
 
@@ -212,7 +212,7 @@ Possui 2 estados básicos (Desmarcado e Selecionado) e outro adicional (Indeterm
 -   **Indeterminado**: significa que alguns checkboxes estão selecionados. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
 -   **Selecionado**: significa que todos os checkboxes da página atual está selecionado. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
 
-![Checkbox Estados](images/checkbox_estados.png)
+![Checkbox Estados](images/checkbox-estados.png)
 
 #### Nas Linhas e Cards
 
@@ -230,14 +230,14 @@ As Linhas podem servir de alvo para selecionar o checkbox, mas os [cards](#) nun
 
 No celular, não existe cabeçalho. Neste caso, quando um dos cards for selecionado, um checkbox aparece na Barra de Contexto para possibilitar a ação de deselecionar todos os cards selecionados.
 
-![Card Checkbox](images/card_checkbox.png)
+![Card Checkbox](images/card-checkbox.png)
 
 Ao selecionar um linha ou card, pode ser útil exibir uma informação de quantos itens estão selecionados na tabela. Esse informação pode ser apresentado como um botão cuja ação pode ser refletida como uma busca, a qual:
 
 -   Exibe somente as linhas ou cards selecionados;
 -   Após a busca, deve ser possível "cancelar" a busca, voltando a exibir o conteúdo da tabela de acordo com a página atual;
 
-![Contextual Filtro](images/barracontextual_filtro.png)
+![Contextual Filtro](images/barracontextual-filtro.png)
 
 ### Itens de Ação
 
@@ -255,12 +255,12 @@ Menu flutuante é usado quando uma quantidade de ações são extensas ou quando
 
 O menu flutuante pode ser usado para exibir algumas ações ou todas elas. A escolha de ve ser feita baseada na quantidade de informação da tabela (como caracteres e colunas) e do conhecimento hierárquico entre dados e ações.
 
-![Ações Menu FLutuante](images/acoes_menuflutuante.png)
-![Ações Linha](images/acoes_quantidade.png)
+![Ações Menu FLutuante](images/acoes-menuflutuante.png)
+![Ações Linha](images/acoes-quantidade.png)
 
 No Desktop, os itens podem aparecer ao passar o mouse sobre a linha referente. Este modo é utilizado quando a tabela possui um número grande de colunas e quando nenhuma ação (mesmo menu flutuante) deve competir com o conteúdo da tabela.
 
-![Ações Desktop](images/acoes_desktop.png)
+![Ações Desktop](images/acoes-desktop.png)
 
 #### Ordenando as ações
 
@@ -272,7 +272,7 @@ As ações entram e saem do menu flutuante à medida que a largura da Barra Supe
 
 Tooltips devem ser usadas em todas as ações que são apresentadas somente por ícone.
 
-![Ações Tooltip](images/acoes_tooltip.png)
+![Ações Tooltip](images/acoes-tooltip.png)
 
 #### Ícones padrão das ações
 
@@ -306,7 +306,7 @@ Em Cards a ação possui duas opções (que podem ser usadas simultaneamente):
 -   **Expandir as informações do card**: localizada à direita, na parte superior do card. Quando retraído, esconde as informações do card, exibindo somente o primeiro item da lista (podendo ser alterado caso o card sofra alguma ordenação). Quando expandido, todas as listas do card são exibidas, podendo ou não exibir as informações adicionais do card.
 -   **Visualizar informações adicionais**: localizada no final do card, após um separador. Ela é exibida com o rótulo "Mais informações" e ícone. Exibe as informações adicionais encontradas no card. É a mesma informação que é contraída na tabela por linhas.
 
-![Expandir Card](images/expandir_card.png)
+![Expandir Card](images/expandir-card.png)
 
 As informações exibidas após a ação expandir (informações adicionais) devem ser diagramadas com cautela. O Excesso de informação e elementos interativos pode confundir o usuário, atrapalhando a leitura e o entendimento dos dados encontrados na tabela. Evite componentes como: tabela, card, arccordion ou qualquer outro componente complexo responsável por organizar, ordenar grande quantidade de informação.
 
@@ -333,7 +333,7 @@ Para indicar qual coluna está ordenada, exiba um ícone com seta para baixo (de
 
 A ausência de setas ou uso de seta dupla (com estado Hover) significa que a coluna está com ordenação padrão.
 
-![Cabeçalho Hover](images/coluna_hover.png)
+![Cabeçalho Hover](images/coluna-hover.png)
 
 Toda a área da célula deve responder a entrada do usuário (touch ou clique).
 
@@ -346,8 +346,8 @@ Os Cards podem ser ordenados com uso de item de ação localizado na Barra Super
 -   O primeiro item da lista dos cards passa a ser o referente ao rótulo escolhido na ordenação;
 -   Todas os cards se ordenam conforme a nova ordenação;
 
-![Ordenar Card - Parte 1](images/ordenar_card01.png)
-![Ordenar Card - Parte 2](images/ordenar_card02.png)
+![Ordenar Card - Parte 1](images/ordenar-card01.png)
+![Ordenar Card - Parte 2](images/ordenar-card02.png)
 
 ### Filtro
 
@@ -357,13 +357,13 @@ Filtros permitem que o usuário pesquise valores específicos em cada coluna ou 
 
 Através do item de ação na barra superior, o usuário podem acessar aos filtros que ficam localizado no cabeçalho de cada coluna. Os componentes de entrada vão depender do tipo de dado que será pesquisado na coluna. A pesquisa é feita sem necessidade de uma ação adicional de confirmação, e o cancelamento pode ser feito ao deixar o componente de entrada sem informação ao interagir novamente com o item de ação respecitivo na barra superior, caso exista.
 
-![Filtro Desktop](images/filtro_desktop.png)
+![Filtro Desktop](images/filtro-desktop.png)
 
 #### Celular
 
 Os componentes de entrada são acessados somente pelo botão ação. Após isso, uma nova tela onde o usuário pode preencher os campos e ações relacionadas. Após a busca, os termos pesquisados aparecem na barra superior na forma de componentes Chips. Os termos pesquisados podem ser cancelados pela ação fechar do chip ou na tela de filtro.
 
-![Filtro Celular](images/filtro_celular.png)
+![Filtro Celular](images/filtro-celular.png)
 
 ### Foco
 
@@ -389,7 +389,7 @@ Para realizar busca de dados dentro da tabela:
 -   Uma ação de "fechar" deve está disponível para o usuário, caso ele queira desistir da busca;
 
 ![Busca](images/busca.png)
-![Busca Celular](images/busca_celular.png)
+![Busca Celular](images/busca-celular.png)
 
 ### Redimensionar Coluna
 
@@ -421,11 +421,11 @@ O usuário não pode interagir com os elementos da tabela enquanto o carregament
 
 ### Tablet
 
-[![Especificação para Tablet](images/spc_tablet.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/screen/d751b4f2-4e8f-462a-9653-f4995b1dee16/Tabela-Tablet/)
+[![Especificação para Tablet](images/spc-tablet.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/screen/d751b4f2-4e8f-462a-9653-f4995b1dee16/Tabela-Tablet/)
 
 ### Celular
 
-[![Especificação para Celular](images/spc_celular.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/screen/bebd0936-f99b-4ced-8ca9-4c332228861e/Tabela-Celular/)
+[![Especificação para Celular](images/spc-celular.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/screen/bebd0936-f99b-4ced-8ca9-4c332228861e/Tabela-Celular/)
 
 ### Tamanho mínimo (Desktop)
 
@@ -433,4 +433,4 @@ O usuário não pode interagir com os elementos da tabela enquanto o carregament
 -   Caso tenha algum ícone, como de ordenação, acrescente **24px** do ícone (área mínimo de interação com mouse);
 -   Espaçamento Interno entre as **extreminadas** da coluna são de **16px**;
 
-![Espaçamento Mínimo - Desktop](images/spc_desktop_minimo.png)
+![Espaçamento Mínimo - Desktop](images/spc-desktop-minimo.png)

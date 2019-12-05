@@ -39,7 +39,7 @@ Usado principalmente quando um novo elemento surge na tela, e necessita de uma a
 
 O **scrim vazado** pode ser utilizado para essa função, onde o elemento de atenção deve ser concentrado na área de fresta do scrim.
 
-![Scrim Inverso de Foco ](images/inverso_foco.png)
+![Scrim Inverso de Foco ](images/inverso-foco.png)
 
 O scrim recebe as seguintes especificações:
 
@@ -51,9 +51,9 @@ O scrim recebe as seguintes especificações:
 Usados como overlay para melhorar constraste do texto sobre qualquer superfície, seja ela imagem ou não.
 Pode ser usado parcial ou totalmente sobre somente um elemento/componente.
 
-![Scrim Legibilidade Parcial](images/legibilidade_parcial.png)
+![Scrim Legibilidade Parcial](images/legibilidade-parcial.png)
 
-![Scrim Legibilidade Total](images/legibilidade_total.png)
+![Scrim Legibilidade Total](images/legibilidade-total.png)
 
 O scrim recebe as seguintes especificações:
 
@@ -66,13 +66,13 @@ Por possuir um comportamento que impede a interação de elemento soprepostos, o
 
 A principal característica neste modo, é que o elemento que recebe o scrim ficará visualmente desativado, simulando transparência em relação ao fundo.
 
-![Scrim Inibição](images/inibicao_01.png)
+![Scrim Inibição](images/inibicao-01.png)
 
 > Utilize o scrim de inibição sobre opções que ainda não podem ser obtidas pelo o usuário.
 
 Use com cautela esse tipo de scrim, pois os elementos sob ela não estão realmente em estado desativado. Use em situações onde uma grande área deve ser temporariamente desativada e prefira configurar o elemento para o estado desativado, ao invés deste recurso.
 
-![Scrim Inibição](images/inibicao_02.png)
+![Scrim Inibição](images/inibicao-02.png)
 
 > **Cuidado**: não crie obstáculos para o usuário realizar uma busca ou utilizar a área de acessibilidade. Deve existir uma boa justificativa para impedir acesso a essas áreas de suporte.
 
