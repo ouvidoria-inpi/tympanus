@@ -1,6 +1,6 @@
 ## Orientação de Uso
 
-![Inputs_Orientação](../../assets/images/components_img/inputs/Inputs_Orientação.png)
+![Inputs_Orientação](images/input-orientacao.png)
 
 #### 1 | Rótulos
 
@@ -18,7 +18,7 @@ Alguns também podem ter um ícone no canto direito. Por exemplo: o input de sen
 
 As alturas dos campos de input devem variar em função de seus usos:
 
-![Inputs_Alturas_Campos](../../assets/images/components_img/inputs/Inputs_Alturas_Campos.png)
+![Inputs_Alturas_Campos](images/input-alturas-campos.png)
 
 ## Rótulo e Informações Adicionais
 
@@ -27,7 +27,7 @@ Entretanto, quando necessário, ele também pode exibir um texto com informaçõ
 
 ### Inputs com texto auxiliar ao preenchimento
 
-![Inputs_Auxiliar_Preenchimento](../../assets/images/components_img/inputs/Inputs_Auxiliar_Preenchimento.png)
+![Inputs_Auxiliar_Preenchimento](images/input-auxiliar-preenchimento.png)
 
 ## Mensagens de Feedback Contextual
 
@@ -35,43 +35,43 @@ Entretanto, quando necessário, ele também pode exibir um texto com informaçõ
 
 A mensagem de erro (feedback contextual) deve ser o mais sucinta possível, de preferência não ultrapassando uma linha da mesma largura do campo de texto.
 
-![Inputs_Mensagem_Erro](../../assets/images/components_img/inputs/Inputs_Mensagem_Erro.png)
+![Inputs_Mensagem_Erro](images/input-mensagem-erro.png)
 
 ### Mensagens de Crítica
 
 A validação dos campos de texto deve exibir a mensagem de suporte abaixo do campo, juntamente com o ícone correspondente.
 
-![Inputs_Mensagem_Critica](../../assets/images/components_img/inputs/Inputs_Mensagem_Critica.png)
+![Inputs_Mensagem_Critica](images/input-mensagem-critica.png)
 
 ## Tipos de Inputs
 
 ### Inputs - Estado normal / habilitado
 
-![Inputs_Estado_Normal](../../assets/images/components_img/inputs/Inputs_Estado_Normal.png)
+![Inputs_Estado_Normal](images/input-estado-normal.png)
 
 ### Inputs - Estado ativo
 
-![Inputs_Estado_Ativo](../../assets/images/components_img/inputs/Inputs_Estado_Ativo.png)
+![Inputs_Estado_Ativo](images/input-estado-ativo.png)
 
 ### Inputs com texto auxiliar ao preenchimento
 
-![Inputs_Estado_Auxiliar](../../assets/images/components_img/inputs/Inputs_Estado_Auxiliar.png)
+![Inputs_Estado_Auxiliar](images/input-estado-auxiliar.png)
 
 ### Validação do Input com texto auxiliar ao preenchimento
 
-![Inputs_Estado_Validação](../../assets/images/components_img/inputs/Inputs_Estado_Validação.png)
+![Inputs_Estado_Validação](images/input-estado-validacao.png)
 
 ### Inputs validação
 
-![Inputs_Validação](../../assets/images/components_img/inputs/Inputs_Validação.png)
+![Inputs_Validação](images/input-validacao.png)
 
 ### Inputs estados aviso caps ligado
 
-![Inputs_Validação_CapsLock](../../assets/images/components_img/inputs/Inputs_Validação_CapsLock.png)
+![Inputs_Validação_CapsLock](images/input-validacao-capslock.png)
 
 ### Inputs desabilitados
 
-![Inputs_Validação_Desabilitado](../../assets/images/components_img/inputs/Inputs_Validação_Desabilitado.png)
+![Inputs_Validação_Desabilitado](images/input-validacao-desabilitado.png)
 
 ## Anatomia
 
@@ -79,7 +79,7 @@ A validação dos campos de texto deve exibir a mensagem de suporte abaixo do ca
 
 São elementos usados pelos usuários para digitar textos. Devem ser acompanhados de rótulos que descrevam a informação que o usuário deve digitar.
 
-![Inputs_CamposTexto](../../assets/images/components_img/inputs/Inputs_CamposTexto.png)
+![Inputs_CamposTexto](images/input-campos-texto.png)
 
 ## Estados
 
@@ -87,22 +87,22 @@ Os campos de texto podem estar nos estados: habilitado; ativo com foco e desabil
 
 ### Estado habilitado
 
-![Inputs_Estado_Habilitado](../../assets/images/components_img/inputs/Inputs_Estado_Habilitado.png)
+![Inputs_Estado_Habilitado](images/input-estado-habilitado.png)
 
 ### Estado ativo
 
-![Inputs_Estado_Ativo2](../../assets/images/components_img/inputs/Inputs_Estado_Ativo2.png)
+![Inputs_Estado_Ativo2](images/input-estado-ativo2.png)
 
 ### Inputs desabilitados
 
-![Inputs_Estado_Desabilitado](../../assets/images/components_img/inputs/Inputs_Estado_Desabilitado.png)
+![Inputs_Estado_Desabilitado](images/input-estado-desabilitado.png)
 
 ## Espaçamentos
 
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados no componente input. Todas as medidas foram definidas com valores múltiplos de 4px e 8px.
 
-![Inputs_Espaçamento](../../assets/images/components_img/inputs/Inputs_Espaçamento.png)
+![Inputs_Espaçamento](images/input-espacamento.png)
 
 ## Cores
 
-![Inputs_Cores](../../assets/images/components_img/inputs/Inputs_Cores.png)
+![Inputs_Cores](images/input-cores.png)
