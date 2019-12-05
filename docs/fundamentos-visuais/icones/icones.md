@@ -7,16 +7,16 @@ Font Awesome é um conjunto de ferramentas de fontes e ícones com base em CSS e
 A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.
 No final desse documento foi incluído as orientações de uso de alguns dos ícones e deve ser seguido para que haja consistência entre os sistemas do governo.
 
-![Exemplo FontAwesome](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Fontawesome.png)
+![Exemplo FontAwesome](images/icones-fontawesome.png)
 
 ### Exemplos de ícones aplicados aos componentes do Design System
 
-![Exemplos de ícones aplicados aos componentes](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Exemplo_Icones.png)
+![Exemplos de ícones aplicados aos componentes](images/exemplo-icones.png)
 
 ## Ícones Criados
 
 No Design System, foram criados dois ícones para representar certificado digital e NeoID pois não havia na família do fontawesoome algum que representasse bem esses dois conceitos.
-![Imagem do Ícone de Certificado Digital e do NEOID](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Certificado_NeoId.png)
+![Imagem do Ícone de Certificado Digital e do NEOID](images/icones_certificado-neoid.png)
 
 ## Princípios
 
@@ -40,26 +40,26 @@ Ao usar ícones em sua interface do usuário, existem técnicas manuais e formas
 
 São usados apenas para reforço visual ou de branding. Se forem removidos da página, os usuários ainda entenderiam e poderiam utilizar a página. Se os ícones são puramente decorativos é necessário adicionar manualmente um atributo aria-hidden a cada um deles para que sejam acessíveis.
 
-![<i class=“fas fa-camera-retro” aria-hidden></I>](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_ariahidden.png)
+![<i class=“fas fa-camera-retro” aria-hidden></I>](images/ariahidden.png)
 
 ##### SVG com JavaScript
 
-![<i class=“fas fa-camera-retro”></I>](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Javascript.png)
+![<i class=“fas fa-camera-retro”></I>](images/javascript.png)
 
 A acessibilidade do Font Awesome adiciona automaticamente aria-hidden=true e role=“img” aos seus atributos SVG in-line, para que seus ícones estejam adequadamente acessíveis.
 
-![aria-hidden=true e role=“img”](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_ariahidden2.png)
+![aria-hidden=true e role=“img”](images/ariahidden2.png)
 
 #### 2 | Ícones Semânticos
 
 São aqueles usados para transmitir um significado, ao invés de apenas decoração. Isso inclui ícones sem texto ao lado deles usando como controle interativo (botões, elementos de formulário, toggles…) Se os ícones tiverem significado semântico, é preciso adicionar manualmente algumas coisas para que ele seja acessado apropriadamente:
 
-- Atributo aria-hidden
-- Forneça uma alternativa de texto dentro de um elemento <span>(ou similar). Inclua também o CSS apropriado
-  para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
-- Atributo title no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
+-   Atributo aria-hidden
+-   Forneça uma alternativa de texto dentro de um elemento <span>(ou similar). Inclua também o CSS apropriado
+    para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
+-   Atributo title no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
 
-![Icones Semanticos](/assets/design-system/assets/images/docs_img/fundamentos/icones/Ds_iconeSemanticos_ariahidden.png)
+![Icones Semanticos](images/icone-semanticos-ariahidden.png)
 
 ##### SVG com JavaScript
 
@@ -71,7 +71,7 @@ Se o ícone tiver significado semântico, coloque um atributo title=“meaning�
 • Tag titlecom um atributo id adequado
 • Atributo aria-labelledby e conecte-o à uma tag title
 
-![SVG com JavaScript](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_SVG_Javascript.png)
+![SVG com JavaScript](images/svg-javascript.png)
 
 ### Reutilização e Colaboração
 
@@ -87,13 +87,13 @@ Os ícones da Fontawesome foram determinados dentro de uma grid de 20 x 16px. En
 
 Os ícones clicáveis do sistema deverão, em sua maioria, ter corpo 16px.
 
-![Imagem do Tamanho dos Ícones: 16 x 16px](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Grid_Fontawesome.png)
+![Imagem do Tamanho dos Ícones: 16 x 16px](images/icones-grid-fontawesome.png)
 
 #### 1| Área de Clique (Desktop)
 
 A área de clique é a área total delimitada (área preenchida pelo ícone + área de margem do ícone) para que seja possível o clique através do mouse. Essa área no Design System deve ser de 24x24px,
 
-![Imagem mostrando Tamanho Area Clique: 24 x 24px](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icone_Area_Clique.png)
+![Imagem mostrando Tamanho Area Clique: 24 x 24px](images/icone-area-clique.png)
 
 #### 2 | Área de Toque
 
@@ -101,11 +101,11 @@ A área de toque dos ícones determina que além da área ocupada pelo ícone h�
 
 A área de toque deve ser de 48 x 48px, garantindo que a experiência do usuário seja satisfatória no momento de acessar as funcionalidades através dos ícones, em dispositivos móveis ou artefatos digitais.
 
-![Imagem mostrando a área de toque dos ícones: 48 x 48px](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Area_Toque.png)
+![Imagem mostrando a área de toque dos ícones: 48 x 48px](images/icones-area-toque.png)
 
 ## Orientação de Uso
 
 As principais funcionalidades dos sistemas do governo foram mapeadas e foram atribuídas a cada uma delas um símbolo representativo - os ícones da versão sólida da FontAwesome. É fundamental que os desenvolvedores e designers utilizem os ícones abaixo com mesma ação que lhe foi atribuída, Isso garante que cada sistema acessado pelo cidadão utilize o mesma linguagem e significado, tornando mais rápida a experiência e o reconhecimento
 do público ao acessar as funcionalidades dos diversos sistemas do governo federal.
 
-![Orientacoes de Uso dos ícones](/assets/design-system/assets/images/docs_img/fundamentos/icones/DS_Icones_Orientacoes_Uso.png)
+![Orientacoes de Uso dos ícones](images/icones-orientacoes-uso.png)
