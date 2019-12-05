@@ -2,19 +2,19 @@
 
 Este componente deve conter uma sequência de links marcando a ordem de acesso nas páginas navegadas. A sequência de links deve ser intercalada com setas do tipo Chevron-Right da família de ícones do Font Awesome O primeiro link é representado pelo ícone Home da bibliioteca de ícones do Font Awesome. Este dá acesso à página inicial do sistema ou portal. O último texto da sequência não deve ter ação de link, pois representa a página atual. O Breadcrumbs deve ser posicionado logo abaixo do cabeçalho do portal ou sistema, alinhado ao título principal.
 
-![Breadcrumb_Estrutura](../../assets/images/components_img/breadcrumb/Breadcrumb_Estrutura.png)
+![Breadcrumb_Estrutura](images/breadcrumb-estrutura.png)
 
 ## Estado
 
 ### Estado Normal
 
-![Breadcrumb_Estado_Normal](../../assets/images/components_img/breadcrumb/Breadcrumb_Estado_Normal.png)
+![Breadcrumb_Estado_Normal](images/breadcrumb-estado-normal.png)
 
 No estado normal, a sequência de links deve apresentar-se como demonstrado no exemplo acima.
 
 ### Estado Hover
 
-![Breadcrumb_Estado_Hover](../../assets/images/components_img/breadcrumb/Breadcrumb_Estado_Hover.png)
+![Breadcrumb_Estado_Hover](images/breadcrumb-estado-hover.png)
 
 No estado Hover, o link deve assumir o formato sublinhado, mantendo a mesma cor do estado normal.
 
@@ -28,7 +28,7 @@ Tom de Voz O tom de voz do Breadcrumbs é, essencialmente, como ele vai se comun
 
 Espaçamento Seguem as métricas definidas para os espaçamentos do Breadcrumbs. Todas as medidas foram definidas com valores múltiplos de 4px.
 
-![Breadcrumb_Espaçamento](../../assets/images/components_img/breadcrumb/Breadcrumb_Espaçamento.png)
+![Breadcrumb_Espaçamento](images/breadcrumb-espacamento.png)
 
 ### Alinhamento
 
@@ -36,4 +36,4 @@ Alinhamento Todo texto deverá ser alinhado à esquerda.
 
 ### Tipografia de Cores
 
-![Breadcrumb_Tipografia](../../assets/images/components_img/breadcrumb/Breadcrumb_Tipografia.png)
+![Breadcrumb_Tipografia](images/breadcrumb-tipografia.png)
