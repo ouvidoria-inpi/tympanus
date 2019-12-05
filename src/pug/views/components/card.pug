@@ -1,0 +1,53 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Card";
+
+append content
+  h1 Cards
+  p
+    | Cards podem ter formatos e conjuntos de informações distintos de acordo com a necessidade de informações que ele deva conter.
+  h2 Card Quadrado 240x240
+  .row
+    a.br-card(href='#')
+      span.icon
+        i.fas.fa-address-card
+      span.title
+        | Título do Card
+    a.br-card.is-medium(href='#')
+      span.icon
+        i.fas.fa-address-card
+      span.title
+        | Título do Card
+  h2 Card com troca de Conteúdo
+  .row
+    a.br-card.is-change-content(href='#')
+      span.icon
+        i.fas.fa-address-card
+      span.title
+        | Título do Card
+      p.text
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit odio quis lectus egestas.
+    a.br-card.is-large.is-change-content(href='#')
+      span.icon
+        i.fas.fa-address-card
+      span.title
+        | Título do Card
+      p.text
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit odio quis lectus egestas.
+  h2 Card com Seta
+  .row
+    a.br-card.is-medium.is-change-content.is-arrow(href='#')
+      span.icon
+        i.fas.fa-address-card
+      span.title
+        | Título do Card
+      p.text
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit odio quis lectus egestas.
+    a.br-card.is-large.is-change-content.is-arrow(href='#')
+      span.icon
+        i.fas.fa-address-card
+      span.title
+        | Título do Card
+      p.text
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit odio quis lectus egestas.

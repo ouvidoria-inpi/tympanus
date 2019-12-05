@@ -9762,6 +9762,7 @@ a.text-dark:hover, a.text-dark:focus {
 .page-content a {
   text-decoration: underline; }
 
+h1,
 .main-title,
 .portal-title,
 .h1,
@@ -9772,12 +9773,14 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 1.5;
   margin-bottom: 40px; }
   @media (max-width: 575.98px) {
+    h1,
     .main-title,
     .portal-title,
     .h1,
     .title-1 {
       font-size: 1.625rem; } }
 
+h2,
 .portal-big-news-title,
 .h2,
 .title-2 {
@@ -9787,6 +9790,7 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 1.5;
   margin-bottom: 40px; }
 
+h3,
 .h3,
 .portal-small-news-title,
 .subtitle-1,
@@ -9797,6 +9801,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 500;
   margin-bottom: 0; }
 
+h4,
 .h4 .subtitle-2 {
   color: #1351b4;
   font-size: 1.125rem;
@@ -12659,3 +12664,5 @@ fieldset legend,
   .br-upload .upload-size {
     text-align: right;
     visibility: hidden; }
+
+/*# sourceMappingURL=dsgov.css.map */
