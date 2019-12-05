@@ -26,7 +26,7 @@ Além da diversidade foi considerado que a Font Awesome traria uma padronizaçã
 
 ### Eficiência e Clareza
 
-Os ícones da Font Awesome possuem um desenho sintético, porém de fácil compreensão, e devem exercer o papel de auxiliar ao usuário na execução de uma ação ou na representação de um serviço. É fundamental que a escolha do ícone para representar uma ideia, ação, ou serviço leve em consideração a experiência do usuário esteja sempre alinhada ao contexto cultural do Brasil, e que seja de fácil reconhecimento público. Para uma melhor legbilidade é recomendado que quando possível um label ou hint apareça ao lado do ícone reforçando a ideia a que foi atribuído.
+Os ícones da Font Awesome possuem um desenho sintético, porém de fácil compreensão, e devem exercer o papel de auxiliar ao usuário na execução de uma ação ou na representação de um serviço. É fundamental que a escolha do ícone para representar uma ideia, ação, ou serviço leve em consideração a experiência do usuário esteja sempre alinhada ao contexto cultural do Brasil, e que seja de fácil reconhecimento público. Para uma melhor legibilidade é recomendado que quando possível um label ou hint apareça ao lado do ícone reforçando a ideia a que foi atribuído.
 
 ### Acessibilidade
 
@@ -68,7 +68,7 @@ Obter a acessibilidade correta pode ser difícil. Por isso, Font Awesome simplif
 Se o ícone tiver significado semântico, coloque um atributo title=“meaning”. A acessibilidade automática cuida do resto, adicionando o seguinte:
 
 • Função ARIA adequada ( role=“img”)
-• Tag titlecom um atributo id adequado
+• Tag title com um atributo id adequado
 • Atributo aria-labelledby e conecte-o à uma tag title
 
 ![SVG com JavaScript](images/svg-javascript.png)
@@ -81,7 +81,7 @@ Interfaces digitais do governo devem ser reutilizáveis pelos diversidade servi�
 
 ### Grid do Fontawesome
 
-Os ícones da Fontawesome foram determinados dentro de uma grid de 20 x 16px. Então, caso haja necessidade de criar novos ícones deve-se seguir essa mesma grid para que sejam conservadas as proporções e características estéticas dos mesmos.
+Os ícones da Font-awesome foram determinados dentro de uma grid de 20 x 16px. Então, caso haja necessidade de criar novos ícones deve-se seguir essa mesma grid para que sejam conservadas as proporções e características estéticas dos mesmos.
 
 ### Tamanho Padrão no Design System
 
