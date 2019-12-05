@@ -26,16 +26,16 @@ Dependendo do fundo aplicado, o estado do componente deve ser revisto para atend
 
 Em alguns casos pode ser necessário aumentar as dimensões do fundo de um elemento ou componente para melhorar a legibilidade de um texto ou a compreensão de um ícone quando um estado é aplicado. Quando isso acontecer, tome cuidado para não soprepor outros elementos: um aumento de 4px ou 8px por exemplo, pode ser suficiente para resolver o problema.
 
-![Legibilidade](/assets/design-system/assets/images/docs_img/fundamentos/estados/aumentando_legibilidade.png)
+![Legibilidade](images/aumentando-legibilidade.png)
 
 Usuários interagem com a interface de diversas maneiras. Ao projetar um componente, considere o uso de diferentes dispostitivos de entrada tais como:
 
-- Mouse
-- Tela sensível ao toque
-- teclado
-- Voz
-- Controle de vídeo game
-- Leitores de Tela (como sintetizadores de voz, Display Braille)
+-   Mouse
+-   Tela sensível ao toque
+-   teclado
+-   Voz
+-   Controle de vídeo game
+-   Leitores de Tela (como sintetizadores de voz, Display Braille)
 
 ### Reutilização e Colaboração
 
@@ -51,21 +51,21 @@ Seguindo este conceito podemos dizer que o [Scrim](#) é um overlay componentiza
 
 ## Tipos de Estado
 
-![Estados](/assets/design-system/assets/images/docs_img/fundamentos/estados/estados.png)
+![Estados](images/estados.png)
 
 Abaixo,segue a lista dos principais estados encontrados no DS gov. Alguns estados são específicos de um componente, e como tal serão detalhados na sua respectiva documentação.
 
-- **Destacado**: Um estado que comunica um destaque sobre um texto, iniciado pelo usuário ou não.
-- **Interativo**: Um estado que comunica que um componente ou elemento é interativo.
-- **Desativado**: Um estado que comunica que um componente ou elemento não é interativo temporariamente.
-- **Hover**: Um estado que comunica quando um usuário coloca o cursor sobre um componente ou elemento.
-- **Pressionado**: Um estado que comunica um toque ou clique do usuário sobre um componente ou elemento.
-- **Foco**: Um estado que comunica quando um usuário destaca um componente ou elemento, utilizando-se de um método de entrada como teclado ou voz.
-- **Ativo**: Um estado que comunica um destaque sobre um determinado destino ou conjunto de escolha, iniciado pelo usuário ou não.
-- **Selecionado**: Um estado que comunica uma escolha do usuário.
-- **Arrastado**: Um estado que comunica quando um usuário pressiona (com clique ou toque) e move um componente ou elemento.
-- **Ligado**: Um estado que comunica a opção "ligado" na alternância entre duas opções.
-- **Desligado**: Um estado que comunica a opção "desligado" na alternância entre duas opções.
+-   **Destacado**: Um estado que comunica um destaque sobre um texto, iniciado pelo usuário ou não.
+-   **Interativo**: Um estado que comunica que um componente ou elemento é interativo.
+-   **Desativado**: Um estado que comunica que um componente ou elemento não é interativo temporariamente.
+-   **Hover**: Um estado que comunica quando um usuário coloca o cursor sobre um componente ou elemento.
+-   **Pressionado**: Um estado que comunica um toque ou clique do usuário sobre um componente ou elemento.
+-   **Foco**: Um estado que comunica quando um usuário destaca um componente ou elemento, utilizando-se de um método de entrada como teclado ou voz.
+-   **Ativo**: Um estado que comunica um destaque sobre um determinado destino ou conjunto de escolha, iniciado pelo usuário ou não.
+-   **Selecionado**: Um estado que comunica uma escolha do usuário.
+-   **Arrastado**: Um estado que comunica quando um usuário pressiona (com clique ou toque) e move um componente ou elemento.
+-   **Ligado**: Um estado que comunica a opção "ligado" na alternância entre duas opções.
+-   **Desligado**: Um estado que comunica a opção "desligado" na alternância entre duas opções.
 
 ## Destacado
 
@@ -75,9 +75,9 @@ Este estado não pode ser utilizado como alternativa a destaques como bold ou it
 
 Exemplos de casos onde o estado deve ser utilizado:
 
-- Citação
-- Palavras-chave
-- Termos/caracteres pesquisados em uma busca
+-   Citação
+-   Palavras-chave
+-   Termos/caracteres pesquisados em uma busca
 
 O destaque é exibido com um overlay sobre o fundo da cor **Orange** com opacidade de 10% e texto na cor **Orange**. Em situações onde esta regra não gere contraste suficiente (como um fundo escuro por exemplo), altere o fundo do elemento para cor Orange e o texto para cor White.
 
@@ -103,10 +103,10 @@ Elementos desativados não precisam ser rígidos sobre as [conformidade de acess
 
 Alguns elementos da tela, não podem receber o estado desativado. Neste caso, prefira não exibir o componente na interface. Alguns componentes que seguem essa regra:
 
-- Componentes de Navegação (Menu, Abas...)
-- Modal
-- Tooltip
-- Botão call to action
+-   Componentes de Navegação (Menu, Abas...)
+-   Modal
+-   Tooltip
+-   Botão call to action
 
 **Cuidado:** Alguns componentes são contituídos por vários outros componentes. Neste caso, seus componentes podem possuir estado de desativado, ainda que o componente "completo" que constituem, não possua tal estado.
 
@@ -162,12 +162,12 @@ O estado selecionado não deve distrair o usuário, porém, deve ser facilmente 
 
 O estado selecionado não pode ser aplicado nos seguintes componentes:
 
-- Componentes de Navegação (Menu, Abas...)
-- Modal
-- Tooltip
-- Botão
-- Mensagens
-- Separadores
+-   Componentes de Navegação (Menu, Abas...)
+-   Modal
+-   Tooltip
+-   Botão
+-   Mensagens
+-   Separadores
 
 **Cuidado:** Alguns componentes são construídos por vários outros componentes. Neste caso, seus componentes ainda podem possuir estado de selecionado, por mais que o componente "completo" não possa.
 
