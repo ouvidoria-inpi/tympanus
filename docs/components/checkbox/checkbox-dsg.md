@@ -4,19 +4,19 @@ São elementos usados para seleção simultânea.
 Possui um texto de orientação que auxilia a escolha do usuário.
 Cada opção deve ser acompanhada de um texto que a descreva.
 
-![Checkbox Formatação Formulário](../../assets/images/components_img/checkbox/checkbox-formatacao-formulario.png)
+![Checkbox Formatação Formulário](images/checkbox-formatacao-formulario.png)
 
-![Checkbox Formatação Mobile](../../assets/images/components_img/checkbox/checkbox-formatacao-mobile.png)
+![Checkbox Formatação Mobile](images/checkbox-formatacao-mobile.png)
 
 ## ESTADOS
 
 Os checkboxes podem estar nos estados: habilitados/desselecionado; hover; selecionado e desabilitado.
 
-![Checkbox Estados Web](../../assets/images/components_img/checkbox/checkbox-estados-web.png)
+![Checkbox Estados Web](images/checkbox-estados-web.png)
 
-![Checkbox Estados Mobile](../../assets/images/components_img/checkbox/checkbox-estados-mobile.png)
+![Checkbox Estados Mobile](images/checkbox-estados-mobile.png)
 
-![Checkbox Espaçamento](../../assets/images/components_img/checkbox/checkbox-espacamento.png)
+![Checkbox Espaçamento](images/checkbox-espacamento.png)
 
 ## USO
 

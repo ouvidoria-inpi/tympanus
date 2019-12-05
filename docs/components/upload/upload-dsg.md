@@ -9,7 +9,7 @@ Abaixo da mensagem informativa deve haver um botão terciário para inclusão do
 
 No Upload o card deve ser branco #FFFFFF e o “hover, desse card deve seguir o mesmo comportamento dos demais: assumir o contorno de cor azul #2B74E9.
 
-![Upload_Cores](../../assets/images/components_img/upload/Upload_Cores.png)
+![Upload_Cores](images/upload-cores.png)
 
 ### Orientações de Uso
 
@@ -20,21 +20,21 @@ O upload pode ou não vir acompanhado de um título.
 
 #### 1 | Upload com Título
 
-![Upload_Titulo](../../assets/images/components_img/upload/Upload_Titulo.png)
+![Upload_Titulo](images/upload-titulo.png)
 
 #### 2 | Upload sem Título
 
-![Upload_sem_TItulo](../../assets/images/components_img/upload/Upload_sem_TItulo.png)
+![Upload_sem_TItulo](images/upload-sem-titulo.png)
 
 #### 3 | Upload com Cards contidos dentro de colapse
 
 O card do Upload pode aparecer contido num elemento de colapse. O mesmo servirá de título para o upload.
 
-![Upload_Cards_Colapse](../../assets/images/components_img/upload/Upload_Cards_Colapse.png)
+![Upload_Cards_Colapse](images/upload-cards-colapse.png)
 
 <!-- #### 3 | Upload Contido no Colapse
 
-![Upload_Colapse](../../assets/images/components_img/upload/Upload_Colapse.png) -->
+![Upload_Colapse](images/upload-colapse.png) -->
 
 ### Comportamentos
 
@@ -43,7 +43,7 @@ O card do Upload pode aparecer contido num elemento de colapse. O mesmo servirá
 Ao passar o mouse em cima do card aparecerá um contorno azul cor #2B74E9.
 **Essa versão ocorrerá apenas na versão web.**
 
-![Upload_Hover](../../assets/images/components_img/upload/Upload_Hover.png)
+![Upload_Hover](images/upload-hover.png)
 
 #### 4 | Cards com altura e Largura Variáveis
 
@@ -53,4 +53,4 @@ Após inclusão dos arquivos aparecerá um ícone ‘X” para excluir o Arquivo
 
 #### 5 | Upload após seleção de arquivos
 
-![Upload_Seleção_Arquivo](../../assets/images/components_img/upload/Upload_Seleção_Arquivo.png)
+![Upload_Seleção_Arquivo](images/upload-selecao-arquivo.png)
