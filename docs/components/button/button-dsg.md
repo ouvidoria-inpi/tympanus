@@ -6,25 +6,25 @@ Botões Principais, Secundários e Terciários
 
 São botões que possuem maior ênfase pela sua importância. São representados com preenchimento de cor e(ou) sombra.
 
-![Botões_Principal](../../assets/images/components_img/botoes/Botões_Principal.png)
+![Botões_Principal](images/button-principal.png)
 
 ### 2 | Botão Secundário ou Delineado (Média Ênfase)
 
 São usados ​​para dar uma ênfase intermediária, menor que os botões principais, além de serem representados visualmente pelo seu contorno delimitado por uma linha fina, sem cor, e sem preenchimento (vazado). Também chamados de “botões fantasmas”.
 
-![Botões_Secundário](../../assets/images/components_img/botoes/Botões_Secundário.png)
+![Botões_Secundário](images/button-secundario.png)
 
 ### 3 | Botão Terciário (Baixa Ênfase)
 
 São botões que possuem características de hiperlinks.
 
-![Botões_Terciário](../../assets/images/components_img/botoes/Botões_Terciário.png)
+![Botões_Terciário](images/button-terciario.png)
 
 ### 4 | Botão Acesso Gov.Br
 
 São botões que facilitam o acesso aos sistemas através de um login prévio através do gov.br.
 
-![Botões_Acesso_Governo](../../assets/images/components_img/botoes/Botões_Acesso_Governo.png)
+![Botões_Acesso_Governo](images/button-acesso-governo.png)
 
 ## Botões Internos
 
@@ -34,10 +34,10 @@ Botões contextuais e Botões de Ação
 
 São botões usados para incitar um visitante a realizar determinada ação dentro do seu site. Possui características de construção (cor, forma, dimensão) diferenciada. São representados com preenchimento de cor e uma borda que ajuda a ancorá-lo em qualquer lugar da tela.
 
-![Botões_Ação](../../assets/images/components_img/botoes/Botões_Ação.png)
+![Botões_Ação](images/button-acao.png)
 
 <!--
-![Botões_Ação_Flutuação](../../assets/images/components_img/botoes/Botões_Ação_Flutuação.png)
+![Botões_Ação_Flutuação](images/button-acao-flutuacao.png)
 
  Botões_Ação_Flutuação.png -->
 
@@ -45,15 +45,15 @@ São botões usados para incitar um visitante a realizar determinada ação dent
 
 São botões que possuem ações específicas dentro da navegação.
 
-![Botões_Ação_Flutuação](../../assets/images/components_img/botoes/Botões_Ação_Flutuação.png)
+![Botões_Ação_Flutuação](images/button-acao-flutuacao.png)
 
 ## Estados dos Botões
 
 Os estados dos botões servem para dar feedback ao usuário sobre as ações que estão acontecendo quando há uma interação com o botão.
 
-![Botões_Estado_1](../../assets/images/components_img/botoes/Botões_Estado_1.png)
-![Botões_Estado_2](../../assets/images/components_img/botoes/Botões_Estado_2.png)
-![Botões_Estado_3](../../assets/images/components_img/botoes/Botões_Estado_3.png)
+![Botões_Estado_1](images/button-estado-1.png)
+![Botões_Estado_2](images/button-estado-2.png)
+![Botões_Estado_3](images/button-estado-3.png)
 
 ## Anatomia
 
@@ -63,7 +63,7 @@ O tom de voz de um botão é, essencialmente, como ele vai comunicar qual é a s
 Quando houver a necessidade da criação de um botão, é esperado que este informe qual a sua ação, reduzindo ao máximo falsas expectativas e dúvidas aos usuários.
 Recomenda-se, sempre que possível, a utilização de verbos de ação no infinitivo. Ex.: “Baixar”, “Continuar”, “Anexar”, etc.
 
-![Botões_Anatomia](../../assets/images/components_img/botoes/Botões_Anatomia.png)
+![Botões_Anatomia](images/button-anatomia.png)
 
 ## Formatação do Texto
 
@@ -73,27 +73,27 @@ Os textos dos botões precisam ser formatados em letras minúsculas com a primei
 
 ### 1 | Botões Finalísticos
 
-![Botões_Finalísticos](../../assets/images/components_img/botoes/Botões_Finalísticos.png)
+![Botões_Finalísticos](images/button-finalisticos.png)
 
 ### 2 | Botões Internos
 
 Podem ser posicionados de acordo com a necessidade das ações.
 
-![Botões_Internos](../../assets/images/components_img/botoes/Botões_Internos.png)
+![Botões_Internos](images/button-internos.png)
 
 ## Tipografia
 
 ### 1 | Botões Finalísticos
 
-![Botões_Finalísticos_Tipografia](../../assets/images/components_img/botoes/Botões_Finalísticos_Tipografia.png)
+![Botões_Finalísticos_Tipografia](images/button-finalisticos-tipografia.png)
 
 ### 2 | Botões Internos
 
-![Botões_Internos_Tipografia](../../assets/images/components_img/botoes/Botões_Internos_Tipografia.png)
+![Botões_Internos_Tipografia](images/button-internos-tipografia.png)
 
 ## Sombra Iluminação
 
-![Botões_Somba_Iluminação](../../assets/images/components_img/botoes/Botões_Somba_Iluminação.png)
+![Botões_Somba_Iluminação](images/button-somba-iluminacao.png)
 
 ## Dimensões
 
@@ -101,13 +101,13 @@ Podem ser posicionados de acordo com a necessidade das ações.
 
 Os botões na web assumem tamanho 44px e podem serão reduzidos de acordo com a responsividade da tela.
 
-![Botões_Web](../../assets/images/components_img/botoes/Botões_Web.png)
+![Botões_Web](images/button-web.png)
 
 ### 2 | Botões Mobile
 
 Os botões mobile nas resoluções maiores também assumem tamanho 44px e diminuem de acordo com a responsividade. O tamanho mínimo sugerido para os botões mobile deve ser 32px. A largura será determinada pelo tamanho da tela (área útil de conteúdo).
 
-![Botões_Mobile](../../assets/images/components_img/botoes/Botões_Mobile.png)
+![Botões_Mobile](images/button-mobile.png)
 
 ## Cores
 
@@ -115,17 +115,17 @@ Botões_Principal_Cores
 
 ### 1 | Botão Principal ou Primário (Alta ênfase)
 
-![Botões_Principal_Cores](../../assets/images/components_img/botoes/Botões_Principal_Cores.png)
+![Botões_Principal_Cores](images/button-principal-cores.png)
 
 ### 2 | Botão Secundário ou Delineado (Média Ênfase)
 
-![Botões_Secundário_Cores](../../assets/images/components_img/botoes/Botões_Secundário_Cores.png)
+![Botões_Secundário_Cores](images/button-secundario-cores.png)
 
 ### 3 | Botões Terciários (Baixa Ênfase)
 
-![Botões_Terciário_Cores](../../assets/images/components_img/botoes/Botões_Terciário_Cores.png)
+![Botões_Terciário_Cores](images/button-terciario-cores.png)
 
 ### 4 | Botões Internos
 
-![Botões_Internos_Cores_1](../../assets/images/components_img/botoes/Botões_Internos_Cores_1.png)
-![Botões_Final](../../assets/images/components_img/botoes/Botões_Final.png)
+![Botões_Internos_Cores_1](images/button-internos-cores-1.png)
+![Botões_Final](images/button-final.png)
