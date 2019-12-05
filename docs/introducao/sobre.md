@@ -38,7 +38,7 @@ esses padrões.
 
 ## O Design System do Governo Federal do Brasil
 
-![Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.](/assets/docs/imagens_ds.png 'Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.')
+![Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.](images/imagens_ds.png)
 _Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo._
 
 Como Design System oficial do Governo Brasileiro, ele atende a uma ampla gama de designers e desenvolvedores que criam produtos e experiências digitais. Os objetivos do sistema incluem melhorar a consistência e a qualidade da interface, tornando o processo de design e desenvolvimento mais eficiente e focado, estabelecendo um vocabulário compartilhado entre designer e desenvolvedor, fornecendo orientação clara e identificável sobre as melhores práticas de design e desenvolvimento.
