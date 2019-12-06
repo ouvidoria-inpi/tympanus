@@ -255,6 +255,7 @@
 }
 
 .br-table .search-bar {
+  height: 56px;
   background: #1351b4;
   padding: 10px;
   margin: 0;
@@ -420,12 +421,18 @@
 }
 
 @media only screen and (max-width: 576px) {
+  .br-table {
+    position: relative;
+  }
+  .br-table table .table-body {
+    max-height: 400px;
+    overflow: auto;
+    margin-top: 56px;
+    margin-bottom: 56px;
+  }
   .br-table table td {
     border-bottom: none;
     color: #555555;
-  }
-  .br-table #navigation-bar .items-left {
-    display: none;
   }
   .br-table .resultado {
     width: 96%;
@@ -439,9 +446,63 @@
   }
   .br-table .selecao {
     font-size: 12px;
+    height: 56px;
   }
   .br-table .table-title {
     font-size: 15px;
+    align-items: center !important;
+    display: flex;
+  }
+  .br-table .search-bar, .br-table .selecao {
+    top: 0;
+  }
+  .br-table .footer, .br-table .title-bar, .br-table .search-bar, .br-table .selecao {
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+    height: 56px;
+  }
+  .br-table .footer {
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .br-table .footer .items-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: auto;
+  }
+  .br-table .footer .items-right .fa.fa-angle-right, .br-table .footer .items-right .fa.fa-angle-left {
+    color: #1351b4;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+  }
+  .br-table .footer .items-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 100%;
+  }
+  .br-table .title-bar {
+    top: 0;
+    margin: 0;
+    background: #ededed;
+  }
+  .br-table .arrows-pages {
+    display: flex;
+    align-items: flex-end;
+  }
+  .br-select .select-selected {
+    border: none;
+    margin-left: 10px;
+  }
+  .paginas {
+    margin-left: 15px;
   }
   td[disabled]:hover, tr[disabled]:hover {
     background: transparent;

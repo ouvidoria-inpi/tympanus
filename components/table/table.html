@@ -25,7 +25,8 @@
       </div>
       <div class="row search-bar is-invisible col-sm-12 col-md-12 col-lg-12">
         <div class="resultado align-items-start">
-         <input type="text" name="result" id="result"> 
+         <label class="sr-only" for="result">Busca da tabela</label>
+         <input type="text" name="result" id="result">
         </div>
         <div class="actions  align-items-end">
           <i class="fa fa-search" id="find"></i>
@@ -55,7 +56,7 @@
             <th>Coluna 3</th>
             <th>Coluna 4</th>
             <th>Coluna 5</th>
-          </tr>  
+          </tr>
         </thead>
         <tbody class="table-body">
           <tr>
@@ -125,30 +126,31 @@
           </tr>
         </tbody>
       </table>
-      <!-- <nav class="navbar fixed-bottom  bg-light d-none d-sm-flex d-sm-none">
-        <div class="br-select is-small">
-          <select id="simples">
-            <option value="0">12</option>
-            <option value="opcao-1">1</option>
-            <option value="opcao-2">10</option>
-            <option value="opcao-3">15</option>
-            <option value="opcao-4">20</option>
-          </select>
+      <div class="footer d-sm-none">
+        <div class="items-left">
+          <div class="br-select is-small">
+            <select name="select" id="simples">
+              <option value="0">12</option>
+              <option value="opcao-1">1</option>
+              <option value="opcao-2">10</option>
+              <option value="opcao-3">15</option>
+              <option value="opcao-4">20</option>
+            </select>
+          </div>
+          <div class="paginas">de 48 páginas</div>
         </div>
-        <div>
-          <span class="col-sm-6">de 48 páginas</span>
-          <span class="divisor-vertical"></span>
+        <div class="items-right">
+          <div class="arrows-pages">
+            <i class="fa fa-angle-left"></i>
+            <i class="fa fa-angle-right"></i>
+          </div>
         </div>
-        <div class="arrows-pages">
-          <i class="fa fa-angle-left"></i>
-          <i class="fa fa-angle-right"></i>
-        </div>
-      </nav> -->
-      <div class="row col-sm-12 col-md-12 col-lg-12 d-none d-sm-flex" id='navigation-bar'>
+      </div>
+      <div  id="navigation-bar" class="row col-sm-12 col-md-12 col-lg-12 d-none d-sm-flex">
         <div class="items-left">
           <span>Exibir:</span>
           <div class="br-select is-small">
-            <select id="simples">
+            <select name="select">
               <option value="0">10</option>
               <option value="opcao-1">1</option>
               <option value="opcao-2">10</option>
@@ -161,7 +163,7 @@
         </div>
         <div class="items-right">
           <div class="br-select is-small">
-            <select id="simples">
+            <select name="select">
               <option value="0">12</option>
               <option value="opcao-1">1</option>
               <option value="opcao-2">10</option>
@@ -169,7 +171,7 @@
               <option value="opcao-4">20</option>
             </select>
           </div>
-          <div class="">de 48 páginas</div>
+          <div>de 48 páginas</div>
           <div class="divisor-vertical"></div>
           <div class="arrows-pages">
             <i class="fa fa-angle-left"></i>
@@ -180,6 +182,6 @@
     </div>
   </div>
   <script src="table.js"></script>
-  <script src="assets/design-system/components/select/select.js"></script> 
+  <script src="assets/design-system/components/select/select.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@ function checkBox() {
   var check = document.getElementsByName('item');
   var selecionado = document.querySelector(".selecao");
   var titulo = document.querySelector(".title-bar");
+  var busca = document.querySelector('.search-bar');
   for(var i=0;i<check.length;i++){
     if (check[i].checked == true){ 
       items += 1;
@@ -10,6 +11,8 @@ function checkBox() {
     if(items > 0){
       selecionado.classList.remove("is-invisible");
       selecionado.classList.add("is-visible");
+      busca.classList.remove("is-visible");
+      busca.classList.add("is-invisible");
       titulo.classList.remove("is-visible");
       titulo.classList.add("is-invisible");
     }
