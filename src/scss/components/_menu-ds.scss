@@ -60,10 +60,7 @@
     margin-top: $spacer-half;
   }
   .is-active {
-    a,
-    button {
-      background-color: $color-primary-lighten-2;
-      color: $color-white;
-    }
+    background-color: $color-primary-lighten-2 !important;
+    color: $color-white !important;
   }
 }

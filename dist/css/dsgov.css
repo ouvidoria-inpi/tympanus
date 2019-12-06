@@ -11881,10 +11881,9 @@ fieldset legend,
       text-decoration: none; }
   .ds-menu-lateral [class*="fa-"] {
     margin-top: 4px; }
-  .ds-menu-lateral .is-active a,
-  .ds-menu-lateral .is-active button {
-    background-color: #2670e8;
-    color: #fff; }
+  .ds-menu-lateral .is-active {
+    background-color: #2670e8 !important;
+    color: #fff !important; }
 
 .br-message {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
