@@ -59,4 +59,11 @@
   [class*="fa-"] {
     margin-top: $spacer-half;
   }
+  .is-active {
+    background-color: $color-primary-lighten-2;
+    a,
+    button {
+      color: $color-white;
+    }
+  }
 }
