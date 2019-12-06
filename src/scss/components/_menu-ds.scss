@@ -5,6 +5,8 @@
   z-index: 1;
   .submenu {
     display: none;
+    list-style: none;
+    padding: 0;
     .menu-item {
       border-bottom: 1px solid $border-color;
       &:last-child {
@@ -56,5 +58,12 @@
   }
   [class*="fa-"] {
     margin-top: $spacer-half;
+  }
+  .is-active {
+    a,
+    button {
+      background-color: $color-primary-lighten-2;
+      color: $color-white;
+    }
   }
 }

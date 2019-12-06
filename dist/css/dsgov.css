@@ -11839,7 +11839,9 @@ fieldset legend,
   position: relative;
   z-index: 1; }
   .ds-menu-lateral .submenu {
-    display: none; }
+    display: none;
+    list-style: none;
+    padding: 0; }
     .ds-menu-lateral .submenu .menu-item {
       border-bottom: 1px solid #ccc; }
       .ds-menu-lateral .submenu .menu-item:last-child {
@@ -11879,6 +11881,10 @@ fieldset legend,
       text-decoration: none; }
   .ds-menu-lateral [class*="fa-"] {
     margin-top: 4px; }
+  .ds-menu-lateral .is-active a,
+  .ds-menu-lateral .is-active button {
+    background-color: #2670e8;
+    color: #fff; }
 
 .br-message {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -12664,3 +12670,5 @@ fieldset legend,
   .br-upload .upload-size {
     text-align: right;
     visibility: hidden; }
+
+/*# sourceMappingURL=dsgov.css.map */
