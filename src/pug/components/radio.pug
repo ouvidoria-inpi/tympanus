@@ -1,0 +1,12 @@
+mixin radio(label="Label")
+  - let className = attributes.class
+  - let componentClass = prefix + "radio"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
+    input(
+      id=attributes.id
+      type="radio"
+      name=attributes.name
+      checked=attributes.checked
+      disabled=attributes.disabled)
+    label(for=attributes.id)=label

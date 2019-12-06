@@ -1,0 +1,68 @@
+extends ../../layouts/system
+
+append vars
+  - var title = "Título da Tela de Formulário"
+
+append scripts
+  script(src="../js/select.js")
+
+append message
+  +message("is-danger")
+    strong Erro.
+    span  Mensagem. 
+    a(href='') Exemplo de link
+
+append content
+  p Preencha o formulário com os dados solicitados e ative a sua conta no sistema enviaremos um código para você. Como prefere recebê-lo?
+  .br-form
+    fieldset
+      legend Identificação do Trabalhador
+      .row
+        .col-sm-8
+          +input("Nome")(id="nome" placeholder="Insira um texto")
+        .col-sm-4
+          +input("CPF")(id="cpf" placeholder="Insira um texto")
+      .row.mt-3
+        .col-sm-4
+          +input("NIS")(id="nos" placeholder="Insira um texto")
+        .col-sm-4
+          +select("Sexo")(id="sexo")
+            +option("Selecione", "0")
+            +option("opção 1", "1")
+            +option("opção 2", "1")
+            +option("opção 3", "2")
+            +option("opção 4", "4")
+        .col-sm-4
+          +select("Raça")(id="raca")
+            +option("Selecione", "0")
+            +option("opção 1", "1")
+            +option("opção 2", "1")
+            +option("opção 3", "2")
+            +option("opção 4", "4")
+      .row.mt-3
+        .col-sm-4
+          +select("Estado Civil")(id="estado-civil")
+            +option("Selecione", "0")
+            +option("opção 1", "1")
+            +option("opção 2", "1")
+            +option("opção 3", "2")
+            +option("opção 4", "4")
+        .col-sm-3
+          .field
+            p.label Primeiro Emprego?
+            +radio("Sim")(id="emprego-sim")
+            +radio("Não")(id="emprego-nao")
+        .col-sm-4
+          +select("Grau de Instrução")(id="instrucao")
+            +option("Selecione", "0")
+            +option("opção 1", "1")
+            +option("opção 2", "1")
+            +option("opção 3", "2")
+            +option("opção 4", "4")
+      .row.mt-3
+        .col-sm-8
+          +input("Nome Social")(id="nome-social" placeholder="Insira um texto")
+    .d-flex.flex-wrap.flex-row-reverse.justify-content-center.justify-content-sm-start.mt-6.mt-sm-10
+      +button(class="is-primary") Ação principal
+      +button(class="is-secondary mt-3 mt-sm-0 mr-sm-3") Ação secundária
+      +button(class="is-cancel mt-3 mt-sm-0 mr-sm-3") Cancelar

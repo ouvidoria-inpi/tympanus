@@ -1,0 +1,14 @@
+mixin checklist
+  - let className = attributes.class
+  - let componentClass = prefix + "checklist"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
+    if block
+      block
+
+mixin check-item
+  .item
+    if block
+      block
+    else
+      .feedback("Incluir ICON, INPUT e CHECKBOX/RADIO")

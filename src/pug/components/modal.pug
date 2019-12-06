@@ -1,0 +1,33 @@
+mixin modal
+  - var className=attributes.class;
+  .br-modal(class=className ? className : "is-medium")
+    .container-fluid.px-0
+      if block
+        block
+      else
+        .br-modal-body
+          +feedback("Inserir MODAL-BODY e MODAL-FOOTER")
+
+mixin modal-header(title)
+  .br-modal-header
+    .br-modal-title(class=attributes.class title=title)=title
+    if block
+      block
+
+mixin modal-body
+  .br-modal-body(class=attributes.class)
+    if block
+      block
+
+mixin modal-footer
+  - var className=attributes.class
+  .br-modal-footer(class=className ? className : "justify-content-end")
+    if block
+      block
+
+mixin modal-close
+  button.close(
+    type="button"
+    data-dismiss="br-modal"
+    aria-label="Close")
+    i.fas.fa-times

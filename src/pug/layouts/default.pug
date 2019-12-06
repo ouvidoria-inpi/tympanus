@@ -1,0 +1,46 @@
+doctype html
+block vars
+  - let prefix = "br-"
+
+block components
+  include ../components/accordeon
+  include ../components/badge
+  include ../components/breadcrumb
+  include ../components/button
+  include ../components/checkbox
+  include ../components/checklist
+  include ../components/divider
+  include ../components/feedback
+  include ../components/header-system
+  include ../components/header-site
+  include ../components/input
+  include ../components/language
+  include ../components/menu-ds
+  include ../components/message
+  include ../components/modal
+  include ../components/pagination
+  include ../components/radio
+  include ../components/select
+  include ../components/skip-menu
+  include ../components/tabs
+  include ../components/textarea
+  include ../components/upload
+
+html(lang="pt-BR")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title= title ? title : "Template padrão"
+    // Fonte Rawline
+    link(rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
+    // Fonte Raleway
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap")
+    // Design System de Governo
+    link(rel="stylesheet" href="../css/dsgov.css")
+    // Fontawesome
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js")
+    block style
+  body(class= templateClass ? `template-${templateClass}` : "")
+    block template
+    block scripts

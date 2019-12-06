@@ -1,0 +1,71 @@
+.#{$prefix}pagination {
+  margin: 0 0 ($spacer * 3);
+  padding: 0;
+  li {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+  }
+  a {
+    border-radius: $button-radius;
+    color: $color-primary;
+    font-weight: 400;
+    justify-content: center;
+    min-width: $spacer * 3;
+    padding: 0 ($spacer);
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    &:hover {
+      background-color: $color-primary-pastel-1;
+      text-decoration: none;
+    }
+  }
+  .is-active {
+    a {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+  .is-first {
+    &::after {
+      color: $color-gray-3;
+      content: "|";
+    }
+  }
+  .is-last {
+    &::before {
+      color: $color-gray-3;
+      content: "|";
+    }
+  }
+  .is-disabled {
+    a {
+      color: $color-gray-5;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+  // Tamanhos
+  &.is-large {
+    @include media-breakpoint-up(sm) {
+      li {
+        font-size: $font-size-base * 1.25;
+      }
+      a {
+        margin: 0 $spacer-half;
+        min-width: $spacer * 3.75;
+      }
+      .is-first {
+        &::after {
+          margin: 0 ($spacer);
+        }
+      }
+      .is-last {
+        &::before {
+          margin: 0 ($spacer);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+mixin button
+  - let className = attributes.class
+  - let accesskey = attributes.accesskey
+  - let disabled = attributes.disabled
+  button.br-button(
+    class=className ? className : ""
+    type="button"
+    accesskey=accesskey ? accesskey : false
+    disabled=disabled ? disabled : false)
+    if block
+      block

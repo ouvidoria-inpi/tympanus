@@ -1,293 +1,359 @@
-{
-  "Introdução": [
-    {
-      "label": "Como começar",
-      "path": "docs/introducao/como-comecar"
-    },
-    {
-      "label": "Princípios do Design System",
-      "path": "docs/introducao/principios"
-    },
-    {
-      "label": "Sobre o Design System",
-      "path": "docs/introducao/sobre"
-    }
-  ],
-  "Fundamentos Visuais": [
-    {
-      "label": "Cores",
-      "path": "docs/fundamentos-visuais/cores"
-    },
-    {
-      "label": "Ícones",
-      "path": "docs/fundamentos-visuais/icones"
-    },
-    {
-      "label": "Estados",
-      "path": "docs/fundamentos-visuais/estados"
-    },
-    {
-      "label": "Sistema de Grid",
-      "path": "docs/fundamentos-visuais/grid"
-    },
-    {
-      "label": "Tipografia",
-      "path": "docs/fundamentos-visuais/tipografia"
-    }
-  ],
-  "Boas Práticas": [
-    {
-      "children": [
-        {
-          "label": "Acessibilidade no Código HTML",
-          "path": "docs/boas-praticas/desenvolvimento/acessibilidade-no-codigo-html"
-        },
-        {
-          "label": "Construção do CSS",
-          "path": "docs/boas-praticas/desenvolvimento/construcao-do-css"
-        },
-        {
-          "label": "Sobre o Design System",
-          "path": "docs/introducao/sobre"
-        },
-        {
-          "label": "Manutenção do CSS",
-          "path": "docs/boas-praticas/desenvolvimento/manutencao-do-css"
-        },
-        {
-          "label": "Uso do WAI-ARIA",
-          "path": "docs/boas-praticas/desenvolvimento/uso-do-wai-aria"
-        },
-        {
-          "label": "Uso do css",
-          "path": "docs/boas-praticas/desenvolvimento/uso-do-css"
-        }
-      ],
-      "label": "Desenvolvimento"
-    },
-    {
-      "children": [
-        {
-          "label": "Aplicação das cores",
-          "path": "docs/boas-praticas/design/aplicacao-das-cores"
-        }
-      ],
-      "label": "Design"
-    }
-  ],
-  "Componentes": [
-    {
-      "label": "Status dos Componentes",
-      "path": "components/components"
-    },
-    {
-      "label": "Abas",
-      "path": "components/tabs/tabs"
-    },
-    {
-      "label": "Acordeão",
-      "path": "components/accordeon/accordeon"
-    },
-    {
-      "label": "Badge",
-      "path": "components/badge/badge"
-    },
-    {
-      "label": "Botão",
-      "path": "components/button/button"
-    },
-    {
-      "label": "Breadcrumb",
-      "path": "components/breadcrumb/breadcrumb"
-    },
-    {
-      "label": "Cabeçalho",
-      "path": "components/header/header"
-    },
-    {
-      "label": "Card",
-      "path": "components/card/card"
-    },
-    {
-      "label": "Checkbox",
-      "path": "components/checkbox/checkbox"
-    },
-    {
-      "label": "Checklist",
-      "path": "components/checklist/checklist"
-    },
-    {
-      "label": "Datepicker",
-      "path": "components/datepicker/datepicker"
-    },
-    {
-      "label": "Divider",
-      "path": "components/divider/divider"
-    },
-    {
-      "label": "Formulário",
-      "path": "components/form/form"
-    },
-    {
-      "label": "Input",
-      "path": "components/input/input"
-    },
-    {
-      "label": "Mensagens",
-      "path": "components/message/message"
-    },
-    {
-      "isPdf": false,
-      "label": "Modal",
-      "path": "components/modal/modal"
-    },
-    {
-      "label": "Paginação",
-      "path": "components/pagination/pagination"
-    },
-    {
-      "label": "Radio button",
-      "path": "components/radio/radio"
-    },
-    {
-      "label": "Scrim",
-      "path": "components/scrim/scrim"
-    },
-    {
-      "label": "Select",
-      "path": "components/select/select"
-    },
-    {
-      "label": "Tabela",
-      "path": "components/table/table"
-    },
-    {
-      "label": "Upload",
-      "path": "components/upload/upload"
-    }
-  ],
-  "Templates": [
-    {
-      "label": "Status dos Templates",
-      "path": "templates/templates"
-    },
-    {
-      "children": [
-        {
-          "label": "1 - Início do Cadastro",
-          "path": "templates/signin/signin"
-        },
-        {
-          "label": "2 - Ativação da Conta",
-          "path": "templates/signin/signin-1"
-        },
-        {
-          "label": "3 - Verificação do código recebido",
-          "path": "templates/signin/signin-2"
-        },
-        {
-          "label": "4 - Correção do número do celular",
-          "path": "templates/signin/signin-3"
-        },
-        {
-          "label": "5 - Conclusão do Cadastro",
-          "path": "templates/signin/signin-4"
-        }
-      ],
-      "label": "Cadastro de usuário"
-    },
-    {
-      "children": [
-        {
-          "label": "Com Lista de Opções",
-          "path": "templates/password-recovery/password-recovery"
-        },
-        {
-          "label": "Pelo Celular",
-          "path": "templates/password-recovery/password-recovery-1"
-        },
-        {
-          "label": "Campo com Validação",
-          "path": "templates/password-recovery/password-recovery-2"
-        },
-        {
-          "label": "Precisa de Ajuda?",
-          "path": "templates/password-recovery/password-recovery-help"
-        },
-        {
-          "label": "Mudar Senha",
-          "path": "templates/password-recovery/password-recovery-change"
-        }
-      ],
-      "label": "Recuperação de Senha"
-    },
-    {
-      "children": [
-        {
-          "label": "Template base",
-          "path": "templates/page/page"
-        },
-        {
-          "label": "Exemplo de formulário - 1",
-          "path": "templates/crud/crud"
-        }
-      ],
-      "label": "Sistemas"
-    },
-    {
-      "children": [
-        {
-          "label": "Template base",
-          "path": "templates/portal/portal"
-        }
-      ],
-      "label": "Sites e portais"
-    },
-    {
-      "children": [
-        {
-          "label": "1 - Tela de Criação (Cadastro)",
-          "path": "templates/crud/crud"
-        },
-        {
-          "label": "2 - Tela de Filtragem com Colapse",
-          "path": "templates/crud/crud-2"
-        },
-        {
-          "label": "3 - Tela de Pesquisa com Mensagem de Alerta",
-          "path": "templates/crud/crud-3"
-        },
-        {
-          "label": "4 - Tela de Busca com Auto-Complete",
-          "path": "templates/crud/crud-4"
-        },
-        {
-          "label": "5 - Tela de Visualização de Dados Cadastrados",
-          "path": "templates/crud/crud-5"
-        },
-        {
-          "label": "6 - Tela de Edição de Dados Cadastrados",
-          "path": "templates/crud/crud-6"
-        }
-      ],
-      "label": "Template CRUD para Portais"
-    },
-    {
-      "children": [
-        {
-          "label": "Com opção de busca",
-          "path": "templates/not-found/not-found-1"
-        },
-        {
-          "label": "Padrão",
-          "path": "templates/not-found/not-found-2"
-        }
-      ],
-      "label": "Tela de erro para Sistemas"
-    },
-    {
-      "label": "Login",
-      "path": "templates/login/login"
-    }
-  ]
-}
+[
+  {
+    "label": "Introdução",
+    "type": "docs",
+    "id": "introducao",
+    "children": [
+      {
+        "label": "Como começar",
+        "filename": "como-comecar"
+      },
+      {
+        "label": "Princípios do Design System",
+        "filename": "principios"
+      },
+      {
+        "label": "Sobre o Design System",
+        "filename": "sobre"
+      }
+    ]
+  },
+  {
+    "label": "Fundamentos Visuais",
+    "type": "docs",
+    "id": "fundamentos-visuais",
+    "children": [
+      {
+        "label": "Cores",
+        "filename": "cores",
+        "folder": "cores"
+      },
+      {
+        "label": "Ícones",
+        "filename": "icones",
+        "folder": "icones"
+      },
+      {
+        "label": "Estados",
+        "filename": "estados",
+        "folder": "estados"
+      },
+      {
+        "label": "Sistema de Grid",
+        "filename": "grid",
+        "folder": "grid"
+      },
+      {
+        "label": "Tipografia",
+        "filename": "tipografia",
+        "folder": "tipografia"
+      }
+    ]
+  },
+  {
+    "label": "Boas Práticas",
+    "type": "docs",
+    "id": "boas-praticas",
+    "children": [
+      {
+        "label": "Desenvolvimento",
+        "children": [
+          {
+            "label": "Acessibilidade no Código HTML",
+            "filename": "acessibilidade-no-codigo-html"
+          },
+          {
+            "label": "Construção do CSS",
+            "filename": "construcao-do-css"
+          },
+          {
+            "label": "Manutenção do CSS",
+            "filename": "manutencao-do-css"
+          },
+          {
+            "label": "Uso do WAI-ARIA",
+            "filename": "uso-do-wai-aria"
+          },
+          {
+            "label": "Uso do css",
+            "filename": "uso-do-css"
+          }
+        ]
+      },
+      {
+        "label": "Design",
+        "children": [
+          {
+            "label": "Aplicação das cores",
+            "filename": "aplicacao-das-cores"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Componentes",
+    "id": "components",
+    "urllabel": "componentes",
+    "type": "component",
+    "children": [
+      {
+        "label": "Status Atual dos Componentes",
+        "filename": "status",
+        "type": "docs"
+      },
+      {
+        "label": "Abas",
+        "filename": "tabs",
+        "urllabel": "abas"
+      },
+      {
+        "label": "Acordeão",
+        "filename": "accordeon",
+        "urllabel": "acordeao"
+      },
+      {
+        "label": "Badge",
+        "filename": "badge",
+        "urllabel": "badge"
+      },
+      {
+        "label": "Botão",
+        "filename": "button",
+        "urllabel": "botao"
+      },
+      {
+        "label": "Breadcrumb",
+        "filename": "breadcrumb",
+        "urllabel": "migalha-de-pao"
+      },
+      {
+        "label": "Cabeçalho",
+        "filename": "header",
+        "urllabel": "cabecalho"
+      },
+      {
+        "label": "Card",
+        "filename": "card",
+        "urllabel": "card"
+      },
+      {
+        "label": "Checkbox",
+        "filename": "checkbox",
+        "urllabel": "checkbox"
+      },
+      {
+        "label": "Checklist",
+        "filename": "checklist",
+        "urllabel": "checklist"
+      },
+      {
+        "label": "Datepicker",
+        "filename": "datepicker",
+        "urllabel": "datepicker"
+      },
+      {
+        "label": "Divider",
+        "filename": "divider",
+        "urllabel": "divisor"
+      },
+      {
+        "label": "Formulário",
+        "filename": "form",
+        "urllabel": "form"
+      },
+      {
+        "label": "Input",
+        "filename": "input",
+        "urllabel": "input"
+      },
+      {
+        "label": "Mensagens",
+        "filename": "message",
+        "urllabel": "mensagem"
+      },
+      {
+        "label": "Modal",
+        "filename": "modal",
+        "urllabel": "modal"
+      },
+      {
+        "label": "Paginação",
+        "filename": "pagination",
+        "urllabel": "paginacao"
+      },
+      {
+        "label": "Radio button",
+        "filename": "radio",
+        "urllabel": "radio"
+      },
+      {
+        "label": "Scrim",
+        "filename": "scrim",
+        "urllabel": "scrim"
+      },
+      {
+        "label": "Select",
+        "filename": "select",
+        "urllabel": "select"
+      },
+      {
+        "label": "Tabela",
+        "filename": "table",
+        "urllabel": "tabela"
+      },
+      {
+        "label": "Textarea",
+        "filename": "textarea",
+        "urllabel": "textarea"
+      },
+      {
+        "label": "Upload",
+        "filename": "upload",
+        "urllabel": "upload"
+      }
+    ]
+  },
+  {
+    "label": "Templates",
+    "id": "templates",
+    "type": "template",
+    "children": [
+      {
+        "label": "Status Atual dos Templates",
+        "filename": "status",
+        "urllabel": "status",
+        "type": "docs"
+      },
+      {
+        "label": "Cadastro de usuário",
+        "children": [
+          {
+            "label": "1 - Início do Cadastro",
+            "filename": "signin",
+            "urllabel": "signin"
+          },
+          {
+            "label": "2 - Ativação da Conta",
+            "filename": "signin-1",
+            "urllabel": "signin-1"
+          },
+          {
+            "label": "3 - Verificação do código recebido",
+            "filename": "signin-2",
+            "urllabel": "signin-2"
+          },
+          {
+            "label": "4 - Correção do número do celular",
+            "filename": "signin-3",
+            "urllabel": "signin-3"
+          },
+          {
+            "label": "5 - Conclusão do Cadastro",
+            "filename": "signin-4",
+            "urllabel": "signin-4"
+          }
+        ]
+      },
+      {
+        "label": "Recuparação de Senha",
+        "children": [
+          {
+            "label": "Com Lista de Opções",
+            "filename": "password-recovery",
+            "urllabel": "password-recovery"
+          },
+          {
+            "label": "Pelo Celular",
+            "filename": "password-recovery-1",
+            "urllabel": "password-recovery-1"
+          },
+          {
+            "label": "Campo com Validação",
+            "filename": "password-recovery-2",
+            "urllabel": "password-recovery-2"
+          },
+          {
+            "label": "Precisa de Ajuda?",
+            "filename": "password-recovery-help",
+            "urllabel": "password-recovery-help"
+          },
+          {
+            "label": "Mudar Senha",
+            "filename": "password-recovery-change",
+            "urllabel": "password-recovery-change"
+          }
+        ]
+      },
+      {
+        "label": "Sistemas",
+        "children": [
+          {
+            "label": "Template base",
+            "filename": "page",
+            "urllabel": "page"
+          }
+        ]
+      },
+      {
+        "label": "Sites e portais",
+        "children": [
+          {
+            "label": "Template base",
+            "filename": "portal",
+            "urllabel": "portal"
+          }
+        ]
+      },
+      {
+        "label": "Template CRUD para Portais",
+        "children": [
+          {
+            "label": "1 - Tela de Criação (Cadastro)",
+            "filename": "crud"
+          },
+          {
+            "label": "2 - Tela de Filtragem com Colapse",
+            "filename": "crud-2"
+          },
+          {
+            "label": "3 - Tela de Pesquisa com Mensagem de Alerta",
+            "filename": "crud-3"
+          },
+          {
+            "label": "4 - Tela de Busca com Auto-Complete",
+            "filename": "crud-4"
+          },
+          {
+            "label": "5 - Tela de Visualização de Dados Cadastrados",
+            "filename": "crud-5"
+          },
+          {
+            "label": "6 - Tela de Edição de Dados Cadastrados",
+            "path": "crud-6"
+          }
+        ]
+      },
+      {
+        "label": "Tela de erro para Sistemas",
+        "children": [
+          {
+            "label": "Com opção de busca",
+            "filename": "not-found-1",
+            "urllabel": "not-found-1"
+          },
+          {
+            "label": "Padrão",
+            "filename": "not-found-2",
+            "urllabel": "not-found-2"
+          }
+        ]
+      },
+      {
+        "label": "Login",
+        "filename": "login",
+        "urllabel": "login"
+      }
+    ]
+  }
+]

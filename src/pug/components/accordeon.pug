@@ -1,0 +1,23 @@
+mixin accordeon
+  - let className = attributes.class
+  - let componentClass = prefix + "accordeon"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
+    if block
+      block
+
+mixin accordeon-item(title="Título", className)
+  .item(class=className ? className : "")
+    button.header(type="button")
+      span.icon
+        if className
+          i.fas.fa-minus
+        else
+          i.fas.fa-plus
+      span.title=title
+  .content
+    if block
+      block
+    else
+      | Conteúdo
+

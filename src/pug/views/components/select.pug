@@ -1,0 +1,65 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Select";
+
+append scripts
+  script(src="../js/select.js")
+
+append content
+  .row
+    .col-sm-4
+      .mb-3
+        +select("Normal")(id="normal")
+          +option("Selecione", "0")
+          +option("opção 1 opção 1 opção 1 opção 1 opção 1 opção 1", "1")
+          +option("opção 2", "1")
+          +option("opção 3", "2")
+          +option("opção 4", "4")
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+      .mb-3
+        +select("Médio")(id="medium" class="is-medium")
+          +option("Selecione", "0")
+          +option("opção 1", "1")
+          +option("opção 2", "2")
+          +option("opção 3", "3")
+          +option("opção 4", "4")
+      .mb-3
+        +select("Pequeno")(id="small" class="is-small")
+          +option("Selecione", "0")
+          +option("opção 1", "1")
+          +option("opção 2", "2")
+          +option("opção 3", "3")
+          +option("opção 4", "4")
+    .col-sm-4
+      .mb-3
+        +select("Focus")(id="focus" class="is-focus")
+          +option("Selecione", "0")
+          +option("opção 1", "1")
+          +option("opção 2", "2")
+          +option("opção 3", "3")
+          +option("opção 4", "4")
+      .mb-3
+        +select("Desabilitado")(id="disabled" disabled)
+          +option("Selecione", "0")
+          +option("opção 1", "1")
+          +option("opção 2", "2")
+          +option("opção 3", "3")
+          +option("opção 4", "4")
+    .col-sm-4
+      .mb-3
+        +select("Inválido")(id="invalid" class="is-invalid")
+          +option("Selecione", "0")
+          +option("opção 1", "1")
+          +option("opção 2", "2")
+          +option("opção 3", "3")
+          +option("opção 4", "4")
+        +feedback("Erro")
+      .mb-3
+        +select("Válido")(id="valid" class="is-valid")
+          +option("Selecione", "0")
+          +option("opção 1", "1")
+          +option("opção 2", "2")
+          +option("opção 3", "3")
+          +option("opção 4", "4")
+        +feedback("Ok")(class="is-valid")

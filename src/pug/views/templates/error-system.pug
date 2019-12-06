@@ -1,0 +1,61 @@
+extends ../../layouts/system
+
+append vars
+  - var title = "Tela de erro"
+
+block title
+
+append content
+  .container
+    .row.align-items-center.justify-content-center
+      .col-sm-5.col-lg-4
+        img.img-fluid(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/unhappy-face.png" alt="Não encontrado...")
+      .col-sm.text-center.text-sm-left
+        .row.justify-content-center
+          .col-sm-12
+            p.not-found-title Desculpe!
+            p.not-found-message.mt-3
+              | A página que você está procurando não existe.
+              br.d-none.d-sm-block
+              | Pesquise o que deseja ou acesse os links sugeridos.
+    .row.mt-10.hint.justify-content-around
+      .col-sm-auto
+        .box
+          .icon.text-center
+            i.fas.fa-home.fa-2x(aria-hidden='true')
+          .content
+            span.title Home
+            p.message.mb-0.mt-1
+              span.d-sm-none Página inicial
+              span.d-none.d-sm-block Acesse a Página inicial
+      .col-sm-auto.vertical-divider
+        hr.d-block.d-sm-none
+      .col-sm-auto
+        .box
+          .icon.text-center
+            i.fas.fa-question.fa-2x(aria-hidden='true')
+          .content
+            span.title Ajuda
+            p.message.mb-0.mt-1
+              span.d-sm-none Tópicos para ajudar você
+              span.d-none.d-sm-block
+                | Acesse tópicos pra ajudar você
+                br
+                | a encontrar o que deseja
+      .col-sm-auto.vertical-divider
+        hr.d-block.d-sm-none
+      .col-sm-auto
+        .box
+          .icon.text-center
+            i.fas.fa-chalkboard-teacher.fa-2x(aria-hidden='true')
+          .content
+            span.title Serviços
+            p.message.mb-0.mt-1
+              span.d-sm-none Principais serviços do Governo Federal
+              span.d-none.d-sm-block
+                | Acesse os principais serviços do
+                br
+                | Governo Federal
+      .col-sm-auto.d-sm-none
+        hr.d-block.d-sm-none
+

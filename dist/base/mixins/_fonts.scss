@@ -1,9 +1,0 @@
-@mixin make-font($font, $font-directory, $font-name, $font-weight, $font-style) {
-  @font-face {
-    font-family: $font;
-    font-style: $font-style;
-    font-weight: $font-weight;
-    src: url("#{$font-directory}/#{$font-name}.ttf") format("truetype");
-    text-rendering: optimizeLegibility;
-  }
-}

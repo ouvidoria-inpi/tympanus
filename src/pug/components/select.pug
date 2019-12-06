@@ -1,0 +1,14 @@
+mixin select(label="Label")
+  - let className = attributes.class
+  - let componentClass = prefix + "select"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
+    label(for=attributes.id)=label
+    select(id=attributes.id
+      disabled=attributes.disabled)
+      if block
+        block
+
+mixin option(text="", value="0")
+  option(value=value
+    selected=attributes.selected)=text
