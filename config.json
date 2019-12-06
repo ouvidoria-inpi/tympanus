@@ -25,23 +25,28 @@
     "children": [
       {
         "label": "Cores",
-        "filename": "cores"
+        "filename": "cores",
+        "folder": "cores"
       },
       {
         "label": "Ícones",
-        "filename": "icones"
+        "filename": "icones",
+        "folder": "icones"
       },
       {
         "label": "Estados",
-        "filename": "estados"
+        "filename": "estados",
+        "folder": "estados"
       },
       {
         "label": "Sistema de Grid",
-        "filename": "grid"
+        "filename": "grid",
+        "folder": "grid"
       },
       {
         "label": "Tipografia",
-        "filename": "tipografia"
+        "filename": "tipografia",
+        "folder": "tipografia"
       }
     ]
   },

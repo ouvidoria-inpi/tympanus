@@ -9907,7 +9907,7 @@ fieldset legend,
   .template-site,
   .template-authentication {
     display: grid;
-    grid-template-areas: "header" "wrapper" "footer";
+    grid-template-areas: "header" "wrapper" "footer";
     grid-template-rows: auto 1fr auto;
     min-height: 100vh; }
     .template-system .page-header,
