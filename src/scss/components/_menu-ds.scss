@@ -60,9 +60,9 @@
     margin-top: $spacer-half;
   }
   .is-active {
-    background-color: $color-primary-lighten-2;
     a,
     button {
+      background-color: $color-primary-lighten-2;
       color: $color-white;
     }
   }
