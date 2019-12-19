@@ -10,6 +10,7 @@ Como iniciar a criação de um novo trabalho neste repositório:
 git clone git@git.serpro:ds-gov/design-system.git
 ```
 
+
 2 - Entre na pasta do clone e execute os comandos:
 
 ```
