@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
   <link rel="stylesheet" href="table.css">
   <link rel="stylesheet" href="../select/select.css">
+  <link rel="stylesheet" href="../accordeon/accordeon.css">
 </head>
 <body>
   <div class="container">
@@ -33,19 +34,31 @@
         </div>
         <i class="fa fa-times toogle-search" id="close"></i>
       </div>
+      <div class="row densidade is-visible col-sm-12 col-md-12 col-lg-12">
+        <div class="table-title col-sm-11 col-md-11 align-items-start">
+          Título da Tabela
+        </div>
+        <div class="actions col-sm-1 col-md-1 align-items-end">
+          <i class="fa fa-th" id="densidade-up" ></i>
+          <i class="fa fa-th-large" id="densidade-down" ></i>
+          <div class="divisor-vertical"></div>
+          <i class="fa fa-ellipsis-v menu-items"></i>
+        </div>
+      </div>
       <div class="row title-bar is-visible col-sm-12 col-md-12 col-lg-12">
         <div class="table-title col-sm-11 col-md-11 align-items-start">
           Título da Tabela
         </div>
         <div class="actions col-sm-1 col-md-1 align-items-end">
           <i class="fa fa-search  toogle-search" id="table-search"></i>
-          <i class="fa fa-ellipsis-v" id="menu-items"></i>
+          <i class="fa fa-ellipsis-v menu-items"></i>
         </div>
       </div>
       <table id="table" class="table-responsive">
         <thead>
           <tr>
-            <th>
+            <th></th>
+            <th class="modify-mobil">
               <div class="br-check">
                 <input type="checkbox" name="item" id="checkbox" class="teste">
                 <label for="checkbox"></label>
@@ -60,7 +73,8 @@
         </thead>
         <tbody class="table-body">
           <tr>
-            <td>
+            <td></td>
+            <td class="modify-mobil">
               <div class="br-check">
                 <input type="checkbox" name="item" id="checkbox2"  class="teste">
                 <label for="checkbox2"></label>
@@ -73,7 +87,8 @@
             <td data-title="Coluna 5">Curabitur tincidunt</td>
           </tr>
           <tr>
-            <td>
+            <td></td>
+            <td class="modify-mobil">
               <div class="br-check">
                 <input type="checkbox" name="item" id="checkbox3"  class="teste">
                 <label for="checkbox3"></label>
@@ -86,7 +101,8 @@
             <td data-title="Coluna 5">Curabitur tincidunt</td>
           </tr>
           <tr>
-            <td>
+            <td class="expande-mobil"><i class="fas fa-angle-up rotate" id="expande"></i></td>
+            <td class="modify-mobil">
               <div class="br-check">
                 <input type="checkbox" name="item" id="checkbox4">
                 <label for="checkbox4"></label>
@@ -98,8 +114,49 @@
             <td data-title="Coluna 4">3258 bytes</td>
             <td data-title="Coluna 5">Curabitur tincidunt</td>
           </tr>
+          <tr class="disabled">
+            <td colspan="7">
+              <div class="br-table">
+                <table class="interna">
+                  <thead>
+                    <tr>
+                      <th>Coluna1</th>
+                      <th>Coluna2</th>
+                      <th>Coluna3</th>
+                      <th>Coluna4</th>
+                      <th>Coluna5</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>TESTE</td>
+                        <td>TESTE</td>
+                        <td>MORE</td>
+                        <td>MORE</td>
+                        <td>TESTE</td>
+                    </tr>
+                    <tr>
+                        <td>TESTE</td>
+                        <td>TESTE</td>
+                        <td>MORE</td>
+                        <td>MORE</td>
+                        <td>TESTE</td>
+                    </tr>
+                    <tr>
+                        <td>TESTE</td>
+                        <td>TESTE</td>
+                        <td>MORE</td>
+                        <td>MORE</td>
+                        <td>TESTE</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </td>
+          </tr>
           <tr>
-            <td>
+            <td></td> 
+            <td class="modify-mobil">
               <div class="br-check">
                 <input type="checkbox" name="item" id="checkbox5">
                 <label for="checkbox5"></label>
@@ -112,7 +169,8 @@
             <td data-title="Coluna 5">Curabitur tincidunt</td>
           </tr>
           <tr>
-            <td>
+            <td></td>
+            <td class="modify-mobil">
               <div class="br-check">
                 <input type="checkbox" name="item" id="checkbox6">
                 <label for="checkbox6"></label>
@@ -124,6 +182,20 @@
             <td data-title="Coluna 4">3258 bytes</td>
             <td data-title="Coluna 5">Curabitur tincidunt</td>
           </tr>
+          <tr>
+            <td></td>
+            <td class="modify-mobil">
+              <div class="br-check">
+                <input type="checkbox" name="item" id="checkbox7">
+                <label for="checkbox7"></label>
+              </div>
+            </td>
+            <td data-title="Coluna 1">Duis id libero posuere</td>
+            <td data-title="Coluna 2">395</td>
+            <td data-title="Coluna 3">100%</td>
+            <td data-title="Coluna 4">7575 bytes</td>
+            <td data-title="Coluna 5">tincidunt arcu sed</td>
+          </tr> 
         </tbody>
       </table>
       <div class="footer d-sm-none">
@@ -183,5 +255,6 @@
   </div>
   <script src="table.js"></script>
   <script src="assets/design-system/components/select/select.js"></script>
+  <script src="assets/design-system/components/accordeon/accordeon.js"></script>
 </body>
 </html>
