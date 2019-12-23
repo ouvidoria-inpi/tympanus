@@ -1,6 +1,6 @@
 mixin datepicker(label="Label", labelClass)
   - let className = attributes.class
-  - let componentClass = prefix + "input"
+  - let componentClass = prefix + "datepicker"
   - className = className ? componentClass + " " + className : componentClass
   div(class=className)
     label(class=labelClass for=attributes.id)=label
@@ -11,3 +11,4 @@ mixin datepicker(label="Label", labelClass)
       disabled=attributes.disabled)
     if block
       block
+    
