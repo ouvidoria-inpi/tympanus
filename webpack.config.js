@@ -105,7 +105,7 @@ module.exports = function(env, argv) {
 													uglify: false,
 													sourceMap: true,
 													name: 'dsgov-components',
-													outputPath: 'js/components',
+													outputPath: 'js/components/',
 													fileName: '[name].js',
 													filesToConcat: ['./src/js/components/**'],
 													attributes: {

@@ -15,7 +15,7 @@
     "watch": "npm-run-all --parallel watch-*",
     "watch-sass": "node-sass -w -r --source-map true ./src/scss/ -o ./dist/css",
     "watch-pug": "pug -w ./src/pug/views/ -o ./dist -P",
-    "watch:webpack": "webpack --mode development",
+    "watch-webpack": "webpack --mode development",
     "build:webpack:dev": "webpack --mode development",
     "build:webpack:prod": "webpack --mode production",
     "delcomp": "rm -rf dist"
