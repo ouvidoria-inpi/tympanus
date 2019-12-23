@@ -100,7 +100,7 @@ module.exports = function(env, argv) {
         },
 
         plugins: [
-												new CleanWebpackPlugin(),
+												// new CleanWebpackPlugin(),
 												new ConcatPlugin({
 													uglify: false,
 													sourceMap: true,
