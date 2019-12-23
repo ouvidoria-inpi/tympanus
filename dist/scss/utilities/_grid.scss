@@ -1,0 +1,25 @@
+// Grid - Baseada na grid do Bootstrap
+// Verifique os valores de breakpoint e gutters nas configurações:
+// - $grid-breakpoints
+// - $grid-gutters
+
+@import "../../../node_modules/bootstrap/scss/grid";
+
+// Variações de gutter
+@each $breakpoint, $gutter in $grid-gutters {
+  @include media-breakpoint-up($breakpoint) {
+    .container,
+    .container-fluid {
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+    }
+    .row {
+      margin-left: -$gutter / 2;
+      margin-right: -$gutter / 2;
+    }
+    [class^="col"] {
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+    }
+  }
+}

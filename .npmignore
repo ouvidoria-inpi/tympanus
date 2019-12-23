@@ -1,0 +1,10 @@
+src
+docs
+dist/components
+dist/templates
+.editorconfig
+.gitlab-ci.yml
+.htmlvalidate.json
+gulpfiles.js
+webpack.config.js
+
