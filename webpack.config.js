@@ -56,6 +56,9 @@ module.exports = function(env, argv) {
 
         module: {
             rules: [{
+																					test: /\.scss$/,
+																					use: ["style-loader", "css-loader", "sass-loader"]
+																			},{
 																				test: /\.s[ac]ss$/i,
 																				
 																				
@@ -67,7 +70,8 @@ module.exports = function(env, argv) {
 																								// 								url: false,
                         //         sourceMap: true
                         //     }
-                        // },
+																								// },
+																								
                         'postcss-loader',
                         {
                             loader: 'sass-loader',
@@ -100,12 +104,12 @@ module.exports = function(env, argv) {
         },
 
         plugins: [
-												new CleanWebpackPlugin(),
+												// new CleanWebpackPlugin(),
 												new ConcatPlugin({
 													uglify: false,
 													sourceMap: true,
 													name: 'dsgov-components',
-													outputPath: 'js/components',
+													outputPath: 'js/components/',
 													fileName: '[name].js',
 													filesToConcat: ['./src/js/components/**'],
 													attributes: {

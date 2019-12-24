@@ -3,8 +3,12 @@ class BRChecklist {
     this.name = name;
     this.component = component;
     this._setBehavior();
-  }
-
+		}
+		
+		
+/*
+teste
+*/
   _setBehavior() {
     for (let inputRadio of this.component.querySelectorAll(
       'input[type="radio"]'
@@ -40,6 +44,8 @@ class BRChecklist {
     }
   }
 }
+
+
 
 let checklistList = [];
 
