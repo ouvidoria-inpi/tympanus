@@ -54,7 +54,9 @@ class BRChecklist {
     this.name = name;
     this.component = component;
     this._setBehavior();
-  }
+		}
+		
+		
 /*
 teste
 */
