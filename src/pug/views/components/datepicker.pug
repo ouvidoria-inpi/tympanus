@@ -4,12 +4,15 @@ append vars
   - var title = "DatePicker";
 
 append scripts
-  script(src="../js/datepicker.min.js")
-  script(src="../js/datepicker.js")
+  script(src="../js/components/datepicker.min.js")
+  script(src="../js/components/datepicker.js")
 
 append content
   .row
     .col-sm
       .mb-3
-        +input("Data")(id="date-start" type="text" placeholder="dd/mm/aaa")
+        +input("Data Início")(id="date-start" class="datepicker" type="text" placeholder="dd/mm/aaaa")
+    .col-sm
+      .mb-3
+        +input("Data Fim")(id="date-end" class="datepicker" type="text" placeholder="dd/mm/aaaa")
 
