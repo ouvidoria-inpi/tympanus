@@ -1,6 +1,6 @@
 .#{$prefix}input {
 &.datepicker {
-  label{
+  label {
       &::after {
       bottom: 8px;
       color: $color-primary;
@@ -13,8 +13,8 @@
       right: 16px;
       z-index: 999;
     }
-    &:hover::after{
-      color: $color-primary-lighten-2
+    &:hover::after {
+      color: $color-primary-lighten-2;
     }
   }
   input {
@@ -208,9 +208,9 @@
   //transition: background 0.15s;
   width: 2.5em; //1.5625em;
 }
-.qs-datepicker .qs-arrow:hover {
+// .qs-datepicker .qs-arrow:hover {
   //background: rgba(0, 0, 0, 0.1);
-}
+//}
 .qs-datepicker .qs-arrow:hover.qs-left::after {
   border-right-color: $color-primary-lighten-2;
 }
