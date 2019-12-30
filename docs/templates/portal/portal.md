@@ -1,198 +1,49 @@
-> **CRUD** (acrônimo de Create, Read, Update e Delete na língua Inglesa) para as quatro operações básicas utilizadas em bases de dados relacionais (RDBMS) ou em interface para utilizadores para criação, consulta, atualização e destruição de dados.
+Este documento busca especificar as principais áreas que compõe os templates para websites e portais no padrão Gov.Br e as instruções sobre onde e qual tipo de conteúdo devem ser utilizados.
 
-**Fonte:** Wikipédia
+### Elementos da Estrutura Principal
 
-Em linhas simples, as interfaces CRUD permitem o cadastro (create), visualização (read), edição (update) e exclusão (delete) de registros de um sistema.
+As principais áreas estruturais são:
 
->
+##### 1 | Cabeçalho (header)
 
----
+O cabeçalho é um dos principais elementos que determina a identidade gov.br para todos os sites. Este é replicado de forma consistente em todas as páginas. É onde se destaca a chancela de uma instituição sobre um ambiente digital. Localizado no topo da capa, traz a assinatura do órgão e garante que se trata de um ambiente sob responsabilidade do Executivo Federal.
 
-## Telas Principais do CRUD
+##### 2 | Notícia em Destaque
 
-As telas de CRUD podem sofrer variações de um sistema para outro. O componente sempre será visualizada na área de conteúdo das telas, independente da tela ter seu menu principal contraído ou expandido, o CRUD deverá se ajustar aos padrões previamente definidos no Design Sistem Gov.Br obedecendo ao que foi definido para tabelas e grid. Também suas telas pode variar na apresentação de seus componentes internos devido a sua necessidade de uso. No entanto, sua composição principal é formada das seguintes telas:
+Nesta área deverá ser exibida a notícia de destaque. Esta deverá vir em formato de banner com o título e resumo da notícia na parte de baixo da imagem.
 
-**1 | Tela de Criação (Cadastro)**
-**2 | Tela de Leitura (Visualização)**
-**3 | Tela de Atualização (Edição)**
-**4 | Tela de Exclusão**
+##### 3 | Área de Notícias
 
----
+A área de notícias terá um layout flexível, podendo assumir uma diagramação com uma, duas ou mais colunas. As chamadas para as notícias serão apresentadas com etiqueta da notícia logo acima do título, título principal, descrição da notícia e botão para compartilhamento da mesma. Ao final desta seção, poderá haver um botão de acesso à página com a listagem completa das notícias.
 
-![Thumbail](/assets/design-system/docs/assets/images/templates/crud/thumbnail_01.png)
+##### 4 | Agenda do Presidente da República
 
-### Layout Sistemas CRUD - Menu Contraído
+O bloco de agenda mostrará os eventos públicos do Presidente da República e o
+usuário poderá navegar por mês, selecionando a opção desejada no combobox, pelos dias da semana, clicando no dia desejado e por evento, navegando lateralmente pela barra de rolagem horizontal. Os eventos serão exibidos com título e descrição. Também será possível acessar a agenda completa através de um botão localizado ao final da agenda.
 
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_sistema_com_menu_01.png)
+##### 5 | Serviços e Informações
 
-### Layout Sistemas CRUD - Menu Expandido
+Esta área apresentará os serviços e informações de utilidade para o cidadão em
+formato de cards, com título e ícone representativo.
 
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_sistema_com_menu.png)
+##### 6 | Banner Publicidade
 
-### Layout Portal CRUD
+Logo abaixo do bloco Serviços e Informações, haverá espaço reservado para
+publicidade.
 
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_portal.png)
+##### 7 | Conheça a Presidência
 
----
+Nesta seção serão apresentados a biografia do presidente, acervo histórico, palácios e residências, principais tropas, entre outros temas dentro do contexto de informações da presidência da república.
 
-## CRUD - Estrutura Básica
+##### 8 | Rodapé Funcional
 
-O componente CRUD é formado normalmente de duas áreas principais: Área de busca e/ou entrada de dados e a Área de Resultado.
+O rodapé (footer) ocupa a parte inferior da estrutura padrão dos sítios e portais na
+Identidade Digital do Executivo Federal. Trata-se de mais um elemento que assegura a credibilidade do ambiente quando o usuário chega ao final. Além de apresentar atalhos para as diferentes áreas do sítio, a estrutura conta com o link para o site da Lei de Acesso à Informação e link para o próprio portal aplicado na logomarca do Governo do Brasil.
 
-![Thumbail](/assets/design-system/docs/assets/images/templates/crud/thumbnail_02.png)
-
-**A | Área de Busca e/ou Entrada de Dados**
-A área de Entrada de Dados pode variar com a necessidade de utilização. Normalmente é composta de componentes e botões;
-
-![Thumbail](/assets/design-system/docs/assets/images/templates/crud/thumbnail_03.png)
-
-**B | Área de Resultado**
-A área de Resultado normalmente apresenta uma tabela com os dados da pesquisa filtrada ou cadastrada. Essas informações apresentadas podem variar em sua apresentação, obedecendo as variações de tabelas definidas na documentação do Design Sistem.
-
-![Thumbail](/assets/design-system/docs/assets/images/templates/crud/thumbnail_04.png)
-
-**C | Botão "Call to Action"**
-Em algumas telas, onde exista uma ação prioritária a ser destacada, é necessária a utilização de um botão "call to action".
-Este botão deverá ficar posicionado na área superior direita na versão web, dando diferenciação e destaque, em comparação aos demais botões.
-
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/composicao_crud.png)
-
----
-
-## Propostas templates de telas com CRUD
-
-Seguem propostas de templates de telas de CRUD, com algumas variações de forma e uso.
-
-#### Componente CRUD - Tela de Criação (Cadastro)
-
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_sistema_com_menu_01.png)
-
-Pode-se considerar a funcionalidade de cadastro, como a mais importante em uma interface CRUD, pois, sem ela as demais não teriam utilidade. Nesta página, também, podemos exibir, a mais tradicional ‘página de entrada’ de um CRUD, que é sua listagem de registros.
-
-**Dicas de Usabilidade:**
-
-**A -** Título da página: deve estar visível sem a necessidade de usar a barra de rolagem. Utilize títulos simples e sem redundância. Exemplo: “Listagem de membros” ao invés de “Listagem de membros cadastrados no sistema”.
-
-**B -** Os botões de acesso à funcionalidade (Limpar, Cadastrar) devem estar facilmente visíveis e acessíveis, sem a necessidade de usar a barra de rolagem.
-
-Seguem alguns recursos que podem ser utilizados para evitar a ocultação dos botões:
-**1 -** disponibilizar um botão no início e outro ao final da página,
-**2 -** utilizar botão fixo ao rolar a página e/ou
-**3 -** utilizar atalho ‘voltar ao topo’ para facilitar o uso;
-
-##### Componente CRUD - Tela de Filtragem com Colapse
-
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_sistema_com_menu_04.png)
-
-Pode-se considerar a funcionalidade ‘Cadastrar’ como a mais importante em uma interface CRUD, pois, sem ela as demais não teriam utilidade. Essa tela é formada normalmente de duas áreas principais: Área de busca e/ou entrada de dados e a Área de Resultado.
-
-**Observações Importantes:**
-
-**Deve-se limitar os dados mais importantes no grid:** disponha somente os dados relevantes ao usuário e que melhor identifiquem os registros, os demais devem estar disponíveis na visualização dos detalhes. Uma interessante tática é dispor inicialmente o mínimo de dados possível e à medida do uso, verificar a necessidade de mais dados;
-
-**Deve-se sintetizar os dados presentes no grid:** aproveite-se de ícones, cores, abreviações e outros recursos para dispor informações relevantes;
-
-**Deve-se aproveitar da resolução:** telas maiores permitem a exibição de mais dados. Utilize mais dados somente em telas maiores e esconda-os em telas menores (interfaces responsivas).
-
-**Deve-se ordenar os dados:** verificar a melhor aplicabilidade ao tipo de registro e disponibilizar inicialmente já ordenado, ainda que, dependendo do tipo de dado, possa variar. Podendo ser:
-
-- Alfabética: nomes;
-- Numérica: ids e códigos
-- Cronológica: data de cadastro e edição.
-
-**Dividir os registros em páginas (tabelas):** utilizar recursos de paginação evita páginas extensas, de difícil carregamento e organização. Para garantir a aplicação dos seguintes recursos, deve-se:
-
-- Destacar a página qual o usuário encontra-se;
-- Mostrar o quantitativo total de páginas;
-- Facilite o acesso à primeira e última página;
-
-**Disponibilizar na tela o quantitativo de registros:** dado de extremo valor, simples de ser coletado e muitas vezes esquecido de ser disponibilizado ao usuário. Disponha a informação ao final da listagem. Exemplo: Total de 105 registros. O termo ‘registro’ é genérico o suficiente para ser utilizado na maioria dos casos.
-
-##### Componente CRUD - Tela de Pesquisa com Mensagem de Alerta
-
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_sistema_com_menu_06.png)
-
-**Nunca exibir a tabela vazia:** caso não haja dado cadastrado, é imprescindível exibir uma mensagem informativa no grid como: “Não há registros a serem exibidos” ou "Dados não encontrados.
-
-##### Componente CRUD - Tela de Busca com Auto-Complete
-
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_sistema_com_menu_05.png)
-
-**Nunca exibir a tabela vazia:** caso não haja dado cadastrado, é imprescindível exibir uma mensagem informativa no grid como: “Não há registros a serem exibidos” ou "Dados não encontrados.
-
-##### Componente CRUD - Tela de Visualização de Dados Cadastrados
-
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_sistema_com_menu_07.png)
-
-O campo de pesquisa deve fazer uso da função auto-complete para facilitar o preenchimento da informação solicitada pelo usuário
-
-##### Componente CRUD - Tela de Edição de Dados Cadastrados
-
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_sistema_com_menu_02.png)
-
-As boas práticas de cadastro e/ou adição devem ser reaproveitadas na edição, portanto, a página pode ser reutilizada, com a diferença que os dados virão inicialmente já preenchidos, permitindo sua edição.
-
-**Campos não-editáveis devem vir bloqueados:** mantenha-os visíveis porém não editáveis (bloquados). Quando necessário, explique ao usuário o motivo da impossibilidade de alteração.
-
----
-
-## Considerações finais de usabilidade (UX) para CRUD
-
-Devido a capacidade de variar em informações, componentes e complexidade, segue uma lista de cuidados em UX, que devem ser tomados ao implementar as telas de CRUD nos sistemas e no portal Gov.Br.
-
-**1 - Título da página:** deve estar visível sem a necessidade de usar a barra de rolagem. Utilizar títulos simples e sem redundância. Exemplo: “Listagem de membros” ao invés de “Listagem de membros cadastrados no sistema”.
-
-**2 - Botões de acesso à funcionalidade:** (Limpar, Cadastrar, Filtrar, etc): devem estar facilmente visíveis e acessíveis, sem a necessidade de usar a barra de rolagem.
-Seguem alguns recursos que podem ser utilizados para evitar a ocultação dos botões:
-1 - disponibilizar um botão no início e outro ao final da página,
-2 - utilizar botão fixo ao rolar a página e/ou
-3 - utilizar atalho ‘voltar ao topo’ para facilitar o uso;
-
-**3 - Formulários grandes e complexos:** Para formulários grandes ou muito complexos a utilização de técnicas que facilitem a experiência do usuário é fundamental para o sucesso do projeto, tais como:
-1 - Dividir o formulário em etapas, categorize e distribua os campos de forma lógica e compreensível;
-2 - Tornar claro seu posicionamento e progressão, pois o usuário deve entender onde está e onde precisa chegar para finalizar o processo. Caso se faça necessário utilizar um Wizard);
-
-**4 - Permitir o usuário salvar sua progressão:** funcionalidades de ‘rascunho’ permitem o usuário salvar sua progressão e finalizá-la mais tarde, item imprescindível a formulários que demandam muito tempo do usuário. Dessa forma, o formulário
-pode ser salvo e o usuário concluir o preenchimento em outros momento, evitando que perca os dados cadastros.
-
-**5 - Garantir o bom funcionamento das teclas de atalho:** atendendo a heurística flexibilidade e eficiência de uso, devemos prover atalhos - despercebidos a usuários novatos - que podem acelerar e facilitar a interação aos usuários especialistas, de modo que o sistema atenda bem a ambos. Garanta a aplicação dos seguintes recursos:
-
-Ordenação dos campos através do atributo tabindex (HTML);
-Tab redireciona ao próximo campo;
-Shift + Tab retorna ao campo anterior;
-Enter no botão de submissão executa a ação.
-
-**6 - Permitir cancelar a ação a qualquer momento:** Atendendo a heurística ‘liberdade e controle do usuário’, deve-se permitir o cancelamento do cadastro com a mesma - ou quase - facilidade de entrada, pois, muitas vezes o usuário entra em determinada ação por engano ou simplesmente desiste no meio do processo. Disponibilizar a funcionalidade (pop-up) para evitar cancelamentos indevidos. Sugestão de mensagem: “Você tem certeza que deseja cancelar o cadastro?”
-
-**7 - Mensagem de alerta e ação de confirmação:** Visto a exclusão ser geralmente irreversível, é fundamental que o usuário seja alertado e possua uma ação para confirmação. Exemplo: Tem certeza que deseja exluir o registro definitivamente?
-
-**8 - Mensagens de feedback:** É fundamental informar o usuário após a conclusão da ação. Aproveite-se, quando necessário, da mensagem de feedback para possibilitar ao usuário desfazer a ação, ainda que o sistema tenha informado ser um processo irreversível. Esse recurso ‘extra’ pode ser extramente útil a vários casos!
-
-Informações extraídas do site: http://thiagonasc.com/usabilidade/usabilidade-interfaces-crud
-
----
-
-![Thumbail](/assets/design-system/docs/assets/images/templates/crud/thumbnail_05.png)
-
-### Templates de CRUD em Mobile Responsivo
-
-##### Modelo Padrão
-
-![Exemplo de Crud](/assets/design-system/docs/assets/images/templates/crud/layout_mobile.png)
-
-O componente CRUD para a versão mobile responsivo, também é formado normalmente de duas áreas principais: Área de Busca e/ou Entrada de Dados e a Área de Resultado.
-
-![Thumbail](/assets/design-system/docs/assets/images/templates/crud/thumbnail_06.png)
-
-**A | Área de Busca e/ou Entrada de Dados**
-A área de Entrada de Dados pode variar com a necessidade de utilização. Normalmente é composta de componentes e botões;
-
-![Thumbail](/assets/design-system/docs/assets/images/templates/crud/thumbnail_07.png)
-
-**B | Área de Resultado**
-A Área de Resultado normalmente apresenta uma tabela com os dados da pesquisa filtrada ou cadastrada. Essas informações apresentadas podem variar em sua apresentação, obedecendo as variações de tabelas definidas na documentação do Design System.
-
-![Thumbail](/assets/design-system/docs/assets/images/templates/crud/thumbnail_08.png)
-
-**C | Botão "Call to Action"**
-Para a versão mobile, o botão deverá ser substituído por uma versão simplificada, flutuante, no padrão "fab button", sendo localizado na área inferior à direita, próximo da área de paginação da tabela, facilitando seu acesso aos usuários de smartphone.
+![Imagem_01](images/img_01.png)
+![Imagem_02](images/img_02.png)
+![Imagem_03](images/img_03.png)
+![Imagem_04](images/img_04.png)
+![Imagem_05](images/img_05.png)
+![Imagem_06](images/img_06.png)
+![Imagem_07](images/img_07.png)
