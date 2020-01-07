@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="../../assets/styles/dsgov-base.min.css">
-  <link rel="stylesheet" href="table.css">
   <link rel="stylesheet" href="../select/select.css">
   <link rel="stylesheet" href="../accordeon/accordeon.css">
+  <link rel="stylesheet" href="table.css">
 </head>
 <body>
   <div class="container">
@@ -60,7 +60,7 @@
             <th></th>
             <th class="modify-mobil">
               <div class="br-check">
-                <input type="checkbox" name="item" id="checkbox" class="teste">
+                <input type="checkbox" name="item" id="checkbox">
                 <label for="checkbox"></label>
               </div>
             </th>
@@ -76,7 +76,7 @@
             <td></td>
             <td class="modify-mobil">
               <div class="br-check">
-                <input type="checkbox" name="item" id="checkbox2"  class="teste">
+                <input type="checkbox" name="item" id="checkbox2">
                 <label for="checkbox2"></label>
               </div>
             </td>
@@ -90,7 +90,7 @@
             <td></td>
             <td class="modify-mobil">
               <div class="br-check">
-                <input type="checkbox" name="item" id="checkbox3"  class="teste">
+                <input type="checkbox" name="item" id="checkbox3">
                 <label for="checkbox3"></label>
               </div>
             </td>
@@ -252,9 +252,131 @@
         </div>
       </div>
     </div>
+    <h2>Exemplo de tabela com coluna </h2>
+    <div class="br-table">
+     <div class="row title-bar is-visible col-sm-12 col-md-12 col-lg-12">
+        <div class="table-title col-sm-11 col-md-11 align-items-start">
+          Título da Tabela
+        </div>
+        <div class="actions col-sm-1 col-md-1 align-items-end">
+          <i class="fa fa-search  toogle-search" id="table-search"></i>
+          <i class="fa fa-ellipsis-v menu-items"></i>
+        </div>
+      </div>
+      <table id="redimensionar">
+        <thead>
+          <tr>
+            <th>Coluna 1</th>
+            <th>Coluna 2</th>
+            <th>Coluna 3</th>
+            <th>Coluna 4</th>
+            <th>Coluna 5</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          <tr>
+            <td data-title="Coluna 1">Lorem ipsum dolor</td>
+            <td data-title="Coluna 2">484</td>
+            <td data-title="Coluna 3">10%</td>
+            <td data-title="Coluna 4">3258 bytes</td>
+            <td data-title="Coluna 5">Curabitur tincidunt</td>
+          </tr>
+          <tr>
+            <td data-title="Coluna 1">Nam mattis nisi</td>
+            <td data-title="Coluna 2">484</td>
+            <td data-title="Coluna 3">17%</td>
+            <td data-title="Coluna 4">3258 bytes</td>
+            <td data-title="Coluna 5">Curabitur tincidunt</td>
+          </tr>
+          <tr>
+            <td data-title="Coluna 1">Integer ut pretium</td>
+            <td data-title="Coluna 2">84</td>
+            <td data-title="Coluna 3">67%</td>
+            <td data-title="Coluna 4">3258 bytes</td>
+            <td data-title="Coluna 5">Curabitur tincidunt</td>
+          </tr>
+          <tr>
+            <td data-title="Coluna 1">Nunc imperdiet risus</td>
+            <td data-title="Coluna 2">484</td>
+            <td data-title="Coluna 3">93%</td>
+            <td data-title="Coluna 4">3258 bytes</td>
+            <td data-title="Coluna 5">Curabitur tincidunt</td>
+          </tr>
+          <tr>
+            <td data-title="Coluna 1">Pellentesque fringilla</td>
+            <td data-title="Coluna 2">484</td>
+            <td data-title="Coluna 3">100%</td>
+            <td data-title="Coluna 4">3258 bytes</td>
+            <td data-title="Coluna 5">Curabitur tincidunt</td>
+          </tr>
+          <tr>
+            <td data-title="Coluna 1">Duis id libero posuere</td>
+            <td data-title="Coluna 2">395</td>
+            <td data-title="Coluna 3">100%</td>
+            <td data-title="Coluna 4">7575 bytes</td>
+            <td data-title="Coluna 5">tincidunt arcu sed</td>
+          </tr> 
+        </tbody>
+      </table>
+      <div class="footer d-sm-none">
+        <div class="items-left">
+          <div class="br-select is-small">
+            <select name="select" id="simples">
+              <option value="0">12</option>
+              <option value="opcao-1">1</option>
+              <option value="opcao-2">10</option>
+              <option value="opcao-3">15</option>
+              <option value="opcao-4">20</option>
+            </select>
+          </div>
+          <div class="paginas">de 48 páginas</div>
+        </div>
+        <div class="items-right">
+          <div class="arrows-pages">
+            <i class="fa fa-angle-left"></i>
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+      <div  id="navigation-bar" class="row col-sm-12 col-md-12 col-lg-12 d-none d-sm-flex">
+        <div class="items-left">
+          <span>Exibir:</span>
+          <div class="br-select is-small">
+            <select name="select">
+              <option value="0">10</option>
+              <option value="opcao-1">1</option>
+              <option value="opcao-2">10</option>
+              <option value="opcao-3">15</option>
+              <option value="opcao-4">20</option>
+            </select>
+          </div>
+          <div class="divisor-vertical"></div>
+          <div class="">0-10 de 50 itens</div>
+        </div>
+        <div class="items-right">
+          <div class="br-select is-small">
+            <select name="select">
+              <option value="0">12</option>
+              <option value="opcao-1">1</option>
+              <option value="opcao-2">10</option>
+              <option value="opcao-3">15</option>
+              <option value="opcao-4">20</option>
+            </select>
+          </div>
+          <div>de 48 páginas</div>
+          <div class="divisor-vertical"></div>
+          <div class="arrows-pages">
+            <i class="fa fa-angle-left"></i>
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  
+
   <script src="table.js"></script>
   <script src="assets/design-system/components/select/select.js"></script>
   <script src="assets/design-system/components/accordeon/accordeon.js"></script>
-</body>
+</body >
 </html>

@@ -12,6 +12,7 @@
 @import "configs";
 @import "mixins";
 
+
 // Estilos específicos
 .#{$prefix}table {
   @include table;
@@ -22,21 +23,31 @@
     overflow-x: auto;
   }
 }
+*{box-sizing: border-box;}
 
 .br-table{
+  #redimensionar thead{
+    th{
+      &:hover{
+        background-color: $color-gray-1;
+       // cursor: default;
+      }
+    }
+    div:hover{
+      border-right: 1px solid $color-primary-lighten-25;
+    }
+  }
   table{
-     #navigation-bar{
-      left: 0;
-      right: 0;
-      position: absolute;
-      z-index: 10;
-      height: 56px;
-     } 
+  border-collapse: collapse;
     thead{
       th{
         padding-left: 0;
         vertical-align: middle;
         height: 56px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: auto;
       }
     }  
     tbody{
@@ -52,6 +63,7 @@
           }
           td{
             color: $color-white;
+            text-overflow: ellipsis;
             &:hover{
               color: $color-white;
             }
@@ -59,6 +71,7 @@
               color: $color-white;
               margin: auto 0.3rem;
             }
+            
           .modify-mobil{
             padding:0;
             margin: 0;
@@ -68,6 +81,10 @@
         td{
           padding: 0;
           vertical-align: middle;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: auto;
         }  
       }
     }
@@ -80,7 +97,17 @@
       }
     }
   }
+  
  
+
+  #navigation-bar{
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 10;
+  height: 56px;
+  } 
+
   .selecao{
     background: $color-primary;
     color: $color-white;
@@ -307,6 +334,7 @@
     transform: rotate(180deg);
     transition: 0.5;
   }
+ 
 }
 
 // @media (min-width: 1280px){
@@ -341,6 +369,8 @@
           border-bottom: none;
           color: $font-system-default-text-color;
           padding: 16px 50px;
+          text-overflow: ellipsis;
+          overflow: unset;
         }
         td.modify-mobil{
           display: table;
@@ -354,6 +384,9 @@
         }
       }
     }  
+  }
+  .columnSelect{
+    border-right: 2px solid #f60;
   }
   .resultado{
     width: 96%;
@@ -457,6 +490,7 @@ td[disabled]:hover, tr[disabled]:hover {
 	}
 .table-responsive thead th{
   color: $font-portal-title-color;
+  text-overflow: ellipsis;
 } 
 
 .table-responsive tr { 
@@ -471,6 +505,7 @@ td[disabled]:hover, tr[disabled]:hover {
     white-space: normal;
     text-align:left;
     color: $font-system-default-text-color;
+    overflow: unset;
   }  
 }
 

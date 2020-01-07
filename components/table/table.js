@@ -85,5 +85,56 @@ function enable(){
   habilita.classList.toggle('enabled');
   expandir.classList.toggle('rotate');
 }
+
 document.getElementById('expande').addEventListener('click', enable);
 
+
+// Funcao para redimensionar a coluna
+
+(function () {
+  var thElm;
+  var startOffset;
+  function createDiv(height){
+    var div = document.createElement('div');
+    div.style.top = 0;
+    div.style.right = 0;
+    div.style.width = '5px';
+    div.style.position = 'absolute';
+    div.style.cursor = 'col-resize';
+    div.style.userSelect = 'none';
+    div.style.height = height+'px';
+    div.className = 'columnSelector';
+    return div;
+   }
+  Array.prototype.forEach.call(
+    document.querySelectorAll("#redimensionar th"),
+    function (th) {
+      th.style.position = 'relative';
+
+      var grip = document.createElement('div');
+      grip.innerHTML = "&nbsp;";
+      grip.style.top = 0;
+      grip.style.right = 0;
+      grip.style.bottom = 0;
+      grip.style.width = '5px';
+      grip.style.position = 'absolute';
+      grip.style.cursor = 'col-resize';
+      grip.addEventListener('mousedown', function (e) {
+          thElm = th;
+          startOffset = th.offsetWidth - e.pageX;
+      });
+
+      th.appendChild(grip);
+    });
+
+
+  document.addEventListener('mousemove', function (e) {
+    if (thElm) {
+      thElm.style.width = startOffset + e.pageX + 'px';
+    }
+  });
+
+  document.addEventListener('mouseup', function () {
+      thElm = undefined;
+  });
+})();
