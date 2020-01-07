@@ -1,0 +1,33 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Abas";
+
+append scripts
+  script(src=jscompoents+"tabs.js")
+
+append content
+  +tabs("is-vertical")
+    +tab-item("Entrar com CPF")
+    +tab-item(class="is-active")
+      img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
+      span.name Entrar com Certificado Digital
+    +tab-item
+      img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
+      span.name Entrar com NeoID
+  +tabs("mt-10")
+    +tab-item(class="is-active")
+      span.name Todos
+      span.results (124)
+    +tab-item
+      span.name Notícias
+      span.results (74)
+    +tab-item
+      span.name Serviços
+      span.results (16)
+    +tab-item
+      span.name Aplicativos
+      span.results (12)
+    +tab-item
+      span.name Mídias
+      span.results (22)

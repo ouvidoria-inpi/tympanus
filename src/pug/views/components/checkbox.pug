@@ -1,0 +1,34 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Checkbox";
+
+append content
+  p.label Selecione 1 ou mais opções
+  +checkbox("Padrão")(id="h-checkbox-default")
+  +checkbox("Checado")(id="h-checkbox-checked" class="ml-sm-7" checked)
+  +checkbox("Inválido")(id="h-checkbox-invalid" class="is-invalid ml-sm-7")
+  +checkbox("Válido")(id="h-checkbox-valid" class="is-valid ml-sm-7")
+  +checkbox("Desativado")(id="h-checkbox-disabled" class="ml-sm-7" disabled)
+  hr
+  .row
+    .col-sm-2
+      p.label Vertical
+      +checkbox("Padrão")(id="v-checkbox-default" class="d-block mb-1")
+      +checkbox("Checado")(id="v-checkbox-checked" class="d-block mb-1" checked)
+      +checkbox("Inválido")(id="v-checkbox-invalid" class="is-invalid d-block mb-1")
+      +checkbox("Válido")(id="v-checkbox-valid" class="is-valid d-block mb-1")
+      +checkbox("Desativado")(id="v-checkbox-disabled" class="d-block mb-1" disabled)
+    .col-sm-2
+      p.label Invertido
+      +checkbox("Checado")(id="v-i-checkbox-checked" class="is-inverted d-block mb-1" checked)
+      +checkbox("Inválido")(id="v-i-checkbox-invalid" class="is-inverted is-invalid d-block mb-1" checked)
+      +checkbox("Válido")(id="v-i-checkbox-valid" class="is-inverted is-valid d-block mb-1" checked)
+      +checkbox("Desativado")(id="v-i-checkbox-disabled" class="is-inverted d-block mb-1" disabled checked)
+    .col-sm-2
+      p.label Pequeno
+      +checkbox("Padrão")(id="v-s-checkbox-default" class="is-small d-block mb-1")
+      +checkbox("Checado")(id="v-s-checkbox-checked" class="is-small d-block mb-1" checked)
+      +checkbox("Inválido")(id="v-s-checkbox-invalid" class="is-small is-invalid d-block mb-1")
+      +checkbox("Válido")(id="v-s-checkbox-valid" class="is-small is-valid d-block mb-1")
+      +checkbox("Desativado")(id="v-s-checkbox-disabled" class="is-small d-block mb-1" disabled)

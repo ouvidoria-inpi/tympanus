@@ -1,0 +1,9 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Breadcrumb";
+
+append content
+  +breadcrumb
+    +crumb("Tela anterior")
+    +crumb("tela atual", "is-active")

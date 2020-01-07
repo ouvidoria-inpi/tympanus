@@ -8,16 +8,13 @@ options:
   # Set the formatter to 'html'
   formatter: stylish
   # Output file instead of logging results
-  output-file: ''
+  output-file: ""
   # Raise an error if more than 50 warnings are generated
   max-warnings: 50
 # File Options
 files:
   include:
-    - 'assets/styles/**/*.s+(a|c)ss'
-    - 'base/**/*.s+(a|c)ss'
-    - 'components/**/*.s+(a|c)ss'
-    - 'templates/**/*.s+(a|c)ss'
+    - "src/scss/**/*.s+(a|c)ss"
 # Rule Configuration
 rules:
   attribute-quotes:
@@ -26,10 +23,10 @@ rules:
   bem-depth: 0
   border-zero:
     - 2
-    - convention: '0'
+    - convention: "0"
   brace-style:
     - 2
-    - style: '1tbs'
+    - style: "1tbs"
     - allow-single-line: true
   class-name-format:
     - 2
@@ -40,7 +37,7 @@ rules:
     - leading-underscore: false
     - filename-extension: false
   declarations-before-nesting: 2
-  empty-args: 
+  empty-args:
     - 2
     - include: false
   empty-line-between-blocks: 0
@@ -49,26 +46,24 @@ rules:
   final-newline:
     - 2
     - include: true
-  force-attribute-nesting: 2
-  force-element-nesting: 2
-  force-pseudo-nesting: 2
-  function-name-format: 
+  force-attribute-nesting: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+  function-name-format:
     - 2
     - allow-leading-underscore: false
     - convention: hyphenatedlowercase
   hex-length:
     - 2
     - style: short
-  hex-notation: 
+  hex-notation:
     - 2
     - style: lowercase
   id-name-format:
     - 2
     - allow-leading-underscore: false
     - convention: hyphenatedlowercase
-  indentation:
-    - 2
-    - size: 2
+  indentation: 0
   leading-zero:
     - 2
     - include: true
@@ -83,7 +78,7 @@ rules:
   no-attribute-selectors: 0
   no-color-hex: 0
   no-color-keywords: 0
-  no-color-literals: 2
+  no-color-literals: 0
   no-combinators: 0
   no-css-comments: 2
   no-debug: 2
@@ -104,10 +99,10 @@ rules:
   no-trailing-whitespace: 2
   no-trailing-zero: 2
   no-transition-all: 0
-  no-universal-selectors: 2
-  no-url-domains: 2
+  no-universal-selectors: 0
+  no-url-domains: 0
   no-url-protocols:
-    - 2
+    - 0
     - allow-protocol-relative-urls: false
   no-value-vendor-prefix: 0
   no-warn: 2
@@ -123,9 +118,6 @@ rules:
     - ignore-custom-properties: false
   property-units: 0
   pseudo-element: 2
-  quotes:
-    - 2
-    - style: double
   shorthand-values: 1
   single-line-per-selector: 2
   space-after-bang:
@@ -161,6 +153,3 @@ rules:
     - 2
     - allow-leading-underscore: false
     - convention: hyphenatedlowercase
-
-
-  

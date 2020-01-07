@@ -1,0 +1,80 @@
+// Links na área de conteúdo
+.page-content {
+  a {
+    text-decoration: underline;
+  }
+}
+
+// Título principal - aplicar preferencialmente em <h1>
+h1,
+.main-title,
+.portal-title,
+.h1,
+.title-1 {
+  @include media-breakpoint-down(xs) {
+    font-size: $h1-mobile-font-size;
+  }
+  color: $headings-color;
+  font-family: $headings-font-family;
+  font-size: $h1-font-size;
+  font-weight: 500;
+  line-height: $headings-line-height;
+  margin-bottom: $headings-margin-bottom;
+}
+
+// Título 2
+h2,
+.portal-big-news-title,
+.h2,
+.title-2 {
+  color: $headings-color;
+  font-size: $h2-font-size;
+  font-weight: 500;
+  line-height: $headings-line-height;
+  margin-bottom: $headings-margin-bottom;
+}
+
+// Subtítulo 1
+h3,
+.h3,
+.portal-small-news-title,
+.subtitle-1,
+.portal-big-news,
+.portal-feature-news {
+  color: $headings-color;
+  font-size: $h3-font-size;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+// Subtítulo 2
+h4,
+.h4 .subtitle-2 {
+  color: $headings-color;
+  font-size: $h4-font-size;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+// Rótulos - aplicar preferencialmente em <label>
+.label {
+  color: $label-color;
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  margin-bottom: $label-margin-bottom;
+}
+
+// Agrupador de formulário - aplicar preferencialmente em <legend> de <fieldset>
+fieldset legend,
+.fieldset {
+  color: $fieldset-color;
+  font-size: $fieldset-font-size;
+  font-weight: $fieldset-font-weight;
+  margin-bottom: $fieldset-margin-bottom;
+}
+
+// Help
+.help {
+  color: $help-color;
+  font-size: $help-font-size;
+}

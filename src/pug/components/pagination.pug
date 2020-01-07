@@ -1,0 +1,29 @@
+mixin pagination
+  - let pages = 10;
+  - let page = 3;
+  - let className = attributes.class
+  - let componentClass = prefix + "pagination"
+  - className = className ? componentClass + " " + className : componentClass
+  nav
+    ul(class=className)
+      li.is-first.is-disabled
+        a(href="")
+          i.fas.fa-chevron-left
+          span.sr-only primeiro
+      li.is-active
+        a(href="") 1
+      li: a(href="") 2
+      li.d-sm-none
+        label.sr-only(for=attributes.id)
+        select(id=attributes.id)
+          while page < pages
+            option=page++
+      - page = 3;
+      while page < pages
+        li.d-none.d-sm-inline
+          a(href="")=page++
+      li: a(href="")=pages
+      li.is-last
+        a(href="")
+          i.fas.fa-chevron-right
+          span.sr-only último

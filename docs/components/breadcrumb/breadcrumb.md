@@ -1,0 +1,1 @@
+Breadcrumbs, breadcrumb navigation ou breadcrumb trail (literalmente, navegação por migalhas de pão ou trilha de migalhas de pão, em alusão à história de João e Maria) é um sistema de navegação estrutural usada para proporcionar ao usuário um meio de localização dentro da estrutura de navegação do site.

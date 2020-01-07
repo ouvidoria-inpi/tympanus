@@ -1,0 +1,36 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Input";
+
+append scripts
+  script(src=jscompoents+"input-password.js")
+  script(src=jscompoents+"input-autocomplete.js")
+
+append content
+  .row
+    .col-sm
+      .mb-3
+        +input("Normal")(id="default" placeholder="Insira um texto")
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+      .mb-3
+        +input("Senha")(id="password" class="has-icon" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
+          button.icon(type='button' onclick="toggleInputAction(this)")
+            span.sr-only Mostrar senha
+            i.fas.fa-eye
+      .mb-3
+        +input("Autocomplete")(id="search-autocomplete" class="has-icon" type="text" placeholder="Digite sua senha de 8 a 11 dígitos")
+          span.icon
+            i.fas.fa-search
+    .col-sm
+      .mb-3
+        +input("Focus")(id="focus" class="is-focus" placeholder="Insira um texto")
+      .mb-3
+        +input("Desativado")(id="disabled" placeholder="Insira um texto" disabled)
+    .col-sm
+      .mb-3
+        +input("Inválido")(id="invalid" class="is-invalid" placeholder="Insira um texto")
+        +feedback("Texto inválido")
+      .mb-3
+        +input("Válido")(id="valid" class="is-valid" placeholder="Insira um texto")
+        +feedback("Texto válido")(class="is-valid")
