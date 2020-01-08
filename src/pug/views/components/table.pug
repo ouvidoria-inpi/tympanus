@@ -4,378 +4,278 @@ append vars
   - var title = "Tabela";
 
 append scripts
-  script(src=jscompoents+"select.js")
   script(src=jscompoents+"table.js")
-  script(src=jscompoents+"table-sortable.min.js")
+  script(src=jscompoents+"select.js")
+  
 
 append content
   .br-table
-    p.caption Exemplo de título da tabela
-    .row.mb-1
-      .col-sm-2
-        .actions.ml-3
-          .br-select.is-small
-            label(for='acoes-em-massa')
-              i.fas.fa-share
-            select#acoes-em-massa
-              option(value='0') Ações em massa
-              option(value='opcao-1') Ação 1
-              option(value='opcao-2') Ação 2
-              option(value='opcao-3') Ação 3
-              option(value='opcao-4') Ação 4
-      .col-sm-2.ml-auto
-        .br-input.has-icon.is-small.d-flex
-          label(for='search')
-            span.sr-only Busca
-          input#search(type='search')
-          span.icon
-            i.fas.fa-search
-      .col-auto
-        .length
-          .br-select.is-small
-            label(for='length-top') Exibir:
-            select#length-top
-              option(value='0') 0
-              option(value='opcao-1' selected) 10
-              option(value='opcao-2') 15
-              option(value='opcao-3') 20
-              option(value='opcao-4') 25
-    .table
-      table
-        thead
-          tr
-            th.text-center(scope='col')
-              .br-checkbox.is-small
-                input#select-all(type='checkbox')
-                label(for='select-all')
-                  span.sr-only checkbox
-            th(scope='col')
-              | Coluna 1 
-              i.fas.fa-sort.text-primary
-            th(style='min-width: 300px' scope='col')
-              | Coluna 2 
-              i.fas.fa-sort.text-primary
-            th(scope='col')
-              | Coluna 3 
-              i.fas.fa-sort.text-primary
-            th(scope='col')
-              | Coluna 4 
-              i.fas.fa-sort.text-primary
-            th.text-center(scope='col') Ações
-        tbody
-          tr
-            td.text-center
-              .br-checkbox.is-small
-                input#check-1(type='checkbox')
-                label(for='check-1')
-                  span.sr-only checkbox
-            td 0001AC201900016
-            td Obter EX-Tarifário para bens de capital e para bens de informática
-            td 09/07/2009
-            td Em Processamento
-            td.text-center
-              .actions.is-inline.is-active
-                button.trigger(type='button')
-                  i.fas.fa-ellipsis-h
-                .list
-                  button(type='button')
-                    span.sr-only Visualizar
-                    i.fas.fa-eye
-                  button(type='button')
-                    span.sr-only Editar
-                    i.fas.fa-edit
-                  button(type='button')
-                    i.fas.fa-envelope-open-text
-                  button(type='button')
-                    span.sr-only Apagar
-                    i.fas.fa-trash
-          tr
-            td.text-center
-              .br-checkbox.is-small
-                input#check-2(type='checkbox')
-                label(for='check-2')
-                  span.sr-only checkbox
-            td 0001AC201900016
-            td Emitir Documento de Arrecadação da Receita Federal
-            td 09/07/2009
-            td Concluído
-            td.text-center
-              .actions.is-active
-                button.trigger(type='button')
-                  i.fas.fa-ellipsis-h
-                .list
-                  button(type='button') Ação 1
-                  button(type='button') Ação 2
-                  button(type='button') Ação 3
-                  button(type='button') Ação 4
-          tr
-            td.text-center
-              .br-checkbox.is-small
-                input#check-3(type='checkbox')
-                label(for='check-3')
-                  span.sr-only checkbox
-            td 0001AC201900016
-            td Obter EX-Tarifário para bens de capital e para bens de informáica
-            td 09/07/2009
-            td Em Processamento
-            td.text-center
-              .actions
-                button(type='button')
-                  span.sr-only Visualizar
-                  i.fas.fa-eye
-                button(type='button')
-                  span.sr-only Editar
-                  i.fas.fa-edit
-          tr
-            td.text-center
-              .br-checkbox.is-small
-                input#check-4(type='checkbox')
-                label(for='check-4')
-                  span.sr-only checkbox
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-coluna-1')
-                  span.sr-only Label
-                input#input-coluna-1(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-coluna-2')
-                  span.sr-only Label
-                input#input-coluna-2(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-coluna-3')
-                  span.sr-only Label
-                input#input-coluna-3(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-coluna-4')
-                  span.sr-only Label
-                input#input-coluna-4(type='text' placeholder='Insira um texto')
-            td.text-center
-              .actions
-                button(type='button')
-                  span.sr-only Visualizar
-                  i.fas.fa-eye
-                button(type='button')
-                  span.sr-only Editar
-                  i.fas.fa-edit
-          tr
-            td.text-center
-              .br-checkbox.is-small
-                input#check-5(type='checkbox')
-                label(for='check-5')
-                  span.sr-only checkbox
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-2-coluna-1')
-                  span.sr-only Label
-                input#input-2-coluna-1(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-2-coluna-2')
-                  span.sr-only Label
-                input#input-2-coluna-2(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-2-coluna-3')
-                  span.sr-only Label
-                input#input-2-coluna-3(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-2-coluna-4')
-                  span.sr-only Label
-                input#input-2-coluna-4(type='text' placeholder='Insira um texto')
-            td.text-center
-              .actions
-                button(type='button')
-                  span.sr-only Visualizar
-                  i.fas.fa-eye
-                button(type='button')
-                  span.sr-only Editar
-                  i.fas.fa-edit
-          tr.is-active
-            td.text-center
-              .br-checkbox.is-small
-                input#check-6(type='checkbox' checked)
-                label(for='check-6')
-                  span.sr-only checkbox
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-3-coluna-1')
-                  span.sr-only Label
-                input#input-3-coluna-1(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-3-coluna-2')
-                  span.sr-only Label
-                input#input-3-coluna-2(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-3-coluna-3')
-                  span.sr-only Label
-                input#input-3-coluna-3(type='text' placeholder='Insira um texto')
-            td
-              .br-input.is-medium
-                label.mb-0(for='input-3-coluna-4')
-                  span.sr-only Label
-                input#input-3-coluna-4(type='text' placeholder='Insira um texto')
-            td.text-center
-              .actions
-                button(type='button')
-                  span.sr-only Visualizar
-                  i.fas.fa-eye
-                button(type='button')
-                  span.sr-only Editar
-                  i.fas.fa-edit
-          tr
-            td.text-center
-              .collapse
-                button(type='button')
-                  i.fas.fa-plus
-                  span.sr-only
-                    | Mais informações
-            td 0001AC201900016
-            td Obter EX-Tarifário para bens de capital e para bens de informáica
-            td 09/07/2009
-            td Em Processamento
-            td.text-center
-              .actions
-                button(type='button')
-                  span.sr-only Visualizar
-                  i.fas.fa-eye
-                button(type='button')
-                  span.sr-only Editar
-                  i.fas.fa-edit
-          tr
-            td.text-center
-              .collapse
-                button(type='button')
-                  i.fas.fa-plus
-                  span.sr-only
-                    | Mais informações
-            td 0001AC201900016
-            td Emitir Documento de Arrecadação da Receita Federal
-            td 09/07/2009
-            td Concluído
-            td.text-center
-              .actions
-                button(type='button')
-                  span.sr-only Visualizar
-                  i.fas.fa-eye
-                button(type='button')
-                  span.sr-only Editar
-                  i.fas.fa-edit
-          tr.is-active
-            td.text-center
-              .collapse
-                button(type='button')
-                  i.fas.fa-minus
-                  span.sr-only
-                    | Fechar informações
-            td 0001AC201900016
-            td Obter EX-Tarifário para bens de capital e para bens de informáica
-            td 09/07/2009
-            td Em Processamento
-            td.text-center
-              .actions
-                button(type='button')
-                  span.sr-only Visualizar
-                  i.fas.fa-eye
-                button(type='button')
-                  span.sr-only Editar
-                  i.fas.fa-edit
-          tr
-            td
-            td(colspan='5')
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laboriosam mollitia eius a porro, magni molestiae nihil repellendus officiis autem ullam cumque saepe culpa non iste amet inventore quas fuga?
-              p
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sit aspernatur labore, temporibus possimus distinctio doloribus recusandae vitae voluptate dolore odit ducimus molestiae aliquid, reiciendis cumque voluptates dolor natus ex!
-              p
-                | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non suscipit commodi eius ducimus magnam laborum in quae laudantium sapiente, minima necessitatibus modi iusto pariatur quaerat? A vitae eos totam fugit!
-          tr
-            td.text-center
-              .br-checkbox.is-small
-                input#check-10(type='checkbox')
-                label(for='check-10')
-                  span.sr-only checkbox
-            td 0001AC201900016
-            td Emitir Documento de Arrecadação da Receita Federal
-            td 09/07/2009
-            td Concluído
-            td.text-center
-              .actions
-                button(type='button')
-                  span.sr-only Visualizar
-                  i.fas.fa-eye
-                button(type='button')
-                  span.sr-only Editar
-                  i.fas.fa-edit
-    .row.mt-1
-      .col-sm
-        ul.br-pagination
-          li.is-first.is-disabled
-            a(href='')
-              i.fas.fa-angle-double-left
-              span Anterior
-          li.d-flex.d-sm-none
-            label(for='page-select-default')
-              span.sr-only Selecione a página
-            select#page-select-default
-              option(value='1') 1
-              option(value='2') 2
-              option(value='3') 3
-              option(value='4') 4
-              option(value='5') 5
-              option(value='6') 6
-              option(value='7') 7
-              option(value='8') 8
-              option(value='9') 9
-              option(value='10') 10
-            span.ml-2 de
-            a(href='') 10
-          li.is-active
-            a(href='')
-              span 1
-          li
-            a(href='')
-              span 2
-          li
-            a(href='')
-              span 3
-          li
-            a(href='')
-              span 4
-          li
-            a(href='')
-              span 5
-          li
-            a(href='')
-              span 6
-          li
-            a(href='')
-              span 7
-          li
-            a(href='')
-              span 8
-          li
-            a(href='')
-              span 9
-          li
-            a(href='')
-              span 10
-          li.is-last
-            a(href='')
-              span Próxima
-              i.fas.fa-angle-double-right
-      .col-auto
-        .length
-          .br-select.is-small
-            label(for='length-bottom') Exibir:
-            select#length-bottom
-              option(value='0') 0
-              option(value='opcao-1' selected) 10
-              option(value='opcao-2') 15
-              option(value='opcao-3') 20
-              option(value='opcao-4') 25
+    .row.selecao.is-invisible.col-sm-12.col-md-12.col-lg-12
+      .item-selecionado.col-sm-8.col-md-8.align-items-start
+        | 1 item selecionado
+      .actions.col-sm-4.col-md-4.align-items-end
+        | Excluir
+        #lixeira
+          i.fa.fa-trash-alt
+        |   Download
+        #download
+          i.fa.fa-download
+    .row.search-bar.is-invisible.col-sm-12.col-md-12.col-lg-12
+      .resultado.align-items-start
+        label.sr-only(for='result') Busca da tabela
+        input#result(type='text' name='result')
+      .actions.align-items-end
+        #find
+          i.fa.fa-search
+      #close.toogle-search
+        i.fa.fa-times
+    .row.densidade.is-visible.col-sm-12.col-md-12.col-lg-12
+      .table-title.col-sm-11.col-md-11.align-items-start
+        | T&iacute;tulo da Tabela
+      .actions.col-sm-1.col-md-1.align-items-end
+        #densidade-up
+          i.fa.fa-th
+        #densidade-down
+          i.fa.fa-th-large
+        .divisor-vertical
+        .menu-items
+          i.fa.fa-ellipsis-v
+    .row.title-bar.is-visible.col-sm-12.col-md-12.col-lg-12
+      .table-title.col-sm-11.col-md-11.align-items-start
+        | T&iacute;tulo da Tabela
+      .actions.col-sm-1.col-md-1.align-items-end
+        #table-search.toogle-search
+          i.fa.fa-search
+        .menu-items
+          i.fa.fa-ellipsis-v
+    table#table.table-responsive
+      thead
+        tr
+          th
+          th.modify-mobil
+            +checkbox("")(id="checkbox1")
+          th Coluna 1
+          th Coluna 2
+          th Coluna 3
+          th Coluna 4
+          th Coluna 5
+      tbody.table-body
+        tr
+          td
+          td.modify-mobil
+            +checkbox("")(id="checkbox2")
+          td(data-title='Coluna 1') Lorem ipsum dolor 
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 10%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td
+          td.modify-mobil
+            +checkbox("")(id="checkbox3")
+          td(data-title='Coluna 1') Nam mattis nisi
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 17%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td.expande-mobil
+            #expande
+              i.fas.fa-angle-up.rotate
+          td.modify-mobil
+            +checkbox("")(id="checkbox4")
+          td(data-title='Coluna 1') Integer ut pretium
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 67%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr.disabled
+          td(colspan='7')
+            .br-table
+              table.interna
+                thead
+                  tr
+                    th Coluna1
+                    th Coluna2
+                    th Coluna3
+                    th Coluna4
+                    th Coluna5
+                tbody
+                  tr
+                    td TESTE
+                    td TESTE
+                    td MORE
+                    td MORE
+                    td TESTE
+                  tr
+                    td TESTE
+                    td TESTE
+                    td MORE
+                    td MORE
+                    td TESTE
+                  tr
+                    td TESTE
+                    td TESTE
+                    td MORE
+                    td MORE
+                    td TESTE
+        tr
+          td
+          td.modify-mobil
+           +checkbox("")(id="checkbox5")
+          td(data-title='Coluna 1') Nunc imperdiet risus
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 93%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td
+          td.modify-mobil
+           +checkbox("")(id="checkbox6")
+          td(data-title='Coluna 1') Pellentesque fringilla
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 100%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td
+          td.modify-mobil
+            +checkbox("")(id="checkbox7")
+          td(data-title='Coluna 1') Duis id libero posuere
+          td(data-title='Coluna 2') 395
+          td(data-title='Coluna 3') 100%
+          td(data-title='Coluna 4') 7575 bytes
+          td(data-title='Coluna 5') tincidunt arcu sed
+    .footer.d-sm-none
+      .items-left
+        .br-select.is-small
+          select#simples(name='select')
+            option(value='0') 12
+            option(value='opcao-1') 1
+            option(value='opcao-2') 10
+            option(value='opcao-3') 15
+            option(value='opcao-4') 20
+        .paginas de 48 p&aacute;ginas
+      .items-right
+        .arrows-pages
+          i.fa.fa-angle-left
+          i.fa.fa-angle-right
+    #navigation-bar.row.col-sm-12.col-md-12.col-lg-12.d-none.d-sm-flex
+      .items-left
+        span Exibir:
+        .br-select.is-small
+          select(name='select')
+            option(value='0') 10
+            option(value='opcao-1') 1
+            option(value='opcao-2') 10
+            option(value='opcao-3') 15
+            option(value='opcao-4') 20
+        .divisor-vertical
+        div 0-10 de 50 itens
+      .items-right
+        .br-select.is-small
+          select(name='select')
+            option(value='0') 12
+            option(value='opcao-1') 1
+            option(value='opcao-2') 10
+            option(value='opcao-3') 15
+            option(value='opcao-4') 20
+        div de 48 p&aacute;ginas
+        .divisor-vertical
+        .arrows-pages
+          i.fa.fa-angle-left
+          i.fa.fa-angle-right
+  h2 Exemplo de tabela com coluna 
+  .br-table
+    .row.title-bar.is-visible.col-sm-12.col-md-12.col-lg-12
+      .table-title.col-sm-11.col-md-11.align-items-start
+        | T&iacute;tulo da Tabela
+      .actions.col-sm-1.col-md-1.align-items-end
+        #table-search
+          i.fa.fa-search.toogle-search
+        .menu-items  
+          i.fa.fa-ellipsis-v
+    table#redimensionar
+      thead
+        tr
+          th Coluna 1
+          th Coluna 2
+          th Coluna 3
+          th Coluna 4
+          th Coluna 5
+      tbody.table-body
+        tr
+          td(data-title='Coluna 1') Lorem ipsum dolor
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 10%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td(data-title='Coluna 1') Nam mattis nisi
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 17%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td(data-title='Coluna 1') Integer ut pretium
+          td(data-title='Coluna 2') 84
+          td(data-title='Coluna 3') 67%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td(data-title='Coluna 1') Nunc imperdiet risus
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 93%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td(data-title='Coluna 1') Pellentesque fringilla
+          td(data-title='Coluna 2') 484
+          td(data-title='Coluna 3') 100%
+          td(data-title='Coluna 4') 3258 bytes
+          td(data-title='Coluna 5') Curabitur tincidunt
+        tr
+          td(data-title='Coluna 1') Duis id libero posuere
+          td(data-title='Coluna 2') 395
+          td(data-title='Coluna 3') 100%
+          td(data-title='Coluna 4') 7575 bytes
+          td(data-title='Coluna 5') tincidunt arcu sed
+    .footer.d-sm-none
+      .items-left
+        .br-select.is-small
+          select#simples(name='select')
+            option(value='0') 12
+            option(value='opcao-1') 1
+            option(value='opcao-2') 10
+            option(value='opcao-3') 15
+            option(value='opcao-4') 20
+        .paginas de 48 p&aacute;ginas
+      .items-right
+        .arrows-pages
+          i.fa.fa-angle-left
+          i.fa.fa-angle-right
+    #navigation-bar.row.col-sm-12.col-md-12.col-lg-12.d-none.d-sm-flex
+      .items-left
+        span Exibir:
+        .br-select.is-small
+          select(name='select')
+            option(value='0') 10
+            option(value='opcao-1') 1
+            option(value='opcao-2') 10
+            option(value='opcao-3') 15
+            option(value='opcao-4') 20
+        .divisor-vertical
+        div 0-10 de 50 itens
+      .items-right
+        .br-select.is-small
+          select(name='select')
+            option(value='0') 12
+            option(value='opcao-1') 1
+            option(value='opcao-2') 10
+            option(value='opcao-3') 15
+            option(value='opcao-4') 20
+        div de 48 p&aacute;ginas
+        .divisor-vertical
+        .arrows-pages
+          i.fa.fa-angle-left
+          i.fa.fa-angle-right
