@@ -1,44 +1,30 @@
 Este documento explica como usar as folhas de estilo do Design System de Governo.
 
-O CSS do DS-Gov foi dividido em partes.
-
 ```text
 design-system/
-├── assets/
-│   └── styles/
-│       ├── dsgov-base.min.css
-│       ├── dsgov-components.min.css
-│       └── dsgov-templates.min.css
+├── dist/
+│   └── css/
+│       ├── dsgov-base.css
+│       ├── dsgov-components.css
+│       └── dsgov.css
 └── ...
 ```
 
-Carregue as versões minificadas de CSS dentro de `<head>`.
+Existem 3 arquivos de CSS disponíveis para uso. O arquivo `dsgov.css` possui o código completo do Design System. Os outros arquivos estão disponíveis caso seu projeto necessite apenas da base ou componentes.
+
+Carregue a folha de estilo dentro de `<head>`.
 
 Exemplo de uso:
 
 ```html
 <head>
-  <link rel="stylesheet" href="dsgov-base.min.css" />
-  <link rel="stylesheet" href="dsgov-components.min.css" />
-  <link rel="stylesheet" href="dsgov-templates.min.css" />
+  <link rel="stylesheet" href="dsgov.css" />
 </head>
 ```
 
-A seguir algumas informações sobre cada parte.
+## Cores
 
-## CSS de base
-
-O arquivo `dsgov-base.min.css` contém os seguintes elementos:
-
-- reset CSS
-- cores
-- tipografia básica
-- grid
-- utilitários
-
-### Cores
-
-Estão disponíveis variações de background e texto usando as cores do DS-Gov.
+Estão disponíveis variações de background e texto.
 
 Para modificar a cor de fundo use `.bg-*`. Para modificar a cor de texto use `text-*`.
 
@@ -52,28 +38,7 @@ Exemplo de uso:
 
 Veja mais informações em [**Fundamentos Visuais --> Cores**](ds/fundamentos-visuais/cores).
 
-### Grid
-
-A Grid do DS-Gov é a mesma grid Bootstrap, portanto sua forma de uso é a mesma. Os tamanhos de breakpoints, containers e gutters possuem valores diferenciados.
-
-Leia a documentação oficial de uso da Grid Bootstrap no endereço [https://getbootstrap.com/docs/4.3/layout/grid/](https://getbootstrap.com/docs/4.3/layout/grid/).
-
-Exemplo de uso:
-
-```html
-<div class="container">
-  <div class="row">
-    <!-- Coluna com largura pré-definida -->
-    <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">...</div>
-    <!-- Coluna com espaço restante -->
-    <div class="col">...</div>
-  </div>
-</div>
-```
-
-Veja mais informações em [**Fundamentos Visuais --> Sistema de Grid**](ds/fundamentos-visuais/grid).
-
-### Espaçamentos
+## Espaçamentos
 
 Os espaçamentos foram criados com base no utilitário **Spacing** do Bootstrap, portanto sua forma de uso é parecida. Os valores foram adaptados e/ou acrescentados.
 
@@ -92,11 +57,45 @@ Exemplo de uso:
 
 Veja mais informações em [**Fundamentos Visuais --> Espaçamentos**](ds/fundamentos-visuais/espacamentos).
 
-### Utilitários
+## Grid
 
-Os utilitários facilitam a criação de HTML sem a necessidade de modificação em CSS.
+A Grid é a mesma grid Bootstrap, portanto sua forma de uso é a mesma. Os tamanhos de breakpoints, containers e gutters possuem valores diferenciados.
 
-Utilitários do Bootstrap disponíveis no DS-Gov:
+Leia a documentação oficial de uso da Grid Bootstrap no endereço [https://getbootstrap.com/docs/4.3/layout/grid/](https://getbootstrap.com/docs/4.3/layout/grid/).
+
+Exemplo de uso:
+
+```html
+<div class="container">
+  <div class="row">
+    <!-- Coluna com largura pré-definida -->
+    <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">...</div>
+    <!-- Coluna com espaço restante -->
+    <div class="col">...</div>
+  </div>
+</div>
+```
+
+Veja mais informações em [**Fundamentos Visuais --> Sistema de Grid**](ds/fundamentos-visuais/grid).
+
+## Utilitários
+
+A versão atual do Design System foi baseada no Bootstrap 4, portanto você poderá alguns dos utilitários disponíveis em <https://getbootstrap.com/docs/4.3/utilities>.
+
+Exemplo:
+
+```html
+<div class="row mx-md-n5">
+  <div class="col px-md-5">
+    <div class="p-3 border bg-primary">Custom column padding</div>
+  </div>
+  <div class="col px-md-5">
+    <div class="p-3 border bg-secondary">Custom column padding</div>
+  </div>
+</div>
+```
+
+Os utilitários compatíveis são os seguintes:
 
 - Clearfix - <https://getbootstrap.com/docs/4.3/utilities/clearfix/>
 - Embeds - <https://getbootstrap.com/docs/4.3/utilities/embed/>
@@ -108,38 +107,3 @@ Utilitários do Bootstrap disponíveis no DS-Gov:
 - Text - <https://getbootstrap.com/docs/4.3/utilities/text/>
 - Vertical alignment - <https://getbootstrap.com/docs/4.3/utilities/vertical-align/>
 - Visibility - <https://getbootstrap.com/docs/4.3/utilities/visibility/>
-
-## CSS de componentes
-
-O arquivo `dsgov-components.min.css` é um compilado de **todos os componentes** criados para o DS-Gov.
-
-As regras gerais são as seguintes:
-
-- todo componente do DS-Gov possui o prefixo `br-`
-- uso de prefixo `is-` em suas variações
-
-Exemplo de uso:
-
-```html
-<!-- Botão primário -->
-<button class="br-button is-primary" type="button">Entrar</button>
-
-<!-- Input com mensagem de erro -->
-<div class="br-input is-invalid">...</div>
-
-<!-- Select pequeno -->
-<div class="br-select is-small">...</div>
-
-<!-- Aba ativa do componente tabs -->
-<ul class="br-tabs">
-  <li class="item is-active">...</li>
-</ul>
-```
-
-Leia a documentação de cada componente na sessão **Componentes** no menu principal.
-
-## CSS de templates
-
-Esta folha de estilo é um compilado de **todos os templates** criados para o DS-Gov.
-
-Leia a documentação de cada template na sessão **Templates** no menu principal.
