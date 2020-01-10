@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Upload</title>
-    <!-- Fonte Rawline-->
-    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
-    <!-- Fonte Raleway-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
-    <!-- Design System de Governo-->
-    <link rel="stylesheet" href="../css/dsgov.css">
-    <!-- Fontawesome-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="br-upload">
-        <input class="upload-input" id="input-file" type="file" name="myFiles" multiple>
-        <p class="upload-header"> Arraste e solte o(s) arquivo(s) do seu computador</p><span class="upload-info"><i class="fas fa-info-circle"></i>        Os arquivos devem ser no formato PNG, JPG ou PDF e ter no máximo 1GB</span>
-        <div class="upload-file-list"></div>
-        <label class="upload-add br-button is-cancel" for="input-file"><i class="fas fa-plus"></i>        Adicionar um arquivo do seu computador</label>
-        <p class="upload-size">Arquivos selecionados: <strong class="upload-size-num">0</strong><br>Tamanho total: <strong class="upload-size-bytes">0</strong></p>
-      </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Upload</title>
+  <!-- Fonte Rawline-->
+  <link rel="stylesheet"
+    href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/fonts/rawline/css/rawline.css">
+  <!-- Fonte Raleway-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
+  <!-- Design System de Governo-->
+  <link rel="stylesheet" href="../css/dsgov.css">
+  <!-- Fontawesome-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="br-upload">
+      <input class="upload-input" id="input-file" type="file" name="myFiles" multiple>
+      <p class="upload-header"> Arraste e solte o(s) arquivo(s) do seu computador</p><span class="upload-info"><i
+          class="fas fa-info-circle"></i> Os arquivos devem ser no formato PNG, JPG ou PDF e ter no máximo 1GB</span>
+      <div class="upload-file-list"></div>
+      <label class="upload-add br-button is-cancel" for="input-file"><i class="fas fa-plus"></i> Adicionar um arquivo do
+        seu computador</label>
+      <p class="upload-size">Arquivos selecionados: <strong class="upload-size-num">0</strong><br>Tamanho total: <strong
+          class="upload-size-bytes">0</strong></p>
     </div>
-    <script src="../js/components/upload.js"></script>
-  </body>
+  </div>
+  <script src="../js/components/upload.js"></script>
+</body>
+
 </html>
