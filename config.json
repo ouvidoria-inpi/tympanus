@@ -56,38 +56,20 @@
     "id": "boas-praticas",
     "children": [
       {
-        "label": "Desenvolvimento",
-        "children": [
-          {
-            "label": "Acessibilidade no Código HTML",
-            "filename": "acessibilidade-no-codigo-html"
-          },
-          {
-            "label": "Construção do CSS",
-            "filename": "construcao-do-css"
-          },
-          {
-            "label": "Manutenção do CSS",
-            "filename": "manutencao-do-css"
-          },
-          {
-            "label": "Uso do WAI-ARIA",
-            "filename": "uso-do-wai-aria"
-          },
-          {
-            "label": "Uso do css",
-            "filename": "uso-do-css"
-          }
-        ]
+        "label": "Uso do css",
+        "filename": "uso-do-css"
       },
       {
-        "label": "Design",
-        "children": [
-          {
-            "label": "Aplicação das cores",
-            "filename": "aplicacao-das-cores"
-          }
-        ]
+        "label": "Construção de componentes",
+        "filename": "construcao-de-componentes"
+      },
+      {
+        "label": "Acessibilidade no Código HTML",
+        "filename": "acessibilidade-no-codigo-html"
+      },
+      {
+        "label": "Uso do WAI-ARIA",
+        "filename": "uso-do-wai-aria"
       }
     ]
   },
