@@ -3,16 +3,19 @@
 
 
 .br-table{
+  width: 100%;
+  margin: 1rem auto;
   #redimensionar thead{
     th{
       &:hover{
         background-color: $color-gray-2;
         cursor: default;
       }
+      div:hover {
+        border-right: 2px solid $color-primary-lighten-1;
+      }
     }
-    div:hover{
-      border-right: 1px solid $color-primary-lighten-1;
-    }
+    
   }
   table{
     width: 100%;
@@ -83,13 +86,13 @@
   
  
 
-  #navigation-bar{
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: 10;
-  height: 56px;
-  } 
+  // #navigation-bar{
+  // left: 0;
+  // right: 0;
+  // position: absolute;
+  // z-index: 10;
+  // height: 56px;
+  // } 
 
   .selecao{
     background: $color-primary;
@@ -233,8 +236,8 @@
       box-shadow: none;
       &.is-active{
         border-radius: 16px;
-        height: 25px;
-        width: 26px;
+        height: 24px;
+        width: 24px;
         margin:0;
         background: $color-primary-pastel-1;
         padding: 0 5px;
@@ -257,6 +260,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin: 0 auto;
     span, div{
       font-size: 14px;
     }
@@ -283,6 +287,7 @@
     .items-left, .items-right{
       .br-select .select-selected{
         border: none;
+        border-bottom: 1px solid transparent;
         &:focus{
           box-shadow: none;
         }
@@ -319,6 +324,8 @@
     font-size: 20px;
     color: $color-primary;
     margin: auto 0.3rem;
+    display: flex;
+    justify-content: center;
   }
   .rotate{
     transform: rotate(180deg);
@@ -327,11 +334,6 @@
  
 }
 
-// @media (min-width: 1280px){
-//   .br-table table thead th{
-//     padding: 16px;
-//   }
-// }
 
 
 
