@@ -126,7 +126,7 @@ module.exports = function(env, argv) {
                 // { context: 'src', from: '**/*.md' },
                 // { context: 'src', from: '**/*.pdf' },
 																// { context: 'src', from: '**/*.html' },
-																{ context: 'src', from: '**/*.js' },
+																// { context: 'src', from: '**/*.js' },
 
                 // OBS.: Não é necessário copiar assets como imagens e fontes que são
                 // utilizados por imports ou pela função url(), pois eles são resolvidos como
