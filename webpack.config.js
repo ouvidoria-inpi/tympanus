@@ -111,7 +111,7 @@ module.exports = function(env, argv) {
 													name: 'dsgov-components',
 													outputPath: 'js/components/',
 													fileName: '[name].js',
-													filesToConcat: ['./src/js/components/**'],
+													filesToConcat: ['./src/js/**'],
 													attributes: {
 																	async: true
 													}
