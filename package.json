@@ -1,6 +1,6 @@
 {
   "name": "@govbr/dsgov",
-  "version": "1.1.0-beta01",
+  "version": "1.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -39,6 +39,7 @@
     "postcss-loader": "^3.0.0",
     "pug-client": "^1.1.0-alpha.1",
     "style-loader": "^1.0.1",
+    "trash-cli": "^3.0.0",
     "url-loader": "^3.0.0",
     "webpack-cli": "^3.3.10"
   },
