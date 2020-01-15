@@ -2370,7 +2370,7 @@ template {
     outline: none; }
 
 .br-upload {
-  background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/upload-fundo.png") 32px 24px #fff no-repeat;
+  background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/upload-fundo.png") 32px 24px #fff no-repeat;
   border: 1px solid #fff;
   box-shadow: 0 3px 6px #ccc;
   margin-bottom: 20px;

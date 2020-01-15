@@ -5,28 +5,34 @@
 ```html
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dsgov-base.min.css">
-    <link rel="stylesheet" href="dsgov-components.min.css">
-    <link rel="stylesheet" href="dsgov-templates.min.css">
-    ...
-  <head>
-  <body>
-    ...
-    <!-- Scripts de componentes -->
-    <script src="componente-x.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="dsgov.css">
+        ...
+    <head>
+    <body>
+        ...
+        <!-- Scripts de componentes -->
+        <script src="componente-x.js"></script>
+    </body>
 </html>
+```
+
+Os arquivos do Design System podem ser baixados em <https://git.serpro/ds-gov/design-system>.
+
+Seu projeto usa **Node**? Nesse caso inclua no arquivo **package.json** o pacote `@govbr/dsgov`.
+
+```bash
+npm install @govbr/dsgov --save
 ```
 
 ## Documentação
 
 Para informações mais detalhadas sobre Cores, Tipografia, etc acesse o item **Fundamentos Visuais** na navegação principal.
 
-Para criação ou manutenção de páginas, templates ou estilos acesse o item **Boas Práticas** na navegação principal.
+Para uso dos estilos ou criação de novos componentes acesse o item **Boas Práticas** na navegação principal.
 
 ## Componentes
 
