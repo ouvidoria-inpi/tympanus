@@ -642,16 +642,6 @@ window.onload = (function() {
 
 scrim = document.getElementsByClassName("is-foco")[0];
 
-function on() {
-    scrim.classList.add("is-active");
-  }
-  
-function off() {
-    scrim.classList.remove("is-active");
-}
-
-scrim = document.getElementsByClassName("is-foco")[0];
-
 function openModal(div) {
     scrim.innerHTML = div.innerHTML;
     scrim.classList.add("is-active");
@@ -666,6 +656,16 @@ function closeModal() {
     scrim.classList.remove("is-active");
 }
 
+
+scrim = document.getElementsByClassName("is-foco")[0];
+
+function on() {
+    scrim.classList.add("is-active");
+  }
+  
+function off() {
+    scrim.classList.remove("is-active");
+}
 
 let listId = 'search-list'
 let listClass = 'search-items'
