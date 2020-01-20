@@ -99,6 +99,21 @@ class BRSelect {
 
 let selectList = [];
 
+function createBrSelect() {
+  for (let brSelect of window.document.querySelectorAll('.br-select')) {
+    let equal = false;
+    for (let existedBrSelect of selectList) {
+      if (brSelect == existedBrSelect.component) {
+        equal = true;
+        break;
+      }
+    }
+    if (!equal) {
+      selectList.push(new BRSelect('br-select', brSelect));
+    }
+  }
+}
+
 window.onload = (function() {
   for (let brSelect of window.document.querySelectorAll('.br-select')) {
     selectList.push(new BRSelect('br-select', brSelect));
