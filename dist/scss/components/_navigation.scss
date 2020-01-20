@@ -1,6 +1,0 @@
-.#{$prefix}navigation {
-  @include navigation-component;
-  @include media-breakpoint-up(md) {
-    max-width: 320px;
-  }
-}

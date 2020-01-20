@@ -1,9 +1,0 @@
-.#{$prefix}table {
-  @include table;
-  @include table-caption;
-  @include table-row-actions;
-  @include table-length;
-  .table {
-    overflow-x: auto;
-  }
-}
