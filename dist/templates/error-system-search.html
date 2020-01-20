@@ -1,376 +1,344 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tela de erro</title>
-  <!-- Fonte Rawline-->
-  <link rel="stylesheet"
-    href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/fonts/rawline/css/rawline.css">
-  <!-- Fonte Raleway-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
-  <!-- Design System de Governo-->
-  <link rel="stylesheet" href="../css/dsgov.css">
-  <!-- Fontawesome-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
-</head>
-
-<body class="template-system">
-  <!-- Cabeçalho da página-->
-  <header class="page-header" id="header">
-    <!-- Atalhos para conteúdo-->
-    <ul class="skip-menu" id="skip-menu">
-      <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
-      <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
-      <li><a accesskey="3" href="#footer">Ir para o rodapé</a></li>
-    </ul>
-    <!-- header-->
-    <div class="br-header-system">
-      <div class="container-fluid">
-        <!-- Barra principal-->
-        <div class="wrapper">
-          <!-- Logo-->
-          <div class="logo"><a class="name" id="logo" href="">Nome do órgão</a><span class="description">Assinatura do
-              órgão</span></div>
-          <!-- Links rápidos-->
-          <div class="quicklinks d-none d-md-flex">
-            <ul>
-              <li><a href="">Acesso à informação</a></li>
-              <li><a href="">Participe</a></li>
-              <li><a href="">Acessibilidade</a></li>
-            </ul>
-            <!-- Altocontraste-->
-            <button class="br-button is-tertiary ml-16" type="button" accesskey="6"><i class="fas fa-adjust"></i><span
-                class="d-none d-md-inline-block ml-md-1 text-uppercase">Alto contraste</span>
-            </button>
-          </div>
-          <!-- Quebra de linha-->
-          <div class="break"></div>
-          <!-- Busca geral-->
-          <div class="search mx-n1 ml-md-auto mr-md-0">
-            <div class="field">
-              <label class="sr-only" for="search">Autocomplete</label>
-              <input id="search" type="search" placeholder="O que você procura?">
-              <button type="button"><i class="fas fa-search"></i><span class="sr-only">buscar</span></button>
-            </div>
-            <button class="close" type="button"><i class="fas fa-times"></i><span class="sr-only">fechar a
-                busca</span></button>
-          </div>
-          <!-- Barra do usuário-->
-          <div class="user-bar d-none d-md-flex ml-md-10">
-            <!-- Configurações do usuário-->
-            <div class="configs dropdown">
-              <button class="trigger" type="button">
-                <!-- Avatar do usuário--><span class="avatar"><i class="fas fa-user-circle"></i></span>
-                <!-- Notificações--><span class="badge">5</span>
-                <!-- Seta para abrir menu--><span class="arrow"><i class="fas fa-chevron-down"></i></span>
-              </button>
-              <div class="menu">
-                <!-- Informações do usuário-->
-                <div class="title user">
-                  <div class="name">Márcia Vinícius Tavares de Almeida</div>
-                  <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
-                </div>
-                <!-- Lista de configurações--><span class="title"><i class="fas fa-cog"></i>
-                  Configuração/Perfil</span><a class="item" href="">Configuração 01</a><a class="item"
-                  href="">Configuração 02</a><a class="item" href="">Configuração 03</a>
-              </div>
-            </div>
-            <!-- Sistemas favoritos do usuário-->
-            <div class="bookmarks dropdown">
-              <button class="trigger" type="button"><i class="fas fa-th-large"></i></button>
-              <div class="menu">
-                <div class="title">Sistemas</div>
-                <div class="list">
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 01</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 02</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 03</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 04</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 05</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 06</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 07</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 08</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 09</div>
-                    </a></div>
-                  <div class="item"><a class="bookmark" href="">
-                      <div class="brand"></div>
-                      <div class="name">Sistema 10</div>
-                    </a></div>
-                </div>
-                <div class="more"><a href="">Mais</a></div>
-              </div>
-            </div>
-            <!-- Logout-->
-            <button class="br-button is-small is-primary ml-3" type="button">Sair
-            </button>
-          </div>
-          <!-- Menu sanduiche-->
-          <button class="menu-hamburger ml-n1" type="button"><i class="fa fa-bars fa-fw"></i></button>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- Wrapper principal-->
-  <div class="page-wrapper">
-    <!-- Menu de navegação-->
-    <nav class="navigation" id="navigation" data-type="system" data-level="0">
-      <div class="wrapper">
-        <div class="overflow-auto">
-          <div class="container">
-            <!-- Logo e avatar-->
-            <div class="header-bar">
-              <!-- Avatar do usuário-->
-              <div class="nav-avatar">
-                <!-- Configurações do usuário-->
-              </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tela de erro</title>
+    <!-- Fonte Rawline-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/fonts/rawline/css/rawline.css">
+    <!-- Fonte Raleway-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
+    <!-- Design System de Governo-->
+    <link rel="stylesheet" href="../css/dsgov.css">
+    <!-- Fontawesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  </head>
+  <body class="template-system">
+    <!-- Cabeçalho da página-->
+    <header class="page-header" id="header">
+      <!-- Atalhos para conteúdo-->
+      <ul class="skip-menu" id="skip-menu">
+        <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
+        <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
+        <li><a accesskey="3" href="#footer">Ir para o rodapé</a></li>
+      </ul>
+      <!-- header-->
+      <div class="br-header-system">
+        <div class="container-fluid">
+          <!-- Barra principal-->
+          <div class="wrapper">
+            <!-- Logo-->
+            <div class="logo"><a class="name" id="logo" href="">Nome do órgão</a><span class="description">Assinatura do órgão</span></div>
+            <!-- Links rápidos-->
+            <div class="quicklinks d-none d-md-flex">
+              <ul>
+                <li><a href="">Acesso à informação</a></li>
+                <li><a href="">Participe</a></li>
+                <li><a href="">Acessibilidade</a></li>
+              </ul>
               <!-- Altocontraste-->
-              <div class="nav-contrast"></div>
+              <button class="br-button is-tertiary ml-16" type="button" accesskey="6"><i class="fas fa-adjust"></i><span class="d-none d-md-inline-block ml-md-1 text-uppercase">Alto contraste</span>
+              </button>
+            </div>
+            <!-- Quebra de linha-->
+            <div class="break"></div>
+            <!-- Busca geral-->
+            <div class="search mx-n1 ml-md-auto mr-md-0">
+              <div class="field">
+                <label class="sr-only" for="search">Autocomplete</label>
+                <input id="search" type="search" placeholder="O que você procura?">
+                <button type="button"><i class="fas fa-search"></i><span class="sr-only">buscar</span></button>
+              </div>
+              <button class="close" type="button"><i class="fas fa-times"></i><span class="sr-only">fechar a busca</span></button>
+            </div>
+            <!-- Barra do usuário-->
+            <div class="user-bar d-none d-md-flex ml-md-10">
+              <!-- Configurações do usuário-->
+              <div class="configs dropdown">
+                <button class="trigger" type="button">
+                  <!-- Avatar do usuário--><span class="avatar"><i class="fas fa-user-circle"></i></span>
+                  <!-- Notificações--><span class="badge">5</span>
+                  <!-- Seta para abrir menu--><span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="menu">
+                  <!-- Informações do usuário-->
+                  <div class="title user">
+                    <div class="name">Márcia Vinícius Tavares de Almeida</div>
+                    <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
+                  </div>
+                  <!-- Lista de configurações--><span class="title"><i class="fas fa-cog"></i>                  Configuração/Perfil</span><a class="item" href="">Configuração 01</a><a class="item" href="">Configuração 02</a><a class="item" href="">Configuração 03</a>
+                </div>
+              </div>
               <!-- Sistemas favoritos do usuário-->
-              <div class="nav-bookmarks"></div>
-              <!-- Logo-->
-              <div class="nav-logo"></div>
+              <div class="bookmarks dropdown">
+                <button class="trigger" type="button"><i class="fas fa-th-large"></i></button>
+                <div class="menu">
+                  <div class="title">Sistemas</div>
+                  <div class="list">
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 01</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 02</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 03</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 04</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 05</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 06</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 07</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 08</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 09</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 10</div></a></div>
+                  </div>
+                  <div class="more"><a href="">Mais</a></div>
+                </div>
+              </div>
+              <!-- Logout-->
+              <button class="br-button is-small is-primary ml-3" type="button">Sair
+              </button>
             </div>
-            <!-- Menu de navegação-->
-            <div class="items">
-              <!-- Navegação local-->
-              <ul class="local" data-level="0">
-                <li class="item">
-                  <button type="button">Item de nível 1</button>
-                  <ul class="submenu level-1" data-level="1">
-                    <li class="item">
-                      <button type="button">Item de nível 2.1</button>
-                      <ul class="submenu level-2" data-level="2">
-                        <li class="item"><a href="">Item de nível 3.1</a></li>
-                        <li class="item"><a href="">Item de nível 3.1</a></li>
-                        <li class="item"><a href="">Item de nível 3.1</a></li>
-                      </ul>
-                    </li>
-                    <li class="item">
-                      <button type="button">Item de nível 2.2</button>
-                      <ul class="submenu level-2" data-level="2">
-                        <li class="item"><a href="">Item de nível 3.2</a></li>
-                        <li class="item"><a href="">Item de nível 3.2</a></li>
-                        <li class="item"><a href="">Item de nível 3.2</a></li>
-                      </ul>
-                    </li>
-                    <li class="item">
-                      <button type="button">Item de nível 2.3</button>
-                      <ul class="submenu level-2" data-level="2">
-                        <li class="item"><a href="">Item de nível 3.3</a></li>
-                        <li class="item"><a href="">Item de nível 3.3</a></li>
-                        <li class="item"><a href="">Item de nível 3.3</a></li>
-                      </ul>
-                    </li>
-                    <li class="item">
-                      <button type="button">Item de nível 2.4</button>
-                      <ul class="submenu level-2" data-level="2">
-                        <li class="item"><a href="">Item de nível 3.4</a></li>
-                        <li class="item"><a href="">Item de nível 3.4</a></li>
-                        <li class="item"><a href="">Item de nível 3.4</a></li>
-                      </ul>
-                    </li>
-                    <li class="item">
-                      <button type="button">Item de nível 2.5</button>
-                      <ul class="submenu level-2" data-level="2">
-                        <li class="item"><a href="">Item de nível 3.5</a></li>
-                        <li class="item"><a href="">Item de nível 3.5</a></li>
-                        <li class="item"><a href="">Item de nível 3.5</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="item">
-                  <button type="button">Conheça a Presidência</button>
-                  <ul class="submenu level-1" data-level="1">
-                    <li class="item"><a href="">Biografia do Presidente</a></li>
-                    <li class="item"><a href="">Ministros</a></li>
-                    <li class="item"><a href="">Principais Tropas</a></li>
-                    <li class="item"><a href="">Palácio e Residências</a></li>
-                    <li class="item"><a href="">Acervo</a></li>
-                    <li class="item"><a href="">Ritos e Solenidades</a></li>
-                    <li class="item"><a href="">Presentes recebidos pelo Presidênte da República</a></li>
-                  </ul>
-                </li>
-                <li class="item">
-                  <button type="button">Vice-Presidência</button>
-                  <ul class="submenu level-1" data-level="1">
-                    <li class="item"><a href="">Agenda Vice-Presidente</a></li>
-                    <li class="item"><a href="">Agendas do Gabinete Pessoal da Vice-Presidência</a></li>
-                    <li class="item"><a href="">Biografia</a></li>
-                    <li class="item"><a href="">Atribuições</a></li>
-                    <li class="item"><a href="">Discursos e Pronunciamentos</a></li>
-                  </ul>
-                </li>
-                <li class="item">
-                  <button type="button">Acesso á Informação</button>
-                  <ul class="submenu level-1" data-level="1">
-                    <li class="item"><a href="">Institucional</a></li>
-                    <li class="item"><a href="">Ações e Programas</a></li>
-                    <li class="item"><a href="">Dados abertos</a></li>
-                    <li class="item"><a href="">Auditorias</a></li>
-                    <li class="item"><a href="">Convênios</a></li>
-                    <li class="item"><a href="">Despesas</a></li>
-                    <li class="item"><a href="">Licitações e contratos</a></li>
-                    <li class="item"><a href="">Servidores</a></li>
-                    <li class="item"><a href="">Informações Classificadas</a></li>
-                    <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <!-- Links rápidos-->
-          <div class="nav-quicklinks"></div>
-          <!-- Logout-->
-          <div class="nav-logout">
-            <div class="nav-timeout"></div>
-            <div class="nav-buttontimeout"></div>
-          </div>
-          <!-- Links úteis e redes sociais-->
-          <div class="row">
-            <!-- Links úteis-->
-            <!-- Redes sociais-->
+            <!-- Menu sanduiche-->
+            <button class="menu-hamburger ml-n1" type="button"><i class="fa fa-bars fa-fw"></i></button>
           </div>
         </div>
       </div>
-    </nav>
-    <div class="flex-fill">
-      <!-- Sombra do topo-->
-      <div>
-        <div class="container-fluid">
-          <!-- Barra de sistema-->
-          <div class="row system-bar">
-            <!-- Breadcrumbs-->
-            <div class="col">
-              <ul class="br-breadcrumb">
-                <li class="home"><a href=""><span class="sr-only">Página inicial</span><i class="fas fa-home"></i></a>
-                </li>
-                <li><a href="">Tela anterior</a></li>
-                <li class="is-active"><a href="">tela atual</a></li>
-              </ul>
-            </div>
-            <!-- Timeout-->
-            <div class="col-auto">
-              <div class="timeout"><i class="fas fa-clock"></i><span class="session">Sessão:</span><span
-                  class="timer">00 min. e 00 seg</span></div>
+    </header>
+    <!-- Wrapper principal-->
+    <div class="page-wrapper">
+      <!-- Menu de navegação-->
+      <nav class="navigation" id="navigation" data-type="system" data-level="0">
+        <div class="wrapper">
+          <div class="overflow-auto">
+            <div class="container">
+              <!-- Logo e avatar-->
+              <div class="header-bar">
+                <!-- Avatar do usuário-->
+                <div class="nav-avatar">
+                  <!-- Configurações do usuário-->
+                </div>
+                <!-- Altocontraste-->
+                <div class="nav-contrast"></div>
+                <!-- Sistemas favoritos do usuário-->
+                <div class="nav-bookmarks"></div>
+                <!-- Logo-->
+                <div class="nav-logo"></div>
+              </div>
+              <!-- Menu de navegação-->
+              <div class="items">
+                <!-- Navegação local-->
+                <ul class="local" data-level="0">
+                  <li class="item">
+                    <button type="button">Item de nível 1</button>
+                    <ul class="submenu level-1" data-level="1">
+                      <li class="item">
+                        <button type="button">Item de nível 2.1</button>
+                        <ul class="submenu level-2" data-level="2">
+                          <li class="item"><a href="">Item de nível 3.1</a></li>
+                          <li class="item"><a href="">Item de nível 3.1</a></li>
+                          <li class="item"><a href="">Item de nível 3.1</a></li>
+                        </ul>
+                      </li>
+                      <li class="item">
+                        <button type="button">Item de nível 2.2</button>
+                        <ul class="submenu level-2" data-level="2">
+                          <li class="item"><a href="">Item de nível 3.2</a></li>
+                          <li class="item"><a href="">Item de nível 3.2</a></li>
+                          <li class="item"><a href="">Item de nível 3.2</a></li>
+                        </ul>
+                      </li>
+                      <li class="item">
+                        <button type="button">Item de nível 2.3</button>
+                        <ul class="submenu level-2" data-level="2">
+                          <li class="item"><a href="">Item de nível 3.3</a></li>
+                          <li class="item"><a href="">Item de nível 3.3</a></li>
+                          <li class="item"><a href="">Item de nível 3.3</a></li>
+                        </ul>
+                      </li>
+                      <li class="item">
+                        <button type="button">Item de nível 2.4</button>
+                        <ul class="submenu level-2" data-level="2">
+                          <li class="item"><a href="">Item de nível 3.4</a></li>
+                          <li class="item"><a href="">Item de nível 3.4</a></li>
+                          <li class="item"><a href="">Item de nível 3.4</a></li>
+                        </ul>
+                      </li>
+                      <li class="item">
+                        <button type="button">Item de nível 2.5</button>
+                        <ul class="submenu level-2" data-level="2">
+                          <li class="item"><a href="">Item de nível 3.5</a></li>
+                          <li class="item"><a href="">Item de nível 3.5</a></li>
+                          <li class="item"><a href="">Item de nível 3.5</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="item">
+                    <button type="button">Conheça a Presidência</button>
+                    <ul class="submenu level-1" data-level="1">
+                      <li class="item"><a href="">Biografia do Presidente</a></li>
+                      <li class="item"><a href="">Ministros</a></li>
+                      <li class="item"><a href="">Principais Tropas</a></li>
+                      <li class="item"><a href="">Palácio e Residências</a></li>
+                      <li class="item"><a href="">Acervo</a></li>
+                      <li class="item"><a href="">Ritos e Solenidades</a></li>
+                      <li class="item"><a href="">Presentes recebidos pelo Presidênte da República</a></li>
+                    </ul>
+                  </li>
+                  <li class="item">
+                    <button type="button">Vice-Presidência</button>
+                    <ul class="submenu level-1" data-level="1">
+                      <li class="item"><a href="">Agenda Vice-Presidente</a></li>
+                      <li class="item"><a href="">Agendas do Gabinete Pessoal da Vice-Presidência</a></li>
+                      <li class="item"><a href="">Biografia</a></li>
+                      <li class="item"><a href="">Atribuições</a></li>
+                      <li class="item"><a href="">Discursos e Pronunciamentos</a></li>
+                    </ul>
+                  </li>
+                  <li class="item">
+                    <button type="button">Acesso á Informação</button>
+                    <ul class="submenu level-1" data-level="1">
+                      <li class="item"><a href="">Institucional</a></li>
+                      <li class="item"><a href="">Ações e Programas</a></li>
+                      <li class="item"><a href="">Dados abertos</a></li>
+                      <li class="item"><a href="">Auditorias</a></li>
+                      <li class="item"><a href="">Convênios</a></li>
+                      <li class="item"><a href="">Despesas</a></li>
+                      <li class="item"><a href="">Licitações e contratos</a></li>
+                      <li class="item"><a href="">Servidores</a></li>
+                      <li class="item"><a href="">Informações Classificadas</a></li>
+                      <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <hr class="my-0">
-      <!-- Conteúdo principal-->
-      <main class="page-content" id="content">
-        <div class="container-fluid">
           <div class="container">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-sm-5 col-lg-4"><img class="img-fluid"
-                  src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/unhappy-face.png"
-                  alt="Não encontrado..."></div>
-              <div class="col-sm text-center text-sm-left">
-                <div class="row justify-content-center">
-                  <div class="col-sm-12">
-                    <p class="not-found-title">Desculpe!</p>
-                    <p class="not-found-message mt-3">A página que você está procurando não existe. <br
-                        class="d-none d-sm-block">Pesquise o que deseja ou acesse os links sugeridos.</p>
-                  </div>
-                </div>
-              </div>
+            <!-- Links rápidos-->
+            <div class="nav-quicklinks"></div>
+            <!-- Logout-->
+            <div class="nav-logout">
+              <div class="nav-timeout"></div>
+              <div class="nav-buttontimeout"></div>
             </div>
-            <div class="row justify-content-sm-center justify-content-md-start mt-sm-3">
-              <div class="col-sm-8 col-md-6 offset-md-4">
-                <div class="d-sm-flex align-items-center mt-sm-3">
-                  <div class="br-input has-icon flex-fill">
-                    <label class="sr-only" for="search-autocomplete">Busca</label>
-                    <input id="search-autocomplete" type="text" placeholder="Digite sua senha de 8 a 11 dígitos"><span
-                      class="icon"><i class="fas fa-search"></i></span>
-                  </div>
-                  <button class="br-button is-primary mt-3 mt-sm-0 ml-sm-3" type="button">Buscar
-                  </button>
-                </div>
-              </div>
+            <!-- Links úteis e redes sociais-->
+            <div class="row">
+              <!-- Links úteis-->
+              <!-- Redes sociais-->
             </div>
-            <div class="row mt-10 hint justify-content-around">
-              <div class="col-sm-auto">
-                <div class="box">
-                  <div class="icon text-center"><i class="fas fa-home fa-2x" aria-hidden="true"></i></div>
-                  <div class="content"><span class="title">Home</span>
-                    <p class="message mb-0 mt-1"><span class="d-sm-none">Página inicial</span><span
-                        class="d-none d-sm-block">Acesse a Página inicial</span></p>
-                  </div>
-                </div>
+          </div>
+        </div>
+      </nav>
+      <div class="flex-fill">
+        <!-- Sombra do topo-->
+        <div>
+          <div class="container-fluid">
+            <!-- Barra de sistema-->
+            <div class="row system-bar">
+              <!-- Breadcrumbs-->
+              <div class="col">
+                <ul class="br-breadcrumb">
+                  <li class="home"><a href=""><span class="sr-only">Página inicial</span><i class="fas fa-home"></i></a></li>
+                  <li><a href="">Tela anterior</a></li>
+                  <li class="is-active"><a href="">tela atual</a></li>
+                </ul>
               </div>
-              <div class="col-sm-auto vertical-divider">
-                <hr class="d-block d-sm-none">
-              </div>
-              <div class="col-sm-auto">
-                <div class="box">
-                  <div class="icon text-center"><i class="fas fa-question fa-2x" aria-hidden="true"></i></div>
-                  <div class="content"><span class="title">Ajuda</span>
-                    <p class="message mb-0 mt-1"><span class="d-sm-none">Tópicos para ajudar você</span><span
-                        class="d-none d-sm-block">Acesse tópicos pra ajudar você<br>a encontrar o que deseja</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-auto vertical-divider">
-                <hr class="d-block d-sm-none">
-              </div>
-              <div class="col-sm-auto">
-                <div class="box">
-                  <div class="icon text-center"><i class="fas fa-chalkboard-teacher fa-2x" aria-hidden="true"></i></div>
-                  <div class="content"><span class="title">Serviços</span>
-                    <p class="message mb-0 mt-1"><span class="d-sm-none">Principais serviços do Governo
-                        Federal</span><span class="d-none d-sm-block">Acesse os principais serviços do<br>Governo
-                        Federal</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-auto d-sm-none">
-                <hr class="d-block d-sm-none">
+              <!-- Timeout-->
+              <div class="col-auto">
+                <div class="timeout"><i class="fas fa-clock"></i><span class="session">Sessão:</span><span class="timer">00 min. e 00 seg</span></div>
               </div>
             </div>
           </div>
         </div>
-      </main>
+        <hr class="my-0">
+        <!-- Conteúdo principal-->
+        <main class="page-content" id="content">
+          <div class="container-fluid">
+            <div class="container">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-sm-5 col-lg-4"><img class="img-fluid" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/unhappy-face.png" alt="Não encontrado..."></div>
+                <div class="col-sm text-center text-sm-left">
+                  <div class="row justify-content-center">
+                    <div class="col-sm-12">
+                      <p class="not-found-title">Desculpe!</p>
+                      <p class="not-found-message mt-3">A página que você está procurando não existe. <br class="d-none d-sm-block">Pesquise o que deseja ou acesse os links sugeridos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-sm-center justify-content-md-start mt-sm-3">
+                <div class="col-sm-8 col-md-6 offset-md-4">
+                  <div class="d-sm-flex align-items-center mt-sm-3">
+                    <div class="br-input has-icon flex-fill">
+                      <label class="sr-only" for="search-autocomplete">Busca</label>
+                      <input id="search-autocomplete" type="text" placeholder="Digite sua senha de 8 a 11 dígitos"><span class="icon"><i class="fas fa-search"></i></span>
+                    </div>
+                    <button class="br-button is-primary mt-3 mt-sm-0 ml-sm-3" type="button">Buscar
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-10 hint justify-content-around">
+                <div class="col-sm-auto">
+                  <div class="box">
+                    <div class="icon text-center"><i class="fas fa-home fa-2x" aria-hidden="true"></i></div>
+                    <div class="content"><span class="title">Home</span>
+                      <p class="message mb-0 mt-1"><span class="d-sm-none">Página inicial</span><span class="d-none d-sm-block">Acesse a Página inicial</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto vertical-divider">
+                  <hr class="d-block d-sm-none">
+                </div>
+                <div class="col-sm-auto">
+                  <div class="box">
+                    <div class="icon text-center"><i class="fas fa-question fa-2x" aria-hidden="true"></i></div>
+                    <div class="content"><span class="title">Ajuda</span>
+                      <p class="message mb-0 mt-1"><span class="d-sm-none">Tópicos para ajudar você</span><span class="d-none d-sm-block">Acesse tópicos pra ajudar você<br>a encontrar o que deseja</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto vertical-divider">
+                  <hr class="d-block d-sm-none">
+                </div>
+                <div class="col-sm-auto">
+                  <div class="box">
+                    <div class="icon text-center"><i class="fas fa-chalkboard-teacher fa-2x" aria-hidden="true"></i></div>
+                    <div class="content"><span class="title">Serviços</span>
+                      <p class="message mb-0 mt-1"><span class="d-sm-none">Principais serviços do Governo Federal</span><span class="d-none d-sm-block">Acesse os principais serviços do<br>Governo Federal</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto d-sm-none">
+                  <hr class="d-block d-sm-none">
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-  </div>
-  <!-- Rodapé de governo-->
-  <footer class="page-footer" id="footer">
-    <div class="chancela-serpro"><img
-        src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/produto-serpro.png"
-        alt="Produto Serpro"></div>
-  </footer>
-  <script src="../js/system.js"></script>
-</body>
-
+    <!-- Rodapé de governo-->
+    <footer class="page-footer" id="footer">
+      <div class="chancela-serpro"><img src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/produto-serpro.png" alt="Produto Serpro"></div>
+    </footer>
+    <script src="../js/system.js"></script>
+  </body>
 </html>
