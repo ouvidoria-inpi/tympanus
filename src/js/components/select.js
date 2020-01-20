@@ -1,85 +1,94 @@
 class BRSelect {
-
   constructor(name, component) {
-    this.name = name;
-    this.component = component;
-    this._setUpBrSelect();
+    this.name = name
+    this.component = component
+    this._setUpBrSelect()
   }
 
   _setUpBrSelect() {
     for (let select of this.component.querySelectorAll('select')) {
-      this.component.appendChild(this._buildSelectionField(select));
-      this.component.appendChild(this._buildOptionsList(select));
+      this.component.appendChild(this._buildSelectionField(select))
+      this.component.appendChild(this._buildOptionsList(select))
     }
-    this._setBehavior();
+    this._setBehavior()
   }
 
   _buildSelectionField(select) {
-    let selectionField = window.document.createElement('button');
-    selectionField.setAttribute('class', 'select-selected unselected');
+    let selectionField = window.document.createElement('button')
+    selectionField.setAttribute('class', 'select-selected unselected')
     if (select.disabled) {
-      selectionField.setAttribute('disabled', 'disabled');
+      selectionField.setAttribute('disabled', 'disabled')
     }
-    selectionField.appendChild(this._buildOptionItem(select.options[select.selectedIndex].innerHTML));
+    selectionField.appendChild(
+      this._buildOptionItem(select.options[select.selectedIndex].innerHTML)
+    )
     selectionField.appendChild(this._buildIcon())
-    return selectionField;
+    return selectionField
   }
 
   _buildOptionItem(text) {
-    let optionItem = window.document.createElement('span');
-    optionItem.innerHTML = text;
-    return optionItem;
+    let optionItem = window.document.createElement('span')
+    optionItem.innerHTML = text
+    return optionItem
   }
 
   _buildIcon() {
-    let icon = window.document.createElement('i');
+    let icon = window.document.createElement('i')
     icon.setAttribute('class', 'fas fa-chevron-down')
-    return icon;
+    return icon
   }
 
   _buildOptionsList(select) {
-    let optionsList = window.document.createElement('div');
-    optionsList.setAttribute('class', 'select-items select-hide');
+    let optionsList = window.document.createElement('div')
+    optionsList.setAttribute('class', 'select-items select-hide')
     for (let option of select.options) {
-      let optionField = window.document.createElement('button');
-      optionField.appendChild(this._buildOptionItem(option.innerHTML));
-      optionsList.appendChild(optionField);      
+      let optionField = window.document.createElement('button')
+      optionField.appendChild(this._buildOptionItem(option.innerHTML))
+      optionsList.appendChild(optionField)
     }
-    return optionsList;
+    return optionsList
   }
 
   _setBehavior() {
-    for (let itemSelected of this.component.querySelectorAll('.select-selected')) {
+    for (let itemSelected of this.component.querySelectorAll(
+      '.select-selected'
+    )) {
       itemSelected.addEventListener('click', (event) => {
-        event.stopPropagation();
+        event.stopPropagation()
         itemSelected.nextElementSibling.classList.toggle('select-hide')
-        this._closeSelects(itemSelected);
+        this._closeSelects(itemSelected)
         window.document.addEventListener('click', () => {
-          this._closeSelects();
-        });
-      });
+          this._closeSelects()
+        })
+      })
     }
     for (let item of this.component.querySelectorAll('.select-items button')) {
       item.addEventListener('click', (event) => {
         for (let select of this.component.querySelectorAll('select')) {
           for (let [index, option] of Array.from(select.options).entries()) {
             if (option.innerHTML === item.firstChild.innerHTML) {
-              select.selectedIndex = index;
-              select.dispatchEvent(new Event('change'));
-              item.parentNode.previousSibling.firstChild.innerHTML = item.firstChild.innerHTML;
-              item.parentNode.previousSibling.setAttribute('class', 'select-selected');
-              item.parentNode.classList.add('select-hide');
-              for (let optionItem of item.parentNode.querySelectorAll('button')) {
+              select.selectedIndex = index
+              select.dispatchEvent(new Event('change'))
+              item.parentNode.previousSibling.firstChild.innerHTML =
+                item.firstChild.innerHTML
+              item.parentNode.previousSibling.setAttribute(
+                'class',
+                'select-selected'
+              )
+              item.parentNode.classList.add('select-hide')
+              for (let optionItem of item.parentNode.querySelectorAll(
+                'button'
+              )) {
                 if (optionItem === item) {
-                  optionItem.setAttribute('class', 'same-as-selected');
+                  optionItem.setAttribute('class', 'same-as-selected')
                 } else {
-                  optionItem.removeAttribute('class');
+                  optionItem.removeAttribute('class')
                 }
               }
             }
           }
         }
-      });
+      })
     }
   }
 
@@ -88,8 +97,8 @@ class BRSelect {
       for (let itemSelected of brSelect.querySelectorAll('.select-selected')) {
         if (itemSelected !== element) {
           for (let optionsList of brSelect.querySelectorAll('.select-items')) {
-            optionsList.classList.add('select-hide');
-            window.document.removeEventListener('click', this._closeSelects);
+            optionsList.classList.add('select-hide')
+            window.document.removeEventListener('click', this._closeSelects)
           }
         }
       }
@@ -97,38 +106,57 @@ class BRSelect {
   }
 
   _deleteSelect() {
-    for (let selectionField of this.component.querySelectorAll('button.select-selected')) {
-      selectionField.remove();
+    for (let selectionField of this.component.querySelectorAll(
+      'button.select-selected'
+    )) {
+      selectionField.remove()
     }
-    for (let optionsList of this.component.querySelectorAll('div.select-items')) {
-      optionsList.remove();
+    for (let optionsList of this.component.querySelectorAll(
+      'div.select-items'
+    )) {
+      optionsList.remove()
     }
   }
 
   updateSelect() {
-    this._deleteSelect();
-    this._setUpBrSelect();
+    this._deleteSelect()
+    this._setUpBrSelect()
   }
 }
-
-let selectList = [];
 
 function getBrSelect(component) {
   for (let brSelect of selectList) {
     for (let select of brSelect.component.querySelectorAll('select')) {
       if (component == select) {
-        return brSelect;      
+        return brSelect
       }
     }
   }
 }
 
 function updateSelect(component) {
-  getBrSelect(component).updateSelect();
+  getBrSelect(component).updateSelect()
+}
+
+let selectList = []
+
+function createBrSelect() {
+  for (let brSelect of window.document.querySelectorAll('.br-select')) {
+    let equal = false
+    for (let existedBrSelect of selectList) {
+      if (brSelect == existedBrSelect.component) {
+        equal = true
+        break
+      }
+    }
+    if (!equal) {
+      selectList.push(new BRSelect('br-select', brSelect))
+    }
+  }
 }
 
 window.onload = (function() {
   for (let brSelect of window.document.querySelectorAll('.br-select')) {
-    selectList.push(new BRSelect('br-select', brSelect));
+    selectList.push(new BRSelect('br-select', brSelect))
   }
-})();
+})()
