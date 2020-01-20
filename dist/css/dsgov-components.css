@@ -29,7 +29,7 @@ body {
   text-align: left;
   background-color: #fff; }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+[tabindex="-1"]:focus {
   outline: 0 !important; }
 
 hr {
@@ -108,12 +108,14 @@ a {
     color: #2670e8;
     text-decoration: underline; }
 
-a:not([href]) {
+a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none; }
-  a:not([href]):hover {
+  a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
     color: inherit;
     text-decoration: none; }
+  a:not([href]):not([tabindex]):focus {
+    outline: 0; }
 
 pre,
 code,
@@ -1723,9 +1725,12 @@ template {
   z-index: 999; }
   .br-scrim.is-foco .br-modal {
     -ms-transform: translate(-50%, -50%);
+    background-color: #fff;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1000; }
   .br-scrim.is-foco.is-active {
     display: block; }
 
@@ -2208,3 +2213,5 @@ template {
   .br-upload .upload-size {
     text-align: right;
     visibility: hidden; }
+
+/*# sourceMappingURL=dsgov-components.css.map */
