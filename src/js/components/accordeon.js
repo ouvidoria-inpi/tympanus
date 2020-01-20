@@ -3,7 +3,9 @@ class BRAccordeon {
     this.name = name;
     this.component = component;
     this._setBehavior();
-  }
+		}
+		
+		
 
   _setBehavior() {
     for (let button of this.component.querySelectorAll("button.header")) {

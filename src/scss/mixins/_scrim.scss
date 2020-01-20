@@ -12,9 +12,12 @@
     z-index: 999;
     .br-modal {
       -ms-transform: translate(-50%, -50%);
+      background-color: $color-white;
       left: 50%;
       top: 50%;
+      position: absolute;
       transform: translate(-50%, -50%);
+      z-index: 1000;
     }
     &.is-active {
       display: block;
