@@ -16,342 +16,179 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="br-table">
-        <div class="row selecao is-invisible col-sm-12 col-md-12 col-lg-12">
-          <div class="item-selecionado col-sm-8 col-md-8 align-items-start">1 item selecionado</div>
-          <div class="actions col-sm-4 col-md-4 align-items-end">Excluir
-            <div id="lixeira"><i class="fa fa-trash-alt"></i></div>  Download
-            <div id="download"><i class="fa fa-download"></i></div>
-          </div>
-        </div>
-        <div class="row search-bar is-invisible col-sm-12 col-md-12 col-lg-12">
-          <div class="resultado align-items-start">
-            <label class="sr-only" for="result">Busca da tabela</label>
-            <input id="result" type="text" name="result">
-          </div>
-          <div class="actions align-items-end">
-            <div id="find"><i class="fa fa-search"></i></div>
-          </div>
-          <div class="toogle-search" id="close"><i class="fa fa-times"></i></div>
-        </div>
-        <div class="row densidade is-visible col-sm-12 col-md-12 col-lg-12">
-          <div class="table-title col-sm-11 col-md-11 align-items-start">T&iacute;tulo da Tabela</div>
-          <div class="actions col-sm-1 col-md-1 align-items-end">
-            <div id="densidade-up"><i class="fa fa-th"></i></div>
-            <div id="densidade-down"><i class="fa fa-th-large"></i></div>
-            <div class="divisor-vertical"></div>
-            <div class="menu-items"><i class="fa fa-ellipsis-v"></i></div>
-          </div>
-        </div>
-        <div class="row title-bar is-visible col-sm-12 col-md-12 col-lg-12">
-          <div class="table-title col-sm-11 col-md-11 align-items-start">T&iacute;tulo da Tabela</div>
-          <div class="actions col-sm-1 col-md-1 align-items-end">
-            <div class="toogle-search" id="table-search"><i class="fa fa-search"></i></div>
-            <div class="menu-items"><i class="fa fa-ellipsis-v"></i></div>
-          </div>
-        </div>
-        <table class="table-responsive" id="table">
-          <thead>
-            <tr>
-              <th></th>
-              <th class="modify-mobil">
-                <div class="br-checkbox">
-                  <input id="checkbox1" type="checkbox">
-                  <label for="checkbox1"></label>
-                </div>
-              </th>
-              <th>Coluna 1</th>
-              <th>Coluna 2</th>
-              <th>Coluna 3</th>
-              <th>Coluna 4</th>
-              <th>Coluna 5</th>
-            </tr>
-          </thead>
-          <tbody class="table-body">
-            <tr>
-              <td></td>
-              <td class="modify-mobil">
-                <div class="br-checkbox">
-                  <input id="checkbox2" type="checkbox">
-                  <label for="checkbox2"></label>
-                </div>
-              </td>
-              <td data-title="Coluna 1">Lorem ipsum dolor </td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">10%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="modify-mobil">
-                <div class="br-checkbox">
-                  <input id="checkbox3" type="checkbox">
-                  <label for="checkbox3"></label>
-                </div>
-              </td>
-              <td data-title="Coluna 1">Nam mattis nisi</td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">17%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td class="expande-mobil">
-                <div id="expande"><i class="fas fa-angle-up rotate"></i></div>
-              </td>
-              <td class="modify-mobil">
-                <div class="br-checkbox">
-                  <input id="checkbox4" type="checkbox">
-                  <label for="checkbox4"></label>
-                </div>
-              </td>
-              <td data-title="Coluna 1">Integer ut pretium</td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">67%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr class="disabled">
-              <td colspan="7">
-                <div class="br-table">
-                  <table class="interna">
-                    <thead>
-                      <tr>
-                        <th>Coluna1</th>
-                        <th>Coluna2</th>
-                        <th>Coluna3</th>
-                        <th>Coluna4</th>
-                        <th>Coluna5</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>TESTE</td>
-                        <td>TESTE</td>
-                        <td>MORE</td>
-                        <td>MORE</td>
-                        <td>TESTE</td>
-                      </tr>
-                      <tr>
-                        <td>TESTE</td>
-                        <td>TESTE</td>
-                        <td>MORE</td>
-                        <td>MORE</td>
-                        <td>TESTE</td>
-                      </tr>
-                      <tr>
-                        <td>TESTE</td>
-                        <td>TESTE</td>
-                        <td>MORE</td>
-                        <td>MORE</td>
-                        <td>TESTE</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="modify-mobil">
-                <div class="br-checkbox">
-                  <input id="checkbox5" type="checkbox">
-                  <label for="checkbox5"></label>
-                </div>
-              </td>
-              <td data-title="Coluna 1">Nunc imperdiet risus</td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">93%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="modify-mobil">
-                <div class="br-checkbox">
-                  <input id="checkbox6" type="checkbox">
-                  <label for="checkbox6"></label>
-                </div>
-              </td>
-              <td data-title="Coluna 1">Pellentesque fringilla</td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">100%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="modify-mobil">
-                <div class="br-checkbox">
-                  <input id="checkbox7" type="checkbox">
-                  <label for="checkbox7"></label>
-                </div>
-              </td>
-              <td data-title="Coluna 1">Duis id libero posuere</td>
-              <td data-title="Coluna 2">395</td>
-              <td data-title="Coluna 3">100%</td>
-              <td data-title="Coluna 4">7575 bytes</td>
-              <td data-title="Coluna 5">tincidunt arcu sed</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="footer d-sm-none">
-          <div class="items-left">
-            <div class="br-select is-small">
-              <select id="simples" name="select">
-                <option value="0">12</option>
-                <option value="opcao-1">1</option>
-                <option value="opcao-2">10</option>
-                <option value="opcao-3">15</option>
-                <option value="opcao-4">20</option>
-              </select>
+      <p class="h2 mb-3">Datatable</p>
+      <div class="br-table is-datatable">
+        <div class="header">
+          <div class="top-bar">
+            <div class="title">Título da Tabela</div>
+            <div class="search-button">
+              <button class="br-button is-circle is-tertiary" id="search-trigger" type="button"><i class="fas fa-search"></i>
+              </button>
             </div>
-            <div class="paginas">de 48 p&aacute;ginas</div>
           </div>
-          <div class="items-right">
-            <div class="arrows-pages"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
+          <div class="search-bar">
+            <div class="br-input is-medium has-icon">
+              <label for="table-search">Buscar</label>
+              <input id="table-search" type="text" placeholder="Buscar na tabela">
+              <button class="icon" type="button"><span class="sr-only">Buscar</span><i class="fas fa-search"></i></button>
+            </div>
+            <button class="br-button is-circle ml-1" id="search-close" type="button"><i class="fas fa-times"></i>
+            </button>
           </div>
         </div>
-        <div class="row col-sm-12 col-md-12 col-lg-12 d-none d-sm-flex" id="navigation-bar">
-          <div class="items-left"><span>Exibir:</span>
-            <div class="br-select is-small">
-              <select name="select">
-                <option value="0">10</option>
-                <option value="opcao-1">1</option>
-                <option value="opcao-2">10</option>
-                <option value="opcao-3">15</option>
-                <option value="opcao-4">20</option>
-              </select>
+        <div class="responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Coluna 1</th>
+                <th>Coluna 2</th>
+                <th>Coluna 3</th>
+                <th>Coluna 4</th>
+                <th>Coluna 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="Coluna 1">s8qerdjg dfcs3rr9 az9g</td>
+                <td data-th="Coluna 2">qb3g7yic uub2a4le id50w4</td>
+                <td data-th="Coluna 3">gs8v7s85 1uslhxfv g9v9f</td>
+                <td data-th="Coluna 4">w5w1xhb6 jj9hp1ws sojw4d</td>
+                <td data-th="Coluna 5">9b1z4p62 so0vb1lu ycyfqm</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">9x9e7xsd f7jmlqk8 ldjq4e</td>
+                <td data-th="Coluna 2">tj9k1nq2 sy828v4c 5espg</td>
+                <td data-th="Coluna 3">gat9oi1c 2ltbdgl9 ue2js</td>
+                <td data-th="Coluna 4">7qmvlsr4 m2qpiii7 cdpapb</td>
+                <td data-th="Coluna 5">hs57rfr8 03m1w3wb 6sg20f</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">8soera7v stfl8n9m tt03gd</td>
+                <td data-th="Coluna 2">y3uan40k xmdaw0hg 6544m5</td>
+                <td data-th="Coluna 3">egs7tb6j 0dcjo3gd amtzfc</td>
+                <td data-th="Coluna 4">ystypysw hxkqgii9 fs4fk</td>
+                <td data-th="Coluna 5">0j8o7f19 jkejnlyy 2i7delf</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">qyss2epq ekz10mua 71ro</td>
+                <td data-th="Coluna 2">kxqsxmij 29a8dwck 7acobq</td>
+                <td data-th="Coluna 3">o9lmrq7s 0ulroi9o spg0jd</td>
+                <td data-th="Coluna 4">aggvx758 9mghlbgx hewg5g</td>
+                <td data-th="Coluna 5">tlqmlnfv 4el55gm0 3wndfx</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">7njg459x x6kwmwz0 52c2c</td>
+                <td data-th="Coluna 2">co366hsi 18k9e9lt 9jvwp</td>
+                <td data-th="Coluna 3">mc5pq7fq ak1em06o gaq8p</td>
+                <td data-th="Coluna 4">ki157gur yks92pju 0ovr</td>
+                <td data-th="Coluna 5">fud4jtkz bpsyyr6e phpnf</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">1y86racj 4wd6z0c2 7f9nf</td>
+                <td data-th="Coluna 2">lkzuvwkz 5pkvvjsg pf5axr</td>
+                <td data-th="Coluna 3">t6scpg4f lfrxdpyq ni8w9</td>
+                <td data-th="Coluna 4">2a7h0690 8nj5mims iy2zqe</td>
+                <td data-th="Coluna 5">01hzmwmw 6ur6xc4i t84dypb</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">j8iexy9p ejsr1vcv 465p8o</td>
+                <td data-th="Coluna 2">khihewll l8qvbeqo nyce8</td>
+                <td data-th="Coluna 3">be5ju0me lqwg5yh6 pxeoss</td>
+                <td data-th="Coluna 4">4ht4d8ek 6fbml798 no8nmh</td>
+                <td data-th="Coluna 5">s0invgs5 lcsyy6lg 2javg</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">b12hhux0 iq75j19u kyt26g</td>
+                <td data-th="Coluna 2">h9e84jja f1f0eozj wq5gja</td>
+                <td data-th="Coluna 3">bv1s2bt3 ze910wtm a72ypoa</td>
+                <td data-th="Coluna 4">kqm2w9jm tknlprw7 aa93l</td>
+                <td data-th="Coluna 5">eq43r608 yjm0zmft tc2c9rq</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">g4grpf3x pmuqxgjw w6y1il</td>
+                <td data-th="Coluna 2">6zlks0s4 ejtc14qo x3zc08</td>
+                <td data-th="Coluna 3">4w8nvda4 t8xklgme 7ih5j9</td>
+                <td data-th="Coluna 4">jdoxvrfw tzfroaro yicvc</td>
+                <td data-th="Coluna 5">uaazumta okmz0dk4 1f5odq</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="footer">
+          <div class="bottom-bar">
+            <div class="items"><span>Exibir:</span>
+              <div class="br-select is-small">
+                <select name="select">
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+              </div><span class="divider"></span><span>1-10 de 50 itens</span>
             </div>
-            <div class="divisor-vertical"></div>
-            <div>0-10 de 50 itens</div>
-          </div>
-          <div class="items-right">
-            <div class="br-select is-small">
-              <select name="select">
-                <option value="0">12</option>
-                <option value="opcao-1">1</option>
-                <option value="opcao-2">10</option>
-                <option value="opcao-3">15</option>
-                <option value="opcao-4">20</option>
-              </select>
+            <div class="pagination">
+              <div class="selectors">
+                <div class="br-select is-small">
+                  <select name="select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div><span>de 3 páginas</span><span class="divider"></span>
+              </div>
+              <div class="arrows">
+                <button class="br-button is-circle is-secondary" type="button"><i class="fa fa-chevron-left"></i>
+                </button>
+                <button class="br-button is-circle is-secondary" type="button"><i class="fa fa-chevron-right"></i>
+                </button>
+              </div>
             </div>
-            <div>de 48 p&aacute;ginas</div>
-            <div class="divisor-vertical"></div>
-            <div class="arrows-pages"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
           </div>
         </div>
       </div>
-      <h2>Exemplo de tabela com coluna </h2>
+      <p class="h2 mb-3 mt-5">Tabela simples</p>
       <div class="br-table">
-        <div class="row title-bar is-visible col-sm-12 col-md-12 col-lg-12">
-          <div class="table-title col-sm-11 col-md-11 align-items-start">T&iacute;tulo da Tabela</div>
-          <div class="actions col-sm-1 col-md-1 align-items-end">
-            <div id="table-search"><i class="fa fa-search toogle-search"></i></div>
-            <div class="menu-items"> <i class="fa fa-ellipsis-v"></i></div>
-          </div>
-        </div>
-        <table id="redimensionar">
-          <thead>
-            <tr>
-              <th>Coluna 1</th>
-              <th>Coluna 2</th>
-              <th>Coluna 3</th>
-              <th>Coluna 4</th>
-              <th>Coluna 5</th>
-            </tr>
-          </thead>
-          <tbody class="table-body">
-            <tr>
-              <td data-title="Coluna 1">Lorem ipsum dolor</td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">10%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td data-title="Coluna 1">Nam mattis nisi</td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">17%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td data-title="Coluna 1">Integer ut pretium</td>
-              <td data-title="Coluna 2">84</td>
-              <td data-title="Coluna 3">67%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td data-title="Coluna 1">Nunc imperdiet risus</td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">93%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td data-title="Coluna 1">Pellentesque fringilla</td>
-              <td data-title="Coluna 2">484</td>
-              <td data-title="Coluna 3">100%</td>
-              <td data-title="Coluna 4">3258 bytes</td>
-              <td data-title="Coluna 5">Curabitur tincidunt</td>
-            </tr>
-            <tr>
-              <td data-title="Coluna 1">Duis id libero posuere</td>
-              <td data-title="Coluna 2">395</td>
-              <td data-title="Coluna 3">100%</td>
-              <td data-title="Coluna 4">7575 bytes</td>
-              <td data-title="Coluna 5">tincidunt arcu sed</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="footer d-sm-none">
-          <div class="items-left">
-            <div class="br-select is-small">
-              <select id="simples" name="select">
-                <option value="0">12</option>
-                <option value="opcao-1">1</option>
-                <option value="opcao-2">10</option>
-                <option value="opcao-3">15</option>
-                <option value="opcao-4">20</option>
-              </select>
-            </div>
-            <div class="paginas">de 48 p&aacute;ginas</div>
-          </div>
-          <div class="items-right">
-            <div class="arrows-pages"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
-          </div>
-        </div>
-        <div class="row col-sm-12 col-md-12 col-lg-12 d-none d-sm-flex" id="navigation-bar">
-          <div class="items-left"><span>Exibir:</span>
-            <div class="br-select is-small">
-              <select name="select">
-                <option value="0">10</option>
-                <option value="opcao-1">1</option>
-                <option value="opcao-2">10</option>
-                <option value="opcao-3">15</option>
-                <option value="opcao-4">20</option>
-              </select>
-            </div>
-            <div class="divisor-vertical"></div>
-            <div>0-10 de 50 itens</div>
-          </div>
-          <div class="items-right">
-            <div class="br-select is-small">
-              <select name="select">
-                <option value="0">12</option>
-                <option value="opcao-1">1</option>
-                <option value="opcao-2">10</option>
-                <option value="opcao-3">15</option>
-                <option value="opcao-4">20</option>
-              </select>
-            </div>
-            <div>de 48 p&aacute;ginas</div>
-            <div class="divisor-vertical"></div>
-            <div class="arrows-pages"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
-          </div>
+        <div class="responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Coluna 1</th>
+                <th>Coluna 2</th>
+                <th>Coluna 3</th>
+                <th>Coluna 4</th>
+                <th>Coluna 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="Coluna 1">9nd4mx0j w7a3i6gk gxtss2</td>
+                <td data-th="Coluna 2">h8ix9qeo 70dza6p6 pgad</td>
+                <td data-th="Coluna 3">48tu48pp ml3wkcag 3n7vvr</td>
+                <td data-th="Coluna 4">tvhy4euq 0fghkg8q ern2il</td>
+                <td data-th="Coluna 5">lmvxcxy0 8ftitcse 6c6fk</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">ymg74b90 ufo6ac49 22p2r3</td>
+                <td data-th="Coluna 2">wh0hfduc dxaunc1s h7paw</td>
+                <td data-th="Coluna 3">xl98kgx6 qblkwac6 0yn20o</td>
+                <td data-th="Coluna 4">6ulvbxy5 f1jo2mf6 fv862f</td>
+                <td data-th="Coluna 5">24b1nm2f p8hf2uyo brno3j</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">vbxk9ylp kvd90wfw qhwtu8</td>
+                <td data-th="Coluna 2">qtcdw9ak pluj0qwf efuxm</td>
+                <td data-th="Coluna 3">g45b8g4h t8ul8mqj 45gmfm</td>
+                <td data-th="Coluna 4">hv38jkh5 kq7nxf0e qi9mu</td>
+                <td data-th="Coluna 5">7q6v0m6i b7vse44x 5l83c</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">u3awxfej 64vvjh6x 916fk</td>
+                <td data-th="Coluna 2">54w62va1 vqb8syda nliru4</td>
+                <td data-th="Coluna 3">l5lyryw2 75ctt3mh 7c192</td>
+                <td data-th="Coluna 4">xtq54jqh jsmdguit cgpdc</td>
+                <td data-th="Coluna 5">qp370jfx atw4xm2s r58jj</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
