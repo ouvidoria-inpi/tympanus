@@ -5,7 +5,8 @@ mixin select(label="Label")
   div(class=className)
     label(for=attributes.id)=label
     select(id=attributes.id
-      disabled=attributes.disabled)
+      disabled=attributes.disabled
+      onchange=attributes.onchange)
       if block
         block
 

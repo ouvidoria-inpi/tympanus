@@ -95,9 +95,37 @@ class BRSelect {
       }
     }
   }
+
+  _deleteSelect() {
+    for (let selectionField of this.component.querySelectorAll('button.select-selected')) {
+      selectionField.remove();
+    }
+    for (let optionsList of this.component.querySelectorAll('div.select-items')) {
+      optionsList.remove();
+    }
+  }
+
+  updateSelect() {
+    this._deleteSelect();
+    this._setUpBrSelect();
+  }
 }
 
 let selectList = [];
+
+function getBrSelect(component) {
+  for (let brSelect of selectList) {
+    for (let select of brSelect.component.querySelectorAll('select')) {
+      if (component == select) {
+        return brSelect;      
+      }
+    }
+  }
+}
+
+function updateSelect(component) {
+  getBrSelect(component).updateSelect();
+}
 
 window.onload = (function() {
   for (let brSelect of window.document.querySelectorAll('.br-select')) {
