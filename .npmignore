@@ -1,5 +1,6 @@
-src
 docs
+dist/scss
+src/pug
 dist/components
 dist/templates
 .editorconfig

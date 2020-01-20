@@ -109,7 +109,7 @@ module.exports = function(env, argv) {
 													uglify: false,
 													sourceMap: true,
 													name: 'dsgov-components',
-													outputPath: 'js/components/',
+													outputPath: 'js/',
 													fileName: '[name].js',
 													filesToConcat: ['./src/js/**'],
 													attributes: {
@@ -120,7 +120,7 @@ module.exports = function(env, argv) {
             new CopyWebpackPlugin([
                 // Copia os fontes SASS no intuito de permitir reconfiguração e recompilação
                 // de regras pelo usuário deste pacote
-                { context: 'src', from: '**/*.scss'},
+                // { context: 'src', from: '**/*.scss'},
 																
                 // Copia os arquivos de documentação dos componentes
                 // { context: 'src', from: '**/*.md' },
