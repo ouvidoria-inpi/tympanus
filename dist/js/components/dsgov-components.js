@@ -49,63 +49,6 @@ window.onload = (function startBrAccordions() {
   }
 })();
 
-class BRChecklist {
-  constructor(name, component) {
-    this.name = name;
-    this.component = component;
-    this._setBehavior();
-		}
-		
-		
-/*
-teste
-*/
-  _setBehavior() {
-    for (let inputRadio of this.component.querySelectorAll(
-      'input[type="radio"]'
-    )) {
-      inputRadio.addEventListener("click", event => {
-        this._switchSole(event);
-      });
-    }
-    for (let inputCheckbox of this.component.querySelectorAll(
-      'input[type="checkbox"]'
-    )) {
-      inputCheckbox.addEventListener("click", event => {
-        this._switchShared(event);
-      });
-    }
-  }
-
-  _switchSole(event) {
-    for (let field of this.component.querySelectorAll(".item")) {
-      if (field === event.currentTarget.parentNode.parentNode) {
-        field.classList.add("is-active");
-      } else {
-        field.classList.remove("is-active");
-      }
-    }
-  }
-
-  _switchShared(event) {
-    for (let field of this.component.querySelectorAll(".item")) {
-      if (field === event.currentTarget.parentNode.parentNode) {
-        field.classList.toggle("is-active");
-      }
-    }
-  }
-}
-
-
-
-let checklistList = [];
-
-window.onload = (function() {
-  for (let brChecklist of window.document.querySelectorAll(".br-checklist")) {
-    checklistList.push(new BRChecklist("br-checklist", brChecklist));
-  }
-})();
-
 class BRHeader {
 
   constructor(name, component) {
@@ -222,6 +165,63 @@ listHeader = [];
 for (let header of window.document.querySelectorAll('.br-header')) {
   listHeader.push(new BRHeader('br-header', header));
 }
+class BRChecklist {
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    this._setBehavior();
+		}
+		
+		
+/*
+teste
+*/
+  _setBehavior() {
+    for (let inputRadio of this.component.querySelectorAll(
+      'input[type="radio"]'
+    )) {
+      inputRadio.addEventListener("click", event => {
+        this._switchSole(event);
+      });
+    }
+    for (let inputCheckbox of this.component.querySelectorAll(
+      'input[type="checkbox"]'
+    )) {
+      inputCheckbox.addEventListener("click", event => {
+        this._switchShared(event);
+      });
+    }
+  }
+
+  _switchSole(event) {
+    for (let field of this.component.querySelectorAll(".item")) {
+      if (field === event.currentTarget.parentNode.parentNode) {
+        field.classList.add("is-active");
+      } else {
+        field.classList.remove("is-active");
+      }
+    }
+  }
+
+  _switchShared(event) {
+    for (let field of this.component.querySelectorAll(".item")) {
+      if (field === event.currentTarget.parentNode.parentNode) {
+        field.classList.toggle("is-active");
+      }
+    }
+  }
+}
+
+
+
+let checklistList = [];
+
+window.onload = (function() {
+  for (let brChecklist of window.document.querySelectorAll(".br-checklist")) {
+    checklistList.push(new BRChecklist("br-checklist", brChecklist));
+  }
+})();
+
 let listId = 'search-list'
 let listClass = 'search-items'
 let itemActive = 'search-active'
@@ -1027,7 +1027,6 @@ function autocomplete(inp, arr) {
   autocomplete(document.getElementById('search-autocomplete'), countries)
 })()
 
-function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
 class BRSelect {
 
   constructor(name, component) {
@@ -1095,6 +1094,7 @@ class BRSelect {
           for (let [index, option] of Array.from(select.options).entries()) {
             if (option.innerHTML === item.firstChild.innerHTML) {
               select.selectedIndex = index;
+              select.dispatchEvent(new Event('change'));
               item.parentNode.previousSibling.firstChild.innerHTML = item.firstChild.innerHTML;
               item.parentNode.previousSibling.setAttribute('class', 'select-selected');
               item.parentNode.classList.add('select-hide');
@@ -1133,132 +1133,8 @@ window.onload = (function() {
     selectList.push(new BRSelect('br-select', brSelect));
   }
 })();
-const tab = dropbox = document.querySelectorAll('.br-tabs .item');
 
-for (let elem of tab) {
-    elem.addEventListener("click", function() { foi(elem) }, false);;
-
-}
-
-
-function foi(event) {
-    console.log(event);
-    const a = document.querySelectorAll('.upload-input');
-    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
-
-    for (let elem of elements) {
-        elem.parentElement.querySelectorAll(".item")
-        elem.classList.remove("is-active");
-    }
-    event.classList.add("is-active");
-    console.log(event.classList);
-
-
-}
-
-const inputElement = document.querySelector('.upload-input');
-const fileList = document.querySelector('.upload-file-list');
-const header = document.querySelector('.upload-header');
-const info = document.querySelector('.upload-info');
-const size = document.querySelector('.upload-size');
-const sizeNum = document.querySelector('.upload-size-num');
-const sizeBytes = document.querySelector('.upload-size-bytes');
-var fileArray = Array.from(inputElement.files);
-
-
-let dropbox;
-
-dropbox = document.querySelector('.br-upload');
-dropbox.addEventListener("dragenter", drag, false);
-dropbox.addEventListener("dragover", drag, false);
-dropbox.addEventListener("drop", drop, false);
-
-
-inputElement.addEventListener("change", handleFiles, false);
-
-function handleFiles(files) {
-
-   
-  newFiles = !files.length ? Array.from(inputElement.files) : Array.from(files);
-  fileArray = fileArray.concat(newFiles);
-
-  info.style.display = 'none';
-  header.innerHTML = 'Arquivos Selecionados';
-  updateFileList();
-}
-
-function updateFileList () {
-
-  if (!fileArray.length) {
-    fileList.innerHTML = "";
-    info.style.display = '';
-    header.innerHTML = 'Arraste e solte o(s) arquivo(s) do seu computador';
-  } else {
-    fileList.innerHTML = "";
-    const list = document.createElement("ul");
-    fileList.appendChild(list);
-    for (let i = 0; i < fileArray.length; i++) {
-      const li = document.createElement("li");
-      list.appendChild(li);
-      
-      const info = document.createElement("span");
-      info.innerHTML = fileArray[i].name ;
-      li.appendChild(info);
-      
-      const del = document.createElement("div");
-      del.addEventListener("click", function(){removeFile(i, event)}, false);
-      del.className = 'del';
-      const img = document.createElement("i");
-      img.className = 'fa fa-times';
-      del.appendChild(img);
-      li.appendChild(del);
-    }
-  }
-  updateSize();
-}
-
-function removeFile(index, e) {
-
-  e.stopPropagation();
-  e.preventDefault();
-  fileArray.splice(index,1);
-  updateFileList();
-}
-
-function updateSize() {
-
-  let nBytes = 0,
-      oFiles = fileArray, 
-      nFiles = oFiles.length;
-  for (let nFileId = 0; nFileId < nFiles; nFileId++) {
-    nBytes += oFiles[nFileId].size;
-  }
-  
-  let sOutput = nBytes + " bytes";
-  for (let aMultiples = ["KB", "MB", "GB", "TB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] ;
-  }
-
-  size.style.visibility = nFiles>0 ? "visible" : "hidden";
-  sizeNum.innerHTML = nFiles;
-  sizeBytes.innerHTML = sOutput;
-}
-
-function drag(e) {
-  e.stopPropagation();
-  e.preventDefault();
-}
-
-function drop(e) {
-  e.stopPropagation();
-  e.preventDefault();
-
-  const dt = e.dataTransfer;
-  const files = dt.files;
-
-  handleFiles(files);
-}
-
+function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
 const brTables = document.querySelectorAll(".br-table");
 const active = "is-active";
 
@@ -1409,4 +1285,130 @@ for (let brTable of brTables) {
 //       thElm = undefined;
 //   });
 // })();
+
+const tab = dropbox = document.querySelectorAll('.br-tabs .item');
+
+for (let elem of tab) {
+    elem.addEventListener("click", function() { foi(elem) }, false);;
+
+}
+
+
+function foi(event) {
+    console.log(event);
+    const a = document.querySelectorAll('.upload-input');
+    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
+
+    for (let elem of elements) {
+        elem.parentElement.querySelectorAll(".item")
+        elem.classList.remove("is-active");
+    }
+    event.classList.add("is-active");
+    console.log(event.classList);
+
+
+}
+
+const inputElement = document.querySelector('.upload-input');
+const fileList = document.querySelector('.upload-file-list');
+const header = document.querySelector('.upload-header');
+const info = document.querySelector('.upload-info');
+const size = document.querySelector('.upload-size');
+const sizeNum = document.querySelector('.upload-size-num');
+const sizeBytes = document.querySelector('.upload-size-bytes');
+var fileArray = Array.from(inputElement.files);
+
+
+let dropbox;
+
+dropbox = document.querySelector('.br-upload');
+dropbox.addEventListener("dragenter", drag, false);
+dropbox.addEventListener("dragover", drag, false);
+dropbox.addEventListener("drop", drop, false);
+
+
+inputElement.addEventListener("change", handleFiles, false);
+
+function handleFiles(files) {
+
+   
+  newFiles = !files.length ? Array.from(inputElement.files) : Array.from(files);
+  fileArray = fileArray.concat(newFiles);
+
+  info.style.display = 'none';
+  header.innerHTML = 'Arquivos Selecionados';
+  updateFileList();
+}
+
+function updateFileList () {
+
+  if (!fileArray.length) {
+    fileList.innerHTML = "";
+    info.style.display = '';
+    header.innerHTML = 'Arraste e solte o(s) arquivo(s) do seu computador';
+  } else {
+    fileList.innerHTML = "";
+    const list = document.createElement("ul");
+    fileList.appendChild(list);
+    for (let i = 0; i < fileArray.length; i++) {
+      const li = document.createElement("li");
+      list.appendChild(li);
+      
+      const info = document.createElement("span");
+      info.innerHTML = fileArray[i].name ;
+      li.appendChild(info);
+      
+      const del = document.createElement("div");
+      del.addEventListener("click", function(){removeFile(i, event)}, false);
+      del.className = 'del';
+      const img = document.createElement("i");
+      img.className = 'fa fa-times';
+      del.appendChild(img);
+      li.appendChild(del);
+    }
+  }
+  updateSize();
+}
+
+function removeFile(index, e) {
+
+  e.stopPropagation();
+  e.preventDefault();
+  fileArray.splice(index,1);
+  updateFileList();
+}
+
+function updateSize() {
+
+  let nBytes = 0,
+      oFiles = fileArray, 
+      nFiles = oFiles.length;
+  for (let nFileId = 0; nFileId < nFiles; nFileId++) {
+    nBytes += oFiles[nFileId].size;
+  }
+  
+  let sOutput = nBytes + " bytes";
+  for (let aMultiples = ["KB", "MB", "GB", "TB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
+    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] ;
+  }
+
+  size.style.visibility = nFiles>0 ? "visible" : "hidden";
+  sizeNum.innerHTML = nFiles;
+  sizeBytes.innerHTML = sOutput;
+}
+
+function drag(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+function drop(e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  const dt = e.dataTransfer;
+  const files = dt.files;
+
+  handleFiles(files);
+}
 //# sourceMappingURL=dsgov-components.js.map

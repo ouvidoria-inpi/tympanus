@@ -65,6 +65,7 @@ class BRSelect {
           for (let [index, option] of Array.from(select.options).entries()) {
             if (option.innerHTML === item.firstChild.innerHTML) {
               select.selectedIndex = index;
+              select.dispatchEvent(new Event('change'));
               item.parentNode.previousSibling.firstChild.innerHTML = item.firstChild.innerHTML;
               item.parentNode.previousSibling.setAttribute('class', 'select-selected');
               item.parentNode.classList.add('select-hide');
