@@ -1,24 +1,77 @@
 const brTables = document.querySelectorAll(".br-table");
+const brTablesHeadersClass = "headers";
 const active = "is-active";
+let brTablesCount = 0;
+
+function toogleSearch(container, trigger, close) {
+  if (trigger) {
+    trigger.addEventListener("click", function() {
+      container.classList.add(active);
+    });
+  }
+
+  if (close) {
+    close.addEventListener("click", function() {
+      container.classList.remove(active);
+    });
+  }
+}
+
+function setSyncScroll(element) {
+  element.classList.add("syncscroll");
+  element.setAttribute("name", "table-" + brTablesCount);
+}
+
+function setHeaderWidth(parent, element) {
+  let cloneNode = parent.querySelector(`.${brTablesHeadersClass}`);
+  for (let i = 0; i < element.children.length; i++) {
+    elementWidth = element.children[i].offsetWidth;
+    cloneElementWidth = cloneNode.children[0].children[i];
+    cloneElementWidth.style.flex = `1 0 ${elementWidth}px`;
+  }
+}
+
+function cloneHeader(parent, element) {
+  let clone = element.cloneNode(true);
+  let headersTag = document.createElement("div");
+  let scrollerTag = document.createElement("div");
+
+  setSyncScroll(scrollerTag);
+  scrollerTag.classList.add("scroller");
+
+  for (let i = 0; i < element.children.length; i++) {
+    let elementNode = clone.children[i].innerHTML;
+    let cloneElementNode = document.createElement("div");
+
+    cloneElementNode.classList.add("item");
+    cloneElementNode.innerHTML = elementNode;
+
+    scrollerTag.appendChild(cloneElementNode);
+  }
+
+  headersTag.classList.add(brTablesHeadersClass);
+  headersTag.appendChild(scrollerTag);
+
+  parent.appendChild(headersTag);
+}
 
 for (let brTable of brTables) {
   let searchBar = brTable.querySelector(".search-bar");
   let searchTrigger = brTable.querySelector("#search-trigger");
   let searchClose = brTable.querySelector("#search-close");
+  let responsive = brTable.querySelector(".responsive");
+  let headers = brTable.querySelector("table thead tr");
 
-  if (searchTrigger) {
-    searchTrigger.addEventListener("click", function() {
-      searchBar.classList.add(active);
-    });
-    console.log(searchTrigger);
-  }
+  brTablesCount++;
 
-  if (searchClose) {
-    searchClose.addEventListener("click", function() {
-      searchBar.classList.remove(active);
-    });
-    console.log(searchClose);
-  }
+  setSyncScroll(responsive);
+  cloneHeader(brTable, headers);
+  setHeaderWidth(brTable, headers);
+  toogleSearch(searchBar, searchTrigger, searchClose);
+
+  window.addEventListener("resize", function() {
+    setHeaderWidth(brTable, headers);
+  });
 }
 
 // function checkBox() {
