@@ -10,11 +10,11 @@ append scripts
   
 
 append content
-  //- p.h1 Refatoração
-  p.h2.mb-3 Datatable
-  +datatable
-  p.h2.mb-3.mt-5 Tabela simples
+  p.h2.mb-3 Tabela simples
   +table
+  p.h2.mb-3.mt-5 Datatable
+  +table(datatable=true, columns=10)
+  +table.mt-5(datatable=true, checkbox=true, title='Datatable com checkbox', rows=10, columns=8)
   //- hr
   //- .br-table
   //-   .row.selecao.is-invisible.col-sm-12.col-md-12.col-lg-12
