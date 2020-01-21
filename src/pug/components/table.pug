@@ -1,14 +1,12 @@
-mixin datatable
-  +table(datatable=true, columns=10 rows=10)
-
-mixin table(datatable=false, checkbox=false, columns=4, rows=5)
+mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=5)
+  - let datatableClass = attributes.datatable ? "is-datatable" : ""
   - let column = 1
   - let row = 2
-  .br-table(class=attributes.datatable ? "is-datatable" : "")
+  .br-table(class=attributes.class ? attributes.class + " " + datatableClass : datatableClass)
     if (attributes.datatable)
       .header
         .top-bar
-          .title Título da Tabela
+          .title=attributes.title ? attributes.title : title
           .search-button
             +button#search-trigger.is-circle.is-tertiary
               i.fas.fa-search
@@ -42,7 +40,7 @@ mixin table(datatable=false, checkbox=false, columns=4, rows=5)
                 if (column === 1)
                   if (attributes.checkbox)
                     td
-                      +checkbox("")(id=`line-${column}`, class="td-checkbox")
+                      +checkbox("")(id=`line-${row}`, class="td-checkbox")
                   td(data-th=`Coluna ${column}`)=random
                 else
                   td(data-th=`Coluna ${column}`)=random
