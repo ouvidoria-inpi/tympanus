@@ -49,6 +49,63 @@ window.onload = (function startBrAccordions() {
   }
 })();
 
+class BRChecklist {
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    this._setBehavior();
+		}
+		
+		
+/*
+teste
+*/
+  _setBehavior() {
+    for (let inputRadio of this.component.querySelectorAll(
+      'input[type="radio"]'
+    )) {
+      inputRadio.addEventListener("click", event => {
+        this._switchSole(event);
+      });
+    }
+    for (let inputCheckbox of this.component.querySelectorAll(
+      'input[type="checkbox"]'
+    )) {
+      inputCheckbox.addEventListener("click", event => {
+        this._switchShared(event);
+      });
+    }
+  }
+
+  _switchSole(event) {
+    for (let field of this.component.querySelectorAll(".item")) {
+      if (field === event.currentTarget.parentNode.parentNode) {
+        field.classList.add("is-active");
+      } else {
+        field.classList.remove("is-active");
+      }
+    }
+  }
+
+  _switchShared(event) {
+    for (let field of this.component.querySelectorAll(".item")) {
+      if (field === event.currentTarget.parentNode.parentNode) {
+        field.classList.toggle("is-active");
+      }
+    }
+  }
+}
+
+
+
+let checklistList = [];
+
+window.onload = (function() {
+  for (let brChecklist of window.document.querySelectorAll(".br-checklist")) {
+    checklistList.push(new BRChecklist("br-checklist", brChecklist));
+  }
+})();
+
 class BRHeader {
 
   constructor(name, component) {
@@ -165,63 +222,6 @@ listHeader = [];
 for (let header of window.document.querySelectorAll('.br-header')) {
   listHeader.push(new BRHeader('br-header', header));
 }
-class BRChecklist {
-  constructor(name, component) {
-    this.name = name;
-    this.component = component;
-    this._setBehavior();
-		}
-		
-		
-/*
-teste
-*/
-  _setBehavior() {
-    for (let inputRadio of this.component.querySelectorAll(
-      'input[type="radio"]'
-    )) {
-      inputRadio.addEventListener("click", event => {
-        this._switchSole(event);
-      });
-    }
-    for (let inputCheckbox of this.component.querySelectorAll(
-      'input[type="checkbox"]'
-    )) {
-      inputCheckbox.addEventListener("click", event => {
-        this._switchShared(event);
-      });
-    }
-  }
-
-  _switchSole(event) {
-    for (let field of this.component.querySelectorAll(".item")) {
-      if (field === event.currentTarget.parentNode.parentNode) {
-        field.classList.add("is-active");
-      } else {
-        field.classList.remove("is-active");
-      }
-    }
-  }
-
-  _switchShared(event) {
-    for (let field of this.component.querySelectorAll(".item")) {
-      if (field === event.currentTarget.parentNode.parentNode) {
-        field.classList.toggle("is-active");
-      }
-    }
-  }
-}
-
-
-
-let checklistList = [];
-
-window.onload = (function() {
-  for (let brChecklist of window.document.querySelectorAll(".br-checklist")) {
-    checklistList.push(new BRChecklist("br-checklist", brChecklist));
-  }
-})();
-
 let listId = 'search-list'
 let listClass = 'search-items'
 let itemActive = 'search-active'
@@ -1134,28 +1134,217 @@ window.onload = (function() {
   }
 })();
 
-function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
+/**
+ * @fileoverview syncscroll - scroll several areas simultaniously
+ * @version 0.0.3
+ *
+ * @license MIT, see http://github.com/asvd/intence
+ * @copyright 2015 asvd <heliosframework@gmail.com>
+ */
+
+(function(root, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["exports"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(exports);
+  } else {
+    factory((root.syncscroll = {}));
+  }
+})(this, function(exports) {
+  var Width = "Width";
+  var Height = "Height";
+  var Top = "Top";
+  var Left = "Left";
+  var scroll = "scroll";
+  var client = "client";
+  var EventListener = "EventListener";
+  var addEventListener = "add" + EventListener;
+  var length = "length";
+  var Math_round = Math.round;
+
+  var names = {};
+
+  var reset = function() {
+    var elems = document.getElementsByClassName("sync" + scroll);
+
+    // clearing existing listeners
+    var i, j, el, found, name;
+    for (name in names) {
+      if (names.hasOwnProperty(name)) {
+        for (i = 0; i < names[name][length]; i++) {
+          names[name][i]["remove" + EventListener](
+            scroll,
+            names[name][i].syn,
+            0
+          );
+        }
+      }
+    }
+
+    // setting-up the new listeners
+    for (i = 0; i < elems[length]; ) {
+      found = j = 0;
+      el = elems[i++];
+      if (!(name = el.getAttribute("name"))) {
+        // name attribute is not set
+        continue;
+      }
+
+      el = el[scroll + "er"] || el; // needed for intence
+
+      // searching for existing entry in array of names;
+      // searching for the element in that entry
+      for (; j < (names[name] = names[name] || [])[length]; ) {
+        found |= names[name][j++] == el;
+      }
+
+      if (!found) {
+        names[name].push(el);
+      }
+
+      el.eX = el.eY = 0;
+
+      (function(el, name) {
+        el[addEventListener](
+          scroll,
+          (el.syn = function() {
+            var elems = names[name];
+
+            var scrollX = el[scroll + Left];
+            var scrollY = el[scroll + Top];
+
+            var xRate = scrollX / (el[scroll + Width] - el[client + Width]);
+            var yRate = scrollY / (el[scroll + Height] - el[client + Height]);
+
+            var updateX = scrollX != el.eX;
+            var updateY = scrollY != el.eY;
+
+            var otherEl,
+              i = 0;
+
+            el.eX = scrollX;
+            el.eY = scrollY;
+
+            for (; i < elems[length]; ) {
+              otherEl = elems[i++];
+              if (otherEl != el) {
+                if (
+                  updateX &&
+                  Math_round(
+                    otherEl[scroll + Left] -
+                      (scrollX = otherEl.eX = Math_round(
+                        xRate *
+                          (otherEl[scroll + Width] - otherEl[client + Width])
+                      ))
+                  )
+                ) {
+                  otherEl[scroll + Left] = scrollX;
+                }
+
+                if (
+                  updateY &&
+                  Math_round(
+                    otherEl[scroll + Top] -
+                      (scrollY = otherEl.eY = Math_round(
+                        yRate *
+                          (otherEl[scroll + Height] - otherEl[client + Height])
+                      ))
+                  )
+                ) {
+                  otherEl[scroll + Top] = scrollY;
+                }
+              }
+            }
+          }),
+          0
+        );
+      })(el, name);
+    }
+  };
+
+  if (document.readyState == "complete") {
+    reset();
+  } else {
+    window[addEventListener]("load", reset, 0);
+  }
+
+  exports.reset = reset;
+});
+
 const brTables = document.querySelectorAll(".br-table");
+const brTablesHeadersClass = "headers";
 const active = "is-active";
+let brTablesCount = 0;
+
+function toogleSearch(container, trigger, close) {
+  if (trigger) {
+    trigger.addEventListener("click", function() {
+      container.classList.add(active);
+    });
+  }
+
+  if (close) {
+    close.addEventListener("click", function() {
+      container.classList.remove(active);
+    });
+  }
+}
+
+function setSyncScroll(element) {
+  element.classList.add("syncscroll");
+  element.setAttribute("name", "table-" + brTablesCount);
+}
+
+function setHeaderWidth(parent, element) {
+  let cloneNode = parent.querySelector(`.${brTablesHeadersClass}`);
+  for (let i = 0; i < element.children.length; i++) {
+    elementWidth = element.children[i].offsetWidth;
+    cloneElementWidth = cloneNode.children[0].children[i];
+    cloneElementWidth.style.flex = `1 0 ${elementWidth}px`;
+  }
+}
+
+function cloneHeader(parent, element) {
+  let clone = element.cloneNode(true);
+  let headersTag = document.createElement("div");
+  let scrollerTag = document.createElement("div");
+
+  setSyncScroll(scrollerTag);
+  scrollerTag.classList.add("scroller");
+
+  for (let i = 0; i < element.children.length; i++) {
+    let elementNode = clone.children[i].innerHTML;
+    let cloneElementNode = document.createElement("div");
+
+    cloneElementNode.classList.add("item");
+    cloneElementNode.innerHTML = elementNode;
+
+    scrollerTag.appendChild(cloneElementNode);
+  }
+
+  headersTag.classList.add(brTablesHeadersClass);
+  headersTag.appendChild(scrollerTag);
+
+  parent.appendChild(headersTag);
+}
 
 for (let brTable of brTables) {
   let searchBar = brTable.querySelector(".search-bar");
   let searchTrigger = brTable.querySelector("#search-trigger");
   let searchClose = brTable.querySelector("#search-close");
+  let responsive = brTable.querySelector(".responsive");
+  let headers = brTable.querySelector("table thead tr");
 
-  if (searchTrigger) {
-    searchTrigger.addEventListener("click", function() {
-      searchBar.classList.add(active);
-    });
-    console.log(searchTrigger);
-  }
+  brTablesCount++;
 
-  if (searchClose) {
-    searchClose.addEventListener("click", function() {
-      searchBar.classList.remove(active);
-    });
-    console.log(searchClose);
-  }
+  setSyncScroll(responsive);
+  cloneHeader(brTable, headers);
+  setHeaderWidth(brTable, headers);
+  toogleSearch(searchBar, searchTrigger, searchClose);
+
+  window.addEventListener("resize", function() {
+    setHeaderWidth(brTable, headers);
+  });
 }
 
 // function checkBox() {
@@ -1286,6 +1475,7 @@ for (let brTable of brTables) {
 //   });
 // })();
 
+function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
 const tab = dropbox = document.querySelectorAll('.br-tabs .item');
 
 for (let elem of tab) {
