@@ -1,7 +1,7 @@
 mixin datatable
-  +table(datatable=true, rows=15)
+  +table(datatable=true, columns=10 rows=10)
 
-mixin table(datatable=false, checkbox=false, columns=5, rows=5)
+mixin table(datatable=false, checkbox=false, columns=4, rows=5)
   - let column = 1
   - let row = 2
   .br-table(class=attributes.datatable ? "is-datatable" : "")
@@ -23,7 +23,7 @@ mixin table(datatable=false, checkbox=false, columns=5, rows=5)
       table
         thead
           tr
-            while (column <= columns)
+            while (column <= (attributes.columns ? attributes.columns : columns))
               if (column === 1)
                 if (attributes.checkbox)
                   th(style="width: 54px;")
@@ -36,7 +36,7 @@ mixin table(datatable=false, checkbox=false, columns=5, rows=5)
           while (row <= (attributes.rows ? attributes.rows : rows))
             tr
               - column = 1
-              while (column <= columns)
+              while (column <= (attributes.columns ? attributes.columns : columns))
                 - let random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
                 - random = random.replace(/(\w{8})/g, '$1 ').replace(/(^\s+|\s+$)/,'')
                 if (column === 1)
