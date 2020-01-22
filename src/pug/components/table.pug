@@ -1,7 +1,7 @@
 mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=5)
   - let datatableClass = attributes.datatable ? "is-datatable" : ""
   - let column = 1
-  - let row = 2
+  - let row = 1
   .br-table(class=attributes.class ? attributes.class + " " + datatableClass : datatableClass)
     if (attributes.datatable)
       .header
@@ -40,7 +40,7 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
                 if (column === 1)
                   if (attributes.checkbox)
                     td
-                      +checkbox("")(id=`line-${row}`, class="td-checkbox")
+                      +checkbox("")(id=`line-${row}`)
                   td(data-th=`Coluna ${column}`)=random
                 else
                   td(data-th=`Coluna ${column}`)=random
