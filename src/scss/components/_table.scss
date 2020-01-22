@@ -1,5 +1,7 @@
-/*!
- * table - 0.3 */
+// TODO: Efeito resize de altura da linha - criar estilos e aplicar a variável $column-compact
+// TODO: menu compacto e barrinha de opções
+// TODO: barra de filtros
+// TODO: barra de itens selecionados
 
 $column-height: 56px;
 $column-compact: 24px;
@@ -58,6 +60,7 @@ $column-gap: 6px;
     .pagination {
       align-items: center;
       display: flex;
+      flex-grow: 1;
       justify-content: space-between;
       .selectors {
         align-items: center;
@@ -204,6 +207,7 @@ $column-gap: 6px;
         }
       }
       .pagination {
+        flex-grow: 0;
         .divider {
           margin: 0 8px 0 16px;
         }
@@ -287,6 +291,13 @@ $column-gap: 6px;
         thead {
           th {
             top: $column-height;
+          }
+        }
+        tbody {
+          tr {
+            &.hover {
+              background-color: $color-primary-pastel-1;
+            }
           }
         }
       }

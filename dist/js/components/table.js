@@ -1,7 +1,25 @@
+// ! Refatorações:
+// TODO: Check all - refatorar código do ed
+// TODO: Comportamento de resize de coluna - refatorar código do ed
+// TODO: Efeito resize de altura da linha - refatorar código do ed
+// TODO: Cards internos de colunas - refatorar código do ed
+
+// ! Pendências:
+// TODO: Barra superior - itens de ação e menu flutuante, tags de filtros, itens selecionados
+// TODO: Filtragem de cabeçalhos
+
 const brTables = document.querySelectorAll(".br-table");
 const brTablesHeadersClass = "headers";
 const active = "is-active";
 let brTablesCount = 0;
+
+function hoverRow(elements) {
+  for (let element of elements) {
+    if (element.children[0].children[0]) {
+      console.log(element);
+    }
+  }
+}
 
 function toogleSearch(container, trigger, close) {
   if (trigger) {
@@ -47,6 +65,16 @@ function cloneHeader(parent, element) {
     cloneElementNode.innerHTML = elementNode;
 
     scrollerTag.appendChild(cloneElementNode);
+
+    if (cloneElementNode.children[0]) {
+      if (cloneElementNode.children[0].classList.contains("br-checkbox")) {
+        let cloneCheckbox = cloneElementNode.children[0];
+        cloneCheckbox.querySelector("input").id = "headers-check";
+        cloneCheckbox
+          .querySelector("label")
+          .setAttribute("for", "headers-check");
+      }
+    }
   }
 
   headersTag.classList.add(brTablesHeadersClass);
@@ -61,6 +89,7 @@ for (let brTable of brTables) {
   let searchClose = brTable.querySelector("#search-close");
   let responsive = brTable.querySelector(".responsive");
   let headers = brTable.querySelector("table thead tr");
+  let rows = brTable.querySelectorAll("table tbody tr");
 
   brTablesCount++;
 
@@ -68,6 +97,7 @@ for (let brTable of brTables) {
   cloneHeader(brTable, headers);
   setHeaderWidth(brTable, headers);
   toogleSearch(searchBar, searchTrigger, searchClose);
+  hoverRow(rows);
 
   window.addEventListener("resize", function() {
     setHeaderWidth(brTable, headers);
