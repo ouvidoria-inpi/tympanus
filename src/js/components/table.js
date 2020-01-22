@@ -85,8 +85,8 @@ function cloneHeader(parent, element) {
 
 for (let brTable of brTables) {
   let searchBar = brTable.querySelector(".search-bar");
-  let searchTrigger = brTable.querySelector("#search-trigger");
-  let searchClose = brTable.querySelector("#search-close");
+  let searchTrigger = brTable.querySelector(".search-trigger");
+  let searchClose = brTable.querySelector(".search-close");
   let responsive = brTable.querySelector(".responsive");
   let headers = brTable.querySelector("table thead tr");
   let rows = brTable.querySelectorAll("table tbody tr");

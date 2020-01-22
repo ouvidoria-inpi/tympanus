@@ -12347,6 +12347,8 @@ fieldset legend,
     .br-table .bottom-bar .items {
       align-items: center;
       display: none; }
+      .br-table .bottom-bar .items label {
+        display: none; }
     .br-table .bottom-bar .pagination {
       align-items: center;
       display: flex;
@@ -12355,6 +12357,8 @@ fieldset legend,
       .br-table .bottom-bar .pagination .selectors {
         align-items: center;
         display: flex; }
+        .br-table .bottom-bar .pagination .selectors label {
+          display: none; }
       .br-table .bottom-bar .pagination .arrows .br-button {
         background-color: transparent;
         border-color: transparent; }
@@ -12375,7 +12379,7 @@ fieldset legend,
     top: 100%;
     transition: top 150ms, opacity 100ms;
     z-index: -1; }
-    .br-table .search-bar #search-close {
+    .br-table .search-bar .search-close {
       background-color: transparent;
       border-color: transparent;
       color: #fff; }

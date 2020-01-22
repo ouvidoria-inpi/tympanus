@@ -2,20 +2,23 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
   - let datatableClass = attributes.datatable ? "is-datatable" : ""
   - let column = 1
   - let row = 1
-  .br-table(class=attributes.class ? attributes.class + " " + datatableClass : datatableClass)
+  .br-table(
+    class=attributes.class ? attributes.class + " " + datatableClass : datatableClass
+    id=attributes.id
+    )
     if (attributes.datatable)
       .header
         .top-bar
           .title=attributes.title ? attributes.title : title
           .search-button
-            +button#search-trigger.is-circle.is-tertiary
+            +button.search-trigger.is-circle.is-tertiary
               i.fas.fa-search
         .search-bar
-          +input("Buscar")#table-search.is-medium.has-icon(placeholder="Buscar na tabela")
+          +input("Buscar").search-input.is-medium.has-icon(placeholder="Buscar na tabela", id=attributes.id + '-search-input')
             button.icon(type='button')
               span.sr-only Buscar
               i.fas.fa-search
-          +button#search-close.is-circle.ml-1
+          +button.search-close.is-circle.ml-1
             i.fas.fa-times
     .responsive
       table
@@ -24,11 +27,11 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
             while (column <= (attributes.columns ? attributes.columns : columns))
               if (column === 1)
                 if (attributes.checkbox)
-                  th(style="width: 54px;")
+                  th(scope="col" style="width: 54px;")
                     +checkbox("")#check-all
-                th=`Coluna ${column}`
+                th(scope="col")=`Coluna ${column}`
               else
-                th=`Coluna ${column}`
+                th(scope="col")=`Coluna ${column}`
               - column++
         tbody
           while (row <= (attributes.rows ? attributes.rows : rows))
@@ -51,20 +54,18 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
         .bottom-bar
           .items
             span Exibir:
-            .br-select.is-small
-              select(name='select')
-                option(value='10') 10
-                option(value='15') 15
-                option(value='20') 20
+            +select("").is-small(id=attributes.id + '-items')
+              +option("10", "10")
+              +option("15", "15")
+              +option("20", "20")
             span.divider
             span 1-10 de 50 itens
           .pagination
             .selectors
-              .br-select.is-small
-                select(name='select')
-                  option(value='1') 1
-                  option(value='2') 2
-                  option(value='3') 3
+              +select("").is-small(id=attributes.id + '-pagination')
+                +option("1", "1")
+                +option("2", "2")
+                +option("3", "3")
               span de 3 páginas
               span.divider
             .arrows
