@@ -1,142 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Acesse sua conta</title>
-  <!-- Fonte Rawline-->
-  <link rel="stylesheet"
-    href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/fonts/rawline/css/rawline.css">
-  <!-- Fonte Raleway-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
-  <!-- Design System de Governo-->
-  <link rel="stylesheet" href="../css/dsgov.css">
-  <!-- Fontawesome-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
-</head>
-
-<body class="template-authentication">
-  <header class="page-header" id="header">
-    <!-- Atalhos para conteúdo-->
-    <ul class="skip-menu" id="skip-menu">
-      <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
-      <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
-      <li><a accesskey="3" href="#footer">Ir para o rodapé</a></li>
-    </ul>
-    <!-- Barra de governo-->
-    <div id="barra-brasil"></div>
-  </header>
-  <div class="page-wrapper">
-    <div class="left-side">
-      <div class="page-content">
-        <!-- Logo--><a class="logo" id="left-logo" href=""><img class="marca"
-            src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/govbr.svg"
-            alt="Governo do Brasil"></a>
-        <!-- Menu de navegação-->
-        <nav>
-          <ul class="br-tabs is-vertical" id="navigation">
-            <li class="item"><a href="javascript:void(0)"><span class="name">Entrar com CPF</span></a></li>
-            <li class="item is-active"><a href="javascript:void(0)"><img class="icon"
-                  src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/icons/certificado-digital.png"
-                  alt="Certificado Digital"><span class="name">Entrar com Certificado Digital</span></a></li>
-            <li class="item"><a href="javascript:void(0)"><img class="icon"
-                  src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/icons/neoid.png"
-                  alt="NeoID"><span class="name">Entrar com NeoID</span></a></li>
-          </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acesse sua conta</title>
+    <!-- Fonte Rawline-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/fonts/rawline/css/rawline.css">
+    <!-- Fonte Raleway-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
+    <!-- Design System de Governo-->
+    <link rel="stylesheet" href="../css/dsgov.css">
+    <!-- Fontawesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  </head>
+  <body class="template-authentication">
+    <header class="page-header" id="header">
+      <!-- Atalhos para conteúdo-->
+      <ul class="skip-menu" id="skip-menu">
+        <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
+        <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
+        <li><a accesskey="3" href="#footer">Ir para o rodapé</a></li>
+      </ul>
+      <!-- Barra de governo-->
+      <div id="barra-brasil"></div>
+    </header>
+    <div class="page-wrapper">
+      <div class="left-side">
+        <div class="page-content">
+          <!-- Logo--><a class="logo" id="left-logo" href=""><img class="marca" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/govbr.svg" alt="Governo do Brasil"></a>
+          <!-- Menu de navegação-->
+          <nav>
+            <ul class="br-tabs is-vertical" id="navigation">
+              <li class="item"><a href="javascript:void(0)"><span class="name">Entrar com CPF</span></a></li>
+              <li class="item is-active"><a href="javascript:void(0)"><img class="icon" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/icons/certificado-digital.png" alt="Certificado Digital"><span class="name">Entrar com Certificado Digital</span></a></li>
+              <li class="item"><a href="javascript:void(0)"><img class="icon" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/icons/neoid.png" alt="NeoID"><span class="name">Entrar com NeoID</span></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-    <div class="right-side">
-      <div class="page-content">
-        <!-- Cabeçalho da página-->
-        <header>
-          <!-- Acessibilidade-->
-          <div class="accessibility"><a id="contrast" href="" accesskey="6"><span class="icon"><i
-                  class="fas fa-adjust"></i></span><span><span class="d-none d-sm-inline"> Alto
-                  Contraste</span></span></a></div>
-        </header>
-        <!-- Conteúdo principal-->
-        <main class="mb-12" id="content">
-          <h1 class="main-title">Acesse sua conta</h1>
-          <div class="row">
-            <div class="col-sm-10 col-md-8">
-              <!-- Informar CPF-->
-              <div class="br-input">
-                <label for="cpf">CPF</label>
-                <input id="cpf" type="text" placeholder="Ex: 123.456.789-99">
-              </div>
-              <!-- Informar a senha-->
-              <div class="br-input has-icon mt-3">
-                <label for="password">Senha</label>
-                <input id="password" type="password" placeholder="Digite sua senha de 8 a 11 dígitos">
-                <button class="icon" type="button" onclick="toggleInputAction(this)"><span class="sr-only">Mostrar
-                    senha</span><i class="fas fa-eye"></i></button>
-              </div>
-              <!-- Facilidades de senha-->
-              <div class="row mt-8 mt-sm-3">
-                <div class="col-auto"><a href="">Esqueceu a Senha?</a></div>
-                <div class="col-auto ml-auto">
-                  <div class="br-checkbox">
-                    <input id="manter-logado" type="checkbox">
-                    <label for="manter-logado">Manter logado?</label>
+      <div class="right-side">
+        <div class="page-content">
+          <!-- Cabeçalho da página-->
+          <header>
+            <!-- Acessibilidade-->
+            <div class="accessibility"><a id="contrast" href="" accesskey="6"><span class="icon"><i class="fas fa-adjust"></i></span><span><span class="d-none d-sm-inline"> Alto Contraste</span></span></a></div>
+          </header>
+          <!-- Conteúdo principal-->
+          <main class="mb-12" id="content">
+            <h1 class="main-title">Acesse sua conta</h1>
+            <div class="row">
+              <div class="col-sm-10 col-md-8">
+                <!-- Informar CPF-->
+                <div class="br-input">
+                  <label for="cpf">CPF</label>
+                  <input id="cpf" type="text" placeholder="Ex: 123.456.789-99">
+                </div>
+                <!-- Informar a senha-->
+                <div class="br-input has-icon mt-3">
+                  <label for="password">Senha</label>
+                  <input id="password" type="password" placeholder="Digite sua senha de 8 a 11 dígitos">
+                  <button class="icon" type="button" onclick="toggleInputAction(this)"><span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i></button>
+                </div>
+                <!-- Facilidades de senha-->
+                <div class="row mt-8 mt-sm-3">
+                  <div class="col-auto"><a href="">Esqueceu a Senha?</a></div>
+                  <div class="col-auto ml-auto">
+                    <div class="br-checkbox">
+                      <input id="manter-logado" type="checkbox">
+                      <label for="manter-logado">Manter logado?</label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- Botões de ação-->
-              <div class="d-flex flex-wrap flex-row-reverse justify-content-center mt-6 mt-sm-10">
-                <button class="br-button is-primary" type="button">Entrar
-                </button>
-                <button class="br-button is-secondary mt-3 mt-sm-0 mr-sm-3" type="button">Cadastrar
-                </button>
-              </div>
-              <!-- Outras opções de login em smartphones-->
-              <div class="d-sm-none mt-12">
-                <div class="row">
-                  <div class="col"><a class="d-inline-flex" href="">
-                      <div class="icon"><img
-                          src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/icons/certificado-digital.png"
-                          alt="Certificado Digital"></div>
-                      <div class="name">Entrar com Certificado Digital</div>
-                    </a></div>
-                  <div class="col"><a class="d-inline-flex" href="">
-                      <div class="icon"><img
-                          src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/icons/neoid.png"
-                          alt="NeoID"></div>
-                      <div class="name">Entrar com NeoID</div>
-                    </a></div>
-                </div>
-              </div>
-              <!-- Outras opções de login-->
-              <aside class="mt-3 mt-sm-10">
-                <div class="divider"><span class="content">ou</span></div>
-                <div class="text-center">
-                  <button class="br-button is-circle is-large border-facebook bg-facebook text-white" type="button"><i
-                      class="fab fa-facebook-f"></i>
+                <!-- Botões de ação-->
+                <div class="d-flex flex-wrap flex-row-reverse justify-content-center mt-6 mt-sm-10">
+                  <button class="br-button is-primary" type="button">Entrar
                   </button>
-                  <button class="br-button is-circle is-large border-twitter bg-twitter text-white ml-1"
-                    type="button"><i class="fab fa-twitter"></i>
-                  </button>
-                  <button class="br-button is-circle is-large border-google-plus bg-google-plus text-white ml-1"
-                    type="button"><i class="fab fa-google-plus-g"></i>
+                  <button class="br-button is-secondary mt-3 mt-sm-0 mr-sm-3" type="button">Cadastrar
                   </button>
                 </div>
-              </aside>
+                <!-- Outras opções de login em smartphones-->
+                <div class="d-sm-none mt-12">
+                  <div class="row">
+                    <div class="col"><a class="d-inline-flex" href="">
+                        <div class="icon"><img src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/icons/certificado-digital.png" alt="Certificado Digital"></div>
+                        <div class="name">Entrar com Certificado Digital</div></a></div>
+                    <div class="col"><a class="d-inline-flex" href="">
+                        <div class="icon"><img src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/icons/neoid.png" alt="NeoID"></div>
+                        <div class="name">Entrar com NeoID</div></a></div>
+                  </div>
+                </div>
+                <!-- Outras opções de login-->
+                <aside class="mt-3 mt-sm-10">
+                  <div class="divider"><span class="content">ou</span></div>
+                  <div class="text-center">
+                    <button class="br-button is-circle is-large border-facebook bg-facebook text-white" type="button"><i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button class="br-button is-circle is-large border-twitter bg-twitter text-white ml-1" type="button"><i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="br-button is-circle is-large border-google-plus bg-google-plus text-white ml-1" type="button"><i class="fab fa-google-plus-g"></i>
+                    </button>
+                  </div>
+                </aside>
+              </div>
             </div>
-          </div>
-        </main>
+          </main>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Rodapé de governo-->
-  <footer class="page-footer" id="footer">
-    <div class="chancela-serpro"><img
-        src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/produto-serpro.png"
-        alt="Produto Serpro"></div>
-  </footer>
-  <script src="//barra.brasil.gov.br/barra_2.0.js" defer></script>
-</body>
-
+    <!-- Rodapé de governo-->
+    <footer class="page-footer" id="footer">
+      <div class="chancela-serpro"><img src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/produto-serpro.png" alt="Produto Serpro"></div>
+    </footer>
+    <script src="//barra.brasil.gov.br/barra_2.0.js" defer></script>
+  </body>
 </html>

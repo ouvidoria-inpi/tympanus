@@ -1,401 +1,384 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tabela</title>
-  <!-- Fonte Rawline-->
-  <link rel="stylesheet"
-    href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/fonts/rawline/css/rawline.css">
-  <!-- Fonte Raleway-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
-  <!-- Design System de Governo-->
-  <link rel="stylesheet" href="../css/dsgov.css">
-  <!-- Fontawesome-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
-</head>
-
-<body>
-  <div class="container-fluid">
-    <div class="br-table">
-      <p class="caption">Exemplo de título da tabela</p>
-      <div class="row mb-1">
-        <div class="col-sm-2">
-          <div class="actions ml-3">
-            <div class="br-select is-small">
-              <label for="acoes-em-massa"><i class="fas fa-share"></i></label>
-              <select id="acoes-em-massa">
-                <option value="0">Ações em massa</option>
-                <option value="opcao-1">Ação 1</option>
-                <option value="opcao-2">Ação 2</option>
-                <option value="opcao-3">Ação 3</option>
-                <option value="opcao-4">Ação 4</option>
-              </select>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabela</title>
+    <!-- Fonte Rawline-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/fonts/rawline/css/rawline.css">
+    <!-- Fonte Raleway-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
+    <!-- Design System de Governo-->
+    <link rel="stylesheet" href="../css/dsgov.css">
+    <!-- Fontawesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="br-table">
+        <p class="caption">Exemplo de título da tabela</p>
+        <div class="row mb-1">
+          <div class="col-sm-2">
+            <div class="actions ml-3">
+              <div class="br-select is-small">
+                <label for="acoes-em-massa"><i class="fas fa-share"></i></label>
+                <select id="acoes-em-massa">
+                  <option value="0">Ações em massa</option>
+                  <option value="opcao-1">Ação 1</option>
+                  <option value="opcao-2">Ação 2</option>
+                  <option value="opcao-3">Ação 3</option>
+                  <option value="opcao-4">Ação 4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2 ml-auto">
+            <div class="br-input has-icon is-small d-flex">
+              <label for="search"><span class="sr-only">Busca</span></label>
+              <input id="search" type="search"><span class="icon"><i class="fas fa-search"></i></span>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="length">
+              <div class="br-select is-small">
+                <label for="length-top">Exibir:</label>
+                <select id="length-top">
+                  <option value="0">0</option>
+                  <option value="opcao-1" selected>10</option>
+                  <option value="opcao-2">15</option>
+                  <option value="opcao-3">20</option>
+                  <option value="opcao-4">25</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-2 ml-auto">
-          <div class="br-input has-icon is-small d-flex">
-            <label for="search"><span class="sr-only">Busca</span></label>
-            <input id="search" type="search"><span class="icon"><i class="fas fa-search"></i></span>
-          </div>
-        </div>
-        <div class="col-auto">
-          <div class="length">
-            <div class="br-select is-small">
-              <label for="length-top">Exibir:</label>
-              <select id="length-top">
-                <option value="0">0</option>
-                <option value="opcao-1" selected>10</option>
-                <option value="opcao-2">15</option>
-                <option value="opcao-3">20</option>
-                <option value="opcao-4">25</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th class="text-center" scope="col">
-                <div class="br-checkbox is-small">
-                  <input id="select-all" type="checkbox">
-                  <label for="select-all"><span class="sr-only">checkbox</span></label>
-                </div>
-              </th>
-              <th scope="col">Coluna 1 <i class="fas fa-sort text-primary"></i></th>
-              <th style="min-width: 300px" scope="col">Coluna 2 <i class="fas fa-sort text-primary"></i></th>
-              <th scope="col">Coluna 3 <i class="fas fa-sort text-primary"></i></th>
-              <th scope="col">Coluna 4 <i class="fas fa-sort text-primary"></i></th>
-              <th class="text-center" scope="col">Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-center">
-                <div class="br-checkbox is-small">
-                  <input id="check-1" type="checkbox">
-                  <label for="check-1"><span class="sr-only">checkbox</span></label>
-                </div>
-              </td>
-              <td>0001AC201900016</td>
-              <td>Obter EX-Tarifário para bens de capital e para bens de informática</td>
-              <td>09/07/2009</td>
-              <td>Em Processamento</td>
-              <td class="text-center">
-                <div class="actions is-inline is-active">
-                  <button class="trigger" type="button"><i class="fas fa-ellipsis-h"></i></button>
-                  <div class="list">
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th class="text-center" scope="col">
+                  <div class="br-checkbox is-small">
+                    <input id="select-all" type="checkbox">
+                    <label for="select-all"><span class="sr-only">checkbox</span></label>
+                  </div>
+                </th>
+                <th scope="col">Coluna 1 <i class="fas fa-sort text-primary"></i></th>
+                <th style="min-width: 300px" scope="col">Coluna 2 <i class="fas fa-sort text-primary"></i></th>
+                <th scope="col">Coluna 3 <i class="fas fa-sort text-primary"></i></th>
+                <th scope="col">Coluna 4 <i class="fas fa-sort text-primary"></i></th>
+                <th class="text-center" scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  <div class="br-checkbox is-small">
+                    <input id="check-1" type="checkbox">
+                    <label for="check-1"><span class="sr-only">checkbox</span></label>
+                  </div>
+                </td>
+                <td>0001AC201900016</td>
+                <td>Obter EX-Tarifário para bens de capital e para bens de informática</td>
+                <td>09/07/2009</td>
+                <td>Em Processamento</td>
+                <td class="text-center">
+                  <div class="actions is-inline is-active">
+                    <button class="trigger" type="button"><i class="fas fa-ellipsis-h"></i></button>
+                    <div class="list">
+                      <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
+                      <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
+                      <button type="button"><i class="fas fa-envelope-open-text"></i></button>
+                      <button type="button"><span class="sr-only">Apagar</span><i class="fas fa-trash"></i></button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="br-checkbox is-small">
+                    <input id="check-2" type="checkbox">
+                    <label for="check-2"><span class="sr-only">checkbox</span></label>
+                  </div>
+                </td>
+                <td>0001AC201900016</td>
+                <td>Emitir Documento de Arrecadação da Receita Federal</td>
+                <td>09/07/2009</td>
+                <td>Concluído</td>
+                <td class="text-center">
+                  <div class="actions is-active">
+                    <button class="trigger" type="button"><i class="fas fa-ellipsis-h"></i></button>
+                    <div class="list">
+                      <button type="button">Ação 1</button>
+                      <button type="button">Ação 2</button>
+                      <button type="button">Ação 3</button>
+                      <button type="button">Ação 4</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="br-checkbox is-small">
+                    <input id="check-3" type="checkbox">
+                    <label for="check-3"><span class="sr-only">checkbox</span></label>
+                  </div>
+                </td>
+                <td>0001AC201900016</td>
+                <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
+                <td>09/07/2009</td>
+                <td>Em Processamento</td>
+                <td class="text-center">
+                  <div class="actions">
                     <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
                     <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                    <button type="button"><i class="fas fa-envelope-open-text"></i></button>
-                    <button type="button"><span class="sr-only">Apagar</span><i class="fas fa-trash"></i></button>
                   </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <div class="br-checkbox is-small">
-                  <input id="check-2" type="checkbox">
-                  <label for="check-2"><span class="sr-only">checkbox</span></label>
-                </div>
-              </td>
-              <td>0001AC201900016</td>
-              <td>Emitir Documento de Arrecadação da Receita Federal</td>
-              <td>09/07/2009</td>
-              <td>Concluído</td>
-              <td class="text-center">
-                <div class="actions is-active">
-                  <button class="trigger" type="button"><i class="fas fa-ellipsis-h"></i></button>
-                  <div class="list">
-                    <button type="button">Ação 1</button>
-                    <button type="button">Ação 2</button>
-                    <button type="button">Ação 3</button>
-                    <button type="button">Ação 4</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="br-checkbox is-small">
+                    <input id="check-4" type="checkbox">
+                    <label for="check-4"><span class="sr-only">checkbox</span></label>
                   </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <div class="br-checkbox is-small">
-                  <input id="check-3" type="checkbox">
-                  <label for="check-3"><span class="sr-only">checkbox</span></label>
-                </div>
-              </td>
-              <td>0001AC201900016</td>
-              <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
-              <td>09/07/2009</td>
-              <td>Em Processamento</td>
-              <td class="text-center">
-                <div class="actions">
-                  <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                  <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <div class="br-checkbox is-small">
-                  <input id="check-4" type="checkbox">
-                  <label for="check-4"><span class="sr-only">checkbox</span></label>
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-coluna-1"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-1" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-coluna-2"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-2" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-coluna-3"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-3" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-coluna-4"><span class="sr-only">Label</span></label>
-                  <input id="input-coluna-4" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td class="text-center">
-                <div class="actions">
-                  <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                  <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <div class="br-checkbox is-small">
-                  <input id="check-5" type="checkbox">
-                  <label for="check-5"><span class="sr-only">checkbox</span></label>
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-2-coluna-1"><span class="sr-only">Label</span></label>
-                  <input id="input-2-coluna-1" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-2-coluna-2"><span class="sr-only">Label</span></label>
-                  <input id="input-2-coluna-2" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-2-coluna-3"><span class="sr-only">Label</span></label>
-                  <input id="input-2-coluna-3" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-2-coluna-4"><span class="sr-only">Label</span></label>
-                  <input id="input-2-coluna-4" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td class="text-center">
-                <div class="actions">
-                  <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                  <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                </div>
-              </td>
-            </tr>
-            <tr class="is-active">
-              <td class="text-center">
-                <div class="br-checkbox is-small">
-                  <input id="check-6" type="checkbox" checked>
-                  <label for="check-6"><span class="sr-only">checkbox</span></label>
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-3-coluna-1"><span class="sr-only">Label</span></label>
-                  <input id="input-3-coluna-1" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-3-coluna-2"><span class="sr-only">Label</span></label>
-                  <input id="input-3-coluna-2" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-3-coluna-3"><span class="sr-only">Label</span></label>
-                  <input id="input-3-coluna-3" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td>
-                <div class="br-input is-medium">
-                  <label class="mb-0" for="input-3-coluna-4"><span class="sr-only">Label</span></label>
-                  <input id="input-3-coluna-4" type="text" placeholder="Insira um texto">
-                </div>
-              </td>
-              <td class="text-center">
-                <div class="actions">
-                  <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                  <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <div class="collapse">
-                  <button type="button"><i class="fas fa-plus"></i><span class="sr-only">Mais
-                      informações</span></button>
-                </div>
-              </td>
-              <td>0001AC201900016</td>
-              <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
-              <td>09/07/2009</td>
-              <td>Em Processamento</td>
-              <td class="text-center">
-                <div class="actions">
-                  <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                  <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <div class="collapse">
-                  <button type="button"><i class="fas fa-plus"></i><span class="sr-only">Mais
-                      informações</span></button>
-                </div>
-              </td>
-              <td>0001AC201900016</td>
-              <td>Emitir Documento de Arrecadação da Receita Federal</td>
-              <td>09/07/2009</td>
-              <td>Concluído</td>
-              <td class="text-center">
-                <div class="actions">
-                  <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                  <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                </div>
-              </td>
-            </tr>
-            <tr class="is-active">
-              <td class="text-center">
-                <div class="collapse">
-                  <button type="button"><i class="fas fa-minus"></i><span class="sr-only">Fechar
-                      informações</span></button>
-                </div>
-              </td>
-              <td>0001AC201900016</td>
-              <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
-              <td>09/07/2009</td>
-              <td>Em Processamento</td>
-              <td class="text-center">
-                <div class="actions">
-                  <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                  <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td colspan="5">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laboriosam mollitia eius a
-                  porro, magni molestiae nihil repellendus officiis autem ullam cumque saepe culpa non iste amet
-                  inventore quas fuga?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sit aspernatur labore, temporibus
-                  possimus distinctio doloribus recusandae vitae voluptate dolore odit ducimus molestiae aliquid,
-                  reiciendis cumque voluptates dolor natus ex!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non suscipit commodi eius ducimus magnam
-                  laborum in quae laudantium sapiente, minima necessitatibus modi iusto pariatur quaerat? A vitae eos
-                  totam fugit!</p>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <div class="br-checkbox is-small">
-                  <input id="check-10" type="checkbox">
-                  <label for="check-10"><span class="sr-only">checkbox</span></label>
-                </div>
-              </td>
-              <td>0001AC201900016</td>
-              <td>Emitir Documento de Arrecadação da Receita Federal</td>
-              <td>09/07/2009</td>
-              <td>Concluído</td>
-              <td class="text-center">
-                <div class="actions">
-                  <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                  <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="row mt-1">
-        <div class="col-sm">
-          <ul class="br-pagination">
-            <li class="is-first is-disabled"><a href=""><i
-                  class="fas fa-angle-double-left"></i><span>Anterior</span></a></li>
-            <li class="d-flex d-sm-none">
-              <label for="page-select-default"><span class="sr-only">Selecione a página</span></label>
-              <select id="page-select-default">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select><span class="ml-2">de</span><a href="">10</a>
-            </li>
-            <li class="is-active"><a href=""><span>1</span></a></li>
-            <li><a href=""><span>2</span></a></li>
-            <li><a href=""><span>3</span></a></li>
-            <li><a href=""><span>4</span></a></li>
-            <li><a href=""><span>5</span></a></li>
-            <li><a href=""><span>6</span></a></li>
-            <li><a href=""><span>7</span></a></li>
-            <li><a href=""><span>8</span></a></li>
-            <li><a href=""><span>9</span></a></li>
-            <li><a href=""><span>10</span></a></li>
-            <li class="is-last"><a href=""><span>Próxima</span><i class="fas fa-angle-double-right"></i></a></li>
-          </ul>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-coluna-1"><span class="sr-only">Label</span></label>
+                    <input id="input-coluna-1" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-coluna-2"><span class="sr-only">Label</span></label>
+                    <input id="input-coluna-2" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-coluna-3"><span class="sr-only">Label</span></label>
+                    <input id="input-coluna-3" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-coluna-4"><span class="sr-only">Label</span></label>
+                    <input id="input-coluna-4" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td class="text-center">
+                  <div class="actions">
+                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
+                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="br-checkbox is-small">
+                    <input id="check-5" type="checkbox">
+                    <label for="check-5"><span class="sr-only">checkbox</span></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-2-coluna-1"><span class="sr-only">Label</span></label>
+                    <input id="input-2-coluna-1" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-2-coluna-2"><span class="sr-only">Label</span></label>
+                    <input id="input-2-coluna-2" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-2-coluna-3"><span class="sr-only">Label</span></label>
+                    <input id="input-2-coluna-3" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-2-coluna-4"><span class="sr-only">Label</span></label>
+                    <input id="input-2-coluna-4" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td class="text-center">
+                  <div class="actions">
+                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
+                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="is-active">
+                <td class="text-center">
+                  <div class="br-checkbox is-small">
+                    <input id="check-6" type="checkbox" checked>
+                    <label for="check-6"><span class="sr-only">checkbox</span></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-3-coluna-1"><span class="sr-only">Label</span></label>
+                    <input id="input-3-coluna-1" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-3-coluna-2"><span class="sr-only">Label</span></label>
+                    <input id="input-3-coluna-2" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-3-coluna-3"><span class="sr-only">Label</span></label>
+                    <input id="input-3-coluna-3" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td>
+                  <div class="br-input is-medium">
+                    <label class="mb-0" for="input-3-coluna-4"><span class="sr-only">Label</span></label>
+                    <input id="input-3-coluna-4" type="text" placeholder="Insira um texto">
+                  </div>
+                </td>
+                <td class="text-center">
+                  <div class="actions">
+                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
+                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="collapse">
+                    <button type="button"><i class="fas fa-plus"></i><span class="sr-only">Mais informações</span></button>
+                  </div>
+                </td>
+                <td>0001AC201900016</td>
+                <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
+                <td>09/07/2009</td>
+                <td>Em Processamento</td>
+                <td class="text-center">
+                  <div class="actions">
+                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
+                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="collapse">
+                    <button type="button"><i class="fas fa-plus"></i><span class="sr-only">Mais informações</span></button>
+                  </div>
+                </td>
+                <td>0001AC201900016</td>
+                <td>Emitir Documento de Arrecadação da Receita Federal</td>
+                <td>09/07/2009</td>
+                <td>Concluído</td>
+                <td class="text-center">
+                  <div class="actions">
+                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
+                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="is-active">
+                <td class="text-center">
+                  <div class="collapse">
+                    <button type="button"><i class="fas fa-minus"></i><span class="sr-only">Fechar informações</span></button>
+                  </div>
+                </td>
+                <td>0001AC201900016</td>
+                <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
+                <td>09/07/2009</td>
+                <td>Em Processamento</td>
+                <td class="text-center">
+                  <div class="actions">
+                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
+                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="5">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laboriosam mollitia eius a porro, magni molestiae nihil repellendus officiis autem ullam cumque saepe culpa non iste amet inventore quas fuga?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sit aspernatur labore, temporibus possimus distinctio doloribus recusandae vitae voluptate dolore odit ducimus molestiae aliquid, reiciendis cumque voluptates dolor natus ex!</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non suscipit commodi eius ducimus magnam laborum in quae laudantium sapiente, minima necessitatibus modi iusto pariatur quaerat? A vitae eos totam fugit!</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="br-checkbox is-small">
+                    <input id="check-10" type="checkbox">
+                    <label for="check-10"><span class="sr-only">checkbox</span></label>
+                  </div>
+                </td>
+                <td>0001AC201900016</td>
+                <td>Emitir Documento de Arrecadação da Receita Federal</td>
+                <td>09/07/2009</td>
+                <td>Concluído</td>
+                <td class="text-center">
+                  <div class="actions">
+                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
+                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="col-auto">
-          <div class="length">
-            <div class="br-select is-small">
-              <label for="length-bottom">Exibir:</label>
-              <select id="length-bottom">
-                <option value="0">0</option>
-                <option value="opcao-1" selected>10</option>
-                <option value="opcao-2">15</option>
-                <option value="opcao-3">20</option>
-                <option value="opcao-4">25</option>
-              </select>
+        <div class="row mt-1">
+          <div class="col-sm">
+            <ul class="br-pagination">
+              <li class="is-first is-disabled"><a href=""><i class="fas fa-angle-double-left"></i><span>Anterior</span></a></li>
+              <li class="d-flex d-sm-none">
+                <label for="page-select-default"><span class="sr-only">Selecione a página</span></label>
+                <select id="page-select-default">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select><span class="ml-2">de</span><a href="">10</a>
+              </li>
+              <li class="is-active"><a href=""><span>1</span></a></li>
+              <li><a href=""><span>2</span></a></li>
+              <li><a href=""><span>3</span></a></li>
+              <li><a href=""><span>4</span></a></li>
+              <li><a href=""><span>5</span></a></li>
+              <li><a href=""><span>6</span></a></li>
+              <li><a href=""><span>7</span></a></li>
+              <li><a href=""><span>8</span></a></li>
+              <li><a href=""><span>9</span></a></li>
+              <li><a href=""><span>10</span></a></li>
+              <li class="is-last"><a href=""><span>Próxima</span><i class="fas fa-angle-double-right"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-auto">
+            <div class="length">
+              <div class="br-select is-small">
+                <label for="length-bottom">Exibir:</label>
+                <select id="length-bottom">
+                  <option value="0">0</option>
+                  <option value="opcao-1" selected>10</option>
+                  <option value="opcao-2">15</option>
+                  <option value="opcao-3">20</option>
+                  <option value="opcao-4">25</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="../js/components/select.js"></script>
-  <script src="../js/components/table.js"></script>
-  <script src="../js/components/table-sortable.min.js"></script>
-</body>
-
+    <script src="../js/dsgov-components.js"></script>
+  </body>
 </html>

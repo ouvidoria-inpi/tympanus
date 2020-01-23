@@ -3,7 +3,9 @@ class BRAccordeon {
     this.name = name;
     this.component = component;
     this._setBehavior();
-  }
+		}
+		
+		
 
   _setBehavior() {
     for (let button of this.component.querySelectorAll("button.header")) {
@@ -642,16 +644,6 @@ window.onload = (function() {
 
 scrim = document.getElementsByClassName("is-foco")[0];
 
-function on() {
-    scrim.classList.add("is-active");
-  }
-  
-function off() {
-    scrim.classList.remove("is-active");
-}
-
-scrim = document.getElementsByClassName("is-foco")[0];
-
 function openModal(div) {
     scrim.innerHTML = div.innerHTML;
     scrim.classList.add("is-active");
@@ -667,15 +659,26 @@ function closeModal() {
 }
 
 
-let listId = 'search-list'
-let listClass = 'search-items'
-let itemActive = 'search-active'
+scrim = document.getElementsByClassName("is-foco")[0];
+
+function on() {
+    scrim.classList.add("is-active");
+  }
+  
+function off() {
+    scrim.classList.remove("is-active");
+}
+
+let searchListId = 'search-list'
+let searchListClass = 'search-items'
+let searchItemActive = 'search-active'
 
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
   var currentFocus
-  /*execute a function when someone writes in the text field:*/
+		/*execute a function when someone writes in the text field:*/
+		if(!inp){return;}
   inp.addEventListener('input', function(e) {
     var a,
       b,
@@ -689,8 +692,8 @@ function autocomplete(inp, arr) {
     currentFocus = -1
     /*create a DIV element that will contain the items (values):*/
     a = document.createElement('DIV')
-    a.setAttribute('id', this.id + listId)
-    a.setAttribute('class', listClass)
+    a.setAttribute('id', this.id + searchListId)
+    a.setAttribute('class', searchListClass)
     /*append the DIV element as a child of the autocomplete container:*/
     this.parentNode.appendChild(a)
     /*for each item in the array...*/
@@ -718,7 +721,7 @@ function autocomplete(inp, arr) {
   })
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener('keydown', function(e) {
-    var x = document.getElementById(this.id + listId)
+    var x = document.getElementById(this.id + searchListId)
     if (x) x = x.getElementsByTagName('div')
     if (e.keyCode == 40) {
       /*If the arrow DOWN key is pressed,
@@ -749,13 +752,13 @@ function autocomplete(inp, arr) {
     removeActive(x)
     if (currentFocus >= x.length) currentFocus = 0
     if (currentFocus < 0) currentFocus = x.length - 1
-    /*add class itemActive:*/
-    x[currentFocus].classList.add(itemActive)
+    /*add class searchItemActive:*/
+    x[currentFocus].classList.add(searchItemActive)
   }
   function removeActive(x) {
     /*a function to remove the "active" class from all autocomplete items:*/
     for (var i = 0; i < x.length; i++) {
-      x[i].classList.remove(itemActive)
+      x[i].classList.remove(searchItemActive)
     }
   }
   function closeAllLists(elmnt) {
@@ -1028,86 +1031,96 @@ function autocomplete(inp, arr) {
 })()
 
 class BRSelect {
-
   constructor(name, component) {
-    this.name = name;
-    this.component = component;
-    this._setUpBrSelect();
+    this.name = name
+    this.component = component
+    this._setUpBrSelect()
   }
 
   _setUpBrSelect() {
     for (let select of this.component.querySelectorAll('select')) {
-      this.component.appendChild(this._buildSelectionField(select));
-      this.component.appendChild(this._buildOptionsList(select));
+      this.component.appendChild(this._buildSelectionField(select))
+      this.component.appendChild(this._buildOptionsList(select))
     }
-    this._setBehavior();
+    this._setBehavior()
   }
 
   _buildSelectionField(select) {
-    let selectionField = window.document.createElement('button');
-    selectionField.setAttribute('class', 'select-selected unselected');
+    let selectionField = window.document.createElement('button')
+    selectionField.setAttribute('class', 'select-selected unselected')
     if (select.disabled) {
-      selectionField.setAttribute('disabled', 'disabled');
+      selectionField.setAttribute('disabled', 'disabled')
     }
-    selectionField.appendChild(this._buildOptionItem(select.options[select.selectedIndex].innerHTML));
+    selectionField.appendChild(
+      this._buildOptionItem(select.options[select.selectedIndex].innerHTML)
+    )
     selectionField.appendChild(this._buildIcon())
-    return selectionField;
+    return selectionField
   }
 
   _buildOptionItem(text) {
-    let optionItem = window.document.createElement('span');
-    optionItem.innerHTML = text;
-    return optionItem;
+    let optionItem = window.document.createElement('span')
+    optionItem.innerHTML = text
+    return optionItem
   }
 
   _buildIcon() {
-    let icon = window.document.createElement('i');
+    let icon = window.document.createElement('i')
     icon.setAttribute('class', 'fas fa-chevron-down')
-    return icon;
+    return icon
   }
 
   _buildOptionsList(select) {
-    let optionsList = window.document.createElement('div');
-    optionsList.setAttribute('class', 'select-items select-hide');
+    let optionsList = window.document.createElement('div')
+    optionsList.setAttribute('class', 'select-items select-hide')
     for (let option of select.options) {
-      let optionField = window.document.createElement('button');
-      optionField.appendChild(this._buildOptionItem(option.innerHTML));
-      optionsList.appendChild(optionField);      
+      let optionField = window.document.createElement('button')
+      optionField.appendChild(this._buildOptionItem(option.innerHTML))
+      optionsList.appendChild(optionField)
     }
-    return optionsList;
+    return optionsList
   }
 
   _setBehavior() {
-    for (let itemSelected of this.component.querySelectorAll('.select-selected')) {
+    for (let itemSelected of this.component.querySelectorAll(
+      '.select-selected'
+    )) {
       itemSelected.addEventListener('click', (event) => {
-        event.stopPropagation();
+        event.stopPropagation()
         itemSelected.nextElementSibling.classList.toggle('select-hide')
-        this._closeSelects(itemSelected);
+        this._closeSelects(itemSelected)
         window.document.addEventListener('click', () => {
-          this._closeSelects();
-        });
-      });
+          this._closeSelects()
+        })
+      })
     }
     for (let item of this.component.querySelectorAll('.select-items button')) {
       item.addEventListener('click', (event) => {
         for (let select of this.component.querySelectorAll('select')) {
           for (let [index, option] of Array.from(select.options).entries()) {
             if (option.innerHTML === item.firstChild.innerHTML) {
-              select.selectedIndex = index;
-              item.parentNode.previousSibling.firstChild.innerHTML = item.firstChild.innerHTML;
-              item.parentNode.previousSibling.setAttribute('class', 'select-selected');
-              item.parentNode.classList.add('select-hide');
-              for (let optionItem of item.parentNode.querySelectorAll('button')) {
+              select.selectedIndex = index
+              select.dispatchEvent(new Event('change'))
+              item.parentNode.previousSibling.firstChild.innerHTML =
+                item.firstChild.innerHTML
+              item.parentNode.previousSibling.setAttribute(
+                'class',
+                'select-selected'
+              )
+              item.parentNode.classList.add('select-hide')
+              for (let optionItem of item.parentNode.querySelectorAll(
+                'button'
+              )) {
                 if (optionItem === item) {
-                  optionItem.setAttribute('class', 'same-as-selected');
+                  optionItem.setAttribute('class', 'same-as-selected')
                 } else {
-                  optionItem.removeAttribute('class');
+                  optionItem.removeAttribute('class')
                 }
               }
             }
           }
         }
-      });
+      })
     }
   }
 
@@ -1116,22 +1129,70 @@ class BRSelect {
       for (let itemSelected of brSelect.querySelectorAll('.select-selected')) {
         if (itemSelected !== element) {
           for (let optionsList of brSelect.querySelectorAll('.select-items')) {
-            optionsList.classList.add('select-hide');
-            window.document.removeEventListener('click', this._closeSelects);
+            optionsList.classList.add('select-hide')
+            window.document.removeEventListener('click', this._closeSelects)
           }
         }
       }
     }
   }
+
+  _deleteSelect() {
+    for (let selectionField of this.component.querySelectorAll(
+      'button.select-selected'
+    )) {
+      selectionField.remove()
+    }
+    for (let optionsList of this.component.querySelectorAll(
+      'div.select-items'
+    )) {
+      optionsList.remove()
+    }
+  }
+
+  updateSelect() {
+    this._deleteSelect()
+    this._setUpBrSelect()
+  }
 }
 
-let selectList = [];
+function getBrSelect(component) {
+  for (let brSelect of selectList) {
+    for (let select of brSelect.component.querySelectorAll('select')) {
+      if (component == select) {
+        return brSelect
+      }
+    }
+  }
+}
+
+function updateSelect(component) {
+  getBrSelect(component).updateSelect()
+}
+
+let selectList = []
+
+function createBrSelect() {
+  for (let brSelect of window.document.querySelectorAll('.br-select')) {
+    let equal = false
+    for (let existedBrSelect of selectList) {
+      if (brSelect == existedBrSelect.component) {
+        equal = true
+        break
+      }
+    }
+    if (!equal) {
+      selectList.push(new BRSelect('br-select', brSelect))
+    }
+  }
+}
 
 window.onload = (function() {
   for (let brSelect of window.document.querySelectorAll('.br-select')) {
-    selectList.push(new BRSelect('br-select', brSelect));
+    selectList.push(new BRSelect('br-select', brSelect))
   }
-})();
+})()
+
 function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
 var parentEl
 var parentE2
@@ -1185,25 +1246,26 @@ for (i = 0; i < target.length; i++) {
   target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
 }
 
-const tab = dropbox = document.querySelectorAll('.br-tabs .item');
-
-for (let elem of tab) {
-    elem.addEventListener("click", function() { foi(elem) }, false);;
-
+const tab = document.querySelectorAll('.br-tabs .item');
+if(tab){
+				for (let elem of tab) {
+								elem.addEventListener("click", function() { itemActiveSelected(elem) }, false);;
+				}
 }
 
 
-function foi(event) {
-    console.log(event);
+
+
+function itemActiveSelected(event) {
+    
     const a = document.querySelectorAll('.upload-input');
     const elements = event.parentElement.querySelectorAll('.br-tabs .item');
-
-    for (let elem of elements) {
+				for (let elem of elements) {
         elem.parentElement.querySelectorAll(".item")
         elem.classList.remove("is-active");
     }
     event.classList.add("is-active");
-    console.log(event.classList);
+    
 
 
 }
@@ -1215,18 +1277,22 @@ const info = document.querySelector('.upload-info');
 const size = document.querySelector('.upload-size');
 const sizeNum = document.querySelector('.upload-size-num');
 const sizeBytes = document.querySelector('.upload-size-bytes');
-var fileArray = Array.from(inputElement.files);
+var fileArray = [];
+if(inputElement)
+		fileArray = Array.from(inputElement.files);
 
 
 let dropbox;
 
 dropbox = document.querySelector('.br-upload');
-dropbox.addEventListener("dragenter", drag, false);
-dropbox.addEventListener("dragover", drag, false);
-dropbox.addEventListener("drop", drop, false);
+if(dropbox){
+		dropbox.addEventListener("dragenter", drag, false);
+		dropbox.addEventListener("dragover", drag, false);
+		dropbox.addEventListener("drop", drop, false);
+}
 
-
-inputElement.addEventListener("change", handleFiles, false);
+if(inputElement)
+		inputElement.addEventListener("change", handleFiles, false);
 
 function handleFiles(files) {
 

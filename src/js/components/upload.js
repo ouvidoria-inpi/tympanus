@@ -5,18 +5,22 @@ const info = document.querySelector('.upload-info');
 const size = document.querySelector('.upload-size');
 const sizeNum = document.querySelector('.upload-size-num');
 const sizeBytes = document.querySelector('.upload-size-bytes');
-var fileArray = Array.from(inputElement.files);
+var fileArray = [];
+if(inputElement)
+		fileArray = Array.from(inputElement.files);
 
 
 let dropbox;
 
 dropbox = document.querySelector('.br-upload');
-dropbox.addEventListener("dragenter", drag, false);
-dropbox.addEventListener("dragover", drag, false);
-dropbox.addEventListener("drop", drop, false);
+if(dropbox){
+		dropbox.addEventListener("dragenter", drag, false);
+		dropbox.addEventListener("dragover", drag, false);
+		dropbox.addEventListener("drop", drop, false);
+}
 
-
-inputElement.addEventListener("change", handleFiles, false);
+if(inputElement)
+		inputElement.addEventListener("change", handleFiles, false);
 
 function handleFiles(files) {
 

@@ -109,9 +109,20 @@ module.exports = function(env, argv) {
 													uglify: false,
 													sourceMap: true,
 													name: 'dsgov-components',
-													outputPath: 'js/components/',
+													outputPath: 'js/',
 													fileName: '[name].js',
 													filesToConcat: ['./src/js/components/**'],
+													attributes: {
+																	async: true
+													}
+												}),
+												new ConcatPlugin({
+													uglify: false,
+													sourceMap: true,
+													name: 'dsgov-templates',
+													outputPath: 'js/',
+													fileName: '[name].js',
+													filesToConcat: ['./src/js/templates/**'],
 													attributes: {
 																	async: true
 													}
@@ -120,13 +131,13 @@ module.exports = function(env, argv) {
             new CopyWebpackPlugin([
                 // Copia os fontes SASS no intuito de permitir reconfiguração e recompilação
                 // de regras pelo usuário deste pacote
-                { context: 'src', from: '**/*.scss'},
+                // { context: 'src', from: '**/*.scss'},
 																
                 // Copia os arquivos de documentação dos componentes
                 // { context: 'src', from: '**/*.md' },
                 // { context: 'src', from: '**/*.pdf' },
 																// { context: 'src', from: '**/*.html' },
-																{ context: 'src', from: '**/*.js' },
+																{ context: 'src', from: '**/templates/*.js' },
 
                 // OBS.: Não é necessário copiar assets como imagens e fontes que são
                 // utilizados por imports ou pela função url(), pois eles são resolvidos como
