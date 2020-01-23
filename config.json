@@ -278,8 +278,8 @@
         "children": [
           {
             "label": "Template base",
-            "filename": "page",
-            "urllabel": "page"
+            "filename": "system",
+            "urllabel": "system"
           }
         ]
       },
@@ -288,8 +288,8 @@
         "children": [
           {
             "label": "Sites e portais - Template base",
-            "filename": "portal",
-            "urllabel": "portal"
+            "filename": "site",
+            "urllabel": "site"
           },
           {
             "label": "Sites e portais - Mobile",
