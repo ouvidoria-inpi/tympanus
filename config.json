@@ -60,10 +60,6 @@
         "filename": "uso-do-css"
       },
       {
-        "label": "Construção de componentes",
-        "filename": "construcao-de-componentes"
-      },
-      {
         "label": "Acessibilidade no Código HTML",
         "filename": "acessibilidade-no-codigo-html"
       },
@@ -82,6 +78,11 @@
       {
         "label": "Status Atual dos Componentes",
         "filename": "status",
+        "type": "docs"
+      },
+      {
+        "label": "Construção de componentes",
+        "filename": "construcao-de-componentes",
         "type": "docs"
       },
       {
@@ -205,6 +206,11 @@
         "label": "Status Atual dos Templates",
         "filename": "status",
         "urllabel": "status",
+        "type": "docs"
+      },
+      {
+        "label": "Uso dos templates",
+        "filename": "uso-dos-templates",
         "type": "docs"
       },
       {
