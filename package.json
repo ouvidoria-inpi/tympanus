@@ -1,15 +1,15 @@
 {
   "name": "@govbr/dsgov",
   "version": "1.2.2-beta1",
-  "description": "Design System do governo",
+		"description": "Design System do governo",
+		"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/",
   "main": "index.js",
   "scripts": {
-				"build": "npm-run-all build:webpack:prod compile",
-				"compile": "npm-run-all version-get compile-*",
+    "build": "npm-run-all build:webpack:prod compile",
+    "compile": "npm-run-all  compile-*",
     "compile-sass": "node-sass -r ./src/scss/ -o ./dist/css",
-				"compile-pug": "pug ./src/pug/views/  -o ./dist -P",
-				"compile-pug-cdn": "pug ./src/pug/views/ -O '{\"version\": \"1.2.2\",\"cdnUrl\": \"https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/\"}' -o ./dist -P",
-				"start": "npm-run-all build watch",
+    "compile-pug": "pug ./src/pug/views/ -O '{\"version\": \"1.2.2\",\"cdnUrl\": \"'$npm_package_cdn'\"}' -o ./dist -P",
+    "start": "npm-run-all build watch",
     "test": "npm-run-all validate:* ",
     "validate:html": "node_modules/.bin/html-validate dist/**/*.html",
     "validate:styles": "node_modules/.bin/stylelint src/scss/**/*.scss",
@@ -18,8 +18,7 @@
     "watch-pug": "pug -w ./src/pug/views/ -O '{\"version\": \"1.2.2\",\"cdnUrl\": \"../\"}' -o ./dist -P",
     "watch-webpack": "webpack --mode development",
     "build:webpack:dev": "webpack --mode development",
-    "build:webpack:prod": "webpack --mode production",
-				"version-get":"npm show ./ version > version"
+    "build:webpack:prod": "webpack --mode production"				
   },
   "engines": {
     "node": ">= 12.13.1"
