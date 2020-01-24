@@ -1,0 +1,35 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Botão";
+
+append content
+  +button(class="is-primary") Entrar
+  +button(class="is-secondary ml-3") Cadastrar
+  +button(class="is-tertiary ml-3") Adicionar
+  +button(class="is-cancel ml-3") Cancelar
+  hr
+  +button(class="is-primary")
+    span Entrar com 
+    strong gov.br
+  +button(class="is-secondary ml-3")
+    span Entrar com 
+    strong gov.br
+  +button(class="is-call-to-action ml-3") Solicitar
+  hr
+  +button(class="is-circle is-primary")
+    i.fas.fa-chevron-up
+  +button(class="is-circle is-secondary")
+    i.fas.fa-chevron-down
+  +button(class="is-circle is-medium text-white bg-twitter border-twitter")
+    i.fab.fa-twitter
+  +button(class="is-circle is-medium text-white bg-facebook border-facebook")
+    i.fab.fa-facebook-f
+  +button(class="is-circle is-large text-white bg-google-plus border-google-plus")
+    i.fab.fa-google-plus-g
+  +button(class="is-circle is-large is-primary")
+    strong gov.br
+  hr
+  +button(class="is-primary is-loading") Entrar
+  +button(class="is-secondary ml-3 is-loading") Cadastro
+  +button(class="is-call-to-action ml-3 is-loading") Solicitar

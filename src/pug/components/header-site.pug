@@ -1,0 +1,47 @@
+mixin header-site
+  - let className = attributes.class
+  - let componentClass = prefix + "header-site"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
+    .container
+      // Barra principal
+      .wrapper
+        // Logo
+        .logo
+          a.image(href="")
+            img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/govbr.svg' alt='Governo Federal')
+          span.name.d-none.d-sm-block Secretaria da Receita do Brasil - RFB
+          span.description.d-none.d-sm-block Ministério da Economia
+        // Links rápidos
+        ul.quicklinks.d-none.d-md-flex.mr-md-10
+          li: a(href="") Acesso à informação
+          li: a(href="") Participe
+          li: a(href="") Acessibilidade
+        // Idioma do site
+        +language(class="d-none d-md-block")
+        // Acesso gov.br
+        a.login.ml-md-10(href="")
+          span.d-none.d-md-inline Acesso gov.br
+          i.fas.fa-user.ml-md-1
+        // Altocontraste
+        +button(id="contrast" class="is-tertiary d-none d-md-block ml-3" accesskey="6")
+          i.fas.fa-adjust
+          span.sr-only Alto contraste
+        // Quebra de linha
+        .break
+        // Busca geral
+        .search.mx-n1.ml-md-auto.mr-md-0
+          .field
+            label.sr-only(for='search') Autocomplete
+            input#search(type='search' placeholder='O que você procura?')
+            button(type='button')
+              i.fas.fa-search
+              span.sr-only buscar
+          button.close(type='button')
+            i.fas.fa-times
+            span.sr-only fechar a busca
+        // Menu sanduiche
+        button.menu-hamburger.ml-n1(type='button')
+          i.fa.fa-bars
+
+

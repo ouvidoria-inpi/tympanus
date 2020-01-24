@@ -1,0 +1,14 @@
+mixin feedback(message)
+  - className=attributes.class
+  if (className)
+    .feedback(class=className)
+      i.fas.fa-check-circle
+      |
+      |
+      span=message
+  else
+    .feedback.is-invalid
+      i.fas.fa-times-circle
+      |
+      |
+      span=message

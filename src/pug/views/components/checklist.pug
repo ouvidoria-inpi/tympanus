@@ -1,0 +1,31 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Checklist";
+
+
+append content
+  +checklist
+    +check-item
+      .icon: i.far.fa-envelope
+      +input("E-mail")(id="email" placeholder="Ex: fulano@email.com")
+      +radio("")(id="radio-email" name="radio")
+    +check-item(class="is-invalid is-active")
+      .icon.is-invalid: i.fas.fa-mobile-alt
+      +input("Celular")(id="celular" class="is-invalid" placeholder="Ex: (xx) xxxxx-xxxx")
+      +radio("")(id="radio-celular" class="is-invalid" name="radio" checked)
+  +feedback("Preencha o campo de texto")
+  p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+  +checklist(class="mt-10")
+    +check-item
+      .icon: i.far.fa-envelope
+      +input("E-mail")(id="box-email" placeholder="Ex: fulano@email.com")
+      +checkbox("")(id="checkbox-email")
+    +check-item(class="is-active")
+      .icon: i.fas.fa-phone
+      +input("Telefone")(id="box-phone" placeholder="(XX) 1234-5678")
+      +checkbox("")(id="checkbox-phone" checked)
+    +check-item
+      .icon: i.fas.fa-mobile-alt
+      +input("Celular")(id="box-cellphone" placeholder="(XX) 91234-5678")
+      +checkbox("")(id="checkbox-cellphone")

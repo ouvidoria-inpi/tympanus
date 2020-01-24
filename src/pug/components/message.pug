@@ -1,0 +1,22 @@
+mixin message(className="is-info")
+  .br-message(class=className)
+    .icon
+      if className == "is-danger"
+        i.fas.fa-times-circle
+        span.sr-only Erro!
+      if className == "is-success"
+        i.fas.fa-check-circle
+        span.sr-only Sucesso!
+      if className == "is-warning"
+        i.fas.fa-exclamation-triangle
+        span.sr-only Atenção!
+      if className == "is-info"
+        i.fas.fa-info-circle
+        span.sr-only Informação!
+    .content
+      if block
+        block
+    .close
+      button(type='button')
+        i.fas.fa-times
+        span.sr-only Fechar

@@ -1,0 +1,82 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Scrim";
+
+append style
+  style.
+    .bloco1 {
+      margin-bottom: 50px;
+      width: 50%;
+      height: 150px;
+      display: block;
+      color: black;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      background-color: rgb(224, 202, 231);
+      box-sizing: border-box;
+      border: solid 1px black;
+      text-align: center;
+      padding: 20px;
+    }
+    .bloco2 {
+      margin-bottom: 50px;
+      width: 100%;
+      height: 200px;
+      font-size: 20px;
+      color: white;
+      display: block;
+      background-position: center;
+      background-size: cover;
+      background-image: url(../../assets/images/imagem.png);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      border: solid 1px black;
+      text-align: left;
+      padding: 20px 0;
+      line-height: 1.5;
+    }
+    .bloco3 {
+      width: 100%;
+      height: 200px;
+      font-size: 20px;
+      color: black;
+      padding: 10px 0;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      background-color: rgb(202, 211, 231);
+      border: solid 1px black;
+      text-align: center;
+      vertical-align: center;
+    }
+
+
+
+append content
+  .br-scrim.is-foco(onclick='off()')
+    .br-modal.is-medium
+      .br-modal-dialog
+        .br-modal-content
+          .br-modal-body
+            p Conteúdo
+          .br-modal-footer.justify-content-end
+            button.br-button.is-secondary.is-small(type='button')
+              | Ação 1
+            button.br-button.is-primary.is-small(type='button')
+              | Ação 2
+  h1 Scrim - Foco
+  .bloco1
+    p Scrim - Foco
+    button(type='button' onclick='on()') Testar Efeito
+  .row
+    .col-6
+      h1 Scrim - Legibilidade
+      .br-scrim.is-legibilidade
+        .bloco2
+          .scrim-text(text-white='') Scrim - Legibilidade
+  h1 Scrim - Inibição (Clicar)
+  .row
+    .col-6
+      .bloco3(onclick="alert('Fui Clicado')")
+        div SEM Scrim Inibição
+    .col-6
+      .br-scrim.is-inibicao
+        .bloco3(onclick="alert('Fui Clicado')")
+          | COM Scrim Inibição

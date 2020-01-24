@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cabeçalho de sistemas</title>
+    <!-- Fonte Rawline-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/fonts/rawline/css/rawline.css">
+    <!-- Fonte Raleway-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
+    <!-- Design System de Governo-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/css/dsgov.css">
+    <!-- Fontawesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="br-header-system">
+        <div class="container-fluid">
+          <!-- Barra principal-->
+          <div class="wrapper">
+            <!-- Logo-->
+            <div class="logo"><a class="name" id="logo" href="">Nome do órgão</a><span class="description">Assinatura do órgão</span></div>
+            <!-- Links rápidos-->
+            <div class="quicklinks d-none d-md-flex">
+              <ul>
+                <li><a href="">Acesso à informação</a></li>
+                <li><a href="">Participe</a></li>
+                <li><a href="">Acessibilidade</a></li>
+              </ul>
+              <!-- Altocontraste-->
+              <button class="br-button is-tertiary ml-16" type="button" accesskey="6"><i class="fas fa-adjust"></i><span class="d-none d-md-inline-block ml-md-1 text-uppercase">Alto contraste</span>
+              </button>
+            </div>
+            <!-- Quebra de linha-->
+            <div class="break"></div>
+            <!-- Busca geral-->
+            <div class="search mx-n1 ml-md-auto mr-md-0">
+              <div class="field">
+                <label class="sr-only" for="search">Autocomplete</label>
+                <input id="search" type="search" placeholder="O que você procura?">
+                <button type="button"><i class="fas fa-search"></i><span class="sr-only">buscar</span></button>
+              </div>
+              <button class="close" type="button"><i class="fas fa-times"></i><span class="sr-only">fechar a busca</span></button>
+            </div>
+            <!-- Barra do usuário-->
+            <div class="user-bar d-none d-md-flex ml-md-10">
+              <!-- Configurações do usuário-->
+              <div class="configs dropdown">
+                <button class="trigger" type="button">
+                  <!-- Avatar do usuário--><span class="avatar"><i class="fas fa-user-circle"></i></span>
+                  <!-- Notificações--><span class="badge">5</span>
+                  <!-- Seta para abrir menu--><span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="menu">
+                  <!-- Informações do usuário-->
+                  <div class="title user">
+                    <div class="name">Márcia Vinícius Tavares de Almeida</div>
+                    <div class="email">marcia-vinicius.almeida@serpro.gov.br</div>
+                  </div>
+                  <!-- Lista de configurações--><span class="title"><i class="fas fa-cog"></i>                  Configuração/Perfil</span><a class="item" href="">Configuração 01</a><a class="item" href="">Configuração 02</a><a class="item" href="">Configuração 03</a>
+                </div>
+              </div>
+              <!-- Sistemas favoritos do usuário-->
+              <div class="bookmarks dropdown">
+                <button class="trigger" type="button"><i class="fas fa-th-large"></i></button>
+                <div class="menu">
+                  <div class="title">Sistemas</div>
+                  <div class="list">
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 01</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 02</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 03</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 04</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 05</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 06</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 07</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 08</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 09</div></a></div>
+                    <div class="item"><a class="bookmark" href="">
+                        <div class="brand"></div>
+                        <div class="name">Sistema 10</div></a></div>
+                  </div>
+                  <div class="more"><a href="">Mais</a></div>
+                </div>
+              </div>
+              <!-- Logout-->
+              <button class="br-button is-small is-primary ml-3" type="button">Sair
+              </button>
+            </div>
+            <!-- Menu sanduiche-->
+            <button class="menu-hamburger ml-n1" type="button"><i class="fa fa-bars fa-fw"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/js/dsgov-components.js"></script>
+  </body>
+</html>

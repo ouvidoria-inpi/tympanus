@@ -1,0 +1,35 @@
+extends ../../layouts/authentication
+
+append vars
+  - var title = "Verifique seu celular";
+
+append content
+  p
+    | Um código foi enviado para 
+    strong (61) 1234-5678
+    | .
+  p Por favor, digite-o no campo abaixo:
+  // Código
+  .row
+    .col-6.col-sm-4
+      +input("Código de 04 dígitos")(id="codigo" class="is-valid" placeholder="XXXX" value="5494")
+  +feedback("Código correto")(class="is-valid")
+  // Opção de reenvio
+  .mt-3
+    +button(class="is-tertiary")
+      u Reenviar código
+  // Opção de alterar número
+  p.mb-0.mt-8 Não recebeu o código? Verifique sua caixa de spam.
+  .mt-3
+    +button(class="is-tertiary")
+      u Informou o número errado?
+  .row.mt-3
+    .col-sm-6
+      +input("Celular")(id="celular" placeholder="Ex: (xx) x xxxx-xxxx")
+  .mt-3
+    +button(class="is-tertiary")
+      u Atualizar e Reenviar Código
+  // Botões de ação
+  .d-flex.flex-wrap.flex-row-reverse.justify-content-center.justify-content-sm-start.mt-10.mt-sm-10
+    +button(class="is-primary") Cadastrar
+    +button(class="is-secondary mt-3 mt-sm-0 mr-sm-3") Voltar

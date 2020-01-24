@@ -1,9 +1,0 @@
-// Carregar variáveis do DS-Gov
-@import "../../base/dsgov-base";
-
-// Background da página
-.page-background {
-  @include media-breakpoint-up(sm) {
-    background: linear-gradient(to right, $color-gray-1 50%, $color-white 50%);
-  }
-}

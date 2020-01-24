@@ -1,0 +1,24 @@
+design-system
+  docs
+  dist
+    css
+    js
+    images
+    html
+      components
+      templates
+  src
+    scss
+      configs
+      mixins
+      utilities
+      components
+      templates
+    js
+      components
+      templates
+    images
+    pug
+      layouts
+      components
+      templates

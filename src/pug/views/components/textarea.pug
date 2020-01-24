@@ -1,0 +1,16 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Textarea";
+		
+
+append content
+  .row
+    .col-sm
+      +textarea("Padrão")(id="default" placeholder="Exemplo de textarea")
+      +textarea("Desativado")(id="disabled" class="mt-3" placeholder='Textarea desativado' disabled)
+    .col-sm
+      +textarea("Válido")(id="valid" class="is-valid" placeholder="Textarea válido")
+      +textarea("Inválido")(id="invalid" class="is-invalid mt-3" placeholder="Textarea inválido")
+				
+

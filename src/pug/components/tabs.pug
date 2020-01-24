@@ -1,0 +1,17 @@
+mixin tabs(className="")
+  nav
+    ul.br-tabs(
+      id=attributes.id
+      class=className)
+      if block
+        block
+      else
+        | Você precisa adicionar tab-item
+
+mixin tab-item(title="aba")
+  li.item(class=attributes.class)
+    a(href="javascript:void(0)")
+      if block
+        block
+      else
+        span.name=title

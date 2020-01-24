@@ -1,0 +1,99 @@
+.#{$prefix}button {
+  &.is-primary {
+    @include button-pill;
+  }
+  &.is-secondary {
+    @include button-pill($color-white, $color-primary);
+  }
+  &.is-call-to-action {
+    @include button-pill($color-secondary, $color-white, $color-gray-2);
+    border-width: $button-action-border-width;
+    height: $button-height-default + ($button-action-border-width * 2);
+    &:hover,
+    &:focus {
+      background-color: $color-teal;
+      border-color: $color-gray-2;
+      color: $color-white;
+    }
+    &:disabled {
+      border-color: $color-gray-2;
+    }
+    @include media-breakpoint-up(sm) {
+      min-width: $button-action-min-width;
+    }
+  }
+  &.is-tertiary {
+    @include button-link;
+  }
+  &.is-cancel {
+    @include button-link($body-color);
+    text-decoration: underline;
+  }
+  &.is-small {
+    @include media-breakpoint-up(md) {
+      min-width: 0;
+    }
+    height: $button-height-small;
+    padding: 0 $button-padding / 2;
+  }
+  &.is-circle {
+    @include media-breakpoint-up(sm) {
+      min-width: 0;
+    }
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    height: $button-circle-default;
+    padding: 0;
+    width: $button-circle-default;
+    @each $size, $value in (medium, $button-circle-medium),
+      (large, $button-circle-large)
+    {
+      &.is-#{$size} {
+        height: $value;
+        width: $value;
+        img {
+          max-width: $value;
+        }
+        [class*="fa-"] {
+          transform: scale(1.75);
+        }
+      }
+    }
+  }
+  &.is-loading {
+    color: transparent !important;
+    pointer-events: none;
+    position: relative;
+    &::after {
+      animation: spinAround 500ms infinite linear;
+      border: 2px solid $color-white;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: "";
+      display: block;
+      height: 1em;
+      left: calc(50% - (1em / 2));
+      position: absolute !important;
+      top: calc(50% - (1em / 2));
+      width: 1em;
+    }
+    &.is-secondary {
+      &::after {
+        border-color: $color-primary;
+        border-right-color: transparent;
+        border-top-color: transparent;
+      }
+    }
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

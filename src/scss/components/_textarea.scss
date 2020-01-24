@@ -1,0 +1,45 @@
+.#{$prefix}textarea {
+  position: relative;
+  label {
+    color: $label-color;
+    font-size: $label-font-size;
+    font-weight: $label-font-weight;
+    margin-bottom: $spacer-half;
+  }
+  textarea {
+    @include placeholder;
+    background: $color-white;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-radius;
+    color: $input-color;
+    display: block;
+    font-weight: $input-font-weight;
+    padding-left: $spacer * 2;
+    padding-right: $spacer * 2;
+    width: 100%;
+    &:focus {
+      border-color: $color-primary-lighten-1;
+      box-shadow: 0 0 0 1px $color-primary-lighten-1;
+      outline: none;
+    }
+    &:invalid {
+      border-color: $color-danger;
+      box-shadow: 0 0 0 1px $color-danger;
+    }
+    &:disabled {
+      background: $color-gray-2;
+    }
+  }
+  // Estados
+  @each $state, $color in (focus, $color-primary-lighten-2),
+    (valid, $color-success), (invalid, $color-danger)
+  {
+    &.is-#{$state} {
+      textarea {
+        border-color: $color;
+        box-shadow: 0 0 0 1px $color;
+        outline: none;
+      }
+    }
+  }
+}
