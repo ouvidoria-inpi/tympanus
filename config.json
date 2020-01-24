@@ -51,13 +51,17 @@
     ]
   },
   {
-    "label": "Boas Práticas",
+    "label": "Guias",
     "type": "docs",
-    "id": "boas-praticas",
+    "id": "guias",
     "children": [
       {
         "label": "Uso do css",
         "filename": "uso-do-css"
+      },
+      {
+        "label": "Uso dos templates",
+        "filename": "uso-dos-templates"
       },
       {
         "label": "Construção de componentes",
@@ -221,9 +225,9 @@
             "urllabel": "signin-1"
           },
           {
-            "label": "3 - Verificação do código recebido",
-            "filename": "signin-2",
-            "urllabel": "signin-2"
+            "label": "2 - Verificação do código recebido",
+            "filename": "signin-1",
+            "urllabel": "signin-1"
           },
           {
             "label": "4 - Correção do número do celular",
@@ -242,28 +246,28 @@
         "children": [
           {
             "label": "Com Lista de Opções",
-            "filename": "password-recovery",
-            "urllabel": "password-recovery"
+            "filename": "password",
+            "urllabel": "password"
           },
           {
             "label": "Pelo Celular",
-            "filename": "password-recovery-1",
-            "urllabel": "password-recovery-1"
+            "filename": "password-1",
+            "urllabel": "password-1"
           },
           {
             "label": "Campo com Validação",
-            "filename": "password-recovery-2",
-            "urllabel": "password-recovery-2"
+            "filename": "password-2",
+            "urllabel": "password-2"
           },
           {
             "label": "Precisa de Ajuda?",
-            "filename": "password-recovery-help",
-            "urllabel": "password-recovery-help"
+            "filename": "password-3",
+            "urllabel": "password-3"
           },
           {
             "label": "Mudar Senha",
-            "filename": "password-recovery-change",
-            "urllabel": "password-recovery-change"
+            "filename": "password-4",
+            "urllabel": "password-4"
           }
         ]
       },
@@ -272,8 +276,8 @@
         "children": [
           {
             "label": "Template base",
-            "filename": "page",
-            "urllabel": "page"
+            "filename": "system",
+            "urllabel": "system"
           }
         ]
       },
@@ -282,8 +286,8 @@
         "children": [
           {
             "label": "Sites e portais - Template base",
-            "filename": "portal",
-            "urllabel": "portal"
+            "filename": "site",
+            "urllabel": "site"
           },
           {
             "label": "Sites e portais - Mobile",
