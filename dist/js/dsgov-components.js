@@ -1247,6 +1247,30 @@ for (i = 0; i < target.length; i++) {
   target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
 }
 
+const tab = document.querySelectorAll('.br-tabs .item');
+if(tab){
+				for (let elem of tab) {
+								elem.addEventListener("click", function() { itemActiveSelected(elem) }, false);;
+				}
+}
+
+
+
+
+function itemActiveSelected(event) {
+    
+    const a = document.querySelectorAll('.upload-input');
+    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
+				for (let elem of elements) {
+        elem.parentElement.querySelectorAll(".item")
+        elem.classList.remove("is-active");
+    }
+    event.classList.add("is-active");
+    
+
+
+}
+
 const inputElement = document.querySelector('.upload-input');
 const fileList = document.querySelector('.upload-file-list');
 const header = document.querySelector('.upload-header');
