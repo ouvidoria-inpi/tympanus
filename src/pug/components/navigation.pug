@@ -1,0 +1,162 @@
+mixin navigation
+  nav#navigation.br-navigation(
+    class=attributes.class
+  )
+    header.header
+      .container
+        .logo.is-active
+          span.name Nome do site ou sistema
+          span.description Ministério ou Descrição
+        button.go-back(type="button")
+          span.arrow
+            i.fas.fa-chevron-left
+          span.node Voltar
+    .navigation
+      .container
+        ul.tree.menu-nav.is-active
+          li.item.has-children.is-active
+            button.trigger(type="button")
+              span.name Item de nível 1
+              span.arrow
+                i.fas.fa-chevron-right
+            ul.tree.menu-nav
+              li.item: a(href="") Item de nível 1.1
+              li.item.has-children
+                button.trigger(type="button")
+                  span.name Item de nível 1.2
+                  span.arrow
+                    i.fas.fa-chevron-right
+                ul.tree.menu-nav
+                  li.item: a(href="") Item ne nível 1.2.1
+                  li.item: a(href="") Item ne nível 1.2.2
+                  li.item: a(href="") Item ne nível 1.2.3
+              li.item: a(href="") Item de nível 1.3
+          li.item.has-children.is-active
+            button.trigger(type="button")
+              span.name Conheça a presidência
+              span.arrow
+                i.fas.fa-chevron-right
+            ul.tree.menu-nav
+              li.item: a(href="") Biografia do Presidente
+              li.item: a(href="") Ministros
+              li.item: a(href="") Principais Tropas
+              li.item: a(href="") Principais Tropas
+              li.item: a(href="") Acervo
+              li.item: a(href="") Ritos e Solenidades
+              li.item: a(href="") Presentes recebidos pelo Presidente da República
+          li.item.has-children.is-active
+            button.trigger(type="button")
+              span.name Vice-Presidência
+              span.arrow
+                i.fas.fa-chevron-right
+            ul.tree.menu-nav
+              li.item: a(href="") Agenda Vice-Presidente
+              li.item: a(href="") Agendas do Gabinete Pessoal da Vice-Presidência
+              li.item: a(href="") Biografia
+              li.item: a(href="") Atribuições
+              li.item: a(href="") Discursos e Pronunciamentos
+          li.item.has-children.is-active
+            button.trigger(type="button")
+              span.name Acesso à Informação
+              span.arrow
+                i.fas.fa-chevron-right
+            ul.tree.menu-nav
+              li.item: a(href="") Institucional
+              li.item: a(href="") Ações e Programas
+              li.item: a(href="") Dados abertos
+              li.item: a(href="") Auditorias
+              li.item: a(href="") Convênios
+              li.item: a(href="") Despesas
+              li.item: a(href="") Licitações e contratos
+              li.item: a(href="") Servidores
+              li.item: a(href="") Informações Classificadas
+              li.item: a(href="") Serviço de Informação ao Cidadão
+          li.item.has-children.is-active
+            button.trigger(type="button")
+              span.name Centrais de Conteúdo
+              span.arrow
+                i.fas.fa-chevron-right
+            ul.tree.menu-nav
+              li.item: a(href="") Imagens
+              li.item: a(href="") Vídeos
+              li.item: a(href="") Áudios
+          li.item.has-children.is-active
+            button.trigger(type="button")
+              span.name Fale Conosco
+              span.arrow
+                i.fas.fa-chevron-right
+            ul.tree.menu-nav
+              li.item: a(href="") Fale com o Presidente
+              li.item: a(href="") Ouvidoria
+          li.item.is-active: a(href="") Mensagem do Presidente
+        ul.tree.menu-nav.is-active
+          li.item.has-children.is-active
+            button.trigger.govbr(type="button")
+              span.name gov.br
+              span.arrow
+                i.fas.fa-chevron-right
+            ul.tree.menu-nav
+              li.item: a(href="") Notícias
+              li.item: a(href="") Agenda do Presidente
+              li.item: a(href="") Agenda do Presidente em exercício
+              li.item: a(href="") Discursos
+              li.item: a(href="") Pronunciamentos
+              li.item: a(href="") Notas Oficiais
+              li.item: a(href="") Notas
+              li.item: a(href="") Entrevistas
+              li.item: a(href="") Foto Oficial
+              li.item: a(href="") Área de Imprensa
+              li.item: a(href="") Porta-voz
+              li.item: a(href="") WhatsApp
+    footer.footer
+      .container
+        .row.align-items-center.no-gutters.mx-0
+          .col-auto.mr-3
+            .language.menu
+              button.trigger(type="button")
+                span.name Português
+                span.arrow
+                  i.fas.fa-chevron-down
+              .items
+                .title Idioma/Language
+                button.item.is-active(type="button")
+                  span.name Português
+                button.item(type="button")
+                  span.name English
+                button.item(type="button")
+                  span.name Español
+          .col-auto
+            button.contrast(type="button" accesskey="6")
+              i.fas.fa-adjust.fa-lg
+        .row.justify-content-between
+          .col-md
+            .links
+              span Links úteis 
+              a(href="")
+                | Acesso à Informação 
+                i.fas.fa-external-link-alt
+              a(href="")
+                | Participe
+                i.fas.fa-external-link-alt
+              a(href="")
+                | Órgãos do Governo
+                i.fas.fa-external-link-alt
+              a(href="")
+                | Acessibilidade
+                i.fas.fa-external-link-alt
+          .col-md-auto
+            .social-network
+              span Redes sociais
+              a(href="https://www.twitter.com/twitter.com/govbr")
+                i.fab.fa-twitter.fa-lg
+                span.sr-only Twitter
+              a(href="https://www.youtube.com/youtube.com/govbr")
+                i.fab.fa-youtube.fa-lg
+                span.sr-only YouTube
+              a(href="https://www.facebook.com/facebook.com/govbr")
+                i.fab.fa-facebook-f.fa-lg
+                span.sr-only Facebook
+              a(href="https://www.flickr.com/flickr/govbr")
+                i.fab.fa-flickr.fa-lg
+                span.sr-only Flickr
+
