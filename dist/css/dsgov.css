@@ -11388,13 +11388,15 @@ fieldset legend,
 
 .br-input .qs-datepicker .qs-square.qs-active {
   background: #2670e8;
-  color: #fff; }
+  color: #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff; }
   .br-input .qs-datepicker .qs-square.qs-active .qs-num {
     background: #1351b4;
     border-radius: 16px;
-    height: 1.9em;
-    margin-top: 0.15em;
-    padding: 0.1em 0em 0.2em;
+    height: 2em;
+    margin-top: 0.25em;
+    padding: 0.15em 0em 0.2em;
     text-align: center;
     width: 2.1em; }
 
@@ -11403,7 +11405,8 @@ fieldset legend,
 
 .br-input .qs-datepicker .qs-square.qs-range-date-start:not(.qs-range-date-6) {
   border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
+  border-top-right-radius: 0;
+  border-right-color: transparent; }
 
 .br-input .qs-datepicker .qs-square.qs-range-date-middle {
   background: #2670e8;
@@ -11422,7 +11425,8 @@ fieldset legend,
 .br-input .qs-datepicker .qs-square.qs-range-date-end:not(.qs-range-date-0),
 .br-input .qs-datepicker .qs-square.qs-range-date-middle.qs-range-date-6 {
   border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
+  border-top-left-radius: 0;
+  border-left-color: transparent; }
 
 .br-input .qs-datepicker .qs-square.qs-disabled span {
   opacity: 0.6; }

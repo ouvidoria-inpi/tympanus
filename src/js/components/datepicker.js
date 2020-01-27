@@ -41,7 +41,13 @@ function focusNextElement() {
 function validDate(datePicker) {
   //console.log(datePicker);
   stringDate = datePicker.el.value;
-  range = datePicker.getRange();
+  range = undefined;
+  try {
+    range = datePicker.getRange();
+  }
+  catch (error) {
+    //console.log(error)
+  }
   date = new Date(stringDate.split('/').reverse().join('/'));
   valid = false;
   if (date instanceof Date && isFinite(date)) {
@@ -55,7 +61,7 @@ function validDate(datePicker) {
       }
       else { 
         valid = true; 
-        console.log ("entrou");
+        //console.log ("entrou");
       }
       //if (range.start) console.log("inicio: ", range.start.toLocaleDateString());
       //if (range.end) console.log("fim: ", range.end.toLocaleDateString());
