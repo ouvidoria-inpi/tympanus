@@ -213,6 +213,30 @@ const dtp_default = datepicker('#default', {
   respectDisabledReadOnly: true,
 
 })
+const dtp_disabled = datepicker('#disabled', { 
+  id: 0, 
+  formatter: (input, date, instance) => {
+    const value = date.toLocaleDateString()
+    input.value = value // => '1/1/2099'
+  },
+  onShow: instance => {
+    activeDatePicker = instance;
+  },
+
+  onHide: instance => {
+    validDate(instance);
+  },
+
+  position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
+  customDays: ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+    customMonths: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+  customOverlayMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+  overlayButton: "Confirma",
+  overlayPlaceholder: 'Digite um ano',
+  noWeekends: true,
+  respectDisabledReadOnly: true,
+
+})
 const dtp_start = datepicker('#date-start', { 
   id: 1, 
   formatter: (input, date, instance) => {
@@ -262,6 +286,7 @@ const dtp_end = datepicker('#date-end', {
 
 // Ativa as mascaras dos campos input
 dtp_default.el.addEventListener("keyup", maskDate);
+dtp_disabled.el.addEventListener("keyup", maskDate);
 dtp_start.el.addEventListener("keyup", maskDate);
 dtp_end.el.addEventListener("keyup", maskDate);
 
@@ -805,16 +830,6 @@ window.onload = (function() {
 
 scrim = document.getElementsByClassName("is-foco")[0];
 
-function on() {
-    scrim.classList.add("is-active");
-  }
-  
-function off() {
-    scrim.classList.remove("is-active");
-}
-
-scrim = document.getElementsByClassName("is-foco")[0];
-
 function openModal(div) {
     scrim.innerHTML = div.innerHTML;
     scrim.classList.add("is-active");
@@ -829,6 +844,16 @@ function closeModal() {
     scrim.classList.remove("is-active");
 }
 
+
+scrim = document.getElementsByClassName("is-foco")[0];
+
+function on() {
+    scrim.classList.add("is-active");
+  }
+  
+function off() {
+    scrim.classList.remove("is-active");
+}
 
 let listId = 'search-list'
 let listClass = 'search-items'
@@ -1295,7 +1320,6 @@ window.onload = (function() {
     selectList.push(new BRSelect('br-select', brSelect));
   }
 })();
-function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
 var parentEl
 var parentE2
 var nextEl
@@ -1346,6 +1370,30 @@ function setActive(el) {
 var target = document.getElementsByTagName('tr')
 for (i = 0; i < target.length; i++) {
   target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
+}
+
+function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
+const tab = dropbox = document.querySelectorAll('.br-tabs .item');
+
+for (let elem of tab) {
+    elem.addEventListener("click", function() { foi(elem) }, false);;
+
+}
+
+
+function foi(event) {
+    console.log(event);
+    const a = document.querySelectorAll('.upload-input');
+    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
+
+    for (let elem of elements) {
+        elem.parentElement.querySelectorAll(".item")
+        elem.classList.remove("is-active");
+    }
+    event.classList.add("is-active");
+    console.log(event.classList);
+
+
 }
 
 const inputElement = document.querySelector('.upload-input');
@@ -1449,28 +1497,5 @@ function drop(e) {
   const files = dt.files;
 
   handleFiles(files);
-}
-
-const tab = dropbox = document.querySelectorAll('.br-tabs .item');
-
-for (let elem of tab) {
-    elem.addEventListener("click", function() { foi(elem) }, false);;
-
-}
-
-
-function foi(event) {
-    console.log(event);
-    const a = document.querySelectorAll('.upload-input');
-    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
-
-    for (let elem of elements) {
-        elem.parentElement.querySelectorAll(".item")
-        elem.classList.remove("is-active");
-    }
-    event.classList.add("is-active");
-    console.log(event.classList);
-
-
 }
 //# sourceMappingURL=dsgov-components.js.map

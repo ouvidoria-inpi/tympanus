@@ -27,9 +27,8 @@ const maskDate = event => {
 
 // Funcao para mudar o foco para o proximo elemento
 function focusNextElement() {
-  const inputs = Array.prototype.slice.call(document.querySelectorAll("input, select"))
-  //console.log(inputs)
-  const index = (inputs.indexOf(document.activeElement) + 2) % inputs.length
+  const inputs = Array.prototype.slice.call(document.querySelectorAll("input:not([disabled]):not([class='qs-overlay-year']), select"))
+  const index = (inputs.indexOf(document.activeElement) + 1) % inputs.length
   const input = inputs[index]
   input.focus()
   input.select()
@@ -61,10 +60,7 @@ function validDate(datePicker) {
       }
       else { 
         valid = true; 
-        //console.log ("entrou");
       }
-      //if (range.start) console.log("inicio: ", range.start.toLocaleDateString());
-      //if (range.end) console.log("fim: ", range.end.toLocaleDateString());
     }
 
     // Validação da data para o minDate e maxDate
@@ -89,6 +85,104 @@ function validDate(datePicker) {
 // Definicoes de parametros dos componentes em tela
 const dtp_default = datepicker('#default', { 
   id: 0, 
+  formatter: (input, date, instance) => {
+    const value = date.toLocaleDateString()
+    input.value = value // => '1/1/2099'
+  },
+  onShow: instance => {
+    activeDatePicker = instance;
+  },
+
+  onHide: instance => {
+    validDate(instance);
+  },
+
+  position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
+  customDays: ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+    customMonths: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+  customOverlayMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+  overlayButton: "Confirma",
+  overlayPlaceholder: 'Digite um ano',
+  noWeekends: true,
+  respectDisabledReadOnly: true,
+  minDate: new Date(2019, 0, 1),
+  maxDate:  new Date(),
+
+})
+const dtp_disabled = datepicker('#disabled', { 
+  id: 2, 
+  formatter: (input, date, instance) => {
+    const value = date.toLocaleDateString()
+    input.value = value // => '1/1/2099'
+  },
+  onShow: instance => {
+    activeDatePicker = instance;
+  },
+
+  onHide: instance => {
+    validDate(instance);
+  },
+
+  position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
+  customDays: ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+    customMonths: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+  customOverlayMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+  overlayButton: "Confirma",
+  overlayPlaceholder: 'Digite um ano',
+  noWeekends: true,
+  respectDisabledReadOnly: true,
+
+})
+const dtp_focus = datepicker('#focus', { 
+  id: 3, 
+  formatter: (input, date, instance) => {
+    const value = date.toLocaleDateString()
+    input.value = value // => '1/1/2099'
+  },
+  onShow: instance => {
+    activeDatePicker = instance;
+  },
+
+  onHide: instance => {
+    validDate(instance);
+  },
+
+  position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
+  customDays: ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+    customMonths: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+  customOverlayMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+  overlayButton: "Confirma",
+  overlayPlaceholder: 'Digite um ano',
+  noWeekends: true,
+  respectDisabledReadOnly: true,
+
+})
+const dtp_valid = datepicker('#valid', { 
+  id: 4, 
+  formatter: (input, date, instance) => {
+    const value = date.toLocaleDateString()
+    input.value = value // => '1/1/2099'
+  },
+  onShow: instance => {
+    activeDatePicker = instance;
+  },
+
+  onHide: instance => {
+    validDate(instance);
+  },
+
+  position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
+  customDays: ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+    customMonths: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+  customOverlayMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+  overlayButton: "Confirma",
+  overlayPlaceholder: 'Digite um ano',
+  noWeekends: true,
+  respectDisabledReadOnly: true,
+
+})
+const dtp_invalid = datepicker('#invalid', { 
+  id: 5, 
   formatter: (input, date, instance) => {
     const value = date.toLocaleDateString()
     input.value = value // => '1/1/2099'
@@ -160,6 +254,10 @@ const dtp_end = datepicker('#date-end', {
 
 // Ativa as mascaras dos campos input
 dtp_default.el.addEventListener("keyup", maskDate);
+dtp_disabled.el.addEventListener("keyup", maskDate);
+dtp_focus.el.addEventListener("keyup", maskDate);
+dtp_valid.el.addEventListener("keyup", maskDate);
+dtp_invalid.el.addEventListener("keyup", maskDate);
 dtp_start.el.addEventListener("keyup", maskDate);
 dtp_end.el.addEventListener("keyup", maskDate);
 
