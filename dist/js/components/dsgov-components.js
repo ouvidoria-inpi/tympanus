@@ -102,11 +102,17 @@ window.onload = (function() {
 
 // Documentação js-datepicker - https://www.npmjs.com/package/js-datepicker
 
+
+// referencia ao datepicker ativo na pagina para submeter ações de mostrar/esconder
+var activeDatePicker;
+
 // Função para mascarar a data no formato dd/mm/yyyy ao digitar no campo
 const maskDate = event => {
   date = event.target.value;
   if (event.key == "Enter"){
+    activeDatePicker.hide();
     focusNextElement();
+    return
   }
   let v = date.replace(/\D/g,'').slice(0, 8);
   if (v.length >= 5) {
@@ -123,31 +129,31 @@ const maskDate = event => {
 
 // Funcao para mudar o foco para o proximo elemento
 function focusNextElement() {
-  //add all elements we want to include in our selection
-  var focussableElements = 'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
-  if (document.activeElement && document.activeElement.form) {
-      var focussable = Array.prototype.filter.call(document.activeElement.form.querySelectorAll(focussableElements),
-      function (element) {
-          //check for visibility while always include the current activeElement 
-          return element.offsetWidth > 0 || element.offsetHeight > 0 || element === document.activeElement
-      });
-      var index = focussable.indexOf(document.activeElement);
-      if(index > -1) {
-         var nextElement = focussable[index + 1] || focussable[0];
-         nextElement.focus();
-      }                    
-  }
+  const inputs = Array.prototype.slice.call(document.querySelectorAll("input, select"))
+  //console.log(inputs)
+  const index = (inputs.indexOf(document.activeElement) + 2) % inputs.length
+  const input = inputs[index]
+  input.focus()
+  input.select()
 }
 
 // Funcao para transferir o valor digitado no input para o componente 
 function validDate(datePicker) {
   //console.log(datePicker);
   stringDate = datePicker.el.value;
-  range = datePicker.getRange();
+  range = undefined;
+  try {
+    range = datePicker.getRange();
+  }
+  catch (error) {
+    //console.log(error)
+  }
   date = new Date(stringDate.split('/').reverse().join('/'));
-  valid = false;
+  valid = false
   if (date instanceof Date && isFinite(date)) {
     //console.log(date.toLocaleDateString());
+    valid = true
+    //console.log(range)
     if (range) {
       if (datePicker.first && range.end) {
         valid = date > range.end ? false : true;
@@ -157,7 +163,7 @@ function validDate(datePicker) {
       }
       else { 
         valid = true; 
-        console.log ("entrou");
+        //console.log ("entrou");
       }
       //if (range.start) console.log("inicio: ", range.start.toLocaleDateString());
       //if (range.end) console.log("fim: ", range.end.toLocaleDateString());
@@ -189,6 +195,10 @@ const dtp_default = datepicker('#default', {
     const value = date.toLocaleDateString()
     input.value = value // => '1/1/2099'
   },
+  onShow: instance => {
+    activeDatePicker = instance;
+  },
+
   onHide: instance => {
     validDate(instance);
   },
@@ -209,6 +219,9 @@ const dtp_start = datepicker('#date-start', {
     const value = date.toLocaleDateString()
     input.value = value // => '1/1/2099'
   },
+  onShow: instance => {
+    activeDatePicker = instance;
+  },
   onHide: instance => {
     validDate(instance);
   },
@@ -228,6 +241,9 @@ const dtp_end = datepicker('#date-end', {
   formatter: (input, date, instance) => {
     const value = date.toLocaleDateString()
     input.value = value // => '1/1/2099'
+  },
+  onShow: instance => {
+    activeDatePicker = instance;
   },
   onHide: instance => {
     validDate(instance);
@@ -789,6 +805,16 @@ window.onload = (function() {
 
 scrim = document.getElementsByClassName("is-foco")[0];
 
+function on() {
+    scrim.classList.add("is-active");
+  }
+  
+function off() {
+    scrim.classList.remove("is-active");
+}
+
+scrim = document.getElementsByClassName("is-foco")[0];
+
 function openModal(div) {
     scrim.innerHTML = div.innerHTML;
     scrim.classList.add("is-active");
@@ -803,16 +829,6 @@ function closeModal() {
     scrim.classList.remove("is-active");
 }
 
-
-scrim = document.getElementsByClassName("is-foco")[0];
-
-function on() {
-    scrim.classList.add("is-active");
-  }
-  
-function off() {
-    scrim.classList.remove("is-active");
-}
 
 let listId = 'search-list'
 let listClass = 'search-items'
@@ -1332,29 +1348,6 @@ for (i = 0; i < target.length; i++) {
   target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
 }
 
-const tab = dropbox = document.querySelectorAll('.br-tabs .item');
-
-for (let elem of tab) {
-    elem.addEventListener("click", function() { foi(elem) }, false);;
-
-}
-
-
-function foi(event) {
-    console.log(event);
-    const a = document.querySelectorAll('.upload-input');
-    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
-
-    for (let elem of elements) {
-        elem.parentElement.querySelectorAll(".item")
-        elem.classList.remove("is-active");
-    }
-    event.classList.add("is-active");
-    console.log(event.classList);
-
-
-}
-
 const inputElement = document.querySelector('.upload-input');
 const fileList = document.querySelector('.upload-file-list');
 const header = document.querySelector('.upload-header');
@@ -1456,5 +1449,28 @@ function drop(e) {
   const files = dt.files;
 
   handleFiles(files);
+}
+
+const tab = dropbox = document.querySelectorAll('.br-tabs .item');
+
+for (let elem of tab) {
+    elem.addEventListener("click", function() { foi(elem) }, false);;
+
+}
+
+
+function foi(event) {
+    console.log(event);
+    const a = document.querySelectorAll('.upload-input');
+    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
+
+    for (let elem of elements) {
+        elem.parentElement.querySelectorAll(".item")
+        elem.classList.remove("is-active");
+    }
+    event.classList.add("is-active");
+    console.log(event.classList);
+
+
 }
 //# sourceMappingURL=dsgov-components.js.map

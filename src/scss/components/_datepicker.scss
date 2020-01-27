@@ -308,9 +308,9 @@
 }
 .qs-datepicker .qs-square.qs-active {
   background: $color-primary-lighten-2; //$color-primary;
-  color: $color-white;
   border-left: 2px solid $color-white;
   border-right: 2px solid $color-white;
+  color: $color-white;
   .qs-num {
     background: $color-primary;
     border-radius: 16px;
@@ -327,8 +327,8 @@
   }
   &:not(.qs-range-date-6) {
     border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
     border-right-color: transparent;
+    border-top-right-radius: 0;
   }
 }
 .qs-datepicker .qs-square.qs-range-date-middle {
@@ -349,8 +349,8 @@
 .qs-datepicker .qs-square.qs-range-date-end:not(.qs-range-date-0),
 .qs-datepicker .qs-square.qs-range-date-middle.qs-range-date-6 {
   border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
   border-left-color: transparent;
+  border-top-left-radius: 0;
 }
 .qs-datepicker .qs-square.qs-disabled span {
   opacity: 0.6;
