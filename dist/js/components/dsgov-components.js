@@ -104,7 +104,15 @@ window.onload = (function() {
 
 
 // referencia ao datepicker ativo na pagina para submeter ações de mostrar/esconder
-var activeDatePicker;
+var activeDatePicker
+
+//Mensagens de erro
+const err1 = 'Data inicial maior que data final ';
+const err2 = 'Data final maior que data inicial ';
+const err3 = 'Data deve ser superior a: ';
+const err4 = 'Data deve ser inferior a: ';
+const err5 = 'Data deve estar entre ';
+const err5and = ' e ';
 
 // Função para mascarar a data no formato dd/mm/yyyy ao digitar no campo
 const maskDate = event => {
@@ -129,9 +137,8 @@ const maskDate = event => {
 
 // Funcao para mudar o foco para o proximo elemento
 function focusNextElement() {
-  const inputs = Array.prototype.slice.call(document.querySelectorAll("input, select"))
-  //console.log(inputs)
-  const index = (inputs.indexOf(document.activeElement) + 2) % inputs.length
+  const inputs = Array.prototype.slice.call(document.querySelectorAll("input:not([disabled]):not([class='qs-overlay-year']), select"))
+  const index = (inputs.indexOf(document.activeElement) +1) % inputs.length
   const input = inputs[index]
   input.focus()
   input.select()
@@ -140,10 +147,11 @@ function focusNextElement() {
 // Funcao para transferir o valor digitado no input para o componente 
 function validDate(datePicker) {
   //console.log(datePicker);
-  stringDate = datePicker.el.value;
-  range = undefined;
+  stringDate = datePicker.el.value
+  range = undefined
+  msg_error = [] 
   try {
-    range = datePicker.getRange();
+    range = datePicker.getRange()
   }
   catch (error) {
     //console.log(error)
@@ -151,93 +159,49 @@ function validDate(datePicker) {
   date = new Date(stringDate.split('/').reverse().join('/'));
   valid = false
   if (date instanceof Date && isFinite(date)) {
-    //console.log(date.toLocaleDateString());
     valid = true
-    //console.log(range)
     if (range) {
-      if (datePicker.first && range.end) {
-        valid = date > range.end ? false : true;
+      if (datePicker.first) {
+        if (range.end) {
+          valid = date > range.end ? false : true;
+          if (!valid) msg_error.push(err1);
+        }
       }
-      else if (!datePicker.first && range.start) {
+      else if (range.start) {
         valid = date < range.start ? false : true;
+        if (!valid) msg_error.push(err2);
       }
-      else { 
-        valid = true; 
-        //console.log ("entrou");
-      }
-      //if (range.start) console.log("inicio: ", range.start.toLocaleDateString());
-      //if (range.end) console.log("fim: ", range.end.toLocaleDateString());
     }
 
     // Validação da data para o minDate e maxDate
-    if (datePicker.minDate) {
-      valid = date >= datePicker.minDate ? true : false;
-    }
-    if (datePicker.maxDate) {
-      valid = date <= datePicker.maxDate ? true : false;
-    }
     if ( datePicker.minDate && datePicker.maxDate) {
       valid = date >= datePicker.minDate && date <= datePicker.maxDate ? true : false;
+      if (!valid) msg_error.push(err5 + datePicker.minDate.toLocaleDateString() + err5and + datePicker.maxDate.toLocaleDateString());
+    } else 
+    if (datePicker.minDate) {
+      valid = date >= datePicker.minDate ? true : false;
+      if (!valid) msg_error.push(err3 + datePicker.minDate.toLocaleDateString());
+    } else
+    if (datePicker.maxDate) {
+      valid = date <= datePicker.maxDate ? true : false;
+      if (!valid) msg_error.push( err4 + datePicker.maxDate.toLocaleDateString());
+    }
+
+    // Muda a data apenas se for valida
+    if (msg_error.length == 0) {
+      datePicker.setDate(date, 1);
+      datePicker.parent.classList.toggle("is-valid")
+    }
+    else {
+      datePicker.parent.classList.toggle("is-invalid")
+      return msg_error
     }
   }
-  //console.log (valid);
-  // Muda a data apenas se for valida
-  if (valid) datePicker.setDate(date, 1);
-  // Retorna ao ultimo valor selecionado valido 
-  else datePicker.el.value = datePicker.dateSelected ? datePicker.dateSelected.toLocaleDateString() : "";
 }
 
 
 // Definicoes de parametros dos componentes em tela
 const dtp_default = datepicker('#default', { 
-  id: 0, 
-  formatter: (input, date, instance) => {
-    const value = date.toLocaleDateString()
-    input.value = value // => '1/1/2099'
-  },
-  onShow: instance => {
-    activeDatePicker = instance;
-  },
-
-  onHide: instance => {
-    validDate(instance);
-  },
-
-  position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
-  customDays: ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
-    customMonths: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-  customOverlayMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-  overlayButton: "Confirma",
-  overlayPlaceholder: 'Digite um ano',
-  noWeekends: true,
-  respectDisabledReadOnly: true,
-
-})
-const dtp_disabled = datepicker('#disabled', { 
-  id: 0, 
-  formatter: (input, date, instance) => {
-    const value = date.toLocaleDateString()
-    input.value = value // => '1/1/2099'
-  },
-  onShow: instance => {
-    activeDatePicker = instance;
-  },
-
-  onHide: instance => {
-    validDate(instance);
-  },
-
-  position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
-  customDays: ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
-    customMonths: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-  customOverlayMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-  overlayButton: "Confirma",
-  overlayPlaceholder: 'Digite um ano',
-  noWeekends: true,
-  respectDisabledReadOnly: true,
-
-})
-const dtp_start = datepicker('#date-start', { 
   id: 1, 
   formatter: (input, date, instance) => {
     const value = date.toLocaleDateString()
@@ -246,8 +210,10 @@ const dtp_start = datepicker('#date-start', {
   onShow: instance => {
     activeDatePicker = instance;
   },
+
   onHide: instance => {
-    validDate(instance);
+    msg_error = validDate(instance);
+    console.log(msg_error)
   },
 
   position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
@@ -258,10 +224,38 @@ const dtp_start = datepicker('#date-start', {
   overlayPlaceholder: 'Digite um ano',
   noWeekends: true,
   respectDisabledReadOnly: true,
+  minDate: new Date(2019, 0, 1),
+  maxDate:  new Date(),
+})
+
+
+const dtp_start = datepicker('#date-start', { 
+  id: 2, 
+  formatter: (input, date, instance) => {
+    const value = date.toLocaleDateString()
+    input.value = value // => '1/1/2099'
+  },
+  onShow: instance => {
+    activeDatePicker = instance;
+  },
+  onHide: instance => {
+    msg_error = validDate(instance);
+    console.log(msg_error)
+  },
+
+  position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
+  customDays: ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+    customMonths: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+  customOverlayMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+  overlayButton: "Confirma",
+  overlayPlaceholder: 'Digite um ano',
+  noWeekends: true,
+  respectDisabledReadOnly: true,
+  maxDate:  new Date(),
 
 })
 const dtp_end = datepicker('#date-end', { 
-  id: 1, 
+  id: 2, 
   formatter: (input, date, instance) => {
     const value = date.toLocaleDateString()
     input.value = value // => '1/1/2099'
@@ -270,7 +264,8 @@ const dtp_end = datepicker('#date-end', {
     activeDatePicker = instance;
   },
   onHide: instance => {
-    validDate(instance);
+    msg_error = validDate(instance);
+    console.log(msg_error)
   },
   
   position: 'bl', //This can be 1 of 5 values: 'tr', 'tl', 'br', 'bl', 'c' representing top-right, top-left, bottom-right, bottom-left, and centered respectively. Datepicker will position itself accordingly relative to the element you reference in the 1st argument. For a value of 'c', Datepicker will position itself fixed, smack in the middle of the screen. This can be desirable for mobile devices.
@@ -281,12 +276,13 @@ const dtp_end = datepicker('#date-end', {
   overlayPlaceholder: 'Digite um ano',
   noWeekends: true,
   respectDisabledReadOnly: true,
+  maxDate:  new Date(),
 
 })
 
 // Ativa as mascaras dos campos input
+
 dtp_default.el.addEventListener("keyup", maskDate);
-dtp_disabled.el.addEventListener("keyup", maskDate);
 dtp_start.el.addEventListener("keyup", maskDate);
 dtp_end.el.addEventListener("keyup", maskDate);
 
@@ -830,6 +826,16 @@ window.onload = (function() {
 
 scrim = document.getElementsByClassName("is-foco")[0];
 
+function on() {
+    scrim.classList.add("is-active");
+  }
+  
+function off() {
+    scrim.classList.remove("is-active");
+}
+
+scrim = document.getElementsByClassName("is-foco")[0];
+
 function openModal(div) {
     scrim.innerHTML = div.innerHTML;
     scrim.classList.add("is-active");
@@ -844,16 +850,6 @@ function closeModal() {
     scrim.classList.remove("is-active");
 }
 
-
-scrim = document.getElementsByClassName("is-foco")[0];
-
-function on() {
-    scrim.classList.add("is-active");
-  }
-  
-function off() {
-    scrim.classList.remove("is-active");
-}
 
 let listId = 'search-list'
 let listClass = 'search-items'
@@ -1320,6 +1316,7 @@ window.onload = (function() {
     selectList.push(new BRSelect('br-select', brSelect));
   }
 })();
+function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
 var parentEl
 var parentE2
 var nextEl
@@ -1372,7 +1369,6 @@ for (i = 0; i < target.length; i++) {
   target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
 }
 
-function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
 const tab = dropbox = document.querySelectorAll('.br-tabs .item');
 
 for (let elem of tab) {

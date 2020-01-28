@@ -20,6 +20,34 @@
   input {
     padding-right: 32px;
   }
+  +p.help +div.feedback.is-valid,
+  +div.feedback.is-valid,
+  +p.help +div.feedback.is-valid +div.feedback.is-invalid,
+  +div.feedback.is-valid +div.feedback.is-invalid   {
+    display: none;
+  }
+  &.is-valid {
+    +p.help {
+      display: none;
+    }
+    +div.feedback.is-valid,
+    +p.help +div.feedback.is-valid {
+      display: block;
+    }
+  }
+  &.is-invalid {
+    +p.help {
+      display: none;
+    }
+    +div.feedback.is-valid,
+    +p.help +div.feedback.is-valid {
+      display: none;
+    }
+    +div.feedback.is-valid +div.feedback.is-invalid,
+    +p.help +div.feedback.is-valid +div.feedback.is-invalid {
+      display: block;
+    }
+  }
 }
 .qs-datepicker-container {
   -moz-user-select: none;
