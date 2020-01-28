@@ -11636,12 +11636,6 @@ fieldset legend,
   .br-navigation .menu {
     position: relative;
     z-index: 1; }
-    .br-navigation .menu .trigger {
-      align-items: baseline;
-      display: inline-flex;
-      padding: 0; }
-      .br-navigation .menu .trigger:hover .arrow::after {
-        background: #dbe8fb; }
     .br-navigation .menu .arrow {
       align-items: center;
       display: inline-flex;
@@ -11656,6 +11650,12 @@ fieldset legend,
         position: absolute;
         width: 16px;
         z-index: -1; }
+    .br-navigation .menu .trigger {
+      align-items: baseline;
+      display: inline-flex;
+      padding: 0; }
+      .br-navigation .menu .trigger:hover .arrow::after {
+        background: #dbe8fb; }
     .br-navigation .menu .items {
       background: #fff;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
@@ -11777,12 +11777,6 @@ fieldset legend,
     .br-navigation .user-bar .bookmarks .bookmark {
       display: inline-block;
       margin: 16px 0 0; }
-      .br-navigation .user-bar .bookmarks .bookmark:hover {
-        text-decoration: none; }
-        .br-navigation .user-bar .bookmarks .bookmark:hover .brand {
-          border-color: #2670e8; }
-        .br-navigation .user-bar .bookmarks .bookmark:hover .name {
-          color: #2670e8; }
       .br-navigation .user-bar .bookmarks .bookmark .brand {
         background: #f8f8f8;
         border: 1px solid #ccc;
@@ -11795,6 +11789,12 @@ fieldset legend,
         font-weight: 500;
         margin-top: 4px;
         text-align: center; }
+      .br-navigation .user-bar .bookmarks .bookmark:hover {
+        text-decoration: none; }
+        .br-navigation .user-bar .bookmarks .bookmark:hover .brand {
+          border-color: #2670e8; }
+        .br-navigation .user-bar .bookmarks .bookmark:hover .name {
+          color: #2670e8; }
     .br-navigation .user-bar .bookmarks .more {
       font-size: 10px;
       font-weight: 600;
@@ -11856,6 +11856,8 @@ fieldset legend,
     .br-navigation .tree .item {
       display: none;
       flex-flow: column; }
+    .br-navigation .tree .arrow {
+      font-size: 12px; }
     .br-navigation .tree .label {
       box-shadow: inset 0 1px 0 #c5d4eb, inset 0 -1px 0 #c5d4eb;
       color: #1351b4;
@@ -11883,8 +11885,6 @@ fieldset legend,
     .br-navigation .tree .govbr {
       font-weight: 900;
       letter-spacing: -1px; }
-    .br-navigation .tree .arrow {
-      font-size: 12px; }
     .br-navigation .tree a {
       color: #555;
       padding: 8px 16px; }
@@ -11909,17 +11909,6 @@ fieldset legend,
       box-shadow: inset -1px 0 0 #ccc;
       flex: 1;
       width: 25%; }
-      .br-navigation.is-site .tree .item:hover > .trigger,
-      .br-navigation.is-site .tree .item:hover > a {
-        background: #0c326f;
-        color: #fff; }
-      .br-navigation.is-site .tree .item:hover > .tree {
-        display: block; }
-        .br-navigation.is-site .tree .item:hover > .tree > .item {
-          display: flex; }
-      .br-navigation.is-site .tree .item .item:hover > .trigger,
-      .br-navigation.is-site .tree .item .item:hover > a {
-        background: #1351b4; }
       .br-navigation.is-site .tree .tree {
         bottom: 0;
         left: 25%;
@@ -11930,6 +11919,17 @@ fieldset legend,
         .br-navigation.is-site .tree .tree .tree {
           left: 100%;
           width: 100%; }
+      .br-navigation.is-site .tree .item .item:hover > .trigger,
+      .br-navigation.is-site .tree .item .item:hover > a {
+        background: #1351b4; }
+      .br-navigation.is-site .tree .item:hover > .trigger,
+      .br-navigation.is-site .tree .item:hover > a {
+        background: #0c326f;
+        color: #fff; }
+      .br-navigation.is-site .tree .item:hover > .tree {
+        display: block; }
+        .br-navigation.is-site .tree .item:hover > .tree > .item {
+          display: flex; }
       .br-navigation.is-site .tree + .tree {
         box-shadow: inset -1px 0 0 #ccc, inset 0 1px 0 #ccc; } }
   .br-navigation.is-system .tree {
@@ -12757,5 +12757,3 @@ fieldset legend,
   .br-upload .upload-size {
     text-align: right;
     visibility: hidden; }
-
-/*# sourceMappingURL=dsgov.css.map */
