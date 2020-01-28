@@ -6,16 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Modal</title>
     <!-- Fonte Rawline-->
-    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/fonts/rawline/css/rawline.css">
     <!-- Fonte Raleway-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
     <!-- Design System de Governo-->
-    <link rel="stylesheet" href="../css/dsgov.css">
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/css/dsgov.css">
     <!-- Fontawesome-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
   </head>
   <body>
     <div class="container-fluid">
+      <div class="br-scrim is-foco" onclick="off()">
+        <div class="br-modal is-medium">
+          <div class="container-fluid px-0">
+            <div class="br-modal-header">
+              <div class="br-modal-title" title="Retornar para página inicial?">Retornar para página inicial?</div>
+            </div>
+            <div class="br-modal-body">
+              <p>Você está sendo redirecionado para a página inicial do sistema</p>
+            </div>
+            <div class="br-modal-footer justify-content-end">
+              <button class="br-button is-small is-secondary" type="button">Cancelar
+              </button>
+              <button class="br-button is-small is-primary ml-3" type="button">Retornar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="br-button is-large is-secondary" type="button" onclick="on()">Modal com Scrim</button>
+      <hr>
       <div class="br-modal is-medium">
         <div class="container-fluid px-0">
           <div class="br-modal-header">
@@ -334,6 +354,6 @@
         </div>
       </div>
     </div>
-    <script src="../js/components/select.js"></script>
+    <script src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/js/dsgov-components.js"></script>
   </body>
 </html>
