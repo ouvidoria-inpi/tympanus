@@ -1,25 +1,27 @@
 .#{$prefix}input {
 &.datepicker {
-  label {
-      &::after {
-      bottom: 8px;
-      color: $color-primary;
-      content: "\f073";
-      display: block;
-      font-family: Font Awesome\ 5 Free;
-      font-size: 20px;
-      font-weight: 900;
-      position: absolute;
-      right: 16px;
-      z-index: 999;
-    }
-    &:hover::after {
-      color: $color-primary-lighten-2;
+  button {
+    background: transparent;
+    border: 0 transparent;
+    bottom: 12px;
+    color: $color-primary;
+    display: block;
+    position: absolute;
+    right: 12px;
+    z-index: 999;
+    &:hover {
+        color: $color-primary-lighten-2;
     }
   }
   input {
     padding-right: 32px;
+    &:focus {
+      border-color: $color-primary-lighten-2;
+      box-shadow: 0 0 0 1px $color-primary-lighten-2;
+      outline: none;
+    }
   }
+
   +p.help +div.feedback.is-valid,
   +div.feedback.is-valid,
   +p.help +div.feedback.is-valid +div.feedback.is-invalid,

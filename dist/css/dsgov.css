@@ -11123,23 +11123,24 @@ fieldset legend,
   .br-checklist .br-radio {
     margin-left: auto; }
 
-.br-input.datepicker label::after {
-  bottom: 8px;
+.br-input.datepicker button {
+  background: transparent;
+  border: 0 transparent;
+  bottom: 12px;
   color: #1351b4;
-  content: "\f073";
   display: block;
-  font-family: Font Awesome\ 5 Free;
-  font-size: 20px;
-  font-weight: 900;
   position: absolute;
-  right: 16px;
+  right: 12px;
   z-index: 999; }
-
-.br-input.datepicker label:hover::after {
-  color: #2670e8; }
+  .br-input.datepicker button:hover {
+    color: #2670e8; }
 
 .br-input.datepicker input {
   padding-right: 32px; }
+  .br-input.datepicker input:focus {
+    border-color: #2670e8;
+    box-shadow: 0 0 0 1px #2670e8;
+    outline: none; }
 
 .br-input.datepicker + p.help + div.feedback.is-valid,
 .br-input.datepicker + div.feedback.is-valid,
