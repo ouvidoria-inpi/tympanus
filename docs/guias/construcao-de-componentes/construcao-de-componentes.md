@@ -38,7 +38,12 @@ design-system/
         └── _components.scss (incluir o novo componente na lista de componentes)
 ```
 
-No exemplo a seguir iremos criar um botão simples. Com as seguintes características: _Fundo preto, texto branco e letras maiúsculas, quadrado, ao clicar é exibida a mensagem: "Botão clicado!"_.
+No exemplo a seguir iremos criar um botão simples. Com as seguintes características:
+
+- Fundo preto
+- texto branco e letras maiúsculas
+- quadrado
+- ao clicar é exibida a mensagem: "Botão clicado!"
 
 ### Código reusável
 

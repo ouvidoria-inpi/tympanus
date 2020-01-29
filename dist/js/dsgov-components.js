@@ -108,122 +108,30 @@ window.onload = (function() {
   }
 })();
 
-class BRHeader {
+function toggleInputAction(element, className) {
+  for (
+    var inputAction = element;
+    !inputAction.classList.contains(className);
+    inputAction = inputAction.parentNode
+  );
 
-  constructor(name, component) {
-    this.HEADER_SITE_SELECTOR = '.br-header.is-site';
-    this.LANGUAGE_MENU_TRIGGER_SELECTOR = '.language.menu button.trigger';
-    this.LANGUAGE_MENU_TRIGGER_NAME_SELECTOR = '.language.menu button.trigger .name'
-    this.LANGUAGE_MENU_ITEM_SELECTOR = '.language.menu .item';
-    this.LANGUAGE_MENU_ITEM_NAME_SELECTOR = '.name';
-    this.SEARCH_INPUT_SELECTOR = '.search input';
-    this.SEARCH_CLOSE_SELECTOR = '.search .close';
-    this.CONFIGS_MENU_TRIGGER_SELECTOR = '.configs.menu button.trigger';
-    this.BOOKMARKS_MENU_TRIGGER_SELECTOR = '.bookmarks.menu button.trigger';
-    this.MENU_HAMBURGER_TRIGGER_SELECTOR = '.menu-hamburger';
-    this.ACTIVE_CLASS = 'is-active';
-    this.name = name;
-    this.component = component;
+  var icon = element.getElementsByClassName("fas")[0];
 
-    switch (this.component.classList.value) {
-      case 'br-header is-site':
-        this._setSiteHeaderBehavior();
-        break;
-      case 'br-header is-system':
-        this._setSystemHeaderBehavior();
-        break;
-    }
-  }
-
-  _setSiteHeaderBehavior() {
-    this._setSelectedLanguage();
-    this._setLanguageMenuBehavior();
-    this._setSearchMenuBehavior();
-    this._setMenuHamburgerBehavior();
-  }
-
-  _setSystemHeaderBehavior() {
-    this._setConfigsMenuBehavior();
-    this._setBookmarksMenuBehavior();
-    this._setSearchMenuBehavior();
-    this._setMenuHamburgerBehavior();
-  }
-
-  _setLanguageMenuBehavior() {
-    for (let languageMenuTrigger of this.component.querySelectorAll(this.LANGUAGE_MENU_TRIGGER_SELECTOR)) {
-      languageMenuTrigger.addEventListener('click', (event) => {
-        event.currentTarget.parentNode.classList.toggle(this.ACTIVE_CLASS);
-      });
-      for (let languageMenuItem of this.component.querySelectorAll(this.LANGUAGE_MENU_ITEM_SELECTOR)) {
-        languageMenuItem.addEventListener('click', (event) => {
-          for (let sibling of this.component.querySelectorAll(this.LANGUAGE_MENU_ITEM_SELECTOR)) {
-            if (sibling === event.currentTarget) {
-              sibling.classList.add(this.ACTIVE_CLASS);
-              languageMenuTrigger.parentNode.classList.toggle(this.ACTIVE_CLASS);
-            } else {
-              sibling.classList.remove(this.ACTIVE_CLASS);
-            }
-          }
-          this._setSelectedLanguage();
-        });
-      }
-    }
-  }
-
-  _setSelectedLanguage() {
-    for (let languageItem of this.component.querySelectorAll(this.LANGUAGE_MENU_ITEM_SELECTOR)) {
-      if (languageItem.classList.contains(this.ACTIVE_CLASS)) {
-        for (let languageItemName of languageItem.querySelectorAll(this.LANGUAGE_MENU_ITEM_NAME_SELECTOR)) {
-          for (let languageTriggerName of this.component.querySelectorAll(this.LANGUAGE_MENU_TRIGGER_NAME_SELECTOR)) {
-            languageTriggerName.innerText = languageItemName.innerText;
-          }
-        }
-      }
-    }
-  }
-
-  _setSearchMenuBehavior() {
-    for (let searchInput of this.component.querySelectorAll(this.SEARCH_INPUT_SELECTOR)) {
-      searchInput.addEventListener('focus', (event) => {
-        event.currentTarget.parentNode.parentNode.classList.add(this.ACTIVE_CLASS);
-      });
-    }
-    for (let searchClose of this.component.querySelectorAll(this.SEARCH_CLOSE_SELECTOR)) {
-      searchClose.addEventListener('click', (event) => {
-        event.currentTarget.parentNode.classList.remove(this.ACTIVE_CLASS);
-      });
-    }
-  }
-
-  _setConfigsMenuBehavior() {
-    for (let configsMenuTrigger of this.component.querySelectorAll(this.CONFIGS_MENU_TRIGGER_SELECTOR)) {
-      configsMenuTrigger.addEventListener('click', (event) => {
-        event.currentTarget.parentNode.classList.toggle(this.ACTIVE_CLASS);
-      });
-    }
-  }
-
-  _setBookmarksMenuBehavior() {
-    for (let bookmarksMenuTrigger of this.component.querySelectorAll(this.BOOKMARKS_MENU_TRIGGER_SELECTOR)) {
-      bookmarksMenuTrigger.addEventListener('click', (event) => {
-        event.currentTarget.parentNode.classList.toggle(this.ACTIVE_CLASS);
-      });
-    }
-  }
-
-  _setMenuHamburgerBehavior() {
-    for (let menuHamburger of this.component.querySelectorAll(this.MENU_HAMBURGER_TRIGGER_SELECTOR)) {
-      menuHamburger.addEventListener('click', (event) => {
-        event.currentTarget.classList.toggle(this.ACTIVE_CLASS);
-      });
-    }
+  if (icon.classList.contains("fa-eye")) {
+    inputAction
+      .querySelector("input[type='password'")
+      .setAttribute("type", "text");
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else if (icon.classList.contains("fa-eye-slash")) {
+    inputAction
+      .querySelector("input[type='text'")
+      .setAttribute("type", "password");
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
   }
 }
 
-listHeader = [];
-for (let header of window.document.querySelectorAll('.br-header')) {
-  listHeader.push(new BRHeader('br-header', header));
-}
 let listId = 'search-list'
 let listClass = 'search-items'
 let itemActive = 'search-active'
@@ -584,36 +492,129 @@ function autocomplete(inp, arr) {
   autocomplete(document.getElementById('search-autocomplete'), countries)
 })()
 
-function toggleInputAction(element, className) {
-  for (
-    var inputAction = element;
-    !inputAction.classList.contains(className);
-    inputAction = inputAction.parentNode
-  );
+class BRHeader {
 
-  var icon = element.getElementsByClassName("fas")[0];
+  constructor(name, component) {
+    this.HEADER_SITE_SELECTOR = '.br-header.is-site';
+    this.LANGUAGE_MENU_TRIGGER_SELECTOR = '.language.menu button.trigger';
+    this.LANGUAGE_MENU_TRIGGER_NAME_SELECTOR = '.language.menu button.trigger .name'
+    this.LANGUAGE_MENU_ITEM_SELECTOR = '.language.menu .item';
+    this.LANGUAGE_MENU_ITEM_NAME_SELECTOR = '.name';
+    this.SEARCH_INPUT_SELECTOR = '.search input';
+    this.SEARCH_CLOSE_SELECTOR = '.search .close';
+    this.CONFIGS_MENU_TRIGGER_SELECTOR = '.configs.menu button.trigger';
+    this.BOOKMARKS_MENU_TRIGGER_SELECTOR = '.bookmarks.menu button.trigger';
+    this.MENU_HAMBURGER_TRIGGER_SELECTOR = '.menu-hamburger';
+    this.ACTIVE_CLASS = 'is-active';
+    this.name = name;
+    this.component = component;
 
-  if (icon.classList.contains("fa-eye")) {
-    inputAction
-      .querySelector("input[type='password'")
-      .setAttribute("type", "text");
-    icon.classList.remove("fa-eye");
-    icon.classList.add("fa-eye-slash");
-  } else if (icon.classList.contains("fa-eye-slash")) {
-    inputAction
-      .querySelector("input[type='text'")
-      .setAttribute("type", "password");
-    icon.classList.remove("fa-eye-slash");
-    icon.classList.add("fa-eye");
+    switch (this.component.classList.value) {
+      case 'br-header is-site':
+        this._setSiteHeaderBehavior();
+        break;
+      case 'br-header is-system':
+        this._setSystemHeaderBehavior();
+        break;
+    }
+  }
+
+  _setSiteHeaderBehavior() {
+    this._setSelectedLanguage();
+    this._setLanguageMenuBehavior();
+    this._setSearchMenuBehavior();
+    this._setMenuHamburgerBehavior();
+  }
+
+  _setSystemHeaderBehavior() {
+    this._setConfigsMenuBehavior();
+    this._setBookmarksMenuBehavior();
+    this._setSearchMenuBehavior();
+    this._setMenuHamburgerBehavior();
+  }
+
+  _setLanguageMenuBehavior() {
+    for (let languageMenuTrigger of this.component.querySelectorAll(this.LANGUAGE_MENU_TRIGGER_SELECTOR)) {
+      languageMenuTrigger.addEventListener('click', (event) => {
+        event.currentTarget.parentNode.classList.toggle(this.ACTIVE_CLASS);
+      });
+      for (let languageMenuItem of this.component.querySelectorAll(this.LANGUAGE_MENU_ITEM_SELECTOR)) {
+        languageMenuItem.addEventListener('click', (event) => {
+          for (let sibling of this.component.querySelectorAll(this.LANGUAGE_MENU_ITEM_SELECTOR)) {
+            if (sibling === event.currentTarget) {
+              sibling.classList.add(this.ACTIVE_CLASS);
+              languageMenuTrigger.parentNode.classList.toggle(this.ACTIVE_CLASS);
+            } else {
+              sibling.classList.remove(this.ACTIVE_CLASS);
+            }
+          }
+          this._setSelectedLanguage();
+        });
+      }
+    }
+  }
+
+  _setSelectedLanguage() {
+    for (let languageItem of this.component.querySelectorAll(this.LANGUAGE_MENU_ITEM_SELECTOR)) {
+      if (languageItem.classList.contains(this.ACTIVE_CLASS)) {
+        for (let languageItemName of languageItem.querySelectorAll(this.LANGUAGE_MENU_ITEM_NAME_SELECTOR)) {
+          for (let languageTriggerName of this.component.querySelectorAll(this.LANGUAGE_MENU_TRIGGER_NAME_SELECTOR)) {
+            languageTriggerName.innerText = languageItemName.innerText;
+          }
+        }
+      }
+    }
+  }
+
+  _setSearchMenuBehavior() {
+    for (let searchInput of this.component.querySelectorAll(this.SEARCH_INPUT_SELECTOR)) {
+      searchInput.addEventListener('focus', (event) => {
+        event.currentTarget.parentNode.parentNode.classList.add(this.ACTIVE_CLASS);
+      });
+    }
+    for (let searchClose of this.component.querySelectorAll(this.SEARCH_CLOSE_SELECTOR)) {
+      searchClose.addEventListener('click', (event) => {
+        event.currentTarget.parentNode.classList.remove(this.ACTIVE_CLASS);
+      });
+    }
+  }
+
+  _setConfigsMenuBehavior() {
+    for (let configsMenuTrigger of this.component.querySelectorAll(this.CONFIGS_MENU_TRIGGER_SELECTOR)) {
+      configsMenuTrigger.addEventListener('click', (event) => {
+        event.currentTarget.parentNode.classList.toggle(this.ACTIVE_CLASS);
+      });
+    }
+  }
+
+  _setBookmarksMenuBehavior() {
+    for (let bookmarksMenuTrigger of this.component.querySelectorAll(this.BOOKMARKS_MENU_TRIGGER_SELECTOR)) {
+      bookmarksMenuTrigger.addEventListener('click', (event) => {
+        event.currentTarget.parentNode.classList.toggle(this.ACTIVE_CLASS);
+      });
+    }
+  }
+
+  _setMenuHamburgerBehavior() {
+    for (let menuHamburger of this.component.querySelectorAll(this.MENU_HAMBURGER_TRIGGER_SELECTOR)) {
+      menuHamburger.addEventListener('click', (event) => {
+        event.currentTarget.classList.toggle(this.ACTIVE_CLASS);
+      });
+    }
   }
 }
 
+listHeader = [];
+for (let header of window.document.querySelectorAll('.br-header')) {
+  listHeader.push(new BRHeader('br-header', header));
+}
 let collapseList = document.querySelectorAll('button[data-toggle="collapse"]');
 collapseList.forEach(function(collapse) {
   collapse.addEventListener("click", function(event) {
-    event.target.classList.toggle("is-open")
+		  this.classList.toggle("is-open")
   })
 })
+
 class BRAlert {
   constructor(name, component) {
     this.name = name;
@@ -642,22 +643,168 @@ window.onload = (function() {
   }
 })();
 
-scrim = document.getElementsByClassName("is-foco")[0];
+class BRSelect {
+  constructor(name, component) {
+    this.name = name
+    this.component = component
+    this._setUpBrSelect()
+  }
 
-function openModal(div) {
-    scrim.innerHTML = div.innerHTML;
-    scrim.classList.add("is-active");
+  _setUpBrSelect() {
+    for (let select of this.component.querySelectorAll('select')) {
+      this.component.appendChild(this._buildSelectionField(select))
+      this.component.appendChild(this._buildOptionsList(select))
+    }
+    this._setBehavior()
+  }
+
+  _buildSelectionField(select) {
+    let selectionField = window.document.createElement('button')
+    selectionField.setAttribute('class', 'select-selected unselected')
+    if (select.disabled) {
+      selectionField.setAttribute('disabled', 'disabled')
+    }
+    selectionField.appendChild(
+      this._buildOptionItem(select.options[select.selectedIndex].innerHTML)
+    )
+    selectionField.appendChild(this._buildIcon())
+    return selectionField
+  }
+
+  _buildOptionItem(text) {
+    let optionItem = window.document.createElement('span')
+    optionItem.innerHTML = text
+    return optionItem
+  }
+
+  _buildIcon() {
+    let icon = window.document.createElement('i')
+    icon.setAttribute('class', 'fas fa-chevron-down')
+    return icon
+  }
+
+  _buildOptionsList(select) {
+    let optionsList = window.document.createElement('div')
+    optionsList.setAttribute('class', 'select-items select-hide')
+    for (let option of select.options) {
+      let optionField = window.document.createElement('button')
+      optionField.appendChild(this._buildOptionItem(option.innerHTML))
+      optionsList.appendChild(optionField)
+    }
+    return optionsList
+  }
+
+  _setBehavior() {
+    for (let itemSelected of this.component.querySelectorAll(
+      '.select-selected'
+    )) {
+      itemSelected.addEventListener('click', (event) => {
+        event.stopPropagation()
+        itemSelected.nextElementSibling.classList.toggle('select-hide')
+        this._closeSelects(itemSelected)
+        window.document.addEventListener('click', () => {
+          this._closeSelects()
+        })
+      })
+    }
+    for (let item of this.component.querySelectorAll('.select-items button')) {
+      item.addEventListener('click', (event) => {
+        for (let select of this.component.querySelectorAll('select')) {
+          for (let [index, option] of Array.from(select.options).entries()) {
+            if (option.innerHTML === item.firstChild.innerHTML) {
+              select.selectedIndex = index
+              select.dispatchEvent(new Event('change'))
+              item.parentNode.previousSibling.firstChild.innerHTML =
+                item.firstChild.innerHTML
+              item.parentNode.previousSibling.setAttribute(
+                'class',
+                'select-selected'
+              )
+              item.parentNode.classList.add('select-hide')
+              for (let optionItem of item.parentNode.querySelectorAll(
+                'button'
+              )) {
+                if (optionItem === item) {
+                  optionItem.setAttribute('class', 'same-as-selected')
+                } else {
+                  optionItem.removeAttribute('class')
+                }
+              }
+            }
+          }
+        }
+      })
+    }
+  }
+
+  _closeSelects(element) {
+    for (let brSelect of window.document.querySelectorAll('.br-select')) {
+      for (let itemSelected of brSelect.querySelectorAll('.select-selected')) {
+        if (itemSelected !== element) {
+          for (let optionsList of brSelect.querySelectorAll('.select-items')) {
+            optionsList.classList.add('select-hide')
+            window.document.removeEventListener('click', this._closeSelects)
+          }
+        }
+      }
+    }
+  }
+
+  _deleteSelect() {
+    for (let selectionField of this.component.querySelectorAll(
+      'button.select-selected'
+    )) {
+      selectionField.remove()
+    }
+    for (let optionsList of this.component.querySelectorAll(
+      'div.select-items'
+    )) {
+      optionsList.remove()
+    }
+  }
+
+  updateSelect() {
+    this._deleteSelect()
+    this._setUpBrSelect()
+  }
 }
 
-function openModalId(id) {
-    scrim = document.getElementById(id);
-    scrim.classList.add("is-active");
+function getBrSelect(component) {
+  for (let brSelect of selectList) {
+    for (let select of brSelect.component.querySelectorAll('select')) {
+      if (component == select) {
+        return brSelect
+      }
+    }
+  }
 }
 
-function closeModal() {
-    scrim.classList.remove("is-active");
+function updateSelect(component) {
+  getBrSelect(component).updateSelect()
 }
 
+let selectList = []
+
+function createBrSelect() {
+  for (let brSelect of window.document.querySelectorAll('.br-select')) {
+    let equal = false
+    for (let existedBrSelect of selectList) {
+      if (brSelect == existedBrSelect.component) {
+        equal = true
+        break
+      }
+    }
+    if (!equal) {
+      selectList.push(new BRSelect('br-select', brSelect))
+    }
+  }
+}
+
+window.onload = (function() {
+  for (let brSelect of window.document.querySelectorAll('.br-select')) {
+    selectList.push(new BRSelect('br-select', brSelect))
+  }
+})()
 
 scrim = document.getElementsByClassName("is-foco")[0];
 
@@ -1030,222 +1177,7 @@ function autocomplete(inp, arr) {
   autocomplete(document.getElementById('search-autocomplete'), countries)
 })()
 
-class BRSelect {
-  constructor(name, component) {
-    this.name = name
-    this.component = component
-    this._setUpBrSelect()
-  }
-
-  _setUpBrSelect() {
-    for (let select of this.component.querySelectorAll('select')) {
-      this.component.appendChild(this._buildSelectionField(select))
-      this.component.appendChild(this._buildOptionsList(select))
-    }
-    this._setBehavior()
-  }
-
-  _buildSelectionField(select) {
-    let selectionField = window.document.createElement('button')
-    selectionField.setAttribute('class', 'select-selected unselected')
-    if (select.disabled) {
-      selectionField.setAttribute('disabled', 'disabled')
-    }
-    selectionField.appendChild(
-      this._buildOptionItem(select.options[select.selectedIndex].innerHTML)
-    )
-    selectionField.appendChild(this._buildIcon())
-    return selectionField
-  }
-
-  _buildOptionItem(text) {
-    let optionItem = window.document.createElement('span')
-    optionItem.innerHTML = text
-    return optionItem
-  }
-
-  _buildIcon() {
-    let icon = window.document.createElement('i')
-    icon.setAttribute('class', 'fas fa-chevron-down')
-    return icon
-  }
-
-  _buildOptionsList(select) {
-    let optionsList = window.document.createElement('div')
-    optionsList.setAttribute('class', 'select-items select-hide')
-    for (let option of select.options) {
-      let optionField = window.document.createElement('button')
-      optionField.appendChild(this._buildOptionItem(option.innerHTML))
-      optionsList.appendChild(optionField)
-    }
-    return optionsList
-  }
-
-  _setBehavior() {
-    for (let itemSelected of this.component.querySelectorAll(
-      '.select-selected'
-    )) {
-      itemSelected.addEventListener('click', (event) => {
-        event.stopPropagation()
-        itemSelected.nextElementSibling.classList.toggle('select-hide')
-        this._closeSelects(itemSelected)
-        window.document.addEventListener('click', () => {
-          this._closeSelects()
-        })
-      })
-    }
-    for (let item of this.component.querySelectorAll('.select-items button')) {
-      item.addEventListener('click', (event) => {
-        for (let select of this.component.querySelectorAll('select')) {
-          for (let [index, option] of Array.from(select.options).entries()) {
-            if (option.innerHTML === item.firstChild.innerHTML) {
-              select.selectedIndex = index
-              select.dispatchEvent(new Event('change'))
-              item.parentNode.previousSibling.firstChild.innerHTML =
-                item.firstChild.innerHTML
-              item.parentNode.previousSibling.setAttribute(
-                'class',
-                'select-selected'
-              )
-              item.parentNode.classList.add('select-hide')
-              for (let optionItem of item.parentNode.querySelectorAll(
-                'button'
-              )) {
-                if (optionItem === item) {
-                  optionItem.setAttribute('class', 'same-as-selected')
-                } else {
-                  optionItem.removeAttribute('class')
-                }
-              }
-            }
-          }
-        }
-      })
-    }
-  }
-
-  _closeSelects(element) {
-    for (let brSelect of window.document.querySelectorAll('.br-select')) {
-      for (let itemSelected of brSelect.querySelectorAll('.select-selected')) {
-        if (itemSelected !== element) {
-          for (let optionsList of brSelect.querySelectorAll('.select-items')) {
-            optionsList.classList.add('select-hide')
-            window.document.removeEventListener('click', this._closeSelects)
-          }
-        }
-      }
-    }
-  }
-
-  _deleteSelect() {
-    for (let selectionField of this.component.querySelectorAll(
-      'button.select-selected'
-    )) {
-      selectionField.remove()
-    }
-    for (let optionsList of this.component.querySelectorAll(
-      'div.select-items'
-    )) {
-      optionsList.remove()
-    }
-  }
-
-  updateSelect() {
-    this._deleteSelect()
-    this._setUpBrSelect()
-  }
-}
-
-function getBrSelect(component) {
-  for (let brSelect of selectList) {
-    for (let select of brSelect.component.querySelectorAll('select')) {
-      if (component == select) {
-        return brSelect
-      }
-    }
-  }
-}
-
-function updateSelect(component) {
-  getBrSelect(component).updateSelect()
-}
-
-let selectList = []
-
-function createBrSelect() {
-  for (let brSelect of window.document.querySelectorAll('.br-select')) {
-    let equal = false
-    for (let existedBrSelect of selectList) {
-      if (brSelect == existedBrSelect.component) {
-        equal = true
-        break
-      }
-    }
-    if (!equal) {
-      selectList.push(new BRSelect('br-select', brSelect))
-    }
-  }
-}
-
-window.onload = (function() {
-  for (let brSelect of window.document.querySelectorAll('.br-select')) {
-    selectList.push(new BRSelect('br-select', brSelect))
-  }
-})()
-
 function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
-var parentEl
-var parentE2
-var nextEl
-
-var checkboxParent
-var checkboxParent2
-
-function hasClass(elem, className) {
-  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ')
-}
-
-function ShowHideTable(el) {
-  parentEl = el.parentNode
-  parentE2 = parentEl.parentNode
-  nextEl = parentE2.nextElementSibling
-  if (nextEl != null) {
-    if (hasClass(nextEl, 'show-table') && hasClass(nextEl, 'row-content')) {
-      nextEl.classList.remove('show-table')
-      nextEl.className = 'row-content hide-table'
-      el.classList.remove('fa-minus')
-      el.className = 'fas fa-plus'
-    } else if (
-      hasClass(nextEl, 'hide-table') &&
-      hasClass(nextEl, 'row-content')
-    ) {
-      nextEl.classList.remove('hide-table')
-      nextEl.className = 'row-content show-table'
-      el.classList.remove('fa-plus')
-      el.className = 'fas fa-minus'
-    }
-  }
-}
-
-function setActive(el) {
-  checkbox = el
-  checkboxParent = checkbox.parentNode
-  checkboxParent2 = checkboxParent.parentNode
-  if (el.checked) {
-    checkboxParent2.className = 'active'
-    checkboxParent.className = 'text-center active'
-  } else {
-    checkboxParent2.classList.remove('active')
-    checkboxParent.classList.remove('active')
-  }
-}
-
-//Correção da altura das colunas na tabela responsiva;
-var target = document.getElementsByTagName('tr')
-for (i = 0; i < target.length; i++) {
-  target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
-}
-
 const tab = document.querySelectorAll('.br-tabs .item');
 if(tab){
 				for (let elem of tab) {
@@ -1375,5 +1307,74 @@ function drop(e) {
   const files = dt.files;
 
   handleFiles(files);
+}
+
+scrim = document.getElementsByClassName("is-foco")[0];
+
+function openModal(div) {
+    scrim.innerHTML = div.innerHTML;
+    scrim.classList.add("is-active");
+}
+
+function openModalId(id) {
+    scrim = document.getElementById(id);
+    scrim.classList.add("is-active");
+}
+
+function closeModal() {
+    scrim.classList.remove("is-active");
+}
+
+
+var parentEl
+var parentE2
+var nextEl
+
+var checkboxParent
+var checkboxParent2
+
+function hasClass(elem, className) {
+  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ')
+}
+
+function ShowHideTable(el) {
+  parentEl = el.parentNode
+  parentE2 = parentEl.parentNode
+  nextEl = parentE2.nextElementSibling
+  if (nextEl != null) {
+    if (hasClass(nextEl, 'show-table') && hasClass(nextEl, 'row-content')) {
+      nextEl.classList.remove('show-table')
+      nextEl.className = 'row-content hide-table'
+      el.classList.remove('fa-minus')
+      el.className = 'fas fa-plus'
+    } else if (
+      hasClass(nextEl, 'hide-table') &&
+      hasClass(nextEl, 'row-content')
+    ) {
+      nextEl.classList.remove('hide-table')
+      nextEl.className = 'row-content show-table'
+      el.classList.remove('fa-plus')
+      el.className = 'fas fa-minus'
+    }
+  }
+}
+
+function setActive(el) {
+  checkbox = el
+  checkboxParent = checkbox.parentNode
+  checkboxParent2 = checkboxParent.parentNode
+  if (el.checked) {
+    checkboxParent2.className = 'active'
+    checkboxParent.className = 'text-center active'
+  } else {
+    checkboxParent2.classList.remove('active')
+    checkboxParent.classList.remove('active')
+  }
+}
+
+//Correção da altura das colunas na tabela responsiva;
+var target = document.getElementsByTagName('tr')
+for (i = 0; i < target.length; i++) {
+  target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
 }
 //# sourceMappingURL=dsgov-components.js.map
