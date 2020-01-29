@@ -219,13 +219,13 @@ dtp_end.el.addEventListener("keyup", maskDate);
 
 
 // Toggle the calendar when a button is clicked.
-dtp_default_btn = document.getElementById("default_btn")
+dtp_default_btn = document.getElementById("default-btn")
 toggleDtp(dtp_default_btn, dtp_default)
 
-dtp_start_btn = document.getElementById("date-start_btn")
+dtp_start_btn = document.getElementById("date-start-btn")
 toggleDtp(dtp_start_btn, dtp_start)
 
-dtp_end_btn = document.getElementById("date-end_btn")
+dtp_end_btn = document.getElementById("date-end-btn")
 toggleDtp(dtp_end_btn, dtp_end)
 
 function toggleDtp (button, datepicker) {
@@ -238,14 +238,3 @@ function toggleDtp (button, datepicker) {
     datepicker[isHidden ? 'show' : 'hide']()
   })
 }
-
-/*
-dtp_default_btn.addEventListener('click', e => {
-  // THIS!!! Prevent Datepicker's event handler from hiding the calendar.
-  e.stopPropagation()
- 
-  // Toggle the calendar.
-  const isHidden = dtp_default.calendarContainer.classList.contains('qs-hidden')
-  dtp_default[isHidden ? 'show' : 'hide']()
-})
-*/
