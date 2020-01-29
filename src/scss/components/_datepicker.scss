@@ -6,19 +6,25 @@
     bottom: 12px;
     color: $color-primary;
     display: block;
+    outline: none !important;
     position: absolute;
     right: 12px;
     z-index: 999;
+    &:active,
     &:hover {
         color: $color-primary-lighten-2;
     }
   }
   input {
     padding-right: 32px;
-    &:focus {
-      border-color: $color-primary-lighten-2;
-      box-shadow: 0 0 0 1px $color-primary-lighten-2;
-      outline: none;
+  }
+
+  &.is-disabled {
+    button,
+    button:active,
+    button:hover {
+      color: $color-gray-5;
+      cursor: not-allowed;
     }
   }
 
@@ -406,7 +412,7 @@
   position: relative;
 }
 .qs-datepicker .qs-event::after {
-  background: #07f;
+  background: $color-primary-lighten-2;
   border-radius: 50%;
   bottom: 0;
   content: '';
@@ -417,7 +423,7 @@
 }
 .qs-datepicker .qs-event.qs-disabled::after,
 .qs-datepicker .qs-event.qs-empty::after {
-  background: #cce4ff;
+  background: $color-primary-pastel-1;
 }
 
 }

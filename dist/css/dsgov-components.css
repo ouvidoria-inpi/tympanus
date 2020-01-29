@@ -778,18 +778,21 @@ template {
   bottom: 12px;
   color: #1351b4;
   display: block;
+  outline: none !important;
   position: absolute;
   right: 12px;
   z-index: 999; }
-  .br-input.datepicker button:hover {
+  .br-input.datepicker button:active, .br-input.datepicker button:hover {
     color: #2670e8; }
 
 .br-input.datepicker input {
   padding-right: 32px; }
-  .br-input.datepicker input:focus {
-    border-color: #2670e8;
-    box-shadow: 0 0 0 1px #2670e8;
-    outline: none; }
+
+.br-input.datepicker.is-disabled button,
+.br-input.datepicker.is-disabled button:active,
+.br-input.datepicker.is-disabled button:hover {
+  color: #888;
+  cursor: not-allowed; }
 
 .br-input.datepicker + p.help + div.feedback.is-valid,
 .br-input.datepicker + div.feedback.is-valid,
@@ -1126,7 +1129,7 @@ template {
   position: relative; }
 
 .br-input .qs-datepicker .qs-event::after {
-  background: #07f;
+  background: #2670e8;
   border-radius: 50%;
   bottom: 0;
   content: '';
@@ -1137,7 +1140,7 @@ template {
 
 .br-input .qs-datepicker .qs-event.qs-disabled::after,
 .br-input .qs-datepicker .qs-event.qs-empty::after {
-  background: #cce4ff; }
+  background: #dbe8fb; }
 
 .br-header-system {
   background-color: #fff;

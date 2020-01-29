@@ -9,29 +9,21 @@ append scripts
 
 append content
   .row
-    .col-sm
-      .mb-3
-        +input("Normal")(id="default" class="datepicker" placeholder="dd/mm/aaaa")
-          button.icon(type='button' id="default-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
-        p.help Insira a data no formato "dd/mm/aaaa", apenas números.  
-        +feedback("Data válida")(class="is-valid")
-        +feedback("Data inválida")
-    .col-sm
+    div.h3 Estados do componente:
   .row
     .col-sm
       .mb-3
-        +input("Desativado")(id="disabled" class="datepicker" placeholder="01/01/2020" disabled)
-          button.icon(type='button' id="disabled-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
+        +input("Normal")(id="normal" class="datepicker" placeholder="dd/mm/aaaa")
+          button.icon(type='button' id="normal-btn")
+              span.sr-only Mostrar calendário
+              i.fas.fa-calendar-alt
     .col-sm
       .mb-3
         +input("Focus")(id="focus" class="datepicker is-focus" placeholder="dd/mm/aaaa")
           button.icon(type='button' id="focus-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
+    
   .row
     .col-sm
       .mb-3
@@ -47,6 +39,32 @@ append content
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
         +feedback("Data inválida")
+  .row
+    .col-sm
+      .mb-3
+        +input("Desativado")(id="disabled" class="datepicker is-disabled" placeholder="01/01/2020" disabled)
+          button.icon(type='button' id="disabled-btn")
+            span.sr-only Mostrar calendário
+            i.fas.fa-calendar-alt
+        +feedback("Data válida")(class="is-valid")
+        +feedback("Data inválida")
+    .col-sm
+      .mb-3
+  .row
+    div.h3 Campo funcional para demonstração:
+  .row
+    .col-sm
+      .mb-3
+        +input("Data")(id="default" class="datepicker" placeholder="dd/mm/aaaa")
+          button.icon(type='button' id="default-btn")
+            span.sr-only Mostrar calendário
+            i.fas.fa-calendar-alt
+        p.help Insira a data no formato "dd/mm/aaaa", apenas números.  
+        +feedback("Data válida")(class="is-valid")
+        +feedback("Data inválida")
+    .col-sm
+  .row
+    div.h3 Campos vinculados para definir um período:
   .row
     .col-sm
       .mb-3
