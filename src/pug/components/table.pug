@@ -14,7 +14,10 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
             +button.search-trigger.is-circle.is-tertiary
               i.fas.fa-search
         .search-bar
-          +input("Buscar").search-input.is-medium.has-icon(placeholder="Buscar na tabela", id=attributes.id + '-search-input')
+          +input("Buscar").search-input.is-medium.has-icon(
+            placeholder="Buscar na tabela",
+            id=attributes.id + '-search-input'
+          )
             button.icon(type='button')
               span.sr-only Buscar
               i.fas.fa-search
@@ -28,7 +31,7 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
               if (column === 1)
                 if (attributes.checkbox)
                   th(scope="col" style="width: 54px;")
-                    +checkbox("")#check-all
+                    +checkbox("")(id=`${attributes.id}-check-all`, name="check")
                 th(scope="col")=`Coluna ${column}`
               else
                 th(scope="col")=`Coluna ${column}`
@@ -43,7 +46,7 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
                 if (column === 1)
                   if (attributes.checkbox)
                     td
-                      +checkbox("")(id=`line-${row}`)
+                      +checkbox("")(id=`${attributes.id}-line-${row}` name="check")
                   td(data-th=`Coluna ${column}`)=random
                 else
                   td(data-th=`Coluna ${column}`)=random

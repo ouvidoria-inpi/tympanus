@@ -1,5 +1,4 @@
 // ! Refatorações:
-// TODO: Check all - refatorar código do ed
 // TODO: Comportamento de resize de coluna - refatorar código do ed
 // TODO: Efeito resize de altura da linha - refatorar código do ed
 // TODO: Cards internos de colunas - refatorar código do ed
@@ -10,13 +9,13 @@
 
 const brTables = document.querySelectorAll(".br-table");
 const brTablesHeadersClass = "headers";
-const active = "is-active";
-let brTablesCount = 0;
+let active = "is-active";
+let brTableNumber = 0;
 
 function hoverRow(elements) {
   for (let element of elements) {
     if (element.children[0].children[0]) {
-      console.log(element);
+      // console.log(element);
     }
   }
 }
@@ -37,7 +36,7 @@ function toogleSearch(container, trigger, close) {
 
 function setSyncScroll(element) {
   element.classList.add("syncscroll");
-  element.setAttribute("name", "table-" + brTablesCount);
+  element.setAttribute("name", "table-" + brTableNumber);
 }
 
 function setHeaderWidth(parent, element) {
@@ -69,10 +68,11 @@ function cloneHeader(parent, element) {
     if (cloneElementNode.children[0]) {
       if (cloneElementNode.children[0].classList.contains("br-checkbox")) {
         let cloneCheckbox = cloneElementNode.children[0];
-        cloneCheckbox.querySelector("input").id = "headers-check";
+        let cloneCheckboxId = `${brTablesHeadersClass}-${parent.id}-check-all`;
+        cloneCheckbox.querySelector("input").id = cloneCheckboxId;
         cloneCheckbox
           .querySelector("label")
-          .setAttribute("for", "headers-check");
+          .setAttribute("for", cloneCheckboxId);
       }
     }
   }
@@ -83,6 +83,29 @@ function cloneHeader(parent, element) {
   parent.appendChild(headersTag);
 }
 
+function checkAll(element) {
+  let headerCheckbox = element.querySelector(
+    ".headers [name='check'] [type='checkbox']"
+  );
+  let tableCheckboxes = element.querySelectorAll(
+    "table [name='check'] [type='checkbox']"
+  );
+
+  if (headerCheckbox) {
+    headerCheckbox.addEventListener("click", function() {
+      if (headerCheckbox.checked) {
+        for (let checkbox of tableCheckboxes) {
+          checkbox.checked = true;
+        }
+      } else {
+        for (let checkbox of tableCheckboxes) {
+          checkbox.checked = false;
+        }
+      }
+    });
+  }
+}
+
 for (let brTable of brTables) {
   let searchBar = brTable.querySelector(".search-bar");
   let searchTrigger = brTable.querySelector(".search-trigger");
@@ -91,12 +114,13 @@ for (let brTable of brTables) {
   let headers = brTable.querySelector("table thead tr");
   let rows = brTable.querySelectorAll("table tbody tr");
 
-  brTablesCount++;
+  brTableNumber++;
 
   setSyncScroll(responsive);
   cloneHeader(brTable, headers);
   setHeaderWidth(brTable, headers);
   toogleSearch(searchBar, searchTrigger, searchClose);
+  checkAll(brTable);
   hoverRow(rows);
 
   window.addEventListener("resize", function() {
