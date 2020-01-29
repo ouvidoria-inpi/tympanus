@@ -23,14 +23,14 @@
   }
   // Ícone ilustrativo
   .icon {
-    color: $color-primary;
+    color: $primary;
     text-align: center;
     width: 40px;
     &.is-invalid {
-      color: $color-danger;
+      color: $danger;
     }
     &.is-valid {
-      color: $color-success;
+      color: $success;
     }
   }
   // Ajuste para input
@@ -42,12 +42,12 @@
     }
     &.is-invalid {
       label {
-        color: $color-danger;
+        color: $danger;
       }
     }
     &.is-valid {
       label {
-        color: $color-success;
+        color: $success;
       }
     }
   }

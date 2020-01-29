@@ -1,6 +1,6 @@
 .#{$prefix}header-system {
-  background-color: $color-white;
-  box-shadow: 0 3px 6px rgba($color-black, 0.16);
+  background-color: $secondary-01;
+  box-shadow: 0 3px 6px rgba($secondary-09, 0.16);
   // Agrupador
   .wrapper {
     display: flex;
@@ -29,12 +29,12 @@
       width: $logo-mobile-width;
     }
     .name {
-      color: $color-primary-darken-2;
+      color: $primary-darken-02;
       font-size: 20px;
       font-weight: 700;
     }
     .description {
-      color: $color-gray-6;
+      color: $secondary-07;
       font-size: 12px;
       font-weight: 600;
     }
@@ -57,15 +57,15 @@
     // Acesso gov.br
     .login {
       align-items: center;
-      color: $color-gray-7;
+      color: $secondary-08;
       display: inline-flex;
       &:hover {
-        [class*="fa-"] {
-          color: $color-primary-lighten-2;
+        [class*='fa-'] {
+          color: $primary-lighten-02;
         }
       }
-      [class*="fa-"] {
-        color: $color-primary;
+      [class*='fa-'] {
+        color: $primary;
       }
       span {
         display: none;
@@ -76,7 +76,7 @@
     }
     // Legislação
     .legislation {
-      color: $color-gray-7;
+      color: $secondary-08;
       display: none;
       font-size: 12px;
       font-weight: 600;
@@ -101,7 +101,7 @@
       flex: 1;
       height: $header-system-mobile-height / 2;
       input {
-        background: $color-gray-2;
+        background: $secondary-03;
         border: 0;
         display: none;
         flex: 1;
@@ -117,10 +117,10 @@
       button {
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $primary;
         padding: 0 ($spacer * 1.5);
         &:hover {
-          background: $color-primary-pastel-1;
+          background: $primary-pastel-01;
         }
       }
     }
@@ -140,7 +140,7 @@
       left: 0;
       .field {
         bottom: 0;
-        box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+        box-shadow: 0 3px 6px rgba($secondary-09, 0.16); // sass-lint:disable-line no-color-literals
         left: 0;
         position: absolute;
         right: 0;
@@ -148,7 +148,7 @@
           display: block;
         }
         button {
-          background: $color-gray-2;
+          background: $secondary-03;
         }
       }
       .close {
@@ -166,10 +166,10 @@
         align-items: center;
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $primary;
         display: inline-flex;
         .arrow {
-          background: $color-gray-2;
+          background: $secondary-03;
           border-radius: 50%;
           font-size: 11px;
           height: 17px;
@@ -193,14 +193,14 @@
         }
         // Conta
         .account {
-          border-top: 1px solid $color-gray-2;
+          border-top: 1px solid $secondary-03;
           display: flex;
           margin: (-$spacer) (-($spacer * 2));
           > * {
             // sass-lint:disable-line no-universal-selectors
             flex: 1;
             &:not(:last-child) {
-              border-right: 1px solid $color-gray-2;
+              border-right: 1px solid $secondary-03;
             }
           }
           a {
@@ -208,7 +208,7 @@
             padding: $spacer ($spacer * 2);
             text-decoration: none;
             &:hover {
-              background: $color-primary-pastel-1;
+              background: $primary-pastel-01;
             }
           }
         }
@@ -216,10 +216,10 @@
         &.is-active {
           &::after {
             border: solid transparent;
-            border-bottom-color: $color-gray-7;
+            border-bottom-color: $secondary-08;
             border-width: 12px;
             bottom: 100%;
-            content: "";
+            content: '';
             height: 0;
             pointer-events: none;
             position: absolute;
@@ -239,9 +239,9 @@
       }
       // Badge com quantidade de notificações
       & + .badge {
-        background: $color-danger;
+        background: $danger;
         border-radius: 50%;
-        color: $color-white;
+        color: $secondary-01;
         font-size: 11px;
         font-weight: 700;
         height: 18px;
@@ -261,14 +261,14 @@
         background: transparent;
         border: 0;
         border-radius: 50%;
-        color: $color-primary;
+        color: $primary;
         display: inline-flex;
         height: 32px;
         justify-content: center;
         padding: 0;
         width: 32px;
         &:hover {
-          background: $color-primary-pastel-1;
+          background: $primary-pastel-01;
         }
       }
       // Menu
@@ -287,10 +287,10 @@
         &.is-active {
           &::after {
             border: solid transparent;
-            border-bottom-color: $color-gray-7;
+            border-bottom-color: $secondary-08;
             border-width: 12px;
             bottom: 100%;
-            content: "";
+            content: '';
             height: 0;
             pointer-events: none;
             position: absolute;
@@ -313,23 +313,23 @@
         &:hover {
           text-decoration: none;
           .brand {
-            border-color: $color-primary-lighten-2;
+            border-color: $primary-lighten-02;
           }
           .name {
-            color: $color-primary-lighten-2;
+            color: $primary-lighten-02;
           }
         }
       }
       // Marca
       .brand {
-        background: $color-gray-1;
-        border: 1px solid $color-gray-3;
+        background: $secondary-02;
+        border: 1px solid $secondary-04;
         height: 42px;
         width: 58px;
       }
       // Nome
       .name {
-        color: $color-gray-6;
+        color: $secondary-07;
         display: block;
         font-size: 9px;
         font-weight: 500;
@@ -351,7 +351,7 @@
     background: transparent;
     border: 0;
     bottom: 0;
-    color: $color-primary;
+    color: $primary;
     font-size: 25px;
     left: 0;
     padding: 0 $spacer;
@@ -360,7 +360,7 @@
     top: $header-system-mobile-height / 2;
     z-index: 1;
     &:hover {
-      color: $color-primary-lighten-2;
+      color: $primary-lighten-02;
       text-decoration: none;
     }
   }
@@ -393,7 +393,7 @@
           padding-right: $spacer * 2;
         }
         button {
-          background-color: $color-gray-2;
+          background-color: $secondary-03;
           padding-left: $spacer * 2;
           padding-right: $spacer * 2;
         }

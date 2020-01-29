@@ -1,14 +1,14 @@
-@mixin upload($color: $color-info) {
+@mixin upload($color: $info) {
   @include media-breakpoint-down(sm) {
     background-position: center 0;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 180px;
   }
-  background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/upload-fundo.png")
-    32px 24px $color-white no-repeat;
-  border: 1px solid $color-white;
-  box-shadow: 0 3px 6px $color-gray-3;
+  background: url('https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/upload-fundo.png')
+    32px 24px $secondary-01 no-repeat;
+  border: 1px solid $secondary-01;
+  box-shadow: 0 3px 6px $secondary-04;
   margin-bottom: 20px;
   min-height: 248px;
   padding-bottom: 16px;
@@ -16,7 +16,7 @@
   padding-right: 48px;
   padding-top: 32px;
   &:hover {
-    border: 1px solid $color-primary-lighten-2;
+    border: 1px solid $primary-lighten-02;
   }
   .upload-header {
     color: $body-color;
@@ -27,7 +27,7 @@
     display: none;
   }
   .upload-info {
-    color: $color-info;
+    color: $info;
     display: block;
     margin: 16px 0;
     padding-left: 40px;
@@ -42,8 +42,8 @@
       padding-left: 0;
     }
     li {
-      border-bottom: 1px solid $color-gray-3;
-      color: $color-info;
+      border-bottom: 1px solid $secondary-04;
+      color: $info;
       font-size: 14px;
       list-style: none;
       padding: 8px 0 8px 8px;

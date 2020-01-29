@@ -1,11 +1,11 @@
 .#{$prefix}message {
-  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
-  color: $color-gray-7;
+  box-shadow: 0 3px 6px rgba($secondary-09, 0.16); // sass-lint:disable-line no-color-literals
+  color: $secondary-08;
   display: flex;
   margin-bottom: $margin-default * 2;
   .icon {
     align-items: center;
-    color: $color-white;
+    color: $secondary-01;
     display: flex;
     font-size: 175%;
     justify-content: center;
@@ -21,7 +21,7 @@
       font-weight: 600;
     }
     a {
-      color: $color-gray-7;
+      color: $secondary-08;
       text-decoration: underline;
       &:hover {
         color: $link-hover-color;
@@ -40,13 +40,13 @@
     button {
       background: transparent;
       border: 0;
-      color: $color-gray-7;
+      color: $secondary-08;
       padding: $spacer $spacer * 2;
     }
   }
   // Estados
-  @each $state, $color in (success, $color-success), (danger, $color-danger),
-    (warning, $color-warning), (info, $color-info)
+  @each $state, $color in (success, $success), (danger, $danger),
+    (warning, $warning), (info, $info)
   {
     &.is-#{$state} {
       background: scale-color($color, $lightness: 90%);
@@ -55,7 +55,7 @@
       }
       @if ($state == warning) {
         .icon {
-          color: $color-gray-7;
+          color: $secondary-08;
         }
       }
     }

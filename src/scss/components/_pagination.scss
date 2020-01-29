@@ -8,7 +8,7 @@
   }
   a {
     border-radius: $button-radius;
-    color: $color-primary;
+    color: $primary;
     font-weight: 400;
     justify-content: center;
     min-width: $spacer * 3;
@@ -17,31 +17,31 @@
     text-align: center;
     text-decoration: none !important;
     &:hover {
-      background-color: $color-primary-pastel-1;
+      background-color: $primary-pastel-01;
       text-decoration: none;
     }
   }
   .is-active {
     a {
-      background-color: $color-primary;
-      color: $color-white;
+      background-color: $primary;
+      color: $secondary-01;
     }
   }
   .is-first {
     &::after {
-      color: $color-gray-3;
-      content: "|";
+      color: $secondary-04;
+      content: '|';
     }
   }
   .is-last {
     &::before {
-      color: $color-gray-3;
-      content: "|";
+      color: $secondary-04;
+      content: '|';
     }
   }
   .is-disabled {
     a {
-      color: $color-gray-5;
+      color: $secondary-06;
       cursor: default;
       pointer-events: none;
     }

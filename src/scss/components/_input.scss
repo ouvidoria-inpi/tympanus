@@ -8,7 +8,7 @@
   }
   input {
     @include placeholder;
-    background: $color-white;
+    background: $secondary-01;
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
     color: $input-color;
@@ -19,16 +19,16 @@
     padding-right: $spacer * 2;
     width: 100%;
     &:focus {
-      border-color: $color-primary-lighten-1;
-      box-shadow: 0 0 0 1px $color-primary-lighten-1;
+      border-color: $primary-lighten-01;
+      box-shadow: 0 0 0 1px $primary-lighten-01;
       outline: none;
     }
     &:invalid {
-      border-color: $color-danger;
-      box-shadow: 0 0 0 1px $color-danger;
+      border-color: $danger;
+      box-shadow: 0 0 0 1px $danger;
     }
     &:disabled {
-      background: $color-gray-2;
+      background: $secondary-03;
     }
   }
   // Input com ícone
@@ -62,17 +62,17 @@
       }
     }
     button.icon {
-      color: $color-primary;
+      color: $primary;
       &:focus,
       &:hover {
-        color: $color-primary-lighten-2;
+        color: $primary-lighten-02;
       }
     }
   }
   // Lista de autocomplete
   .search-items {
-    background: $color-white;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
+    background: $secondary-01;
+    box-shadow: 0 3px 6px rgba($secondary-09, 0.22); // sass-lint:disable-line no-color-literals
     left: 0;
     margin-top: 1px;
     position: absolute;
@@ -83,7 +83,7 @@
       cursor: pointer;
       padding: $spacer;
       &:hover {
-        background-color: $color-primary-pastel-1;
+        background-color: $primary-pastel-01;
       }
     }
   }
@@ -100,8 +100,8 @@
     }
   }
   // Estados
-  @each $state, $color in (focus, $color-primary-lighten-2),
-    (valid, $color-success), (invalid, $color-danger)
+  @each $state, $color in (focus, $primary-lighten-02), (valid, $success),
+    (invalid, $danger)
   {
     &.is-#{$state} {
       input {

@@ -6,13 +6,16 @@
  */
 
 // Carregar configurações
-@import "base";
+@import 'base';
+
+// Gerar tokens
+@import 'tokens';
 
 // Reset CSS Bootstrap
-@import "../../node_modules/bootstrap/scss/reboot";
+@import '../../node_modules/bootstrap/scss/reboot';
 
 // Utilitários
-@import "utilities";
+@import 'utilities';
 
 // Templates
-@import "templates";
+@import 'templates';

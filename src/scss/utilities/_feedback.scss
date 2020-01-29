@@ -5,9 +5,9 @@
   font-weight: $feedback-font-weight;
   padding: $spacer-half;
   &.is-valid {
-    color: $color-success;
+    color: $success;
   }
   &.is-invalid {
-    color: $color-danger;
+    color: $danger;
   }
 }

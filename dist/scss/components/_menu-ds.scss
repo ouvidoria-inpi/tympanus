@@ -1,5 +1,5 @@
 .ds-menu-lateral {
-  background: $color-white;
+  background: $secondary-01;
   padding: 0;
   position: relative;
   z-index: 1;
@@ -7,8 +7,8 @@
   button {
     background: transparent;
     border: 0;
-    border-bottom: 1px solid $color-primary;
-    color: $color-primary;
+    border-bottom: 1px solid $primary;
+    color: $primary;
     display: flex;
     font-size: $font-size-base * 1.25;
     font-weight: 400;
@@ -17,11 +17,11 @@
     text-align: left;
     width: 100%;
     &:hover {
-      background: $color-primary-pastel-1;
+      background: $primary-pastel-01;
       text-decoration: none;
     }
   }
-  [class*="fa-"] {
+  [class*='fa-'] {
     margin-top: $spacer-half;
   }
   .submenu {
@@ -31,7 +31,7 @@
     a,
     button {
       border-width: 0;
-      color: $color-gray-7;
+      color: $secondary-08;
       font-size: $font-size-base;
     }
     .menu-item {
@@ -47,12 +47,12 @@
         padding-left: $spacer * 4.5;
       }
     }
-    [class*="fa-"] {
-      color: $color-gray-5;
+    [class*='fa-'] {
+      color: $secondary-06;
     }
   }
   .is-open {
-    [class*="fa-"] {
+    [class*='fa-'] {
       transform: rotate(180deg);
     }
     & + .submenu {
@@ -60,7 +60,7 @@
     }
   }
   .is-active {
-    background-color: $color-primary-lighten-2 !important;
-    color: $color-white !important;
+    background-color: $primary-lighten-02 !important;
+    color: $secondary-01 !important;
   }
 }

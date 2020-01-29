@@ -1,7 +1,7 @@
 @mixin button-pill(
-  $background: $color-primary,
-  $color: $color-white,
-  $border: $color-primary
+  $background: $primary,
+  $color: $secondary-01,
+  $border: $primary
 ) {
   background: $background;
   border: 1px solid $border;
@@ -14,9 +14,9 @@
   width: 100%;
   &:hover,
   &:focus {
-    background-color: $color-primary-lighten-2;
-    border-color: $color-primary-lighten-2;
-    color: $color-white;
+    background-color: $primary-lighten-02;
+    border-color: $primary-lighten-02;
+    color: $secondary-01;
   }
   &:disabled {
     background-color: adjust-color(

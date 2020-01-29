@@ -101,17 +101,17 @@ Dentro de `src/scss/components/` crie o arquivo **\_simple-button.scss** com o s
 ```scss
 // src/scss/components/_simple-button.scss
 .#{$prefix}simple-button {
-  background: $color-black;
-  border: 1px solid $color-black;
+  background: $secondary-09;
+  border: 1px solid $secondary-09;
   border-radius: 0;
-  color: $color-white;
+  color: $secondary-01;
   display: inline-block;
   font-weight: 400;
   padding: 8px 16px;
   text-transform: uppercase;
   &:hover {
-    background: $color-gray-6;
-    color: $color-white;
+    background: $secondary-07;
+    color: $secondary-01;
     text-decoration: none;
   }
 }

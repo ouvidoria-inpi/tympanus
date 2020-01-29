@@ -23,7 +23,7 @@
   @include user-bar;
   // Menu hamburguer
   @include hamburger;
-  background: $color-white;
+  background: $secondary-01;
 }
 
 @mixin header-shadow {
@@ -217,7 +217,7 @@
       margin-right: ($spacer * 2);
     }
     a {
-      color: $color-gray-6;
+      color: $secondary-07;
       font-weight: 500;
     }
   }
@@ -243,7 +243,7 @@
     }
     // Listagem de idiomas
     .items {
-      border-top: 1px solid $color-warning;
+      border-top: 1px solid $warning;
       margin: $spacer 0 0;
       right: 0;
       top: 100%;
@@ -263,7 +263,7 @@
 @mixin login {
   .login {
     .icon {
-      color: $color-primary;
+      color: $primary;
     }
     span {
       display: none;
@@ -272,7 +272,7 @@
   // Desktop
   @include media-breakpoint-up(md) {
     .login {
-      color: $color-gray-6;
+      color: $secondary-07;
       display: inline-flex;
       margin-left: ($spacer * 3);
       margin-top: $spacer-half;
@@ -299,7 +299,7 @@
       text-decoration: underline;
     }
     .icon {
-      color: $color-primary;
+      color: $primary;
     }
     span + span {
       margin-left: $spacer;
@@ -348,7 +348,7 @@
         @include btn-icon;
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $primary;
       }
     }
     // Botão fechar
@@ -428,7 +428,7 @@
           flex: 1;
           // Caixa de busca
           .field {
-            box-shadow: 0 (-$spacer-half) 0 $spacer-half $color-white;
+            box-shadow: 0 (-$spacer-half) 0 $spacer-half $secondary-01;
             position: relative;
             right: auto;
             top: auto;
@@ -505,22 +505,22 @@
     @include btn-icon;
     background: transparent;
     border: 0;
-    color: $color-primary;
+    color: $primary;
     left: -$spacer;
     position: absolute;
-    [class*="fa-times"] {
+    [class*='fa-times'] {
       display: none;
     }
     &.is-active {
-      [class*="fa-bars"] {
+      [class*='fa-bars'] {
         display: none;
       }
-      [class*="fa-times"] {
+      [class*='fa-times'] {
         display: block;
       }
       &::before {
         border: solid transparent;
-        border-bottom-color: $color-warning;
+        border-bottom-color: $warning;
         border-width: ($spacer * 1.5);
         bottom: -$spacer;
         content: none;
@@ -538,7 +538,7 @@
       bottom: 9px;
       &.is-active {
         &::before {
-          content: "";
+          content: '';
         }
       }
     }
@@ -570,7 +570,7 @@
       margin-left: $spacer;
       &::after {
         border-radius: 50%;
-        content: "";
+        content: '';
         display: block;
         height: 16px;
         position: absolute;
@@ -584,19 +584,19 @@
       &:hover {
         .arrow {
           &::after {
-            background: $color-primary-pastel-1;
+            background: $primary-pastel-01;
           }
         }
       }
     }
     .items {
-      background: $color-white;
-      box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
+      background: $secondary-01;
+      box-shadow: 0 3px 6px rgba($secondary-09, 0.22); // sass-lint:disable-line no-color-literals
       display: none;
       position: absolute;
     }
     .title {
-      border-bottom: 1px solid $color-gray-3;
+      border-bottom: 1px solid $secondary-04;
       display: block;
       font-size: 14px;
       font-style: italic;
@@ -604,9 +604,9 @@
       padding: $spacer ($spacer * 2);
     }
     .item {
-      background: $color-white;
+      background: $secondary-01;
       border: 0;
-      color: $color-gray-6;
+      color: $secondary-07;
       display: block;
       padding: $spacer ($spacer * 2);
       position: relative;
@@ -615,11 +615,11 @@
       white-space: nowrap;
       width: 100%;
       &:hover {
-        background: $color-primary-pastel-1;
+        background: $primary-pastel-01;
       }
       // Item pré selecionado
       &.is-active {
-        color: $color-primary;
+        color: $primary;
         font-weight: 500;
       }
     }
@@ -634,18 +634,18 @@
 
 @mixin btn-icon {
   align-items: center;
-  color: $color-primary;
+  color: $primary;
   display: inline-flex;
   height: 36px;
   justify-content: center;
   width: 36px;
   &:hover {
-    color: $color-primary-lighten-2;
+    color: $primary-lighten-02;
     z-index: 1;
     &::after {
-      background: $color-primary-pastel-1;
+      background: $primary-pastel-01;
       border-radius: 50%;
-      content: "";
+      content: '';
       display: block;
       height: 32px;
       position: absolute;
@@ -657,7 +657,7 @@
 
 @mixin user-avatar {
   .avatar {
-    color: $color-primary;
+    color: $primary;
     display: inline-flex;
     font-size: 40px;
     position: relative;
@@ -666,9 +666,9 @@
     }
     // Badge com quantidade de notificações
     & + .badge {
-      background: $color-danger;
+      background: $danger;
       border-radius: 50%;
-      color: $color-white;
+      color: $secondary-01;
       font-size: 11px;
       font-weight: 700;
       height: 18px;
@@ -706,10 +706,10 @@
       &.is-active {
         &::after {
           border: solid transparent;
-          border-bottom-color: $color-gray-7;
+          border-bottom-color: $secondary-08;
           border-width: 12px;
           bottom: 100%;
-          content: "";
+          content: '';
           height: 0;
           pointer-events: none;
           position: absolute;
@@ -739,10 +739,10 @@
       &.is-active {
         &::after {
           border: solid transparent;
-          border-bottom-color: $color-gray-7;
+          border-bottom-color: $secondary-08;
           border-width: 12px;
           bottom: 100%;
-          content: "";
+          content: '';
           height: 0;
           pointer-events: none;
           position: absolute;
@@ -761,14 +761,14 @@
     }
     // Marca
     .brand {
-      background: $color-gray-1;
-      border: 1px solid $color-gray-3;
+      background: $secondary-02;
+      border: 1px solid $secondary-04;
       height: 42px;
       width: 58px;
     }
     // Nome
     .name {
-      color: $color-gray-6;
+      color: $secondary-07;
       display: block;
       font-size: 9px;
       font-weight: 500;
@@ -782,10 +782,10 @@
       &:hover {
         text-decoration: none;
         .brand {
-          border-color: $color-primary-lighten-2;
+          border-color: $primary-lighten-02;
         }
         .name {
-          color: $color-primary-lighten-2;
+          color: $primary-lighten-02;
         }
       }
     }
@@ -803,10 +803,10 @@
 @mixin user-logout {
   .logout {
     align-items: center;
-    background: $color-primary;
-    border: 1px solid $color-primary;
+    background: $primary;
+    border: 1px solid $primary;
     border-radius: 100px;
-    color: $color-white;
+    color: $secondary-01;
     display: inline-flex;
     font-size: 12px;
     font-weight: 600;
@@ -815,8 +815,8 @@
     padding: 0 ($spacer * 3);
     text-align: center;
     &:hover {
-      background: $color-primary-lighten-2;
-      border-color: $color-primary-lighten-2;
+      background: $primary-lighten-02;
+      border-color: $primary-lighten-02;
     }
   }
 }

@@ -7,9 +7,9 @@
   .template-authentication {
     display: grid;
     grid-template-areas:
-      "header"
-      "wrapper"
-      "footer";
+      'header'
+      'wrapper'
+      'footer';
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     .page-header {
@@ -56,14 +56,14 @@
   &:hover,
   &:focus {
     .br-button {
-      background-color: $color-primary-lighten-2;
-      border-color: $color-primary-lighten-2;
+      background-color: $primary-lighten-02;
+      border-color: $primary-lighten-02;
     }
   }
   &:disabled {
     .br-button {
-      background: $color-gray-5;
-      border-color: $color-gray-5;
+      background: $secondary-06;
+      border-color: $secondary-06;
     }
   }
 }
@@ -82,7 +82,7 @@ $logo-desktop: 150px;
 
 // Sombra
 .shadow-bottom {
-  box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+  box-shadow: 0 3px 6px rgba($secondary-09, 0.16); // sass-lint:disable-line no-color-literals
 }
 
 // Fixar na tela
@@ -123,7 +123,7 @@ $logo-desktop: 150px;
 
 // Links úteis
 .links {
-  border-top: 1px solid $color-gray-2;
+  border-top: 1px solid $secondary-03;
   font-size: 14px;
   padding: $spacer;
   position: relative;
@@ -137,7 +137,7 @@ $logo-desktop: 150px;
     align-items: center;
     display: flex;
     padding: $spacer-half 0;
-    [class*="fa-"] {
+    [class*='fa-'] {
       margin-left: $spacer;
     }
   }
@@ -152,9 +152,9 @@ $logo-desktop: 150px;
   }
   // Container da navegação
   .wrapper {
-    background: $color-white;
-    border-top: 1px solid $color-warning;
-    box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+    background: $secondary-01;
+    border-top: 1px solid $warning;
+    box-shadow: 0 3px 6px rgba($secondary-09, 0.16); // sass-lint:disable-line no-color-literals
     display: none;
     flex-direction: column;
     left: 0;
@@ -170,7 +170,7 @@ $logo-desktop: 150px;
   }
   // Cabeçalho
   .header-bar {
-    background: $color-gray-1;
+    background: $secondary-02;
     margin: 0 (-$spacer);
     min-height: $navigation-bar;
   }
@@ -207,8 +207,8 @@ $logo-desktop: 150px;
       font-size: 26px;
       justify-content: flex-end;
       margin: 0 $spacer;
-      [class*="fa-"] {
-        color: $color-primary;
+      [class*='fa-'] {
+        color: $primary;
         margin-right: ($spacer * 2);
       }
       img {
@@ -231,7 +231,7 @@ $logo-desktop: 150px;
         max-width: 64px;
       }
       &::before {
-        background: $color-gray-3;
+        background: $secondary-04;
         content: '';
         height: 1px;
         left: 0;
@@ -244,7 +244,7 @@ $logo-desktop: 150px;
   }
   // Submenu
   .submenu {
-    background: $color-gray-2;
+    background: $secondary-03;
     bottom: 0;
     display: none;
     left: 0;
@@ -268,7 +268,7 @@ $logo-desktop: 150px;
       align-items: center;
       background: transparent;
       border: 0;
-      color: $color-gray-6;
+      color: $secondary-07;
       display: flex;
       font-weight: 400;
       justify-content: space-between;
@@ -277,7 +277,7 @@ $logo-desktop: 150px;
       text-decoration: none;
       width: 100%;
       [class*='fa-'] {
-        color: $color-primary;
+        color: $primary;
       }
     }
     // Item ativo
@@ -285,12 +285,12 @@ $logo-desktop: 150px;
       // Link ou trigger
       > a,
       > button {
-        background: $color-primary-darken-1;
-        color: $color-white;
+        background: $primary-darken-01;
+        color: $secondary-01;
         display: none;
         font-weight: 600;
         [class*='fa-'] {
-          color: $color-white;
+          color: $secondary-01;
         }
       }
       // Menu gov.br
@@ -307,7 +307,7 @@ $logo-desktop: 150px;
         // Link ou trigger
         > a,
         > button {
-          background: $color-primary;
+          background: $primary;
         }
       }
     }
@@ -353,16 +353,16 @@ $logo-desktop: 150px;
         }
       }
       .title {
-        border-bottom: 1px solid $color-gray-3;
+        border-bottom: 1px solid $secondary-04;
         display: block;
         padding: ($spacer * 1.5) ($spacer * 2);
       }
       .item {
-        color: $color-gray-6;
+        color: $secondary-07;
         display: block;
         padding: $spacer ($spacer * 2);
         &:hover {
-          background: $color-primary-pastel-1;
+          background: $primary-pastel-01;
           text-decoration: none;
         }
       }
@@ -407,7 +407,7 @@ $logo-desktop: 150px;
     }
     // Legislação
     .legislation {
-      color: $color-gray-7;
+      color: $secondary-08;
       display: inline-block;
       font-size: 14px;
       margin: 0;
@@ -416,7 +416,7 @@ $logo-desktop: 150px;
     .language {
       display: inline-block;
       .trigger {
-        color: $color-gray-7;
+        color: $secondary-08;
         font-size: 14px;
       }
     }
@@ -464,7 +464,7 @@ $logo-desktop: 150px;
 
 // Redes sociais
 .social-network {
-  border-top: 1px solid $color-gray-2;
+  border-top: 1px solid $secondary-03;
   margin: 0;
   padding: $spacer;
   text-transform: uppercase;
@@ -483,7 +483,7 @@ $logo-desktop: 150px;
       margin: 0;
       padding: 0;
       a {
-        color: $color-primary;
+        color: $primary;
         display: inline-block;
         padding: $spacer ($spacer * 2);
       }
@@ -505,7 +505,7 @@ $logo-desktop: 150px;
 .page-footer {
   position: relative;
   a {
-    color: $color-white;
+    color: $secondary-01;
   }
   // Logo
   .logo {
@@ -522,15 +522,15 @@ $logo-desktop: 150px;
   }
   // Navegação
   .navigation {
-    border-top: 1px solid $color-white;
+    border-top: 1px solid $secondary-01;
     padding: 0;
     position: static;
     // Item de navegação
     .item {
-      border-bottom: 1px solid $color-white;
+      border-bottom: 1px solid $secondary-01;
       a,
       button {
-        color: $color-white;
+        color: $secondary-01;
         display: inline-block;
         font-weight: 800;
         padding: ($spacer * 2) 0;
@@ -538,7 +538,7 @@ $logo-desktop: 150px;
         width: auto;
         &:hover {
           background: transparent;
-          color: $color-white;
+          color: $secondary-01;
           text-decoration: underline;
         }
       }
@@ -577,14 +577,14 @@ $logo-desktop: 150px;
   // Redes sociais
   .social-network {
     border: 0;
-    color: $color-white;
+    color: $secondary-01;
     padding: ($spacer * 7) 0 ($spacer * 2);
     text-align: left;
     span {
       display: block;
     }
     a {
-      color: $color-white;
+      color: $secondary-01;
     }
   }
   // Marcas do governo
@@ -604,7 +604,7 @@ $logo-desktop: 150px;
   }
   // Cancela Serpro
   .chancela-serpro {
-    border-bottom: 4px solid $color-primary-darken-2;
+    border-bottom: 4px solid $primary-darken-02;
     padding: $spacer;
     text-align: center;
   }
@@ -653,7 +653,7 @@ $logo-desktop: 150px;
   &.navigation {
     // Container da navegação
     .wrapper {
-      background: $color-gray-2;
+      background: $secondary-03;
       min-height: calc(100vh - #{$main-bar-mobile * 2});
     }
     // Cabeçalho
@@ -759,7 +759,7 @@ $logo-desktop: 150px;
       position: relative;
       .local,
       .govbr {
-        border-right: 1px solid $color-gray-3;
+        border-right: 1px solid $secondary-04;
         padding: ($spacer * 2) 0;
         width: 25%;
       }
@@ -787,7 +787,7 @@ $logo-desktop: 150px;
     .level-2,
     .level-3 {
       bottom: 0;
-      box-shadow: inset -1px 0 0 0 $color-gray-3;
+      box-shadow: inset -1px 0 0 0 $secondary-04;
       padding: ($spacer * 2) 0;
       position: absolute;
       top: 0;
@@ -829,11 +829,11 @@ $logo-desktop: 150px;
         &:hover {
           > a,
           > button {
-            background: $color-primary-darken-1;
-            color: $color-white;
+            background: $primary-darken-01;
+            color: $secondary-01;
             font-weight: 600;
             [class*='fa-'] {
-              color: $color-white;
+              color: $secondary-01;
             }
             img {
               filter: invert(0);
@@ -850,7 +850,7 @@ $logo-desktop: 150px;
           &:hover {
             > a,
             > button {
-              background: $color-primary;
+              background: $primary;
             }
           }
         }
@@ -992,7 +992,7 @@ $logo-desktop: 150px;
     }
     // Navegação
     &.navigation {
-      background: $color-gray-2;
+      background: $secondary-03;
       // Container da navegação
       .wrapper {
         background: transparent;
@@ -1027,8 +1027,8 @@ $logo-desktop: 150px;
         position: relative;
         > a,
         button {
-          border-top: 1px solid $color-primary-pastel-2;
-          color: $color-primary;
+          border-top: 1px solid $primary-pastel-02;
+          color: $primary;
           font-weight: 600;
         }
         [class*='fa-'] {
@@ -1040,8 +1040,8 @@ $logo-desktop: 150px;
           > button {
             background: transparent;
             &:hover {
-              background: $color-primary-darken-1;
-              color: $color-white;
+              background: $primary-darken-01;
+              color: $secondary-01;
             }
           }
         }
@@ -1051,7 +1051,7 @@ $logo-desktop: 150px;
           > a,
           > button {
             border-top: 0;
-            color: $color-gray-6;
+            color: $secondary-07;
             font-weight: 500;
             [class*='fa-'] {
               transform: rotate(0);
@@ -1065,7 +1065,7 @@ $logo-desktop: 150px;
             background: transparent;
             display: flex;
             [class*='fa-'] {
-              color: $color-primary;
+              color: $primary;
               transform: rotate(-90deg);
             }
           }
@@ -1075,8 +1075,8 @@ $logo-desktop: 150px;
               &.is-active {
                 > a,
                 > button {
-                  [class*="fa-"] {
-                    color: $color-primary-lighten-2;
+                  [class*='fa-'] {
+                    color: $primary-lighten-02;
                     transform: rotate(0);
                   }
                 }
@@ -1095,15 +1095,15 @@ $logo-desktop: 150px;
         position: static;
       }
       .level-1 {
-        border-top: 1px solid $color-primary-pastel-2;
+        border-top: 1px solid $primary-pastel-02;
         padding: 0 0 ($spacer * 2);
         width: 100%;
         > .item {
           &:hover {
             a,
             button {
-              [class*="fa-"] {
-                color: $color-primary-lighten-2;
+              [class*='fa-'] {
+                color: $primary-lighten-02;
               }
             }
             .level-2 {
@@ -1118,7 +1118,7 @@ $logo-desktop: 150px;
         }
       }
       .level-2 {
-        background: $color-gray-1;
+        background: $secondary-02;
         left: 100%;
         margin-top: -($spacer * 2);
         padding: ($spacer * 2) 0;

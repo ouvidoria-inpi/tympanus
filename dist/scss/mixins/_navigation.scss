@@ -44,7 +44,7 @@
   // Versão de site
   &.is-site {
     .header {
-      background: $color-gray-1;
+      background: $secondary-02;
     }
     @include media-breakpoint-up(md) {
       .header {
@@ -55,7 +55,7 @@
   // Versão de sistema
   &.is-system {
     .header {
-      background: $color-gray-2;
+      background: $secondary-03;
     }
     // Desktop
     @include media-breakpoint-up(md) {
@@ -73,14 +73,14 @@
   // Desktop
   @include media-breakpoint-up(md) {
     .footer {
-      background: $color-gray-1;
+      background: $secondary-02;
       padding: 0;
     }
   }
   // Versão de sistema
   &.is-system {
     .footer {
-      background: $color-gray-2;
+      background: $secondary-03;
     }
     // Desktop
     @include media-breakpoint-up(md) {
@@ -93,7 +93,7 @@
 
 @mixin navigation {
   .navigation {
-    background: $color-gray-2;
+    background: $secondary-03;
     .container {
       position: relative;
     }
@@ -127,7 +127,7 @@
 
 @mixin logo {
   .logo {
-    background: $color-gray-1;
+    background: $secondary-02;
     display: none;
     flex-flow: column-reverse;
     font-weight: 600;
@@ -162,7 +162,7 @@
     margin: 0;
     padding: 0;
     .arrow {
-      color: $color-primary;
+      color: $primary;
       margin-right: ($spacer * 2);
     }
     &.is-active {
@@ -179,7 +179,7 @@
 
 @mixin tree {
   .tree {
-    background: $color-gray-2;
+    background: $secondary-03;
     display: none;
     list-style: none;
     margin: 0 (-$spacer);
@@ -193,14 +193,14 @@
       align-items: center;
       background: transparent;
       border: 0;
-      color: $color-gray-6;
+      color: $secondary-07;
       display: flex;
       flex: 1;
       justify-content: space-between;
       padding: $spacer ($spacer * 2);
       &:hover {
-        background: $color-primary-darken-1;
-        color: $color-white;
+        background: $primary-darken-01;
+        color: $secondary-01;
       }
     }
     .item {
@@ -211,9 +211,9 @@
       font-size: 12px;
     }
     .label {
-      box-shadow: inset 0 1px 0 $color-primary-pastel-2,
-        inset 0 -1px 0 $color-primary-pastel-2;
-      color: $color-primary;
+      box-shadow: inset 0 1px 0 $primary-pastel-02,
+        inset 0 -1px 0 $primary-pastel-02;
+      color: $primary;
       flex-flow: row;
       font-weight: 600;
       margin: 0;
@@ -234,9 +234,9 @@
       }
       &:hover {
         background: transparent;
-        color: $color-primary;
+        color: $primary;
         .arrow {
-          background: $color-primary-pastel-1;
+          background: $primary-pastel-01;
         }
       }
     }
@@ -246,11 +246,11 @@
     }
     // Links
     a {
-      color: $color-gray-6;
+      color: $secondary-07;
       padding: $spacer ($spacer * 2);
       &:hover {
-        background: $color-primary-darken-1;
-        color: $color-white;
+        background: $primary-darken-01;
+        color: $secondary-01;
         text-decoration: none;
       }
     }
@@ -292,12 +292,12 @@
           .item {
             position: relative;
             .item {
-              background: $color-gray-1;
+              background: $secondary-02;
               &:hover {
                 > {
                   .trigger,
                   a {
-                    background: $color-primary;
+                    background: $primary;
                   }
                 }
               }
@@ -306,8 +306,8 @@
               > {
                 .trigger,
                 a {
-                  background: $color-primary-darken-1;
-                  color: $color-white;
+                  background: $primary-darken-01;
+                  color: $secondary-01;
                 }
                 .tree {
                   display: block;
@@ -332,17 +332,17 @@
     .tree {
       // Separador de menus
       & + .tree {
-        box-shadow: inset 0 1px 0 $color-gray-3;
+        box-shadow: inset 0 1px 0 $secondary-04;
       }
     }
     // Desktop
     @include media-breakpoint-up(md) {
       .tree {
-        box-shadow: inset -1px 0 0 $color-gray-3;
+        box-shadow: inset -1px 0 0 $secondary-04;
         flex: 1;
         width: 25%;
         & + .tree {
-          box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
+          box-shadow: inset -1px 0 0 $secondary-04, inset 0 1px 0 $secondary-04;
         }
         .tree {
           bottom: 0;
@@ -362,7 +362,7 @@
               > {
                 .trigger,
                 a {
-                  background: $color-primary;
+                  background: $primary;
                 }
               }
             }
@@ -372,8 +372,8 @@
             > {
               .trigger,
               a {
-                background: $color-primary-darken-1;
-                color: $color-white;
+                background: $primary-darken-01;
+                color: $secondary-01;
               }
               .tree {
                 display: block;
@@ -409,12 +409,12 @@
     }
     // Listagem de idiomas
     .menu {
-      border-top: 1px solid $color-warning;
+      border-top: 1px solid $warning;
       margin: $spacer 0 0;
       right: 0;
       // Rótulo da seleção
       .title {
-        border-bottom: 1px solid $color-gray-3;
+        border-bottom: 1px solid $secondary-04;
         font-size: 14px;
         font-style: italic;
         font-weight: 600;
@@ -426,7 +426,7 @@
         white-space: nowrap;
         // Item selecionado
         &.is-active {
-          color: $color-primary;
+          color: $primary;
           font-weight: 600;
         }
       }
@@ -442,7 +442,7 @@
 
 @mixin links {
   .links {
-    border-top: 1px solid $color-gray-2;
+    border-top: 1px solid $secondary-03;
     display: flex;
     flex-flow: column;
     font-size: 14px;
@@ -459,7 +459,7 @@
       align-items: center;
       display: inline-flex;
       padding: $spacer-half 0;
-      [class*="fa-"] {
+      [class*='fa-'] {
         margin-left: $spacer;
       }
     }
@@ -487,7 +487,7 @@
 
 @mixin social-network {
   .social-network {
-    border-top: 1px solid $color-gray-2;
+    border-top: 1px solid $secondary-03;
     margin: 0;
     padding: ($spacer * 2) 0;
     text-transform: uppercase;
@@ -522,10 +522,10 @@
 @mixin user-logout {
   .logout {
     align-items: center;
-    background: $color-primary;
-    border: 1px solid $color-primary;
+    background: $primary;
+    border: 1px solid $primary;
     border-radius: 100px;
-    color: $color-white;
+    color: $secondary-01;
     display: inline-flex;
     font-size: 12px;
     font-weight: 600;
@@ -534,8 +534,8 @@
     padding: 0 ($spacer * 3);
     text-align: center;
     &:hover {
-      background: $color-primary-lighten-1;
-      border-color: $color-primary-lighten-1;
+      background: $primary-lighten-01;
+      border-color: $primary-lighten-01;
     }
   }
 }
@@ -565,7 +565,7 @@
       margin-left: $spacer;
       &::after {
         border-radius: 50%;
-        content: "";
+        content: '';
         display: block;
         height: 16px;
         position: absolute;
@@ -580,19 +580,19 @@
       &:hover {
         .arrow {
           &::after {
-            background: $color-primary-pastel-1;
+            background: $primary-pastel-01;
           }
         }
       }
     }
     .items {
-      background: $color-white;
-      box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
+      background: $secondary-01;
+      box-shadow: 0 3px 6px rgba($secondary-09, 0.22); // sass-lint:disable-line no-color-literals
       display: none;
       position: absolute;
     }
     .title {
-      border-bottom: 1px solid $color-gray-3;
+      border-bottom: 1px solid $secondary-04;
       display: block;
       font-size: 14px;
       font-style: italic;
@@ -600,9 +600,9 @@
       padding: $spacer ($spacer * 2);
     }
     .item {
-      background: $color-white;
+      background: $secondary-01;
       border: 0;
-      color: $color-gray-6;
+      color: $secondary-07;
       display: block;
       padding: $spacer ($spacer * 2);
       position: relative;
@@ -611,11 +611,11 @@
       white-space: nowrap;
       width: 100%;
       &:hover {
-        background: $color-primary-pastel-1;
+        background: $primary-pastel-01;
       }
       // Item pré selecionado
       &.is-active {
-        color: $color-primary;
+        color: $primary;
         font-weight: 500;
       }
     }
@@ -661,7 +661,7 @@
 
 @mixin user-avatar {
   .avatar {
-    color: $color-primary;
+    color: $primary;
     display: inline-flex;
     font-size: 40px;
     position: relative;
@@ -670,9 +670,9 @@
     }
     // Badge com quantidade de notificações
     & + .badge {
-      background: $color-danger;
+      background: $danger;
       border-radius: 50%;
-      color: $color-white;
+      color: $secondary-01;
       font-size: 11px;
       font-weight: 700;
       height: 18px;
@@ -710,10 +710,10 @@
       &.is-active {
         &::after {
           border: solid transparent;
-          border-bottom-color: $color-gray-7;
+          border-bottom-color: $secondary-08;
           border-width: 12px;
           bottom: 100%;
-          content: "";
+          content: '';
           height: 0;
           pointer-events: none;
           position: absolute;
@@ -742,10 +742,10 @@
       &.is-active {
         &::after {
           border: solid transparent;
-          border-bottom-color: $color-gray-7;
+          border-bottom-color: $secondary-08;
           border-width: 12px;
           bottom: 100%;
-          content: "";
+          content: '';
           height: 0;
           pointer-events: none;
           position: absolute;
@@ -768,14 +768,14 @@
       margin: ($spacer * 2) 0 0;
       // Marca
       .brand {
-        background: $color-gray-1;
-        border: 1px solid $color-gray-3;
+        background: $secondary-02;
+        border: 1px solid $secondary-04;
         height: 42px;
         width: 58px;
       }
       // Nome
       .name {
-        color: $color-gray-6;
+        color: $secondary-07;
         display: block;
         font-size: 9px;
         font-weight: 500;
@@ -785,10 +785,10 @@
       &:hover {
         text-decoration: none;
         .brand {
-          border-color: $color-primary-lighten-1;
+          border-color: $primary-lighten-01;
         }
         .name {
-          color: $color-primary-lighten-1;
+          color: $primary-lighten-01;
         }
       }
     }
@@ -805,18 +805,18 @@
 
 @mixin btn-icon {
   align-items: center;
-  color: $color-primary;
+  color: $primary;
   display: inline-flex;
   height: 36px;
   justify-content: center;
   width: 36px;
   &:hover {
-    color: $color-primary-lighten-1;
+    color: $primary-lighten-01;
     z-index: 1;
     &::after {
-      background: $color-primary-pastel-1;
+      background: $primary-pastel-01;
       border-radius: 50%;
-      content: "";
+      content: '';
       display: block;
       height: 32px;
       position: absolute;

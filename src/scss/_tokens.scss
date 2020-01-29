@@ -1,0 +1,6 @@
+:root {
+  // Cores
+  @each $color, $value in $br-theme {
+    --#{$color}: #{$value};
+  }
+}
