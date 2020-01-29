@@ -1,3 +1,4 @@
+
 class BRAccordeon {
   constructor(name, component) {
     this.name = name;

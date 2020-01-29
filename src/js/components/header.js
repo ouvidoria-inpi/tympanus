@@ -1,3 +1,4 @@
+try{
 class BRHeader {
 
   constructor(name, component) {
@@ -114,3 +115,5 @@ listHeader = [];
 for (let header of window.document.querySelectorAll('.br-header')) {
   listHeader.push(new BRHeader('br-header', header));
 }
+
+}catch (e){}

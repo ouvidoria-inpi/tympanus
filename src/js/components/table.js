@@ -46,6 +46,6 @@ function setActive(el) {
 
 //Correção da altura das colunas na tabela responsiva;
 var target = document.getElementsByTagName('tr')
-for (i = 0; i < target.length; i++) {
+for (let i = 0; i < target.length; i++) {
   target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
 }
