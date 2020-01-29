@@ -234,7 +234,7 @@ const dtp_end = datepicker('#date-end', {
   maxDate:  new Date(),
 
 })
-
+/*
 const dtp_disabled = datepicker('#disabled', { 
   id: 3, 
   formatter: (input, date, instance) => {
@@ -260,16 +260,16 @@ const dtp_disabled = datepicker('#disabled', {
   
 
 })
-
+*/
 // Ativa as mascaras dos campos input
 
 dtp_default.el.addEventListener("keyup", dtp_maskDate);
-dtp_disabled.el.addEventListener("keyup", dtp_maskDate);
+//dtp_disabled.el.addEventListener("keyup", dtp_maskDate);
 dtp_start.el.addEventListener("keyup", dtp_maskDate);
 dtp_end.el.addEventListener("keyup", dtp_maskDate);
 
 
-// Ativa o calendari quando os botoes sao clicados
+// Ativa o calendario quando os botoes sao clicados
 dtp_default_btn = document.getElementById("default-btn")
 dtp_toggle(dtp_default_btn, dtp_default)
 
@@ -279,9 +279,10 @@ dtp_toggle(dtp_start_btn, dtp_start)
 dtp_end_btn = document.getElementById("date-end-btn")
 dtp_toggle(dtp_end_btn, dtp_end)
 
+/*
 dtp_disabled_btn = document.getElementById("disabled-btn")
 dtp_toggle(dtp_disabled_btn, dtp_disabled)
-
+*/
 
 // Teste do campo desabilitado
 //dtp_disabler(dtp_disabled)
