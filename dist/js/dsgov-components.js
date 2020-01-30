@@ -1,3 +1,56 @@
+class BRAccordeon {
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    this._setBehavior();
+		}
+		
+		
+
+  _setBehavior() {
+    for (let button of this.component.querySelectorAll("button.header")) {
+      button.addEventListener("click", event => {
+        this._collapse(event);
+        this._changeIcon(event);
+      });
+    }
+  }
+
+  _collapse(event) {
+    for (let field of this.component.querySelectorAll(".item")) {
+      if (field === event.currentTarget.parentNode) {
+        field.classList.toggle("is-active");
+      } else if (field.classList.contains("is-active")) {
+        field.classList.toggle("is-active");
+      }
+    }
+  }
+
+  _changeIcon(event) {
+    for (let field of this.component.querySelectorAll(".item")) {
+      if (field.classList.contains("is-active")) {
+        for (let icon of field.querySelectorAll(".icon")) {
+          icon.children[0].classList.remove("fa-plus");
+          icon.children[0].classList.add("fa-minus");
+        }
+      } else {
+        for (let icon of field.querySelectorAll(".icon")) {
+          icon.children[0].classList.remove("fa-minus");
+          icon.children[0].classList.add("fa-plus");
+        }
+      }
+    }
+  }
+}
+
+let accordeonList = [];
+
+window.onload = (function startBrAccordions() {
+  for (let brAccordeon of window.document.querySelectorAll(".br-accordeon")) {
+    accordeonList.push(new BRAccordeon("br-accordeon", brAccordeon));
+  }
+})();
+
 /**
  * @fileoverview syncscroll - scroll several areas simultaniously
  * @version 0.0.3
@@ -134,59 +187,6 @@
 
   exports.reset = reset;
 });
-
-class BRAccordeon {
-  constructor(name, component) {
-    this.name = name;
-    this.component = component;
-    this._setBehavior();
-		}
-		
-		
-
-  _setBehavior() {
-    for (let button of this.component.querySelectorAll("button.header")) {
-      button.addEventListener("click", event => {
-        this._collapse(event);
-        this._changeIcon(event);
-      });
-    }
-  }
-
-  _collapse(event) {
-    for (let field of this.component.querySelectorAll(".item")) {
-      if (field === event.currentTarget.parentNode) {
-        field.classList.toggle("is-active");
-      } else if (field.classList.contains("is-active")) {
-        field.classList.toggle("is-active");
-      }
-    }
-  }
-
-  _changeIcon(event) {
-    for (let field of this.component.querySelectorAll(".item")) {
-      if (field.classList.contains("is-active")) {
-        for (let icon of field.querySelectorAll(".icon")) {
-          icon.children[0].classList.remove("fa-plus");
-          icon.children[0].classList.add("fa-minus");
-        }
-      } else {
-        for (let icon of field.querySelectorAll(".icon")) {
-          icon.children[0].classList.remove("fa-minus");
-          icon.children[0].classList.add("fa-plus");
-        }
-      }
-    }
-  }
-}
-
-let accordeonList = [];
-
-window.onload = (function startBrAccordions() {
-  for (let brAccordeon of window.document.querySelectorAll(".br-accordeon")) {
-    accordeonList.push(new BRAccordeon("br-accordeon", brAccordeon));
-  }
-})();
 
 class BRChecklist {
   constructor(name, component) {
@@ -797,6 +797,573 @@ function closeModal() {
 }
 
 
+/* Componente BRNavigation
+ * Esse objeto trata a navegação do menu de site e de sistema
+ */
+
+class BRNavigation {
+  constructor(name, component) {
+    this.INITIAL_LEVEL = 0;
+    this.name = name;
+    this.component = component;
+    this._setBehavior();
+  }
+
+  /* Gerencia toda a configuaração do compontamento dos menus de site e sistema. */
+  _setBehavior() {
+    for (let navContainer of this.component.querySelectorAll(
+      ".navigation .container"
+    )) {
+      this._setTreeLevel(navContainer, 0);
+    }
+    this._setNavigationBehavior();
+
+    switch (this.component.id) {
+      case "site-nav":
+        this._setLanguageMenuBehavior();
+        break;
+      case "system-nav":
+        this._setConfigsMenuBehavior();
+        this._setBookmarksMenuBehavior();
+        break;
+    }
+  }
+
+  /* Coloca o atributo 'data-level' nos elementos com a classe 'tree'
+   * tendo o valor correspondente ao nível do menu, começando no nível 0.
+   */
+  _setTreeLevel(item, level) {
+    if (item) {
+      for (let tree of item.children) {
+        if (tree.classList.contains("menu-nav")) {
+          tree.setAttribute("data-level", level);
+          for (let item of tree.children) {
+            if (item.classList.contains("has-children")) {
+              this._setTreeLevel(item, level + 1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  _setNavigationBehavior() {
+    for (let navTrigger of this.component.querySelectorAll(
+      ".navigation ul.tree.menu-nav .item.has-children button.trigger"
+    )) {
+      navTrigger.addEventListener("click", event => {
+        this._handleInitialLevel(event);
+        this._handleItemSelection(event);
+      });
+    }
+    for (let goBackTrigger of this.component.querySelectorAll(
+      ".header .container button.go-back"
+    )) {
+      goBackTrigger.addEventListener("click", event => {
+        this._handleGoBack(event);
+      });
+    }
+  }
+
+  _getParentElementByClass(element, parentClass) {
+    while (!element.classList.contains(parentClass)) {
+      element = element.parentNode;
+    }
+    return element;
+  }
+
+  _getTreeLevel(element) {
+    return Number(
+      this._getParentElementByClass(element, "tree").getAttribute("data-level")
+    );
+  }
+
+  _getSiblingsElementsByClass(element, siblingClass) {
+    let siblings = [];
+    for (let sibling of element.parentNode.children) {
+      if (sibling.classList.contains(siblingClass)) {
+        siblings.push(sibling);
+      }
+    }
+    return siblings;
+  }
+
+  _handleInitialLevel(event) {
+    switch (
+      this._getParentElementByClass(event.currentTarget, "br-navigation").id
+    ) {
+      case "site-nav":
+        if (this._getTreeLevel(event.currentTarget) === this.INITIAL_LEVEL) {
+          for (let tree of this._getParentElementByClass(
+            event.currentTarget,
+            "container"
+          ).children) {
+            if (
+              tree !==
+              this._getParentElementByClass(event.currentTarget, "tree")
+            ) {
+              tree.classList.remove("is-active");
+            }
+          }
+        }
+        break;
+      case "system-nav":
+        if (
+          Number(this._getTreeLevel(event.currentTarget)) === this.INITIAL_LEVEL
+        ) {
+          for (let tree of this._getSiblingsElementsByClass(
+            event.currentTarget,
+            "tree"
+          )) {
+            for (let item of tree.children) {
+              item.classList.toggle("is-active");
+            }
+            tree.classList.toggle("is-active");
+          }
+          for (let arrow of event.currentTarget.querySelectorAll(
+            ".arrow svg"
+          )) {
+            if (arrow.classList.contains("fa-chevron-right")) {
+              arrow.classList.remove("fa-chevron-right");
+              arrow.classList.add("fa-chevron-left");
+            } else if (arrow.classList.contains("fa-chevron-left")) {
+              arrow.classList.remove("fa-chevron-left");
+              arrow.classList.add("fa-chevron-right");
+            }
+          }
+        }
+        if (
+          Number(this._getTreeLevel(event.currentTarget)) ===
+          this.INITIAL_LEVEL + 1
+        ) {
+          for (let tree of this.component.querySelectorAll(
+            '#system-nav .navigation .tree.menu-nav[data-level="0"]'
+          )) {
+            for (let item of tree.children) {
+              if (
+                item !==
+                this._getParentElementByClass(
+                  this._getParentElementByClass(event.currentTarget, "tree"),
+                  "item"
+                )
+              ) {
+                for (let tree of item.children) {
+                  if (tree.classList.contains("tree")) {
+                    for (let item of tree.children) {
+                      item.classList.remove("is-active");
+                    }
+                    tree.classList.remove("is-active");
+                  }
+                }
+                item.classList.remove("is-active");
+              } else {
+                for (let child of item.children) {
+                  if (child.classList.contains("trigger")) {
+                    child.classList.add("is-hidden");
+                  }
+                }
+              }
+            }
+          }
+        }
+        break;
+    }
+  }
+
+  _handleItemSelection(event) {
+    switch (
+      this._getParentElementByClass(event.currentTarget, "br-navigation").id
+    ) {
+      case "site-nav":
+        for (let item of this._getParentElementByClass(
+          event.currentTarget,
+          "tree"
+        ).children) {
+          if (
+            item !== this._getParentElementByClass(event.currentTarget, "item")
+          ) {
+            item.classList.remove("is-active");
+          }
+        }
+        for (let tree of this._getSiblingsElementsByClass(
+          event.currentTarget,
+          "tree"
+        )) {
+          tree.classList.add("is-active");
+          for (let item of tree.children) {
+            item.classList.add("is-active");
+          }
+        }
+        event.currentTarget.classList.add("is-hidden");
+        for (let name of event.currentTarget.querySelectorAll(".name")) {
+          this._setGoBackButton(
+            name.innerText,
+            this._getTreeLevel(event.currentTarget)
+          );
+        }
+        break;
+      case "system-nav":
+        if (this._getTreeLevel(event.currentTarget) > this.INITIAL_LEVEL) {
+          for (let tree of this._getSiblingsElementsByClass(
+            event.currentTarget,
+            "tree"
+          )) {
+            for (let item of tree.children) {
+              item.classList.add("is-active");
+            }
+            tree.classList.add("is-active");
+          }
+          for (let item of this._getParentElementByClass(
+            event.currentTarget,
+            "tree"
+          ).children) {
+            if (
+              item !==
+              this._getParentElementByClass(event.currentTarget, "item")
+            ) {
+              item.classList.remove("is-active");
+            }
+          }
+          event.currentTarget.classList.add("is-hidden");
+          for (let name of event.currentTarget.querySelectorAll(".name")) {
+            this._setGoBackButton(
+              name.innerText,
+              this._getTreeLevel(event.currentTarget)
+            );
+          }
+        }
+        break;
+    }
+  }
+
+  _setGoBackButton(name, level) {
+    if (
+      this._getParentElementByClass(event.currentTarget, "br-navigation").id ===
+      "site-nav"
+    ) {
+      for (let logo of this.component.querySelectorAll(
+        ".br-navigation .header .logo"
+      )) {
+        logo.classList.remove("is-active");
+      }
+    }
+    for (let goBackButton of this.component.querySelectorAll(
+      ".br-navigation .header button.go-back"
+    )) {
+      for (let node of goBackButton.querySelectorAll(".node")) {
+        node.innerText = name;
+      }
+      goBackButton.setAttribute("goto-level", level);
+      goBackButton.classList.add("is-active");
+    }
+  }
+
+  _handleGoBack(event) {
+    switch (
+      this._getParentElementByClass(event.currentTarget, "br-navigation").id
+    ) {
+      case "site-nav":
+        for (let tree of this.component.querySelectorAll(
+          '#site-nav .navigation .tree.is-active[data-level="' +
+            (Number(event.currentTarget.getAttribute("goto-level")) + 1) +
+            '"]'
+        )) {
+          for (let child of tree.children) {
+            child.classList.remove("is-active");
+          }
+          tree.classList.remove("is-active");
+          for (let sibling of this._getSiblingsElementsByClass(
+            tree,
+            "trigger"
+          )) {
+            sibling.classList.remove("is-hidden");
+          }
+        }
+        for (let tree of this.component.querySelectorAll(
+          '#site-nav .navigation .tree.is-active[data-level="' +
+            event.currentTarget.getAttribute("goto-level") +
+            '"]'
+        )) {
+          for (let child of tree.children) {
+            child.classList.add("is-active");
+          }
+          if (
+            Number(event.currentTarget.getAttribute("goto-level")) ===
+            this.INITIAL_LEVEL
+          ) {
+            event.currentTarget.classList.remove("is-active");
+            for (let node of event.currentTarget.querySelectorAll(".node")) {
+              node.innerText = "";
+            }
+            for (let headerItem of this._getParentElementByClass(
+              event.currentTarget,
+              "container"
+            ).children) {
+              if (headerItem.classList.contains("logo")) {
+                headerItem.classList.add("is-active");
+              }
+            }
+            for (let child of this._getParentElementByClass(tree, "container")
+              .children) {
+              child.classList.add("is-active");
+            }
+          } else {
+            for (let sibling of this._getSiblingsElementsByClass(
+              tree,
+              "trigger"
+            )) {
+              for (let name of sibling.querySelectorAll(".name")) {
+                for (let node of event.currentTarget.querySelectorAll(
+                  ".node"
+                )) {
+                  node.innerText = name.innerText;
+                }
+              }
+            }
+            event.currentTarget.setAttribute(
+              "goto-level",
+              Number(event.currentTarget.getAttribute("goto-level")) - 1
+            );
+          }
+        }
+        break;
+      case "system-nav":
+        for (let tree of this.component.querySelectorAll(
+          '#system-nav .navigation .tree.is-active[data-level="' +
+            (Number(event.currentTarget.getAttribute("goto-level")) + 1) +
+            '"]'
+        )) {
+          for (let child of tree.children) {
+            child.classList.remove("is-active");
+          }
+          tree.classList.remove("is-active");
+          for (let sibling of this._getSiblingsElementsByClass(
+            tree,
+            "trigger"
+          )) {
+            sibling.classList.remove("is-hidden");
+          }
+        }
+        for (let tree of this.component.querySelectorAll(
+          '#system-nav .navigation .tree.is-active[data-level="' +
+            event.currentTarget.getAttribute("goto-level") +
+            '"]'
+        )) {
+          for (let child of tree.children) {
+            child.classList.add("is-active");
+          }
+          if (
+            Number(event.currentTarget.getAttribute("goto-level")) ===
+            this.INITIAL_LEVEL + 1
+          ) {
+            event.currentTarget.classList.remove("is-active");
+            for (let node of event.currentTarget.querySelectorAll(".node")) {
+              node.innerText = "";
+            }
+            for (let child of this._getParentElementByClass(tree, "container")
+              .children) {
+              if (child.classList.contains("menu-nav")) {
+                for (let item of child.children) {
+                  for (let tree of item.querySelectorAll(
+                    '.tree.menu-nav[data-level="1"]'
+                  )) {
+                    for (let item of tree.children) {
+                      item.classList.add("is-active");
+                    }
+                    for (let sibling of this._getSiblingsElementsByClass(
+                      tree,
+                      "trigger"
+                    )) {
+                      sibling.classList.remove("is-hidden");
+                    }
+                    tree.classList.add("is-active");
+                  }
+                  item.classList.add("is-active");
+                }
+              }
+            }
+          } else {
+            for (let sibling of this._getSiblingsElementsByClass(
+              tree,
+              "trigger"
+            )) {
+              for (let name of sibling.querySelectorAll(".name")) {
+                for (let node of event.currentTarget.querySelectorAll(
+                  ".node"
+                )) {
+                  node.innerText = name.innerText;
+                }
+              }
+            }
+            event.currentTarget.setAttribute(
+              "goto-level",
+              Number(event.currentTarget.getAttribute("goto-level")) - 1
+            );
+          }
+        }
+        break;
+    }
+  }
+
+  _setLanguageMenuBehavior() {
+    for (let languageTrigger of this.component.querySelectorAll(
+      "#site-nav .footer .language.menu button.trigger"
+    )) {
+      languageTrigger.addEventListener("click", event => {
+        this._getParentElementByClass(
+          event.currentTarget,
+          "language"
+        ).classList.toggle("is-active");
+      });
+      for (let items of this._getSiblingsElementsByClass(
+        languageTrigger,
+        "items"
+      )) {
+        for (let item of items.children) {
+          item.addEventListener("click", event => {
+            for (let item of items.children) {
+              if (item !== event.currentTarget) {
+                item.classList.remove("is-active");
+              } else {
+                item.classList.add("is-active");
+                for (let triggerName of languageTrigger.querySelectorAll(
+                  ".name"
+                )) {
+                  for (let languageName of event.currentTarget.querySelectorAll(
+                    ".name"
+                  )) {
+                    triggerName.innerText = languageName.innerText;
+                  }
+                }
+              }
+            }
+          });
+        }
+      }
+    }
+  }
+
+  _setConfigsMenuBehavior() {
+    for (let configsTrigger of this.component.querySelectorAll(
+      "#system-nav .header .configs.menu button.trigger"
+    )) {
+      configsTrigger.addEventListener("click", event => {
+        if (
+          this._getParentElementByClass(
+            event.currentTarget,
+            "configs"
+          ).classList.contains("is-active")
+        ) {
+          for (let container of this.component.querySelectorAll(
+            "#system-nav .navigation .container"
+          )) {
+            for (let tree of container.children) {
+              if (tree.classList.contains("menu-nav")) {
+                tree.classList.add("is-active");
+              } else {
+                tree.classList.remove("is-active");
+              }
+            }
+          }
+          this._getParentElementByClass(
+            event.currentTarget,
+            "configs"
+          ).classList.remove("is-active");
+        } else {
+          for (let container of this.component.querySelectorAll(
+            "#system-nav .navigation .container"
+          )) {
+            for (let tree of container.children) {
+              if (tree.classList.contains("info-nav")) {
+                tree.classList.add("is-active");
+              } else {
+                tree.classList.remove("is-active");
+              }
+            }
+          }
+          this._getParentElementByClass(
+            event.currentTarget,
+            "configs"
+          ).classList.add("is-active");
+          for (let bookmarksMenu of this._getParentElementByClass(
+            event.currentTarget,
+            "container"
+          ).querySelectorAll(".bookmarks.menu")) {
+            bookmarksMenu.classList.remove("is-active");
+          }
+        }
+      });
+    }
+  }
+
+  _setBookmarksMenuBehavior() {
+    for (let bookmarksTrigger of this.component.querySelectorAll(
+      "#system-nav .header .bookmarks.menu button.trigger"
+    )) {
+      bookmarksTrigger.addEventListener("click", event => {
+        if (
+          this._getParentElementByClass(
+            event.currentTarget,
+            "bookmarks"
+          ).classList.contains("is-active")
+        ) {
+          for (let container of this.component.querySelectorAll(
+            "#system-nav .navigation .container"
+          )) {
+            for (let tree of container.children) {
+              if (tree.classList.contains("menu-nav")) {
+                tree.classList.add("is-active");
+              } else {
+                for (let item of tree.querySelectorAll(".item")) {
+                  item.classList.remove("is-active");
+                }
+                tree.classList.remove("is-active");
+              }
+            }
+          }
+          this._getParentElementByClass(
+            event.currentTarget,
+            "bookmarks"
+          ).classList.remove("is-active");
+        } else {
+          for (let container of this.component.querySelectorAll(
+            "#system-nav .navigation .container"
+          )) {
+            for (let tree of container.children) {
+              if (tree.classList.contains("favorite-nav")) {
+                for (let item of tree.querySelectorAll(".item")) {
+                  item.classList.add("is-active");
+                }
+                tree.classList.add("is-active");
+              } else {
+                tree.classList.remove("is-active");
+              }
+            }
+          }
+          this._getParentElementByClass(
+            event.currentTarget,
+            "bookmarks"
+          ).classList.add("is-active");
+          for (let configsMenu of this._getParentElementByClass(
+            event.currentTarget,
+            "container"
+          ).querySelectorAll(".configs.menu")) {
+            configsMenu.classList.remove("is-active");
+          }
+        }
+      });
+    }
+  }
+}
+
+let navigationList = [];
+
+window.onload = (function() {
+  for (let brNavigation of window.document.querySelectorAll(".br-navigation")) {
+    navigationList.push(new BRNavigation("br-navigation", brNavigation));
+  }
+})();
+
 scrim = document.getElementsByClassName("is-foco")[0];
 
 function on() {
@@ -1333,9 +1900,9 @@ window.onload = (function() {
 
 function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
 // ! Refatorações:
-// TODO: Comportamento de resize de coluna - refatorar código do ed
-// TODO: Efeito resize de altura da linha - refatorar código do ed
-// TODO: Cards internos de colunas - refatorar código do ed
+// TODO: Comportamento de resize de coluna
+// TODO: Efeito resize de altura da linha
+// TODO: Cards internos de colunas
 
 // ! Pendências:
 // TODO: Barra superior - itens de ação e menu flutuante, tags de filtros, itens selecionados
@@ -1349,7 +1916,6 @@ let brTableNumber = 0;
 function hoverRow(elements) {
   for (let element of elements) {
     if (element.children[0].children[0]) {
-      // console.log(element);
     }
   }
 }
@@ -1461,134 +2027,6 @@ for (let brTable of brTables) {
     setHeaderWidth(brTable, headers);
   });
 }
-
-// function checkBox() {
-//   var items =0;
-//   var check = document.querySelectorAll(".br-table input[type='checkbox']");
-//   var selecionado = document.querySelector(".selecao");
-//   var titulo = document.querySelector(".title-bar");
-//   var busca = document.querySelector('.search-bar');
-//   for(var i=0;i<check.length;i++){
-//     if (check[i].checked == true){
-//       trElement = check[i].closest('tr')
-//       if(!trElement.classList.contains('is-selected')){
-//         trElement.classList.toggle('is-selected')
-//       }
-//       items += 1;
-//     }else{
-//       trElement = check[i].closest('tr')
-//       if(trElement.classList.contains('is-selected')){
-//         trElement.classList.toggle('is-selected')
-//       }
-//     }
-//     if(items > 0){
-//       selecionado.classList.remove("is-invisible");
-//       selecionado.classList.add("is-visible");
-//       busca.classList.remove("is-visible");
-//       busca.classList.add("is-invisible");
-//       titulo.classList.remove("is-visible");
-//       titulo.classList.add("is-invisible");
-
-//     }
-//     else{
-//       titulo.classList.remove("is-invisible");
-//       titulo.classList.add("is-visible");
-//       selecionado.classList.remove("is-visible");
-//       selecionado.classList.add("is-invisible");
-//     }
-//   };
-// }
-// document.getElementById('table').addEventListener('click', checkBox);
-
-// function pesquisa(){
-//   document.querySelector(".search-bar").classList.toggle('is-invisible')
-//   document.querySelector(".title-bar").classList.toggle('is-invisible')
-// }
-// document.querySelectorAll('.toogle-search').forEach(function(item){
-//   item.addEventListener('click', pesquisa);
-// })
-
-// function densidadeUp(){
-//   var aumentar = document.querySelector("#densidade-up");
-//   var diminuir = document.querySelector("#densidade-down");
-//   var tamanhoTh = document.querySelectorAll("th");
-//   var altura = document.querySelectorAll("tr");
-//   aumentar.classList.toggle("is-active");
-//   diminuir.classList.remove("is-active");
-
-//   for(j=0; j < tamanhoTh.length; j++){
-//     tamanhoTh[j].style.height = "40px";
-//   }
-
-//   for(c = 0; c < altura.length; c++){
-//     altura[c].style.height = "40px";
-//   }
-// }
-// document.getElementById('densidade-up').addEventListener("click", densidadeUp);
-
-// function densidadeDown(){
-//   var diminuir = document.querySelector("#densidade-down");
-//   var aumentar = document.querySelector("#densidade-up");
-//   var tamanhoTh = document.querySelectorAll("th");
-//   var altura = document.querySelectorAll("tr");
-//   diminuir.classList.toggle("is-active");
-//   aumentar.classList.remove("is-active");
-
-//   for(k=0; k < tamanhoTh.length; k++){
-//     tamanhoTh[k].style.height = "56px";
-//   }
-//   for(i = 0; i < altura.length; i++){
-//     altura[i].style.height = "56px";
-//   }
-// }
-// document.getElementById('densidade-down').addEventListener('click', densidadeDown);
-
-// function enable(){
-//   var habilita = document.querySelector('.disabled');
-//   var expandir = document.querySelector('#expande');
-//   habilita.classList.toggle('enabled');
-//   expandir.classList.toggle('rotate');
-// }
-
-// document.getElementById('expande').addEventListener('click', enable);
-
-// // Funcao para redimensionar a coluna
-
-// (function () {
-//   var thElm;
-//   var startOffset;
-//   Array.prototype.forEach.call(
-//     document.querySelectorAll("#redimensionar th"),
-//     function (th) {
-//       th.style.position = 'relative';
-//       var grip = document.createElement('div');
-//       grip.innerHTML = "&nbsp;";
-//       grip.style.top = 0;
-//       grip.style.right = 0;
-//       grip.style.bottom = 0;
-//       grip.style.width = '5px';
-//       grip.style.position = 'absolute';
-//       grip.style.cursor = 'col-resize';
-//       grip.style.overflow = 'hidden';
-//       grip.style.textOverflow = 'ellipsis';
-//       grip.style.whiteSpace = 'nowrap';
-//       grip.addEventListener('mousedown', function (e) {
-//           thElm = th;
-//           startOffset = th.offsetWidth - e.pageX;
-//       });
-//       th.appendChild(grip);
-//     });
-
-//   document.getElementById('redimensionar').addEventListener('mousemove', function (e) {
-//     if (thElm) {
-//       thElm.style.width = startOffset + e.pageX + 'px';
-//     }
-//   });
-
-//   document.getElementById('redimensionar').addEventListener('mouseup', function () {
-//       thElm = undefined;
-//   });
-// })();
 
 const tab = document.querySelectorAll('.br-tabs .item');
 if(tab){
