@@ -1,19 +1,26 @@
 ## Dependências
 
 - script `datepicker.min.js` (código minificado do componente [js-datepicker](https://www.npmjs.com/package/js-datepicker))
-- script `datepicker.js` (código de regionalização e customização do componente)
+- script `datepicker-dsgov.js` (código de regionalização e customização do componente)
 - componente `br-input`, o Datepicker é uma extensão do componente Input
 
 ## Código básico
 
 ```html
 <div class="br-input datepicker">
-  <label for="input">Label</label>
-  <input id="input" type="text" placeholder="dd/mm/aaaa" />
-  <button class="icon">
-    <i class="fas fa-calendar-alt"></i>
-  </span>
+  <label for="picker">Data</label>
+  <input id="picker" type="text" placeholder="dd/mm/aaaa">
+  <button id="picker-btn" class="icon"><i class="fas fa-calendar-alt"></i></button>
 </div>
+<div class="feedback is-valid">
+  <i class="fas fa-check-circle"></i>
+  <span class="message">Data válida</span>
+</div>
+<div class="feedback is-invalid">
+  <i class="fas fa-times-circle"></i>
+  <span class="message">Data inválida</span>
+</div>
+<p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
 ```
 
 # Anatomia do componente
@@ -97,8 +104,6 @@ DEVE ser aplicado diretamente usando o prefixo `is-` ao container do componente.
 
 O `feedback is-valid` deve ser incluído imediatamente após o componente com o ícone `<i class="fas fa-check-circle">` e o texto `message` .
 
-Caso exista `help` ele deverá ficar após o `feedback`.
-
 Exemplo de uso:
 
 ```html
@@ -111,9 +116,6 @@ Exemplo de uso:
   <i class="fas fa-check-circle"></i>
   <span class="message">Data válida</span>
 </div>
-<p class="help">
-  Texto auxiliar ao preenchimento, tem a função de previnir erros.
-</p>
 ```
 
 ## `invalid`
@@ -121,6 +123,8 @@ Exemplo de uso:
 DEVE ser aplicado diretamente usando o prefixo `is-` ao container do componente.
 
 O `feedback is-invalid` deve ser incluído imediatamente após o `valid`, seguindo sua mesma estrutura, porém o ícone do `feedback` é o `<i class="fas fa-times-circle">`.
+
+Caso exista `help` ele deverá ficar após os `feedbacks`.
 
 Exemplo de uso:
 
@@ -192,22 +196,20 @@ Importados os scripts das depedências do componente em sua página, no seu cód
 // Inicialização do componente
 const dtp_picker = datepicker('#picker', (options))
 
-// Ativa as mascaras d campo input
+// Ativa as máscaras do campo input
 dtp_picker.el.addEventListener("keyup", dtp_maskDate);
 
-// Ativa o calendario quando os botoes sao clicados
+// Ativa o calendário quando o botao é clicado
 dtp_picker_btn = document.getElementById("picker-btn")
 dtp_toggle(dtp_picker_btn, dtp_picker)
 ```
 
 ## Opções do componente
-No arquivo `datepicker.js` foram criadas uma série de customizações a serem usadas nos `options` do componente de forma a padronizar e regionalizar seu uso. Exemplo de uso: 
+No arquivo `datepicker-dsgov.js` foram criadas uma série de customizações a serem usadas nos `options` do componente de forma a padronizar e regionalizar seu uso. Exemplo de uso: 
 
 ```js
-// referencia ao datepicker ativo na pagina para submeter ações de mostrar/esconder
-var activeDatePicker
 
-// Mensagens de erro padrao
+// Mensagens de erro padrão
 const dtp_err1 = 'Data inicial maior que data final ';
 const dtp_err2 = 'Data final maior que data inicial ';
 const dtp_err3 = 'Data deve ser superior a ';
@@ -224,26 +226,20 @@ const dtp_btn_ok = "Confirma"
 const dtp_input_year = "Digite um ano"
 
 
-// Funções para definir os comportamentos padrao dos campos
+// Funções para definir o comportamento padrão dos campos
 function dtp_formater (input, date, instance) {
-  const value = date.toLocaleDateString()
-  input.value = value // => '1/1/2099'
+  ...
 }
 
 function dtp_onShow (instance) {
-  activeDatePicker = instance
-  instance.el.value = ""
+  ...
 }
 
 function dtp_onHide (instance) {
-  erro = dtp_validDate(instance)
-  if (instance.dateSelected && !erro) {
-    instance.el.value = instance.dateSelected.toLocaleDateString()
-    dtp_validDate(instance)
-  }
+  ...
 }
 
-// Exemplo de datepicker com todas as opções definidas
+// Exemplo de declaração de Datepicker com todas as opções definidas
 const dtp_picker = datepicker('#picker', { 
   id: 1, 
   formatter: (input, date, instance) => {
@@ -270,4 +266,14 @@ const dtp_picker = datepicker('#picker', {
 })
 ```
 
+## Ativar/Desativar o Datepicker
+Para tanto é necessário manipular o estado `is-disabled` do componente. Contudo, seguindo os exemplos acima, basta chamar as funções disponíveis no `datepicker-dsgov.js` passando a constante que declarou o datepicker:
+
+```js
+// Desativar 
+dtp_disabler(dtp_picker)
+
+// Ativar 
+dtp_enabler(dtp_picker)
+```
 

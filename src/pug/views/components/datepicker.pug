@@ -5,7 +5,8 @@ append vars
 
 append scripts
   script(src="../js/components/datepicker.min.js")
-  script(src="../js/components/datepicker.js")
+  script(src="../js/components/datepicker-dsgov.js")
+  script(src="../js/components/datepicker-page.js")
 
 append content
   .row
@@ -59,9 +60,9 @@ append content
           button.icon(type='button' id="default-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        p.help Insira a data no formato "dd/mm/aaaa", apenas números.  
         +feedback("Data válida")(class="is-valid")
         +feedback("Data inválida")
+        p.help Insira a data no formato "dd/mm/aaaa", apenas números.  
     .col-sm
   .row
     div.h3 Campos vinculados para definir um período:
@@ -72,15 +73,15 @@ append content
           button.icon(type='button' id="date-start-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        p.help Insira a data inicial do período no formato "dd/mm/aaaa".  
         +feedback("Data válida")(class="is-valid")
         +feedback("Data inválida")
+        p.help Insira a data inicial do período no formato "dd/mm/aaaa".  
     .col-sm
       .mb-3
         +input("Data Final")(id="date-end" class="datepicker" type="text" placeholder="dd/mm/aaaa")
           button.icon(type='button' id="date-end-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        p.help Insira a data final do período no formato "dd/mm/aaaa".
         +feedback("Data válida")(class="is-valid")
         +feedback("Data inválida")
+        p.help Insira a data final do período no formato "dd/mm/aaaa".
