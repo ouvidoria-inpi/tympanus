@@ -61,7 +61,7 @@
       display: inline-flex;
       &:hover {
         [class*='fa-'] {
-          color: $primary-lighten-02;
+          color: $primary-lighten-01;
         }
       }
       [class*='fa-'] {
@@ -120,7 +120,7 @@
         color: $primary;
         padding: 0 ($spacer * 1.5);
         &:hover {
-          background: $primary-pastel-01;
+          background: $primary-pastel-02;
         }
       }
     }
@@ -208,7 +208,7 @@
             padding: $spacer ($spacer * 2);
             text-decoration: none;
             &:hover {
-              background: $primary-pastel-01;
+              background: $primary-pastel-02;
             }
           }
         }
@@ -268,7 +268,7 @@
         padding: 0;
         width: 32px;
         &:hover {
-          background: $primary-pastel-01;
+          background: $primary-pastel-02;
         }
       }
       // Menu
@@ -313,10 +313,10 @@
         &:hover {
           text-decoration: none;
           .brand {
-            border-color: $primary-lighten-02;
+            border-color: $primary-lighten-01;
           }
           .name {
-            color: $primary-lighten-02;
+            color: $primary-lighten-01;
           }
         }
       }
@@ -360,7 +360,7 @@
     top: $header-system-mobile-height / 2;
     z-index: 1;
     &:hover {
-      color: $primary-lighten-02;
+      color: $primary-lighten-01;
       text-decoration: none;
     }
   }

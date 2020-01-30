@@ -140,7 +140,7 @@ a {
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #5992ed;
+    color: #2670e8;
     text-decoration: underline; }
 
 a:not([href]) {
@@ -321,7 +321,7 @@ template {
     text-decoration: none;
     width: 100%; }
     .br-accordeon .header:hover {
-      color: #5992ed;
+      color: #2670e8;
       text-decoration: none; }
       .br-accordeon .header:hover .title,
       .br-accordeon .header:hover .icon {
@@ -430,7 +430,7 @@ template {
   .br-breadcrumb .home a {
     color: #555; }
     .br-breadcrumb .home a:hover, .br-breadcrumb .home a:focus {
-      color: #5992ed;
+      color: #2670e8;
       text-decoration: none; }
   .br-breadcrumb li {
     color: #555;
@@ -442,7 +442,7 @@ template {
       font-weight: 600;
       text-decoration: none; }
       .br-breadcrumb li a:hover {
-        color: #5992ed; }
+        color: #2670e8; }
   .br-breadcrumb li + li::before {
     color: #9e9d9d;
     content: ">";
@@ -453,7 +453,7 @@ template {
     color: #555;
     font-weight: 700; }
     .br-breadcrumb .is-active a {
-      color: #5992ed;
+      color: #2670e8;
       font-weight: 700;
       text-decoration: none; }
 
@@ -468,8 +468,8 @@ template {
   padding: 0 24px;
   width: 100%; }
   .br-button.is-primary:hover, .br-button.is-primary:focus {
-    background-color: #5992ed;
-    border-color: #5992ed;
+    background-color: #2670e8;
+    border-color: #2670e8;
     color: #fff; }
   .br-button.is-primary:disabled {
     background-color: #9eb6db;
@@ -491,8 +491,8 @@ template {
   padding: 0 24px;
   width: 100%; }
   .br-button.is-secondary:hover, .br-button.is-secondary:focus {
-    background-color: #5992ed;
-    border-color: #5992ed;
+    background-color: #2670e8;
+    border-color: #2670e8;
     color: #fff; }
   .br-button.is-secondary:disabled {
     background-color: white;
@@ -516,8 +516,8 @@ template {
   border-width: 14px;
   height: 72px; }
   .br-button.is-call-to-action:hover, .br-button.is-call-to-action:focus {
-    background-color: #5992ed;
-    border-color: #5992ed;
+    background-color: #2670e8;
+    border-color: #2670e8;
     color: #fff; }
   .br-button.is-call-to-action:disabled {
     background-color: #9fc0a9;
@@ -546,7 +546,7 @@ template {
   font-weight: 500;
   padding: 0; }
   .br-button.is-tertiary:hover, .br-button.is-tertiary:focus {
-    color: #5992ed; }
+    color: #2670e8; }
 
 .br-button.is-cancel {
   background: transparent;
@@ -558,7 +558,7 @@ template {
   padding: 0;
   text-decoration: underline; }
   .br-button.is-cancel:hover, .br-button.is-cancel:focus {
-    color: #5992ed; }
+    color: #2670e8; }
 
 .br-button.is-small {
   height: 32px;
@@ -634,7 +634,7 @@ template {
   .br-card .icon {
     margin-bottom: 18px; }
     .br-card .icon i {
-      color: #5992ed;
+      color: #2670e8;
       font-size: 50px; }
   .br-card .title {
     color: #0c326f;
@@ -659,7 +659,7 @@ template {
       transition: width 0ms 0ms, height 0ms 0ms, opacity 0.3s ease-in-out 0.2s;
       width: 100%; }
   .br-card.is-arrow::after {
-    color: #5992ed;
+    color: #2670e8;
     content: '\f062';
     font-family: Font awesome\5 Free;
     font-size: 20px;
@@ -705,8 +705,8 @@ template {
       position: absolute;
       width: 24px; }
     .br-checkbox input[type='checkbox']:checked + label::before {
-      background: #5992ed;
-      border-color: #5992ed; }
+      background: #2670e8;
+      border-color: #2670e8; }
     .br-checkbox input[type='checkbox']:checked + label::after {
       border: solid #fff;
       border-width: 0 2px 2px 0;
@@ -719,7 +719,7 @@ template {
       width: 6px; }
     .br-checkbox input[type='checkbox']:hover:not(:disabled) + label::before,
     .br-checkbox input[type='checkbox']:focus:not(:disabled) + label::before {
-      box-shadow: 0 0 0 4px rgba(89, 146, 237, 0.45); }
+      box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45); }
     .br-checkbox input[type='checkbox']:invalid + label::before {
       border-color: #e60000;
       border-width: 2px; }
@@ -854,7 +854,7 @@ template {
       color: #333;
       display: inline-flex; }
       .br-header-system .quicklinks .login:hover [class*='fa-'] {
-        color: #5992ed; }
+        color: #2670e8; }
       .br-header-system .quicklinks .login [class*='fa-'] {
         color: #1351b4; }
       .br-header-system .quicklinks .login span {
@@ -900,7 +900,7 @@ template {
         color: #1351b4;
         padding: 0 12px; }
         .br-header-system .search .field button:hover {
-          background: #c5d4eb; }
+          background: #dbe8fb; }
     .br-header-system .search .close {
       background: transparent;
       border: 0;
@@ -962,7 +962,7 @@ template {
           padding: 8px 16px;
           text-decoration: none; }
           .br-header-system .user-bar .configs .menu .account a:hover {
-            background: #c5d4eb; }
+            background: #dbe8fb; }
       .br-header-system .user-bar .configs .menu.is-active::after {
         border: solid transparent;
         border-bottom-color: #333;
@@ -1006,7 +1006,7 @@ template {
         padding: 0;
         width: 32px; }
         .br-header-system .user-bar .bookmarks .trigger:hover {
-          background: #c5d4eb; }
+          background: #dbe8fb; }
       .br-header-system .user-bar .bookmarks .menu {
         margin: 15px -12px 0 0;
         padding: 16px;
@@ -1037,9 +1037,9 @@ template {
         .br-header-system .user-bar .bookmarks .bookmark:hover {
           text-decoration: none; }
           .br-header-system .user-bar .bookmarks .bookmark:hover .brand {
-            border-color: #5992ed; }
+            border-color: #2670e8; }
           .br-header-system .user-bar .bookmarks .bookmark:hover .name {
-            color: #5992ed; }
+            color: #2670e8; }
       .br-header-system .user-bar .bookmarks .brand {
         background: #f8f8f8;
         border: 1px solid #ccc;
@@ -1071,7 +1071,7 @@ template {
     top: 55px;
     z-index: 1; }
     .br-header-system .menu-hamburger:hover {
-      color: #5992ed;
+      color: #2670e8;
       text-decoration: none; }
   @media (min-width: 998px) {
     .br-header-system .wrapper {
@@ -1150,9 +1150,9 @@ template {
     .br-header-site .login [class*='fa-'] {
       color: #1351b4; }
     .br-header-site .login:hover {
-      color: #5992ed; }
+      color: #2670e8; }
       .br-header-site .login:hover [class*='fa-'] {
-        color: #5992ed; }
+        color: #2670e8; }
   .br-header-site .search {
     bottom: 0;
     display: flex;
@@ -1181,7 +1181,7 @@ template {
         color: #1351b4;
         padding: 0 12px; }
         .br-header-site .search .field button:hover {
-          background: #c5d4eb; }
+          background: #dbe8fb; }
     .br-header-site .search .close {
       background: transparent;
       border: 0;
@@ -1218,7 +1218,7 @@ template {
     top: 0;
     z-index: 1; }
     .br-header-site .menu-hamburger:hover {
-      color: #5992ed;
+      color: #2670e8;
       text-decoration: none; }
   @media (min-width: 576px) {
     .br-header-site .wrapper {
@@ -1339,7 +1339,7 @@ template {
   .br-input.has-icon button.icon {
     color: #1351b4; }
     .br-input.has-icon button.icon:focus, .br-input.has-icon button.icon:hover {
-      color: #5992ed; }
+      color: #2670e8; }
   .br-input .search-items {
     background: #fff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
@@ -1353,7 +1353,7 @@ template {
       cursor: pointer;
       padding: 8px; }
       .br-input .search-items > *:hover {
-        background-color: #c5d4eb; }
+        background-color: #dbe8fb; }
   .br-input.is-medium input {
     height: 40px; }
   .br-input.is-medium .icon {
@@ -1365,8 +1365,8 @@ template {
     height: 32px;
     line-height: 32px; }
   .br-input.is-focus input {
-    border-color: #5992ed;
-    box-shadow: 0 0 0 1px #5992ed;
+    border-color: #2670e8;
+    box-shadow: 0 0 0 1px #2670e8;
     outline: none; }
   .br-input.is-valid input {
     border-color: #168821;
@@ -1427,7 +1427,7 @@ template {
     width: 100%; }
     .ds-menu-lateral a:hover,
     .ds-menu-lateral button:hover {
-      background: #c5d4eb;
+      background: #dbe8fb;
       text-decoration: none; }
   .ds-menu-lateral [class*='fa-'] {
     margin-top: 4px; }
@@ -1456,7 +1456,7 @@ template {
   .ds-menu-lateral .is-open + .submenu {
     display: block; }
   .ds-menu-lateral .is-active {
-    background-color: #5992ed !important;
+    background-color: #2670e8 !important;
     color: #fff !important; }
 
 .br-message {
@@ -1482,7 +1482,7 @@ template {
       color: #333;
       text-decoration: underline; }
       .br-message .content a:hover {
-        color: #5992ed; }
+        color: #2670e8; }
     .br-message .content *:last-child {
       margin-bottom: 0; }
   .br-message .close {
@@ -1615,7 +1615,7 @@ template {
     text-align: center;
     text-decoration: none !important; }
     .br-pagination a:hover {
-      background-color: #c5d4eb;
+      background-color: #dbe8fb;
       text-decoration: none; }
   .br-pagination .is-active a {
     background-color: #1351b4;
@@ -1668,10 +1668,10 @@ template {
       position: absolute;
       width: 24px; }
     .br-radio input[type='radio']:checked + label::before {
-      background: #5992ed;
-      border-color: #5992ed; }
+      background: #2670e8;
+      border-color: #2670e8; }
     .br-radio input[type='radio']:checked + label::after {
-      background: #5992ed;
+      background: #2670e8;
       border: 5px solid #fff;
       border-radius: 50%;
       bottom: 0;
@@ -1685,7 +1685,7 @@ template {
       width: 24px; }
     .br-radio input[type='radio']:hover:not(:disabled) + label::before,
     .br-radio input[type='radio']:focus:not(:disabled) + label::before {
-      box-shadow: 0 0 0 4px rgba(89, 146, 237, 0.45); }
+      box-shadow: 0 0 0 4px rgba(38, 112, 232, 0.45); }
     .br-radio input[type='radio']:invalid + label::before {
       border-color: #e60000;
       border-width: 2px; }
@@ -1726,7 +1726,7 @@ template {
     border-color: #fff; }
   .br-radio.is-inverted input[type='radio']:checked + label::after {
     background-color: #fff;
-    border-color: #5992ed; }
+    border-color: #2670e8; }
   .br-radio.is-inverted input[type='radio']:disabled:checked + label::after {
     border-color: #9e9d9d; }
   .br-radio.is-inverted.is-invalid input[type='radio']:checked + label::after {
@@ -1822,11 +1822,11 @@ template {
       font-size: 16px;
       margin-left: 16px; }
     .br-select .select-selected:focus {
-      border-color: #5992ed;
-      box-shadow: 0 0 0 1px #5992ed;
+      border-color: #2670e8;
+      box-shadow: 0 0 0 1px #2670e8;
       outline: none; }
     .br-select .select-selected:focus [class*='fa-'], .br-select .select-selected:hover [class*='fa-'] {
-      color: #5992ed;
+      color: #2670e8;
       margin-left: 16px; }
     .br-select .select-selected:disabled {
       background: #ededed; }
@@ -1850,9 +1850,9 @@ template {
       text-align: left;
       width: 100%; }
       .br-select .select-items button:hover, .br-select .select-items button:focus {
-        background: #c5d4eb; }
+        background: #dbe8fb; }
       .br-select .select-items button.same-as-selected {
-        background: #5992ed;
+        background: #2670e8;
         color: #fff; }
   .br-select .select-hide {
     display: none; }
@@ -1865,11 +1865,11 @@ template {
     .br-select.is-small .select-selected [class*='fa-'] {
       font-size: 10.66667px; }
   .br-select.is-focus .select-selected {
-    border-color: #5992ed;
-    box-shadow: 0 0 0 1px #5992ed;
+    border-color: #2670e8;
+    box-shadow: 0 0 0 1px #2670e8;
     outline: none; }
     .br-select.is-focus .select-selected [class*='fa-'] {
-      color: #5992ed;
+      color: #2670e8;
       margin-left: 16px; }
   .br-select.is-valid .select-selected {
     border-color: #168821;
@@ -1896,7 +1896,7 @@ template {
     bottom: auto;
     top: 100%; }
   .br-table table tbody tr:hover {
-    background: #c5d4eb; }
+    background: #dbe8fb; }
     .br-table table tbody tr:hover th,
     .br-table table tbody tr:hover td {
       border-color: #2670e8;
@@ -1986,7 +1986,7 @@ template {
             padding: 8px 16px; } }
         .br-table table .actions .list a:hover,
         .br-table table .actions .list button:hover {
-          background: #c5d4eb;
+          background: #dbe8fb;
           color: #2670e8;
           text-decoration: none; }
     .br-table table .actions.is-inline .list {
@@ -2054,7 +2054,7 @@ template {
         flex-direction: row;
         padding: 0; }
       .br-tabs.is-vertical .item:hover {
-        background: #c5d4eb; }
+        background: #dbe8fb; }
       .br-tabs.is-vertical .item.is-active {
         box-shadow: none; }
         .br-tabs.is-vertical .item.is-active a:hover,
@@ -2123,7 +2123,7 @@ template {
     .br-tabs a:hover,
     .br-tabs button:hover,
     .br-tabs input[type='submit']:hover {
-      background: #c5d4eb;
+      background: #dbe8fb;
       text-decoration: none; }
       .br-tabs a:hover .name,
       .br-tabs a:hover .results,
@@ -2131,7 +2131,7 @@ template {
       .br-tabs button:hover .results,
       .br-tabs input[type='submit']:hover .name,
       .br-tabs input[type='submit']:hover .results {
-        color: #5992ed; }
+        color: #2670e8; }
 
 .br-textarea {
   position: relative; }
@@ -2166,8 +2166,8 @@ template {
     .br-textarea textarea:disabled {
       background: #ededed; }
   .br-textarea.is-focus textarea {
-    border-color: #5992ed;
-    box-shadow: 0 0 0 1px #5992ed;
+    border-color: #2670e8;
+    box-shadow: 0 0 0 1px #2670e8;
     outline: none; }
   .br-textarea.is-valid textarea {
     border-color: #168821;
@@ -2195,7 +2195,7 @@ template {
       padding-right: 16px;
       padding-top: 180px; } }
   .br-upload:hover {
-    border: 1px solid #5992ed; }
+    border: 1px solid #2670e8; }
   .br-upload .upload-header {
     color: #555;
     font-size: 1.5rem;
@@ -2246,3 +2246,5 @@ template {
   .br-upload .upload-size {
     text-align: right;
     visibility: hidden; }
+
+/*# sourceMappingURL=dsgov-components.css.map */

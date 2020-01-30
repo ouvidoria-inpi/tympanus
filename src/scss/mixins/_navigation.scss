@@ -236,7 +236,7 @@
         background: transparent;
         color: $primary;
         .arrow {
-          background: $primary-pastel-01;
+          background: $primary-pastel-02;
         }
       }
     }
@@ -580,7 +580,7 @@
       &:hover {
         .arrow {
           &::after {
-            background: $primary-pastel-01;
+            background: $primary-pastel-02;
           }
         }
       }
@@ -611,7 +611,7 @@
       white-space: nowrap;
       width: 100%;
       &:hover {
-        background: $primary-pastel-01;
+        background: $primary-pastel-02;
       }
       // Item pré selecionado
       &.is-active {
@@ -814,7 +814,7 @@
     color: $primary-lighten-01;
     z-index: 1;
     &::after {
-      background: $primary-pastel-01;
+      background: $primary-pastel-02;
       border-radius: 50%;
       content: '';
       display: block;

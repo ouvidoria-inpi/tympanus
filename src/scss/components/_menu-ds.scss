@@ -17,7 +17,7 @@
     text-align: left;
     width: 100%;
     &:hover {
-      background: $primary-pastel-01;
+      background: $primary-pastel-02;
       text-decoration: none;
     }
   }
@@ -60,7 +60,7 @@
     }
   }
   .is-active {
-    background-color: $primary-lighten-02 !important;
+    background-color: $primary-lighten-01 !important;
     color: $secondary-01 !important;
   }
 }

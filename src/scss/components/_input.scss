@@ -65,7 +65,7 @@
       color: $primary;
       &:focus,
       &:hover {
-        color: $primary-lighten-02;
+        color: $primary-lighten-01;
       }
     }
   }
@@ -83,7 +83,7 @@
       cursor: pointer;
       padding: $spacer;
       &:hover {
-        background-color: $primary-pastel-01;
+        background-color: $primary-pastel-02;
       }
     }
   }
@@ -100,7 +100,7 @@
     }
   }
   // Estados
-  @each $state, $color in (focus, $primary-lighten-02), (valid, $success),
+  @each $state, $color in (focus, $primary-lighten-01), (valid, $success),
     (invalid, $danger)
   {
     &.is-#{$state} {

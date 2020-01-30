@@ -224,37 +224,6 @@ listHeader = [];
 for (let header of window.document.querySelectorAll('.br-header')) {
   listHeader.push(new BRHeader('br-header', header));
 }
-function toggleInputAction(element, className) {
-  for (
-    var inputAction = element;
-    !inputAction.classList.contains(className);
-    inputAction = inputAction.parentNode
-  );
-
-  var icon = element.getElementsByClassName("fas")[0];
-
-  if (icon.classList.contains("fa-eye")) {
-    inputAction
-      .querySelector("input[type='password'")
-      .setAttribute("type", "text");
-    icon.classList.remove("fa-eye");
-    icon.classList.add("fa-eye-slash");
-  } else if (icon.classList.contains("fa-eye-slash")) {
-    inputAction
-      .querySelector("input[type='text'")
-      .setAttribute("type", "password");
-    icon.classList.remove("fa-eye-slash");
-    icon.classList.add("fa-eye");
-  }
-}
-
-let collapseList = document.querySelectorAll('button[data-toggle="collapse"]');
-collapseList.forEach(function(collapse) {
-  collapse.addEventListener("click", function(event) {
-		  this.classList.toggle("is-open")
-  })
-})
-
 let listId = 'search-list'
 let listClass = 'search-items'
 let itemActive = 'search-active'
@@ -615,32 +584,36 @@ function autocomplete(inp, arr) {
   autocomplete(document.getElementById('search-autocomplete'), countries)
 })()
 
-scrim = document.getElementsByClassName("is-foco")[0];
+function toggleInputAction(element, className) {
+  for (
+    var inputAction = element;
+    !inputAction.classList.contains(className);
+    inputAction = inputAction.parentNode
+  );
 
-function openModal(div) {
-    scrim.innerHTML = div.innerHTML;
-    scrim.classList.add("is-active");
-}
+  var icon = element.getElementsByClassName("fas")[0];
 
-function openModalId(id) {
-    scrim = document.getElementById(id);
-    scrim.classList.add("is-active");
-}
-
-function closeModal() {
-    scrim.classList.remove("is-active");
-}
-
-
-scrim = document.getElementsByClassName("is-foco")[0];
-
-function on() {
-    scrim.classList.add("is-active");
+  if (icon.classList.contains("fa-eye")) {
+    inputAction
+      .querySelector("input[type='password'")
+      .setAttribute("type", "text");
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else if (icon.classList.contains("fa-eye-slash")) {
+    inputAction
+      .querySelector("input[type='text'")
+      .setAttribute("type", "password");
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
   }
-  
-function off() {
-    scrim.classList.remove("is-active");
 }
+
+let collapseList = document.querySelectorAll('button[data-toggle="collapse"]');
+collapseList.forEach(function(collapse) {
+  collapse.addEventListener("click", function(event) {
+		  this.classList.toggle("is-open")
+  })
+})
 
 class BRAlert {
   constructor(name, component) {
@@ -669,6 +642,33 @@ window.onload = (function() {
     alertList.push(new BRAlert("br-message", brAlert));
   }
 })();
+
+scrim = document.getElementsByClassName("is-foco")[0];
+
+function openModal(div) {
+    scrim.innerHTML = div.innerHTML;
+    scrim.classList.add("is-active");
+}
+
+function openModalId(id) {
+    scrim = document.getElementById(id);
+    scrim.classList.add("is-active");
+}
+
+function closeModal() {
+    scrim.classList.remove("is-active");
+}
+
+
+scrim = document.getElementsByClassName("is-foco")[0];
+
+function on() {
+    scrim.classList.add("is-active");
+  }
+  
+function off() {
+    scrim.classList.remove("is-active");
+}
 
 let searchListId = 'search-list'
 let searchListClass = 'search-items'

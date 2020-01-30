@@ -56,8 +56,8 @@
   &:hover,
   &:focus {
     .br-button {
-      background-color: $primary-lighten-02;
-      border-color: $primary-lighten-02;
+      background-color: $primary-lighten-01;
+      border-color: $primary-lighten-01;
     }
   }
   &:disabled {
@@ -362,7 +362,7 @@ $logo-desktop: 150px;
         display: block;
         padding: $spacer ($spacer * 2);
         &:hover {
-          background: $primary-pastel-01;
+          background: $primary-pastel-02;
           text-decoration: none;
         }
       }
@@ -1076,7 +1076,7 @@ $logo-desktop: 150px;
                 > a,
                 > button {
                   [class*='fa-'] {
-                    color: $primary-lighten-02;
+                    color: $primary-lighten-01;
                     transform: rotate(0);
                   }
                 }
@@ -1103,7 +1103,7 @@ $logo-desktop: 150px;
             a,
             button {
               [class*='fa-'] {
-                color: $primary-lighten-02;
+                color: $primary-lighten-01;
               }
             }
             .level-2 {

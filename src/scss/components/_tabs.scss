@@ -19,7 +19,7 @@
         padding: 0;
       }
       &:hover {
-        background: $primary-pastel-01;
+        background: $primary-pastel-02;
       }
       &.is-active {
         box-shadow: none;
@@ -109,7 +109,7 @@
     padding: $spacer ($spacer * 2.5) ($spacer * 1.5);
     text-decoration: none;
     &:hover {
-      background: $primary-pastel-01;
+      background: $primary-pastel-02;
       text-decoration: none;
       .name,
       .results {

@@ -32,11 +32,11 @@
     }
     // Checado
     &:checked + label::before {
-      background: $primary-lighten-02;
-      border-color: $primary-lighten-02;
+      background: $primary-lighten-01;
+      border-color: $primary-lighten-01;
     }
     &:checked + label::after {
-      background: $primary-lighten-02;
+      background: $primary-lighten-01;
       border: 5px solid $secondary-01;
       border-radius: 50%;
       bottom: 0;
@@ -52,7 +52,7 @@
     // Hover
     &:hover:not(:disabled) + label::before,
     &:focus:not(:disabled) + label::before {
-      box-shadow: 0 0 0 4px rgba($primary-lighten-02, 0.45);
+      box-shadow: 0 0 0 4px rgba($primary-lighten-01, 0.45);
     }
     // Inválido
     &:invalid {
@@ -112,7 +112,7 @@
       }
       &:checked + label::after {
         background-color: $secondary-01;
-        border-color: $primary-lighten-02;
+        border-color: $primary-lighten-01;
       }
       &:disabled:checked + label::after {
         border-color: $secondary-05;

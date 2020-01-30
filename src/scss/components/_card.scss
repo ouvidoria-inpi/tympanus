@@ -12,7 +12,7 @@
   .icon {
     margin-bottom: $spacer * 2.25;
     & i {
-      color: $primary-lighten-02;
+      color: $primary-lighten-01;
       font-size: 50px;
     }
   }
@@ -46,7 +46,7 @@
   }
   &.is-arrow {
     &::after {
-      color: $primary-lighten-02;
+      color: $primary-lighten-01;
       content: '\f062';
       font-family: Font awesome\5 Free; // stylelint-disable-line font-family-no-missing-generic-family-keyword
       font-size: 20px;
