@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DatePicker</title>
+    <!-- Fonte Rawline-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <!-- Fonte Raleway-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
+    <!-- Design System de Governo-->
+    <link rel="stylesheet" href="../css/dsgov.css">
+    <!-- Fontawesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="h3">Estados do componente:</div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="mb-3">
+            <div class="br-input datepicker">
+              <label for="normal">Normal</label>
+              <input id="normal" type="text" placeholder="dd/mm/aaaa">
+              <button class="icon" type="button" id="normal-btn"><span class="sr-only">Mostrar calendário</span><i class="fas fa-calendar-alt"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="mb-3">
+            <div class="br-input datepicker is-focus">
+              <label for="focus">Focus</label>
+              <input id="focus" type="text" placeholder="dd/mm/aaaa">
+              <button class="icon" type="button" id="focus-btn"><span class="sr-only">Mostrar calendário</span><i class="fas fa-calendar-alt"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="mb-3">
+            <div class="br-input datepicker is-valid">
+              <label for="valid">Válido</label>
+              <input id="valid" type="text" placeholder="dd/mm/aaaa">
+              <button class="icon" type="button" id="valid-btn"><span class="sr-only">Mostrar calendário</span><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="feedback is-valid"><i class="fas fa-check-circle"></i>
+              <span class="message">Data válida</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="mb-3">
+            <div class="br-input datepicker is-invalid">
+              <label for="invalid">Inválido</label>
+              <input id="invalid" type="text" placeholder="dd/mm/aaaa">
+              <button class="icon" type="button" id="invalid-btn"><span class="sr-only">Mostrar calendário</span><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="feedback is-invalid"><i class="fas fa-times-circle"></i>
+              <span class="message">Data inválida</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="mb-3">
+            <div class="br-input datepicker is-disabled">
+              <label for="disabled">Desativado</label>
+              <input id="disabled" type="text" placeholder="01/01/2020" disabled>
+              <button class="icon" type="button" id="disabled-btn"><span class="sr-only">Mostrar calendário</span><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="feedback is-valid"><i class="fas fa-check-circle"></i>
+              <span class="message">Data válida</span>
+            </div>
+            <div class="feedback is-invalid"><i class="fas fa-times-circle"></i>
+              <span class="message">Data inválida</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="mb-3"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="h3">Campo funcional para demonstração:</div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="mb-3">
+            <div class="br-input datepicker">
+              <label for="default">Data</label>
+              <input id="default" type="text" placeholder="dd/mm/aaaa">
+              <button class="icon" type="button" id="default-btn"><span class="sr-only">Mostrar calendário</span><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="feedback is-valid"><i class="fas fa-check-circle"></i>
+              <span class="message">Data válida</span>
+            </div>
+            <div class="feedback is-invalid"><i class="fas fa-times-circle"></i>
+              <span class="message">Data inválida</span>
+            </div>
+            <p class="help">Insira a data no formato "dd/mm/aaaa", apenas números.  </p>
+          </div>
+        </div>
+        <div class="col-sm"></div>
+      </div>
+      <div class="row">
+        <div class="h3">Campos vinculados para definir um período:</div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="mb-3">
+            <div class="br-input datepicker">
+              <label for="date-start">Data Inicial</label>
+              <input id="date-start" type="text" placeholder="dd/mm/aaaa">
+              <button class="icon" type="button" id="date-start-btn"><span class="sr-only">Mostrar calendário</span><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="feedback is-valid"><i class="fas fa-check-circle"></i>
+              <span class="message">Data válida</span>
+            </div>
+            <div class="feedback is-invalid"><i class="fas fa-times-circle"></i>
+              <span class="message">Data inválida</span>
+            </div>
+            <p class="help">Insira a data inicial do período no formato "dd/mm/aaaa".  </p>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="mb-3">
+            <div class="br-input datepicker">
+              <label for="date-end">Data Final</label>
+              <input id="date-end" type="text" placeholder="dd/mm/aaaa">
+              <button class="icon" type="button" id="date-end-btn"><span class="sr-only">Mostrar calendário</span><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="feedback is-valid"><i class="fas fa-check-circle"></i>
+              <span class="message">Data válida</span>
+            </div>
+            <div class="feedback is-invalid"><i class="fas fa-times-circle"></i>
+              <span class="message">Data inválida</span>
+            </div>
+            <p class="help">Insira a data final do período no formato "dd/mm/aaaa".</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/components/datepicker.min.js"></script>
+    <script src="../js/components/datepicker-dsgov.js"></script>
+    <script src="../js/components/datepicker-page.js"></script>
+  </body>
+</html>

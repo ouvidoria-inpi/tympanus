@@ -92,6 +92,7 @@
 }
 
 @mixin navigation {
+  // stylelint-disable no-descending-specificity
   .navigation {
     background: $color-gray-2;
     .container {
@@ -123,6 +124,7 @@
       }
     }
   }
+  // stylelint-enable no-descending-specificity
 }
 
 @mixin logo {
@@ -163,7 +165,7 @@
     padding: 0;
     .arrow {
       color: $color-primary;
-      margin-right: ($spacer * 2);
+      margin-right: $spacer * 2;
     }
     &.is-active {
       display: block;
@@ -178,6 +180,7 @@
 }
 
 @mixin tree {
+  // stylelint-disable no-descending-specificity
   .tree {
     background: $color-gray-2;
     display: none;
@@ -187,7 +190,7 @@
     .title {
       display: flex;
       flex-flow: column;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
     }
     .trigger {
       align-items: center;
@@ -197,7 +200,7 @@
       display: flex;
       flex: 1;
       justify-content: space-between;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
       &:hover {
         background: $color-primary-darken-1;
         color: $color-white;
@@ -207,9 +210,6 @@
       display: none;
       flex-flow: column;
     }
-    .arrow {
-      font-size: 12px;
-    }
     .label {
       box-shadow: inset 0 1px 0 $color-primary-pastel-2,
         inset 0 -1px 0 $color-primary-pastel-2;
@@ -217,7 +217,7 @@
       flex-flow: row;
       font-weight: 600;
       margin: 0;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
       text-transform: uppercase;
       .icon {
         margin-right: $spacer;
@@ -244,10 +244,13 @@
       font-weight: 900;
       letter-spacing: -1px;
     }
+    .arrow {
+      font-size: 12px;
+    }
     // Links
     a {
       color: $color-gray-6;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
       &:hover {
         background: $color-primary-darken-1;
         color: $color-white;
@@ -272,6 +275,38 @@
       }
     }
   }
+  // Versão de site
+  &.is-site {
+    .tree {
+      // Separador de menus
+      & + .tree {
+        box-shadow: inset 0 1px 0 $color-gray-3;
+      }
+    }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .tree {
+        box-shadow: inset -1px 0 0 $color-gray-3;
+        flex: 1;
+        width: 25%;
+        .tree {
+          bottom: 0;
+          left: 25%;
+          padding: $spacer 0;
+          position: absolute;
+          top: 0;
+          width: 25%;
+          .tree {
+            left: 100%;
+            width: 100%;
+          }
+        }
+        & + .tree {
+          box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
+        }
+      }
+    }
+  }
   // Versão de sistema
   &.is-system {
     .tree {
@@ -283,25 +318,8 @@
         padding: ($spacer * 2) 0;
         .tree {
           padding: 0;
-          .tree {
-            .item {
-              white-space: nowrap;
-            }
-          }
-          // stylelint-disable no-descending-specificity
           .item {
             position: relative;
-            .item {
-              background: $color-gray-1;
-              &:hover {
-                > {
-                  .trigger,
-                  a {
-                    background: $color-primary;
-                  }
-                }
-              }
-            }
             &:hover {
               > {
                 .trigger,
@@ -322,52 +340,6 @@
               }
             }
           }
-          // stylelint-enable no-descending-specificity
-        }
-      }
-    }
-  }
-  // Versão de site
-  &.is-site {
-    .tree {
-      // Separador de menus
-      & + .tree {
-        box-shadow: inset 0 1px 0 $color-gray-3;
-      }
-    }
-    // Desktop
-    @include media-breakpoint-up(md) {
-      .tree {
-        box-shadow: inset -1px 0 0 $color-gray-3;
-        flex: 1;
-        width: 25%;
-        & + .tree {
-          box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
-        }
-        .tree {
-          bottom: 0;
-          left: 25%;
-          padding: $spacer 0;
-          position: absolute;
-          top: 0;
-          width: 25%;
-          .tree {
-            left: 100%;
-            width: 100%;
-          }
-        }
-        .item {
-          .item {
-            &:hover {
-              > {
-                .trigger,
-                a {
-                  background: $color-primary;
-                }
-              }
-            }
-          }
-          // stylelint-disable no-descending-specificity
           &:hover {
             > {
               .trigger,
@@ -378,18 +350,75 @@
               .tree {
                 display: block;
                 > {
-                  .item {
-                    display: flex;
+                  .trigger,
+                  a {
+                    background: $color-primary;
                   }
                 }
               }
             }
           }
-          // stylelint-enable no-descending-specificity
+        }
+        & + .tree {
+          box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
         }
       }
     }
   }
+  // Versão de sistema
+  &.is-system {
+    .tree {
+      padding: 0 0 $spacer * 2;
+    }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .tree {
+        padding: $spacer * 2 0;
+        .tree {
+          padding: 0;
+          .item {
+            position: relative;
+            &:hover {
+              > {
+                .trigger,
+                a {
+                  background: $color-primary-darken-1;
+                  color: $color-white;
+                }
+                .tree {
+                  display: block;
+                  left: 100%;
+                  position: absolute;
+                  > {
+                    .item {
+                      display: flex;
+                    }
+                  }
+                }
+              }
+            }
+            .item {
+              background: $color-gray-1;
+              &:hover {
+                > {
+                  .trigger,
+                  a {
+                    background: $color-primary;
+                  }
+                }
+              }
+            }
+          }
+          .tree {
+            .item {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+  // stylelint-enable no-descending-specificity
 }
 
 @mixin language {
@@ -418,7 +447,7 @@
         font-size: 14px;
         font-style: italic;
         font-weight: 600;
-        margin: ($spacer * 2) ($spacer * 2) $spacer;
+        margin: $spacer * 2 $spacer * 2 $spacer;
         padding: 0;
       }
       // Item selecionável
@@ -446,8 +475,8 @@
     display: flex;
     flex-flow: column;
     font-size: 14px;
-    margin: ($spacer * 1.5) 0 0;
-    padding: ($spacer * 2) 0;
+    margin: $spacer * 1.5 0 0;
+    padding: $spacer * 2 0;
     position: relative;
     span {
       display: block;
@@ -458,7 +487,7 @@
     a {
       align-items: center;
       display: inline-flex;
-      padding: $spacer-half 0;
+      padding: $spacer * 0.5 0;
       [class*="fa-"] {
         margin-left: $spacer;
       }
@@ -472,7 +501,7 @@
         width: 100%;
       }
       a {
-        margin-right: ($spacer * 4);
+        margin-right: $spacer * 4;
       }
     }
   }
@@ -489,13 +518,13 @@
   .social-network {
     border-top: 1px solid $color-gray-2;
     margin: 0;
-    padding: ($spacer * 2) 0;
+    padding: $spacer * 2 0;
     text-transform: uppercase;
     span {
       display: block;
       font-size: 14px;
       font-weight: 700;
-      margin-right: ($spacer * 2.5);
+      margin-right: $spacer * 2.5;
     }
     a {
       @include btn-icon;
@@ -513,7 +542,7 @@
         width: 100%;
       }
       a {
-        margin-right: ($spacer * 2);
+        margin-right: $spacer * 2;
       }
     }
   }
@@ -530,12 +559,12 @@
     font-size: 12px;
     font-weight: 600;
     height: 32px;
-    margin-left: ($spacer * 2);
-    padding: 0 ($spacer * 3);
+    margin-left: $spacer * 2;
+    padding: 0 $spacer * 3;
     text-align: center;
     &:hover {
-      background: $color-primary-lighten-1;
-      border-color: $color-primary-lighten-1;
+      background: $color-primary-lighten-2;
+      border-color: $color-primary-lighten-2;
     }
   }
 }
@@ -557,6 +586,18 @@
   .menu {
     position: relative;
     z-index: 1;
+    .trigger {
+      align-items: baseline;
+      display: inline-flex;
+      padding: 0;
+      &:hover {
+        .arrow {
+          &::after {
+            background: $color-primary-pastel-1;
+          }
+        }
+      }
+    }
     .arrow {
       align-items: center;
       display: inline-flex;
@@ -573,18 +614,6 @@
         z-index: -1;
       }
     }
-    .trigger {
-      align-items: baseline;
-      display: inline-flex;
-      padding: 0;
-      &:hover {
-        .arrow {
-          &::after {
-            background: $color-primary-pastel-1;
-          }
-        }
-      }
-    }
     .items {
       background: $color-white;
       box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
@@ -597,14 +626,14 @@
       font-size: 14px;
       font-style: italic;
       font-weight: 600;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
     }
     .item {
       background: $color-white;
       border: 0;
       color: $color-gray-6;
       display: block;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
       position: relative;
       text-align: left;
       text-decoration: none;
@@ -679,7 +708,7 @@
       left: -$spacer;
       margin-right: -$spacer;
       position: relative;
-      top: -($spacer * 1.5);
+      top: -$spacer * 1.5;
       width: 18px;
     }
   }
@@ -717,7 +746,7 @@
           height: 0;
           pointer-events: none;
           position: absolute;
-          right: ($spacer * 2);
+          right: $spacer * 2;
           width: 0;
         }
       }
@@ -749,7 +778,7 @@
           height: 0;
           pointer-events: none;
           position: absolute;
-          right: ($spacer * 2);
+          right: $spacer * 2;
           width: 0;
         }
       }
@@ -757,7 +786,7 @@
     // Lista de favoritos
     .list {
       columns: 5;
-      padding: 0 ($spacer * 2);
+      padding: 0 $spacer * 2;
       .item {
         padding: 0;
       }
@@ -765,7 +794,7 @@
     // Favorito
     .bookmark {
       display: inline-block;
-      margin: ($spacer * 2) 0 0;
+      margin: $spacer * 2 0 0;
       // Marca
       .brand {
         background: $color-gray-1;
@@ -779,16 +808,16 @@
         display: block;
         font-size: 9px;
         font-weight: 500;
-        margin-top: $spacer-half;
+        margin-top: $spacer * 0.5;
         text-align: center;
       }
       &:hover {
         text-decoration: none;
         .brand {
-          border-color: $color-primary-lighten-1;
+          border-color: $color-primary-lighten-2;
         }
         .name {
-          color: $color-primary-lighten-1;
+          color: $color-primary-lighten-2;
         }
       }
     }
@@ -796,7 +825,7 @@
     .more {
       font-size: 10px;
       font-weight: 600;
-      margin: ($spacer * 2) 0;
+      margin: $spacer * 2 0;
       text-align: center;
       text-decoration: underline;
     }
@@ -811,7 +840,7 @@
   justify-content: center;
   width: 36px;
   &:hover {
-    color: $color-primary-lighten-1;
+    color: $color-primary-lighten-2;
     z-index: 1;
     &::after {
       background: $color-primary-pastel-1;

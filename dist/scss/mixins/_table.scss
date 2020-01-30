@@ -51,12 +51,6 @@
       }
       // Linha marcada
       &.is-active {
-        th,
-        td {
-          background: $color-primary-lighten-1;
-          border-color: $color-primary-lighten-1;
-          color: $color-white;
-        }
         &:hover {
           background: inherit;
           th,
@@ -64,6 +58,12 @@
             box-shadow: none;
             color: $color-white;
           }
+        }
+        th,
+        td {
+          background: $color-primary-lighten-1;
+          border-color: $color-primary-lighten-1;
+          color: $color-white;
         }
         .collapse,
         .actions {

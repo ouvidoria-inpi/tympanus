@@ -3,7 +3,8 @@ extends ../../layouts/component
 append vars
   - var title = "Mensagem";
 
-
+append scripts
+  script(src=jscompoents+"message.js")
 
 append content
   +message("is-danger")

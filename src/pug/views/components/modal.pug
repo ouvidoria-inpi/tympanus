@@ -3,21 +3,8 @@ extends ../../layouts/component
 append vars
   - var title = "Modal";
 
-append content
-  .br-scrim.is-foco(onclick='off()')
-    +modal
-      +modal-header("Retornar para página inicial?")
-      +modal-body
-        p Você está sendo redirecionado para a página inicial do sistema
-      +modal-footer
-        +button(class="is-small is-secondary")
-          | Cancelar
-        +button(class="is-small is-primary ml-3")
-          | Retornar
-
-append content
-  button(type='button' class="br-button is-large is-secondary" onclick='on()') Modal com Scrim
-  hr
+append scripts
+  script(src=jscompoents+"select.js")
 
 append content
   +modal

@@ -9981,6 +9981,33 @@ fieldset legend,
     font-size: 12px;
     font-weight: 500; }
 
+.social-network {
+  border-top: 1px solid #ededed;
+  margin: 0;
+  padding: 8px;
+  text-transform: uppercase; }
+  .social-network span {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 20px; }
+  .social-network ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+    .social-network ul li {
+      display: inline-block;
+      margin: 0;
+      padding: 0; }
+      .social-network ul li:first-child a {
+        padding-left: 0; }
+      .social-network ul li:last-child a {
+        padding-right: 0; }
+      .social-network ul li a {
+        color: #1351b4;
+        display: inline-block;
+        padding: 8px 16px; }
+
 .links {
   border-top: 1px solid #ededed;
   font-size: 14px;
