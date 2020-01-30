@@ -1,224 +1,129 @@
-### Experiência Única
+[Artefato de Design]: # (grid_1.1.0.xd)
 
+### Experiência Única
 O sistema de Grid de 12 colunas possui uma boa flexibilidade para projetos de layouts, pois permite uma diagramação de páginas e telas com colunas múltiplas de 12, além de se adequar aos principais Frameworks CSS, facilitando a escolha na teconologia a ser utilizada. Em Tablets e Smartphones o número de colunas é reduzido ao máximo de 8 e 4 respectivamente, devido à limitação de espaço.
 
-### Eficiência e Clareza
 
-Seguindo o princípio de espaçamentos e dimensões múltiplos de 8, é possível
-preservar as proporções em resoluções de telas diferenciadas, visto que a maioria tem suas dimensões divisíveis por 8. Esta característica de Design Multi-Plataforma fornece ao usuário uma sensação de consistência e clareza no projeto de design em diferentes dispositivos.
+### Eficiência e Clareza
+Seguindo o princípio de espaçamentos e dimensões múltiplos de 8, é possível preservar as proporções em resoluções de telas diferenciadas, visto que a maioria tem suas dimensões divisíveis por 8. Esta característica de Design Multi-Plataforma fornece ao usuário uma sensação de consistência e clareza no projeto de design em diferentes dispositivos.
 
 ### Acessibilidade
-
 As interfaces devem ser adequadas a diferentes tipos de dispositivos, tendo em vista esse aspecto, o sistema de grid fornece alguns breakpoints - pontos de quebra onde o layout será ajustado para atender diferentes resoluções, sendo assim possível desenvolver interfaces adaptáveis a diversos formatos e tamanhos de telas.
 
 ### Reutilização e Colaboração
-
 Porventura, poderá haver alguma adaptação específica no sistema de grids, break-points e padrões de proporção, para atender alguma necessidade em projetos de interface. Sendo assim, faz-se necessário, que essas evoluções/adaptações sejam testadas e passem por uma prévia aprovação da equipe de design do DS.
 
-O sistema de grid para o Design System do Governo Federal se adequa a 4 breakpoints de referência, abrangendo resoluções para Mobile, Tablet, Desktop e resoluções superiores. São elas:
+---  
 
--   X-Small: até 576px - **SmartPhone Portrait**
--   Small: a partir de 576px - **SmartPhone Landscape e Tablet Portrait**
--   Medium: a partir de 992px - **Tablet Landscape**
--   Large: a partir de 1280px - **Desktop**
--   X-Large a partir de 1600px - **Big Desktop / TV**
+## Breakpoints
 
-## Desktop
+O sistema de grid para o Design System do Governo Federal se adequa a 5 breakpoints de referência, abrangendo resoluções para Mobile, Tablet, Desktop  e resoluções superiores. São elas:
 
-As **12 colunas** serão divididas em **1152 pixels** de largura com espaçamentos de **24 pixels** entre elas. Esse sistema permite a organização do conteúdo em diversas formatações de coluna e facilita a reorganização dele nos grids das versões tablet e mobile.
+![Breakpoints](assets/design-system/docs/fundamentos-visuais/grid/imagens/breakpoint-statcounter.png)
 
-A margem externa ao conteúdo será sempre variável se adequando às dimensões
-da tela. Abaixo seguem alguns exemplos:
+|Device|Token Breakpoint|Breakpoint Range (px)|Breakpoint (px)|
+|--|--|--|--|
+|Smartphone Portrait|--grid-breakpoint-xsmall|0 - 575|0|
+|Smartphone Landscape / Tablet Portrait|--grid-breakpoint-small|576 - 991|576|
+|Tablet Landscape|--grid-breakpoint-medium|992 - 1279|992|
+|Desktop|--grid-breakpoint-large|1280 - 1599|1280|
+|TV|--grid-breakpoint-xlarge|1600 - *|1600|
 
-##### Desktop - 1280 x 800
+---
 
-![Desktop 1280x800px](images/desktop-1280x800.png)
+## Comportamento da Grid
+Existem dois tipos de comportamento para as Grids: Fixa e a Fluida.
 
--   **12** Colunas
--   **24px** de Medianiz
--   **1152px** de container
--   **M** - margem externa variável
+### Grid Fixa
+Na grid fixa, as colunas e as medianizes possuem largura fixa. Porém o **largura das margens são variadas** de acordo com a resolução da tela, mantendo quase todo o conteúdo centralizado da tela em uma largura máxima (`max-width`).
 
-##### Desktop - 1366 x 768
+Em uma grid fixa, apesar das larguras variadas, as margens possuem um valor mínimo que deve ser respeitado. 
 
-![Desktop 1366x768px](images/desktop-1366x768.png)
+As grids utilizadas como fixas são voltadas para Desktop (`--grid-breakpoint-large`) e para TV (`--grid-breakpoint-xlarge`).
 
--   **12** Colunas
--   **24px** de Medianiz
--   **1152px** de container
--   **M** - margem externa variável
+![Grid Fixa 01](assets/design-system/docs/fundamentos-visuais/grid/imagens/behavior-fixa01.png)
 
-##### Desktop - 1440 x 900
+![Grid Fixa 02](assets/design-system/docs/fundamentos-visuais/grid/imagens/behavior-fixa02.png)
 
-![Desktop 1440x900px](images/desktop-1440x900.png)
+### Grid Fluida
+Na grid fluida, tanto as margens como as medianizes possuem largura fixa, porém a **largura das colunas alteram** de tamanho, dimensionando também o conteúdo. Neste caso, a grid ocupam todo o espaço disponível da tela (`max-width` de 100%).
 
--   **12** Colunas
--   **24px** de Medianiz
--   **1152px** de container
--   **M** - margem externa variável
+As grids utilizadas como fluida são as de Smarthphone (`--grid-breakpoint-xsmall` e `--grid-breakpoint-small`) e Tablet (`--grid-breakpoint-small` e `--grid-breakpoint-medium`).
 
-Para resoluções maiores que **1440px** também utiliza-se o padrão de **12 colunas** com medianiz de **32px** e largura máxima de **1440px**. Nestas resoluções o conteúdo cresce de forma proporcional tanto na horizontal como na vertical.
+![Grid Fluida 01](assets/design-system/docs/fundamentos-visuais/grid/imagens/behavior-fluida01.png)
 
-##### Desktop - 1600 x 900
+![Grid Fluida 02](assets/design-system/docs/fundamentos-visuais/grid/imagens/behavior-fluida02.png)
 
-![Desktop 1600x900px](images/desktop-1600x900.png)
+### Max-Width
+`Max-width` mede a distancia entre o início da primeira coluna da grid até o final da última coluna. Em outras palavras, é o tamanho da largura da grid sem os elementos margem.
 
--   **12** Colunas
--   **32px** de Medianiz
--   **1440px** de container
--   **M** - margem externa variável
+---
 
-##### Desktop - 1920 x 1080
+## Tipos de Grid
+Existem 4 tipos de grid: **Smartphone Portrait**, **Tablet / Smartphone Landscape**, **Desktop** e **TV**. Cada uma delas deve ser utilizada em um determinado breakpoint.
 
-![Desktop 1920x1080px](images/desktop-1920x1080.png)
+### Smartphone Portrait
+Conteúdo deve ser reorganizado em **4 colunas** e respeitando a margem de **8px** nas laterais e medianiz de **16px**.
 
--   **12** Colunas
--   **32px** de Medianiz
--   **1440px** de container
--   **M** - margem externa variável
+Utiliza o comportamento de grid fluida.
 
-## Tablets
+|Property|Token Grid|Value|
+|--|--|--|
+|max-width|--grid-portrait-maxwidth|100%|
+|gutter|--grid-portrait-gutter|16px|
+|columns|--grid-portrait-columns|4|
+|margin|--grid-portrait-margin|8px|
+|breakpoint|-|--grid-breakpoint-xsmall|
 
-Nos dispositivos tablets, o conteúdo pode ser reorganizado em até **8 colunas** se adequando às variações retrato e paisagem. O espaçamento entre as colunas será de **24px** e a margem externa ao conteúdo de **40px**.
+![Grid 4 colunas](assets/design-system/docs/fundamentos-visuais/grid/imagens/grid-04colunas.png)
 
-##### Tablet Android - 8 colunas- 768 x 1024 Portrait
+---
 
-![Tablet Android - 768 x 1024 Portrait](images/tablet-8-portrait.png)
+### Tablet / Smartphone Landscape
+Nos dispositivos tablets, o conteúdo é organizado em **8 colunas** se adequando às variações retrato e paisagem. O espaçamento entre as colunas será de **24px** e a margem externa ao conteúdo de **40px**.
 
--   **8** Colunas
--   **24px** de Medianiz
--   **40px** de margem externa
+Essa grid pode ser utilizada em dois breakpoints distintos e utiliza o comportamento de grid fluida.
 
-##### Tablet Android - 8 colunas - 768 x 1024 Landscape
+|Property|Token Grid|Value|
+|--|--|--|
+|max-width|--grid-tablet-maxwidth|100%|
+|gutter|--grid-tablet-gutter|24px|
+|columns|--grid-tablet-columns|8|
+|margin|--grid-tablet-margin|40px|
+|breakpoint|-|--grid-breakpoint-small ou --grid-breakpoint-medium|
 
-![Tablet Android - 768 x 1024 Landscape](images/tablet-8-landscape.png)
+![Grid 8 colunas](assets/design-system/docs/fundamentos-visuais/grid/imagens/grid-08colunas.png)
 
--   **8** Colunas
--   **24px** de Medianiz
--   **40px** de margem externa
+---
 
-##### Tablet Android - 4 colunas - 768 x 1024 Portrait
+### Desktop
+As **12 colunas** serão divididas em **1200 pixels** de largura com espaçamentos de **24 pixels** entre elas. Esse sistema permite a organização do conteúdo em diversas formatações de coluna.
 
-![Tablet Android - 768 x 1024 Portrait](images/tablet-4-portrait.png)
+A margem externa ao conteúdo será variável (com tamanho mínimo de **40 pixels**) se adequando às dimensões da tela (grid fixa)
 
--   **4** Colunas
--   **24px** de Medianiz
--   **40px** de margem externa
+|Property|Token Grid|Value|
+|--|--|--|
+|max-width|--grid-desktop-maxwidth|1200px|
+|gutter|--grid-desktop-gutter|24px|
+|columns|--grid-desktop-columns|12|
+|margin|--grid-desktop-margin|40px - *|
+|breakpoint|-|--grid-breakpoint-large|
 
-##### Tablet Android - 4 colunas - 768 x 1024 Landscape
+![Grid 12 colunas](assets/design-system/docs/fundamentos-visuais/grid/imagens/grid-12colunas.png)
 
-![Tablet Android - 768 x 1024 Landscape](images/tablet-4-landscape.png)
+---
 
--   **4** Colunas
--   **24px** de Medianiz
--   **40px** de margem externa
-
-##### Tablet Android - 3 colunas - 768 x 1024 Portrait
-
-![Tablet Android - 768 x 1024 Portrait](images/tablet-3-portrait.png)
-
--   **3** Colunas
--   **24px** de Medianiz
--   **40px** de margem externa
-
-##### Tablet Android - 3 colunas - 768 x 1024 Landscape
-
-![Tablet Android - 768 x 1024 Landscape](images/tablet-3-landscape.png)
-
--   **3** Colunas
--   **24px** de Medianiz
--   **40px** de margem externa
-
-##### Tablet Android - 2 colunas - 768 x 1024 Portrait
-
-![Tablet Android - 768 x 1024 Portrait](images/tablet-2-portrait.png)
-
--   **2** Colunas
--   **24px** de Medianiz
--   **40px** de margem externa
-
-##### Tablet Android - 2 colunas - 768 x 1024 Landscape
-
-![Tablet Android - 768 x 1024 Landscape](images/tablet-2-landscape.png)
-
--   **2** Colunas
--   **24px** de Medianiz
--   **40px** de margem externa
-
-## Smartphones
-
-Conteúdo pode ser reorganizado em até **4 colunas** e respeitando a margem de **24px** nas laterais e medianiz de **16px**.
-
-##### iPhone X/XS - 4 colunas
-
-![iPhone X/XS - 4 colunas](images/smartphone-4-x.png)
-
--   **4** Colunas
--   **16px** de Medianiz
--   **24px** de margem externa
-
-##### iPhone 5/SE - 4 colunas
-
-![iPhone 5/SE - 4 colunas](images/smartphone-4-5se.png)
-
--   **4** Colunas
--   **16px** de Medianiz
--   **24px** de margem externa
-
-##### iPhone X/XS - 3 colunas
-
-![iPhone X/XS - 3 colunas](images/smartphone-3-x.png)
-
--   **3** Colunas
--   **16px** de Medianiz
--   **24px** de margem externa
-
-##### iPhone 5/SE - 3 colunas
-
-![iPhone 5/SE - 3 colunas](images/smartphone-3-5se.png)
-
--   **3** Colunas
--   **16px** de Medianiz
--   **24px** de margem externa
-
-##### iPhone X/XS - 2 colunas
-
-![iPhone X/XS - 2 colunas](images/smartphone-2-x.png)
-
--   **2** Colunas
--   **16px** de Medianiz
--   **24px** de margem externa
-
-##### iPhone 5/SE - 2 colunas
-
-![iPhone 5/SE - 2 colunas](images/smartphone-2-5se.png)
-
--   **2** Colunas
--   **16px** de Medianiz
--   **24px** de margem externa
-
-Para responsividade em sites e portais o ideal é que se use uma diagramação com **1 coluna** apenas, visto que o conteúdo textual e o enquadramento das fotos funciona melhor quando há uma redução na largura de Desktop para Smartphones.
-
-##### iPhone X/XS - 1 coluna
-
-![iPhone X/XS - 1 coluna](images/smartphone-1-x.png)
-
--   **1** Coluna
--   **24px** de margem externa
-
-##### iPhone 5/SE - 1 coluna
-
-![iPhone 5/SE - 1 coluna](images/smartphone-1-5se.png)
-
--   **1** Coluna
--   **24px** de margem externa
-
-## Grade de 8 Pontos
-
-Sempre que possível, use **múltiplos de 8** para definir dimensões e margem de elementos em bloco e em linha. Os elementos são posicionados dentro da grid e mantêm distâncias relativas um com os outros.
-
-![Grid de 8 Pontos](images/grid-8.png)
-
-A Grade de 8 Pontos é mais adequada a um **Design Multi-Plataforma**, visto que os tamanhos de telas mais populares são divisíveis por 8 em pelo menos um eixo e, geralmente em ambos os eixos. Isto facilita a preservação das proporções em dispositivos com tamanhos de telas diversos.
-
-![Resoluções mais usadas](images/resolutions.png)
+### TV
+As **12 colunas** serão divididas em **1520 pixels** de largura com espaçamentos de **40 pixels** entre elas. 
+
+A margem externa ao conteúdo será variável (com tamanho mínimo de **40 pixels**) se adequando às dimensões da tela (grid fixa).
+
+|Property|Token Grid|Value|
+|--|--|--|
+|max-width|--grid-tv-maxwidth|1520px|
+|gutter|--grid-tv-gutter|40px|
+|columns|--grid-tv-columns|12|
+|margin|--grid-tv-margin|40px - *|
+|breakpoint|-|--grid-breakpoint-xlarge|
+
+![Grid 12 colunas](assets/design-system/docs/fundamentos-visuais/grid/imagens/grid-12colunas.png)
