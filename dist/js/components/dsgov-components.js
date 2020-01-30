@@ -336,7 +336,7 @@ const dtp_end = datepicker('#date-end', {
   maxDate:  new Date(),
 
 })
-
+/*
 const dtp_disabled = datepicker('#disabled', { 
   id: 3, 
   formatter: (input, date, instance) => {
@@ -362,16 +362,16 @@ const dtp_disabled = datepicker('#disabled', {
   
 
 })
-
+*/
 // Ativa as mascaras dos campos input
 
 dtp_default.el.addEventListener("keyup", dtp_maskDate);
-dtp_disabled.el.addEventListener("keyup", dtp_maskDate);
+//dtp_disabled.el.addEventListener("keyup", dtp_maskDate);
 dtp_start.el.addEventListener("keyup", dtp_maskDate);
 dtp_end.el.addEventListener("keyup", dtp_maskDate);
 
 
-// Ativa o calendari quando os botoes sao clicados
+// Ativa o calendario quando os botoes sao clicados
 dtp_default_btn = document.getElementById("default-btn")
 dtp_toggle(dtp_default_btn, dtp_default)
 
@@ -381,9 +381,10 @@ dtp_toggle(dtp_start_btn, dtp_start)
 dtp_end_btn = document.getElementById("date-end-btn")
 dtp_toggle(dtp_end_btn, dtp_end)
 
+/*
 dtp_disabled_btn = document.getElementById("disabled-btn")
 dtp_toggle(dtp_disabled_btn, dtp_disabled)
-
+*/
 
 // Teste do campo desabilitado
 //dtp_disabler(dtp_disabled)
@@ -1312,185 +1313,7 @@ function autocomplete(inp, arr) {
   autocomplete(document.getElementById('search-autocomplete'), countries)
 })()
 
-var parentEl
-var parentE2
-var nextEl
-
-var checkboxParent
-var checkboxParent2
-
-function hasClass(elem, className) {
-  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ')
-}
-
-function ShowHideTable(el) {
-  parentEl = el.parentNode
-  parentE2 = parentEl.parentNode
-  nextEl = parentE2.nextElementSibling
-  if (nextEl != null) {
-    if (hasClass(nextEl, 'show-table') && hasClass(nextEl, 'row-content')) {
-      nextEl.classList.remove('show-table')
-      nextEl.className = 'row-content hide-table'
-      el.classList.remove('fa-minus')
-      el.className = 'fas fa-plus'
-    } else if (
-      hasClass(nextEl, 'hide-table') &&
-      hasClass(nextEl, 'row-content')
-    ) {
-      nextEl.classList.remove('hide-table')
-      nextEl.className = 'row-content show-table'
-      el.classList.remove('fa-plus')
-      el.className = 'fas fa-minus'
-    }
-  }
-}
-
-function setActive(el) {
-  checkbox = el
-  checkboxParent = checkbox.parentNode
-  checkboxParent2 = checkboxParent.parentNode
-  if (el.checked) {
-    checkboxParent2.className = 'active'
-    checkboxParent.className = 'text-center active'
-  } else {
-    checkboxParent2.classList.remove('active')
-    checkboxParent.classList.remove('active')
-  }
-}
-
-//Correção da altura das colunas na tabela responsiva;
-var target = document.getElementsByTagName('tr')
-for (i = 0; i < target.length; i++) {
-  target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
-}
-
 function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
-const inputElement = document.querySelector('.upload-input');
-const fileList = document.querySelector('.upload-file-list');
-const header = document.querySelector('.upload-header');
-const info = document.querySelector('.upload-info');
-const size = document.querySelector('.upload-size');
-const sizeNum = document.querySelector('.upload-size-num');
-const sizeBytes = document.querySelector('.upload-size-bytes');
-var fileArray = Array.from(inputElement.files);
-
-
-let dropbox;
-
-dropbox = document.querySelector('.br-upload');
-dropbox.addEventListener("dragenter", drag, false);
-dropbox.addEventListener("dragover", drag, false);
-dropbox.addEventListener("drop", drop, false);
-
-
-inputElement.addEventListener("change", handleFiles, false);
-
-function handleFiles(files) {
-
-   
-  newFiles = !files.length ? Array.from(inputElement.files) : Array.from(files);
-  fileArray = fileArray.concat(newFiles);
-
-  info.style.display = 'none';
-  header.innerHTML = 'Arquivos Selecionados';
-  updateFileList();
-}
-
-function updateFileList () {
-
-  if (!fileArray.length) {
-    fileList.innerHTML = "";
-    info.style.display = '';
-    header.innerHTML = 'Arraste e solte o(s) arquivo(s) do seu computador';
-  } else {
-    fileList.innerHTML = "";
-    const list = document.createElement("ul");
-    fileList.appendChild(list);
-    for (let i = 0; i < fileArray.length; i++) {
-      const li = document.createElement("li");
-      list.appendChild(li);
-      
-      const info = document.createElement("span");
-      info.innerHTML = fileArray[i].name ;
-      li.appendChild(info);
-      
-      const del = document.createElement("div");
-      del.addEventListener("click", function(){removeFile(i, event)}, false);
-      del.className = 'del';
-      const img = document.createElement("i");
-      img.className = 'fa fa-times';
-      del.appendChild(img);
-      li.appendChild(del);
-    }
-  }
-  updateSize();
-}
-
-function removeFile(index, e) {
-
-  e.stopPropagation();
-  e.preventDefault();
-  fileArray.splice(index,1);
-  updateFileList();
-}
-
-function updateSize() {
-
-  let nBytes = 0,
-      oFiles = fileArray, 
-      nFiles = oFiles.length;
-  for (let nFileId = 0; nFileId < nFiles; nFileId++) {
-    nBytes += oFiles[nFileId].size;
-  }
-  
-  let sOutput = nBytes + " bytes";
-  for (let aMultiples = ["KB", "MB", "GB", "TB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] ;
-  }
-
-  size.style.visibility = nFiles>0 ? "visible" : "hidden";
-  sizeNum.innerHTML = nFiles;
-  sizeBytes.innerHTML = sOutput;
-}
-
-function drag(e) {
-  e.stopPropagation();
-  e.preventDefault();
-}
-
-function drop(e) {
-  e.stopPropagation();
-  e.preventDefault();
-
-  const dt = e.dataTransfer;
-  const files = dt.files;
-
-  handleFiles(files);
-}
-
-const tab = dropbox = document.querySelectorAll('.br-tabs .item');
-
-for (let elem of tab) {
-    elem.addEventListener("click", function() { foi(elem) }, false);;
-
-}
-
-
-function foi(event) {
-    console.log(event);
-    const a = document.querySelectorAll('.upload-input');
-    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
-
-    for (let elem of elements) {
-        elem.parentElement.querySelectorAll(".item")
-        elem.classList.remove("is-active");
-    }
-    event.classList.add("is-active");
-    console.log(event.classList);
-
-
-}
-
 class BRSelect {
 
   constructor(name, component) {
@@ -1595,4 +1418,182 @@ window.onload = (function() {
   for (let brSelect of window.document.querySelectorAll('.br-select')) {
     selectList.push(new BRSelect('br-select', brSelect));
   }
-})();//# sourceMappingURL=dsgov-components.js.map
+})();
+var parentEl
+var parentE2
+var nextEl
+
+var checkboxParent
+var checkboxParent2
+
+function hasClass(elem, className) {
+  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ')
+}
+
+function ShowHideTable(el) {
+  parentEl = el.parentNode
+  parentE2 = parentEl.parentNode
+  nextEl = parentE2.nextElementSibling
+  if (nextEl != null) {
+    if (hasClass(nextEl, 'show-table') && hasClass(nextEl, 'row-content')) {
+      nextEl.classList.remove('show-table')
+      nextEl.className = 'row-content hide-table'
+      el.classList.remove('fa-minus')
+      el.className = 'fas fa-plus'
+    } else if (
+      hasClass(nextEl, 'hide-table') &&
+      hasClass(nextEl, 'row-content')
+    ) {
+      nextEl.classList.remove('hide-table')
+      nextEl.className = 'row-content show-table'
+      el.classList.remove('fa-plus')
+      el.className = 'fas fa-minus'
+    }
+  }
+}
+
+function setActive(el) {
+  checkbox = el
+  checkboxParent = checkbox.parentNode
+  checkboxParent2 = checkboxParent.parentNode
+  if (el.checked) {
+    checkboxParent2.className = 'active'
+    checkboxParent.className = 'text-center active'
+  } else {
+    checkboxParent2.classList.remove('active')
+    checkboxParent.classList.remove('active')
+  }
+}
+
+//Correção da altura das colunas na tabela responsiva;
+var target = document.getElementsByTagName('tr')
+for (i = 0; i < target.length; i++) {
+  target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
+}
+
+const tab = dropbox = document.querySelectorAll('.br-tabs .item');
+
+for (let elem of tab) {
+    elem.addEventListener("click", function() { foi(elem) }, false);;
+
+}
+
+
+function foi(event) {
+    console.log(event);
+    const a = document.querySelectorAll('.upload-input');
+    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
+
+    for (let elem of elements) {
+        elem.parentElement.querySelectorAll(".item")
+        elem.classList.remove("is-active");
+    }
+    event.classList.add("is-active");
+    console.log(event.classList);
+
+
+}
+
+const inputElement = document.querySelector('.upload-input');
+const fileList = document.querySelector('.upload-file-list');
+const header = document.querySelector('.upload-header');
+const info = document.querySelector('.upload-info');
+const size = document.querySelector('.upload-size');
+const sizeNum = document.querySelector('.upload-size-num');
+const sizeBytes = document.querySelector('.upload-size-bytes');
+var fileArray = Array.from(inputElement.files);
+
+
+let dropbox;
+
+dropbox = document.querySelector('.br-upload');
+dropbox.addEventListener("dragenter", drag, false);
+dropbox.addEventListener("dragover", drag, false);
+dropbox.addEventListener("drop", drop, false);
+
+
+inputElement.addEventListener("change", handleFiles, false);
+
+function handleFiles(files) {
+
+   
+  newFiles = !files.length ? Array.from(inputElement.files) : Array.from(files);
+  fileArray = fileArray.concat(newFiles);
+
+  info.style.display = 'none';
+  header.innerHTML = 'Arquivos Selecionados';
+  updateFileList();
+}
+
+function updateFileList () {
+
+  if (!fileArray.length) {
+    fileList.innerHTML = "";
+    info.style.display = '';
+    header.innerHTML = 'Arraste e solte o(s) arquivo(s) do seu computador';
+  } else {
+    fileList.innerHTML = "";
+    const list = document.createElement("ul");
+    fileList.appendChild(list);
+    for (let i = 0; i < fileArray.length; i++) {
+      const li = document.createElement("li");
+      list.appendChild(li);
+      
+      const info = document.createElement("span");
+      info.innerHTML = fileArray[i].name ;
+      li.appendChild(info);
+      
+      const del = document.createElement("div");
+      del.addEventListener("click", function(){removeFile(i, event)}, false);
+      del.className = 'del';
+      const img = document.createElement("i");
+      img.className = 'fa fa-times';
+      del.appendChild(img);
+      li.appendChild(del);
+    }
+  }
+  updateSize();
+}
+
+function removeFile(index, e) {
+
+  e.stopPropagation();
+  e.preventDefault();
+  fileArray.splice(index,1);
+  updateFileList();
+}
+
+function updateSize() {
+
+  let nBytes = 0,
+      oFiles = fileArray, 
+      nFiles = oFiles.length;
+  for (let nFileId = 0; nFileId < nFiles; nFileId++) {
+    nBytes += oFiles[nFileId].size;
+  }
+  
+  let sOutput = nBytes + " bytes";
+  for (let aMultiples = ["KB", "MB", "GB", "TB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
+    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] ;
+  }
+
+  size.style.visibility = nFiles>0 ? "visible" : "hidden";
+  sizeNum.innerHTML = nFiles;
+  sizeBytes.innerHTML = sOutput;
+}
+
+function drag(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+function drop(e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  const dt = e.dataTransfer;
+  const files = dt.files;
+
+  handleFiles(files);
+}
+//# sourceMappingURL=dsgov-components.js.map

@@ -269,7 +269,7 @@ dtp_start.el.addEventListener("keyup", dtp_maskDate);
 dtp_end.el.addEventListener("keyup", dtp_maskDate);
 
 
-// Ativa o calendari quando os botoes sao clicados
+// Ativa o calendario quando os botoes sao clicados
 dtp_default_btn = document.getElementById("default-btn")
 dtp_toggle(dtp_default_btn, dtp_default)
 
