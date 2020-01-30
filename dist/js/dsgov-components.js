@@ -1,3 +1,141 @@
+/**
+ * @fileoverview syncscroll - scroll several areas simultaniously
+ * @version 0.0.3
+ *
+ * @license MIT, see http://github.com/asvd/intence
+ * @copyright 2015 asvd <heliosframework@gmail.com>
+ */
+
+(function(root, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["exports"], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(exports);
+  } else {
+    factory((root.syncscroll = {}));
+  }
+})(this, function(exports) {
+  var Width = "Width";
+  var Height = "Height";
+  var Top = "Top";
+  var Left = "Left";
+  var scroll = "scroll";
+  var client = "client";
+  var EventListener = "EventListener";
+  var addEventListener = "add" + EventListener;
+  var length = "length";
+  var Math_round = Math.round;
+
+  var names = {};
+
+  var reset = function() {
+    var elems = document.getElementsByClassName("sync" + scroll);
+
+    // clearing existing listeners
+    var i, j, el, found, name;
+    for (name in names) {
+      if (names.hasOwnProperty(name)) {
+        for (i = 0; i < names[name][length]; i++) {
+          names[name][i]["remove" + EventListener](
+            scroll,
+            names[name][i].syn,
+            0
+          );
+        }
+      }
+    }
+
+    // setting-up the new listeners
+    for (i = 0; i < elems[length]; ) {
+      found = j = 0;
+      el = elems[i++];
+      if (!(name = el.getAttribute("name"))) {
+        // name attribute is not set
+        continue;
+      }
+
+      el = el[scroll + "er"] || el; // needed for intence
+
+      // searching for existing entry in array of names;
+      // searching for the element in that entry
+      for (; j < (names[name] = names[name] || [])[length]; ) {
+        found |= names[name][j++] == el;
+      }
+
+      if (!found) {
+        names[name].push(el);
+      }
+
+      el.eX = el.eY = 0;
+
+      (function(el, name) {
+        el[addEventListener](
+          scroll,
+          (el.syn = function() {
+            var elems = names[name];
+
+            var scrollX = el[scroll + Left];
+            var scrollY = el[scroll + Top];
+
+            var xRate = scrollX / (el[scroll + Width] - el[client + Width]);
+            var yRate = scrollY / (el[scroll + Height] - el[client + Height]);
+
+            var updateX = scrollX != el.eX;
+            var updateY = scrollY != el.eY;
+
+            var otherEl,
+              i = 0;
+
+            el.eX = scrollX;
+            el.eY = scrollY;
+
+            for (; i < elems[length]; ) {
+              otherEl = elems[i++];
+              if (otherEl != el) {
+                if (
+                  updateX &&
+                  Math_round(
+                    otherEl[scroll + Left] -
+                      (scrollX = otherEl.eX = Math_round(
+                        xRate *
+                          (otherEl[scroll + Width] - otherEl[client + Width])
+                      ))
+                  )
+                ) {
+                  otherEl[scroll + Left] = scrollX;
+                }
+
+                if (
+                  updateY &&
+                  Math_round(
+                    otherEl[scroll + Top] -
+                      (scrollY = otherEl.eY = Math_round(
+                        yRate *
+                          (otherEl[scroll + Height] - otherEl[client + Height])
+                      ))
+                  )
+                ) {
+                  otherEl[scroll + Top] = scrollY;
+                }
+              }
+            }
+          }),
+          0
+        );
+      })(el, name);
+    }
+  };
+
+  if (document.readyState == "complete") {
+    reset();
+  } else {
+    window[addEventListener]("load", reset, 0);
+  }
+
+  exports.reset = reset;
+});
+
+
 class BRAccordeon {
   constructor(name, component) {
     this.name = name;
@@ -51,63 +189,71 @@ window.onload = (function startBrAccordions() {
   }
 })();
 
-class BRChecklist {
-  constructor(name, component) {
-    this.name = name;
-    this.component = component;
-    this._setBehavior();
+
+try{
+	class BRChecklist {
+		constructor(name, component) {
+			this.name = name;
+			this.component = component;
+			this._setBehavior();
+			}
+			
+			
+	/*
+	teste
+	*/
+		_setBehavior() {
+			for (let inputRadio of this.component.querySelectorAll(
+				'input[type="radio"]'
+			)) {
+				inputRadio.addEventListener("click", event => {
+					this._switchSole(event);
+				});
+			}
+			for (let inputCheckbox of this.component.querySelectorAll(
+				'input[type="checkbox"]'
+			)) {
+				inputCheckbox.addEventListener("click", event => {
+					this._switchShared(event);
+				});
+			}
 		}
-		
-		
-/*
-teste
-*/
-  _setBehavior() {
-    for (let inputRadio of this.component.querySelectorAll(
-      'input[type="radio"]'
-    )) {
-      inputRadio.addEventListener("click", event => {
-        this._switchSole(event);
-      });
-    }
-    for (let inputCheckbox of this.component.querySelectorAll(
-      'input[type="checkbox"]'
-    )) {
-      inputCheckbox.addEventListener("click", event => {
-        this._switchShared(event);
-      });
-    }
-  }
 
-  _switchSole(event) {
-    for (let field of this.component.querySelectorAll(".item")) {
-      if (field === event.currentTarget.parentNode.parentNode) {
-        field.classList.add("is-active");
-      } else {
-        field.classList.remove("is-active");
-      }
-    }
-  }
+		_switchSole(event) {
+			for (let field of this.component.querySelectorAll(".item")) {
+				if (field === event.currentTarget.parentNode.parentNode) {
+					field.classList.add("is-active");
+				} else {
+					field.classList.remove("is-active");
+				}
+			}
+		}
 
-  _switchShared(event) {
-    for (let field of this.component.querySelectorAll(".item")) {
-      if (field === event.currentTarget.parentNode.parentNode) {
-        field.classList.toggle("is-active");
-      }
-    }
-  }
+		_switchShared(event) {
+			for (let field of this.component.querySelectorAll(".item")) {
+				if (field === event.currentTarget.parentNode.parentNode) {
+					field.classList.toggle("is-active");
+				}
+			}
+		}
+	}
+
+
+
+	let checklistList = [];
+
+	window.onload = (function() {
+		for (let brChecklist of window.document.querySelectorAll(".br-checklist")) {
+			checklistList.push(new BRChecklist("br-checklist", brChecklist));
+		}
+	})();
+
+
+}catch (e){
+	console.log(e);
 }
 
-
-
-let checklistList = [];
-
-window.onload = (function() {
-  for (let brChecklist of window.document.querySelectorAll(".br-checklist")) {
-    checklistList.push(new BRChecklist("br-checklist", brChecklist));
-  }
-})();
-
+try{
 class BRHeader {
 
   constructor(name, component) {
@@ -224,365 +370,369 @@ listHeader = [];
 for (let header of window.document.querySelectorAll('.br-header')) {
   listHeader.push(new BRHeader('br-header', header));
 }
+
+}catch (e){}
+
+
 let listId = 'search-list'
 let listClass = 'search-items'
 let itemActive = 'search-active'
 
-function autocomplete(inp, arr) {
+function autocomplete ( inp, arr ) {
   /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
-  var currentFocus
-  /*execute a function when someone writes in the text field:*/
-  inp.addEventListener('input', function(e) {
-    var a,
-      b,
-      i,
-      val = this.value
-    /*close any already open lists of autocompleted values*/
-    closeAllLists()
-    if (!val) {
-      return false
-    }
-    currentFocus = -1
-    /*create a DIV element that will contain the items (values):*/
-    a = document.createElement('DIV')
-    a.setAttribute('id', this.id + listId)
-    a.setAttribute('class', listClass)
-    /*append the DIV element as a child of the autocomplete container:*/
-    this.parentNode.appendChild(a)
-    /*for each item in the array...*/
-    for (i = 0; i < arr.length; i++) {
-      /*check if the item starts with the same letters as the text field value:*/
-      if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-        /*create a DIV element for each matching element:*/
-        b = document.createElement('DIV')
-        /*make the matching letters bold:*/
-        b.innerHTML = '<strong>' + arr[i].substr(0, val.length) + '</strong>'
-        b.innerHTML += arr[i].substr(val.length)
-        /*insert a input field that will hold the current array item's value:*/
-        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>"
-        /*execute a function when someone clicks on the item value (DIV element):*/
-        b.addEventListener('click', function(e) {
-          /*insert the value for the autocomplete text field:*/
-          inp.value = this.getElementsByTagName('input')[0].value
+	var currentFocus
+	/*execute a function when someone writes in the text field:*/
+	inp.addEventListener( 'input', function ( e ) {
+		var a,
+			b,
+			i,
+			val = this.value
+		/*close any already open lists of autocompleted values*/
+		closeAllLists()
+		if ( !val ) {
+			return false
+		}
+		currentFocus = -1
+		/*create a DIV element that will contain the items (values):*/
+		a = document.createElement( 'DIV' )
+		a.setAttribute( 'id', this.id + listId )
+		a.setAttribute( 'class', listClass )
+		/*append the DIV element as a child of the autocomplete container:*/
+		this.parentNode.appendChild( a )
+		/*for each item in the array...*/
+		for ( i = 0; i < arr.length; i++ ) {
+			/*check if the item starts with the same letters as the text field value:*/
+			if ( arr[ i ].substr( 0, val.length ).toUpperCase() == val.toUpperCase() ) {
+				/*create a DIV element for each matching element:*/
+				b = document.createElement( 'DIV' )
+				/*make the matching letters bold:*/
+				b.innerHTML = '<strong>' + arr[ i ].substr( 0, val.length ) + '</strong>'
+				b.innerHTML += arr[ i ].substr( val.length )
+				/*insert a input field that will hold the current array item's value:*/
+				b.innerHTML += "<input type='hidden' value='" + arr[ i ] + "'>"
+				/*execute a function when someone clicks on the item value (DIV element):*/
+				b.addEventListener( 'click', function ( e ) {
+					/*insert the value for the autocomplete text field:*/
+					inp.value = this.getElementsByTagName( 'input' )[ 0 ].value
           /*close the list of autocompleted values,
                 (or any other open lists of autocompleted values:*/
-          closeAllLists()
-        })
-        a.appendChild(b)
-      }
-    }
-  })
-  /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener('keydown', function(e) {
-    var x = document.getElementById(this.id + listId)
-    if (x) x = x.getElementsByTagName('div')
-    if (e.keyCode == 40) {
+					closeAllLists()
+				} )
+				a.appendChild( b )
+			}
+		}
+	} )
+	/*execute a function presses a key on the keyboard:*/
+	inp.addEventListener( 'keydown', function ( e ) {
+		var x = document.getElementById( this.id + listId )
+		if ( x ) x = x.getElementsByTagName( 'div' )
+		if ( e.keyCode == 40 ) {
       /*If the arrow DOWN key is pressed,
           increase the currentFocus variable:*/
-      currentFocus++
-      /*and and make the current item more visible:*/
-      addActive(x)
-    } else if (e.keyCode == 38) {
-      //up
+			currentFocus++
+			/*and and make the current item more visible:*/
+			addActive( x )
+		} else if ( e.keyCode == 38 ) {
+			//up
       /*If the arrow UP key is pressed,
           decrease the currentFocus variable:*/
-      currentFocus--
-      /*and and make the current item more visible:*/
-      addActive(x)
-    } else if (e.keyCode == 13) {
-      /*If the ENTER key is pressed, prevent the form from being submitted,*/
-      e.preventDefault()
-      if (currentFocus > -1) {
-        /*and simulate a click on the "active" item:*/
-        if (x) x[currentFocus].click()
-      }
-    }
-  })
-  function addActive(x) {
-    /*a function to classify an item as "active":*/
-    if (!x) return false
-    /*start by removing the "active" class on all items:*/
-    removeActive(x)
-    if (currentFocus >= x.length) currentFocus = 0
-    if (currentFocus < 0) currentFocus = x.length - 1
-    /*add class itemActive:*/
-    x[currentFocus].classList.add(itemActive)
-  }
-  function removeActive(x) {
-    /*a function to remove the "active" class from all autocomplete items:*/
-    for (var i = 0; i < x.length; i++) {
-      x[i].classList.remove(itemActive)
-    }
-  }
-  function closeAllLists(elmnt) {
+			currentFocus--
+			/*and and make the current item more visible:*/
+			addActive( x )
+		} else if ( e.keyCode == 13 ) {
+			/*If the ENTER key is pressed, prevent the form from being submitted,*/
+			e.preventDefault()
+			if ( currentFocus > -1 ) {
+				/*and simulate a click on the "active" item:*/
+				if ( x ) x[ currentFocus ].click()
+			}
+		}
+	} )
+	function addActive ( x ) {
+		/*a function to classify an item as "active":*/
+		if ( !x ) return false
+		/*start by removing the "active" class on all items:*/
+		removeActive( x )
+		if ( currentFocus >= x.length ) currentFocus = 0
+		if ( currentFocus < 0 ) currentFocus = x.length - 1
+		/*add class itemActive:*/
+		x[ currentFocus ].classList.add( itemActive )
+	}
+	function removeActive ( x ) {
+		/*a function to remove the "active" class from all autocomplete items:*/
+		for ( var i = 0; i < x.length; i++ ) {
+			x[ i ].classList.remove( itemActive )
+		}
+	}
+	function closeAllLists ( elmnt ) {
     /*close all autocomplete lists in the document,
       except the one passed as an argument:*/
-    var x = document.getElementsByClassName(listClass)
-    for (var i = 0; i < x.length; i++) {
-      if (elmnt != x[i] && elmnt != inp) {
-        x[i].parentNode.removeChild(x[i])
-      }
-    }
-  }
-  /*execute a function when someone clicks in the document:*/
-  document.addEventListener('click', function(e) {
-    closeAllLists(e.target)
-  })
+		var x = document.getElementsByClassName( listClass )
+		for ( var i = 0; i < x.length; i++ ) {
+			if ( elmnt != x[ i ] && elmnt != inp ) {
+				x[ i ].parentNode.removeChild( x[ i ] )
+			}
+		}
+	}
+	/*execute a function when someone clicks in the document:*/
+	document.addEventListener( 'click', function ( e ) {
+		closeAllLists( e.target )
+	} )
 }
 
-;(function() {
-  const countries = [
-    'Afeganistão',
-    'África do Sul',
-    'Albânia',
-    'Alemanha',
-    'Andorra',
-    'Angola',
-    'Anguilla',
-    'Antártida',
-    'Antígua e Barbuda',
-    'Antilhas Holandesas',
-    'Arábia Saudita',
-    'Argélia',
-    'Argentina',
-    'Armênia',
-    'Aruba',
-    'Austrália',
-    'Áustria',
-    'Azerbaijão',
-    'Bahamas',
-    'Bahrein',
-    'Bangladesh',
-    'Barbados',
-    'Belarus',
-    'Bélgica',
-    'Belize',
-    'Benin',
-    'Bermudas',
-    'Bolívia',
-    'Bósnia-Herzegóvina',
-    'Botsuana',
-    'Brasil',
-    'Brunei',
-    'Bulgária',
-    'Burkina Fasso',
-    'Burundi',
-    'Butão',
-    'Cabo Verde',
-    'Camarões',
-    'Camboja',
-    'Canadá',
-    'Cazaquistão',
-    'Chade',
-    'Chile',
-    'China',
-    'Chipre',
-    'Cingapura',
-    'Colômbia',
-    'Congo',
-    'Coréia do Norte',
-    'Coréia do Sul',
-    'Costa do Marfim',
-    'Costa Rica',
-    'Croácia (Hrvatska)',
-    'Cuba',
-    'Dinamarca',
-    'Djibuti',
-    'Dominica',
-    'Egito',
-    'El Salvador',
-    'Emirados Árabes Unidos',
-    'Equador',
-    'Eritréia',
-    'Eslováquia',
-    'Eslovênia',
-    'Espanha',
-    'Estados Unidos',
-    'Estônia',
-    'Etiópia',
-    'Fiji',
-    'Filipinas',
-    'Finlândia',
-    'França',
-    'Gabão',
-    'Gâmbia',
-    'Gana',
-    'Geórgia',
-    'Gibraltar',
-    'Grã-Bretanha (Reino Unido, UK)',
-    'Granada',
-    'Grécia',
-    'Groelândia',
-    'Guadalupe',
-    'Guam (Território dos Estados Unidos)',
-    'Guatemala',
-    'Guernsey',
-    'Guiana',
-    'Guiana Francesa',
-    'Guiné',
-    'Guiné Equatorial',
-    'Guiné-Bissau',
-    'Haiti',
-    'Holanda',
-    'Honduras',
-    'Hong Kong',
-    'Hungria',
-    'Iêmen',
-    'Ilha Bouvet (Território da Noruega)',
-    'Ilha do Homem',
-    'Ilha Natal',
-    'Ilha Pitcairn',
-    'Ilha Reunião',
-    'Ilhas Aland',
-    'Ilhas Cayman',
-    'Ilhas Cocos',
-    'Ilhas Comores',
-    'Ilhas Cook',
-    'Ilhas Faroes',
-    'Ilhas Falkland (Malvinas)',
-    'Ilhas Geórgia do Sul e Sandwich do Sul',
-    'Ilhas Heard e McDonald (Território da Austrália)',
-    'Ilhas Marianas do Norte',
-    'Ilhas Marshall',
-    'Ilhas Menores dos Estados Unidos',
-    'Ilhas Norfolk',
-    'Ilhas Seychelles',
-    'Ilhas Solomão',
-    'Ilhas Svalbard e Jan Mayen',
-    'Ilhas Tokelau',
-    'Ilhas Turks e Caicos',
-    'Ilhas Virgens (Estados Unidos)',
-    'Ilhas Virgens (Inglaterra)',
-    'Ilhas Wallis e Futuna',
-    'índia',
-    'Indonésia',
-    'Irã',
-    'Iraque',
-    'Irlanda',
-    'Islândia',
-    'Israel',
-    'Itália',
-    'Jamaica',
-    'Japão',
-    'Jersey',
-    'Jordânia',
-    'Kênia',
-    'Kiribati',
-    'Kuait',
-    'Laos',
-    'Látvia',
-    'Lesoto',
-    'Líbano',
-    'Libéria',
-    'Líbia',
-    'Liechtenstein',
-    'Lituânia',
-    'Luxemburgo',
-    'Macau',
-    'Macedônia (República Yugoslava)',
-    'Madagascar',
-    'Malásia',
-    'Malaui',
-    'Maldivas',
-    'Mali',
-    'Malta',
-    'Marrocos',
-    'Martinica',
-    'Maurício',
-    'Mauritânia',
-    'Mayotte',
-    'México',
-    'Micronésia',
-    'Moçambique',
-    'Moldova',
-    'Mônaco',
-    'Mongólia',
-    'Montenegro',
-    'Montserrat',
-    'Myanma',
-    'Namíbia',
-    'Nauru',
-    'Nepal',
-    'Nicarágua',
-    'Níger',
-    'Nigéria',
-    'Niue',
-    'Noruega',
-    'Nova Caledônia',
-    'Nova Zelândia',
-    'Omã',
-    'Palau',
-    'Panamá',
-    'Papua-Nova Guiné',
-    'Paquistão',
-    'Paraguai',
-    'Peru',
-    'Polinésia Francesa',
-    'Polônia',
-    'Porto Rico',
-    'Portugal',
-    'Qatar',
-    'Quirguistão',
-    'República Centro-Africana',
-    'República Democrática do Congo',
-    'República Dominicana',
-    'República Tcheca',
-    'Romênia',
-    'Ruanda',
-    'Rússia (antiga URSS) - Federação Russa',
-    'Saara Ocidental',
-    'Saint Vincente e Granadinas',
-    'Samoa Americana',
-    'Samoa Ocidental',
-    'San Marino',
-    'Santa Helena',
-    'Santa Lúcia',
-    'São Bartolomeu',
-    'São Cristóvão e Névis',
-    'São Martim',
-    'São Tomé e Príncipe',
-    'Senegal',
-    'Serra Leoa',
-    'Sérvia',
-    'Síria',
-    'Somália',
-    'Sri Lanka',
-    'St. Pierre and Miquelon',
-    'Suazilândia',
-    'Sudão',
-    'Suécia',
-    'Suíça',
-    'Suriname',
-    'Tadjiquistão',
-    'Tailândia',
-    'Taiwan',
-    'Tanzânia',
-    'Território Britânico do Oceano índico',
-    'Territórios do Sul da França',
-    'Territórios Palestinos Ocupados',
-    'Timor Leste',
-    'Togo',
-    'Tonga',
-    'Trinidad and Tobago',
-    'Tunísia',
-    'Turcomenistão',
-    'Turquia',
-    'Tuvalu',
-    'Ucrânia',
-    'Uganda',
-    'Uruguai',
-    'Uzbequistão',
-    'Vanuatu',
-    'Vaticano',
-    'Venezuela',
-    'Vietnã',
-    'Zâmbia',
-    'Zimbábue',
-  ]
+; ( function () {
+	const countries = [
+		'Afeganistão',
+		'África do Sul',
+		'Albânia',
+		'Alemanha',
+		'Andorra',
+		'Angola',
+		'Anguilla',
+		'Antártida',
+		'Antígua e Barbuda',
+		'Antilhas Holandesas',
+		'Arábia Saudita',
+		'Argélia',
+		'Argentina',
+		'Armênia',
+		'Aruba',
+		'Austrália',
+		'Áustria',
+		'Azerbaijão',
+		'Bahamas',
+		'Bahrein',
+		'Bangladesh',
+		'Barbados',
+		'Belarus',
+		'Bélgica',
+		'Belize',
+		'Benin',
+		'Bermudas',
+		'Bolívia',
+		'Bósnia-Herzegóvina',
+		'Botsuana',
+		'Brasil',
+		'Brunei',
+		'Bulgária',
+		'Burkina Fasso',
+		'Burundi',
+		'Butão',
+		'Cabo Verde',
+		'Camarões',
+		'Camboja',
+		'Canadá',
+		'Cazaquistão',
+		'Chade',
+		'Chile',
+		'China',
+		'Chipre',
+		'Cingapura',
+		'Colômbia',
+		'Congo',
+		'Coréia do Norte',
+		'Coréia do Sul',
+		'Costa do Marfim',
+		'Costa Rica',
+		'Croácia (Hrvatska)',
+		'Cuba',
+		'Dinamarca',
+		'Djibuti',
+		'Dominica',
+		'Egito',
+		'El Salvador',
+		'Emirados Árabes Unidos',
+		'Equador',
+		'Eritréia',
+		'Eslováquia',
+		'Eslovênia',
+		'Espanha',
+		'Estados Unidos',
+		'Estônia',
+		'Etiópia',
+		'Fiji',
+		'Filipinas',
+		'Finlândia',
+		'França',
+		'Gabão',
+		'Gâmbia',
+		'Gana',
+		'Geórgia',
+		'Gibraltar',
+		'Grã-Bretanha (Reino Unido, UK)',
+		'Granada',
+		'Grécia',
+		'Groelândia',
+		'Guadalupe',
+		'Guam (Território dos Estados Unidos)',
+		'Guatemala',
+		'Guernsey',
+		'Guiana',
+		'Guiana Francesa',
+		'Guiné',
+		'Guiné Equatorial',
+		'Guiné-Bissau',
+		'Haiti',
+		'Holanda',
+		'Honduras',
+		'Hong Kong',
+		'Hungria',
+		'Iêmen',
+		'Ilha Bouvet (Território da Noruega)',
+		'Ilha do Homem',
+		'Ilha Natal',
+		'Ilha Pitcairn',
+		'Ilha Reunião',
+		'Ilhas Aland',
+		'Ilhas Cayman',
+		'Ilhas Cocos',
+		'Ilhas Comores',
+		'Ilhas Cook',
+		'Ilhas Faroes',
+		'Ilhas Falkland (Malvinas)',
+		'Ilhas Geórgia do Sul e Sandwich do Sul',
+		'Ilhas Heard e McDonald (Território da Austrália)',
+		'Ilhas Marianas do Norte',
+		'Ilhas Marshall',
+		'Ilhas Menores dos Estados Unidos',
+		'Ilhas Norfolk',
+		'Ilhas Seychelles',
+		'Ilhas Solomão',
+		'Ilhas Svalbard e Jan Mayen',
+		'Ilhas Tokelau',
+		'Ilhas Turks e Caicos',
+		'Ilhas Virgens (Estados Unidos)',
+		'Ilhas Virgens (Inglaterra)',
+		'Ilhas Wallis e Futuna',
+		'índia',
+		'Indonésia',
+		'Irã',
+		'Iraque',
+		'Irlanda',
+		'Islândia',
+		'Israel',
+		'Itália',
+		'Jamaica',
+		'Japão',
+		'Jersey',
+		'Jordânia',
+		'Kênia',
+		'Kiribati',
+		'Kuait',
+		'Laos',
+		'Látvia',
+		'Lesoto',
+		'Líbano',
+		'Libéria',
+		'Líbia',
+		'Liechtenstein',
+		'Lituânia',
+		'Luxemburgo',
+		'Macau',
+		'Macedônia (República Yugoslava)',
+		'Madagascar',
+		'Malásia',
+		'Malaui',
+		'Maldivas',
+		'Mali',
+		'Malta',
+		'Marrocos',
+		'Martinica',
+		'Maurício',
+		'Mauritânia',
+		'Mayotte',
+		'México',
+		'Micronésia',
+		'Moçambique',
+		'Moldova',
+		'Mônaco',
+		'Mongólia',
+		'Montenegro',
+		'Montserrat',
+		'Myanma',
+		'Namíbia',
+		'Nauru',
+		'Nepal',
+		'Nicarágua',
+		'Níger',
+		'Nigéria',
+		'Niue',
+		'Noruega',
+		'Nova Caledônia',
+		'Nova Zelândia',
+		'Omã',
+		'Palau',
+		'Panamá',
+		'Papua-Nova Guiné',
+		'Paquistão',
+		'Paraguai',
+		'Peru',
+		'Polinésia Francesa',
+		'Polônia',
+		'Porto Rico',
+		'Portugal',
+		'Qatar',
+		'Quirguistão',
+		'República Centro-Africana',
+		'República Democrática do Congo',
+		'República Dominicana',
+		'República Tcheca',
+		'Romênia',
+		'Ruanda',
+		'Rússia (antiga URSS) - Federação Russa',
+		'Saara Ocidental',
+		'Saint Vincente e Granadinas',
+		'Samoa Americana',
+		'Samoa Ocidental',
+		'San Marino',
+		'Santa Helena',
+		'Santa Lúcia',
+		'São Bartolomeu',
+		'São Cristóvão e Névis',
+		'São Martim',
+		'São Tomé e Príncipe',
+		'Senegal',
+		'Serra Leoa',
+		'Sérvia',
+		'Síria',
+		'Somália',
+		'Sri Lanka',
+		'St. Pierre and Miquelon',
+		'Suazilândia',
+		'Sudão',
+		'Suécia',
+		'Suíça',
+		'Suriname',
+		'Tadjiquistão',
+		'Tailândia',
+		'Taiwan',
+		'Tanzânia',
+		'Território Britânico do Oceano índico',
+		'Territórios do Sul da França',
+		'Territórios Palestinos Ocupados',
+		'Timor Leste',
+		'Togo',
+		'Tonga',
+		'Trinidad and Tobago',
+		'Tunísia',
+		'Turcomenistão',
+		'Turquia',
+		'Tuvalu',
+		'Ucrânia',
+		'Uganda',
+		'Uruguai',
+		'Uzbequistão',
+		'Vanuatu',
+		'Vaticano',
+		'Venezuela',
+		'Vietnã',
+		'Zâmbia',
+		'Zimbábue',
+	]
 
-  autocomplete(document.getElementById('search-autocomplete'), countries)
-})()
+	autocomplete( document.getElementById( 'search-autocomplete' ), countries )
+} )()
 
 function toggleInputAction(element, className) {
   for (
@@ -615,6 +765,7 @@ collapseList.forEach(function(collapse) {
   })
 })
 
+
 class BRAlert {
   constructor(name, component) {
     this.name = name;
@@ -643,7 +794,7 @@ window.onload = (function() {
   }
 })();
 
-scrim = document.getElementsByClassName("is-foco")[0];
+let scrim = document.getElementsByClassName("is-foco")[0];
 
 function openModal(div) {
     scrim.innerHTML = div.innerHTML;
@@ -1762,56 +1913,133 @@ window.onload = (function() {
 })()
 
 function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
-var parentEl
-var parentE2
-var nextEl
+// ! Refatorações:
+// TODO: Comportamento de resize de coluna
+// TODO: Efeito resize de altura da linha
+// TODO: Cards internos de colunas
 
-var checkboxParent
-var checkboxParent2
+// ! Pendências:
+// TODO: Barra superior - itens de ação e menu flutuante, tags de filtros, itens selecionados
+// TODO: Filtragem de cabeçalhos
 
-function hasClass(elem, className) {
-  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ')
+const brTables = document.querySelectorAll( ".br-table" );
+const brTablesHeadersClass = "headers";
+let active = "is-active";
+let brTableNumber = 0;
+
+function hoverRow ( elements ) {
+	for ( let element of elements ) {
+		if ( element.children[ 0 ].children[ 0 ] ) {
+		}
+	}
 }
 
-function ShowHideTable(el) {
-  parentEl = el.parentNode
-  parentE2 = parentEl.parentNode
-  nextEl = parentE2.nextElementSibling
-  if (nextEl != null) {
-    if (hasClass(nextEl, 'show-table') && hasClass(nextEl, 'row-content')) {
-      nextEl.classList.remove('show-table')
-      nextEl.className = 'row-content hide-table'
-      el.classList.remove('fa-minus')
-      el.className = 'fas fa-plus'
-    } else if (
-      hasClass(nextEl, 'hide-table') &&
-      hasClass(nextEl, 'row-content')
-    ) {
-      nextEl.classList.remove('hide-table')
-      nextEl.className = 'row-content show-table'
-      el.classList.remove('fa-plus')
-      el.className = 'fas fa-minus'
-    }
-  }
+function toogleSearch ( container, trigger, close ) {
+	if ( trigger ) {
+		trigger.addEventListener( "click", function () {
+			container.classList.add( active );
+		} );
+	}
+
+	if ( close ) {
+		close.addEventListener( "click", function () {
+			container.classList.remove( active );
+		} );
+	}
 }
 
-function setActive(el) {
-  checkbox = el
-  checkboxParent = checkbox.parentNode
-  checkboxParent2 = checkboxParent.parentNode
-  if (el.checked) {
-    checkboxParent2.className = 'active'
-    checkboxParent.className = 'text-center active'
-  } else {
-    checkboxParent2.classList.remove('active')
-    checkboxParent.classList.remove('active')
-  }
+function setSyncScroll ( element ) {
+	element.classList.add( "syncscroll" );
+	element.setAttribute( "name", "table-" + brTableNumber );
 }
 
-//Correção da altura das colunas na tabela responsiva;
-var target = document.getElementsByTagName('tr')
-for (i = 0; i < target.length; i++) {
-  target[i].children[0].style.height = target[i].children[1].offsetHeight + 'px'
+function setHeaderWidth ( parent, element ) {
+	let cloneNode = parent.querySelector( `.${ brTablesHeadersClass }` );
+	for ( let i = 0; i < element.children.length; i++ ) {
+		elementWidth = element.children[ i ].offsetWidth;
+		cloneElementWidth = cloneNode.children[ 0 ].children[ i ];
+		cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
+	}
+}
+
+function cloneHeader ( parent, element ) {
+	let clone = element.cloneNode( true );
+	let headersTag = document.createElement( "div" );
+	let scrollerTag = document.createElement( "div" );
+
+	setSyncScroll( scrollerTag );
+	scrollerTag.classList.add( "scroller" );
+
+	for ( let i = 0; i < element.children.length; i++ ) {
+		let elementNode = clone.children[ i ].innerHTML;
+		let cloneElementNode = document.createElement( "div" );
+
+		cloneElementNode.classList.add( "item" );
+		cloneElementNode.innerHTML = elementNode;
+
+		scrollerTag.appendChild( cloneElementNode );
+
+		if ( cloneElementNode.children[ 0 ] ) {
+			if ( cloneElementNode.children[ 0 ].classList.contains( "br-checkbox" ) ) {
+				let cloneCheckbox = cloneElementNode.children[ 0 ];
+				let cloneCheckboxId = `${ brTablesHeadersClass }-${ parent.id }-check-all`;
+				cloneCheckbox.querySelector( "input" ).id = cloneCheckboxId;
+				cloneCheckbox
+					.querySelector( "label" )
+					.setAttribute( "for", cloneCheckboxId );
+			}
+		}
+	}
+
+	headersTag.classList.add( brTablesHeadersClass );
+	headersTag.appendChild( scrollerTag );
+
+	parent.appendChild( headersTag );
+}
+
+function checkAll ( element ) {
+	let headerCheckbox = element.querySelector(
+		".headers [name='check'] [type='checkbox']"
+	);
+	let tableCheckboxes = element.querySelectorAll(
+		"table [name='check'] [type='checkbox']"
+	);
+
+	if ( headerCheckbox ) {
+		headerCheckbox.addEventListener( "click", function () {
+			if ( headerCheckbox.checked ) {
+				for ( let checkbox of tableCheckboxes ) {
+					checkbox.checked = true;
+				}
+			} else {
+				for ( let checkbox of tableCheckboxes ) {
+					checkbox.checked = false;
+				}
+			}
+		} );
+	}
+}
+
+for ( let brTable of brTables ) {
+	let searchBar = brTable.querySelector( ".search-bar" );
+	let searchTrigger = brTable.querySelector( ".search-trigger" );
+	let searchClose = brTable.querySelector( ".search-close" );
+	let responsive = brTable.querySelector( ".responsive" );
+	let headers = brTable.querySelector( "table thead tr" );
+	let rows = brTable.querySelectorAll( "table tbody tr" );
+
+	brTableNumber++;
+
+	setSyncScroll( responsive );
+	cloneHeader( brTable, headers );
+	setHeaderWidth( brTable, headers );
+	toogleSearch( searchBar, searchTrigger, searchClose );
+	checkAll( brTable );
+	hoverRow( rows );
+
+	window.addEventListener( "resize", function () {
+		setHeaderWidth( brTable, headers );
+	} );
 }
 
 const tab = document.querySelectorAll('.br-tabs .item');
