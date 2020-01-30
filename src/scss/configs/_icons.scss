@@ -1,0 +1,29 @@
+$icon-base: 16px;
+$icon-xs: $icon-base * 0.5;
+$icon-sm: $icon-base * 0.75;
+$icon-lg: $icon-base * 1.25;
+$icon-2x: $icon-base * 2;
+$icon-3x: $icon-base * 3;
+$icon-4x: $icon-base * 4;
+$icon-5x: $icon-base * 5;
+$icon-6x: $icon-base * 6;
+$icon-7x: $icon-base * 7;
+$icon-8x: $icon-base * 8;
+$icon-9x: $icon-base * 9;
+$icon-10x: $icon-base * 10;
+
+$br-icons: (
+  icon-size-base: $icon-base,
+  icon-size-xs: $icon-xs,
+  icon-size-sm: $icon-sm,
+  icon-size-lg: $icon-lg,
+  icon-size-2x: $icon-2x,
+  icon-size-3x: $icon-3x,
+  icon-size-4x: $icon-4x,
+  icon-size-5x: $icon-5x,
+  icon-size-6x: $icon-6x,
+  icon-size-7x: $icon-7x,
+  icon-size-8x: $icon-8x,
+  icon-size-9x: $icon-9x,
+  icon-size-10x: $icon-10x,
+);

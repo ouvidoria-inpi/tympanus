@@ -1,6 +1,11 @@
 :root {
   // Cores
-  @each $color, $value in $br-theme {
-    --#{$color}: #{$value};
+  @each $item, $value in $br-theme {
+    --color-#{$item}: #{$value};
+  }
+
+  // Ícones
+  @each $item, $value in $br-icons {
+    --#{$item}: #{$value};
   }
 }
