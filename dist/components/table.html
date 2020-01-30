@@ -16,371 +16,422 @@
   </head>
   <body>
     <div class="container-fluid">
+      <p class="h2 mb-3">Tabela simples</p>
       <div class="br-table">
-        <p class="caption">Exemplo de título da tabela</p>
-        <div class="row mb-1">
-          <div class="col-sm-2">
-            <div class="actions ml-3">
-              <div class="br-select is-small">
-                <label for="acoes-em-massa"><i class="fas fa-share"></i></label>
-                <select id="acoes-em-massa">
-                  <option value="0">Ações em massa</option>
-                  <option value="opcao-1">Ação 1</option>
-                  <option value="opcao-2">Ação 2</option>
-                  <option value="opcao-3">Ação 3</option>
-                  <option value="opcao-4">Ação 4</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-2 ml-auto">
-            <div class="br-input has-icon is-small d-flex">
-              <label for="search"><span class="sr-only">Busca</span></label>
-              <input id="search" type="search"><span class="icon"><i class="fas fa-search"></i></span>
-            </div>
-          </div>
-          <div class="col-auto">
-            <div class="length">
-              <div class="br-select is-small">
-                <label for="length-top">Exibir:</label>
-                <select id="length-top">
-                  <option value="0">0</option>
-                  <option value="opcao-1" selected>10</option>
-                  <option value="opcao-2">15</option>
-                  <option value="opcao-3">20</option>
-                  <option value="opcao-4">25</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="table">
+        <div class="responsive">
           <table>
             <thead>
               <tr>
-                <th class="text-center" scope="col">
-                  <div class="br-checkbox is-small">
-                    <input id="select-all" type="checkbox">
-                    <label for="select-all"><span class="sr-only">checkbox</span></label>
-                  </div>
-                </th>
-                <th scope="col">Coluna 1 <i class="fas fa-sort text-primary"></i></th>
-                <th style="min-width: 300px" scope="col">Coluna 2 <i class="fas fa-sort text-primary"></i></th>
-                <th scope="col">Coluna 3 <i class="fas fa-sort text-primary"></i></th>
-                <th scope="col">Coluna 4 <i class="fas fa-sort text-primary"></i></th>
-                <th class="text-center" scope="col">Ações</th>
+                <th scope="col">Coluna 1</th>
+                <th scope="col">Coluna 2</th>
+                <th scope="col">Coluna 3</th>
+                <th scope="col">Coluna 4</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="text-center">
-                  <div class="br-checkbox is-small">
-                    <input id="check-1" type="checkbox">
-                    <label for="check-1"><span class="sr-only">checkbox</span></label>
-                  </div>
-                </td>
-                <td>0001AC201900016</td>
-                <td>Obter EX-Tarifário para bens de capital e para bens de informática</td>
-                <td>09/07/2009</td>
-                <td>Em Processamento</td>
-                <td class="text-center">
-                  <div class="actions is-inline is-active">
-                    <button class="trigger" type="button"><i class="fas fa-ellipsis-h"></i></button>
-                    <div class="list">
-                      <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                      <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                      <button type="button"><i class="fas fa-envelope-open-text"></i></button>
-                      <button type="button"><span class="sr-only">Apagar</span><i class="fas fa-trash"></i></button>
-                    </div>
-                  </div>
-                </td>
+                <td data-th="Coluna 1">iru8uths omujm4lm h06g8</td>
+                <td data-th="Coluna 2">flxbtlyh krgacmb9 mupg2</td>
+                <td data-th="Coluna 3">acsnm2hw zfiblrzc an1r64</td>
+                <td data-th="Coluna 4">ez1dm6ik mmj1gziu a43rk</td>
               </tr>
               <tr>
-                <td class="text-center">
-                  <div class="br-checkbox is-small">
-                    <input id="check-2" type="checkbox">
-                    <label for="check-2"><span class="sr-only">checkbox</span></label>
-                  </div>
-                </td>
-                <td>0001AC201900016</td>
-                <td>Emitir Documento de Arrecadação da Receita Federal</td>
-                <td>09/07/2009</td>
-                <td>Concluído</td>
-                <td class="text-center">
-                  <div class="actions is-active">
-                    <button class="trigger" type="button"><i class="fas fa-ellipsis-h"></i></button>
-                    <div class="list">
-                      <button type="button">Ação 1</button>
-                      <button type="button">Ação 2</button>
-                      <button type="button">Ação 3</button>
-                      <button type="button">Ação 4</button>
-                    </div>
-                  </div>
-                </td>
+                <td data-th="Coluna 1">w0xgoixi k9jjbmfl irge29</td>
+                <td data-th="Coluna 2">6f9xx2r0 mb4k8onr u8mtw</td>
+                <td data-th="Coluna 3">9bnkt7lq jna1o3ue xl6ybh</td>
+                <td data-th="Coluna 4">290gosoq cvcx4vx2 b49eqi</td>
               </tr>
               <tr>
-                <td class="text-center">
-                  <div class="br-checkbox is-small">
-                    <input id="check-3" type="checkbox">
-                    <label for="check-3"><span class="sr-only">checkbox</span></label>
-                  </div>
-                </td>
-                <td>0001AC201900016</td>
-                <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
-                <td>09/07/2009</td>
-                <td>Em Processamento</td>
-                <td class="text-center">
-                  <div class="actions">
-                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>
+                <td data-th="Coluna 1">b37qvw79 zeqsl6no apjw5</td>
+                <td data-th="Coluna 2">qaq23o77 dupy8dsb 7uvuy</td>
+                <td data-th="Coluna 3">yt1kyjzh cacjxfo4 o8mxm</td>
+                <td data-th="Coluna 4">xdbt9nlz 9wva82be lbel7</td>
               </tr>
               <tr>
-                <td class="text-center">
-                  <div class="br-checkbox is-small">
-                    <input id="check-4" type="checkbox">
-                    <label for="check-4"><span class="sr-only">checkbox</span></label>
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-coluna-1"><span class="sr-only">Label</span></label>
-                    <input id="input-coluna-1" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-coluna-2"><span class="sr-only">Label</span></label>
-                    <input id="input-coluna-2" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-coluna-3"><span class="sr-only">Label</span></label>
-                    <input id="input-coluna-3" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-coluna-4"><span class="sr-only">Label</span></label>
-                    <input id="input-coluna-4" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td class="text-center">
-                  <div class="actions">
-                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>
+                <td data-th="Coluna 1">3w82suww 16ls7kc3 99512</td>
+                <td data-th="Coluna 2">pw06f6py wse0k7qv yyokw</td>
+                <td data-th="Coluna 3">bo04frvj 7ffhf4aj b5qomp</td>
+                <td data-th="Coluna 4">vfwsxtea wpqi105w a53oet</td>
               </tr>
               <tr>
-                <td class="text-center">
-                  <div class="br-checkbox is-small">
-                    <input id="check-5" type="checkbox">
-                    <label for="check-5"><span class="sr-only">checkbox</span></label>
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-2-coluna-1"><span class="sr-only">Label</span></label>
-                    <input id="input-2-coluna-1" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-2-coluna-2"><span class="sr-only">Label</span></label>
-                    <input id="input-2-coluna-2" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-2-coluna-3"><span class="sr-only">Label</span></label>
-                    <input id="input-2-coluna-3" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-2-coluna-4"><span class="sr-only">Label</span></label>
-                    <input id="input-2-coluna-4" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td class="text-center">
-                  <div class="actions">
-                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="is-active">
-                <td class="text-center">
-                  <div class="br-checkbox is-small">
-                    <input id="check-6" type="checkbox" checked>
-                    <label for="check-6"><span class="sr-only">checkbox</span></label>
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-3-coluna-1"><span class="sr-only">Label</span></label>
-                    <input id="input-3-coluna-1" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-3-coluna-2"><span class="sr-only">Label</span></label>
-                    <input id="input-3-coluna-2" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-3-coluna-3"><span class="sr-only">Label</span></label>
-                    <input id="input-3-coluna-3" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td>
-                  <div class="br-input is-medium">
-                    <label class="mb-0" for="input-3-coluna-4"><span class="sr-only">Label</span></label>
-                    <input id="input-3-coluna-4" type="text" placeholder="Insira um texto">
-                  </div>
-                </td>
-                <td class="text-center">
-                  <div class="actions">
-                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">
-                  <div class="collapse">
-                    <button type="button"><i class="fas fa-plus"></i><span class="sr-only">Mais informações</span></button>
-                  </div>
-                </td>
-                <td>0001AC201900016</td>
-                <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
-                <td>09/07/2009</td>
-                <td>Em Processamento</td>
-                <td class="text-center">
-                  <div class="actions">
-                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">
-                  <div class="collapse">
-                    <button type="button"><i class="fas fa-plus"></i><span class="sr-only">Mais informações</span></button>
-                  </div>
-                </td>
-                <td>0001AC201900016</td>
-                <td>Emitir Documento de Arrecadação da Receita Federal</td>
-                <td>09/07/2009</td>
-                <td>Concluído</td>
-                <td class="text-center">
-                  <div class="actions">
-                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="is-active">
-                <td class="text-center">
-                  <div class="collapse">
-                    <button type="button"><i class="fas fa-minus"></i><span class="sr-only">Fechar informações</span></button>
-                  </div>
-                </td>
-                <td>0001AC201900016</td>
-                <td>Obter EX-Tarifário para bens de capital e para bens de informáica</td>
-                <td>09/07/2009</td>
-                <td>Em Processamento</td>
-                <td class="text-center">
-                  <div class="actions">
-                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td colspan="5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laboriosam mollitia eius a porro, magni molestiae nihil repellendus officiis autem ullam cumque saepe culpa non iste amet inventore quas fuga?</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sit aspernatur labore, temporibus possimus distinctio doloribus recusandae vitae voluptate dolore odit ducimus molestiae aliquid, reiciendis cumque voluptates dolor natus ex!</p>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non suscipit commodi eius ducimus magnam laborum in quae laudantium sapiente, minima necessitatibus modi iusto pariatur quaerat? A vitae eos totam fugit!</p>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">
-                  <div class="br-checkbox is-small">
-                    <input id="check-10" type="checkbox">
-                    <label for="check-10"><span class="sr-only">checkbox</span></label>
-                  </div>
-                </td>
-                <td>0001AC201900016</td>
-                <td>Emitir Documento de Arrecadação da Receita Federal</td>
-                <td>09/07/2009</td>
-                <td>Concluído</td>
-                <td class="text-center">
-                  <div class="actions">
-                    <button type="button"><span class="sr-only">Visualizar</span><i class="fas fa-eye"></i></button>
-                    <button type="button"><span class="sr-only">Editar</span><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>
+                <td data-th="Coluna 1">nxrag4rc f51p5qmm 8dgms</td>
+                <td data-th="Coluna 2">deezk17f plh6lt5w twui6</td>
+                <td data-th="Coluna 3">v5s29ru9 k8l8dr68 nsgn5</td>
+                <td data-th="Coluna 4">3lk26dmg awhofbyf qje8k</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="row mt-1">
-          <div class="col-sm">
-            <ul class="br-pagination">
-              <li class="is-first is-disabled"><a href=""><i class="fas fa-angle-double-left"></i><span>Anterior</span></a></li>
-              <li class="d-flex d-sm-none">
-                <label for="page-select-default"><span class="sr-only">Selecione a página</span></label>
-                <select id="page-select-default">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select><span class="ml-2">de</span><a href="">10</a>
-              </li>
-              <li class="is-active"><a href=""><span>1</span></a></li>
-              <li><a href=""><span>2</span></a></li>
-              <li><a href=""><span>3</span></a></li>
-              <li><a href=""><span>4</span></a></li>
-              <li><a href=""><span>5</span></a></li>
-              <li><a href=""><span>6</span></a></li>
-              <li><a href=""><span>7</span></a></li>
-              <li><a href=""><span>8</span></a></li>
-              <li><a href=""><span>9</span></a></li>
-              <li><a href=""><span>10</span></a></li>
-              <li class="is-last"><a href=""><span>Próxima</span><i class="fas fa-angle-double-right"></i></a></li>
-            </ul>
+      </div>
+      <p class="h2 mb-3 mt-5">Datatable</p>
+      <div class="br-table is-datatable" id="datatable-default">
+        <div class="header">
+          <div class="top-bar">
+            <div class="title">Título da Tabela</div>
+            <div class="search-button">
+              <button class="br-button search-trigger is-circle is-tertiary" type="button"><i class="fas fa-search"></i>
+              </button>
+            </div>
           </div>
-          <div class="col-auto">
-            <div class="length">
+          <div class="search-bar">
+            <div class="br-input search-input is-medium has-icon">
+              <label for="datatable-default-search-input">Buscar</label>
+              <input id="datatable-default-search-input" type="text" placeholder="Buscar na tabela">
+              <button class="icon" type="button"><span class="sr-only">Buscar</span><i class="fas fa-search"></i></button>
+            </div>
+            <button class="br-button search-close is-circle ml-1" type="button"><i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Coluna 1</th>
+                <th scope="col">Coluna 2</th>
+                <th scope="col">Coluna 3</th>
+                <th scope="col">Coluna 4</th>
+                <th scope="col">Coluna 5</th>
+                <th scope="col">Coluna 6</th>
+                <th scope="col">Coluna 7</th>
+                <th scope="col">Coluna 8</th>
+                <th scope="col">Coluna 9</th>
+                <th scope="col">Coluna 10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="Coluna 1">9mj0cs9o lvmydkzk jwe3qb</td>
+                <td data-th="Coluna 2">58rvnj1n fccfk2q1 0i20hr</td>
+                <td data-th="Coluna 3">jj8ti54f numujel0 7nmwq</td>
+                <td data-th="Coluna 4">goi3g12c ia8d1123 lnfrbm</td>
+                <td data-th="Coluna 5">ojui8y2s wol7s348 yuaaf</td>
+                <td data-th="Coluna 6">zkxcbj3y l8h8f313 7og31r</td>
+                <td data-th="Coluna 7">more5vyc euo8cw9j ze5x7r</td>
+                <td data-th="Coluna 8">9cmif96u dvne85d8 tgh3w</td>
+                <td data-th="Coluna 9">2nrwu80q xwrs7e7s 4799ds</td>
+                <td data-th="Coluna 10">r76sxgmq snqvz2uw n6js</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">pfl7p8kn 4pkxjwm3 wcgqf</td>
+                <td data-th="Coluna 2">3neebdxa olaiuu5v teowo</td>
+                <td data-th="Coluna 3">gm134a4s phs87ro3 ahwm59</td>
+                <td data-th="Coluna 4">ebs8da9e fhc01046 69q7f</td>
+                <td data-th="Coluna 5">u1barkze txdqwmew v26eoq</td>
+                <td data-th="Coluna 6">2bn35mqc sit2hloq 16bcsu</td>
+                <td data-th="Coluna 7">h9yzun1a pikk1w5f 7gdp8</td>
+                <td data-th="Coluna 8">apec9ycm brplyn0r 2deowh</td>
+                <td data-th="Coluna 9">jokzfe5v x3mionhj stpj</td>
+                <td data-th="Coluna 10">nkx7mj6p btmin5hk noo0n</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">lofcbd37 m4fhxsi1 q6kkff</td>
+                <td data-th="Coluna 2">relxl2sy r4adiqn1 ysbai</td>
+                <td data-th="Coluna 3">vsrf6j3v riodchpi rkg7v</td>
+                <td data-th="Coluna 4">v5wbdvwi bp452em9 t1t2b</td>
+                <td data-th="Coluna 5">76idgnip w2it7f32 cutkkq</td>
+                <td data-th="Coluna 6">tgz3oxqo r4cmg0j4 c03gr</td>
+                <td data-th="Coluna 7">sv6a1lye h4epfs9u rtum7a</td>
+                <td data-th="Coluna 8">6byrw215 rxoltkaa 6beunk</td>
+                <td data-th="Coluna 9">0iqfixxs jsl9tk2f u40n73</td>
+                <td data-th="Coluna 10">nmx6b77r y4fvcpel 8jrcx</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">8xumikcd kewitxsf v4b1ee</td>
+                <td data-th="Coluna 2">x6dmx5t1 6cq4dd8i m7vqb8</td>
+                <td data-th="Coluna 3">m16wpnlc 2vq1mpd4 6ytgax</td>
+                <td data-th="Coluna 4">meacdo2k 6kahrckj demnp</td>
+                <td data-th="Coluna 5">80e0476i hhtq906c 5b14ua</td>
+                <td data-th="Coluna 6">vfkjisst 5ed2aon5 jq5psz</td>
+                <td data-th="Coluna 7">6pm65h3o us47x8sy f458tc</td>
+                <td data-th="Coluna 8">sn6o320l vuppi40v vd33ri</td>
+                <td data-th="Coluna 9">jdlq3lgf pze7yset 7bcvov</td>
+                <td data-th="Coluna 10">q8gs5ud9 98b5ls74 qtppg</td>
+              </tr>
+              <tr>
+                <td data-th="Coluna 1">x6hs8z7f 25mv6av2 q9dy</td>
+                <td data-th="Coluna 2">3j03i888 oocpidj6 12b7i</td>
+                <td data-th="Coluna 3">69xncbyj yzqp3cas kno5q</td>
+                <td data-th="Coluna 4">a49pmsiz u2faq1sj fiee6e</td>
+                <td data-th="Coluna 5">ji44b6to j8hrrppp dkmhn</td>
+                <td data-th="Coluna 6">2oqgzcnk y0d3qkjl kt0nx1</td>
+                <td data-th="Coluna 7">ijyshrtz 0i9lgesn mzh00o</td>
+                <td data-th="Coluna 8">uv47i1js cgy5csis lwqxe</td>
+                <td data-th="Coluna 9">nhi7t7vi 0gpu5ean pmmo59</td>
+                <td data-th="Coluna 10">uxueh1rt 0bhkdzwf bbpxic</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="footer">
+          <div class="bottom-bar">
+            <div class="items"><span>Exibir:</span>
               <div class="br-select is-small">
-                <label for="length-bottom">Exibir:</label>
-                <select id="length-bottom">
-                  <option value="0">0</option>
-                  <option value="opcao-1" selected>10</option>
-                  <option value="opcao-2">15</option>
-                  <option value="opcao-3">20</option>
-                  <option value="opcao-4">25</option>
+                <label for="datatable-default-items"></label>
+                <select id="datatable-default-items">
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
                 </select>
+              </div><span class="divider"></span><span>1-10 de 50 itens</span>
+            </div>
+            <div class="pagination">
+              <div class="selectors">
+                <div class="br-select is-small">
+                  <label for="datatable-default-pagination"></label>
+                  <select id="datatable-default-pagination">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div><span>de 3 páginas</span><span class="divider"></span>
+              </div>
+              <div class="arrows">
+                <button class="br-button is-circle is-secondary" type="button"><i class="fa fa-chevron-left"></i>
+                </button>
+                <button class="br-button is-circle is-secondary" type="button"><i class="fa fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="br-table mt-5 is-datatable" id="datatable-checkbox">
+        <div class="header">
+          <div class="top-bar">
+            <div class="title">Datatable com checkbox</div>
+            <div class="search-button">
+              <button class="br-button search-trigger is-circle is-tertiary" type="button"><i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="search-bar">
+            <div class="br-input search-input is-medium has-icon">
+              <label for="datatable-checkbox-search-input">Buscar</label>
+              <input id="datatable-checkbox-search-input" type="text" placeholder="Buscar na tabela">
+              <button class="icon" type="button"><span class="sr-only">Buscar</span><i class="fas fa-search"></i></button>
+            </div>
+            <button class="br-button search-close is-circle ml-1" type="button"><i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="responsive">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" style="width: 54px;">
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-check-all" type="checkbox">
+                    <label for="datatable-checkbox-check-all"></label>
+                  </div>
+                </th>
+                <th scope="col">Coluna 1</th>
+                <th scope="col">Coluna 2</th>
+                <th scope="col">Coluna 3</th>
+                <th scope="col">Coluna 4</th>
+                <th scope="col">Coluna 5</th>
+                <th scope="col">Coluna 6</th>
+                <th scope="col">Coluna 7</th>
+                <th scope="col">Coluna 8</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-1" type="checkbox">
+                    <label for="datatable-checkbox-line-1"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">ayrpui07 5zisv0hy vhwrk</td>
+                <td data-th="Coluna 2">5e1grjdp bghdsy9o olxpp</td>
+                <td data-th="Coluna 3">49lmrx82 8rpujz6m 5k1r4h</td>
+                <td data-th="Coluna 4">9ehr381n fmq77q9l 3jfmet</td>
+                <td data-th="Coluna 5">mgbyqy1k toisc1g6 ssn</td>
+                <td data-th="Coluna 6">eyqr6mgo 5yqrxrq7 0y8fn8</td>
+                <td data-th="Coluna 7">15ugw9xv 1k26v8vt 0veeib</td>
+                <td data-th="Coluna 8">mpzh6x0y 67iz1ft5 va17nn</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-2" type="checkbox">
+                    <label for="datatable-checkbox-line-2"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">39aqpxur 4bt8dwig tmczi</td>
+                <td data-th="Coluna 2">3a8dgy1k 5unt5sio styucd</td>
+                <td data-th="Coluna 3">4kt2wcbu qr5h5m7a zmq79</td>
+                <td data-th="Coluna 4">7111qp0e l2ltcxy3 o9cjb</td>
+                <td data-th="Coluna 5">x2yg3ubn glfspcag xx947</td>
+                <td data-th="Coluna 6">ykkaat8j y5rkibg1 avqr7l</td>
+                <td data-th="Coluna 7">uqv6vxkl byq9teml fuw5co</td>
+                <td data-th="Coluna 8">x3550n8r 2nbvu8qr 7ktihs</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-3" type="checkbox">
+                    <label for="datatable-checkbox-line-3"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">gx4cnons 3ztcyau4 4efn</td>
+                <td data-th="Coluna 2">fqkpc1uv w6b7jarv h10opc</td>
+                <td data-th="Coluna 3">3rc1vfse jcfg5aiy qpmq45</td>
+                <td data-th="Coluna 4">5nyp6u45 7h5h4gmz z2y63</td>
+                <td data-th="Coluna 5">uvh68sdv u77k52yb h3b07</td>
+                <td data-th="Coluna 6">qd2uk8zj 47g8pow2 hj625</td>
+                <td data-th="Coluna 7">dpcvhjgk nggsi8i4 on1sk</td>
+                <td data-th="Coluna 8">lud7rk36 j6jjxkdk 9e9cq</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-4" type="checkbox">
+                    <label for="datatable-checkbox-line-4"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">6es2l0n0 r7moxh9h ghdml</td>
+                <td data-th="Coluna 2">8ryg64qw vxh1j6xn 3emk8f</td>
+                <td data-th="Coluna 3">sx872vwb cpr8qbrn m9l8</td>
+                <td data-th="Coluna 4">bcmul2l9 xavpj5p4 el8fa</td>
+                <td data-th="Coluna 5">061wl3fu tc677rkg mdau9i</td>
+                <td data-th="Coluna 6">6ynv08v0 ks3ep93w rop5de</td>
+                <td data-th="Coluna 7">aqy512z9 3o48y80n msp6e</td>
+                <td data-th="Coluna 8">ejtepwjy csu7dtea ddofd</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-5" type="checkbox">
+                    <label for="datatable-checkbox-line-5"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">f8v227px zl725h6e 4xbi1m</td>
+                <td data-th="Coluna 2">4tkcyg1e ehydn79p xvbxl</td>
+                <td data-th="Coluna 3">p78l7r2h ltq2qgn6 vjy2gq</td>
+                <td data-th="Coluna 4">ywv6nyy2 2kgmx3fi toisn</td>
+                <td data-th="Coluna 5">yp42ljnf ahzfckcn 37o7</td>
+                <td data-th="Coluna 6">swf1yjfw mo3nwcmu j5anx</td>
+                <td data-th="Coluna 7">xatc6rv6 wo9xxlg1 oyyahm</td>
+                <td data-th="Coluna 8">xbikyeag vwgq3efh 6dwkm</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-6" type="checkbox">
+                    <label for="datatable-checkbox-line-6"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">umuze4tc pbmw16ty b68je</td>
+                <td data-th="Coluna 2">ao6luzun z7rwe3h6 eg8aoi</td>
+                <td data-th="Coluna 3">rc69a5q4 kvpblwky fk94d</td>
+                <td data-th="Coluna 4">xl7ftw27 a56inxbv pk22s</td>
+                <td data-th="Coluna 5">bnve94e8 xl7f39v4 ylco56</td>
+                <td data-th="Coluna 6">6g5nkeaq 3hh7r0uc fd1mf7</td>
+                <td data-th="Coluna 7">9tlfc1e1 4x8f1eaz tafe97</td>
+                <td data-th="Coluna 8">xloyztk9 to2ix2ey ay4wa</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-7" type="checkbox">
+                    <label for="datatable-checkbox-line-7"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">f5k86gmr qyf92eej 8o0bu</td>
+                <td data-th="Coluna 2">8phoa8cu rv9w6w5j 1b7g</td>
+                <td data-th="Coluna 3">kswqre2o s8aj8h6e vr1nt</td>
+                <td data-th="Coluna 4">kanbimqt mxbw7jdv ayi1l</td>
+                <td data-th="Coluna 5">npd6vhfg eoih5htp qh14yu</td>
+                <td data-th="Coluna 6">iyg30qb1 of6q6crc a3utd</td>
+                <td data-th="Coluna 7">y5dk33zx ymy1aqou ge6cj</td>
+                <td data-th="Coluna 8">8wq8gugu e5vo2a15 6oo13</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-8" type="checkbox">
+                    <label for="datatable-checkbox-line-8"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">luft67ad drdphudx xqp7v</td>
+                <td data-th="Coluna 2">so6tk66g dp37a9ym uydxq</td>
+                <td data-th="Coluna 3">p0kwrndq 0u12pzbq j12gz9</td>
+                <td data-th="Coluna 4">dis2woci xnbwvq97 9qgzsm</td>
+                <td data-th="Coluna 5">uec7ag7y q28klb8i w4y7jd</td>
+                <td data-th="Coluna 6">kqzpgwbc ate85lie 7b6q</td>
+                <td data-th="Coluna 7">5g1b44dy v9ysl3yd w9ozzf</td>
+                <td data-th="Coluna 8">l2zpxmuw cax56ruw mdtmf</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-9" type="checkbox">
+                    <label for="datatable-checkbox-line-9"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">2kd3hu52 ge4woyuf 673pbo</td>
+                <td data-th="Coluna 2">arog82yy 1qe1s1xy lh8f5n</td>
+                <td data-th="Coluna 3">xe4gbaky injwmzeb b0pdw</td>
+                <td data-th="Coluna 4">kxq0ngi8 a3a3zgjd gyewgr</td>
+                <td data-th="Coluna 5">39sa3fps mzod6cfm qtst7k</td>
+                <td data-th="Coluna 6">n09ha0st d6mr9j96 qn67x</td>
+                <td data-th="Coluna 7">0exybgfz acj5vy2b i93wtir</td>
+                <td data-th="Coluna 8">1c5kdc5j 0pdf03zs n44jo9</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="br-checkbox" name="check">
+                    <input id="datatable-checkbox-line-10" type="checkbox">
+                    <label for="datatable-checkbox-line-10"></label>
+                  </div>
+                </td>
+                <td data-th="Coluna 1">wnqkx2qx lgof10s0 ak5k2</td>
+                <td data-th="Coluna 2">mfnw7hki 2sav8h2i ch3xbi</td>
+                <td data-th="Coluna 3">lxrbsb6v x6r2jqfd 3qoi</td>
+                <td data-th="Coluna 4">6tiwdja8 9ulsezb5 zdb8ar</td>
+                <td data-th="Coluna 5">3k2zst5e 4c67nmcv 1bvhl3</td>
+                <td data-th="Coluna 6">w9j2ecyk f9ez1c0k 65x9vc</td>
+                <td data-th="Coluna 7">jv1nbdxl lkinb1nm dxt9</td>
+                <td data-th="Coluna 8">3shxql23 yikpww29 g9gr5l</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="footer">
+          <div class="bottom-bar">
+            <div class="items"><span>Exibir:</span>
+              <div class="br-select is-small">
+                <label for="datatable-checkbox-items"></label>
+                <select id="datatable-checkbox-items">
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+              </div><span class="divider"></span><span>1-10 de 50 itens</span>
+            </div>
+            <div class="pagination">
+              <div class="selectors">
+                <div class="br-select is-small">
+                  <label for="datatable-checkbox-pagination"></label>
+                  <select id="datatable-checkbox-pagination">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div><span>de 3 páginas</span><span class="divider"></span>
+              </div>
+              <div class="arrows">
+                <button class="br-button is-circle is-secondary" type="button"><i class="fa fa-chevron-left"></i>
+                </button>
+                <button class="br-button is-circle is-secondary" type="button"><i class="fa fa-chevron-right"></i>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="/js/components/select.js"></script>
-    <script src="/js/components/table.js"></script>
-    <script src="/js/components/table-sortable.min.js"></script>
   </body>
 </html>

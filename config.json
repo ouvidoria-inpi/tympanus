@@ -51,43 +51,41 @@
     ]
   },
   {
-    "label": "Boas Práticas",
+    "label": "Guias",
     "type": "docs",
-    "id": "boas-praticas",
+    "id": "guias",
     "children": [
       {
-        "label": "Desenvolvimento",
-        "children": [
-          {
-            "label": "Acessibilidade no Código HTML",
-            "filename": "acessibilidade-no-codigo-html"
-          },
-          {
-            "label": "Construção do CSS",
-            "filename": "construcao-do-css"
-          },
-          {
-            "label": "Manutenção do CSS",
-            "filename": "manutencao-do-css"
-          },
-          {
-            "label": "Uso do WAI-ARIA",
-            "filename": "uso-do-wai-aria"
-          },
-          {
-            "label": "Uso do css",
-            "filename": "uso-do-css"
-          }
-        ]
+        "label": "Construção de componentes",
+        "filename": "construcao-de-componentes"
       },
       {
-        "label": "Design",
-        "children": [
-          {
-            "label": "Aplicação das cores",
-            "filename": "aplicacao-das-cores"
-          }
-        ]
+        "label": "Uso dos templates",
+        "filename": "uso-dos-templates"
+      },
+      {
+        "label": "Construção do HTML",
+        "filename": "construcao-do-html"
+      },
+      {
+        "label": "Acessibilidade no Código HTML",
+        "filename": "acessibilidade-no-codigo-html"
+      },      
+      {
+        "label": "Uso do WAI-ARIA",
+        "filename": "uso-do-wai-aria"
+      },
+      {
+        "label": "Uso do css",
+        "filename": "uso-do-css"
+      },
+      {
+        "label": "Construção do CSS",
+        "filename": "construcao-do-css"
+      },
+      {
+        "label": "Manutenção do CSS",
+        "filename": "manutencao-do-css"
       }
     ]
   },
@@ -123,9 +121,9 @@
         "urllabel": "botao"
       },
       {
-        "label": "Breadcrumb",
-        "filename": "breadcrumb",
-        "urllabel": "migalha-de-pao"
+        "label": "Busca",
+        "filename": "search",
+        "urllabel": "busca"
       },
       {
         "label": "Cabeçalho",
@@ -168,9 +166,14 @@
         "urllabel": "input"
       },
       {
-        "label": "Mensagens",
+        "label": "Mensagem",
         "filename": "message",
         "urllabel": "mensagem"
+      },
+      {
+        "label": "Migalha de Pão",
+        "filename": "breadcrumb",
+        "urllabel": "migalha-de-pao"
       },
       {
         "label": "Modal",
@@ -178,9 +181,19 @@
         "urllabel": "modal"
       },
       {
+        "label": "Navegagação",
+        "filename": "navigation",
+        "urllabel": "navegacao"
+      },
+      {
         "label": "Paginação",
         "filename": "pagination",
         "urllabel": "paginacao"
+      },
+      {
+        "label": "Portlet",
+        "filename": "portlet",
+        "urllabel": "portlet"
       },
       {
         "label": "Radio button",
@@ -229,59 +242,59 @@
         "label": "Cadastro de usuário",
         "children": [
           {
-            "label": "1 - Início do Cadastro",
+            "label": "Cadastro de usuário - Início do Cadastro",
             "filename": "signin",
             "urllabel": "signin"
           },
           {
-            "label": "2 - Ativação da Conta",
+            "label": "Cadastro de usuário - Ativação da Conta",
             "filename": "signin-1",
             "urllabel": "signin-1"
           },
           {
-            "label": "3 - Verificação do código recebido",
-            "filename": "signin-2",
-            "urllabel": "signin-2"
+            "label": "Cadastro de usuário - Verificação do código recebido",
+            "filename": "signin-1",
+            "urllabel": "signin-1"
           },
           {
-            "label": "4 - Correção do número do celular",
+            "label": "Cadastro de usuário - Correção do número do celular",
             "filename": "signin-3",
             "urllabel": "signin-3"
           },
           {
-            "label": "5 - Conclusão do Cadastro",
+            "label": "Cadastro de usuário - Conclusão do Cadastro",
             "filename": "signin-4",
             "urllabel": "signin-4"
           }
         ]
       },
       {
-        "label": "Recuparação de Senha",
+        "label": "Recuperação de Senha",
         "children": [
           {
-            "label": "Com Lista de Opções",
-            "filename": "password-recovery",
-            "urllabel": "password-recovery"
+            "label": "Recuperação de Senha - Com Lista de Opções",
+            "filename": "password",
+            "urllabel": "password"
           },
           {
-            "label": "Pelo Celular",
-            "filename": "password-recovery-1",
-            "urllabel": "password-recovery-1"
+            "label": "Recuperação de Senha - Pelo Celular",
+            "filename": "password-1",
+            "urllabel": "password-1"
           },
           {
-            "label": "Campo com Validação",
-            "filename": "password-recovery-2",
-            "urllabel": "password-recovery-2"
+            "label": "Recuperação de Senha - Campo com Validação",
+            "filename": "password-2",
+            "urllabel": "password-2"
           },
           {
-            "label": "Precisa de Ajuda?",
-            "filename": "password-recovery-help",
-            "urllabel": "password-recovery-help"
+            "label": "Recuperação de Senha - Precisa de Ajuda?",
+            "filename": "password-3",
+            "urllabel": "password-3"
           },
           {
-            "label": "Mudar Senha",
-            "filename": "password-recovery-change",
-            "urllabel": "password-recovery-change"
+            "label": "Recuperação de Senha - Mudar Senha",
+            "filename": "password-4",
+            "urllabel": "password-4"
           }
         ]
       },
@@ -290,8 +303,8 @@
         "children": [
           {
             "label": "Template base",
-            "filename": "page",
-            "urllabel": "page"
+            "filename": "system",
+            "urllabel": "system"
           }
         ]
       },
@@ -299,9 +312,14 @@
         "label": "Sites e portais",
         "children": [
           {
-            "label": "Template base",
-            "filename": "portal",
-            "urllabel": "portal"
+            "label": "Sites e portais - Template base",
+            "filename": "site",
+            "urllabel": "site"
+          },
+          {
+            "label": "Sites e portais - Mobile",
+            "filename": "site-mobile",
+            "urllabel": "site-mobile"
           }
         ]
       },
@@ -309,27 +327,27 @@
         "label": "Template CRUD para Portais",
         "children": [
           {
-            "label": "1 - Tela de Criação (Cadastro)",
+            "label": "Template CRUD para Portais - Tela de Criação (Cadastro)",
             "filename": "crud"
           },
           {
-            "label": "2 - Tela de Filtragem com Colapse",
+            "label": "Template CRUD para Portais - Tela de Filtragem com Colapse",
             "filename": "crud-2"
           },
           {
-            "label": "3 - Tela de Pesquisa com Mensagem de Alerta",
+            "label": "Template CRUD para Portais - Tela de Pesquisa com Mensagem de Alerta",
             "filename": "crud-3"
           },
           {
-            "label": "4 - Tela de Busca com Auto-Complete",
+            "label": "Template CRUD para Portais - Tela de Busca com Auto-Complete",
             "filename": "crud-4"
           },
           {
-            "label": "5 - Tela de Visualização de Dados Cadastrados",
+            "label": "Template CRUD para Portais - Tela de Visualização de Dados Cadastrados",
             "filename": "crud-5"
           },
           {
-            "label": "6 - Tela de Edição de Dados Cadastrados",
+            "label": "Template CRUD para Portais - Tela de Edição de Dados Cadastrados",
             "path": "crud-6"
           }
         ]
@@ -338,12 +356,12 @@
         "label": "Tela de erro para Sistemas",
         "children": [
           {
-            "label": "Com opção de busca",
+            "label": "Tela de erro para Sistemas - Com opção de busca",
             "filename": "not-found-1",
             "urllabel": "not-found-1"
           },
           {
-            "label": "Padrão",
+            "label": "Tela de erro para Sistemas - Padrão",
             "filename": "not-found-2",
             "urllabel": "not-found-2"
           }
