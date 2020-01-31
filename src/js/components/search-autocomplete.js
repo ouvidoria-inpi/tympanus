@@ -1,12 +1,13 @@
-let listId = 'search-list'
-let listClass = 'search-items'
-let itemActive = 'search-active'
+let searchListId = 'search-list'
+let searchListClass = 'search-items'
+let searchItemActive = 'search-active'
 
 function autocomplete ( inp, arr ) {
   /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
 	var currentFocus
 	/*execute a function when someone writes in the text field:*/
+	if ( !inp ) { return; }
 	inp.addEventListener( 'input', function ( e ) {
 		var a,
 			b,
@@ -20,8 +21,8 @@ function autocomplete ( inp, arr ) {
 		currentFocus = -1
 		/*create a DIV element that will contain the items (values):*/
 		a = document.createElement( 'DIV' )
-		a.setAttribute( 'id', this.id + listId )
-		a.setAttribute( 'class', listClass )
+		a.setAttribute( 'id', this.id + searchListId )
+		a.setAttribute( 'class', searchListClass )
 		/*append the DIV element as a child of the autocomplete container:*/
 		this.parentNode.appendChild( a )
 		/*for each item in the array...*/
@@ -49,7 +50,7 @@ function autocomplete ( inp, arr ) {
 	} )
 	/*execute a function presses a key on the keyboard:*/
 	inp.addEventListener( 'keydown', function ( e ) {
-		var x = document.getElementById( this.id + listId )
+		var x = document.getElementById( this.id + searchListId )
 		if ( x ) x = x.getElementsByTagName( 'div' )
 		if ( e.keyCode == 40 ) {
       /*If the arrow DOWN key is pressed,
@@ -80,13 +81,13 @@ function autocomplete ( inp, arr ) {
 		removeActive( x )
 		if ( currentFocus >= x.length ) currentFocus = 0
 		if ( currentFocus < 0 ) currentFocus = x.length - 1
-		/*add class itemActive:*/
-		x[ currentFocus ].classList.add( itemActive )
+		/*add class searchItemActive:*/
+		x[ currentFocus ].classList.add( searchItemActive )
 	}
 	function removeActive ( x ) {
 		/*a function to remove the "active" class from all autocomplete items:*/
 		for ( var i = 0; i < x.length; i++ ) {
-			x[ i ].classList.remove( itemActive )
+			x[ i ].classList.remove( searchItemActive )
 		}
 	}
 	function closeAllLists ( elmnt ) {
