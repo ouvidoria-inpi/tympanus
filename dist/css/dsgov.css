@@ -51,7 +51,32 @@
   --icon-size-7x: 112px;
   --icon-size-8x: 128px;
   --icon-size-9x: 144px;
-  --icon-size-10x: 160px; }
+  --icon-size-10x: 160px;
+  --status-highlight-overlay: rgba(216, 72, 0, 0.1);
+  --status-highlight-background: #fff;
+  --status-highlight-text: #d84800;
+  --status-enabled: #1351b4;
+  --status-enabled-darken: #fff;
+  --status-disabled-background: rgba(237, 237, 237, 0.45);
+  --status-disabled-text: rgba(204, 204, 204, 0.45);
+  --status-hover: #dbe8fb;
+  --status-pressed-background: #071d41;
+  --status-pressed-text: #c5d4eb;
+  --status-focus-overlay: rgba(242, 227, 23, 0.3);
+  --status-focus-background: #fff;
+  --status-active-background: #0c326f;
+  --status-active-text: #fff;
+  --status-selected-background: #2670e8;
+  --status-selected-text: #fff;
+  --status-dragged-background: #ededed;
+  --status-dragged-text: #333;
+  --status-dragged-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  --status-visited-background: #c5d4eb;
+  --status-visited-text: #0c326f;
+  --status-on-background: #5992ed;
+  --status-on-text: #fff;
+  --status-off-background: #ccc;
+  --status-off-text: #555; }
 
 *,
 *::before,

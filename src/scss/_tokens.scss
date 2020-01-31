@@ -8,4 +8,9 @@
   @each $item, $value in $br-icons {
     --#{$item}: #{$value};
   }
+
+  // Estados
+  @each $item, $value in $br-status {
+    --#{$item}: #{$value};
+  }
 }
