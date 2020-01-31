@@ -43,7 +43,3 @@ class BRChecklist {
 
 let checklistList = [];
 
-
-}catch ( e ) {
-	console.log( e );
-}
