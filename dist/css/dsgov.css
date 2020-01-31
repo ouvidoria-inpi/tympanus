@@ -1697,6 +1697,15 @@ a.text-dark:hover, a.text-dark:focus {
 .fa-10x {
   font-size: 160px !important; }
 
+.highlight {
+  background: #fff linear-gradient(rgba(216, 72, 0, 0.1), rgba(216, 72, 0, 0.1));
+  color: #d84800;
+  padding: 0 0.25rem; }
+
+[disabled],
+.disabled {
+  cursor: not-allowed; }
+
 .container {
   width: 100%;
   padding-right: 8px;

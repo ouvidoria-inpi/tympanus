@@ -1,0 +1,24 @@
+extends ../../layouts/site
+
+append vars
+  - var title = "Estados"
+
+append content
+  p.h3 Destacado
+  p
+    span Lorem ipsum dolor sit amet 
+    span.highlight consectetur adipisicing elit
+    span . Voluptatem quaerat doloremque similique alias laboriosam sequi voluptatibus reiciendis atque consequuntur omnis nisi odit quod nihil pariatur, dolores nostrum illum impedit itaque.
+
+  p.h3 Interativo
+  p
+    a(href="http://www.google.com") Link para o Google
+  +button.is-primary Botão primário
+
+  p.h3 Desativado
+  +button.is-primary.mt-3(disabled) Botão primário desativado
+  .row
+    .col-3
+      +input.mt-3('input desativado')(disabled)
+
+block sitemap
