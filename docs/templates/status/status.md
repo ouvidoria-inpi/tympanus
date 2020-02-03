@@ -12,10 +12,9 @@ Acompanhe a evolução dos templates do Design System
     <strong>Em Progresso</strong> - O template está sendo desenvolvido atualmente.
 </p>
 
-<p>
-    <i class="fas fa-sync text-orange"></i>
-    <strong>Em Progresso</strong> - O template está sendo desenvolvido atualmente.
-</p>
+<br/>
+<br/>
+<br/>
 
 
 <div class="br-table">
