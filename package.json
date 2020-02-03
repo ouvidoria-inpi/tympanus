@@ -2,7 +2,7 @@
 	"name": "@govbr/dsgov",
 	"version": "1.2.2-beta4",
 	"description": "Design System do governo",
-	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/",
+	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.3/",
 	"main": "index.js",
 	"scripts": {
 		"build": "npm-run-all build:webpack:prod compile",
