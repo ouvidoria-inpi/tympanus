@@ -324,32 +324,8 @@
         ]
       },
       {
-        "label": "Template CRUD para Portais",
-        "children": [
-          {
-            "label": "Template CRUD para Portais - Tela de Criação (Cadastro)",
-            "filename": "crud"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Filtragem com Colapse",
-            "filename": "crud-2"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Pesquisa com Mensagem de Alerta",
-            "filename": "crud-3"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Busca com Auto-Complete",
-            "filename": "crud-4"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Visualização de Dados Cadastrados",
-            "filename": "crud-5"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Edição de Dados Cadastrados",
-            "path": "crud-6"
-          }
+        "label": "Exemplo de CRUD",
+        "filename": "crud"
         ]
       },
       {
