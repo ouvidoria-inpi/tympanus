@@ -3,22 +3,22 @@ $status-highlight-overlay: rgba($color-support-03, 0.1);
 $status-highlight-background: $color-secondary-01;
 $status-highlight-color: $color-support-03;
 // Interativo
-$status-enabled: $color-primary;
-$status-enabled-darken: $color-secondary-01;
+$status-enabled-text: $color-primary;
+$status-enabled-text-darken: $color-secondary-01;
 // Desativado
 $status-disabled-background: rgba($color-secondary-03, 0.45);
 $status-disabled-color: rgba($color-secondary-04, 0.45);
 // Hover
-$status-hover: $color-primary-pastel-02;
+$status-hover-background: $color-primary-pastel-02;
 // Pressionado
 $status-pressed-background: $color-primary-darken-02;
 $status-pressed-color: $color-primary-pastel-01;
 // Foco
-$status-focus-overlay: rgba($color-support-02, 0.3);
-$status-focus-background: $color-secondary-01;
+$status-focused-overlay: rgba($color-support-02, 0.3);
+$status-focused-background: $color-secondary-01;
 // Ativo
-$status-active-background: $color-primary-darken-01;
-$status-active-color: $color-secondary-01;
+$status-activated-background: $color-primary-darken-01;
+$status-activated-color: $color-secondary-01;
 // Selecionado
 $status-selected-background: $color-primary-lighten-01;
 $status-selected-color: $color-secondary-01;
@@ -40,17 +40,17 @@ $br-status: (
   status-highlight-overlay: $status-highlight-overlay,
   status-highlight-background: $status-highlight-background,
   status-highlight-text: $status-highlight-color,
-  status-enabled: $status-enabled,
-  status-enabled-darken: $status-enabled-darken,
+  status-enabled-text: $status-enabled-text,
+  status-enabled-text-darken: $status-enabled-text-darken,
   status-disabled-background: $status-disabled-background,
   status-disabled-text: $status-disabled-color,
-  status-hover: $status-hover,
+  status-hover-background: $status-hover-background,
   status-pressed-background: $status-pressed-background,
   status-pressed-text: $status-pressed-color,
-  status-focus-overlay: $status-focus-overlay,
-  status-focus-background: $status-focus-background,
-  status-active-background: $status-active-background,
-  status-active-text: $status-active-color,
+  status-focused-overlay: $status-focused-overlay,
+  status-focused-background: $status-focused-background,
+  status-activated-background: $status-activated-background,
+  status-activated-text: $status-activated-color,
   status-selected-background: $status-selected-background,
   status-selected-text: $status-selected-color,
   status-dragged-background: $status-dragged-background,

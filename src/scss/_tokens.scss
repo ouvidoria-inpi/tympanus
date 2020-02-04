@@ -1,7 +1,7 @@
 :root {
   // Cores
   @each $item, $value in $br-theme {
-    --color-#{$item}: #{$value};
+    --#{$item}: #{$value};
   }
 
   // Ícones
