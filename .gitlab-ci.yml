@@ -19,6 +19,7 @@ install_dependencies:
     - npm config set registry http://nexus.aic.serpro/repository/npm-group/
     - npm config set @serpro:registry http://nexus.aic.serpro/repository/npm-private/
     - npm install
+    - npm build
   artifacts:
     paths:
       - node_modules/
