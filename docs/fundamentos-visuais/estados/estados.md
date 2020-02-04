@@ -130,10 +130,10 @@ A cor **Primary Default** não é aplicável em todas as situações, como no ca
 
 ![Interativo](assets/design-system/docs/fundamentos-visuais/estados/imagens/interativo.png)
 
-| Property  | Token Status                      | Token Color             | Token Weight       |
-| --------- | --------------------------------- | ----------------------- | ------------------ |
-| text/icon | --status-enabled-text-text        | --color-primary-default |                    |
-| text/icon | --status-enabled-text-text-darken | --color-secondary-01    | --font-weight-bold |
+| Property  | Token Status                 | Token Color             | Token Weight       |
+| --------- | ---------------------------- | ----------------------- | ------------------ |
+| text/icon | --status-enabled-text        | --color-primary-default |                    |
+| text/icon | --status-enabled-text-darken | --color-secondary-01    | --font-weight-bold |
 
 ---
 
@@ -224,10 +224,10 @@ Só pode existir um elemento com foco por vez na tela.
 
 ![Foco](assets/design-system/docs/fundamentos-visuais/estados/imagens/foco.png)
 
-| Property   | Token Status                  | Token Color          | Opacity |
-| ---------- | ----------------------------- | -------------------- | ------- |
-| background | --status-focuseded-overlay    | --color-support-02   | 30%     |
-| background | --status-focuseded-background | --color-secondary-01 | 100%    |
+| Property   | Token Status                | Token Color          | Opacity |
+| ---------- | --------------------------- | -------------------- | ------- |
+| background | --status-focused-overlay    | --color-support-02   | 30%     |
+| background | --status-focused-background | --color-secondary-01 | 100%    |
 
 ---
 
