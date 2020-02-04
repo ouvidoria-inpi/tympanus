@@ -901,13 +901,6 @@ function toggleInputAction(element, className) {
   }
 }
 
-let collapseList = document.querySelectorAll( 'button[data-toggle="collapse"]' );
-collapseList.forEach( function ( collapse ) {
-	collapse.addEventListener( "click", function ( event ) {
-		event.target.classList.toggle( "is-open" )
-	} )
-} )
-
 class BRAlert {
   constructor(name, component) {
     this.name = name;
@@ -935,6 +928,13 @@ window.onload = (function() {
     alertList.push(new BRAlert("br-message", brAlert));
   }
 })();
+
+let collapseList = document.querySelectorAll( 'button[data-toggle="collapse"]' );
+collapseList.forEach( function ( collapse ) {
+	collapse.addEventListener( "click", function ( event ) {
+		event.target.classList.toggle( "is-open" )
+	} )
+} )
 
 let scrim = document.getElementsByClassName("is-foco")[0];
 
