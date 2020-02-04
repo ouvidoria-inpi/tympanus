@@ -3,20 +3,24 @@
     @include button-pill;
   }
   &.is-secondary {
-    @include button-pill($secondary-01, $primary);
+    @include button-pill($color-secondary-01, $color-primary);
   }
   &.is-call-to-action {
-    @include button-pill($highlight, $secondary-01, $secondary-03);
+    @include button-pill(
+      $color-highlight,
+      $color-secondary-01,
+      $color-secondary-03
+    );
     border-width: $button-action-border-width;
     height: $button-height-default + ($button-action-border-width * 2);
     &:hover,
     &:focus {
-      background-color: $support-01;
-      border-color: $secondary-03;
-      color: $secondary-01;
+      background-color: $color-support-01;
+      border-color: $color-secondary-03;
+      color: $color-secondary-01;
     }
     &:disabled {
-      border-color: $secondary-03;
+      border-color: $color-secondary-03;
     }
     @include media-breakpoint-up(sm) {
       min-width: $button-action-min-width;
@@ -55,7 +59,7 @@
         img {
           max-width: $value;
         }
-        [class*='fa-'] {
+        [class*="fa-"] {
           transform: scale(1.75);
         }
       }
@@ -67,11 +71,11 @@
     position: relative;
     &::after {
       animation: spinAround 500ms infinite linear;
-      border: 2px solid $secondary-01;
+      border: 2px solid $color-secondary-01;
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
-      content: '';
+      content: "";
       display: block;
       height: 1em;
       left: calc(50% - (1em / 2));
@@ -81,7 +85,7 @@
     }
     &.is-secondary {
       &::after {
-        border-color: $primary;
+        border-color: $color-primary;
         border-right-color: transparent;
         border-top-color: transparent;
       }

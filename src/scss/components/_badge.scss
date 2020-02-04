@@ -5,10 +5,10 @@
   width: 1em;
   .icon,
   .number {
-    background-color: $success;
-    border: 1px solid $secondary-01;
+    background-color: $color-success;
+    border: 1px solid $color-secondary-01;
     border-radius: 50%;
-    color: $secondary-01;
+    color: $color-secondary-01;
     display: block;
     position: absolute;
   }
@@ -90,25 +90,25 @@
   &.is-success {
     .icon,
     .number {
-      background-color: $success;
+      background-color: $color-success;
     }
   }
   &.is-warning {
     .icon,
     .number {
-      background-color: $warning;
+      background-color: $color-warning;
     }
   }
   &.is-info {
     .icon,
     .number {
-      background-color: $info;
+      background-color: $color-info;
     }
   }
   &.is-danger {
     .icon,
     .number {
-      background-color: $danger;
+      background-color: $color-danger;
     }
   }
 }

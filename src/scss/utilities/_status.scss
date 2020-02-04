@@ -1,8 +1,8 @@
 // Estado destacado
 .highlight {
-  background: $secondary-01
-    linear-gradient(rgba($support-03, 0.1), rgba($support-03, 0.1));
-  color: $support-03;
+  background: $color-secondary-01
+    linear-gradient(rgba($color-support-03, 0.1), rgba($color-support-03, 0.1));
+  color: $color-support-03;
   padding: 0 0.25rem;
 }
 // Estado desativado

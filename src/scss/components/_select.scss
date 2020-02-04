@@ -12,7 +12,7 @@
   // Substituto do select original
   .select-selected {
     align-items: center;
-    background: $secondary-01;
+    background: $color-secondary-01;
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
     color: $input-color;
@@ -31,42 +31,42 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-    [class*='fa-'] {
-      color: $primary;
+    [class*="fa-"] {
+      color: $color-primary;
       font-size: $input-default / 3;
       margin-left: ($spacer * 2);
     }
     &:focus {
-      border-color: $primary-lighten-01;
-      box-shadow: 0 0 0 1px $primary-lighten-01;
+      border-color: $color-primary-lighten-01;
+      box-shadow: 0 0 0 1px $color-primary-lighten-01;
       outline: none;
     }
     &:focus,
     &:hover {
-      [class*='fa-'] {
-        color: $primary-lighten-01;
+      [class*="fa-"] {
+        color: $color-primary-lighten-01;
         margin-left: ($spacer * 2);
       }
     }
     &:disabled {
-      background: $secondary-03;
-      [class*='fa-'] {
-        color: $secondary-06;
+      background: $color-secondary-03;
+      [class*="fa-"] {
+        color: $color-secondary-06;
         margin-left: ($spacer * 2);
       }
     }
   }
   // Lista de opções
   .select-items {
-    background: $secondary-01;
-    box-shadow: 0 3px 6px rgba($secondary-09, 0.22);
+    background: $color-secondary-01;
+    box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22);
     left: $spacer-half;
     margin-top: 1px;
     position: absolute;
     right: $spacer-half;
     z-index: 1;
     button {
-      background: $secondary-01;
+      background: $color-secondary-01;
       border: 0;
       display: block;
       font-weight: 500;
@@ -75,11 +75,11 @@
       width: 100%;
       &:hover,
       &:focus {
-        background: $primary-pastel-02;
+        background: $color-primary-pastel-02;
       }
       &.same-as-selected {
-        background: $primary-lighten-01;
-        color: $secondary-01;
+        background: $color-primary-lighten-01;
+        color: $color-secondary-01;
       }
     }
   }
@@ -92,22 +92,22 @@
     &.is-#{$size} {
       .select-selected {
         height: $value;
-        [class*='fa-'] {
+        [class*="fa-"] {
           font-size: $value / 3;
         }
       }
     }
   }
   // Estados
-  @each $state, $color in (focus, $primary-lighten-01), (valid, $success),
-    (invalid, $danger)
+  @each $state, $color in (focus, $color-primary-lighten-01),
+    (valid, $color-success), (invalid, $color-danger)
   {
     &.is-#{$state} {
       .select-selected {
         border-color: $color;
         box-shadow: 0 0 0 1px $color;
         outline: none;
-        [class*='fa-'] {
+        [class*="fa-"] {
           color: $color;
           margin-left: ($spacer * 2);
         }

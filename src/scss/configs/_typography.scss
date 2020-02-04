@@ -1,19 +1,19 @@
 // Configuração da tipografia do design system
 
 // Família de fontes padrão
-$font-family-base: 'Rawline', 'Raleway', sans-serif;
+$font-family-base: "Rawline", "Raleway", sans-serif;
 
 // Body
-$body-color: $secondary-07;
+$body-color: $color-secondary-07;
 $font-size-base: 1rem; // 16px
 $font-weight-base: 500;
 
 // links
-$link-color: $primary;
-$link-hover-color: $primary-lighten-01;
+$link-color: $color-primary;
+$link-hover-color: $color-primary-lighten-01;
 
 // Títulos
-$headings-color: $primary;
+$headings-color: $color-primary;
 $headings-line-height: 1.5;
 $headings-margin-bottom: $spacer * 5;
 
@@ -27,7 +27,7 @@ $h6-font-size: $font-size-base;
 $h1-mobile-font-size: $font-size-base * 1.625; // 26px
 
 // Formulários
-$label-color: $secondary-08;
+$label-color: $color-secondary-08;
 $label-font-size: $font-size-base;
 $label-font-weight: 600;
 $label-margin-bottom: $spacer * 2;
@@ -41,12 +41,12 @@ $placeholder-font-size: $font-size-base * 0.875; // 14px
 $placeholder-font-style: italic;
 $placeholder-font-weight: 400;
 
-$fieldset-color: $primary;
+$fieldset-color: $color-primary;
 $fieldset-font-size: $font-size-base * 1.375; // 22px
 $fieldset-font-weight: $font-weight-base;
 $fieldset-margin-bottom: $spacer * 3; // 24px
 
-$help-color: $secondary-08;
+$help-color: $color-secondary-08;
 $help-font-size: $font-size-base * 0.8125; // 13px
 
 $feedback-font-size: $font-size-base * 0.8125; // 13px
@@ -54,11 +54,11 @@ $feedback-font-style: italic;
 $feedback-font-weight: 500;
 
 // Logo
-$logo-name-color: $primary-darken-02;
+$logo-name-color: $color-primary-darken-02;
 $logo-name-size: 20px;
 $logo-name-desktop: 24px;
 
-$logo-description-color: $secondary-08;
+$logo-description-color: $color-secondary-08;
 $logo-description-size: 12px;
 $logo-description-desktop: 18px;
 
@@ -66,8 +66,8 @@ $logo-description-desktop: 18px;
 $breadcrumbs-font-size: $font-size-base * 0.75; // 12px
 $breadcrumbs-font-weight: 600;
 
-$breadcrumbs-divider: '>';
-$breadcrumbs-divider-color: $secondary-05;
+$breadcrumbs-divider: ">";
+$breadcrumbs-divider-color: $color-secondary-05;
 $breadcrumbs-divider-size: $breadcrumbs-font-size;
 
 // Abas

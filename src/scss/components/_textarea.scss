@@ -8,7 +8,7 @@
   }
   textarea {
     @include placeholder;
-    background: $secondary-01;
+    background: $color-secondary-01;
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
     color: $input-color;
@@ -18,21 +18,21 @@
     padding-right: $spacer * 2;
     width: 100%;
     &:focus {
-      border-color: $primary-lighten-01;
-      box-shadow: 0 0 0 1px $primary-lighten-01;
+      border-color: $color-primary-lighten-01;
+      box-shadow: 0 0 0 1px $color-primary-lighten-01;
       outline: none;
     }
     &:invalid {
-      border-color: $danger;
-      box-shadow: 0 0 0 1px $danger;
+      border-color: $color-danger;
+      box-shadow: 0 0 0 1px $color-danger;
     }
     &:disabled {
-      background: $secondary-03;
+      background: $color-secondary-03;
     }
   }
   // Estados
-  @each $state, $color in (focus, $primary-lighten-01), (valid, $success),
-    (invalid, $danger)
+  @each $state, $color in (focus, $color-primary-lighten-01),
+    (valid, $color-success), (invalid, $color-danger)
   {
     &.is-#{$state} {
       textarea {

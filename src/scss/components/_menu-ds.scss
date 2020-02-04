@@ -1,5 +1,5 @@
 .ds-menu-lateral {
-  background: $secondary-01;
+  background: $color-secondary-01;
   padding: 0;
   position: relative;
   z-index: 1;
@@ -7,8 +7,8 @@
   button {
     background: transparent;
     border: 0;
-    border-bottom: 1px solid $primary;
-    color: $primary;
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
     display: flex;
     font-size: $font-size-base * 1.25;
     font-weight: 400;
@@ -17,7 +17,7 @@
     text-align: left;
     width: 100%;
     &:hover {
-      background: $primary-pastel-02;
+      background: $color-primary-pastel-02;
       text-decoration: none;
     }
   }
@@ -31,7 +31,7 @@
     a,
     button {
       border-width: 0;
-      color: $secondary-08;
+      color: $color-secondary-08;
       font-size: $font-size-base;
     }
     .menu-item {
@@ -48,7 +48,7 @@
       }
     }
     [class*="fa-"] {
-      color: $secondary-06;
+      color: $color-secondary-06;
     }
   }
   .is-open {
@@ -63,8 +63,8 @@
   button {
     background: transparent;
     border: 0;
-    border-bottom: 1px solid $primary;
-    color: $primary;
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
     display: flex;
     font-size: $font-size-base * 1.25;
     font-weight: 400;
@@ -73,7 +73,7 @@
     text-align: left;
     width: 100%;
     &:hover {
-      background: $primary-pastel-02;
+      background: $color-primary-pastel-02;
       text-decoration: none;
     }
   }
@@ -81,7 +81,7 @@
     margin-top: $spacer-half;
   }
   .is-active {
-    background-color: $primary-lighten-01 !important;
-    color: $secondary-01 !important;
+    background-color: $color-primary-lighten-01 !important;
+    color: $color-secondary-01 !important;
   }
 }

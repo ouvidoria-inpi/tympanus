@@ -4,7 +4,7 @@
       background: transparent;
       border: 0 transparent;
       bottom: 12px;
-      color: $primary;
+      color: $color-primary;
       display: block;
       outline: none !important;
       position: absolute;
@@ -12,7 +12,7 @@
       z-index: 999;
       &:active,
       &:hover {
-        color: $primary-lighten-01;
+        color: $color-primary-lighten-01;
       }
     }
     input {
@@ -23,7 +23,7 @@
       button,
       button:active,
       button:hover {
-        color: $secondary-06;
+        color: $color-secondary-06;
         cursor: not-allowed;
       }
     }
@@ -70,10 +70,10 @@
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     -webkit-user-select: none;
     background: $white;
-    border: 1px solid $secondary-02;
+    border: 1px solid $color-secondary-02;
     border-radius: 0.26392em;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    color: $secondary-07;
+    color: $color-secondary-07;
     //display: -webkit-box;
     //display: -ms-flexbox;
     display: flex;
@@ -108,7 +108,7 @@
     -webkit-box-orient: vertical;
     -webkit-transition: opacity 0.3s;
     background: $white; //rgba(0, 0, 0, 0.75);
-    color: $secondary-06;
+    color: $color-secondary-06;
     display: flex;
     //display: -ms-flexbox;
     //display: -webkit-box;
@@ -130,9 +130,9 @@
   .qs-datepicker .qs-overlay .qs-overlay-year {
     background: rgba(0, 0, 0, 0);
     border: 0;
-    border-bottom: 1px solid $secondary-06;
+    border-bottom: 1px solid $color-secondary-06;
     border-radius: 0;
-    color: $secondary-06;
+    color: $color-secondary-06;
     display: block;
     font-size: 0.875em;
     height: 2.5em;
@@ -143,7 +143,7 @@
     &:hover,
     &:focus {
       border: 0;
-      border-bottom: 1px solid $secondary-06;
+      border-bottom: 1px solid $color-secondary-06;
       box-shadow: none;
     }
   }
@@ -159,7 +159,7 @@
   }
   .qs-datepicker .qs-overlay .qs-submit {
     background: hsla(0, 0%, 50.2%, 0.4);
-    border: 1px solid $secondary-06;
+    border: 1px solid $color-secondary-06;
     border-radius: 0.26392em;
     cursor: pointer;
     display: none;
@@ -167,8 +167,8 @@
     padding: 0.5em;
   }
   .qs-datepicker .qs-overlay .qs-submit.qs-disabled {
-    border-color: $secondary-04;
-    color: $secondary-04;
+    border-color: $color-secondary-04;
+    color: $color-secondary-04;
     cursor: not-allowed;
   }
   .qs-datepicker .qs-overlay .qs-overlay-month-container {
@@ -188,7 +188,7 @@
     -webkit-box-pack: center;
     //-webkit-transition: opacity 0.15s;
     align-items: center;
-    color: $secondary-07;
+    color: $color-secondary-07;
     cursor: pointer;
     display: flex;
     //display: -webkit-box;
@@ -204,9 +204,9 @@
   .qs-datepicker .qs-overlay .qs-overlay-month.active,
   .qs-datepicker .qs-overlay .qs-overlay-month:hover {
     //opacity: 1;
-    color: $primary;
+    color: $color-primary;
     span {
-      background: $primary-pastel-02;
+      background: $color-primary-pastel-02;
       border-radius: 16px;
     }
   }
@@ -221,7 +221,7 @@
     -webkit-filter: blur(0);
     -webkit-transition: -webkit-filter 0.3s;
     align-items: center;
-    background: $secondary-01; //#d3d3d3;
+    background: $color-secondary-01; //#d3d3d3;
     //display: -ms-flexbox;
     //display: -webkit-box;
     display: flex;
@@ -252,10 +252,10 @@
   //background: rgba(0, 0, 0, 0.1);
   //}
   .qs-datepicker .qs-arrow:hover.qs-left::after {
-    border-right-color: $primary-lighten-01;
+    border-right-color: $color-primary-lighten-01;
   }
   .qs-datepicker .qs-arrow:hover.qs-right::after {
-    border-left-color: $primary-lighten-01;
+    border-left-color: $color-primary-lighten-01;
   }
   .qs-datepicker .qs-arrow::after {
     //-webkit-transition: border 0.2s;
@@ -268,29 +268,29 @@
   .qs-datepicker .qs-arrow.qs-left::after {
     //-ms-transform: translate(25%, -50%);
     //-webkit-transform: translate(25%, -50%);
-    border-right-color: $primary;
+    border-right-color: $color-primary;
     right: 50%;
     //transform: translate(25%, -50%);
   }
   .qs-datepicker .qs-arrow.qs-right::after {
     //-ms-transform: translate(-25%, -50%);
     //-webkit-transform: translate(-25%, -50%);
-    border-left-color: $primary;
+    border-left-color: $color-primary;
     left: 50%;
     //transform: translate(-25%, -50%);
   }
   .qs-datepicker .qs-month-year {
     -webkit-transition: border 0.2s;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
-    color: $primary;
+    color: $color-primary;
     cursor: pointer;
     font-weight: 700;
     padding: 0 1em;
     transition: border 0.2s;
   }
   .qs-datepicker .qs-month-year:hover {
-    //border-bottom: 1px solid $secondary-07;
-    background-color: $primary-pastel-02;
+    //border-bottom: 1px solid $color-secondary-07;
+    background-color: $color-primary-pastel-02;
     border-radius: 16px;
   }
   .qs-datepicker .qs-month-year:active:focus,
@@ -347,12 +347,12 @@
     text-decoration: underline;
   }
   .qs-datepicker .qs-square.qs-active {
-    background: $primary-lighten-01; //$primary;
-    border-left: 2px solid $secondary-01;
-    border-right: 2px solid $secondary-01;
-    color: $secondary-01;
+    background: $color-primary-lighten-01; //$color-primary;
+    border-left: 2px solid $color-secondary-01;
+    border-right: 2px solid $color-secondary-01;
+    color: $color-secondary-01;
     .qs-num {
-      background: $primary;
+      background: $color-primary;
       border-radius: 16px;
       height: 2em;
       margin-top: 0.25em;
@@ -372,8 +372,8 @@
     }
   }
   .qs-datepicker .qs-square.qs-range-date-middle {
-    background: $primary-lighten-01;
-    color: $secondary-01;
+    background: $color-primary-lighten-01;
+    color: $color-secondary-01;
   }
   .qs-datepicker
     .qs-square.qs-range-date-middle:not(.qs-range-date-0):not(.qs-range-date-6) {
@@ -402,21 +402,21 @@
     cursor: not-allowed;
   }
   .qs-datepicker .qs-square.qs-day {
-    color: $secondary-07;
+    color: $color-secondary-07;
     cursor: default;
     font-weight: 500;
   }
   .qs-datepicker
     .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
-    background: $primary-pastel-02;
+    background: $color-primary-pastel-02;
     //border-radius: 50%;
-    color: $primary;
+    color: $color-primary;
   }
   .qs-datepicker .qs-event {
     position: relative;
   }
   .qs-datepicker .qs-event::after {
-    background: $primary-lighten-01;
+    background: $color-primary-lighten-01;
     border-radius: 50%;
     bottom: 0;
     content: "";
@@ -427,6 +427,6 @@
   }
   .qs-datepicker .qs-event.qs-disabled::after,
   .qs-datepicker .qs-event.qs-empty::after {
-    background: $primary-pastel-02;
+    background: $color-primary-pastel-02;
   }
 }

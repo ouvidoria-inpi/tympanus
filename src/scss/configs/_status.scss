@@ -1,40 +1,40 @@
 // Destacado
-$status-highlight-overlay: rgba($support-03, 0.1);
-$status-highlight-background: $secondary-01;
-$status-highlight-color: $support-03;
+$status-highlight-overlay: rgba($color-support-03, 0.1);
+$status-highlight-background: $color-secondary-01;
+$status-highlight-color: $color-support-03;
 // Interativo
-$status-enabled: $primary;
-$status-enabled-darken: $secondary-01;
+$status-enabled: $color-primary;
+$status-enabled-darken: $color-secondary-01;
 // Desativado
-$status-disabled-background: rgba($secondary-03, 0.45);
-$status-disabled-color: rgba($secondary-04, 0.45);
+$status-disabled-background: rgba($color-secondary-03, 0.45);
+$status-disabled-color: rgba($color-secondary-04, 0.45);
 // Hover
-$status-hover: $primary-pastel-02;
+$status-hover: $color-primary-pastel-02;
 // Pressionado
-$status-pressed-background: $primary-darken-02;
-$status-pressed-color: $primary-pastel-01;
+$status-pressed-background: $color-primary-darken-02;
+$status-pressed-color: $color-primary-pastel-01;
 // Foco
-$status-focus-overlay: rgba($support-02, 0.3);
-$status-focus-background: $secondary-01;
+$status-focus-overlay: rgba($color-support-02, 0.3);
+$status-focus-background: $color-secondary-01;
 // Ativo
-$status-active-background: $primary-darken-01;
-$status-active-color: $secondary-01;
+$status-active-background: $color-primary-darken-01;
+$status-active-color: $color-secondary-01;
 // Selecionado
-$status-selected-background: $primary-lighten-01;
-$status-selected-color: $secondary-01;
+$status-selected-background: $color-primary-lighten-01;
+$status-selected-color: $color-secondary-01;
 // Arrastado
-$status-dragged-background: $secondary-03;
-$status-dragged-color: $secondary-08;
-$status-dragged-shadow: 0 3px 6px rgba($secondary-09, 0.16);
+$status-dragged-background: $color-secondary-03;
+$status-dragged-color: $color-secondary-08;
+$status-dragged-shadow: 0 3px 6px rgba($color-secondary-09, 0.16);
 // Visitado
-$status-visited-background: $primary-pastel-01;
-$status-visited-color: $primary-darken-01;
+$status-visited-background: $color-primary-pastel-01;
+$status-visited-color: $color-primary-darken-01;
 // Ligado
-$status-on-background: $primary-lighten-02;
-$status-on-color: $secondary-01;
+$status-on-background: $color-primary-lighten-02;
+$status-on-color: $color-secondary-01;
 // Desligado
-$status-off-background: $secondary-04;
-$status-off-color: $secondary-07;
+$status-off-background: $color-secondary-04;
+$status-off-color: $color-secondary-07;
 
 $br-status: (
   status-highlight-overlay: $status-highlight-overlay,

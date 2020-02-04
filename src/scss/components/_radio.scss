@@ -1,7 +1,7 @@
 .#{$prefix}radio {
   display: inline-block;
   position: relative;
-  input[type='radio'] {
+  input[type="radio"] {
     // Remover o checkbox padrão do navegador
     opacity: 0;
     position: absolute;
@@ -21,10 +21,10 @@
     }
     // Caixa
     & + label::before {
-      background: $secondary-01;
-      border: 1px solid $secondary-06;
+      background: $color-secondary-01;
+      border: 1px solid $color-secondary-06;
       border-radius: 50%;
-      content: '';
+      content: "";
       height: $checkbox-default;
       left: 0;
       position: absolute;
@@ -32,15 +32,15 @@
     }
     // Checado
     &:checked + label::before {
-      background: $primary-lighten-01;
-      border-color: $primary-lighten-01;
+      background: $color-primary-lighten-01;
+      border-color: $color-primary-lighten-01;
     }
     &:checked + label::after {
-      background: $primary-lighten-01;
-      border: 5px solid $secondary-01;
+      background: $color-primary-lighten-01;
+      border: 5px solid $color-secondary-01;
       border-radius: 50%;
       bottom: 0;
-      content: '';
+      content: "";
       height: $checkbox-default;
       left: 0;
       position: absolute;
@@ -52,37 +52,37 @@
     // Hover
     &:hover:not(:disabled) + label::before,
     &:focus:not(:disabled) + label::before {
-      box-shadow: 0 0 0 4px rgba($primary-lighten-01, 0.45);
+      box-shadow: 0 0 0 4px rgba($color-primary-lighten-01, 0.45);
     }
     // Inválido
     &:invalid {
       & + label::before {
-        border-color: $danger;
+        border-color: $color-danger;
         border-width: 2px;
       }
     }
     // Desativado
     &:disabled + label::before {
-      background-color: $secondary-03;
+      background-color: $color-secondary-03;
     }
     &:disabled:checked + label::before {
-      background: $secondary-05;
-      border-color: $secondary-05;
+      background: $color-secondary-05;
+      border-color: $color-secondary-05;
     }
     &:disabled:checked + label::after {
-      background: $secondary-05;
+      background: $color-secondary-05;
     }
   }
   // Estados
-  @each $state, $color in (invalid, $danger), (valid, $success) {
+  @each $state, $color in (invalid, $color-danger), (valid, $color-success) {
     &.is-#{$state} {
-      input[type='radio'] {
+      input[type="radio"] {
         & + label {
           color: $color;
         }
         & + label::before {
           border-color: $color;
-          @if ($state == 'invalid') {
+          @if ($state == "invalid") {
             border-width: 2px;
           }
         }
@@ -104,38 +104,38 @@
   }
   // Invertido
   &.is-inverted {
-    input[type='radio'] {
+    input[type="radio"] {
       // Checado
       &:checked + label::before {
-        background: $secondary-01;
-        border-color: $secondary-01;
+        background: $color-secondary-01;
+        border-color: $color-secondary-01;
       }
       &:checked + label::after {
-        background-color: $secondary-01;
-        border-color: $primary-lighten-01;
+        background-color: $color-secondary-01;
+        border-color: $color-primary-lighten-01;
       }
       &:disabled:checked + label::after {
-        border-color: $secondary-05;
+        border-color: $color-secondary-05;
       }
     }
     &.is-invalid {
-      input[type='radio'] {
+      input[type="radio"] {
         &:checked + label::after {
-          border-color: $danger;
+          border-color: $color-danger;
         }
       }
     }
     &.is-valid {
-      input[type='radio'] {
+      input[type="radio"] {
         &:checked + label::after {
-          border-color: $success;
+          border-color: $color-success;
         }
       }
     }
   }
   // Versão pequena
   &.is-small {
-    input[type='radio'] {
+    input[type="radio"] {
       // Texto
       & + label {
         line-height: $checkbox-small;

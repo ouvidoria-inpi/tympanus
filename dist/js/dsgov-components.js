@@ -1520,111 +1520,6 @@ window.onload = (function() {
   }
 })();
 
-class BRSelect {
-
-  constructor(name, component) {
-    this.name = name;
-    this.component = component;
-    this._setUpBrSelect();
-  }
-
-  _setUpBrSelect() {
-    for (let select of this.component.querySelectorAll('select')) {
-      this.component.appendChild(this._buildSelectionField(select));
-      this.component.appendChild(this._buildOptionsList(select));
-    }
-    this._setBehavior();
-  }
-
-  _buildSelectionField(select) {
-    let selectionField = window.document.createElement('button');
-    selectionField.setAttribute('class', 'select-selected unselected');
-    if (select.disabled) {
-      selectionField.setAttribute('disabled', 'disabled');
-    }
-    selectionField.appendChild(this._buildOptionItem(select.options[select.selectedIndex].innerHTML));
-    selectionField.appendChild(this._buildIcon())
-    return selectionField;
-  }
-
-  _buildOptionItem(text) {
-    let optionItem = window.document.createElement('span');
-    optionItem.innerHTML = text;
-    return optionItem;
-  }
-
-  _buildIcon() {
-    let icon = window.document.createElement('i');
-    icon.setAttribute('class', 'fas fa-chevron-down')
-    return icon;
-  }
-
-  _buildOptionsList(select) {
-    let optionsList = window.document.createElement('div');
-    optionsList.setAttribute('class', 'select-items select-hide');
-    for (let option of select.options) {
-      let optionField = window.document.createElement('button');
-      optionField.appendChild(this._buildOptionItem(option.innerHTML));
-      optionsList.appendChild(optionField);      
-    }
-    return optionsList;
-  }
-
-  _setBehavior() {
-    for (let itemSelected of this.component.querySelectorAll('.select-selected')) {
-      itemSelected.addEventListener('click', (event) => {
-        event.stopPropagation();
-        itemSelected.nextElementSibling.classList.toggle('select-hide')
-        this._closeSelects(itemSelected);
-        window.document.addEventListener('click', () => {
-          this._closeSelects();
-        });
-      });
-    }
-    for (let item of this.component.querySelectorAll('.select-items button')) {
-      item.addEventListener('click', (event) => {
-        for (let select of this.component.querySelectorAll('select')) {
-          for (let [index, option] of Array.from(select.options).entries()) {
-            if (option.innerHTML === item.firstChild.innerHTML) {
-              select.selectedIndex = index;
-              item.parentNode.previousSibling.firstChild.innerHTML = item.firstChild.innerHTML;
-              item.parentNode.previousSibling.setAttribute('class', 'select-selected');
-              item.parentNode.classList.add('select-hide');
-              for (let optionItem of item.parentNode.querySelectorAll('button')) {
-                if (optionItem === item) {
-                  optionItem.setAttribute('class', 'same-as-selected');
-                } else {
-                  optionItem.removeAttribute('class');
-                }
-              }
-            }
-          }
-        }
-      });
-    }
-  }
-
-  _closeSelects(element) {
-    for (let brSelect of window.document.querySelectorAll('.br-select')) {
-      for (let itemSelected of brSelect.querySelectorAll('.select-selected')) {
-        if (itemSelected !== element) {
-          for (let optionsList of brSelect.querySelectorAll('.select-items')) {
-            optionsList.classList.add('select-hide');
-            window.document.removeEventListener('click', this._closeSelects);
-          }
-        }
-      }
-    }
-  }
-}
-
-let selectList = [];
-
-window.onload = (function() {
-  for (let brSelect of window.document.querySelectorAll('.br-select')) {
-    selectList.push(new BRSelect('br-select', brSelect));
-  }
-})();
 scrim = document.getElementsByClassName("is-foco")[0];
 
 function on() {
@@ -1633,159 +1528,6 @@ function on() {
   
 function off() {
     scrim.classList.remove("is-active");
-}
-
-// ! Refatorações:
-// TODO: Comportamento de resize de coluna
-// TODO: Efeito resize de altura da linha
-// TODO: Cards internos de colunas
-
-// ! Pendências:
-// TODO: Barra superior - itens de ação e menu flutuante, tags de filtros, itens selecionados
-// TODO: Filtragem de cabeçalhos
-
-const brTables = document.querySelectorAll( ".br-table" );
-const brTablesHeadersClass = "headers";
-let active = "is-active";
-let brTableNumber = 0;
-
-function hoverRow ( elements ) {
-	for ( let element of elements ) {
-		if ( element.children[ 0 ].children[ 0 ] ) {
-		}
-	}
-}
-
-function toogleSearch ( container, trigger, close ) {
-	if ( trigger ) {
-		trigger.addEventListener( "click", function () {
-			container.classList.add( active );
-		} );
-	}
-
-	if ( close ) {
-		close.addEventListener( "click", function () {
-			container.classList.remove( active );
-		} );
-	}
-}
-
-function setSyncScroll ( element ) {
-	element.classList.add( "syncscroll" );
-	element.setAttribute( "name", "table-" + brTableNumber );
-}
-
-function setHeaderWidth ( parent, element ) {
-	let cloneNode = parent.querySelector( `.${ brTablesHeadersClass }` );
-	for ( let i = 0; i < element.children.length; i++ ) {
-		elementWidth = element.children[ i ].offsetWidth;
-		cloneElementWidth = cloneNode.children[ 0 ].children[ i ];
-		cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
-	}
-}
-
-function cloneHeader ( parent, element ) {
-	let clone = element.cloneNode( true );
-	let headersTag = document.createElement( "div" );
-	let scrollerTag = document.createElement( "div" );
-
-	setSyncScroll( scrollerTag );
-	scrollerTag.classList.add( "scroller" );
-
-	for ( let i = 0; i < element.children.length; i++ ) {
-		let elementNode = clone.children[ i ].innerHTML;
-		let cloneElementNode = document.createElement( "div" );
-
-		cloneElementNode.classList.add( "item" );
-		cloneElementNode.innerHTML = elementNode;
-
-		scrollerTag.appendChild( cloneElementNode );
-
-		if ( cloneElementNode.children[ 0 ] ) {
-			if ( cloneElementNode.children[ 0 ].classList.contains( "br-checkbox" ) ) {
-				let cloneCheckbox = cloneElementNode.children[ 0 ];
-				let cloneCheckboxId = `${ brTablesHeadersClass }-${ parent.id }-check-all`;
-				cloneCheckbox.querySelector( "input" ).id = cloneCheckboxId;
-				cloneCheckbox
-					.querySelector( "label" )
-					.setAttribute( "for", cloneCheckboxId );
-			}
-		}
-	}
-
-	headersTag.classList.add( brTablesHeadersClass );
-	headersTag.appendChild( scrollerTag );
-
-	parent.appendChild( headersTag );
-}
-
-function checkAll ( element ) {
-	let headerCheckbox = element.querySelector(
-		".headers [name='check'] [type='checkbox']"
-	);
-	let tableCheckboxes = element.querySelectorAll(
-		"table [name='check'] [type='checkbox']"
-	);
-
-	if ( headerCheckbox ) {
-		headerCheckbox.addEventListener( "click", function () {
-			if ( headerCheckbox.checked ) {
-				for ( let checkbox of tableCheckboxes ) {
-					checkbox.checked = true;
-				}
-			} else {
-				for ( let checkbox of tableCheckboxes ) {
-					checkbox.checked = false;
-				}
-			}
-		} );
-	}
-}
-
-for ( let brTable of brTables ) {
-	let searchBar = brTable.querySelector( ".search-bar" );
-	let searchTrigger = brTable.querySelector( ".search-trigger" );
-	let searchClose = brTable.querySelector( ".search-close" );
-	let responsive = brTable.querySelector( ".responsive" );
-	let headers = brTable.querySelector( "table thead tr" );
-	let rows = brTable.querySelectorAll( "table tbody tr" );
-
-	brTableNumber++;
-
-	setSyncScroll( responsive );
-	cloneHeader( brTable, headers );
-	setHeaderWidth( brTable, headers );
-	toogleSearch( searchBar, searchTrigger, searchClose );
-	checkAll( brTable );
-	hoverRow( rows );
-
-	window.addEventListener( "resize", function () {
-		setHeaderWidth( brTable, headers );
-	} );
-}
-
-function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
-const tab = document.querySelectorAll( '.br-tabs .item' );
-
-for ( let elem of tab ) {
-	elem.addEventListener( "click", function () { changeElementTab( elem ) }, false );;
-
-}
-
-
-function changeElementTab ( event ) {
-	console.log( event );
-	const a = document.querySelectorAll( '.upload-input' );
-	const elements = event.parentElement.querySelectorAll( '.br-tabs .item' );
-
-	for ( let elem of elements ) {
-		elem.parentElement.querySelectorAll( ".item" )
-		elem.classList.remove( "is-active" );
-	}
-	event.classList.add( "is-active" );
-	console.log( event.classList );
-
-
 }
 
 let searchListId = 'search-list'
@@ -2148,6 +1890,264 @@ function autocomplete ( inp, arr ) {
 
 	autocomplete( document.getElementById( 'search-autocomplete' ), countries )
 } )()
+
+class BRSelect {
+
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    this._setUpBrSelect();
+  }
+
+  _setUpBrSelect() {
+    for (let select of this.component.querySelectorAll('select')) {
+      this.component.appendChild(this._buildSelectionField(select));
+      this.component.appendChild(this._buildOptionsList(select));
+    }
+    this._setBehavior();
+  }
+
+  _buildSelectionField(select) {
+    let selectionField = window.document.createElement('button');
+    selectionField.setAttribute('class', 'select-selected unselected');
+    if (select.disabled) {
+      selectionField.setAttribute('disabled', 'disabled');
+    }
+    selectionField.appendChild(this._buildOptionItem(select.options[select.selectedIndex].innerHTML));
+    selectionField.appendChild(this._buildIcon())
+    return selectionField;
+  }
+
+  _buildOptionItem(text) {
+    let optionItem = window.document.createElement('span');
+    optionItem.innerHTML = text;
+    return optionItem;
+  }
+
+  _buildIcon() {
+    let icon = window.document.createElement('i');
+    icon.setAttribute('class', 'fas fa-chevron-down')
+    return icon;
+  }
+
+  _buildOptionsList(select) {
+    let optionsList = window.document.createElement('div');
+    optionsList.setAttribute('class', 'select-items select-hide');
+    for (let option of select.options) {
+      let optionField = window.document.createElement('button');
+      optionField.appendChild(this._buildOptionItem(option.innerHTML));
+      optionsList.appendChild(optionField);      
+    }
+    return optionsList;
+  }
+
+  _setBehavior() {
+    for (let itemSelected of this.component.querySelectorAll('.select-selected')) {
+      itemSelected.addEventListener('click', (event) => {
+        event.stopPropagation();
+        itemSelected.nextElementSibling.classList.toggle('select-hide')
+        this._closeSelects(itemSelected);
+        window.document.addEventListener('click', () => {
+          this._closeSelects();
+        });
+      });
+    }
+    for (let item of this.component.querySelectorAll('.select-items button')) {
+      item.addEventListener('click', (event) => {
+        for (let select of this.component.querySelectorAll('select')) {
+          for (let [index, option] of Array.from(select.options).entries()) {
+            if (option.innerHTML === item.firstChild.innerHTML) {
+              select.selectedIndex = index;
+              item.parentNode.previousSibling.firstChild.innerHTML = item.firstChild.innerHTML;
+              item.parentNode.previousSibling.setAttribute('class', 'select-selected');
+              item.parentNode.classList.add('select-hide');
+              for (let optionItem of item.parentNode.querySelectorAll('button')) {
+                if (optionItem === item) {
+                  optionItem.setAttribute('class', 'same-as-selected');
+                } else {
+                  optionItem.removeAttribute('class');
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+  }
+
+  _closeSelects(element) {
+    for (let brSelect of window.document.querySelectorAll('.br-select')) {
+      for (let itemSelected of brSelect.querySelectorAll('.select-selected')) {
+        if (itemSelected !== element) {
+          for (let optionsList of brSelect.querySelectorAll('.select-items')) {
+            optionsList.classList.add('select-hide');
+            window.document.removeEventListener('click', this._closeSelects);
+          }
+        }
+      }
+    }
+  }
+}
+
+let selectList = [];
+
+window.onload = (function() {
+  for (let brSelect of window.document.querySelectorAll('.br-select')) {
+    selectList.push(new BRSelect('br-select', brSelect));
+  }
+})();
+function documentReady(t){/in/.test(document.readyState)?setTimeout("documentReady("+t+")",9):t()}function findAncestor(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}function unformatNumberString(t){return t=t.replace(/[^\d\.-]/g,""),Number(t)}function extractStringContent(t){var e=document.createElement("span");return e.innerHTML=t,e.textContent||e.innerText}function setColHeaderDirection(t,e,n){for(var r=0;r<n.length;r++)r==e?n[e].setAttribute("data-sort-direction",t):n[r].setAttribute("data-sort-direction",0)}function renderSortedTable(t,e){for(var n=t.getElementsByTagName("tbody")[0].getElementsByTagName("tr"),r=0;r<n.length;r++)for(var a=n[r].getElementsByTagName("td"),i=0;i<a.length;i++)a[i].innerHTML=e[r][i]}documentReady(function(){for(var t=document.getElementsByClassName("sortable-table"),e=[],n=0;n<t.length;n++)!function(){t[n].setAttribute("data-sort-index",n);for(var r=t[n].getElementsByTagName("tbody")[0].getElementsByTagName("tr"),a=0;a<r.length;a++)for(var i=r[a].getElementsByTagName("td"),o=0;o<i.length;o++)void 0===e[n]&&e.splice(n,0,[]),void 0===e[n][a]&&e[n].splice(a,0,[]),e[n][a].splice(o,0,i[o].innerHTML);for(var s=t[n].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].getElementsByTagName("th"),d=0;d<s.length;d++)!function(){var n=s[d].classList.contains("numeric-sort");s[d].setAttribute("data-sort-direction",0),s[d].setAttribute("data-sort-index",d),s[d].addEventListener("click",function(){var r=this.getAttribute("data-sort-direction"),a=this.getAttribute("data-sort-index"),i=findAncestor(this,"sortable-table").getAttribute("data-sort-index");setColHeaderDirection(1==r?-1:1,a,s),e[i]=e[i].sort(function(t,e){var i=extractStringContent(t[a]),o=extractStringContent(e[a]);return n&&(i=unformatNumberString(i),o=unformatNumberString(o)),i===o?0:1==r?i>o?-1:1:i<o?-1:1}),renderSortedTable(t[i],e[i])})}()}()});
+// ! Refatorações:
+// TODO: Comportamento de resize de coluna
+// TODO: Efeito resize de altura da linha
+// TODO: Cards internos de colunas
+
+// ! Pendências:
+// TODO: Barra superior - itens de ação e menu flutuante, tags de filtros, itens selecionados
+// TODO: Filtragem de cabeçalhos
+
+const brTables = document.querySelectorAll( ".br-table" );
+const brTablesHeadersClass = "headers";
+let active = "is-active";
+let brTableNumber = 0;
+
+function hoverRow ( elements ) {
+	for ( let element of elements ) {
+		if ( element.children[ 0 ].children[ 0 ] ) {
+		}
+	}
+}
+
+function toogleSearch ( container, trigger, close ) {
+	if ( trigger ) {
+		trigger.addEventListener( "click", function () {
+			container.classList.add( active );
+		} );
+	}
+
+	if ( close ) {
+		close.addEventListener( "click", function () {
+			container.classList.remove( active );
+		} );
+	}
+}
+
+function setSyncScroll ( element ) {
+	element.classList.add( "syncscroll" );
+	element.setAttribute( "name", "table-" + brTableNumber );
+}
+
+function setHeaderWidth ( parent, element ) {
+	let cloneNode = parent.querySelector( `.${ brTablesHeadersClass }` );
+	for ( let i = 0; i < element.children.length; i++ ) {
+		elementWidth = element.children[ i ].offsetWidth;
+		cloneElementWidth = cloneNode.children[ 0 ].children[ i ];
+		cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
+	}
+}
+
+function cloneHeader ( parent, element ) {
+	let clone = element.cloneNode( true );
+	let headersTag = document.createElement( "div" );
+	let scrollerTag = document.createElement( "div" );
+
+	setSyncScroll( scrollerTag );
+	scrollerTag.classList.add( "scroller" );
+
+	for ( let i = 0; i < element.children.length; i++ ) {
+		let elementNode = clone.children[ i ].innerHTML;
+		let cloneElementNode = document.createElement( "div" );
+
+		cloneElementNode.classList.add( "item" );
+		cloneElementNode.innerHTML = elementNode;
+
+		scrollerTag.appendChild( cloneElementNode );
+
+		if ( cloneElementNode.children[ 0 ] ) {
+			if ( cloneElementNode.children[ 0 ].classList.contains( "br-checkbox" ) ) {
+				let cloneCheckbox = cloneElementNode.children[ 0 ];
+				let cloneCheckboxId = `${ brTablesHeadersClass }-${ parent.id }-check-all`;
+				cloneCheckbox.querySelector( "input" ).id = cloneCheckboxId;
+				cloneCheckbox
+					.querySelector( "label" )
+					.setAttribute( "for", cloneCheckboxId );
+			}
+		}
+	}
+
+	headersTag.classList.add( brTablesHeadersClass );
+	headersTag.appendChild( scrollerTag );
+
+	parent.appendChild( headersTag );
+}
+
+function checkAll ( element ) {
+	let headerCheckbox = element.querySelector(
+		".headers [name='check'] [type='checkbox']"
+	);
+	let tableCheckboxes = element.querySelectorAll(
+		"table [name='check'] [type='checkbox']"
+	);
+
+	if ( headerCheckbox ) {
+		headerCheckbox.addEventListener( "click", function () {
+			if ( headerCheckbox.checked ) {
+				for ( let checkbox of tableCheckboxes ) {
+					checkbox.checked = true;
+				}
+			} else {
+				for ( let checkbox of tableCheckboxes ) {
+					checkbox.checked = false;
+				}
+			}
+		} );
+	}
+}
+
+for ( let brTable of brTables ) {
+	let searchBar = brTable.querySelector( ".search-bar" );
+	let searchTrigger = brTable.querySelector( ".search-trigger" );
+	let searchClose = brTable.querySelector( ".search-close" );
+	let responsive = brTable.querySelector( ".responsive" );
+	let headers = brTable.querySelector( "table thead tr" );
+	let rows = brTable.querySelectorAll( "table tbody tr" );
+
+	brTableNumber++;
+
+	setSyncScroll( responsive );
+	cloneHeader( brTable, headers );
+	setHeaderWidth( brTable, headers );
+	toogleSearch( searchBar, searchTrigger, searchClose );
+	checkAll( brTable );
+	hoverRow( rows );
+
+	window.addEventListener( "resize", function () {
+		setHeaderWidth( brTable, headers );
+	} );
+}
+
+const tab = document.querySelectorAll( '.br-tabs .item' );
+
+for ( let elem of tab ) {
+	elem.addEventListener( "click", function () { changeElementTab( elem ) }, false );;
+
+}
+
+
+function changeElementTab ( event ) {
+	console.log( event );
+	const a = document.querySelectorAll( '.upload-input' );
+	const elements = event.parentElement.querySelectorAll( '.br-tabs .item' );
+
+	for ( let elem of elements ) {
+		elem.parentElement.querySelectorAll( ".item" )
+		elem.classList.remove( "is-active" );
+	}
+	event.classList.add( "is-active" );
+	console.log( event.classList );
+
+
+}
 
 const inputElement = document.querySelector('.upload-input');
 const fileList = document.querySelector('.upload-file-list');

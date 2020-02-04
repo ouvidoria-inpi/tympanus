@@ -5,7 +5,7 @@
     &::before {
       animation: spinAround 0.5s infinite linear;
       border: 3px solid currentColor;
-      border-color: transparent transparent $primary $primary !important;
+      border-color: transparent transparent $color-primary $color-primary !important;
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
@@ -31,7 +31,7 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     .close {
       background: transparent;
       border: 0;
-      color: $primary;
+      color: $color-primary;
       font-weight: 500;
       padding: 0;
       position: absolute;
@@ -80,14 +80,14 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
       width: 8px;
     }
     &::-webkit-scrollbar-track {
-      background: $secondary-03;
+      background: $color-secondary-03;
     }
     &::-webkit-scrollbar-thumb {
-      background: $secondary-06;
+      background: $color-secondary-06;
     }
     &:hover {
       &::-webkit-scrollbar-thumb {
-        background: $secondary-07;
+        background: $color-secondary-07;
       }
     }
   }

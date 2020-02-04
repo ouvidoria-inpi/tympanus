@@ -48,7 +48,7 @@
   // Versão tablet
   @include media-breakpoint-up(sm) {
     .left-side {
-      background-color: $secondary-02;
+      background-color: $color-secondary-02;
       .page-content {
         padding-left: 0;
         padding-right: 0;

@@ -11,66 +11,66 @@ $yahoo: #720e9e;
 $youtube: #c4302b;
 
 // Primário
-$primary: #1351b4;
-$primary-pastel-01: #c5d4eb;
-$primary-pastel-02: #dbe8fb;
-$primary-lighten-01: #2670e8;
-$primary-lighten-02: #5992ed;
-$primary-darken-01: #0c326f;
-$primary-darken-02: #071d41;
+$color-primary: #1351b4;
+$color-primary-pastel-01: #c5d4eb;
+$color-primary-pastel-02: #dbe8fb;
+$color-primary-lighten-01: #2670e8;
+$color-primary-lighten-02: #5992ed;
+$color-primary-darken-01: #0c326f;
+$color-primary-darken-02: #071d41;
 
 // Secundário
-$secondary-01: #fff;
-$secondary-02: #f8f8f8;
-$secondary-03: #ededed;
-$secondary-04: #ccc;
-$secondary-05: #9e9d9d;
-$secondary-06: #888;
-$secondary-07: #555;
-$secondary-08: #333;
-$secondary-09: #000;
+$color-secondary-01: #fff;
+$color-secondary-02: #f8f8f8;
+$color-secondary-03: #ededed;
+$color-secondary-04: #ccc;
+$color-secondary-05: #9e9d9d;
+$color-secondary-06: #888;
+$color-secondary-07: #555;
+$color-secondary-08: #333;
+$color-secondary-09: #000;
 
 // Destaque
-$highlight: #268744;
+$color-highlight: #268744;
 
 // Estados
-$warning: #ffcd07;
-$success: #168821;
-$danger: #e60000;
-$info: #155bcb;
+$color-warning: #ffcd07;
+$color-success: #168821;
+$color-danger: #e60000;
+$color-info: #155bcb;
 
 // Suporte
-$support-01: #36a191;
-$support-02: #f2e317;
-$support-03: #d84800;
-$support-04: #a26739;
+$color-support-01: #36a191;
+$color-support-02: #f2e317;
+$color-support-03: #d84800;
+$color-support-04: #a26739;
 
 $br-theme: (
-  primary-pastel-01: $primary-pastel-01,
-  primary-pastel-02: $primary-pastel-02,
-  primary-lighten-01: $primary-lighten-01,
-  primary-lighten-02: $primary-lighten-02,
-  primary-default: $primary,
-  primary-darken-01: $primary-darken-01,
-  primary-darken-02: $primary-darken-02,
-  secondary-01: $secondary-01,
-  secondary-02: $secondary-02,
-  secondary-03: $secondary-03,
-  secondary-04: $secondary-04,
-  secondary-05: $secondary-05,
-  secondary-06: $secondary-06,
-  secondary-07: $secondary-07,
-  secondary-08: $secondary-08,
-  secondary-09: $secondary-09,
-  highlight: $highlight,
-  success: $success,
-  warning: $warning,
-  danger: $danger,
-  info: $info,
-  support-01: $support-01,
-  support-02: $support-02,
-  support-03: $support-03,
-  support-04: $support-04,
+  color-primary-pastel-01: $color-primary-pastel-01,
+  color-primary-pastel-02: $color-primary-pastel-02,
+  color-primary-lighten-01: $color-primary-lighten-01,
+  color-primary-lighten-02: $color-primary-lighten-02,
+  color-primary-default: $color-primary,
+  color-primary-darken-01: $color-primary-darken-01,
+  color-primary-darken-02: $color-primary-darken-02,
+  color-secondary-01: $color-secondary-01,
+  color-secondary-02: $color-secondary-02,
+  color-secondary-03: $color-secondary-03,
+  color-secondary-04: $color-secondary-04,
+  color-secondary-05: $color-secondary-05,
+  color-secondary-06: $color-secondary-06,
+  color-secondary-07: $color-secondary-07,
+  color-secondary-08: $color-secondary-08,
+  color-secondary-09: $color-secondary-09,
+  color-highlight: $color-highlight,
+  color-success: $color-success,
+  color-warning: $color-warning,
+  color-danger: $color-danger,
+  color-info: $color-info,
+  color-support-01: $color-support-01,
+  color-support-02: $color-support-02,
+  color-support-03: $color-support-03,
+  color-support-04: $color-support-04,
   facebook: $facebook,
   google-plus: $google-plus,
   linkedin: $linkedin,
@@ -78,5 +78,5 @@ $br-theme: (
   whatsapp: $whatsapp,
   xbox: $xbox,
   yahoo: $yahoo,
-  youtube: $youtube,
+  youtube: $youtube
 );

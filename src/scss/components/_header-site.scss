@@ -1,6 +1,6 @@
 .#{$prefix}header-site {
-  background-color: $secondary-01;
-  box-shadow: 0 3px 6px rgba($secondary-09, 0.16);
+  background-color: $color-secondary-01;
+  box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16);
   // Agrupador
   .wrapper {
     align-items: flex-start;
@@ -51,12 +51,12 @@
     position: absolute;
     right: $spacer * 4;
     top: 0;
-    [class*='fa-'] {
+    [class*="fa-"] {
       color: $link-color;
     }
     &:hover {
       color: $link-hover-color;
-      [class*='fa-'] {
+      [class*="fa-"] {
         color: $link-hover-color;
       }
     }
@@ -74,7 +74,7 @@
       display: inline-flex;
       flex: 1;
       input {
-        background: $secondary-03;
+        background: $color-secondary-03;
         border: 0;
         display: none;
         flex: 1;
@@ -90,10 +90,10 @@
       button {
         background: transparent;
         border: 0;
-        color: $primary;
+        color: $color-primary;
         padding: 0 ($spacer * 1.5);
         &:hover {
-          background: $primary-pastel-02;
+          background: $color-primary-pastel-02;
         }
       }
     }
@@ -112,7 +112,7 @@
     &.is-active {
       left: 0;
       .field {
-        box-shadow: 0 3px 6px rgba($secondary-09, 0.16); // sass-lint:disable-line no-color-literals
+        box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16); // sass-lint:disable-line no-color-literals
         left: 0;
         position: absolute;
         right: 0;
@@ -121,7 +121,7 @@
           display: block;
         }
         button {
-          background-color: $secondary-03;
+          background-color: $color-secondary-03;
         }
       }
       .close {
@@ -134,7 +134,7 @@
     background: transparent;
     border: 0;
     bottom: 0;
-    color: $primary;
+    color: $color-primary;
     font-size: 25px;
     left: 0;
     padding: 0 $spacer;
@@ -143,7 +143,7 @@
     top: 0;
     z-index: 1;
     &:hover {
-      color: $primary-lighten-01;
+      color: $color-primary-lighten-01;
       text-decoration: none;
     }
   }
@@ -223,7 +223,7 @@
           padding-right: $spacer * 2;
         }
         button {
-          background-color: $secondary-03;
+          background-color: $color-secondary-03;
           padding-left: $spacer * 2;
           padding-right: $spacer * 2;
         }
