@@ -92,6 +92,7 @@
 }
 
 @mixin navigation {
+  // stylelint-disable no-descending-specificity
   .navigation {
     background: $secondary-03;
     .container {
@@ -123,6 +124,7 @@
       }
     }
   }
+  // stylelint-enable no-descending-specificity
 }
 
 @mixin logo {
@@ -178,6 +180,7 @@
 }
 
 @mixin tree {
+  // stylelint-disable no-descending-specificity
   .tree {
     background: $secondary-03;
     display: none;
@@ -187,7 +190,7 @@
     .title {
       display: flex;
       flex-flow: column;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
     }
     .trigger {
       align-items: center;
@@ -197,7 +200,7 @@
       display: flex;
       flex: 1;
       justify-content: space-between;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
       &:hover {
         background: $primary-darken-01;
         color: $secondary-01;
@@ -207,9 +210,6 @@
       display: none;
       flex-flow: column;
     }
-    .arrow {
-      font-size: 12px;
-    }
     .label {
       box-shadow: inset 0 1px 0 $primary-pastel-02,
         inset 0 -1px 0 $primary-pastel-02;
@@ -217,7 +217,7 @@
       flex-flow: row;
       font-weight: 600;
       margin: 0;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
       text-transform: uppercase;
       .icon {
         margin-right: $spacer;
@@ -243,6 +243,9 @@
     .govbr {
       font-weight: 900;
       letter-spacing: -1px;
+    }
+    .arrow {
+      font-size: 12px;
     }
     // Links
     a {
@@ -272,6 +275,38 @@
       }
     }
   }
+  // Versão de site
+  &.is-site {
+    .tree {
+      // Separador de menus
+      & + .tree {
+        box-shadow: inset 0 1px 0 $secondary-04;
+      }
+    }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .tree {
+        box-shadow: inset -1px 0 0 $secondary-04;
+        flex: 1;
+        width: 25%;
+        .tree {
+          bottom: 0;
+          left: 25%;
+          padding: $spacer 0;
+          position: absolute;
+          top: 0;
+          width: 25%;
+          .tree {
+            left: 100%;
+            width: 100%;
+          }
+        }
+        & + .tree {
+          box-shadow: inset -1px 0 0 $secondary-04, inset 0 1px 0 $secondary-04;
+        }
+      }
+    }
+  }
   // Versão de sistema
   &.is-system {
     .tree {
@@ -283,12 +318,6 @@
         padding: ($spacer * 2) 0;
         .tree {
           padding: 0;
-          .tree {
-            .item {
-              white-space: nowrap;
-            }
-          }
-          // stylelint-disable no-descending-specificity
           .item {
             position: relative;
             .item {
@@ -322,13 +351,33 @@
               }
             }
           }
-          // stylelint-enable no-descending-specificity
+          &:hover {
+            > {
+              .trigger,
+              a {
+                background: $primary-darken-01;
+                color: $secondary-01;
+              }
+              .tree {
+                display: block;
+                > {
+                  .trigger,
+                  a {
+                    background: $primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+        & + .tree {
+          box-shadow: inset -1px 0 0 $secondary-04, inset 0 1px 0 $secondary-04;
         }
       }
     }
   }
-  // Versão de site
-  &.is-site {
+  // Versão de sistema
+  &.is-system {
     .tree {
       // Separador de menus
       & + .tree {
@@ -345,19 +394,9 @@
           box-shadow: inset -1px 0 0 $secondary-04, inset 0 1px 0 $secondary-04;
         }
         .tree {
-          bottom: 0;
-          left: 25%;
-          padding: $spacer 0;
-          position: absolute;
-          top: 0;
-          width: 25%;
-          .tree {
-            left: 100%;
-            width: 100%;
-          }
-        }
-        .item {
+          padding: 0;
           .item {
+            position: relative;
             &:hover {
               > {
                 .trigger,
@@ -378,18 +417,24 @@
               .tree {
                 display: block;
                 > {
-                  .item {
-                    display: flex;
+                  .trigger,
+                  a {
+                    background: $primary;
                   }
                 }
               }
             }
           }
-          // stylelint-enable no-descending-specificity
+          .tree {
+            .item {
+              white-space: nowrap;
+            }
+          }
         }
       }
     }
   }
+  // stylelint-enable no-descending-specificity
 }
 
 @mixin language {
@@ -418,7 +463,7 @@
         font-size: 14px;
         font-style: italic;
         font-weight: 600;
-        margin: ($spacer * 2) ($spacer * 2) $spacer;
+        margin: $spacer * 2 $spacer * 2 $spacer;
         padding: 0;
       }
       // Item selecionável
@@ -446,8 +491,8 @@
     display: flex;
     flex-flow: column;
     font-size: 14px;
-    margin: ($spacer * 1.5) 0 0;
-    padding: ($spacer * 2) 0;
+    margin: $spacer * 1.5 0 0;
+    padding: $spacer * 2 0;
     position: relative;
     span {
       display: block;
@@ -459,7 +504,7 @@
       align-items: center;
       display: inline-flex;
       padding: $spacer-half 0;
-      [class*='fa-'] {
+      [class*="fa-"] {
         margin-left: $spacer;
       }
     }
@@ -472,7 +517,7 @@
         width: 100%;
       }
       a {
-        margin-right: ($spacer * 4);
+        margin-right: $spacer * 4;
       }
     }
   }
@@ -489,13 +534,13 @@
   .social-network {
     border-top: 1px solid $secondary-03;
     margin: 0;
-    padding: ($spacer * 2) 0;
+    padding: $spacer * 2 0;
     text-transform: uppercase;
     span {
       display: block;
       font-size: 14px;
       font-weight: 700;
-      margin-right: ($spacer * 2.5);
+      margin-right: $spacer * 2.5;
     }
     a {
       @include btn-icon;
@@ -513,7 +558,7 @@
         width: 100%;
       }
       a {
-        margin-right: ($spacer * 2);
+        margin-right: $spacer * 2;
       }
     }
   }
@@ -530,8 +575,8 @@
     font-size: 12px;
     font-weight: 600;
     height: 32px;
-    margin-left: ($spacer * 2);
-    padding: 0 ($spacer * 3);
+    margin-left: $spacer * 2;
+    padding: 0 $spacer * 3;
     text-align: center;
     &:hover {
       background: $primary-lighten-01;
@@ -557,6 +602,18 @@
   .menu {
     position: relative;
     z-index: 1;
+    .trigger {
+      align-items: baseline;
+      display: inline-flex;
+      padding: 0;
+      &:hover {
+        .arrow {
+          &::after {
+            background: $primary-pastel-02;
+          }
+        }
+      }
+    }
     .arrow {
       align-items: center;
       display: inline-flex;
@@ -565,7 +622,7 @@
       margin-left: $spacer;
       &::after {
         border-radius: 50%;
-        content: '';
+        content: "";
         display: block;
         height: 16px;
         position: absolute;
@@ -597,14 +654,14 @@
       font-size: 14px;
       font-style: italic;
       font-weight: 600;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
     }
     .item {
       background: $secondary-01;
       border: 0;
       color: $secondary-07;
       display: block;
-      padding: $spacer ($spacer * 2);
+      padding: $spacer $spacer * 2;
       position: relative;
       text-align: left;
       text-decoration: none;
@@ -679,7 +736,7 @@
       left: -$spacer;
       margin-right: -$spacer;
       position: relative;
-      top: -($spacer * 1.5);
+      top: -$spacer * 1.5;
       width: 18px;
     }
   }
@@ -713,11 +770,11 @@
           border-bottom-color: $secondary-08;
           border-width: 12px;
           bottom: 100%;
-          content: '';
+          content: "";
           height: 0;
           pointer-events: none;
           position: absolute;
-          right: ($spacer * 2);
+          right: $spacer * 2;
           width: 0;
         }
       }
@@ -745,11 +802,11 @@
           border-bottom-color: $secondary-08;
           border-width: 12px;
           bottom: 100%;
-          content: '';
+          content: "";
           height: 0;
           pointer-events: none;
           position: absolute;
-          right: ($spacer * 2);
+          right: $spacer * 2;
           width: 0;
         }
       }
@@ -757,7 +814,7 @@
     // Lista de favoritos
     .list {
       columns: 5;
-      padding: 0 ($spacer * 2);
+      padding: 0 $spacer * 2;
       .item {
         padding: 0;
       }
@@ -765,7 +822,7 @@
     // Favorito
     .bookmark {
       display: inline-block;
-      margin: ($spacer * 2) 0 0;
+      margin: $spacer * 2 0 0;
       // Marca
       .brand {
         background: $secondary-02;
@@ -779,7 +836,7 @@
         display: block;
         font-size: 9px;
         font-weight: 500;
-        margin-top: $spacer-half;
+        margin-top: $spacer * 0.5;
         text-align: center;
       }
       &:hover {
@@ -796,7 +853,7 @@
     .more {
       font-size: 10px;
       font-weight: 600;
-      margin: ($spacer * 2) 0;
+      margin: $spacer * 2 0;
       text-align: center;
       text-decoration: underline;
     }
@@ -816,7 +873,7 @@
     &::after {
       background: $primary-pastel-02;
       border-radius: 50%;
-      content: '';
+      content: "";
       display: block;
       height: 32px;
       position: absolute;

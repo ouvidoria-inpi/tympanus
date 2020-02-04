@@ -1,15 +1,12 @@
-// TODO: Refatorar código
-// stylelint-disable
-
 @supports (display: grid) {
   .template-system,
   .template-site,
   .template-authentication {
     display: grid;
     grid-template-areas:
-      'header'
-      'wrapper'
-      'footer';
+      "header"
+      "wrapper"
+      "footer";
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     .page-header {
@@ -137,7 +134,7 @@ $logo-desktop: 150px;
     align-items: center;
     display: flex;
     padding: $spacer-half 0;
-    [class*='fa-'] {
+    [class*="fa-"] {
       margin-left: $spacer;
     }
   }
@@ -207,7 +204,7 @@ $logo-desktop: 150px;
       font-size: 26px;
       justify-content: flex-end;
       margin: 0 $spacer;
-      [class*='fa-'] {
+      [class*="fa-"] {
         color: $primary;
         margin-right: ($spacer * 2);
       }
@@ -232,7 +229,7 @@ $logo-desktop: 150px;
       }
       &::before {
         background: $secondary-04;
-        content: '';
+        content: "";
         height: 1px;
         left: 0;
         position: absolute;
@@ -276,7 +273,7 @@ $logo-desktop: 150px;
       text-align: left;
       text-decoration: none;
       width: 100%;
-      [class*='fa-'] {
+      [class*="fa-"] {
         color: $primary;
       }
     }
@@ -289,7 +286,7 @@ $logo-desktop: 150px;
         color: $secondary-01;
         display: none;
         font-weight: 600;
-        [class*='fa-'] {
+        [class*="fa-"] {
           color: $secondary-01;
         }
       }
@@ -442,8 +439,8 @@ $logo-desktop: 150px;
   // Comportamento do menu
   // Mostrar apenas quem é ativo no nível atual
   @each $level in (0, 1, 2, 3) {
-    &:not([data-level='#{$level}']) {
-      [data-level='#{$level}'] {
+    &:not([data-level="#{$level}"]) {
+      [data-level="#{$level}"] {
         > .item {
           display: none;
         }
@@ -497,6 +494,33 @@ $logo-desktop: 150px;
           padding-right: 0;
         }
       }
+      a {
+        color: $primary;
+        display: inline-block;
+        padding: $spacer ($spacer * 2);
+      }
+    }
+  }
+}
+
+// Links úteis
+.links {
+  border-top: 1px solid $secondary-03;
+  font-size: 14px;
+  padding: $spacer;
+  position: relative;
+  span {
+    display: block;
+    font-weight: 700;
+    margin: $spacer 0;
+    text-transform: uppercase;
+  }
+  a {
+    align-items: center;
+    display: flex;
+    padding: $spacer-half 0;
+    [class*="fa-"] {
+      margin-left: $spacer;
     }
   }
 }
@@ -611,7 +635,7 @@ $logo-desktop: 150px;
 }
 
 // Ajustes para sistemas
-[data-type='system'] {
+[data-type="system"] {
   // Barra do cabeçalho
   .header-bar {
     height: $main-bar-mobile * 2;
@@ -683,32 +707,8 @@ $logo-desktop: 150px;
   .header-bar {
     height: $main-bar-tablet;
   }
-  // Navegação
-  .navigation {
-    // Container da navegação
-    .wrapper {
-      min-height: calc(50vh - #{$main-bar-mobile});
-    }
-    // Barra do cabeçalho
-    .header-bar {
-      height: auto;
-      min-height: auto;
-    }
-    // Logo
-    .logo {
-      .name {
-        display: none;
-      }
-      .description {
-        display: none;
-      }
-      &.is-active {
-        display: none;
-      }
-    }
-  }
   // Ajustes para sistemas
-  [data-type='system'] {
+  [data-type="system"] {
     // Barra do cabeçalho
     .header-bar {
       height: $main-bar-mobile * 2;
@@ -727,13 +727,6 @@ $logo-desktop: 150px;
     // Menu sanduiche
     .menu-hamburger {
       bottom: 0;
-    }
-    // Navegação
-    &.navigation {
-      // Container da navegação
-      .wrapper {
-        min-height: calc(50vh - #{$main-bar-mobile});
-      }
     }
   }
 }
@@ -823,7 +816,7 @@ $logo-desktop: 150px;
       }
     }
     // Navegação por hover
-    &[data-children='hover'] {
+    &[data-children="hover"] {
       // Item de navegação
       .item {
         &:hover {
@@ -832,7 +825,7 @@ $logo-desktop: 150px;
             background: $primary-darken-01;
             color: $secondary-01;
             font-weight: 600;
-            [class*='fa-'] {
+            [class*="fa-"] {
               color: $secondary-01;
             }
             img {
@@ -934,7 +927,7 @@ $logo-desktop: 150px;
     }
   }
   // Ajustes para sistemas
-  [data-type='system'] {
+  [data-type="system"] {
     // Barra do cabeçalho
     .header-bar {
       height: $main-bar-desktop;
@@ -1031,7 +1024,7 @@ $logo-desktop: 150px;
           color: $primary;
           font-weight: 600;
         }
-        [class*='fa-'] {
+        [class*="fa-"] {
           font-size: 10px;
           transform: rotate(90deg);
         }
@@ -1053,7 +1046,7 @@ $logo-desktop: 150px;
             border-top: 0;
             color: $secondary-07;
             font-weight: 500;
-            [class*='fa-'] {
+            [class*="fa-"] {
               transform: rotate(0);
             }
           }
@@ -1064,7 +1057,7 @@ $logo-desktop: 150px;
           > button {
             background: transparent;
             display: flex;
-            [class*='fa-'] {
+            [class*="fa-"] {
               color: $primary;
               transform: rotate(-90deg);
             }
@@ -1075,7 +1068,7 @@ $logo-desktop: 150px;
               &.is-active {
                 > a,
                 > button {
-                  [class*='fa-'] {
+                  [class*="fa-"] {
                     color: $primary-lighten-01;
                     transform: rotate(0);
                   }
@@ -1102,7 +1095,7 @@ $logo-desktop: 150px;
           &:hover {
             a,
             button {
-              [class*='fa-'] {
+              [class*="fa-"] {
                 color: $primary-lighten-01;
               }
             }
@@ -1138,5 +1131,3 @@ $logo-desktop: 150px;
     width: 100%;
   }
 }
-
-// stylelint-enable

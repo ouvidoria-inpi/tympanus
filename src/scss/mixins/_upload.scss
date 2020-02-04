@@ -5,7 +5,7 @@
     padding-right: 16px;
     padding-top: 180px;
   }
-  background: url('https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/upload-fundo.png')
+  background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/images/upload-fundo.png")
     32px 24px $secondary-01 no-repeat;
   border: 1px solid $secondary-01;
   box-shadow: 0 3px 6px $secondary-04;
@@ -78,7 +78,6 @@
     }
   }
   .upload-size {
-    // font-size: 10px;
     text-align: right;
     visibility: hidden;
   }

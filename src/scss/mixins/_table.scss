@@ -65,6 +65,12 @@
             color: $secondary-01;
           }
         }
+        th,
+        td {
+          background: $primary-lighten-1;
+          border-color: $primary-lighten-1;
+          color: $secondary-01;
+        }
         .collapse,
         .actions {
           > * {
@@ -73,7 +79,7 @@
           }
         }
         .br-check {
-          input[type='checkbox']:checked + label {
+          input[type="checkbox"]:checked + label {
             // sass-lint:disable-line force-attribute-nesting, force-pseudo-nesting
             &::before {
               background: $secondary-01;

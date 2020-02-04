@@ -508,14 +508,14 @@
     color: $primary;
     left: -$spacer;
     position: absolute;
-    [class*='fa-times'] {
+    [class*="fa-times"] {
       display: none;
     }
     &.is-active {
-      [class*='fa-bars'] {
+      [class*="fa-bars"] {
         display: none;
       }
-      [class*='fa-times'] {
+      [class*="fa-times"] {
         display: block;
       }
       &::before {
@@ -538,7 +538,7 @@
       bottom: 9px;
       &.is-active {
         &::before {
-          content: '';
+          content: "";
         }
       }
     }
@@ -562,6 +562,17 @@
   .menu {
     position: relative;
     z-index: 1;
+    .trigger {
+      align-items: baseline;
+      display: inline-flex;
+      &:hover {
+        .arrow {
+          &::after {
+            background: $primary-pastel-02;
+          }
+        }
+      }
+    }
     .arrow {
       align-items: center;
       display: inline-flex;
@@ -570,7 +581,7 @@
       margin-left: $spacer;
       &::after {
         border-radius: 50%;
-        content: '';
+        content: "";
         display: block;
         height: 16px;
         position: absolute;
@@ -645,7 +656,7 @@
     &::after {
       background: $primary-pastel-02;
       border-radius: 50%;
-      content: '';
+      content: "";
       display: block;
       height: 32px;
       position: absolute;
@@ -709,7 +720,7 @@
           border-bottom-color: $secondary-08;
           border-width: 12px;
           bottom: 100%;
-          content: '';
+          content: "";
           height: 0;
           pointer-events: none;
           position: absolute;
@@ -742,7 +753,7 @@
           border-bottom-color: $secondary-08;
           border-width: 12px;
           bottom: 100%;
-          content: '';
+          content: "";
           height: 0;
           pointer-events: none;
           position: absolute;
@@ -757,6 +768,20 @@
       padding: 0 ($spacer * 2);
       .item {
         padding: 0;
+      }
+    }
+    // Favorito
+    .bookmark {
+      display: inline-block;
+      margin: ($spacer * 2) 0 0;
+      &:hover {
+        text-decoration: none;
+        .brand {
+          border-color: $primary-lighten-01;
+        }
+        .name {
+          color: $primary-lighten-01;
+        }
       }
     }
     // Marca

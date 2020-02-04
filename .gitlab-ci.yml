@@ -29,4 +29,4 @@ validate_html:
 
 validate_sass:
   stage: test
-  script: npm run validate:styles
+  script: npm run validate:sass

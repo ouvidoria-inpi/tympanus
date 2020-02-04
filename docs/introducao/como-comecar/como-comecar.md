@@ -41,7 +41,7 @@ npm install @govbr/dsgov --save
 
 Para informações mais detalhadas sobre Cores, Tipografia, etc acesse o item **Fundamentos Visuais** na navegação principal.
 
-Para uso dos estilos ou criação de novos componentes acesse o item **Boas Práticas** na navegação principal.
+Para criação ou manutenção de páginas, templates ou estilos acesse o item **Boas Práticas** na navegação principal.
 
 ## Componentes
 

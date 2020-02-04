@@ -1,3 +1,4 @@
+
 let listId = 'search-list'
 let listClass = 'search-items'
 let itemActive = 'search-active'
