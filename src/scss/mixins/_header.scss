@@ -797,20 +797,6 @@
       text-align: center;
       text-decoration: underline;
     }
-    // Favorito
-    .bookmark {
-      display: inline-block;
-      margin: ($spacer * 2) 0 0;
-      &:hover {
-        text-decoration: none;
-        .brand {
-          border-color: $color-primary-lighten-2;
-        }
-        .name {
-          color: $color-primary-lighten-2;
-        }
-      }
-    }
   }
 }
 
