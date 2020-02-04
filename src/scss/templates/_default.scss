@@ -1,3 +1,6 @@
+// TODO: Refatorar código
+// stylelint-disable
+
 @supports (display: grid) {
   .template-system,
   .template-site,
@@ -514,3 +517,5 @@ $logo-desktop: 150px;
     width: 100%;
   }
 }
+
+// stylelint-enable

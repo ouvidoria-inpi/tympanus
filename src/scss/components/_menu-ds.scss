@@ -28,6 +28,12 @@
     display: none;
     list-style: none;
     padding: 0;
+    a,
+    button {
+      border-width: 0;
+      color: $color-gray-7;
+      font-size: $font-size-base;
+    }
     .menu-item {
       border-bottom: 1px solid $border-color;
       &:last-child {

@@ -775,6 +775,20 @@
       margin-top: $spacer-half;
       text-align: center;
     }
+    // Favorito
+    .bookmark {
+      display: inline-block;
+      margin: ($spacer * 2) 0 0;
+      &:hover {
+        text-decoration: none;
+        .brand {
+          border-color: $color-primary-lighten-2;
+        }
+        .name {
+          color: $color-primary-lighten-2;
+        }
+      }
+    }
     // Mais opções
     .more {
       font-size: 10px;

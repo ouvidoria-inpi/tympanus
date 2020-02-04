@@ -210,6 +210,9 @@
       display: none;
       flex-flow: column;
     }
+    .arrow {
+      font-size: 12px;
+    }
     .label {
       box-shadow: inset 0 1px 0 $color-primary-pastel-2,
         inset 0 -1px 0 $color-primary-pastel-2;
@@ -243,9 +246,6 @@
     .govbr {
       font-weight: 900;
       letter-spacing: -1px;
-    }
-    .arrow {
-      font-size: 12px;
     }
     // Links
     a {
@@ -340,18 +340,7 @@
               > {
                 .trigger,
                 a {
-                  background: $color-primary-darken-1;
-                  color: $color-white;
-                }
-                .tree {
-                  display: block;
-                  left: 100%;
-                  position: absolute;
-                  > {
-                    .item {
-                      display: flex;
-                    }
-                  }
+                  background: $color-primary;
                 }
               }
             }
@@ -366,9 +355,8 @@
               .tree {
                 display: block;
                 > {
-                  .trigger,
-                  a {
-                    background: $color-primary;
+                  .item {
+                    display: flex;
                   }
                 }
               }
