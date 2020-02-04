@@ -29,6 +29,6 @@ validate_html:
   stage: test
   script: npm run validate:html
 
-validate_sass:
+validate_styles:
   stage: test
-  script: npm run validate:sass
+  script: npm run validate:styles
