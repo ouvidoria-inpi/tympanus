@@ -12,19 +12,13 @@ Acompanhe a evolução dos templates do Design System
     <strong>Em Progresso</strong> - O template está sendo desenvolvido atualmente.
 </p>
 
-<p>
-    <i class="fas fa-sync text-orange"></i>
-    <strong>Em Progresso</strong> - O template está sendo desenvolvido atualmente.
-</p>
-
-
 <div class="br-table">
     <div class="table">
         <table>
             <thead>
                 <tr>
                     <th>Template</th>
-                    <th class="text-center">HTML/CSS2</th>
+                    <th class="text-center">HTML/CSS</th>
                     <th class="text-center">Documentação Desenvolvedor</th>
                     <th class="text-center">Documentação Design</th>
                 </tr>

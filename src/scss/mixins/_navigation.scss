@@ -210,6 +210,9 @@
       display: none;
       flex-flow: column;
     }
+    .arrow {
+      font-size: 12px;
+    }
     .label {
       box-shadow: inset 0 1px 0 $color-primary-pastel-2,
         inset 0 -1px 0 $color-primary-pastel-2;
@@ -243,9 +246,6 @@
     .govbr {
       font-weight: 900;
       letter-spacing: -1px;
-    }
-    .arrow {
-      font-size: 12px;
     }
     // Links
     a {
@@ -301,41 +301,13 @@
             width: 100%;
           }
         }
-        & + .tree {
-          box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
-        }
-      }
-    }
-  }
-  // Versão de sistema
-  &.is-system {
-    .tree {
-      padding: 0 0 ($spacer * 2);
-    }
-    // Desktop
-    @include media-breakpoint-up(md) {
-      .tree {
-        padding: ($spacer * 2) 0;
-        .tree {
-          padding: 0;
+        .item {
           .item {
-            position: relative;
             &:hover {
               > {
                 .trigger,
                 a {
-                  background: $color-primary-darken-1;
-                  color: $color-white;
-                }
-                .tree {
-                  display: block;
-                  left: 100%;
-                  position: absolute;
-                  > {
-                    .item {
-                      display: flex;
-                    }
-                  }
+                  background: $color-primary;
                 }
               }
             }
@@ -350,9 +322,8 @@
               .tree {
                 display: block;
                 > {
-                  .trigger,
-                  a {
-                    background: $color-primary;
+                  .item {
+                    display: flex;
                   }
                 }
               }
@@ -586,18 +557,6 @@
   .menu {
     position: relative;
     z-index: 1;
-    .trigger {
-      align-items: baseline;
-      display: inline-flex;
-      padding: 0;
-      &:hover {
-        .arrow {
-          &::after {
-            background: $color-primary-pastel-1;
-          }
-        }
-      }
-    }
     .arrow {
       align-items: center;
       display: inline-flex;
@@ -612,6 +571,18 @@
         position: absolute;
         width: 16px;
         z-index: -1;
+      }
+    }
+    .trigger {
+      align-items: baseline;
+      display: inline-flex;
+      padding: 0;
+      &:hover {
+        .arrow {
+          &::after {
+            background: $color-primary-pastel-1;
+          }
+        }
       }
     }
     .items {
