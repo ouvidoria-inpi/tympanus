@@ -3,41 +3,6 @@
   padding: 0;
   position: relative;
   z-index: 1;
-  .submenu {
-    display: none;
-    list-style: none;
-    padding: 0;
-    .menu-item {
-      border-bottom: 1px solid $border-color;
-      &:last-child {
-        border-width: 0;
-      }
-    }
-    .submenu {
-      border-top: 1px solid $border-color;
-      a,
-      button {
-        padding-left: $spacer * 4.5;
-      }
-    }
-    a,
-    button {
-      border-width: 0;
-      color: $color-gray-7;
-      font-size: $font-size-base;
-    }
-    [class*="fa-"] {
-      color: $color-gray-5;
-    }
-  }
-  .is-open {
-    [class*="fa-"] {
-      transform: rotate(180deg);
-    }
-    & + .submenu {
-      display: block;
-    }
-  }
   a,
   button {
     background: transparent;
@@ -58,6 +23,41 @@
   }
   [class*="fa-"] {
     margin-top: $spacer-half;
+  }
+  .submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    .menu-item {
+      border-bottom: 1px solid $border-color;
+      &:last-child {
+        border-width: 0;
+      }
+    }
+    a,
+    button {
+      border-width: 0;
+      color: $color-gray-7;
+      font-size: $font-size-base;
+    }
+    .submenu {
+      border-top: 1px solid $border-color;
+      a,
+      button {
+        padding-left: $spacer * 4.5;
+      }
+    }
+    [class*="fa-"] {
+      color: $color-gray-5;
+    }
+  }
+  .is-open {
+    [class*="fa-"] {
+      transform: rotate(180deg);
+    }
+    & + .submenu {
+      display: block;
+    }
   }
   .is-active {
     background-color: $color-primary-lighten-2 !important;

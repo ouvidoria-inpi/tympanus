@@ -562,17 +562,6 @@
   .menu {
     position: relative;
     z-index: 1;
-    .trigger {
-      align-items: baseline;
-      display: inline-flex;
-      &:hover {
-        .arrow {
-          &::after {
-            background: $color-primary-pastel-1;
-          }
-        }
-      }
-    }
     .arrow {
       align-items: center;
       display: inline-flex;
@@ -587,6 +576,17 @@
         position: absolute;
         width: 16px;
         z-index: -1;
+      }
+    }
+    .trigger {
+      align-items: baseline;
+      display: inline-flex;
+      &:hover {
+        .arrow {
+          &::after {
+            background: $color-primary-pastel-1;
+          }
+        }
       }
     }
     .items {
@@ -759,20 +759,6 @@
         padding: 0;
       }
     }
-    // Favorito
-    .bookmark {
-      display: inline-block;
-      margin: ($spacer * 2) 0 0;
-      &:hover {
-        text-decoration: none;
-        .brand {
-          border-color: $color-primary-lighten-2;
-        }
-        .name {
-          color: $color-primary-lighten-2;
-        }
-      }
-    }
     // Marca
     .brand {
       background: $color-gray-1;
@@ -796,6 +782,20 @@
       margin: ($spacer * 2) 0;
       text-align: center;
       text-decoration: underline;
+    }
+    // Favorito
+    .bookmark {
+      display: inline-block;
+      margin: ($spacer * 2) 0 0;
+      &:hover {
+        text-decoration: none;
+        .brand {
+          border-color: $color-primary-lighten-2;
+        }
+        .name {
+          color: $color-primary-lighten-2;
+        }
+      }
     }
   }
 }
