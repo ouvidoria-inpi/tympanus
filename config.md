@@ -20,6 +20,6 @@ Nome do arquivo no sistema de arquivos.
 
 Contém um array com todos os filhos daquele objeto.
 
-## urllabel
+## urlLabel
 
 Url que vai aparecer no browser. É um alias para o folder, assim podemos colocar as urls em português mesmo que os arquivos no sistema de arquivos estejam em inglês.

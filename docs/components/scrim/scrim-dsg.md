@@ -1,4 +1,4 @@
-![Exemplo de Scrim](images/scrim-zoom.png)
+![Exemplo de Scrim](images/scrim_zoom.png)
 
 ## Uso
 
