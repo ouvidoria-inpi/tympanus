@@ -1,9 +1,9 @@
-scrim = document.getElementsByClassName("is-foco")[0];
-
 function on() {
-    scrim.classList.add("is-active");
-  }
-  
+  scrim = document.getElementsByClassName('is-foco')[0]
+  scrim.classList.add('is-active')
+}
+
 function off() {
-    scrim.classList.remove("is-active");
+  scrim = document.getElementsByClassName('is-foco')[0]
+  scrim.classList.remove('is-active')
 }
