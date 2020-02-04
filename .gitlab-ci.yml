@@ -23,6 +23,7 @@ install_dependencies:
   artifacts:
     paths:
       - node_modules/
+      - dist/
 
 validate_html:
   stage: test
