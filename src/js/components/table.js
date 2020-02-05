@@ -82,16 +82,28 @@ function cloneHeader ( parent, element ) {
 	parent.appendChild( headersTag );
 }
 
-function checkAll ( element ) {
+function checkAll ( element, selectedBar ) {
 	let headerCheckbox = element.querySelector(
 		".headers [name='check'] [type='checkbox']"
 	);
 	let tableCheckboxes = element.querySelectorAll(
-		"table [name='check'] [type='checkbox']"
+		"tbody [name='check'] [type='checkbox']"
 	);
+	
+	if ( tableCheckboxes ) {
+		for ( let checkbox of tableCheckboxes ) {
+			checkbox.addEventListener( "click", function () { 
+				countSelected( checkbox.checked ? 1 : -1, selectedBar, tableCheckboxes) 
+				if (!checkbox.checked) {
+					headerCheckbox.checked = false;
+				}
+			} )
+		}
+	}
 
 	if ( headerCheckbox ) {
 		headerCheckbox.addEventListener( "click", function () {
+			count = tableCheckboxes.length;
 			if ( headerCheckbox.checked ) {
 				for ( let checkbox of tableCheckboxes ) {
 					checkbox.checked = true;
@@ -100,8 +112,38 @@ function checkAll ( element ) {
 				for ( let checkbox of tableCheckboxes ) {
 					checkbox.checked = false;
 				}
+				count = -1 * count;
 			}
+			countSelected(count, selectedBar, tableCheckboxes, headerCheckbox)
 		} );
+	}
+}
+
+function countSelected( count, selectedBar, tableCheckboxes, headerCheckbox ) {
+	let info_count = selectedBar.querySelector(".info .count");
+	let info_text = selectedBar.querySelector(".info .text");
+	let info_select_all = selectedBar.querySelector(".info .select-all");
+	let total = count < 2 ? parseInt(info_count.innerHTML, 10) + count : count;
+	
+	info_select_all.addEventListener( "click", function () { 
+		for ( let checkbox of tableCheckboxes ) {
+			checkbox.checked = false;
+		}
+		if ( headerCheckbox ) headerCheckbox.checked = false;
+		selectedBar.classList.remove("is-active");
+		total = 0;
+		info_count.innerHTML = total;
+		info_text.innerHTML = total > 1 ? "itens selecionados" : "item selecionado" 
+	});
+
+	if ( total > 0 ) {
+		selectedBar.classList.add("is-active");
+		info_count.innerHTML = total;
+		info_text.innerHTML = total > 1 ? "itens selecionados" : "item selecionado" 
+	}
+	else {
+		selectedBar.classList.remove("is-active");
+		info_count.innerHTML = 0;
 	}
 }
 
@@ -109,6 +151,7 @@ for ( let brTable of brTables ) {
 	let searchBar = brTable.querySelector( ".search-bar" );
 	let searchTrigger = brTable.querySelector( ".search-trigger" );
 	let searchClose = brTable.querySelector( ".search-close" );
+	let selectedBar = brTable.querySelector( ".selected-bar" );
 	let responsive = brTable.querySelector( ".responsive" );
 	let headers = brTable.querySelector( "table thead tr" );
 	let rows = brTable.querySelectorAll( "table tbody tr" );
@@ -119,7 +162,7 @@ for ( let brTable of brTables ) {
 	cloneHeader( brTable, headers );
 	setHeaderWidth( brTable, headers );
 	toogleSearch( searchBar, searchTrigger, searchClose );
-	checkAll( brTable );
+	checkAll( brTable, selectedBar );
 	hoverRow( rows );
 
 	window.addEventListener( "resize", function () {
