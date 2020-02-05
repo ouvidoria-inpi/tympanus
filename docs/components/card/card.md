@@ -1,0 +1,2 @@
+Card Design, geralmente apresentados em formatos retangulares, contém informações resumidas, relevantes, interativas e de rápida compreensão, devem ser usados para selecionar um ou mais itens de um conjunto de opções. São muito utilizados como elementos de seleção simultânea.
+Os cards devem ser fáceis de verificar informações relevantes e acionáveis. Elementos, como texto e imagens, devem ser colocados sobre eles de maneira a indicar claramente a hierarquia.
