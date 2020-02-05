@@ -77,6 +77,8 @@
 		"webpack-concat-plugin": "^3.0.0"
 	},
 	"husky": {
-		"hooks": {}
+		"hooks": {
+			"pre-push": "npm test"
+		}
 	}
 }
