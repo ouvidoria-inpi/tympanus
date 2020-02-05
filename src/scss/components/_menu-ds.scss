@@ -59,27 +59,6 @@
       display: block;
     }
   }
-  a,
-  button {
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid $color-primary;
-    color: $color-primary;
-    display: flex;
-    font-size: $font-size-base * 1.25;
-    font-weight: 400;
-    justify-content: space-between;
-    padding: $spacer ($spacer * 2);
-    text-align: left;
-    width: 100%;
-    &:hover {
-      background: $color-primary-pastel-02;
-      text-decoration: none;
-    }
-  }
-  [class*="fa-"] {
-    margin-top: $spacer-half;
-  }
   .is-active {
     background-color: $color-primary-lighten-01 !important;
     color: $color-secondary-01 !important;

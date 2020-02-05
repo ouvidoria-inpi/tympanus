@@ -1,3 +1,6 @@
+// TODO: Refatorar código
+// stylelint-disable
+
 @supports (display: grid) {
   .template-system,
   .template-site,
@@ -526,6 +529,7 @@ $logo-desktop: 150px;
 }
 
 // Rodape
+// stylelint-disable no-descending-specificity
 .page-footer {
   position: relative;
   a {
@@ -633,6 +637,7 @@ $logo-desktop: 150px;
     text-align: center;
   }
 }
+// stylelint-enable no-descending-specificity
 
 // Ajustes para sistemas
 [data-type="system"] {
@@ -851,6 +856,7 @@ $logo-desktop: 150px;
     }
   }
   // Rodape
+  // stylelint-disable no-descending-specificity
   .page-footer {
     // Navegação
     .navigation {
@@ -870,20 +876,20 @@ $logo-desktop: 150px;
         flex: 0 0 16.66667%;
         padding-right: ($spacer * 2);
         width: auto;
-        &:hover,
-        &:active {
-          > a,
-          > button {
-            background: transparent;
-            font-weight: 800;
-          }
-        }
         > a,
         > button {
           display: inline-block;
           width: auto;
           &:hover {
             text-decoration: underline;
+          }
+        }
+        &:hover,
+        &:active {
+          > a,
+          > button {
+            background: transparent;
+            font-weight: 800;
           }
         }
         .item {
@@ -926,6 +932,7 @@ $logo-desktop: 150px;
       text-align: right;
     }
   }
+  // stylelint-enable no-descending-specificity
   // Ajustes para sistemas
   [data-type="system"] {
     // Barra do cabeçalho
@@ -1131,3 +1138,5 @@ $logo-desktop: 150px;
     width: 100%;
   }
 }
+
+// stylelint-enable

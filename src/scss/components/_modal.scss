@@ -72,10 +72,6 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     padding: 0 ($spacer * 2);
     resize: none;
     width: auto;
-    &:focus,
-    &:active {
-      outline: none;
-    }
     &::-webkit-scrollbar {
       width: 8px;
     }
@@ -84,6 +80,10 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     }
     &::-webkit-scrollbar-thumb {
       background: $color-secondary-06;
+    }
+    &:focus,
+    &:active {
+      outline: none;
     }
     &:hover {
       &::-webkit-scrollbar-thumb {

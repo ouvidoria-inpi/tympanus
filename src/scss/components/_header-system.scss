@@ -197,7 +197,6 @@
           display: flex;
           margin: (-$spacer) (-($spacer * 2));
           > * {
-            // sass-lint:disable-line no-universal-selectors
             flex: 1;
             &:not(:last-child) {
               border-right: 1px solid $color-secondary-03;

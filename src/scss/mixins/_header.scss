@@ -562,17 +562,6 @@
   .menu {
     position: relative;
     z-index: 1;
-    .trigger {
-      align-items: baseline;
-      display: inline-flex;
-      &:hover {
-        .arrow {
-          &::after {
-            background: $color-primary-pastel-02;
-          }
-        }
-      }
-    }
     .arrow {
       align-items: center;
       display: inline-flex;
@@ -768,20 +757,6 @@
       padding: 0 ($spacer * 2);
       .item {
         padding: 0;
-      }
-    }
-    // Favorito
-    .bookmark {
-      display: inline-block;
-      margin: ($spacer * 2) 0 0;
-      &:hover {
-        text-decoration: none;
-        .brand {
-          border-color: $color-primary-lighten-01;
-        }
-        .name {
-          color: $color-primary-lighten-01;
-        }
       }
     }
     // Marca
