@@ -161,6 +161,24 @@ $column-gap: 6px;
     display: block;
     tr {
       display: block;
+      &.is-selected {
+        background: $color-primary-lighten-2;
+        color: $color-white;
+        &:hover{
+          background: $color-primary-lighten-2;
+          color: $color-white;
+        }
+        td {
+          color: $color-white;
+          text-overflow: ellipsis;
+          &:hover{
+            color: $color-white;
+            }
+          &:before {
+            color: $color-white !important;
+          }
+        }
+      }
     }
     th {
       color: $color-primary-darken-1;
@@ -257,6 +275,10 @@ $column-gap: 6px;
         min-width: 32px;
         padding: 1px 0px;
         width: 32px;
+        &:hover, &:focus {
+          background-color: transparent !important;
+          border-color:  transparent !important;
+        }
         span {
           display: none;
         }

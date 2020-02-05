@@ -94,6 +94,25 @@
       }
     }
   }
+  &.is-checking {
+    input[type="checkbox"] {
+      & + label::before {
+        background: $color-primary-lighten-2;
+        border-color: $color-primary-lighten-2;
+      }
+      & + label::after {
+        border: solid $color-white;
+        border-width: 0 3px 3px 0;
+        content: "";
+        height: 3px;
+        left: 6px;
+        position: absolute;
+        top: 11px;
+        transform: rotate(0);
+        width: 12px;
+      }
+    }
+  }
   // Invertido
   &.is-inverted {
     input[type="checkbox"] {
