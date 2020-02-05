@@ -4,4 +4,3 @@ collapseList.forEach(function(collapse) {
 		  this.classList.toggle("is-open")
   })
 })
-
