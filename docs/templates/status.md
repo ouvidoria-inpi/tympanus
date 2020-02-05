@@ -12,100 +12,10 @@ Acompanhe a evolução dos templates do Design System
     <strong>Em Progresso</strong> - O template está sendo desenvolvido atualmente.
 </p>
 
-<p>
-    <i class="fas fa-sync text-orange"></i>
-    <strong>Em Progresso</strong> - O template está sendo desenvolvido atualmente.
-</p>
-
-
-<div class="br-table">
-    <div class="table">
-        <table>
-            <thead>
-                <tr>
-                    <th>Template</th>
-                    <th class="text-center">HTML/CSS2</th>
-                    <th class="text-center">Documentação Desenvolvedor</th>
-                    <th class="text-center">Documentação Design</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="/ds/templates/login">Login</a></td>
-                    <td class="text-center">
-                        <i class="fas fa-check text-success"></i
-                        ><span class="sr-only">Acessível</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-sync text-orange"></i
-                        ><span class="sr-only">Em Progresso</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-check text-success"></i
-                        ><span class="sr-only">Acessível</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="/ds/templates/signin">Cadastro de Usuário</a></td>
-                    <td class="text-center">
-                        <i class="fas fa-check text-success"></i
-                        ><span class="sr-only">Acessível</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-sync text-orange"></i
-                        ><span class="sr-only">Em Progresso</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-check text-success"></i
-                        ><span class="sr-only">Acessível</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="/ds/templates/page">Tela interna para Sistemas</a></td>
-                    <td class="text-center">
-                        <i class="fas fa-check text-success"></i
-                        ><span class="sr-only">Acessível</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-sync text-orange"></i
-                        ><span class="sr-only">Em Progresso</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-check text-success"></i
-                        ><span class="sr-only">Acessível</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="/ds/templates/crud">Formulário para Sistemas</a></td>
-                    <td class="text-center">
-                        <i class="fas fa-check text-success"></i
-                        ><span class="sr-only">Acessível</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-sync text-orange"></i
-                        ><span class="sr-only">Em Progresso</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-sync text-orange"></i
-                        ><span class="sr-only">Em Progresso</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="/ds/templates/not-found">Tela de Erro para Sistemas</a></td>
-                    <td class="text-center">
-                        <i class="fas fa-check text-success"></i
-                        ><span class="sr-only">Acessível</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-sync text-orange"></i
-                        ><span class="sr-only">Em Progresso</span>
-                    </td>
-                    <td class="text-center">
-                        <i class="fas fa-sync text-orange"></i
-                        ><span class="sr-only">Em Progresso</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+| Template                                              |  <div class="text-center">HTML/CSS</div>  | <div class="text-center">Documentação Desenvolvedor</div> | <div class="text-center">Documentação Design</div> |
+| ----------------------------------------------------- | :---------------------------------------: | :-------------------------------------------------------: | :------------------------------------------------: |
+| [Login](/ds/templates/login)                          | <i class="fas fa-check text-success"></i> |          <i class="fas fa-sync text-orange"></i>          |     <i class="fas fa-check text-success"></i>      |
+| [Cadastro de Usuário](/ds/templates/signin)           | <i class="fas fa-check text-success"></i> |          <i class="fas fa-sync text-orange"></i>          |     <i class="fas fa-check text-success"></i>      |
+| [Tela interna para Sistemas](/ds/templates/page)      | <i class="fas fa-check text-success"></i> |          <i class="fas fa-sync text-orange"></i>          |     <i class="fas fa-check text-success"></i>      |
+| [Formulário para Sistemas](/ds/templates/crud)        | <i class="fas fa-check text-success"></i> |          <i class="fas fa-sync text-orange"></i>          |      <i class="fas fa-sync text-orange"></i>       |
+| [Tela de Erro para Sistemas](/ds/templates/not-found) | <i class="fas fa-check text-success"></i> |          <i class="fas fa-sync text-orange"></i>          |      <i class="fas fa-sync text-orange"></i>       |

@@ -112,7 +112,7 @@
     &.is-active {
       left: 0;
       .field {
-        box-shadow: 0 3px 6px rgba($color-black, 0.16); // sass-lint:disable-line no-color-literals
+        box-shadow: 0 3px 6px rgba($color-black, 0.16);
         left: 0;
         position: absolute;
         right: 0;

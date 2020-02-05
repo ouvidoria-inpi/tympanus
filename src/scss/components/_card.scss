@@ -48,7 +48,7 @@
     &::after {
       color: $color-primary-lighten-2;
       content: "\f062";
-      font-family: Font Awesome\ 5 Free;
+      font-family: Font Awesome\5 Free; // stylelint-disable-line font-family-no-missing-generic-family-keyword
       font-size: 20px;
       font-weight: 900;
       position: absolute;

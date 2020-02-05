@@ -92,7 +92,7 @@
   {
     "label": "Componentes",
     "id": "components",
-    "urllabel": "componentes",
+    "urlLabel": "componentes",
     "type": "component",
     "children": [
       {
@@ -103,127 +103,127 @@
       {
         "label": "Abas",
         "filename": "tabs",
-        "urllabel": "abas"
+        "urlLabel": "abas"
       },
       {
         "label": "Acordeão",
         "filename": "accordeon",
-        "urllabel": "acordeao"
+        "urlLabel": "acordeao"
       },
       {
         "label": "Badge",
         "filename": "badge",
-        "urllabel": "badge"
+        "urlLabel": "badge"
       },
       {
         "label": "Botão",
         "filename": "button",
-        "urllabel": "botao"
+        "urlLabel": "botao"
       },
       {
         "label": "Busca",
         "filename": "search",
-        "urllabel": "busca"
+        "urlLabel": "busca"
       },
       {
         "label": "Cabeçalho",
         "filename": "header",
-        "urllabel": "cabecalho"
+        "urlLabel": "cabecalho"
       },
       {
         "label": "Card",
         "filename": "card",
-        "urllabel": "card"
+        "urlLabel": "card"
       },
       {
         "label": "Checkbox",
         "filename": "checkbox",
-        "urllabel": "checkbox"
+        "urlLabel": "checkbox"
       },
       {
         "label": "Checklist",
         "filename": "checklist",
-        "urllabel": "checklist"
+        "urlLabel": "checklist"
       },
       {
         "label": "Datepicker",
         "filename": "datepicker",
-        "urllabel": "datepicker"
+        "urlLabel": "datepicker"
       },
       {
         "label": "Divider",
         "filename": "divider",
-        "urllabel": "divisor"
+        "urlLabel": "divisor"
       },
       {
         "label": "Formulário",
         "filename": "form",
-        "urllabel": "form"
+        "urlLabel": "form"
       },
       {
         "label": "Input",
         "filename": "input",
-        "urllabel": "input"
+        "urlLabel": "input"
       },
       {
         "label": "Mensagem",
         "filename": "message",
-        "urllabel": "mensagem"
+        "urlLabel": "mensagem"
       },
       {
         "label": "Migalha de Pão",
         "filename": "breadcrumb",
-        "urllabel": "migalha-de-pao"
+        "urlLabel": "migalha-de-pao"
       },
       {
         "label": "Modal",
         "filename": "modal",
-        "urllabel": "modal"
+        "urlLabel": "modal"
       },
       {
         "label": "Navegagação",
         "filename": "navigation",
-        "urllabel": "navegacao"
+        "urlLabel": "navegacao"
       },
       {
         "label": "Paginação",
         "filename": "pagination",
-        "urllabel": "paginacao"
+        "urlLabel": "paginacao"
       },
       {
         "label": "Portlet",
         "filename": "portlet",
-        "urllabel": "portlet"
+        "urlLabel": "portlet"
       },
       {
         "label": "Radio button",
         "filename": "radio",
-        "urllabel": "radio"
+        "urlLabel": "radio"
       },
       {
         "label": "Scrim",
         "filename": "scrim",
-        "urllabel": "scrim"
+        "urlLabel": "scrim"
       },
       {
         "label": "Select",
         "filename": "select",
-        "urllabel": "select"
+        "urlLabel": "select"
       },
       {
         "label": "Tabela",
         "filename": "table",
-        "urllabel": "tabela"
+        "urlLabel": "tabela"
       },
       {
         "label": "Textarea",
         "filename": "textarea",
-        "urllabel": "textarea"
+        "urlLabel": "textarea"
       },
       {
         "label": "Upload",
         "filename": "upload",
-        "urllabel": "upload"
+        "urlLabel": "upload"
       }
     ]
   },
@@ -235,7 +235,7 @@
       {
         "label": "Status Atual dos Templates",
         "filename": "status",
-        "urllabel": "status",
+        "urlLabel": "status",
         "type": "docs"
       },
       {
@@ -244,27 +244,27 @@
           {
             "label": "Cadastro de usuário - Início do Cadastro",
             "filename": "signin",
-            "urllabel": "signin"
+            "urlLabel": "signin"
           },
           {
             "label": "Cadastro de usuário - Ativação da Conta",
             "filename": "signin-1",
-            "urllabel": "signin-1"
+            "urlLabel": "signin-1"
           },
           {
             "label": "Cadastro de usuário - Verificação do código recebido",
             "filename": "signin-1",
-            "urllabel": "signin-1"
+            "urlLabel": "signin-1"
           },
           {
             "label": "Cadastro de usuário - Correção do número do celular",
             "filename": "signin-3",
-            "urllabel": "signin-3"
+            "urlLabel": "signin-3"
           },
           {
             "label": "Cadastro de usuário - Conclusão do Cadastro",
             "filename": "signin-4",
-            "urllabel": "signin-4"
+            "urlLabel": "signin-4"
           }
         ]
       },
@@ -274,27 +274,27 @@
           {
             "label": "Recuperação de Senha - Com Lista de Opções",
             "filename": "password",
-            "urllabel": "password"
+            "urlLabel": "password"
           },
           {
             "label": "Recuperação de Senha - Pelo Celular",
             "filename": "password-1",
-            "urllabel": "password-1"
+            "urlLabel": "password-1"
           },
           {
             "label": "Recuperação de Senha - Campo com Validação",
             "filename": "password-2",
-            "urllabel": "password-2"
+            "urlLabel": "password-2"
           },
           {
             "label": "Recuperação de Senha - Precisa de Ajuda?",
             "filename": "password-3",
-            "urllabel": "password-3"
+            "urlLabel": "password-3"
           },
           {
             "label": "Recuperação de Senha - Mudar Senha",
             "filename": "password-4",
-            "urllabel": "password-4"
+            "urlLabel": "password-4"
           }
         ]
       },
@@ -304,7 +304,7 @@
           {
             "label": "Template base",
             "filename": "system",
-            "urllabel": "system"
+            "urlLabel": "system"
           }
         ]
       },
@@ -314,43 +314,18 @@
           {
             "label": "Sites e portais - Template base",
             "filename": "site",
-            "urllabel": "site"
+            "urlLabel": "site"
           },
           {
             "label": "Sites e portais - Mobile",
             "filename": "site-mobile",
-            "urllabel": "site-mobile"
+            "urlLabel": "site-mobile"
           }
         ]
       },
       {
-        "label": "Template CRUD para Portais",
-        "children": [
-          {
-            "label": "Template CRUD para Portais - Tela de Criação (Cadastro)",
-            "filename": "crud"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Filtragem com Colapse",
-            "filename": "crud-2"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Pesquisa com Mensagem de Alerta",
-            "filename": "crud-3"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Busca com Auto-Complete",
-            "filename": "crud-4"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Visualização de Dados Cadastrados",
-            "filename": "crud-5"
-          },
-          {
-            "label": "Template CRUD para Portais - Tela de Edição de Dados Cadastrados",
-            "path": "crud-6"
-          }
-        ]
+        "label": "Exemplo de CRUD",
+        "filename": "crud"
       },
       {
         "label": "Tela de erro para Sistemas",
@@ -358,19 +333,19 @@
           {
             "label": "Tela de erro para Sistemas - Com opção de busca",
             "filename": "not-found-1",
-            "urllabel": "not-found-1"
+            "urlLabel": "not-found-1"
           },
           {
             "label": "Tela de erro para Sistemas - Padrão",
             "filename": "not-found-2",
-            "urllabel": "not-found-2"
+            "urlLabel": "not-found-2"
           }
         ]
       },
       {
         "label": "Login",
         "filename": "login",
-        "urllabel": "login"
+        "urlLabel": "login"
       }
     ]
   }

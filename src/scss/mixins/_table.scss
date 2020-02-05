@@ -51,6 +51,12 @@
       }
       // Linha marcada
       &.is-active {
+        th,
+        td {
+          background: $color-primary-lighten-1;
+          border-color: $color-primary-lighten-1;
+          color: $color-white;
+        }
         &:hover {
           background: inherit;
           th,
@@ -59,22 +65,14 @@
             color: $color-white;
           }
         }
-        th,
-        td {
-          background: $color-primary-lighten-1;
-          border-color: $color-primary-lighten-1;
-          color: $color-white;
-        }
         .collapse,
         .actions {
           > * {
-            // sass-lint:disable-line no-universal-selectors
             color: $color-white;
           }
         }
         .br-check {
           input[type="checkbox"]:checked + label {
-            // sass-lint:disable-line force-attribute-nesting, force-pseudo-nesting
             &::before {
               background: $color-white;
               border-color: $color-white;
