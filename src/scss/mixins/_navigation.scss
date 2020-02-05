@@ -301,8 +301,41 @@
             width: 100%;
           }
         }
-        .item {
+        & + .tree {
+          box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
+        }
+      }
+    }
+  }
+  // Versão de sistema
+  &.is-system {
+    .tree {
+      padding: 0 0 $spacer * 2;
+    }
+    // Desktop
+    @include media-breakpoint-up(md) {
+      .tree {
+        padding: $spacer * 2 0;
+        .tree {
+          padding: 0;
+          .tree {
+            .item {
+              white-space: nowrap;
+            }
+          }
           .item {
+            position: relative;
+            .item {
+              background: $color-gray-1;
+              &:hover {
+                > {
+                  .trigger,
+                  a {
+                    background: $color-primary;
+                  }
+                }
+              }
+            }
             &:hover {
               > {
                 .trigger,
@@ -332,59 +365,6 @@
         }
         & + .tree {
           box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
-        }
-      }
-    }
-  }
-  // Versão de sistema
-  &.is-system {
-    .tree {
-      padding: 0 0 $spacer * 2;
-    }
-    // Desktop
-    @include media-breakpoint-up(md) {
-      .tree {
-        padding: $spacer * 2 0;
-        .tree {
-          padding: 0;
-          .item {
-            position: relative;
-            &:hover {
-              > {
-                .trigger,
-                a {
-                  background: $color-primary-darken-1;
-                  color: $color-white;
-                }
-                .tree {
-                  display: block;
-                  left: 100%;
-                  position: absolute;
-                  > {
-                    .item {
-                      display: flex;
-                    }
-                  }
-                }
-              }
-            }
-            .item {
-              background: $color-gray-1;
-              &:hover {
-                > {
-                  .trigger,
-                  a {
-                    background: $color-primary;
-                  }
-                }
-              }
-            }
-          }
-          .tree {
-            .item {
-              white-space: nowrap;
-            }
-          }
         }
       }
     }
@@ -587,7 +567,7 @@
     }
     .items {
       background: $color-white;
-      box-shadow: 0 3px 6px rgba($color-black, 0.22); // sass-lint:disable-line no-color-literals
+      box-shadow: 0 3px 6px rgba($color-black, 0.22);
       display: none;
       position: absolute;
     }

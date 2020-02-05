@@ -68,13 +68,11 @@
         .collapse,
         .actions {
           > * {
-            // sass-lint:disable-line no-universal-selectors
             color: $color-white;
           }
         }
         .br-check {
           input[type="checkbox"]:checked + label {
-            // sass-lint:disable-line force-attribute-nesting, force-pseudo-nesting
             &::before {
               background: $color-white;
               border-color: $color-white;
