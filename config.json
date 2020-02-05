@@ -211,6 +211,11 @@
         "urlLabel": "select"
       },
       {
+        "label": "Tag",
+        "filename": "tag",
+        "urlLabel": "tag"
+      },
+      {
         "label": "Tabela",
         "filename": "table",
         "urlLabel": "tabela"
@@ -219,6 +224,11 @@
         "label": "Textarea",
         "filename": "textarea",
         "urlLabel": "textarea"
+      },
+      {
+        "label": "Tooltip",
+        "filename": "tooltip",
+        "urlLabel": "tooltip"
       },
       {
         "label": "Upload",

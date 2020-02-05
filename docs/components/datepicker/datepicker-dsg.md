@@ -1,70 +1,133 @@
-## Orientação de Uso
+## Versão Simples
 
-![Datepicker_Orientação](images/datepicker-orientacao.png)
+A versão simples consiste basicamente em um campo input para inserção da data de forma manual ou por meio de um calendário que será disponibilizado ao usuário por meio de clique no ícone calendário.
 
-### 1 | Rótulos
+![Estrutura](imagens/00_Datepicker.png)
 
-Devem ser acompanhados de rótulos que descrevam as datas que o usuário deve digitar.
+## Versão com Data Inicial e Data Final
 
-### 2 | Placeholder
+Na versão Data Inicial / Data Final o usuário deve preencher os dois campos concomitantemente. No calendário de data final, os dias anteriores à data inicial selecionada ficam desabilitados. Este é um recurso de prevenção de erro e consta nas heurísticas de Nielsen.
 
-A máscara tem a função de auxiliar o usuário em como preencher as datas solicitadas. dd (significa dia) mm (mês) e aaaa (o ano). A máscara desaparece ao se começar a digitar no campo. E retorna no caso de exclusão da informação.
+![Estrutura](imagens/03_Versao-Data-Inicial-Final.png)
 
-### 3 | Ícones
+## Versão com Intervalo de Data
 
-Alguns também podem ter um ícone no canto direito. Por exemplo: o input de senha com o ícone de mostrar/ocultar a senha.
+Na versão Intervalo de Data o usuário seleciona a data inicial e ao movimentar o ponteiro do mouse o calendário vai selecionando os dias subsequentes até que o usuário clique na data final. Desta forma, uma sequência de datas É selecionada.
 
-## Rótulo e Informações Adicionais
+![Estrutura](imagens/04_Versao-Intervalo.png)
 
-Sempre que possível o rótulo do campo de data deve ser o mais sucinto e claro possível, Entretanto, quando necessário, ele também pode exibir um texto com informações adicionais para auxiliar o preenchimento.
+## Versão Sugestão de Data Usuais
 
-### Data Picker com texto auxiliar ao preenchimento
+Na versão Sugestão de Datas Usuais o usuário recebe alguns atalhos para as datas mais comuns. Ao clicar em alguns desses atalhos o input já é preenchido automaticamente. Estas datas mais comuns podem ser sugeridas pelo uso do usuário ou fixas no componente
 
-![Datepicker_Texto_Auxiliar](images/datepicker-texto-auxiliar.png)
+![Estrutura](imagens/05_Versao-Sugestao-Datas.png)
 
-## Mensagens de Feedback Contextual
+# Estados
 
-### Mensagens de Erro
+## Estado Normal
 
-A mensagem de erro (feedback contextual) deve ser o mais sucinta possível, de preferência não ultrapassando uma linha da mesma largura do campo de texto.
-Essas validações dos campos de texto deve exibir a mensagem de suporte abaixo do campo, juntamente com o ícone correspondente.
+No estado Normal os elementos seguem as especificações padrão.
 
-![Datepicker_Mensagem_Erro](images/datepicker-mensagem-erro.png)
+![Estrutura](imagens/06_Estado-Normal.png)
 
-### Mensagens de Alerta
+## Estado Hover
 
-Mensagens de Alerta Se houver necessidade poderá aparecer um tooltip com mais Alguma informação complementar ao preenchimento dos campos.
+No estado Hover os elementos seguem as seguintes especificações:
 
-![Datepicker_Mensagem_Alerta](images/datepicker-mensagem-alerta.png)
+![Estrutura](imagens/07_Estado-Hover.png)
 
-## Funcionalidade do Datepicker
+1 |
+Background: #DBE8FB
+Texto: #1351B4
+Peso da Fonte: Semibold
 
-![Datepicker_Funcionalidades_1](images/datepicker-funcionalidades-1.png)
+2 |
+Background: #2670E8
+Texto: #FFFFFF
+Peso da Fonte: Medium
 
-![Datepicker_Funcionalidades_2](images/datepicker-funcionalidades-2.png)
+3 |
+Background: #DBE8FB
+Texto: #1351B4
+Peso da Fonte: Semibold
 
-## Estados
+## Estado Focus
 
-Os campos de data seguem o mesmo comportamento do input, quando está sendo acionado. O contorno aumenta a espessura para 2px e o mesmo assume a cor azul #2B74E9, sinalizando ao usuário onde ele se encontra.
+O estado Focus dos campos input do Datepicker seguem as mesmas especificações do campo input.
 
-![Datepicker_Estado](images/datepicker-estado.png)
+## Estado Disable
 
-## Anatomia
+No estado Disable as datas do campo Data final não podem ser anteriores à data selecionada no campo Data inicial e por isso são apresentadas desabilitadas a fim de evitar erro do usuário. Os dias desabilitados seguem as seguintes especificações:
 
-São elementos usados pelos usuários para selecionar uma ou mais datas.
+![Estrutura](imagens/08_Estado-Disable.png)
 
-### Tipografia e Cor
+1 |
+Texto: #C5D4EB
+Peso da Fonte: Medium
 
-![Datepicker_Tipografia](images/datepicker-tipografia.png)
+---
 
-## Hover
+# Estrutura
 
-Ao passar o mouse em cima dos meses/anos, aparecerá um background de cantos arredondados nas extremidades e cor #DBE7FC.
+![Estrutura](imagens/01_Estrutura-Basica.png)
 
-![Datepicker_Hover](images/datepicker-hover.png)
+#### 1 | Campo de Inserção de Datas
 
-## Espaçamentos
+Campo de input para inserção da data de forma manual ou por meio da funcionalidade de calendário, acionada por meio de click no ícone calendário.
 
-Segue as métricas definidas para os espaçamentos de todos os elementos utilizados no componente imput.. Todas as medidas foram definidas com valores múltiplos de 4px e 8px.
+#### 2 | Mês e Ano Atuais
 
-![Datepicker_Espaçamento](images/datepicker-espacamento.png)
+O calendário apresenta o mês e ano atuais e setas para navegação entre os meses de forma linear.
+
+#### 3 | Dias da Semana
+
+O Calendário deve apresentar os dias da semana referentes ao mês selecionado.
+
+#### 4 | Dia do Mês
+
+O Calendário deve apresentar os dias do mês selecionado.
+
+#### 5 | Dia Atual
+
+O dia atual destacado.
+
+#### 6 | Hover
+
+O efeito hover é apresentado ao passar o ponteiro do mouse sobre as datas do calendário.
+
+#### 7 | Dias Desabilitados
+
+Os dias desabilitado é apresentados em tonalidade mais clara.
+
+---
+
+## Versão Mobile e Responsividade
+
+Nos dispositivos móveis, o Datepicker segue uma formatação mais resumida, visando otimizar a adequação nos espaços reduzidos. Assim como na versão web, o Wizard mobile também possui duas formas de diagramação: a horizontal e a vertical, como demonstrado no modelo abaixo:
+
+![Estado Focus](imagens/09_Versao-Mobile.png)
+
+Na versão mobile, não será permitido utilizar a versão Sugestão de Datas Usuais.
+
+## Comportamento
+
+O comportamento do Datepicker em dispositivos mobile segue as mesmas definições do desktop. A exceção é a versão Sugestão de Datas Usuais, que não tem previsão de uso para esta resolução.
+
+### Área de Click em Touch
+
+![Estado Focus](imagens/10_Area-Toque.png)
+
+1 |
+Área de toque (40x40)px
+
+## Exemplos de Telas
+
+Abaixo pode-se observar alguns exemplos do Datepicker nas versões web e mobile.
+
+### Exemplo de Template Web:
+
+![Estado Focus](imagens/11_Exemplo-Web.png)
+
+### Exemplo de Template Mobile:
+
+![Estado Focus](imagens/12-Exemplo-Mobile.png)
