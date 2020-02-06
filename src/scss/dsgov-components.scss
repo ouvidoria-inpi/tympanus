@@ -1,18 +1,18 @@
 /*!
- * Componentes do Design System de Governo
+ * DSGov: Design System de Governo
  * Versão beta
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP
  */
 
 // Carregar configurações
-@import 'base';
+@import "base";
 
 // Gerar tokens
-@import 'tokens';
+@import "tokens";
 
-// Reset CSS Bootstrap
-@import '../../node_modules/bootstrap/scss/reboot';
+// Reset css
+@import "utilities/normalize";
 
 // Componentes
-@import 'components';
+@import "components";
