@@ -1,0 +1,27 @@
+@mixin grid-breakpoint(
+  $breakpoint,
+  $media-breakpoint,
+  $margin,
+  $maxwidth,
+  $gutter,
+  $columns
+) {
+  @media (min-width: $media-breakpoint) {
+    .container {
+      padding: v(grid-tv-margin, $margin);
+      max-width: v(grid-tv-maxwidth, $maxwidth);
+    }
+    .row {
+      margin: calc(#{v(grid-tv-gutter, $gutter)} / -2);
+    }
+    .col {
+      padding: calc(#{v(grid-tv-gutter, $gutter)} / 2);
+    }
+    @for $i from 1 through $columns {
+      .#{$breakpoint}-#{$i} {
+        flex: none;
+        width: 100% / $columns * $i;
+      }
+    }
+  }
+}

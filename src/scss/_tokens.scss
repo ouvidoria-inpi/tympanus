@@ -24,4 +24,21 @@
   @each $item, $value in $font-line-heights {
     --#{$item}: #{$value};
   }
+
+  // Grid
+  @each $item, $value in $grid-breakpoints {
+    --#{$item}: #{$value};
+  }
+  @each $item, $value in $grid-portrait {
+    --#{$item}: #{$value};
+  }
+  @each $item, $value in $grid-tablet {
+    --#{$item}: #{$value};
+  }
+  @each $item, $value in $grid-desktop {
+    --#{$item}: #{$value};
+  }
+  @each $item, $value in $grid-tv {
+    --#{$item}: #{$value};
+  }
 }

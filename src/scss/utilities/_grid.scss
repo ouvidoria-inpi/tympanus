@@ -1,0 +1,56 @@
+// grid-portrait
+.container {
+  margin: auto;
+  padding: v(grid-portrait-margin, $grid-portrait-margin);
+  width: v(grid-portrait-maxwidth, $grid-portrait-maxwidth);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(#{v(grid-portrait-gutter, $grid-portrait-gutter)} / -2);
+}
+
+.col {
+  flex-basis: 100% / $grid-portrait-columns;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: calc(#{v(grid-portrait-gutter, $grid-portrait-gutter)} / 2);
+}
+
+@for $i from 1 through $grid-portrait-columns {
+  .portrait-#{$i} {
+    flex: none;
+    width: 100% / $grid-portrait-columns * $i;
+  }
+}
+
+// grid-tablet
+@include grid-breakpoint(
+  tablet,
+  $grid-breakpoint-small,
+  $grid-tablet-margin,
+  $grid-tablet-maxwidth,
+  $grid-tablet-gutter,
+  $grid-tablet-columns
+);
+
+// grid-desktop
+@include grid-breakpoint(
+  desktop,
+  $grid-breakpoint-large,
+  $grid-desktop-margin,
+  $grid-desktop-maxwidth,
+  $grid-desktop-gutter,
+  $grid-desktop-columns
+);
+
+// grid-tv
+@include grid-breakpoint(
+  tv,
+  $grid-breakpoint-xlarge,
+  $grid-tv-margin,
+  $grid-tv-maxwidth,
+  $grid-tv-gutter,
+  $grid-tv-columns
+);
