@@ -1,6 +1,6 @@
 {
 	"name": "@govbr/dsgov",
-	"version": "1.2.3-beta.5",
+	"version": "1.2.3-beta.6",
 	"description": "Design System do governo",
 	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.3/",
 	"main": "index.js",
