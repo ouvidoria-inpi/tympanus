@@ -65,7 +65,7 @@
         }
       }
       [class*="fa-"] {
-        color: $color-primary;
+        color: $color-primary-default;
       }
       span {
         display: none;
@@ -117,7 +117,7 @@
       button {
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $color-primary-default;
         padding: 0 ($spacer * 1.5);
         &:hover {
           background: $color-primary-pastel-02;
@@ -166,7 +166,7 @@
         align-items: center;
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $color-primary-default;
         display: inline-flex;
         .arrow {
           background: $color-secondary-03;
@@ -260,7 +260,7 @@
         background: transparent;
         border: 0;
         border-radius: 50%;
-        color: $color-primary;
+        color: $color-primary-default;
         display: inline-flex;
         height: 32px;
         justify-content: center;
@@ -350,7 +350,7 @@
     background: transparent;
     border: 0;
     bottom: 0;
-    color: $color-primary;
+    color: $color-primary-default;
     font-size: 25px;
     left: 0;
     padding: 0 $spacer;

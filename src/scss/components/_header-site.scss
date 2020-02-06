@@ -90,7 +90,7 @@
       button {
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $color-primary-default;
         padding: 0 ($spacer * 1.5);
         &:hover {
           background: $color-primary-pastel-02;
@@ -134,7 +134,7 @@
     background: transparent;
     border: 0;
     bottom: 0;
-    color: $color-primary;
+    color: $color-primary-default;
     font-size: 25px;
     left: 0;
     padding: 0 $spacer;

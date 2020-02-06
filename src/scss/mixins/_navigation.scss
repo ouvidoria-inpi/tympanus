@@ -164,7 +164,7 @@
     margin: 0;
     padding: 0;
     .arrow {
-      color: $color-primary;
+      color: $color-primary-default;
       margin-right: ($spacer * 2);
     }
     &.is-active {
@@ -216,7 +216,7 @@
     .label {
       box-shadow: inset 0 1px 0 $color-primary-pastel-02,
         inset 0 -1px 0 $color-primary-pastel-02;
-      color: $color-primary;
+      color: $color-primary-default;
       flex-flow: row;
       font-weight: 600;
       margin: 0;
@@ -237,7 +237,7 @@
       }
       &:hover {
         background: transparent;
-        color: $color-primary;
+        color: $color-primary-default;
         .arrow {
           background: $color-primary-pastel-02;
         }
@@ -332,7 +332,7 @@
                 > {
                   .trigger,
                   a {
-                    background: $color-primary;
+                    background: $color-primary-default;
                   }
                 }
               }
@@ -419,7 +419,7 @@
         white-space: nowrap;
         // Item selecionado
         &.is-active {
-          color: $color-primary;
+          color: $color-primary-default;
           font-weight: 600;
         }
       }
@@ -515,8 +515,8 @@
 @mixin user-logout {
   .logout {
     align-items: center;
-    background: $color-primary;
-    border: 1px solid $color-primary;
+    background: $color-primary-default;
+    border: 1px solid $color-primary-default;
     border-radius: 100px;
     color: $color-secondary-01;
     display: inline-flex;
@@ -608,7 +608,7 @@
       }
       // Item pré selecionado
       &.is-active {
-        color: $color-primary;
+        color: $color-primary-default;
         font-weight: 500;
       }
     }
@@ -654,7 +654,7 @@
 
 @mixin user-avatar {
   .avatar {
-    color: $color-primary;
+    color: $color-primary-default;
     display: inline-flex;
     font-size: 40px;
     position: relative;
@@ -798,7 +798,7 @@
 
 @mixin btn-icon {
   align-items: center;
-  color: $color-primary;
+  color: $color-primary-default;
   display: inline-flex;
   height: 36px;
   justify-content: center;

@@ -8,7 +8,7 @@
   }
   a {
     border-radius: $button-radius;
-    color: $color-primary;
+    color: $color-primary-default;
     font-weight: 400;
     justify-content: center;
     min-width: $spacer * 3;
@@ -23,7 +23,7 @@
   }
   .is-active {
     a {
-      background-color: $color-primary;
+      background-color: $color-primary-default;
       color: $color-secondary-01;
     }
   }

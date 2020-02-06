@@ -263,7 +263,7 @@
 @mixin login {
   .login {
     .icon {
-      color: $color-primary;
+      color: $color-primary-default;
     }
     span {
       display: none;
@@ -299,7 +299,7 @@
       text-decoration: underline;
     }
     .icon {
-      color: $color-primary;
+      color: $color-primary-default;
     }
     span + span {
       margin-left: $spacer;
@@ -348,7 +348,7 @@
         @include btn-icon;
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $color-primary-default;
       }
     }
     // Botão fechar
@@ -505,7 +505,7 @@
     @include btn-icon;
     background: transparent;
     border: 0;
-    color: $color-primary;
+    color: $color-primary-default;
     left: -$spacer;
     position: absolute;
     [class*="fa-times"] {
@@ -619,7 +619,7 @@
       }
       // Item pré selecionado
       &.is-active {
-        color: $color-primary;
+        color: $color-primary-default;
         font-weight: 500;
       }
     }
@@ -634,7 +634,7 @@
 
 @mixin btn-icon {
   align-items: center;
-  color: $color-primary;
+  color: $color-primary-default;
   display: inline-flex;
   height: 36px;
   justify-content: center;
@@ -657,7 +657,7 @@
 
 @mixin user-avatar {
   .avatar {
-    color: $color-primary;
+    color: $color-primary-default;
     display: inline-flex;
     font-size: 40px;
     position: relative;
@@ -803,8 +803,8 @@
 @mixin user-logout {
   .logout {
     align-items: center;
-    background: $color-primary;
-    border: 1px solid $color-primary;
+    background: $color-primary-default;
+    border: 1px solid $color-primary-default;
     border-radius: 100px;
     color: $color-secondary-01;
     display: inline-flex;

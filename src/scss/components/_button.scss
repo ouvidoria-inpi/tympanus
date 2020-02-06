@@ -3,7 +3,7 @@
     @include button-pill;
   }
   &.is-secondary {
-    @include button-pill($color-secondary-01, $color-primary);
+    @include button-pill($color-secondary-01, $color-primary-default);
   }
   &.is-call-to-action {
     @include button-pill(
@@ -85,7 +85,7 @@
     }
     &.is-secondary {
       &::after {
-        border-color: $color-primary;
+        border-color: $color-primary-default;
         border-right-color: transparent;
         border-top-color: transparent;
       }

@@ -34,7 +34,7 @@
       white-space: nowrap;
       // Item selecionado
       &.is-active {
-        color: $color-primary;
+        color: $color-primary-default;
         font-weight: 600;
       }
     }

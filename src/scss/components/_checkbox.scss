@@ -102,7 +102,7 @@
         background: $color-secondary-01;
       }
       &:checked + label::after {
-        border-color: $color-primary;
+        border-color: $color-primary-default;
       }
       &:disabled:checked + label::after {
         border-color: $color-secondary-05;

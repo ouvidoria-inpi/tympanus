@@ -32,7 +32,7 @@
       white-space: nowrap;
     }
     [class*="fa-"] {
-      color: $color-primary;
+      color: $color-primary-default;
       font-size: $input-default / 3;
       margin-left: ($spacer * 2);
     }

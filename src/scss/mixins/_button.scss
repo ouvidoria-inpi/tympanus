@@ -1,7 +1,7 @@
 @mixin button-pill(
-  $background: $color-primary,
+  $background: $color-primary-default,
   $color: $color-secondary-01,
-  $border: $color-primary
+  $border: $color-primary-default
 ) {
   background: $background;
   border: 1px solid $border;

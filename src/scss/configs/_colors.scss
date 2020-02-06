@@ -1,5 +1,3 @@
-// ATENÇÃO! Incluir cores no mapa $br-theme
-
 // Brands
 $facebook: #3b5998;
 $google-plus: #db4a39;
@@ -11,7 +9,7 @@ $yahoo: #720e9e;
 $youtube: #c4302b;
 
 // Primário
-$color-primary: #1351b4;
+$color-primary-default: #1351b4;
 $color-primary-pastel-01: #c5d4eb;
 $color-primary-pastel-02: #dbe8fb;
 $color-primary-lighten-01: #2670e8;
@@ -50,7 +48,7 @@ $br-theme: (
   color-primary-pastel-02: $color-primary-pastel-02,
   color-primary-lighten-01: $color-primary-lighten-01,
   color-primary-lighten-02: $color-primary-lighten-02,
-  color-primary-default: $color-primary,
+  color-primary-default: $color-primary-default,
   color-primary-darken-01: $color-primary-darken-01,
   color-primary-darken-02: $color-primary-darken-02,
   color-secondary-01: $color-secondary-01,

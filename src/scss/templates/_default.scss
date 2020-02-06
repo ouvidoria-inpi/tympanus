@@ -208,7 +208,7 @@ $logo-desktop: 150px;
       justify-content: flex-end;
       margin: 0 $spacer;
       [class*="fa-"] {
-        color: $color-primary;
+        color: $color-primary-default;
         margin-right: ($spacer * 2);
       }
       img {
@@ -277,7 +277,7 @@ $logo-desktop: 150px;
       text-decoration: none;
       width: 100%;
       [class*="fa-"] {
-        color: $color-primary;
+        color: $color-primary-default;
       }
     }
     // Item ativo
@@ -307,7 +307,7 @@ $logo-desktop: 150px;
         // Link ou trigger
         > a,
         > button {
-          background: $color-primary;
+          background: $color-primary-default;
         }
       }
     }
@@ -483,7 +483,7 @@ $logo-desktop: 150px;
       margin: 0;
       padding: 0;
       a {
-        color: $color-primary;
+        color: $color-primary-default;
         display: inline-block;
         padding: $spacer ($spacer * 2);
       }
@@ -498,7 +498,7 @@ $logo-desktop: 150px;
         }
       }
       a {
-        color: $color-primary;
+        color: $color-primary-default;
         display: inline-block;
         padding: $spacer ($spacer * 2);
       }
@@ -848,7 +848,7 @@ $logo-desktop: 150px;
           &:hover {
             > a,
             > button {
-              background: $color-primary;
+              background: $color-primary-default;
             }
           }
         }
@@ -1028,7 +1028,7 @@ $logo-desktop: 150px;
         > a,
         button {
           border-top: 1px solid $color-primary-pastel-02;
-          color: $color-primary;
+          color: $color-primary-default;
           font-weight: 600;
         }
         [class*="fa-"] {
@@ -1065,7 +1065,7 @@ $logo-desktop: 150px;
             background: transparent;
             display: flex;
             [class*="fa-"] {
-              color: $color-primary;
+              color: $color-primary-default;
               transform: rotate(-90deg);
             }
           }

@@ -4,7 +4,7 @@
       background: transparent;
       border: 0 transparent;
       bottom: 12px;
-      color: $color-primary;
+      color: $color-primary-default;
       display: block;
       outline: none !important;
       position: absolute;
@@ -204,7 +204,7 @@
   .qs-datepicker .qs-overlay .qs-overlay-month.active,
   .qs-datepicker .qs-overlay .qs-overlay-month:hover {
     //opacity: 1;
-    color: $color-primary;
+    color: $color-primary-default;
     span {
       background: $color-primary-pastel-02;
       border-radius: 16px;
@@ -268,21 +268,21 @@
   .qs-datepicker .qs-arrow.qs-left::after {
     //-ms-transform: translate(25%, -50%);
     //-webkit-transform: translate(25%, -50%);
-    border-right-color: $color-primary;
+    border-right-color: $color-primary-default;
     right: 50%;
     //transform: translate(25%, -50%);
   }
   .qs-datepicker .qs-arrow.qs-right::after {
     //-ms-transform: translate(-25%, -50%);
     //-webkit-transform: translate(-25%, -50%);
-    border-left-color: $color-primary;
+    border-left-color: $color-primary-default;
     left: 50%;
     //transform: translate(-25%, -50%);
   }
   .qs-datepicker .qs-month-year {
     -webkit-transition: border 0.2s;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
-    color: $color-primary;
+    color: $color-primary-default;
     cursor: pointer;
     font-weight: 700;
     padding: 0 1em;
@@ -347,12 +347,12 @@
     text-decoration: underline;
   }
   .qs-datepicker .qs-square.qs-active {
-    background: $color-primary-lighten-01; //$color-primary;
+    background: $color-primary-lighten-01; //$color-primary-default;
     border-left: 2px solid $color-secondary-01;
     border-right: 2px solid $color-secondary-01;
     color: $color-secondary-01;
     .qs-num {
-      background: $color-primary;
+      background: $color-primary-default;
       border-radius: 16px;
       height: 2em;
       margin-top: 0.25em;
@@ -410,7 +410,7 @@
     .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
     background: $color-primary-pastel-02;
     //border-radius: 50%;
-    color: $color-primary;
+    color: $color-primary-default;
   }
   .qs-datepicker .qs-event {
     position: relative;
