@@ -2,7 +2,7 @@
 
 const dsComponenteUrl = 'components/accordeon.html';
 
-describe('Validate params of design for the component button - primary', () => {
+describe('Validate params of design for the component accordeon - primary', () => {
     let tokens;
 
     before(() => {
