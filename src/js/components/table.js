@@ -7,11 +7,12 @@
 // TODO: Barra superior - itens de ação e menu flutuante, tags de filtros, itens selecionados
 // TODO: Filtragem de cabeçalhos
 
+const brTables = document.querySelectorAll( ".br-table" );
 const brTablesHeadersClass = "headers";
 const active = "is-active";
 var brTableNumber = 0;
 
-document.addEventListener("DOMContentLoaded", function(){
+if ( brTables ) {
 
 	const brTables = document.querySelectorAll( ".br-table" );
 
@@ -25,10 +26,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		brTableNumber++;
 
-		setSyncScroll( responsive );
-		cloneHeader( brTable, headers );
-		setHeaderWidth( brTable, headers );
-		toogleSearch( searchBar, searchTrigger, searchClose );
+		if ( responsive ) setSyncScroll( responsive );
+		if ( headers ) {
+			setHeaderWidth( brTable, headers );
+			cloneHeader( brTable, headers );
+		}
+		if ( searchBar ) toogleSearch( searchBar, searchTrigger, searchClose );
 		setClickActions( brTable );
 		hoverRow( rows );
 
@@ -36,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			setHeaderWidth( brTable, headers );
 		} );
 	}
-});
+}
 
 function hoverRow ( elements ) {
 	for ( let element of elements ) {
@@ -66,10 +69,12 @@ function setSyncScroll ( element ) {
 
 function setHeaderWidth ( parent, element ) {
 	var cloneNode = parent.querySelector( `.${ brTablesHeadersClass }` );
-	for ( let i = 0; i < element.children.length; i++ ) {
-		elementWidth = element.children[ i ].offsetWidth;
-		cloneElementWidth = cloneNode.children[ 0 ].children[ i ];
-		cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
+	if ( cloneNode ) {
+		for ( let i = 0; i < element.children.length; i++ ) {
+			elementWidth = element.children[ i ].offsetWidth;
+			cloneElementWidth = cloneNode.children[ 0 ].children[ i ];
+			cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
+		}
 	}
 }
 
@@ -125,13 +130,13 @@ function setClickActions ( brTable ) {
 
 	if ( headerCheckbox ) {
 		headerCheckbox.addEventListener( "click", function () {
-			selectAllTable ( selectedBar, tableCheckboxes, headerCheckbox );
+			checkAllTable ( selectedBar, tableCheckboxes, headerCheckbox );
 		} );
 	}
 
 	if ( info_select_all ) {
 		info_select_all.addEventListener( "click", function () { 
-			selectAllTable ( selectedBar, tableCheckboxes );
+			checkAllTable ( selectedBar, tableCheckboxes, headerCheckbox );
 		});
 	}
 }
@@ -152,7 +157,7 @@ function setRow ( checkbox, check ) {
 function checkRow ( checkbox, selectedBar, tableCheckboxes, headerCheckbox){
 	check = checkbox.checked
 	setRow ( checkbox, check );
-	countSelected ( check ? 1 : -1, selectedBar, tableCheckboxes, headerCheckbox );
+	setSelectedBar ( check ? 1 : -1, selectedBar, tableCheckboxes, headerCheckbox );
 }
 
 function checkAllRows ( tableCheckboxes ) {
@@ -167,31 +172,23 @@ function uncheckAllRows ( tableCheckboxes ) {
 	}
 }
 
-function selectAllTable ( selectedBar, tableCheckboxes, headerCheckbox ) {
+function checkAllTable ( selectedBar, tableCheckboxes, headerCheckbox ) {
 	count = tableCheckboxes.length;
 	var info_count = selectedBar.querySelector(".info .count");
 	var total = parseInt(info_count.innerHTML, 10);
 
-	if ( headerCheckbox ) { 
-		if ( headerCheckbox.checked ) {
-			checkAllRows ( tableCheckboxes )
-		} else {
-			uncheckAllRows ( tableCheckboxes )
-			count = -1 * count;
-		}
-	} else {
-			if ( total == count ) {
-				uncheckAllRows ( tableCheckboxes )
-				count = -1 * count;
-			}
-			else {
-				checkAllRows ( tableCheckboxes )
-			}
+	if ( total == count ) {
+		uncheckAllRows ( tableCheckboxes )
+		count = -1 * count;
 	}
-	countSelected(count, selectedBar, tableCheckboxes, headerCheckbox);
+	else {
+		checkAllRows ( tableCheckboxes )
+	}
+
+	setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox);
 }
 
-function countSelected( count, selectedBar, tableCheckboxes, headerCheckbox ) {
+function setSelectedBar( count, selectedBar, tableCheckboxes, headerCheckbox ) {
 	
 	var info_count = selectedBar.querySelector(".info .count");
 	var info_text = selectedBar.querySelector(".info .text");
@@ -202,8 +199,9 @@ function countSelected( count, selectedBar, tableCheckboxes, headerCheckbox ) {
 		selectedBar.classList.add("is-active");
 		info_count.innerHTML = total;
 		info_text.innerHTML = total > 1 ? "itens selecionados" : "item selecionado";
+	
 		if ( headerCheckbox ) headerCheckbox.parentNode.classList.add("is-checking");
-		if (mobile_ico) {
+		if ( mobile_ico ) {
 			mobile_ico.classList.add("fa-minus-square");
 			mobile_ico.classList.remove("fa-check-square");
 		}
@@ -212,22 +210,22 @@ function countSelected( count, selectedBar, tableCheckboxes, headerCheckbox ) {
 				headerCheckbox.checked = true;
 				headerCheckbox.parentNode.classList.remove("is-checking");
 			}
-			if (mobile_ico) {
+			if ( mobile_ico ) {
 				mobile_ico.classList.remove("fa-minus-square");
 				mobile_ico.classList.add("fa-check-square");
 			}
 		}
 	}
 	else {
-		selectedBar.classList.remove("is-active");
 		info_count.innerHTML = 0;
 		if ( headerCheckbox ) { 
 			headerCheckbox.checked = false;
 			headerCheckbox.parentNode.classList.remove("is-checking");
 		}
-		if (mobile_ico) {
+		if ( mobile_ico ) {
 			mobile_ico.classList.remove("fa-check-square");
 			mobile_ico.classList.add("fa-minus-square");
 		}
+		selectedBar.classList.remove("is-active");
 	}
 }
