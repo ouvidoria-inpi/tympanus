@@ -1,5 +1,5 @@
 @mixin icon-size($item, $value) {
   .#{$item} {
-    font-size: $value !important;
+    font-size: v($item, $value) !important;
   }
 }

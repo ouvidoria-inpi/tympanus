@@ -10,7 +10,7 @@
 // 1. Correct the line height in all browsers.
 // 2. Prevent adjustments of font size after orientation changes in iOS.
 html {
-  line-height: $font-line-height-medium; // 1
+  line-height: v(font-line-height-medium, $font-line-height-medium); // 1
   -webkit-text-size-adjust: 100%; // 2
 }
 

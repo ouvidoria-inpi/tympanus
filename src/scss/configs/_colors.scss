@@ -1,12 +1,12 @@
 // Brands
-$facebook: #3b5998;
-$google-plus: #db4a39;
-$linkedin: #0e76a8;
-$twitter: #00acee;
-$whatsapp: #25d366;
-$xbox: #9bc848;
-$yahoo: #720e9e;
-$youtube: #c4302b;
+$color-facebook: #3b5998;
+$color-google-plus: #db4a39;
+$color-linkedin: #0e76a8;
+$color-twitter: #00acee;
+$color-whatsapp: #25d366;
+$color-xbox: #9bc848;
+$color-yahoo: #720e9e;
+$color-youtube: #c4302b;
 
 // Primário
 $color-primary-default: #1351b4;
@@ -69,12 +69,12 @@ $br-theme: (
   color-support-02: $color-support-02,
   color-support-03: $color-support-03,
   color-support-04: $color-support-04,
-  facebook: $facebook,
-  google-plus: $google-plus,
-  linkedin: $linkedin,
-  twitter: $twitter,
-  whatsapp: $whatsapp,
-  xbox: $xbox,
-  yahoo: $yahoo,
-  youtube: $youtube
+  color-facebook: $color-facebook,
+  color-google-plus: $color-google-plus,
+  color-linkedin: $color-linkedin,
+  color-twitter: $color-twitter,
+  color-whatsapp: $color-whatsapp,
+  color-xbox: $color-xbox,
+  color-yahoo: $color-yahoo,
+  color-youtube: $color-youtube
 );

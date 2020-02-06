@@ -1,5 +1,5 @@
 @each $item, $value in $br-theme {
-  @include bg-colors(".bg-#{$item}", $value);
-  @include text-colors(".text-#{$item}", $value);
-  @include border-colors(".border-#{$item}", $value);
+  @include text-colors($item, $value);
+  @include bg-colors($item, $value);
+  @include border-colors($item, $value);
 }
