@@ -1,6 +1,6 @@
 {
 	"name": "@govbr/dsgov",
-	"version": "1.2.3-beta.6",
+	"version": "1.2.3-beta.4",
 	"description": "Design System do governo",
 	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.3/",
 	"main": "index.js",
@@ -18,7 +18,8 @@
 		"watch-pug": "pug -w ./src/pug/views/ -O '{\"version\": \"1.2.2\",\"cdnUrl\": \"../\"}' -o ./dist -P",
 		"watch-webpack": "webpack --mode development",
 		"build:webpack:dev": "webpack --mode development",
-		"build:webpack:prod": "webpack --mode production"
+		"build:webpack:prod": "webpack --mode production",
+		"tag-version": "npm version prerelease -preid=beta"
 	},
 	"engines": {
 		"node": ">= 12.13.1"
