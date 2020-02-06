@@ -13,4 +13,15 @@
   @each $item, $value in $br-status {
     --#{$item}: #{$value};
   }
+
+  // Tipografia
+  @each $item, $value in $font-weights {
+    --#{$item}: #{$value};
+  }
+  @each $item, $value in $font-sizes {
+    --#{$item}: #{$value};
+  }
+  @each $item, $value in $font-line-heights {
+    --#{$item}: #{$value};
+  }
 }
