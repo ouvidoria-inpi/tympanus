@@ -1,6 +1,5 @@
 /// <reference types="Cypress" />
 
-const url = Cypress.config('baseUrl');
 const dsComponenteUrl = 'components/button.html';
 const componentClass = '.br-button.is-primary'
 const fileData = 'button.json';

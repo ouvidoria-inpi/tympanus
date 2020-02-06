@@ -1,6 +1,5 @@
 /// <reference types="Cypress" />
 
-const url = Cypress.config('baseUrl');
 const dsComponenteUrl = 'components/button.html';
 const componentClass = '.br-button.is-call-to-action';
 const fileData = 'button.json';
@@ -10,9 +9,7 @@ describe('Validate params of design for the component button - call-to-action', 
 
 	before(() => {
 		cy.visit(dsComponenteUrl)
-		cy.fixture(fileData).then((data) => {
-			tokens = data
-		})
+		cy.fixture(fileData).then((data) => tokens = data)
 	})
 
 	it('Validate call-to-action button design color', () => {
@@ -84,7 +81,6 @@ describe('Validate params of design for the component button - call-to-action', 
 			.dblclick({ force: true })
 			.should('have.css', 'color')
 			.and('eq', tokens.isCallToAction.buttonFontColorDbClick)
-			.and('eq', 'rgb(255, 255, 255)')
 	})
 
 	it('Validate background color on click', () => {
@@ -93,7 +89,6 @@ describe('Validate params of design for the component button - call-to-action', 
 			.dblclick({ force: true })
 			.should('have.css', 'background-color')
 			.and('eq', tokens.isCallToAction.buttonBackgroundColorDbClick)
-			.and('eq', 'rgb(54, 161, 145)')
 	})
 
 })
@@ -104,9 +99,7 @@ describe('Validate params of design for the component button on mobile aplicatti
 	before(() => {
 		cy.visit(dsComponenteUrl)
 		cy.get(component).contains('Desenvolvedor').click()
-		cy.fixture(fileData).then((data) => {
-			tokens = data
-		})
+		cy.fixture(fileData).then((data) => tokens = data)
 	})
 
 	it('Validate button min-height on mobile', () => {

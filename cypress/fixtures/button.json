@@ -1,4 +1,8 @@
 {
+	"globals": {
+		"buttonFontSize": "16px"
+	},
+
 	"isPrimary": {
 		"buttonFontSize": "16px",
 		"buttonFontColor": "rgb(255, 255, 255)",
