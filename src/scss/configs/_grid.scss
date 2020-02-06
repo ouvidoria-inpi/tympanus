@@ -1,32 +1,25 @@
-// Sobrescrita de Grid breakpoints, Grid containers e Grid columns do
-// _variables.scss do Bootstrap
+$grid-breakpoint-xsmall: 0px;
+$grid-breakpoint-small: 575px;
+$grid-breakpoint-medium: 992px;
+$grid-breakpoint-large: 1280px;
+$grid-breakpoint-xlarge: 1600px;
 
-// Breakpoints
-//   - xs: mobile
-//   - sm: mobile landscape e tablet
-//   - md: table landscape e desktop
-//   - lg: desktop
-//   - xl: tv
-// Os gutters variam de acordo com o breakpoint.
+$grid-portrait-maxwidth: 100%;
+$grid-portrait-gutter: 16px;
+$grid-portrait-columns: 4;
+$grid-portrait-margin: 8px;
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 998px,
-  lg: 1280px,
-  xl: 1600px
-);
+$grid-tablet-maxwidth: 100%;
+$grid-tablet-gutter: 24px;
+$grid-tablet-columns: 8px;
+$grid-tablet-margin: 40px;
 
-$container-max-widths: (
-  sm: 1150px,
-  md: 1151px,
-  lg: 1152px,
-  xl: 1440px
-);
+$grid-desktop-maxwidth: 1200px;
+$grid-desktop-gutter: 24px;
+$grid-desktop-columns: 12;
+$grid-desktop-margin: 40px;
 
-$grid-gutter-width: 16px;
-$grid-gutters: (
-  sm: $grid-gutter-width,
-  lg: 24px,
-  xl: 32px
-);
+$grid-tv-maxwidth: 1520px;
+$grid-tv-gutter: 40px;
+$grid-tv-columns: 12;
+$grid-tv-margin: 40px;
