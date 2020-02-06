@@ -1,17 +1,3 @@
-// Setar tamanho de ícones
-[class*="fa-"] {
-  font-size: $icon-size-base;
+@each $item, $value in $br-icons {
+  @include icon-size($item, $value);
 }
-
-@include icon-size("xs", $icon-size-xs);
-@include icon-size("sm", $icon-size-sm);
-@include icon-size("lg", $icon-size-lg);
-@include icon-size("2x", $icon-size-2x);
-@include icon-size("3x", $icon-size-3x);
-@include icon-size("4x", $icon-size-4x);
-@include icon-size("5x", $icon-size-5x);
-@include icon-size("6x", $icon-size-6x);
-@include icon-size("7x", $icon-size-7x);
-@include icon-size("8x", $icon-size-8x);
-@include icon-size("9x", $icon-size-9x);
-@include icon-size("10x", $icon-size-10x);
