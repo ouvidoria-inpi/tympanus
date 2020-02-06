@@ -162,23 +162,21 @@ $column-gap: 6px;
     display: block;
     tr {
       display: block;
+      background: $color-white;
+      color: $color-gray-6;
       &.is-selected {
         background: $color-primary-lighten-2;
         color: $color-white;
-        &:hover{
-          background: $color-primary-lighten-2;
-          color: $color-white;
-        }
-        td {
-          color: $color-white;
-          text-overflow: ellipsis;
+          &.is-hover, 
           &:hover{
-            color: $color-white;
-            }
-          &:before {
-            color: $color-white !important;
+            background: $color-primary-pastel-1;
+            color: $color-primary-darken-1;
           }
-        }
+      }
+      &.is-hover, 
+      &:hover {
+        background: $color-primary-pastel-1;
+        color: default;
       }
     }
     th {
@@ -286,6 +284,24 @@ $column-gap: 6px;
       }
       .mobile {
         display: inline;
+      }
+    }
+    table {
+      tr {
+        &.is-selected {
+          background: $color-primary-lighten-2;
+          color: $color-white !important;
+          &:hover, 
+          td:before {
+            background: $color-primary-lighten-2;
+            color: $color-white;
+          }
+        }
+        &.is-hover, 
+        &:hover {
+          background: $color-white;
+          color: $color-gray-6;
+        }
       }
     }
   }

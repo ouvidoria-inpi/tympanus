@@ -10,6 +10,7 @@
 const brTables = document.querySelectorAll( ".br-table" );
 const brTablesHeadersClass = "headers";
 const active = "is-active";
+const hover = "is-hover";
 var brTableNumber = 0;
 
 if ( brTables ) {
@@ -41,10 +42,14 @@ if ( brTables ) {
 	}
 }
 
-function hoverRow ( elements ) {
-	for ( let element of elements ) {
-		if ( element.children[ 0 ].children[ 0 ] ) {
-		}
+function hoverRow ( rows ) {
+	for ( let row of rows ) {
+		row.addEventListener( "mouseenter" , function () {
+				row.classList.add( hover );
+		});
+		row.addEventListener( "mouseleave" , function () {
+			row.classList.remove( hover );
+		});
 	}
 }
 
