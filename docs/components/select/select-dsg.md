@@ -1,6 +1,6 @@
 ### Orientação de Uso
 
-![Select_Orientação_Uso](images/select-orientacao-uso.png)
+![Select_Orientação_Uso](imagens/select-orientacao-uso.png)
 
 #### 1 | Rótulos
 
@@ -14,14 +14,14 @@ O placeholder tem a função de auxiliar o usuário a selecionar as opções dis
 
 De acordo com o contexto de uso as alturas dos campos devem variar para: select em Filtro em portal; select em tabelas e select geral.
 
-![Select_Alturas_Campos](images/select-alturas-campos.png)
+![Select_Alturas_Campos](imagens/select-alturas-campos.png)
 
 ### Comportamento
 
 O label, o placeholder e os demais comportamentos permanecem iguais.
 No caso do uso em Tabelas e Filtro em portal o label pode ser suprimido, mas nesse caso o uso do placeholder é imprescindível.
 
-![Select_Comportamento](images/select-comportamento.png)
+![Select_Comportamento](imagens/select-comportamento.png)
 
 ### Anatomia
 
@@ -31,23 +31,23 @@ São elementos usados pelos usuários para escolher uma opção em um grupo de d
 
 #### Select Habilitado
 
-![Select_Habilitado](images/select-habilitado.png)
+![Select_Habilitado](imagens/select-habilitado.png)
 
 #### Select Desabilitado
 
-![Select_Desabilitado](images/select-desabilitado.png)
+![Select_Desabilitado](imagens/select-desabilitado.png)
 
 #### Select Expandido
 
-![Select_Expandido](images/select-expandido.png)
+![Select_Expandido](imagens/select-expandido.png)
 
 #### Select uso Filtro Portal
 
-![Select_Filtro_Portal](images/select-filtro-portal.png)
+![Select_Filtro_Portal](imagens/select-filtro-portal.png)
 
 ### Select uso Tabelas
 
-![Select_Tabelas](images/select-tabelas.png)
+![Select_Tabelas](imagens/select-tabelas.png)
 
 ## Estados
 
@@ -55,22 +55,22 @@ Os Selects podem ser representados nos estados: habilitado; desabilitado e campo
 
 #### Select habilitado
 
-![Select_Estado_Habilitado](images/select-estado-habilitado.png)
+![Select_Estado_Habilitado](imagens/select-estado-habilitado.png)
 
 #### Select desabilitado
 
-![Select_Estado_Desabilitado](images/select-estado-desabilitado.png)
+![Select_Estado_Desabilitado](imagens/select-estado-desabilitado.png)
 
 #### Select com foco e dropdown aberto.
 
-![Select_Estado_Foco_DropDown](images/select-estado-foco-dropdown.png)
+![Select_Estado_Foco_DropDown](imagens/select-estado-foco-dropdown.png)
 
 ### Espaçamentos
 
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados no componente select. Todas as medidas foram definidas com valores múltiplos de 4px e 8px.
 
-![Select_Espaçamento](images/select-espacamento.png)
+![Select_Espaçamento](imagens/select-espacamento.png)
 
 ## Cores
 
-![Select_Cores](images/select-cores.png)
+![Select_Cores](imagens/select-cores.png)
