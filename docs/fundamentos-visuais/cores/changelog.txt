@@ -1,0 +1,9 @@
+# Changelog
+Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
+
+## [7.0.2] - 29/01/2020
+- `Corrigido` o rótulo "Artefato de Design" para "Artefato Fonte de Design".
+
+## [7.0.1] - 27/01/2020
+- `Adicionado` nova paleta de cor Destaque (highlight) e os Design Tokens.
+- `Modificado` o nome das categorias de cores para se adaptarem melhor aos design tokens e ajustanto para os novos padrões de desenvolvimento. 

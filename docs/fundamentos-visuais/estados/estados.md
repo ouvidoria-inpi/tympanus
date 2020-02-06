@@ -1,4 +1,4 @@
-[artefato de design]: # 'estados_2.0.0.xd'
+[artefato fonte de design]: # 'estados_2.0.0.xd'
 
 Estados são representações visuais que ajudam os usuários a identificar o estado de um componente ou elemento. Comunicam o estado de uma ação e sugerem a possibilidade ou imposibilidade do usuário interagir com um elemento, estabelecendo confiança entre interface e usuário.
 
@@ -75,7 +75,7 @@ Caso um componente possua borda, utilize as mesmas regras utilizadas para texto/
 
 ## Tipos de Estado
 
-![Estados](assets/design-system/docs/fundamentos-visuais/estados/imagens/states.png)
+![Estados](imagens/states.png)
 
 Abaixo,segue a lista dos principais estados encontrados no DS gov. Alguns estados são específicos de um componente, e como tal serão detalhados na sua respectiva documentação.
 
@@ -110,7 +110,7 @@ O destaque é exibido com background da cor **Secondary 01**, um overlay da cor 
 
 O texto destacado pode possuir estado interativo.
 
-![Destacado](assets/design-system/docs/fundamentos-visuais/estados/imagens/destacado.png)
+![Destacado](imagens/destacado.png)
 
 | Property   | Token Status                  | Token Color          | Opacity |
 | ---------- | ----------------------------- | -------------------- | ------- |
@@ -128,7 +128,7 @@ A cor **Primary Default** não é aplicável em todas as situações, como no ca
 
 > **Exemplo:** Hiperlinks e Botões podem ser bons lugares para usar a cor Primary Default, porém, uma Lista ou Menu, o uso de bold nos textos (ao invés da cor Primary Default ou um underline) pode ser mais eficaz na maioria das situações.
 
-![Interativo](assets/design-system/docs/fundamentos-visuais/estados/imagens/interativo.png)
+![Interativo](imagens/interativo.png)
 
 | Property  | Token Status                 | Token Color             | Token Weight       |
 | --------- | ---------------------------- | ----------------------- | ------------------ |
@@ -158,7 +158,7 @@ Alguns elementos da tela, não podem receber o estado desativado. Neste caso, pr
 
 Elementos desativados não sofrem herança, ou seja, não podem ser combinados com qualquer outro estado.
 
-![Desativado](assets/design-system/docs/fundamentos-visuais/estados/imagens/desativado.png)
+![Desativado](imagens/desativado.png)
 
 ##### Opção 1: recomendada
 
@@ -187,7 +187,7 @@ Em casos em que o elemento interativo tenha algumas características visuais que
 
 Só pode existir um elemento com hover por vez na tela.
 
-![Hover](assets/design-system/docs/fundamentos-visuais/estados/imagens/hover.png)
+![Hover](imagens/hover.png)
 
 | Property   | Token Status              | Token Color               |
 | ---------- | ------------------------- | ------------------------- |
@@ -203,7 +203,7 @@ Características visuais referentes à elevação do componente na tela, como so
 
 Só pode existir um elemento com pressionado por vez na tela.
 
-![Pressionado](assets/design-system/docs/fundamentos-visuais/estados/imagens/pressionado.png)
+![Pressionado](imagens/pressionado.png)
 
 | Property   | Token Status                | Token Color               |
 | ---------- | --------------------------- | ------------------------- |
@@ -222,7 +222,7 @@ Componentes desativados não podem receber foco.
 
 Só pode existir um elemento com foco por vez na tela.
 
-![Foco](assets/design-system/docs/fundamentos-visuais/estados/imagens/foco.png)
+![Foco](imagens/foco.png)
 
 | Property   | Token Status                | Token Color          | Opacity |
 | ---------- | --------------------------- | -------------------- | ------- |
@@ -241,7 +241,7 @@ Em algumas situações, o elemento ativo pode receber uma ênfase exagerada, se 
 
 Dentro de um único conjunto de opções, apenas um estado ativado pode estar presente de cada vez.
 
-![Ativo](assets/design-system/docs/fundamentos-visuais/estados/imagens/ativo.png)
+![Ativo](imagens/ativo.png)
 
 | Property   | Token Status                  | Token Color                |
 | ---------- | ----------------------------- | -------------------------- |
@@ -269,7 +269,7 @@ O estado selecionado não pode ser aplicado nos seguintes componentes:
 
 **Cuidado:** Alguns componentes são construídos por vários outros componentes. Neste caso, seus componentes ainda podem possuir estado de selecionado, por mais que o componente "completo" não possa.
 
-![Selecionado](assets/design-system/docs/fundamentos-visuais/estados/imagens/selecionado.png)
+![Selecionado](imagens/selecionado.png)
 
 | Property   | Token Status                 | Token Color                |
 | ---------- | ---------------------------- | -------------------------- |
@@ -288,7 +288,7 @@ Caso a ênfase do componente ainda esteja alta, distraindo o usuário de suas ta
 
 Pode haver apenas um único estado arrastado de cada vez dentro de um layout.
 
-![Arrastado](assets/design-system/docs/fundamentos-visuais/estados/imagens/arrastado.png)
+![Arrastado](imagens/arrastado.png)
 
 | Property   | Token Status                | Token Color          | Shadow                                                 |
 | ---------- | --------------------------- | -------------------- | ------------------------------------------------------ |
@@ -307,7 +307,7 @@ Interfaces que mostram um passo a passo, pode ser uma boa situação de uso do e
 
 O estado visitado é exibido com texto na cor **Primary Darken 01**. A cor de fundo, apesar de não ser obrigatória, pode ser alterado para a cor **Primary Pastel 01**.
 
-![Visitado](assets/design-system/docs/fundamentos-visuais/estados/imagens/visitado.png)
+![Visitado](imagens/visitado.png)
 
 | Property   | Token Status                | Token Color               |
 | ---------- | --------------------------- | ------------------------- |
@@ -322,9 +322,9 @@ Apesar de serem estados diferentes, o estado ligado e desligado estão unidos na
 
 O estado ligado pode ser exibido com a cor **Primary Lighten 02** enquanto o desligado pela cor **Secondary 04**. A cor de texto utilize as cores **Secondary 01** no ligado e **Secondary 07** para o desligado.
 
-![Ligado](assets/design-system/docs/fundamentos-visuais/estados/imagens/ligado.png)
+![Ligado](imagens/ligado.png)
 
-![Desligado](assets/design-system/docs/fundamentos-visuais/estados/imagens/desligado.png)
+![Desligado](imagens/desligado.png)
 
 | Property   | Token Status           | Token Color                |
 | ---------- | ---------------------- | -------------------------- |

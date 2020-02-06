@@ -4,19 +4,19 @@ São elementos usados para seleção simultânea.
 Possui um texto de orientação que auxilia a escolha do usuário.
 Cada opção deve ser acompanhada de um texto que a descreva.
 
-![Checkbox Formatação Formulário](images/checkbox-formatacao-formulario.png)
+![Checkbox Formatação Formulário](imagens/checkbox-formatacao-formulario.png)
 
-![Checkbox Formatação Mobile](images/checkbox-formatacao-mobile.png)
+![Checkbox Formatação Mobile](imagens/checkbox-formatacao-mobile.png)
 
 ## ESTADOS
 
 Os checkboxes podem estar nos estados: habilitados/desselecionado; hover; selecionado e desabilitado.
 
-![Checkbox Estados Web](images/checkbox-estados-web.png)
+![Checkbox Estados Web](imagens/checkbox-estados-web.png)
 
-![Checkbox Estados Mobile](images/checkbox-estados-mobile.png)
+![Checkbox Estados Mobile](imagens/checkbox-estados-mobile.png)
 
-![Checkbox Espaçamento](images/checkbox-espacamento.png)
+![Checkbox Espaçamento](imagens/checkbox-espacamento.png)
 
 ## USO
 
@@ -38,11 +38,11 @@ São elementos usados para seleção exclusiva.
 Possui um texto de orientação que auxilia a escolha do usuário.
 Cada opção deve ser acompanhada de um texto que a descreva.
 
-![Radiobutton Formatação Formulário](images/checkbox-formatacao-formulario.png)
+![Radiobutton Formatação Formulário](imagens/checkbox-formatacao-formulario.png)
 
-![Radiobutton Formatação Mobile](images/checkbox-formatacao-mobile.png)
+![Radiobutton Formatação Mobile](imagens/checkbox-formatacao-mobile.png)
 
-![Radiobutton Espaçamento](images/checkbox-espacamento.png)
+![Radiobutton Espaçamento](imagens/checkbox-espacamento.png)
 
 ## ESTADOS
 
@@ -50,9 +50,9 @@ Os radiobuttons podem estar nos estados: habilitados/desselecionados; hover; sel
 
 Os radiobuttons podem vir acompanhados de ícones ou imagens para uma compreensão mais rápida e maior engajamento do usuário.
 
-![Radiobutton Estados Web](images/checkbox-estados-web.png)
+![Radiobutton Estados Web](imagens/checkbox-estados-web.png)
 
-![Radiobutton Estados Mobile](images/checkbox-estados-mobile.png)
+![Radiobutton Estados Mobile](imagens/checkbox-estados-mobile.png)
 
 ## USO
 
