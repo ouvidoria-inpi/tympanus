@@ -13,7 +13,12 @@ npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
 ``` npm install ```
 
 # iniciar o servidor de desenvolvimento
-``` npm start```
+``` npm run start```
 
 ## Para testar o projeto usando cypress use o seguinte comando 
-``` npm start:test ```
+
+# Iniciar o ambiente de testes
+``` npm run start:test ```
+
+# Iniciar o cypress
+``` npm run cypress:interface ```
