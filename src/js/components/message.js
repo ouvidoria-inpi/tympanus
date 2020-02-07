@@ -20,8 +20,6 @@ class BRAlert {
 
 let alertList = [];
 
-window.onload = (function() {
-  for (let brAlert of window.document.querySelectorAll(".br-message")) {
-    alertList.push(new BRAlert("br-message", brAlert));
-  }
-})();
+for (let brAlert of window.document.querySelectorAll(".br-message")) {
+  alertList.push(new BRAlert("br-message", brAlert));
+}

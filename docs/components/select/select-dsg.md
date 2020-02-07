@@ -41,13 +41,13 @@ Possui um texto de orientação que auxilia a escolha do usuário. Cada opção 
 
 ### Formatação Básica
 
-![RadioButton_Formatação_Básica](imagens/radiobutton/radiobutton-formatacao_basica.png)
+![RadioButton_Formatação_Básica](imagens/radiobutton-formatacao-basica.png)
 
 ### Formatação com ícones
 
 Os Radio Buttons podem vir acompanhados de ícones ou imagens para uma compreensão mais rápida e maior engajamento do usuário. Ex: Dentro de um contexto de formulário.
 
-![RadioButton_Formatação_Ícones](imagens/radiobutton/radiobuttons-formatacao-icones.png)
+![RadioButton_Formatação_Ícones](imagens/radiobutton-icones.png)
 
 <br/>
 
@@ -55,7 +55,7 @@ Os Radio Buttons podem vir acompanhados de ícones ou imagens para uma compreens
 
 Os estados dos Radio Buttons servem para dar feedback ao usuário sobre as ações que estão acontecendo. Eles podem estar nos estados: normal (habilitado)/deselecionado, selecionado, hover; desabilitado e validado.
 
-![RadioButton_Estados](imagens/radiobutton/radiobutton-estados.png)
+![RadioButton_Estados](imagens/radiobutton-estados.png)
 
 #### 1 - Normal - O estado padrão deselecionado do Radio Button.
 
@@ -86,29 +86,29 @@ Os itens do Radio Buttons devem vir preferencialmente em colunas alinhados à es
 
 ### 1 | Uso em 1 coluna
 
-![RadioButton_1Coluna](imagens/radiobutton/radiobutton-uma-coluna.png)
+![RadioButton_1Coluna](imagens/radiobutton-uma-coluna.png)
 
 ### 2 | Uso em 2 colunas
 
-![RadioButton_2Colunas](imagens/radiobutton/radiobutton-duas-colunas.png)
+![RadioButton_2Colunas](imagens/radiobutton-duas-colunas.png)
 
 ### 3 | Uso em 1 linha
 
 Evitar esse tipo de formatação, pois os itens organizados em coluna são mais fáceis de serem identificados pela usuário. Utilizar apenas quando for estritamente necessário, ou quando houverem poucos itens a serem selecionados.
 
-![RadioButton_1Linha](imagens/radiobutton/radiobutton-uma-linha.png)
+![RadioButton_1Linha](imagens/radiobutton-uma-linha.png)
 
 <!-- ### 4 | Uso em linhas com ícone
 
 Quando houver necessidade de utilizar ícones para auxiliar no entendimento das opções, utilizar a formatação em linha, e dispor o label e o ícone alinhados à esquerda do bloco de informações e o Radio Button posicionados à direita em relação aos demais elementos.
 
-![RadioButton_1Linha_Icone](imagens/radiobutton/radiobutton-icone.png) -->
+![RadioButton_1Linha_Icone](imagens/radiobutton-icone.png) -->
 
 <br/>
 
 ## Tipografia
 
-![RadioButton_Tipografia](imagens/radiobutton/radiobutton-tipografia.png)
+![RadioButton_Tipografia](imagens/radiobutton-tipografia.png)
 
 #### 1 - Texto de Orientação - Rawline 16px Semibold
 
@@ -122,7 +122,7 @@ Quando houver necessidade de utilizar ícones para auxiliar no entendimento das 
 
 ## Dimensões
 
-![RadioButton_Dimensões](imagens/radiobutton/radiobutton-dimensoes.png)
+![RadioButton_Dimensões](imagens/radiobutton-dimensoes.png)
 
 #### 5 - Elipse 24x24px - Espessura do Contorno 1px
 
@@ -140,13 +140,13 @@ Quando houver necessidade de utilizar ícones para auxiliar no entendimento das 
 
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados na paginação.. Todas as medidas foram definidas com valores múltiplos de 4px.
 
-![RadioButton_Espaçamento](imagens/radiobutton/CheckBox_Espaçamento.png)
+![RadioButton_Espaçamento](imagens/checkbox-espacamento.png)
 
 ## Cores
 
 ### 1 |. Versão Positiva
 
-![RadioButton_Versão_Positiva](imagens/radiobutton/radiobutton-cores.png)
+![RadioButton_Versão_Positiva](imagens/radiobutton-cores.png)
 
 #### 9 - Estado Normal - Preenchimento #FFFFFF Contorno: Cinza #888888
 
@@ -160,7 +160,7 @@ Segue as métricas definidas para os espaçamentos de todos os elementos utiliza
 
 <br/>
 
-![RadioButton_Versão_Negativa](imagens/radiobutton/radiobutton-cores-tabela.png)
+![RadioButton_Versão_Negativa](imagens/radiobutton-cores-tabela.png)
 
 #### 14 - Versão Negativa - Preenchimento: Primária Azul Lighten #2670E8 - Contorno: #FFFFFF - Elipse Central: #FFFFFF
 
@@ -178,20 +178,20 @@ Cada opção deve ser acompanhada de um texto que a descreva.
 
 ### Formatação
 
-![CheckBox_Exemplo_Formatacao](imagens/checkbox/checkbox-estrutura-basica.png)
+![CheckBox_Exemplo_Formatacao](imagens/checkbox-estrutura-basica.png)
 
 <!-- #### Formatação Aplicada à Formulário
 
 Pode utilizado de forma mais direta como no exemplo anterior, ou dentro de um contexto de formulário.
 
-![CheckBox_Aplicacao_Formulario](imagens/Controle-de-Selecao/formulario-checkbox.png) -->
+![CheckBox_Aplicacao_Formulario](imagens/formulario-checkbox.png) -->
 
 ### Estados
 
 Os estados dos checkbox servem para dar feedback ao usuário sobre as ações que estão acontecendo
 quando usuário seleciona ou não um checkbox.
 
-![CheckBox_Estados](imagens/checkbox/checkbox-estados.png)
+![CheckBox_Estados](imagens/checkbox-estados.png)
 
 #### 1 - Normal - O estado padrão deselecionado do checkbox.
 
@@ -221,22 +221,22 @@ Os itens do checkbox devem vir preferencialmente em colunas alinhados à esquerd
 
 #### 1 | Uso em 1 coluna
 
-![CheckBox_Uso_uma_coluna](imagens/checkbox/checkbox-uma-coluna.png)
+![CheckBox_Uso_uma_coluna](imagens/checkbox-uma-coluna.png)
 
 #### 2 | Uso em 2 colunas
 
-![CheckBox_Uso_Duas_colunas](imagens/checkbox/checkbox-duas-colunas.png)
+![CheckBox_Uso_Duas_colunas](imagens/checkbox-duas-colunas.png)
 
 #### 3 | Uso em 1 linha
 
 Evitar esse tipo de formatação, pois os itens organizados em coluna são mais fáceis de serem identificados pela usuário.
 Utilizar apenas quando for estritamente necessário, ou quando houverem poucos itens a serem selecionados.
 
-![CheckBox_Uso_Uma_Linha](imagens/checkbox/checkbox-uma-linha.png)
+![CheckBox_Uso_Uma_Linha](imagens/checkbox-uma-linha.png)
 
 ## Tipografia
 
-![CheckBox_Tipografia](imagens/checkbox/checkbox-tipografia.png)
+![CheckBox_Tipografia](imagens/checkbox-tipografia.png)
 
 #### 1 - Texto de Orientação - Rawline 16px Semibold
 
@@ -248,7 +248,7 @@ Utilizar apenas quando for estritamente necessário, ou quando houverem poucos i
 
 #### 1 | Versão Padrão
 
-![CheckBox_Dimensoes](imagens/checkbox/checkbox-dimensoes.png)
+![CheckBox_Dimensoes](imagens/checkbox-dimensoes.png)
 
 #### 1 - Estado Normal - Box: 24 x 24px - Espessura do Contorno: 1px
 
@@ -265,7 +265,7 @@ Utilizar apenas quando for estritamente necessário, ou quando houverem poucos i
 Para se adaptar proporcionalmente ao tamanho da font utilizada na tabela, o checkbox aparecerá na mesma
 num tamanho reduzido: 20px.
 
-![CheckBox_Dimensoes_tabela](imagens/checkbox/checkbox-dimensoes-tabela.png)
+![CheckBox_Dimensoes_tabela](imagens/checkbox-dimensoes-tabela.png)
 
 #### 5 - Versão Menor - Box: 20 x 20px
 
@@ -276,17 +276,17 @@ num tamanho reduzido: 20px.
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados na paginação.
 Todas as medidas foram definidas com valores múltiplos de 4px.
 
-![CheckBox_Espaçamentos](imagens/checkbox/checkbox-espacamentos.png)
+![CheckBox_Espaçamentos](imagens/checkbox-espacamentos.png)
 
 ### Arredondamento
 
-![CheckBox_Arredondamento](imagens/checkbox/checkbox-arredondamento.png)
+![CheckBox_Arredondamento](imagens/checkbox-arredondamento.png)
 
 ### Cores
 
 #### 1 | Versão Positiva
 
-![CheckBox_Versão_Positiva](imagens/checkbox/checkbox-cores.png)
+![CheckBox_Versão_Positiva](imagens/checkbox-cores.png)
 
 #### 1 - Estado Normal
 
@@ -332,7 +332,7 @@ Todas as medidas foram definidas com valores múltiplos de 4px.
 Utilizar a versão negativa do checkbox sobre backgrounds escuros, como por exemplo na linha selecionada da tabela.
 Nesse caso o checkbox assume a cor branca como cor de background e o ícone assume cor azul.
 
-![CheckBox_Versão_Positiva](imagens/checkbox/checkbox-cores-negativa.png)
+![CheckBox_Versão_Positiva](imagens/checkbox-cores-negativa.png)
 
 #### 8 - Versão Negativa
 
@@ -352,7 +352,7 @@ Os componentes Select são usados ​​para coletar informações fornecidas pe
 
 ## Orientação de Uso
 
-![Select_Orientação_Uso](imagens/select/select-orientacao-uso.png)
+![Select_Orientação_Uso](imagens/select-orientacao-uso.png)
 
 #### 1 | Rótulos
 
@@ -366,7 +366,7 @@ O placeholder tem a função de auxiliar o usuário a selecionar as opções dis
 
 De acordo com o contexto de uso as alturas dos campos devem variar para: select em Filtro em portal (pequeno); select em tabelas (médio) e select geral (grande).
 
-![Select_Altura_Campos](imagens/select/Select_Alturas_Campos.png)
+![Select_Altura_Campos](imagens/select-alturas-campos.png)
 
 ## Comportamento
 
@@ -374,7 +374,7 @@ O label, o placeholder e os demais comportamentos permanecem iguais.
 
 No caso do uso em Tabelas e Filtro em portal o label pode ser suprimido, mas nesse caso o uso do placeholder é imprescindível.
 
-![Select_Comportamento](imagens/select/Select_Comportamento.png)
+![Select_Comportamento](imagens/select-comportamento.png)
 
 ## Anatomia
 
@@ -383,7 +383,7 @@ São elementos usados pelos usuários para escolher uma opção em um grupo de d
 
 ### Select Habilitado
 
-![Select_Habilitado](imagens/select/select-anatomia.png)
+![Select_Habilitado](imagens/select-anatomia.png)
 
 #### 1 - Rótulo - 16px Semibold #333333
 
@@ -405,7 +405,7 @@ São elementos usados pelos usuários para escolher uma opção em um grupo de d
 
 ### Select Desabilitado
 
-![Select_Habilitado](imagens/select/select-anatomia-desabilitado.png)
+![Select_Habilitado](imagens/select-anatomia-desabilitado.png)
 
 #### 1 - Rótulo - 16px Semibold #333333 opacidade: 45%
 
@@ -419,7 +419,7 @@ São elementos usados pelos usuários para escolher uma opção em um grupo de d
 
 ### Select Expandido
 
-![Select_Habilitado](imagens/select/select-anatomia-expandido.png)
+![Select_Habilitado](imagens/select-anatomia-expandido.png)
 
 #### 1 - Seletor - #260E8
 
@@ -428,7 +428,7 @@ São elementos usados pelos usuários para escolher uma opção em um grupo de d
 #### 3 - Hover - Cor de fundo - #DBE8FB
 
 <!-- ### Select Filtro Portal
-![Select_Habilitado](imagens/select/Select_Filtro_Portal.png)
+![Select_Habilitado](imagens/select-filtro-portal.png)
  -->
 
 <!-- ## Estados
@@ -436,21 +436,21 @@ São elementos usados pelos usuários para escolher uma opção em um grupo de d
 Os Selects podem ser representados nos estados: habilitado; desabilitado e campo com foco e dropdown aberto.
 
 ### Select Habilitado
-![Select_Habilitado](imagens/select/Select_Estado_Habilitado.png)
+![Select_Habilitado](imagens/select-estado-habilitado.png)
 
 ### Select Desabilitado
-![Select_Habilitado](imagens/select/Select_Estado_Desabilitado.png)
+![Select_Habilitado](imagens/select-estado-desabilitado.png)
 
 ### Select com foco e dropdown aberto.
-![Select_Habilitado](imagens/select/Select_Estado_Foco_DropDown.png)
+![Select_Habilitado](imagens/select-estado-foco-dropdown.png)
  -->
 
 <!-- ## Espaçamentos
 
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados no componente select.. Todas as medidas foram definidas com valores múltiplos de 4px e 8px.
 
-![Select_Habilitado](imagens/select/Select_Espaçamento.png) -->
+![Select_Habilitado](imagens/select-espaçamento.png) -->
 
 ## Cores
 
-![Select_Habilitado](imagens/select/Select_Cores.png)
+![Select_Habilitado](imagens/select-cores.png)
