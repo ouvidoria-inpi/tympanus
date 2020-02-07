@@ -1,56 +1,42 @@
-### Anatomia do componente
+## Cores
 
-O componente "Upload" aparece em forma de Cards e podem ter formatos distintos de acordo com a resolução da tela, mas devem sempre ficar alinhados com os elementos do formulário, seguindo a grid. O tamanho ideal deve ser 760 x 248 px.
-Do lado esquerdo do card aparecerá uma imagem ilustrativa, que foi criada a partir dos ícones do fontawesome. Essa imagem servirá de apoio ao entendimento do texto que aparece do lado direito do card.
-Abaixo do título do card, aparecerá sempre uma mensagem informativa de como devem ser as características dos arquivos a serem anexados.
-Abaixo da mensagem informativa deve haver um botão terciário para inclusão dos arquivos.
+No Upload o card deve ser branco #FFFFFF e no estado “hover, deve seguir o padrão com o fundo na cor #DBE8FB.
 
-### Cores
+![Upload Cores](imagens/upload-cores.png)
 
-No Upload o card deve ser branco #FFFFFF e o “hover, desse card deve seguir o mesmo comportamento dos demais: assumir o contorno de cor azul #2B74E9.
+## Orientações de Uso
 
-![Upload_Cores](images/upload-cores.png)
+### Upload com cards de 770 x 248px
 
-### Orientações de Uso
+Os cards tem altura sempre adaptada a quantidade de texto. A largura mínima deve ser 770px e Altura mínima 248px (antes dos arquivos serem selecionados).
 
-#### Upload com Cards de 770 x 248px
-
-Os cards tem altura sempre adaptada a quantidade de texto. A LARGURA mínima DEVE SER 770PX E Altura mínima 248px (antes dos arquivos serem selecionados).
 O upload pode ou não vir acompanhado de um título.
 
-#### 1 | Upload com Título
+![Upload Uso](imagens/upload-orientacoes-com-titulo.png)
 
-![Upload_Titulo](images/upload-titulo.png)
+![Upload Uso](imagens/upload-orientacoes-sem-titulo.png)
 
-#### 2 | Upload sem Título
+### Upload com cards contidos dentro de colapse
 
-![Upload_sem_TItulo](images/upload-sem-titulo.png)
+O card do upload pode aparecer contido num elemento de colapse. o mesmo servirá de título para o upload.
 
-#### 3 | Upload com Cards contidos dentro de colapse
+![Upload Uso](imagens/upload-contido-colapse.png)
 
-O card do Upload pode aparecer contido num elemento de colapse. O mesmo servirá de título para o upload.
+### Comportamento do hover
 
-![Upload_Cards_Colapse](images/upload-cards-colapse.png)
+Ao passar o mouse em cima do card, este mudará a cor de fundo para #DBE8FB. Isto ocorrerá apenas na versão web.
 
-<!-- #### 3 | Upload Contido no Colapse
+![Upload Uso](imagens/upload-contido-hover.png)
 
-![Upload_Colapse](images/upload-colapse.png) -->
+### 4 | Cards com Altura e LARGURA Variáveis
 
-### Comportamentos
+Os cards do upload podem aumentar a altura em função da quantidade dos arquivos incluídos e podem variar a largura
+conforme disposição dos elementos do formulário.
 
-#### Comportamento em mouse hover
+#### Comportamento
 
-Ao passar o mouse em cima do card aparecerá um contorno azul cor #2B74E9.
-**Essa versão ocorrerá apenas na versão web.**
+Após inclusão dos arquivos aparecerá um ícone ‘X” para excluir o arquivo, caso o usuário tenha selecionado errado. O botão terciário para inclusão de arquivos permanecerá visível no card mesmo após a seleção de vários arquivos,
 
-![Upload_Hover](images/upload-hover.png)
+### 5 | Upload após seleção dos arquivos
 
-#### 4 | Cards com altura e Largura Variáveis
-
-Os cards do upload podem aumentar a altura em função da quantidade dos arquivos incluídos e podem variar a largura CONFORME DISPOSIÇÃO DOS ELEMENTOS DO FORMULÁRIO.
-
-Após inclusão dos arquivos aparecerá um ícone ‘X” para excluir o Arquivo, caso o usuário tenha selecionado errado. O botão terciário para inclusão de arquivos permanecerá visível no card mesmo após a seleção de vários arquivos.
-
-#### 5 | Upload após seleção de arquivos
-
-![Upload_Seleção_Arquivo](images/upload-selecao-arquivo.png)
+![Upload Uso](imagens/upload-selecao-varios-arquivos.png)

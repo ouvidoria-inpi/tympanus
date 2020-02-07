@@ -234,6 +234,11 @@
         "label": "Upload",
         "filename": "upload",
         "urlLabel": "upload"
+      },
+      {
+        "label": "Wizard",
+        "filename": "wizard",
+        "urlLabel": "wizard"
       }
     ]
   },
