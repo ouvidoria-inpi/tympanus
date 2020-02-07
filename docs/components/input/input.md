@@ -1,1 +1,1 @@
-São componentes que definem a entrada de dados simples por parte do usuário.
+É o componente que permite a entrada de dados textuais por parte do usuário.

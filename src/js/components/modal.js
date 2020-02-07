@@ -1,4 +1,4 @@
-let scrim = document.getElementsByClassName("is-foco")[0];
+scrim = document.getElementsByClassName("is-foco")[0];
 
 function openModal(div) {
     scrim.innerHTML = div.innerHTML;

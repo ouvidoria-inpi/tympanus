@@ -1,388 +1,96 @@
-doctype html
-html(lang="pt-BR")
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    title Table
-    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' crossorigin='anonymous')
-    link(rel='stylesheet' href='/dist/css/dsgov.css')
-    link(rel='stylesheet' href='../input/input.css')
-    link(rel='stylesheet' href='../checkbox/checkbox.css')
-    link(rel='stylesheet' href='../select/select.css')
-    link(rel='stylesheet' href='../pagination/pagination.css')
-    link(rel='stylesheet' href='table.css')
-  body
-    .container-fluid
-      .br-table
-        p.caption Exemplo de título da tabela
-        .row.mb-1
-          .col-sm-2
-            .actions.ml-3
-              .br-select
-                label(for='acoes-em-massa')
-                  i.fas.fa-share
-                select#acoes-em-massa
-                  option(value='0') Ações em massa
-                  option(value='opcao-1') Ação 1
-                  option(value='opcao-2') Ação 2
-                  option(value='opcao-3') Ação 3
-                  option(value='opcao-4') Ação 4
-          .col-sm-2.ml-auto
-            .search
-              .br-input
-                label.mb-0(for='search')
-                  span.sr-only Busca
-                input#search(type='search')
-                span.icon
-                  i.fas.fa-search
-          .col-auto
-            .length
-              .br-select
-                label(for='length-top') Exibir:
-                select#length-top
-                  option(value='0') 0
-                  option(value='opcao-1' selected='') 10
-                  option(value='opcao-2') 15
-                  option(value='opcao-3') 20
-                  option(value='opcao-4') 25
-        .table
-          table
-            thead
-              tr
-                th.text-center(scope='col')
-                  .br-check
-                    input#select-all(type='checkbox')
-                    label(for='select-all')
-                      span.sr-only checkbox
-                th(scope='col')
-                  | Coluna 1 
-                  i.fas.fa-sort.text-primary
-                th(style='min-width: 300px' scope='col')
-                  | Coluna 2 
-                  i.fas.fa-sort.text-primary
-                th(scope='col')
-                  | Coluna 3 
-                  i.fas.fa-sort.text-primary
-                th(scope='col')
-                  | Coluna 4 
-                  i.fas.fa-sort.text-primary
-                th.text-center(scope='col') Ações
-            tbody
-              tr
-                td.text-center
-                  .br-check
-                    input#check-1(type='checkbox')
-                    label(for='check-1')
-                      span.sr-only checkbox
-                td 0001AC201900016
-                td Obter EX-Tarifário para bens de capital e para bens de informática
-                td 09/07/2009
-                td Em Processamento
-                td.text-center
-                  .actions.is-inline.is-active
-                    button.trigger(type='button')
-                      i.fas.fa-ellipsis-h
-                    .list
-                      button(type='button')
-                        span.sr-only Visualizar
-                        i.fas.fa-eye
-                      button(type='button')
-                        span.sr-only Editar
-                        i.fas.fa-edit
-                      button(type='button')
-                        i.fas.fa-envelope-open-text
-                      button(type='button')
-                        span.sr-only Apagar
-                        i.fas.fa-trash
-              tr
-                td.text-center
-                  .br-check
-                    input#check-2(type='checkbox')
-                    label(for='check-2')
-                      span.sr-only checkbox
-                td 0001AC201900016
-                td Emitir Documento de Arrecadação da Receita Federal
-                td 09/07/2009
-                td Concluído
-                td.text-center
-                  .actions.is-active
-                    button.trigger(type='button')
-                      i.fas.fa-ellipsis-h
-                    .list
-                      button(type='button') Ação 1
-                      button(type='button') Ação 2
-                      button(type='button') Ação 3
-                      button(type='button') Ação 4
-              tr
-                td.text-center
-                  .br-check
-                    input#check-3(type='checkbox')
-                    label(for='check-3')
-                      span.sr-only checkbox
-                td 0001AC201900016
-                td Obter EX-Tarifário para bens de capital e para bens de informáica
-                td 09/07/2009
-                td Em Processamento
-                td.text-center
-                  .actions
-                    button(type='button')
-                      span.sr-only Visualizar
-                      i.fas.fa-eye
-                    button(type='button')
-                      span.sr-only Editar
-                      i.fas.fa-edit
-              tr
-                td.text-center
-                  .br-check
-                    input#check-4(type='checkbox')
-                    label(for='check-4')
-                      span.sr-only checkbox
-                td
-                  .br-input
-                    label.mb-0(for='input-coluna-1')
-                      span.sr-only Label
-                    input#input-coluna-1(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-coluna-2')
-                      span.sr-only Label
-                    input#input-coluna-2(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-coluna-3')
-                      span.sr-only Label
-                    input#input-coluna-3(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-coluna-4')
-                      span.sr-only Label
-                    input#input-coluna-4(type='text' placeholder='Insira um texto')
-                td.text-center
-                  .actions
-                    button(type='button')
-                      span.sr-only Visualizar
-                      i.fas.fa-eye
-                    button(type='button')
-                      span.sr-only Editar
-                      i.fas.fa-edit
-              tr
-                td.text-center
-                  .br-check
-                    input#check-5(type='checkbox')
-                    label(for='check-5')
-                      span.sr-only checkbox
-                td
-                  .br-input
-                    label.mb-0(for='input-2-coluna-1')
-                      span.sr-only Label
-                    input#input-2-coluna-1(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-2-coluna-2')
-                      span.sr-only Label
-                    input#input-2-coluna-2(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-2-coluna-3')
-                      span.sr-only Label
-                    input#input-2-coluna-3(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-2-coluna-4')
-                      span.sr-only Label
-                    input#input-2-coluna-4(type='text' placeholder='Insira um texto')
-                td.text-center
-                  .actions
-                    button(type='button')
-                      span.sr-only Visualizar
-                      i.fas.fa-eye
-                    button(type='button')
-                      span.sr-only Editar
-                      i.fas.fa-edit
-              tr.is-active
-                td.text-center
-                  .br-check
-                    input#check-6(type='checkbox' checked)
-                    label(for='check-6')
-                      span.sr-only checkbox
-                td
-                  .br-input
-                    label.mb-0(for='input-3-coluna-1')
-                      span.sr-only Label
-                    input#input-3-coluna-1(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-3-coluna-2')
-                      span.sr-only Label
-                    input#input-3-coluna-2(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-3-coluna-3')
-                      span.sr-only Label
-                    input#input-3-coluna-3(type='text' placeholder='Insira um texto')
-                td
-                  .br-input
-                    label.mb-0(for='input-3-coluna-4')
-                      span.sr-only Label
-                    input#input-3-coluna-4(type='text' placeholder='Insira um texto')
-                td.text-center
-                  .actions
-                    button(type='button')
-                      span.sr-only Visualizar
-                      i.fas.fa-eye
-                    button(type='button')
-                      span.sr-only Editar
-                      i.fas.fa-edit
-              tr
-                td.text-center
-                  .collapse
-                    button(type='button')
-                      i.fas.fa-plus
-                      span.sr-only
-                        | Mais informações
-                td 0001AC201900016
-                td Obter EX-Tarifário para bens de capital e para bens de informáica
-                td 09/07/2009
-                td Em Processamento
-                td.text-center
-                  .actions
-                    button(type='button')
-                      span.sr-only Visualizar
-                      i.fas.fa-eye
-                    button(type='button')
-                      span.sr-only Editar
-                      i.fas.fa-edit
-              tr
-                td.text-center
-                  .collapse
-                    button(type='button')
-                      i.fas.fa-plus
-                      span.sr-only
-                        | Mais informações
-                td 0001AC201900016
-                td Emitir Documento de Arrecadação da Receita Federal
-                td 09/07/2009
-                td Concluído
-                td.text-center
-                  .actions
-                    button(type='button')
-                      span.sr-only Visualizar
-                      i.fas.fa-eye
-                    button(type='button')
-                      span.sr-only Editar
-                      i.fas.fa-edit
-              tr.is-active
-                td.text-center
-                  .collapse
-                    button(type='button')
-                      i.fas.fa-minus
-                      span.sr-only
-                        | Fechar informações
-                td 0001AC201900016
-                td Obter EX-Tarifário para bens de capital e para bens de informáica
-                td 09/07/2009
-                td Em Processamento
-                td.text-center
-                  .actions
-                    button(type='button')
-                      span.sr-only Visualizar
-                      i.fas.fa-eye
-                    button(type='button')
-                      span.sr-only Editar
-                      i.fas.fa-edit
-              tr
-                td
-                td(colspan='5')
-                  p
-                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laboriosam mollitia eius a porro, magni molestiae nihil repellendus officiis autem ullam cumque saepe culpa non iste amet inventore quas fuga?
-                  p
-                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sit aspernatur labore, temporibus possimus distinctio doloribus recusandae vitae voluptate dolore odit ducimus molestiae aliquid, reiciendis cumque voluptates dolor natus ex!
-                  p
-                    | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non suscipit commodi eius ducimus magnam laborum in quae laudantium sapiente, minima necessitatibus modi iusto pariatur quaerat? A vitae eos totam fugit!
-              tr
-                td.text-center
-                  .br-check
-                    input#check-10(type='checkbox')
-                    label(for='check-10')
-                      span.sr-only checkbox
-                td 0001AC201900016
-                td Emitir Documento de Arrecadação da Receita Federal
-                td 09/07/2009
-                td Concluído
-                td.text-center
-                  .actions
-                    button(type='button')
-                      span.sr-only Visualizar
-                      i.fas.fa-eye
-                    button(type='button')
-                      span.sr-only Editar
-                      i.fas.fa-edit
-        .row.mt-1
-          .col-sm
-            ul.br-pagination
-              li.is-first.is-disabled
-                a(href='')
-                  i.fas.fa-angle-double-left
-                  span Anterior
-              li.d-flex.d-sm-none
-                label(for='page-select-default')
-                  span.sr-only Selecione a página
-                select#page-select-default
-                  option(value='1') 1
-                  option(value='2') 2
-                  option(value='3') 3
-                  option(value='4') 4
-                  option(value='5') 5
-                  option(value='6') 6
-                  option(value='7') 7
-                  option(value='8') 8
-                  option(value='9') 9
-                  option(value='10') 10
-                span.ml-2 de
-                a(href='') 10
-              li.is-active
-                a(href='')
-                  span 1
-              li
-                a(href='')
-                  span 2
-              li
-                a(href='')
-                  span 3
-              li
-                a(href='')
-                  span 4
-              li
-                a(href='')
-                  span 5
-              li
-                a(href='')
-                  span 6
-              li
-                a(href='')
-                  span 7
-              li
-                a(href='')
-                  span 8
-              li
-                a(href='')
-                  span 9
-              li
-                a(href='')
-                  span 10
-              li.is-last
-                a(href='')
-                  span Próxima
-                  i.fas.fa-angle-double-right
-          .col-auto
-            .length
-              .br-select
-                label(for='length-bottom') Exibir:
-                select#length-bottom
-                  option(value='0') 0
-                  option(value='opcao-1' selected='') 10
-                  option(value='opcao-2') 15
-                  option(value='opcao-3') 20
-                  option(value='opcao-4') 25
-    script(src='../select/select.js')
+mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=5)
+  - let datatableClass = attributes.datatable ? "is-datatable" : ""
+  - let column = 1
+  - let row = 1
+  .br-table(
+    class=attributes.class ? attributes.class + " " + datatableClass : datatableClass
+    id=attributes.id
+    )
+    if (attributes.datatable)
+      .header
+        .top-bar
+          .title=attributes.title ? attributes.title : title
+          .search-button
+            +button.search-trigger.is-circle.is-tertiary
+              i.fas.fa-search
+        .search-bar
+          +input("Buscar").search-input.is-medium.has-icon(
+            placeholder="Buscar na tabela",
+            id=attributes.id + '-search-input'
+          )
+            button.icon(type='button')
+              span.sr-only Buscar
+              i.fas.fa-search
+          +button.search-close.is-circle.ml-1
+            i.fas.fa-times
+        if (attributes.checkbox)
+          .selected-bar
+            .info
+              +button.mobile.select-all.is-primary 
+                i.fas.fa-minus-square
+              span.count 0
+              span.text item selecionado
+            .action-button
+              +button.delete-trigger.is-primary 
+                span Excluir
+                i.fas.fa-trash-alt
+            .action-button
+              +button.download-trigger.is-primary 
+                span Download
+                i.fas.fa-download
+            .action-button.mobile
+              +button.is-primary 
+                i.fas.fa-ellipsis-v
+    .responsive
+      table
+        thead
+          tr
+            while (column <= (attributes.columns ? attributes.columns : columns))
+              if (column === 1)
+                if (attributes.checkbox)
+                  th(scope="col" style="width: 54px;")
+                    +checkbox("")(id=`${attributes.id}-check-all`, name="check")
+                th(scope="col")=`Coluna ${column}`
+              else
+                th(scope="col")=`Coluna ${column}`
+              - column++
+        tbody
+          while (row <= (attributes.rows ? attributes.rows : rows))
+            tr
+              - column = 1
+              while (column <= (attributes.columns ? attributes.columns : columns))
+                - let random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+                - random = random.replace(/(\w{8})/g, '$1 ').replace(/(^\s+|\s+$)/,'')
+                if (column === 1)
+                  if (attributes.checkbox)
+                    td
+                      +checkbox("")(id=`${attributes.id}-line-${row}` name="check")
+                  td(data-th=`Coluna ${column}`)=random
+                else
+                  td(data-th=`Coluna ${column}`)=random
+                - column++
+            - row++
+    if (attributes.datatable)
+      .footer
+        .bottom-bar
+          .items
+            span Exibir:
+            +select("").is-small(id=attributes.id + '-items')
+              +option("10", "10")
+              +option("15", "15")
+              +option("20", "20")
+            span.divider
+            span 1-10 de 50 itens
+          .pagination
+            .selectors
+              +select("").is-small(id=attributes.id + '-pagination')
+                +option("1", "1")
+                +option("2", "2")
+                +option("3", "3")
+              span de 3 páginas
+              span.divider
+            .arrows
+              +button.is-circle.is-secondary
+                i.fa.fa-chevron-left
+              +button.is-circle.is-secondary
+                i.fa.fa-chevron-right

@@ -1,78 +1,82 @@
 ## Tipos de Acordeão
 
-#### 1 | Acordeão Positivo
+1 | Acordeão Positivo
+O acordeão positivo pode ser aplicado em sistemas e também no Portal Único. Ele se apresenta sobre background claro e se apresenta da seguinte forma:
 
-O acordeão positivo pode ser aplicado em sistemas e também no Portal Único. Ele deve vir sobre background claro e segue a seguinte formatação:
+![Acordeão Positivo](imagens/acordeao-positivo.png)
 
-![Acordeão_Positivo](images/accordeon-positivo.png)
+1 | Acordeão Negativo
+Ele se apresenta sobre background escuro e se apresenta da seguinte forma:
 
-#### 2 | Acordeão Negativo
+![Acordeão Negativo](imagens/acordeao-negativo.png)
 
-O acordeão negativo é aplicado sobre o rodapé do Portal Único. Ele deve vir sobre background azul escuro e a tipografia deve se apresentar de forma maíuscula destacando os itens sobre o background escuro. Os ícones para expandir o item, aparecerem à direita do componente.
+## Estados do Acordeão
 
-![Acordeão_Negativo](images/accordeon-negativo.png)
+Os estados dos acordeão servem para dar feedback ao usuário sobre a intereção do usuário ao expandir, recolher, ou passar o mouse por cima de um item da lista.
 
-### Estados do Acordeão
+### A | Interativo
 
-Estados do Acordeão Os estados dos acordeão servem para dar feedback ao usuário sobre a intereção do usuário ao expandir, recolher, ou passar o mouse por cima de um item da lista.
+O estado inicial do Acordeão, como ele é exibido na interface. Acompanhado do ícone de expandir (angle-down) que indica ao usuário que há itens a serem clicados.
 
-![Acordeão_Estado](images/accordeon-estado.png)
+### B | Ativo
 
-#### A | Normal
+Acontece quando se clica num item da lista e o mesmo se expande exibindo o conteúdo. Nessa situação o texto fica semibold e assume cor Primary Darken 01. E o ícone "angle-down” é substituído pelo de “angle-up“ indicando ao usuário, que o clique nos elementos do item expandido tem a ação de esconder o conteúdo.
 
-O estado padrão do Acordeão, como ele é exibido naturalmente na interface.
+### C | Hover
 
-#### B | Click
+O estado quando o cursor do mouse está sobre o item a ser expandido ou recolhido. Nesse caso, o item recebe tratamento gráfico de hover, (um background azul claro aparece embaixo do item) sinalizando ao usuário a interação.
 
-Acontece quando se clica num item da lista e o mesmo se expande exibindo o conteúdo. Nessa situação o ícone de “+” é substituído pelo de “-“ indicando ao usuário, que o clique nos elementos do item expandido tem a ação de esconder o conteúdo
+#### Positivo
 
-#### C | Hover
+![Acordeão Estados Positivo](imagens/acordeao-positivo-estados.png)
 
-O estado quando o cursor do mouse está sobre o item a ser expandido ou recolhido. Nesse caso, tanto o ícone quanto o texto assumem outro tom de azul, sinalizando ao usuário a interação.
+#### Negativo
+
+Sobre background negativo o hover deve seguir o padrão gráfico sobre fundo escuro.
+
+![Acordeão Estados Negativo](imagens/acordeao-negativo-estados.png)
 
 ## Anatomia
 
 ### Tom de Voz do Acordeão
 
 O tom de voz do acordeão é, essencialmente, como ele vai comunicar qual assunto se trata, deixando claro para o usuário que assunto ele vai encontrar em cada detalhamento dos itens.
-Recomenda-se, sempre que possível, a utilização de uma sentença, clara e sucinta, um resumo que determine de forma objetiva qual conteúdo será exibido. Evitar uso de siglas ou expressões que não são reconhecidas ao público em geral. Não exceder uma linha de texto. O detalhe de cada item deve aparecer quando o item for expandido.
+
+Recomenda-se, sempre que possível, a utilização de uma sentença, clara e sucinta, um resumo que determine de forma objetiva qual conteúdo será exibido. Evitar uso de siglas ou expressões que não são reconhecidas ao público em geral. **Não exceder uma linha de texto.** O detalhe de cada item deve aparecer quando o item for expandido.
 
 ### Formatação do Texto
 
-#### 1 | Acordeão Positivo
-
-Os textos dos itens foram formatados em letras minúsculas com **a primeira letra maiúscula.**
-
-#### 2 | Acordeão Negativo
-
-Os textos dos itens expansíveis serão exibidos em maiúsculas, para facilitar a leitura sobre fundo escuro e garantir a hierarquia visual dos itens do menu no caso do rodapé de portais e sistemas.
+Os textos dos itens foram formatados em letras minúsculas com a primeira letra maiúscula no estilo medium. Ao ser clicado o item passa a se apresentar no estilo semibold para auxiliar informar ao usuário que aquele item está ativo.
 
 ### Alinhamento
 
-#### 1 | Acordeão Positivo
+Os itens aparecem separados por uma linha de contorno cinza e os ícones de retrair e expandir aparecem alinhados entre si à esquerda, antes do texto.
 
-Os itens aparecem separados por uma linha de contorno cinza e os ícones aparecem alinhados entre si, antes do texto.
+##### 1 | Acordeão Positivo
 
-![Acordeão_Alinhamento_Positivo](images/accordeon-alinhamento-positivo.png)
+![Acordeão Positivo](imagens/acordeao-positivo-alinhamento.png)
 
-#### 2 | Acordeão Negativo
+##### 2 | Acordeão Negativo
 
-No acordeão negativo os itens também aparecem separados entre si por uma linha de contorno branca e os itens de texto vêm antes que os ícones. Esses aparecem do lado direito do componente.
-
-![Acordeão_Alinhamento_Negativo](images/accordeon-alinhamento-negativo.png)
+![Acordeão Positivo](imagens/acordeao-negativo-alinhamento.png)
 
 ### Espaçamentos
 
 Seguem as métricas definidas para os espaçamentos dos acordeões. Todas as medidas foram definidas com valores múltiplos de 4px.
 
-![Acordeão_Espaçamentos](images/accordeon-espacamentos.png)
+![Acordeão Positivo](imagens/Acordeao-negativo-espacamento.png)
 
-### Tipografia e Cor
+## Tipografia e Cor
 
 #### 1 | Acordeão Positivo
 
-![Acordeão_Positivo_Tipografia](images/accordeon-positivo-tipografia.png)
+A cor da fonte deve seguir a cor do estado ativo, pois é importante criar essa uniformidade com os outros componentes ativos da interface.
+
+![Acordeão Positivo](imagens/acordeao-positivo-alinhamento.png)
+`
 
 #### 2 | Acordeão Negativo
 
-![Acordeão_Negativo_Tipografia](images/accordeon-negativo-tipografia.png)
+Por questões de acessibilidae, no acordeão negativo a cor da fonte passa a ser Secondary 01 (branca), mas os estilos seguem o mesmo padrão adotado no positivo.
+
+![Acordeão Positivo](imagens/acordeao-negativo-alinhamento.png)

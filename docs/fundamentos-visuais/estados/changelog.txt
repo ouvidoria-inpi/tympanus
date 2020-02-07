@@ -1,0 +1,9 @@
+# Changelog
+Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
+
+## [2.0.1] - 29/01/2020
+- `Corrigido` o rótulo "Artefato de Design" para "Artefato Fonte de Design". Retirado a marcação de citação para descrição do fundamento.
+
+## [2.0.0] - 24/01/2020
+- `Adicionado` o estado Visitado.
+- `Modificado` para os novos padrões de desenvolvimento e os estados: Pressionado, Foco, Ativo, Ligado e Desligado. 

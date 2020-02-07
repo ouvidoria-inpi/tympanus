@@ -4,7 +4,7 @@ append vars
   - var title = "Ative sua conta";
 
 append scripts
-  script(src=jscompoents+"checklist.js")
+  script(src=jscompoents+"dsgov-components.js")
 
 append content
   p
@@ -26,8 +26,8 @@ append content
           +radio("")(id="radio-celular" name="radio")
   // Receber código
   p.label.mt-8 Receber Código por:
-  +radio("Mensagem SMS")(id="mensagem" class="d-block mb-1")
-  +radio("Ligação")(id="ligacao" class="d-block mb-1")
+  +radio("Mensagem SMS")(id="mensagem" name="canal" class="d-block mb-1")
+  +radio("Ligação")(id="ligacao" name="canal" class="d-block mb-1")
   // Botões de ação
   .d-flex.flex-wrap.flex-row-reverse.justify-content-center.justify-content-sm-start.mt-10.mt-sm-10
     +button(class="is-primary" disabled) Avançar

@@ -22,7 +22,27 @@ class BRChecklist {
 				this._switchShared(event.currentTarget);
 			});
 		}
-	}
+		
+		
+/*
+teste
+*/
+  _setBehavior() {
+    for (let inputRadio of this.component.querySelectorAll(
+      'input[type="radio"]'
+    )) {
+      inputRadio.addEventListener("click", event => {
+        this._switchSole(event);
+      });
+    }
+    for (let inputCheckbox of this.component.querySelectorAll(
+      'input[type="checkbox"]'
+    )) {
+      inputCheckbox.addEventListener("click", event => {
+        this._switchShared(event);
+      });
+    }
+  }
 
 	_switchSole(currentCheckedElement) {
 		for (let field of this.component.querySelectorAll(".item")) {
@@ -49,6 +69,8 @@ class BRChecklist {
     return element;
   }
 }
+
+
 
 let checklistList = [];
 

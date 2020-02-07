@@ -3,6 +3,7 @@ mixin button
   - let accesskey = attributes.accesskey
   - let disabled = attributes.disabled
   button.br-button(
+    id=attributes.id
     class=className ? className : ""
     type="button"
     accesskey=accesskey ? accesskey : false
