@@ -166,6 +166,11 @@
         "urlLabel": "input"
       },
       {
+        "label": "Listas",
+        "filename": "listas",
+        "urlLabel": "listas"
+      },
+      {
         "label": "Mensagem",
         "filename": "message",
         "urlLabel": "mensagem"
@@ -211,6 +216,11 @@
         "urlLabel": "select"
       },
       {
+        "label": "Tag",
+        "filename": "tag",
+        "urlLabel": "tag"
+      },
+      {
         "label": "Tabela",
         "filename": "table",
         "urlLabel": "tabela"
@@ -221,9 +231,19 @@
         "urlLabel": "textarea"
       },
       {
+        "label": "Tooltip",
+        "filename": "tooltip",
+        "urlLabel": "tooltip"
+      },
+      {
         "label": "Upload",
         "filename": "upload",
         "urlLabel": "upload"
+      },
+      {
+        "label": "Wizard",
+        "filename": "wizard",
+        "urlLabel": "wizard"
       }
     ]
   },
@@ -242,27 +262,27 @@
         "label": "Cadastro de usuário",
         "children": [
           {
-            "label": "Cadastro de usuário - Início do Cadastro",
+            "label": "Início do Cadastro",
             "filename": "signin",
             "urlLabel": "signin"
           },
           {
-            "label": "Cadastro de usuário - Ativação da Conta",
+            "label": "Ativação da Conta",
             "filename": "signin-1",
             "urlLabel": "signin-1"
           },
           {
-            "label": "Cadastro de usuário - Verificação do código recebido",
-            "filename": "signin-1",
-            "urlLabel": "signin-1"
+            "label": "Verificação do código recebido",
+            "filename": "signin-2",
+            "urlLabel": "signin-2"
           },
           {
-            "label": "Cadastro de usuário - Correção do número do celular",
+            "label": "Correção do número do celular",
             "filename": "signin-3",
             "urlLabel": "signin-3"
           },
           {
-            "label": "Cadastro de usuário - Conclusão do Cadastro",
+            "label": "Conclusão do Cadastro",
             "filename": "signin-4",
             "urlLabel": "signin-4"
           }
@@ -272,27 +292,27 @@
         "label": "Recuperação de Senha",
         "children": [
           {
-            "label": "Recuperação de Senha - Com Lista de Opções",
+            "label": "Com Lista de Opções",
             "filename": "password",
             "urlLabel": "password"
           },
           {
-            "label": "Recuperação de Senha - Pelo Celular",
+            "label": "Pelo Celular",
             "filename": "password-1",
             "urlLabel": "password-1"
           },
           {
-            "label": "Recuperação de Senha - Campo com Validação",
+            "label": "Campo com Validação",
             "filename": "password-2",
             "urlLabel": "password-2"
           },
           {
-            "label": "Recuperação de Senha - Precisa de Ajuda?",
+            "label": "Precisa de Ajuda?",
             "filename": "password-3",
             "urlLabel": "password-3"
           },
           {
-            "label": "Recuperação de Senha - Mudar Senha",
+            "label": "Mudar Senha",
             "filename": "password-4",
             "urlLabel": "password-4"
           }
@@ -312,12 +332,12 @@
         "label": "Sites e portais",
         "children": [
           {
-            "label": "Sites e portais - Template base",
+            "label": "Template base",
             "filename": "site",
             "urlLabel": "site"
           },
           {
-            "label": "Sites e portais - Mobile",
+            "label": "Mobile",
             "filename": "site-mobile",
             "urlLabel": "site-mobile"
           }
@@ -331,12 +351,12 @@
         "label": "Tela de erro para Sistemas",
         "children": [
           {
-            "label": "Tela de erro para Sistemas - Com opção de busca",
+            "label": "Com opção de busca",
             "filename": "not-found-1",
             "urlLabel": "not-found-1"
           },
           {
-            "label": "Tela de erro para Sistemas - Padrão",
+            "label": "Padrão",
             "filename": "not-found-2",
             "urlLabel": "not-found-2"
           }
