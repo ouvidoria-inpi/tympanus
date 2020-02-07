@@ -136,14 +136,9 @@
         "urlLabel": "card"
       },
       {
-        "label": "Checkbox",
-        "filename": "checkbox",
-        "urlLabel": "checkbox"
-      },
-      {
-        "label": "Checklist",
-        "filename": "checklist",
-        "urlLabel": "checklist"
+        "label": "Controle de Seleção",
+        "filename": "selection-control",
+        "urlLabel": "controle-selecao"
       },
       {
         "label": "Datepicker",
@@ -201,19 +196,9 @@
         "urlLabel": "portlet"
       },
       {
-        "label": "Radio button",
-        "filename": "radio",
-        "urlLabel": "radio"
-      },
-      {
         "label": "Scrim",
         "filename": "scrim",
         "urlLabel": "scrim"
-      },
-      {
-        "label": "Select",
-        "filename": "select",
-        "urlLabel": "select"
       },
       {
         "label": "Tag",

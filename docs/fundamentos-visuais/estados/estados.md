@@ -1,7 +1,5 @@
 [artefato fonte de design]: # 'estados_2.0.1.xd'
 
-# Estados
-
 Estados são representações visuais que ajudam os usuários a identificar o estado de um componente ou elemento. Comunicam o estado de uma ação e sugerem a possibilidade ou imposibilidade do usuário interagir com um elemento, estabelecendo confiança entre interface e usuário.
 
 ---
