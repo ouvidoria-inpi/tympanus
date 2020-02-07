@@ -7,234 +7,234 @@
 // TODO: Barra superior - itens de ação e menu flutuante, tags de filtros, itens selecionados
 // TODO: Filtragem de cabeçalhos
 
-const brTables = document.querySelectorAll( ".br-table" );
-const brTablesHeadersClass = "headers";
-const active = "is-active";
-const hover = "is-hover";
-var brTableNumber = 0;
+const brTables = document.querySelectorAll('.br-table')
+const brTablesHeadersClass = 'headers'
+const active = 'is-active'
+const hover = 'is-hover'
+let brTableNumber = 0
 
-if ( brTables ) {
+if (brTables) {
+  const brTables = document.querySelectorAll('.br-table')
 
-	const brTables = document.querySelectorAll( ".br-table" );
+  for (let brTable of brTables) {
+    let searchBar = brTable.querySelector('.search-bar')
+    let searchTrigger = brTable.querySelector('.search-trigger')
+    let searchClose = brTable.querySelector('.search-close')
+    let responsive = brTable.querySelector('.responsive')
+    let headers = brTable.querySelector('table thead tr')
+    let rows = brTable.querySelectorAll('table tbody tr')
 
-	for ( let brTable of brTables ) {
-		var searchBar = brTable.querySelector( ".search-bar" );
-		var searchTrigger = brTable.querySelector( ".search-trigger" );
-		var searchClose = brTable.querySelector( ".search-close" );
-		var responsive = brTable.querySelector( ".responsive" );
-		var headers = brTable.querySelector( "table thead tr" );
-		var rows = brTable.querySelectorAll( "table tbody tr" );
+    brTableNumber++
 
-		brTableNumber++;
+    if (responsive) setSyncScroll(responsive)
+    if (headers) {
+      setHeaderWidth(brTable, headers)
+      cloneHeader(brTable, headers)
+    }
+    if (searchBar) toogleSearch(searchBar, searchTrigger, searchClose)
+    setClickActions(brTable)
+    hoverRow(rows)
 
-		if ( responsive ) setSyncScroll( responsive );
-		if ( headers ) {
-			setHeaderWidth( brTable, headers );
-			cloneHeader( brTable, headers );
-		}
-		if ( searchBar ) toogleSearch( searchBar, searchTrigger, searchClose );
-		setClickActions( brTable );
-		hoverRow( rows );
+    window.addEventListener('resize', function() {
+      if (headers) setHeaderWidth(brTable, headers)
+    })
 
-		window.addEventListener( "resize", function () {
-			if ( headers ) setHeaderWidth( brTable, headers );
-		} );
-
-		window.addEventListener( "load", function () {
-			if ( headers ) setHeaderWidth( brTable, headers );
-		} );
-	}
+    window.addEventListener('load', function() {
+      if (headers) setHeaderWidth(brTable, headers)
+    })
+  }
 }
 
-function hoverRow ( rows ) {
-	for ( let row of rows ) {
-		row.addEventListener( "mouseenter" , function () {
-				row.classList.add( hover );
-		});
-		row.addEventListener( "mouseleave" , function () {
-			row.classList.remove( hover );
-		});
-	}
+function hoverRow(rows) {
+  for (let row of rows) {
+    row.addEventListener('mouseenter', function() {
+      row.classList.add(hover)
+    })
+    row.addEventListener('mouseleave', function() {
+      row.classList.remove(hover)
+    })
+  }
 }
 
-function toogleSearch ( container, trigger, close ) {
-	if ( trigger ) {
-		trigger.addEventListener( "click", function () {
-			container.classList.add( active );
-		} );
-	}
+function toogleSearch(container, trigger, close) {
+  if (trigger) {
+    trigger.addEventListener('click', function() {
+      container.classList.add(active)
+    })
+  }
 
-	if ( close ) {
-		close.addEventListener( "click", function () {
-			container.classList.remove( active );
-		} );
-	}
+  if (close) {
+    close.addEventListener('click', function() {
+      container.classList.remove(active)
+    })
+  }
 }
 
-function setSyncScroll ( element ) {
-	element.classList.add( "syncscroll" );
-	element.setAttribute( "name", "table-" + brTableNumber );
+function setSyncScroll(element) {
+  element.classList.add('syncscroll')
+  element.setAttribute('name', 'table-' + brTableNumber)
 }
 
-function setHeaderWidth ( parent, element ) {
-	var cloneNode = parent.querySelector( `.${ brTablesHeadersClass }` );
-	if ( cloneNode ) {
-		for ( let i = 0; i < element.children.length; i++ ) {
-			elementWidth = element.children[ i ].offsetWidth;
-			cloneElementWidth = cloneNode.children[ 0 ].children[ i ];
-			if ( cloneElementWidth ) cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
-		}
-	}
+function setHeaderWidth(parent, element) {
+  let cloneNode = parent.querySelector(`.${brTablesHeadersClass}`)
+  if (cloneNode) {
+    for (let i = 0; i < element.children.length; i++) {
+      elementWidth = element.children[i].offsetWidth
+      cloneElementWidth = cloneNode.children[0].children[i]
+      if (cloneElementWidth)
+        cloneElementWidth.style.flex = `1 0 ${elementWidth}px`
+    }
+  }
 }
 
-function cloneHeader ( parent, element ) {
-	var clone = element.cloneNode( true );
-	var headersTag = document.createElement( "div" );
-	var scrollerTag = document.createElement( "div" );
+function cloneHeader(parent, element) {
+  let clone = element.cloneNode(true)
+  let headersTag = document.createElement('div')
+  let scrollerTag = document.createElement('div')
 
-	setSyncScroll( scrollerTag );
-	scrollerTag.classList.add( "scroller" );
+  setSyncScroll(scrollerTag)
+  scrollerTag.classList.add('scroller')
 
-	for ( let i = 0; i < element.children.length; i++ ) {
-		var elementNode = clone.children[ i ].innerHTML;
-		var cloneElementNode = document.createElement( "div" );
+  for (let i = 0; i < element.children.length; i++) {
+    let elementNode = clone.children[i].innerHTML
+    let cloneElementNode = document.createElement('div')
 
-		cloneElementNode.classList.add( "item" );
-		cloneElementNode.innerHTML = elementNode;
+    cloneElementNode.classList.add('item')
+    cloneElementNode.innerHTML = elementNode
 
-		scrollerTag.appendChild( cloneElementNode );
+    scrollerTag.appendChild(cloneElementNode)
 
-		if ( cloneElementNode.children[ 0 ] ) {
-			if ( cloneElementNode.children[ 0 ].classList.contains( "br-checkbox" ) ) {
-				var cloneCheckbox = cloneElementNode.children[ 0 ];
-				var cloneCheckboxId = `${ brTablesHeadersClass }-${ parent.id }-check-all`;
-				cloneCheckbox.querySelector( "input" ).id = cloneCheckboxId;
-				cloneCheckbox
-					.querySelector( "label" )
-					.setAttribute( "for", cloneCheckboxId );
-			}
-		}
-	}
+    if (cloneElementNode.children[0]) {
+      if (cloneElementNode.children[0].classList.contains('br-checkbox')) {
+        let cloneCheckbox = cloneElementNode.children[0]
+        let cloneCheckboxId = `${brTablesHeadersClass}-${parent.id}-check-all`
+        cloneCheckbox.querySelector('input').id = cloneCheckboxId
+        cloneCheckbox
+          .querySelector('label')
+          .setAttribute('for', cloneCheckboxId)
+      }
+    }
+  }
 
-	headersTag.classList.add( brTablesHeadersClass );
-	headersTag.appendChild( scrollerTag );
+  headersTag.classList.add(brTablesHeadersClass)
+  headersTag.appendChild(scrollerTag)
 
-	parent.appendChild( headersTag );
+  parent.appendChild(headersTag)
 }
 
-function setClickActions ( brTable ) {
-	
-	var headerCheckbox = brTable.querySelector(".headers [name='check'] [type='checkbox']");
-	var tableCheckboxes = brTable.querySelectorAll("tbody [name='check'] [type='checkbox']");
-	var selectedBar = brTable.querySelector( ".selected-bar" );
-	var info_select_all = brTable.querySelector(".selected-bar .info .select-all");
-	
-	if ( tableCheckboxes ) {
-		for ( let checkbox of tableCheckboxes ) {
-			checkbox.addEventListener( "click", function () { 
-				checkRow ( checkbox, selectedBar, tableCheckboxes, headerCheckbox );
-			} )
-		}
-	}
+function setClickActions(brTable) {
+  let headerCheckbox = brTable.querySelector(
+    ".headers [name='check'] [type='checkbox']"
+  )
+  let tableCheckboxes = brTable.querySelectorAll(
+    "tbody [name='check'] [type='checkbox']"
+  )
+  let selectedBar = brTable.querySelector('.selected-bar')
+  let info_select_all = brTable.querySelector('.selected-bar .info .select-all')
 
-	if ( headerCheckbox ) {
-		headerCheckbox.addEventListener( "click", function () {
-			checkAllTable ( selectedBar, tableCheckboxes, headerCheckbox );
-		} );
-	}
+  if (tableCheckboxes) {
+    for (let checkbox of tableCheckboxes) {
+      checkbox.addEventListener('click', function() {
+        checkRow(checkbox, selectedBar, tableCheckboxes, headerCheckbox)
+      })
+    }
+  }
 
-	if ( info_select_all ) {
-		info_select_all.addEventListener( "click", function () { 
-			checkAllTable ( selectedBar, tableCheckboxes, headerCheckbox );
-		});
-	}
+  if (headerCheckbox) {
+    headerCheckbox.addEventListener('click', function() {
+      checkAllTable(selectedBar, tableCheckboxes, headerCheckbox)
+    })
+  }
+
+  if (info_select_all) {
+    info_select_all.addEventListener('click', function() {
+      checkAllTable(selectedBar, tableCheckboxes, headerCheckbox)
+    })
+  }
 }
 
-function setRow ( checkbox, check ) {
-	tr = checkbox.parentNode.parentNode.parentNode;
-	if ( check ) {
-		tr.classList.add("is-selected");
-		checkbox.parentNode.classList.add("is-inverted");
-		checkbox.checked = true;
-	} else {
-		tr.classList.remove("is-selected");
-		checkbox.parentNode.classList.remove("is-inverted");
-		checkbox.checked = false;
-	}
+function setRow(checkbox, check) {
+  tr = checkbox.parentNode.parentNode.parentNode
+  if (check) {
+    tr.classList.add('is-selected')
+    checkbox.parentNode.classList.add('is-inverted')
+    checkbox.checked = true
+  } else {
+    tr.classList.remove('is-selected')
+    checkbox.parentNode.classList.remove('is-inverted')
+    checkbox.checked = false
+  }
 }
 
-function checkRow ( checkbox, selectedBar, tableCheckboxes, headerCheckbox){
-	check = checkbox.checked
-	setRow ( checkbox, check );
-	setSelectedBar ( check ? 1 : -1, selectedBar, tableCheckboxes, headerCheckbox );
+function checkRow(checkbox, selectedBar, tableCheckboxes, headerCheckbox) {
+  check = checkbox.checked
+  setRow(checkbox, check)
+  setSelectedBar(check ? 1 : -1, selectedBar, tableCheckboxes, headerCheckbox)
 }
 
-function checkAllRows ( tableCheckboxes ) {
-	for ( let checkbox of tableCheckboxes ) {
-		setRow(checkbox, true);
-	}
+function checkAllRows(tableCheckboxes) {
+  for (let checkbox of tableCheckboxes) {
+    setRow(checkbox, true)
+  }
 }
 
-function uncheckAllRows ( tableCheckboxes ) {
-	for ( let checkbox of tableCheckboxes ) {
-		setRow(checkbox, false);
-	}
+function uncheckAllRows(tableCheckboxes) {
+  for (let checkbox of tableCheckboxes) {
+    setRow(checkbox, false)
+  }
 }
 
-function checkAllTable ( selectedBar, tableCheckboxes, headerCheckbox ) {
-	count = tableCheckboxes.length;
-	var info_count = selectedBar.querySelector(".info .count");
-	var total = parseInt(info_count.innerHTML, 10);
+function checkAllTable(selectedBar, tableCheckboxes, headerCheckbox) {
+  count = tableCheckboxes.length
+  let info_count = selectedBar.querySelector('.info .count')
+  let total = parseInt(info_count.innerHTML, 10)
 
-	if ( total == count ) {
-		uncheckAllRows ( tableCheckboxes )
-		count = -1 * count;
-	}
-	else {
-		checkAllRows ( tableCheckboxes )
-	}
+  if (total == count) {
+    uncheckAllRows(tableCheckboxes)
+    count = -1 * count
+  } else {
+    checkAllRows(tableCheckboxes)
+  }
 
-	setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox);
+  setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox)
 }
 
-function setSelectedBar( count, selectedBar, tableCheckboxes, headerCheckbox ) {
-	
-	var info_count = selectedBar.querySelector(".info .count");
-	var info_text = selectedBar.querySelector(".info .text");
-	var mobile_ico = selectedBar.querySelector(".info .select-all svg");
-	var total = count < 2 ? parseInt(info_count.innerHTML, 10) + count : count;
+function setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox) {
+  let info_count = selectedBar.querySelector('.info .count')
+  let info_text = selectedBar.querySelector('.info .text')
+  let mobile_ico = selectedBar.querySelector('.info .select-all svg')
+  let total = count < 2 ? parseInt(info_count.innerHTML, 10) + count : count
 
-	if ( total > 0 ) {
-		selectedBar.classList.add("is-active");
-		info_count.innerHTML = total;
-		info_text.innerHTML = total > 1 ? "itens selecionados" : "item selecionado";
-	
-		if ( headerCheckbox ) headerCheckbox.parentNode.classList.add("is-checking");
-		if ( mobile_ico ) {
-			mobile_ico.classList.add("fa-minus-square");
-			mobile_ico.classList.remove("fa-check-square");
-		}
-		if ( total == tableCheckboxes.length ) {
-			if ( headerCheckbox ) { 
-				headerCheckbox.checked = true;
-				headerCheckbox.parentNode.classList.remove("is-checking");
-			}
-			if ( mobile_ico ) {
-				mobile_ico.classList.remove("fa-minus-square");
-				mobile_ico.classList.add("fa-check-square");
-			}
-		}
-	}
-	else {
-		info_count.innerHTML = 0;
-		if ( headerCheckbox ) { 
-			headerCheckbox.checked = false;
-			headerCheckbox.parentNode.classList.remove("is-checking");
-		}
-		if ( mobile_ico ) {
-			mobile_ico.classList.remove("fa-check-square");
-			mobile_ico.classList.add("fa-minus-square");
-		}
-		selectedBar.classList.remove("is-active");
-	}
+  if (total > 0) {
+    selectedBar.classList.add('is-active')
+    info_count.innerHTML = total
+    info_text.innerHTML = total > 1 ? 'itens selecionados' : 'item selecionado'
+
+    if (headerCheckbox) headerCheckbox.parentNode.classList.add('is-checking')
+    if (mobile_ico) {
+      mobile_ico.classList.add('fa-minus-square')
+      mobile_ico.classList.remove('fa-check-square')
+    }
+    if (total == tableCheckboxes.length) {
+      if (headerCheckbox) {
+        headerCheckbox.checked = true
+        headerCheckbox.parentNode.classList.remove('is-checking')
+      }
+      if (mobile_ico) {
+        mobile_ico.classList.remove('fa-minus-square')
+        mobile_ico.classList.add('fa-check-square')
+      }
+    }
+  } else {
+    info_count.innerHTML = 0
+    if (headerCheckbox) {
+      headerCheckbox.checked = false
+      headerCheckbox.parentNode.classList.remove('is-checking')
+    }
+    if (mobile_ico) {
+      mobile_ico.classList.remove('fa-check-square')
+      mobile_ico.classList.add('fa-minus-square')
+    }
+    selectedBar.classList.remove('is-active')
+  }
 }

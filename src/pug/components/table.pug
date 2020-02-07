@@ -1,4 +1,4 @@
-mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=5)
+mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=10)
   - let datatableClass = attributes.datatable ? "is-datatable" : ""
   - let column = 1
   - let row = 1
@@ -45,29 +45,24 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
       table
         thead
           tr
+            if (attributes.checkbox)
+              th(scope="col" style="width: 54px;")
+                +checkbox("")(id=`${attributes.id}-check-all`, name="check")
+            - column = 1
             while (column <= (attributes.columns ? attributes.columns : columns))
-              if (column === 1)
-                if (attributes.checkbox)
-                  th(scope="col" style="width: 54px;")
-                    +checkbox("")(id=`${attributes.id}-check-all`, name="check")
-                th(scope="col")=`Coluna ${column}`
-              else
-                th(scope="col")=`Coluna ${column}`
+              th(scope="col")=`Coluna ${column}`
               - column++
         tbody
           while (row <= (attributes.rows ? attributes.rows : rows))
             tr
+              if (attributes.checkbox)
+                td
+                  +checkbox("")(id=`${attributes.id}-line-${row}` name="check")
               - column = 1
               while (column <= (attributes.columns ? attributes.columns : columns))
-                - let random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+                - let random = `kjnsiojashbnio bdkasjdb kjsdaskd ajlblk ajdbaksdj `//Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
                 - random = random.replace(/(\w{8})/g, '$1 ').replace(/(^\s+|\s+$)/,'')
-                if (column === 1)
-                  if (attributes.checkbox)
-                    td
-                      +checkbox("")(id=`${attributes.id}-line-${row}` name="check")
-                  td(data-th=`Coluna ${column}`)=random
-                else
-                  td(data-th=`Coluna ${column}`)=random
+                td(data-th=`Coluna ${column}`)=random
                 - column++
             - row++
     if (attributes.datatable)

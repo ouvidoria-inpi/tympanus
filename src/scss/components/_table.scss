@@ -244,7 +244,18 @@ $column-gap: 6px;
       overflow: auto;
     }
   }
-
+  
+// Resolve bug na rolagem do firefox e limita aparecimento da barra de rolagem horizonyal
+  .syncscroll,
+  .header,
+  .headers,
+  .responsive {
+    width: calc(100vw - 27px);
+  }
+  .syncscroll {
+    overflow: auto;
+  }
+  
   @include media-breakpoint-down(sm) {
     .top-bar {
       .title {
