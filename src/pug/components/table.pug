@@ -23,6 +23,24 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
               i.fas.fa-search
           +button.search-close.is-circle.ml-1
             i.fas.fa-times
+        if (attributes.checkbox)
+          .selected-bar
+            .info
+              +button.mobile.select-all.is-primary 
+                i.fas.fa-minus-square
+              span.count 0
+              span.text item selecionado
+            .action-button
+              +button.delete-trigger.is-primary 
+                span Excluir
+                i.fas.fa-trash-alt
+            .action-button
+              +button.download-trigger.is-primary 
+                span Download
+                i.fas.fa-download
+            .action-button.mobile
+              +button.is-primary 
+                i.fas.fa-ellipsis-v
     .responsive
       table
         thead
