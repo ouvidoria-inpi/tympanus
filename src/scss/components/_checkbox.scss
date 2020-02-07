@@ -160,6 +160,9 @@
       &:checked + label::after {
         left: 7px;
         top: 3px;
+        border-width: 0 2px 2px 0;
+        height: 12px;
+        width: 6px;
       }
     }
   }
