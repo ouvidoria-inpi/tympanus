@@ -14,286 +14,665 @@
     <!-- Fontawesome-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
   </head>
-  <body class="template-site">
-    <!-- Cabeçalho da página-->
-    <header class="page-header" id="header">
-      <!-- Atalhos para conteúdo-->
-      <ul class="skip-menu" id="skip-menu">
-        <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
-        <li><a accesskey="2" href="#navigation">Ir para o menu</a></li>
-        <li><a accesskey="3" href="#footer">Ir para o rodapé</a></li>
-      </ul>
-      <!-- header-->
-      <div class="br-header-site">
-        <div class="container">
-          <!-- Barra principal-->
-          <div class="wrapper">
-            <!-- Logo-->
-            <div class="logo"><a class="image" href=""><img src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/govbr.svg" alt="Governo Federal"></a><span class="name d-none d-sm-block">Secretaria da Receita do Brasil - RFB</span><span class="description d-none d-sm-block">Ministério da Economia</span></div>
-            <!-- Links rápidos-->
-            <ul class="quicklinks d-none d-md-flex mr-md-10">
-              <li><a href="">Acesso à informação</a></li>
-              <li><a href="">Participe</a></li>
-              <li><a href="">Acessibilidade</a></li>
-            </ul>
-            <!-- Idioma do site-->
-            <div class="dropdown br-language d-none d-md-block">
-              <button class="trigger" type="button"><span class="name">Português</span><i class="fas fa-chevron-down arrow"></i></button>
-              <div class="menu">
-                <div class="title">Idioma/Language</div>
-                <button class="item is-active" type="button"><span class="name">Português</span></button>
-                <button class="item" type="button"><span class="name">English</span></button>
-                <button class="item" type="button"><span class="name">Español</span></button>
-              </div>
-            </div>
-            <!-- Acesso gov.br--><a class="login ml-md-10" href=""><span class="d-none d-md-inline">Acesso gov.br</span><i class="fas fa-user ml-md-1"></i></a>
-            <!-- Altocontraste-->
-            <button class="br-button is-tertiary d-none d-md-block ml-3" type="button" accesskey="6"><i class="fas fa-adjust"></i><span class="sr-only">Alto contraste</span>
-            </button>
-            <!-- Quebra de linha-->
-            <div class="break"></div>
-            <!-- Busca geral-->
-            <div class="search mx-n1 ml-md-auto mr-md-0">
-              <div class="field">
-                <label class="sr-only" for="search">Autocomplete</label>
-                <input id="search" type="search" placeholder="O que você procura?">
-                <button type="button"><i class="fas fa-search"></i><span class="sr-only">buscar</span></button>
-              </div>
-              <button class="close" type="button"><i class="fas fa-times"></i><span class="sr-only">fechar a busca</span></button>
-            </div>
-            <!-- Menu sanduiche-->
-            <button class="menu-hamburger ml-n1" type="button"><i class="fa fa-bars"></i></button>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- Wrapper principal-->
-    <div class="page-wrapper">
-      <!-- Menu de navegação-->
-      <nav class="navigation" id="navigation" data-children="hover" data-level="0">
-        <div class="wrapper">
-          <div class="bg-gray-2">
-            <div class="container">
-              <!-- Logo e avatar-->
-              <div class="header-bar">
-                <!-- Avatar do usuário-->
-                <div class="nav-avatar"></div>
-                <!-- Altocontraste-->
-                <div class="nav-contrast"></div>
-                <!-- Sistemas favoritos do usuário-->
-                <div class="nav-bookmarks"></div>
-                <!-- Logo-->
-                <div class="nav-logo"></div>
-              </div>
-              <!-- Menu de navegação-->
-              <div class="items">
-                <!-- Navegação local-->
-                <ul class="local" data-level="0">
-                  <li class="item">
-                    <button type="button">Item de nível 1</button>
-                    <ul class="submenu level-1" data-level="1">
-                      <li class="item">
-                        <button type="button">Item de nível 2.1</button>
-                        <ul class="submenu level-2" data-level="2">
-                          <li class="item"><a href="">Item de nível 3.1</a></li>
-                          <li class="item"><a href="">Item de nível 3.1</a></li>
-                          <li class="item"><a href="">Item de nível 3.1</a></li>
-                        </ul>
-                      </li>
-                      <li class="item">
-                        <button type="button">Item de nível 2.2</button>
-                        <ul class="submenu level-2" data-level="2">
-                          <li class="item"><a href="">Item de nível 3.2</a></li>
-                          <li class="item"><a href="">Item de nível 3.2</a></li>
-                          <li class="item"><a href="">Item de nível 3.2</a></li>
-                        </ul>
-                      </li>
-                      <li class="item">
-                        <button type="button">Item de nível 2.3</button>
-                        <ul class="submenu level-2" data-level="2">
-                          <li class="item"><a href="">Item de nível 3.3</a></li>
-                          <li class="item"><a href="">Item de nível 3.3</a></li>
-                          <li class="item"><a href="">Item de nível 3.3</a></li>
-                        </ul>
-                      </li>
-                      <li class="item">
-                        <button type="button">Item de nível 2.4</button>
-                        <ul class="submenu level-2" data-level="2">
-                          <li class="item"><a href="">Item de nível 3.4</a></li>
-                          <li class="item"><a href="">Item de nível 3.4</a></li>
-                          <li class="item"><a href="">Item de nível 3.4</a></li>
-                        </ul>
-                      </li>
-                      <li class="item">
-                        <button type="button">Item de nível 2.5</button>
-                        <ul class="submenu level-2" data-level="2">
-                          <li class="item"><a href="">Item de nível 3.5</a></li>
-                          <li class="item"><a href="">Item de nível 3.5</a></li>
-                          <li class="item"><a href="">Item de nível 3.5</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="item">
-                    <button type="button">Conheça a Presidência</button>
-                    <ul class="submenu level-1" data-level="1">
-                      <li class="item"><a href="">Biografia do Presidente</a></li>
-                      <li class="item"><a href="">Ministros</a></li>
-                      <li class="item"><a href="">Principais Tropas</a></li>
-                      <li class="item"><a href="">Palácio e Residências</a></li>
-                      <li class="item"><a href="">Acervo</a></li>
-                      <li class="item"><a href="">Ritos e Solenidades</a></li>
-                      <li class="item"><a href="">Presentes recebidos pelo Presidênte da República</a></li>
-                    </ul>
-                  </li>
-                  <li class="item">
-                    <button type="button">Vice-Presidência</button>
-                    <ul class="submenu level-1" data-level="1">
-                      <li class="item"><a href="">Agenda Vice-Presidente</a></li>
-                      <li class="item"><a href="">Agendas do Gabinete Pessoal da Vice-Presidência</a></li>
-                      <li class="item"><a href="">Biografia</a></li>
-                      <li class="item"><a href="">Atribuições</a></li>
-                      <li class="item"><a href="">Discursos e Pronunciamentos</a></li>
-                    </ul>
-                  </li>
-                  <li class="item">
-                    <button type="button">Acesso á Informação</button>
-                    <ul class="submenu level-1" data-level="1">
-                      <li class="item"><a href="">Institucional</a></li>
-                      <li class="item"><a href="">Ações e Programas</a></li>
-                      <li class="item"><a href="">Dados abertos</a></li>
-                      <li class="item"><a href="">Auditorias</a></li>
-                      <li class="item"><a href="">Convênios</a></li>
-                      <li class="item"><a href="">Despesas</a></li>
-                      <li class="item"><a href="">Licitações e contratos</a></li>
-                      <li class="item"><a href="">Servidores</a></li>
-                      <li class="item"><a href="">Informações Classificadas</a></li>
-                      <li class="item"><a href="">Serviço de Informação ao Cidadão</a></li>
-                    </ul>
-                  </li>
-                  <li class="item">
-                    <button type="button">Centrais de Conteúdo</button>
-                    <ul class="submenu level-1" data-level="1">
-                      <li class="item"><a href="">Imagens</a></li>
-                      <li class="item"><a href="">Vídeos</a></li>
-                      <li class="item"><a href="">Áudios</a></li>
-                    </ul>
-                  </li>
-                  <li class="item">
-                    <button type="button">Fale Conosco</button>
-                    <ul class="submenu level-1" data-level="1">
-                      <li class="item"><a href="">Fale com o Presidente</a></li>
-                      <li class="item"><a href="">Ouvidoria</a></li>
-                    </ul>
-                  </li>
-                  <li class="item"><a href="">Mensagem do Presidente</a></li>
-                </ul>
-                <!-- Navegação do gov.br-->
-                <ul class="govbr" data-level="0">
-                  <li class="item">
-                    <button class="logo" type="button"><img src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/govbrNegativa.svg" alt="gov.br"></button>
-                    <ul class="submenu level-1" data-level="1">
-                      <li class="item"><a href="">Notícias</a></li>
-                      <li class="item"><a href="">Agenda do Presidente</a></li>
-                      <li class="item"><a href="">Agenda do Presidente em exercício</a></li>
-                      <li class="item"><a href="">Discursos</a></li>
-                      <li class="item"><a href="">Pronunciamentos</a></li>
-                      <li class="item"><a href="">Notas Oficiais</a></li>
-                      <li class="item"><a href="">Notas</a></li>
-                      <li class="item"><a href="">Entrevistas</a></li>
-                      <li class="item"><a href="">Foto Oficial</a></li>
-                      <li class="item"><a href="">Área de Imprensa</a></li>
-                      <li class="item"><a href="">Porta-voz</a></li>
-                      <li class="item"><a href="">WhatsApp</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <!-- Links rápidos-->
-            <div class="nav-quicklinks"></div>
-            <!-- Logout-->
-            <div class="nav-logout">
-              <div class="nav-buttontimeout"></div>
-              <div class="nav-timeout"></div>
-            </div>
-            <!-- Links úteis e redes sociais-->
-            <div class="row">
-              <!-- Links úteis-->
-              <div class="col-md">
-                <div class="links"><span>Links úteis</span><a href="">Acesso á Informação <i class="fas fa-external-link-alt"></i></a><a href="">Participe <i class="fas fa-external-link-alt"></i></a><a href="">Órgãos do Governo <i class="fas fa-external-link-alt"></i></a><a href="">Acessibilidade <i class="fas fa-external-link-alt"></i></a></div>
-              </div>
-              <!-- Redes sociais-->
-              <div class="col-md-auto">
-                <div class="social-network"><span>Redes sociais</span>
-                  <ul>
-                    <li><a href="https://www.twitter.com/twitter.com/govbr"><i class="fab fa-twitter fa-lg"></i><span class="sr-only">Twitter</span></a></li>
-                    <li><a href="https://www.youtube.com/youtube.com/govbr"><i class="fab fa-youtube fa-lg"></i><span class="sr-only">YouTube</span></a></li>
-                    <li><a href="https://www.facebook.com/facebook.com/govbr"><i class="fab fa-facebook-f fa-lg"></i><span class="sr-only">Facebook</span></a></li>
-                    <li><a href="https://www.flickr.com/flickr/govbr"><i class="fab fa-flickr fa-lg"></i><span class="sr-only">Flickr</span></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!-- Breadcrumbs-->
-      <div>
-        <div class="container">
-          <ul class="br-breadcrumb">
-            <li class="home"><a href=""><span class="sr-only">Página inicial</span><i class="fas fa-home"></i></a></li>
-            <li><a href="">Tela anterior</a></li>
-            <li class="is-active"><a href="">tela atual</a></li>
-          </ul>
-          <hr>
-        </div>
-      </div>
-      <!-- Conteúdo principal-->
-      <main class="page-content" id="content">
-        <div class="container">
-          <h1 class="main-title">Estados</h1>
-          <p class="h3">Destacado</p>
-          <p><span>Lorem ipsum dolor sit amet </span><span class="highlight">consectetur adipisicing elit</span><span>. Voluptatem quaerat doloremque similique alias laboriosam sequi voluptatibus reiciendis atque consequuntur omnis nisi odit quod nihil pariatur, dolores nostrum illum impedit itaque.</span></p>
-          <p class="h3">Interativo</p>
-          <p><a href="http://www.google.com">Link para o Google</a></p>
-          <button class="br-button is-primary" type="button">Botão primário
-          </button>
-          <p class="h3">Desativado</p>
-          <button class="br-button is-primary mt-3" type="button" disabled>Botão primário desativado
-          </button>
+  <body>
+    <div class="background-color-secondary-03">
+      <div class="container">
+        <div class="background-color-secondary-01">
+          <h1>Tokens</h1>
+          <h2 class="h3">Cores</h2>
+          <table>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-primary-pastel-01: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-primary-pastel-01" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-primary-pastel-02: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-primary-pastel-02" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-primary-lighten-01: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-primary-lighten-01" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-primary-lighten-02: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-primary-lighten-02" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-primary-default: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-primary-default" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-primary-darken-01: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-primary-darken-01" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-primary-darken-02: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-primary-darken-02" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-secondary-01: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-secondary-01" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-secondary-02: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-secondary-02" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-secondary-03: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-secondary-03" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-secondary-04: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-secondary-04" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-secondary-05: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-secondary-05" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-secondary-06: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-secondary-06" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-secondary-07: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-secondary-07" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-secondary-08: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-secondary-08" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-highlight: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-highlight" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-warning: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-warning" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-success: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-success" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-danger: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-danger" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-info: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-info" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-support-01: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-support-01" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-support-02: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-support-02" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-support-03: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-support-03" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--color-support-04: </td>
+              <td>
+                <div class="border-color-secondary-04 background-color-support-04" style="border: 1px solid; height: 1em; width: 2em;"></div>
+              </td>
+            </tr>
+          </table>
+          <h2 class="h3">Ícones</h2>
+          <table>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-xs: </td>
+              <td><i class="fas fa-camera-retro icon-size-xs"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-sm: </td>
+              <td><i class="fas fa-camera-retro icon-size-sm"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-base: </td>
+              <td><i class="fas fa-camera-retro icon-size-base"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-lg: </td>
+              <td><i class="fas fa-camera-retro icon-size-lg"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-2x: </td>
+              <td><i class="fas fa-camera-retro icon-size-2x"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-3x: </td>
+              <td><i class="fas fa-camera-retro icon-size-3x"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-4x: </td>
+              <td><i class="fas fa-camera-retro icon-size-4x"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-5x: </td>
+              <td><i class="fas fa-camera-retro icon-size-5x"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-6x: </td>
+              <td><i class="fas fa-camera-retro icon-size-6x"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-7x: </td>
+              <td><i class="fas fa-camera-retro icon-size-7x"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-8x: </td>
+              <td><i class="fas fa-camera-retro icon-size-8x"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-9x: </td>
+              <td><i class="fas fa-camera-retro icon-size-9x"></i></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--icon-size-10x: </td>
+              <td><i class="fas fa-camera-retro icon-size-10x"></i></td>
+            </tr>
+          </table>
+          <h2 class="h3">Grid</h2>
+          <table>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-breakpoint-xsmall: </td>
+              <td><span>0px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-breakpoint-small: </td>
+              <td><span>575px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-breakpoint-medium: </td>
+              <td><span>992px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-breakpoint-large: </td>
+              <td><span>1280px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-breakpoint-xlarge: </td>
+              <td><span>1600px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-portrait-maxwidth: </td>
+              <td><span>100%</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-portrait-gutter: </td>
+              <td><span>16px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-portrait-columns: </td>
+              <td><span>4</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-portrait-margin: </td>
+              <td><span>8px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-tablet-maxwidth: </td>
+              <td><span>100%</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-tablet-gutter: </td>
+              <td><span>24px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-tablet-columns: </td>
+              <td><span>8</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-tablet-margin: </td>
+              <td><span>40px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-desktop-maxwidth: </td>
+              <td><span>1200px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-desktop-gutter: </td>
+              <td><span>24px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-desktop-columns: </td>
+              <td><span>12</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-desktop-margin: </td>
+              <td><span>40px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-tv-maxwidth: </td>
+              <td><span>1520px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-tv-gutter: </td>
+              <td><span>40px</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-tv-columns: </td>
+              <td><span>12</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--grid-tv-margin: </td>
+              <td><span>40px</span></td>
+            </tr>
+          </table>
           <div class="row">
-            <div class="col-3">
-              <div class="br-input mt-3">
-                <label for="input-disabled">Label</label>
-                <input id="input-disabled" type="text" disabled>
-              </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
+            </div>
+            <div class="col">
+              <div class="background-color-primary-default color-secondary-01">Auto</div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
-    <!-- Rodapé de governo-->
-    <footer class="page-footer" id="footer">
-      <div class="bg-primary-darken-02 text-white">
-        <div class="container">
-          <!-- Logo do rodapé-->
-          <div class="logo"><img src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/govbrNegativa.svg" alt="gov.br"></div>
-          <!-- Redes sociais-->
-          <div class="social-network"><span>Redes sociais</span>
-            <ul>
-              <li><a href="https://www.twitter.com/twitter.com/govbr"><i class="fab fa-twitter fa-lg"></i><span class="sr-only">Twitter</span></a></li>
-              <li><a href="https://www.youtube.com/youtube.com/govbr"><i class="fab fa-youtube fa-lg"></i><span class="sr-only">YouTube</span></a></li>
-              <li><a href="https://www.facebook.com/facebook.com/govbr"><i class="fab fa-facebook-f fa-lg"></i><span class="sr-only">Facebook</span></a></li>
-              <li><a href="https://www.flickr.com/flickr/govbr"><i class="fab fa-flickr fa-lg"></i><span class="sr-only">Flickr</span></a></li>
-            </ul>
+          <div class="row">
+            <div class="col portrait-1">
+              <div class="background-color-primary-default color-secondary-01">Portrait 1</div>
+            </div>
           </div>
+          <div class="row">
+            <div class="col portrait-2">
+              <div class="background-color-primary-default color-secondary-01">Portrait 2</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col portrait-3">
+              <div class="background-color-primary-default color-secondary-01">Portrait 3</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col portrait-4">
+              <div class="background-color-primary-default color-secondary-01">Portrait 4</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tablet-1">
+              <div class="background-color-primary-default color-secondary-01">Tablet 1</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tablet-2">
+              <div class="background-color-primary-default color-secondary-01">Tablet 2</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tablet-3">
+              <div class="background-color-primary-default color-secondary-01">Tablet 3</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tablet-4">
+              <div class="background-color-primary-default color-secondary-01">Tablet 4</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tablet-5">
+              <div class="background-color-primary-default color-secondary-01">Tablet 5</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tablet-6">
+              <div class="background-color-primary-default color-secondary-01">Tablet 6</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tablet-7">
+              <div class="background-color-primary-default color-secondary-01">Tablet 7</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tablet-8">
+              <div class="background-color-primary-default color-secondary-01">Tablet 8</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-1">
+              <div class="background-color-primary-default color-secondary-01">Desktop 1</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-2">
+              <div class="background-color-primary-default color-secondary-01">Desktop 2</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-3">
+              <div class="background-color-primary-default color-secondary-01">Desktop 3</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-4">
+              <div class="background-color-primary-default color-secondary-01">Desktop 4</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-5">
+              <div class="background-color-primary-default color-secondary-01">Desktop 5</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-6">
+              <div class="background-color-primary-default color-secondary-01">Desktop 6</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-7">
+              <div class="background-color-primary-default color-secondary-01">Desktop 7</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-8">
+              <div class="background-color-primary-default color-secondary-01">Desktop 8</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-9">
+              <div class="background-color-primary-default color-secondary-01">Desktop 9</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-10">
+              <div class="background-color-primary-default color-secondary-01">Desktop 10</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-11">
+              <div class="background-color-primary-default color-secondary-01">Desktop 11</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col desktop-12">
+              <div class="background-color-primary-default color-secondary-01">Desktop 12</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-1">
+              <div class="background-color-primary-default color-secondary-01">TV 1</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-2">
+              <div class="background-color-primary-default color-secondary-01">TV 2</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-3">
+              <div class="background-color-primary-default color-secondary-01">TV 3</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-4">
+              <div class="background-color-primary-default color-secondary-01">TV 4</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-5">
+              <div class="background-color-primary-default color-secondary-01">TV 5</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-6">
+              <div class="background-color-primary-default color-secondary-01">TV 6</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-7">
+              <div class="background-color-primary-default color-secondary-01">TV 7</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-8">
+              <div class="background-color-primary-default color-secondary-01">TV 8</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-9">
+              <div class="background-color-primary-default color-secondary-01">TV 9</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-10">
+              <div class="background-color-primary-default color-secondary-01">TV 10</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-11">
+              <div class="background-color-primary-default color-secondary-01">TV 11</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col tv-12">
+              <div class="background-color-primary-default color-secondary-01">TV 12</div>
+            </div>
+          </div>
+          <h2 class="h3">Tipografia</h2>
+          <table>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-thin: </td>
+              <td><span class="font-weight-thin">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-extra-light: </td>
+              <td><span class="font-weight-extra-light">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-light: </td>
+              <td><span class="font-weight-light">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-regular: </td>
+              <td><span class="font-weight-regular">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-medium: </td>
+              <td><span class="font-weight-medium">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-semi-bold: </td>
+              <td><span class="font-weight-semi-bold">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-bold: </td>
+              <td><span class="font-weight-bold">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-extra-bold: </td>
+              <td><span class="font-weight-extra-bold">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-weight-black: </td>
+              <td><span class="font-weight-black">Peso da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-base: </td>
+              <td><span class="font-size-scale-base">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-down-01: </td>
+              <td><span class="font-size-scale-down-01">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-down-02: </td>
+              <td><span class="font-size-scale-down-02">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-down-03: </td>
+              <td><span class="font-size-scale-down-03">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-up-01: </td>
+              <td><span class="font-size-scale-up-01">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-up-02: </td>
+              <td><span class="font-size-scale-up-02">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-up-03: </td>
+              <td><span class="font-size-scale-up-03">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-up-04: </td>
+              <td><span class="font-size-scale-up-04">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-up-05: </td>
+              <td><span class="font-size-scale-up-05">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-up-06: </td>
+              <td><span class="font-size-scale-up-06">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-size-scale-up-07: </td>
+              <td><span class="font-size-scale-up-07">Tamanho da fonte</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-line-height-low: </td>
+              <td><span class="bg-color-secondary-04 font-line-height-low">Line height<br/>Line height<br/>Line height</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-line-height-medium: </td>
+              <td><span class="bg-color-secondary-04 font-line-height-medium">Line height<br/>Line height<br/>Line height</span></td>
+            </tr>
+            <tr style="vertical-align: top;">
+              <td style="text-align: right;">--font-line-height-high: </td>
+              <td><span class="bg-color-secondary-04 font-line-height-high">Line height<br/>Line height<br/>Line height</span></td>
+            </tr>
+          </table>
+          <p class="h4">Estilos de tipografia</p>
+          <table>
+            <tr>
+              <td style="text-align: right;">Texto padrão, parágrafo: </td>
+              <td><span>Texto padrão, parágrafo</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Título h1: </td>
+              <td><span class="h1">Título h1</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Título h2: </td>
+              <td><span class="h2">Título h2</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Título h3: </td>
+              <td><span class="h3">Título h3</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Título h4: </td>
+              <td><span class="h4">Título h4</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Título h5: </td>
+              <td><span class="h5">Título h5</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Título h6: </td>
+              <td><span class="h6">Título h6</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Label: </td>
+              <td><span class="label">Label</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Fieldset: </td>
+              <td><span class="fieldset">Fieldset</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Placeholder: </td>
+              <td><span class="placeholder">Placeholder</span></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">Input: </td>
+              <td><span class="input">Input</span></td>
+            </tr>
+          </table>
         </div>
       </div>
-    </footer>
-    <script src="//barra.brasil.gov.br/barra_2.0.js" defer></script>
-    <script src="../js/templates/site.js"></script>
+    </div>
   </body>
 </html>

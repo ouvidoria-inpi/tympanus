@@ -1,27 +1,31 @@
 // grid-portrait
 .container {
   margin: auto;
-  padding: v(grid-portrait-margin, $grid-portrait-margin);
-  width: v(grid-portrait-maxwidth, $grid-portrait-maxwidth);
+  padding-left: v(container-padding, $container-padding);
+  padding-right: v(container-padding, $container-padding);
+  max-width: v(container-maxwidth, $container-maxwidth);
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(#{v(grid-portrait-gutter, $grid-portrait-gutter)} / -2);
+  margin-left: calc(#{v(row-margin, $row-margin)} / -2);
+  margin-right: calc(#{v(row-margin, $row-margin)} / -2);
 }
 
 .col {
-  flex-basis: 100% / $grid-portrait-columns;
+  flex-basis: calc(100% / #{v(grid-columns, $grid-columns)});
   flex-grow: 1;
-  max-width: 100%;
-  padding: calc(#{v(grid-portrait-gutter, $grid-portrait-gutter)} / 2);
+  padding-left: calc(#{v(col-gutter, $col-gutter)} / 2);
+  padding-right: calc(#{v(col-gutter, $col-gutter)} / 2);
 }
 
 @for $i from 1 through $grid-portrait-columns {
   .portrait-#{$i} {
-    flex: none;
-    width: 100% / $grid-portrait-columns * $i;
+    flex-basis: calc(
+      100% / #{v(grid-columns, $grid-columns)} * #{$i}
+    ) !important;
+    flex-grow: 0;
   }
 }
 

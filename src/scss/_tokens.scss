@@ -41,4 +41,7 @@
   @each $item, $value in $grid-tv {
     --#{$item}: #{$value};
   }
+  @each $item, $value in $grid-config {
+    --#{$item}: #{$value};
+  }
 }

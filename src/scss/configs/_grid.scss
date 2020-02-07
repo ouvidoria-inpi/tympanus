@@ -54,3 +54,18 @@ $grid-tv: (
   grid-tv-columns: $grid-tv-columns,
   grid-tv-margin: $grid-tv-margin
 );
+
+$grid-breakpoint: $grid-breakpoint-xsmall;
+$container-maxwidth: $grid-portrait-maxwidth;
+$container-padding: $grid-portrait-margin;
+$row-margin: $grid-portrait-gutter;
+$col-gutter: $grid-portrait-gutter;
+$grid-columns: $grid-portrait-columns;
+$grid-config: (
+  grid-breakpoint: $grid-breakpoint,
+  container-maxwidth: $container-maxwidth,
+  container-padding: $container-padding,
+  row-margin: $row-margin,
+  col-gutter: $col-gutter,
+  grid-columns: $grid-columns
+);
