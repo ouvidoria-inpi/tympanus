@@ -3,8 +3,8 @@ class BRChecklist {
 		this.name = name;
 		this.component = component;
 		this._setBehavior();
-	}
-
+  }
+  
 	_setBehavior() {
 		for (let inputRadio of this.component.querySelectorAll('input[type="radio"]')) {
       if (inputRadio.checked) {
@@ -22,26 +22,6 @@ class BRChecklist {
 				this._switchShared(event.currentTarget);
 			});
 		}
-		
-		
-/*
-teste
-*/
-  _setBehavior() {
-    for (let inputRadio of this.component.querySelectorAll(
-      'input[type="radio"]'
-    )) {
-      inputRadio.addEventListener("click", event => {
-        this._switchSole(event);
-      });
-    }
-    for (let inputCheckbox of this.component.querySelectorAll(
-      'input[type="checkbox"]'
-    )) {
-      inputCheckbox.addEventListener("click", event => {
-        this._switchShared(event);
-      });
-    }
   }
 
 	_switchSole(currentCheckedElement) {
@@ -52,8 +32,8 @@ teste
 				field.classList.remove("is-active");
 			}
 		}
-	}
-
+  }
+  
 	_switchShared(currentCheckedElement) {
 		for (let field of this.component.querySelectorAll(".item")) {
 			if (field === this._getParentElementByClass(currentCheckedElement, "item")) {
@@ -61,7 +41,7 @@ teste
 			}
 		}
   }
-  
+
   _getParentElementByClass(element, parentClass) {
     while (!element.classList.contains(parentClass)) {
       element = element.parentNode;
@@ -69,8 +49,6 @@ teste
     return element;
   }
 }
-
-
 
 let checklistList = [];
 
