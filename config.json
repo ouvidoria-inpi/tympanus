@@ -166,6 +166,11 @@
         "urlLabel": "input"
       },
       {
+        "label": "Listas",
+        "filename": "listas",
+        "urlLabel": "listas"
+      },
+      {
         "label": "Mensagem",
         "filename": "message",
         "urlLabel": "mensagem"
