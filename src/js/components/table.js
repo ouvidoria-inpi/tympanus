@@ -37,7 +37,11 @@ if ( brTables ) {
 		hoverRow( rows );
 
 		window.addEventListener( "resize", function () {
-			setHeaderWidth( brTable, headers );
+			if ( headers ) setHeaderWidth( brTable, headers );
+		} );
+
+		window.addEventListener( "load", function () {
+			if ( headers ) setHeaderWidth( brTable, headers );
 		} );
 	}
 }
@@ -78,7 +82,7 @@ function setHeaderWidth ( parent, element ) {
 		for ( let i = 0; i < element.children.length; i++ ) {
 			elementWidth = element.children[ i ].offsetWidth;
 			cloneElementWidth = cloneNode.children[ 0 ].children[ i ];
-			cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
+			if ( cloneElementWidth ) cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
 		}
 	}
 }

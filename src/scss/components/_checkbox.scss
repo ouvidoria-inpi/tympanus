@@ -37,14 +37,14 @@
     }
     &:checked + label::after {
       border: solid $color-white;
-      border-width: 0 2px 2px 0;
+      border-width: 0 3px 3px 0;
       content: "";
-      height: 10px;
-      left: 9px;
+      height: 15px;
+      left: 8px;
       position: absolute;
-      top: 6px;
+      top: 3px;
       transform: rotate(45deg);
-      width: 6px;
+      width: 8px;
     }
     // Hover
     &:hover:not(:disabled) + label::before,
