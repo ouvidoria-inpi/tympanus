@@ -81,6 +81,8 @@ function setHeaderWidth ( parent, element ) {
 	if ( cloneNode ) {
 		for ( let i = 0; i < element.children.length; i++ ) {
 			elementWidth = element.children[ i ].offsetWidth;
+			//console.log(elementWidth);
+			//if (i == 0) console.log(elementWidth);
 			cloneElementWidth = cloneNode.children[ 0 ].children[ i ];
 			if ( cloneElementWidth ) cloneElementWidth.style.flex = `1 0 ${ elementWidth }px`;
 		}
