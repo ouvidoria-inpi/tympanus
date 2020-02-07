@@ -1,1 +1,1 @@
-Os componentes Select são usados ​​para coletar informações fornecidas pelo usuário em uma lista de opções.
+Os controles de seleção permitem que os usuários concluam tarefas que envolvem fazer escolhas, como selecionar opções ou ativar ou desativar as configurações. Os controles de seleção são encontrados nas telas que solicitam que os usuários tomem decisões ou declarem preferências como configurações ou caixas de diálogo.
