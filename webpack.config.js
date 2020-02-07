@@ -1,18 +1,18 @@
-const path = require( 'path' );
+const path = require('path');
 
 // Webpack Stuff
-const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
-const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
-const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
-const ConcatPlugin = require( 'webpack-concat-plugin' );
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ConcatPlugin = require('webpack-concat-plugin');
 
 const paths = {
-	src: path.resolve( __dirname, 'src' ),
-	assets: path.resolve( __dirname, 'src', 'assets' ),
-	fonts: path.resolve( __dirname, 'src', 'assets', 'fonts' ),
-	images: path.resolve( __dirname, 'src', 'assets', 'images' ),
-	dist: path.resolve( __dirname, 'dist' ),
-	distjs: path.resolve( __dirname, 'dist', 'js' ),
+	src: path.resolve(__dirname, 'src'),
+	assets: path.resolve(__dirname, 'src', 'assets'),
+	fonts: path.resolve(__dirname, 'src', 'assets', 'fonts'),
+	images: path.resolve(__dirname, 'src', 'assets', 'images'),
+	dist: path.resolve(__dirname, 'dist'),
+	distjs: path.resolve(__dirname, 'dist', 'js'),
 };
 
 /**
@@ -26,23 +26,23 @@ const fileLoader = {
 		name: '[name].[ext]',
 
 		// Mantém a estrutura de diretórios (mas excluindo-se o 'src')
-		outputPath ( filename, absoluteFilePath, absoluteRootPath ) {
-			const relativePath = path.relative( absoluteRootPath, absoluteFilePath );
+		outputPath(filename, absoluteFilePath, absoluteRootPath) {
+			const relativePath = path.relative(absoluteRootPath, absoluteFilePath);
 
-			const outPath = relativePath.split( '/' );
+			const outPath = relativePath.split('/');
 
 			// Remove a primeira parte do path, ou seja, 'src'
 			outPath.shift();
 
-			return outPath.join( '/' );
+			return outPath.join('/');
 		}
 	}
 };
 
-module.exports = function ( env, argv ) {
+module.exports = function (env, argv) {
 	const config = {
 		entry: {
-			'dsgov-base': path.resolve( paths.src + "/scss", 'dsgov-base.scss' ),
+			'dsgov-base': path.resolve(paths.src + "/scss", 'dsgov-base.scss'),
 			// 'dsgov-components': [	
 			//     // path.resolve(paths.src, 'dsgov-components.js'),
 			//     // path.resolve(paths.src, 'dsgov-components.scss')
@@ -55,9 +55,9 @@ module.exports = function ( env, argv ) {
 		},
 
 		module: {
-			rules: [ {
+			rules: [{
 				test: /\.scss$/,
-				use: [ "style-loader", "css-loader", "sass-loader" ]
+				use: ["style-loader", "css-loader", "sass-loader"]
 			}, {
 				test: /\.s[ac]ss$/i,
 
@@ -90,14 +90,14 @@ module.exports = function ( env, argv ) {
 				test: /\.(woff(2)?|ttf|eot|svg)$/,
 				// Usamos este include para remover ambiguidade entre
 				// svg's (imagem vs fonte)
-				include: [ paths.fonts ],
+				include: [paths.fonts],
 				loader: fileLoader,
 			},
 			{
 				test: /\.(png|svg|jpg|jpg)$/,
 				// Usamos este include para remover ambiguidade entre
 				// svg's (imagem vs fonte)
-				include: [ paths.images ],
+				include: [paths.images],
 				loader: fileLoader,
 			}
 			]
@@ -105,30 +105,30 @@ module.exports = function ( env, argv ) {
 
 		plugins: [
 			// new CleanWebpackPlugin(),
-			new ConcatPlugin( {
+			new ConcatPlugin({
 				uglify: false,
 				sourceMap: true,
 				name: 'dsgov-components',
 				outputPath: 'js/',
 				fileName: '[name].js',
-				filesToConcat: [ './src/js/components/**' ],
+				filesToConcat: ['./src/js/components/**'],
 				attributes: {
 					async: true
 				}
-			} ),
-			new ConcatPlugin( {
+			}),
+			new ConcatPlugin({
 				uglify: false,
 				sourceMap: true,
 				name: 'dsgov-templates',
 				outputPath: 'js/',
 				fileName: '[name].js',
-				filesToConcat: [ './src/js/templates/**' ],
+				filesToConcat: ['./src/js/templates/**'],
 				attributes: {
 					async: true
 				}
-			} ),
+			}),
 
-			new CopyWebpackPlugin( [
+			new CopyWebpackPlugin([
 				// Copia os fontes SASS no intuito de permitir reconfiguração e recompilação
 				// de regras pelo usuário deste pacote
 				// { context: 'src', from: '**/*.scss'},
@@ -143,16 +143,23 @@ module.exports = function ( env, argv ) {
 				// OBS.: Não é necessário copiar assets como imagens e fontes que são
 				// utilizados por imports ou pela função url(), pois eles são resolvidos como
 				// módulos webpack pelo loader 'css-loader'
-			] ),
-			new MiniCssExtractPlugin( {
+			]),
+			new MiniCssExtractPlugin({
 				// Options similar to the same options in webpackOptions.output
 				// all options are optional
 				filename: argv.mode === 'production' ? '[name].min.css' : '[name].css',
 				chunkFilename: argv.mode === 'production' ? '[id].min.css' : '[id].css',
 				ignoreOrder: false, // Enable to remove warnings about conflicting order
-			} ),
+			}),
 		],
 		devtool: 'source-map',
+
+		devServer: {
+			contentBase: path.join(__dirname, 'dist'),
+			compress: true,
+			port: 9000
+		}
+
 	};
 
 	return config;
