@@ -1,6 +1,6 @@
 {
 	"name": "@govbr/dsgov",
-	"version": "1.2.3-beta.4",
+	"version": "1.2.2-beta5",
 	"description": "Design System do governo",
 	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.3/",
 	"main": "index.js",
@@ -10,7 +10,7 @@
 		"compile-sass": "node-sass -r ./src/scss/ -o ./dist/css",
 		"compile-pug": "pug ./src/pug/views/ -O '{\"version\": \"1.2.2\",\"cdnUrl\": \"'$npm_package_cdn'\"}' -o ./dist -P",
 		"start": "npm-run-all build watch",
-		"test": "npm-run-all validate:* ",
+		"test": "npm run build && npm-run-all validate:* ",
 		"validate:html": "node_modules/.bin/html-validate dist/**/*.html",
 		"validate:styles": "node_modules/.bin/stylelint src/scss/**/*.scss",
 		"watch": "npm-run-all --parallel watch-* & npm run watch-webpack",
@@ -18,8 +18,7 @@
 		"watch-pug": "pug -w ./src/pug/views/ -O '{\"version\": \"1.2.2\",\"cdnUrl\": \"../\"}' -o ./dist -P",
 		"watch-webpack": "webpack --mode development",
 		"build:webpack:dev": "webpack --mode development",
-		"build:webpack:prod": "webpack --mode production",
-		"tag-version": "npm version prerelease -preid=beta"
+		"build:webpack:prod": "webpack --mode production"
 	},
 	"engines": {
 		"node": ">= 12.13.1"
@@ -78,6 +77,6 @@
 		"webpack-concat-plugin": "^3.0.0"
 	},
 	"husky": {
-		"hooks": {}
+		"pre-push": "npm test"
 	}
 }
