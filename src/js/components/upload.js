@@ -22,7 +22,7 @@ class BRUpload {
       this._drag(event)
     }, false);
     this.component.addEventListener("drop", (event) => {
-      this._drop()
+      this._drop(event)
     }, false);
 
     if(this._inputElement) {
@@ -41,7 +41,10 @@ class BRUpload {
   _drop(event) {
     event.stopPropagation();
     event.preventDefault();
-    this._handleFiles(event.dataTransfer.files);
+
+    let dt = event.dataTransfer;
+    let files = dt.files;
+    this._handleFiles(files);
   }
 
   _handleFiles(files) {
