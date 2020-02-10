@@ -107,10 +107,22 @@ module.exports = function ( env, argv ) {
 			// new CleanWebpackPlugin(),
 			new ConcatPlugin( {
 				uglify: false,
-				sourceMap: true,
+				sourceMap: false,
 				name: 'dsgov-components',
 				outputPath: 'js/',
 				fileName: '[name].js',
+				filesToConcat: [ './src/js/components/**' ],
+				attributes: {
+					async: true
+				}
+			} ),
+			// Producao
+			new ConcatPlugin( {
+				uglify: true,
+				sourceMap: true,
+				name: 'dsgov-components',
+				outputPath: 'js/',
+				fileName: '[name].min.js',
 				filesToConcat: [ './src/js/components/**' ],
 				attributes: {
 					async: true
