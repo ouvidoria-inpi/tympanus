@@ -28,8 +28,8 @@ if (brTables) {
 
     if (responsive) setSyncScroll(responsive)
     if (headers) {
-      setHeaderWidth(brTable, headers)
       cloneHeader(brTable, headers)
+      setHeaderWidth(brTable, headers)
     }
     if (searchBar) toogleSearch(searchBar, searchTrigger, searchClose)
     setClickActions(brTable)
@@ -39,8 +39,9 @@ if (brTables) {
       if (headers) setHeaderWidth(brTable, headers)
     })
 
-    window.addEventListener('load', function() {
+    window.addEventListener('DOMContentLoaded', function() {
       if (headers) setHeaderWidth(brTable, headers)
+      console.log("entrou")
     })
   }
 }
@@ -98,6 +99,7 @@ function cloneHeader(parent, element) {
   for (let i = 0; i < element.children.length; i++) {
     let elementNode = clone.children[i].innerHTML
     let cloneElementNode = document.createElement('div')
+    
 
     cloneElementNode.classList.add('item')
     cloneElementNode.innerHTML = elementNode
@@ -118,8 +120,10 @@ function cloneHeader(parent, element) {
 
   headersTag.classList.add(brTablesHeadersClass)
   headersTag.appendChild(scrollerTag)
+  let responsive = parent.querySelector('.responsive')
+  if ( responsive )responsive.insertAdjacentElement("beforebegin", headersTag)
+  else parent.appendChild(headersTag)
 
-  parent.appendChild(headersTag)
 }
 
 function setClickActions(brTable) {
