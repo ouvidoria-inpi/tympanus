@@ -9,7 +9,7 @@ $column-spacing: 16px;
 $column-gap: 6px;
 
 .#{$prefix}table {
-  display: block; //grid;
+  display: grid;
   .header {
     order: 0;
   }
@@ -244,17 +244,18 @@ $column-gap: 6px;
       overflow: auto;
     }
   }
+  
 // Resolve bug na rolagem do firefox e limita aparecimento da barra de rolagem horizonyal
-.header,
-.headers,
-.responsive {
-  width: 100%;
-  position: relative;
-}
-.syncscroll {
-  overflow: auto;
-}
-   
+  .syncscroll,
+  .header,
+  .headers,
+  .responsive {
+    width: calc(100vw - 27px);
+  }
+  .syncscroll {
+    overflow: auto;
+  }
+  
   @include media-breakpoint-down(sm) {
     .top-bar {
       .title {

@@ -60,7 +60,7 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
                   +checkbox("")(id=`${attributes.id}-line-${row}` name="check")
               - column = 1
               while (column <= (attributes.columns ? attributes.columns : columns))
-                - let random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+                - let random = `kjnsiojashbnio bdkasjdb kjsdaskd ajlblk ajdbaksdj `//Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
                 - random = random.replace(/(\w{8})/g, '$1 ').replace(/(^\s+|\s+$)/,'')
                 td(data-th=`Coluna ${column}`)=random
                 - column++

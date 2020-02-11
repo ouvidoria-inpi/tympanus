@@ -28,8 +28,8 @@ if (brTables) {
 
     if (responsive) setSyncScroll(responsive)
     if (headers) {
-      cloneHeader(brTable, headers)
       setHeaderWidth(brTable, headers)
+      cloneHeader(brTable, headers)
     }
     if (searchBar) toogleSearch(searchBar, searchTrigger, searchClose)
     setClickActions(brTable)
@@ -122,10 +122,8 @@ function cloneHeader(parent, element) {
 
   headersTag.classList.add(brTablesHeadersClass)
   headersTag.appendChild(scrollerTag)
-  let responsive = parent.querySelector('.responsive')
-  if ( responsive )responsive.insertAdjacentElement("beforebegin", headersTag)
-  else parent.appendChild(headersTag)
 
+  parent.appendChild(headersTag)
 }
 
 function setClickActions(brTable) {
