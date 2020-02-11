@@ -1,5 +1,14 @@
 // Prefixo de uso nos componentes
-$prefix: 'br-';
+$prefix: "br-";
+
+// Tipos de displays
+$displays: "block", "flex", "inline", "inline-block", "inline-flex";
+$display-prefix: "display-";
+
+// Classes de visibilidade (nome da classe, display)
+$visibilities: (visible, block), (hidden, none);
+
+// TODO: Trocar as variáveis abaixo por tokens
 
 // Espaçamentos
 $margin-default: $spacer * 2; // margem entre elementos 16px
