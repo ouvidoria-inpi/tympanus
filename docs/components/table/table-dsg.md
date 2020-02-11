@@ -1,16 +1,18 @@
-![Exemplo de Tabela](images/tabela.png)
+![Exemplo de Tabela](imagens/tabela.png)
 
 ## Uso
 
-As tabelas exibem informações em uma grid básica de linhas e colunas. Elas devem organizar as informações de uma maneira intuitiva, com uma estrutura lógica que facilite a compreensão do conteúdo, como o uso de hierarquia ou alfabetização.
+As tabelas exibem informações em uma grid básica de linhas e colunas. Elas devem organizar as informações de uma maneira intuitiva, com uma estrutura lógica que facilite a compreensão do conteúdo, utilizando o uso de hierarquia ou alfabetização.
 
 As tabelas podem conter:
 
--   Componentes interativos (como chips, botões, links);
--   Elementos não interativos (como textos, badges);
--   Ferramentas para consultar e manipular dados (como busca, filtros);
+- Componentes interativos (como chips, botões, links);
+- Elementos não interativos (como textos, badges);
+- Ferramentas para consultar e manipular dados (como busca, filtros);
 
-Nunca utilize foto/imagem dentro de uma tabela. Sempre prefira usar outro componente (como uma [Listas](#)) ou utilize outros recursos (como [botão](#) ou [hiperlinks](#)) para representar/acessar o conteúdo em questão.
+Nunca utilize foto/imagem dentro de uma tabela. Sempre utilize outro componente (como [Listas](#)) ou outros recursos (como [botão](#) ou [hiperlinks](#)) para representar/acessar o conteúdo em questão.
+
+---
 
 ## Anatomia
 
@@ -19,12 +21,12 @@ Nunca utilize foto/imagem dentro de uma tabela. Sempre prefira usar outro compon
 As tabelas são estruturadas em:
 
 1. **Barra Superior** (_opcional_)
-2. **Cabeçalho da coluna**
+2. **Cabeçalho da Coluna**
 3. **Colunas**
 4. **Linhas**
 5. **Barra de Paginação** (_opcional_)
 
-![Tabela Desktop](images/desktop-tablet.png)
+![Tabela Desktop](imagens/anatomia_desktoptablet.png)
 
 ### Celulares
 
@@ -34,27 +36,31 @@ As tabelas são estruturadas em:
 2. **Cards**
 3. **Barra de Paginação** (_opcional_)
 
-![Tabela Celular](images/celular.png)
+![Tabela Celular](imagens/anatomia_celular.png)
+
+---
 
 ## Barra Superior
 
-A Barra Superior fornece conteúdo e ações relacionadas à tabela atual. Ela pode se transformar em uma Barra de ação contextual.
+A Barra Superior fornece conteúdo e ações relacionadas à tabela associada. Ela pode se transformar em uma Barra de ação contextual.
 
 ### Barra Padrão
 
-1. **Titulo da tabela** (_opcional_): Texto usado para descrever o assunto à tabela.
-2. **Itens de ação e menu flutuante** (_opcional_): Ações relacionadas a tabela.
-3. **Tag de Filtros** (_opcional_): usados somente nos celulares.
+1. **Título da tabela** (_opcional_): Texto usado para descrever o assunto da tabela.
+2. **Itens de ação e menu flutuante** (_opcional_): Ações relacionadas à tabela.
+3. **Tag de Filtros** (_opcional_): usadas somente nos celulares.
 
-![Barra Superior](images/barrasuperior.png)
+![Barra Superior](imagens/barrasuperior.png)
+
+![Barra Contextual](imagens/anatomia_barrasuperior.png)
 
 ### Barra Contextual
 
-1. **Texto contextual** (_opcional_)
+1. **Texto contextual** - Quantidade de Itens Selecionados (_opcional_)
 2. **Elemento contextual** (_opcional_)
 3. **Itens de ação e menu flutuante contextual** (_opcional_)
 
-![Barra Contextual](images/barracontextual.png)
+![Barra Contextual](imagens/anatomia_barracontextual.png)
 
 Uma Barra Superior pode se transformar em uma barra de ação contextual para fornecer ações contextuais aos itens selecionados. Por exemplo, acessar um ícone de lupa nos itens de ação, a barra transforma-se em uma barra contextual com elementos relacionados a busca.
 
@@ -62,34 +68,43 @@ A barra contextual para Desktop deve ser utilizada com cautela, já que nem semp
 
 Quando a Barra Superior se transforma em uma barra contextual, ocorrem as seguintes alterações:
 
--   A cor da barra muda indicando a mudança de estado
--   O título da tabela desaparece
--   Os itens de ação da Barra Superior são substituídas por ações contextuais
--   Alguns elementos, baseados no contexto, podem ser exibidos.
+- A cor da barra muda indicando a mudança de estado
+- O título da tabela desaparece
+- Os itens de ação da Barra Superior são substituídas por ações contextuais
+- Alguns elementos, baseados no contexto, podem ser exibidos.
 
-![Contextual comportamento](images/animacao.gif)
+![Contextual comportamento](imagens/barracontextual_animacao.png)
 
-O Título da tabela pode ser substituido por um texto contextual, neste caso, esse texto não precisa herdar as mesmas característias de formatação.
+![Barra Contextual Tablet](imagens/tablet_barraucontextual.png)
+
+![Contextual comportamento](imagens/animacao.gif)
+
+O Título da tabela pode ser substituído por um texto contextual, neste caso, esse texto não precisa herdar as mesmas características de formatação.
+
+---
 
 ## Cabeçalho e Coluna
 
 O cabeçalho da coluna descreve o tipo de conteúdo exibidos em cada coluna. Cada linha contém dados relacionadas a uma única entidade.
 
 1. **Checkbox** (_opcional_)
-2. **Nome da coluna**
-3. **Ordenação** (_opcional_)
-4. **Filtro** (_opcional_)
+2. **Filtro** (_opcional_)
+3. **Nome da coluna**
+4. **Ordenação** (_opcional_)
+5. **Ícone para Filtrar** (_opcional_)
 
-![Cabeçalho](images/cabecalho.png)
+![Cabeçalho](imagens/anatomia_cabecalhocoluna.png)
 
 ### Nome da coluna
 
 Texto que descreve o tipo de conteúdo exibido na coluna.
 
-O texto deve ser conciso de modo a comunicar a sua mensagem de forma mais eficiente possível. Estes textos não devem ser extensos (preferencialmente com quantidade de caracteres menor do que os dados referentes).
+O texto deve ser conciso de modo a comunicar a sua mensagem de forma mais eficiente possível. Estes textos não devem ser extensos (preferencialmente com quantidade de caracteres menor que os dados referentes).
 
 > **Dica**: faça uma lista de palavras-chave e depois escolha as mais relevantes para sua necessidade.
 > **Exemplo**: nomes como "Data Inicial" e "Data Final" podem ser utilizados como "Inicial" e "final" respectivamente.
+
+---
 
 ## Linhas
 
@@ -100,37 +115,43 @@ As linhas apresentam os dados organizados por colunas e podem ter elementos de m
 3. **Dados**
 4. **Itens de Ação** (_opcional_)
 
-![Linha](images/linha.png)
+![Linha](imagens/anatomia_linha.png)
+
+![Linha](imagens/anatomia_linha_2.png)
 
 ### Dados
 
 Os dados de uma linha podem conter:
 
--   Ícones
--   Links
--   Textos
--   Componentes de formulários ([checkbox](#), [text](#), [radio](#), [select](#)...)
--   Chips
+- Ícones
+- Links
+- Textos
+- Componentes de formulários ([checkbox](#), [text](#), [radio](#), [select](#)...)
+- Chips
+
+---
 
 ## Cards
 
-Para celulares as colunas e linhas não são as melhores formas de apresentar os dados devido as retrições de espaço. Desde modo, as linhas da tabela devem ser convertidas em Cards, enquanto que o cabeçalho são rótulos para os dados que serão exibidos em uma lista dentro do card.
+Para celulares as colunas e linhas não são as melhores formas de apresentar os dados devido às retrições de espaço. Desde modo, as linhas da tabela devem ser convertidas em Cards, enquanto que o cabeçalho são rótulos para os dados que serão exibidos em uma lista dentro do card.
 
-1. **Ação Expandir/Retrair** (_opcional_)
-2. **Checkbox** (_opcional_)
+1. **Checkbox** (_opcional_)
+2. **Ação Expandir/Retrair** (_opcional_)
 3. **Lista**
 4. **Itens de Ação** (_opcional_)
 
-![Cards](images/cards.png)
+![Cards](imagens/anatomia_cards.png)
 
 ### Lista
 
-Os dados no card são organizados por um componente lista. E são constituidos da seguinte forma:
+Os dados no card são organizados por um componente lista. E são constituídos da seguinte forma:
 
 1. **Label:** representando o cabeçalho daquele dado no card;
 2. **Dado:** o dado propriamente dito, conforme é apresentado na linha da tabela
 
-![Lista](images/lista.png)
+![Lista](imagens/anatomia_lista.png)
+
+---
 
 ## Barra de Paginação
 
@@ -139,25 +160,29 @@ A paginação é exibida na parte inferior de uma tabela.
 Os controles de paginação fornecem acesso rápido a todas as páginas, enquanto indicam e permitem a configuração da quantidade de linhas de uma tabela.
 
 1. **Número de linhas por página**;
-2. **Número total de linhas, incluindo o intervalo atualmente em exibição**;
+2. **Número total de linhas, incluindo o intervalo em exibição**;
 3. **Página atual e a quantidade total de páginas**;
-4. **Ícones para navegação (setas esquerda e direita) para navegar nas páginas**;
+4. **Ícones para navegação (setas esquerda e direita) através das páginas**;
 
-![Paginação](images/paginacao.png)
+![Paginação](imagens/anatomia_paginacao.png)
 
 Para celular, a paginação deve mostrar somente a quantidade atual, a quantidade total de páginas e os controles de navegação.
+
+---
 
 ## Comportamento
 
 ### Rolagem
 
-Evite rolagem em tabelas. Quando necessário, a Barra Superior e o Cabeçalho permanecem visiveis até o término das Linhas da Tabela. Enquanto os elementos ficam fixos, a elevação destes itens acima de outros elementos se torna aparente.
+Evite rolagem em tabelas. Quando necessário, a Barra Superior e o Cabeçalho permanecem visíveis até o término das Linhas da Tabela. Enquanto os elementos ficam fixos, a elevação destes itens acima de outros elementos se torna aparente.
 
-![Rolagem](images/rolagem.png)
+![Rolagem](imagens/rolagem.png)
 
 No caso de celular, tanto a Barra Superior como a Barra de Paginação ficam fixas.
 
-![Rolagem Celular](images/rolagem-celular.png)
+![Rolagem Celular](imagens/responsividade_celular.png)
+
+![Rolagem Celular](imagens/celular_rolagem.png)
 
 Os itens fixos garantem que os dados da tabela podem ser comparados em qualquer contexto de visualização.
 
@@ -167,34 +192,34 @@ Quando uma tela é redimensionada, a exibição dos itens de ações na Barra Su
 
 As ações são movidas para o menu flutuante da direita para a esquerda, tornando a ação mais usada a última a ser movida para o menu flutuante.
 
-![Responsividade Barra Superior](images/responsividade-barrasuperior.png)
+![Responsividade Barra Superior](imagens/responsividade.png)
 
 As Linhas da tabela são transformadas em Cards e as Colunas (relacionadas a Linha) em Listas dentro do card.
 
-Textos (tanto do cabeçalho como das linhas) não podem acupar mais de uma linha. Os textos devem ser contraídos com reticências, e ao passar o mouse sobre o texto contraído é revelado o texto completo pelo uso de [tooltip](#). Para celular, não existe esta restrição.
+Textos (tanto do cabeçalho como das linhas) não podem ocupar mais de uma linha. Os textos devem ser contraídos com reticências, e ao passar o mouse sobre o texto truncado é revelado o texto completo pelo uso de [tooltip](#). Para celular, não existe esta restrição.
 
-![Responsividade Texto](images/responsividade-texto.png)
+![Responsividade Texto](imagens/Coluna_redimensiona3.png)
 
 ### Coluna Hover
 
 Quando o usuário passa o mouse sobre o cabeçalho de uma coluna:
 
--   Um [tooltip](#) pode exibir o nome completo da coluna (caso esteja contraido) ou uma descrição detalhada;
--   Se a ordenação estiver ativada, um ícone de seta dupla aparecerá ao lado do cabeçalho da coluna;
+- Um [tooltip](#) pode exibir o nome completo da coluna (caso esteja contraído) ou uma descrição detalhada;
+- Se a ordenação estiver ativada, um ícone de seta dupla aparecerá ao lado do cabeçalho da coluna;
 
-![Cabeçalho Hover](images/coluna-hover.png)
+![Cabeçalho Hover](imagens/cabecalho.png)
 
 ### Linha Hover (Desktop)
 
-As linhas da tabela pode possuir o estado hover, podendo ou não ter uma ação após o clique:
+As linhas da tabela podem possuir o estado hover, podendo ou não ter uma ação após o clique:
 
--   Caso tenha alguma ação, o cursor do mouse deve ser alterado para o estado comum de itens interativos (mão com dedo indicador);
--   Se não tiver ação, o cursor do mouse não deve ser alterado;
--   Se o cursor do mouse estiver em algum elemento interativo dentro da linha (link ou botão), a linha não deve receber hover enquanto o mouse estiver sobre estes itens;
+- Caso tenha alguma ação, o cursor do mouse deve ser alterado para o estado comum de itens interativos (mão com dedo indicador);
+- Se não houver ação, o cursor do mouse não deve ser alterado;
+- Se o cursor do mouse estiver em algum elemento interativo dentro da linha (link ou botão), a linha não deve receber hover enquanto o mouse estiver sobre estes itens;
 
-![Linha Hover](images/linha-hover.png)
+![Linha Hover](imagens/linha_hover.png)
 
-![Card Hover](images/card-hover.png)
+![Linha Hover](imagens/celular_cardnaohover.png)
 
 > **Não Faça**: Cards nunca devem ter efeito hover.
 
@@ -206,23 +231,23 @@ Usado para selecionar ou deselecionar as linhas ou cards da tabela.
 
 #### Nos Cabeçalhos
 
-Possui 2 estados básicos (Desmarcado e Selecionado) e outro adicional (Indeterminado). Quando acionado pelo usuário cada um executa uma ação específica:
+Possui dois estados básicos (Desmarcado e Selecionado) e outro adicional (Indeterminado). Quando acionado pelo usuário cada um executa uma ação específica:
 
--   **Desmarcado**: significa nenhuma checkbox das linhas está selecionado. Se acionado pelo usuário, todos os checkboxes passam para o estado de selecionado, inclusive do cabeçalho;
--   **Indeterminado**: significa que alguns checkboxes estão selecionados. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
--   **Selecionado**: significa que todos os checkboxes da página atual está selecionado. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
+- **Desmarcado**: significa nenhuma checkbox das linhas está selecionado. Se acionado pelo usuário, todos os checkboxes passam para o estado de selecionado, inclusive do cabeçalho;
+- **Indeterminado**: significa que alguns checkboxes estão selecionados. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
+- **Selecionado**: significa que todos os checkboxes da página atual estão selecionados. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
 
-![Checkbox Estados](images/checkbox-estados.png)
+![Checkbox Estados](imagens/interacoes_checkbox.png)
 
 #### Nas Linhas e Cards
 
 Quando um checkbox é selecionado:
 
--   Além de mudar seu estado para Selecionado, a linha da tabela ou o card (para celulares) é apresentada por outra cor. O conteúdo exibido por uma ação expandir não precisam herdar essa caracteristica.
--   A barra de contexto (Barra Superior) geralmente será exibida com ações referente a linha selecionada, chamadas de ações em lote.
--   O checkbox da cabeçalho é alterado para estado Indeterminado caso esteja no estado Desmarcado. Se todas as linhas da página atual for selecionada, o estado será Selecionado.
+- Além de mudar seu estado para Selecionado, a linha da tabela ou o card (para celulares) é apresentada por outra cor. O conteúdo exibido por uma ação expandir não precisam herdar essa característica.
+- A barra de contexto (Barra Superior) geralmente será exibida com ações referente à linha selecionada, chamadas de ações em lote.
+- O checkbox do cabeçalho é alterado para estado Indeterminado caso esteja no estado Desmarcado. Se todas as linhas da página atual forem selecionadas, o estado será Selecionado.
 
-![Contextual comportamento](images/animacao.gif)
+![Contextual comportamento](imagens/animacao.gif)
 
 As Linhas podem servir de alvo para selecionar o checkbox, mas os [cards](#) nunca podem ter este comportamento.
 
@@ -230,14 +255,22 @@ As Linhas podem servir de alvo para selecionar o checkbox, mas os [cards](#) nun
 
 No celular, não existe cabeçalho. Neste caso, quando um dos cards for selecionado, um checkbox aparece na Barra de Contexto para possibilitar a ação de deselecionar todos os cards selecionados.
 
-![Card Checkbox](images/card-checkbox.png)
+![Card Checkbox](imagens/celular_selecionar.png)
 
-Ao selecionar um linha ou card, pode ser útil exibir uma informação de quantos itens estão selecionados na tabela. Esse informação pode ser apresentado como um botão cuja ação pode ser refletida como uma busca, a qual:
+Ao selecionar um linha ou card, pode ser útil exibir uma informação de quantos itens estão selecionados na tabela. Essa informação pode ser apresentada como um botão cuja ação pode ser refletida como uma busca, a qual:
 
--   Exibe somente as linhas ou cards selecionados;
--   Após a busca, deve ser possível "cancelar" a busca, voltando a exibir o conteúdo da tabela de acordo com a página atual;
+- Exibe somente as linhas ou cards selecionados;
+- Após a busca, deve ser possível "cancelar" a busca, voltando a exibir o conteúdo da tabela de acordo com a página atual;
 
-![Contextual Filtro](images/barracontextual-filtro.png)
+![Contextual Filtro](imagens/barracontextual_filtro1.png)
+
+![Contextual Filtro](imagens/barracontextual_filtro2.png)
+
+![Contextual Filtro](imagens/animacao.gif)
+
+- o comportamento do hover na barra contextual, deve seguir os mesmos padrões adotados no hover dos demais componentes.
+
+![barracontextual Hover](imagens/barracontextual_hover.png)
 
 ### Itens de Ação
 
@@ -245,22 +278,23 @@ Os itens de ações são posicionados à direita da tabela, e exibidos como bot�
 
 Estes botões terciários devem ser, preferencialmente, a versão com ícones para que a tabela não fique com excesso de poluição visual (principalmente nas linhas ou cards da tabela).
 
-Quando a quantidade de ações não for extensa, a versão label+ícone pode ser utilizado no Desktop (geralmente usados na Barra de contexto).
+Quando a quantidade de ações não for extensa, a versão label+ícone pode ser utilizada no Desktop (geralmente usados na Barra de contexto).
 
-![Ações](images/acoes.png)
+![Ações](imagens/anatomia_itensacao.png)
 
-Os itens são exibidos lado a lado, desde que não ultrapassem o limite máximo de exibição (recomenda-se em em uma Linha da tabela até 4 ícones). Este número pode ser diferente para a Barra Superior ou de Contexto. Acima do valor máximo, é recomendado o uso do menu flutuante para acomodar as demais ações. O menu flutuante é uma ação, desta forma ele é somado na contagem de valor máximo da exibição de itens.
+Os itens são exibidos lado a lado, desde que não ultrapassem o limite máximo de exibição (recomenda-se em uma linha da tabela até 4 ícones). Este número pode ser diferente para a Barra Superior ou de Contexto. Acima do valor máximo, é recomendado o uso do menu flutuante para acomodar as demais ações. O menu flutuante é uma ação, desta forma ele é somado na contagem de valor máximo da exibição de itens.
 
-Menu flutuante é usado quando uma quantidade de ações são extensas ou quando a lista de ações precisa de um outro tratamento a fim de beneficiar hierarquicamente outro tipo de informação (como os dados da tabela). Só pode existir 1 menu flutuante por itens de ação
+Menu flutuante é usado quando uma quantidade de ações são extensas ou quando a lista de ações precisa de um outro tratamento a fim de beneficiar hierarquicamente outro tipo de informação (como os dados da tabela). Só pode existir 1 menu flutuante por item de ação.
 
 O menu flutuante pode ser usado para exibir algumas ações ou todas elas. A escolha de ve ser feita baseada na quantidade de informação da tabela (como caracteres e colunas) e do conhecimento hierárquico entre dados e ações.
 
-![Ações Menu FLutuante](images/acoes-menuflutuante.png)
-![Ações Linha](images/acoes-quantidade.png)
+![Ações Menu FLutuante](imagens/tabela_menuflutuante.png)
+
+![Ações Linha](imagens/acoes_quantidade.png)
 
 No Desktop, os itens podem aparecer ao passar o mouse sobre a linha referente. Este modo é utilizado quando a tabela possui um número grande de colunas e quando nenhuma ação (mesmo menu flutuante) deve competir com o conteúdo da tabela.
 
-![Ações Desktop](images/acoes-desktop.png)
+![Ações Desktop](imagens/itensacao_01.png)
 
 #### Ordenando as ações
 
@@ -272,41 +306,43 @@ As ações entram e saem do menu flutuante à medida que a largura da Barra Supe
 
 Tooltips devem ser usadas em todas as ações que são apresentadas somente por ícone.
 
-![Ações Tooltip](images/acoes-tooltip.png)
+![Ações Tooltip](imagens/acoes_tooltip.png)
 
-#### Ícones padrão das ações
+#### Ícones padrões para ações
 
-Utilize icones padrões para ações relacionadas:
+Utilize ícones padrões para ações relacionadas:
 
--   Adicionar
--   Remover
--   Editar
--   Visualizar
--   Filtro
--   Busca
+- Adicionar
+- Remover
+- Editar
+- Visualizar
+- Filtrar
+- Buscar
 
 ### Simplificando Elementos
 
-Por questões de legibilidade e densidade informacional, os elementos que possuem borda perdem essa característica no Estado Normal. Este comportamento é aplicado somente no estado Normal, em outros tipos de Estados o visual padrão pode ser mantido.
+Por questões de legibilidade e densidade informacional, os elementos que possuem sublinhado perdem essa característica no Estado Interativo. Este comportamento é aplicado somente no estado Interativo, em outros tipos de Estados o visual padrão pode ser mantido.
 
-![Simplificando](images/simplificando.png)
+![Simplificando](imagens/simplificando.png)
 
-Elementos das quais as bordas enfluenciam diretamente na sua função, como no caso de Separadores, não sofrem qualquer alteração, independente do Estado.
+Elementos das quais o influenciam diretamente na sua função, como no caso de Separadores, não sofrem qualquer alteração, independente do Estado.
 
 ### Ação Expandir
 
-Essa ação exibe informações adicionais relacionadas a linha (ou card, no caso de celular). Representada por um botão terciário com uso de ícone de seta para baixo ou para cima (representando a ação de expandir ou retrair respectivamente), além do ícone, pode ser representada com label+ícone.
+Essa ação exibe informações adicionais relacionadas à linha (ou card, no caso de celular). Representada por um botão terciário com uso de ícone de seta para baixo ou para cima (representando a ação de expandir ou retrair respectivamente), além do ícone, pode ser representada com label+ícone.
 
 Quando aplicado nas linhas da tabela, deve ser a primeira informação a ser exibida e funciona como um componente [accordion](#): as linhas da tabela se afastam para exibir o conteúdo adicional. Este conteúdo é apresentado limitado por elementos que ajudem a destacar sua hierarquia dentro da tabela, tais como uma sombra.
 
-![Expandir](images/expandir.png)
+![Expandir](imagens/expandir.png)
+
+![Expandir Tablet](imagens/tablet_expandir02.png)
 
 Em Cards a ação possui duas opções (que podem ser usadas simultaneamente):
 
--   **Expandir as informações do card**: localizada à direita, na parte superior do card. Quando retraído, esconde as informações do card, exibindo somente o primeiro item da lista (podendo ser alterado caso o card sofra alguma ordenação). Quando expandido, todas as listas do card são exibidas, podendo ou não exibir as informações adicionais do card.
--   **Visualizar informações adicionais**: localizada no final do card, após um separador. Ela é exibida com o rótulo "Mais informações" e ícone. Exibe as informações adicionais encontradas no card. É a mesma informação que é contraída na tabela por linhas.
+- **Expandir as informações do card**: localizada à direita, na parte superior do card. Quando retraído, esconde as informações do card, exibindo somente o primeiro item da lista (podendo ser alterado caso o card sofra alguma ordenação). Quando expandido, todas as listas do card são exibidas, podendo ou não exibir as informações adicionais do card.
+- **Visualizar informações adicionais**: localizada no final do card, após um separador. Ela é exibida com o rótulo "Mais informações" e ícone. Exibe as informações adicionais encontradas no card. É a mesma informação que é contraída na tabela por linhas.
 
-![Expandir Card](images/expandir-card.png)
+![Expandir Card](imagens/expandir_card.png)
 
 As informações exibidas após a ação expandir (informações adicionais) devem ser diagramadas com cautela. O Excesso de informação e elementos interativos pode confundir o usuário, atrapalhando a leitura e o entendimento dos dados encontrados na tabela. Evite componentes como: tabela, card, arccordion ou qualquer outro componente complexo responsável por organizar, ordenar grande quantidade de informação.
 
@@ -318,10 +354,12 @@ As configuração de densidade das linhas das tabelas podem ser alterados pelo u
 
 Neste caso:
 
--   A altura das as Linhas e de todas as Barras da Tabela serão alteradas na mesma dimensão;
--   O tamanho da fonte dos textos e dos ícones não são alterados;
+- A altura das as Linhas e de todas as Barras da Tabela serão alteradas na mesma dimensão;
+- O tamanho da fonte dos textos e dos ícones não são alterados;
 
-![Densidade](images/densidade.png)
+![Densidade](imagens/densidade01.png)
+
+![Densidade](imagens/densidade02.png)
 
 ### Ordenação
 
@@ -333,21 +371,22 @@ Para indicar qual coluna está ordenada, exiba um ícone com seta para baixo (de
 
 A ausência de setas ou uso de seta dupla (com estado Hover) significa que a coluna está com ordenação padrão.
 
-![Cabeçalho Hover](images/coluna-hover.png)
+![Cabeçalho Ordenação](imagens/cabecalho.png)
 
 Toda a área da célula deve responder a entrada do usuário (touch ou clique).
 
-![Ordenar](images/ordenar.png)
+![Ordenar](imagens/tabela_ordenacao.png)
 
 #### Celular
 
 Os Cards podem ser ordenados com uso de item de ação localizado na Barra Superior. Neste caso:
 
--   O primeiro item da lista dos cards passa a ser o referente ao rótulo escolhido na ordenação;
--   Todas os cards se ordenam conforme a nova ordenação;
+- O primeiro item da lista dos cards passa a ser o referente ao rótulo escolhido na ordenação;
+- Todas os cards se ordenam conforme a nova ordenação;
 
-![Ordenar Card - Parte 1](images/ordenar-card01.png)
-![Ordenar Card - Parte 2](images/ordenar-card02.png)
+![Ordenar Card - Parte 1](imagens/celular_ordenacao01.png)
+
+![Ordenar Card - Parte 2](imagens/celular_ordenacao02.png)
 
 ### Filtro
 
@@ -357,13 +396,13 @@ Filtros permitem que o usuário pesquise valores específicos em cada coluna ou 
 
 Através do item de ação na barra superior, o usuário podem acessar aos filtros que ficam localizado no cabeçalho de cada coluna. Os componentes de entrada vão depender do tipo de dado que será pesquisado na coluna. A pesquisa é feita sem necessidade de uma ação adicional de confirmação, e o cancelamento pode ser feito ao deixar o componente de entrada sem informação ao interagir novamente com o item de ação respecitivo na barra superior, caso exista.
 
-![Filtro Desktop](images/filtro-desktop.png)
+![Filtro Desktop](imagens/barrasuperior_filtro.png)
 
 #### Celular
 
 Os componentes de entrada são acessados somente pelo botão ação. Após isso, uma nova tela onde o usuário pode preencher os campos e ações relacionadas. Após a busca, os termos pesquisados aparecem na barra superior na forma de componentes Chips. Os termos pesquisados podem ser cancelados pela ação fechar do chip ou na tela de filtro.
 
-![Filtro Celular](images/filtro-celular.png)
+![Filtro Celular](imagens/celular_filtro.png)
 
 ### Foco
 
@@ -377,19 +416,32 @@ A rolagem (scrolling) horizontal é útil para apresentar grandes conjuntos de d
 
 Por causa da limitação de espaço é recomendado que apenas 1 coluna de dados seja fixa. Mas, caso seja viável, mais de uma coluna pode ser fixa. Como exceção, a coluna contendo o ícone de expandir e os componentes de checkbox, caso exista, sempre devem ser fixas. Esse entendimento pode ser expandido para qualquer elemento interativo que seja muito importante dentro da tabela.
 
-![Coluna Fixa](images/colunafixa.png)
+![Coluna Fixa Rolagem](imagens/tablete_rolagemhorizontal01.png)
+
+![Coluna Fixa Rolagem](imagens/tablet_colunafixa.png)
+
+![Coluna Fixa Rolagem](imagens/tablet_colunafixa_expandir.png)
 
 ### Buscar
 
 Para realizar busca de dados dentro da tabela:
 
--   Utilize uma ação, na Barra Superior, para apresentar o campo de busca;
--   O campo de busca deve está inserido em uma Barra de Contexto;
--   Destaque, no conteúdo, os termos procurados;
--   Uma ação de "fechar" deve está disponível para o usuário, caso ele queira desistir da busca;
+- Utilize uma ação, na Barra Superior, para apresentar o campo de busca;
 
-![Busca](images/busca.png)
-![Busca Celular](images/busca-celular.png)
+![Busca](imagens/tabela_busca.png)
+
+- O campo de busca deve está inserido em uma Barra de Contexto;
+
+![Bbarracontextual Busca](imagens/barracontextual_busca.png)
+
+- Destaque, no conteúdo, os termos procurados;
+- Uma ação de "fechar" deve está disponível para o usuário, caso ele queira desistir da busca;
+
+![Bbarracontextual Desatque Busca](imagens/barracontextual_busca_destaque.png)
+
+Busca no Celular
+
+![Busca Celular](imagens/celular_busca.png)
 
 ### Redimensionar Coluna
 
@@ -397,40 +449,61 @@ Redimensionar colunas permitem que usuários vejam dados contraídos de forma co
 
 Quando o usuário coloca o mouse próximo a lateral do cabeçalho, seguintes mudanças acontece:
 
--   O cursor do mouse é alterado para setas
--   Uma linha vertical da coluna é exibida
--   O usuário pode arrastar a linha vertical para esquerda e direita
--   Dados contraídos podem ficar visíveis e dados muito extensos podem ser contraídos e adicionado reticências. Veja [Responsividade](#) para maiores detalhes.
--   Elementos visual de sombra é adicionado como resposta durante a ação de arrastar a linha vertical.
+- O cursor do mouse é alterado para setas
+- Uma linha vertical da coluna é exibida
 
-![Redimensionar Coluna](images/redimensionarcoluna.png)
+![Redimensionar Coluna](imagens/coluna_redimensionar1.png)
+
+- O usuário pode arrastar a linha vertical para esquerda e direita
+
+- Elemento visual de sombra é adicionado como resposta durante a ação de arrastar a linha vertical.
+
+![Redimensionar Coluna](imagens/Coluna_redimensiona2.png)
+
+- Dados contraídos podem ficar visíveis e dados muito extensos podem ser contraídos e adicionado reticências. Veja [Responsividade](#) para maiores detalhes.
+
+![Redimensionar Coluna](imagens/Coluna_redimensiona3.png)
 
 ### Carregando dados
 
 Quando os dados da coluna são atualizados uma mensagem de carregamento deve ser exibida sobre a tabela.
 
-O usuário não pode interagir com os elementos da tabela enquanto o carregamento não estiver concluído. Nentes caso, coloque uma opção para cancelar o processamento.
+O usuário não pode interagir com os elementos da tabela enquanto o carregamento não estiver concluído. Neste caso, coloque uma opção para cancelar o processamento.
 
-![Carregando](images/carregando.png)
+![Carregando](imagens/loading.png)
+
+---
+
+### Mensagens dentro da Tabela
+
+Quando houver necessidade de alertar ao usuário sobre determinada informação da tabela, a mesma deve aparecer em formato de mensagem e logo abaixo do cabeçalho da mesma.
+
+![Mensagens Tabela - Desktop](imagens/mensagem.png)
+
+Na versão mobile a mesma deve se apresentar logo abaixo do título da tabela.
+
+![Mensagens Tabela - Mobile](imagens/celular_mensagem.png)
+
+---
 
 ## Especificação
 
 ### Desktop
 
-[![Especificação para Desktop](images/tabela.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/)
+[![Especificação para Desktop](imagens/tabela.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/)
 
 ### Tablet
 
-[![Especificação para Tablet](images/spc-tablet.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/screen/d751b4f2-4e8f-462a-9653-f4995b1dee16/Tabela-Tablet/)
+[![Especificação para Tablet](imagens/tablete_rolagemhorizontal01.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/screen/d751b4f2-4e8f-462a-9653-f4995b1dee16/Tabela-Tablet/)
 
 ### Celular
 
-[![Especificação para Celular](images/spc-celular.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/screen/bebd0936-f99b-4ced-8ca9-4c332228861e/Tabela-Celular/)
+[![Especificação para Celular](imagens/celular.png)](https://xd.adobe.com/spec/a0154d97-6875-455b-559b-2eee2a832c9b-d624/screen/bebd0936-f99b-4ced-8ca9-4c332228861e/Tabela-Celular/)
 
 ### Tamanho mínimo (Desktop)
 
--   Deixe **12px** de espaçamento interno **entre as colunas** de uma tabela;
--   Caso tenha algum ícone, como de ordenação, acrescente **24px** do ícone (área mínimo de interação com mouse);
--   Espaçamento Interno entre as **extreminadas** da coluna são de **16px**;
+- Deixe **12px** de espaçamento interno **entre as colunas** de uma tabela;
+- Caso tenha algum ícone, como de ordenação, acrescente **24px** do ícone (área mínimo de interação com mouse);
+- Espaçamento Interno entre as **extreminadas** da coluna são de **16px** do lado esquerdo da tabela, e de **8px** do lado direito (entre os ícones e a extremidade da Tabela)
 
-![Espaçamento Mínimo - Desktop](images/spc-desktop-minimo.png)
+![Espaçamento Mínimo - Desktop](imagens/coluna_espacominimo.png)

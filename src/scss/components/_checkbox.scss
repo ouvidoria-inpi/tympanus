@@ -37,14 +37,14 @@
     }
     &:checked + label::after {
       border: solid $color-secondary-01;
-      border-width: 0 2px 2px 0;
+      border-width: 0 3px 3px 0;
       content: "";
-      height: 10px;
-      left: 9px;
+      height: 15px;
+      left: 8px;
       position: absolute;
-      top: 6px;
+      top: 3px;
       transform: rotate(45deg);
-      width: 6px;
+      width: 8px;
     }
     // Hover
     &:hover:not(:disabled) + label::before,
@@ -91,6 +91,25 @@
         &:focus:not(:disabled) + label::before {
           box-shadow: 0 0 0 4px rgba($color, 0.45);
         }
+      }
+    }
+  }
+  &.is-checking {
+    input[type="checkbox"] {
+      & + label::before {
+        background: $color-primary-lighten-01;
+        border-color: $color-primary-lighten-01;
+      }
+      & + label::after {
+        border: solid $color-secondary-01;
+        border-width: 0 3px 3px 0;
+        content: "";
+        height: 3px;
+        left: 6px;
+        position: absolute;
+        top: 11px;
+        transform: rotate(0);
+        width: 12px;
       }
     }
   }
@@ -141,6 +160,9 @@
       &:checked + label::after {
         left: 7px;
         top: 3px;
+        border-width: 0 2px 2px 0;
+        height: 12px;
+        width: 6px;
       }
     }
   }

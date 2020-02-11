@@ -1,4 +1,4 @@
-mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=5)
+mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=10)
   - let datatableClass = attributes.datatable ? "is-datatable" : ""
   - let column = 1
   - let row = 1
@@ -23,33 +23,46 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
               i.fas.fa-search
           +button.search-close.is-circle.ml-1
             i.fas.fa-times
+        if (attributes.checkbox)
+          .selected-bar
+            .info
+              +button.mobile.select-all.is-primary 
+                i.fas.fa-minus-square
+              span.count 0
+              span.text item selecionado
+            .action-button
+              +button.delete-trigger.is-primary 
+                span Excluir
+                i.fas.fa-trash-alt
+            .action-button
+              +button.download-trigger.is-primary 
+                span Download
+                i.fas.fa-download
+            .action-button.mobile
+              +button.is-primary 
+                i.fas.fa-ellipsis-v
     .responsive
       table
         thead
           tr
+            if (attributes.checkbox)
+              th(scope="col" style="width: 54px;")
+                +checkbox("")(id=`${attributes.id}-check-all`, name="check")
+            - column = 1
             while (column <= (attributes.columns ? attributes.columns : columns))
-              if (column === 1)
-                if (attributes.checkbox)
-                  th(scope="col" style="width: 54px;")
-                    +checkbox("")(id=`${attributes.id}-check-all`, name="check")
-                th(scope="col")=`Coluna ${column}`
-              else
-                th(scope="col")=`Coluna ${column}`
+              th(scope="col")=`Coluna ${column}`
               - column++
         tbody
           while (row <= (attributes.rows ? attributes.rows : rows))
             tr
+              if (attributes.checkbox)
+                td
+                  +checkbox("")(id=`${attributes.id}-line-${row}` name="check")
               - column = 1
               while (column <= (attributes.columns ? attributes.columns : columns))
-                - let random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+                - let random = `kjnsiojashbnio bdkasjdb kjsdaskd ajlblk ajdbaksdj `//Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
                 - random = random.replace(/(\w{8})/g, '$1 ').replace(/(^\s+|\s+$)/,'')
-                if (column === 1)
-                  if (attributes.checkbox)
-                    td
-                      +checkbox("")(id=`${attributes.id}-line-${row}` name="check")
-                  td(data-th=`Coluna ${column}`)=random
-                else
-                  td(data-th=`Coluna ${column}`)=random
+                td(data-th=`Coluna ${column}`)=random
                 - column++
             - row++
     if (attributes.datatable)

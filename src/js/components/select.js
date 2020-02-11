@@ -124,6 +124,12 @@ class BRSelect {
   }
 }
 
+let selectList = []
+
+for (let brSelect of window.document.querySelectorAll('.br-select')) {
+  selectList.push(new BRSelect('br-select', brSelect))
+}
+
 function getBrSelect(component) {
   for (let brSelect of selectList) {
     for (let select of brSelect.component.querySelectorAll('select')) {
@@ -137,8 +143,6 @@ function getBrSelect(component) {
 function updateSelect(component) {
   getBrSelect(component).updateSelect()
 }
-
-let selectList = []
 
 function createBrSelect() {
   for (let brSelect of window.document.querySelectorAll('.br-select')) {
@@ -155,8 +159,4 @@ function createBrSelect() {
   }
 }
 
-window.onload = (function() {
-  for (let brSelect of window.document.querySelectorAll('.br-select')) {
-    selectList.push(new BRSelect('br-select', brSelect))
-  }
-})()
+

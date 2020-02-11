@@ -40,10 +40,10 @@ design-system/
 
 No exemplo a seguir iremos criar um botão simples. Com as seguintes características:
 
-- Fundo preto
-- texto branco e letras maiúsculas
-- quadrado
-- ao clicar é exibida a mensagem: "Botão clicado!"
+-   Fundo preto
+-   texto branco e letras maiúsculas
+-   quadrado
+-   ao clicar é exibida a mensagem: "Botão clicado!"
 
 ### Código reusável
 
@@ -101,19 +101,19 @@ Dentro de `src/scss/components/` crie o arquivo **\_simple-button.scss** com o s
 ```scss
 // src/scss/components/_simple-button.scss
 .#{$prefix}simple-button {
-  background: $color-black;
-  border: 1px solid $color-black;
-  border-radius: 0;
-  color: $color-white;
-  display: inline-block;
-  font-weight: 400;
-  padding: 8px 16px;
-  text-transform: uppercase;
-  &:hover {
-    background: $color-gray-6;
-    color: $color-white;
-    text-decoration: none;
-  }
+    background: $color-black;
+    border: 1px solid $color-black;
+    border-radius: 0;
+    color: $color-secondary-01;
+    display: inline-block;
+    font-weight: 400;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    &:hover {
+        background: $color-secondary-07;
+        color: $color-secondary-01;
+        text-decoration: none;
+    }
 }
 ```
 
@@ -131,12 +131,12 @@ Atenção! Da mesma forma como foi feito no arquivo Pug, você poderá criar um 
 Dentro de `src/js/components/` crie o arquivo **simple-button.js** com o seguinte código:
 
 ```js
-const simpleButtons = document.querySelectorAll('.br-simple-button')
+const simpleButtons = document.querySelectorAll('.br-simple-button');
 
 for (let simpleButton of simpleButtons) {
-  simpleButton.addEventListener('click', function() {
-    alert('Botão clicado!')
-  })
+    simpleButton.addEventListener('click', function() {
+        alert('Botão clicado!');
+    });
 }
 ```
 

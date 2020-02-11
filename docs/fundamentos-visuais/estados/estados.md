@@ -1,4 +1,4 @@
-[artefato fonte de design]: # 'estados_2.0.0.xd'
+[artefato fonte de design]: # 'estados_2.0.1.xd'
 
 Estados são representações visuais que ajudam os usuários a identificar o estado de um componente ou elemento. Comunicam o estado de uma ação e sugerem a possibilidade ou imposibilidade do usuário interagir com um elemento, estabelecendo confiança entre interface e usuário.
 
@@ -24,7 +24,7 @@ A herança de um estado deve ser respeitada. Quando vários estados ocorrem ao m
 
 ### Acessibilidade
 
-Por se tratar de representações visuais, os estados devem seguir os princípios de acessibilidade encontrados nas [Cores](#). Entretando, apesar da importância do contraste, alguns estados não possuem a necessidade de se preocupar com tais questões tendo em vista sua função dentro da interface, como é o caso de estado **Desativado**.
+Por se tratar de representações visuais, os estados devem seguir os princípios de acessibilidade encontrados nas [Cores](#). Entretando, apesar da importância do contraste, alguns estados não possuem a necessidade de se preocupar com tais questões tendo em vista sua função dentro da interface, como é o caso de estado **Desabilitado**.
 
 Dependendo do fundo aplicado, o estado do componente deve ser revisto para atender todos os princípios estabelecidos dos estados. Caso as especificações contidas no estado forem insuficientes para promover um bom contraste entre fundo e texto/ícone, inverta as cores de fundo e texto/ícone do elemento. Se mesmo assim não houver um contraste satisfatório, utilize as informações localizadas do [fundamento cores](#) como guia para atender as necessidades.
 
@@ -79,18 +79,18 @@ Caso um componente possua borda, utilize as mesmas regras utilizadas para texto/
 
 Abaixo,segue a lista dos principais estados encontrados no DS gov. Alguns estados são específicos de um componente, e como tal serão detalhados na sua respectiva documentação.
 
--   **Destacado**: Um estado que comunica um destaque sobre um texto, iniciado pelo usuário ou não.
--   **Interativo**: Um estado que comunica que um componente ou elemento é interativo.
--   **Desativado**: Um estado que comunica que um componente ou elemento não é interativo temporariamente.
--   **Hover**: Um estado que comunica quando um usuário coloca o cursor sobre um componente ou elemento.
--   **Pressionado**: Um estado que comunica um toque ou clique do usuário sobre um componente ou elemento.
--   **Foco**: Um estado que comunica quando um usuário destaca um componente ou elemento, utilizando-se de um método de entrada como teclado ou voz.
--   **Ativo**: Um estado que comunica um destaque sobre um determinado destino ou conjunto de escolha, iniciado pelo usuário ou não.
--   **Selecionado**: Um estado que comunica uma escolha do usuário.
--   **Arrastado**: Um estado que comunica quando um usuário pressiona (com clique ou toque) e move um componente ou elemento.
--   **Visitado**: Um estado que comunica que um contéudo de um elemento interativo foi acessado pelo usuário.
--   **Ligado**: Um estado que comunica a opção "ligado" na alternância entre duas opções.
--   **Desligado**: Um estado que comunica a opção "desligado" na alternância entre duas opções.
+- **Destacado**: Um estado que comunica um destaque sobre um texto, iniciado pelo usuário ou não.
+- **Interativo**: Um estado que comunica que um componente ou elemento é interativo.
+- **Desabilitado**: Um estado que comunica que um componente ou elemento não é interativo temporariamente.
+- **Hover**: Um estado que comunica quando um usuário coloca o cursor sobre um componente ou elemento.
+- **Pressionado**: Um estado que comunica um toque ou clique do usuário sobre um componente ou elemento.
+- **Foco**: Um estado que comunica quando um usuário destaca um componente ou elemento, utilizando-se de um método de entrada como teclado ou voz.
+- **Ativo**: Um estado que comunica um destaque sobre um determinado destino ou conjunto de escolha, iniciado pelo usuário ou não.
+- **Selecionado**: Um estado que comunica uma escolha do usuário.
+- **Arrastado**: Um estado que comunica quando um usuário pressiona (com clique ou toque) e move um componente ou elemento.
+- **Visitado**: Um estado que comunica que um contéudo de um elemento interativo foi acessado pelo usuário.
+- **Ligado**: Um estado que comunica a opção "ligado" na alternância entre duas opções.
+- **Desligado**: Um estado que comunica a opção "desligado" na alternância entre duas opções.
 
 ---
 
@@ -137,28 +137,30 @@ A cor **Primary Default** não é aplicável em todas as situações, como no ca
 
 ---
 
-## Desativado
+## Desabilitado
 
-Um estado desativado, deve ter baixa ênfase ou ser amenizado dentro de uma interface. O estado desativado comunica quando um componente ou elemento não é interativo (geralmente temporariamente). Esse estado é exibido com **45%** de opacidade do estado Interativo e o cursor do mouse deve ser alterado para a "símbolo de não permitido: círculo com traço diagonal" (`cursor: not-allowed`).
+Um estado desabilitado, deve ter baixa ênfase ou ser amenizado dentro de uma interface. O estado desabilitado comunica quando um componente ou elemento não é interativo (geralmente temporariamente). Esse estado é exibido com **45%** de opacidade do estado Interativo e o cursor do mouse deve ser alterado para a "símbolo de não permitido: círculo com traço diagonal" (`cursor: not-allowed`).
 
 Caso um componente, mesmo com a opacidade aplicada ainda esteja se destacado, substitua a alteração da opacidade pela cor: Fundo: **Secondary 03** | Texto e ícone: **Secondary 04**.
 
-Elementos desativados não precisam ser rígidos sobre as [conformidade de acessibilidade](#); e caracteristicas visuais que destaquem o elemento devem ser retiradas ou amenizadas, como é o caso das sombras por exemplo.
+**ATENCÃO: Utilize essa opção somente quando a recomendação padrão (**45%** de opacidade do estado Interativo ) não funcionar.**
 
-### Evitar estado desativado
+Elementos desabilitados não precisam ser rígidos sobre as [conformidade de acessibilidade](#); e caracteristicas visuais que destaquem o elemento devem ser retiradas ou amenizadas, como é o caso das sombras por exemplo.
 
-Alguns elementos da tela, não podem receber o estado desativado. Neste caso, prefira não exibir o componente na interface. Alguns componentes que seguem essa regra:
+### Evitar estado desabilitado
+
+Alguns elementos da tela, não podem receber o estado desabilitado. Neste caso, prefira não exibir o componente na interface. Alguns componentes que seguem essa regra:
 
 -   Componentes de Navegação (Menu, Abas...)
 -   Modal
 -   Tooltip
 -   Botão call to action
 
-**Cuidado:** Alguns componentes são contituídos por vários outros componentes. Neste caso, seus componentes podem possuir estado de desativado, ainda que o componente "completo" que constituem, não possua tal estado.
+**Cuidado:** Alguns componentes são contituídos por vários outros componentes. Neste caso, seus componentes podem possuir estado de desabilitado, ainda que o componente "completo" que constituem, não possua tal estado.
 
-Elementos desativados não sofrem herança, ou seja, não podem ser combinados com qualquer outro estado.
+Elementos desabilitados não sofrem herança, ou seja, não podem ser combinados com qualquer outro estado.
 
-![Desativado](imagens/desativado.png)
+![Desabilitado](imagens/desabilitado.png)
 
 ##### Opção 1: recomendada
 
@@ -181,9 +183,9 @@ O Estado hover acontece quando o usuário mantém o cursor do mouse sobre um com
 
 Por padrão, o hover é exibido em um fundo da cor **Primary Pastel 02** e o cursor do mouse deve ser alterado para a "mão fechada com indicador esticado" (`cursor: pointer`) caso o elemento seja interativo, como no caso de hiperlinks. Para questões de legibilidade, a cor da fonte ou elemento gráfico podem ser alterados para cor padrão do estado interativo ou de texto normal.
 
-Componentes desativados não podem receber hover.
+Componentes desabilitados não podem receber hover.
 
-Em casos em que o elemento interativo tenha algumas características visuais que fogem do comum, como ter um fundo da mesma cor do hover, pode ser utilizado um overlay no fundo do componente para se criar contraste suficiente para percepção do hover. Esse Overlay é realizado com opacidade de 12% da cor do texto/ícone no elemento ao qual é aplicada, e no caso de ter um fundo escuro a opacidade deve ser ajustada para 24%.
+Em casos em que o elemento interativo tenha algumas características visuais que fogem do comum, como ter um fundo da mesma cor do hover, pode ser utilizado um overlay no fundo do componente para se criar contraste suficiente para percepção do hover. Esse Overlay é realizado com opacidade de 12% da cor do texto/ícone no elemento ao qual é aplicada, e no caso de ter um fundo escuro a opacidade deve ser a mesma 12%.
 
 Só pode existir um elemento com hover por vez na tela.
 
@@ -218,7 +220,7 @@ O estado foco surge quando um usuário utiliza-se de um teclado ou voz para dest
 
 O foco é exibido por um overlay na cor **Support 02** com opacidade **30%** e o fundo deverá mudar para a cor **Secondary 01**. Para questões de legibilidade, a cor da fonte/ícone poderá ser alterada para cor padrão do estado interativo caso o constraste seja insuficiente para leitura.
 
-Componentes desativados não podem receber foco.
+Componentes desabilitados não podem receber foco.
 
 Só pode existir um elemento com foco por vez na tela.
 
@@ -318,7 +320,7 @@ O estado visitado é exibido com texto na cor **Primary Darken 01**. A cor de fu
 
 ## Ligado e Desligado
 
-Apesar de serem estados diferentes, o estado ligado e desligado estão unidos na função: comunicam uma alternância entre duas opções: Ligado ou Desligado. Um elemento ou componente se alterna entre um estado ligado ou desligado conforme a interação do usuário utilizando os seguintes métodos de entrada: toque, cursor, teclado ou voz.
+Apesar de serem estados diferentes, o estado ligado e desligado estão unidos na função: comunicam uma alternância entre duas opções: Ligado ou Desligado, exemplo quando se utiliza um swipe. Um elemento ou componente se alterna entre um estado ligado ou desligado conforme a interação do usuário utilizando os seguintes métodos de entrada: toque, cursor, teclado ou voz.
 
 O estado ligado pode ser exibido com a cor **Primary Lighten 02** enquanto o desligado pela cor **Secondary 04**. A cor de texto utilize as cores **Secondary 01** no ligado e **Secondary 07** para o desligado.
 

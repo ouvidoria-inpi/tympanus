@@ -45,8 +45,6 @@ class BRAccordeon {
 
 let accordeonList = [];
 
-window.onload = (function startBrAccordions() {
-  for (let brAccordeon of window.document.querySelectorAll('.br-accordeon')) {
-    accordeonList.push(new BRAccordeon('br-accordeon', brAccordeon));
-  }
-})();
+for (let brAccordeon of window.document.querySelectorAll(".br-accordeon")) {
+  accordeonList.push(new BRAccordeon("br-accordeon", brAccordeon));
+}
