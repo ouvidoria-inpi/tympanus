@@ -7,24 +7,28 @@
   $columns
 ) {
   @media (min-width: $media-breakpoint) {
-    --grid-#{columns}: var(--grid-tablet-columns);
     .container {
-      max-width: v(container-maxwidth, $maxwidth);
-      padding-left: v(container-padding, $margin);
-      padding-right: v(container-padding, $margin);
+      --container-maxwidth: var(--grid-#{$breakpoint}-maxwidth, #{$maxwidth});
+      --container-padding: var(--grid-#{$breakpoint}-margin, #{$margin});
     }
     .row {
-      margin-left: calc(#{v(row-margin, $gutter)} / -2);
-      margin-right: calc(#{v(row-margin, $gutter)} / -2);
+      --row-margin: var(--grid-#{$breakpoint}-gutter, #{$gutter});
     }
     .col {
-      flex-basis: calc(100% / #{v(grid-columns, $columns)});
-      padding-left: calc(#{v(col-gutter, $gutter)} / 2);
-      padding-right: calc(#{v(col-gutter, $gutter)} / 2);
+      --col-gutter: var(--grid-#{$breakpoint}-gutter, #{$gutter});
+      flex-basis: 100% / $columns;
+    }
+    @each $bp in map-keys($breakpoints) {
+      .col-#{$bp} {
+        --col-gutter: var(--grid-#{$breakpoint}-gutter, #{$gutter});
+        @if $bp == $breakpoint {
+          flex-basis: 100% / $columns;
+        }
+      }
     }
     @for $i from 1 through $columns {
       .#{$breakpoint}-#{$i} {
-        flex-basis: calc(100% / #{v(grid-columns, $columns)} * $i) !important;
+        flex-basis: 100% / $columns * $i !important;
         flex-grow: 0;
       }
     }

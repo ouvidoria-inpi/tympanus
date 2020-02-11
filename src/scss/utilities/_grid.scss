@@ -1,35 +1,40 @@
-// grid-portrait
+// Configuração básica
 .container {
   margin: auto;
   padding-left: v(container-padding, $container-padding);
   padding-right: v(container-padding, $container-padding);
   max-width: v(container-maxwidth, $container-maxwidth);
 }
-
 .row {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(#{v(row-margin, $row-margin)} / -2);
   margin-right: calc(#{v(row-margin, $row-margin)} / -2);
 }
-
-.col {
-  flex-basis: calc(100% / #{v(grid-columns, $grid-columns)});
+%col {
+  flex-basis: 100%;
   flex-grow: 1;
   padding-left: calc(#{v(col-gutter, $col-gutter)} / 2);
   padding-right: calc(#{v(col-gutter, $col-gutter)} / 2);
 }
-
-@for $i from 1 through $grid-portrait-columns {
-  .portrait-#{$i} {
-    flex-basis: calc(
-      100% / #{v(grid-columns, $grid-columns)} * #{$i}
-    ) !important;
-    flex-grow: 0;
+.col {
+  @extend %col;
+}
+@each $breakpoint in map-keys($breakpoints) {
+  .col-#{$breakpoint} {
+    @extend %col;
   }
 }
 
-// grid-tablet
+// Customizações de acordo com o Breakpoint
+@include grid-breakpoint(
+  portrait,
+  $grid-breakpoint-xsmall,
+  $grid-portrait-margin,
+  $grid-portrait-maxwidth,
+  $grid-portrait-gutter,
+  $grid-portrait-columns
+);
 @include grid-breakpoint(
   tablet,
   $grid-breakpoint-small,
@@ -38,8 +43,6 @@
   $grid-tablet-gutter,
   $grid-tablet-columns
 );
-
-// grid-desktop
 @include grid-breakpoint(
   desktop,
   $grid-breakpoint-large,
@@ -48,8 +51,6 @@
   $grid-desktop-gutter,
   $grid-desktop-columns
 );
-
-// grid-tv
 @include grid-breakpoint(
   tv,
   $grid-breakpoint-xlarge,
