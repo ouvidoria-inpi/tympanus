@@ -73,7 +73,7 @@
     @include media-breakpoint-up(sm) {
       .bar {
         height: $header-site-tablet-height;
-        padding-top: $spacer-half;
+        padding-top: $spacer * 0.5;
       }
     }
     // Desktop
@@ -225,7 +225,7 @@
   @include media-breakpoint-up(md) {
     .quicklinks {
       display: inline-flex;
-      margin-top: $spacer-half;
+      margin-top: $spacer * 0.5;
       position: relative;
     }
   }
@@ -254,7 +254,7 @@
     .language {
       display: inline-flex;
       margin-left: ($spacer * 2);
-      margin-top: $spacer-half;
+      margin-top: $spacer * 0.5;
       position: relative;
     }
   }
@@ -275,7 +275,7 @@
       color: $color-secondary-07;
       display: inline-flex;
       margin-left: ($spacer * 3);
-      margin-top: $spacer-half;
+      margin-top: $spacer * 0.5;
       position: relative;
       span {
         display: inline;
@@ -293,7 +293,7 @@
     background: transparent;
     border: 0;
     display: none;
-    margin-top: $spacer-half;
+    margin-top: $spacer * 0.5;
     position: relative;
     &:hover {
       text-decoration: underline;
@@ -428,7 +428,7 @@
           flex: 1;
           // Caixa de busca
           .field {
-            box-shadow: 0 (-$spacer-half) 0 $spacer-half $color-secondary-01;
+            box-shadow: 0 (-$spacer * 0.5) 0 $spacer * 0.5 $color-secondary-01;
             position: relative;
             right: auto;
             top: auto;
@@ -772,7 +772,7 @@
       display: block;
       font-size: 9px;
       font-weight: 500;
-      margin-top: $spacer-half;
+      margin-top: $spacer * 0.5;
       text-align: center;
     }
     // Favorito

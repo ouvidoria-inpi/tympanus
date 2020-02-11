@@ -4,7 +4,7 @@
     color: $label-color;
     font-size: $label-font-size;
     font-weight: $label-font-weight;
-    margin-bottom: $spacer-half;
+    margin-bottom: $spacer * 0.5;
   }
   select {
     display: none;
@@ -60,17 +60,17 @@
   .select-items {
     background: $color-secondary-01;
     box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22);
-    left: $spacer-half;
+    left: $spacer * 0.5;
     margin-top: 1px;
     position: absolute;
-    right: $spacer-half;
+    right: $spacer * 0.5;
     z-index: 1;
     button {
       background: $color-secondary-01;
       border: 0;
       display: block;
       font-weight: 500;
-      padding: $spacer-half ($spacer * 2);
+      padding: $spacer * 0.5 ($spacer * 2);
       text-align: left;
       width: 100%;
       &:hover,

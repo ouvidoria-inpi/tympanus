@@ -43,7 +43,7 @@
       display: inline-block;
       font-weight: $font-weight-base;
       margin-left: $tabs-vertical-icons + ($spacer * 2);
-      padding: ($spacer * 2) $spacer-half;
+      padding: ($spacer * 2) $spacer * 0.5;
       text-align: left;
       white-space: normal;
     }

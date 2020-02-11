@@ -37,7 +37,7 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
       padding: 0;
       position: absolute;
       right: 0;
-      top: -($spacer-half);
+      top: -($spacer * 0.5);
     }
   }
   &-title {
