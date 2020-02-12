@@ -4,7 +4,9 @@
   $margin,
   $maxwidth,
   $gutter,
-  $columns
+  $columns,
+  $tablet: false,
+  $desktop: false
 ) {
   @media (min-width: $media-breakpoint) {
     .container {
@@ -14,17 +16,12 @@
     .row {
       --row-margin: var(--grid-#{$breakpoint}-gutter, #{$gutter});
     }
-    .col {
+    .col,
+    #{if($tablet, ".col-#{$tablet}", "")},
+    #{if($desktop, ".col-#{$desktop}", "")},
+    .col-#{$breakpoint} {
       --col-gutter: var(--grid-#{$breakpoint}-gutter, #{$gutter});
       flex-basis: 100% / $columns;
-    }
-    @each $bp in map-keys($breakpoints) {
-      .col-#{$bp} {
-        --col-gutter: var(--grid-#{$breakpoint}-gutter, #{$gutter});
-        @if $bp == $breakpoint {
-          flex-basis: 100% / $columns;
-        }
-      }
     }
     @for $i from 1 through $columns {
       .#{$breakpoint}-#{$i} {
