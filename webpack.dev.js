@@ -1,6 +1,6 @@
 const path = require('path');
 const isDEV = process.env.NODE_ENV === 'development'
-
+console.log(isDEV)
 // Webpack Stuff
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -66,7 +66,8 @@ const fileLoader = {
 };
 
 module.exports = {
-  mode: isDEV ? "development" : "production",
+  // mode: isDEV ? "development" : "production",
+  mode: "development",
   entry: {
     'dsgov': path.resolve(paths.src + "/scss", 'dsgov.scss'),
     // 'dsgov-base': path.resolve(paths.src + "/scss", 'dsgov-base.scss'),
@@ -78,11 +79,11 @@ module.exports = {
     path: paths.dist
   },
   devServer: {
-    overlay: false,
     contentBase: path.join(__dirname, 'dist'),
-    compress: false,
+    compress: true,
     port: 9000,
     open: true,
+    clientLogLevel: 'error'
   },
   module: {
     rules: [
@@ -108,16 +109,16 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)$/,
-        include: [paths.fonts],
-        loader: fileLoader,
-      },
-      {
-        test: /\.(png|svg|jpg|jpg)$/,
-        include: [paths.images],
-        loader: fileLoader,
-      },
+      // {
+      //   test: /\.(woff(2)?|ttf|eot|svg)$/,
+      //   include: [paths.fonts],
+      //   loader: fileLoader,
+      // },
+      // {
+      //   test: /\.(png|svg|jpg|jpg)$/,
+      //   include: [paths.images],
+      //   loader: fileLoader,
+      // },
       {
         // Include pug-loader to process the pug files
         test: /\.pug$/,
