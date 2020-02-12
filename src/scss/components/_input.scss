@@ -82,7 +82,8 @@
     > * {
       cursor: pointer;
       padding: $spacer;
-      &:hover {
+      &:hover,
+      &.is-active {
         background-color: $color-primary-pastel-1;
       }
     }

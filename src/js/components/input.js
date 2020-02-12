@@ -10,9 +10,6 @@ class BRInput {
    _setBehavior() {
     this._setPasswordViewBehavior();
     this._setAutocompleteBehavior();
-    window.document.addEventListener("click", () => {
-      this._clearSearchItems();
-    });
   }
 
   _setPasswordViewBehavior() {
@@ -100,7 +97,7 @@ class BRInput {
         if (this._currentFocus > -1) {
           event.preventDefault();
           for (let searchItems of this.component.querySelectorAll(".search-items")) {
-            for (let itemActive of searchItems.querySelectorAll("div.active")) {
+            for (let itemActive of searchItems.querySelectorAll("div.is-active")) {
               itemActive.click();
             }
           }
@@ -130,10 +127,10 @@ class BRInput {
     for (let searchItems of this.component.querySelectorAll(".search-items")) {
       for (let [index, item] of searchItems.querySelectorAll("div").entries()) {
         if (index === this._currentFocus) {
-          item.classList.add("active");
+          item.classList.add("is-active");
         }
         if (index !== this._currentFocus) {
-          item.classList.remove("active");
+          item.classList.remove("is-active");
         }
       }
     }
