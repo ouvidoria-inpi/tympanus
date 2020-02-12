@@ -7,6 +7,7 @@ Excutar os comandos abaixo para registrar componentes que estão no nexus do ser
 ```
 npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
 ```
+
 ## Executando o projeto 
 
 # instalar os pacotes
