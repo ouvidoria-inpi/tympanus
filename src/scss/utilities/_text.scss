@@ -1,0 +1,14 @@
+$text-transform: "none", "capitalize", "uppercase", "lowercase";
+$text-align: "left", "right", "center", "justify";
+
+@each $value in $text-align {
+  .align-#{$value} {
+    text-align: #{$value};
+  }
+}
+
+@each $value in $text-transform {
+  .transform-#{$value} {
+    text-transform: #{$value};
+  }
+}
