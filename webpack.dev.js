@@ -1,6 +1,6 @@
 const path = require('path');
 const isDEV = process.env.NODE_ENV === 'development'
-console.log(isDEV)
+
 // Webpack Stuff
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -83,7 +83,11 @@ module.exports = {
     compress: true,
     port: 9000,
     open: true,
-    clientLogLevel: 'error'
+    clientLogLevel: 'error',
+    progress: true,
+    profile: true,
+    hot: true,
+    inline: true
   },
   module: {
     rules: [
@@ -91,8 +95,6 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         loader: [
           isDEV ? 'style-loader' : MiniCssExtractPlugin.loader,
-          // 'style-loader' - Adiciona CSS a DOM injetando a tag <style>
-          // 'style-loader' - Adiciona CSS a DOM injetando a tag <style>
           'css-loader',
           // 'postcss-loader',
           {
@@ -109,16 +111,16 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   test: /\.(woff(2)?|ttf|eot|svg)$/,
-      //   include: [paths.fonts],
-      //   loader: fileLoader,
-      // },
-      // {
-      //   test: /\.(png|svg|jpg|jpg)$/,
-      //   include: [paths.images],
-      //   loader: fileLoader,
-      // },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)$/,
+        include: [paths.fonts],
+        loader: fileLoader,
+      },
+      {
+        test: /\.(png|svg|jpg|jpg)$/,
+        include: [paths.images],
+        loader: fileLoader,
+      },
       {
         // Include pug-loader to process the pug files
         test: /\.pug$/,

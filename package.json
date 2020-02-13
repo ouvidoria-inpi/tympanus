@@ -11,7 +11,7 @@
 		"compile-pug": "pug ./src/pug/views/ -O '{\"version\": \"1.2.2\",\"cdnUrl\": \"'$npm_package_cdn'\"}' -o ./dist -P",
 		"prestart": "",
 		"start": "npm-run-all build watch",
-		"start:dev": "npm-run-all build:webpack:dev & webpack-dev-server --env dev --progress --profile --colors && watch-webpack",
+		"start:dev": "webpack-dev-server --env dev --progress --profile --colors --hot --inline",
 		"start:prod": "npm-run-all build:webpack:prod & webpack-dev-server --env dev --progress --profile --colors && watch-webpack",
 		"start:test": "npm-run-all build:webpack:prod compile && node_modules/.bin/webpack-dev-server",
 		"test": "npm-run-all validate:*",
