@@ -1,8 +1,9 @@
 const path = require('path');
 const isDEV = process.env.NODE_ENV === 'development'
-console.log('Estou no arquivo de ***DEVELOPMENT***')
+console.log('Estou no ***AMBIENTE de DEVELOPMENT***')
 
 // Webpack Stuff
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ConcatPlugin = require('webpack-concat-plugin');
@@ -136,6 +137,7 @@ module.exports = {
     extensions: [".js", ".scss"]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new ConcatPlugin({
       uglify: false,
       sourceMap: true,
