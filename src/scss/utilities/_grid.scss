@@ -1,9 +1,12 @@
-// Configuração básica
+// Configuração básica - funciona em portrait
 .container {
   margin: auto;
   padding-left: v(container-padding, $container-padding);
   padding-right: v(container-padding, $container-padding);
   max-width: v(container-maxwidth, $container-maxwidth);
+  .container {
+    --container-padding: v(row-margin, $row-margin);
+  }
 }
 
 .row {
@@ -34,7 +37,7 @@
   }
 }
 
-// Customizações de acordo com o Breakpoint
+// Customizações para breakpoints tablet, desktop e tv
 @include grid-breakpoint(
   "tablet",
   $grid-breakpoint-small,

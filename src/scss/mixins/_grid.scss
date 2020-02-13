@@ -17,10 +17,15 @@
       --row-margin: var(--grid-#{$breakpoint}-gutter, #{$gutter});
     }
     .col,
+    .col-tablet,
+    .col-desktop,
+    .col-tv {
+      --col-gutter: var(--grid-#{$breakpoint}-gutter, #{$gutter});
+    }
+    .col,
     #{if($tablet, ".col-#{$tablet}", "")},
     #{if($desktop, ".col-#{$desktop}", "")},
     .col-#{$breakpoint} {
-      --col-gutter: var(--grid-#{$breakpoint}-gutter, #{$gutter});
       flex-basis: 100% / $columns;
     }
     @for $i from 1 through $columns {
