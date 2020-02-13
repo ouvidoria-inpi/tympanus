@@ -35,13 +35,15 @@ if (brTables) {
     setClickActions(brTable)
     hoverRow(rows)
 
+    
     window.addEventListener('resize', function() {
       if (headers) setHeaderWidth(brTable, headers)
     })
 
-    window.addEventListener('load', function() {
-      if (headers) setHeaderWidth(brTable, headers)
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function(){ if (headers) setHeaderWidth(brTable, headers) }, 500);
     })
+  
   }
 }
 
@@ -98,10 +100,12 @@ function cloneHeader(parent, element) {
   for (let i = 0; i < element.children.length; i++) {
     let elementNode = clone.children[i].innerHTML
     let cloneElementNode = document.createElement('div')
-
+    let elementWidth = element.children[i].offsetWidth
+    
     cloneElementNode.classList.add('item')
     cloneElementNode.innerHTML = elementNode
-
+    if (elementWidth) cloneElementNode.style.flex = `1 0 ${elementWidth}px`
+  
     scrollerTag.appendChild(cloneElementNode)
 
     if (cloneElementNode.children[0]) {
