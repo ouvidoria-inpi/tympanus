@@ -131,8 +131,7 @@ module.exports = {
           loader: 'pug-loader',
           query: {
             pretty: true,
-            root: path.resolve(__dirname, 'src/views'),
-            iden
+            root: path.resolve(__dirname, 'src/views')
           }
         },
       },
