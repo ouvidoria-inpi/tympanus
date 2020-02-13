@@ -7,6 +7,7 @@ mixin input(label="Label", labelClass)
     input(
       id=attributes.id
       type=attributes.type ? attributes.type : "text"
+      class=attributes.class
       placeholder=attributes.placeholder
       disabled=attributes.disabled)
     if block
