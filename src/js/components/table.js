@@ -28,8 +28,8 @@ if (brTables) {
 
     if (responsive) setSyncScroll(responsive)
     if (headers) {
-      setHeaderWidth(brTable, headers)
       cloneHeader(brTable, headers)
+      setHeaderWidth(brTable, headers)
     }
     if (searchBar) toogleSearch(searchBar, searchTrigger, searchClose)
     setClickActions(brTable)
@@ -49,6 +49,19 @@ if (brTables) {
 
 function hoverRow(rows) {
   for (let row of rows) {
+    let colapseIco = document.createElement('i')
+    let colapseBtn = document.createElement('button')
+    colapseIco.classList.add('fas','fa-chevron-up')
+    colapseBtn.classList.add('br-button','is-circle','is-secondary','mobile','col-collapse')
+    colapseBtn.type 
+    colapseBtn.appendChild(colapseIco)
+    row.children[0].appendChild(colapseBtn)
+    colapseBtn.addEventListener('click', function() {
+      row.classList.toggle('is-collapsed') 
+      this.children[0].classList.toggle('fa-chevron-up')
+      this.children[0].classList.toggle('fa-chevron-down')
+    })
+    
     row.addEventListener('mouseenter', function() {
       row.classList.add(hover)
     })
@@ -122,8 +135,9 @@ function cloneHeader(parent, element) {
 
   headersTag.classList.add(brTablesHeadersClass)
   headersTag.appendChild(scrollerTag)
-
-  parent.appendChild(headersTag)
+  let responsive = parent.querySelector('.responsive')
+  if ( responsive )responsive.insertAdjacentElement("beforebegin", headersTag)
+  else parent.appendChild(headersTag)
 }
 
 function setClickActions(brTable) {
@@ -206,7 +220,7 @@ function checkAllTable(selectedBar, tableCheckboxes, headerCheckbox) {
 function setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox) {
   let info_count = selectedBar.querySelector('.info .count')
   let info_text = selectedBar.querySelector('.info .text')
-  let mobile_ico = selectedBar.querySelector('.info .select-all svg')
+  let mobile_ico = selectedBar.querySelector('.info .select-all .fa-minus-square')
   let total = count < 2 ? parseInt(info_count.innerHTML, 10) + count : count
 
   if (total > 0) {
