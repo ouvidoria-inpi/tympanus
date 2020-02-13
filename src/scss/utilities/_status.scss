@@ -1,12 +1,12 @@
 // Estado destacado
 .highlight {
-  background: v(color-secondary-01, $color-secondary-01)
+  background: v(status-highlight-background, $status-highlight-background)
     linear-gradient(
-      rgba(v(color-support-03, $color-support-03), 0.1),
-      rgba(v(color-support-03, $color-support-03), 0.1)
+      v(status-highlight-overlay, $status-highlight-overlay),
+      v(status-highlight-overlay, $status-highlight-overlay)
     );
-  color: v(color-support-03, $color-support-03);
-  padding: 0 0.25rem;
+  color: v(status-highlight-color, $status-highlight-color);
+  padding: 0 4px;
 }
 // Estado desativado
 [disabled],
