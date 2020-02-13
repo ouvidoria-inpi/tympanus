@@ -1,10 +1,14 @@
 const path = require('path');
+const isDEV = process.env.NODE_ENV === 'production'
 
 // Webpack Stuff
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ConcatPlugin = require('webpack-concat-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
+// We need Nodes fs module to read directory contents
+const fs = require('fs')
 
 const paths = {
 	src: path.resolve(__dirname, 'src'),
@@ -15,11 +19,32 @@ const paths = {
 	distjs: path.resolve(__dirname, 'dist', 'js'),
 };
 
-/**
- * Configuração do file-loader.
- * A configuração dos módulos do tipo imagem e fonte é a mesma.
- * TODO Verificar se é possível aglutinar em uma só regra.
- */
+// Our function that generates our html plugins
+function generateHtmlPlugins(templateDir, dirName) {
+	// Read files in template directory
+	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
+	return templateFiles.map(item => {
+		// Split names and extension
+		const parts = item.split('.')
+		const name = parts[0]
+		const extension = parts[1]
+		// Create new HTMLWebpackPlugin with options
+		return new HTMLWebpackPlugin({
+			filename: `${dirName}/${name}.html`,
+			template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+			templateParameters: {
+				version: JSON.stringify(require("./package.json").version).replace(/\"/gi, ""),
+				cdnUrl: '../'
+			},
+			inject: true,
+		})
+	})
+}
+
+// Call our function on our views directory.
+const htmlPluginsComponentes = generateHtmlPlugins('./src/pug/views/components', 'componentes')
+const htmlPluginsTemplates = generateHtmlPlugins('./src/pug/views/templates', 'templates')
+
 const fileLoader = {
 	loader: 'file-loader',
 	options: {
@@ -40,67 +65,78 @@ const fileLoader = {
 };
 
 module.exports = {
-
-	mode: 'production',
+	// mode: isDEV ? "development" : "production",
+	mode: "development",
 	entry: {
-		'dsgov-base': path.resolve(paths.src + "/scss", 'dsgov-base.scss')
+		'dsgov': path.resolve(paths.src + "/scss", 'dsgov.scss'),
+		'dsgov-base': path.resolve(paths.src + "/scss", 'dsgov-base.scss'),
+		'dsgov-componentes': path.resolve(paths.src + "/scss", 'dsgov-components.scss'),
 	},
 	watch: true,
 	output: {
 		filename: './js/[name].js',
 		path: paths.dist
 	},
-
+	devServer: {
+		contentBase: path.join(__dirname, 'dist'),
+		stats: 'errors-only',
+		clientLogLevel: 'error',
+		port: 9000,
+		open: true,
+		hot: true,
+		inline: true,
+		progress: true,
+		profile: true,
+	},
 	module: {
-		rules: [{
-			test: /\.scss$/,
-			use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"]
-		}, {
-			test: /\.s[ac]ss$/i,
-			use: [
-				'postcss-loader',
-				{
-					loader: 'sass-loader',
-					options: {
-						sassOptions: {
-							includePaths: [
-								'node_modules'
-							],
-							outputStyle: 'expanded'
+		rules: [
+			{
+				test: /\.s[ac]ss$/i,
+				loader: [
+					isDEV ? 'style-loader' : MiniCssExtractPlugin.loader,
+					'css-loader',
+					// 'postcss-loader',
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: false,
+							sassOptions: {
+								includePaths: [
+									'node_modules'
+								],
+								outputStyle: 'expanded'
+							}
 						}
 					}
-				}
-			]
-		},
-		{
-			test: /\.(woff(2)?|ttf|eot|svg)$/,
-			// Usamos este include para remover ambiguidade entre
-			// svg's (imagem vs fonte)
-			include: [paths.fonts],
-			loader: fileLoader,
-		},
-		{
-			test: /\.(png|svg|jpg|jpg)$/,
-			// Usamos este include para remover ambiguidade entre
-			// svg's (imagem vs fonte)
-			include: [paths.images],
-			loader: fileLoader,
-		},
-		{
-			test: /\.pug$/,
-			use: [
-				"file-loader?name=[path][name].html",
-				"extract-loader",
-				"html-loader",
-				"pug-html-loader"
-			]
-		}
-
+				]
+			},
+			{
+				test: /\.(woff(2)?|ttf|eot|svg)$/,
+				include: [paths.fonts],
+				loader: fileLoader,
+			},
+			{
+				test: /\.(png|svg|jpg|jpg)$/,
+				include: [paths.images],
+				loader: fileLoader,
+			},
+			{
+				// Include pug-loader to process the pug files
+				test: /\.pug$/,
+				use: {
+					loader: 'pug-loader',
+					query: {
+						pretty: true,
+						root: path.resolve(__dirname, 'src/views'),
+					}
+				},
+			},
 		]
 	},
-
+	resolve: {
+		extensions: [".js", ".scss"]
+	},
 	plugins: [
-		// new CleanWebpackPlugin(),
 		new ConcatPlugin({
 			uglify: false,
 			sourceMap: true,
@@ -124,32 +160,16 @@ module.exports = {
 			}
 		}),
 
-
-
 		new CopyWebpackPlugin([
-			// Copia os fontes SASS no intuito de permitir reconfiguração e recompilação
-			// de regras pelo usuário deste pacote
-			// { context: 'src', from: '**/*.scss'},
-
-			// Copia os arquivos de documentação dos componentes
-			// { context: 'src', from: '**/*.md' },
-			// { context: 'src', from: '**/*.pdf' },
-			// { context: 'src', from: '**/*.html' },
 			{ context: 'src', from: '**/templates/*.js' },
 			{ context: 'src', from: '**/config/*.js' },
-
-			// OBS.: Não é necessário copiar assets como imagens e fontes que são
-			// utilizados por imports ou pela função url(), pois eles são resolvidos como
-			// módulos webpack pelo loader 'css-loader'
 		]),
+		// Extract our css to a separate css file
 		new MiniCssExtractPlugin({
-			// Options similar to the same options in webpackOptions.output
-			// all options are optional
-			filename: '[name].css',
+			filename: 'css/[name].css',
 			chunkFilename: '[id].css',
 			ignoreOrder: false, // Enable to remove warnings about conflicting order
 		}),
-	],
+	].concat(htmlPluginsComponentes, htmlPluginsTemplates),
 	devtool: 'source-map'
-
-};
+}

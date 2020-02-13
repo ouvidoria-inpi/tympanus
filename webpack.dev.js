@@ -4,7 +4,6 @@ const isDEV = process.env.NODE_ENV === 'development'
 // Webpack Stuff
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ConcatPlugin = require('webpack-concat-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
@@ -46,32 +45,30 @@ function generateHtmlPlugins(templateDir, dirName) {
 const htmlPluginsComponentes = generateHtmlPlugins('./src/pug/views/components', 'componentes')
 const htmlPluginsTemplates = generateHtmlPlugins('./src/pug/views/templates', 'templates')
 
-const fileLoader = {
-  loader: 'file-loader',
-  options: {
-    name: '[name].[ext]',
+// const fileLoader = {
+//   loader: 'file-loader',
+//   options: {
+//     name: '[name].[ext]',
 
-    // Mantém a estrutura de diretórios (mas excluindo-se o 'src')
-    outputPath(filename, absoluteFilePath, absoluteRootPath) {
-      const relativePath = path.relative(absoluteRootPath, absoluteFilePath);
+//     // Mantém a estrutura de diretórios (mas excluindo-se o 'src')
+//     outputPath(filename, absoluteFilePath, absoluteRootPath) {
+//       const relativePath = path.relative(absoluteRootPath, absoluteFilePath);
 
-      const outPath = relativePath.split('/');
+//       const outPath = relativePath.split('/');
 
-      // Remove a primeira parte do path, ou seja, 'src'
-      outPath.shift();
+//       // Remove a primeira parte do path, ou seja, 'src'
+//       outPath.shift();
 
-      return outPath.join('/');
-    }
-  }
-};
+//       return outPath.join('/');
+//     }
+//   }
+// };
 
 module.exports = {
   // mode: isDEV ? "development" : "production",
   mode: "development",
   entry: {
-    'dsgov': path.resolve(paths.src + "/scss", 'dsgov.scss'),
-    // 'dsgov-base': path.resolve(paths.src + "/scss", 'dsgov-base.scss'),
-    // 'dsgov-componentes': path.resolve(paths.src + "/scss", 'dsgov-components.scss'),
+    'dsgov': path.resolve(paths.src + "/scss", 'dsgov.scss')
   },
   watch: true,
   output: {
@@ -80,14 +77,14 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    compress: true,
+    stats: 'errors-only',
+    clientLogLevel: 'error',
     port: 9000,
     open: true,
-    clientLogLevel: 'error',
+    hot: true,
+    inline: true,
     progress: true,
     profile: true,
-    hot: true,
-    inline: true
   },
   module: {
     rules: [
@@ -111,16 +108,16 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)$/,
-        include: [paths.fonts],
-        loader: fileLoader,
-      },
-      {
-        test: /\.(png|svg|jpg|jpg)$/,
-        include: [paths.images],
-        loader: fileLoader,
-      },
+      // {
+      //   test: /\.(woff(2)?|ttf|eot|svg)$/,
+      //   include: [paths.fonts],
+      //   loader: fileLoader,
+      // },
+      // {
+      //   test: /\.(png|svg|jpg|jpg)$/,
+      //   include: [paths.images],
+      //   loader: fileLoader,
+      // },
       {
         // Include pug-loader to process the pug files
         test: /\.pug$/,
