@@ -4,8 +4,8 @@
 	"description": "Design System do governo",
 	"main": "index.js",
 	"scripts": {
-		"start": "npm-run-all build:webpack:dev && webpack-dev-server --colors",
-		"build": "webpack --env -w prod --progress --profile --colors",
+		"start": "webpack-dev-server --env dev",
+		"build": "webpack --env prod --progress --profile --colors",
 		"test": "npm-run-all validate:*",
 		"validate:html": "node_modules/.bin/html-validate dist/**/*.html",
 		"validate:styles": "node_modules/.bin/stylelint src/scss/**/*.scss",

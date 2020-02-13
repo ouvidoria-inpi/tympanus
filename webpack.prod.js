@@ -66,7 +66,7 @@ const fileLoader = {
 
 module.exports = {
 	// mode: isDEV ? "development" : "production",
-	mode: "development",
+	mode: "production",
 	entry: {
 		'dsgov': path.resolve(paths.src + "/scss", 'dsgov.scss'),
 		'dsgov-base': path.resolve(paths.src + "/scss", 'dsgov-base.scss'),
