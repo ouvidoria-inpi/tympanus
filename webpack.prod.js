@@ -1,5 +1,6 @@
 const path = require('path');
 const isDEV = process.env.NODE_ENV === 'production'
+console.log('Estou no arquivo de ***PRODUCTION***')
 
 // Webpack Stuff
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');

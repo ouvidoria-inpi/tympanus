@@ -1,5 +1,6 @@
 const path = require('path');
 const isDEV = process.env.NODE_ENV === 'development'
+console.log('Estou no arquivo de ***DEVELOPMENT***')
 
 // Webpack Stuff
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -45,24 +46,24 @@ function generateHtmlPlugins(templateDir, dirName) {
 const htmlPluginsComponentes = generateHtmlPlugins('./src/pug/views/components', 'componentes')
 const htmlPluginsTemplates = generateHtmlPlugins('./src/pug/views/templates', 'templates')
 
-// const fileLoader = {
-//   loader: 'file-loader',
-//   options: {
-//     name: '[name].[ext]',
+const fileLoader = {
+  loader: 'file-loader',
+  options: {
+    name: '[name].[ext]',
 
-//     // Mantém a estrutura de diretórios (mas excluindo-se o 'src')
-//     outputPath(filename, absoluteFilePath, absoluteRootPath) {
-//       const relativePath = path.relative(absoluteRootPath, absoluteFilePath);
+    // Mantém a estrutura de diretórios (mas excluindo-se o 'src')
+    outputPath(filename, absoluteFilePath, absoluteRootPath) {
+      const relativePath = path.relative(absoluteRootPath, absoluteFilePath);
 
-//       const outPath = relativePath.split('/');
+      const outPath = relativePath.split('/');
 
-//       // Remove a primeira parte do path, ou seja, 'src'
-//       outPath.shift();
+      // Remove a primeira parte do path, ou seja, 'src'
+      outPath.shift();
 
-//       return outPath.join('/');
-//     }
-//   }
-// };
+      return outPath.join('/');
+    }
+  }
+};
 
 module.exports = {
   // mode: isDEV ? "development" : "production",
@@ -108,16 +109,16 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   test: /\.(woff(2)?|ttf|eot|svg)$/,
-      //   include: [paths.fonts],
-      //   loader: fileLoader,
-      // },
-      // {
-      //   test: /\.(png|svg|jpg|jpg)$/,
-      //   include: [paths.images],
-      //   loader: fileLoader,
-      // },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)$/,
+        include: [paths.fonts],
+        loader: fileLoader,
+      },
+      {
+        test: /\.(png|svg|jpg|jpg)$/,
+        include: [paths.images],
+        loader: fileLoader,
+      },
       {
         // Include pug-loader to process the pug files
         test: /\.pug$/,
