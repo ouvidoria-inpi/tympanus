@@ -31,6 +31,7 @@ p {
 // Links
 a {
   color: v(color-primary-default, $color-primary-default);
+  text-decoration: none;
   &:hover {
     background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
   }
@@ -121,6 +122,11 @@ input,
   font-weight: v(font-weight-medium, $font-weight-medium);
   line-height: v(font-line-height-low, $font-line-height-low);
   margin-bottom: 4px;
+}
+
+// Imagens
+img {
+  vertical-align: middle;
 }
 
 // Help
