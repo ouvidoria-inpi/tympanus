@@ -132,6 +132,7 @@ module.exports = {
           query: {
             pretty: true,
             root: path.resolve(__dirname, 'src/views'),
+            iden
           }
         },
       },
