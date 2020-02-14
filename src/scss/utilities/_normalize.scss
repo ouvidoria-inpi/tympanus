@@ -22,12 +22,13 @@ main {
   display: block;
 }
 
-// 1. Add the correct box sizing in Firefox.
-// 2. Show the overflow in Edge and IE.
 hr {
-  box-sizing: content-box; // 1
-  height: 0; // 1
-  overflow: visible; // 2
+  background-color: $color-secondary-04;
+  border: 0;
+  box-sizing: content-box;
+  color: inherit;
+  height: 1px;
+  overflow: visible;
 }
 
 // 1. Correct the inheritance and scaling of font size in all browsers.
