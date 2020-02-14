@@ -220,7 +220,7 @@ function checkAllTable(selectedBar, tableCheckboxes, headerCheckbox) {
 function setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox) {
   let info_count = selectedBar.querySelector('.info .count')
   let info_text = selectedBar.querySelector('.info .text')
-  let mobile_ico = selectedBar.querySelector('.info .select-all .fa-minus-square')
+  let mobile_ico = selectedBar.querySelector('.info .select-all').children[0]
   let total = count < 2 ? parseInt(info_count.innerHTML, 10) + count : count
 
   if (total > 0) {

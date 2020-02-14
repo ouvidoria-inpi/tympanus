@@ -182,8 +182,12 @@ $column-gap: 6px;
       transition: max-height 500ms;
       max-height: 100em;
       &.is-collapsed {
-        max-height: 4.4em;
+        max-height: 5em;
         overflow: hidden;
+        td:nth-child(1) {
+          max-height: 3.8em;
+          overflow: hidden;
+        }
       }
       &.is-selected {
         background: $color-primary-lighten-2;
@@ -192,7 +196,7 @@ $column-gap: 6px;
           &:hover,
           td:before {
             background: $color-primary-lighten-2;
-            color: $color-white;
+            color: $color-white !important;
           }
       }
       &.is-hover, 
@@ -217,15 +221,17 @@ $column-gap: 6px;
         display: block;
         font-weight: 600;
       }
-      .col-collapse {
+      .col-collapse,
+      .col-collapse:hover,
+      .col-collapse:focus  {
         display: block;
         position: absolute;
         right: 8px;
-        top: 1em;
+        top: 1.2em;
         min-width: 32px;
         padding: 1px 0px;
         border: 0;
-        color: inherit !important;
+        color: inherit;
         background: transparent !important;
       }
     }
@@ -253,9 +259,17 @@ $column-gap: 6px;
           top: 1em;
           width: 100%;
           .col-collapse {
-            top: 0;
+            top: 0.3em;
           }
         }
+      }
+      &.is-collapsed td:nth-child(1) {
+        max-height: auto;
+        overflow: visible;
+      }
+      &.is-collapsed td:nth-child(2) {
+        max-height: 3.8em;
+        overflow: hidden;
       }
     }
   }
