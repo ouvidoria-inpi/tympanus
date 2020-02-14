@@ -129,6 +129,7 @@ Adicionar a tag **`is-arrow`**.
 <a href="#" class="br-card is-large is-change-content is-arrow">
   <span class="icon">
     <i class="fas fa-address-card"></i>
+    <i class="fas fa-arrow-up"></i>
   </span>
   <span class="title">
     Título do Card
