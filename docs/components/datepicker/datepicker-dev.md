@@ -9,8 +9,10 @@
 ```html
 <div class="br-input datepicker">
   <label for="picker">Data</label>
-  <input id="picker" type="text" placeholder="dd/mm/aaaa">
-  <button id="picker-btn" class="icon"><i class="fas fa-calendar-alt"></i></button>
+  <input id="picker" type="text" placeholder="dd/mm/aaaa" />
+  <button id="picker-btn" class="icon">
+    <i class="fas fa-calendar-alt"></i>
+  </button>
 </div>
 <div class="feedback is-valid">
   <i class="fas fa-check-circle"></i>
@@ -20,7 +22,9 @@
   <i class="fas fa-times-circle"></i>
   <span class="message">Data inválida</span>
 </div>
-<p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+<p class="help">
+  Texto auxiliar ao preenchimento, tem a função de previnir erros.
+</p>
 ```
 
 # Anatomia do componente
@@ -30,7 +34,7 @@ Este componente é formado pelos seguintes elementos:
 - `br-input datepicker`: container do componente
 - `<label>`: rótulo do input
 - `<input>`: caixa de entrada de dados
-- `<button>`: botão com ícone para o `<input>` 
+- `<button>`: botão com ícone para o `<input>`
 - `feedback`: mensagem de feedback
 - `help`: Texto de ajuda para o `<input>` (opcional)
 
@@ -58,13 +62,12 @@ Em situações de erro ou retorno positivo use o `feedback`. Ele deve ser inseri
 
 O texto de feedback deve ser inserido dentro de `message`.
 
-
 Exemplo de uso:
 
 ```html
 <div class="br-input datepicker is-invalid">
   <label for="date-feedback-invalid">Input com erro</label>
-  <input id="date-feedback-invalid" type="text"  />
+  <input id="date-feedback-invalid" type="text" />
   <button class="icon"><i class="fas fa-calendar-alt"></i></button>
 </div>
 <div class="feedback">
@@ -110,7 +113,7 @@ Exemplo de uso:
 <div class="br-input datepicker is-valid">
   <label for="valido">Válido</label>
   <input id="valido" type="text" placeholder="dd/mm/aaaa" />
-   <button class="icon"><i class="fas fa-calendar-alt"></i></button>
+  <button class="icon"><i class="fas fa-calendar-alt"></i></button>
 </div>
 <div class="feedback is-valid">
   <i class="fas fa-check-circle"></i>
@@ -131,7 +134,7 @@ Exemplo de uso:
 ```html
 <div class="br-input datepicker is-invalid">
   <label for="invalido">Inválido</label>
-  <input id="invalido" type="text" placeholder="dd/mm/aaaa">
+  <input id="invalido" type="text" placeholder="dd/mm/aaaa" />
   <button class="icon"><i class="fas fa-calendar-alt"></i></button>
 </div>
 <div class="feedback is-valid">
@@ -142,10 +145,10 @@ Exemplo de uso:
   <i class="fas fa-times-circle"></i>
   <span class="message">Data inválida</span>
 </div>
-<p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
-
+<p class="help">
+  Texto auxiliar ao preenchimento, tem a função de previnir erros.
+</p>
 ```
-
 
 ## `disabled`
 
@@ -161,24 +164,29 @@ Exemplo de uso:
     id="desabilitado"
     type="text"
     placeholder="dd/mm/aaaa"
-    disabled  />
-  <button class="icon"><i class="fas fa-calendar-alt"></i></button> 
+    disabled
+  />
+  <button class="icon"><i class="fas fa-calendar-alt"></i></button>
 </div>
 ```
 
 # Regras especiais
 
-Esse componente foi baseado no `js-datepicker` para uma documentação detalhada do funcionamento dos scripts [acesse  a página do js-datepicker](https://www.npmjs.com/package/js-datepicker)
+Esse componente foi baseado no `js-datepicker` para uma documentação detalhada do funcionamento dos scripts [acesse a página do js-datepicker](https://www.npmjs.com/package/js-datepicker)
 
 ## Inicialização do componente
+
 Importados os scripts das depedências do componente em sua página, no seu código javascript, deve-se criar uma constante (`const`) do tipo `datepicker` que referencia a `id` do campo `br-input datepicker`, além de vincular o `button` ao seu respectivo `datepicker` e ativar a máscara do input. Conforme exemplo a seguir:
 
 ### HTML:
+
 ```html
 <div class="br-input datepicker">
   <label for="picker">Data</label>
-  <input id="picker" type="text" placeholder="dd/mm/aaaa">
-  <button id="picker-btn" class="icon"><i class="fas fa-calendar-alt"></i></button>
+  <input id="picker" type="text" placeholder="dd/mm/aaaa" />
+  <button id="picker-btn" class="icon">
+    <i class="fas fa-calendar-alt"></i>
+  </button>
 </div>
 <div class="feedback is-valid">
   <i class="fas fa-check-circle"></i>
@@ -188,24 +196,28 @@ Importados os scripts das depedências do componente em sua página, no seu cód
   <i class="fas fa-times-circle"></i>
   <span class="message">Data inválida</span>
 </div>
-<p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+<p class="help">
+  Texto auxiliar ao preenchimento, tem a função de previnir erros.
+</p>
 ```
 
 ### JS:
+
 ```js
 // Inicialização do componente
-const dtp_picker = datepicker('#picker', (options))
+const dtp_picker = datepicker('#picker', options)
 
 // Ativa as máscaras do campo input
-dtp_picker.el.addEventListener("keyup", dtp_maskDate);
+dtp_picker.el.addEventListener('keyup', dtp_maskDate)
 
 // Ativa o calendário quando o botao é clicado
-dtp_picker_btn = document.getElementById("picker-btn")
+dtp_picker_btn = document.getElementById('picker-btn')
 dtp_toggle(dtp_picker_btn, dtp_picker)
 ```
 
 ## Opções do componente
-No arquivo `datepicker-dsgov.js` foram criadas uma série de customizações a serem usadas nos `options` do componente de forma a padronizar e regionalizar seu uso. Exemplo de uso: 
+
+No arquivo `datepicker-dsgov.js` foram criadas uma série de customizações a serem usadas nos `options` do componente de forma a padronizar e regionalizar seu uso. Exemplo de uso:
 
 ```js
 
@@ -218,7 +230,7 @@ const dtp_err5 = 'Data deve estar entre ';
 const dtp_err5and = ' e ';
 
 // Constantes de configuração e regionalização do componente
-const dtp_position = 'bl'; //Pode ser 5 valores: 'tr', 'tl', 'br', 'bl', 'c' (top-right, top-left, bottom-right, bottom-left e centered). 
+const dtp_position = 'bl'; //Pode ser 5 valores: 'tr', 'tl', 'br', 'bl', 'c' (top-right, top-left, bottom-right, bottom-left e centered).
 const dtp_days_br = ['Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
 const dtp_months_br = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 const dtp_months_ovr_br = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
@@ -240,10 +252,10 @@ function dtp_onHide (instance) {
 }
 
 // Exemplo de declaração de Datepicker com todas as opções definidas
-const dtp_picker = datepicker('#picker', { 
-  id: 1, 
+const dtp_picker = datepicker('#picker', {
+  id: 1,
   formatter: (input, date, instance) => {
-    dtp_formater (input, date, instance) 
+    dtp_formater (input, date, instance)
   },
   onShow: instance => {
     dtp_onShow (instance)
@@ -267,13 +279,13 @@ const dtp_picker = datepicker('#picker', {
 ```
 
 ## Ativar/Desativar o Datepicker
+
 Para tanto é necessário manipular o estado `is-disabled` do componente. Contudo, seguindo os exemplos acima, basta chamar as funções disponíveis no `datepicker-dsgov.js` passando a constante que declarou o datepicker:
 
 ```js
-// Desativar 
+// Desativar
 dtp_disabler(dtp_picker)
 
-// Ativar 
+// Ativar
 dtp_enabler(dtp_picker)
 ```
-

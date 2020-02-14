@@ -78,7 +78,8 @@ module.exports = {
   },
   watch: false,
   output: {
-    filename: './js/[name].js',
+    chunkFilename: "[name].[chunkhash:8].min.js",
+    filename: './js/[name].[chunkhash:8].min.js',
     path: paths.dist
   },
   devServer: {
@@ -147,7 +148,7 @@ module.exports = {
       sourceMap: true,
       name: 'dsgov-components',
       outputPath: 'js/',
-      fileName: '[name].js',
+      fileName: '[name].min.js',
       filesToConcat: [ './src/js/components/**' ],
       attributes: {
         async: true
@@ -158,7 +159,7 @@ module.exports = {
       sourceMap: true,
       name: 'dsgov-templates',
       outputPath: 'js/',
-      fileName: '[name].js',
+      fileName: '[name].min.js',
       filesToConcat: [ './src/js/templates/**' ],
       attributes: {
         async: true
@@ -171,8 +172,8 @@ module.exports = {
     ] ),
     // Extract our css to a separate css file
     new MiniCssExtractPlugin( {
-      filename: 'css/[name].min.css',
-      chunkFilename: '[id].min.css',
+      filename: 'css/[name].[chunkhash].min.css',
+      chunkFilename: '[id].[chunkhash].min.css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     } ),
   ].concat( htmlPluginsComponentes, htmlPluginsTemplates ),

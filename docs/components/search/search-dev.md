@@ -15,7 +15,7 @@
 <div class="br-search">
   <div class="br-input is-autocomplete">
     <label for="search-autocomplete" class="sr-only">Autocomplete</label>
-    <input id="search-autocomplete" type="text" placeholder="Digite um país">
+    <input id="search-autocomplete" type="text" placeholder="Digite um país" />
     <span class="icon">
       <i class="fas fa-search"></i>
     </span>
@@ -28,11 +28,25 @@
 <script src="input-autocomplete.js"></script>
 <!-- JSON exemplo -->
 <script>
-  const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan"];
+  const countries = [
+    'Afghanistan',
+    'Albania',
+    'Algeria',
+    'Andorra',
+    'Angola',
+    'Anguilla',
+    'Antigua &amp; Barbuda',
+    'Argentina',
+    'Armenia',
+    'Aruba',
+    'Australia',
+    'Austria',
+    'Azerbaijan',
+  ]
 </script>
 <!-- Carregar o JSON -->
 <script>
-  autocomplete(document.getElementById("search-autocomplete"), countries);
+  autocomplete(document.getElementById('search-autocomplete'), countries)
 </script>
 ```
 

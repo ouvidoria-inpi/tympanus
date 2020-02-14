@@ -5,31 +5,31 @@ append vars
 
 append content
   p.label Selecione 1
-  +radio("Padrão")(id="h-radio-default")
-  +radio("Checado")(id="h-radio-checked" class="ml-sm-7" checked)
-  +radio("Inválido")(id="h-radio-invalid" class="is-invalid ml-sm-7")
-  +radio("Válido")(id="h-radio-valid" class="is-valid ml-sm-7")
-  +radio("Desativado")(id="h-radio-disabled" class="ml-sm-7" disabled)
+  +radio("Padrão")(id="h-radio-default" name="selecione")
+  +radio("Checado")(id="h-radio-checked" name="selecione" class="ml-sm-7" checked)
+  +radio("Inválido")(id="h-radio-invalid" name="selecione" class="is-invalid ml-sm-7")
+  +radio("Válido")(id="h-radio-valid" name="selecione" class="is-valid ml-sm-7")
+  +radio("Desativado")(id="h-radio-disabled" name="selecione" class="ml-sm-7" disabled)
   hr
   .row
     .col-sm-2
       p.label Vertical
-      +radio("Padrão")(id="v-radio-default" class="d-block mb-1")
-      +radio("Checado")(id="v-radio-checked" class="d-block mb-1" checked)
-      +radio("Inválido")(id="v-radio-invalid" class="is-invalid d-block mb-1")
-      +radio("Válido")(id="v-radio-valid" class="is-valid d-block mb-1")
-      +radio("Desativado")(id="v-radio-disabled" class="d-block mb-1" disabled)
+      +radio("Padrão")(id="v-radio-default" name="vertical" class="d-block mb-1")
+      +radio("Checado")(id="v-radio-checked" name="vertical" class="d-block mb-1" checked)
+      +radio("Inválido")(id="v-radio-invalid" name="vertical" class="is-invalid d-block mb-1")
+      +radio("Válido")(id="v-radio-valid" name="vertical" class="is-valid d-block mb-1")
+      +radio("Desativado")(id="v-radio-disabled" name="vertical" class="d-block mb-1" disabled)
     .col-sm-2
       p.label Invertido
-      +radio("Checado")(id="v-i-radio-checked" class="is-inverted d-block mb-1" checked)
-      +radio("Inválido")(id="v-i-radio-invalid" class="is-inverted is-invalid d-block mb-1" checked)
-      +radio("Válido")(id="v-i-radio-valid" class="is-inverted is-valid d-block mb-1" checked)
-      +radio("Desativado")(id="v-i-radio-disabled" class="is-inverted d-block mb-1" disabled checked)
+      +radio("Checado")(id="v-i-radio-checked" name="invertido" class="is-inverted d-block mb-1" checked)
+      +radio("Inválido")(id="v-i-radio-invalid" name="invertido" class="is-inverted is-invalid d-block mb-1" checked)
+      +radio("Válido")(id="v-i-radio-valid" name="invertido" class="is-inverted is-valid d-block mb-1" checked)
+      +radio("Desativado")(id="v-i-radio-disabled" name="invertido" class="is-inverted d-block mb-1" disabled checked)
     .col-sm-2
       p.label Pequeno
-      +radio("Padrão")(id="v-s-radio-default" class="is-small d-block mb-1")
-      +radio("Checado")(id="v-s-radio-checked" class="is-small d-block mb-1" checked)
-      +radio("Inválido")(id="v-s-radio-invalid" class="is-small is-invalid d-block mb-1")
-      +radio("Válido")(id="v-s-radio-valid" class="is-small is-valid d-block mb-1")
-      +radio("Desativado")(id="v-s-radio-disabled" class="is-small d-block mb-1" disabled)
+      +radio("Padrão")(id="v-s-radio-default" name="pequeno" class="is-small d-block mb-1")
+      +radio("Checado")(id="v-s-radio-checked" name="pequeno" class="is-small d-block mb-1" checked)
+      +radio("Inválido")(id="v-s-radio-invalid" name="pequeno" class="is-small is-invalid d-block mb-1")
+      +radio("Válido")(id="v-s-radio-valid" name="pequeno" class="is-small is-valid d-block mb-1")
+      +radio("Desativado")(id="v-s-radio-disabled" name="pequeno" class="is-small d-block mb-1" disabled)
       p.label= version

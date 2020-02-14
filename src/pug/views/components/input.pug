@@ -9,26 +9,32 @@ append content
   .row
     .col-sm
       .mb-3
-        +input("Normal")(id="default" placeholder="Insira um texto")
+        +input("Normal")(id="normal" type="text" placeholder="Insira um texto")
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+    .col-sm
       .mb-3
-        +input("Senha")(id="password" class="has-icon" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
-          button.icon(type='button' onclick="toggleInputAction(this)")
+        +input("Focus")(id="focus" type="text" class="is-focus" placeholder="Insira um texto")
+    .col-sm
+      .mb-3
+        +input("Desativado")(id="desativado" type="text" placeholder="Insira um texto" disabled)
+  .row
+    .col-sm
+      .mb-3
+        +input("Válido")(id="valido" type="text" class="is-valid" placeholder="Insira um texto")
+        +feedback("Texto válido")(class="is-valid")    
+    .col-sm
+      .mb-3
+        +input("Inválido")(id="invalido" type="text" class="is-invalid" placeholder="Insira um texto")
+        +feedback("Texto inválido")
+    .col-sm
+      .mb-3
+        +input("Senha")(id="senha" type="password" class="has-icon" placeholder="Digite sua senha de 8 a 11 dígitos")
+          button.icon(type='button')
             span.sr-only Mostrar senha
             i.fas.fa-eye
+  .row
+    .col-sm
       .mb-3
-        +input("Autocomplete")(id="search-autocomplete" class="has-icon" type="text" placeholder="Digite sua senha de 8 a 11 dígitos")
+        +input("Autocomplete")(id="autocomplete" type="text" class="search-autocomplete has-icon" placeholder="Digite um país")
           span.icon
             i.fas.fa-search
-    .col-sm
-      .mb-3
-        +input("Focus")(id="focus" class="is-focus" placeholder="Insira um texto")
-      .mb-3
-        +input("Desativado")(id="disabled" placeholder="Insira um texto" disabled)
-    .col-sm
-      .mb-3
-        +input("Inválido")(id="invalid" class="is-invalid" placeholder="Insira um texto")
-        +feedback("Texto inválido")
-      .mb-3
-        +input("Válido")(id="valid" class="is-valid" placeholder="Insira um texto")
-        +feedback("Texto válido")(class="is-valid")
