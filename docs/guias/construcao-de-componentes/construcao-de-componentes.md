@@ -101,8 +101,8 @@ Dentro de `src/scss/components/` crie o arquivo **\_simple-button.scss** com o s
 ```scss
 // src/scss/components/_simple-button.scss
 .#{$prefix}simple-button {
-    background: $color-black;
-    border: 1px solid $color-black;
+    background: $color-secondary-09;
+    border: 1px solid $color-secondary-09;
     border-radius: 0;
     color: $color-secondary-01;
     display: inline-block;
