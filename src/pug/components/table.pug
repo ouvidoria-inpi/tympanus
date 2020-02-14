@@ -1,6 +1,7 @@
-mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=10)
+mixin table(datatable=false, title='Título da Tabela', checkbox=false, collapse=false, columns=4, rows=10)
   - let datatableClass = attributes.datatable ? "is-datatable" : ""
   - datatableClass = attributes.checkbox ? datatableClass  + " is-checkbox" : datatableClass
+  - datatableClass = attributes.collapse ? datatableClass  + " is-collapsible" : datatableClass
   - let column = 1
   - let row = 1
   .br-table(

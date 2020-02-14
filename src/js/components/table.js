@@ -23,6 +23,7 @@ if (brTables) {
     let responsive = brTable.querySelector('.responsive')
     let headers = brTable.querySelector('table thead tr')
     let rows = brTable.querySelectorAll('table tbody tr')
+    let collapse = brTable.classList.contains('is-collapsible')
 
     brTableNumber++
 
@@ -33,7 +34,7 @@ if (brTables) {
     }
     if (searchBar) toogleSearch(searchBar, searchTrigger, searchClose)
     setClickActions(brTable)
-    hoverRow(rows)
+    hoverRow(rows, collapse)
 
     
     window.addEventListener('resize', function() {
@@ -47,21 +48,22 @@ if (brTables) {
   }
 }
 
-function hoverRow(rows) {
+function hoverRow(rows, collapse) {
   for (let row of rows) {
-    let colapseIco = document.createElement('i')
-    let colapseBtn = document.createElement('button')
-    colapseIco.classList.add('fas','fa-chevron-up')
-    colapseBtn.classList.add('br-button','is-circle','is-secondary','mobile','col-collapse')
-    colapseBtn.type 
-    colapseBtn.appendChild(colapseIco)
-    row.children[0].appendChild(colapseBtn)
-    colapseBtn.addEventListener('click', function() {
-      row.classList.toggle('is-collapsed') 
-      this.children[0].classList.toggle('fa-chevron-up')
-      this.children[0].classList.toggle('fa-chevron-down')
-    })
-    
+    if ( collapse ) {
+      let colapseIco = document.createElement('i')
+      let colapseBtn = document.createElement('button')
+      colapseIco.classList.add('fas','fa-chevron-up')
+      colapseBtn.classList.add('br-button','is-circle','is-secondary','mobile','col-collapse')
+      colapseBtn.type 
+      colapseBtn.appendChild(colapseIco)
+      row.children[0].appendChild(colapseBtn)
+      colapseBtn.addEventListener('click', function() {
+        row.classList.toggle('is-collapsed') 
+        this.children[0].classList.toggle('fa-chevron-up')
+        this.children[0].classList.toggle('fa-chevron-down')
+      })
+    }
     row.addEventListener('mouseenter', function() {
       row.classList.add(hover)
     })
