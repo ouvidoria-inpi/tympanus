@@ -1,51 +1,51 @@
-const path = require('path');
+const path = require( 'path' );
 const isDEV = process.env.NODE_ENV === 'development'
-console.log('Estou no ***AMBIENTE de DEVELOPMENT***')
+console.log( 'Estou no ***AMBIENTE de DEVELOPMENT***' )
 
 // Webpack Stuff
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ConcatPlugin = require('webpack-concat-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const ConcatPlugin = require( 'webpack-concat-plugin' );
+const HTMLWebpackPlugin = require( 'html-webpack-plugin' );
 
 // We need Nodes fs module to read directory contents
-const fs = require('fs')
+const fs = require( 'fs' )
 
 const paths = {
-  src: path.resolve(__dirname, 'src'),
-  assets: path.resolve(__dirname, 'src', 'assets'),
-  fonts: path.resolve(__dirname, 'src', 'assets', 'fonts'),
-  images: path.resolve(__dirname, 'src', 'assets', 'images'),
-  dist: path.resolve(__dirname, 'dist'),
-  distjs: path.resolve(__dirname, 'dist', 'js'),
+  src: path.resolve( __dirname, 'src' ),
+  assets: path.resolve( __dirname, 'src', 'assets' ),
+  fonts: path.resolve( __dirname, 'src', 'assets', 'fonts' ),
+  images: path.resolve( __dirname, 'src', 'assets', 'images' ),
+  dist: path.resolve( __dirname, 'dist' ),
+  distjs: path.resolve( __dirname, 'dist', 'js' ),
 };
 
 // Our function that generates our html plugins
-function generateHtmlPlugins(templateDir, dirName) {
+function generateHtmlPlugins ( templateDir, dirName ) {
   // Read files in template directory
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
-  return templateFiles.map(item => {
+  const templateFiles = fs.readdirSync( path.resolve( __dirname, templateDir ) )
+  return templateFiles.map( item => {
     // Split names and extension
-    const parts = item.split('.')
-    const name = parts[0]
-    const extension = parts[1]
+    const parts = item.split( '.' )
+    const name = parts[ 0 ]
+    const extension = parts[ 1 ]
     // Create new HTMLWebpackPlugin with options
-    return new HTMLWebpackPlugin({
-      filename: `${dirName}/${name}.html`,
-      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+    return new HTMLWebpackPlugin( {
+      filename: `${ dirName }/${ name }.html`,
+      template: path.resolve( __dirname, `${ templateDir }/${ name }.${ extension }` ),
       templateParameters: {
-        version: JSON.stringify(require("./package.json").version).replace(/\"/gi, ""),
+        version: JSON.stringify( require( "./package.json" ).version ).replace( /\"/gi, "" ),
         cdnUrl: '../'
       },
       inject: true,
-    })
-  })
+    } )
+  } )
 }
 
 // Call our function on our views directory.
-const htmlPluginsComponentes = generateHtmlPlugins('./src/pug/views/components', 'componentes')
-const htmlPluginsTemplates = generateHtmlPlugins('./src/pug/views/templates', 'templates')
+const htmlPluginsComponentes = generateHtmlPlugins( './src/pug/views/components', 'components' )
+const htmlPluginsTemplates = generateHtmlPlugins( './src/pug/views/templates', 'templates' )
 
 const fileLoader = {
   loader: 'file-loader',
@@ -53,15 +53,15 @@ const fileLoader = {
     name: '[name].[ext]',
 
     // Mantém a estrutura de diretórios (mas excluindo-se o 'src')
-    outputPath(filename, absoluteFilePath, absoluteRootPath) {
-      const relativePath = path.relative(absoluteRootPath, absoluteFilePath);
+    outputPath ( filename, absoluteFilePath, absoluteRootPath ) {
+      const relativePath = path.relative( absoluteRootPath, absoluteFilePath );
 
-      const outPath = relativePath.split('/');
+      const outPath = relativePath.split( '/' );
 
       // Remove a primeira parte do path, ou seja, 'src'
       outPath.shift();
 
-      return outPath.join('/');
+      return outPath.join( '/' );
     }
   }
 };
@@ -70,7 +70,7 @@ module.exports = {
   // mode: isDEV ? "development" : "production",
   mode: "development",
   entry: {
-    'dsgov': path.resolve(paths.src + "/scss", 'dsgov.scss')
+    'dsgov': path.resolve( paths.src + "/scss", 'dsgov.scss' )
   },
   watch: true,
   output: {
@@ -78,7 +78,7 @@ module.exports = {
     path: paths.dist
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join( __dirname, 'dist' ),
     stats: 'errors-only',
     clientLogLevel: 'error',
     port: 9000,
@@ -112,12 +112,12 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)$/,
-        include: [paths.fonts],
+        include: [ paths.fonts ],
         loader: fileLoader,
       },
       {
         test: /\.(png|svg|jpg|jpg)$/,
-        include: [paths.images],
+        include: [ paths.images ],
         loader: fileLoader,
       },
       {
@@ -127,50 +127,50 @@ module.exports = {
           loader: 'pug-loader',
           query: {
             pretty: true,
-            root: path.resolve(__dirname, 'src/views'),
+            root: path.resolve( __dirname, 'src/views' ),
           }
         },
       },
     ]
   },
   resolve: {
-    extensions: [".js", ".scss"]
+    extensions: [ ".js", ".scss" ]
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new ConcatPlugin({
+    new ConcatPlugin( {
       uglify: false,
       sourceMap: true,
       name: 'dsgov-components',
       outputPath: 'js/',
       fileName: '[name].js',
-      filesToConcat: ['./src/js/components/**'],
+      filesToConcat: [ './src/js/components/**' ],
       attributes: {
         async: true
       }
-    }),
-    new ConcatPlugin({
+    } ),
+    new ConcatPlugin( {
       uglify: false,
       sourceMap: true,
       name: 'dsgov-templates',
       outputPath: 'js/',
       fileName: '[name].js',
-      filesToConcat: ['./src/js/templates/**'],
+      filesToConcat: [ './src/js/templates/**' ],
       attributes: {
         async: true
       }
-    }),
+    } ),
 
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin( [
       { context: 'src', from: '**/templates/*.js' },
       { context: 'src', from: '**/config/*.js' },
-    ]),
+    ] ),
     // Extract our css to a separate css file
-    new MiniCssExtractPlugin({
+    new MiniCssExtractPlugin( {
       filename: 'css/[name].css',
       chunkFilename: '[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
-    }),
-  ].concat(htmlPluginsComponentes, htmlPluginsTemplates),
+    } ),
+  ].concat( htmlPluginsComponentes, htmlPluginsTemplates ),
   devtool: 'source-map'
 }

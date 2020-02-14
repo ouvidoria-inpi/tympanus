@@ -6,7 +6,6 @@
 	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.3/",
 	"scripts": {
 		"start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev",
-		"build:site": "npm-run-all build:webpack:dev",
 		"build": "npm-run-all build:webpack:prod",
 		"test": "npm-run-all validate:*",
 		"validate:html": "node_modules/.bin/html-validate dist/**/*.html",
