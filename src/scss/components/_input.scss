@@ -1,13 +1,6 @@
 .#{$prefix}input {
   position: relative;
-  label {
-    color: $label-color;
-    font-size: $label-font-size;
-    font-weight: $label-font-weight;
-    margin-bottom: $spacer * 0.5;
-  }
   input {
-    @include placeholder;
     background: $color-secondary-01;
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
