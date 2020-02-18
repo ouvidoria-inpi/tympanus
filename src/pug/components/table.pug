@@ -10,6 +10,13 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
       .header
         .top-bar
           .title=attributes.title ? attributes.title : title
+          .grid-button
+            +button.grid-small-trigger.is-circle.is-tertiary
+              i.fas.fa-th
+          .grid-button
+            +button.grid-large-trigger.is-circle.is-tertiary
+              i.fas.fa-th-large    
+          .divisor
           .search-button
             +button.search-trigger.is-circle.is-tertiary
               i.fas.fa-search

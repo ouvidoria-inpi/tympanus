@@ -35,14 +35,18 @@ $column-gap: 6px;
       font-size: 24px;
       font-weight: 600;
     }
-    .search-button {
-      .br-button {
-        border-color: transparent;
-        &:hover {
-          background-color: $color-primary-pastel-1;
-        }
+    .br-button {
+      border-color: transparent;
+      &:hover {
+        background-color: $color-primary-pastel-1;
+        cursor: pointer;
       }
     }
+    .divisor {
+      border-right: 1px solid #ccc;
+      height: 1.5em;
+      margin: 0 5px 0 5px;
+    } 
   }
   .bottom-bar {
     align-items: center;
