@@ -5,7 +5,8 @@
     &::before {
       animation: spinAround 0.5s infinite linear;
       border: 3px solid currentColor;
-      border-color: transparent transparent $color-primary $color-primary !important;
+      border-color: transparent transparent $color-primary-default
+        $color-primary-default !important;
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
@@ -31,12 +32,12 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     .close {
       background: transparent;
       border: 0;
-      color: $color-primary;
+      color: $color-primary-default;
       font-weight: 500;
       padding: 0;
       position: absolute;
       right: 0;
-      top: -($spacer-half);
+      top: -($spacer * 0.5);
     }
   }
   &-title {
@@ -76,10 +77,10 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
       width: 8px;
     }
     &::-webkit-scrollbar-track {
-      background: $color-gray-2;
+      background: $color-secondary-03;
     }
     &::-webkit-scrollbar-thumb {
-      background: $color-gray-5;
+      background: $color-secondary-06;
     }
     &:focus,
     &:active {
@@ -87,7 +88,7 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     }
     &:hover {
       &::-webkit-scrollbar-thumb {
-        background: $color-gray-6;
+        background: $color-secondary-07;
       }
     }
   }

@@ -1,0 +1,15 @@
+@mixin font-weight($item, $value) {
+  .#{$item} {
+    font-weight: v($item, $value) !important;
+  }
+}
+@mixin font-size($item, $value) {
+  .#{$item} {
+    font-size: v($item, $value) !important;
+  }
+}
+@mixin line-height($item, $value) {
+  .#{$item} {
+    line-height: v($item, $value) !important;
+  }
+}

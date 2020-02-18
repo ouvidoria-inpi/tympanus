@@ -1,0 +1,15 @@
+// Estado destacado
+.highlight {
+  background: v(status-highlight-background, $status-highlight-background)
+    linear-gradient(
+      v(status-highlight-overlay, $status-highlight-overlay),
+      v(status-highlight-overlay, $status-highlight-overlay)
+    );
+  color: v(status-highlight-color, $status-highlight-color);
+  padding: 0 4px;
+}
+// Estado desativado
+[disabled],
+.disabled {
+  cursor: not-allowed;
+}

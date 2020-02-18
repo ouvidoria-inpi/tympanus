@@ -1,0 +1,65 @@
+// Destacado
+$status-highlight-overlay: rgba($color-support-03, 0.1);
+$status-highlight-background: $color-secondary-01;
+$status-highlight-color: $color-support-03;
+// Interativo
+$status-enabled-text: $color-primary-default;
+$status-enabled-text-darken: $color-secondary-01;
+// Desativado
+$status-disabled-background: rgba($color-secondary-03, 0.45);
+$status-disabled-color: rgba($color-secondary-04, 0.45);
+// Hover
+$status-hover-background: $color-primary-pastel-02;
+// Pressionado
+$status-pressed-background: $color-primary-darken-02;
+$status-pressed-color: $color-primary-pastel-01;
+// Foco
+$status-focused-overlay: rgba($color-support-02, 0.3);
+$status-focused-background: $color-secondary-01;
+// Ativo
+$status-activated-background: $color-primary-darken-01;
+$status-activated-color: $color-secondary-01;
+// Selecionado
+$status-selected-background: $color-primary-lighten-01;
+$status-selected-color: $color-secondary-01;
+// Arrastado
+$status-dragged-background: $color-secondary-03;
+$status-dragged-color: $color-secondary-08;
+$status-dragged-shadow: 0 3px 6px rgba($color-secondary-09, 0.16);
+// Visitado
+$status-visited-background: $color-primary-pastel-01;
+$status-visited-color: $color-primary-darken-01;
+// Ligado
+$status-on-background: $color-primary-lighten-02;
+$status-on-color: $color-secondary-01;
+// Desligado
+$status-off-background: $color-secondary-04;
+$status-off-color: $color-secondary-07;
+
+$br-status: (
+  status-highlight-overlay: $status-highlight-overlay,
+  status-highlight-background: $status-highlight-background,
+  status-highlight-text: $status-highlight-color,
+  status-enabled-text: $status-enabled-text,
+  status-enabled-text-darken: $status-enabled-text-darken,
+  status-disabled-background: $status-disabled-background,
+  status-disabled-text: $status-disabled-color,
+  status-hover-background: $status-hover-background,
+  status-pressed-background: $status-pressed-background,
+  status-pressed-text: $status-pressed-color,
+  status-focused-overlay: $status-focused-overlay,
+  status-focused-background: $status-focused-background,
+  status-activated-background: $status-activated-background,
+  status-activated-text: $status-activated-color,
+  status-selected-background: $status-selected-background,
+  status-selected-text: $status-selected-color,
+  status-dragged-background: $status-dragged-background,
+  status-dragged-text: $status-dragged-color,
+  status-dragged-shadow: $status-dragged-shadow,
+  status-visited-background: $status-visited-background,
+  status-visited-text: $status-visited-color,
+  status-on-background: $status-on-background,
+  status-on-text: $status-on-color,
+  status-off-background: $status-off-background,
+  status-off-text: $status-off-color
+);

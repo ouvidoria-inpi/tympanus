@@ -22,7 +22,7 @@
     right: 0;
     // Rótulo da seleção
     .title {
-      border-bottom: 1px solid $color-gray-3;
+      border-bottom: 1px solid $color-secondary-04;
       font-size: 14px;
       font-style: italic;
       font-weight: 600;
@@ -34,7 +34,7 @@
       white-space: nowrap;
       // Item selecionado
       &.is-active {
-        color: $color-primary;
+        color: $color-primary-default;
         font-weight: 600;
       }
     }

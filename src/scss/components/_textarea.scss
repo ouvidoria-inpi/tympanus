@@ -4,11 +4,11 @@
     color: $label-color;
     font-size: $label-font-size;
     font-weight: $label-font-weight;
-    margin-bottom: $spacer-half;
+    margin-bottom: $spacer * 0.5;
   }
   textarea {
     @include placeholder;
-    background: $color-white;
+    background: $color-secondary-01;
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
     color: $input-color;
@@ -18,8 +18,8 @@
     padding-right: $spacer * 2;
     width: 100%;
     &:focus {
-      border-color: $color-primary-lighten-1;
-      box-shadow: 0 0 0 1px $color-primary-lighten-1;
+      border-color: $color-primary-lighten-01;
+      box-shadow: 0 0 0 1px $color-primary-lighten-01;
       outline: none;
     }
     &:invalid {
@@ -27,11 +27,11 @@
       box-shadow: 0 0 0 1px $color-danger;
     }
     &:disabled {
-      background: $color-gray-2;
+      background: $color-secondary-03;
     }
   }
   // Estados
-  @each $state, $color in (focus, $color-primary-lighten-2),
+  @each $state, $color in (focus, $color-primary-lighten-01),
     (valid, $color-success), (invalid, $color-danger)
   {
     &.is-#{$state} {

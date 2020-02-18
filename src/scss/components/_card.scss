@@ -12,18 +12,18 @@
   .icon {
     margin-bottom: $spacer * 2.25;
     & i {
-      color: $color-primary-lighten-2;
+      color: $color-primary-lighten-01;
       font-size: 50px;
     }
   }
   .title {
-    color: $color-primary-darken-1;
+    color: $color-primary-darken-01;
     font-size: $h3-font-size;
     font-weight: 700;
     text-transform: uppercase;
   }
   .text {
-    color: $color-white;
+    color: $color-secondary-01;
     left: 0;
     opacity: 0;
     padding: 50px 30px;
@@ -34,7 +34,7 @@
     &:hover {
       text-decoration: none;
       .text {
-        background-color: $color-gray-6;
+        background-color: $color-secondary-07;
         font-weight: 500;
         height: 100%;
         line-height: 25px;
@@ -46,9 +46,9 @@
   }
   &.is-arrow {
     &::after {
-      color: $color-primary-lighten-2;
+      color: $color-primary-lighten-01;
       content: "\f062";
-      font-family: Font Awesome\5 Free; // stylelint-disable-line font-family-no-missing-generic-family-keyword
+      font-family: Font awesome\5 Free; // stylelint-disable-line font-family-no-missing-generic-family-keyword
       font-size: 20px;
       font-weight: 900;
       position: absolute;

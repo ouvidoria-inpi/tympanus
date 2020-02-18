@@ -1,26 +1,39 @@
-// Grid - Baseada na grid do Bootstrap
-// Verifique os valores de breakpoint e gutters nas configurações:
-// - $grid-breakpoints
-// - $grid-gutters
+// Configuração básica - funciona em portrait
+.container {
+  margin: auto;
+  padding-left: v(container-padding, $container-padding);
+  padding-right: v(container-padding, $container-padding);
+  max-width: v(container-maxwidth, $container-maxwidth);
+  .container {
+    --container-padding: v(row-margin, $row-margin);
+  }
+}
 
-@import "../../../node_modules/bootstrap/scss/grid";
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(#{v(row-margin, $row-margin)} / -2);
+  margin-right: calc(#{v(row-margin, $row-margin)} / -2);
+}
 
-// Variações de gutter
-@each $breakpoint, $gutter in $grid-gutters {
-  @include media-breakpoint-up($breakpoint) {
-    .container,
-    .container-fluid {
-      padding-left: $gutter / 2;
-      padding-right: $gutter / 2;
-    }
-    .row {
-      margin-left: -$gutter / 2;
-      margin-right: -$gutter / 2;
-    }
-    [class^="col"] {
-      padding-left: $gutter / 2;
-      padding-right: $gutter / 2;
-    }
+.col,
+.col-tablet,
+.col-desktop,
+.col-tv {
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding-left: calc(#{v(col-gutter, $col-gutter)} / 2);
+  padding-right: calc(#{v(col-gutter, $col-gutter)} / 2);
+}
+
+.col {
+  flex-basis: 100% / $grid-columns;
+}
+
+@for $i from 1 through $grid-portrait-columns {
+  .portrait-#{$i} {
+    flex-basis: 100% / $grid-portrait-columns * $i !important;
+    flex-grow: 0;
   }
   @include media-breakpoint-down($breakpoint) {
     .container,
@@ -30,3 +43,32 @@
     }
   }
 }
+
+// Customizações para breakpoints tablet, desktop e tv
+@include grid-breakpoint(
+  "tablet",
+  $grid-breakpoint-small,
+  $grid-tablet-margin,
+  $grid-tablet-maxwidth,
+  $grid-tablet-gutter,
+  $grid-tablet-columns
+);
+@include grid-breakpoint(
+  "desktop",
+  $grid-breakpoint-large,
+  $grid-desktop-margin,
+  $grid-desktop-maxwidth,
+  $grid-desktop-gutter,
+  $grid-desktop-columns,
+  "tablet"
+);
+@include grid-breakpoint(
+  "tv",
+  $grid-breakpoint-xlarge,
+  $grid-tv-margin,
+  $grid-tv-maxwidth,
+  $grid-tv-gutter,
+  $grid-tv-columns,
+  "tablet",
+  "desktop"
+);

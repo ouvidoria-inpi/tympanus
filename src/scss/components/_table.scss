@@ -126,7 +126,7 @@ $column-gap: 6px;
     justify-content: space-between;
     left: 0;
     opacity: 0;
-    padding: 0 11px;//$column-spacing * 0.5 $column-spacing;
+    padding: 0 11px; //$column-spacing * 0.5 $column-spacing;
     position: absolute;
     right: 0;
     top: 100%;
@@ -155,9 +155,10 @@ $column-gap: 6px;
       padding: 1px 0px;
       width: 32px;
       outline: 0;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: transparent !important;
-        border-color:  transparent !important;
+        border-color: transparent !important;
       }
       span {
         display: none;
@@ -192,14 +193,14 @@ $column-gap: 6px;
       &.is-selected {
         background: $color-primary-lighten-2;
         color: $color-white;
-          &.is-hover, 
-          &:hover,
-          td:before {
-            background: $color-primary-lighten-2;
-            color: $color-white !important;
-          }
+        &.is-hover,
+        &:hover,
+        td:before {
+          background: $color-primary-lighten-2;
+          color: $color-white !important;
+        }
       }
-      &.is-hover, 
+      &.is-hover,
       &:hover {
         background: default;
         color: default;
@@ -223,7 +224,7 @@ $column-gap: 6px;
       }
       .col-collapse,
       .col-collapse:hover,
-      .col-collapse:focus  {
+      .col-collapse:focus {
         display: block;
         position: absolute;
         right: 8px;
@@ -309,8 +310,8 @@ $column-gap: 6px;
       overflow: auto;
     }
   }
-  
-// Resolve bug na rolagem do firefox e limita aparecimento da barra de rolagem horizontal
+
+  // Resolve bug na rolagem do firefox e limita aparecimento da barra de rolagem horizontal
   .header,
   .headers,
   .responsive {
@@ -321,8 +322,7 @@ $column-gap: 6px;
   .syncscroll {
     overflow: auto;
   }
-  
- 
+
   // Versão tablet
   @include media-breakpoint-up(sm) {
     .top-bar {
@@ -429,7 +429,7 @@ $column-gap: 6px;
             padding-right: $column-gap;
           }
         }
-        &.is-hover, 
+        &.is-hover,
         &:hover {
           background: $color-primary-pastel-1;
           color: default;
