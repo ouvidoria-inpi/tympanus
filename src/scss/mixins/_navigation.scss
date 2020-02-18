@@ -134,12 +134,12 @@
     flex-flow: column-reverse;
     font-weight: 600;
     .name {
-      color: $logo-name-color;
-      font-size: $logo-name-size;
+      color: v(color-primary-darken-02, $color-primary-darken-02);
+      font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
     }
     .description {
-      color: $logo-description-color;
-      font-size: $logo-description-size;
+      color: v(color-secondary-08, $color-secondary-08);
+      font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
     }
     &.is-active {
       display: flex;

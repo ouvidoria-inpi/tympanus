@@ -87,15 +87,15 @@
   .name {
     color: $body-color;
     flex: 1;
-    font-size: $tabs-font-size;
-    font-weight: $tabs-font-weight;
+    font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
+    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
     text-align: center;
     white-space: nowrap;
   }
   .results {
     color: $body-color;
     font-size: $font-size-base * 0.875;
-    font-weight: $tabs-font-weight;
+    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
   }
   a,
   button,
