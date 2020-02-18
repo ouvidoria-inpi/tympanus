@@ -36,7 +36,7 @@ $status-on-color: $color-secondary-01;
 $status-off-background: $color-secondary-04;
 $status-off-color: $color-secondary-07;
 
-$br-status: (
+$tokens-status: (
   status-highlight-overlay: $status-highlight-overlay,
   status-highlight-background: $status-highlight-background,
   status-highlight-text: $status-highlight-color,
