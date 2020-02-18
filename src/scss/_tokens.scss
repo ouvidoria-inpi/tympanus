@@ -1,48 +1,13 @@
 :root {
-  // Cores
-  @each $item, $value in $br-theme {
-    --#{$item}: #{$value};
-  }
-
-  // Ícones
-  @each $item, $value in $br-icons {
-    --#{$item}: #{$value};
-  }
-  --icon-size: #{v(icon-size, $icon-size-base)};
-
-  // Estados
-  @each $item, $value in $br-status {
-    --#{$item}: #{$value};
-  }
-
-  // Tipografia
-  @each $item, $value in $font-weights {
-    --#{$item}: #{$value};
-  }
-  @each $item, $value in $font-sizes {
-    --#{$item}: #{$value};
-  }
-  @each $item, $value in $font-line-heights {
-    --#{$item}: #{$value};
-  }
-
-  // Grid
-  @each $item, $value in $grid-breakpoints {
-    --#{$item}: #{$value};
-  }
-  @each $item, $value in $grid-portrait {
-    --#{$item}: #{$value};
-  }
-  @each $item, $value in $grid-tablet {
-    --#{$item}: #{$value};
-  }
-  @each $item, $value in $grid-desktop {
-    --#{$item}: #{$value};
-  }
-  @each $item, $value in $grid-tv {
-    --#{$item}: #{$value};
-  }
-  @each $item, $value in $grid-config {
-    --#{$item}: #{$value};
-  }
+  @include tokens($tokens-colors);
+  @include tokens($tokens-icons);
+  @include tokens($tokens-status);
+  @include tokens($tokens-font-weight);
+  @include tokens($tokens-font-size);
+  @include tokens($tokens-line-height);
+  @include tokens($tokens-breakpoints);
+  @include tokens($tokens-portrait);
+  @include tokens($tokens-tablet);
+  @include tokens($tokens-desktop);
+  @include tokens($tokens-tv);
 }
