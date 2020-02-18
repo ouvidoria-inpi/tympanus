@@ -1,18 +1,3 @@
-// Pesos
-@each $item, $value in $font-weights {
-  @include font-weight($item, $value);
-}
-
-// Tamanhos
-@each $item, $value in $font-sizes {
-  @include font-size($item, $value);
-}
-
-// Alturas de linhas
-@each $item, $value in $font-line-heights {
-  @include line-height($item, $value);
-}
-
 // Texto padrão
 body {
   color: v(color-secondary-08, $color-secondary-08);
@@ -110,11 +95,11 @@ ol {
 // Blockquotes
 blockquote {
   background-color: v(color-secondary-02, $color-secondary-02);
-  position: relative;
-  padding: 1rem;
   border-left: 4px solid $color-highlight;
-  margin: 1rem 0;
   font-style: italic;
+  margin: 1rem 0;
+  padding: 1rem;
+  position: relative;
   > *:last-child {
     margin-bottom: 0;
   }
@@ -141,6 +126,7 @@ fieldset legend,
   font-style: italic;
   font-weight: v(font-weight-medium, $font-weight-medium);
   line-height: v(font-line-height-medium, $font-line-height-medium);
+  opacity: 1;
 }
 input,
 .input {
@@ -152,6 +138,20 @@ input,
 
 // Help
 .help {
-  color: $help-color;
-  font-size: $help-font-size;
+  font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
+}
+
+// Pesos
+@each $item, $value in $tokens-font-weight {
+  @include font-weight($item, $value);
+}
+
+// Tamanhos
+@each $item, $value in $tokens-font-size {
+  @include font-size($item, $value);
+}
+
+// Alturas de linhas
+@each $item, $value in $tokens-line-height {
+  @include line-height($item, $value);
 }
