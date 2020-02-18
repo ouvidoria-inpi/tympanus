@@ -189,6 +189,12 @@ class BRDatepicker {
 }
 
 let datepickerList = [];
+let configData = {};
 for (let brDatepicker of window.document.querySelectorAll(".br-datepicker")) {
-  datepickerList.push(new BRDatepicker("br-datepicker", brDatepicker));
+  if (brDatepicker.classList.contains("range")) {
+    configData = {id: "range-1"};
+    datepickerList.push(new BRDatepicker("br-datepicker", brDatepicker, configData));  
+  } else {
+    datepickerList.push(new BRDatepicker("br-datepicker", brDatepicker));
+  }  
 }

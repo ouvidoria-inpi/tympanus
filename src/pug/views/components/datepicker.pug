@@ -48,13 +48,13 @@ append content
   .row
     .col-sm
       .mb-3
-        +datepicker("Data Inicial")(id="date-start" type="text" placeholder="dd/mm/aaaa")
+        +datepicker("Data Inicial")(id="date-start" class="range" type="text" placeholder="dd/mm/aaaa")
         +feedback("Data válida")(class="is-valid")
         +feedback("Data inválida")
         p.help Insira a data inicial do período no formato "dd/mm/aaaa".  
     .col-sm
       .mb-3
-        +datepicker("Data Final")(id="date-end" type="text" placeholder="dd/mm/aaaa")
+        +datepicker("Data Final")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
         +feedback("Data válida")(class="is-valid")
         +feedback("Data inválida")
         p.help Insira a data final do período no formato "dd/mm/aaaa".
