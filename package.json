@@ -3,7 +3,7 @@
 	"version": "1.2.3-beta.7",
 	"description": "Design System do governo",
 	"main": "index.js",
-	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.4/",
+	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.7/",
 	"scripts": {
 		"start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev",
 		"build": "npm-run-all build:webpack:prod",
