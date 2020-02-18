@@ -1,11 +1,5 @@
 .#{$prefix}select {
   position: relative;
-  label {
-    color: $label-color;
-    font-size: $label-font-size;
-    font-weight: $label-font-weight;
-    margin-bottom: $spacer * 0.5;
-  }
   select {
     display: none;
   }
