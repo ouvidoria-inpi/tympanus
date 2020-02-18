@@ -1,34 +1,45 @@
 .#{$prefix}button {
+  margin: 22px 20px;
   &.is-primary {
     @include button-pill;
-  }
+    @include estados;
+   }
   &.is-secondary {
     @include button-pill($color-white, $color-primary);
+    @include estados;
   }
   &.is-call-to-action {
     @include button-pill($color-secondary, $color-white, $color-gray-2);
     border-width: $button-action-border-width;
     height: $button-height-default + ($button-action-border-width * 2);
-    &:hover,
-    &:focus {
-      background-color: $color-teal;
-      border-color: $color-gray-2;
-      color: $color-white;
-    }
-    &:disabled {
-      border-color: $color-gray-2;
-    }
+    @include estados-actions;
     @include media-breakpoint-up(sm) {
       min-width: $button-action-min-width;
+    }
+    &.is-mobile{
+      @include estados-actions;
+      border: 13px solid $color-gray-2;
+      font-size: 12px;
     }
   }
   &.is-tertiary {
     @include button-link;
-  }
-  &.is-cancel {
-    @include button-link($body-color);
+    @include estados;
     text-decoration: underline;
+    &:focus:active{
+      background-color: transparent;
+      color: $color-primary;
+    }
   }
+  // &.is-cancel {
+  //   @include button-link;
+  //   @include estados;
+  //   text-decoration: underline;
+  //   &:active{
+  //     background-color: transparent;
+  //     color: $color-primary;
+  //   }
+  // }
   &.is-small {
     @include media-breakpoint-up(md) {
       min-width: 0;
@@ -40,6 +51,7 @@
     @include media-breakpoint-up(sm) {
       min-width: 0;
     }
+    @include estados;
     border-radius: 50%;
     border-style: solid;
     border-width: 1px;
@@ -89,6 +101,10 @@
   }
 }
 
+svg[class*="fa"]{
+  margin: 0 2px;
+}
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -97,3 +113,10 @@
     transform: rotate(359deg);
   }
 }
+
+.engloba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}  
