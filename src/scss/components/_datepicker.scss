@@ -1,5 +1,4 @@
-.#{$prefix}input {
-&.datepicker {
+.#{$prefix}datepicker {
   button {
     background: transparent;
     border: 0 transparent;
@@ -428,6 +427,4 @@
 .qs-datepicker .qs-event.qs-disabled::after,
 .qs-datepicker .qs-event.qs-empty::after {
   background: $color-primary-pastel-1;
-}
-
 }

@@ -3,12 +3,14 @@ mixin datepicker(label="Label", labelClass)
   - let componentClass = prefix + "datepicker"
   - className = className ? componentClass + " " + className : componentClass
   div(class=className)
-    label(class=labelClass for=attributes.id)=label
-    input(
-      id=attributes.id
-      type=attributes.type ? attributes.type : "text"
-      placeholder=attributes.placeholder
-      disabled=attributes.disabled)
-    if block
-      block
+    if attributes.disabled
+      +input(label)(id=attributes.id placeholder=attributes.placeholder disabled)
+        button.icon(type='button' id=attributes.id + "-btn")
+          span.sr-only Mostrar calendário
+          i.fas.fa-calendar-alt
+    else
+      +input(label)(id=attributes.id placeholder=attributes.placeholder)
+        button.icon(type='button' id=attributes.id + "-btn")
+          span.sr-only Mostrar calendário
+          i.fas.fa-calendar-alt
     

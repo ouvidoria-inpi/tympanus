@@ -46,7 +46,6 @@
 	},
 	"devDependencies": {
 		"@govbr/ds-validate": "0.0.2",
-		
 		"autoprefixer": "^9.7.4",
 		"babel-cli": "^6.26.0",
 		"clean-css-cli": "^4.3.0",
