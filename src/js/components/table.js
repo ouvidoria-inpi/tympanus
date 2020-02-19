@@ -20,6 +20,8 @@ if (brTables) {
     let searchBar = brTable.querySelector('.search-bar')
     let searchTrigger = brTable.querySelector('.search-trigger')
     let searchClose = brTable.querySelector('.search-close')
+    let gridLTrigger = brTable.querySelector('.grid-large-trigger')
+    let gridSTrigger = brTable.querySelector('.grid-small-trigger')
     let responsive = brTable.querySelector('.responsive')
     let headers = brTable.querySelector('table thead tr')
     let rows = brTable.querySelectorAll('table tbody tr')
@@ -32,6 +34,7 @@ if (brTables) {
       cloneHeader(brTable, headers)
     }
     if (searchBar) toogleSearch(searchBar, searchTrigger, searchClose)
+    if (gridLTrigger) toggleGrid(brTable, gridLTrigger, gridSTrigger)
     setClickActions(brTable)
     hoverRow(rows)
 
@@ -68,6 +71,20 @@ function toogleSearch(container, trigger, close) {
   if (close) {
     close.addEventListener('click', function() {
       container.classList.remove(active)
+    })
+  }
+}
+
+function toogleGrid(table, gridLTrigger, gridSTrigger) {
+  if (gridLTrigger) {
+    trigger.addEventListener('click', function() {
+      table.classList.remove("is-grid-small")
+    })
+  }
+
+  if (gridSTrigger) {
+    close.addEventListener('click', function() {
+      table.classList.add("is-grid-small")
     })
   }
 }
