@@ -1,357 +1,235 @@
 [
-  {
-    "label": "Introdução",
-    "type": "docs",
-    "id": "introducao",
-    "children": [
-      {
-        "label": "Como começar",
-        "filename": "como-comecar"
-      },
-      {
-        "label": "Princípios do Design System",
-        "filename": "principios"
-      },
-      {
-        "label": "Sobre o Design System",
-        "filename": "sobre"
-      }
-    ]
-  },
-  {
-    "label": "Fundamentos Visuais",
-    "type": "docs",
-    "id": "fundamentos-visuais",
-    "children": [
-      {
-        "label": "Cores",
-        "filename": "cores",
-        "folder": "cores"
-      },
-      {
-        "label": "Iconografia",
-        "filename": "iconografia",
-        "folder": "iconografia"
-      },
-      {
-        "label": "Estados",
-        "filename": "estados",
-        "folder": "estados"
-      },
-      {
-        "label": "Sistema de Grid",
-        "filename": "grid",
-        "folder": "grid"
-      },
-      {
-        "label": "Tipografia",
-        "filename": "tipografia",
-        "folder": "tipografia"
-      }
-    ]
-  },
-  {
-    "label": "Guias",
-    "type": "docs",
-    "id": "guias",
-    "children": [
-      {
-        "label": "Construção de componentes",
-        "filename": "construcao-de-componentes"
-      },
-      {
-        "label": "Uso dos templates",
-        "filename": "uso-dos-templates"
-      },
-      {
-        "label": "Construção do HTML",
-        "filename": "construcao-do-html"
-      },
-      {
-        "label": "Acessibilidade no Código HTML",
-        "filename": "acessibilidade-no-codigo-html"
-      },      
-      {
-        "label": "Uso do WAI-ARIA",
-        "filename": "uso-do-wai-aria"
-      },
-      {
-        "label": "Uso do css",
-        "filename": "uso-do-css"
-      },
-      {
-        "label": "Construção do CSS",
-        "filename": "construcao-do-css"
-      },
-      {
-        "label": "Manutenção do CSS",
-        "filename": "manutencao-do-css"
-      }
-    ]
-  },
-  {
-    "label": "Componentes",
-    "id": "components",
-    "urlLabel": "componentes",
-    "type": "component",
-    "children": [
-      {
-        "label": "Status Atual dos Componentes",
-        "filename": "status",
-        "type": "docs"
-      },
-      {
-        "label": "Abas",
-        "filename": "tabs",
-        "urlLabel": "abas"
-      },
-      {
-        "label": "Acordeão",
-        "filename": "accordeon",
-        "urlLabel": "acordeao"
-      },
-      {
-        "label": "Badge",
-        "filename": "badge",
-        "urlLabel": "badge"
-      },
-      {
-        "label": "Botão",
-        "filename": "button",
-        "urlLabel": "botao"
-      },
-      {
-        "label": "Busca",
-        "filename": "search",
-        "urlLabel": "busca"
-      },
-      {
-        "label": "Cabeçalho",
-        "filename": "header",
-        "urlLabel": "cabecalho"
-      },
-      {
-        "label": "Card",
-        "filename": "card",
-        "urlLabel": "card"
-      },
-      {
-        "label": "Controle de Seleção",
-        "filename": "selection-control",
-        "urlLabel": "controle-selecao"
-      },
-      {
-        "label": "Datepicker",
-        "filename": "datepicker",
-        "urlLabel": "datepicker"
-      },
-      {
-        "label": "Divider",
-        "filename": "divider",
-        "urlLabel": "divisor"
-      },
-      {
-        "label": "Formulário",
-        "filename": "form",
-        "urlLabel": "form"
-      },
-      {
-        "label": "Input",
-        "filename": "input",
-        "urlLabel": "input"
-      },
-      {
-        "label": "Listas",
-        "filename": "listas",
-        "urlLabel": "listas"
-      },
-      {
-        "label": "Mensagem",
-        "filename": "message",
-        "urlLabel": "mensagem"
-      },
-      {
-        "label": "Migalha de Pão",
-        "filename": "breadcrumb",
-        "urlLabel": "migalha-de-pao"
-      },
-      {
-        "label": "Modal",
-        "filename": "modal",
-        "urlLabel": "modal"
-      },
-      {
-        "label": "Navegagação",
-        "filename": "navigation",
-        "urlLabel": "navegacao"
-      },
-      {
-        "label": "Paginação",
-        "filename": "pagination",
-        "urlLabel": "paginacao"
-      },
-      {
-        "label": "Portlet",
-        "filename": "portlet",
-        "urlLabel": "portlet"
-      },
-      {
-        "label": "Scrim",
-        "filename": "scrim",
-        "urlLabel": "scrim"
-      },
-      {
-        "label": "Tag",
-        "filename": "tag",
-        "urlLabel": "tag"
-      },
-      {
-        "label": "Tabela",
-        "filename": "table",
-        "urlLabel": "tabela"
-      },
-      {
-        "label": "Textarea",
-        "filename": "textarea",
-        "urlLabel": "textarea"
-      },
-      {
-        "label": "Tooltip",
-        "filename": "tooltip",
-        "urlLabel": "tooltip"
-      },
-      {
-        "label": "Upload",
-        "filename": "upload",
-        "urlLabel": "upload"
-      },
-      {
-        "label": "Wizard",
-        "filename": "wizard",
-        "urlLabel": "wizard"
-      }
-    ]
-  },
-  {
-    "label": "Templates",
-    "id": "templates",
-    "type": "template",
-    "children": [
-      {
-        "label": "Status Atual dos Templates",
-        "filename": "status",
-        "urlLabel": "status",
-        "type": "docs"
-      },
-      {
-        "label": "Cadastro de usuário",
-        "children": [
-          {
-            "label": "Início do Cadastro",
-            "filename": "signin",
-            "urlLabel": "signin"
-          },
-          {
-            "label": "Ativação da Conta",
-            "filename": "signin-1",
-            "urlLabel": "signin-1"
-          },
-          {
-            "label": "Verificação do código recebido",
-            "filename": "signin-2",
-            "urlLabel": "signin-2"
-          },
-          {
-            "label": "Correção do número do celular",
-            "filename": "signin-3",
-            "urlLabel": "signin-3"
-          },
-          {
-            "label": "Conclusão do Cadastro",
-            "filename": "signin-4",
-            "urlLabel": "signin-4"
-          }
-        ]
-      },
-      {
-        "label": "Recuperação de Senha",
-        "children": [
-          {
-            "label": "Com Lista de Opções",
-            "filename": "password",
-            "urlLabel": "password"
-          },
-          {
-            "label": "Pelo Celular",
-            "filename": "password-1",
-            "urlLabel": "password-1"
-          },
-          {
-            "label": "Campo com Validação",
-            "filename": "password-2",
-            "urlLabel": "password-2"
-          },
-          {
-            "label": "Precisa de Ajuda?",
-            "filename": "password-3",
-            "urlLabel": "password-3"
-          },
-          {
-            "label": "Mudar Senha",
-            "filename": "password-4",
-            "urlLabel": "password-4"
-          }
-        ]
-      },
-      {
-        "label": "Sistemas",
-        "children": [
-          {
-            "label": "Template base",
-            "filename": "system",
-            "urlLabel": "system"
-          }
-        ]
-      },
-      {
-        "label": "Sites e portais",
-        "children": [
-          {
-            "label": "Template base",
-            "filename": "site",
-            "urlLabel": "site"
-          },
-          {
-            "label": "Mobile",
-            "filename": "site-mobile",
-            "urlLabel": "site-mobile"
-          }
-        ]
-      },
-      {
-        "label": "Exemplo de CRUD",
-        "filename": "crud"
-      },
-      {
-        "label": "Tela de erro para Sistemas",
-        "children": [
-          {
-            "label": "Com opção de busca",
-            "filename": "not-found-1",
-            "urlLabel": "not-found-1"
-          },
-          {
-            "label": "Padrão",
-            "filename": "not-found-2",
-            "urlLabel": "not-found-2"
-          }
-        ]
-      },
-      {
-        "label": "Login",
-        "filename": "login",
-        "urlLabel": "login"
-      }
-    ]
-  }
+	{
+		"label": "Introdução",
+		"type": "docs",
+		"id": "introducao",
+		"children": [
+			{
+				"label": "Como começar",
+				"filename": "como-comecar"
+			},
+			{
+				"label": "Princípios do Design System",
+				"filename": "principios"
+			},
+			{
+				"label": "Sobre o Design System",
+				"filename": "sobre"
+			}
+		]
+	},
+	{
+		"label": "Fundamentos Visuais",
+		"type": "docs",
+		"id": "fundamentos-visuais",
+		"children": [
+			{
+				"label": "Cores",
+				"filename": "cores",
+				"folder": "cores"
+			},
+			{
+				"label": "Iconografia",
+				"filename": "iconografia",
+				"folder": "iconografia"
+			},
+			{
+				"label": "Estados",
+				"filename": "estados",
+				"folder": "estados"
+			},
+			{
+				"label": "Sistema de Grid",
+				"filename": "grid",
+				"folder": "grid"
+			},
+			{
+				"label": "Tipografia",
+				"filename": "tipografia",
+				"folder": "tipografia"
+			}
+		]
+	},
+	{
+		"label": "Guias",
+		"type": "docs",
+		"id": "guias",
+		"children": [
+			{
+				"label": "Construção de componentes",
+				"filename": "construcao-de-componentes"
+			},
+			{
+				"label": "Uso dos templates",
+				"filename": "uso-dos-templates"
+			},
+			{
+				"label": "Construção do HTML",
+				"filename": "construcao-do-html"
+			},
+			{
+				"label": "Acessibilidade no Código HTML",
+				"filename": "acessibilidade-no-codigo-html"
+			},
+			{
+				"label": "Uso do WAI-ARIA",
+				"filename": "uso-do-wai-aria"
+			},
+			{
+				"label": "Uso do css",
+				"filename": "uso-do-css"
+			},
+			{
+				"label": "Construção do CSS",
+				"filename": "construcao-do-css"
+			},
+			{
+				"label": "Manutenção do CSS",
+				"filename": "manutencao-do-css"
+			}
+		]
+	},
+	{
+		"label": "Componentes",
+		"id": "components",
+		"urlLabel": "componentes",
+		"type": "component",
+		"children": [
+			{
+				"label": "Status Atual dos Componentes",
+				"filename": "status",
+				"type": "docs"
+			},
+			{
+				"label": "Abas",
+				"filename": "tabs",
+				"urlLabel": "abas"
+			},
+			{
+				"label": "Acordeão",
+				"filename": "accordeon",
+				"urlLabel": "acordeao"
+			},
+			{
+				"label": "Badge",
+				"filename": "badge",
+				"urlLabel": "badge"
+			},
+			{
+				"label": "Botão",
+				"filename": "button",
+				"urlLabel": "botao"
+			},
+			{
+				"label": "Busca",
+				"filename": "search",
+				"urlLabel": "busca"
+			},
+			{
+				"label": "Cabeçalho",
+				"filename": "header",
+				"urlLabel": "cabecalho"
+			},
+			{
+				"label": "Card",
+				"filename": "card",
+				"urlLabel": "card"
+			},
+			{
+				"label": "Controle de Seleção",
+				"filename": "selection-control",
+				"urlLabel": "controle-selecao"
+			},
+			{
+				"label": "Datepicker",
+				"filename": "datepicker",
+				"urlLabel": "datepicker"
+			},
+			{
+				"label": "Divider",
+				"filename": "divider",
+				"urlLabel": "divisor"
+			},
+			{
+				"label": "Formulário",
+				"filename": "form",
+				"urlLabel": "form"
+			},
+			{
+				"label": "Input",
+				"filename": "input",
+				"urlLabel": "input"
+			},
+			{
+				"label": "Listas",
+				"filename": "listas",
+				"urlLabel": "listas"
+			},
+			{
+				"label": "Mensagem",
+				"filename": "message",
+				"urlLabel": "mensagem"
+			},
+			{
+				"label": "Migalha de Pão",
+				"filename": "breadcrumb",
+				"urlLabel": "migalha-de-pao"
+			},
+			{
+				"label": "Modal",
+				"filename": "modal",
+				"urlLabel": "modal"
+			},
+			{
+				"label": "Navegação",
+				"filename": "navigation",
+				"urlLabel": "navegacao"
+			},
+			{
+				"label": "Paginação",
+				"filename": "pagination",
+				"urlLabel": "paginacao"
+			},
+			{
+				"label": "Portlet",
+				"filename": "portlet",
+				"urlLabel": "portlet"
+			},
+			{
+				"label": "Scrim",
+				"filename": "scrim",
+				"urlLabel": "scrim"
+			},
+			{
+				"label": "Tag",
+				"filename": "tag",
+				"urlLabel": "tag"
+			},
+			{
+				"label": "Tabela",
+				"filename": "table",
+				"urlLabel": "tabela"
+			},
+			{
+				"label": "Textarea",
+				"filename": "textarea",
+				"urlLabel": "textarea"
+			},
+			{
+				"label": "Tooltip",
+				"filename": "tooltip",
+				"urlLabel": "tooltip"
+			},
+			{
+				"label": "Upload",
+				"filename": "upload",
+				"urlLabel": "upload"
+			},
+			{
+				"label": "Wizard",
+				"filename": "wizard",
+				"urlLabel": "wizard"
+			}
+		]
+	}
 ]
