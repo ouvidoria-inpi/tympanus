@@ -5,11 +5,16 @@
     @include estados;
    }
   &.is-secondary {
-    @include button-pill($color-white, $color-primary);
+    @include button-pill($color-secondary-01, $color-primary-default);
     @include estados;
+
   }
   &.is-call-to-action {
-    @include button-pill($color-secondary, $color-white, $color-gray-2);
+    @include button-pill(
+      $color-highlight,
+      $color-secondary-01,
+      $color-secondary-03
+    );
     border-width: $button-action-border-width;
     height: $button-height-default + ($button-action-border-width * 2);
     @include estados-actions;
@@ -31,15 +36,6 @@
       color: $color-primary;
     }
   }
-  // &.is-cancel {
-  //   @include button-link;
-  //   @include estados;
-  //   text-decoration: underline;
-  //   &:active{
-  //     background-color: transparent;
-  //     color: $color-primary;
-  //   }
-  // }
   &.is-small {
     @include media-breakpoint-up(md) {
       min-width: 0;
@@ -79,7 +75,7 @@
     position: relative;
     &::after {
       animation: spinAround 500ms infinite linear;
-      border: 2px solid $color-white;
+      border: 2px solid $color-secondary-01;
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
@@ -93,18 +89,16 @@
     }
     &.is-secondary {
       &::after {
-        border-color: $color-primary;
+        border-color: $color-primary-default;
         border-right-color: transparent;
         border-top-color: transparent;
       }
     }
   }
 }
-
 svg[class*="fa"]{
   margin: 0 2px;
 }
-
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -113,7 +107,6 @@ svg[class*="fa"]{
     transform: rotate(359deg);
   }
 }
-
 .engloba {
   display: flex;
   justify-content: center;

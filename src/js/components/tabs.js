@@ -1,23 +1,33 @@
-const tab = document.querySelectorAll('.br-tabs .item');
-if(tab){
-				for (let elem of tab) {
-								elem.addEventListener("click", function() { itemActiveSelected(elem) }, false);;
-				}
-}
+class BRTabs {
 
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    this._setBehavior();
+  }
 
-
-
-function itemActiveSelected(event) {
-    
-    const a = document.querySelectorAll('.upload-input');
-    const elements = event.parentElement.querySelectorAll('.br-tabs .item');
-				for (let elem of elements) {
-        elem.parentElement.querySelectorAll(".item")
-        elem.classList.remove("is-active");
+  _setBehavior() {
+    for (let item of this.component.querySelectorAll('.item')) {
+      item.addEventListener("click", (event) => {
+        this._switchTab(event.currentTarget);
+      }, false);
     }
-    event.classList.add("is-active");
-    
+  }
 
-
+  _switchTab(currentTab) {
+    for (let tab of this.component.querySelectorAll('.item')) {
+      if (tab === currentTab) {
+        tab.classList.add("is-active");
+      } else {
+        tab.classList.remove("is-active");
+      }
+    }
+  }
 }
+
+let abasList = [];
+for (let brTabs of window.document.querySelectorAll('.br-tabs')) {
+  abasList.push(new BRTabs("br-tabs", brTabs));
+}
+
+

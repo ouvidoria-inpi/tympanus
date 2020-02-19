@@ -1,7 +1,7 @@
 @mixin button-pill(
-  $background: $color-primary,
-  $color: $color-white,
-  $border: $color-primary
+  $background: $color-primary-default,
+  $color: $color-secondary-01,
+  $border: $color-primary-default
 ) {
   background: $background;
   border: 1px solid $border;
@@ -12,21 +12,6 @@
   height: $button-height-default;
   padding: 0 $button-padding;
   width: 100%;
-  // &:hover,
-  // &:focus {
-  //   background-color: $color-primary-lighten-2;
-  //   border-color: $color-primary-lighten-2;
-  //   color: $color-white;
-  // }
-  // &:disabled {
-  //   background-color: adjust-color(
-  //     $background,
-  //     $lightness: 45%,
-  //     $saturation: -45%
-  //   );
-  //   border-color: adjust-color($border, $lightness: 35%, $saturation: -35%);
-  //   color: adjust-color($color, $lightness: 35%, $saturation: -35%);
-  // }
   // Tablet
   @include media-breakpoint-up(sm) {
     min-width: $button-min-width;

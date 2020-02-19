@@ -18,7 +18,7 @@ Exemplo de uso:
 
 ```html
 <head>
-  <link rel="stylesheet" href="dsgov.css" />
+    <link rel="stylesheet" href="dsgov.css" />
 </head>
 ```
 
@@ -31,8 +31,8 @@ Para modificar a cor de fundo use `.bg-*`. Para modificar a cor de texto use `te
 Exemplo de uso:
 
 ```html
-<div class="bg-primary">
-  <p class="text-white">Texto...</p>
+<div class="bg-primary-default">
+    <p class="text-white">Texto...</p>
 </div>
 ```
 
@@ -48,10 +48,10 @@ Exemplo de uso:
 
 ```html
 <header id="header" class="page-header pt-1 pb-2 pt-md-3 pb-md-4">
-  <!-- Acessibilidade -->
-  <div class="accessibility py-half py-lg-3"></div>
-  <!-- Logo -->
-  <div id="logo" class="logo my-2 my-sm-3 my-lg-4"></div>
+    <!-- Acessibilidade -->
+    <div class="accessibility py-half py-lg-3"></div>
+    <!-- Logo -->
+    <div id="logo" class="logo my-2 my-sm-3 my-lg-4"></div>
 </header>
 ```
 
@@ -67,12 +67,12 @@ Exemplo de uso:
 
 ```html
 <div class="container">
-  <div class="row">
-    <!-- Coluna com largura pré-definida -->
-    <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">...</div>
-    <!-- Coluna com espaço restante -->
-    <div class="col">...</div>
-  </div>
+    <div class="row">
+        <!-- Coluna com largura pré-definida -->
+        <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">...</div>
+        <!-- Coluna com espaço restante -->
+        <div class="col">...</div>
+    </div>
 </div>
 ```
 
@@ -86,24 +86,24 @@ Exemplo:
 
 ```html
 <div class="row mx-md-n5">
-  <div class="col px-md-5">
-    <div class="p-3 border bg-primary">Custom column padding</div>
-  </div>
-  <div class="col px-md-5">
-    <div class="p-3 border bg-secondary">Custom column padding</div>
-  </div>
+    <div class="col px-md-5">
+        <div class="p-3 border bg-primary">Custom column padding</div>
+    </div>
+    <div class="col px-md-5">
+        <div class="p-3 border bg-secondary">Custom column padding</div>
+    </div>
 </div>
 ```
 
 Os utilitários compatíveis são os seguintes:
 
-- Clearfix - <https://getbootstrap.com/docs/4.3/utilities/clearfix/>
-- Embeds - <https://getbootstrap.com/docs/4.3/utilities/embed/>
-- Float - <https://getbootstrap.com/docs/4.3/utilities/float/>
-- Overflow - <https://getbootstrap.com/docs/4.3/utilities/overflow/>
-- Position - <https://getbootstrap.com/docs/4.3/utilities/position/>
-- Screen readers - <https://getbootstrap.com/docs/4.3/utilities/screen-readers/>
-- Stretched link - <https://getbootstrap.com/docs/4.3/utilities/stretched-link/>
-- Text - <https://getbootstrap.com/docs/4.3/utilities/text/>
-- Vertical alignment - <https://getbootstrap.com/docs/4.3/utilities/vertical-align/>
-- Visibility - <https://getbootstrap.com/docs/4.3/utilities/visibility/>
+-   Clearfix - <https://getbootstrap.com/docs/4.3/utilities/clearfix/>
+-   Embeds - <https://getbootstrap.com/docs/4.3/utilities/embed/>
+-   Float - <https://getbootstrap.com/docs/4.3/utilities/float/>
+-   Overflow - <https://getbootstrap.com/docs/4.3/utilities/overflow/>
+-   Position - <https://getbootstrap.com/docs/4.3/utilities/position/>
+-   Screen readers - <https://getbootstrap.com/docs/4.3/utilities/screen-readers/>
+-   Stretched link - <https://getbootstrap.com/docs/4.3/utilities/stretched-link/>
+-   Text - <https://getbootstrap.com/docs/4.3/utilities/text/>
+-   Vertical alignment - <https://getbootstrap.com/docs/4.3/utilities/vertical-align/>
+-   Visibility - <https://getbootstrap.com/docs/4.3/utilities/visibility/>

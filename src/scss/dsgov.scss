@@ -1,5 +1,5 @@
 /*!
- * Design System de Governo
+ * DSGov: Design System de Governo
  * Versão beta
  * Suporte:
    - Serpro: DIDES/SUPSE/SESEP
@@ -8,8 +8,8 @@
 // Carregar configurações
 @import "base";
 
-// Reset CSS Bootstrap
-@import "../../node_modules/bootstrap/scss/reboot";
+// Gerar tokens
+@import "tokens";
 
 // Utilitários
 @import "utilities";

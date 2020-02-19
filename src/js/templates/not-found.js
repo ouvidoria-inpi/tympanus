@@ -62,7 +62,7 @@ class TemplateSystem {
           navigation.classList.toggle('is-active');
           navigation.setAttribute('data-level', '0');
         }
-      });      
+      });
     }
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       let arrowIcon = document.createElement('i');
@@ -168,10 +168,10 @@ class TemplateSystem {
   }
 }
 
-let systemList = [];
+let systemList2 = [];
 
-window.onload = (function() {
+window.onload = (function () {
   for (let templateSystem of window.document.querySelectorAll('.template-system')) {
-    systemList.push(new TemplateSystem('template-system', templateSystem));
+    systemList2.push(new TemplateSystem('template-system', templateSystem));
   }
 })();

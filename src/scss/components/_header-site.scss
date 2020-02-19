@@ -1,6 +1,6 @@
 .#{$prefix}header-site {
-  background-color: $color-white;
-  box-shadow: 0 3px 6px rgba($color-black, 0.16);
+  background-color: $color-secondary-01;
+  box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16);
   // Agrupador
   .wrapper {
     align-items: flex-start;
@@ -21,12 +21,12 @@
       }
     }
     .name {
-      color: $logo-name-color;
-      font-size: $logo-name-size;
+      color: v(color-primary-darken-02, $color-primary-darken-02);
+      font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
     }
     .description {
-      color: $logo-description-color;
-      font-size: $logo-description-size;
+      color: v($color-secondary-08, $color-secondary-08);
+      font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
     }
   }
   // Links rápidos
@@ -74,26 +74,19 @@
       display: inline-flex;
       flex: 1;
       input {
-        background: $color-gray-2;
+        background: $color-secondary-03;
         border: 0;
         display: none;
         flex: 1;
         padding: ($spacer * 2) $spacer;
-        &::placeholder {
-          color: $placeholder-color;
-          font-size: $placeholder-font-size;
-          font-style: $placeholder-font-style;
-          font-weight: $placeholder-font-weight;
-          opacity: 1;
-        }
       }
       button {
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $color-primary-default;
         padding: 0 ($spacer * 1.5);
         &:hover {
-          background: $color-primary-pastel-1;
+          background: $color-primary-pastel-02;
         }
       }
     }
@@ -105,14 +98,14 @@
       display: none;
       padding: 0 ($spacer * 1.5);
       position: absolute;
-      right: $spacer-half;
+      right: $spacer * 0.5;
       top: 0;
     }
     // Busca ativa
     &.is-active {
       left: 0;
       .field {
-        box-shadow: 0 3px 6px rgba($color-black, 0.16);
+        box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16); // sass-lint:disable-line no-color-literals
         left: 0;
         position: absolute;
         right: 0;
@@ -121,7 +114,7 @@
           display: block;
         }
         button {
-          background-color: $color-gray-2;
+          background-color: $color-secondary-03;
         }
       }
       .close {
@@ -134,7 +127,7 @@
     background: transparent;
     border: 0;
     bottom: 0;
-    color: $color-primary;
+    color: $color-primary-default;
     font-size: 25px;
     left: 0;
     padding: 0 $spacer;
@@ -143,7 +136,7 @@
     top: 0;
     z-index: 1;
     &:hover {
-      color: $color-primary-lighten-2;
+      color: $color-primary-lighten-01;
       text-decoration: none;
     }
   }
@@ -223,7 +216,7 @@
           padding-right: $spacer * 2;
         }
         button {
-          background-color: $color-gray-2;
+          background-color: $color-secondary-03;
           padding-left: $spacer * 2;
           padding-right: $spacer * 2;
         }

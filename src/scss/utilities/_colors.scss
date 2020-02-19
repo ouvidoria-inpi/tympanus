@@ -1,6 +1,5 @@
-// Classes reusáveis de cores de fundo e cores de texto
-@each $name, $value in $br-theme {
-  @include bg-colors(".bg-#{$name}", $value);
-  @include text-colors(".text-#{$name}", $value);
-  @include border-colors(".border-#{$name}", $value);
+@each $item, $value in $tokens-colors {
+  @include text-colors($item, $value);
+  @include bg-colors($item, $value);
+  @include border-colors($item, $value);
 }

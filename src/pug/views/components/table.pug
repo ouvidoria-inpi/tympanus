@@ -6,7 +6,7 @@ append vars
 
 append content
   p.h2.mb-3 Tabela simples
-  +table
+  +table(collapse=true)
   p.h2.mb-3.mt-5 Datatable
-  +table#datatable-default(datatable=true, columns=3)
-  +table#datatable-checkbox.mt-5(datatable=true, checkbox=true, title='Datatable com checkbox', rows=10, columns=8)
+  +table#datatable-default(datatable=true, columns=10)
+  +table#datatable-checkbox.mt-5(datatable=true, checkbox=true, collapse=true, title='Datatable com checkbox', rows=10, columns=8)

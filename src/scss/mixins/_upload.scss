@@ -5,10 +5,10 @@
     padding-right: 16px;
     padding-top: 180px;
   }
-  background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.0/images/upload-fundo.png")
-    32px 24px $color-white no-repeat;
-  border: 1px solid $color-white;
-  box-shadow: 0 3px 6px $color-gray-3;
+  background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/images/upload-fundo.png")
+    32px 24px $color-secondary-01 no-repeat;
+  border: 1px solid $color-secondary-01;
+  box-shadow: 0 3px 6px $color-secondary-04;
   margin-bottom: 20px;
   min-height: 248px;
   padding-bottom: 16px;
@@ -16,7 +16,7 @@
   padding-right: 48px;
   padding-top: 32px;
   &:hover {
-    border: 1px solid $color-primary-lighten-2;
+    border: 1px solid $color-primary-lighten-01;
   }
   .upload-header {
     color: $body-color;
@@ -42,7 +42,7 @@
       padding-left: 0;
     }
     li {
-      border-bottom: 1px solid $color-gray-3;
+      border-bottom: 1px solid $color-secondary-04;
       color: $color-info;
       font-size: 14px;
       list-style: none;
@@ -78,7 +78,6 @@
     }
   }
   .upload-size {
-    // font-size: 10px;
     text-align: right;
     visibility: hidden;
   }

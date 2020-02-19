@@ -216,7 +216,7 @@ class TemplateSystem {
 
 let systemList = [];
 
-window.onload = (function() {
+window.onload = (function () {
   for (let templateSystem of window.document.querySelectorAll(
     ".template-system"
   )) {

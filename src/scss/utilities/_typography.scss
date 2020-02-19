@@ -1,80 +1,142 @@
-// Links na área de conteúdo
-.page-content {
-  a {
-    text-decoration: underline;
+// Texto padrão
+body {
+  color: v(color-secondary-08, $color-secondary-08);
+  font-family: v(font-family-base, $font-family-base);
+  font-size: v(font-size-scale-base, $font-size-scale-base);
+  font-weight: v(font-weight-regular, $font-weight-regular);
+  line-height: v(font-line-height-medium, $font-line-height-medium);
+}
+
+// Parágrafos
+p {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+// Links
+a {
+  color: v(color-primary-default, $color-primary-default);
+  text-decoration: none;
+  &:hover {
+    background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
+  }
+  &:focus {
+    background: v(color-secondary-01, $color-secondary-01)
+      linear-gradient(
+        rgba(v(color-support-02, $color-support-02), 0.3),
+        rgba(v(color-support-02, $color-support-02), 0.3)
+      );
   }
 }
 
-// Título principal - aplicar preferencialmente em <h1>
+// Imagens
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+// Títulos
 h1,
-.main-title,
-.portal-title,
-.h1,
-.title-1 {
-  @include media-breakpoint-down(xs) {
-    font-size: $h1-mobile-font-size;
-  }
-  color: $headings-color;
-  font-family: $headings-font-family;
-  font-size: $h1-font-size;
-  font-weight: 500;
-  line-height: $headings-line-height;
-  margin-bottom: $headings-margin-bottom;
+.h1 {
+  font-size: v(font-size-scale-up-06, $font-size-scale-up-06);
+  font-weight: v(font-weight-regular, $font-weight-regular);
+  line-height: v(font-line-height-low, $font-line-height-low);
+  margin-bottom: 32px;
+  margin-top: 0;
 }
-
-// Título 2
 h2,
-.portal-big-news-title,
-.h2,
-.title-2 {
-  color: $headings-color;
-  font-size: $h2-font-size;
-  font-weight: 500;
-  line-height: $headings-line-height;
-  margin-bottom: $headings-margin-bottom;
+.h2 {
+  font-size: v(font-size-scale-up-05, $font-size-scale-up-05);
+  font-weight: v(font-weight-regular, $font-weight-regular);
+  line-height: v(font-line-height-low, $font-line-height-low);
+  margin-bottom: 20px;
+  margin-top: 28px;
 }
-
-// Subtítulo 1
 h3,
-.h3,
-.portal-small-news-title,
-.subtitle-1,
-.portal-big-news,
-.portal-feature-news {
-  color: $headings-color;
-  font-size: $h3-font-size;
-  font-weight: 500;
-  margin-bottom: 0;
+.h3 {
+  font-size: v(font-size-scale-up-04, $font-size-scale-up-04);
+  font-weight: v(font-weight-regular, $font-weight-regular);
+  line-height: v(font-line-height-low, $font-line-height-low);
+  margin-bottom: 20px;
+  margin-top: 28px;
 }
-
-// Subtítulo 2
 h4,
-.h4 .subtitle-2 {
-  color: $headings-color;
-  font-size: $h4-font-size;
-  font-weight: 600;
-  margin-bottom: 0;
+.h4 {
+  font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
+  font-weight: v(font-weight-regular, $font-weight-regular);
+  line-height: v(font-line-height-low, $font-line-height-low);
+  margin-bottom: 20px;
+  margin-top: 28px;
+}
+h5,
+.h5 {
+  font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
+  font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+  line-height: v(font-line-height-low, $font-line-height-low);
+  margin-bottom: 16px;
+  margin-top: 28px;
+}
+h6,
+.h6 {
+  font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
+  font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+  line-height: v(font-line-height-low, $font-line-height-low);
+  margin-bottom: 16px;
+  margin-top: 28px;
 }
 
-// Rótulos - aplicar preferencialmente em <label>
+// Listas
+ul,
+ol {
+  margin: 1rem 0;
+  padding: 0 3rem;
+}
+
+// Blockquotes
+blockquote {
+  background-color: v(color-secondary-02, $color-secondary-02);
+  border-left: 4px solid $color-highlight;
+  font-style: italic;
+  margin: 1rem 0;
+  padding: 1rem;
+  position: relative;
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Formulários
+label,
 .label {
-  color: $label-color;
-  font-size: $label-font-size;
-  font-weight: $label-font-weight;
-  margin-bottom: $label-margin-bottom;
+  font-size: v(font-size-scale-base, $font-size-scale-base);
+  font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+  line-height: v(font-line-height-medium, $font-line-height-medium);
+  margin-bottom: 4px;
 }
-
-// Agrupador de formulário - aplicar preferencialmente em <legend> de <fieldset>
 fieldset legend,
 .fieldset {
-  color: $fieldset-color;
-  font-size: $fieldset-font-size;
-  font-weight: $fieldset-font-weight;
-  margin-bottom: $fieldset-margin-bottom;
+  font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
+  font-weight: v(font-weight-regular, $font-weight-regular);
+  line-height: v(font-line-height-low, $font-line-height-low);
+  margin-bottom: 4px;
+}
+::placeholder,
+.placeholder {
+  font-size: v(font-size-scale-base, $font-size-scale-base);
+  font-style: italic;
+  font-weight: v(font-weight-medium, $font-weight-medium);
+  line-height: v(font-line-height-medium, $font-line-height-medium);
+  opacity: 1;
+}
+input,
+.input {
+  font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
+  font-weight: v(font-weight-medium, $font-weight-medium);
+  line-height: v(font-line-height-low, $font-line-height-low);
+  margin-bottom: 4px;
 }
 
 // Help
 .help {
-  color: $help-color;
-  font-size: $help-font-size;
+  font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
 }

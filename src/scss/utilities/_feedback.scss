@@ -1,9 +1,9 @@
 // Feedback
 .feedback {
-  font-size: $feedback-font-size;
-  font-style: $feedback-font-style;
-  font-weight: $feedback-font-weight;
-  padding: $spacer-half;
+  font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
+  font-style: italic;
+  font-weight: v(font-weight-medium, $font-weight-medium);
+  padding: $spacer * 0.5;
   &.is-valid {
     color: $color-success;
   }

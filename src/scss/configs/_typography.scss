@@ -1,75 +1,60 @@
-// Configuração da tipografia do design system
-
-// Família de fontes padrão
+// Família de fontes base
 $font-family-base: "Rawline", "Raleway", sans-serif;
 
-// Body
-$body-color: $color-gray-6;
-$font-size-base: 1rem; // 16px
-$font-weight-base: 500;
+// Pesos
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+$tokens-font-weight: (
+  font-weight-thin: $font-weight-thin,
+  font-weight-extra-light: $font-weight-extra-light,
+  font-weight-light: $font-weight-light,
+  font-weight-regular: $font-weight-regular,
+  font-weight-medium: $font-weight-medium,
+  font-weight-semi-bold: $font-weight-semi-bold,
+  font-weight-bold: $font-weight-bold,
+  font-weight-extra-bold: $font-weight-extra-bold,
+  font-weight-black: $font-weight-black
+);
 
-// links
-$link-color: $color-primary;
-$link-hover-color: $color-primary-lighten-2;
+// Tamanhos
+$font-size-scale-base: 14px;
+$font-size-scale-down-01: $font-size-scale-base * 0.833;
+$font-size-scale-down-02: $font-size-scale-base * 0.694;
+$font-size-scale-down-03: $font-size-scale-base * 0.579;
+$font-size-scale-up-01: $font-size-scale-base * 1.2;
+$font-size-scale-up-02: $font-size-scale-base * 1.44;
+$font-size-scale-up-03: $font-size-scale-base * 1.728;
+$font-size-scale-up-04: $font-size-scale-base * 2.074;
+$font-size-scale-up-05: $font-size-scale-base * 2.488;
+$font-size-scale-up-06: $font-size-scale-base * 2.986;
+$font-size-scale-up-07: $font-size-scale-base * 3.583;
+$tokens-font-size: (
+  font-size-scale-base: $font-size-scale-base,
+  font-size-scale-down-01: $font-size-scale-down-01,
+  font-size-scale-down-02: $font-size-scale-down-02,
+  font-size-scale-down-03: $font-size-scale-down-03,
+  font-size-scale-up-01: $font-size-scale-up-01,
+  font-size-scale-up-02: $font-size-scale-up-02,
+  font-size-scale-up-03: $font-size-scale-up-03,
+  font-size-scale-up-04: $font-size-scale-up-04,
+  font-size-scale-up-05: $font-size-scale-up-05,
+  font-size-scale-up-06: $font-size-scale-up-06,
+  font-size-scale-up-07: $font-size-scale-up-07
+);
 
-// Títulos
-$headings-color: $color-primary;
-$headings-line-height: 1.5;
-$headings-margin-bottom: $spacer * 5;
-
-$h1-font-size: $font-size-base * 2.25; // 36px
-$h2-font-size: $font-size-base * 1.5; // 24px
-$h3-font-size: $font-size-base * 1.25; // 20px
-$h4-font-size: $font-size-base * 1.125; // 18px
-$h5-font-size: $font-size-base;
-$h6-font-size: $font-size-base;
-
-$h1-mobile-font-size: $font-size-base * 1.625; // 26px
-
-// Formulários
-$label-color: $color-gray-7;
-$label-font-size: $font-size-base;
-$label-font-weight: 600;
-$label-margin-bottom: $spacer * 2;
-
-$input-color: $body-color;
-$input-font-size: $font-size-base;
-$input-font-weight: 600;
-
-$placeholder-color: $input-color;
-$placeholder-font-size: $font-size-base * 0.875; // 14px
-$placeholder-font-style: italic;
-$placeholder-font-weight: 400;
-
-$fieldset-color: $color-primary;
-$fieldset-font-size: $font-size-base * 1.375; // 22px
-$fieldset-font-weight: $font-weight-base;
-$fieldset-margin-bottom: $spacer * 3; // 24px
-
-$help-color: $color-gray-7;
-$help-font-size: $font-size-base * 0.8125; // 13px
-
-$feedback-font-size: $font-size-base * 0.8125; // 13px
-$feedback-font-style: italic;
-$feedback-font-weight: 500;
-
-// Logo
-$logo-name-color: $color-primary-darken-2;
-$logo-name-size: 20px;
-$logo-name-desktop: 24px;
-
-$logo-description-color: $color-gray-7;
-$logo-description-size: 12px;
-$logo-description-desktop: 18px;
-
-// Breadcrumbs
-$breadcrumbs-font-size: $font-size-base * 0.75; // 12px
-$breadcrumbs-font-weight: 600;
-
-$breadcrumbs-divider: ">";
-$breadcrumbs-divider-color: $color-gray-4;
-$breadcrumbs-divider-size: $breadcrumbs-font-size;
-
-// Abas
-$tabs-font-size: $font-size-base * 1.125; // 18px
-$tabs-font-weight: 600;
+// Altura de linhas
+$font-line-height-low: 1.15;
+$font-line-height-medium: 1.45;
+$font-line-height-high: 1.85;
+$tokens-line-height: (
+  font-line-height-low: $font-line-height-low,
+  font-line-height-medium: $font-line-height-medium,
+  font-line-height-high: $font-line-height-high
+);
