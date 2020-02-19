@@ -3,20 +3,24 @@
     @include button-pill;
   }
   &.is-secondary {
-    @include button-pill($color-white, $color-primary);
+    @include button-pill($color-secondary-01, $color-primary-default);
   }
   &.is-call-to-action {
-    @include button-pill($color-secondary, $color-white, $color-gray-2);
+    @include button-pill(
+      $color-highlight,
+      $color-secondary-01,
+      $color-secondary-03
+    );
     border-width: $button-action-border-width;
     height: $button-height-default + ($button-action-border-width * 2);
     &:hover,
     &:focus {
-      background-color: $color-teal;
-      border-color: $color-gray-2;
-      color: $color-white;
+      background-color: $color-support-01;
+      border-color: $color-secondary-03;
+      color: $color-secondary-01;
     }
     &:disabled {
-      border-color: $color-gray-2;
+      border-color: $color-secondary-03;
     }
     @include media-breakpoint-up(sm) {
       min-width: $button-action-min-width;
@@ -67,7 +71,7 @@
     position: relative;
     &::after {
       animation: spinAround 500ms infinite linear;
-      border: 2px solid $color-white;
+      border: 2px solid $color-secondary-01;
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
@@ -81,7 +85,7 @@
     }
     &.is-secondary {
       &::after {
-        border-color: $color-primary;
+        border-color: $color-primary-default;
         border-right-color: transparent;
         border-top-color: transparent;
       }

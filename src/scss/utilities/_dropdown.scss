@@ -3,8 +3,8 @@
   position: relative;
   z-index: 1;
   .menu {
-    background: $color-white;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22);
+    background: $color-secondary-01;
+    box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22); // sass-lint:disable-line no-color-literals
     display: none;
     position: absolute;
     // Rótulo
@@ -15,7 +15,7 @@
     }
     // Item de menu
     .item {
-      background: $color-white;
+      background: $color-secondary-01;
       border: 0;
       display: block;
       padding: $spacer ($spacer * 2);
@@ -29,7 +29,7 @@
       &.item {
         text-decoration: none;
         &:hover {
-          background: $color-primary-pastel-1;
+          background: $color-primary-pastel-02;
         }
       }
     }

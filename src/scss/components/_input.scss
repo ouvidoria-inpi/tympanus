@@ -1,14 +1,7 @@
 .#{$prefix}input {
   position: relative;
-  label {
-    color: $label-color;
-    font-size: $label-font-size;
-    font-weight: $label-font-weight;
-    margin-bottom: $spacer-half;
-  }
   input {
-    @include placeholder;
-    background: $color-white;
+    background: $color-secondary-01;
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
     color: $input-color;
@@ -19,7 +12,11 @@
     padding-right: $spacer * 5;
     width: 100%;
     &:focus {
-      background-color: #FBF7B9;
+      background: v(status-focused-background, status-focused-background)
+    linear-gradient(
+      v(status-focused-overlay, status-focused-overlay),
+      v(status-focused-overlay, status-focused-overlay)
+    );
     }
     &:invalid {
       border-color: $color-danger;
@@ -61,17 +58,17 @@
       }
     }
     button.icon {
-      color: $color-primary;
+      color: $color-primary-default;
       &:focus,
       &:hover {
-        color: $color-primary-lighten-2;
+        color: $color-primary-lighten-01;
       }
     }
   }
   // Lista de autocomplete
   .search-items {
-    background: $color-white;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22);
+    background: $color-secondary-01;
+    box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22); // sass-lint:disable-line no-color-literals
     left: 0;
     margin-top: 1px;
     position: absolute;
@@ -83,7 +80,7 @@
       padding: $spacer;
       &.is-active,
       &:hover {
-        background-color: $color-primary-pastel-1;
+        background-color: $color-primary-pastel-02;
       }
     }
   }

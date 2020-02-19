@@ -19,7 +19,7 @@ append template
     // Menu de navegação
     nav#navigation.navigation(data-children='hover' data-level='0')
       .wrapper
-        .bg-gray-2
+        .bg-color-secondary-03
           .container
             // Logo e avatar
             .header-bar
@@ -246,98 +246,99 @@ append template
         block content
   // Rodapé de governo
   footer#footer.page-footer
-    .bg-primary-darken-2.text-white
+    .bg-color-primary-darken-02.text-color-secondary-01
       .container
         // Logo do rodapé
         .logo
-          img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbrNegativa.svg' alt='gov.br')
-        // Itens de navegação
-        .navigation.is-active
-          ul.local(data-level='0')
-            li.item.is-active
-              button(type='button') Item de nível 1
-              ul.submenu.level-1(data-level='1')
-                li.item.is-active
-                  a(href='') Item de nível 2.1
-                li.item.is-active
-                  a(href='') Item de nível 2.2
-                li.item.is-active
-                  a(href='') Item de nível 2.3
-                li.item.is-active
-                  a(href='') Item de nível 2.4
-                li.item.is-active
-                  a(href='') Item de nível 2.5
-            li.item.is-active
-              button(type='button') Conheça a Presidência
-              ul.submenu.level-1(data-level='1')
-                li.item.is-active
-                  a(href='') Biografia do Presidente
-                li.item.is-active
-                  a(href='') Ministros
-                li.item.is-active
-                  a(href='') Principais Tropas
-                li.item.is-active
-                  a(href='') Palácio e Residências
-                li.item.is-active
-                  a(href='') Acervo
-                li.item.is-active
-                  a(href='') Ritos e Solenidades
-                li.item.is-active
-                  a(href='') Presentes recebidos pelo Presidênte da República
-            li.item.is-active
-              button(type='button') Vice-Presidência
-              ul.submenu.level-1(data-level='1')
-                li.item.is-active
-                  a(href='') Agenda Vice-Presidente
-                li.item.is-active
-                  a(href='') Agendas do Gabinete Pessoal da Vice-Presidência
-                li.item.is-active
-                  a(href='') Biografia
-                li.item.is-active
-                  a(href='') Atribuições
-                li.item.is-active
-                  a(href='') Discursos e Pronunciamentos
-            li.item.is-active
-              button(type='button') Acesso á Informação
-              ul.submenu.level-1(data-level='1')
-                li.item.is-active
-                  a(href='') Institucional
-                li.item.is-active
-                  a(href='') Ações e Programas
-                li.item.is-active
-                  a(href='') Dados abertos
-                li.item.is-active
-                  a(href='') Auditorias
-                li.item.is-active
-                  a(href='') Convênios
-                li.item.is-active
-                  a(href='') Despesas
-                li.item.is-active
-                  a(href='') Licitações e contratos
-                li.item.is-active
-                  a(href='') Servidores
-                li.item.is-active
-                  a(href='') Informações Classificadas
-                li.item.is-active
-                  a(href='') Serviço de Informação ao Cidadão
-            li.item.is-active
-              button(type='button') Centrais de Conteúdo
-              ul.submenu.level-1(data-level='1')
-                li.item.is-active
-                  a(href='') Imagens
-                li.item.is-active
-                  a(href='') Vídeos
-                li.item.is-active
-                  a(href='') Áudios
-            li.item.is-active
-              button(type='button') Fale Conosco
-              ul.submenu.level-1(data-level='1')
-                li.item.is-active
-                  a(href='') Fale com o Presidente
-                li.item.is-active
-                  a(href='') Ouvidoria
-            li.item.is-active
-              a(href='') Mensagem do Presidente
+          img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/'+version+'/images/govbrNegativa.svg' alt='gov.br')
+        block sitemap
+          // Itens de navegação
+          .navigation.is-active
+            ul.local(data-level='0')
+              li.item.is-active
+                button(type='button') Item de nível 1
+                ul.submenu.level-1(data-level='1')
+                  li.item.is-active
+                    a(href='') Item de nível 2.1
+                  li.item.is-active
+                    a(href='') Item de nível 2.2
+                  li.item.is-active
+                    a(href='') Item de nível 2.3
+                  li.item.is-active
+                    a(href='') Item de nível 2.4
+                  li.item.is-active
+                    a(href='') Item de nível 2.5
+              li.item.is-active
+                button(type='button') Conheça a Presidência
+                ul.submenu.level-1(data-level='1')
+                  li.item.is-active
+                    a(href='') Biografia do Presidente
+                  li.item.is-active
+                    a(href='') Ministros
+                  li.item.is-active
+                    a(href='') Principais Tropas
+                  li.item.is-active
+                    a(href='') Palácio e Residências
+                  li.item.is-active
+                    a(href='') Acervo
+                  li.item.is-active
+                    a(href='') Ritos e Solenidades
+                  li.item.is-active
+                    a(href='') Presentes recebidos pelo Presidênte da República
+              li.item.is-active
+                button(type='button') Vice-Presidência
+                ul.submenu.level-1(data-level='1')
+                  li.item.is-active
+                    a(href='') Agenda Vice-Presidente
+                  li.item.is-active
+                    a(href='') Agendas do Gabinete Pessoal da Vice-Presidência
+                  li.item.is-active
+                    a(href='') Biografia
+                  li.item.is-active
+                    a(href='') Atribuições
+                  li.item.is-active
+                    a(href='') Discursos e Pronunciamentos
+              li.item.is-active
+                button(type='button') Acesso á Informação
+                ul.submenu.level-1(data-level='1')
+                  li.item.is-active
+                    a(href='') Institucional
+                  li.item.is-active
+                    a(href='') Ações e Programas
+                  li.item.is-active
+                    a(href='') Dados abertos
+                  li.item.is-active
+                    a(href='') Auditorias
+                  li.item.is-active
+                    a(href='') Convênios
+                  li.item.is-active
+                    a(href='') Despesas
+                  li.item.is-active
+                    a(href='') Licitações e contratos
+                  li.item.is-active
+                    a(href='') Servidores
+                  li.item.is-active
+                    a(href='') Informações Classificadas
+                  li.item.is-active
+                    a(href='') Serviço de Informação ao Cidadão
+              li.item.is-active
+                button(type='button') Centrais de Conteúdo
+                ul.submenu.level-1(data-level='1')
+                  li.item.is-active
+                    a(href='') Imagens
+                  li.item.is-active
+                    a(href='') Vídeos
+                  li.item.is-active
+                    a(href='') Áudios
+              li.item.is-active
+                button(type='button') Fale Conosco
+                ul.submenu.level-1(data-level='1')
+                  li.item.is-active
+                    a(href='') Fale com o Presidente
+                  li.item.is-active
+                    a(href='') Ouvidoria
+              li.item.is-active
+                a(href='') Mensagem do Presidente
         // Redes sociais
         .social-network
           span Redes sociais
