@@ -35,7 +35,7 @@ if (brTables) {
       setHeaderWidth(brTable, headers)
     }
     if (searchBar) toogleSearch(searchBar, searchTrigger, searchClose)
-    if (gridLTrigger) toggleGrid(brTable, gridLTrigger, gridSTrigger)
+    if (gridLTrigger) toogleGrid(brTable, gridLTrigger, gridSTrigger)
     setClickActions(brTable)
     hoverRow(rows, collapse)
 
@@ -92,13 +92,13 @@ function toogleSearch(container, trigger, close) {
 
 function toogleGrid(table, gridLTrigger, gridSTrigger) {
   if (gridLTrigger) {
-    trigger.addEventListener('click', function() {
+    gridLTrigger.addEventListener('click', function() {
       table.classList.remove("is-grid-small")
     })
   }
 
   if (gridSTrigger) {
-    close.addEventListener('click', function() {
+    gridSTrigger.addEventListener('click', function() {
       table.classList.add("is-grid-small")
     })
   }
