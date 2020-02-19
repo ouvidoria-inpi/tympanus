@@ -1,5 +1,5 @@
 // Gerar classes de display
-@each $display in $displays {
+@each $display in $display-types {
   @include display($display, "#{$display-prefix}#{$display}");
 }
 
