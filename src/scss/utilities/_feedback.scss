@@ -3,11 +3,14 @@
   font-size: $feedback-font-size;
   font-style: $feedback-font-style;
   font-weight: $feedback-font-weight;
-  padding: $spacer-half;
+  padding-top: $spacer;
   &.is-valid {
     color: $color-success;
   }
   &.is-invalid {
     color: $color-danger;
+  }
+  &.is-disabled {
+    color: $color-gray-6;
   }
 }

@@ -16,12 +16,10 @@
     font-weight: $input-font-weight;
     height: $input-default;
     padding-left: $spacer * 2;
-    padding-right: $spacer * 2;
+    padding-right: $spacer * 5;
     width: 100%;
     &:focus {
-      border-color: $color-primary-lighten-1;
-      box-shadow: 0 0 0 1px $color-primary-lighten-1;
-      outline: none;
+      background-color: #FBF7B9;
     }
     &:invalid {
       border-color: $color-danger;
@@ -29,6 +27,7 @@
     }
     &:disabled {
       background: $color-gray-2;
+      border-color: $color-gray-3;
     }
   }
   // Input com ícone
@@ -88,10 +87,12 @@
     }
   }
   // Tamanhos
-  @each $size, $value in (medium, $input-medium), (small, $input-small) {
+  @each $size, $value, $weight in (medium, $input-medium, $input-font-weight), 
+  (small, $input-small, $input-font-weight-small) {
     &.is-#{$size} {
       input {
         height: $value;
+        font-weight: $weight;
       }
       .icon {
         height: $value;
@@ -100,8 +101,8 @@
     }
   }
   // Estados
-  @each $state, $color in (focus, $color-primary-lighten-2),
-    (valid, $color-success), (invalid, $color-danger)
+  @each $state, $color in (valid, $color-success), 
+  (invalid, $color-danger) //,(focus, $color-primary-lighten-2)
   {
     &.is-#{$state} {
       input {
@@ -109,6 +110,11 @@
         box-shadow: 0 0 0 1px $color;
         outline: none;
       }
+    }
+  }
+  &.is-#{focus} {
+    input {
+      background-color: #FBF7B9;
     }
   }
 }

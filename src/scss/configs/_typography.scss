@@ -27,14 +27,15 @@ $h6-font-size: $font-size-base;
 $h1-mobile-font-size: $font-size-base * 1.625; // 26px
 
 // Formulários
-$label-color: $color-gray-7;
-$label-font-size: $font-size-base;
+$label-color: $color-gray-6;
+$label-font-size: $font-size-base * 0.875;
 $label-font-weight: 600;
 $label-margin-bottom: $spacer * 2;
 
 $input-color: $body-color;
-$input-font-size: $font-size-base;
+$input-font-size: $font-size-base * 1.05; // 16,8px
 $input-font-weight: 600;
+$input-font-weight-small: 500;
 
 $placeholder-color: $input-color;
 $placeholder-font-size: $font-size-base * 0.875; // 14px
@@ -47,9 +48,9 @@ $fieldset-font-weight: $font-weight-base;
 $fieldset-margin-bottom: $spacer * 3; // 24px
 
 $help-color: $color-gray-7;
-$help-font-size: $font-size-base * 0.8125; // 13px
+$help-font-size: $font-size-base * 0.875;
 
-$feedback-font-size: $font-size-base * 0.8125; // 13px
+$feedback-font-size: $font-size-base * 0.875; // 14px
 $feedback-font-style: italic;
 $feedback-font-weight: 500;
 
