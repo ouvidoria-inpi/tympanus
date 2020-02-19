@@ -20,20 +20,24 @@ if (brTables) {
     let searchBar = brTable.querySelector('.search-bar')
     let searchTrigger = brTable.querySelector('.search-trigger')
     let searchClose = brTable.querySelector('.search-close')
+    let gridLTrigger = brTable.querySelector('.grid-large-trigger')
+    let gridSTrigger = brTable.querySelector('.grid-small-trigger')
     let responsive = brTable.querySelector('.responsive')
     let headers = brTable.querySelector('table thead tr')
     let rows = brTable.querySelectorAll('table tbody tr')
+    let collapse = brTable.classList.contains('is-collapsible')
 
     brTableNumber++
 
     if (responsive) setSyncScroll(responsive)
     if (headers) {
-      setHeaderWidth(brTable, headers)
       cloneHeader(brTable, headers)
+      setHeaderWidth(brTable, headers)
     }
     if (searchBar) toogleSearch(searchBar, searchTrigger, searchClose)
+    if (gridLTrigger) toogleGrid(brTable, gridLTrigger, gridSTrigger)
     setClickActions(brTable)
-    hoverRow(rows)
+    hoverRow(rows, collapse)
 
     
     window.addEventListener('resize', function() {
@@ -47,8 +51,22 @@ if (brTables) {
   }
 }
 
-function hoverRow(rows) {
+function hoverRow(rows, collapse) {
   for (let row of rows) {
+    if ( collapse ) {
+      let colapseIco = document.createElement('i')
+      let colapseBtn = document.createElement('button')
+      colapseIco.classList.add('fas','fa-chevron-up')
+      colapseBtn.classList.add('br-button','is-circle','is-secondary','mobile','col-collapse')
+      colapseBtn.type 
+      colapseBtn.appendChild(colapseIco)
+      row.children[0].appendChild(colapseBtn)
+      colapseBtn.addEventListener('click', function() {
+        row.classList.toggle('is-collapsed') 
+        this.children[0].classList.toggle('fa-chevron-up')
+        this.children[0].classList.toggle('fa-chevron-down')
+      })
+    }
     row.addEventListener('mouseenter', function() {
       row.classList.add(hover)
     })
@@ -68,6 +86,20 @@ function toogleSearch(container, trigger, close) {
   if (close) {
     close.addEventListener('click', function() {
       container.classList.remove(active)
+    })
+  }
+}
+
+function toogleGrid(table, gridLTrigger, gridSTrigger) {
+  if (gridLTrigger) {
+    gridLTrigger.addEventListener('click', function() {
+      table.classList.remove("is-grid-small")
+    })
+  }
+
+  if (gridSTrigger) {
+    gridSTrigger.addEventListener('click', function() {
+      table.classList.add("is-grid-small")
     })
   }
 }
@@ -122,8 +154,9 @@ function cloneHeader(parent, element) {
 
   headersTag.classList.add(brTablesHeadersClass)
   headersTag.appendChild(scrollerTag)
-
-  parent.appendChild(headersTag)
+  let responsive = parent.querySelector('.responsive')
+  if ( responsive )responsive.insertAdjacentElement("beforebegin", headersTag)
+  else parent.appendChild(headersTag)
 }
 
 function setClickActions(brTable) {
@@ -206,7 +239,7 @@ function checkAllTable(selectedBar, tableCheckboxes, headerCheckbox) {
 function setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox) {
   let info_count = selectedBar.querySelector('.info .count')
   let info_text = selectedBar.querySelector('.info .text')
-  let mobile_ico = selectedBar.querySelector('.info .select-all svg')
+  let mobile_ico = selectedBar.querySelector('.info .select-all').children[0]
   let total = count < 2 ? parseInt(info_count.innerHTML, 10) + count : count
 
   if (total > 0) {

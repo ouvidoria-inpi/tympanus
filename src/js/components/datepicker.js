@@ -1,3 +1,4 @@
+//
 class BRDatepicker {
 
   constructor(name, component, configData) {
@@ -13,7 +14,7 @@ class BRDatepicker {
     this._ERRO_5_AND = ' e ';
     
     // Configuração padrão do datepicker
-    this._formater = (input, date, instance) => {
+    this._formatter = (input, date, instance) => {
       const value = date.toLocaleDateString();
       input.value = value; // => '1/1/2099'
     }
@@ -41,7 +42,34 @@ class BRDatepicker {
     this._noWeekends              = true;
     this._id                      = "dtp" + Math.floor(Math.random() * 100);
     
-    this._datepickerProperties = ["onSelect","onShow","onHide","onMonthChange","position","startDay","customDays","customMonths","customOverlayMonths","overlayButtom","overlayPlaceholder","events","alwaysShow","dateSelected","maxDate","minDate","startDate","showAllDates","respectDisabledReadOnly","noWeekends","disabler","disableDates","disableMobile","disableYearOverlay","disabled","id"];
+    this._datepickerProperties = [
+      "onSelect",
+      "onShow",
+      "onHide",
+      "onMonthChange",
+      "formatter",
+      "position",
+      "startDay",
+      "customDays",
+      "customMonths",
+      "customOverlayMonths",
+      "overlayButtom",
+      "overlayPlaceholder",
+      "events",
+      "alwaysShow",
+      "dateSelected",
+      "maxDate",
+      "minDate",
+      "startDate",
+      "showAllDates",
+      "respectDisabledReadOnly",
+      "noWeekends",
+      "disabler",
+      "disableDates",
+      "disableMobile",
+      "disableYearOverlay",
+      "disabled",
+      "id"];
 
     for (let inputDate of this.component.querySelectorAll(".br-input input")) {
       this.picker = datepicker(inputDate, this._configDatepicker(configData));

@@ -1,5 +1,7 @@
-mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=4, rows=10)
+mixin table(datatable=false, title='Título da Tabela', checkbox=false, collapse=false, columns=4, rows=10)
   - let datatableClass = attributes.datatable ? "is-datatable" : ""
+  - datatableClass = attributes.checkbox ? datatableClass  + " is-checkbox" : datatableClass
+  - datatableClass = attributes.collapse ? datatableClass  + " is-collapsible" : datatableClass
   - let column = 1
   - let row = 1
   .br-table(
@@ -10,6 +12,13 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
       .header
         .top-bar
           .title=attributes.title ? attributes.title : title
+          .grid-button
+            +button.grid-small-trigger.is-circle.is-tertiary
+              i.fas.fa-th
+          .grid-button
+            +button.grid-large-trigger.is-circle.is-tertiary
+              i.fas.fa-th-large    
+          .divisor
           .search-button
             +button.search-trigger.is-circle.is-tertiary
               i.fas.fa-search
@@ -60,7 +69,7 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, columns=
                   +checkbox("")(id=`${attributes.id}-line-${row}` name="check")
               - column = 1
               while (column <= (attributes.columns ? attributes.columns : columns))
-                - let random = `kjnsiojashbnio bdkasjdb kjsdaskd ajlblk ajdbaksdj `//Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+                - let random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
                 - random = random.replace(/(\w{8})/g, '$1 ').replace(/(^\s+|\s+$)/,'')
                 td(data-th=`Coluna ${column}`)=random
                 - column++

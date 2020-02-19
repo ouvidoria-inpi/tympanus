@@ -1,15 +1,10 @@
-// TODO: Efeito resize de altura da linha - criar estilos e aplicar a variável $column-compact
-// TODO: Menu compacto e barrinha de opções
-// TODO: Barra de filtros
-// TODO: Barra de itens selecionados
-
 $column-height: 56px;
-$column-compact: 24px;
+$column-compact: 40px;
 $column-spacing: 16px;
 $column-gap: 6px;
 
 .#{$prefix}table {
-  display: grid;
+  display: block; //grid;
   .header {
     order: 0;
   }
@@ -32,16 +27,26 @@ $column-gap: 6px;
     padding-right: $column-spacing;
     .title {
       flex-grow: 1;
-      font-size: 24px;
+      line-height: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 600;
     }
-    .search-button {
-      .br-button {
-        border-color: transparent;
-        &:hover {
-          background-color: $color-primary-pastel-1;
-        }
+    .br-button {
+      border-color: transparent;
+      &:hover {
+        background-color: $color-primary-pastel-1;
+        cursor: pointer;
       }
+    }
+    .divisor {
+      border-right: 1px solid #ccc;
+      height: 1.5em;
+      margin: 0 5px 0 5px;
+    } 
+    .grid-small-trigger,
+    .grid-large-trigger,
+    .divisor {
+      display: none;
     }
   }
   .bottom-bar {
@@ -92,13 +97,14 @@ $column-gap: 6px;
     background-color: $color-primary;
     bottom: 0;
     display: flex;
+    height: 0;
     opacity: 0;
     padding: $column-spacing * 0.5 $column-spacing;
     position: absolute;
     left: 0;
     right: 0;
     top: 100%;
-    transition: top 150ms, opacity 100ms;
+    transition: top 150ms;
     z-index: -1;
     .search-close {
       background-color: transparent;
@@ -115,6 +121,7 @@ $column-gap: 6px;
       opacity: 1;
       top: 0;
       z-index: 1;
+      height: $column-height;
     }
   }
   .selected-bar {
@@ -122,60 +129,89 @@ $column-gap: 6px;
     background-color: $color-primary;
     bottom: 0;
     display: flex;
+    height: 0;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     left: 0;
     opacity: 0;
-    padding: $column-spacing * 0.5 $column-spacing;
+    padding: 0 11px;//$column-spacing * 0.5 $column-spacing;
     position: absolute;
     right: 0;
     top: 100%;
-    transition: top 150ms, opacity 100ms;
+    transition: top 150ms;
     z-index: -1;
     .info {
       flex-grow: 1;
       white-space: nowrap;
-      .text,
-      .count {
-        color: $color-white;
-        padding-right: 10px;
+      display: flex;
+      align-items: center;
+      .select-all {
+        font-size: 24px;
+        margin-right: 4px;
+        //margin-left: 11px;
+        padding: 0;
       }
     }
-    .action-button {
-      button {
-        span {
-          padding-right: 8px;
-        }
+    .text,
+    .count {
+      padding-right: 4px;
+      line-height: 20px;
+      color: $color-white;
+    }
+    button {
+      min-width: 32px;
+      padding: 1px 0px;
+      width: 32px;
+      outline: 0;
+      &:hover, &:focus {
+        background-color: transparent !important;
+        border-color:  transparent !important;
+      }
+      span {
+        display: none;
       }
     }
     .mobile {
-      display: none;
+      display: inline;
     }
     &.is-active {
       opacity: 1;
       top: 0;
       z-index: 2;
+      height: $column-height;
     }
   }
   table {
     display: block;
     tr {
       display: block;
+      position: relative;
       background: $color-white;
       color: $color-gray-6;
+      transition: max-height 500ms;
+      max-height: 100em;
+      &.is-collapsed {
+        max-height: 5em;
+        overflow: hidden;
+        td:nth-child(1) {
+          max-height: 3.8em;
+          overflow: hidden;
+        }
+      }
       &.is-selected {
         background: $color-primary-lighten-2;
         color: $color-white;
           &.is-hover, 
-          &:hover{
+          &:hover,
+          td:before {
             background: $color-primary-lighten-2;
-            color:  $color-white;
+            color: $color-white !important;
           }
       }
       &.is-hover, 
       &:hover {
-        background: $color-primary-pastel-1;
+        background: default;
         color: default;
       }
     }
@@ -195,6 +231,19 @@ $column-gap: 6px;
         display: block;
         font-weight: 600;
       }
+      .col-collapse,
+      .col-collapse:hover,
+      .col-collapse:focus  {
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 1.2em;
+        min-width: 32px;
+        padding: 1px 0px;
+        border: 0;
+        color: inherit;
+        background: transparent !important;
+      }
     }
     thead {
       display: block;
@@ -205,6 +254,32 @@ $column-gap: 6px;
         box-shadow: 0 3px 6px rgba($color-black, 0.16);
         margin: $column-spacing * 0.5 0;
         padding: $column-spacing * 0.5 0;
+      }
+    }
+  }
+  &.is-checkbox {
+    table tbody tr {
+      td {
+        padding-left: 52px;
+        padding-right: 52px;
+        &:first-child {
+          position: absolute;
+          padding-right: 4px;
+          padding-left: 16px;
+          top: 1em;
+          width: 100%;
+          .col-collapse {
+            top: 0.3em;
+          }
+        }
+      }
+      &.is-collapsed td:nth-child(1) {
+        max-height: auto;
+        overflow: visible;
+      }
+      &.is-collapsed td:nth-child(2) {
+        max-height: 3.8em;
+        overflow: hidden;
       }
     }
   }
@@ -245,87 +320,48 @@ $column-gap: 6px;
     }
   }
   
-// Resolve bug na rolagem do firefox e limita aparecimento da barra de rolagem horizonyal
-  .syncscroll,
+// Resolve bug na rolagem do firefox e limita aparecimento da barra de rolagem horizontal
   .header,
   .headers,
   .responsive {
-    width: calc(100vw - 27px);
+    width: 100%;
+    position: relative;
   }
+
   .syncscroll {
     overflow: auto;
   }
   
-  @include media-breakpoint-down(sm) {
-    .top-bar {
-      .title {
-        line-height: 1.4rem;
-        font-size: 1.3rem;
-      }
-    }
-    
-    .selected-bar {
-      align-items: center;
-      padding: 8px 0px;
-      .info {
-        display: flex;
-        align-items: center;
-        .select-all {
-          font-size: 24px;
-          margin-right: 4px;
-          margin-left: 11px;
-        }
-        .count {
-          padding-right: 4px;
-        }
-        .text {
-          line-height: 20px;
-        }
-      }
-      button {
-        min-width: 32px;
-        padding: 1px 0px;
-        width: 32px;
-        &:hover, &:focus {
-          background-color: transparent !important;
-          border-color:  transparent !important;
-        }
-        span {
-          display: none;
-        }
-      }
-      .mobile {
-        display: inline;
-      }
-    }
-    table {
-      tr {
-        &.is-selected {
-          background: $color-primary-lighten-2;
-          color: $color-white !important;
-          &:hover, 
-          td:before {
-            background: $color-primary-lighten-2;
-            color: $color-white;
-          }
-        }
-        &.is-hover, 
-        &:hover {
-          background: $color-white;
-          color: $color-gray-6;
-        }
-      }
-    }
-  }
+ 
   // Versão tablet
   @include media-breakpoint-up(sm) {
     .top-bar {
       background-color: $color-white;
+      title {
+        line-height: 1.5rem;
+        font-size: 1.6rem;
+      }
+      .grid-small-trigger,
+      .grid-large-trigger,
+      .divisor {
+        display: inline-block;
+      }
     }
     .selected-bar {
       padding: 0 1rem;
       .mobile {
         display: none;
+      }
+      .action-button {
+        button {
+          width: auto;
+          min-width: auto;
+          span {
+            display: inline;
+            padding-right: 8px;
+            padding-left: 24px;
+          }
+        }
       }
     }
     .bottom-bar {
@@ -424,10 +460,27 @@ $column-gap: 6px;
           &::before {
             content: none;
           }
+          .col-collapse {
+            display: none;
+          }
         }
         tr {
           box-shadow: none;
           margin: 0;
+        }
+      }
+    }
+    &.is-checkbox {
+      table tbody tr {
+        td {
+          padding-left: 8px;
+          padding-right: 8px;
+          &:first-child {
+            position: static;
+            padding-right: 16px;
+            padding-left: 16px;
+            width: auto;
+          }
         }
       }
     }
@@ -445,6 +498,42 @@ $column-gap: 6px;
           tr {
             &.hover {
               background-color: $color-primary-pastel-1;
+            }
+          }
+        }
+      }
+    }
+    &.is-grid-small {
+      .top-bar,
+      .selected-bar.is-active,
+      .search-bar.is-active,
+      .bottom-bar,
+      .headers .scroller 
+      {
+        height: $column-compact;
+        overflow: hidden;
+      }
+      .search-bar {
+        .br-input.is-medium input,
+        .br-input.is-medium .icon {
+          height: $column-spacing*2;
+          line-height: $column-spacing*2;
+        }
+      }
+      table {
+        margin-top: -$column-compact;
+        tr {
+          height: $column-compact;
+        }
+      }
+      &.is-datatable {
+        .headers {
+          top: $column-compact;
+        }
+        table {
+          thead {
+            th {
+              top: $column-compact;
             }
           }
         }

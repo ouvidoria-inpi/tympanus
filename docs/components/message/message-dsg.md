@@ -142,13 +142,13 @@ Aparecem logo abaixo dos campos de input. Elas devem aparecer na tela. assim que
 
 Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma correta, dando um Feedback positivo.
 
-![Mensagens Contextuais](imagens/Validação_Positiva.png)
+![Mensagens Contextuais](imagens/Validacao_Positiva.png)
 
 #### 2 | Validação Negativa
 
 Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma diferente da esperada. É importante deixar claro o que saiu errado e/ou dar sugestões de como o usuário pode preencher o campo de forma satisfatória.
 
-![Mensagens Contextuais](imagens/Validação_Negativa.png)
+![Mensagens Contextuais](imagens/Validacao_Negativa.png)
 
 ### Mensagens Complementares
 

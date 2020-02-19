@@ -3,6 +3,38 @@ extends ../../layouts/component
 append vars
   - var title = "Scrim";
 
+append content
+  .br-scrim.is-foco(onclick='off()')
+    .br-modal.is-medium
+      .br-modal-dialog
+        .br-modal-content
+          .br-modal-body
+            p Conteúdo
+          .br-modal-footer.justify-content-end
+            button.br-button.is-secondary.is-small(type='button')
+              | Ação 1
+            button.br-button.is-primary.is-small(type='button')
+              | Ação 2
+  h1 Scrim - Foco
+  .bloco1
+    p Scrim - Foco
+    button(type='button' onclick='on()') Testar Efeito
+  .row
+    .col-6
+      h1 Scrim - Legibilidade
+      .br-scrim.is-legibilidade
+        .bloco2
+          .scrim-text(text-white='') Scrim - Legibilidade
+  h1 Scrim - Inibição (Clicar)
+  .row
+    .col-6
+      .bloco3(onclick="alert('Fui Clicado')")
+        div SEM Scrim Inibição
+    .col-6
+      .br-scrim.is-inibicao
+        .bloco3(onclick="alert('Fui Clicado')")
+          | COM Scrim Inibição
+
 append style
   style.
     .bloco1 {
@@ -46,37 +78,3 @@ append style
       text-align: center;
       vertical-align: center;
     }
-
-
-
-append content
-  .br-scrim.is-foco(onclick='off()')
-    .br-modal.is-medium
-      .br-modal-dialog
-        .br-modal-content
-          .br-modal-body
-            p Conteúdo
-          .br-modal-footer.justify-content-end
-            button.br-button.is-secondary.is-small(type='button')
-              | Ação 1
-            button.br-button.is-primary.is-small(type='button')
-              | Ação 2
-  h1 Scrim - Foco
-  .bloco1
-    p Scrim - Foco
-    button(type='button' onclick='on()') Testar Efeito
-  .row
-    .col-6
-      h1 Scrim - Legibilidade
-      .br-scrim.is-legibilidade
-        .bloco2
-          .scrim-text(text-white='') Scrim - Legibilidade
-  h1 Scrim - Inibição (Clicar)
-  .row
-    .col-6
-      .bloco3(onclick="alert('Fui Clicado')")
-        div SEM Scrim Inibição
-    .col-6
-      .br-scrim.is-inibicao
-        .bloco3(onclick="alert('Fui Clicado')")
-          | COM Scrim Inibição
