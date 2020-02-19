@@ -1,3 +1,18 @@
+// Pesos
+@each $item, $value in $tokens-font-weight {
+  @include tokens-font-weight($item, $value);
+}
+
+// Tamanhos
+@each $item, $value in $tokens-font-size {
+  @include tokens-font-size($item, $value);
+}
+
+// Alturas de linhas
+@each $item, $value in $tokens-line-height {
+  @include tokens-line-height($item, $value);
+}
+
 $text-transform: "none", "capitalize", "uppercase", "lowercase";
 $text-align: "left", "right", "center", "justify";
 

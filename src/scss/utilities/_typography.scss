@@ -140,18 +140,3 @@ input,
 .help {
   font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
 }
-
-// Pesos
-@each $item, $value in $tokens-font-weight {
-  @include font-weight($item, $value);
-}
-
-// Tamanhos
-@each $item, $value in $tokens-font-size {
-  @include font-size($item, $value);
-}
-
-// Alturas de linhas
-@each $item, $value in $tokens-line-height {
-  @include line-height($item, $value);
-}
