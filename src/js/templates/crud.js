@@ -62,7 +62,7 @@ class TemplateSystem {
           navigation.classList.toggle('is-active');
           navigation.setAttribute('data-level', '0');
         }
-      });      
+      });
     }
     for (let button of this.template.querySelectorAll('.page-wrapper .navigation .item button')) {
       let arrowIcon = document.createElement('i');
@@ -240,7 +240,7 @@ class BRSelect {
     for (let option of select.options) {
       let optionField = window.document.createElement('button');
       optionField.appendChild(this._buildOptionItem(option.innerHTML));
-      optionsList.appendChild(optionField);      
+      optionsList.appendChild(optionField);
     }
     return optionsList;
   }
@@ -294,13 +294,13 @@ class BRSelect {
 }
 
 let selectList = [];
-let systemList = [];
+let systemList1 = [];
 
-window.onload = (function() {
+window.onload = (function () {
   for (let brSelect of window.document.querySelectorAll('.br-select')) {
     selectList.push(new BRSelect('br-select', brSelect));
   }
   for (let templateSystem of window.document.querySelectorAll('.template-system')) {
-    systemList.push(new TemplateSystem('template-system', templateSystem));
+    systemList1.push(new TemplateSystem('template-system', templateSystem));
   }
 })();
