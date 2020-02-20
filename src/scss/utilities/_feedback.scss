@@ -5,9 +5,9 @@
   font-weight: v(font-weight-medium, $font-weight-medium);
   padding: $spacer * 0.5;
   &.is-valid {
-    color: $color-success;
+    color: v(color-success, $color-success);
   }
   &.is-invalid {
-    color: $color-danger;
+    color: v(color-danger, $color-danger);
   }
 }
