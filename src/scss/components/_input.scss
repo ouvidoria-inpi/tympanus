@@ -1,7 +1,7 @@
 .#{$prefix}input {
   position: relative;
   input {
-    background: $color-secondary-01;
+    background: v(color-secondary-01, $color-secondary-01);
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
     color: $input-color;
@@ -9,19 +9,22 @@
     font-weight: $input-font-weight;
     height: $input-default;
     padding-left: $spacer * 2;
-    padding-right: $spacer * 2;
+    padding-right: $spacer * 5;
     width: 100%;
     &:focus {
-      border-color: $color-primary-lighten-01;
-      box-shadow: 0 0 0 1px $color-primary-lighten-01;
-      outline: none;
+      background: v(status-focused-background, status-focused-background)
+      linear-gradient(
+        v(status-focused-overlay, status-focused-overlay),
+        v(status-focused-overlay, status-focused-overlay)
+      );
     }
     &:invalid {
-      border-color: $color-danger;
-      box-shadow: 0 0 0 1px $color-danger;
+      border-color: v(color-danger, v(color-danger, $color-danger));
+      box-shadow: 0 0 0 1px v(color-danger, $color-danger);
     }
     &:disabled {
-      background: $color-secondary-03;
+      background: v(status-disabled-background, status-disabled-background);
+      border-color: v(color-secondary-04, $color-secondary-04);
     }
   }
   // Input com ícone
@@ -30,8 +33,8 @@
       padding-right: 48px;
       &:disabled {
         & + .icon {
-          color: $body-color;
-          pointer-events: none;
+          color: v(status-disabled-text, status-disabled-text);
+          cursor: not-allowed;
         }
       }
     }
@@ -55,17 +58,17 @@
       }
     }
     button.icon {
-      color: $color-primary-default;
+      color: v(color-primary-default, $color-primary-default);
       &:focus,
       &:hover {
-        color: $color-primary-lighten-01;
+        color: v(color-primary-lighten-01, $color-primary-lighten-01);
       }
     }
   }
   // Lista de autocomplete
   .search-items {
-    background: $color-secondary-01;
-    box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22); // sass-lint:disable-line no-color-literals
+    background: v(color-secondary-01, $color-secondary-01);
+    box-shadow: 0 3px 6px rgba(v(color-secondary-09, $color-secondary-09), 0.22); // sass-lint:disable-line no-color-literals
     left: 0;
     margin-top: 1px;
     position: absolute;
@@ -77,12 +80,13 @@
       padding: $spacer;
       &.is-active,
       &:hover {
-        background-color: $color-primary-pastel-02;
+        background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
       }
     }
   }
   // Tamanhos
-  @each $size, $value in (medium, $input-medium), (small, $input-small) {
+  @each $size, $value in (medium, $input-medium), 
+  (small, $input-small) {
     &.is-#{$size} {
       input {
         height: $value;
@@ -94,8 +98,8 @@
     }
   }
   // Estados
-  @each $state, $color in (focus, $color-primary-lighten-01),
-    (valid, $color-success), (invalid, $color-danger)
+  @each $state, $color in (valid, v(color-success, $color-success)), 
+  (invalid, v(color-danger, $color-danger))
   {
     &.is-#{$state} {
       input {
@@ -103,6 +107,15 @@
         box-shadow: 0 0 0 1px $color;
         outline: none;
       }
+    }
+  }
+  &.is-#{focus} {
+    input {
+      background: v(status-focused-background, status-focused-background)
+      linear-gradient(
+        v(status-focused-overlay, status-focused-overlay),
+        v(status-focused-overlay, status-focused-overlay)
+      );
     }
   }
 }

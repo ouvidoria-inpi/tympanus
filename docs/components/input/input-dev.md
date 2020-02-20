@@ -84,6 +84,21 @@ Exemplo de uso:
 </div>
 ```
 
+Para **mensagem de campo desabilitado** adicione `is-disabled` a classe de feedback. Use o ícone `<i class="fas fa-exclamation-triangle">` dentro da mensagem de feedback.
+
+Exemplo de uso:
+
+```html
+<div class="br-input">
+  <label for="disabled">Desativado</label>
+  <input id="disabled" placeholder="Insira um texto" disabled="" type="text">
+</div>
+<div class="feedback is-disabled">
+  <i class="fas fa-exclamation-triangle"></i>
+  <span class="message">Campo Desabilitado</span>
+</div>
+```
+
 ## `help`
 
 Uma mensagem de ajuda PODE ser incluída. Ela deve ser inserida imediatamente após o `br-input`.
