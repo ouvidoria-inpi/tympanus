@@ -25,6 +25,7 @@ class BRDatepicker {
 
     this._onHide = (instance) => {
       let erro = this._validDate(instance);
+      console.log(instance.dateSelected)
       if (instance.dateSelected && !erro) {
         instance.el.value = instance.dateSelected.toLocaleDateString();
         this._validDate(instance);
@@ -71,7 +72,7 @@ class BRDatepicker {
       "disabled",
       "id"];
 
-    for (let inputDate of this.component.querySelectorAll(".br-input input")) {
+    for (let inputDate of this.component.querySelectorAll("input")) {
       this.picker = datepicker(inputDate, this._configDatepicker(configData));
     }
 
@@ -149,7 +150,7 @@ class BRDatepicker {
     }
     let date = new Date(stringDate.split('/').reverse().join('/'));
     let valid = false;
-    if (date instanceof Date) {
+    if (isFinite(date)) {
       valid = true;
       if (range) {
         if (instance.first) {

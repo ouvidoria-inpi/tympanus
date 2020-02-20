@@ -1,16 +1,6 @@
 mixin datepicker(label="Label", labelClass)
-  - let className = attributes.class
-  - let componentClass = prefix + "datepicker"
-  - className = className ? componentClass + " " + className : componentClass
-  div(class=className)
-    if attributes.disabled
-      +input(label)(id=attributes.id placeholder=attributes.placeholder disabled)
-        button.icon(type='button' id=attributes.id + "-btn")
-          span.sr-only Mostrar calendário
-          i.fas.fa-calendar-alt
-    else
-      +input(label)(id=attributes.id placeholder=attributes.placeholder)
-        button.icon(type='button' id=attributes.id + "-btn")
-          span.sr-only Mostrar calendário
-          i.fas.fa-calendar-alt
+  +input(label)(id=attributes.id placeholder=attributes.placeholder class=attributes.class disabled=attributes.disabled datepicker="true")
+    button.icon(type='button' id=attributes.id + "-btn")
+      span.sr-only Mostrar calendário
+      i.fas.fa-calendar-alt
     
