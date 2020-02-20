@@ -124,19 +124,23 @@ fieldset legend,
 .placeholder {
   font-size: v(font-size-scale-base, $font-size-scale-base);
   font-style: italic;
-  font-weight: v(font-weight-medium, $font-weight-medium);
-  line-height: v(font-line-height-medium, $font-line-height-medium);
+  font-weight: v(font-weight-regular, $font-weight-regular);
+  //line-height: v(font-line-height-medium, $font-line-height-medium);
   opacity: 1;
+  margin-bottom: 4px;
+  margin-top: 4px;
 }
 input,
-.input {
+.input,
+textarea,
+.textarea{
   font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
   font-weight: v(font-weight-medium, $font-weight-medium);
-  line-height: v(font-line-height-low, $font-line-height-low);
+  //line-height: v(font-line-height-low, $font-line-height-low);
   margin-bottom: 4px;
 }
 
 // Help
 .help {
-  font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
+  font-size: v(font-size-scale-base, $font-size-scale-base);
 }
