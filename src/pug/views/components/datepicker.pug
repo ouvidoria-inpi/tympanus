@@ -30,14 +30,14 @@ append content
           button.icon(type='button' id="valid-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        +feedback("Data válida")(class="is-valid")
+        +feedback("fa-check-circle", "Data válida")(class="is-valid")
     .col-sm
       .mb-3
         +input("Inválido")(id="invalid" class="datepicker is-invalid" placeholder="dd/mm/aaaa")
           button.icon(type='button' id="invalid-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        +feedback("Data inválida")
+        +feedback("fa-check-circle", "Data válida")(class="is-valid")
   .row
     .col-sm
       .mb-3
@@ -45,8 +45,8 @@ append content
           button.icon(type='button' id="disabled-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        +feedback("Data válida")(class="is-valid")
-        +feedback("Data inválida")
+        +feedback("fa-check-circle", "Data válida")(class="is-valid")
+        +feedback("fa-times-circle", "Data inválida")(class="is-invalid")
     .col-sm
       .mb-3
   .row
@@ -58,8 +58,8 @@ append content
           button.icon(type='button' id="default-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        +feedback("Data válida")(class="is-valid")
-        +feedback("Data inválida")
+        +feedback("fa-check-circle", "Data válida")(class="is-valid")
+        +feedback("fa-times-circle", "Data inválida")(class="is-invalid")
         p.help Insira a data no formato "dd/mm/aaaa", apenas números.  
     .col-sm
   .row
@@ -71,8 +71,8 @@ append content
           button.icon(type='button' id="date-start-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        +feedback("Data válida")(class="is-valid")
-        +feedback("Data inválida")
+        +feedback("fa-check-circle", "Data válida")(class="is-valid")
+        +feedback("fa-times-circle", "Data inválida")(class="is-invalid")
         p.help Insira a data inicial do período no formato "dd/mm/aaaa".  
     .col-sm
       .mb-3
@@ -80,6 +80,6 @@ append content
           button.icon(type='button' id="date-end-btn")
             span.sr-only Mostrar calendário
             i.fas.fa-calendar-alt
-        +feedback("Data válida")(class="is-valid")
-        +feedback("Data inválida")
+        +feedback("fa-check-circle", "Data válida")(class="is-valid")
+        +feedback("fa-times-circle", "Data inválida")(class="is-invalid")
         p.help Insira a data final do período no formato "dd/mm/aaaa".
