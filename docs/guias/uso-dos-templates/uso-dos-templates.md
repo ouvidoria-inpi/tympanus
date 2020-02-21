@@ -12,7 +12,7 @@ No exemplo a seguir usaremos o template padrão de sites, mas também serve para
 1. Copie o código do template no editor de texto
 1. Devido o longo conteúdo do template, faça uma busca pelo texto `<!-- Conteúdo principal -->`
 
-Vamos modificar o título da página e inserir textos e imagens para criar uma tela simples. Usaremos a Grid para organizar o conteúdo ficar adaptável em dispositivos móveis. Veja mais informações sobre a Grid em **Fundamentos Visuais -> Sistema de Grid**.
+Vamos modificar o título da página e inserir textos e imagens para criar uma tela simples. Usaremos a Grid para organizar o conteúdo ficar adaptável em dispositivos móveis. Veja mais informações sobre a Grid em [Fundamentos Visuais --> Sistema de Grid](ds/fundamentos-visuais/grid).
 
 ```html
 ...

@@ -10,7 +10,9 @@ Exemplos e lista dos principais pré-processadores de 2018 no endereço: <https:
 
 ### Sass
 
-O Sass possui 2 formatos de escrita: SASS e SCSS. A primeira usa indentação para separar blocos de códigos e cada regra deve ser escrita numa linha única. A segunda é parecida com a escrita original do CSS. Para facilitar a leitura do código **recomendamos o uso do formato SCSS**.
+O Sass possui 2 formatos de escrita: .sass e .scss. A primeira usa indentação para separar blocos de códigos e cada regra deve ser escrita numa linha única. A segunda é parecida com a escrita original do CSS.
+
+> Para facilitar a leitura do código recomendamos o uso do formato **.scss**.
 
 Veja a seguir dicas e boas práticas de uso do Sass.
 
@@ -64,21 +66,13 @@ Fonte: <http://thesassway.com/intermediate/dynamically-change-text-color-based-o
 -   Controle de código responsivo - <https://jonsuh.com/blog/managing-responsive-breakpoints-with-sass-maps/>
 -   DRY - Don’t Repeat Yourself - <https://thoughtbot.com/blog/removing-sass-duplication>
 
-### Less
-
-Diferente do Sass que precisa ser pré-compilado em CSS, o Less pode ser transcrito diretamente na página usando Javascript.
-
-O link a seguir mostra de forma prática as diferenças entre Sass e Less - <https://css-tricks.com/sass-vs-less/>
-
 ## Reset CSS
 
 Antigamente cada Browser se comportava de forma diferente para a mesma regra de CSS. Isso era ocasionada pela falta de padronização e pela quantidade de engines disponíveis no mercado.
 
 Hoje esse número foi reduzido à 3 principais (Webkit, Blink e Gecko), mas ainda assim é possível que cada uma delas renderize alguns elementos na tela de forma particular. Isso é melhor verificado em telas de formulário, pois cada input ou botão apresenta sua formação de acordo com a engine e Sistema Operacional do usuário.
 
-O uso de Reset CSS faz com que todas ou grande parte dos componentes e tags HTML sigam a mesma padronização visual.
-
-A sugestão é fazer uso da mais usada em Projetos Web do momento. Atualmente o Bootstrap é bastante usado em soluções Web. Ele possui uma coleção de estilos de Reset e pode ser carregado a parte ou em conjunto com seus componentes internos.
+Estamos utilizando o Normalize.css - <https://necolas.github.io/normalize.css/> customizado para garantir a padronização dos elementos do Design System.
 
 ## Arquitetura
 
@@ -88,15 +82,23 @@ Existem várias arquiteturas de organização de código disponíveis na interne
 | --------------------------------------------------- | --------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------- |
 | Base, Layout, Module, State, Theme                  | Atoms, Molecules, Organisms, Templates, Pages | Components, Elements, Variants, Layouts, Helpers | Settings, Tools, Generic, Base, Objects, Components, Trumps |
 
-No DS-Gov são usadas 3 folhas de estilos:
+O Design System utiliza uma arquitetura próxima ao **Atomic Design**. Ele está organizado segundo o exemplo a seguir:
 
--   CSS de base
--   CSS de componentes
--   CSS de templates
+```text
+design-system/
+└── src/
+    └── scss/
+        ├── components/
+        ├── configs/
+        ├── functions/
+        ├── mixins/
+        ├── templates/
+        └── utilities/
+```
 
-| CSS de base                | CSS de componentes          | CSS de templates           |
-| -------------------------- | --------------------------- | -------------------------- |
-| Configs, Mixins, Utilities | Configs, Mixins, Components | Configs, Mixins, Templates |
+São geradas 3 folhas de estilos: dsgov.css, dsgov-base.css e dsgov-components.css
+
+Utilize o arquivo **dsgov.css** em seu projeto para aproveitar o máximo do Design System.
 
 ## Comentários
 
@@ -176,8 +178,6 @@ Exemplo de aplicação de Media Queries:
 
 Conforme pode ser visto no exemplo acima, **recomendamos** sempre o uso da abordagem **Mobile First**. A compreensão e manutenção do código é melhor.
 
-O Framework Bootstrap possui uma série de mixins de Media Queries. [**Veja como usar os mixins de Media Queries do Bootstrap**](http://apycom.com/bootstrap-components/bootstrap-media-queries-587.html).
-
 ## Linters
 
 A maioria das regras de boas práticas exemplificadas a seguir podem ser escritas ou configuradas nos linters do projeto. Seu uso melhora a legibilidade e cria uma padronização de escrita. Há casos em que o uso de linters até corrige erros de sintaxe.
@@ -196,15 +196,13 @@ Os novos editores de texto possuem linters nativos ou disponíveis como extensõ
 -   <https://github.com/gajus/css-lint>
 -   <https://github.com/sasstools/sass-lint>
 
-No DS-Gov é usado o linter `stylelint`. Ele pode ser utilizado através do script `npm run validate:sass`.
-
-Ele também está configurado como pipeline de desenvolvimento dentro do positório git, ou seja, sempre que um novo código seja inserido/atualizado ele será ativado.
+No Design System é usado o linter **stylelint**.
 
 ## Organização dos arquivos
 
 Independente da arquitetura usada no projeto é importante saber como organizar os arquivos. **A folha de estilo principal deve ser usada somente para carregar configurações e o restante dos arquivos conforme a arquitetura**.
 
-Segue um exemplo usando o pré-processador SASS:
+Segue um exemplo usando o pré-processador Sass:
 
 ```scss
 // <NOME DO PROJETO/TEMPLATE/COMPONENTE - VERSÃO>
@@ -212,15 +210,15 @@ Segue um exemplo usando o pré-processador SASS:
 // <LINK PARA VISUALIZAÇÃO/DOWNLOAD>
 
 // #LIBRARIES
-@import "jspm_packages/npm/hint.css@2.2.1/src/hint.scss";
-@import "jspm_packages/npm/susy@2.2.9/sass/susy";
+@import 'jspm_packages/npm/hint.css@2.2.1/src/hint.scss';
+@import 'jspm_packages/npm/susy@2.2.9/sass/susy';
 
 // #COMPONENTS
-@import "components/boxview";
-@import "components/boxview-item";
-@import "components/buttons";
-@import "components/carousel";
-@import "components/document-reader";
+@import 'components/boxview';
+@import 'components/boxview-item';
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/document-reader';
 ```
 
 **Não coloque valores hard-coded nos estilos de componentes e templates**. Use sempre variáveis. A exceção é para estilos que não irão mudar a configuração independente do tema.
@@ -231,81 +229,40 @@ Veja a seguir como isso é aplicado na prática:
 
 **Arquivo de botões**
 
-```scss
-// Arquivo “components/buttons.scss”
-
+```css
+/* Arquivo “components/buttons.css” */
 .button {
-    background: $btn-bg;
-    border-width: $btn-border-width;
-    border-radius: $btn-radius;
-    padding: $btn-padding;
-    &-primary {
-        background: $btn-primary-bg;
-    }
-    &-clear {
-        border: 0; // o botão do tipo clear nunca possui borda
-    }
+    border-width: var(--button-border-width);
+    border-radius: var(--button-radius);
+    padding: var(--button-padding);
+}
+.button.primary {
+    background: var(--button-primary);
+}
+.button.clear {
+    border: 0; // o botão do tipo clear nunca possui borda
 }
 ```
 
 **Tema principal**
 
-```scss
-// Configurações de botões
-$btn-padding: 10px;
-$btn-bg: #fff;
-$btn-primary-bg: #2969bd;
-$btn-border-width: 1px;
-$btn-radius: 4px;
+```css
+/* Configurações de botões */
+--button-primary: #2969bd;
+--button-border-width: 1px;
+--button-radius: 4px;
+--button-padding: 10px;
 ```
 
 **Tema comemorativo**
 
 ```scss
-// Configurações de botões
-$btn-padding: 5px 15px;
-$btn-bg: #fff;
-$btn-primary-bg: #000;
-$btn-border-width: 3px;
-$btn-radius: 0;
+/* Configurações de botões */
+--button-primary: #000;
+--button-border-width: 3px;
+--button-radius: 0;
+--button-padding: 5px 15px;
 ```
-
-### Organização de arquivos no DS-Gov
-
-Conforme mencionado em **arquetura**, o DS-Gov possui 3 CSS.
-
-```text
-repositorio/
-├── assets/
-│   └── styles/
-│       ├── dsgov-base.min.css
-│       ├── dsgov-components.min.css
-│       └── dsgov-templates.min.css
-├── base/
-│   ├── configs/
-│   ├── mixins/
-│   ├── utilities/
-│   ├── _dsgov-base.scss
-│   └── _tokens.scss
-├── components/
-│   └── ...
-└── templates/
-    └── ...
-```
-
-No diretório `assets` estão as versões compiladas e minificadas dos estilos.
-
-Os arquivos para desenvolvimento estão em seus respectivos diretórios.
-
-Cada componente e template possui a seguinte estrutura:
-
--   `_configs.scss`: variáveis de configuração
--   `_mixins.scss`: códigos reaproveitáveis
--   `CHANGELOG.md`: versionamento
--   `arquivo.scss`: **carrega o css de base** e aplica `configs` e `mixins`
--   `arquivo.html`: código HTML do componente/template
--   `arquivo.md`: documentação para desenvolvedor
--   `arquivo-dsg.md`: documentação para designer
 
 ## Formatação e sintaxe
 

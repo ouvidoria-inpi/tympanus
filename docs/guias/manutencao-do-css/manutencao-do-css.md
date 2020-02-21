@@ -1,14 +1,14 @@
 Esse documento é destinado para manutenção das folhas de estilo do DS-Gov.
 
-Todos os estilos foram escritos usando **SCSS**. Nunca altere os arquivos de CSS do diretório `assets`, pois eles são gerados automaticamente.
+Todos os estilos foram escritos usando **Sass**. Eles são compilados em CSS.
+
+## Pré-requisitos
+
+-   git
+-   node (versão 12)
+-   nvm (opcional)
 
 ## Ambiente de desenvolvimento
-
-**Pré-requisitos**
-
-- git
-- node (versão 12)
-- nvm (opcional)
 
 Preparar ambiente de desenvolvimento:
 
@@ -16,13 +16,7 @@ Preparar ambiente de desenvolvimento:
 git clone git@git.serpro:ds-gov/design-system.git
 cd design-system
 npm install
-npm run build
-```
-
-Rodar watch para compilar arquivos a cada modificação:
-
-```bash
-npm run watch
+npm start
 ```
 
 ## Organização dos aquivos
@@ -31,27 +25,21 @@ O SCSS do DS-Gov foi dividido em partes.
 
 ```text
 design-system/
-├── base/
-│   ├── configs/
-│   ├── mixins/
-│   ├── utilities/
-│   ├── _dsgov-base.scss
-│   └── _tokens.scss
-├── components/
-│   └── ...
-└── templates/
-    └── ...
+└── src/
+    └── scss/
+        ├── components/
+        ├── configs/
+        ├── functions/
+        ├── mixins/
+        ├── templates/
+        └── utilities/
 ```
 
-**Base**
+## Configs
 
-A **Base** usa o Bootstrap como dependência.
+Nesta pasta estão todos os Tokens (variáveis) descritos na documentação de **Fundamentos Visuais**. Cada Token está criado em seu arquivo correspondente para facilitar a manutenção.
 
-Algumas variáveis como **cores**, **tipografia** e **espaçamentos** são gerenciadas via Design Tokens no arquivo `_tokens.scss`.
-
-O diretório `config/` sobrescreve os valores originais do Bootstrap e contém configurações específicas do DS-Gov.
-
-Nenhum CSS será gerado dentro do diretório `base/`. Ele será criado dentro do diretório `assets/styles/`.
+> Nenhuma regra de escrita de CSS deve ser colocada nesta pasta.
 
 **Componentes e Templates**
 
@@ -69,13 +57,13 @@ Exemplo de uso:
 
 Cada componente/template possui a seguinte estrutura:
 
-- `_configs.scss`: variáveis de configuração
-- `_mixins.scss`: códigos reaproveitáveis
-- `CHANGELOG.md`: versionamento
-- `arquivo.scss`: **carrega o css de base** e aplica `configs` e `mixins`
-- `arquivo.html`: código HTML do componente/template
-- `arquivo.md`: documentação para desenvolvedor
-- `arquivo-dsg.md`: documentação para designer
+-   `_configs.scss`: variáveis de configuração
+-   `_mixins.scss`: códigos reaproveitáveis
+-   `CHANGELOG.md`: versionamento
+-   `arquivo.scss`: **carrega o css de base** e aplica `configs` e `mixins`
+-   `arquivo.html`: código HTML do componente/template
+-   `arquivo.md`: documentação para desenvolvedor
+-   `arquivo-dsg.md`: documentação para designer
 
 Para cada componente/template será gerado um arquivo individual de css em seu diretório local. Dentro de `assets/styles/` são geradas versões contendo um compilado de todos os componentes/templates.
 
