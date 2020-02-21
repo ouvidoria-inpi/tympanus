@@ -24,9 +24,9 @@ A herança de um estado deve ser respeitada. Quando vários estados ocorrem ao m
 
 ### Acessibilidade
 
-Por se tratar de representações visuais, os estados devem seguir os princípios de acessibilidade encontrados nas [Cores](#). Entretando, apesar da importância do contraste, alguns estados não possuem a necessidade de se preocupar com tais questões tendo em vista sua função dentro da interface, como é o caso de estado **Desabilitado**.
+Por se tratar de representações visuais, os estados devem seguir os princípios de acessibilidade encontrados nas [Cores](/ds/fundamentos-visuais/cores). Entretando, apesar da importância do contraste, alguns estados não possuem a necessidade de se preocupar com tais questões tendo em vista sua função dentro da interface, como é o caso de estado **Desabilitado**.
 
-Dependendo do fundo aplicado, o estado do componente deve ser revisto para atender todos os princípios estabelecidos dos estados. Caso as especificações contidas no estado forem insuficientes para promover um bom contraste entre fundo e texto/ícone, inverta as cores de fundo e texto/ícone do elemento. Se mesmo assim não houver um contraste satisfatório, utilize as informações localizadas do [fundamento cores](#) como guia para atender as necessidades.
+Dependendo do fundo aplicado, o estado do componente deve ser revisto para atender todos os princípios estabelecidos dos estados. Caso as especificações contidas no estado forem insuficientes para promover um bom contraste entre fundo e texto/ícone, inverta as cores de fundo e texto/ícone do elemento. Se mesmo assim não houver um contraste satisfatório, utilize as informações localizadas do [fundamento cores](/ds/fundamentos-visuais/cores) como guia para atender as necessidades.
 
 Em alguns casos pode ser necessário aumentar as dimensões do fundo de um elemento ou componente para melhorar a legibilidade de um texto ou a compreensão de um ícone quando um estado é aplicado. Quando isso acontecer, tome cuidado para não soprepor outros elementos: um aumento de 4px ou 8px por exemplo, pode ser suficiente para resolver o problema.
 
@@ -132,7 +132,7 @@ A cor **Primary Default** não é aplicável em todas as situações, como no ca
 
 | Property  | Token Status                 | Token Color             | Token Weight       |
 | --------- | ---------------------------- | ----------------------- | ------------------ |
-| text/icon | --status-enabled-text        | --color-primary-default |                    |
+| text/icon | `--status-enabled-text`        | --color-primary-default |                    |
 | text/icon | --status-enabled-text-darken | --color-secondary-01    | --font-weight-bold |
 
 ---
@@ -145,7 +145,7 @@ Caso um componente, mesmo com a opacidade aplicada ainda esteja se destacado, su
 
 **ATENCÃO: Utilize essa opção somente quando a recomendação padrão (**45%** de opacidade do estado Interativo ) não funcionar.**
 
-Elementos desabilitados não precisam ser rígidos sobre as [conformidade de acessibilidade](#); e caracteristicas visuais que destaquem o elemento devem ser retiradas ou amenizadas, como é o caso das sombras por exemplo.
+Elementos desabilitados não precisam ser rígidos sobre as [conformidade de acessibilidade](/ds/guias/acessibilidade-no-codigo-html); e caracteristicas visuais que destaquem o elemento devem ser retiradas ou amenizadas, como é o caso das sombras por exemplo.
 
 ### Evitar estado desabilitado
 
