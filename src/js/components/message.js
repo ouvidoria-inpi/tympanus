@@ -18,11 +18,5 @@ class BRAlert {
   }
 }
 
-// let alertList = [];
-
-// for ( let brAlert of window.document.querySelectorAll( ".br-message" ) ) {
-//   alertList.push( new BRAlert( "br-message", brAlert ) );
-// }
-
 
 export default BRAlert

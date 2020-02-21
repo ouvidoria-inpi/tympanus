@@ -1,3 +1,4 @@
+
 class BRAccordeon {
   constructor ( name, component ) {
     this.name = name;
@@ -43,4 +44,14 @@ class BRAccordeon {
   }
 }
 
-export default BRAccordeon
+let accordeonList = [];
+
+for ( let brAccordeon of window.document.querySelectorAll( ".br-accordeon" ) ) {
+  accordeonList.push( new BRAccordeon( "br-accordeon", brAccordeon ) );
+}
+
+
+module.export = BRAccordeon
+
+
+
