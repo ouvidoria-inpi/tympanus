@@ -51,7 +51,7 @@ Alguns estados utilizam o conceito de overlay. Overlay é uma aplicação/camada
 
 Dependendo da cor de um elemento, a opacidade do overlay deve ser revista para que o destaque do elemento seja notado pelo usuário: O valor da opacidade é inversamente proporcional ao brilho do elemento (cor de fundo), ou seja, quanto mais claro a cor do componente, menor será o valor da opacidade necessário para que o usuário perceba o estado.
 
-Seguindo este conceito podemos dizer que o [Scrim](#) é um overlay componentizado do DS Gov.
+Seguindo este conceito podemos dizer que o [Scrim](/ds/componentes/scrim) é um overlay componentizado do DS Gov.
 
 ---
 
