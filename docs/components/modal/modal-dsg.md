@@ -42,7 +42,7 @@ Evite termos que expressão ambiguidade, alarmam o usuário como: "_Desculpe pel
 
 #### Comportamento
 
-Se necessário, os títulos podem quebrar para um segunda linha. Maiores que duas linhas, os textos devem ser contraídos com reticências (...), e ao passar o mouse sobre o texto contraído, deverá ser revelado o texto completo pelo uso de [tooltip](#).
+Se necessário, os títulos podem quebrar para um segunda linha. Maiores que duas linhas, os textos devem ser contraídos com reticências (...), e ao passar o mouse sobre o texto contraído, deverá ser revelado o texto completo pelo uso de [tooltip](/ds/componentes/tooltip).
 
 ![Título Duas Linhas](imagens/alerta_titulo_duaslinhas.png)
 
@@ -119,7 +119,7 @@ O uso de Título é altamente recomendável.
 
 Exibem uma lista de itens que entram em vigor imediatamente quando selecionados.
 
-Pela característica do modal, esta opção deve ser utilizada com moderação. É preferível o uso de [dropdown](#) como uma opção menos disruptiva.
+Pela característica do modal, esta opção deve ser utilizada com moderação. É preferível o uso de dropdown como uma opção menos disruptiva.
 
 ![Opção Lista](imagens/opcao_lista.png)
 
@@ -185,13 +185,13 @@ Os modais normalmente utilizam o scrim, criando uma área não interativa e exig
 
 Comportamento que pode ser aplicado em uma modal, geralmente o de Alerta, fazendo com que o fechamento seja feito de forma automatizada (após alguns segundos por exemplo), sem a necessidade de interação do usuário
 
-Esse tipo de modal só pode ser utilizado em situações onde o conteúdo não faz mais sentido após um determinado período, tal como um [loading](#).
+Esse tipo de modal só pode ser utilizado em situações onde o conteúdo não faz mais sentido após um determinado período, tal como um loading.
 
 O usuário deve ser capaz de cancelar modal a qualquer momento, por isso o botão de ação de negação é obrigatório.
 
 ![Loading](imagens/loading.png)
 
-Utilize esta opção com moderação. Prefira o uso de [toast](#) como uma opção menos disruptiva.
+Utilize esta opção com moderação. Prefira o uso de toast como uma opção menos disruptiva.
 
 ### Posição
 
