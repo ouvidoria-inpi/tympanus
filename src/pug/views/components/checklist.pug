@@ -14,7 +14,7 @@ append content
       .icon.is-invalid: i.fas.fa-mobile-alt
       +input("Celular")(id="celular" class="is-invalid" placeholder="Ex: (xx) xxxxx-xxxx")
       +radio("")(id="radio-celular" class="is-invalid" name="radio" checked)
-  +feedback("Preencha o campo de texto")
+  +feedback("fa-times-circle", "Preencha o campo de texto")(class="is-invalid")
   p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
   +checklist(class="mt-10")
     +check-item

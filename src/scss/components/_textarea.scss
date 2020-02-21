@@ -1,31 +1,35 @@
 .#{$prefix}textarea {
   position: relative;
   textarea {
-    background: $color-secondary-01;
+    background: v(color-secondary-01, $color-secondary-01);
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
     color: $input-color;
     display: block;
     font-weight: $input-font-weight;
+    padding-top: $spacer;
     padding-left: $spacer * 2;
-    padding-right: $spacer * 2;
+    padding-right: $spacer * 5;
     width: 100%;
     &:focus {
-      border-color: $color-primary-lighten-01;
-      box-shadow: 0 0 0 1px $color-primary-lighten-01;
-      outline: none;
+      background: v(status-focused-background, status-focused-background)
+      linear-gradient(
+        v(status-focused-overlay, status-focused-overlay),
+        v(status-focused-overlay, status-focused-overlay)
+      );
     }
     &:invalid {
-      border-color: $color-danger;
-      box-shadow: 0 0 0 1px $color-danger;
+      border-color: v(color-danger, v(color-danger, $color-danger));
+      box-shadow: 0 0 0 1px v(color-danger, $color-danger);
     }
     &:disabled {
-      background: $color-secondary-03;
+      background: v(status-disabled-background, status-disabled-background);
+      border-color: v(color-secondary-04, $color-secondary-04);
     }
   }
   // Estados
-  @each $state, $color in (focus, $color-primary-lighten-01),
-    (valid, $color-success), (invalid, $color-danger)
+  @each $state, $color in (valid, v(color-success, $color-success)), 
+  (invalid, v(color-danger, $color-danger))
   {
     &.is-#{$state} {
       textarea {
@@ -33,6 +37,15 @@
         box-shadow: 0 0 0 1px $color;
         outline: none;
       }
+    }
+  }
+  &.is-#{focus} {
+    textarea {
+      background: v(status-focused-background, status-focused-background)
+      linear-gradient(
+        v(status-focused-overlay, status-focused-overlay),
+        v(status-focused-overlay, status-focused-overlay)
+      );
     }
   }
 }
