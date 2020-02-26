@@ -122,11 +122,6 @@
         "urlLabel": "busca"
       },
       {
-        "label": "Cabeçalho",
-        "filename": "header",
-        "urlLabel": "cabecalho"
-      },
-      {
         "label": "Card",
         "filename": "card",
         "urlLabel": "card"
@@ -175,11 +170,6 @@
         "label": "Modal",
         "filename": "modal",
         "urlLabel": "modal"
-      },
-      {
-        "label": "Navegação",
-        "filename": "navigation",
-        "urlLabel": "navegacao"
       },
       {
         "label": "Paginação",
