@@ -5,9 +5,8 @@
     @include estados;
    }
   &.is-secondary {
-    @include button-pill($color-secondary-01, $color-primary-default);
+    @include button-pill(v(color-secondary-01, $color-secondary-01), v(color-primary-default,$color-primary-default));
     @include estados;
-
   }
   &.is-call-to-action {
     @include button-pill(
@@ -17,23 +16,34 @@
     );
     border-width: $button-action-border-width;
     height: $button-height-default + ($button-action-border-width * 2);
+    font-size: v(font-size-scale-up-02,$font-size-scale-up-02);
     @include estados-actions;
     @include media-breakpoint-up(sm) {
       min-width: $button-action-min-width;
     }
     &.is-mobile{
       @include estados-actions;
-      border: 13px solid $color-gray-2;
-      font-size: 12px;
+      border: 13px solid  v(color-secondary-03, $color-secondary-03);
+      font-size: v(font-size-scale-down-01, $font-size-scale-base);
+      &:focus:active{
+        background-color: v(status-activated-background, $status-activated-background);
+        color: v(status-activated-color, $status-activated-color);
+      }
+      &:not(:focus):hover{
+        background-color: v(status-hover-background, $status-hover-background);
+        border-color: v(color-secondary-03, $color-secondary-03);
+        color: v(color-primary-default, $color-primary-default);
+      }
     }
   }
-  &.is-tertiary {
+  &.is-tertiary{
     @include button-link;
     @include estados;
     text-decoration: underline;
+    color: v(color-primary-default, $color-primary-default);
     &:focus:active{
       background-color: transparent;
-      color: $color-primary;
+      color:v(status-activated-background, $status-activated-background);
     }
   }
   &.is-small {
@@ -75,7 +85,7 @@
     position: relative;
     &::after {
       animation: spinAround 500ms infinite linear;
-      border: 2px solid $color-secondary-01;
+      border: 2px solid v(color-secondary-01, $color-secondary-01);
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
@@ -89,7 +99,8 @@
     }
     &.is-secondary {
       &::after {
-        border-color: $color-primary-default;
+        border:2px solid v(color-primary-default, $color-primary-default);
+        border-color: v(color-primary-default, $color-primary-default);
         border-right-color: transparent;
         border-top-color: transparent;
       }

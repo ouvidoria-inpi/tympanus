@@ -1,14 +1,14 @@
 @mixin button-pill(
-  $background: $color-primary-default,
-  $color: $color-secondary-01,
-  $border: $color-primary-default
+  $background: v(color-primary-default, $color-primary-default),
+  $color: v(color-secondary-01, $color-secondary-01),
+  $border: v(color-primary-default, $color-primary-default)
 ) {
   background: $background;
   border: 1px solid $border;
   border-radius: $button-radius;
   color: $color;
   display: inline-block;
-  font-weight: 600;
+  font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
   height: $button-height-default;
   padding: 0 $button-padding;
   width: 100%;
@@ -25,7 +25,7 @@
   color: $color;
   cursor: pointer;
   display: inline;
-  font-weight: $font-weight-base;
+  font-weight: v(font-weight-medium,$font-weight-medium);
   padding: 0 24px;
   height: 44px;
   min-width: 144px;
@@ -35,40 +35,38 @@
 
 @mixin estados{
   &:not(.is-disabled):hover{
-    background-color: $color-primary-pastel-1;
-    color: $color-primary;
+    background-color: v(status-hover-background, $status-hover-background);
+    color: v(color-primary-default, $color-primary-default);
   }
   &:not(.is-disabled):focus{
-    background-color: rgba(255,255,0,0.3);
-    color: $color-primary;
+    background-color: v(status-focused-overlay,$status-focused-overlay);
+    color: v(status-focused-background, $status-focused-background);
   }
-  &:not(.is-disabled):not(.is-tertiary):active{
-    background-color: $color-primary-darken-1;
-    color: $color-white;
+  &:not(.is-disabled):not(.is-tertiary):not(.is-mobile):active{
+    background-color: v(status-activated-background,$status-activated-background);
+    color: v(status-activated-color,$status-activated-color);
   }
   &.is-disabled{
     opacity: 0.45;
     cursor: not-allowed;
   }
 }
-
 @mixin estados-actions{
-  box-shadow: 0px 2px 3px #00000029;
-    &:hover{
-      background-color: $color-teal;
-      border-color: $color-gray-2;
-      color: $color-white;
-    }
-    &:focus{
-      background-color: rgba(255,255,0,0.3);
-      color: $color-secondary;
-      border-color: $color-gray-2!important;
-    }
-    &:disabled {
-      border-color: $color-gray-2;
-    }
-    &:active{
-      background-color: $color-success;
-      color: $color-white;
-    }
+  box-shadow: 0px 2px 3px v(color-secondary-04, $color-secondary-04);
+  &:hover{
+    background-color: v(status-hover-background, $status-hover-background); 
+    color: v(color-primary-default, $color-primary-default);
+  }
+  &:focus{
+    background-color: v(status-focused-overlay, $status-focused-overlay);
+    color: v(status-focused-background, $status-focused-background);
+    border-color: v(color-secondary-03, $color-secondary-03!important);
+  }
+  &:disabled {
+    border-color: v(color-secondary-03, $color-secondary-03);
+  }
+  &:active{
+    background-color: v(status-activated-background, $status-activated-background);
+    color: v(status-activated-color, $status-activated-color);
+  }
 }
