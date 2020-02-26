@@ -26,7 +26,7 @@ Incentivamos o formato [DRY](https://alistapart.com/article/dry-ing-out-your-sas
 
 Pense sempre na lógica de temas nas soluções. Um componente pode variar sua aparência de acordo com o tema ativado. Valores hard-coded nessas situações inviabilizam a aplicação de temas.
 
-Veja a seguir um exemplo prático:
+Veja a seguir um exemplo hipotético:
 
 ```scss
 .button {
@@ -58,7 +58,7 @@ Veja a seguir um exemplo prático:
 </div>
 <div class="col-sm">
 
-### Tema comemorativo
+### Tema alternativo
 
 ```scss
 /* Configurações de botões */
