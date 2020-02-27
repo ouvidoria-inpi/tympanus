@@ -1,9 +1,9 @@
 {
 	"name": "@govbr/dsgov",
-	"version": "1.2.3-beta.8",
+	"version": "1.2.3-beta.9",
 	"description": "Design System do governo",
 	"main": "index.js",
-	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.8/",
+	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.3-beta.9/",
 	"scripts": {
 		"start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev",
 		"build": "npm-run-all build:webpack:prod",
@@ -35,6 +35,7 @@
 		"cypress": "^3.8.3",
 		"file-loader": "^5.0.2",
 		"mini-css-extract-plugin": "^0.8.0",
+		"postcss-calc": "^7.0.2",
 		"postcss-loader": "^3.0.0",
 		"pug-client": "^1.0.2",
 		"pug-html-loader": "^1.1.5",
