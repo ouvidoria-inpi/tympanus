@@ -1,4 +1,5 @@
 :root {
+  --font-family-base: #{$font-family-base};
   @include tokens($tokens-colors);
   @include tokens($tokens-icons);
   @include tokens($tokens-status);

@@ -12,7 +12,7 @@ No exemplo a seguir usaremos o template padrão de sites, mas também serve para
 1. Copie o código do template no editor de texto
 1. Devido o longo conteúdo do template, faça uma busca pelo texto `<!-- Conteúdo principal -->`
 
-Vamos modificar o título da página e inserir textos e imagens para criar uma tela simples. Usaremos a Grid para organizar o conteúdo ficar adaptável em dispositivos móveis. Veja mais informações sobre a Grid em **Fundamentos Visuais -> Sistema de Grid**.
+Vamos modificar o título da página e inserir textos e imagens para criar uma tela simples. Usaremos a Grid para organizar o conteúdo ficar adaptável em dispositivos móveis. Veja mais informações sobre a Grid em [Fundamentos Visuais --> Sistema de Grid](ds/fundamentos-visuais/grid).
 
 ```html
 ...
@@ -21,37 +21,37 @@ Vamos modificar o título da página e inserir textos e imagens para criar uma t
     <div class="container">
         <h1>Página de destaque</h1>
         <div class="row">
-            <div class="col-tablet">
+            <div class="col-sm">
                 <img
-                    src="https://picsum.photos/480/300"
+                    src="https://picsum.photos/480/300?random=1"
                     alt="Imagem aleatória 1"
                 />
                 <span>Técnologia</span>
-                <h2 class="h4">Título do bloco 1</h2>
+                <p class="h4">Título do bloco 1</p>
                 <p>
                     Texto descritivo do primeiro bloco, Lorem ipsum dolor sit
                     amet consectetur adipisicing elit.
                 </p>
             </div>
-            <div class="col-tablet">
+            <div class="col-sm">
                 <img
-                    src="https://picsum.photos/480/300"
+                    src="https://picsum.photos/480/300?random=2"
                     alt="Imagem aleatória 2"
                 />
                 <span>Técnologia</span>
-                <h2 class="h4">Título do bloco 2</h2>
+                <p class="h4">Título do bloco 2</p>
                 <p>
                     Texto descritivo do segundo bloco, Et voluptates magni ex
                     labore ipsum vel ad veniam.
                 </p>
             </div>
-            <div class="col-tablet">
+            <div class="col-sm">
                 <img
-                    src="https://picsum.photos/480/300"
+                    src="https://picsum.photos/480/300?random=3"
                     alt="Imagem aleatória 3"
                 />
                 <span>Técnologia</span>
-                <h2 class="h4">Título do bloco 3</h2>
+                <p class="h4">Título do bloco 3</p>
                 <p>
                     Texto descritivo do terceiro bloco, voluptatibus asperiores
                     mollitia, qui animi dolores.
@@ -65,8 +65,16 @@ Vamos modificar o título da página e inserir textos e imagens para criar uma t
 
 A imagem a seguir ilustra o conteúdo criado em desktop.
 
-![Versão Desktop da tela - são mostrados 3 blocos de conteúdo](images/conteudo-simples-2.png)
+<div class="d-inline-block border mb-3">
+
+![Versão Desktop da tela - são mostrados 3 blocos de conteúdo](images/example-iPad.png)
+
+</div>
 
 Agora veja como ficou para celulares:
 
-![Versão Celular - cada bloco aparece abaixo do outro](images/conteudo-simple-mobile-2.png)
+<div class="d-inline-block border">
+
+![Versão Celular - cada bloco aparece abaixo do outro](images/example-iPhoneX.png)
+
+</div>

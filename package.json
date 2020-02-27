@@ -33,6 +33,7 @@
 		"cypress": "^3.8.3",
 		"file-loader": "^5.0.2",
 		"mini-css-extract-plugin": "^0.8.0",
+		"postcss-calc": "^7.0.2",
 		"postcss-loader": "^3.0.0",
 		"pug-client": "^1.0.2",
 		"pug-html-loader": "^1.1.5",

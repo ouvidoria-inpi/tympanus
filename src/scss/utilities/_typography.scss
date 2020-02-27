@@ -1,10 +1,14 @@
 // Texto padrão
 body {
-  color: v(color-secondary-08, $color-secondary-08);
-  font-family: v(font-family-base, $font-family-base);
-  font-size: v(font-size-scale-base, $font-size-scale-base);
-  font-weight: v(font-weight-regular, $font-weight-regular);
-  line-height: v(font-line-height-medium, $font-line-height-medium);
+  --font-size: #{$font-size-scale-base};
+  --text-color: #{$color-secondary-08};
+  --font-weight: #{$font-weight-regular};
+  --line-height: #{font-line-height-medium};
+  color: v(text-color);
+  font-family: v(font-family-base);
+  font-size: v(font-size);
+  font-weight: v(font-weight);
+  line-height: v(line-height);
 }
 
 // Parágrafos
@@ -15,18 +19,19 @@ p {
 
 // Links
 a {
-  color: v(color-primary-default, $color-primary-default);
+  color: v(color-primary-default);
   text-decoration: none;
-  &:hover {
-    background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
+}
+.page-content {
+  a {
+    @include hover;
+    @include focus;
   }
-  &:focus {
-    background: v(color-secondary-01, $color-secondary-01)
-      linear-gradient(
-        rgba(v(color-support-02, $color-support-02), 0.3),
-        rgba(v(color-support-02, $color-support-02), 0.3)
-      );
-  }
+}
+
+// Botões
+button {
+  cursor: pointer;
 }
 
 // Imagens
@@ -35,52 +40,61 @@ img {
   vertical-align: middle;
 }
 
+// Divisores
+hr {
+  background-color: v(color-secondary-04);
+  border: 0;
+  color: inherit;
+  height: 1px;
+  margin: 16px 0;
+}
+
 // Títulos
 h1,
 .h1 {
-  font-size: v(font-size-scale-up-06, $font-size-scale-up-06);
-  font-weight: v(font-weight-regular, $font-weight-regular);
-  line-height: v(font-line-height-low, $font-line-height-low);
+  font-size: v(font-size-scale-up-06);
+  font-weight: v(font-weight-regular);
+  line-height: v(font-line-height-low);
   margin-bottom: 32px;
   margin-top: 0;
 }
 h2,
 .h2 {
-  font-size: v(font-size-scale-up-05, $font-size-scale-up-05);
-  font-weight: v(font-weight-regular, $font-weight-regular);
-  line-height: v(font-line-height-low, $font-line-height-low);
+  font-size: v(font-size-scale-up-05);
+  font-weight: v(font-weight-regular);
+  line-height: v(font-line-height-low);
   margin-bottom: 20px;
   margin-top: 28px;
 }
 h3,
 .h3 {
-  font-size: v(font-size-scale-up-04, $font-size-scale-up-04);
-  font-weight: v(font-weight-regular, $font-weight-regular);
-  line-height: v(font-line-height-low, $font-line-height-low);
+  font-size: v(font-size-scale-up-04);
+  font-weight: v(font-weight-regular);
+  line-height: v(font-line-height-low);
   margin-bottom: 20px;
   margin-top: 28px;
 }
 h4,
 .h4 {
-  font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
-  font-weight: v(font-weight-regular, $font-weight-regular);
-  line-height: v(font-line-height-low, $font-line-height-low);
+  font-size: v(font-size-scale-up-03);
+  font-weight: v(font-weight-regular);
+  line-height: v(font-line-height-low);
   margin-bottom: 20px;
   margin-top: 28px;
 }
 h5,
 .h5 {
-  font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
-  font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
-  line-height: v(font-line-height-low, $font-line-height-low);
+  font-size: v(font-size-scale-up-02);
+  font-weight: v(font-weight-semi-bold);
+  line-height: v(font-line-height-low);
   margin-bottom: 16px;
   margin-top: 28px;
 }
 h6,
 .h6 {
-  font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
-  font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
-  line-height: v(font-line-height-low, $font-line-height-low);
+  font-size: v(font-size-scale-up-01);
+  font-weight: v(font-weight-semi-bold);
+  line-height: v(font-line-height-low);
   margin-bottom: 16px;
   margin-top: 28px;
 }
@@ -94,7 +108,7 @@ ol {
 
 // Blockquotes
 blockquote {
-  background-color: v(color-secondary-02, $color-secondary-02);
+  background-color: v(color-secondary-02);
   border-left: 4px solid $color-highlight;
   font-style: italic;
   margin: 1rem 0;
@@ -108,39 +122,32 @@ blockquote {
 // Formulários
 label,
 .label {
-  font-size: v(font-size-scale-base, $font-size-scale-base);
-  font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
-  line-height: v(font-line-height-medium, $font-line-height-medium);
-  margin-bottom: 4px;
+  font-size: v(font-size-scale-base);
+  font-weight: v(font-weight-semi-bold);
+  line-height: v(font-line-height-medium);
 }
 fieldset legend,
 .fieldset {
-  font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
-  font-weight: v(font-weight-regular, $font-weight-regular);
-  line-height: v(font-line-height-low, $font-line-height-low);
+  font-size: v(font-size-scale-up-02);
+  font-weight: v(font-weight-regular);
+  line-height: v(font-line-height-low);
   margin-bottom: 4px;
 }
 ::placeholder,
 .placeholder {
-  font-size: v(font-size-scale-base, $font-size-scale-base);
+  font-size: v(font-size-scale-base);
   font-style: italic;
-  font-weight: v(font-weight-regular, $font-weight-regular);
-  //line-height: v(font-line-height-medium, $font-line-height-medium);
+  font-weight: v(font-weight-regular);
   opacity: 1;
-  margin-bottom: 4px;
-  margin-top: 4px;
 }
 input,
-.input,
 textarea,
-.textarea{
-  font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
-  font-weight: v(font-weight-medium, $font-weight-medium);
-  //line-height: v(font-line-height-low, $font-line-height-low);
-  margin-bottom: 4px;
+.input {
+  font-size: v(font-size-scale-up-01);
+  font-weight: v(font-weight-medium);
 }
 
 // Help
 .help {
-  font-size: v(font-size-scale-base, $font-size-scale-base);
+  font-size: v(font-size-scale-base);
 }
