@@ -12,7 +12,7 @@ export default class Globals {
 
   constructor () { }
 
-  initInstance () {
+  initInstanceAll () {
     this.initInstanceAccordeon()
     this.initInstanceChecklist()
     this.initInstanceMessage()
@@ -52,7 +52,7 @@ export default class Globals {
 
 
   initInstanceHeader () {
-    listHeader = [];
+    let listHeader = [];
 
     for ( let header of window.document.querySelectorAll( '.br-header' ) ) {
       listHeader.push( new BRHeader( 'br-header', header ) );

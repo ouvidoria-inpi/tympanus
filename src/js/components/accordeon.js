@@ -45,13 +45,12 @@ class BRAccordeon {
 }
 
 let accordeonList = [];
-
 for ( let brAccordeon of window.document.querySelectorAll( ".br-accordeon" ) ) {
-  accordeonList.push( new BRAccordeon( "br-accordeon", brAccordeon ) );
+  accordeonList.push( Object.create( new BRAccordeon( "br-accordeon", brAccordeon ) ) );
 }
 
 
-module.export = BRAccordeon
+export default BRAccordeon
 
 
 

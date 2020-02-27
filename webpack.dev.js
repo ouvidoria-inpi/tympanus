@@ -38,7 +38,7 @@ function generateHtmlPlugins ( templateDir, dirName ) {
         version: JSON.stringify( require( "./package.json" ).version ).replace( /\"/gi, "" ),
         cdnUrl: '../'
       },
-      inject: true,
+      inject: false,
     } )
   } )
 }
@@ -70,11 +70,12 @@ module.exports = {
   // mode: isDEV ? "development" : "production",
   mode: "development",
   entry: {
-    'dsgov': path.resolve( paths.src + "/scss", 'dsgov.scss' )
+    'dsgov': path.resolve( paths.src + "/scss", 'dsgov.scss' ),
+    'ds-gov': path.resolve( paths.src + "/js/", 'index.js' ),
   },
   watch: true,
   output: {
-    filename: './js/[name].js',
+    filename: './js/teste-babel.js',
     path: paths.dist
   },
   devServer: {
@@ -82,7 +83,7 @@ module.exports = {
     stats: 'errors-only',
     clientLogLevel: 'error',
     port: 9000,
-    open: true,
+    open: false,
     hot: true,
     inline: true,
     progress: true,
@@ -130,6 +131,14 @@ module.exports = {
             root: path.resolve( __dirname, 'src/views' ),
           }
         },
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        options: {
+          presets: [ "@babel/preset-env" ]
+        }
       },
     ]
   },
