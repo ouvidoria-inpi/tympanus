@@ -2,6 +2,7 @@ mixin input(label="Label", labelClass)
   - let className = attributes.class
   - let componentClass = prefix + "input"
   - className = className ? componentClass + " " + className : componentClass
+  - className = attributes.datepicker ? className + " " + "br-datepicker" : className
   div(class=className)
     label(class=labelClass for=attributes.id)=label
     input(
