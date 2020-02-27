@@ -51,7 +51,7 @@ append content
           +option("opção 2", "2")
           +option("opção 3", "3")
           +option("opção 4", "4")
-        +feedback("Erro")
+        +feedback("fa-times-circle", "Erro")(class="is-invalid")
       .mb-3
         +select("Válido")(id="valid" class="is-valid")
           +option("Selecione", "0")
@@ -59,4 +59,4 @@ append content
           +option("opção 2", "2")
           +option("opção 3", "3")
           +option("opção 4", "4")
-        +feedback("Ok")(class="is-valid")
+        +feedback("fa-check-circle", "Ok")(class="is-valid")
