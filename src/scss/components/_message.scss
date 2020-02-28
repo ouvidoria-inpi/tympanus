@@ -1,5 +1,4 @@
-.#{$prefix}message {
-  box-shadow: 0 3px 6px rgba($color-black, 0.16);
+.#{$prefix}message {  
   color: $color-gray-7;
   display: flex;
   margin-bottom: $margin-default * 2;
@@ -16,7 +15,7 @@
   }
   .content {
     flex: 1;
-    padding: $spacer * 2.5;
+    padding: $spacer-half * 4.5 0;
     strong {
       font-weight: 600;
     }
@@ -33,16 +32,6 @@
       }
     }
   }
-  .close {
-    align-items: flex-start;
-    display: flex;
-    button {
-      background: transparent;
-      border: 0;
-      color: $color-gray-7;
-      padding: $spacer $spacer * 2;
-    }
-  }
   // Estados
   @each $state, $color in (success, $color-success), (danger, $color-danger),
     (warning, $color-warning), (info, $color-info)
@@ -50,10 +39,21 @@
     &.is-#{$state} {
       background: scale-color($color, $lightness: 90%);
       .icon {
-        background: $color;
+        background: transparent;
+        color: $color;
+      }
+      .close {
+        align-items: flex-start;
+        display: flex;
+        button {
+          background: transparent;
+          border: 0;
+          color: $color;
+          padding: $spacer $spacer * 2;
+        }
       }
       @if ($state == warning) {
-        .icon {
+        .icon, .close button {
           color: $color-gray-7;
         }
       }
