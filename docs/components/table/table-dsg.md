@@ -10,7 +10,7 @@ As tabelas podem conter:
 - Elementos não interativos (como textos, badges);
 - Ferramentas para consultar e manipular dados (como busca, filtros);
 
-Nunca utilize foto/imagem dentro de uma tabela. Sempre utilize outro componente (como [Listas](#)) ou outros recursos (como [botão](#) ou [hiperlinks](#)) para representar/acessar o conteúdo em questão.
+Nunca utilize foto/imagem dentro de uma tabela. Sempre utilize outro componente (como [Listas](/ds/componentes/listas)) ou outros recursos (como [botão](ds/componentes/botao) ou hiperlinks para representar/acessar o conteúdo em questão.
 
 ---
 
@@ -126,7 +126,7 @@ Os dados de uma linha podem conter:
 - Ícones
 - Links
 - Textos
-- Componentes de formulários ([checkbox](#), [text](#), [radio](#), [select](#)...)
+- Componentes de formulários (checkbox, text, radio, select...)
 - Chips
 
 ---
@@ -460,7 +460,7 @@ Quando o usuário coloca o mouse próximo a lateral do cabeçalho, seguintes mud
 
 ![Redimensionar Coluna](imagens/Coluna_redimensiona2.png)
 
-- Dados contraídos podem ficar visíveis e dados muito extensos podem ser contraídos e adicionado reticências. Veja [Responsividade](#) para maiores detalhes.
+- Dados contraídos podem ficar visíveis e dados muito extensos podem ser contraídos e adicionado reticências. Veja Responsividade para maiores detalhes.
 
 ![Redimensionar Coluna](imagens/Coluna_redimensiona3.png)
 
