@@ -12,6 +12,8 @@
 </div>
 ```
 
+---
+
 # Anatomia do componente
 
 Este componente é formado pelos seguintes elementos:
@@ -133,6 +135,8 @@ Exemplo de uso:
 </p>
 ```
 
+---
+
 # Variações
 
 Estão disponíveis 3 tipos de input.
@@ -249,6 +253,8 @@ Exemplo de uso:
 </script>
 ```
 
+---
+
 # Estados
 
 Este componente apresenta os seguintes estados:
@@ -316,12 +322,12 @@ Exemplo de uso:
 
 ## disabled
 
-Deve ser aplicado como propriedade no `<input>`.
+O prefixo `is-` deve ser adicionado ao container do componente, e a propriedade `disabled` deve ser adicionada no elemento `<input>`.
 
 Exemplo de uso:
 
 ```html
-<div class="br-input">
+<div class="br-input is-disabled">
   <label for="desabilitado">Desabilitado</label>
   <input
     class="br-input"

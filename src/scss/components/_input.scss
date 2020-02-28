@@ -1,30 +1,28 @@
 .#{$prefix}input {
   position: relative;
   input {
-    background: v(color-secondary-01, $color-secondary-01);
+    background: v(color-secondary-01);
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
-    color: $input-color;
     display: block;
-    font-weight: $input-font-weight;
     height: $input-default;
     padding-left: $spacer * 2;
     padding-right: $spacer * 5;
     width: 100%;
     &:focus {
-      background: v(status-focused-background, status-focused-background)
+      background: v(status-focused-background)
       linear-gradient(
-        v(status-focused-overlay, status-focused-overlay),
-        v(status-focused-overlay, status-focused-overlay)
+        v(status-focused-overlay),
+        v(status-focused-overlay)
       );
     }
     &:invalid {
-      border-color: v(color-danger, v(color-danger, $color-danger));
-      box-shadow: 0 0 0 1px v(color-danger, $color-danger);
+      border-color: v(color-danger);
+      box-shadow: 0 0 0 1px v(color-danger);
     }
     &:disabled {
-      background: v(status-disabled-background, status-disabled-background);
-      border-color: v(color-secondary-04, $color-secondary-04);
+      background: v(status-disabled-background);
+      border-color: v(color-secondary-04);
     }
   }
   // Input com ícone
@@ -33,7 +31,7 @@
       padding-right: 48px;
       &:disabled {
         & + .icon {
-          color: v(status-disabled-text, status-disabled-text);
+          color: v(status-disabled-text);
           cursor: not-allowed;
         }
       }
@@ -58,17 +56,17 @@
       }
     }
     button.icon {
-      color: v(color-primary-default, $color-primary-default);
+      color: v(color-primary-default);
       &:focus,
       &:hover {
-        color: v(color-primary-lighten-01, $color-primary-lighten-01);
+        color: v(color-primary-lighten-01);
       }
     }
   }
   // Lista de autocomplete
   .search-items {
-    background: v(color-secondary-01, $color-secondary-01);
-    box-shadow: 0 3px 6px rgba(v(color-secondary-09, $color-secondary-09), 0.22); // sass-lint:disable-line no-color-literals
+    background: v(color-secondary-01);
+    box-shadow: 0 3px 6px rgba(v(color-secondary-09), 0.22); // sass-lint:disable-line no-color-literals
     left: 0;
     margin-top: 1px;
     position: absolute;
@@ -80,7 +78,7 @@
       padding: $spacer;
       &.is-active,
       &:hover {
-        background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
+        background-color: v(color-primary-pastel-02);
       }
     }
   }
@@ -98,8 +96,8 @@
     }
   }
   // Estados
-  @each $state, $color in (valid, v(color-success, $color-success)), 
-  (invalid, v(color-danger, $color-danger))
+  @each $state, $color in (valid, v(color-success)), 
+  (invalid, v(color-danger))
   {
     &.is-#{$state} {
       input {
@@ -111,11 +109,21 @@
   }
   &.is-#{focus} {
     input {
-      background: v(status-focused-background, status-focused-background)
+      background: v(status-focused-background)
       linear-gradient(
-        v(status-focused-overlay, status-focused-overlay),
-        v(status-focused-overlay, status-focused-overlay)
+        v(status-focused-overlay),
+        v(status-focused-overlay)
       );
+    }
+  }
+  &.is-#{disabled} {
+    label {
+      opacity: .45;
+    }
+    input {
+      background: v(status-disabled-background);
+      border-color: v(color-secondary-04);
+      color: v(color-secondary-04); 
     }
   }
 }
