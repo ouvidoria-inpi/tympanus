@@ -1,3 +1,4 @@
+import BRInput from './input'
 import BRAccordeon from './accordeon'
 import BRChecklist from './checklist'
 import BRAlert from './message'
@@ -6,6 +7,8 @@ import BRNavigation from './navigation'
 import BRSelect from './select'
 import BRTabs from './tabs'
 import BRUpload from './upload'
+import BRDatepicker from './datepicker'
+
 
 
 export default class Globals {
@@ -22,6 +25,7 @@ export default class Globals {
     this.initInstanceSelect()
     this.initInstanceTabs()
     this.initInstanceUpload()
+    this.initInstanceDatepicker()
   }
 
   initInstanceAccordeon () {
@@ -355,6 +359,22 @@ export default class Globals {
 
     for ( let brUpload of window.document.querySelectorAll( ".br-upload" ) ) {
       uploadList.push( new BRUpload( "br-upload", brUpload ) );
+    }
+
+  }
+
+  initInstanceDatepicker () {
+
+    let datepickerList = [];
+    let configData = {};
+
+    for ( let brDatepicker of window.document.querySelectorAll( ".br-datepicker" ) ) {
+      //   if ( brDatepicker.classList.contains( "range" ) ) {
+      //     configData = { id: "range-1" };
+      //     datepickerList.push( new BRDatepicker( "br-datepicker", brDatepicker, configData ) );
+      //   } else {
+      datepickerList.push( new BRDatepicker( "br-datepicker", brDatepicker ) );
+      //   }
     }
 
   }

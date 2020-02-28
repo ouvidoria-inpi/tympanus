@@ -71,11 +71,11 @@ module.exports = {
   mode: "development",
   entry: {
     'dsgov': path.resolve( paths.src + "/scss", 'dsgov.scss' ),
-    'ds-gov': path.resolve( paths.src + "/js/", 'index.js' ),
+    'dsgov-transp': path.resolve( paths.src + "/js/", 'index.js' ),
   },
   watch: true,
   output: {
-    filename: './js/teste-babel.js',
+    filename: './js/[name].js',
     path: paths.dist
   },
   devServer: {
