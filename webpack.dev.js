@@ -1,12 +1,10 @@
 const path = require( 'path' );
 const isDEV = process.env.NODE_ENV === 'development'
-console.log( 'Estou no ***AMBIENTE de DEVELOPMENT***' )
+// console.log( '***AMBIENTE de DEVELOPMENT*** ------' )
 
 // Webpack Stuff
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
-const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
-const ConcatPlugin = require( 'webpack-concat-plugin' );
 const HTMLWebpackPlugin = require( 'html-webpack-plugin' );
 
 // We need Nodes fs module to read directory contents
@@ -44,8 +42,8 @@ function generateHtmlPlugins ( templateDir, dirName ) {
 }
 
 // Call our function on our views directory.
-const htmlPluginsComponentes = generateHtmlPlugins( './src/pug/views/components', 'components' )
-const htmlPluginsTemplates = generateHtmlPlugins( './src/pug/views/templates', 'templates' )
+const htmlPluginsComponentes = generateHtmlPlugins( './src/pug/views/components', 'pug/components' )
+const htmlPluginsTemplates = generateHtmlPlugins( './src/pug/views/templates', 'pug/templates' )
 
 const fileLoader = {
   loader: 'file-loader',
@@ -67,11 +65,12 @@ const fileLoader = {
 };
 
 module.exports = {
-  // mode: isDEV ? "development" : "production",
   mode: "development",
   entry: {
-    'dsgov': path.resolve( paths.src + "/scss", 'dsgov.scss' ),
-    'dsgov-transp': path.resolve( paths.src + "/js/", 'index.js' ),
+    'dsgov': [
+      path.resolve( paths.src + "/scss", 'dsgov.scss' ),
+      path.resolve( paths.src + "/js/", 'index.js' )
+    ]
   },
   watch: true,
   output: {
@@ -96,7 +95,6 @@ module.exports = {
         loader: [
           isDEV ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
-          // 'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
@@ -147,33 +145,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new ConcatPlugin( {
-      uglify: false,
-      sourceMap: true,
-      name: 'dsgov-components',
-      outputPath: 'js/',
-      fileName: '[name].js',
-      filesToConcat: [ './src/js/components/**' ],
-      attributes: {
-        async: true
-      }
-    } ),
-    new ConcatPlugin( {
-      uglify: false,
-      sourceMap: true,
-      name: 'dsgov-templates',
-      outputPath: 'js/',
-      fileName: '[name].js',
-      filesToConcat: [ './src/js/templates/**' ],
-      attributes: {
-        async: true
-      }
-    } ),
-
-    new CopyWebpackPlugin( [
-      { context: 'src', from: '**/templates/*.js' },
-      { context: 'src', from: '**/config/*.js' },
-    ] ),
     // Extract our css to a separate css file
     new MiniCssExtractPlugin( {
       filename: 'css/[name].css',

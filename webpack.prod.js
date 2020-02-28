@@ -154,22 +154,6 @@ module.exports = {
         async: true
       }
     } ),
-    new ConcatPlugin( {
-      uglify: true,
-      sourceMap: true,
-      name: 'dsgov-templates',
-      outputPath: 'js/',
-      fileName: '[name].min.js',
-      filesToConcat: [ './src/js/templates/**' ],
-      attributes: {
-        async: true
-      }
-    } ),
-
-    new CopyWebpackPlugin( [
-      { context: 'src', from: '**/templates/*.js' },
-      { context: 'src', from: '**/config/*.js' },
-    ] ),
     // Extract our css to a separate css file
     new MiniCssExtractPlugin( {
       filename: 'css/[name].[chunkhash].min.css',
