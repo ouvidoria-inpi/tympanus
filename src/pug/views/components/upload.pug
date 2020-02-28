@@ -6,4 +6,19 @@ append vars
 
 
 append content
-  +upload
+  h4 Upload Com Título
+  .engloba
+    h4 - Documentos do Trabalhador
+    +upload
+  hr
+  h4 Upload Sem Título
+  .engloba
+    +upload
+  hr
+  h4 Upload Contido no Colapse
+  .engloba
+    +accordeon
+      +accordeon-item("Documentos do Trabalhador")
+        +upload
+
+

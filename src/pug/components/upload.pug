@@ -4,17 +4,24 @@ mixin upload
   - className = className ? componentClass + " " + className : componentClass
   div(class=className)
     input#input-file.upload-input(type='file' name='myFiles' multiple)
-    p.upload-header  Arraste e solte o(s) arquivo(s) do seu computador
-    span.upload-info
+    .upload-header  Arraste e solte o(s) arquivo(s) do seu computador
+    .upload-info
       i.fas.fa-info-circle
       |         Os arquivos devem ser no formato PNG, JPG ou PDF e ter no máximo 1GB
     .upload-file-list
     label.upload-add.br-button.is-cancel(for='input-file')
       i.fas.fa-plus
       |         Adicionar um arquivo do seu computador
-    p.upload-size
+    .upload-size
       | Arquivos selecionados: 
       strong.upload-size-num 0
       br
       | Tamanho total: 
       strong.upload-size-bytes 0
+  +button.is-cancel.ml-3 Cancelar
+  +button.is-primary.ml-3 Salvar    
+
+//- mixin upload-botoes
+//-   +upload
+//-   +button.is-cancel Cancelar
+//-   +button.is-primary Salvar
