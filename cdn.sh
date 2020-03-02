@@ -12,7 +12,7 @@ mkdir $LATEST
 mkdir cdn-dsgov-estaleiro/htdocs/design-system/latest
 mkdir cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
 echo $LATEST > cdn-dsgov-estaleiro/version
-cp -r ../dist/** cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
-cp -r ../dist/** cdn-dsgov-estaleiro/htdocs/design-system/latest
+cp -r ../dist/js cdn-dsgov-estaleiro/htdocs/design-system/latest/
+cp -r ../dist/css cdn-dsgov-estaleiro/htdocs/design-system/latest/
 cd ..
-git checkout cdn-publish
+git checkout develop
