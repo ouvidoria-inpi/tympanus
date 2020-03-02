@@ -1,14 +1,18 @@
-@mixin upload($color: $color-info) {
+@mixin upload($color: v(color-info,$color-info)){
   @include media-breakpoint-down(sm) {
     background-position: center 0;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 180px;
+    &:hover{
+      border: 1px solid v(color-primary-pastel-02,$color-primary-pastel-02);
+      background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/upload-fundo.png") center 0 v(color-secondary-01,$color-secondary-01) no-repeat !important;
+      cursor: pointer;
+    }
   }
-  background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/images/upload-fundo.png")
-    32px 24px $color-secondary-01 no-repeat;
-  border: 1px solid $color-secondary-01;
-  box-shadow: 0 3px 6px $color-secondary-04;
+  background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/upload-fundo.png") 32px 24px v(color-secondary-01,$color-secondary-01) no-repeat;
+  border: 1px solid v(color-secondary-01,$color-secondary-01);
+  box-shadow: 0 3px 6px v(color-secondary-04,$color-secondary-04);
   margin-bottom: 20px;
   min-height: 248px;
   padding-bottom: 16px;
@@ -16,23 +20,25 @@
   padding-right: 48px;
   padding-top: 32px;
   &:hover {
-    border: 1px solid $color-primary-lighten-01;
+    border: 1px solid v(color-primary-pastel-02,$color-primary-pastel-02);
+    background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/upload-fundo-hover.png") 32px 24px v(color-primary-pastel-02,$color-primary-pastel-02) no-repeat;
+    cursor: pointer;
   }
   .upload-header {
-    color: $body-color;
-    font-size: $h2-font-size;
-    font-weight: 400;
+    color: v(color-secondary-07,$color-secondary-07);
+    font-size: v(font-size-scale-up-03,$font-size-scale-up-03)!important;
+    font-weight: v(font-weight-regular, $font-weight-regular)!important;
   }
   .upload-input {
     display: none;
   }
   .upload-info {
-    color: $color-info;
+    color: v(color-info,$color-info);
     display: block;
     margin: 16px 0;
     padding-left: 40px;
     .fa-info-circle {
-      font-size: 26px;
+      font-size: v(font-size-scale-up-03,$font-size-scale-up-03)!important;
       margin-left: -40px;
       position: absolute;
     }
@@ -42,9 +48,9 @@
       padding-left: 0;
     }
     li {
-      border-bottom: 1px solid $color-secondary-04;
-      color: $color-info;
-      font-size: 14px;
+      border-bottom: 1px solid v(color-secondary-04,$color-secondary-04);
+      color: v(color-info,$color-info);
+      font-size: v(font-size-scale-base,$font-size-scale-base)!important;
       list-style: none;
       padding: 8px 0 8px 8px;
       position: relative;
@@ -70,10 +76,11 @@
     display: block;
     margin: 30px 0;
     padding-left: 32px;
+    color: v(color-info,$color-info);
     .fa-plus {
-      font-size: 16px;
+      font-size: v(font-size-scale-up-01,$font-size-scale-up-01)!important;
       margin-left: -28px;
-      margin-top: 6px;
+      margin-top: 0;
       position: absolute;
     }
   }
@@ -81,4 +88,20 @@
     text-align: right;
     visibility: hidden;
   }
+}
+
+.engloba{
+  background-color: v(color-secondary-03,$color-secondary-03);
+  padding: 1em 2em;
+  .br-accordeon{
+    .icon{
+      padding: 5px 14px;
+    }
+    .title{
+      font-size: v(font-size-scale-up-03,$font-size-scale-up-03)!important;
+    }
+  }  
+}
+p.titulo{
+  font-size: v(font-size-scale-up-03,$font-size-scale-up-03)!important;
 }
