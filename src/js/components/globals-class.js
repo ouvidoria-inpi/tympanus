@@ -16,6 +16,7 @@ export default class Globals {
   constructor () { }
 
   initInstanceAll () {
+    console.log( 'Na classe de instanciação' )
     this.initInstanceAccordeon()
     this.initInstanceChecklist()
     this.initInstanceMessage()

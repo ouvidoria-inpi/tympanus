@@ -46,8 +46,8 @@ function generateHtmlPlugins ( templateDir, dirName ) {
 }
 
 // Call our function on our views directory.
-const htmlPluginsComponentes = generateHtmlPlugins( './src/pug/views/components', 'components' )
-const htmlPluginsTemplates = generateHtmlPlugins( './src/pug/views/templates', 'templates' )
+const htmlPluginsComponentes = generateHtmlPlugins( './src/html/views/components', 'components' )
+const htmlPluginsTemplates = generateHtmlPlugins( './src/html/views/templates', 'templates' )
 
 const fileLoader = {
   loader: 'file-loader',

@@ -1,7 +1,6 @@
 src
 docs
-dist/components
-dist/templates
+dist/html
 .editorconfig
 .gitlab-ci.yml
 .htmlvalidate.json

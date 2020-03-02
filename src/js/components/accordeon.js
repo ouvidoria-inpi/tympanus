@@ -18,7 +18,10 @@ class BRAccordeon {
   }
 
   _collapse ( event ) {
+    // debugger
+    console.log( '_collapse' )
     for ( let field of this.component.querySelectorAll( ".item" ) ) {
+      console.log( 'for' )
       if ( field === event.currentTarget.parentNode ) {
         field.classList.toggle( "is-active" );
       } else if ( field.classList.contains( "is-active" ) ) {
