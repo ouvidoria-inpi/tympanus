@@ -46,6 +46,15 @@
       color:v(status-activated-background, $status-activated-background);
     }
   }
+  &.is-cancel {
+    @include button-link(v(color-primary-default,$color-primary-default));
+    text-decoration: underline;
+    @include estados;
+    &:focus:active{
+      background-color: transparent!important;
+      color:v(color-primary-darken-01, $color-primary-darken-01)!important;
+    }
+  }
   &.is-small {
     @include media-breakpoint-up(md) {
       min-width: 0;
