@@ -1,22 +1,18 @@
-import BRInput from './input'
 import BRAccordeon from './accordeon'
 import BRChecklist from './checklist'
-import BRAlert from './message'
+import BRDatepicker from './datepicker'
 import BRHeader from './header'
+import BRInput from './input'
+import BRAlert from './message'
 import BRNavigation from './navigation'
 import BRSelect from './select'
 import BRTabs from './tabs'
 import BRUpload from './upload'
-import BRDatepicker from './datepicker'
-
-
 
 export default class Globals {
+  constructor() {}
 
-  constructor () { }
-
-  initInstanceAll () {
-    console.log( 'Na classe de instanciação' )
+  initInstanceAll() {
     this.initInstanceAccordeon()
     this.initInstanceChecklist()
     this.initInstanceMessage()
@@ -29,43 +25,39 @@ export default class Globals {
     this.initInstanceDatepicker()
   }
 
-  initInstanceAccordeon () {
-    let accordeonList = [];
+  initInstanceAccordeon() {
+    let accordeonList = []
 
-    for ( let brAccordeon of window.document.querySelectorAll( ".br-accordeon" ) ) {
-      accordeonList.push( new BRAccordeon( "br-accordeon", brAccordeon ) );
-    }
-
-  }
-
-  initInstanceChecklist () {
-    let checklistList = [];
-
-    for ( let brChecklist of window.document.querySelectorAll( '.br-checklist' ) ) {
-      checklistList.push( new BRChecklist( 'br-checklist', brChecklist ) );
+    for (let brAccordeon of window.document.querySelectorAll('.br-accordeon')) {
+      accordeonList.push(new BRAccordeon('br-accordeon', brAccordeon))
     }
   }
 
-  initInstanceMessage () {
-    let alertList = [];
+  initInstanceChecklist() {
+    let checklistList = []
 
-    for ( let brAlert of window.document.querySelectorAll( ".br-message" ) ) {
-      alertList.push( new BRAlert( "br-message", brAlert ) );
+    for (let brChecklist of window.document.querySelectorAll('.br-checklist')) {
+      checklistList.push(new BRChecklist('br-checklist', brChecklist))
     }
-
   }
 
+  initInstanceMessage() {
+    let alertList = []
 
-  initInstanceHeader () {
-    let listHeader = [];
-
-    for ( let header of window.document.querySelectorAll( '.br-header' ) ) {
-      listHeader.push( new BRHeader( 'br-header', header ) );
+    for (let brAlert of window.document.querySelectorAll('.br-message')) {
+      alertList.push(new BRAlert('br-message', brAlert))
     }
-
   }
 
-  initInstanceInput () {
+  initInstanceHeader() {
+    let listHeader = []
+
+    for (let header of window.document.querySelectorAll('.br-header')) {
+      listHeader.push(new BRHeader('br-header', header))
+    }
+  }
+
+  initInstanceInput() {
     const countries = [
       'Afeganistão',
       'África do Sul',
@@ -316,68 +308,60 @@ export default class Globals {
     ]
 
     let inputList = []
-    for ( let brInput of window.document.querySelectorAll( ".br-input" ) ) {
-      inputList.push( new BRInput( "br-input", brInput ) );
+    for (let brInput of window.document.querySelectorAll('.br-input')) {
+      inputList.push(new BRInput('br-input', brInput))
     }
 
-    for ( let brInput of inputList ) {
-      for ( let inputAutocomplete of brInput.component.querySelectorAll( 'input.search-autocomplete' ) ) {
-        brInput.setAutocompleteData( countries );
+    for (let brInput of inputList) {
+      for (let inputAutocomplete of brInput.component.querySelectorAll(
+        'input.search-autocomplete'
+      )) {
+        brInput.setAutocompleteData(countries)
       }
     }
-
   }
 
-  initInstanceNavigation () {
-    let navigationList = [];
+  initInstanceNavigation() {
+    let navigationList = []
 
-    for ( let brNavigation of window.document.querySelectorAll( ".br-navigation" ) ) {
-      navigationList.push( new BRNavigation( "br-navigation", brNavigation ) );
+    for (let brNavigation of window.document.querySelectorAll(
+      '.br-navigation'
+    )) {
+      navigationList.push(new BRNavigation('br-navigation', brNavigation))
     }
-
   }
 
-  initInstanceSelect () {
+  initInstanceSelect() {
     let selectList = []
 
-    for ( let brSelect of window.document.querySelectorAll( '.br-select' ) ) {
-      selectList.push( new BRSelect( 'br-select', brSelect ) )
+    for (let brSelect of window.document.querySelectorAll('.br-select')) {
+      selectList.push(new BRSelect('br-select', brSelect))
     }
-
   }
 
-  initInstanceTabs () {
-    let abasList = [];
+  initInstanceTabs() {
+    let abasList = []
 
-    for ( let brTabs of window.document.querySelectorAll( '.br-tabs' ) ) {
-      abasList.push( new BRTabs( "br-tabs", brTabs ) );
+    for (let brTabs of window.document.querySelectorAll('.br-tabs')) {
+      abasList.push(new BRTabs('br-tabs', brTabs))
     }
-
   }
 
-  initInstanceUpload () {
-    let uploadList = [];
+  initInstanceUpload() {
+    let uploadList = []
 
-    for ( let brUpload of window.document.querySelectorAll( ".br-upload" ) ) {
-      uploadList.push( new BRUpload( "br-upload", brUpload ) );
+    for (let brUpload of window.document.querySelectorAll('.br-upload')) {
+      uploadList.push(new BRUpload('br-upload', brUpload))
     }
-
   }
 
-  initInstanceDatepicker () {
+  initInstanceDatepicker() {
+    let datepickerList = []
 
-    let datepickerList = [];
-    let configData = {};
-
-    for ( let brDatepicker of window.document.querySelectorAll( ".br-datepicker" ) ) {
-      //   if ( brDatepicker.classList.contains( "range" ) ) {
-      //     configData = { id: "range-1" };
-      //     datepickerList.push( new BRDatepicker( "br-datepicker", brDatepicker, configData ) );
-      //   } else {
-      datepickerList.push( new BRDatepicker( "br-datepicker", brDatepicker ) );
-      //   }
+    for (let brDatepicker of window.document.querySelectorAll(
+      '.br-datepicker'
+    )) {
+      datepickerList.push(new BRDatepicker('br-datepicker', brDatepicker))
     }
-
   }
-
 }
