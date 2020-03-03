@@ -64,7 +64,7 @@ Os itens aparecem separados por uma linha de contorno cinza e os ícones de retr
 
 Seguem as métricas definidas para os espaçamentos dos acordeões. Todas as medidas foram definidas com valores múltiplos de 4px.
 
-![Acordeão Positivo](imagens/Acordeao-negativo-espacamento.png)
+![Acordeão Positivo](imagens/acordeao-negativo-espacamento.png)
 
 ## Tipografia e Cor
 
