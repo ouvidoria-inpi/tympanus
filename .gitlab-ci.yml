@@ -20,6 +20,7 @@ install_dependencies:
     - npm set strict-ssl false
     - npm config set @serpro:registry http://nexus.aic.serpro/repository/npm-private/
     - npm install
+    - ls
     - npm run build
   artifacts:
     paths:
