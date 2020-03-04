@@ -15,6 +15,7 @@ install_dependencies:
   stage: build
   script:
     - apk add openssh
+    - export CYPRESS_INSTALL_BINARY=https://cdn.cypress.io/desktop/3.8.3/linux-x64/cypress.zip
     - export NODE_TLS_REJECT_UNAUTHORIZED=0 
     - npm set strict-ssl false
     - npm config set @serpro:registry http://nexus.aic.serpro/repository/npm-private/
