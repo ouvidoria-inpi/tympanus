@@ -1,12 +1,15 @@
-
 const path = require( 'path' );
-const isDEV = process.env.NODE_ENV === 'development'
-// console.log( '***AMBIENTE de DEVELOPMENT*** ------' )
+const isDEV = process.env.NODE_ENV === 'production'
+console.log( 'Estou no ***AMBIENTE de PRODUCTION***' )
 
 // Webpack Stuff
-const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const ConcatPlugin = require( 'webpack-concat-plugin' );
 const HTMLWebpackPlugin = require( 'html-webpack-plugin' );
+const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
+const OptimizeCSSAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' )
 
 // We need Nodes fs module to read directory contents
 const fs = require( 'fs' )
@@ -35,16 +38,16 @@ function generateHtmlPlugins ( templateDir, dirName ) {
 			template: path.resolve( __dirname, `${ templateDir }/${ name }.${ extension }` ),
 			templateParameters: {
 				version: JSON.stringify( require( "./package.json" ).version ).replace( /\"/gi, "" ),
-				cdnUrl: '../'
+				cdnUrl: require( "./package.json" ).cdn
 			},
-			inject: false,
+			inject: true,
 		} )
 	} )
 }
 
 // Call our function on our views directory.
-const htmlPluginsComponentes = generateHtmlPlugins( './src/pug/views/components', 'components' )
-const htmlPluginsTemplates = generateHtmlPlugins( './src/pug/views/templates', 'templates' )
+const htmlPluginsComponentes = generateHtmlPlugins( './src/html/views/components', 'components' )
+const htmlPluginsTemplates = generateHtmlPlugins( './src/html/views/templates', 'templates' )
 
 const fileLoader = {
 	loader: 'file-loader',
@@ -66,17 +69,29 @@ const fileLoader = {
 };
 
 module.exports = {
+	// mode: isDEV ? "development" : "production",
 	mode: "production",
 	entry: {
-		'dsgov': [
-			path.resolve( paths.src + "/scss", 'dsgov.scss' ),
-			path.resolve( paths.src + "/js/", 'index.js' )
-		]
+		'dsgov': path.resolve( paths.src + "/scss", 'dsgov.scss' ),
+		'dsgov-base': path.resolve( paths.src + "/scss", 'dsgov-base.scss' ),
+		'dsgov-componentes': path.resolve( paths.src + "/scss", 'dsgov-components.scss' ),
 	},
 	watch: false,
 	output: {
-		filename: './js/[name].js',
+		chunkFilename: "[name].[chunkhash:8].min.js",
+		filename: './js/[name].[chunkhash:8].min.js',
 		path: paths.dist
+	},
+	devServer: {
+		contentBase: path.join( __dirname, 'dist' ),
+		stats: 'errors-only',
+		clientLogLevel: 'error',
+		port: 9000,
+		open: true,
+		hot: true,
+		inline: true,
+		progress: true,
+		profile: true,
 	},
 	module: {
 		rules: [
@@ -85,6 +100,7 @@ module.exports = {
 				loader: [
 					isDEV ? 'style-loader' : MiniCssExtractPlugin.loader,
 					'css-loader',
+					// 'postcss-loader',
 					{
 						loader: 'sass-loader',
 						options: {
@@ -116,17 +132,9 @@ module.exports = {
 					loader: 'pug-loader',
 					query: {
 						pretty: true,
-						root: path.resolve( __dirname, 'src/views' ),
+						root: path.resolve( __dirname, 'src/views' )
 					}
 				},
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: "babel-loader",
-				options: {
-					presets: [ "@babel/preset-env" ]
-				}
 			},
 		]
 	},
@@ -134,11 +142,22 @@ module.exports = {
 		extensions: [ ".js", ".scss" ]
 	},
 	plugins: [
-		new CleanWebpackPlugin(),
+		// new CleanWebpackPlugin(),
+		new ConcatPlugin( {
+			uglify: true,
+			sourceMap: true,
+			name: 'dsgov-components',
+			outputPath: 'js/',
+			fileName: '[name].min.js',
+			filesToConcat: [ './src/js/components/**' ],
+			attributes: {
+				async: true
+			}
+		} ),
 		// Extract our css to a separate css file
 		new MiniCssExtractPlugin( {
-			filename: 'css/[name].css',
-			chunkFilename: '[id].css',
+			filename: 'css/[name].[chunkhash].min.css',
+			chunkFilename: '[id].[chunkhash].min.css',
 			ignoreOrder: false, // Enable to remove warnings about conflicting order
 		} ),
 	].concat( htmlPluginsComponentes, htmlPluginsTemplates ),
