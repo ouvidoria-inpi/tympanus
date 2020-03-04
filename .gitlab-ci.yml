@@ -17,7 +17,6 @@ install_dependencies:
     - apk add openssh
     - export NODE_TLS_REJECT_UNAUTHORIZED=0 
     - npm set strict-ssl false
-    - npm config set registry http://nexus.aic.serpro/repository/npm-group/
     - npm config set @serpro:registry http://nexus.aic.serpro/repository/npm-private/
     - npm install
     - npm run build
