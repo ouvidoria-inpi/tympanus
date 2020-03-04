@@ -1,6 +1,6 @@
 .#{$prefix}message {
-  box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16); // sass-lint:disable-line no-color-literals
-  color: $color-secondary-08;
+  box-shadow: 0 3px 6px rgba(v(color-secondary-09,$color-secondary-09), 0.16); // sass-lint:disable-line no-color-literals
+  color: v(color-secondary-08,$color-secondary-08);
   display: flex;
   margin-bottom: $margin-default * 2;
   .icon {
@@ -21,7 +21,7 @@
       font-weight: 600;
     }
     a {
-      color: $color-secondary-08;
+      color: v(color-secondary-08,$color-secondary-08);
       text-decoration: underline;
       &:hover {
         color: $link-hover-color;
@@ -39,7 +39,7 @@
     button {
       background: transparent;
       border: 0;
-      color: $color-secondary-08;
+      color: v(color-secondary-08,$color-secondary-08);
       padding: $spacer $spacer * 2;
     }
   }
@@ -54,7 +54,7 @@
       }
       @if ($state == warning) {
         .icon {
-          color: $color-secondary-08;
+          color: v(color-secondary-08,$color-secondary-08);
         }
       }
     }
