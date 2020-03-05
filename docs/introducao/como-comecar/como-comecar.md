@@ -22,11 +22,14 @@
     <body>
         ...
         <!-- Scripts de componentes -->
-        <script src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/js/dsgov-components.js"></script>
+        <script src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/latest/js/dsgov-components.js"></script>
     </body>
 </html>
 ```
-
+Para versões anterioes coloque o nome da versão no latest como exemplo 
+```
+https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/js/dsgov-components.js
+```
 Os arquivos do Design System podem ser baixados em <https://git.serpro/ds-gov/design-system>.
 
 Seu projeto usa **Node**? Nesse caso inclua no arquivo **package.json** o pacote `@govbr/dsgov`.
