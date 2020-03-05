@@ -8,9 +8,11 @@ import BRNavigation from './navigation'
 import BRSelect from './select'
 import BRTabs from './tabs'
 import BRUpload from './upload'
+import BRTable from './table'
+
 
 export default class Globals {
-  constructor() {}
+  constructor() { }
 
   initInstanceAll() {
     this.initInstanceAccordeon()
@@ -23,6 +25,8 @@ export default class Globals {
     this.initInstanceTabs()
     this.initInstanceUpload()
     this.initInstanceDatepicker()
+    this.initInstanceTable()
+
   }
 
   initInstanceAccordeon() {
@@ -364,4 +368,12 @@ export default class Globals {
       datepickerList.push(new BRDatepicker('br-datepicker', brDatepicker))
     }
   }
+
+  initInstanceTable() {
+    let tableList = [];
+    for (let [index, brTable] of window.document.querySelectorAll(".br-table").entries()) {
+      tableList.push(new BRTable("br-table", brTable, index));
+    }
+  }
+
 }

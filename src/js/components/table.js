@@ -25,7 +25,7 @@ class BRTable {
     let scrollerTag = document.createElement("div");
     this._setSyncScroll(scrollerTag);
     scrollerTag.classList.add("scroller")
-    
+
     for (let header of this.component.querySelectorAll("table thead tr th")) {
       let clonedHeader = document.createElement("div");
       clonedHeader.classList.add("item");
@@ -114,7 +114,7 @@ class BRTable {
     );
     let selectedBar = this.component.querySelector('.selected-bar');
     let info_select_all = this.component.querySelector('.selected-bar .info .select-all');
-  
+
     if (tableCheckboxes) {
       for (let checkbox of tableCheckboxes) {
         checkbox.addEventListener('click', () => {
@@ -122,20 +122,20 @@ class BRTable {
         });
       }
     }
-  
+
     if (headerCheckbox) {
       headerCheckbox.addEventListener('click', () => {
         this._checkAllTable(selectedBar, tableCheckboxes, headerCheckbox);
       });
     }
-  
+
     if (info_select_all) {
       info_select_all.addEventListener('click', () => {
         this._checkAllTable(selectedBar, tableCheckboxes, headerCheckbox);
       });
     }
   }
-  
+
   _setRow(checkbox, check) {
     let tr = checkbox.parentNode.parentNode.parentNode;
     if (check) {
@@ -148,51 +148,51 @@ class BRTable {
       checkbox.checked = false;
     }
   }
-  
+
   _checkRow(checkbox, selectedBar, tableCheckboxes, headerCheckbox) {
     let check = checkbox.checked;
     this._setRow(checkbox, check);
     this._setSelectedBar(check ? 1 : -1, selectedBar, tableCheckboxes, headerCheckbox);
   }
-  
+
   _checkAllRows(tableCheckboxes) {
     for (let checkbox of tableCheckboxes) {
       this._setRow(checkbox, true);
     }
   }
-  
+
   _uncheckAllRows(tableCheckboxes) {
     for (let checkbox of tableCheckboxes) {
       this._setRow(checkbox, false);
     }
   }
-  
+
   _checkAllTable(selectedBar, tableCheckboxes, headerCheckbox) {
     let count = tableCheckboxes.length;
     let info_count = selectedBar.querySelector('.info .count');
     let total = parseInt(info_count.innerHTML, 10);
-  
+
     if (total == count) {
       this._uncheckAllRows(tableCheckboxes);
       count = -1 * count;
     } else {
       this._checkAllRows(tableCheckboxes);
     }
-  
+
     this._setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox);
   }
-  
+
   _setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox) {
     let info_count = selectedBar.querySelector('.info .count');
     let info_text = selectedBar.querySelector('.info .text');
     let mobile_ico = selectedBar.querySelector('.info .select-all').children[0];
     let total = count < 2 ? parseInt(info_count.innerHTML, 10) + count : count;
-  
+
     if (total > 0) {
       selectedBar.classList.add('is-active');
       info_count.innerHTML = total;
       info_text.innerHTML = total > 1 ? 'itens selecionados' : 'item selecionado';
-  
+
       if (headerCheckbox) headerCheckbox.parentNode.classList.add('is-checking');
       if (mobile_ico) {
         mobile_ico.classList.add('fa-minus-square');
@@ -227,3 +227,6 @@ let tableList = [];
 for (let [index, brTable] of window.document.querySelectorAll(".br-table").entries()) {
   tableList.push(new BRTable("br-table", brTable, index));
 }
+
+
+export default BRTable
