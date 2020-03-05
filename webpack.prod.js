@@ -46,8 +46,8 @@ function generateHtmlPlugins ( templateDir, dirName ) {
 }
 
 // Call our function on our views directory.
-const htmlPluginsComponentes = generateHtmlPlugins( './src/html/views/components', 'components' )
-const htmlPluginsTemplates = generateHtmlPlugins( './src/html/views/templates', 'templates' )
+const htmlPluginsComponentes = generateHtmlPlugins( './src/pug/views/components', 'components' )
+const htmlPluginsTemplates = generateHtmlPlugins( './src/pug/views/templates', 'templates' )
 
 const fileLoader = {
 	loader: 'file-loader',
@@ -78,8 +78,8 @@ module.exports = {
 	},
 	watch: false,
 	output: {
-		chunkFilename: "[name].[chunkhash:8].min.js",
-		filename: './js/[name].[chunkhash:8].min.js',
+		chunkFilename: "[name].js",
+		filename: './js/[name].js',
 		path: paths.dist
 	},
 	devServer: {
@@ -156,8 +156,8 @@ module.exports = {
 		} ),
 		// Extract our css to a separate css file
 		new MiniCssExtractPlugin( {
-			filename: 'css/[name].[chunkhash].min.css',
-			chunkFilename: '[id].[chunkhash].min.css',
+			filename: 'css/[name].css',
+			chunkFilename: '[id].css',
 			ignoreOrder: false, // Enable to remove warnings about conflicting order
 		} ),
 	].concat( htmlPluginsComponentes, htmlPluginsTemplates ),
