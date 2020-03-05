@@ -55,11 +55,11 @@ C | Botões Mini
 
 Em sistemas antigos, que já utilizam os ícones em suas estruturas, o padrão a ser seguido deve ser: background do botão + ícone + Label. De forma geral é indicado que o ícone apareça antes do label. Porém, há situações onde a localização do ícone pode interferir no entendimento da ação. Nesse caso, é indicado que o ícone apareça à direita, exemplo Botão Avançar. É imprescindível que a seta apareça do lado direito, para que fique coerente com a ação de avançar.
 
-[![Imagem Botoes Primarios com Icones](imagens/BotoesPrimarioscomIcones.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/screen/802b49c2-1789-4016-868e-b44d4ba08a43/BotoesPrimariosMobile-Exemplos)
+[![Imagem Botoes Primarios com Icones](imagens/BotoesPrimarioscomIcones.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/screen/3dcde40d-405b-42f1-8ffb-1a73de8efa4b/BotoesPrimarioscomIcones)
 
 É importante que os Botões Mobile apareçam ocupando toda a largura da tela, para ficar mais rápido o acesso através do toque. Exceto quando houver necessidade de colocar um botão primário e um secundário como ocorre nos filtros. Quando houver necessidade de incluir botões nos Card Mini é recomendado que os botões apareçam num formato menor: altura 32px.
 
-[![Imagem Botoes Primarios Mobile Exemplos](imagens/BotoesPrimariosMobile_Exemplos.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/screen/3dcde40d-405b-42f1-8ffb-1a73de8efa4b/BotoesPrimarioscomIcones)
+[![Imagem Botoes Primarios Mobile Exemplos](imagens/BotoesPrimariosMobile_Exemplos.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/screen/802b49c2-1789-4016-868e-b44d4ba08a43/BotoesPrimariosMobile-Exemplos)
 
 ##### 2 | Botão Call to Action (Ênfase Muito Alta )
 
