@@ -23,16 +23,16 @@ class BRScrim {
   _setBehavior() {
     if (this.component.classList.contains("is-foco")) {
       this.component.addEventListener("click", (event) => {
-        this._closeScrim(event);
+        this._hideScrim(event);
       });
     }
   }
 
-  _closeScrim(event) {
+  _hideScrim(event) {
     event.currentTarget.classList.remove("is-active");
   }
 
-  openScrim() {
+  showScrim() {
     if (this._type === "is-foco") {
       this.component.classList.add("is-active");
     }
@@ -47,7 +47,7 @@ for (let brScrim of window.document.querySelectorAll(".br-scrim")) {
 for (let buttonBloco1 of window.document.querySelectorAll(".bloco1 button")) {
   buttonBloco1.addEventListener("click", () => {
     for (let brScrim of scrimList) {
-      brScrim.openScrim();
+      brScrim.showScrim();
     }
   });
 }
