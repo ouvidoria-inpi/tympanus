@@ -63,10 +63,14 @@ class BRUpload {
   }
 
   _handleFiles(files) {
+    console.log(this._fileArray)
+
     let newFiles = !files.length
       ? Array.from(this._inputElement.files)
       : Array.from(files)
     this._fileArray = this._fileArray.concat(newFiles)
+
+    console.log(this._fileArray)
 
     this._info.style.display = 'none'
     this._header.innerHTML = 'Arquivos Selecionados'
@@ -140,6 +144,12 @@ class BRUpload {
     this._fileArray.splice(index, 1)
     this._updateFileList()
   }
+}
+
+let uploadList = []
+
+for (let brUpload of window.document.querySelectorAll('.br-upload')) {
+  uploadList.push(new BRUpload('br-upload', brUpload))
 }
 
 export default BRUpload

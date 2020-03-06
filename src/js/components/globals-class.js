@@ -8,9 +8,11 @@ import BRNavigation from './navigation'
 import BRSelect from './select'
 import BRTabs from './tabs'
 import BRUpload from './upload'
+import BRTable from './table'
+import BRScrim from './scrim'
 
 export default class Globals {
-  constructor() {}
+  constructor() { }
 
   initInstanceAll() {
     this.initInstanceAccordeon()
@@ -23,6 +25,9 @@ export default class Globals {
     this.initInstanceTabs()
     this.initInstanceUpload()
     this.initInstanceDatepicker()
+    this.initInstanceTable()
+    this.initInstanceScrim()
+
   }
 
   initInstanceAccordeon() {
@@ -362,6 +367,29 @@ export default class Globals {
       '.br-datepicker'
     )) {
       datepickerList.push(new BRDatepicker('br-datepicker', brDatepicker))
+    }
+  }
+
+  initInstanceTable() {
+    let tableList = [];
+    for (let [index, brTable] of window.document.querySelectorAll(".br-table").entries()) {
+      tableList.push(new BRTable("br-table", brTable, index));
+    }
+  }
+
+  initInstanceScrim() {
+    let scrimList = [];
+    
+    for (let brScrim of window.document.querySelectorAll(".br-scrim")) {
+      scrimList.push(new BRScrim("br-scrim", brScrim));
+    }
+
+    for (let buttonBloco1 of window.document.querySelectorAll(".bloco1 button")) {
+      buttonBloco1.addEventListener("click", () => {
+        for (let brScrim of scrimList) {
+          brScrim.showScrim();
+        }
+      });
     }
   }
 }
