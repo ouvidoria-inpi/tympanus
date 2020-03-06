@@ -27,7 +27,10 @@ echo "Enviando nova versao para o CDN"
 git add .
 git commit -m "inserindo nova versao"]
 pwd
-git push origin $LATEST
+cd css cdn-dsgov-estaleiro
+pwd
+git commit -am " Incluindo versão beta $LATEST "
+git push origin master
 cd ../../
 git push origin $LATEST
 echo "Nova versão enviada no CDN"
