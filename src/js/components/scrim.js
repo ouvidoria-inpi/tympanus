@@ -3,7 +3,6 @@ class BRScrim {
   constructor(name, component) {
     this.name = name;
     this.component = component;
-    console.log(this);
     this._setType();
     this._setBehavior();
   }
