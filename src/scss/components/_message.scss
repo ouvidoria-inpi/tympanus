@@ -1,13 +1,12 @@
 .#{$prefix}message {
-  box-shadow: 0 3px 6px rgba(v(color-secondary-09,$color-secondary-09), 0.16); // sass-lint:disable-line no-color-literals
-  color: v(color-secondary-08,$color-secondary-08);
+  color: $color-gray-7;
   display: flex;
   margin-bottom: $margin-default * 2;
   .icon {
     align-items: center;
-    color: v(color-secondary-01,$color-secondary-01);
+    color: $color-secondary-01;
     display: flex;
-    font-size: v(font-size-scale-up-03,$font-size-scale-up-03);
+    font-size: 175%;
     justify-content: center;
     width: $message-icon;
     img {
@@ -18,19 +17,26 @@
     flex: 1;
     padding: $spacer-half * 4.5 0;
     strong {
-      font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
+      font-weight: 600;
     }
     a {
-      color: v(color-secondary-08,$color-secondary-08);
+      color: $color-secondary-08;
       text-decoration: underline;
       &:hover {
-        color: v(color-primary-lighten-01,$color-primary-lighten-01); //Checar
+        color: $link-hover-color;
       }
     }
     * {
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+  a {
+    color: v(color-secondary-08,$color-secondary-08);
+    text-decoration: underline;
+    &:hover {
+      color: v(color-primary-lighten-01,$color-primary-lighten-01); //Checar
     }
   }
   // Estados
@@ -40,7 +46,7 @@
     &.is-#{$state} {
       background: scale-color($color, $lightness: 90%);
       .icon {
-        background: $color;
+        background: transparent;
         color: $color;
       }
       .close {
@@ -55,7 +61,7 @@
       }
       @if ($state == warning) {
         .icon, .close button {
-          color: v(color-secondary-08,$color-secondary-08);
+          color: $color-gray-7;
         }
       }
     }
