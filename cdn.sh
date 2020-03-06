@@ -2,7 +2,7 @@
 
 git commit -am " Incluindo versão beta"
 npm version prerelease -preid=beta
-
+npm publish
 
 LATEST=$( git describe --tags `git rev-list --tags --max-count=1` )
 
