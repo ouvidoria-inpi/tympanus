@@ -30,7 +30,7 @@ pwd
 cd css cdn-dsgov-estaleiro
 pwd
 git commit -am " Incluindo versão beta $LATEST "
-git push origin master
+# git push origin master
 cd ../../
 # git push origin $LATEST
 echo "Nova versão enviada no CDN"
