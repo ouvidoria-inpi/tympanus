@@ -25,7 +25,7 @@ cp -r ../dist/js cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
 cp -r ../dist/css cdn-dsgov-estaleiro/htdocs/design-system/$LATEST 
 echo "Enviando nova versao para o CDN"
 git add .
-git commit -m "inserindo nova versao"]
+git commit -m "inserindo nova versao"
 pwd
 cd css cdn-dsgov-estaleiro
 pwd
