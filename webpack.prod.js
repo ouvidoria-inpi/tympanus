@@ -1,6 +1,5 @@
 const path = require( 'path' );
 const isDEV = process.env.NODE_ENV === 'production'
-console.log( 'Estou no ***AMBIENTE de PRODUCTION***' )
 
 // Webpack Stuff
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');

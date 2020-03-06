@@ -1,6 +1,5 @@
 const path = require('path');
 const isDEV = process.env.NODE_ENV === 'development'
-// console.log( '***AMBIENTE de DEVELOPMENT*** ------' )
 
 // Webpack Stuff
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
