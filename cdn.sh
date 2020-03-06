@@ -31,6 +31,6 @@ cd css cdn-dsgov-estaleiro
 pwd
 git commit -am " Incluindo versão beta $LATEST "
 cd ../../
-git push origin $LATEST
+# git push origin $LATEST
 echo "Nova versão enviada no CDN"
 # git checkout develop
