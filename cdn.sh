@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
 
+git commit -am " Incluindo versão beta"
+npm version prerelease -preid=beta
 
-
-
-if $(npm version prerelease -preid=beta) ; then
-    echo "Command succeeded";
-else
-    exit;
-fi
 
 LATEST=$( git describe --tags `git rev-list --tags --max-count=1` )
 
