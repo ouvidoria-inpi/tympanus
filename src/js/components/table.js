@@ -5,7 +5,6 @@ class BRTable {
     this.component = component;
     this._sequence = sequence;
 
-    console.log(this.component);
     this._setBehavior();
   }
 

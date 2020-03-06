@@ -22,7 +22,6 @@ append scripts
     let activeClass = "is-active";
     function toggleNavigation(element) {
       let trigger = document.querySelector(element);
-      // console.log(trigger)
       let nav = document.querySelector(element + "-nav");
       trigger.addEventListener("click", function() {
         this.classList.toggle(activeClass);
