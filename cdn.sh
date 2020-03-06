@@ -7,7 +7,7 @@ npm version prerelease -preid=beta
 LATEST=$( git describe --tags `git rev-list --tags --max-count=1` )
 
 echo $LATEST
-
+echo "Guardando dados no CDN"
 # git push origin $LATEST
 # git checkout $LATEST
 rm -rf cdn
