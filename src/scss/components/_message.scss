@@ -1,5 +1,5 @@
 .#{$prefix}message {
-  color: $color-gray-7;
+  color: v(color-secondary-08,$color-secondary-08);
   display: flex;
   margin-bottom: $margin-default * 2;
   .icon {
