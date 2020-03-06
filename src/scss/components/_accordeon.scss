@@ -1,66 +1,99 @@
 .#{$prefix}accordeon {
-  border-top: 1px solid $border-color;
+  border-top: 1px solid v(color-secondary-04, $color-secondary-04);
   margin-bottom: $margin-default;
   .item {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid v(color-secondary-04, $color-secondary-04);
     display: flex;
     flex-direction: column;
     &.is-active {
+      border-bottom: 0;
+      .header {
+        .icon,
+        .title {
+          color: v(color-primary-darken-01, $color-primary-darken-01);
+          font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+        }
+        &:hover {
+          color: v(color-primary-darken-01, $color-primary-darken-01);
+        }
+      }
       & + .content {
+        border-bottom: 1px solid v(color-secondary-04, $color-secondary-04);
         display: block;
       }
     }
-  }
-  .header {
-    background: transparent;
-    border: 0;
-    color: $body-color;
-    display: flex;
-    font-size: $font-size-base;
-    justify-content: space-between;
-    padding: $spacer ($spacer * 2) ($spacer * 1.5);
-    text-align: left;
-    text-decoration: none;
-    width: 100%;
-    &:hover {
-      color: $link-hover-color;
+    .header {
+      background: transparent;
+      border: 0;
+      display: flex;
+      font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
+      justify-content: space-between;
+      padding: ($spacer * 2) 0;
+      text-align: left;
       text-decoration: none;
-      .title,
-      .icon {
-        color: inherit;
+      width: 100%;
+      &:hover {
+        background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
+        color: v(color-primary-default, $color-primary-default);
+        text-decoration: none;
+        .title,
+        .icon {
+          color: inherit;
+        }
       }
-    }
-  }
-  .icon {
-    color: $color-primary-default;
-    padding: 0 ($spacer * 2);
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
-    }
-  }
-  .title {
-    color: $body-color;
-    flex: 1;
-    font-weight: $font-weight-base;
-    padding: 0 $spacer;
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
+      .icon {
+        color: v(color-primary-default, $color-primary-default);
+        margin: 0 ($spacer * 2);
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+      .title {
+        color: v(color-primary-default, $color-primary-default);
+        flex: 1;
+        font-weight: v(font-weight-medium, $font-weight-medium);
+        padding: 0 $spacer;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
     }
   }
   .content {
     display: none;
-    font-size: $font-size-base * 0.875;
-    margin: 0 ($spacer * 2);
-    padding: $spacer ($spacer * 7) ($spacer * 3);
+    font-size: v(font-size-scale-base, $font-size-scale-base);
+    margin: 0 ($spacer);
+    padding: $spacer ($spacer * 8) ($spacer * 2);
     * {
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+  &.is-negative {
+    background-color: v(color-primary-darken-02, $color-primary-darken-02);
+    .item {
+      .header {
+        .icon,
+        .title {
+          color: v(color-secondary-01, $color-secondary-01);
+        }
+        &:hover {
+          background-color: rgba(255,255,255, 0.12);
+          .title,
+          .icon {
+            color: v(color-secondary-01, $color-secondary-01);
+          }
+        }
+      }
+      & + .content {
+        color: v(color-secondary-01, $color-secondary-01);
       }
     }
   }
