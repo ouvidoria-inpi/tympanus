@@ -61,7 +61,7 @@
       }
       @if ($state == warning) {
         .icon, .close button {
-          color: $color-gray-7;
+          color: $color-secondary-08;
         }
       }
     }
