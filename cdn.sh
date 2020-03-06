@@ -4,7 +4,7 @@
 
 
 if $(npm version prerelease -preid=beta) ; then
-    echo "Command succeeded"
+    echo "Command succeeded";
 else
     exit;
 fi
