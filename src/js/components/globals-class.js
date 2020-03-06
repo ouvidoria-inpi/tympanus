@@ -9,7 +9,7 @@ import BRSelect from './select'
 import BRTabs from './tabs'
 import BRUpload from './upload'
 import BRTable from './table'
-
+import BRScrim from './scrim'
 
 export default class Globals {
   constructor() { }
@@ -26,6 +26,7 @@ export default class Globals {
     this.initInstanceUpload()
     this.initInstanceDatepicker()
     this.initInstanceTable()
+    this.initInstanceScrim()
 
   }
 
@@ -376,4 +377,19 @@ export default class Globals {
     }
   }
 
+  initInstanceScrim() {
+    let scrimList = [];
+    
+    for (let brScrim of window.document.querySelectorAll(".br-scrim")) {
+      scrimList.push(new BRScrim("br-scrim", brScrim));
+    }
+
+    for (let buttonBloco1 of window.document.querySelectorAll(".bloco1 button")) {
+      buttonBloco1.addEventListener("click", () => {
+        for (let brScrim of scrimList) {
+          brScrim.showScrim();
+        }
+      });
+    }
+  }
 }
