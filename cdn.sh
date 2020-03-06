@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
 
-npm version prerelease -preid=beta
+
+
+if $(npm version prerelease -preid=beta) ; then
+    echo "Command succeeded"
+else
+    exit;
+fi
+
 LATEST=$( git describe --tags `git rev-list --tags --max-count=1` )
 
 echo $LATEST
@@ -23,8 +30,10 @@ cp -r ../dist/js cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
 cp -r ../dist/css cdn-dsgov-estaleiro/htdocs/design-system/$LATEST 
 echo "Enviando nova versao para o CDN"
 git add .
-git commit -m "inserindo nova versao"
+git commit -m "inserindo nova versao"]
+pwd
 git push origin $LATEST
-cd ..
+cd ../../
+git push origin $LATEST
 echo "Nova versão enviada no CDN"
 # git checkout develop
