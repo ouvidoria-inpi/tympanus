@@ -10,6 +10,7 @@ import BRTabs from './tabs'
 import BRUpload from './upload'
 import BRTable from './table'
 import BRScrim from './scrim'
+import BRModal from './modal'
 
 export default class Globals {
   constructor() { }
@@ -27,6 +28,7 @@ export default class Globals {
     this.initInstanceDatepicker()
     this.initInstanceTable()
     this.initInstanceScrim()
+    this.initInstanceModal()
 
   }
 
@@ -390,6 +392,23 @@ export default class Globals {
           brScrim.showScrim();
         }
       });
+    }
+  }
+
+  initInstanceModal() {
+    let modalList = []
+
+    for (let brModal of window.document.querySelectorAll(".br-modal")) {
+      modalList.push(new BRModal("br-modal", brModal));
+    }
+
+    for (let brScrim of window.document.querySelectorAll(".br-scrim")) {
+      let scrim = new BRScrim("br-scrim", brScrim);
+      for (let button of window.document.querySelectorAll(".br-scrim + button")) {
+        button.addEventListener("click", () => {
+          scrim.showScrim();
+        });
+      } 
     }
   }
 }
