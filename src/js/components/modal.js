@@ -1,16 +1,32 @@
-scrim = document.getElementsByClassName("is-foco")[0];
+import BRScrim from "./scrim";
 
-function openModal(div) {
-    scrim.innerHTML = div.innerHTML;
-    scrim.classList.add("is-active");
+class BRModal {
+
+  constructor(name, component) {
+    this.name = name;
+    this.component = component;
+    console.log(this.component);
+    this._setBehavior();
+  }
+
+  _setBehavior() {
+
+  }
 }
 
-function openModalId(id) {
-    scrim = document.getElementById(id);
-    scrim.classList.add("is-active");
+export default BRModal
+
+let modalList = []
+
+for (let brModal of window.document.querySelectorAll(".br-modal")) {
+  modalList.push(new BRModal("br-modal", brModal));
 }
 
-function closeModal() {
-    scrim.classList.remove("is-active");
+for (let brScrim of window.document.querySelectorAll(".br-scrim")) {
+  let scrim = new BRScrim("br-scrim", brScrim);
+  for (let button of window.document.querySelectorAll(".br-scrim + button")) {
+    button.addEventListener("click", () => {
+      scrim.showScrim();
+    });
+  }  
 }
-
