@@ -1,6 +1,5 @@
 .#{$prefix}message {
-  box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16); // sass-lint:disable-line no-color-literals
-  color: $color-secondary-08;
+  color: v(color-secondary-08,$color-secondary-08);
   display: flex;
   margin-bottom: $margin-default * 2;
   .icon {
@@ -16,7 +15,7 @@
   }
   .content {
     flex: 1;
-    padding: $spacer * 2.5;
+    padding: $spacer * 2.25 0;
     strong {
       font-weight: 600;
     }
@@ -33,14 +32,11 @@
       }
     }
   }
-  .close {
-    align-items: flex-start;
-    display: flex;
-    button {
-      background: transparent;
-      border: 0;
-      color: $color-secondary-08;
-      padding: $spacer $spacer * 2;
+  a {
+    color: v(color-secondary-08,$color-secondary-08);
+    text-decoration: underline;
+    &:hover {
+      color: v(color-primary-lighten-01,$color-primary-lighten-01); //Checar
     }
   }
   // Estados
@@ -50,10 +46,21 @@
     &.is-#{$state} {
       background: scale-color($color, $lightness: 90%);
       .icon {
-        background: $color;
+        background: transparent;
+        color: $color;
+      }
+      .close {
+        align-items: flex-start;
+        display: flex;
+        button {
+          background: transparent;
+          border: 0;
+          color: $color;
+          padding: $spacer $spacer * 2;
+        }
       }
       @if ($state == warning) {
-        .icon {
+        .icon, .close button {
           color: $color-secondary-08;
         }
       }
