@@ -1,53 +1,14 @@
 ## Dependências
 
-Para diferentes tamanhos deve ser definido o tamanho de fonte (font-size) do componente pai.
+Para diferentes tamanhos deve ser definido o tamanho de fonte (font-size) do componente pai ou usar a classe `.fa-1x`, onde para aumentar o tamanho do ícone, muda-se o valor ao lado de `.fa-?X`. 
 
-## Código básico
+## Posicionamento e Tipos de badges
 
-```html
-<div class="br-badge">
-  <span class="icon"></span>
-</div>
-```
-
-Ou
-
-```html
-<div class="br-badge is-status">
-  <span class="icon"></span>
-</div>
-```
-
-Ou
-
-```html
-<div class="br-badge is-symbol">
-  <i></i>
-  <i class="fas icon"></i>
-</div>
-```
-
-Ou
-
-```html
-<div class="br-badge is-count">
-  <i></i>
-  <span class="number"> {{valor}} </span>
-</div>
-```
-
-# Anatomia do componente
-
-Este componente é formado pelos seguintes elementos obrigatórios:
-
-- `br-badge`: container do componente;
-- `is-status`: para definir badge sinalização;
-- `is-symbol`: para definir badge sinalização de status com símbolo;
-- `is-count`: para definir badge contagem;
-- `icon`: elemento interno do badge de sinalização que contem o icone a ser exibido;
-- `number`: elemento interno do badge contagem que contem o valor a ser exibido;
-
-# Estados
+Podemos posicionar os badges na parte `superior`, `inferior`, `esquerda` e `direita`. 
+Existem também os seguintes tipos de badges:
+Ícones de estados;
+Símbolos;
+Números e Contadores.
 
 ## Cores
 
@@ -58,22 +19,61 @@ Para definir as cores dos bages são usadas as seguintes classes:
 - `is-info`
 - `is-danger`
 
-## Posição
+## Código
 
-Para definir o posicionamento dos bages são usadas as seguintes classes:
+Badge com Ícone alinhado ao topo, a esquerda e cor de sucesso(is-success):
 
-- `is-top` ou `is-bottom`
-- `is-left` ou `is-right`
-
-## Exemplo:
-
-```html
-<div class="br-badge is-symbol is-left is-bottom is-warning">
-  <i class="fas fa-file"></i>
-  <i class="fas fa-check icon"></i>
-</div>
+``` Html
+    <span class="br-badge is-top is-left icon">
+      <i class="fas fa-circle is-success"></i>
+    </span>
 ```
 
-# Regras especiais
+Badge com Ícone alinhado ao topo, a direita e cor de atenção(is-warning):
+``` Html
+   <span class="br-badge is-top is-right icon">
+    <i class="fas fa-circle is-warning"></i>
+   </span>
+```
 
-Os badges de tipo 1 só podem ter definidos o posicionamento superior ou inferior (top ou bottom).
+Badge com Ícone alinhado a base, a esquerda e cor de informação(is-info):
+``` Html
+  <span class="br-badge is-bottom is-left icon">
+    <i class="fas fa-circle is-info"></i>
+  </span>
+```
+
+Badge com Ícone alinhado a base, a direita e cor de perigo(is-danger):
+``` Html
+  <span class="br-badge is-bottom is-right icon">
+    <i class="fas fa-circle is-danger"></i>
+  </span>
+```
+
+Seguindo a mesma lógica de posicionamento **topo**, **direita**, **baixo** e **esquerda**, temos também os badges com `Símbolos`, `Números` e `Contadores`.
+
+Badge com Símbolo alinhado ao topo, a esquerda e cor de sucesso(is-success):
+``` Html
+  <span class="br-badge is-top is-left simbol">
+    <i class="fas fa-check is-success"></i>
+  </span>
+```
+
+Badge com Número alinhado a base e a direita(por padrão a corda fonte da classe fa-layers-cont é #ff253a):
+``` Html
+  <span class="br-badge fa-layers-counter fa-layers-bottom-right">5</span>
+```
+
+Badge com Contador alinhado ao topo e a direita(por padrão a corda fonte da classe fa-layers-cont é #ff253a):
+```Html
+  <span class="br-badge fa-layers-counter fa-layers-top-right">999+</span>
+```
+
+# Anatomia do componente
+
+Este componente é formado pelos seguintes elementos obrigatórios:
+
+- `br-badge`: container do componente;
+- `is-top`, `is-right`, `is-bottom` e `is-left`: para definir o posicionamento do badge em relação ao elemento que se deseja posicionar;
+- `is-symbol`: para definir badge sinalização de status com símbolo;
+- `icon`: elemento usado para status, através de um ícone de circulo e cor;
