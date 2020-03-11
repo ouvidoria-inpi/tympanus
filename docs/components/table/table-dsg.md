@@ -126,7 +126,7 @@ Os dados de uma linha podem conter:
 - Ícones
 - Links
 - Textos
-- Componentes de formulários ([checkbox](), [text](), [radio](), [select]()...)
+- Componentes de formulários (checkbox, text, radio, select...)
 - Chips
 
 ---

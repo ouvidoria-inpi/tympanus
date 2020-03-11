@@ -20,7 +20,7 @@ A variedade de estilos da Rawline torna desnecessária a utilização de outra f
 
 A diversidade de pesos da Rawline facilita a definição de níveis de hierarquias entre os elementos da tela. Isso torna a leitura mais agradável, e também fica mais claro para o usuário o papel que esses elementos ocupam na tela.
 
-As escalas tipográficas foram definidas para manter uma harmonia e coesão dentro do texto. Dessa forma, nenhuma fonte deve estar fora da escala definida no DS: **Minor Third**. Veja [Escala tipográfica]() para maiores detalhes.
+As escalas tipográficas foram definidas para manter uma harmonia e coesão dentro do texto. Dessa forma, nenhuma fonte deve estar fora da escala definida no DS: **Minor Third**. Veja [Escala tipográfica](ds/fundamentos-visuais/tipografia#escala-tipográfica) para maiores detalhes.
 
 A **Tabela de Estilo Padrão** foi criada para manter a mesma experiência do usuário na maioria dos dispositivos. Caso seja necessário alterar algum valor, deve-se seguir a Escala tipográfica. Além disso, os demais itens da tabela de Estilo devem ser revistos mantendo a escala proporcional, ou seja, aumentando ou diminuindo conforme a necessidade.
 
