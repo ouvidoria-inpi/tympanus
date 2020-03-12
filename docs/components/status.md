@@ -24,7 +24,6 @@ Acompanhe a evolução dos componentes do Design System
 | [Checklist](/ds/componentes/checklist)   | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |      <i class="fas fa-sync text-orange"></i>       |
 | [Datepicker](/ds/componentes/datepicker) |  <i class="fas fa-sync text-orange"></i>  |          <i class="fas fa-sync text-orange"></i>          |     <i class="fas fa-check text-success"></i>      |
 | [Divider](/ds/componentes/divider)       | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |      <i class="fas fa-sync text-orange"></i>       |
-| [Formulário](/ds/componentes/form)       | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |      <i class="fas fa-sync text-orange"></i>       |
 | [Input](/ds/componentes/input)           | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
 | [Mensagens](/ds/componentes/message)     |  <i class="fas fa-sync text-orange"></i>  |          <i class="fas fa-sync text-orange"></i>          |     <i class="fas fa-check text-success"></i>      |
 | [Modal](/ds/componentes/modal)           |  <i class="fas fa-sync text-orange"></i>  |          <i class="fas fa-sync text-orange"></i>          |     <i class="fas fa-check text-success"></i>      |
