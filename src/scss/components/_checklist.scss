@@ -1,10 +1,10 @@
 .#{$prefix}checklist {
-  border-top: 1px solid $border-color;
+  border-top: 1px solid v(color-secondary-04,$color-secondary-04);
   margin: 0;
   // Cada linha do checklist
   .item {
     align-items: center;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid v(color-secondary-04,$color-secondary-04);
     display: flex;
     margin: 0;
     min-height: 65px;
@@ -23,14 +23,14 @@
   }
   // Ícone ilustrativo
   .icon {
-    color: $color-primary-default;
+    color: v(color-primary-default,$color-primary-default);
     text-align: center;
     width: 40px;
     &.is-invalid {
-      color: $color-danger;
+      color: v(color-danger,$color-danger);
     }
     &.is-valid {
-      color: $color-success;
+      color: v(color-success,$color-success);
     }
   }
   // Ajuste para input
@@ -42,12 +42,12 @@
     }
     &.is-invalid {
       label {
-        color: $color-danger;
+        color: v(color-danger,$color-danger);
       }
     }
     &.is-valid {
       label {
-        color: $color-success;
+        color: v(color-success,$color-success);
       }
     }
   }
