@@ -6,27 +6,46 @@ append vars
 
 
 append content
-  +tabs("is-vertical")
-    +tab-item("Entrar com CPF")
-    +tab-item(class="is-active")
-      img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
-      span.name Entrar com Certificado Digital
-    +tab-item
-      img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
-      span.name Entrar com NeoID
-  +tabs("mt-10")
-    +tab-item(class="is-active")
-      span.name Todos
-      span.results (124)
-    +tab-item
-      span.name Notícias
-      span.results (74)
-    +tab-item
-      span.name Serviços
-      span.results (16)
-    +tab-item
-      span.name Aplicativos
-      span.results (12)
-    +tab-item
-      span.name Mídias
-      span.results (22)
+  .row
+    .col
+      p.label 1 | Abas Padrão
+      +tabs()
+        +tab-nav()
+          +tab-item(title="Sobre" pane="sobre")
+          +tab-item(title="Todos" pane="todos")
+          +tab-item(title="Notícias" class="is-active" pane="noticias")
+          +tab-item(title="Serviços" pane="servicos")
+          +tab-item(title="Aplicativos" pane="aplicativos")
+          +tab-item(title="Mídias" pane="midias")
+        +tab-content
+          +tab-pane(id="sobre")
+            p Painel Sobre
+          +tab-pane(id="todos")
+            p Painel Todos
+          +tab-pane(id="noticias" class="is-active")
+            p Painel Noticias
+          +tab-pane(id="servicos")
+            p Painel Serviços
+          +tab-pane(id="aplicativos")
+            p Painel Aplicativos
+          +tab-pane(id="midias")
+            p Painel Mídias
+  .row.mt-10
+    .col
+      p.label 2 | Abas com Contadores
+      +tabs(counter="true")
+        +tab-nav
+          +tab-item(title="Refine a sua busca" count="124" notTab="true")
+          +tab-item(title="Todos" pane="todos" count="124")
+          +tab-item(title="Notícias" class="is-active" pane="noticias" count="74")
+          +tab-item(title="Serviços" pane="servicos" count="16")
+          +tab-item(title="Aplicativos" pane="aplicativos" count="12")
+        +tab-content
+          +tab-pane(id="todos")
+            p Painel Todos
+          +tab-pane(id="noticias"  class="is-active")
+            p Painel Noticias
+          +tab-pane(id="servicos")
+            p Painel Serviços
+          +tab-pane(id="aplicativos")
+            p Painel Aplicativos

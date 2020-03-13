@@ -1,17 +1,51 @@
-mixin tabs(className="")
-  nav
-    ul.br-tabs(
-      id=attributes.id
-      class=className)
+mixin tabs(counter="false")
+  - let className = attributes.class
+  - let componentClass = prefix + "tabs"
+  - className = className ? componentClass + " " + className : componentClass
+  div(
+    class=className
+    data-counter=attributes.counter)
+    if block
+      block
+    else 
+      | Você precisa adicionar tab-nav e tab-content
+
+mixin tab-nav()
+  nav.tab-nav
+    ul(id=attributes.id)
       if block
         block
-      else
+      else 
         | Você precisa adicionar tab-item
 
 mixin tab-item(title="aba")
-  li.item(class=attributes.class)
-    a(href="javascript:void(0)")
-      if block
-        block
-      else
-        span.name=title
+  if attributes.notTab === "true"
+    li.tab-item(
+      class=attributes.class
+      not-tab=attributes.notTab)
+        span.name=attributes.title
+        p.outcome Resultados
+          span #{attributes.count}
+  else
+    li.tab-item(class=attributes.class)
+      a(href="#" + attributes.pane)
+        span.name=attributes.title
+      if attributes.count
+        span.results ( #{attributes.count} )
+
+mixin tab-content()
+  .tab-content
+    if block
+      block
+    else
+      | Você precisa adicionar tab-pane
+
+mixin tab-pane()
+  - let className = attributes.class
+  - let itemClass = "tab-pane"
+  - className = className ? itemClass + " " + className : itemClass
+  div(
+    id=attributes.id
+    class=className)
+    if block
+      block
