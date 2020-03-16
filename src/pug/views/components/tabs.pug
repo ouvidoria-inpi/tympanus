@@ -11,24 +11,24 @@ append content
       p.label 1 | Abas Padrão
       +tabs()
         +tab-nav()
-          +tab-item(title="Sobre" pane="sobre")
-          +tab-item(title="Todos" pane="todos")
-          +tab-item(title="Notícias" class="is-active" pane="noticias")
-          +tab-item(title="Serviços" pane="servicos")
-          +tab-item(title="Aplicativos" pane="aplicativos")
-          +tab-item(title="Mídias" pane="midias")
+          +tab-item(title="Sobre" pane="pane-1")
+          +tab-item(title="Todos" pane="pane-2")
+          +tab-item(title="Notícias" class="is-active" pane="pane-3")
+          +tab-item(title="Serviços" pane="pane-4")
+          +tab-item(title="Aplicativos" pane="pane-5")
+          +tab-item(title="Mídias" pane="pane-6")
         +tab-content
-          +tab-pane(id="sobre")
+          +tab-pane(id="pane-1")
             p Painel Sobre
-          +tab-pane(id="todos")
+          +tab-pane(id="pane-2")
             p Painel Todos
-          +tab-pane(id="noticias" class="is-active")
+          +tab-pane(id="pane-3" class="is-active")
             p Painel Noticias
-          +tab-pane(id="servicos")
+          +tab-pane(id="pane-4")
             p Painel Serviços
-          +tab-pane(id="aplicativos")
+          +tab-pane(id="pane-5")
             p Painel Aplicativos
-          +tab-pane(id="midias")
+          +tab-pane(id="pane-6")
             p Painel Mídias
   .row.mt-10
     .col
@@ -36,16 +36,16 @@ append content
       +tabs(counter="true")
         +tab-nav
           +tab-item(title="Refine a sua busca" count="124" notTab="true")
-          +tab-item(title="Todos" pane="todos" count="124")
-          +tab-item(title="Notícias" class="is-active" pane="noticias" count="74")
-          +tab-item(title="Serviços" pane="servicos" count="16")
-          +tab-item(title="Aplicativos" pane="aplicativos" count="12")
+          +tab-item(title="Todos" pane="pane-7" count="124")
+          +tab-item(title="Notícias" class="is-active" pane="pane-8" count="74")
+          +tab-item(title="Serviços" pane="pane-9" count="16")
+          +tab-item(title="Aplicativos" pane="pane-10" count="12")
         +tab-content
-          +tab-pane(id="todos")
+          +tab-pane(id="pane-7")
             p Painel Todos
-          +tab-pane(id="noticias"  class="is-active")
+          +tab-pane(id="pane-8"  class="is-active")
             p Painel Noticias
-          +tab-pane(id="servicos")
+          +tab-pane(id="pane-9")
             p Painel Serviços
-          +tab-pane(id="aplicativos")
+          +tab-pane(id="pane-10")
             p Painel Aplicativos
