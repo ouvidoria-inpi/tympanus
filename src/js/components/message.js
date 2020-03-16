@@ -18,8 +18,12 @@ class BRAlert {
   }
 }
 
-let alertList = [];
+/* Instancia a classe */
+let alertList = []
 
-for (let brAlert of window.document.querySelectorAll(".br-message")) {
-  alertList.push(new BRAlert("br-message", brAlert));
+for (let brAlert of window.document.querySelectorAll('.br-message')) {
+  alertList.push(new BRAlert('br-message', brAlert))
 }
+
+
+export default BRAlert

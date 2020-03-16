@@ -1,11 +1,10 @@
+
 class BRAccordeon {
-  constructor(name, component) {
+  constructor ( name, component ) {
     this.name = name;
     this.component = component;
     this._setBehavior();
-		}
-		
-		
+		}		
 
   _setBehavior() {
     for (let button of this.component.querySelectorAll('button.header')) {
@@ -44,7 +43,12 @@ class BRAccordeon {
 }
 
 let accordeonList = [];
-
-for (let brAccordeon of window.document.querySelectorAll(".br-accordeon")) {
-  accordeonList.push(new BRAccordeon("br-accordeon", brAccordeon));
+for ( let brAccordeon of window.document.querySelectorAll( ".br-accordeon" ) ) {
+  accordeonList.push( Object.create( new BRAccordeon( "br-accordeon", brAccordeon ) ) );
 }
+
+
+export default BRAccordeon
+
+
+

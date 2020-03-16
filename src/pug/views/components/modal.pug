@@ -4,7 +4,7 @@ append vars
   - var title = "Modal";
 
 append content
-  .br-scrim.is-foco(onclick='off()')
+  .br-scrim.is-foco
     +modal
       +modal-header("Retornar para página inicial?")
       +modal-body
@@ -16,7 +16,7 @@ append content
           | Retornar
 
 append content
-  button(type='button' class="br-button is-large is-secondary" onclick='on()') Modal com Scrim
+  button(type='button' class="br-button is-large is-secondary") Modal com Scrim
   hr
 
 append content
@@ -134,7 +134,7 @@ append content
         +option("Governo Federal do Brasil (gov.br)", "0")
       +input("Usuário")(id="auth-usuario" class="mt-3" placeholder="Insira um texto")
       +input("Senha")(id="auth-password" class="has-icon mt-3" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
-        button.icon(type='button' onclick="toggleInputAction(this)")
+        button.icon(type='button')
           i.fas.fa-eye
           span.sr-only Mostrar senha
     +modal-footer

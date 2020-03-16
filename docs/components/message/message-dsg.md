@@ -195,7 +195,3 @@ Devem vir alinhados à esquerda com o componente ou com elementos do componente.
 Aparecem logo após o ícone.
 
 ![Mensagens Contextuais](imagens/Anatomia_Mensagens_Complementares.png)
-
-### Especificação
-
-https://xd.adobe.com/view/bb4626d4-c633-42c0-5718-a3d3735a4b27-cd77/
