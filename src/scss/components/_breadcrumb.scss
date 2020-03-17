@@ -1,3 +1,35 @@
+@include media-breakpoint-down(xs) {
+  .br-breadcrumb{
+    display: block!important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   .home{
+      display: inline;
+    }
+    li:not(:nth-child(3)):after{
+      display: none;
+    }
+    li:not(:first-child):not(:nth-child(2)):not(.is-active){
+      display: none;
+    }
+
+
+    li:nth-child(3):after{
+      display:inline!important;
+      content: '...';
+      font-size: 1em;
+      background-color: v(color-secondary-04, $color-secondary-04);
+    }
+
+    li:nth-child(2):after{
+      display: inline!important;
+      content: '>';
+      margin: 1em;
+      color: v(color-secondary-04, $color-secondary-04);
+    }
+  }
+}
 .#{$prefix}breadcrumb {
   display: block;
   list-style: none;
@@ -6,26 +38,26 @@
   // Página inicial
   .home {
     a {
-      color: $body-color;
+      color: v(color-secondary-07,$color-secondary-07);
       &:hover,
       &:focus {
-        color: $link-hover-color;
+        color: v(color-primary-lighten-01,$color-primary-lighten-01);
         text-decoration: none;
       }
     }
   }
   // Cada item
   li {
-    color: $body-color;
+    color: v(color-secondary-07,$color-secondary-07);
     display: inline;
     font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
     font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
     a {
-      color: $body-color;
-      font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+      color: v(color-secondary-08,$color-secondary-08);
+      font-weight: v(font-weight-medium, $font-weight-medium);
       text-decoration: none;
       &:hover {
-        color: $link-hover-color;
+        text-decoration: underline;
       }
     }
   }
@@ -36,7 +68,7 @@
       content: ">";
       font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
       font-weight: v(font-weight-regular, $font-weight-regular);
-      padding: 0 ($spacer * 1.5);
+      padding: 0 ($spacer * 1);
     }
   }
   // Item ativo
@@ -47,3 +79,4 @@
     }
   }
 }
+
