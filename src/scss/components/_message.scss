@@ -1,10 +1,10 @@
 .#{$prefix}message {
-  color: v(color-secondary-08,$color-secondary-08);
+  color: $color-gray-7;
   display: flex;
   margin-bottom: $margin-default * 2;
   .icon {
     align-items: center;
-    color: $color-secondary-01;
+    color: $color-white;
     display: flex;
     font-size: 175%;
     justify-content: center;
@@ -15,12 +15,12 @@
   }
   .content {
     flex: 1;
-    padding: $spacer * 2.25 0;
+    padding: $spacer-half * 4.5 0;
     strong {
       font-weight: 600;
     }
     a {
-      color: $color-secondary-08;
+      color: $color-gray-7;
       text-decoration: underline;
       &:hover {
         color: $link-hover-color;
@@ -30,13 +30,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
-  a {
-    color: v(color-secondary-08,$color-secondary-08);
-    text-decoration: underline;
-    &:hover {
-      color: v(color-primary-lighten-01,$color-primary-lighten-01); //Checar
     }
   }
   // Estados
@@ -61,7 +54,7 @@
       }
       @if ($state == warning) {
         .icon, .close button {
-          color: $color-secondary-08;
+          color: $color-gray-7;
         }
       }
     }

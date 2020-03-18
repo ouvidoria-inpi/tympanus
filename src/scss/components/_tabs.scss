@@ -19,7 +19,7 @@
         padding: 0;
       }
       &:hover {
-        background: $color-primary-pastel-02;
+        background: $color-primary-pastel-1;
       }
       &.is-active {
         box-shadow: none;
@@ -31,11 +31,11 @@
           }
         }
         .name {
-          box-shadow: inset 0 -4px 0 0 $color-primary-default;
-          color: $color-primary-darken-02;
+          box-shadow: inset 0 -4px 0 0 $color-primary;
+          color: $color-primary-darken-2;
         }
         .results {
-          color: $color-primary-darken-02;
+          color: $color-primary-darken-2;
         }
       }
     }
@@ -43,7 +43,7 @@
       display: inline-block;
       font-weight: $font-weight-base;
       margin-left: $tabs-vertical-icons + ($spacer * 2);
-      padding: ($spacer * 2) $spacer * 0.5;
+      padding: ($spacer * 2) $spacer-half;
       text-align: left;
       white-space: normal;
     }
@@ -52,19 +52,19 @@
     display: flex;
     margin: 0 ($spacer * 2.5);
     &.is-active {
-      box-shadow: inset 0 -4px 0 0 $color-primary-default;
+      box-shadow: inset 0 -4px 0 0 $color-primary;
       a,
       button,
       input[type="submit"] {
         &:hover {
-          box-shadow: inset 0 -4px 0 0 $color-primary-default;
+          box-shadow: inset 0 -4px 0 0 $color-primary;
         }
       }
       .name {
-        color: $color-primary-darken-02;
+        color: $color-primary-darken-2;
       }
       .results {
-        color: $color-primary-default;
+        color: $color-primary;
       }
     }
     &:first-child {
@@ -87,15 +87,15 @@
   .name {
     color: $body-color;
     flex: 1;
-    font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
-    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+    font-size: $tabs-font-size;
+    font-weight: $tabs-font-weight;
     text-align: center;
     white-space: nowrap;
   }
   .results {
     color: $body-color;
     font-size: $font-size-base * 0.875;
-    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+    font-weight: $tabs-font-weight;
   }
   a,
   button,
@@ -109,7 +109,7 @@
     padding: $spacer ($spacer * 2.5) ($spacer * 1.5);
     text-decoration: none;
     &:hover {
-      background: $color-primary-pastel-02;
+      background: $color-primary-pastel-1;
       text-decoration: none;
       .name,
       .results {

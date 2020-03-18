@@ -20,7 +20,7 @@ $column-gap: 6px;
   }
   .top-bar {
     align-items: center;
-    background-color: $color-secondary-03;
+    background-color: $color-gray-2;
     display: flex;
     height: $column-height;
     padding-left: $column-spacing;
@@ -34,7 +34,7 @@ $column-gap: 6px;
     .br-button {
       border-color: transparent;
       &:hover {
-        background-color: $color-primary-pastel-02;
+        background-color: $color-primary-pastel-1;
         cursor: pointer;
       }
     }
@@ -42,7 +42,7 @@ $column-gap: 6px;
       border-right: 1px solid #ccc;
       height: 1.5em;
       margin: 0 5px 0 5px;
-    }
+    } 
     .grid-small-trigger,
     .grid-large-trigger,
     .divisor {
@@ -51,8 +51,8 @@ $column-gap: 6px;
   }
   .bottom-bar {
     align-items: center;
-    background-color: $color-secondary-01;
-    box-shadow: 0px -1px 3px 0px rgba($color-secondary-09, 0.16);
+    background-color: $color-white;
+    box-shadow: 0px -1px 3px 0px rgba($color-black, 0.16);
     display: flex;
     height: $column-height;
     justify-content: space-between;
@@ -83,10 +83,10 @@ $column-gap: 6px;
           border-color: transparent;
           &:focus,
           &:hover {
-            color: $color-primary-default;
+            color: $color-primary;
           }
           &:hover {
-            background-color: $color-primary-pastel-02;
+            background-color: $color-primary-pastel-1;
           }
         }
       }
@@ -94,7 +94,7 @@ $column-gap: 6px;
   }
   .search-bar {
     align-items: center;
-    background-color: $color-primary-default;
+    background-color: $color-primary;
     bottom: 0;
     display: flex;
     height: 0;
@@ -109,7 +109,7 @@ $column-gap: 6px;
     .search-close {
       background-color: transparent;
       border-color: transparent;
-      color: $color-secondary-01;
+      color: $color-white;
     }
     .br-input {
       flex-grow: 1;
@@ -126,7 +126,7 @@ $column-gap: 6px;
   }
   .selected-bar {
     align-items: center;
-    background-color: $color-primary-default;
+    background-color: $color-primary;
     bottom: 0;
     display: flex;
     height: 0;
@@ -135,7 +135,7 @@ $column-gap: 6px;
     justify-content: space-between;
     left: 0;
     opacity: 0;
-    padding: 0 11px; //$column-spacing * 0.5 $column-spacing;
+    padding: 0 11px;//$column-spacing * 0.5 $column-spacing;
     position: absolute;
     right: 0;
     top: 100%;
@@ -157,17 +157,16 @@ $column-gap: 6px;
     .count {
       padding-right: 4px;
       line-height: 20px;
-      color: $color-secondary-01;
+      color: $color-white;
     }
     button {
       min-width: 32px;
       padding: 1px 0px;
       width: 32px;
       outline: 0;
-      &:hover,
-      &:focus {
+      &:hover, &:focus {
         background-color: transparent !important;
-        border-color: transparent !important;
+        border-color:  transparent !important;
       }
       span {
         display: none;
@@ -188,8 +187,8 @@ $column-gap: 6px;
     tr {
       display: block;
       position: relative;
-      background: $color-secondary-01;
-      color: $color-secondary-07;
+      background: $color-white;
+      color: $color-gray-6;
       transition: max-height 500ms;
       max-height: 100em;
       &.is-collapsed {
@@ -201,23 +200,23 @@ $column-gap: 6px;
         }
       }
       &.is-selected {
-        background: $color-primary-lighten-01;
-        color: $color-secondary-01;
-        &.is-hover,
-        &:hover,
-        td:before {
-          background: $color-primary-lighten-01;
-          color: $color-secondary-01 !important;
-        }
+        background: $color-primary-lighten-2;
+        color: $color-white;
+          &.is-hover, 
+          &:hover,
+          td:before {
+            background: $color-primary-lighten-2;
+            color: $color-white !important;
+          }
       }
-      &.is-hover,
+      &.is-hover, 
       &:hover {
         background: default;
         color: default;
       }
     }
     th {
-      color: $color-primary-darken-01;
+      color: $color-primary-darken-1;
       display: none;
       font-weight: 600;
       padding-left: $column-spacing;
@@ -227,14 +226,14 @@ $column-gap: 6px;
       display: block;
       padding: $column-spacing * 0.5 $column-spacing;
       &::before {
-        color: $color-primary-darken-01;
+        color: $color-primary-darken-1;
         content: attr(data-th);
         display: block;
         font-weight: 600;
       }
       .col-collapse,
       .col-collapse:hover,
-      .col-collapse:focus {
+      .col-collapse:focus  {
         display: block;
         position: absolute;
         right: 8px;
@@ -252,7 +251,7 @@ $column-gap: 6px;
     tbody {
       display: block;
       tr {
-        box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16);
+        box-shadow: 0 3px 6px rgba($color-black, 0.16);
         margin: $column-spacing * 0.5 0;
         padding: $column-spacing * 0.5 0;
       }
@@ -298,7 +297,7 @@ $column-gap: 6px;
   }
   .br-select {
     .select-selected {
-      color: $color-primary-lighten-01;
+      color: $color-primary-lighten-2;
       border-radius: 0;
       border-color: transparent;
       padding-left: 8px;
@@ -310,7 +309,7 @@ $column-gap: 6px;
         box-shadow: none;
       }
       &:hover {
-        border-bottom-color: $color-primary-lighten-01;
+        border-bottom-color: $color-primary-lighten-2;
       }
     }
     .select-items {
@@ -320,8 +319,8 @@ $column-gap: 6px;
       overflow: auto;
     }
   }
-
-  // Resolve bug na rolagem do firefox e limita aparecimento da barra de rolagem horizontal
+  
+// Resolve bug na rolagem do firefox e limita aparecimento da barra de rolagem horizontal
   .header,
   .headers,
   .responsive {
@@ -332,11 +331,12 @@ $column-gap: 6px;
   .syncscroll {
     overflow: auto;
   }
-
+  
+ 
   // Versão tablet
   @include media-breakpoint-up(sm) {
     .top-bar {
-      background-color: $color-secondary-01;
+      background-color: $color-white;
       title {
         line-height: 1.5rem;
         font-size: 1.6rem;
@@ -372,7 +372,7 @@ $column-gap: 6px;
         }
         &::after {
           background-color: transparent;
-          color: $color-secondary-04;
+          color: $color-gray-3;
           content: "|";
           height: auto;
           width: auto;
@@ -395,7 +395,7 @@ $column-gap: 6px;
       overflow: auto;
     }
     .headers {
-      background-color: $color-secondary-03;
+      background-color: $color-gray-2;
       display: block;
       overflow-y: hidden;
       position: sticky;
@@ -408,7 +408,7 @@ $column-gap: 6px;
         overflow-x: hidden;
       }
       .item {
-        color: $color-primary-darken-01;
+        color: $color-primary-darken-1;
         font-weight: 600;
         padding: $column-gap;
         white-space: nowrap;
@@ -425,11 +425,11 @@ $column-gap: 6px;
       margin-top: -$column-height;
       width: 100%;
       th {
-        background-color: $color-secondary-03;
+        background-color: $color-gray-2;
         display: table-cell;
       }
       td {
-        border-bottom: 1px solid $color-primary-pastel-01;
+        border-bottom: 1px solid $color-primary-pastel-2;
         display: table-cell;
       }
       tr {
@@ -444,9 +444,9 @@ $column-gap: 6px;
             padding-right: $column-gap;
           }
         }
-        &.is-hover,
+        &.is-hover, 
         &:hover {
-          background: $color-primary-pastel-02;
+          background: $color-primary-pastel-1;
           color: default;
         }
       }
@@ -497,7 +497,7 @@ $column-gap: 6px;
         tbody {
           tr {
             &.hover {
-              background-color: $color-primary-pastel-02;
+              background-color: $color-primary-pastel-1;
             }
           }
         }
@@ -508,15 +508,16 @@ $column-gap: 6px;
       .selected-bar.is-active,
       .search-bar.is-active,
       .bottom-bar,
-      .headers .scroller {
+      .headers .scroller 
+      {
         height: $column-compact;
         overflow: hidden;
       }
       .search-bar {
         .br-input.is-medium input,
         .br-input.is-medium .icon {
-          height: $column-spacing * 2;
-          line-height: $column-spacing * 2;
+          height: $column-spacing*2;
+          line-height: $column-spacing*2;
         }
       }
       table {

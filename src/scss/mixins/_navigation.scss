@@ -44,7 +44,7 @@
   // Versão de site
   &.is-site {
     .header {
-      background: $color-secondary-02;
+      background: $color-gray-1;
     }
     @include media-breakpoint-up(md) {
       .header {
@@ -55,7 +55,7 @@
   // Versão de sistema
   &.is-system {
     .header {
-      background: $color-secondary-03;
+      background: $color-gray-2;
     }
     // Desktop
     @include media-breakpoint-up(md) {
@@ -73,14 +73,14 @@
   // Desktop
   @include media-breakpoint-up(md) {
     .footer {
-      background: $color-secondary-02;
+      background: $color-gray-1;
       padding: 0;
     }
   }
   // Versão de sistema
   &.is-system {
     .footer {
-      background: $color-secondary-03;
+      background: $color-gray-2;
     }
     // Desktop
     @include media-breakpoint-up(md) {
@@ -94,7 +94,7 @@
 @mixin navigation {
   // stylelint-disable no-descending-specificity
   .navigation {
-    background: $color-secondary-03;
+    background: $color-gray-2;
     .container {
       position: relative;
     }
@@ -129,17 +129,17 @@
 
 @mixin logo {
   .logo {
-    background: $color-secondary-02;
+    background: $color-gray-1;
     display: none;
     flex-flow: column-reverse;
     font-weight: 600;
     .name {
-      color: v(color-primary-darken-02, $color-primary-darken-02);
-      font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
+      color: $logo-name-color;
+      font-size: $logo-name-size;
     }
     .description {
-      color: v(color-secondary-08, $color-secondary-08);
-      font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
+      color: $logo-description-color;
+      font-size: $logo-description-size;
     }
     &.is-active {
       display: flex;
@@ -164,8 +164,8 @@
     margin: 0;
     padding: 0;
     .arrow {
-      color: $color-primary-default;
-      margin-right: ($spacer * 2);
+      color: $color-primary;
+      margin-right: $spacer * 2;
     }
     &.is-active {
       display: block;
@@ -182,7 +182,7 @@
 @mixin tree {
   // stylelint-disable no-descending-specificity
   .tree {
-    background: $color-secondary-03;
+    background: $color-gray-2;
     display: none;
     list-style: none;
     margin: 0 (-$spacer);
@@ -196,14 +196,14 @@
       align-items: center;
       background: transparent;
       border: 0;
-      color: $color-secondary-07;
+      color: $color-gray-6;
       display: flex;
       flex: 1;
       justify-content: space-between;
       padding: $spacer $spacer * 2;
       &:hover {
-        background: $color-primary-darken-01;
-        color: $color-secondary-01;
+        background: $color-primary-darken-1;
+        color: $color-white;
       }
     }
     .item {
@@ -214,9 +214,9 @@
       font-size: 12px;
     }
     .label {
-      box-shadow: inset 0 1px 0 $color-primary-pastel-02,
-        inset 0 -1px 0 $color-primary-pastel-02;
-      color: $color-primary-default;
+      box-shadow: inset 0 1px 0 $color-primary-pastel-2,
+        inset 0 -1px 0 $color-primary-pastel-2;
+      color: $color-primary;
       flex-flow: row;
       font-weight: 600;
       margin: 0;
@@ -237,9 +237,9 @@
       }
       &:hover {
         background: transparent;
-        color: $color-primary-default;
+        color: $color-primary;
         .arrow {
-          background: $color-primary-pastel-02;
+          background: $color-primary-pastel-1;
         }
       }
     }
@@ -249,11 +249,11 @@
     }
     // Links
     a {
-      color: $color-secondary-07;
-      padding: $spacer ($spacer * 2);
+      color: $color-gray-6;
+      padding: $spacer $spacer * 2;
       &:hover {
-        background: $color-primary-darken-01;
-        color: $color-secondary-01;
+        background: $color-primary-darken-1;
+        color: $color-white;
         text-decoration: none;
       }
     }
@@ -280,13 +280,13 @@
     .tree {
       // Separador de menus
       & + .tree {
-        box-shadow: inset 0 1px 0 $color-secondary-04;
+        box-shadow: inset 0 1px 0 $color-gray-3;
       }
     }
     // Desktop
     @include media-breakpoint-up(md) {
       .tree {
-        box-shadow: inset -1px 0 0 $color-secondary-04;
+        box-shadow: inset -1px 0 0 $color-gray-3;
         flex: 1;
         width: 25%;
         .tree {
@@ -302,8 +302,7 @@
           }
         }
         & + .tree {
-          box-shadow: inset -1px 0 0 $color-secondary-04,
-            inset 0 1px 0 $color-secondary-04;
+          box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
         }
       }
     }
@@ -327,12 +326,12 @@
           .item {
             position: relative;
             .item {
-              background: $color-secondary-02;
+              background: $color-gray-1;
               &:hover {
                 > {
                   .trigger,
                   a {
-                    background: $color-primary-default;
+                    background: $color-primary;
                   }
                 }
               }
@@ -341,18 +340,7 @@
               > {
                 .trigger,
                 a {
-                  background: $color-primary-darken-01;
-                  color: $color-secondary-01;
-                }
-                .tree {
-                  display: block;
-                  left: 100%;
-                  position: absolute;
-                  > {
-                    .item {
-                      display: flex;
-                    }
-                  }
+                  background: $color-primary;
                 }
               }
             }
@@ -361,8 +349,8 @@
             > {
               .trigger,
               a {
-                background: $color-primary-darken-01;
-                color: $color-secondary-01;
+                background: $color-primary-darken-1;
+                color: $color-white;
               }
               .tree {
                 display: block;
@@ -376,8 +364,7 @@
           }
         }
         & + .tree {
-          box-shadow: inset -1px 0 0 $color-secondary-04,
-            inset 0 1px 0 $color-secondary-04;
+          box-shadow: inset -1px 0 0 $color-gray-3, inset 0 1px 0 $color-gray-3;
         }
       }
     }
@@ -407,7 +394,7 @@
       right: 0;
       // Rótulo da seleção
       .title {
-        border-bottom: 1px solid $color-secondary-04;
+        border-bottom: 1px solid $color-gray-3;
         font-size: 14px;
         font-style: italic;
         font-weight: 600;
@@ -419,7 +406,7 @@
         white-space: nowrap;
         // Item selecionado
         &.is-active {
-          color: $color-primary-default;
+          color: $color-primary;
           font-weight: 600;
         }
       }
@@ -435,7 +422,7 @@
 
 @mixin links {
   .links {
-    border-top: 1px solid $color-secondary-03;
+    border-top: 1px solid $color-gray-2;
     display: flex;
     flex-flow: column;
     font-size: 14px;
@@ -480,7 +467,7 @@
 
 @mixin social-network {
   .social-network {
-    border-top: 1px solid $color-secondary-03;
+    border-top: 1px solid $color-gray-2;
     margin: 0;
     padding: $spacer * 2 0;
     text-transform: uppercase;
@@ -515,10 +502,10 @@
 @mixin user-logout {
   .logout {
     align-items: center;
-    background: $color-primary-default;
-    border: 1px solid $color-primary-default;
+    background: $color-primary;
+    border: 1px solid $color-primary;
     border-radius: 100px;
-    color: $color-secondary-01;
+    color: $color-white;
     display: inline-flex;
     font-size: 12px;
     font-weight: 600;
@@ -527,8 +514,8 @@
     padding: 0 $spacer * 3;
     text-align: center;
     &:hover {
-      background: $color-primary-lighten-01;
-      border-color: $color-primary-lighten-01;
+      background: $color-primary-lighten-2;
+      border-color: $color-primary-lighten-2;
     }
   }
 }
@@ -573,19 +560,19 @@
       &:hover {
         .arrow {
           &::after {
-            background: $color-primary-pastel-02;
+            background: $color-primary-pastel-1;
           }
         }
       }
     }
     .items {
-      background: $color-secondary-01;
-      box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22); // sass-lint:disable-line no-color-literals
+      background: $color-white;
+      box-shadow: 0 3px 6px rgba($color-black, 0.22);
       display: none;
       position: absolute;
     }
     .title {
-      border-bottom: 1px solid $color-secondary-04;
+      border-bottom: 1px solid $color-gray-3;
       display: block;
       font-size: 14px;
       font-style: italic;
@@ -593,9 +580,9 @@
       padding: $spacer $spacer * 2;
     }
     .item {
-      background: $color-secondary-01;
+      background: $color-white;
       border: 0;
-      color: $color-secondary-07;
+      color: $color-gray-6;
       display: block;
       padding: $spacer $spacer * 2;
       position: relative;
@@ -604,11 +591,11 @@
       white-space: nowrap;
       width: 100%;
       &:hover {
-        background: $color-primary-pastel-02;
+        background: $color-primary-pastel-1;
       }
       // Item pré selecionado
       &.is-active {
-        color: $color-primary-default;
+        color: $color-primary;
         font-weight: 500;
       }
     }
@@ -654,7 +641,7 @@
 
 @mixin user-avatar {
   .avatar {
-    color: $color-primary-default;
+    color: $color-primary;
     display: inline-flex;
     font-size: 40px;
     position: relative;
@@ -665,7 +652,7 @@
     & + .badge {
       background: $color-danger;
       border-radius: 50%;
-      color: $color-secondary-01;
+      color: $color-white;
       font-size: 11px;
       font-weight: 700;
       height: 18px;
@@ -703,7 +690,7 @@
       &.is-active {
         &::after {
           border: solid transparent;
-          border-bottom-color: $color-secondary-08;
+          border-bottom-color: $color-gray-7;
           border-width: 12px;
           bottom: 100%;
           content: "";
@@ -735,7 +722,7 @@
       &.is-active {
         &::after {
           border: solid transparent;
-          border-bottom-color: $color-secondary-08;
+          border-bottom-color: $color-gray-7;
           border-width: 12px;
           bottom: 100%;
           content: "";
@@ -761,14 +748,14 @@
       margin: $spacer * 2 0 0;
       // Marca
       .brand {
-        background: $color-secondary-02;
-        border: 1px solid $color-secondary-04;
+        background: $color-gray-1;
+        border: 1px solid $color-gray-3;
         height: 42px;
         width: 58px;
       }
       // Nome
       .name {
-        color: $color-secondary-07;
+        color: $color-gray-6;
         display: block;
         font-size: 9px;
         font-weight: 500;
@@ -778,10 +765,10 @@
       &:hover {
         text-decoration: none;
         .brand {
-          border-color: $color-primary-lighten-01;
+          border-color: $color-primary-lighten-2;
         }
         .name {
-          color: $color-primary-lighten-01;
+          color: $color-primary-lighten-2;
         }
       }
     }
@@ -798,16 +785,16 @@
 
 @mixin btn-icon {
   align-items: center;
-  color: $color-primary-default;
+  color: $color-primary;
   display: inline-flex;
   height: 36px;
   justify-content: center;
   width: 36px;
   &:hover {
-    color: $color-primary-lighten-01;
+    color: $color-primary-lighten-2;
     z-index: 1;
     &::after {
-      background: $color-primary-pastel-02;
+      background: $color-primary-pastel-1;
       border-radius: 50%;
       content: "";
       display: block;

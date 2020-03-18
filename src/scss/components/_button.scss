@@ -1,59 +1,33 @@
 .#{$prefix}button {
-  margin: 22px 20px;
   &.is-primary {
     @include button-pill;
-    @include estados;
-   }
+  }
   &.is-secondary {
-    @include button-pill(v(color-secondary-01, $color-secondary-01), v(color-primary-default,$color-primary-default));
-    @include estados;
+    @include button-pill($color-white, $color-primary);
   }
   &.is-call-to-action {
-    @include button-pill(
-      $color-highlight,
-      $color-secondary-01,
-      $color-secondary-03
-    );
+    @include button-pill($color-secondary, $color-white, $color-gray-2);
     border-width: $button-action-border-width;
     height: $button-height-default + ($button-action-border-width * 2);
-    font-size: v(font-size-scale-up-02,$font-size-scale-up-02);
-    @include estados-actions;
+    &:hover,
+    &:focus {
+      background-color: $color-teal;
+      border-color: $color-gray-2;
+      color: $color-white;
+    }
+    &:disabled {
+      border-color: $color-gray-2;
+    }
     @include media-breakpoint-up(sm) {
       min-width: $button-action-min-width;
     }
-    &.is-mobile{
-      @include estados-actions;
-      border: 13px solid  v(color-secondary-03, $color-secondary-03);
-      font-size: v(font-size-scale-down-01, $font-size-scale-base);
-      &:focus:active{
-        background-color: v(status-activated-background, $status-activated-background);
-        color: v(status-activated-color, $status-activated-color);
-      }
-      &:not(:focus):hover{
-        background-color: v(status-hover-background, $status-hover-background);
-        border-color: v(color-secondary-03, $color-secondary-03);
-        color: v(color-primary-default, $color-primary-default);
-      }
-    }
   }
-  &.is-tertiary{
+  &.is-tertiary {
     @include button-link;
-    @include estados;
-    text-decoration: underline;
-    color: v(color-primary-default, $color-primary-default);
-    &:focus:active{
-      background-color: transparent;
-      color:v(status-activated-background, $status-activated-background);
-    }
   }
   &.is-cancel {
-    @include button-link(v(color-primary-default,$color-primary-default));
+    @include button-link($body-color);
     text-decoration: underline;
-    @include estados;
-    &:focus:active{
-      background-color: transparent!important;
-      color:v(color-primary-darken-01, $color-primary-darken-01)!important;
-    }
   }
   &.is-small {
     @include media-breakpoint-up(md) {
@@ -66,7 +40,6 @@
     @include media-breakpoint-up(sm) {
       min-width: 0;
     }
-    @include estados;
     border-radius: 50%;
     border-style: solid;
     border-width: 1px;
@@ -94,7 +67,7 @@
     position: relative;
     &::after {
       animation: spinAround 500ms infinite linear;
-      border: 2px solid v(color-secondary-01, $color-secondary-01);
+      border: 2px solid $color-white;
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
@@ -108,17 +81,14 @@
     }
     &.is-secondary {
       &::after {
-        border:2px solid v(color-primary-default, $color-primary-default);
-        border-color: v(color-primary-default, $color-primary-default);
+        border-color: $color-primary;
         border-right-color: transparent;
         border-top-color: transparent;
       }
     }
   }
 }
-svg[class*="fa"]{
-  margin: 0 2px;
-}
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -127,9 +97,3 @@ svg[class*="fa"]{
     transform: rotate(359deg);
   }
 }
-.engloba {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}  

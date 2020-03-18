@@ -12,8 +12,6 @@
 </div>
 ```
 
----
-
 # Anatomia do componente
 
 Este componente é formado pelos seguintes elementos:
@@ -86,21 +84,6 @@ Exemplo de uso:
 </div>
 ```
 
-Para **mensagem de campo desabilitado** adicione `is-disabled` a classe de feedback. Use o ícone `<i class="fas fa-exclamation-triangle">` dentro da mensagem de feedback.
-
-Exemplo de uso:
-
-```html
-<div class="br-input">
-  <label for="disabled">Desativado</label>
-  <input id="disabled" placeholder="Insira um texto" disabled="" type="text">
-</div>
-<div class="feedback is-disabled">
-  <i class="fas fa-exclamation-triangle"></i>
-  <span class="message">Campo Desabilitado</span>
-</div>
-```
-
 ## `help`
 
 Uma mensagem de ajuda PODE ser incluída. Ela deve ser inserida imediatamente após o `br-input`.
@@ -134,8 +117,6 @@ Exemplo de uso:
   Texto auxiliar ao preenchimento, tem a função de previnir erros.
 </p>
 ```
-
----
 
 # Variações
 
@@ -253,8 +234,6 @@ Exemplo de uso:
 </script>
 ```
 
----
-
 # Estados
 
 Este componente apresenta os seguintes estados:
@@ -322,12 +301,12 @@ Exemplo de uso:
 
 ## disabled
 
-O prefixo `is-` deve ser adicionado ao container do componente, e a propriedade `disabled` deve ser adicionada no elemento `<input>`.
+Deve ser aplicado como propriedade no `<input>`.
 
 Exemplo de uso:
 
 ```html
-<div class="br-input is-disabled">
+<div class="br-input">
   <label for="desabilitado">Desabilitado</label>
   <input
     class="br-input"
