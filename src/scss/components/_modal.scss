@@ -1,12 +1,11 @@
-.#{$prefix}load {
+.br-load {
   &.is-loading {
     font-size: $font-size-base * 1.125;
     margin-bottom: 1rem;
     &::before {
       animation: spinAround 0.5s infinite linear;
       border: 3px solid currentColor;
-      border-color: transparent transparent v(color-primary-default,$color-primary-default)
-      v(color-primary-default,$color-primary-default) !important;
+      border-color: transparent transparent $color-primary $color-primary !important;
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
@@ -19,9 +18,10 @@
   }
 }
 
+$br-modal-bg-color: rgba(255, 255, 255, 1);
 $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
 
-.#{$prefix}modal {
+.br-modal {
   box-shadow: 0 3px 6px $br-modal-box-shadow-color;
   padding: $spacer * 2;
   width: 28.8rem;
@@ -31,22 +31,22 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     .close {
       background: transparent;
       border: 0;
-      color: v(color-primary-default,$color-primary-default);
-      font-weight: v(font-weight-medium,$font-weight-medium);
+      color: $color-primary;
+      font-weight: 500;
       padding: 0;
       position: absolute;
       right: 0;
-      top: -($spacer * 0.5);
+      top: -($spacer-half);
     }
   }
   &-title {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     display: -webkit-box;
-    font-size: v(font-size-scale-up-01,$font-size-scale-up-01);
-    font-weight: v($font-weight-bold,$font-weight-bold);
+    font-size: $h3-font-size;
+    font-weight: bold;
     margin: 0;
-    max-height: v(font-size-scale-up-07,$font-size-scale-up-07);
+    max-height: $h3-font-size * 3;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 80%;
@@ -62,9 +62,9 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
   &-footer {
     display: flex;
   }
-  .#{$prefix}card {
+  .br-card {
     border: 0;
-    font-size: v(font-size-scale-base,$font-size-scale-base);
+    font-size: $font-size-base * 0.875;
     height: 216px;
     margin-left: -$spacer * 2;
     margin-right: -$spacer * 2;
@@ -76,10 +76,10 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
       width: 8px;
     }
     &::-webkit-scrollbar-track {
-      background: v(color-secondary-03,$color-secondary-03);
+      background: $color-gray-2;
     }
     &::-webkit-scrollbar-thumb {
-      background: v(color-secondary-06,$color-secondary-06);
+      background: $color-gray-5;
     }
     &:focus,
     &:active {
@@ -87,14 +87,14 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     }
     &:hover {
       &::-webkit-scrollbar-thumb {
-        background: v(color-secondary-07,$color-secondary-07);
+        background: $color-gray-6;
       }
     }
   }
 }
 
 @media (min-width: 576px) {
-  .#{$prefix}modal {
+  .br-modal {
     &.is-xsmall {
       max-width: 220px;
       min-width: 220px;

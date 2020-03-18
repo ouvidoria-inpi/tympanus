@@ -3,13 +3,13 @@
   list-style: none;
   position: absolute;
   a {
-    color: v(color-secondary-01, $color-secondary-01);
+    color: $color-white;
     position: absolute;
     top: -200em;
     white-space: nowrap;
     &:focus {
       align-items: center;
-      background: v(color-highlight, $color-highlight);
+      background: $color-secondary;
       border-radius: $button-radius;
       display: inline-flex;
       height: $button-height-default;

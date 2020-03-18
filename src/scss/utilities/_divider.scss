@@ -5,13 +5,13 @@
   margin-bottom: $margin-default;
   &::after,
   &::before {
-    background: v(color-secondary-04, $color-secondary-04);
+    background: $border-color;
     content: "";
     height: 1px;
     width: 100%;
   }
   .content {
-    color: v(color-primary-default, $color-primary-default);
+    color: $color-primary;
     margin: 0;
     padding: 0 ($spacer * 2) !important;
     white-space: nowrap;

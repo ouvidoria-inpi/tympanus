@@ -7,14 +7,10 @@ append vars
 append content
   .row
     .col-sm
-      .mb-3
-        +textarea("Padrão")(id="default" placeholder="Exemplo de textarea")
-      .mb-3
-        +textarea("Desativado")(id="disabled" class="mt-3 is-disabled" placeholder='Textarea desativado' disabled)
+      +textarea("Padrão")(id="default" placeholder="Exemplo de textarea")
+      +textarea("Desativado")(id="disabled" class="mt-3" placeholder='Textarea desativado' disabled)
     .col-sm
-      .mb-3
-        +textarea("Válido")(id="valid" class="is-valid" placeholder="Textarea válido")
-      .mb-3
-        +textarea("Inválido")(id="invalid" class="is-invalid mt-3" placeholder="Textarea inválido")
+      +textarea("Válido")(id="valid" class="is-valid" placeholder="Textarea válido")
+      +textarea("Inválido")(id="invalid" class="is-invalid mt-3" placeholder="Textarea inválido")
 				
 

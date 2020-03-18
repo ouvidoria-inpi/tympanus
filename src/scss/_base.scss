@@ -1,8 +1,6 @@
 // ATENÇÃO! Este arquivo não pode gerar CSS
 
 @import "configs/colors";
-@import "configs/icons";
-@import "configs/status";
 @import "configs/spacing";
 @import "configs/typography";
 @import "configs/grid";
@@ -13,5 +11,4 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-@import "functions";
 @import "mixins";

@@ -32,7 +32,7 @@
 
 // Estilo padrão do texto gov.br
 .govbr {
-  font-weight: v(font-weight-extra-bold, $font-weight-extra-bold);
+  font-weight: 800;
   letter-spacing: -1px;
 }
 
@@ -42,10 +42,30 @@
   background: transparent;
   border: 0;
   display: inline-flex;
-  font-weight: v(font-weight-extra-bold, $font-weight-extra-bold);
+  font-size: $font-size-base * 0.75;
+  font-weight: 800;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  .br-button {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: $spacer;
+  }
+  &:hover,
+  &:focus {
+    .br-button {
+      background-color: $color-primary-lighten-2;
+      border-color: $color-primary-lighten-2;
+    }
+  }
+  &:disabled {
+    .br-button {
+      background: $color-gray-5;
+      border-color: $color-gray-5;
+    }
+  }
 }
 
 // Barra principal
@@ -62,7 +82,7 @@ $logo-desktop: 150px;
 
 // Sombra
 .shadow-bottom {
-  box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16); // sass-lint:disable-line no-color-literals
+  box-shadow: 0 3px 6px rgba($color-black, 0.16);
 }
 
 // Fixar na tela
@@ -93,30 +113,30 @@ $logo-desktop: 150px;
   display: none;
   .session {
     font-size: 12px;
-    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+    font-weight: 600;
   }
   .timer {
     font-size: 12px;
-    font-weight: v(font-weight-medium, $font-weight-medium);
+    font-weight: 500;
   }
 }
 
 // Links úteis
 .links {
-  border-top: 1px solid v(color-secondary-03, $color-secondary-03);
+  border-top: 1px solid $color-gray-2;
   font-size: 14px;
   padding: $spacer;
   position: relative;
   span {
     display: block;
-    font-weight: v(font-weight-bold, $font-weight-bold);
+    font-weight: 700;
     margin: $spacer 0;
     text-transform: uppercase;
   }
   a {
     align-items: center;
     display: flex;
-    padding: $spacer * 0.5 0;
+    padding: $spacer-half 0;
     [class*="fa-"] {
       margin-left: $spacer;
     }
@@ -125,14 +145,14 @@ $logo-desktop: 150px;
 
 // Redes sociais
 .social-network {
-  border-top: 1px solid v(color-secondary-03, $color-secondary-03);
+  border-top: 1px solid $color-gray-2;
   margin: 0;
   padding: $spacer;
   text-transform: uppercase;
   span {
     display: block;
     font-size: 14px;
-    font-weight: v(font-weight-bold, $font-weight-bold);
+    font-weight: 700;
     margin-right: ($spacer * 2.5);
   }
   ul {
@@ -144,7 +164,7 @@ $logo-desktop: 150px;
       margin: 0;
       padding: 0;
       a {
-        color: v(color-primary-default, $color-primary-default);
+        color: $color-primary;
         display: inline-block;
         padding: $spacer ($spacer * 2);
       }
@@ -167,7 +187,7 @@ $logo-desktop: 150px;
 .page-footer {
   position: relative;
   a {
-    color: v(color-secondary-01, $color-secondary-01);
+    color: $color-white;
   }
   // Logo
   .logo {
@@ -184,23 +204,23 @@ $logo-desktop: 150px;
   }
   // Navegação
   .navigation {
-    border-top: 1px solid v(color-secondary-01, $color-secondary-01);
+    border-top: 1px solid $color-white;
     padding: 0;
     position: static;
     // Item de navegação
     .item {
-      border-bottom: 1px solid v(color-secondary-01, $color-secondary-01);
+      border-bottom: 1px solid $color-white;
       a,
       button {
-        color: v(color-secondary-01, $color-secondary-01);
+        color: $color-white;
         display: inline-block;
-        font-weight: v(font-weight-extra-bold, $font-weight-extra-bold);
+        font-weight: 800;
         padding: ($spacer * 2) 0;
         text-transform: uppercase;
         width: auto;
         &:hover {
           background: transparent;
-          color: v(status-hover-background, $status-hover-background);
+          color: $color-white;
           text-decoration: underline;
         }
       }
@@ -223,7 +243,7 @@ $logo-desktop: 150px;
       a,
       button {
         font-size: 14px;
-        font-weight: v(font-weight-medium, $font-weight-medium);
+        font-weight: 500;
         padding: $spacer 0;
         text-transform: none;
       }
@@ -239,14 +259,14 @@ $logo-desktop: 150px;
   // Redes sociais
   .social-network {
     border: 0;
-    color: v(color-secondary-01, $color-secondary-01);
+    color: $color-white;
     padding: ($spacer * 7) 0 ($spacer * 2);
     text-align: left;
     span {
       display: block;
     }
     a {
-      color: v(color-secondary-01, $color-secondary-01);
+      color: $color-white;
     }
   }
   // Marcas do governo
@@ -266,8 +286,7 @@ $logo-desktop: 150px;
   }
   // Cancela Serpro
   .chancela-serpro {
-    border-bottom: 4px solid
-      v(color-primary-darken-02, $color-primary-darken-02);
+    border-bottom: 4px solid $color-primary-darken-2;
     padding: $spacer;
     text-align: center;
   }
@@ -389,7 +408,7 @@ $logo-desktop: 150px;
           > a,
           > button {
             background: transparent;
-            font-weight: v(font-weight-extra-bold, $font-weight-extra-bold);
+            font-weight: 800;
           }
         }
         .item {
@@ -397,7 +416,7 @@ $logo-desktop: 150px;
           &:active {
             > a,
             > button {
-              font-weight: v(font-weight-medium, $font-weight-medium);
+              font-weight: 500;
             }
           }
         }

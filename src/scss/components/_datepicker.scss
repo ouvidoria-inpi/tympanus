@@ -3,7 +3,7 @@
     background: transparent;
     border: 0 transparent;
     bottom: 12px;
-    color: v(color-primary-default ,$color-primary-default);
+    color: $color-primary;
     display: block;
     outline: none !important;
     position: absolute;
@@ -11,198 +11,52 @@
     z-index: 999;
     &:active,
     &:hover {
-        color: v(color-primary-lighten-01, $color-primary-lighten-01);
+        color: $color-primary-lighten-2;
     }
+  }
+  input {
+    padding-right: 32px;
+  }
 
-    &.is-disabled {
-      button,
-      button:active,
-      button:hover {
-        color: v(color-secondary-06 ,$color-secondary-06);
-        cursor: not-allowed;
-      }
+  &.is-disabled {
+    button,
+    button:active,
+    button:hover {
+      color: $color-gray-5;
+      cursor: not-allowed;
     }
+  }
 
-    + p.help + div.feedback.is-valid,
-    + div.feedback.is-valid,
-    + p.help + div.feedback.is-valid + div.feedback.is-invalid,
-    + div.feedback.is-valid + div.feedback.is-invalid {
+  +p.help +div.feedback.is-valid,
+  +div.feedback.is-valid,
+  +p.help +div.feedback.is-valid +div.feedback.is-invalid,
+  +div.feedback.is-valid +div.feedback.is-invalid {
+    display: none;
+  }
+  &.is-valid {
+    +p.help,
+    +div.feedback.is-valid +div.feedback.is-invalid +p.help,
+    +div.feedback.is-invalid +div.feedback.is-valid +p.help {
       display: none;
     }
-    &.is-valid {
-      + p.help,
-      + div.feedback.is-valid + div.feedback.is-invalid + p.help,
-      + div.feedback.is-invalid + div.feedback.is-valid + p.help {
-        display: none;
-      }
-      + div.feedback.is-valid,
-      + p.help + div.feedback.is-valid {
-        display: block;
-      }
-    }
-    &.is-invalid {
-      + p.help,
-      + div.feedback.is-valid + div.feedback.is-invalid + p.help,
-      + div.feedback.is-invalid + div.feedback.is-valid + p.help {
-        display: none;
-      }
-      + div.feedback.is-valid,
-      + p.help + div.feedback.is-valid {
-        display: none;
-      }
-      + div.feedback.is-valid + div.feedback.is-invalid,
-      + p.help + div.feedback.is-valid + div.feedback.is-invalid {
-        display: block;
-      }
+    +div.feedback.is-valid,
+    +p.help +div.feedback.is-valid {
+      display: block;
     }
   }
-  .qs-datepicker-container {
-    -moz-user-select: none;
-    -ms-flex-direction: column;
-    -ms-user-select: none;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    -webkit-user-select: none;
-    background: v(color-secondary-01 ,$color-secondary-01);
-    border: 1px solid v(color-secondary-02 ,$color-secondary-02);
-    border-radius: 0.26392em;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    color: v(color-secondary-07 ,$color-secondary-07);
-    //display: -webkit-box;
-    //display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    //font-family: sans-serif;
-    font-size: 14px; //1rem;
-    overflow: hidden;
-    padding: 0.2em 1em;
-    position: absolute;
-    user-select: none;
-    width: 20em; //16em;//15.625em;
-    z-index: 9001;
-  }
-  .qs-datepicker-container * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .qs-datepicker-container.qs-centered {
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    left: 50%;
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .qs-datepicker-container.qs-hidden {
-    display: none;
-  }
-  .qs-datepicker .qs-overlay {
-    -ms-flex-direction: column;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-transition: opacity 0.3s;
-    background: v(color-secondary-01 ,$color-secondary-01); //rgba(0, 0, 0, 0.75);
-    color: v(color-secondary-06 ,$color-secondary-06);
-    display: flex;
-    //display: -ms-flexbox;
-    //display: -webkit-box;
-    flex-direction: column;
-    height: 100%;
-    left: 0;
-    opacity: 1;
-    padding: 0.5em;
-    position: absolute;
-    top: 0;
-    transition: opacity 0.3s;
-    width: 100%;
-    z-index: 1;
-  }
-  .qs-datepicker .qs-overlay.qs-hidden {
-    opacity: 0;
-    z-index: -1;
-  }
-  .qs-datepicker .qs-overlay .qs-overlay-year {
-    background: rgba(0, 0, 0, 0);
-    border: 0;
-    border-bottom: 1px solid v(color-secondary-06 ,$color-secondary-06);
-    border-radius: 0;
-    color: v(color-secondary-06 ,$color-secondary-06);
-    display: block;
-    font-size: 0.875em;
-    height: 2.5em;
-    margin: 0 auto;
-    padding: 0.25em 0;
-    text-align: center;
-    width: 80%;
-    &:hover,
-    &:focus {
-      border: 0;
-      border-bottom: 1px solid v(color-secondary-06 ,$color-secondary-06);
-      box-shadow: none;
+  &.is-invalid {
+    +p.help,
+    +div.feedback.is-valid +div.feedback.is-invalid +p.help,
+    +div.feedback.is-invalid +div.feedback.is-valid +p.help {
+      display: none;
     }
-  }
-  .qs-datepicker .qs-overlay .qs-overlay-year::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
-  .qs-datepicker .qs-overlay .qs-close {
-    cursor: pointer;
-    padding: 0.5em;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .qs-datepicker .qs-overlay .qs-submit {
-    background: hsla(0, 0%, 50.2%, 0.4);
-    border: 1px solid v(color-secondary-06 ,$color-secondary-06);
-    border-radius: 0.26392em;
-    cursor: pointer;
-    display: none;
-    margin: 0 auto auto;
-    padding: 0.5em;
-  }
-  .qs-datepicker .qs-overlay .qs-submit.qs-disabled {
-    border-color: v(color-secondary-04 ,$color-secondary-04);
-    color: v(color-secondary-04 ,$color-secondary-04);
-    cursor: not-allowed;
-  }
-  .qs-datepicker .qs-overlay .qs-overlay-month-container {
-    -ms-flex-positive: 1;
-    -ms-flex-wrap: wrap;
-    -webkit-box-flex: 1;
-    //display: -webkit-box;
-    //display: -ms-flexbox;
-    display: flex;
-    flex-grow: 1;
-    flex-wrap: wrap;
-  }
-  .qs-datepicker .qs-overlay .qs-overlay-month {
-    -ms-flex-align: center;
-    -ms-flex-pack: center;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    //-webkit-transition: opacity 0.15s;
-    align-items: center;
-    color: v(color-secondary-07 ,$color-secondary-07);
-    cursor: pointer;
-    display: flex;
-    //display: -webkit-box;
-    //display: -ms-flexbox;
-    //transition: opacity 0.15s;
-    justify-content: center;
-    //opacity: 0.5;
-    width: 33.33333%;
-    span {
-      padding: 0 8px 2px;
+    +div.feedback.is-valid,
+    +p.help +div.feedback.is-valid {
+      display: none;
     }
-  }
-  .qs-datepicker .qs-overlay .qs-overlay-month.active,
-  .qs-datepicker .qs-overlay .qs-overlay-month:hover {
-    //opacity: 1;
-    color: v(color-primary-default ,$color-primary-default);
-    span {
-      background: v(color-primary-pastel-01 ,$color-primary-pastel-01);
-      border-radius: 16px;
+    +div.feedback.is-valid +div.feedback.is-invalid,
+    +p.help +div.feedback.is-valid +div.feedback.is-invalid {
+      display: block;
     }
   }
 }
@@ -214,11 +68,11 @@
   -webkit-box-orient: vertical;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -webkit-user-select: none;
-  background: v(color-secondary-01 ,$color-secondary-01);
-  border: 1px solid v(color-secondary-02 ,$color-secondary-02);
+  background: $white;
+  border: 1px solid $color-gray-1;
   border-radius: 0.26392em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  color: v(color-secondary-07 ,$color-secondary-07);
+  color: $color-gray-6;
   //display: -webkit-box;
   //display: -ms-flexbox;
   display: flex;
@@ -273,12 +127,12 @@
     }
   }
   &.qs-active {
-    background: v(color-primary-lighten-01, $color-primary-lighten-01); //v(color-primary-default ,$color-primary-default);
-    border-left: 2px solid v(color-secondary-01 ,$color-secondary-01);
-    border-right: 2px solid v(color-secondary-01 ,$color-secondary-01);
-    color: v(color-secondary-01 ,$color-secondary-01);
+    background: $color-primary-lighten-2; //$color-primary;
+    border-left: 2px solid $color-white;
+    border-right: 2px solid $color-white;
+    color: $color-white;
     .qs-num {
-      background: v(color-primary-default ,$color-primary-default);
+      background: $color-primary;
       border-radius: 16px;
       height: 2em;
       margin-top: 0.25em;
@@ -298,8 +152,8 @@
     }
   }
   &.qs-range-date-middle {
-    background: v(color-primary-lighten-01, $color-primary-lighten-01);
-    color: v(color-secondary-01 ,$color-secondary-01);
+    background: $color-primary-lighten-2;
+    color: $color-white;
     &:not(.qs-range-date-0):not(.qs-range-date-6) {
       border-radius: 0;
     }
@@ -333,14 +187,14 @@
     cursor: not-allowed;
   }
   &.qs-day {
-    color: v(color-secondary-07 ,$color-secondary-07);
+    color: $color-gray-6;
     cursor: default;
     font-weight: 500;
   }
   &:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
-    background: v(color-primary-pastel-02 ,$color-primary-pastel-02);
+    background: $color-primary-pastel-1;
     //border-radius: 50%;
-    color: v(color-primary-default ,$color-primary-default);
+    color: $color-primary;
   }
 }
 
@@ -349,8 +203,8 @@
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   -webkit-transition: opacity 0.3s;
-  background: v(color-secondary-01 ,$color-secondary-01);//rgba(0, 0, 0, 0.75);
-  color: v(color-secondary-06 ,$color-secondary-06);
+  background: $white;//rgba(0, 0, 0, 0.75);
+  color: $color-gray-5;
   display: flex;
   //display: -ms-flexbox;
   //display: -webkit-box;
@@ -371,9 +225,9 @@
   .qs-overlay-year {
     background: rgba(0, 0, 0, 0);
     border: 0;
-    border-bottom: 1px solid v(color-secondary-06 ,$color-secondary-06);
+    border-bottom: 1px solid $color-gray-5;
     border-radius: 0;
-    color: v(color-secondary-06 ,$color-secondary-06);
+    color: $color-gray-5;
     display: block;
     font-size: 0.875em;
     height: 2.5em;
@@ -387,7 +241,7 @@
     &:hover,
     &:focus {
       border: 0;
-      border-bottom: 1px solid v(color-secondary-06 ,$color-secondary-06);
+      border-bottom: 1px solid $color-gray-5;
       box-shadow: none;
     }
   }
@@ -400,7 +254,7 @@
   }
   .qs-submit {
     background: hsla(0, 0%, 50.2%, 0.4);
-    border: 1px solid v(color-secondary-06 ,$color-secondary-06);
+    border: 1px solid $color-gray-5;
     border-radius: 0.26392em;
     cursor: pointer;
     display: none;
@@ -408,8 +262,8 @@
     padding: 0.5em;
   }
   .qs-submit.qs-disabled {
-    border-color: v(color-secondary-04 ,$color-secondary-04);
-    color: v(color-secondary-04 ,$color-secondary-04);
+    border-color: $color-gray-3;
+    color: $color-gray-3;
     cursor: not-allowed;
   }
   .qs-overlay-month-container {
@@ -429,7 +283,7 @@
     -webkit-box-pack: center;
     //-webkit-transition: opacity 0.15s;
     align-items: center;
-    color: v(color-secondary-07 ,$color-secondary-07);
+    color: $color-gray-6;
     cursor: pointer;
     display: flex;
     //display: -webkit-box;
@@ -445,9 +299,9 @@
  .qs-overlay-month.active,
  .qs-overlay-month:hover {
     //opacity: 1;
-    color: v(color-primary-default ,$color-primary-default);
+    color: $color-primary;
     span {
-      background: v(color-primary-pastel-02 ,$color-primary-pastel-02);
+      background: $color-primary-pastel-1;
       border-radius: 16px;
     }
   }
@@ -464,7 +318,7 @@
   -webkit-filter: blur(0);
   -webkit-transition: -webkit-filter 0.3s;
   align-items: center;
-  background: v(color-secondary-01 ,$color-secondary-01);//#d3d3d3;
+  background: $color-white;//#d3d3d3;
   //display: -ms-flexbox;
   //display: -webkit-box;
   display: flex;
@@ -494,14 +348,14 @@
   &.qs-left::after {
     //-ms-transform: translate(25%, -50%);
     //-webkit-transform: translate(25%, -50%);
-    border-right-color: v(color-primary-default ,$color-primary-default);
+    border-right-color: $color-primary;
     right: 50%;
     //transform: translate(25%, -50%);
   }
   &.qs-right::after {
     //-ms-transform: translate(-25%, -50%);
   //-webkit-transform: translate(-25%, -50%);
-  border-left-color: v(color-primary-default ,$color-primary-default);
+  border-left-color: $color-primary;
   left: 50%;
   //transform: translate(-25%, -50%);
   }
@@ -510,10 +364,10 @@
     //background: rgba(0, 0, 0, 0.1);
   //}
   &:hover.qs-left::after {
-    border-right-color: v(color-primary-lighten-01, $color-primary-lighten-01);
+    border-right-color: $color-primary-lighten-2;
   }
   &:hover.qs-right::after {
-    border-left-color: v(color-primary-lighten-01, $color-primary-lighten-01);
+    border-left-color: $color-primary-lighten-2;
   }
   &::after {
     //-webkit-transition: border 0.2s;
@@ -528,14 +382,14 @@
 .qs-datepicker .qs-month-year {
   -webkit-transition: border 0.2s;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
-  color: v(color-primary-default ,$color-primary-default);
+  color: $color-primary;
   cursor: pointer;
   font-weight: 700;
   padding: 0 1em;
   transition: border 0.2s;
   &:hover {
-    //border-bottom: 1px solid v(color-secondary-07 ,$color-secondary-07);
-    background-color: v(color-primary-pastel-02 ,$color-primary-pastel-02);
+    //border-bottom: 1px solid $color-gray-6;
+    background-color: $color-primary-pastel-1;
     border-radius: 16px;
   }
   &:focus,
@@ -573,7 +427,7 @@
   position: relative;
 }
 .qs-datepicker .qs-event::after {
-  background: v(color-primary-lighten-01, $color-primary-lighten-01);
+  background: $color-primary-lighten-2;
   border-radius: 50%;
   bottom: 0;
   content: '';
@@ -584,5 +438,5 @@
 }
 .qs-datepicker .qs-event.qs-disabled::after,
 .qs-datepicker .qs-event.qs-empty::after {
-  background: v(color-primary-pastel-02 ,$color-primary-pastel-02);
+  background: $color-primary-pastel-1;
 }
