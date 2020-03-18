@@ -18,11 +18,11 @@
   li {
     color: $body-color;
     display: inline;
-    font-size: $breadcrumbs-font-size;
-    font-weight: $breadcrumbs-font-weight;
+    font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
+    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
     a {
       color: $body-color;
-      font-weight: $breadcrumbs-font-weight;
+      font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
       text-decoration: none;
       &:hover {
         color: $link-hover-color;
@@ -32,21 +32,18 @@
   // Separador
   li + li {
     &::before {
-      color: $breadcrumbs-divider-color;
-      content: $breadcrumbs-divider;
-      font-size: $breadcrumbs-divider-size;
-      font-weight: 400;
+      color: v(color-secondary-04, $color-secondary-04);
+      content: ">";
+      font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
+      font-weight: v(font-weight-regular, $font-weight-regular);
       padding: 0 ($spacer * 1.5);
     }
   }
   // Item ativo
   .is-active {
-    color: $body-color;
-    font-weight: 700;
+    font-weight: v(font-weight-bold, $font-weight-bold);
     a {
-      color: $link-hover-color;
-      font-weight: 700;
-      text-decoration: none;
+      font-weight: v(font-weight-bold, $font-weight-bold);
     }
   }
 }

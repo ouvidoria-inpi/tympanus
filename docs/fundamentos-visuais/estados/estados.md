@@ -32,12 +32,12 @@ Em alguns casos pode ser necessário aumentar as dimensões do fundo de um eleme
 
 Usuários interagem com a interface de diversas maneiras. Ao projetar um componente, considere o uso de diferentes dispostitivos de entrada tais como:
 
-- Mouse
-- Tela sensível ao toque
-- teclado
-- Voz
-- Controle de vídeo game
-- Leitores de Tela (como sintetizadores de voz, Display Braille)
+-   Mouse
+-   Tela sensível ao toque
+-   teclado
+-   Voz
+-   Controle de vídeo game
+-   Leitores de Tela (como sintetizadores de voz, Display Braille)
 
 ### Reutilização e Colaboração
 
@@ -102,9 +102,9 @@ Este estado não pode ser utilizado como alternativa a destaques como bold ou it
 
 Exemplos de casos onde o estado deve ser utilizado:
 
-- Citação
-- Palavras-chave
-- Termos/caracteres pesquisados em uma busca
+-   Citação
+-   Palavras-chave
+-   Termos/caracteres pesquisados em uma busca
 
 O destaque é exibido com background da cor **Secondary 01**, um overlay da cor **Support 03** com opacidade de 10% e texto na cor **Support 03**. É importante também que o espaçamento interno tenha no mínimo 4px do lado direito e esquerdo.
 
@@ -151,10 +151,10 @@ Elementos desabilitados não precisam ser rígidos sobre as [conformidade de ace
 
 Alguns elementos da tela, não podem receber o estado desabilitado. Neste caso, prefira não exibir o componente na interface. Alguns componentes que seguem essa regra:
 
-- Componentes de Navegação (Menu, Abas...)
-- Modal
-- Tooltip
-- Botão call to action
+-   Componentes de Navegação (Menu, Abas...)
+-   Modal
+-   Tooltip
+-   Botão call to action
 
 **Cuidado:** Alguns componentes são contituídos por vários outros componentes. Neste caso, seus componentes podem possuir estado de desabilitado, ainda que o componente "completo" que constituem, não possua tal estado.
 
@@ -262,12 +262,12 @@ O estado selecionado não deve distrair o usuário, porém, deve ser facilmente 
 
 O estado selecionado não pode ser aplicado nos seguintes componentes:
 
-- Componentes de Navegação (Menu, Abas...)
-- Modal
-- Tooltip
-- Botão
-- Mensagens
-- Separadores
+-   Componentes de Navegação (Menu, Abas...)
+-   Modal
+-   Tooltip
+-   Botão
+-   Mensagens
+-   Separadores
 
 **Cuidado:** Alguns componentes são construídos por vários outros componentes. Neste caso, seus componentes ainda podem possuir estado de selecionado, por mais que o componente "completo" não possa.
 

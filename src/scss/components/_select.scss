@@ -1,23 +1,18 @@
 .#{$prefix}select {
   position: relative;
-  label {
-    color: $label-color;
-    font-size: $label-font-size;
-    font-weight: $label-font-weight;
-    margin-bottom: $spacer-half;
-  }
+  margin-bottom: 4px;
   select {
     display: none;
   }
   // Substituto do select original
   .select-selected {
     align-items: center;
-    background: $color-white;
+    background: v(color-secondary-01);
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
-    color: $input-color;
+    color: v(color-secondary-07);
     display: flex;
-    font-weight: $input-font-weight;
+    font-weight: v(font-weight-medium);
     height: $input-default;
     justify-content: space-between;
     padding-left: $spacer * 2;
@@ -32,54 +27,61 @@
       white-space: nowrap;
     }
     [class*="fa-"] {
-      color: $color-primary;
+      color: v(color-primary-default);
       font-size: $input-default / 3;
-      margin-left: ($spacer * 2);
+      margin-left: $spacer * 6;
     }
     &:focus {
-      border-color: $color-primary-lighten-2;
-      box-shadow: 0 0 0 1px $color-primary-lighten-2;
+      background: v(status-focused-background)
+      linear-gradient(
+        v(status-focused-overlay),
+        v(status-focused-overlay)
+      );
       outline: none;
+      //border-color: v(color-primary-lighten-01);
+      //box-shadow: 0 0 0 1px v(color-primary-lighten-01);
     }
     &:focus,
     &:hover {
       [class*="fa-"] {
-        color: $color-primary-lighten-2;
+        color: v(color-primary-lighten-01);
         margin-left: ($spacer * 2);
       }
     }
     &:disabled {
-      background: $color-gray-2;
+      background: v(status-disabled-background);
+      border-color: v(color-secondary-04);
       [class*="fa-"] {
-        color: $color-gray-5;
+        color: v(color-primary-default);
+        opacity: .45;
         margin-left: ($spacer * 2);
       }
     }
   }
   // Lista de opções
   .select-items {
-    background: $color-white;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22);
-    left: $spacer-half;
+    background: v(color-secondary-01);
+    box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22);
+    left: $spacer * 0.5;
     margin-top: 1px;
     position: absolute;
-    right: $spacer-half;
+    right: $spacer * 0.5;
     z-index: 1;
     button {
-      background: $color-white;
+      background: v(color-secondary-01);
       border: 0;
       display: block;
-      font-weight: 500;
-      padding: $spacer-half ($spacer * 2);
+      font-weight: v(font-weight-medium);
+      padding: $spacer * 0.5 ($spacer * 2);
       text-align: left;
       width: 100%;
       &:hover,
       &:focus {
-        background: $color-primary-pastel-1;
+        background: v(color-primary-pastel-02);
       }
       &.same-as-selected {
-        background: $color-primary-lighten-2;
-        color: $color-white;
+        background: v(color-primary-lighten-01);
+        color: v(color-secondary-01);
       }
     }
   }
@@ -99,8 +101,7 @@
     }
   }
   // Estados
-  @each $state, $color in (focus, $color-primary-lighten-2),
-    (valid, $color-success), (invalid, $color-danger)
+  @each $state, $color in (valid, v(color-success)), (invalid, v(color-danger))
   {
     &.is-#{$state} {
       .select-selected {
@@ -112,6 +113,27 @@
           margin-left: ($spacer * 2);
         }
       }
+    }
+  }
+  &.is-#{focus} {
+    input {
+      background: v(status-focused-background)
+      linear-gradient(
+        v(status-focused-overlay),
+        v(status-focused-overlay)
+      );
+    }
+  }
+  &.is-#{disabled} {
+    label {
+      opacity: .45;
+    }
+    input {
+      background: v(status-disabled-background);
+      border-color: v(color-secondary-04);
+    }
+    .select-selected {
+      color: v(color-secondary-04);
     }
   }
 }

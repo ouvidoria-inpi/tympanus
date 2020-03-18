@@ -1,102 +1,141 @@
-Esse documento propõe um padrão de codificação para folhas de estilo.
+Este documento propõe um padrão de codificação para folhas de estilo (CSS).
 
-## Pré-processador de CSS
+## Organização dos arquivos
 
-Os pré-processadores de CSS ajudam na otimização do código, pois o código gerado será formatado conforme as configurações predefinidas.
+As folhas de estilo do Design System seguem a arquitetura **Atomic Design**.
 
-A maioria permite minificação e criação de source maps. A vantagem de um código minificado é a diminuição do arquivo de CSS gerando agilidade no carregamento e aplicação na tela.
+```text
+design-system/
+└── src/
+    └── scss/
+        ├── components/
+        ├── configs/
+        ├── functions/
+        ├── mixins/
+        ├── templates/
+        └── utilities/
+```
 
-Exemplos e lista dos principais pré-processadores de 2018 no endereço: <https://raygun.com/blog/css-preprocessors-examples/>
+## Sass
 
-### Sass
+O CSS do Design System foi criado a partir do pré-processador Sass. Usamos o formato `.scss` na criação dos arquivos. Eles são compilados em arquivos CSS.
 
-O Sass possui 2 formatos de escrita: SASS e SCSS. A primeira usa indentação para separar blocos de códigos e cada regra deve ser escrita numa linha única. A segunda é parecida com a escrita original do CSS. Para facilitar a leitura do código **recomendamos o uso do formato SCSS**.
+Incentivamos o formato [DRY](https://alistapart.com/article/dry-ing-out-your-sass-mixins/ 'Don’t Repeat Yourself') na criação dos códigos. Aproveite as facilidades do Sass e crie, sempre que possível, mixins, functions ou mesmo [Placeholder Selectors](https://sass-lang.com/documentation/style-rules/placeholder-selectors) quando for criar seu código, mas lembre-se de respeitar a organização do código em suas respectivas pastas.
 
-Veja a seguir dicas e boas práticas de uso do Sass.
+**Não utilize valores hard-coded** nos estilos de componentes e templates. Use sempre variáveis. A exceção é para estilos que não irão mudar a configuração independente do tema.
 
-**Criar uma biblioteca de mixins utilitários para reaproveitamento de código**
+Pense sempre na lógica de temas nas soluções. Um componente pode variar sua aparência de acordo com o tema ativado. Valores hard-coded nessas situações inviabilizam a aplicação de temas.
+
+Veja a seguir um exemplo hipotético:
 
 ```scss
-// Centralizar usando display flex
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.button {
+    border-width: var(--button-border-width);
+    border-radius: var(--button-radius);
+    padding: var(--button-padding);
 }
-// Bloco de notícias
-.news {
-    color: $news-color;
-    background: $news-background;
-    @include flex-center;
+.button.primary {
+    background: var(--button-primary);
+}
+.button.clear {
+    border: 0; // o botão do tipo clear nunca possui borda
 }
 ```
 
-Mais exemplos em <https://gist.github.com/chriseppstein/1215856>
+<div class="row">
+<div class="col-sm">
 
-**Mudar a cor do texto de acordo com a cor de fundo de um elemento**
+### Tema principal
+
+```css
+/* Configurações de botões */
+--button-primary: #2969bd;
+--button-border-width: 1px;
+--button-radius: 4px;
+--button-padding: 10px;
+```
+
+</div>
+<div class="col-sm">
+
+### Tema alternativo
 
 ```scss
-// Variáveis de cor
-$black: #000;
-$white: #fff;
+/* Configurações de botões */
+--button-primary: #000;
+--button-border-width: 3px;
+--button-radius: 0;
+--button-padding: 5px 15px;
+```
 
-// Função para mudança de cor
-@function dynamic-color($color) {
-    @if (lightness($color) > 50) {
-        @return $black;
-    } @else {
-        @return $white;
+</div>
+</div>
+
+## Uso dos Tokens
+
+Conforme documentado em **Fundamentos Visuais**, na navegação principal, o Design System utiliza os Tokens de Design em cores, fontes e outros elementos. Nas folhas de estilo eles são transcritos como variáveis de CSS e são aplicados nas diversas propriedades.
+
+Em resumo, os Tokens são criadas para uso global em `:root` para uso geral e podem ser aplicados em seletores ou outras variáveis locais quando necessário.
+
+No CSS a variável é aplicada conforme o exemplo a seguir:
+
+```css
+:root {
+    --font-size-scale-base: 14px;
+    --font-size-scale-up-01: 16.8px;
+}
+p {
+    font-size: var(--font-size-scale-base);
+}
+@media (min-width: 1600px) {
+    p {
+        font-size: var(--font-size-scale-up-01);
     }
 }
-// Bloco de notícias
-.news {
-    color: dynamic-color($news-bg);
-    background: $news-bg;
-    @include flex-center;
+```
+
+> No exemplo acima o tamanho da fonte do parágrafo é de 14px, porém em resoluções a partir de 1600px o tamanho da fonte é de 16.8px.
+
+No Sass criamos uma função para aplicar os Tokens de Design: `v(nome do token)`. Use-a sempre que houver necessidade de aplicar um Token, caso contrário o CSS gerado pelo Sass será incompatível com possíveis trocas de Temas ou aplicação do Modo de Alto Contraste.
+
+E porque não utilizar as variáveis do Sass? Veja a seguir o que irá acontecer no CSS caso a função não for utilizada:
+
+<div class="row">
+<div class="col-sm">
+
+```scss
+p {
+    font-size: v(font-size-scale-base);
 }
 ```
 
-Fonte: <http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass>
+Irá gerar o CSS utilizando o Token de Design:
 
-**Uso avançado de Maps**
+```css
+p {
+    font-size: var(--font-size-scale-base);
+}
+```
 
--   Gerar classes de cores - <https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps>
--   Controle de código responsivo - <https://jonsuh.com/blog/managing-responsive-breakpoints-with-sass-maps/>
--   DRY - Don’t Repeat Yourself - <https://thoughtbot.com/blog/removing-sass-duplication>
+</div>
+<div class="col-sm">
 
-### Less
+```scss
+p {
+    font-size: $font-size-scale-base;
+}
+```
 
-Diferente do Sass que precisa ser pré-compilado em CSS, o Less pode ser transcrito diretamente na página usando Javascript.
+Irá gerar o CSS com valor estático:
 
-O link a seguir mostra de forma prática as diferenças entre Sass e Less - <https://css-tricks.com/sass-vs-less/>
+```css
+p {
+    font-size: 14px;
+}
+```
 
-## Reset CSS
-
-Antigamente cada Browser se comportava de forma diferente para a mesma regra de CSS. Isso era ocasionada pela falta de padronização e pela quantidade de engines disponíveis no mercado.
-
-Hoje esse número foi reduzido à 3 principais (Webkit, Blink e Gecko), mas ainda assim é possível que cada uma delas renderize alguns elementos na tela de forma particular. Isso é melhor verificado em telas de formulário, pois cada input ou botão apresenta sua formação de acordo com a engine e Sistema Operacional do usuário.
-
-O uso de Reset CSS faz com que todas ou grande parte dos componentes e tags HTML sigam a mesma padronização visual.
-
-A sugestão é fazer uso da mais usada em Projetos Web do momento. Atualmente o Bootstrap é bastante usado em soluções Web. Ele possui uma coleção de estilos de Reset e pode ser carregado a parte ou em conjunto com seus componentes internos.
-
-## Arquitetura
-
-Existem várias arquiteturas de organização de código disponíveis na internet. O mais indicado para uso é aquela que represente melhor o seu projeto.
-
-| Seguindo a arquitetura SMACSS (pronuncia-se Smacks) | Seguindo a arquitetura Atomic Design          | Seguindo a arquitetura RSCSS                     | Seguindo a arquitetura ITCSS                                |
-| --------------------------------------------------- | --------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------- |
-| Base, Layout, Module, State, Theme                  | Atoms, Molecules, Organisms, Templates, Pages | Components, Elements, Variants, Layouts, Helpers | Settings, Tools, Generic, Base, Objects, Components, Trumps |
-
-No DS-Gov são usadas 3 folhas de estilos:
-
--   CSS de base
--   CSS de componentes
--   CSS de templates
-
-| CSS de base                | CSS de componentes          | CSS de templates           |
-| -------------------------- | --------------------------- | -------------------------- |
-| Configs, Mixins, Utilities | Configs, Mixins, Components | Configs, Mixins, Templates |
+</div>
+</div>
 
 ## Comentários
 
@@ -124,207 +163,36 @@ Comentários são importantes e facilitam o entendimento e manutenção do códi
 
 ## Media Queries
 
-Não crie arquivos a parte para essa função. O ideal é que cada componente/template tenha suas regras de media querie escritas no próprio arquivo. Caso a primeira versão não possua responsividade, crie uma v2 do arquivo com as novas regras.
+Não crie arquivos a parte para essa função. O ideal é que cada componente outemplate tenha suas regras de media querie escritas no próprio arquivo.
 
-Exemplo de aplicação de Media Queries:
-
-**Abordagem Mobile First**
+Além disso, recomendamos a escrita no formato **Mobile First**. Exemplo de aplicação de Media Queries:
 
 ```scss
-// Arquivo “components/sidebar”
-
+// Estilos para Mobile e Tablet
 .sidebar { … }
 
-// Maior que tela de Mobile
-@media (min-width: $medium-screen) {
+// Estilos para Desktop
+@media (min-width: $grid-breakpoint-medium) {
   .sidebar { … }
 }
 
-// Maior que tela de Tablet
-@media (min-width: $large-screen) {
-  .sidebar { … }
-}
-
-// Maior que tela de Desktop
-@media (min-width: $larger-screen) {
+// Estilos para TV
+@media (min-width: $grid-breakpoint-large) {
   .sidebar { … }
 }
 ```
 
-**Abordagem tradicional**
+## Linter
 
-```scss
-// Arquivo “components/sidebar”
+Os linters permitem a criar de regras de escrita de códigos garantindo a padronização do CSS. No projeto está configurado o linter **stylelint** - <https://stylelint.io/>. Usamos a versão compatível com Sass.
 
-.sidebar { … }
-
-// Tela de Mobile
-@media (max-width: $small-screen) {
-  .sidebar { … }
-}
-
-// Tela de Tablet
-@media (min-width: ($small-screen + 1)) and (max-width: $medium-screen) {
-  .sidebar { … }
-}
-
-// Maior que tela de Desktop
-@media (min-width: $larger-screen) {
-  .sidebar { … }
-}
-```
-
-Conforme pode ser visto no exemplo acima, **recomendamos** sempre o uso da abordagem **Mobile First**. A compreensão e manutenção do código é melhor.
-
-O Framework Bootstrap possui uma série de mixins de Media Queries. [**Veja como usar os mixins de Media Queries do Bootstrap**](http://apycom.com/bootstrap-components/bootstrap-media-queries-587.html).
-
-## Linters
-
-A maioria das regras de boas práticas exemplificadas a seguir podem ser escritas ou configuradas nos linters do projeto. Seu uso melhora a legibilidade e cria uma padronização de escrita. Há casos em que o uso de linters até corrige erros de sintaxe.
-
-Os novos editores de texto possuem linters nativos ou disponíveis como extensões/plugins para instalação. Caso não esteja disponível no seu editor veja a seguir algumas opções de linters.
-
-**Linters online**
-
--   <http://csslint.net/> - Possui várias opções de configuração (setinha ao lado de “Lint!”).
--   <https://codebeautify.org/cssvalidate>
--   <https://pinetools.com/css-beautifier>
-
-**Linters para configurar em projetos**
-
--   <https://stylelint.io/>
--   <https://github.com/gajus/css-lint>
--   <https://github.com/sasstools/sass-lint>
-
-No DS-Gov é usado o linter `stylelint`. Ele pode ser utilizado através do script `npm run validate:sass`.
-
-Ele também está configurado como pipeline de desenvolvimento dentro do positório git, ou seja, sempre que um novo código seja inserido/atualizado ele será ativado.
-
-## Organização dos arquivos
-
-Independente da arquitetura usada no projeto é importante saber como organizar os arquivos. **A folha de estilo principal deve ser usada somente para carregar configurações e o restante dos arquivos conforme a arquitetura**.
-
-Segue um exemplo usando o pré-processador SASS:
-
-```scss
-// <NOME DO PROJETO/TEMPLATE/COMPONENTE - VERSÃO>
-// <DESCRIÇÃO>
-// <LINK PARA VISUALIZAÇÃO/DOWNLOAD>
-
-// #LIBRARIES
-@import "jspm_packages/npm/hint.css@2.2.1/src/hint.scss";
-@import "jspm_packages/npm/susy@2.2.9/sass/susy";
-
-// #COMPONENTS
-@import "components/boxview";
-@import "components/boxview-item";
-@import "components/buttons";
-@import "components/carousel";
-@import "components/document-reader";
-```
-
-**Não coloque valores hard-coded nos estilos de componentes e templates**. Use sempre variáveis. A exceção é para estilos que não irão mudar a configuração independente do tema.
-
-Pense sempre na lógica de temas nas soluções. Um componente pode variar sua aparência de acordo com o tema ativado. Valores hard-coded nessas situações inviabilizam a aplicação de temas.
-
-Veja a seguir como isso é aplicado na prática:
-
-**Arquivo de botões**
-
-```scss
-// Arquivo “components/buttons.scss”
-
-.button {
-    background: $btn-bg;
-    border-width: $btn-border-width;
-    border-radius: $btn-radius;
-    padding: $btn-padding;
-    &-primary {
-        background: $btn-primary-bg;
-    }
-    &-clear {
-        border: 0; // o botão do tipo clear nunca possui borda
-    }
-}
-```
-
-**Tema principal**
-
-```scss
-// Configurações de botões
-$btn-padding: 10px;
-$btn-bg: #fff;
-$btn-primary-bg: #2969bd;
-$btn-border-width: 1px;
-$btn-radius: 4px;
-```
-
-**Tema comemorativo**
-
-```scss
-// Configurações de botões
-$btn-padding: 5px 15px;
-$btn-bg: #fff;
-$btn-primary-bg: #000;
-$btn-border-width: 3px;
-$btn-radius: 0;
-```
-
-### Organização de arquivos no DS-Gov
-
-Conforme mencionado em **arquetura**, o DS-Gov possui 3 CSS.
-
-```text
-repositorio/
-├── assets/
-│   └── styles/
-│       ├── dsgov-base.min.css
-│       ├── dsgov-components.min.css
-│       └── dsgov-templates.min.css
-├── base/
-│   ├── configs/
-│   ├── mixins/
-│   ├── utilities/
-│   ├── _dsgov-base.scss
-│   └── _tokens.scss
-├── components/
-│   └── ...
-└── templates/
-    └── ...
-```
-
-No diretório `assets` estão as versões compiladas e minificadas dos estilos.
-
-Os arquivos para desenvolvimento estão em seus respectivos diretórios.
-
-Cada componente e template possui a seguinte estrutura:
-
--   `_configs.scss`: variáveis de configuração
--   `_mixins.scss`: códigos reaproveitáveis
--   `CHANGELOG.md`: versionamento
--   `arquivo.scss`: **carrega o css de base** e aplica `configs` e `mixins`
--   `arquivo.html`: código HTML do componente/template
--   `arquivo.md`: documentação para desenvolvedor
--   `arquivo-dsg.md`: documentação para designer
-
-## Formatação e sintaxe
-
-As regras estão configuradas no arquivo de linter: `.stylelintrc` localizado na raiz do projeto.
-
-Para mais informações consulte a documentação do linter em <https://stylelint.io/>.
+Recomendamos usar editores de texto que possuam suporte a linters para que você não seja surpreendido com mensagens de erro ao enviar CSS no repositório do projeto. O Visual Studio Code - <https://code.visualstudio.com/> - é um exemplo de editor com suporte ao stylelint, bastando instalar a respectiva extensão.
 
 ## Links interessantes
 
 ### Browsers
 
 -   <https://en.wikipedia.org/wiki/Comparison_of_browser_engines_(CSS_support)>
-
-### Arquitetura
-
--   <http://smacss.com/>
--   <https://rscss.io>
--   <https://willianjusten.com.br/organizando-seu-css-com-itcss/>
--   <http://bradfrost.com/blog/post/atomic-web-design/>
 
 ### Boas Práticas
 
@@ -342,12 +210,6 @@ Para mais informações consulte a documentação do linter em <https://stylelin
 -   <https://www.w3schools.com/css/css_rwd_mediaqueries.asp>
 -   <https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488>
 -   <https://css-tricks.com/snippets/css/media-queries-for-standard-devices/>
-
-### Linters
-
--   <https://github.com/sass/linter>
--   <https://github.com/sasstools/sass-lint>
--   <https://stylelint.io/>
 
 ### Frameworks
 

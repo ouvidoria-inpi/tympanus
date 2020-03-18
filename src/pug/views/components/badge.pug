@@ -4,71 +4,67 @@ append vars
   - var title = "Badge";
 
 append content
-  .row(style='font-size: 20px;')
+  .row(style='font-size: 28px;margin: 1em;')
     .col-auto
-      +badge
-        i.fas.fa-user
-        span.icon
+      i.fas.fa-user
+      +badge("is-top is-left icon")
+        i.fas.fa-circle.is-success
     .col-auto
-      +badge("is-top is-warning")
-        i.fas.fa-user
-        span.icon
+      i.fas.fa-user
+      +badge("is-top is-right icon")
+        i.fas.fa-circle.is-warning
     .col-auto
-      +badge("is-bottom is-info")
-        i.fas.fa-user
-        span.icon
+      i.fas.fa-user
+      +badge("is-bottom is-left icon")
+        i.fas.fa-circle.is-info
     .col-auto
-      +badge("is-bottom is-danger")
-        i.fas.fa-user
-        span.icon
-  .row(style='font-size: 24px;')
+      i.fas.fa-user
+      +badge("is-bottom is-right icon")
+        i.fas.fa-circle.is-danger
+  .row(style='font-size: 36px;margin: 1em;')
     .col-auto
-      +badge("is-symbol")
-        i.fas.fa-file
-        i.fas.fa-check.icon
+      i.fas.fa-file
+      +badge("is-top is-left simbol ")
+        i.fas.fa-check.is-success
     .col-auto
-      +badge("is-symbol is-left is-bottom is-warning")
-        i.fas.fa-file
-        i.fas.fa-check.icon
+      i.fas.fa-file
+      +badge("is-bottom is-left simbol ")
+        i.fas.fa-check.is-warning
     .col-auto
-      +badge("is-symbol is-right is-bottom is-info")
-        i.fas.fa-file
-        i.fas.fa-check.icon
+      i.fas.fa-file
+      +badge("is-bottom is-right simbol")
+        i.fas.fa-check.is-info
     .col-auto
-      +badge("is-symbol is-right is-top is-danger")
-        i.fas.fa-file
-        i.fas.fa-check.icon
-  .row(style='font-size: 32px;')
+      i.fas.fa-file
+      +badge("is-top is-right simbol")
+        i.fas.fa-check.is-danger
+  .row(style='font-size: 36px;margin: 1em;')
     .col-auto
-      +badge("is-symbol")
-        i.fas.fa-file
-        i.fas.fa-check.icon
+      i.fas.fa-file
+      +badge("is-top is-left simbol")
+        i.fas.fa-check.is-success
     .col-auto
-      +badge("is-symbol is-left is-bottom is-warning")
-        i.fas.fa-plane-departure
-        i.fas.fa-info.icon
+      i.fas.fa-plane-departure
+      +badge("is-bottom is-left simbol")
+        i.fas.fa-info.is-warning
     .col-auto
-      +badge("is-symbol is-right is-bottom is-info")
-        i.fas.fa-car
-        i.fas.fa-euro-sign.icon
+      i.fas.fa-car
+      +badge("is-bottom is-right simbol")
+        i.fas.fa-euro-sign.is-info
     .col-auto
-      +badge("is-symbol is-right is-top is-danger")
-        i.fas.fa-comment
-        i.fas.fa-times.icon
-  .row(style='font-size: 36px;')
+      i.fas.fa-comment
+      +badge("is-top is-right simbol")
+        i.fas.fa-times.is-danger
+  .row(style='font-size: 46px;margin: 1em;')
     .col-auto
-      +badge("is-count is-danger")
-        i.fas.fa-envelope
-        span.number 1
+      i.fas.fa-envelope
+      +badge("fa-layers-counter fa-layers-top-left") 1
     .col-auto
-      +badge("is-count is-left is-bottom is-danger")
-        i.fas.fa-envelope
-        span.number 5
+      i.fas.fa-envelope
+      +badge("fa-layers-counter fa-layers-bottom-left") 5
     .col-auto
-      +badge("is-count is-right is-bottom is-danger")
-        i.fas.fa-envelope
-        span.number 5
+      i.fas.fa-envelope
+      +badge("fa-layers-counter fa-layers-bottom-right") 5
     .col-auto
-      +badge("is-count is-right is-top is-danger")
-        i.fas.fa-envelope
-        span.number 999+
+      i.fas.fa-envelope
+      +badge("fa-layers-counter fa-layers-top-right") 999+

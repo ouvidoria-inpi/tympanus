@@ -44,28 +44,28 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
             <td><span class="text-nowrap">gray-7</span></td>
             <td>
               <div class="d-flex">
-              <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+              <div class="bg-primary-pastel-01 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
                 <span>AA</span>
               </div>
-              <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+              <div class="bg-primary-pastel-01 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
                 <span>AAA</span>
               </div>
               </div>
             </td>
             <td>
               <div class="d-flex">
-                  <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+                  <div class="bg-primary-pastel-01 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
                     <span>AA</span>
                     <span>18pt</span>
                   </div>
-                  <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+                  <div class="bg-primary-pastel-01 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
                     <span>AAA</span>
                     <span>18pt</span>
                   </div>
               </div>
             </td>
             <td>
-              <div class="bg-primary-pastel-1 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
+              <div class="bg-primary-pastel-01 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; box-shadow: 0 0 0 1px #fff; height: 60px; width: 60px;">
                 <i class="fas fa-edit fa-lg"></i>
               </div>
             </td>
@@ -76,28 +76,28 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
             <td><span class="text-nowrap">gray-7</span></td>
             <td>
               <div class="d-flex">
-              <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-pastel-02 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AA</span>
               </div>
-              <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-pastel-02 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AAA</span>
               </div>
               </div>
             </td>
             <td>
               <div class="d-flex">
-                  <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+                  <div class="bg-primary-pastel-02 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                     <span>AA</span>
                     <span>18pt</span>
                   </div>
-                  <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+                  <div class="bg-primary-pastel-02 text-gray-7 d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
                     <span>AAA</span>
                     <span>18pt</span>
                   </div>
               </div>
             </td>
             <td>
-              <div class="bg-primary-pastel-2 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-pastel-02 text-gray-7 d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                 <i class="fas fa-edit fa-lg"></i>
               </div>
             </td>
@@ -108,13 +108,13 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
         <td>white</td>
         <td></td>
         <td>
-          <div class="bg-primary-lighten-25 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+          <div class="bg-primary-lighten-025 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
             <span>AA</span>
             <span>18pt</span>
           </div>
         </td>
         <td>
-          <div class="bg-primary-lighten-25 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+          <div class="bg-primary-lighten-025 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
             <i class="fas fa-edit fa-lg"></i>
           </div>
         </td>
@@ -124,24 +124,24 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
         <td><span class="text-nowrap">primary-lighten-15</span></td>
         <td>white</td>
         <td>
-          <div class="bg-primary-lighten-15 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+          <div class="bg-primary-pastel-015 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
             <span>AA</span>
           </div>
         </td>
         <td>
           <div class="d-flex">
-            <div class="bg-primary-lighten-15 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+            <div class="bg-primary-pastel-015 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
               <span>AA</span>
               <span>18pt</span>
             </div>
-            <div class="bg-primary-lighten-15 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+            <div class="bg-primary-pastel-015 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
               <span>AAA</span>
               <span>18pt</span>
             </div>
           </div>
         </td>
         <td>
-          <div class="bg-primary-lighten-15 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+          <div class="bg-primary-pastel-015 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
             <i class="fas fa-edit fa-lg"></i>
           </div>
         </td>
@@ -152,28 +152,28 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
         <td>white</td>
         <td>
           <div class="d-flex">
-              <div class="bg-primary text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-default text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AA</span>
               </div>
-              <div class="bg-primary text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-default text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AAA</span>
               </div>
           </div>
         </td>
         <td>
           <div class="d-flex">
-              <div class="bg-primary text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-default text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AA</span>
                 <span>18pt</span>
               </div>
-              <div class="bg-primary text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-default text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AAA</span>
                 <span>18pt</span>
               </div>
           </div>
         </td>
         <td>
-          <div class="bg-primary text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+          <div class="bg-primary-default text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
             <i class="fas fa-edit fa-lg"></i>
           </div>
         </td>
@@ -184,28 +184,28 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
         <td>white</td>
         <td>
           <div class="d-flex">
-              <div class="bg-primary-darken-15 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-darken-015 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AA</span>
               </div>
-              <div class="bg-primary-darken-15 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-darken-015 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AAA</span>
               </div>
           </div>
         </td>
         <td>
           <div class="d-flex">
-              <div class="bg-primary-darken-15 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-darken-015 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AA</span>
                 <span>18pt</span>
               </div>
-              <div class="bg-primary-darken-15 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-darken-015 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AAA</span>
                 <span>18pt</span>
               </div>
           </div>
         </td>
         <td>
-          <div class="bg-primary-darken-15 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+          <div class="bg-primary-darken-015 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
             <i class="fas fa-edit fa-lg"></i>
           </div>
         </td>
@@ -216,28 +216,28 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
         <td>white</td>
         <td>
           <div class="d-flex">
-              <div class="bg-primary-darken-25 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-darken-025 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AA</span>
               </div>
-              <div class="bg-primary-darken-25 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-darken-025 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AAA</span>
               </div>
           </div>
         </td>
         <td>
           <div class="d-flex">
-              <div class="bg-primary-darken-25 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-darken-025 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AA</span>
                 <span>18pt</span>
               </div>
-              <div class="bg-primary-darken-25 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
+              <div class="bg-primary-darken-025 text-white d-flex flex-column justify-content-center align-items-center ml-1" style="border-radius: 4px; height: 60px; width: 60px;">
                 <span>AAA</span>
                 <span>18pt</span>
               </div>
           </div>
         </td>
         <td>
-          <div class="bg-primary-darken-25 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
+          <div class="bg-primary-darken-025 text-white d-flex flex-column justify-content-center align-items-center" style="border-radius: 4px; height: 60px; width: 60px;">
             <i class="fas fa-edit fa-lg"></i>
           </div>
         </td>

@@ -3,19 +3,19 @@
   position: relative;
   z-index: 1;
   .menu {
-    background: $color-white;
-    box-shadow: 0 3px 6px rgba($color-black, 0.22);
+    background: v(color-secondary-01, $color-secondary-01);
+    box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22);
     display: none;
     position: absolute;
     // Rótulo
     .title {
       display: block;
-      font-weight: 600;
+      font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
       padding: $spacer ($spacer * 2);
     }
     // Item de menu
     .item {
-      background: $color-white;
+      background: v(color-secondary-01, $color-secondary-01);
       border: 0;
       display: block;
       padding: $spacer ($spacer * 2);
@@ -29,7 +29,7 @@
       &.item {
         text-decoration: none;
         &:hover {
-          background: $color-primary-pastel-1;
+          background: v(status-hover-background, $status-hover-background);
         }
       }
     }

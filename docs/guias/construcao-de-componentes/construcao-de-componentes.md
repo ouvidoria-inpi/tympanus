@@ -1,4 +1,6 @@
-Faça um fork ou clone do projeto em <https://git.serpro/ds-gov/design-system>.
+Os templates foram desenvolvimdos usando a linguagem de templates Pug - <https://pugjs.org/api/getting-started.html>. Eles são compilados para HTML. Para os estilos foi usado o SASS - <https://sass-lang.com/>. Eles são compilados para CSS.
+
+Abra o terminal e faça um clone do projeto:
 
 ```bash
 git clone git@git.serpro:ds-gov/design-system.git
@@ -6,15 +8,13 @@ cd design-system
 npm install
 ```
 
-Arquivos de desenvolvimento estão em `src`. Na pasta `dist` serão gerados os arquivos compilados.
+Para iniciar o desenvolvimento execute comando `npm start` no terminal.
 
-Os códigos foram escritos usando a linguagem de templates Pug - <https://pugjs.org/api/getting-started.html>. Eles são compilados para HTML. Para os estilos foi usado o SASS - <https://sass-lang.com/>. Eles são compilados para CSS.
-
-Para compilar o novo componente e monitorar alterações rode o comando `npm start` no terminal.
-
-Recomendamos o uso da extensão **"Live Server"** do _Visual Studio Code_ durante o desenvolvimento de componentes.
+Será aberto automaticamente no Browser o endereço <http://localhost:9000>. Você poderá visualizar os arquivos compilados neste endereço.
 
 ## Exemplo prático
+
+> Recomendamos o uso do editor de texto **Visual Studio Code** (<https://code.visualstudio.com>), mas você poderá usar qualquer outro de sua preferência.
 
 Um componente deve obedecer a seguinte estrutura:
 
@@ -40,10 +40,11 @@ design-system/
 
 No exemplo a seguir iremos criar um botão simples. Com as seguintes características:
 
-- Fundo preto
-- texto branco e letras maiúsculas
-- quadrado
-- ao clicar é exibida a mensagem: "Botão clicado!"
+-   cor de fundo: color-secondary-09
+-   cor de texto: color-secondary-01
+-   letras maiúsculas
+-   quadrado
+-   ao clicar é exibida a mensagem: "Botão clicado!"
 
 ### Código reusável
 
@@ -52,7 +53,6 @@ Escrever o componente de forma reusável facilita a interação dele com outros 
 Dentro de `src/pug/components/` crie o arquivo **simple-button.pug** com o seguinte código:
 
 ```pug
-//- src/pug/components/simple-button.pug
 mixin simple-button
     button.br-simple-button(
         id=attributes.id
@@ -69,8 +69,9 @@ Para mais informações sobre mixins em Pug acesse <https://pugjs.org/language/m
 Inclua o novo mixin na listagem de componentes em `src/pug/layouts/default.pug`:
 
 ```pug
-//- src/pug/layouts/default.pug
+...
 block components
+    ...
     include ../components/simple-button
 ```
 
@@ -79,14 +80,10 @@ block components
 Dentro de `src/pug/views/components/` crie o arquivo **simple-button.pug** com o seguinte código:
 
 ```pug
-//- src/pug/views/components/simple-button.pug
 extends ../../layouts/component
 
 append vars
     - var title = "Botão simples"
-
-append scripts
-    script(src=jscompoents+"simple-button.js")
 
 append content
     +simple-button Botão simples
@@ -99,28 +96,25 @@ append content
 Dentro de `src/scss/components/` crie o arquivo **\_simple-button.scss** com o seguinte código:
 
 ```scss
-// src/scss/components/_simple-button.scss
 .#{$prefix}simple-button {
-  background: $color-black;
-  border: 1px solid $color-black;
-  border-radius: 0;
-  color: $color-white;
-  display: inline-block;
-  font-weight: 400;
-  padding: 8px 16px;
-  text-transform: uppercase;
-  &:hover {
-    background: $color-gray-6;
-    color: $color-white;
-    text-decoration: none;
-  }
+    background: v(color-secondary-09);
+    border: 1px solid v(color-secondary-09);
+    border-radius: 0;
+    color: v(color-secondary-01);
+    display: inline-block;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    &:hover {
+        background: v(color-secondary-07);
+        color: v(color-secondary-01);
+        text-decoration: none;
+    }
 }
 ```
 
 Incluir o novo componente na lista de componentes em `src/scss/_components.scss`:
 
 ```scss
-// src/scss/components/_components.scss
 @import 'components/simple-button';
 ```
 
@@ -131,21 +125,13 @@ Atenção! Da mesma forma como foi feito no arquivo Pug, você poderá criar um 
 Dentro de `src/js/components/` crie o arquivo **simple-button.js** com o seguinte código:
 
 ```js
-const simpleButtons = document.querySelectorAll('.br-simple-button')
+const simpleButtons = document.querySelectorAll('.br-simple-button');
 
 for (let simpleButton of simpleButtons) {
-  simpleButton.addEventListener('click', function() {
-    alert('Botão clicado!')
-  })
+    simpleButton.addEventListener('click', function() {
+        alert('Botão clicado!');
+    });
 }
 ```
 
-### Versão final compilada
-
-Rode o seguinte script no terminal, na raiz do projeto:
-
-```bash
-npm run build
-```
-
-O componente poderá ser visualizado diretamente no browser através do arquivo `dist/components/simple-button.html`.
+Confira o novo componente em <http://localhost:9000/components/>.

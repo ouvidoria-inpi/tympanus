@@ -21,8 +21,8 @@
     }
     // Caixa
     & + label::before {
-      background: $color-white;
-      border: 1px solid $color-gray-5;
+      background: $color-secondary-01;
+      border: 1px solid $color-secondary-06;
       border-radius: $checkbox-radius;
       content: "";
       height: $checkbox-default;
@@ -32,11 +32,11 @@
     }
     // Checado
     &:checked + label::before {
-      background: $color-primary-lighten-2;
-      border-color: $color-primary-lighten-2;
+      background: $color-primary-lighten-01;
+      border-color: $color-primary-lighten-01;
     }
     &:checked + label::after {
-      border: solid $color-white;
+      border: solid $color-secondary-01;
       border-width: 0 3px 3px 0;
       content: "";
       height: 15px;
@@ -49,7 +49,7 @@
     // Hover
     &:hover:not(:disabled) + label::before,
     &:focus:not(:disabled) + label::before {
-      box-shadow: 0 0 0 4px rgba($color-primary-lighten-2, 0.45);
+      box-shadow: 0 0 0 4px rgba($color-primary-lighten-01, 0.45);
     }
     // Inválido
     &:invalid {
@@ -60,12 +60,12 @@
     }
     // Desativado
     &:disabled + label::before {
-      background-color: $color-gray-2;
+      background-color: $color-secondary-03;
     }
     // Checado
     &:disabled:checked + label::before {
-      background: $color-gray-4;
-      border-color: $color-gray-4;
+      background: $color-secondary-05;
+      border-color: $color-secondary-05;
     }
   }
   // Estados
@@ -97,11 +97,11 @@
   &.is-checking {
     input[type="checkbox"] {
       & + label::before {
-        background: $color-primary-lighten-2;
-        border-color: $color-primary-lighten-2;
+        background: $color-primary-lighten-01;
+        border-color: $color-primary-lighten-01;
       }
       & + label::after {
-        border: solid $color-white;
+        border: solid $color-secondary-01;
         border-width: 0 3px 3px 0;
         content: "";
         height: 3px;
@@ -118,13 +118,13 @@
     input[type="checkbox"] {
       // Checado
       &:checked + label::before {
-        background: $color-white;
+        background: $color-secondary-01;
       }
       &:checked + label::after {
-        border-color: $color-primary;
+        border-color: $color-primary-default;
       }
       &:disabled:checked + label::after {
-        border-color: $color-gray-4;
+        border-color: $color-secondary-05;
       }
     }
     &.is-invalid {
