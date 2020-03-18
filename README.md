@@ -6,61 +6,48 @@ Como iniciar a criação de um novo trabalho neste repositório:
 
 1 - Clone o repositório
 
-```
+```git
 git clone git@git.serpro:ds-gov/design-system.git
 ```
 
-
 2 - Entre na pasta do clone e execute os comandos:
 
-```
-cd design-system
-npm install && npm run start
+```node
+npm run init
 ```
 
 3 - No Visual Studio code execute o comando (CTRL + P):
 
-```
+```node
 ext install ritwickdey.LiveServer
 ```
 
 > Mais informações sobre a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
+4 - Para executar o projeto execute o comando
 
-4 - Abra a pasta **dist** e clique com o botão direito em cima da página html do componente/templates que você está alterando.
-<br />
-
-5 - Aguarde a abertura do navegador com a página solicitada
-
-
-# Componentes
-
-Excutar os comandos abaixo para registrar componentes que estão no nexus do serpro e depois execute o npm install
-
-```
-npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/
+```node
+npm run start
 ```
 
+5 - Abra a pasta **dist** e clique com o botão direito em cima da página html do componente/templates que você está alterando.
+
+6 - Aguarde a abertura do navegador com a página solicitada
+
+## Testando o Projeto
+
+### Iniciar o ambiente de testes
+
+```node
+npm run start:test
 ```
-npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
+
+### Iniciar o cypress
+
+```node
+npm run cypress:interface
 ```
 
-## Executando o projeto 
+### Endereço do servidor
 
-# instalar os pacotes
-``` npm install ```
-
-# iniciar o servidor de desenvolvimento
-``` npm run start```
-
-## Para testar o projeto usando cypress use os seguintes comandos
-
-# Iniciar o ambiente de testes
-``` npm run start:test ```
-
-# Iniciar o cypress
-``` npm run cypress:interface ```
-
-# Acesso o servidor do projeto que está rodando na porta 
-
-- http://localhost:9000
+[http://localhost:9000](http://localhost:9000)
