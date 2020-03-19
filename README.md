@@ -10,13 +10,15 @@ Como iniciar a criação de um novo trabalho neste repositório:
 git clone git@git.serpro:ds-gov/design-system.git
 ```
 
-2 - Entre na pasta do clone e execute os comandos:
+2 - Verifique se o projeto está na branch develop
+
+3 - Entre na pasta do clone e execute os comandos:
 
 ```node
 npm run init
 ```
 
-3 - No Visual Studio code execute o comando (CTRL + P):
+4 - No Visual Studio code execute o comando (CTRL + P):
 
 ```node
 ext install ritwickdey.LiveServer
@@ -24,15 +26,15 @@ ext install ritwickdey.LiveServer
 
 > Mais informações sobre a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-4 - Para executar o projeto execute o comando
+5 - Para executar o projeto execute o comando
 
 ```node
 npm run start
 ```
 
-5 - Abra a pasta **dist** e clique com o botão direito em cima da página html do componente/templates que você está alterando.
+6 - Abra a pasta **dist** e clique com o botão direito em cima da página html do componente/templates que você está alterando.
 
-6 - Aguarde a abertura do navegador com a página solicitada
+7 - Aguarde a abertura do navegador com a página solicitada
 
 ## Testando o Projeto
 
