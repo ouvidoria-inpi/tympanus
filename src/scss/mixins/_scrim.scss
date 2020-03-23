@@ -1,6 +1,6 @@
 @mixin scrim {
   &.is-foco {
-    background-color: rgba(v(color-secondary-09,$color-secondary-09), 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     bottom: 0;
     display: none;
     height: 100%;
@@ -26,7 +26,7 @@
   &.is-inibicao {
     position: relative;
     &::before {
-      background: rgba(v(color-secondary-01,$color-secondary-01), 0.64);
+      background: rgba(255, 255, 255, 0.64);
       content: "";
       height: 100%;
       left: 0;
@@ -38,7 +38,7 @@
   &.is-legibilidade {
     position: relative;
     .scrim-text {
-      background-color: rgba(v(color-secondary-09,$color-secondary-09), 0.64);
+      background-color: rgba(0, 0, 0, 0.64);
       bottom: 0;
       left: 0;
       padding: $spacer * 2.2 $spacer * 1.25;
