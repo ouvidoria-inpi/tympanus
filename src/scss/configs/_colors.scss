@@ -27,6 +27,9 @@ $color-secondary-06: #888;
 $color-secondary-07: #555;
 $color-secondary-08: #333;
 $color-secondary-09: #000;
+$color-secondary-10:  rgba(0,0,0,.4);
+$color-secondary-11:  rgba(255,255,255,.64);
+$color-secondary-12:  rgba(0,0,0,.64);
 
 // Destaque
 $color-highlight: #268744;
@@ -60,6 +63,9 @@ $tokens-colors: (
   color-secondary-07: $color-secondary-07,
   color-secondary-08: $color-secondary-08,
   color-secondary-09: $color-secondary-09,
+  color-secondary-10: $color-secondary-10,
+  color-secondary-11: $color-secondary-11,
+  color-secondary-12: $color-secondary-12,
   color-highlight: $color-highlight,
   color-success: $color-success,
   color-warning: $color-warning,
