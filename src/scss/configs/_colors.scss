@@ -33,6 +33,9 @@ $rgb-secondary-06: get-rgb($color-secondary-06);
 $rgb-secondary-07: get-rgb($color-secondary-07);
 $rgb-secondary-08: get-rgb($color-secondary-08);
 $rgb-secondary-09: get-rgb($color-secondary-09);
+$color-secondary-10:  rgba(0,0,0,.4);
+$color-secondary-11:  rgba(255,255,255,.64);
+$color-secondary-12:  rgba(0,0,0,.64);
 
 // Destaque
 $color-highlight: #268744;
@@ -109,6 +112,9 @@ $tokens-colors: (
   rgb-secondary-07: $rgb-secondary-07,
   rgb-secondary-08: $rgb-secondary-08,
   rgb-secondary-09: $rgb-secondary-09,
+  color-secondary-10: $color-secondary-10,
+  color-secondary-11: $color-secondary-11,
+  color-secondary-12: $color-secondary-12,
   color-highlight: $color-highlight,
   rgb-highlight: $rgb-highlight,
   color-success: $color-success,
