@@ -1,0 +1,40 @@
+mixin tooltip(label="Título", labelClass, place="top", popover="false", active="false")
+  - let className = attributes.class
+  - let componentClass = prefix + "tooltip"
+  - className = className ? componentClass + " " + className : componentClass
+  - className = attributes.popover ? className  + " is-popover" : className
+  div(
+    id=attributes.id
+    place=attributes.place
+    popover=attributes.popover
+    timer=attributes.timer
+    active=attributes.active
+    class=className 
+    role="tooltip")
+    div.arrow(data-popper-arrow)
+    if (attributes.popover)
+      div.close
+        i.fas.fa-times
+      if block
+        block
+    else  
+      span.text=label
+      if block
+        block
+  mixin popover-image
+    div.popover-image
+      if block
+        block
+  mixin popover-header
+    div.popover-header
+      if block
+        block
+  mixin popover-body
+    div.popover-body
+      if block
+        block
+  mixin popover-footer
+    div.popover-footer
+      if block
+        block
+
