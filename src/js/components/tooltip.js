@@ -8,7 +8,7 @@ class BRTooltip {
     this.activator = component.previousSibling.previousSibling;
     const place = component.getAttribute("place");
     this.placement = place ? place : "top";
-    this.popover = component.getAttribute("popover");
+    this.popover = this.component.classList.contains( "is-popover" ) ;
     this.timer = component.getAttribute("timer");
     this.active = component.getAttribute("active");
     this.popperInstance = null;
@@ -45,6 +45,7 @@ class BRTooltip {
     }
   }
   _create () {
+    this._setLayout();
     //Cria a instancia do popper
     this.popperInstance = createPopper(this.activator, this.component, {
       placement: this.placement,
@@ -58,15 +59,6 @@ class BRTooltip {
       ],
     });
   }
-
-   _destroy() {
-    //Destroi a instancia do popper (estava sendo usada no hide mas conflitou com o efeito fade)
-    if (this.popperInstance) {
-      this.popperInstance.destroy();
-      this.popperInstance = null;
-    }
-  }
-
 
   _show ( event ) {
     this.component.setAttribute('data-show', '');
@@ -84,6 +76,24 @@ class BRTooltip {
     }
     else if ( component ) {
       component.removeAttribute('data-show');
+    }
+  }
+
+  _setLayout () {
+    // Cria a setinha que aponta para o item que criou o tooltip
+    let arrow = document.createElement( 'div' );
+    arrow.setAttribute( 'data-popper-arrow', '' );
+    arrow.classList.add( "arrow" );
+    this.component.appendChild( arrow );
+    
+    // Cria o icone de fechar do popover
+    if (this.popover) {
+      let close = document.createElement( 'div' );
+      close.classList.add( "close" );
+      let ico = document.createElement( 'i' );
+      ico.classList.add( "fas","fa-times" );
+      close.appendChild( ico );
+      this.component.appendChild( close );
     }
   }
 }

@@ -6,15 +6,10 @@ mixin tooltip(label="Título", labelClass, place="top", popover="false", active=
   div(
     id=attributes.id
     place=attributes.place
-    popover=attributes.popover
     timer=attributes.timer
     active=attributes.active
-    class=className 
-    role="tooltip")
-    div.arrow(data-popper-arrow)
+    class=className)
     if (attributes.popover)
-      div.close
-        i.fas.fa-times
       if block
         block
     else  
