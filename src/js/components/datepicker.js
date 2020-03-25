@@ -16,7 +16,7 @@ class BRDatepicker {
 
     // Configuração padrão do datepicker
     this._formatter = ( input, date, instance ) => {
-      const value = date.toLocaleDateString();
+      const value = date.toLocaleDateString("pt-BR");
       input.value = value; // => '1/1/2099'
     }
 
@@ -41,7 +41,8 @@ class BRDatepicker {
     this._maxDate = new Date();
     this._minDate = new Date( 2019, 0, 1 );
     this._respectDisabledReadOnly = true;
-    this._noWeekends = true;
+    this._noWeekends = false;
+    this._disableYearOverlay = true;
     this._id = "dtp" + Math.floor( Math.random() * 100 );
 
     this._datepickerProperties = [
