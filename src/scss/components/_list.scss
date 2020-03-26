@@ -1,0 +1,13 @@
+.#{$prefix}list {
+  background-color: v(color-secondary-01);
+  width: 400px;
+  & .item {
+    color: v(color-secondary-08);
+    font-size: v($font-size-scale-base);
+    & .icons {
+      font-size: v($font-size-scale-up-02);
+    }
+  }
+
+
+}

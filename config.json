@@ -146,6 +146,11 @@
             "urlLabel": "checklist"
           },
           {
+            "label": "List",
+            "filename": "list",
+            "urlLabel": "list"
+          },
+          {
             "label": "Radio",
             "filename": "radio",
             "ulLabel": "radio"

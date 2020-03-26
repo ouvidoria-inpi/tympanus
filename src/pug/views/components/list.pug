@@ -1,0 +1,34 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "List";
+
+append content
+  h1 Lists
+  p
+    | A lista simples é a lista padrão da marcação HTML para qualquer navegador web. Elas são úteis pela facilidade em criar um documento bem estruturado, e pelo fato de ser conhecida, pode possuir maior acessibilidade e melhor facilidade de manutenção.
+  h2 Lista simples
+  .row
+    ul.br-list
+      li Texto de uma linha
+        span.icons
+          i.fas.fa-heartbeat
+          i.fas.fa-chevron-right
+  h2 Lista Ordenada
+  .row
+    ol.br-list.is-order
+      li Texto de uma linha
+      li Texto de uma linha
+        ol.br-list.is-order
+          li Texto de uma linha
+          li Texto de uma linha
+      li Texto de uma linha
+  h2 Lista não Ordenada
+  .row
+    ul.br-list.is-order
+      li Texto de uma linha
+      li Texto de uma linha
+        ol.br-list.is-order
+          li Texto de uma linha
+          li Texto de uma linha
+      li Texto de uma linha
