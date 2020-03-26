@@ -7,7 +7,8 @@ class BRTooltip {
     this.component = component;
     this.activator = component.previousSibling.previousSibling;
     const place = component.getAttribute("place");
-    this.placement = place ? place : "top";
+    const positions = ["top",  "right", "bottom", "left"];
+    this.placement = positions.includes(place) ? place : "top";
     this.popover = this.component.classList.contains( "is-popover" ) ;
     this.timer = component.getAttribute("timer");
     this.active = component.getAttribute("active");
@@ -62,7 +63,7 @@ class BRTooltip {
 
   _show ( event ) {
     this.component.setAttribute('data-show', '');
-    // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o fade no primeiro carregamento
+    // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
     this.component.style.visibility = "visible";
     if ( this.timer ) {
       setTimeout( this._hide, this.timer, event, this.component );

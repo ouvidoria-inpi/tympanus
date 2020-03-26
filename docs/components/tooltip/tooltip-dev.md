@@ -7,7 +7,6 @@ O Tooltip usa como base o componente Popper para mais informações acesse o lin
 ```html
 <div class="br-tooltip">
   <span class="text">Texto de Informação</span>
-  <span class="subtext">Sub-texto</span>
 </div>
 ```
 
@@ -39,11 +38,14 @@ Para definir o posicionamento dos tooltips são usados os seguintes atributos:
 - `place="left"` ou 
 - `place="right"`
 
+Caso o atributo não seja definido, ou apresente erro, o padrão será definido para `top`.
+
 ### Exemplo:
 
 ```html
 <div class="br-tooltip is-warning" place="left">
   <span class="text">Texto de Informação</span>
+  <span class="subtext">Sub-texto</span>
 </div>
 ```
 
@@ -73,7 +75,7 @@ Tipo de tooltip é formado pelos seguintes elementos:
 </div>
 ```
 
-### Exemplo - PopOver com Ícone e Botão:
+### PopOver com Ícone e Botão:
 
 - Os ícones devem ser inseridos dentro do container `popover-header`. 
 - Os botões e links devem ser inseridos dentro do container `popover-footer`, caso não sejam necessários esse container pode ser omitido. 
@@ -93,7 +95,7 @@ Tipo de tooltip é formado pelos seguintes elementos:
 ```
 
 
-### Exemplo - PopOver com Imagem:
+### PopOver com Imagem:
 
 - Uma imagem (de tamanho máximo de 120px) pode ser inserida dentro do container `popover-image` que deve ser declarado antes dos demais containers:
 
@@ -119,11 +121,27 @@ Existem atributos que podem ser declarados para controlar se os tooltips devem a
 - `active`: atributo que pode ser definido quando se deseja que o tooltip apareça no inicio do carregamento;
 - `timer`: atributo que determina após quantos milisegundos o tooltip deve ser automaticamente ocultado;
 
+```html
 <div class="br-tooltip is-info" place="right" timer="8000" active="true">
   <span class="text">Fulano de Tal da Silva</span>
   <span class="subtext">Diretor Presidente</span>
 </div>
 
+```
+
 # Regras especiais
 
-Os tooltips só podem ter definidos um posicionamento (top, bottom, left ou right), mas caso seu conteúdo extrapole as dimensões da tela ele será automaticamento reposicionado.
+## Posicionamento
+Os tooltips só podem ter definidos um único posicionamento (top, bottom, left ou right) mas, caso seu conteúdo extrapole as dimensões da tela, ele será automaticamento reposicionado.
+
+## Declaração
+O tooltip fica vinculado ao elemento (tag) declarado na linha/bloco anterior (parente, ou sibling, da árvore html) do código html. Assim, no exemplo abaixo, aparecerá sobre o texto da tag `<span>`:
+
+```html
+<div>
+  <span class="h3">Tooltip com Texto Simples</span>
+  <div class="br-tooltip" place="bottom">
+    <span class="text">Texto de Informação</span>
+  </div>
+<div>
+``` 
