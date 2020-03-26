@@ -1,34 +1,38 @@
 .#{$prefix}textarea {
   position: relative;
+  label {
+    color: $label-color;
+    font-size: $label-font-size;
+    font-weight: $label-font-weight;
+    margin-bottom: $spacer-half;
+  }
   textarea {
-    background: v(color-secondary-01);
+    @include placeholder;
+    background: $color-white;
     border: $input-border-width solid $input-border-color;
     border-radius: $input-radius;
-    height: 128px;
+    color: $input-color;
     display: block;
-    padding-top: $spacer;
+    font-weight: $input-font-weight;
     padding-left: $spacer * 2;
-    padding-right: $spacer * 5;
+    padding-right: $spacer * 2;
     width: 100%;
     &:focus {
-      background: v(status-focused-background)
-      linear-gradient(
-        v(status-focused-overlay),
-        v(status-focused-overlay)
-      );
+      border-color: $color-primary-lighten-1;
+      box-shadow: 0 0 0 1px $color-primary-lighten-1;
+      outline: none;
     }
     &:invalid {
-      border-color: v(color-danger, v(color-danger));
-      box-shadow: 0 0 0 1px v(color-danger);
+      border-color: $color-danger;
+      box-shadow: 0 0 0 1px $color-danger;
     }
     &:disabled {
-      background: v(status-disabled-background);
-      border-color: v(color-secondary-04);
+      background: $color-gray-2;
     }
   }
   // Estados
-  @each $state, $color in (valid, v(color-success)), 
-  (invalid, v(color-danger))
+  @each $state, $color in (focus, $color-primary-lighten-2),
+    (valid, $color-success), (invalid, $color-danger)
   {
     &.is-#{$state} {
       textarea {
@@ -36,26 +40,6 @@
         box-shadow: 0 0 0 1px $color;
         outline: none;
       }
-    }
-  }
-  &.is-#{focus} {
-    textarea {
-      background: v(status-focused-background)
-      linear-gradient(
-        v(status-focused-overlay),
-        v(status-focused-overlay)
-      );
-    }
-  }
-  &.is-#{disabled} {
-    label,
-    ::placeholder {
-      opacity: .45  ;
-    }
-    input {
-      background: v(status-disabled-background);
-      border-color: v(color-secondary-04);
-      color: v(color-secondary-04); 
     }
   }
 }

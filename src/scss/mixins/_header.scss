@@ -23,7 +23,7 @@
   @include user-bar;
   // Menu hamburguer
   @include hamburger;
-  background: $color-secondary-01;
+  background: $color-white;
 }
 
 @mixin header-shadow {
@@ -73,7 +73,7 @@
     @include media-breakpoint-up(sm) {
       .bar {
         height: $header-site-tablet-height;
-        padding-top: $spacer * 0.5;
+        padding-top: $spacer-half;
       }
     }
     // Desktop
@@ -217,7 +217,7 @@
       margin-right: ($spacer * 2);
     }
     a {
-      color: $color-secondary-07;
+      color: $color-gray-6;
       font-weight: 500;
     }
   }
@@ -225,7 +225,7 @@
   @include media-breakpoint-up(md) {
     .quicklinks {
       display: inline-flex;
-      margin-top: $spacer * 0.5;
+      margin-top: $spacer-half;
       position: relative;
     }
   }
@@ -254,7 +254,7 @@
     .language {
       display: inline-flex;
       margin-left: ($spacer * 2);
-      margin-top: $spacer * 0.5;
+      margin-top: $spacer-half;
       position: relative;
     }
   }
@@ -263,7 +263,7 @@
 @mixin login {
   .login {
     .icon {
-      color: $color-primary-default;
+      color: $color-primary;
     }
     span {
       display: none;
@@ -272,10 +272,10 @@
   // Desktop
   @include media-breakpoint-up(md) {
     .login {
-      color: $color-secondary-07;
+      color: $color-gray-6;
       display: inline-flex;
       margin-left: ($spacer * 3);
-      margin-top: $spacer * 0.5;
+      margin-top: $spacer-half;
       position: relative;
       span {
         display: inline;
@@ -293,13 +293,13 @@
     background: transparent;
     border: 0;
     display: none;
-    margin-top: $spacer * 0.5;
+    margin-top: $spacer-half;
     position: relative;
     &:hover {
       text-decoration: underline;
     }
     .icon {
-      color: $color-primary-default;
+      color: $color-primary;
     }
     span + span {
       margin-left: $spacer;
@@ -348,7 +348,7 @@
         @include btn-icon;
         background: transparent;
         border: 0;
-        color: $color-primary-default;
+        color: $color-primary;
       }
     }
     // Botão fechar
@@ -428,7 +428,7 @@
           flex: 1;
           // Caixa de busca
           .field {
-            box-shadow: 0 (-$spacer * 0.5) 0 $spacer * 0.5 $color-secondary-01;
+            box-shadow: 0 (-$spacer-half) 0 $spacer-half $color-white;
             position: relative;
             right: auto;
             top: auto;
@@ -505,7 +505,7 @@
     @include btn-icon;
     background: transparent;
     border: 0;
-    color: $color-primary-default;
+    color: $color-primary;
     left: -$spacer;
     position: absolute;
     [class*="fa-times"] {
@@ -584,19 +584,19 @@
       &:hover {
         .arrow {
           &::after {
-            background: $color-primary-pastel-02;
+            background: $color-primary-pastel-1;
           }
         }
       }
     }
     .items {
-      background: $color-secondary-01;
-      box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22); // sass-lint:disable-line no-color-literals
+      background: $color-white;
+      box-shadow: 0 3px 6px rgba($color-black, 0.22);
       display: none;
       position: absolute;
     }
     .title {
-      border-bottom: 1px solid $color-secondary-04;
+      border-bottom: 1px solid $color-gray-3;
       display: block;
       font-size: 14px;
       font-style: italic;
@@ -604,9 +604,9 @@
       padding: $spacer ($spacer * 2);
     }
     .item {
-      background: $color-secondary-01;
+      background: $color-white;
       border: 0;
-      color: $color-secondary-07;
+      color: $color-gray-6;
       display: block;
       padding: $spacer ($spacer * 2);
       position: relative;
@@ -615,11 +615,11 @@
       white-space: nowrap;
       width: 100%;
       &:hover {
-        background: $color-primary-pastel-02;
+        background: $color-primary-pastel-1;
       }
       // Item pré selecionado
       &.is-active {
-        color: $color-primary-default;
+        color: $color-primary;
         font-weight: 500;
       }
     }
@@ -634,16 +634,16 @@
 
 @mixin btn-icon {
   align-items: center;
-  color: $color-primary-default;
+  color: $color-primary;
   display: inline-flex;
   height: 36px;
   justify-content: center;
   width: 36px;
   &:hover {
-    color: $color-primary-lighten-01;
+    color: $color-primary-lighten-2;
     z-index: 1;
     &::after {
-      background: $color-primary-pastel-02;
+      background: $color-primary-pastel-1;
       border-radius: 50%;
       content: "";
       display: block;
@@ -657,7 +657,7 @@
 
 @mixin user-avatar {
   .avatar {
-    color: $color-primary-default;
+    color: $color-primary;
     display: inline-flex;
     font-size: 40px;
     position: relative;
@@ -668,7 +668,7 @@
     & + .badge {
       background: $color-danger;
       border-radius: 50%;
-      color: $color-secondary-01;
+      color: $color-white;
       font-size: 11px;
       font-weight: 700;
       height: 18px;
@@ -706,7 +706,7 @@
       &.is-active {
         &::after {
           border: solid transparent;
-          border-bottom-color: $color-secondary-08;
+          border-bottom-color: $color-gray-7;
           border-width: 12px;
           bottom: 100%;
           content: "";
@@ -739,7 +739,7 @@
       &.is-active {
         &::after {
           border: solid transparent;
-          border-bottom-color: $color-secondary-08;
+          border-bottom-color: $color-gray-7;
           border-width: 12px;
           bottom: 100%;
           content: "";
@@ -761,18 +761,18 @@
     }
     // Marca
     .brand {
-      background: $color-secondary-02;
-      border: 1px solid $color-secondary-04;
+      background: $color-gray-1;
+      border: 1px solid $color-gray-3;
       height: 42px;
       width: 58px;
     }
     // Nome
     .name {
-      color: $color-secondary-07;
+      color: $color-gray-6;
       display: block;
       font-size: 9px;
       font-weight: 500;
-      margin-top: $spacer * 0.5;
+      margin-top: $spacer-half;
       text-align: center;
     }
     // Favorito
@@ -782,10 +782,10 @@
       &:hover {
         text-decoration: none;
         .brand {
-          border-color: $color-primary-lighten-01;
+          border-color: $color-primary-lighten-2;
         }
         .name {
-          color: $color-primary-lighten-01;
+          color: $color-primary-lighten-2;
         }
       }
     }
@@ -803,10 +803,10 @@
 @mixin user-logout {
   .logout {
     align-items: center;
-    background: $color-primary-default;
-    border: 1px solid $color-primary-default;
+    background: $color-primary;
+    border: 1px solid $color-primary;
     border-radius: 100px;
-    color: $color-secondary-01;
+    color: $color-white;
     display: inline-flex;
     font-size: 12px;
     font-weight: 600;
@@ -815,8 +815,8 @@
     padding: 0 ($spacer * 3);
     text-align: center;
     &:hover {
-      background: $color-primary-lighten-01;
-      border-color: $color-primary-lighten-01;
+      background: $color-primary-lighten-2;
+      border-color: $color-primary-lighten-2;
     }
   }
 }

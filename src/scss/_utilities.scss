@@ -17,15 +17,10 @@
 @import "../../node_modules/bootstrap/scss/images";
 
 // Utilitários do design system
-@import "utilities/normalize";
 @import "utilities/colors";
-@import "utilities/typography";
-@import "utilities/text";
-@import "utilities/icons";
-@import "utilities/status";
 @import "utilities/grid";
-@import "utilities/visibility";
 @import "utilities/spacing";
+@import "utilities/typography";
 @import "utilities/feedback";
 @import "utilities/divider";
 @import "utilities/dropdown";

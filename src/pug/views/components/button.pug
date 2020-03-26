@@ -4,56 +4,32 @@ append vars
   - var title = "Botão";
 
 append content
-  .row
-    .engloba
-      | Botão Primário
-      +button(class="is-primary") Entrar
-    .engloba
-      | Botão Secundário
-      +button(class="is-secondary ml-3") Cadastrar
-    .engloba
-      | Botão Terciário
-      +button(class="is-tertiary ml-3") Adicionar
-    .engloba
-      | Botão desabilitado
-      +button(class="is-primary is-disabled ml-3")  Acessar
+  +button(class="is-primary") Entrar
+  +button(class="is-secondary ml-3") Cadastrar
+  +button(class="is-tertiary ml-3") Adicionar
+  +button(class="is-cancel ml-3") Cancelar
   hr
-  p Botões com ícones *
   +button(class="is-primary")
-    span
-      i.fas.fa-print
-      | Imprimir
-  +button(class="is-secondary ml-3")    
-    span
-      i.fas.fa-edit
-      | Editar
-  +button(class="is-primary ml-3")
-    span  Avançar
-      i.fas.fa-chevron-right
-  +button(class="is-tertiary ml-3")
-    span
-      i.fas.fa-sliders-h
-      | Filtrar
-  hr
-  p Botões Call to Action(Web e mobile)
+    span Entrar com 
+    strong gov.br
+  +button(class="is-secondary ml-3")
+    span Entrar com 
+    strong gov.br
   +button(class="is-call-to-action ml-3") Solicitar
-  +button(class="is-circle is-large is-call-to-action is-mobile")
-    i.fas.fa-plus
   hr
-  p Botões circulares
   +button(class="is-circle is-primary")
     i.fas.fa-chevron-up
   +button(class="is-circle is-secondary")
     i.fas.fa-chevron-down
-  +button(class="is-circle is-medium color-secondary-01 background-color-twitter border-color-twitter")
+  +button(class="is-circle is-medium text-white bg-twitter border-twitter")
     i.fab.fa-twitter
-  +button(class="is-circle is-medium color-secondary-01 background-color-facebook border-color-facebook")
+  +button(class="is-circle is-medium text-white bg-facebook border-facebook")
     i.fab.fa-facebook-f
-  +button(class="is-circle is-large color-secondary-01 background-color-google-plus border-color-google-plus")
+  +button(class="is-circle is-large text-white bg-google-plus border-google-plus")
     i.fab.fa-google-plus-g
+  +button(class="is-circle is-large is-primary")
+    strong gov.br
   hr
-  p Botões de loading
-  +button(class="is-primary is-loading")
-  +button(class="is-secondary is-loading color-primary-default ml-3")
-  +button(class="is-call-to-action is-loading ml-3 ")
-  +button(class="is-circle is-large is-call-to-action is-mobile ml-3 is-loading")
+  +button(class="is-primary is-loading") Entrar
+  +button(class="is-secondary ml-3 is-loading") Cadastro
+  +button(class="is-call-to-action ml-3 is-loading") Solicitar
