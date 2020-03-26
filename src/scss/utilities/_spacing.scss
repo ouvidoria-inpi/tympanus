@@ -1,4 +1,150 @@
 // Espaçamentos - Baseado nos espaçamentos do Bootstrap
-// Verifique os valores em $spacers
-
 @import "../../../node_modules/bootstrap/scss/utilities/spacing";
+
+// Verifique os valores em $spacers
+$espacamentos: (
+  0: 0,
+  1: 8px,
+  2: 12px,
+  3: 16px,
+  4: 24px,
+  5: 32px
+);
+$variacoes: (
+  b: "bottom",
+  l: "left",
+  r: "right",
+  t: "top"
+);
+
+@each $item, $value in $espacamentos {
+  .p-#{$item} {
+    padding: $value;
+  }
+  .px-#{$item} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py-#{$item} {
+    padding-bottom: $value;
+    padding-top: $value;
+  }
+  .p-n#{$item} {
+    padding: -$value;
+  }
+  .px-n#{$item} {
+    padding-left: -$value;
+    padding-right: -$value;
+  }
+  .py-n#{$item} {
+    padding-bottom: -$value;
+    padding-top: -$value;
+  }
+  @each $side, $property in $variacoes {
+    .p#{$side}-#{$item} {
+      padding-#{$property}: $value;
+    }
+    .p#{$side}-n#{$item} {
+      padding-#{$property}: -$value;
+    }
+  }
+  .m-#{$item} {
+    margin: $value;
+  }
+  .mx-#{$item} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$item} {
+    margin-bottom: $value;
+    margin-top: $value;
+  }
+  .m-n#{$item} {
+    margin: -$value;
+  }
+  .mx-n#{$item} {
+    margin-left: -$value;
+    margin-right: -$value;
+  }
+  .my-n#{$item} {
+    margin-bottom: -$value;
+    margin-top: -$value;
+  }
+  @each $side, $property in $variacoes {
+    .m#{$side}-#{$item} {
+      margin-#{$property}: $value;
+    }
+    .m#{$side}-n#{$item} {
+      margin-#{$property}: -$value;
+    }
+  }
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @if $breakpoint != "portrait" {
+    @media (min-width: $width) {
+      @each $item, $value in $espacamentos {
+        .p-#{$breakpoint}-#{$item} {
+          padding: $value;
+        }
+        .px-#{$breakpoint}-#{$item} {
+          padding-left: $value;
+          padding-right: $value;
+        }
+        .py-#{$breakpoint}-#{$item} {
+          padding-bottom: $value;
+          padding-top: $value;
+        }
+        .p-#{$breakpoint}-n#{$item} {
+          padding: -$value;
+        }
+        .px-#{$breakpoint}-n#{$item} {
+          padding-left: -$value;
+          padding-right: -$value;
+        }
+        .py-#{$breakpoint}-n#{$item} {
+          padding-bottom: -$value;
+          padding-top: -$value;
+        }
+        @each $side, $property in $variacoes {
+          .p#{$side}-#{$breakpoint}-#{$item} {
+            padding-#{$property}: $value;
+          }
+          .p#{$side}-#{$breakpoint}-n#{$item} {
+            padding-#{$property}: -$value;
+          }
+        }
+        .m-#{$breakpoint}-#{$item} {
+          margin: $value;
+        }
+        .mx-#{$breakpoint}-#{$item} {
+          margin-left: $value;
+          margin-right: $value;
+        }
+        .my-#{$breakpoint}-#{$item} {
+          margin-bottom: $value;
+          margin-top: $value;
+        }
+        .m-#{$breakpoint}-n#{$item} {
+          margin: -$value;
+        }
+        .mx-#{$breakpoint}-n#{$item} {
+          margin-left: -$value;
+          margin-right: -$value;
+        }
+        .my-#{$breakpoint}-n#{$item} {
+          margin-bottom: -$value;
+          margin-top: -$value;
+        }
+        @each $side, $property in $variacoes {
+          .m#{$side}-#{$breakpoint}-#{$item} {
+            margin-#{$property}: $value;
+          }
+          .m#{$side}-#{$breakpoint}-n#{$item} {
+            margin-#{$property}: -$value;
+          }
+        }
+      }
+    }
+  }
+}

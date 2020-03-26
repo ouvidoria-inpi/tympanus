@@ -1,6 +1,6 @@
 .#{$prefix}header-system {
-  background-color: $color-white;
-  box-shadow: 0 3px 6px rgba($color-black, 0.16);
+  background-color: $color-secondary-01;
+  box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16);
   // Agrupador
   .wrapper {
     display: flex;
@@ -29,12 +29,12 @@
       width: $logo-mobile-width;
     }
     .name {
-      color: $color-primary-darken-2;
+      color: $color-primary-darken-02;
       font-size: 20px;
       font-weight: 700;
     }
     .description {
-      color: $color-gray-6;
+      color: $color-secondary-07;
       font-size: 12px;
       font-weight: 600;
     }
@@ -57,15 +57,15 @@
     // Acesso gov.br
     .login {
       align-items: center;
-      color: $color-gray-7;
+      color: $color-secondary-08;
       display: inline-flex;
       &:hover {
         [class*="fa-"] {
-          color: $color-primary-lighten-2;
+          color: $color-primary-lighten-01;
         }
       }
       [class*="fa-"] {
-        color: $color-primary;
+        color: $color-primary-default;
       }
       span {
         display: none;
@@ -76,7 +76,7 @@
     }
     // Legislação
     .legislation {
-      color: $color-gray-7;
+      color: $color-secondary-08;
       display: none;
       font-size: 12px;
       font-weight: 600;
@@ -101,26 +101,19 @@
       flex: 1;
       height: $header-system-mobile-height / 2;
       input {
-        background: $color-gray-2;
+        background: $color-secondary-03;
         border: 0;
         display: none;
         flex: 1;
         padding: ($spacer * 2) $spacer;
-        &::placeholder {
-          color: $placeholder-color;
-          font-size: $placeholder-font-size;
-          font-style: $placeholder-font-style;
-          font-weight: $placeholder-font-weight;
-          opacity: 1;
-        }
       }
       button {
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $color-primary-default;
         padding: 0 ($spacer * 1.5);
         &:hover {
-          background: $color-primary-pastel-1;
+          background: $color-primary-pastel-02;
         }
       }
     }
@@ -133,14 +126,14 @@
       margin-bottom: $spacer * 2;
       padding: 0 ($spacer * 1.5);
       position: absolute;
-      right: $spacer-half;
+      right: $spacer * 0.5;
     }
     // Busca ativa
     &.is-active {
       left: 0;
       .field {
         bottom: 0;
-        box-shadow: 0 3px 6px rgba($color-black, 0.16);
+        box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16); // sass-lint:disable-line no-color-literals
         left: 0;
         position: absolute;
         right: 0;
@@ -148,7 +141,7 @@
           display: block;
         }
         button {
-          background: $color-gray-2;
+          background: $color-secondary-03;
         }
       }
       .close {
@@ -166,10 +159,10 @@
         align-items: center;
         background: transparent;
         border: 0;
-        color: $color-primary;
+        color: $color-primary-default;
         display: inline-flex;
         .arrow {
-          background: $color-gray-2;
+          background: $color-secondary-03;
           border-radius: 50%;
           font-size: 11px;
           height: 17px;
@@ -193,13 +186,13 @@
         }
         // Conta
         .account {
-          border-top: 1px solid $color-gray-2;
+          border-top: 1px solid $color-secondary-03;
           display: flex;
           margin: (-$spacer) (-($spacer * 2));
           > * {
             flex: 1;
             &:not(:last-child) {
-              border-right: 1px solid $color-gray-2;
+              border-right: 1px solid $color-secondary-03;
             }
           }
           a {
@@ -207,7 +200,7 @@
             padding: $spacer ($spacer * 2);
             text-decoration: none;
             &:hover {
-              background: $color-primary-pastel-1;
+              background: $color-primary-pastel-02;
             }
           }
         }
@@ -215,7 +208,7 @@
         &.is-active {
           &::after {
             border: solid transparent;
-            border-bottom-color: $color-gray-7;
+            border-bottom-color: $color-secondary-08;
             border-width: 12px;
             bottom: 100%;
             content: "";
@@ -240,7 +233,7 @@
       & + .badge {
         background: $color-danger;
         border-radius: 50%;
-        color: $color-white;
+        color: $color-secondary-01;
         font-size: 11px;
         font-weight: 700;
         height: 18px;
@@ -260,14 +253,14 @@
         background: transparent;
         border: 0;
         border-radius: 50%;
-        color: $color-primary;
+        color: $color-primary-default;
         display: inline-flex;
         height: 32px;
         justify-content: center;
         padding: 0;
         width: 32px;
         &:hover {
-          background: $color-primary-pastel-1;
+          background: $color-primary-pastel-02;
         }
       }
       // Menu
@@ -286,7 +279,7 @@
         &.is-active {
           &::after {
             border: solid transparent;
-            border-bottom-color: $color-gray-7;
+            border-bottom-color: $color-secondary-08;
             border-width: 12px;
             bottom: 100%;
             content: "";
@@ -312,27 +305,27 @@
         &:hover {
           text-decoration: none;
           .brand {
-            border-color: $color-primary-lighten-2;
+            border-color: $color-primary-lighten-01;
           }
           .name {
-            color: $color-primary-lighten-2;
+            color: $color-primary-lighten-01;
           }
         }
       }
       // Marca
       .brand {
-        background: $color-gray-1;
-        border: 1px solid $color-gray-3;
+        background: $color-secondary-02;
+        border: 1px solid $color-secondary-04;
         height: 42px;
         width: 58px;
       }
       // Nome
       .name {
-        color: $color-gray-6;
+        color: $color-secondary-07;
         display: block;
         font-size: 9px;
         font-weight: 500;
-        margin-top: $spacer-half;
+        margin-top: $spacer * 0.5;
         text-align: center;
       }
       // Mais opções
@@ -350,7 +343,7 @@
     background: transparent;
     border: 0;
     bottom: 0;
-    color: $color-primary;
+    color: $color-primary-default;
     font-size: 25px;
     left: 0;
     padding: 0 $spacer;
@@ -359,7 +352,7 @@
     top: $header-system-mobile-height / 2;
     z-index: 1;
     &:hover {
-      color: $color-primary-lighten-2;
+      color: $color-primary-lighten-01;
       text-decoration: none;
     }
   }
@@ -392,7 +385,7 @@
           padding-right: $spacer * 2;
         }
         button {
-          background-color: $color-gray-2;
+          background-color: $color-secondary-03;
           padding-left: $spacer * 2;
           padding-right: $spacer * 2;
         }

@@ -3,7 +3,27 @@
 // - $grid-breakpoints
 // - $grid-gutters
 
-@import "../../../node_modules/bootstrap/scss/grid";
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 998px,
+  lg: 1280px,
+  xl: 1600px
+);
+
+$container-max-widths: (
+  sm: 1150px,
+  md: 1151px,
+  lg: 1152px,
+  xl: 1440px
+);
+
+$grid-gutter-width: 16px;
+$grid-gutters: (
+  sm: $grid-gutter-width,
+  lg: 24px,
+  xl: 32px
+);
 
 // Variações de gutter
 @each $breakpoint, $gutter in $grid-gutters {
@@ -22,11 +42,6 @@
       }
     }
   }
-  @include media-breakpoint-down($breakpoint) {
-    .container,
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
 }
+
+@import "../../../node_modules/bootstrap/scss/grid";
