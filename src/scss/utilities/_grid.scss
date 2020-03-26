@@ -36,10 +36,10 @@ $grid-gutters: (
     .row {
       margin-left: -$gutter / 2;
       margin-right: -$gutter / 2;
-    }
-    [class^="col"] {
-      padding-left: $gutter / 2;
-      padding-right: $gutter / 2;
+      [class^="col"] {
+        padding-left: $gutter / 2;
+        padding-right: $gutter / 2;
+      }
     }
   }
 }
