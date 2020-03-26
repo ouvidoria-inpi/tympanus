@@ -337,6 +337,7 @@
       }
   
       &.qs-disabled {
+        cursor: not-allowed;
         span {
           color: v(color-primary-pastel-01)
         }
@@ -344,10 +345,6 @@
   
       &.qs-empty {
         cursor: default;
-      }
-  
-      &.qs-disabled {
-        cursor: not-allowed;
       }
   
       &.qs-day {
@@ -376,7 +373,7 @@
         width: 0.4687em;
         height: 0.4687em;
         border-radius: 50%;
-        background: v(color-primary-lighten-01, $color-primary-lighten-01);;
+        background: v(color-primary-lighten-01, $color-primary-lighten-01);
         bottom: 0;
         right: 0;
       }
