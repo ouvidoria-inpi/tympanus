@@ -27,7 +27,7 @@
       font-size: v(font-size-scale-down-01, $font-size-scale-base);
       &:focus:active{
         background-color: v(status-activated-background, $status-activated-background);
-        color: v(status-activated-color, $status-activated-color);
+        color: v(status-activated-text);
       }
       &:not(:focus):hover{
         background-color: v(status-hover-background, $status-hover-background);

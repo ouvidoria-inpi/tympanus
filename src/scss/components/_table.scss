@@ -20,26 +20,26 @@ $column-gap: 6px;
   }
   .top-bar {
     align-items: center;
-    background-color: $color-secondary-03;
+    background-color: v(color-secondary-03,$color-secondary-03);
     display: flex;
     height: $column-height;
     padding-left: $column-spacing;
     padding-right: $column-spacing;
     .title {
       flex-grow: 1;
-      line-height: 1.4rem;
-      font-size: 1.3rem;
-      font-weight: 600;
+      line-height:  v(font-line-height-medium,$font-line-height-medium);
+      font-size: v(font-size-scale-up-02,$font-size-scale-up-02);
+      font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
     }
     .br-button {
       border-color: transparent;
       &:hover {
-        background-color: $color-primary-pastel-02;
+        background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
         cursor: pointer;
       }
     }
     .divisor {
-      border-right: 1px solid #ccc;
+      border-right: 1px solid v(color-secondary-04,$color-secondary-04);
       height: 1.5em;
       margin: 0 5px 0 5px;
     }
@@ -51,8 +51,8 @@ $column-gap: 6px;
   }
   .bottom-bar {
     align-items: center;
-    background-color: $color-secondary-01;
-    box-shadow: 0px -1px 3px 0px rgba($color-secondary-09, 0.16);
+    background-color: v(color-secondary-01, $color-secondary-01);
+    box-shadow: 0px -1px 3px 0px rgba(v(color-secondary-09, $color-secondary-09), 0.16);
     display: flex;
     height: $column-height;
     justify-content: space-between;
@@ -83,10 +83,10 @@ $column-gap: 6px;
           border-color: transparent;
           &:focus,
           &:hover {
-            color: $color-primary-default;
+            color: v(color-primary-default,$color-primary-default);
           }
           &:hover {
-            background-color: $color-primary-pastel-02;
+            background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
           }
         }
       }
@@ -94,7 +94,7 @@ $column-gap: 6px;
   }
   .search-bar {
     align-items: center;
-    background-color: $color-primary-default;
+    background-color: v(color-primary-default,$color-primary-default);
     bottom: 0;
     display: flex;
     height: 0;
@@ -109,7 +109,7 @@ $column-gap: 6px;
     .search-close {
       background-color: transparent;
       border-color: transparent;
-      color: $color-secondary-01;
+      color: v(color-secondary-01,$color-secondary-01);
     }
     .br-input {
       flex-grow: 1;
@@ -126,7 +126,7 @@ $column-gap: 6px;
   }
   .selected-bar {
     align-items: center;
-    background-color: $color-primary-default;
+    background-color: v(color-primary-default,$color-primary-default);
     bottom: 0;
     display: flex;
     height: 0;
@@ -147,17 +147,16 @@ $column-gap: 6px;
       display: flex;
       align-items: center;
       .select-all {
-        font-size: 24px;
+        font-size: v(font-size-scale-up-03,$font-size-scale-up-03);
         margin-right: 4px;
-        //margin-left: 11px;
         padding: 0;
       }
     }
     .text,
     .count {
       padding-right: 4px;
-      line-height: 20px;
-      color: $color-secondary-01;
+      line-height:  v(font-line-height-low,$font-line-height-low);
+      color: v(color-secondary-01, $color-secondary-01);
     }
     button {
       min-width: 32px;
@@ -188,8 +187,8 @@ $column-gap: 6px;
     tr {
       display: block;
       position: relative;
-      background: $color-secondary-01;
-      color: $color-secondary-07;
+      background: v(color-secondary-01, $color-secondary-01);
+      color: v(color-secondary-07, $color-secondary-07);
       transition: max-height 500ms;
       max-height: 100em;
       &.is-collapsed {
@@ -201,25 +200,25 @@ $column-gap: 6px;
         }
       }
       &.is-selected {
-        background: $color-primary-lighten-01;
-        color: $color-secondary-01;
+        background: v(color-primary-lighten-01,$color-primary-lighten-01);
+        color: v(color-secondary-01, $color-secondary-01);
         &.is-hover,
         &:hover,
-        td:before {
-          background: $color-primary-lighten-01;
-          color: $color-secondary-01 !important;
-        }
+          {
+            background: v(color-primary-lighten-01,$color-primary-lighten-01);
+            color: v(color-secondary-01, $color-secondary-01)!important;
+          }
       }
       &.is-hover,
       &:hover {
-        background: default;
-        color: default;
+        background-color: v(color-primary-pastel-02,$color-primary-pastel-02);
+        color: v(color-secondary-07, $color-secondary-07);
       }
     }
     th {
-      color: $color-primary-darken-01;
+      color: v(color-primary-darken-01,$color-primary-darken-01);
       display: none;
-      font-weight: 600;
+      font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
       padding-left: $column-spacing;
       padding-right: $column-spacing;
     }
@@ -227,10 +226,10 @@ $column-gap: 6px;
       display: block;
       padding: $column-spacing * 0.5 $column-spacing;
       &::before {
-        color: $color-primary-darken-01;
+        color: v(color-primary-darken-01,$color-primary-darken-01);
         content: attr(data-th);
         display: block;
-        font-weight: 600;
+        font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
       }
       .col-collapse,
       .col-collapse:hover,
@@ -252,7 +251,7 @@ $column-gap: 6px;
     tbody {
       display: block;
       tr {
-        box-shadow: 0 3px 6px rgba($color-secondary-09, 0.16);
+        box-shadow: 0 3px 6px rgba(v(color-secondary-09, $color-secondary-09), 0.16);
         margin: $column-spacing * 0.5 0;
         padding: $column-spacing * 0.5 0;
       }
@@ -298,7 +297,7 @@ $column-gap: 6px;
   }
   .br-select {
     .select-selected {
-      color: $color-primary-lighten-01;
+      color: v(color-primary-lighten-01,$color-primary-lighten-01);
       border-radius: 0;
       border-color: transparent;
       padding-left: 8px;
@@ -310,7 +309,7 @@ $column-gap: 6px;
         box-shadow: none;
       }
       &:hover {
-        border-bottom-color: $color-primary-lighten-01;
+        border-bottom-color: v(color-primary-lighten-01,$color-primary-lighten-01);
       }
     }
     .select-items {
@@ -336,10 +335,10 @@ $column-gap: 6px;
   // Versão tablet
   @include media-breakpoint-up(sm) {
     .top-bar {
-      background-color: $color-secondary-01;
+      background-color: v(color-secondary-01, $color-secondary-01);
       title {
-        line-height: 1.5rem;
-        font-size: 1.6rem;
+        line-height: v(font-line-height-medium,$font-line-height-medium);
+        font-size:v(font-size-scale-up-03,$font-size-scale-up-03);
       }
       .grid-small-trigger,
       .grid-large-trigger,
@@ -372,7 +371,7 @@ $column-gap: 6px;
         }
         &::after {
           background-color: transparent;
-          color: $color-secondary-04;
+          color: v(color-secondary-04,$color-secondary-04);
           content: "|";
           height: auto;
           width: auto;
@@ -395,7 +394,7 @@ $column-gap: 6px;
       overflow: auto;
     }
     .headers {
-      background-color: $color-secondary-03;
+      background-color: v(color-secondary-03,$color-secondary-03);
       display: block;
       overflow-y: hidden;
       position: sticky;
@@ -408,8 +407,8 @@ $column-gap: 6px;
         overflow-x: hidden;
       }
       .item {
-        color: $color-primary-darken-01;
-        font-weight: 600;
+        color: v(color-primary-darken-01,$color-primary-darken-01);
+        font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
         padding: $column-gap;
         white-space: nowrap;
         &:first-child {
@@ -425,11 +424,11 @@ $column-gap: 6px;
       margin-top: -$column-height;
       width: 100%;
       th {
-        background-color: $color-secondary-03;
+        background-color: v(color-secondary-03,$color-secondary-03);
         display: table-cell;
       }
       td {
-        border-bottom: 1px solid $color-primary-pastel-01;
+        border-bottom: 1px solid v(color-primary-pastel-01,$color-primary-pastel-01);
         display: table-cell;
       }
       tr {
@@ -446,8 +445,8 @@ $column-gap: 6px;
         }
         &.is-hover,
         &:hover {
-          background: $color-primary-pastel-02;
-          color: default;
+          background: v(color-primary-pastel-02,$color-primary-pastel-02);
+          color:  v(color-primary-darken-01,$color-primary-darken-01);
         }
       }
       thead {
@@ -497,7 +496,7 @@ $column-gap: 6px;
         tbody {
           tr {
             &.hover {
-              background-color: $color-primary-pastel-02;
+              background-color: v(color-primary-pastel-02,$color-primary-pastel-02);
             }
           }
         }
