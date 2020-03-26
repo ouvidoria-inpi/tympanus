@@ -8,7 +8,13 @@ append content
     .col
       p.label Versão Simples
       +datepicker("Data")(id="normal" placeholder="dd/mm/aaaa")
-
+    .col
+      p.label Versão Data Inicial / Data Final
+      .row
+        .col
+          +datepicker("Data Inicial")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
+        .col
+          +datepicker("Data Final")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
 
 
 

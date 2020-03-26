@@ -28,7 +28,7 @@ class BRDatepicker {
       let erro = this._validDate( instance );
 
       if ( instance.dateSelected && !erro ) {
-        instance.el.value = instance.dateSelected.toLocaleDateString();
+        instance.el.value = instance.dateSelected.toLocaleDateString("pt-BR");
         this._validDate( instance );
       }
     }
@@ -38,7 +38,7 @@ class BRDatepicker {
     this._customOverlayMonths = [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ];
     this._overlayButtom = "Confirma";
     this._overlayPlaceholder = "Digite um ano";
-    this._maxDate = new Date();
+    // this._maxDate = new Date();
     this._minDate = new Date( 2019, 0, 1 );
     this._respectDisabledReadOnly = true;
     this._noWeekends = false;
