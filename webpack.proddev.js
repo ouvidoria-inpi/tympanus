@@ -1,53 +1,48 @@
-
-const path = require( 'path' );
-const isDEV = process.env.NODE_ENV === 'production'
+const path = require('path');
+const isDEV = process.env.NODE_ENV === 'development'
 
 // Webpack Stuff
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
-const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
-const ConcatPlugin = require( 'webpack-concat-plugin' );
-const HTMLWebpackPlugin = require( 'html-webpack-plugin' );
-const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
-const OptimizeCSSAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' )
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 // We need Nodes fs module to read directory contents
-const fs = require( 'fs' )
+const fs = require('fs')
 
 const paths = {
-	src: path.resolve( __dirname, 'src' ),
-	assets: path.resolve( __dirname, 'src', 'assets' ),
-	fonts: path.resolve( __dirname, 'src', 'assets', 'fonts' ),
-	images: path.resolve( __dirname, 'src', 'assets', 'images' ),
-	dist: path.resolve( __dirname, 'dist' ),
-	distjs: path.resolve( __dirname, 'dist', 'js' ),
+	src: path.resolve(__dirname, 'src'),
+	assets: path.resolve(__dirname, 'src', 'assets'),
+	fonts: path.resolve(__dirname, 'src', 'assets', 'fonts'),
+	images: path.resolve(__dirname, 'src', 'assets', 'images'),
+	dist: path.resolve(__dirname, 'dist'),
+	distjs: path.resolve(__dirname, 'dist', 'js'),
 };
 
 // Our function that generates our html plugins
-function generateHtmlPlugins ( templateDir, dirName ) {
+function generateHtmlPlugins(templateDir, dirName) {
 	// Read files in template directory
-	const templateFiles = fs.readdirSync( path.resolve( __dirname, templateDir ) )
-	return templateFiles.map( item => {
+	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
+	return templateFiles.map(item => {
 		// Split names and extension
-		const parts = item.split( '.' )
-		const name = parts[ 0 ]
-		const extension = parts[ 1 ]
+		const parts = item.split('.')
+		const name = parts[0]
+		const extension = parts[1]
 		// Create new HTMLWebpackPlugin with options
-		return new HTMLWebpackPlugin( {
-			filename: `${ dirName }/${ name }.html`,
-			template: path.resolve( __dirname, `${ templateDir }/${ name }.${ extension }` ),
+		return new HTMLWebpackPlugin({
+			filename: `${dirName}/${name}.html`,
+			template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
 			templateParameters: {
-				version: JSON.stringify( require( "./package.json" ).version ).replace( /\"/gi, "" ),
-				cdnUrl: require( "./package.json" ).cdn
+				version: JSON.stringify(require("./package.json").version).replace(/\"/gi, ""),
+				cdnUrl: '../'
 			},
-			inject: true,
-		} )
-	} )
+			inject: false,
+		})
+	})
 }
 
 // Call our function on our views directory.
-const htmlPluginsComponentes = generateHtmlPlugins( './src/pug/views/components', 'components' )
-const htmlPluginsTemplates = generateHtmlPlugins( './src/pug/views/templates', 'templates' )
+const htmlPluginsComponentes = generateHtmlPlugins('./src/pug/views/components', 'components')
+const htmlPluginsTemplates = generateHtmlPlugins('./src/pug/views/templates', 'templates')
 
 const fileLoader = {
 	loader: 'file-loader',
@@ -55,24 +50,21 @@ const fileLoader = {
 		name: '[name].[ext]',
 
 		// Mantém a estrutura de diretórios (mas excluindo-se o 'src')
-		outputPath ( filename, absoluteFilePath, absoluteRootPath ) {
-			const relativePath = path.relative( absoluteRootPath, absoluteFilePath );
+		outputPath(filename, absoluteFilePath, absoluteRootPath) {
+			const relativePath = path.relative(absoluteRootPath, absoluteFilePath);
 
-			const outPath = relativePath.split( '/' );
+			const outPath = relativePath.split('/');
 
 			// Remove a primeira parte do path, ou seja, 'src'
 			outPath.shift();
 
-			return outPath.join( '/' );
+			return outPath.join('/');
 		}
 	}
 };
 
-
-
-
 module.exports = {
-	mode: "production",
+	mode: "development",
 	entry: {
 		'dsgov': [
 			path.resolve(paths.src + "/scss", 'dsgov.scss'),
@@ -81,9 +73,10 @@ module.exports = {
 	},
 	watch: false,
 	output: {
-		filename: './js/[name].dev.js',
+		filename: './js/[name].js',
 		path: paths.dist
 	},
+	
 	module: {
 		rules: [
 			{
@@ -104,6 +97,27 @@ module.exports = {
 						}
 					}
 				]
+			},
+			{
+				test: /\.(woff(2)?|ttf|eot|svg)$/,
+				include: [paths.fonts],
+				loader: fileLoader,
+			},
+			{
+				test: /\.(png|svg|jpg|jpg)$/,
+				include: [paths.images],
+				loader: fileLoader,
+			},
+			{
+				// Include pug-loader to process the pug files
+				test: /\.pug$/,
+				use: {
+					loader: 'pug-loader',
+					query: {
+						pretty: true,
+						root: path.resolve(__dirname, 'src/views'),
+					}
+				},
 			},
 			{
 				test: /\.js$/,
