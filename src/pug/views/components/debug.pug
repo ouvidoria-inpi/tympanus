@@ -1,0 +1,114 @@
+extends ../../layouts/default
+append vars
+  - var title = "Debug";
+
+append style
+  style.
+    .box {
+      box-shadow: inset 0px 0px 0px 1px var(--color-secondary-04);
+      display: block;
+      height: 48px;
+      width: 48px;
+    }
+
+append template
+  .container
+    h1=title
+
+    h2 Tipografia
+
+    p.color-danger
+      i.fas.fa-exclamation-circle
+      |
+      |
+      span Números desalinhados significa que a fonte Rawline não carregou.
+
+    p
+      strong letras:
+      |
+      |
+      span Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nihil nemo fugit placeat aperiam quas praesentium excepturi magni voluptas, sequi eligendi quos quaerat suscipit culpa architecto consequatur vel quasi.
+
+    p
+      strong números:
+      |
+      |
+      span 0123456789
+
+    h2 Cores
+
+    .row
+      .col
+        p Primárias
+        .display-flex.flex-wrap.mb-3
+          each val in ["pastel-01", "pastel-02", "lighten-01", "lighten-02", "default", "darken-01", "darken-02"]
+            .box(class=`background-color-primary-${val}` title=val)
+      .col
+        p Secundárias
+        .display-flex.flex-wrap.mb-3
+          each val in ["01", "02", "03", "04", "05", "06", "07", "08", "09"]
+            .box(class=`background-color-secondary-${val}` title=`secondary-${val}`)
+      .col
+        p Highlight, mensagens e suporte
+        .display-flex.flex-wrap.mb-3
+          .box.background-color-highlight(title="highlight")
+          each val in ["warning", "success", "danger", "info"]
+            .box(class=`background-color-${val}` title=val)
+          each val in ["support-01", "support-02", "support-03", "support-04"]
+            .box(class=`background-color-${val}` title=val)
+
+    h2 Estados
+
+    .row
+      .col
+        p Destacado
+        .display-flex.flex-wrap.mb-3
+          each val in ["highlight-overlay", "highlight-background", "highlight-text"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+        p Interativo
+        .display-flex.flex-wrap.mb-3
+          each val in ["enabled-text", "enabled-text-darken"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+        p Desativado
+        .display-flex.flex-wrap.mb-3
+          each val in ["disabled-background", "disabled-text"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+      .col
+        p Hover
+        .display-flex.flex-wrap.mb-3
+          each val in ["hover-background"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+        p Pressionado
+        .display-flex.flex-wrap.mb-3
+          each val in ["pressed-background", "pressed-text"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+        p Foco
+        .display-flex.flex-wrap.mb-3
+          each val in ["focused-overlay", "focused-background"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+      .col
+        p Ativo
+        .display-flex.flex-wrap.mb-3
+          each val in ["activated-background", "activated-text"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+        p Selecionado
+        .display-flex.flex-wrap.mb-3
+          each val in ["selected-background", "selected-text"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+        p Arrastado
+        .display-flex.flex-wrap.mb-3
+          each val in ["dragged-background", "dragged-text", "dragged-shadow"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+      .col
+        p Visitado
+        .display-flex.flex-wrap.mb-3
+          each val in ["visited-background", "visited-text"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+        p Ligado
+        .display-flex.flex-wrap.mb-3
+          each val in ["on-background", "on-text"]
+            .box(style=`background-color: var(--status-${val})` title=val)
+        p Desligado
+        .display-flex.flex-wrap.mb-3
+          each val in ["off-background", "off-text"]
+            .box(style=`background-color: var(--status-${val})` title=val)

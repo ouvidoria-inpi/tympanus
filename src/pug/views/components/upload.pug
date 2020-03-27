@@ -3,7 +3,18 @@ extends ../../layouts/component
 append vars
   - var title = "Upload";
 
-
-
 append content
-  +upload
+  p.titulo Upload Com Título
+  .engloba
+    p.titulo - Documentos do Trabalhador
+    +upload("input-file-a")
+  hr
+  p.titulo Upload Sem Título
+  .engloba
+    +upload("input-file-b")
+  hr
+  p.titulo Upload Contido no Colapse
+  .engloba
+    +accordeon
+      +accordeon-item("Documentos do Trabalhador")
+        +upload("input-file-c")

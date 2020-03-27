@@ -1,32 +1,17 @@
 @mixin button-pill(
-  $background: $color-primary,
-  $color: $color-white,
-  $border: $color-primary
+  $background: v(color-primary-default, $color-primary-default),
+  $color: v(color-secondary-01, $color-secondary-01),
+  $border: v(color-primary-default, $color-primary-default)
 ) {
   background: $background;
   border: 1px solid $border;
   border-radius: $button-radius;
   color: $color;
   display: inline-block;
-  font-weight: 600;
+  font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
   height: $button-height-default;
   padding: 0 $button-padding;
   width: 100%;
-  &:hover,
-  &:focus {
-    background-color: $color-primary-lighten-2;
-    border-color: $color-primary-lighten-2;
-    color: $color-white;
-  }
-  &:disabled {
-    background-color: adjust-color(
-      $background,
-      $lightness: 35%,
-      $saturation: -35%
-    );
-    border-color: adjust-color($border, $lightness: 35%, $saturation: -35%);
-    color: adjust-color($color, $lightness: 35%, $saturation: -35%);
-  }
   // Tablet
   @include media-breakpoint-up(sm) {
     min-width: $button-min-width;
@@ -40,10 +25,48 @@
   color: $color;
   cursor: pointer;
   display: inline;
-  font-weight: $font-weight-base;
-  padding: 0;
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
+  font-weight: v(font-weight-medium,$font-weight-medium);
+  padding: 0 24px;
+  height: 44px;
+  min-width: 144px;
+  width: auto;
+  border-radius: 144px;
+}
+
+@mixin estados{
+  &:not(.is-disabled):hover{
+    background-color: v(status-hover-background, $status-hover-background);
+    color: v(color-primary-default, $color-primary-default);
+  }
+  &:not(.is-disabled):focus{
+    background-color: v(status-focused-overlay,$status-focused-overlay);
+    color: v(status-focused-background, $status-focused-background);
+  }
+  &:not(.is-disabled):not(.is-tertiary):not(.is-mobile):active{
+    background-color: v(status-activated-background,$status-activated-background);
+    color: v(status-activated-text);
+  }
+  &.is-disabled{
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+@mixin estados-actions{
+  box-shadow: 0px 2px 3px v(color-secondary-04, $color-secondary-04);
+  &:hover{
+    background-color: v(status-hover-background, $status-hover-background); 
+    color: v(color-primary-default, $color-primary-default);
+  }
+  &:focus{
+    background-color: v(status-focused-overlay, $status-focused-overlay);
+    color: v(status-focused-background, $status-focused-background);
+    border-color: v(color-secondary-03, $color-secondary-03!important);
+  }
+  &:disabled {
+    border-color: v(color-secondary-03, $color-secondary-03);
+  }
+  &:active{
+    background-color: v(status-activated-background, $status-activated-background);
+    color: v(status-activated-text);
   }
 }

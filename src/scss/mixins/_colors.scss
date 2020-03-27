@@ -1,20 +1,20 @@
 // Criar cores de fundo
-@mixin bg-colors($name, $value) {
-  #{$name} {
-    background-color: $value !important;
+@mixin bg-colors($item, $value) {
+  .background-#{$item} {
+    background-color: v($item, $value) !important;
   }
 }
 
 // Criar cores de textos
-@mixin text-colors($name, $value) {
-  #{$name} {
-    color: $value !important;
+@mixin text-colors($item, $value) {
+  .#{$item} {
+    color: v($item, $value) !important;
   }
 }
 
 // Criar cores de bordas
-@mixin border-colors($name, $value) {
-  #{$name} {
-    border-color: $value !important;
+@mixin border-colors($item, $value) {
+  .border-#{$item} {
+    border-color: v($item, $value) !important;
   }
 }

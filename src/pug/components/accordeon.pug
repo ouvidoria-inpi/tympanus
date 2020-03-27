@@ -11,13 +11,12 @@ mixin accordeon-item(title="Título", className)
     button.header(type="button")
       span.icon
         if className
-          i.fas.fa-minus
+          i.fas.fa-angle-up.fa-lg
         else
-          i.fas.fa-plus
+          i.fas.fa-angle-down.fa-lg
       span.title=title
   .content
     if block
       block
     else
       | Conteúdo
-

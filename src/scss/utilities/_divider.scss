@@ -1,19 +1,19 @@
-.divider {
+.#{$prefix}divider {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: $margin-default;
-  &::after,
-  &::before {
-    background: $border-color;
-    content: "";
-    height: 1px;
+  margin: 1em 0; 
+  border-top: 1px solid v(color-secondary-04, $color-secondary-04);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  width: 100%;
+  &.fundo-neutro{
+    border-top: 1px solid v(color-secondary-01, $color-secondary-01);
+    margin: 1em 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
     width: 100%;
   }
-  .content {
-    color: $color-primary;
-    margin: 0;
-    padding: 0 ($spacer * 2) !important;
-    white-space: nowrap;
-  }
-}
+}  

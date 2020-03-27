@@ -8,7 +8,7 @@
   }
   a {
     border-radius: $button-radius;
-    color: $color-primary;
+    color: v(color-primary-default);
     font-weight: 400;
     justify-content: center;
     min-width: $spacer * 3;
@@ -17,31 +17,31 @@
     text-align: center;
     text-decoration: none !important;
     &:hover {
-      background-color: $color-primary-pastel-1;
+      background-color: v(color-primary-pastel-02);
       text-decoration: none;
     }
   }
   .is-active {
     a {
-      background-color: $color-primary;
-      color: $color-white;
+      background-color: $color-primary-default;
+      color: v(color-secondary-01);
     }
   }
   .is-first {
     &::after {
-      color: $color-gray-3;
+      color: v(color-secondary-04);
       content: "|";
     }
   }
   .is-last {
     &::before {
-      color: $color-gray-3;
+      color: v(color-secondary-04);
       content: "|";
     }
   }
   .is-disabled {
     a {
-      color: $color-gray-5;
+      color: v(color-secondary-06);
       cursor: default;
       pointer-events: none;
     }
@@ -53,7 +53,7 @@
         font-size: $font-size-base * 1.25;
       }
       a {
-        margin: 0 $spacer-half;
+        margin: 0 $spacer * 0.5;
         min-width: $spacer * 3.75;
       }
       .is-first {
