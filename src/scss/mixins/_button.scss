@@ -44,7 +44,7 @@
   }
   &:not(.is-disabled):not(.is-tertiary):not(.is-mobile):active{
     background-color: v(status-activated-background,$status-activated-background);
-    color: v(status-activated-color,$status-activated-color);
+    color: v(status-activated-text);
   }
   &.is-disabled{
     opacity: 0.45;
@@ -67,6 +67,6 @@
   }
   &:active{
     background-color: v(status-activated-background, $status-activated-background);
-    color: v(status-activated-color, $status-activated-color);
+    color: v(status-activated-text);
   }
 }

@@ -1,114 +1,45 @@
 .#{$prefix}badge {
-  height: 1.5em;
-  margin: 0 0.25em;
+  min-height: 1.5em;
+  margin: 0 1em;
   position: relative;
-  width: 1em;
-  .icon,
-  .number {
-    background-color: $color-success;
-    border: 1px solid $color-secondary-01;
-    border-radius: 50%;
-    color: $color-secondary-01;
-    display: block;
+  height: auto;
+  width: auto;
+  min-width: 1.5em;
+  &.is-top{
+    @include status-icon-top;
+  }
+  &.is-bottom{
+    @include status-icon-bottom;
+  }
+  &.fa-layers-counter{
+    display: inline-block;
+    height: auto;
+    margin: auto;
+    width: auto;
+    border: 10px solid v(color-secondary-01, $color-secondary-01);
     position: absolute;
+    padding: 10px;
+    border-radius: 70px;
+    min-width: 2.5em;
+    min-height: 2.5em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: v(font-line-height-medium,$font-line-height-medium);
   }
-  &.is-status,
-  & {
-    .icon {
-      height: 0.4em;
-      left: -0.2em;
-      top: 0;
-      width: 0.4em;
-    }
+  &.fa-layers-top-left{
+    left: -2px;
+    top: 2px;
   }
-  &.is-symbol {
-    .icon {
-      border-width: 0.08em;
-      font-size: 0.5em !important;
-      height: 1.2em;
-      left: -0.4em;
-      line-height: 0.9em !important;
-      padding: 0.1em 0 0;
-      text-align: center;
-      top: 0;
-      width: 1.2em;
-    }
-    &.is-left {
-      .icon {
-        left: -0.4em;
-        right: auto;
-      }
-    }
-    &.is-right {
-      .icon {
-        left: auto;
-        right: -0.2em;
-      }
-    }
+  &.fa-layers-top-right{
+    right: -15px;
+    top: 4px;
   }
-  &.is-count {
-    .number {
-      border-radius: 1em;
-      border-width: 0.1em;
-      font-size: 0.5em;
-      font-weight: 600;
-      left: -0.4em;
-      line-height: 1em;
-      min-width: 1em;
-      padding: 0 0.3em 0.25em;
-      text-align: center;
-      top: 0;
-      width: auto;
-    }
-    &.is-left {
-      .number {
-        left: -0.5em;
-      }
-    }
-    &.is-right {
-      .number {
-        left: 100%;
-        margin-left: -0.5rem;
-      }
-    }
+  &.fa-layers-bottom-left{
+    left: -5px;
+    bottom: 2px;
   }
-
-  &.is-top {
-    .icon,
-    .number {
-      bottom: auto;
-      top: 0;
-    }
-  }
-  &.is-bottom {
-    .icon,
-    .number {
-      bottom: 0;
-      top: auto;
-    }
-  }
-  &.is-success {
-    .icon,
-    .number {
-      background-color: $color-success;
-    }
-  }
-  &.is-warning {
-    .icon,
-    .number {
-      background-color: $color-warning;
-    }
-  }
-  &.is-info {
-    .icon,
-    .number {
-      background-color: $color-info;
-    }
-  }
-  &.is-danger {
-    .icon,
-    .number {
-      background-color: $color-danger;
-    }
+  &.fa-layers-bottom-right{
+    right: -5px;
+    bottom: 2px;
   }
 }

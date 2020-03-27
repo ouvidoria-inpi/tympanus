@@ -25,9 +25,11 @@ class BRTabs {
   }
 }
 
-let abasList = [];
+let abasList = []
+
 for (let brTabs of window.document.querySelectorAll('.br-tabs')) {
-  abasList.push(new BRTabs("br-tabs", brTabs));
+  abasList.push(new BRTabs('br-tabs', brTabs))
 }
 
 
+export default BRTabs

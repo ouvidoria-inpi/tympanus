@@ -4,67 +4,42 @@ Nenhuma dependência.
 
 ## Código básico
 
+
+
+A sintaxe básica do componente é esta demonstrada abaixo:
+
 ```html
 <div class="br-divider">
-  <span class="content">Ou</span>
 </div>
 ```
+*A cor padrão do separador é o #cccccc, que está definida na cor da borda superior do componente separador/divider.
 
 # Anatomia do componente
 
-Este componente é formado pelos seguintes elementos:
+Este componente é formado pelo seguinte elemento:
 
-- `br-divider`: container do componente
-- `content`: conteúdo a ser mostrado
+- `br-divider`: container do componente, essa é a classe principal, onde a mesma é usada para a maioria dos fundos(backgrounds), tais como: fundo positivo(de cor branca `#ffffff`) e fundo negativo(de cor mais forte `#071D41`).
+
+- `fundo-neutro`: classe usada para quando o fundo do componente precisar ser neutro. Exemplo: cor de background igual a `#cccccc`, sendo assim, o separador será de cor branca `#ffffff`. 
+
+
+
+
+```html
+<div class="br-divider fundo-neutro">
+</div>
+```
+
 
 ## `br-divider`
 
-**Elemento obrigatório**!
+**Elemento obrigatório!**
 
-O uso ideal do componente são textos pequenos. Por padrão o texto não irá quebrar em linhas.
+O uso ideal é para separar conteúdos, normalmente entre componentes. Exemplo separar conteúdo de um componente de abas do conteúdo abaixo ou acima dele.
+Podendo, também ser usado como separador de assuntos num componente acordeão.
 
-## `content`
 
-**Elemento obrigatório**!
 
-Para textos grandes use a classe `text-wrap` dentro de `content`. O alinhamento sempre à esquerda.
-
-Exemplo de uso:
-
-```html
-<div class="br-divider">
-  <span class="content text-wrap"
-    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nulla
-    repudiandae dignissimos dolorem quas, maxime libero autem. Nemo nisi
-    voluptatibus, totam itaque ut minima! Maiores sit amet eveniet nulla
-    quidem!</span
-  >
-</div>
-```
-
-Para uso com ícones, poderá ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome - `<i class="fas">`.
-
-Exemplo de uso:
-
-```html
-<div class="br-divider">
-  <span class="content">
-    <img src="image.png" alt="Texto descritivo" />
-  </span>
-</div>
-```
-
-Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](https://fontawesome.com/).
-
-Exemplo de uso:
-
-```html
-<div class="br-divider">
-  <span class="content">
-    <i class="fas fa-check-circle fa-2x"></i>
-  </span>
-</div>
-```
 
 # Estados
 
