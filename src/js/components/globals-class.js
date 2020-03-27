@@ -11,6 +11,7 @@ import BRUpload from './upload'
 import BRTable from './table'
 import BRScrim from './scrim'
 import BRModal from './modal'
+import BRTooltip from './tooltip'
 
 export default class Globals {
   constructor() { }
@@ -29,6 +30,7 @@ export default class Globals {
     this.initInstanceTable()
     this.initInstanceScrim()
     this.initInstanceModal()
+    this.initInstanceTooltip()
 
   }
 
@@ -409,6 +411,13 @@ export default class Globals {
           scrim.showScrim();
         });
       } 
+    }
+  }
+
+  initInstanceTooltip() {
+    let tooltipList = []
+    for (let brTooltip of window.document.querySelectorAll( ".br-tooltip")) {
+      tooltipList.push(new BRTooltip('br-tooltip', brTooltip ))
     }
   }
 }
