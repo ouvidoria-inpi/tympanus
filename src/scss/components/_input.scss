@@ -10,11 +10,12 @@
     padding-right: $spacer * 5;
     width: 100%;
     &:focus {
-      background: v(status-focused-background)
-      linear-gradient(
-        v(status-focused-overlay),
-        v(status-focused-overlay)
-      );
+      // background: v(status-focused-background)
+      // linear-gradient(
+      //   v(status-focused-overlay),
+      //   v(status-focused-overlay)
+      // );
+      @include focus;
     }
     &:invalid {
       border-color: v(color-danger);
@@ -109,11 +110,8 @@
   }
   &.is-#{focus} {
     input {
-      background: v(status-focused-background)
-      linear-gradient(
-        v(status-focused-overlay),
-        v(status-focused-overlay)
-      );
+      background: v(status-highlight-background)
+      linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
     }
   }
   &.is-#{disabled} {
