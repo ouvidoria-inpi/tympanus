@@ -28,14 +28,8 @@ O aprimoramento contínuo dos padrões apresentados pelo _Design System_ deve se
 
 Boas Práticas de estruturação de Serviços foram revistas com o objetivo de garantir uma melhoria no atendimento aos cidadãos.
 
-### Priorizar atenção ao usuário, no lugar do foco na tecnologia:
+**Priorizar atenção ao usuário, no lugar do foco na tecnologia**: é preciso entender a necessidade do usuário para, só depois, pensar em como atendê-la. A tecnologia deve se adequar ao objetivo e não o contrário. Recomenda-se pensar em mais de uma maneira para resolver um problema.
 
-é preciso entender a necessidade do usuário para, só depois, pensar em como atendê-la. A tecnologia deve se adequar ao objetivo e não o contrário. Recomenda-se pensar em mais de uma maneira para resolver um problema.
+**Boa fé dos usuários como premissa**: não sacrificar soluções mais simples e eficientes em função de possível má-fé do usuário. Mecanismos de controle devem ser usados racionalmente de forma a minimizar os danos na experiência do usuário, sem prejudicar sua aplicação.
 
-### Boa fé dos usuários como premissa:
-
-não sacrificar soluções mais simples e eficientes em função de possível má-fé do usuário. Mecanismos de controle devem ser usados racionalmente de forma a minimizar os danos na experiência do usuário, sem prejudicar sua aplicação.
-
-### Compreensão e Compatibilidade:
-
-os serviços devem ser compreensíveis tanto para usuários quanto para máquinas, sendo também compatíveis com assistentes virtuais. É preciso que a inteligência artificial possibilite isso à medida que apoia a classificação e organização do conteúdo dos serviços.
+**Compreensão e Compatibilidade**: os serviços devem ser compreensíveis tanto para usuários quanto para máquinas, sendo também compatíveis com assistentes virtuais. É preciso que a inteligência artificial possibilite isso à medida que apoia a classificação e organização do conteúdo dos serviços.

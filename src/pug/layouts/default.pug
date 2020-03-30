@@ -1,7 +1,6 @@
 doctype html
 block vars
   - let prefix = "br-"
-  
   - let jscompoents = cdnUrl+"js/"
 
 block components
@@ -29,9 +28,8 @@ block components
   include ../components/tabs
   include ../components/table
   include ../components/textarea
+  include ../components/tooltip
   include ../components/upload
-
-
 
 html(lang="pt-BR")
   head
@@ -51,5 +49,3 @@ html(lang="pt-BR")
   body(class= templateClass ? `template-${templateClass}` : "")
     block template
     block scripts
-
-
