@@ -1,0 +1,14 @@
+extends ../../layouts/component
+
+append vars
+    - var title = "Tag";
+
+append content
+    h1 Tags de entrada
+    +tag.is-start
+        .icon: i.fa.fa-car
+        span Mitsubishi Outlander
+    +tag.is-start.disabled
+        .icon: i.fa.fa-car
+        span Mitsubishi Outlander
+    +input("Exemplo")(id="is-start" type="text" placeholder="Insira um texto e aperte a tecla ENTER")
