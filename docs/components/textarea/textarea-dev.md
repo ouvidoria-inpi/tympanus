@@ -2,6 +2,7 @@
 
 O Componente de TextArea  permite que seu aplicativo aceite um valor de texto potencialmente longo do usuário.
 
+
 ## Dependências
 
 Nenhuma dependência.
@@ -15,9 +16,7 @@ Nenhuma dependência.
 </div>
 ```
 
----
-
-## Anatomia do componente
+# Anatomia do componente
 
 Este componente é formado pelos seguintes elementos obrigatórios:
 
@@ -25,9 +24,7 @@ Este componente é formado pelos seguintes elementos obrigatórios:
 - `<textarea>`: caixa de entrada de dados
 - `<label>`: tag html de rótulo
 
----
-
-## Estados
+# Estados
 
 Este componente apresenta os seguintes estados:
 
@@ -47,19 +44,6 @@ Exemplo de uso:
 </div>
 ```
 
-No caso do estado disabled, o prefixo `is-` deve ser adicionado ao container do componente e também a propriedade `disabled` deve ser adicionada no elemento `<input>`.
-
-Exemplo de uso:
-
-```html
-<div class="br-textarea is-disabled">
-  <label for="disabled">Desativado</label>
-  <textarea id="disabled" placeholder="Textarea desativado" disabled></textarea>
-</div>
-```
-
----
-
-## Regras especiais
+# Regras especiais
 
 Nenhuma regra especial.

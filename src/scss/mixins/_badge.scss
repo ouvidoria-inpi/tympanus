@@ -96,7 +96,7 @@
     min-height: 0.8em;
     font-size: v(font-size-scale-up-01,$font-size-scale-up-01);
     @include status();
-  }   
+  }
 }
 
 @mixin status-icon-top{
@@ -111,7 +111,7 @@
     left: -1.3em;
     right: auto;
     @include type();
-  }  
+  }
 }
 
 @mixin status-icon-bottom{  
@@ -126,5 +126,5 @@
     left: -1.2em;
     right: auto;
     @include type;
-  }  
+  }
 }
