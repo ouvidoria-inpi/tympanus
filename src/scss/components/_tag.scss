@@ -58,7 +58,7 @@
       color: v(color-support-03);
     }
   }
-  &.is-start{  
+  &.is-start-close{  
     .close {
       align-items: flex-start;
       display: flex;
@@ -67,6 +67,7 @@
         border: 0;
         color: v(color-support-03);
         padding: 0;
+        outline: 0;
       }
     }
   }
