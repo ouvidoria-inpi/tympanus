@@ -2,7 +2,8 @@ class BRTag {
 	constructor(name, component) {
 		this.name = name;
         this.component = component;
-		this._setBehavior();
+        this._setBehavior();
+        
 	}
 
     _setBehavior() {

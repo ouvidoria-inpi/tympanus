@@ -2,6 +2,7 @@ class BRChecklist {
 	constructor(name, component) {
 		this.name = name;
 		this.component = component;
+		console.log("foi3");
 		this._setBehavior();
 	}
 

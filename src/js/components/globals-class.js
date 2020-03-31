@@ -9,6 +9,7 @@ import BRSelect from './select'
 import BRTabs from './tabs'
 import BRUpload from './upload'
 import BRTable from './table'
+import BRTag from './tag'
 import BRScrim from './scrim'
 import BRModal from './modal'
 
@@ -29,6 +30,7 @@ export default class Globals {
     this.initInstanceTable()
     this.initInstanceScrim()
     this.initInstanceModal()
+    this.initInstanceTags()
 
   }
 
@@ -353,6 +355,16 @@ export default class Globals {
       abasList.push(new BRTabs('br-tabs', brTabs))
     }
   }
+
+  initInstanceTags() {
+    let abasList = []
+    console.log("fi");
+    for (let brTabs of window.document.querySelectorAll('.br-tag')) {
+      console.log("fi");
+      abasList.push(new BRTag('br-tabs', brTags))
+    }
+  }
+
 
   initInstanceUpload() {
     let uploadList = []
