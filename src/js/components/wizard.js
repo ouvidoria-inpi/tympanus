@@ -39,12 +39,16 @@ class BRWizard {
 
       //remove active state from all the state
       this.removeClasses(this.DOMstrings.stepsBtns, 'is-active');
+      this.removeClasses(this.DOMstrings.stepsBtns, 'is-inactive');
 
       //set picked items to active
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
 
-        if (index <= activeStepNum) {
+        if (index == activeStepNum) {
           elem.classList.add('is-active');
+        }
+        if (index < activeStepNum) {
+          elem.classList.add('is-inactive');
         }
 
       });
