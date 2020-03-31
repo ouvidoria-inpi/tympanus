@@ -1,13 +1,97 @@
-.#{$prefix}list {
-  background-color: v(color-secondary-01);
-  width: 400px;
-  & .item {
-    color: v(color-secondary-08);
-    font-size: v($font-size-scale-base);
-    & .icons {
-      font-size: v($font-size-scale-up-02);
+dl.#{$prefix}list {
+  list-style-type: none;
+  li {
+    li {
+      font-style: italic;
     }
   }
+}
+ul.#{$prefix}list {
+  &.is-simple {
+    li {
+      display: block;
+      list-style: none;
+      margin: 0 0 16px 1.1225em;
+      padding: 0;
+      position: relative;
+      &::before {
+        color: var(--color-secondary-05);
+        content: "\2022";
+        display: inline-block;
+        font-size: 3em;
+        left: -18px;
+        position: absolute;
+        top: -24px;
+      }
+    }
+  }
+}
+.#{$prefix}list {
+  background-color: v(color-secondary-01);
+  padding: 0;
+  width: 400px;
+  list-style-type: none;
 
+  &.is-simple {
+    padding: 0 48px;
+  }
 
+  & h5 {
+    color: v(color-secondary-09);
+    font-size: v(font-size-scale-down-02);
+    font-weight: v(font-weight-bold);
+    margin-bottom: 0;
+    padding-left: 57px;
+    text-transform: uppercase;
+  }
+  & .item {
+    align-items: center;
+    color: v(color-secondary-08);
+    display: flex;
+    flex-direction: row;
+    font-size: v(font-size-scale-base);
+    justify-content: space-between;
+    min-height: 56px;
+    line-height: v(font-line-height-medium);
+    list-style-type: none;
+    padding: 8px 16px;
+    border: 1px solid red;
+    .icon {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      min-width: 56px;
+      min-height: 56px;
+      //border: 1px solid lime;
+
+      [class*="fa-"] {
+        color: v(color-secondary-05);
+        font-size: v(font-size-scale-up-02);
+      }
+      // [class*="fa-heartbeat"] {
+      //   left: 23px;
+      // }
+      // [class*="fa-chevron-right"] {
+      //   color: v(color-primary-default);
+      //   right: 23px;
+      // }
+    }
+    .content {
+      width: 100%;
+      .sub-title {
+        font-size: v(font-size-scale-down-01);
+        font-weight: v(font-weight-semi-bold);
+        margin: 0;
+        text-transform: uppercase;
+      }
+      .text, .text-sec, .sub-title {
+        width: 100%;
+        padding: 0 16px;
+      }
+      .text-sec {
+        font-size: v(font-size-scale-down-01);
+        color: v(color-secondary-05);
+      }
+    }
+  }
 }
