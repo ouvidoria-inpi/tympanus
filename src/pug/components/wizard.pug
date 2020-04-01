@@ -6,29 +6,37 @@ mixin wizard(label="Título", labelClass)
     id=attributes.id
     class=className)
     .wizard-progress
-      <button class="wizard-progress-btn is-active" type="button" title="Dados Pessoais" step="1">Dados Pessoais</button>
-      <button class="wizard-progress-btn" type="button" title="Validar Dados" step="2">Validar Dados</button>
-      <button class="wizard-progress-btn" type="button" title="Habilitar Cadastro" step="3">Habilitar Cadastro</button>
-      <button class="wizard-progress-btn" type="button" title="Cadastrar Senha" step="4">Cadastrar Senha</button>
+      button(class="wizard-progress-btn is-active" type="button" title="Dados Pessoais" step="1")
+        span.info Dados Pessoais
+      button(class="wizard-progress-btn" type="button" title="Validar Dados" step="2")
+        span.info Validar Dados
+      button(class="wizard-progress-btn" type="button" title="Habilitar Cadastro" step="3")
+        span.info Habilitar Cadastro
+      button(class="wizard-progress-btn" type="button" title="Cadastrar Senha" step="4")
+        span.info Cadastrar Senha
     .wizard-form
       .wizard-panel.is-active
         .h3 Dados Pessoais
+        .text Conteúdo aqui
         .wizard-panel-btn
           +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
         .h3 Validar Dados
+        .text Conteúdo aqui
         .wizard-panel-btn
-          +button(class="is-primary wizard-btn-prev") Voltar
+          +button(class="is-secondary wizard-btn-prev") Voltar
           +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
         .h3 Habilitar Cadastro
+        .text Conteúdo aqui
         .wizard-panel-btn
-          +button(class="is-primary wizard-btn-prev") Voltar
+          +button(class="is-secondary wizard-btn-prev") Voltar
           +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
         .h3 Cadastrar Senha
+        .text Conteúdo aqui
         .wizard-panel-btn
-          +button(class="is-primary wizard-btn-prev") Voltar
+          +button(class="is-secondary wizard-btn-prev") Voltar
           +button(class="is-primary wizard-btn") Finalizar
     if block
       block

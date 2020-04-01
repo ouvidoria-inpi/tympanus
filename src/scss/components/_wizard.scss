@@ -15,21 +15,17 @@
     position: relative;
     padding-top: 20px;
     color: v(color-primary-lighten-01);
-    text-indent: -9999px;
+    text-indent: 0;
     border: none;
     background-color: transparent;
     outline: none !important;
     cursor: pointer;
     font-size: 18px;
-    line-height: 64px;
+    line-height: 20px;
+    padding-top: 32px;
   }
   
-  @media (min-width: 500px) {
-    .wizard-progress-btn {
-      text-indent: 0;
-    }
-  }
-  
+ 
   .wizard-progress-btn:before {
     position: absolute;
     top: 0;
@@ -41,7 +37,7 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
-    content: attr(step);
+    content: attr(step) !important;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
@@ -105,7 +101,7 @@
   .wizard-panel {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 100%;
     height: 0;
     opacity: 0;
     visibility: hidden;
@@ -114,18 +110,19 @@
     margin-left: 2%;
     width: 96%;
     margin-bottom: 32px;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    // -webkit-transform: scale(0.9);
+    //         transform: scale(0.9);
     &.is-active {
       height: auto;
       opacity: 1;
       visibility: visible;
       transition-property: all;
-      transition-duration: 0.2s;
+      transition-duration: 0.3s;
       transition-timing-function: linear;
       transition-delay: 0s;
-      -webkit-transform: scale(1);
-              transform: scale(1);
+      left: 0 !important;
+      // -webkit-transform: scale(1);
+      //         transform: scale(1);
     }
   }
   .wizard-panel-btn {
@@ -145,4 +142,26 @@
     float: left;
   }
 
+  @media (max-width:600px) {
+    .wizard-panel-btn {
+      width: 102%;
+      margin-left: -2%;
+      .br-button {
+        width: 90%;
+        margin: 10px 20px;
+        float: left;
+        clear: both;
+      }
+    }
+    .wizard-progress {
+      min-height: auto;
+      padding-top: 28px;
+      .wizard-progress-btn {
+        padding-bottom: 8px;
+        .info {
+          display: none;
+        }
+      }
+    }
+  }
 }
