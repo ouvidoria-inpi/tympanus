@@ -10,15 +10,15 @@ append content
   h2 Lista simples
   .row
     div.engloba
+      span.title Título da Lista
       ul.br-list
-        span.title Título da Lista
         li.list-item
           div.icon
             i.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha
           div.icon
-            a.list-item(href='#')
+            a.list-item(href='#') Link
               i.fas.fa-chevron-right
         li.list-item
           div.icon
@@ -26,7 +26,7 @@ append content
           div.content
             div.text Texto de uma linha
           div.icon
-            a.list-item(href='#')
+            a.list-item(href='#') Link
               i.fas.fa-chevron-right
         li.list-item
           div.icon
@@ -34,35 +34,35 @@ append content
           div.content
             div.text Texto de uma linha
           div.icon
-            a.list-item(href='#')
+            a.list-item(href='#') Link
               i.fas.fa-chevron-right
   h2 Lista simples com Clique
   .row
     div.engloba
+      span.title Título da Lista
       div.br-list
-        span.title Título da Lista
-        a.list-item(href='#',role='listitem') teste
+        a.list-item
           div.icon
             i.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha
           div.icon
             i.fas.fa-chevron-right
-        a.list-item(href='#',role='listitem')
+        a.list-item
           div.icon
             i.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha
           div.icon
             i.fas.fa-chevron-right
-        a.list-item.disabled(href='#',role='listitem')
+        a.list-item.disabled
           div.icon
             i.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha (Desabilitado)
           div.icon
            i.fas.fa-chevron-right
-        a.list-item.dragged(href='#',role='listitem')
+        a.list-item.dragged
           div.icon
             i.fas.fa-heartbeat
           div.content
@@ -72,7 +72,7 @@ append content
   h2 Lista Ordenada
   .row
     div.engloba
-      ol.br-list.is-simple(role='list')
+      ol.br-list.is-simple
         li Texto de uma linha
         li Texto de uma linha
           ol.br-list.is-simple
@@ -82,7 +82,7 @@ append content
   h2 Lista não Ordenada
   .row
     div.engloba
-      ul.br-list.is-simple(role='list')
+      ul.br-list.is-simple
         li Texto de uma linha
         li Texto de uma linha
           ul.br-list.is-simple
@@ -92,7 +92,7 @@ append content
   h2 Lista de Definição
   .row
     div.engloba
-      dl.br-list.is-simple(role='list')
+      dl.br-list.is-simple
         dt Texto de uma linha
         dd Texto de uma linha
         dt Texto de uma linha
@@ -102,8 +102,8 @@ append content
   h2 Anatomia de uma Lista Complexa
   .row
     div.engloba
+      span.title Título da Lista
       ul.br-list
-        span.title Título da Lista
         li.list-item
           div.icon
             i.fas.fa-heartbeat
@@ -158,7 +158,7 @@ append content
             div.content
               div.text Texto secundário Lorem ipsum dolor sit amet consectetur
             div.icon
-              a(href="#")
+              a(href="#") Link
                 i.fas.fa-chevron-right
         ul.br-list
           li.list-item
@@ -167,7 +167,7 @@ append content
             div.content
               div.text Texto secundário
             div.icon
-              a(href="#")
+              a(href="#") Link
                 i.fas.fa-chevron-right
       div.col
         ul.br-list
@@ -177,7 +177,7 @@ append content
             div.content
               div.text Texto de uma linha
             div.icon
-              a(href="#")
+              a(href="#") Link
                 i.fas.fa-ellipsis-v
         ul.br-list
           li.list-item
@@ -186,7 +186,7 @@ append content
             div.content
               div.text Texto de uma linha
             div.icon
-              a(href="#")
+              a(href="#") Link
                 i.fas.fa-ellipsis-v
         ul.br-list
           li.list-item

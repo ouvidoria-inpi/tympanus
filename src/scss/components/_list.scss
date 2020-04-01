@@ -154,6 +154,7 @@ ul.#{$prefix}list {
       }
     }
     a {
+      text-indent: -9000px;
       .icon {
         [class*="fa-"] {
           color: v(color-primary-default);
