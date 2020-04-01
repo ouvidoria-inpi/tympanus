@@ -1,7 +1,7 @@
 extends ../../layouts/component
 
 append vars
-  - var title = "List";
+  - var title = 'List';
 
 append content
   h1 Lists
@@ -9,134 +9,197 @@ append content
     | A lista simples é a lista padrão da marcação HTML para qualquer navegador web. Elas são úteis pela facilidade em criar um documento bem estruturado, e pelo fato de ser conhecida, pode possuir maior acessibilidade e melhor facilidade de manutenção.
   h2 Lista simples
   .row
-    ul.br-list(role="list")
-      h5 Título da Lista
-      li.item(role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.text Texto de uma linha
-        div.icon
-          i.fas.fa-chevron-right
-      li.item(role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.text Texto de uma linha
-        div.icon
-          i.fas.fa-chevron-right
-      li.item(role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.text Texto de uma linha
-        div.icon
-          i.fas.fa-chevron-right
+    div.engloba
+      ul.br-list(role='list')
+        h5.title Título da Lista
+        li.list-item(role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            a.list-item(href='#')
+              i.fas.fa-chevron-right
+        li.list-item(role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            a.list-item(href='#')
+              i.fas.fa-chevron-right
+        li.list-item(role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            a.list-item(href='#')
+              i.fas.fa-chevron-right
   h2 Lista simples com Clique
   .row
-    div.br-list(role="list")
-      h5 Título da Lista
-      a.item(href="#",role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.text Texto de uma linha
-        div.icon
-          i.fas.fa-chevron-right
-      a.item(href="#",role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.text Texto de uma linha
-        div.icon
-          i.fas.fa-chevron-right
-      a.item(href="#",role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.text Texto de uma linha
-        div.icon
+    div.engloba
+      div.br-list(role='list')
+        h5.title Título da Lista
+        a.list-item(href='#',role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            i.fas.fa-chevron-right
+        a.list-item(href='#',role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            i.fas.fa-chevron-right
+        a.list-item.disabled(href='#',role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha (Desabilitado)
+          div.icon
+           i.fas.fa-chevron-right
+        a.list-item.dragged(href='#',role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha (Arrastado)
+          div.icon
            i.fas.fa-chevron-right
   h2 Lista Ordenada
   .row
-    ol.br-list.is-simple(role="list")
-      li(role="listitem") Texto de uma linha
-      li(role="listitem") Texto de uma linha
-        ol.br-list.is-simple
-          li(role="listitem") Texto de uma linha
-          li(role="listitem") Texto de uma linha
-      li(role="listitem") Texto de uma linha
+    div.engloba
+      ol.br-list.is-simple(role='list')
+        li(role='listitem') Texto de uma linha
+        li(role='listitem') Texto de uma linha
+          ol.br-list.is-simple
+            li(role='listitem') Texto de uma linha
+            li(role='listitem') Texto de uma linha
+        li(role='listitem') Texto de uma linha
   h2 Lista não Ordenada
   .row
-    ul.br-list.is-simple(role="list")
-      li(role="listitem") Texto de uma linha
-      li(role="listitem") Texto de uma linha
-        ul.br-list.is-simple
-          li(role="listitem") Texto de uma linha
-          li(role="listitem") Texto de uma linha
-      li(role="listitem") Texto de uma linha
+    div.engloba
+      ul.br-list.is-simple(role='list')
+        li(role='listitem') Texto de uma linha
+        li(role='listitem') Texto de uma linha
+          ul.br-list.is-simple
+            li(role='listitem') Texto de uma linha
+            li(role='listitem') Texto de uma linha
+        li(role='listitem') Texto de uma linha
   h2 Lista de Definição
   .row
-    dl.br-list.is-simple(role="list")
-      li(role="listitem") Texto de uma linha
-      li(role="listitem") Texto de uma linha
-        dl.br-list.is-simple
-          li(role="listitem") Texto de uma linha
-          li(role="listitem") Texto de uma linha
-      li(role="listitem") Texto de uma linha
+    div.engloba
+      dl.br-list.is-simple(role='list')
+        li(role='listitem') Texto de uma linha
+        li(role='listitem') Texto de uma linha
+          dl.br-list.is-simple
+            li(role='listitem') Texto de uma linha
+            li(role='listitem') Texto de uma linha
+        li(role='listitem') Texto de uma linha
   h2 Anatomia de uma Lista Complexa
   .row
-    ul.br-list(role="list")
-      h5 Título da Lista
-      li.item(role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.sub-title Subtítulo
-          div.text Texto de uma linha
-          div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-        div.icon
-          i.fas.fa-chevron-right
-      li.item(role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.sub-title Subtítulo
-          div.text Texto de uma linha
-          div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-        div.icon
-          i.fas.fa-chevron-right
-      li.item(role="listitem")
-        div.icon
-          i.fas.fa-heartbeat
-        div.content
-          div.sub-title Subtítulo
-          div.text Texto de uma linha
-          div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-        div.icon
-          i.fas.fa-chevron-right
+    div.engloba
+      ul.br-list(role='list')
+        h5.title Título da Lista
+        li.list-item(role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.sub-title Subtítulo
+            div.text Texto de uma linha
+            div.text-sec Texto secundário Lorem Ipsum dolor sit amet
+          div.icon
+            i.fas.fa-chevron-right
+        li.list-item(role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.sub-title Subtítulo
+            div.text Texto de uma linha
+            div.text-sec Texto secundário Lorem Ipsum dolor sit amet
+          div.icon
+            i.fas.fa-chevron-right
+        li.list-item(role='listitem')
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.sub-title Subtítulo
+            div.text Texto de uma linha
+            div.text-sec Texto secundário Lorem Ipsum dolor sit amet
+          div.icon
+            i.fas.fa-chevron-right
   h2 Recursos Visuais
   .row
-    ul.br-list(role="list")
-      h5 Título da Lista
-      li.item(role="listitem")
-        div.icon
-          img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png',alt='Circle')
-        div.content
-          div.text Texto de uma linha
-        div.icon
-          i.fas fa-cube
-      li.item(role="listitem")
-        div.icon
-          img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/square1.png',alt='Square')
-        div.content
-          div.text Texto principal
-          div.text-sec Texto secundário Lorem ipsum dolor sit amet consectetur
-
-      li.item(role="listitem")
-        div.icon
-          img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png',alt='Rectangle')
-        div.content
-          div.text Texto de uma linha
-        div.icon
-          i.fas.fa-chevron-right
+    .row
+    div.engloba
+      .col
+        ul.br-list(role='list')
+          li.list-item(role='listitem')
+            div.icon
+              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png',alt='Circle')
+            div.content
+              div.text Texto secundário
+            div.icon
+              i.fas.fa-cube
+        ul.br-list(role='list')
+          li.list-item(role='listitem')
+            div.icon
+              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/square1.png',alt='Square')
+            div.content
+              div.text Texto principal
+              div.text-sec Texto secundário
+        ul.br-list(role='list')
+          li.list-item(role='listitem')
+            div.icon
+              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png',alt='Rectangle')
+            div.content
+              div.text Texto secundário Lorem ipsum dolor sit amet consectetur
+            div.icon
+              a(href="#")
+                i.fas.fa-chevron-right
+        ul.br-list(role='list')
+          li.list-item(role='listitem')
+            div.icon
+              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png',alt='Rectangle')
+            div.content
+              div.text Texto secundário
+            div.icon
+              a(href="#")
+                i.fas.fa-chevron-right
+      div.col
+        ul.br-list(role='list')
+          li.list-item(role='listitem')
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto de uma linha
+            div.icon
+              a(href="#")
+                i.fas.fa-ellipsis-v
+        ul.br-list(role='list')
+          li.list-item(role='listitem')
+            div.icon
+              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png',alt='Circle')
+            div.content
+              div.text Texto de uma linha
+            div.icon
+              a(href="#")
+                i.fas.fa-ellipsis-v
+        ul.br-list(role='list')
+          li.list-item(role='listitem')
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto principal
+              div.text-sec Texto secundário Lorem ipsum dolor sit amet consectetur
+        ul.br-list(role='list')
+          li.list-item(role='listitem')
+            div.content
+              div.text Texto principal
+              div.text-sec Texto secundário
+            div.icon
+              div.headline meta
+              i.fas.fa-cube

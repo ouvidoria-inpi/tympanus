@@ -1,18 +1,32 @@
 dl.#{$prefix}list {
   list-style-type: none;
+  padding: 21px;
   li {
     li {
       font-style: italic;
+    }
+    dl {
+      padding: 0 21px;
+    }
+  }
+}
+ol.#{$prefix}list  {
+  list-style-type: decimal;
+  padding: 21px;
+  li {
+    ol {
+      padding: 0 21px;
     }
   }
 }
 ul.#{$prefix}list {
   &.is-simple {
+    padding: 21px;
     li {
       display: block;
       list-style: none;
       margin: 0 0 16px 1.1225em;
-      padding: 0;
+      padding: 0 16px 0 0;
       position: relative;
       &::before {
         color: var(--color-secondary-05);
@@ -23,30 +37,31 @@ ul.#{$prefix}list {
         position: absolute;
         top: -24px;
       }
+      ul {
+        padding: 0 21px;
+      }
     }
   }
 }
 .#{$prefix}list {
   background-color: v(color-secondary-01);
   padding: 0;
-  width: 400px;
+  width: auto;
   list-style-type: none;
 
-  &.is-simple {
-    padding: 0 48px;
-  }
-
-  & h5 {
+  & .title {
     color: v(color-secondary-09);
+    display: block;
     font-size: v(font-size-scale-down-02);
     font-weight: v(font-weight-bold);
     margin-bottom: 0;
-    padding-left: 57px;
+    padding: 15px;
     text-transform: uppercase;
   }
-  & .item {
+  & .list-item {
     align-items: center;
     color: v(color-secondary-08);
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     font-size: v(font-size-scale-base);
@@ -55,26 +70,90 @@ ul.#{$prefix}list {
     line-height: v(font-line-height-medium);
     list-style-type: none;
     padding: 8px 16px;
-    border: 1px solid red;
+
+    &.disabled {
+      * {
+        color: v(color-secondary-04);
+      }
+    }
+
+    &.dragged {
+      background-color: v(color-secondary-03);
+      & .icon {
+        [class*="fa-"] {
+          color: v(color-secondary-04);
+        }
+      }
+    }
+
+    &:hover {
+      background-color: v(color-primary-pastel-02);
+      & .icon {
+        [class*="fa-"] {
+          color: v(color-primary-default);
+        }
+      }
+    }
+    &:focus {
+      background-color: v(color-support-02);
+    }
+    &:active {
+      background-color: v(color-primary-default);
+      color: v(color-secondary-01);
+      & .icon {
+        [class*="fa-"] {
+          color: v(color-primary-pastel-01);
+        }
+      }
+    }
+    &:focus-within {
+      background-color: v(color-primary-darken-01);
+      color: v(color-secondary-01);
+      & .icon {
+        [class*="fa-"] {
+          color: v(color-secondary-01);
+        }
+      }
+    }
+
     .icon {
       align-items: center;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      min-width: 56px;
-      min-height: 56px;
-      //border: 1px solid lime;
+      .headline {
+        color: v(color-secondary-09);
+        font-size: v(font-size-scale-down-01);
+        padding-bottom: $spacer;
+        text-transform: lowercase;
+      }
+
+      &:first-child {
+        justify-content: flex-start;
+      }
+
+      &:last-child {
+        justify-content: flex-end;
+      }
 
       [class*="fa-"] {
         color: v(color-secondary-05);
-        font-size: v(font-size-scale-up-02);
+        font-size: v(font-size-scale-up-01);
+        font-weight: v(font-weight-bold);
       }
-      // [class*="fa-heartbeat"] {
-      //   left: 23px;
-      // }
-      // [class*="fa-chevron-right"] {
-      //   color: v(color-primary-default);
-      //   right: 23px;
-      // }
+
+      a {
+        [class*="fa-"] {
+          color: v(color-primary-default);
+        }
+      }
+    }
+    a {
+      .icon {
+        [class*="fa-"] {
+          color: v(color-primary-default);
+        }
+      }
     }
     .content {
       width: 100%;
