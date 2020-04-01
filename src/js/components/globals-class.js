@@ -12,6 +12,7 @@ import BRTable from './table'
 import BRScrim from './scrim'
 import BRModal from './modal'
 import BRTooltip from './tooltip'
+import BRBreadcrumb from './breadcrumb';
 
 export default class Globals {
   constructor() { }
@@ -31,6 +32,7 @@ export default class Globals {
     this.initInstanceScrim()
     this.initInstanceModal()
     this.initInstanceTooltip()
+    this.initInstanceBreadcrumb()
 
   }
 
@@ -418,6 +420,13 @@ export default class Globals {
     let tooltipList = []
     for (let brTooltip of window.document.querySelectorAll( ".br-tooltip")) {
       tooltipList.push(new BRTooltip('br-tooltip', brTooltip ))
+    }
+  }
+
+  initInstanceBreadcrumb() {
+    let breadcrumbList = [];
+    for (let brBreadcrumb of window.document.querySelectorAll(".br-breadcrumb")) {
+      breadcrumbList.push(new BRBreadcrumb("br-breadcrumb", brBreadcrumb));
     }
   }
 }
