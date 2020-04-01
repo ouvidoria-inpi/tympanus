@@ -1,22 +1,27 @@
 dl.#{$prefix}list {
   list-style-type: none;
   padding: 21px;
-  li {
-    li {
-      font-style: italic;
-    }
-    dl {
-      padding: 0 21px;
-    }
+  dd {
+    font-style: italic;
+    padding: 14px 0;
+  }
+  dl {
+    padding: 0 21px 14px 21px;
   }
 }
 ol.#{$prefix}list  {
   list-style-type: decimal;
   padding: 21px;
   li {
+    padding-bottom: 14px;
     ol {
+      margin-bottom: 0;
       padding: 0 21px;
+      li:last-child {
+        padding-bottom: 0;
+      }
     }
+
   }
 }
 ul.#{$prefix}list {
