@@ -1,13 +1,12 @@
 @mixin hover {
   &:hover {
-    background-color: v(color-primary-pastel-02);
+    background-color: v(status-hover-background);
   }
 }
 
 @mixin focus {
   &:focus {
-    background: v(status-highlight-background)
-      linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
+    background: v(status-highlight-background) linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
   }
 }
 
