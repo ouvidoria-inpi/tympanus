@@ -78,7 +78,7 @@ ul.#{$prefix}list {
     }
 
     &.dragged {
-      background-color: v(color-secondary-03);
+      background-color: v(color-secondary-03); //Verificar
       & .icon {
         [class*="fa-"] {
           color: v(color-secondary-04);
