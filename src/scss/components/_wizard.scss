@@ -101,7 +101,7 @@
   .wizard-panel {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 1%;
     height: 0;
     opacity: 0;
     visibility: hidden;
@@ -117,16 +117,22 @@
       opacity: 1;
       visibility: visible;
       transition-property: all;
-      transition-duration: 0.3s;
+      transition-duration: 0.5s;
       transition-timing-function: linear;
       transition-delay: 0s;
       left: 0 !important;
       // -webkit-transform: scale(1);
       //         transform: scale(1);
     }
+    .content {
+      min-height: calc(100vh - 340px);
+      max-height: calc(100vh - 320px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
   }
   .wizard-panel-btn {
-    width: 104%;
+    width: 103.5%;
     position: absolute;
     margin-top: 1px;
     min-height: 88px;
@@ -144,7 +150,7 @@
 
   @media (max-width:600px) {
     .wizard-panel-btn {
-      width: 102%;
+      width: 104%;
       margin-left: -2%;
       .br-button {
         width: 90%;

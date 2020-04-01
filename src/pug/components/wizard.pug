@@ -16,25 +16,29 @@ mixin wizard(label="Título", labelClass)
         span.info Cadastrar Senha
     .wizard-form
       .wizard-panel.is-active
-        .h3 Dados Pessoais
-        .text Conteúdo aqui
+        .content
+          .h3 Dados Pessoais
+          .text Conteúdo aqui
         .wizard-panel-btn
           +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
-        .h3 Validar Dados
-        .text Conteúdo aqui
-        .wizard-panel-btn
-          +button(class="is-secondary wizard-btn-prev") Voltar
-          +button(class="is-primary wizard-btn-next") Avançar
-      .wizard-panel
-        .h3 Habilitar Cadastro
-        .text Conteúdo aqui
+        .content
+          .h3 Validar Dados
+          .text Conteúdo aqui
         .wizard-panel-btn
           +button(class="is-secondary wizard-btn-prev") Voltar
           +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
-        .h3 Cadastrar Senha
-        .text Conteúdo aqui
+        .content
+          .h3 Habilitar Cadastro
+          .text Conteúdo aqui
+        .wizard-panel-btn
+          +button(class="is-secondary wizard-btn-prev") Voltar
+          +button(class="is-primary wizard-btn-next") Avançar
+      .wizard-panel
+        .content
+          .h3 Cadastrar Senha
+          .text Conteúdo aqui
         .wizard-panel-btn
           +button(class="is-secondary wizard-btn-prev") Voltar
           +button(class="is-primary wizard-btn") Finalizar

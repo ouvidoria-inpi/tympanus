@@ -155,11 +155,11 @@ class BRWizard {
       //set active step and active panel onclick
       if (eventTarget.classList.contains(`${this.DOMstrings.stepPrevBtnClass}`)) {
         activePanelNum--;
-        activePanel.style.left = "100%";
+        activePanel.style.left = "1%";
 
       } else {
         activePanelNum++;
-        activePanel.style.left = "-100%";
+        activePanel.style.left = "-1%";
       }
 
       this.setActiveStep(activePanelNum);
