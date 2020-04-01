@@ -91,6 +91,15 @@ ul.#{$prefix}list {
       }
     }
 
+    &.selected {
+      background-color: v(color-primary-lighten-01);
+      & .icon {
+        [class*="fa-"] {
+          color: v(color-secondary-01);
+        }
+      }
+    }
+
     &:hover {
       background-color: v(color-primary-pastel-02);
       & .icon {
