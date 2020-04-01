@@ -82,30 +82,13 @@ class BRWizard {
       //show active panel
       this.DOMstrings.stepFormPanels.forEach((elem, index) => {
         if (index === activePanelNum) {
-
           elem.classList.add('is-active');
-
-          this.setFormHeight(elem);
-
         }
       });
 
     };
 
-    //set form height equal to current panel height
-    this.formHeight = activePanel => {
-      const activePanelHeight = activePanel.offsetHeight;
-      this.DOMstrings.stepsForm.style.height = `${activePanelHeight}px`;
-
-    };
-
-    this.setFormHeight = () => {
-      const activePanel = this.getActivePanel();
-      this.formHeight(activePanel);
-    };
-
-
-    this._setBehavior()  
+    this._setBehavior() ;
   }
 
   _setBehavior( ){
@@ -116,8 +99,9 @@ class BRWizard {
       const eventTarget = e.target;
 
       if (!eventTarget.classList.contains(`${this.DOMstrings.stepsBtnClass}`)) {
+        e.target.parentNode.click();
         return;
-      }
+       }
 
       //get active button step number
       const activeStep = this.getActiveStep(eventTarget);
@@ -129,11 +113,6 @@ class BRWizard {
       this.setActivePanel(activeStep);
 
       
-      //SETTING PROPER FORM HEIGHT ONLOAD
-      window.addEventListener('load', this.setFormHeight, false);
-
-      //SETTING PROPER FORM HEIGHT ONRESIZE
-      window.addEventListener('resize', this.setFormHeight, false);
     });
 
     //PREV/NEXT BTNS CLICK

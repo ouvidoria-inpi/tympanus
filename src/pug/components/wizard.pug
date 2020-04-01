@@ -12,31 +12,31 @@ mixin wizard(label="Título", labelClass)
         span.info Validar Dados
       button(class="wizard-progress-btn" type="button" title="Habilitar Cadastro" step="3")
         span.info Habilitar Cadastro
-      button(class="wizard-progress-btn" type="button" title="Cadastrar Senha" step="4")
+      button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="4" disabled)
         span.info Cadastrar Senha
     .wizard-form
       .wizard-panel.is-active
-        .content
+        .wizard-panel-content
           .h3 Dados Pessoais
           .text Conteúdo aqui
         .wizard-panel-btn
           +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
-        .content
+        .wizard-panel-content
           .h3 Validar Dados
           .text Conteúdo aqui
         .wizard-panel-btn
           +button(class="is-secondary wizard-btn-prev") Voltar
           +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
-        .content
+        .wizard-panel-content
           .h3 Habilitar Cadastro
           .text Conteúdo aqui
         .wizard-panel-btn
           +button(class="is-secondary wizard-btn-prev") Voltar
           +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
-        .content
+        .wizard-panel-content
           .h3 Cadastrar Senha
           .text Conteúdo aqui
         .wizard-panel-btn

@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     background-color: v(color-secondary-02);
-    min-height: 140px;
+    min-height: 164px;
     padding-top: 56px;
   }
   
@@ -15,13 +15,16 @@
     position: relative;
     color: v(color-primary-lighten-01);
     text-indent: 0;
-    border: none;
     background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
     outline: none !important;
     cursor: pointer;
     font-size: 18px;
     line-height: 20px;
-    padding-top: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   
  
@@ -49,17 +52,17 @@
     box-sizing: border-box;
     z-index: 3;
   }
-
+  
   .wizard-progress-btn:after {
     position: absolute;
     top: 5px;
-    left: calc(-50% - 13px / 2);
+    left: calc(-50% + 34px / 2);
     transition-property: all;
     transition-duration: 0.15s;
     transition-timing-function: linear;
     transition-delay: 0s;
     display: block;
-    width: 100%;
+    width: calc(100% - 34px);
     height: 1px;
     content: '';
     background-color: v(color-primary-lighten-01);
@@ -78,10 +81,12 @@
     color: v(color-primary-default);
     font-weight: 600;
   }
+
+  .wizard-progress-btn.is-inactive {
+    color: v(color-primary-default);
+  }
   
   .wizard-progress-btn.is-inactive:before {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
     background-color: v(color-primary-pastel-01);
     border-color: v(color-primary-pastel-01);
     color: v(color-primary-default);
@@ -91,6 +96,37 @@
     border-color: v(color-primary-default);
     color: v(color-secondary-01);
     font-weight: 700;
+  }
+
+  .wizard-progress-btn.is-disabled {
+    opacity: 0.5;
+  }
+
+  .wizard-progress-btn.is-active:hover:before,
+  .wizard-progress-btn.is-inactive:hover:before {
+    background-color: v(status-hover-background, $status-hover-background);
+    border-color: v(status-hover-background, $status-hover-background);
+    color: v(color-primary-lighten-01);
+  }
+  .wizard-progress-btn:hover:before {
+    background-color: v(status-hover-background, $status-hover-background);
+    border-color: v(color-primary-lighten-01);
+  }
+
+  .wizard-progress-btn.is-active:focus:before,
+  .wizard-progress-btn.is-inactive:focus:before {
+    background-color: v(status-focused-overlay, $status-focused-overlay);
+    border-color: v(status-focused-overlay, $status-focused-overlay);
+    color: v(color-primary-lighten-01);
+  }
+  .wizard-progress-btn:focus:before {
+    background-color: v(status-focused-overlay, $status-focused-overlay);
+    border-color: v(color-primary-lighten-01);
+  }
+  .wizard-progress-btn.is-disabled:hover:before,
+  .wizard-progress-btn.is-disabled:focus:before {
+    background-color: inherit !important;
+    border-color: inherit !important;
   }
   
   .wizard-form {
@@ -109,8 +145,6 @@
     margin-left: 2%;
     width: 96%;
     margin-bottom: 32px;
-    // -webkit-transform: scale(0.9);
-    //         transform: scale(0.9);
     &.is-active {
       height: auto;
       opacity: 1;
@@ -120,10 +154,8 @@
       transition-timing-function: linear;
       transition-delay: 0s;
       left: 0 !important;
-      // -webkit-transform: scale(1);
-      //         transform: scale(1);
     }
-    .content {
+    .wizard-panel-content {
       min-height: calc(100vh - 340px);
       max-height: calc(100vh - 320px);
       overflow-y: auto;
@@ -147,10 +179,12 @@
     float: left;
   }
 
-  @media (max-width:600px) {
+  @include media-breakpoint-down(sm) {
     .wizard-panel-btn {
       width: 104%;
       margin-left: -2%;
+      background-color: transparent;
+      position: relative;
       .br-button {
         width: 90%;
         margin: 10px 20px;
@@ -161,6 +195,7 @@
     .wizard-progress {
       min-height: auto;
       padding-top: 28px;
+      padding-bottom: 16px;
       .wizard-progress-btn {
         padding-bottom: 8px;
         .info {
