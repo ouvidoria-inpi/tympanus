@@ -6,9 +6,11 @@
     // Remover o checkbox padrão do navegador
     opacity: 0;
     position: absolute;
-    
-    // Texto
-    & + label {
+    &:disabled + label {
+      pointer-events: none;
+    }
+    // Caixa
+    & + label{
       align-items: flex-start;
       cursor: pointer;
       display: inline-flex;
@@ -17,12 +19,6 @@
       padding: 0 0 0 ($checkbox-default + $spacer);
       position: relative;
       vertical-align: top;
-    }
-    &:disabled + label {
-      pointer-events: none;
-    }
-    // Caixa
-    & + label{
       &:hover:before{
         border: 1px solid v(color-secondary-06,$color-secondary-06);
         box-shadow: 0 0 0 5px rgba(var(--rgb-primary-lighten-02), 0.45);
@@ -153,6 +149,10 @@
           border: 1px solid v(color-secondary-06,$color-secondary-06);
           box-shadow: 0 0 0 5px rgba(var(--rgb-primary-lighten-02), 0.45);
         }
+      }
+      &:disabled + label:before {
+        pointer-events: none;
+        background: rgba(var(--rgb-secondary-01),0.45);
       }
       // Checado
       &:checked + label::before {
