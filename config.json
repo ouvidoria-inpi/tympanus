@@ -173,9 +173,9 @@
         "urlLabel": "input"
       },
       {
-        "label": "Listas",
-        "filename": "listas",
-        "urlLabel": "listas"
+        "label": "Lista",
+        "filename": "list",
+        "urlLabel": "lista"
       },
       {
         "label": "Mensagem",
