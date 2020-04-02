@@ -9,7 +9,7 @@ const ConcatPlugin = require( 'webpack-concat-plugin' );
 const HTMLWebpackPlugin = require( 'html-webpack-plugin' );
 const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
 const OptimizeCSSAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' )
-
+const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 // We need Nodes fs module to read directory contents
 const fs = require( 'fs' )
 
@@ -77,20 +77,9 @@ module.exports = {
 	},
 	watch: false,
 	output: {
-		chunkFilename: "[name].js",
-		filename: './js/[name].js',
+		chunkFilename: "[name].min.js",
+		filename: './js/[name].min.js',
 		path: paths.dist
-	},
-	devServer: {
-		contentBase: path.join( __dirname, 'dist' ),
-		stats: 'errors-only',
-		clientLogLevel: 'error',
-		port: 9000,
-		open: true,
-		hot: true,
-		inline: true,
-		progress: true,
-		profile: true,
 	},
 	module: {
 		rules: [
@@ -155,10 +144,11 @@ module.exports = {
 		} ),
 		// Extract our css to a separate css file
 		new MiniCssExtractPlugin( {
-			filename: 'css/[name].css',
-			chunkFilename: '[id].css',
+			filename: 'css/[name].min.css',
+			chunkFilename: '[id].min.css',
 			ignoreOrder: false, // Enable to remove warnings about conflicting order
 		} ),
+		new UnminifiedWebpackPlugin()
 	].concat( htmlPluginsComponentes, htmlPluginsTemplates ),
 	optimization: {
 		minimizer: [

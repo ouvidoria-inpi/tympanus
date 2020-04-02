@@ -1,19 +1,23 @@
 {
 	"name": "@govbr/dsgov",
-	"version": "1.2.3-beta.18",
+	"version": "1.2.3-beta.22",
 	"description": "Design System do governo",
 	"main": "index.js",
 	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/latest/",
 	"scripts": {
 		"start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev",
-		"build": "npm-run-all build:webpack:prod",
+		"build": "npm-run-all build:webpack:prod && npm run cdn:build",
 		"test": "npm-run-all validate:*",
+		"init": "npm run repo:serpro & npm run repo:govbr && npm install",
+		"repo:serpro": "npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/",
+		"repo:govbr": "npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/",
 		"validate:html": "node_modules/.bin/html-validate dist/**/*.html",
 		"validate:styles": "node_modules/.bin/stylelint src/scss/**/*.scss",
 		"build:webpack:dev": "webpack --env dev --progress --profile --colors",
 		"build:webpack:prod": "webpack --env prod",
 		"cypress:terminal": "npx cypress run",
-		"cypress:interface": "npx cypress open"
+		"cypress:interface": "npx cypress open",
+		"cdn:build": "webpack --config webpack.proddev.js"
 	},
 	"engines": {
 		"node": ">= 12.16.1"
@@ -85,6 +89,7 @@
 		"stylelint-scss": "^3.14.2",
 		"stylelint-webpack-plugin": "^1.2.3",
 		"uglifyjs-webpack-plugin": "^2.2.0",
+		"unminified-webpack-plugin": "^2.0.0",
 		"webpack": "^4.42.0",
 		"webpack-cli": "^3.3.11",
 		"webpack-concat-plugin": "^3.0.0",
