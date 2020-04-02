@@ -2,8 +2,9 @@ mixin tag
     .br-tag&attributes(attributes)
         .content
             if block
-                block    
-        .close
-            button(type='button')
-                i.fas.fa-times
-                span.sr-only Fechar
+                block
+        if attributes.class == "is-start-close"   
+            .close
+                button(type='button')
+                    i.fas.fa-times
+                    span.sr-only Fechar
