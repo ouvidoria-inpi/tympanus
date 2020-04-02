@@ -1,16 +1,15 @@
 .#{$prefix}tag {
   //@include hover;
   //@include focus; 
-  align-items: baseline;
+  align-items: center;
   background: v(color-secondary-01);
   border: 1px solid v(color-primary-default);
-  border-radius: $button-radius;
+  border-radius: 16px;
   color: v(color-primary-default);
   display: inline-flex;
   font-size: v(font-size-scale-down-01);
   font-weight: v(font-weight-semi-bold);
   height: 20px;
-  justify-content: baseline;
   padding: 0 10px;
   margin: 10px;
   .content {
@@ -23,7 +22,7 @@
     display: flex;
     font-size: 100%;
     justify-content: center;
-    padding-right: 10px;
+    margin-right: 10px;
     width: 12px;
     img {
       max-height: 9px;
@@ -35,7 +34,7 @@
     background-color: v(color-primary-pastel-01);
   }
   &:active {
-    background-color: v(color-primary-default);
+    background-color: v(color--secondary);
     color: v(color-secondary-01);
     .icon {
       color: v(color-secondary-01);
@@ -47,7 +46,10 @@
   &.disabled {
     background-color: v(color-primary-pastel-01);
     opacity: .45;
-    &:active {
+    &:active,
+    &:hover,
+    &:focus  {
+      background: v(color-primary-pastel-01);
       color: v(color-primary-default);
       opacity: .45;
       .icon {
@@ -60,9 +62,8 @@
   }
   &.is-start-close{  
     .close {
-      align-items: flex-start;
-      display: flex;
       button {
+        display: flex;
         background: transparent;
         border: 0;
         color: v(color-support-03);
