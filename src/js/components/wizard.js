@@ -1,3 +1,4 @@
+import SwipeEventDispatcher from './swipe'
 class BRWizard {
   constructor ( name, component ) {
     this.name = name;
@@ -6,6 +7,7 @@ class BRWizard {
     this.DOMstrings = {
       stepsBtnClass: 'wizard-progress-btn',
       stepsBtns: document.querySelectorAll(`.wizard-progress-btn`),
+      stepsBarClass: 'wizard-progress',
       stepsBar: document.querySelector('.wizard-progress'),
       stepsForm: document.querySelector('.wizard-form'),
       stepFormPanelClass: 'wizard-panel',
@@ -145,6 +147,14 @@ class BRWizard {
       this.setActivePanel(activePanelNum);
 
     });
+
+    const dispatcher = new SwipeEventDispatcher(this.DOMstrings.stepsBar);
+    dispatcher.on('SWIPE_UP', () => { 
+      this.DOMstrings.stepsBar.classList.add("is-collapsed")
+    });
+    dispatcher.on('SWIPE_DOWN', () => { 
+      this.DOMstrings.stepsBar.classList.remove("is-collapsed")
+    });
   }
 }
 
@@ -152,4 +162,5 @@ let wizardList = []
 for (let brWizard of window.document.querySelectorAll( ".br-wizard")) {
   wizardList.push(new BRWizard('br-wizard', brWizard ))
 }
+
 export default BRWizard

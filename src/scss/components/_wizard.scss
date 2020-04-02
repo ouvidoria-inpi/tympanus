@@ -27,7 +27,8 @@
     font-size: 18px;
     line-height: 20px;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 0px;
+    max-height: 90px;
   }
   
  
@@ -185,26 +186,70 @@
   }
 
   @include media-breakpoint-down(sm) {
-    .wizard-panel-btn {
-      width: 104%;
-      margin-left: -2%;
-      background-color: transparent;
-      position: relative;
-      .br-button {
-        width: 90%;
-        margin: 10px 20px;
-        float: left;
-        clear: both;
+    
+    .wizard-form {
+      .wizard-panel {
+        border-top: 0;
+        .wizard-panel-content {
+        min-height: calc(100vh - 350px);
+        max-height: calc(100vh - 350px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        }
+      }
+      .wizard-panel-btn {
+        width: 104%;
+        margin-left: -2%;
+        padding-top: 8px;
+        background-color: transparent;
+        //position: relative;
+        .br-button {
+          width: 90%;
+          margin: 8px 5%;
+          float: left;
+          clear: both;
+        }
       }
     }
     .wizard-progress {
-      min-height: auto;
-      padding-top: 28px;
-      padding-bottom: 16px;
+      position: relative;
+      padding-top: 32px;
+      min-height: 134px;
       .wizard-progress-btn {
-        padding-bottom: 8px;
         .info {
-          display: none;
+          font-size: 0.6em;
+          line-height: 0.7em;
+        }
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        width: 12%;
+        height: 4px;
+        border-radius: 2px;
+        content: '';
+        background-color: v(color-secondary-04);
+        bottom: 0;
+        left: 44%;
+      }
+      &.is-collapsed {
+        min-height: auto;
+        padding-bottom: 32px;
+        .wizard-progress-btn {
+          padding-bottom: 8px;
+          .info {
+            display: none;
+          }
+        }
+        & + .wizard-form {
+          .wizard-panel {
+            .wizard-panel-content {
+              min-height: calc(100vh - 290px);
+              max-height: calc(100vh - 290px);
+              overflow-y: auto;
+              overflow-x: hidden;
+            }
+          }
         }
       }
     }
