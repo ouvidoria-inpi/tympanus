@@ -9,6 +9,7 @@
             .name {
               color: v(color-secondary-07, $color-secondary-07);
               font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
+              line-height: v(font-size-scale-up-03, $font-size-scale-up-03);
               font-weight: v(font-weight-semi-bold ,$font-weight-semi-bold);
             }
             .outcome {
