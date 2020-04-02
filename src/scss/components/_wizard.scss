@@ -1,4 +1,7 @@
 .#{$prefix}wizard {
+  height: calc( 100vh - 52px);
+  max-width: 100%;
+  overflow-x: hidden;
   .wizard-progress {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -163,12 +166,14 @@
     }
   }
   .wizard-panel-btn {
-    width: 103.5%;
+    width: 104.5%;
     position: absolute;
     margin-top: 1px;
     min-height: 88px;
+    height: auto;
+    padding: 0px 1.5%;
     background-color: v(color-secondary-02);
-    margin-left: -2%;
+    margin-left: -2.5%;
   }
   .wizard-btn-next,
   .wizard-btn {
