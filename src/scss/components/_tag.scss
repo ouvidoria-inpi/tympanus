@@ -10,11 +10,10 @@
   font-size: v(font-size-scale-down-01);
   font-weight: v(font-weight-semi-bold);
   height: 20px;
-  padding: 0 10px;
   margin: 10px;
+  padding: 0 10px;
   .content {
     display: flex;
-    padding-right: $spacer * 1.5;
   }
   .icon {
     align-items: center;
@@ -69,6 +68,7 @@
         color: v(color-support-03);
         padding: 0;
         outline: 0;
+        padding-left: $spacer * 1.5;
       }
     }
   }
