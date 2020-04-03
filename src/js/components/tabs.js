@@ -27,7 +27,7 @@ class BRTabs {
 
   _switchContent(currentTab) {
     for (let ref of currentTab.querySelectorAll("a")) {
-      for (let tabPane of this.component.querySelectorAll(".tab-content .tab-pane")) {
+      for (let tabPane of this.component.querySelectorAll(".tab-content .tab-panel")) {
         if (ref.getAttribute("href") === "#" + tabPane.getAttribute("id")) {
           tabPane.classList.add("is-active");
         } else {

@@ -11,24 +11,24 @@ append content
       p.label 1 | Abas Padrão
       +tabs()
         +tab-nav()
-          +tab-item(title="Sobre" pane="pane-1")
-          +tab-item(title="Todos" pane="pane-2")
-          +tab-item(title="Notícias" class="is-active" pane="pane-3")
-          +tab-item(title="Serviços" pane="pane-4")
-          +tab-item(title="Aplicativos" pane="pane-5")
-          +tab-item(title="Mídias" pane="pane-6")
+          +tab-item(title="Sobre" pane="panel-1")
+          +tab-item(title="Todos" pane="panel-2")
+          +tab-item(title="Notícias" class="is-active" pane="panel-3")
+          +tab-item(title="Serviços" pane="panel-4")
+          +tab-item(title="Aplicativos" pane="panel-5")
+          +tab-item(title="Mídias" pane="panel-6")
         +tab-content
-          +tab-pane(id="pane-1")
+          +tab-pane(id="panel-1")
             p Painel Sobre
-          +tab-pane(id="pane-2")
+          +tab-pane(id="panel-2")
             p Painel Todos
-          +tab-pane(id="pane-3" class="is-active")
+          +tab-pane(id="panel-3" class="is-active")
             p Painel Noticias
-          +tab-pane(id="pane-4")
+          +tab-pane(id="panel-4")
             p Painel Serviços
-          +tab-pane(id="pane-5")
+          +tab-pane(id="panel-5")
             p Painel Aplicativos
-          +tab-pane(id="pane-6")
+          +tab-pane(id="panel-6")
             p Painel Mídias
   .row.mt-10
     .col
@@ -44,7 +44,7 @@ append content
           +tab-pane(id="pane-7")
             p Painel Todos
           +tab-pane(id="pane-8"  class="is-active")
-            p Painel Noticias
+            p Painel Notícias
           +tab-pane(id="pane-9")
             p Painel Serviços
           +tab-pane(id="pane-10")

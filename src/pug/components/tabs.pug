@@ -42,7 +42,7 @@ mixin tab-content()
 
 mixin tab-pane()
   - let className = attributes.class
-  - let itemClass = "tab-pane"
+  - let itemClass = "tab-panel"
   - className = className ? itemClass + " " + className : itemClass
   div(
     id=attributes.id
