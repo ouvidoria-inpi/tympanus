@@ -84,11 +84,12 @@ Quando o usuário não fez _upload_ de nenhuma imagem o avatar icônico será ut
 
 #### Comportamento:
 
-Nunca é demais lembrar que sempre que um avatar aparecer pela primeira vez, em qualquer circunstância, será do tipo icônico. O usuário poderá fazer o _upload_ de sua própria foto (ou qualquer outra de sua escolha) para representá-lo no momento que desejar. Ao passar o mouse sobre o avatar (_hover_), o ícone Camera (fa-camera) é apresentado indicando ao usuário que ao clicar em qualquer parte da imagem poderá realizar o _upload_ de outra imagem de sua escolha. A partir de então, o sistema sempre exibirá o novo avatar com a nova imagem escolhida pelo usuário. O mesmo poderá a qualquer momento alterar a imagem, ou mesmo desabilitá-la. Neste caso, o avatar icônico voltará a ser utilizado como padrão.
+Nunca é demais lembrar que sempre que um avatar aparecer pela primeira vez, em qualquer circunstância, será do tipo icônico. O usuário poderá fazer o _upload_ de sua própria foto (ou qualquer outra de sua escolha) para representá-lo no momento que desejar. Ao passar o mouse sobre o avatar (_hover_), o ícone Camera (fa-camera) é apresentado indicando ao usuário que ao clicar em qualquer parte da imagem poderá realizar o _upload_ de outra imagem de sua escolha. A partir de então, o sistema sempre exibirá o novo avatar com a nova imagem escolhida pelo usuário. O mesmo poderá a qualquer momento alterar a imagem, ou mesmo excluí-la. Neste caso, o avatar icônico voltará a ser utilizado como padrão.
 
 ![Exemplo Tipo](imagens/avatar-foto-icon-large-usos.png)
 
-Ao passar o mouse sobre a foto (_Hover_), o _badge_ com o ícone de deletar é apresentado ao usuário. Neste momento, o usuário tem a opção de deleter a foto ou trocar por outra.
+Ao passar o mouse sobre a foto (_Hover_), o ícone Camera fica disponível indicando que a foto poderá ser editada, isto é, ser trocada ou mesmo deletada. Neste momento, o usuário pode clicar em qualquer local da foto e será então levado para outra tela para realizar a ação desejada.
+
 No caso de dispositivos móveis, o mesmo comporamento será conseguindo tocando com o dedo na foto e mantendo o toque por dois segundos. A partir de então as mesmas opções de deletar ou alterar a foto são apresentadas.
 
 ![Exemplo Tipo](imagens/avatar-deletar-foto.png)
@@ -128,7 +129,7 @@ Basicamente, existem duas variações de avatar: o fotográfico e o icônico. Es
 
 ### Detalhamento do tipo
 
-Com finalidade de auxiliar o desenvolvedor, especificamos as dimensões das três variações na escala de avatares:
+Com finalidade de auxiliar, especificamos as dimensões das três variações na escala de avatares:
 
 ![Exemplo Tipo](imagens/avatar-foto-pequeno-espacamento.png)
 
@@ -152,13 +153,13 @@ A imagem acima sugere que a usuária Márcia possui cinco notificações não li
 
 2- Em _Cards_, com finalidade de identificação do usuário:
 
-O avatar pode ser utilizado em diversos formatos de _cards_ (ver componente _Card_), de acordo com sua aplicação. Geralmente a finalidade é de identificação do usuário com um texto mais detalhado. Pode ser utilizado também para permitir a alteração da imagem do avatar. Neste caso, o processo pode ser por meio de clique no ícone Camera (fa-camera) ou simplesmente arrastando a imagem para a imagem do avatar.
+O avatar pode ser utilizado em diversos formatos de _cards_ (ver componente _Card_), de acordo com sua aplicação. Geralmente a finalidade é de identificação do usuário com um texto mais detalhado. Pode ser utilizado também para permitir a alteração da imagem do avatar. Neste caso, o processo pode ser por meio de clique na foto já descrito anteriormente.
 
 ![Exemplo Tipo](imagens/avatar-large-aplicacoes.png)
 
 3- Em Telas de Boas vindas:
 
-Sugerimos também a utilização de avatares para identificar usuários em telas de boas vindas. No exemplo abaixo, após a realização do _login_ biométrico, o usuário pode visualizar o _feedback_ com a tela de boas vindas confirmando que o _login_ foi realizado com sucesso.
+Sugerimos também a utilização de avatares para identificação de usuários em telas de boas vindas.
 
 ![Exemplo Tipo](imagens/avatar-medium-aplicacoes.png)
 
@@ -231,6 +232,7 @@ Ainda é possível e sugerido a utilização de avatares em contextos de _chat_ 
 | Icon Fechar                | color    | `--color-primary-default`   | 100%    |
 | Icon User (avatar icônico) | color    | `--color-primary-pastel-01` | 100%    |
 | Icon Camera                | color    | `--color-primary-default`   | 100%    |
+| Conteiner                  | color    | `--color-primary-pastel-02` | 100%    |
 
 ### Estado
 
