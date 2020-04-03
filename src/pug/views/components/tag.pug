@@ -4,7 +4,8 @@ append vars
     - var title = "Tag";
 
 append content
-    h1 Tags de Entrada
+    h1 Tag
+    h6 Estados (enabled, disabled, selected, hover)
     +tag
         .icon: i.fa.fa-car
         span Mitsubishi Outlander
@@ -14,19 +15,23 @@ append content
     +tag.disabled
         .icon: i.fa.fa-car
         span Mitsubishi Outlander
+    hr
+    h6 Tag de Entrada
     .br-tag-input
+    hr
+    h6 Tag de Escolha
     .br-tag-list
         +tag
-            .icon: i.fa.fa-car
-            span Mitsubishi Outlander
+            span Alta Prioridade
         +tag
-            .icon: i.fa.fa-car
-            span Mitsubishi Outlander
+            span Baixa Prioridade
+    hr
+    h6 Tag de Filtro        
     .br-tag-filter
         +tag
-            .icon: i.fa.fa-car
-            span Mitsubishi Outlander
+            .icon: i.fas.fa-check
+            span Modelo de Automóvel
         +tag
-            .icon: i.fa.fa-car
-            span Mitsubishi Outlander
+            .icon: i.fas.fa-check
+            span Tipo de Combustível 
 
