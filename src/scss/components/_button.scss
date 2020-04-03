@@ -1,12 +1,15 @@
 .#{$prefix}button {
   margin: 22px 20px;
+  @include mobil;
   &.is-primary {
     @include button-pill;
     @include estados;
+    @include mobil;
    }
   &.is-secondary {
     @include button-pill(v(color-secondary-01, $color-secondary-01), v(color-primary-default,$color-primary-default));
     @include estados;
+    @include mobil;
   }
   &.is-call-to-action {
     @include button-pill(
@@ -18,13 +21,15 @@
     height: $button-height-default + ($button-action-border-width * 2);
     font-size: v(font-size-scale-up-02,$font-size-scale-up-02);
     @include estados-actions;
-    @include media-breakpoint-up(sm) {
-      min-width: $button-action-min-width;
+    @include media-breakpoint-down(xs) {
+      width: 100%;
     }
     &.is-mobile{
       @include estados-actions;
       border: 13px solid  v(color-secondary-03, $color-secondary-03);
       font-size: v(font-size-scale-down-01, $font-size-scale-base);
+      height: 44px;
+      min-height: 32px;
       &:focus:active{
         background-color: v(status-activated-background, $status-activated-background);
         color: v(status-activated-text);
@@ -36,9 +41,11 @@
       }
     }
   }
+
   &.is-tertiary{
     @include button-link;
     @include estados;
+    @include mobil;
     text-decoration: underline;
     color: v(color-primary-default, $color-primary-default);
     &:focus:active{
@@ -46,25 +53,15 @@
       color:v(status-activated-background, $status-activated-background);
     }
   }
-  &.is-cancel {
-    @include button-link(v(color-primary-default,$color-primary-default));
-    text-decoration: underline;
-    @include estados;
-    &:focus:active{
-      background-color: transparent!important;
-      color:v(color-primary-darken-01, $color-primary-darken-01)!important;
-    }
-  }
   &.is-small {
-    @include media-breakpoint-up(md) {
-      min-width: 0;
-    }
     height: $button-height-small;
     padding: 0 $button-padding / 2;
+    font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
+    width: auto;
   }
   &.is-circle {
-    @include media-breakpoint-up(sm) {
-      min-width: 0;
+    @include media-breakpoint-down(xs) {
+      margin: 0.5em;
     }
     @include estados;
     border-radius: 50%;
@@ -92,6 +89,8 @@
     color: transparent !important;
     pointer-events: none;
     position: relative;
+    width: 8em;
+    @include mobil;
     &::after {
       animation: spinAround 500ms infinite linear;
       border: 2px solid v(color-secondary-01, $color-secondary-01);
@@ -127,9 +126,10 @@ svg[class*="fa"]{
     transform: rotate(359deg);
   }
 }
-.engloba {
+.around {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @include mobil;
 }  
