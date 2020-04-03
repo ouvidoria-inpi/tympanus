@@ -7,6 +7,8 @@ import BRAlert from './message'
 import BRNavigation from './navigation'
 import BRSelect from './select'
 import BRTabs from './tabs'
+import BRTag from './tag'
+import BRTagInput from './taginput'
 import BRUpload from './upload'
 import BRTable from './table'
 import BRScrim from './scrim'
@@ -14,7 +16,7 @@ import BRModal from './modal'
 import BRTooltip from './tooltip'
 
 export default class Globals {
-  constructor() { }
+  constructor() {}
 
   initInstanceAll() {
     this.initInstanceAccordeon()
@@ -323,8 +325,8 @@ export default class Globals {
 
     for (let brInput of inputList) {
       for (let inputAutocomplete of brInput.component.querySelectorAll(
-        'input.search-autocomplete'
-      )) {
+          'input.search-autocomplete'
+        )) {
         brInput.setAutocompleteData(countries)
       }
     }
@@ -334,8 +336,8 @@ export default class Globals {
     let navigationList = []
 
     for (let brNavigation of window.document.querySelectorAll(
-      '.br-navigation'
-    )) {
+        '.br-navigation'
+      )) {
       navigationList.push(new BRNavigation('br-navigation', brNavigation))
     }
   }
@@ -368,8 +370,8 @@ export default class Globals {
     let datepickerList = []
 
     for (let brDatepicker of window.document.querySelectorAll(
-      '.br-datepicker'
-    )) {
+        '.br-datepicker'
+      )) {
       datepickerList.push(new BRDatepicker('br-datepicker', brDatepicker))
     }
   }
@@ -383,7 +385,7 @@ export default class Globals {
 
   initInstanceScrim() {
     let scrimList = [];
-    
+
     for (let brScrim of window.document.querySelectorAll(".br-scrim")) {
       scrimList.push(new BRScrim("br-scrim", brScrim));
     }
@@ -410,14 +412,47 @@ export default class Globals {
         button.addEventListener("click", () => {
           scrim.showScrim();
         });
-      } 
+      }
     }
   }
 
   initInstanceTooltip() {
     let tooltipList = []
-    for (let brTooltip of window.document.querySelectorAll( ".br-tooltip")) {
-      tooltipList.push(new BRTooltip('br-tooltip', brTooltip ))
+    for (let brTooltip of window.document.querySelectorAll(".br-tooltip")) {
+      tooltipList.push(new BRTooltip('br-tooltip', brTooltip))
+    }
+  }
+
+  initInstanceTagInput() {
+    let tagInputList = []
+
+    for (let brTag of window.document.querySelectorAll('.br-tag-input')) {
+      tagInputList.push(new BRTagInput('br-tag-input', brTag))
+    }
+  }
+
+
+
+  initInstanceTag() {
+
+    let tagList = []
+
+    for (let brTag of window.document.querySelectorAll('.br-tag')) {
+      tagList.push(new BRTag('br-tag', brTag))
+    }
+
+    let tagListChoice = []
+
+    for (let brTagChoice of window.document.querySelectorAll('.br-tag-list')) {
+      console.log("....");
+      tagListChoice.push(new BRTagChoice('br-tag-list', brTagChoice))
+    }
+
+    let tagListFilter = []
+
+    for (let brTagFilter of window.document.querySelectorAll('.br-tag-filter')) {
+      console.log("....");
+      tagListFilter.push(new BRTagFilter('br-tag-list', brTagFilter))
     }
   }
 }
