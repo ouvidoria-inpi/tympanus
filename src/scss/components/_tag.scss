@@ -39,7 +39,7 @@
     .icon {
       color: v(color-secondary-01);
       }
-    &.is-start .close button{
+    &.tag-input-close .close button{
       color: v(color-secondary-01);
     }
   }
@@ -56,11 +56,11 @@
         color: v(color-primary-default);
       }
     }
-    &.is-start .close button{
+    &.tag-input-close .close button{
       color: v(color-support-03);
     }
   }
-  &.is-start-close{  
+  &.tag-input-close{  
     .close {
       button {
         display: flex;
