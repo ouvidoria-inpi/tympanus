@@ -5,7 +5,9 @@ Nenhuma dependência.
 ## Código básico
 
 ```html
-<button class="br-button" type="button">Botão</button>
+<button class="br-button" type="button">
+  Botão
+</button>
 ```
 
 ## Detalhamento
@@ -16,22 +18,25 @@ Este componente é formado pelos seguintes elementos:
 
 ## Variações
 
-Estão disponíveis 9 tipos de botões. Cada tipo é aplicado com o prefixo `is-`.
+Estão disponíveis 10 tipos de botões. Cada tipo é aplicado com o prefixo `is-`.
 
-4 para uso comum:
+3 para uso comum:
 
 - Primário
 - Secundário
 - Terciário
-- Cancelar
 
-5 para uso específico:
+
+7 para uso específico:
 
 - Call to Action
 - Circular
 - Redes Sociais
 - Voltar ao Topo
 - Filtrar
+- Loading
+- Web Mini
+
 
 ### Botão Primário
 
@@ -42,7 +47,9 @@ NUNCA use mais de 1 Botão Primário, pois confunde o usuário em sua tomada de 
 Exemplo de uso:
 
 ```html
-<button class="br-button is-primary" type="button">Ação</button>
+<button class="br-button is-primary" type="button">
+  Ação
+</button>
 ```
 
 ### Botão Secundário
@@ -52,7 +59,9 @@ Para **ações subjetivas** ou de **menor importância** use **Botão Secundári
 Exemplo de uso:
 
 ```html
-<button class="br-button is-secondary" type="button">Ação</button>
+<button class="br-button is-secondary" type="button">
+  Ação
+</button>
 ```
 
 ### Botão Terciário
@@ -62,31 +71,31 @@ Nas situações em que o botão deverá se comportar como um **link** use o **Bo
 Exemplo de uso:
 
 ```html
-<button class="br-button is-tertiary" type="button">Ação</button>
+<button class="br-button is-tertiary" type="button">
+  Ação
+</button>
 ```
 
-### Botão Cancelar
 
-Para cancelar use o **Botão Cancelar**.
-
-Cor no botão sinaliza uma chamada à ação, por isso o **Botão Cancelar** possui a mesma cor de um texto padrão na tela. Além disso, é preciso passar a impressão de que o botão não fará alterações no sistema e será sua fuga da ação.
-
-[https://uxmovement.com/buttons/why-cancel-buttons-should-never-have-a-color/](https://uxmovement.com/buttons/why-cancel-buttons-should-never-have-a-color/)
-
-Exemplo de uso:
-
-```html
-<button class="br-button is-cancel" type="button">Cancelar</button>
-```
-
-### Botão Call to Action
+### Botão Call to Action(Web e Mobile)
 
 Usado em situações que necessitem atenção especial. Ele é diferente do Botão Primário.
 
 Exemplo de uso:
 
+Web
+
 ```html
-<button class="br-button is-call-to-action" type="button">Ação</button>
+<button class="br-button is-call-to-action" type="button">
+  Ação
+</button>
+```
+
+Mobile
+
+```Html
+  <button class="br-button is-circle is-large is-call-to-action is-mobile" type="button"><i class="fas fa-plus"></i>
+  </button>
 ```
 
 ### Botão Circular
@@ -158,7 +167,7 @@ Exemplo de uso:
 
 ### Botão Filtrar
 
-Usado especial para uso de filtros.
+Usado especial para uso de filtros. Devemos usar a classe `is-filter`.
 
 Exemplo de uso:
 
@@ -168,6 +177,39 @@ Exemplo de uso:
   <i class="fas fa-sliders-h"></i>
 </button>
 ```
+
+### Botão Loading
+
+Botão usado para indicar que algum processo em segundo plano está sendo executado.
+A classe a ser usada é `is-loading`.
+
+Exemplo de uso: 
+
+```Html
+<button class="br-button is-primary is-loading" type="button">
+</button>
+```
+
+Ou para botão Call to Action
+
+```Html
+<button class="br-button is-call-to-action is-loading" type="button">
+</button>
+```
+
+### Botão Web Mini
+
+São usados em locais com espaço reduzidos, como cards, botão sair presente nos cabeçalhos.
+Devemos usar a classe `is-small`.
+
+Exemplo de uso:
+
+```Html
+  <button class="br-button is-primary is-small" type="button">
+    Entrar
+  </button>
+```
+
 
 ## Estados
 
@@ -179,8 +221,13 @@ Exemplo de uso:
 Exemplo de uso:
 
 ```html
-<button class="br-button is-primary is-hover" type="button">Ação</button>
-<button class="br-button is-primary is-focus" type="button">Ação</button>
+<button class="br-button is-primary is-hover" type="button">
+  Ação
+</button>
+
+<button class="br-button is-primary is-focus" type="button">
+  Ação
+</button>
 ```
 
 ### disabled
@@ -194,25 +241,24 @@ Exemplo de uso:
 <button class="br-button is-primary" type="button" disabled>
   Ação desativada
 </button>
+
 <a href="" class="br-button is-primary is-disabled">Ação</a>
 ```
 
-### loading
-
-- Sempre que necessário aplique o estado de `loading` nos botões para sinalizar ao usuário que o sistema está operando
-- Este estado é recomendados para os tipos **Botão Primário**, **Botão Secundário**, **Botão Call to Action** e **Botão Circular**
-- Deve ser aplicado diretamente no componente usando o prefixo `is-`
-
-Exemplo de uso:
-
-```html
-<button class="br-button is-primary is-loading" type="button">Ação</button>
-```
 
 ## Regras especiais
 
-Em _smartphones_ o botão terá a largura da tela. Será aplicado espaçamento vertical automático de 16px entre eles.
+Essa regra deve ser aplicada apenas nas versões menores e circulares dos botões `Call to Action` e `loading`, no caso específico de aparelhos mobile.
+Usa-se a classe `is-circle is-large is-mobile`
 
-Nos demais dispositivos os botões terão tamanho mínimo de 144px. Será aplicado espaçamento horizontal automático de 24px entre botões.
+Exemplo de uso:
 
-Botões dentro do elemento `actions` do componente `br-form` serão ordenados de forma inversa.
+```Html
+<button class="br-button is-circle is-large is-call-to-action is-mobile  is-loading" type="button">
+</button>
+```
+
+```Html
+  <button class="br-button is-circle is-large is-call-to-action is-mobile" type="button"><i class="fas fa-plus"></i>
+  </button>
+```
