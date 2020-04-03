@@ -129,8 +129,7 @@ append content
           div.icon
             i.fas.fa-chevron-right
   h2 Recursos Visuais
-  .row
-    .row
+  div.row
     div.engloba
       .col
         ul.br-list
@@ -166,7 +165,7 @@ append content
             div.icon
               a(href="#") Link
                 i.fas.fa-chevron-right
-      div.col
+      .col
         ul.br-list
           li.list-item
             div.icon
@@ -200,3 +199,53 @@ append content
             div.icon
               div.headline meta
               i.fas.fa-cube
+  h2 Lista com Collapse
+  .row
+    div.engloba
+      ul.br-list
+        li.list-item
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            a.list-item(href='#') Link
+              i.fas.fa-chevron-right
+        li.list-item
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            a.list-item(href='#') Link
+              i.fas.fa-chevron-right
+          ul
+            li Texto de uma linha
+            li Texto de uma linha
+            li Texto de uma linha
+            li Texto de uma linha
+        li.list-item
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            a.list-item(href='#') Link
+              i.fas.fa-chevron-right
+        li.list-item
+          div.icon
+            i.fas.fa-heartbeat
+          div.content
+            div.text Texto de uma linha
+          div.icon
+            a.list-item(href='#') Link
+              i.fas.fa-chevron-right
+
+append style
+  style.
+    .engloba {
+        align-items: flex-start;
+        display: flex!important;
+        flex-direction: row;
+        justify-content: center;
+    }

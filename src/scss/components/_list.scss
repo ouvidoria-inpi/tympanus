@@ -50,6 +50,7 @@ ul.#{$prefix}list {
 }
 .#{$prefix}list {
   background-color: v(color-secondary-01);
+  min-width: 400px;
   padding: 0;
   width: auto;
   list-style-type: none;
@@ -69,6 +70,7 @@ ul.#{$prefix}list {
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     font-size: v(font-size-scale-base);
     justify-content: space-between;
     min-height: 56px;
@@ -133,6 +135,7 @@ ul.#{$prefix}list {
     .icon {
       align-items: center;
       display: flex;
+      flex-basis: auto;
       flex-direction: column;
       justify-content: center;
       .headline {
@@ -171,7 +174,7 @@ ul.#{$prefix}list {
       }
     }
     .content {
-      width: 100%;
+      flex-basis: 74%;
       .sub-title {
         font-size: v(font-size-scale-down-01);
         font-weight: v(font-weight-semi-bold);
@@ -186,6 +189,13 @@ ul.#{$prefix}list {
         font-size: v(font-size-scale-down-01);
         color: v(color-secondary-05);
       }
+    }
+    ul {
+      box-shadow: $list-box-shadow;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      list-style-type: none;
     }
   }
 }
