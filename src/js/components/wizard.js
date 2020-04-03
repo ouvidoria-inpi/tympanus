@@ -148,6 +148,12 @@ class BRWizard {
 
     });
 
+    //set steps buttons grid style if it needs to scroll horizontaly
+    if ( this.DOMstrings.stepsBar.classList.contains("is-scroll") ) {
+      let stepsWidth = Math.round( 100 / this.DOMstrings.stepsBtns.length);
+      this.DOMstrings.stepsBar.style.gridTemplateColumns = "repeat(auto-fit, minmax(125px, " + stepsWidth + "% ))";
+    }
+
     const dispatcher = new SwipeEventDispatcher(this.DOMstrings.stepsBar);
     dispatcher.on('SWIPE_UP', () => { 
       this.DOMstrings.stepsBar.classList.add("is-collapsed")

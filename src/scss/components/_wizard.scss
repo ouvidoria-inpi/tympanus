@@ -4,7 +4,11 @@
   overflow-x: hidden;
   .wizard-progress {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); //Padrao horizontal
+    //grid-template-columns: repeat(auto-fit, minmax(125px, 9%));
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
     background-color: v(color-secondary-02);
     min-height: 164px;
     padding-top: 56px;
@@ -222,19 +226,23 @@
         }
       }
       &:after {
-        position: absolute;
+        position: fixed;
         display: block;
         width: 12%;
         height: 4px;
         border-radius: 2px;
         content: '';
         background-color: v(color-secondary-04);
-        bottom: 0;
+        //bottom: 0;
         left: 44%;
+        margin-top: 98px;
       }
       &.is-collapsed {
         min-height: auto;
         padding-bottom: 32px;
+        &:after {
+          margin-top: 52px;
+        }
         .wizard-progress-btn {
           padding-bottom: 8px;
           .info {

@@ -5,7 +5,7 @@ mixin wizard(label="Título", labelClass)
   div(
     id=attributes.id
     class=className)
-    .wizard-progress.is-collapsed
+    .wizard-progress.is-collapsed.is-scroll
       button(class="wizard-progress-btn is-active" type="button" title="Dados Pessoais" step="1")
         span.info Dados Pessoais
       button(class="wizard-progress-btn" type="button" title="Validar Dados" step="2")
@@ -13,6 +13,21 @@ mixin wizard(label="Título", labelClass)
       button(class="wizard-progress-btn" type="button" title="Habilitar Cadastro" step="3")
         span.info Habilitar Cadastro
       button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="4" disabled)
+        span.info Cadastrar Senha
+      //- Exemplo para testar layout com muitos botoes de passos 
+      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="5" disabled)
+      //-   span.info Cadastrar Senha
+      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="6" disabled)
+      //-   span.info Cadastrar Senha
+      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="7" disabled)
+      //-   span.info Cadastrar Senha
+      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="8" disabled)
+      //-   span.info Cadastrar Senha
+      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="9" disabled)
+      //-   span.info Cadastrar Senha
+      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="10" disabled)
+      //-   span.info Cadastrar Senha
+      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="11" disabled)
         span.info Cadastrar Senha
     .wizard-form
       .wizard-panel.is-active
