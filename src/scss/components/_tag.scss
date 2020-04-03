@@ -33,7 +33,7 @@
   &:focus {
     background-color: v(color-primary-pastel-01);
   }
-  &:active {
+  &.active {
     background-color: v(color-primary-default);
     color: v(color-secondary-01);
     .icon {
@@ -72,31 +72,10 @@
       }
     }
   }
-  
-
-  
-
-  .input-tag{
-    padding: 0.9em 0.5em;
-    box-sizing: border-box;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    font-size: inherit;
-    font-family: inherit;
-    color: inherit;
-  }
-
 }
-
-
-.tag-input {
+.br-tag-input {
   @include input;
 }
-
-
-
 .input-tag{
   padding: 0.9em 0.5em;
   box-sizing: border-box;
