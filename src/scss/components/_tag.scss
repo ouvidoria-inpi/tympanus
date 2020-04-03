@@ -92,15 +92,7 @@
 
 
 .tag-input {
-  border: 1px solid #1e87f0;
-  box-sizing: border-box;
-  padding: 0em 0.5em;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 14px;
-  border-radius: 5px;
-  
+  @include input;
 }
 
 

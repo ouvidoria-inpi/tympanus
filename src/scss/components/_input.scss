@@ -1,21 +1,14 @@
 .#{$prefix}input {
   position: relative;
   input {
-    background: v(color-secondary-01);
-    border: $input-border-width solid $input-border-color;
-    border-radius: $input-radius;
-    display: block;
-    height: $input-default;
-    padding-left: $spacer * 2;
-    padding-right: $spacer * 5;
-    width: 100%;
-    &:focus {
+    @include input;
+    /*&:focus {
       background: v(status-focused-background)
       linear-gradient(
         v(status-focused-overlay),
         v(status-focused-overlay)
       );
-    }
+    }*/
     &:invalid {
       border-color: v(color-danger);
       box-shadow: 0 0 0 1px v(color-danger);
