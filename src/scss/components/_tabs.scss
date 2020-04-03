@@ -3,7 +3,7 @@
   &[data-counter="true"] {
     .tab-nav {
       ul {
-        margin-bottom: 45px;
+        margin-bottom: 72px;
         .tab-item {
           &[not-tab="true"] {
             .name {
@@ -36,12 +36,14 @@
       border-bottom: 1px solid v(color-secondary-04, $color-secondary-04);
       display: flex;
       padding: 0;
+      margin-bottom: 8px;
       .tab-item {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0 $spacer * 3.25;
         position: relative;
+        white-space: nowrap;
         &:first-child {
           padding-left: 0;
         }
@@ -51,7 +53,7 @@
         &.is-active {
           a {
             border-bottom: 4px solid v(color-primary-default, $color-primary-default);
-            padding-bottom: $spacer * 2;
+            padding-bottom: $spacer * 1;
             .name {
               color: v(color-primary-darken-02, $color-primary-darken-02)
             }
@@ -63,7 +65,7 @@
         a {
           color: v(color-secondary-07, $color-secondary-07);
           display: inline-block;
-          padding: $spacer * 2.5 $spacer * 3;
+          padding: $spacer * 1 $spacer * 3;
           &:hover {
             background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
             .name {
@@ -94,6 +96,10 @@
           top: 80px;
         }
       }
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      overflow-x: auto;
     }
   }
   .tab-content {
