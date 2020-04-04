@@ -14,6 +14,7 @@ import BRTable from './table'
 import BRScrim from './scrim'
 import BRModal from './modal'
 import BRTooltip from './tooltip'
+import BRWizard from './wizard'
 
 export default class Globals {
   constructor() {}
@@ -33,7 +34,6 @@ export default class Globals {
     this.initInstanceScrim()
     this.initInstanceModal()
     this.initInstanceTooltip()
-
   }
 
   initInstanceAccordeon() {
@@ -325,8 +325,8 @@ export default class Globals {
 
     for (let brInput of inputList) {
       for (let inputAutocomplete of brInput.component.querySelectorAll(
-          'input.search-autocomplete'
-        )) {
+        'input.search-autocomplete'
+      )) {
         brInput.setAutocompleteData(countries)
       }
     }
@@ -336,8 +336,8 @@ export default class Globals {
     let navigationList = []
 
     for (let brNavigation of window.document.querySelectorAll(
-        '.br-navigation'
-      )) {
+      '.br-navigation'
+    )) {
       navigationList.push(new BRNavigation('br-navigation', brNavigation))
     }
   }
@@ -370,55 +370,61 @@ export default class Globals {
     let datepickerList = []
 
     for (let brDatepicker of window.document.querySelectorAll(
-        '.br-datepicker'
-      )) {
+      '.br-datepicker'
+    )) {
       datepickerList.push(new BRDatepicker('br-datepicker', brDatepicker))
     }
   }
 
   initInstanceTable() {
-    let tableList = [];
-    for (let [index, brTable] of window.document.querySelectorAll(".br-table").entries()) {
-      tableList.push(new BRTable("br-table", brTable, index));
+    let tableList = []
+    for (let [index, brTable] of window.document
+      .querySelectorAll('.br-table')
+      .entries()) {
+      tableList.push(new BRTable('br-table', brTable, index))
     }
   }
 
   initInstanceScrim() {
-    let scrimList = [];
+    let scrimList = []
 
-    for (let brScrim of window.document.querySelectorAll(".br-scrim")) {
-      scrimList.push(new BRScrim("br-scrim", brScrim));
+    for (let brScrim of window.document.querySelectorAll('.br-scrim')) {
+      scrimList.push(new BRScrim('br-scrim', brScrim))
     }
 
-    for (let buttonBloco1 of window.document.querySelectorAll(".bloco1 button")) {
-      buttonBloco1.addEventListener("click", () => {
+    for (let buttonBloco1 of window.document.querySelectorAll(
+      '.bloco1 button'
+    )) {
+      buttonBloco1.addEventListener('click', () => {
         for (let brScrim of scrimList) {
-          brScrim.showScrim();
+          brScrim.showScrim()
         }
-      });
+      })
     }
   }
 
   initInstanceModal() {
     let modalList = []
 
-    for (let brModal of window.document.querySelectorAll(".br-modal")) {
-      modalList.push(new BRModal("br-modal", brModal));
+    for (let brModal of window.document.querySelectorAll('.br-modal')) {
+      modalList.push(new BRModal('br-modal', brModal))
     }
 
-    for (let brScrim of window.document.querySelectorAll(".br-scrim")) {
-      let scrim = new BRScrim("br-scrim", brScrim);
-      for (let button of window.document.querySelectorAll(".br-scrim + button")) {
-        button.addEventListener("click", () => {
-          scrim.showScrim();
-        });
+    for (let brScrim of window.document.querySelectorAll('.br-scrim')) {
+      let scrim = new BRScrim('br-scrim', brScrim)
+      for (let button of window.document.querySelectorAll(
+        '.br-scrim + button'
+      )) {
+        button.addEventListener('click', () => {
+          scrim.showScrim()
+        })
       }
     }
   }
 
   initInstanceTooltip() {
     let tooltipList = []
-    for (let brTooltip of window.document.querySelectorAll(".br-tooltip")) {
+    for (let brTooltip of window.document.querySelectorAll('.br-tooltip')) {
       tooltipList.push(new BRTooltip('br-tooltip', brTooltip))
     }
   }
@@ -431,10 +437,7 @@ export default class Globals {
     }
   }
 
-
-
   initInstanceTag() {
-
     let tagList = []
 
     for (let brTag of window.document.querySelectorAll('.br-tag')) {
@@ -444,15 +447,23 @@ export default class Globals {
     let tagListChoice = []
 
     for (let brTagChoice of window.document.querySelectorAll('.br-tag-list')) {
-      console.log("....");
+      console.log('....')
       tagListChoice.push(new BRTagChoice('br-tag-list', brTagChoice))
     }
 
     let tagListFilter = []
 
-    for (let brTagFilter of window.document.querySelectorAll('.br-tag-filter')) {
-      console.log("....");
+    for (let brTagFilter of window.document.querySelectorAll(
+      '.br-tag-filter'
+    )) {
+      console.log('....')
       tagListFilter.push(new BRTagFilter('br-tag-list', brTagFilter))
+    }
+  }
+  initInstanceWizard() {
+    let wizardList = []
+    for (let brWizard of window.document.querySelectorAll('.br-wizard')) {
+      wizardList.push(new BRWizard('br-wizard', brWizard))
     }
   }
 }
