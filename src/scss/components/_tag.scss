@@ -1,6 +1,6 @@
 .#{$prefix}tag {
   //@include hover;
-  //@include focus; 
+  //@include focus;
   align-items: center;
   background: v(color-secondary-01);
   border: 1px solid v(color-primary-default);
@@ -37,29 +37,29 @@
     color: v(color-secondary-01);
     .icon {
       color: v(color-secondary-01);
-      }
-    &.tag-input-close .close button{
+    }
+    &.tag-input-close .close button {
       color: v(color-secondary-01);
     }
   }
   &.disabled {
     background-color: v(color-primary-pastel-01);
-    opacity: .45;
+    opacity: 0.45;
     &:active,
     &:hover,
-    &:focus  {
+    &:focus {
       background: v(color-primary-pastel-01);
       color: v(color-primary-default);
-      opacity: .45;
+      opacity: 0.45;
       .icon {
         color: v(color-primary-default);
       }
     }
-    &.tag-input-close .close button{
+    &.tag-input-close .close button {
       color: v(color-support-03);
     }
   }
-  &.tag-input-close{  
+  &.tag-input-close {
     .close {
       button {
         display: flex;
@@ -75,8 +75,13 @@
 }
 .br-tag-input {
   @include input;
+  display: flex;
+  flex-wrap: wrap;
+  input {
+    flex: 1;
+  }
 }
-.input-tag{
+.input-tag {
   padding: 0.9em 0.5em;
   box-sizing: border-box;
   -webkit-box-flex: 1;
