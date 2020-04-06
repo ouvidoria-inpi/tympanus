@@ -12,9 +12,11 @@
   height: 20px;
   margin: 10px;
   padding: 0 10px;
+
   .content {
     display: flex;
   }
+
   .icon {
     align-items: center;
     color: v(color-primary-default);
@@ -23,43 +25,54 @@
     justify-content: center;
     margin-right: 10px;
     width: 12px;
+
     img {
       max-height: 9px;
       max-width: 12px;
     }
   }
+
   &:hover,
   &:focus {
     background-color: v(color-primary-pastel-01);
+    outline: none;
   }
+
   &.active {
     background-color: v(color-primary-default);
     color: v(color-secondary-01);
+
     .icon {
       color: v(color-secondary-01);
-      }
-    &.tag-input-close .close button{
+    }
+
+    &.tag-input-close .close button {
       color: v(color-secondary-01);
     }
   }
+
   &.disabled {
     background-color: v(color-primary-pastel-01);
     opacity: .45;
+
     &:active,
     &:hover,
-    &:focus  {
+    &:focus {
       background: v(color-primary-pastel-01);
       color: v(color-primary-default);
       opacity: .45;
+
       .icon {
         color: v(color-primary-default);
       }
     }
-    &.tag-input-close .close button{
+
+    &.tag-input-close .close button {
       color: v(color-support-03);
     }
   }
-  &.tag-input-close{  
+
+  &.tag-input-close {
     .close {
       button {
         display: flex;
@@ -73,10 +86,12 @@
     }
   }
 }
+
 .br-tag-input {
   @include input;
 }
-.input-tag{
+
+.input-tag {
   padding: 0.9em 0.5em;
   box-sizing: border-box;
   -webkit-box-flex: 1;
