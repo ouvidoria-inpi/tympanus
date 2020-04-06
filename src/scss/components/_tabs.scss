@@ -11,12 +11,14 @@
               font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
               line-height: v(font-size-scale-up-03, $font-size-scale-up-03);
               font-weight: v(font-weight-semi-bold ,$font-weight-semi-bold);
+              display: inline-block;
+              padding-bottom: 6px;
             }
             .outcome {
               font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
               font-weight: v(font-weight-regular, $font-weight-regular);
               position: absolute;
-              top: 72px;
+              top: 52px;
               left: 0;
               span {
                 color: v(color-primary-default ,$color-primary-default);
@@ -96,7 +98,7 @@
           font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
           justify-content: center;
           position: absolute;
-          top: 80px;
+          top: 60px;
         }
       }
     }
