@@ -1,36 +1,31 @@
-mixin wizard(label="Título", labelClass)
+mixin wizard(label="Título", labelClass, collapsed=true, scroll=true, vertical=false, total = 4)
   - let className = attributes.class
   - let componentClass = prefix + "wizard"
+  - total = attributes.total ?  attributes.total : 4
   - className = className ? componentClass + " " + className : componentClass
   div(
     id=attributes.id
+    collapsed=attributes.collapsed
+    scroll=attributes.scroll
+    vertical=attributes.vertical
     class=className)
-    .wizard-progress.is-collapsed.is-scroll
-      button(class="wizard-progress-btn is-active" type="button" title="Dados Pessoais" step="1")
+    .wizard-progress.is-collapsed
+      button(class="wizard-progress-btn" type="button" title="Dados Pessoais" step="1" active)
         span.info Dados Pessoais
       button(class="wizard-progress-btn" type="button" title="Validar Dados" step="2")
         span.info Validar Dados
       button(class="wizard-progress-btn" type="button" title="Habilitar Cadastro" step="3")
         span.info Habilitar Cadastro
-      button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="4" disabled)
+      button(class="wizard-progress-btn" type="button" title="Cadastrar Senha" step="4")
         span.info Cadastrar Senha
-      //- Exemplo para testar layout com muitos botoes de passos 
-      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="5" disabled)
-      //-   span.info Cadastrar Senha
-      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="6" disabled)
-      //-   span.info Cadastrar Senha
-      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="7" disabled)
-      //-   span.info Cadastrar Senha
-      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="8" disabled)
-      //-   span.info Cadastrar Senha
-      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="9" disabled)
-      //-   span.info Cadastrar Senha
-      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="10" disabled)
-      //-   span.info Cadastrar Senha
-      //- button(class="wizard-progress-btn is-disabled" type="button" title="Cadastrar Senha" step="11" disabled)
-        span.info Cadastrar Senha
+      if ( total > 4 )
+        - let n = 5;
+        while n <= total 
+          button(class="wizard-progress-btn" type="button" title="Passo "+ n step=n)
+            span.info= 'Passo ' + n
+          - n++
     .wizard-form
-      .wizard-panel.is-active
+      .wizard-panel(active)
         .wizard-panel-content
           .h3 Dados Pessoais
           .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -49,13 +44,28 @@ mixin wizard(label="Título", labelClass)
           .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .wizard-panel-btn
           +button(class="is-secondary wizard-btn-prev") Voltar
-          +button(class="is-primary wizard-btn-next is-disabled" disabled) Avançar
+          +button(class="is-primary wizard-btn-next") Avançar
       .wizard-panel
         .wizard-panel-content
           .h3 Cadastrar Senha
           .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .wizard-panel-btn
           +button(class="is-secondary wizard-btn-prev") Voltar
-          +button(class="is-primary wizard-btn") Finalizar
-    if block
-      block
+          if ( total <= 5 )
+            +button(class="is-primary wizard-btn") Finalizar
+          else 
+            +button(class="is-primary wizard-btn-next") Avançar
+      if ( total > 4 )
+        - let n = 5;
+        while n <= total 
+          .wizard-panel
+            .wizard-panel-content
+              .h3= 'Passo ' +  n 
+              .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            .wizard-panel-btn
+              +button(class="is-secondary wizard-btn-prev") Voltar
+              if ( n < total )
+                +button(class="is-primary wizard-btn-next") Avançar
+              else 
+                +button(class="is-primary wizard-btn") Finalizar
+          - n++

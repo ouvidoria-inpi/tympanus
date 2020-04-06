@@ -16,9 +16,9 @@ class BRWizard {
       stepNextBtnClass: 'wizard-btn-next' 
     };
     //remove class from a set of items
-    this.removeClasses = (elemSet, className) => {
+    this.removeAttributes = (elemSet, attrName) => {
       elemSet.forEach(elem => {
-        elem.classList.remove(className);
+        elem.removeAttribute(attrName)
       });
     };
 
@@ -40,17 +40,19 @@ class BRWizard {
     this.setActiveStep = activeStepNum => {
 
       //remove active state from all the state
-      this.removeClasses(this.DOMstrings.stepsBtns, 'is-active');
-      this.removeClasses(this.DOMstrings.stepsBtns, 'is-inactive');
+      this.removeAttributes(this.DOMstrings.stepsBtns, 'active');
+      this.removeAttributes(this.DOMstrings.stepsBtns, 'inactive');
+
 
       //set picked items to active
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
 
         if (index == activeStepNum) {
-          elem.classList.add('is-active');
+          elem.setAttribute('active', true);
+          elem.focus();
         }
         if (index < activeStepNum) {
-          elem.classList.add('is-inactive');
+          elem.setAttribute('inactive', true);
         }
 
       });
@@ -63,7 +65,7 @@ class BRWizard {
 
       this.DOMstrings.stepFormPanels.forEach(elem => {
 
-        if (elem.classList.contains('is-active')) {
+        if ( elem.hasAttribute('active')) {
 
           activePanel = elem;
 
@@ -79,12 +81,12 @@ class BRWizard {
     this.setActivePanel = activePanelNum => {
 
       //remove active class from all the panels
-      this.removeClasses(this.DOMstrings.stepFormPanels, 'is-active');
+      this.removeAttributes(this.DOMstrings.stepFormPanels, 'active');
 
       //show active panel
       this.DOMstrings.stepFormPanels.forEach((elem, index) => {
         if (index === activePanelNum) {
-          elem.classList.add('is-active');
+          elem.setAttribute('active', true)
         }
       });
 
@@ -149,9 +151,9 @@ class BRWizard {
     });
 
     //set steps buttons grid style if it needs to scroll horizontaly
-    if ( this.DOMstrings.stepsBar.classList.contains("is-scroll") ) {
-      let stepsWidth = Math.round( 100 / this.DOMstrings.stepsBtns.length);
-      this.DOMstrings.stepsBar.style.gridTemplateColumns = "repeat(auto-fit, minmax(125px, " + stepsWidth + "% ))";
+    if ( this.component.hasAttribute("scroll") && !this.component.hasAttribute("vertical") ) {
+      let stepsWidth = Math.round( 100 / this.DOMstrings.stepsBtns.length) -0.5;
+      this.DOMstrings.stepsBar.style.gridTemplateColumns = "repeat(auto-fit, minmax(100px, " + stepsWidth + "% ))";
     }
 
     const dispatcher = new SwipeEventDispatcher(this.DOMstrings.stepsBar);
