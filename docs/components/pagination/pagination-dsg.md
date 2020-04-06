@@ -53,11 +53,11 @@ A estrutura da paginação é formada pela sequência de 09 elementos dentre nú
 ![Paginacao Setas](imagens/Paginacao_OnMouseOver_Setas.png)
 
 5 | Usuário põe o mouse sobre reticências
-![Paginacao Reticencias](imagens/Paginacao_OnMouseOver_Reticências.png)
+![Paginacao Reticencias](imagens/Paginacao_OnMouseOver_Reticencias.png)
 
 6 | Usuário clica sobre as reticências
 
-![Paginacao Reticencias](imagens/Paginacao_Clique_Reticências.png)
+![Paginacao Reticencias](imagens/Paginacao_Clique_Reticencias.png)
 
 7 | Usuário seleciona uma página com mais de 02 caracteres
 ![Paginacao 04Caracteres](imagens/Paginacao_Selecionada_Mais02Caracteres.png)

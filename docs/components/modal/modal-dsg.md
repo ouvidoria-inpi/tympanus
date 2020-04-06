@@ -2,7 +2,7 @@
 
 ## Uso
 
-Modal é um conteiner que aparece sobre um conteúdo de interface, para fornecer informações críticas ou solicitar uma decisão. São apresentados em conjunto com um [scrim](#). Requer concentração do usuário, permanecendo visível até que alguma ação seja tomada.
+Modal é um conteiner que aparece sobre um conteúdo de interface, para fornecer informações críticas ou solicitar uma decisão. São apresentados em conjunto com um [scrim](/ds/componentes/scrim). Requer concentração do usuário, permanecendo visível até que alguma ação seja tomada.
 
 Modais são propositadamente interruptivos, portanto devem ser usados ​​com moderação.
 
@@ -42,7 +42,7 @@ Evite termos que expressão ambiguidade, alarmam o usuário como: "_Desculpe pel
 
 #### Comportamento
 
-Se necessário, os títulos podem quebrar para um segunda linha. Maiores que duas linhas, os textos devem ser contraídos com reticências (...), e ao passar o mouse sobre o texto contraído, deverá ser revelado o texto completo pelo uso de [tooltip](#).
+Se necessário, os títulos podem quebrar para um segunda linha. Maiores que duas linhas, os textos devem ser contraídos com reticências (...), e ao passar o mouse sobre o texto contraído, deverá ser revelado o texto completo pelo uso de [tooltip](/ds/componentes/tooltip).
 
 ![Título Duas Linhas](imagens/alerta_titulo_duaslinhas.png)
 
@@ -58,7 +58,7 @@ Conteúdo pode ter várias representações de acordo com tipo de modal utilizad
 
 ### Botões
 
-Representam as 3 ações, relativas ao modal, que o usuário poderá interagir. A ação determinará o [tipo de botão](#) utilizado:
+Representam as 3 ações, relativas ao modal, que o usuário poderá interagir. A ação determinará o [tipo de botão](/ds/componentes/botao) utilizado:
 
 - **Conhecimento:** Quando a ciência do usuário é necessário para prosseguir, uma única ação será apresentada. Uso do botão primário.
 - **Confirmação:** Confirmam uma ação proposta. Se condizente ao contexto, essas ações podem envolver a remoção de algo, como "Excluir" ou "Remover". Uso do botão primário.
@@ -119,7 +119,7 @@ O uso de Título é altamente recomendável.
 
 Exibem uma lista de itens que entram em vigor imediatamente quando selecionados.
 
-Pela característica do modal, esta opção deve ser utilizada com moderação. É preferível o uso de [dropdown](#) como uma opção menos disruptiva.
+Pela característica do modal, esta opção deve ser utilizada com moderação. É preferível o uso de dropdown como uma opção menos disruptiva.
 
 ![Opção Lista](imagens/opcao_lista.png)
 
@@ -185,17 +185,17 @@ Os modais normalmente utilizam o scrim, criando uma área não interativa e exig
 
 Comportamento que pode ser aplicado em uma modal, geralmente o de Alerta, fazendo com que o fechamento seja feito de forma automatizada (após alguns segundos por exemplo), sem a necessidade de interação do usuário
 
-Esse tipo de modal só pode ser utilizado em situações onde o conteúdo não faz mais sentido após um determinado período, tal como um [loading](#).
+Esse tipo de modal só pode ser utilizado em situações onde o conteúdo não faz mais sentido após um determinado período, tal como um loading.
 
 O usuário deve ser capaz de cancelar modal a qualquer momento, por isso o botão de ação de negação é obrigatório.
 
 ![Loading](imagens/loading.png)
 
-Utilize esta opção com moderação. Prefira o uso de [toast](#) como uma opção menos disruptiva.
+Utilize esta opção com moderação. Prefira o uso de toast como uma opção menos disruptiva.
 
 ### Posição
 
-O modal deve manter o foco total do usuário até que uma ação seja tomada. Não deve ser ocultada por outros elementos. Alguns componentes de importância maior, como um [tooltip](#), podem ocultar uma parte do modal termporariamente. Componentes encontrados no modal de entrada podem ocultar parcialmente o modal, como caso de um [datapicker](#).
+O modal deve manter o foco total do usuário até que uma ação seja tomada. Não deve ser ocultada por outros elementos. Alguns componentes de importância maior, como um [tooltip](/ds/componentes/tooltip), podem ocultar uma parte do modal termporariamente. Componentes encontrados no modal de entrada podem ocultar parcialmente o modal, como caso de um [datapicker](/ds/componentes/datepicker).
 
 Deve ser centralizado na tela do dispositivo ou pode ser exibido próximo ao elemento que "solicitou/disparou" o modal.
 
@@ -218,7 +218,7 @@ Cancelar é a ação de ignorar a modal sem que uma ação de Conhecimento ou de
 
 O modal pode ser cancelada:
 
-- Clicando no [Scrim](#), porém, em alguns casos, a opção pode não existir;
+- Clicando no [Scrim](/ds/componentes/scrim), porém, em alguns casos, a opção pode não existir;
 - Interagindo com o botão "Cancelar";
 - Interagindo com o ícone de fechar na parte superior a direita;
 - Modal de Alerta nunca deve ser cancelada (via scrim ou ícone de cancelar) mas pode ser fechada por uma ação.
@@ -241,7 +241,7 @@ O modal pode ser cancelada:
 
 ### Tamanho máximo e mínimo
 
-De acordo com a grid do ds.gov, o [card](#) do modal pode ocupar uma largura de até **8 colunas** ou **640px**. O tamanho mínimo é de **3 colunas** ou **220px**;
+De acordo com a grid do ds.gov, o [card](/ds/componentes/card) do modal pode ocupar uma largura de até **8 colunas** ou **640px**. O tamanho mínimo é de **3 colunas** ou **220px**;
 
 ![Tamanho Máximo](imagens/tamanho_maximo.png)
 

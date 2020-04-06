@@ -11,10 +11,9 @@
   font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
   height: $button-height-default;
   padding: 0 $button-padding;
-  width: 100%;
+  width: auto;
   // Tablet
   @include media-breakpoint-up(sm) {
-    min-width: $button-min-width;
     width: auto;
   }
 }
@@ -28,7 +27,6 @@
   font-weight: v(font-weight-medium,$font-weight-medium);
   padding: 0 24px;
   height: 44px;
-  min-width: 144px;
   width: auto;
   border-radius: 144px;
 }
@@ -44,7 +42,7 @@
   }
   &:not(.is-disabled):not(.is-tertiary):not(.is-mobile):active{
     background-color: v(status-activated-background,$status-activated-background);
-    color: v(status-activated-color,$status-activated-color);
+    color: v(status-activated-text);
   }
   &.is-disabled{
     opacity: 0.45;
@@ -67,6 +65,12 @@
   }
   &:active{
     background-color: v(status-activated-background, $status-activated-background);
-    color: v(status-activated-color, $status-activated-color);
+    color: v(status-activated-text);
+  }
+}
+@mixin mobil{
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    margin: 0.5em;
   }
 }

@@ -56,6 +56,18 @@
     "id": "guias",
     "children": [
       {
+        "label": "Construção de componentes",
+        "filename": "construcao-de-componentes"
+      },
+      {
+        "label": "Uso dos templates",
+        "filename": "uso-dos-templates"
+      },
+      {
+        "label": "Construção do HTML",
+        "filename": "construcao-do-html"
+      },
+      {
         "label": "Acessibilidade no Código HTML",
         "filename": "acessibilidade-no-codigo-html"
       },
@@ -64,24 +76,16 @@
         "filename": "uso-do-wai-aria"
       },
       {
-        "label": "Construção do HTML",
-        "filename": "construcao-do-html"
+        "label": "Uso do css",
+        "filename": "uso-do-css"
       },
       {
         "label": "Construção do CSS",
         "filename": "construcao-do-css"
       },
       {
-        "label": "Uso do css",
-        "filename": "uso-do-css"
-      },
-      {
-        "label": "Uso dos templates",
-        "filename": "uso-dos-templates"
-      },
-      {
-        "label": "Construção de componentes",
-        "filename": "construcao-de-componentes"
+        "label": "Manutenção do CSS",
+        "filename": "manutencao-do-css"
       }
     ]
   },
@@ -129,7 +133,24 @@
       {
         "label": "Controle de Seleção",
         "filename": "selection-control",
-        "urlLabel": "controle-selecao"
+        "urlLabel": "controle-selecao",
+        "children": [
+          {
+            "label": "Checkbox",
+            "filename": "checkbox",
+            "urlLabel": "checkbox"
+          },
+          {
+            "label": "Checklist",
+            "filename": "checklist",
+            "urlLabel": "checklist"
+          },
+          {
+            "label": "Radio",
+            "filename": "radio",
+            "ulLabel": "radio"
+          }
+        ]
       },
       {
         "label": "Datepicker",
@@ -140,11 +161,6 @@
         "label": "Divider",
         "filename": "divider",
         "urlLabel": "divisor"
-      },
-      {
-        "label": "Formulário",
-        "filename": "form",
-        "urlLabel": "form"
       },
       {
         "label": "Input",
@@ -175,11 +191,6 @@
         "label": "Paginação",
         "filename": "pagination",
         "urlLabel": "paginacao"
-      },
-      {
-        "label": "Portlet",
-        "filename": "portlet",
-        "urlLabel": "portlet"
       },
       {
         "label": "Scrim",
@@ -217,5 +228,22 @@
         "urlLabel": "wizard"
       }
     ]
+  },
+  {
+    "label": "UIkit",
+    "id": "uikit",
+    "children": [
+      {
+        "label": " UIkit App Mobile ",
+        "filename": "uikit-mobile",
+        "path": "//xd.adobe.com/spec/c303d5d1-659d-4d25-5fe3-0911b6465be9-b532/",
+        "isLink": true
+      }
+    ]
+  },
+  {
+    "label": "Release Notes",
+    "id": "release-notes",
+    "type": "docs"
   }
 ]
