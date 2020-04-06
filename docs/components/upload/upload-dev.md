@@ -122,16 +122,7 @@ Botões de Voltar e Salvar, devem ter as classes do componente "br-button" e adi
 <button class="br-button is-primary" type="button">Salvar</button>
 ```
 
-# Tipos de Upload
-
-Existem 3 tipos de construção de upload, `Com Título`, `Sem Título` e `Upload Inserido no Colapse`.
-Os exemplos estão abaixo.
-
 # Estados
-
-### Hover 
-
-O elemento mudará para cor #DBE8FB, somente na versão web desktop.
 
 Para resoluções menores que o breakpoint "sm" (atualmente 998px). O componente se reorganiza de forma a alinhar o conteúdo à esquerda e a imagem de fundo centralizada em relaçao ao card.
 

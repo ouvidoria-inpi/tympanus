@@ -124,12 +124,7 @@ class BRSelect {
   }
 }
 
-let selectList = []
-
-for (let brSelect of window.document.querySelectorAll('.br-select')) {
-  selectList.push(new BRSelect('br-select', brSelect))
-}
-
+/* Refatorar e incluir na classe */
 function getBrSelect(component) {
   for (let brSelect of selectList) {
     for (let select of brSelect.component.querySelectorAll('select')) {
@@ -159,4 +154,11 @@ function createBrSelect() {
   }
 }
 
+let selectList = []
 
+for (let brSelect of window.document.querySelectorAll('.br-select')) {
+  selectList.push(new BRSelect('br-select', brSelect))
+}
+
+/* Refatorar e incluir na classe */
+export default BRSelect

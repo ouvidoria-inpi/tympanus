@@ -3,83 +3,85 @@ extends ../../layouts/component
 append vars
   - var title = "DatePicker";
 
-append scripts
-  script(src="../js/config/datepicker-page.js")
-
 append content
   .row
-    div.h3 Estados do componente:
-  .row
-    .col-sm
-      .mb-3
-        +input("Normal")(id="normal" class="datepicker" placeholder="dd/mm/aaaa")
-          button.icon(type='button' id="normal-btn")
-              span.sr-only Mostrar calendário
-              i.fas.fa-calendar-alt
-    .col-sm
-      .mb-3
-        +input("Focus")(id="focus" class="datepicker is-focus" placeholder="dd/mm/aaaa")
-          button.icon(type='button' id="focus-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
-    
-  .row
-    .col-sm
-      .mb-3
-        +input("Válido")(id="valid" class="datepicker is-valid" placeholder="dd/mm/aaaa")
-          button.icon(type='button' id="valid-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
-        +feedback("fa-check-circle", "Data válida")(class="is-valid")
-    .col-sm
-      .mb-3
-        +input("Inválido")(id="invalid" class="datepicker is-invalid" placeholder="dd/mm/aaaa")
-          button.icon(type='button' id="invalid-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
-        +feedback("fa-check-circle", "Data válida")(class="is-valid")
-  .row
-    .col-sm
-      .mb-3
-        +input("Desativado")(id="disabled" class="datepicker is-disabled" placeholder="01/01/2020" disabled)
-          button.icon(type='button' id="disabled-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
-        +feedback("fa-check-circle", "Data válida")(class="is-valid")
-        +feedback("fa-times-circle", "Data inválida")(class="is-invalid")
-    .col-sm
-      .mb-3
-  .row
-    div.h3 Campo funcional para demonstração:
-  .row
-    .col-sm
-      .mb-3
-        +input("Data")(id="default" class="datepicker" placeholder="dd/mm/aaaa")
-          button.icon(type='button' id="default-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
-        +feedback("fa-check-circle", "Data válida")(class="is-valid")
-        +feedback("fa-times-circle", "Data inválida")(class="is-invalid")
-        p.help Insira a data no formato "dd/mm/aaaa", apenas números.  
-    .col-sm
-  .row
-    div.h3 Campos vinculados para definir um período:
-  .row
-    .col-sm
-      .mb-3
-        +input("Data Inicial")(id="date-start" class="datepicker" type="text" placeholder="dd/mm/aaaa")
-          button.icon(type='button' id="date-start-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
-        +feedback("fa-check-circle", "Data válida")(class="is-valid")
-        +feedback("fa-times-circle", "Data inválida")(class="is-invalid")
-        p.help Insira a data inicial do período no formato "dd/mm/aaaa".  
-    .col-sm
-      .mb-3
-        +input("Data Final")(id="date-end" class="datepicker" type="text" placeholder="dd/mm/aaaa")
-          button.icon(type='button' id="date-end-btn")
-            span.sr-only Mostrar calendário
-            i.fas.fa-calendar-alt
-        +feedback("fa-check-circle", "Data válida")(class="is-valid")
-        +feedback("fa-times-circle", "Data inválida")(class="is-invalid")
-        p.help Insira a data final do período no formato "dd/mm/aaaa".
+    .col
+      p.label Versão Simples
+      +datepicker("Data")(id="normal" placeholder="dd/mm/aaaa")
+    .col
+      p.label Versão Data Inicial / Data Final
+      .row
+        .col
+          +datepicker("Data Inicial")(id="date-start" class="range" type="text" placeholder="dd/mm/aaaa")
+        .col
+          +datepicker("Data Final")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //- .row
+  //-   div.h3 Estados do componente:
+  //- .row
+  //-   .col-sm
+  //-     .mb-3
+  //-       +datepicker("Normal")(id="normal" placeholder="dd/mm/aaaa")
+  //-       +feedback("", "Data válida")(class="is-valid")
+  //-       +feedback("", "Data inválida")
+  //-   .col-sm
+  //-     .mb-3
+  //-       +datepicker("Focus")(id="focus" class="is-focus" placeholder="dd/mm/aaaa")
+  //-       +feedback("", "Data válida")(class="is-valid")
+  //-       +feedback("", "Data inválida")
+  //- .row
+  //-   .col-sm
+  //-     .mb-3
+  //-       +datepicker("Válido")(id="valid" class="is-valid" placeholder="dd/mm/aaaa")
+  //-       +feedback("", "Data válida")(class="is-valid")
+  //-       +feedback("", "Data inválida")
+  //-   .col-sm
+  //-     .mb-3
+  //-       +datepicker("Inválido")(id="invalid" class="is-invalid" placeholder="dd/mm/aaaa")
+  //-       +feedback("", "Data válida")(class="is-valid")
+  //-       +feedback("", "Data inválida")
+  //- .row
+  //-   .col-sm
+  //-     .mb-3
+  //-       +datepicker("Desativado")(id="disabled" class="is-disabled" placeholder="01/01/2020" disabled)
+  //-       +feedback("", "Data válida")(class="is-valid")
+  //-       +feedback("", "Data inválida")
+  //-   .col-sm
+  //-     .mb-3
+  //- .row
+  //-   div.h3 Campo funcional para demonstração:
+  //- .row
+  //-   .col-sm
+  //-     .mb-3
+  //-       +datepicker("Data")(id="default" placeholder="dd/mm/aaaa")
+  //-       +feedback("", "Data válida")(class="is-valid")
+  //-       +feedback("", "Data inválida")
+  //-       p.help Insira a data no formato "dd/mm/aaaa", apenas números.  
+  //-   .col-sm
+  //- .row
+  //-   div.h3 Campos vinculados para definir um período:
+  //- .row
+  //-   .col-sm
+  //-     .mb-3
+  //-       +datepicker("Data Inicial")(id="date-start" class="range" type="text" placeholder="dd/mm/aaaa")
+  //-       +feedback("", "Data válida")(class="is-valid")
+  //-       +feedback("", "Data inválida")
+  //-       p.help Insira a data inicial do período no formato "dd/mm/aaaa".  
+  //-   .col-sm
+  //-     .mb-3
+  //-       +datepicker("Data Final")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
+  //-       +feedback("", "Data válida")(class="is-valid")
+  //-       +feedback("", "Data inválida")
+  //-       p.help Insira a data final do período no formato "dd/mm/aaaa".

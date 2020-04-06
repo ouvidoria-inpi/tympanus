@@ -1,4 +1,4 @@
-## Dependências
+# Dependências
 
 Nenhuma dependência.
 
@@ -10,22 +10,21 @@ Nenhuma dependência.
   <input type="checkbox" id="checkbox" />
   <label for="checkbox">Checkbox</label>
 </div>
-<!-- radio -->
-<div class="br-check">
-  <input name="radio" type="radio" id="radio" />
-  <label for="radio">Radio button</label>
-</div>
 ```
 
+
 ## Detalhamento
+
+Componente deve ser usado quando necessitar usar uma lista com várias opções e houver necessidade de escolher mais de uma opção simultaneamente.
 
 Este componente é formado pelos seguintes elementos:
 
 - `br-check`: container do componente
 
-A natureza de comportamento do componente é `inline-block`. Isso significa que ao usar vários checkbox ou radio button em sequência eles ficarão lado a lado.
-
 ### Alinhamento vertical
+
+A natureza de comportamento do componente é preferencialmente em colunas, ficando os checkbox um abaixo do outro. Evite usar esse componente em linhas, mas, caso seja necessário, use a opção com `inline-block`, que também está contemplada na área de exemplos.
+
 
 Você poderá modificar o comportamento padrão do `br-check` usando as classes **Display** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/display/](https://getbootstrap.com/docs/4.3/utilities/display/). A aplicação deve ser feita diretamente no elemento. O exemplo a seguir configura os checkboxes um abaixo do outro:
 

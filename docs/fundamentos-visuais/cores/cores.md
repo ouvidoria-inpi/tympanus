@@ -30,7 +30,7 @@ O **nível AA** indica que é necessário uma taxa de contraste de pelo menos **
 
 O **nível AAA** requer uma taxa de contraste de pelo menos **7:1** para texto normal e **4,5:1** para texto grande.
 
-É considerado **texto grande** aquele em que a fonte possui pelo menos 18 pontos (24px, 1,71em, 171% do tamanho padrão da Fonte Base, veja [Tipografia](#) para maiores detalhes) ou 14 pontos em negrito (19px, 1,325em, 132,5%), um texto com tamanho abaixo desses valores (tal como 14pt regular) é considerado **texto normal**.
+É considerado **texto grande** aquele em que a fonte possui pelo menos 18 pontos (24px, 1,71em, 171% do tamanho padrão da Fonte Base, veja [Tipografia](/ds/fundamentos-visuais/tipografia) para maiores detalhes) ou 14 pontos em negrito (19px, 1,325em, 132,5%), um texto com tamanho abaixo desses valores (tal como 14pt regular) é considerado **texto normal**.
 
 Elementos gráficos e componentes da interface (como ícones e bordas) seguem as mesmas regras de texto grande.
 
@@ -58,7 +58,7 @@ As variantes pastel são as cores com alta luminosidade e com pouco saturação,
 
 A cor **Primary Default** é usada como padrão de hiperlinks.
 
-Utilize a documentação encontrada no fundamento [Estado](#), para ajudar a aplicar a paleta de cor em diferentes níveis de interação.
+Utilize a documentação encontrada no fundamento [Estado](/ds/fundamentos-visuais/estados), para ajudar a aplicar a paleta de cor em diferentes níveis de interação.
 
 | Exemplo                                               | Categoria da Cor   | Hexadecimal | Token                      |
 | ----------------------------------------------------- | ------------------ | ----------- | -------------------------- |
