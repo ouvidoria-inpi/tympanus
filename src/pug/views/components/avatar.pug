@@ -1,0 +1,159 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Avatar";
+
+append style
+  style.
+    .card {
+      box-shadow: 0 3px 6px rgba(var(--rgb-secondary-09), 0.16);
+      border-radius: 4px;
+    }
+    .card-3 .is-tertiary {
+      margin: 0;
+      min-width: 0;
+      padding: 8px;
+    }
+
+append content
+  .row
+    .col-md
+      p.h2 Avatar estático
+      .br-avatar.small
+        span.image: i.fas.fa-user
+      .br-avatar.medium
+        span.image: i.fas.fa-user
+      .br-avatar.large
+        span.image: i.fas.fa-user
+      .br-avatar.small
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+      .br-avatar.medium
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+      .br-avatar.large
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+
+      p.h2 Com Badge
+      .br-avatar.small
+        +badge("fa-layers-counter fa-layers-top-left") 5
+        span.image: i.fas.fa-user
+      .br-avatar.medium
+        +badge("fa-layers-counter fa-layers-top-left") 5
+        span.image: i.fas.fa-user
+      .br-avatar.large
+        +badge("fa-layers-counter fa-layers-top-left") 5
+        span.image: i.fas.fa-user
+      .br-avatar.small
+        +badge("fa-layers-counter fa-layers-top-left") 5
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+      .br-avatar.medium
+        +badge("fa-layers-counter fa-layers-top-left") 5
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+      .br-avatar.large
+        +badge("fa-layers-counter fa-layers-top-left") 5
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+
+      p.h2 Com menu
+      .br-avatar.small
+        span.image: i.fas.fa-user
+        button.menu(type="button")
+          span.icon: i.fas.fa-angle-down
+      .br-avatar.medium
+        span.image: i.fas.fa-user
+        button.menu(type="button")
+          span.icon: i.fas.fa-angle-down
+      .br-avatar.large
+        span.image: i.fas.fa-user
+        button.menu(type="button")
+          span.icon: i.fas.fa-angle-down
+      .br-avatar.small
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+        button.menu(type="button")
+          span.icon: i.fas.fa-angle-down
+      .br-avatar.medium
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+        button.menu(type="button")
+          span.icon: i.fas.fa-angle-down
+      .br-avatar.large
+        span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+        button.menu(type="button")
+          span.icon: i.fas.fa-angle-down
+
+      p.h2
+        | Alteração de foto
+        |
+        small (hover/focus)
+      .br-avatar.small
+        button.change(type="button")
+          span.image: i.fas.fa-user
+          span.icon: i.fas.fa-camera
+      .br-avatar.medium
+        button.change(type="button")
+          span.image: i.fas.fa-user
+          span.icon: i.fas.fa-camera
+      .br-avatar.large
+        button.change(type="button")
+          span.image: i.fas.fa-user
+          span.icon: i.fas.fa-camera
+      .br-avatar.small
+        button.change(type="button")
+          span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+          span.icon: i.fas.fa-camera
+      .br-avatar.medium
+        button.change(type="button")
+          span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+          span.icon: i.fas.fa-camera
+      .br-avatar.large
+        button.change(type="button")
+          span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+          span.icon: i.fas.fa-camera
+    .col-md
+      p.h5 Aplicações na prática
+      .row
+        .col-sm-6
+          .card.p-3
+            .text-center
+              .br-avatar.large
+                button.change(type="button")
+                  span.image: i.fas.fa-user
+                  span.icon: i.fas.fa-camera
+            p.h4.text-center Clique na imagem acima para trocar sua foto no perfil.
+            .d-flex.color-info.px-0
+              .pr-1
+                span.icon-lg: i.fas.fa-info-circle
+              spam Os arquivos devem ser nos formatos PNG, JPG, PDF e ter no máximo 1G
+        .col-sm-3
+          .card.p-3.text-center
+            .br-avatar.medium
+              span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+            p.h5.color-primary-default Maria Amorim
+            p UX Designer
+            hr
+            p
+              i.fas-fa-phone
+              |
+              | +55 81 9999 9999
+      .row.mt-3
+        .col-sm-5
+          .card.card-3.p-3.d-flex
+            .mr-3
+              .br-avatar.small
+                span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+            .flex-grow-1
+              p.h6.color-primary-default.mt-0.mb-1.px-0 Maria Amorim
+              span UX Designer
+            div
+              +button.is-tertiary.is-circle
+                span.icon: i.fas.fa-phone
+              +button.is-tertiary.is-circle
+                span.icon: i.fas.fa-comment
+        .col-sm
+          .card.p-3.d-flex
+            .mr-3
+              .br-avatar.small
+                span.image: img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="")
+            .flex-grow-1
+              +textarea("")(id="comments" placeholder="Digite seu comentário")
+              .d-flex.justify-content-end
+                +button.is-tertiary Cancelar
+                +button.is-primary Enviar
+
