@@ -111,6 +111,11 @@
         "urlLabel": "acordeao"
       },
       {
+        "label": "Avatar",
+        "filename": "avatar",
+        "urlLabel": "avatar"
+      },
+      {
         "label": "Badge",
         "filename": "badge",
         "urlLabel": "badge"
