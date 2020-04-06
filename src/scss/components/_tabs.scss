@@ -51,7 +51,7 @@
           padding-right: 0;
         }
         &.is-active {
-          a {
+          button {
             border-bottom: 4px solid v(color-primary-default, $color-primary-default);
             padding-bottom: $spacer * 1;
             .name {
@@ -62,7 +62,10 @@
             color: v(color-primary-default, $color-primary-default);
           }
         }
-        a {
+        button {
+          background-color: transparent;
+          border: none;
+          border-bottom: 4px solid transparent;
           color: v(color-secondary-07, $color-secondary-07);
           display: inline-block;
           padding: $spacer * 1 $spacer * 3;

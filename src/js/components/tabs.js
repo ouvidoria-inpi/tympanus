@@ -7,7 +7,7 @@ class BRTabs {
   }
 
   _setBehavior() {
-    for (let ancor of this.component.querySelectorAll('.tab-nav .tab-item:not([not-tab="true"]) a')) {
+    for (let ancor of this.component.querySelectorAll('.tab-nav .tab-item:not([not-tab="true"]) button')) {
       ancor.addEventListener("click", (event) => {
         this._switchTab(event.currentTarget.parentElement);
         this._switchContent(event.currentTarget.parentElement);
@@ -26,12 +26,12 @@ class BRTabs {
   }
 
   _switchContent(currentTab) {
-    for (let ref of currentTab.querySelectorAll("a")) {
-      for (let tabPane of this.component.querySelectorAll(".tab-content .tab-panel")) {
-        if (ref.getAttribute("href") === "#" + tabPane.getAttribute("id")) {
-          tabPane.classList.add("is-active");
+    for (let button of currentTab.querySelectorAll("button")) {
+      for (let tabPanel of this.component.querySelectorAll(".tab-content .tab-panel")) {
+        if (button.getAttribute("data-panel") === tabPanel.getAttribute("id")) {
+          tabPanel.classList.add("is-active");
         } else {
-          tabPane.classList.remove("is-active");
+          tabPanel.classList.remove("is-active");
         }
       }
     }

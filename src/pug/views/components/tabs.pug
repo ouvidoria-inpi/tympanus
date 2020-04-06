@@ -11,12 +11,12 @@ append content
       p.label 1 | Abas Padrão
       +tabs()
         +tab-nav()
-          +tab-item(title="Sobre" pane="panel-1")
-          +tab-item(title="Todos" pane="panel-2")
-          +tab-item(title="Notícias" class="is-active" pane="panel-3")
-          +tab-item(title="Serviços" pane="panel-4")
-          +tab-item(title="Aplicativos" pane="panel-5")
-          +tab-item(title="Mídias" pane="panel-6")
+          +tab-item(title="Sobre" panel="panel-1")
+          +tab-item(title="Todos" panel="panel-2")
+          +tab-item(title="Notícias" class="is-active" panel="panel-3")
+          +tab-item(title="Serviços" panel="panel-4")
+          +tab-item(title="Aplicativos" panel="panel-5")
+          +tab-item(title="Mídias" panel="panel-6")
         +tab-content
           +tab-pane(id="panel-1")
             p Painel Sobre
@@ -36,16 +36,16 @@ append content
       +tabs(counter="true")
         +tab-nav
           +tab-item(title="Refine a sua busca" count="124" notTab="true")
-          +tab-item(title="Todos" pane="pane-7" count="124")
-          +tab-item(title="Notícias" class="is-active" pane="pane-8" count="74")
-          +tab-item(title="Serviços" pane="pane-9" count="16")
-          +tab-item(title="Aplicativos" pane="pane-10" count="12")
+          +tab-item(title="Todos" panel="panel-7" count="124")
+          +tab-item(title="Notícias" class="is-active" panel="panel-8" count="74")
+          +tab-item(title="Serviços" panel="panel-9" count="16")
+          +tab-item(title="Aplicativos" panel="panel-10" count="12")
         +tab-content
-          +tab-pane(id="pane-7")
+          +tab-pane(id="panel-7")
             p Painel Todos
-          +tab-pane(id="pane-8"  class="is-active")
+          +tab-pane(id="panel-8"  class="is-active")
             p Painel Notícias
-          +tab-pane(id="pane-9")
+          +tab-pane(id="panel-9")
             p Painel Serviços
-          +tab-pane(id="pane-10")
+          +tab-pane(id="panel-10")
             p Painel Aplicativos
