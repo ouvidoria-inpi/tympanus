@@ -190,12 +190,58 @@ ul.#{$prefix}list {
         color: v(color-secondary-05);
       }
     }
+    &.open {
+      ul {
+        display: flex;
+      }
+      .icon {
+        .fa-chevron-right {
+          transform: rotate(90deg);
+        }
+      }
+    }
     ul {
-      box-shadow: $list-box-shadow;
-      display: flex;
+      display: none;
       flex-direction: column;
       flex-basis: 100%;
+      height: 180px;
       list-style-type: none;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background: v(color-secondary-03,$color-secondary-03);
+      }
+      &::-webkit-scrollbar-thumb {
+        background: v(color-secondary-06,$color-secondary-06);
+      }
+      & li {
+        padding: 12px 0;
+        position: relative;
+        &:first-child {
+          &::after {
+            content: ' ';
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 180px;
+            right: 0;
+            box-shadow: $list-box-shadow-inverse;
+            }
+          }        
+        &:last-child {
+          &::before {
+            content: ' ';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: -138px;
+            right: 0;
+            box-shadow: $list-box-shadow;
+          }
+        }
+      }
     }
   }
 }
