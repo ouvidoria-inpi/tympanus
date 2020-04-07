@@ -31,13 +31,13 @@ class BRAccordeon {
     for ( let field of this.component.querySelectorAll( ".item" ) ) {
       if ( field.classList.contains( "is-active" ) ) {
         for ( let icon of field.querySelectorAll( ".icon" ) ) {
-          icon.children[ 0 ].classList.remove( "fa-plus" );
-          icon.children[ 0 ].classList.add( "fa-minus" );
+          icon.children[ 0 ].classList.remove( "fa-angle-down" );
+          icon.children[ 0 ].classList.add( "fa-angle-up" );
         }
       } else {
         for ( let icon of field.querySelectorAll( ".icon" ) ) {
-          icon.children[ 0 ].classList.remove( "fa-minus" );
-          icon.children[ 0 ].classList.add( "fa-plus" );
+          icon.children[ 0 ].classList.remove( "fa-angle-up" );
+          icon.children[ 0 ].classList.add( "fa-angle-down" );
         }
       }
     }
