@@ -10,26 +10,27 @@
   font-size: v(font-size-scale-down-01);
   font-weight: v(font-weight-semi-bold);
   height: 20px;
+  justify-content: center;
   margin: 10px;
   padding: 0 10px;
 
   .content {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .icon {
-    align-items: center;
+  img {
+    max-height: 9px;
+    max-width: 12px;
+  }
+
+  [class*="fa-"] {
+    text-align: center;
     color: v(color-primary-default);
-    display: flex;
     font-size: 100%;
-    justify-content: center;
     margin-right: 10px;
     width: 12px;
-
-    img {
-      max-height: 9px;
-      max-width: 12px;
-    }
   }
 
   &:hover,
@@ -42,7 +43,7 @@
     background-color: v(color-primary-default);
     color: v(color-secondary-01);
 
-    .icon {
+    [class*="fa-"] {
       color: v(color-secondary-01);
     }
 
@@ -62,7 +63,7 @@
       color: v(color-primary-default);
       opacity: 0.45;
 
-      .icon {
+      [class*="fa-"] {
         color: v(color-primary-default);
       }
     }
@@ -75,12 +76,12 @@
   &.tag-input-close {
     .close {
       button {
-        display: flex;
         background: transparent;
         border: 0;
         color: v(color-support-03);
-        padding: 0;
         outline: 0;
+        margin: 0;
+        padding-right: 0;
         padding-left: $spacer * 1.5;
       }
     }
