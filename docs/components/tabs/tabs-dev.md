@@ -5,26 +5,28 @@ Nenhuma dependência.
 ## Código básico
 
 ```html
-<div class="br-tabs">
-  <nav class="tab-nav">
+<nav class="tab-nav">
     <ul>
-      <li class="tab-item"><a href="#panel-1"><span class="name">Item 1</span></a>
+      <li class="tab-item">
+        <button type="button" data-panel="panel-1"><span class="name">Sobre</span></button>
       </li>
-      <li class="tab-item is-active"><a href="#panel-2"><span class="name">Item 2</span></a>
+      <li class="tab-item">
+        <button type="button" data-panel="panel-2"><span class="name">Todos</span></button>
       </li>
-      <li class="tab-item"><a href="#panel-3"><span class="name">Item 3</span></a>
+      <li class="tab-item is-active">
+        <button type="button" data-panel="panel-3"><span class="name">Notícias</span></button>
       </li>
     </ul>
   </nav>
   <div class="tab-content">
     <div class="tab-panel" id="panel-1">
-      ...
+      <p>Painel Sobre</p>
     </div>
-    <div class="tab-panel is-active" id="panel-2">
-      ...
+    <div class="tab-panel" id="panel-2">
+      <p>Painel Todos</p>
     </div>
-    <div class="tab-panel" id="panel-3">
-      ...
+    <div class="tab-panel is-active" id="panel-3">
+      <p>Painel Noticias</p>
     </div>
   </div>
 </div>
@@ -37,6 +39,7 @@ Este componente é formado pelos seguintes elementos:
 - `br-tabs`: container do componente
 - `tab-nav`: container da lista de abas
 - `tab-item`: cada aba da lista
+- `data-panel`: atributo de referência ao painel de conteúdo
 - `name`: nome da aba
 - `tab-content`: container do painel de conteúdo
 - `tab-panel`: cada painel de conteúdo
@@ -75,7 +78,7 @@ Exemplo de uso:
 
 Cada aba DEVE estar dentro de um elemento `tab-item`.
 
-O `tab-item` contém uma tag de link - `<a href="">` com uma ancora para o painel correspondente
+O `tab-item` contém uma tag `button` com um atributo `data-panel`, que faz referência ao painel correspondente
 
 Cada `tab-item` corresponde a um **li** de uma lista não ordenada **ul**
 
@@ -85,11 +88,14 @@ Exemplo de uso:
 
 ```html
 <ul>
-  <li class="tab-item"><a href="#panel-1">...</a>
+  <li class="tab-item">
+    <button type="button" data-panel="panel-1">...</button>
   </li>
-  <li class="tab-item is-active"><a href="#panel-2">...</a>
+  <li class="tab-item">
+    <button type="button" data-panel="panel-2">...</button>
   </li>
-  <li class="tab-item"><a href="#panel-3">...</a>
+  <li class="tab-item is-active">
+    <button type="button" data-panel="panel-3">...</button>
   </li>
 </ul>
 ```
@@ -104,11 +110,14 @@ Exemplo de uso:
 
 ```html
 <ul>
-  <li class="tab-item"><a href="#panel-1"><span class="name">Item 1</span></a>
+  <li class="tab-item">
+    <button type="button" data-panel="panel-1"><span class="name">Sobre</span></button>
   </li>
-  <li class="tab-item is-active"><a href="#panel-2"><span class="name">Item 2</span></a>
+  <li class="tab-item">
+    <button type="button" data-panel="panel-2"><span class="name">Todos</span></button>
   </li>
-  <li class="tab-item"><a href="#panel-3"><span class="name">Item 3</span></a>
+  <li class="tab-item is-active">
+    <button type="button" data-panel="panel-3"><span class="name">Notícias</span></button>
   </li>
 </ul>
 ```
@@ -150,20 +159,22 @@ Exemplo de uso:
   <nav class="tab-nav">
     <ul>
       <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
-        <p class="outcome">Resultados<span>valor</span></p>
+        <p class="outcome">Resultados<span>124</span></p>
       </li>
-      <li class="tab-item"><a href="#pane-1"><span class="name">Item 1</span></a><span class="results">( valor )</span>
+      <li class="tab-item">
+        <button type="button" data-panel="panel-7"><span class="name">Todos</span></button><span class="results">( valor )</span>
       </li>
-      <li class="tab-item is-active"><a href="#pane-2"><span class="name">Item 2</span></a><span class="results">( valor )</span>
+      <li class="tab-item is-active">
+        <button type="button" data-panel="panel-8"><span class="name">Notícias</span></button><span class="results">( valor )</span>
       </li>
     </ul>
   </nav>
   <div class="tab-content">
-    <div class="tab-panel" id="pane-1">
-      <p>Painel Item 1</p>
+    <div class="tab-panel" id="panel-7">
+      <p>Painel Todos</p>
     </div>
-    <div class="tab-panel is-active" id="pane-2">
-      <p>Painel Item 2</p>
+    <div class="tab-panel is-active" id="panel-8">
+      <p>Painel Notícias</p>
     </div>
   </div>
 </div>
@@ -205,7 +216,7 @@ Exemplo de uso:
 <nav class="tab-nav">
   <ul>
     <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
-      <p class="outcome">Resultados<span>valor</span></p>
+      <p class="outcome">Resultados<span>124</span></p>
     </li>
   </ul>
 </nav>
@@ -221,7 +232,14 @@ Exemplo de uso:
 
 ```html
 <ul>
-  <li class="tab-item"><a href="#pane-1"><span class="name">Item 1</span></a><span class="results">( valor )</span>
+  <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
+    <p class="outcome">Resultados<span>124</span></p>
+  </li>
+  <li class="tab-item">
+    <button type="button" data-panel="panel-7"><span class="name">Todos</span></button><span class="results">( valor )</span>
+  </li>
+  <li class="tab-item is-active">
+    <button type="button" data-panel="panel-8"><span class="name">Notícias</span></button><span class="results">( valor )</span>
   </li>
 </ul>
 ```
