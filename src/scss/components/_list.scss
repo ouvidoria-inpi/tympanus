@@ -187,6 +187,7 @@ div.#{$prefix}list {
       }
     }
     .content {
+      padding: 0 16px 0 0;
       //flex-basis: 74%;
       .sub-title {
         font-size: v(font-size-scale-down-01);
