@@ -50,7 +50,6 @@
     span [class*="fa-"] {
       color: v(color-secondary-01);
     }
-
     &.tag-input-close .close button {
       color: v(color-secondary-01);
     }
@@ -59,7 +58,6 @@
   &.disabled {
     background-color: v(color-primary-pastel-01);
     opacity: 0.45;
-
     &:active,
     &:hover,
     &:focus {
@@ -77,7 +75,6 @@
       color: v(color-support-03);
     }
   }
-
   &.tag-input-close {
     .close {
       button {
@@ -93,8 +90,12 @@
 
 .br-tag-input {
   @include input;
+  display: flex;
+  flex-wrap: wrap;
+  input {
+    flex: 1;
+  }
 }
-
 .input-tag {
   padding: 0.9em 0.5em;
   box-sizing: border-box;
