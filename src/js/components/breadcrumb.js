@@ -12,11 +12,11 @@ class BRBreadcrumb {
         this.hideCrumbs();
       }
     } );
-    this.component.addEventListener( "mousewheel", ( event ) => {
-      let delta = Math.max( -1, Math.min( 1, ( event.wheelDelta || -event.detail ) ) );
-      event.currentTarget.scrollLeft -= ( delta * 40 );
-      event.preventDefault();
-    } );
+    // this.component.addEventListener( "mousewheel", ( event ) => {
+    //   let delta = Math.max( -1, Math.min( 1, ( event.wheelDelta || -event.detail ) ) );
+    //   event.currentTarget.scrollLeft -= ( delta * 40 );
+    //   event.preventDefault();
+    // } );
   }
 
   hideCrumbs () {
