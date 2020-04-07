@@ -1,4 +1,6 @@
 div.#{$prefix}list {
+  padding: 0 0;
+  width: auto;
   dl {
     list-style-type: none;
     padding: 21px;
@@ -47,12 +49,7 @@ div.#{$prefix}list {
         }
       }
     }
-  }
-}
-
-div.#{$prefix}list {
-  padding: 0 0;
-  width: auto;
+  }  
 }
 
 .#{$prefix}list {
