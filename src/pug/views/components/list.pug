@@ -10,35 +10,38 @@ append content
   h2 Lista simples
   .row
     div.engloba
-      ul.br-list
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha
-          div.icon
-            a.list-item(href='#') Link
-              i.fas.fa-chevron-right
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha
-          div.icon
-            a.list-item(href='#') Link
-              i.fas.fa-chevron-right
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha
-          div.icon
-            a.list-item(href='#') Link
-              i.fas.fa-chevron-right
+      div.br-list
+        h3.title Título da Lista
+        ul
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto de uma linha
+            div.icon
+              a.list-item(href='#') Link
+                i.fas.fa-chevron-right
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto de uma linha
+            div.icon
+              a.list-item(href='#') Link
+                i.fas.fa-chevron-right
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto de uma linha
+            div.icon
+              a.list-item(href='#') Link
+                i.fas.fa-chevron-right
   h2 Lista simples com Clique
   .row
     div.engloba
       div.br-list
+        h3.title Título da Lista
         a.list-item
           div.icon
             i.fas.fa-heartbeat
@@ -59,195 +62,218 @@ append content
           div.content
             div.text Texto de uma linha (Estado Desabilitado)
           div.icon
-           i.fas.fa-chevron-right
+            i.fas.fa-chevron-right
         a.list-item.dragged
           div.icon
             i.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha (Estado Arrastado)
           div.icon
-           i.fas.fa-chevron-right
+            i.fas.fa-chevron-right
   h2 Lista Ordenada
   .row
     div.engloba
-      ol.br-list.is-simple
-        li Texto de uma linha
-        li Texto de uma linha
-          ol.br-list.is-simple
-            li Texto de uma linha
-            li Texto de uma linha
-        li Texto de uma linha
+      div.br-list
+        ol.is-simple
+          li Texto de uma linha
+          li Texto de uma linha
+            ol.br-list.is-simple
+              li Texto de uma linha
+              li Texto de uma linha
+          li Texto de uma linha
   h2 Lista não Ordenada
   .row
     div.engloba
-      ul.br-list.is-simple
-        li Texto de uma linha
-        li Texto de uma linha
-          ul.br-list.is-simple
-            li Texto de uma linha
-            li Texto de uma linha
-        li Texto de uma linha
+      div.br-list
+        ul.is-simple
+          li Texto de uma linha
+          li Texto de uma linha
+            ul.br-list.is-simple
+              li Texto de uma linha
+              li Texto de uma linha
+          li Texto de uma linha
   h2 Lista de Definição
   .row
     div.engloba
-      dl.br-list.is-simple
-        dt Texto de uma linha
-        dd Texto de uma linha
-        dt Texto de uma linha
-        dd Texto de uma linha
-        dt Texto de uma linha
-        dd Texto de uma linha
+      div.br-list
+        dl.is-simple
+          dt Texto de uma linha
+          dd Texto de uma linha
+          dt Texto de uma linha
+          dd Texto de uma linha
+          dt Texto de uma linha
+          dd Texto de uma linha
   h2 Anatomia de uma Lista Complexa
   .row
     div.engloba
-      ul.br-list
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.sub-title Subtítulo
-            div.text Texto de uma linha
-            div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-          div.icon
-            i.fas.fa-chevron-right
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.sub-title Subtítulo
-            div.text Texto de uma linha
-            div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-          div.icon
-            i.fas.fa-chevron-right
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.sub-title Subtítulo
-            div.text Texto de uma linha
-            div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-          div.icon
-            i.fas.fa-chevron-right
+      div.br-list
+        h3.title Título da Lista
+        ul
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.sub-title Subtítulo
+              div.text Texto de uma linha
+              div.text-sec Texto secundário Lorem Ipsum dolor sit amet
+            div.icon
+              i.fas.fa-chevron-right
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.sub-title Subtítulo
+              div.text Texto de uma linha
+              div.text-sec Texto secundário Lorem Ipsum dolor sit amet
+            div.icon
+              i.fas.fa-chevron-right
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.sub-title Subtítulo
+              div.text Texto de uma linha
+              div.text-sec Texto secundário Lorem Ipsum dolor sit amet
+            div.icon
+              i.fas.fa-chevron-right
   h2 Recursos Visuais
   div.row
     div.engloba
       .col
-        ul.br-list
-          li.list-item
-            div.icon
-              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png',alt='Circle')
-            div.content
-              div.text Texto secundário
-            div.icon
-              i.fas.fa-cube
-        ul.br-list
-          li.list-item
-            div.icon
-              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/square1.png',alt='Square')
-            div.content
-              div.text Texto principal
-              div.text-sec Texto secundário
-        ul.br-list
-          li.list-item
-            div.icon
-              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png',alt='Rectangle')
-            div.content
-              div.text Texto secundário Lorem ipsum dolor sit amet consectetur
-            div.icon
-              a(href="#") Link
-                i.fas.fa-chevron-right
-        ul.br-list
-          li.list-item
-            div.icon
-              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png',alt='Rectangle')
-            div.content
-              div.text Texto secundário
-            div.icon
-              a(href="#") Link
-                i.fas.fa-chevron-right
+        div.br-list
+          h3.title Título da Lista
+          ul
+            li.list-item
+              div.icon
+                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png',alt='Circle')
+              div.content
+                div.text Texto secundário
+              div.icon
+                i.fas.fa-cube
+        div.br-list
+          h3.title Título da Lista
+          ul
+            li.list-item
+              div.icon
+                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/square1.png',alt='Square')
+              div.content
+                div.text Texto principal
+                div.text-sec Texto secundário
+        div.br-list
+          h3.title Título da Lista
+          ul
+            li.list-item
+              div.icon
+                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png',alt='Rectangle')
+              div.content
+                div.text Texto secundário Lorem ipsum dolor sit amet consectetur
+              div.icon
+                a(href="#") Link
+                  i.fas.fa-chevron-right
+        div.br-list
+          h3.title Título da Lista
+          ul
+            li.list-item
+              div.icon
+                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png',alt='Rectangle')
+              div.content
+                div.text Texto secundário
+              div.icon
+                a(href="#") Link
+                  i.fas.fa-chevron-right
       .col
-        ul.br-list
-          li.list-item
-            div.icon
-              i.fas.fa-heartbeat
-            div.content
-              div.text Texto de uma linha
-            div.icon
-              a(href="#") Link
-                i.fas.fa-ellipsis-v
-        ul.br-list
-          li.list-item
-            div.icon
-              img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png',alt='Circle')
-            div.content
-              div.text Texto de uma linha
-            div.icon
-              a(href="#") Link
-                i.fas.fa-ellipsis-v
-        ul.br-list
-          li.list-item
-            div.icon
-              i.fas.fa-heartbeat
-            div.content
-              div.text Texto principal
-              div.text-sec Texto secundário Lorem ipsum dolor sit amet consectetur
-        ul.br-list
-          li.list-item
-            div.content
-              div.text Texto principal
-              div.text-sec Texto secundário
-            div.icon
-              div.headline meta
-              i.fas.fa-cube
+        div.br-list
+          h3.title Título da Lista
+          ul
+            li.list-item
+              div.icon
+                i.fas.fa-heartbeat
+              div.content
+                div.text Texto de uma linha
+              div.icon
+                a(href="#") Link
+                  i.fas.fa-ellipsis-v
+        div.br-list
+          h3.title Título da Lista
+          ul
+            li.list-item
+              div.icon
+                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png',alt='Circle')
+              div.content
+                div.text Texto de uma linha
+              div.icon
+                a(href="#") Link
+                  i.fas.fa-ellipsis-v
+        div.br-list
+          h3.title Título da Lista
+          ul
+            li.list-item
+              div.icon
+                i.fas.fa-heartbeat
+              div.content
+                div.text Texto principal
+                div.text-sec Texto secundário Lorem ipsum dolor sit amet consectetur
+        div.br-list
+          h3.title Título da Lista
+          ul
+            li.list-item
+              div.content
+                div.text Texto principal
+                div.text-sec Texto secundário
+              div.icon
+                div.headline meta
+                i.fas.fa-cube
   h2 Lista com Collapse
   .row
     div.engloba
-      ul.br-list
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha (CLOSE)
-          div.icon
-            a.list-item(href='#') Link
-              i.fas.fa-chevron-down
-        li.list-item.open
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha (OPEN)
-          div.icon
-            a.list-item(href='#') Link
-              i.fas.fa-chevron-down
-          ul.top-shadow.bottom-shadow
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-            li Texto de uma linha
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha (CLOSE)
-          div.icon
-            a.list-item(href='#') Link
-              i.fas.fa-chevron-down
-        li.list-item
-          div.icon
-            i.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha (CLOSE)
-          div.icon
-            a.list-item(href='#') Link
-              i.fas.fa-chevron-down
+      div.br-list
+        h3.title Título da Lista
+        ul
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto de uma linha (CLOSE)
+            div.icon
+              a.list-item(href='#') Link
+                i.fas.fa-chevron-down
+          li.list-item.open
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto de uma linha (OPEN)
+            div.icon
+              a.list-item(href='#') Link
+                i.fas.fa-chevron-down
+            ul.top-shadow.bottom-shadow
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+              li Texto de uma linha
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto de uma linha (CLOSE)
+            div.icon
+              a.list-item(href='#') Link
+                i.fas.fa-chevron-down
+          li.list-item
+            div.icon
+              i.fas.fa-heartbeat
+            div.content
+              div.text Texto de uma linha (CLOSE)
+            div.icon
+              a.list-item(href='#') Link
+                i.fas.fa-chevron-down
 
 append style
   style.
