@@ -9,7 +9,7 @@ mixin wizard(label="Título", labelClass, collapsed=true, scroll=true, vertical=
     scroll=attributes.scroll
     vertical=attributes.vertical
     class=className)
-    .wizard-progress.is-collapsed
+    .wizard-progress
       button(class="wizard-progress-btn" type="button" title="Dados Pessoais" step="1" active)
         span.info Dados Pessoais
       button(class="wizard-progress-btn" type="button" title="Validar Dados" step="2")

@@ -48,11 +48,11 @@ class BRWizard {
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
 
         if (index == activeStepNum) {
-          elem.setAttribute('active', true);
+          elem.setAttribute('active', '');
           elem.focus();
         }
         if (index < activeStepNum) {
-          elem.setAttribute('inactive', true);
+          elem.setAttribute('inactive', '');
         }
 
       });
@@ -86,7 +86,7 @@ class BRWizard {
       //show active panel
       this.DOMstrings.stepFormPanels.forEach((elem, index) => {
         if (index === activePanelNum) {
-          elem.setAttribute('active', true)
+          elem.setAttribute('active', '')
         }
       });
 
@@ -156,13 +156,24 @@ class BRWizard {
       this.DOMstrings.stepsBar.style.gridTemplateColumns = "repeat(auto-fit, minmax(100px, " + stepsWidth + "% ))";
     }
 
+    // Swipe 
     const dispatcher = new SwipeEventDispatcher(this.DOMstrings.stepsBar);
-    dispatcher.on('SWIPE_UP', () => { 
-      this.DOMstrings.stepsBar.classList.add("is-collapsed")
+    if (  !this.component.hasAttribute("vertical")  ) {
+      dispatcher.on('SWIPE_UP', () => { 
+        this.component.setAttribute('collapsed', '');
+      });
+      dispatcher.on('SWIPE_DOWN', () => { 
+        this.component.removeAttribute('collapsed');
+
     });
-    dispatcher.on('SWIPE_DOWN', () => { 
-      this.DOMstrings.stepsBar.classList.remove("is-collapsed")
-    });
+    } else {
+      dispatcher.on('SWIPE_LEFT', () => { 
+        this.component.setAttribute('collapsed', '');
+      });
+      dispatcher.on('SWIPE_RIGHT', () => { 
+        this.component.removeAttribute('collapsed');
+      });
+    } 
   }
 }
 
