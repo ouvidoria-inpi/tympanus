@@ -57,18 +57,15 @@
       font-weight: v(font-weight-bold, $font-weight-bold);
     }
   }
-  // &::-webkit-scrollbar-thumb {
-  //   height: 5px;
-  // }
   &::-webkit-scrollbar {
-    height: 3px;
+    height: 6px;
   }
   &::-webkit-scrollbar-track {
-    background: #cccccc;
+    background: v(color-secondary-04);
     border-radius: 0px
   }
   &::-webkit-scrollbar-thumb {
-    background: #615f5f;
+    background: v(color-secondary-05);
     border-radius: 0px
   }
 }
