@@ -1,6 +1,6 @@
 .#{$prefix}tag {
   //@include hover;
-  //@include focus; 
+  //@include focus;
   align-items: center;
   background: v(color-secondary-01);
   border: 1px solid v(color-primary-default);
@@ -53,14 +53,14 @@
 
   &.disabled {
     background-color: v(color-primary-pastel-01);
-    opacity: .45;
+    opacity: 0.45;
 
     &:active,
     &:hover,
     &:focus {
       background: v(color-primary-pastel-01);
       color: v(color-primary-default);
-      opacity: .45;
+      opacity: 0.45;
 
       .icon {
         color: v(color-primary-default);

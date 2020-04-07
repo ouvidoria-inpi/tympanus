@@ -10,7 +10,6 @@ mixin tag
                     span.sr-only Fechar
 
 mixin tag-button
-    button(type='button').br-tag&attributes(attributes)
-        .content
-            if block
-                block
+    button.br-tag&attributes(attributes)(type='button')
+        if block
+            block
