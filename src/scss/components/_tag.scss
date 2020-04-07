@@ -20,12 +20,14 @@
     align-items: center;
   }
 
-  img {
+  img,
+  .content img {
     max-height: 9px;
     max-width: 12px;
   }
 
-  [class*="fa-"] {
+  .content [class*="fa-"],
+  span [class*="fa-"] {
     text-align: center;
     color: v(color-primary-default);
     font-size: 100%;
@@ -39,11 +41,13 @@
     outline: none;
   }
 
+  &:active,
   &.active {
     background-color: v(color-primary-default);
     color: v(color-secondary-01);
 
-    [class*="fa-"] {
+    .content [class*="fa-"],
+    span [class*="fa-"] {
       color: v(color-secondary-01);
     }
 
@@ -63,7 +67,8 @@
       color: v(color-primary-default);
       opacity: 0.45;
 
-      [class*="fa-"] {
+      .content [class*="fa-"],
+      span [class*="fa-"] {
         color: v(color-primary-default);
       }
     }
@@ -80,8 +85,6 @@
         border: 0;
         color: v(color-support-03);
         outline: 0;
-        margin: 0;
-        padding-right: 0;
         padding-left: $spacer * 1.5;
       }
     }

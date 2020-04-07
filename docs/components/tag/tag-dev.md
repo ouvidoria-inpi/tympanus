@@ -7,8 +7,7 @@ Nenhuma dependência.
 ```html
 <div class="br-tag">
     <div class="content">
-        <div class="icon"><i class="fa fa-car"></i></div>
-        <span>Mitsubishi Outlander</span>
+        <span><i class="fa fa-car"></i>Mitsubishi Outlander</span>
     </div>
 </div>
 ```
@@ -18,8 +17,8 @@ Nenhuma dependência.
 Este componente é formado pelos seguintes elementos:
 
 -   `br-tag` (obrigatório): container do componente.
--   `content` (obrigatório): conteúdo da tag, engloba o ícone e o texto.
--   `icon` (opcional): ícone ou miniatura para a tag. Para miniatura, usar `<img src="" alt="">` e para ícone do Fontawesome - `<i class="fas">`.
+-   `content` (obrigatório para o tipo Tag de Entrada): conteúdo da tag, engloba o ícone e o texto.
+-   ícone (opcional): ícone ou miniatura para a tag. Para miniatura, usar `<img src="" alt="">` e para ícone do Fontawesome - `<i class="fas">`.
 
 Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](https://fontawesome.com/).
 
@@ -27,7 +26,7 @@ Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](h
 
 ## Tag de Entrada
 
-Representam dados ou informações inseridas em campos de texto e convertidas em um componente Tag.
+Representam dados ou informações inseridas em campos de texto e que serão convertidas em um componente Tag.
 
 Usar o prefixo `br-tag-input`.
 
@@ -47,8 +46,7 @@ Exemplo de uso:
 ```html
 <div class="br-tag tag-input-close">
     <div class="content">
-        <div class="icon"><i class="fa fa-car"></i></div>
-        <span>Mitsubishi Outlander</span>
+        <span><i class="fa fa-car"></i>Mitsubishi Outlander</span>
     </div>
     <div class="close">
         <button type="button">
@@ -60,7 +58,7 @@ Exemplo de uso:
 
 ## Tag de Escolha
 
-Nos conjuntos que contêm pelo menos duas opções, os Tags de escolha representam uma única seleção ou seja, permitem a seleção de um único Tag dentre um conjunto de opções. Funcionam também como alternativa para botões, botões de opção e menus de seleção única.
+Nos conjuntos que contêm pelo menos duas opções, os Tags de escolha representam uma única seleção. Ou seja, permitem a seleção de um único Tag dentre um conjunto de opções. Funcionam também como alternativa para botões, botões de opção e menus de seleção única.
 
 Aplicar a classe `br-tag-list`.
 
@@ -68,12 +66,8 @@ Exemplo de uso:
 
 ```html
 <div class="br-tag-list">
-    <button class="br-tag">
-        <div class="content"><span>Alta Prioridade</span></div>
-    </button>
-    <button class="br-tag">
-        <div class="content"><span>Baixa Prioridade</span></div>
-    </button>
+    <button class="br-tag" type="button"><span>Alta Prioridade</span></button>
+    <button class="br-tag" type="button"><span>Baixa Prioridade</span></button>
 </div>
 ```
 
@@ -87,17 +81,11 @@ Exemplo de uso:
 
 ```html
 <div class="br-tag-filter">
-    <button class="br-tag">
-        <div class="content">
-            <div class="icon"><i class="fas fa-check"></i></div>
-            <span>Modelo de Automóvel</span>
-        </div>
+    <button class="br-tag" type="button">
+        <span><i class="fas fa-check"></i>Modelo de Automóvel</span>
     </button>
-    <button class="br-tag">
-        <div class="content">
-            <div class="icon"><i class="fas fa-check"></i></div>
-            <span>Tipo de Combustível</span>
-        </div>
+    <button class="br-tag" type="button">
+        <span><i class="fas fa-check"></i>Tipo de Combustível</span>
     </button>
 </div>
 ```
