@@ -1,13 +1,15 @@
-mixin wizard(label="Título", labelClass, collapsed=true, scroll=true, vertical=false, total = 4)
+mixin wizard(label="Título", labelClass, collapsed=true, scroll=true, vertical=false, total = 4, step = 1)
   - let className = attributes.class
   - let componentClass = prefix + "wizard"
   - total = attributes.total ?  attributes.total : 4
+  - step = attributes.step ? attributes.step : 1
   - className = className ? componentClass + " " + className : componentClass
   div(
     id=attributes.id
     collapsed=attributes.collapsed
     scroll=attributes.scroll
     vertical=attributes.vertical
+    step=step
     class=className)
     .wizard-progress
       button(class="wizard-progress-btn" type="button" title="Dados Pessoais" step="1" active)

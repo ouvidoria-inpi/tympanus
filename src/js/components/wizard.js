@@ -92,6 +92,20 @@ class BRWizard {
 
     };
 
+    this.setStep = num => {
+      const activeStep = num <= this.DOMstrings.stepsBtns.length  ? num - 1 : 0;
+      this.setActiveStep(activeStep);
+      this.setActivePanel(activeStep);
+    };
+
+    this.collapseSteps = () => {
+      this.component.setAttribute('collapsed', '');
+    }
+
+    this.expandSteps = () => {
+      this.component.removeAttribute('collapsed');
+    }
+
     this._setBehavior() ;
   }
 
@@ -150,6 +164,12 @@ class BRWizard {
 
     });
 
+    // Set default active step
+    if ( this.component.hasAttribute("step")) {
+      this.setStep(this.component.getAttribute("step"))
+    }
+
+
     //set steps buttons grid style if it needs to scroll horizontaly
     if ( this.component.hasAttribute("scroll") && !this.component.hasAttribute("vertical") ) {
       let stepsWidth = Math.round( 100 / this.DOMstrings.stepsBtns.length) -0.5;
@@ -158,21 +178,23 @@ class BRWizard {
 
     // Swipe 
     const dispatcher = new SwipeEventDispatcher(this.DOMstrings.stepsBar);
-    if (  !this.component.hasAttribute("vertical")  ) {
-      dispatcher.on('SWIPE_UP', () => { 
-        this.component.setAttribute('collapsed', '');
-      });
-      dispatcher.on('SWIPE_DOWN', () => { 
-        this.component.removeAttribute('collapsed');
-
-    });
-    } else {
+    if (  this.component.hasAttribute("vertical")  ) {
       dispatcher.on('SWIPE_LEFT', () => { 
-        this.component.setAttribute('collapsed', '');
+        this.collapseSteps();
       });
       dispatcher.on('SWIPE_RIGHT', () => { 
-        this.component.removeAttribute('collapsed');
+        this.expandSteps();
       });
+      this.DOMstrings.stepsForm.ontouchstart = () => {
+        this.collapseSteps();
+      };
+    } else {
+      this.DOMstrings.stepsBar.ontouchstart = () => {
+        this.expandSteps();
+      };
+      this.DOMstrings.stepsForm.ontouchstart = () => {
+        this.collapseSteps();
+      };
     } 
   }
 }

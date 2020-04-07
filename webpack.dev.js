@@ -83,6 +83,7 @@ module.exports = {
 		port: 9000,
 		open: false,
 		hot: true,
+		host: '192.168.25.11',
 		inline: true,
 		progress: true,
 		profile: true,

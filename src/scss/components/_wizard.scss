@@ -28,7 +28,7 @@
       outline: none !important;
       cursor: pointer;
       font-size: 18px;
-      line-height: 20px;
+      line-height: 19px;
       padding-top: 16px;
       padding-bottom: 0px;
       max-height: 90px;
@@ -42,7 +42,7 @@
         margin-top: -13px;
         font-size: 20px;
         font-weight: 600;
-        line-height: 26px;
+        line-height: 28px;
         content: attr(step) !important;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
@@ -166,8 +166,8 @@
         left: 0 !important;
       }
       .wizard-panel-content {
-        min-height: calc(100vh - 340px);
-        max-height: calc(100vh - 320px);
+        min-height: calc(100vh - 300px);
+        max-height: calc(100vh - 300px);
         overflow-y: auto;
         overflow-x: hidden;
       }
@@ -263,8 +263,8 @@
       .wizard-panel {
         border-top: 0;
         .wizard-panel-content {
-          min-height: calc(100vh - 350px);
-          max-height: calc(100vh - 350px);
+          min-height: calc(100vh - 276px);
+          max-height: calc(100vh - 276px);
           overflow-y: auto;
           overflow-x: hidden;
         }
@@ -285,8 +285,10 @@
     }
     .wizard-progress {
       position: relative;
-      padding-top: 32px;
-      min-height: 134px;
+      padding-top: 24px;
+      min-height: 100px;
+      max-height: 100px;
+      overflow-y: hidden;
       .wizard-progress-btn {
         .info {
           font-size: 0.6em;
@@ -303,16 +305,19 @@
         background-color: v(color-secondary-04);
         //bottom: 0;
         left: 44%;
-        margin-top: 98px;
+        margin-top: 72px;
       } 
     }
 
     &[collapsed] {
       .wizard-progress {
-        min-height: auto;
-        padding-bottom: 32px;
+        min-height: 64px;
+        max-height: 64px;
+        padding-bottom: 24px;
+        overflow-y: hidden;
+        padding-top: 24px;
         &:after {
-          margin-top: 52px;
+          margin-top: 36px;
         }
         .wizard-progress-btn {
           padding-bottom: 8px;
@@ -324,8 +329,8 @@
       .wizard-form {
         .wizard-panel {
           .wizard-panel-content {
-            min-height: calc(100vh - 290px);
-            max-height: calc(100vh - 290px);
+            min-height: calc(100vh - 240px);
+            max-height: calc(100vh - 240px);
             overflow-y: auto;
             overflow-x: hidden;
           }
@@ -335,21 +340,22 @@
     
     &[vertical] {
       .wizard-progress {
-        max-width: 140px;
+        max-width: 110px;
         max-height: calc(100vh - 60px);
         &:after {
           width: 4px;
           height: 8%;
-          left: 142px;
+          left: 114px;
           top: 40%;
           margin-top: 0;
         } 
         .wizard-progress-btn {
           padding-right: 56px;
+          line-height: 18px;
         }
       }
       .wizard-form {
-        width: calc(100% - 140px);
+        width: calc(100% - 110px);
         .wizard-panel {
           .wizard-panel-content {
             min-height: calc(100vh - 180px);
@@ -362,6 +368,8 @@
       }
       &[collapsed] {
         .wizard-progress {
+          padding-top: 0;
+          padding-bottom: 0;
           max-width: 60px;
           &:after {
             width: 4px;
