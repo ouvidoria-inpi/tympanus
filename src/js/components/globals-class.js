@@ -1,5 +1,4 @@
 import BRAccordeon from './accordeon'
-import BRChecklist from './checklist'
 import BRDatepicker from './datepicker'
 import BRHeader from './header'
 import BRInput from './input'
@@ -20,7 +19,6 @@ export default class Globals {
 
   initInstanceAll () {
     this.initInstanceAccordeon()
-    this.initInstanceChecklist()
     this.initInstanceMessage()
     this.initInstanceHeader()
     this.initInstanceInput()
@@ -42,14 +40,6 @@ export default class Globals {
 
     for ( let brAccordeon of window.document.querySelectorAll( '.br-accordeon' ) ) {
       accordeonList.push( new BRAccordeon( 'br-accordeon', brAccordeon ) )
-    }
-  }
-
-  initInstanceChecklist () {
-    let checklistList = []
-
-    for ( let brChecklist of window.document.querySelectorAll( '.br-checklist' ) ) {
-      checklistList.push( new BRChecklist( 'br-checklist', brChecklist ) )
     }
   }
 
