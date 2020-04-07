@@ -1,7 +1,5 @@
 [artefato fonte de design]: # 'avatar_0.0.0.xd'
 
-É o componente utilizado para representar graficamente um usuário em ambientes virtuais. Pode apresentar-se como ilustração vetorial (que chamaremos de avatar icônico) ou fotografia (que chamaremos de avatar fotográfico). Seu objetivo é identificar um usuário em ambientes virtuais.
-
 ![Exemplo Componente](imagens/avatar-icon-pequeno.png)
 
 ![Exemplo Componente](imagens/avatar-foto-pequeno.png)

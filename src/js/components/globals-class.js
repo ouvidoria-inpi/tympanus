@@ -1,12 +1,12 @@
 import BRAccordeon from './accordeon'
-import BRChecklist from './checklist'
 import BRDatepicker from './datepicker'
-import BRHeader from './header'
 import BRInput from './input'
 import BRAlert from './message'
 import BRNavigation from './navigation'
 import BRSelect from './select'
 import BRTabs from './tabs'
+import BRTag from './tag'
+import BRTagInput from './taginput'
 import BRUpload from './upload'
 import BRTable from './table'
 import BRScrim from './scrim'
@@ -16,13 +16,11 @@ import BRBreadcrumb from './breadcrumb';
 import BRWizard from './wizard'
 
 export default class Globals {
-  constructor () { }
+  constructor() {}
 
-  initInstanceAll () {
+  initInstanceAll() {
     this.initInstanceAccordeon()
-    this.initInstanceChecklist()
     this.initInstanceMessage()
-    this.initInstanceHeader()
     this.initInstanceInput()
     this.initInstanceNavigation()
     this.initInstanceSelect()
@@ -37,7 +35,7 @@ export default class Globals {
     this.initInstanceWizard()
   }
 
-  initInstanceAccordeon () {
+  initInstanceAccordeon() {
     let accordeonList = []
 
     for ( let brAccordeon of window.document.querySelectorAll( '.br-accordeon' ) ) {
@@ -45,15 +43,7 @@ export default class Globals {
     }
   }
 
-  initInstanceChecklist () {
-    let checklistList = []
-
-    for ( let brChecklist of window.document.querySelectorAll( '.br-checklist' ) ) {
-      checklistList.push( new BRChecklist( 'br-checklist', brChecklist ) )
-    }
-  }
-
-  initInstanceMessage () {
+  initInstanceMessage() {
     let alertList = []
 
     for ( let brAlert of window.document.querySelectorAll( '.br-message' ) ) {
@@ -61,15 +51,7 @@ export default class Globals {
     }
   }
 
-  initInstanceHeader () {
-    let listHeader = []
-
-    for ( let header of window.document.querySelectorAll( '.br-header' ) ) {
-      listHeader.push( new BRHeader( 'br-header', header ) )
-    }
-  }
-
-  initInstanceInput () {
+  initInstanceInput() {
     const countries = [
       'Afeganistão',
       'África do Sul',
@@ -326,24 +308,24 @@ export default class Globals {
 
     for ( let brInput of inputList ) {
       for ( let inputAutocomplete of brInput.component.querySelectorAll(
-        'input.search-autocomplete'
-      ) ) {
+          'input.search-autocomplete'
+        ) ) {
         brInput.setAutocompleteData( countries )
       }
     }
   }
 
-  initInstanceNavigation () {
+  initInstanceNavigation() {
     let navigationList = []
 
     for ( let brNavigation of window.document.querySelectorAll(
-      '.br-navigation'
-    ) ) {
+        '.br-navigation'
+      ) ) {
       navigationList.push( new BRNavigation( 'br-navigation', brNavigation ) )
     }
   }
 
-  initInstanceSelect () {
+  initInstanceSelect() {
     let selectList = []
 
     for ( let brSelect of window.document.querySelectorAll( '.br-select' ) ) {
@@ -351,7 +333,7 @@ export default class Globals {
     }
   }
 
-  initInstanceTabs () {
+  initInstanceTabs() {
     let abasList = []
 
     for ( let brTabs of window.document.querySelectorAll( '.br-tabs' ) ) {
@@ -359,7 +341,7 @@ export default class Globals {
     }
   }
 
-  initInstanceUpload () {
+  initInstanceUpload() {
     let uploadList = []
 
     for ( let brUpload of window.document.querySelectorAll( '.br-upload' ) ) {
@@ -367,74 +349,109 @@ export default class Globals {
     }
   }
 
-  initInstanceDatepicker () {
+  initInstanceDatepicker() {
     let datepickerList = []
 
     for ( let brDatepicker of window.document.querySelectorAll(
-      '.br-datepicker'
-    ) ) {
+        '.br-datepicker'
+      ) ) {
       datepickerList.push( new BRDatepicker( 'br-datepicker', brDatepicker ) )
     }
   }
 
-  initInstanceTable () {
-    let tableList = [];
-    for ( let [ index, brTable ] of window.document.querySelectorAll( ".br-table" ).entries() ) {
-      tableList.push( new BRTable( "br-table", brTable, index ) );
+  initInstanceTable() {
+    let tableList = []
+    for ( let [ index, brTable ] of window.document
+      .querySelectorAll( '.br-table' )
+      .entries() ) {
+      tableList.push( new BRTable( 'br-table', brTable, index ) )
     }
   }
 
-  initInstanceScrim () {
-    let scrimList = [];
+  initInstanceScrim() {
+    let scrimList = []
 
-    for ( let brScrim of window.document.querySelectorAll( ".br-scrim" ) ) {
-      scrimList.push( new BRScrim( "br-scrim", brScrim ) );
+    for ( let brScrim of window.document.querySelectorAll( '.br-scrim' ) ) {
+      scrimList.push( new BRScrim( 'br-scrim', brScrim ) )
     }
 
-    for ( let buttonBloco1 of window.document.querySelectorAll( ".bloco1 button" ) ) {
-      buttonBloco1.addEventListener( "click", () => {
+    for ( let buttonBloco1 of window.document.querySelectorAll(
+        '.bloco1 button'
+      ) ) {
+      buttonBloco1.addEventListener( 'click', () => {
         for ( let brScrim of scrimList ) {
-          brScrim.showScrim();
+          brScrim.showScrim()
         }
-      } );
+      } )
     }
   }
 
-  initInstanceModal () {
+  initInstanceModal() {
     let modalList = []
 
-    for ( let brModal of window.document.querySelectorAll( ".br-modal" ) ) {
-      modalList.push( new BRModal( "br-modal", brModal ) );
+    for ( let brModal of window.document.querySelectorAll( '.br-modal' ) ) {
+      modalList.push( new BRModal( 'br-modal', brModal ) )
     }
 
-    for ( let brScrim of window.document.querySelectorAll( ".br-scrim" ) ) {
-      let scrim = new BRScrim( "br-scrim", brScrim );
-      for ( let button of window.document.querySelectorAll( ".br-scrim + button" ) ) {
-        button.addEventListener( "click", () => {
-          scrim.showScrim();
-        } );
+    for ( let brScrim of window.document.querySelectorAll( '.br-scrim' ) ) {
+      let scrim = new BRScrim( 'br-scrim', brScrim )
+      for ( let button of window.document.querySelectorAll(
+          '.br-scrim + button'
+        ) ) {
+        button.addEventListener( 'click', () => {
+          scrim.showScrim()
+        } )
       }
     }
   }
 
-  initInstanceTooltip () {
+  initInstanceTooltip() {
     let tooltipList = []
-    for ( let brTooltip of window.document.querySelectorAll( ".br-tooltip" ) ) {
+    for ( let brTooltip of window.document.querySelectorAll( '.br-tooltip' ) ) {
       tooltipList.push( new BRTooltip( 'br-tooltip', brTooltip ) )
     }
   }
 
-  initInstanceBreadcrumb () {
-    let breadcrumbList = [];
-    for ( let brBreadcrumb of window.document.querySelectorAll( ".br-breadcrumb" ) ) {
-      breadcrumbList.push( new BRBreadcrumb( "br-breadcrumb", brBreadcrumb ) );
+  initInstanceTagInput() {
+    let tagInputList = []
+
+    for ( let brTag of window.document.querySelectorAll( '.br-tag-input' ) ) {
+      tagInputList.push( new BRTagInput( 'br-tag-input', brTag ) )
     }
   }
 
-  initInstanceWizard () {
+  initInstanceTag() {
+    let tagList = []
+
+    for ( let brTag of window.document.querySelectorAll( '.br-tag' ) ) {
+      tagList.push( new BRTag( 'br-tag', brTag ) )
+    }
+
+    let tagListChoice = []
+
+    for ( let brTagChoice of window.document.querySelectorAll( '.br-tag-list' ) ) {
+      tagListChoice.push( new BRTagChoice( 'br-tag-list', brTagChoice ) )
+    }
+
+    let tagListFilter = []
+
+    for ( let brTagFilter of window.document.querySelectorAll(
+        '.br-tag-filter'
+      ) ) {
+      tagListFilter.push( new BRTagFilter( 'br-tag-list', brTagFilter ) )
+    }
+  }
+  initInstanceWizard() {
     let wizardList = []
-    for ( let brWizard of window.document.querySelectorAll( ".br-wizard" ) ) {
+    for ( let brWizard of window.document.querySelectorAll( '.br-wizard' ) ) {
       wizardList.push( new BRWizard( 'br-wizard', brWizard ) )
+    }
+  }
+
+  initInstanceBreadcrumb() {
+    let breadcrumbList = [];
+    for ( let brBreadcrumb of window.document.querySelectorAll( ".br-breadcrumb" ) ) {
+      breadcrumbList.push( new BRBreadcrumb( "br-breadcrumb", brBreadcrumb ) );
     }
   }
 }
