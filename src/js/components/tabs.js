@@ -7,19 +7,32 @@ class BRTabs {
   }
 
   _setBehavior() {
-    for (let item of this.component.querySelectorAll('.item')) {
-      item.addEventListener("click", (event) => {
-        this._switchTab(event.currentTarget);
+    for (let ancor of this.component.querySelectorAll('.tab-nav .tab-item:not([not-tab="true"]) button')) {
+      ancor.addEventListener("click", (event) => {
+        this._switchTab(event.currentTarget.parentElement);
+        this._switchContent(event.currentTarget.parentElement);
       }, false);
     }
   }
 
   _switchTab(currentTab) {
-    for (let tab of this.component.querySelectorAll('.item')) {
-      if (tab === currentTab) {
-        tab.classList.add("is-active");
+    for (let tabItem of this.component.querySelectorAll('.tab-nav .tab-item:not([not-tab="true"])')) {
+      if (tabItem === currentTab) {
+        tabItem.classList.add("is-active");
       } else {
-        tab.classList.remove("is-active");
+        tabItem.classList.remove("is-active");
+      }
+    }
+  }
+
+  _switchContent(currentTab) {
+    for (let button of currentTab.querySelectorAll("button")) {
+      for (let tabPanel of this.component.querySelectorAll(".tab-content .tab-panel")) {
+        if (button.getAttribute("data-panel") === tabPanel.getAttribute("id")) {
+          tabPanel.classList.add("is-active");
+        } else {
+          tabPanel.classList.remove("is-active");
+        }
       }
     }
   }

@@ -101,131 +101,96 @@
         "type": "docs"
       },
       {
-        "label": "Abas",
-        "filename": "tabs",
-        "urlLabel": "abas"
+        "label": "Accordeon",
+        "filename": "accordeon"
       },
       {
-        "label": "Acordeão",
-        "filename": "accordeon",
-        "urlLabel": "acordeao"
+        "label": "Avatar",
+        "filename": "avatar"
       },
       {
         "label": "Badge",
-        "filename": "badge",
-        "urlLabel": "badge"
+        "filename": "badge"
       },
       {
-        "label": "Botão",
-        "filename": "button",
-        "urlLabel": "botao"
+        "label": "Breadcrumb",
+        "filename": "breadcrumb"
       },
       {
-        "label": "Busca",
-        "filename": "search",
-        "urlLabel": "busca"
+        "label": "Button",
+        "filename": "button"
       },
       {
-        "label": "Card",
-        "filename": "card",
-        "urlLabel": "card"
-      },
-      {
-        "label": "Controle de Seleção",
-        "filename": "selection-control",
-        "urlLabel": "controle-selecao",
-        "children": [
-          {
-            "label": "Checkbox",
-            "filename": "checkbox",
-            "urlLabel": "checkbox"
-          },
-          {
-            "label": "Checklist",
-            "filename": "checklist",
-            "urlLabel": "checklist"
-          },
-          {
-            "label": "Radio",
-            "filename": "radio",
-            "ulLabel": "radio"
-          }
-        ]
+        "label": "Checkbox",
+        "filename": "checkbox"
       },
       {
         "label": "Datepicker",
-        "filename": "datepicker",
-        "urlLabel": "datepicker"
+        "filename": "datepicker"
       },
       {
         "label": "Divider",
-        "filename": "divider",
-        "urlLabel": "divisor"
+        "filename": "divider"
       },
       {
         "label": "Input",
-        "filename": "input",
-        "urlLabel": "input"
+        "filename": "input"
       },
       {
-        "label": "Listas",
-        "filename": "listas",
-        "urlLabel": "listas"
+        "label": "List",
+        "filename": "list"
       },
       {
-        "label": "Mensagem",
-        "filename": "message",
-        "urlLabel": "mensagem"
-      },
-      {
-        "label": "Migalha de Pão",
-        "filename": "breadcrumb",
-        "urlLabel": "migalha-de-pao"
+        "label": "Mensage",
+        "filename": "message"
       },
       {
         "label": "Modal",
-        "filename": "modal",
-        "urlLabel": "modal"
+        "filename": "modal"
       },
       {
-        "label": "Paginação",
-        "filename": "pagination",
-        "urlLabel": "paginacao"
+        "label": "Pagination",
+        "filename": "pagination"
+      },
+      {
+        "label": "Radio",
+        "filename": "radio"
       },
       {
         "label": "Scrim",
-        "filename": "scrim",
-        "urlLabel": "scrim"
+        "filename": "scrim"
+      },
+      {
+        "label": "Search",
+        "filename": "search"
+      },
+      {
+        "label": "Table",
+        "filename": "table"
+      },
+      {
+        "label": "Tabs",
+        "filename": "tabs"
       },
       {
         "label": "Tag",
-        "filename": "tag",
-        "urlLabel": "tag"
-      },
-      {
-        "label": "Tabela",
-        "filename": "table",
-        "urlLabel": "tabela"
+        "filename": "tag"
       },
       {
         "label": "Textarea",
-        "filename": "textarea",
-        "urlLabel": "textarea"
+        "filename": "textarea"
       },
       {
         "label": "Tooltip",
-        "filename": "tooltip",
-        "urlLabel": "tooltip"
+        "filename": "tooltip"
       },
       {
         "label": "Upload",
-        "filename": "upload",
-        "urlLabel": "upload"
+        "filename": "upload"
       },
       {
         "label": "Wizard",
-        "filename": "wizard",
-        "urlLabel": "wizard"
+        "filename": "wizard"
       }
     ]
   },
