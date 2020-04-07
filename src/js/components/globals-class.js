@@ -1,6 +1,5 @@
 import BRAccordeon from './accordeon'
 import BRDatepicker from './datepicker'
-import BRHeader from './header'
 import BRInput from './input'
 import BRAlert from './message'
 import BRNavigation from './navigation'
@@ -20,7 +19,6 @@ export default class Globals {
   initInstanceAll () {
     this.initInstanceAccordeon()
     this.initInstanceMessage()
-    this.initInstanceHeader()
     this.initInstanceInput()
     this.initInstanceNavigation()
     this.initInstanceSelect()
@@ -48,14 +46,6 @@ export default class Globals {
 
     for ( let brAlert of window.document.querySelectorAll( '.br-message' ) ) {
       alertList.push( new BRAlert( 'br-message', brAlert ) )
-    }
-  }
-
-  initInstanceHeader () {
-    let listHeader = []
-
-    for ( let header of window.document.querySelectorAll( '.br-header' ) ) {
-      listHeader.push( new BRHeader( 'br-header', header ) )
     }
   }
 
