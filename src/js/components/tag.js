@@ -60,7 +60,7 @@ class BRTagFilter {
 	}
 
     _setBehavior() {
-        console.log("criado");
+        
         
         for (let button of this.component.querySelectorAll(".br-tag")) {
             
@@ -89,7 +89,7 @@ for (let brTag of window.document.querySelectorAll('.br-tag')) {
 let tagListChoice = []
 
 for (let brTagChoice of window.document.querySelectorAll('.br-tag-list')) {
-    console.log("....");
+    
 	tagListChoice.push(new BRTagChoice('br-tag-list', brTagChoice))
 }
 
@@ -98,8 +98,7 @@ for (let brTagChoice of window.document.querySelectorAll('.br-tag-list')) {
 let tagListFilter = []
 
 for (let brTagFilter of window.document.querySelectorAll('.br-tag-filter')) {
-    console.log("....");
-	tagListFilter.push(new BRTagFilter('br-tag-list', brTagFilter))
+    tagListFilter.push(new BRTagFilter('br-tag-list', brTagFilter))
 }
 
 
