@@ -6,6 +6,7 @@
 	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/latest/",
 	"scripts": {
 		"start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev",
+		"build-local": "npm-run-all build:webpack:dev & webpack-dev-server --env prod",
 		"build": "npm-run-all build:webpack:prod && npm run cdn:build",
 		"test": "npm-run-all validate:*",
 		"init": "npm run repo:serpro & npm run repo:govbr && npm install",
