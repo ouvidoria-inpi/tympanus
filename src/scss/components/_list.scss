@@ -53,7 +53,6 @@ div.#{$prefix}list {
 }
 .#{$prefix}list {
   background-color: v(color-secondary-01);
-  //min-width: 400px;
   width: auto;
   ul {
     list-style-type: none;
@@ -99,7 +98,6 @@ div.#{$prefix}list {
   .icon {
     align-items: center;
     display: flex;
-    //flex-basis: auto;
     flex-direction: column;
     justify-content: center;
     &.active {
@@ -183,7 +181,7 @@ div.#{$prefix}list {
       }
     }
     &.dragged {
-      background-color: v(color-secondary-03); //Verificar
+      background-color: v(color-secondary-03);
       & .icon {
         [class*="fa-"] {
           color: v(color-secondary-04);
@@ -246,7 +244,6 @@ div.#{$prefix}list {
     }
     .content {
       padding: 0 16px 0 0;
-      //flex-basis: 74%;
     }
     .sub-title {
       font-size: v(font-size-scale-down-01);
