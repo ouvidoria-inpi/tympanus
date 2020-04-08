@@ -162,8 +162,24 @@ div.#{$prefix}list {
       }
     }
     &.disabled {
-      * {
+      & .text {
         color: v(color-secondary-04);
+      }
+      & .icon {
+        [class*="fa-"] {
+          color: v(color-secondary-04);
+        }
+      }
+      &:hover {
+        background-color: v(color-primary-pastel-02);
+        & .icon {
+          [class*="fa-"] {
+            color: v(color-primary-default);
+          }
+        }
+        & .text {
+          color: v(color-secondary-09);
+        }
       }
     }
     &.dragged {
@@ -181,6 +197,9 @@ div.#{$prefix}list {
           color: v(color-secondary-01);
         }
       }
+      & .text {
+        color: v(color-secondary-01);
+      }
     }
     &:hover {
       background-color: v(color-primary-pastel-02);
@@ -188,6 +207,9 @@ div.#{$prefix}list {
         [class*="fa-"] {
           color: v(color-primary-default);
         }
+      }
+      & .text {
+        color: v(color-secondary-09);
       }
     }
     &:focus {
