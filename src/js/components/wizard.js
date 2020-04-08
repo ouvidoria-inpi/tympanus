@@ -16,9 +16,9 @@ class BRWizard {
       stepNextBtnClass: 'wizard-btn-next' 
     };
     //remove class from a set of items
-    this.removeClasses = (elemSet, className) => {
+    this.removeAttributes = (elemSet, attrName) => {
       elemSet.forEach(elem => {
-        elem.classList.remove(className);
+        elem.removeAttribute(attrName)
       });
     };
 
@@ -40,17 +40,19 @@ class BRWizard {
     this.setActiveStep = activeStepNum => {
 
       //remove active state from all the state
-      this.removeClasses(this.DOMstrings.stepsBtns, 'is-active');
-      this.removeClasses(this.DOMstrings.stepsBtns, 'is-inactive');
+      this.removeAttributes(this.DOMstrings.stepsBtns, 'active');
+      this.removeAttributes(this.DOMstrings.stepsBtns, 'inactive');
+
 
       //set picked items to active
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
 
         if (index == activeStepNum) {
-          elem.classList.add('is-active');
+          elem.setAttribute('active', '');
+          elem.focus();
         }
         if (index < activeStepNum) {
-          elem.classList.add('is-inactive');
+          elem.setAttribute('inactive', '');
         }
 
       });
@@ -63,7 +65,7 @@ class BRWizard {
 
       this.DOMstrings.stepFormPanels.forEach(elem => {
 
-        if (elem.classList.contains('is-active')) {
+        if ( elem.hasAttribute('active')) {
 
           activePanel = elem;
 
@@ -79,16 +81,36 @@ class BRWizard {
     this.setActivePanel = activePanelNum => {
 
       //remove active class from all the panels
-      this.removeClasses(this.DOMstrings.stepFormPanels, 'is-active');
+      this.removeAttributes(this.DOMstrings.stepFormPanels, 'active');
 
       //show active panel
       this.DOMstrings.stepFormPanels.forEach((elem, index) => {
         if (index === activePanelNum) {
-          elem.classList.add('is-active');
+          elem.setAttribute('active', '')
         }
       });
 
     };
+
+    this.setStepsNum = () => {
+      this.DOMstrings.stepsBtns.forEach((elem, index) => {
+          elem.setAttribute('step', index+1 )
+      });
+    }
+
+    this.setStep = num => {
+      const activeStep = num <= this.DOMstrings.stepsBtns.length  ? num - 1 : 0;
+      this.setActiveStep(activeStep);
+      this.setActivePanel(activeStep);
+    };
+
+    this.collapseSteps = () => {
+      this.component.setAttribute('collapsed', '');
+    }
+
+    this.expandSteps = () => {
+      this.component.removeAttribute('collapsed');
+    }
 
     this._setBehavior() ;
   }
@@ -148,19 +170,41 @@ class BRWizard {
 
     });
 
-    //set steps buttons grid style if it needs to scroll horizontaly
-    if ( this.DOMstrings.stepsBar.classList.contains("is-scroll") ) {
-      let stepsWidth = Math.round( 100 / this.DOMstrings.stepsBtns.length);
-      this.DOMstrings.stepsBar.style.gridTemplateColumns = "repeat(auto-fit, minmax(125px, " + stepsWidth + "% ))";
+    // Set Steps label number 
+    this.setStepsNum();
+
+    // Set default active step
+    if ( this.component.hasAttribute("step")) {
+      this.setStep(this.component.getAttribute("step"))
     }
 
+
+    //set steps buttons grid style if it needs to scroll horizontaly
+    if ( this.component.hasAttribute("scroll") && !this.component.hasAttribute("vertical") ) {
+      let stepsWidth = Math.round( 100 / this.DOMstrings.stepsBtns.length) -0.5;
+      this.DOMstrings.stepsBar.style.gridTemplateColumns = "repeat(auto-fit, minmax(100px, " + stepsWidth + "% ))";
+    }
+
+    // Swipe 
     const dispatcher = new SwipeEventDispatcher(this.DOMstrings.stepsBar);
-    dispatcher.on('SWIPE_UP', () => { 
-      this.DOMstrings.stepsBar.classList.add("is-collapsed")
-    });
-    dispatcher.on('SWIPE_DOWN', () => { 
-      this.DOMstrings.stepsBar.classList.remove("is-collapsed")
-    });
+    if (  this.component.hasAttribute("vertical")  ) {
+      dispatcher.on('SWIPE_LEFT', () => { 
+        this.collapseSteps();
+      });
+      dispatcher.on('SWIPE_RIGHT', () => { 
+        this.expandSteps();
+      });
+      this.DOMstrings.stepsForm.ontouchstart = () => {
+        this.collapseSteps();
+      };
+    } else {
+      this.DOMstrings.stepsBar.ontouchstart = () => {
+        this.expandSteps();
+      };
+      this.DOMstrings.stepsForm.ontouchstart = () => {
+        this.collapseSteps();
+      };
+    } 
   }
 }
 
