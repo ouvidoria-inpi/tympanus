@@ -5,6 +5,7 @@
   overflow-y: hidden;
   .wizard-progress {
     display: grid;
+    grid-template-rows: none;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); //Padrao horizontal
     width: 100%;
     overflow-x: auto;
@@ -42,7 +43,7 @@
         margin-top: -13px;
         font-size: 20px;
         font-weight: 600;
-        line-height: 28px;
+        line-height: 29px;
         content: attr(step) !important;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
@@ -116,6 +117,12 @@
         color: v(color-primary-lighten-01);
       }
 
+      &[disabled]:hover:before,
+      &[disabled]:focus:before {
+        background-color: default !important;
+        border-color: default !important;
+      }
+
       &:hover:before {
         background-color: v(status-hover-background, $status-hover-background);
         border-color: v(color-primary-lighten-01);
@@ -124,12 +131,6 @@
       &:focus:before {
         background-color: v(status-focused-overlay, $status-focused-overlay);
         border-color: v(color-primary-lighten-01);
-      }
-
-      &[disabled]:hover:before,
-      &[disabled]:focus:before {
-        background-color: inherit !important;
-        border-color: inherit !important;
       }
 
       &[inactive]:focus:before {
@@ -265,6 +266,10 @@
         .wizard-panel-content {
           min-height: calc(100vh - 276px);
           max-height: calc(100vh - 276px);
+          transition-property: all;
+          transition-duration: 0.25s;
+          transition-timing-function: linear;
+          transition-delay: 0s;
           overflow-y: auto;
           overflow-x: hidden;
         }
@@ -288,11 +293,16 @@
       padding-top: 24px;
       min-height: 100px;
       max-height: 100px;
+      transition-property: all;
+      transition-duration: 0.25s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
       overflow-y: hidden;
       .wizard-progress-btn {
         .info {
           font-size: 0.6em;
-          line-height: 0.7em;
+          line-height: 1em;
+          text-align: center;
         }
       }
       &:after {
@@ -306,6 +316,10 @@
         //bottom: 0;
         left: 44%;
         margin-top: 72px;
+        transition-property: all;
+        transition-duration: 0.25s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
       } 
     }
 
@@ -316,6 +330,7 @@
         padding-bottom: 24px;
         overflow-y: hidden;
         padding-top: 24px;
+        
         &:after {
           margin-top: 36px;
         }
@@ -352,10 +367,21 @@
         .wizard-progress-btn {
           padding-right: 56px;
           line-height: 18px;
+          .info {
+            position: absolute;
+            right: 54px;
+            margin-top: -0.5em;
+            line-height: 1.6em;
+          }
         }
       }
       .wizard-form {
-        width: calc(100% - 110px);
+        max-width: calc(100% - 110px);
+        min-width: calc(100% - 110px);
+        transition-property: all;
+        transition-duration: 0.25s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
         .wizard-panel {
           .wizard-panel-content {
             min-height: calc(100vh - 180px);
@@ -385,7 +411,8 @@
           }
         }
         .wizard-form {
-          width: calc(100% - 60px);
+          min-width: calc(100% - 60px);
+          max-width: calc(100% - 60px);
         }
       }
     }

@@ -92,6 +92,12 @@ class BRWizard {
 
     };
 
+    this.setStepsNum = () => {
+      this.DOMstrings.stepsBtns.forEach((elem, index) => {
+          elem.setAttribute('step', index+1 )
+      });
+    }
+
     this.setStep = num => {
       const activeStep = num <= this.DOMstrings.stepsBtns.length  ? num - 1 : 0;
       this.setActiveStep(activeStep);
@@ -163,6 +169,9 @@ class BRWizard {
       this.setActivePanel(activePanelNum);
 
     });
+
+    // Set Steps label number 
+    this.setStepsNum();
 
     // Set default active step
     if ( this.component.hasAttribute("step")) {
