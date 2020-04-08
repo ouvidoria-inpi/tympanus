@@ -15,27 +15,30 @@ append content
         ul
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.text Texto de uma linha
             div.icon
-              a.list-item(href='#') Link
+              a.list-item(href='#')
+                span.sr-only Link
                 i.fas.fa-chevron-right
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.text Texto de uma linha
             div.icon
-              a.list-item(href='#') Link
+              a.list-item(href='#')
+                span.sr-only Link
                 i.fas.fa-chevron-right
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.text Texto de uma linha
             div.icon
-              a.list-item(href='#') Link
+              a.list-item(href='#')
+                span.sr-only Link
                 i.fas.fa-chevron-right
   h2 Lista simples com Clique
   .row
@@ -44,28 +47,28 @@ append content
         h3.title Título da Lista
         a.list-item
           div.icon
-            i.fas.fa-heartbeat
+            i.fa-lg.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha
           div.icon
             i.fas.fa-chevron-right
         a.list-item.selected
           div.icon
-            i.fas.fa-heartbeat
+            i.fa-lg.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha (Estado Selecionado)
           div.icon
             i.fas.fa-chevron-right
         a.list-item.disabled
           div.icon
-            i.fas.fa-heartbeat
+            i.fa-lg.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha (Estado Desabilitado)
           div.icon
             i.fas.fa-chevron-right
         a.list-item.dragged
           div.icon
-            i.fas.fa-heartbeat
+            i.fa-lg.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha (Estado Arrastado)
           div.icon
@@ -111,7 +114,7 @@ append content
         ul
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.sub-title Subtítulo
               div.text Texto de uma linha
@@ -120,7 +123,7 @@ append content
               i.fas.fa-chevron-right
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.sub-title Subtítulo
               div.text Texto de uma linha
@@ -129,13 +132,54 @@ append content
               i.fas.fa-chevron-right
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.sub-title Subtítulo
               div.text Texto de uma linha
               div.text-sec Texto secundário Lorem Ipsum dolor sit amet
             div.icon
               i.fas.fa-chevron-right
+  h2 Lista Complexa
+  .row
+    div.engloba
+      div.br-list
+        div.header
+          h3.title Título da Lista
+          div.actions
+            button.br-button.is-circle.is-secondary(type='button')
+              i.fa-lg.fas.fa-sort-alpha-up
+            div.divider
+            button.br-button.is-circle.is-secondary(type='button')
+              i.fa-lg.fas.fa-search
+            button.br-button.is-circle.is-secondary(type='button')
+              i.fa-lg.fas.fa-ellipsis-v
+        ul
+          li.list-item.unread
+            div.icon.active
+              i.fa-lg.fas.fa-envelope
+            div.text Comunicação
+            div.content
+              div.sub-title Em tempo - Instabilidade
+              div.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus massa nisi, id efficitur tortor tincidunt rutrum.
+            div.text 08/04/2020
+          li.br-divider
+          li.list-item.unread
+            div.icon.active
+              i.fa-lg.fas.fa-calendar-check
+            div.text Comunicação
+            div.content
+              div.sub-title Em tempo - Instabilidade
+              div.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus massa nisi, id efficitur tortor tincidunt rutrum.
+            div.text 08/04/2020
+          li.br-divider
+          li.list-item
+            div.icon
+              i.fa-lg.fas.fa-envelope-open
+            div.text Comunicação
+            div.content
+              div.sub-title Em tempo - Instabilidade
+              div.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus massa nisi, id efficitur tortor tincidunt rutrum.
+            div.text 08/04/2020
   h2 Recursos Visuais
   div.row
     div.engloba
@@ -168,7 +212,8 @@ append content
               div.content
                 div.text Texto secundário Lorem ipsum dolor sit amet consectetur
               div.icon
-                a(href="#") Link
+                a(href="#")
+                  span.sr-only Link
                   i.fas.fa-chevron-right
         div.br-list
           h3.title Título da Lista
@@ -179,7 +224,8 @@ append content
               div.content
                 div.text Texto secundário
               div.icon
-                a(href="#") Link
+                a(href="#")
+                  span.sr-only Link
                   i.fas.fa-chevron-right
       .col
         div.br-list
@@ -187,11 +233,12 @@ append content
           ul
             li.list-item
               div.icon
-                i.fas.fa-heartbeat
+                i.fa-lg.fas.fa-heartbeat
               div.content
                 div.text Texto de uma linha
               div.icon
-                a(href="#") Link
+                a(href="#")
+                  span.sr-only Link
                   i.fas.fa-ellipsis-v
         div.br-list
           h3.title Título da Lista
@@ -202,14 +249,15 @@ append content
               div.content
                 div.text Texto de uma linha
               div.icon
-                a(href="#") Link
+                a(href="#")
+                  span.sr-only Link
                   i.fas.fa-ellipsis-v
         div.br-list
           h3.title Título da Lista
           ul
             li.list-item
               div.icon
-                i.fas.fa-heartbeat
+                i.fa-lg.fas.fa-heartbeat
               div.content
                 div.text Texto principal
                 div.text-sec Texto secundário Lorem ipsum dolor sit amet consectetur
@@ -231,19 +279,21 @@ append content
         ul
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.text Texto de uma linha (CLOSE)
             div.icon
-              a.list-item(href='#') Link
+              a.list-item(href='#')
+                span.sr-only Link
                 i.fas.fa-chevron-down
           li.list-item.open
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.text Texto de uma linha (OPEN)
             div.icon
-              a.list-item(href='#') Link
+              a.list-item(href='#')
+                span.sr-only Link
                 i.fas.fa-chevron-down
             ul.top-shadow.bottom-shadow
               li Texto de uma linha
@@ -260,19 +310,21 @@ append content
               li Texto de uma linha
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.text Texto de uma linha (CLOSE)
             div.icon
-              a.list-item(href='#') Link
+              a.list-item(href='#')
+                span.sr-only Link
                 i.fas.fa-chevron-down
           li.list-item
             div.icon
-              i.fas.fa-heartbeat
+              i.fa-lg.fas.fa-heartbeat
             div.content
               div.text Texto de uma linha (CLOSE)
             div.icon
-              a.list-item(href='#') Link
+              a.list-item(href='#')
+                span.sr-only Link
                 i.fas.fa-chevron-down
 
 append style

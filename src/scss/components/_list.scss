@@ -49,9 +49,8 @@ div.#{$prefix}list {
         }
       }
     }
-  }  
+  }
 }
-
 .#{$prefix}list {
   background-color: v(color-secondary-01);
   //min-width: 400px;
@@ -72,6 +71,68 @@ div.#{$prefix}list {
       margin-top: 0;
     }
   }
+  .header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    .actions {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      .br-button {
+        margin: 0 12px;
+      }
+      .icon {
+        flex-direction: row;
+        &:last-of-type {
+          position: unset;
+        }
+      }
+      .divider {
+        border-right: 1px solid v(color-secondary-04, $color-secondary-04);
+        height: 1.5em;
+        margin: 0 5px 0 5px;
+      }
+    }
+  }
+  .icon {
+    align-items: center;
+    display: flex;
+    //flex-basis: auto;
+    flex-direction: column;
+    justify-content: center;
+    &.active {
+      [class*="fa-"] {
+        color: v(color-primary-default);
+      }
+    }
+    .headline {
+      color: v(color-secondary-09);
+      font-size: v(font-size-scale-down-01);
+      padding-bottom: $spacer;
+      text-transform: lowercase;
+    }
+    &:first-child {
+      justify-content: flex-start;
+    }
+    &:last-of-type {
+      justify-content: flex-end;
+      position: absolute;
+      right: 16px;
+    }
+    [class*="fa-"] {
+      color: v(color-secondary-05);
+      font-size: v(icon-size-lg);
+      font-weight: v(font-weight-bold);
+    }
+    a {
+      padding: 0;
+      [class*="fa-"] {
+        color: v(color-primary-default);
+      }
+    }
+  }
   .list-item {
     align-items: center;
     color: v(color-secondary-08);
@@ -86,13 +147,25 @@ div.#{$prefix}list {
     list-style-type: none;
     padding: 20px 16px;
     position: relative;
-
+    &.unread {
+      .sub-title {
+        font-weight: v(font-weight-bold);
+        font-size: v(font-size-scale-base);
+      }
+      & .icon {
+        [class*="fa-"] {
+          color: v(color-primary-default);
+        }
+      }
+      & > .text {
+        font-weight: v(font-weight-bold);
+      }
+    }
     &.disabled {
       * {
         color: v(color-secondary-04);
       }
     }
-
     &.dragged {
       background-color: v(color-secondary-03); //Verificar
       & .icon {
@@ -101,7 +174,6 @@ div.#{$prefix}list {
         }
       }
     }
-
     &.selected {
       background-color: v(color-primary-lighten-01);
       & .icon {
@@ -110,7 +182,6 @@ div.#{$prefix}list {
         }
       }
     }
-
     &:hover {
       background-color: v(color-primary-pastel-02);
       & .icon {
@@ -121,6 +192,7 @@ div.#{$prefix}list {
     }
     &:focus {
       background-color: v(color-support-02);
+      color: v(color-secondary-09);
     }
     &:active {
       background-color: v(color-primary-default);
@@ -140,46 +212,10 @@ div.#{$prefix}list {
         }
       }
     }
-
-    .icon {
-      align-items: center;
-      display: flex;
-      //flex-basis: auto;
-      flex-direction: column;
-      justify-content: center;
-
-      .headline {
-        color: v(color-secondary-09);
-        font-size: v(font-size-scale-down-01);
-        padding-bottom: $spacer;
-        text-transform: lowercase;
-      }
-
-      &:first-child {
-        justify-content: flex-start;
-      }
-
-      &:last-of-type {
-        justify-content: flex-end;
-        position: absolute;
-        right: 16px;
-      }
-
-      [class*="fa-"] {
-        color: v(color-secondary-05);
-        font-size: v(font-size-scale-up-01);
-        font-weight: v(font-weight-bold);
-      }
-
-      a {
-        padding: 0;
-        [class*="fa-"] {
-          color: v(color-primary-default);
-        }
-      }
-    }
     a {
-      text-indent: -9000px;
+      span {
+        display: none;
+      }
       .icon {
         [class*="fa-"] {
           color: v(color-primary-default);
@@ -189,22 +225,21 @@ div.#{$prefix}list {
     .content {
       padding: 0 16px 0 0;
       //flex-basis: 74%;
-      .sub-title {
-        font-size: v(font-size-scale-down-01);
-        font-weight: v(font-weight-semi-bold);
-        margin: 0;
-        text-transform: uppercase;
-      }
-      .text,
-      .text-sec,
-      .sub-title {
-        width: 100%;
-        padding: 0 16px;
-      }
-      .text-sec {
-        font-size: v(font-size-scale-down-01);
-        color: v(color-secondary-05);
-      }
+    }
+    .sub-title {
+      font-size: v(font-size-scale-down-01);
+      font-weight: v(font-weight-semi-bold);
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .text,
+    .text-sec,
+    .sub-title {
+      padding: 0 16px;
+    }
+    .text-sec {
+      font-size: v(font-size-scale-down-01);
+      color: v(color-secondary-05);
     }
     &.open {
       flex-wrap: wrap;
