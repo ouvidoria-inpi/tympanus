@@ -195,18 +195,6 @@
     ]
   },
   {
-    "label": "UIkit",
-    "id": "uikit",
-    "children": [
-      {
-        "label": " UIkit App Mobile ",
-        "filename": "uikit-mobile",
-        "path": "//xd.adobe.com/spec/c303d5d1-659d-4d25-5fe3-0911b6465be9-b532/",
-        "isLink": true
-      }
-    ]
-  },
-  {
     "label": "Release Notes",
     "id": "release-notes",
     "type": "docs"
