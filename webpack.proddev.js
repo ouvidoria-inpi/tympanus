@@ -1,10 +1,12 @@
 const path = require('path');
 const isDEV = process.env.NODE_ENV === 'development'
 
+
 // Webpack Stuff
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 
 // We need Nodes fs module to read directory contents
 const fs = require('fs')
@@ -139,6 +141,10 @@ module.exports = {
 			chunkFilename: '[id].css',
 			ignoreOrder: false, // Enable to remove warnings about conflicting order
 		}),
+		new WebpackShellPlugin({
+			onBuildEnd: ['node componentes.js',' npm run compile-sass ']
+		}),
+
 	].concat(htmlPluginsComponentes, htmlPluginsTemplates),
 	devtool: 'source-map'
 }

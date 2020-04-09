@@ -1,25 +1,29 @@
 var fs = require('fs');
+var dir="./src/scss/temp"
 var files = fs.readdirSync('./src/scss/components/');
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+
+
 files.forEach((file)=>{
     componentName=file.split(".")[0].split("_")[1];
-
-      arquivo="      // Carregar configurações\n"
+    arquivo="      // Precisa do import dos Tokens\n"
     arquivo+='@import "../base";\n'
-    arquivo+='@import "../tokens";\n'
-    // arquivo+='@import "../utilities/normalize";\n'
-    arquivo+='@import "../components/'+componentName+'";'
-
-
-
-
-      
-
-    
-
-      fs.writeFile("./src/scss/temp/"+componentName+".scss", arquivo, function (err) {
-        if (err) throw err;
-        console.log('Saved!');
-      });
+    if(componentName){
+      arquivo+='@import "../components/'+componentName+'";';
+      try{
+            fs.writeFile("./src/scss/temp/"+componentName+".scss", arquivo, function (err) {
+                if (err) throw err;
+                
+            });
+            
+        }catch(err){
+            
+        }
+    }
     
 
 })
+
+console.log("CSS dos Componentes Criados");
