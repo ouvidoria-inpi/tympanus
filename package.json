@@ -18,7 +18,8 @@
 		"build:webpack:prod": "webpack --env prod",
 		"cypress:terminal": "npx cypress run",
 		"cypress:interface": "npx cypress open",
-		"cdn:build": "webpack --config webpack.proddev.js"
+		"cdn:build": "webpack --config webpack.proddev.js",
+		"compile-sass": "node-sass -r ./src/scss/temp/ -o ./dist/css/componente"
 	},
 	"engines": {
 		"node": ">= 12.16.1"
