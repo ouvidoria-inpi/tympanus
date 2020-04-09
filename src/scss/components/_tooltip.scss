@@ -1,9 +1,9 @@
 .#{$prefix}tooltip {
-  background: v(color-info);
-  color: v(color-secondary-01);
-  font-weight: bold;
+  background: v(color-info, $color-info);
+  color: v(color-secondary-01, $color-secondary-01);
+  font-weight:v(font-weight-semi-bold,$font-weight-semi-bold);
   padding: 16px 36px;
-  font-size: 14px;
+  font-size: v(font-size-scale-base,$font-size-scale-base);
   border-radius: 4px;
   display: block;
   position: absolute;
@@ -49,21 +49,21 @@
   }
   &.is-success,
   &.is-success .arrow::before {
-    background: v(color-success);
+    background: v(color-success, $color-success);
   }
   &.is-error,
   &.is-error .arrow::before {
-    background: v(color-danger);
+    background: v(color-danger, $color-danger);
   }
   &.is-warning,
   &.is-warning .arrow::before {
-    background: v(color-warning);
-    color: v(color-secondary-08);
+    background: v(color-warning, $color-warning);
+    color: v(color-secondary-08, $color-secondary-08);
   }
   &.is-info,
   &.is-info .arrow::before,
   .arrow::before {
-    background: v(color-info);
+    background: v(color-info, $color-info);
   }
 
   .arrow,
@@ -101,7 +101,7 @@
   }
 
   .popover-header {
-    font-size: 1em;
+    font-size:  v(font-size-scale-base,$font-size-scale-base);;
     text-align: center;
     margin-bottom: 1em;
     width: 180px;
@@ -109,7 +109,7 @@
     clear: right;
     .fas,
     .svg-inline--fa {
-      font-size: 2.5em;
+      font-size: v(font-size-scale-up-06,$font-size-scale-up-06);
       text-align: center;
     } 
   }
@@ -118,7 +118,7 @@
     height: auto;
     max-width: 120px;
     max-height: 120px;
-    border: 3px solid v(color-secondary-01);
+    border: 3px solid v(color-secondary-01, $color-secondary-01);
     overflow: hidden;
     float: left;
     margin-right: 15px;
@@ -128,14 +128,14 @@
     }
   }
   .popover-body {
-    font-size: 0.9em;
+    font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
     margin-bottom: 1em;
     width: 180px;
     float: right;
     clear: right;
   }
   .popover-footer {
-    font-size: 0.9em;
+    font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
     text-align: center;
     width: 180px;
     float: right;
@@ -144,13 +144,13 @@
 
   
   .text {
-    font-size: 1em;
-    font-weight: 600;
+    font-size: v(font-size-scale-base, $font-size-scale-base);
+    font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
   }
 
   .subtext {
-    font-size: 0.9em;
-    font-weight: 500;
+    font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
+    font-weight: v(font-weight-medium,$font-weight-medium);
   }
 
   .link {
@@ -169,8 +169,8 @@
 
   button,
   .br-button {
-    font-size: 0.9em;
-    font-weight: 500;
+    font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
+    font-weight:  v(font-weight-medium,$font-weight-medium);
     background: transparent;
     color: inherit;
     margin: 5px 5px;
