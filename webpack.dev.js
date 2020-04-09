@@ -5,6 +5,7 @@ const isDEV = process.env.NODE_ENV === 'development'
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const WebpackShellPlugin = require('webpack-shell-plugin');
 
 // We need Nodes fs module to read directory contents
 const fs = require('fs')
