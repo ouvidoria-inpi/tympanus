@@ -9,9 +9,9 @@ Podem existir vários scrims ativos na mesma tela e de diferentes tipos.
 
 Usado fundamentalmente para oferecer:
 
-- **Foco:** Quando existe mudança de foco entre um elemento e outro;
-- **Legibilidade:** Quando um texto precisa ser aplicado sobre uma superfície e o contraste entre fundo/texto não é suficiente para gerar um contraste acessível;
-- **Inibição:** Simular elementos para o estado de desativado;
+* **Foco:** Quando existe mudança de foco entre um elemento e outro; 
+* **Legibilidade:** Quando um texto precisa ser aplicado sobre uma superfície e o contraste entre fundo/texto não é suficiente para gerar um contraste acessível; 
+* **Inibição:** Simular elementos para o estado de desativado; 
 
 ---
 
@@ -50,8 +50,8 @@ O **scrim vazado** pode ser utilizado com esta finalidade, onde o elemento de at
 
 O scrim recebe as seguintes especificações:
 
-- **Cor:** #000000
-- **Opacidade:** 40%
+* **Cor:** #000000
+* **Opacidade:** 40%
 
 ---
 
@@ -65,8 +65,8 @@ Usados como um tipo de sobreposição (overlay), buscando melhorar o constraste 
 
 O scrim recebe as seguintes especificações:
 
-- **Cor:** #000000
-- **Opacidade:** 64%
+* **Cor:** #000000
+* **Opacidade:** 64%
 
 ---
 
@@ -82,7 +82,7 @@ A principal característica neste modo, é que o elemento que recebe o scrim fic
 
 Esse tipo de scrim deve ser utilizado com cautela, pois os elementos que estarão abaixo da scrim não estarão realmente em estado desativado. Esse recurso deve ser utilizado em situações onde uma grande área deve ser temporariamente desativada.
 
-Em pequenas áres ou componentes, sempre que possível, prefira configurar o elemento para o estado desativado,ao invés da utilização deste recurso.
+Em pequenas áres ou componentes, sempre que possível, prefira configurar o elemento para o estado desativado, ao invés da utilização deste recurso.
 
 ![Scrim Inibição](imagens/inibicao_02.png)
 
@@ -90,5 +90,6 @@ Em pequenas áres ou componentes, sempre que possível, prefira configurar o ele
 
 O scrim recebe as seguintes especificações:
 
-- **Cor:** cor de fundo predominante do elemento que recebe o scrim
-- **Opacidade:** 64%
+* **Cor:** cor de fundo predominante do elemento que recebe o scrim
+* **Opacidade:** 64%
+

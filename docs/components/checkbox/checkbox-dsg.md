@@ -1,7 +1,5 @@
 ## ANATOMIA
 
-São elementos usados para seleção simultânea.
-Possui um texto de orientação que auxilia a escolha do usuário.
 Cada opção deve ser acompanhada de um texto que a descreva.
 
 ![Checkbox Formatação Formulário](imagens/checkbox-formatacao-formulario.png)
@@ -63,3 +61,4 @@ Dar preferência ao uso do texto em uma coluna, porém se houver necessidade de 
 **Cuidado!**
 
 Havendo muitas opções, considere usar o select (dropdown) para um melhor aproveitamento do espaço e uma menor densidade de informação.
+

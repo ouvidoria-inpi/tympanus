@@ -32,12 +32,12 @@ Em alguns casos pode ser necessário aumentar as dimensões do fundo de um eleme
 
 Usuários interagem com a interface de diversas maneiras. Ao projetar um componente, considere o uso de diferentes dispostitivos de entrada tais como:
 
-- Mouse
-- Tela sensível ao toque
-- teclado
-- Voz
-- Controle de vídeo game
-- Leitores de Tela (como sintetizadores de voz, Display Braille)
+* Mouse
+* Tela sensível ao toque
+* teclado
+* Voz
+* Controle de vídeo game
+* Leitores de Tela (como sintetizadores de voz, Display Braille)
 
 ### Reutilização e Colaboração
 
@@ -51,13 +51,13 @@ Alguns estados utilizam o conceito de overlay. Overlay é uma aplicação/camada
 
 Dependendo da cor de um elemento, a opacidade do overlay deve ser revista para que o destaque do elemento seja notado pelo usuário: O valor da opacidade é inversamente proporcional ao brilho do elemento (cor de fundo), ou seja, quanto mais claro a cor do componente, menor será o valor da opacidade necessário para que o usuário perceba o estado.
 
-Seguindo este conceito podemos dizer que o [Scrim](/ds/componentes/scrim) é um overlay componentizado do DS Gov.
+Seguindo este conceito podemos dizer que o [Scrim](/ds/componentes/scrim) é um overlay componentizado do DSGOV.
 
 ---
 
 ## Estilos alternativos no estado
 
-Na maioria das situações, as regras descritas nos estados irão funcionar dentro de uma interface que segue os padrões estabelecidos no DS Gov.
+Na maioria das situações, as regras descritas nos estados irão funcionar dentro de uma interface que segue os padrões estabelecidos no DSGOV.
 
 Mas pode existir alguma situação muito específica, onde o contraste de um estado não atenda os princípios dentro da um interface. Nestes casos, as orientações descritas nos próprios estados podem sugerir algumas alternativas para contornar essas situações. Se mesmo seguindo as orientações o problema persistir, inverta as cores entre fundo e texto/ícones descritas na documentação!
 
@@ -77,20 +77,20 @@ Caso um componente possua borda, utilize as mesmas regras utilizadas para texto/
 
 ![Estados](imagens/states.png)
 
-Abaixo,segue a lista dos principais estados encontrados no DS gov. Alguns estados são específicos de um componente, e como tal serão detalhados na sua respectiva documentação.
+Abaixo, segue a lista dos principais estados encontrados no DSGOV. Alguns estados são específicos de um componente, e como tal serão detalhados na sua respectiva documentação.
 
-- **Destacado**: Um estado que comunica um destaque sobre um texto, iniciado pelo usuário ou não.
-- **Interativo**: Um estado que comunica que um componente ou elemento é interativo.
-- **Desabilitado**: Um estado que comunica que um componente ou elemento não é interativo temporariamente.
-- **Hover**: Um estado que comunica quando um usuário coloca o cursor sobre um componente ou elemento.
-- **Pressionado**: Um estado que comunica um toque ou clique do usuário sobre um componente ou elemento.
-- **Foco**: Um estado que comunica quando um usuário destaca um componente ou elemento, utilizando-se de um método de entrada como teclado ou voz.
-- **Ativo**: Um estado que comunica um destaque sobre um determinado destino ou conjunto de escolha, iniciado pelo usuário ou não.
-- **Selecionado**: Um estado que comunica uma escolha do usuário.
-- **Arrastado**: Um estado que comunica quando um usuário pressiona (com clique ou toque) e move um componente ou elemento.
-- **Visitado**: Um estado que comunica que um contéudo de um elemento interativo foi acessado pelo usuário.
-- **Ligado**: Um estado que comunica a opção "ligado" na alternância entre duas opções.
-- **Desligado**: Um estado que comunica a opção "desligado" na alternância entre duas opções.
+* **Destacado**: Um estado que comunica um destaque sobre um texto, iniciado pelo usuário ou não.
+* **Interativo**: Um estado que comunica que um componente ou elemento é interativo.
+* **Desabilitado**: Um estado que comunica que um componente ou elemento não é interativo temporariamente.
+* **Hover**: Um estado que comunica quando um usuário coloca o cursor sobre um componente ou elemento.
+* **Pressionado**: Um estado que comunica um toque ou clique do usuário sobre um componente ou elemento.
+* **Foco**: Um estado que comunica quando um usuário destaca um componente ou elemento, utilizando-se de um método de entrada como teclado ou voz.
+* **Ativo**: Um estado que comunica um destaque sobre um determinado destino ou conjunto de escolha, iniciado pelo usuário ou não.
+* **Selecionado**: Um estado que comunica uma escolha do usuário.
+* **Arrastado**: Um estado que comunica quando um usuário pressiona (com clique ou toque) e move um componente ou elemento.
+* **Visitado**: Um estado que comunica que um contéudo de um elemento interativo foi acessado pelo usuário.
+* **Ligado**: Um estado que comunica a opção "ligado" na alternância entre duas opções.
+* **Desligado**: Um estado que comunica a opção "desligado" na alternância entre duas opções.
 
 ---
 
@@ -102,11 +102,11 @@ Este estado não pode ser utilizado como alternativa a destaques como bold ou it
 
 Exemplos de casos onde o estado deve ser utilizado:
 
-- Citação
-- Palavras-chave
-- Termos/caracteres pesquisados em uma busca
+* Citação
+* Palavras-chave
+* Termos/caracteres pesquisados em uma busca
 
-O destaque é exibido com background da cor **Secondary 01**, um overlay da cor **Support 03** com opacidade de 10% e texto na cor **Support 03**. É importante também que o espaçamento interno tenha no mínimo 4px do lado direito e esquerdo.
+O destaque é exibido com background da cor **Secondary 01**, um overlay da cor **Support 03** com opacidade de 10% e texto na cor **Support 03**.É importante também que o espaçamento interno tenha no mínimo 4px do lado direito e esquerdo.
 
 O texto destacado pode possuir estado interativo.
 
@@ -132,14 +132,14 @@ A cor **Primary Default** não é aplicável em todas as situações, como no ca
 
 | Property  | Token Status                 | Token Color             | Token Weight       |
 | --------- | ---------------------------- | ----------------------- | ------------------ |
-| text/icon | `--status-enabled-text`        | --color-primary-default |                    |
+| text/icon | `--status-enabled-text` | --color-primary-default |                    |
 | text/icon | --status-enabled-text-darken | --color-secondary-01    | --font-weight-bold |
 
 ---
 
 ## Desabilitado
 
-Um estado desabilitado, deve ter baixa ênfase ou ser amenizado dentro de uma interface. O estado desabilitado comunica quando um componente ou elemento não é interativo (geralmente temporariamente). Esse estado é exibido com **45%** de opacidade do estado Interativo e o cursor do mouse deve ser alterado para a "símbolo de não permitido: círculo com traço diagonal" (`cursor: not-allowed`).
+Um estado desabilitado, deve ter baixa ênfase ou ser amenizado dentro de uma interface. O estado desabilitado comunica quando um componente ou elemento não é interativo (geralmente temporariamente). Esse estado é exibido com **45%** de opacidade do estado Interativo e o cursor do mouse deve ser alterado para a "símbolo de não permitido: círculo com traço diagonal" ( `cursor: not-allowed` ).
 
 Caso um componente, mesmo com a opacidade aplicada ainda esteja se destacado, substitua a alteração da opacidade pela cor: Fundo: **Secondary 03** | Texto e ícone: **Secondary 04**.
 
@@ -151,10 +151,10 @@ Elementos desabilitados não precisam ser rígidos sobre as [conformidade de ace
 
 Alguns elementos da tela, não podem receber o estado desabilitado. Neste caso, prefira não exibir o componente na interface. Alguns componentes que seguem essa regra:
 
-- Componentes de Navegação (Menu, Abas...)
-- Modal
-- Tooltip
-- Botão call to action
+* Componentes de Navegação (Menu, Abas... )
+* Modal
+* Tooltip
+* Botão call to action
 
 **Cuidado:** Alguns componentes são contituídos por vários outros componentes. Neste caso, seus componentes podem possuir estado de desabilitado, ainda que o componente "completo" que constituem, não possua tal estado.
 
@@ -181,7 +181,7 @@ Elementos desabilitados não sofrem herança, ou seja, não podem ser combinados
 
 O Estado hover acontece quando o usuário mantém o cursor do mouse sobre um componente ou elemento interativo. Ele deve ser aplicado, no mínimo, em toda a área interativa do componente, podendo ser em todo ele, nos elementos que o formam ou por alguma área que faz parte do componente.
 
-Por padrão, o hover é exibido em um fundo da cor **Primary Pastel 02** e o cursor do mouse deve ser alterado para a "mão fechada com indicador esticado" (`cursor: pointer`) caso o elemento seja interativo, como no caso de hiperlinks. Para questões de legibilidade, a cor da fonte ou elemento gráfico podem ser alterados para cor padrão do estado interativo ou de texto normal.
+Por padrão, o hover é exibido em um fundo da cor **Primary Pastel 02** e o cursor do mouse deve ser alterado para a "mão fechada com indicador esticado" ( `cursor: pointer` ) caso o elemento seja interativo, como no caso de hiperlinks. Para questões de legibilidade, a cor da fonte ou elemento gráfico podem ser alterados para cor padrão do estado interativo ou de texto normal.
 
 Componentes desabilitados não podem receber hover.
 
@@ -256,18 +256,18 @@ Dentro de um único conjunto de opções, apenas um estado ativado pode estar pr
 
 Um estado selecionado indica a seleção de opções pelo usuário usando um dos seguintes métodos de entrada: toque, cursor, teclado ou voz.
 
-O estado selecionado não deve distrair o usuário, porém, deve ser facilmente identificável. Ele é exibido com um fundo da cor **Primary Lighten 01** e texto ou ícones com cor **Secondary 01**. Um ícone, representando a seleção, deve ser adicionado sobre o componente (`fa-check`, `fa-check-square`, `fa-check-circle`...).
+O estado selecionado não deve distrair o usuário, porém, deve ser facilmente identificável. Ele é exibido com um fundo da cor **Primary Lighten 01** e texto ou ícones com cor **Secondary 01**. Um ícone, representando a seleção, deve ser adicionado sobre o componente ( `fa-check` , `fa-check-square` , `fa-check-circle` ... ).
 
 ### Evitar estado selecionado
 
 O estado selecionado não pode ser aplicado nos seguintes componentes:
 
-- Componentes de Navegação (Menu, Abas...)
-- Modal
-- Tooltip
-- Botão
-- Mensagens
-- Separadores
+* Componentes de Navegação (Menu, Abas... )
+* Modal
+* Tooltip
+* Botão
+* Mensagens
+* Separadores
 
 **Cuidado:** Alguns componentes são construídos por vários outros componentes. Neste caso, seus componentes ainda podem possuir estado de selecionado, por mais que o componente "completo" não possa.
 
@@ -284,7 +284,7 @@ O estado selecionado não pode ser aplicado nos seguintes componentes:
 
 O estado arrastado ocorre quando um usuário pressiona e move um elemento ou componente.
 
-O estado arrastado não devem distrair o usuário de suas tarefas. São exibidos com fundo na cor **Secondary 03**. A cor da fonte ou elemento gráfico podem ser alterados para cor **Secondary 08** a fim de manter o mínimo de legibilidade. O componente arrastado recebe também uma sombra (**Secondary 09 (16% opacidade), x:0, y:3, b:6**) e o cursor do mouse deve ser alterado para a "mão fechada" (`cursor: grabbing`)
+O estado arrastado não devem distrair o usuário de suas tarefas. São exibidos com fundo na cor **Secondary 03**. A cor da fonte ou elemento gráfico podem ser alterados para cor **Secondary 08** a fim de manter o mínimo de legibilidade. O componente arrastado recebe também uma sombra (**Secondary 09 (16% opacidade), x:0, y:3, b:6**) e o cursor do mouse deve ser alterado para a "mão fechada" ( `cursor: grabbing` )
 
 Caso a ênfase do componente ainda esteja alta, distraindo o usuário de suas tarefas, a opacidade do componente pode ser ajustada para 90%.
 
@@ -294,7 +294,7 @@ Pode haver apenas um único estado arrastado de cada vez dentro de um layout.
 
 | Property   | Token Status                | Token Color          | Shadow                                                 |
 | ---------- | --------------------------- | -------------------- | ------------------------------------------------------ |
-| background | --status-dragged-background | --color-secondary-03 | color:--color-secondary-09 (16% opacidade),x:0,y:3,b:6 |
+| background | --status-dragged-background | --color-secondary-03 | color:--color-secondary-09 (16% opacidade), x:0, y:3, b:6 |
 | text/icon  | --status-dragged-text       | --color-secondary-08 |                                                        |
 
 ---
@@ -337,3 +337,4 @@ O estado ligado pode ser exibido com a cor **Primary Lighten 02** enquanto o des
 | ---------- | ----------------------- | -------------------- |
 | background | --status-off-background | --color-secondary-04 |
 | text/icon  | --status-off-text       | --color-secondary-07 |
+
