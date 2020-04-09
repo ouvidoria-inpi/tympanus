@@ -5,33 +5,30 @@
 ## Código básico
 
 ```html
-<div class="br-accordeon" single>
-  <div class="field">
-    <button
-      class="header"
-      type="button"
-      onclick="toggleAccordeonField(this, 'br-accordeon')"
-    >
-      <span class="icon"><i class="fas fa-plus"></i></span>
-      <span class="title">Título do item</span>
-    </button>
-    <div class="content">
-      <p>Conteúdo do item</p>
+ <div class="br-accordeon">
+    <div class="item">
+      <button class="header" type="button">
+        <span class="icon"><i class="fas fa-angle-down fa-lg"></i></span>
+        <span class="title">Título do conteúdo</span>
+      </button>
     </div>
-  </div>
+    <div class="content">
+      conteúdo em si
+    </div>
 </div>
+
 ```
 
 ## Detalhamento
 
 O componente é composto dos seguintes elementos:
 
-- `br-accordeon`: container do componente
-- `field`: linha agrupadora
-- `header`: área do cabeçalho
-  - `icon`: ícone do cabeçalho
-  - `title`: título do cabeçalho
-- `content`: área do conteúdo
+- `br-accordeon`: container do componente;
+- `item`: agrupa o item icone(icon) e título(title);
+- `header`: área do cabeçalho;
+- `icon`: ícone do cabeçalho;
+- `title`: título do cabeçalho;
+- `content`: área do conteúdo.
 
 ### `br-accordeon`
 
@@ -43,21 +40,21 @@ Exemplo de uso:
 
 ```html
 <div class="br-accordeon">
-  <div class="field">...</div>
+  <div class="item">...</div>
 </div>
 ```
 
-### `field`
+### `item`
 
-Cada linha do componente DEVE ser inserida dentro de um `field`. As linha que estiverem abertas devem conter a classe `is-active`.
+Cada linha do componente DEVE ser inserida dentro de um `item`. As linha que estiverem abertas devem conter a classe `is-active`.
 
 Exemplo de uso:
 
 ```html
 <div class="br-accordeon">
-  <div class="field is-active">...</div>
-  <div class="field">...</div>
-  <div class="field">...</div>
+  <div class="item is-active">...</div>
+  <div class="item">...</div>
+  <div class="item">...</div>
 </div>
 ```
 
@@ -73,7 +70,7 @@ Exemplo de uso:
 
 ```html
 <div class="br-accordeon">
-  <div class="field">
+  <div class="item">
     <button class="header" ...>
       <span class="icon"><i class="fas fa-plus"></i></span>
       <span class="title">Título do item</span>
@@ -89,7 +86,7 @@ Exemplo de uso:
 
 ```html
 <div class="br-accordeon">
-  <div class="field">
+  <div class="item">
     <button class="header" ...>
       <span class="title">Título do item</span>
       <span class="icon"><i class="fas fa-plus"></i></span>
