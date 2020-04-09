@@ -114,7 +114,7 @@ Tipo de tooltip é formado pelos seguintes elementos:
 
 ```
 
-## Aparecer / Econder  
+## Aparecer / Esconder  
 
 Existem atributos que podem ser declarados para controlar se os tooltips devem aparecer incialmente e após quantos milisegundos devem ser ocultados:
 
