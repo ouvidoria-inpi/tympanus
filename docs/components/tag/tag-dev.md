@@ -90,24 +90,6 @@ Exemplo de uso:
 </div>
 ```
 
-## Tag de Ação
-
-Oferecem ações relacionadas ao conteúdo principal. Eles devem aparecer dinamicamente e contextualmente em uma interface do usuário.
-
-Podem ser usados como uma alternativa aos botões, que devem aparecer de forma persistente e consistente.
-
-Aplicar a classe `br-tag`.
-
-Exemplo de uso:
-
-```html
-<div class="br-tag">
-    <div class="content">
-        <div class="icon"><i class="fa fa-car"></i></div>
-        <span>Mitsubishi Outlander</span>
-    </div>
-</div>
-```
 
 # Estados
 
