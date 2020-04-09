@@ -28,6 +28,7 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
 <div class="br-table">
 <div class="table">
   <table>
+
     <thead>
       <tr>
         <th>Token</th>
@@ -244,6 +245,7 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
         <td><strong>16.65</strong>:1</td>
       </tr>
     </tbody>
+
   </table>
 </div>
 </div>
@@ -252,6 +254,7 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
 
 <div class="br-table">
   <div class="table">
+
       <table>
         <thead>
           <tr>
@@ -551,6 +554,7 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
           </tr>
         </tbody>
       </table>
+
   </div>
 </div>
 
@@ -558,6 +562,7 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
 
 <div class="br-table">
   <div class="table">
+
       <table>
         <thead>
           <tr>
@@ -685,6 +690,7 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
           </tr>
         </tbody>
       </table>
+
   </div>
 </div>
 
@@ -692,6 +698,7 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
 
 <div class="br-table">
   <div class="table">
+
       <table>
         <thead>
           <tr>
@@ -799,5 +806,7 @@ Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas
           </tr>
         </tbody>
       </table>
+
   </div>
 </div>
+

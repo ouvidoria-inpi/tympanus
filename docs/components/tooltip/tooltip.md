@@ -1,1 +1,2 @@
 São alertas flutuantes que aparecem quando se passa o mouse sobre um elemento da interface ou espontâneamente em determinadas situações. Normalmente usados em links, ícones ou elementos interativos. Pode ser utilizado em conjunto com um cursor, normalmente um ponteiro do mouse. Preferencialmente contém uma informação objetiva, resumida e contextual. No caso dos PopOvers, podem conter alguns recursos interativos e maior riqueza de detalhes no formato do conteúdo.
+

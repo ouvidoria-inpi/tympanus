@@ -6,3 +6,4 @@ Abaixo do título do card, aparecerá sempre uma mensagem informativa
 de como devem ser as características dos arquivos a serem anexados.
 
 Abaixo da mensagem informativa deve haver um botão terciário para inclusão dos arquivos.
+

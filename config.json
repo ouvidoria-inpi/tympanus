@@ -15,6 +15,10 @@
       {
         "label": "Sobre o Design System",
         "filename": "sobre"
+      },
+      {
+        "label": "Prototipando com o DSGOV",
+        "filename": "prototipando"
       }
     ]
   },
@@ -197,6 +201,7 @@
   {
     "label": "Release Notes",
     "id": "release-notes",
+    "filename": "release-notes",
     "type": "docs"
   }
 ]

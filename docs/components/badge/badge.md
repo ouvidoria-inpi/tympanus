@@ -1,1 +1,2 @@
 O componente Badge deve ser utilizado para chamar a atenção a outro elemento da interface ou para exibir uma notificação. Ele aprimora o componente ao qual está associado com informações adicionais. Essas informações podem ser números, ícones ou apenas a sua própria cor
+
