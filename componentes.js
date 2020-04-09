@@ -1,6 +1,10 @@
 var fs = require('fs');
-var dir="./src/scss/temp"
+var dir="./dist/scss/temp"
 var files = fs.readdirSync('./src/scss/components/');
+
+if (!fs.existsSync("./dist/scss")){
+    fs.mkdirSync("./dist/scss");
+}
 if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
 }
@@ -13,7 +17,7 @@ files.forEach((file)=>{
     if(componentName){
       arquivo+='@import "../components/'+componentName+'";';
       try{
-            fs.writeFile("./src/scss/temp/"+componentName+".scss", arquivo, function (err) {
+            fs.writeFile(dir+"/"+componentName+".scss", arquivo, function (err) {
                 if (err) throw err;
                 
             });
