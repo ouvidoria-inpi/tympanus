@@ -142,7 +142,7 @@ module.exports = {
 			ignoreOrder: false, // Enable to remove warnings about conflicting order
 		}),
 		new WebpackShellPlugin({
-			onBuildEnd: ['node componentes.js',' node-sass -r ./src/scss/temp/ -o ./dist/css/componente --output-style=expanded ']
+			onBuildEnd: ['node componentes.js',' node-sass -r ./dist/scss/temp -o ./dist/css/componente --output-style=expanded  ']
 		}),
 
 	].concat(htmlPluginsComponentes, htmlPluginsTemplates),

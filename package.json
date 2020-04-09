@@ -19,7 +19,7 @@
 		"cypress:terminal": "npx cypress run",
 		"cypress:interface": "npx cypress open",
 		"homologacao:build": "webpack --config webpack.proddev.js",
-		"compile-sass": "node-sass -r ./src/scss/temp/ -o ./dist/css/componente --output-style=expanded "
+		"compile-sass": "node-sass -r ./dist/scss/temp -o ./dist/css/componente --output-style=expanded "
 	},
 	"engines": {
 		"node": ">= 12.16.1"
