@@ -16,7 +16,7 @@ Nenhuma dependência.
         <span class="upload-size-bytes">...</span>
     </p>
 </div>
-<button class="br-button is-cancel" type="button">Voltar</button>
+<button class="br-button is-tertiary" type="button">Voltar</button>
 <button class="br-button is-primary" type="button">Salvar</button>
 ```
 
@@ -109,10 +109,10 @@ Exemplo de uso:
 
 ## `br-button` 
 
-Botões de Voltar e Salvar, devem ter as classes do componente "br-button" e adicionalmente "is-cancel" ou "is-primary" respectivamente.
+Botões de Voltar e Salvar, devem ter as classes do componente "br-button" e adicionalmente "is-tertiary" ou "is-primary" respectivamente.
 
 ``` html
-<button class="br-button is-cancel" type="button">Voltar</button>
+<button class="br-button is-tertiary" type="button">Voltar</button>
 <button class="br-button is-primary" type="button">Salvar</button>
 ```
 
