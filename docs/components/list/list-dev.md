@@ -64,7 +64,7 @@ Listas de definição usada para exibir termos e explicações dos termos.
     <div class="content">
       <div class="text">Texto de uma linha</div>
     </div>
-    <div class="icon"><i class="fas fa-chevron-right"></i></div></a><a class="list-item selected">
+    <div class="icon"><i class="fas fa-chevron-right"></i></div></a><a class="list-item .is-selected">
     <div class="icon"><i class="fa-lg fas fa-heartbeat"></i></div>
     <div class="content">
       <div class="text">Texto de uma linha (Estado Selecionado)</div>
@@ -224,22 +224,22 @@ O componente é composto dos seguintes elementos:
     - `.actions`: container para os botões de ação da lista.
       - `.divisor`: classe para aplicar um divisor entre os ícones de ação.
 - `.list-item`: container para o conteúdo de um item unitário da lista.
-    - `.unread`: classe aplicada juntamente com o `list-item` para marcar e-mails de uma lista como não lidos.
+    - `.is-unread`: classe aplicada juntamente com o `list-item` para marcar e-mails de uma lista como não lidos.
 - `.icon`: área para imagens, ícones e recursos visuais.
   - `.headline`: espaço reservado para um metatexto.
 - `.content`: container para conteúdo de texto.
 - `.sub-title`: subtítulo do item.
 - `.text`: texto do item.
 - `.text-sec`:  texto secundário do item.
-- `.open`: essa classe deve ser aplicada a uma lista que contém uma sub-lista, quando a mesma estiver "aberta" para que a sub-lista seja exibida.
+- `.is-open`: essa classe deve ser aplicada a uma lista que contém uma sub-lista, quando a mesma estiver "aberta" para que a sub-lista seja exibida.
 
 ## Estados
 - `hover`: o estado de mouse hover de um item é ativado automáticamente.
 - `focus`: o estado de foco de um item é ativado automáticamente.
 - `active`: o estado de ativo de um item é ativado automáticamente.
-- `.selected`: essa classe deve ser aplicada ao item para ele receber o estado de selecionado.
+- `.is-selected`: essa classe deve ser aplicada ao item para ele receber o estado de selecionado.
 - `.dragged`: essa classe deve ser aplicada no arrasto de um item da lista.
-- `.disabled`: essa classe deve ser aplicada para o item ficar com estado de desabilitado.
+- `.is-disabled`: essa classe deve ser aplicada para o item ficar com estado de desabilitado.
 
 ## Estados para Sub-Listas
 - `.top-shadow`: Sombra superior da sublista para indicar que há itens escondidos na barra de rolagem para cima.

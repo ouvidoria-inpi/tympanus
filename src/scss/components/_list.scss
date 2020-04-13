@@ -145,7 +145,7 @@ div.#{$prefix}list {
     list-style-type: none;
     padding: 20px 16px;
     position: relative;
-    &.unread {
+    &.is-unread {
       .sub-title {
         font-weight: v(font-weight-bold);
         font-size: v(font-size-scale-base);
@@ -159,7 +159,7 @@ div.#{$prefix}list {
         font-weight: v(font-weight-bold);
       }
     }
-    &.disabled {
+    &.is-disabled {
       & .text {
         color: v(color-secondary-04);
       }
@@ -188,7 +188,7 @@ div.#{$prefix}list {
         }
       }
     }
-    &.selected {
+    &.is-selected {
       background-color: v(color-primary-lighten-01);
       & .icon {
         [class*="fa-"] {
@@ -260,7 +260,7 @@ div.#{$prefix}list {
       font-size: v(font-size-scale-down-01);
       color: v(color-secondary-05);
     }
-    &.open {
+    &.is-open {
       flex-wrap: wrap;
       ul {
         display: flex;

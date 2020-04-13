@@ -52,14 +52,14 @@ append content
             div.text Texto de uma linha
           div.icon
             i.fas.fa-chevron-right
-        a.list-item.selected
+        a.list-item.is-selected
           div.icon
             i.fa-lg.fas.fa-heartbeat
           div.content
             div.text Texto de uma linha (Estado Selecionado)
           div.icon
             i.fas.fa-chevron-right
-        a.list-item.disabled
+        a.list-item.is-disabled
           div.icon
             i.fa-lg.fas.fa-heartbeat
           div.content
@@ -154,7 +154,7 @@ append content
             button.br-button.is-circle.is-secondary(type='button')
               i.fa-lg.fas.fa-ellipsis-v
         ul
-          li.list-item.unread
+          li.list-item.is-unread
             div.icon.active
               i.fa-lg.fas.fa-envelope
             div.text Comunicação
@@ -163,7 +163,7 @@ append content
               div.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus massa nisi, id efficitur tortor tincidunt rutrum.
             div.text 08/04/2020
           li.br-divider
-          li.list-item.unread
+          li.list-item.is-unread
             div.icon.active
               i.fa-lg.fas.fa-calendar-check
             div.text Comunicação
@@ -286,7 +286,7 @@ append content
               a.list-item(href='#')
                 span.sr-only Link
                 i.fas.fa-chevron-down
-          li.list-item.open
+          li.list-item.is-open
             div.icon
               i.fa-lg.fas.fa-heartbeat
             div.content
