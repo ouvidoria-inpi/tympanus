@@ -122,7 +122,7 @@ Listas de definição usada para exibir termos e explicações dos termos.
 ```html
 <div class="br-list">
   <div class="header">
-    <h3 class="title">Título da Lista</h3>
+    <h3 class="title">Lista de E-mail</h3>
     <div class="actions">
       <button class="br-button is-circle is-secondary" type="button"><i class="fa-lg fas fa-sort-alpha-up"></i></button>
       <div class="divider"></div>
