@@ -154,19 +154,13 @@ append content
           +checkbox("Marcar como ocupado")(id="evento-check" class="mb-2" checked)
       .row.mt-3
         .col-sm-6
-          +input("Inicial")(id="evento-inicio" class="has-icon" placeholder="dd/mm/aaaa")
-            button.icon(type="button")
-              i.fas.fa-calendar
-              span.sr-only Abrir calendário
+          +datepicker("Data")(id="normal" placeholder="dd/mm/aaaa")
         .col-sm-4
           +select("Hora Inicial")(id="evento-hora-inicio")
             +option("11:00", "11")
       .row.mt-3
         .col-sm-6
-          +input("Final")(id="evento-final" class="has-icon" placeholder="dd/mm/aaaa")
-            button.icon(type="button")
-              i.fas.fa-calendar
-              span.sr-only Abrir calendário
+          +datepicker("Data")(id="normal" placeholder="dd/mm/aaaa")
         .col-sm-4
           +select("Hora Final")(id="evento-hora-final")
             +option("12:00", "12")
