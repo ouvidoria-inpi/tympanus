@@ -96,25 +96,3 @@
     visibility: hidden;
   }
 }
-
-.engloba{
-  background-color: v(color-secondary-03,$color-secondary-03);
-  padding: 1em 2em;
-  display: block!important;
-  .br-accordeon{
-    .icon{
-      padding: 5px 14px;
-    }
-    .title{
-      font-size: v(font-size-scale-up-03,$font-size-scale-up-03)!important;
-    }
-  }  
-  @include media-breakpoint-down(xs) {
-    .br-button.is-cancel{
-      width: 100%;
-    }
-  }
-}
-p.titulo{
-  font-size: v(font-size-scale-up-03,$font-size-scale-up-03)!important;
-}
