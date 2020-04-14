@@ -32,11 +32,7 @@
       margin-left: $spacer * 6;
     }
     &:focus {
-      background: v(status-focused-background)
-      linear-gradient(
-        v(status-focused-overlay),
-        v(status-focused-overlay)
-      );
+      @include focus();
       outline: none;
       //border-color: v(color-primary-lighten-01);
       //box-shadow: 0 0 0 1px v(color-primary-lighten-01);

@@ -1,0 +1,7 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Wizard";
+
+append content
+  +wizard(scroll=true, vertical=true, collapsed=true, total=5, step=3)

@@ -131,3 +131,4 @@ Abaixo pode-se observar alguns exemplos do Datepicker nas versões web e mobile.
 ### Exemplo de Template Mobile:
 
 ![Estado Focus](imagens/12-Exemplo-Mobile.png)
+

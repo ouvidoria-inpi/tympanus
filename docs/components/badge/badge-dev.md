@@ -1,79 +1,60 @@
 ## Dependências
 
-Para diferentes tamanhos deve ser definido o tamanho de fonte (font-size) do componente pai.
+Não há dependências externas
 
 ## Código básico
 
-```html
-<div class="br-badge">
-  <span class="icon"></span>
-</div>
-```
+``` html
+<span class="br-badge is-top is-left icon"><i class="fas fa-circle is-success"></i></span>
+<span class="br-badge is-top is-right icon"><i class="fas fa-circle is-warning"></i></span>
+<span class="br-badge is-bottom is-left icon"><i class="fas fa-circle is-info"></i></span>
+<span class="br-badge is-bottom is-right icon"><i class="fas fa-circle is-danger"></i></span>
 
-Ou
+<span class="br-badge is-top is-left simbol "><i class="fas fa-check is-success"></i></span>
+<span class="br-badge is-bottom is-left simbol "><i class="fas fa-check is-warning"></i></span>
+<span class="br-badge is-bottom is-right simbol"><i class="fas fa-check is-info"></i></span>
+<span class="br-badge is-top is-right simbol"><i class="fas fa-check is-danger"></i></span>
+<span class="br-badge is-top is-left simbol"><i class="fas fa-check is-success"></i></span>
 
-```html
-<div class="br-badge is-status">
-  <span class="icon"></span>
-</div>
-```
+<span class="br-badge is-bottom is-left simbol"><i class="fas fa-info is-warning"></i></span>
+<span class="br-badge is-bottom is-right simbol"><i class="fas fa-euro-sign is-info"></i></span>
+<span class="br-badge is-top is-right simbol"><i class="fas fa-times is-danger"></i></span>
 
-Ou
-
-```html
-<div class="br-badge is-symbol">
-  <i></i>
-  <i class="fas icon"></i>
-</div>
-```
-
-Ou
-
-```html
-<div class="br-badge is-count">
-  <i></i>
-  <span class="number"> {{valor}} </span>
-</div>
+<span class="br-badge fa-layers-counter fa-layers-top-left">1</span>
+<span class="br-badge fa-layers-counter fa-layers-bottom-left">5</span>
+<span class="br-badge fa-layers-counter fa-layers-bottom-right">5</span>
+<span class="br-badge fa-layers-counter fa-layers-top-right">999+</span>
 ```
 
 # Anatomia do componente
 
-Este componente é formado pelos seguintes elementos obrigatórios:
+Este componente é formado pelos seguintes elementos:
 
-- `br-badge`: container do componente;
-- `is-status`: para definir badge sinalização;
-- `is-symbol`: para definir badge sinalização de status com símbolo;
-- `is-count`: para definir badge contagem;
-- `icon`: elemento interno do badge de sinalização que contem o icone a ser exibido;
-- `number`: elemento interno do badge contagem que contem o valor a ser exibido;
+* `br-badge` : container do componente; 
+* `icon` : classe para badge simples; 
+* `simbol` : classe para badge com simbolos; 
+* `fa-layers-counter` : classe para indicar que o bagde contém contador; 
 
-# Estados
-
-## Cores
+## Estados
 
 Para definir as cores dos bages são usadas as seguintes classes:
 
-- `is-success`
-- `is-warning`
-- `is-info`
-- `is-danger`
+* `is-success` 
+* `is-warning` 
+* `is-info` 
+* `is-danger` 
 
-## Posição
+## Posicionamento
 
-Para definir o posicionamento dos bages são usadas as seguintes classes:
+* `is-top` 
+* `is-bottom` 
+* `is-left` 
+* `is-right` 
 
-- `is-top` ou `is-bottom`
-- `is-left` ou `is-right`
+## Posicionamento com contadores
 
-## Exemplo:
+* `fa-layers-top-left` 
+* `fa-layers-bottom-left` 
+* `fa-layers-bottom-right` 
+* `fa-layers-top-right` 
 
-```html
-<div class="br-badge is-symbol is-left is-bottom is-warning">
-  <i class="fas fa-file"></i>
-  <i class="fas fa-check icon"></i>
-</div>
-```
-
-# Regras especiais
-
-Os badges de tipo 1 só podem ter definidos o posicionamento superior ou inferior (top ou bottom).

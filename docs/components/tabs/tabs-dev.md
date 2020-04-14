@@ -4,94 +4,103 @@ Nenhuma dependência.
 
 ## Código básico
 
-```html
-<ul class="br-tabs">
-  <li class="item is-active">
-    <a href="#">
-      <span class="name">Item 1</span>
-    </a>
-  </li>
-  <li class="item">
-    <a href="#">
-      <span class="name">Item 2</span>
-    </a>
-  </li>
-  <li class="item">
-    <a href="#">
-      <span class="name">Item 2</span>
-    </a>
-  </li>
-</ul>
+``` html
+<nav class="tab-nav">
+    <ul>
+        <li class="tab-item">
+            <button type="button" data-panel="panel-1"><span class="name">Sobre</span></button>
+        </li>
+        <li class="tab-item">
+            <button type="button" data-panel="panel-2"><span class="name">Todos</span></button>
+        </li>
+        <li class="tab-item is-active">
+            <button type="button" data-panel="panel-3"><span class="name">Notícias</span></button>
+        </li>
+    </ul>
+</nav>
+<div class="tab-content">
+    <div class="tab-panel" id="panel-1">
+        <p>Painel Sobre</p>
+    </div>
+    <div class="tab-panel" id="panel-2">
+        <p>Painel Todos</p>
+    </div>
+    <div class="tab-panel is-active" id="panel-3">
+        <p>Painel Noticias</p>
+    </div>
+</div>
+</div>
 ```
 
 # Anatomia do componente
 
 Este componente é formado pelos seguintes elementos:
 
-- `br-tabs`: container do componente
-- `item`: cada aba da lista
-- `icon`: ícone da aba (opcional)
-- `name`: nome da aba
-- `results`: número de itens de resultados da aba (opcional)
+* `br-tabs` : container do componente
+* `tab-nav` : container da lista de abas
+* `tab-item` : cada aba da lista
+* `data-panel` : atributo de referência ao painel de conteúdo
+* `name` : nome da aba
+* `tab-content` : container do painel de conteúdo
+* `tab-panel` : cada painel de conteúdo
 
-## `br-tabs`
-
-**Elemento obrigatório**!
-
-Por padrão a visualização das abas é **horizontal**.
-
-Para usar a versão vertical aplique o prefixo `is-vertical`.
-
-Exemplo de uso:
-
-```html
-<ul class="br-tabs is-vertical">
-  ...
-</ul>
-```
-
-## `item`
+## `br-tabs` 
 
 **Elemento obrigatório**!
 
-Cada aba DEVE estar dentro de um elemento `item`.
-
-O `item` pode conter uma tag de link - `<a href="">` ou uma tag de botão - `<button>`.
-
-Para a aba selecionada aplique a classe `is-active`.
+Todo o componente Tabs está dentro de uma **div** com a classe `br-tabs` 
 
 Exemplo de uso:
 
-```html
-<ul class="br-tabs flex-column">
-  <li class="item is-active">...</li>
-  <li class="item">...</li>
-  <li class="item">...</li>
-</ul>
+``` html
+<div class="br-tabs">
+    ...
+</div>
 ```
 
-## `icon`
+## `tab-nav` 
 
-Cada aba PODE ter um ícone, portanto este elemento é opcional.
+**Elemento obrigatório**!
 
-O ícone pode ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome - `<i class="fas">`.
-
-Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](https://fontawesome.com/).
+A lista de abas está dentro de um container de navegação que deve ser escrito com a tag **nav** e a classe `tab-nav` 
 
 Exemplo de uso:
 
-```html
-<ul class="br-tabs flex-column">
-  <li class="item">
-    <a href="#">
-      <img class="icon" src="image.png" alt="Texto descritivo" />
-      <span class="name">Nome da aba</span>
-    </a>
-  </li>
+``` html
+<nav class="tab-nav">
+    ...
+</nav>
+```
+
+## `tab-item` 
+
+**Elemento obrigatório**!
+
+Cada aba DEVE estar dentro de um elemento `tab-item` .
+
+O `tab-item` contém uma tag `button` com um atributo `data-panel` , que faz referência ao painel correspondente
+
+Cada `tab-item` corresponde a um **li** de uma lista não ordenada **ul**
+
+Para a aba selecionada aplique a classe `is-active` no **li** correspondente.
+
+Exemplo de uso:
+
+``` html
+<ul>
+    <li class="tab-item">
+        <button type="button" data-panel="panel-1">...</button>
+    </li>
+    <li class="tab-item">
+        <button type="button" data-panel="panel-2">...</button>
+    </li>
+    <li class="tab-item is-active">
+        <button type="button" data-panel="panel-3">...</button>
+    </li>
 </ul>
 ```
 
-## `name`
+## `name` 
 
 **Elemento obrigatório**!
 
@@ -99,40 +108,139 @@ Cada aba DEVE ter um nome.
 
 Exemplo de uso:
 
-```html
-<ul class="br-tabs">
-  <li class="item">
-    <a href="#">
-      <span class="name">Nome da aba</span>
-    </a>
-  </li>
+``` html
+<ul>
+    <li class="tab-item">
+        <button type="button" data-panel="panel-1"><span class="name">Sobre</span></button>
+    </li>
+    <li class="tab-item">
+        <button type="button" data-panel="panel-2"><span class="name">Todos</span></button>
+    </li>
+    <li class="tab-item is-active">
+        <button type="button" data-panel="panel-3"><span class="name">Notícias</span></button>
+    </li>
 </ul>
 ```
 
-## `results`
+## `tab-content` 
 
-Cada aba PODE ter o número de itens de resultados, portanto este elemento é opcional.
+**Elemento obrigatório**!
+
+O conteúdo das abas deve ficar em uma **div** com a classe `tab-content` 
 
 Exemplo de uso:
 
-```html
-<ul class="br-tabs">
-  <li class="item">
-    <a href="#">
-      <span class="name">Nome da aba</span>
-      <span class="results">(124)</span>
-    </a>
-  </li>
+``` html
+<div class="tab-content">
+    ...
+</div>
+```
+
+## `tab-panel` 
+
+**Elemento obrigatório**!
+
+Cada painel corresponde a uma **div** com a classe `tab-panel` e um *id* para o link com a âncora
+
+Exemplo de uso:
+
+``` html
+<div class="tab-content">
+    <div class="tab-panel" id="panel-1">
+        ...
+    </div>
+</div>
+```
+
+## Código com Contadores
+
+``` html
+<div class="br-tabs" data-counter="true">
+    <nav class="tab-nav">
+        <ul>
+            <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
+                <p class="outcome">Resultados<span>124</span></p>
+            </li>
+            <li class="tab-item">
+                <button type="button" data-panel="panel-7"><span class="name">Todos</span></button><span class="results">( valor )</span>
+            </li>
+            <li class="tab-item is-active">
+                <button type="button" data-panel="panel-8"><span class="name">Notícias</span></button><span class="results">( valor )</span>
+            </li>
+        </ul>
+    </nav>
+    <div class="tab-content">
+        <div class="tab-panel" id="panel-7">
+            <p>Painel Todos</p>
+        </div>
+        <div class="tab-panel is-active" id="panel-8">
+            <p>Painel Notícias</p>
+        </div>
+    </div>
+</div>
+```
+
+# Anatomia do código com contadores
+
+Essa versão possui os seguintes itens adicionais
+
+* `data-counter` - Atributo para ativar o contador
+* `not-tab` - Elemento que não se comporta como aba
+* `results` - Elemento que mostra a contagem
+
+## `data-counter` 
+
+**Elemento obrigatório caso queira utilizar contadores**!
+
+Caso seja para utilizar as abas com contador, é necessário utilizar o atributo `data-counter` com o valor **true** na mesma **div** no `br-tas` 
+
+Exemplo de uso:
+
+``` html
+<div class="br-tabs" data-counter="true">
+    ...
+</div>
+```
+
+## `not-tab` 
+
+**Elemento opcional**!
+
+O atributo `not-tab` serve para indicar que um `tab-item` dentro do container `tab-nav` **não é uma aba**
+
+Esse elemento não será clicável
+
+Exemplo de uso:
+
+``` html
+<nav class="tab-nav">
+    <ul>
+        <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
+            <p class="outcome">Resultados<span>124</span></p>
+        </li>
+    </ul>
+</nav>
+```
+
+## `results` 
+
+**Elemento obrigatório caso queira utilizar contadores**!
+
+Serve para mostrar o contador da aba.É utilizado dentro de um `tab-item` 
+
+Exemplo de uso:
+
+``` html
+<ul>
+    <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
+        <p class="outcome">Resultados<span>124</span></p>
+    </li>
+    <li class="tab-item">
+        <button type="button" data-panel="panel-7"><span class="name">Todos</span></button><span class="results">( valor )</span>
+    </li>
+    <li class="tab-item is-active">
+        <button type="button" data-panel="panel-8"><span class="name">Notícias</span></button><span class="results">( valor )</span>
+    </li>
 </ul>
 ```
 
-# Estados
-
-Este componente apresenta os seguintes estados:
-
-- ativo: aplicado via classe `is-active` diretamente em `item`
-- hover: aplicado automaticamente via hover/focus na aba
-
-# Regras especiais
-
-Nenhuma regra especial.

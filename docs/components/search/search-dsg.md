@@ -86,7 +86,7 @@ Os textos de Label e Placeholder deverão ser alinhados à esquerda.
 
 #### 1 | Placeholder
 
-Rawline 16,8pt SemiBold Italic | Alinhado à esquerda | #555555
+Rawline 16, 8pt SemiBold Italic | Alinhado à esquerda | #555555
 
 #### 2 | Campo de Busca
 
@@ -100,7 +100,7 @@ Font Awesome | Search | #1351B4
 
 #### 4 | Texto do Campo de Busca
 
-Rawline 20,16pt SemiBold | Alinhado à esquerda | #555555
+Rawline 20, 16pt SemiBold | Alinhado à esquerda | #555555
 
 #### 5 | Ícone Fechar
 
@@ -222,11 +222,11 @@ Rawline 14px Italic | Alinhado à esquerda | #555555
 
 #### 4 | Busca Avançada
 
-Rawline 11,67px Bold | Alinhado à esquerda | #1351B4
+Rawline 11, 67px Bold | Alinhado à esquerda | #1351B4
 
 #### 5 | Texto Input
 
-Rawline 16,8px Semibold | Alinhado à esquerda | #333333
+Rawline 16, 8px Semibold | Alinhado à esquerda | #333333
 
 #### 6 | Ícone Busca
 
@@ -318,12 +318,13 @@ Font Awesome | Alinhado à direita | #1351B4
 
 #### 5 | Texto Sugestivo
 
-Rawline 16,8px Medium | Alinhado à esquerda | #555555
+Rawline 16, 8px Medium | Alinhado à esquerda | #555555
 
 #### 6 | Texto Sugestivo - Palavra em Destaque
 
-Rawline 16,8px Bold | Alinhado à esquerda | #555555
+Rawline 16, 8px Bold | Alinhado à esquerda | #555555
 
 #### 7 | Cor de Fundo do Item - Mouse Over
 
 Cor #DBE7FC
+

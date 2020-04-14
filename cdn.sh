@@ -18,7 +18,7 @@ rm -rf cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
 rm -rf cdn-dsgov-estaleiro/htdocs/design-system/latest
 mkdir cdn-dsgov-estaleiro/htdocs/design-system/latest
 mkdir cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
-echo $LATEST > cdn-dsgov-estaleiro/version
+echo $LATEST > cdn-dsgov-estaleiro/designsystemversion
 cp -r ../dist/js cdn-dsgov-estaleiro/htdocs/design-system/latest/
 cp -r ../dist/css cdn-dsgov-estaleiro/htdocs/design-system/latest/
 cp -r ../dist/js cdn-dsgov-estaleiro/htdocs/design-system/$LATEST 

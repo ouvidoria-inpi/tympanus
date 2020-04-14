@@ -14,7 +14,7 @@ As interfaces devem cumprir as diferentes necessidades de acessibilidade. Por ca
 
 ### Estrutura
 
-Cada aba deve possuir um label (rótulo) que a defina de forma clara e sintética. Para que a leitura não seja prejudicada e a interface se mantenha organizada, é recomendado que o label das abas seja composto de apenas uma palavra ou no máximo duas. É recomendado que apareçam no máximo, 06 abas por tela. Os rótulos das abas devem aparecer em uma única linha. E os contadores devem aparecer abaixo do separador que dá suporte aos labels.
+Cada aba deve possuir um label (rótulo) que a defina de forma clara e sintética. Para que a leitura não seja prejudicada e a interface se mantenha organizada, é recomendado que o label das abas seja composto de apenas uma palavra ou no máximo duas.É recomendado que apareçam no máximo, 06 abas por tela. Os rótulos das abas devem aparecer em uma única linha. E os contadores devem aparecer abaixo do separador que dá suporte aos labels.
 
 ##### 1 | Abas Padrão
 
@@ -128,3 +128,4 @@ Nos dispositivos móveis é necessário ajustar a largura de acordo com a tela. 
 A área de toque foi definida de acordo com as margens projetadas para as abas. Sendo assim, tanto na aplicação web como mobile, a área de toque compreende a largura total do label, acrescida das margens laterais de 24px e das margens superior e inferior de 20px.
 
 [![Imagem Area de Toque das Abas](imagens/AbasAreaToque.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/c6896841-d5ad-41f1-a566-41844cbd2f91/AbasPoucosItens-Espa-amento-1)
+
