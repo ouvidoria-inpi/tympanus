@@ -59,7 +59,7 @@ npm install dsgov.tgz
 
 ## Template inicial
 
-A seguir temos um exemplo de um template inicial para utilização do DSGOV. Copie o template para um arquivo html e confira se os caminhos dos arquivos **`rwaline.css`** e **`dsgov.css`**  estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **`dsgov.js`** confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do DSGOV. Copie o template para um arquivo html e confira se os caminhos dos arquivos **`rawline.css`** e **`dsgov.css`**  estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **`dsgov.js`** confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>
