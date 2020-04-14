@@ -7,7 +7,6 @@ yarn-error.log*
 lerna-debug.log*
 dist/
 cdn/
-src/scss/temp/
 cypress/screenshots
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
