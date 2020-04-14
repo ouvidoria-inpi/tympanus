@@ -1,119 +1,117 @@
 // Lista de Itens de Abas
 .#{$prefix}tabs {
-  border-bottom: 1px solid $border-color;
-  display: flex;
-  overflow: auto;
-  padding: 0;
-  &.is-vertical {
-    border-bottom: 0;
-    flex-direction: column;
-    .item {
-      border-bottom: 1px solid $border-color;
-      margin: 0;
-      padding: 0;
-      padding-right: $tabs-vertical-icons + ($spacer * 2);
-      a,
-      button,
-      input[type="submit"] {
-        flex-direction: row;
-        padding: 0;
-      }
-      &:hover {
-        background: $color-primary-pastel-02;
-      }
-      &.is-active {
-        box-shadow: none;
-        a,
-        button,
-        input[type="submit"] {
-          &:hover {
-            box-shadow: none;
+  &[data-counter="true"] {
+    .tab-nav {
+      ul {
+        margin-bottom: 72px;
+        .tab-item {
+          &[not-tab="true"] {
+            .name {
+              color: v(color-secondary-07, $color-secondary-07);
+              font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
+              line-height: v(font-size-scale-up-03, $font-size-scale-up-03);
+              font-weight: v(font-weight-semi-bold ,$font-weight-semi-bold);
+              display: inline-block;
+              padding-bottom: 6px;
+            }
+            .outcome {
+              font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
+              font-weight: v(font-weight-regular, $font-weight-regular);
+              position: absolute;
+              top: 52px;
+              left: 0;
+              span {
+                color: v(color-primary-default ,$color-primary-default);
+                display: inline-block;
+                font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
+                font-weight: v(font-weight-semi-bold ,$font-weight-semi-bold);
+                margin-left: $spacer * 2.76;
+              }
+            }
           }
         }
-        .name {
-          box-shadow: inset 0 -4px 0 0 $color-primary-default;
-          color: $color-primary-darken-02;
+      }
+    }
+  }
+  .tab-nav {
+    ul {
+      border-bottom: 1px solid v(color-secondary-04, $color-secondary-04);
+      display: flex;
+      padding: 0;
+      margin-bottom: 8px;
+      .tab-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 $spacer * 3.25;
+        position: relative;
+        white-space: nowrap;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        &.is-active {
+          button {
+            border-bottom: 4px solid v(color-primary-default, $color-primary-default);
+            padding-bottom: $spacer * 1;
+            .name {
+              color: v(color-primary-darken-02, $color-primary-darken-02)
+            }
+          }
+          .results {
+            color: v(color-primary-default, $color-primary-default);
+          }
+        }
+        button {
+          background-color: transparent;
+          border: none;
+          border-bottom: 4px solid transparent;
+          color: v(color-secondary-07, $color-secondary-07);
+          display: inline-block;
+          padding: $spacer * 1 $spacer * 3;
+          &:hover {
+            background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
+            .name {
+              color: v(color-primary-default, $color-primary-default);
+            }
+          }
+          &:focus {
+            background-color: rgba(242, 227, 23, 0.3);
+            .name {
+              color: v(color-primary-default, $color-primary-default);
+            }
+          }       
+          .name {
+            color: v(color-secondary-07 ,$color-secondary-07);
+            font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
+            font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+            text-align: center;
+            white-space: nowrap;
+          }
         }
         .results {
-          color: $color-primary-darken-02;
+          color: v(color-secondary-07, $color-secondary-07);
+          display: flex;
+          font-size: v(font-size-scale-base, $font-size-scale-base);
+          font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+          justify-content: center;
+          position: absolute;
+          top: 60px;
         }
       }
     }
-    .name {
-      display: inline-block;
-      font-weight: $font-weight-base;
-      margin-left: $tabs-vertical-icons + ($spacer * 2);
-      padding: ($spacer * 2) $spacer * 0.5;
-      text-align: left;
-      white-space: normal;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      overflow-x: auto;
     }
   }
-  .item {
-    display: flex;
-    margin: 0 ($spacer * 2.5);
-    &.is-active {
-      box-shadow: inset 0 -4px 0 0 $color-primary-default;
-      a,
-      button,
-      input[type="submit"] {
-        &:hover {
-          box-shadow: inset 0 -4px 0 0 $color-primary-default;
-        }
-      }
-      .name {
-        color: $color-primary-darken-02;
-      }
-      .results {
-        color: $color-primary-default;
-      }
-    }
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  .icon {
-    align-self: center;
-    color: $body-color;
-    justify-content: center;
-    margin: 0 $spacer;
-    width: $tabs-vertical-icons;
-    & + .name {
-      margin-left: 0;
-    }
-  }
-  .name {
-    color: $body-color;
-    flex: 1;
-    font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
-    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
-    text-align: center;
-    white-space: nowrap;
-  }
-  .results {
-    color: $body-color;
-    font-size: $font-size-base * 0.875;
-    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
-  }
-  a,
-  button,
-  input[type="submit"] {
-    align-items: center;
-    background: transparent;
-    border: 0;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: $spacer ($spacer * 2.5) ($spacer * 1.5);
-    text-decoration: none;
-    &:hover {
-      background: $color-primary-pastel-02;
-      text-decoration: none;
-      .name,
-      .results {
-        color: $link-hover-color;
+  .tab-content {
+    .tab-panel {
+      display: none;
+      &.is-active {
+        display: block;
       }
     }
   }

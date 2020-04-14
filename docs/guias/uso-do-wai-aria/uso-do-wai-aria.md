@@ -24,21 +24,23 @@ Nessas instâncias, os **states** e **properties** equivalentes da linguagem do 
 
 ### WAI-ARIA Roles
 
-O WAI-ARIA role é definido em um elemento usando o atributo `role`
+O WAI-ARIA role é definido em um elemento usando o atributo `role` 
 
-```html
+``` html
 <li role="menuitem">Abrir arquivo...</li>
 ```
 
 A especificação WAI-ARIA define uma taxonomia ([WAI-ARIA role taxonomy][3]) e os comportamentos esperados pelos roles. Ela fornece as seguintes informações:
 
-- Uma informação descritiva sobre o role
-- Informações de hierarquia entre os roles
-- O contexto do role
-- Referências e conceitos relacionados em outras especificações
-- Uso da Web Ontology Language para fornecer uma hierarquia
+* Uma informação descritiva sobre o role
+* Informações de hierarquia entre os roles
+* O contexto do role
+* Referências e conceitos relacionados em outras especificações
+* Uso da Web Ontology Language para fornecer uma hierarquia
+
   de tipos permitindo herança semântica (semelhante a uma hierarquia de classes)
-- States e prperties suportados para cada role
+
+* States e prperties suportados para cada role
 
 > Anexar uma role fornece informações às tecnologias assistivas sobre como lidar com cada elemento.
 
@@ -50,11 +52,11 @@ As tecnologias assistivas podem acessar essas informações por meio de um DOM d
 
 Quando combinado com **roles**, o agente do usuário pode fornecer às tecnologias assistidas informações da interface do usuário a qualquer momento. Alterações nos **states** ou **properties** resultarão em uma notificação às tecnologias de assistência, o que poderia alertar o usuário de que uma alteração ocorreu.
 
-O exemplo abaixo usa um list item que foi usado para criar um menu com checkbox, e os eventos JavaScript irão capturar os eventos de mouse e teclado para alternar o valor de `aria-checked`. O role é usado para que o comportamento desse widget seja conhecido pelo agente de usuário.
+O exemplo abaixo usa um list item que foi usado para criar um menu com checkbox, e os eventos JavaScript irão capturar os eventos de mouse e teclado para alternar o valor de `aria-checked` . O role é usado para que o comportamento desse widget seja conhecido pelo agente de usuário.
 
-```html
+``` html
 <li role="menuitemcheckbox" aria-checked="true">
-  Ordenado pela última modificação
+    Ordenado pela última modificação
 </li>
 ```
 
@@ -70,14 +72,15 @@ Esses **states** e **properties** são usados juntamente com os **roles** e a ta
 
 ## Referências
 
-- [Accessible Rich Internet Application - ARIA][1]
-- [Web Accessibility Initiative - WAI][2]
-- [WAI-ARIA role taxonomy][3]
-- [WAI-ARIA States and Properties][4]
-- [Diagrama de Classes dos Relacionamentos Entre as Roles][5]
+* [Accessible Rich Internet Application - ARIA][1]
+* [Web Accessibility Initiative - WAI][2]
+* [WAI-ARIA role taxonomy][3]
+* [WAI-ARIA States and Properties][4]
+* [Diagrama de Classes dos Relacionamentos Entre as Roles][5]
 
 [1]: https://www.w3.org/TR/wai-aria/
 [2]: https://www.w3.org/WAI/
 [3]: https://www.w3.org/TR/wai-aria/#role_definitions
 [4]: https://www.w3.org/TR/wai-aria/#states_and_properties
 [5]: https://www.w3.org/TR/wai-aria/img/rdf_model.svg
+

@@ -1,6 +1,7 @@
 ## Exemplos de utilização
 
-Podem servir como sinalização dinâmica de alteração de estado ou conter informações como números de pendências ou notificações.  
+Podem servir como sinalização dinâmica de alteração de estado ou conter informações como números de pendências ou notificações.
+
 ![Badge Exemplos de Utilização](imagens/badge_exemplos.png)
 
 ## Tipos
@@ -44,3 +45,4 @@ Todos do textos e números deverão ser centralizados.
 ### Exemplo de uso
 
 ![Badge Exemplo de uso](imagens/badge_exemplos_uso.png)
+

@@ -1,80 +1,77 @@
-## Dependências
+# Dependências
 
 Nenhuma dependência.
 
 ## Código básico
 
-```html
+``` html
 <!-- checkbox -->
 <div class="br-check">
-  <input type="checkbox" id="checkbox" />
-  <label for="checkbox">Checkbox</label>
-</div>
-<!-- radio -->
-<div class="br-check">
-  <input name="radio" type="radio" id="radio" />
-  <label for="radio">Radio button</label>
+    <input type="checkbox" id="checkbox" />
+    <label for="checkbox">Checkbox</label>
 </div>
 ```
 
 ## Detalhamento
 
+Componente deve ser usado quando necessitar usar uma lista com várias opções e houver necessidade de escolher mais de uma opção simultaneamente.
+
 Este componente é formado pelos seguintes elementos:
 
-- `br-check`: container do componente
-
-A natureza de comportamento do componente é `inline-block`. Isso significa que ao usar vários checkbox ou radio button em sequência eles ficarão lado a lado.
+* `br-check` : container do componente
 
 ### Alinhamento vertical
+
+A natureza de comportamento do componente é preferencialmente em colunas, ficando os checkbox um abaixo do outro. Evite usar esse componente em linhas, mas, caso seja necessário, use a opção com `inline-block` , que também está contemplada na área de exemplos.
 
 Você poderá modificar o comportamento padrão do `br-check` usando as classes **Display** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/display/](https://getbootstrap.com/docs/4.3/utilities/display/). A aplicação deve ser feita diretamente no elemento. O exemplo a seguir configura os checkboxes um abaixo do outro:
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-check d-block">...</div>
 <div class="br-check d-block mt-1">...</div>
 ```
 
 ## Estados
 
-### `hover`
+### `hover` 
 
-- É aplicado automaticamente no elemento
+* É aplicado automaticamente no elemento
 
-### `checked`
+### `checked` 
 
-- É aplicado automaticamente no elemento quando possuir o atributo `checked`
+* É aplicado automaticamente no elemento quando possuir o atributo `checked` 
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-check">
-  <input ... checked>
-  <label ...>
+    <input ... checked>
+    <label ...>
 </div>
 ```
 
-### `disabled`
+### `disabled` 
 
-- É aplicado automaticamente no elemento quando possuir o atributo `disabled`
+* É aplicado automaticamente no elemento quando possuir o atributo `disabled` 
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-check">
-  <input ... disabled>
-  <label ...>
+    <input ... disabled>
+    <label ...>
 </div>
 ```
 
-### `invalid` e `valid`
+### `invalid` e `valid` 
 
-- Deve ser aplicado no componente usando o prefixo `is-`
+* Deve ser aplicado no componente usando o prefixo `is-` 
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-check is-invalid">...</div>
 <div class="br-check is-valid">...</div>
 ```
@@ -83,11 +80,11 @@ Exemplo de uso:
 
 ### Espaçamentos
 
-O espaçamento entre vários `br-check`, seja ele horizontal ou vertical, deverá ser feito de forma manual. Recomendamos o uso do utilitário **Spacing** do Bootstrap - [https://getbootstrap.com/docs/4.3/utilities/spacing/](https://getbootstrap.com/docs/4.3/utilities/spacing/).
+O espaçamento entre vários `br-check` , seja ele horizontal ou vertical, deverá ser feito de forma manual. Recomendamos o uso do utilitário **Spacing** do Bootstrap - [https://getbootstrap.com/docs/4.3/utilities/spacing/](https://getbootstrap.com/docs/4.3/utilities/spacing/).
 
 Exemplo de espaçamento horizontal entre checkboxes:
 
-```html
+``` html
 <div class="br-check">...</div>
 <div class="br-check ml-6">...</div>
 <div class="br-check ml-6">...</div>
@@ -95,7 +92,7 @@ Exemplo de espaçamento horizontal entre checkboxes:
 
 Exemplo de espaçamento vertical entre radio buttons:
 
-```html
+``` html
 <div class="br-check d-block">...</div>
 <div class="br-check d-block mt-1">...</div>
 <div class="br-check d-block mt-1">...</div>
@@ -105,15 +102,16 @@ O espaçamento horizontal para o componente na orientação vertal deve ser feit
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="row">
-  <div class="col">
-    <div class="br-check d-block">...</div>
-    <div class="br-check d-block mt-1">...</div>
-  </div>
-  <div class="col">
-    <div class="br-check d-block">...</div>
-    <div class="br-check d-block mt-1">...</div>
-  </div>
+    <div class="col">
+        <div class="br-check d-block">...</div>
+        <div class="br-check d-block mt-1">...</div>
+    </div>
+    <div class="col">
+        <div class="br-check d-block">...</div>
+        <div class="br-check d-block mt-1">...</div>
+    </div>
 </div>
 ```
+

@@ -13,9 +13,11 @@ Este componente deve conter uma sequência de links marcando a ordem de acesso n
 Tanto na versão do breadcrumb para o portal quanto para sistemas, no estado hover, cada link deve assumir o formato sublinhado, mantendo a mesma cor do estado normal (#333333). O link que representa a página atual (último link), apresenta uma diferenciação de peso tipográfico em bold.
 
 **Estado Normal e Estado Hover**  
+
 ![Anatomia](imagens/03_estados_portal.png)
 
 **Estado Normal e Estado Hover**
+
 ![Anatomia](imagens/04_estados_sistemas.png)
 
 ---
@@ -23,11 +25,14 @@ Tanto na versão do breadcrumb para o portal quanto para sistemas, no estado hov
 ## Tipos de Breadcrumbs
 
 **Normal**
+
 ![Anatomia](imagens/05_tipo_normal.png)
 
 **Normal**
+
 ![Anatomia](imagens/06_tipo_colapsado.png)
-**A -** Em situações onde a trilha do breadcrumb for muito extensa com espaço limitado de apresentação, é recomendado fazer uso do recurso de colapse para encurta-lo dando destaque ao ícone de home e a tela atual. Este recurso, utiliza o símbolo de "reticências (...)" para agrupar links intermediários e ocultando-los.
+
+**A -** Em situações onde a trilha do breadcrumb for muito extensa com espaço limitado de apresentação, é recomendado fazer uso do recurso de colapse para encurta-lo dando destaque ao ícone de home e a tela atual. Este recurso, utiliza o símbolo de "reticências (... )" para agrupar links intermediários e ocultando-los.
 
 **B -** Os links ocultos, poderão ser novamente acessados, clicando-se no ícone agrupador, caso necessário.
 Exemplo pode ser visto na página: (https://material-ui.com/components/breadcrumbs/); no tópico **Customized breadcrumbs**.
@@ -60,3 +65,4 @@ Todo texto deverá ser alinhado à esquerda.
 ![Anatomia](imagens/10_anatomia_sistemas.png)
 
 ---
+

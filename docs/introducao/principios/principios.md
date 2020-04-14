@@ -1,8 +1,8 @@
 ## Objetivos dos Princípios
 
-- guiar decisões de _design_;
-- ser autênticos e específicos, em vez de genéricos;
-- ser facilmente memorizáveis, fáceis de lembrar e utilizáveis no dia a dia.
+* guiar decisões de _design_; 
+* ser autênticos e específicos, em vez de genéricos; 
+* ser facilmente memorizáveis, fáceis de lembrar e utilizáveis no dia a dia.
 
 ### Experiência Única
 
@@ -32,4 +32,5 @@ Boas Práticas de estruturação de Serviços foram revistas com o objetivo de g
 
 **Boa fé dos usuários como premissa**: não sacrificar soluções mais simples e eficientes em função de possível má-fé do usuário. Mecanismos de controle devem ser usados racionalmente de forma a minimizar os danos na experiência do usuário, sem prejudicar sua aplicação.
 
-**Compreensão e Compatibilidade**: os serviços devem ser compreensíveis tanto para usuários quanto para máquinas, sendo também compatíveis com assistentes virtuais. É preciso que a inteligência artificial possibilite isso à medida que apoia a classificação e organização do conteúdo dos serviços.
+**Compreensão e Compatibilidade**: os serviços devem ser compreensíveis tanto para usuários quanto para máquinas, sendo também compatíveis com assistentes virtuais.É preciso que a inteligência artificial possibilite isso à medida que apoia a classificação e organização do conteúdo dos serviços.
+

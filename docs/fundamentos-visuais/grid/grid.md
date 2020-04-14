@@ -40,11 +40,11 @@ Existem dois tipos de comportamento para as Grids: Fixa e a Fluida.
 
 ### Grid Fixa
 
-Na grid fixa, as colunas e as medianizes possuem largura fixa. Porém o **largura das margens são variadas** de acordo com a resolução da tela, mantendo quase todo o conteúdo centralizado da tela em uma largura máxima (`max-width`).
+Na grid fixa, as colunas e as medianizes possuem largura fixa. Porém o **largura das margens são variadas** de acordo com a resolução da tela, mantendo quase todo o conteúdo centralizado da tela em uma largura máxima ( `max-width` ).
 
 Em uma grid fixa, apesar das larguras variadas, as margens possuem um valor mínimo que deve ser respeitado.
 
-As grids utilizadas como fixas são voltadas para Desktop (`--grid-breakpoint-large`) e para TV (`--grid-breakpoint-xlarge`).
+As grids utilizadas como fixas são voltadas para Desktop ( `--grid-breakpoint-large` ) e para TV ( `--grid-breakpoint-xlarge` ).
 
 ![Grid Fixa 01](imagens/behavior-fixa01.png)
 
@@ -52,9 +52,9 @@ As grids utilizadas como fixas são voltadas para Desktop (`--grid-breakpoint-la
 
 ### Grid Fluida
 
-Na grid fluida, tanto as margens como as medianizes possuem largura fixa, porém a **largura das colunas alteram** de tamanho, dimensionando também o conteúdo. Neste caso, a grid ocupam todo o espaço disponível da tela (`max-width` de 100%).
+Na grid fluida, tanto as margens como as medianizes possuem largura fixa, porém a **largura das colunas alteram** de tamanho, dimensionando também o conteúdo. Neste caso, a grid ocupam todo o espaço disponível da tela ( `max-width` de 100%).
 
-As grids utilizadas como fluida são as de Smarthphone (`--grid-breakpoint-xsmall` e `--grid-breakpoint-small`) e Tablet (`--grid-breakpoint-small` e `--grid-breakpoint-medium`).
+As grids utilizadas como fluida são as de Smarthphone ( `--grid-breakpoint-xsmall` e `--grid-breakpoint-small` ) e Tablet ( `--grid-breakpoint-small` e `--grid-breakpoint-medium` ).
 
 ![Grid Fluida 01](imagens/behavior-fluida01.png)
 
@@ -139,3 +139,4 @@ A margem externa ao conteúdo será variável (com tamanho mínimo de **40 pixel
 | breakpoint | -                  | --grid-breakpoint-xlarge |
 
 ![Grid 12 colunas](imagens/grid-12colunas.png)
+

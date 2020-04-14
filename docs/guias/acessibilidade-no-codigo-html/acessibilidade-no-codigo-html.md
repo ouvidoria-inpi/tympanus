@@ -48,11 +48,11 @@ A validação manual é necessária porque nem todos os problemas de acessibilid
 
 #### Benefícios de um HTML válido
 
-- Melhor comunicação e menos chance de má interpretação
-- É mais provável que seja exibido de maneira correta e previsível, independentemente do navegador ou do tipo de dispositivo
-- É mais provável que seja funcional para usuários com problemas de acessibilidade
-- Reduz possíveis interpretações erradas por mecanismos de pesquisa (de dados estruturados, metadados, idioma, codificação, etc.)
-- É mais provável que seja renderizado mais rapidamente em alguns cenários (o usuário pode ver a página mais rapidamente)
+* Melhor comunicação e menos chance de má interpretação
+* É mais provável que seja exibido de maneira correta e previsível, independentemente do navegador ou do tipo de dispositivo
+* É mais provável que seja funcional para usuários com problemas de acessibilidade
+* Reduz possíveis interpretações erradas por mecanismos de pesquisa (de dados estruturados, metadados, idioma, codificação, etc.)
+* É mais provável que seja renderizado mais rapidamente em alguns cenários (o usuário pode ver a página mais rapidamente)
 
 ### Use **HTML semântico**
 
@@ -70,13 +70,13 @@ A [Especificação HTML5 do W3C][8] trás a semantica dos elementos da linguagem
 
 Como exemplo pode-se citar:
 
-- Usar cabeçalhos de acordo com sua hierarquia
+* Usar cabeçalhos de acordo com sua hierarquia
 
 Os níveis de cabeçalho (elementos HTML H1 a H6) devem ser utilizados de forma hierárquica, pois organizam a ordem de importância e subordinação dos conteúdos, facilitando a leitura e compreensão.
 
 Conceitualmente, existem seis níveis de títulos, sendo o H1 o mais alto, ou seja, deverá corresponder ao conteúdo principal da página, assim é recomendável que toda página tenha apenas um H1. Já os níveis do H2 ao H6 poderão ser utilizados mais de uma vez na página, mas sem excesso e com lógica textual, obedecendo uma hierarquia.
 
-```html
+``` html
 <h1>1º nível</h1>
 <h2>2º nível</h2>
 <h3>3º nível</h3>
@@ -85,25 +85,25 @@ Conceitualmente, existem seis níveis de títulos, sendo o H1 o mais alto, ou se
 <h6>6º nível</h6>
 ```
 
-- Usar listas de acordo com sua finalidade
+* Usar listas de acordo com sua finalidade
 
 O elemento HTML `ul` (ou elemento HTML de Lista desordenada) representa uma lista de itens sem ordem rígida, isto é, uma coleção de itens que não trazem uma ordenação numérica e as suas posições, nessa lista, são irrelevantes.
 
 O Elemento HTML `ol` (ou Elemento HTML de lista ordenada) representa uma lista de itens ordenados. De forma característica esses itens ordenados em uma lista são mostrados com uma contagem que os precede, que pode ser de qualquer tipo, como numerais, letras, algarismos romanos, ou simples símbolos.
 
-```html
+``` html
 <!-- Lista desordenanda -->
 <ul>
-  <li>primeiro item</li>
-  <li>segundo item</li>
-  <li>terceiro item</li>
+    <li>primeiro item</li>
+    <li>segundo item</li>
+    <li>terceiro item</li>
 </ul>
 
 <!-- Lista ordenanda -->
 <ol>
-  <li>primeiro item</li>
-  <li>segundo item</li>
-  <li>terceiro item</li>
+    <li>primeiro item</li>
+    <li>segundo item</li>
+    <li>terceiro item</li>
 </ol>
 ```
 
@@ -111,37 +111,40 @@ O Elemento HTML `ol` (ou Elemento HTML de lista ordenada) representa uma lista d
 
 As tabelas devem ser utilizadas apenas para dados tabulares e não para efeitos de disposição dos elementos na página. Para este fim, utilize as folhas de estilo.
 
-```html
+``` html
 <html>
-  <head> </head>
-  <body>
+
+<head> </head>
+
+<body>
     <div id="topo" role="”banner”">
-      <div>
-        <!--barra de acessibilidade-->
-      </div>
-      <h1>Exemplo sem tabelas!</h1>
+        <div>
+            <!--barra de acessibilidade-->
+        </div>
+        <h1>Exemplo sem tabelas!</h1>
     </div>
     <div id="menu" role="”navigation”">
-      <ul>
-        <li><a href="menu1.html">Menu 1</a></li>
-        <li><a href="menu2.html">Menu 2</a></li>
-        <li><a href="menu3.html">Menu 3</a></li>
-        <li><a href="menu4.html">Menu 4</a></li>
-      </ul>
+        <ul>
+            <li><a href="menu1.html">Menu 1</a></li>
+            <li><a href="menu2.html">Menu 2</a></li>
+            <li><a href="menu3.html">Menu 3</a></li>
+            <li><a href="menu4.html">Menu 4</a></li>
+        </ul>
     </div>
     <div id="conteudo" role="main">
-      <!--conteúdo principal da página-->
-      <div id="lateral">
-        <!--conteúdo da lateral da página-->
-      </div>
-      <div id="rodape" role="contentinfo">
-        <!--direitos autorais-->
-        <address>
-          <!--e-mail de contato-->
-        </address>
-      </div>
+        <!--conteúdo principal da página-->
+        <div id="lateral">
+            <!--conteúdo da lateral da página-->
+        </div>
+        <div id="rodape" role="contentinfo">
+            <!--direitos autorais-->
+            <address>
+                <!--e-mail de contato-->
+            </address>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
 ```
 
@@ -153,11 +156,11 @@ Deve-se identificar o principal idioma utilizado nos documentos. A identificaç�
 
 Se algum elemento de uma página possuir conteúdo em um idioma diferente do principal, este deverá estar identificado pelo **atributo lang**. Essa recomendação não se aplica para nomes próprios ou termos técnicos que sejam compreendidos no contexto.
 
-```html
+``` html
 <p lang="de">
-  Da dachte der Herr daran, ihn aus dem Futter zu schaffen, aber der Esel
-  merkte, daß kein guter Wind wehte, lief fort und machte sich auf den Weg nach
-  Bremen: dort, meinte er, könnte er ja Stadtmusikant werden.
+    Da dachte der Herr daran, ihn aus dem Futter zu schaffen, aber der Esel
+    merkte, daß kein guter Wind wehte, lief fort und machte sich auf den Weg nach
+    Bremen: dort, meinte er, könnte er ja Stadtmusikant werden.
 </p>
 ```
 
@@ -165,17 +168,11 @@ Se algum elemento de uma página possuir conteúdo em um idioma diferente do pri
 
 Deve ser fornecida uma descrição para as imagens da página, utilizando-se, para tanto o **atributo alt**.
 
-```html
-<img
-  src="foto-porto-alegre.jpg"
-  alt="Foto de uma bicicleta de carga verde com caixas laranjas encostada numa parede"
-/>
+``` html
+<img src="foto-porto-alegre.jpg" alt="Foto de uma bicicleta de carga verde com caixas laranjas encostada numa parede" />
 
 <a href="http://www.dominiopublico.gov.br/">
-  <img
-    src="guia.png"
-    alt="Guia de Serviços – Consulte serviços públicos de forma fácil"
-  />
+    <img src="guia.png" alt="Guia de Serviços – Consulte serviços públicos de forma fácil" />
 </a>
 ```
 
@@ -183,7 +180,7 @@ Deve ser fornecida uma descrição para as imagens da página, utilizando-se, pa
 
 Labels de formulários DEVEM ser usados. Os leitores de tela usam os labels para informar ao usuário sobre o campo do formulário.
 
-```html
+``` html
 <label for="nome">Nome: </label>
 <input type="text" name="nome" id="nome" />
 
@@ -196,14 +193,14 @@ Labels de formulários DEVEM ser usados. Os leitores de tela usam os labels para
 
 ## Referências
 
-- [Modelo de Acessibilidade em Governo Eletrônico - eMAG][1]
-- [World Wide Web Consortium - W3C][2]
-- [Web Content Accessibility Guidelines - WCAG][3]
-- [Web Accessibility Initiative - WAI][4]
-- [Accessible Rich Internet Applications - ARIA][5]
-- [HTML Válido][6]
-- [HTML Semântico][7]
-- [Especificação HTML5 do W3C][8]
+* [Modelo de Acessibilidade em Governo Eletrônico - eMAG][1]
+* [World Wide Web Consortium - W3C][2]
+* [Web Content Accessibility Guidelines - WCAG][3]
+* [Web Accessibility Initiative - WAI][4]
+* [Accessible Rich Internet Applications - ARIA][5]
+* [HTML Válido][6]
+* [HTML Semântico][7]
+* [Especificação HTML5 do W3C][8]
 
 [1]: http://emag.governoeletronico.gov.br/
 [2]: https://www.w3.org/
@@ -213,3 +210,4 @@ Labels de formulários DEVEM ser usados. Os leitores de tela usam os labels para
 [6]: https://varvy.com/valid-html-use.html
 [7]: https://www.lifewire.com/why-use-semantic-html-3468271
 [8]: https://www.w3.org/TR/html52/
+

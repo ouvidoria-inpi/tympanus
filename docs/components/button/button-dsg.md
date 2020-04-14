@@ -6,7 +6,7 @@ Para criar uma experiência única nos produtos do governo federal, faz-se neces
 
 ### Eficiência e Clareza
 
-É fundamental que a palavra que acompanha o botão (label) seja de fácil compreensão, comunique e auxilie o usuário na navegação, ou seja a ação que o botão se destina a executar deve estar clara. O local onde os botões são aplicados devem seguir um padrão e auxiliam para deixar claro para o cidadão qual função cumprem na tela. Por isso num formulário por exemplo, os botões salvar devem sempre seguir um padrão de alinhamento e localização, isso auxilia e muito a compreensão das ações. Além disso, os estados e interações cumprem um papel importante: dar um feedback ao usuário sobre o que está acontecendo na interface. Eles cumprem a função de comunicar se o botão será ou foi acionado, se o botão está clicável, ou se está inacessível (desabilitado)… auxiliam o usuário no momento da navegação e são fundamentais para garantir uma boa usabilidade do sistema. Sendo assim, foram determinadas nessa documentação todos os estados e interações afim de facilitar o trabalho do desenvolvedor e do designer,
+É fundamental que a palavra que acompanha o botão (label) seja de fácil compreensão, comunique e auxilie o usuário na navegação, ou seja a ação que o botão se destina a executar deve estar clara. O local onde os botões são aplicados devem seguir um padrão e auxiliam para deixar claro para o cidadão qual função cumprem na tela. Por isso num formulário por exemplo, os botões salvar devem sempre seguir um padrão de alinhamento e localização, isso auxilia e muito a compreensão das ações. Além disso, os estados e interações cumprem um papel importante: dar um feedback ao usuário sobre o que está acontecendo na interface. Eles cumprem a função de comunicar se o botão será ou foi acionado, se o botão está clicável, ou se está inacessível (desabilitado)… auxiliam o usuário no momento da navegação e são fundamentais para garantir uma boa usabilidade do sistema. Sendo assim, foram determinadas nessa documentação todos os estados e interações afim de facilitar o trabalho do desenvolvedor e do designer, 
 
 ### Acessibilidade
 
@@ -33,14 +33,14 @@ São os botões terciários que se destinam às ações mais pontuais de ênfase
 
 #### Botões Finalísticos
 
-É composto de uma base (background ou contorno) e o label, que é um rótulo representativo da ação que ele irá realizar.  
+É composto de uma base (background ou contorno) e o label, que é um rótulo representativo da ação que ele irá realizar.
 Não foram utilizados ícones nos botões principais e secundários, para evitar que funções mais complexas não sejam bem representadas e sejam retratadas de forma a causar dúvida ao usuário. Essa regra foi adotada também para restringir que
-cada equipe de desenvolvimento adote um padrão diferenciado do que está sendo definido no Design System. Porém, serão mostradas aqui aplicações dos botões com ícones, apenas para que se houver necessidade, sejam aplicadas em sistemas antigos do governo federal, os quais costumavam fazer uso de um ícone em suas estruturas,
+cada equipe de desenvolvimento adote um padrão diferenciado do que está sendo definido no Design System. Porém, serão mostradas aqui aplicações dos botões com ícones, apenas para que se houver necessidade, sejam aplicadas em sistemas antigos do governo federal, os quais costumavam fazer uso de um ícone em suas estruturas, 
 
 ##### 1 | Botão Principal ou Primário (Ênfase Alta)
 
 São botões que possuem maior ênfase pela sua importância. Utilizados com maior frequência, são representados com preenchimento na cor principal e devem ser aplicados à/às ações cruciais da tela, informando ao usuário sua importância.
-Por exemplo, quando num formulário aparece a ação salvar e a a ação cancelar. Espera-se que após preencher os campos,
+Por exemplo, quando num formulário aparece a ação salvar e a a ação cancelar. Espera-se que após preencher os campos, 
 o usuário deseje salvar, sendo assim, a cor botão salvar deve se destacar da cor do botão cancelar (que é a ação menos esperada).
 
 [![Imagem Botoes Primarios](imagens/BotoesPrimarios.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/)
@@ -53,7 +53,7 @@ C | Botões Mini
 
 [![Imagem Exemplo de Botoes Primarios no Formulario](imagens/BotoesPrimarios_Exemplos.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/screen/c2719157-5ffa-421f-9958-d32960e1a353/BotoesPrimarios-Exemplos)
 
-Em sistemas antigos, que já utilizam os ícones em suas estruturas, o padrão a ser seguido deve ser: background do botão + ícone + Label. De forma geral é indicado que o ícone apareça antes do label. Porém, há situações onde a localização do ícone pode interferir no entendimento da ação. Nesse caso, é indicado que o ícone apareça à direita, exemplo Botão Avançar. É imprescindível que a seta apareça do lado direito, para que fique coerente com a ação de avançar.
+Em sistemas antigos, que já utilizam os ícones em suas estruturas, o padrão a ser seguido deve ser: background do botão + ícone + Label. De forma geral é indicado que o ícone apareça antes do label. Porém, há situações onde a localização do ícone pode interferir no entendimento da ação. Nesse caso, é indicado que o ícone apareça à direita, exemplo Botão Avançar.É imprescindível que a seta apareça do lado direito, para que fique coerente com a ação de avançar.
 
 [![Imagem Botoes Primarios com Icones](imagens/BotoesPrimarioscomIcones.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/screen/3dcde40d-405b-42f1-8ffb-1a73de8efa4b/BotoesPrimarioscomIcones)
 
@@ -63,7 +63,7 @@ Em sistemas antigos, que já utilizam os ícones em suas estruturas, o padrão a
 
 ##### 2 | Botão Call to Action (Ênfase Muito Alta )
 
-São botões utilizados somente quando houver uma necessidade maior de chamar atenção do usuário, para execução de uma ação importante na tela. Diferem dos botões primários por aparecerem em menor frequência e apenas em uma ação específica da tela. São representados com preenchimento na cor secundária verde #268744 para diferenciar dos tons de azuis que prevalecem no padrão gráfico do Design System. Recebem uma borda cinza, que auxilia a ancorá-lo em qualquer lugar da tela. Além disso, o botão Call to Action, possui uma dimensão diferenciada que o distingue dos demais botões da tela, tornado-se o foco de atenção para realização de determinada ação,
+São botões utilizados somente quando houver uma necessidade maior de chamar atenção do usuário, para execução de uma ação importante na tela. Diferem dos botões primários por aparecerem em menor frequência e apenas em uma ação específica da tela. São representados com preenchimento na cor secundária verde #268744 para diferenciar dos tons de azuis que prevalecem no padrão gráfico do Design System. Recebem uma borda cinza, que auxilia a ancorá-lo em qualquer lugar da tela. Além disso, o botão Call to Action, possui uma dimensão diferenciada que o distingue dos demais botões da tela, tornado-se o foco de atenção para realização de determinada ação, 
 
 D | Botão Call to Action Web
 E | Botão Call to Action Mobile
@@ -186,16 +186,16 @@ observando o devido espaçamento mínimo entre ele o primário.
 
 C | Botões Terciários
 Pode vir alinhado à direita ou à esquerda dependendo
-do conteúdo da tela,
+do conteúdo da tela, 
 
 #### 2 | Botões Contextuais
 
-Podem ser posicionados de acordo com a necessidade das ações. Às vezes aparecem alinhados à esquerda com a massa de texto, outras vezes pode vir alinhado à direita com o conteúdo. Quando houver dúvida no posicionamento é fundamental, realizar um teste AB com pelo menos 05 usuários para testar a localização mais adequada.
+Podem ser posicionados de acordo com a necessidade das ações.Às vezes aparecem alinhados à esquerda com a massa de texto, outras vezes pode vir alinhado à direita com o conteúdo. Quando houver dúvida no posicionamento é fundamental, realizar um teste AB com pelo menos 05 usuários para testar a localização mais adequada.
 
 [![Imagem Alinhamento dos Botoes Contextuais](imagens/BotoesTerciarios_Alinhamento.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/screen/4b0538aa-4d81-430e-8ef3-1ff938dd8268/BotoesTerciarios-Alinhamento)
 
 D | Botões Internos
-Devem ser alinhados de acordo com a necessidade,
+Devem ser alinhados de acordo com a necessidade, 
 
 ### Dimensões
 
@@ -272,3 +272,4 @@ geralmente ocupam uma posição de destaque em relação aos demais botões, no 
 O botão Call to Action recebeu uma sombra tanto no elemento verde como no elemento cinza, com intuito de ressaltá-lo dos demais botões.
 
 [![Imagem Sombra dos Botoes CalltoAction](imagens/BotoesCalltoAction_Sombra.png)](https://xd.adobe.com/spec/b10e5556-5012-4a45-67fc-677df7f6cb2a-c73f/screen/91e8ce3d-6733-4472-98c9-da4935b22a75/BotoesCalltoAction-Sombra-)
+
