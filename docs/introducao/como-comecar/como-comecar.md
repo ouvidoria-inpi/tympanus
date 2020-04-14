@@ -53,7 +53,7 @@ Is this OK? (yes)
 npm install dsgov.tgz
 ```
 
-- Após a execução completa do comando será criado a pasta **`node_modules/@govbr/dsgov`**. Essa pastas contém os módulos necessários para o funcinamento do DSGOV.
+- Após a execução completa do comando será criado a pasta **`node_modules/@govbr/dsgov`**. Essa pasta contém os módulos necessários para o funcinamento do DSGOV.
 
 - Na pasta **`node_modules/@govbr/dsgov/dist`** você encontra os arquivos **`dsgov.js`** e **`dsgov.css`** que podem ser utilizados no seu projeto.
 
