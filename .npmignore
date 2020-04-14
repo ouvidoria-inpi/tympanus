@@ -7,3 +7,4 @@ dist/html
 gulpfiles.js
 webpack.config.js
 cdn
+assets
