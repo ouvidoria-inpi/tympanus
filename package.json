@@ -1,13 +1,13 @@
 {
 	"name": "@govbr/dsgov",
-	"version": "1.2.3-beta.23",
+	"version": "1.2.3-beta.25",
 	"description": "Design System do governo",
 	"main": "index.js",
 	"cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/latest/",
 	"scripts": {
 		"start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev",
 		"build-local": "npm-run-all build:webpack:dev & webpack-dev-server --env prod",
-		"build": "npm-run-all build:webpack:prod && npm run homologacao:build && npm run compile-sass",
+		"build": "npm-run-all build:webpack:prod && npm run homologacao:build ",
 		"test": "npm-run-all validate:*",
 		"init": "npm run repo:serpro & npm run repo:govbr && npm install",
 		"repo:serpro": "npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/",
@@ -86,6 +86,7 @@
 		"pug": "^2.0.4",
 		"pug-cli": "^1.0.0-alpha6",
 		"pug-loader": "^2.4.0",
+		"run-node-webpack-plugin": "^1.2.2",
 		"sass-loader": "^8.0.2",
 		"stylelint": "^13.2.1",
 		"stylelint-config-recommended-scss": "^4.2.0",
