@@ -149,10 +149,13 @@ module.exports = {
 			ignoreOrder: false, // Enable to remove warnings about conflicting order
 		}),
 		new WebpackShellPlugin({
-			onBuildEnd: ['node componentes.js && node-sass -r ./dist/scss/temp -o ./dist/css/componente --output-style=expanded']
+			onBuildEnd: ['node componentes.js ']
 		}),
 
-		new FileListPlugin(),
+
+
+
+		
 
 	].concat(htmlPluginsComponentes, htmlPluginsTemplates),
 	devtool: 'source-map'
