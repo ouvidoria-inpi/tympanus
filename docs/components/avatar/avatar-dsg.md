@@ -1,4 +1,4 @@
-[artefato fonte de design]: # 'avatar_0.0.0.xd'
+[artefato fonte de design]: #'avatar_0.0.0.xd'
 
 ![Exemplo Componente](imagens/avatar-icon-pequeno.png)
 

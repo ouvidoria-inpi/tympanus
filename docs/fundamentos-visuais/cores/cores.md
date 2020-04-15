@@ -62,41 +62,13 @@ Utilize a documentação encontrada no fundamento [Estado](/ds/fundamentos-visua
 
 | Exemplo                                               | Categoria da Cor   | Hexadecimal | Token                      |
 | ----------------------------------------------------- | ------------------ | ----------- | -------------------------- |
-| 
-
-![Primary Pastel 02](imagens/primary-pastel-02.png)
-
-   | Primary Pastel 02  | #DBE8FB     | --color-primary-pastel-02  |
-| 
-
-![Primary Pastel 01](imagens/primary-pastel-01.png)
-
-   | Primary Pastel 01  | #C5D4EB     | --color-primary-pastel-01  |
-| 
-
-![Primary Lighten 02](imagens/primary-lighten-25.png)
-
- | Primary Lighten 02 | #5992ED     | --color-primary-lighten-02 |
-| 
-
-![Primary Lighten 01](imagens/primary-lighten-15.png)
-
- | Primary Lighten 01 | #2670E8     | --color-primary-lighten-01 |
-| 
-
-![Primary Default](imagens/primary.png)
-
-               | Primary Default    | #1351B4     | --color-primary-default    |
-| 
-
-![Primary Darken 01](imagens/primary-darken-15.png)
-
-   | Primary Darken 01  | #0C326F     | --color-primary-darken-01  |
-| 
-
-![Primary Darken 02](imagens/primary-darken-25.png)
-
-   | Primary Darken 02  | #071D41     | --color-primary-darken-02  |
+| ![Primary Pastel 02](imagens/primary-pastel-02.png)   | Primary Pastel 02  | #DBE8FB     | --color-primary-pastel-02  |
+| ![Primary Pastel 01](imagens/primary-pastel-01.png)   | Primary Pastel 01  | #C5D4EB     | --color-primary-pastel-01  |
+| ![Primary Lighten 02](imagens/primary-lighten-25.png) | Primary Lighten 02 | #5992ED     | --color-primary-lighten-02 |
+| ![Primary Lighten 01](imagens/primary-lighten-15.png) | Primary Lighten 01 | #2670E8     | --color-primary-lighten-01 |
+| ![Primary Default](imagens/primary.png)               | Primary Default    | #1351B4     | --color-primary-default    |
+| ![Primary Darken 01](imagens/primary-darken-15.png)   | Primary Darken 01  | #0C326F     | --color-primary-darken-01  |
+| ![Primary Darken 02](imagens/primary-darken-25.png)   | Primary Darken 02  | #071D41     | --color-primary-darken-02  |
 
 ### Acessibilidade
 
@@ -106,41 +78,13 @@ Seguem abaixo as recomendações de cor de texto/elementos gráficos que devem s
 
 | Cor de Fundo                 | Cor de Texto | Texto Normal                                      | Texto Grande                                       | Contraste |
 | ---------------------------- | ------------ | ------------------------------------------------- | -------------------------------------------------- | --------- |
-| Primary Pastel 02 (#DBE8FB)  | #333333      | 
-
-![AAA](imagens/primary-pastel-01-textonormal.png) | ![AAA](imagens/primary-pastel-01-textogrande.png)
-
-  | 10:1      |
-| Primary Pastel 01 (#C5D4EB)  | #333333      | 
-
-![AA](imagens/primary-pastel-02-textonormal.png)  | ![AAA](imagens/primary-pastel-02-textogrande.png)
-
-  | 8, 4:1     |
-| Primary Lighten 02 (#5992ED) | #FFFFFF      | ---                                               | 
-
-![AA](imagens/primary-lighten-25-textogrande.png)
-
-  | 3, 1:1     |
-| Primary Lighten 01 (#2670E8) | #FFFFFF      | 
-
-![AA](imagens/primary-lighten-15-textonormal.png) | ![AAA](imagens/primary-lighten-15-textogrande.png)
-
- | 4, 5:1     |
-| Primary Default (#1351B4)    | #FFFFFF      | 
-
-![AAA](imagens/primary-textonormal.png)           | ![AAA](imagens/primary-textogrande.png)
-
-            | 7, 3:1     |
-| Primary Darken 01 (#0C326F)  | #FFFFFF      | 
-
-![AAA](imagens/primary-darken-15-textonormal.png) | ![AAA](imagens/primary-darken-15-textogrande.png)
-
-  | 12, 3:1    |
-| Primary Darken 02 (#071D41)  | #FFFFFF      | 
-
-![AAA](imagens/primary-darken-25-textonormal.png) | ![AAA](imagens/primary-darken-25-textogrande.png)
-
-  | 16, 6:1    |
+| Primary Pastel 02 (#DBE8FB)  | #333333      | ![AAA](imagens/primary-pastel-01-textonormal.png) | ![AAA](imagens/primary-pastel-01-textogrande.png)  | 10:1      |
+| Primary Pastel 01 (#C5D4EB)  | #333333      | ![AA](imagens/primary-pastel-02-textonormal.png)  | ![AAA](imagens/primary-pastel-02-textogrande.png)  | 8, 4:1    |
+| Primary Lighten 02 (#5992ED) | #FFFFFF      | ---                                               | ![AA](imagens/primary-lighten-25-textogrande.png)  | 3, 1:1    |
+| Primary Lighten 01 (#2670E8) | #FFFFFF      | ![AA](imagens/primary-lighten-15-textonormal.png) | ![AAA](imagens/primary-lighten-15-textogrande.png) | 4, 5:1    |
+| Primary Default (#1351B4)    | #FFFFFF      | ![AAA](imagens/primary-textonormal.png)           | ![AAA](imagens/primary-textogrande.png)            | 7, 3:1    |
+| Primary Darken 01 (#0C326F)  | #FFFFFF      | ![AAA](imagens/primary-darken-15-textonormal.png) | ![AAA](imagens/primary-darken-15-textogrande.png)  | 12, 3:1   |
+| Primary Darken 02 (#071D41)  | #FFFFFF      | ![AAA](imagens/primary-darken-25-textonormal.png) | ![AAA](imagens/primary-darken-25-textogrande.png)  | 16, 6:1   |
 
 ---
 
@@ -154,51 +98,15 @@ As cores secundárias trabalham com o brilho da cor, indo do mais claro **Second
 
 | Exemplo                              | Categoria da Cor | Hexadecimal | Token                |
 | ------------------------------------ | ---------------- | ----------- | -------------------- |
-| 
-
-![Secondary 01](imagens/white.png)
-
-   | Secondary 01     | #FFFFFF     | --color-secondary-01 |
-| 
-
-![Secondary 02](imagens/gray-01.png)
-
- | Secondary 02     | #F8F8F8     | --color-secondary-02 |
-| 
-
-![Secondary 03](imagens/gray-02.png)
-
- | Secondary 03     | #EDEDED     | --color-secondary-03 |
-| 
-
-![Secondary 04](imagens/gray-03.png)
-
- | Secondary 04     | #CCCCCC     | --color-secondary-04 |
-| 
-
-![Secondary 05](imagens/gray-04.png)
-
- | Secondary 05     | #9E9D9D     | --color-secondary-05 |
-| 
-
-![Secondary 06](imagens/gray-05.png)
-
- | Secondary 06     | #888888     | --color-secondary-06 |
-| 
-
-![Secondary 07](imagens/gray-06.png)
-
- | Secondary 07     | #555555     | --color-secondary-07 |
-| 
-
-![Secondary 08](imagens/gray-07.png)
-
- | Secondary 08     | #333333     | --color-secondary-08 |
-| 
-
-![Secondary 09](imagens/black.png)
-
-   | Secondary 09     | #000000     | --color-secondary-09 |
+| ![Secondary 01](imagens/white.png)   | Secondary 01     | #FFFFFF     | --color-secondary-01 |
+| ![Secondary 02](imagens/gray-01.png) | Secondary 02     | #F8F8F8     | --color-secondary-02 |
+| ![Secondary 03](imagens/gray-02.png) | Secondary 03     | #EDEDED     | --color-secondary-03 |
+| ![Secondary 04](imagens/gray-03.png) | Secondary 04     | #CCCCCC     | --color-secondary-04 |
+| ![Secondary 05](imagens/gray-04.png) | Secondary 05     | #9E9D9D     | --color-secondary-05 |
+| ![Secondary 06](imagens/gray-05.png) | Secondary 06     | #888888     | --color-secondary-06 |
+| ![Secondary 07](imagens/gray-06.png) | Secondary 07     | #555555     | --color-secondary-07 |
+| ![Secondary 08](imagens/gray-07.png) | Secondary 08     | #333333     | --color-secondary-08 |
+| ![Secondary 09](imagens/black.png)   | Secondary 09     | #000000     | --color-secondary-09 |
 
 ### Acessibilidade
 
@@ -208,51 +116,15 @@ A seguir a relação de contraste entre a cor que deve ser adotada nos textos e 
 
 | Cor de Fundo           | Cor de Texto | Texto Normal                            | Texto Grande                            | Contraste |
 | ---------------------- | ------------ | --------------------------------------- | --------------------------------------- | --------- |
-| Secondary 01 (#FFFFFF) | #333333      | 
-
-![AAA](imagens/white-textonormal.png)   | ![AAA](imagens/white-textogrande.png)
-
-   | 12, 6:1    |
-| Secondary 02 (#F8F8F8) | #333333      | 
-
-![AAA](imagens/gray-01-textonormal.png) | ![AAA](imagens/gray-01-textogrande.png)
-
- | 11, 8:1    |
-| Secondary 03 (#EDEDED) | #333333      | 
-
-![AAA](imagens/gray-02-textonormal.png) | ![AAA](imagens/gray-02-textogrande.png)
-
- | 10, 7:1    |
-| Secondary 04 (#CCCCCC) | #333333      | 
-
-![AA](imagens/gray-03-textonormal.png)  | ![AAA](imagens/gray-03-textogrande.png)
-
- | 7, 8:1     |
-| Secondary 05 (#9E9D9D) | #333333      | 
-
-![AA](imagens/gray-04-textonormal.png)  | ![AAA](imagens/gray-04-textogrande.png)
-
- | 4, 6:1     |
-| Secondary 06 (#888888) | #FFFFFF      | ---                                     | 
-
-![AA](imagens/gray-05-textogrande.png)
-
-  | 3, 5:1     |
-| Secondary 07 (#555555) | #FFFFFF      | 
-
-![AA](imagens/gray-06-textonormal.png)  | ![AAA](imagens/gray-06-textogrande.png)
-
- | 7, 4:1     |
-| Secondary 08 (#333333) | #FFFFFF      | 
-
-![AAA](imagens/gray-07-textonormal.png) | ![AAA](imagens/gray-07-textogrande.png)
-
- | 12, 6:1    |
-| Secondary 09 (#000000) | #FFFFFF      | 
-
-![AAA](imagens/black-textonormal.png)   | ![AAA](imagens/black-textogrande.png)
-
-   | 21:1      |
+| Secondary 01 (#FFFFFF) | #333333      | ![AAA](imagens/white-textonormal.png)   | ![AAA](imagens/white-textogrande.png)   | 12, 6:1   |
+| Secondary 02 (#F8F8F8) | #333333      | ![AAA](imagens/gray-01-textonormal.png) | ![AAA](imagens/gray-01-textogrande.png) | 11, 8:1   |
+| Secondary 03 (#EDEDED) | #333333      | ![AAA](imagens/gray-02-textonormal.png) | ![AAA](imagens/gray-02-textogrande.png) | 10, 7:1   |
+| Secondary 04 (#CCCCCC) | #333333      | ![AA](imagens/gray-03-textonormal.png)  | ![AAA](imagens/gray-03-textogrande.png) | 7, 8:1    |
+| Secondary 05 (#9E9D9D) | #333333      | ![AA](imagens/gray-04-textonormal.png)  | ![AAA](imagens/gray-04-textogrande.png) | 4, 6:1    |
+| Secondary 06 (#888888) | #FFFFFF      | ---                                     | ![AA](imagens/gray-05-textogrande.png)  | 3, 5:1    |
+| Secondary 07 (#555555) | #FFFFFF      | ![AA](imagens/gray-06-textonormal.png)  | ![AAA](imagens/gray-06-textogrande.png) | 7, 4:1    |
+| Secondary 08 (#333333) | #FFFFFF      | ![AAA](imagens/gray-07-textonormal.png) | ![AAA](imagens/gray-07-textogrande.png) | 12, 6:1   |
+| Secondary 09 (#000000) | #FFFFFF      | ![AAA](imagens/black-textonormal.png)   | ![AAA](imagens/black-textogrande.png)   | 21:1      |
 
 ---
 
@@ -264,11 +136,7 @@ No DSGOV ela só pode ser utilizada em um único elemento ou componente por tela
 
 | Exemplo                             | Categoria da Cor | Hexadecimal - RGB | Token             |
 | ----------------------------------- | ---------------- | ----------------- | ----------------- |
-| 
-
-![Highlight](imagens/secundary.png)
-
- | Highlight        | #268744           | --color-highlight |
+| ![Highlight](imagens/secundary.png) | Highlight        | #268744           | --color-highlight |
 
 ### Acessibilidade
 
@@ -276,11 +144,7 @@ A seguir a relação de contraste entre a cor que deve ser adotada nos textos ut
 
 | Cor de Fundo        | Cor de Texto | Texto Normal                             | Texto Grande                              | Contraste |
 | ------------------- | ------------ | ---------------------------------------- | ----------------------------------------- | --------- |
-| Highlight (#268744) | #FFFFFF      | 
-
-![AA](imagens/secundary-textonormal.png) | ![AAA](imagens/secundary-textogrande.png)
-
- | 4, 5:1     |
+| Highlight (#268744) | #FFFFFF      | ![AA](imagens/secundary-textonormal.png) | ![AAA](imagens/secundary-textogrande.png) | 4, 5:1    |
 
 ---
 
@@ -290,26 +154,10 @@ As cores de aviso foram escolhidas para serem aplicadas em situações que exige
 
 | Exemplo                         | Categoria da Cor | Hexadecimal | Token                 | Usos                                       |
 | ------------------------------- | ---------------- | ----------- | --------------------- | ------------------------------------------ |
-| 
-
-![Warning](imagens/warning.png)
-
- | Warning          | #FFCD07     | --color-alarm-warning | Mensagens de Aviso                         |
-| 
-
-![Success](imagens/success.png)
-
- | Success          | #168821     | --color-alarm-success | Mensagens de Sucesso, Validações Positivas |
-| 
-
-![Danger](imagens/danger.png)
-
-   | Danger           | #E60000     | --color-alarm-danger  | Mensagens de Erro, Validações Negativas    |
-| 
-
-![Info](imagens/info.png)
-
-       | Info             | #155BCB     | --color-alarm-info    | Mensagens Informativa                      |
+| ![Warning](imagens/warning.png) | Warning          | #FFCD07     | --color-alarm-warning | Mensagens de Aviso                         |
+| ![Success](imagens/success.png) | Success          | #168821     | --color-alarm-success | Mensagens de Sucesso, Validações Positivas |
+| ![Danger](imagens/danger.png)   | Danger           | #E60000     | --color-alarm-danger  | Mensagens de Erro, Validações Negativas    |
+| ![Info](imagens/info.png)       | Info             | #155BCB     | --color-alarm-info    | Mensagens Informativa                      |
 
 ### Acessibilidade
 
@@ -317,26 +165,10 @@ A seguir a relação de contraste entre a cor do texto a serem utilizados sobre 
 
 | Cor de Fundo      | Cor de Texto | Texto Normal                            | Texto Grande                            | Contraste |
 | ----------------- | ------------ | --------------------------------------- | --------------------------------------- | --------- |
-| Warning (#FFCD07) | #333333      | 
-
-![AAA](imagens/warning-textonormal.png) | ![AAA](imagens/warning-textogrande.png)
-
- | 8, 4:1     |
-| Success (#168821) | #FFFFFF      | 
-
-![AA](imagens/success-textonormal.png)  | ![AAA](imagens/success-textogrande.png)
-
- | 4, 5:1     |
-| Danger (#E60000)  | #FFFFFF      | 
-
-![AA](imagens/danger-textonormal.png)   | ![AAA](imagens/danger-textogrande.png)
-
-  | 4, 8:1     |
-| Info (#155BCB)    | #FFFFFF      | 
-
-![AA](imagens/info-textonormal.png)     | ![AAA](imagens/info-textogrande.png)
-
-    | 6, 1:1     |
+| Warning (#FFCD07) | #333333      | ![AAA](imagens/warning-textonormal.png) | ![AAA](imagens/warning-textogrande.png) | 8, 4:1    |
+| Success (#168821) | #FFFFFF      | ![AA](imagens/success-textonormal.png)  | ![AAA](imagens/success-textogrande.png) | 4, 5:1    |
+| Danger (#E60000)  | #FFFFFF      | ![AA](imagens/danger-textonormal.png)   | ![AAA](imagens/danger-textogrande.png)  | 4, 8:1    |
+| Info (#155BCB)    | #FFFFFF      | ![AA](imagens/info-textonormal.png)     | ![AAA](imagens/info-textogrande.png)    | 6, 1:1    |
 
 ---
 
@@ -348,26 +180,10 @@ Utilize as cores de apoio somente em elementos gráficos e textos grandes.
 
 | Exemplo                           | Categoria da Cor | Hexadecimal | Token              |
 | --------------------------------- | ---------------- | ----------- | ------------------ |
-| 
-
-![Support 01](imagens/teal.png)
-
-   | Support 01       | #36A191     | --color-support-01 |
-| 
-
-![Support 02](imagens/yellow.png)
-
- | Support 02       | #F2E317     | --color-support-02 |
-| 
-
-![Support 03](imagens/orange.png)
-
- | Support 03       | #DB4800     | --color-support-03 |
-| 
-
-![Support 04](imagens/brown.png)
-
-  | Support 04       | #A26739     | --color-support-04 |
+| ![Support 01](imagens/teal.png)   | Support 01       | #36A191     | --color-support-01 |
+| ![Support 02](imagens/yellow.png) | Support 02       | #F2E317     | --color-support-02 |
+| ![Support 03](imagens/orange.png) | Support 03       | #DB4800     | --color-support-03 |
+| ![Support 04](imagens/brown.png)  | Support 04       | #A26739     | --color-support-04 |
 
 ### Acessibilidade
 
@@ -377,24 +193,7 @@ A seguir a relação de contraste entre a cor do texto a ser utilizado sobre as 
 
 | Cor de Fundo         | Cor de Texto | Texto Normal                           | Texto Grande                           | Contraste |
 | -------------------- | ------------ | -------------------------------------- | -------------------------------------- | --------- |
-| Support 01 (#36A191) | #FFFFFF      | ---                                    | 
-
-![AA](imagens/teal-textogrande.png)
-
-    | 3, 1:1     |
-| Support 02 (#F2E317) | #333333      | 
-
-![AAA](imagens/yellow-textonormal.png) | ![AAA](imagens/yellow-textogrande.png)
-
- | 9, 4:1     |
-| Support 03 (#DB4800) | #FFFFFF      | ---                                    | 
-
-![AA](imagens/orange-textogrande.png)
-
-  | 4, 2:1     |
-| Support 04 (#A26739) | #FFFFFF      | 
-
-![AA](imagens/brown-textonormal.png)   | ![AAA](imagens/brown-textogrande.png)
-
-  | 4, 6:1     |
-
+| Support 01 (#36A191) | #FFFFFF      | ---                                    | ![AA](imagens/teal-textogrande.png)    | 3, 1:1    |
+| Support 02 (#F2E317) | #333333      | ![AAA](imagens/yellow-textonormal.png) | ![AAA](imagens/yellow-textogrande.png) | 9, 4:1    |
+| Support 03 (#DB4800) | #FFFFFF      | ---                                    | ![AA](imagens/orange-textogrande.png)  | 4, 2:1    |
+| Support 04 (#A26739) | #FFFFFF      | ![AA](imagens/brown-textonormal.png)   | ![AAA](imagens/brown-textogrande.png)  | 4, 6:1    |
