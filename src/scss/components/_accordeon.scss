@@ -1,8 +1,8 @@
 .#{$prefix}accordeon {
-  border-top: 1px solid v(color-secondary-04, $color-secondary-04);
+  border-top: 1px solid v(color-secondary-04);
   margin-bottom: $margin-default;
   .item {
-    border-bottom: 1px solid v(color-secondary-04, $color-secondary-04);
+    border-bottom: 1px solid v(color-secondary-04);
     display: flex;
     flex-direction: column;
     &.is-active {
@@ -10,15 +10,15 @@
       .header {
         .icon,
         .title {
-          color: v(color-primary-darken-01, $color-primary-darken-01);
-          font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+          color: v(color-primary-darken-01);
+          font-weight: v(font-weight-semi-bold);
         }
         &:hover {
-          color: v(color-primary-darken-01, $color-primary-darken-01);
+          color: v(color-primary-darken-01);
         }
       }
       & + .content {
-        border-bottom: 1px solid v(color-secondary-04, $color-secondary-04);
+        border-bottom: 1px solid v(color-secondary-04);
         display: block;
       }
     }
@@ -26,15 +26,15 @@
       background: transparent;
       border: 0;
       display: flex;
-      font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
+      font-size: v(font-size-scale-up-01);
       justify-content: space-between;
       padding: ($spacer * 2) 0;
       text-align: left;
       text-decoration: none;
       width: 100%;
       &:hover {
-        background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
-        color: v(color-primary-default, $color-primary-default);
+        background-color: v(color-primary-pastel-02);
+        color: v(color-primary-default);
         text-decoration: none;
         .title,
         .icon {
@@ -42,32 +42,20 @@
         }
       }
       .icon {
-        color: v(color-primary-default, $color-primary-default);
-        margin: 0 ($spacer * 2);
-        &:first-child {
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
+        color: v(color-primary-default);
+        margin: 0 ($spacer * 2) 0 $spacer * 1.5;
       }
       .title {
-        color: v(color-primary-default, $color-primary-default);
+        color: v(color-primary-default);
         flex: 1;
-        font-weight: v(font-weight-medium, $font-weight-medium);
-        margin: 0 $spacer;
-        &:first-child {
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
+        font-weight: v(font-weight-medium);
+        margin: 0;
       }
     }
   }
   .content {
     display: none;
-    font-size: v(font-size-scale-base, $font-size-scale-base);
+    font-size: v(font-size-scale-base);
     margin: 0 ($spacer);
     padding: $spacer ($spacer * 8) ($spacer * 2);
     * {
@@ -77,23 +65,23 @@
     }
   }
   &.is-negative {
-    background-color: v(color-primary-darken-02, $color-primary-darken-02);
+    background-color: v(color-primary-darken-02);
     .item {
       .header {
         .icon,
         .title {
-          color: v(color-secondary-01, $color-secondary-01);
+          color: v(color-secondary-01);
         }
         &:hover {
-          background-color: rgba(255,255,255, 0.12);
+          background-color: rgba(var(--rgb-secondary-01), 0.12);
           .title,
           .icon {
-            color: v(color-secondary-01, $color-secondary-01);
+            color: v(color-secondary-01);
           }
         }
       }
       & + .content {
-        color: v(color-secondary-01, $color-secondary-01);
+        color: v(color-secondary-01);
       }
     }
   }
