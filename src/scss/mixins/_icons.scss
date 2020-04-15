@@ -1,5 +1,5 @@
 @mixin icon-size($item, $value) {
   .#{$item} {
-    --icon-size: var(--#{$item}, #{$value});
+    --icon-size: #{$value};
   }
 }
