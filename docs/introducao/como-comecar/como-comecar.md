@@ -104,7 +104,7 @@ Se for implantar o seu projeto em produção é altamente recomendado que você 
 No exemplo acima do **`template inicial`** temos uma importação do arquivo **`rawline.css`** via CDN:
 
 ```html
-<link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+<link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"/>
 ```
 
 Se for utilizar esse template é recomendado baixar o arquivo CSS e as Fontes contidas nele e realizar a importação manual de cada uma para o seu projeto.
