@@ -8,3 +8,5 @@ gulpfiles.js
 webpack.config.js
 cdn
 assets
+dist/css/componentes
+dist/componentes
