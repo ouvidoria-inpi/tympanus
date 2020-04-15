@@ -1,6 +1,6 @@
 ## Instalação através do <a href="https://nodejs.org/">NODE</a>
 
-1. Faça o download do pacote NPM do DSGOV na seção [Downloads](/downloads).
+1. Faça o download do pacote NPM do DSGOV na seção [Downloads](/downloads) ou clique [aqui](/assets/design-system/assets/DSGOV_latest.zip).
 
 2. Crie uma nova pasta para o seu projeto e coloque o arquivo **`dsgov-latest.tgz`** dentro dela. Caso já tenha um projeto em andamento coloque o arquivo na pasta raiz do seu projeto.
 
@@ -93,15 +93,27 @@ A seguir temos um exemplo de um template inicial para utilização do DSGOV. Cop
 </html>
 ```
 
-### Fonts
+## Servidor CDN
 
-No template inicial a font rawline é disponibilizada no nosso CDN (cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system). Esse CDN está ainda em consolidação então não garantimos a sua alta disponiblidade, sendo assim disponibilizamos uma alternativa na forma de um arquivo na seção de [Downloads](/downloads) para que possa ser utilizado em substituição ao CDN.
+Os arquivos instalados via NPM utilizam o servidor CDN do [Serpro](https://www.serpro.gov.br) para importar as fontes utilizadas pelo **`DSGOV`**.
+
+No momento esse servidor possui capacidade suficiente para suprir apenas o desenvolvimento do projeto, não possuindo garantia de estabilidade suficiente para projetos em produção.
+
+Se for implantar o seu projeto em produção é altamente recomendado que você baixe os arquivos e armazene-os em um servidor de sua confiança que possa garantir a estabilidade necessária para o seu projeto.
+
+No exemplo acima do **`template inicial`** temos uma importação do arquivo **`rawline.css`** via CDN:
+
+```html
+<link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+```
+
+Se for utilizar esse template é recomendado baixar o arquivo CSS e as Fontes contidas nele e realizar a importação manual de cada uma para o seu projeto.
 
 Fara fazer a troca do CDN para a fonte disponibilizada no pacote, baixe o pacote na seção de [Downloads](/downloads), descompacte, copie os arquivos para uma pasta no seu projeto e troque os apontamentos do CDN nos arquivos CSS e JS para o arquivo local.
 
 ## Documentação
 
-Para informações mais detalhadas sobre <a href="/ds/fundamentos-visuais/cores">Cores</a>, <a href="/ds/fundamentos-visuais/tipografia">Tipografia</a>, etc acesse o item **Fundamentos Visuais** na navegação principal.
+Para informações mais detalhadas sobre [Cores](/ds/fundamentos-visuais/cores), [Tipografia](/ds/fundamentos-visuais/tipografia), etc acesse o item **Fundamentos Visuais** na navegação principal.
 
 Para uso dos estilos ou criação de novos componentes acesse o item **Guias** na navegação principal.
 
