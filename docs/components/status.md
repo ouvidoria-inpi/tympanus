@@ -30,6 +30,7 @@ Acompanhe a evolução dos componentes do Design System
 | [Radio](/ds/componentes/radio)           | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-warning"></i>      |
 | [Scrim](/ds/componentes/scrim)           | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
 | [Search](/ds/componentes/search)         | <i class="fas fa-sync text-warning"></i>  |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
+| [Search](/ds/componentes/select)         | <i class="fas fa-sync text-warning"></i>  |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-sync text-warning"></i>      |
 | [Table](/ds/componentes/table)           | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
 | [Tabs](/ds/componentes/tabs)             | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
 | [Tag](/ds/componentes/tag)               | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |

@@ -132,7 +132,7 @@ A cor **Primary Default** não é aplicável em todas as situações, como no ca
 
 | Property  | Token Status                 | Token Color             | Token Weight       |
 | --------- | ---------------------------- | ----------------------- | ------------------ |
-| text/icon | `--status-enabled-text` | --color-primary-default |                    |
+| text/icon | `--status-enabled-text`      | --color-primary-default |                    |
 | text/icon | --status-enabled-text-darken | --color-secondary-01    | --font-weight-bold |
 
 ---

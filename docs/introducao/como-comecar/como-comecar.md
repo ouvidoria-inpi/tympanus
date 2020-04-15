@@ -34,7 +34,7 @@
 
 Para versões anterioes coloque o nome da versão no latest como exemplo 
 
-``` 
+``` html
 https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/1.2.2/js/dsgov-components.js
 ```
 
