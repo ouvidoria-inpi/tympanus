@@ -27,18 +27,20 @@ Este é um documento vivo com diversos componentes e propriedades de um produto 
 
 Isso beneficia tanto o resultado que se almeja alcançar com o software como a comunicação, as pessoas, os negócios e as empresas.
 
-A ideia é que esse produto seja utilizado para consulta, para se tomar decisões, para novas features,novas interfaces e novas propriedades dos produtos do governo.
+A ideia é que esse produto seja utilizado para consulta, para se tomar decisões, para novas features, novas interfaces e novas propriedades dos produtos do governo.
 
 **Atenção**
 Este não é um documento estático, ele pode sofrer constantes mudanças e a ideia desse Design System é isso. Encaixar diversas formas sem perder consistência.
 
-Você já está entendendo que o Design System é o conjunto completo de padrões do projeto,
+Você já está entendendo que o Design System é o conjunto completo de padrões do projeto, 
 documentação e princípios. Utilizando o UI kit (kit de ferramentas de design) e o código para atingir
 esses padrões.
 
 ## O Design System do Governo Federal do Brasil
 
 ![Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.](images/imagens_ds.png)
+
 _Alguns elementos definidos para compor o Design System do Governo Federal - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo._
 
 Como Design System oficial do Governo Brasileiro, ele atende a uma ampla gama de designers e desenvolvedores que criam produtos e experiências digitais. Os objetivos do sistema incluem melhorar a consistência e a qualidade da interface, tornando o processo de design e desenvolvimento mais eficiente e focado, estabelecendo um vocabulário compartilhado entre designer e desenvolvedor, fornecendo orientação clara e identificável sobre as melhores práticas de design e desenvolvimento.
+

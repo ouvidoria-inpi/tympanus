@@ -8,11 +8,11 @@ Nenhuma dependência.
 
 ## Código básico
 
-```html
+``` html
 <div class="br-message">
-  <div class="icon">...</div>
-  <div class="content">...</div>
-  <div class="close">...</div>
+    <div class="icon">...</div>
+    <div class="content">...</div>
+    <div class="close">...</div>
 </div>
 ```
 
@@ -20,16 +20,16 @@ Nenhuma dependência.
 
 O componente é composto dos seguintes elementos:
 
-- `br-message`: container do componente
-- `icon`: icon ilustrativo
-- `content`: conteúdo da mensagem
-- `close`: botão de fechar
+* `br-message` : container do componente
+* `icon` : icon ilustrativo
+* `content` : conteúdo da mensagem
+* `close` : botão de fechar
 
-### `icon`
+### `icon` 
 
 Elemento onde deverá ser informado o ícone ilustrativo da mensagem.
 
-O ícone pode ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome - `<i class="fas">`.
+O ícone pode ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome - `<i class="fas">` .
 
 Imagens serão redimencionadas automaticamente dentro do elemento.
 
@@ -37,18 +37,18 @@ Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](h
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-message">
-  <div class="icon">
-    <i class="fas fa-check-circle"></i>
-    <span class="sr-only">Sucesso!</span>
-  </div>
-  <div class="content">...</div>
-  <div class="close">...</div>
+    <div class="icon">
+        <i class="fas fa-check-circle"></i>
+        <span class="sr-only">Sucesso!</span>
+    </div>
+    <div class="content">...</div>
+    <div class="close">...</div>
 </div>
 ```
 
-### `content`
+### `content` 
 
 A mensagem do alerta deve ser inserido dentro deste elemento.
 
@@ -56,14 +56,14 @@ Pode ser inserido deste uma simples mensagem.
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-message">
-  <div class="icon">...</div>
-  <div class="content">
-    <strong>Erro!</strong>
-    <span>Mensagem de erro.</span>
-  </div>
-  <div class="close">...</div>
+    <div class="icon">...</div>
+    <div class="content">
+        <strong>Erro!</strong>
+        <span>Mensagem de erro.</span>
+    </div>
+    <div class="close">...</div>
 </div>
 ```
 
@@ -71,67 +71,67 @@ Ou uma mensagem com várias linhas.
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-message">
-  <div class="icon">...</div>
-  <div class="content">
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
-  </div>
-  <div class="close">...</div>
+    <div class="icon">...</div>
+    <div class="content">
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+    </div>
+    <div class="close">...</div>
 </div>
 ```
 
-### `close`
+### `close` 
 
 Local do botão de fechamento do alerta.
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-message">
-  <div class="icon">...</div>
-  <div class="content">...</div>
-  <div class="close">
-    <button type="button">
-      <i class="fas fa-times"></i>
-      <span class="sr-only">Fechar</span>
-    </button>
-  </div>
+    <div class="icon">...</div>
+    <div class="content">...</div>
+    <div class="close">
+        <button type="button">
+            <i class="fas fa-times"></i>
+            <span class="sr-only">Fechar</span>
+        </button>
+    </div>
 </div>
 ```
 
 ## Variações
 
-Estão disponíveis 4 tipos de alertas. Cada tipo é aplicado com o prefixo `is-`.
+Estão disponíveis 4 tipos de alertas. Cada tipo é aplicado com o prefixo `is-` .
 
-- Sucesso (sucess)
-- Erro (danger)
-- Atenção (warning)
-- Informação (info)
+* Sucesso (sucess)
+* Erro (danger)
+* Atenção (warning)
+* Informação (info)
 
 O tipo deve ser aplicado no container do componente.
 
 Exemplo de uso:
 
-```html
+``` html
 <div class="br-message">
-  <div class="icon">
-    <i class="fas fa-times-circle"></i>
-    <span class="sr-only">Erro!</span>
-  </div>
-  <div class="content">
-    <strong>Erro!</strong>
-    <span>Mensagem de erro.</span>
-  </div>
-  <div class="close">
-    <button type="button">
-      <i class="fas fa-times"></i>
-      <span class="sr-only">Fechar</span>
-    </button>
-  </div>
+    <div class="icon">
+        <i class="fas fa-times-circle"></i>
+        <span class="sr-only">Erro!</span>
+    </div>
+    <div class="content">
+        <strong>Erro!</strong>
+        <span>Mensagem de erro.</span>
+    </div>
+    <div class="close">
+        <button type="button">
+            <i class="fas fa-times"></i>
+            <span class="sr-only">Fechar</span>
+        </button>
+    </div>
 </div>
 ```
 
@@ -142,3 +142,4 @@ Nenhum estado adicional para este componente.
 ## Regras especiais
 
 Nenhuma regra especial.
+

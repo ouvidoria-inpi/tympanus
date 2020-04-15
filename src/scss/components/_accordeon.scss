@@ -55,7 +55,7 @@
         color: v(color-primary-default, $color-primary-default);
         flex: 1;
         font-weight: v(font-weight-medium, $font-weight-medium);
-        padding: 0 $spacer;
+        margin: 0 $spacer;
         &:first-child {
           padding-left: 0;
         }

@@ -5,17 +5,17 @@ append vars
 
 append content
   .row
-    .col-sm-1
+    .col.col-sm-3.col-lg-1
       .p-3
         +avatar()(menu)
           .image: img(src="https://i.picsum.photos/id/823/40/40.jpg" alt="Imagem Placeholder")
           +badge("fa-layers-counter fa-layers-top-left") 5
-    .col-sm-1
+    .col.col-sm-3.col-lg-1
       .p-3
         +avatar()(menu)
           .image: i.fas.fa-user
           +badge("fa-layers-counter fa-layers-top-left") 5
-    .col-sm-3
+    .col-sm-10.col-lg-5
       .card.card-3.p-3.d-flex
         .mr-3
           +avatar(size="small")
@@ -29,7 +29,7 @@ append content
           +button.is-tertiary.is-circle
             span.icon: i.fas.fa-comment
   .row.mt-3
-    .col-sm-3.col-lg-4
+    .col-sm-9.col-md-8.col-lg-7.col-xl-5
       .card.p-3.d-flex
         .mr-3
           +avatar(size="small")
@@ -39,8 +39,8 @@ append content
           .d-flex.justify-content-end
             +button.is-tertiary Cancelar
             +button.is-primary Enviar
-    .col-sm-3.col-lg-2
-      .card.p-3.text-center
+    .col-sm-5.col-md-4.col-lg-3.col-xl-2
+      .card.p-3.text-center.mt-3.mt-md-0
         +avatar(size="medium")
           .image: img(src="https://i.picsum.photos/id/823/100/100.jpg" alt="Imagem Placeholder")
         p.h5.color-primary-default Maria Amorim
@@ -50,8 +50,8 @@ append content
           i.fas-fa-phone
           |
           | +55 81 9999 9999
-    .col-sm-6.col-lg-3
-      .card.p-3
+    .col-sm-7.col-lg-6.col-xl-5
+      .card.p-3.mt-3.mt-xl-0
         .text-center
           +avatar(size="large" change)
             .image: i.fas.fa-user

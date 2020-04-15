@@ -35,7 +35,7 @@ como tópicos de ajuda.
 
 ### Tom de Voz
 
-A linguagem utilizada nas mensagens deve ser clara e objetiva. É fundamental que o usuário entenda o que aconteceu, as consequências e o que pode ser feito. Então, é interessante que na mensagem venham sugestões de como o usuário pode resolver a questão.
+A linguagem utilizada nas mensagens deve ser clara e objetiva.É fundamental que o usuário entenda o que aconteceu, as consequências e o que pode ser feito. Então, é interessante que na mensagem venham sugestões de como o usuário pode resolver a questão.
 
 ### Estrutura
 
@@ -136,7 +136,7 @@ As mensagens servem para dar feedback pontual ao usuário sobre o preenchimento 
 
 ### Mensagens de Validação
 
-Aparecem logo abaixo dos campos de input. Elas devem aparecer na tela. assim que o usuário preencher um campo do formulário e passar para o próximo. Dessa forma, fica claro para usuário se o preenchimento foi correto ou se ele necessita redigitar a informação. Isso deve sempre ocorrer antes do usuário percorrer todo o formulário, agilizando e melhorando a experiência no uso do sistema.
+Aparecem logo abaixo dos campos de input. Elas devem aparecer na tela.assim que o usuário preencher um campo do formulário e passar para o próximo. Dessa forma, fica claro para usuário se o preenchimento foi correto ou se ele necessita redigitar a informação. Isso deve sempre ocorrer antes do usuário percorrer todo o formulário, agilizando e melhorando a experiência no uso do sistema.
 
 #### 1 | Validação Positiva
 
@@ -146,7 +146,7 @@ Aparecem logo após o preenchimento do campo e servem para indicar ao usuário q
 
 #### 2 | Validação Negativa
 
-Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma diferente da esperada. É importante deixar claro o que saiu errado e/ou dar sugestões de como o usuário pode preencher o campo de forma satisfatória.
+Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma diferente da esperada.É importante deixar claro o que saiu errado e/ou dar sugestões de como o usuário pode preencher o campo de forma satisfatória.
 
 ![Mensagens Contextuais](imagens/Validacao_Negativa.png)
 
@@ -168,7 +168,7 @@ As mensagens Informativas, são muitas vezes dicas para que o usuário entenda m
 
 #### Tom de voz
 
-A linguagem utilizada nas mensagens deve ser clara e concisa. É fundamental que o usuário não fique constrangido com o erro e que receba informações que o oriente na utilização do sistema. É recomendável utilizar expressões como "por favor" e "desculpe" a fim de criar uma maior empatia com o usuário.
+A linguagem utilizada nas mensagens deve ser clara e concisa.É fundamental que o usuário não fique constrangido com o erro e que receba informações que o oriente na utilização do sistema.É recomendável utilizar expressões como "por favor" e "desculpe" a fim de criar uma maior empatia com o usuário.
 
 #### Estrutura
 
@@ -195,3 +195,4 @@ Devem vir alinhados à esquerda com o componente ou com elementos do componente.
 Aparecem logo após o ícone.
 
 ![Mensagens Contextuais](imagens/Anatomia_Mensagens_Complementares.png)
+
