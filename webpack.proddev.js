@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
+const FileListPlugin = require('./FileListPlugin.js');
 
 // We need Nodes fs module to read directory contents
 const fs = require('fs')
@@ -41,6 +42,12 @@ function generateHtmlPlugins(templateDir, dirName) {
 		})
 	})
 }
+
+
+
+
+  
+  
 
 // Call our function on our views directory.
 const htmlPluginsComponentes = generateHtmlPlugins('./src/pug/views/components', 'components')
@@ -144,6 +151,8 @@ module.exports = {
 		new WebpackShellPlugin({
 			onBuildEnd: ['node componentes.js && node-sass -r ./dist/scss/temp -o ./dist/css/componente --output-style=expanded']
 		}),
+
+		new FileListPlugin(),
 
 	].concat(htmlPluginsComponentes, htmlPluginsTemplates),
 	devtool: 'source-map'
