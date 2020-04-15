@@ -1,5 +1,6 @@
 .#{$prefix}button {
   margin: 22px 20px;
+  outline: 0;
   @include mobil;
   &.is-primary {
     @include button-pill;

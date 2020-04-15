@@ -1,2 +1,3 @@
-DatePicker é um widget de interface gráfica que permite ao usuário selecionar uma data de um calendário e/ou hora a partir de um intervalo de tempo. Geralmente é apresentado nos formatos de selecionador de data, calendário pop-up, seletor de data e hora ou um seletor de tempo. 
+DatePicker é um widget de interface gráfica que permite ao usuário selecionar uma data de um calendário e/ou hora a partir de um intervalo de tempo. Geralmente é apresentado nos formatos de selecionador de data, calendário pop-up, seletor de data e hora ou um seletor de tempo.
 Ao clicar-se no ícone de calendário, uma cortina com o calendário do mês atual é apresentado. Ao se clicar fora da área do calendário, a cortina será fechada.
+

@@ -70,7 +70,7 @@ Utilize os valores abaixo para representar os diferentes estilos da fonte Ralewa
 
 O estabelecimento de uma escala tipográfica é uma forma de determinar tamanhos tipográficos. A escala é importante porque estabelece a hierarquia e melhora a legibilidade criando harmonia e coesão entre os textos.
 
-Existem muitas escalas diferentes, mas dentro do Design System do Governo Federal foi escolhida a escala **Minor Third** (1,2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hierarquia de uma interface.
+Existem muitas escalas diferentes, mas dentro do Design System do Governo Federal foi escolhida a escala **Minor Third** (1, 2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hierarquia de uma interface.
 
 O tamanho **fonte base** é de 14px (1em) e peso da fonte normal (400). A unidade **em** é uma medida relativa que permite que o usuário altere o tamanho de exibição do texto na interface. Com exceção da fonte base, utilize a unidade **em** para todos os outros valores da escala. Assim, caso o valor do tamanho base padrão seja alterado, toda a interface se adapta ao novo valor.
 
@@ -112,9 +112,9 @@ Definir um tamanho de uma fonte base (juntamente com a referência do uso de uni
 
 ## Line-height (entrelinha)
 
-Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com valores em porcentagem ou relativos (como **rem** ou **em**), pois o valor vai depender do tamanho da fonte que ele está sendo aplicado. Por padrão, utilize entrelinha de 1.45 para valores até a fonte base, após isso, utilize o valor e 1,15.
+Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com valores em porcentagem ou relativos (como **rem** ou **em**), pois o valor vai depender do tamanho da fonte que ele está sendo aplicado. Por padrão, utilize entrelinha de 1.45 para valores até a fonte base, após isso, utilize o valor e 1, 15.
 
-**Obs:** para trabalhar com softwares que trabalham com unidades em pixel (como Adobe XD), multiplique o valor do tamanho da fonte pelo valor da entrelinha da tabela. _**Exemplo:** No H1 a line-height é 1.15 do valor de 41.8px (size), logo o valor da line-height será 48,07px._
+**Obs:** para trabalhar com softwares que trabalham com unidades em pixel (como Adobe XD), multiplique o valor do tamanho da fonte pelo valor da entrelinha da tabela._**Exemplo:** No H1 a line-height é 1.15 do valor de 41.8px (size), logo o valor da line-height será 48, 07px._
 
 | Line-Height (em) | Token                    |
 | ---------------- | ------------------------ |
@@ -126,9 +126,9 @@ Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com v
 
 ## Tabela de Estilo Padrão
 
-Utilize a tabela de estilo para determinar a hierarquia dos elementos dentro de uma interface. Os valores listados são referente aos estilos visuais base do DS GOV especificados nos design tokens.
+Utilize a tabela de estilo para determinar a hierarquia dos elementos dentro de uma interface. Os valores listados são referente aos estilos visuais base do DSGOV especificados nos design tokens.
 
-O valor **line-height** (entrelinhamento) não se refere ao fonte base, e sim ao valor do próprio elemento textual. _**Exemplo:** No H1 a line-height é 115% do valor de 2,986em (--font-size-scale-up-06)._
+O valor **line-height** (entrelinhamento) não se refere ao fonte base, e sim ao valor do próprio elemento textual._**Exemplo:** No H1 a line-height é 115% do valor de 2, 986em (--font-size-scale-up-06)._
 
 | Type                    | Size                    | Weight                  | Line-height               | Outros estilos                                                                               |
 | ----------------------- | ----------------------- | ----------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
@@ -159,35 +159,36 @@ Para calcular o valor do espaçamento entre os caracteres utilize o seguinte fó
 ## Tabela de conversão PX, PT, EM e %
 
 A tabela a seguir, tem como referência resolução de 96dpi com fonte base equivalente a 14px.
-Onde 1 pixel = 0,75 pontos e 1 ponto = 1,33333 pixel.
+Onde 1 pixel = 0, 75 pontos e 1 ponto = 1, 33333 pixel.
 
 | Ponto    | Pixel | Em       | Porcentagem |
 | -------- | ----- | -------- | ----------- |
 | 6 pt     | 8 px  | 0.57 em  | 57 %        |
-| 6,75 pt  | 9 px  | 0.64 em  | 64 %        |
-| 7,5 pt   | 10 px | 0.71 em  | 71 %        |
-| 8,25 pt  | 11 px | 0.785 em | 78,5 %      |
+| 6, 75 pt  | 9 px  | 0.64 em  | 64 %        |
+| 7, 5 pt   | 10 px | 0.71 em  | 71 %        |
+| 8, 25 pt  | 11 px | 0.785 em | 78, 5 %      |
 | 9 pt     | 12 px | 0.85 em  | 85 %        |
-| 9,75 pt  | 13 px | 0.92 em  | 92 %        |
-| 10,5 pt  | 14 px | 1 em     | 100 %       |
-| 11,25 pt | 15 px | 1,07 em  | 107 %       |
-| 12 pt    | 16 px | 1,14 em  | 114 %       |
-| 12,75 pt | 17 px | 1,21 em  | 121 %       |
-| 13,5 pt  | 18 px | 1,28 em  | 128 %       |
-| 14,25 pt | 19 px | 1,35 em  | 135 %       |
-| 15 pt    | 20 px | 1,42 em  | 142 %       |
-| 15,75 pt | 21 px | 1,5 em   | 150 %       |
-| 16,5 pt  | 22 px | 1,57 em  | 157 %       |
-| 17,25 pt | 23 px | 1,64 em  | 164 %       |
-| 18 pt    | 24 px | 1,71 em  | 171 %       |
-| 18,75 pt | 25 px | 1,785 em | 178,5 %     |
-| 19,5 pt  | 26 px | 1,85 em  | 185 %       |
-| 20,25 pt | 27 px | 1,92 em  | 192 %       |
+| 9, 75 pt  | 13 px | 0.92 em  | 92 %        |
+| 10, 5 pt  | 14 px | 1 em     | 100 %       |
+| 11, 25 pt | 15 px | 1, 07 em  | 107 %       |
+| 12 pt    | 16 px | 1, 14 em  | 114 %       |
+| 12, 75 pt | 17 px | 1, 21 em  | 121 %       |
+| 13, 5 pt  | 18 px | 1, 28 em  | 128 %       |
+| 14, 25 pt | 19 px | 1, 35 em  | 135 %       |
+| 15 pt    | 20 px | 1, 42 em  | 142 %       |
+| 15, 75 pt | 21 px | 1, 5 em   | 150 %       |
+| 16, 5 pt  | 22 px | 1, 57 em  | 157 %       |
+| 17, 25 pt | 23 px | 1, 64 em  | 164 %       |
+| 18 pt    | 24 px | 1, 71 em  | 171 %       |
+| 18, 75 pt | 25 px | 1, 785 em | 178, 5 %     |
+| 19, 5 pt  | 26 px | 1, 85 em  | 185 %       |
+| 20, 25 pt | 27 px | 1, 92 em  | 192 %       |
 | 21 pt    | 28 px | 2 em     | 200 %       |
-| 21,75 pt | 29 px | 2,07 em  | 207 %       |
-| 22,5 pt  | 30 px | 2,14 em  | 214 %       |
-| 23,25 pt | 31 px | 2.21 em  | 221 %       |
-| 24 pt    | 32 px | 2,28 em  | 228 %       |
-| 24,75 pt | 33 px | 2,35 em  | 235 %       |
-| 25,5 pt  | 34 px | 2,42 em  | 242 %       |
-| 26,25 pt | 35 px | 2,5 em   | 250 %       |
+| 21, 75 pt | 29 px | 2, 07 em  | 207 %       |
+| 22, 5 pt  | 30 px | 2, 14 em  | 214 %       |
+| 23, 25 pt | 31 px | 2.21 em  | 221 %       |
+| 24 pt    | 32 px | 2, 28 em  | 228 %       |
+| 24, 75 pt | 33 px | 2, 35 em  | 235 %       |
+| 25, 5 pt  | 34 px | 2, 42 em  | 242 %       |
+| 26, 25 pt | 35 px | 2, 5 em   | 250 %       |
+

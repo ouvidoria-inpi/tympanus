@@ -36,7 +36,7 @@ São utilizados em componentes de filtros
 
 ##### 2 | Texto
 
-16,8px | Medium | #555555
+16, 8px | Medium | #555555
 
 ---
 
@@ -98,7 +98,7 @@ A validação dos campos de texto deve exibir a mensagem de suporte abaixo do ca
 
 ### Inputs Textarea
 
-Este componente representa um campo de entrada de dados com múltiplas linhas. Útil quando você quer permitir ao usuário informar um texto extenso, em formato livre, como um comentário em formulário de dados. Abaixo segue um exemplo do componente:
+Este componente representa um campo de entrada de dados com múltiplas linhas.Útil quando você quer permitir ao usuário informar um texto extenso, em formato livre, como um comentário em formulário de dados. Abaixo segue um exemplo do componente:
 
 ![Inputs do Tipo Textarea](imagens/Input-Textarea.png)
 
@@ -128,7 +128,7 @@ São elementos usados pelos usuários para digitar textos. Devem ser acompanhado
 
 ##### 4 | Texto do Input
 
-16,8px | Semibold | #555555
+16, 8px | Semibold | #555555
 
 ##### 5 | Borda do campo de texto
 
@@ -191,3 +191,4 @@ Segue as métricas definidas para os espaçamentos de todos os elementos utiliza
 ### Link Adobe XD para Especificações
 
 https://xd.adobe.com/spec/7927f1ea-e05b-4e8a-5bf2-9c4931aae8d5-0f16/
+

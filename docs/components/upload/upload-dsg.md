@@ -18,7 +18,7 @@ O upload pode ou não vir acompanhado de um título.
 
 ### Upload com cards contidos dentro de colapse
 
-O card do upload pode aparecer contido num elemento de colapse. o mesmo servirá de título para o upload.
+O card do upload pode aparecer contido num elemento de colapse.o mesmo servirá de título para o upload.
 
 ![Upload Uso](imagens/upload-contido-colapse.png)
 
@@ -35,8 +35,9 @@ conforme disposição dos elementos do formulário.
 
 #### Comportamento
 
-Após inclusão dos arquivos aparecerá um ícone ‘X” para excluir o arquivo, caso o usuário tenha selecionado errado. O botão terciário para inclusão de arquivos permanecerá visível no card mesmo após a seleção de vários arquivos,
+Após inclusão dos arquivos aparecerá um ícone ‘X” para excluir o arquivo, caso o usuário tenha selecionado errado. O botão terciário para inclusão de arquivos permanecerá visível no card mesmo após a seleção de vários arquivos, 
 
 ### 5 | Upload após seleção dos arquivos
 
 ![Upload Uso](imagens/upload-selecao-varios-arquivos.png)
+

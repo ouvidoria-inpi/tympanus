@@ -16,7 +16,7 @@ Veja a seguir dicas e boas práticas de uso do Sass.
 
 **Criar uma biblioteca de mixins utilitários para reaproveitamento de código**
 
-```scss
+``` scss
 // Centralizar usando display flex
 @mixin flex-center {
     display: flex;
@@ -35,7 +35,7 @@ Mais exemplos em <https://gist.github.com/chriseppstein/1215856>
 
 **Mudar a cor do texto de acordo com a cor de fundo de um elemento**
 
-```scss
+``` scss
 // Variáveis de cor
 $black: #000;
 $white: #fff;
@@ -60,9 +60,9 @@ Fonte: <http://thesassway.com/intermediate/dynamically-change-text-color-based-o
 
 **Uso avançado de Maps**
 
--   Gerar classes de cores - <https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps>
--   Controle de código responsivo - <https://jonsuh.com/blog/managing-responsive-breakpoints-with-sass-maps/>
--   DRY - Don’t Repeat Yourself - <https://thoughtbot.com/blog/removing-sass-duplication>
+*   Gerar classes de cores - <https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps>
+*   Controle de código responsivo - <https://jonsuh.com/blog/managing-responsive-breakpoints-with-sass-maps/>
+*   DRY - Don’t Repeat Yourself - <https://thoughtbot.com/blog/removing-sass-duplication>
 
 ### Less
 
@@ -90,9 +90,9 @@ Existem várias arquiteturas de organização de código disponíveis na interne
 
 No DS-Gov são usadas 3 folhas de estilos:
 
--   CSS de base
--   CSS de componentes
--   CSS de templates
+*   CSS de base
+*   CSS de componentes
+*   CSS de templates
 
 | CSS de base                | CSS de componentes          | CSS de templates           |
 | -------------------------- | --------------------------- | -------------------------- |
@@ -106,16 +106,20 @@ Há situações em que você deverá usar o comentário simples (inline) apenas 
 
 Veja no exemplo a seguir o uso dos 2 tipos de comentários em ação:
 
-```css
+``` css
 /**
+
 * Helper class to truncate and add ellipsis to a string too long for it to fit
 * on a single line.
 * 1. Prevent content from wrapping, forcing it on a single line.
 * 2. Add ellipsis at the end of the line.
+
 */
 .ellipsis {
-    white-space: nowrap; /* 1 */
-    text-overflow: ellipsis; /* 2 */
+    white-space: nowrap;
+    /* 1 */
+    text-overflow: ellipsis;
+    /* 2 */
     overflow: hidden;
 }
 ```
@@ -130,7 +134,7 @@ Exemplo de aplicação de Media Queries:
 
 **Abordagem Mobile First**
 
-```scss
+``` scss
 // Arquivo “components/sidebar”
 
 .sidebar { … }
@@ -153,7 +157,7 @@ Exemplo de aplicação de Media Queries:
 
 **Abordagem tradicional**
 
-```scss
+``` scss
 // Arquivo “components/sidebar”
 
 .sidebar { … }
@@ -176,7 +180,7 @@ Exemplo de aplicação de Media Queries:
 
 Conforme pode ser visto no exemplo acima, **recomendamos** sempre o uso da abordagem **Mobile First**. A compreensão e manutenção do código é melhor.
 
-O Framework Bootstrap possui uma série de mixins de Media Queries. [**Veja como usar os mixins de Media Queries do Bootstrap**](http://apycom.com/bootstrap-components/bootstrap-media-queries-587.html).
+O Framework Bootstrap possui uma série de mixins de Media Queries.[**Veja como usar os mixins de Media Queries do Bootstrap**](http://apycom.com/bootstrap-components/bootstrap-media-queries-587.html).
 
 ## Linters
 
@@ -186,27 +190,27 @@ Os novos editores de texto possuem linters nativos ou disponíveis como extensõ
 
 **Linters online**
 
--   <http://csslint.net/> - Possui várias opções de configuração (setinha ao lado de “Lint!”).
--   <https://codebeautify.org/cssvalidate>
--   <https://pinetools.com/css-beautifier>
+*   <http://csslint.net/> - Possui várias opções de configuração (setinha ao lado de “Lint!”).
+*   <https://codebeautify.org/cssvalidate>
+*   <https://pinetools.com/css-beautifier>
 
 **Linters para configurar em projetos**
 
--   <https://stylelint.io/>
--   <https://github.com/gajus/css-lint>
--   <https://github.com/sasstools/sass-lint>
+*   <https://stylelint.io/>
+*   <https://github.com/gajus/css-lint>
+*   <https://github.com/sasstools/sass-lint>
 
-No DS-Gov é usado o linter `stylelint`. Ele pode ser utilizado através do script `npm run validate:sass`.
+No DS-Gov é usado o linter `stylelint` . Ele pode ser utilizado através do script `npm run validate:sass` .
 
 Ele também está configurado como pipeline de desenvolvimento dentro do positório git, ou seja, sempre que um novo código seja inserido/atualizado ele será ativado.
 
 ## Organização dos arquivos
 
-Independente da arquitetura usada no projeto é importante saber como organizar os arquivos. **A folha de estilo principal deve ser usada somente para carregar configurações e o restante dos arquivos conforme a arquitetura**.
+Independente da arquitetura usada no projeto é importante saber como organizar os arquivos.**A folha de estilo principal deve ser usada somente para carregar configurações e o restante dos arquivos conforme a arquitetura**.
 
 Segue um exemplo usando o pré-processador SASS:
 
-```scss
+``` scss
 // <NOME DO PROJETO/TEMPLATE/COMPONENTE - VERSÃO>
 // <DESCRIÇÃO>
 // <LINK PARA VISUALIZAÇÃO/DOWNLOAD>
@@ -231,7 +235,7 @@ Veja a seguir como isso é aplicado na prática:
 
 **Arquivo de botões**
 
-```scss
+``` scss
 // Arquivo “components/buttons.scss”
 
 .button {
@@ -250,7 +254,7 @@ Veja a seguir como isso é aplicado na prática:
 
 **Tema principal**
 
-```scss
+``` scss
 // Configurações de botões
 $btn-padding: 10px;
 $btn-bg: #fff;
@@ -261,7 +265,7 @@ $btn-radius: 4px;
 
 **Tema comemorativo**
 
-```scss
+``` scss
 // Configurações de botões
 $btn-padding: 5px 15px;
 $btn-bg: #fff;
@@ -274,7 +278,7 @@ $btn-radius: 0;
 
 Conforme mencionado em **arquetura**, o DS-Gov possui 3 CSS.
 
-```text
+``` text
 repositorio/
 ├── assets/
 │   └── styles/
@@ -299,13 +303,13 @@ Os arquivos para desenvolvimento estão em seus respectivos diretórios.
 
 Cada componente e template possui a seguinte estrutura:
 
--   `_configs.scss`: variáveis de configuração
--   `_mixins.scss`: códigos reaproveitáveis
--   `CHANGELOG.md`: versionamento
--   `arquivo.scss`: **carrega o css de base** e aplica `configs` e `mixins`
--   `arquivo.html`: código HTML do componente/template
--   `arquivo.md`: documentação para desenvolvedor
--   `arquivo-dsg.md`: documentação para designer
+* `_configs.scss` : variáveis de configuração
+* `_mixins.scss` : códigos reaproveitáveis
+* `CHANGELOG.md` : versionamento
+* `arquivo.scss` : **carrega o css de base** e aplica `configs` e `mixins` 
+* `arquivo.html` : código HTML do componente/template
+* `arquivo.md` : documentação para desenvolvedor
+* `arquivo-dsg.md` : documentação para designer
 
 ## Formatação e sintaxe
 
@@ -317,50 +321,51 @@ Para mais informações consulte a documentação do linter em <https://stylelin
 
 ### Browsers
 
--   <https://en.wikipedia.org/wiki/Comparison_of_browser_engines_(CSS_support)>
+*   <https://en.wikipedia.org/wiki/Comparison_of_browser_engines_(CSS_support)>
 
 ### Arquitetura
 
--   <http://smacss.com/>
--   <https://rscss.io>
--   <https://willianjusten.com.br/organizando-seu-css-com-itcss/>
--   <http://bradfrost.com/blog/post/atomic-web-design/>
+*   <http://smacss.com/>
+*   <https://rscss.io>
+*   <https://willianjusten.com.br/organizando-seu-css-com-itcss/>
+*   <http://bradfrost.com/blog/post/atomic-web-design/>
 
 ### Boas Práticas
 
--   <https://levelup.gitconnected.com/the-complete-css-style-guide-for-your-next-project-bb5a5d8f7bc9>
--   <https://www.creativebloq.com/advice/a-guide-to-writing-better-css>
--   <https://github.com/airbnb/css>
--   <https://cssguidelin.es/>
--   <https://sass-guidelin.es>
--   <http://www.richfinelli.com/what-is-a-css-source-maps/>
--   <https://raygun.com/blog/css-preprocessors-examples/>
+*   <https://levelup.gitconnected.com/the-complete-css-style-guide-for-your-next-project-bb5a5d8f7bc9>
+*   <https://www.creativebloq.com/advice/a-guide-to-writing-better-css>
+*   <https://github.com/airbnb/css>
+*   <https://cssguidelin.es/>
+*   <https://sass-guidelin.es>
+*   <http://www.richfinelli.com/what-is-a-css-source-maps/>
+*   <https://raygun.com/blog/css-preprocessors-examples/>
 
 ### Media Queries
 
--   <https://developer.mozilla.org/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries>
--   <https://www.w3schools.com/css/css_rwd_mediaqueries.asp>
--   <https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488>
--   <https://css-tricks.com/snippets/css/media-queries-for-standard-devices/>
+*   <https://developer.mozilla.org/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries>
+*   <https://www.w3schools.com/css/css_rwd_mediaqueries.asp>
+*   <https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488>
+*   <https://css-tricks.com/snippets/css/media-queries-for-standard-devices/>
 
 ### Linters
 
--   <https://github.com/sass/linter>
--   <https://github.com/sasstools/sass-lint>
--   <https://stylelint.io/>
+*   <https://github.com/sass/linter>
+*   <https://github.com/sasstools/sass-lint>
+*   <https://stylelint.io/>
 
 ### Frameworks
 
--   <https://getbootstrap.com/>
--   <https://semantic-ui.com/>
--   <https://foundation.zurb.com/>
--   <https://materializecss.com/>
--   <https://v0.material-ui.com/#/>
--   <https://purecss.io/>
--   <http://getskeleton.com/>
--   <https://getuikit.com/>
--   <https://milligram.io/>
+*   <https://getbootstrap.com/>
+*   <https://semantic-ui.com/>
+*   <https://foundation.zurb.com/>
+*   <https://materializecss.com/>
+*   <https://v0.material-ui.com/#/>
+*   <https://purecss.io/>
+*   <http://getskeleton.com/>
+*   <https://getuikit.com/>
+*   <https://milligram.io/>
 
 ### Manuais IDG
 
--   <http://www.portalpadrao.gov.br/manuais>
+*   <http://www.portalpadrao.gov.br/manuais>
+

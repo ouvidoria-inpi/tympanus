@@ -6,11 +6,11 @@ cd design-system
 npm install
 ```
 
-Arquivos de desenvolvimento estão em `src`. Na pasta `dist` serão gerados os arquivos compilados.
+Arquivos de desenvolvimento estão em `src` . Na pasta `dist` serão gerados os arquivos compilados.
 
 Os códigos foram escritos usando a linguagem de templates Pug - <https://pugjs.org/api/getting-started.html>. Eles são compilados para HTML. Para os estilos foi usado o SASS - <https://sass-lang.com/>. Eles são compilados para CSS.
 
-Para compilar o novo componente e monitorar alterações rode o comando `npm start` no terminal.
+Para compilar o novo componente e monitorar alterações rode o comando `npm run start` no terminal.
 
 Recomendamos o uso da extensão **"Live Server"** do _Visual Studio Code_ durante o desenvolvimento de componentes.
 
@@ -40,10 +40,10 @@ design-system/
 
 No exemplo a seguir iremos criar um botão simples. Com as seguintes características:
 
-- Fundo preto
-- texto branco e letras maiúsculas
-- quadrado
-- ao clicar é exibida a mensagem: "Botão clicado!"
+-   Fundo preto
+-   texto branco e letras maiúsculas
+-   quadrado
+-   ao clicar é exibida a mensagem: "Botão clicado!"
 
 ### Código reusável
 
@@ -66,7 +66,7 @@ mixin simple-button
 
 Para mais informações sobre mixins em Pug acesse <https://pugjs.org/language/mixins.html>.
 
-Inclua o novo mixin na listagem de componentes em `src/pug/layouts/default.pug`:
+Inclua o novo mixin na listagem de componentes em `src/pug/layouts/default.pug` :
 
 ```pug
 //- src/pug/layouts/default.pug
@@ -83,6 +83,7 @@ Dentro de `src/pug/views/components/` crie o arquivo **simple-button.pug** com o
 extends ../../layouts/component
 
 append vars
+
     - var title = "Botão simples"
 
 append scripts
@@ -101,30 +102,30 @@ Dentro de `src/scss/components/` crie o arquivo **\_simple-button.scss** com o s
 ```scss
 // src/scss/components/_simple-button.scss
 .#{$prefix}simple-button {
-  background: $color-black;
-  border: 1px solid $color-black;
-  border-radius: 0;
-  color: $color-white;
-  display: inline-block;
-  font-weight: 400;
-  padding: 8px 16px;
-  text-transform: uppercase;
-  &:hover {
-    background: $color-gray-6;
+    background: $color-black;
+    border: 1px solid $color-black;
+    border-radius: 0;
     color: $color-white;
-    text-decoration: none;
-  }
+    display: inline-block;
+    font-weight: 400;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    &:hover {
+        background: $color-gray-6;
+        color: $color-white;
+        text-decoration: none;
+    }
 }
 ```
 
-Incluir o novo componente na lista de componentes em `src/scss/_components.scss`:
+Incluir o novo componente na lista de componentes em `src/scss/_components.scss` :
 
 ```scss
 // src/scss/components/_components.scss
 @import 'components/simple-button';
 ```
 
-Atenção! Da mesma forma como foi feito no arquivo Pug, você poderá criar um mixin SASS para reúso de código, neste caso o arquivo deverá ser criado em `src/scss/mixins/` e incluído da lista de mixins em `src/scss/_mixins.scss`.
+Atenção! Da mesma forma como foi feito no arquivo Pug, você poderá criar um mixin SASS para reúso de código, neste caso o arquivo deverá ser criado em `src/scss/mixins/` e incluído da lista de mixins em `src/scss/_mixins.scss` .
 
 ### Comportamento básico
 
@@ -134,9 +135,9 @@ Dentro de `src/js/components/` crie o arquivo **simple-button.js** com o seguint
 const simpleButtons = document.querySelectorAll('.br-simple-button')
 
 for (let simpleButton of simpleButtons) {
-  simpleButton.addEventListener('click', function() {
-    alert('Botão clicado!')
-  })
+    simpleButton.addEventListener('click', function() {
+        alert('Botão clicado!')
+    })
 }
 ```
 
@@ -148,4 +149,4 @@ Rode o seguinte script no terminal, na raiz do projeto:
 npm run build
 ```
 
-O componente poderá ser visualizado diretamente no browser através do arquivo `dist/components/simple-button.html`.
+O componente poderá ser visualizado diretamente no browser através do arquivo `dist/components/simple-button.html` .

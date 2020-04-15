@@ -15,6 +15,10 @@
       {
         "label": "Sobre o Design System",
         "filename": "sobre"
+      },
+      {
+        "label": "Prototipando com o DSGOV",
+        "filename": "prototipando"
       }
     ]
   },
@@ -58,10 +62,6 @@
       {
         "label": "Construção de componentes",
         "filename": "construcao-de-componentes"
-      },
-      {
-        "label": "Uso dos templates",
-        "filename": "uso-dos-templates"
       },
       {
         "label": "Construção do HTML",
@@ -165,6 +165,10 @@
         "filename": "search"
       },
       {
+        "label": "Select",
+        "filename": "select"
+      },
+      {
         "label": "Table",
         "filename": "table"
       },
@@ -197,6 +201,7 @@
   {
     "label": "Release Notes",
     "id": "release-notes",
+    "filename": "release-notes",
     "type": "docs"
   }
 ]
