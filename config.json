@@ -64,10 +64,6 @@
         "filename": "construcao-de-componentes"
       },
       {
-        "label": "Uso dos templates",
-        "filename": "uso-dos-templates"
-      },
-      {
         "label": "Construção do HTML",
         "filename": "construcao-do-html"
       },
@@ -167,6 +163,10 @@
       {
         "label": "Search",
         "filename": "search"
+      },
+      {
+        "label": "Select",
+        "filename": "select"
       },
       {
         "label": "Table",
