@@ -92,7 +92,6 @@
   {
     "label": "Componentes",
     "id": "components",
-    "urlLabel": "componentes",
     "type": "component",
     "children": [
       {
@@ -159,10 +158,6 @@
       {
         "label": "Scrim",
         "filename": "scrim"
-      },
-      {
-        "label": "Search",
-        "filename": "search"
       },
       {
         "label": "Select",
