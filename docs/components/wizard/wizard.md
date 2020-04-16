@@ -1,2 +1,1 @@
-Compreende uma sequência de etapas ou passos que o usuário deve percorrer para concluir uma determinada tarefa ou processo dentro de um sistema ou website.É frequentemente utilizado com o intuito de guiar o usuário durante a navegação sem deixar dúvidas em relação as etapas já concluídas e as demais.
-
+Compreende uma sequência de etapas ou passos que o usuário deve percorrer para concluir uma determinada tarefa ou processo dentro de um sistema ou website. É frequentemente utilizado com o intuito de guiar o usuário durante a navegação sem deixar dúvidas em relação as etapas já concluídas e as demais.

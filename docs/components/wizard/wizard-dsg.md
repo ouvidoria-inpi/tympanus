@@ -1,10 +1,3 @@
-# Wizard
-
-### Definição
->Compreende uma sequência de etapas ou passos que o usuário deve percorrer para concluir uma determinada tarefa ou processo dentro de um sistema ou website. É frequentemente utilizado com o intuito de guiar o usuário durante a navegação sem deixar dúvidas em relação as etapas já concluídas e as demais.
-
----
-
 ### Estrutura
 
 O template de wizard é organizado nas seguintes áreas, demonstradas abaixo:
@@ -12,27 +5,35 @@ O template de wizard é organizado nas seguintes áreas, demonstradas abaixo:
 ![Estrutura](imagens/DS_Wizard_Horizontal_Estrutura_2.png)
 
 #### 1 | Painel de Etapas
+
 Aqui serão exibidas de forma linear todas as etapas do Wizard. Deverão ser exibidos por escrito os rótulos de cada etapa, ordenados numericamente. Tanto os rótulos como os indicadores numéricos deverão ser clicáveis e o usuário poderá navegar, também, através deles.
 
 #### 2 | Etapa Concluída
+
 A etapa concluída deverá ser formatada de acordo com exemplo acima. Com o círculo preenchido em torno do número, o usuário tem a confirmação de que aquela etapa foi preenchida e/ou concluída.
 
 #### 3 | Etapa Atual
+
 Na etapa atual, o rótulo ficará no estilo Bold e o círculo branco, com a borda em azul. Transmite a ideia de que a etapa atual ainda está incompleta.
 
 #### 4 | Etapa Não Concluída
-Na etapa não concluída, o rótulo e borda do círculo ficarão na cor cinza. 
+
+Na etapa não concluída, o rótulo e borda do círculo ficarão na cor cinza.
 
 #### 5 | Área de Conteúdo
+
 Esta área é o espaço reservado para o conteúdo da tela.
 
 #### 6 | Barra de Navegação
+
 Na barra de navegação estarão disponíveis os botões de avançar e voltar. Assim o usuário poderá percorrer por todas as etapas necessárias.
 
 #### 7 | Botão Voltar
+
 Aqui será usado o botão na versão secundária.
 
 #### 8 | Botão Avançar
+
 Aqui será usado o botão na versão primária.
 
 ---
@@ -42,6 +43,7 @@ Aqui será usado o botão na versão primária.
 Este template dispõe de duas formas de diagramação, a horizontal e a vertical. Estas poderão ser utilizadas de acordo com a necessidade de cada projeto, atendendo os requisitos em cada contexto.
 
 #### Versão Horizontal
+
 A versão horizontal, comumente mais usada, é a **versão padrão**.
 
 ![Versão Horizontal - Web](imagens/DS_Wizard_Horizontal_Estrutura_1.png)
@@ -52,15 +54,11 @@ Nenhum item foi preenchido pelo usuário.
 
 Apenas o item 04 ainda não foi preenchido pelo usuário.
 
-
-
 #### Versão Vertical
 
-A versão vertical pode ser mais adequada em alguns contextos específicos. 
+A versão vertical pode ser mais adequada em alguns contextos específicos.
 
 ![Versão Vertical - Web](imagens/DS_Wizard_Vertical.png)
-
-
 
 ---
 
@@ -72,21 +70,17 @@ Quando o wizard ainda não foi preenchido os elementos devem seguir as especific
 
 ![Estado Normal](imagens/DS_Wizard_Horizontal_Estrutura_1.png)
 
-
 #### Estado Hover
 
 No estado **Hover** os elementos seguem as seguintes especificações:
 
 ![Estado Hover](imagens/DS_Wizard_Horizontal_Estados_Hover.png)
 
-
-**1 |  Hover na Etapa Concluída**
+**1 | Hover na Etapa Concluída**
 
 **2 | Hover na Etapa Atual**
 
 **3 | Hover na Etapa Não Concluída**
-
-
 
 #### Estado Focus
 
@@ -94,27 +88,23 @@ No estado **Focus** os elementos seguem as seguintes especificações:
 
 ![Estado Focus](imagens/DS_Wizard_Horizontal_Estados_Focus.png)
 
-**1 |  Foco na Etapa Concluída**
+**1 | Foco na Etapa Concluída**
 
 **2 | Foco na Etapa Atual**
 
 **3 | Foco na Etapa Não Concluída**
 
-
-
 #### Estado Disable
 
-Nesse estado, os elementos preservam suas especificações em cada etapa, porém a opacidade deve ser reduzida para 45%, conforme foi definido no estado desabilitado. 
+Nesse estado, os elementos preservam suas especificações em cada etapa, porém a opacidade deve ser reduzida para 45%, conforme foi definido no estado desabilitado.
 
 ![Estado Disable](imagens/DS_Wizard_Horizontal_Disable.png)
-
 
 **1 | Disable na Etapa Concluída**
 
 **2 | Disable na Etapa Atual**
 
 **3 | Disable na Etapa Não Concluída**
-
 
 ---
 
@@ -128,18 +118,19 @@ Na versão mobile, o Wizard possui os mesmos elementos disponíveis da versão w
 
 ![Versão Mobile](imagens/DS_Wizard_Exemplo_Mobile.png)
 
+#### 1 | Painel de Etapas
 
-#### 1 | Painel de Etapas 
 Configura-se com a numeração das etapas aparente e rótulos ocultos. Os ícones com a númeração das etapas são elementos clicáveis e o usuário poderá, também, navegar por eles.
 
 #### 2 | Área de Conteúdo
+
 De acordo com o tamanho do conteúdo, haverá rolagem natural na tela pelo dispositivo.
 
 #### 3 | Barra de Navegação
+
 Com os botões **Avançar** e **Voltar**, nos formatos **Primário** e **Secundário** respectivamente.
 
---- 
-
+---
 
 ### Comportamento
 
@@ -150,7 +141,6 @@ Tendo em vista o formato mais resumido, o Wizard na versão mobile necessita de 
 Na versão mobile, o painel de etapas é retrátil. O usuário poderá abri-lo com o touch deslizando-o para baixo. O movimento para fechar segue o sentido contrário, deslizando o painel para cima. Desta forma, o usuário poderá visualizar os rótulos das etapas, antes ocultados para otimização dos espaços.
 
 ![Painel Retrátil](imagens/DS_Wizard_Comportamento_Painel_Etapas_Retratil_Horizontal.png)
-
 
 #### 2 | Painel de Etapas Retrátil | Versão Vertical
 
@@ -163,7 +153,6 @@ Assim como na versão horizontal, o painel de etapas é retrátil também na ver
 ![Controle de Exibição de Etapas](imagens/DS_Wizard_Mobile_Comportamento_Controle_Exibicao.png)
 
 Com o intuito de preservar a estética e manter um design mais limpo, recomenda-se um **número máximo de exibição de quatro etapas na tela**. Nos casos em que houver mais de quatro etapas, **serão exibidas apenas três: a atual, a anterior e a seguinte**. As demais etapas ficarão ocultas e poderão ser acessadas a partir da rolagem horizontal como descrito no comportamento abaixo.
-
 
 #### 4 | Rolagem das etapas dentro do painel
 

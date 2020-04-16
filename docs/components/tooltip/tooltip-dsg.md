@@ -1,10 +1,3 @@
-# Tooltip e PopOver
-
-### Definição
->São alertas flutuantes que aparecem quando se passa o mouse sobre um elemento da interface ou espontâneamente em determinadas situações. Normalmente usados em links, ícones ou elementos interativos. Pode ser utilizado em conjunto com um cursor, normalmente um ponteiro do mouse. Preferencialmente contém uma informação objetiva, resumida e contextual. No caso dos PopOvers, podem conter alguns recursos interativos e maior riqueza de detalhes no formato do conteúdo.
-
----
-
 ### Estrutura
 
 O Tooltip é estruturado da seguinte forma:
@@ -12,15 +5,18 @@ O Tooltip é estruturado da seguinte forma:
 ![Estrutura](imagens/DS_Tooltip_Estrutura.png)
 
 #### 1 | Balão flutuante
+
 O balão flutuante aparecerá sobre o elemento relacionado.
 
 #### 2 | Texto informativo
+
 O texto informativo deve ser claro, objetivo e contextual. O alinhamento de texto interno ao Tooltip **deve ser centralizado**.
 
 ![Estrutura](imagens/DS_Tooltip_Estrutura_Setas_Direcionais.png)
 
 #### 3 | Seta Direcional
-A seta direcional do balão poderá aparecer em qualquer um dos lados, indicando a posição do elemento relacionado. 
+
+A seta direcional do balão poderá aparecer em qualquer um dos lados, indicando a posição do elemento relacionado.
 
 ---
 
@@ -42,12 +38,12 @@ A versão com texto auxiliar permite um reforço na informação. Deve ser usada
 
 #### Com Semântica nas Cores
 
-Para os componentes Tooltip e PopOvers, é utilizada a seguinte semântica de cores: 
+Para os componentes Tooltip e PopOvers, é utilizada a seguinte semântica de cores:
 
- - **Azul (#155BCB)** para informação, como padrão; 
- - **Verde (#168821)** para sucesso; 
- - **Vermelho (#E60000)** para erros; 
- - **Amarelo (#FFCD07)** para advertência.
+-   **Azul (#155BCB)** para informação, como padrão;
+-   **Verde (#168821)** para sucesso;
+-   **Vermelho (#E60000)** para erros;
+-   **Amarelo (#FFCD07)** para advertência.
 
 ![Tipos](imagens/DS_Tooltip_Tipos_Cores_Semantica.png)
 
@@ -115,13 +111,12 @@ A recomendação é que se utilize os Tooltips e PopOvers de forma a não confli
 
 ![Direção](imagens/DS_Tooltip_Comportamento_Direção_Padrão.png)
 
+No exemplo abaixo, os balões flutuantes dos Tooltips aparecem no sentido oposto aos limites da tela de exibição, evitanto ficar ocultos ou criar barra de rolagem. Logo:
 
-No exemplo abaixo, os balões flutuantes dos Tooltips aparecem no sentido oposto aos limites da tela de exibição, evitanto ficar ocultos ou criar barra de rolagem. Logo: 
-
- - o Tooltip **próximo ao topo da tela** aparecerá **abaixo do elemento**;
- - o Tooltip **próximo à base da tela** aparecerá **acima do elemento**;
- - o Tooltip **próximo à direita da tela**, aparecerá à **esquerda do elemento**;
- - e o Tooltip **próximo à esquerda da tela**, aparecerá à **direita do elemento**.
+-   o Tooltip **próximo ao topo da tela** aparecerá **abaixo do elemento**;
+-   o Tooltip **próximo à base da tela** aparecerá **acima do elemento**;
+-   o Tooltip **próximo à direita da tela**, aparecerá à **esquerda do elemento**;
+-   e o Tooltip **próximo à esquerda da tela**, aparecerá à **direita do elemento**.
 
 ![Direção](imagens/DS_Tooltip_Comportamento_Direção.png)
 
@@ -135,12 +130,11 @@ Tendo em vista que a comunicação através de Tooltips e PopOvers deve ser curt
 
 ![Anatomia](imagens/DS_Tooltip_Anatomia_Limites.png)
 
- - Então para Tooltips simples, recomenda-se utilizar uma frase com uma linha de aproximadamente **cinco palavras**;
- - Para Tooltips com texto auxiliar, recomenda-se utilizar uma frase com uma linha para o texto principal, com aproximadamente cinco palavras e uma frase auxiliar com uma linha de aproximadamente cinco palavras;
- - Para PopOvers, recomenda-se utlizar no título até aproximadamente cinco palavras. E no texto auxiliar até cinco linhas.
+-   Então para Tooltips simples, recomenda-se utilizar uma frase com uma linha de aproximadamente **cinco palavras**;
+-   Para Tooltips com texto auxiliar, recomenda-se utilizar uma frase com uma linha para o texto principal, com aproximadamente cinco palavras e uma frase auxiliar com uma linha de aproximadamente cinco palavras;
+-   Para PopOvers, recomenda-se utlizar no título até aproximadamente cinco palavras. E no texto auxiliar até cinco linhas.
 
 **OBS:** Claro que os limites aqui estabelecidos são apenas uma recomendação e podem ser ultrapassados com moderação em decorrência de necessidades específicas. A ideia aqui explicitada é evitar a utilização de textos muito longos, descaracterizando o objetivo do componente.
-
 
 #### Abaixo seguem as especificações da tipografia:
 
@@ -168,9 +162,11 @@ Deve-se respeitar as larguras máxima para Tooltip e PopOvers de acordo com as e
 ![Largura Máxima](imagens/DS_Tooltip_Anatomia_Largura_Maxima.png)
 
 #### 1 | Largura Máxima para Tooltip
+
 240px
 
 #### 2 | Largura Máxima para PopOver
+
 360px
 
 ---
@@ -184,4 +180,3 @@ Nos dispositivos móveis, o componente **Tooltip** perde o sentido em termos fun
 ## Especificações
 
 https://xd.adobe.com/view/1d1c688a-2f8c-4c67-6548-902cdcd3ecb7-6b2d/
-
