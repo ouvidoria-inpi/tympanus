@@ -1,55 +1,42 @@
-# Paginação
-
-## Definição
-
-
-Paginação é um padrão de interface que divide o conteúdo em páginas separadas. Para o Design System GovBr, foi sugerido a enumeração das páginas, onde a primeira e última ficam sempre fixas, visíveis, podendo ser acessadas diretamente a qualquer momento.  
-
-A paginação é considerado um método ideal para os casos em que o usuário busca algo específico dentro de uma lista de resultados. Nesse caso é possível que o usuário digite no autocomplete a página específica que ele deseja acessar.
-
-Encontrar o melhor resultado para uma pesquisa específica pode demorar um segundo ou alguns minutos. Ao longo da interação com o site ou sistema, o usuário tem uma noção do caminho que já percorreu e quantos resultados pode ainda encontrar.  A página onde o usuário se encontra fica sempre demarcada permitindo que ele saiba exatamente onde se encontra.
-
-
 ![Paginacao](imagens/PaginacaoPadrao.png)
 
-------------
+---
+
 ### Anatomia
 
 #### Estrutura:
+
 **1 - Setas**
 
 **2 - Separador**
 
 **3 - Caracteres Numericos**
 
-
 ![Paginacao Anatomia](imagens/Paginacao_Anatomia.png)
 
+---
 
+## Tipos
 
-------------
-
-## Tipos 
 Existem, por padrão, 02 tipos de paginação
 
 #### Paginação para Telas de Portal e Sistemas
+
 É a paginação padrão do Design System, aparece sempre no final do conteúdo da tela. As páginas são acessadas rapidamente e são facilmemte reconhecíveis aos usuários, já que uma sequencia de pelo menos oito números ficam sempre visíveis na tela.
 
 ![Paginacao Padrao](imagens/PaginacaoPadrao.png)
 
+#### Paginação da Tabela
 
-#### Paginação da Tabela 
 Para tabela foi aplicada uma paginação mais resumida, para deixar o layout mais integrado com a tabela.
-
 
 ![Paginacao Web](imagens/PaginacaoTabelas_Web.png)
 
 ![Paginacao Mobile](imagens/PaginacaoTabelas_Mobile.png)
 
+## Estrutura
 
-## Estrutura 
-
-A estrutura da paginação é formada pela sequência de nove elementos dentre números e reticências e os ícones de seta indicativos das ações de avançar e retroceder.  A navegação entre as páginas pode ser feita por meio de três formas: diretamente no clique em cima do número correspondente à página. Avançando ou retrocedendo através das setas para página posterior e anterior respectivamente. E ainda através do clique em cima da reticências (…) que abrirá um campo autocomplete para o usuário digitar a página específica que deseja acessar.  
+A estrutura da paginação é formada pela sequência de nove elementos dentre números e reticências e os ícones de seta indicativos das ações de avançar e retroceder. A navegação entre as páginas pode ser feita por meio de três formas: diretamente no clique em cima do número correspondente à página. Avançando ou retrocedendo através das setas para página posterior e anterior respectivamente. E ainda através do clique em cima da reticências (…) que abrirá um campo autocomplete para o usuário digitar a página específica que deseja acessar.
 
 1 | Usuário encontra-se na página 1:
 
@@ -59,16 +46,13 @@ A estrutura da paginação é formada pela sequência de nove elementos dentre n
 
 ![Paginacao Pag12 Hover Pag10](imagens/Paginacao_OnMouseOver_Pag12.png)
 
-
 3 | Usuário encontra-se na página 12:
 
 ![Paginacao Pag12](imagens/Paginacao_Selecionada_Pag12.png)
 
-
 4 | Usuário encontra-se na página 12 e põe o mouse sobre uma das setas:
 
 ![Paginacao Setas](imagens/Paginacao_OnMouseOver_Setas.png)
-
 
 5 | Usuário põe o mouse sobre reticências:
 
@@ -78,12 +62,11 @@ A estrutura da paginação é formada pela sequência de nove elementos dentre n
 
 ![Paginacao Reticencias](imagens/Paginacao_Clique_Reticências.png)
 
-
 7 | Usuário seleciona uma página com mais de 02 caracteres:
 
 ![Paginacao 04Caracteres](imagens/Paginacao_Selecionada_Mais02Caracteres.png)
 
-------------
+---
 
 ## Estados
 
@@ -94,33 +77,27 @@ O estado que comunica ao usuário que os números são interativos/clicáveis.
 Acontece quando se clica em algum número da paginação indicando em que página o usuário se encontra.
 
 **3 | Hover:**
-O estado que comunica quando um usuário coloca o cursor sobre um número da paginação. 
+O estado que comunica quando um usuário coloca o cursor sobre um número da paginação.
 
-![Paginacao Estados](imagens/Paginacao_Estados.png) 
+![Paginacao Estados](imagens/Paginacao_Estados.png)
 
+---
 
+## Orientação de Uso
 
------------
-##  Orientação de Uso
+A primeira e a última página devem permanecer sempre fixas e visíveis na paginação, sendo assim o usuário pode a qualquer momento acessar essas páginas. Porém se o usuário clicar na página 8 em diante, os números de 2 a 7 irão rolar para esquerda, passando a aparecer na tela as página 8,9,10,11,12…
 
-A primeira e a última página devem permanecer sempre fixas e visíveis na  paginação, sendo assim o usuário pode a qualquer momento acessar essas páginas. Porém se o usuário clicar na página 8 em diante,  os números de 2 a 7 irão rolar para esquerda, passando a aparecer na tela as página 8,9,10,11,12… 
-
-
-![Paginacao](imagens/Paginacao_PrimeiraeUltima_PaginasFixas.png) 
+![Paginacao](imagens/Paginacao_PrimeiraeUltima_PaginasFixas.png)
 
 ![Paginacao Apos Clique](imagens/Paginacao_RolagemAposClique.png)
 
-
-Ao clicar sobre páginas com mais de dois caracteres o elemento circular que sinaliza a página que o usuário se encontra se transforma em uma forma mais alongada semelhante a uma pílula. 
+Ao clicar sobre páginas com mais de dois caracteres o elemento circular que sinaliza a página que o usuário se encontra se transforma em uma forma mais alongada semelhante a uma pílula.
 
 ![Paginacao Muitos Caracteres](imagens/Paginacao_Selecionada_Mais02Caracteres.png)
-
-
 
 ### Portal - Paginação com Tipografia Maior
 
 O uso da tipografia em maior dimensão só é sugerida para portal, devido a proporção dos itens de resultado das telas.
-
 
 ![Paginacao Portal](imagens/Paginacao_Portal.png)
 
@@ -128,10 +105,9 @@ Nesse caso, como a quantidade de caracteres e a fonte são maiores indica-se dei
 
 ![Paginacao Portal](imagens/Paginacao_Portal_Maisde02Caracteres.png)
 
+### **Sistema - Paginação Padrão**
 
-### **Sistema - Paginação Padrão** 
-
-Com exceção do uso no portal, a tipografia na paginação deve ser 14pt, ficando mais proporcional aos elementos do sistema. 
+Com exceção do uso no portal, a tipografia na paginação deve ser 14pt, ficando mais proporcional aos elementos do sistema.
 
 Quando a primeiro ou a última página estiver selecionada a seta que a acompanha deve aparecer desabilitada informando ao usuário que não há mais itens a serem clicados.
 
@@ -144,51 +120,46 @@ ao usuário que não há mais itens a serem clicados.
 
 ![Paginacao Selecao Ultima Pagina](imagens/Paginacao_SelecaoUltimaPagina.png)
 
-
 ### **Sistema - Paginação Resumida**
 
 Em situações de menor espaçamento ou resoluções de tela reduzidas utilizar este formato.
 
 ![Paginacao Resumida](imagens/PaginacaoResumida_Mobile.png)
 
-
 ### Mobile - Paginação Resumida
 
-A navegação pode ser por escolha de uma página específica, uma a uma, ou diretamente a inicial ou final. 
+A navegação pode ser por escolha de uma página específica, uma a uma, ou diretamente a inicial ou final.
 
 ![Paginacao Resumida](imagens/PaginacaoResumida_Mobile_SelecaoPagina.png)
 
 Nesse caso, o picker nativo do celular abrirá para que o ususário faça a escolha da página que deseja acessar.
 
+### Mobile - Carregar mais opções
 
-### Mobile - Carregar mais opções 
-
- Carregamento por demanda do usuário: o uso do botão "Carregar mais resultados" é interessante pra quando o usuário não quer gastar os dados do celular. Nesse caso, as demais opções de itens exibidos na tela só aparecem após o clique no botão carregar.
-
+Carregamento por demanda do usuário: o uso do botão "Carregar mais resultados" é interessante pra quando o usuário não quer gastar os dados do celular. Nesse caso, as demais opções de itens exibidos na tela só aparecem após o clique no botão carregar.
 
 ![Paginacao Carregar mais Opcaoes](imagens/Paginacao_CarregarMaisOpcoes.png)
 
-
-__________
+---
 
 ### Alinhamento
 
-A paginação deve vir alinhada à direita com o conteúdo da tela. E do Lado esquerdo deve aparecer a quantidade de itens por página. 
+A paginação deve vir alinhada à direita com o conteúdo da tela. E do Lado esquerdo deve aparecer a quantidade de itens por página.
 
 ![Paginacao Alinhamento](imagens/Paginacao_Portal_Exemplo.png)
 
-Na paginação de tabela aparecerá do lado esquerdo um contador com a qualidade de itens exibidos e a opção de selecionar quantos itens serão exibidos na tela. Já a paginação em si, deverá aparecer alinhada à direita com o conteúdo. 
+Na paginação de tabela aparecerá do lado esquerdo um contador com a qualidade de itens exibidos e a opção de selecionar quantos itens serão exibidos na tela. Já a paginação em si, deverá aparecer alinhada à direita com o conteúdo.
 
 ![Paginacao Tabela](imagens/Paginacao_SelecaoPrimeiraPagina_Exemplo.png)
-
 
 ### Espaçamentos
 
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados na paginação. Todas as medidas foram definidas com valores múltiplos de 4px e 8px.
 
 ##### 1 | Paginação Portal:
+
 ![Paginacao Tabela](imagens/PaginacaoPortal_MargemMinima.png)
 
-
 ##### 2| Paginação Sistema:
+
 ![Paginacao Tabela](imagens/PaginacaoSistema_MargemMinima.png)
