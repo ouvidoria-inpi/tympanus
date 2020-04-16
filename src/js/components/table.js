@@ -1,3 +1,5 @@
+import reset from './_syncscroll';
+
 class BRTable {
 
   constructor(name, component, sequence) {
