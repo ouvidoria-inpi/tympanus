@@ -109,7 +109,7 @@ No exemplo acima do **`template inicial`** temos uma importação do arquivo **`
 
 Se for utilizar esse template é recomendado baixar o arquivo CSS e as Fontes contidas nele e realizar a importação manual de cada uma para o seu projeto.
 
-Fara fazer a troca do CDN para a fonte disponibilizada no pacote, baixe o pacote na seção de [Downloads](/downloads), descompacte, copie os arquivos para uma pasta no seu projeto e troque os apontamentos do CDN nos arquivos CSS e JS para o arquivo local.
+Para fazer a troca do CDN para a fonte disponibilizada no pacote, baixe o [Pacote CDN](https://serprodrive.serpro.gov.br/s/dLZJm9soLLiPzzg) na seção de [Downloads](/downloads), descompacte, copie os arquivos para uma pasta no seu projeto e troque os apontamentos do CDN nos arquivos CSS e JS para o arquivo local.
 
 ## Documentação
 
