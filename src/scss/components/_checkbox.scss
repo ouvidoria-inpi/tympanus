@@ -1,8 +1,7 @@
 .#{$prefix}checkbox {
   display: inline-block;
   position: relative;
-  height: 3em;
-
+  margin-bottom: 8px;
   input[type="checkbox"] {
     // Remover o checkbox padrão do navegador
     opacity: 0;
