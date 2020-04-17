@@ -11,11 +11,11 @@ append template
     // Atalhos para conteúdo
     ul#skip-menu.skip-menu
       li
-        a(accesskey='1' href='#content') Ir para o conteúdo
+        a(accesskey="1" href="#content") Ir para o conteúdo
       li
-        a(accesskey='2' href='#navigation') Ir para o menu    
+        a(accesskey="2" href="#navigation") Ir para o menu    
       li
-        a(accesskey='3' href='#footer') Ir para o rodapé
+        a(accesskey="3" href="#footer") Ir para o rodapé
     // Barra de governo
     #barra-brasil
   .page-wrapper
@@ -23,7 +23,7 @@ append template
       .page-content
         block auth-logo
           // Logo
-          a#left-logo.logo(href="")
+          a#left-logo.logo(href="javascript:void(0)")
             img.marca(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbr.svg" alt="Governo do Brasil")
         block auth-menu
     .right-side
@@ -33,7 +33,7 @@ append template
           block header
             // Acessibilidade
             .accessibility
-              a#contrast(href="" accesskey="6")
+              a#contrast(href="javascript:void(0)" accesskey="6")
                 span.icon
                   i.fas.fa-adjust
                 span
