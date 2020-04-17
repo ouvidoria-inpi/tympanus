@@ -43,7 +43,7 @@ append content
         +popover-body
           span.subtext Para verificar mais detalhes a respeito do seu acesso, clique no link abaixo.
         +popover-footer
-          a.link(href="#") Clique aqui 
+          a.link(href="javascript:void(0)") Clique aqui 
     .col-md-4.offset-md-1
       span.h3 PopOver com ícone e botão- Warning
       +tooltip("Incluído com sucesso!")(id="tt7" class="is-warning" popover="true" place="left")
@@ -71,9 +71,3 @@ append content
             span.text Fulano de Tal da Silva
           +popover-body
             span.subtext Diretor Presidente
-  //- .row
-  //-     .col-md-4.offset-md-1
-  //-       span.h3 Por Área
-  //-       div(style="width: 200px; height:200px; background: pink")
-  //-       +tooltip("Texto Informativo")(id="tt10" class="is-info" place="top")
-  //-         span.subtext Texto auxiliar
