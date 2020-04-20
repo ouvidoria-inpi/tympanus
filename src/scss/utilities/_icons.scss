@@ -1,7 +1,4 @@
 // Formatação padrão
-// - tamanho do ícone = 16px
-// - espaçamento interno de 4px
-// - área do ícone = 24px
 .svg-inline--fa,
 .fa,
 .fab,
@@ -10,21 +7,31 @@
 .far,
 .fas {
   --icon-size: var(--icon-size-base);
+  display: inline-block;
   font-size: var(--icon-size);
-  height: calc(var(--icon-size) + 8px) !important;
-  margin: 0 !important;
-  padding: 4px;
-  vertical-align: baseline !important; // Alinhamento em relação à textos
-  width: calc(var(--icon-size) + 8px) !important;
+  width: calc(var(--icon-size) + 8px);
 }
 
-// Remoção do estilo para .fa-lg
-.fa-lg,
-.svg-inline--fa.fa-lg {
-  vertical-align: baseline;
+// Ajuste para versão svn do ícone
+%icon-width {
+  width: calc(var(--icon-size) + 8px);
+}
+
+.svg-inline--fa {
+  @for $i from 1 through 20 {
+    &.fa-w-#{$i} {
+      @extend %icon-width;
+    }
+  }
 }
 
 // Classes do Fontawesome
-@each $item, $value in $fa-icons {
-  @include icon-size($item, $value);
+@each $key, $value in $fa-icons {
+  .#{$key},
+  .svg-inline--fa.#{$key} {
+    --icon-size: #{$value};
+    @if $key == fa-lg {
+      vertical-align: -0.125em;
+    }
+  }
 }
