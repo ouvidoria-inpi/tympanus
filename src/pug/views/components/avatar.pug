@@ -4,45 +4,57 @@ append vars
   - var title = "Avatar";
 
 append content
-  .row
-    .col.col-sm-3.col-lg-1
-      .p-3
-        +avatar()(menu)
-          .image: img(src="https://i.picsum.photos/id/823/40/40.jpg" alt="Imagem Placeholder")
-          +badge("fa-layers-counter fa-layers-top-left") 5
-    .col.col-sm-3.col-lg-1
-      .p-3
-        +avatar()(menu)
-          .image: i.fas.fa-user
-          +badge("fa-layers-counter fa-layers-top-left") 5
-    .col-sm-10.col-lg-5
+  .row.mt-1
+    .col-auto
+      .d-flex.align-items-center
+        +badge()(danger)
+          .icon 5
+          .content
+            +avatar
+              .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+        +button()(mini circle)
+          i.fas.fa-angle-down
+    .col-auto
+      .d-flex.align-items-center
+        +badge()(danger)
+          .icon 5
+          .content
+            +avatar
+              .image: i.fas.fa-user
+        +button()(mini circle)
+          i.fas.fa-angle-down
+    .col-sm-10.col-lg-5.mt-1.mt-sm-0
       .card.card-3.p-3.d-flex
         .mr-3
-          +avatar(size="small")
-            .image: img(src="https://i.picsum.photos/id/823/40/40.jpg" alt="Imagem Placeholder")
+          +avatar
+            .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
         .flex-grow-1
           p.h6.color-primary-default.mt-0.mb-1.px-0 Maria Amorim
           span UX Designer
         div
           +button.is-tertiary.is-circle
-            span.icon: i.fas.fa-phone
+            icon: i.fas.fa-phone
           +button.is-tertiary.is-circle
-            span.icon: i.fas.fa-comment
+            icon: i.fas.fa-comment
   .row.mt-3
     .col-sm-9.col-md-8.col-lg-7.col-xl-5
       .card.p-3.d-flex
         .mr-3
-          +avatar(size="small")
-            .image: img(src="https://i.picsum.photos/id/823/40/40.jpg" alt="Imagem Placeholder")
+          +avatar
+            .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
         .flex-grow-1
           +textarea("")(id="comments" placeholder="Digite seu comentário")
-          .d-flex.justify-content-end
-            +button.is-tertiary Cancelar
-            +button.is-primary Enviar
+          .mt-3.d-flex.justify-content-end
+            +button
+              u Cancelar
+            +button.is-primary.ml-4 Enviar
     .col-sm-5.col-md-4.col-lg-3.col-xl-2
       .card.p-3.text-center.mt-3.mt-md-0
-        +avatar(size="medium")
-          .image: img(src="https://i.picsum.photos/id/823/100/100.jpg" alt="Imagem Placeholder")
+        +badge()(medium success)
+          .icon
+          .content
+            +avatar()(medium)
+              .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
         p.h5.color-primary-default Maria Amorim
         p UX Designer
         hr
@@ -53,8 +65,8 @@ append content
     .col-sm-7.col-lg-6.col-xl-5
       .card.p-3.mt-3.mt-xl-0
         .text-center
-          +avatar(size="large" change)
-            .image: i.fas.fa-user
+          +avatar()(large change)
+            span.image: i.fas.fa-user
         p.h4.text-center Clique na imagem acima para trocar sua foto no perfil.
         .d-flex.color-info.px-0
           .pr-1
