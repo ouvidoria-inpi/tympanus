@@ -1,5 +1,23 @@
-@mixin icon-size($item, $value) {
-  .#{$item} {
+@mixin icon-size($value) {
+  .svg-inline--fa,
+  .fa,
+  .fab,
+  .fad,
+  .fal,
+  .far,
+  .fas {
     --icon-size: #{$value};
+  }
+}
+
+@mixin icon-reset {
+  .svg-inline--fa,
+  .fa,
+  .fab,
+  .fad,
+  .fal,
+  .far,
+  .fas {
+    width: auto;
   }
 }
