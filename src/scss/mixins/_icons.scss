@@ -1,16 +1,10 @@
 @mixin icon-size($value) {
-  .svg-inline--fa,
-  .fa,
-  .fab,
-  .fad,
-  .fal,
-  .far,
-  .fas {
+  @include icon {
     --icon-size: #{$value};
   }
 }
 
-@mixin icon-reset {
+@mixin icon {
   .svg-inline--fa,
   .fa,
   .fab,
@@ -18,6 +12,6 @@
   .fal,
   .far,
   .fas {
-    width: auto;
+    @content;
   }
 }
