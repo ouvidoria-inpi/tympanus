@@ -2,16 +2,16 @@ mixin message(className="is-info")
   .br-message(class=className)
     .icon
       if className == "is-danger"
-        i.fas.fa-times-circle
+        i.fas.fa-times-circle.fa-2x
         span.sr-only Erro!
       if className == "is-success"
-        i.fas.fa-check-circle
+        i.fas.fa-check-circle.fa-2x
         span.sr-only Sucesso!
       if className == "is-warning"
-        i.fas.fa-exclamation-triangle
+        i.fas.fa-exclamation-triangle.fa-2x
         span.sr-only Atenção!
       if className == "is-info"
-        i.fas.fa-info-circle
+        i.fas.fa-info-circle.fa-2x
         span.sr-only Informação!
     .content
       if block
