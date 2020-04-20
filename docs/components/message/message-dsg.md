@@ -20,14 +20,14 @@ As mensagens de Sucesso servem para auxiliar o usuário para que este perceba o 
 As mensagens de Atenção, muitas vezes trazem informações que possam alertar ao usuário que determinada ação depende de outra ação
 prévia, ou que haverá alguma consequência após a realização de uma ação e que esta merece uma atenção maior do usuário.
 
-![Tipos](imagens/Mensagem_de_Atencao.png)
+![Tipos](imagens/Mensagem_de_Atenção.png)
 
 #### 4 | Mensagens de Informação
 
 As mensagens Informativas, são muitas vezes dicas para que o usuário entenda melhor o que o sistema está solicitando. Serve mais ou menos
 como tópicos de ajuda.
 
-![Tipos](imagens/Mensagem_de_Informacao.png)
+![Tipos](imagens/Mensagem_de_Informação.png)
 
 ---
 
@@ -35,7 +35,7 @@ como tópicos de ajuda.
 
 ### Tom de Voz
 
-A linguagem utilizada nas mensagens deve ser clara e objetiva.É fundamental que o usuário entenda o que aconteceu, as consequências e o que pode ser feito. Então, é interessante que na mensagem venham sugestões de como o usuário pode resolver a questão.
+A linguagem utilizada nas mensagens deve ser clara e objetiva. É fundamental que o usuário entenda o que aconteceu, as consequências e o que pode ser feito. Então, é interessante que na mensagem venham sugestões de como o usuário pode resolver a questão.
 
 ### Estrutura
 
@@ -136,19 +136,19 @@ As mensagens servem para dar feedback pontual ao usuário sobre o preenchimento 
 
 ### Mensagens de Validação
 
-Aparecem logo abaixo dos campos de input. Elas devem aparecer na tela.assim que o usuário preencher um campo do formulário e passar para o próximo. Dessa forma, fica claro para usuário se o preenchimento foi correto ou se ele necessita redigitar a informação. Isso deve sempre ocorrer antes do usuário percorrer todo o formulário, agilizando e melhorando a experiência no uso do sistema.
+Aparecem logo abaixo dos campos de input. Elas devem aparecer na tela. assim que o usuário preencher um campo do formulário e passar para o próximo. Dessa forma, fica claro para usuário se o preenchimento foi correto ou se ele necessita redigitar a informação. Isso deve sempre ocorrer antes do usuário percorrer todo o formulário, agilizando e melhorando a experiência no uso do sistema.
 
 #### 1 | Validação Positiva
 
 Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma correta, dando um Feedback positivo.
 
-![Mensagens Contextuais](imagens/Validacao_Positiva.png)
+![Mensagens Contextuais](imagens/Validação_Positiva.png)
 
 #### 2 | Validação Negativa
 
-Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma diferente da esperada.É importante deixar claro o que saiu errado e/ou dar sugestões de como o usuário pode preencher o campo de forma satisfatória.
+Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma diferente da esperada. É importante deixar claro o que saiu errado e/ou dar sugestões de como o usuário pode preencher o campo de forma satisfatória.
 
-![Mensagens Contextuais](imagens/Validacao_Negativa.png)
+![Mensagens Contextuais](imagens/Validação_Negativa.png)
 
 ### Mensagens Complementares
 
@@ -168,7 +168,7 @@ As mensagens Informativas, são muitas vezes dicas para que o usuário entenda m
 
 #### Tom de voz
 
-A linguagem utilizada nas mensagens deve ser clara e concisa.É fundamental que o usuário não fique constrangido com o erro e que receba informações que o oriente na utilização do sistema.É recomendável utilizar expressões como "por favor" e "desculpe" a fim de criar uma maior empatia com o usuário.
+A linguagem utilizada nas mensagens deve ser clara e concisa. É fundamental que o usuário não fique constrangido com o erro e que receba informações que o oriente na utilização do sistema. É recomendável utilizar expressões como "por favor" e "desculpe" a fim de criar uma maior empatia com o usuário.
 
 #### Estrutura
 
@@ -182,7 +182,7 @@ Devem vir alinhados à esquerda com o campo de texto.
 **B | Texto da Mensagem**
 Aparecem logo após o ícone.
 
-![Mensagens Contextuais](imagens/Anatomia_Validacao.png)
+![Mensagens Contextuais](imagens/Anatomia_Validação.png)
 
 #### 2 | Mensagens de Texto Informativo
 
@@ -196,3 +196,6 @@ Aparecem logo após o ícone.
 
 ![Mensagens Contextuais](imagens/Anatomia_Mensagens_Complementares.png)
 
+### Especificação
+
+https://xd.adobe.com/view/bb4626d4-c633-42c0-5718-a3d3735a4b27-cd77/

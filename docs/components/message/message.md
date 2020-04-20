@@ -1,2 +1,1 @@
-O componente message serve para dar feedback ao usuário sobre o que está acontecendo no sistema. Muitas tem a função de orientar o usuário a preencher um formulário ou encontrar uma forma de acessar o conteúdo procurado. Outras porém, podem servir de alerta a possíveis consequências na realização de alguma ação.
-
+As mensagens servem para dar feedback ao usuário sobre o que está acontecendo no sistema. Muitas tem a função de orientar o usuário a preencher um formulário ou encontrar uma forma de acessar o conteúdo procurado. Outras porém, podem servir de alerta a possíveis consequências na realização de alguma ação.

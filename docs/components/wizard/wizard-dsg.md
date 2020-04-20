@@ -193,4 +193,3 @@ Abaixo pode-se observar alguns exemplos do Wizard nas versões web e mobile.
 #### Versão Mobile
 
 ![Exemplo - Versão Mobile](imagens/DS_Wizard_Mobile_Exemplo_Mobile.png)
-

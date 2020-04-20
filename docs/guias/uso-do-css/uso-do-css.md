@@ -55,7 +55,6 @@ Exemplo de uso:
 </header>
 ```
 
-Veja mais informações em [**Fundamentos Visuais --> Espaçamentos**](ds/fundamentos-visuais/espacamentos).
 
 ## Grid
 

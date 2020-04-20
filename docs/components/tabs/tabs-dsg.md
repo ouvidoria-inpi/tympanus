@@ -2,7 +2,7 @@
 
 ### Experiência Única
 
-As informações são organizadas em assuntos. Cada aba se destina a um assunto dentro de um contexto específico, facilitando que o usuário encontre o que procura e possa facilmente migrar de um assunto para o outro.
+As informações são organizadas em assuntos. Cada aba se destina a um assunto dentro de um contexto específico, facilitando que o usuário encontre o que procura e possa facilmente alternar de um assunto para o outro.
 
 ### Eficiência e Clareza
 
@@ -14,7 +14,7 @@ As interfaces devem cumprir as diferentes necessidades de acessibilidade. Por ca
 
 ### Estrutura
 
-Cada aba deve possuir um label (rótulo) que a defina de forma clara e sintética. Para que a leitura não seja prejudicada e a interface se mantenha organizada, é recomendado que o label das abas seja composto de apenas uma palavra ou no máximo duas.É recomendado que apareçam no máximo, 06 abas por tela. Os rótulos das abas devem aparecer em uma única linha. E os contadores devem aparecer abaixo do separador que dá suporte aos labels.
+Cada aba deve possuir um label (rótulo) que a defina de forma clara e sintética. Para que a leitura não seja prejudicada e a interface se mantenha organizada, é recomendado que o label das abas seja composto de apenas uma palavra (no máximo duas). É recomendado que apareçam no máximo, 06 abas por tela. Os rótulos das abas devem aparecer em uma única linha. E os contadores devem aparecer abaixo do separador que dá suporte aos labels.
 
 ##### 1 | Abas Padrão
 
@@ -29,6 +29,8 @@ No mobile o ideal é que apareçam pelo menos 3 itens de abas
 Os contadores devem aparecer abaixo dos rótulos e alinhados ao centro com os mesmos. Nessa versão sugere-se que apareçam no máximo 04 abas por tela.
 
 [![Imagem Abas com Contadores](imagens/AbasComContadores.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/d7617bec-a68d-4b07-b14c-cd91f04ea516/AbasComContadores)
+
+Exemplo de Abas em um contexto de resultado de busca com contadores:
 
 [![Imagem Exemplo de Abas com Contadores](imagens/AbasComContadores_Exemplo.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/7b2e5644-f518-4a06-a02b-e6e60e31eb09/AbasComContadores-Exemplo)
 
@@ -79,7 +81,7 @@ Evitar uso de siglas ou expressões que sejam desconhecidas do público em geral
 
 #### Formatação do Texto
 
-Os textos dos botões precisam ser formatados em letras minúsculas com a primeira letra maiúscula. Ex.: Notícias
+Os textos dos labels precisam ser formatados em letras minúsculas com a primeira letra maiúscula. Ex.: Principais Notícias
 
 ### Alinhamento
 
@@ -99,11 +101,11 @@ Deve-se deixar uma margem de 24px entre o primeiro label e a extremidade do sepa
 
 Na web deve ser deixada uma distância total de 100 px entre os labels, ou seja, 24px de margem de cada lado, acrescidas de uma distância de 52px.
 
-[![Imagem Espaçamento entre as Abas](imagens/Abas_Espacamento.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/98462a44-9bb6-4fb5-9aff-ea38aa1f3262/Abas-Espa-amento)
+[![Imagem Espaçamento entre as Abas](imagens/Abas_Espaçamento.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/98462a44-9bb6-4fb5-9aff-ea38aa1f3262/Abas-Espa-amento)
 
 ##### 2 | Aplicação Mobile
 
-Nos dispositivos móveis a distancia entre os labels deve diminuir de acordo com o formato de cada tela. O ideal é que fiquem sempre visíveis no mínimo 3 abas. Se houverem mais de 03 abas, a aba que se encontra mais à direita da tela virá truncada, indicando ao usuário que há mais abas disponíveis para o clique. Nos casos em que haja necessidade de contador, os mesmos devem aparecer abaixo do separador, como acontece na versão mobile.
+Nos dispositivos móveis a distancia entre os labels deve diminuir de acordo com o formato de cada tela. O ideal é que fiquem sempre visíveis no mínimo 3 abas. Se houver mais de 3 abas, a que se encontra mais à direita da tela virá truncada, indicando ao usuário que há mais abas disponíveis para o clique. Nos casos em que haja necessidade de contador, os mesmos devem aparecer abaixo do separador, como acontece na versão mobile.
 
 [![Imagem Espaçamento entre as Abas Mobile](imagens/AbasPoucosItens_Exemplo_Mobile.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/b4fd2196-dc8d-4d32-a71e-c7790064e46f/AbasPoucosItens-Exemplo-Mobile)
 
@@ -115,7 +117,7 @@ Nos dispositivos móveis a distancia entre os labels deve diminuir de acordo com
 
 Quando houver poucas abas, conservar a distância de 100px entre elas. O separador porém, deve preencher toda largura disponível na tela.
 
-[![Imagem Comportamento entre as Abas Mobile](imagens/AbasPoucosItens_Espacamento.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/00292887-75f9-4c7b-9b62-323bb2a3fc75/AbasPoucosItens-Espa-amento)
+[![Imagem Comportamento entre as Abas Mobile](imagens/AbasPoucosItens_Espaçamento.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/00292887-75f9-4c7b-9b62-323bb2a3fc75/AbasPoucosItens-Espa-amento)
 
 #### 2 | Aplicação Mobile
 
@@ -128,4 +130,3 @@ Nos dispositivos móveis é necessário ajustar a largura de acordo com a tela. 
 A área de toque foi definida de acordo com as margens projetadas para as abas. Sendo assim, tanto na aplicação web como mobile, a área de toque compreende a largura total do label, acrescida das margens laterais de 24px e das margens superior e inferior de 20px.
 
 [![Imagem Area de Toque das Abas](imagens/AbasAreaToque.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/c6896841-d5ad-41f1-a566-41844cbd2f91/AbasPoucosItens-Espa-amento-1)
-

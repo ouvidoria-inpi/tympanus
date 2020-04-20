@@ -72,10 +72,7 @@ Seguem as métricas definidas para os espaçamentos dos acordeões. Todas as med
 
 A cor da fonte deve seguir a cor do estado ativo, pois é importante criar essa uniformidade com os outros componentes ativos da interface.
 
-![Accordeon Positivo](imagens/acordeao-positivo-alinhamento.png)
-
-`
-
+![Accordeon Positivo](imagens/acordeao-positivo-alinhame
 #### 2 | Accordeon Negativo
 
 Por questões de acessibilidae, no accordeon negativo a cor da fonte passa a ser Secondary 01 (branca), mas os estilos seguem o mesmo padrão adotado no positivo.

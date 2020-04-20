@@ -4,15 +4,6 @@ append vars
   - var title = "Acesse sua conta";
 
 append auth-menu
-  // Menu de navegação
-  //- +tabs("is-vertical")(id="navigation")
-  //-   +tab-item("Entrar com CPF")
-  //-   +tab-item(class="is-active")
-  //-     img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
-  //-     span.name Entrar com Certificado Digital
-  //-   +tab-item
-  //-     img.icon(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
-  //-     span.name Entrar com NeoID
 
 block content
   .row
@@ -21,13 +12,13 @@ block content
       +input("CPF")(id="cpf" placeholder="Ex: 123.456.789-99")
       // Informar a senha
       +input("Senha")(id="password" class="has-icon mt-3" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
-        button.icon(type='button' onclick="toggleInputAction(this)")
+        button.icon(type="button" onclick="toggleInputAction(this)")
           span.sr-only Mostrar senha
           i.fas.fa-eye
       // Facilidades de senha
       .row.mt-8.mt-sm-3
         .col-auto
-          a(href='') Esqueceu a Senha?
+          a(href="javascript:void(0)") Esqueceu a Senha?
         .col-auto.ml-auto
           +checkbox("Manter logado?")(id="manter-logado")
       // Botões de ação
@@ -38,14 +29,14 @@ block content
       .d-sm-none.mt-12
         .row
           .col
-            a.d-inline-flex(href='')
+            a.d-inline-flex(href="javascript:void(0)")
               .icon
-                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png' alt='Certificado Digital')
+                img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/certificado-digital.png" alt="Certificado Digital")
               .name Entrar com Certificado Digital
           .col
-            a.d-inline-flex(href='')
+            a.d-inline-flex(href="javascript:void(0)")
               .icon
-                img(src='https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png' alt='NeoID')
+                img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/icons/neoid.png" alt="NeoID")
               .name Entrar com NeoID
       // Outras opções de login
       aside.mt-3.mt-sm-10
