@@ -4,67 +4,241 @@ append vars
   - var title = "Botão";
 
 append content
-  .row
-    .around
-      | Botão Primário
-      +button(class="is-primary") Entrar
-    .around
-      | Botão Secundário
-      +button(class="is-secondary") Cadastrar
-    .around
-      | Botão Terciário
-      +button(class="is-tertiary") Adicionar
-    .around
-      | Botão desabilitado
-      +button(class="is-primary is-disabled")  Acessar
-  hr
+  p.h2 Botões finalísticos
 
-  p Botões com ícones *
-  +button(class="is-primary")
-    span
-      i.fas.fa-print
-      | Imprimir
-  +button(class="is-secondary")    
-    span
+  p Primário
+  .mb-3.mb-sm-0.d-sm-inline
+    +button()(primary) Entrar
+  .mb-3.mb-sm-0.text-center.text-sm-left.d-sm-inline
+    +button()(primary mini) Entrar
+  .mb-3.mb-sm-0.d-sm-inline
+    +button()(primary)
       i.fas.fa-edit
       | Editar
-  +button(class="is-primary")
-    span  Avançar
-      i.fas.fa-chevron-right
-  +button(class="is-tertiary")
-    span
-      i.fas.fa-sliders-h
-      | Filtrar
+  .mb-3.mb-sm-0.d-sm-inline
+    +button()(primary)
+      i.fas.fa-print
+      | Imprimir
+  .mb-3.mb-sm-0.d-sm-inline
+    +button()(primary)
+      | Avançar
+      i.fas.fa-angle-right
+
+  p.mt-3 Call to Action
+  .mb-3.mb-sm-0.d-sm-inline
+      +button()(action) Adicionar
+  .mb-3.mb-sm-0.text-center.text-sm-left.d-sm-inline
+      +button()(action circle)
+          i.fas.fa-plus
+
+  p.mt-3 Secundário
+  .mb-3.mb-sm-0.d-sm-inline
+      +button()(secondary) Voltar
+  .mb-3.mb-sm-0.text-center.text-sm-left.d-sm-inline
+      +button()(secondary mini) Voltar
+  .mb-3.mb-sm-0.d-sm-inline
+      +button()(secondary)
+          i.fas.fa-eraser
+          | Limpar
+  .mb-3.mb-sm-0.d-sm-inline
+      +button()(secondary)
+          i.fas.fa-angle-left
+          | Voltar
+
   hr
 
-  p Botões Call to Action(Web e mobile)
-  +button(class="is-call-to-action") Solicitar
-  +button(class="is-circle is-large is-call-to-action is-mobile")
-    i.fas.fa-plus
+  p.h2 Botões contextuais
+
+  p Label sem ícone
+  +button
+      u Fazer login
+
+  p.mt-3 Label com ícone
+  .mb-3.mb-sm-0.d-sm-inline
+      +button
+          i.fas.fa-sliders-h
+          | Filtrar
+  .mb-3.mb-sm-0.d-sm-inline
+      +button
+          i.fas.fa-edit
+          | Editar
+  .mb-3.mb-sm-0.d-sm-inline
+      +button
+          i.fas.fa-print
+          | Imprimir
+  .mb-3.mb-sm-0.d-sm-inline
+      +button
+          i.fas.fa-download
+          | Download
+  .mb-3.mb-sm-0.d-sm-inline
+      +button
+          i.fas.fa-upload
+          | Upload
+  .mb-3.mb-sm-0.d-sm-inline
+      +button
+          i.fas.fa-plus
+          | Adicionar
+  .mb-3.mb-sm-0.d-sm-inline
+      +button
+          | Voltar ao Topo
+          i.fas.fa-chevron-circle-up
+  .mb-3.mb-sm-0.d-sm-inline
+      +button
+          | Avançar
+          i.fas.fa-angle-right
+
+  p.mt-3 Ícone
+  +button()(circle)
+      i.fas.fa-envelope
+  +button()(circle)
+      i.fas.fa-phone
+  +button()(circle)
+      i.fas.fa-chevron-down
+  +button()(circle)
+      i.fas.fa-plus
+
+  p.mt-3 ìcone mini
+  +button()(mini circle)
+      i.fas.fa-envelope
+  +button()(mini circle)
+      i.fas.fa-phone
+  +button()(mini circle)
+      i.fas.fa-chevron-down
+  +button()(mini circle)
+      i.fas.fa-plus
+
   hr
 
-  p Botões circulares
-  +button(class="is-circle is-primary")
-    i.fas.fa-chevron-up
-  +button(class="is-circle is-secondary")
-    i.fas.fa-chevron-down
-  +button(class="is-circle is-medium color-secondary-01 background-color-twitter border-color-twitter")
-    i.fab.fa-twitter
-  +button(class="is-circle is-medium color-secondary-01 background-color-facebook border-color-facebook")
-    i.fab.fa-facebook-f
-  +button(class="is-circle is-large color-secondary-01 background-color-google-plus border-color-google-plus")
-    i.fab.fa-google-plus-g
-  hr
+  p.h2 Estados
+  .row
+      //- .col-sm-4.col-lg-auto.text-center
+      //-     p.text-left.text-sm-center Interativo
+      //-     .mt-3
+      //-         +button()(primary) Entrar
+      //-     .mt-3
+      //-         +button()(secondary) Voltar
+      //-     .mt-3
+      //-         +button
+      //-             u Entrar
+      //-     .mt-3
+      //-         +button
+      //-             i.fas.fa-sliders-h
+      //-             | Filtrar
+      //-     .mt-3
+      //-         +button()(circle)
+      //-             i.fas.fa-plus
+      //-     .mt-3
+      //-         +button()(action) Solicitar
+      //-     .mt-3
+      //-         +button()(action circle)
+      //-             i.fas.fa-plus
 
-  p Botões de loading
-  +button(class="is-primary is-loading")
-  +button(class="is-secondary is-loading color-primary-default")
-  +button(class="is-call-to-action is-loading")
-  +button(class="is-circle is-large is-call-to-action is-mobile is-loading")
-  hr
+      //- .col-sm-4.col-lg-auto.text-center.mt-3.mt-sm-0
+      //-     p.text-left.text-sm-center Hover
+      //-     .mt-3
+      //-         +button()(primary hover) Entrar
+      //-     .mt-3
+      //-         +button()(secondary hover) Voltar
+      //-     .mt-3
+      //-         +button()(hover)
+      //-             u Entrar
+      //-     .mt-3
+      //-         +button()(hover)
+      //-             i.fas.fa-sliders-h
+      //-             | Filtrar
+      //-     .mt-3
+      //-         +button()(circle hover)
+      //-             i.fas.fa-plus
+      //-     .mt-3
+      //-         +button()(action hover) Solicitar
+      //-     .mt-3
+      //-         +button()(action circle hover)
+      //-             i.fas.fa-plus
 
+      //- .col-sm-4.col-lg-auto.text-center.mt-3.mt-sm-0
+      //-     p.text-left.text-sm-center Pressionado
+      //-     .mt-3
+      //-         +button()(primary active) Entrar
+      //-     .mt-3
+      //-         +button()(secondary active) Voltar
+      //-     .mt-3
+      //-         +button()(active)
+      //-             u Entrar
+      //-     .mt-3
+      //-         +button()(active)
+      //-             i.fas.fa-sliders-h
+      //-             | Filtrar
+      //-     .mt-3
+      //-         +button()(circle active)
+      //-             i.fas.fa-plus
+      //-     .mt-3
+      //-         +button()(action active) Solicitar
+      //-     .mt-3
+      //-         +button()(action circle active)
+      //-             i.fas.fa-plus
 
-  p Botões Web mini
-  +button(class="is-primary is-small") Entrar
-  +button(class="is-secondary is-small") Voltar
-  +button(class="is-tertiary is-small") Filtrar
+      //- .col-sm-4.col-lg-auto.text-center.mt-3.mt-lg-0
+      //-     p.text-left.text-sm-center Foco
+      //-     .mt-3
+      //-         +button()(primary focus) Entrar
+      //-     .mt-3
+      //-         +button()(secondary focus) Voltar
+      //-     .mt-3
+      //-         +button()(focus)
+      //-             u Entrar
+      //-     .mt-3
+      //-         +button()(focus)
+      //-             i.fas.fa-sliders-h
+      //-             | Filtrar
+      //-     .mt-3
+      //-         +button()(circle focus)
+      //-             i.fas.fa-plus
+      //-     .mt-3
+      //-         +button()(action focus) Solicitar
+      //-     .mt-3
+      //-         +button()(action circle focus)
+      //-             i.fas.fa-plus
+
+      .col-sm-4.col-lg-auto.text-center.mt-3.mt-lg-0
+          p.text-left.text-sm-center Desativado
+          .mt-3
+              +button()(primary disabled) Entrar
+          .mt-3
+              +button()(secondary disabled) Voltar
+          .mt-3
+              +button()(disabled)
+                  u Entrar
+          //- .mt-3
+          //-     +button()(disabled)
+          //-         i.fas.fa-sliders-h
+          //-         | Filtrar
+          //- .mt-3
+          //-     +button()(circle disabled)
+          //-         i.fas.fa-plus
+          .mt-3
+              +button()(action disabled) Solicitar
+          .mt-3
+              +button()(action circle disabled)
+                  i.fas.fa-plus
+
+      .col-sm-4.col-lg-auto.text-center.mt-3.mt-lg-0
+          p.text-left.text-sm-center Progresso
+          .mt-3
+              +button()(primary loading) Entrar
+          .mt-3
+              +button()(secondary loading) Voltar
+          .mt-3
+              +button()(loading)
+                  u Entrar
+          //- .mt-3
+          //-     +button()(loading)
+          //-         i.fas.fa-sliders-h
+          //-         | Filtrar
+          //- .mt-3
+          //-     +button()(circle loading)
+          //-         i.fas.fa-plus
+          .mt-3
+              +button()(action loading) Solicitar
+          .mt-3
+              +button()(action circle loading)
+                  i.fas.fa-plus

@@ -4,8 +4,14 @@ Nenhuma dependência.
 
 ## Código básico
 
-``` html
-<button class="br-button" type="button">
+```html
+<button
+    class="br-button [primary|secondary|action|tertiary] [mini|circle] [loading]"
+    type="button"
+    [primary|secondary|action|tertiary]
+    [mini|circle]
+    [disabled|loading]
+>
     Button
 </button>
 ```
@@ -14,247 +20,164 @@ Nenhuma dependência.
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-button` : container do componente
+-   `br-button` : container do componente
 
-## Variações
+## Tipos de Botão
 
-Estão disponíveis 10 tipos de botões. Cada tipo é aplicado com o prefixo `is-` .
+O tipo DEVE ser informado no mesmo nível do container do elemento. Pode ser aplicado como **classe ou atributo**.
 
-3 para uso comum:
+A única exceção é para o tipo Terciário, pois caso não seja informado o tipo ele será aplicado de forma automática.
 
-* Primário
-* Secundário
-* Terciário
+Botões para uso comum:
 
-7 para uso específico:
+-   Primário (primary)
+-   Secundário (secondary)
+-   Terciário (tertiary)
+-   Call to Action (action)
 
-* Call to Action
-* Circular
-* Redes Sociais
-* Voltar ao Topo
-* Filtrar
-* Loading
-* Web Mini
+Variações:
 
-### Button Primário
+-   Mini
+-   Circular (circle)
 
-Toda **ação principal** na tela deve usar o **Button Primário**.
+Estados:
 
-NUNCA use mais de 1 Button Primário, pois confunde o usuário em sua tomada de decisão.
+-   Desativado (disabled)
+-   Em progresso (loading)
 
-Exemplo de uso:
+Você poderá aplicar as variações para alguns botões. Os estados podem ser aplicados para qualquer tipo de botão. Veja na documentação de Designer alguns exemplos.
 
-``` html
-<button class="br-button is-primary" type="button">
-    Ação
+### Aplicar o tipo usando classe
+
+```html
+<!-- Botão Primário -->
+<button class="br-button primary" type="button">
+    Entrar
+</button>
+
+<!-- Botão Secundário -->
+<button class="br-button secondary" type="button">
+    Voltar
+</button>
+
+<!-- Botão Call to Action -->
+<button class="br-button action" type="button">
+    Adicionar
+</button>
+
+<!-- Botão Terciário -->
+<button class="br-button tertiary" type="button">
+    Fazer Login
 </button>
 ```
 
-### Button Secundário
+> Por motivos de compatibilidade, classes com prefixo `-is` também aplicam os tipos. Ex: is-primary
 
-Para **ações subjetivas** ou de **menor importância** use **Button Secundário**. Este botão PODE ser usado quantas vezes forem necessárias na tela.
+### Aplicar o tipo usando atributo
 
-Exemplo de uso:
+```html
+<!-- Botão Primário -->
+<button class="br-button" type="button" primary>
+    Entrar
+</button>
 
-``` html
-<button class="br-button is-secondary" type="button">
-    Ação
+<!-- Botão Secundário -->
+<button class="br-button" type="button" secondary>
+    Voltar
+</button>
+
+<!-- Botão Call to Action -->
+<button class="br-button" type="button" action>
+    Adicionar
+</button>
+
+<!-- Botão Terciário -->
+<button class="br-button" type="button" tertiary>
+    Fazer Login
 </button>
 ```
 
-### Button Terciário
+### Aplicar as varições
 
-Nas situações em que o botão deverá se comportar como um **link** use o **Button Terciário**.
+As variações podem ser aplicadas em conjunto com os tipos. É possivel aplicar usando classe ou atributo.
 
-Exemplo de uso:
+```html
+<!-- Usando classes -->
+<button class="br-button primary mini" type="button">
+    Entrar
+</button>
+<button class="br-button action circle" type="button">
+    <i class="fas fa-plus"></i>
+</button>
 
-``` html
-<button class="br-button is-tertiary" type="button">
-    Ação
+<!-- Usando atributos -->
+<button class="br-button" type="button" primary mini>
+    Entrar
+</button>
+<button class="br-button" type="button" action circle>
+    <i class="fas fa-plus"></i>
 </button>
 ```
 
-### Button Call to Action(Web e Mobile)
+## O Botão Terciário
 
-Usado em situações que necessitem atenção especial. Ele é diferente do Button Primário.
+Segundo a documentação de Designer este botão deve se comportar como um hyperlink.
 
-Exemplo de uso:
+Por ser um tipo mais comum que os outros botões, informar o tipo `tertiary` é opcional. Botões sem tipo serão tratados como Terciário.
 
-Web
+Label sem ícone: Texto **com** sublinhado
 
-``` html
-<button class="br-button is-call-to-action" type="button">
-    Ação
+```Html
+<button class="br-button" type="button">
+    <u>Fazer login</u>
 </button>
 ```
 
-Mobile
+Label com ícone: Texto **sem** sublinhado
 
-``` Html
-  <button class="br-button is-circle is-large is-call-to-action is-mobile" type="button"><i class="fas fa-plus"></i>
-  </button>
-```
-
-### Button Circular
-
-Use apenas ícones nestes botões.
-
-O ícone pode ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome - `<i class="fas">` .
-
-Imagens serão redimencionadas automaticamente dentro do botão. Nos ícones do Fontawesome use **cor primária** ou **cor secundária**.
-
-Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](https://fontawesome.com/).
-
-Exemplo de uso:
-
-``` html
-<button class="br-button is-circle" type="button">
-    <img class="icon" src="image.png" alt="Texto descritivo" />
-</button>
-<button class="br-button is-circle is-primary" type="button">
-    <i class="fas fa-chevron-up"></i>
-</button>
-<button class="br-button is-circle is-secondary" type="button">
-    <i class="fas fa-chevron-down"></i>
-</button>
-```
-
-### Button Redes Sociais
-
-Botões para login com redes sociais. A regra é a mesma dos botões circulares.
-
-A maioria dos ícones de redes sociais podem ser encontrados no Fontawesome. Para ícones mais complexos, como o do Google, use imagem.
-
-Exemplo de uso:
-
-``` html
-<button class="br-button is-social-media is-facebook" type="button">
-    <i class="fab fa-facebook-f fa-lg"></i>
-</button>
-<button class="br-button is-social-media is-twitter" type="button">
-    <i class="fab fa-twitter fa-lg"></i>
-</button>
-<button class="br-button is-social-media" type="button">
-    <img src="imagem" alt="Texto descritivo" />
-</button>
-```
-
-### Button Voltar ao Topo
-
-Usado geralmente ao final de conteúdos para facilitar a rolagem de tela.
-
-Um script deve ser aplicado ao botão para realizar a ação.
-
-Exemplo de uso:
-
-``` html
-<button class="br-button is-go-top" type="button" onclick="topFunction()">
-    Voltar ao topo
-    <span class="br-button is-circle is-primary">
-        <i class="fas fa-chevron-up"></i>
-    </span>
-</button>
-<script>
-    function topFunction() {
-        document.body.scrollTop = 0 // Safari
-        document.documentElement.scrollTop = 0 // Chrome, Firefox, IE, Opera
-    }
-</script>
-```
-
-### Button Filtrar
-
-Usado especial para uso de filtros. Devemos usar a classe `is-filter` .
-
-Exemplo de uso:
-
-``` html
-<button class="br-button is-filter" type="button">
-    Filtrar
+```Html
+<button class="br-button" type="button">
     <i class="fas fa-sliders-h"></i>
+    Filtrar
 </button>
 ```
 
-### Button Loading
+Apenas ícone:
 
-Button usado para indicar que algum processo em segundo plano está sendo executado.
-A classe a ser usada é `is-loading` .
-
-Exemplo de uso: 
-
-``` Html
-<button class="br-button is-primary is-loading" type="button">
+```Html
+<!-- Versão normal -->
+<button class="br-button" type="button" circle>
+    <i class="fas fa-envelope"></i>
 </button>
-```
 
-Ou para botão Call to Action
-
-``` Html
-<button class="br-button is-call-to-action is-loading" type="button">
+<!-- Versão mini -->
+<button class="br-button" type="button" circle mini>
+    <i class="fas fa-phone"></i>
 </button>
-```
-
-### Button Web Mini
-
-São usados em locais com espaço reduzidos, como cards, botão sair presente nos cabeçalhos.
-Devemos usar a classe `is-small` .
-
-Exemplo de uso:
-
-``` Html
-  <button class="br-button is-primary is-small" type="button">
-      Entrar
-  </button>
 ```
 
 ## Estados
 
-### `focus` e `hover` 
+Os estados de **focus**, **hover** e **active** são aplicados de forma automática no componente.
 
-* São aplicados automaticamente no elemento
-* Podem ser aplicados diretamente usando o prefixo `is-` 
+Para os estados **disabled** e **loading** é necessário aplicar o respectivo atributo no componente.
 
-Exemplo de uso:
+Exemplo:
 
-``` html
-<button class="br-button is-primary is-hover" type="button">
-    Ação
+```Html
+<!-- Exemplo de botão primário desativado -->
+<button class="br-button" type="button" primary disabled>
+    Entrar
 </button>
 
-<button class="br-button is-primary is-focus" type="button">
-    Ação
-</button>
-```
-
-### disabled
-
-* Deve ser aplicado como propriedade no componente quando for tag do tipo `<button>` ou `<input>` 
-* Pode ser aplicado diretamente usando o prefixo `is-` , porém a aplicação por classe apenas modifica o estilo e não desabilita o componente de fato
-
-Exemplo de uso:
-
-``` html
-<button class="br-button is-primary" type="button" disabled>
-    Ação desativada
-</button>
-
-<a href="" class="br-button is-primary is-disabled">Ação</a>
-```
-
-## Regras especiais
-
-Essa regra deve ser aplicada apenas nas versões menores e circulares dos botões `Call to Action` e `loading` , no caso específico de aparelhos mobile.
-Usa-se a classe `is-circle is-large is-mobile` 
-
-Exemplo de uso:
-
-``` Html
-<button class="br-button is-circle is-large is-call-to-action is-mobile  is-loading" type="button">
+<!-- Exemplo de botão primário em progresso -->
+<button class="br-button" type="button" primary loading>
+    Avançar
 </button>
 ```
 
-``` Html
-  <button class="br-button is-circle is-large is-call-to-action is-mobile" type="button"><i class="fas fa-plus"></i>
-  </button>
-```
+## Regras especiais e dicas
 
+-   Botões Primário, Secundário e Terciário ocupam 100% da largura de tela em dispositivos móveis
+-   O botão Call to Action não possui variação mini
+-   Botões usando as variações Mini e Circular mantém suas propriedades mesmo em dispositivos móveis
