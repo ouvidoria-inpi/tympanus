@@ -62,7 +62,7 @@ A mensagem de erro (feedback contextual) deve ser o mais sucinta possível, de p
 
 A validação dos campos de texto deve exibir a mensagem de suporte abaixo do campo, juntamente com o ícone correspondente.
 
-![Mensagens de Crítica](imagens/Input-Mensagens-de-Crítica.png)
+![Mensagens de Crítica](imagens/Input-Mensagens-de-Critica.png)
 
 ---
 
@@ -82,7 +82,7 @@ A validação dos campos de texto deve exibir a mensagem de suporte abaixo do ca
 
 #### Validação do Input com texto auxiliar ao preenchimento
 
-![Validação do Input com texto auxiliar ao preenchimento](imagens/Input-Validação-do-Input-com-texto-auxiliar-ao-preenchimento.png)
+![Validação do Input com texto auxiliar ao preenchimento](imagens/Input-Validacao-do-Input-com-texto-auxiliar-ao-preenchimento.png)
 
 ### Inputs Validação
 
@@ -90,7 +90,7 @@ A validação dos campos de texto deve exibir a mensagem de suporte abaixo do ca
 
 ### Inputs Aviso Caps Lock ligado
 
-![Inputs estados aviso caps ligado](imagens/Input-Mensagens-de-Crítica.png)
+![Inputs estados aviso caps ligado](imagens/Input-Mensagens-de-Critica.png)
 
 ### Inputs desativado
 
@@ -178,7 +178,7 @@ Os campos de texto podem estar nos estados: **habilitado**, **ativo**, **com foc
 
 Segue as métricas definidas para os espaçamentos de todos os elementos utilizados no componente imput. Todas as medidas foram definidas com valores múltiplos de **4px** e **8px**.
 
-![Espaçamentos](imagens/Input-Espaçamentos.png)
+![Espaçamentos](imagens/Input-Espacamentos.png)
 
 ---
 
