@@ -36,9 +36,9 @@ A imagem a seguir ilustra os casos descritos acima:
 
 ![Exemplo Anatomia](imagens/avatar-foto-pequeno-anatomia.png)
 
-1- Avatar (icônico ou fotográfico); 
-2- Botões terciários com ações de Expandir e Fechar o menu contextual; 
-3- _Badge_ sinalizador de _status_ (Ex: _status_ online); 
+1- Avatar (icônico ou fotográfico);
+2- Botões terciários com ações de Expandir e Fechar o menu contextual;
+3- _Badge_ sinalizador de _status_ (Ex: _status_ online);
 4- _Badge_ indicador de quantidade de notificações.
 
 ######Atenção: note que a distância entre o botão terciário e o avatar é zero.
@@ -51,7 +51,7 @@ Basicamente, existem duas variações de avatar: o fotográfico e o icônico. Es
 
 ![Exemplo Tipo](imagens/avatar-type.png)
 
-1- Avatar icônico (imagem icônica padrão do site/sistema); 
+1- Avatar icônico (imagem icônica padrão do site/sistema);
 2- Avatar fotográfico (após o usuário alterar a imagem do perfil).
 
 ---
@@ -70,7 +70,7 @@ Com finalidade de auxiliar o desenvolvedor, especificamos as dimensões das trê
 
 #### a) Avatar fotográfico:
 
-Na etapa (1), o usuário escolhe a imagem no seu computador para representá-lo.(2) Ao fazer o _upload_ da imagem uma máscara de corte limita a parte da foto que será utilizada no avatar. O usuário poderá mover a foto livremente dentro da máscara até ficar satisfeito com a parte da foto que será utilizada. A etapa (3) ilustra o resultado final da foto escolhida pelo usuário cortada pela máscara circular e como ela será mostrada pelo sistema.
+Na etapa (1), o usuário escolhe a imagem no seu computador para representá-lo. (2) Ao fazer o _upload_ da imagem uma máscara de corte limita a parte da foto que será utilizada no avatar. O usuário poderá mover a foto livremente dentro da máscara até ficar satisfeito com a parte da foto que será utilizada. A etapa (3) ilustra o resultado final da foto escolhida pelo usuário cortada pela máscara circular e como ela será mostrada pelo sistema.
 
 ![Exemplo Anatomia](imagens/avatar-mascara-foto.png)
 
@@ -106,9 +106,9 @@ O Avatar deve se adaptar responsivamente de acordo com a resolução do disposit
 
 O designer ou desenvolvedor deve contar com bom senso ao optar pela escala que melhor se adapta ao layout planejado porém, algumas sugestões são recomendadas:
 
-Pequeno (_Small_): Geralmente utilizados em espaços reduzidos como _headers_, listas de contatos, mensagens e notificações; 
+Pequeno (_Small_): Geralmente utilizados em espaços reduzidos como _headers_, listas de contatos, mensagens e notificações;
 
-Médio (_Medium_): Apropriado para representar o usuário em telas de boas-vindas e _cards_ de perfil do usuário; 
+Médio (_Medium_): Apropriado para representar o usuário em telas de boas-vindas e _cards_ de perfil do usuário;
 
 Grande (_Large_): Adequado para formatos digitais maiores, como no uso de tablets e Tvs. Utilizado também em formulários onde haja necessidade de inclusão da foto do usuário ou de depoimentos e também em telas do perfil do usuário.
 
@@ -120,7 +120,7 @@ Basicamente, existem duas variações de avatar: o fotográfico e o icônico. Es
 
 ![Exemplo Tipo](imagens/avatar-type.png)
 
-1- Avatar icônico (imagem icônica padrão do site/sistema); 
+1- Avatar icônico (imagem icônica padrão do site/sistema);
 2- Avatar fotográfico (após o usuário alterar a imagem do perfil).
 
 ---
@@ -183,7 +183,7 @@ Ainda é possível e sugerido a utilização de avatares em contextos de _chat_ 
 
 | Name                  | Ícone                         | Size                | Class (Font Awesome) |
 | --------------------- | ----------------------------- | ------------------- | -------------------- |
-| User (avatar icônico) | <i class="fas fa-user"></i>   | `--icon-size-2x` | fa-user              |
+| User (avatar icônico) | <i class="fas fa-user"></i>   | `--icon-size-2x`    | fa-user              |
 | Camera                | <i class="fas fa-camera"></i> | `--icone-size-base` | fa-camera            |
 
 ### Iconografia (Medium)
@@ -225,11 +225,11 @@ Ainda é possível e sugerido a utilização de avatares em contextos de _chat_ 
 
 | Name                       | Property | Color Token                 | Opacity |
 | -------------------------- | -------- | --------------------------- | ------- |
-| Número (notificação)       | color    | `--color-secondary-01` | 100%    |
-| Icon Expandir              | color    | `--color-primary-default` | 100%    |
-| Icon Fechar                | color    | `--color-primary-default` | 100%    |
+| Número (notificação)       | color    | `--color-secondary-01`      | 100%    |
+| Icon Expandir              | color    | `--color-primary-default`   | 100%    |
+| Icon Fechar                | color    | `--color-primary-default`   | 100%    |
 | Icon User (avatar icônico) | color    | `--color-primary-pastel-01` | 100%    |
-| Icon Camera                | color    | `--color-primary-default` | 100%    |
+| Icon Camera                | color    | `--color-primary-default`   | 100%    |
 | Conteiner                  | color    | `--color-primary-pastel-02` | 100%    |
 
 ### Estado
@@ -257,4 +257,3 @@ Ainda é possível e sugerido a utilização de avatares em contextos de _chat_ 
 | Badge (notificação)   | padding-height | 8px   |
 | Badge (status)        | padding-width  | -1px  |
 | Badge (status)        | padding-height | -1px  |
-

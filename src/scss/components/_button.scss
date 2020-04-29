@@ -6,36 +6,35 @@
     @include button-pill;
     @include estados;
     @include mobil;
-   }
+  }
   &.is-secondary {
-    @include button-pill(v(color-secondary-01, $color-secondary-01), v(color-primary-default,$color-primary-default));
+    @include button-pill(
+      v(color-secondary-01, $color-secondary-01),
+      v(color-primary-default, $color-primary-default)
+    );
     @include estados;
     @include mobil;
   }
   &.is-call-to-action {
-    @include button-pill(
-      $color-highlight,
-      $color-secondary-01,
-      $color-secondary-03
-    );
+    @include button-pill($color-highlight, $color-secondary-01, $color-secondary-03);
     border-width: $button-action-border-width;
     height: $button-height-default + ($button-action-border-width * 2);
-    font-size: v(font-size-scale-up-02,$font-size-scale-up-02);
+    font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
     @include estados-actions;
     @include media-breakpoint-down(xs) {
       width: 100%;
     }
-    &.is-mobile{
+    &.is-mobile {
       @include estados-actions;
-      border: 13px solid  v(color-secondary-03, $color-secondary-03);
+      border: 13px solid v(color-secondary-03, $color-secondary-03);
       font-size: v(font-size-scale-down-01, $font-size-scale-base);
       height: 44px;
       min-height: 32px;
-      &:focus:active{
+      &:focus:active {
         background-color: v(status-activated-background, $status-activated-background);
         color: v(status-activated-text);
       }
-      &:not(:focus):hover{
+      &:not(:focus):hover {
         background-color: v(status-hover-background, $status-hover-background);
         border-color: v(color-secondary-03, $color-secondary-03);
         color: v(color-primary-default, $color-primary-default);
@@ -43,21 +42,21 @@
     }
   }
 
-  &.is-tertiary{
+  &.is-tertiary {
     @include button-link;
     @include estados;
     @include mobil;
     text-decoration: underline;
     color: v(color-primary-default, $color-primary-default);
-    &:focus:active{
+    &:focus:active {
       background-color: transparent;
-      color:v(status-activated-background, $status-activated-background);
+      color: v(status-activated-background, $status-activated-background);
     }
   }
   &.is-small {
     height: $button-height-small;
     padding: 0 $button-padding / 2;
-    font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
+    font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
     width: auto;
   }
   &.is-circle {
@@ -71,16 +70,14 @@
     height: $button-circle-default;
     padding: 0;
     width: $button-circle-default;
-    @each $size, $value in (medium, $button-circle-medium),
-      (large, $button-circle-large)
-    {
+    @each $size, $value in (medium, $button-circle-medium), (large, $button-circle-large) {
       &.is-#{$size} {
         height: $value;
         width: $value;
         img {
           max-width: $value;
         }
-        [class*="fa-"] {
+        [class*='fa-'] {
           transform: scale(1.75);
         }
       }
@@ -98,7 +95,7 @@
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
-      content: "";
+      content: '';
       display: block;
       height: 1em;
       left: calc(50% - (1em / 2));
@@ -108,16 +105,13 @@
     }
     &.is-secondary {
       &::after {
-        border:2px solid v(color-primary-default, $color-primary-default);
+        border: 2px solid v(color-primary-default, $color-primary-default);
         border-color: v(color-primary-default, $color-primary-default);
         border-right-color: transparent;
         border-top-color: transparent;
       }
     }
   }
-}
-svg[class*="fa"]{
-  margin: 0 2px;
 }
 @keyframes spinAround {
   from {
@@ -133,4 +127,4 @@ svg[class*="fa"]{
   align-items: center;
   flex-direction: column;
   @include mobil;
-}  
+}

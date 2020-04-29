@@ -2,15 +2,6 @@ extends ../../layouts/default
 append vars
   - var title = "Debug";
 
-append style
-  style.
-    .box {
-      box-shadow: inset 0px 0px 0px 1px var(--color-secondary-04);
-      display: block;
-      height: 48px;
-      width: 48px;
-    }
-
 append template
   .container
     h1=title
@@ -112,3 +103,91 @@ append template
         .display-flex.flex-wrap.mb-3
           each val in ["off-background", "off-text"]
             .box(style=`background-color: var(--status-${val})` title=val)
+
+    h2 Ícones
+
+    p Base 16px
+
+    i.fas.fa-search
+    i.fas.fa-eye
+    i.fas.fa-eye-slash
+    i.fas.fa-home
+    i.fas.fa-cog
+    i.fas.fa-edit
+    i.fas.fa-trash-alt
+    i.fas.fa-envelope
+    i.fas.fa-envelope-open
+    i.fas.fa-download
+    i.fas.fa-upload
+    i.fas.fa-bell
+    i.fas.fa-bell-slash
+    i.fas.fa-eraser
+    i.fas.fa-clock
+    i.fas.fa-lock
+    i.fas.fa-unlock
+    i.fas.fa-user
+    i.fas.fa-check
+    i.fas.fa-times
+    i.fas.fa-plus
+    i.fas.fa-minus
+    i.fas.fa-check-circle
+    i.fas.fa-info-circle
+    i.fas.fa-exclamation-triangle
+    i.fas.fa-times-circle
+    i.fas.fa-question
+    i.fas.fa-chevron-left
+    i.fas.fa-chevron-right
+    i.fas.fa-chevron-up
+    i.fas.fa-chevron-down
+    i.fas.fa-sync
+    i.fas.fa-paperclip
+    i.fas.fa-bars
+    i.fas.fa-ellipsis-v
+    i.fas.fa-volume-up
+    i.fas.fa-volume-mute
+    i.fas.fa-share-square
+    i.fas.fa-deaf
+    i.fas.fa-adjust
+    i.fas.fa-toggle-off
+    i.fas.fa-toggle-on
+    i.fas.fa-th-large
+    i.fas.fa-th
+    i.fas.fa-calendar-alt
+    i.fas.fa-print
+    i.fas.fa-sliders-h
+    i.fas.fa-sort-down
+    i.fas.fa-sort-up
+    i.fas.fa-sort
+    i.fas.fa-image
+    i.fas.fa-copy
+    i.fas.fa-cut
+    i.fas.fa-folder
+    i.fas.fa-folder-open
+    i.fas.fa-share-square
+    i.fas.fa-share
+    i.fas.fa-clipboard-list
+
+    p.mt-3 Tamanhos
+
+    i.fas.fa-camera.fa-xs
+    i.fas.fa-camera.fa-sm
+    i.fas.fa-camera
+    i.fas.fa-camera.fa-lg
+    i.fas.fa-camera.fa-2x
+    i.fas.fa-camera.fa-3x
+    i.fas.fa-camera.fa-4x
+    i.fas.fa-camera.fa-5x
+    i.fas.fa-camera.fa-6x
+    i.fas.fa-camera.fa-7x
+    i.fas.fa-camera.fa-8x
+    i.fas.fa-camera.fa-9x
+    i.fas.fa-camera.fa-10x
+
+append style
+  style.
+    .box {
+      box-shadow: inset 0px 0px 0px 1px var(--color-secondary-04);
+      display: block;
+      height: 48px;
+      width: 48px;
+    }

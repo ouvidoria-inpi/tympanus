@@ -3,7 +3,7 @@
   //font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
   font-style: italic;
   font-weight: v(font-weight-medium, $font-weight-medium);
-  padding: $spacer * 0.5;
+  padding: $spacer * 0.5 0;
   &.is-valid {
     color: v(color-success, $color-success);
   }

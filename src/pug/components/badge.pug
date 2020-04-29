@@ -1,6 +1,4 @@
-mixin badge(className)
-  span.br-badge(
-    class=className ? className : ""
-    data-fa-transform=attributes.position)
+mixin badge
+  .br-badge&attributes(attributes)
     if block
       block
