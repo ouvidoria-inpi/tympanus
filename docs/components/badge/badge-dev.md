@@ -19,17 +19,12 @@ Este componente é formado pelos seguintes elementos:
 -   **icon** : o Badge será inserido neste elemento
 -   **content** : o conteúdo que ficará ao lado do Badge
 
-Cor e o posicionamento DEVEM ser aplicados no container do componente.
+Cor e o posicionamento DEVEM ser aplicados no container do componente. **Pode ser aplicado como classe CSS ou atributo HTML.**
 
 ### Cores do Badge
 
-A **cor de estado** (danger | success | warning | info) pode ser aplicada de várias formas.
-
 ```html
-<!-- Usando prefixo -->
-<div class="br-badge is-danger"></div>
-
-<!-- Sem prefixo -->
+<!-- Usando classe -->
 <div class="br-badge success"></div>
 
 <!-- Usando attributo -->
@@ -40,13 +35,10 @@ A **cor de estado** (danger | success | warning | info) pode ser aplicada de vá
 
 O Badge PODE variar **verticalmente** e **horizontalmente** em relação ao conteúdo.
 
-O posicionamento vertical padrão do Badge é acima do conteúdo. A aplicação da posição de baixo pode ser feita de várias formas.
+O posicionamento vertical padrão do Badge é acima do conteúdo. A aplicação da posição de baixo DEVE ser aplicada manualmente.
 
 ```html
-<!-- Usando prefixo -->
-<div class="br-badge is-bottom"></div>
-
-<!-- Sem prefixo -->
+<!-- Usando classe -->
 <div class="br-badge bottom"></div>
 
 <!-- Usando attributo -->
@@ -71,7 +63,7 @@ O posicionamento horizontal do Badge depende do posicionamento do **elemento ico
 
 ### Elemento icon
 
-Caso ele esteja vazio será representado pelo círculo de tamanho mínimo conforme documentado no Designer
+Caso ele esteja vazio será representado pelo círculo de tamanho mínimo conforme documentado de Designer.
 
 É possível inserir texto ou ícone do Fontawesome neste elemento.
 
@@ -100,8 +92,6 @@ Caso ele esteja vazio será representado pelo círculo de tamanho mínimo confor
 ### Elemento content
 
 Neste elemento ficam os textos, ícones ou outros componentes do Design System, tal como o Avatar.
-
-Com relação aos ícones, use o tamanho 2x de acordo com a documentação de Fundamentos de Iconografia.
 
 ```html
 <!-- Badge amarelo à direita e abaixo do ícone de arquivo -->
