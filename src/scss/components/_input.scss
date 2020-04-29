@@ -1,35 +1,25 @@
 .#{$prefix}input {
   position: relative;
+  margin-bottom: $spacer * 4;
   input {
     @include input;
-    /*&:focus {
-      background: v(status-focused-background)
-      linear-gradient(
-        v(status-focused-overlay),
-        v(status-focused-overlay)
-      );
-    }*/
-    &:invalid {
-      border-color: v(color-danger);
-      box-shadow: 0 0 0 1px v(color-danger);
-    }
-    &:disabled {
-      background: v(status-disabled-background);
-      border-color: v(color-secondary-04);
-    }
-  }
-  // Input com ícone
-  &.has-icon {
-    input {
-      padding-right: 48px;
-      &:disabled {
-        & + .icon {
-          color: v(status-disabled-text);
+    &[disabled] {
+      color: v(color-secondary-06);
+      background-color: v(color-secondary-03);
+      border: 1px solid v(color-secondary-06);
+      ~ button {
+        &.icon {
+          color: v(color-secondary-06);
           cursor: not-allowed;
         }
       }
+      ~ .help {
+        display: none;
+      }
     }
-    .icon {
+  }
+  button {
+    &.icon {
       background: transparent;
       border: 0;
       bottom: 0;
@@ -42,77 +32,184 @@
       position: absolute;
       right: 0;
       width: auto;
+      top: 16px;
+      color: v(color-primary-default);
+      outline: none;
       img {
         max-width: 24px;
         min-width: 24px;
         transform: translate(0, -4px);
       }
-    }
-    button.icon {
-      color: v(color-primary-default);
       &:focus,
       &:hover {
         color: v(color-primary-lighten-01);
       }
     }
   }
-  // Lista de autocomplete
-  .search-items {
-    background: v(color-secondary-01);
-    box-shadow: 0 3px 6px rgba(v(color-secondary-09), 0.22); // sass-lint:disable-line no-color-literals
-    left: 0;
-    margin-top: 1px;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 1;
-    > * {
-      cursor: pointer;
-      padding: $spacer;
-      &.is-active,
-      &:hover {
-        background-color: v(color-primary-pastel-02);
-      }
+  .help {
+    font-size: v(font-size-scale-down-01);
+  }
+  .feedback {
+    &.valid {
+      color: v(color-success);
+    }
+    &.invalid {
+      color: v(color-danger);
     }
   }
-  // Tamanhos
-  @each $size, $value in (medium, $input-medium), 
-  (small, $input-small) {
-    &.is-#{$size} {
-      input {
-        height: $value;
-      }
-      .icon {
-        height: $value;
-        line-height: $value;
-      }
-    }
-  }
-  // Estados
-  @each $state, $color in (valid, v(color-success)), 
-  (invalid, v(color-danger))
-  {
-    &.is-#{$state} {
-      input {
-        border-color: $color;
-        box-shadow: 0 0 0 1px $color;
-        outline: none;
-      }
-    }
-  }
-  &.is-#{focus} {
+  &.valid {
     input {
-      background: v(status-highlight-background) linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
+      border: 2px solid v(color-success);
+    }
+    button {
+      &.icon {
+        color: v(color-success);
+      }
     }
   }
-  &.is-#{disabled} {
+  &.invalid {
+    input {
+      border: 2px solid v(color-danger);
+    }
+    button {
+      &.icon {
+        color: v(color-danger);
+      }
+    }
+  }
+  &.filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     label {
-      opacity: .45;
+      white-space: nowrap;
+      margin-right: $spacer * 2;
     }
     input {
-      background: v(status-disabled-background);
-      border-color: v(color-secondary-04);
-      color: v(color-secondary-04); 
+      min-height: $input-small;
     }
   }
 }
+
+
+
+
+
+// .#{$prefix}input {
+//   position: relative;
+//   input {
+//     @include input;
+//     /*&:focus {
+//       background: v(status-focused-background)
+//       linear-gradient(
+//         v(status-focused-overlay),
+//         v(status-focused-overlay)
+//       );
+//     }*/
+//     &:invalid {
+//       border-color: v(color-danger);
+//       box-shadow: 0 0 0 1px v(color-danger);
+//     }
+//     &:disabled {
+//       background: v(status-disabled-background);
+//       border-color: v(color-secondary-04);
+//     }
+//   }
+//   // Input com ícone
+//   &.has-icon {
+//     input {
+//       padding-right: 48px;
+//       &:disabled {
+//         & + .icon {
+//           color: v(status-disabled-text);
+//           cursor: not-allowed;
+//         }
+//       }
+//     }
+//     .icon {
+//       background: transparent;
+//       border: 0;
+//       bottom: 0;
+//       font-size: $input-font-size;
+//       height: $input-default;
+//       line-height: $input-default;
+//       margin: 0;
+//       min-width: 0;
+//       padding: 0 ($spacer * 2);
+//       position: absolute;
+//       right: 0;
+//       width: auto;
+//       img {
+//         max-width: 24px;
+//         min-width: 24px;
+//         transform: translate(0, -4px);
+//       }
+//     }
+//     button.icon {
+//       color: v(color-primary-default);
+//       &:focus,
+//       &:hover {
+//         color: v(color-primary-lighten-01);
+//       }
+//     }
+//   }
+//   // Lista de autocomplete
+//   .search-items {
+//     background: v(color-secondary-01);
+//     box-shadow: 0 3px 6px rgba(v(color-secondary-09), 0.22); // sass-lint:disable-line no-color-literals
+//     left: 0;
+//     margin-top: 1px;
+//     position: absolute;
+//     right: 0;
+//     top: 100%;
+//     z-index: 1;
+//     > * {
+//       cursor: pointer;
+//       padding: $spacer;
+//       &.is-active,
+//       &:hover {
+//         background-color: v(color-primary-pastel-02);
+//       }
+//     }
+//   }
+//   // Tamanhos
+//   @each $size, $value in (medium, $input-medium), 
+//   (small, $input-small) {
+//     &.is-#{$size} {
+//       input {
+//         height: $value;
+//       }
+//       .icon {
+//         height: $value;
+//         line-height: $value;
+//       }
+//     }
+//   }
+//   // Estados
+//   @each $state, $color in (valid, v(color-success)), 
+//   (invalid, v(color-danger))
+//   {
+//     &.is-#{$state} {
+//       input {
+//         border-color: $color;
+//         box-shadow: 0 0 0 1px $color;
+//         outline: none;
+//       }
+//     }
+//   }
+//   &.is-#{focus} {
+//     input {
+//       background: v(status-highlight-background) linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
+//     }
+//   }
+//   &.is-#{disabled} {
+//     label {
+//       opacity: .45;
+//     }
+//     input {
+//       background: v(status-disabled-background);
+//       border-color: v(color-secondary-04);
+//       color: v(color-secondary-04); 
+//     }
+//   }
+// }

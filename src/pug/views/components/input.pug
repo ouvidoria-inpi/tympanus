@@ -4,30 +4,40 @@ append vars
   - var title = "Input";
 
 append content
-  .row
-    .col-sm
-      .mb-3
-        +input("Normal")(id="normal" type="text" placeholder="Insira um texto")
-        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
-      .mb-3
-        +input("Senha")(id="senha" type="password" class="has-icon" placeholder="Digite sua senha de 8 a 11 dígitos")
-          button.icon(type='button')
-            span.sr-only Mostrar senha
-            i.fas.fa-eye
-      .mb-3
-        +input("Autocomplete")(id="autocomplete" type="text" class="search-autocomplete has-icon" placeholder="Digite um país")
-          span.icon
-            i.fas.fa-search
-    .col-sm
-      .mb-3
-        +input("Focus")(id="focus" type="text" class="is-focus" placeholder="Insira um texto")
-      .mb-3
-        +input("Desativado")(id="desativado" type="text" class="is-disabled" placeholder="Insira um texto" disabled)
+  .row.justify-content-around.mb-5
+    .col-sm-4
+      p.label Input Simples
+      +input("CPF")(id="cpf-id" type="text" placeholder="Digite somente números")
+      +input("CPF")(id="cpf-id" type="text" placeholder="Digite somente números" valid)
+        +feedback("fa-check-circle", "CPF válido")(class="valid")
+      +input("CPF")(id="cpf-id" type="text" placeholder="Digite somente números" invalid)
+        +feedback("fa-times-circle", "CPF inválido")(class="invalid")
+      +input("CPF")(id="cpf-id" type="text" placeholder="Digite somente números" disabled)
         +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
-    .col-sm
-      .mb-3
-        +input("Inválido")(id="invalid" class="is-invalid" placeholder="Insira um texto")
-        +feedback("fa-times-circle", "Texto inválido")(class="is-invalid")
-      .mb-3
-        +input("Válido")(id="valid" class="is-valid" placeholder="Insira um texto")
-        +feedback("fa-check-circle", "Texto válido")(class="is-valid")
+    .col-sm-4
+      p.label Input com Ícone
+      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos")
+      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
+        +feedback("fa-check-circle", "Campo correto")(class="valid")
+      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
+        +feedback("fa-times-circle", "Senha incorreta")(class="invalid")
+      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
+        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
+
+  .row.justify-content-around.mb-5
+    .col-sm-4
+      p.label Input com Ícone e Texto Auxiliar
+      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos")
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
+        +feedback("fa-check-circle", "Campo correto")(class="valid")
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
+        +feedback("fa-times-circle", "Senha incorreta")(class="invalid")
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
+        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+    .col-sm-4
+      p.label Input para Filtros
+      +input("Filtrar por:")(id="filtro-id" type="text" placeholder="Pesquisar em notícias" filter)

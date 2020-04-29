@@ -1,15 +1,23 @@
-mixin input(label="Label", labelClass)
+mixin input(label="Label")
   - let className = attributes.class
   - let componentClass = prefix + "input"
   - className = className ? componentClass + " " + className : componentClass
+  - className = attributes.filter ? className + " " + "filter" : className
   - className = attributes.datepicker ? className + " " + "br-datepicker" : className
+  - className = attributes.type == "password" ? className + " " + "has-icon" : className
+  - className = attributes.valid ? className + " " + "valid" : className
+  - className = attributes.invalid ? className + " " + "invalid" : className
   div(class=className)
-    label(class=labelClass for=attributes.id)=label
+    label(for=attributes.id)=label
     input(
       id=attributes.id
       type=attributes.type ? attributes.type : "text"
       class=attributes.class
       placeholder=attributes.placeholder
       disabled=attributes.disabled)
+    if attributes.type == "password" && !attributes.filter
+      button.icon(type='button')
+        span.sr-only Mostrar senha
+        i.fas.fa-eye
     if block
       block
