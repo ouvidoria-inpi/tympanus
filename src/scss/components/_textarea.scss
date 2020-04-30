@@ -3,7 +3,6 @@
   margin-bottom: $spacer * 4;
   textarea {
     @include input;
-    min-height: auto;
     &[disabled] {
       color: v(color-secondary-06);
       background-color: v(color-secondary-03);
@@ -15,5 +14,23 @@
   }
   .help {
     font-size: v(font-size-scale-down-01);
+  }
+  .feedback {
+    &.valid {
+      color: v(color-success);
+    }
+    &.invalid {
+      color: v(color-danger);
+    }
+  }
+  &.valid {
+    textarea {
+      border: 2px solid v(color-success);
+    }
+  }
+  &.invalid {
+    textarea {
+      border: 2px solid v(color-danger);
+    }
   }
 }
