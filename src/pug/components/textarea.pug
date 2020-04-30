@@ -7,6 +7,8 @@ mixin textarea(label="Label")
     textarea(
       id=attributes.id
       placeholder=attributes.placeholder
+      rows=attributes.rows
+      cols=attributes.cols
       disabled=attributes.disabled)
-      if block
-        block
+    if block
+      block
