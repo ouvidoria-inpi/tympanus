@@ -7,35 +7,35 @@ append content
   .row.justify-content-around.mb-5
     .col-sm-4
       p.label Input Simples
-      +input("CPF")(id="cpf-id" type="text" placeholder="Digite somente números")
-      +input("CPF")(id="cpf-id" type="text" placeholder="Digite somente números" valid)
+      +input("CPF")(id="cpf-id1" type="text" placeholder="Digite somente números")
+      +input("CPF")(id="cpf-id2" type="text" placeholder="Digite somente números" valid)
         +feedback("fa-check-circle", "CPF válido")(class="valid")
-      +input("CPF")(id="cpf-id" type="text" placeholder="Digite somente números" invalid)
+      +input("CPF")(id="cpf-id3" type="text" placeholder="Digite somente números" invalid)
         +feedback("fa-times-circle", "CPF inválido")(class="invalid")
-      +input("CPF")(id="cpf-id" type="text" placeholder="Digite somente números" disabled)
+      +input("CPF")(id="cpf-id4" type="text" placeholder="Digite somente números" disabled)
         +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
     .col-sm-4
       p.label Input com Ícone
-      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos")
-      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
+      +input("Senha")(id="password-id1" type="password" placeholder="Sua senha de 8 a 11 digitos")
+      +input("Senha")(id="password-id2" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
         +feedback("fa-check-circle", "Campo correto")(class="valid")
-      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
+      +input("Senha")(id="password-id3" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
         +feedback("fa-times-circle", "Senha incorreta")(class="invalid")
-      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
+      +input("Senha")(id="password-id4" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
         +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
 
   .row.justify-content-around.mb-5
     .col-sm-4
       p.label Input com Ícone e Texto Auxiliar
-      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos")
+      +input("Senha")(id="password-id5" type="password" placeholder="Sua senha de 8 a 11 digitos")
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
-      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
+      +input("Senha")(id="password-id6" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
         +feedback("fa-check-circle", "Campo correto")(class="valid")
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
-      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
+      +input("Senha")(id="password-id7" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
         +feedback("fa-times-circle", "Senha incorreta")(class="invalid")
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
-      +input("Senha")(id="password-id" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
+      +input("Senha")(id="password-id8" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
         +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
     .col-sm-4
