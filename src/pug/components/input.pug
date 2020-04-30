@@ -19,5 +19,9 @@ mixin input(label="Label")
       button.icon(type='button')
         span.sr-only Mostrar senha
         i.fas.fa-eye
+    if attributes.datepicker && !attributes.filter
+      button.icon(type='button' id=attributes.id + "-btn")
+        span.sr-only Mostrar calendário
+        i.fas.fa-calendar-alt
     if block
       block
