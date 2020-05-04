@@ -1,6 +1,6 @@
-# TextArea
+# Textarea
 
-O Componente de TextArea  permite que seu aplicativo aceite um valor de texto potencialmente longo do usuário.
+O Componente de Textarea permite que seu aplicativo aceite um valor de texto potencialmente longo do usuário.
 
 ## Dependências
 
@@ -9,37 +9,100 @@ Nenhuma dependência.
 ## Código básico
 
 ``` html
-<div class="br-textarea">
-    <label for="textarea">Label</label>
-    <textarea id="textarea" placeholder="Exemplo de TextArea"></textarea>
+<div class="col-sm-4">
+    <div class="br-textarea">
+    <label for="textarea">Digite sua mensagem aqui</label>
+    <textarea id="textarea" placeholder="Exemplo de textarea simples" rows="5" cols="5"></textarea>
+    </div>
 </div>
 ```
 
 # Anatomia do componente
 
-Este componente é formado pelos seguintes elementos obrigatórios:
+Este componente é formado pelos seguintes elementos:
 
 * `br-textarea` : container do componente
-* `<textarea>` : caixa de entrada de dados
 * `<label>` : tag html de rótulo
+* `<textarea>` : caixa de entrada de dados
+* `feedback` : mensagem de feedback
+* `help` : texto de ajuda para i `<input>` (opcional)
 
-# Estados
+## feedback
 
-Este componente apresenta os seguintes estados:
+Em situações de erro ou retorno positivo, use o feedback. Ele deve ser inserido dentro do `br-textarea`, após a tag `textarea` e antes do `help`
 
-* focus
-* valid
-* invalid
-* disabled
+Para **mensagens de erro** adicione `invalid` ao container e ao `feedback`. Use o ícone `<i class="fas fa-times-circle"></i>` dentro do `feedback`.
 
-Estados podem ser aplicados diretamente usando o prefixo `is-` ao container do componente.
+Exemple de uso:
+
+```html
+<div class="br-textarea invalid">
+    <label for="textarea">Digite sua mensagem aqui</label>
+    <textarea id="textarea" placeholder="Exemplo de textarea inválido" rows="5" cols="5"></textarea>
+    <div class="feedback invalid"><i class="fas fa-times-circle"></i>
+        <span>Senha incorreta</span>
+    </div>
+</div>
+```
+
+Para **mensagem poditiva**, adicione `valid` ao container e ao `feedback`. Use o ícone `<i class="fas fa-check-circle"></i>` dentro do `feedback`
 
 Exemplo de uso:
 
-``` html
-<div class="br-textarea is-focus">
-    <label for="textarea">Label</label>
-    <textarea id="textarea" placeholder="Exemplo de Focus"></textarea>
+```html
+<div class="br-textarea valid">
+    <label for="textarea">Digite sua mensagem aqui</label>
+    <textarea id="textarea" placeholder="Exemplo de textarea válido" rows="5" cols="5"></textarea>
+    <div class="feedback valid"><i class="fas fa-check-circle"></i>
+    <span>Campo correto</span>
+    </div>
+</div>
+```
+
+## help
+
+Uma mensagem de ajuda PODE ser incluída. Ela deve ser inserida dentro do `br-textarea`, após a tag `textarea`.
+
+Exemplo de uso:
+
+```html
+<div class="br-textarea">
+    <label for="textarea">Digite sua mensagem aqui</label>
+    <textarea id="textarea" placeholder="Exemplo de textarea simples" rows="5" cols="5"></textarea>
+    <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+</div>
+```
+
+Caso exista `feedback`, este deverá ser inserido antes do `help`
+
+Exemplo de uso:
+
+```html
+<div class="br-textarea valid">
+    <label for="textarea">Digite sua mensagem aqui</label>
+    <textarea id="textarea" placeholder="Exemplo de textarea válido" rows="5" cols="5"></textarea>
+    <div class="feedback valid"><i class="fas fa-check-circle"></i>
+        <span>Campo correto</span>
+    </div>
+    <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
+</div>
+```
+
+## Disabled
+
+Para desabilitar o `br-textarea`, basta colocar o atributo disabled na tab `textarea` e o feedback com a classe `disabled`. Use o ícone `<i class="fas fa-exclamation-triangle">` dentro do `feedback`
+
+O campo `help` não aparece em campos desabilitados
+
+Exemplo de uso:
+
+```html
+<div class="br-textarea">
+    <label for="textarea">Digite sua mensagem aqui</label>
+    <textarea id="textarea" placeholder="Exemplo de textarea desabilitado" rows="5" cols="5" disabled></textarea>
+    <div class="feedback is-disabled"><i class="fas fa-exclamation-triangle"></i>
+        <span>Campo Desabilitado</span>
+    </div>
 </div>
 ```
 
