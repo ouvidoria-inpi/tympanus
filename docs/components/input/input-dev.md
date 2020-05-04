@@ -20,9 +20,9 @@ Este componente é formado pelos seguintes elementos:
 * `<input>` : caixa de entrada de dados
 * `icon` : ícone para o `<input>` (opcional)
 * `feedback` : mensagem de feedback
-* `help` : Texto de ajuda para o `<input>` (opcional)
+* `help` : texto de ajuda para o `<input>` (opcional)
 
-## `icon` 
+## `icon`
 
 O input PODE ter um ícone, portanto este elemento é opcional.
 
@@ -46,7 +46,7 @@ Exemplo de uso:
 
 Em situações de erro ou retorno positivo use o `feedback` . Ele deve ser inserido dentro do `br-input`, após a tag `button`, se houver, e antes do `help` .
 
-Para **mensagem de erro** adicione `invalid` ao container do componente. Use o ícone `<i class="fas fa-times-circle">` dentro da mensagem de feedback.
+Para **mensagem de erro**, adicione `invalid` ao container do componente. Use o ícone `<i class="fas fa-times-circle">` dentro do feedback.
 
 Exemplo de uso:
 
@@ -60,7 +60,7 @@ Exemplo de uso:
 </div>
 ```
 
-Para **mensagem positiva** adicione `valid` ao container do componente. Use o ícone `<i class="fas fa-check-circle">` dentro da mensagem de feedback.
+Para **mensagem positiva**, adicione `valid` ao container do componente. Use o ícone `<i class="fas fa-check-circle">` dentro do feedback.
 
 Exemplo de uso:
 
@@ -90,7 +90,7 @@ Exemplo de uso:
 </div>
 ```
 
-Caso exista `feedback` ele deverá ser inserido antes de `help` .
+Caso exista `feedback`, este deverá ser inserido antes de `help` .
 
 Exemplo de uso:
 
@@ -108,7 +108,7 @@ Exemplo de uso:
 
 ## Disabled
 
-Para desabilitar o `br-input` basta colocar o attibuto disabled na tag `input` e o feedback com a classe `disabled`.  Use o ícone `<i class="fas fa-exclamation-triangle">` dentro da mensagem de feedback.
+Para desabilitar o `br-input` basta colocar o attibuto disabled na tag `input` e o feedback com a classe `disabled`.  Use o ícone `<i class="fas fa-exclamation-triangle">` dentro do feedback.
 
 O campo `help` não aparece em campos desabilitados
 
@@ -126,5 +126,13 @@ Exemplo de uso:
 
 # Regras especiais
 
-Nenhuma regra especial.
+O componente `br-input`, quando usado para filtros, possui uma anatomia diferente. Para habilitar essa caraterística é preciso colocar a classe `filter` na raiz do componente `br-input`
 
+Exemplo de uso:
+
+```html
+<div class="br-input filter">
+    <label for="filtro">Filtrar por:</label>
+    <input id="filtro" type="text" placeholder="Pesquisar em notícias">
+</div>
+```
