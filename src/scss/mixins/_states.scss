@@ -1,6 +1,6 @@
 @mixin hover {
   &:hover {
-    background-color: v(status-hover-background);
+    background: v(status-hover-background);
   }
 }
 

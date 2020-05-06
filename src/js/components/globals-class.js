@@ -12,7 +12,8 @@ import BRTable from './table'
 import BRScrim from './scrim'
 import BRModal from './modal'
 import BRTooltip from './tooltip'
-import BRBreadcrumb from './breadcrumb';
+import BRList from './list'
+import BRBreadcrumb from './breadcrumb'
 import BRWizard from './wizard'
 
 export default class Globals {
@@ -31,6 +32,7 @@ export default class Globals {
     this.initInstanceScrim()
     this.initInstanceModal()
     this.initInstanceTooltip()
+    this.initInstanceList()
     this.initInstanceBreadcrumb()
     this.initInstanceWizard()
   }
@@ -410,6 +412,13 @@ export default class Globals {
     for ( let brTooltip of window.document.querySelectorAll( '.br-tooltip' ) ) {
       tooltipList.push( new BRTooltip( 'br-tooltip', brTooltip ) )
     }
+  }
+
+  initInstanceList() {
+    let listList = []
+    for (let brList of window.document.querySelectorAll( ".br-list[accordion]")) {
+      listList.push(new BRList('br-list', brList ))
+    } 
   }
 
   initInstanceTagInput() {
