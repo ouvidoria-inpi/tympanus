@@ -1,6 +1,20 @@
-mixin list(className="is-simple")
-  ul.list
-    li.item teste
-      span.icons
-      ul.br-list
-        li teste
+mixin list
+  .br-list&attributes(attributes)
+    if block
+      block
+
+mixin list-header(header)
+  .header
+    .title= header
+    if block
+      block
+
+mixin list-item
+  if attributes.link
+    a.item(href="javascript:void(0);")&attributes(attributes)
+      if block
+        block
+  else
+    .item&attributes(attributes)
+      if block
+        block
