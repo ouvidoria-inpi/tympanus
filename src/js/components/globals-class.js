@@ -35,6 +35,7 @@ export default class Globals {
     this.initInstanceList()
     this.initInstanceBreadcrumb()
     this.initInstanceWizard()
+    this.initInstanceLoading()
   }
 
   initInstanceAccordeon() {
