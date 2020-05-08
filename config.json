@@ -140,6 +140,10 @@
         "filename": "list"
       },
       {
+        "label": "Loading",
+        "filename": "loading"
+      },
+      {
         "label": "Mensage",
         "filename": "message"
       },
