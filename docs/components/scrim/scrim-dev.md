@@ -42,7 +42,7 @@ O uso do componente scrim deve feito através de sua aplicação em uma `<div>` 
 
 ## Foco
 
-Usado principalmente quando um novo elemento surge na tela, e necessita de uma atenção especial do usuário. Os elementos ou regiões que não requerem atenção do usuário ficam escuros, quanto o elemento em questão ganha atenção total.
+Usado principalmente quando um novo elemento surge na tela e necessita de uma atenção especial do usuário. Os elementos ou regiões que não requerem atenção do usuário ficam escuros, enquanto o novo elemento ganha atenção total.
 
 Exemplo de uso:
 
@@ -70,7 +70,7 @@ Exemplo de uso:
 
 ## Legibilidade
 
-Usados como overlay para melhorar constraste do texto sobre qualquer superfície, seja ela imagem ou não.
+Usados como overlay para melhorar o constraste do texto sobre qualquer superfície, seja ela imagem ou não.
 
 A legibilidade do texto deve ser feita com o uso da classe `scrim-text` , que se encarregará de posicionar o texto corretamente na tela.
 
@@ -96,9 +96,7 @@ Exemplo de uso:
 
 ``` html
 <div class="br-scrim is-inibicao">
-    <div onclick="alert('Fui Clicado')">
-        Com Scrim Inibição
-    </div>
+    Com Scrim Inibição
 </div>
 ```
 
