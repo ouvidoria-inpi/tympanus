@@ -1,3 +1,5 @@
+[version]: # '6.0.0'
+
 ## Princípios
 
 Os Tags são compactos, relevantes e focados.

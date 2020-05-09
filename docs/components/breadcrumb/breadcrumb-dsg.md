@@ -115,8 +115,8 @@ Para mais informações sobre Estados, consultar o documentos de Fundamentos.
 
 ### Espaçamento
 
-| Name          | Property    | Token |
-| ------------- | ----------- | ----- |
+| Name        | Property    | Token |
+| ----------- | ----------- | ----- |
 | Breadcrumbs | padding-top | 16px  |
 
 Confira as imagens abaixo para a melhor compreensão dos espaçamentos utilizados:
