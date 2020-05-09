@@ -60,12 +60,12 @@
     "id": "guias",
     "children": [
       {
-        "label": "Construção de componentes",
-        "filename": "construcao-de-componentes"
+        "label": "Boas práticas de CSS",
+        "filename": "boas-praticas-de-css"
       },
       {
-        "label": "Construção do HTML",
-        "filename": "construcao-do-html"
+        "label": "Boas práticas de HTML",
+        "filename": "boas-praticas-de-html"
       },
       {
         "label": "Acessibilidade no Código HTML",
@@ -76,12 +76,12 @@
         "filename": "uso-do-wai-aria"
       },
       {
-        "label": "Uso do css",
-        "filename": "uso-do-css"
+        "label": "Construção de componentes",
+        "filename": "construcao-de-componentes"
       },
       {
-        "label": "Construção do CSS",
-        "filename": "construcao-do-css"
+        "label": "Uso do css",
+        "filename": "uso-do-css"
       },
       {
         "label": "Manutenção do CSS",
