@@ -1,0 +1,1 @@
+Notificações são mensagens enviadas por aplicativos ou sites que fornecem informações curtas, oportunas e relevantes quando ele não está em uso. As notificações são, geralmente, conteúdos relevantes para os usuários.

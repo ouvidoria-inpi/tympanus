@@ -1,3 +1,5 @@
+[version]: # '5.0.0'
+
 ## Versão Simples
 
 A versão simples consiste basicamente em um campo input para inserção da data de forma manual ou por meio de um calendário que será disponibilizado ao usuário por meio de clique no ícone calendário.
@@ -131,4 +133,3 @@ Abaixo pode-se observar alguns exemplos do Datepicker nas versões web e mobile.
 ### Exemplo de Template Mobile:
 
 ![Estado Focus](imagens/12-Exemplo-Mobile.png)
-

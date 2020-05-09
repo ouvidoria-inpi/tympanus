@@ -1,3 +1,5 @@
+[version]: # '6.0.0'
+
 ## Princípios
 
 ### Experiência Única

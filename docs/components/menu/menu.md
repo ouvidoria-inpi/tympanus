@@ -1,0 +1,1 @@
+O menu deve ser utilizado para auxiliar o usuário na navegação através de todas as páginas do site ou sistema. Compreende um lista de itens ou opções, onde cada um desses itens chama outro programa ou página. Geralmente abrange todas as seções de um site ou seções dentro de um contexto específico.
