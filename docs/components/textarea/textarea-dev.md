@@ -36,10 +36,10 @@ Para **mensagens de erro** adicione `invalid` ao container e ao `feedback`. Use 
 Exemple de uso:
 
 ```html
-<div class="br-textarea invalid">
+<div class="br-textarea" invalid>
     <label for="textarea">Digite sua mensagem aqui</label>
     <textarea id="textarea" placeholder="Exemplo de textarea inválido" rows="5" cols="5"></textarea>
-    <div class="feedback invalid"><i class="fas fa-times-circle"></i>
+    <div class="feedback" invalid><i class="fas fa-times-circle"></i>
         <span>Senha incorreta</span>
     </div>
 </div>
@@ -50,10 +50,10 @@ Para **mensagem poditiva**, adicione `valid` ao container e ao `feedback`. Use o
 Exemplo de uso:
 
 ```html
-<div class="br-textarea valid">
+<div class="br-textarea" valid>
     <label for="textarea">Digite sua mensagem aqui</label>
     <textarea id="textarea" placeholder="Exemplo de textarea válido" rows="5" cols="5"></textarea>
-    <div class="feedback valid"><i class="fas fa-check-circle"></i>
+    <div class="feedback" valid><i class="fas fa-check-circle"></i>
     <span>Campo correto</span>
     </div>
 </div>
@@ -78,10 +78,10 @@ Caso exista `feedback`, este deverá ser inserido antes do `help`
 Exemplo de uso:
 
 ```html
-<div class="br-textarea valid">
+<div class="br-textarea" valid>
     <label for="textarea">Digite sua mensagem aqui</label>
     <textarea id="textarea" placeholder="Exemplo de textarea válido" rows="5" cols="5"></textarea>
-    <div class="feedback valid"><i class="fas fa-check-circle"></i>
+    <div class="feedback" valid><i class="fas fa-check-circle"></i>
         <span>Campo correto</span>
     </div>
     <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
@@ -100,7 +100,7 @@ Exemplo de uso:
 <div class="br-textarea">
     <label for="textarea">Digite sua mensagem aqui</label>
     <textarea id="textarea" placeholder="Exemplo de textarea desabilitado" rows="5" cols="5" disabled></textarea>
-    <div class="feedback is-disabled"><i class="fas fa-exclamation-triangle"></i>
+    <div class="feedback" disabled><i class="fas fa-exclamation-triangle"></i>
         <span>Campo Desabilitado</span>
     </div>
 </div>
@@ -109,4 +109,3 @@ Exemplo de uso:
 # Regras especiais
 
 Nenhuma regra especial.
-
