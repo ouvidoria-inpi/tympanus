@@ -4,10 +4,9 @@ mixin input(label="Label")
   - className = className ? componentClass + " " + className : componentClass
   - className = attributes.filter ? className + " " + "filter" : className
   - className = attributes.datepicker ? className + " " + "br-datepicker" : className
-  - className = attributes.type == "password" ? className + " " + "has-icon" : className
-  - className = attributes.valid ? className + " " + "valid" : className
-  - className = attributes.invalid ? className + " " + "invalid" : className
-  div(class=className)
+  div(class=className
+      valid=attributes.valid
+      invalid=attributes.invalid)
     label(for=attributes.id)=label
     input(
       id=attributes.id

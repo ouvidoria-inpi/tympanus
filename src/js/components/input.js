@@ -14,7 +14,7 @@ class BRInput {
 
   _setPasswordViewBehavior () {
     for ( let inputPassword of this.component.querySelectorAll( "input[type='password']" ) ) {
-      if (( inputPassword.parentNode.classList.contains( "has-icon" )) && (!inputPassword.disabled)) {
+      if (!inputPassword.disabled) {
         for ( let buttonIcon of inputPassword.parentNode.querySelectorAll( "button.icon" ) ) {
           buttonIcon.addEventListener( "click", ( event ) => {
             this._toggleShowPassword( event );
