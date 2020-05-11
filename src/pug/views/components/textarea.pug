@@ -13,24 +13,24 @@ append content
   .row.justify-content-around
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id3" placeholder="Exemplo de textarea válido" rows=5 cols=5 valid)
-        +feedback("fa-check-circle", "Campo correto")(class="valid")
+        +feedback("fa-check-circle", "Campo correto")(valid)
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id4" placeholder="Exemplo de textarea válido" rows=5 cols=5 valid)
-        +feedback("fa-check-circle", "Campo correto")(class="valid")
+        +feedback("fa-check-circle", "Campo correto")(valid)
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
   .row.justify-content-around
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id5" placeholder="Exemplo de textarea inválido" rows=5 cols=5 invalid)
-        +feedback("fa-times-circle", "Senha incorreta")(class="invalid")
+        +feedback("fa-times-circle", "Senha incorreta")(invalid)
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id6" placeholder="Exemplo de textarea inválido" rows=5 cols=5 invalid)
-        +feedback("fa-times-circle", "Senha incorreta")(class="invalid")
+        +feedback("fa-times-circle", "Senha incorreta")(invalid)
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
   .row.justify-content-around
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id7" placeholder="Exemplo de textarea desabilitado" rows=5 cols=5 disabled)
-        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
+        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(disabled)
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id8" placeholder="Exemplo de textarea desabilitado" rows=5 cols=5 disabled)
-        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
+        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(disabled)
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.

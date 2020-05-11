@@ -16,19 +16,19 @@
     font-size: v(font-size-scale-down-01);
   }
   .feedback {
-    &.valid {
+    &[valid] {
       color: v(color-success);
     }
-    &.invalid {
+    &[invalid] {
       color: v(color-danger);
     }
   }
-  &.valid {
+  &[valid] {
     textarea {
       border: 2px solid v(color-success);
     }
   }
-  &.invalid {
+  &[invalid] {
     textarea {
       border: 2px solid v(color-danger);
     }

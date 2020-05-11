@@ -2,9 +2,9 @@ mixin textarea(label="Label")
   - let className = attributes.class
   - let componentClass = prefix + "textarea"
   - className = className ? componentClass + " " + className : componentClass
-  - className = attributes.valid ? className + " " + "valid" : className
-  - className = attributes.invalid ? className + " " + "invalid" : className
-  div(class=className)
+  div(class=className
+      valid=attributes.valid
+      invalid=attributes.invalid)
     label(for=attributes.id)=label
     textarea(
       id=attributes.id
