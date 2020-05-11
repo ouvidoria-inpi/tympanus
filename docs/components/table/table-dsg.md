@@ -1,3 +1,5 @@
+[version]: # '3.0.0'
+
 ![Exemplo de Tabela](imagens/tabela.png)
 
 ## Uso
@@ -6,11 +8,11 @@ As tabelas exibem informações em uma grid básica de linhas e colunas. Elas de
 
 As tabelas podem conter:
 
-* Componentes interativos (como chips, botões, links); 
-* Elementos não interativos (como textos, badges); 
-* Ferramentas para consultar e manipular dados (como busca, filtros); 
+-   Componentes interativos (como chips, botões, links);
+-   Elementos não interativos (como textos, badges);
+-   Ferramentas para consultar e manipular dados (como busca, filtros);
 
-Nunca utilize foto/imagem dentro de uma tabela. Sempre utilize outro componente (como [Listas](/ds/componentes/listas)) ou outros recursos (como [botão](ds/componentes/botao) ou hiperlinks para representar/acessar o conteúdo em questão.
+Nunca utilize foto/imagem dentro de uma tabela. Sempre utilize outro componente (como [Listas](#)) ou outros recursos (como [botão](#) ou [hiperlinks](#)) para representar/acessar o conteúdo em questão.
 
 ---
 
@@ -68,10 +70,10 @@ A barra contextual para Desktop deve ser utilizada com cautela, já que nem semp
 
 Quando a Barra Superior se transforma em uma barra contextual, ocorrem as seguintes alterações:
 
-* A cor da barra muda indicando a mudança de estado
-* O título da tabela desaparece
-* Os itens de ação da Barra Superior são substituídas por ações contextuais
-* Alguns elementos, baseados no contexto, podem ser exibidos.
+-   A cor da barra muda indicando a mudança de estado
+-   O título da tabela desaparece
+-   Os itens de ação da Barra Superior são substituídas por ações contextuais
+-   Alguns elementos, baseados no contexto, podem ser exibidos.
 
 ![Contextual comportamento](imagens/barracontextual_animacao.png)
 
@@ -123,11 +125,11 @@ As linhas apresentam os dados organizados por colunas e podem ter elementos de m
 
 Os dados de uma linha podem conter:
 
-* Ícones
-* Links
-* Textos
-* Componentes de formulários (checkbox, text, radio, select... )
-* Chips
+-   Ícones
+-   Links
+-   Textos
+-   Componentes de formulários ([checkbox](#), [text](#), [radio](#), [select](#)...)
+-   Chips
 
 ---
 
@@ -204,8 +206,8 @@ Textos (tanto do cabeçalho como das linhas) não podem ocupar mais de uma linha
 
 Quando o usuário passa o mouse sobre o cabeçalho de uma coluna:
 
-* Um [tooltip](#) pode exibir o nome completo da coluna (caso esteja contraído) ou uma descrição detalhada; 
-* Se a ordenação estiver ativada, um ícone de seta dupla aparecerá ao lado do cabeçalho da coluna; 
+-   Um [tooltip](#) pode exibir o nome completo da coluna (caso esteja contraído) ou uma descrição detalhada;
+-   Se a ordenação estiver ativada, um ícone de seta dupla aparecerá ao lado do cabeçalho da coluna;
 
 ![Cabeçalho Hover](imagens/cabecalho.png)
 
@@ -213,9 +215,9 @@ Quando o usuário passa o mouse sobre o cabeçalho de uma coluna:
 
 As linhas da tabela podem possuir o estado hover, podendo ou não ter uma ação após o clique:
 
-* Caso tenha alguma ação, o cursor do mouse deve ser alterado para o estado comum de itens interativos (mão com dedo indicador); 
-* Se não houver ação, o cursor do mouse não deve ser alterado; 
-* Se o cursor do mouse estiver em algum elemento interativo dentro da linha (link ou botão), a linha não deve receber hover enquanto o mouse estiver sobre estes itens; 
+-   Caso tenha alguma ação, o cursor do mouse deve ser alterado para o estado comum de itens interativos (mão com dedo indicador);
+-   Se não houver ação, o cursor do mouse não deve ser alterado;
+-   Se o cursor do mouse estiver em algum elemento interativo dentro da linha (link ou botão), a linha não deve receber hover enquanto o mouse estiver sobre estes itens;
 
 ![Linha Hover](imagens/linha_hover.png)
 
@@ -233,9 +235,9 @@ Usado para selecionar ou deselecionar as linhas ou cards da tabela.
 
 Possui dois estados básicos (Desmarcado e Selecionado) e outro adicional (Indeterminado). Quando acionado pelo usuário cada um executa uma ação específica:
 
-* **Desmarcado**: significa nenhuma checkbox das linhas está selecionado. Se acionado pelo usuário, todos os checkboxes passam para o estado de selecionado, inclusive do cabeçalho; 
-* **Indeterminado**: significa que alguns checkboxes estão selecionados. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
-* **Selecionado**: significa que todos os checkboxes da página atual estão selecionados. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
+-   **Desmarcado**: significa nenhuma checkbox das linhas está selecionado. Se acionado pelo usuário, todos os checkboxes passam para o estado de selecionado, inclusive do cabeçalho;
+-   **Indeterminado**: significa que alguns checkboxes estão selecionados. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
+-   **Selecionado**: significa que todos os checkboxes da página atual estão selecionados. Se acionado, todos os checkboxes passam para o estado desmarcado, inclusive do cabeçalho.
 
 ![Checkbox Estados](imagens/interacoes_checkbox.png)
 
@@ -243,9 +245,9 @@ Possui dois estados básicos (Desmarcado e Selecionado) e outro adicional (Indet
 
 Quando um checkbox é selecionado:
 
-* Além de mudar seu estado para Selecionado, a linha da tabela ou o card (para celulares) é apresentada por outra cor. O conteúdo exibido por uma ação expandir não precisam herdar essa característica.
-* A barra de contexto (Barra Superior) geralmente será exibida com ações referente à linha selecionada, chamadas de ações em lote.
-* O checkbox do cabeçalho é alterado para estado Indeterminado caso esteja no estado Desmarcado. Se todas as linhas da página atual forem selecionadas, o estado será Selecionado.
+-   Além de mudar seu estado para Selecionado, a linha da tabela ou o card (para celulares) é apresentada por outra cor. O conteúdo exibido por uma ação expandir não precisam herdar essa característica.
+-   A barra de contexto (Barra Superior) geralmente será exibida com ações referente à linha selecionada, chamadas de ações em lote.
+-   O checkbox do cabeçalho é alterado para estado Indeterminado caso esteja no estado Desmarcado. Se todas as linhas da página atual forem selecionadas, o estado será Selecionado.
 
 ![Contextual comportamento](imagens/animacao.gif)
 
@@ -259,8 +261,8 @@ No celular, não existe cabeçalho. Neste caso, quando um dos cards for selecion
 
 Ao selecionar um linha ou card, pode ser útil exibir uma informação de quantos itens estão selecionados na tabela. Essa informação pode ser apresentada como um botão cuja ação pode ser refletida como uma busca, a qual:
 
-* Exibe somente as linhas ou cards selecionados; 
-* Após a busca, deve ser possível "cancelar" a busca, voltando a exibir o conteúdo da tabela de acordo com a página atual; 
+-   Exibe somente as linhas ou cards selecionados;
+-   Após a busca, deve ser possível "cancelar" a busca, voltando a exibir o conteúdo da tabela de acordo com a página atual;
 
 ![Contextual Filtro](imagens/barracontextual_filtro1.png)
 
@@ -268,7 +270,7 @@ Ao selecionar um linha ou card, pode ser útil exibir uma informação de quanto
 
 ![Contextual Filtro](imagens/animacao.gif)
 
-* o comportamento do hover na barra contextual, deve seguir os mesmos padrões adotados no hover dos demais componentes.
+-   o comportamento do hover na barra contextual, deve seguir os mesmos padrões adotados no hover dos demais componentes.
 
 ![barracontextual Hover](imagens/barracontextual_hover.png)
 
@@ -312,12 +314,12 @@ Tooltips devem ser usadas em todas as ações que são apresentadas somente por 
 
 Utilize ícones padrões para ações relacionadas:
 
-* Adicionar
-* Remover
-* Editar
-* Visualizar
-* Filtrar
-* Buscar
+-   Adicionar
+-   Remover
+-   Editar
+-   Visualizar
+-   Filtrar
+-   Buscar
 
 ### Simplificando Elementos
 
@@ -339,8 +341,8 @@ Quando aplicado nas linhas da tabela, deve ser a primeira informação a ser exi
 
 Em Cards a ação possui duas opções (que podem ser usadas simultaneamente):
 
-* **Expandir as informações do card**: localizada à direita, na parte superior do card. Quando retraído, esconde as informações do card, exibindo somente o primeiro item da lista (podendo ser alterado caso o card sofra alguma ordenação). Quando expandido, todas as listas do card são exibidas, podendo ou não exibir as informações adicionais do card.
-* **Visualizar informações adicionais**: localizada no final do card, após um separador. Ela é exibida com o rótulo "Mais informações" e ícone. Exibe as informações adicionais encontradas no card.É a mesma informação que é contraída na tabela por linhas.
+-   **Expandir as informações do card**: localizada à direita, na parte superior do card. Quando retraído, esconde as informações do card, exibindo somente o primeiro item da lista (podendo ser alterado caso o card sofra alguma ordenação). Quando expandido, todas as listas do card são exibidas, podendo ou não exibir as informações adicionais do card.
+-   **Visualizar informações adicionais**: localizada no final do card, após um separador. Ela é exibida com o rótulo "Mais informações" e ícone. Exibe as informações adicionais encontradas no card. É a mesma informação que é contraída na tabela por linhas.
 
 ![Expandir Card](imagens/expandir_card.png)
 
@@ -354,8 +356,8 @@ As configuração de densidade das linhas das tabelas podem ser alterados pelo u
 
 Neste caso:
 
-* A altura das as Linhas e de todas as Barras da Tabela serão alteradas na mesma dimensão; 
-* O tamanho da fonte dos textos e dos ícones não são alterados; 
+-   A altura das as Linhas e de todas as Barras da Tabela serão alteradas na mesma dimensão;
+-   O tamanho da fonte dos textos e dos ícones não são alterados;
 
 ![Densidade](imagens/densidade01.png)
 
@@ -381,8 +383,8 @@ Toda a área da célula deve responder a entrada do usuário (touch ou clique).
 
 Os Cards podem ser ordenados com uso de item de ação localizado na Barra Superior. Neste caso:
 
-* O primeiro item da lista dos cards passa a ser o referente ao rótulo escolhido na ordenação; 
-* Todas os cards se ordenam conforme a nova ordenação; 
+-   O primeiro item da lista dos cards passa a ser o referente ao rótulo escolhido na ordenação;
+-   Todas os cards se ordenam conforme a nova ordenação;
 
 ![Ordenar Card - Parte 1](imagens/celular_ordenacao01.png)
 
@@ -406,7 +408,7 @@ Os componentes de entrada são acessados somente pelo botão ação. Após isso,
 
 ### Foco
 
-O estado de foco, utilizando teclas tab do teclado, são realizados em todos os itens interativos dentro da tabela (como links, botões, checkboxes... )
+O estado de foco, utilizando teclas tab do teclado, são realizados em todos os itens interativos dentro da tabela (como links, botões, checkboxes...)
 
 ### Coluna Fixa
 
@@ -426,16 +428,16 @@ Por causa da limitação de espaço é recomendado que apenas 1 coluna de dados 
 
 Para realizar busca de dados dentro da tabela:
 
-* Utilize uma ação, na Barra Superior, para apresentar o campo de busca; 
+-   Utilize uma ação, na Barra Superior, para apresentar o campo de busca;
 
 ![Busca](imagens/tabela_busca.png)
 
-* O campo de busca deve está inserido em uma Barra de Contexto; 
+-   O campo de busca deve está inserido em uma Barra de Contexto;
 
 ![Bbarracontextual Busca](imagens/barracontextual_busca.png)
 
-* Destaque, no conteúdo, os termos procurados; 
-* Uma ação de "fechar" deve está disponível para o usuário, caso ele queira desistir da busca; 
+-   Destaque, no conteúdo, os termos procurados;
+-   Uma ação de "fechar" deve está disponível para o usuário, caso ele queira desistir da busca;
 
 ![Bbarracontextual Desatque Busca](imagens/barracontextual_busca_destaque.png)
 
@@ -449,18 +451,18 @@ Redimensionar colunas permitem que usuários vejam dados contraídos de forma co
 
 Quando o usuário coloca o mouse próximo a lateral do cabeçalho, seguintes mudanças acontece:
 
-* O cursor do mouse é alterado para setas
-* Uma linha vertical da coluna é exibida
+-   O cursor do mouse é alterado para setas
+-   Uma linha vertical da coluna é exibida
 
 ![Redimensionar Coluna](imagens/coluna_redimensionar1.png)
 
-* O usuário pode arrastar a linha vertical para esquerda e direita
+-   O usuário pode arrastar a linha vertical para esquerda e direita
 
-* Elemento visual de sombra é adicionado como resposta durante a ação de arrastar a linha vertical.
+-   Elemento visual de sombra é adicionado como resposta durante a ação de arrastar a linha vertical.
 
 ![Redimensionar Coluna](imagens/Coluna_redimensiona2.png)
 
-* Dados contraídos podem ficar visíveis e dados muito extensos podem ser contraídos e adicionado reticências. Veja [Responsividade]() para maiores detalhes.
+-   Dados contraídos podem ficar visíveis e dados muito extensos podem ser contraídos e adicionado reticências. Veja [Responsividade](#) para maiores detalhes.
 
 ![Redimensionar Coluna](imagens/Coluna_redimensiona3.png)
 
@@ -502,9 +504,8 @@ Na versão mobile a mesma deve se apresentar logo abaixo do título da tabela.
 
 ### Tamanho mínimo (Desktop)
 
-* Deixe **12px** de espaçamento interno **entre as colunas** de uma tabela; 
-* Caso tenha algum ícone, como de ordenação, acrescente **24px** do ícone (área mínimo de interação com mouse); 
-* Espaçamento Interno entre as **extreminadas** da coluna são de **16px** do lado esquerdo da tabela, e de **8px** do lado direito (entre os ícones e a extremidade da Tabela)
+-   Deixe **12px** de espaçamento interno **entre as colunas** de uma tabela;
+-   Caso tenha algum ícone, como de ordenação, acrescente **24px** do ícone (área mínimo de interação com mouse);
+-   Espaçamento Interno entre as **extreminadas** da coluna são de **16px** do lado esquerdo da tabela, e de **8px** do lado direito (entre os ícones e a extremidade da Tabela)
 
 ![Espaçamento Mínimo - Desktop](imagens/coluna_espacominimo.png)
-

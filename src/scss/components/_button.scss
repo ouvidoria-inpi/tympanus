@@ -1,104 +1,96 @@
 .#{$prefix}button {
-  margin: 22px 20px;
-  outline: 0;
-  @include mobil;
-  &.is-primary {
-    @include button-pill;
-    @include estados;
-    @include mobil;
-   }
-  &.is-secondary {
-    @include button-pill(v(color-secondary-01, $color-secondary-01), v(color-primary-default,$color-primary-default));
-    @include estados;
-    @include mobil;
-  }
-  &.is-call-to-action {
-    @include button-pill(
-      $color-highlight,
-      $color-secondary-01,
-      $color-secondary-03
-    );
-    border-width: $button-action-border-width;
-    height: $button-height-default + ($button-action-border-width * 2);
-    font-size: v(font-size-scale-up-02,$font-size-scale-up-02);
-    @include estados-actions;
-    @include media-breakpoint-down(xs) {
-      width: 100%;
+  @media (min-width: $grid-breakpoint-small) {
+    min-width: 156px;
+    width: auto;
+
+    &.is-call-to-action,
+    &.action,
+    &[action] {
+      min-width: 220px;
     }
-    &.is-mobile{
-      @include estados-actions;
-      border: 13px solid  v(color-secondary-03, $color-secondary-03);
-      font-size: v(font-size-scale-down-01, $font-size-scale-base);
-      height: 44px;
-      min-height: 32px;
-      &:focus:active{
-        background-color: v(status-activated-background, $status-activated-background);
-        color: v(status-activated-text);
+  }
+
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: v(color-primary-default);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: v(font-weight-semi-bold);
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+  text-align: center;
+  width: 100%;
+
+  &.is-primary,
+  &.primary,
+  &[primary] {
+    background: v(color-primary-default);
+    color: v(color-secondary-01);
+
+    &:not(:disabled) {
+      &:focus,
+      &[focus],
+      &:hover,
+      &[hover] {
+        color: v(color-primary-default);
       }
-      &:not(:focus):hover{
-        background-color: v(status-hover-background, $status-hover-background);
-        border-color: v(color-secondary-03, $color-secondary-03);
-        color: v(color-primary-default, $color-primary-default);
+
+      &:active,
+      &[active] {
+        color: v(color-secondary-01);
       }
     }
   }
 
-  &.is-tertiary{
-    @include button-link;
-    @include estados;
-    @include mobil;
-    text-decoration: underline;
-    color: v(color-primary-default, $color-primary-default);
-    &:focus:active{
-      background-color: transparent;
-      color:v(status-activated-background, $status-activated-background);
-    }
-  }
-  &.is-small {
-    height: $button-height-small;
-    padding: 0 $button-padding / 2;
-    font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
-    width: auto;
-  }
-  &.is-circle {
-    @include media-breakpoint-down(xs) {
-      margin: 0.5em;
-    }
-    @include estados;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 1px;
-    height: $button-circle-default;
-    padding: 0;
-    width: $button-circle-default;
-    @each $size, $value in (medium, $button-circle-medium),
-      (large, $button-circle-large)
-    {
-      &.is-#{$size} {
-        height: $value;
-        width: $value;
-        img {
-          max-width: $value;
-        }
-        [class*="fa-"] {
-          transform: scale(1.75);
-        }
+  &.is-call-to-action,
+  &.action,
+  &[action] {
+    background: v(color-highlight);
+    border-color: v(color-secondary-03);
+    border-radius: 40px;
+    border-width: 16px;
+    color: v(color-secondary-01);
+    font-size: v(font-size-scale-up-01);
+    height: 80px;
+    line-height: 48px;
+    padding: 0 44px;
+
+    &:not(:disabled):not(:active):not([active]) {
+      &:focus,
+      &[focus] {
+        color: v(color-highlight);
+      }
+
+      &:hover,
+      &[hover] {
+        background: v(color-support-01);
+        color: v(color-secondary-01);
       }
     }
   }
-  &.is-loading {
+
+  &.is-secondary,
+  &.secondary,
+  &[secondary] {
+    border-color: v(color-primary-default);
+  }
+
+  &.is-loading,
+  &.loading,
+  &[loading] {
     color: transparent !important;
     pointer-events: none;
     position: relative;
-    width: 8em;
-    @include mobil;
+
     &::after {
       animation: spinAround 500ms infinite linear;
-      border: 2px solid v(color-secondary-01, $color-secondary-01);
+      border: 2px solid v(color-primary-default);
       border-radius: 50%;
       border-right-color: transparent;
       border-top-color: transparent;
-      content: "";
+      content: '';
       display: block;
       height: 1em;
       left: calc(50% - (1em / 2));
@@ -106,18 +98,79 @@
       top: calc(50% - (1em / 2));
       width: 1em;
     }
-    &.is-secondary {
+
+    &.is-primary,
+    &.primary,
+    &[primary],
+    &.is-call-to-action,
+    &.action,
+    &[action] {
       &::after {
-        border:2px solid v(color-primary-default, $color-primary-default);
-        border-color: v(color-primary-default, $color-primary-default);
-        border-right-color: transparent;
-        border-top-color: transparent;
+        border-bottom-color: v(color-secondary-01);
+        border-left-color: v(color-secondary-01);
       }
     }
   }
-}
-svg[class*="fa"]{
-  margin: 0 2px;
+
+  &.is-mini,
+  &.mini,
+  &[mini] {
+    font-size: v(font-size-scale-down-01);
+    height: 32px;
+    line-height: 32px;
+    min-width: 68px;
+    width: auto;
+  }
+
+  &.is-circle,
+  &.circle,
+  &[circle] {
+    border-radius: 50%;
+    height: v(icon-size-3x);
+    min-width: 0;
+    padding: 0;
+    width: v(icon-size-3x);
+    &.is-call-to-action,
+    &.action,
+    &[action] {
+      height: v(icon-size-5x);
+      width: v(icon-size-5x);
+    }
+    &.is-mini,
+    &.mini,
+    &[mini] {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  &:not(:disabled) {
+    @include focus;
+    &[focus] {
+      background: v(status-highlight-background)
+        linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
+    }
+
+    @include hover;
+    &[hover] {
+      background: v(status-hover-background);
+    }
+
+    @include active;
+    &:active {
+      color: v(color-secondary-01);
+    }
+
+    &[active] {
+      background: v(status-pressed-background);
+      color: v(color-secondary-01);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
 @keyframes spinAround {
   from {
@@ -127,10 +180,3 @@ svg[class*="fa"]{
     transform: rotate(359deg);
   }
 }
-.around {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  @include mobil;
-}  

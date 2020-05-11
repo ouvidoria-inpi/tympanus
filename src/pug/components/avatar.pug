@@ -1,10 +1,10 @@
 mixin avatar
   .br-avatar&attributes(attributes)
-    if block
-      block
     if attributes.change
       button.change(type="button")
-        span.icon: i.fas.fa-camera
-    if attributes.menu
-      button.menu(type="button")
-        span.icon: i.fas.fa-angle-down
+        if block
+          block
+        span.icon.color-primary-default: i.fas.fa-camera
+    else
+      if block
+        block

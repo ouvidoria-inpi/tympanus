@@ -1,4 +1,4 @@
-Antes de criar esse MR verifique se não existe outro MR com o mesmo código.
+Antes de criar esse MR verifique se não existe outro MR com o mesmo conteúdo.
 
 Marque as opções na página do git.serpro:
 1. Delete source branch when merge request is accepted.
@@ -27,7 +27,9 @@ Quando estiver pronto, altere o título e remova o **WIP**
 
 ## Labels (tags)
 
-Coloque as tags para identificar o status e tipo do MR
+Coloque as tags (etiquetas, label) para identificar o status e tipo do MR
+
+Ex:
 
 - Componente
 - Template
@@ -40,6 +42,8 @@ Coloque as tags para identificar o status e tipo do MR
 - Bugfix
 - Hotfix
 - Fazendo
+- Devops
+- git
 
 ## Tarefa ALM (opcional)
 

@@ -1,47 +1,82 @@
-
+$badge-min: 18px;
+$badge-empty-min: 8px;
 
 .#{$prefix}badge {
-  min-height: 5em;
-  margin: 0 1em;
+  display: inline-block;
   position: relative;
-  height: auto;
-  width: auto;
-  min-width: 1.5em;
-  &.is-top{
-    @include status-icon-top;
-  }
-  &.is-bottom{
-    @include status-icon-bottom;
-  }
-  &.fa-layers-counter{
+  .icon {
+    background: v(color-secondary-03);
+    border-radius: 40px;
+    box-shadow: 0 0 0 1px v(color-secondary-01);
     display: inline-block;
-    height: auto;
-    margin: auto;
-    width: auto;
-    border: 10px solid v(color-secondary-01, $color-secondary-01);
+    font-size: v(font-size-scale-down-01);
+    font-weight: v(font-weight-semi-bold);
+    min-height: $badge-min;
+    min-width: $badge-min;
+    padding: 0 $spacer * 0.5;
     position: absolute;
-    padding: 10px;
-    border-radius: 70px;
-    min-width: 2.5em;
-    min-height: 2.5em;
     text-align: center;
-    vertical-align: middle;
-    line-height: v(font-line-height-medium,$font-line-height-medium);
+    top: 0;
+    z-index: 1;
+    @include icon {
+      --icon-size: v(icon-size-xs);
+      width: auto;
+    }
+    &:first-child {
+      right: calc(100% - #{$spacer * 1.5});
+    }
+    &:last-child {
+      left: calc(100% - #{$spacer * 1.5});
+    }
+    &:empty {
+      border-radius: 50%;
+      min-height: $badge-empty-min;
+      min-width: $badge-empty-min;
+      padding: 0;
+    }
   }
-  &.fa-layers-top-left{
-    left: -2px;
-    top: 2px;
+  .content {
+    display: inline-block;
   }
-  &.fa-layers-top-right{
-    right: -15px;
-    top: 4px;
+  &.is-bottom,
+  &.bottom,
+  &[bottom] {
+    .icon {
+      bottom: 0;
+      top: auto;
+    }
   }
-  &.fa-layers-bottom-left{
-    left: -5px;
-    bottom: 2px;
+  // Tamanhos
+  @each $key, $value in (medium: 1.5, large: 2.5) {
+    &.is-#{$key},
+    &.#{$key},
+    &[#{$key}] {
+      .icon {
+        transform: scale($value);
+        &:first-child {
+          right: calc(100% - #{$spacer * 1.75 * $value});
+        }
+        &:last-child {
+          left: calc(100% - #{$spacer * 1.75 * $value});
+        }
+        &:empty {
+          min-height: $badge-min * 0.75;
+          min-width: $badge-min * 0.75;
+        }
+      }
+    }
   }
-  &.fa-layers-bottom-right{
-    right: -5px;
-    bottom: 2px;
+  // Cores
+  @each $state in (success, warning, danger, info) {
+    &.is-#{$state},
+    &.#{$state},
+    &[#{$state}] {
+      .icon {
+        background: var(--color-#{$state});
+        @if $state != warning {
+          color: v(color-secondary-01);
+        }
+      }
+    }
   }
 }

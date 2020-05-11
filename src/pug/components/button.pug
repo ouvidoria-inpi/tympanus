@@ -1,12 +1,4 @@
 mixin button
-  - let className = attributes.class
-  - let accesskey = attributes.accesskey
-  - let disabled = attributes.disabled
-  button.br-button(
-    id=attributes.id
-    class=className ? className : ""
-    type="button"
-    accesskey=accesskey ? accesskey : false
-    disabled=disabled ? disabled : false)
+  button.br-button(type="button")&attributes(attributes)
     if block
       block

@@ -1,3 +1,7 @@
+[version]: # '2.0.0'
+
+---
+
 ### Estrutura
 
 O Tooltip é estruturado da seguinte forma:

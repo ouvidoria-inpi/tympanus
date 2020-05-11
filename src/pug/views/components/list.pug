@@ -2,336 +2,324 @@ extends ../../layouts/component
 
 append vars
   - var title = "List";
+  - var i = 0;
 
 append content
-  h1 Lists
-  p
-    | A lista simples é a lista padrão da marcação HTML para qualquer navegador web. Elas são úteis pela facilidade em criar um documento bem estruturado, e pelo fato de ser conhecida, pode possuir maior acessibilidade e melhor facilidade de manutenção.
-  h2 Lista simples
-  .row
-    div.engloba
-      div.br-list
-        h3.title Título da Lista
-        ul
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.text Texto de uma linha
-            div.icon
-              a.list-item(href="javascript:void(0)")
-                span.sr-only Link
-                i.fas.fa-chevron-right
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.text Texto de uma linha
-            div.icon
-              a.list-item(href="javascript:void(0)")
-                span.sr-only Link
-                i.fas.fa-chevron-right
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.text Texto de uma linha
-            div.icon
-              a.list-item(href="javascript:void(0)")
-                span.sr-only Link
-                i.fas.fa-chevron-right
-  h2 Lista simples com Clique
-  .row
-    div.engloba
-      div.br-list
-        h3.title Título da Lista
-        a.list-item
-          div.icon
-            i.fa-lg.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha
-          div.icon
-            i.fas.fa-chevron-right
-        a.list-item.is-selected
-          div.icon
-            i.fa-lg.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha (Estado Selecionado)
-          div.icon
-            i.fas.fa-chevron-right
-        a.list-item.is-disabled
-          div.icon
-            i.fa-lg.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha (Estado Desabilitado)
-          div.icon
-            i.fas.fa-chevron-right
-        a.list-item.dragged
-          div.icon
-            i.fa-lg.fas.fa-heartbeat
-          div.content
-            div.text Texto de uma linha (Estado Arrastado)
-          div.icon
-            i.fas.fa-chevron-right
-  h2 Lista Ordenada
-  .row
-    div.engloba
-      div.br-list
-        ol.is-simple
-          li Texto de uma linha
-          li Texto de uma linha
-            ol.br-list.is-simple
-              li Texto de uma linha
-              li Texto de uma linha
-          li Texto de uma linha
-  h2 Lista não Ordenada
-  .row
-    div.engloba
-      div.br-list
-        ul.is-simple
-          li Texto de uma linha
-          li Texto de uma linha
-            ul.br-list.is-simple
-              li Texto de uma linha
-              li Texto de uma linha
-          li Texto de uma linha
-  h2 Lista de Definição
-  .row
-    div.engloba
-      div.br-list
-        dl.is-simple
-          dt Texto de uma linha
-          dd Texto de uma linha
-          dt Texto de uma linha
-          dd Texto de uma linha
-          dt Texto de uma linha
-          dd Texto de uma linha
-  h2 Anatomia de uma Lista Complexa
-  .row
-    div.engloba
-      div.br-list
-        h3.title Título da Lista
-        ul
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.sub-title Subtítulo
-              div.text Texto de uma linha
-              div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-            div.icon
-              i.fas.fa-chevron-right
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.sub-title Subtítulo
-              div.text Texto de uma linha
-              div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-            div.icon
-              i.fas.fa-chevron-right
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.sub-title Subtítulo
-              div.text Texto de uma linha
-              div.text-sec Texto secundário Lorem Ipsum dolor sit amet
-            div.icon
-              i.fas.fa-chevron-right
-  h2 Lista Complexa
-  .row
-    div.engloba
-      div.br-list
-        div.header
-          h3.title Lista de E-mail
-          div.actions
-            button.br-button.is-circle.is-secondary(type="button")
-              i.fa-lg.fas.fa-sort-alpha-up
-            div.divider
-            button.br-button.is-circle.is-secondary(type="button")
-              i.fa-lg.fas.fa-search
-            button.br-button.is-circle.is-secondary(type="button")
-              i.fa-lg.fas.fa-ellipsis-v
-        ul
-          li.list-item.is-unread
-            div.icon.active
-              i.fa-lg.fas.fa-envelope
-            div.text Comunicação
-            div.content
-              div.sub-title Em tempo - Instabilidade
-              div.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus massa nisi, id efficitur tortor tincidunt rutrum.
-            div.text 08/04/2020
-          li.br-divider
-          li.list-item.is-unread
-            div.icon.active
-              i.fa-lg.fas.fa-calendar-check
-            div.text Comunicação
-            div.content
-              div.sub-title Em tempo - Instabilidade
-              div.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus massa nisi, id efficitur tortor tincidunt rutrum.
-            div.text 08/04/2020
-          li.br-divider
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-envelope-open
-            div.text Comunicação
-            div.content
-              div.sub-title Em tempo - Instabilidade
-              div.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus massa nisi, id efficitur tortor tincidunt rutrum.
-            div.text 08/04/2020
-  h2 Recursos Visuais
-  div.row
-    div.engloba
-      .col
-        div.br-list
-          h3.title Título da Lista
-          ul
-            li.list-item
-              div.icon
-                img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png",alt="Circle")
-              div.content
-                div.text Texto secundário
-              div.icon
-                i.fas.fa-cube
-        div.br-list
-          h3.title Título da Lista
-          ul
-            li.list-item
-              div.icon
-                img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/square1.png",alt="Square")
-              div.content
-                div.text Texto principal
-                div.text-sec Texto secundário
-        div.br-list
-          h3.title Título da Lista
-          ul
-            li.list-item
-              div.icon
-                img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png",alt="Rectangle")
-              div.content
-                div.text Texto secundário Lorem ipsum dolor sit amet consectetur
-              div.icon
-                a(href="#")
-                  span.sr-only Link
-                  i.fas.fa-chevron-right
-        div.br-list
-          h3.title Título da Lista
-          ul
-            li.list-item
-              div.icon
-                img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/rectangle.png",alt="Rectangle")
-              div.content
-                div.text Texto secundário
-              div.icon
-                a(href="#")
-                  span.sr-only Link
-                  i.fas.fa-chevron-right
-      .col
-        div.br-list
-          h3.title Título da Lista
-          ul
-            li.list-item
-              div.icon
-                i.fa-lg.fas.fa-heartbeat
-              div.content
-                div.text Texto de uma linha
-              div.icon
-                a(href="#")
-                  span.sr-only Link
-                  i.fas.fa-ellipsis-v
-        div.br-list
-          h3.title Título da Lista
-          ul
-            li.list-item
-              div.icon
-                img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/circle.png",alt="Circle")
-              div.content
-                div.text Texto de uma linha
-              div.icon
-                a(href="#")
-                  span.sr-only Link
-                  i.fas.fa-ellipsis-v
-        div.br-list
-          h3.title Título da Lista
-          ul
-            li.list-item
-              div.icon
-                i.fa-lg.fas.fa-heartbeat
-              div.content
-                div.text Texto principal
-                div.text-sec Texto secundário Lorem ipsum dolor sit amet consectetur
-        div.br-list
-          h3.title Título da Lista
-          ul
-            li.list-item
-              div.content
-                div.text Texto principal
-                div.text-sec Texto secundário
-              div.icon
-                div.headline meta
-                i.fas.fa-cube
-  h2 Lista com Collapse
-  .row
-    div.engloba
-      div.br-list
-        h3.title Título da Lista
-        ul
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.text Texto de uma linha (CLOSE)
-            div.icon
-              a.list-item(href="javascript:void(0)")
-                span.sr-only Link
-                i.fas.fa-chevron-down
-          li.list-item.is-open
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.text Texto de uma linha (OPEN)
-            div.icon
-              a.list-item(href="javascript:void(0)")
-                span.sr-only Link
-                i.fas.fa-chevron-down
-            ul.top-shadow.bottom-shadow
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-              li Texto de uma linha
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.text Texto de uma linha (CLOSE)
-            div.icon
-              a.list-item(href="javascript:void(0)")
-                span.sr-only Link
-                i.fas.fa-chevron-down
-          li.list-item
-            div.icon
-              i.fa-lg.fas.fa-heartbeat
-            div.content
-              div.text Texto de uma linha (CLOSE)
-            div.icon
-              a.list-item(href="javascript:void(0)")
-                span.sr-only Link
-                i.fas.fa-chevron-down
+  p.h2 Listas Simples
 
-append style
-  style.
-    .engloba {
-        align-items: flex-start;
-        display: flex!important;
-        flex-direction: row;
-        justify-content: center;
-    }
+  .row
+    .col-sm-6.col-md-4.col-xl-3
+      +list
+        ol
+          li Texto de uma linha
+          li
+            | Texto de uma linha
+            ol
+              li Texto de uma linha
+              li Texto de uma linha
+          li Texto de uma linha
+          //- - let i = 0;
+          //- while i < 10000
+          //-   li Texto de uma linha
+          //-   - i++
+    .col-sm-6.col-md-4.col-xl-3
+      hr.d-sm-none
+      +list
+        ul
+          li Texto de uma linha
+          li
+            | Texto de uma linha
+            ul
+              li Texto de uma linha
+              li Texto de uma linha
+          li Texto de uma linha
+    .col-sm.col-md-4.col-xl-3
+      hr.d-sm-none
+      +list
+        dl
+          dt Texto de uma linha
+          dd Texto de uma linha
+          dt Texto de uma linha
+          dd Texto de uma linha
+
+  p.h2 Lista Complexa
+
+  .row
+    .col-sm-4.col-lg-3
+      +list
+        +list-header("Itens de 1 linha sem separadores")
+        +list-item()(link)
+          .support
+            i.fas.fa-heartbeat
+          .content Texto de uma linha
+          .support
+            i.fas.fa-angle-right
+        +list-item()(link)
+          .support
+            i.fas.fa-heartbeat
+          .content Texto de uma linha
+          .support
+            i.fas.fa-angle-right
+        +list-item()(link)
+          .support
+            i.fas.fa-heartbeat
+          .content Texto de uma linha
+          .support
+            i.fas.fa-angle-right
+    .col-sm-4.col-lg-3.mt-5.mt-sm-0
+      +list()(checkable)
+        +list-header("Itens de 2 linhas com controles e separadores")
+        +list-item.two-lines.divider(disabled)
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .text Texto principal
+            .description Texto secundário
+          .support
+            +checkbox("")(id="checkbox-1" disabled)
+        +list-item.two-lines.divider
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .text Texto principal
+            .description Texto secundário
+          .support
+            +checkbox("")(id="checkbox-2")
+        +list-item.two-lines.selected
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .text Texto principal
+            .description Texto secundário
+          .support
+            +checkbox("")(id="checkbox-3" checked)
+    .col-sm-4.col-lg-3.mt-5.mt-sm-0
+      +list
+        +list-header("Items de 3 linhas com separadores")
+        +list-item.three-lines.divider
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .subtitle Subtítulo
+            .text Texto Principal
+            .description Texto secundário Lorem Ipsum dolor sit amet
+          .support meta
+        +list-item.three-lines.divider
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .subtitle Subtítulo
+            .text Texto Principal
+            .description Texto secundário Lorem Ipsum dolor sit amet
+          .support meta
+        +list-item.three-lines
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .subtitle Subtítulo
+            .text Texto Principal
+            .description Texto secundário Lorem Ipsum dolor sit amet
+          .support meta
+
+  .row.mt-5
+    .col-sm-4.col-lg-3
+      +list()(collapsible)
+        +list-header("Versão com expandir")
+        +list-item()(link)
+          .support: i.fas.fa-running
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+        +list-item()(link active)
+          .support: i.fas.fa-heartbeat
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-up
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+        +list-item()(link)
+          .support: i.fas.fa-burn
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+        +list-item()(link)
+          .support: i.fas.fa-globe
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+
+  p.h3 Versão com densidade
+
+  .row
+    .col-sm-4.col-lg-3
+      +list.condensed
+        +list-header("Itens de 1 linha sem separadores")
+        +list-item()(link)
+          .support
+            i.fas.fa-heartbeat
+          .content Texto de uma linha
+          .support
+            i.fas.fa-angle-right
+        +list-item()(link)
+          .support
+            i.fas.fa-heartbeat
+          .content Texto de uma linha
+          .support
+            i.fas.fa-angle-right
+        +list-item()(link)
+          .support
+            i.fas.fa-heartbeat
+          .content Texto de uma linha
+          .support
+            i.fas.fa-angle-right
+    .col-sm-4.col-lg-3.mt-5.mt-sm-0
+      +list.condensed
+        +list-header("Items de 3 linhas com separadores")
+        +list-item.three-lines.divider
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .subtitle Subtítulo
+            .text Texto Principal
+            .description Texto secundário Lorem Ipsum dolor sit amet
+          .support meta
+        +list-item.three-lines.divider
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .subtitle Subtítulo
+            .text Texto Principal
+            .description Texto secundário Lorem Ipsum dolor sit amet
+          .support meta
+        +list-item.three-lines
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .subtitle Subtítulo
+            .text Texto Principal
+            .description Texto secundário Lorem Ipsum dolor sit amet
+          .support meta
+    .col-sm-4.col-lg-3.mt-5.mt-sm-0
+      +list()(checkable).condensed
+        +list-header("Itens de 2 linhas com controles e separadores")
+        +list-item.two-lines.divider(disabled)
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .text Texto principal
+            .description Texto secundário
+          .support
+            +checkbox("")(id="checkbox-condensed-1" disabled)
+        +list-item.two-lines.divider
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .text Texto principal
+            .description Texto secundário
+          .support
+            +checkbox("")(id="checkbox-condensed-2")
+        +list-item.two-lines.selected
+          .support
+            i.fas.fa-heartbeat
+          .content
+            .text Texto principal
+            .description Texto secundário
+          .support
+            +checkbox("")(id="checkbox-condensed-3" checked)
+
+  p.h3 Exemplo complexo
+
+  +list
+    +list-header("Lista de E-mail")
+      .actions
+        +button()(tertiary circle mini)
+          i.fas.fa-sort-alpha-up
+        span.mx-3 |
+        +button()(tertiary circle mini)
+          i.fas.fa-search
+        +button()(tertiary circle mini)
+          i.fas.fa-ellipsis-v
+    +list-item()(link).two-lines.divider
+      .support: i.fas.fa-envelope-open.fa-lg.color-secondary-05
+      .content
+        .row.align-items-center
+          .col-4.col-sm-3.col-lg-2
+            .subtitle ALM SERPRO
+          .col-8.col-sm-9.col-lg-10
+            .subtitle [Item de Trabalho 1827328] Tarefa sobre componentes
+            .description IU da web https://alm.serpro/ccm/com/resource/itemName/com.ibm.team.workitem.WorItem/18289068 ID:18289068 Lorem ipsum dolor sit amet consectetur adipisicing elit 
+      .support 04 de nov
+    +list-item()(link).two-lines
+      .support: i.fas.fa-envelope-open.fa-lg.color-secondary-05
+      .content
+        .row.align-items-center
+          .col-4.col-sm-3.col-lg-2
+            .subtitle Comunicação
+          .col-8.col-sm-9.col-lg-10
+            .subtitle Aceitar: Primeira Leitura - 05/11/2019
+            .description
+              i.fas.fa-paperclip
+              |  A Supgp e a Supgd informam que o Siscopweb está instável, fazendo com que algumas ações fiquem com tempo de Lorem ipsum dolor sit amet consectetur adipisicing elit
+      .support 04 de nov
+    +list-item()(link).two-lines
+      .support: i.fas.fa-envelope.fa-lg.color-primary-default
+      .content
+        .row.align-items-center
+          .col-4.col-sm-3.col-lg-2
+            .subtitle: strong Comunicação
+          .col-8.col-sm-9.col-lg-10
+            .subtitle: strong Em Tempo - Instabilidade
+            .description A Supgp e a Supgd informam que o Siscopweb está instável, fazendo com que algumas ações fiquem com tempo de Lorem ipsum dolor sit amet consectetur adipisicing elit
+      .support seg, 12:34
+    +list-item()(link).two-lines.divider
+      .support: i.fas.fa-envelope-open.fa-lg.color-secondary-05
+      .content
+        .row.align-items-center
+          .col-4.col-sm-3.col-lg-2
+            .subtitle cronogramapg
+          .col-8.col-sm-9.col-lg-10
+            .subtitle
+              i.fas.fa-level-up-alt
+              |  [SGP] Último dia para programar férias, licença prêmio, alterar a opção de tíquete e validar cartão de Lorem ipsum dolor sit amet consectetur adipisicing elit
+            .description Prezado (a), Informamos que hoje é o último dia para que os empregados realizem sua programação de férias (período de Lorem ipsum dolor sit amet consectetur adipisicing elit)
+      .support 04 de nov
+    +list-item()(link).two-lines
+      .support: i.fas.fa-calendar-check.fa-lg.color-primary-default
+      .content
+        .row.align-items-center
+          .col-4.col-sm-3.col-lg-2
+            .subtitle: strong João Paulo Francisco Lorem ipsum
+          .col-8.col-sm-9.col-lg-10
+            .subtitle: strong Aceitar: Reunião sobre Design System
+            .description Bom dia Senhor Usuário! Nossa reunião foi marcada para amanhã. Para iniciarmos a reunião, entre na sala de número Lorem ipsum dolor sit amet consectetur adipisicing
+      .support seg. 10:12

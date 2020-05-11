@@ -33,6 +33,7 @@ $column-gap: 6px;
     }
     .br-button {
       border-color: transparent;
+      outline: none;
       &:hover {
         background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
         cursor: pointer;
@@ -81,6 +82,7 @@ $column-gap: 6px;
         .br-button {
           background-color: transparent;
           border-color: transparent;
+          outline: none;
           &:focus,
           &:hover {
             color: v(color-primary-default,$color-primary-default);
@@ -443,7 +445,7 @@ $column-gap: 6px;
         height: $column-height;
         th,
         td {
-          padding: $column-gap * 2;
+          // padding: $column-gap * 2;
           &:first-child {
             padding-left: $column-spacing * 1.33;
           }
@@ -541,6 +543,22 @@ $column-gap: 6px;
             th {
               top: $column-compact;
             }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    .responsive {
+      table {
+        thead {
+          tr {
+            height: 0;
+          }
+        }
+        tbody {
+          tr {
+            height: 100%;
           }
         }
       }
