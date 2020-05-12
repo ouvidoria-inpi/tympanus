@@ -1,13 +1,16 @@
-mixin accordeon
+mixin accordion
   - let className = attributes.class
-  - let componentClass = prefix + "accordeon"
+  - let componentClass = prefix + "accordion"
   - className = className ? componentClass + " " + className : componentClass
-  div(class=className)
+  div(class=className
+      negative=attributes.negative
+      single=attributes.single)
     if block
       block
 
-mixin accordeon-item(title="Título", className)
-  .item(class=className ? className : "")
+mixin accordion-item(title="Título", className)
+  .item(class=className ? className : ""
+        active=attributes.active)
     button.header(type="button")
       span.icon
         if className
