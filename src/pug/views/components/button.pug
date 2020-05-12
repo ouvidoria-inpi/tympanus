@@ -224,12 +224,14 @@ append content
       .col-sm-4.col-lg-auto.text-center.mt-3.mt-lg-0
           p.text-left.text-sm-center Progresso
           .mt-3
-              +button()(primary loading) Entrar
+              +button()(primary loading)
+              .sr-only Entrar
           .mt-3
-              +button()(secondary loading) Voltar
+              +button()(secondary loading)
+              .sr-only Voltar
           .mt-3
               +button()(loading)
-                  u Entrar
+              .sr-only Entrar
           //- .mt-3
           //-     +button()(loading)
           //-         i.fas.fa-sliders-h
@@ -238,7 +240,8 @@ append content
           //-     +button()(circle loading)
           //-         i.fas.fa-plus
           .mt-3
-              +button()(action loading) Solicitar
+              +button()(action loading)
+              .sr-only Solicitar
           .mt-3
               +button()(action circle loading)
                   i.fas.fa-plus
