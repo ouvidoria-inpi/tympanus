@@ -1,4 +1,4 @@
-[version]: # '1.0.0'
+[version]: # '1.0.1'
 
 ![Exemplo Loading](imagens/loading-types.png)
 
@@ -11,6 +11,7 @@ Utilizado com o objetivo de proporcionar feedback ao usuário durante algum proc
 ---
 
 ## Anatomia
+
 O loading é constituido por:
 
 **1 - Círculo dinâmico contínuo**
@@ -70,6 +71,7 @@ Este elemento compreende o `Componente Scrim` do tipo `Foco`, ou seja, com **40%
 ## Tipos
 
 #### Loading Determinado (Tamanho Único)
+
 Exibe quanto tempo uma operação vai demorar. Exibe uma progressão **percentual de 0 a 100**. Pode ser utilizado com ou sem o `Botão Cancelar`. Possui apenas um tamanho.
 
 ![Exemplo Loading Determinado](imagens/loading-types-determined.png)
@@ -81,6 +83,7 @@ Demonstra um tempo de espera não especificado. Exibe uma forma circular em movi
 ![Exemplo Loading Indeterminado](imagens/loading-types-indeterminated.png)
 
 #### Loading Indeterminado (Tamanho Pequeno)
+
 Possui a mesma finalidade e funcionamento do `Loading Indeterminado Tamanho Padrão`, porém seu uso é mais restrito, apenas dentro de outros componentes, onde o espaço é mais reduzido ou em situações em que se quer dar pouco destaque ao processamento. Também pode ser utilizado com ou sem o `Rótulo`.
 
 ![Exemplo Loading Indeterminado Pequeno](imagens/loading-types-indeterminated-small.png)
@@ -114,6 +117,7 @@ Neste caso utiliza-se o `Loading Indeterminado Tamanho Pequeno (24x24px)`. Geral
 ![Exemplo Tamanho menor](imagens/loading-indeterminated-small-behavior-sample.png)
 
 ###### No corpo da página
+
 Neste caso pode-se utilizar o `Loading Determinado` ou `Indeterminado` em seus tamanhos padrões `(44x44px, 84x84px)`, de acordo com o contexto e a necessidade. Pode ser usado em auxílio a um componente de upload ou para demonstrar o carregamento de um bloco ou área da página, como observado no exemplo abaixo.
 
 ![Exemplo Tamanho menor](imagens/loading-indeterminated-behavior-sample.png)
