@@ -14,7 +14,7 @@ Acompanhe a evolução dos componentes do Design System
 
 | Componente                               |  <div class="text-center">HTML/CSS</div>  | <div class="text-center">Documentação Desenvolvedor</div> | <div class="text-center">Documentação Design</div> |
 | ---------------------------------------- | :---------------------------------------: | :-------------------------------------------------------: | :------------------------------------------------: |
-| [Accordeon](/ds/componentes/accordeon)   | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
+| [Accordion](/ds/componentes/accordion)   | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
 | [Avatar](/ds/componentes/avatar)         | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
 | [Badge](/ds/componentes/badge)           | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |
 | [Breadcrumb](/ds/componentes/breadcrumb) | <i class="fas fa-check text-success"></i> |         <i class="fas fa-check text-success"></i>         |     <i class="fas fa-check text-success"></i>      |

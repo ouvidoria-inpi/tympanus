@@ -7,7 +7,7 @@
 ## Código básico
 
 ``` html
-<div class="br-input datepicker">
+<div class="br-input br-datepicker">
     <label for="picker">Data</label>
     <input id="picker" type="text" placeholder="dd/mm/aaaa" />
     <button id="picker-btn" class="icon">
@@ -31,7 +31,7 @@
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-input datepicker` : container do componente
+* `br-input br-datepicker` : container do componente
 * `<label>` : rótulo do input
 * `<input>` : caixa de entrada de dados
 * `<button>` : botão com ícone para o `<input>` 
@@ -47,7 +47,7 @@ Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](h
 Exemplo de uso:
 
 ``` html
-<div class="br-input datepicker">
+<div class="br-input br-datepicker">
     <label for="datepicker">Data</label>
     <input id="datepicker" type="text" />
     <button class="icon">
@@ -65,7 +65,7 @@ O texto de feedback deve ser inserido dentro de `message` .
 Exemplo de uso:
 
 ``` html
-<div class="br-input datepicker is-invalid">
+<div class="br-input br-datepicker is-invalid">
     <label for="date-feedback-invalid">Input com erro</label>
     <input id="date-feedback-invalid" type="text" />
     <button class="icon"><i class="fas fa-calendar-alt"></i></button>
@@ -83,7 +83,7 @@ Uma mensagem de ajuda PODE ser incluída. Ela deve ser inserida imediatamente ap
 Exemplo de uso:
 
 ``` html
-<div class="br-input datepicker">
+<div class="br-input br-datepicker">
     <label for="date-help">Label</label>
     <input id="date-help" type="text" placeholder="dd/mm/aaaa" />
     <button class="icon"><i class="fas fa-calendar-alt"></i></button>
@@ -110,7 +110,7 @@ O `feedback is-valid` deve ser incluído imediatamente após o componente com o 
 Exemplo de uso:
 
 ``` html
-<div class="br-input datepicker is-valid">
+<div class="br-input br-datepicker is-valid">
     <label for="valido">Válido</label>
     <input id="valido" type="text" placeholder="dd/mm/aaaa" />
     <button class="icon"><i class="fas fa-calendar-alt"></i></button>
@@ -132,7 +132,7 @@ Caso exista `help` ele deverá ficar após os `feedbacks` .
 Exemplo de uso:
 
 ``` html
-<div class="br-input datepicker is-invalid">
+<div class="br-input br-datepicker is-invalid">
     <label for="invalido">Inválido</label>
     <input id="invalido" type="text" placeholder="dd/mm/aaaa" />
     <button class="icon"><i class="fas fa-calendar-alt"></i></button>
@@ -157,9 +157,9 @@ DEVE ser aplicado diretamente usando o prefixo `is-` ao container do componente,
 Exemplo de uso:
 
 ``` html
-<div class="br-input datepicker is-disabled">
+<div class="br-input br-datepicker is-disabled">
     <label for="desabilitado">Desabilitado</label>
-    <input class="br-input datepicker" id="desabilitado" type="text" placeholder="dd/mm/aaaa" disabled />
+    <input class="br-input br-datepicker" id="desabilitado" type="text" placeholder="dd/mm/aaaa" disabled />
     <button class="icon"><i class="fas fa-calendar-alt"></i></button>
 </div>
 ```
@@ -170,12 +170,12 @@ Esse componente foi baseado no `js-datepicker` para uma documentação detalhada
 
 ## Inicialização do componente
 
-Importados os scripts das depedências do componente em sua página, no seu código javascript, deve-se criar uma constante ( `const` ) do tipo `datepicker` que referencia a `id` do campo `br-input datepicker` , além de vincular o `button` ao seu respectivo `datepicker` e ativar a máscara do input. Conforme exemplo a seguir:
+Importados os scripts das depedências do componente em sua página, no seu código javascript, deve-se criar uma constante ( `const` ) do tipo `datepicker` que referencia a `id` do campo `br-input br-datepicker` , além de vincular o `button` ao seu respectivo `datepicker` e ativar a máscara do input. Conforme exemplo a seguir:
 
 ### HTML:
 
 ``` html
-<div class="br-input datepicker">
+<div class="br-input br-datepicker">
     <label for="picker">Data</label>
     <input id="picker" type="text" placeholder="dd/mm/aaaa" />
     <button id="picker-btn" class="icon">
