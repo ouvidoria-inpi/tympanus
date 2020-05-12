@@ -1,9 +1,9 @@
 // Prefixo de uso nos componentes
-$prefix: "br-";
+$prefix: 'br-';
 
 // Tipos de displays
-$display-types: "block", "flex", "inline", "inline-block", "inline-flex";
-$display-prefix: "display-";
+$display-types: 'block', 'flex', 'inline', 'inline-block', 'inline-flex';
+$display-prefix: 'display-';
 
 // Classes de visibilidade (nome da classe, display)
 $visibilities: (visible, block), (hidden, none);
@@ -61,7 +61,7 @@ $button-circle-large: 64px;
 $checkbox-default: 24px;
 $checkbox-small: 20px;
 
-$input-default: 48px;
+$input-default: 40px;
 $input-medium: 40px;
 $input-small: 32px;
 

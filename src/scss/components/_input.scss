@@ -1,6 +1,9 @@
 .#{$prefix}input {
   position: relative;
-  margin-bottom: $spacer * 4;
+  label {
+    display: inline-block;
+    padding-bottom: $spacer * 0.5;
+  }
   input {
     @include input;
     &[disabled] {
@@ -18,6 +21,8 @@
       }
     }
   }
+  // TODO: Remover [1] após revisão do feedback e help
+  // 1 - temporário até remover feedback e help de dentro do input
   button {
     &.icon {
       background: transparent;
@@ -25,14 +30,13 @@
       bottom: 0;
       font-size: $input-font-size;
       height: $input-default;
-      line-height: $input-default;
       margin: 0;
       min-width: 0;
       padding: 0 ($spacer * 2);
       position: absolute;
       right: 0;
       width: auto;
-      top: 16px;
+      top: 1.5em; // 1
       color: v(color-primary-default);
       outline: none;
       img {
