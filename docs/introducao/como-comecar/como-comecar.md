@@ -1,6 +1,8 @@
-## Instalação através do <a href="https://nodejs.org/">NODE</a>
+## Instalação
 
-1. Faça o download do pacote NPM do DSGOV na seção [Downloads](/downloads) ou clique [aqui](/assets/design-system/assets/DSGOV_latest.zip).
+### Instalar manualmente
+
+1. Faça o download do pacote NPM do DSGOV na seção [Downloads](/downloads) ou clique [aqui](/assets/design-system/assets/npm-package/dsgov-latest.zip).
 
 2. Crie uma nova pasta para o seu projeto e coloque o arquivo **`dsgov-latest.tgz`** dentro dela. Caso já tenha um projeto em andamento coloque o arquivo na pasta raiz do seu projeto.
 
@@ -57,6 +59,25 @@ npm install dsgov-latest.tgz
 
 -   Na pasta **`node_modules/@govbr/dsgov/dist`** você encontra os arquivos **`dsgov.min.js`** e **`dsgov.min.css`** que podem ser utilizados no seu projeto.
 
+### Instalar usando 'npm install'
+
+Nosso pacote NPM está disponível apenas no [nexus.aic.serpro](http://nexus.aic.serpro/) que está disponível apenas para a rede interna do [SERPRO](https://www.serpro.gov.br/).
+
+Caso tenha acesso à rede do [SERPRO](https://www.serpro.gov.br/), siga os passos abaixo:
+
+1. Execute os comando abaixo no seu terminal:
+
+```node
+  npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/
+  npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
+```
+
+2. Instale o pacote do dsgov usando o comanndo:
+
+  ```node
+  npm install @govbr/dsgov
+  ```
+
 ## Template inicial
 
 A seguir temos um exemplo de um template inicial para utilização do DSGOV. Copie o template para um arquivo html e confira se os caminhos dos arquivos **`rawline.css`** e **`dsgov.min.css`** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **`dsgov.min.js`** confira se o caminho está correto de acordo com as pastas do seu projeto.
@@ -104,7 +125,10 @@ Se for implantar o seu projeto em produção é altamente recomendado que você 
 No exemplo acima do **`template inicial`** temos uma importação do arquivo **`rawline.css`** via CDN:
 
 ```html
-<link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"/>
+<link
+    rel="stylesheet"
+    href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+/>
 ```
 
 Se for utilizar esse template é recomendado baixar o arquivo CSS e as Fontes contidas nele e realizar a importação manual de cada uma para o seu projeto.
