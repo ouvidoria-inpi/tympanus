@@ -152,7 +152,7 @@ module.exports = {
     extensions: ['.js', '.scss'],
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
     // Extract our css to a separate css file
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',

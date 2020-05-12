@@ -1,3 +1,5 @@
+[version]: # '8.0.0'
+
 ![Paginacao](imagens/PaginacaoPadrao.png)
 
 ---

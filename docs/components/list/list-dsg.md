@@ -1,3 +1,5 @@
+[version]: # '2.0.0'
+
 ![Listas](imagens/Listas.png)
 
 ---
@@ -22,9 +24,9 @@ A lista simples é a lista padrão da marcação HTML para qualquer navegador we
 
 Existem três tipos de lista em HTML:
 
-* **Não ordenada**: utilizado para agrupar um conjunto de itens relacionados sem nenhuma ordem particular.
-* **Ordenada**: usada para agrupar um conjunto de itens relacionados a uma ordem específica.
-* **Definições**: usada para exibir termos e explicações dos termos.
+-   **Não ordenada**: utilizado para agrupar um conjunto de itens relacionados sem nenhuma ordem particular.
+-   **Ordenada**: usada para agrupar um conjunto de itens relacionados a uma ordem específica.
+-   **Definições**: usada para exibir termos e explicações dos termos.
 
 ![Lista Simples](imagens/Lista_Simples.png)
 
@@ -63,11 +65,9 @@ A lista Complexa permite o uso consistente de elementos gráficos, textuais e in
 Apesar de possuir uma altura padrão, seu contêiner pode pode sofrer alteração quando botões de ação são adicionados.
 
 ![Título Normal](imagens/Titulo_01.png)
-
 _Contêiner do título com altura padrão._
 
 ![Título Maior](imagens/Titulo_02.png)
-
 _Contêiner do título com altura maior para conter os botões de ação._
 
 ---
@@ -85,9 +85,9 @@ Eles podem ser divididos em 3 áreas:
 ![Áreas do Item](imagens/Item_Areas.png)
 
 Os itens podem possuir alturas variadas determinadas pela quantidade de linhas de conteúdo exibidos. Mas apesar dessa variação, **todos os itens de uma lista deve possuir as mesmas dimensões**, indepedente do comportamento aplicado. Devido a essa característica, podemos dividir os itens em 3 tipos, e isso se reflete para o tipo de Lista Complexa que será exibido na interface:
-**1 linha**: uma lista com itens de uma única linha com ícones e texto; 
-**2 linhas**: uma lista com itens de 2 linhas de texto; 
-**3 linhas**: uma lista com ítens de 3 linhas de texto; 
+**1 linha**: uma lista com itens de uma única linha com ícones e texto;
+**2 linhas**: uma lista com itens de 2 linhas de texto;
+**3 linhas**: uma lista com ítens de 3 linhas de texto;
 
 ![Alturas da Item](imagens/Item_Alturas.png)
 
@@ -101,9 +101,9 @@ Apartir dos itens com 2 linhas, podem ser utilizados 2 tipos de conteúdo na ár
 
 Existem 3 tipos de texto dentro de uma Lista Complexa, com suas funcionalidades baseada na ênfase dentro da lista:
 
-* **Subtítulo**: texto opcional que possui a maior enfase entre os textos. Deve ser usado somente quando há necessidade de ter um conteúdo com enfase maior que o texto principal.
-* **Principal**: texto obrigatório, onde o conteúdo principal da lista será exibido.
-* **Secundário**: texto opcional que possui a menor enfase entre os textos. Podem ser utilizados em até 2 linhas.
+-   **Subtítulo**: texto opcional que possui a maior enfase entre os textos. Deve ser usado somente quando há necessidade de ter um conteúdo com enfase maior que o texto principal.
+-   **Principal**: texto obrigatório, onde o conteúdo principal da lista será exibido.
+-   **Secundário**: texto opcional que possui a menor enfase entre os textos. Podem ser utilizados em até 2 linhas.
 
 ---
 
@@ -138,7 +138,6 @@ Controles são os componentes de [controle de seleção](#) que podem ser utiliz
 Os controles não podem ser utilizados em conjunto com qualquer outro recurso visual ou metadado em uma mesma área.
 
 ![Exemplo de Controles](imagens/Controles.png)
-
 _**Cuidado**: selecionar um controle de seleção não significa que o item da lista foi selecionado, e sim uma opção. Por tanto, o estado selecionado não precisa ser aplicado no item da lista._
 
 ---
@@ -168,7 +167,6 @@ As configuração de densidade de uma Lista, pode ser alterada manipulando a alt
 A altura mínima deve ser respeitada para cada caso. Veja [especificações](#) para maiores detalhes.
 
 ![Densidade](imagens/Item_Densidade.png)
-
 _Densidade mínima para 1 linha de texto é a única que possui distinção baseada no dispositivo utilizado_
 
 #### Responsividade
@@ -201,41 +199,20 @@ Utilize separadores ou elementos visuais (como uma sombra) para destacar estes n
 
 ## Lista com item de 1 Linha
 
-<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/" title="Spec">
-
-![1 Linha](imagens/Lista_1linha.png)
-
-</a>
+<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/" title="Spec">![1 Linha](imagens/Lista_1linha.png)</a>
 
 ## Lista com item de 2 Linhas
 
-<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/screen/8ac84e87-9b9d-43ec-9bc3-2911edea9f99/Listas-2-Linhas" title="Spec">
-
-![2 Linha](imagens/Lista_2linhas.png)
-
-</a>
+<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/screen/8ac84e87-9b9d-43ec-9bc3-2911edea9f99/Listas-2-Linhas" title="Spec">![2 Linha](imagens/Lista_2linhas.png)</a>
 
 ## Lista com item de 3 Linhas
 
-<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/screen/b0d1a894-5868-4db6-812e-c2c3b749c02f/Listas-3-Linhas" title="Spec">
-
-![3 Linha](imagens/Lista_3linhas.png)
-
-</a>
+<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/screen/b0d1a894-5868-4db6-812e-c2c3b749c02f/Listas-3-Linhas" title="Spec">![3 Linha](imagens/Lista_3linhas.png)</a>
 
 ## Estados dos itens
 
-<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/screen/c7858278-472f-48a1-9fb4-955bc5b4c970/Listas-Estados" title="Spec">
-
-![Estados](imagens/Item_Estados.png)
-
-</a>
+<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/screen/c7858278-472f-48a1-9fb4-955bc5b4c970/Listas-Estados" title="Spec">![Estados](imagens/Item_Estados.png)</a>
 
 ## Comportamento Expandir
 
-<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/screen/66936d23-ea43-4ae0-93d5-d69e382fb281/Listas-Expandir" title="Spec">
-
-![Expandir](imagens/Collapse_Separadores.png)
-
-</a>
-
+<a href="https://xd.adobe.com/view/c94553ea-d55e-448f-694f-d5d75bb3b577-bf74/screen/66936d23-ea43-4ae0-93d5-d69e382fb281/Listas-Expandir" title="Spec">![Expandir](imagens/Collapse_Separadores.png)</a>
