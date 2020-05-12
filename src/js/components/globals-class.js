@@ -1,4 +1,4 @@
-import BRAccordeon from './accordeon'
+import BRAccordion from './accordion'
 import BRDatepicker from './datepicker'
 import BRInput from './input'
 import BRAlert from './message'
@@ -20,7 +20,7 @@ export default class Globals {
   constructor() {}
 
   initInstanceAll() {
-    this.initInstanceAccordeon()
+    this.initInstanceAccordion()
     this.initInstanceMessage()
     this.initInstanceInput()
     this.initInstanceNavigation()
@@ -38,11 +38,11 @@ export default class Globals {
     this.initInstanceLoading()
   }
 
-  initInstanceAccordeon() {
-    let accordeonList = []
+  initInstanceAccordion() {
+    let accordionList = []
 
-    for ( let brAccordeon of window.document.querySelectorAll( '.br-accordeon' ) ) {
-      accordeonList.push( new BRAccordeon( 'br-accordeon', brAccordeon ) )
+    for ( let brAccordion of window.document.querySelectorAll( '.br-accordion' ) ) {
+      accordionList.push( new BRAccordion( 'br-accordion', brAccordion ) )
     }
   }
 
