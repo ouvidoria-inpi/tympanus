@@ -40,46 +40,38 @@ Demonstra um tempo de espera não especificado. Exibe uma forma circular em  mov
 ### Loading Indeterminado com Rótulo
 
 ```html
-<div class="br-loading" continuos>
-  <div class="spinner"></div>
-</div>
+<div loading md label></div>
 <span>Carregando...</span>
 ```
 
 ### Loading Indeterminado sem Rótulo
 
 ```html
-<div class="br-loading" continuos>
-  <div class="spinner"></div>
-</div>
+<div loading md></div>
 ```
 
 ### Loading Indeterminado Pequeno com Rótulo
 
 ```html
-<div class="br-loading" continuos sm>
-  <div class="spinner"></div>
-</div>
+<div loading label></div>
 <span>Carregando...</span>
 ```
 
 ### Loading Indeterminado Pequeno sem Rótulo
 
 ```html
-<div class="br-loading" continuos sm>
-  <div class="spinner"></div>
-</div>
+<div loading></div>
 ```
 
 ## Detalhamento
 
 O componente é composto dos seguintes elementos principais:
 
--   `.br-loading`: container do componente.
-    -   `progress`: atributo html utilizado para definir um loading do tipo progressivo com animação de valor determinado.
+-   `.br-loading`: container do componente loading Determinado.
     -   `data-progress`: atributo html utilizado para definir a porcentagem de carregamento de um loading determinado.Essa propriedade deve ser modificada dinamicamente para que o loading carregue até o valor desejado.
-    -   `continuos`: atributo html utilizado para defirnir um loading do tipo indeterminado com animação de rotação contínua.
-    -   `sm`: atributo html utilizada juntamente com a classe `.br-loading` para ativar um loading indeterminado de tamanho pequeno.
+-   `loading`: atributo html utilizado para definir um loading do tipo indeterminado com animação de rotação contínua. Pode ser aplicado em qualquer tag html.
+    - `md`: atributo html utilizado juntamente com o atributo `loading` para ativar um loading indeterminado de tamanho médio.
+    -   `label`: atributo html utilizado juntamente com o atributo `loading` para configurar um loading indeterminado com label.
 
 ## Regras especiais
 

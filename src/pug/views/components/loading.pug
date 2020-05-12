@@ -9,41 +9,43 @@ append content
     | Indicadores de progresso que expressam um tempo de espera não especificado ou exibem a duração de um processo.
   h2 Loading Determinado
   .row
-    .col-3.d-flex.justify-content-center.flex-column.align-items-center
+    .col-3.d-flex.justify-content-top.flex-column.align-items-center
       span Loading Determinado com Botão
-      .br-loading(data-progress="75")(progress)
+      .br-loading(data-progress="75")
         .br-loading-mask(full)
           .br-loading-fill
         .br-loading-mask
           .br-loading-fill
       button.br-button.is-tertiary(type="button") Cancelar
-    .col-3.d-flex.justify-content-center.flex-column.align-items-center
+    .col-3.d-flex.justify-content-top.flex-column.align-items-center
       span Loading Determinado sem Botão
-      .br-loading(data-progress="90")(progress)
+      .br-loading(data-progress="90")
         .br-loading-mask(full)
           .br-loading-fill
         .br-loading-mask
           .br-loading-fill
   h2 Loading Indeterminado
   .row
-    .col-3.d-flex.justify-content-center.flex-column.align-items-center
+    .col-3.d-flex.justify-content-top.flex-column.align-items-center
       span Loading Indeterminado com Rótulo
-      .br-loading(continuos)
-        .spinner
+      br
+      div(loading md label)
       span Carregando...
-    .col-3.d-flex.justify-content-center.flex-column.align-items-center
+    .col-3.d-flex.justify-content-top.flex-column.align-items-center
       span Loading Indeterminado sem Rótulo
-      .br-loading(continuos)
-        .spinner
+      br
+      br
+      div(loading md)
   .br-divider
   .row
-    .col-3.d-flex.justify-content-center.flex-column.align-items-center
+    .col-3.d-flex.justify-content-top.flex-column.align-items-center
       span Loading Indeterminado Pequeno com Rótulo
+      br
       .d-flex.align-items-center
-        .br-loading(continuos)(sm)
-          .spinner
+        div(loading label)
         span Carregando...
-    .col-3.d-flex.justify-content-center.flex-column.align-items-center
+    .col-3.d-flex.justify-content-top.flex-column.align-items-center
       span Loading Indeterminado Pequeno sem Rótulo
-      .br-loading(continuos)(sm)
-        .spinner
+      br
+      br
+      div(loading)
