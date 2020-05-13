@@ -119,7 +119,7 @@ Existem atributos que podem ser declarados para controlar se os tooltips devem a
 * `timer` : atributo que determina após quantos milisegundos o tooltip deve ser automaticamente ocultado; 
 
 ``` html
-<div class="br-tooltip is-info" place="right" timer="8000" active="true">
+<div class="br-tooltip is-info" place="right" timer="8000" active>
     <span class="text">Fulano de Tal da Silva</span>
     <span class="subtext">Diretor Presidente</span>
 </div>

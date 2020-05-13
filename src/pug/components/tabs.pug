@@ -30,6 +30,8 @@ mixin tab-item(title="aba")
     li.tab-item(class=attributes.class)
       button(type="button" data-panel=attributes.panel)
         span.name=attributes.title
+          if block
+            block
       if attributes.count
         span.results ( #{attributes.count} )
 

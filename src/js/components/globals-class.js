@@ -12,6 +12,7 @@ import BRTable from './table'
 import BRScrim from './scrim'
 import BRModal from './modal'
 import BRTooltip from './tooltip'
+import BRNotification from './notification'
 import BRList from './list'
 import BRBreadcrumb from './breadcrumb'
 import BRWizard from './wizard'
@@ -32,6 +33,7 @@ export default class Globals {
     this.initInstanceScrim()
     this.initInstanceModal()
     this.initInstanceTooltip()
+    this.initInstanceNotification()
     this.initInstanceList()
     this.initInstanceBreadcrumb()
     this.initInstanceWizard()
@@ -412,6 +414,13 @@ export default class Globals {
     let tooltipList = []
     for ( let brTooltip of window.document.querySelectorAll( '.br-tooltip' ) ) {
       tooltipList.push( new BRTooltip( 'br-tooltip', brTooltip ) )
+    }
+  }
+
+  initInstanceNotification() {
+    let notificationList = []
+    for (let brNotification of window.document.querySelectorAll( ".br-notification")) {
+      notificationList.push( new BRNotification( 'br-notification', brNotification ))
     }
   }
 

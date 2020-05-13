@@ -152,6 +152,10 @@
         "filename": "modal"
       },
       {
+        "label": "Notification",
+        "filename": "notification"
+      },
+      {
         "label": "Pagination",
         "filename": "pagination"
       },

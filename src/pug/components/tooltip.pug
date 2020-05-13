@@ -1,15 +1,7 @@
-mixin tooltip(label="Título", labelClass, place="top", popover="false", active="false")
-  - let className = attributes.class
-  - let componentClass = prefix + "tooltip"
-  - className = className ? componentClass + " " + className : componentClass
-  - className = attributes.popover ? className  + " is-popover" : className
-  div(
-    id=attributes.id
-    place=attributes.place
-    timer=attributes.timer
-    active=attributes.active
-    class=className)
-    if (attributes.popover)
+mixin tooltip(label)
+  - let className = attributes.notification ? prefix + "notification" : prefix + "tooltip"
+  div(class=className)&attributes(attributes)
+    if (attributes.popover || attributes.notification)
       if block
         block
     else  
