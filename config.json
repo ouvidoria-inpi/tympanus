@@ -148,6 +148,10 @@
         "filename": "message"
       },
       {
+        "label": "Menu",
+        "filename": "menu"
+      },
+      {
         "label": "Modal",
         "filename": "modal"
       },

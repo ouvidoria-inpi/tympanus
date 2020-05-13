@@ -1,0 +1,951 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Menu";
+
+append content
+  .row
+    .col-sm-6.col-lg-4.col-xl-3
+      .br-menu
+        nav.folders
+          //- Fechar Menu
+          .close-menu
+            +button()(circle mini)
+              i.fas.fa-times
+          //- Menu gov.br
+          .folder
+            a.header.logo()
+              .content
+                img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbr.svg" alt="gov.br")
+              .support
+                i.fas.fa-angle-down
+            ul()
+              li
+                a.item()
+                  .content Serviços
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Buscar serviços por
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Categorias
+                      li
+                        a.item()
+                          .content Órgãos
+                      li
+                        a.item()
+                          .content Estados
+                  li
+                    a.item()
+                      .content Serviços por público alvo
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Cidadãos
+                      li
+                        a.item()
+                          .content Empresas
+                      li
+                        a.item()
+                          .content Órgãos e Entidades Públicas
+                      li
+                        a.item()
+                          .content Demais segmentos (ONGs, Organizações Socias, etc)
+              li
+                a.item()
+                  .content Galeria de Aplicativos
+              li
+                a.item()
+                  .content Notícias
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Últimas notícias
+                  li
+                    a.item()
+                      .content Ações 2019
+                  li
+                    a.item()
+                      .content Saúde
+                  li
+                    a.item()
+                      .content Agricultura e Pecuária
+                  li
+                    a.item()
+                      .content Cidadania e Assitência Social
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Cidadania e Assitência Social
+                  li
+                    a.item()
+                      .content Cultura e Esporte
+                  li
+                    a.item()
+                      .content Economia e Gestão Pública
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content 300 dias
+                      li
+                        a.item()
+                          .content 400 dias
+                  li
+                    a.item()
+                      .content Educação e Pesquisa
+                  li
+                    a.item()
+                      .content Energia
+                  li
+                    a.item()
+                      .content Infraestrura
+                  li
+                    a.item()
+                      .content Justiça e Segurança
+                  li
+                    a.item()
+                      .content Meio Ambiente
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Operação Verde Brasil
+                  li
+                    a.item()
+                      .content Trabalho e Previdência
+                  li
+                    a.item()
+                      .content Turismo
+              li
+                a.item()
+                  .content Acompanhe o Planalto
+              li
+                a.item()
+                  .content Canais do Poder Executivo Federal
+              li
+                a.item()
+                  .content Navegação
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Acessibilidade
+                  li
+                    a.item()
+                      .content Mapa do Site
+                  li
+                    a.item()
+                      .content Termos de Uso
+                  li
+                    a.item()
+                      .content Sobre o gov.br
+              li
+                a.item()
+                  .content Acesse sua conta gov.br
+              li
+                a.item()
+                  .content Guia de Edição de Serviços do gov.br
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Informações Básicas
+                  li
+                    a.item()
+                      .content O que é um serviço público
+                  li
+                    a.item()
+                      .content Cadastrando e Editando Serviços
+                  li
+                    a.item()
+                      .content Escrevendo para o seu usuário
+                  li
+                    a.item()
+                      .content Publicações e Cursos
+              li
+                a.item()
+                  .content Órgãos do Governo
+              li
+                a.item()
+                  .content Todos por todos
+          //- Menu principal
+          .folder
+            a.header()
+              .content Planalto
+              .support
+                i.fas.fa-angle-down
+            ul
+              li
+                a.item()
+                  .content Acompanhe o Planalto
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Notícias
+                  li
+                    a.item()
+                      .content Agenda do Presidente
+                  li
+                    a.item()
+                      .content Agenda do Presidente em exercício
+                  li
+                    a.item()
+                      .content Discursos
+                  li
+                    a.item()
+                      .content Pronunciamentos
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Pronunciamentos do Presidente da República
+                  li
+                    a.item()
+                      .content Notas Oficiais
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content 2019
+                      li
+                        a.item()
+                          .content 2020
+                  li
+                    a.item()
+                      .content Notas e Comunicados
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Boletins
+                      li
+                        a.item()
+                          .content Nota à imprensa
+                  li
+                    a.item()
+                      .content Entrevistas
+                  li
+                    a.item(disabled)
+                      .content Foto Oficial
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Fotos
+                  li
+                    a.item()
+                      .content Área de Imprensa
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Contatos dos Assessores de Imprensa e Comunicação do Governo
+                      li
+                        a.item()
+                          .content Sobre a Secretaria de Imprensa
+                      li
+                        a.item()
+                          .content Credenciamento de Imprensa
+                  li
+                    a.item()
+                      .content Porta-voz
+                  li
+                    a.item()
+                      .content Whatsapp
+              li
+                a.item()
+                  .content Conheça a Presidência
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Biografia do Presidente
+                  li
+                    a.item()
+                      .content Biografia do Vice Presidente
+                  li
+                    a.item()
+                      .content Palácios e Residências
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Palácio do Planalto
+                      li
+                        a.item()
+                          .content Palácio da Alvorada
+                      li
+                        a.item()
+                          .content Granja do Torto
+                      li
+                        a.item()
+                          .content Programas de visitação
+                      li
+                        a.item()
+                          .content Palácio do Jaburu
+                      li
+                        a.item()
+                          .content Palácio do Jaburu - old
+                  li
+                    a.item()
+                      .content Agende sua visita ao Palácio do Planalto
+                  li
+                    a.item()
+                      .content Ritos e Solenidades
+                  li
+                    a.item()
+                      .content Principais Tropas
+                  li
+                    a.item()
+                      .content Acervo
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Símbolos Nacionais
+                      li
+                        a.item()
+                          .content Constituição Federal
+                      li
+                        a.item()
+                          .content Legislação
+                      li
+                        a.item()
+                          .content Galeria de Presidentes
+                      li
+                        a.item()
+                          .content Biblioteca da Presidência
+                  li
+                    a.item()
+                      .content Ministros
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Casa Civil da Presidência da República
+                      li
+                        a.item()
+                          .content Secretaria de Governo da Presidência da República
+                      li
+                        a.item()
+                          .content Gabinete de Segurança Institucional
+                      li
+                        a.item()
+                          .content Ministério da Justiça e Segurança Pública
+                      li
+                        a.item()
+                          .content Ministério da Defesa
+                      li
+                        a.item()
+                          .content Ministério das Relações Exteriores
+                      li
+                        a.item()
+                          .content Ministério da Economia
+                      li
+                        a.item()
+                          .content Ministério da Infraestrutura
+                      li
+                        a.item()
+                          .content Ministério da Agricultura
+                      li
+                        a.item()
+                          .content Ministério da Educação
+                      li
+                        a.item()
+                          .content Ministério da Infraestrutura
+                      li
+                        a.item()
+                          .content Ministério da Mulher, Família e Direitos Humanos
+                      li
+                        a.item()
+                          .content Ministério da Cidadania
+                      li
+                        a.item()
+                          .content Ministério da Saúde
+                      li
+                        a.item()
+                          .content Ministério da Minas e Energia
+                      li
+                        a.item()
+                          .content Ministério da Ciência, Tecnologia, Inovações e Comunicações
+                      li
+                        a.item()
+                          .content Ministério do Meio Ambiente
+                      li
+                        a.item()
+                          .content Ministério do Turismo
+                      li
+                        a.item()
+                          .content Ministério do Desenvolvimento Regional
+                      li
+                        a.item()
+                          .content Controladoria-Geral da União (CGU)
+                      li
+                        a.item()
+                          .content Advocacia-Geral da União (AGU)
+                      li
+                        a.item()
+                          .content Banco Central
+                      li
+                        a.item()
+                          .content Secretaria-Geral da Presidência da República
+                  li
+                    a.item()
+                      .content Presentes recebidos pelo Presidente da República
+              li
+                a.item()
+                  .content Mensagem presidencial
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Inicial
+                  li
+                    a.item()
+                      .content Estado melhor
+                  li
+                    a.item()
+                      .content Políticas melhores
+                  li
+                    a.item()
+                      .content Resultados melhores
+              li
+                a.item()
+                  .content Vice-Presidência
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Agenda Vice-Presidente
+                  li
+                    a.item()
+                      .content Agendas do Gabinete Pessoal da Vice-Presidência
+                  li
+                    a.item()
+                      .content CNAL
+                  li
+                    a.item()
+                      .content Notícias
+                  li
+                    a.item()
+                      .content Artigos
+                  li
+                    a.item()
+                      .content Discursos e Pronunciamentos
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Discurso do presidente da República em exercício, Hamilton Mourão, durante evento dos 356 anos dos Correios e homenagem ao Dia do Carteiro
+                  li
+                    a.item()
+                      .content Agenda Atribuições
+              li
+                a.item()
+                  .content Acesso à Informação
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Institucional
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Estrutura da Presidência
+                      li
+                        a.item()
+                          .content Atribuições do Gabinete Pessoal
+                      li
+                        a.item()
+                          .content Horários de atendimento do órgão
+                      li
+                        a.item()
+                          .content Presidência
+                      li
+                        a.item()
+                          .content Comitê de Governança Digital
+                  li
+                    a.item()
+                      .content Ações e Programas
+                  li
+                    a.item()
+                      .content Dados abertos
+                  li
+                    a.item()
+                      .content Auditorias
+                  li
+                    a.item()
+                      .content Convênios
+                  li
+                    a.item()
+                      .content Despesas
+                  li
+                    a.item()
+                      .content Licitações e contratos
+                  li
+                    a.item()
+                      .content Servidores
+                  li
+                    a.item()
+                      .content Informações Classificadas
+                  li
+                    a.item()
+                      .content Serviços de Informação ao Cidadão
+              li
+                a.item()
+                  .content Centrais de Conteúdo
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Imagens
+                  li
+                    a.item()
+                      .content Videos
+                  li
+                    a.item()
+                      .content Áudios
+              li
+                a.item()
+                  .content Fale Conosco
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Fale com o Presidente
+                  li
+                    a.item()
+                      .content Ouvidoria
+        footer.footer
+          .footer-block
+            .title Acesso Rápido
+            .content
+              a.item()
+                | Órgãos do Governo
+                i.fas.fa-external-link-square-alt
+              a.ml-3()
+                | Legislação
+                i.fas.fa-external-link-square-alt
+          .footer-block
+            .title Redes Sociais
+            .content
+              +button()(circle)
+                img(src="https://picsum.photos/id/1/200" alt="Redes Sociais")
+              +button()(circle)
+                img(src="https://picsum.photos/id/10/200" alt="Redes Sociais")
+              +button()(circle)
+                img(src="https://picsum.photos/id/1001/200" alt="Redes Sociais")
+              +button()(circle)
+                img(src="https://picsum.photos/id/1002/200" alt="Redes Sociais")
+    .col
+      p.h2 Exemplo de Menu Principal
+
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequuntur ratione suscipit voluptatem reprehenderit aut recusandae autem voluptas quo nulla tenetur, quos a dolores enim ad, cum, eius et odio!
+  hr
+  .row
+    .col-sm-6.col-lg-4.col-xl-3
+      .br-menu
+        nav.folders
+          //- Menu Auxiliar
+          .folder
+            ul
+              li
+                a.item()
+                  .content Acompanhe o Planalto
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Notícias
+                  li
+                    a.item()
+                      .content Agenda do Presidente
+                  li
+                    a.item()
+                      .content Agenda do Presidente em exercício
+                  li
+                    a.item()
+                      .content Discursos
+                  li
+                    a.item()
+                      .content Pronunciamentos
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Pronunciamentos do Presidente da República
+                  li
+                    a.item()
+                      .content Notas Oficiais
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content 2019
+                      li
+                        a.item()
+                          .content 2020
+                  li
+                    a.item()
+                      .content Notas e Comunicados
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Boletins
+                      li
+                        a.item()
+                          .content Nota à imprensa
+                  li
+                    a.item()
+                      .content Entrevistas
+                  li
+                    a.item()
+                      .content Foto Oficial
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Fotos
+                  li
+                    a.item()
+                      .content Área de Imprensa
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Contatos dos Assessores de Imprensa e Comunicação do Governo
+                      li
+                        a.item()
+                          .content Sobre a Secretaria de Imprensa
+                      li
+                        a.item()
+                          .content Credenciamento de Imprensa
+                  li
+                    a.item()
+                      .content Porta-voz
+                  li
+                    a.item()
+                      .content Whatsapp
+              li
+                a.item()
+                  .content Conheça a Presidência
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Biografia do Presidente
+                  li
+                    a.item()
+                      .content Biografia do Vice Presidente
+                  li
+                    a.item()
+                      .content Palácios e Residências
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Palácio do Planalto
+                      li
+                        a.item()
+                          .content Palácio da Alvorada
+                      li
+                        a.item()
+                          .content Granja do Torto
+                      li
+                        a.item()
+                          .content Programas de visitação
+                      li
+                        a.item()
+                          .content Palácio do Jaburu
+                      li
+                        a.item()
+                          .content Palácio do Jaburu - old
+                  li
+                    a.item()
+                      .content Agende sua visita ao Palácio do Planalto
+                  li
+                    a.item()
+                      .content Ritos e Solenidades
+                  li
+                    a.item()
+                      .content Principais Tropas
+                  li
+                    a.item()
+                      .content Acervo
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Símbolos Nacionais
+                      li
+                        a.item()
+                          .content Constituição Federal
+                      li
+                        a.item()
+                          .content Legislação
+                      li
+                        a.item()
+                          .content Galeria de Presidentes
+                      li
+                        a.item()
+                          .content Biblioteca da Presidência
+                  li
+                    a.item()
+                      .content Ministros
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Casa Civil da Presidência da República
+                      li
+                        a.item()
+                          .content Secretaria de Governo da Presidência da República
+                      li
+                        a.item()
+                          .content Gabinete de Segurança Institucional
+                      li
+                        a.item()
+                          .content Ministério da Justiça e Segurança Pública
+                      li
+                        a.item()
+                          .content Ministério da Defesa
+                      li
+                        a.item()
+                          .content Ministério das Relações Exteriores
+                      li
+                        a.item()
+                          .content Ministério da Economia
+                      li
+                        a.item()
+                          .content Ministério da Infraestrutura
+                      li
+                        a.item()
+                          .content Ministério da Agricultura
+                      li
+                        a.item()
+                          .content Ministério da Educação
+                      li
+                        a.item()
+                          .content Ministério da Infraestrutura
+                      li
+                        a.item()
+                          .content Ministério da Mulher, Família e Direitos Humanos
+                      li
+                        a.item()
+                          .content Ministério da Cidadania
+                      li
+                        a.item()
+                          .content Ministério da Saúde
+                      li
+                        a.item()
+                          .content Ministério da Minas e Energia
+                      li
+                        a.item()
+                          .content Ministério da Ciência, Tecnologia, Inovações e Comunicações
+                      li
+                        a.item()
+                          .content Ministério do Meio Ambiente
+                      li
+                        a.item()
+                          .content Ministério do Turismo
+                      li
+                        a.item()
+                          .content Ministério do Desenvolvimento Regional
+                      li
+                        a.item()
+                          .content Controladoria-Geral da União (CGU)
+                      li
+                        a.item()
+                          .content Advocacia-Geral da União (AGU)
+                      li
+                        a.item()
+                          .content Banco Central
+                      li
+                        a.item()
+                          .content Secretaria-Geral da Presidência da República
+                  li
+                    a.item()
+                      .content Presentes recebidos pelo Presidente da República
+              li
+                a.item()
+                  .content Mensagem presidencial
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Inicial
+                  li
+                    a.item()
+                      .content Estado melhor
+                  li
+                    a.item()
+                      .content Políticas melhores
+                  li
+                    a.item()
+                      .content Resultados melhores
+              li
+                a.item()
+                  .content Vice-Presidência
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Agenda Vice-Presidente
+                  li
+                    a.item()
+                      .content Agendas do Gabinete Pessoal da Vice-Presidência
+                  li
+                    a.item()
+                      .content CNAL
+                  li
+                    a.item()
+                      .content Notícias
+                  li
+                    a.item()
+                      .content Artigos
+                  li
+                    a.item()
+                      .content Discursos e Pronunciamentos
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Discurso do presidente da República em exercício, Hamilton Mourão, durante evento dos 356 anos dos Correios e homenagem ao Dia do Carteiro
+                  li
+                    a.item()
+                      .content Agenda Atribuições
+              li
+                a.item()
+                  .content Acesso à Informação
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item(disabled)
+                      .content Institucional
+                      .support
+                        i.fas.fa-angle-right
+                    ul
+                      li
+                        a.item()
+                          .content Estrutura da Presidência
+                      li
+                        a.item()
+                          .content Atribuições do Gabinete Pessoal
+                      li
+                        a.item()
+                          .content Horários de atendimento do órgão
+                      li
+                        a.item()
+                          .content Presidência
+                      li
+                        a.item()
+                          .content Comitê de Governança Digital
+                  li
+                    a.item()
+                      .content Ações e Programas
+                  li
+                    a.item()
+                      .content Dados abertos
+                  li
+                    a.item()
+                      .content Auditorias
+                  li
+                    a.item()
+                      .content Convênios
+                  li
+                    a.item()
+                      .content Despesas
+                  li
+                    a.item()
+                      .content Licitações e contratos
+                  li
+                    a.item()
+                      .content Servidores
+                  li
+                    a.item()
+                      .content Informações Classificadas
+                  li
+                    a.item()
+                      .content Serviços de Informação ao Cidadão
+              li
+                a.item()
+                  .content Centrais de Conteúdo
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Imagens
+                  li
+                    a.item()
+                      .content Videos
+                  li
+                    a.item()
+                      .content Áudios
+              li
+                a.item()
+                  .content Fale Conosco
+                  .support
+                    i.fas.fa-angle-right
+                ul()
+                  li
+                    a.item()
+                      .content Fale com o Presidente
+                  li
+                    a.item()
+                      .content Ouvidoria
+    .col
+      p.h2 Exemplo de Menu Auxiliar
+
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo sit maiores, nesciunt magni consequuntur temporibus assumenda harum cum aliquam voluptates magnam at repudiandae sed perferendis aliquid, error, odit esse distinctio!

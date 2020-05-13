@@ -13,6 +13,7 @@ import BRScrim from './scrim'
 import BRModal from './modal'
 import BRTooltip from './tooltip'
 import BRList from './list'
+import BRMenu from './menu'
 import BRBreadcrumb from './breadcrumb'
 import BRWizard from './wizard'
 
@@ -33,6 +34,7 @@ export default class Globals {
     this.initInstanceModal()
     this.initInstanceTooltip()
     this.initInstanceList()
+    this.initInstanceMenu()
     this.initInstanceBreadcrumb()
     this.initInstanceWizard()
     this.initInstanceLoading()
@@ -417,9 +419,19 @@ export default class Globals {
 
   initInstanceList() {
     let listList = []
-    for (let brList of window.document.querySelectorAll( ".br-list[accordion]")) {
-      listList.push(new BRList('br-list', brList ))
-    } 
+    for (let brList of window.document.querySelectorAll( ".br-list[collapsible]")) {
+      listList.push(new BRList('br-list-collapsible', brList ))
+    }
+    for (let brList of window.document.querySelectorAll( ".br-list[checkable]")) {
+      listList.push(new BRList('br-list-checkable', brList ))
+    }
+  }
+
+  initInstanceMenu(){
+    let menuList = []
+    for (let brMenu of window.document.querySelectorAll( ".br-menu")) {
+      menuList.push(new BRMenu('br-menu', brMenu ))
+    }
   }
 
   initInstanceTagInput() {
