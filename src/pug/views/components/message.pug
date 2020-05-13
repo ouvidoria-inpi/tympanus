@@ -20,42 +20,46 @@ append content
     strong Informação.
     span  Mensagem. 
     a(href="javascript:void(0)") Exemplo de link
+  +message("hint")
+    strong Mensagem Complementar.
+    p Os arquivos devem ser no formatos PNG, JPG, PDF e ter no máximo 1G.
   .row
-    .col
+    .col-md-12
       +message("is-danger")
         p
           strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           br
           | Voluptatum, illo totam. A neque iusto dolores rem assumenda? Officiis error inventore laudantium quam vel illum nemo nesciunt accusamus. Dolore, aliquid assumenda.
-        p
-          strong Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          br
           | Ad fuga quod odio laborum sequi aspernatur ut nulla molestiae? Officiis earum, expedita amet optio ex necessitatibus voluptatem sequi accusamus numquam suscipit.
       +message("is-success")
         p
           strong Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           br
           | Omnis quae laudantium error explicabo amet. Dicta provident sit tempore sed incidunt reprehenderit aliquam iusto, rem architecto quibusdam tempora animi. Odio, ipsa.
-        p
-          strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          br
           | Exercitationem itaque beatae maxime repudiandae, consequuntur odio necessitatibus facilis nesciunt dicta in id error autem saepe fugiat laboriosam atque nisi dolor? Rem.
-    .col
+    .col-md-12
       +message("is-warning")
         p
           strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           br
           | Architecto quasi ex ipsa ipsum in iure quaerat harum, iusto enim, perferendis, accusamus et asperiores cum quis totam modi natus illo esse.
-        p
-          strong Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          br
           | Hic quam tenetur consequatur ipsam, facere molestias mollitia officia possimus voluptas provident corrupti culpa ullam quo voluptate! Iusto nesciunt temporibus adipisci aut.
       +message("is-info")
         p
           strong Lorem ipsum dolor sit amet consectetur adipisicing elit.
           br
           | Iste aperiam accusamus fugit itaque ullam temporibus quasi voluptatem ea officia architecto cupiditate qui libero numquam neque, et cumque porro molestiae enim.
-        p
-          strong Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          br
           | Rem minus dolorum hic, molestias cumque adipisci eos voluptatum mollitia accusantium distinctio nihil sint laboriosam, repudiandae fugit culpa enim asperiores ea labore!
+          
+  .row
+    .col-sm
+      .mb-3
+        +input("Desativado")(id="desativado" type="text" class="is-disabled" placeholder="Insira um texto" disabled)
+        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
+      .mb-3
+        +input("Inválido")(id="invalid" class="is-invalid" placeholder="Insira um texto")
+        +feedback("fa-times-circle", "Texto inválido")(class="is-invalid")
+      .mb-3
+        +input("Válido")(id="valid" class="is-valid" placeholder="Insira um texto")
+        +feedback("fa-check-circle", "Texto válido")(class="is-valid")
+
