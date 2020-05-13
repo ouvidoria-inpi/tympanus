@@ -1,5 +1,4 @@
 import { createPopper } from '@popperjs/core';
-import { isNumber } from 'util';
 class BRTooltip {
 
   constructor ( name, component ) {
@@ -8,25 +7,28 @@ class BRTooltip {
     this.activator = component.previousSibling.previousSibling;
     const place = component.getAttribute("place");
     const positions = ["top",  "right", "bottom", "left"];
-    this.placement = positions.includes(place) ? place : "top";
-    this.popover = this.component.classList.contains( "is-popover" ) ;
+    this.popover = component.hasAttribute("popover");
+    this.notification = component.classList.contains("br-notification"); 
     this.timer = component.getAttribute("timer");
-    this.active = component.getAttribute("active");
+    this.active = component.hasAttribute("active");
+    this.placement = positions.includes(place) ? place : this.notification ? "bottom" : "top";
     this.popperInstance = null;
     this.showEvents = ['mouseenter', 'focus'];
     this.hideEvents = ['mouseleave', 'blur'];
     this._create();
     this._setBehavior();
   }
-  _setBehavior (){
+  _setBehavior () {
     // Ação de abrir padrao ao entrar no ativador
-    this.showEvents.forEach(event => {
-      this.activator.addEventListener( event, ( event ) => {
-        this._show( event );
+    if ( this.activator ) {
+      this.showEvents.forEach(event => {
+        this.activator.addEventListener( event, ( event ) => {
+          this._show( event );
+        });
       });
-    });
+    }
     // Adiciona ação de fechar ao botao do popover
-    if (this.popover) {
+    if (this.popover || this.notification) {
       let close = this.component.querySelectorAll( ".close" )[0];
       close.addEventListener("click", ( event ) => {
         this._hide( event );
@@ -48,23 +50,56 @@ class BRTooltip {
   _create () {
     this._setLayout();
     //Cria a instancia do popper
-    this.popperInstance = createPopper(this.activator, this.component, {
-      placement: this.placement,
-      modifiers: [
-        {
-          name: 'offset',
-          options: {
-            offset: [0, 8],
+    if (this.notification) {
+     this.component.setAttribute('notification', '');
+     this.popperInstance = createPopper(this.activator, this.component, {
+        placement: this.placement,
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 10],
+            },
           },
-        },
-      ],
-    });
+          {
+            name: 'preventOverflow',
+            options: {
+              //rootBoundary: 'document',
+              mainAxis: true, // true by default
+              altAxis: true, // false by default
+            },
+          },
+        ],
+      });
+    } else {
+      this.popperInstance = createPopper(this.activator, this.component, {
+        placement: this.placement,
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 8],
+            },
+          },
+        ],
+      });
+    }
+  }
+
+  _destroy() {
+    if (this.popperInstance) {
+      var refpopover = this.component;
+      setTimeout(function() {
+        refpopover.style.display = "none";
+      }, 500);
+    }
   }
 
   _show ( event ) {
+    this.component.style.display = "unset";
     this.component.setAttribute('data-show', '');
     // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
-    this.component.style.visibility = "visible";
+    //this.component.style.visibility = "visible";
     if ( this.timer ) {
       setTimeout( this._hide, this.timer, event, this.component );
     }
@@ -74,9 +109,11 @@ class BRTooltip {
     // data-show é o atributo que controla a visibilidade 
     if ( this.component ) {
       this.component.removeAttribute('data-show');
+      this._destroy();
     }
     else if ( component ) {
       component.removeAttribute('data-show');
+      component.style.display = "none";
     }
   }
 
@@ -87,10 +124,11 @@ class BRTooltip {
     arrow.classList.add( "arrow" );
     this.component.appendChild( arrow );
     
-    // Cria o icone de fechar do popover
-    if (this.popover) {
-      let close = document.createElement( 'div' );
-      close.classList.add( "close" );
+    // Cria o icone de fechar do po over
+    if (this.popover || this.notification) {
+      let close = document.createElement( 'button' );
+      close.setAttribute("type", "button"); 
+      close.classList.add( "close");
       let ico = document.createElement( 'i' );
       ico.classList.add( "fas","fa-times" );
       close.appendChild( ico );
