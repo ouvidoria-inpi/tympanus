@@ -1,29 +1,13 @@
 // Pesos
-@each $item, $value in $tokens-font-weight {
-  @include tokens-font-weight($item, $value);
-}
-
-// Tamanhos
-@each $item, $value in $tokens-font-size {
-  @include tokens-font-size($item, $value);
-}
-
-// Alturas de linhas
-@each $item, $value in $tokens-line-height {
-  @include tokens-line-height($item, $value);
-}
-
-$text-transform: "none", "capitalize", "uppercase", "lowercase";
-$text-align: "left", "right", "center", "justify";
-
-@each $value in $text-align {
-  .align-#{$value} {
-    text-align: #{$value};
+@each $key, $value in $text-font-weight {
+  .text-#{$key} {
+    font-weight: $value;
   }
 }
 
-@each $value in $text-transform {
-  .transform-#{$value} {
-    text-transform: #{$value};
+// Tamanhos
+@each $key, $value in $text-font-size {
+  .text-#{$key} {
+    font-size: calc(#{v(font-size-scale-base)} * #{$value});
   }
 }

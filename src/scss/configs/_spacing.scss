@@ -1,14 +1,12 @@
 // Espaçamentos seguem a regra da grid8p
 
 $spacer: 8px;
-$spacer-variations: 30;
 
 $spacers: (
   0: 0,
-  h: $spacer * 0.5
+  1: 8px,
+  2: 12px,
+  3: 16px,
+  4: 24px,
+  5: 40px,
 );
-
-// Incluir os intervalos de espaçamento de $spacer + $spacer * 0.5
-@for $i from 0 through $spacer-variations {
-  $spacers: map-merge(($i + 1: $spacer + $spacer * 0.5 * $i), $spacers);
-}

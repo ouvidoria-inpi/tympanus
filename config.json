@@ -76,16 +76,12 @@
         "filename": "uso-do-wai-aria"
       },
       {
+        "label": "Utilitários de CSS",
+        "filename": "utilitarios-css"
+      },
+      {
         "label": "Construção de componentes",
         "filename": "construcao-de-componentes"
-      },
-      {
-        "label": "Uso do css",
-        "filename": "uso-do-css"
-      },
-      {
-        "label": "Manutenção do CSS",
-        "filename": "manutencao-do-css"
       }
     ]
   },
