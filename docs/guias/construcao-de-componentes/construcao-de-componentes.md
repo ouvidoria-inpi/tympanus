@@ -3,18 +3,20 @@ Faça um fork ou clone do projeto em <https://git.serpro/ds-gov/design-system>.
 ```bash
 git clone git@git.serpro:ds-gov/design-system.git
 cd design-system
-npm install
+npm run init
+npm start
 ```
 
-Arquivos de desenvolvimento estão em `src` . Na pasta `dist` serão gerados os arquivos compilados.
+Veja a lista de componentes no endereço <http://localhost:9000/>.
 
-Os códigos foram escritos usando a linguagem de templates Pug - <https://pugjs.org/api/getting-started.html>. Eles são compilados para HTML. Para os estilos foi usado o SASS - <https://sass-lang.com/>. Eles são compilados para CSS.
+Os códigos foram escritos usando a linguagem de templates Pug - <https://pugjs.org/api/getting-started.html>. Eles são compilados para HTML.
 
-Para compilar o novo componente e monitorar alterações rode o comando `npm run start` no terminal.
+Para os estilos foi usado o SASS - <https://sass-lang.com/>. Eles são compilados para CSS.
 
-Recomendamos o uso da extensão **"Live Server"** do _Visual Studio Code_ durante o desenvolvimento de componentes.
+## Regras
 
-## Exemplo prático
+1. Componentes do Design System DEVEM ter prefixo **br-**
+1. Variações deve ser aplicadas por classe ou atributo
 
 Um componente deve obedecer a seguinte estrutura:
 
@@ -38,33 +40,36 @@ design-system/
         └── _components.scss (incluir o novo componente na lista de componentes)
 ```
 
+---
+
+## Exemplo prático
+
 No exemplo a seguir iremos criar um botão simples. Com as seguintes características:
 
--   Fundo preto
--   texto branco e letras maiúsculas
--   quadrado
--   ao clicar é exibida a mensagem: "Botão clicado!"
+1. Fundo preto e texto branco
+1. Letras maiúsculas
+1. Quadrado
+1. Tamanho padrão e pequeno
+1. Ao clicar é exibida a mensagem: "Botão clicado!"
 
 ### Código reusável
 
 Escrever o componente de forma reusável facilita a interação dele com outros componentes ou templates. A ideia é criar um **mixin** para ser reusado quando necessário.
+
+**Mixin** pode ser criado tanto no SASS quanto no Pug.
+
+-   Veja a documentação de mixin para Pug em <https://pugjs.org/language/mixins.html>
+-   Veja a documentação de mixin para SASS em <https://sass-lang.com/documentation/at-rules/mixin>
 
 Dentro de `src/pug/components/` crie o arquivo **simple-button.pug** com o seguinte código:
 
 ```pug
 //- src/pug/components/simple-button.pug
 mixin simple-button
-    button.br-simple-button(
-        id=attributes.id
-        class=attributes.class
-        type="button"
-        disabled=attributes.disabled
-    )
+    button.br-simple-button(type="button")&attributes(attributes)
         if block
             block
 ```
-
-Para mais informações sobre mixins em Pug acesse <https://pugjs.org/language/mixins.html>.
 
 Inclua o novo mixin na listagem de componentes em `src/pug/layouts/default.pug` :
 
@@ -83,16 +88,12 @@ Dentro de `src/pug/views/components/` crie o arquivo **simple-button.pug** com o
 extends ../../layouts/component
 
 append vars
-
     - var title = "Botão simples"
-
-append scripts
-    script(src=jscompoents+"simple-button.js")
 
 append content
     +simple-button Botão simples
     +simple-button#botao.py-3 Botão com Id e classes
-    +simple-button.py-3(disabled) Botão desativado
+    +simple-button.py-3()(disabled) Botão desativado
 ```
 
 ### Estilo básico
@@ -114,6 +115,10 @@ Dentro de `src/scss/components/` crie o arquivo **\_simple-button.scss** com o s
         background: $color-gray-6;
         color: $color-white;
         text-decoration: none;
+    }
+    &.small,
+    &[small] {
+        padding: 4px 8px;
     }
 }
 ```
@@ -140,13 +145,3 @@ for (let simpleButton of simpleButtons) {
     })
 }
 ```
-
-### Versão final compilada
-
-Rode o seguinte script no terminal, na raiz do projeto:
-
-```bash
-npm run build
-```
-
-O componente poderá ser visualizado diretamente no browser através do arquivo `dist/components/simple-button.html` .
