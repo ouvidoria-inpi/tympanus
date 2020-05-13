@@ -144,6 +144,10 @@
         "filename": "loading"
       },
       {
+        "label": "Menu",
+        "filename": "menu"
+      },
+      {
         "label": "Message",
         "filename": "message"
       },
