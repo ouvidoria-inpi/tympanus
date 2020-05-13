@@ -2,7 +2,17 @@
 
 git commit -am " Incluindo versão beta"
 npm version prerelease -preid=beta
-npm publish
+LATEST=$( git describe --tags `git rev-list --tags --max-count=1` )
+read -p "Quer publicar essa tag para o nexus e gitlab (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  npm publish
+  echo "publicado no nexus"
+  git push origin $LATEST
+  git checkout $LATEST
+else
+  
+fi
+
 
 LATEST=$( git describe --tags `git rev-list --tags --max-count=1` )
 
@@ -30,8 +40,15 @@ pwd
 cd cdn-dsgov-estaleiro
 pwd
 git commit -am " Incluindo versão beta $LATEST "
-git push origin master
+# git push origin master
 cd ../../
-# git push origin $LATEST
+read -p "Quer enviar essa tag para o git (y/n)?" CONT
+    # git push origin $LATEST
+if [ "$CONT" = "y" ]; then
+  echo "publicando no git";
+else
+  echo "nao publicando repositoio";
+fi
+
 echo "Nova versão enviada no CDN"
 # git checkout develop

@@ -1,5 +1,4 @@
-[version]: # '1.0.0'
-[artefato fonte de design]: # 'menu_1.0.0.xd'
+[version]: # '1.0.1'
 
 ![Exemplo Componente](imagens/menu-anatomy-types.png)
 
@@ -373,7 +372,7 @@ Ocorre quando o item do menu foi selecionado e o painel de subitens aparece.
 | ----------------- | -------------- | :----: |
 | Cabeçalho do Menu | padding-left   | `16px` |
 | Cabeçalho do Menu | padding-right  | `16px` |
-| Item do Menu      | padding-left   | `56px` |
+| Item do Menu      | padding-left   | `16px` |
 | Item do Menu      | padding-right  | `16px` |
 | Rodapé            | padding-left   | `56px` |
 | Rodapé            | padding-right  | `16px` |
