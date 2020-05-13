@@ -1,47 +1,8 @@
-// Grid - Baseada na grid do Bootstrap
-// Verifique os valores de breakpoint e gutters nas configurações:
-// - $grid-breakpoints
-// - $grid-gutters
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 998px,
-  lg: 1280px,
-  xl: 1600px
-);
-
-$container-max-widths: (
-  sm: 1150px,
-  md: 1151px,
-  lg: 1152px,
-  xl: 1440px
-);
-
-$grid-gutter-width: 16px;
-$grid-gutters: (
-  sm: $grid-gutter-width,
-  lg: 24px,
-  xl: 32px
-);
-
-// Variações de gutter
-@each $breakpoint, $gutter in $grid-gutters {
-  @include media-breakpoint-up($breakpoint) {
-    .container,
-    .container-fluid {
-      padding-left: $gutter / 2;
-      padding-right: $gutter / 2;
-    }
-    .row {
-      margin-left: -$gutter / 2;
-      margin-right: -$gutter / 2;
-      [class^="col"] {
-        padding-left: $gutter / 2;
-        padding-right: $gutter / 2;
-      }
-    }
-  }
-}
-
+// Grid Bootstrap
 @import "../../../node_modules/bootstrap/scss/grid";
+
+@include grid-bs($grid-breakpoint-small, $grid-tablet-gutter);
+@include grid-bs($grid-breakpoint-large, $grid-desktop-gutter);
+@include grid-bs($grid-breakpoint-xlarge, $grid-tv-gutter);
+
+// TODO: Criar Grid do DSGov
