@@ -103,7 +103,7 @@ Deve-se deixar uma margem de 24px entre o primeiro label e a extremidade do sepa
 
 Na web deve ser deixada uma distância total de 100 px entre os labels, ou seja, 24px de margem de cada lado, acrescidas de uma distância de 52px.
 
-[![Imagem Espaçamento entre as Abas](imagens/Abas_Espaçamento.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/98462a44-9bb6-4fb5-9aff-ea38aa1f3262/Abas-Espa-amento)
+[![Imagem Espaçamento entre as Abas](imagens/Abas_Espacamento.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/98462a44-9bb6-4fb5-9aff-ea38aa1f3262/Abas-Espa-amento)
 
 ##### 2 | Aplicação Mobile
 
@@ -119,7 +119,7 @@ Nos dispositivos móveis a distancia entre os labels deve diminuir de acordo com
 
 Quando houver poucas abas, conservar a distância de 100px entre elas. O separador porém, deve preencher toda largura disponível na tela.
 
-[![Imagem Comportamento entre as Abas Mobile](imagens/AbasPoucosItens_Espaçamento.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/00292887-75f9-4c7b-9b62-323bb2a3fc75/AbasPoucosItens-Espa-amento)
+[![Imagem Comportamento entre as Abas Mobile](imagens/AbasPoucosItens_Espacamento.png)](https://xd.adobe.com/view/2b778d2f-6d4f-45df-4639-bc0f5d5b41f2-5d46/screen/00292887-75f9-4c7b-9b62-323bb2a3fc75/AbasPoucosItens-Espa-amento)
 
 #### 2 | Aplicação Mobile
 

@@ -5,8 +5,8 @@
   "main": "index.js",
   "cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/latest/",
   "scripts": {
-    "start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev",
-    "init": "npm run repo:serpro & npm run repo:govbr && npm install && npm audit fix",
+    "start": "npm-run-all build:webpack:dev webpack-dev-server --env dev",
+    "init": "npm-run-all repo:serpro npm run repo:govbr && npm install",
     "repo:govbr": "npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/",
     "repo:serpro": "npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/",
     "build:hom": "webpack --config webpack.proddev.js",
@@ -14,7 +14,7 @@
     "build:sass": "node componentes.js && node-sass -r ./dist/scss/temp/ -o ./dist/css/components --output-style=expanded",
     "build:webpack:dev": "webpack --env dev --progress --profile --colors",
     "build:webpack:prod": "webpack --env prod",
-    "build": "npm-run-all build:webpack:prod && npm run build:hom",
+    "build": "npm-run-all minify:img build:webpack:prod build:hom",
     "commit": "git-cz",
     "lint:branch": "node ./branch.lint.js",
     "lint:html": "./node_modules/.bin/html-validate dist/**/*.html",
@@ -24,7 +24,8 @@
     "release:alpha": "standard-version -t '' --prerelease alpha",
     "release:beta": "standard-version -t '' --prerelease beta",
     "release:rc": "standard-version -t '' --prerelease rc",
-    "release": "standard-version"
+    "release": "standard-version",
+    "minify:img": "node minify-img.js"
   },
   "engines": {
     "node": ">= 12.16.3"
@@ -67,6 +68,10 @@
     "html-validate": "2.21.0",
     "html-webpack-plugin": "4.3.0",
     "husky": "4.2.5",
+    "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-pngquant": "^8.0.0",
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "4.14.1",
     "npm-run-all": "4.1.5",
