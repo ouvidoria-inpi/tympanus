@@ -1,31 +1,26 @@
-import BRScrim from "./scrim";
+import BRScrim from './scrim'
 
 class BRModal {
-
-  constructor ( name, component ) {
-    this.name = name;
-    this.component = component;
-    this._setBehavior();
-  }
-
-  _setBehavior () {
-
+  constructor(name, component) {
+    this.name = name
+    this.component = component
+    this._setBehavior()
   }
 }
 
 export default BRModal
 
-let modalList = []
+const modalList = []
 
-for ( let brModal of window.document.querySelectorAll( ".br-modal" ) ) {
-  modalList.push( new BRModal( "br-modal", brModal ) );
+for (const brModal of window.document.querySelectorAll('.br-modal')) {
+  modalList.push(new BRModal('br-modal', brModal))
 }
 
-for ( let brScrim of window.document.querySelectorAll( ".br-scrim" ) ) {
-  let scrim = new BRScrim( "br-scrim", brScrim );
-  for ( let button of window.document.querySelectorAll( ".br-scrim + button" ) ) {
-    button.addEventListener( "click", () => {
-      scrim.showScrim();
-    } );
+for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
+  const scrim = new BRScrim('br-scrim', brScrim)
+  for (const button of window.document.querySelectorAll('.br-scrim + button')) {
+    button.addEventListener('click', () => {
+      scrim.showScrim()
+    })
   }
 }

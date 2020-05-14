@@ -1,11 +1,12 @@
 const path = require('path')
+
 const isDEV = process.env.NODE_ENV === 'development'
 
 // Webpack Stuff
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-const WebpackShellPlugin = require('webpack-shell-plugin');
+const WebpackShellPlugin = require('webpack-shell-plugin')
 
 // We need Nodes fs module to read directory contents
 const fs = require('fs')
@@ -18,41 +19,6 @@ const paths = {
   dist: path.resolve(__dirname, 'dist'),
   distjs: path.resolve(__dirname, 'dist', 'js'),
 }
-
-// Our function that generates our html plugins
-function generateHtmlPlugins(templateDir, dirName) {
-  // Read files in template directory
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
-  return templateFiles.map((item) => {
-    // Split names and extension
-    const parts = item.split('.')
-    const name = parts[0]
-    const extension = parts[1]
-    // Create new HTMLWebpackPlugin with options
-    return new HTMLWebpackPlugin({
-      filename: `${dirName}/${name}.html`,
-      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-      templateParameters: {
-        version: JSON.stringify(require('./package.json').version).replace(
-          /\"/gi,
-          ''
-        ),
-        cdnUrl: '../',
-      },
-      inject: false,
-    })
-  })
-}
-
-// Call our function on our views directory.
-const htmlPluginsComponentes = generateHtmlPlugins(
-  './src/pug/views/components',
-  'components'
-)
-const htmlPluginsTemplates = generateHtmlPlugins(
-  './src/pug/views/templates',
-  'templates'
-)
 
 const fileLoader = {
   loader: 'file-loader',
@@ -77,8 +43,8 @@ module.exports = {
   mode: 'development',
   entry: {
     dsgov: [
-      path.resolve(paths.src + '/scss', 'dsgov.scss'),
-      path.resolve(paths.src + '/js/', 'index.js'),
+      path.resolve(`${paths.src}/scss`, 'dsgov.scss'),
+      path.resolve(`${paths.src}/js/`, 'index.js'),
     ],
   },
   watch: true,
@@ -127,17 +93,17 @@ module.exports = {
         include: [paths.images],
         loader: fileLoader,
       },
-      {
-        // Include pug-loader to process the pug files
-        test: /\.pug$/,
-        use: {
-          loader: 'pug-loader',
-          query: {
-            pretty: true,
-            root: path.resolve(__dirname, 'src/views'),
-          },
-        },
-      },
+      // {
+      //   // Include pug-loader to process the pug files
+      //   test: /\.pug$/,
+      //   use: {
+      //     loader: 'pug-loader',
+      //     query: {
+      //       pretty: true,
+      //       root: path.resolve(__dirname, 'src/views'),
+      //     },
+      //   },
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -152,7 +118,7 @@ module.exports = {
     extensions: ['.js', '.scss'],
   },
   plugins: [
-    // new CleanWebpackPlugin(),
+    //new CleanWebpackPlugin(),
     // Extract our css to a separate css file
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
@@ -160,10 +126,11 @@ module.exports = {
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
     new WebpackShellPlugin({
-			onBuildEnd: ['node componentes.js ']
-		}),
-    
-	
-  ].concat(htmlPluginsComponentes, htmlPluginsTemplates),
+      onBuildEnd: [
+        'pug -q -w ./src/pug/views/ -O optionpug.json -o ./dist/ -P',
+        'node componentes.js',
+      ],
+    }),
+  ],
   devtool: 'source-map',
 }
