@@ -9,27 +9,27 @@ mixin auto-bs(lines)
     - n = 1
     while n <= lines
       .col(column=n)
-        .background-color-secondary-01.box
+        .bg-secondary-01.box
           p coluna
       - n++
 
 mixin col-bs(size)
   .row.mt-3(row=size)
     div(class=`col-${size}`)
-      .background-color-secondary-01.box
+      .bg-secondary-01.box
         p coluna
 
 append template
   .container
     h1=title
 
-  .background-color-secondary-03.pb-3
+  .bg-secondary-03.pb-3
     .container
       h2 Grid Bootstrap
 
       h3 Container
     .container
-      .background-color-secondary-01.box
+      .bg-secondary-01.box
         p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus soluta autem dolor voluptatem, enim quasi quos, alias libero impedit, quia eius nam sequi obcaecati id nobis. Aut nihil rem odit?
 
       h3 Colunas automáticas
@@ -50,7 +50,7 @@ append template
       h3 Container fluid
 
     .container-fluid
-      .background-color-secondary-01.box
+      .bg-secondary-01.box
         p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus soluta autem dolor voluptatem, enim quasi quos, alias libero impedit, quia eius nam sequi obcaecati id nobis. Aut nihil rem odit?
 
     .container
@@ -75,7 +75,7 @@ append template
 
     h2 Tipografia
 
-    p.color-danger
+    p.text-danger
       i.fas.fa-exclamation-circle
       |
       |
@@ -100,20 +100,20 @@ append template
         p Primárias
         .display-flex.flex-wrap.mb-3
           each val in ["pastel-01", "pastel-02", "lighten-01", "lighten-02", "default", "darken-01", "darken-02"]
-            .box.square(class=`background-color-primary-${val}` title=val)
+            .box.square(class=`bg-primary-${val}` title=val)
       .col
         p Secundárias
         .display-flex.flex-wrap.mb-3
           each val in ["01", "02", "03", "04", "05", "06", "07", "08", "09"]
-            .box.square(class=`background-color-secondary-${val}` title=`secondary-${val}`)
+            .box.square(class=`bg-secondary-${val}` title=`secondary-${val}`)
       .col
         p Highlight, mensagens e suporte
         .display-flex.flex-wrap.mb-3
-          .box.square.background-color-highlight(title="highlight")
+          .box.square.bg-highlight(title="highlight")
           each val in ["warning", "success", "danger", "info"]
-            .box.square(class=`background-color-${val}` title=val)
+            .box.square(class=`bg-${val}` title=val)
           each val in ["support-01", "support-02", "support-03", "support-04"]
-            .box.square(class=`background-color-${val}` title=val)
+            .box.square(class=`bg-${val}` title=val)
 
     h2 Estados
 
