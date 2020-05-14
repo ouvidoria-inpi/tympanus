@@ -4,7 +4,7 @@ append vars
   - var n = 0;
   - var rows = 0;
 
-mixin auto-bs(lines)
+mixin auto-bs(lines, fluid = false)
   .row.mt-3(row=lines)
     - n = 1
     while n <= lines
@@ -13,7 +13,7 @@ mixin auto-bs(lines)
           p coluna
       - n++
 
-mixin col-bs(size)
+mixin col-bs(size, fluid = false)
   .row.mt-3(row=size)
     div(class=`col-${size}`)
       .bg-secondary-01.box
@@ -23,53 +23,54 @@ append template
   .container
     h1=title
 
-  .bg-secondary-03.pb-3
-    .container
-      h2 Grid Bootstrap
+    h2 Grid Bootstrap
 
-      h3 Container
-    .container
-      .bg-secondary-01.box
-        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus soluta autem dolor voluptatem, enim quasi quos, alias libero impedit, quia eius nam sequi obcaecati id nobis. Aut nihil rem odit?
+    h3 Container fixo
 
-      h3 Colunas automáticas
+    p.h6 Colunas automáticas
 
-      - rows = 1;
-      while rows <= 12
-        +auto-bs(rows)
-        - rows++
+  .bg-secondary-02
+    - rows = 1;
+    while rows <= 12
+      .bg-secondary-03
+        .container
+          +auto-bs(rows)
+          - rows++
 
-      h3 Colunas fixas
+  .container
+      p.h6 Colunas fixas
 
-      - rows = 1;
-      while rows <= 12
-        +col-bs(rows)
-        - rows++
+  .bg-secondary-02
+    - rows = 1;
+    while rows <= 12
+      .bg-secondary-03
+        .container
+          +col-bs(rows)
+          - rows++
 
-    .container
-      h3 Container fluid
+  .container
+    h3 Container fluid
 
-    .container-fluid
-      .bg-secondary-01.box
-        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus soluta autem dolor voluptatem, enim quasi quos, alias libero impedit, quia eius nam sequi obcaecati id nobis. Aut nihil rem odit?
+    p.h6 Colunas automáticas
 
-    .container
-      h3 Colunas automáticas
+  .bg-secondary-02
+    - rows = 1;
+    while rows <= 12
+      .bg-secondary-03
+        .container-fluid
+          +auto-bs(rows)
+          - rows++
 
-    .container-fluid
-      - rows = 1;
-      while rows <= 12
-        +auto-bs(rows)
-        - rows++
+  .container
+    p.h6 Colunas fixas
 
-    .container
-      h3 Colunas fixas
-
-    .container-fluid
-      - rows = 1;
-      while rows <= 12
-        +col-bs(rows)
-        - rows++
+  .bg-secondary-02
+    - rows = 1;
+    while rows <= 12
+      .bg-secondary-03
+        .container-fluid
+          +col-bs(rows)
+          - rows++
 
   .container
 
