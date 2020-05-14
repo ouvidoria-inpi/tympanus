@@ -1,9 +1,9 @@
 rm -rf dist
 npm run build
 LATEST=$( git describe --tags `git rev-list --tags --max-count=1` )
-apt install zip
+sudo apt install zip
 # remove o latest anterior
-rm assets/source-code/dsgov-latest.zip
+rm -rf assets/source-code/dsgov-latest.zip
 zip -r assets/source-code/dsgov-lastest.zip dist
 zip -r assets/source-code/dsgov-$LATEST.zip dist
 echo $LATEST
