@@ -6,7 +6,7 @@
   "cdn": "https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/latest/",
   "scripts": {
     "start": "npm-run-all build:webpack:dev webpack-dev-server --env dev",
-    "init": "npm-run-all repo:serpro npm run repo:govbr && npm install",
+    "init": "npm run repo:serpro & npm run repo:govbr && npm install",
     "repo:govbr": "npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/",
     "repo:serpro": "npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/",
     "build:hom": "webpack --config webpack.proddev.js",
