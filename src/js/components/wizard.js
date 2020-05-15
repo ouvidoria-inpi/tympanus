@@ -1,5 +1,4 @@
 import SwipeEventDispatcher from './swipe'
-
 class BRWizard {
   constructor(name, component) {
     this.name = name
@@ -22,7 +21,6 @@ class BRWizard {
         elem.removeAttribute(attrName)
       })
     }
-
     // return exect parent node of the element
     this.findParent = (elem, parentClass) => {
       let currentNode = elem
@@ -31,18 +29,15 @@ class BRWizard {
       }
       return currentNode
     }
-
     // get active button step number
     this.getActiveStep = (elem) => {
       return Array.from(this.DOMstrings.stepsBtns).indexOf(elem)
     }
-
     // set all steps before clicked (and clicked too) to active
     this.setActiveStep = (activeStepNum) => {
       // remove active state from all the state
       this.removeAttributes(this.DOMstrings.stepsBtns, 'active')
       this.removeAttributes(this.DOMstrings.stepsBtns, 'inactive')
-
       // set picked items to active
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
         if (index === activeStepNum) {
@@ -54,25 +49,20 @@ class BRWizard {
         }
       })
     }
-
     // get active panel
     this.getActivePanel = () => {
       let activePanel
-
       this.DOMstrings.stepFormPanels.forEach((elem) => {
         if (elem.hasAttribute('active')) {
           activePanel = elem
         }
       })
-
       return activePanel
     }
-
     // open active panel (and close unactive panels)
     this.setActivePanel = (activePanelNum) => {
       // remove active class from all the panels
       this.removeAttributes(this.DOMstrings.stepFormPanels, 'active')
-
       // show active panel
       this.DOMstrings.stepFormPanels.forEach((elem, index) => {
         if (index === activePanelNum) {
@@ -80,55 +70,43 @@ class BRWizard {
         }
       })
     }
-
     this.setStepsNum = () => {
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
         elem.setAttribute('step', index + 1)
       })
     }
-
     this.setStep = (num) => {
       const activeStep = num <= this.DOMstrings.stepsBtns.length ? num - 1 : 0
       this.setActiveStep(activeStep)
       this.setActivePanel(activeStep)
     }
-
     this.collapseSteps = () => {
       this.component.setAttribute('collapsed', '')
     }
-
     this.expandSteps = () => {
       this.component.removeAttribute('collapsed')
     }
-
     this._setBehavior()
   }
-
   _setBehavior() {
     // STEPS BAR CLICK FUNCTION
     this.DOMstrings.stepsBar.addEventListener('click', (e) => {
       // check if click target is a step button
       const eventTarget = e.target
-
       if (!eventTarget.classList.contains(`${this.DOMstrings.stepsBtnClass}`)) {
         e.target.parentNode.click()
         return
       }
-
       // get active button step number
       const activeStep = this.getActiveStep(eventTarget)
-
       // set all steps before clicked (and clicked too) to active
       this.setActiveStep(activeStep)
-
       // open active panel
       this.setActivePanel(activeStep)
     })
-
     // PREV/NEXT BTNS CLICK
     this.DOMstrings.stepsForm.addEventListener('click', (e) => {
       const eventTarget = e.target
-
       // check if we clicked on `PREV` or NEXT` buttons
       if (
         !(
@@ -138,12 +116,9 @@ class BRWizard {
       ) {
         return
       }
-
       // find active panel
       const activePanel = this.findParent(eventTarget, `${this.DOMstrings.stepFormPanelClass}`)
-
       let activePanelNum = Array.from(this.DOMstrings.stepFormPanels).indexOf(activePanel)
-
       // set active step and active panel onclick
       if (eventTarget.classList.contains(`${this.DOMstrings.stepPrevBtnClass}`)) {
         activePanelNum -= 1
@@ -152,25 +127,20 @@ class BRWizard {
         activePanelNum += 1
         activePanel.style.left = '-1%'
       }
-
       this.setActiveStep(activePanelNum)
       this.setActivePanel(activePanelNum)
     })
-
     // Set Steps label number
     this.setStepsNum()
-
     // Set default active step
     if (this.component.hasAttribute('step')) {
       this.setStep(this.component.getAttribute('step'))
     }
-
     // set steps buttons grid style if it needs to scroll horizontaly
     if (this.component.hasAttribute('scroll') && !this.component.hasAttribute('vertical')) {
       const stepsWidth = Math.round(100 / this.DOMstrings.stepsBtns.length) - 0.5
       this.DOMstrings.stepsBar.style.gridTemplateColumns = `repeat(auto-fit, minmax(100px, ${stepsWidth}% ))`
     }
-
     // Swipe
     const dispatcher = new SwipeEventDispatcher(this.DOMstrings.stepsBar)
     if (this.component.hasAttribute('vertical')) {
@@ -193,10 +163,8 @@ class BRWizard {
     }
   }
 }
-
 const wizardList = []
 for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
   wizardList.push(new BRWizard('br-wizard', brWizard))
 }
-
 export default BRWizard

@@ -12,7 +12,6 @@ class BRUpload {
     this._fileArray = []
     this._setBehavior()
   }
-
   _setBehavior() {
     this.component.addEventListener(
       'dragenter',
@@ -35,7 +34,6 @@ class BRUpload {
       },
       false
     )
-
     if (this._inputElement) {
       this._fileArray = Array.from(this._inputElement.files)
       this._inputElement.addEventListener(
@@ -47,31 +45,24 @@ class BRUpload {
       )
     }
   }
-
   _drag(event) {
     event.stopPropagation()
     event.preventDefault()
   }
-
   _drop(event) {
     event.stopPropagation()
     event.preventDefault()
-
     const dt = event.dataTransfer
     const { files } = dt
     this._handleFiles(files)
   }
-
   _handleFiles(files) {
     const newFiles = !files.length ? Array.from(this._inputElement.files) : Array.from(files)
     this._fileArray = this._fileArray.concat(newFiles)
-
     this._info.style.display = 'none'
     this._header.innerHTML = 'Arquivos Selecionados'
-
     this._updateFileList()
   }
-
   _updateFileList() {
     if (!this._fileArray.length) {
       this._fileList.innerHTML = ''
@@ -84,11 +75,9 @@ class BRUpload {
       for (let i = 0; i < this._fileArray.length; i++) {
         const li = document.createElement('li')
         list.appendChild(li)
-
         const info = document.createElement('span')
         info.innerHTML = this._fileArray[i].name
         li.appendChild(info)
-
         const del = document.createElement('div')
         del.addEventListener(
           'click',
@@ -106,7 +95,6 @@ class BRUpload {
     }
     this._updateSize()
   }
-
   _updateSize() {
     let nBytes = 0
     const oFiles = this._fileArray
@@ -114,7 +102,6 @@ class BRUpload {
     for (let nFileId = 0; nFileId < nFiles; nFileId++) {
       nBytes += oFiles[nFileId].size
     }
-
     let sOutput = `${nBytes} bytes`
     for (
       let aMultiples = ['KB', 'MB', 'GB', 'TB'], nMultiple = 0, nApprox = nBytes / 1024;
@@ -123,12 +110,10 @@ class BRUpload {
     ) {
       sOutput = `${nApprox.toFixed(3)} ${aMultiples[nMultiple]}`
     }
-
     this._size.style.visibility = nFiles > 0 ? 'visible' : 'hidden'
     this._sizeNum.innerHTML = nFiles
     this._sizeBytes.innerHTML = sOutput
   }
-
   _removeFile(index, event) {
     event.stopPropagation()
     event.preventDefault()
@@ -136,11 +121,8 @@ class BRUpload {
     this._updateFileList()
   }
 }
-
 const uploadList = []
-
 for (const brUpload of window.document.querySelectorAll('.br-upload')) {
   uploadList.push(new BRUpload('br-upload', brUpload))
 }
-
 export default BRUpload

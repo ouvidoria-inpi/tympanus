@@ -16,7 +16,6 @@ import BRTagInput from './taginput'
 import BRTooltip from './tooltip'
 import BRUpload from './upload'
 import BRWizard from './wizard'
-
 export default class Globals {
   initInstanceAll() {
     this.initInstanceAccordion()
@@ -36,23 +35,18 @@ export default class Globals {
     this.initInstanceUpload()
     this.initInstanceWizard()
   }
-
   initInstanceAccordion() {
     const accordionList = []
-
     for (const brAccordion of window.document.querySelectorAll('.br-accordion')) {
       accordionList.push(new BRAccordion('br-accordion', brAccordion))
     }
   }
-
   initInstanceMessage() {
     const alertList = []
-
     for (const brMessage of window.document.querySelectorAll('.br-message')) {
       alertList.push(new BRMessage('br-message', brMessage))
     }
   }
-
   initInstanceInput() {
     const countries = [
       'Afeganistão',
@@ -302,65 +296,51 @@ export default class Globals {
       'Zâmbia',
       'Zimbábue',
     ]
-
     const inputList = []
     for (const brInput of window.document.querySelectorAll('.br-input')) {
       inputList.push(new BRInput('br-input', brInput))
     }
-
     for (const brInput of inputList) {
       brInput.component.querySelectorAll('input.search-autocomplete').forEach(() => {
         brInput.setAutocompleteData(countries)
       })
     }
   }
-
   initInstanceSelect() {
     const selectList = []
-
     for (const brSelect of window.document.querySelectorAll('.br-select')) {
       selectList.push(new BRSelect('br-select', brSelect))
     }
   }
-
   initInstanceTabs() {
     const abasList = []
-
     for (const brTabs of window.document.querySelectorAll('.br-tabs')) {
       abasList.push(new BRTabs('br-tabs', brTabs))
     }
   }
-
   initInstanceUpload() {
     const uploadList = []
-
     for (const brUpload of window.document.querySelectorAll('.br-upload')) {
       uploadList.push(new BRUpload('br-upload', brUpload))
     }
   }
-
   initInstanceDatepicker() {
     const datepickerList = []
-
     for (const brDatepicker of window.document.querySelectorAll('.br-datepicker')) {
       datepickerList.push(new BRDatepicker('br-datepicker', brDatepicker))
     }
   }
-
   initInstanceTable() {
     const tableList = []
     for (const [index, brTable] of window.document.querySelectorAll('.br-table').entries()) {
       tableList.push(new BRTable('br-table', brTable, index))
     }
   }
-
   initInstanceScrim() {
     const scrimList = []
-
     for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
       scrimList.push(new BRScrim('br-scrim', brScrim))
     }
-
     for (const buttonBloco1 of window.document.querySelectorAll('.bloco1 button')) {
       buttonBloco1.addEventListener('click', () => {
         for (const brScrim of scrimList) {
@@ -369,14 +349,11 @@ export default class Globals {
       })
     }
   }
-
   initInstanceModal() {
     const modalList = []
-
     for (const brModal of window.document.querySelectorAll('.br-modal')) {
       modalList.push(new BRModal('br-modal', brModal))
     }
-
     for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
       const scrim = new BRScrim('br-scrim', brScrim)
       for (const button of window.document.querySelectorAll('.br-scrim + button')) {
@@ -386,21 +363,18 @@ export default class Globals {
       }
     }
   }
-
   initInstanceTooltip() {
     const tooltipList = []
     for (const brTooltip of window.document.querySelectorAll('.br-tooltip')) {
       tooltipList.push(new BRTooltip('br-tooltip', brTooltip))
     }
   }
-
   initInstanceNotification() {
     const notificationList = []
     for (const brNotification of window.document.querySelectorAll('.br-notification')) {
       notificationList.push(new BRNotification('br-notification', brNotification))
     }
   }
-
   initInstanceList() {
     const listList = []
     for (const brList of window.document.querySelectorAll('.br-list[collapsible]')) {
@@ -410,37 +384,30 @@ export default class Globals {
       listList.push(new BRList('br-list-checkable', brList))
     }
   }
-
   initInstanceMenu() {
     const menuList = []
     for (const brMenu of window.document.querySelectorAll('.br-menu')) {
       menuList.push(new BRMenu('br-menu', brMenu))
     }
   }
-
   initInstanceTagInput() {
     const tagInputList = []
-
     for (const brTag of window.document.querySelectorAll('.br-tag-input')) {
       tagInputList.push(new BRTagInput('br-tag-input', brTag))
     }
   }
-
   initInstanceTag() {
     const tagList = []
-
     for (const brTag of window.document.querySelectorAll('.br-tag')) {
       tagList.push(new BRTag('br-tag', brTag))
     }
   }
-
   initInstanceWizard() {
     const wizardList = []
     for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
       wizardList.push(new BRWizard('br-wizard', brWizard))
     }
   }
-
   initInstanceBreadcrumb() {
     const breadcrumbList = []
     for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {

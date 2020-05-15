@@ -4,7 +4,6 @@ class BRTabs {
     this.component = component
     this._setBehavior()
   }
-
   _setBehavior() {
     for (const ancor of this.component.querySelectorAll(
       '.tab-nav .tab-item:not([not-tab="true"]) button'
@@ -19,7 +18,6 @@ class BRTabs {
       )
     }
   }
-
   _switchTab(currentTab) {
     for (const tabItem of this.component.querySelectorAll(
       '.tab-nav .tab-item:not([not-tab="true"])'
@@ -31,7 +29,6 @@ class BRTabs {
       }
     }
   }
-
   _switchContent(currentTab) {
     for (const button of currentTab.querySelectorAll('button')) {
       for (const tabPanel of this.component.querySelectorAll('.tab-content .tab-panel')) {
@@ -44,11 +41,8 @@ class BRTabs {
     }
   }
 }
-
 const abasList = []
-
 for (const brTabs of window.document.querySelectorAll('.br-tabs')) {
   abasList.push(new BRTabs('br-tabs', brTabs))
 }
-
 export default BRTabs

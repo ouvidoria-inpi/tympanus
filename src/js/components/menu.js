@@ -6,7 +6,6 @@ class BRMenu {
     this.main = this.folders.length >= 2
     this._setBehavior()
   }
-
   _setBehavior() {
     this._closeAllSubmenus()
     this._setHref()
@@ -15,7 +14,6 @@ class BRMenu {
       this.folders.forEach((folder, i, arr) => {
         const header = folder.querySelector('.header')
         const submenu = folder.querySelector('ul')
-
         const index = i + 1
         // Abre o ultimo menu
         if (arr.length === index) {
@@ -53,7 +51,6 @@ class BRMenu {
     })
     this._showLinked()
   }
-
   _showLinked() {
     const linked = this.component.querySelector('.item[linked]')
     if (linked) {
@@ -76,7 +73,6 @@ class BRMenu {
       })
     }
   }
-
   _setHref() {
     const tagsA = this.component.querySelectorAll('.folder a')
     tagsA.forEach((link) => {
@@ -92,7 +88,6 @@ class BRMenu {
         ? folder.querySelector('.header .fa-angle-down')
         : folder.querySelector('.header .fa-angle-up')
       _header.removeAttribute('hidden')
-
       if (header === _header) {
         ul1.toggleAttribute('hidden')
         icon.classList.toggle('fa-angle-down')
@@ -105,7 +100,6 @@ class BRMenu {
       }
     })
   }
-
   _linkClick(link) {
     const linked = this.component.querySelectorAll('[linked]')
     linked.forEach((_link) => {
@@ -113,7 +107,6 @@ class BRMenu {
     })
     link.setAttribute('linked', '')
   }
-
   _itemClick(folder, item, submenu) {
     submenu.toggleAttribute('hidden')
     item.toggleAttribute('active')
@@ -141,7 +134,6 @@ class BRMenu {
       else header.removeAttribute('hidden')
     })
   }
-
   _toggleSiblingsItens(item) {
     const li = item.parentNode.parentNode.querySelectorAll(':scope > li')
     li.forEach((sibling) => {
@@ -169,10 +161,8 @@ class BRMenu {
     }
   }
 }
-
 const menuList = []
 for (const brMenu of window.document.querySelectorAll('.br-menu')) {
   menuList.push(new BRMenu('br-menu', brMenu))
 }
-
 export default BRMenu

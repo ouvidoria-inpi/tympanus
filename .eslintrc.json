@@ -1,6 +1,6 @@
 {
   "extends": ["plugin:jsx-a11y/recommended"],
-  // "extends": ["plugin:jsx-a11y/recommended", "plugin:prettier/recommended"],
+  "extends": ["plugin:jsx-a11y/recommended", "plugin:prettier/recommended"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
