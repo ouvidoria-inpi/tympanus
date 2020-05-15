@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-# Merge Request
-
-Antes de criar esse MR verifique se não existe outro MR com o mesmo código.
-=======
-Antes de criar esse MR verifique se não existe outro MR com o mesmo conteúdo.
->>>>>>> 56594947bfbc71a5edaf09eeab77e635fa3f3689
+**Antes de criar esse MR verifique se não existe outro MR sobre o mesmo assunto.**
 
 Marque as opções na página do git.serpro:
 
@@ -17,16 +11,19 @@ Quando estiver pronto, altere o título e remova o **WIP**
 
 ## O que foi feito
 
-(Descreva o que foi feito na branch)
+(Descreva o que foi feito no máximo de detalhes)
+
+## Indicados para analisar
+
+(Relacione as pessoas que são mais indicadas para analisar esse MR)
 
 ## Responsáveis
 
 (Relacione as pessoas que trabalharam nesse código)
-@12345678912 @12457823568 @32659821548
 
 ## Critérios de aceitação
 
-(Copie a lista da tarefa do ALM para considerar essa tarefa como pronta)
+(Se sua tarefa tiver requisitos para ser considerada pronta, relacione-os abaixo)
 
 -   [ ] Item 1
 -   [x] Item 2
@@ -34,23 +31,11 @@ Quando estiver pronto, altere o título e remova o **WIP**
 
 ## Labels (tags/etiquetas)
 
-Coloque as tags (etiquetas, label) para identificar o status e tipo do MR
+Por favor, **remova essa seção após colocar as tags**
 
+Selecione as tags (etiquetas, label) para identificar o status e tipo do MR
 Ex:
 
-<<<<<<< HEAD
--   Componente
--   Template
--   Documentação
--   JS/TS
--   HTML
--   CSS/SCSS
--   Refatoração
--   Fix
--   Bugfix
--   Hotfix
--   Fazendo
-=======
 - Componente
 - Template
 - Documentação
@@ -64,7 +49,8 @@ Ex:
 - Fazendo
 - Devops
 - git
->>>>>>> 56594947bfbc71a5edaf09eeab77e635fa3f3689
+
+Se precisar crie outras tags, **mas cuidado com o excesso**.
 
 ## Tarefa ALM (opcional)
 
