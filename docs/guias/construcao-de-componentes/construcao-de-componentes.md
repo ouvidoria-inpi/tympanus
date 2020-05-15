@@ -1,7 +1,7 @@
-Faça um fork ou clone do projeto em <https://git.serpro/ds-gov/design-system>.
+Faça um fork ou clone do projeto em <git@git.serpro:dsgov/dsgov-dsgov.git>.
 
 ```bash
-git clone git@git.serpro:ds-gov/design-system.git
+git clone git@git.serpro:dsgov/dsgov-dsgov.git
 cd design-system
 npm run init
 npm start

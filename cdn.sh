@@ -23,7 +23,7 @@ echo "Guardando dados no CDN"
 rm -rf cdn
 mkdir cdn
 cd cdn
-git clone git@git.serpro:ds-gov/cdn-dsgov-estaleiro.git
+git clone git@git.serpro:dsgov/dsgov-cdn.git
 rm -rf cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
 rm -rf cdn-dsgov-estaleiro/htdocs/design-system/latest
 mkdir cdn-dsgov-estaleiro/htdocs/design-system/latest
