@@ -7,7 +7,6 @@ class BRList {
     this.itens = component.querySelectorAll(':scope > .item')
     this._setBehavior()
   }
-
   _setBehavior() {
     if (this.collapsible) {
       this.itens.forEach((item) => {
@@ -29,7 +28,6 @@ class BRList {
       })
     }
   }
-
   _toggle(event, item) {
     const icon = item.querySelector('.fa-angle-down')
       ? item.querySelector('.fa-angle-down')
@@ -40,12 +38,10 @@ class BRList {
       icon.classList.toggle('fa-angle-up')
     }
   }
-
   _check(event, item) {
     item.classList.toggle('selected')
     this._setSelected(item)
   }
-
   _setSelected(item) {
     const br_checkbox = item.querySelector('.br-checkbox')
     const br_checkbox_input = br_checkbox.querySelector('input')
@@ -63,7 +59,6 @@ class BRList {
     }
   }
 }
-
 const listList = []
 for (const brList of window.document.querySelectorAll('.br-list[collapsible]')) {
   listList.push(new BRList('br-list-collapsible', brList))

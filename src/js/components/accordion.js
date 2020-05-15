@@ -4,7 +4,6 @@ class BRAccordion {
     this.component = component
     this._setBehavior()
   }
-
   _setBehavior() {
     for (const button of this.component.querySelectorAll('button.header')) {
       button.addEventListener('click', (event) => {
@@ -13,7 +12,6 @@ class BRAccordion {
       })
     }
   }
-
   _collapse(event) {
     if (this.component.hasAttribute('single')) {
       for (const field of this.component.querySelectorAll('.item')) {
@@ -41,7 +39,6 @@ class BRAccordion {
       }
     }
   }
-
   _changeIcon() {
     for (const field of this.component.querySelectorAll('.item')) {
       if (field.hasAttribute('active')) {
@@ -58,10 +55,8 @@ class BRAccordion {
     }
   }
 }
-
 const accordionList = []
 for (const brAccordion of window.document.querySelectorAll('.br-accordion')) {
   accordionList.push(Object.create(new BRAccordion('br-accordion', brAccordion)))
 }
-
 export default BRAccordion

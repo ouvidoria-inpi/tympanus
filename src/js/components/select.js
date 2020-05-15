@@ -4,7 +4,6 @@ class BRSelect {
     this.component = component
     this._setUpBrSelect()
   }
-
   _setUpBrSelect() {
     for (const select of this.component.querySelectorAll('select')) {
       this.component.appendChild(this._buildSelectionField(select))
@@ -12,7 +11,6 @@ class BRSelect {
     }
     this._setBehavior()
   }
-
   _buildSelectionField(select) {
     const selectionField = window.document.createElement('button')
     selectionField.setAttribute('class', 'select-selected unselected')
@@ -25,19 +23,16 @@ class BRSelect {
     selectionField.appendChild(this._buildIcon())
     return selectionField
   }
-
   _buildOptionItem(text) {
     const optionItem = window.document.createElement('span')
     optionItem.innerHTML = text
     return optionItem
   }
-
   _buildIcon() {
     const icon = window.document.createElement('i')
     icon.setAttribute('class', 'fas fa-chevron-down')
     return icon
   }
-
   _buildOptionsList(select) {
     const optionsList = window.document.createElement('div')
     optionsList.setAttribute('class', 'select-items select-hide')
@@ -48,7 +43,6 @@ class BRSelect {
     }
     return optionsList
   }
-
   _setBehavior() {
     for (const itemSelected of this.component.querySelectorAll('.select-selected')) {
       itemSelected.addEventListener('click', (event) => {
@@ -83,7 +77,6 @@ class BRSelect {
       })
     }
   }
-
   _closeSelects(element) {
     for (const brSelect of window.document.querySelectorAll('.br-select')) {
       for (const itemSelected of brSelect.querySelectorAll('.select-selected')) {
@@ -96,7 +89,6 @@ class BRSelect {
       }
     }
   }
-
   _deleteSelect() {
     for (const selectionField of this.component.querySelectorAll('button.select-selected')) {
       selectionField.remove()
@@ -105,18 +97,14 @@ class BRSelect {
       optionsList.remove()
     }
   }
-
   updateSelect() {
     this._deleteSelect()
     this._setUpBrSelect()
   }
 }
-
 // TODO: Refatorar e incluir na classe
 const selectList = []
-
 for (const brSelect of window.document.querySelectorAll('.br-select')) {
   selectList.push(new BRSelect('br-select', brSelect))
 }
-
 export default BRSelect

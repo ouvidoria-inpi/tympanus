@@ -1,5 +1,4 @@
 import BRTooltip from './tooltip'
-
 class BRNotification extends BRTooltip {
   constructor(name, component) {
     super(name, component)
@@ -41,10 +40,8 @@ class BRNotification extends BRTooltip {
     })
   }
 }
-
 const notificationList = []
 for (const brNotification of window.document.querySelectorAll('.br-notification')) {
   notificationList.push(new BRNotification('br-notification', brNotification))
 }
-
 export default BRNotification

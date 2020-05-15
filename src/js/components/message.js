@@ -4,7 +4,6 @@ class BRAlert {
     this.component = component
     this._setBehavior()
   }
-
   _setBehavior() {
     for (const button of this.component.querySelectorAll('div.close button')) {
       button.addEventListener('click', () => {
@@ -12,17 +11,13 @@ class BRAlert {
       })
     }
   }
-
   _dismiss(component) {
     component.parentNode.removeChild(component)
   }
 }
-
 /* Instancia a classe */
 const alertList = []
-
 for (const brAlert of window.document.querySelectorAll('.br-message')) {
   alertList.push(new BRAlert('br-message', brAlert))
 }
-
 export default BRAlert

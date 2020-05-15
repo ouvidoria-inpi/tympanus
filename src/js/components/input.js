@@ -5,12 +5,10 @@ class BRInput {
     this._currentFocus = -1
     this._setBehavior()
   }
-
   _setBehavior() {
     this._setPasswordViewBehavior()
     this._setAutocompleteBehavior()
   }
-
   _setPasswordViewBehavior() {
     for (const inputPassword of this.component.querySelectorAll("input[type='password']")) {
       if (inputPassword.parentNode.classList.contains('has-icon')) {
@@ -26,7 +24,6 @@ class BRInput {
       }
     }
   }
-
   _toggleShowPassword(event) {
     for (const icon of event.currentTarget.querySelectorAll('.svg-inline--fa')) {
       if (icon.classList.contains('fa-eye')) {
@@ -44,7 +41,6 @@ class BRInput {
       }
     }
   }
-
   _setAutocompleteBehavior() {
     for (const inputAutocomplete of this.component.querySelectorAll('input.search-autocomplete')) {
       inputAutocomplete.addEventListener(
@@ -55,7 +51,6 @@ class BRInput {
         },
         false
       )
-
       inputAutocomplete.addEventListener(
         'keydown',
         (event) => {
@@ -65,12 +60,10 @@ class BRInput {
       )
     }
   }
-
   _buildSearchItems(element) {
     const searchList = window.document.createElement('div')
     searchList.setAttribute('class', 'search-items')
     this.component.appendChild(searchList)
-
     if (element.value !== '') {
       for (const data of this.dataList) {
         if (data.substr(0, element.value.length).toUpperCase() === element.value.toUpperCase()) {
@@ -88,7 +81,6 @@ class BRInput {
             },
             false
           )
-
           searchList.appendChild(item)
         }
       }
@@ -96,7 +88,6 @@ class BRInput {
       this._clearSearchItems()
     }
   }
-
   _clearSearchItems() {
     for (const searchItems of this.component.querySelectorAll('.search-items')) {
       for (const item of searchItems.querySelectorAll('div')) {
@@ -105,7 +96,6 @@ class BRInput {
       this.component.removeChild(searchItems)
     }
   }
-
   _handleArrowKeys(event) {
     switch (event.keyCode) {
       case 13:
@@ -119,14 +109,12 @@ class BRInput {
           this._currentFocus = -1
         }
         break
-
       case 38:
         if (this._currentFocus > 0) {
           this._currentFocus -= 1
         }
         this._switchFocus()
         break
-
       case 40:
         for (const searchItems of this.component.querySelectorAll('.search-items')) {
           if (this._currentFocus < searchItems.querySelectorAll('div').length - 1) {
@@ -135,11 +123,9 @@ class BRInput {
         }
         this._switchFocus()
         break
-
       // skip default case
     }
   }
-
   _switchFocus() {
     for (const searchItems of this.component.querySelectorAll('.search-items')) {
       for (const [index, item] of searchItems.querySelectorAll('div').entries()) {
@@ -152,12 +138,10 @@ class BRInput {
       }
     }
   }
-
   setAutocompleteData(dataList) {
     this.dataList = dataList
   }
 }
-
 const countries = [
   'Afeganistão',
   'África do Sul',
@@ -406,16 +390,13 @@ const countries = [
   'Zâmbia',
   'Zimbábue',
 ]
-
 const inputList = []
 for (const brInput of window.document.querySelectorAll('.br-input')) {
   inputList.push(new BRInput('br-input', brInput))
 }
-
 for (const brInput of inputList) {
   brInput.component.querySelectorAll('input.search-autocomplete').forEach(() => {
     brInput.setAutocompleteData(countries)
   })
 }
-
 export default BRInput

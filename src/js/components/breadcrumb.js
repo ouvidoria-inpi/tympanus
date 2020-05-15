@@ -4,7 +4,6 @@ class BRBreadcrumb {
     this.component = component
     this._setBehavior()
   }
-
   _setBehavior() {
     window.addEventListener('load', () => {
       if (window.innerWidth < this.component.scrollWidth) {
@@ -12,7 +11,6 @@ class BRBreadcrumb {
       }
     })
   }
-
   hideCrumbs() {
     for (const crumb of this.component.querySelectorAll('li:not(:nth-child(1)):not(:last-child)')) {
       if (crumb.classList.contains('hidden')) {
@@ -26,7 +24,6 @@ class BRBreadcrumb {
       }
     }
   }
-
   _showCrumbs() {
     for (const crumb of this.component.querySelectorAll('li:not(:nth-child(1)):not(:last-child)')) {
       if (crumb.classList.contains('more')) {
@@ -38,10 +35,8 @@ class BRBreadcrumb {
     }
   }
 }
-
 const breadcrumbList = []
 for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
   breadcrumbList.push(new BRBreadcrumb('br-breadcrumb', brBreadcrumb))
 }
-
 export default BRBreadcrumb

@@ -29,11 +29,9 @@ class BRTooltip {
     // Adiciona ação de fechar ao botao do popover
     if (this.popover || this.notification) {
       const [close] = this.component.querySelectorAll('.close')
-
       close.addEventListener('click', (event) => {
         this._hide(event)
       })
-
       // Ação de fechar padrao ao sair do ativador
     } else {
       this.hideEvents.forEach((event) => {
@@ -85,7 +83,6 @@ class BRTooltip {
       })
     }
   }
-
   _destroy() {
     if (this.popperInstance) {
       const refpopover = this.component
@@ -94,7 +91,6 @@ class BRTooltip {
       }, 500)
     }
   }
-
   _show(event) {
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
@@ -104,7 +100,6 @@ class BRTooltip {
       setTimeout(this._hide, this.timer, event, this.component)
     }
   }
-
   _hide(event, component) {
     // data-show é o atributo que controla a visibilidade
     if (this.component) {
@@ -115,14 +110,12 @@ class BRTooltip {
       component.style.display = 'none'
     }
   }
-
   _setLayout() {
     // Cria a setinha que aponta para o item que criou o tooltip
     const arrow = document.createElement('div')
     arrow.setAttribute('data-popper-arrow', '')
     arrow.classList.add('arrow')
     this.component.appendChild(arrow)
-
     // Cria o icone de fechar do po over
     if (this.popover || this.notification) {
       const close = document.createElement('button')
@@ -135,7 +128,6 @@ class BRTooltip {
     }
   }
 }
-
 const tooltipList = []
 for (const brTooltip of window.document.querySelectorAll('.br-tooltip')) {
   tooltipList.push(new BRTooltip('br-tooltip', brTooltip))
