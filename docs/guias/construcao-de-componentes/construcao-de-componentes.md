@@ -1,4 +1,4 @@
-Faça um fork ou clone do projeto em <git@git.serpro:dsgov/dsgov-dsgov.git>.
+Faça um fork ou clone do projeto em [git@git.serpro:dsgov/dsgov-dsgov.git](git@git.serpro:dsgov/dsgov-dsgov.git).
 
 ```bash
 git clone git@git.serpro:dsgov/dsgov-dsgov.git
