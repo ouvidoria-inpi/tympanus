@@ -19,7 +19,6 @@
     "lint:branch": "node ./branch.lint.js",
     "lint:html": "./node_modules/.bin/html-validate dist/**/*.html",
     "lint:js": "./node_modules/.bin/eslint \"src/js/**/*.js\" --fix",
-    "lint:html2": "./node_modules/.bin/eslint dist/**/*.html --fix",
     "lint:styles": "./node_modules/.bin/stylelint src/scss/**/*.scss",
     "lint": "npm-run-all lint:*",
     "release:alpha": "standard-version -t '' --prerelease alpha",
