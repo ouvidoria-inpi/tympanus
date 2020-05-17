@@ -1,10 +1,10 @@
 'use strict'
 
-module.exports = ctx => ({
+module.exports = (ctx) => ({
   map: ctx.options.map,
   plugins: {
-    'autoprefixer': { cascade: false },
+    autoprefixer: { cascade: false },
     'postcss-between': { breakMultipleSelectors: true },
-    'postcss-sorting': { 'properties-order': 'alphabetical' }
-  }
+    'postcss-sorting': { 'properties-order': 'alphabetical' },
+  },
 })

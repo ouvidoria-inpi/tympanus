@@ -58,7 +58,7 @@ A estrutura da paginação é formada pela sequência de nove elementos dentre n
 
 5 | Usuário põe o mouse sobre reticências:
 
-![Paginacao Reticencias](imagens/Paginacao_OnMouseOver_Reticências.png)
+![Paginacao Reticencias](imagens/Paginacao_OnMouseOver_Reticencias.png)
 
 6 | Usuário clica sobre as reticências:
 

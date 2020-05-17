@@ -2,7 +2,7 @@
 
 ## Orientação de Uso
 
-![Orientação de Uso](imagens/Input-Orientação-de-Uso.png)
+![Orientação de Uso](imagens/Input-Orientacao-de-Uso.png)
 
 **1 | Rótulos**
 Devem ser acompanhados de rótulos que descrevam a informação que o usuário deve digitar.
@@ -49,7 +49,7 @@ A mensagem de erro (feedback contextual) deve ser o mais sucinta possível, de p
 
 A validação dos campos de texto deve exibir a mensagem de suporte abaixo do campo, juntamente com o ícone correspondente.
 
-![Mensagens de Crítica](imagens/Input-Mensagens-de-Crítica.png)
+![Mensagens de Crítica](imagens/Input-Mensagens-de-Critica.png)
 
 ---
 

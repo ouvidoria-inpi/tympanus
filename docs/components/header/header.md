@@ -1,0 +1,1 @@
+O componente _Header_ (Cabeçalho) é o principal item da página, onde podem ser agrupados componentes predefinidos que tem como finalidade auxiliar o usuário no acesso ou mesmo execução das funcionalidades principais site/sistema, ele é sempre localizado no topo das páginas.

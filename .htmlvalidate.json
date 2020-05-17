@@ -1,114 +1,102 @@
 {
-	"rules": {
-		"ds-rules-br-tabs": [
-			0,
-			{
-				"style": "lowercase",
-				"ignoreForeign": true
-			}
-		],
-		"indetation": [
-			0,
-			{
-				"style": "lowercase"
-			}
-		],
-		"attr-case": [
-			2,
-			{
-				"style": "lowercase",
-				"ignoreForeign": true
-			}
-		],
-		"attr-quotes": [
-			2,
-			{
-				"style": "auto",
-				"unquoted": false
-			}
-		],
-		"attribute-allowed-values": 2,
-		"attribute-boolean-style": [
-			2,
-			{
-				"style": "omit"
-			}
-		],
-		"class-pattern": [
-			2,
-			{
-				"pattern": "kebabcase"
-			}
-		],
-		"close-attr": 2,
-		"close-order": 2,
-		"deprecateddeprecated": 0,
-		"element-case": [
-			2,
-			{
-				"style": "lowercase"
-			}
-		],
-		"element-name": [
-			2,
-			{
-				"pattern": "[a-z0-9-]",
-				"whitelist": [],
-				"blacklist": []
-			}
-		],
-		"element-permitted-content": 2,
-		"element-permitted-occurrences": 2,
-		"element-permitted-order": 2,
-		"element-required-attributes": 2,
-		"empty-heading": 2,
-		"empty-title": 2,
-		"heading-level": 2,
-		"id-pattern": [
-			2,
-			{
-				"pattern": "kebabcase"
-			}
-		],
-		"input-missing-label": 2,
-		"long-title": [
-			2,
-			{
-				"maxlength": 120
-			}
-		],
-		"script-type": 0,
-		"deprecated-rule": 0,
-		"meta-refresh": 0,
-		"missing-doctype": 0,
-		"no-conditional-comment": 2,
-		"no-deprecated-attr": 2,
-		"no-dup-attr": 2,
-		"no-dup-class": 2,
-		"no-dup-id": 2,
-		"no-implicit-closed": 0,
-		"no-inline-style": 0,
-		"no-raw-characters": 0,
-		"no-trailing-whitespace": 2,
-		"prefer-button": 2,
-		"require-sri": 0,
-		"unrecognized-char-ref": 0,
-		"void": [
-			2,
-			{
-				"style": "omit"
-			}
-		],
-		"wcag/h30": 2,
-		"wcag/h32": 2,
-		"wcag/h36": 2,
-		"wcag/h37": [
-			2,
-			{
-				"allowEmpty": true,
-				"alias": []
-			}
-		],
-		"wcag/h67": 2
-	}
+  "rules": {
+    "ds-rules-br-tabs": [
+      0,
+      {
+        "style": "lowercase",
+        "ignoreForeign": true
+      }
+    ],
+    "indetation": [0, { "style": "lowercase" }],
+    "attr-case": [
+      0,
+      {
+        "style": "lowercase",
+        "ignoreForeign": true
+      }
+    ],
+    "attr-quotes": [
+      2,
+      {
+        "style": "auto",
+        "unquoted": false
+      }
+    ],
+    "attribute-allowed-values": 2,
+    "attribute-boolean-style": [
+      2,
+      {
+        "style": "omit"
+      }
+    ],
+    "deprecated-rule": 0,
+    "class-pattern": [
+      2,
+      {
+        "pattern": "kebabcase"
+      }
+    ],
+    "close-attr": 2,
+    "close-order": 2,
+    "deprecateddeprecated": 0,
+    "element-case": [
+      2,
+      {
+        "style": "lowercase"
+      }
+    ],
+    "element-name": [
+      2,
+      {
+        "pattern": "[a-z0-9-]",
+        "whitelist": [],
+        "blacklist": []
+      }
+    ],
+    "element-permitted-content": 2,
+    "element-permitted-occurrences": 2,
+    "element-permitted-order": 2,
+    "element-required-attributes": 2,
+    "empty-heading": 2,
+    "empty-title": 2,
+    "heading-level": 2,
+    "id-pattern": [
+      2,
+      {
+        "pattern": "kebabcase"
+      }
+    ],
+    "input-missing-label": 2,
+    "long-title": [
+      2,
+      {
+        "maxlength": 120
+      }
+    ],
+    "meta-refresh": 0,
+    "missing-doctype": 0,
+    "no-conditional-comment": 2,
+    "no-deprecated-attr": 2,
+    "no-dup-attr": 2,
+    "no-dup-class": 2,
+    "no-dup-id": 2,
+    "no-implicit-closed": 0,
+    "no-inline-style": 0,
+    "no-raw-characters": 0,
+    "no-trailing-whitespace": 2,
+    "prefer-button": 2,
+    "require-sri": 0,
+    "unrecognized-char-ref": 0,
+    "wcag/h30": 2,
+    "wcag/h32": 2,
+    "wcag/h36": 2,
+    "wcag/h37": [
+      2,
+      {
+        "allowEmpty": true,
+        "alias": []
+      }
+    ],
+    "wcag/h67": 2
+  }
 }

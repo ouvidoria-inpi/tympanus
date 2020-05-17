@@ -1,34 +1,39 @@
-Antes de criar esse MR verifique se não existe outro MR com o mesmo conteúdo.
+**Antes de criar esse MR verifique se não existe outro MR sobre o mesmo assunto.**
 
 Marque as opções na página do git.serpro:
+
 1. Delete source branch when merge request is accepted.
-2. Squash commits when merge request is accepted. 
+2. Squash commits when merge request is accepted.
 
 Se o código ainda não é considerado pronto (depende dos critérios de aceitação da tarefa, o título do MR deve estar marcado como **WIP**.
 
 Quando estiver pronto, altere o título e remova o **WIP**
 
-## Descrição
+## O que foi feito
 
-(Descreva o que foi feito na branch)
+(Descreva o que foi feito no máximo de detalhes)
+
+## Indicados para analisar
+
+(Relacione as pessoas que são mais indicadas para analisar esse MR)
 
 ## Responsáveis
 
 (Relacione as pessoas que trabalharam nesse código)
-@12345678912 @12457823568 @32659821548
 
-## Checklist
+## Critérios de aceitação
 
-(Copie a lista da tarefa do ALM para considerar essa tarefa como pronta)
+(Se sua tarefa tiver requisitos para ser considerada pronta, relacione-os abaixo)
 
-- [ ] Item 1
-- [x] Item 2
-- [ ] Item 3
+-   [ ] Item 1
+-   [x] Item 2
+-   [ ] Item 3
 
-## Labels (tags)
+## Labels (tags/etiquetas)
 
-Coloque as tags (etiquetas, label) para identificar o status e tipo do MR
+Por favor, **remova essa seção após colocar as tags**
 
+Selecione as tags (etiquetas, label) para identificar o status e tipo do MR
 Ex:
 
 - Componente
@@ -44,6 +49,8 @@ Ex:
 - Fazendo
 - Devops
 - git
+
+Se precisar crie outras tags, **mas cuidado com o excesso**.
 
 ## Tarefa ALM (opcional)
 
