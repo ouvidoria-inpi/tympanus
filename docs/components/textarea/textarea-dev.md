@@ -1,7 +1,3 @@
-# TextArea
-
-O Componente de TextArea  permite que seu aplicativo aceite um valor de texto potencialmente longo do usuário.
-
 ## Dependências
 
 Nenhuma dependência.
