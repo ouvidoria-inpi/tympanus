@@ -23,11 +23,9 @@ append template
   .container
     h1=title
 
-    h2 Grid Bootstrap
+    h2 Grid
 
-    h3 Container fixo
-
-    p.h6 Colunas automáticas
+    p.h6 Container
 
   .bg-secondary-02
     - rows = 1;
@@ -38,20 +36,7 @@ append template
           - rows++
 
   .container
-      p.h6 Colunas fixas
-
-  .bg-secondary-02
-    - rows = 1;
-    while rows <= 12
-      .bg-secondary-03
-        .container
-          +col-bs(rows)
-          - rows++
-
-  .container
-    h3 Container fluid
-
-    p.h6 Colunas automáticas
+    p.h6 Container-fluid
 
   .bg-secondary-02
     - rows = 1;
@@ -59,17 +44,6 @@ append template
       .bg-secondary-03
         .container-fluid
           +auto-bs(rows)
-          - rows++
-
-  .container
-    p.h6 Colunas fixas
-
-  .bg-secondary-02
-    - rows = 1;
-    while rows <= 12
-      .bg-secondary-03
-        .container-fluid
-          +col-bs(rows)
           - rows++
 
   .container

@@ -1,8 +1,31 @@
 // Grid Bootstrap
-@import "../../../node_modules/bootstrap/scss/grid";
+@import '../../../node_modules/bootstrap/scss/grid';
 
-@include grid-bs($grid-breakpoint-small, $grid-tablet-gutter);
-@include grid-bs($grid-breakpoint-large, $grid-desktop-gutter);
-@include grid-bs($grid-breakpoint-xlarge, $grid-tv-gutter);
+@media (min-width: $grid-breakpoint-small) {
+  .container,
+  .container-fluid {
+    padding-left: $grid-tablet-margin;
+    padding-right: $grid-tablet-margin;
+  }
+  .row {
+    margin-right: -($grid-tablet-gutter / 2);
+    margin-left: -($grid-tablet-gutter / 2);
+  }
+  .col,
+  [class*='col-'] {
+    padding-right: $grid-tablet-gutter / 2;
+    padding-left: $grid-tablet-gutter / 2;
+  }
+}
 
-// TODO: Criar Grid do DSGov
+@media (min-width: $grid-breakpoint-xlarge) {
+  .row {
+    margin-right: -$grid-tv-gutter / 2;
+    margin-left: -$grid-tv-gutter / 2;
+  }
+  .col,
+  [class*='col-'] {
+    padding-right: $grid-tv-gutter / 2;
+    padding-left: $grid-tv-gutter / 2;
+  }
+}
