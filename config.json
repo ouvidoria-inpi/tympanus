@@ -125,6 +125,10 @@
 				"filename": "divider"
 			},
 			{
+				"label": "Footer",
+				"filename": "footer"
+			},
+			{
 				"label": "Input",
 				"filename": "input"
 			},

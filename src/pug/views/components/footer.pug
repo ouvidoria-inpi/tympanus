@@ -1,0 +1,182 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "footer";
+
+
+append content
+  p Exemplo de Footer Versão Negativa
+  +footer(class="negative")
+    .line(class="around-logo")
+    .line(class="around-list")
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+    .line(class="around-social")
+        div(class="social-network")
+          p(class="title-social-network") Redes Sociais
+          button(class="is-circle color-secondary-01 background-color-facebook border-color-facebook" type="button")
+            img(alt="botão facebook" src="/teste.png")
+          button(class="is-circle color-secondary-01 background-color-twitter border-color-twitter" type="button")
+            img(alt="botão twitter" src="/teste.png")
+          button(class="is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
+            img(alt="botão google" src="/teste.png")
+          button(class="is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
+            img(alt="botão govbr" src="/teste.png")  
+        div(class="assigns")
+          div(class="logo-information")
+          div(class="logo-br")
+  
+  p Exemplo de Footer Versão Positiva
+  +footer(class="positive")
+    .line(class="around-logo")
+    .line(class="around-list")
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+    .line(class="around-social")
+        div(class="social-network")
+          p(class="title-social-network") Redes Sociais
+          button(class="is-circle color-secondary-01 background-color-facebook border-color-facebook" type="button")
+            img(alt="botão facebook" src="/teste.png")
+          button(class="is-circle color-secondary-01 background-color-twitter border-color-twitter" type="button")
+            img(alt="botão twitter" src="/teste.png")
+          button(class="is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
+            img(alt="botão google" src="/teste.png")
+          button(class="is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
+            img(alt="botão govbr" src="/teste.png")  
+        div(class="assigns")
+          div(class="logo-information")
+          div(class="logo-br")
+
+append style
+  style.
+    .engloba {
+        align-items: flex-start;
+        display: flex!important;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .br-list{
+      background-color: transparent;  
+    }
+    .line{
+      display: flex;
+      flex-direction: row;
+      //- magin: 1em;
+    }
+
