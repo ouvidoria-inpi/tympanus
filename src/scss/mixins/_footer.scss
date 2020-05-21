@@ -1,4 +1,4 @@
-@mixin img{
+@mixin img {
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 102px;
@@ -7,59 +7,58 @@
   height: 48px;
 }
 
-@mixin themes{
-  .negative{
-    background-color: v(color-primary-darken-02); 
-    .around-logo{
-      background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbr.svg");
+@mixin themes {
+  &.negative {
+    background-color: v(color-primary-darken-02);
+    .around-logo {
+      background: url('https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbr.svg');
     }
     .logo,
     .text-list,
     .title-social-network,
     .assigns,
-    .law-information{
+    .law-information {
       color: v(color-secondary-01);
     }
     .around-list,
     .around-rights,
-    .around-footer{
-      background-color: v(color-primary-darken-02); 
-      color: v(color-secondary-01); 
+    .around-footer {
+      background-color: v(color-primary-darken-02);
+      color: v(color-secondary-01);
     }
-    .logo-information{
-      background: url("/assets/design-system/docs/components/footer/imagens/logo-acesso-info.png");
+    .logo-information {
+      background: url('/assets/design-system/docs/components/footer/imagens/logo-acesso-info.png');
       @include img;
     }
-    .logo-br{
-      background: url("/assets/design-system/docs/components/footer/imagens/logo-govbr.png");
+    .logo-br {
+      background: url('/assets/design-system/docs/components/footer/imagens/logo-govbr.png');
       @include img;
     }
   }
-  .positive{
-    background-color: v(color-secondary-01); 
-    .around-logo{
-      background: url("/assets/design-system/docs/components/footer/imagens/logo-govbr.png");
+  &.positive {
+    background-color: v(color-secondary-01);
+    .around-logo {
+      background: url('/assets/design-system/docs/components/footer/imagens/logo-govbr.png');
     }
     .logo,
     .text-list,
     .title-social-network,
     .assigns,
-    .law-information{
+    .law-information {
       color: v(color-primary-darken-02);
     }
     .around-list,
     .around-rights,
-    .around-footer{
-      background-color: v(color-secondary-01); 
+    .around-footer {
+      background-color: v(color-secondary-01);
     }
-    .logo-information{
-      background: url("/assets/design-system/docs/components/footer/imagens/logo-acesso-info.png");
+    .logo-information {
+      background: url('/assets/design-system/docs/components/footer/imagens/logo-acesso-info.png');
       @include img;
     }
-    .logo-br{
-      background: url("/assets/design-system/docs/components/footer/imagens/logo-govbr.png");
+    .logo-br {
+      background: url('/assets/design-system/docs/components/footer/imagens/logo-govbr.png');
       @include img;
     }
   }
 }
-
