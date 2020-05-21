@@ -66,8 +66,10 @@
       &-rights{
         font-size: v(font-size=scale-down-01);
         font-weight: v(font-weight-medium);
+        border: 1px solid black;
         &-bolder{
           font-weight: v(font-weight-extra-bold);
+          
         }
       }
     }  

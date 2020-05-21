@@ -11,7 +11,7 @@
   .negative{
     background-color: v(color-primary-darken-02); 
     .around-logo{
-      background: url("/assets/design-system/docs/components/footer/imagens/logo-govbr.png");
+      background: url("https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbr.svg");
     }
     .logo,
     .text-list,
@@ -27,11 +27,11 @@
       color: v(color-secondary-01); 
     }
     .logo-information{
-      background: url("/assets/img/logo-acesso-info.png");
+      background: url("/assets/design-system/docs/components/footer/imagens/logo-acesso-info.png");
       @include img;
     }
     .logo-br{
-      background: url("/assets/img/logo-gov.png");
+      background: url("/assets/design-system/docs/components/footer/imagens/logo-govbr.png");
       @include img;
     }
   }
@@ -45,7 +45,7 @@
     .title-social-network,
     .assigns,
     .law-information{
-      color: v(color-secondary-07);
+      color: v(color-primary-darken-02);
     }
     .around-list,
     .around-rights,
@@ -53,11 +53,11 @@
       background-color: v(color-secondary-01); 
     }
     .logo-information{
-      background: url("/assets/img/logo-acesso-info.png");
+      background: url("/assets/design-system/docs/components/footer/imagens/logo-acesso-info.png");
       @include img;
     }
     .logo-br{
-      background: url("/assets/img/logo-gov.png");
+      background: url("/assets/design-system/docs/components/footer/imagens/logo-govbr.png");
       @include img;
     }
   }
