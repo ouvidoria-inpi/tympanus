@@ -4,70 +4,81 @@ append vars
   - var title = "Tooltip";
 
 append content
-  .h1 Tololtip CSS Example
+  .h3 Tololtip CSS Example
   .row
-    .col-md-4.offset-md-1
-      span.h3 Tooltip com Texto Simples
-      +tooltip("Texto de Informação")(id="tt1" place="bottom")
-    .col-md-4.offset-md-1
-      span.h3 Tooltip com Texto Auxiliar - Info
-      br
-      img(src="https://picsum.photos/50" alt="Avatar" style="border-radius:50%; width:50px; height:50px; border: 3px solid #ccc;")
-      +tooltip("Fulano de Tal da Silva")(id="tt2" class="is-info" place="right" active="true" timer="8000")
-        span.subtext Diretor Presidente
+    .col-sm-12.col-md-5.offset-md-1
+      div.mb-30.mt-20
+        a(href="javascript:void();").h5 Tooltip com Texto Simples
+        +tooltip("Texto de Informação")(id="tt1" place="right")
+    .col-sm-12.col-md-5.offset-md-1
+      div.mb-30.mt-20
+        div.h5 Tooltip com Texto Auxiliar - Info
+        a(href="javascript:void();")
+          img(src="https://picsum.photos/50" alt="Avatar" style="border-radius:50%; width:50px; height:50px; border: 3px solid #ccc;")
+        +tooltip("Fulano de Tal da Silva")(id="tt2" class="is-info" place="right" active=true timer="8000")
+          span.subtext Diretor Presidente
   .row
-    .col-md-4.offset-md-1
-      span.h3 Tooltip - Erro
-      +tooltip("Não foi possível logar!")(id="tt3" class="is-error" place="bottom")
-        span.subtext Verifique sua conexão
-    .col-md-4.offset-md-1
-      span.h3 Tooltip - Sucesso
-      +tooltip("Incluído com sucesso!")(id="tt4" class="is-success" place="right")
+    .col-sm-12.col-md-5.offset-md-1
+      div.mb-30.mt-20
+        a(href="javascript:void();").h5 Tooltip - Erro
+        +tooltip("Não foi possível logar!")(id="tt3" class="is-error" place="bottom")
+          span.subtext Verifique sua conexão
+    .col-sm-12.col-md-5.offset-md-1
+      div.mb-30.mt-20
+        a(href="javascript:void();").h5 Tooltip - Sucesso
+        +tooltip("Incluído com sucesso!")(id="tt4" class="is-success" place="right")
           span.subtext Protocolo 0000.22-11
   .row
-    .col-md-4.offset-md-1
-      +input("Senha (Tooltip no campo - Advertência)")(id="senha" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
-        button.icon(type='button')
-          span.sr-only Mostrar senha
-          i.fas.fa-eye
-      +tooltip("O Caps Lock está ligado!")(id="tt5" class="is-warning" place="right" active="true" timer="10000")
-        span.subtext Desative antes de digitar
+    .col-md-6.offset-md-1
+      div.mb-30.mt-20
+        span.h5 Tooltip com Input
+        +input("Senha (Tooltip no campo - Advertência)")(id="senha" type="password" class="has-icon" placeholder="Digite sua senha de 8 a 11 dígitos")
+          +tooltip("O Caps Lock está ligado!")(id="tt5" class="is-warning" place="right" active=true timer="10000")
+            span.subtext Desative antes de digitar
+          button.icon(type='button')
+            span.sr-only Mostrar senha
+            i.fas.fa-eye
+
   .row
-    .h2 Tipo PopOver
+    .h3 Tipo PopOver
   .row
-    .col-md-4.offset-md-1
-      span.h3 PopOver Simples
-      +tooltip("Cadastro Concluído")(id="tt6" class="is-success" popover="true" timer="5000" place="bottom")
-        +popover-header
-          span.text Cadastro Concluído!
-        +popover-body
-          span.subtext Para verificar mais detalhes a respeito do seu acesso, clique no link abaixo.
-        +popover-footer
-          a.link(href="javascript:void(0)") Clique aqui 
-    .col-md-4.offset-md-1
-      span.h3 PopOver com ícone e botão- Warning
-      +tooltip("Incluído com sucesso!")(id="tt7" class="is-warning" popover="true" place="left")
-        +popover-header
-          i.fas.fa-exclamation-triangle.fa-2x
-        +popover-body
-          span.subtext É recomendado que o cadastro seja atualizado antes de prosseguir.
-        +popover-footer
-          +button(class="is-primary")
-            span Atualizar
-  .row
-      .col-md-4.offset-md-1
-        span.h3 PopOver com ícone - Erro
-        +tooltip(id="tt8" class="is-error" popover="true" timer="3000" place="right")
+    .col-sm-12.col-md-5.offset-md-1
+      div.mb-30.mt-20
+        a(href="javascript:void();").h5 PopOver Simples
+        +tooltip("Cadastro Concluído")(id="tt6" class="is-success" popover=true timer="5000" place="bottom")
           +popover-header
-            i.fas.fa-ban.fa-2x
+            span.text Cadastro Concluído!
           +popover-body
-            span.subtext Essa ação só é permitida após o preenchimento dos campos no formulário!
-      .col-md-4.offset-md-1
-        span.h3 PopOver com imagem
-        +tooltip("Incluído com sucesso!")(id="tt9" class="is-info" popover="true" timer="2000" place="bottom")
-          +popover-image
-            img(src="https://picsum.photos/80" alt="Avatar")
+            span.subtext Para verificar mais detalhes a respeito do seu acesso, clique no link abaixo.
+          +popover-footer
+            a.link(href="javascript:void(0)") Clique aqui
+    .col-sm-12.col-md-5.offset-md-1
+      div.mb-30.mt-20
+        a(href="javascript:void();").h5 PopOver com ícone e botão- Warning
+        +tooltip("Incluído com sucesso!")(id="tt7" class="is-warning" popover=true place="right")
           +popover-header
-            span.text Fulano de Tal da Silva
+            i.fas.fa-exclamation-triangle.fa-2x
           +popover-body
-            span.subtext Diretor Presidente
+            span.subtext É recomendado que o cadastro seja atualizado antes de prosseguir.
+          +popover-footer
+            +button(class="is-primary")
+              span Atualizar
+  .row
+      .col-sm-12.col-md-5.offset-md-1
+        div.mb-30.mt-20
+          a(href="javascript:void();").h5 PopOver com ícone - Erro
+          +tooltip(id="tt8" class="is-error" popover=true timer="3000" place="right")
+            +popover-header
+              i.fas.fa-ban.fa-2x
+            +popover-body
+              span.subtext Essa ação só é permitida após o preenchimento dos campos no formulário!
+      .col-sm-12.col-md-5.offset-md-1
+        div.mb-30.mt-20
+          a(href="javascript:void();").h5 PopOver com imagem
+          +tooltip("Incluído com sucesso!")(id="tt9" class="is-info" popover=true timer="2000" place="bottom")
+            +popover-image
+              img(src="https://picsum.photos/80" alt="Avatar")
+            +popover-header
+              span.text Fulano de Tal da Silva
+            +popover-body
+              span.subtext Diretor Presidente

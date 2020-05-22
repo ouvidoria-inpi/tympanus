@@ -16,7 +16,15 @@ mixin message(className="is-info")
     .content
       if block
         block
-    .close
-      button(type='button')
-        i.fas.fa-times
-        span.sr-only Fechar
+    unless className == "hint"
+      .close
+        button.br-button.circle(type='button')
+          i.fas.fa-times
+          span.sr-only Fechar
+
+mixin feedback(icon, message)
+  .feedback(class=attributes.class)
+    i.fas(class=icon)
+    |
+    |
+    span=message

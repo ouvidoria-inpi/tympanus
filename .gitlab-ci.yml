@@ -29,8 +29,8 @@ install_dependencies:
 
 validate_html:
   stage: test
-  script: npm run validate:html
+  script: npm run lint:html
 
 validate_styles:
   stage: test
-  script: npm run validate:styles
+  script: npm run lint:styles

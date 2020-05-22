@@ -191,4 +191,3 @@ Segue as métricas definidas para os espaçamentos de todos os elementos utiliza
 ### Link Adobe XD para Especificações
 
 https://xd.adobe.com/spec/7927f1ea-e05b-4e8a-5bf2-9c4931aae8d5-0f16/
-

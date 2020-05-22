@@ -1,13 +1,25 @@
 // Criar cores de fundo
-@mixin bg-colors($item, $value) {
+@mixin bg-token-colors($item, $value) {
   .background-#{$item} {
     background-color: v($item, $value) !important;
   }
 }
 
+@mixin bg-colors($item, $value) {
+  .bg-#{$item} {
+    background-color: v($item, $value) !important;
+  }
+}
+
 // Criar cores de textos
-@mixin text-colors($item, $value) {
+@mixin text-token-colors($item, $value) {
   .#{$item} {
+    color: v($item, $value) !important;
+  }
+}
+
+@mixin text-colors($item, $value) {
+  .text-#{$item} {
     color: v($item, $value) !important;
   }
 }

@@ -1,146 +1,148 @@
 class BRInput {
-
-  constructor ( name, component ) {
-    this.name = name;
-    this.component = component;
-    this._currentFocus = -1;
-    this._setBehavior();
+  constructor(name, component) {
+    this.name = name
+    this.component = component
+    this._currentFocus = -1
+    this._setBehavior()
+  }
+  _setBehavior() {
+    this._setPasswordViewBehavior()
+    this._setAutocompleteBehavior()
   }
 
-  _setBehavior () {
-    this._setPasswordViewBehavior();
-    this._setAutocompleteBehavior();
-  }
-
-  _setPasswordViewBehavior () {
-    for ( let inputPassword of this.component.querySelectorAll( "input[type='password']" ) ) {
+  _setPasswordViewBehavior() {
+    for (const inputPassword of this.component.querySelectorAll("input[type='password']")) {
       if (!inputPassword.disabled) {
-        for ( let buttonIcon of inputPassword.parentNode.querySelectorAll( "button.icon" ) ) {
-          buttonIcon.addEventListener( "click", ( event ) => {
-            this._toggleShowPassword( event );
-          }, false )
+        for (const buttonIcon of inputPassword.parentNode.querySelectorAll('button.icon')) {
+          buttonIcon.addEventListener(
+            'click',
+            (event) => {
+              this._toggleShowPassword(event)
+            },
+            false
+          )
         }
       }
     }
   }
-
-  _toggleShowPassword ( event ) {
-    for ( let icon of event.currentTarget.querySelectorAll( ".svg-inline--fa" ) ) {
-      if ( icon.classList.contains( "fa-eye" ) ) {
-        icon.classList.remove( "fa-eye" );
-        icon.classList.add( "fa-eye-slash" );
-        for ( let input of this.component.querySelectorAll( "input[type='password']" ) ) {
-          input.setAttribute( "type", "text" );
+  _toggleShowPassword(event) {
+    for (const icon of event.currentTarget.querySelectorAll('.svg-inline--fa')) {
+      if (icon.classList.contains('fa-eye')) {
+        icon.classList.remove('fa-eye')
+        icon.classList.add('fa-eye-slash')
+        for (const input of this.component.querySelectorAll("input[type='password']")) {
+          input.setAttribute('type', 'text')
         }
-      } else if ( icon.classList.contains( "fa-eye-slash" ) ) {
-        icon.classList.remove( "fa-eye-slash" );
-        icon.classList.add( "fa-eye" );
-        for ( let input of this.component.querySelectorAll( "input[type='text']" ) ) {
-          input.setAttribute( "type", "password" );
+      } else if (icon.classList.contains('fa-eye-slash')) {
+        icon.classList.remove('fa-eye-slash')
+        icon.classList.add('fa-eye')
+        for (const input of this.component.querySelectorAll("input[type='text']")) {
+          input.setAttribute('type', 'password')
         }
       }
     }
   }
-
-  _setAutocompleteBehavior () {
-    for ( let inputAutocomplete of this.component.querySelectorAll( 'input.search-autocomplete' ) ) {
-      inputAutocomplete.addEventListener( "input", ( event ) => {
-        this._clearSearchItems();
-        this._buildSearchItems( event.currentTarget );
-      }, false );
-
-      inputAutocomplete.addEventListener( "keydown", ( event ) => {
-        this._handleArrowKeys( event );
-      }, false );
+  _setAutocompleteBehavior() {
+    for (const inputAutocomplete of this.component.querySelectorAll('input.search-autocomplete')) {
+      inputAutocomplete.addEventListener(
+        'input',
+        (event) => {
+          this._clearSearchItems()
+          this._buildSearchItems(event.currentTarget)
+        },
+        false
+      )
+      inputAutocomplete.addEventListener(
+        'keydown',
+        (event) => {
+          this._handleArrowKeys(event)
+        },
+        false
+      )
     }
   }
-
-  _buildSearchItems ( element ) {
-    let searchList = window.document.createElement( "div" );
-    searchList.setAttribute( "class", "search-items" );
-    this.component.appendChild( searchList );
-
-    if ( element.value !== "" ) {
-      for ( let data of this.dataList ) {
-        if ( data.substr( 0, element.value.length ).toUpperCase() == element.value.toUpperCase() ) {
-          let item = window.document.createElement( "div" );
-          item.innerHTML = "<strong>" + data.substr( 0, element.value.length ) + "</strong>";
-          item.innerHTML += data.substr( element.value.length );
-          item.innerHTML += "<input type=\"hidden\" value=\"" + data + "\">";
-          item.addEventListener( "click", ( event ) => {
-            for ( let input of event.currentTarget.querySelectorAll( "input[type='hidden']" ) ) {
-              element.value = input.value;
-            }
-            this._clearSearchItems();
-          }, false )
-
-          searchList.appendChild( item );
+  _buildSearchItems(element) {
+    const searchList = window.document.createElement('div')
+    searchList.setAttribute('class', 'search-items')
+    this.component.appendChild(searchList)
+    if (element.value !== '') {
+      for (const data of this.dataList) {
+        if (data.substr(0, element.value.length).toUpperCase() === element.value.toUpperCase()) {
+          const item = window.document.createElement('div')
+          item.innerHTML = `<strong>${data.substr(0, element.value.length)}</strong>`
+          item.innerHTML += data.substr(element.value.length)
+          item.innerHTML += `<input type="hidden" value="${data}">`
+          item.addEventListener(
+            'click',
+            (event) => {
+              for (const input of event.currentTarget.querySelectorAll("input[type='hidden']")) {
+                element.value = input.value
+              }
+              this._clearSearchItems()
+            },
+            false
+          )
+          searchList.appendChild(item)
         }
       }
     } else {
-      this._clearSearchItems();
+      this._clearSearchItems()
     }
   }
-
-  _clearSearchItems () {
-    for ( let searchItems of this.component.querySelectorAll( ".search-items" ) ) {
-      for ( let item of searchItems.querySelectorAll( "div" ) ) {
-        searchItems.removeChild( item );
+  _clearSearchItems() {
+    for (const searchItems of this.component.querySelectorAll('.search-items')) {
+      for (const item of searchItems.querySelectorAll('div')) {
+        searchItems.removeChild(item)
       }
-      this.component.removeChild( searchItems );
+      this.component.removeChild(searchItems)
     }
   }
-
-  _handleArrowKeys ( event ) {
-    switch ( event.keyCode ) {
+  _handleArrowKeys(event) {
+    switch (event.keyCode) {
       case 13:
-        if ( this._currentFocus > -1 ) {
-          event.preventDefault();
-          for ( let searchItems of this.component.querySelectorAll( ".search-items" ) ) {
-            for ( let itemActive of searchItems.querySelectorAll( "div.is-active" ) ) {
-              itemActive.click();
+        if (this._currentFocus > -1) {
+          event.preventDefault()
+          for (const searchItems of this.component.querySelectorAll('.search-items')) {
+            for (const itemActive of searchItems.querySelectorAll('div.is-active')) {
+              itemActive.click()
             }
           }
-          this._currentFocus = -1;
+          this._currentFocus = -1
         }
-        break;
-
+        break
       case 38:
-        if ( this._currentFocus > 0 ) {
-          this._currentFocus--;
+        if (this._currentFocus > 0) {
+          this._currentFocus -= 1
         }
-        this._switchFocus();
-        break;
-
+        this._switchFocus()
+        break
       case 40:
-        for ( let searchItems of this.component.querySelectorAll( ".search-items" ) ) {
-          if ( this._currentFocus < searchItems.querySelectorAll( "div" ).length - 1 ) {
-            this._currentFocus++;
+        for (const searchItems of this.component.querySelectorAll('.search-items')) {
+          if (this._currentFocus < searchItems.querySelectorAll('div').length - 1) {
+            this._currentFocus += 1
           }
         }
-        this._switchFocus();
-        break;
+        this._switchFocus()
+        break
+      // skip default case
     }
   }
-
-  _switchFocus () {
-    for ( let searchItems of this.component.querySelectorAll( ".search-items" ) ) {
-      for ( let [ index, item ] of searchItems.querySelectorAll( "div" ).entries() ) {
-        if ( index === this._currentFocus ) {
-          item.classList.add( "is-active" );
+  _switchFocus() {
+    for (const searchItems of this.component.querySelectorAll('.search-items')) {
+      for (const [index, item] of searchItems.querySelectorAll('div').entries()) {
+        if (index === this._currentFocus) {
+          item.classList.add('is-active')
         }
-        if ( index !== this._currentFocus ) {
-          item.classList.remove( "is-active" );
+        if (index !== this._currentFocus) {
+          item.classList.remove('is-active')
         }
       }
     }
   }
-
-  setAutocompleteData ( dataList ) {
-    this.dataList = dataList;
+  setAutocompleteData(dataList) {
+    this.dataList = dataList
   }
 }
-
 const countries = [
   'Afeganistão',
   'África do Sul',
@@ -389,21 +391,13 @@ const countries = [
   'Zâmbia',
   'Zimbábue',
 ]
-
-let inputList = []
-for ( let brInput of window.document.querySelectorAll( '.br-input' ) ) {
-  inputList.push( new BRInput( 'br-input', brInput ) )
+const inputList = []
+for (const brInput of window.document.querySelectorAll('.br-input')) {
+  inputList.push(new BRInput('br-input', brInput))
 }
-
-for ( let brInput of inputList ) {
-  for ( let inputAutocomplete of brInput.component.querySelectorAll(
-      'input.search-autocomplete'
-    ) ) {
-    brInput.setAutocompleteData( countries )
-  }
+for (const brInput of inputList) {
+  brInput.component.querySelectorAll('input.search-autocomplete').forEach(() => {
+    brInput.setAutocompleteData(countries)
+  })
 }
-
 export default BRInput
-
-
-

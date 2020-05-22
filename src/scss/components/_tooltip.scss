@@ -1,6 +1,9 @@
-.#{$prefix}tooltip {
+.#{$prefix}tooltip, 
+.#{$prefix}notification {
   background: v(color-info, $color-info);
   color: v(color-secondary-01, $color-secondary-01);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  //padding: $spacer * 2;
   font-weight:v(font-weight-semi-bold,$font-weight-semi-bold);
   padding: 16px 36px;
   font-size: v(font-size-scale-base,$font-size-scale-base);
@@ -43,54 +46,78 @@
     animation-duration: 0.4s;
   }
 
-  &.is-popover {
+  &[popover] {
     max-width: 360px;
     width: auto;
   }
-  &.is-success,
-  &.is-success .arrow::before {
+  &.is-success {
     background: v(color-success, $color-success);
+    .arrow {
+      border-color: v(color-success, $color-success);
+    }
   }
-  &.is-error,
-  &.is-error .arrow::before {
+  &.is-error {
     background: v(color-danger, $color-danger);
+    .arrow {
+      border-color:  v(color-danger, $color-danger);
+    }
   }
-  &.is-warning,
-  &.is-warning .arrow::before {
+  &.is-warning {
     background: v(color-warning, $color-warning);
     color: v(color-secondary-08, $color-secondary-08);
+    .arrow {
+      border-color: v(color-warning, $color-warning);
+    }
   }
   &.is-info,
-  &.is-info .arrow::before,
-  .arrow::before {
+  & {
     background: v(color-info, $color-info);
+    .arrow {
+      border-color: v(color-info, $color-info);
+    }
   }
 
-  .arrow,
-  .arrow::before {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    z-index: -1;
+  .arrow {
+    position: absolute !important;
+    z-index: -1 !important;
+    width: 0px;
+    height: 0px;
   }
-  .arrow::before {
-    content: '';
-    transform: rotate(45deg);
-  }
+
   &[data-popper-placement^='top'] > .arrow {
-    bottom: -4px;
+    bottom: -8px;
+    margin-left: -8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top-width: 8px;
+    border-top-style: solid;
   }
   
   &[data-popper-placement^='bottom'] > .arrow {
-    top: -4px;
+    top: -8px;
+    margin-left: -8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
   }
   
   &[data-popper-placement^='left'] > .arrow {
-    right: -4px;
+    right: -8px;
+    margin-top: -8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left-width: 8px; 
+    border-left-style: solid;
   }
   
   &[data-popper-placement^='right'] > .arrow {
-    left: -4px;
+    left: -8px;
+    margin-top: -8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-right-width: 8px;
+    border-right-style: solid; 
   }
 
   .text,
@@ -162,9 +189,12 @@
 
   .close {
     position: absolute;
-    top:5px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     cursor: pointer;
+    border: 0;
+    margin: 0;
+    padding: 0;
   }
 
   button,
@@ -172,6 +202,7 @@
     font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
     font-weight:  v(font-weight-medium,$font-weight-medium);
     background: transparent;
+    border-color: inherit;
     color: inherit;
     margin: 5px 5px;
   }
