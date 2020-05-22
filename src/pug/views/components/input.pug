@@ -11,26 +11,38 @@ append content
         +input("CPF")(id="cpf-id1" type="text" placeholder="Digite somente números")
       .mb-3
         +input("CPF")(id="cpf-id2" type="text" placeholder="Digite somente números" valid)
-          +feedback("fa-check-circle", "CPF válido")(valid)
+        .feedback.color-success
+          i.fas.fa-check-circle
+          span CPF válido
       .mb-3
         +input("CPF")(id="cpf-id3" type="text" placeholder="Digite somente números" invalid)
-          +feedback("fa-times-circle", "CPF inválido")(invalid)
+        .feedback.color-danger
+          i.fas.fa-times-circle
+          span CPF inválido
       .mb-3
         +input("CPF")(id="cpf-id4" type="text" placeholder="Digite somente números" disabled)
-          +feedback("fa-exclamation-triangle", "Campo Desabilitado")(disabled)
+        .feedback
+          i.fas.fa-exclamation-triangle
+          span Campo Desabilitado
     .col-sm-4
       p.h2 Input com Ícone
       .mb-3
         +input("Senha")(id="password-id1" type="password" placeholder="Sua senha de 8 a 11 digitos")
       .mb-3
         +input("Senha")(id="password-id2" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
-          +feedback("fa-check-circle", "Campo correto")(valid)
+        .feedback.color-success
+          i.fas.fa-check-circle
+          span Campo correto
       .mb-3
         +input("Senha")(id="password-id3" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
-          +feedback("fa-times-circle", "Senha incorreta")(invalid)
+        .feedback.color-danger
+          i.fas.fa-times-circle
+          span Senha incorreta
       .mb-3
         +input("Senha")(id="password-id4" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
-          +feedback("fa-exclamation-triangle", "Campo Desabilitado")(disabled)
+        .feedback
+          i.fas.fa-exclamation-triangle
+          span Campo Desabilitado
 
   .row.justify-content-around.mb-5
     .col-sm-4
@@ -40,16 +52,22 @@ append content
           p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
       .mb-3
         +input("Senha")(id="password-id6" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
-          +feedback("fa-check-circle", "Campo correto")(valid)
-          p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+        .feedback.color-success
+          i.fas.fa-check-circle
+          span Campo correto
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
       .mb-3
         +input("Senha")(id="password-id7" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
-          +feedback("fa-times-circle", "Senha incorreta")(invalid)
-          p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+        .feedback.color-danger
+          i.fas.fa-times-circle
+          span Senha incorreta
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
       .mb-3
         +input("Senha")(id="password-id8" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
-          +feedback("fa-exclamation-triangle", "Campo Desabilitado")(disabled)
-          p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+        .feedback
+          i.fas.fa-exclamation-triangle
+          span Campo Desabilitado
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
     .col-sm-4
       p.h2 Input para Filtros
       .mb-3
