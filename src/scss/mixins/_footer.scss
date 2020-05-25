@@ -7,58 +7,103 @@
   height: 48px;
 }
 
-@mixin themes {
-  &.negative {
-    background-color: v(color-primary-darken-02);
+@mixin themes($tema, $background, $logo, $acesso, $slogan) {
+  &.#{$tema} {
+    background-color: $background;
     .around-logo {
-      background: url('https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbr.svg');
+      background: url(#{$logo});
+      @include img;
     }
     .logo,
     .text-list,
     .title-social-network,
     .assigns,
     .law-information {
-      color: v(color-secondary-01);
+      @if $tema == 'negative' {
+        color: v(color-secondary-01);
+      } @else {
+        color: v(color-primary-darken-02);
+      }
     }
     .around-list,
     .around-rights,
     .around-footer {
-      background-color: v(color-primary-darken-02);
-      color: v(color-secondary-01);
+      background-color: $background;
+      @if $tema == 'negative' {
+        color: v(color-secondary-01);
+      } @else {
+        color: v(color-primary-darken-02);
+      }
     }
     .logo-information {
-      background: url('/assets/design-system/docs/components/footer/imagens/logo-acesso-info.png');
+      background: url(#{$acesso});
       @include img;
     }
-    .logo-br {
-      background: url('/assets/design-system/docs/components/footer/imagens/logo-govbr.png');
+    .logo-slogan {
+      background: url(#{$slogan});
       @include img;
     }
   }
-  &.positive {
-    background-color: v(color-secondary-01);
-    .around-logo {
-      background: url('/assets/design-system/docs/components/footer/imagens/logo-govbr.png');
+  @include teste;
+}
+
+@mixin teste {
+  /*** Logo govbr ***/
+  .around {
+    &-logo {
+      border: 1px solid rgb(206, 203, 25);
+      text-align: left;
+      // margin-top: 2em;
     }
-    .logo,
-    .text-list,
-    .title-social-network,
-    .assigns,
-    .law-information {
-      color: v(color-primary-darken-02);
+    /*** container lista e acordeão ***/
+    &-list {
+      border: 1px solid green;
+      flex-direction: row;
+      flex-wrap: wrap;
+      display: flex;
     }
-    .around-list,
-    .around-rights,
-    .around-footer {
-      background-color: v(color-secondary-01);
+    /*** Rede sociais e assinaturas ***/
+    &-social {
+      border: 1px solid yellow;
+      // margin: 1em;
+      display: flex;
+      justify-content: space-between;
+      .social-network {
+        justify-content: left;
+        height: auto;
+        font-size: v(font-size-scale-down-02);
+        .title-social-network {
+          font-size: v(font-size-scale-up-01);
+          font-weight: v(font-weight-extra-bold);
+          margin: 0 auto;
+        }
+        // .is-circle{
+        //   height: v(icon-size-2x);
+        //   font-size: v(font-size-scale-down-02);
+        //   width: v(icon-size-2x);
+        //   border-radius: 50%;
+        //   display: inline;
+        //   text-align: center;
+        //   border: none;
+        //   padding:0;
+        //   margin: 0.8em .5em;
+        // }
+      }
+      .assigns {
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+      }
     }
-    .logo-information {
-      background: url('/assets/design-system/docs/components/footer/imagens/logo-acesso-info.png');
-      @include img;
-    }
-    .logo-br {
-      background: url('/assets/design-system/docs/components/footer/imagens/logo-govbr.png');
-      @include img;
+    /***Informações legais***/
+    &-rights {
+      font-size: v(font-size=scale-down-01);
+      font-weight: v(font-weight-medium);
+      border: 2px solid green;
+      justify-content: center;
+      &-bolder {
+        font-weight: v(font-weight-extra-bold);
+      }
     }
   }
 }

@@ -13,7 +13,7 @@ append content
           .engloba
             .br-list
                 dl(class="is-simple")
-                  dt Texto de uma linha
+                  dt Texto de uma linha1
                   dd Texto de uma linha
                   dt Texto de uma linha
                   dd Texto de uma linha
@@ -72,18 +72,21 @@ append content
     .line(class="around-social")
         div(class="social-network")
           p(class="title-social-network") Redes Sociais
-          button(class="is-circle color-secondary-01 background-color-facebook border-color-facebook" type="button")
-            img(alt="botão facebook" src="/assets/design-system/docs/components/footer/imagens/facebook.png")
-          button(class="is-circle color-secondary-01 background-color-twitter border-color-twitter" type="button")
-            img(alt="botão twitter" src="/assets/design-system/docs/components/footer/imagens/twitter.png")
-          button(class="is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
-            img(alt="botão google" src="/assets/design-system/docs/components/footer/imagens/google.png")
-          button(class="is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
-            img(alt="botão govbr" src="/assets/design-system/docs/components/footer/imagens/govbr.png")  
+          button(class="br-button tertiary is-circle" type="button")
+            img(alt="botão facebook" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.svg")
+          button(class="br-button tertiary is-circle" type="button")
+            img(alt="botão twitter" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.svg")
+          button(class="br-button tertiary is-circle" type="button")
+            img(alt="botão google" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.svg")
+          button(class="br-button tertiary is-circle" type="button")
+            img(alt="botão govbr" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.svg")  
         div(class="assigns")
-          div(class="logo-information")
-          div(class="logo-br")
-  
+          div(class="logo-information ml-2 mr-2")
+          div(class="logo-slogan ml-2 mr-2")
+    .line(class="around-rights")
+      p 
+      | Texto destinado a exibição de informações relacionadas à 
+      span.around-rights-bolder  licensa de uso.       
   p Exemplo de Footer Versão Positiva
   +footer(class="positive")
     .line(class="around-logo")
@@ -148,21 +151,44 @@ append content
                   dd Texto de uma linha
                   dt Texto de uma linha
                   dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha4
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+        .col-md-2
+          .engloba
+            .br-list
+                dl(class="is-simple")
+                  dt Texto de uma linha5
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
+                  dt Texto de uma linha
+                  dd Texto de uma linha
     .line(class="around-social")
         div(class="social-network")
           p(class="title-social-network") Redes Sociais
-          button(class="is-circle color-secondary-01 background-color-facebook border-color-facebook" type="button")
-            img(alt="botão facebook" src="/assets/design-system/docs/components/footer/imagens/facebook.png")
-          button(class="is-circle color-secondary-01 background-color-twitter border-color-twitter" type="button")
-            img(alt="botão twitter" src="/assets/design-system/docs/components/footer/imagens/twitter.png")
-          button(class="is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
-            img(alt="botão google" src="/assets/design-system/docs/components/footer/imagens/google.png")
-          button(class="is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
-            img(alt="botão govbr" src="/assets/design-system/docs/components/footer/imagens/govbr.svg")  
+          button(class="br-button tertiary is-circle color-secondary-01 background-color-facebook border-color-facebook" type="button")
+            img(alt="botão facebook" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.svg")
+          button(class="br-button tertiary is-circle color-secondary-01 background-color-twitter border-color-twitter" type="button")
+            img(alt="botão twitter" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.svg")
+          button(class="br-button tertiary is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
+            img(alt="botão google" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.svg")
+          button(class="br-button tertiary is-circle color-secondary-01 background-color-secondary-01 border-color-youtube" type="button")
+            img(alt="botão govbr" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.svg")  
         div(class="assigns")
-          div(class="logo-information")
-          div(class="logo-br")
-
+          div(class="logo-information ml-2 mr-2")
+          div(class="logo-slogan ml-2 mr-2")
+    .line(class="around-rights")
+      p 
+      | Texto destinado a exibição de informações relacionadas à 
+      span.around-rights-bolder licensa de uso.      
 append style
   style.
     .engloba {
@@ -179,4 +205,8 @@ append style
       flex-direction: row;
       //- magin: 1em;
     }
+    img {
+      max-width: 90%;
+      width: auto;
+    } 
 

@@ -1,77 +1,30 @@
-.#{$prefix}footer{
+// $footer-config: (
+//   negative: v(color-primary-darken-02),
+//   positive: v(color-secondary-01)
+// );
+$cdn-images: 'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images';
+
+.#{$prefix}footer {
   height: auto;
   width: 100%;
   padding: 2em;
   border: 2px solid rgb(90, 86, 49);
   display: flex;
   flex-direction: column;
-  // background-color: v(color-primary-darken-02);  
   /*** Mixin de Temas ***/
-  @include themes;
-  /*** Logo govbr ***/
-    .around{
-      &-logo{
-        border: 1px solid rgb(206, 203, 25);
-        text-align: left;
-        // margin-top: 2em;
-      }  
-      /*** container lista e acordeão ***/
-      &-list{
-        border: 1px solid green;
-        flex-direction: row;
-        display: flex;
-      }
-      /*** Rede sociais e assinaturas ***/
-      &-social{
-        border: 1px solid yellow;
-        // margin: 1em;
-        display: flex;
-        justify-content: space-between;
-        .social-network{
-          justify-content: left;
-          height: auto;
-          font-size: v(font-size-scale-down-02);
-          .title-social-network{
-            font-size: v(font-size-scale-up-01);
-            font-weight: v(font-weight-extra-bold);
-            margin: 0 auto;
-          }
-          .is-circle{
-            height: v(icon-size-2x);
-            font-size: v(font-size-scale-down-02);
-            width: v(icon-size-2x);
-            border-radius: 50%;
-            display: inline;
-            text-align: center;
-            border: none;
-            padding:0;
-            margin: 0.8em .5em;
-          }
-        }
-        .assigns{
-          display: flex;
-          justify-content: right;
-          align-items: flex-end;
-          .logo-information{
-            background: url("/assets/img/logo-acesso-info.png");
-            @include img;
-          }
-          .logo-br{
-            background: url("/assets/img/logo-gov.png");
-            @include img;
-          }
-        }
-      }
-      /***Informações legais***/ 
-      &-rights{
-        font-size: v(font-size=scale-down-01);
-        font-weight: v(font-weight-medium);
-        border: 1px solid black;
-        &-bolder{
-          font-weight: v(font-weight-extra-bold);
-          
-        }
-      }
-    }  
+  @include themes(
+    negative,
+    v(color-primary-darken-02),
+    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-negative.svg',
+    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-negative.svg',
+    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-negative.svg'
+  );
 
+  @include themes(
+    positive,
+    v(color-secondary-01),
+    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-positive.svg',
+    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-positive.svg',
+    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-positive.svg'
+  );
 }
