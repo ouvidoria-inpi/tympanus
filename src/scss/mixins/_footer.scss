@@ -10,11 +10,10 @@
 @mixin themes($tema, $background, $logo, $acesso, $slogan) {
   &.#{$tema} {
     background-color: $background;
-    .around-logo {
+    .logo {
       background: url(#{$logo});
       @include img;
     }
-    .logo,
     .text-list,
     .title-social-network,
     .assigns,
@@ -43,51 +42,46 @@
       background: url(#{$slogan});
       @include img;
     }
+    dt:after {
+      @if ($tema == 'negative') {
+        border-color: v(color-secondary-01);
+      } @else {
+        border-color: v(color-primary-darken-02);
+      }
+    }
   }
-  @include teste;
+  @include common-area;
 }
 
-@mixin teste {
+@mixin common-area {
   /*** Logo govbr ***/
   .around {
     &-logo {
-      border: 1px solid rgb(206, 203, 25);
-      text-align: left;
-      // margin-top: 2em;
+      display: flex;
+      justify-content: flex-start;
+      .logo {
+        background-color: transparent;
+      }
     }
     /*** container lista e acordeão ***/
     &-list {
-      border: 1px solid green;
       flex-direction: row;
       flex-wrap: wrap;
       display: flex;
     }
     /*** Rede sociais e assinaturas ***/
     &-social {
-      border: 1px solid yellow;
-      // margin: 1em;
       display: flex;
       justify-content: space-between;
       .social-network {
         justify-content: left;
         height: auto;
         font-size: v(font-size-scale-down-02);
+        border: none;
         .title-social-network {
           font-size: v(font-size-scale-up-01);
           font-weight: v(font-weight-extra-bold);
-          margin: 0 auto;
         }
-        // .is-circle{
-        //   height: v(icon-size-2x);
-        //   font-size: v(font-size-scale-down-02);
-        //   width: v(icon-size-2x);
-        //   border-radius: 50%;
-        //   display: inline;
-        //   text-align: center;
-        //   border: none;
-        //   padding:0;
-        //   margin: 0.8em .5em;
-        // }
       }
       .assigns {
         display: flex;
@@ -97,9 +91,8 @@
     }
     /***Informações legais***/
     &-rights {
-      font-size: v(font-size=scale-down-01);
+      font-size: v(font-size-scale-down-01);
       font-weight: v(font-weight-medium);
-      border: 2px solid green;
       justify-content: center;
       &-bolder {
         font-weight: v(font-weight-extra-bold);

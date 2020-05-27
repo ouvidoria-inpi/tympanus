@@ -1,8 +1,0 @@
-<svg id="_.image1-min" data-name=".image1-min" xmlns="http://www.w3.org/2000/svg" width="102" height="48" viewBox="0 0 102 48">
-  <g id="_.container" data-name=".container" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3">
-    <rect width="102" height="48" stroke="none"/>
-    <rect x="0.5" y="0.5" width="101" height="47" fill="none"/>
-  </g>
-  <text id="_.text-main" data-name=".text-main" transform="translate(46.044 31)" fill="#fff" font-size="18" font-family="Rawline-Medium, Rawline" font-weight="500"><tspan x="0" y="0">.Img</tspan></text>
-  <text id="_.icon" data-name=".icon" transform="translate(23 34)" fill="#fff" font-size="26" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'"><tspan x="-13" y="0">image</tspan></text>
-</svg>
