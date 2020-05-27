@@ -6,7 +6,7 @@ Nenhuma dependência.
 
 ``` html
 <!-- checkbox -->
-<div class="br-check">
+<div class="br-checkbox">
     <input type="checkbox" id="checkbox" />
     <label for="checkbox">Checkbox</label>
 </div>
@@ -18,19 +18,19 @@ Componente deve ser usado quando necessitar usar uma lista com várias opções 
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-check` : container do componente
+* `br-checkbox` : container do componente
 
 ### Alinhamento vertical
 
 A natureza de comportamento do componente é preferencialmente em colunas, ficando os checkbox um abaixo do outro. Evite usar esse componente em linhas, mas, caso seja necessário, use a opção com `inline-block` , que também está contemplada na área de exemplos.
 
-Você poderá modificar o comportamento padrão do `br-check` usando as classes **Display** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/display/](https://getbootstrap.com/docs/4.3/utilities/display/). A aplicação deve ser feita diretamente no elemento. O exemplo a seguir configura os checkboxes um abaixo do outro:
+Você poderá modificar o comportamento padrão do `br-checkbox` usando as classes **Display** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/display/](https://getbootstrap.com/docs/4.3/utilities/display/). A aplicação deve ser feita diretamente no elemento. O exemplo a seguir configura os checkboxes um abaixo do outro:
 
 Exemplo de uso:
 
 ``` html
-<div class="br-check d-block">...</div>
-<div class="br-check d-block mt-1">...</div>
+<div class="br-checkbox d-block">...</div>
+<div class="br-checkbox d-block mt-1">...</div>
 ```
 
 ## Estados
@@ -46,7 +46,7 @@ Exemplo de uso:
 Exemplo de uso:
 
 ``` html
-<div class="br-check">
+<div class="br-checkbox">
     <input ... checked>
     <label ...>
 </div>
@@ -59,7 +59,7 @@ Exemplo de uso:
 Exemplo de uso:
 
 ``` html
-<div class="br-check">
+<div class="br-checkbox">
     <input ... disabled>
     <label ...>
 </div>
@@ -72,30 +72,30 @@ Exemplo de uso:
 Exemplo de uso:
 
 ``` html
-<div class="br-check is-invalid">...</div>
-<div class="br-check is-valid">...</div>
+<div class="br-checkbox is-invalid">...</div>
+<div class="br-checkbox is-valid">...</div>
 ```
 
 ## Regras especiais
 
 ### Espaçamentos
 
-O espaçamento entre vários `br-check` , seja ele horizontal ou vertical, deverá ser feito de forma manual. Recomendamos o uso do utilitário **Spacing** do Bootstrap - [https://getbootstrap.com/docs/4.3/utilities/spacing/](https://getbootstrap.com/docs/4.3/utilities/spacing/).
+O espaçamento entre vários `br-checkbox` , seja ele horizontal ou vertical, deverá ser feito de forma manual. Recomendamos o uso do utilitário **Spacing** do Bootstrap - [https://getbootstrap.com/docs/4.3/utilities/spacing/](https://getbootstrap.com/docs/4.3/utilities/spacing/).
 
 Exemplo de espaçamento horizontal entre checkboxes:
 
 ``` html
-<div class="br-check">...</div>
-<div class="br-check ml-6">...</div>
-<div class="br-check ml-6">...</div>
+<div class="br-checkbox">...</div>
+<div class="br-checkbox ml-6">...</div>
+<div class="br-checkbox ml-6">...</div>
 ```
 
 Exemplo de espaçamento vertical entre radio buttons:
 
 ``` html
-<div class="br-check d-block">...</div>
-<div class="br-check d-block mt-1">...</div>
-<div class="br-check d-block mt-1">...</div>
+<div class="br-checkbox d-block">...</div>
+<div class="br-checkbox d-block mt-1">...</div>
+<div class="br-checkbox d-block mt-1">...</div>
 ```
 
 O espaçamento horizontal para o componente na orientação vertal deve ser feito usando a grid.
@@ -105,12 +105,12 @@ Exemplo de uso:
 ``` html
 <div class="row">
     <div class="col">
-        <div class="br-check d-block">...</div>
-        <div class="br-check d-block mt-1">...</div>
+        <div class="br-checkbox d-block">...</div>
+        <div class="br-checkbox d-block mt-1">...</div>
     </div>
     <div class="col">
-        <div class="br-check d-block">...</div>
-        <div class="br-check d-block mt-1">...</div>
+        <div class="br-checkbox d-block">...</div>
+        <div class="br-checkbox d-block mt-1">...</div>
     </div>
 </div>
 ```
