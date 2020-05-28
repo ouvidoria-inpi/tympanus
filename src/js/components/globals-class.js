@@ -1,6 +1,7 @@
 import BRAccordion from './accordion'
 import BRBreadcrumb from './breadcrumb'
 import BRDatepicker from './datepicker'
+import BRHeader from './header'
 import BRInput from './input'
 import BRList from './list'
 import BRMenu from './menu'
@@ -21,6 +22,7 @@ export default class Globals {
     this.initInstanceAccordion()
     this.initInstanceBreadcrumb()
     this.initInstanceDatepicker()
+    this.initInstanceHeader()
     this.initInstanceInput()
     this.initInstanceList()
     this.initInstanceMenu()
@@ -45,6 +47,14 @@ export default class Globals {
     const alertList = []
     for (const brMessage of window.document.querySelectorAll('.br-message')) {
       alertList.push(new BRMessage('br-message', brMessage))
+    }
+  }
+
+  initInstanceHeader() {
+    const headerList = []
+
+    for (const brHeader of window.document.querySelectorAll('.br-header')) {
+      headerList.push(new BRHeader('br-header', brHeader))
     }
   }
   initInstanceInput() {
