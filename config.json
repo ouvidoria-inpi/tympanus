@@ -125,12 +125,12 @@
 				"filename": "divider"
 			},
 			{
-				"label": "Input",
-				"filename": "input"
-			},
-			{
 				"label": "Header",
 				"filename": "header"
+			},
+			{
+				"label": "Input",
+				"filename": "input"
 			},
 			{
 				"label": "List",
