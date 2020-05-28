@@ -87,6 +87,7 @@
     "prefer-button": 2,
     "require-sri": 0,
     "unrecognized-char-ref": 0,
+    "void-style": 2,
     "wcag/h30": 2,
     "wcag/h32": 2,
     "wcag/h36": 2,

@@ -3,8 +3,30 @@
   width: 100%;
   display: block;
   overflow: auto;
-  // display: flex;
-  // flex-direction: column;
+
+  .br-list {
+    &:not([collapsible]) {
+      a.item {
+        pointer-events: none;
+      }
+    }
+
+    .br-list {
+      background-image: none;
+    }
+
+    a.item:not([disabled])[active] {
+      background: transparent;
+    }
+  }
+
+  @media screen and (min-width: 991px) {
+    .br-list .item .support {
+      display: none;
+      pointer-events: none;
+    }
+  }
+
   /*** Mixin de Temas ***/
   @include themes(
     negative,
