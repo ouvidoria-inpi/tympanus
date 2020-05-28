@@ -69,6 +69,10 @@
 				"filename": "acessibilidade-no-codigo-html"
 			},
 			{
+				"label": "Codificação JavaScript",
+				"filename": "codificacao-javascript"
+			},
+			{
 				"label": "Uso do WAI-ARIA",
 				"filename": "uso-do-wai-aria"
 			},
