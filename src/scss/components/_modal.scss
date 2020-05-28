@@ -10,8 +10,8 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     .close {
       background: transparent;
       border: 0;
-      color: v(color-primary-default,$color-primary-default);
-      font-weight: v(font-weight-medium,$font-weight-medium);
+      color: v(color-primary-default, $color-primary-default);
+      font-weight: v(font-weight-medium, $font-weight-medium);
       padding: 0;
       position: absolute;
       right: 0;
@@ -22,10 +22,10 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     display: -webkit-box;
-    font-size: v(font-size-scale-up-01,$font-size-scale-up-01);
-    font-weight: v($font-weight-bold,$font-weight-bold);
+    font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
+    font-weight: v($font-weight-bold, $font-weight-bold);
     margin: 0;
-    max-height: v(font-size-scale-up-07,$font-size-scale-up-07);
+    max-height: v(font-size-scale-up-07, $font-size-scale-up-07);
     overflow: hidden;
     text-overflow: ellipsis;
     width: 80%;
@@ -43,7 +43,7 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
   }
   .#{$prefix}card {
     border: 0;
-    font-size: v(font-size-scale-base,$font-size-scale-base);
+    font-size: v(font-size-scale-base, $font-size-scale-base);
     height: 216px;
     margin-left: -$spacer * 2;
     margin-right: -$spacer * 2;
@@ -55,10 +55,10 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
       width: 8px;
     }
     &::-webkit-scrollbar-track {
-      background: v(color-secondary-03,$color-secondary-03);
+      background: v(color-secondary-03, $color-secondary-03);
     }
     &::-webkit-scrollbar-thumb {
-      background: v(color-secondary-06,$color-secondary-06);
+      background: v(color-secondary-06, $color-secondary-06);
     }
     &:focus,
     &:active {
@@ -66,13 +66,13 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     }
     &:hover {
       &::-webkit-scrollbar-thumb {
-        background: v(color-secondary-07,$color-secondary-07);
+        background: v(color-secondary-07, $color-secondary-07);
       }
     }
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: $grid-breakpoint-small) {
   .#{$prefix}modal {
     &.is-xsmall {
       max-width: 220px;

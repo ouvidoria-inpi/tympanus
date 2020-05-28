@@ -1,47 +1,31 @@
-// Grid - Baseada na grid do Bootstrap
-// Verifique os valores de breakpoint e gutters nas configurações:
-// - $grid-breakpoints
-// - $grid-gutters
+// Grid Bootstrap
+@import '../../../node_modules/bootstrap/scss/grid';
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 998px,
-  lg: 1280px,
-  xl: 1600px
-);
-
-$container-max-widths: (
-  sm: 1150px,
-  md: 1151px,
-  lg: 1152px,
-  xl: 1440px
-);
-
-$grid-gutter-width: 16px;
-$grid-gutters: (
-  sm: $grid-gutter-width,
-  lg: 24px,
-  xl: 32px
-);
-
-// Variações de gutter
-@each $breakpoint, $gutter in $grid-gutters {
-  @include media-breakpoint-up($breakpoint) {
-    .container,
-    .container-fluid {
-      padding-left: $gutter / 2;
-      padding-right: $gutter / 2;
-    }
-    .row {
-      margin-left: -$gutter / 2;
-      margin-right: -$gutter / 2;
-      [class^="col"] {
-        padding-left: $gutter / 2;
-        padding-right: $gutter / 2;
-      }
-    }
+@media (min-width: $grid-breakpoint-small) {
+  .container,
+  .container-fluid {
+    padding-left: $grid-tablet-margin;
+    padding-right: $grid-tablet-margin;
+  }
+  .row {
+    margin-right: -($grid-tablet-gutter / 2);
+    margin-left: -($grid-tablet-gutter / 2);
+  }
+  .col,
+  [class*='col-'] {
+    padding-right: $grid-tablet-gutter / 2;
+    padding-left: $grid-tablet-gutter / 2;
   }
 }
 
-@import "../../../node_modules/bootstrap/scss/grid";
+@media (min-width: $grid-breakpoint-xlarge) {
+  .row {
+    margin-right: -$grid-tv-gutter / 2;
+    margin-left: -$grid-tv-gutter / 2;
+  }
+  .col,
+  [class*='col-'] {
+    padding-right: $grid-tv-gutter / 2;
+    padding-left: $grid-tv-gutter / 2;
+  }
+}
