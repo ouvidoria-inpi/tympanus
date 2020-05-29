@@ -1,27 +1,37 @@
-mixin upload(nome)
-  - let className = attributes.class
-  - let componentClass = prefix + "upload"
-  - className = className ? componentClass + " " + className : componentClass
-  div(class=className)
-    input.upload-input(type='file' name='myFiles' id=nome multiple)
-    .upload-header  Arraste e solte o(s) arquivo(s) do seu computador
-    .upload-info
-      i.fas.fa-info-circle
-      |         Os arquivos devem ser no formato PNG, JPG ou PDF e ter no máximo 1GB
-    .upload-file-list
-    label.upload-add.br-button.is-tertiary(for=nome)
-      i.fas.fa-plus
-      |         Adicionar um arquivo do seu computador
-    .upload-size
-      | Arquivos selecionados: 
-      strong.upload-size-num 0
-      br
-      | Tamanho total: 
-      strong.upload-size-bytes 0
-  +button.is-tertiary.ml-3 Cancelar
-  +button.is-primary.ml-3 Salvar
+mixin upload
+  - let classComponent = prefix + 'upload'
+  - let className = attributes.class ? classComponent + ' ' + attributes.class : classComponent
+  - let id = attributes.id ? attributes.id : 'upload'
+  - let label = attributes.multiple ? "Selecione um ou mais arquivos" : "Selecione ou arraste 1 arquivo"
+  - let feedbackType = attributes.feedbackType ? "text-" + attributes.feedbackType : "text-danger"
+  - let feedbackIcon = attributes.feedbackIcon ? attributes.feedbackIcon : "fa-exclamation-circle"
+  - let feedbackText = attributes.feedbackText ? ' ' + attributes.feedbackText : "mensagem de feedback"
 
-//- mixin upload-botoes
-//-   +upload
-//-   +button.is-cancel Cancelar
-//-   +button.is-primary Salvar
+  div(
+    class=classComponent,
+  )
+    label.upload-label(for=id)
+      i.fas.fa-upload
+      span=' ' + label
+
+    input.upload-input(
+      id=id,
+      type="file",
+      multiple=attributes.multiple,
+      disabled=attributes.disabled
+    )
+
+    +button.upload-button(disabled=attributes.disabled)
+      i.fas.fa-upload
+      span=' ' + label
+
+    if (attributes.disabled)
+      .feedback
+        i.fas.fa-exclamation-triangle
+        span  Upload desabilitado
+    else if (attributes.feedbackType) || (attributes.feedbackIcon) || (attributes.feedbackText)
+      .feedback(class=feedbackType)
+        i.fas(class=feedbackIcon)
+        span=feedbackText
+
+    .upload-list

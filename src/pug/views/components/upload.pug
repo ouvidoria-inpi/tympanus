@@ -4,17 +4,20 @@ append vars
   - var title = "Upload";
 
 append content
-  p.titulo Upload Com Título
-  .engloba
-    p.titulo - Documentos do Trabalhador
-    +upload("input-file-a")
+  p Upload de 1 arquivo
+  +upload#single-file
+
   hr
-  p.titulo Upload Sem Título
-  .engloba
-    +upload("input-file-b")
+
+  p Upload de vários arquivos
+  +upload()(id="multiple-files" multiple)
+
   hr
-  p.titulo Upload Contido no Colapse
-  .engloba
-    +accordion
-      +accordion-item("Documentos do Trabalhador")
-        +upload("input-file-c")
+
+  p Upload com mensagem de feedback
+  +upload()(feedbackText="Os arquivos devem ser no formato PNG, JPG, PDF e ter no máximo 1GB.")
+
+  hr
+
+  p Upload desabilitado
+  +upload()(id="disabled" disabled)

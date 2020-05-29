@@ -1,27 +1,5 @@
 .#{$prefix}button {
-  @media (min-width: $grid-breakpoint-small) {
-    min-width: 156px;
-    width: auto;
-
-    &.is-call-to-action,
-    &.action,
-    &[action] {
-      min-width: 220px;
-    }
-  }
-
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 20px;
-  color: v(color-primary-default);
-  cursor: pointer;
-  display: inline-block;
-  font-weight: v(font-weight-semi-bold);
-  height: 40px;
-  line-height: 40px;
-  padding: 0 40px;
-  text-align: center;
-  width: 100%;
+  @include button;
 
   &.is-primary,
   &.primary,
@@ -47,6 +25,9 @@
   &.is-call-to-action,
   &.action,
   &[action] {
+    @media (min-width: $grid-breakpoint-small) {
+      min-width: 220px;
+    }
     background: v(color-highlight);
     border-color: v(color-secondary-03);
     border-radius: 40px;
