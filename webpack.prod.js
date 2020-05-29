@@ -5,6 +5,7 @@ const isDEV = process.env.NODE_ENV === 'production'
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 const ConcatPlugin = require('webpack-concat-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -12,6 +13,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin')
 // We need Nodes fs module to read directory contents
 const fs = require('fs')
+var glob = require("glob");
 
 const paths = {
   src: path.resolve(__dirname, 'src'),
@@ -73,7 +75,8 @@ module.exports = {
   entry: {
     dsgov: path.resolve(paths.src + '/scss', 'dsgov.scss'),
     'dsgov-base': path.resolve(paths.src + '/scss', 'dsgov-base.scss'),
-    'dsgov-componentes': path.resolve(paths.src + '/scss', 'dsgov-components.scss'),
+    // 'dsgov-componentes': path.resolve(paths.src + '/scss', 'dsgov-components.scss').concat(glob.sync('./src/components/**/*.js')),
+    
   },
   watch: false,
   output: {
@@ -129,16 +132,20 @@ module.exports = {
   },
   plugins: [
     // new CleanWebpackPlugin(),
-    new ConcatPlugin({
-      uglify: true,
-      sourceMap: true,
-      name: 'dsgov-components',
-      outputPath: 'js/',
-      fileName: '[name].min.js',
-      filesToConcat: ['./src/js/components/**'],
-      attributes: {
-        async: true,
-      },
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: 'src/js/components', to: 'dist/js/components' }
+    //   ]
+    // }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'components/*',
+          to: 'js',
+          force: true,
+          context: path.resolve(__dirname, 'src', 'js')
+        },
+      ],
     }),
     // Extract our css to a separate css file
     new MiniCssExtractPlugin({
