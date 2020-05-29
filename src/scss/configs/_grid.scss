@@ -9,7 +9,7 @@ $tokens-breakpoints: (
   grid-breakpoint-small: $grid-breakpoint-small,
   grid-breakpoint-medium: $grid-breakpoint-medium,
   grid-breakpoint-large: $grid-breakpoint-large,
-  grid-breakpoint-xlarge: $grid-breakpoint-xlarge
+  grid-breakpoint-xlarge: $grid-breakpoint-xlarge,
 );
 
 // Portrait
@@ -21,7 +21,7 @@ $tokens-portrait: (
   grid-portrait-maxwidth: $grid-portrait-maxwidth,
   grid-portrait-gutter: $grid-portrait-gutter,
   grid-portrait-columns: $grid-portrait-columns,
-  grid-portrait-margin: $grid-portrait-margin
+  grid-portrait-margin: $grid-portrait-margin,
 );
 
 // Tablet
@@ -33,7 +33,7 @@ $tokens-tablet: (
   grid-tablet-maxwidth: $grid-tablet-maxwidth,
   grid-tablet-gutter: $grid-tablet-gutter,
   grid-tablet-columns: $grid-tablet-columns,
-  grid-tablet-margin: $grid-tablet-margin
+  grid-tablet-margin: $grid-tablet-margin,
 );
 
 // Desktop
@@ -45,7 +45,7 @@ $tokens-desktop: (
   grid-desktop-maxwidth: $grid-desktop-maxwidth,
   grid-desktop-gutter: $grid-desktop-gutter,
   grid-desktop-columns: $grid-desktop-columns,
-  grid-desktop-margin: $grid-desktop-margin
+  grid-desktop-margin: $grid-desktop-margin,
 );
 
 // TV
@@ -57,7 +57,7 @@ $tokens-tv: (
   grid-tv-maxwidth: $grid-tv-maxwidth,
   grid-tv-gutter: $grid-tv-gutter,
   grid-tv-columns: $grid-tv-columns,
-  grid-tv-margin: $grid-tv-margin
+  grid-tv-margin: $grid-tv-margin,
 );
 
 // Mapa de breakpoints
@@ -65,5 +65,21 @@ $breakpoints: (
   portrait: $grid-breakpoint-xsmall,
   tablet: $grid-breakpoint-small,
   desktop: $grid-breakpoint-large,
-  tv: $grid-breakpoint-xlarge
+  tv: $grid-breakpoint-xlarge,
+);
+
+// Compatibilidade com Bootstrap
+$grid-gutter-width: $grid-portrait-gutter;
+$grid-breakpoints: (
+  xs: 0,
+  sm: $grid-breakpoint-small,
+  md: $grid-breakpoint-medium,
+  lg: $grid-breakpoint-large,
+  xl: $grid-breakpoint-xlarge,
+);
+$container-max-widths: (
+  sm: $grid-desktop-maxwidth - 2,
+  md: $grid-desktop-maxwidth - 1,
+  lg: $grid-desktop-maxwidth,
+  xl: $grid-tv-maxwidth,
 );

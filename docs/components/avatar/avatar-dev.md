@@ -64,7 +64,7 @@ Exemplo de uso:
         <span class="image">
             <i class="fas fa-user"></i>
         </span>
-        <span class="icon color-primary-default">
+        <span class="icon text-primary-default">
             <i class="fas fa-camera"></i>
         </span>
     </button>

@@ -1,14 +1,56 @@
 extends ../../layouts/default
 append vars
   - var title = "Debug";
+  - var n = 0;
+  - var rows = 0;
+
+mixin auto-bs(lines, fluid = false)
+  .row.mt-3(row=lines)
+    - n = 1
+    while n <= lines
+      .col(column=n)
+        .bg-secondary-01.box
+          p coluna
+      - n++
+
+mixin col-bs(size, fluid = false)
+  .row.mt-3(row=size)
+    div(class=`col-${size}`)
+      .bg-secondary-01.box
+        p coluna
 
 append template
   .container
     h1=title
 
+    h2 Grid
+
+    p.h6 Container
+
+  .bg-secondary-02
+    - rows = 1;
+    while rows <= 12
+      .bg-secondary-03
+        .container
+          +auto-bs(rows)
+          - rows++
+
+  .container
+    p.h6 Container-fluid
+
+  .bg-secondary-02
+    - rows = 1;
+    while rows <= 12
+      .bg-secondary-03
+        .container-fluid
+          +auto-bs(rows)
+          - rows++
+
+  .container
+
     h2 Tipografia
 
-    p.color-danger
+    p.text-danger
       i.fas.fa-exclamation-circle
       |
       |
@@ -33,20 +75,20 @@ append template
         p Primárias
         .display-flex.flex-wrap.mb-3
           each val in ["pastel-01", "pastel-02", "lighten-01", "lighten-02", "default", "darken-01", "darken-02"]
-            .box(class=`background-color-primary-${val}` title=val)
+            .box.square(class=`bg-primary-${val}` title=val)
       .col
         p Secundárias
         .display-flex.flex-wrap.mb-3
           each val in ["01", "02", "03", "04", "05", "06", "07", "08", "09"]
-            .box(class=`background-color-secondary-${val}` title=`secondary-${val}`)
+            .box.square(class=`bg-secondary-${val}` title=`secondary-${val}`)
       .col
         p Highlight, mensagens e suporte
         .display-flex.flex-wrap.mb-3
-          .box.background-color-highlight(title="highlight")
+          .box.square.bg-highlight(title="highlight")
           each val in ["warning", "success", "danger", "info"]
-            .box(class=`background-color-${val}` title=val)
+            .box.square(class=`bg-${val}` title=val)
           each val in ["support-01", "support-02", "support-03", "support-04"]
-            .box(class=`background-color-${val}` title=val)
+            .box.square(class=`bg-${val}` title=val)
 
     h2 Estados
 
@@ -55,54 +97,54 @@ append template
         p Destacado
         .display-flex.flex-wrap.mb-3
           each val in ["highlight-overlay", "highlight-background", "highlight-text"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
         p Interativo
         .display-flex.flex-wrap.mb-3
           each val in ["enabled-text", "enabled-text-darken"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
         p Desativado
         .display-flex.flex-wrap.mb-3
           each val in ["disabled-background", "disabled-text"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
       .col
         p Hover
         .display-flex.flex-wrap.mb-3
           each val in ["hover-background"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
         p Pressionado
         .display-flex.flex-wrap.mb-3
           each val in ["pressed-background", "pressed-text"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
         p Foco
         .display-flex.flex-wrap.mb-3
           each val in ["focused-overlay", "focused-background"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
       .col
         p Ativo
         .display-flex.flex-wrap.mb-3
           each val in ["activated-background", "activated-text"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
         p Selecionado
         .display-flex.flex-wrap.mb-3
           each val in ["selected-background", "selected-text"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
         p Arrastado
         .display-flex.flex-wrap.mb-3
           each val in ["dragged-background", "dragged-text", "dragged-shadow"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
       .col
         p Visitado
         .display-flex.flex-wrap.mb-3
           each val in ["visited-background", "visited-text"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
         p Ligado
         .display-flex.flex-wrap.mb-3
           each val in ["on-background", "on-text"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
         p Desligado
         .display-flex.flex-wrap.mb-3
           each val in ["off-background", "off-text"]
-            .box(style=`background-color: var(--status-${val})` title=val)
+            .box.square(style=`background-color: var(--status-${val})` title=val)
 
     h2 Ícones
 
@@ -186,7 +228,9 @@ append template
 append style
   style.
     .box {
-      box-shadow: inset 0px 0px 0px 1px var(--color-secondary-04);
+      border: 1px solid var(--color-secondary-04);
+    }
+    .square {
       display: block;
       height: 48px;
       width: 48px;

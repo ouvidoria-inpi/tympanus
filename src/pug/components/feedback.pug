@@ -1,5 +1,8 @@
 mixin feedback(icon, message)
-  .feedback&attributes(attributes)
+  .feedback(
+    valid=attributes.valid
+    invalid=attributes.invalid
+    disabled=attributes.disabled)
     i.fas(class=icon)
     |
     |

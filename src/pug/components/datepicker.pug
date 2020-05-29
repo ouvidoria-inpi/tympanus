@@ -1,5 +1,2 @@
 mixin datepicker(label="Label", labelClass)
-  +input(label)(id=attributes.id placeholder=attributes.placeholder class=attributes.class disabled=attributes.disabled datepicker="true")
-    button.icon(type='button' id=attributes.id + "-btn")
-      span.sr-only Mostrar calendário
-      i.fas.fa-calendar-alt
+  +input(label)(id=attributes.id placeholder=attributes.placeholder class=attributes.class disabled=attributes.disabled datepicker)

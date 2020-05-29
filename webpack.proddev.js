@@ -140,7 +140,7 @@ module.exports = {
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
     new WebpackShellPlugin({
-      onBuildEnd: ['node componentes.js '],
+      onBuildEnd: ['node componentes.js', 'node mincomponentes.js'],
     }),
   ].concat(htmlPluginsComponentes, htmlPluginsTemplates),
   devtool: 'source-map',

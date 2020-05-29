@@ -1,16 +1,12 @@
 .#{$prefix}datepicker {
   input {
-    border-color: v(color-secondary-06) !important;
-    border-radius: 6px !important;
-    height: 40px !important;
-    position: relative;
     width: 187px !important;
     + button {
       background-color: transparent;
       border: none;
       color: v(color-primary-default);
       font-size: v(font-size-scale-up-02);
-      left: 144px;
+      left: 136px;
       top: 28px;
       position: absolute;
     }

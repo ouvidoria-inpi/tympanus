@@ -9,9 +9,10 @@ class BRInput {
     this._setPasswordViewBehavior()
     this._setAutocompleteBehavior()
   }
+
   _setPasswordViewBehavior() {
     for (const inputPassword of this.component.querySelectorAll("input[type='password']")) {
-      if (inputPassword.parentNode.classList.contains('has-icon')) {
+      if (!inputPassword.disabled) {
         for (const buttonIcon of inputPassword.parentNode.querySelectorAll('button.icon')) {
           buttonIcon.addEventListener(
             'click',
