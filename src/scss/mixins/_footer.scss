@@ -26,7 +26,9 @@
     }
     .around-list,
     .around-rights,
-    .around-footer {
+    .around-footer,
+    .content,
+    .support {
       background-color: $background;
       @if $tema == 'negative' {
         color: v(color-secondary-01);
@@ -41,13 +43,6 @@
     .logo-slogan {
       background: url(#{$slogan});
       @include img;
-    }
-    dt:after {
-      @if ($tema == 'negative') {
-        border-color: v(color-secondary-01);
-      } @else {
-        border-color: v(color-primary-darken-02);
-      }
     }
   }
   @include common-area;

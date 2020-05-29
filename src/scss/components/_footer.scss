@@ -15,12 +15,20 @@
       background-image: none;
     }
 
-    a.item:not([disabled])[active] {
+    a.item:not([disabled])[active],
+    a.item:not([disabled]):hover,
+    a.item:not([disabled]):focus {
       background: transparent;
+      outline: none;
     }
   }
 
-  @media screen and (min-width: 991px) {
+  .br-button.tertiary.is-circle:hover,
+  .br-button:not(:disabled):focus {
+    background: transparent;
+  }
+
+  @media screen and (min-width: 769px) {
     .br-list .item .support {
       display: none;
       pointer-events: none;
@@ -44,7 +52,7 @@
     'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-positive.png'
   );
 
-  @media (max-width: 576px) {
+  @media (max-width: 580px) {
     .around {
       &-social {
         display: none;
@@ -59,23 +67,6 @@
       &-list {
         justify-content: center;
       }
-    }
-    dt:after {
-      border-style: solid;
-      border-width: 0px 3px 3px 0px;
-      content: '';
-      height: 0.65em;
-      position: relative;
-      top: 0;
-      transform: rotate(45deg);
-      width: 8px;
-      right: 2em;
-      display: block;
-      float: right;
-      cursor: pointer;
-    }
-    .show {
-      display: flex;
     }
   }
   @media (min-width: 769px) {
