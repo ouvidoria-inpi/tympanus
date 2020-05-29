@@ -16,7 +16,7 @@
           cursor: not-allowed;
         }
       }
-      ~ .help {
+      ~.help {
         display: none;
       }
     }
@@ -50,16 +50,8 @@
       }
     }
   }
-  .help {
+  ~.help {
     font-size: v(font-size-scale-down-01);
-  }
-  .feedback {
-    &[valid] {
-      color: v(color-success);
-    }
-    &[invalid] {
-      color: v(color-danger);
-    }
   }
   &[valid] {
     input {
@@ -81,7 +73,7 @@
       }
     }
   }
-  &.filter {
+  &[filter] {
     display: flex;
     justify-content: flex-start;
     align-items: center;
