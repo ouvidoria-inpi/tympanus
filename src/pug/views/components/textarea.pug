@@ -4,14 +4,33 @@ append vars
   - var title = "Textarea";
 
 append content
-  .row
-    .col-sm
-      .mb-3
-        +textarea("Padrão")(id="default" placeholder="Exemplo de textarea")
-      .mb-3
-        +textarea("Desativado")(id="disabled" class="mt-3 is-disabled" placeholder='Textarea desativado' disabled)
-    .col-sm
-      .mb-3
-        +textarea("Válido")(id="valid" class="is-valid" placeholder="Textarea válido")
-      .mb-3
-        +textarea("Inválido")(id="invalid" class="is-invalid mt-3" placeholder="Textarea inválido")
+  .row.justify-content-around
+    .col-sm-4
+      +textarea("Digite sua mensagem aqui")(id="textarea-id1" placeholder="Exemplo de textarea simples" rows=5 cols=5)
+    .col-sm-4
+      +textarea("Digite sua mensagem aqui")(id="textarea-id2" placeholder="Exemplo de textarea simples" rows=5 cols=5)
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+  .row.justify-content-around
+    .col-sm-4
+      +textarea("Digite sua mensagem aqui")(id="textarea-id3" placeholder="Exemplo de textarea válido" rows=5 cols=5 valid)
+        +feedback("fa-check-circle", "Campo correto")(valid)
+    .col-sm-4
+      +textarea("Digite sua mensagem aqui")(id="textarea-id4" placeholder="Exemplo de textarea válido" rows=5 cols=5 valid)
+        +feedback("fa-check-circle", "Campo correto")(valid)
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+  .row.justify-content-around
+    .col-sm-4
+      +textarea("Digite sua mensagem aqui")(id="textarea-id5" placeholder="Exemplo de textarea inválido" rows=5 cols=5 invalid)
+        +feedback("fa-times-circle", "Senha incorreta")(invalid)
+    .col-sm-4
+      +textarea("Digite sua mensagem aqui")(id="textarea-id6" placeholder="Exemplo de textarea inválido" rows=5 cols=5 invalid)
+        +feedback("fa-times-circle", "Senha incorreta")(invalid)
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+  .row.justify-content-around
+    .col-sm-4
+      +textarea("Digite sua mensagem aqui")(id="textarea-id7" placeholder="Exemplo de textarea desabilitado" rows=5 cols=5 disabled)
+        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(disabled)
+    .col-sm-4
+      +textarea("Digite sua mensagem aqui")(id="textarea-id8" placeholder="Exemplo de textarea desabilitado" rows=5 cols=5 disabled)
+        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(disabled)
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.

@@ -4,30 +4,71 @@ append vars
   - var title = "Input";
 
 append content
-  .row
-    .col-sm
+  .row.justify-content-around.mb-5
+    .col-sm-4
+      p.h2 Input Simples
       .mb-3
-        +input("Normal")(id="normal" type="text" placeholder="Insira um texto")
+        +input("CPF")(id="cpf-id1" type="text" placeholder="Digite somente números")
+      .mb-3
+        +input("CPF")(id="cpf-id2" type="text" placeholder="Digite somente números" valid)
+        .feedback.color-success
+          i.fas.fa-check-circle
+          span CPF válido
+      .mb-3
+        +input("CPF")(id="cpf-id3" type="text" placeholder="Digite somente números" invalid)
+        .feedback.color-danger
+          i.fas.fa-times-circle
+          span CPF inválido
+      .mb-3
+        +input("CPF")(id="cpf-id4" type="text" placeholder="Digite somente números" disabled)
+        .feedback
+          i.fas.fa-exclamation-triangle
+          span Campo Desabilitado
+    .col-sm-4
+      p.h2 Input com Ícone
+      .mb-3
+        +input("Senha")(id="password-id1" type="password" placeholder="Sua senha de 8 a 11 digitos")
+      .mb-3
+        +input("Senha")(id="password-id2" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
+        .feedback.color-success
+          i.fas.fa-check-circle
+          span Campo correto
+      .mb-3
+        +input("Senha")(id="password-id3" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
+        .feedback.color-danger
+          i.fas.fa-times-circle
+          span Senha incorreta
+      .mb-3
+        +input("Senha")(id="password-id4" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
+        .feedback
+          i.fas.fa-exclamation-triangle
+          span Campo Desabilitado
+
+  .row.justify-content-around.mb-5
+    .col-sm-4
+      p.h2 Input com Ícone e Texto Auxiliar
+      .mb-3
+        +input("Senha")(id="password-id5" type="password" placeholder="Sua senha de 8 a 11 digitos")
+          p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+      .mb-3
+        +input("Senha")(id="password-id6" type="password" placeholder="Sua senha de 8 a 11 digitos" valid)
+        .feedback.color-success
+          i.fas.fa-check-circle
+          span Campo correto
         p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
       .mb-3
-        +input("Senha")(id="senha" type="password" class="has-icon" placeholder="Digite sua senha de 8 a 11 dígitos")
-          button.icon(type='button')
-            span.sr-only Mostrar senha
-            i.fas.fa-eye
+        +input("Senha")(id="password-id7" type="password" placeholder="Sua senha de 8 a 11 digitos" invalid)
+        .feedback.color-danger
+          i.fas.fa-times-circle
+          span Senha incorreta
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
       .mb-3
-        +input("Autocomplete")(id="autocomplete" type="text" class="search-autocomplete has-icon" placeholder="Digite um país")
-          span.icon
-            i.fas.fa-search
-    .col-sm
+        +input("Senha")(id="password-id8" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled)
+        .feedback
+          i.fas.fa-exclamation-triangle
+          span Campo Desabilitado
+        p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+    .col-sm-4
+      p.h2 Input para Filtros
       .mb-3
-        +input("Focus")(id="focus" type="text" class="is-focus" placeholder="Insira um texto")
-      .mb-3
-        +input("Desativado")(id="desativado" type="text" class="is-disabled" placeholder="Insira um texto" disabled)
-        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
-    .col-sm
-      .mb-3
-        +input("Inválido")(id="invalid" class="is-invalid" placeholder="Insira um texto")
-        +feedback("fa-times-circle", "Texto inválido")(class="is-invalid")
-      .mb-3
-        +input("Válido")(id="valid" class="is-valid" placeholder="Insira um texto")
-        +feedback("fa-check-circle", "Texto válido")(class="is-valid")
+        +input("Filtrar por:")(id="filtro-id" type="text" placeholder="Pesquisar em notícias" filter)
