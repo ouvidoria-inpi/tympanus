@@ -2,17 +2,24 @@ extends ../../layouts/base
 
 append vars
   - var title = "Template Base";
-
-
+  
 block template
-  +header()(sticky)
-    +header-default-content
-  .content
-    .row
-      .col-sm-6.col-lg-4.col-xl-3
-        +menu
-          +menu-principal-content
-      .col
-        p.h2 Exemplo de Menu Principal
-
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequuntur ratione suscipit voluptatem reprehenderit aut recusandae autem voluptas quo nulla tenetur, quos a dolores enim ad, cum, eius et odio!
+  .container
+    +header()(sticky)
+      +header-default-content
+    .content
+      .row
+        //- .col-sm-6.col-lg-4.col-xl-3
+        .col
+          +menu
+            +menu-principal-content
+        .col
+          +breadcrumb
+            +crumb("Tela Anterior")
+            +crumb("Tela Anterior2")
+            +crumb("Tela Anterior3")
+            +crumb("Tela Anterior4")
+            +crumb("Tela Atual", "is-active")
+          p.h2 Exemplo de Menu Principal
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequuntur ratione suscipit voluptatem reprehenderit aut recusandae autem voluptas quo nulla tenetur, quos a dolores enim ad, cum, eius et odio!
+      .row

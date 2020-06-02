@@ -4,7 +4,7 @@
   $logo-desktop-width: 120px;
   $logo-compact: 60px;
 
-  .container {
+  .flex-container {
     background: v(color-secondary-01); 
     display: flex;
     flex-direction: row;
@@ -13,6 +13,7 @@
     position: relative;
     box-shadow: 0 3px 6px rgba(var(--rgb-secondary-09), 0.16);
     padding: $spacer*2 $spacer*5;
+    z-index: 1;
   }
 
   &.sticky {
@@ -21,8 +22,18 @@
     width: 100vw;
     margin-top: 0;
     position: fixed;
+    z-index: 1;
+    .flex-container {
+      width: 100%;
+      flex-wrap: wrap;
+    }
     & + .content {
       padding-top: 96px;
+      position: relative;
+      z-index: 0;
+    }
+    .menu {
+      display: flex !important;
     }
   }
   
@@ -56,6 +67,7 @@
       -webkit-box-orient: vertical; 
     }
   }
+
   // Botões de ação
   .actions {
     max-width: min-content;
@@ -248,12 +260,15 @@
         background: v(color-secondary-02);
         border: 0;
       }
-      button .icon{
-        border-left: 1px solid  v(color-primary-lighten-01);
-        padding-left: $spacer;
-        height: 24px;
-        line-height: 20px;
-        top: 12px;
+      button.icon {
+        top: auto;
+        .icon{
+          border-left: 1px solid  v(color-primary-lighten-01);
+          padding-left: $spacer;
+          height: 24px;
+          line-height: 20px;
+          top: 12px;
+        }
       }
     }
     .search-close {
@@ -265,13 +280,14 @@
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
+      align-items: flex-end;
 
       .search-close {
         max-width: 32px;
+        height: 40px;
         visibility: visible;
         transition: max-width 1s ease-in-out;
-        margin-top: $spacer/2;
+        //margin-top: $spacer/2;
       }
     }
   }
@@ -306,8 +322,9 @@
   //   }
   // }
 
-  &[compact] {
-    .container {
+  &[compact],
+  &.sticky[compact] {
+    .flex-container {
       flex-wrap: nowrap;
       padding-top: $spacer*4;
     }
@@ -398,7 +415,7 @@
   }
 
   &[compact][no-logo] {
-    .container {
+    .flex-container {
       padding-top: $spacer*2;
     }
     .logo {
@@ -475,7 +492,7 @@
   /********************************* */
   // Breakpoint Grid 8 colunas (tablet)
   @include media-breakpoint-down(sm) {
-    .container {
+    .flex-container {
       padding: $spacer*2 $spacer*3;
     }
 
@@ -582,7 +599,7 @@
         align-items: center;
         width: 100%;
         height: 48px;
-        margin-top: 5.5em;
+        margin-top: 5em;
         left: 0;
         background: v(color-secondary-01);
         padding: 0 $spacer $spacer $spacer*2;
@@ -637,7 +654,7 @@
   /********************************* */
   // Breakpoint Grid 4 colunas (mobile)
   @include media-breakpoint-down(xs) {
-    .container {
+    .flex-container {
       padding: $spacer*2;
     }
     .menu {
@@ -688,7 +705,7 @@
     &:not([compact]) .popmenu[active]{
       top: $spacer;
       .search {
-        margin-top: 3.2em;
+        margin-top: 4em;
         height: 40px;
         .br-input {
           input {
@@ -708,7 +725,7 @@
     }
     &[compact],
     &[compact][no-logo] {
-      .container {
+      .flex-container {
         flex-wrap: wrap;
         padding-top: $spacer*2;
       }

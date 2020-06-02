@@ -3,7 +3,7 @@ class BRHeader {
   constructor(name, component) {
     this.name = name
     this.component = component
-    this.container = component.querySelector('.container')
+    this.flex_container = component.querySelector('.flex-container')
     this.login = component.querySelector('.login')
     this.login_btn = component.querySelector('.login button')
     this.avatar = component.querySelector('.avatar')
@@ -21,7 +21,7 @@ class BRHeader {
     // Inicializa Layout
     this.avatar.setAttribute('hidden', '')
     if (this.sticky) {
-      //this.component.style.paddingTop = `${this.container.offsetHeight}px`
+      //this.component.style.paddingTop = `${this.flex_container.offsetHeight}px`
       //this.component.setAttribute('compact', '')
       const compact = this.component.hasAttribute('compact')
       const noSubtitle = this.component.hasAttribute('no-subtitle')
@@ -110,11 +110,11 @@ class BRHeader {
       const search = popmenu.querySelector('.search')
       // Maximiza tamanho do search no menu compacto
       if (this.component.hasAttribute('compact')) {
-        search.style.height = `${this.container.offsetHeight}px`
+        search.style.height = `${this.flex_container.offsetHeight}px`
       } else {
-        popmenu.style.height = `${this.container.offsetHeight}px`
+        popmenu.style.height = `${this.flex_container.offsetHeight}px`
       }
-      this.container.prepend(popmenu)
+      this.flex_container.prepend(popmenu)
       // Ação do botão de fechar popmenu
       popclose.addEventListener('click', () => {
         popmenu.removeAttribute('active')
