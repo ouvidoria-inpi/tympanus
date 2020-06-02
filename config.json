@@ -216,7 +216,7 @@
 	{
 		"children": [
 			{
-				"label": "Template Base",
+				"label": "Base",
 				"filename": "base"
 			}
 		],

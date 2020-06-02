@@ -1,0 +1,5 @@
+[version]: # (2.0.0)
+
+# Base
+
+O _Base_ do DSGOV é um modelo estrutural de página que define as regras de organização, comportamento e localização dos organismos de layout. Define sobre onde e qual tipo de conteúdo deve ser localizado em cada área de apresentação, assim como suas variações em decorrência de adaptação responsiva.
