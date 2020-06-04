@@ -1,18 +1,18 @@
-[artefato fonte de design]: # 'grid_1.1.0.xd'
+[version]: # '1.0.1'
 
-## Experiência Única
+### Experiência Única
 
 O sistema de Grid de 12 colunas possui uma boa flexibilidade para projetos de layouts, pois permite uma diagramação de páginas e telas com colunas múltiplas de 12, além de se adequar aos principais Frameworks CSS, facilitando a escolha na teconologia a ser utilizada. Em Tablets e Smartphones o número de colunas é reduzido ao máximo de 8 e 4 respectivamente, devido à limitação de espaço.
 
-## Eficiência e Clareza
+### Eficiência e Clareza
 
 Seguindo o princípio de espaçamentos e dimensões múltiplos de 8, é possível preservar as proporções em resoluções de telas diferenciadas, visto que a maioria tem suas dimensões divisíveis por 8. Esta característica de Design Multi-Plataforma fornece ao usuário uma sensação de consistência e clareza no projeto de design em diferentes dispositivos.
 
-## Acessibilidade
+### Acessibilidade
 
 As interfaces devem ser adequadas a diferentes tipos de dispositivos, tendo em vista esse aspecto, o sistema de grid fornece alguns breakpoints - pontos de quebra onde o layout será ajustado para atender diferentes resoluções, sendo assim possível desenvolver interfaces adaptáveis a diversos formatos e tamanhos de telas.
 
-## Reutilização e Colaboração
+### Reutilização e Colaboração
 
 Porventura, poderá haver alguma adaptação específica no sistema de grids, break-points e padrões de proporção, para atender alguma necessidade em projetos de interface. Sendo assim, faz-se necessário, que essas evoluções/adaptações sejam testadas e passem por uma prévia aprovação da equipe de design do DS.
 
@@ -34,35 +34,51 @@ O sistema de grid para o Design System do Governo Federal se adequa a 5 breakpoi
 
 ---
 
-## Comportamento da Grid
+## Comportamentos da Grid
 
-Existem dois tipos de comportamento para as Grids: Fixa e a Fluida.
+### Largura da Grid
 
-### Grid Fixa
+Existem dois tipos de largura para as Grids: **Fixa** e a **Fluida**.
 
-Na grid fixa, as colunas e as medianizes possuem largura fixa. Porém o **largura das margens são variadas** de acordo com a resolução da tela, mantendo quase todo o conteúdo centralizado da tela em uma largura máxima ( `max-width` ).
+#### Largura Fixa
 
-Em uma grid fixa, apesar das larguras variadas, as margens possuem um valor mínimo que deve ser respeitado.
+Na largura fixa, as colunas e as medianizes possuem largura fixa. Porém a largura das **margens são variadas** de acordo com a resolução da tela, ou seja, o conteúdo se mantem centralizado da tela em uma largura máxima (`max-width`) fixa.
 
-As grids utilizadas como fixas são voltadas para Desktop ( `--grid-breakpoint-large` ) e para TV ( `--grid-breakpoint-xlarge` ).
+Em uma largura fixa, apesar das larguras variadas, as margens possuem um valor mínimo que deve ser respeitado.
+
+As grids utilizadas como fixas são voltadas para Desktop (`--grid-breakpoint-large`) e para TV (`--grid-breakpoint-xlarge`).
 
 ![Grid Fixa 01](imagens/behavior-fixa01.png)
 
 ![Grid Fixa 02](imagens/behavior-fixa02.png)
 
-### Grid Fluida
+#### Largura Fluida
 
-Na grid fluida, tanto as margens como as medianizes possuem largura fixa, porém a **largura das colunas alteram** de tamanho, dimensionando também o conteúdo. Neste caso, a grid ocupam todo o espaço disponível da tela ( `max-width` de 100%).
+Na largura fluida, tanto as margens como as medianizes possuem largura fixa, porém a largura das **colunas variam** , dimensionando também o conteúdo. Neste caso, a grid ocupam todo o espaço disponível da tela (`max-width` de 100%).
 
-As grids utilizadas como fluida são as de Smarthphone ( `--grid-breakpoint-xsmall` e `--grid-breakpoint-small` ) e Tablet ( `--grid-breakpoint-small` e `--grid-breakpoint-medium` ).
+As grids utilizadas como fluida são as de Smarthphone (`--grid-breakpoint-xsmall` e `--grid-breakpoint-small`) e Tablet (`--grid-breakpoint-small` e `--grid-breakpoint-medium`).
 
 ![Grid Fluida 01](imagens/behavior-fluida01.png)
 
 ![Grid Fluida 02](imagens/behavior-fluida02.png)
 
-### Max-Width
+#### Max-Width
 
-`Max-width` mede a distancia entre o início da primeira coluna da grid até o final da última coluna. Em outras palavras, é o tamanho da largura da grid sem os elementos margem.
+`Max-width` mede a distancia entre o início da primeira coluna da grid até o final da última coluna. Em outras palavras, é o tamanho da largura da grid sem os elementos de margem.
+
+![Max-Width](imagens/maxwidth.png)
+
+### Sangria (Bleeds)
+
+As margens são o espaço de segurança entre o conteúdo e as bordas direita e esquerda de uma tela. Por padrão, os elementos dentro da grid nunca devem ultrapassar as margens. Porém, alguns componentes podem ter elementos que quebram essa regra e ocupam o espaço também da margem, é o que chamamos de sangria da grid.
+
+Quando a sangria acontece a largura do elemento deve ocupar todo o espaço da margem.
+
+**Atenção:** Somente elementos visuais podem utilizar a sangria (como um background, por exemplo) dentro de uma interface. **Os conteúdos devem respeitar as margens da grid**!!
+
+![Com sangria](imagens/sangria.png)
+
+![Sem sangria](imagens/semsangria.png)
 
 ---
 
@@ -139,4 +155,3 @@ A margem externa ao conteúdo será variável (com tamanho mínimo de **40 pixel
 | breakpoint | -                  | --grid-breakpoint-xlarge |
 
 ![Grid 12 colunas](imagens/grid-12colunas.png)
-
