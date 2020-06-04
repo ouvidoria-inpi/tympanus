@@ -3,62 +3,41 @@ extends ../../layouts/component
 append vars
   - var title = "Checkbox";
 
-append style
-  style. 
-    .title-checkbox{
-      font-size: 16px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 0.4em;
-    }
 append content
-  p.title-checkbox Selecione uma ou mais opções (se necessário)
-  +checkbox("Padrão")(id="h-checkbox-default")
-  +checkbox("Checado")(class="ml-3" id="h-checkbox-checked" checked)
-  +checkbox("Inválido")(class="ml-3" id="h-checkbox-invalid" class="is-invalid")
-    +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid")
-  //- +checkbox("Válido")(id="h-checkbox-valid" class="is-valid" checked)
-  //-   +feedback("fa-check-circle", "Campo Correto")(class="is-valid")
-  +checkbox("Desativado")(class="ml-3" id="h-checkbox-disabled" disabled)
+  .description
+    p.title-checkbox Checkbox Horizontal Padrão (Titulo opcional).
+    p.auxiliary.text Texto auxiliar(opcional).
+  .list-options
+    +checkbox("Padrão")(class="pb-5 pr-5 ml-3 d-inline-block" id="h-checkbox-default")
+    +checkbox("Checado")(class="pb-5 pr-5 ml-3 d-inline-block" id="h-checkbox-checked" checked)
+    +checkbox("Inválido")(class="pb-5 pr-5 ml-3 d-inline-block" id="h-checkbox-invalid" class="is-invalid")
+      +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid p-0")
+    +checkbox("Válido")(class="pb-5 pr-5 ml-3 d-inline-block" id="h-checkbox-valid" class="is-valid" checked)
+      +feedback("fa-check-circle", "Campo Correto")(class="is-valid p-0")
+    +checkbox("Desativado")(class="ml-3 pb-5 pr-5 d-inline-block" id="h-checkbox-disabled" disabled)
   hr
   .row
-    .col-sm-4
-      p.title-checkbox Vertical
-      .mb-3
+    .col-sm-4.pb-5.pr-5
+      .description
+        p.title-checkbox Checkbox Vertical Padrão (Título opcional).
+        p.auxiliary.text Texto auxiliar(opcional).
+      .list-options
         +checkbox("Padrão")(id="v-checkbox-default")
-      .mb-3
         +checkbox("Checado")(id="v-checkbox-checked" checked)
-      .mb-3
         +checkbox("Inválido")(id="v-checkbox-invalid" class="is-invalid")
-          +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid")
-      //- +checkbox("Válido")(id="v-checkbox-valid" class="is-valid" checked)
-      //-   +feedback("fa-check-circle", "Campo Correto")(class="is-valid")
-      .mb-3
+          +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid p-0")
+        +checkbox("Válido")(id="v-checkbox-valid" class="is-valid" checked)
+          +feedback("fa-check-circle", "Campo Correto")(class="is-valid p-0")
         +checkbox("Desativado")(id="v-checkbox-disabled" class="d-block" disabled)
-    .col-sm-4
-      p.title-checkbox Pequeno
-      .mb-3
-        +checkbox("Padrão")(id="v-s-checkbox-default" class="is-small d-block")
-      .mb-3
-        +checkbox("Checado")(id="v-s-checkbox-checked" class="is-small d-block" checked)
-      .mb-3
-        +checkbox("Inválido")(id="v-s-checkbox-invalid" class="is-small is-invalid d-block")
-          +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid")
-      //- +checkbox("Válido")(id="v-s-checkbox-valid" class="is-small is-valid d-block" checked)
-      //-   +feedback("fa-check-circle", "Campo Correto")(class="is-valid")
-      .mb-3
-        +checkbox("Desativado")(id="v-s-checkbox-disabled" class="is-small d-block" disabled)
-    .col-sm-4.bg-primary-default
-      p.title-checkbox(style="color: #fff") Fundo Negativo ou Invertido
-      p.description.is-inverted Selecione mais de uma opção se necessário
-      .mb-3
-        +checkbox("Padrão")(id="v-i-checkbox-default" class="is-inverted")
-      .mb-3
-        +checkbox("Checado")(id="v-i-checkbox-checked" class="is-inverted" checked)
-      .mb-3
-        +checkbox("Inválido")(id="v-i-checkbox-invalid" class="is-inverted is-invalid")
-          +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid")  
-      //- +checkbox("Válido")(id="v-i-checkbox-valid" class="is-inverted is-valid" checked)
-      //-   +feedback("fa-check-circle", "Campo Correto")(class="is-valid")
-      .mb-1
-        +checkbox("Desativado")(id="v-i-checkbox-disabled" class="is-inverted" disabled)
+    .col-sm-4.pb-5.pr-5
+      .description
+        p.title-checkbox Checkbox Pequeno (Título opcional).
+        p.auxiliary.text Texto auxiliar(opcional).
+      .list-options
+        +checkbox("Padrão")(id="v-s-checkbox-default" class="is-small")
+        +checkbox("Checado")(id="v-s-checkbox-checked" class="is-small" checked)
+        +checkbox("Inválido")(id="v-s-checkbox-invalid" class="is-small is-invalid")
+          +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid p-0")
+        +checkbox("Válido")(id="v-s-checkbox-valid" class="is-small is-valid" checked)
+          +feedback("fa-check-circle", "Campo Correto")(class="is-valid p-0")
+        +checkbox("Desativado")(id="v-s-checkbox-disabled" class="is-small" disabled)
