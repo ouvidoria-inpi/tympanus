@@ -4,11 +4,15 @@ class BRList {
     this.component = component
     this.collapsible = this.name === 'br-list-collapsible'
     this.checkable = this.name === 'br-list-checkable'
+    this.unique = component.hasAttribute('unique')
     this.itens = component.querySelectorAll(':scope > .item')
+    // suporte a colunas do bootstrap dentro da lista
+    if (this.itens.length === 0) this.itens = component.querySelectorAll('div > .item')
     this._setBehavior()
   }
   _setBehavior() {
     if (this.collapsible) {
+      this._closeAllItens()
       this.itens.forEach((item) => {
         item.addEventListener('click', (event) => {
           this._toggle(event, item)
@@ -29,14 +33,28 @@ class BRList {
     }
   }
   _toggle(event, item) {
+    if (this.unique) this._closeAllItens()
+    item.toggleAttribute('active')
     const icon = item.querySelector('.fa-angle-down')
       ? item.querySelector('.fa-angle-down')
       : item.querySelector('.fa-angle-up')
-    item.toggleAttribute('active')
     if (icon) {
       icon.classList.toggle('fa-angle-down')
       icon.classList.toggle('fa-angle-up')
     }
+  }
+
+  _closeAllItens() {
+    this.itens.forEach((item) => {
+      item.removeAttribute('active')
+      const icon = item.querySelector('.fa-angle-down')
+        ? item.querySelector('.fa-angle-down')
+        : item.querySelector('.fa-angle-up')
+      if (icon) {
+        icon.classList.add('fa-angle-down')
+        icon.classList.remove('fa-angle-up')
+      }
+    })
   }
   _check(event, item) {
     item.classList.toggle('selected')

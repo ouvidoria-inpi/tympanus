@@ -4,15 +4,15 @@
   display: block;
   overflow: auto;
 
-  .br-list {
-    &:not([collapsible]) {
-      a.item {
-        pointer-events: none;
-      }
+  .#{$prefix}list {
+    .item {
+      font-size: v(font-size-scale-base);
     }
 
-    .br-list {
-      background-image: none;
+    & > div > .item .content {
+      text-transform: uppercase;
+      font-size: v(font-size-scale-down-01);
+      font-weight: v(font-weight-bold);
     }
 
     a.item:not([disabled])[active],
@@ -23,13 +23,14 @@
     }
   }
 
-  .br-button.tertiary.is-circle:hover,
-  .br-button:not(:disabled):focus {
+  .#{$prefix}button.tertiary.is-circle:hover,
+  .#{$prefix}button:not(:disabled):focus {
     background: transparent;
   }
 
-  @media screen and (min-width: 769px) {
-    .br-list .item .support {
+  // @media screen and (min-width: 769px) {
+    @include media-breakpoint-up(md) {
+    .#{$prefix}list .item .support {
       display: none;
       pointer-events: none;
     }
@@ -52,26 +53,27 @@
     'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-positive.png'
   );
 
-  @media (max-width: 580px) {
+  // @media (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
+      .around {
+        &-logo {
+          justify-content: center;
+        }
+        &-list {
+          justify-content: center;
+        }
+      }
+      [class*='col'] {
+        padding: 0 0 $spacer*4;
+      }
+    }
+  
+  // @media (max-width: 580px) {
+  @include media-breakpoint-down(xs) {
     .around {
       &-social {
         display: none;
       }
-    }
-  }
-  @media (max-width: 768px) {
-    .around {
-      &-logo {
-        justify-content: center;
-      }
-      &-list {
-        justify-content: center;
-      }
-    }
-  }
-  @media (min-width: 769px) {
-    .col-md-2 {
-      width: auto;
     }
   }
 }

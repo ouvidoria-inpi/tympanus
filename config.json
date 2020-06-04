@@ -129,6 +129,10 @@
         "filename": "divider"
       },
       {
+        "label": "Footer",
+        "filename": "footer"
+      },
+      {
         "label": "Header",
         "filename": "header"
       },
