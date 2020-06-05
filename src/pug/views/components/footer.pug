@@ -6,25 +6,25 @@ append vars
 
 append content
   p Exemplo de Footer Versão Negativa 
-  +footer.negative.br-divider.fundo-neutro
-    div.around-logo
+  +footer
+    div.container-logo
       .logo
-    +list()(collapsible horizontal unique).around-list
-      +footer-list-filler(total=10 col=6)
-    +footer-bottom-filler()(negative)
+    +list()(collapsible horizontal unique).container-list
+      +footer-list-filler()(total=6 col=2)
+    +footer-bottom-filler()
   <br><br>
-  p Exemplo de Footer Versão Negativa (col automática)
-  +footer.negative.br-divider.fundo-neutro
-    div.around-logo
+  p Exemplo de Footer Versão Negativa ( col automática, logo centralizado )
+  +footer.negative
+    div.container-logo.text-center
       .logo
-    +list()(collapsible horizontal unique).around-list
-      +footer-list-filler(total=10 col)
-    +footer-bottom-filler()(negative)
+    +list()(collapsible horizontal unique).container-list
+      +footer-list-filler()(total=4 col)
+    +footer-bottom-filler()
   <br><br>
   p Exemplo de Footer Versão Positiva
-  +footer.positive.br-divider
-    div.around-logo
+  +footer.positive
+    div.container-logo
       .logo
-    +list()(collapsible horizontal unique).around-list
-      +footer-list-filler(total=12 col=2)
-    +footer-bottom-filler
+    +list()(collapsible horizontal unique).container-list
+      +footer-list-filler(total=6 col=2)
+    +footer-bottom-filler()(positive)

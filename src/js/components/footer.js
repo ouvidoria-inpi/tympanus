@@ -10,9 +10,9 @@ class BRFooter {
   }
 }
 
-const listFooter = []
+const footerList = []
 for (const brFooter of window.document.querySelectorAll('.br-footer')) {
-  listFooter.push(new BRFooter('br-footer', brFooter))
+  footerList.push(new BRFooter('br-footer', brFooter))
 }
 
 export default BRFooter
