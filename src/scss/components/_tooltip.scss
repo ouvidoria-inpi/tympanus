@@ -50,26 +50,26 @@
     max-width: 360px;
     width: auto;
   }
-  &.is-success {
+  &[success] {
     background: v(color-success, $color-success);
     .arrow {
       border-color: v(color-success, $color-success);
     }
   }
-  &.is-error {
+  &[error] {
     background: v(color-danger, $color-danger);
     .arrow {
       border-color:  v(color-danger, $color-danger);
     }
   }
-  &.is-warning {
+  &[warning] {
     background: v(color-warning, $color-warning);
     color: v(color-secondary-08, $color-secondary-08);
     .arrow {
       border-color: v(color-warning, $color-warning);
     }
   }
-  &.is-info,
+  &[info],
   & {
     background: v(color-info, $color-info);
     .arrow {
@@ -188,22 +188,14 @@
   }
 
   .close {
+    background: transparent;
     position: absolute;
+    color: inherit;
     top: 5px;
     right: 5px;
     cursor: pointer;
     border: 0;
     margin: 0;
     padding: 0;
-  }
-
-  button,
-  .br-button {
-    font-size: v(font-size-scale-down-01,$font-size-scale-down-01);
-    font-weight:  v(font-weight-medium,$font-weight-medium);
-    background: transparent;
-    border-color: inherit;
-    color: inherit;
-    margin: 5px 5px;
   }
 }
