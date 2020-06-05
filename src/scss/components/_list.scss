@@ -52,17 +52,17 @@
         -webkit-box-orient: vertical; 
       }
     }
-    [class*='col'] {
-      flex-grow: 1;
-      min-width: 25%;
+    [class='col'] {
+      flex-grow: 0;
+      flex-basis: 16.6%;
+      flex-shrink: auto;
       padding: 0 $spacer $spacer;
       @include media-breakpoint-down(sm) {
-        max-width: 100%;
-        min-width: 100%;
-        width: 100%;
+        flex-basis: 100% !important;
       }
       @include media-breakpoint-up(lg) {
-        min-width: 16.6%;
+        //min-width: 16.6%;
+        flex-basis: 16.6%;
       }
     }
     @include media-breakpoint-up(md) {
@@ -78,7 +78,7 @@
     }
     [class*='col-'] {
       flex-grow: 0;
-      min-width: min-content;
+      min-width: auto;
       @include media-breakpoint-down(sm) {
         max-width: 100%;
         min-width: 100%;

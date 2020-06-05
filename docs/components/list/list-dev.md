@@ -280,7 +280,8 @@ Aplicar **selected** na linha selecionada pelo controle. Pode-se aplicar por cla
 
 ### Alinhamento horizontal
 
-Aplicar o atributo **horizontal** na tag do componente. Surgiu da necessidade do componente footer para criar uma lista agrupada de links. O layout se mantêm horizontal no desktop e os itens expandidos, mas na resolução de tablet e mobile a lista volta para o formato vertical e pode ser condensada. Cada item de rpimeiro nível da lista deve ser encapsulados por um container com a classe `col`.
+Aplicar o atributo **horizontal** na tag do componente.
+Surgiu da necessidade do componente footer para criar uma lista agrupada de links. A altura de linha padrão para os textos é de duas linhas. O layout se mantêm horizontal no desktop e os itens expandidos mas, na resolução de tablet e mobile, a lista volta para o formato vertical e pode ser condensada. Cada item de primeiro nível da lista deve ser encapsulados por um container com a classe `col`, podendo ser usadas as varições do bootstrap para diferentes tamanhos de coluna (ex.: col-2, col-4, col-8)
 
 ```html
 <div class="br-list" collapsible horizontal two-lines unique>

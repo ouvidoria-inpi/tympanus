@@ -5,11 +5,14 @@ class BRList {
     this.collapsible = this.name === 'br-list-collapsible'
     this.checkable = this.name === 'br-list-checkable'
     this.unique = component.hasAttribute('unique')
+    this.horizontal = component.hasAttribute('horizontal')
+    this.cols = this.horizontal ? component.querySelectorAll('.col') : []
     this.itens = component.querySelectorAll(':scope > .item')
     // suporte a colunas do bootstrap dentro da lista
     if (this.itens.length === 0) this.itens = component.querySelectorAll('div > .item')
     this._setBehavior()
   }
+  // eslint-disable-next-line complexity
   _setBehavior() {
     if (this.collapsible) {
       this._closeAllItens()
@@ -29,6 +32,15 @@ class BRList {
             }
           })
         }
+      })
+    }
+    if (this.cols.length > 0) {
+      const n = this.cols.length
+      const pos = n > 6 && n % 2 === 1 ? n + 1 : n
+      const resto = pos / Math.ceil(pos / 6)
+      const equal = 100 / resto
+      this.cols.forEach((col) => {
+        col.style.flexBasis = `${equal}%`
       })
     }
   }

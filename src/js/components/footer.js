@@ -6,7 +6,7 @@ class BRFooter {
   }
 
   _setBehavior() {
-    // Script
+    // Javascript
   }
 }
 
