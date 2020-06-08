@@ -21,12 +21,12 @@ Este componente é formado pelos seguintes elementos obrigatórios:
 
 ## Cores
 
-Para definir as cores dos tooltips são usadas as seguintes classes:
+Para definir as cores dos tooltips são usadas os seguintes atributos:
 
-* `is-success` 
-* `is-warning` 
-* `is-info` 
-* `is-danger` 
+* `success` 
+* `warning` 
+* `info` 
+* `danger` 
 
 ## Posição
 
@@ -42,7 +42,7 @@ Caso o atributo não seja definido, ou apresente erro, o padrão será definido 
 ### Exemplo:
 
 ``` html
-<div class="br-tooltip is-warning" place="left">
+<div class="br-tooltip" warning place="left">
     <span class="text">Texto de Informação</span>
     <span class="subtext">Sub-texto</span>
 </div>
@@ -52,7 +52,7 @@ Caso o atributo não seja definido, ou apresente erro, o padrão será definido 
 
 Tipo de tooltip é formado pelos seguintes elementos:
 
-* `is-popover` : classe para definir tooltip do tipo PopOver; 
+* `popover` : atributo para definir tooltip do tipo PopOver; 
 * `popover-header` : é o container para icones e texto principal; 
 * `popover-body` :  é o container para o texto secundário; 
 * `popover-footer` : é o container para botoes e links (opcional); 
@@ -61,7 +61,7 @@ Tipo de tooltip é formado pelos seguintes elementos:
 ### Exemplo:
 
 ``` html
-<div class="br-tooltip is-popover is-success">
+<div class="br-tooltip" popover success>
     <div class="popover-header">
         <span class="text">Cadastro Concluído!</span>
     </div>
@@ -80,7 +80,7 @@ Tipo de tooltip é formado pelos seguintes elementos:
 * Os botões e links devem ser inseridos dentro do container `popover-footer` , caso não sejam necessários esse container pode ser omitido.
 
 ``` html
-<div class="br-tooltip is-warning is-popover" place="left">
+<div class="br-tooltip" popover warning place="left">
     <div class="popover-header">
         <i class="fas fa-exclamation-triangle"></i>
     </div>
@@ -88,7 +88,7 @@ Tipo de tooltip é formado pelos seguintes elementos:
         <span class="subtext">É recomendado que o cadastro seja atualizado antes de prosseguir.</span>
     </div>
     <div class="popover-footer">
-        <button class="br-button is-primary" type="button"><span>Atualizar</span></button>
+        <button class="br-button" type="button" primary><span>Atualizar</span>
     </div>
 </div>
 ```
@@ -98,7 +98,7 @@ Tipo de tooltip é formado pelos seguintes elementos:
 * Uma imagem (de tamanho máximo de 120px) pode ser inserida dentro do container `popover-image` que deve ser declarado antes dos demais containers:
 
 ``` html
-<div class="br-tooltip is-info is-popover" place="bottom">
+<div class="br-tooltip" info popover place="bottom">
     <div class="popover-image">
         <img src="" alt="Avatar">
     </div>
@@ -119,7 +119,7 @@ Existem atributos que podem ser declarados para controlar se os tooltips devem a
 * `timer` : atributo que determina após quantos milisegundos o tooltip deve ser automaticamente ocultado; 
 
 ``` html
-<div class="br-tooltip is-info" place="right" timer="8000" active>
+<div class="br-tooltip" info place="right" timer="8000" active>
     <span class="text">Fulano de Tal da Silva</span>
     <span class="subtext">Diretor Presidente</span>
 </div>

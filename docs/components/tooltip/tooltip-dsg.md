@@ -67,13 +67,13 @@ Os componentes **Tooltip** e **PopOver** surgirão na tela em decorrência de al
 
 A ação direta é aquela que ocorre quando o usuário interage diretamente com o elemento sobre o qual aparecerá o Tooltip. Como por exemplo, nos eventos **MouseOver**, **Click** e **Focus**.
 
-![Comportamento](imagens/DS_Tooltip_Comportamento_Ação_Direta.png)
+![Comportamento](imagens/DS_Tooltip_Comportamento_Acao_Direta.png)
 
 ### Ação Indireta do Usuário
 
 Na ação indireta, o usuário interage com algum elemento, porém o **Tooltip** aparecerá fazendo referência a outro elemento ou parte da tela. No exemplo abaixo, o usuário clicou num botão, com ação de incluir linhas na tabela. Como reflexo desta ação, o Tooltip indicou o surgimento da nova linha dentro da tabela.
 
-![Comportamento](imagens/DS_Tooltip_Comportamento_Ação_Indireta.png)
+![Comportamento](imagens/DS_Tooltip_Comportamento_Acao_Indireta.png)
 
 ### Automaticamente pelo Sistema
 
@@ -113,7 +113,7 @@ Neste tipo de permanência, o Tooltip ou PopOver permanecerá visível até o us
 
 A recomendação é que se utilize os Tooltips e PopOvers de forma a não conflitar com os limites da tela ou com o conteúdo ao qual se quer dar destaque. Por padrão, o Tooltipo ou PopOver aparecerá acima do elemento, como mostra o exemplo abaixo.
 
-![Direção](imagens/DS_Tooltip_Comportamento_Direção_Padrão.png)
+![Direção](imagens/DS_Tooltip_Comportamento_Direcao_Padrao.png)
 
 No exemplo abaixo, os balões flutuantes dos Tooltips aparecem no sentido oposto aos limites da tela de exibição, evitanto ficar ocultos ou criar barra de rolagem. Logo:
 
@@ -122,7 +122,7 @@ No exemplo abaixo, os balões flutuantes dos Tooltips aparecem no sentido oposto
 -   o Tooltip **próximo à direita da tela**, aparecerá à **esquerda do elemento**;
 -   e o Tooltip **próximo à esquerda da tela**, aparecerá à **direita do elemento**.
 
-![Direção](imagens/DS_Tooltip_Comportamento_Direção.png)
+![Direção](imagens/DS_Tooltip_Comportamento_Direcao.png)
 
 ---
 
