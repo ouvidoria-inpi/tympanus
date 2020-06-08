@@ -18,6 +18,8 @@ import BRTagInput from './taginput'
 import BRTooltip from './tooltip'
 import BRUpload from './upload'
 import BRWizard from './wizard'
+// Script Templates
+import BRTemplateBAse from './template-base'
 export default class Globals {
   initInstanceAll() {
     this.initInstanceAccordion()
@@ -446,6 +448,13 @@ export default class Globals {
     const wizardList = []
     for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
       wizardList.push(new BRWizard('br-wizard', brWizard))
+    }
+  }
+
+  initInstanceTemplateBase() {
+    const templateBaseList = []
+    for (const brTemplateBase of window.document.querySelectorAll('.template-base')) {
+      templateBaseList.push(new BRTemplateBase('template-base', brTemplateBase))
     }
   }
 }

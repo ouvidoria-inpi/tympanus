@@ -8,25 +8,25 @@ mixin footer-list-filler(attributes)
   - col = typeof(attributes.col) === 'number' ? 'col-' + attributes.col : 'col'
   - let n = 1;
   while n <= total
-    - let itens = Math.floor(Math.random() * (1 - 10) + 10)
+    - let itens = Math.floor(Math.random() * (1 - 4) + 4)
     div(class = col)
       +list-item()(link)
         if (n % 2 == 0)
-          .content= 'Categoria '+ n + ' - Exemplo - teste teste testetesteteste testetesteteste teste '
+          .content= 'Categoria '+ n 
         else
           .content= 'Categoria '+ n
         .support: i.fas.fa-angle-up
       +list
         - let i = 0;
         while i <= itens
-          - let div = Math.floor(Math.random() * (1 - 10) + 10)
+          - let div = Math.floor(Math.random() * (1 - 4) + 4)
           +list-item()(link)
             if ( i % div == 0)
-              .content= i+1 + '° - Item da Lista '+ n
+              .content= 'Item da Lista '
             else if ( i % div == 1)
-              .content= i+1 + '° - Item da Lista '+ n + ' -  teste teste testestes testeste teste testeteste testeteste teste teste testetesteteste teste teste teste teste'
+              .content= 'Item da Lista ' + ' -  teste teste testestes testeste teste testeteste testeteste teste teste testetesteteste teste teste teste teste'
             else
-              .content= i+1 + '° - Item da Lista '+ n + ' -  teste teste teste testeteste teste '
+              .content= 'Item da Lista ' + ' -  teste teste teste testeteste teste '
             - i++
       - n++
 

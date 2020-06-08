@@ -9,17 +9,23 @@ block template
       +header-default-content
     .content
       .row
-        //- .col-sm-6.col-lg-4.col-xl-3
-        .col
+        .col-menu.col-sm-6.col-md-4
           +menu
             +menu-principal-content
-        .col
+        .col.col-main
           +breadcrumb
             +crumb("Tela Anterior")
             +crumb("Tela Anterior2")
             +crumb("Tela Anterior3")
             +crumb("Tela Anterior4")
             +crumb("Tela Atual", "is-active")
-          p.h2 Exemplo de Menu Principal
+          p.h2=title
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequuntur ratione suscipit voluptatem reprehenderit aut recusandae autem voluptas quo nulla tenetur, quos a dolores enim ad, cum, eius et odio!
       .row
+        .col
+          +footer
+            div.container-logo.text-center
+              .logo
+            +list()(collapsible horizontal unique).container-list
+              +footer-list-filler()(total=6 col=2)
+            +footer-bottom-filler()
