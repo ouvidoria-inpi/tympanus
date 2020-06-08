@@ -1,237 +1,226 @@
 [
-	{
-		"children": [
-			{
-				"label": "Como começar",
-				"filename": "como-comecar"
-			},
-			{
-				"label": "Princípios do Design System",
-				"filename": "principios"
-			},
-			{
-				"label": "Sobre o Design System",
-				"filename": "sobre"
-			},
-			{
-				"label": "Prototipando com o DSGOV",
-				"filename": "prototipando"
-			}
-		],
-		"id": "introducao",
-		"label": "Introdução",
-		"type": "docs"
-	},
-	{
-		"children": [
-			{
-				"label": "Cores",
-				"filename": "cores",
-				"folder": "cores"
-			},
-			{
-				"label": "Iconografia",
-				"filename": "iconografia",
-				"folder": "iconografia"
-			},
-			{
-				"label": "Estados",
-				"filename": "estados",
-				"folder": "estados"
-			},
-			{
-				"label": "Sistema de Grid",
-				"filename": "grid",
-				"folder": "grid"
-			},
-			{
-				"label": "Tipografia",
-				"filename": "tipografia",
-				"folder": "tipografia"
-			}
-		],
-		"id": "fundamentos-visuais",
-		"label": "Fundamentos Visuais",
-		"type": "docs"
-	},
-	{
-		"children": [
-			{
-				"label": "Boas práticas de CSS",
-				"filename": "boas-praticas-de-css"
-			},
-			{
-				"label": "Boas práticas de HTML",
-				"filename": "boas-praticas-de-html"
-			},
-			{
-				"label": "Acessibilidade no Código HTML",
-				"filename": "acessibilidade-no-codigo-html"
-			},
-			{
-				"label": "Codificação JavaScript",
-				"filename": "codificacao-javascript"
-			},
-			{
-				"label": "Uso do WAI-ARIA",
-				"filename": "uso-do-wai-aria"
-			},
-			{
-				"label": "Utilitários de CSS",
-				"filename": "utilitarios-css"
-			},
-			{
-				"label": "Construção de componentes",
-				"filename": "construcao-de-componentes"
-			}
-		],
-		"id": "guias",
-		"label": "Guias",
-		"type": "docs"
-	},
-	{
-		"children": [
-			{
-				"label": "Status Atual dos Componentes",
-				"filename": "status",
-				"type": "docs"
-			},
-			{
-				"label": "Accordion",
-				"filename": "accordion"
-			},
-			{
-				"label": "Avatar",
-				"filename": "avatar"
-			},
-			{
-				"label": "Badge",
-				"filename": "badge"
-			},
-			{
-				"label": "Breadcrumb",
-				"filename": "breadcrumb"
-			},
-			{
-				"label": "Button",
-				"filename": "button"
-			},
-			{
-				"label": "Checkbox",
-				"filename": "checkbox"
-			},
-			{
-				"label": "Datepicker",
-				"filename": "datepicker"
-			},
-			{
-				"label": "Divider",
-				"filename": "divider"
-			},
-			{
+  {
+    "children": [
+      {
+        "label": "Como começar",
+        "filename": "como-comecar"
+      },
+      {
+        "label": "Princípios do Design System",
+        "filename": "principios"
+      },
+      {
+        "label": "Sobre o Design System",
+        "filename": "sobre"
+      },
+      {
+        "label": "Prototipando com o DSGOV",
+        "filename": "prototipando"
+      }
+    ],
+    "id": "introducao",
+    "label": "Introdução",
+    "type": "docs"
+  },
+  {
+    "children": [
+      {
+        "label": "Cores",
+        "filename": "cores",
+        "folder": "cores"
+      },
+      {
+        "label": "Iconografia",
+        "filename": "iconografia",
+        "folder": "iconografia"
+      },
+      {
+        "label": "Estados",
+        "filename": "estados",
+        "folder": "estados"
+      },
+      {
+        "label": "Sistema de Grid",
+        "filename": "grid",
+        "folder": "grid"
+      },
+      {
+        "label": "Tipografia",
+        "filename": "tipografia",
+        "folder": "tipografia"
+      }
+    ],
+    "id": "fundamentos-visuais",
+    "label": "Fundamentos Visuais",
+    "type": "docs"
+  },
+  {
+    "children": [
+      {
+        "label": "Boas práticas de CSS",
+        "filename": "boas-praticas-de-css"
+      },
+      {
+        "label": "Boas práticas de HTML",
+        "filename": "boas-praticas-de-html"
+      },
+      {
+        "label": "Acessibilidade no Código HTML",
+        "filename": "acessibilidade-no-codigo-html"
+      },
+      {
+        "label": "Codificação JavaScript",
+        "filename": "codificacao-javascript"
+      },
+      {
+        "label": "Uso do WAI-ARIA",
+        "filename": "uso-do-wai-aria"
+      },
+      {
+        "label": "Utilitários de CSS",
+        "filename": "utilitarios-css"
+      },
+      {
+        "label": "Construção de componentes",
+        "filename": "construcao-de-componentes"
+      }
+    ],
+    "id": "guias",
+    "label": "Guias",
+    "type": "docs"
+  },
+  {
+    "children": [
+      {
+        "label": "Status Atual dos Componentes",
+        "filename": "status",
+        "type": "docs"
+      },
+      {
+        "label": "Accordion",
+        "filename": "accordion"
+      },
+      {
+        "label": "Avatar",
+        "filename": "avatar"
+      },
+      {
+        "label": "Badge",
+        "filename": "badge"
+      },
+      {
+        "label": "Breadcrumb",
+        "filename": "breadcrumb"
+      },
+      {
+        "label": "Button",
+        "filename": "button"
+      },
+      {
+        "label": "Checkbox",
+        "filename": "checkbox"
+      },
+      {
+        "label": "Datepicker",
+        "filename": "datepicker"
+      },
+      {
+        "label": "Divider",
+        "filename": "divider"
+      },
+      {
         "label": "Footer",
         "filename": "footer"
       },
-			{
-				"label": "Header",
-				"filename": "header"
-			},
-			{
-				"label": "Input",
-				"filename": "input"
-			},
-			{
-				"label": "List",
-				"filename": "list"
-			},
-			{
-				"label": "Loading",
-				"filename": "loading"
-			},
-			{
-				"label": "Menu",
-				"filename": "menu"
-			},
-			{
-				"label": "Message",
-				"filename": "message"
-			},
-			{
-				"label": "Menu",
-				"filename": "menu"
-			},
-			{
-				"label": "Modal",
-				"filename": "modal"
-			},
-			{
-				"label": "Notification",
-				"filename": "notification"
-			},
-			{
-				"label": "Pagination",
-				"filename": "pagination"
-			},
-			{
-				"label": "Radio",
-				"filename": "radio"
-			},
-			{
-				"label": "Scrim",
-				"filename": "scrim"
-			},
-			{
-				"label": "Select",
-				"filename": "select"
-			},
-			{
-				"label": "Table",
-				"filename": "table"
-			},
-			{
-				"label": "Tabs",
-				"filename": "tabs"
-			},
-			{
-				"label": "Tag",
-				"filename": "tag"
-			},
-			{
-				"label": "Textarea",
-				"filename": "textarea"
-			},
-			{
-				"label": "Tooltip",
-				"filename": "tooltip"
-			},
-			{
-				"label": "Upload",
-				"filename": "upload"
-			},
-			{
-				"label": "Wizard",
-				"filename": "wizard"
-			}
-		],
-		"id": "components",
-		"label": "Componentes",
-		"type": "component"
-	},
-	{
-		"children": [
-			{
-				"label": "Base",
-				"filename": "base"
-			}
-		],
-		"id": "templates",
-		"label": "Templates",
-		"type": "templates"
-	},
-	{
-		"filename": "release-notes",
-		"id": "release-notes",
-		"label": "Release Notes",
-		"type": "docs"
-	}
+      {
+        "label": "Header",
+        "filename": "header"
+      },
+      {
+        "label": "Input",
+        "filename": "input"
+      },
+      {
+        "label": "List",
+        "filename": "list"
+      },
+      {
+        "label": "Loading",
+        "filename": "loading"
+      },
+      {
+        "label": "Menu",
+        "filename": "menu"
+      },
+      {
+        "label": "Message",
+        "filename": "message"
+      },
+      {
+        "label": "Menu",
+        "filename": "menu"
+      },
+      {
+        "label": "Modal",
+        "filename": "modal"
+      },
+      {
+        "label": "Notification",
+        "filename": "notification"
+      },
+      {
+        "label": "Pagination",
+        "filename": "pagination"
+      },
+      {
+        "label": "Radio",
+        "filename": "radio"
+      },
+      {
+        "label": "Scrim",
+        "filename": "scrim"
+      },
+      {
+        "label": "Select",
+        "filename": "select"
+      },
+      {
+        "label": "Table",
+        "filename": "table"
+      },
+      {
+        "label": "Tabs",
+        "filename": "tabs"
+      },
+      {
+        "label": "Tag",
+        "filename": "tag"
+      },
+      {
+        "label": "Textarea",
+        "filename": "textarea"
+      },
+      {
+        "label": "Tooltip",
+        "filename": "tooltip"
+      },
+      {
+        "label": "Upload",
+        "filename": "upload"
+      },
+      {
+        "label": "Wizard",
+        "filename": "wizard"
+      }
+    ],
+    "id": "components",
+    "label": "Componentes",
+    "type": "component"
+  },
+  {
+    "filename": "release-notes",
+    "id": "release-notes",
+    "label": "Release Notes",
+    "type": "docs"
+  }
 ]

@@ -1,61 +1,63 @@
 mixin footer
-    .br-footer&attributes(attributes)
-       if block
-          block
+  .br-footer&attributes(attributes)
+    if block
+      block
 
 mixin footer-list-filler(attributes)
-   - total = attributes.total ?  attributes.total : 6
-   - col = typeof(attributes.col) === 'number' ? 'col-' + attributes.col : 'col'
-   - let n = 1;
-   while n <= total 
-      - var itens = Math.floor(Math.random() * (1 - 10) + 10)
-      div(class = col)
-         +list-item()(link)
-            if (n % 2 == 0)
-               .content= 'Categoria '+ n + ' - Exemplo - teste teste testetesteteste testetesteteste teste '
+  - total = attributes.total ?  attributes.total : 6
+  - col = typeof(attributes.col) === 'number' ? 'col-' + attributes.col : 'col'
+  - let n = 1;
+  while n <= total
+    - let itens = Math.floor(Math.random() * (1 - 10) + 10)
+    div(class = col)
+      +list-item()(link)
+        if (n % 2 == 0)
+          .content= 'Categoria '+ n + ' - Exemplo - teste teste testetesteteste testetesteteste teste '
+        else
+          .content= 'Categoria '+ n
+        .support: i.fas.fa-angle-up
+      +list
+        - let i = 0;
+        while i <= itens
+          - let div = Math.floor(Math.random() * (1 - 10) + 10)
+          +list-item()(link)
+            if ( i % div == 0)
+              .content= i+1 + '° - Item da Lista '+ n
+            else if ( i % div == 1)
+              .content= i+1 + '° - Item da Lista '+ n + ' -  teste teste testestes testeste teste testeteste testeteste teste teste testetesteteste teste teste teste teste'
             else
-               .content= 'Categoria '+ n
-            .support: i.fas.fa-angle-up
-         +list
-            - let i = 0;
-            while i <= itens 
-               - var div = Math.floor(Math.random() * (1 - 10) + 10)
-               +list-item()(link)
-                  if ( i % div == 0)
-                     .content= i+1 + '° - Item da Lista '+ n 
-                  else if ( i % div == 1)
-                     .content= i+1 + '° - Item da Lista '+ n + ' -  teste teste testestes testeste teste testeteste testeteste teste teste testetesteteste teste teste teste teste'
-                  else 
-                     .content= i+1 + '° - Item da Lista '+ n + ' -  teste teste teste testeteste teste '
-               - i++
+              .content= i+1 + '° - Item da Lista '+ n + ' -  teste teste teste testeteste teste '
+            - i++
       - n++
 
 mixin footer-bottom-filler(attributes)
-   div.container-social
-      div.social-network
-         p.title-social-network Redes Sociais
-         if (attributes.positive)
-            button(class="br-button tertiary is-circle" type="button")
-               img(alt="botão facebook" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.png")
-            button(class="br-button tertiary is-circle" type="button")
-               img(alt="botão twitter" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.png")
-            button(class="br-button tertiary is-circle" type="button")
-               img(alt="botão google" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.png")
-            button(class="br-button tertiary is-circle" type="button")
-               img(alt="botão govbr" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.png")  
-         else
-            button(class="br-button tertiary is-circle" type="button")
-               img(alt="botão facebook" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.png")
-            button(class="br-button tertiary is-circle" type="button")
-               img(alt="botão twitter" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.png")
-            button(class="br-button tertiary is-circle" type="button")
-               img(alt="botão google" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.png")
-            button(class="br-button tertiary is-circle" type="button")
-               img(alt="botão govbr" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.png")  
-      div.assigns
-         div.logo-information
-         div.logo-slogan
-   .br-divider
-   div.container-rights
-      span Texto destinado a exibição de informações relacionadas à 
-         span.bolder licensa de uso.      
+  div.container-social
+    div.social-network
+      p.title-social-network Redes Sociais
+      if (attributes.positive)
+        button(class="br-button tertiary is-circle" type="button")
+          img(alt="botão facebook" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.png")
+        button(class="br-button tertiary is-circle" type="button")
+          img(alt="botão twitter" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.png")
+        button(class="br-button tertiary is-circle" type="button")
+          img(alt="botão google" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.png")
+        button(class="br-button tertiary is-circle" type="button")
+          img(alt="botão govbr" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-positive.png")
+      else
+        button(class="br-button tertiary is-circle" type="button")
+          img(alt="botão facebook" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.png")
+        button(class="br-button tertiary is-circle" type="button")
+          img(alt="botão twitter" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.png")
+        button(class="br-button tertiary is-circle" type="button")
+          img(alt="botão google" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.png")
+        button(class="br-button tertiary is-circle" type="button")
+          img(alt="botão govbr" src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-negative.png")
+    div.assigns
+      div.logo-information
+      div.logo-slogan
+  .br-divider
+  div.container-rights
+    span Texto destinado a exibição de informações relacionadas à
+    |
+    |
+    span.bolder licensa de uso.
