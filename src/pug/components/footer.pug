@@ -8,7 +8,7 @@ mixin footer-list-filler(attributes)
   - col = typeof(attributes.col) === 'number' ? 'col-' + attributes.col : 'col'
   - let n = 1;
   while n <= total
-    - var itens = Math.floor(Math.random() * (1 - 10) + 10)
+    - let itens = Math.floor(Math.random() * (1 - 10) + 10)
     div(class = col)
       +list-item()(link)
         if (n % 2 == 0)
@@ -19,7 +19,7 @@ mixin footer-list-filler(attributes)
       +list
         - let i = 0;
         while i <= itens
-          - var div = Math.floor(Math.random() * (1 - 10) + 10)
+          - let div = Math.floor(Math.random() * (1 - 10) + 10)
           +list-item()(link)
             if ( i % div == 0)
               .content= i+1 + '° - Item da Lista '+ n
