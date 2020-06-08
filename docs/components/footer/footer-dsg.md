@@ -1,9 +1,3 @@
-[version]: # '1.0.0'
-
-![Exemplo Componente](imagens/footer-type-standard.png)
-
----
-
 ## Uso
 
 O _footer_ (Rodapé), deve ser utilizado como um elemento de "fechamento" de conteúdo de página, ajudando o usuário em sua localização e, em muitos casos, auxiliando-o com serviços úteis e informações complementares.
@@ -18,7 +12,7 @@ O _footer_ (Rodapé) precisa apresentar um padrão organizacional com layout con
 
 ## Anatomia
 
-O _Footer_ é composto por vários elementos visuais e componentes organizados em espaços determinados. É importante notar que **os elementos se repetem nas versões e variações do rodapé**, podendo assumir outras formas dependendo do tipo escolhido ou da resolução da tela.
+O _Footer_ é composto por vários elementos visuais e componentes organizados em espaços determinados. É importante notar que **os elementos se repetem nas versões e variações do rodapé**, podendo assumir outras formas dependendo do tipo escolhido ou da resolução da tela. 
 
 A seguir, apresentamos os elementos e componentes mais utilizados no _footer_ (Rodapé):
 
@@ -70,7 +64,7 @@ O Mapa do Site é formado pela junção de vários componentes list (lista). Cad
 
 ![Exemplo Anatomia](imagens/footer-sitemap.png)
 
-**IMPORTANTE:** O componente List, em todos os ítens que o compõe, possui a altura definida como comportamento de densidade.
+**IMPORTANTE:**  O componente List, em todos os ítens que o compõe, possui a altura definida como comportamento de densidade.
 
 ##### Mapa do Site - Adição de Novas Listas
 
@@ -80,7 +74,7 @@ Sempre que houver a necessidade de adicionar novas listas, estes deverão ser or
 
 #### Comportamento Lista Expandir
 
-O mapa do site quando utilizados em layouts com 4 e 8 colunas deverão ser apresentadas como listas no **"comportamento lista expandir"**, devido a limitação de espaço.
+O mapa do site  quando utilizados em layouts com 4 e 8 colunas deverão ser apresentadas como listas no **"comportamento lista expandir"**, devido a limitação de espaço.
 
 Para o _footer_ (Rodapé) o **"comportamento lista expandir"** transforma as categorias das listas em listas do layout 12 colunas em listas expansíveis com ação collapse. Cada categoria da lista, quando acionados, apresentará em seu interior os ítens da lista que o compõe.
 
@@ -118,7 +112,7 @@ Esta área apresenta informações indispensáveis ao sistema ou portal e deve s
 
 #### Responsividade
 
-O componente _Footer_ deve se comportar de forma fluida em relação à resolução de tela utilizada. A tabela a seguir resume as dimensões de _Footer_ utilizadas referentes à quantidade de _grids_:
+O componente _Footer_ deve se comportar de forma fluida em relação à resolução de tela utilizada. A tabela a seguir resume as dimensões  de _Footer_ utilizadas referentes à quantidade de _grids_:
 
 Segue exemplos dos _Footers_ para cada _Grid_ disponível:
 
@@ -143,18 +137,17 @@ Segue exemplos dos _Footers_ para cada _Grid_ disponível:
 
 ### Temas
 
-Foi desenvolvido para o _footer_ (rodapés) dois temas que se diferenciam na inversão das cores empregadas. **Tema 1**, na versão negativa e **Tema 2**, na versão positiva.
+Foi desenvolvido para o _footer_ (rodapés) dois temas que se diferenciam na inversão das cores empregadas. **Tema 1**, na versão negativa e **Tema 2**, na versão positiva. 
 
 ![Exemplo Componente](imagens/footer-behavior-theme1.png)
 
 ![Exemplo Componente](imagens/footer-behavior-theme2.png)
 
 **IMPORTANTE:** No "tema 2" será necessário o uso do componente separador no topo do _footer_ (Rodapé), fazendo uma delimitação do footer com a área de conteúdo. Caso haja a necessidade da utilização da barra de informações legais no tema 2, este também deverá apresentar o componente separador no topo. Como visto abaixo:
-
 #### Layout Flúido
-
 Em alguns casos, conforme necessidade do projeto ou das regras de negócio, os elementos do _footer_ (Rodapé) pode apresentar mudanças de alinhamento, afetando desta forma seu layout.
 Esta organização e composição final deverá sempre respeitar o alinhamento na sua respectiva grid.
+
 
 ![Exemplo Componente](imagens/footer-fluidlayout.png)
 
@@ -166,11 +159,11 @@ Esta organização e composição final deverá sempre respeitar o alinhamento n
 
 ###### Footer Temas 1 e 2
 
-| Name                                | Size                        | Weight                     |
-| ----------------------------------- | --------------------------- | -------------------------- |
-| Título Redes Sociais                | `-–font-size-scale-up-01`   | `-–font-weight-extra-bold` |
-| Texto Informações Legais            | `-–font-size-scale-down-01` | `-–font-weight-medium`     |
-| Texto Informações Legais - Destaque | `-–font-size-scale-down-01` | `-–font-weight-extra-bold` |
+|Name|Size|Weight|
+|--|--|--|
+|Título Redes Sociais|`-–font-size-scale-up-01`|`-–font-weight-extra-bold`|
+|Texto Informações Legais|`-–font-size-scale-down-01`|`-–font-weight-medium`|
+|Texto Informações Legais - Destaque|`-–font-size-scale-down-01`|`-–font-weight-extra-bold`|
 
 ---
 
@@ -178,35 +171,35 @@ Esta organização e composição final deverá sempre respeitar o alinhamento n
 
 ###### _Footer_ Tema 1
 
-| Name                                | Property         | Color Token                 |
-| ----------------------------------- | ---------------- | --------------------------- |
-| Logo Principal                      | color            | `–-color-secondary-01`      |
-| Texto Componente Lista              | color            | `–-color-secondary-01`      |
-| Container Componente Lista          | background color | `--color-primary-darken-02` |
-| Ícone Expandir                      | color            | `--color-secondary-01`      |
-| Ícone Retrair                       | color            | `--color-secondary-01`      |
-| Título Redes Sociais                | color            | `–-color-secondary-01`      |
-| Container Informações Legais        | background color | `--color-primary-darken-02` |
-| Logo Assinatura                     | color            | `–-color-secondary-01`      |
-| Texto Informações Legais            | color            | `–color-secondary-01`       |
-| Texto Informações Legais - Destaque | color            | `–color-secondary-01`       |
-| Container _Footer_                  | background color | `--color-primary-darken-02` |
+|Name|Property|Color Token|
+|--|--|--|
+Logo Principal|color|`–-color-secondary-01`|
+|Texto Componente Lista|color|`–-color-secondary-01`|
+|Container Componente Lista|background color|`--color-primary-darken-02`|
+|Ícone Expandir|color|`--color-secondary-01`|
+|Ícone Retrair|color|`--color-secondary-01`|
+|Título Redes Sociais |color|`–-color-secondary-01`|
+|Container Informações Legais|background color|`--color-primary-darken-02`|
+|Logo Assinatura|color|`–-color-secondary-01`|
+|Texto Informações Legais|color|`–color-secondary-01`|
+|Texto Informações Legais - Destaque|color|`–color-secondary-01`|
+|Container _Footer_ |background color|`--color-primary-darken-02`|
 
 ###### _Footer_ Tema 2
 
-| Name                                | Property         | Color Token                 |
-| ----------------------------------- | ---------------- | --------------------------- |
-| Logo Principal                      | color            | `--color-primary-darken-02` |
-| Texto Componente Lista              | color            | `--color-primary-darken-02` |
-| Container Componente Lista          | background color | `–color-secondary-01`       |
-| Ícone Expandir                      | color            | `--color-primary-darken-02` |
-| Ícone Retrair                       | color            | `--color-primary-darken-02` |
-| Título Redes Sociais                | color            | `--color-primary-darken-02` |
-| Container Informações Legais        | background color | `–color-secondary-01`       |
-| Logo Assinatura                     | color            | `--color-primary-darken-02` |
-| Texto Informações Legais            | color            | `--color-primary-darken-02` |
-| Texto Informações Legais - Destaque | color            | `--color-primary-darken-02` |
-| Container _Footer_                  | background color | `-–color-primary-01`        |
+|Name|Property|Color Token|
+|--|--|--|
+Logo Principal|color|`--color-primary-darken-02`|
+|Texto Componente Lista|color|`--color-primary-darken-02`|
+|Container Componente Lista|background color|`–color-secondary-01`|
+|Ícone Expandir|color|`--color-primary-darken-02`|
+|Ícone Retrair|color|`--color-primary-darken-02`|
+|Título Redes Sociais |color|`--color-primary-darken-02`|
+|Container Informações Legais|background color|`–color-secondary-01`|
+|Logo Assinatura|color|`--color-primary-darken-02`|
+|Texto Informações Legais|color|`--color-primary-darken-02`|
+|Texto Informações Legais - Destaque|color|`--color-primary-darken-02`|
+|Container _Footer_ |background color|`-–color-primary-01`|
 
 ---
 
@@ -214,37 +207,37 @@ Esta organização e composição final deverá sempre respeitar o alinhamento n
 
 ###### Footer Temas 1 e 2 (Sem Informação Legal)
 
-| Name                 | Padding - Property                                                |
-| -------------------- | ----------------------------------------------------------------- |
-| **4 Colunas**        | **left** ---------- **right** -------- **top** ------- **bottom** |
-| Componente Separador | `0px` ------- `0px` ------- `0px` ------- `variável`              |
-| Logo Principal       | `16px` ------- `variável (grid)` ------- `48px` ------- `48px`    |
-| **8 Colunas**        | **left** ---------- **right** -------- **top** ------- **bottom** |
-| Componente Separador | `0px` ------- `0px` ------- `0px` ------- `variável`              |
-| Logo Principal       | `40px` ------- `variável (grid)` ------- `48px` ------- `48px`    |
-| Título Redes Sociais | `0px` ------- `--` ------- `0px` ------- `--`                     |
-| Botão Rede Social    | `0px` ------- `16px` ------- `--` ------- `0px`                   |
-| Logo Assinatura      | `40px` ------- `0px` ------- `--` ------- `0px`                   |
-| **12 Colunas**       | **left** ---------- **right** -------- **top** ------- **bottom** |
-| Componente Separador | `0px` ------- `0px` ------- `0px` ------- `variável`              |
-| Logo Principal       | `40px` ------- `--` ------- `48px` ------- `48px`                 |
-| Título Redes Sociais | `0px` ------- `563px` ------- `0px` ------- `--`                  |
-| Botão Rede Social    | `0px` ------- `16px` ------- `--` ------- `0px`                   |
-| Logo Assinatura      | `40px` ------- `0px` ------- `--` ------- `0px`                   |
+|Name|Padding - Property|
+|--|--|
+|**4 Colunas**|**left**  ---------- **right**  -------- **top**  ------- **bottom**|
+|Componente Separador|`0px`  ------- `0px`  ------- `0px`  ------- `variável`|
+|Logo Principal|`16px`  ------- `variável (grid)`  ------- `48px`  ------- `48px`|
+|**8 Colunas**|**left**  ---------- **right**  -------- **top**  ------- **bottom**|
+|Componente Separador|`0px`  ------- `0px`  ------- `0px`  ------- `variável`|
+|Logo Principal|`40px`  ------- `variável (grid)`  ------- `48px`  ------- `48px`|
+|Título Redes Sociais|`0px`  ------- `--`  ------- `0px`  ------- `--`|
+|Botão Rede Social|`0px`  ------- `16px`  ------- `--`  ------- `0px`|
+|Logo Assinatura|`40px`  ------- `0px`  ------- `--`  ------- `0px`|
+|**12 Colunas**|**left**  ---------- **right**  -------- **top**  ------- **bottom**|
+|Componente Separador|`0px`  ------- `0px`  ------- `0px`  ------- `variável`|
+|Logo Principal|`40px`  ------- `--`  ------- `48px`  ------- `48px`|
+|Título Redes Sociais|`0px`  ------- `563px`  ------- `0px`  ------- `--`|
+|Botão Rede Social|`0px`  ------- `16px`  ------- `--`  ------- `0px`|
+|Logo Assinatura|`40px`  ------- `0px`  ------- `--`  ------- `0px`|
 
 ###### Área Informação Legal
 
-| Name                     | Padding - Property                                                                  |
-| ------------------------ | ----------------------------------------------------------------------------------- |
-| **4 Colunas**            | **left** ---------- **right** -------- **top** ------- **bottom**                   |
-| Componente Separador     | `0px` ------- `0px` ------- `0px` ------- `variável`                                |
-| Texto Informações Legais | `centralizado` ------- `centralizado` ------- `centralizado` ------- `centralizado` |
-| **8 Colunas**            | **left** ---------- **right** -------- **top** ------- **bottom**                   |
-| Componente Separador     | `0px` ------- `0px` ------- `0px` ------- `variável`                                |
-| Texto Informações Legais | `centralizado` ------- `centralizado` ------- `centralizado` ------- `centralizado` |
-| **12 Colunas**           | **left** ---------- **right** -------- **top** ------- **bottom**                   |
-| Componente Separador     | `0px` ------- `0px` ------- `0px` ------- `variável`                                |
-| Texto Informações Legais | `centralizado` ------- `centralizado` ------- `centralizado` ------- `centralizado` |
+|Name|Padding - Property|
+|--|--|
+|**4 Colunas**|**left**  ---------- **right**  -------- **top**  ------- **bottom**|
+|Componente Separador|`0px`  ------- `0px`  ------- `0px`  ------- `variável`|
+|Texto Informações Legais|`centralizado`  ------- `centralizado`  ------- `centralizado`  ------- `centralizado`|
+|**8 Colunas**|**left**  ---------- **right**  -------- **top**  ------- **bottom**|
+|Componente Separador|`0px`  ------- `0px`  ------- `0px`  ------- `variável`|
+|Texto Informações Legais|`centralizado`  ------- `centralizado`  ------- `centralizado`  ------- `centralizado`|
+|**12 Colunas**|**left**  ---------- **right**  -------- **top**  ------- **bottom**|
+|Componente Separador|`0px`  ------- `0px`  ------- `0px`  ------- `variável`|
+|Texto Informações Legais|`centralizado`  ------- `centralizado`  ------- `centralizado`  ------- `centralizado`|
 
 ---
 
@@ -252,36 +245,36 @@ Esta organização e composição final deverá sempre respeitar o alinhamento n
 
 ###### Footer Temas 1 e 2 (Sem Informação Legal)
 
-| Name                                      | Property                              |
-| ----------------------------------------- | ------------------------------------- |
-| **4 Colunas**                             | **width** ------ **height**           |
-| Componente Separador                      | `480px` ------ `1px`                  |
-| Logo Principal e Assinatura - Tam. Mínimo | `102px` ------ `variável`             |
-| Logo Principal e Assinatura - Tam. Máximo | `180px` ------ `variável`             |
-| Container _Footer_                        | `480px` ------ `133px`                |
-| **8 Colunas**                             | **width** ------ **height**           |
-| Componente Separador                      | `768px` ------ `1px`                  |
-| Logo Principal e Assinatura - Tam. Mínimo | `102px` ------ `variável`             |
-| Logo Principal e Assinatura - Tam. Máximo | `180px` ------ `variável`             |
-| Container Redes Sociais                   | `688px` ------ `96px`                 |
-| Container _Footer_                        | `768px` ------ `variável (conteúdo)`  |
-| **12 Colunas**                            | **width** ------ **height**           |
-| Componente Separador                      | `1280px` ------ `1px`                 |
-| Logo Principal e Assinatura - Tam. Mínimo | `102px` ------ `variável`             |
-| Logo Principal e Assinatura - Tam. Máximo | `180px` ------ `variável`             |
-| Container Redes Sociais                   | `1200px` ------ `96px`                |
-| Container _Footer_                        | `1280px` ------ `variável (conteúdo)` |
+|Name|Property|
+|--|--|
+|**4 Colunas**|**width**   ------  **height**|
+|Componente Separador|`480px`   ------  `1px`|
+|Logo Principal e Assinatura - Tam. Mínimo|`102px`   ------  `variável`|
+|Logo Principal e Assinatura - Tam. Máximo|`180px`   ------  `variável`|
+|Container _Footer_|`480px`   ------  `133px`|
+|**8 Colunas**|**width**   ------  **height**|
+|Componente Separador|`768px`   ------  `1px`|
+|Logo Principal e Assinatura - Tam. Mínimo|`102px`   ------  `variável`|
+|Logo Principal e Assinatura - Tam. Máximo|`180px`   ------  `variável`|
+|Container Redes Sociais|`688px`   ------  `96px`|
+|Container _Footer_|`768px`   ------  `variável (conteúdo)`|
+|**12 Colunas**|**width**   ------  **height**|
+|Componente Separador|`1280px`   ------  `1px`|
+|Logo Principal e Assinatura - Tam. Mínimo|`102px`   ------  `variável`|
+|Logo Principal e Assinatura - Tam. Máximo|`180px`   ------  `variável`|
+|Container Redes Sociais|`1200px`   ------  `96px`|
+|Container _Footer_|`1280px`   ------  `variável (conteúdo)`|
 
 ###### Área Informação Legal
 
-| Name                         | Property                    |
-| ---------------------------- | --------------------------- |
-| **4 Colunas**                | **width** ------ **height** |
-| Componente Separador         | `480px` ------ `1px`        |
-| Container Informações Legais | `480px` ------ `48px`       |
-| **8 Colunas**                | **width** ------ **height** |
-| Componente Separador         | `768px` ------ `1px`        |
-| Container Informações Legais | `788px` ------ `48px`       |
-| **12 Colunas**               | **width** ------ **height** |
-| Componente Separador         | `1280px` ------ `1px`       |
-| Container Informações Legais | `1280px` ------ `48px`      |
+|Name|Property|
+|--|--|
+|**4 Colunas**|**width**   ------  **height**|
+|Componente Separador|`480px`   ------  `1px`|
+|Container Informações Legais|`480px`    ------   `48px`|
+|**8 Colunas**|**width**   ------  **height**|
+|Componente Separador|`768px`    ------   `1px`|
+|Container Informações Legais|`788px`    ------   `48px`|
+|**12 Colunas**|**width**   ------  **height**|
+|Componente Separador|`1280px`    ------   `1px`|
+|Container Informações Legais|`1280px`    ------   `48px`|
