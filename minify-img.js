@@ -4,7 +4,7 @@ const imageminPngquant = require("imagemin-pngquant");
 const imageminJpegtran = require('imagemin-jpegtran');
  
 (async () => {
-    const files = await imagemin(['**/*.{jpg,png}'], {
+    const files = await imagemin(['src/assets/design-system/**/*.{jpg,png}'], {
       plugins: [
         imageminJpegtran(),
         imageminPngquant({

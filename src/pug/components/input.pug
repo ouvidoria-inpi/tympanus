@@ -2,11 +2,11 @@ mixin input(label="Label")
   - let className = attributes.class
   - let componentClass = prefix + "input"
   - className = className ? componentClass + " " + className : componentClass
-  - className = attributes.filter ? className + " " + "filter" : className
   - className = attributes.datepicker ? className + " " + "br-datepicker" : className
   div(class=className
       valid=attributes.valid
-      invalid=attributes.invalid)
+      invalid=attributes.invalid
+      filter=attributes.filter)
     label(for=attributes.id)=label
     input(
       id=attributes.id
