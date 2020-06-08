@@ -1,0 +1,30 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "footer";
+
+
+append content
+  p Exemplo de Footer Versão Negativa 
+  +footer
+    div.container-logo
+      .logo
+    +list()(collapsible horizontal unique).container-list
+      +footer-list-filler()(total=6 col=2)
+    +footer-bottom-filler()
+  <br><br>
+  p Exemplo de Footer Versão Negativa ( col automática, logo centralizado )
+  +footer.negative
+    div.container-logo.text-center
+      .logo
+    +list()(collapsible horizontal unique).container-list
+      +footer-list-filler()(total=4 col)
+    +footer-bottom-filler()
+  <br><br>
+  p Exemplo de Footer Versão Positiva
+  +footer.positive
+    div.container-logo
+      .logo
+    +list()(collapsible horizontal unique).container-list
+      +footer-list-filler(total=6 col=2)
+    +footer-bottom-filler()(positive)
