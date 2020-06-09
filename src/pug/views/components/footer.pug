@@ -3,25 +3,24 @@ extends ../../layouts/component
 append vars
   - var title = "footer";
 
-
 append content
-  p Exemplo de Footer Versão Negativa 
+  p.h2 Footer escuro
   +footer
     div.container-logo
       .logo
     +list()(collapsible horizontal unique).container-list
       +footer-list-filler()(total=6 col=2)
     +footer-bottom-filler()
-  <br><br>
-  p Exemplo de Footer Versão Negativa ( col automática, logo centralizado )
+
+  p.h2 Variação de footer escuro
   +footer.negative
     div.container-logo.text-center
       .logo
     +list()(collapsible horizontal unique).container-list
       +footer-list-filler()(total=4 col)
     +footer-bottom-filler()
-  <br><br>
-  p Exemplo de Footer Versão Positiva
+
+  p.h2 Footer claro
   +footer.positive
     div.container-logo
       .logo
