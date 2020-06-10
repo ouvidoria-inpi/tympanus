@@ -24,7 +24,6 @@ rm -rf cdn
 mkdir cdn
 cd cdn
 git clone git@git.serpro:dsgov/dsgov-cdn.git
-<<<<<<< cdn.sh
 rm -rf dsgov-cdn/htdocs/design-system/$LATEST
 rm -rf dsgov-cdn/htdocs/design-system/latest
 mkdir dsgov-cdn/htdocs/design-system/latest
@@ -34,17 +33,6 @@ cp -r ../dist/js dsgov-cdn/htdocs/design-system/latest/
 cp -r ../dist/css dsgov-cdn/htdocs/design-system/latest/
 cp -r ../dist/js dsgov-cdn/htdocs/design-system/$LATEST 
 cp -r ../dist/css dsgov-cdn/htdocs/design-system/$LATEST 
-=======
-rm -rf cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
-rm -rf cdn-dsgov-estaleiro/htdocs/design-system/latest
-mkdir cdn-dsgov-estaleiro/htdocs/design-system/latest
-mkdir cdn-dsgov-estaleiro/htdocs/design-system/$LATEST
-echo $LATEST > cdn-dsgov-estaleiro/designsystemversion
-cp -r ../dist/js cdn-dsgov-estaleiro/htdocs/design-system/latest/
-cp -r ../dist/css cdn-dsgov-estaleiro/htdocs/design-system/latest/
-cp -r ../dist/js cdn-dsgov-estaleiro/htdocs/design-system/$LATEST 
-cp -r ../dist/css cdn-dsgov-estaleiro/htdocs/design-system/$LATEST 
->>>>>>> cdn.sh
 echo "Enviando nova versao para o CDN"
 git add .
 git commit -m "inserindo nova versao"

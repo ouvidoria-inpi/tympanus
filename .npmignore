@@ -37,3 +37,8 @@ webpack.dev.js
 .vscode
 templates
 src/js
+/docs
+.htmlvalidate.json    
+src/pug
+.gitlab-ci.yml
+.editorconfig
