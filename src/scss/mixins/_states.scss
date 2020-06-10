@@ -6,7 +6,8 @@
 
 @mixin focus {
   &:focus {
-    background: v(status-highlight-background) linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
+    background: v(status-focused-background)
+      linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
   }
 }
 
