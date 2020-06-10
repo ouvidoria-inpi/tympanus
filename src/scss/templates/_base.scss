@@ -34,8 +34,8 @@
   .#{$prefix}footer {
     position: relative;
     z-index: 0;
-    .container-logo {
-      padding: $spacer*2 $spacer*5;
+    .logo {
+      padding: $spacer*2 0;
     }
     .#{$prefix}list {
       .#{$prefix}list {
@@ -75,6 +75,12 @@
     }
   }
 
+  .#{$prefix}notification {
+    position: fixed;
+    right: 0 !important;
+    display: none;
+  }
+
   @include media-breakpoint-down(sm) {
     .context-menu {
       position: fixed;
@@ -112,6 +118,12 @@
         overflow: auto;
       }
     }
+  
+    .col-main {
+      height: auto !important;
+      min-height: calc( 100vh - 260px );
+    }
+
     .#{$prefix}footer {
       padding-bottom: 48px;
     }

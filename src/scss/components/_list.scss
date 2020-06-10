@@ -22,11 +22,10 @@
   }
   // Lista dentro de lista
   & & {
-    background-image: linear-gradient(transparent, rgba(v(rgb-secondary-06), 0.24)),
-      linear-gradient(rgba(v(rgb-secondary-06), 0.24), transparent);
-    background-position: bottom, top;
-    background-repeat: no-repeat;
-    background-size: 100% 9px;
+    // background-image: linear-gradient(transparent, rgba(v(rgb-secondary-06), 0.24)), linear-gradient(rgba(v(rgb-secondary-06), 0.24), transparent);
+    // background-position: bottom, top;
+    // background-repeat: no-repeat;
+    // background-size: 100% 9px;
     max-height: 0;
     overflow: hidden;
     transition: all 400ms ease-in-out;
@@ -44,25 +43,21 @@
       .content {
         height: auto;
         overflow: hidden;
-        padding: 0 $spacer*2;
+        padding: 0 $spacer * 2;
         white-space: initial;
         text-overflow: unset;
         display: -webkit-box;
         -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical; 
+        -webkit-box-orient: vertical;
       }
     }
-    [class='col'] {
+    .col,
+    [class*='col-'] {
       flex-grow: 0;
-      flex-basis: 16.6%;
-      flex-shrink: auto;
-      padding: 0 $spacer $spacer;
+      padding: 0;
       @include media-breakpoint-down(sm) {
         flex-basis: 100% !important;
-      }
-      @include media-breakpoint-up(lg) {
-        //min-width: 16.6%;
-        flex-basis: 16.6%;
+        max-width: 100%;
       }
     }
     @include media-breakpoint-up(md) {
@@ -76,34 +71,20 @@
         background-image: none;
       }
     }
-    [class*='col-'] {
-      flex-grow: 0;
-      min-width: auto;
-      padding: 0 $spacer $spacer;
-      @include media-breakpoint-down(sm) {
-        max-width: 100%;
-        min-width: 100%;
-        width: 100%;
-      }
-      @include media-breakpoint-up(lg) {
-        min-width: auto;
-      }
-    }
   }
 
-  
   &[one-line] .item,
   &[one-line] & .item {
     height: 2em;
     .content {
       height: auto;
       overflow: hidden;
-      padding: 0 $spacer*2;
+      padding: 0 $spacer * 2;
       white-space: initial;
       text-overflow: unset;
       display: -webkit-box;
       -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical; 
+      -webkit-box-orient: vertical;
     }
   }
 
@@ -113,26 +94,27 @@
     .content {
       height: auto;
       overflow: hidden;
-      padding: 0 $spacer*2;
+      padding: 0 $spacer * 2;
       white-space: initial;
       text-overflow: unset;
       display: -webkit-box;
       -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical; 
+      -webkit-box-orient: vertical;
     }
   }
-&[three-lines] .item,
-&[three-lines] & .item {
-  height: 6em;
-  .content {
-    height: auto;
-    overflow: hidden;
-    padding: 0 $spacer*2;
-    white-space: initial;
-    text-overflow: unset;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical; 
+
+  &[three-lines] .item,
+  &[three-lines] & .item {
+    height: 6em;
+    .content {
+      height: auto;
+      overflow: hidden;
+      padding: 0 $spacer * 2;
+      white-space: initial;
+      text-overflow: unset;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
   }
-}
 }

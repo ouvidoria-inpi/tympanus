@@ -1,81 +1,40 @@
 .#{$prefix}footer {
-  height: auto;
-  width: 100%;
+  --text-color: var(--color-secondary-01);
+  --status-focused-background: var(--color-primary-darken-01);
+  --status-hover-background: var(--color-primary-darken-01);
+  background: v(color-primary-darken-02);
+  color: v(color-secondary-01);
   display: block;
-  overflow: auto;
-
-
-
-  .#{$prefix}list {
-    .item {
-      font-size: v(font-size-scale-base);
-    }
-
-    & > div > .item .content {
-      text-transform: uppercase;
-      font-size: v(font-size-scale-down-01);
-      font-weight: v(font-weight-bold);
-    }
-
-    a.item:not([disabled])[active],
-    a.item:not([disabled]):hover,
-    a.item:not([disabled]):focus {
-      background: transparent;
-      outline: none;
+  .logo {
+    padding: $spacer * 6 0 $spacer * 4;
+    img {
+      max-height: 48px;
+      max-width: 180px;
     }
   }
-
-  .#{$prefix}button.tertiary.is-circle:hover,
-  .#{$prefix}button:not(:disabled):focus {
-    background: transparent;
+  .assigns {
+    img {
+      max-height: 46px;
+      max-width: 180px;
+    }
+  }
+  .social-network {
+    border: 0;
+  }
+  &[inverted],
+  &.inverted {
+    --text-color: var(--color-primary-darken-02);
+    --status-focused-background: var(--color-secondary-01);
+    --status-hover-background: var(--color-primary-pastel-02);
+    background: v(color-secondary-01);
+    border-top: 1px solid v(color-secondary-04);
+    color: v(color-primary-darken-02);
   }
 
-  // @media screen and (min-width: 769px) {
-    @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(md) {
     .#{$prefix}list .item .support {
       display: none;
       pointer-events: none;
-    }
-  }
-
-  /*** Mixin de Temas ***/
-  @include themes(
-    #{$prefix}footer,
-    v(color-primary-darken-02),
-    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-negative.png',
-    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-negative.png',
-    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-negative.png'
-  );
-
-  @include themes(
-    positive,
-    v(color-secondary-01),
-    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-positive.png',
-    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-positive.png',
-    'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-positive.png'
-  );
-
-  // @media (max-width: 768px) {
-    @include media-breakpoint-down(sm) {
-      .container {
-        &-logo {
-          justify-content: center;
-        }
-        &-list {
-          justify-content: center;
-        }
-      }
-      [class*='col'] {
-        padding: 0 0 $spacer*4;
-      }
-    }
-  
-  // @media (max-width: 580px) {
-  @include media-breakpoint-down(xs) {
-    .container {
-      &-social {
-        display: none;
-      }
     }
   }
 }

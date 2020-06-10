@@ -72,9 +72,8 @@ mixin header-default-content
 mixin header-base-content
   .flex-container
     .logo
-      //img(src="https://picsum.photos/200/300" alt="logo")
-      img(src="https://www.gov.br/++theme++padrao_govbr/img/govbr-colorido-b.png" alt="logo")
-      .sign Ministério da Ciência e Tecnologia, Inovações e Comunicações
+      img(src=`https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-positive.png` alt="logo")
+      .sign Assinatura Padrão do Cabeçalho
     .actions
       .links
         +button()(circle mini)
@@ -119,14 +118,14 @@ mixin header-base-content
           .content
             +avatar
               .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
-      +notification()()
-        +notification-filler
+      //- +notification()()
+      //-   +notification-filler
         //- +button()(mini circle)
         //-   i.fas.fa-angle-down
     .menu
       +button()(circle mini)
           i.fas.fa-bars
-      .title Sistema Nacional de Laboratórios em Nanotecnologias (SisNANO)
+      .title Título Padrão do Cabeçalho
       .subtitle Subtítulo do Cabeçalho
     .search
       +input("")( type="text" class="has-icon" placeholder="O que você procura?")

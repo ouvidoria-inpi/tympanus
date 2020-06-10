@@ -30,12 +30,10 @@ block template
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequuntur ratione suscipit voluptatem reprehenderit aut recusandae autem voluptas quo nulla tenetur, quos a dolores enim ad, cum, eius et odio!
   +footer
     .container-lg
-      div.container-logo.text-center
-        .logo
-      +list()(collapsible horizontal unique).container-list
+      +footer-logo.text-center
+      +list()(collapsible horizontal unique)
         +footer-list-filler()(total=6 col=2)
-      +footer-bottom-filler()
+      +footer-bottom-filler
     .br-divider
-    div.container-rights
-      span Texto destinado a exibição de informações relacionadas à
-        b licensa de uso.
+    .container-lg
+      +footer-info

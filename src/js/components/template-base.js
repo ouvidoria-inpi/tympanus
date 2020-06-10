@@ -8,6 +8,7 @@ class BRTemplateBase {
     this.scrim_menu = component.querySelector('.scrim-menu')
     this.cm_header = component.querySelector('.context-menu .header')
     this.context_menu = component.querySelector('.context-menu')
+    this.notification = component.querySelector('.br-notification')
     this._setBehavior()
   }
 

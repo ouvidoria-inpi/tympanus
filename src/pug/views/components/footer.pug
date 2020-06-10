@@ -4,38 +4,31 @@ append vars
   - var title = "footer";
 
 append content
-  p Exemplo de Footer Versão Negativa
+  p.h2 Footer padrão
   +footer
-    div.container-logo
-      .logo
-    +list()(collapsible horizontal unique).container-list
-      +footer-list-filler()(total=6 col=2)
-    +footer-bottom-filler()
+    .container-lg
+      +footer-logo
+      +list()(collapsible horizontal unique)
+        +footer-list-filler()(total=6 col=2)
+      +footer-bottom-filler
     .br-divider
-    div.container-rights
-      span Texto destinado a exibição de informações relacionadas àl
-        b licensa de uso.
-  <br><br>
-  p Exemplo de Footer Versão Negativa ( col automática, logo centralizado )
-  +footer.negative
-    div.container-logo.text-center
-      .logo
-    +list()(collapsible horizontal unique).container-list
-      +footer-list-filler()(total=4 col)
-    +footer-bottom-filler()
+    .container-lg
+      +footer-info
+
+  p.h2 Versão simples
+  +footer
+    +footer-logo.text-center
     .br-divider
-    div.container-rights
-      span Texto destinado a exibição de informações relacionadas àl
-        b licensa de uso.
-  <br><br>
-  p Exemplo de Footer Versão Positiva
-  +footer.positive
-    div.container-logo
-      .logo
-    +list()(collapsible horizontal unique).container-list
-      +footer-list-filler(total=6 col=2)
-    +footer-bottom-filler()(positive)
+    .container-lg
+      +footer-info
+
+  p.h2 Tema 2
+  +footer()(inverted)
+    .container-lg
+      +footer-logo()(inverted)
+      +list()(collapsible horizontal unique)
+        +footer-list-filler(total=6 col=2)
+      +footer-bottom-filler()(inverted)
     .br-divider
-    div.container-rights
-      span Texto destinado a exibição de informações relacionadas àl
-        b licensa de uso.
+    .container-lg
+      +footer-info

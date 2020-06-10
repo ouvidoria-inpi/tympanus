@@ -1,8 +1,11 @@
 .#{$prefix}header {
   min-width: 320px;
   $logo-mobile-width: 80px;
+  $logo-mobile-height: 40px;
   $logo-desktop-width: 120px;
+  $logo-desktop-height: 48px;
   $logo-compact: 60px;
+  $logo-compact-height: 32px;
   box-shadow: 0 3px 6px rgba(var(--rgb-secondary-09), 0.16);
   background: v(color-secondary-01); 
 
@@ -47,7 +50,7 @@
     display: flex;
     img {
       max-width: $logo-desktop-width;
-      height: auto;
+      max-height: $logo-desktop-height;
     }
     
     // Assinatura (opcional)
@@ -334,7 +337,7 @@
       margin-top: -$spacer*2.5;
       img {
         max-width: $logo-compact;
-        height: auto;
+        max-height: $logo-compact-height;
       }
       .sign {
         display: none;
@@ -684,6 +687,7 @@
       }
       img {
         max-width: $logo-mobile-width;
+        max-height: $logo-mobile-height;
       }
     }
     .search {
@@ -746,6 +750,7 @@
         width: $logo-mobile-width;
         img {
           max-width: $logo-mobile-width;
+          max-height: $logo-mobile-height;
         }
       }
       .menu {
