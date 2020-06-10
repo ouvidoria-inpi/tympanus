@@ -1,45 +1,4 @@
-# Documentação de Desenvolvedor
-
-- [Documentação de Desenvolvedor](#documentação-de-desenvolvedor)
-  - [Introdução](#introdução)
-    - [Recomendações para criação da documentação](#recomendações-para-criação-da-documentação)
-  - [Como usar](#como-usar)
-    - [HTML](#html)
-      - [Propriedades obrigatórias](#propriedades-obrigatórias)
-      - [Propriedades Adicionais](#propriedades-adicionais)
-    - [Javascript](#javascript)
-      - [Configurações obrigatórias](#configurações-obrigatórias)
-      - [Configurações Adicionais](#configurações-adicionais)
-    - [Estados](#estados)
-  - [Próximos passos](#próximos-passos)
-  - [Dependências](#dependências)
-  - [Links relacionados](#links-relacionados)
-  - [Atalhos de teclado](#atalhos-de-teclado)
-
-## Introdução
-
-Essa seção não faz parte da documentação, ela é apenas para explicar melhor como esse template funciona.
-
-A primeira coisa que a documentação de desenvolvedor tem que ter é a versão da documentação de design utilizada como base para a construção do componente. Isso porque pode acontecer da documentação de design ser atualizada e o componente implementado e sua documentação continuarem sem alterações.
-Ex: doc. design: #X.0.0
-
-Esse é um template para documentação de DESENVOLVEDOR. Cada componente é único e pode exigir pequenas variações desse documento. Cabe a quem escrever a documentação avaliar quais seções são necessárias para os componentes.
-
-Sugestões são bem-vindas e devem ser discutidas com o time antes de serem adotadas.
-
-O título é recuperado do arquivo config.json e a descrição é única para as documentações de DESIGNER e DESENVOLVEDOR. Caso seja necessário atualizar, atualize o arquivo correspondende.
-Ex: no componente button o arquivo de descrição é button.md
-
-### Recomendações para criação da documentação
-
-1.  Ao colocar o código-fonte coloque a linguagem correta. Ex ``` javascript
-2.  Tente pedir para alguém seguir a documentação e verificar se conseguem usar o componente/template
-3.  Seja direto nos textos de explicação
-
-Abaixo estão as seções que uma documentação de desenvolvimento pode conter e entre comentários está uma explicação resumida sobre a seção.
-
-<!-- Versão da doc. de DESIGN usada como base para o desenvolvimento -->
-<!-- doc. design: #1.0.0 -->
+[version]: # '1.0.0'
 
 ## Como usar
 
@@ -48,87 +7,128 @@ Abaixo estão as seções que uma documentação de desenvolvimento pode conter 
 <!-- Deve incluir o HTML básico para uso do componente em seu estado 'default' escolhido pelo desenvolvedor/design. -->
 
 ```html
-<p>Exemplo de código HTML</p>
+<body class="template-base">
+  <div class="scrim-menu">
+    <div class="br-menu">
+      <!-- Menu Principal-->
+    <div>
+  <div class="br-header" sticky>
+    <div class="container-lg">
+      <!-- Conteúdo do Header-->
+    </div>
+  </div>
+  <div class="container-lg">
+    <div class="row">
+      <div class="context-menu col-sm-6 col-md-4">
+        <div class="br-menu">
+          <a class="header">
+            <div class="support"><i class="fas fa-angle-up"></i></div>
+            <div class="content"> Menu Contextual </div>
+          </a>
+          <nav class="folders">
+            <div class="folder">
+              <ul>
+                <li>
+                  <!-- Lista de links -->
+                </li>
+              <ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="col container-main">
+        <ul class="br-breadcrumb">
+          <!-- Lista de links breadcrumb -->
+        </ul>
+        <!-- Conteúdo da Página -->
+      </div>
+    </div>
+  </div>
+  <div class="br-footer">
+    <div class="container-lg">
+      <!-- Conteúdo do Footer-->
+    </div>
+  </div>
+</body>
 ```
 
-#### Propriedades obrigatórias
+#### Elementos obrigatórios
 
 <!-- Deve mostrar os atributos HTML que são obrigatórios para o uso do componente. -->
 
-| Atributo | Tipo    | Valor padrão | Descrição                                            |
-| -------- | ------- | ------------ | ---------------------------------------------------- |
-| title    | string  | undefined    | Et deserunt adipisicing culpa cupidatat consequat    |
-| timeout  | number  | 10           | Amet enim labore Lorem qui labore sint ipsum ullamco |
-| validade | boolean | false        | Exercitation minim eiusmod enim irure dolore ullamco |
+| Elemento        | Descrição                       |
+| --------------- | ------------------------------- |
+| template-base   | classe do body                  |
+| scrim-menu      | Container o menu principal      |
+| br-menu         | Menu principal                  |
+| br-header       | Cabeçalho da página             |
+| container-lg    | Container do cabeçalho          |
+| container-main  | Container do conteúdo principal |
+| br-breadcrumb   | Componente Breadcrumb           |
+| br-footer       | Componente Footer               |
+| container-lg    | Container do conteúdo Footer    |
 
-#### Propriedades Adicionais
+#### Elementos opcionais
 
-<!-- Deve mostrar os outros atributos possíveis que definem os possíveis comportamentos. -->
-
-| Atributo        | Tipo     | Valor padrão | Descrição                          |
-| --------------- | -------- | ------------ | ---------------------------------- |
-| max-date        | data     | now()        | Enim excepteur laborum cillum quis |
-| min-date        | data     | now()        | Consectetur ea eu sunt aliquip     |
-| after-selection | function | undefined    | Anim cillum nulla excepteur sit    |
+| Elemento                    | Descrição                             |
+| --------------------------- | ------------------------------------- |
+| context-menu                | Container scrim do menu contextual    |
+| br-menu                     | Menu Secundário                       |
+| header, support, i, content | Cabeçalho do menu contextual          |
 
 ### Javascript
 
 ```javascript
-const exemplo = Exemplo de código javascript;
+const templateBaseList = []
+for (const brTemplateBase of window.document.querySelectorAll('.template-base')) {
+  templateBaseList.push(new BRTemplateBase('template-base', brTemplateBase))
+}
 ```
 
 #### Configurações obrigatórias
 
-| Propriedad | Tipo     | Valor padrão | Descrição                 |
-| ---------- | -------- | ------------ | ------------------------- |
-| prop1      | function | undefined    | Velit adipisicing ullamco |
-| prop2      | boolean  | true         | Magna cupidatat veniam    |
+-   Buscar o elemento com a classe "template-base" e inicializar o construtor do componente.
+-   Definir adequadamente os estilos dos elementos da página que possibilitam a interação dos componentes.
 
-#### Configurações Adicionais
-
-| Propriedade | Tipo | Valor padrão | Descrição                 |
-| ----------- | ---- | ------------ | ------------------------- |
-| prop1       |      |              | Minim commodo adipisicing |
-| prop2       |      |              | Ut anim Lorem incididunt  |
-
-### Estados
+<!-- ### Estados -->
 
 <!-- Propriedades que são relacionadas ao estado do componente devem ficar nessa seção e não nas de cima -->
 
-| Estado     | propriedade | Valores    |
-| ---------- | ----------- | ---------- |
-| Desativado | disabled    | true/false |
-| Focado     | foucused    | true       |
+#### Informações Adicionais
 
-## Próximos passos
+-   O menu secundário ou contextual é opicional. Mas, caso seja utilizado, é necessário que sejam incluídos os itens do cabeçalho que geram a barra de atiuvação no layout mobile.
+
+<!-- ## Próximos passos -->
 
 <!-- Mostra as features que já foram planejadas para o componente e o status dela para os designers e desenvolvedores -->
 
--   Não planejado: A necessidade foi identificada, mas ainda não tem data para ser satisfeita.
+<!-- -   Não planejado: A necessidade foi identificada, mas ainda não tem data para ser satisfeita.
 -   Fazendo: A equipe está trabalhando na necessidade.
 -   Feito: Necessidade já é satisfeita.
 
 | Nome                                         | Documentação de Design | Desenvolvimento |
 | -------------------------------------------- | ---------------------- | --------------- |
-| Validação de datas                           | Feito                  | Feito           |
-| Customização de mensagem de erro             | Feito                  | Não planejado   |
-| Modo input único                             | Fazendo                | Feito           |
-| Desabilitar apenas alguns dias no calendário | Não planejado          | Não planejado   |
+| Responsividade                               | Feito                  | Feito           |
+| Comportamento da Busca                       | Feito                  | Feito           |
+| Comportamento Logado e Não Logado            | Feito                  | Feito           |
+| Comportamento Sticky Header                  | Feito                  | Feito           | -->
 
 ## Dependências
 
 <!-- Caso o componente dependa de algum outro ou de algo externo, listamos aqui colocando links para a documentação da dependência -->
 
-| Internas                        | Externas |
-| ------------------------------- | -------- |
-| [Input](/ds/components/input)   |          |
-| [Button](/ds/components/button) |          |
-| [Select](/ds/components/select) |          |
+-   [Header](/ds/components/header)
+-   [Menu](/ds/components/menu)
+-   [Footer](/ds/components/footer)
+-   [Breadcrumb](/ds/components/breadcrumb)
+-   [List](/ds/components/list)
+-   [Button](/ds/components/button)
+-   [Divider](/ds/components/divider)
 
-## Links relacionados
+<!-- ## Links relacionados -->
 
 <!-- Links para mais informações ou referências que sejam inportantes para o desenvolvedor usar o componente -->
 
-## Atalhos de teclado
+<!-- ## Atalhos de teclado -->
 
 <!-- Caso o uso do componente por atalhos tenha sido implementado -->

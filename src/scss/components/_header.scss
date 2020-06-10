@@ -75,6 +75,7 @@
   .actions {
     max-width: min-content;
     height: 40px;
+    margin-top: 6px;
     order: 2;
     display: flex;
     justify-content: flex-end;
@@ -201,6 +202,7 @@
       order: 4;
       align-items: center;
       padding: 0 $spacer 0 $spacer*3;
+      margin-top: $spacer;
     }
     .popmenu {
       display: none;
@@ -355,6 +357,7 @@
     }
     .actions {
       order: 3;
+      margin-top: 0;
       .search-btn {
         display: flex;
         flex-wrap: nowrap;

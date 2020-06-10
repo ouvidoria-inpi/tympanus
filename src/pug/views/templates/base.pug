@@ -10,7 +10,7 @@ block template
   +header()(sticky)
     .container-lg
       +header-base-content
-  .container-lg.content
+  .container-lg
     .row
       .context-menu.col-sm-6.col-md-4
         +menu
@@ -19,7 +19,7 @@ block template
               i.fas.fa-angle-up
             .content Menu Contextual
           +menu-auxiliar-content
-      .col.col-main
+      .col.container-main
         +breadcrumb
           +crumb("Tela Anterior")
           +crumb("Tela Anterior2")
