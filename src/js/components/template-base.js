@@ -2,9 +2,12 @@ class BRTemplateBase {
   constructor(name, component) {
     this.name = name
     this.component = component
+    this.header = component.querySelector('.br-header')
     this.btn_menu = component.querySelector('.br-header .menu button')
     this.close_menu = component.querySelector('.br-menu .close-menu button')
-    this.col_menu = component.querySelector('.col-menu')
+    this.scrim_menu = component.querySelector('.scrim-menu')
+    this.cm_header = component.querySelector('.context-menu .header')
+    this.context_menu = component.querySelector('.context-menu')
     this._setBehavior()
   }
 
@@ -19,14 +22,49 @@ class BRTemplateBase {
         this._closeMenu()
       })
     }
+    if (this.scrim_menu) {
+      this.scrim_menu.addEventListener('click', () => {
+        this._closeMenuOut()
+      })
+    }
+    if (this.cm_header) {
+      this.cm_header.addEventListener('click', () => {
+        this._toggleContextMenu()
+      })
+    }
+    if (this.context_menu) {
+      this.context_menu.addEventListener('click', () => {
+        this._closeContextMenu()
+      })
+    }
   }
   _openMenu() {
-    //this.col_menu.style.display = 'unset'
-    this.col_menu.classList.remove('hide')
+    //this.scrim_menu.style.display = 'unset'
+    this.scrim_menu.setAttribute('show', '')
   }
   _closeMenu() {
-    //this.col_menu.style.display = 'none'
-    this.col_menu.classList.add('hide')
+    this.scrim_menu.removeAttribute('show')
+  }
+  _closeMenuOut() {
+    if (event.target === this.scrim_menu) {
+      this._closeMenu()
+    }
+  }
+  _closeContextMenu() {
+    if (event.target === this.context_menu) {
+      this._toggleContextMenu()
+    }
+  }
+  _toggleContextMenu() {
+    this.context_menu.toggleAttribute('show')
+    const cMenu = this.cm_header
+    const icon = cMenu.querySelector('.fa-angle-down')
+      ? cMenu.querySelector('.fa-angle-down')
+      : cMenu.querySelector('.fa-angle-up')
+    if (icon) {
+      icon.classList.toggle('fa-angle-down')
+      icon.classList.toggle('fa-angle-up')
+    }
   }
 }
 

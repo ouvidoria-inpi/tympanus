@@ -3,16 +3,16 @@
   $logo-mobile-width: 80px;
   $logo-desktop-width: 120px;
   $logo-compact: 60px;
+  box-shadow: 0 3px 6px rgba(var(--rgb-secondary-09), 0.16);
+  background: v(color-secondary-01); 
 
   .flex-container {
-    background: v(color-secondary-01); 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
-    box-shadow: 0 3px 6px rgba(var(--rgb-secondary-09), 0.16);
-    padding: $spacer*2 $spacer*5;
+    position: relative; 
+    padding: $spacer*2 0;
     z-index: 1;
   }
 
@@ -27,7 +27,7 @@
       width: 100%;
       flex-wrap: wrap;
     }
-    & + .content {
+    & + div {
       padding-top: 96px;
       position: relative;
       z-index: 0;
@@ -330,7 +330,7 @@
     }
     .logo {
       position: absolute;
-      left: $spacer*5.5;
+      left: $spacer;
       margin-top: -$spacer*2.5;
       img {
         max-width: $logo-compact;
@@ -493,9 +493,13 @@
   // Breakpoint Grid 8 colunas (tablet)
   @include media-breakpoint-down(sm) {
     .flex-container {
-      padding: $spacer*2 $spacer*3;
+      padding: $spacer*2 0;
     }
 
+    .logo {
+      padding-left: $spacer;
+    }
+  
     .actions {
       flex-grow: 2;
       .links {
@@ -620,12 +624,15 @@
         }
       }
     }
+
     [hidden] {
       display: none;
     }
+
     &[compact] {
       .logo {
-        left: $spacer*4;
+        left: 0;
+        padding-left: 0;
       }
       .menu {
         .title {
@@ -655,7 +662,7 @@
   // Breakpoint Grid 4 colunas (mobile)
   @include media-breakpoint-down(xs) {
     .flex-container {
-      padding: $spacer*2;
+      padding: $spacer*2 0;
     }
     .menu {
       width: 100%;
@@ -730,6 +737,7 @@
         padding-top: $spacer*2;
       }
       .logo {
+        left: $spacer*2;
         order: 1;
         position: unset;
         margin-top: 0;
