@@ -1,8 +1,1 @@
-[version]: # (1.0.0)
-
-# Footer (Rodapé)
 Geralmente localizado na parte inferior das páginas, o _footer_ (Rodapé) pode ser organizado de formas distintas. Normalmente essa organização é definida através da combinação de elementos que reforçam a identidade visual com o conteúdo a ser informado, respeitando os objetivos de negócio e as necessidades do usuário.
-
-![Exemplo Componente](imagens/footer-type-standard.png)
-
----
