@@ -6,15 +6,15 @@ A Grid é a mesma grid Bootstrap, portanto sua forma de uso é a mesma. Os taman
 
 Conversão de breakpoints DSGov para Bootstrap:
 
-| Token Breakpoint           | Classe Bootstrap |
-| -------------------------- | ---------------- |
-| `--grid-breakpoint-xsmall` | `.xs`            |
-| `--grid-breakpoint-small`  | `.sm`            |
-| `--grid-breakpoint-medium` | `.md`            |
-| `--grid-breakpoint-large`  | `.lg`            |
-| `--grid-breakpoint-xlarge` | `.xl`            |
+| Token Breakpoint       | Classe Bootstrap |
+| ---------------------- | ---------------- |
+| `--grid-breakpoint-xs` | `.xs`            |
+| `--grid-breakpoint-sm` | `.sm`            |
+| `--grid-breakpoint-md` | `.md`            |
+| `--grid-breakpoint-lg` | `.lg`            |
+| `--grid-breakpoint-xl` | `.xl`            |
 
-Leia a documentação oficial de uso da Grid Bootstrap no endereço [https://getbootstrap.com/docs/4.3/layout/grid/](https://getbootstrap.com/docs/4.3/layout/grid/).
+Leia a documentação oficial de uso da Grid Bootstrap no endereço [https://getbootstrap.com/docs/4.5/layout/grid/](https://getbootstrap.com/docs/4.5/layout/grid/).
 
 Exemplo de uso:
 
@@ -27,6 +27,21 @@ Exemplo de uso:
         <div class="col">...</div>
     </div>
 </div>
+```
+
+### Para quem trabalha com Sass
+
+Use os mixins nativos do Bootstrap quando precisar especificar código por breakpoint. Mais detalhes em <https://github.com/twbs/bootstrap/blob/master/scss/mixins/_breakpoints.scss>.
+
+```scss
+.seletor {
+    propriedade: valor;
+}
+@include media-breakpoint-up(md) {
+    .seletor {
+        propriedade: valor;
+    }
+}
 ```
 
 Veja mais informações sobre a Grid DSGov em [Fundamentos Visuais --> Sistema de Grid](ds/fundamentos-visuais/grid).
@@ -57,7 +72,7 @@ O espaçamento pode ser aplicado em _margin_ (`m-*`) ou _padding_ (`p-*`), onde 
 </div>
 ```
 
-Leia a documentação oficial de uso do utilitário **Spacing** no endereço [https://getbootstrap.com/docs/4.3/utilities/spacing/](https://getbootstrap.com/docs/4.3/utilities/spacing/).
+Leia a documentação oficial de uso do utilitário **Spacing** no endereço [https://getbootstrap.com/docs/4.5/utilities/spacing/](https://getbootstrap.com/docs/4.5/utilities/spacing/).
 
 ---
 

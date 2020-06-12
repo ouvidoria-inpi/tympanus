@@ -96,13 +96,13 @@
     &[condensed] {
       .item {
         height: 48px;
-        @media (min-width: $grid-breakpoint-medium) {
+        @include media-breakpoint-up(md) {
           height: 32px;
         }
         &.one-line,
         &[one-line] {
           height: 48px;
-          @media (min-width: $grid-breakpoint-medium) {
+          @include media-breakpoint-up(md) {
             height: 32px;
           }
         }

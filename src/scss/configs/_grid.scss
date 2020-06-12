@@ -1,15 +1,15 @@
 // Breakpoint
-$grid-breakpoint-xsmall: 0px;
-$grid-breakpoint-small: 575px;
-$grid-breakpoint-medium: 992px;
-$grid-breakpoint-large: 1280px;
-$grid-breakpoint-xlarge: 1600px;
+$grid-breakpoint-xs: 0px;
+$grid-breakpoint-sm: 575px;
+$grid-breakpoint-md: 992px;
+$grid-breakpoint-lg: 1280px;
+$grid-breakpoint-xl: 1600px;
 $tokens-breakpoints: (
-  grid-breakpoint-xsmall: $grid-breakpoint-xsmall,
-  grid-breakpoint-small: $grid-breakpoint-small,
-  grid-breakpoint-medium: $grid-breakpoint-medium,
-  grid-breakpoint-large: $grid-breakpoint-large,
-  grid-breakpoint-xlarge: $grid-breakpoint-xlarge,
+  grid-breakpoint-xs: $grid-breakpoint-xs,
+  grid-breakpoint-sm: $grid-breakpoint-sm,
+  grid-breakpoint-md: $grid-breakpoint-md,
+  grid-breakpoint-lg: $grid-breakpoint-lg,
+  grid-breakpoint-xl: $grid-breakpoint-xl,
 );
 
 // Portrait
@@ -62,20 +62,20 @@ $tokens-tv: (
 
 // Mapa de breakpoints
 $breakpoints: (
-  portrait: $grid-breakpoint-xsmall,
-  tablet: $grid-breakpoint-small,
-  desktop: $grid-breakpoint-large,
-  tv: $grid-breakpoint-xlarge,
+  portrait: $grid-breakpoint-xs,
+  tablet: $grid-breakpoint-sm,
+  desktop: $grid-breakpoint-lg,
+  tv: $grid-breakpoint-xl,
 );
 
 // Compatibilidade com Bootstrap
 $grid-gutter-width: $grid-portrait-gutter;
 $grid-breakpoints: (
   xs: 0,
-  sm: $grid-breakpoint-small,
-  md: $grid-breakpoint-medium,
-  lg: $grid-breakpoint-large,
-  xl: $grid-breakpoint-xlarge,
+  sm: $grid-breakpoint-sm,
+  md: $grid-breakpoint-md,
+  lg: $grid-breakpoint-lg,
+  xl: $grid-breakpoint-xl,
 );
 $container-max-widths: (
   sm: $grid-desktop-maxwidth - 2,

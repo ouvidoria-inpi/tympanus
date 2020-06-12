@@ -4,8 +4,6 @@
   display: block;
   overflow: auto;
 
-
-
   .#{$prefix}list {
     .item {
       font-size: v(font-size-scale-base);
@@ -30,8 +28,7 @@
     background: transparent;
   }
 
-  // @media screen and (min-width: 769px) {
-    @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(md) {
     .#{$prefix}list .item .support {
       display: none;
       pointer-events: none;
@@ -55,22 +52,20 @@
     'https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-positive.png'
   );
 
-  // @media (max-width: 768px) {
-    @include media-breakpoint-down(sm) {
-      .container {
-        &-logo {
-          justify-content: center;
-        }
-        &-list {
-          justify-content: center;
-        }
+  @include media-breakpoint-down(sm) {
+    .container {
+      &-logo {
+        justify-content: center;
       }
-      [class*='col'] {
-        padding: 0 0 $spacer*4;
+      &-list {
+        justify-content: center;
       }
     }
-  
-  // @media (max-width: 580px) {
+    [class*='col'] {
+      padding: 0 0 $spacer * 4;
+    }
+  }
+
   @include media-breakpoint-down(xs) {
     .container {
       &-social {
