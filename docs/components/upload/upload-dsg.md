@@ -6,7 +6,7 @@
 
 ## Uso
 
-O _Upload_ é geralmente usado dentro de formulários mas pode eventualmente ser também utilizado como um componente isolado.
+O _Upload_ é geralmente usado dentro de formulários mas pode eventualmente ser também utilizado como um componente isolados..
 
 ### Tom de voz
 

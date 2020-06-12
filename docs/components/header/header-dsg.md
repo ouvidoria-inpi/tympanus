@@ -639,7 +639,7 @@ Com a **Busca ativa**, o campo de pesquisa ocupará toda largura do Cabeçalho.
 
 ###### Cabeçalho com Subtítulo
 
-![Exemplo Anatomia](imagens/header-compact-behavior-tilte-subtitle–2.png)
+![Exemplo Anatomia](imagens/header-compact-behavior-tilte-subtitle-2.png)
 
 **IMPORTANTE:** Neste caso, o ícone de acionamento do **_Menu_** e o bloco com **_Título_** e **_Subtítulo_** **permanecem centralizados na altura do _Cabeçalho_**. A exceção ocorre na versão Grid de 4 Colunas, quando o comportamento permanece padrão.
 
