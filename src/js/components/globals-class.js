@@ -1,5 +1,6 @@
 import BRAccordion from './accordion'
 import BRBreadcrumb from './breadcrumb'
+import BRCard from './card'
 import BRDatepicker from './datepicker'
 import BRFooter from './footer'
 import BRHeader from './header'
@@ -22,6 +23,7 @@ export default class Globals {
   initInstanceAll() {
     this.initInstanceAccordion()
     this.initInstanceBreadcrumb()
+    this.initInstanceCard()
     this.initInstanceDatepicker()
     this.initInstanceFooter()
     this.initInstanceHeader()
@@ -446,6 +448,19 @@ export default class Globals {
     const wizardList = []
     for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
       wizardList.push(new BRWizard('br-wizard', brWizard))
+    }
+  }
+  initInstanceBreadcrumb() {
+    const breadcrumbList = []
+    for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
+      breadcrumbList.push(new BRBreadcrumb('br-breadcrumb', brBreadcrumb))
+    }
+  }
+
+  initInstanceCard() {
+    const listCard = []
+    for (const brCard of window.document.querySelectorAll('.br-card')) {
+      listCard.push(new BRCard('br-card', brCard))
     }
   }
 }
