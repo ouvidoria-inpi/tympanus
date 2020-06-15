@@ -4,40 +4,31 @@ append vars
   - var title = "Checkbox";
 
 append content
-  .description
-    p.title-checkbox Checkbox Horizontal Padrão (Titulo opcional).
-    p.auxiliary-text Texto auxiliar(opcional).
-  .list-options
-    +checkbox("Padrão")(class="pb-5 pr-5 ml-3 d-inline-block" id="h-checkbox-default")
-    +checkbox("Checado")(class="pb-5 pr-5 ml-3 d-inline-block" id="h-checkbox-checked" checked)
-    +checkbox("Inválido")(class="pb-5 pr-5 ml-3 d-inline-block" id="h-checkbox-invalid" class="is-invalid")
-      +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid p-0")
-    +checkbox("Válido")(class="pb-5 pr-5 ml-3 d-inline-block" id="h-checkbox-valid" class="is-valid" checked)
-      +feedback("fa-check-circle", "Campo Correto")(class="is-valid p-0")
-    +checkbox("Desativado")(class="ml-3 pb-5 pr-5 d-inline-block" id="h-checkbox-disabled" disabled)
-  hr
+  p.label Selecione uma opção
+  +checkbox("Opção 1")#checkbox-1
+  +checkbox("Opção 2 selecionada")#checkbox-2(checked)
+  +checkbox("Opção 3")#checkbox-3
+
   .row
-    .col-sm-4.pb-5.pr-5
-      .description
-        p.title-checkbox Checkbox Vertical Padrão (Título opcional).
-        p.auxiliary-text Texto auxiliar(opcional).
-      .list-options
-        +checkbox("Padrão")(id="v-checkbox-default")
-        +checkbox("Checado")(id="v-checkbox-checked" checked)
-        +checkbox("Inválido")(id="v-checkbox-invalid" class="is-invalid")
-          +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid p-0")
-        +checkbox("Válido")(id="v-checkbox-valid" class="is-valid" checked)
-          +feedback("fa-check-circle", "Campo Correto")(class="is-valid p-0")
-        +checkbox("Desativado")(id="v-checkbox-disabled" class="d-block" disabled)
-    .col-sm-4.pb-5.pr-5
-      .description
-        p.title-checkbox Checkbox Pequeno (Título opcional).
-        p.auxiliary-text Texto auxiliar(opcional).
-      .list-options
-        +checkbox("Padrão")(id="v-s-checkbox-default" class="is-small")
-        +checkbox("Checado")(id="v-s-checkbox-checked" class="is-small" checked)
-        +checkbox("Inválido")(id="v-s-checkbox-invalid" class="is-small is-invalid")
-          +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid p-0")
-        +checkbox("Válido")(id="v-s-checkbox-valid" class="is-small is-valid" checked)
-          +feedback("fa-check-circle", "Campo Correto")(class="is-valid p-0")
-        +checkbox("Desativado")(id="v-s-checkbox-disabled" class="is-small" disabled)
+    .col-6.col-sm-4.col-lg-3
+      p.label.mt-3 Selecione várias opções
+      +checkbox("Nome do filtro 5")#filtro-5(small)
+      +checkbox("Nome do filtro 6")#filtro-6(small)
+      +checkbox("Nome do filtro 7")#filtro-7(small)
+    .col-6.col-sm-4.col-lg-3
+      p.label.mt-3 Selecione várias opções
+      +checkbox("Nome do filtro 1")#filtro-1(small)
+      +checkbox("Nome do filtro 2")#filtro-2(small)
+      +checkbox("Nome do filtro 3")#filtro-3(small)
+      +checkbox("Nome do filtro 4")#filtro-4(small)
+
+  p.label.mt-3 Listagem horizontal
+  +checkbox("Opção 1")#h-checkbox-1.d-inline
+  +checkbox("Opção 2")#h-checkbox-2.d-inline
+  +checkbox("Opção 3")#h-checkbox-3.d-inline
+
+  p.label.mt-3 Estados e validação
+  +checkbox("desativado")#check-state-disabled(disabled)
+  +checkbox("Inválido")#check-state-invalid(invalid)
+  +checkbox("Valid")#check-state-valid(checked valid)
+  +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid")
