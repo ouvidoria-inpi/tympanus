@@ -3,61 +3,59 @@
 ### Instalar manualmente
 
 1. Faça o download do pacote NPM do DSGOV na seção [Downloads](/downloads) ou clique [aqui](/assets/design-system/assets/npm-package/dsgov-latest.zip).
+1. Crie uma nova pasta para o seu projeto e coloque o arquivo **dsgov-latest.tgz** dentro dela. Caso já tenha um projeto em andamento coloque o arquivo na pasta raiz do seu projeto.
+1. Entre na pasta que você colocou o arquivo e utilize o seguinte comando para inicializar o node no seu projeto:
 
-2. Crie uma nova pasta para o seu projeto e coloque o arquivo **`dsgov-latest.tgz`** dentro dela. Caso já tenha um projeto em andamento coloque o arquivo na pasta raiz do seu projeto.
+    ```bash
+    npm init
+    ```
 
-3. Entre na pasta que você colocou o arquivo e utilize o seguinte comando para inicializar o node no seu projeto:
+    Preencha os questionamentos seguintes ou aperte a tecla **`enter`** em cada um para pular:
 
-```bash
-npm init
-```
+    ```makefile
+    package name: (dsgov)
+    version: (1.0.0)
+    description:
+    git repository:
+    keywords:
+    author:
+    license: (ISC)
+    About to write to ~$/dsgov/package.json:
+    ```
 
--   Preencha os questionamentos seguintes ou aperte a tecla **`enter`** em cada um para pular:
+    Ao final digite **`yes`** para confirmar e aperte a tecla **`enter`**:
 
-```bash
-package name: (dsgov)
-version: (1.0.0)
-description:
-git repository:
-keywords:
-author:
-license: (ISC)
-About to write to ~$/dsgov/package.json:
-```
+    ```bash
+    {
+      "name": "dsgov-testes",
+      "version": "1.0.0",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "@govbr/dsgov": "file:dsgov-1.2.3-beta.24.tgz"
+      },
+      "devDependencies": {},
+      "description": ""
+    }
 
--   Ao final digite **`yes`** para confirmar e aperte a tecla **`enter`**:
+    Is this OK? (yes)
+    ```
 
-```bash
-{
-  "name": "dsgov-testes",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@govbr/dsgov": "file:dsgov-1.2.3-beta.24.tgz"
-  },
-  "devDependencies": {},
-  "description": ""
-}
+    O arquivo **package.json** será criado na pasta do seu projeto.
 
-Is this OK? (yes)
-```
+1. Utilize a linha de comando abaixo para realizar a instação do pacote:
 
--   O arquivo **`package.json`** será criado na pasta do seu projeto.
+    ```bash
+    npm install dsgov-latest.tgz
+    ```
 
-4. Utilize a linha de comando abaixo para realizar a instação do pacote:
+    Após a execução completa do comando será criado a pasta **node_modules/@govbr/dsgov**. Essa pasta contém os módulos necessários para o funcinamento do DSGOV.
 
-```bash
-npm install dsgov-latest.tgz
-```
-
--   Após a execução completa do comando será criado a pasta **`node_modules/@govbr/dsgov`**. Essa pasta contém os módulos necessários para o funcinamento do DSGOV.
-
--   Na pasta **`node_modules/@govbr/dsgov/dist`** você encontra os arquivos **`dsgov.min.js`** e **`dsgov.min.css`** que podem ser utilizados no seu projeto.
+    Na pasta **node_modules/@govbr/dsgov/dist** você encontra os arquivos **dsgov.min.js** e **dsgov.min.css** que podem ser utilizados no seu projeto.
 
 ### Instalar usando 'npm install'
 
@@ -67,20 +65,20 @@ Caso tenha acesso à rede do [SERPRO](https://www.serpro.gov.br/), siga os passo
 
 1. Execute os comando abaixo no seu terminal:
 
-```node
-  npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/
-  npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
-```
+    ```bash
+      npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/
+      npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
+    ```
 
-2. Instale o pacote do dsgov usando o comanndo:
+1. Instale o pacote do dsgov usando o comanndo:
 
-  ```node
-  npm install @govbr/dsgov
-  ```
+    ```bash
+    npm install @govbr/dsgov
+    ```
 
 ## Template inicial
 
-A seguir temos um exemplo de um template inicial para utilização do DSGOV. Copie o template para um arquivo html e confira se os caminhos dos arquivos **`rawline.css`** e **`dsgov.min.css`** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **`dsgov.min.js`** confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do DSGOV. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **dsgov.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **dsgov.min.js** confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>
@@ -116,13 +114,13 @@ A seguir temos um exemplo de um template inicial para utilização do DSGOV. Cop
 
 ## Servidor CDN
 
-Os arquivos instalados via NPM utilizam o servidor CDN do [Serpro](https://www.serpro.gov.br) para importar as fontes utilizadas pelo **`DSGOV`**.
+Os arquivos instalados via NPM utilizam o servidor CDN do [Serpro](https://www.serpro.gov.br) para importar as fontes utilizadas pelo **DSGOV**.
 
 No momento esse servidor possui capacidade suficiente para suprir apenas o desenvolvimento do projeto, não possuindo garantia de estabilidade suficiente para projetos em produção.
 
 Se for implantar o seu projeto em produção é altamente recomendado que você baixe os arquivos e armazene-os em um servidor de sua confiança que possa garantir a estabilidade necessária para o seu projeto.
 
-No exemplo acima do **`template inicial`** temos uma importação do arquivo **`rawline.css`** via CDN:
+No exemplo acima do **template inicial** temos uma importação do arquivo **rawline.css** via CDN:
 
 ```html
 <link
