@@ -1,0 +1,14 @@
+mixin card
+  - let componentClass = prefix + 'card'
+  - let className = attributes.class ? componentClass + ' ' + attributes.class : componentClass
+  - let flipped = attributes.flipped ? "off" : false
+  - let expanded = attributes.expanded ? "off" : false
+  - let disabled = attributes.disabled ? "on" : false
+  div(
+    class=className,
+    flipped=flipped,
+    expanded=expanded, 
+    disabled=disabled,
+    draggable=attributes.draggable)
+    if block
+      block

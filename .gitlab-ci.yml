@@ -34,3 +34,12 @@ validate_html:
 validate_styles:
   stage: test
   script: npm run lint:styles
+
+publish_develop:
+  stage: test
+  script:
+    - "curl -X POST -k -F token=$TRIGGER_TOKEN -F ref=develop https://git.serpro/api/v4/projects/8815/trigger/pipeline"
+  only:
+    - develop
+    - build/develop
+

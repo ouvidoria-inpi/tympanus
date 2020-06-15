@@ -15,7 +15,7 @@ $status-pressed-background: var(--color-primary-darken-02);
 $status-pressed-text: var(--color-primary-pastel-01);
 // Foco
 $status-focused-overlay: rgba(var(--rgb-support-02), 0.3);
-$status-focused-background: var(--color-primary-default);
+$status-focused-background: var(--color-secondary-01);
 // Ativo
 $status-activated-background: var(--color-primary-darken-01);
 $status-activated-text: var(--color-secondary-01);
@@ -61,5 +61,5 @@ $tokens-status: (
   status-on-background: $status-on-background,
   status-on-text: $status-on-text,
   status-off-background: $status-off-background,
-  status-off-text: $status-off-text
+  status-off-text: $status-off-text,
 );

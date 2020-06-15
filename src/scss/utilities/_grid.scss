@@ -1,7 +1,7 @@
 // Grid Bootstrap
 @import '../../../node_modules/bootstrap/scss/grid';
 
-@media (min-width: $grid-breakpoint-small) {
+@include media-breakpoint-up(sm) {
   .container,
   .container-fluid {
     padding-left: $grid-tablet-margin;
@@ -18,7 +18,7 @@
   }
 }
 
-@media (min-width: $grid-breakpoint-xlarge) {
+@include media-breakpoint-up(xl) {
   .row {
     margin-right: -$grid-tv-gutter / 2;
     margin-left: -$grid-tv-gutter / 2;

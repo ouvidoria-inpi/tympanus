@@ -1,0 +1,131 @@
+extends ../../layouts/component
+
+append vars
+  - var title = "Card";
+
+append content
+  .row
+    .col-sm-6.col-md-4.col-lg-3
+      p.h2 Card simples
+      +card
+        .front
+          .content
+            img(src="https://picsum.photos/id/0/1080" alt="Imagem de exemplo")
+    .col-sm-6.col-md-4.col-lg-3
+      p.h2 Card complexo
+      +card
+        .front
+          .header.d-flex.justify-content-between
+            div.d-flex
+              .mr-3
+                +avatar
+                  .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+              .flex-grow-1
+                p.h6.text-primary-default.mb-0 Maria Amorim
+                span UX Designer
+            +button()(circle mini)
+              i.fas.fa-ellipsis-v
+          .content
+            img(src="https://picsum.photos/id/10/1080" alt="Imagem de exemplo")
+            p.mt-3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
+          .footer.d-flex.justify-content-between.align-items-center
+            +button Button
+            div
+              +button()(circle mini)
+                i.fas.fa-heart
+              +button()(circle mini)
+                i.fas.fa-share-alt
+  .row.mt-3
+    .col-sm-6.col-md-4.col-lg-3
+      p.h2 Card com flip
+      +card()(flipped)
+        .front
+          .header.d-flex.justify-content-between
+            div
+              p.h5 Card com flip
+            div
+              +button()(circle mini class="flip")
+                i.fas.fa-redo-alt
+          .content
+            p Clique no botão acima para ver o conteúdo de trás do Card.
+        .back
+          .header.d-flex.justify-content-between
+            div
+              p.h5 Título do Card
+              span Subtítulo do Card
+            +button()(circle mini class="flip")
+              i.fas.fa-redo-alt
+          .content
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit necessitatibus quod voluptates voluptatibus sequi labore voluptatum ab, odio nesciunt in similique sed, porro facilis rem unde, aut mollitia ut ex!
+    .col-sm-6.col-md-4.col-lg-3
+      p.h2 Card com expansão
+      +card()(expanded)
+        .front
+          .header.d-flex.justify-content-between
+            div.d-flex
+              .mr-3
+                +avatar
+                  .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+              .flex-grow-1
+                p.h6.text-primary-default.mb-0 Maria Amorim
+                span UX Designer
+            +button()(circle mini)
+              i.fas.fa-ellipsis-v
+          .content
+            img(src="https://picsum.photos/id/100/1080" alt="Imagem de exemplo")
+            p.mt-3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
+          .footer
+            .text-right
+              +button()(circle mini class="expand")
+                i.fas.fa-angle-down
+            .expanded
+              +list.mx-n3
+                +list-header("Items de 3 linhas com separadores")
+                +list-item.three-lines.divider
+                  .support
+                    i.fas.fa-heartbeat
+                  .content
+                    .subtitle Subtítulo
+                    .text Texto Principal
+                    .description Texto secundário Lorem Ipsum dolor sit amet
+                  .support meta
+                +list-item.three-lines.divider
+                  .support
+                    i.fas.fa-heartbeat
+                  .content
+                    .subtitle Subtítulo
+                    .text Texto Principal
+                    .description Texto secundário Lorem Ipsum dolor sit amet
+                  .support meta
+                +list-item.three-lines
+                  .support
+                    i.fas.fa-heartbeat
+                  .content
+                    .subtitle Subtítulo
+                    .text Texto Principal
+                    .description Texto secundário Lorem Ipsum dolor sit amet
+                  .support meta
+    .col-sm-6.col-md-4.col-lg-3
+      p.h2 Card desativado
+      +card()(disabled)
+        .front
+          .header.d-flex.justify-content-between
+            div.d-flex
+              .mr-3
+                +avatar
+                  .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+              .flex-grow-1
+                p.h6.text-primary-default.mb-0 Maria Amorim
+                span UX Designer
+            +button()(circle mini)
+              i.fas.fa-ellipsis-v
+          .content
+            img(src="https://picsum.photos/id/1001/1080" alt="Imagem de exemplo")
+            p.mt-3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
+          .footer.d-flex.justify-content-between.align-items-center
+            +button Button
+            div
+              +button()(circle mini)
+                i.fas.fa-heart
+              +button()(circle mini)
+                i.fas.fa-share-alt

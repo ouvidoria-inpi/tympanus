@@ -45,7 +45,7 @@ append content
   p.h2 Lista Complexa
 
   .row
-    .col-sm-4.col-lg-3
+    .col-sm-6.col-md-4.col-lg-3
       +list
         +list-header("Itens de 1 linha sem separadores")
         +list-item()(link)
@@ -66,7 +66,7 @@ append content
           .content Texto de uma linha
           .support
             i.fas.fa-angle-right
-    .col-sm-4.col-lg-3.mt-5.mt-sm-0
+    .col-sm-6.col-md-4.col-lg-3.mt-5.mt-sm-0
       +list()(checkable)
         +list-header("Itens de 2 linhas com controles e separadores")
         +list-item.two-lines.divider(disabled)
@@ -93,7 +93,7 @@ append content
             .description Texto secundário
           .support
             +checkbox("")(id="checkbox-3" checked)
-    .col-sm-4.col-lg-3.mt-5.mt-sm-0
+    .col-sm-6.col-md-4.col-lg-3.mt-5.mt-sm-0
       +list
         +list-header("Items de 3 linhas com separadores")
         +list-item.three-lines.divider
@@ -121,8 +121,7 @@ append content
             .description Texto secundário Lorem Ipsum dolor sit amet
           .support meta
 
-  .row.mt-5
-    .col-sm-4.col-lg-3
+    .col-sm-6.col-md-4.col-lg-3
       +list()(collapsible)
         +list-header("Versão com expandir")
         +list-item()(link)
@@ -178,10 +177,182 @@ append content
           +list-item
             .content Texto de uma linha
 
+    .col-sm-6.col-md-4.col-lg-3
+      +list()(collapsible unique )
+        +list-header("Versão com expandir unicamente")
+        +list-item()(link)
+          .support: i.fas.fa-running
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+        +list-item()(link active)
+          .support: i.fas.fa-heartbeat
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-up
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+        +list-item()(link)
+          .support: i.fas.fa-burn
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+        +list-item()(link)
+          .support: i.fas.fa-globe
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+
+    .col-sm-6.col-md-4.col-lg-3
+      +list()(collapsible unique three-lines)
+        +list-header("Versão com expandir unicamente com mais de uma linha ( aceita os atributos: two-lines e three-lines )")
+        +list-item()(link)
+          .support: i.fas.fa-running
+          .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+        +list-item()(link active)
+          .support: i.fas.fa-heartbeat
+          .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          .support: i.fas.fa-angle-up
+        +list
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+        +list-item()(link)
+          .support: i.fas.fa-burn
+          .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+        +list-item()(link)
+          .support: i.fas.fa-globe
+          .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+          +list-item
+            .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
+
+  .row
+    +list()(collapsible horizontal unique)
+      +list-header("Versão com expandir unicamente horizontal com mais de uma linha ( padrão com duas linhas )")
+      .col
+        +list-item()(link)
+          .support: i.fas.fa-running
+          .content Texto de uma linha Texto de uma linha Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha Texto de uma linha Texto de uma linha
+          +list-item
+            .content Texto de uma linha Texto de uma linha Texto de uma Texto de uma linha Texto de uma Texto de uma linha Texto de uma
+          +list-item
+            .content Texto de uma linha Texto de uma linha Texto de uma linha
+          +list-item
+            .content Texto de uma linha Texto de uma linha Texto de uma linha
+      .col
+        +list-item()(link active)
+          .support: i.fas.fa-heartbeat
+          .content Texto de uma linha Texto de uma linha Texto de uma linha
+          .support: i.fas.fa-angle-up
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha Texto de uma linha Texto de uma  Texto de uma linha Texto de uma
+          +list-item
+            .content Texto de uma linha
+      .col
+        +list-item()(link)
+          .support: i.fas.fa-burn
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha Texto de uma linha Texto de uma Texto de uma linha Texto de uma
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha  Texto de uma linha Texto de uma Texto de uma linha Texto de uma Texto de uma linha Texto de uma Texto de uma linha Texto de uma
+      .col
+        +list-item()(link)
+          .support: i.fas.fa-globe
+          .content Texto de uma linha
+          .support: i.fas.fa-angle-down
+        +list
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha  Texto de uma linha Texto de uma Texto de uma linha Texto de uma Texto de uma linha Texto de uma Texto de uma linha Texto de uma
+          +list-item
+            .content Texto de uma linha
+          +list-item
+            .content Texto de uma linha
+
   p.h3 Versão com densidade
 
   .row
-    .col-sm-4.col-lg-3
+    .col-sm-6.col-md-4.col-lg-3
       +list.condensed
         +list-header("Itens de 1 linha sem separadores")
         +list-item()(link)
@@ -202,7 +373,7 @@ append content
           .content Texto de uma linha
           .support
             i.fas.fa-angle-right
-    .col-sm-4.col-lg-3.mt-5.mt-sm-0
+    .col-sm-6.col-md-4.col-lg-3.mt-5.mt-sm-0
       +list.condensed
         +list-header("Items de 3 linhas com separadores")
         +list-item.three-lines.divider
@@ -229,7 +400,7 @@ append content
             .text Texto Principal
             .description Texto secundário Lorem Ipsum dolor sit amet
           .support meta
-    .col-sm-4.col-lg-3.mt-5.mt-sm-0
+    .col-sm-6.col-md-4.col-lg-3.mt-5.mt-sm-0
       +list()(checkable).condensed
         +list-header("Itens de 2 linhas com controles e separadores")
         +list-item.two-lines.divider(disabled)
@@ -277,7 +448,7 @@ append content
             .subtitle ALM SERPRO
           .col-8.col-sm-9.col-lg-10
             .subtitle [Item de Trabalho 1827328] Tarefa sobre componentes
-            .description IU da web https://alm.serpro/ccm/com/resource/itemName/com.ibm.team.workitem.WorItem/18289068 ID:18289068 Lorem ipsum dolor sit amet consectetur adipisicing elit 
+            .description IU da web https://alm.serpro/ccm/com/resource/itemName/com.ibm.team.workitem.WorItem/18289068 ID:18289068 Lorem ipsum dolor sit amet consectetur adipisicing elit
       .support 04 de nov
     +list-item()(link).two-lines
       .support: i.fas.fa-envelope-open.fa-lg.text-secondary-05

@@ -72,7 +72,7 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
   }
 }
 
-@media (min-width: $grid-breakpoint-small) {
+@include media-breakpoint-up(sm) {
   .#{$prefix}modal {
     &.is-xsmall {
       max-width: 220px;

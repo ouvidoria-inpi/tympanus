@@ -40,21 +40,33 @@ São usados apenas para reforço visual ou de branding. Se forem removidos da p�
 
 Se os ícones são puramente decorativos é necessário adicionar manualmente um atributo `aria-hidden` a cada um deles para que sejam acessíveis.
 
-``` html
+```html
 <i class="fas fa-camera-retro" aria-hidden></i>
 ```
 
 ##### SVG com JavaScript
 
-``` html
+```html
 <i class="fas fa-camera-retro"></i>
 ```
 
 A acessibilidade do Font Awesome adiciona automaticamente `aria-hidden=true` e `role=“img”` aos seus atributos SVG in-line, para que seus ícones estejam adequadamente acessíveis.
 
-``` html
-<svg class="svg-inline--fa fa-camera-retro fa-w-16" aria-hidden="true" data-fa-i2svg="" data-prefix="fas" data-icon="camera-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <path fill="currentColor" d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm0 32h106c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H38c-3.3 0-6-2.7-6-6V80c0-8.8 7.2-16 16-16zm426 96H38c-3.3 0-6-2.7-6-6v-36c0-3.3 2.7-6 6-6h138l30.2-45.3c1.1-1.7 3-2.7 5-2.7H464c8.8 0 16 7.2 16 16v74c0 3.3-2.7 6-6 6zM256 424c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-208c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm-48 104c-8.8 0-16-7.2-16-16 0-35.3 28.7-64 64-64 8.8 0 16 7.2 16 16s-7.2 16-16 16c-17.6 0-32 14.4-32 32 0 8.8-7.2 16-16 16z"></path>
+```html
+<svg
+    class="svg-inline--fa fa-camera-retro fa-w-16"
+    aria-hidden="true"
+    data-fa-i2svg=""
+    data-prefix="fas"
+    data-icon="camera-retro"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+>
+    <path
+        fill="currentColor"
+        d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm0 32h106c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H38c-3.3 0-6-2.7-6-6V80c0-8.8 7.2-16 16-16zm426 96H38c-3.3 0-6-2.7-6-6v-36c0-3.3 2.7-6 6-6h138l30.2-45.3c1.1-1.7 3-2.7 5-2.7H464c8.8 0 16 7.2 16 16v74c0 3.3-2.7 6-6 6zM256 424c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-208c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm-48 104c-8.8 0-16-7.2-16-16 0-35.3 28.7-64 64-64 8.8 0 16 7.2 16 16s-7.2 16-16 16c-17.6 0-32 14.4-32 32 0 8.8-7.2 16-16 16z"
+    ></path>
 </svg>
 ```
 
@@ -64,14 +76,11 @@ São aqueles usados para transmitir um significado, ao invés de apenas decoraç
 
 Se os ícones tiverem significado semântico, é preciso adicionar manualmente algumas coisas para que ele seja acessado apropriadamente:
 
-* Atributo `aria-hidden` .
-* Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado
+-   Atributo `aria-hidden` .
+-   Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
+-   Atributo `title` no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
 
-  para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
-
-* Atributo `title` no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
-
-``` html
+```html
 <i aria-hidden class="fas fa-car" title="Time to destination by car"></i>
 <span class="sr-only">Time to destination by car:</span>
 <span>4 minutes</span>
@@ -79,19 +88,19 @@ Se os ícones tiverem significado semântico, é preciso adicionar manualmente a
 
 No caso de elementos interativos focalizáveis, existem várias opções para incluir um texto ou rótulo alternativo ao elemento, sem a necessidade de qualquer ocultação visual `<span>` ou semelhante. Por exemplo, simplesmente adicionar o atributo `aria-label` com uma descrição de texto ao próprio elemento interativo será suficiente para fornecer um nome alternativo acessível ao elemento. Se você precisar fornecer uma dica visual (tooltip) em um mouseover/focus, recomendamos usar o atributo `title` ou uma solução de tooltip personalizado.
 
-``` html
+```html
 <a href="path/to/shopping/cart" aria-label="View 3 items in your shopping cart">
     <i aria-hidden class="fas fa-shopping-cart"></i>
 </a>
 ```
 
-``` html
+```html
 <a aria-label="Skip to main navigation" href="#navigation-main">
     <i aria-hidden class="fas fa-bars"></i>
 </a>
 ```
 
-``` html
+```html
 <a aria-label="Delete" class="btn btn-danger" href="path/to/settings">
     <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
 </a>
@@ -103,18 +112,31 @@ Obter a acessibilidade correta pode ser difícil. Por isso, Font Awesome simplif
 
 Se o ícone tiver significado semântico, coloque um atributo `title=“meaning”` . A acessibilidade automática cuida do resto, adicionando o seguinte:
 
-• Função ARIA adequada ( `role=“img”` )
-• Tag `title` com um atributo `id` adequado
-• Atributo `aria-labelledby` e conecte-o à uma tag `title` 
+-   Função ARIA adequada ( `role=“img”` )
+-   Tag `title` com um atributo `id` adequado
+-   Atributo `aria-labelledby` e conecte-o à uma tag `title`
 
-``` html
+```html
 <i title="Magic is included!" class="fas fa-magic"></i>
 ```
 
-``` html
-<svg title="Magic is included!" class="svg-inline--fa fa-magic fa-w-16" aria-labelledby="svg-inline--fa-title-1" data-fa-i2svg="" data-prefix="fas" data-icon="magic" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+```html
+<svg
+    title="Magic is included!"
+    class="svg-inline--fa fa-magic fa-w-16"
+    aria-labelledby="svg-inline--fa-title-1"
+    data-fa-i2svg=""
+    data-prefix="fas"
+    data-icon="magic"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+>
     <title id="svg-inline--fa-title-1">Magic is included!</title>
-    <path fill="currentColor" d="M101.1 505L7 410.9c-9.4-9.4-9.4-24.6 0-33.9L377 7c9.4-9.4 24.6-9.4 33.9 0l94.1 94.1c9.4 9.4 9.4 24.6 0 33.9L135 505c-9.3 9.3-24.5 9.3-33.9 0zM304 159.2l48.8 48.8 89.9-89.9-48.8-48.8-89.9 89.9zM138.9 39.3l-11.7 23.8-26.2 3.8c-4.7.7-6.6 6.5-3.2 9.8l19 18.5-4.5 26.1c-.8 4.7 4.1 8.3 8.3 6.1L144 115l23.4 12.3c4.2 2.2 9.1-1.4 8.3-6.1l-4.5-26.1 19-18.5c3.4-3.3 1.5-9.1-3.2-9.8L160.8 63l-11.7-23.8c-2-4.1-8.1-4.1-10.2.1zm97.7-20.7l-7.8 15.8-17.5 2.6c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4L240 69l15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-3-5.4-3-6.8-.1zm-192 0l-7.8 15.8L19.3 37c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4L48 69l15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-3-5.4-3-6.8-.1zm416 223.5l-7.8 15.8-17.5 2.5c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4l15.6-8.2 15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-2.8-5.4-2.8-6.8 0z"></path>
+    <path
+        fill="currentColor"
+        d="M101.1 505L7 410.9c-9.4-9.4-9.4-24.6 0-33.9L377 7c9.4-9.4 24.6-9.4 33.9 0l94.1 94.1c9.4 9.4 9.4 24.6 0 33.9L135 505c-9.3 9.3-24.5 9.3-33.9 0zM304 159.2l48.8 48.8 89.9-89.9-48.8-48.8-89.9 89.9zM138.9 39.3l-11.7 23.8-26.2 3.8c-4.7.7-6.6 6.5-3.2 9.8l19 18.5-4.5 26.1c-.8 4.7 4.1 8.3 8.3 6.1L144 115l23.4 12.3c4.2 2.2 9.1-1.4 8.3-6.1l-4.5-26.1 19-18.5c3.4-3.3 1.5-9.1-3.2-9.8L160.8 63l-11.7-23.8c-2-4.1-8.1-4.1-10.2.1zm97.7-20.7l-7.8 15.8-17.5 2.6c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4L240 69l15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-3-5.4-3-6.8-.1zm-192 0l-7.8 15.8L19.3 37c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4L48 69l15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-3-5.4-3-6.8-.1zm416 223.5l-7.8 15.8-17.5 2.5c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4l15.6-8.2 15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-2.8-5.4-2.8-6.8 0z"
+    ></path>
 </svg>
 ```
 
@@ -262,4 +284,3 @@ As principais funcionalidades dos sistemas do governo foram mapeadas e foram atr
 | <i class="fas fa-share-square"></i>         | Exportar Arquivo/Documento              | fa-share-square         |
 | <i class="fas fa-share"></i>                | Enviar                                  | fa-share                |
 | <i class="fas fa-clipboard-list"></i>       | Fiscalizar                              | fa-clipboard-list       |
-

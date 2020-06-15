@@ -85,8 +85,10 @@ Um item poderá abrir uma nova Lista Complexa. Neste caso ela deverá estar imed
 
 A "sublista" é visível ao aplicar **active** ao item. É possível usar classe ou atributo.
 
+Para habilitar o comportamento de expandir apenas um item por vez deve-se usar o atributo `unique` a tag do componente.
+
 ```html
-<div class="br-list" collapsible>
+<div class="br-list" collapsible unique>
     <!-- Item fechado -->
     <button class="item" type="button">...</button>
     <div class="br-list">...</div>
@@ -189,6 +191,39 @@ Pode-se aplicar por classe ou atributo.
 </div>
 ```
 
+#### Alturas do item configuradas pelo componente
+
+-   **one-line**: altura recomendada para 1 linha de texto (padrão)
+-   **two-lines**: altura recomendada para 2 linhas de texto
+-   **three-lines**: altura recomendada para 3 linhas de texto
+
+A grande diferença para o caso anterior é que ao invés de ter vários textos com apenas uma linha cada, ter-se-á apenas um texto em cada item que pode se expandir para ocupar a quantidade de linhas desejadas e isso se aplica a todos os itens da lista. Assim, mante-se o alinhamento e padronização das linhas com os demais itens da lista.
+
+Pode-se aplicar por atributo diretamente ao componente.
+
+```html
+<!-- Item com 1 linha -->
+<div class="br-list">
+    <div class="item">
+        <div class="content">Texto do item</div>
+    </div>
+</div>
+
+<!-- Item com 2 linhas -->
+<div class="br-list" two-lines>
+    <div class="item">
+        <div class="content">Texto do item</div>
+    </div>
+</div>
+
+<!-- Item com 3 linhas -->
+<div class="br-list" three-lines>
+    <div class="item" >
+        <div class="content">Texto do item</div>
+    </div>
+</div>
+```
+
 ### Separadores em itens
 
 Usar **divider** no elemento. Pode-se aplicar por classe ou atributo.
@@ -237,6 +272,37 @@ Aplicar **selected** na linha selecionada pelo controle. Pode-se aplicar por cla
             <div class="br-checkbox">
                 <input id="checkbox" type="checkbox" checked />
                 <label for="checkbox"></label>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+### Alinhamento horizontal
+
+Aplicar o atributo **horizontal** na tag do componente.
+Surgiu da necessidade do componente footer para criar uma lista agrupada de links. A altura de linha padrão para os textos é de duas linhas. O layout se mantêm horizontal no desktop e os itens expandidos mas, na resolução de tablet e mobile, a lista volta para o formato vertical e pode ser condensada. Cada item de primeiro nível da lista deve ser encapsulados por um container com a classe `col`, podendo ser usadas as varições do bootstrap para diferentes tamanhos de coluna (ex.: col-2, col-4, col-8)
+
+```html
+<div class="br-list" collapsible horizontal two-lines unique>
+    <div class="col">
+        <a class="item" href="javascript:void(0);" link="">
+            <div class="support"><i class="fas fa-running"></i> </div>
+            <div class="content">Texto de uma linha Texto de uma linha Texto de uma linha</div>
+            <div class="support"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="br-list">
+            <div class="item">
+                <div class="content">Texto de uma linha Texto de uma linha Texto de uma linha</div>
+            </div>
+            <div class="item">
+                <div class="content">Texto de uma linha Texto de uma linha Texto de uma Texto de uma linha</div>
+            </div>
+            <div class="item"> 
+                <div class="content">Texto de uma linha Texto de uma linha Texto de uma linha</div>
+            </div>
+            <div class="item">
+                <div class="content">Texto de uma linha Texto de uma linha Texto de uma linha</div>
             </div>
         </div>
     </div>
