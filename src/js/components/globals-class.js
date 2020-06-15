@@ -39,6 +39,7 @@ export default class Globals {
     this.initInstanceSelect()
     this.initInstanceTable()
     this.initInstanceTabs()
+    this.initInstanceTemplateBase()
     this.initInstanceTooltip()
     this.initInstanceUpload()
     this.initInstanceWizard()
@@ -459,7 +460,7 @@ export default class Globals {
       templateBaseList.push(new BRTemplateBase('template-base', brTemplateBase))
     }
   }
-  
+
   initInstanceBreadcrumb() {
     const breadcrumbList = []
     for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
