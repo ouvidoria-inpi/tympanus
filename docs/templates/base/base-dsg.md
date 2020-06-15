@@ -1,3 +1,5 @@
+[version]: # '2.0.0'
+
 ![Exemplo Template](imagens/template-base-view-1280px.png)
 
 ---
@@ -10,7 +12,7 @@ O _Base_ deve ser usado como ponto de partida para construção de uma página e
 
 ## Anatomia
 
-A seguir estão listadas as regiões ou áreas essenciais e opcionais que fazem parte do _Base_. 
+A seguir estão listadas as regiões ou áreas essenciais e opcionais que fazem parte do _Base_.
 
 1. Área para Cabeçalho
 2. Área para Breadcrumbs (Opcional)
@@ -56,7 +58,7 @@ D - Componente _Scrim_ por cima do conteúdo da página.
 
 ### 4. Área para Conteúdo
 
-Esta é uma área essencial no _Base_. Esta região conterá todo conteúdo do site/sistema. Sua altura varia de acordo com o conteúdo da página e o usuário poderá utilizar a barra de rolagem do navegador para visualizar todo conteúdo.  
+Esta é uma área essencial no _Base_. Esta região conterá todo conteúdo do site/sistema. Sua altura varia de acordo com o conteúdo da página e o usuário poderá utilizar a barra de rolagem do navegador para visualizar todo conteúdo.
 
 A - A área de conteúdo se estende por todo espaço horizontal, respeitando as margens de proteção laterais, superior e inferior. Para mais detalhes sobre os espaçamentos consulte a seção _Design Tokens_.
 
@@ -108,29 +110,29 @@ Observe que a largura do _Menu Contextual_ se ajusta à largura das 3 primeiras 
 
 #### C) Smartphone (Grid de 4 Colunas)
 
- Na versão para Grid de 4 Colunas há uma adaptação substancial no _Menu Contextual_. Este se apresenta como uma barra na base da área visível da tela. Ao _Touch_ do usuário, o _Menu Contextual_ expande de baixo para cima e ocupa parte da tela. Por trás do _Menu Contextual_ a tela é coberta pelo _Componente Scrim_, dando foco ao _Menu_.
+Na versão para Grid de 4 Colunas há uma adaptação substancial no _Menu Contextual_. Este se apresenta como uma barra na base da área visível da tela. Ao _Touch_ do usuário, o _Menu Contextual_ expande de baixo para cima e ocupa parte da tela. Por trás do _Menu Contextual_ a tela é coberta pelo _Componente Scrim_, dando foco ao _Menu_.
 
- Ao rolar a tela, a barra do Menu Contextual permanecerá sempre fixa na base da área visível da tela.
+Ao rolar a tela, a barra do Menu Contextual permanecerá sempre fixa na base da área visível da tela.
 
 ![Exemplo Comportamento](imagens/template-base-menu-grid-320px.png)
 
 #### Largura Fixa x Largura Fluida
 
-Como observado nos exemplos acima, cada tipo de _Grid_ é composto pelo número de colunas, largura das colunas, espaçamentos entre colunas e espaçamentos laterais. Contudo, é importante observar que a largura do Base em resoluções diferentes pode variar bastante, mesmo em cada modelo de Grid (12, 8 ou 4 colunas). 
+Como observado nos exemplos acima, cada tipo de _Grid_ é composto pelo número de colunas, largura das colunas, espaçamentos entre colunas e espaçamentos laterais. Contudo, é importante observar que a largura do Base em resoluções diferentes pode variar bastante, mesmo em cada modelo de Grid (12, 8 ou 4 colunas).
 
 Por exemplo, numa Grid de 12 colunas é possível ter resoluções distintas, com 1280px, 1440px, 1600px etc. O mesmo ocorre em Grids de 8 e 4 colunas com resoluções menores. Tendo em vista este aspecto, os tipos de Grids possuem comportamentos diferentes:
 
- - Grids de 4 e 8 colunas possuem comportamento fluido;
- - Grids de 12 colunas possuem comportamento fixo. 
+-   Grids de 4 e 8 colunas possuem comportamento fluido;
+-   Grids de 12 colunas possuem comportamento fixo.
 
 ##### Grid de 4 e 8 colunas - Comportamento Fluido
 
 Adequado para:
 
- - Smartphone Portrait
- - Smartphone Landscape
- - Tablet Portrait
- - Tablet Landscape
+-   Smartphone Portrait
+-   Smartphone Landscape
+-   Tablet Portrait
+-   Tablet Landscape
 
 Observe que o tamanho das margens laterais e espaçamentos entre colunas permanecem fixos, enquanto que as larguras das colunas variam de tamanho.
 
@@ -148,8 +150,8 @@ Observe que o tamanho das margens laterais e espaçamentos entre colunas permane
 
 Adequado para:
 
- - Desktop
- - TV
+-   Desktop
+-   TV
 
 Nesta situação a largura das colunas e espaçamentos entre colunas permanecem fixos e as margens externas variam de tamanho. É importante observar que a área que compreende todo conteúdo possui uma largura fixa de 1200px. Consulte maiores detalhes na documentação da _Grid_.
 
@@ -165,80 +167,80 @@ Note que as áreas de Cabeçalho e Rodapé sangram a _Grid_, porém o conteúdo 
 
 ### Espaçamentos (Grid de 12 Colunas)
 
-|Name|Property|Value|
-|--|--|--|
-|Área para Cabeçalho|margin-top|`0px`|
-|Área para Cabeçalho|margin-bottom|`16px`|
-|Área para Cabeçalho|margin-left|`0px`|
-|Área para Cabeçalho|margin-right|`0px`|
-|Área para Breadcrumbs|margin-top|`16px`|
-|Área para Breadcrumbs|margin-left|`40px`|
-|Área para Breadcrumbs (com Menu Auxiliar)|margin-left|`24px`|
-|Área para Breadcrumbs|margin-right|`40px`|
-|Área para Breadcrumbs|margin-bottom|`24px`|
-|Área para Menu Auxiliar|margin-top|`0px`|
-|Área para Menu Auxiliar|margin-bottom|`0px`|
-|Área para Menu Auxiliar|margin-left|`40px`|
-|Área para Menu Auxiliar|margin-right|`24px`|
-|Área para Conteúdo|margin-top|`24px`|
-|Área para Conteúdo|margin-bottom|`40px`|
-|Área para Conteúdo|margin-left|`40px`|
-|Área para Conteúdo (com Menu Auxiliar)|margin-left|`24px`|
-|Área para Conteúdo|margin-right|`40px`|
-|Área para Rodapé|margin-top|`40px`|
-|Área para Rodapé|margin-bottom|`0px`|
-|Área para Rodapé|margin-left|`0px`|
-|Área para Rodapé|margin-right|`0px`|
+| Name                                      | Property      | Value  |
+| ----------------------------------------- | ------------- | ------ |
+| Área para Cabeçalho                       | margin-top    | `0px`  |
+| Área para Cabeçalho                       | margin-bottom | `16px` |
+| Área para Cabeçalho                       | margin-left   | `0px`  |
+| Área para Cabeçalho                       | margin-right  | `0px`  |
+| Área para Breadcrumbs                     | margin-top    | `16px` |
+| Área para Breadcrumbs                     | margin-left   | `40px` |
+| Área para Breadcrumbs (com Menu Auxiliar) | margin-left   | `24px` |
+| Área para Breadcrumbs                     | margin-right  | `40px` |
+| Área para Breadcrumbs                     | margin-bottom | `24px` |
+| Área para Menu Auxiliar                   | margin-top    | `0px`  |
+| Área para Menu Auxiliar                   | margin-bottom | `0px`  |
+| Área para Menu Auxiliar                   | margin-left   | `40px` |
+| Área para Menu Auxiliar                   | margin-right  | `24px` |
+| Área para Conteúdo                        | margin-top    | `24px` |
+| Área para Conteúdo                        | margin-bottom | `40px` |
+| Área para Conteúdo                        | margin-left   | `40px` |
+| Área para Conteúdo (com Menu Auxiliar)    | margin-left   | `24px` |
+| Área para Conteúdo                        | margin-right  | `40px` |
+| Área para Rodapé                          | margin-top    | `40px` |
+| Área para Rodapé                          | margin-bottom | `0px`  |
+| Área para Rodapé                          | margin-left   | `0px`  |
+| Área para Rodapé                          | margin-right  | `0px`  |
 
 ### Espaçamentos (Grid de 8 Colunas)
 
-|Name|Property|Value|
-|--|--|--|
-|Área para Cabeçalho|margin-top|`0px`|
-|Área para Cabeçalho|margin-bottom|`16px`|
-|Área para Cabeçalho|margin-left|`0px`|
-|Área para Cabeçalho|margin-right|`0px`|
-|Área para Breadcrumbs|margin-top|`16px`|
-|Área para Breadcrumbs|margin-left|`40px`|
-|Área para Breadcrumbs (com Menu Auxiliar)|margin-left|`24px`|
-|Área para Breadcrumbs|margin-right|`40px`|
-|Área para Breadcrumbs|margin-bottom|`24px`|
-|Área para Menu Auxiliar|margin-top|`0px`|
-|Área para Menu Auxiliar|margin-bottom|`0px`|
-|Área para Menu Auxiliar|margin-left|`40px`|
-|Área para Menu Auxiliar|margin-right|`24px`|
-|Área para Conteúdo|margin-top|`24px`|
-|Área para Conteúdo|margin-bottom|`24px`|
-|Área para Conteúdo|margin-left|`40px`|
-|Área para Conteúdo (com Menu Auxiliar)|margin-left|`24px`|
-|Área para Conteúdo|margin-right|`40px`|
-|Área para Rodapé|margin-top|`24px`|
-|Área para Rodapé|margin-bottom|`0px`|
-|Área para Rodapé|margin-left|`0px`|
-|Área para Rodapé|margin-right|`0px`|
+| Name                                      | Property      | Value  |
+| ----------------------------------------- | ------------- | ------ |
+| Área para Cabeçalho                       | margin-top    | `0px`  |
+| Área para Cabeçalho                       | margin-bottom | `16px` |
+| Área para Cabeçalho                       | margin-left   | `0px`  |
+| Área para Cabeçalho                       | margin-right  | `0px`  |
+| Área para Breadcrumbs                     | margin-top    | `16px` |
+| Área para Breadcrumbs                     | margin-left   | `40px` |
+| Área para Breadcrumbs (com Menu Auxiliar) | margin-left   | `24px` |
+| Área para Breadcrumbs                     | margin-right  | `40px` |
+| Área para Breadcrumbs                     | margin-bottom | `24px` |
+| Área para Menu Auxiliar                   | margin-top    | `0px`  |
+| Área para Menu Auxiliar                   | margin-bottom | `0px`  |
+| Área para Menu Auxiliar                   | margin-left   | `40px` |
+| Área para Menu Auxiliar                   | margin-right  | `24px` |
+| Área para Conteúdo                        | margin-top    | `24px` |
+| Área para Conteúdo                        | margin-bottom | `24px` |
+| Área para Conteúdo                        | margin-left   | `40px` |
+| Área para Conteúdo (com Menu Auxiliar)    | margin-left   | `24px` |
+| Área para Conteúdo                        | margin-right  | `40px` |
+| Área para Rodapé                          | margin-top    | `24px` |
+| Área para Rodapé                          | margin-bottom | `0px`  |
+| Área para Rodapé                          | margin-left   | `0px`  |
+| Área para Rodapé                          | margin-right  | `0px`  |
 
 ### Espaçamentos (Grid de 4 Colunas)
 
-|Name|Property|Value|
-|--|--|--|
-|Área para Cabeçalho|margin-top|`0px`|
-|Área para Cabeçalho|margin-bottom|`16px`|
-|Área para Cabeçalho|margin-left|`0px`|
-|Área para Cabeçalho|margin-right|`0px`|
-|Área para Breadcrumbs|margin-top|`16px`|
-|Área para Breadcrumbs|margin-bottom|`16px`|
-|Área para Breadcrumbs|margin-left|`8px`|
-|Área para Breadcrumbs|margin-right|`8px`|
-|Área para Menu Auxiliar|margin-top|`16px`|
-|Área para Menu Auxiliar|margin-bottom|`0px`|
-|Área para Menu Auxiliar|margin-left|`0px`|
-|Área para Menu Auxiliar|margin-right|`0px`|
-|Área para Conteúdo|margin-top|`16px`|
-|Área para Conteúdo|margin-bottom|`16px`|
-|Área para Conteúdo|margin-left|`8px`|
-|Área para Conteúdo|margin-right|`8px`|
-|Área para Rodapé|margin-top|`16px`|
-|Área para Rodapé (com Menu Contextual)|margin-top|`0px`|
-|Área para Rodapé|margin-bottom|`0px`|
-|Área para Rodapé|margin-left|`0px`|
-|Área para Rodapé|margin-right|`0px`|
+| Name                                   | Property      | Value  |
+| -------------------------------------- | ------------- | ------ |
+| Área para Cabeçalho                    | margin-top    | `0px`  |
+| Área para Cabeçalho                    | margin-bottom | `16px` |
+| Área para Cabeçalho                    | margin-left   | `0px`  |
+| Área para Cabeçalho                    | margin-right  | `0px`  |
+| Área para Breadcrumbs                  | margin-top    | `16px` |
+| Área para Breadcrumbs                  | margin-bottom | `16px` |
+| Área para Breadcrumbs                  | margin-left   | `8px`  |
+| Área para Breadcrumbs                  | margin-right  | `8px`  |
+| Área para Menu Auxiliar                | margin-top    | `16px` |
+| Área para Menu Auxiliar                | margin-bottom | `0px`  |
+| Área para Menu Auxiliar                | margin-left   | `0px`  |
+| Área para Menu Auxiliar                | margin-right  | `0px`  |
+| Área para Conteúdo                     | margin-top    | `16px` |
+| Área para Conteúdo                     | margin-bottom | `16px` |
+| Área para Conteúdo                     | margin-left   | `8px`  |
+| Área para Conteúdo                     | margin-right  | `8px`  |
+| Área para Rodapé                       | margin-top    | `16px` |
+| Área para Rodapé (com Menu Contextual) | margin-top    | `0px`  |
+| Área para Rodapé                       | margin-bottom | `0px`  |
+| Área para Rodapé                       | margin-left   | `0px`  |
+| Área para Rodapé                       | margin-right  | `0px`  |

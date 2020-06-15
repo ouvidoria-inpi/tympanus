@@ -1,18 +1,8 @@
-[artefato fonte de design]: # 'iconografia_6.1.0.xd'
+[version]: # '6.2.0'
 
-Os ícones são representações gráficas que podem simbolizar uma ação ou comunicar ao usuário possibilidades de mudanças de estados entre os elementos de uma interface. No caso do Design System, foi escolhida a coleção de ícones **"Font Awesome Solid"** (versão 5.10.2) por possuírem uma boa variedade de ícones com um layout simples, sintético e amigável.
+# Iconografia
 
----
-
-## Font Awesome Solid 5.10.2
-
-[Font Awesome](https://fontawesome.com/) é um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi feito por Dave Gandy para uso com o Twitter Bootstrap e mais tarde foi incorporado no BootstrapCDN.
-
-A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.
-
-No final desse documento foi incluído as **orientações de uso** de alguns dos ícones e essa tabela deve ser seguida para que haja consistência entre os sistemas do governo.
-
-![Exemplo FontAwesome](imagens/fontawesome.png)
+Os ícones são representações gráficas que podem simbolizar uma ação, comunicar ao usuário possibilidades de mudanças de estados entre os elementos de uma interface ou apenas ser uma representacao gráfica de uma ação ou informação textual. No caso do Design System, foi escolhida a coleção de ícones **"Font Awesome"** (versão 5.10.2) por possuírem uma boa variedade de ícones com um layout simples, sintético e amigável.
 
 ---
 
@@ -20,11 +10,17 @@ No final desse documento foi incluído as **orientações de uso** de alguns dos
 
 ### Experiência Única
 
-Além da diversidade foi considerado que a Font Awesome traria uma padronização no visual dos ícones bastante importante no processo de reconhecimento e memorização dos usuários. Optou-se pelo uso da **versão solid** (style prefix: `fas` ), então as características gráficas, como preenchimento, peso visual devem ser preservadas no momento de construção de novos ícones. Espera-se por tanto, que o padrão gráfico dos ícones por ser utilizado em vários sistemas do governo federal, passe a exercer um papel importante no reconhecimento dos usuários, no que diz respeito a interfaces governamentais. Sendo assim, é imprescindível que o designer e o desenvolvedor priorizem a utilização dos ícones, como demonstrado na tabela de orientações de uso.É fundamental atribuir os significados recomendados na tabela, evitando duplo sentido e facilitando o reconhecimento e memorização do usuário.
+Além da diversidade foi considerado que a Font Awesome traria uma padronização no visual dos ícones bastante importante no processo de reconhecimento e memorização dos usuários. Optou-se pelo uso dos **estilos solid** (style prefix: `fas`) e a **brand** (style prefix: `fab`), então as características gráficas, como preenchimento, peso visual devem ser preservadas no momento de construção de novos ícones.
+
+Espera-se por tanto, que o padrão gráfico dos ícones por ser utilizado em vários sistemas do governo federal, passe a exercer um papel importante no reconhecimento dos usuários, no que diz respeito a interfaces governamentais.
+
+Sendo assim, é imprescindível que o designer e o desenvolvedor priorizem a utilização dos ícones, como demonstrado na **Tabela de Orientações de Uso**. É fundamental atribuir os significados recomendados na tabela, evitando duplo sentido e facilitando o reconhecimento e memorização do usuário.
 
 ### Eficiência e Clareza
 
-Os ícones da Font Awesome possuem um desenho sintético, porém de fácil compreensão, e devem exercer o papel de auxiliar ao usuário na execução de uma ação ou na representação de um serviço.É fundamental que a escolha do ícone para representar uma ideia, ação, ou serviço leve em consideração a experiência do usuário esteja sempre alinhada ao contexto cultural do Brasil, e que seja de fácil reconhecimento público. Para uma melhor legibilidade é recomendado que quando possível um label ou hint apareça ao lado do ícone reforçando a ideia a que foi atribuído.
+Os ícones da Font Awesome possuem um desenho sintético, porém de fácil compreensão, e devem exercer o papel de auxiliar ao usuário na execução de uma ação ou na representação de um serviço. É fundamental que a escolha do ícone para representar uma ideia, ação, ou serviço leve em consideração a experiência do usuário esteja sempre alinhada ao contexto cultural do Brasil, e que seja de fácil reconhecimento público.
+
+Para uma melhor legibilidade é recomendado que quando possível um label ou hint apareça ao lado do ícone reforçando a ideia a que foi atribuído.
 
 ### Acessibilidade
 
@@ -40,21 +36,33 @@ São usados apenas para reforço visual ou de branding. Se forem removidos da p�
 
 Se os ícones são puramente decorativos é necessário adicionar manualmente um atributo `aria-hidden` a cada um deles para que sejam acessíveis.
 
-``` html
+```html
 <i class="fas fa-camera-retro" aria-hidden></i>
 ```
 
 ##### SVG com JavaScript
 
-``` html
+```html
 <i class="fas fa-camera-retro"></i>
 ```
 
 A acessibilidade do Font Awesome adiciona automaticamente `aria-hidden=true` e `role=“img”` aos seus atributos SVG in-line, para que seus ícones estejam adequadamente acessíveis.
 
-``` html
-<svg class="svg-inline--fa fa-camera-retro fa-w-16" aria-hidden="true" data-fa-i2svg="" data-prefix="fas" data-icon="camera-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <path fill="currentColor" d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm0 32h106c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H38c-3.3 0-6-2.7-6-6V80c0-8.8 7.2-16 16-16zm426 96H38c-3.3 0-6-2.7-6-6v-36c0-3.3 2.7-6 6-6h138l30.2-45.3c1.1-1.7 3-2.7 5-2.7H464c8.8 0 16 7.2 16 16v74c0 3.3-2.7 6-6 6zM256 424c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-208c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm-48 104c-8.8 0-16-7.2-16-16 0-35.3 28.7-64 64-64 8.8 0 16 7.2 16 16s-7.2 16-16 16c-17.6 0-32 14.4-32 32 0 8.8-7.2 16-16 16z"></path>
+```html
+<svg
+    class="svg-inline--fa fa-camera-retro fa-w-16"
+    aria-hidden="true"
+    data-fa-i2svg=""
+    data-prefix="fas"
+    data-icon="camera-retro"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+>
+    <path
+        fill="currentColor"
+        d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm0 32h106c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H38c-3.3 0-6-2.7-6-6V80c0-8.8 7.2-16 16-16zm426 96H38c-3.3 0-6-2.7-6-6v-36c0-3.3 2.7-6 6-6h138l30.2-45.3c1.1-1.7 3-2.7 5-2.7H464c8.8 0 16 7.2 16 16v74c0 3.3-2.7 6-6 6zM256 424c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-208c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm-48 104c-8.8 0-16-7.2-16-16 0-35.3 28.7-64 64-64 8.8 0 16 7.2 16 16s-7.2 16-16 16c-17.6 0-32 14.4-32 32 0 8.8-7.2 16-16 16z"
+    ></path>
 </svg>
 ```
 
@@ -64,14 +72,12 @@ São aqueles usados para transmitir um significado, ao invés de apenas decoraç
 
 Se os ícones tiverem significado semântico, é preciso adicionar manualmente algumas coisas para que ele seja acessado apropriadamente:
 
-* Atributo `aria-hidden` .
-* Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado
+-   Atributo `aria-hidden`.
+-   Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado
+    para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
+-   Atributo `title` no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
 
-  para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
-
-* Atributo `title` no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
-
-``` html
+```html
 <i aria-hidden class="fas fa-car" title="Time to destination by car"></i>
 <span class="sr-only">Time to destination by car:</span>
 <span>4 minutes</span>
@@ -79,19 +85,19 @@ Se os ícones tiverem significado semântico, é preciso adicionar manualmente a
 
 No caso de elementos interativos focalizáveis, existem várias opções para incluir um texto ou rótulo alternativo ao elemento, sem a necessidade de qualquer ocultação visual `<span>` ou semelhante. Por exemplo, simplesmente adicionar o atributo `aria-label` com uma descrição de texto ao próprio elemento interativo será suficiente para fornecer um nome alternativo acessível ao elemento. Se você precisar fornecer uma dica visual (tooltip) em um mouseover/focus, recomendamos usar o atributo `title` ou uma solução de tooltip personalizado.
 
-``` html
+```html
 <a href="path/to/shopping/cart" aria-label="View 3 items in your shopping cart">
     <i aria-hidden class="fas fa-shopping-cart"></i>
 </a>
 ```
 
-``` html
+```html
 <a aria-label="Skip to main navigation" href="#navigation-main">
     <i aria-hidden class="fas fa-bars"></i>
 </a>
 ```
 
-``` html
+```html
 <a aria-label="Delete" class="btn btn-danger" href="path/to/settings">
     <i aria-hidden class="fas fa-trash" title="Delete this item?"></i>
 </a>
@@ -101,26 +107,67 @@ No caso de elementos interativos focalizáveis, existem várias opções para in
 
 Obter a acessibilidade correta pode ser difícil. Por isso, Font Awesome simplifica o processo com o recurso de acessibilidade automática. Usando um pouco de JS, adicionando elementos e atributos no HTML de suporte para que os ícones fiquem acessíveis ao público mais amplo possível.
 
-Se o ícone tiver significado semântico, coloque um atributo `title=“meaning”` . A acessibilidade automática cuida do resto, adicionando o seguinte:
+Se o ícone tiver significado semântico, coloque um atributo `title=“meaning”`. A acessibilidade automática cuida do resto, adicionando o seguinte:
 
 • Função ARIA adequada ( `role=“img”` )
 • Tag `title` com um atributo `id` adequado
-• Atributo `aria-labelledby` e conecte-o à uma tag `title` 
+• Atributo `aria-labelledby` e conecte-o à uma tag `title`
 
-``` html
+```html
 <i title="Magic is included!" class="fas fa-magic"></i>
 ```
 
-``` html
-<svg title="Magic is included!" class="svg-inline--fa fa-magic fa-w-16" aria-labelledby="svg-inline--fa-title-1" data-fa-i2svg="" data-prefix="fas" data-icon="magic" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+```html
+<svg
+    title="Magic is included!"
+    class="svg-inline--fa fa-magic fa-w-16"
+    aria-labelledby="svg-inline--fa-title-1"
+    data-fa-i2svg=""
+    data-prefix="fas"
+    data-icon="magic"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+>
     <title id="svg-inline--fa-title-1">Magic is included!</title>
-    <path fill="currentColor" d="M101.1 505L7 410.9c-9.4-9.4-9.4-24.6 0-33.9L377 7c9.4-9.4 24.6-9.4 33.9 0l94.1 94.1c9.4 9.4 9.4 24.6 0 33.9L135 505c-9.3 9.3-24.5 9.3-33.9 0zM304 159.2l48.8 48.8 89.9-89.9-48.8-48.8-89.9 89.9zM138.9 39.3l-11.7 23.8-26.2 3.8c-4.7.7-6.6 6.5-3.2 9.8l19 18.5-4.5 26.1c-.8 4.7 4.1 8.3 8.3 6.1L144 115l23.4 12.3c4.2 2.2 9.1-1.4 8.3-6.1l-4.5-26.1 19-18.5c3.4-3.3 1.5-9.1-3.2-9.8L160.8 63l-11.7-23.8c-2-4.1-8.1-4.1-10.2.1zm97.7-20.7l-7.8 15.8-17.5 2.6c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4L240 69l15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-3-5.4-3-6.8-.1zm-192 0l-7.8 15.8L19.3 37c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4L48 69l15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-3-5.4-3-6.8-.1zm416 223.5l-7.8 15.8-17.5 2.5c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4l15.6-8.2 15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-2.8-5.4-2.8-6.8 0z"></path>
+    <path
+        fill="currentColor"
+        d="M101.1 505L7 410.9c-9.4-9.4-9.4-24.6 0-33.9L377 7c9.4-9.4 24.6-9.4 33.9 0l94.1 94.1c9.4 9.4 9.4 24.6 0 33.9L135 505c-9.3 9.3-24.5 9.3-33.9 0zM304 159.2l48.8 48.8 89.9-89.9-48.8-48.8-89.9 89.9zM138.9 39.3l-11.7 23.8-26.2 3.8c-4.7.7-6.6 6.5-3.2 9.8l19 18.5-4.5 26.1c-.8 4.7 4.1 8.3 8.3 6.1L144 115l23.4 12.3c4.2 2.2 9.1-1.4 8.3-6.1l-4.5-26.1 19-18.5c3.4-3.3 1.5-9.1-3.2-9.8L160.8 63l-11.7-23.8c-2-4.1-8.1-4.1-10.2.1zm97.7-20.7l-7.8 15.8-17.5 2.6c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4L240 69l15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-3-5.4-3-6.8-.1zm-192 0l-7.8 15.8L19.3 37c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4L48 69l15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-3-5.4-3-6.8-.1zm416 223.5l-7.8 15.8-17.5 2.5c-3.1.5-4.4 4.3-2.1 6.5l12.6 12.3-3 17.4c-.5 3.1 2.8 5.5 5.6 4l15.6-8.2 15.6 8.2c2.8 1.5 6.1-.9 5.6-4l-3-17.4 12.6-12.3c2.3-2.2 1-6.1-2.1-6.5l-17.5-2.5-7.8-15.8c-1.4-2.8-5.4-2.8-6.8 0z"
+    ></path>
 </svg>
 ```
 
 ### Reutilização e Colaboração
 
-Interfaces digitais do governo devem ser reutilizáveis pelos diversidade serviços disponíveis, sendo assim o uso da Font Awesome facilita esse reuso, por ser mais fácil de implementar. Caso haja necessidade podem ser incluídos novos ícones, porém é necessário consultar a tabela de orientações de uso, para verificar se já a funcionalidade já foi atribuída a algum ícone e também se há algum dentro do .É interessante que haja um trabalho em conjunto de criação e validação entre a equipe que vai propor novos ícones e a equipe de design para que sejam preservadas as características do padrão gráfico do Design System.
+Interfaces digitais do governo devem ser reutilizáveis pelos diversidade serviços disponíveis, sendo assim o uso da Font Awesome facilita esse reuso, por ser mais fácil de implementar. Caso haja necessidade podem ser incluídos novos ícones, porém é necessário consultar a tabela de orientações de uso, para verificar se já a funcionalidade já foi atribuída a algum ícone e também se há algum dentro do . É interessante que haja um trabalho em conjunto de criação e validação entre a equipe que vai propor novos ícones e a equipe de design para que sejam preservadas as características do padrão gráfico do Design System.
+
+---
+
+## Font Awesome
+
+[Font Awesome](https://fontawesome.com/) é um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi feito por Dave Gandy para uso com o Twitter Bootstrap e mais tarde foi incorporado no BootstrapCDN.
+
+A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.
+
+No final desse documento foi incluído as **orientações de uso** de alguns dos ícones e essa tabela deve ser seguida para que haja consistência entre os sistemas do governo.
+
+Atualmente no DS Gov são utilizados 2 estilos disponíveis: **Solid** e a **Brand**.
+
+### Estilo Solid
+
+Estilo padrão. Pode ser utilizado em todas as situações que necessitam do uso de ícones.
+
+![Exemplo FontAwesome Solid](imagens/fontawesome.png)
+_Alguns ícones da Font Awesome Solid_
+
+### Estilo Brand
+
+Estilo muito parecido com o Solid, porém, são limitados, pois são voltados para representações das marcas atuais no mercado, inclusive das redes-sociais.
+
+![Exemplo FontAwesome Brand](imagens/fontawesome-brand.png)
+_Alguns ícones da Font Awesome Brand_
+
+Caso nao encontre o ícone adequado nesta bibioteca (ou nos estilos mencionados acima), utilize as instruções descritas em **Ícones Personalizados**.
 
 ---
 
@@ -131,6 +178,7 @@ Em algumas situações, a família Font Awesome pode não suprir todas as necess
 Veja alguns ícones criados abaixo utilizando alguns desses modos:
 
 ![Imagem do Ícone de Certificado Digital e do NEOID](imagens/icones-criados.png)
+_Exemplo de ícones personalizados_
 
 ## Anatomia e Comportamento
 
@@ -139,10 +187,11 @@ Veja alguns ícones criados abaixo utilizando alguns desses modos:
 Os ícones da Font Awesome foram determinados dentro de uma grid de 20x16px. Então, caso haja necessidade de criar novos ícones deve-se seguir essa mesma grid para que sejam conservadas as proporções e características estéticas dos mesmos.
 
 ![Grid Font Awesome](imagens/grid-fontawesome.png)
+_Grid utilizado para criação de ícones personalizados baseados na Font Awesome_
 
 ### Tamanho Padrão no Design System
 
-O tamanho base para os ícones possui o valor de corpo **16px**. Seguindo os seguintes design tokens e escala na propriedade `font-size` :
+O tamanho base para os ícones possui o valor de corpo **16px**. Seguindo os seguintes design tokens e escala na propriedade `font-size`:
 
 | Token Icon Size  | Value         |
 | ---------------- | ------------- |
@@ -187,6 +236,7 @@ Os ícones interativos devem possuir uma área mínima de interação (mesmo nos
 Utilizada em interfaces não tácteis, como por exemplo, dispositivos que utilizam o mouse. Essa deve ser de no mínimo 24x24px.
 
 ![Imagem mostrando Tamanho Area Clique: 24 x 24px](imagens/area-minima-clique.png)
+_Especificação de área mínima para cliques_
 
 #### Área de Toque
 
@@ -195,12 +245,13 @@ A área de toque dos ícones determina que além da área ocupada pelo ícone h�
 A área de toque deve ser de 48x48px, garantindo que a experiência do usuário seja satisfatória no momento de acessar as funcionalidades através dos ícones, em dispositivos móveis ou artefatos digitais.
 
 ![Imagem mostrando a área de toque dos ícones: 48 x 48px](imagens/area-minima-toque.png)
+_Especificação de área mínima para toques_
 
 ---
 
 ## Orientação de Uso
 
-As principais funcionalidades dos sistemas do governo foram mapeadas e foram atribuídas a cada uma delas um símbolo representativo - os ícones da versão sólida da FontAwesome.É fundamental que os desenvolvedores e designers utilizem os ícones abaixo com mesma ação que lhe foi atribuída, Isso garante que cada sistema acessado pelo cidadão utilize o mesma linguagem e significado, tornando mais rápida a experiência e o reconhecimento do público ao acessar as funcionalidades dos diversos sistemas do governo federal.
+As principais funcionalidades dos sistemas do governo foram mapeadas e foram atribuídas a cada uma delas um símbolo representativo - os ícones da versão sólida da FontAwesome. É fundamental que os desenvolvedores e designers utilizem os ícones abaixo com mesma ação que lhe foi atribuída, Isso garante que cada sistema acessado pelo cidadão utilize o mesma linguagem e significado, tornando mais rápida a experiência e o reconhecimento do público ao acessar as funcionalidades dos diversos sistemas do governo federal.
 
 | Ícone                                       | Ação                                    | Classe (Font Awesome)   |
 | ------------------------------------------- | --------------------------------------- | ----------------------- |
@@ -262,4 +313,3 @@ As principais funcionalidades dos sistemas do governo foram mapeadas e foram atr
 | <i class="fas fa-share-square"></i>         | Exportar Arquivo/Documento              | fa-share-square         |
 | <i class="fas fa-share"></i>                | Enviar                                  | fa-share                |
 | <i class="fas fa-clipboard-list"></i>       | Fiscalizar                              | fa-clipboard-list       |
-
