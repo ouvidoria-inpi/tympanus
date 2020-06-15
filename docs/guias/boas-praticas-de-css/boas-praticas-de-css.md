@@ -186,7 +186,7 @@ Os novos editores de texto possuem linters nativos ou disponíveis como extensõ
 -   <https://github.com/gajus/css-lint>
 -   <https://github.com/sasstools/sass-lint>
 
-No DSGOV é usado o linter `stylelint` . Ele pode ser utilizado através do script `npm run validate:sass` .
+No DSGOV é usado o linter `stylelint` . Ele pode ser utilizado através do script `npm run lint:styles` .
 
 Ele também está configurado como pipeline de desenvolvimento dentro do positório git, ou seja, sempre que um novo código seja inserido/atualizado ele será ativado.
 
