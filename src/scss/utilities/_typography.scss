@@ -133,6 +133,7 @@ blockquote {
 }
 
 // Tabela padrão
+// stylelint-disable
 table {
   border-collapse: collapse;
   width: 100%;
@@ -164,6 +165,7 @@ table {
     }
   }
 }
+// stylelint-enable
 
 // Formulários
 label,
