@@ -2,6 +2,7 @@
 body {
   --font-size: #{$font-size-scale-base};
   --text-color: #{$color-secondary-08};
+  --bg-color: #{$color-secondary-01};
   --font-weight: #{$font-weight-regular};
   --line-height: #{font-line-height-medium};
   color: v(text-color);
@@ -54,6 +55,8 @@ h1,
 .h1 {
   font-size: v(font-size-scale-up-06);
   font-weight: v(font-weight-regular);
+}
+h1 {
   line-height: v(font-line-height-low);
   margin-bottom: 32px;
   margin-top: 0;
@@ -62,6 +65,8 @@ h2,
 .h2 {
   font-size: v(font-size-scale-up-05);
   font-weight: v(font-weight-regular);
+}
+h2 {
   line-height: v(font-line-height-low);
   margin-bottom: 20px;
   margin-top: 28px;
@@ -70,6 +75,8 @@ h3,
 .h3 {
   font-size: v(font-size-scale-up-04);
   font-weight: v(font-weight-regular);
+}
+h3 {
   line-height: v(font-line-height-low);
   margin-bottom: 20px;
   margin-top: 28px;
@@ -78,6 +85,8 @@ h4,
 .h4 {
   font-size: v(font-size-scale-up-03);
   font-weight: v(font-weight-regular);
+}
+h4 {
   line-height: v(font-line-height-low);
   margin-bottom: 20px;
   margin-top: 28px;
@@ -86,6 +95,8 @@ h5,
 .h5 {
   font-size: v(font-size-scale-up-02);
   font-weight: v(font-weight-semi-bold);
+}
+h5 {
   line-height: v(font-line-height-low);
   margin-bottom: 16px;
   margin-top: 28px;
@@ -94,6 +105,8 @@ h6,
 .h6 {
   font-size: v(font-size-scale-up-01);
   font-weight: v(font-weight-semi-bold);
+}
+h6 {
   line-height: v(font-line-height-low);
   margin-bottom: 16px;
   margin-top: 28px;
