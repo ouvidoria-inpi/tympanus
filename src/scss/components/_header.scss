@@ -772,10 +772,10 @@
           white-space: nowrap;
         }
       }
-      .popmenu[active] {
-        ul {
-          margin-top: $spacer;
-        }
+    }
+    .popmenu[active] {
+      ul {
+        margin-top: $spacer*3;
       }
     }
   }
