@@ -25,7 +25,7 @@
   &.is-call-to-action,
   &.action,
   &[action] {
-    @media (min-width: $grid-breakpoint-small) {
+    @include media-breakpoint-up(sm) {
       min-width: 220px;
     }
     background: v(color-highlight);

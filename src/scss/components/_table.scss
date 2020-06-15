@@ -20,16 +20,16 @@ $column-gap: 6px;
   }
   .top-bar {
     align-items: center;
-    background-color: v(color-secondary-03,$color-secondary-03);
+    background-color: v(color-secondary-03, $color-secondary-03);
     display: flex;
     height: $column-height;
     padding-left: $column-spacing;
     padding-right: $column-spacing;
     .title {
       flex-grow: 1;
-      line-height:  v(font-line-height-medium,$font-line-height-medium);
-      font-size: v(font-size-scale-up-02,$font-size-scale-up-02);
-      font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
+      line-height: v(font-line-height-medium, $font-line-height-medium);
+      font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
+      font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
     }
     .br-button {
       border-color: transparent;
@@ -40,7 +40,7 @@ $column-gap: 6px;
       }
     }
     .divisor {
-      border-right: 1px solid v(color-secondary-04,$color-secondary-04);
+      border-right: 1px solid v(color-secondary-04, $color-secondary-04);
       height: 1.5em;
       margin: 0 5px 0 5px;
     }
@@ -85,7 +85,7 @@ $column-gap: 6px;
           outline: none;
           &:focus,
           &:hover {
-            color: v(color-primary-default,$color-primary-default);
+            color: v(color-primary-default, $color-primary-default);
           }
           &:hover {
             background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
@@ -96,7 +96,7 @@ $column-gap: 6px;
   }
   .search-bar {
     align-items: center;
-    background-color: v(color-primary-default,$color-primary-default);
+    background-color: v(color-primary-default, $color-primary-default);
     bottom: 0;
     display: flex;
     height: 0;
@@ -111,7 +111,7 @@ $column-gap: 6px;
     .search-close {
       background-color: transparent;
       border-color: transparent;
-      color: v(color-secondary-01,$color-secondary-01);
+      color: v(color-secondary-01, $color-secondary-01);
     }
     .br-input {
       flex-grow: 1;
@@ -128,7 +128,7 @@ $column-gap: 6px;
   }
   .selected-bar {
     align-items: center;
-    background-color: v(color-primary-default,$color-primary-default);
+    background-color: v(color-primary-default, $color-primary-default);
     bottom: 0;
     display: flex;
     height: 0;
@@ -149,7 +149,7 @@ $column-gap: 6px;
       display: flex;
       align-items: center;
       .select-all {
-        font-size: v(font-size-scale-up-03,$font-size-scale-up-03);
+        font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
         margin-right: 4px;
         padding: 0;
       }
@@ -157,7 +157,7 @@ $column-gap: 6px;
     .text,
     .count {
       padding-right: 4px;
-      line-height:  v(font-line-height-low,$font-line-height-low);
+      line-height: v(font-line-height-low, $font-line-height-low);
       color: v(color-secondary-01, $color-secondary-01);
     }
     button {
@@ -203,25 +203,24 @@ $column-gap: 6px;
         }
       }
       &.is-selected {
-        background: v(color-primary-lighten-01,$color-primary-lighten-01);
+        background: v(color-primary-lighten-01, $color-primary-lighten-01);
         color: v(color-secondary-01, $color-secondary-01);
         &.is-hover,
-        &:hover,
-          {
-            background: v(color-primary-lighten-01,$color-primary-lighten-01);
-            color: v(color-secondary-01, $color-secondary-01)!important;
-          }
+        &:hover {
+          background: v(color-primary-lighten-01, $color-primary-lighten-01);
+          color: v(color-secondary-01, $color-secondary-01) !important;
+        }
       }
       &.is-hover,
       &:hover {
-        background-color: v(color-primary-pastel-02,$color-primary-pastel-02);
+        background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
         color: v(color-secondary-07, $color-secondary-07);
       }
     }
     th {
-      color: v(color-primary-darken-01,$color-primary-darken-01);
+      color: v(color-primary-darken-01, $color-primary-darken-01);
       display: none;
-      font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
+      font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
       padding-left: $column-spacing;
       padding-right: $column-spacing;
     }
@@ -229,10 +228,10 @@ $column-gap: 6px;
       display: block;
       padding: $column-spacing * 0.5 $column-spacing;
       &::before {
-        color: v(color-primary-darken-01,$color-primary-darken-01);
+        color: v(color-primary-darken-01, $color-primary-darken-01);
         content: attr(data-th);
         display: block;
-        font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
+        font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
       }
       .col-collapse,
       .col-collapse:hover,
@@ -303,19 +302,19 @@ $column-gap: 6px;
   }
   .br-select {
     .select-selected {
-      color: v(color-primary-lighten-01,$color-primary-lighten-01);
+      color: v(color-primary-lighten-01, $color-primary-lighten-01);
       border-radius: 0;
       border-color: transparent;
       padding-left: 8px;
       padding-right: 8px;
-      [class*="fa-"] {
+      [class*='fa-'] {
         margin-left: 8px;
       }
       &:focus {
         box-shadow: none;
       }
       &:hover {
-        border-bottom-color: v(color-primary-lighten-01,$color-primary-lighten-01);
+        border-bottom-color: v(color-primary-lighten-01, $color-primary-lighten-01);
       }
     }
     .select-items {
@@ -343,8 +342,8 @@ $column-gap: 6px;
     .top-bar {
       background-color: v(color-secondary-01, $color-secondary-01);
       title {
-        line-height: v(font-line-height-medium,$font-line-height-medium);
-        font-size:v(font-size-scale-up-03,$font-size-scale-up-03);
+        line-height: v(font-line-height-medium, $font-line-height-medium);
+        font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
       }
       .grid-small-trigger,
       .grid-large-trigger,
@@ -377,8 +376,8 @@ $column-gap: 6px;
         }
         &::after {
           background-color: transparent;
-          color: v(color-secondary-04,$color-secondary-04);
-          content: "|";
+          color: v(color-secondary-04, $color-secondary-04);
+          content: '|';
           height: auto;
           width: auto;
         }
@@ -400,7 +399,7 @@ $column-gap: 6px;
       overflow: auto;
     }
     .headers {
-      background-color: v(color-secondary-03,$color-secondary-03);
+      background-color: v(color-secondary-03, $color-secondary-03);
       display: block;
       overflow-y: hidden;
       position: sticky;
@@ -413,8 +412,8 @@ $column-gap: 6px;
         overflow-x: hidden;
       }
       .item {
-        color: v(color-primary-darken-01,$color-primary-darken-01);
-        font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
+        color: v(color-primary-darken-01, $color-primary-darken-01);
+        font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
         padding: $column-gap * 2;
         white-space: nowrap;
         .br-checkbox {
@@ -433,11 +432,11 @@ $column-gap: 6px;
       margin-top: -$column-height;
       width: 100%;
       th {
-        background-color: v(color-secondary-03,$color-secondary-03);
+        background-color: v(color-secondary-03, $color-secondary-03);
         display: table-cell;
       }
       td {
-        border-bottom: 1px solid v(color-primary-pastel-01,$color-primary-pastel-01);
+        border-bottom: 1px solid v(color-primary-pastel-01, $color-primary-pastel-01);
         display: table-cell;
       }
       tr {
@@ -455,8 +454,8 @@ $column-gap: 6px;
         }
         &.is-hover,
         &:hover {
-          background: v(color-primary-pastel-02,$color-primary-pastel-02);
-          color:  v(color-primary-darken-01,$color-primary-darken-01);
+          background: v(color-primary-pastel-02, $color-primary-pastel-02);
+          color: v(color-primary-darken-01, $color-primary-darken-01);
         }
       }
       thead {
@@ -506,7 +505,7 @@ $column-gap: 6px;
         tbody {
           tr {
             &.hover {
-              background-color: v(color-primary-pastel-02,$color-primary-pastel-02);
+              background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
             }
           }
         }
@@ -548,7 +547,7 @@ $column-gap: 6px;
       }
     }
   }
-  @media (max-width: 575px) {
+  @include media-breakpoint-up(sm) {
     .responsive {
       table {
         thead {
