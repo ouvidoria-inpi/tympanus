@@ -132,6 +132,39 @@ blockquote {
   }
 }
 
+// Tabela padrão
+table {
+  border-collapse: collapse;
+  width: 100%;
+  tr {
+    height: 56px;
+  }
+  th,
+  td {
+    padding: $spacer $spacer * 2;
+    &:not([align]) {
+      text-align: left;
+    }
+  }
+  thead {
+    th {
+      background-color: v(color-secondary-03);
+      color: v(color-primary-darken-01);
+    }
+  }
+  tbody {
+    tr {
+      @include hover;
+    }
+    th,
+    td {
+      @include media-breakpoint-up(sm) {
+        border-bottom: 1px solid v(color-primary-pastel-01);
+      }
+    }
+  }
+}
+
 // Formulários
 label,
 .label {
@@ -164,4 +197,20 @@ textarea,
 // Help
 .help {
   font-size: v(font-size-scale-base);
+}
+
+// Exemplo de código
+code {
+  background: v(status-highlight-background)
+    linear-gradient(v(status-highlight-overlay), v(status-highlight-overlay));
+  border-radius: 4px;
+  color: v(status-highlight-text);
+  padding: 0 4px;
+}
+pre {
+  margin: $spacer * 2 0 $spacer * 4;
+  padding: $spacer * 2;
+  code {
+    padding: 0;
+  }
 }
