@@ -3,7 +3,7 @@
 ## Como usar
 
 ```html
-<div class="br-card" [draggable="true/false" flipped="on|off" expanded="on|off"] [disabled]>
+<div class="br-card" [draggable="true/false" flipped="on|off" expanded="on|off" ] [disabled]>
     <div class="front">
         <div class="header">...</div>
         <div class="content">...</div>
@@ -35,10 +35,10 @@
 
 ### Atributos opcionais
 
-| Atributo   | Tipo   | Valor padrão | Descrição                               |
-| ---------- | ------ | ------------ | --------------------------------------- |
-| `flipped`  | String | "off"        | Incluir para Cards do tipo "flip"       |
-| `expanded` | String | "off"        | Incluir para Cards do tipo "expansão"   |
+| Atributo   | Tipo   | Valor padrão | Descrição                             |
+| ---------- | ------ | ------------ | ------------------------------------- |
+| `flipped`  | String | "off"        | Incluir para Cards do tipo "flip"     |
+| `expanded` | String | "off"        | Incluir para Cards do tipo "expansão" |
 
 ### Estados
 
@@ -54,10 +54,10 @@ class BRCard { ... }
 
 #### Configurações obrigatórias
 
-| Classe     | Descrição                                |
-| ---------- | ---------------------------------------- |
-| `flip`    | Incluir no `button` que trata o flip     |
-| `expand`  | Incluir no `button` que trata a expansão |
+| Classe   | Descrição                                |
+| -------- | ---------------------------------------- |
+| `flip`   | Incluir no `button` que trata o flip     |
+| `expand` | Incluir no `button` que trata a expansão |
 
 #### Configurações Adicionais
 
@@ -67,6 +67,6 @@ class BRCard { ... }
 
 ## Dependências
 
-| Internas                              | Externas |
-| ------------------------------------- | -------- |
-| [dropzone](/ds/components/dropzone)   |          |
+| Internas                            | Externas |
+| ----------------------------------- | -------- |
+| [dropzone](/ds/components/dropzone) |          |

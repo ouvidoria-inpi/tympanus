@@ -215,19 +215,19 @@ O footer é um elemento usado apenas no Menu Principal. Dentro deste elemento us
 
 ## Estados
 
-* `hover`: É aplicado automaticamente ao item;
+-   `hover`: É aplicado automaticamente ao item;
 
-* `foco`: É aplicado automaticamente ao item;
+-   `foco`: É aplicado automaticamente ao item;
 
-* `ativo`: É aplicado automaticamente ao item através do atributo `active`;
+-   `ativo`: É aplicado automaticamente ao item através do atributo `active`;
 
-* `ancorado`: É aplicado ao item com endereço ativo da página atual através do atributo `linked`;
+-   `ancorado`: É aplicado ao item com endereço ativo da página atual através do atributo `linked`;
 
-* `desabilitado`: É aplicado ao item quando possuir o atributo `disabled`.
+-   `desabilitado`: É aplicado ao item quando possuir o atributo `disabled`.
 
 Exemplo de uso:
 
-``` html
+```html
 <a class="item" active>
     <div class="content">Item de menu</div>
     <div class="support">
@@ -240,20 +240,20 @@ Exemplo de uso:
 
 ### Nageção pelos elementos folder em múltiplos menus
 
-- Quando houver mais de um menu, ao carregar o componente, o último menu será visualizado na forma expandida, enquanto os demais serão retraídos.
-- Ao se expandir um menu (folder) os demais serão retraídos.
-- Ao se navegar pelos subníveis de um menu, este será visualizado unicamente no componente, ocultando os demais. Contudo, caso se clique no grupo do menu, ao se retrair, os demais deverão ser visualizados.
+-   Quando houver mais de um menu, ao carregar o componente, o último menu será visualizado na forma expandida, enquanto os demais serão retraídos.
+-   Ao se expandir um menu (folder) os demais serão retraídos.
+-   Ao se navegar pelos subníveis de um menu, este será visualizado unicamente no componente, ocultando os demais. Contudo, caso se clique no grupo do menu, ao se retrair, os demais deverão ser visualizados.
 
 ### Nageção pelos subníveis de um menu
 
-- Ao se clicar num item que possua subníveis, este se tornará ativo e serão ocultados os itens adjacentes, mostrando apenas os itens internos ao ativo.
-- Um item desabilitado (disabled) não pode ser clicado e ocultará seus subníveis, caso existam.
+-   Ao se clicar num item que possua subníveis, este se tornará ativo e serão ocultados os itens adjacentes, mostrando apenas os itens internos ao ativo.
+-   Um item desabilitado (disabled) não pode ser clicado e ocultará seus subníveis, caso existam.
 
 ### Estados adicionais controlados por script
 
-- O atributo `hidden` é usado pelo script nas tags de lista para controlar a visualização dos subitens. Exemplo de uso:
+-   O atributo `hidden` é usado pelo script nas tags de lista para controlar a visualização dos subitens. Exemplo de uso:
 
-``` html
+```html
 <li>
     <a class="item">
         <div class="content">Conteúdo</div>
@@ -262,16 +262,22 @@ Exemplo de uso:
         </div>
     </a>
     <ul hidden>
-        <li><a class="item"><div class="content">Imagens</div></a></li>
-        <li><a class="item"><div class="content">Videos</div></a></li>
-        <li><a class="item"><div class="content">Áudios</div></a></li>
+        <li>
+            <a class="item"><div class="content">Imagens</div></a>
+        </li>
+        <li>
+            <a class="item"><div class="content">Videos</div></a>
+        </li>
+        <li>
+            <a class="item"><div class="content">Áudios</div></a>
+        </li>
     </ul>
 </li>
 ```
 
-- O atributo `linked` deve ser aplicado ao item do menu para associá-lo ao endereço de página ativo. Para que o menu seja previamente carregado no nivel do item ancorado, deve-se associar o atributo `linked` ao referido item. Ao se realizar essa ação dinamicamente por script deve-se chamar a função `_showLinked` do componente. Exemplo de uso:
+-   O atributo `linked` deve ser aplicado ao item do menu para associá-lo ao endereço de página ativo. Para que o menu seja previamente carregado no nivel do item ancorado, deve-se associar o atributo `linked` ao referido item. Ao se realizar essa ação dinamicamente por script deve-se chamar a função `_showLinked` do componente. Exemplo de uso:
 
-``` html
+```html
 <a class="item" linked>
     <div class="content">Item de menu</div>
     <div class="support">

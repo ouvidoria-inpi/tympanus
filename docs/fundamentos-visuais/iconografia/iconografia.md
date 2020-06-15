@@ -1,7 +1,5 @@
 [version]: # '6.2.0'
 
-# Iconografia
-
 Os ícones são representações gráficas que podem simbolizar uma ação, comunicar ao usuário possibilidades de mudanças de estados entre os elementos de uma interface ou apenas ser uma representacao gráfica de uma ação ou informação textual. No caso do Design System, foi escolhida a coleção de ícones **"Font Awesome"** (versão 5.10.2) por possuírem uma boa variedade de ícones com um layout simples, sintético e amigável.
 
 ---

@@ -90,7 +90,6 @@ Exemplo de uso:
 </div>
 ```
 
-
 # Estados
 
 Este componente apresenta os seguintes estados:
