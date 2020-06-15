@@ -35,6 +35,11 @@
         "folder": "iconografia"
       },
       {
+        "label": "Espaçamento",
+        "filename": "espacamento",
+        "folder": "espacamento"
+      },
+      {
         "label": "Estados",
         "filename": "estados",
         "folder": "estados"
@@ -220,6 +225,17 @@
     "id": "components",
     "label": "Componentes",
     "type": "component"
+  },
+  {
+    "id": "templates",
+    "label": "Templates",
+    "type": "template",
+    "children": [
+      {
+        "label": "Base",
+        "filename": "base"
+      }
+    ]
   },
   {
     "filename": "release-notes",

@@ -100,8 +100,7 @@ Os _cards_ são flexíveis e por isso não possuem dimensões fixas. No entanto,
 
 _Cards_ podem possuir diversos comportamentos próprios. A seguir, listamos os mais usuais:
 
-### Flip
-
+###_Flip_
 _Cards_ podem apresentar conteúdo na sua superfície frontal assim como no seu verso. O verso do _card_ é apresentado em cor cinza escuro e trabalha com os elementos em versão negativa. O verso do _card_ é útil quando for necessário apresentar informações complementares que não necessitem estar visíveis e podem ser acionadas com um simples clique em qualquer área do _card_ (desde que não seja em um elemento interativo). Chamamos essa ação de **_flip_**. Para retornar à superfície frontal deve-se proceder da mesma forma.
 Por se tratar de um recurso de complemento de informação, o verso deve ser mais conciso e objetivo que a superfície frontal, evitando-se elementos complexos e interativos (normalmente utiliza-se textos e/ou imagens).
 
