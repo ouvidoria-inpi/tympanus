@@ -1,2 +1,1 @@
-Elemento usado para seleção simultânea e possui um texto de orientação que auxilia a escolha do usuário.
-
+O componente Checkbox permite selecionar uma ou mais opções em uma lista de opções.

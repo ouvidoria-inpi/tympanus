@@ -20,34 +20,30 @@
 
 #### Atualizados
 
--   Fndamento Cores
 -   Componente Accordion
 -   Componente Avatar
 -   Componente Breadcrumb
 -   Componente Button
 -   Componente Checkbox
--   Componente Checkbox
 -   Componente Input
 -   Componente List
 -   Componente Message
 -   Componente Modal
+-   Componente Radio
 -   Componente Radiobutton
 -   Componente Scrim
 -   Componente Table
 -   Componente Textarea
 -   Componente Upload
--   Componente Input
--   Componente Mensagem
 -   Documentação Acessibilidade no Código HTML
 -   Documentação Boas Práticas de CSS
 -   Documentação Boas Práticas de HTML
 -   Documentação Codificação Javascript
 -   Documentação Como Começar
 -   Documentação Contrução de Componentes
--   Documentação de Design do componente Datepicker/Timepicker
--   Documentação de Design do componente Select
 -   Documentação Utilitários de CSS
+-   Fundamento Cores
 -   Fundamento Grid
--   Fundamento Ícones
+-   Fundamento Iconografia
 -   Fundamento Tipografia
 -   Grid usada pelo DSGOV
