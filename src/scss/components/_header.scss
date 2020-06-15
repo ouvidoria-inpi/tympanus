@@ -699,6 +699,7 @@
     }
     .actions {
       display: flex;
+      position: relative;
       flex-wrap: nowrap;
       .links,
       .functions,
@@ -738,15 +739,17 @@
       }
     }
     &[compact],
+    &.sticky[compact],
     &[compact][no-logo] {
       .flex-container {
         flex-wrap: wrap;
         padding-top: $spacer*2;
+        padding-bottom: $spacer;
       }
       .logo {
-        left: $spacer*2;
+        left: $spacer;
         order: 1;
-        position: unset;
+        position: relative;
         margin-top: 0;
         display: flex;
         align-items: center;
@@ -767,6 +770,7 @@
       .actions { 
         order: 2;
         align-self: flex-end;
+        margin-top: 6px;
         min-width: calc( 100% - 80px);
         ul {
           white-space: nowrap;
