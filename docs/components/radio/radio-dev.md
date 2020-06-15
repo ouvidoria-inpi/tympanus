@@ -1,114 +1,76 @@
+## Como usar
+
+### HTML
+
+```html
+    <div class="container-fluid">
+      <div class="description">
+        <p class="title-radiobutton">....</p>
+        <p class="auxiliary-text">...</p>
+      </div>
+      <div class="list-options">
+        <div class="br-radio pb-5 pr-5 ml-3 d-inline-block">
+          <input id="h-radio-default" type="radio" name="selecione">
+          <label for="h-radio-default">Padrão</label>
+        </div>
+        <div class="br-radio pb-5 pr-5 ml-3 d-inline-block">
+          <input id="h-radio-checked" type="radio" name="selecione" checked>
+          <label for="h-radio-checked">Checado</label>
+        </div>
+      </div>
+    </div>
+```
+
+
+#### Propriedades obrigatórias
+
+| Tag    | Atributo     | Valor padrão  | Descrição                                             |
+| ------ | ------------ | ------------  | ----------------------------------------------------  |
+| div    | class        | br-radio      | Container do componente (posição vertical é o padrão) |
+| div    | class        | list-options  | Container que engloba a caixa e item de opção         |
+| div    | class        | pb-5 pr-5 ml-3| Espaçamento do radio button horizontal                |
+| div    | class        | pb-5 pr-5     | Espaçamento do radio button vertical                  |
+| input  | type         | radio         | Caixa de opção (radio button)                         |
+| input  | id           |v-s-radio-default| Identificador da caixa de opção (radio  button)     |
+| label  | for          |v-s-radio-default| Identificador do texto descritivo (label)           |
+
+
+#### Propriedades Adicionais
+
+| Tag    | Atributo | Valor padrão      | Descrição                                             |
+|------- | -------- | ----------------- | ----------------------------------------------------  |
+| div    | class    | d-inline-block    | Classe utilizada para radio button horizontal         |
+| div    | class    |col-sm-4 pb-5 pr-5 | Engloba/faz o espaçamento do container do radio button |
+| div    | class    | descripton        | Container que engloba o título e texto auxiliar       |
+| div    | class    | title-radio       | Título do radio button                                |
+| div    | class    | auxiliary-text    | Texto auxiliar (complementar do título do radio button)|
+| div    | class    | feedback          | Container de mensagem de retorno(válid ou inválido)   |
+| div    | class    | is-small          | Transforma a caixa de opção em tamanho menor          |
+
+#### Estados
+
+| Estado        | Atributo    | Valor       | Descrição                                            |
+| --------------| ------------|-------------| -----------------------------------------------------|
+| Checado       | atributo    | checked     | Caixa de opção aplicada como checada                 |
+| Inválido      | classe      | is-invalid  | Indica um radio button e um feedback inválido        |
+| Válido        | classe      | is-valid    | Indica um radio button e um feedback válido          |
+| Desabilitado  | atributo    | disabled    | Desabilita a opção de seleção do radio button        |
+| Destaque(hover)|pseudo-classe| :hover     | Aplicado automaticamente para realçar o elemento     |
+
+### Javascript
+
+Poderá ser desenvolvido conforme a necessidade do usuário final.
+
+#### Configurações obrigatórias
+
+- Utilizar o elemento com a classe `"br-radio"` e inicializar o construtor do componente.
+
+#### Configurações Adicionais
+
+- Para fazer uma descrição do componente radio button, use a classe `"description"` que engloba as classes `"title-radio"` (Título do radio button) e `"auxiliary-text"` (texto auxiliar). Lembrando que esse item é opcional.
+
+
+
 ## Dependências
 
-Nenhuma dependência.
-
-## Código básico
-
-``` html
-<div class="br-radio">
-    <input id="h-radio-default" type="radio" name="selecione">
-    <label for="h-radio-default">Padrão</label>
-</div>
-```
-
-## Detalhamento
-
-Este componente é formado pelos seguintes elementos:
-
-* `br-radio` : container do componente
-
-A natureza de comportamento do componente é `inline-block` . Isso significa que ao usar vários checkbox ou radio button em sequência eles ficarão lado a lado.
-
-### Alinhamento vertical
-
-Você poderá modificar o comportamento padrão do `br-radio` usando as classes **Display** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/display/](https://getbootstrap.com/docs/4.3/utilities/display/). A aplicação deve ser feita diretamente no elemento. O exemplo a seguir configura os checkboxes um abaixo do outro:
-
-Exemplo de uso:
-
-``` html
-<div class="br-radio d-block">...</div>
-<div class="br-radio d-block mb-1">...</div>
-```
-
-## Estados
-
-### `hover`
-
-* É aplicado automaticamente no elemento
-
-### `checked`
-
-* É aplicado automaticamente no elemento quando possuir o atributo `checked` 
-
-Exemplo de uso:
-
-``` html
-<div class="br-radio">
-    <input ... checked>
-    <label ...>
-</div>
-```
-
-### `disabled`
-
-* É aplicado automaticamente no elemento quando possuir o atributo `disabled` 
-
-Exemplo de uso:
-
-``` html
-<div class="br-radio">
-    <input ... disabled>
-    <label ...>
-</div>
-```
-
-### `invalid` e `valid` 
-
-* Deve ser aplicado no componente usando o prefixo `is-` 
-
-Exemplo de uso:
-
-``` html
-<div class="br-radio is-invalid">...</div>
-<div class="br-radio is-valid">...</div>
-```
-
-## Regras especiais
-
-### Espaçamentos
-
-O espaçamento entre vários `br-radio` , seja ele horizontal ou vertical, deverá ser feito de forma manual. Recomendamos o uso do utilitário **Spacing** do Bootstrap - [https://getbootstrap.com/docs/4.3/utilities/spacing/](https://getbootstrap.com/docs/4.3/utilities/spacing/).
-
-Exemplo de espaçamento horizontal entre checkboxes:
-
-``` html
-<div class="br-radio">...</div>
-<div class="br-radio ml-sm-7">...</div>
-<div class="br-radio ml-sm-7">...</div>
-```
-
-Exemplo de espaçamento vertical entre radio buttons:
-
-``` html
-<div class="br-radio d-block">...</div>
-<div class="br-radio d-block mb-1">...</div>
-<div class="br-radio d-block mb-1">...</div>
-```
-
-O espaçamento horizontal para o componente na orientação vertical deve ser feito usando a grid.
-
-Exemplo de uso:
-
-``` html
-<div class="row">
-    <div class="col">
-        <div class="br-radio d-block">...</div>
-        <div class="br-radio d-block mb-1">...</div>
-    </div>
-    <div class="col">
-        <div class="br-radio d-block">...</div>
-        <div class="br-radio d-block mb-1">...</div>
-    </div>
-</div>
-```
-
+Não há dependências.
