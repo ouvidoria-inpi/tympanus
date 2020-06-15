@@ -1,4 +1,4 @@
-[version]: # '1.0.0'
+[version]: # '1.0.1'
 
 ![Exemplo Componente](imagens/footer-type-standard.png)
 
@@ -64,17 +64,18 @@ Esta área é destinada à utilização a logo do sistema ou portal, respeitando
 
 #### 2- Área Mapa do Site
 
-O Mapa do Site é formado pela junção de vários componentes list (lista). Cada lista deverá ser organizado de duas em duas colunas, respeitando as definições de espaçamento e alinhamento propostos, mantendo uma melhor organização quanto à responsividade.
+O Mapa do Site é formado pela junção de vários componentes List (lista). Cada lista deverá está inserida na grid utilizando 2, 3, 4, 8 ou 12 colunas, respeitando as definições de espaçamento e alinhamento propostos, mantendo uma melhor organização quanto à responsividade.
 
 **IMPORTANTE:** Caso o mapa do site apresentado esteja muito extenso, correndo o risco de se tornar pesado e difícil de usar, será necessária a criação de um mapa completo do site em uma página separada e vinculá-lo ao _footer_ (Rodapé), que é geralmente onde os usuários esperam encontrar esse link.
 
 ![Exemplo Anatomia](imagens/footer-sitemap.png)
+_Exemplo de list usada de 2 em 2 colunas_
 
 **IMPORTANTE:** O componente List, em todos os ítens que o compõe, possui a altura definida como comportamento de densidade.
 
 ##### Mapa do Site - Adição de Novas Listas
 
-Sempre que houver a necessidade de adicionar novas listas, estes deverão ser organizados à baixo mantendo as especificações de espaçamento já definidas nos tokens.
+Sempre que houver a necessidade de adicionar novas listas, estes deverão ser organizados à baixo mantendo as especificações de colunas e de espaçamento já definidas nos tokens.
 
 ![Exemplo Anatomia](imagens/footer-add-sitemap.png)
 

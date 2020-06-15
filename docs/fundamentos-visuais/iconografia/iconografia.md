@@ -1,18 +1,8 @@
-[artefato fonte de design]: # 'iconografia_6.1.0.xd'
+[version]: # '6.2.0'
 
-Os ícones são representações gráficas que podem simbolizar uma ação ou comunicar ao usuário possibilidades de mudanças de estados entre os elementos de uma interface. No caso do Design System, foi escolhida a coleção de ícones **"Font Awesome Solid"** (versão 5.10.2) por possuírem uma boa variedade de ícones com um layout simples, sintético e amigável.
+# Iconografia
 
----
-
-## Font Awesome Solid 5.10.2
-
-[Font Awesome](https://fontawesome.com/) é um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi feito por Dave Gandy para uso com o Twitter Bootstrap e mais tarde foi incorporado no BootstrapCDN.
-
-A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.
-
-No final desse documento foi incluído as **orientações de uso** de alguns dos ícones e essa tabela deve ser seguida para que haja consistência entre os sistemas do governo.
-
-![Exemplo FontAwesome](imagens/fontawesome.png)
+Os ícones são representações gráficas que podem simbolizar uma ação, comunicar ao usuário possibilidades de mudanças de estados entre os elementos de uma interface ou apenas ser uma representacao gráfica de uma ação ou informação textual. No caso do Design System, foi escolhida a coleção de ícones **"Font Awesome"** (versão 5.10.2) por possuírem uma boa variedade de ícones com um layout simples, sintético e amigável.
 
 ---
 
@@ -20,11 +10,17 @@ No final desse documento foi incluído as **orientações de uso** de alguns dos
 
 ### Experiência Única
 
-Além da diversidade foi considerado que a Font Awesome traria uma padronização no visual dos ícones bastante importante no processo de reconhecimento e memorização dos usuários. Optou-se pelo uso da **versão solid** (style prefix: `fas` ), então as características gráficas, como preenchimento, peso visual devem ser preservadas no momento de construção de novos ícones. Espera-se por tanto, que o padrão gráfico dos ícones por ser utilizado em vários sistemas do governo federal, passe a exercer um papel importante no reconhecimento dos usuários, no que diz respeito a interfaces governamentais. Sendo assim, é imprescindível que o designer e o desenvolvedor priorizem a utilização dos ícones, como demonstrado na tabela de orientações de uso.É fundamental atribuir os significados recomendados na tabela, evitando duplo sentido e facilitando o reconhecimento e memorização do usuário.
+Além da diversidade foi considerado que a Font Awesome traria uma padronização no visual dos ícones bastante importante no processo de reconhecimento e memorização dos usuários. Optou-se pelo uso dos **estilos solid** (style prefix: `fas`) e a **brand** (style prefix: `fab`), então as características gráficas, como preenchimento, peso visual devem ser preservadas no momento de construção de novos ícones.
+
+Espera-se por tanto, que o padrão gráfico dos ícones por ser utilizado em vários sistemas do governo federal, passe a exercer um papel importante no reconhecimento dos usuários, no que diz respeito a interfaces governamentais.
+
+Sendo assim, é imprescindível que o designer e o desenvolvedor priorizem a utilização dos ícones, como demonstrado na **Tabela de Orientações de Uso**. É fundamental atribuir os significados recomendados na tabela, evitando duplo sentido e facilitando o reconhecimento e memorização do usuário.
 
 ### Eficiência e Clareza
 
-Os ícones da Font Awesome possuem um desenho sintético, porém de fácil compreensão, e devem exercer o papel de auxiliar ao usuário na execução de uma ação ou na representação de um serviço.É fundamental que a escolha do ícone para representar uma ideia, ação, ou serviço leve em consideração a experiência do usuário esteja sempre alinhada ao contexto cultural do Brasil, e que seja de fácil reconhecimento público. Para uma melhor legibilidade é recomendado que quando possível um label ou hint apareça ao lado do ícone reforçando a ideia a que foi atribuído.
+Os ícones da Font Awesome possuem um desenho sintético, porém de fácil compreensão, e devem exercer o papel de auxiliar ao usuário na execução de uma ação ou na representação de um serviço. É fundamental que a escolha do ícone para representar uma ideia, ação, ou serviço leve em consideração a experiência do usuário esteja sempre alinhada ao contexto cultural do Brasil, e que seja de fácil reconhecimento público.
+
+Para uma melhor legibilidade é recomendado que quando possível um label ou hint apareça ao lado do ícone reforçando a ideia a que foi atribuído.
 
 ### Acessibilidade
 
@@ -76,8 +72,9 @@ São aqueles usados para transmitir um significado, ao invés de apenas decoraç
 
 Se os ícones tiverem significado semântico, é preciso adicionar manualmente algumas coisas para que ele seja acessado apropriadamente:
 
--   Atributo `aria-hidden` .
--   Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
+-   Atributo `aria-hidden`.
+-   Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado
+    para ocultar visualmente o elemento, mantendo- o acessível a tecnologias assistivas.
 -   Atributo `title` no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
 
 ```html
@@ -110,11 +107,11 @@ No caso de elementos interativos focalizáveis, existem várias opções para in
 
 Obter a acessibilidade correta pode ser difícil. Por isso, Font Awesome simplifica o processo com o recurso de acessibilidade automática. Usando um pouco de JS, adicionando elementos e atributos no HTML de suporte para que os ícones fiquem acessíveis ao público mais amplo possível.
 
-Se o ícone tiver significado semântico, coloque um atributo `title=“meaning”` . A acessibilidade automática cuida do resto, adicionando o seguinte:
+Se o ícone tiver significado semântico, coloque um atributo `title=“meaning”`. A acessibilidade automática cuida do resto, adicionando o seguinte:
 
--   Função ARIA adequada ( `role=“img”` )
--   Tag `title` com um atributo `id` adequado
--   Atributo `aria-labelledby` e conecte-o à uma tag `title`
+• Função ARIA adequada ( `role=“img”` )
+• Tag `title` com um atributo `id` adequado
+• Atributo `aria-labelledby` e conecte-o à uma tag `title`
 
 ```html
 <i title="Magic is included!" class="fas fa-magic"></i>
@@ -142,7 +139,35 @@ Se o ícone tiver significado semântico, coloque um atributo `title=“meaning�
 
 ### Reutilização e Colaboração
 
-Interfaces digitais do governo devem ser reutilizáveis pelos diversidade serviços disponíveis, sendo assim o uso da Font Awesome facilita esse reuso, por ser mais fácil de implementar. Caso haja necessidade podem ser incluídos novos ícones, porém é necessário consultar a tabela de orientações de uso, para verificar se já a funcionalidade já foi atribuída a algum ícone e também se há algum dentro do .É interessante que haja um trabalho em conjunto de criação e validação entre a equipe que vai propor novos ícones e a equipe de design para que sejam preservadas as características do padrão gráfico do Design System.
+Interfaces digitais do governo devem ser reutilizáveis pelos diversidade serviços disponíveis, sendo assim o uso da Font Awesome facilita esse reuso, por ser mais fácil de implementar. Caso haja necessidade podem ser incluídos novos ícones, porém é necessário consultar a tabela de orientações de uso, para verificar se já a funcionalidade já foi atribuída a algum ícone e também se há algum dentro do . É interessante que haja um trabalho em conjunto de criação e validação entre a equipe que vai propor novos ícones e a equipe de design para que sejam preservadas as características do padrão gráfico do Design System.
+
+---
+
+## Font Awesome
+
+[Font Awesome](https://fontawesome.com/) é um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi feito por Dave Gandy para uso com o Twitter Bootstrap e mais tarde foi incorporado no BootstrapCDN.
+
+A versão 5.10.2 possui uma grande quantidade de ícones. Foram expostos aqui, apenas alguns, para que se tenha ideia da variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos aqui expostos, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode ser desenhado um novo, desde que siga o mesmo padrão visual e passe pela validação da equipe de Design.
+
+No final desse documento foi incluído as **orientações de uso** de alguns dos ícones e essa tabela deve ser seguida para que haja consistência entre os sistemas do governo.
+
+Atualmente no DS Gov são utilizados 2 estilos disponíveis: **Solid** e a **Brand**.
+
+### Estilo Solid
+
+Estilo padrão. Pode ser utilizado em todas as situações que necessitam do uso de ícones.
+
+![Exemplo FontAwesome Solid](imagens/fontawesome.png)
+_Alguns ícones da Font Awesome Solid_
+
+### Estilo Brand
+
+Estilo muito parecido com o Solid, porém, são limitados, pois são voltados para representações das marcas atuais no mercado, inclusive das redes-sociais.
+
+![Exemplo FontAwesome Brand](imagens/fontawesome-brand.png)
+_Alguns ícones da Font Awesome Brand_
+
+Caso nao encontre o ícone adequado nesta bibioteca (ou nos estilos mencionados acima), utilize as instruções descritas em **Ícones Personalizados**.
 
 ---
 
@@ -153,6 +178,7 @@ Em algumas situações, a família Font Awesome pode não suprir todas as necess
 Veja alguns ícones criados abaixo utilizando alguns desses modos:
 
 ![Imagem do Ícone de Certificado Digital e do NEOID](imagens/icones-criados.png)
+_Exemplo de ícones personalizados_
 
 ## Anatomia e Comportamento
 
@@ -161,10 +187,11 @@ Veja alguns ícones criados abaixo utilizando alguns desses modos:
 Os ícones da Font Awesome foram determinados dentro de uma grid de 20x16px. Então, caso haja necessidade de criar novos ícones deve-se seguir essa mesma grid para que sejam conservadas as proporções e características estéticas dos mesmos.
 
 ![Grid Font Awesome](imagens/grid-fontawesome.png)
+_Grid utilizado para criação de ícones personalizados baseados na Font Awesome_
 
 ### Tamanho Padrão no Design System
 
-O tamanho base para os ícones possui o valor de corpo **16px**. Seguindo os seguintes design tokens e escala na propriedade `font-size` :
+O tamanho base para os ícones possui o valor de corpo **16px**. Seguindo os seguintes design tokens e escala na propriedade `font-size`:
 
 | Token Icon Size  | Value         |
 | ---------------- | ------------- |
@@ -209,6 +236,7 @@ Os ícones interativos devem possuir uma área mínima de interação (mesmo nos
 Utilizada em interfaces não tácteis, como por exemplo, dispositivos que utilizam o mouse. Essa deve ser de no mínimo 24x24px.
 
 ![Imagem mostrando Tamanho Area Clique: 24 x 24px](imagens/area-minima-clique.png)
+_Especificação de área mínima para cliques_
 
 #### Área de Toque
 
@@ -217,12 +245,13 @@ A área de toque dos ícones determina que além da área ocupada pelo ícone h�
 A área de toque deve ser de 48x48px, garantindo que a experiência do usuário seja satisfatória no momento de acessar as funcionalidades através dos ícones, em dispositivos móveis ou artefatos digitais.
 
 ![Imagem mostrando a área de toque dos ícones: 48 x 48px](imagens/area-minima-toque.png)
+_Especificação de área mínima para toques_
 
 ---
 
 ## Orientação de Uso
 
-As principais funcionalidades dos sistemas do governo foram mapeadas e foram atribuídas a cada uma delas um símbolo representativo - os ícones da versão sólida da FontAwesome.É fundamental que os desenvolvedores e designers utilizem os ícones abaixo com mesma ação que lhe foi atribuída, Isso garante que cada sistema acessado pelo cidadão utilize o mesma linguagem e significado, tornando mais rápida a experiência e o reconhecimento do público ao acessar as funcionalidades dos diversos sistemas do governo federal.
+As principais funcionalidades dos sistemas do governo foram mapeadas e foram atribuídas a cada uma delas um símbolo representativo - os ícones da versão sólida da FontAwesome. É fundamental que os desenvolvedores e designers utilizem os ícones abaixo com mesma ação que lhe foi atribuída, Isso garante que cada sistema acessado pelo cidadão utilize o mesma linguagem e significado, tornando mais rápida a experiência e o reconhecimento do público ao acessar as funcionalidades dos diversos sistemas do governo federal.
 
 | Ícone                                       | Ação                                    | Classe (Font Awesome)   |
 | ------------------------------------------- | --------------------------------------- | ----------------------- |
