@@ -12,7 +12,7 @@
           linear-gradient(v(status-focused-overlay), v(status-focused-overlay)) !important;
       }
     }
-  
+
     &:disabled + label {
       cursor: not-allowed;
     }
@@ -24,7 +24,7 @@
       display: inline-block;
       font-weight: v(font-weight-medium);
       min-height: $checkbox-default;
-      padding:  $spacer/2 $checkbox-default + $spacer $spacer $checkbox-default + $spacer; 
+      padding: $spacer/2 $checkbox-default + $spacer $spacer $checkbox-default + $spacer;
       position: relative;
       font-size: v(font-size-scale-up-01);
       &:hover:before {
@@ -85,7 +85,9 @@
   $color-d: v(color-danger, $color-danger);
   $color-s: v(color-success, $color-success);
   @each $state, $color in (invalid, $color-d), (valid, $color-s) {
-    &.is-#{$state}:not(.is-inverted) {
+    &.is-#{$state}:not(.is-inverted):not(.inverted):not([inverted]),
+    &.#{$state}:not(.is-inverted):not(.inverted):not([inverted]),
+    &[#{$state}]:not(.is-inverted):not(.inverted):not([inverted]) {
       input[type='checkbox'] {
         & + label {
           color: $color;
@@ -126,7 +128,9 @@
   }
 
   // Versão pequena
-  &.is-small {
+  &.is-small,
+  &.small,
+  &[small] {
     input[type='checkbox'] {
       // Texto
       & + label {
@@ -151,41 +155,4 @@
       }
     }
   }
-
-  .feedback {
-    font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
-    font-weight: v(font-weight-medium);
-  }
-}
-
-
-
-.with-description {
-  margin: 0;
-}
-
-.description {
-  color: v(color-secondary-08);
-  padding-bottom: 1em;
-  display: block;
-  p{
-    margin-bottom: 0;
-  }
-  .title-checkbox{
-    font-size: v(font-size-scale-base);
-    font-weight: v(font-weight-semi-bold);
-  }
-  .auxiliary-text{
-    font-size: v(font-size-scale-down-01);
-    font-weight: v(font-weight-medium);
-  }
-}
-.list-options{
-  padding: $spacer * 0 $spacer * 5 $spacer * 5 $spacer * 0;
-  height: auto;
-  width: auto;
-}
-
-.feedback{
-  margin-bottom: 8px;
 }
