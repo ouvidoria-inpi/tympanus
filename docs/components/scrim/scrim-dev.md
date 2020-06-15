@@ -4,19 +4,19 @@ Nenhuma dependência.
 
 ## Código básico
 
-``` html
+```html
 <div class="br-scrim is-foco"></div>
 ```
 
 Ou
 
-``` html
+```html
 <div class="br-scrim is-legibilidade"></div>
 ```
 
 Ou
 
-``` html
+```html
 <div class="br-scrim is-inibicao"></div>
 ```
 
@@ -26,13 +26,13 @@ Ou
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-scrim` (obrigatório): container do componente
+-   `br-scrim` (obrigatório): container do componente
 
 A classe `br-scrim` é obrigatória e seu uso deve estar associado com um tipo de scrim:
 
-* `is-foco` : mudança de foco entre um elemento e outro
-* `is-legibilidade` : quando um texto precisa ser aplicado sobre um superfície e o contraste fundo/texto não é suficiente para gerar contraste acessível
-* `is-inibicao` : simular elementos para o estado de desativado
+-   `is-foco` : mudança de foco entre um elemento e outro
+-   `is-legibilidade` : quando um texto precisa ser aplicado sobre um superfície e o contraste fundo/texto não é suficiente para gerar contraste acessível
+-   `is-inibicao` : simular elementos para o estado de desativado
 
 O uso do componente scrim deve feito através de sua aplicação em uma `<div>` por cima dos demais elementos, ou seja, essa classe envolverá os elementos que passarão a receber o efeito scrim.
 
@@ -46,7 +46,7 @@ Usado principalmente quando um novo elemento surge na tela e necessita de uma at
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-scrim is-foco" onclick="off()">
     <div class="br-modal is-medium">
         <div class="br-modal-dialog">
@@ -76,7 +76,7 @@ A legibilidade do texto deve ser feita com o uso da classe `scrim-text` , que se
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-scrim is-legibilidade">
     <div class="img">
         <div class="scrim-text">Texto</div>
@@ -94,7 +94,7 @@ A tag com a classe `br-scrim is-inibicao` , responsável por realizar o correto 
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-scrim is-inibicao">
     Com Scrim Inibição
 </div>
@@ -106,14 +106,13 @@ Exemplo de uso:
 
 O scrim do tipo `is-foco` por padrão possui seu estado inativo. Para definir que está ativo, usar a classe:
 
-* `is-active` 
+-   `is-active`
 
 **Exemplo**:
 
-``` html
+```html
 scrim = document.getElementsByClassName("is-foco")[0]; function on() {
-scrim.classList.add("is-active"); } function off() {
-scrim.classList.remove("is-active"); }
+scrim.classList.add("is-active"); } function off() { scrim.classList.remove("is-active"); }
 ```
 
 ---
@@ -123,4 +122,3 @@ scrim.classList.remove("is-active"); }
 **Cuidado**: ao utilizar o scrim do tipo `is-legibilidade` , não criar obstáculos para o usuário realizar uma busca ou utilizar a área de acessibilidade. Deve existir uma boa justificativa para impedir acesso a essas áreas de suporte.
 
 ---
-

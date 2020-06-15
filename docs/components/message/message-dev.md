@@ -29,7 +29,7 @@ O componente é composto dos seguintes elementos:
 
 Elemento onde deverá ser informado o ícone ilustrativo da mensagem.
 
-O ícone pode ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome  `<i class="fas">` .
+O ícone pode ser uma imagem - `<img src="" alt="">` ou ícone do Fontawesome `<i class="fas">` .
 
 Imagens serão redimensionadas automaticamente dentro do elemento.
 
@@ -186,12 +186,7 @@ Exemplo de uso (invalid):
 <div>
     <div class="br-input is-invalid">
         <label for="invalid">Inválido</label>
-        <input
-            class="is-invalid"
-            id="invalid"
-            type="text"
-            placeholder="Insira um texto"
-        />
+        <input class="is-invalid" id="invalid" type="text" placeholder="Insira um texto" />
     </div>
     <div class="feedback is-invalid">
         <i class="fas fa-times-circle"></i>
@@ -206,12 +201,7 @@ Exemplo de uso (valid):
 <div>
     <div class="br-input is-valid">
         <label for="valid">Válido</label>
-        <input
-            class="is-valid"
-            id="valid"
-            type="text"
-            placeholder="Insira um texto"
-        />
+        <input class="is-valid" id="valid" type="text" placeholder="Insira um texto" />
     </div>
     <div class="feedback is-valid">
         <i class="fas fa-check-circle"></i>
@@ -233,8 +223,7 @@ Exemplo de uso:
 ```html
 <div class="br-message hint">
     <div class="icon">
-        <i class="fas fa-info-circle"></i
-        ><span class="sr-only">Informação!</span>
+        <i class="fas fa-info-circle"></i><span class="sr-only">Informação!</span>
     </div>
     <div class="content">
         <p>

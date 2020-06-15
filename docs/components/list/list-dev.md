@@ -218,7 +218,7 @@ Pode-se aplicar por atributo diretamente ao componente.
 
 <!-- Item com 3 linhas -->
 <div class="br-list" three-lines>
-    <div class="item" >
+    <div class="item">
         <div class="content">Texto do item</div>
     </div>
 </div>
@@ -287,7 +287,7 @@ Surgiu da necessidade do componente footer para criar uma lista agrupada de link
 <div class="br-list" collapsible horizontal two-lines unique>
     <div class="col">
         <a class="item" href="javascript:void(0);" link="">
-            <div class="support"><i class="fas fa-running"></i> </div>
+            <div class="support"><i class="fas fa-running"></i></div>
             <div class="content">Texto de uma linha Texto de uma linha Texto de uma linha</div>
             <div class="support"><i class="fas fa-angle-down"></i></div>
         </a>
@@ -296,9 +296,11 @@ Surgiu da necessidade do componente footer para criar uma lista agrupada de link
                 <div class="content">Texto de uma linha Texto de uma linha Texto de uma linha</div>
             </div>
             <div class="item">
-                <div class="content">Texto de uma linha Texto de uma linha Texto de uma Texto de uma linha</div>
+                <div class="content">
+                    Texto de uma linha Texto de uma linha Texto de uma Texto de uma linha
+                </div>
             </div>
-            <div class="item"> 
+            <div class="item">
                 <div class="content">Texto de uma linha Texto de uma linha Texto de uma linha</div>
             </div>
             <div class="item">

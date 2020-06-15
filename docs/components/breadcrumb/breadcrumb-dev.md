@@ -1,10 +1,10 @@
 ## Dependências
 
-- script **breadcrumb.js**
+-   script **breadcrumb.js**
 
 ## Código básico
 
-``` html
+```html
 <ul class="br-breadcrumb">
     <li class="home">
         <a href="">
@@ -22,10 +22,10 @@
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-breadcrumb` : container do componente
-* `hidden` : classe necessária para controlar o collapse
-* `ul` : tag raiz do componente
-* `li` : cada item do breadcrumb
+-   `br-breadcrumb` : container do componente
+-   `hidden` : classe necessária para controlar o collapse
+-   `ul` : tag raiz do componente
+-   `li` : cada item do breadcrumb
 
 # Estados
 
@@ -36,4 +36,3 @@ Nenhum estado adicional.
 O primeiro item é o `home` .É representado por ícone.
 
 A tela atual deve conter a classe `is-active` .
-

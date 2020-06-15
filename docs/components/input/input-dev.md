@@ -1,10 +1,10 @@
 ## Dependências
 
-* script `inpu.js`
+-   script `inpu.js`
 
 ## Código básico
 
-``` html
+```html
 <div class="br-input">
     <label for="input">Label</label>
     <input id="input" type="text" placeholder="Texto de exemplo" />
@@ -15,12 +15,12 @@
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-input` : container do componente
-* `<label>` : rótulo do input
-* `<input>` : caixa de entrada de dados
-* `icon` : ícone para o `<input>` (opcional)
-* `feedback` : mensagem de feedback
-* `help` : texto de ajuda para o `<input>` (opcional)
+-   `br-input` : container do componente
+-   `<label>` : rótulo do input
+-   `<input>` : caixa de entrada de dados
+-   `icon` : ícone para o `<input>` (opcional)
+-   `feedback` : mensagem de feedback
+-   `help` : texto de ajuda para o `<input>` (opcional)
 
 ## `icon`
 
@@ -32,15 +32,17 @@ Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](h
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input">
     <label for="password">Senha</label>
-    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos">
-    <button class="icon" type="button"><span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i></button>
+    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos" />
+    <button class="icon" type="button">
+        <span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i>
+    </button>
 </div>
 ```
 
-## `feedback` 
+## `feedback`
 
 Em situações de erro ou retorno positivo use o `feedback` . Ele deve ser inserido após a tag do `br-input`.
 
@@ -50,10 +52,10 @@ O feedback também deve possuir a classe `color-danger`.
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input" invalid>
     <label for="input">Senha</label>
-    <input id="input" type="text" placeholder="Texto de exemplo">
+    <input id="input" type="text" placeholder="Texto de exemplo" />
 </div>
 <div class="feedback color-danger">
     <i class="fas fa-times-circle"></i>
@@ -67,11 +69,13 @@ O feedback também deve possuir a classe `color-success`.
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input" valid>
     <label for="password">Senha</label>
-    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos">
-    <button class="icon" type="button"><span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i></button>
+    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos" />
+    <button class="icon" type="button">
+        <span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i>
+    </button>
 </div>
 <div class="feedback color-success">
     <i class="fas fa-check-circle"></i>
@@ -79,17 +83,19 @@ Exemplo de uso:
 </div>
 ```
 
-## `help` 
+## `help`
 
 Uma mensagem de ajuda PODE ser incluída. Ela deve ser inserida depois do `br-input` .
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input">
     <label for="password">Senha</label>
-    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos">
-    <button class="icon" type="button"><span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i></button>
+    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos" />
+    <button class="icon" type="button">
+        <span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i>
+    </button>
 </div>
 <p class="help">Texto auxiliar ao preenchimento, tem a função de previnir erros.</p>
 ```
@@ -98,11 +104,13 @@ Caso exista `feedback`, este deverá ser inserido antes de `help` .
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input" valid>
     <label for="password">Senha</label>
-    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos">
-    <button class="icon" type="button"><span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i></button>
+    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos" />
+    <button class="icon" type="button">
+        <span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i>
+    </button>
 </div>
 <div class="feedback color-success">
     <i class="fas fa-check-circle"></i>
@@ -118,11 +126,14 @@ Para desabilitar o `br-input` basta colocar o attibuto disabled na tag `input`. 
 O campo `help` não aparece em campos desabilitados
 
 Exemplo de uso:
+
 ```html
 <div class="br-input">
     <label for="password">Senha</label>
-    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled>
-    <button class="icon" type="button"><span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i></button>
+    <input id="password" type="password" placeholder="Sua senha de 8 a 11 digitos" disabled />
+    <button class="icon" type="button">
+        <span class="sr-only">Mostrar senha</span><i class="fas fa-eye"></i>
+    </button>
 </div>
 <div class="feedback">
     <i class="fas fa-exclamation-triangle"></i>
@@ -139,6 +150,6 @@ Exemplo de uso:
 ```html
 <div class="br-input" filter>
     <label for="filtro">Filtrar por:</label>
-    <input id="filtro" type="text" placeholder="Pesquisar em notícias">
+    <input id="filtro" type="text" placeholder="Pesquisar em notícias" />
 </div>
 ```
