@@ -38,7 +38,7 @@ validate_styles:
 publish_develop:
   stage: test
   script:
-    - "curl -X POST -k -F token=$TRIGGER_TOKEN -F ref=build/develop https://git.serpro/api/v4/projects/8815/trigger/pipeline"
+    - "curl -X POST -k -F token=$TRIGGER_TOKEN -F ref=develop https://git.serpro/api/v4/projects/8815/trigger/pipeline"
   only:
     - develop
     - build/develop
