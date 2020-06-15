@@ -15,8 +15,8 @@ Os UI Kits foram criados para serem editados com a ferramenta de prototipação 
 ### Para utilizar os UI Kits:
 
 1. Acesse o site da [Adobe](https://www.adobe.com/products/xd.html) para baixar e instalar gratuitamente o Adobe XD.
-2. Faça abaixo o download do ui-kit correspondente à natureza do seu produto.
-3. Abra os arquivos e siga as orientações de uso.
+1. Faça abaixo o download do ui-kit correspondente à natureza do seu produto.
+1. Abra os arquivos e siga as orientações de uso.
 
 ### UI Kit Web
 
@@ -55,4 +55,3 @@ Para melhorarmos os uikits e suas orientações de uso, o seu feedback é muito 
 Conte-nos o que achou do material, se teve algum problema ou necessidade não contemplada e se tem sugestões de melhorias.
 
 Compartilhe conosco os protótipos que você produziu, para garantirmos que você esteja no caminho certo.
-
