@@ -10,3 +10,5 @@ mixin radio(label="Label")
       checked=attributes.checked
       disabled=attributes.disabled)
     label(for=attributes.id)=label
+    if block
+      block
