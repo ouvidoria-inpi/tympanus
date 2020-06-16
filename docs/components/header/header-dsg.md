@@ -26,16 +26,22 @@ A seguir, listamos os grupos de componentes mais frequentemente utilizados:
 8. **Botão Acesso GovBr (Opcional);**
 9. **Componente Avatar (Opcional);**
 10. **Componente Busca (Opcional);**
-11. 12. **Lista Dropdown (Componente Lista) (Opcional).**
+11. **Lista Dropdown (Componente Lista) (Opcional).**
 
-######Cabeçalho Padrão
+### Cabeçalho Padrão
+
 ![Exemplo Anatomia](imagens/header-anatomy-1.png)
-######Cabeçalho Compacto
+
+### Cabeçalho Compacto
+
 ![Exemplo Anatomia](imagens/header-anatomy-2.png)
-######Cabeçalho Mobile
+
+### Cabeçalho Mobile
+
 ![Exemplo Anatomia](imagens/header-anatomy-3.png)
 
-######Lista Dropdown (Componente Lista)
+### Lista Dropdown (Componente Lista)
+
 ![Exemplo Anatomia](imagens/header-anatomy-12.png)
 
 **Atenção:** Nem sempre é necessária a utilização de todos os componentes listados nesse manual porém, em caso de necessidade de inserção de novos componentes no _header_, a equipe de design responsável pelo _Design System_ deverá ser contactada para a realização de um estudo específico para este fim.
@@ -72,11 +78,11 @@ Existem três tamanhos padrão para a logo:
 
 A assinatura serve para identificar uma subcategoria ou descrição relacionada à marca. Descreve uma categoria superior ao título do cabeçalho. Fica localizada ao lado da logo/marca.
 
-###### Com Assinatura
+##### Com Assinatura
 
 ![Exemplo Anatomia](imagens/header-anatomy-signature.png)
 
-###### Sem Assinatura
+##### Sem Assinatura
 
 ![Exemplo Anatomia](imagens/header-anatomy-type-no-signature.png)
 
@@ -88,7 +94,7 @@ A assinatura serve para identificar uma subcategoria ou descrição relacionada 
 
 O _Header_ (Cabeçalho) deve sempre possuir um título que o identifique, ou em casos de páginas internas, que identifique a página atual.
 
-###### Comportamento - Tamanho da Fonte
+##### Comportamento - Tamanho da Fonte
 
 O tamanho da tipografia no título do _Header_ (Cabeçalho) muda conforme se adequa às diferentes resoluções e Grids. Essas mudanças ocorrem nas mudanças de _Breakpoints_.
 
@@ -150,7 +156,7 @@ Quando a quantidade de links não couber no espaço horizontal em decorrência d
 
 ![Exemplo Anatomia](imagens/header-anatomy-links-area.png)
 
-###### Lista Dropdown
+##### Lista Dropdown
 
 O usuário deverá clicar sobre o ícone **ellipsis-v** e uma **Lista Dropdown** aparecerá flutuando sobre o conteúdo. Este elemento corresponde ao **Componente Lista**. Observe o modelo abaixo:
 
@@ -169,7 +175,7 @@ Quando a quantidade de ícones não couber no espaço horizontal em decorrência
 
 ![Exemplo Anatomia](imagens/header-anatomy-functions-area.png)
 
-###### Lista Dropdown
+##### Lista Dropdown
 
 O usuário deverá clicar sobre o ícone **th** e uma **Lista Dropdown** aparecerá flutuando sobre o conteúdo. Este elemento corresponde ao **Componente Lista**. Observe o modelo abaixo:
 
@@ -201,7 +207,7 @@ O Avatar do Usuário consiste em uma imagem (ou ícone, caso o usuário não ten
 
 Há disponível um documento com maiores detalhes do componente Avatar. Por favor consulte-o para mais detalhes.
 
-#### 10. Componente Busca (Opcional);
+#### 10. Componente Busca (Opcional)
 
 Através do Componente Busca o usuário poderá realizar pesquisa no Site/Sistema por palavra-chave. Este elemento é opcional e deve ser usado de acordo com a necessidade de cada Site/Sistema. Abaixo seguem os exemplos de visualização do Componente Busca no Cabeçalho para Desktop, Tablet e Smartphone.
 
@@ -217,12 +223,12 @@ Através do Componente Busca o usuário poderá realizar pesquisa no Site/Sistem
 
 Foram previstos para este _Design System_ dois tipos de _Headers_ (Cabeçalhos), um **Padrão** e outro **Compacto**, como detalhado abaixo:
 
-###### Cabeçalho Padrão
+### Cabeçalho Padrão
 
 Este tipo de cabeçalho é utilizado quando for necessário exibir uma quantidade maior de informações e também quando for necessário dar mais ênfase a marca do site/sistema. Geralmente é mais utilizado em sites ou portais de notícias, mas não é uma exclusividade deste tipo.
 ![Exemplo Componente](imagens/header-anatomy-type-default.png)
 
-###### Cabeçalho Compacto
+#### Cabeçalho Compacto
 
 Este tipo Compacto é mais utilizado quando as informações a serem exibidas forem mais sucintas ou seja necessário dar mais espaço visível à área de conteúdo. Muito utilizado em sistemas, porém não obrigatório.
 ![Exemplo Componente](imagens/header-anatomy-type-compact.png)
@@ -231,7 +237,7 @@ Este tipo Compacto é mais utilizado quando as informações a serem exibidas fo
 
 ## Comportamento
 
-#### 1. Responsividade
+### 1. Responsividade
 
 O componente _Header_ (Cabeçalho) deve se comportar de forma fluida em relação à resolução de tela utilizada. A seguir ilustramos os _Headers_ (Cabeçalhos) para cada _Grid_ disponível.
 
@@ -283,7 +289,7 @@ Basicamente a diferença estre as duas variações é a substituição do compon
 
 A Lista Dropdown aparecerá flutuando sobre o cabeçalho logo abaixo do seu botão de acionamento correspondente. E fechará com um segundo clique no mesmo botão ou clique fora da lista.
 
-###### Lista Dropdown - Desktop e Tablet (Grid de 12 e 8 colunas)
+##### Lista Dropdown - Desktop e Tablet (Grid de 12 e 8 colunas)
 
 Utilize o Componente Lista com densidade para Desktop.
 
@@ -305,7 +311,7 @@ Ao rolar a página para baixo, e chegando na posição de topo inicial, o cabeç
 
 Abaixo seguem alguns exemplos do funcionamento do Sticky Header nas versões **Padrão** e **Compacto**:
 
-###### Sticky Header - Cabeçalho Padrão
+##### Sticky Header - Cabeçalho Padrão
 
 ![Exemplo Componente](imagens/header-behavior-sticky-header-1.png)
 
@@ -625,19 +631,19 @@ Com a **Busca ativa**, o campo de pesquisa ocupará toda largura do Cabeçalho.
 
 **Mudanças na altura do Cabeçalho em decorrência do número de linhas no título:**
 
-###### Cabeçalho Padrão
+#### Cabeçalho Padrão
 
 ![Exemplo Anatomia](imagens/header-behavior-tilte-1.png)
 
 **IMPORTANTE:** Note que o ícone de acionamento do _Menu_ e o _Título do Cabeçalho_ não mudam de posição, apenas o _Título_ cresce para baixo, e o _Container do Cabeçalho_ acompanha o crescimento.
 
-###### Cabeçalho Compacto
+#### Cabeçalho Compacto
 
 ![Exemplo Anatomia](imagens/header-compact-behavior-tilte-2.png)
 
 **IMPORTANTE:** Aqui também o ícone de acionamento do _Menu_ e o _Título do Cabeçalho_ não mudam de posição, apenas o _Título_ cresce para baixo, e o _Container do Cabeçalho_ acompanha o crescimento.
 
-###### Cabeçalho com Subtítulo
+#### Cabeçalho com Subtítulo
 
 ![Exemplo Anatomia](imagens/header-compact-behavior-tilte-subtitle-2.png)
 
