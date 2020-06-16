@@ -1,18 +1,22 @@
 .#{$prefix}header {
   min-width: 320px;
   $logo-mobile-width: 80px;
+  $logo-mobile-height: 40px;
   $logo-desktop-width: 120px;
+  $logo-desktop-height: 48px;
   $logo-compact: 60px;
+  $logo-compact-height: 32px;
+  box-shadow: 0 3px 6px rgba(var(--rgb-secondary-09), 0.16);
+  background: v(color-secondary-01); 
 
-  .container {
-    background: v(color-secondary-01); 
+  .flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
-    box-shadow: 0 3px 6px rgba(var(--rgb-secondary-09), 0.16);
-    padding: $spacer*2 $spacer*5;
+    position: relative; 
+    padding: $spacer*2 0;
+    z-index: 1;
   }
 
   &.sticky {
@@ -21,8 +25,18 @@
     width: 100vw;
     margin-top: 0;
     position: fixed;
-    & + .content {
+    z-index: 1;
+    .flex-container {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    & + div {
       padding-top: 96px;
+      position: relative;
+      z-index: 0;
+    }
+    .menu {
+      display: flex !important;
     }
   }
   
@@ -36,7 +50,7 @@
     display: flex;
     img {
       max-width: $logo-desktop-width;
-      height: auto;
+      max-height: $logo-desktop-height;
     }
     
     // Assinatura (opcional)
@@ -56,10 +70,12 @@
       -webkit-box-orient: vertical; 
     }
   }
+
   // Botões de ação
   .actions {
     max-width: min-content;
     height: 40px;
+    margin-top: 6px;
     order: 2;
     display: flex;
     justify-content: flex-end;
@@ -186,6 +202,7 @@
       order: 4;
       align-items: center;
       padding: 0 $spacer 0 $spacer*3;
+      margin-top: $spacer;
     }
     .popmenu {
       display: none;
@@ -248,12 +265,15 @@
         background: v(color-secondary-02);
         border: 0;
       }
-      button .icon{
-        border-left: 1px solid  v(color-primary-lighten-01);
-        padding-left: $spacer;
-        height: 24px;
-        line-height: 20px;
-        top: 12px;
+      button.icon {
+        top: auto;
+        .icon{
+          border-left: 1px solid  v(color-primary-lighten-01);
+          padding-left: $spacer;
+          height: 24px;
+          line-height: 20px;
+          top: 12px;
+        }
       }
     }
     .search-close {
@@ -265,13 +285,15 @@
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
+      align-items: flex-end;
 
       .search-close {
         max-width: 32px;
+        //height: 40px;
+        margin-bottom: 4px;
         visibility: visible;
         transition: max-width 1s ease-in-out;
-        margin-top: $spacer/2;
+        //margin-top: $spacer/2;
       }
     }
   }
@@ -306,18 +328,19 @@
   //   }
   // }
 
-  &[compact] {
-    .container {
+  &[compact],
+  &.sticky[compact] {
+    .flex-container {
       flex-wrap: nowrap;
       padding-top: $spacer*4;
     }
     .logo {
       position: absolute;
-      left: $spacer*5.5;
+      left: $spacer;
       margin-top: -$spacer*2.5;
       img {
         max-width: $logo-compact;
-        height: auto;
+        max-height: $logo-compact-height;
       }
       .sign {
         display: none;
@@ -335,6 +358,7 @@
     }
     .actions {
       order: 3;
+      margin-top: 0;
       .search-btn {
         display: flex;
         flex-wrap: nowrap;
@@ -398,7 +422,7 @@
   }
 
   &[compact][no-logo] {
-    .container {
+    .flex-container {
       padding-top: $spacer*2;
     }
     .logo {
@@ -475,10 +499,14 @@
   /********************************* */
   // Breakpoint Grid 8 colunas (tablet)
   @include media-breakpoint-down(sm) {
-    .container {
-      padding: $spacer*2 $spacer*3;
+    .flex-container {
+      padding: $spacer*2 0;
     }
 
+    .logo {
+      padding-left: $spacer;
+    }
+  
     .actions {
       flex-grow: 2;
       .links {
@@ -582,7 +610,7 @@
         align-items: center;
         width: 100%;
         height: 48px;
-        margin-top: 5.5em;
+        margin-top: 5em;
         left: 0;
         background: v(color-secondary-01);
         padding: 0 $spacer $spacer $spacer*2;
@@ -603,12 +631,15 @@
         }
       }
     }
+
     [hidden] {
       display: none;
     }
+
     &[compact] {
       .logo {
-        left: $spacer*4;
+        left: 0;
+        padding-left: 0;
       }
       .menu {
         .title {
@@ -637,8 +668,8 @@
   /********************************* */
   // Breakpoint Grid 4 colunas (mobile)
   @include media-breakpoint-down(xs) {
-    .container {
-      padding: $spacer*2;
+    .flex-container {
+      padding: $spacer*2 0;
     }
     .menu {
       width: 100%;
@@ -660,6 +691,7 @@
       }
       img {
         max-width: $logo-mobile-width;
+        max-height: $logo-mobile-height;
       }
     }
     .search {
@@ -668,6 +700,7 @@
     }
     .actions {
       display: flex;
+      position: relative;
       flex-wrap: nowrap;
       .links,
       .functions,
@@ -688,7 +721,7 @@
     &:not([compact]) .popmenu[active]{
       top: $spacer;
       .search {
-        margin-top: 3.2em;
+        margin-top: 4em;
         height: 40px;
         .br-input {
           input {
@@ -707,20 +740,24 @@
       }
     }
     &[compact],
+    &.sticky[compact],
     &[compact][no-logo] {
-      .container {
+      .flex-container {
         flex-wrap: wrap;
         padding-top: $spacer*2;
+        padding-bottom: $spacer;
       }
       .logo {
+        left: $spacer;
         order: 1;
-        position: unset;
+        position: relative;
         margin-top: 0;
         display: flex;
         align-items: center;
         width: $logo-mobile-width;
         img {
           max-width: $logo-mobile-width;
+          max-height: $logo-mobile-height;
         }
       }
       .menu {
@@ -734,15 +771,16 @@
       .actions { 
         order: 2;
         align-self: flex-end;
+        margin-top: 6px;
         min-width: calc( 100% - 80px);
         ul {
           white-space: nowrap;
         }
       }
-      .popmenu[active] {
-        ul {
-          margin-top: $spacer;
-        }
+    }
+    .popmenu[active] {
+      ul {
+        margin-top: $spacer*3;
       }
     }
   }

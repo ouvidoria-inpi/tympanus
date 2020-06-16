@@ -1,69 +1,136 @@
 mixin header
   div(class=prefix+"header")&attributes(attributes)
-    .container
-      if block
-        block
+    if block
+      block
 
 mixin header-default-content
-  .logo
-    //img(src="https://picsum.photos/200/300" alt="logo")
-    img(src="https://www.gov.br/++theme++padrao_govbr/img/govbr-colorido-b.png" alt="logo")
-    .sign Ministério da Ciência e Tecnologia, Inovações e Comunicações
-  .actions
-    .links
-      +button()(circle mini)
-        i.fas.fa-ellipsis-v
-      ul
-        li.title Acesso Rápido
-        li: a(href="javascript:void(0);") Link de acesso 1
-        li: a(href="javascript:void(0);") Link de acesso 2
-        li: a(href="javascript:void(0);") Link de acesso 3
-        li: a(href="javascript:void(0);") Link de acesso 4
-    .functions
-      +button()(circle mini)
-        i.fas.fa-th
-      ul
-        li.title Funcionalidades do Sistema
-        li
-          +button()(circle mini) 
-            i.fas.fa-chart-bar
-            span.text Funcionalidade 1
-        li
-          +button()(circle mini) 
-            i.fas.fa-headset
-            span.text Funcionalidade 2
-        li
+  .container-lg
+    .flex-container
+      .logo
+        //img(src="https://picsum.photos/200/300" alt="logo")
+        img(src="https://www.gov.br/++theme++padrao_govbr/img/govbr-colorido-b.png" alt="logo")
+        .sign Ministério da Ciência e Tecnologia, Inovações e Comunicações
+      .actions
+        .links
           +button()(circle mini)
-            i.fas.fa-comment
-            span.text Funcionalidade 3
-        li
+            i.fas.fa-ellipsis-v
+          ul
+            li.title Acesso Rápido
+            li: a(href="javascript:void(0);") Link de acesso 1
+            li: a(href="javascript:void(0);") Link de acesso 2
+            li: a(href="javascript:void(0);") Link de acesso 3
+            li: a(href="javascript:void(0);") Link de acesso 4
+        .functions
           +button()(circle mini)
-            i.fas.fa-adjust
-            span.text Funcionalidade 4
-    .search-btn
-      +button()(circle mini)
-        i.fas.fa-search
-    .login
-      +button()(mini)
-        i.fas.fa-user
-        span.ml-1 Entrar
-    .avatar
-      +badge()(danger)
-        .icon 5
-        .content
-          +avatar
-            .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
-      //- +button()(mini circle)
-      //-   i.fas.fa-angle-down
-  .menu
-    +button()(circle mini)
-        i.fas.fa-bars
-    .title Sistema Nacional de Laboratórios em Nanotecnologias (SisNANO)
-    .subtitle Subtítulo do Cabeçalho
-  .search
-    +input("")( type="text" class="has-icon" placeholder="O que você procura?")
-      button.icon(type='button')
-        span.icon
+            i.fas.fa-th
+          ul
+            li.title Funcionalidades do Sistema
+            li
+              +button()(circle mini) 
+                i.fas.fa-chart-bar
+                span.text Funcionalidade 1
+            li
+              +button()(circle mini) 
+                i.fas.fa-headset
+                span.text Funcionalidade 2
+            li
+              +button()(circle mini)
+                i.fas.fa-comment
+                span.text Funcionalidade 3
+            li
+              +button()(circle mini)
+                i.fas.fa-adjust
+                span.text Funcionalidade 4
+        .search-btn
+          +button()(circle mini)
+            i.fas.fa-search
+        .login
+          +button()(mini)
+            i.fas.fa-user
+            span.ml-1 Entrar
+        .avatar
+          +badge()(danger)
+            .icon 5
+            .content
+              +avatar
+                .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+          //- +button()(mini circle)
+          //-   i.fas.fa-angle-down
+      .menu
+        +button()(circle mini)
+            i.fas.fa-bars
+        .title Sistema Nacional de Laboratórios em Nanotecnologias (SisNANO)
+        .subtitle Subtítulo do Cabeçalho
+      .search
+        +input("")( type="text" class="has-icon" placeholder="O que você procura?")
+          button.icon(type='button')
+            span.icon
+              i.fas.fa-search
+        +button()(circle mini).search-close
+            i.fas.fa-times
+
+mixin header-base-content
+  .flex-container
+    .logo
+      img(src=`https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-positive.png` alt="logo")
+      .sign Assinatura Padrão do Cabeçalho
+    .actions
+      .links
+        +button()(circle mini)
+          i.fas.fa-ellipsis-v
+        ul
+          li.title Acesso Rápido
+          li: a(href="javascript:void(0);") Link de acesso 1
+          li: a(href="javascript:void(0);") Link de acesso 2
+          li: a(href="javascript:void(0);") Link de acesso 3
+          li: a(href="javascript:void(0);") Link de acesso 4
+      .functions
+        +button()(circle mini)
+          i.fas.fa-th
+        ul
+          li.title Funcionalidades do Sistema
+          li
+            +button()(circle mini) 
+              i.fas.fa-chart-bar
+              span.text Funcionalidade 1
+          li
+            +button()(circle mini) 
+              i.fas.fa-headset
+              span.text Funcionalidade 2
+          li
+            +button()(circle mini)
+              i.fas.fa-comment
+              span.text Funcionalidade 3
+          li
+            +button()(circle mini)
+              i.fas.fa-adjust
+              span.text Funcionalidade 4
+      .search-btn
+        +button()(circle mini)
           i.fas.fa-search
-    +button()(circle mini).search-close
-        i.fas.fa-times
+      .login
+        +button()(mini)
+          i.fas.fa-user
+          span.ml-1 Entrar
+      a(href="javascript:void(0)").avatar
+        +badge()(danger)
+          .icon 5
+          .content
+            +avatar
+              .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+      //- +notification()()
+      //-   +notification-filler
+        //- +button()(mini circle)
+        //-   i.fas.fa-angle-down
+    .menu
+      +button()(circle mini)
+          i.fas.fa-bars
+      .title Título Padrão do Cabeçalho
+      .subtitle Subtítulo do Cabeçalho
+    .search
+      +input("")( type="text" class="has-icon" placeholder="O que você procura?")
+        button.icon(type='button')
+          span.icon
+            i.fas.fa-search
+      +button()(circle mini).search-close
+          i.fas.fa-times

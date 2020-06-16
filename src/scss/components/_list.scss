@@ -22,11 +22,10 @@
   }
   // Lista dentro de lista
   & & {
-    background-image: linear-gradient(transparent, rgba(v(rgb-secondary-06), 0.24)),
-      linear-gradient(rgba(v(rgb-secondary-06), 0.24), transparent);
-    background-position: bottom, top;
-    background-repeat: no-repeat;
-    background-size: 100% 9px;
+    // background-image: linear-gradient(transparent, rgba(v(rgb-secondary-06), 0.24)), linear-gradient(rgba(v(rgb-secondary-06), 0.24), transparent);
+    // background-position: bottom, top;
+    // background-repeat: no-repeat;
+    // background-size: 100% 9px;
     max-height: 0;
     overflow: hidden;
     transition: all 400ms ease-in-out;

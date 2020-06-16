@@ -227,16 +227,16 @@
     "type": "component"
   },
   {
-    "id": "templates",
-    "label": "Templates",
-    "type": "template",
-    "children": [
-      {
-        "label": "Base",
-        "filename": "base"
-      }
-    ]
-  },
+		"children": [
+			{
+				"label": "Template Base",
+				"filename": "base"
+			}
+		],
+		"id": "templates",
+		"label": "Templates",
+		"type": "templates"
+	},
   {
     "filename": "release-notes",
     "id": "release-notes",
