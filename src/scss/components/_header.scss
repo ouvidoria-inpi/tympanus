@@ -289,7 +289,8 @@
 
       .search-close {
         max-width: 32px;
-        height: 40px;
+        //height: 40px;
+        margin-bottom: 4px;
         visibility: visible;
         transition: max-width 1s ease-in-out;
         //margin-top: $spacer/2;

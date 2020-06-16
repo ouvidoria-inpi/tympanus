@@ -1,4 +1,19 @@
 .template-base {
+  .accessibility-links {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    a {
+      position: absolute;
+      top: -9999px;
+      z-index: 9999;
+      &:focus {
+        top: 0;
+      }
+    }
+  }
+
   .#{$prefix}header {
     z-index: 1;
     position: relative;
@@ -66,6 +81,7 @@
       .#{$prefix}menu {
       max-width: 100%;
       width: fit-content;
+      width: -moz-fit-content;
       height: 100Vh;
       transition: all .5s ease-in-out;
         @include media-breakpoint-down(sm) {
@@ -99,6 +115,7 @@
         max-height: 50vh;
         width: 100%;
         min-height: fit-content;
+        min-height: -moz-fit-content;
       }
       &[show] {
         //height: fit-content;
