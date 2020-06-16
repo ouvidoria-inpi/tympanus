@@ -17,14 +17,13 @@ block template
       +header-base-content
   .container-lg
     .row
-      .context-menu.col-sm-6.col-md-4
-        #context-nav
-          +menu
-            a.header
-              .support
-                i.fas.fa-angle-up
-              .content Menu Contextual
-            +menu-auxiliar-content
+      .context-menu.col-sm-6.col-md-4#context-nav
+        +menu
+          a.header
+            .support
+              i.fas.fa-angle-up
+            .content Menu Contextual
+          +menu-auxiliar-content
       .col.container-main
         +breadcrumb
           +crumb("Tela Anterior")
