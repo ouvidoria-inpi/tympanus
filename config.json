@@ -182,8 +182,8 @@
         "filename": "pagination"
       },
       {
-        "label": "Radio",
-        "filename": "radio"
+        "label": "Radio Button",
+        "filename": "radiobutton"
       },
       {
         "label": "Scrim",

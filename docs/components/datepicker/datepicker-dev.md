@@ -1,12 +1,12 @@
 ## Dependências
 
-* script `datepicker.min.js` (código minificado do componente [js-datepicker](https://www.npmjs.com/package/js-datepicker))
-* script `datepicker-dsgov.js` (código de regionalização e customização do componente)
-* componente `br-input` , o Datepicker é uma extensão do componente Input
+-   script `datepicker.min.js` (código minificado do componente [js-datepicker](https://www.npmjs.com/package/js-datepicker))
+-   script `datepicker-dsgov.js` (código de regionalização e customização do componente)
+-   componente `br-input` , o Datepicker é uma extensão do componente Input
 
 ## Código básico
 
-``` html
+```html
 <div class="br-input br-datepicker">
     <label for="picker">Data</label>
     <input id="picker" type="text" placeholder="dd/mm/aaaa" />
@@ -31,14 +31,14 @@
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-input br-datepicker` : container do componente
-* `<label>` : rótulo do input
-* `<input>` : caixa de entrada de dados
-* `<button>` : botão com ícone para o `<input>` 
-* `feedback` : mensagem de feedback
-* `help` : Texto de ajuda para o `<input>` (opcional)
+-   `br-input br-datepicker` : container do componente
+-   `<label>` : rótulo do input
+-   `<input>` : caixa de entrada de dados
+-   `<button>` : botão com ícone para o `<input>`
+-   `feedback` : mensagem de feedback
+-   `help` : Texto de ajuda para o `<input>` (opcional)
 
-## `<button>` 
+## `<button>`
 
 O input datepicker tem um botão com ícone do Fontawesome - `<i class="fas.fa-calendar-alt">` .
 
@@ -46,7 +46,7 @@ Para conhecer os ícones do Fontawesome veja o link [https://fontawesome.com/](h
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input br-datepicker">
     <label for="datepicker">Data</label>
     <input id="datepicker" type="text" />
@@ -56,7 +56,7 @@ Exemplo de uso:
 </div>
 ```
 
-## `feedback` 
+## `feedback`
 
 Em situações de erro ou retorno positivo use o `feedback` . Ele deve ser inserido imediatamente após o `br-input` .
 
@@ -64,7 +64,7 @@ O texto de feedback deve ser inserido dentro de `message` .
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input br-datepicker is-invalid">
     <label for="date-feedback-invalid">Input com erro</label>
     <input id="date-feedback-invalid" type="text" />
@@ -76,13 +76,13 @@ Exemplo de uso:
 </div>
 ```
 
-## `help` 
+## `help`
 
 Uma mensagem de ajuda PODE ser incluída. Ela deve ser inserida imediatamente após o `br-input` .
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input br-datepicker">
     <label for="date-help">Label</label>
     <input id="date-help" type="text" placeholder="dd/mm/aaaa" />
@@ -97,11 +97,11 @@ Exemplo de uso:
 
 Este componente apresenta os seguintes estados:
 
-* valid
-* invalid
-* disabled
+-   valid
+-   invalid
+-   disabled
 
-## `valid` 
+## `valid`
 
 DEVE ser aplicado diretamente usando o prefixo `is-` ao container do componente.
 
@@ -109,7 +109,7 @@ O `feedback is-valid` deve ser incluído imediatamente após o componente com o 
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input br-datepicker is-valid">
     <label for="valido">Válido</label>
     <input id="valido" type="text" placeholder="dd/mm/aaaa" />
@@ -121,7 +121,7 @@ Exemplo de uso:
 </div>
 ```
 
-## `invalid` 
+## `invalid`
 
 DEVE ser aplicado diretamente usando o prefixo `is-` ao container do componente.
 
@@ -131,7 +131,7 @@ Caso exista `help` ele deverá ficar após os `feedbacks` .
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input br-datepicker is-invalid">
     <label for="invalido">Inválido</label>
     <input id="invalido" type="text" placeholder="dd/mm/aaaa" />
@@ -150,16 +150,22 @@ Exemplo de uso:
 </p>
 ```
 
-## `disabled` 
+## `disabled`
 
 DEVE ser aplicado diretamente usando o prefixo `is-` ao container do componente, bem como a propriedade `disabled` no `<input>` .
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-input br-datepicker is-disabled">
     <label for="desabilitado">Desabilitado</label>
-    <input class="br-input br-datepicker" id="desabilitado" type="text" placeholder="dd/mm/aaaa" disabled />
+    <input
+        class="br-input br-datepicker"
+        id="desabilitado"
+        type="text"
+        placeholder="dd/mm/aaaa"
+        disabled
+    />
     <button class="icon"><i class="fas fa-calendar-alt"></i></button>
 </div>
 ```
@@ -174,7 +180,7 @@ Importados os scripts das depedências do componente em sua página, no seu cód
 
 ### HTML:
 
-``` html
+```html
 <div class="br-input br-datepicker">
     <label for="picker">Data</label>
     <input id="picker" type="text" placeholder="dd/mm/aaaa" />
@@ -197,7 +203,7 @@ Importados os scripts das depedências do componente em sua página, no seu cód
 
 ### JS:
 
-``` js
+```js
 // Inicialização do componente
 const dtp_picker = datepicker('#picker', options)
 
@@ -213,7 +219,7 @@ dtp_toggle(dtp_picker_btn, dtp_picker)
 
 No arquivo `datepicker-dsgov.js` foram criadas uma série de customizações a serem usadas nos `options` do componente de forma a padronizar e regionalizar seu uso. Exemplo de uso:
 
-``` js
+```js
 // Mensagens de erro padrão
 const dtp_err1 = 'Data inicial maior que data final ';
 const dtp_err2 = 'Data final maior que data inicial ';
@@ -274,11 +280,10 @@ const dtp_picker = datepicker('#picker', {
 
 Para tanto é necessário manipular o estado `is-disabled` do componente. Contudo, seguindo os exemplos acima, basta chamar as funções disponíveis no `datepicker-dsgov.js` passando a constante que declarou o datepicker:
 
-``` js
+```js
 // Desativar
 dtp_disabler(dtp_picker)
 
 // Ativar
 dtp_enabler(dtp_picker)
 ```
-

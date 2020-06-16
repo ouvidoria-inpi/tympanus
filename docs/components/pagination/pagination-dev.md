@@ -2,48 +2,46 @@
 
 ```html
 <nav>
-  <ul class="br-pagination">
-    <li class="is-first is-disabled">
-      <a href="">
-        <i class="fas fa-angle-double-left"></i>
-        <span>Anterior</span>
-      </a>
-    </li>
-    <li class="d-flex d-sm-none">
-      <label for="page-select-large"
-        ><span class="sr-only">Selecione a página</span></label
-      >
-      <select id="page-select-large">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <span class="ml-2">de</span><a href="">5</a>
-    </li>
-    <li class="is-active">
-      <a href=""><span>1</span></a>
-    </li>
-    <li>
-      <a href=""><span>2</span></a>
-    </li>
-    <li>
-      <a href=""><span>3</span></a>
-    </li>
-    <li>
-      <a href=""><span>4</span></a>
-    </li>
-    <li>
-      <a href=""><span>5</span></a>
-    </li>
-    <li class="is-last">
-      <a href="">
-        <span>Próxima</span>
-        <i class="fas fa-angle-double-right"></i>
-      </a>
-    </li>
-  </ul>
+    <ul class="br-pagination">
+        <li class="is-first is-disabled">
+            <a href="">
+                <i class="fas fa-angle-double-left"></i>
+                <span>Anterior</span>
+            </a>
+        </li>
+        <li class="d-flex d-sm-none">
+            <label for="page-select-large"><span class="sr-only">Selecione a página</span></label>
+            <select id="page-select-large">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <span class="ml-2">de</span><a href="">5</a>
+        </li>
+        <li class="is-active">
+            <a href=""><span>1</span></a>
+        </li>
+        <li>
+            <a href=""><span>2</span></a>
+        </li>
+        <li>
+            <a href=""><span>3</span></a>
+        </li>
+        <li>
+            <a href=""><span>4</span></a>
+        </li>
+        <li>
+            <a href=""><span>5</span></a>
+        </li>
+        <li class="is-last">
+            <a href="">
+                <span>Próxima</span>
+                <i class="fas fa-angle-double-right"></i>
+            </a>
+        </li>
+    </ul>
 </nav>
 ```
 
@@ -51,21 +49,21 @@
 
 ```html
 <nav>
-  <ul class="br-pagination">
-    <li class="is-first">...</li>
-    <li class="d-flex d-sm-none">...</li>
-    <li class="is-active">
-      <a href=""><span>1</span></a>
-    </li>
-    <li>
-      <a href=""><span>2</span></a>
-    </li>
-    <li><span>...</span></li>
-    <li>
-      <a href=""><span>10</span></a>
-    </li>
-    <li class="is-last">...</li>
-  </ul>
+    <ul class="br-pagination">
+        <li class="is-first">...</li>
+        <li class="d-flex d-sm-none">...</li>
+        <li class="is-active">
+            <a href=""><span>1</span></a>
+        </li>
+        <li>
+            <a href=""><span>2</span></a>
+        </li>
+        <li><span>...</span></li>
+        <li>
+            <a href=""><span>10</span></a>
+        </li>
+        <li class="is-last">...</li>
+    </ul>
 </nav>
 ```
 
@@ -77,9 +75,9 @@ O tamanho grande é aplicado com a classe `is-large`. Exemplo:
 
 ```html
 <ul class="br-pagination is-large">
-  <li>...</li>
-  <li>...</li>
-  <li>...</li>
+    <li>...</li>
+    <li>...</li>
+    <li>...</li>
 </ul>
 ```
 
@@ -93,9 +91,9 @@ Você poderá modificar o comportamento padrão usando as classes de **Justify c
 
 ```html
 <nav>
-  <ul class="br-pagination justify-content-start">
-    ...
-  </ul>
+    <ul class="br-pagination justify-content-start">
+        ...
+    </ul>
 </nav>
 ```
 

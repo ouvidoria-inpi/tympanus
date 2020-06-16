@@ -4,7 +4,7 @@ Nenhuma dependência.
 
 ## Código básico
 
-``` html
+```html
 <nav class="tab-nav">
     <ul>
         <li class="tab-item">
@@ -36,43 +36,43 @@ Nenhuma dependência.
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-tabs` : container do componente
-* `tab-nav` : container da lista de abas
-* `tab-item` : cada aba da lista
-* `data-panel` : atributo de referência ao painel de conteúdo
-* `name` : nome da aba
-* `tab-content` : container do painel de conteúdo
-* `tab-panel` : cada painel de conteúdo
+-   `br-tabs` : container do componente
+-   `tab-nav` : container da lista de abas
+-   `tab-item` : cada aba da lista
+-   `data-panel` : atributo de referência ao painel de conteúdo
+-   `name` : nome da aba
+-   `tab-content` : container do painel de conteúdo
+-   `tab-panel` : cada painel de conteúdo
 
-## `br-tabs` 
+## `br-tabs`
 
 **Elemento obrigatório**!
 
-Todo o componente Tabs está dentro de uma **div** com a classe `br-tabs` 
+Todo o componente Tabs está dentro de uma **div** com a classe `br-tabs`
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-tabs">
     ...
 </div>
 ```
 
-## `tab-nav` 
+## `tab-nav`
 
 **Elemento obrigatório**!
 
-A lista de abas está dentro de um container de navegação que deve ser escrito com a tag **nav** e a classe `tab-nav` 
+A lista de abas está dentro de um container de navegação que deve ser escrito com a tag **nav** e a classe `tab-nav`
 
 Exemplo de uso:
 
-``` html
+```html
 <nav class="tab-nav">
     ...
 </nav>
 ```
 
-## `tab-item` 
+## `tab-item`
 
 **Elemento obrigatório**!
 
@@ -86,7 +86,7 @@ Para a aba selecionada aplique a classe `is-active` no **li** correspondente.
 
 Exemplo de uso:
 
-``` html
+```html
 <ul>
     <li class="tab-item">
         <button type="button" data-panel="panel-1">...</button>
@@ -100,7 +100,7 @@ Exemplo de uso:
 </ul>
 ```
 
-## `name` 
+## `name`
 
 **Elemento obrigatório**!
 
@@ -108,7 +108,7 @@ Cada aba DEVE ter um nome.
 
 Exemplo de uso:
 
-``` html
+```html
 <ul>
     <li class="tab-item">
         <button type="button" data-panel="panel-1"><span class="name">Sobre</span></button>
@@ -122,29 +122,29 @@ Exemplo de uso:
 </ul>
 ```
 
-## `tab-content` 
+## `tab-content`
 
 **Elemento obrigatório**!
 
-O conteúdo das abas deve ficar em uma **div** com a classe `tab-content` 
+O conteúdo das abas deve ficar em uma **div** com a classe `tab-content`
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="tab-content">
     ...
 </div>
 ```
 
-## `tab-panel` 
+## `tab-panel`
 
 **Elemento obrigatório**!
 
-Cada painel corresponde a uma **div** com a classe `tab-panel` e um *id* para o link com a âncora
+Cada painel corresponde a uma **div** com a classe `tab-panel` e um _id_ para o link com a âncora
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="tab-content">
     <div class="tab-panel" id="panel-1">
         ...
@@ -154,18 +154,22 @@ Exemplo de uso:
 
 ## Código com Contadores
 
-``` html
+```html
 <div class="br-tabs" data-counter="true">
     <nav class="tab-nav">
         <ul>
-            <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
+            <li class="tab-item" not-tab="true">
+                <span class="name">Refine a sua busca</span>
                 <p class="outcome">Resultados<span>124</span></p>
             </li>
             <li class="tab-item">
-                <button type="button" data-panel="panel-7"><span class="name">Todos</span></button><span class="results">( valor )</span>
+                <button type="button" data-panel="panel-7"><span class="name">Todos</span></button
+                ><span class="results">( valor )</span>
             </li>
             <li class="tab-item is-active">
-                <button type="button" data-panel="panel-8"><span class="name">Notícias</span></button><span class="results">( valor )</span>
+                <button type="button" data-panel="panel-8">
+                    <span class="name">Notícias</span></button
+                ><span class="results">( valor )</span>
             </li>
         </ul>
     </nav>
@@ -184,25 +188,25 @@ Exemplo de uso:
 
 Essa versão possui os seguintes itens adicionais
 
-* `data-counter` - Atributo para ativar o contador
-* `not-tab` - Elemento que não se comporta como aba
-* `results` - Elemento que mostra a contagem
+-   `data-counter` - Atributo para ativar o contador
+-   `not-tab` - Elemento que não se comporta como aba
+-   `results` - Elemento que mostra a contagem
 
-## `data-counter` 
+## `data-counter`
 
 **Elemento obrigatório caso queira utilizar contadores**!
 
-Caso seja para utilizar as abas com contador, é necessário utilizar o atributo `data-counter` com o valor **true** na mesma **div** no `br-tas` 
+Caso seja para utilizar as abas com contador, é necessário utilizar o atributo `data-counter` com o valor **true** na mesma **div** no `br-tas`
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-tabs" data-counter="true">
     ...
 </div>
 ```
 
-## `not-tab` 
+## `not-tab`
 
 **Elemento opcional**!
 
@@ -212,35 +216,38 @@ Esse elemento não será clicável
 
 Exemplo de uso:
 
-``` html
+```html
 <nav class="tab-nav">
     <ul>
-        <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
+        <li class="tab-item" not-tab="true">
+            <span class="name">Refine a sua busca</span>
             <p class="outcome">Resultados<span>124</span></p>
         </li>
     </ul>
 </nav>
 ```
 
-## `results` 
+## `results`
 
 **Elemento obrigatório caso queira utilizar contadores**!
 
-Serve para mostrar o contador da aba.É utilizado dentro de um `tab-item` 
+Serve para mostrar o contador da aba.É utilizado dentro de um `tab-item`
 
 Exemplo de uso:
 
-``` html
+```html
 <ul>
-    <li class="tab-item" not-tab="true"><span class="name">Refine a sua busca</span>
+    <li class="tab-item" not-tab="true">
+        <span class="name">Refine a sua busca</span>
         <p class="outcome">Resultados<span>124</span></p>
     </li>
     <li class="tab-item">
-        <button type="button" data-panel="panel-7"><span class="name">Todos</span></button><span class="results">( valor )</span>
+        <button type="button" data-panel="panel-7"><span class="name">Todos</span></button
+        ><span class="results">( valor )</span>
     </li>
     <li class="tab-item is-active">
-        <button type="button" data-panel="panel-8"><span class="name">Notícias</span></button><span class="results">( valor )</span>
+        <button type="button" data-panel="panel-8"><span class="name">Notícias</span></button
+        ><span class="results">( valor )</span>
     </li>
 </ul>
 ```
-

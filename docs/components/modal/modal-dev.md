@@ -2,7 +2,7 @@
 
 O componente deve ser encapsulado pelo componente scrim do tipo foco para que seja visualizado corretamente. Para abrir, controla-se a classe "is-active" por meio de um script.
 
-``` html
+```html
 <div class="br-scrim is-foco">
     ...
 </div>
@@ -10,7 +10,7 @@ O componente deve ser encapsulado pelo componente scrim do tipo foco para que se
 
 ## Código básico
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -35,7 +35,7 @@ O componente deve ser encapsulado pelo componente scrim do tipo foco para que se
 
 ## Código básico com ícone de cancelar (X)
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -65,20 +65,20 @@ O componente deve ser encapsulado pelo componente scrim do tipo foco para que se
 
 Este componente é formado pelos seguintes elementos:
 
-* `br-modal` : container do componente
-* `br-modal-dialog` : caixa de diálogo do modal (card).
-* `br-modal-header` : caixa de cabeçaçho do modal.
-* `br-modal-body` : caixa de conteúdo do modal.
-* `br-modal-footer` : caixa de rodapé/ações do modal.
+-   `br-modal` : container do componente
+-   `br-modal-dialog` : caixa de diálogo do modal (card).
+-   `br-modal-header` : caixa de cabeçaçho do modal.
+-   `br-modal-body` : caixa de conteúdo do modal.
+-   `br-modal-footer` : caixa de rodapé/ações do modal.
 
 ## Variações de tamanho
 
 Estão disponíveis 4 tamanhos de modais. Cada tamanho é aplicado com o prefixo `is-` :
 
-* Muito pequeno `is-xsmall` 
-* Pequeno `is-small` 
-* Medio `is-medium` 
-* Grande `is-large` 
+-   Muito pequeno `is-xsmall`
+-   Pequeno `is-small`
+-   Medio `is-medium`
+-   Grande `is-large`
 
 ### Modal muito pequeno
 
@@ -86,7 +86,7 @@ O modal **Muito pequeno** ocupa o mínimo/máximo de 3 colunas (220px)
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-modal is-xsmall">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -115,7 +115,7 @@ O modal **Pequeno** ocupa o mínimo/máximo de 300px.
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-modal is-small">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -144,7 +144,7 @@ O modal **Médio** ocupa o mínimo/máximo de 500px.
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -173,7 +173,7 @@ O modal **Largo** ocupa o mínimo/máximo 8 colunas(640px).
 
 Exemplo de uso:
 
-``` html
+```html
 <div class="br-modal is-large">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -202,7 +202,7 @@ Exemplo de uso:
 
 O modal pode ter ou não um **Título** de acordo com a necessidade. Para remover o cabeçalho/título de um modal basta remover o elemento `br-modal-header` e seu conteúdo, que possui o seguinte código:
 
-``` html
+```html
 <div class="br-modal-header">
     <h2 class="br-modal-title">Título</h2>
 </div>
@@ -210,7 +210,7 @@ O modal pode ter ou não um **Título** de acordo com a necessidade. Para remove
 
 Exemplo de modal sem título:
 
-``` html
+```html
 <div class="br-modal is-large">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -236,7 +236,7 @@ O modal pode ter ou não um **Modal com título contraído** de acordo com a nec
 
 Exemplo de modal com título contraído:
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -250,8 +250,7 @@ Exemplo de modal com título contraído:
             </div>
             <div class="br-modal-body">
                 <p>
-                    Texto com uma linha Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit.
+                    Texto com uma linha Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
             </div>
             <div class="br-modal-footer justify-content-end">
@@ -281,7 +280,7 @@ Interrompem os usuário com informações, detalhes ou ações urgentes.
 
 Exemplo de **Modal de Alerta** com título:
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -306,14 +305,14 @@ Exemplo de **Modal de Alerta** com título:
 
 Exemplo de **Modal de Alerta** sem título:
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
             <div class="br-modal-body">
                 <p>
-                    Modal de alerta sem título Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit.
+                    Modal de alerta sem título Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.
                 </p>
             </div>
             <div class="br-modal-footer justify-content-end">
@@ -339,7 +338,7 @@ Exibem uma lista de itens que entram em vigor imediatamente quando selecionados.
 
 Exemplo de Modal de Opção por **Lista**:
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -383,7 +382,7 @@ Exige que o usuário confirme uma opção antes que ela seja submetida, permitin
 
 Exemplos de Modal de Opção **por Seleção**:
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -444,7 +443,7 @@ Exemplos de Modal de Opção **por Seleção**:
 </div>
 ```
 
-``` html
+```html
 <div class="br-modal is-medium mt-9">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -495,7 +494,7 @@ Contém ações que requerem uma série de tarefas para serem concluídas tais c
 
 Exemplos de **Modal de Entrada**:
 
-``` html
+```html
 <div class="br-modal is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -518,14 +517,26 @@ Exemplos de **Modal de Entrada**:
                     <div class="field">
                         <div class="br-input">
                             <label for="simples">Usuário</label>
-                            <input id="simples" type="text" placeholder="Nome do usuário ou E-mail" />
+                            <input
+                                id="simples"
+                                type="text"
+                                placeholder="Nome do usuário ou E-mail"
+                            />
                         </div>
                     </div>
                     <div class="field">
                         <div class="br-input has-icon">
                             <label for="password">Senha</label>
-                            <input type="password" id="password" placeholder="Digite sua senha de 8 a 11 dígitos" />
-                            <button class="icon" type="button" onclick="toggleInputAction(this, 'is-action')">
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Digite sua senha de 8 a 11 dígitos"
+                            />
+                            <button
+                                class="icon"
+                                type="button"
+                                onclick="toggleInputAction(this, 'is-action')"
+                            >
                                 <span class="sr-only">Mostrar senha</span>
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -547,7 +558,7 @@ Exemplos de **Modal de Entrada**:
 </div>
 ```
 
-``` html
+```html
 <div class="br-modal is-large mt-9">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -565,7 +576,11 @@ Exemplos de **Modal de Entrada**:
                                 <div class="field">
                                     <div class="br-input">
                                         <label for="simples3">Nome do evento</label>
-                                        <input id="simples3" type="text" placeholder="Digite o nome do evento" />
+                                        <input
+                                            id="simples3"
+                                            type="text"
+                                            placeholder="Digite o nome do evento"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -584,7 +599,11 @@ Exemplos de **Modal de Entrada**:
                             <div class="field">
                                 <div class="br-input has-icon">
                                     <label for="data">Inicial</label>
-                                    <input type="date" id="data" placeholder="Quinta, 13 de setembro de 2019" />
+                                    <input
+                                        type="date"
+                                        id="data"
+                                        placeholder="Quinta, 13 de setembro de 2019"
+                                    />
                                     <button class="icon" type="button">
                                         <i class="fas fa-calendar"></i>
                                     </button>
@@ -649,7 +668,7 @@ Para transformar um modal em **Modal de Rolagem** a class `is-scroll` deve ser a
 
 Exemplo de **Modal com Rolagem**:
 
-``` html
+```html
 <div class="br-modal is-scroll is-medium">
     <div class="br-modal-dialog">
         <div class="br-modal-content">
@@ -658,19 +677,17 @@ Exemplo de **Modal com Rolagem**:
             </div>
             <div class="br-modal-body mb-5">
                 <div class="br-card">
-                    Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Mauris id
-                    gravida nulla. Cras sagittis dapibus felis vitae semper. Donec vel
-                    hendrerit ante. Etiam sed blandit nisi. Praesent iaculis, nisl eget
-                    rutrum vehicula, lacus tortor feugiat diam, et euismod lacus metus
-                    eget nisi. Sed fermentum, nunc nec efficitur pharetra, felis dolor
-                    feugiat massa, et semper turpis felis quis ligula. Quisque non metus
-                    at risus maximus ultrices. Nam vel massa tellus. Vestibulum lobortis
-                    dui et pellentesque porta. Cras rhoncus augue a mauris porttitor, in
-                    malesuada metus eleifend. Praesent ac lacinia lorem. Sed cursus nisl
-                    ligula, vel ultrices ex pellentesque eu. Curabitur facilisis egestas
-                    libero, non pharetra lacus ultricies quis. Mauris non finibus justo,
-                    eu varius metus. Donec nec eros semper, consequat turpis id, fermentum
-                    dolor.
+                    Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Mauris id gravida
+                    nulla. Cras sagittis dapibus felis vitae semper. Donec vel hendrerit ante. Etiam
+                    sed blandit nisi. Praesent iaculis, nisl eget rutrum vehicula, lacus tortor
+                    feugiat diam, et euismod lacus metus eget nisi. Sed fermentum, nunc nec
+                    efficitur pharetra, felis dolor feugiat massa, et semper turpis felis quis
+                    ligula. Quisque non metus at risus maximus ultrices. Nam vel massa tellus.
+                    Vestibulum lobortis dui et pellentesque porta. Cras rhoncus augue a mauris
+                    porttitor, in malesuada metus eleifend. Praesent ac lacinia lorem. Sed cursus
+                    nisl ligula, vel ultrices ex pellentesque eu. Curabitur facilisis egestas
+                    libero, non pharetra lacus ultricies quis. Mauris non finibus justo, eu varius
+                    metus. Donec nec eros semper, consequat turpis id, fermentum dolor.
                 </div>
             </div>
             <div class="br-modal-footer justify-content-end">
@@ -685,4 +702,3 @@ Exemplo de **Modal com Rolagem**:
     </div>
 </div>
 ```
-

@@ -32,7 +32,7 @@ Este componente é formado pelos seguintes elementos:
 
 Em situações de erro ou retorno positivo, use o feedback. Ele deve ser inserido após a tag do `br-textarea` e antes do `help`
 
-Para **mensagens de erro** adicione `invalid` ao container e a classe ``color-danger` ao `feedback`. Use o ícone `<i class="fas fa-times-circle"></i>` dentro do `feedback`.
+Para **mensagens de erro** adicione `invalid` ao container e a classe ``color-danger`ao`feedback`. Use o ícone`<i class="fas fa-times-circle"></i>`dentro do`feedback`.
 
 Exemple de uso:
 
@@ -103,7 +103,13 @@ Exemplo de uso:
 ```html
 <div class="br-textarea">
     <label for="textarea-id8">Digite sua mensagem aqui</label>
-    <textarea id="textarea-id8" placeholder="Exemplo de textarea desabilitado" rows="5" cols="5" disabled></textarea>
+    <textarea
+        id="textarea-id8"
+        placeholder="Exemplo de textarea desabilitado"
+        rows="5"
+        cols="5"
+        disabled
+    ></textarea>
 </div>
 <div class="feedback">
     <i class="fas fa-exclamation-triangle"></i>
