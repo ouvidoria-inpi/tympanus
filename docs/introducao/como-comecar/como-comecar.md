@@ -2,7 +2,7 @@
 
 ### Instalar manualmente
 
-1. Faça o download do pacote NPM do DSGOV na seção [Downloads](/downloads) ou clique [aqui](/assets/design-system/assets/npm-package/dsgov-latest.zip).
+1. Faça o download do pacote NPM do DSGOV na seção [Downloads](/downloads) ou clique [aqui](/assets/design-system/assets/npm-package/dsgov-latest.tgz).
 1. Crie uma nova pasta para o seu projeto e coloque o arquivo **dsgov-latest.tgz** dentro dela. Caso já tenha um projeto em andamento coloque o arquivo na pasta raiz do seu projeto.
 1. Entre na pasta que você colocou o arquivo e utilize o seguinte comando para inicializar o node no seu projeto:
 
