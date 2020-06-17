@@ -73,7 +73,7 @@
 
   // Botões de ação
   .actions {
-    max-width: min-content;
+    max-width: 60%;
     height: 40px;
     margin-top: 6px;
     order: 2;
@@ -82,6 +82,7 @@
     align-items: center;
     flex-wrap: nowrap;
     flex-grow: 3;
+    position: relative;
 
 
     // Links (opcional)
@@ -92,7 +93,7 @@
       border-top: 0;
       font-size: v(font-size-scale-down-01);
       padding: 0;
-      max-width: 24em;
+      //max-width: 24em;
       position: relative;
       overflow-y: hidden;
       overflow-x: auto;
@@ -357,6 +358,8 @@
       }
     }
     .actions {
+      //max-width: fit-content;
+      //max-width: -moz-fit-content;
       order: 3;
       margin-top: 0;
       .search-btn {
@@ -370,10 +373,11 @@
     .popmenu[active] { 
       position: absolute;
       display: unset !important;
-      left: 0;
+      left: unset;
+      right: 0;
       top: 0;
       order: 0;
-      width: 100%;
+      width: 96.5vw;
       z-index: 999;
       ul {
         margin-top: 0;
@@ -508,6 +512,8 @@
     }
   
     .actions {
+      max-width: fit-content;
+      max-width: -moz-fit-content;
       flex-grow: 2;
       .links {
         overflow: visible;

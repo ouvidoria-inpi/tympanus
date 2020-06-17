@@ -91,10 +91,10 @@
     }
   }
 
-  .#{$prefix}notification {
-    position: fixed;
-    right: 0 !important;
-    display: none;
+  .#{$prefix}notification[notification] {
+    &[data-popper-placement^='bottom'] > .arrow {
+      margin-left: 6px !important;
+    }
   }
 
   @include media-breakpoint-down(sm) {

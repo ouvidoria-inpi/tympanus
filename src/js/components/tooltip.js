@@ -1,4 +1,4 @@
-import { createPopper } from '@popperjs/core'
+import { createPopper, right } from '@popperjs/core'
 class BRTooltip {
   constructor(name, component) {
     this.name = name
@@ -61,13 +61,14 @@ class BRTooltip {
           {
             name: 'preventOverflow',
             options: {
-              //rootBoundary: 'document',
+              //rootBoundary: 'viewport',
               altAxis: true, // false by default
               mainAxis: true, // true by default
             },
           },
         ],
         placement: this.placement,
+        strategy: 'absolute',
       })
     } else {
       this.popperInstance = createPopper(this.activator, this.component, {

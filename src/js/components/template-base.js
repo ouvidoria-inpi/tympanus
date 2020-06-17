@@ -38,6 +38,14 @@ class BRTemplateBase {
         this._closeContextMenu()
       })
     }
+    if (this.notification) {
+      setTimeout(() => {
+        this.notification.style =
+          'position: absolute; left: auto; display: unset; top: 54px; bottom: auto; right: -32px;'
+        this.notification.querySelector('.arrow').style =
+          'position: absolute; left: auto; right: 60px;'
+      }, 500)
+    }
   }
   _openMenu() {
     //this.scrim_menu.style.display = 'unset'
