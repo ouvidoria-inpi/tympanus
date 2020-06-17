@@ -4,9 +4,11 @@ append vars
   - var title = "Breadcrumb";
 
 append content
-  +breadcrumb
-    +crumb("Tela Anterior")
-    +crumb("Tela Anterior2")
-    +crumb("Tela Anterior3")
-    +crumb("Tela Anterior4")
-    +crumb("Tela Atual", "is-active")
+  .row.justify-content-center.mt-3.mb-5
+    .col-auto
+      +breadcrumb
+        +crumb("Tela Anterior")
+        +crumb("Tela Anterior2")
+        +crumb("Tela Anterior3")
+        +crumb("Tela Anterior4")
+        +crumb("Tela Atual", "is-active")
