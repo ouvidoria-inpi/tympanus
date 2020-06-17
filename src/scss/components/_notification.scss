@@ -123,7 +123,7 @@
       .tab-panel {
         font-size: v(font-size-scale-down-01);
         padding: 0.5em 1.5em 0.5em 1.5em;
-        max-height: calc(100vh - 250px);
+        max-height: calc(100vh - 310px);
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: thin;
@@ -380,7 +380,7 @@
           }
         }
         .tab-panel {
-          max-height: calc(100vh - 200px);
+          max-height: calc(100vh - 266px);
         }
       }
       .#{$prefix}list {
@@ -402,7 +402,7 @@
       top: 0px;
       right: -1px;
       cursor: pointer;
-      height: 42px;
+      height: 48px;
       width: 32px;
       background: v(color-secondary-01);
       .svg-inline--fa, .fas {

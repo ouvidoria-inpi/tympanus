@@ -9,7 +9,7 @@
   font-size: v(font-size-scale-base,$font-size-scale-base);
   border-radius: 4px;
   display: block;
-  position: absolute;
+  position: absolute !important;
   opacity: 0;
   animation-name: fadeOutOpacity;
   animation-iteration-count: 1;
