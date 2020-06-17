@@ -33,9 +33,6 @@ $rgb-secondary-06: get-rgb($color-secondary-06);
 $rgb-secondary-07: get-rgb($color-secondary-07);
 $rgb-secondary-08: get-rgb($color-secondary-08);
 $rgb-secondary-09: get-rgb($color-secondary-09);
-$color-secondary-10: rgba(0, 0, 0, 0.4);
-$color-secondary-11: rgba(255, 255, 255, 0.64);
-$color-secondary-12: rgba(0, 0, 0, 0.64);
 
 // Destaque
 $color-highlight: #268744;
@@ -56,10 +53,24 @@ $color-support-01: #36a191;
 $color-support-02: #f2e317;
 $color-support-03: #d84800;
 $color-support-04: #a26739;
+$color-support-05: #40e0d0;
+$color-support-06: #48cbeb;
+$color-support-07: #c72487;
+$color-support-08: #63007f;
+$color-support-09: #f08080;
+$color-support-10: #ff8c00;
+$color-support-11: #fdf5e6;
 $rgb-support-01: get-rgb($color-support-01);
 $rgb-support-02: get-rgb($color-support-02);
 $rgb-support-03: get-rgb($color-support-03);
 $rgb-support-04: get-rgb($color-support-04);
+$rgb-support-05: get-rgb($color-support-05);
+$rgb-support-06: get-rgb($color-support-06);
+$rgb-support-07: get-rgb($color-support-07);
+$rgb-support-08: get-rgb($color-support-08);
+$rgb-support-09: get-rgb($color-support-09);
+$rgb-support-10: get-rgb($color-support-10);
+$rgb-support-11: get-rgb($color-support-11);
 
 // Brands
 $color-facebook: #3b5998;
@@ -105,6 +116,13 @@ $br-colors: (
   support-02: $color-support-02,
   support-03: $color-support-03,
   support-04: $color-support-04,
+  support-05: $color-support-05,
+  support-06: $color-support-06,
+  support-07: $color-support-07,
+  support-08: $color-support-08,
+  support-09: $color-support-09,
+  support-10: $color-support-10,
+  support-11: $color-support-11,
   facebook: $color-facebook,
   google-plus: $color-google-plus,
   linkedin: $color-linkedin,
@@ -148,9 +166,6 @@ $tokens-colors: (
   rgb-secondary-07: $rgb-secondary-07,
   rgb-secondary-08: $rgb-secondary-08,
   rgb-secondary-09: $rgb-secondary-09,
-  color-secondary-10: $color-secondary-10,
-  color-secondary-11: $color-secondary-11,
-  color-secondary-12: $color-secondary-12,
   color-highlight: $color-highlight,
   rgb-highlight: $rgb-highlight,
   color-success: $color-success,
@@ -165,10 +180,24 @@ $tokens-colors: (
   color-support-02: $color-support-02,
   color-support-03: $color-support-03,
   color-support-04: $color-support-04,
+  color-support-05: $color-support-05,
+  color-support-06: $color-support-06,
+  color-support-07: $color-support-07,
+  color-support-08: $color-support-08,
+  color-support-09: $color-support-09,
+  color-support-10: $color-support-10,
+  color-support-11: $color-support-11,
   rgb-support-01: $rgb-support-01,
   rgb-support-02: $rgb-support-02,
   rgb-support-03: $rgb-support-03,
   rgb-support-04: $rgb-support-04,
+  rgb-support-05: $rgb-support-05,
+  rgb-support-06: $rgb-support-06,
+  rgb-support-07: $rgb-support-07,
+  rgb-support-08: $rgb-support-08,
+  rgb-support-09: $rgb-support-09,
+  rgb-support-10: $rgb-support-10,
+  rgb-support-11: $rgb-support-11,
   color-facebook: $color-facebook,
   color-google-plus: $color-google-plus,
   color-linkedin: $color-linkedin,

@@ -5,6 +5,9 @@
   min-width: 352px;
   padding: 0;
   max-height: 0;
+  // position: absolute;
+  // right: 0 !important;
+
 
   &[data-show] {
     max-height: 100vh;
@@ -96,6 +99,7 @@
             button {
               margin: 0;
               border-bottom: 2px solid transparent;
+              width: fit-content;
               padding: 1em 1em 1em 2.2em ;
               .name {
                 font-size: v(font-size-scale-down-01);
@@ -105,7 +109,7 @@
                 font-size: v(font-size-scale-base);
                 position: absolute;
                 left: 0.4em;
-                margin-top: 0.1em;
+                margin-top: 0.3em;
               }
             }
             &.is-active {
@@ -119,7 +123,7 @@
       .tab-panel {
         font-size: v(font-size-scale-down-01);
         padding: 0.5em 1.5em 0.5em 1.5em;
-        max-height: calc(100vh - 250px);
+        max-height: calc(100vh - 310px);
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: thin;
@@ -314,7 +318,7 @@
             .tab-item {
               margin-right: 8px;
               button {
-                width: 32px;
+                width: 28px;
                 overflow: hidden;
                 .name {
                   visibility: hidden;
@@ -376,7 +380,7 @@
           }
         }
         .tab-panel {
-          max-height: calc(100vh - 200px);
+          max-height: calc(100vh - 266px);
         }
       }
       .#{$prefix}list {
@@ -398,7 +402,7 @@
       top: 0px;
       right: -1px;
       cursor: pointer;
-      height: 42px;
+      height: 48px;
       width: 32px;
       background: v(color-secondary-01);
       .svg-inline--fa, .fas {

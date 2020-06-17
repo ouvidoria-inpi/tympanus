@@ -19,6 +19,8 @@ import BRTagInput from './taginput'
 import BRTooltip from './tooltip'
 import BRUpload from './upload'
 import BRWizard from './wizard'
+// Script Templates
+import BRTemplateBAse from './template-base'
 export default class Globals {
   initInstanceAll() {
     this.initInstanceAccordion()
@@ -37,6 +39,7 @@ export default class Globals {
     this.initInstanceSelect()
     this.initInstanceTable()
     this.initInstanceTabs()
+    this.initInstanceTemplateBase()
     this.initInstanceTooltip()
     this.initInstanceUpload()
     this.initInstanceWizard()
@@ -450,6 +453,14 @@ export default class Globals {
       wizardList.push(new BRWizard('br-wizard', brWizard))
     }
   }
+
+  initInstanceTemplateBase() {
+    const templateBaseList = []
+    for (const brTemplateBase of window.document.querySelectorAll('.template-base')) {
+      templateBaseList.push(new BRTemplateBase('template-base', brTemplateBase))
+    }
+  }
+
   initInstanceBreadcrumb() {
     const breadcrumbList = []
     for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {

@@ -1,6 +1,6 @@
 @mixin scrim {
   &.is-foco {
-    background-color: v(color-secondary-10,$color-secondary-10);
+    background: rgba(v(rgb-secondary-09), 0.4);
     bottom: 0;
     display: none;
     height: 100%;
@@ -12,7 +12,7 @@
     z-index: 999;
     .br-modal {
       -ms-transform: translate(-50%, -50%);
-      background-color: v(color-secondary-01,$color-secondary-01);
+      background-color: v(color-secondary-01, $color-secondary-01);
       left: 50%;
       top: 50%;
       position: absolute;
@@ -26,8 +26,8 @@
   &.is-inibicao {
     position: relative;
     &::before {
-      background: v(color-secondary-11,$color-secondary-11);
-      content: "";
+      background: rgba(v(rgb-secondary-01), 0.64);
+      content: '';
       height: 100%;
       left: 0;
       position: absolute;
@@ -38,7 +38,7 @@
   &.is-legibilidade {
     position: relative;
     .scrim-text {
-      background-color: v(color-secondary-12,$color-secondary-12);
+      background: rgba(v(rgb-secondary-09), 0.64);
       bottom: 0;
       left: 0;
       padding: $spacer * 3 $spacer * 1.25;

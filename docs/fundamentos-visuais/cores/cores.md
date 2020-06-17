@@ -60,15 +60,15 @@ A cor **Primary Default** é usada como padrão de hiperlinks.
 
 Utilize a documentação encontrada no fundamento [Estado](#), para ajudar a aplicar a paleta de cor em diferentes níveis de interação.
 
-|                        Exemplo                        | Categoria da Cor   | Hexadecimal | Token                      |
-| :---------------------------------------------------: | ------------------ | ----------- | -------------------------- |
-|  ![Primary Pastel 02](imagens/primary-pastel-02.png)  | Primary Pastel 02  | #DBE8FB     | --color-primary-pastel-02  |
-|  ![Primary Pastel 01](imagens/primary-pastel-01.png)  | Primary Pastel 01  | #C5D4EB     | --color-primary-pastel-01  |
-| ![Primary Lighten 02](imagens/primary-lighten-25.png) | Primary Lighten 02 | #5992ED     | --color-primary-lighten-02 |
-| ![Primary Lighten 01](imagens/primary-lighten-15.png) | Primary Lighten 01 | #2670E8     | --color-primary-lighten-01 |
-|        ![Primary Default](imagens/primary.png)        | Primary Default    | #1351B4     | --color-primary-default    |
-|  ![Primary Darken 01](imagens/primary-darken-15.png)  | Primary Darken 01  | #0C326F     | --color-primary-darken-01  |
-|  ![Primary Darken 02](imagens/primary-darken-25.png)  | Primary Darken 02  | #071D41     | --color-primary-darken-02  |
+|                        Exemplo                        | Categoria da Cor   | Hexadecimal | Token                        |
+| :---------------------------------------------------: | ------------------ | ----------- | ---------------------------- |
+|  ![Primary Pastel 02](imagens/primary-pastel-02.png)  | Primary Pastel 02  | #DBE8FB     | `--color-primary-pastel-02`  |
+|  ![Primary Pastel 01](imagens/primary-pastel-01.png)  | Primary Pastel 01  | #C5D4EB     | `--color-primary-pastel-01`  |
+| ![Primary Lighten 02](imagens/primary-lighten-25.png) | Primary Lighten 02 | #5992ED     | `--color-primary-lighten-02` |
+| ![Primary Lighten 01](imagens/primary-lighten-15.png) | Primary Lighten 01 | #2670E8     | `--color-primary-lighten-01` |
+|        ![Primary Default](imagens/primary.png)        | Primary Default    | #1351B4     | `--color-primary-default`    |
+|  ![Primary Darken 01](imagens/primary-darken-15.png)  | Primary Darken 01  | #0C326F     | `--color-primary-darken-01`  |
+|  ![Primary Darken 02](imagens/primary-darken-25.png)  | Primary Darken 02  | #071D41     | `--color-primary-darken-02`  |
 
 ### Acessibilidade
 
@@ -96,17 +96,17 @@ Indicamos as cores **Secondary 08** e **Secondary 01** para texto (fundo claro e
 
 As cores secundárias trabalham com o brilho da cor, indo do mais claro **Secondary 01** até o mais escuro **Secondary 09**.
 
-|               Exemplo                | Categoria da Cor | Hexadecimal | Token                |
-| :----------------------------------: | ---------------- | ----------- | -------------------- |
-|  ![Secondary 01](imagens/white.png)  | Secondary 01     | #FFFFFF     | --color-secondary-01 |
-| ![Secondary 02](imagens/gray-01.png) | Secondary 02     | #F8F8F8     | --color-secondary-02 |
-| ![Secondary 03](imagens/gray-02.png) | Secondary 03     | #EDEDED     | --color-secondary-03 |
-| ![Secondary 04](imagens/gray-03.png) | Secondary 04     | #CCCCCC     | --color-secondary-04 |
-| ![Secondary 05](imagens/gray-04.png) | Secondary 05     | #9E9D9D     | --color-secondary-05 |
-| ![Secondary 06](imagens/gray-05.png) | Secondary 06     | #888888     | --color-secondary-06 |
-| ![Secondary 07](imagens/gray-06.png) | Secondary 07     | #555555     | --color-secondary-07 |
-| ![Secondary 08](imagens/gray-07.png) | Secondary 08     | #333333     | --color-secondary-08 |
-|  ![Secondary 09](imagens/black.png)  | Secondary 09     | #000000     | --color-secondary-09 |
+|               Exemplo                | Categoria da Cor | Hexadecimal | Token                  |
+| :----------------------------------: | ---------------- | ----------- | ---------------------- |
+|  ![Secondary 01](imagens/white.png)  | Secondary 01     | #FFFFFF     | `--color-secondary-01` |
+| ![Secondary 02](imagens/gray-01.png) | Secondary 02     | #F8F8F8     | `--color-secondary-02` |
+| ![Secondary 03](imagens/gray-02.png) | Secondary 03     | #EDEDED     | `--color-secondary-03` |
+| ![Secondary 04](imagens/gray-03.png) | Secondary 04     | #CCCCCC     | `--color-secondary-04` |
+| ![Secondary 05](imagens/gray-04.png) | Secondary 05     | #9E9D9D     | `--color-secondary-05` |
+| ![Secondary 06](imagens/gray-05.png) | Secondary 06     | #888888     | `--color-secondary-06` |
+| ![Secondary 07](imagens/gray-06.png) | Secondary 07     | #555555     | `--color-secondary-07` |
+| ![Secondary 08](imagens/gray-07.png) | Secondary 08     | #333333     | `--color-secondary-08` |
+|  ![Secondary 09](imagens/black.png)  | Secondary 09     | #000000     | `--color-secondary-09` |
 
 ### Acessibilidade
 
@@ -134,9 +134,9 @@ A cor de destaque é utilizada para impor alta ênfase em um determinado element
 
 No DSGOV ela só pode ser utilizada em um único elemento ou componente por tela. Podendo ou não ser interativo.
 
-|               Exemplo               | Categoria da Cor | Hexadecimal - RGB | Token             |
-| :---------------------------------: | ---------------- | ----------------- | ----------------- |
-| ![Highlight](imagens/secundary.png) | Highlight        | #268744           | --color-highlight |
+|               Exemplo               | Categoria da Cor | Hexadecimal - RGB | Token               |
+| :---------------------------------: | ---------------- | ----------------- | ------------------- |
+| ![Highlight](imagens/secundary.png) | Highlight        | #268744           | `--color-highlight` |
 
 ### Acessibilidade
 
@@ -152,12 +152,12 @@ A seguir a relação de contraste entre a cor que deve ser adotada nos textos ut
 
 As cores de aviso foram escolhidas para serem aplicadas em situações que exigem mais atenção do usuário, como ocorre nas mensagens de Feedback e estados correlacionados.
 
-|             Exemplo             | Categoria da Cor | Hexadecimal | Token                 | Usos                                       |
-| :-----------------------------: | ---------------- | ----------- | --------------------- | ------------------------------------------ |
-| ![Warning](imagens/warning.png) | Warning          | #FFCD07     | --color-alarm-warning | Mensagens de Aviso                         |
-| ![Success](imagens/success.png) | Success          | #168821     | --color-alarm-success | Mensagens de Sucesso, Validações Positivas |
-|  ![Danger](imagens/danger.png)  | Danger           | #E60000     | --color-alarm-danger  | Mensagens de Erro, Validações Negativas    |
-|    ![Info](imagens/info.png)    | Info             | #155BCB     | --color-alarm-info    | Mensagens Informativa                      |
+|             Exemplo             | Categoria da Cor | Hexadecimal | Token                   | Usos                                       |
+| :-----------------------------: | ---------------- | ----------- | ----------------------- | ------------------------------------------ |
+| ![Warning](imagens/warning.png) | Warning          | #FFCD07     | `--color-alarm-warning` | Mensagens de Aviso                         |
+| ![Success](imagens/success.png) | Success          | #168821     | `--color-alarm-success` | Mensagens de Sucesso, Validações Positivas |
+|  ![Danger](imagens/danger.png)  | Danger           | #E60000     | `--color-alarm-danger`  | Mensagens de Erro, Validações Negativas    |
+|    ![Info](imagens/info.png)    | Info             | #155BCB     | `--color-alarm-info`    | Mensagens Informativa                      |
 
 ### Acessibilidade
 
@@ -178,19 +178,19 @@ As cores de apoio podem ser aplicadas quando houver a necessidade de variação 
 
 Utilize as cores de apoio somente em elementos gráficos e textos grandes.
 
-|                 Exemplo                 | Categoria da Cor | Hexadecimal | Token              |
-| :-------------------------------------: | ---------------- | ----------- | ------------------ |
-|     ![Support 01](imagens/teal.png)     | Support 01       | #36A191     | --color-support-01 |
-|    ![Support 02](imagens/yellow.png)    | Support 02       | #F2E317     | --color-support-02 |
-|    ![Support 03](imagens/orange.png)    | Support 03       | #DB4800     | --color-support-03 |
-|    ![Support 04](imagens/brown.png)     | Support 04       | #A26739     | --color-support-04 |
-| ![Support 05](imagens/light-green.png)  | Support 05       | #40E0D0     | --color-support-05 |
-|    ![Support 06](imagens/ciano.png)     | Support 06       | #48CBEB     | --color-support-06 |
-|    ![Support 07](imagens/violet.png)    | Support 07       | #C72487     | --color-support-07 |
-|    ![Support 08](imagens/purple.png)    | Support 08       | #63007F     | --color-support-08 |
-|    ![Support 09](imagens/salmon.png)    | Support 09       | #F08080     | --color-support-09 |
-| ![Support 10](imagens/light-orange.png) | Support 10       | #FF8C00     | --color-support-10 |
-|     ![Support 11](imagens/sand.png)     | Support 11       | #FDF5E6     | --color-support-11 |
+|                 Exemplo                 | Categoria da Cor | Hexadecimal | Token                |
+| :-------------------------------------: | ---------------- | ----------- | -------------------- |
+|     ![Support 01](imagens/teal.png)     | Support 01       | #36A191     | `--color-support-01` |
+|    ![Support 02](imagens/yellow.png)    | Support 02       | #F2E317     | `--color-support-02` |
+|    ![Support 03](imagens/orange.png)    | Support 03       | #DB4800     | `--color-support-03` |
+|    ![Support 04](imagens/brown.png)     | Support 04       | #A26739     | `--color-support-04` |
+| ![Support 05](imagens/light-green.png)  | Support 05       | #40E0D0     | `--color-support-05` |
+|    ![Support 06](imagens/ciano.png)     | Support 06       | #48CBEB     | `--color-support-06` |
+|    ![Support 07](imagens/violet.png)    | Support 07       | #C72487     | `--color-support-07` |
+|    ![Support 08](imagens/purple.png)    | Support 08       | #63007F     | `--color-support-08` |
+|    ![Support 09](imagens/salmon.png)    | Support 09       | #F08080     | `--color-support-09` |
+| ![Support 10](imagens/light-orange.png) | Support 10       | #FF8C00     | `--color-support-10` |
+|     ![Support 11](imagens/sand.png)     | Support 11       | #FDF5E6     | `--color-support-11` |
 
 ### Acessibilidade
 

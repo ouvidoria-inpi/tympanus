@@ -45,7 +45,9 @@ class BRList {
     }
   }
   _toggle(event, item) {
-    if (this.unique) this._closeAllItens()
+    if (!item.hasAttribute('active')) {
+      if (this.unique) this._closeAllItens()
+    }
     item.toggleAttribute('active')
     const icon = item.querySelector('.fa-angle-down')
       ? item.querySelector('.fa-angle-down')
