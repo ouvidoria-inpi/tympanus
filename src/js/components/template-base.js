@@ -41,9 +41,9 @@ class BRTemplateBase {
     if (this.notification) {
       setTimeout(() => {
         this.notification.style =
-          'position: absolute; left: auto; display: unset; top: 54px; bottom: auto; right: -32px;'
+          'position: absolute; left: auto; display: unset; top: 54px; bottom: auto; right: -8px;'
         this.notification.querySelector('.arrow').style =
-          'position: absolute; left: auto; right: 60px;'
+          'position: absolute; left: auto; right: 28px;'
       }, 500)
     }
   }

@@ -86,7 +86,7 @@
 
   &[data-popper-placement^='top'] > .arrow {
     bottom: -8px;
-    margin-left: -8px;
+    margin-left: 0px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-top-width: 8px;
@@ -95,7 +95,7 @@
   
   &[data-popper-placement^='bottom'] > .arrow {
     top: -8px;
-    margin-left: -8px;
+    margin-left: 0px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom-width: 8px;
