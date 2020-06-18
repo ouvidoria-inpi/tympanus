@@ -3,7 +3,7 @@ mixin checkbox(label="Label")
   - let componentClass = prefix + "checkbox"
   - className = className ? componentClass + " " + className : componentClass
   if attributes.invalid
-    div(class=className, name=attributes.name, invalid)
+    div(class=className, invalid)
       input(
         id=attributes.id
         type="checkbox"
@@ -13,7 +13,7 @@ mixin checkbox(label="Label")
       if block
         block
   else if attributes.valid
-    div(class=className, name=attributes.name, valid)
+    div(class=className, valid)
       input(
         id=attributes.id
         type="checkbox"
@@ -23,7 +23,7 @@ mixin checkbox(label="Label")
       if block
         block
   else
-    div(class=className, name=attributes.name)
+    div(class=className)
       input(
         id=attributes.id
         type="checkbox"

@@ -1,12 +1,12 @@
 .#{$prefix}radio {
   display: block;
   vertical-align: top;
-  input[type="radio"] {
+  input[type='radio'] {
     // Remover o checkbox padrão do navegador
     opacity: 0;
     position: absolute;
     //Focus
-    &:focus{
+    &:focus {
       &:checked + label:before,
       & + label::before {
         background: v(status-highlight-background)
@@ -14,7 +14,7 @@
       }
     }
     //hover
-    &:hover:not(:disabled){
+    &:hover:not(:disabled) {
       & + label::before {
         border: 1px solid v(color-secondary-06, $color-secondary-06);
         box-shadow: 0 0 0 5px rgba(var(--rgb-primary-lighten-01), 0.45);
@@ -25,20 +25,19 @@
       cursor: not-allowed;
       color: v(color-secondary-04);
     }
-    
+
     // Descritive Text
     & + label {
+      align-items: flex-start;
       color: v(color-secondary-08);
       cursor: pointer;
       font-weight: v(font-weight-medium);
       display: inline-block;
-      margin-bottom: 0;
       min-height: $checkbox-default;
-      padding:   $spacer/2 $checkbox-default + $spacer $spacer $checkbox-default + $spacer;
+      padding: $spacer/2 $checkbox-default + $spacer $spacer $checkbox-default + $spacer;
       position: relative;
-      vertical-align: top;
       font-size: v(font-size-scale-up-01);
-      
+
       // Box
       &:before {
         background: v(color-secondary-01);
@@ -47,7 +46,6 @@
         content: '';
         height: $checkbox-default;
         left: 0;
-        top:0;
         position: absolute;
         width: $checkbox-default;
         padding: $spacer/2 $spacer $spacer/2 $spacer * 0;
@@ -59,16 +57,16 @@
       border: 7px solid v(color-primary-lighten-01);
       border-radius: 50%;
       bottom: 0;
-      content: "";
+      content: '';
       height: 10px;
       left: 5px;
       position: absolute;
       right: 0;
-      top: 5px;
+      top: 9px;
       transform: scale(0.9, 0.9);
       width: 10px;
     }
-   
+
     // Inválid
     &:invalid {
       & + label::before {
@@ -89,21 +87,23 @@
     }
   }
   // Estados(States)
-  @each $state, $color in (invalid, v(color-danger)), (valid, v(color-success)) {
-    &.is-#{$state} {
-      input[type="radio"] {
+  @each $state, $color in (invalid, $color-danger), (valid, $color-success) {
+    &.is-#{$state}:not(.is-inverted):not(.inverted):not([inverted]),
+    &.#{$state}:not(.is-inverted):not(.inverted):not([inverted]),
+    &[#{$state}]:not(.is-inverted):not(.inverted):not([inverted]) {
+      input[type='radio'] {
         & + label::before {
           border-color: $color;
-          @if ($state == "invalid") {
+          @if ($state == 'invalid') {
             border-color: v(color-danger);
             border-width: 2px;
           }
-          @if ($state == "valid"){
-            border-color: v(color-success)!important;
+          @if ($state == 'valid') {
+            border-color: v(color-success) !important;
             border-width: 2px;
           }
         }
-       // Checado
+        // Checado
         &:checked + label::before {
           // background: $color;
           border-color: $color;
@@ -121,17 +121,19 @@
           }
         }
         // Hover
-        &:hover:not(:disabled) + label::before{
+        &:hover:not(:disabled) + label::before {
           box-shadow: 0 0 0 5px rgba(var(--rgb-primary-lighten-02), 0.45);
           border-width: 2px;
         }
       }
     }
   }
-  
+
   // Versão pequena
-  &.is-small {
-    input[type="radio"] {
+  &.is-small,
+  &.small,
+  &[small] {
+    input[type='radio'] {
       // Texto
       & + label {
         line-height: $checkbox-small;
@@ -151,37 +153,4 @@
       }
     }
   }
-
-  .feedback {
-    font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
-    font-weight: v(font-weight-medium);
-    margin-bottom: 8px;
-  }
 }
-.title-radiobutton{
-  font-size: v(font-size-scale-base);
-  font-weight: v(font-weight-semi-bold);
-  margin-bottom: 0;
-}
-.description {
-  color: v(color-secondary-08);
-  padding-bottom: 1em;
-  display: block;
-  p{
-    margin-bottom: 0;
-  }
-  .title-radiobutton{
-    font-size: v(font-size-scale-base);
-    font-weight: v(font-weight-semi-bold);
-  }
-  .auxiliary-text{
-    font-size: v(font-size-scale-down-01);
-    font-weight: v(font-weight-medium);
-  }
-}
-.list-options{
-  padding: $spacer * 0 $spacer * 5 $spacer * 5 $spacer * 0;
-  height: auto;
-  width: auto;
-}
-

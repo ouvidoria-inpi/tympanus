@@ -2,13 +2,36 @@ mixin radio(label="Label")
   - let className = attributes.class
   - let componentClass = prefix + "radio"
   - className = className ? componentClass + " " + className : componentClass
-  div(class=className)
-    input(
-      id=attributes.id
-      type="radio"
-      name=attributes.name
-      checked=attributes.checked
-      disabled=attributes.disabled)
-    label(for=attributes.id)=label
-    if block
-      block
+  if attributes.invalid
+    div(class=className, invalid)
+      input(
+        id=attributes.id
+        type="radio"
+        name=attributes.name
+        checked=attributes.checked
+        disabled=attributes.disabled)
+      label(for=attributes.id)=label
+      if block
+        block
+  else if attributes.valid
+    div(class=className, valid)
+      input(
+        id=attributes.id
+        type="radio"
+        name=attributes.name
+        checked=attributes.checked
+        disabled=attributes.disabled)
+      label(for=attributes.id)=label
+      if block
+        block
+  else
+    div(class=className)
+      input(
+        id=attributes.id
+        type="radio"
+        name=attributes.name
+        checked=attributes.checked
+        disabled=attributes.disabled)
+      label(for=attributes.id)=label
+      if block
+        block
