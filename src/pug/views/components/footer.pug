@@ -1,46 +1,27 @@
-extends ../../layouts/base
+extends ../../layouts/component
 
 append vars
-  - var title = "Template Base";
+  - var title = "footer";
 
-block template
-  ul.accessibility-links
-    li: a.br-button(accesskey="1" href="#main-content") Ir para o conteúdo
-    li: a.br-button(accesskey="2" href="#main-nav") Ir para o menu principal
-    li: a.br-button(accesskey="3" href="#context-nav") Ir para o menu auxiliar
-  .scrim-menu
-    #main-nav
-      +menu
-        +menu-principal-content
-  +header()(sticky)
-    .container-lg
-      +header-base-content
-  .container-lg
-    .row
-      .context-menu.col-sm-6.col-md-4
-        #context-nav
-          +menu
-            a.header
-              .support
-                i.fas.fa-angle-up
-              .content Menu Contextual
-            +menu-auxiliar-content
-      .col.container-main
-        +breadcrumb
-          +crumb("Tela Anterior")
-          +crumb("Tela Anterior2")
-          +crumb("Tela Anterior3")
-          +crumb("Tela Anterior4")
-          +crumb("Tela Atual", "is-active")
-        #main-content
-          p.h2=title
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequuntur ratione suscipit voluptatem reprehenderit aut recusandae autem voluptas quo nulla tenetur, quos a dolores enim ad, cum, eius et odio!
+append content
+  p Exemplo de Footer Versão Negativa
   +footer
-    .container-lg
-      +footer-logo.text-center
-      +list()(collapsible horizontal unique)
-        +footer-list-filler()(total=6 col=2)
-      +footer-bottom-filler
-    .br-divider
-    .container-lg
-      +footer-info
+      .container-lg
+        +footer-logo.text-center
+        +list()(collapsible horizontal unique)
+          +footer-list-filler()(total=6 col=2)
+        +footer-bottom-filler
+      .br-divider
+      .container-lg
+        +footer-info
+  <br><br>
+  p Exemplo de Footer Versão Positiva
+  +footer.inverted
+      .container-lg
+        +footer-logo.text-center(inverted)
+        +list()(collapsible horizontal unique)
+          +footer-list-filler()(total=6 col=2)
+        +footer-bottom-filler()(inverted)
+      .br-divider
+      .container-lg
+        +footer-info
