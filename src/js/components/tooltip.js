@@ -32,6 +32,14 @@ class BRTooltip {
       close.addEventListener('click', (event) => {
         this._hide(event)
       })
+      if (this.notification) {
+        setTimeout(() => {
+          this.notification.style =
+            'position: absolute; left: auto; display: unset; top: 54px; bottom: auto; right: -8px;'
+          this.notification.querySelector('.arrow').style =
+            'position: absolute; left: auto; right: 28px;'
+        }, 500)
+      }
       // Ação de fechar padrao ao sair do ativador
     } else {
       this.hideEvents.forEach((event) => {
