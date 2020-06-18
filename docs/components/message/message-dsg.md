@@ -19,13 +19,13 @@ As mensagens de Sucesso servem para auxiliar o usuário para que este perceba o 
 As mensagens de Atenção, muitas vezes trazem informações que possam alertar ao usuário que determinada ação depende de outra ação
 prévia, ou que haverá alguma consequência após a realização de uma ação e que esta merece uma atenção maior do usuário.
 
-![Tipos](imagens/Mensagem_de_Atenção.png)
+![Tipos](imagens/Mensagem_de_Atencao.png)
 
 **4 | Mensagens de Informação**
 As mensagens Informativas, são muitas vezes dicas para que o usuário entenda melhor o que o sistema está solicitando. Serve mais ou menos
 como tópicos de ajuda.
 
-![Tipos](imagens/Mensagem_de_Informação.png)
+![Tipos](imagens/Mensagem_de_Informacao.png)
 
 ## Tom de Voz
 
@@ -121,12 +121,12 @@ Aparecem logo abaixo dos campos de input. Elas devem aparecer na tela. assim que
 **Validação Positiva**
 Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma correta, dando um Feedback positivo.
 
-![Mensagens Contextuais](imagens/Validação_Positiva.png)
+![Mensagens Contextuais](imagens/Validacao_Positiva.png)
 
 **Validação Negativa**
 Aparecem logo após o preenchimento do campo e servem para indicar ao usuário que ele digitou os dados de forma diferente da esperada. É importante deixar claro o que saiu errado e/ou dar sugestões de como o usuário pode preencher o campo de forma satisfatória.
 
-![Mensagens Contextuais](imagens/Validação_Negativa.png)
+![Mensagens Contextuais](imagens/Validacao_Negativa.png)
 
 **Informativo**
 As mensagens Informativas, são muitas vezes dicas para que o usuário entenda melhor o que o sistema está solicitando. Serve mais ou menos como tópicos de ajuda. Podem aparecer dentro de componentes, como por exemplo a informação que traz as características de como deve ser a imagem a ser anexada dentro do componente de Upload. Pode vir contida também dentro de outros componentes, como por exemplo nas tabelas, com intuito de oferecer algumas informações complementares.
@@ -151,7 +151,7 @@ Devem vir alinhados à esquerda com o campo de texto.
 **B | Texto da Mensagem**
 Aparecem logo após o ícone.
 
-![Mensagens Contextuais](imagens/Anatomia_Validação.png)
+![Mensagens Contextuais](imagens/Anatomia_Validacao.png)
 
 ### Mensagens de Texto Informativo
 
