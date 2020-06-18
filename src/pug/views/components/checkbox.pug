@@ -4,10 +4,16 @@ append vars
   - var title = "Checkbox";
 
 append content
-  p.label Selecione uma opção
+  p.label.mb-0 Selecione uma opção
+  p.help-text Informações adicionais
   +checkbox("Opção 1")#checkbox-1
   +checkbox("Opção 2 selecionada")#checkbox-2(checked)
   +checkbox("Opção 3")#checkbox-3
+  .feedback
+    i.fas.fa-exclamation-triangle
+    span  Texto de mensagem
+
+  hr
 
   .row
     .col-md-4
@@ -30,5 +36,5 @@ append content
   p.label.mt-3 Estados e validação
   +checkbox("desativado")#check-state-disabled(disabled)
   +checkbox("Inválido")#check-state-invalid(invalid)
-  +checkbox("Valid")#check-state-valid(checked valid)
+  +checkbox("Válido")#check-state-valid(checked valid)
   +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid")

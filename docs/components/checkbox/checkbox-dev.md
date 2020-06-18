@@ -5,7 +5,7 @@
 ```html
 <p class="label">Texto opcional para lista de Checkboxes</p>
 <div class="br-checkbox [d-inline-block]" [small] [disabled|invalid|valid]>
-    <input id="identificador" type="checkbox" />
+    <input id="identificador" type="checkbox" [disabled] />
     <label for="identificador">Label do componente</label>
 </div>
 <p class="feedback">...</p>
@@ -43,6 +43,7 @@ Poderá ser desenvolvido conforme a necessidade do usuário final.
 #### Configurações obrigatórias
 
 -   Utilizar o elemento com a classe `"br-checkbox"` e inicializar o construtor do componente.
+-   Ao desativar o componente inclua também o atributo `disabled` no elemento `input`.
 
 ## Dependências
 
