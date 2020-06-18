@@ -60,7 +60,7 @@
   }
 
   .scrim-menu {
-    background-color: v(color-secondary-10);
+    background-color: rgba(v(rgb-secondary-09), 0.4);
     bottom: 0;
     left: 0;
     position: fixed;
@@ -119,7 +119,7 @@
       }
       &[show] {
         //height: fit-content;
-        background-color: v(color-secondary-10);
+        background-color: rgba(v(rgb-secondary-09), 0.4);
         height: 100vh;
         display: flex;
         align-items: flex-end;
