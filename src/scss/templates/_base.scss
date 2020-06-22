@@ -19,13 +19,12 @@
     position: relative;
   }
 
-  .#{$prefix}header.sticky  + div {
-    position: relative;
-    z-index: auto;
-  }
-
   .#{$prefix}header.sticky {
     z-index: 1;
+    & + div {
+      position: relative;
+      z-index: auto;
+    }
   }
 
   .context-menu {
@@ -93,7 +92,7 @@
 
   .#{$prefix}notification[notification] {
     &[data-popper-placement^='bottom'] > .arrow {
-      margin-left: 6px !important;
+      margin-left: 24px !important;
     }
   }
 
@@ -142,7 +141,7 @@
     }
 
     .#{$prefix}footer {
-      padding-bottom: 48px;
+      padding-bottom: 43px;
     }
   }
 }

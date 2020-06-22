@@ -32,8 +32,8 @@ class BRHeader {
           if (!noSubtitle) this.component.setAttribute('no-subtitle', '')
         } else {
           this.component.classList.remove('sticky')
-          if (!compact) this.component.removeAttribute('compact', '')
-          if (!noSubtitle) this.component.removeAttribute('no-subtitle')
+          //if (!compact) this.component.removeAttribute('compact', '')
+          //if (!noSubtitle) this.component.removeAttribute('no-subtitle')
         }
       }
     }
@@ -110,9 +110,9 @@ class BRHeader {
       const search = popmenu.querySelector('.search')
       // Maximiza tamanho do search no menu compacto
       if (this.component.hasAttribute('compact')) {
-        search.style.height = `${this.flex_container.offsetHeight}px`
+        search.style.height = `${this.flex_container.offsetHeight - 2}px`
       } else {
-        popmenu.style.height = `${this.flex_container.offsetHeight}px`
+        popmenu.style.height = `${this.flex_container.offsetHeight - 2}px`
       }
       this.flex_container.prepend(popmenu)
       // Ação do botão de fechar popmenu

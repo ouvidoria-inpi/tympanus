@@ -32,14 +32,7 @@ class BRTooltip {
       close.addEventListener('click', (event) => {
         this._hide(event)
       })
-      if (this.notification) {
-        setTimeout(() => {
-          this.notification.style =
-            'position: absolute; left: auto; display: unset; top: 54px; bottom: auto; right: -8px;'
-          this.notification.querySelector('.arrow').style =
-            'position: absolute; left: auto; right: 28px;'
-        }, 500)
-      }
+      this._fixPosition()
       // Ação de fechar padrao ao sair do ativador
     } else {
       this.hideEvents.forEach((event) => {
@@ -57,6 +50,7 @@ class BRTooltip {
     this._setLayout()
     //Cria a instancia do popper
     if (this.notification) {
+      //console.log(this.activator.parentNode)
       this.component.setAttribute('notification', '')
       this.popperInstance = createPopper(this.activator, this.component, {
         modifiers: [
@@ -69,13 +63,14 @@ class BRTooltip {
           {
             name: 'preventOverflow',
             options: {
-              //rootBoundary: 'viewport',
-              altAxis: true, // false by default
+              altAxis: false, // false by default
               mainAxis: true, // true by default
+              //rootBoundary: 'body',
             },
           },
         ],
-        placement: this.placement,
+        //placement: this.placement,
+        placement: 'bottom',
         strategy: 'absolute',
       })
     } else {
@@ -103,6 +98,7 @@ class BRTooltip {
   _show(event) {
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
+    this._fixPosition()
     // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
     //this.component.style.visibility = "visible";
     if (this.timer) {
@@ -134,6 +130,16 @@ class BRTooltip {
       ico.classList.add('fas', 'fa-times')
       close.appendChild(ico)
       this.component.appendChild(close)
+    }
+  }
+  _fixPosition() {
+    if (this.notification) {
+      setTimeout(() => {
+        this.component.style =
+          'position: absolute; left: auto; display: unset; top: 56px; bottom: auto; right: -8px;'
+        this.component.querySelector('.arrow').style =
+          'position: absolute; left: auto; right: 28px;'
+      }, 500)
     }
   }
 }

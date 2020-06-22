@@ -5,6 +5,7 @@
   min-width: 352px;
   padding: 0;
   max-height: 0;
+  margin-left: -20px;
   // position: absolute;
   // right: 0 !important;
 
@@ -33,6 +34,7 @@
     margin-top: 2px !important; 
     & > .arrow {
       top: -10px;
+      margin-left: 20px !important;
     }
   }
 
@@ -123,7 +125,7 @@
       .tab-panel {
         font-size: v(font-size-scale-down-01);
         padding: 0.5em 1.5em 0.5em 1.5em;
-        max-height: calc(100vh - 310px);
+        max-height: calc(100vh - 330px);
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: thin;
@@ -241,6 +243,7 @@
         }
         .subtitle {
           //color: v(color-secondary-08);
+          display: unset !important;
           font-weight: v(font-weight-medium);
           font-size: v(font-size-scale-down-01);
           width: 100%;
@@ -253,7 +256,7 @@
           //color: v(color-secondary-08);
           font-size: v(font-size-scale-down-02);
           font-weight: v(font-weight-medium);
-          width: auto;
+          width: 100%;
           height: auto;
           overflow: hidden;
           padding: 0;
@@ -380,7 +383,7 @@
           }
         }
         .tab-panel {
-          max-height: calc(100vh - 266px);
+          max-height: calc(100vh - 276px);
         }
       }
       .#{$prefix}list {
