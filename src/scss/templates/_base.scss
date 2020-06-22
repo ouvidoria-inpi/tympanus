@@ -90,11 +90,12 @@
     }
   }
 
-  .#{$prefix}notification[notification] {
-    &[data-popper-placement^='bottom'] > .arrow {
-      margin-left: 24px !important;
-    }
-  }
+  // .#{$prefix}notification[notification] {
+  //   //margin-left: 4px;
+  //   &[data-popper-placement^='bottom'] > .arrow {
+  //     margin-left: 24px !important;
+  //   }
+  // }
 
   @include media-breakpoint-down(sm) {
     .context-menu {

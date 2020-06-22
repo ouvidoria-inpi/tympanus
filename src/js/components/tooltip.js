@@ -71,7 +71,7 @@ class BRTooltip {
         ],
         //placement: this.placement,
         placement: 'bottom',
-        strategy: 'absolute',
+        strategy: 'fixed',
       })
     } else {
       this.popperInstance = createPopper(this.activator, this.component, {
@@ -135,11 +135,14 @@ class BRTooltip {
   _fixPosition() {
     if (this.notification) {
       setTimeout(() => {
-        this.component.style =
-          'position: absolute; left: auto; display: unset; top: 56px; bottom: auto; right: -8px;'
-        this.component.querySelector('.arrow').style =
-          'position: absolute; left: auto; right: 28px;'
-      }, 500)
+        const pos = this.activator.getBoundingClientRect()
+        this.component.style = `position: fixed !important; top: ${
+          pos.top + pos.height + 10
+        }px !important; left: auto; right: 8px; display: unset; bottom: auto;`
+        this.component.querySelector('.arrow').style = `position: absolute; left: auto; right: ${
+          document.body.clientWidth - pos.right + pos.width / 5
+        }px !important;`
+      }, 100)
     }
   }
 }

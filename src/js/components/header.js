@@ -32,8 +32,8 @@ class BRHeader {
           if (!noSubtitle) this.component.setAttribute('no-subtitle', '')
         } else {
           this.component.classList.remove('sticky')
-          //if (!compact) this.component.removeAttribute('compact', '')
-          //if (!noSubtitle) this.component.removeAttribute('no-subtitle')
+          if (!compact) this.component.removeAttribute('compact', '')
+          if (!noSubtitle) this.component.removeAttribute('no-subtitle')
         }
       }
     }
