@@ -62,14 +62,27 @@ class BRTagInput {
           this.keynm = 13
           const text = this.value
           const x = ''
-
           if (text.includes(',') || String(event.keyCode) === String(13)) {
             if (text.replace(',', '') !== '') {
               _this.arrayOfList.push(text.replace(',', ''))
-              // this.arrayOfList.push(text.replace(',', ''))
-            } // clear input
-            this.value = ''
-            // pushTagElement(text.replace(',', ''))
+            }
+            _this.value = ''
+            _this.DOMRender()
+          }
+        }
+      },
+      false
+    )
+    this.DOMInput.addEventListener(
+      'keydown',
+      function (event) {
+        {
+          const text = this.value
+          if (String(event.keyCode) === String(9)) {
+            if (text.replace(',', '') !== '') {
+              _this.arrayOfList.push(text.replace(',', ''))
+            }
+            _this.value = ''
             _this.DOMRender()
           }
         }
