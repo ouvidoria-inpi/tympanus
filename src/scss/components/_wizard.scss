@@ -201,6 +201,7 @@
       grid-template-columns: 1fr; //Padrão vertical
       text-align: right;
       padding-top: 0;
+      position: relative;
 
       .wizard-progress-btn {
         padding-top: 0;
@@ -306,16 +307,17 @@
         }
       }
       &:after {
-        position: fixed;
+        position: absolute;
         display: block;
         width: 12%;
         height: 4px;
         border-radius: 2px;
         content: '';
         background-color: v(color-secondary-04,$color-secondary-04);
-        //bottom: 0;
+        bottom: 0;
+        top: unset;
         left: 44%;
-        margin-top: 72px;
+        //margin-top: 72px;
         transition-property: all;
         transition-duration: 0.25s;
         transition-timing-function: linear;
@@ -360,7 +362,9 @@
         &:after {
           width: 4px;
           height: 8%;
-          left: 114px;
+          //left: 106px;
+          left: unset;
+          right: 0;
           top: 40%;
           margin-top: 0;
         } 
@@ -400,7 +404,9 @@
           &:after {
             width: 4px;
             height: 8%;
-            left: 62px;
+            //left: 54px;
+            left: unset;
+            right: 0;
             top: 40%;
           } 
           .wizard-progress-btn {
