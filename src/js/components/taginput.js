@@ -52,21 +52,32 @@ class BRTagInput {
     this.DOMCreate().focus()
   }
   onKeyUp() {
+    // eslint-disable-next-line consistent-this
+    const _this = this
+
     this.DOMInput.addEventListener(
       'keyup',
-      (event) => {
-        const text = value.trim() // check if ',' or 'enter' key was press
-        if (text.includes(',') || event.keyCode === 13) {
-          if (text.replace(',', '') !== '') {
-            self.arrayOfList.push(text.replace(',', ''))
-          } // clear input
-          value = ''
-          self.DOMRender()
+      function (event) {
+        {
+          this.keynm = 13
+          const text = this.value
+          const x = ''
+
+          if (text.includes(',') || String(event.keyCode) === String(13)) {
+            if (text.replace(',', '') !== '') {
+              _this.arrayOfList.push(text.replace(',', ''))
+              // this.arrayOfList.push(text.replace(',', ''))
+            } // clear input
+            this.value = ''
+            // pushTagElement(text.replace(',', ''))
+            _this.DOMRender()
+          }
         }
       },
-      this
+      false
     )
   }
+
   onDelete(id) {
     this.arrayOfList = this.arrayOfList.filter((currentValue, index) => {
       if (index === id) {
