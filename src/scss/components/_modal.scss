@@ -3,7 +3,7 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
 .#{$prefix}modal {
   box-shadow: 0 3px 6px $br-modal-box-shadow-color;
   padding: $spacer * 2;
-  width: 28.8rem;
+  // width: 28.8rem;
   &-header {
     margin-bottom: $spacer * 3.5;
     position: relative;
