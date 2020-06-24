@@ -1,5 +1,5 @@
 .#{$prefix}menu {
-  background: v(color-secondary-03);
+  background: v(color-secondary-01);
   box-shadow: 3px 0 3px rgba(v(rgb-secondary-09), 0.16);
   display: flex;
   flex-flow: column;
@@ -78,7 +78,7 @@
       }
       .item {
         align-items: center;
-        background: v(color-secondary-02);
+        background: v(color-secondary-01);
         border: 0;
         border-color: v(color-secondary-04);
         border-style: solid;

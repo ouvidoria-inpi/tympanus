@@ -379,6 +379,7 @@
       left: unset;
       right: 0;
       top: 0;
+      max-height: -webkit-fill-available;
       order: 0;
       width: 100%;
       z-index: 999;
@@ -727,7 +728,7 @@
           position: absolute;
           width: 100%;
           left: 0;
-          top: 0;
+          top: $spacer;
           ul {
             width: 100%;
           }
