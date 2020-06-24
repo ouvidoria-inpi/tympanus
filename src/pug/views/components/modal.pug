@@ -4,179 +4,51 @@ append vars
   - var title = "Modal";
 
 append content
+  p.h5 Acionamento por botão
   .br-scrim.is-foco
     +modal
       +modal-header("Retornar para página inicial?")
       +modal-body
         p Você está sendo redirecionado para a página inicial do sistema
       +modal-footer
-        +button(class="is-small is-secondary")
-          | Cancelar
-        +button(class="is-small is-primary ml-3")
-          | Retornar
+        +button()(secondary) Cancelar
+        +button().ml-3(primary) Retornar
 
-append content
-  button(type='button' class="br-button is-large is-secondary") Modal com Scrim
-  hr
+  +button()(secondary) Modal com Scrim
 
-append content
-  +modal
-    +modal-header("Retornar para página inicial?")
-    +modal-body
-      p Você está sendo redirecionado para a página inicial do sistema
-    +modal-footer
-      +button(class="is-small is-secondary")
-        | Cancelar
-      +button(class="is-small is-primary ml-3")
-        | Retornar
-  hr
+  p.h5.mt-5 Modal simples
   +modal
     +modal-header("Retornar para página inicial?")
       +modal-close
     +modal-body
       p Você está sendo redirecionado para a página inicial do sistema
     +modal-footer
-      +button(class="is-small is-secondary")
-        | Ação 1
-      +button(class="is-small is-primary ml-3")
-        | Ação 2
-  hr
-  +modal
-    +modal-header("Título do modal de exemplo com uso de duas linhas, título do modal de exemplo com uso de duas linhas")
-      +modal-close
-    +modal-body
-      p Texto com duas linhas Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    +modal-footer
-      +button(class="is-small is-secondary")
-        | Ação 1
-      +button(class="is-small is-primary ml-3")
-        | Ação 2
-  hr
-  +modal
-    +modal-header("Título do modal de exemplo com uso de uma linha")(class="is-inline")
-      +modal-close
-    +modal-body
-      p Texto com uma linha Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    +modal-footer
-      +button(class="is-small is-secondary")
-        | Ação 1
-      +button(class="is-small is-primary ml-3")
-        | Ação 2
-  hr
-  +modal(class="is-xsmall")
-    +modal-body(class="align-center")
-      span.is-loading
-      br
-    +modal-footer(class="justify-content-around")
-      +button(class="is-small is-secondary")
-        | Cancelar
-  hr
-  +modal
-    +modal-body
-      p Modal de alerta sem título Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    +modal-footer
-      +button(class="is-small is-secondary")
-        | Ação 1
-      +button(class="is-small is-primary ml-3")
-        | Ação 2
-  hr
-  +modal
-    +modal-header("Escolha uma conta")
-      +modal-close
-    +modal-body
-      +select("Opções")(id="por-lista")
-        +option("Selecione", "0")
-        +option("opção 1", "1")
-        +option("opção 2", "2")
-        +option("opção 3", "3")
-    +modal-footer
-      +button(class="is-small is-secondary")
-        | Cancelar
-      +button(class="is-small is-primary ml-3")
-        | Retornar
-  hr
-  +modal
-    +modal-header("Buscar pelos estados")
-      +modal-close
-    +modal-body
-      +checkbox("Acre(AC)")(id="selecao-ac" class="d-block")
-      +checkbox("Alagoas(AL)")(id="selecao-al" class="d-block mt-1" checked)
-      +checkbox("Amapá(AP)")(id="selecao-ap" class="d-block mt-1")
-      +checkbox("Amazonas(AM)")(id="selecao-am" class="d-block mt-1")
-      +checkbox("Bahia(BA)")(id="selecao-ba" class="d-block mt-1" checked)
-      +checkbox("Ceará(CE)")(id="selecao-ce" class="d-block mt-1")
-      +checkbox("Distrito Federal(DF)")(id="selecao-df" class="d-block mt-1")
-      +checkbox("Espírito Santo(ES)")(id="selecao-es" class="d-block mt-1")
-    +modal-footer
-      +button(class="is-small is-secondary")
-        | Cancelar
-      +button(class="is-small is-primary ml-3")
-        | Retornar
-  hr
-  +modal
-    +modal-header("Opções de Visualização")
-      +modal-close
-    +modal-body
-      +radio("Fotos")(id="op-fotos" class="d-block" name="op")
-      +radio("Filmes")(id="op-filmes" class="d-block mt-1" name="op" checked)
-      +radio("Áudio")(id="op-audio" class="d-block mt-1" name="op")
-      +radio("Todas")(id="op-todas" class="d-block mt-1" name="op")
-    +modal-footer
-      +button(class="is-small is-secondary")
-        | Cancelar
-      +button(class="is-small is-primary ml-3")
-        | Retornar
-  hr
+      +button()(secondary) Cancelar
+      +button().ml-3(primary) Retornar
+
+  p.h5.mt-5 Modal login
   +modal
     +modal-header("Autenticar pelo Gov.br")
       +modal-close
     +modal-body
       +select("Domínio da autenticação")(id="auth-dominio")
         +option("Governo Federal do Brasil (gov.br)", "0")
-      +input("Usuário")(id="auth-usuario" placeholder="Insira um texto")
-      +input("Senha")(id="auth-password" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
-        button.icon(type='button')
-          i.fas.fa-eye
-          span.sr-only Mostrar senha
+      .mt-3
+        +input("Usuário")#auth-usuario(placeholder="Insira um texto")
+      .mt-3
+        +input("Senha")#auth-password(type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
+          button.icon(type='button')
+            i.fas.fa-eye
+            span.sr-only Mostrar senha
     +modal-footer
-      +button(class="is-small is-secondary")
-        | Cancelar
-      +button(class="is-small is-primary ml-3")
-        | Retornar
-  hr
-  +modal(class="is-large")
-    +modal-header("Novo evento")
-      +modal-close
-    +modal-body
-      .row.align-items-end
-        .col-sm-7
-          +input("Nome do evento")(id="evento-nome" placeholder="Digite o nome do evento")
-        .col-sm
-          +checkbox("Marcar como ocupado")(id="evento-check" class="mb-2" checked)
-      .row.mt-3
-        .col-sm-6
-          +datepicker("Data Inicial")(id="date-start" class="range" type="text" placeholder="dd/mm/aaaa")
-        .col-sm-4
-          +select("Hora Inicial")(id="evento-hora-inicio")
-            +option("11:00", "11")
-      .row.mt-3
-        .col-sm-6
-          +datepicker("Data Final")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
-        .col-sm-4
-          +select("Hora Final")(id="evento-hora-final")
-            +option("12:00", "12")
-    +modal-footer
-      +button(class="is-small is-secondary")
-        | Cancelar
-      +button(class="is-small is-primary ml-3")
-        | Entrar
-  hr
+      +button()(secondary) Cancelar
+      +button().ml-3(primary) Retornar
+
+  p.h5.mt-5 Modal com scroll
   +modal(class="is-scroll")
     +modal-header("Concorda com os termos?")
     +modal-body
       .br-card Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Mauris id gravida nulla. Cras sagittis dapibus felis vitae semper. Donec vel hendrerit ante. Etiam sed blandit nisi. Praesent iaculis, nisl eget rutrum vehicula, lacus tortor feugiat diam, et euismod lacus metus eget nisi. Sed fermentum, nunc nec efficitur pharetra, felis dolor feugiat massa, et semper turpis felis quis ligula. Quisque non metus at risus maximus ultrices. Nam vel massa tellus. Vestibulum lobortis dui et pellentesque porta. Cras rhoncus augue a mauris porttitor, in malesuada metus eleifend. Praesent ac lacinia lorem. Sed cursus nisl ligula, vel ultrices ex pellentesque eu. Curabitur facilisis egestas libero, non pharetra lacus ultricies quis. Mauris non finibus justo, eu varius metus. Donec nec eros semper, consequat turpis id, fermentum dolor.
     +modal-footer
-      +button(class="is-small is-secondary")
-        | Negar
-      +button(class="is-small is-primary ml-3" disabled)
-        | Aceitar
+      +button()(secondary) Negar
+      +button().ml-3(primary disabled) Aceitar

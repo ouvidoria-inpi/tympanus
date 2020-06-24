@@ -4,8 +4,9 @@ append vars
   - var title = "Checkbox";
 
 append content
-  p.label.mb-0 Selecione uma opção
-  p.help-text Informações adicionais
+  p.h5 Checkbox padrão
+  p.label.mb-0 Rótulo
+  p.text-down-01 Informações adicionais
   +checkbox("Opção 1")#checkbox-1
   +checkbox("Opção 2 selecionada")#checkbox-2(checked)
   +checkbox("Opção 3")#checkbox-3
@@ -13,28 +14,15 @@ append content
     i.fas.fa-exclamation-triangle
     span  Texto de mensagem
 
-  hr
-
-  .row
-    .col-md-4
-      p.label.mt-3 Selecione várias opções
-      +checkbox("Nome do filtro 5")#filtro-5(small)
-      +checkbox("Nome do filtro 6")#filtro-6(small)
-      +checkbox("Nome do filtro 7")#filtro-7(small)
-    .col-md-4
-      p.label.mt-3 Selecione várias opções
-      +checkbox("Nome do filtro 1")#filtro-1(small)
-      +checkbox("Nome do filtro 2")#filtro-2(small)
-      +checkbox("Nome do filtro 3")#filtro-3(small)
-      +checkbox("Nome do filtro 4")#filtro-4(small)
-
-  p.label.mt-3 Listagem horizontal
+  p.h5.mt-5 Listagem horizontal
   +checkbox("Opção 1")#h-checkbox-1.d-inline
   +checkbox("Opção 2")#h-checkbox-2.d-inline
   +checkbox("Opção 3")#h-checkbox-3.d-inline
 
-  p.label.mt-3 Estados e validação
+  p.h5.mt-5 Estados e validação
   +checkbox("desativado")#check-state-disabled(disabled)
   +checkbox("Inválido")#check-state-invalid(invalid)
   +checkbox("Válido")#check-state-valid(checked valid)
-  +feedback("fa-times-circle", "Preenchimento Obrigatório")(class="is-invalid")
+  .feedback.text-danger
+    .icon: i.fas.fa-times-circle
+    .content Preenchimento Obrigatório

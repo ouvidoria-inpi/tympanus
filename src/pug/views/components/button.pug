@@ -4,244 +4,119 @@ append vars
   - var title = "Botão";
 
 append content
-  p.h2 Botões finalísticos
+  p.h5 Primário
+  .row
+    .col-sm-auto
+      +button()(primary) Entrar
+    .col-sm-auto.mt-3.mt-sm-0.text-center
+      +button()(primary mini) Entrar
+    .col-sm-auto.mt-3.mt-sm-0
+      +button()(primary)
+        i.fas.fa-edit
+        | Editar
+    .col-sm-auto.mt-3.mt-sm-0
+      +button()(primary)
+        i.fas.fa-print
+        | Imprimir
+    .col-sm-auto.mt-3.mt-sm-0
+      +button()(primary)
+        | Avançar
+        i.fas.fa-angle-right
 
-  p Primário
+  p.h5.mt-5 Call to Action
+  .row
+    .col-sm-auto
+      +button()(action) Adicionar
+    .col-sm-auto.mt-3.mt-sm-0.text-center
+      +button()(action circle): i.fas.fa-plus
+
+  p.h5.mt-5 Secundário
   .mb-3.mb-sm-0.d-sm-inline
-    +button()(primary) Entrar
+    +button()(secondary) Voltar
   .mb-3.mb-sm-0.text-center.text-sm-left.d-sm-inline
-    +button()(primary mini) Entrar
+    +button()(secondary mini) Voltar
   .mb-3.mb-sm-0.d-sm-inline
-    +button()(primary)
+    +button()(secondary)
+      i.fas.fa-eraser
+      | Limpar
+  .mb-3.mb-sm-0.d-sm-inline
+    +button()(secondary)
+      i.fas.fa-angle-left
+      | Voltar
+
+  p.h5.mt-5 Terciário sem ícone
+  +button: u Fazer login
+
+  p.h5.mt-5 Terciário sem ícone
+  .mb-3.mb-sm-0.d-sm-inline
+    +button
+      i.fas.fa-sliders-h
+      | Filtrar
+  .mb-3.mb-sm-0.d-sm-inline
+    +button
       i.fas.fa-edit
       | Editar
   .mb-3.mb-sm-0.d-sm-inline
-    +button()(primary)
+    +button
       i.fas.fa-print
       | Imprimir
   .mb-3.mb-sm-0.d-sm-inline
-    +button()(primary)
+    +button
+      i.fas.fa-download
+      | Download
+  .mb-3.mb-sm-0.d-sm-inline
+    +button
+      i.fas.fa-upload
+      | Upload
+  .mb-3.mb-sm-0.d-sm-inline
+    +button
+      i.fas.fa-plus
+      | Adicionar
+  .mb-3.mb-sm-0.d-sm-inline
+    +button
+      | Voltar ao Topo
+      i.fas.fa-chevron-circle-up
+  .mb-3.mb-sm-0.d-sm-inline
+    +button
       | Avançar
       i.fas.fa-angle-right
 
-  p.mt-3 Call to Action
-  .mb-3.mb-sm-0.d-sm-inline
-      +button()(action) Adicionar
-  .mb-3.mb-sm-0.text-center.text-sm-left.d-sm-inline
-      +button()(action circle)
-          i.fas.fa-plus
+  p.h5.mt-5 Circular
+  +button()(circle): i.fas.fa-envelope
+  +button()(circle): i.fas.fa-phone
+  +button()(circle): i.fas.fa-chevron-down
+  +button()(circle): i.fas.fa-plus
 
-  p.mt-3 Secundário
-  .mb-3.mb-sm-0.d-sm-inline
-      +button()(secondary) Voltar
-  .mb-3.mb-sm-0.text-center.text-sm-left.d-sm-inline
-      +button()(secondary mini) Voltar
-  .mb-3.mb-sm-0.d-sm-inline
-      +button()(secondary)
-          i.fas.fa-eraser
-          | Limpar
-  .mb-3.mb-sm-0.d-sm-inline
-      +button()(secondary)
-          i.fas.fa-angle-left
-          | Voltar
+  p.h5.mt-5 Circular mini
+  +button()(mini circle): i.fas.fa-envelope
+  +button()(mini circle): i.fas.fa-phone
+  +button()(mini circle): i.fas.fa-chevron-down
+  +button()(mini circle): i.fas.fa-plus
 
-  hr
-
-  p.h2 Botões contextuais
-
-  p Label sem ícone
-  +button
-      u Fazer login
-
-  p.mt-3 Label com ícone
-  .mb-3.mb-sm-0.d-sm-inline
-      +button
-          i.fas.fa-sliders-h
-          | Filtrar
-  .mb-3.mb-sm-0.d-sm-inline
-      +button
-          i.fas.fa-edit
-          | Editar
-  .mb-3.mb-sm-0.d-sm-inline
-      +button
-          i.fas.fa-print
-          | Imprimir
-  .mb-3.mb-sm-0.d-sm-inline
-      +button
-          i.fas.fa-download
-          | Download
-  .mb-3.mb-sm-0.d-sm-inline
-      +button
-          i.fas.fa-upload
-          | Upload
-  .mb-3.mb-sm-0.d-sm-inline
-      +button
-          i.fas.fa-plus
-          | Adicionar
-  .mb-3.mb-sm-0.d-sm-inline
-      +button
-          | Voltar ao Topo
-          i.fas.fa-chevron-circle-up
-  .mb-3.mb-sm-0.d-sm-inline
-      +button
-          | Avançar
-          i.fas.fa-angle-right
-
-  p.mt-3 Ícone
-  +button()(circle)
-      i.fas.fa-envelope
-  +button()(circle)
-      i.fas.fa-phone
-  +button()(circle)
-      i.fas.fa-chevron-down
-  +button()(circle)
-      i.fas.fa-plus
-
-  p.mt-3 ìcone mini
-  +button()(mini circle)
-      i.fas.fa-envelope
-  +button()(mini circle)
-      i.fas.fa-phone
-  +button()(mini circle)
-      i.fas.fa-chevron-down
-  +button()(mini circle)
-      i.fas.fa-plus
-
-  hr
-
-  p.h2 Estados
   .row
-      //- .col-sm-4.col-lg-auto.text-center
-      //-     p.text-left.text-sm-center Interativo
-      //-     .mt-3
-      //-         +button()(primary) Entrar
-      //-     .mt-3
-      //-         +button()(secondary) Voltar
-      //-     .mt-3
-      //-         +button
-      //-             u Entrar
-      //-     .mt-3
-      //-         +button
-      //-             i.fas.fa-sliders-h
-      //-             | Filtrar
-      //-     .mt-3
-      //-         +button()(circle)
-      //-             i.fas.fa-plus
-      //-     .mt-3
-      //-         +button()(action) Solicitar
-      //-     .mt-3
-      //-         +button()(action circle)
-      //-             i.fas.fa-plus
-
-      //- .col-sm-4.col-lg-auto.text-center.mt-3.mt-sm-0
-      //-     p.text-left.text-sm-center Hover
-      //-     .mt-3
-      //-         +button()(primary hover) Entrar
-      //-     .mt-3
-      //-         +button()(secondary hover) Voltar
-      //-     .mt-3
-      //-         +button()(hover)
-      //-             u Entrar
-      //-     .mt-3
-      //-         +button()(hover)
-      //-             i.fas.fa-sliders-h
-      //-             | Filtrar
-      //-     .mt-3
-      //-         +button()(circle hover)
-      //-             i.fas.fa-plus
-      //-     .mt-3
-      //-         +button()(action hover) Solicitar
-      //-     .mt-3
-      //-         +button()(action circle hover)
-      //-             i.fas.fa-plus
-
-      //- .col-sm-4.col-lg-auto.text-center.mt-3.mt-sm-0
-      //-     p.text-left.text-sm-center Pressionado
-      //-     .mt-3
-      //-         +button()(primary active) Entrar
-      //-     .mt-3
-      //-         +button()(secondary active) Voltar
-      //-     .mt-3
-      //-         +button()(active)
-      //-             u Entrar
-      //-     .mt-3
-      //-         +button()(active)
-      //-             i.fas.fa-sliders-h
-      //-             | Filtrar
-      //-     .mt-3
-      //-         +button()(circle active)
-      //-             i.fas.fa-plus
-      //-     .mt-3
-      //-         +button()(action active) Solicitar
-      //-     .mt-3
-      //-         +button()(action circle active)
-      //-             i.fas.fa-plus
-
-      //- .col-sm-4.col-lg-auto.text-center.mt-3.mt-lg-0
-      //-     p.text-left.text-sm-center Foco
-      //-     .mt-3
-      //-         +button()(primary focus) Entrar
-      //-     .mt-3
-      //-         +button()(secondary focus) Voltar
-      //-     .mt-3
-      //-         +button()(focus)
-      //-             u Entrar
-      //-     .mt-3
-      //-         +button()(focus)
-      //-             i.fas.fa-sliders-h
-      //-             | Filtrar
-      //-     .mt-3
-      //-         +button()(circle focus)
-      //-             i.fas.fa-plus
-      //-     .mt-3
-      //-         +button()(action focus) Solicitar
-      //-     .mt-3
-      //-         +button()(action circle focus)
-      //-             i.fas.fa-plus
-
-      .col-sm-4.col-lg-auto.text-center.mt-3.mt-lg-0
-          p.text-left.text-sm-center Desativado
-          .mt-3
-              +button()(primary disabled) Entrar
-          .mt-3
-              +button()(secondary disabled) Voltar
-          .mt-3
-              +button()(disabled)
-                  u Entrar
-          //- .mt-3
-          //-     +button()(disabled)
-          //-         i.fas.fa-sliders-h
-          //-         | Filtrar
-          //- .mt-3
-          //-     +button()(circle disabled)
-          //-         i.fas.fa-plus
-          .mt-3
-              +button()(action disabled) Solicitar
-          .mt-3
-              +button()(action circle disabled)
-                  i.fas.fa-plus
-
-      .col-sm-4.col-lg-auto.text-center.mt-3.mt-lg-0
-          p.text-left.text-sm-center Progresso
-          .mt-3
-              +button()(primary loading)
-              .sr-only Entrar
-          .mt-3
-              +button()(secondary loading)
-              .sr-only Voltar
-          .mt-3
-              +button()(loading)
-              .sr-only Entrar
-          //- .mt-3
-          //-     +button()(loading)
-          //-         i.fas.fa-sliders-h
-          //-         | Filtrar
-          //- .mt-3
-          //-     +button()(circle loading)
-          //-         i.fas.fa-plus
-          .mt-3
-              +button()(action loading)
-              .sr-only Solicitar
-          .mt-3
-              +button()(action circle loading)
-                  i.fas.fa-plus
+    .col-sm-4.col-md-auto.text-center
+      p.h5.mt-5 Desativado
+      .mt-3
+        +button()(primary disabled) Entrar
+      .mt-3
+        +button()(secondary disabled) Voltar
+      .mt-3
+        +button()(disabled)
+          u Entrar
+      .mt-3
+        +button()(action disabled) Solicitar
+      .mt-3
+        +button()(action circle disabled)
+          i.fas.fa-plus
+    .col-sm-4.col-md-auto.text-center
+      p.h5.mt-5 Progresso
+      .mt-3
+        +button()(primary loading) Entrar
+      .mt-3
+        +button()(secondary loading) Voltar
+      .mt-3
+        +button()(loading) Entrar
+      .mt-3
+        +button()(action loading) Solicitar
+      .mt-3
+        +button()(action circle loading): i.fas.fa-plus

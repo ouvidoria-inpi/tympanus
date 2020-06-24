@@ -4,9 +4,13 @@ append vars
   - var title = "Paginação";
 
 append content
-  .align-center
+  p.h5 Tamanho grande
     +pagination(id="large" class="is-large")
+
+  p.h5.mt-5 Tamanho padrão
     +pagination(id="default")
+
+  p.h5.mt-5 Versão reduzida
     nav
       ul.br-pagination
         li.is-first.is-disabled

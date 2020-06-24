@@ -6,13 +6,13 @@ append vars
 append content
   .row
     .col-sm-6.col-md-4.col-lg-3
-      p.h2 Card simples
+      p.h5 Card simples
       +card
         .front
           .content
             img(src="https://picsum.photos/id/0/1080" alt="Imagem de exemplo")
-    .col-sm-6.col-md-4.col-lg-3
-      p.h2 Card complexo
+    .col-sm-6.col-md-4.col-lg-3.mt-5.mt-sm-0
+      p.h5 Card complexo
       +card
         .front
           .header.d-flex.justify-content-between
@@ -21,7 +21,7 @@ append content
                 +avatar
                   .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
               .flex-grow-1
-                p.h6.text-primary-default.mb-0 Maria Amorim
+                p.h5.text-primary-default.mb-0 Maria Amorim
                 span UX Designer
             +button()(circle mini)
               i.fas.fa-ellipsis-v
@@ -35,9 +35,9 @@ append content
                 i.fas.fa-heart
               +button()(circle mini)
                 i.fas.fa-share-alt
-  .row.mt-3
+  .row.mt-5
     .col-sm-6.col-md-4.col-lg-3
-      p.h2 Card com flip
+      p.h5 Card com flip
       +card()(flipped)
         .front
           .header.d-flex.justify-content-between
@@ -57,8 +57,8 @@ append content
               i.fas.fa-redo-alt
           .content
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit necessitatibus quod voluptates voluptatibus sequi labore voluptatum ab, odio nesciunt in similique sed, porro facilis rem unde, aut mollitia ut ex!
-    .col-sm-6.col-md-4.col-lg-3
-      p.h2 Card com expansão
+    .col-sm-6.col-md-4.col-lg-3.mt-5.mt-sm-0
+      p.h5 Card com expansão
       +card()(expanded)
         .front
           .header.d-flex.justify-content-between
@@ -67,7 +67,7 @@ append content
                 +avatar
                   .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
               .flex-grow-1
-                p.h6.text-primary-default.mb-0 Maria Amorim
+                p.h5.text-primary-default.mb-0 Maria Amorim
                 span UX Designer
             +button()(circle mini)
               i.fas.fa-ellipsis-v
@@ -105,8 +105,8 @@ append content
                     .text Texto Principal
                     .description Texto secundário Lorem Ipsum dolor sit amet
                   .support meta
-    .col-sm-6.col-md-4.col-lg-3
-      p.h2 Card desativado
+    .col-sm-6.col-md-4.col-lg-3.mt-5.mt-md-0
+      p.h5 Card desativado
       +card()(disabled)
         .front
           .header.d-flex.justify-content-between
@@ -115,7 +115,7 @@ append content
                 +avatar
                   .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
               .flex-grow-1
-                p.h6.text-primary-default.mb-0 Maria Amorim
+                p.h5.text-primary-default.mb-0 Maria Amorim
                 span UX Designer
             +button()(circle mini)
               i.fas.fa-ellipsis-v

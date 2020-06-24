@@ -4,62 +4,30 @@ append vars
   - var title = "Mensagem";
 
 append content
-  +message("is-danger")
-    strong Erro.
-    span  Mensagem. 
-    a(href="javascript:void(0)") Exemplo de link
-  +message("is-success")
+  p.h5 Tipos
+  +message()(danger)
+    strong Data de início do afastamento inválida.
+    p A data não pode ser superior à data atual.
+  +message()(success)
     strong Sucesso.
-    span  Mensagem. 
-    a(href="javascript:void(0)") Exemplo de link
-  +message("is-warning")
-    strong Atenção.
-    span  Mensagem. 
-    a(href="javascript:void(0)") Exemplo de link
-  +message("is-info")
+    span  Seus dados foram alterados conforme preencimento do formulário.
+  +message()(info)
     strong Informação.
-    span  Mensagem. 
-    a(href="javascript:void(0)") Exemplo de link
-  +message("hint")
-    strong Mensagem Complementar.
-    p Os arquivos devem ser no formatos PNG, JPG, PDF e ter no máximo 1G.
-  .row
-    .col-md-12
-      +message("is-danger")
-        p
-          strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          br
-          | Voluptatum, illo totam. A neque iusto dolores rem assumenda? Officiis error inventore laudantium quam vel illum nemo nesciunt accusamus. Dolore, aliquid assumenda.
-          | Ad fuga quod odio laborum sequi aspernatur ut nulla molestiae? Officiis earum, expedita amet optio ex necessitatibus voluptatem sequi accusamus numquam suscipit.
-      +message("is-success")
-        p
-          strong Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          br
-          | Omnis quae laudantium error explicabo amet. Dicta provident sit tempore sed incidunt reprehenderit aliquam iusto, rem architecto quibusdam tempora animi. Odio, ipsa.
-          | Exercitationem itaque beatae maxime repudiandae, consequuntur odio necessitatibus facilis nesciunt dicta in id error autem saepe fugiat laboriosam atque nisi dolor? Rem.
-    .col-md-12
-      +message("is-warning")
-        p
-          strong Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          br
-          | Architecto quasi ex ipsa ipsum in iure quaerat harum, iusto enim, perferendis, accusamus et asperiores cum quis totam modi natus illo esse.
-          | Hic quam tenetur consequatur ipsam, facere molestias mollitia officia possimus voluptas provident corrupti culpa ullam quo voluptate! Iusto nesciunt temporibus adipisci aut.
-      +message("is-info")
-        p
-          strong Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          br
-          | Iste aperiam accusamus fugit itaque ullam temporibus quasi voluptatem ea officia architecto cupiditate qui libero numquam neque, et cumque porro molestiae enim.
-          | Rem minus dolorum hic, molestias cumque adipisci eos voluptatum mollitia accusantium distinctio nihil sint laboriosam, repudiandae fugit culpa enim asperiores ea labore!
-          
-  .row
-    .col-sm
-      .mb-3
-        +input("Desativado")(id="desativado" type="text" class="is-disabled" placeholder="Insira um texto" disabled)
-        +feedback("fa-exclamation-triangle", "Campo Desabilitado")(class="is-disabled")
-      .mb-3
-        +input("Inválido")(id="invalid" class="is-invalid" placeholder="Insira um texto")
-        +feedback("fa-times-circle", "Texto inválido")(class="is-invalid")
-      .mb-3
-        +input("Válido")(id="valid" class="is-valid" placeholder="Insira um texto")
-        +feedback("fa-check-circle", "Texto válido")(class="is-valid")
+    span  Seus dados só serão salvos após o preenchimento do primeiro campo do formulário.
+  +message()(warning)
+    strong Atenção.
+    span  Em caso de dúvida, não compartilhe sua senha com terceiros. Ligue para a Central de atendimento.
 
+  p.h5.mt-5 Mensagens contextuais
+  p.feedback.text-success
+    span.icon: i.fas.fa-check-circle.fa-lg
+    | Campo correto.
+  .feedback.text-danger
+    .icon: i.fas.fa-times-circle.fa-lg
+    | O CPF deve conter apenas dígitos.
+  span.feedback.text-info
+    span.icon: i.fas.fa-exclamation-circle.fa-lg
+    | Os arquivos devem ser no formato PNJ, JPG, PDF e ter no máximo 1GB.
+  .feedback
+    .icon: i.fas.fa-exclamation-triangle.fa-lg
+    | A tecla CAPS-LOCK está ativada.
