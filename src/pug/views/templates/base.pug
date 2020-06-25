@@ -9,9 +9,8 @@ block template
     li: a.br-button(accesskey="2" href="#main-nav") Ir para o menu principal
     li: a.br-button(accesskey="3" href="#context-nav") Ir para o menu auxiliar
   .scrim-menu
-    #main-nav
-      +menu
-        +menu-principal-content
+    +menu#main-nav
+      +menu-principal-content
   +header()(sticky)
     .container-lg
       +header-base-content
