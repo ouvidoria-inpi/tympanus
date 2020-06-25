@@ -11,10 +11,10 @@
   display: block;
   position: absolute !important;
   opacity: 0;
-  animation-name: fadeOutOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.5s;
+  // animation-name: fadeOutOpacity;
+  // animation-iteration-count: 1;
+  // animation-timing-function: ease-in;
+  // animation-duration: 0.5s;
   visibility: hidden;
   max-width: 240px;
   z-index: 999;
@@ -40,10 +40,11 @@
   &[data-show] {
     visibility: visible;
     opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.4s;
+    // animation-name: fadeInOpacity;
+    // animation-iteration-count: 1;
+    // animation-timing-function: ease-in;
+    // animation-duration: 0.4s;
+    animation: fadeInOpacity ease-in-out .5s;
   }
 
   &[popover] {
