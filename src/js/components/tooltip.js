@@ -90,16 +90,16 @@ class BRTooltip {
     if (this.popperInstance) {
       const refpopover = this.component
       setTimeout(() => {
-        //refpopover.style.display = 'none'
+        refpopover.style.display = 'none'
       }, 500)
     }
   }
   _show(event) {
-    //this.component.style.display = 'unset'
+    this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
     this._fixPosition()
     // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
-    //this.component.style.visibility = "visible";
+    this.component.style.visibility = 'visible'
     if (this.timer) {
       setTimeout(this._hide, this.timer, event, this.component)
     }
@@ -108,10 +108,10 @@ class BRTooltip {
     // data-show é o atributo que controla a visibilidade
     if (this.component) {
       this.component.removeAttribute('data-show')
-      //this._destroy()
+      this._destroy()
     } else if (component) {
       component.removeAttribute('data-show')
-      //component.style.display = 'none'
+      component.style.display = 'none'
     }
   }
   _setLayout() {

@@ -111,7 +111,7 @@
               .fas {
                 font-size: v(font-size-scale-base);
                 position: absolute;
-                left: 0.4em;
+                left: 0.4em !important;
                 margin-top: 0.3em;
               }
             }
@@ -330,7 +330,7 @@
                 .svg-inline--fa,
                 .fas {
                   visibility: visible;
-                  left: 9px;
+                  left: 1em !important;
                 }
               }
               &:last-child {
@@ -374,7 +374,7 @@
                 .svg-inline--fa,
                 .fas {
                   visibility: visible;
-                  left: 9px;
+                  left: 0.9em !important;
                 }
               }
               &:last-child {
