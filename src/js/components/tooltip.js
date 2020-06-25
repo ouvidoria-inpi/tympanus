@@ -32,7 +32,6 @@ class BRTooltip {
       close.addEventListener('click', (event) => {
         this._hide(event)
       })
-      this._fixPosition()
       // Ação de fechar padrao ao sair do ativador
     } else {
       this.hideEvents.forEach((event) => {
@@ -91,12 +90,12 @@ class BRTooltip {
     if (this.popperInstance) {
       const refpopover = this.component
       setTimeout(() => {
-        refpopover.style.display = 'none'
+        //refpopover.style.display = 'none'
       }, 500)
     }
   }
   _show(event) {
-    this.component.style.display = 'unset'
+    //this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
     this._fixPosition()
     // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
@@ -109,10 +108,10 @@ class BRTooltip {
     // data-show é o atributo que controla a visibilidade
     if (this.component) {
       this.component.removeAttribute('data-show')
-      this._destroy()
+      //this._destroy()
     } else if (component) {
       component.removeAttribute('data-show')
-      component.style.display = 'none'
+      //component.style.display = 'none'
     }
   }
   _setLayout() {
@@ -142,7 +141,7 @@ class BRTooltip {
         this.component.querySelector('.arrow').style = `position: absolute; left: auto; right: ${
           document.body.clientWidth - pos.right + pos.width / 5
         }px !important;`
-      }, 100)
+      }, 10)
     }
   }
 }
