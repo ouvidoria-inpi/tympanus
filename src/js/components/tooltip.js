@@ -91,7 +91,7 @@ class BRTooltip {
       const refpopover = this.component
       setTimeout(() => {
         refpopover.style.display = 'none'
-      }, 500)
+      }, 50)
     }
   }
   _show(event) {
