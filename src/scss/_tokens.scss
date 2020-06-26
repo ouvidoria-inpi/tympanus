@@ -11,4 +11,6 @@
   @include tokens($tokens-tablet);
   @include tokens($tokens-desktop);
   @include tokens($tokens-tv);
+  @include tokens($tokens-alinhamento);
+  @include tokens($tokens-spacing);
 }

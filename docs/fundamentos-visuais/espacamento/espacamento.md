@@ -20,7 +20,7 @@ Os métodos de espaços usados no elemento devem ser claros.
 
 Utilizar espaços entre os elementos é a melhor forma de proporcionar uma boa legibilidade e organização do conteúdo. No design existe um termo chamado de espaço em branco que ajudam neste contexto.
 
-Os espaços em branco (_white space_ ou _negative space_) são recursos visuais que ajudam a tornar um layout mais agradável. Criam hierarquia nas informações (dando foco no que for mais importante) e criam relacionamento entre os elementos (aplicando distância entre os não semelhantes e a proximidade dos semelhantes).
+Os espaços em branco (_white space_ ou _negative space_) são recursos visuais que ajuda a tornar um layout mais agradável. Criam hierarquia nas informações (dando foco no que for mais importante) e criam relacionamento entre os elementos (aplicando distância entre os não semelhantes e a proximidade dos semelhantes).
 
 Os espaços em branco também são importantes para leitura, pois criam áreas de respiro no layout, isto é, espaços onde o olhar do leitor pode descansar, e por fim manter o fluxo de leitura.
 
@@ -164,15 +164,15 @@ _Exemplo de Escala_
 
 **Importante**: por padrão, os espaçamentos de qualquer elemento do DS Gov é de 0px. Ou seja, não utiliza nenhum tipo de escala.
 
-| Spacing Scale Token       | Value |
-| ------------------------- | ----- |
-| `--spacing-scale-default` | 0px   |
+| Spacing Scale Token       | Value     |
+| ------------------------- | --------- |
+| `--spacing-scale-default` | 0px (0em) |
 
 #### Layout
 
 Escala base para os componentes e templates. Possui o incremento base de 8px.
 
-É utilizada para posicionar e hierarquizar componentes em uma interface, criar áreas de respiro e de proteção, entre outros. Ela é escala mais utilizada pela sua flexibilidade, pois permite o uso em qualquer tipo de elemento, além de posicionamentos mais perceptíveis.
+É utilizada para posicionar e hierarquizar componentes em uma interface, criar áreas de respiro e de proteção, entre outros. Ela é escala mais utilizada pela sua flexibilidade, pois permite o uso em **qualquer tipo de elemento**, além de criar posicionamentos mais perceptíveis.
 
 ![Escala Layout](imagens/escala-layout.png)
 _Escala Layout_
@@ -196,16 +196,16 @@ Escala utilizada para realizar pequenos ajustes de espaçamento em elementos de 
 
 Utilize a escala Ajuste quando necessitar de espaçamentos finos de um texto/ícone onde uma densidade alta possa fazer sentido na hierarquia dos elementos (como o espaço entre um rótulo e uma entrada de texto).
 
-**Atenção**: apesar da escala Ajuste se utilizada apenas para textos e ícones, ela não é exclusiva destes elementos!
+**Atenção**: apenas textos e ícones podem utilizar a escala Ajuste.
 
 ![Escala Ajuste](imagens/escala-ajuste.png)
 _Escala Ajuste_
 
-| Spacing Scale Token    | Value        |
-| ---------------------- | ------------ |
-| `--spacing-scale-0.5x` | 4px (.5em)   |
-| `--spacing-scale-1.5x` | 12px (1.5em) |
-| `--spacing-scale-2.5x` | 20px (2.5em) |
-| `--spacing-scale-3.5x` | 28px (3.5em) |
-| `--spacing-scale-4.5x` | 36px (4.5em) |
-| `--spacing-scale-5.5x` | 44px (5.5em) |
+| Spacing Scale Token     | Value        |
+| ----------------------- | ------------ |
+| `--spacing-scale-half`  | 4px (.5em)   |
+| `--spacing-scale-baseh` | 12px (1.5em) |
+| `--spacing-scale-2xh`   | 20px (2.5em) |
+| `--spacing-scale-3xh`   | 28px (3.5em) |
+| `--spacing-scale-4xh`   | 36px (4.5em) |
+| `--spacing-scale-5xh`   | 44px (5.5em) |
