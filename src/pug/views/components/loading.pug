@@ -4,48 +4,31 @@ append vars
   - var title = "Loading";
 
 append content
-  h1 Loading
-  p
-    | Indicadores de progresso que expressam um tempo de espera não especificado ou exibem a duração de um processo.
-  h2 Loading Determinado
+  p.h5 Com porcentagem
   .row
-    .col-3.d-flex.justify-content-top.flex-column.align-items-center
-      span Loading Determinado com Botão
-      .br-loading(data-progress="75")
-        .br-loading-mask(full)
-          .br-loading-fill
-        .br-loading-mask
-          .br-loading-fill
-      button.br-button.is-tertiary(type="button") Cancelar
-    .col-3.d-flex.justify-content-top.flex-column.align-items-center
-      span Loading Determinado sem Botão
-      .br-loading(data-progress="90")
-        .br-loading-mask(full)
-          .br-loading-fill
-        .br-loading-mask
-          .br-loading-fill
-  h2 Loading Indeterminado
+    .col-auto
+      .d-flex.justify-content-top.flex-column.align-items-center
+        +card
+          .front
+            .content
+              .br-loading(data-progress="75")
+                .br-loading-mask(full)
+                  .br-loading-fill
+                .br-loading-mask
+                  .br-loading-fill
+            button.br-button.is-tertiary(type="button") Cancelar
+
+  p.h5.mt-5 Indeterminado médio
   .row
-    .col-3.d-flex.justify-content-top.flex-column.align-items-center
-      span Loading Indeterminado com Rótulo
-      br
-      div(loading md label)
-      span Carregando...
-    .col-3.d-flex.justify-content-top.flex-column.align-items-center
-      span Loading Indeterminado sem Rótulo
-      br
-      br
-      div(loading md)
-  .br-divider
-  .row.mb-5
-    .col-3.d-flex.justify-content-top.flex-column.align-items-center
-      span Loading Indeterminado Pequeno com Rótulo
-      br
-      .d-flex.align-items-center
-        div(loading label)
+    .col-auto
+      .d-flex.justify-content-top.flex-column.align-items-center
+        div(loading md label)
         span Carregando...
-    .col-3.d-flex.justify-content-top.flex-column.align-items-center
-      span Loading Indeterminado Pequeno sem Rótulo
-      br
-      br
-      div(loading)
+
+  p.h5.mt-5 Indeterminado pequeno
+  .row
+    .col-auto
+      .d-flex.justify-content-top.flex-column.align-items-center
+        .d-flex.align-items-center
+          div(loading label)
+          span Carregando...

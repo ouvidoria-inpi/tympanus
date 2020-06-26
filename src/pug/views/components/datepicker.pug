@@ -4,13 +4,11 @@ append vars
   - var title = "DatePicker";
 
 append content
-  .row.mt-3.mb-5
-    .col-auto
-      p.label Versão Simples
-      +datepicker("Data")(id="normal" placeholder="dd/mm/aaaa")
-  .row.mt-3.mb-5
-    .col-auto
-      p.label Versão Data Inicial / Data Final
-      +datepicker("Data Inicial")(id="date-start" class="range" type="text" placeholder="dd/mm/aaaa")
-      +datepicker("Data Final")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
-      
+  p.h5 Versão Simples
+  +datepicker("Data")(id="normal" placeholder="dd/mm/aaaa")
+
+  p.h5.mt-5 Versão Data Inicial / Data Final
+  +datepicker("Data Inicial")(id="date-start" class="range" type="text" placeholder="dd/mm/aaaa")
+  .mt-3
+    +datepicker("Data Final")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
+  

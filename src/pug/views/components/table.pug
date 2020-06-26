@@ -4,8 +4,9 @@ append vars
   - var title = "Tabela";
 
 append content
-  p.h2.mb-3 Tabela simples
+  p.h5 Tabela simples
   +table()
-  p.h2.mb-3.mt-5 Datatable
+
+  p.h5.mt-5 Datatable
   +table#datatable-default(datatable=true, columns=10)
   +table#datatable-checkbox.mt-5(datatable=true, checkbox=true, title='Datatable com checkbox', rows=10, columns=8)

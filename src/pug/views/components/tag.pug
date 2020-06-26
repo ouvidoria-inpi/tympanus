@@ -1,41 +1,40 @@
 extends ../../layouts/component
 
 append vars
-    - var title = "Tag";
+  - var title = "Tag";
 
 append content
-    h1 Tag
-    h2 Estados (enabled, disabled, selected, hover)
-    +tag
-        span
-            i.fa.fa-car
-            | Mitsubishi Outlander
-    +tag.tag-input-close
-        span
-            i.fa.fa-car
-            | Mitsubishi Outlander
-    +tag.disabled
-        span
-            i.fa.fa-car
-            | Mitsubishi Outlander
-    hr
-    h2 Tag de Entrada
-    .br-tag-input
-    hr
-    h2 Tag de Escolha
-    .br-tag-list
-        +tag-button
-            span Alta Prioridade
-        +tag-button
-            span Baixa Prioridade
-    hr
-    h2 Tag de Filtro        
-    .br-tag-filter
-        +tag-button
-            span
-                i.fas.fa-check
-                | Modelo de Automóvel
-        +tag-button
-            span
-                i.fas.fa-check
-                | Tipo de Combustível
+  p.h5 Exemplos
+  +tag
+    span
+      i.fa.fa-car
+      | Mitsubishi Outlander
+  +tag.tag-input-close
+    span
+      i.fa.fa-car
+      | Mitsubishi Outlander
+  +tag.disabled
+    span
+      i.fa.fa-car
+      | Mitsubishi Outlander
+
+  p.h5.mt-5 Tag de Entrada
+  .br-tag-input
+
+  p.h5.mt-5 Tag de Escolha
+  .br-tag-list
+    +tag-button
+      span Alta Prioridade
+    +tag-button
+      span Baixa Prioridade
+
+  p.h5.mt-5 Tag de Filtro        
+  .br-tag-filter
+    +tag-button
+      span
+        i.fas.fa-check
+        | Modelo de Automóvel
+    +tag-button
+      span
+        i.fas.fa-check
+        | Tipo de Combustível

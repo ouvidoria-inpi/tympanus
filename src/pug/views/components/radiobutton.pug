@@ -4,27 +4,26 @@ append vars
   - var title = "Radio button";
 
 append content
+  p.h5 Radio button padrão
   p.label.mb-0 Rótulo
   p.help-text Informações adicionais
   +radio("opcao-1")#op-1(name="radio")
   +radio("opcao-2")#op-2(name="radio" checked)
   +radio("opcao-3")#op-3(name="radio")
   +radio("opcao-4")#op-4(name="radio")
-  .feedback
+  .feedback.mt-1
     i.fas.fa-exclamation-triangle
     span  Texto de mensagem
 
-  hr
-
-  p.label.mt-3 Listagem horizontal
+  p.h5.mt-5 Listagem horizontal
   +radio("Opção 1")#h-radio-1.d-inline(name="h-radio")
   +radio("Opção 2")#h-radio-2.d-inline(name="h-radio")
   +radio("Opção 3")#h-radio-3.d-inline(name="h-radio")
 
-  p.label.mt-3 Estados e validação
+  p.h5.mt-5 Estados e validação
   +radio("desativado")#check-state-disabled(disabled name="validate-radio")
   +radio("Inválido")#check-state-invalid(invalid name="validate-radio")
   +radio("Válido")#check-state-valid(checked valid name="validate-radio")
-  .feedback.text-danger
+  .feedback.text-danger.mt-1
     i.fas.fa-times-circle
     span  Preenchimento Obrigatório

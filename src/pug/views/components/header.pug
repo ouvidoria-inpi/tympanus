@@ -4,59 +4,47 @@ append vars
   - var title = "Header";
 
 append content
-  //- .h6 Teste 
-  //- +header()(no-logo no-login no-sign no-subtitle no-links no-search no-functions)
-  //-   +header-default-content
-  //- <br><br><br>
-  //- +header()(compact no-logo no-login no-links no-search no-functions)
-  //-   +header-default-content
-  //- <br><br><br>
-  //- .h6 Menu Sticky
-  //- +header()(sticky)
-  //-   +header-default-content
-  //- .content
-  .h6 Menu Padrão 
+  p.h5 Header padrão 
   +header
     +header-default-content
-  <br><br><br>
-  .h6 Menu Compacto (compact)
+
+  p.h5.mt-5 Compacto
   +header()(compact)
     +header-default-content
-  <br><br><br>
-  .h6 Menu sem Links (no-links)
+
+  p.h5.mt-5 Sem Links
   +header()(no-links)
     +header-default-content
-  <br><br><br>
-  +header()(compact no-links)
-    +header-default-content
-  <br><br><br>
-  .h6 Menu sem logo (compact, no-logo, no-liks)
+  .mt-3
+    +header()(compact no-links)
+      +header-default-content
+
+  p.h5.mt-5 Sem logo
   +header()(compact no-logo no-links)
     +header-default-content
-  <br><br><br>
-  .h6 Menu sem Assinatura (no-sign)
+
+  p.h5.mt-5 Sem Assinatura
   +header()(no-sign)
     +header-default-content
-  <br><br><br>
-  .h6 Menu sem Subtítulo (no-subtitle)
+
+  p.h5.mt-5 Sem Subtítulo
   +header()(no-subtitle)
     +header-default-content
-  <br><br><br>
-  .h6 Menu sem Funcionalidades (no-functions)
+
+  p.h5.mt-5 Sem Funcionalidades
   +header()(no-functions)
     +header-default-content
-  <br><br><br>
-  .h6 Menu sem Login (no-login)
+
+  p.h5.mt-5 Sem Login
   +header()(no-login)
     +header-default-content
-  <br><br><br>
-  +header()(compact no-login)
-    +header-default-content
-  <br><br><br>
-  .h6 Menu sem Busca (no-search)
+  .mt-3
+    +header()(compact no-login)
+      +header-default-content
+
+  p.h5.mt-5 Sem Busca
   +header()(no-search)
     +header-default-content
-  <br><br><br>
-  +header()(compact no-search)
-    +header-default-content
-  <br><br><br>
+  .mt-3
+    +header()(compact no-search)
+      +header-default-content
