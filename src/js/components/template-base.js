@@ -17,6 +17,11 @@ class BRTemplateBase {
       this.btn_menu.addEventListener('click', () => {
         this._openMenu()
       })
+      this.component
+        .querySelectorAll('.accessibility-links .br-button')[1]
+        .addEventListener('click', () => {
+          this._openMenu()
+        })
     }
     if (this.close_menu) {
       this.close_menu.addEventListener('click', () => {
@@ -37,14 +42,6 @@ class BRTemplateBase {
       this.context_menu.addEventListener('click', () => {
         this._closeContextMenu()
       })
-    }
-    if (this.notification) {
-      setTimeout(() => {
-        this.notification.style =
-          'position: absolute; left: auto; display: unset; top: 54px; bottom: auto; right: -8px;'
-        this.notification.querySelector('.arrow').style =
-          'position: absolute; left: auto; right: 28px;'
-      }, 500)
     }
   }
   _openMenu() {

@@ -4,4 +4,8 @@ append vars
   - var title = "Wizard";
 
 append content
+  .h3 Layout Vertical
   +wizard(scroll=true, vertical=true, collapsed=true, total=5, step=3)
+  <br><br>
+  .h3 Layout Horizontal
+  +wizard(scroll=true, vertical=false, collapsed=true, total=5, step=3)

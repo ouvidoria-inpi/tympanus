@@ -32,14 +32,6 @@ class BRTooltip {
       close.addEventListener('click', (event) => {
         this._hide(event)
       })
-      if (this.notification) {
-        setTimeout(() => {
-          this.notification.style =
-            'position: absolute; left: auto; display: unset; top: 54px; bottom: auto; right: -8px;'
-          this.notification.querySelector('.arrow').style =
-            'position: absolute; left: auto; right: 28px;'
-        }, 500)
-      }
       // Ação de fechar padrao ao sair do ativador
     } else {
       this.hideEvents.forEach((event) => {
@@ -57,6 +49,7 @@ class BRTooltip {
     this._setLayout()
     //Cria a instancia do popper
     if (this.notification) {
+      //console.log(this.activator.parentNode)
       this.component.setAttribute('notification', '')
       this.popperInstance = createPopper(this.activator, this.component, {
         modifiers: [
@@ -69,14 +62,15 @@ class BRTooltip {
           {
             name: 'preventOverflow',
             options: {
-              //rootBoundary: 'viewport',
-              altAxis: true, // false by default
+              altAxis: false, // false by default
               mainAxis: true, // true by default
+              //rootBoundary: 'body',
             },
           },
         ],
-        placement: this.placement,
-        strategy: 'absolute',
+        //placement: this.placement,
+        placement: 'bottom',
+        strategy: 'fixed',
       })
     } else {
       this.popperInstance = createPopper(this.activator, this.component, {
@@ -97,14 +91,15 @@ class BRTooltip {
       const refpopover = this.component
       setTimeout(() => {
         refpopover.style.display = 'none'
-      }, 500)
+      }, 50)
     }
   }
   _show(event) {
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
+    this._fixPosition()
     // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
-    //this.component.style.visibility = "visible";
+    this.component.style.visibility = 'visible'
     if (this.timer) {
       setTimeout(this._hide, this.timer, event, this.component)
     }
@@ -134,6 +129,19 @@ class BRTooltip {
       ico.classList.add('fas', 'fa-times')
       close.appendChild(ico)
       this.component.appendChild(close)
+    }
+  }
+  _fixPosition() {
+    if (this.notification) {
+      setTimeout(() => {
+        const pos = this.activator.getBoundingClientRect()
+        this.component.style = `position: fixed !important; top: ${
+          pos.top + pos.height + 10
+        }px !important; left: auto; right: 8px; display: unset; bottom: auto;`
+        this.component.querySelector('.arrow').style = `position: absolute; left: auto; right: ${
+          document.body.clientWidth - pos.right + pos.width / 5
+        }px !important;`
+      }, 10)
     }
   }
 }
