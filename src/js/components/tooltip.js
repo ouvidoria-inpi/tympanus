@@ -12,8 +12,9 @@ class BRTooltip {
     this.active = component.hasAttribute('active')
     this.placement = positions.includes(place) ? place : this.notification ? 'bottom' : 'top'
     this.popperInstance = null
-    this.showEvents = ['mouseenter', 'focus']
+    this.showEvents = ['mouseenter', 'click', 'focus']
     this.hideEvents = ['mouseleave', 'blur']
+    this.closeTimer = null
     this._create()
     this._setBehavior()
   }
@@ -28,15 +29,15 @@ class BRTooltip {
     }
     // Adiciona ação de fechar ao botao do popover
     if (this.popover || this.notification) {
-      const [close] = this.component.querySelectorAll('.close')
-      close.addEventListener('click', (event) => {
-        this._hide(event)
+      const closeBtn = this.component.querySelector('.close')
+      closeBtn.addEventListener('click', (event) => {
+        this._hide(event, this.component)
       })
       // Ação de fechar padrao ao sair do ativador
     } else {
       this.hideEvents.forEach((event) => {
         this.activator.addEventListener(event, (otherEvent) => {
-          this._hide(otherEvent)
+          this._hide(otherEvent, this.component)
         })
       })
     }
@@ -73,6 +74,17 @@ class BRTooltip {
         strategy: 'fixed',
       })
     } else {
+      const ac = this.activator.getBoundingClientRect()
+      const tt = this.component.getBoundingClientRect()
+      const bw = document.body.clientWidth
+      // console.log('width: ', bw, ' ac: ', ac, ' tt: ', tt)
+      // console.log(ac.x + ac.width + tt.width)
+      if (this.placement === 'right') {
+        this.placement = ac.x + ac.width + tt.width > bw ? 'top' : this.placement
+      }
+      if (this.placement === 'left') {
+        this.placement = ac.x - tt.width > 0 ? this.placement : 'top'
+      }
       this.popperInstance = createPopper(this.activator, this.component, {
         modifiers: [
           {
@@ -81,38 +93,38 @@ class BRTooltip {
               offset: [0, 8],
             },
           },
+          {
+            name: 'preventOverflow',
+            options: {
+              altAxis: true, // false by default
+              //boundary: 'body',
+              mainAxis: true, // true by default
+              //rootBoundary: 'document',
+              tether: false, // true by default
+            },
+          },
         ],
         placement: this.placement,
       })
     }
   }
-  _destroy() {
-    if (this.popperInstance) {
-      const refpopover = this.component
-      setTimeout(() => {
-        refpopover.style.display = 'none'
-      }, 50)
-    }
-  }
   _show(event) {
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
+    this.component.style.zIndex = 99
     this._fixPosition()
     // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
     this.component.style.visibility = 'visible'
     if (this.timer) {
-      setTimeout(this._hide, this.timer, event, this.component)
+      clearTimeout(this.closeTimer)
+      this.closeTimer = setTimeout(this._hide, this.timer, event, this.component)
     }
   }
   _hide(event, component) {
-    // data-show é o atributo que controla a visibilidade
-    if (this.component) {
-      this.component.removeAttribute('data-show')
-      this._destroy()
-    } else if (component) {
-      component.removeAttribute('data-show')
-      component.style.display = 'none'
-    }
+    component.removeAttribute('data-show')
+    component.style.zIndex = -1
+    component.style.visibility = 'hidden'
+    clearTimeout(component.closeTimer)
   }
   _setLayout() {
     // Cria a setinha que aponta para o item que criou o tooltip
@@ -134,12 +146,12 @@ class BRTooltip {
   _fixPosition() {
     if (this.notification) {
       setTimeout(() => {
-        const pos = this.activator.getBoundingClientRect()
+        const ac = this.activator.getBoundingClientRect()
         this.component.style = `position: fixed !important; top: ${
-          pos.top + pos.height + 10
+          ac.top + ac.height + 10
         }px !important; left: auto; right: 8px; display: unset; bottom: auto;`
         this.component.querySelector('.arrow').style = `position: absolute; left: auto; right: ${
-          document.body.clientWidth - pos.right + pos.width / 5
+          document.body.clientWidth - ac.right + ac.width / 5
         }px !important;`
       }, 10)
     }
