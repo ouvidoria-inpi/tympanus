@@ -1,17 +1,19 @@
 mixin breadcrumb
-  - let className = attributes.class
-  - let componentClass = prefix + "breadcrumb"
-  - className = className ? componentClass + " " + className : componentClass
-  ul(class=className)
-    li.home
-      a(href="javascript:void(0)")
-        span.sr-only Página inicial
-        i.fas.fa-home
-    li.hidden
-      i.fas.fa-ellipsis-h
-    if block
-      block
+  - let className = [attributes.class, prefix + "breadcrumb", "pt-3"]
+  div(class=className)
+    ul.crumb-list
+      li.crumb.home
+        a(href="javascript:void(0)")
+          span.sr-only Página inicial
+          i.icon.fas.fa-home
+      if block
+        block
 
-mixin crumb(name="crumb", className)
-  li(class=className ? className : "")
-    a(href="javascript:void(0)")=name
+mixin crumb(name="crumb")
+  - className = ["crumb", attributes.class]
+  li(class=className active=attributes.active)
+    i.icon.fas.fa-chevron-right
+    if attributes.active
+      span=name
+    else
+      a(href="javascript:void(0)")=name

@@ -4,10 +4,19 @@ append vars
   - var title = "Breadcrumb";
 
 append content
-  p.h5 Breadcrumbs padrão
-  +breadcrumb
-    +crumb("Tela Anterior")
-    +crumb("Tela Anterior2")
-    +crumb("Tela Anterior3")
-    +crumb("Tela Anterior4")
-    +crumb("Tela Atual", "is-active")
+  .row.mb-5
+    .col-auto
+      +breadcrumb
+        +crumb("Página Ancestral 01")
+        +crumb("Página Ancestral 02")
+        +crumb("Página Ancestral 03")
+        +crumb("Página Ancestral 04")
+        +crumb("Página Ancestral 05")
+        +crumb("Página Ancestral 06")
+        +crumb("Página Ancestral 07")
+        +crumb("Página Ancestral 08")
+        +crumb("Página Ancestral 09")
+        +crumb("Página Ancestral 10")
+        +crumb("Página Ancestral 11")
+        +crumb("Página Ancestral 12")
+        +crumb("Página Atual")(active)
