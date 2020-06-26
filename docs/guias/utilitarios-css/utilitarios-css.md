@@ -61,7 +61,30 @@ Os espaçamentos foram criados com base no utilitário **Spacing** do Bootstrap,
 | **4**: aplica 24px de espaçamento          | **x**: horizontal                                |
 | **5**: aplica 40px de espaçamento          | **y**: vertical                                  |
 
+Estão disponíveis espaçamentos com base nos tokens de espaçamento do DSGov também, veja a tabela abaixo:
+
+| Variação  | Token aplicado          | Valor aplicado |
+| --------- | ----------------------- | -------------- |
+| **half**  | `--spacing-scale-half`  | 4px            |
+| **base**  | `--spacing-scale-base`  | 8px            |
+| **baseh** | `--spacing-scale-baseh` | 12px           |
+| **2x**    | `--spacing-scale-2x`    | 16px           |
+| **2xh**   | `--spacing-scale-2xh`   | 20px           |
+| **3x**    | `--spacing-scale-3x`    | 24px           |
+| **3xh**   | `--spacing-scale-3xh`   | 28px           |
+| **4x**    | `--spacing-scale-4x`    | 32px           |
+| **4xh**   | `--spacing-scale-4xh`   | 36px           |
+| **5x**    | `--spacing-scale-5x`    | 40px           |
+| **5xh**   | `--spacing-scale-5xh`   | 44px           |
+| **6x**    | `--spacing-scale-6x`    | 48px           |
+| **7x**    | `--spacing-scale-7x`    | 56px           |
+| **8x**    | `--spacing-scale-8x`    | 64px           |
+| **9x**    | `--spacing-scale-9x`    | 72px           |
+| **10x**   | `--spacing-scale-10x`   | 80px           |
+
 O espaçamento pode ser aplicado em _margin_ (`m-*`) ou _padding_ (`p-*`), onde \* (asterísco) representa o valor do espaçamento.
+
+Sangrias são aplicadas aplicando margens negativas, se `m-1` aplica 8px de margem então `m-n1` aplica -8px de margem. Esta lógica pode ser aplicada em todos os valores disponíveis.
 
 É possivel informar o _breakpoint_ de aplicação do espaçamento conforme o exemplo a seguir:
 
