@@ -11,7 +11,7 @@ append content
   +radio("opcao-2")#op-2(name="radio" checked)
   +radio("opcao-3")#op-3(name="radio")
   +radio("opcao-4")#op-4(name="radio")
-  .feedback
+  .feedback.mt-1
     i.fas.fa-exclamation-triangle
     span  Texto de mensagem
 
@@ -24,6 +24,6 @@ append content
   +radio("desativado")#check-state-disabled(disabled name="validate-radio")
   +radio("Inválido")#check-state-invalid(invalid name="validate-radio")
   +radio("Válido")#check-state-valid(checked valid name="validate-radio")
-  .feedback.text-danger
+  .feedback.text-danger.mt-1
     i.fas.fa-times-circle
     span  Preenchimento Obrigatório

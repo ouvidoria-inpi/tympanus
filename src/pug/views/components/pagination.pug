@@ -5,29 +5,29 @@ append vars
 
 append content
   p.h5 Tamanho grande
-    +pagination(id="large" class="is-large")
+  +pagination(id="large" class="is-large")
 
   p.h5.mt-5 Tamanho padrão
-    +pagination(id="default")
+  +pagination(id="default")
 
   p.h5.mt-5 Versão reduzida
-    nav
-      ul.br-pagination
-        li.is-first.is-disabled
-          a(href="javascript:void(0)")
-            i.fas.fa-chevron-left
-            span.sr-only primeiro
-        li.is-active
-          a(href="javascript:void(0)") 1
-        li: a(href="javascript:void(0)") 2
-        li.d-none.d-sm-inline ...
-        li.d-sm-none
-          label.sr-only(for="mini")
-          select(id="mini")
-            each page in [3,4,5,6,7,8,9]
-              option=page
-        li: a(href="javascript:void(0)") 10
-        li.is-last
-          a(href="javascript:void(0)")
-            i.fas.fa-chevron-right
-            span.sr-only último
+  nav
+    ul.br-pagination
+      li.is-first.is-disabled
+        a(href="javascript:void(0)")
+          i.fas.fa-chevron-left
+          span.sr-only primeiro
+      li.is-active
+        a(href="javascript:void(0)") 1
+      li: a(href="javascript:void(0)") 2
+      li.d-none.d-sm-inline ...
+      li.d-sm-none
+        label.sr-only(for="mini")
+        select(id="mini")
+          each page in [3,4,5,6,7,8,9]
+            option=page
+      li: a(href="javascript:void(0)") 10
+      li.is-last
+        a(href="javascript:void(0)")
+          i.fas.fa-chevron-right
+          span.sr-only último

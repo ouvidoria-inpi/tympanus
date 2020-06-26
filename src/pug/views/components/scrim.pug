@@ -17,68 +17,30 @@ append content
               | Cancelar
             button.br-button.is-primary.is-mini.ml-3.mr-3(type='button')
               | Retornar
-  h2 Scrim - Foco
-  .bloco1
-    button.br-button.is-primary(type='button') Testar Efeito
+  p.h5 Foco
+  +button()(primary) Testar Efeito
+
+  p.h5.mt-5 Legibilidade
   .row
-    .col-6
-      h2 Scrim - Legibilidade
-      .br-scrim.is-legibilidade
-        .bloco2
-          .scrim-text(text-white='') Scrim - Legibilidade
-  h2 Scrim - SEM Inibição (Clicável) e COM Inibição(Não Clicável)
-  .row
-    .col-lg
-      p SEM Scrim Inibição(a área do elemento é Clicável)
-      .bloco3(onclick="alert('Exemplo scrim sem inibição(Área Clicável)')")
-    .col-lg
-      p COM Scrim Inibição(a área do elemento torna-se desativada)
-      .br-scrim.is-inibicao
-         .bloco3
+    .col-auto
+      +card.legibilidade
+        .front
+          .content.p-0
+            img(src="https://picsum.photos/400" alt="iamgem aleatória")
+            .effect
+              .p-3 Scrim - Legibilidade
+
 append style
   style.
-    .bloco1 {
-      margin-bottom: 50px;
-      width: 50%;
-      height: 200px;
-      display: block;
-      color: black;
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-      background-size: cover;
-      background-image: url("./assets/design-system/docs/components/scrim/imagens/agricultura.jpeg");
-      box-sizing: border-box;
-      border: solid 1px black;
-      text-align: right;
-      padding: 20px;
+    .legibilidade .content {
+      position: relative;
     }
-    .bloco2 {
-      margin-bottom: 50px;
-      width: 100%;
-      height: 200px;
-      font-size: 20px;
-      color: white;
-      display: block;
-      background-size: cover;
-      background-image: url("./assets/design-system/docs/components/scrim/imagens/agricultura.jpeg");
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-      border: solid 1px black;
-      text-align: left;
-      padding: 20px 0;
-      line-height: 1.5;
-    }
-    .bloco3:not(is-inibicao){
-      cursor: pointer;
-    }
-    .bloco3{
-      width: 100%;
-      height: 200px;
-      font-size: 20px;
-      color: black;
-      padding: 10px 0;
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-      background-size: cover;
-      background-image:url("/assets/design-system/docs/components/scrim/imagens/agricultura.jpeg");
-      border: solid 1px black;
-      text-align: center;
-      vertical-align: center;
+    .legibilidade .effect {
+      background: rgba(var(--rgb-secondary-09), 0.45);
+      color: var(--color-secondary-01);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
     }

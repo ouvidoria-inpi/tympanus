@@ -4,241 +4,71 @@ append vars
   - var title = "Tooltip";
 
 append content
-  .row.align-items-center
-    .col-md-6
-      +list.condensed
-        +list-header("Tooltip")
-        +list-item()
-          .content
-            strong Tipo: 
-            | texto simples
-        +list-item()
-          .content
-            strong Comportamento: 
-            | mouseOver
-        +list-item()
-          .content
-            strong Permanência: 
-            | por evento mouseOver
-        +list-item()
-          .content
-            strong Direção: 
-            | padrão (em cima)
-        +list-item()
-          .content
-            strong Semântica: 
-            | padrão (informação)
-    .col-md-6.text-center
-      a(href="javascript:void(0);")
-        img(src="https://picsum.photos/50" alt="Avatar" style="border-radius:50%; width:50px; height:50px; border: 3px solid #ccc;")
-      +tooltip("Texto de Informação!")(id="tt1")
-  hr
-  .row.align-items-center
-    .col-md-6
-      +list.condensed
-        +list-header("Tooltip")
-        +list-item()
-          .content
-            strong Tipo: 
-            | texto auxiliar
-        +list-item()
-          .content
-            strong Comportamento: 
-            | mouseOver
-        +list-item()
-          .content
-            strong Permanência: 
-            | por evento mouseOver
-        +list-item()
-          .content
-            strong Direção: 
-            | em cima, à esquerda, à direita e em baixo
-        +list-item()
-          .content
-            strong Semântica: 
-            | informação, sucesso, erro e advertência
-    .col-md-6.text-center
-      div.mb-3
-        a(href="javascript:void(0);").h5 Informação
-        +tooltip("Fulano de Tal da Silva")(id="tt2" info place="top")
-          span.subtext Diretor Presidente
-      div.mb-3
-        a(href="javascript:void(0);").h5 Sucesso
-        +tooltip("Incluído com Sucesso!")(id="tt3" success place="left")
-          span.subtext Protocolo 000.22-11
-      div.mb-3
-        a(href="javascript:void(0);").h5 Erro
-        +tooltip("Não foi possível logar!")(id="tt4" error place="right")
-          span.subtext Verifique seus dados
-      div.mb-3
-        a(href="javascript:void(0);").h5 Advertência
-        +tooltip("O Caps Lock está ligado!")(id="tt5" warning place="bottom")
-          span.subtext Desabilite antes de digitar
-  hr
-  .row.align-items-center
-    .col-md-6
-      +list.condensed
-        +list-header("Tooltip")
-        +list-item()
-          .content
-            strong Tipo: 
-            | texto com input
-        +list-item()
-          .content
-            strong Comportamento: 
-            | onload
-        +list-item()
-          .content
-            strong Permanência: 
-            | tempo (10s)
-        +list-item()
-          .content
-            strong Direção: 
-            | em baixo
-        +list-item()
-          .content
-            strong Semântica: 
-            | advertência
-    .col-md-6
+  P.h5 Exemplo padrão
+  a(href="javascript:void(0);")
+    img(src="https://picsum.photos/50" alt="Avatar" style="border-radius:50%; width:50px; height:50px; border: 3px solid #ccc;")
+  +tooltip("Texto de Informação!")(id="tt1")
+
+  p.h5.mt-5 Direções e tipos
+  div.mb-3
+    a(href="javascript:void(0);") Informação
+    +tooltip("Fulano de Tal da Silva")(id="tt2" info place="top")
+      span.subtext Diretor Presidente
+  div.mb-3
+    a(href="javascript:void(0);") Sucesso
+    +tooltip("Incluído com Sucesso!")(id="tt3" success place="left")
+      span.subtext Protocolo 000.22-11
+  div.mb-3
+    a(href="javascript:void(0);") Erro
+    +tooltip("Não foi possível logar!")(id="tt4" error place="right")
+      span.subtext Verifique seus dados
+  div.mb-3
+    a(href="javascript:void(0);") Advertência
+    +tooltip("O Caps Lock está ligado!")(id="tt5" warning place="bottom")
+      span.subtext Desabilite antes de digitar
+
+  p.h5.mt-5 Onload
+  .row
+    .col-sm-4
       +input("Senha (Tooltip no campo - Advertência)")(id="senha" type="password" class="has-icon" placeholder="Digite sua senha de 8 a 11 dígitos")
         button.icon(type='button')
           span.sr-only Mostrar senha
           i.fas.fa-eye
       +tooltip("O Caps Lock está ligado!")(id="tt6" warning place="bottom" active=true timer="10000")
-          span.subtext Desative antes de digitar    
-  hr
-  .row.align-items-center
-    .col-md-6
-      +list.condensed
-        +list-header("PopOver")
-        +list-item()
-          .content
-            strong Tipo: 
-            | popover simples
-        +list-item()
-          .content
-            strong Comportamento: 
-            | mouseOver
-        +list-item()
-          .content
-            strong Permanência: 
-            | tempo (5s) ou ação direta do usuário
-        +list-item()
-          .content
-            strong Direção: 
-            | em baixo
-        +list-item()
-          .content
-            strong Semântica: 
-            | sucesso
-    .col-md-6.text-center
-      a(href="javascript:void(0);").h5 PopOver Simples
-      +tooltip("Cadastro Concluído")(id="tt7" success popover=true timer="5000" place="bottom")
-        +popover-header
-          span.text Cadastro Concluído!
-        +popover-body
-          span.subtext Para verificar mais detalhes a respeito do seu acesso, clique no link abaixo.
-        +popover-footer
-          a.link(href="javascript:void(0)") Clique aqui
-  hr
-  .row.align-items-center
-    .col-md-6
-      +list.condensed
-        +list-header("PopOver")
-        +list-item()
-          .content
-            strong Tipo: 
-            | popover com ícone e botão
-        +list-item()
-          .content
-            strong Comportamento: 
-            | mouseOver
-        +list-item()
-          .content
-            strong Permanência: 
-            | ação direta do usuário
-        +list-item()
-          .content
-            strong Direção: 
-            | à direita (conflito de limite de tela)
-        +list-item()
-          .content
-            strong Semântica: 
-            | adverência
-    .col-md-6.text-center
-      a(href="javascript:void(0);").h5 PopOver com ícone e botão- Warning
-      +tooltip("Incluído com sucesso!")(id="tt8" warning popover=true place="right")
-        +popover-header
-          i.fas.fa-exclamation-triangle.fa-2x
-        +popover-body
-          span.subtext É recomendado que o cadastro seja atualizado antes de prosseguir.
-        +popover-footer
-          +button()(primary)
-            span Atualizar
-  hr
-  .row.align-items-center
-    .col-md-6
-      +list.condensed
-        +list-header("PopOver")
-        +list-item()
-          .content
-            strong Tipo: 
-            | popover com ícone
-        +list-item()
-          .content
-            strong Comportamento: 
-            | mouseOver
-        +list-item()
-          .content
-            strong Permanência: 
-            | tempo (3s) ou ação direta do usuário
-        +list-item()
-          .content
-            strong Direção: 
-            | à esquerda
-        +list-item()
-          .content
-            strong Semântica: 
-            | erro
-    .col-md-6.text-center
-      a(href="javascript:void(0);").h5 PopOver com ícone - Erro
-      +tooltip()(id="tt9" error popover=true timer="3000" place="left")
-        +popover-header
-          i.fas.fa-ban.fa-2x
-        +popover-body
-          span.subtext Essa ação só é permitida após o preenchimento dos campos no formulário!
-  hr
-  .row.align-items-center
-    .col-md-6
-      +list.condensed
-        +list-header("PopOver")
-        +list-item()
-          .content
-            strong Tipo: 
-            | popover com imagem
-        +list-item()
-          .content
-            strong Comportamento: 
-            | mouseOver
-        +list-item()
-          .content
-            strong Permanência: 
-            | tempo (4s) ou ação direta do usuário
-        +list-item()
-          .content
-            strong Direção: 
-            | em baixo
-        +list-item()
-          .content
-            strong Semântica: 
-            | informação
-    .col-md-6.text-center
-      a(href="javascript:void(0);").h5 PopOver com imagem
-      +tooltip("Incluído com sucesso!")(id="tt10" info popover=true timer="4000" place="bottom")
-        +popover-image
-          img(src="https://picsum.photos/80" alt="Avatar")
-        +popover-header
-          span.text Fulano de Tal da Silva
-        +popover-body
-          span.subtext Diretor Presidente
-  hr
+        span.subtext Desative antes de digitar
+
+  p.h5.mt-5 Popovers
+  a(href="javascript:void(0);") PopOver Simples
+  +tooltip("Cadastro Concluído")(id="tt7" success popover=true timer="5000" place="bottom")
+    +popover-header
+      span.text Cadastro Concluído!
+    +popover-body
+      span.subtext Para verificar mais detalhes a respeito do seu acesso, clique no link abaixo.
+    +popover-footer
+      a.link(href="javascript:void(0)") Clique aqui
+  .mt-3
+    a(href="javascript:void(0);") PopOver com ícone e botão- Warning
+    +tooltip("Incluído com sucesso!")(id="tt8" warning popover=true place="right")
+      +popover-header
+        i.fas.fa-exclamation-triangle.fa-2x
+      +popover-body
+        span.subtext É recomendado que o cadastro seja atualizado antes de prosseguir.
+      +popover-footer
+        +button()(primary)
+          span Atualizar
+  .mt-3
+    a(href="javascript:void(0);") PopOver com ícone - Erro
+    +tooltip()(id="tt9" error popover=true timer="3000" place="left")
+      +popover-header
+        i.fas.fa-ban.fa-2x
+      +popover-body
+        span.subtext Essa ação só é permitida após o preenchimento dos campos no formulário!
+  .mt-3
+    a(href="javascript:void(0);") PopOver com imagem
+    +tooltip("Incluído com sucesso!")(id="tt10" info popover=true timer="4000" place="bottom")
+      +popover-image
+        img(src="https://picsum.photos/80" alt="Avatar")
+      +popover-header
+        span.text Fulano de Tal da Silva
+      +popover-body
+        span.subtext Diretor Presidente
