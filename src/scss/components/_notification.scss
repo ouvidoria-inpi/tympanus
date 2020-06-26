@@ -58,6 +58,7 @@
     padding: 1.2em 1.5em 1em 1.5em;
     border-bottom: 1px solid v(color-secondary-04);
     padding-bottom: v(font-size-scale-down-03);
+    width: 100%;
     &,
     .user-name {
       font-size: v(font-size-scale-base);
@@ -74,6 +75,7 @@
   .notification-body {
     padding: 0;
     margin-bottom: 0.5em;
+    width: 100%;
     .#{$prefix}tabs {
       .tab-nav {
         max-width: 100%;
