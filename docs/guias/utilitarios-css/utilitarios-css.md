@@ -31,7 +31,7 @@ Exemplo de uso:
 
 ### Para quem trabalha com Sass
 
-Use os mixins nativos do Bootstrap quando precisar especificar código por breakpoint. Mais detalhes em <https://github.com/twbs/bootstrap/blob/master/scss/mixins/_breakpoints.scss>.
+Use os mixins nativos do Bootstrap quando precisar especificar código por breakpoint. Mais detalhes em <https://github.com/twbs/bootstrap/blob/main/scss/mixins/_breakpoints.scss>.
 
 ```scss
 .seletor {
@@ -80,7 +80,7 @@ Leia a documentação oficial de uso do utilitário **Spacing** no endereço [ht
 
 Estão disponíveis variações de cores para background, texto e bordas.
 
--   Para modificar a cor de fundo use `.bg-*`
+-   Para modificar a cor de fundo use `bg-*`
 -   Para modificar a cor de texto use `text-*`
 -   Para modificar a cor da borda use `border-*`
 
