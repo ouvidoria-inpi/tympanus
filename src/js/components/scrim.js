@@ -37,7 +37,7 @@ for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
   scrimList.push(new BRScrim('br-scrim', brScrim))
 }
 export default BRScrim
-for (const buttonBloco1 of window.document.querySelectorAll('.bloco1 button')) {
+for (const buttonBloco1 of window.document.querySelectorAll('.scrimexemplo button')) {
   buttonBloco1.addEventListener('click', () => {
     for (const brScrim of scrimList) {
       brScrim.showScrim()

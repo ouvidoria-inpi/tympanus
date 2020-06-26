@@ -66,7 +66,7 @@ class BRTagInput {
             if (text.replace(',', '') !== '') {
               _this.arrayOfList.push(text.replace(',', ''))
             }
-            _this.value = ''
+            this.value = ''
             _this.DOMRender()
           }
         }
@@ -82,7 +82,7 @@ class BRTagInput {
             if (text.replace(',', '') !== '') {
               _this.arrayOfList.push(text.replace(',', ''))
             }
-            _this.value = ''
+            this.value = ''
             _this.DOMRender()
           }
         }
