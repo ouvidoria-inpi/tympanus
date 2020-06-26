@@ -5,10 +5,9 @@ append vars
   - var i = 0;
 
 append content
-  p.h2 Listas Simples
-
   .row
-    .col-xl
+    .col-sm-6.col-md-4
+      p.h5 Lista numerada
       +list
         ol
           li Texto de uma linha
@@ -18,12 +17,8 @@ append content
               li Texto de uma linha
               li Texto de uma linha
           li Texto de uma linha
-          //- - let i = 0;
-          //- while i < 10000
-          //-   li Texto de uma linha
-          //-   - i++
-    .col-xl
-      hr.d-xl-none
+    .col-sm-6.col-md-4
+      p.h5.mt-5.mt-sm-0 Lista sem ordem
       +list
         ul
           li Texto de uma linha
@@ -33,8 +28,8 @@ append content
               li Texto de uma linha
               li Texto de uma linha
           li Texto de uma linha
-    .col-xl
-      hr.d-xl-none
+    .col-sm.col-md-4
+      p.h5.mt-5.mt-md-0 Lista de definição
       +list
         dl
           dt Texto de uma linha
@@ -42,10 +37,9 @@ append content
           dt Texto de uma linha
           dd Texto de uma linha
 
-  p.h2 Lista Complexa
-
+  p.h5.mt-5 Lista Complexa
   .row
-    .col-md-6.col-lg-4.col-xl-3
+    .col-sm-6.col-md-4
       +list
         +list-header("Itens de 1 linha sem separadores")
         +list-item()(link)
@@ -66,7 +60,8 @@ append content
           .content Texto de uma linha
           .support
             i.fas.fa-angle-right
-    .col-md-6.col-lg-4.col-xl-3.mt-5.mt-sm-0
+
+    .col-sm-6.col-md-4.mt-5.mt-sm-0
       +list()(checkable)
         +list-header("Itens de 2 linhas com controles e separadores")
         +list-item.two-lines.divider(disabled)
@@ -93,7 +88,8 @@ append content
             .description Texto secundário
           .support
             +checkbox("")(id="checkbox-3" checked)
-    .col-md-6.col-lg-4.col-xl-3.mt-5.mt-sm-0
+
+    .col-sm-6.col-md-4.mt-5.mt-md-0
       +list
         +list-header("Items de 3 linhas com separadores")
         +list-item.three-lines.divider
@@ -121,7 +117,7 @@ append content
             .description Texto secundário Lorem Ipsum dolor sit amet
           .support meta
 
-    .col-md-6.col-lg-4.col-xl-3
+    .col-sm-6.col-md-4.mt-5
       +list()(collapsible)
         +list-header("Versão com expandir")
         +list-item()(link)
@@ -177,7 +173,7 @@ append content
           +list-item
             .content Texto de uma linha
 
-    .col-md-6.col-lg-4.col-xl-3
+    .col-sm-6.col-md-4.mt-5
       +list()(collapsible unique )
         +list-header("Versão com expandir unicamente")
         +list-item()(link)
@@ -233,7 +229,7 @@ append content
           +list-item
             .content Texto de uma linha
 
-    .col-md-6.col-lg-4.col-xl-3
+    .col-sm-6.col-md-4.mt-5
       +list()(collapsible unique three-lines)
         +list-header("Versão com expandir unicamente com mais de uma linha ( aceita os atributos: two-lines e three-lines )")
         +list-item()(link)
@@ -289,7 +285,7 @@ append content
           +list-item
             .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
 
-  .row
+  .row.mt-5
     +list()(collapsible horizontal unique)
       +list-header("Versão com expandir unicamente horizontal com mais de uma linha ( padrão com duas linhas )")
       .col
@@ -349,10 +345,9 @@ append content
           +list-item
             .content Texto de uma linha
 
-  p.h3 Versão com densidade
-
+  p.h5.mt-5 Versão com densidade
   .row
-    .col-md-6.col-lg-4.col-xl-3
+    .col-sm-6.col-md-4
       +list.condensed
         +list-header("Itens de 1 linha sem separadores")
         +list-item()(link)
@@ -373,7 +368,8 @@ append content
           .content Texto de uma linha
           .support
             i.fas.fa-angle-right
-    .col-md-6.col-lg-4.col-xl-3.mt-5.mt-sm-0
+
+    .col-sm-6.col-md-4.mt-5.mt-sm-0
       +list.condensed
         +list-header("Items de 3 linhas com separadores")
         +list-item.three-lines.divider
@@ -400,7 +396,8 @@ append content
             .text Texto Principal
             .description Texto secundário Lorem Ipsum dolor sit amet
           .support meta
-    .col-md-6.col-lg-4.col-xl-3.mt-5.mt-sm-0
+
+    .col-sm-6.col-md-4.mt-5.mt-sm-0
       +list()(checkable).condensed
         +list-header("Itens de 2 linhas com controles e separadores")
         +list-item.two-lines.divider(disabled)
@@ -428,8 +425,7 @@ append content
           .support
             +checkbox("")(id="checkbox-condensed-3" checked)
 
-  p.h3 Exemplo complexo
-
+  p.h5.mt-5 Exemplo complexo
   +list
     +list-header("Lista de E-mail")
       .actions

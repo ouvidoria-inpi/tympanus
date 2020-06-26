@@ -4,44 +4,26 @@ append vars
   - var title = "Textarea";
 
 append content
+  p.h5 Textarea padrão
   .row
-    .col-md-4
+    .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id1" placeholder="Exemplo de textarea simples" rows=5 cols=5)
-    .col-md-4
-      +textarea("Digite sua mensagem aqui")(id="textarea-id2" placeholder="Exemplo de textarea simples" rows=5 cols=5)
-      p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
+      p.text-down-01.mt-1 Texto auxiliar ao preenchimento, tem a função de previnir erros.
+
+  p.h5.mt-5 Validação e estados
   .row
-    .col-md-4
-      +textarea("Digite sua mensagem aqui")(id="textarea-id3" placeholder="Exemplo de textarea válido" rows=5 cols=5 valid)
-      .feedback.color-success
-        i.fas.fa-check-circle
-        span Campo correto
-    .col-md-4
+    .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id4" placeholder="Exemplo de textarea válido" rows=5 cols=5 valid)
-      .feedback.color-success
+      .feedback.color-success.mt-1
         i.fas.fa-check-circle
         span Campo correto
-      p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
-  .row
-    .col-md-4
+    .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id5" placeholder="Exemplo de textarea inválido" rows=5 cols=5 invalid)
-      .feedback.color-danger
+      .feedback.color-danger.mt-1
         i.fas.fa-times-circle
         span Campo inválido
-    .col-md-4
-      +textarea("Digite sua mensagem aqui")(id="textarea-id6" placeholder="Exemplo de textarea inválido" rows=5 cols=5 invalid)
-      .feedback.color-danger
-        i.fas.fa-times-circle
-        span Campo inválido
-      p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
-  .row
-    .col-md-4
+    .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id7" placeholder="Exemplo de textarea desabilitado" rows=5 cols=5 disabled)
-      .feedback
-        i.fas.fa-exclamation-triangle
-        span Campo Desabilitado
-    .col-md-4
-      +textarea("Digite sua mensagem aqui")(id="textarea-id8" placeholder="Exemplo de textarea desabilitado" rows=5 cols=5 disabled)
-      .feedback
+      .feedback.mt-1
         i.fas.fa-exclamation-triangle
         span Campo Desabilitado

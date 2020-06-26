@@ -4,10 +4,11 @@ append vars
   - var title = "Notification";
 
 append content
-  .container-lg.mt-3.mb-1
+  p.h5 Exemplo
+  .row
     .col
-      .header(style="width:100%; display: flex; position: relative; justify-content: flex-end;")
-        a(href="javascript:void(0);"  style="width:50px; height:50px;")
+      .header(style="margin-bottom:500px;")
+        a(href="javascript:void(0);"  style="display:block; width:50px; height:50px;")
           img(src="https://picsum.photos/50" alt="Avatar" style="border-radius:50%; width:50px; height:50px; border: 3px solid #ccc;")
         +notification()()
           +notification-filler
