@@ -11,14 +11,14 @@
     .title {
       display: block;
       font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
-      padding: $spacer ($spacer * 2);
+      padding: v(spacing-scale-base) v(spacing-scale-2x);
     }
     // Item de menu
     .item {
       background: v(color-secondary-01, $color-secondary-01);
       border: 0;
       display: block;
-      padding: $spacer ($spacer * 2);
+      padding: v(spacing-scale-base) v(spacing-scale-2x);
       position: relative;
       text-align: left;
       width: 100%;

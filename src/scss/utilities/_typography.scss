@@ -14,7 +14,7 @@ body {
 
 // Parágrafos
 p {
-  margin-bottom: 16px;
+  margin-bottom: v(spacing-scale-2x);
   margin-top: 0;
 }
 
@@ -47,7 +47,7 @@ hr {
   border: 0;
   color: inherit;
   height: 1px;
-  margin: 16px 0;
+  margin: v(spacing-scale-2x) 0;
 }
 
 // Títulos
@@ -58,7 +58,7 @@ h1,
 }
 h1 {
   line-height: v(font-line-height-low);
-  margin-bottom: 32px;
+  margin-bottom: v(spacing-scale-4x);
   margin-top: 0;
 }
 h2,
@@ -68,8 +68,8 @@ h2,
 }
 h2 {
   line-height: v(font-line-height-low);
-  margin-bottom: 20px;
-  margin-top: 28px;
+  margin-bottom: v(spacing-scale-2xh);
+  margin-top: v(spacing-scale-3xh);
 }
 h3,
 .h3 {
@@ -78,8 +78,8 @@ h3,
 }
 h3 {
   line-height: v(font-line-height-low);
-  margin-bottom: 20px;
-  margin-top: 28px;
+  margin-bottom: v(spacing-scale-2xh);
+  margin-top: v(spacing-scale-3xh);
 }
 h4,
 .h4 {
@@ -88,8 +88,8 @@ h4,
 }
 h4 {
   line-height: v(font-line-height-low);
-  margin-bottom: 20px;
-  margin-top: 28px;
+  margin-bottom: v(spacing-scale-2xh);
+  margin-top: v(spacing-scale-3xh);
 }
 h5,
 .h5 {
@@ -98,8 +98,8 @@ h5,
 }
 h5 {
   line-height: v(font-line-height-low);
-  margin-bottom: 16px;
-  margin-top: 28px;
+  margin-bottom: v(spacing-scale-2x);
+  margin-top: v(spacing-scale-3xh);
 }
 h6,
 .h6 {
@@ -108,15 +108,15 @@ h6,
 }
 h6 {
   line-height: v(font-line-height-low);
-  margin-bottom: 16px;
-  margin-top: 28px;
+  margin-bottom: v(spacing-scale-2x);
+  margin-top: v(spacing-scale-3xh);
 }
 
 // Listas
 ul,
 ol {
-  margin: 1rem 0;
-  padding: 0 3rem;
+  margin: v(spacing-scale-2x) 0;
+  padding: 0 v(spacing-scale-6x);
 }
 
 // Blockquotes
@@ -124,8 +124,8 @@ blockquote {
   background-color: v(color-secondary-02);
   border-left: 4px solid $color-highlight;
   font-style: italic;
-  margin: 1rem 0;
-  padding: 1rem;
+  margin: v(spacing-scale-2x) 0;
+  padding: v(spacing-scale-2x);
   position: relative;
   > *:last-child {
     margin-bottom: 0;
@@ -142,7 +142,7 @@ table {
   }
   th,
   td {
-    padding: $spacer $spacer * 2;
+    padding: v(spacing-scale-base) v(spacing-scale-2x);
     &:not([align]) {
       text-align: left;
     }
@@ -179,7 +179,7 @@ fieldset legend,
   font-size: v(font-size-scale-up-02);
   font-weight: v(font-weight-regular);
   line-height: v(font-line-height-low);
-  margin-bottom: 4px;
+  margin-bottom: v(spacing-scale-half);
 }
 ::placeholder,
 .placeholder {
@@ -207,11 +207,11 @@ code {
     linear-gradient(v(status-highlight-overlay), v(status-highlight-overlay));
   border-radius: 4px;
   color: v(status-highlight-text);
-  padding: 0 4px;
+  padding: 0 v(spacing-scale-half);
 }
 pre {
-  margin: $spacer * 2 0 $spacer * 4;
-  padding: $spacer * 2;
+  margin: v(spacing-scale-2x) 0 v(spacing-scale-4x);
+  padding: v(spacing-scale-2x);
   code {
     padding: 0;
   }

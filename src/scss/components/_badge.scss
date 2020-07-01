@@ -13,7 +13,7 @@ $badge-empty-min: 8px;
     font-weight: v(font-weight-semi-bold);
     min-height: $badge-min;
     min-width: $badge-min;
-    padding: 0 $spacer * 0.5;
+    padding: 0 v(spacing-scale-half);
     position: absolute;
     text-align: center;
     top: 0;
@@ -23,10 +23,10 @@ $badge-empty-min: 8px;
       width: auto;
     }
     &:first-child {
-      right: calc(100% - #{$spacer * 1.5});
+      right: calc(100% - #{v(spacing-scale-baseh)});
     }
     &:last-child {
-      left: calc(100% - #{$spacer * 1.5});
+      left: calc(100% - #{v(spacing-scale-baseh)});
     }
     &:empty {
       border-radius: 50%;
@@ -54,10 +54,10 @@ $badge-empty-min: 8px;
       .icon {
         transform: scale($value);
         &:first-child {
-          right: calc(100% - #{$spacer * 1.75 * $value});
+          right: calc(100% - #{v(spacing-scale-base)} * 1.75 * #{$value});
         }
         &:last-child {
-          left: calc(100% - #{$spacer * 1.75 * $value});
+          left: calc(100% - #{v(spacing-scale-base)} * 1.75 * #{$value});
         }
         &:empty {
           min-height: $badge-min * 0.75;

@@ -12,13 +12,13 @@
     padding: 0;
     .arrow {
       font-size: 10px;
-      margin-left: $spacer;
+      margin-left: v(spacing-scale-base);
     }
   }
   // Listagem de idiomas
   .menu {
     border-top: 1px solid $color-warning;
-    margin: $spacer 0 0;
+    margin: v(spacing-scale-base) 0 0;
     right: 0;
     // Rótulo da seleção
     .title {
@@ -26,7 +26,7 @@
       font-size: 14px;
       font-style: italic;
       font-weight: 600;
-      margin: ($spacer * 2) ($spacer * 2) $spacer;
+      margin: v(spacing-scale-2x) v(spacing-scale-2x) v(spacing-scale-base);
       padding: 0;
     }
     // Item selecionável

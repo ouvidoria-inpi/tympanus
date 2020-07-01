@@ -1,7 +1,6 @@
 .#{$prefix}accordion {
   background: v(bg-color);
   border-top: 1px solid v(color-secondary-04);
-  margin-bottom: $margin-default;
   .item {
     border-bottom: 1px solid v(color-secondary-04);
     display: flex;
@@ -26,13 +25,13 @@
     display: flex;
     font-size: v(font-size-scale-up-01);
     justify-content: space-between;
-    padding: ($spacer * 2) 0;
+    padding: v(spacing-scale-2x) 0;
     text-align: left;
     text-decoration: none;
     width: 100%;
     outline: none;
     .icon {
-      margin: 0 ($spacer * 2) 0 $spacer * 1.5;
+      margin: 0 v(spacing-scale-2x) 0 v(spacing-scale-baseh);
     }
     .title {
       flex: 1;
@@ -46,8 +45,8 @@
     color: v(text-color);
     display: none;
     font-size: v(font-size-scale-base);
-    margin: 0 ($spacer);
-    padding: $spacer ($spacer * 8) ($spacer * 2);
+    margin: 0 v(spacing-scale-base);
+    padding: v(spacing-scale-base) v(spacing-scale-8x) v(spacing-scale-2x);
     * {
       &:last-child {
         margin-bottom: 0;

@@ -1,5 +1,5 @@
 .#{$prefix}wizard {
-  height: calc( 100vh - 52px);
+  height: calc(100vh - 52px);
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -10,9 +10,9 @@
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    background-color: v(color-secondary-02,$color-secondary-02);
+    background-color: v(color-secondary-02, $color-secondary-02);
     min-height: 164px;
-    padding-top: 56px;
+    padding-top: v(spacing-scale-7x);
 
     .wizard-progress-btn {
       transition-property: all;
@@ -20,7 +20,7 @@
       transition-timing-function: linear;
       transition-delay: 0s;
       position: relative;
-      color: v(color-primary-lighten-01,$color-primary-lighten-01);
+      color: v(color-primary-lighten-01, $color-primary-lighten-01);
       text-indent: 0;
       background-color: transparent;
       border: none;
@@ -28,9 +28,9 @@
       box-shadow: none !important;
       outline: none !important;
       cursor: pointer;
-      font-size: v(font-size-scale-up-01,$font-size-scale-up-01);
+      font-size: v(font-size-scale-up-01, $font-size-scale-up-01);
       line-height: 19px;
-      padding-top: 16px;
+      padding-top: v(spacing-scale-2x);
       padding-bottom: 0px;
       max-height: 90px;
       &:before {
@@ -41,23 +41,25 @@
         width: 36px;
         height: 36px;
         margin-top: -13px;
-        font-size: v(font-size-scale-up-02,$font-size-scale-up-02);
-        font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
+        font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
+        font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
         line-height: 29px;
         content: attr(step) !important;
         -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
-        transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+        transform: translateX(-50%);
+        transition: all 0.15s linear 0s,
+          -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
         transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
-        transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
-        border: 2px solid v(color-primary-lighten-01,$color-primary-lighten-01);
-        color: v(color-primary-lighten-01,$color-primary-lighten-01);
+        transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s,
+          -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+        border: 2px solid v(color-primary-lighten-01, $color-primary-lighten-01);
+        color: v(color-primary-lighten-01, $color-primary-lighten-01);
         border-radius: 50%;
-        background-color: v(color-secondary-01,$color-secondary-01);
+        background-color: v(color-secondary-01, $color-secondary-01);
         box-sizing: border-box;
         z-index: 3;
       }
-      
+
       &:after {
         position: absolute;
         top: 5px;
@@ -70,21 +72,21 @@
         width: calc(100% - 34px);
         height: 1px;
         content: '';
-        background-color: v(color-primary-lighten-01,$color-primary-lighten-01);
+        background-color: v(color-primary-lighten-01, $color-primary-lighten-01);
         z-index: 1;
       }
 
       &:first-child:after {
         display: none;
       }
-      
+
       &[active] {
-        color: v(color-primary-default,$color-primary-default);
-        font-weight: v(font-weight-semi-bold,$font-weight-semi-bold);
+        color: v(color-primary-default, $color-primary-default);
+        font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
       }
 
       &[inactive] {
-        color: v(color-primary-default,$color-primary-default);
+        color: v(color-primary-default, $color-primary-default);
       }
 
       &[disabled] {
@@ -95,20 +97,20 @@
       &[inactive]:after {
         height: 2px;
       }
-      
+
       &[inactive]:before {
-        background-color: v(color-primary-pastel-01,$color-primary-pastel-01);
-        border-color: v(color-primary-pastel-01,$color-primary-pastel-01);
-        color: v(color-primary-default,$color-primary-default);
+        background-color: v(color-primary-pastel-01, $color-primary-pastel-01);
+        border-color: v(color-primary-pastel-01, $color-primary-pastel-01);
+        color: v(color-primary-default, $color-primary-default);
       }
 
-      &[active]:before, 
-      &[active]:hover:before,    
+      &[active]:before,
+      &[active]:hover:before,
       &[active]:focus:before {
-        background-color: v(color-primary-default,$color-primary-default);
-        border-color: v(color-primary-default,$color-primary-default);
-        color: v(color-secondary-01,$color-secondary-01);
-        font-weight: v(font-weight-bold,$font-weight-bold);
+        background-color: v(color-primary-default, $color-primary-default);
+        border-color: v(color-primary-default, $color-primary-default);
+        color: v(color-secondary-01, $color-secondary-01);
+        font-weight: v(font-weight-bold, $font-weight-bold);
       }
 
       &[inactive]:hover:before {
@@ -125,25 +127,25 @@
 
       &:hover:before {
         background-color: v(status-hover-background, $status-hover-background);
-        border-color: v(color-primary-lighten-01,$color-primary-lighten-01);
+        border-color: v(color-primary-lighten-01, $color-primary-lighten-01);
       }
 
       &:focus:before {
         background-color: v(status-focused-overlay, $status-focused-overlay);
-        border-color: v(color-primary-lighten-01,$color-primary-lighten-01);
+        border-color: v(color-primary-lighten-01, $color-primary-lighten-01);
       }
 
       &[inactive]:focus:before {
         background-color: v(status-focused-overlay, $status-focused-overlay);
         border-color: v(status-focused-overlay, $status-focused-overlay);
-        color: v(color-primary-lighten-01,$color-primary-lighten-01);
+        color: v(color-primary-lighten-01, $color-primary-lighten-01);
       }
     }
   }
 
   .wizard-form {
     position: relative;
-  
+
     .wizard-panel {
       position: absolute;
       top: 0;
@@ -151,11 +153,11 @@
       height: 0;
       opacity: 0;
       visibility: hidden;
-      border-top: 1px solid v(color-secondary-04,$color-secondary-04);
-      border-bottom: 1px solid v(color-secondary-04,$color-secondary-04);
+      border-top: 1px solid v(color-secondary-04, $color-secondary-04);
+      border-bottom: 1px solid v(color-secondary-04, $color-secondary-04);
       margin-left: 2%;
       width: 96%;
-      margin-bottom: 32px;
+      margin-bottom: v(spacing-scale-4x);
       &[active] {
         height: auto;
         opacity: 1;
@@ -178,15 +180,15 @@
         margin-top: 1px;
         min-height: 88px;
         height: auto;
-        padding: 16px 1.5%;
-        background-color: v(color-secondary-02,$color-secondary-02);
+        padding: v(spacing-scale-2x) 1.5%;
+        background-color: v(color-secondary-02, $color-secondary-02);
         margin-left: -2.5%;
       }
       .wizard-btn-next,
       .wizard-btn {
         float: right;
       }
-    
+
       .wizard-btn-prev {
         float: left;
       }
@@ -196,7 +198,7 @@
   &[vertical] {
     .wizard-progress {
       max-width: 260px;
-      height: calc( 100vh - 52px);
+      height: calc(100vh - 52px);
       float: left;
       grid-template-columns: 1fr; //Padrão vertical
       text-align: right;
@@ -216,7 +218,7 @@
           position: absolute;
           top: 50%;
           left: calc(100% - 32px);
-          margin-top: -16px;
+          margin-top: calc(#{v(spacing-scale-2x)} * -1);
           line-height: 26px;
           text-align: center;
         }
@@ -232,7 +234,7 @@
         &[inactive]:after {
           width: 2px;
         }
-      }            
+      }
     }
     &[scroll] {
       .wizard-progress {
@@ -248,8 +250,8 @@
       width: calc(100% - 260px);
       .wizard-panel {
         .wizard-panel-content {
-          min-height: calc( 100vh - 142px);
-          max-height: calc( 100vh - 142px);
+          min-height: calc(100vh - 142px);
+          max-height: calc(100vh - 142px);
         }
         .wizard-panel-btn {
           margin-left: -2%;
@@ -258,9 +260,7 @@
     }
   }
 
-
   @include media-breakpoint-down(sm) {
-    
     .wizard-form {
       .wizard-panel {
         border-top: 0;
@@ -283,7 +283,7 @@
         //position: relative;
         .br-button {
           width: 90%;
-          margin: 8px 5%;
+          margin: v(spacing-scale-base) 5%;
           float: left;
           clear: both;
         }
@@ -291,7 +291,7 @@
     }
     .wizard-progress {
       position: relative;
-      padding-top: 24px;
+      padding-top: v(spacing-scale-3x);
       min-height: 100px;
       max-height: 100px;
       transition-property: all;
@@ -301,7 +301,7 @@
       overflow-y: hidden;
       .wizard-progress-btn {
         .info {
-          font-size: v(font-size-scale-down-02,$font-size-scale-down-02);
+          font-size: v(font-size-scale-down-02, $font-size-scale-down-02);
           line-height: 1em;
           text-align: center;
         }
@@ -313,31 +313,30 @@
         height: 4px;
         border-radius: 2px;
         content: '';
-        background-color: v(color-secondary-04,$color-secondary-04);
+        background-color: v(color-secondary-04, $color-secondary-04);
         bottom: 0;
         top: unset;
         left: 44%;
-        //margin-top: 72px;
         transition-property: all;
         transition-duration: 0.25s;
         transition-timing-function: linear;
         transition-delay: 0s;
-      } 
+      }
     }
 
     &[collapsed] {
       .wizard-progress {
         min-height: 64px;
         max-height: 64px;
-        padding-bottom: 24px;
+        padding-bottom: v(spacing-scale-3x);
         overflow-y: hidden;
-        padding-top: 24px;
-        
+        padding-top: v(spacing-scale-3x);
+
         &:after {
-          margin-top: 36px;
+          margin-top: v(spacing-scale-4xh);
         }
         .wizard-progress-btn {
-          padding-bottom: 8px;
+          padding-bottom: v(spacing-scale-base);
           .info {
             display: none;
           }
@@ -354,7 +353,7 @@
         }
       }
     }
-    
+
     &[vertical] {
       .wizard-progress {
         max-width: 110px;
@@ -367,9 +366,9 @@
           right: 0;
           top: 40%;
           margin-top: 0;
-        } 
+        }
         .wizard-progress-btn {
-          padding-right: 56px;
+          padding-right: v(spacing-scale-7x);
           line-height: 18px;
           .info {
             position: absolute;
@@ -408,9 +407,9 @@
             left: unset;
             right: 0;
             top: 40%;
-          } 
+          }
           .wizard-progress-btn {
-            padding-right: 0px;
+            padding-right: 0;
             .info {
               display: none;
             }

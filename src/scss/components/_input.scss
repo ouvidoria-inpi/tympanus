@@ -2,7 +2,7 @@
   position: relative;
   label {
     display: inline-block;
-    padding-bottom: $spacer * 0.5;
+    padding-bottom: v(spacing-scale-half);
   }
   input {
     @include input;
@@ -16,7 +16,7 @@
           cursor: not-allowed;
         }
       }
-      ~.help {
+      ~ .help {
         display: none;
       }
     }
@@ -32,7 +32,7 @@
       height: $input-default;
       margin: 0;
       min-width: 0;
-      padding: 0 ($spacer * 2);
+      padding: 0 v(spacing-scale-2x);
       position: absolute;
       right: 0;
       width: auto;
@@ -50,7 +50,7 @@
       }
     }
   }
-  ~.help {
+  ~ .help {
     font-size: v(font-size-scale-down-01);
   }
   &[valid] {
@@ -79,7 +79,7 @@
     align-items: center;
     label {
       white-space: nowrap;
-      margin-right: $spacer * 2;
+      margin-right: v(spacing-scale-2x);
     }
     input {
       min-height: $input-small;

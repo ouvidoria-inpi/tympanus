@@ -4,18 +4,16 @@
     display: none;
   }
   .upload-button {
-    @include media-breakpoint-up(sm) {
-      border: 1px dashed;
-      border-radius: 4px;
-      padding-left: $spacer * 2;
-      padding-right: $spacer * 2;
-      text-align: left;
-      width: 100%;
-    }
+    border: 1px dashed;
+    border-radius: 4px;
+    padding-left: v(spacing-scale-2x);
+    padding-right: v(spacing-scale-2x);
+    text-align: left;
+    width: 100%;
   }
 
   .feedback {
-    margin-top: $spacer;
+    margin-top: v(spacing-scale-base);
   }
 
   .upload-list {

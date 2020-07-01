@@ -5,10 +5,10 @@
     li {
       &::before {
         color: currentColor;
-        content: "•";
+        content: '•';
         display: inline-block;
         opacity: 0.65;
-        padding-right: $spacer;
+        padding-right: v(spacing-scale-base);
         position: absolute;
         transform: scale(3) translate(-2px, -1px);
       }
@@ -19,20 +19,20 @@
   ol {
     margin: 0;
     li {
-      padding: $spacer 0;
+      padding: v(spacing-scale-base) 0;
     }
     ul,
     ol {
-      margin: $spacer 0 (-$spacer);
+      margin: v(spacing-scale-base) 0 calc(#{v(spacing-scale-base)} * -1);
     }
   }
   // Estilo base para lista de definição
   dt {
     font-weight: v(font-weight-semi-bold);
-    padding: $spacer 0;
+    padding: v(spacing-scale-base) 0;
   }
   dd {
     font-style: italic;
-    padding: $spacer 0;
+    padding: v(spacing-scale-base) 0;
   }
 }

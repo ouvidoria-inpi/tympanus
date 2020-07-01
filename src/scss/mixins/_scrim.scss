@@ -41,7 +41,7 @@
       background: rgba(v(rgb-secondary-09), 0.64);
       bottom: 0;
       left: 0;
-      padding: $spacer * 3 $spacer * 1.25;
+      padding: v(spacing-scale-3x) v(spacing-scale-baseh);
       position: absolute;
       width: 100%;
     }
