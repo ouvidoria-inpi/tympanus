@@ -6,7 +6,7 @@
   color: v(color-secondary-01);
   display: block;
   .logo {
-    padding: $spacer * 6 0 $spacer * 4;
+    padding: v(spacing-scale-6x) 0 v(spacing-scale-4x);
     img {
       max-height: 48px;
       max-width: 180px;

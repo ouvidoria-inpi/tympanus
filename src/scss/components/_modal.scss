@@ -2,9 +2,9 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
 
 .#{$prefix}modal {
   box-shadow: 0 3px 6px $br-modal-box-shadow-color;
-  padding: $spacer * 2;
+  padding: v(spacing-scale-2x);
   &-header {
-    margin-bottom: $spacer * 3.5;
+    margin-bottom: v(spacing-scale-3xh);
     position: relative;
     .close {
       background: transparent;
@@ -14,7 +14,7 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
       padding: 0;
       position: absolute;
       right: 0;
-      top: -($spacer * 0.5);
+      top: calc(#{v(spacing-scale-half)} * -1);
     }
   }
   &-title {
@@ -35,7 +35,7 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     }
   }
   &-body {
-    margin: 0 0 ($spacer * 5);
+    margin: 0 0 v(spacing-scale-5x);
   }
   &-footer {
     display: flex;
@@ -45,10 +45,10 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     border: 0;
     font-size: v(font-size-scale-base);
     height: 216px;
-    margin-left: -$spacer * 2;
-    margin-right: -$spacer * 2;
+    margin-left: calc(#{v(spacing-scale-2x)} * -1);
+    margin-right: calc(#{v(spacing-scale-2x)} * -1);
     overflow: auto;
-    padding: 0 ($spacer * 2);
+    padding: 0 v(spacing-scale-2x);
     resize: none;
     width: auto;
     &::-webkit-scrollbar {
@@ -71,12 +71,13 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     }
   }
 
-  &.is-scroll{
-    .#{$prefix}card{
-      box-shadow: inset 0 -4px 3px rgba(v(rgb-secondary-09), 0.16), inset 0 4px 3px rgba(v(rgb-secondary-09), 0.16);
-      padding: $spacer * 2;
+  &.is-scroll {
+    .#{$prefix}card {
+      box-shadow: inset 0 -4px 3px rgba(v(rgb-secondary-09), 0.16),
+        inset 0 4px 3px rgba(v(rgb-secondary-09), 0.16);
+      padding: v(spacing-scale-2x);
     }
-  }  
+  }
 }
 
 @include media-breakpoint-up(sm) {
@@ -91,9 +92,9 @@ $br-modal-box-shadow-color: rgba(0, 0, 0, 0.16);
     &.is-medium {
       max-width: 500px;
     }
-    &.is-large, &.is-scroll {
+    &.is-large,
+    &.is-scroll {
       max-width: 640px;
     }
   }
 }
-

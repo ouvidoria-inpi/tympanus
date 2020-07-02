@@ -1,12 +1,9 @@
 // Destacado
 .highlight {
   background: v(status-highlight-background)
-    linear-gradient(
-      v(status-highlight-overlay),
-      v(status-highlight-overlay)
-    );
+    linear-gradient(v(status-highlight-overlay), v(status-highlight-overlay));
   color: v(status-highlight-text);
-  padding: 0 4px;
+  padding: 0 v(spacing-scale-half);
 }
 // Desativado
 [disabled],

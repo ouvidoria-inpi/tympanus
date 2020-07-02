@@ -1,5 +1,5 @@
 .#{$prefix}pagination {
-  margin: 0 0 ($spacer * 3);
+  margin: 0 0 v(spacing-scale-3x);
   padding: 0;
   li {
     display: inline-flex;
@@ -11,8 +11,8 @@
     color: v(color-primary-default);
     font-weight: 400;
     justify-content: center;
-    min-width: $spacer * 3;
-    padding: 0 ($spacer);
+    min-width: v(spacing-scale-3x);
+    padding: 0 v(spacing-scale-base);
     position: relative;
     text-align: center;
     text-decoration: none !important;
@@ -30,13 +30,13 @@
   .is-first {
     &::after {
       color: v(color-secondary-04);
-      content: "|";
+      content: '|';
     }
   }
   .is-last {
     &::before {
       color: v(color-secondary-04);
-      content: "|";
+      content: '|';
     }
   }
   .is-disabled {
@@ -53,17 +53,17 @@
         font-size: $font-size-base * 1.25;
       }
       a {
-        margin: 0 $spacer * 0.5;
-        min-width: $spacer * 3.75;
+        margin: 0 v(spacing-scale-half);
+        min-width: calc(#{v(spacing-scale-base)} * 3.75);
       }
       .is-first {
         &::after {
-          margin: 0 ($spacer);
+          margin: 0 v(spacing-scale-base);
         }
       }
       .is-last {
         &::before {
-          margin: 0 ($spacer);
+          margin: 0 v(spacing-scale-base);
         }
       }
     }

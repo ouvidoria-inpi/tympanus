@@ -1,143 +1,63 @@
 .#{$prefix}message {
-  color: v(color-secondary-08, $color-secondary-08);
   display: flex;
-  margin-bottom: $margin-default * 2;
-
+  margin-bottom: v(spacing-scale-2x);
   .icon {
-    align-items: center;
-    color: $color-secondary-01;
-    display: flex;
-    font-size: 175%;
-    justify-content: center;
-    width: $message-icon;
-
+    align-self: center;
+    padding: v(spacing-scale-2x) 0;
+    text-align: center;
+    width: v(icon-size-3x);
     img {
       max-width: 32px;
     }
   }
-
   .content {
     align-self: center;
     flex: 1;
-    padding: $spacer * 2.5 $spacer * 2.5;
     font-size: v(font-size-scale-up-01);
-
-    strong {
-      font-weight: 600;
-    }
-
+    padding: v(spacing-scale-2x) 0;
     a {
-      color: $color-secondary-08;
-      text-decoration: underline;
-
-      &:hover {
-        color: $link-hover-color;
-      }
+      @include focus;
+      @include hover;
     }
-
     * {
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
-
-  a {
-    color: v(color-secondary-08, $color-secondary-08);
-    text-decoration: underline;
-
-    &:hover {
-      color: v(color-primary-lighten-01, $color-primary-lighten-01); //Checar
-    }
+  .close {
+    align-self: start;
+    margin: v(font-size-scale-base);
   }
-
-  .close button {
-    &.br-button.is-tertiary {
-      margin: 0;
-    }
-  }
-
   // Estados
-  @each $state,
-  $color in (success, $color-success),
-  (danger, $color-danger),
-  (warning, $color-warning),
-  (info, $color-info) {
-    &.is-#{$state} {
-      background: scale-color($color, $lightness: 90%);
-
+  @each $state, $color in (success, v(color-success)), (danger, v(color-danger)),
+    (warning, v(color-warning)), (info, v(color-info))
+  {
+    &.is-#{$state},
+    &.#{$state},
+    &[#{$state}] {
+      background: rgba(var(--rgb-#{$state}), 0.09);
       .icon {
-        background: transparent;
         color: $color;
       }
-
       .close {
-        align-items: flex-start;
-        display: flex;
-
-        button {
-          background: transparent;
-          border: 0;
+        .#{$prefix}button {
           color: $color;
-          padding: 0;
-
-          &.br-button.is-tertiary:hover {
-            background-color: transparent;
-            color: $color;
+          &:hover {
+            background: rgba(var(--rgb-#{$state}), 0.15);
           }
         }
       }
-
-      @if ($state==warning) {
-
-        .icon,
-        .close button {
-          color: $color-secondary-08;
-
-          &.br-button.is-tertiary:hover {
-            background-color: transparent;
-            color: $color-secondary-08;
+      @if ($state == warning) {
+        .icon {
+          color: v(text-color);
+        }
+        .close {
+          .#{$prefix}button {
+            color: v(text-color);
           }
         }
       }
     }
-
-    //Mensagens Complementares
-    &.hint {
-      align-items: center;
-      background: transparent;
-      color: $color-info;
-
-      .icon {
-        background: transparent;
-        color: $color-info;
-      }
-
-      .content {
-        padding: 0;
-
-      }
-    }
-  }
-}
-
-//Mensagens de Validação
-.feedback {
-  align-items: center;
-  //font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
-  font-style: italic;
-  font-weight: v(font-weight-medium, $font-weight-medium);
-  padding: $spacer * 0.5 0;
-
-  &.is-valid {
-    color: v(color-success, $color-success);
-  }
-
-  &.is-invalid {
-    color: v(color-danger, $color-danger);
-  }
-
-  &.is-disabled {
-    color: $color-secondary-07;
   }
 }

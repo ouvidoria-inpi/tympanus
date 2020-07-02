@@ -13,7 +13,7 @@
   font-weight: v(font-weight-semi-bold);
   height: 40px;
   line-height: 40px;
-  padding: 0 40px;
+  padding: 0 v(spacing-scale-5x);
   text-align: center;
   width: 100%;
   &:not(:disabled) {

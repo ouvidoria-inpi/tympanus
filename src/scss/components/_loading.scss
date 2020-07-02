@@ -21,7 +21,7 @@ $stroke: 5px;
       border: 2px solid v(color-primary-default);
       border-radius: 50%;
       border-right-color: transparent;
-      content: "";
+      content: '';
       display: block;
       height: $diameter-sm;
       left: $position-sm;
@@ -50,12 +50,12 @@ $stroke: 5px;
         width: $diameter-md;
       }
       &[label] {
-        margin: 0 2*$spacer 2*$spacer 0;
+        margin: 0 v(spacing-scale-2x) v(spacing-scale-2x) 0;
       }
     }
     &[label] {
       display: inline;
-      margin: 0 2*$spacer 0 0;
+      margin: 0 v(spacing-scale-2x) 0 0;
       vertical-align: middle;
       &::after {
         position: static;
@@ -69,7 +69,7 @@ $stroke: 5px;
   border-radius: 50%;
   height: $diameter;
   width: $diameter;
-  margin: $spacer * 3.5;
+  margin: v(spacing-scale-3xh);
   &-mask,
   &-fill {
     backface-visibility: hidden;
@@ -88,7 +88,7 @@ $stroke: 5px;
     background: v(color-secondary-01);
     border-radius: 50%;
     color: v(color-primary-default);
-    content: attr(data-progress) "%";
+    content: attr(data-progress) '%';
     $diameter: $diameter - $stroke * 2;
     font-size: v(font-size-scale-up-02);
     font-weight: v(font-weight-semi-bold);
@@ -105,11 +105,11 @@ $stroke: 5px;
       0% {
         transform: rotate(0deg);
       }
-      [data-progress="#{$step}"] {
+      [data-progress='#{$step}'] {
         transform: rotate($rotation#{deg});
       }
     }
-    &[data-progress="#{$step}"] {
+    &[data-progress='#{$step}'] {
       .#{$prefix}loading-mask[full],
       .#{$prefix}loading-fill {
         transform: rotate($step * $rotationIncrement#{deg});

@@ -150,13 +150,13 @@ $column-gap: 6px;
       align-items: center;
       .select-all {
         font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
-        margin-right: 4px;
+        margin-right: v(spacing-scale-half);
         padding: 0;
       }
     }
     .text,
     .count {
-      padding-right: 4px;
+      padding-right: v(spacing-scale-half);
       line-height: v(font-line-height-low, $font-line-height-low);
       color: v(color-secondary-01, $color-secondary-01);
     }
@@ -269,8 +269,8 @@ $column-gap: 6px;
         }
         &:first-child {
           position: absolute;
-          padding-right: 4px;
-          padding-left: 16px;
+          padding-right: v(spacing-scale-half);
+          padding-left: v(spacing-scale-2x);
           top: 1em;
           width: 100%;
           .col-collapse {
@@ -305,10 +305,10 @@ $column-gap: 6px;
       color: v(color-primary-lighten-01, $color-primary-lighten-01);
       border-radius: 0;
       border-color: transparent;
-      padding-left: 8px;
-      padding-right: 8px;
+      padding-left: v(spacing-scale-base);
+      padding-right: v(spacing-scale-base);
       [class*='fa-'] {
-        margin-left: 8px;
+        margin-left: v(spacing-scale-base);
       }
       &:focus {
         box-shadow: none;
@@ -362,15 +362,15 @@ $column-gap: 6px;
           min-width: auto;
           span {
             display: inline;
-            padding-right: 8px;
-            padding-left: 24px;
+            padding-right: v(spacing-scale-base);
+            padding-left: v(spacing-scale-3x);
           }
         }
       }
     }
     .bottom-bar {
       .divider {
-        margin: 0 16px 0 8px;
+        margin: 0 v(spacing-scale-2x) 0 v(spacing-scale-base);
         &::before {
           content: none;
         }
@@ -385,13 +385,13 @@ $column-gap: 6px;
       .items {
         display: flex;
         .divider {
-          margin: 0 16px 0 8px;
+          margin: 0 v(spacing-scale-2x) 0 v(spacing-scale-base);
         }
       }
       .pagination {
         flex-grow: 0;
         .divider {
-          margin: 0 8px 0 16px;
+          margin: 0 v(spacing-scale-base) 0 v(spacing-scale-2x);
         }
       }
     }
@@ -481,12 +481,12 @@ $column-gap: 6px;
     &.is-checkbox {
       table tbody tr {
         td {
-          padding-left: 8px;
-          padding-right: 8px;
+          padding-left: v(spacing-scale-base);
+          padding-right: v(spacing-scale-base);
           &:first-child {
             position: static;
-            padding-right: 16px;
-            padding-left: 16px;
+            padding-right: v(spacing-scale-2x);
+            padding-left: v(spacing-scale-2x);
             width: auto;
           }
         }

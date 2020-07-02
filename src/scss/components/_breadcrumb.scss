@@ -15,7 +15,7 @@
     .crumb {
       align-items: center;
       display: flex;
-      height: $spacer * 4;
+      height: v(spacing-scale-4x);
       .icon {
         color: v(color-secondary-04);
         font-size: v(icon-size-sm);
@@ -35,7 +35,6 @@
       &.home {
         align-items: center;
         display: flex;
-        // height: $spacer * 3;
         .icon {
           color: v(color-primary-default);
           position: static;
@@ -56,15 +55,15 @@
       }
     }
     &::-webkit-scrollbar {
-      height: $spacer;
+      height: v(spacing-scale-base);
     }
     &::-webkit-scrollbar-track {
       background: v(color-secondary-04);
-      border-radius: 0px
+      border-radius: 0;
     }
     &::-webkit-scrollbar-thumb {
       background: v(color-secondary-05);
-      border-radius: 0px
+      border-radius: 0;
     }
   }
 }

@@ -33,8 +33,8 @@
       cursor: pointer;
       font-weight: v(font-weight-medium);
       display: inline-block;
-      min-height: $checkbox-default;
-      padding: $spacer/2 $checkbox-default + $spacer $spacer $checkbox-default + $spacer;
+      min-height: v(spacing-scale-3x);
+      padding: v(spacing-scale-half) v(spacing-scale-4x) v(spacing-scale-base) v(spacing-scale-4x);
       position: relative;
       font-size: v(font-size-scale-up-01);
 
@@ -44,11 +44,11 @@
         border: 1px solid v(color-secondary-04);
         border-radius: 50%;
         content: '';
-        height: $checkbox-default;
+        height: v(spacing-scale-3x);
         left: 0;
         position: absolute;
-        width: $checkbox-default;
-        padding: $spacer/2 $spacer $spacer/2 $spacer * 0;
+        width: v(spacing-scale-3x);
+        padding: v(spacing-scale-half) v(spacing-scale-base) v(spacing-scale-half) 0;
       }
     }
 
@@ -136,14 +136,13 @@
     input[type='radio'] {
       // Texto
       & + label {
-        line-height: $checkbox-small;
-        min-height: $checkbox-small;
-        // padding: 0 0 0 ($checkbox-small + $spacer);
+        line-height: v(spacing-scale-2xh);
+        min-height: v(spacing-scale-2xh);
       }
       // Caixa
       & + label::before {
-        height: $checkbox-small;
-        width: $checkbox-small;
+        height: v(spacing-scale-2xh);
+        width: v(spacing-scale-2xh);
       }
       // Checado
       &:checked + label::after {

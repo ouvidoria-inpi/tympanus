@@ -1,16 +1,16 @@
 // Lista de Itens de Abas
 .#{$prefix}tabs {
-  &[data-counter="true"] {
+  &[data-counter='true'] {
     .tab-nav {
       ul {
-        margin-bottom: 72px;
+        margin-bottom: v(spacing-scale-9x);
         .tab-item {
-          &[not-tab="true"] {
+          &[not-tab='true'] {
             .name {
               color: v(color-secondary-07, $color-secondary-07);
               font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
               line-height: v(font-size-scale-up-03, $font-size-scale-up-03);
-              font-weight: v(font-weight-semi-bold ,$font-weight-semi-bold);
+              font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
               display: inline-block;
               padding-bottom: 6px;
             }
@@ -21,11 +21,11 @@
               top: 52px;
               left: 0;
               span {
-                color: v(color-primary-default ,$color-primary-default);
+                color: v(color-primary-default, $color-primary-default);
                 display: inline-block;
                 font-size: v(font-size-scale-up-03, $font-size-scale-up-03);
-                font-weight: v(font-weight-semi-bold ,$font-weight-semi-bold);
-                margin-left: $spacer * 2.76;
+                font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+                margin-left: v(spacing-scale-3x);
               }
             }
           }
@@ -38,12 +38,13 @@
       border-bottom: 1px solid v(color-secondary-04, $color-secondary-04);
       display: flex;
       padding: 0;
-      margin-bottom: 8px;
+      margin-bottom: v(spacing-scale-base);
+      margin-top: 0;
       .tab-item {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 $spacer * 3.25;
+        padding: 0 v(spacing-scale-3x);
         position: relative;
         white-space: nowrap;
         &:first-child {
@@ -55,9 +56,9 @@
         &.is-active {
           button {
             border-bottom: 4px solid v(color-primary-default, $color-primary-default);
-            padding-bottom: $spacer * 1;
+            padding-bottom: v(spacing-scale-base);
             .name {
-              color: v(color-primary-darken-02, $color-primary-darken-02)
+              color: v(color-primary-darken-02, $color-primary-darken-02);
             }
           }
           .results {
@@ -70,7 +71,7 @@
           border-bottom: 4px solid transparent;
           color: v(color-secondary-07, $color-secondary-07);
           display: inline-block;
-          padding: $spacer * 1 $spacer * 3;
+          padding: v(spacing-scale-base) v(spacing-scale-3x);
           &:hover {
             background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
             .name {
@@ -82,9 +83,9 @@
             .name {
               color: v(color-primary-default, $color-primary-default);
             }
-          }       
+          }
           .name {
-            color: v(color-secondary-07 ,$color-secondary-07);
+            color: v(color-secondary-07, $color-secondary-07);
             font-size: v(font-size-scale-up-02, $font-size-scale-up-02);
             font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
             text-align: center;
