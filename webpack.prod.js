@@ -1,56 +1,21 @@
 const path = require('path')
-// const isDEV = process.env.NODE_ENV === 'production'
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
-// const HTMLWebpackPlugin = require('html-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-// const UnminifiedWebpackPlugin = require('unminified-webpack-plugin')
-const WebpackShellPlugin = require('webpack-shell-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-
-// const fs = require('fs')
+const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 const paths = {
   src: path.resolve(__dirname, 'src'),
   assets: path.resolve(__dirname, 'src', 'assets'),
   dist: path.resolve(__dirname, 'dist'),
 }
 
-// Our function that generates our html plugins
-// function generateHtmlPlugins(templateDir, dirName) {
-//   // Read files in template directory
-//   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
-//   return templateFiles.map((item) => {
-//     // Split names and extension
-//     const parts = item.split('.')
-//     const name = parts[0]
-//     const extension = parts[1]
-//     // Create new HTMLWebpackPlugin with options
-//     return new HTMLWebpackPlugin({
-//       filename: `${dirName}/${name}.html`,
-//       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-//       templateParameters: {
-//         version: JSON.stringify(require('./package.json').version).replace(/\"/gi, ''),
-//         cdnUrl: require('./package.json').cdn,
-//       },
-//       inject: true,
-//     })
-//   })
-// }
-
-// Call our function on our views directory.
-// const htmlPluginsComponentes = generateHtmlPlugins('./src/pug/views/components', 'components')
-// const htmlPluginsTemplates = generateHtmlPlugins('./src/pug/views/templates', 'templates')
-
 module.exports = {
   mode: 'production',
   entry: {
-    dsgov: path.resolve(`${paths.src}/js/index.js`),
-    'dsgov.min': path.resolve(`${paths.src}/js/index.js`),
+    dsgov: [path.resolve(`${paths.src}/scss/dsgov.scss`), path.resolve(`${paths.src}/js/index.js`)],
   },
-  watch: false,
+  watch: true,
   output: {
+    filename: './js/dsgov.js',
     path: paths.dist,
-    filename: 'js/[name].js',
   },
   module: {
     rules: [
@@ -71,35 +36,32 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env'],
+        },
+      },
     ],
   },
   resolve: {
     extensions: ['.js', '.scss'],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        {
-          from: 'components/*',
-          to: 'js',
-          force: true,
-          context: path.resolve(__dirname, 'src', 'js'),
-        },
-      ],
-    }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].min.css',
-      chunkFilename: '[id].min.css',
+      filename: 'css/[name].css',
+      chunkFilename: '[id].css',
       ignoreOrder: false,
     }),
-    new WebpackShellPlugin({
-      onBuildEnd: ['pug -q -w -s ./src/pug/views/ -O optionpug.json -o ./dist/ -P'],
+    new WebpackShellPluginNext({
+      onBuildEnd: {
+        scripts: ['pug -q -w -s ./src/pug/views/ -O optionpug.json -o ./dist/ -P'],
+        blocking: false,
+        parallel: true,
+      },
     }),
   ],
-  // .concat(htmlPluginsComponentes, htmlPluginsTemplates),
-  optimization: {
-    nodeEnv: 'production',
-    minimize: true,
-  },
   devtool: 'source-map',
 }
