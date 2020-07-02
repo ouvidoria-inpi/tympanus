@@ -8,7 +8,7 @@ mixin select(label="Label")
       .front
         .content
           if attributes.multiple
-            +list.condensed.selected-options-list
+            +list.condensed.selected-list
             +divider
           +list.condensed.options-list
             if block
