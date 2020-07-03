@@ -194,6 +194,7 @@ $column-gap: 6px;
       color: v(color-secondary-07, $color-secondary-07);
       transition: max-height 500ms;
       max-height: 100em;
+      height: auto;
       &.is-collapsed {
         max-height: 5em;
         overflow: hidden;
@@ -256,6 +257,7 @@ $column-gap: 6px;
         box-shadow: 0 3px 6px rgba(v(color-secondary-09, $color-secondary-09), 0.16);
         margin: $column-spacing * 0.5 0;
         padding: $column-spacing * 0.5 0;
+        height: auto;
       }
     }
   }
@@ -429,7 +431,7 @@ $column-gap: 6px;
     }
     table {
       display: table;
-      margin-top: -$column-height;
+      margin-top: -$column-height + 16px;
       width: 100%;
       th {
         background-color: v(color-secondary-03, $color-secondary-03);
