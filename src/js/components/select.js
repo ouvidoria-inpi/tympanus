@@ -54,9 +54,33 @@ class BRSelect {
   }
 
   _unselectItem(event) {
-    for (const content of event.currentTarget.querySelectorAll('.content')) {
-      this.options.push(content.innerText)
-      this.selected.slice(this.selected.indexOf(content.innerText))
+    for (const option of event.currentTarget.querySelectorAll('.content')) {
+      this.selected.splice(this.selected.indexOf(option.innerText), 1)
+      for (const optionItem of this.component.querySelectorAll('.br-list.options-list .item')) {
+        for (const content of optionItem.querySelectorAll('.content')) {
+          if (content.innerText === option.innerText) {
+            optionItem.classList.remove('hidden')
+          }
+        }
+      }
+    }
+    event.currentTarget.parentElement.removeChild(event.currentTarget)
+    for (const input of this.component.querySelectorAll('.br-input input')) {
+      if (this.selected.length === 0) {
+        input.value = ''
+      } else if (this.selected.length === 1) {
+        input.value = `${this.selected.length} item selecionado`
+      } else {
+        input.value = `${this.selected.length} itens selecionados`
+      }
+    }
+    for (const selectedList of this.component.querySelectorAll('.br-list.selected-list')) {
+      if (this.selected.length === 0) {
+        selectedList.classList.add('hidden')
+        for (const brDivider of this.component.querySelectorAll('.br-divider')) {
+          brDivider.classList.add('hidden')
+        }
+      }
     }
   }
 
@@ -64,27 +88,14 @@ class BRSelect {
     for (const selectedList of this.component.querySelectorAll('.br-list.selected-list')) {
       const item = this._createItem(['fas', 'fa-trash'], option)
       item.setAttribute('selected', '')
-      item.addEventListener('click', (event) => {
-        this.selected.splice(this.selected.indexOf(option), 1)
-        for (const optionItem of this.component.querySelectorAll('.br-list.options-list .item')) {
-          for (const content of optionItem.querySelectorAll('.content')) {
-            if (content.innerText === option) {
-              optionItem.classList.remove('hidden')
-            }
-          }
-        }
-        item.parentElement.removeChild(item)
-        for (const input of this.component.querySelectorAll('.br-input input')) {
-          if (this.selected.length === 0) {
-            input.value = ''
-          } else if (this.selected.length === 1) {
-            input.value = `${this.selected.length} item selecionado`
-          } else {
-            input.value = `${this.selected.length} itens selecionados`
-          }
-        }
-      })
+      item.addEventListener('click', this._unselectItem.bind(this))
       selectedList.appendChild(item)
+      if (this.selected.length !== 0) {
+        selectedList.classList.remove('hidden')
+        for (const brDivider of this.component.querySelectorAll('.br-divider')) {
+          brDivider.classList.remove('hidden')
+        }
+      }
     }
   }
 

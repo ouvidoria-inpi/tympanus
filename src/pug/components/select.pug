@@ -8,8 +8,8 @@ mixin select(label="Label")
       .front
         .content
           if attributes.multiple
-            +list.condensed.selected-list
-            +divider
+            +list.condensed.selected-list.hidden
+            +divider.hidden
           +list.condensed.options-list
             if block
               block
