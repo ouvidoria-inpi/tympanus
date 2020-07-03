@@ -6,7 +6,7 @@ const isDEV = process.env.NODE_ENV === 'development'
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-const WebpackShellPlugin = require('webpack-shell-plugin')
+const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 
 // We need Nodes fs module to read directory contents
 const fs = require('fs')
@@ -53,16 +53,20 @@ module.exports = {
     path: paths.dist,
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join('./dist'),
+    watchContentBase: true,
     stats: 'errors-only',
     clientLogLevel: 'error',
     port: 9000,
     open: false,
-    hot: true,
+    overlay: true,
     inline: true,
+    hot: true,
     progress: true,
     profile: true,
+    liveReload: true,
     host: '0.0.0.0',
+    compress: true,
   },
   module: {
     rules: [
@@ -93,17 +97,6 @@ module.exports = {
         include: [paths.images],
         loader: fileLoader,
       },
-      // {
-      //   // Include pug-loader to process the pug files
-      //   test: /\.pug$/,
-      //   use: {
-      //     loader: 'pug-loader',
-      //     query: {
-      //       pretty: true,
-      //       root: path.resolve(__dirname, 'src/views'),
-      //     },
-      //   },
-      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -118,18 +111,21 @@ module.exports = {
     extensions: ['.js', '.scss'],
   },
   plugins: [
-    //new CleanWebpackPlugin(),
     // Extract our css to a separate css file
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       chunkFilename: '[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
-    new WebpackShellPlugin({
-      onBuildEnd: [
-        'pug -q -w ./src/pug/views/ -O optionpug.json -o ./dist/ -P',
-        'node componentes.js',
-      ],
+    new WebpackShellPluginNext({
+      onBuildEnd: {
+        scripts: [
+          'npx pug -q -w -s ./src/pug/views/ -O optionpug.json -o ./dist/ -P',
+          'node componentes.js',
+        ],
+        blocking: false,
+        parallel: true,
+      },
     }),
   ],
   devtool: 'source-map',
