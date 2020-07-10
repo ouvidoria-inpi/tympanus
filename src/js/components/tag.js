@@ -1,12 +1,13 @@
 class BRTag {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.DomList = []
     this._setBehavior()
     this.arrayOfList = []
   }
-  _setBehavior() {
+
+  _setBehavior () {
     for (const button of this.component.querySelectorAll('div.close button')) {
       button.addEventListener('click', () => {
         this.component.parentNode.removeChild(this.component)
@@ -15,21 +16,23 @@ class BRTag {
   }
 }
 class BRTagChoice {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.DomList = []
     this._setBehavior()
     this.arrayOfList = []
   }
-  _setBehavior() {
+
+  _setBehavior () {
     for (const button of this.component.querySelectorAll('.br-tag')) {
       button.addEventListener('click', (event) => {
         this._switchTag(event.currentTarget)
       })
     }
   }
-  _switchTag(currentTag) {
+
+  _switchTag (currentTag) {
     for (const tag of this.component.querySelectorAll('.br-tag')) {
       if (tag === currentTag) {
         tag.classList.add('active')
@@ -40,21 +43,23 @@ class BRTagChoice {
   }
 }
 class BRTagFilter {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.DomList = []
     this._setBehavior()
     this.arrayOfList = []
   }
-  _setBehavior() {
+
+  _setBehavior () {
     for (const button of this.component.querySelectorAll('.br-tag')) {
       button.addEventListener('click', (event) => {
         this._switchTag(event.currentTarget)
       })
     }
   }
-  _switchTag(currentTag) {
+
+  _switchTag (currentTag) {
     currentTag.classList.toggle('active')
   }
 }

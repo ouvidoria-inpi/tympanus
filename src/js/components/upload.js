@@ -5,7 +5,7 @@ class BRUpload {
    * @param {*} component componente
    * @param {*} uploadFiles  promisse de status do upload
    */
-  constructor(name, component, uploadFiles) {
+  constructor (name, component, uploadFiles) {
     this.name = name
     this.component = component
     this._inputElement = this.component.querySelector('.upload-input')
@@ -16,7 +16,7 @@ class BRUpload {
     this._setBehavior()
   }
 
-  _setBehavior() {
+  _setBehavior () {
     this.component.addEventListener(
       'dragenter',
       (event) => {
@@ -76,17 +76,19 @@ class BRUpload {
     }
   }
 
-  _clickUpload() {
+  _clickUpload () {
     this._inputElement.click()
   }
-  _drag(event) {
+
+  _drag (event) {
     event.stopPropagation()
     event.preventDefault()
     this._btnUpload.classList.add('bg-support-01')
     // text-secondary-01
     this._btnUpload.classList.add('text-secondary-01')
   }
-  _drop(event) {
+
+  _drop (event) {
     event.stopPropagation()
     event.preventDefault()
     this._btnUpload.className = this._btnUpload.className.replace(/\bbg-support-01\b/g, '')
@@ -96,20 +98,22 @@ class BRUpload {
     this._handleFiles(files)
   }
 
-  _onDragEnd(event) {
+  _onDragEnd (event) {
     event.stopPropagation()
     event.preventDefault()
 
     this._btnUpload.className = this._btnUpload.className.replace(/\bbg-support-01\b/g, '')
     this._btnUpload.className = this._btnUpload.className.replace(/\btext-secondary-01\b/g, '')
   }
-  _handleFiles(files) {
+
+  _handleFiles (files) {
     const newFiles = !files.length ? Array.from(this._inputElement.files) : Array.from(files)
     this._fileArray = this._fileArray.concat(newFiles)
 
     this._updateFileList()
   }
-  _updateFileList() {
+
+  _updateFileList () {
     if (!this._fileArray.length) {
       this._fileList.innerHTML = ''
       this._info.style.display = ''
@@ -138,7 +142,7 @@ class BRUpload {
     }
   }
 
-  _renderItem(position) {
+  _renderItem (position) {
     const li = document.createElement('div')
     li.className = 'item'
     this._fileList.appendChild(li)
@@ -164,7 +168,7 @@ class BRUpload {
     btndel.setAttribute('mini', '')
     btndel.addEventListener(
       'click',
-      () => {
+      (event) => {
         this._removeFile(position, event)
       },
       false
@@ -178,7 +182,7 @@ class BRUpload {
     this._fileArray[position].nowait = true
   }
 
-  _calcSize(nBytes) {
+  _calcSize (nBytes) {
     let sOutput = ''
     for (
       let aMultiples = ['KB', 'MB', 'GB', 'TB'], nMultiple = 0, nApprox = nBytes / 1024;
@@ -189,7 +193,8 @@ class BRUpload {
     }
     return sOutput
   }
-  _removeFile(index, event) {
+
+  _removeFile (index, event) {
     event.stopPropagation()
     event.preventDefault()
     this._fileArray.splice(index, 1)
@@ -198,9 +203,9 @@ class BRUpload {
 }
 const uploadList = []
 
-function uploadTimeout() {
+function uploadTimeout () {
   return new Promise((resolve) => {
-    //Colocar aqui um upload para o servidor e retirar o timeout
+    // Colocar aqui um upload para o servidor e retirar o timeout
     return setTimeout(resolve, 3000)
   })
 }

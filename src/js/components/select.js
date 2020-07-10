@@ -1,5 +1,5 @@
 class BRSelect {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.options = []
@@ -8,13 +8,13 @@ class BRSelect {
     this._setBehavior()
   }
 
-  _setOptions() {
+  _setOptions () {
     for (const content of this.component.querySelectorAll('.br-list.options-list .item .content')) {
       this.options.push(content.innerText)
     }
   }
 
-  _setBehavior() {
+  _setBehavior () {
     this._setExpandBehavior()
     if (this.component.hasAttribute('multiple')) {
       this._setSelectMultipleBehavior()
@@ -23,7 +23,7 @@ class BRSelect {
     }
   }
 
-  _selectItem(event) {
+  _selectItem (event) {
     for (const content of event.currentTarget.querySelectorAll('.content')) {
       if (this.component.hasAttribute('multiple')) {
         this.selected.push(content.innerText)
@@ -53,7 +53,7 @@ class BRSelect {
     }
   }
 
-  _unselectItem(event) {
+  _unselectItem (event) {
     for (const option of event.currentTarget.querySelectorAll('.content')) {
       this.selected.splice(this.selected.indexOf(option.innerText), 1)
       for (const optionItem of this.component.querySelectorAll('.br-list.options-list .item')) {
@@ -84,7 +84,7 @@ class BRSelect {
     }
   }
 
-  _buildSelectedList(option) {
+  _buildSelectedList (option) {
     for (const selectedList of this.component.querySelectorAll('.br-list.selected-list')) {
       const item = this._createItem(['fas', 'fa-trash'], option)
       item.setAttribute('selected', '')
@@ -99,7 +99,7 @@ class BRSelect {
     }
   }
 
-  _setExpandBehavior() {
+  _setExpandBehavior () {
     for (const buttonTrigger of this.component.querySelectorAll('.br-input button[trigger]')) {
       buttonTrigger.addEventListener('click', (event) => {
         for (const card of this.component.querySelectorAll('.br-card')) {
@@ -122,7 +122,7 @@ class BRSelect {
     }
   }
 
-  _closeSelect() {
+  _closeSelect () {
     for (const card of this.component.querySelectorAll('.br-card')) {
       card.removeAttribute('expanded', '')
       for (const icon of this.component.querySelectorAll('.br-input button[trigger] svg')) {
@@ -132,19 +132,19 @@ class BRSelect {
     }
   }
 
-  _setSelectMultipleBehavior() {
+  _setSelectMultipleBehavior () {
     for (const item of this.component.querySelectorAll('.br-list.options-list .item')) {
       item.addEventListener('click', this._selectItem.bind(this))
     }
   }
 
-  _setSelectSimpleBehavior() {
+  _setSelectSimpleBehavior () {
     for (const item of this.component.querySelectorAll('.br-list.options-list .item')) {
       item.addEventListener('click', this._selectItem.bind(this))
     }
   }
 
-  _createItem(iconClasses, option) {
+  _createItem (iconClasses, option) {
     const item = document.createElement('div')
     item.classList.add('item')
 

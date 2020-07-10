@@ -1,5 +1,5 @@
 class BRTagInput {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.DomList = []
@@ -10,7 +10,8 @@ class BRTagInput {
     this.DOMRender()
     this.onKeyUp()
   }
-  _setBehavior() {
+
+  _setBehavior () {
     for (const button of this.component.querySelectorAll('div.close button')) {
       button.addEventListener('click', () => {
         this.component.parentNode.removeChild(this.component)
@@ -22,18 +23,21 @@ class BRTagInput {
       })
     }
   }
-  DOMCreate() {
+
+  DOMCreate () {
     const input = document.createElement('input')
     input.className = 'input-tag a'
-    if (this.arrayOfList.length <= 0)
+    if (this.arrayOfList.length <= 0) {
       input.setAttribute('placeholder', 'Insira um texto e aperte a tecla ENTER')
+    }
     this.component.appendChild(input)
     this.DOMList = this.component.firstElementChild
     this.DOMInput = this.component.lastElementChild
     this.onKeyUp()
     return input
   }
-  DOMRender() {
+
+  DOMRender () {
     this.component.innerHTML = ''
     this.arrayOfList.forEach(function (currentValue, index) {
       const li = document.createElement('div')
@@ -51,24 +55,22 @@ class BRTagInput {
     }, this)
     this.DOMCreate().focus()
   }
-  onKeyUp() {
+
+  onKeyUp () {
     // eslint-disable-next-line consistent-this
     const _this = this
 
     this.DOMInput.addEventListener(
       'keyup',
       function (event) {
-        {
-          this.keynm = 13
-          const text = this.value
-          const x = ''
-          if (text.includes(',') || String(event.keyCode) === String(13)) {
-            if (text.replace(',', '') !== '') {
-              _this.arrayOfList.push(text.replace(',', ''))
-            }
-            this.value = ''
-            _this.DOMRender()
+        this.keynm = 13
+        const text = this.value
+        if (text.includes(',') || String(event.keyCode) === String(13)) {
+          if (text.replace(',', '') !== '') {
+            _this.arrayOfList.push(text.replace(',', ''))
           }
+          this.value = ''
+          _this.DOMRender()
         }
       },
       false
@@ -76,22 +78,20 @@ class BRTagInput {
     this.DOMInput.addEventListener(
       'keydown',
       function (event) {
-        {
-          const text = this.value
-          if (String(event.keyCode) === String(9)) {
-            if (text.replace(',', '') !== '') {
-              _this.arrayOfList.push(text.replace(',', ''))
-            }
-            this.value = ''
-            _this.DOMRender()
+        const text = this.value
+        if (String(event.keyCode) === String(9)) {
+          if (text.replace(',', '') !== '') {
+            _this.arrayOfList.push(text.replace(',', ''))
           }
+          this.value = ''
+          _this.DOMRender()
         }
       },
       false
     )
   }
 
-  onDelete(id) {
+  onDelete (id) {
     this.arrayOfList = this.arrayOfList.filter((currentValue, index) => {
       if (index === id) {
         return false
@@ -100,7 +100,8 @@ class BRTagInput {
     })
     this.DOMRender()
   }
-  getAttribute() {
+
+  getAttribute () {
     let dataAttribute = ''
     dataAttribute = this.component.getAttribute('tag-input-tags')
     if (typeof dataAttribute === 'undefined') {
@@ -110,7 +111,8 @@ class BRTagInput {
       })
     }
   }
-  setAttribute() {
+
+  setAttribute () {
     this.component.setAttribute('tag-input', this.arrayOfList.toString())
   }
 }

@@ -1,5 +1,5 @@
 class BRList {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.collapsible = this.name === 'br-list-collapsible'
@@ -12,8 +12,9 @@ class BRList {
     if (this.itens.length === 0) this.itens = component.querySelectorAll('div > .item')
     this._setBehavior()
   }
+
   // eslint-disable-next-line complexity
-  _setBehavior() {
+  _setBehavior () {
     if (this.collapsible) {
       this._closeAllItens()
       this.itens.forEach((item) => {
@@ -44,7 +45,8 @@ class BRList {
       })
     }
   }
-  _toggle(event, item) {
+
+  _toggle (event, item) {
     if (!item.hasAttribute('active')) {
       if (this.unique) this._closeAllItens()
     }
@@ -58,7 +60,7 @@ class BRList {
     }
   }
 
-  _closeAllItens() {
+  _closeAllItens () {
     this.itens.forEach((item) => {
       item.removeAttribute('active')
       const icon = item.querySelector('.fa-angle-down')
@@ -70,23 +72,25 @@ class BRList {
       }
     })
   }
-  _check(event, item) {
+
+  _check (event, item) {
     item.classList.toggle('selected')
     this._setSelected(item)
   }
-  _setSelected(item) {
-    const br_checkbox = item.querySelector('.br-checkbox')
-    const br_checkbox_input = br_checkbox.querySelector('input')
+
+  _setSelected (item) {
+    const brCheckbox = item.querySelector('.br-checkbox')
+    const brCheckboxInput = brCheckbox.querySelector('input')
     const selected = item.classList.contains('selected')
-    if (br_checkbox) {
+    if (brCheckbox) {
       if (selected) {
-        br_checkbox.classList.add('is-inverted')
-        br_checkbox_input.setAttribute('checked', '')
-        br_checkbox_input.checked = true
+        brCheckbox.classList.add('is-inverted')
+        brCheckboxInput.setAttribute('checked', '')
+        brCheckboxInput.checked = true
       } else {
-        br_checkbox.classList.remove('is-inverted')
-        br_checkbox_input.removeAttribute('checked')
-        br_checkbox_input.checked = false
+        brCheckbox.classList.remove('is-inverted')
+        brCheckboxInput.removeAttribute('checked')
+        brCheckboxInput.checked = false
       }
     }
   }

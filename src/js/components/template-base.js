@@ -1,5 +1,5 @@
 class BRTemplateBase {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.header = component.querySelector('.br-header')
@@ -12,7 +12,7 @@ class BRTemplateBase {
     this._setBehavior()
   }
 
-  _setBehavior() {
+  _setBehavior () {
     if (this.btn_menu) {
       this.btn_menu.addEventListener('click', () => {
         this._openMenu()
@@ -44,24 +44,29 @@ class BRTemplateBase {
       })
     }
   }
-  _openMenu() {
-    //this.scrim_menu.style.display = 'unset'
+
+  _openMenu () {
+    // this.scrim_menu.style.display = 'unset'
     this.scrim_menu.setAttribute('show', '')
   }
-  _closeMenu() {
+
+  _closeMenu () {
     this.scrim_menu.removeAttribute('show')
   }
-  _closeMenuOut() {
+
+  _closeMenuOut (event) {
     if (event.target === this.scrim_menu) {
       this._closeMenu()
     }
   }
-  _closeContextMenu() {
+
+  _closeContextMenu (event) {
     if (event.target === this.context_menu) {
       this._toggleContextMenu()
     }
   }
-  _toggleContextMenu() {
+
+  _toggleContextMenu () {
     this.context_menu.toggleAttribute('show')
     const cMenu = this.cm_header
     const icon = cMenu.querySelector('.fa-angle-down')

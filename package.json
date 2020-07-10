@@ -25,13 +25,13 @@
     "lint": "npm-run-all lint:*",
     "lint:branch": "npx branch-lint",
     "lint:html": "./node_modules/.bin/html-validate dist/**/*.html",
-    "lint:js": "./node_modules/.bin/eslint \"src/js/**/*.js\" --fix",
+    "lint:js": "standard \"src/js/**/*.js\" --fix",
     "lint:styles": "./node_modules/.bin/stylelint src/scss/**/*.scss",
+    "minify:img": "node minify-img.js",
     "release": "standard-version",
     "release:alpha": "standard-version -t '' --prerelease alpha",
     "release:beta": "standard-version -t '' --prerelease beta",
     "release:rc": "standard-version -t '' --prerelease rc",
-    "minify:img": "node minify-img.js",
     "start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev"
   },
   "husky": {
@@ -51,15 +51,15 @@
   ],
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.13.1",
-    "@popperjs/core": "^2.4.3",
+    "@popperjs/core": "^2.4.4",
     "bootstrap": "4.5.0",
-    "js-datepicker": "5.14.2"
+    "js-datepicker": "5.15.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
-    "@govbr/dsgov-gitlint": "0.0.4",
+    "@govbr/dsgov-gitlint": "*",
     "autoprefixer": "9.8.4",
     "babel-loader": "8.1.0",
     "chalk": "4.1.0",
@@ -94,6 +94,7 @@
     "pug": "3.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "sass-loader": "8.0.2",
+    "standard": "^14.3.4",
     "standard-version": "^8.0.0",
     "style-loader": "1.2.1",
     "stylelint": "13.6.1",

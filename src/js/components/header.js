@@ -1,6 +1,5 @@
-/* eslint-disable complexity */
 class BRHeader {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.flex_container = component.querySelector('.flex-container')
@@ -17,12 +16,13 @@ class BRHeader {
     this.sticky = component.hasAttribute('sticky')
     this._setBehavior()
   }
-  _setBehavior() {
+
+  _setBehavior () {
     // Inicializa Layout
     this.avatar.setAttribute('hidden', '')
     if (this.sticky) {
-      //this.component.style.paddingTop = `${this.flex_container.offsetHeight}px`
-      //this.component.setAttribute('compact', '')
+      // this.component.style.paddingTop = `${this.flex_container.offsetHeight}px`
+      // this.component.setAttribute('compact', '')
       const compact = this.component.hasAttribute('compact')
       const noSubtitle = this.component.hasAttribute('no-subtitle')
       window.onscroll = () => {
@@ -72,9 +72,10 @@ class BRHeader {
       })
     }
   }
-  _openPop() {
+
+  _openPop (event) {
     let parentTag = event.target.parentNode
-    while (parentTag.tagName != 'DIV') {
+    while (parentTag.tagName !== 'DIV') {
       parentTag = parentTag.parentNode
     }
     const btnEvent = parentTag.querySelector(':scope > button')
@@ -100,9 +101,7 @@ class BRHeader {
         popmenu.classList.add('popmenu')
         ul.parentNode.appendChild(popmenu)
       }
-    }
-    // Menu de busca
-    else {
+    } else { // Menu de busca
       popmenu = document.createElement('div')
       popmenu.classList.add('popmenu')
       popmenu.innerHTML = this.search.outerHTML
@@ -129,13 +128,13 @@ class BRHeader {
       }, 500)
     }
     // Visibilidade do popmenu
-    const set = popmenu.style.display ? true : false
+    const set = !!popmenu.style.display
     popmenu.setAttribute('active', '')
     if (popmenu.parentNode) popmenu.parentNode.setAttribute('active', '')
-    // eslint-disable-next-line prettier/prettier
-    popmenu.style.display = set ? popmenu.style.display === 'none' ? 'flex' : 'none' : 'flex'
+    popmenu.style.display = set ? (popmenu.style.display === 'none' ? 'flex' : 'none') : 'flex'
   }
-  _closePop() {
+
+  _closePop () {
     const popmenu = this.component.querySelector('.popmenu')
     popmenu.parentNode.removeChild(popmenu)
   }

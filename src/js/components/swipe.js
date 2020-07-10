@@ -1,10 +1,10 @@
 export class SwipeEventDispatcher {
-  constructor(element, options = {}) {
+  constructor (element, options = {}) {
     this.evtMap = {
       SWIPE_DOWN: [],
       SWIPE_LEFT: [],
       SWIPE_RIGHT: [],
-      SWIPE_UP: [],
+      SWIPE_UP: []
     }
     this.xDown = null
     this.yDown = null
@@ -25,24 +25,29 @@ export class SwipeEventDispatcher {
       false
     )
   }
-  on(evt, cb) {
+
+  on (evt, cb) {
     this.evtMap[evt].push(cb)
   }
-  off(evt, lcb) {
+
+  off (evt, lcb) {
     this.evtMap[evt] = this.evtMap[evt].filter((cb) => {
       return cb !== lcb
     })
   }
-  trigger(evt, data) {
+
+  trigger (evt, data) {
     this.evtMap[evt].map((handler) => {
       return handler(data)
     })
   }
-  handleTouchStart(evt) {
+
+  handleTouchStart (evt) {
     this.xDown = evt.touches[0].clientX
     this.yDown = evt.touches[0].clientY
   }
-  handleTouchEnd(evt) {
+
+  handleTouchEnd (evt) {
     const deltaX = evt.changedTouches[0].clientX - this.xDown
     const deltaY = evt.changedTouches[0].clientY - this.yDown
     const distMoved = Math.abs(Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY)

@@ -1,11 +1,11 @@
 class BRBreadcrumb {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this._setBehavior()
   }
 
-  _setBehavior() {
+  _setBehavior () {
     this._insertExpandButton()
     this._setView()
     window.matchMedia('(min-width: 576px)').addListener(() => {
@@ -22,7 +22,7 @@ class BRBreadcrumb {
     })
   }
 
-  _setView() {
+  _setView () {
     this._expand()
     for (const crumbList of this.component.querySelectorAll('.crumb-list')) {
       const crumbs = crumbList.querySelectorAll('.crumb')
@@ -40,7 +40,7 @@ class BRBreadcrumb {
     }
   }
 
-  _insertExpandButton() {
+  _insertExpandButton () {
     const crumb = this._createCrumb()
     for (const crumbList of this.component.querySelectorAll('.crumb-list')) {
       const crumbs = crumbList.querySelectorAll('.crumb')
@@ -50,7 +50,7 @@ class BRBreadcrumb {
     }
   }
 
-  _expand(event) {
+  _expand (event) {
     for (const crumbList of this.component.querySelectorAll('.crumb-list')) {
       for (const crumb of crumbList.querySelectorAll('.crumb')) {
         if (crumb.classList.contains('hidden')) {
@@ -63,7 +63,7 @@ class BRBreadcrumb {
     }
   }
 
-  _createCrumb() {
+  _createCrumb () {
     const crumb = document.createElement('li')
     crumb.classList.add('crumb')
     crumb.setAttribute('expand', '')

@@ -61,16 +61,6 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)$/,
-        include: [paths.fonts],
-        loader: fileLoader,
-      },
-      {
-        test: /\.(png|svg|jpg|jpg)$/,
-        include: [paths.images],
-        loader: fileLoader,
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
