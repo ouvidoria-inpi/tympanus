@@ -25,16 +25,16 @@ mixin notification-filler
   +notification-body
     +tabs()
       +tab-nav()
-        +tab-item(title="Configurações" panel="panel-1")
+        +tab-item(title="Configurações" panel="panel-11")
           i.fas.fa-cog
-        +tab-item(title="Notificações" panel="panel-2" class="is-active")
+        +tab-item(title="Notificações" panel="panel-21" class="is-active")
           i.fas.fa-bell
-        +tab-item(title="Mensagens" panel="panel-3" )
+        +tab-item(title="Mensagens" panel="panel-31" )
           i.fas.fa-envelope
       +tab-content
-        +tab-pane(id="panel-1")
+        +tab-pane(id="panel-11")
           p Painel Configurações
-        +tab-pane(id="panel-2" class="is-active")
+        +tab-pane(id="panel-21" class="is-active")
           +list
             +list-item()(link).divider
               +badge()(success)
@@ -190,7 +190,7 @@ mixin notification-filler
                 div.action Ocultar esta notificação
                 div.action Ocultar todas as notificações 
 
-        +tab-pane(id="panel-3")
+        +tab-pane(id="panel-31")
           +list
             +list-header("Lista de Mensagens")
               .actions
@@ -355,9 +355,3 @@ mixin notification-filler
               div.contextual-menu
                 div.action Ocultar esta notificação
                 div.action Ocultar todas as notificações 
-              
-  //- +notification-footer
-  //-   +button()(secondary mini)
-  //-     | Cancelar
-  //-   +button()(primary mini)
-  //-     | Retornar
