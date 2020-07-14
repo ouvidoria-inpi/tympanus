@@ -1,6 +1,6 @@
 {
   "name": "@govbr/dsgov",
-  "version": "1.4.0-rc.1",
+  "version": "1.4.0-rc.2",
   "description": "Design System do Governo Federal",
   "keywords": [
     "dsgov",
@@ -28,9 +28,9 @@
     "lint:styles": "./node_modules/.bin/stylelint src/scss/**/*.scss",
     "minify:img": "node minify-img.js",
     "release": "standard-version",
-    "release:alpha": "standard-version -t '' --prerelease alpha",
-    "release:beta": "standard-version -t '' --prerelease beta",
-    "release:rc": "standard-version -t '' --prerelease rc",
+    "release:alpha": "standard-version --prerelease alpha",
+    "release:beta": "standard-version --prerelease beta",
+    "release:rc": "standard-version --prerelease rc",
     "start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev"
   },
   "husky": {
