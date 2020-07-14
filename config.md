@@ -6,24 +6,24 @@ O arquivo é dividido em áreas de Introdução, Componentes, etc...
 
 Para configurar é necessário montar um objeto com as propriedades abaixo e colocar na área correta.
 
-# Propriedades do config.json
+## Propriedades do config.json
 
-## label
+### label
 
 Usado para montar o menu lateral e mostrar dentro de HTML.
 
-## id
+### id
 
 id único para o arquivo. Deve ser o mesmo nome da pasta.
 
-## type
+### type
 
 Usado para mostrar qual o modo de renderização (docs, component ou template).
 
-## filename
+### filename
 
 Nome do arquivo no sistema de arquivos.
 
-## children
+### children
 
 Contém um array com todos os filhos daquele objeto.
