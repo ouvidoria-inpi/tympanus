@@ -1,6 +1,6 @@
 {
   "name": "@govbr/dsgov",
-  "version": "1.4.0-beta.0",
+  "version": "1.4.0-rc.1",
   "description": "Design System do Governo Federal",
   "keywords": [
     "dsgov",
@@ -64,6 +64,7 @@
     "chalk": "4.1.0",
     "clean-webpack-plugin": "3.0.0",
     "commitizen": "^4.1.2",
+    "commitlint": "^9.1.0",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "3.6.0",
     "eslint-config-prettier": "^6.11.0",
