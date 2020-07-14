@@ -71,8 +71,6 @@ Você poderá aplicar as variações para alguns botões. Os estados podem ser a
 </button>
 ```
 
-> Por motivos de compatibilidade, classes com prefixo `-is` também aplicam os tipos. Ex: is-primary
-
 ### Aplicar o tipo usando atributo
 
 ```html
