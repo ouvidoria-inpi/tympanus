@@ -21,17 +21,29 @@ class BRTooltip {
   _setBehavior() {
     // Ação de abrir padrao ao entrar no ativador
     if (this.activator) {
-      this.showEvents.forEach((event) => {
-        this.activator.addEventListener(event, (otherEvent) => {
-          this._show(otherEvent)
+      if (this.notification) {
+        this.activator.addEventListener('click', (otherEvent) => {
+          if (this.activator.hasAttribute('active')) {
+            this._hide(otherEvent, this.component)
+          } else {
+            this._show(otherEvent)
+          }
+          this._toggleActivatorIcon()
         })
-      })
+      } else {
+        this.showEvents.forEach((event) => {
+          this.activator.addEventListener(event, (otherEvent) => {
+            this._show(otherEvent)
+          })
+        })
+      }
     }
     // Adiciona ação de fechar ao botao do popover
     if (this.popover || this.notification) {
       const closeBtn = this.component.querySelector('.close')
       closeBtn.addEventListener('click', (event) => {
         this._hide(event, this.component)
+        this._toggleActivatorIcon()
       })
       // Ação de fechar padrao ao sair do ativador
     } else {
@@ -143,6 +155,16 @@ class BRTooltip {
       this.component.appendChild(close)
     }
   }
+
+  _toggleActivatorIcon() {
+    const icon = this.activator.querySelector('button svg')
+    if (icon) {
+      icon.classList.toggle('fa-angle-down')
+      icon.classList.toggle('fa-angle-up')
+    }
+    this.activator.toggleAttribute('active')
+  }
+
   _fixPosition() {
     if (this.notification) {
       setTimeout(() => {
