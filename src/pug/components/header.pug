@@ -54,8 +54,8 @@ mixin header-default-content
             .content
               +avatar
                 .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
-          //- +button()(mini circle)
-          //-   i.fas.fa-angle-down
+          +button()(mini circle)
+            i.fas.fa-angle-down
       .menu
         +button()(circle mini)
             i.fas.fa-bars
@@ -112,16 +112,16 @@ mixin header-base-content
         +button()(mini)
           i.fas.fa-user
           span.ml-1 Entrar
-      a(href="javascript:void(0)").avatar
+      div.avatar
         +badge()(danger)
           .icon 5
           .content
             +avatar
               .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+        +button()(mini circle)
+          i.fas.fa-angle-down
       +notification()()
         +notification-filler
-        //- +button()(mini circle)
-        //-   i.fas.fa-angle-down
     .menu
       +button()(circle mini)
           i.fas.fa-bars

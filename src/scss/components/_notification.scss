@@ -310,7 +310,12 @@
   }
 
   .notification-footer {
-    padding: 0.5em 1.5em 0.5em 1.5em;
+    padding: 1em 1.5em 1em 1.5em;
+    border-top: 1px solid v(color-secondary-04);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
   }
 
   &[mini] {
