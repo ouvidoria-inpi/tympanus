@@ -184,8 +184,8 @@ O `notification-footer` serve para posicionar botões complementares, pode ser u
 
 ```html
 <div class="notification-footer">
-    <button class="br-button" type="button" secondary="" mini="">Cancelar</button>
-    <button class="br-button" type="button" primary="" mini="">Retornar</button>
+    <button class="br-button" type="button" secondary mini>Cancelar</button>
+    <button class="br-button" type="button" primary mini>Retornar</button>
 </div>
 ```
 
