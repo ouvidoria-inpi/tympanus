@@ -1,6 +1,6 @@
 {
   "name": "@govbr/dsgov",
-  "version": "1.4.0-rc.2",
+  "version": "1.4.0-beta.0",
   "description": "Design System do Governo Federal",
   "keywords": [
     "dsgov",
@@ -55,8 +55,8 @@
     "js-datepicker": "5.15.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@govbr/dsgov-gitlint": "*",
     "autoprefixer": "9.8.5",
