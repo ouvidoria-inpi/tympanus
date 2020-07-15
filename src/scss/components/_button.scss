@@ -8,10 +8,9 @@
   // Enfases
   &.primary,
   &[primary] {
-    background: v(color-primary-default);
-    color: v(color-secondary-01);
-    &:hover:not(:disabled) {
-      color: v(color-primary-default);
+    &:not(:focus):not(:hover):not(:active) {
+      background: v(color-primary-default);
+      color: v(color-secondary-01);
     }
   }
 

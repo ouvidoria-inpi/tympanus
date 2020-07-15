@@ -4,59 +4,47 @@ append vars
   - var title = "Botão";
 
 append content
-  p.h5 Primário
-  +button()(primary) Entrar
-  .mt-3
-    +button()(primary)
-      i.fas.fa-print
-      | Imprimir
-  .mt-3
-    +button()(primary)
-      | Avançar
-      i.fas.fa-angle-right
+  p.h5 Ênfase
+  div
+    +button()(primary) Botão
+    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
+      +button()(secondary)
+        i.fas.fa-city.mr-1
+        | Botão
+    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
+      +button()(secondary)
+        | Botão
+        i.fas.fa-city.ml-1
+    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
+      +button Botão
+  .mt-3.text-center.text-sm-left
+    +button()(primary circle)
+      i.fas.fa-city
+    +button()(secondary circle).ml-3
+      i.fas.fa-city
+    +button()(circle).ml-3
+      i.fas.fa-city
 
-  p.h5.mt-5 Call to Action
-  +button()(action) Adicionar
-  
-  p.h5.mt-5 Secundário
-  +button()(secondary) Voltar
-  .mt-3
-    +button()(secondary)
-      i.fas.fa-eraser
-      | Limpar
-  .mt-3
-    +button()(secondary)
-      i.fas.fa-angle-left
-      | Voltar
-
-  p.h5.mt-5 Terciário
-  +button: u Cancelar
-  .mt-3
-    +button
-      i.fas.fa-sliders-h
-      | Filtrar
-
-  p.h5.mt-5 Circular
-  +button()(primary circle): i.fas.fa-plus
-  .d-inline.ml-3
-    +button()(secondary circle): i.fas.fa-plus
-  .d-inline.ml-3
-    +button()(circle): i.fas.fa-plus
-  .d-inline.ml-3
-    +button()(action circle): i.fas.fa-plus
-
-  p.h5.mt-5 Mini
-  +button()(primary mini) Entrar
-  .d-inline.ml-3
-    +button()(secondary mini) Voltar
-  .mt-3
-    +button()(primary circle mini): i.fas.fa-plus
-    .d-inline.ml-3
-      +button()(secondary circle mini): i.fas.fa-plus
-    .d-inline.ml-3
-      +button()(circle mini): i.fas.fa-plus
+  p.h5.mt-5 Densidade
+  div
+    +button()(secondary large)
+      | Baixa
+    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
+      +button()(secondary)
+        | Padrão
+    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
+      +button()(secondary small)
+        | Alta
+    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3.text-center.text-sm-left
+  .mt-3.text-center.text-sm-left
+    +button()(secondary circle large)
+      i.fas.fa-city
+    +button()(circle secondary).ml-3
+      i.fas.fa-city
+    +button()(secondary circle small).ml-3
+      i.fas.fa-city
 
   p.h5.mt-5 Estados
-  +button()(primary disabled) Entrar
-  .mt-3
-    +button()(primary loading) Entrar
+  +button()(secondary disabled) Desativado
+  .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
+    +button()(primary loading) Carregando
