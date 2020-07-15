@@ -41,7 +41,7 @@ mixin footer-bottom-filler
         p.text-up-01.text-extra-bold.text-uppercase Redes Sociais
         - let btn = 0
         while btn < 4
-          +button().mr-3(circle)
+          a(href="javascript:void(0);").mr-3
             img(src=`https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/button-${type}.png` alt="Imagem")
           - btn++
       .col.assigns.text-right
