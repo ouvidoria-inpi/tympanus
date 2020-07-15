@@ -28,8 +28,6 @@
     "lint:styles": "./node_modules/.bin/stylelint src/scss/**/*.scss",
     "minify:img": "node minify-img.js",
     "release": "standard-version",
-    "release:alpha": "standard-version --prerelease alpha",
-    "release:beta": "standard-version --prerelease beta",
     "release:rc": "standard-version --prerelease rc",
     "start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev"
   },
@@ -45,8 +43,12 @@
     }
   },
   "browserslist": [
-    "last 5 version",
-    "> 5% in BR"
+    "> 5% in BR",
+    "cover 99.5% in BR",
+    "last 5 versions",
+    "Firefox ESR",
+    "not dead",
+    "IE 9-11"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.13.1",

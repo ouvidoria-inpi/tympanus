@@ -5,8 +5,6 @@
     "formulahendry.auto-rename-tag",
     "aaron-bond.better-comments",
     "coenraads.bracket-pair-colorizer-2",
-    "wmaurer.change-case",
-    "axetroy.vscode-changelog-generator",
     "kisstkondoros.vscode-codemetrics",
     "naumovs.color-highlight",
     "bierner.color-info",
@@ -40,7 +38,6 @@
     "gruntfuggly.todo-tree",
     "jock.svg",
     "pflannery.vscode-versionlens",
-    "jeremyljackson.vs-docblock",
     "vivaxy.vscode-conventional-commits"
   ]
 }

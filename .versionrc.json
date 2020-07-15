@@ -9,6 +9,7 @@
     { "type": "perf", "hidden": true },
     { "type": "test", "hidden": true },
     { "type": "chore", "hidden": true },
-    { "type": "revert", "hidden": true }
+    { "type": "revert", "hidden": true },
+    { "type": "ci", "hidden": true }
   ]
 }
