@@ -159,7 +159,7 @@
         padding: 0 0 0 v(spacing-scale-2x);
         .actions {
           .#{$prefix}button {
-            &[circle][mini] {
+            &[circle][small] {
               vertical-align: middle;
               line-height: 48px;
               border: transparent;
@@ -219,7 +219,7 @@
           }
         }
         .#{$prefix}button {
-          &[circle][mini] {
+          &[circle][small] {
             border: transparent;
           }
         }

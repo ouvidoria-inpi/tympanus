@@ -82,7 +82,7 @@ Obrigatório para Menu Principal apenas.
 <div class="br-menu">
     <nav class="folders">
         <div class="close-menu">
-            <button class="br-button" type="button" circle mini>
+            <button class="br-button" type="button" circle small>
                 <i class="fas fa-times"></i>
             </button>
         </div>

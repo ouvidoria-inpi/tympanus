@@ -1,24 +1,64 @@
 @mixin button {
-  @include media-breakpoint-up(sm) {
-    min-width: 156px;
-    width: auto;
-  }
-
+  // Botão regular
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 20px;
-  color: v(color-primary-default);
   cursor: pointer;
   display: inline-block;
-  font-weight: v(font-weight-semi-bold);
   height: 40px;
-  line-height: 40px;
   padding: 0 v(spacing-scale-5x);
   text-align: center;
   width: 100%;
+
+  // Largura auto para breakpoints maiores
+  @include media-breakpoint-up(sm) {
+    &:not([circle]):not(.circle) {
+      width: auto;
+    }
+  }
+
+  // Botão circular
+  &[circle],
+  &.circle {
+    border-radius: 50%;
+    padding: 0 !important;
+    width: 40px;
+  }
+
+  // Densidades
+  &[large],
+  &.large {
+    height: 48px;
+    padding-left: v(spacing-scale-6x);
+    padding-right: v(spacing-scale-6x);
+    &[circle],
+    &.circle {
+      width: 48px;
+    }
+  }
+  &[small],
+  &.small {
+    height: 32px;
+    padding-left: v(spacing-scale-4x);
+    padding-right: v(spacing-scale-4x);
+    &[circle],
+    &.circle {
+      width: 32px;
+    }
+  }
+
+  // Resetar ícones
+  @include icon {
+    --icon-size: var(--icon-size-base);
+  }
+
+  // Estados
   &:not(:disabled) {
     @include focus;
     @include hover;
     @include active;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }

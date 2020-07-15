@@ -12,7 +12,7 @@ mixin header-default-content
         .sign Ministério da Ciência e Tecnologia, Inovações e Comunicações
       .actions
         .links
-          +button()(circle mini)
+          +button()(circle small)
             i.fas.fa-ellipsis-v
           ul
             li.title Acesso Rápido
@@ -21,31 +21,31 @@ mixin header-default-content
             li: a(href="javascript:void(0);") Link de acesso 3
             li: a(href="javascript:void(0);") Link de acesso 4
         .functions
-          +button()(circle mini)
+          +button()(circle small)
             i.fas.fa-th
           ul
             li.title Funcionalidades do Sistema
             li
-              +button()(circle mini) 
+              +button()(circle small)
                 i.fas.fa-chart-bar
                 span.text Funcionalidade 1
             li
-              +button()(circle mini) 
+              +button()(circle small)
                 i.fas.fa-headset
                 span.text Funcionalidade 2
             li
-              +button()(circle mini)
+              +button()(circle small)
                 i.fas.fa-comment
                 span.text Funcionalidade 3
             li
-              +button()(circle mini)
+              +button()(circle small)
                 i.fas.fa-adjust
                 span.text Funcionalidade 4
         .search-btn
-          +button()(circle mini)
+          +button()(circle small)
             i.fas.fa-search
         .login
-          +button()(mini)
+          +button()(small)
             i.fas.fa-user
             span.ml-1 Entrar
         .avatar
@@ -54,10 +54,8 @@ mixin header-default-content
             .content
               +avatar
                 .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
-          //- +button()(mini circle)
-          //-   i.fas.fa-angle-down
       .menu
-        +button()(circle mini)
+        +button()(circle small)
             i.fas.fa-bars
         .title Sistema Nacional de Laboratórios em Nanotecnologias (SisNANO)
         .subtitle Subtítulo do Cabeçalho
@@ -66,7 +64,7 @@ mixin header-default-content
           button.icon(type='button')
             span.icon
               i.fas.fa-search
-        +button()(circle mini).search-close
+        +button()(circle small).search-close
             i.fas.fa-times
 
 mixin header-base-content
@@ -76,7 +74,7 @@ mixin header-base-content
       .sign Assinatura Padrão do Cabeçalho
     .actions
       .links
-        +button()(circle mini)
+        +button()(circle small)
           i.fas.fa-ellipsis-v
         ul
           li.title Acesso Rápido
@@ -85,31 +83,31 @@ mixin header-base-content
           li: a(href="javascript:void(0);") Link de acesso 3
           li: a(href="javascript:void(0);") Link de acesso 4
       .functions
-        +button()(circle mini)
+        +button()(circle small)
           i.fas.fa-th
         ul
           li.title Funcionalidades do Sistema
           li
-            +button()(circle mini) 
+            +button()(circle small)
               i.fas.fa-chart-bar
               span.text Funcionalidade 1
           li
-            +button()(circle mini) 
+            +button()(circle small)
               i.fas.fa-headset
               span.text Funcionalidade 2
           li
-            +button()(circle mini)
+            +button()(circle small)
               i.fas.fa-comment
               span.text Funcionalidade 3
           li
-            +button()(circle mini)
+            +button()(circle small)
               i.fas.fa-adjust
               span.text Funcionalidade 4
       .search-btn
-        +button()(circle mini)
+        +button()(circle small)
           i.fas.fa-search
       .login
-        +button()(mini)
+        +button()(small)
           i.fas.fa-user
           span.ml-1 Entrar
       a(href="javascript:void(0)").avatar
@@ -120,10 +118,8 @@ mixin header-base-content
               .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
       +notification()()
         +notification-filler
-        //- +button()(mini circle)
-        //-   i.fas.fa-angle-down
     .menu
-      +button()(circle mini)
+      +button()(circle small)
           i.fas.fa-bars
       .title Título Padrão do Cabeçalho
       .subtitle Subtítulo do Cabeçalho
@@ -132,5 +128,5 @@ mixin header-base-content
         button.icon(type='button')
           span.icon
             i.fas.fa-search
-      +button()(circle mini).search-close
+      +button()(circle small).search-close
           i.fas.fa-times

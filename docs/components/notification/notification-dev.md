@@ -101,7 +101,7 @@ O conteúdo padrão do `br-list` para notificações e mensagens pode conter os 
 -   `br-badge` : componente badge ( [badge](/ds/components/badge) );
 -   `header` : container do cabeçalho da lista;
 -   `actions` : container dos botões de ação do header;
--   `br-button`: botões de ação ( [button](/ds/components/button) ) devem ter os atributos - `circle` e `mini`;
+-   `br-button`: botões de ação ( [button](/ds/components/button) ) devem ter os atributos - `circle` e `small`;
 -   `title` : classe para formatar o título;
 -   `subtitle` : classe para formatar o sub-título;
 -   `date` : classe para formatar o a data;
@@ -130,7 +130,7 @@ O submenu contextual serve para definir ações complementares, possui a seguint
             </div>
         </div>
         <!-- Submenu Contextual -->
-        <button class="br-button contextual-btn" type="button" mini circle>
+        <button class="br-button contextual-btn" type="button" small circle>
             <i class="fa-lg fas fa-ellipsis-v"></i>
         </button>
         <div class="contextual-menu">
@@ -148,10 +148,10 @@ O submenu contextual serve para definir ações complementares, possui a seguint
     <div class="header">
         <div class="title">Lista de Mensagens</div>
         <div class="actions">
-            <button class="br-button" type="button" tertiary circle mini>
+            <button class="br-button" type="button" tertiary circle small>
                 <i class="fas fa-sort-alpha-up"></i></button
             ><span class="mx-3">|</span>
-            <button class="br-button" type="button" tertiary circle mini>
+            <button class="br-button" type="button" tertiary circle small>
                 <i class="fas fa-search"></i>
             </button>
         </div>
@@ -167,7 +167,7 @@ O submenu contextual serve para definir ações complementares, possui a seguint
             </div>
         </div>
         <div class="date">08/04/2020</div>
-        <button class="br-button contextual-btn" type="button" mini circle>
+        <button class="br-button contextual-btn" type="button" small circle>
             <i class="fa-lg fas fa-ellipsis-v"></i>
         </button>
         <div class="contextual-menu">
@@ -184,8 +184,8 @@ O `notification-footer` serve para posicionar botões complementares, pode ser u
 
 ```html
 <div class="notification-footer">
-    <button class="br-button" type="button" secondary mini>Cancelar</button>
-    <button class="br-button" type="button" primary mini>Retornar</button>
+    <button class="br-button" type="button" secondary small>Cancelar</button>
+    <button class="br-button" type="button" primary small>Retornar</button>
 </div>
 ```
 
