@@ -1,70 +1,51 @@
-[version]: # '5.0.0'
+[version]: # '6.0.0'
 
-![Exemplo_Componente](imagens/select-exemplo.png)
+![Exemplo Componente Select](imagens/select-sample.png)
 
 ---
 
 ## Uso
 
-A função do componente Select é coletar informações fornecidas pelo usuário em uma lista de opções. Utilize o componente select quando um usuário precisar escolher entre mais de 5 opções ou tiver espaço limitado para exibir as opções como dentro de células de tabelas, por exemplo. Em listas de opções com muitos extensa, permita que os usuários façam buscas entre as opções. Se a lista de opções for curta use os componentes radiobutton, checkbox ou switch.
+A função do componente _Select_ é coletar informações fornecidas pelo usuário em uma lista de opções. Utilize o componente _Select_ quando um usuário precisar escolher uma ou mais opções em uma lista.
 
 ### Tom de voz
 
 -   Ordene os itens de forma sensata para facilitar a visualização das opções pelo usuário.
-<!-- - Evite alterar as opções em um menu suspenso com base na entrada em outro. -->
 -   Se possível torne padrão a opção mais escolhida pelos usuários.
--   Deve apresentar uma lista com até seis itens, utilizando barra de rolagem caso existam mais opções.
 
 ---
 
 ## Anatomia
 
-1. Input
-2. Ícone interativo
-3. Lista
-4. Rodapé
-5. Botao Mini Primário
-6. Separador
-7. Tag de entrada
-8. Tooltip info
+1. Componente _Input_
+2. Componente _Botão Circular_ _( Ênfase Terciária )_
+3. Componente _Lista_
 
-![Anatomia](imagens/select-anatomia.png)
+![Anatomia](imagens/select-anatomy.png)
 
-### Input
+### 1. Componente _Input_
 
-O componente input (1) é apresentado com o ícone interativo indicando o sentido em que a lista será aberta. Quando aberto este ícone deverá indicar a direção oposta. Não deve haver espaçamento entre o input e a lista apresentada.
+O componente _Input_ é o campo de entrada de texto onde o usuário irá digitar o texto do item escolhido ou selecionar através do _Mouse_. Ao clicar no _Componente Input_, este assumirá seu estado _Foco_ e o cursor ficará ativo em seu interior.
 
-![Detalhe_Icone](imagens/select-detalhe-input.png)
+![Detalhe Input](imagens/select-input.png)
 
-### Lista
+### 2. Componente _Botão Circular ( Ênfase Terciária )_
 
-O componente deve apresentar uma lista com ao menos dois e até cinco itens, apresentando barra de rolagem caso existam mais opções a serem apresentadas. Deve ocupar a largura do maior item a ser selecionado, respeitando a largura máxima (consulte _Design Tokens_). Não deve haver espaçamento entre o input e a lista apresentada.
+O _Botão Circular ( Ênfase Terciária )_ posiciona-se dentro do _Componente Input_ em sua extrema direita e possui o comportamento _Toggle_. Quando o usuário clicar sobre o _Componente Input_ ou sobre o _Botão Circular_, este alternará entre os ícones _Angle-Up_ e _Angle-Down_, conforme a abertura ou fechamento da _Lista Dropdown_.
 
-![Detalhe_Icone](imagens/select-texto-grande.png)
+![Detalhe Botão Circular](imagens/select-button-circle.png)
 
-### Rodapé
+### 3. Componente Lista
 
-O elemento rodapé (4) aparecerá como último item da lista de opções dentro do mesmo container e deverá ter a altura, largura e cor de um item do componente lista. Deverá conter um botão do tipo button mini primário (5) ao lado direito e um separador (6) em seu topo ocupando a largura da lista.
+O componente deve apresentar os itens a serem escolhidos pelo usuário. No tipo _Multiselect_, o usuário poderá incluir ou remover mais de um item através do _Checkbox_. Cada item selecionado assumirá o _Estado Selecionado_.
 
-![Detalhe_Rodape](imagens/select-detalhe-rodape.png)
+![Detalhe Lista](imagens/select-sample.png)
 
-### Botao Mini Primário
+#### Sombra no Componente Lista
 
-Dentro do rodapé deverá conter um botão do tipo button mini primário (5) ao lado direito.
+O _Componente Lista_ será apresentado flutuando sobre a tela e uma sombra deverá ser utilizada para proporcionar contraste entre o _Componente Lista_ e o conteúdo de tela ao fundo.
 
-### Separador
-
-O componente separador deve se posicionar ao topo do rodapé e ocupar toda a sua largura.
-
-### Tag
-
-O componente deve conter a quantidade de itens selecionados acompanhado da expressão "itens selecionados" caso seja selecionados apenas um item colocar a expressão no singular "item selecionado".
-
-### Tooltip info
-
-O componente tooltip deve aparecer ao posicionar o mouse sobre um input após o usuário fazer seleções múltiplas. Deverá conter os textos dos itens selecionados. A instância utilizada será a info, uma vez que se trata de um texto informativo.
-
-![Detalhe_Rodape](imagens/select-detalhe-multiselect-tooltip.png)
+![Detalhe Lista](imagens/select-behavior-shadow.png)
 
 ---
 
@@ -72,87 +53,190 @@ O componente tooltip deve aparecer ao posicionar o mouse sobre um input após o 
 
 O componente pode ser do tipo:
 
--   Select
--   Multiselect
+-   _Select_
+-   _Multiselect_
 
-### Tipo Select
+### Tipo _Select_
 
-O tipo Select é utilizado para as opções de seleção única. Se você precisar permitir que os usuários selecionem mais de uma opção ao mesmo tempo use o tipo Multiselect. A seleção será apresentada dentro do input seguindo suas diretrizes.
+O tipo _Select_ é utilizado para as opções de seleção única. O item selecionado será apresentado no _Placeholder_ seguindo as diretrizes do _Componente_ _Input_.
 
-![Exemplo_Select](imagens/select-tipo-select.png)
+![Exemplo_Select](imagens/select-type-select.png)
 
 ### Tipo Multiselect
 
-Caso seja necessário oferecer multiplas seleções além do componente lista é apresentado abaixo deste um rodapé com um separador em seu topo e um botão de confirmação. As opções selecionadas serão apresentadas dentro do input, seguindo suas diretrizes de exibição.
+Caso seja necessário oferecer multiplas seleções, deve-se utilizar o tipo _Multiselect_. As opções selecionadas serão apresentadas no _Placeholder_, seguindo as diretrizes de exibição do _Componente_ _Input_.
 
-![Exemplo_Multiselect](imagens/select-tipo-multiselect.png)
+![Exemplo_Multiselect](imagens/select-type-multiselect.png)
 
 ---
 
 ### Comportamento
 
-Ao clicar em qualquer parte da extensão do componente, será aberta uma lista abaixo do input, ocupando a largura maior item da lista, apresentando as opções de seleção e o seu ícone interativo é alterado indicando a direção oposta à lista aberta.
+#### 1. Seleção dos Itens
 
-Todos os ítens da lista deverão ter o mesmo número de linhas e a mesma altura seguindo as diretrizes do componente lista.
+Ao selecionar os itens no _Componente Select_ e _Multiselect_, o usuário terá essa informação visível no _Placeholder_ do _Campo Input_, conforme a sequência de cada tipo abaixo:
 
-A lista deverá aparecer por cima dos elementos da página com uma sombra progetada, dando um aspecto de flutuar sobre a página.
+#### Seleção de itens no _Select_
 
-![Detalhe_Comportamento_Sombra](imagens/select-comportamento-sombra.png)
+1 - O _Placeholder_ exibe a informação inicial;
+2 - O usuário escolhe o item;
+3 - O _Placeholder_ exibe a opção selecionada.
 
-No tipo select, com a lista aberta, ao selecionar um dos itens a lista deverá ser recolhida apresentando o item selecionado dentro do input seguindo suas diretrizes.
+![Placeholder Select](imagens/select-placeholder.png)
 
-No tipo multiselect, a lista será recolhida apenas quando o botão no rodapé for acionado ou quando o usuário tirar o foco do componente. Será apresentado em uma tag o número de itens selecionados acompanhado da expressão "item selecionado" quando um item for selecionado e "itens selecionados" quando mais de um item for selecionado.
+#### Seleção de itens no _Multiselect_
 
-Deverá aparecer apenas um tag dentro do input que deverá manter a sua largura original.
+1 - O _Placeholder_ exibe a informação inicial;
+2 - O usuário escolhe os itens;
+3 - O _Placeholder_ exibe as opções selecionadas em tempo real;
+4 - O _Placeholder_ exibe as opções escolhidas.
 
-O usuário poderá visualizar as opções selecionadas através de um tooltip ao passar o mouse ou clicar na área do tag que exibe o número de itens selecionaos. Neste tooltip cada item selecionado será seguido de um ícone interativo indicando a possibilidade de exclusão respeitando as diretrizes do componente.
+![Abertura Select](imagens/select-placeholder-multiselect.png)
 
-O usuário poderá excluir estes itens clicando no ícone interativo dentro do tooltip (ver tokens). Clicando novamente no input o qua deverá abrir novamente a lista com os mesmos itens selecionados.
+IMPORTANTE: Observe que no passo 3 e 4 o _Placeholder_ só exibe quantos itens couberem dentro do _Campo_ _Input_ e o restante será acrescentado em forma de quantidade ao final do texto.
 
-![Detalhe_Comportamento_Sombra](imagens/select-detalhe-multiselect-tooltip.png)
+##### Seleção de todos os itens no _Multiselect_
 
-Em listas de opções muito extensas, permita que os usuários façam buscas entre as opções.
-O campo de busca deve ser o próprio input e o seu botão interativo deverá indicar a alternativa (ver design tokens).
+O usuário poderá selecionar ou deselecionar todos os itens da lista ao mesmo tempo. Esta opção estará disponível no primeiro item da lista de forma destacada ( _Estado Destacado_ ).
 
-![Detalhe_Comportamento_Sombra](imagens/select-busca.png)
+Ao clicar no _Checkbox_ deste primeiro item, todos os itens da lista serão marcados. Caso o usuário desmarque o _Checkbox_ do primeiro item, todos os itens da lista serão desmarcados.
+
+O rótulo deste item alternará de "Selecionar Todos" para "Deselecionar Todos" conforme o usuário marque ou desmarque o primeiro item da lista. Observe o exemplo abaixo:
+
+![Multiselect Selecão de Todos os itens](imagens/select-behaviour-selected-all.png)
+
+1 - Os itens estão todos deselecionados;
+2 - A lista foi totalmente selecionada através do primeiro item da lista.
+
+#### Filtro no _Select_ e _Multiselect_
+
+Para facilitar o processo de encontrar os itens na lista, tanto o _Select_ como o _Multiselect_ possuem a função de filtro. O filtro funciona no momento em que o usuário digita o texto no _Campo Input_ e, de forma dinâmica, a lista será atualizada apenas com os itens que possuem os mesmo caracteres que estão sendo digitados naquele momento. Observe o exemplo abaixo:
+
+![Multiselect Selecão de Todos os itens](imagens/select-behaviour-filter.png)
+
+1 - A lista possue diversas palavras;
+2 - O usuário digita o início de uma palavra a sua escolha e a lista é atualizada conforme o texto digitado.
+
+#### 2. Abertura do Select e Multiselect
+
+Para abrir o _Componente Select_ ou _Multiselect_ o usuário poderá clicar tanto no _Campo Input_ como também no _Botão_ do mesmo. Observe abaixo:
+
+![Abertura Select](imagens/select-behaviour-select-click-open.png)
+
+![Abertura Multiselect](imagens/select-behaviour-multiselect-click-open.png)
+
+#### 3. Responsividade
+
+Nas _Grids_ de 12 e 8 colunas o tamanho do _Select_ e _Multiselect_ será ajustado conforme o seu conteúdo interno, respeitando os tamanhos mínimos e máximos.
+
+##### Grid de 12 Colunas
+
+![Responsividade 12 colunas](imagens/select-behavior-responsive-grid-12-col.png)
+
+##### Grid de 8 Colunas
+
+![Responsividade 8 colunas](imagens/select-behavior-responsive-grid-8-col.png)
+
+##### Grid de 4 Colunas
+
+Na _Grid_ de 4 colunas, o _Componente Select_ e _Multiselect_ ocuparão toda largura da tela, respeitando as margens laterais da _Grid_.
+
+![Responsividade 4 colunas](imagens/select-behavior-responsive-grid-4-col.png)
+
+#### 4. Estados
+
+O _Componente Select_ e _Multiselect_ seguirão o padrão de diretrizes para _Estados_, conforme observado abaixo:
+
+##### Estado Interativo
+
+No _Estado Interativo_ o _Campo Input_ e os _Itens da Lista_ apresentam-se em suas formas naturais.
+
+![Estado Interativo](imagens/select-behaviour-state-interative.png)
+
+##### Estado Foco
+
+O _Estado Foco_ ocorrerá sobre o _Campo Input_ quando o usuário clicar sobre ele ou sobre o _Botão Circular_.
+
+![Estado Foco](imagens/select-behaviour-state-foco.png)
+
+##### Estado Hover
+
+O _Estado Hover_ ocorrerá sobre o _Item da Lista_ quando o usuário passar o _mouse_ sobre ele.
+
+![Estado Hover](imagens/select-behaviour-state-hover.png)
+
+##### Estado Selecionado
+
+O _Estado Selecionado_ ocorrerá sobre o _Item da Lista_ quando o usuário selecionar o mesmo.
+
+![Estado Selecionado](imagens/select-behaviour-state-activated.png)
+
+##### Estado Destacado
+
+O _Estado Destacado_ será permanente apenas no primeiro item da lista no _Multiselect_, para dar ênfase à funcionalidade "Selecionar Todos".
+
+![Estado Destacado](imagens/select-behaviour-state-highlighted.png)
+
+#### 5. Dimensões mínimas e máximas
+
+##### Larguras do Select e Multiselect
+
+Os _Componentes Select_ e _Multiselect_ terão suas larguras ajustadas conforme o conteúdo interno dos seus itens. Porém, deverão ser respeitadas as larguras mínimas e máximas para estes elementos. Observe a seguir:
+
+![Exemplo de Tamanhos](imagens/select-behavior-size.png)
+
+##### Largura Mínima
+
+A largura mínima deverá ser de 100px para o _Select_ e 200px para o _Multiselect_.
+
+![Exemplo de Tamanho Mínimo](imagens/select-behavior-size-1.png)
+
+##### Largura Máxima
+
+A largura máxima deverá ser de 400px para o _Select_ e o _Multiselect_. Quando o texto do item for maior que este tamanho, poderá ocorrer a quebra de linha dentro do item. Porém recomenda-se evitar sempre que possível esta situação. De modo geral, deve-se prezar pelo uso de um texto curto e objetivo no _Select_ e _Multiselect_. Quando for de extrema necessidade, utiliza-se a quebra de linha dentro o item. Observe o modelo abaixo:
+
+![Exemplo de Largura Máxima](imagens/select-behavior-size-2.png)
+
+##### Altura Máxima
+
+A altura máxima para o _Select_ e _Multiselect_ será correspondente à quantidade de itens em cada um:
+
+-   10 itens para o _Select_;
+-   9 itens para o _Multiselect_.
+
+Quando a quantidade de itens for superior, deverá ser utilizada uma barra de rolagem para visualização dos demais itens. Por exemplo, se o _Select_ possuir 100 itens, ficarão visíveis apenas 10, e o restante será visível apenas pela rolagem do _Select_.
+
+![Exemplo de Altura Máxima](imagens/select-behaviour-max-height.png)
 
 ---
 
 ## Design Tokens
 
-### Iconografia do Input
+### Iconografia
 
-| Name               | estado  | ícone                             | Class (Font Awesome) |
-| ------------------ | ------- | --------------------------------- | -------------------- |
-| Ícone de Interação | fechado | <i class="fas fa-angle-down"></i> | `fa-angle-down`      |
-| Ícone de Interação | aberto  | <i class="fas fa-angle-up"></i>   | `fa-angle-up`        |
-| Ícone de Interação | busca   | <i class="fas fa-search"></i>     | `fa-search`          |
-|                    |         |                                   |                      |
+| Name                     | Estado  | Ícone                             | Class (Font Awesome) |
+| ------------------------ | ------- | --------------------------------- | -------------------- |
+| Ícone - _Botão Circular_ | Fechado | <i class="fas fa-angle-down"></i> | `fa-angle-down`      |
+| Ícone - _Botão Circular_ | Aberto  | <i class="fas fa-angle-up"></i>   | `fa-angle-up`        |
 
-### Espaçamento/ Alinhamento
+### Espaçamento
 
-| Name                  | Property      | Token                                  |
-| --------------------- | ------------- | -------------------------------------- |
-| _Input_               | margin-bottom | `0px`                                  |
-| _List_                | margin-top    | `0px`                                  |
-| _Tag_                 | margin-left   | `8px`                                  |
-| _Tag_                 | margin-top    | `centralizado na vertical com o Input` |
-| _Tag_                 | margin-bottom | `centralizado na vertical com o Input` |
-| _button-mini-primary_ | margin-top    | `12px`                                 |
-| _button-mini-primary_ | margin-bottom | `12px`                                 |
-| _button-mini-primary_ | margin-right  | `24px`                                 |
-| _tooltip_             | left          | `0px`                                  |
-| _tooltip_             | bottom        | `-32px`                                |
+| Name               | Property      | Token |
+| ------------------ | ------------- | ----- |
+| _Componente Input_ | margin-bottom | `0px` |
+| _Componente List_  | margin-top    | `0px` |
 
-#### Dimensões
+### Dimensões
 
-| Name   |            Width            |     Max-Width      |   Height   |
-| ------ | :-------------------------: | :----------------: | :--------: |
-| Lista  |         `variável`          |      `400px`       | `variável` |
-| Rodapé | `variável conforme a Lista` | `conforme a Lista` |   `56px`   |
+| Name                             |   Width    | Max-Width | Min-Width | Height |
+| -------------------------------- | :--------: | :-------: | :-------: | :----: |
+| _Componente Input_ - Select      | `variável` |  `400px`  |  `100px`  | `40px` |
+| _Componente Input_ - Multiselect | `variável` |  `400px`  |  `200px`  | `40px` |
+| Item _List_ - Select             | `variável` |  `400px`  |  `100px`  | `56px` |
+| Item _List_ - Multiselect        | `variável` |  `400px`  |  `200px`  | `56px` |
 
-#### Sombreamento da lista
+### Sombreamento
 
-| Name   | Property   | Token                          |
-| ------ | ---------- | ------------------------------ |
-| _List_ | box-shadow | `0px 3px 6px rgba(0,0,0,0.16)` |
+| Name              | Property   | Token                          |
+| ----------------- | ---------- | ------------------------------ |
+| _Componente List_ | box-shadow | `0px 3px 6px rgba(0,0,0,0.16)` |
