@@ -55,10 +55,10 @@ Exemplo de uso:
                     <p>Conteúdo</p>
                 </div>
                 <div class="br-modal-footer justify-content-end">
-                    <button class="br-button is-small" type="button" secondary>
+                    <button class="br-button small" type="button" secondary>
                         Ação 1
                     </button>
-                    <button class="br-button is-small" type="button" primary>
+                    <button class="br-button small" type="button" primary>
                         Ação 2
                     </button>
                 </div>

@@ -199,6 +199,12 @@
       align-items: center;
       padding: 0 v(spacing-scale-base) 0 v(spacing-scale-3x);
       margin-top: v(spacing-scale-base);
+      display: flex;
+      flex-wrap: nowrap;
+      cursor: pointer;
+      &[hidden] {
+        display: none;
+      }
     }
     .popmenu {
       display: none;

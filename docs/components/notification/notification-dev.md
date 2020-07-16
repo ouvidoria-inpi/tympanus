@@ -148,10 +148,10 @@ O submenu contextual serve para definir ações complementares, possui a seguint
     <div class="header">
         <div class="title">Lista de Mensagens</div>
         <div class="actions">
-            <button class="br-button" type="button" tertiary circle small>
+            <button class="br-button" type="button" circle small>
                 <i class="fas fa-sort-alpha-up"></i></button
             ><span class="mx-3">|</span>
-            <button class="br-button" type="button" tertiary circle small>
+            <button class="br-button" type="button" circle small>
                 <i class="fas fa-search"></i>
             </button>
         </div>

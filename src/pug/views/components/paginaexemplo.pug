@@ -1,0 +1,198 @@
+extends ../../layouts/base
+
+append vars
+  - var title = "Página de Exemplo";
+
+
+block template
+  ul.accessibility-links
+    li: a.br-button(accesskey="1" href="#main-content") Ir para o conteúdo
+    li: a.br-button(accesskey="2" href="#main-nav") Ir para o menu principal
+    li: a.br-button(accesskey="3" href="#context-nav") Ir para o menu auxiliar
+  .scrim-menu
+    +menu#main-nav
+      +menu-principal-content
+  +header()(sticky)
+    .container-lg
+      +header-base-content
+  .container-lg
+    .row
+      .context-menu.col-sm-6.col-md-4#context-nav
+        +menu
+          a.header
+            .support
+              i.fas.fa-angle-up
+            .content Menu Contextual
+          +menu-auxiliar-content
+      .col.container-main
+        +breadcrumb
+          +crumb("Tela Anterior")
+          +crumb("Tela Anterior2")
+          +crumb("Tela Anterior3")
+          +crumb("Tela Anterior4")
+          +crumb("Tela Atual", "is-active")
+        #main-content
+          p.h2=title
+          .row
+          +message()(warning)
+            strong Atenção.
+            span  Favor preencher todos os campos obrigatórios do formulário.
+          p.h5 Cadastro
+          .row.mt-5
+            .col-sm-4
+              +input("NOME")(id="nome" type="text" placeholder="Digite seu nome")
+            .col-sm-4
+              +input("CPF")(id="cpf-id3" type="text" placeholder="Digite somente números" invalid)
+              .mt-1
+                .feedback.color-danger
+                  .icon: i.fas.fa-times-circle
+                  | CPF inválido
+            .col-sm-4
+              p.label.mb-0 Sexo
+              p.help-text Escolha uma das opçoes abaixo
+              +radio("Masculino")#h-radio-1.d-inline(name="h-radio")
+              +radio("Feminino")#h-radio-2.d-inline(name="h-radio")
+          .row.mt-5
+            .col-sm-6
+              +datepicker("Data de nascimento")(id="normal" placeholder="dd/mm/aaaa")
+            .col-sm-6
+              p.label.mb-0 Digite algum conhecimento prévio de tipo de linguagem
+              .br-tag-input
+          .row.mt-5
+            .col-sm-4
+              +select("Escolaridade")(id="escola")
+                +option("Selecione", "0")
+                +option("Primário")
+                +option("Secundário")
+                +option("Universitário")
+                +option("PHD")
+              p.text-down-01 Texto auxiliar ao preenchimento, tem a função de previnir erros.
+            .col-sm-8
+              p.label.mb-0 Escolha uma ou mais opções onde cursou
+              +checkbox("Escola Estadual")#h-checkbox-1.d-inline
+              +checkbox("Escola Municipal")#h-checkbox-3.d-inline
+              +checkbox("Escola Particular")#h-checkbox-2.d-inline
+          .row.mt-5
+            .col-md-12
+              p.label.mb-0 Envie um arquivo de foto para identificação
+              +upload()(feedbackText="Os arquivos devem ser no formato PNG, JPG, PDF e ter no máximo 1GB.")
+          .row.mt-5
+            .col-sm-12
+              +textarea("Mensagem")(id="textarea-id1" placeholder="Digite sua mensagem aqui" rows=5 cols=5)
+              p.text-down-01.mt-1 Texto auxiliar ao preenchimento, tem a função de previnir erros.
+          .row.mt-5-text-right
+            .col-sm-12
+              +button()(secondary)
+                i.fas.fa-angle-left
+                | Cancelar
+              .d-inline.ml-3
+              .br-scrim.is-foco
+                .br-modal.is-medium
+                  .br-modal-dialog
+                    .br-modal-content
+                      .br-modal-header
+                        h1.br-modal-title Encerramento do cadastro
+                      .br-modal-body
+                        p Deseja finalizar o cadastro?
+                      .br-modal-footer.justify-content-end
+                        +button()(secondary small).mx-3 Cancelar
+                        +button()(primary small).mx-3 Confirmar
+              +button()(primary)
+                | Cadastrar
+                i.fas.fa-angle-right
+          +divider
+          .row.mt-5
+            .col-sm-12
+              p.h5 Etapas do cadastro
+              +wizard(scroll=true, vertical=false, collapsed=true, total=5, step=3)
+          +divider
+          .row.mt-5
+            +table#datatable-checkbox.mt-5(datatable=true, checkbox=true, title='Tabela de Cadastrados', rows=5, columns=4)
+          +divider
+          p.h5 Cursos Oferecidos
+          .row.mt-5
+          +tabs()
+            +tab-nav()
+              +tab-item(title="Gestão" panel="panel-12")
+              +tab-item(title="Segurança da Informação" panel="panel-22")
+              +tab-item(title="Software" class="is-active" panel="panel-32")
+              +tab-item(title="Desenvolvimento" panel="panel-42")
+            +tab-content
+              +tab-pane(id="panel-12" class="is-active")
+                p Curso na área de gestão de software.
+                p Curso na área de gestão de software.
+                p Curso na área de gestão de software.
+                p Curso na área de gestão de software.
+              +tab-pane(id="panel-22")
+                p Curso na área de Segurança da Informação, redes e privacidade.
+                p Curso na área de Segurança da Informação, redes e privacidade.
+                p Curso na área de Segurança da Informação, redes e privacidade.
+              +tab-pane(id="panel-32")
+                p Curso na área de Engenharia de Software, cobit, itil.
+                p Curso na área de Engenharia de Software, cobit, itil.
+                p Curso na área de Engenharia de Software, cobit, itil.
+              +tab-pane(id="panel-42")
+                p Curso na área de Desenvolvimento, programação java, python, ruby.
+                p Curso na área de Desenvolvimento, programação java, python, ruby.
+                p Curso na área de Desenvolvimento, programação java, python, ruby.
+          +divider
+          .row.mt-5
+            .col-sm-6.col-md-4.col-lg-3.mt-5.mt-sm-0
+              +card()(expanded)
+                .front
+                  .header.d-flex.justify-content-between
+                    .d-flex
+                      .mr-3
+                        +avatar
+                          a(href="javascript:void(0);")
+                            .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+                            +tooltip("Funcionária do Mês")(id="tt2" info place="top")
+                              span.subtext Filial Florianópolis.
+                      .flex-grow-1
+                        p.h5.text-primary-default.mb-0 Maria Amorim
+                        span UX Designer
+                    +button()(circle small)
+                      i.fas.fa-ellipsis-v
+                  .content
+                    img(src="https://picsum.photos/id/100/1080" alt="Imagem de exemplo")
+                    p.mt-3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
+                  .footer
+                    .text-right
+                      +button()(circle small).expand
+                        i.fas.fa-angle-down
+                    .expanded
+                      +list.mx-n3
+                        +list-header("Items de 3 linhas com separadores")
+                        +list-item.three-lines.divider
+                          .support
+                            i.fas.fa-heartbeat
+                          .content
+                            .subtitle Subtítulo
+                            .text Texto Principal
+                            .description Texto secundário Lorem Ipsum dolor sit amet
+                          .support meta
+                        +list-item.three-lines.divider
+                          .support
+                            i.fas.fa-heartbeat
+                          .content
+                            .subtitle Subtítulo
+                            .text Texto Principal
+                            .description Texto secundário Lorem Ipsum dolor sit amet
+                          .support meta
+                        +list-item.three-lines
+                          .support
+                            i.fas.fa-heartbeat
+                          .content
+                            .subtitle Subtítulo
+                            .text Texto Principal
+                            .description Texto secundário Lorem Ipsum dolor sit amet
+                          .support meta
+  +footer
+    .container-lg
+      +footer-logo.text-center
+      +list()(collapsible horizontal unique)
+        +footer-list-filler()(total=6 col=2)
+      +footer-bottom-filler
+    .br-divider
+    .container-lg
+      +footer-info

@@ -1,6 +1,7 @@
 .#{$prefix}message {
   display: flex;
   margin-bottom: v(spacing-scale-2x);
+  width: 100%;
   .icon {
     align-self: center;
     padding: v(spacing-scale-2x) 0;

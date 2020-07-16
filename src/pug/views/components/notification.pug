@@ -4,11 +4,23 @@ append vars
   - var title = "Notification";
 
 append content
-  p.h5 Exemplo
-  .row
-    .col
-      .header(style="margin-bottom:500px;")
-        a(href="javascript:void(0);"  style="display:block; width:50px; height:50px;")
-          img(src="https://picsum.photos/50" alt="Avatar" style="border-radius:50%; width:50px; height:50px; border: 3px solid #ccc;")
-        +notification()()
-          +notification-filler
+  .container-lg
+    p.h5 Exemplo
+    .row
+      .col
+        //- .header(style="margin-bottom:500px; display: flex; justify-content: flex-end;")
+        //-   a(href="javascript:void(0);"  style="display:block; width:50px; height:50px;")
+        //-     img(src="https://picsum.photos/50" alt="Avatar" style="border-radius:50%; width:50px; height:50px; border: 3px solid #ccc;")
+        //-   +notification()()
+        //-     +notification-filler
+        div(style="margin-bottom:500px; display: flex; justify-content: flex-end;")
+          div.avatar(style="cursor:pointer; display:flex;")
+            +badge()(danger)
+              .icon 5
+              .content
+                +avatar
+                  .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
+            +button()(small circle)
+              i.fas.fa-angle-down
+          +notification()()
+            +notification-filler

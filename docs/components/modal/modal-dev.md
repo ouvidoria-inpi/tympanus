@@ -21,10 +21,10 @@ O componente deve ser encapsulado pelo componente scrim do tipo foco para que se
                 <p>Conteúdo</p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -49,10 +49,10 @@ O componente deve ser encapsulado pelo componente scrim do tipo foco para que se
                 <p>Conteúdo</p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -97,10 +97,10 @@ Exemplo de uso:
                 <p>Conteúdo</p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -126,10 +126,10 @@ Exemplo de uso:
                 <p>Conteúdo</p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -155,10 +155,10 @@ Exemplo de uso:
                 <p>Conteúdo</p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -184,10 +184,10 @@ Exemplo de uso:
                 <p>Conteúdo</p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -218,10 +218,10 @@ Exemplo de modal sem título:
                 <p>Conteúdo</p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -254,10 +254,10 @@ Exemplo de modal com título contraído:
                 </p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -291,10 +291,10 @@ Exemplo de **Modal de Alerta** com título:
                 <p>Modal de alerta com título. Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -316,10 +316,10 @@ Exemplo de **Modal de Alerta** sem título:
                 </p>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Ação 1
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Ação 2
                 </button>
             </div>
@@ -364,10 +364,10 @@ Exemplo de Modal de Opção por **Lista**:
                 </div>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Cancelar
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Retornar
                 </button>
             </div>
@@ -431,10 +431,10 @@ Exemplos de Modal de Opção **por Seleção**:
                 </div>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Cancelar
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Retornar
                 </button>
             </div>
@@ -476,10 +476,10 @@ Exemplos de Modal de Opção **por Seleção**:
                 </div>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Cancelar
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Retornar
                 </button>
             </div>
@@ -546,10 +546,10 @@ Exemplos de **Modal de Entrada**:
                 </div>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Cancelar
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Entrar
                 </button>
             </div>
@@ -647,10 +647,10 @@ Exemplos de **Modal de Entrada**:
                 </div>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Cancelar
                 </button>
-                <button class="br-button is-small" type="button" primary>
+                <button class="br-button small" type="button" primary>
                     Entrar
                 </button>
             </div>
@@ -691,10 +691,10 @@ Exemplo de **Modal com Rolagem**:
                 </div>
             </div>
             <div class="br-modal-footer justify-content-end">
-                <button class="br-button is-small" type="button" secondary>
+                <button class="br-button small" type="button" secondary>
                     Negar
                 </button>
-                <button class="br-button is-disabled is-small" type="button" primary>
+                <button class="br-button small" type="button" primary disabled>
                     Aceitar
                 </button>
             </div>
