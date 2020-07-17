@@ -1,6 +1,6 @@
 import { createPopper } from '@popperjs/core'
 class BRTooltip {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this.activator = component.previousSibling.previousSibling
@@ -19,7 +19,7 @@ class BRTooltip {
     this._setBehavior()
   }
 
-  _setBehavior() {
+  _setBehavior () {
     // Ação de abrir padrao ao entrar no ativador
     if (this.activator) {
       if (this.notification) {
@@ -60,7 +60,7 @@ class BRTooltip {
     // }
   }
 
-  _create() {
+  _create () {
     this._setLayout()
     // Cria a instancia do popper
     if (this.notification) {
@@ -71,21 +71,21 @@ class BRTooltip {
           {
             name: 'offset',
             options: {
-              offset: [0, 10],
-            },
+              offset: [0, 10]
+            }
           },
           {
             name: 'preventOverflow',
             options: {
               altAxis: false, // false by default
-              mainAxis: true, // true by default
+              mainAxis: true // true by default
               // rootBoundary: 'body',
-            },
-          },
+            }
+          }
         ],
         // placement: this.placement,
         placement: 'bottom',
-        strategy: 'fixed',
+        strategy: 'fixed'
       })
     } else {
       const ac = this.activator.getBoundingClientRect()
@@ -104,8 +104,8 @@ class BRTooltip {
           {
             name: 'offset',
             options: {
-              offset: [0, 8],
-            },
+              offset: [0, 8]
+            }
           },
           {
             name: 'preventOverflow',
@@ -114,16 +114,16 @@ class BRTooltip {
               // boundary: 'body',
               mainAxis: true, // true by default
               // rootBoundary: 'document',
-              tether: false, // true by default
-            },
-          },
+              tether: false // true by default
+            }
+          }
         ],
-        placement: this.placement,
+        placement: this.placement
       })
     }
   }
 
-  _show(event) {
+  _show (event) {
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
     this.component.style.zIndex = 99
@@ -136,14 +136,14 @@ class BRTooltip {
     }
   }
 
-  _hide(event, component) {
+  _hide (event, component) {
     component.removeAttribute('data-show')
     component.style.zIndex = -1
     component.style.visibility = 'hidden'
     clearTimeout(component.closeTimer)
   }
 
-  _setLayout() {
+  _setLayout () {
     // Cria a setinha que aponta para o item que criou o tooltip
     const arrow = document.createElement('div')
     arrow.setAttribute('data-popper-arrow', '')
@@ -161,7 +161,7 @@ class BRTooltip {
     }
   }
 
-  _toggleActivatorIcon() {
+  _toggleActivatorIcon () {
     const icon = this.activator.querySelector('button svg')
     if (icon) {
       icon.classList.toggle('fa-angle-down')
@@ -170,7 +170,7 @@ class BRTooltip {
     this.activator.toggleAttribute('active')
   }
 
-  _fixPosition() {
+  _fixPosition () {
     if (this.notification) {
       setTimeout(() => {
         const ac = this.activator.getBoundingClientRect()
