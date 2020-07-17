@@ -46,7 +46,7 @@ class BRWizard {
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
         if (index === activeStepNum) {
           elem.setAttribute('active', '')
-          elem.focus()
+          //elem.focus()
         }
         if (index < activeStepNum) {
           elem.setAttribute('inactive', '')
