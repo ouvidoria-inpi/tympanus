@@ -13,14 +13,14 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, collapse
         .top-bar
           .title=attributes.title ? attributes.title : title
           .grid-button
-            +button.grid-small-trigger.is-circle.is-tertiary
+            +button()(circle).grid-small-trigger
               i.fas.fa-th
           .grid-button
-            +button.grid-large-trigger.is-circle.is-tertiary
-              i.fas.fa-th-large    
+            +button()(circle).grid-large-trigger
+              i.fas.fa-th-large
           .divisor
           .search-button
-            +button.search-trigger.is-circle.is-tertiary
+            +button()(circle).search-trigger
               i.fas.fa-search
         .search-bar
           +input("Buscar").search-input.is-medium.has-icon(
@@ -30,25 +30,25 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, collapse
             button.icon(type='button')
               span.sr-only Buscar
               i.fas.fa-search
-          +button.search-close.is-circle.ml-1
+          +button()(circle).search-close.ml-1
             i.fas.fa-times
         if (attributes.checkbox)
           .selected-bar
             .info
-              +button.mobile.select-all.is-primary 
+              +button()(primary).mobile.select-all
                 i.fas.fa-minus-square
               span.count 0
               span.text item selecionado
             .action-button
-              +button.delete-trigger.is-primary 
+              +button()(primary).delete-trigger
                 span Excluir
                 i.fas.fa-trash-alt
             .action-button
-              +button.download-trigger.is-primary 
+              +button()(primary).download-trigger
                 span Download
                 i.fas.fa-download
             .action-button.mobile
-              +button.is-primary 
+              +button()(primary)
                 i.fas.fa-ellipsis-v
     .responsive
       table
@@ -94,7 +94,7 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, collapse
               span de 3 páginas
               span.divider
             .arrows
-              +button.is-circle.is-secondary
+              +button()(circle secondary)
                 i.fa.fa-chevron-left
-              +button.is-circle.is-secondary
+              +button()(circle secondary)
                 i.fa.fa-chevron-right

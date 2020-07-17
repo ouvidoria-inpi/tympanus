@@ -178,7 +178,7 @@
     // Acesso gov.br (não logado)
     .login {
       order: 4;
-      .#{$prefix}button[mini] {
+      .#{$prefix}button {
         @include hover;
         @include focus;
         @include active;

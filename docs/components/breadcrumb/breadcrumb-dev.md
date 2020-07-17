@@ -33,7 +33,6 @@
 
 <!-- Deve mostrar os atributos HTML que são obrigatórios para o uso do componente. -->
 
-
 | Classe             | Descrição                         |
 | ------------------ | --------------------------------- |
 | `br-breadcrumb`    | Classe container do componente    |
@@ -46,9 +45,9 @@
 | `fa-home`          | Ícone da página inicial           |
 | `fa-chevron-right` | Ícone de hierarquia               |
 
-| Atributo   | Tipo    | Valor padrão | Descrição                       |
-| ---------- | ------- | ------------ | ------------------------------- |
-| `active`   | boolean |              | Indica qual página está ativa   |
+| Atributo | Tipo    | Valor padrão | Descrição                     |
+| -------- | ------- | ------------ | ----------------------------- |
+| `active` | boolean |              | Indica qual página está ativa |
 
 ### Javascript
 
@@ -60,10 +59,10 @@ new BRBreadcrumb('br-breadcrumb', brBreadcrumb)
 
 #### Configurações obrigatórias
 
-| Propriedad           | Tipo   | Descrição                              |
-| -------------------- | ------ | -------------------------------------- |
-| `br-breadcrumb`      | string | Nome do componente                     |
-| brBreadcrumg         | Object | Objeto que representa um br-breadcrumb |
+| Propriedad      | Tipo   | Descrição                              |
+| --------------- | ------ | -------------------------------------- |
+| `br-breadcrumb` | string | Nome do componente                     |
+| brBreadcrumg    | Object | Objeto que representa um br-breadcrumb |
 
 #### Configurações Adicionais
 
@@ -71,7 +70,7 @@ O componente cria automaticamente mais um item na lista que é um botão de expa
 
 ```html
 <li class="crumb" expand>
-    <button class="br-button" type="button" mini circle>
+    <button class="br-button" type="button" circle small>
         <i class="fas fa-ellipsis-h"></i>
     </button>
 </li>
@@ -79,9 +78,9 @@ O componente cria automaticamente mais um item na lista que é um botão de expa
 
 > Não é necessário implementar esse item
 
-| Atributo        | Tipo     | Valor padrão | Descrição                                              |
-| --------------- | -------- | ------------ | ------------------------------------------------------ |
-| expand          | boolead  |              | Indica que esse item ativa a funcionalidad de expansão |
+| Atributo | Tipo    | Valor padrão | Descrição                                              |
+| -------- | ------- | ------------ | ------------------------------------------------------ |
+| expand   | boolead |              | Indica que esse item ativa a funcionalidad de expansão |
 
 ## Dependências
 

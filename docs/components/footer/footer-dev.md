@@ -29,9 +29,9 @@
             <div class="row align-items-end justify-content-between py-5">
                 <div class="col social-network">
                     <p class="text-up-01 text-extra-bold text-uppercase">Redes Sociais</p>
-                    <button class="br-button mr-3" type="button" circle>
+                    <a href="" class="mr-3">
                         <img src="https://url-da-imagem.png" alt="Texto alternativo" />
-                    </button>
+                    </a>
                 </div>
                 <div class="col assigns text-right">
                     <img class="ml-4" src="https://url-da-imagem.png" alt="Texto alternativo" />

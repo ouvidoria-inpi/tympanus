@@ -1,4 +1,5 @@
 mixin button
-  button.br-button(type="button")&attributes(attributes)
+  - let componentClass = prefix + "button"
+  button.br-button(class=className type="button")&attributes(attributes)
     if block
       block

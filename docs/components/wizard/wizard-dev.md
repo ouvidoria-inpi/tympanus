@@ -24,7 +24,7 @@ Nenhuma dependência.
                 <div class="text">Conteúdo aqui</div>
             </div>
             <div class="wizard-panel-btn">
-                <button class="br-button is-primary wizard-btn-next" type="button">Avançar</button>
+                <button class="br-button wizard-btn-next" type="button" primary>Avançar</button>
             </div>
         </div>
         <div class="wizard-panel">
@@ -33,8 +33,8 @@ Nenhuma dependência.
                 <div class="text">Conteúdo aqui</div>
             </div>
             <div class="wizard-panel-btn">
-                <button class="br-button is-secondary wizard-btn-prev" type="button">Voltar</button>
-                <button class="br-button is-primary wizard-btn-next" type="button">Avançar</button>
+                <button class="br-button wizard-btn-prev" type="button" secondary>Voltar</button>
+                <button class="br-button wizard-btn-next" type="button" primary>Avançar</button>
             </div>
         </div>
         <div class="wizard-panel">
@@ -43,8 +43,8 @@ Nenhuma dependência.
                 <div class="text">Conteúdo aqui</div>
             </div>
             <div class="wizard-panel-btn">
-                <button class="br-button is-secondary wizard-btn-prev" type="button">Voltar</button>
-                <button class="br-button is-primary wizard-btn" type="button">Avançar</button>
+                <button class="br-button wizard-btn-prev" type="button" secondary>Voltar</button>
+                <button class="br-button wizard-btn" type="button" primary>Avançar</button>
             </div>
         </div>
     </div>

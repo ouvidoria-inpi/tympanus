@@ -12,11 +12,9 @@ append content
             h1.br-modal-title Scrim com Foco
           .br-modal-body
             p Exemplo utilizando o componente scrim com FOCO
-          .br-modal-footer.justify-content-end
-            button.br-button.is-secondary.is-mini.ml-3.mr-3(type='button')
-              | Cancelar
-            button.br-button.is-primary.is-mini.ml-3.mr-3(type='button')
-              | Retornar
+          .br-modal-footer.justify-content-center
+            +button()(secondary) Cancelar
+            +button()(primary).mt-3.mt-sm-0.ml-sm-3 Retornar
   p.h5 Foco
   .scrimexemplo
     +button()(primary) Testar Efeito

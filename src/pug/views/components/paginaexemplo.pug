@@ -95,10 +95,8 @@ block template
                       .br-modal-body
                         p Deseja finalizar o cadastro?
                       .br-modal-footer.justify-content-end
-                        button.br-button.is-secondary.is-mini.ml-3.mr-3(type='button')
-                          | Cancelar
-                        button.br-button.is-primary.is-mini.ml-3.mr-3(type='button')
-                          | Confirmar
+                        +button()(secondary small).mx-3 Cancelar
+                        +button()(primary small).mx-3 Confirmar
               +button()(primary)
                 | Cadastrar
                 i.fas.fa-angle-right
@@ -153,14 +151,14 @@ block template
                       .flex-grow-1
                         p.h5.text-primary-default.mb-0 Maria Amorim
                         span UX Designer
-                    +button()(circle mini)
+                    +button()(circle small)
                       i.fas.fa-ellipsis-v
                   .content
                     img(src="https://picsum.photos/id/100/1080" alt="Imagem de exemplo")
                     p.mt-3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
                   .footer
                     .text-right
-                      +button()(circle mini class="expand")
+                      +button()(circle small).expand
                         i.fas.fa-angle-down
                     .expanded
                       +list.mx-n3

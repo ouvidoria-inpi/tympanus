@@ -13,7 +13,7 @@
         </div>
         <div class="actions">
             <div class="links">
-                <button class="br-button" type="button" circle mini>
+                <button class="br-button" type="button" circle small>
                     <i class="fas fa-ellipsis-v"></i>
                 </button>
                 <ul>
@@ -25,31 +25,31 @@
                 </ul>
             </div>
             <div class="functions">
-                <button class="br-button" type="button" circle mini>
+                <button class="br-button" type="button" circle small>
                     <i class="fas fa-th"></i>
                 </button>
                 <ul>
                     <li class="title">Funcionalidades do Sistema</li>
                     <li>
-                        <button class="br-button" type="button" circle mini>
+                        <button class="br-button" type="button" circle small>
                             <i class="fas fa-chart-bar"></i>
                             <span class="text">Funcionalidade 1</span>
                         </button>
                     </li>
                     <li>
-                        <button class="br-button" type="button" circle mini>
+                        <button class="br-button" type="button" circle small>
                             <i class="fas fa-headset"></i>
                             <span class="text">Funcionalidade 2</span>
                         </button>
                     </li>
                     <li>
-                        <button class="br-button" type="button" circle mini>
+                        <button class="br-button" type="button" circle small>
                             <i class="fas fa-comment"></i>
                             <span class="text">Funcionalidade 3</span>
                         </button>
                     </li>
                     <li>
-                        <button class="br-button" type="button" circle mini>
+                        <button class="br-button" type="button" circle small>
                             <i class="fas fa-adjust"></i>
                             <span class="text">Funcionalidade 4</span>
                         </button>
@@ -57,12 +57,12 @@
                 </ul>
             </div>
             <div class="search-btn">
-                <button class="br-button" type="button" circle mini>
+                <button class="br-button" type="button" circle small>
                     <i class="fas fa-search"></i>
                 </button>
             </div>
             <div class="login">
-                <button class="br-button" type="button" mini>
+                <button class="br-button" type="button" small>
                     <i class="fas fa-user"></i><span class="ml-1">Entrar</span>
                 </button>
             </div>
@@ -80,7 +80,7 @@
             </div>
         </div>
         <div class="menu">
-            <button class="br-button" type="button" circle mini>
+            <button class="br-button" type="button" circle small>
                 <i class="fas fa-bars"></i>
             </button>
             <div class="title">Título do Cabeçalho</div>
@@ -94,7 +94,7 @@
                     <span class="icon"><i class="fas fa-search"></i></span>
                 </button>
             </div>
-            <button class="br-button search-close" type="button" circle mini>
+            <button class="br-button search-close" type="button" circle small>
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -104,18 +104,18 @@
 
 #### Propriedades obrigatórias
 
-| Tag    | Atributo    | Valor padrão | Descrição                                          |
-| ------ | ----------- | ------------ | -------------------------------------------------- |
-| div    | class       | br-header    | Container do componente                            |
-| div    | class       | container    | Container interno responsável pelo layout          |
-| div    | class       | logo         | Container para o logo                              |
-| img    | alt         | logo         | Imagem do logo                                     |
-| div    | class       | actions      | Container para os botões de ação, links e login    |
-| button | class       | br-button    | classe dos botões (componente button)              |
-| button | circle mini |              | estilo dos botoes circulares (todos)               |
-| div    | class       | menu         | Container para o botão de menu, título e subtítulo |
-| i      | class       | fa-bars      | icone botão de menu                                |
-| div    | class       | title        | Título do Cabeçalho                                |
+| Tag    | Atributo     | Valor padrão | Descrição                                          |
+| ------ | ------------ | ------------ | -------------------------------------------------- |
+| div    | class        | br-header    | Container do componente                            |
+| div    | class        | container    | Container interno responsável pelo layout          |
+| div    | class        | logo         | Container para o logo                              |
+| img    | alt          | logo         | Imagem do logo                                     |
+| div    | class        | actions      | Container para os botões de ação, links e login    |
+| button | class        | br-button    | classe dos botões (componente button)              |
+| button | circle small |              | estilo dos botoes circulares (todos)               |
+| div    | class        | menu         | Container para o botão de menu, título e subtítulo |
+| i      | class        | fa-bars      | icone botão de menu                                |
+| div    | class        | title        | Título do Cabeçalho                                |
 
 #### Propriedades Adicionais
 
