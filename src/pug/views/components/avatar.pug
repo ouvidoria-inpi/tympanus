@@ -4,8 +4,8 @@ append vars
   - var title = "Avatar";
 
 append content
-  .row
-    .col-auto
+  .row.justify-content-between
+    .col-auto.ml-1.mt-5
       p.h5 Avatar icônico
       .d-flex.align-items-center
         +badge()(danger)
@@ -13,9 +13,9 @@ append content
           .content
             +avatar
               .image: i.fas.fa-user
-        +button()(mini circle)
+        +button()(small circle)
           i.fas.fa-angle-down
-    .col-auto.ml-3
+    .col-auto.ml-1.mt-5
       p.h5 Avatar fotográfico
       .d-flex.align-items-center
         +badge()(danger)
@@ -23,11 +23,11 @@ append content
           .content
             +avatar
               .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
-        +button()(mini circle)
+        +button()(small circle)
           i.fas.fa-angle-down
   p.h5.mt-5 Em telas de Chat
   .row
-    .col-sm-6.col-md-4.col-lg-3.col-xl-2
+    .col-sm-12.col-md-6
       +card
         .front
           .content
@@ -38,27 +38,26 @@ append content
                 .text-primary-default.text-up-01 Maria Amorim
                 span UX Designer
               div
-                +button()(circle mini)
+                +button()(circle small)
                   icon: i.fas.fa-phone
-                +button()(circle mini)
+                +button()(circle small)
                   icon: i.fas.fa-comment
-    .col-sm-8.col-md-6.col-lg-5.col-xl-4
+    .col-sm-12.col-md-6
       +card
         .front
           .content
             .d-flex
-              +avatar
+              +avatar.mt-1
                 .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
               .flex-fill.ml-3
                 +textarea("")(id="comments" placeholder="Digite seu comentário")
           .footer
-            .row.justify-content-sm-end
-              .col-6.col-sm-auto
+            .row.justify-content-end
+              .col.col-xs-12.text-right
                 +button Cancelar
-              .col-6.col-sm-auto
-                +button()(primary) Enviar
+                +button()(primary).mt-2 Enviar
   .row
-    .col-sm-6.col-md-4.col-lg-3.col-xl-2
+    .col-sm-12.col-md-6
       +card
         .front
           .content.text-center
@@ -73,7 +72,7 @@ append content
             p
               i.fas-fa-phone
               span  +55 81 9999 9999
-    .col-sm-6.col-md-4.col-lg-3.col-xl-2
+    .col-sm-12.col-md-6
       +card
         .front
           .content

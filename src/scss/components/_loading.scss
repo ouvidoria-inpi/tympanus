@@ -29,12 +29,8 @@ $stroke: 5px;
       top: $position-sm;
       width: $diameter-sm;
     }
-    &.is-primary,
     &.primary,
-    &[primary],
-    &.is-call-to-action,
-    &.action,
-    &[action] {
+    &[primary] {
       &::after {
         border-bottom-color: v(color-secondary-01);
         border-top-color: v(color-secondary-01);
@@ -116,5 +112,14 @@ $stroke: 5px;
         animation: fill ease-in-out 2s;
       }
     }
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }

@@ -27,7 +27,7 @@ Este kit contém componentes gráficos para a construção de páginas web, incl
 Voltados para prototipação de aplicações mobile Android e iOS. Os UI Kits Mobile disponibilizam elementos visuais, templates, paleta de cores e orientações de uso para tipografia e ícones.
 
 <a href="/downloads">
-    <button class="br-button is-secondary" type="button">Download dos UI Kits</button>
+    <button class="br-button" type="button" secondary>Download dos UI Kits</button>
 </a>
 
 ## Orientações de uso

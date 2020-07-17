@@ -227,7 +227,7 @@
 			{
 				"label": "Template Base",
 				"filename": "base"
-			}
+      }
 		],
 		"id": "templates",
 		"label": "Templates",

@@ -1,4 +1,4 @@
-[version]: # '1.0.0'
+[version]: # '1.0.1'
 
 Espaçamento é a distância entre um elemento a outro representado por alguma unidade métrica. O espaçamento é um fundamento do design visual que frequentemente cria uma lacuna entre os designers e os desenvolvedores ao projetar uma interface. Para evitar essa situação, o DS Gov cria e detalha termos em um sistema flexível, possibilitando layouts funcionais e consistentes.
 

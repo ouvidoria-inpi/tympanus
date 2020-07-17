@@ -95,7 +95,7 @@ Exemplo de uso:
     <div class="icon">...</div>
     <div class="content">...</div>
     <div class="close">
-        <button class="br-button is-tertiary" type="button">
+        <button class="br-button" type="button">
             <i class="fas fa-times"></i><span class="sr-only">Fechar</span>
         </button>
     </div>

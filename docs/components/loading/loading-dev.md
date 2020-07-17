@@ -17,7 +17,7 @@ Exibe quanto tempo uma operação vai demorar. Exibe uma progressão **percentua
         <div class="br-loading-fill"></div>
     </div>
 </div>
-<button class="br-button is-tertiary" type="button">Cancelar</button>
+<button class="br-button" type="button">Cancelar</button>
 ```
 
 ### Loading Determinado sem Botão Cancelar

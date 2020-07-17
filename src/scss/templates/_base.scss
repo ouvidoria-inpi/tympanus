@@ -20,7 +20,7 @@
   }
 
   .#{$prefix}header.sticky {
-    z-index: 1;
+    z-index: 99999;
     & + div {
       position: relative;
       z-index: auto;

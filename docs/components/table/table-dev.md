@@ -15,18 +15,18 @@ O componente table, na sua versão atual depende dos seguinte componentes:
         <div class="top-bar">
             <div class="title">Datatable com checkbox</div>
             <div class="grid-button">
-                <button class="br-button grid-small-trigger is-circle is-tertiary" type="button">
+                <button class="br-button grid-small-trigger" type="button" circle>
                     <i class="fas fa-th"></i>
                 </button>
             </div>
             <div class="grid-button">
-                <button class="br-button grid-large-trigger is-circle is-tertiary" type="button">
+                <button class="br-button grid-large-trigger" type="button" circle>
                     <i class="fas fa-th-large"> </i>
                 </button>
             </div>
             <div class="divisor"></div>
             <div class="search-button">
-                <button class="br-button search-trigger is-circle is-tertiary" type="button">
+                <button class="br-button search-trigger" type="button" circle>
                     <i class="fas fa-search"></i>
                 </button>
             </div>
@@ -44,28 +44,28 @@ O componente table, na sua versão atual depende dos seguinte componentes:
                     <span class="sr-only">Buscar</span><i class="fas fa-search"></i>
                 </button>
             </div>
-            <button class="br-button search-close is-circle ml-1" type="button">
+            <button class="br-button search-close ml-1" type="button" circle>
                 <i class="fas fa-times"></i>
             </button>
         </div>
         <div class="selected-bar">
             <div class="info">
-                <button class="br-button mobile select-all is-primary" type="button">
+                <button class="br-button mobile select-all" type="button" primary>
                     <i class="fas fa-minus-square"></i></button
                 ><span class="count">0</span><span class="text">item selecionado</span>
             </div>
             <div class="action-button">
-                <button class="br-button delete-trigger is-primary" type="button">
+                <button class="br-button delete-trigger" type="button" primary>
                     <span>Excluir</span><i class="fas fa-trash-alt"></i>
                 </button>
             </div>
             <div class="action-button">
-                <button class="br-button download-trigger is-primary" type="button">
+                <button class="br-button download-trigger" type="button" primary>
                     <span>Download</span><i class="fas fa-download"></i>
                 </button>
             </div>
             <div class="action-button mobile">
-                <button class="br-button is-primary" type="button">
+                <button class="br-button" type="button" primary>
                     <i class="fas fa-ellipsis-v"></i>
                 </button>
             </div>
@@ -140,10 +140,10 @@ O componente table, na sua versão atual depende dos seguinte componentes:
                     <span>de 3 páginas</span><span class="divider"></span>
                 </div>
                 <div class="arrows">
-                    <button class="br-button is-circle is-secondary" type="button">
+                    <button class="br-button" type="button" circle secondary>
                         <i class="fa fa-chevron-left"></i>
                     </button>
-                    <button class="br-button is-circle is-secondary" type="button">
+                    <button class="br-button" type="button" circle secondary>
                         <i class="fa fa-chevron-right"></i>
                     </button>
                 </div>

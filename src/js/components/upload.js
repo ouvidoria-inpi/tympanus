@@ -165,7 +165,6 @@ class BRUpload {
     btndel.className = 'br-button'
     btndel.type = 'button'
     btndel.setAttribute('circle', '')
-    btndel.setAttribute('mini', '')
     btndel.addEventListener(
       'click',
       (event) => {

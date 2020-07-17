@@ -1,6 +1,6 @@
 import { createPopper } from '@popperjs/core'
 class BRTooltip {
-  constructor (name, component) {
+  constructor(name, component) {
     this.name = name
     this.component = component
     this.activator = component.previousSibling.previousSibling
@@ -19,20 +19,32 @@ class BRTooltip {
     this._setBehavior()
   }
 
-  _setBehavior () {
+  _setBehavior() {
     // Ação de abrir padrao ao entrar no ativador
     if (this.activator) {
-      this.showEvents.forEach((event) => {
-        this.activator.addEventListener(event, (otherEvent) => {
-          this._show(otherEvent)
+      if (this.notification) {
+        this.activator.addEventListener('click', (otherEvent) => {
+          if (this.activator.hasAttribute('active')) {
+            this._hide(otherEvent, this.component)
+          } else {
+            this._show(otherEvent)
+          }
+          this._toggleActivatorIcon()
         })
-      })
+      } else {
+        this.showEvents.forEach((event) => {
+          this.activator.addEventListener(event, (otherEvent) => {
+            this._show(otherEvent)
+          })
+        })
+      }
     }
     // Adiciona ação de fechar ao botao do popover
     if (this.popover || this.notification) {
       const closeBtn = this.component.querySelector('.close')
       closeBtn.addEventListener('click', (event) => {
         this._hide(event, this.component)
+        this._toggleActivatorIcon()
       })
       // Ação de fechar padrao ao sair do ativador
     } else {
@@ -48,7 +60,7 @@ class BRTooltip {
     // }
   }
 
-  _create () {
+  _create() {
     this._setLayout()
     // Cria a instancia do popper
     if (this.notification) {
@@ -59,21 +71,21 @@ class BRTooltip {
           {
             name: 'offset',
             options: {
-              offset: [0, 10]
-            }
+              offset: [0, 10],
+            },
           },
           {
             name: 'preventOverflow',
             options: {
               altAxis: false, // false by default
-              mainAxis: true // true by default
+              mainAxis: true, // true by default
               // rootBoundary: 'body',
-            }
-          }
+            },
+          },
         ],
         // placement: this.placement,
         placement: 'bottom',
-        strategy: 'fixed'
+        strategy: 'fixed',
       })
     } else {
       const ac = this.activator.getBoundingClientRect()
@@ -92,8 +104,8 @@ class BRTooltip {
           {
             name: 'offset',
             options: {
-              offset: [0, 8]
-            }
+              offset: [0, 8],
+            },
           },
           {
             name: 'preventOverflow',
@@ -102,16 +114,16 @@ class BRTooltip {
               // boundary: 'body',
               mainAxis: true, // true by default
               // rootBoundary: 'document',
-              tether: false // true by default
-            }
-          }
+              tether: false, // true by default
+            },
+          },
         ],
-        placement: this.placement
+        placement: this.placement,
       })
     }
   }
 
-  _show (event) {
+  _show(event) {
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
     this.component.style.zIndex = 99
@@ -124,14 +136,14 @@ class BRTooltip {
     }
   }
 
-  _hide (event, component) {
+  _hide(event, component) {
     component.removeAttribute('data-show')
     component.style.zIndex = -1
     component.style.visibility = 'hidden'
     clearTimeout(component.closeTimer)
   }
 
-  _setLayout () {
+  _setLayout() {
     // Cria a setinha que aponta para o item que criou o tooltip
     const arrow = document.createElement('div')
     arrow.setAttribute('data-popper-arrow', '')
@@ -149,7 +161,16 @@ class BRTooltip {
     }
   }
 
-  _fixPosition () {
+  _toggleActivatorIcon() {
+    const icon = this.activator.querySelector('button svg')
+    if (icon) {
+      icon.classList.toggle('fa-angle-down')
+      icon.classList.toggle('fa-angle-up')
+    }
+    this.activator.toggleAttribute('active')
+  }
+
+  _fixPosition() {
     if (this.notification) {
       setTimeout(() => {
         const ac = this.activator.getBoundingClientRect()

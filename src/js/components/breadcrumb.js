@@ -74,7 +74,7 @@ class BRBreadcrumb {
     const button = document.createElement('button')
     button.classList.add('br-button')
     button.setAttribute('type', 'button')
-    button.setAttribute('mini', '')
+    button.setAttribute('small', '')
     button.setAttribute('circle', '')
 
     const ellipsisIcon = document.createElement('i')

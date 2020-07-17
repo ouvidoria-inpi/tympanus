@@ -1,42 +1,44 @@
-[version]: # '5.1.0'
+[version]: # '6.0.0'
 
-![Exemplo Componente](imagens/diretriz-pickers.png)
-
-Há também a variação do _Datepicker_ e _Timepicker_ para dispositivos com resoluções de quatro colunas (dispositivos móveis):
-
-![Exemplo Componente](imagens/diretriz-picker-responsive.png)
+![Exemplo Componente](imagens/diretriz-datetimepicker.png)
 
 ---
 
 ## Uso
 
-O componente _Picker (Datepicker e Timepicker)_ funciona basicamente como seletores de datas e horas. De uma forma geral, o usuário pode selecionar datas e horas por meio do calendário e seletores disponibilizados ou simplesmente digitando diretamente no campo de entrada (_Input_). O calendário/seletor é disponibilizado para o usuário ao se clicar no campo de entrada e uma máscara no formato dd/mm/aaaa é mostrada dentro do campo input (ou hh/mm, em se tratando do _Timepicker_). Ao se clicar em qualquer área da tela fora do componente, o calendário é recolhido.
+O componente _DateTimePicker_ funciona basicamente como seletores de datas e horas. De uma forma geral, o usuário pode selecionar datas e horas por meio do calendário e seletores disponibilizados ou simplesmente digitando diretamente no campo de entrada (_Input_) conforme a máscara sugere. O calendário e o seletor de horas podem ocorrer juntos, ou seja, em um mesmo componente ou em componentes independentes.
 
-![Exemplo Componente](imagens/diretriz-mascara.png)
+![Exemplo Uso](imagens/uso.png)
+
+### Tom de Voz
+
+Prefira sempre utlizar os nomes dos meses e dias emno idioma português.
+O nome do mês deve ser escrito por inteiro e os dias da semana abreviados (com três dígitos).
+Por padrão defina domingo como primeiro dia da semana.
 
 ---
 
 ## Anatomia
 
-Segue o detalhamento dos elementos encontrados nos componentes do tipo _Picker_:
+O componente _DateTimePicker_ é dividido em duas partes: _datepicker_ e _timepicker_ e podem ser utilizados em conjunto ou de forma independente:
+
+![Exemplo Tipo](imagens/anatomy-3.png)
 
 1. Campo de entrada (_Input_);
 2. Mês e ano atuais e ícones de navegação entre os meses;
-3. Dias da semana do mês selecionado;
-4. Dia atual em destaque;
-5. Dia pressionado;
+3. Dias da semana;
+4. Dia atual em destaque (opcional);
+5. Dia selecionado;
 6. _Hover_
 7. _Card_ que contém o componente;
-8. Botão terciário que dá acesso a um menu contextual;
-9. Seletor de horas;
-10. Seletor de datas (na versão responsiva).
+8. Seletor de horas;
+9. Dias (mês anterior/posterior).
 
 ![Exemplo Tipo](imagens/anatomy-1.png)
 
-Nos casos em que o componente for utilizado em conjunto (Data inicial e Data final), as datas anteriores à data inicial escolhida ficam desabilitadas para o usuário e o intervalo de dias entre a data inicial e final ficam destacados, conforme a imagem abaixo:
-
-1. Dias desabilitados;
-2. Intervalo de dias em destaque.
+10. Datas inicial e final selecionadas;
+11. Intervalo de dias em destaque;
+12. Dias desabilitados.
 
 ![Exemplo Tipo](imagens/anatomy-2.png)
 
@@ -44,67 +46,119 @@ Nos casos em que o componente for utilizado em conjunto (Data inicial e Data fin
 
 ## Tipos
 
-Basicamente, existem quatro variações de _Pickers_: _Datepicker_ e _Timepicker_ e suas versões para resoluções de 4 colunas (dispositivos _mobile_):
+Basicamente existem três variações do componente: _DateTimePicker_ (padrão), _Datepicker_ e _Timepicker_:
 
-### 1- _Datepicker_
+### 1- _DateTimePicker_
 
-![Exemplo Tipo](imagens/picker-type-datepicker.png)
+O _DateTimePicker_ é o componente padrão para escolha conjunta de data e horário.
 
-**O _Datepicker_ é o tipo de _Picker_ sugerido para preencher valores de datas em um formulário.**
+![Exemplo Tipo](imagens/type-datetimepicker.png)
 
-Ao clicar no campo _Input_, um calendário é apresentado. O usuário poderá digitar a data diretamente no campo ou selecionar no calendário. O usuário poderá ainda navegar entre os meses (o calendário _default_ será sempre o do mês atual). Uma vez selecionada a data, o campo é preenchido e o _card_ ocultado. Para acessar novamente o calendário, basta clicar no campo _Input_. A qualquer momento em que o usuário clicar em qualquer área da tela fora do calendário, o mesmo será ocultado.
-O _Datepicker_ sempre exibirá a data atual em detaque (laranja) para facilitar o usuário a se localizar no calendário.
+### 2- _Datepicker_
 
-### 2- _Datepicker_ (Responsive)
+O componente _datepicker_ está disponível de maneira independente, isto é, um componente apenas para o calendário. O funcionamento é o mesmo já descrito anteriormente porém, ao usuário é permitido selecionar somente datas.
 
-![Exemplo Tipo](imagens/picker-type-datepicker-responsive.png)
-
-Para versões mobile ou resoluções de 4 colunas, recomendamos a utilização desta versão do componente _Datepicker_. Nela o usuário poderá selecionar a data desejada deslizando para cima ou para baixo cada uma das três colunas (dia, mês e ano). A data selecionada fica destacada em azul no centro do componente. Caso deseje, o usuário também poderá preencher a data digitando pelo teclado do dispositivo. Ao se clicar fora da área de seleção, o componente é fechado e o foco segue para o item seguinte do formulário.
+![Exemplo Tipo](imagens/type-datepicker.png)
 
 ### 3- _Timepicker_
 
-![Exemplo Tipo](imagens/picker-type-timepicker.png)
+O componente _timepicker_ também está disponível de maneira independente, isto é, um componente apenas para o seletor de horas. O funcionamento é o mesmo já descrito anteriormente porém, ao usuário é permitido selecionar somente horários.
 
-O _Timepicker_ segue a mesma lógica do _Datepicker_, porém apresenta um seletor de horas no lugar de um calendário.
-É possível optar por apresentar os dois formatos internacionais de horário: formato 24h e formato AM/PM. Caso a escolha seja pelos dois formatos, é necessário incluir um menu suspenso (componente lista) com as opções de troca de formato. Este comportamento será melhor detalhado mais adiante. É necessário a indicação do formato de hora que virá como _default_. O horário _default_ indicado nos campos deve ser: 00:00.
-Como nos componentes descritos anteriormente, ao se clicar fora da área de seleção a janela será automaticamente fechada.
+![Exemplo Tipo](imagens/type-timepicker.png)
 
-### 4- _Timepicker_ (Resposive)
-
-![Exemplo Tipo](imagens/picker-type-timepicker-responsive.png)
-
-O _Timepicker_ responsivo é a variação do _Timepicker_ descrito anteriormente para versões mobile ou em resoluções de quatro colunas. A lógica é a mesma do _Datepicker_ responsivo e o usuário poderá selecionar a hora desejada deslizando cada uma das três colunas (hora, minuto e AM/PM) para cima ou para baixo. O horário desejado fica destacado em azul. Nesta versão, não há a possibilidade de o usuário trocar o formato de hora. Novamente, ao se clicar fora do componente, o _card_ é fechado e o foco segue para o item seguinte.
+**Atenção:** O horário _default_ indicado nos campos deve ser: 00:00. Por enquanto, o componente oferece apenas o formato 24 horas como opção de uso.
 
 ---
 
 ### Comportamento dos Tipos
 
-Para facilitar o entendimento, é exemplificado alguns comportamentos mais usuais:
+O componente _DateTimePicker_ (e suas variações independentes) funcionam sempre da mesma maneira.
 
-1. Com a utilização do _Datepicker_, pode-se criar um formulário de entrada conjunta de data inicial e data final. Uma vez selecionadas as datas inicial e final, o intervalo de dias entre as datas selecionadas fica destacado em azul (no exemplo abaixo, o intervalo entre os dias 8 e 12 de fevereiro).
+Ao clicar no campo _Input_, um calendário e/ou seletor de horas são apresentados. Uma vez selecionadas data e/ou a hora, o campo _input_ é preenchido e o _card_ ocultado. Para acessar novamente o calendário, basta clicar no campo _Input_.
+A qualquer momento em que o usuário clicar em qualquer área da tela fora do _card_, o mesmo será ocultado.
+O _DateTimePicker_ sempre exibirá a data atual em destaque (laranja) para facilitar o usuário se localizar no calendário.
 
-a. Data inicial escolhida no primeiro campo de _input_.
-b. Após a escolha da data inicial, o calendário é recolhido e automaticamente aberto o calendário para escolha da data final.
+#### Navegação entre as datas
 
-![Exemplo Comportamento](imagens/picker-behavior-selected.png)
+O usuário pode navegar linearmente pelo calendário por meio das setas de navegação. Também é possível selecionar o mês desejado por meio de um combo _select_ (nativo do componente) e o ano por meio de digitação no campo _input_ apropriado.
 
-**Atenção:** Note que no calendário de data final os dias anteriores à data inicial escolhida estarão desabilitados, não permitindo que o usuário selecione uma data inválida por descuido.
+1. Setas de navegação linear;
+2. Combo _select_ para escolha do mês;
+3. Combo _input_ para escolha do ano.
 
-**Atenção:** Sempre que desejar o usuário pode clicar nos ícones para alterar as datas escolhidas.
+![Exemplo Tipo](imagens/type-datetimepicker-nav.png)
 
-2. É possível utilizar os componentes _Datepicker_ e _Timepicker_ em conjunto, em uma espécie de _combo_. Quando isto for necessário, o componente poderá ser apresentado conforme a figura abaixo e sempre na ordem data-horário. Observe que o comportamento de cada um dos _Pickers_ é exatamente o mesmo de quando utilizado individualmente.
+#### Intervalo de datas
 
-a. Primeiramente é escolhida a data no primeiro _input_.
+É possível utilizar _datepicker_, para criar uma entrada conjunta de data inicial e data final. Uma vez selecionadas as datas inicial e final, o intervalo de dias entre as datas selecionadas fica destacado em azul (no exemplo abaixo, o intervalo entre os dias 8 e 12 de fevereiro) está destacado.
 
-b. Uma veze escolhida a data, o calendário é recolhido e o seletor de horas é automaticamente apresentado ao usuário.
+1. Data inicial selecionada;
+2. Data final selecionada e destacado todos os dias compreendidos neste intervalo.
 
-![Exemplo Comportamento](imagens/picker-behavior-datahora.png)
+![Exemplo Comportamento](imagens/datepicker-interval.png)
 
-**Atenção:** Sempre que desejar o usuário pode clicar nos ícones para alterar a data ou horário escolhidos.
+**Atenção:** note que os dias anteriores à data inicial escolhida ficam desabilitados, não permitindo que o usuário selecione por descuido uma data inválida.
 
-3- Neste exemplo, é ilustrado o comportamento da troca de formato de horas no componente _Timepicker_. Ao clicar no botão terciário Expandir (recurso opcional), a opção de troca de formato é apresentada por meio de um menu contextual com o componente lista. Não há uma recomendação para o formato _default_ ficando a decisão a critério do desenvolvedor.
+#### Estados
 
-![Exemplo Comportamento](imagens/picker-behavior-menu.png)
+Alguns estados podem ser encontrados nos elementos do datepicker e do _timepicker_. A seguir, é ilustrado cada um deles.
+
+**Atenção:** A fim de facilitar o entendimento, os componentes estão ilustrados de forma independente porém todos os estados apresentados ocorrem também no componente padrão _DateTimePicker_.
+
+##### 1. _Hover_
+
+O estado _hover_ ocorre nos campos _input_ e nos dias do calendário.
+
+1. Estado _hover_.
+
+![Exemplo Comportamento](imagens/estado-hover.png)
+
+##### 2. Selecionado
+
+O estado selecionado ocorre basicamente nos dias selecionados pelo usuário, tanto em um calendário simples quanto em um calendário de intervalo de datas.
+
+1. Estado selecionado.
+
+![Exemplo Comportamento](imagens/estado-selecionado.png)
+
+##### 3. Foco
+
+O estado foco ocorre somente nos campos _input_.
+
+1. Estado foco.
+
+![Exemplo Comportamento](imagens/estado-foco.png)
+
+##### 4. Destacado
+
+O estado destacado ocorre unicamente para marcar o dia atual e independe de qualquer ação do usuário.
+
+1. Estado destacado.
+
+![Exemplo Comportamento](imagens/estado-destacado.png)
+
+##### 5. Desabilitado
+
+O estado desabilitado ocorre nas datas que por qualquer motivo não podem ser selecionadas. Geralmente é utilizado para desabilitar as datas anteriores à data inicialmente escolhida.
+
+1. Estado desabilitado.
+
+![Exemplo Comportamento](imagens/estado-desabilitado.png)
+
+##### 6. Intervalo
+
+O estado intervalo ocorre apenas nos calendário em que é permitida a seleção de duas datas (data inicial e final) e tem por finalidade destacar os dias compreendidos nesse intervalo.
+
+1. Data inicial e final selecionada;
+2. Intervalo de dias entre a data inicial e final.
+
+![Exemplo Comportamento](imagens/estado-interval.png)
+
+#### Responsividade
+
+O componente _DateTimePicker_ for projetado para ser utilizado em qualquer resolução de tela até 4 colunas de acordo com a imagem a seguir:
+
+![Exemplo Comportamento](imagens/responsividade.png)
 
 ---
 
@@ -116,29 +170,32 @@ b. Uma veze escolhida a data, o calendário é recolhido e o seletor de horas é
 | ---------------------------- | ------------------------- | ------------------------- |
 | Mês/Ano                      | `--font-size-scale-up-01` | `--font-weight-semi-bold` |
 | Dias da Semana               | `--font-size-scale-base`  | `--font-weight-medium`    |
-| Dias                         | `--font-size-scale-base`  | `--font-weight-medium`    |
-| Dia Atual                    | `--font-size-scale-base`  | `--font-weight-medium`    |
-| Intervalo Dias (Selected)    | `--font-size-scale-base`  | `--font-weight-medium`    |
+| Dias                         | `--font-size-scale-base`  | `--font-weight-semi-bold` |
+| Dia Atual                    | `--font-size-scale-base`  | `--font-weight-semi-bold` |
+| Dia Mês anterior/posterior   | `--font-size-scale-base`  | `--font-weight-regular`   |
+| Dia Desabilitados            | `--font-size-scale-base`  | `--font-weight-regular`   |
+| Intervalo Dias (Selected)    | `--font-size-scale-base`  | `--font-weight-semi-bold` |
 | Seletor (Data/Hora)          | `--font-size-scale-up-01` | `--font-weight-semi-bold` |
 | Seletor (Data/Hora Selected) | `--font-size-scale-up-01` | `--font-weight-semi-bold` |
 
 ### Cor
 
-| Name                             | Property | Token Color               |
-| -------------------------------- | -------- | ------------------------- |
-| Texto Mês/Ano                    | color    | `--color-primary-default` |
-| Texto Dias da Semana             | color    | `--color-secondary-07`    |
-| Texto Dias                       | color    | `--font-size-scale-base`  |
-| Intervalo Dias Selected          | color    | `--color-secondary-09`    |
-| Seletor (Data/Hora)              | color    | `--color-secondary-08`    |
-| Seletor (Data/Hora Selected)     | color    | `--color-primary-default` |
-| Ícone "Selecionar Data"          | color    | `--color-primary-default` |
-| Ícone "Marcar Hora"              | color    | `--color-primary-default` |
-| Botão terciário "Acessar Opções" | color    | `--color-primary-default` |
-| Botão terciário "Voltar"         | color    | `--color-primary-default` |
-| Botão terciário "Avançar"        | color    | `--color-primary-default` |
-| Botão terciário "Retrair"        | color    | `--color-primary-default` |
-| Botão terciário "Expandir"       | color    | `--color-primary-default` |
+| Name                              | Property | Token Color               | Opacity |
+| --------------------------------- | -------- | ------------------------- | ------- |
+| Texto Mês/Ano                     | color    | `--color-primary-default` | -       |
+| Texto Dias da Semana              | color    | `--color-secondary-07`    | -       |
+| Texto Dias                        | color    | `--color-primary-default` | -       |
+| Texto Dias Mês anterior/posterior | color    | `--color-primary-default` | 60%     |
+| Texto Dias Desabilitados          | color    | `--color-secondary-04`    | 45%     |
+| Intervalo (dias selecionados)     | color    | `--color-secondary-09`    | -       |
+| Seletor (Data/Hora)               | color    | `--color-secondary-08`    | -       |
+| Seletor (Data/Hora Selected)      | color    | `--color-primary-default` | -       |
+| Ícone "Selecionar Data"           | color    | `--color-primary-default` | -       |
+| Ícone "Marcar Hora"               | color    | `--color-primary-default` | -       |
+| Botão terciário "Voltar"          | color    | `--color-primary-default` | -       |
+| Botão terciário "Avançar"         | color    | `--color-primary-default` | -       |
+| Botão terciário "Retrair"         | color    | `--color-primary-default` | -       |
+| Botão terciário "Expandir"        | color    | `--color-primary-default` | -       |
 
 ### Iconografia
 
@@ -149,50 +206,43 @@ b. Uma veze escolhida a data, o calendário é recolhido e o seletor de horas é
 
 ### Botões Terciários
 
-| Name           | Ícone                              | Token Size          | Class (Font Awesome) |
-| -------------- | ---------------------------------- | ------------------- | -------------------- |
-| Acessar Opções | <i class="fas fa-ellipsis-v"></i>  | `--icone-size-base` | fa-ellipsis-v        |
-| Voltar         | <i class="fas fa-angle-left"></i>  | `--icon-size-lg`    | fa-angle-left        |
-| Avançar        | <i class="fas fa-angle-right"></i> | `---icon-size-lg`   | fa-angle-right       |
-| Retrair        | <i class="fas fa-angle-up"></i>    | `---icon-size-lg`   | fa-angle-up          |
-| Expandir       | <i class="fas fa-angle-down"></i>  | `---icon-size-lg`   | fa-angle-down        |
+| Name    | Ícone                              | Token Size        | Class (Font Awesome) |
+| ------- | ---------------------------------- | ----------------- | -------------------- |
+| Voltar  | <i class="fas fa-angle-left"></i>  | `--icon-size-lg`  | fa-angle-left        |
+| Avançar | <i class="fas fa-angle-right"></i> | `---icon-size-lg` | fa-angle-right       |
+| Retrair | <i class="fas fa-angle-up"></i>    | `---icon-size-lg` | fa-angle-up          |
 
 ### Estado
 
-| Name                  | Estado      | Token Status                  |
-| --------------------- | ----------- | ----------------------------- |
-| Dias (Conteiner)      | Hover       | `--status-hover-background`   | - |
-| Dia atual (Text)      | Destacado   | `--status-highlight-text`     | - |
-| Dia atual (Conteiner) | Destacado   | `--status-highlight-overlay`  |
-| Dia atual (Text)      | Pressionado | `--status-pressed-text`       | - |
-| Dia atual (Conteiner) | Pressionado | `--status-pressed-background` |
-| Dias intervalo (Text) | \*\*\*      | `---color-secondary-01`       | - |
-| Dias intervalo (Text) | \*\*\*      | `--color-primary-default`     | - |
-
-\*\*\* Ainda não temos este estado!
+| Name                  | Estado      | Token Status                   | Transparência |
+| --------------------- | ----------- | ------------------------------ | ------------- |
+| Dias (Conteiner)      | Hover       | `--status-hover-background`    | -             |
+| Dia atual (Text)      | Destacado   | `--status-highlight-text`      | -             |
+| Dia atual (Conteiner) | Destacado   | `--status-highlight-overlay`   | -             |
+| Dia atual (Text)      | Selecionado | `--status-selected-text`       | -             |
+| Dia atual (Conteiner) | Selecionado | `--status-selected-background` | -             |
+| Dias intervalo (Text) | \*\*\*      | `--status-selected-text`       | 50%           |
 
 ### Dimensão
 
-| Name                  | Property | Dimension |
-| --------------------- | -------- | --------- |
-| _Card_ (_Datepicker_) | width    | 288px     |
-| _Card_ (_Datepicker_) | height   | auto      |
-| _Card_ (_Timepicker_) | width    | 256px     |
-| _Card_ (_Timepicker_) | height   | 180px     |
-| _Card_ (Responsive)   | width    | 256px     |
-| _Card_ (Responsive)   | height   | 196px     |
+| Name                      | Property | Dimension |
+| ------------------------- | -------- | --------- |
+| _Card_ (_DateTimePicker_) | width    | 304px     |
+| _Card_ (_DateTimePicker_) | height   | auto      |
+| _Card_ (_Datepicker_)     | width    | 304px     |
+| _Card_ (_Datepicker_)     | height   | auto      |
+| _Card_ (_Timepicker_)     | width    | 144px     |
+| _Card_ (_Timepicker_)     | height   | 116px     |
 
 ### Espaçamento
 
-| Name                             | Property       | Spacing |
-| -------------------------------- | -------------- | ------- |
-| Dias (Text)                      | padding-width  | 24px    |
-| Dias (Text)                      | padding-height | 24px    |
-| Dias (Text)                      | padding-top    | 12px    |
-| Dias (Text)                      | padding-bottom | 20px    |
-| Seletor (Responsive)             | padding-width  | 24px    |
-| Seletor (Responsive)             | padding-height | 12px    |
-| Seletor (Responsive)             | padding-top    | 12px    |
-| Seletor (Responsive)             | padding-bottom | 20px    |
-| Botão terciário "Acessar Opções" | padding-top    | 16px    |
-| Botão terciário "Acessar Opções" | padding-right  | 16px    |
+| Name                          | Property | Token Spacing                 |
+| ----------------------------- | -------- | ----------------------------- |
+| Calendário (_DateTimePicker_) | width    | `--spacing-scale-2xh`         |
+| Calendário (_DateTimePicker_) | height   | `--spacing-scale-2xh`         |
+| Seletor (_DateTimePicker_)    | width    | `--spacing-horizontal-center` |
+| Seletor (_DateTimePicker_)    | height   | `--spacing-scale-baseh`       |
+| Calendário (_Datepicker_)     | width    | `--spacing-scale-2xh`         |
+| Calendário (_Datepicker_)     | height   | `--spacing-scale-2xh`         |
+| Seletor (_TimePicker_)        | width    | `--spacing-scale-baseh`       |
+| Seletor (_TimePicker_)        | height   | `--spacing-scale-baseh`       |
