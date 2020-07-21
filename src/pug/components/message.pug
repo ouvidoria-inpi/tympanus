@@ -2,25 +2,25 @@ mixin message
   - let componentClass = prefix + 'message'
   div(class=componentClass)&attributes(attributes)
     if attributes.danger
-      .icon
+      .icon(aria-label="informações erradas")
         i.fas.fa-times-circle.fa-lg
         span.sr-only Erro!
     if attributes.success
-      .icon
+      .icon(aria-label="informações corretas")
         i.fas.fa-check-circle.fa-lg
         span.sr-only Sucesso!
     if attributes.warning
-      .icon
+      .icon(aria-label="atenção as informações")
         i.fas.fa-exclamation-triangle.fa-lg
         span.sr-only Atenção!
     if attributes.info
-      .icon
+      .icon(aria-label="mensagem de informação")
         i.fas.fa-info-circle.fa-lg
         span.sr-only Informação!
-    .content
+    .content(aria-label="informações do conteúdo")
       if block
         block
     .close
-      +button()(circle small)
+      +button()(circle small aria-label="Fechar") 
         i.fas.fa-times
         span.sr-only Fechar
