@@ -1,12 +1,13 @@
 import BRTooltip from './tooltip'
 class BRNotification extends BRTooltip {
-  constructor(name, component) {
+  constructor (name, component) {
     super(name, component)
     this.menuBtns = component.querySelectorAll('.contextual-btn')
     this.hideEvents = ['mouseleave', 'blur']
     this._setMenu()
   }
-  _setMenu() {
+
+  _setMenu () {
     for (const btn of this.menuBtns) {
       const menu = btn.parentNode.querySelector('.contextual-menu')
       btn.addEventListener('click', () => {
@@ -29,11 +30,13 @@ class BRNotification extends BRTooltip {
       }
     }
   }
-  _hideNotification(action) {
+
+  _hideNotification (action) {
     const notification = action.parentNode.parentNode
     notification.setAttribute('hidden', '')
   }
-  _hideAllNotifications(action) {
+
+  _hideAllNotifications (action) {
     const notifications = action.parentNode.parentNode.parentNode.querySelectorAll('.item')
     notifications.forEach((notification) => {
       notification.setAttribute('hidden', '')

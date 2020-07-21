@@ -1,16 +1,17 @@
 class BRInput {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this._currentFocus = -1
     this._setBehavior()
   }
-  _setBehavior() {
+
+  _setBehavior () {
     this._setPasswordViewBehavior()
     this._setAutocompleteBehavior()
   }
 
-  _setPasswordViewBehavior() {
+  _setPasswordViewBehavior () {
     for (const inputPassword of this.component.querySelectorAll("input[type='password']")) {
       if (!inputPassword.disabled) {
         for (const buttonIcon of inputPassword.parentNode.querySelectorAll('button.icon')) {
@@ -25,7 +26,8 @@ class BRInput {
       }
     }
   }
-  _toggleShowPassword(event) {
+
+  _toggleShowPassword (event) {
     for (const icon of event.currentTarget.querySelectorAll('.svg-inline--fa')) {
       if (icon.classList.contains('fa-eye')) {
         icon.classList.remove('fa-eye')
@@ -42,7 +44,8 @@ class BRInput {
       }
     }
   }
-  _setAutocompleteBehavior() {
+
+  _setAutocompleteBehavior () {
     for (const inputAutocomplete of this.component.querySelectorAll('input.search-autocomplete')) {
       inputAutocomplete.addEventListener(
         'input',
@@ -61,7 +64,8 @@ class BRInput {
       )
     }
   }
-  _buildSearchItems(element) {
+
+  _buildSearchItems (element) {
     const searchList = window.document.createElement('div')
     searchList.setAttribute('class', 'search-items')
     this.component.appendChild(searchList)
@@ -89,7 +93,8 @@ class BRInput {
       this._clearSearchItems()
     }
   }
-  _clearSearchItems() {
+
+  _clearSearchItems () {
     for (const searchItems of this.component.querySelectorAll('.search-items')) {
       for (const item of searchItems.querySelectorAll('div')) {
         searchItems.removeChild(item)
@@ -97,7 +102,8 @@ class BRInput {
       this.component.removeChild(searchItems)
     }
   }
-  _handleArrowKeys(event) {
+
+  _handleArrowKeys (event) {
     switch (event.keyCode) {
       case 13:
         if (this._currentFocus > -1) {
@@ -127,7 +133,8 @@ class BRInput {
       // skip default case
     }
   }
-  _switchFocus() {
+
+  _switchFocus () {
     for (const searchItems of this.component.querySelectorAll('.search-items')) {
       for (const [index, item] of searchItems.querySelectorAll('div').entries()) {
         if (index === this._currentFocus) {
@@ -139,7 +146,8 @@ class BRInput {
       }
     }
   }
-  setAutocompleteData(dataList) {
+
+  setAutocompleteData (dataList) {
     this.dataList = dataList
   }
 }
@@ -389,7 +397,7 @@ const countries = [
   'Venezuela',
   'Vietnã',
   'Zâmbia',
-  'Zimbábue',
+  'Zimbábue'
 ]
 const inputList = []
 for (const brInput of window.document.querySelectorAll('.br-input')) {

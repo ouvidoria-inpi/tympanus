@@ -1,11 +1,12 @@
 class BRScrim {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this._setType()
     this._setBehavior()
   }
-  _setType() {
+
+  _setType () {
     if (this.component.classList.contains('is-foco')) {
       this._type = 'is-foco'
     }
@@ -16,17 +17,20 @@ class BRScrim {
       this._type = 'is-inibicao'
     }
   }
-  _setBehavior() {
+
+  _setBehavior () {
     if (this.component.classList.contains('is-foco')) {
       this.component.addEventListener('click', (event) => {
         this._hideScrim(event)
       })
     }
   }
-  _hideScrim(event) {
+
+  _hideScrim (event) {
     event.currentTarget.classList.remove('is-active')
   }
-  showScrim() {
+
+  showScrim () {
     if (this._type === 'is-foco') {
       this.component.classList.add('is-active')
     }

@@ -1,11 +1,11 @@
 class BRFooter {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this._setBehavior()
   }
 
-  _setBehavior() {
+  _setBehavior () {
     // Javascript
   }
 }

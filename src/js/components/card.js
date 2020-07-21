@@ -1,18 +1,18 @@
 class BRCard {
-  constructor(name, component, id) {
+  constructor (name, component, id) {
     this.name = name
     this.component = component
     this.component.setAttribute('id', `card${id}`)
     this._setBehavior()
   }
 
-  _setBehavior() {
+  _setBehavior () {
     this._setFlipBehavior()
     this._setExpandBehavior()
     this._setDragBehavior()
   }
 
-  _setFlipBehavior() {
+  _setFlipBehavior () {
     for (const flip of this.component.querySelectorAll('button.flip')) {
       flip.addEventListener('click', () => {
         if (this.component.getAttribute('flipped') === 'off') {
@@ -24,7 +24,7 @@ class BRCard {
     }
   }
 
-  _setExpandBehavior() {
+  _setExpandBehavior () {
     for (const expand of this.component.querySelectorAll('button.expand')) {
       expand.addEventListener('click', () => {
         if (this.component.getAttribute('expanded') === 'off') {
@@ -36,7 +36,7 @@ class BRCard {
     }
   }
 
-  _setDragBehavior() {
+  _setDragBehavior () {
     for (const img of this.component.querySelectorAll('img')) {
       img.setAttribute('draggable', 'false')
     }

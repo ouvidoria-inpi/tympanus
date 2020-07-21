@@ -1,19 +1,21 @@
 /* eslint-disable complexity */
 class BRTable {
-  constructor(name, component, sequence) {
+  constructor (name, component, sequence) {
     this.name = name
     this.component = component
     this._sequence = sequence
     this._setBehavior()
   }
-  _setBehavior() {
+
+  _setBehavior () {
     this._cloneHeader()
     this._setHeaderWidth()
     this._toogleSearch()
     this._toogleGrid()
     this._setClickActions()
   }
-  _cloneHeader() {
+
+  _cloneHeader () {
     for (const responsive of this.component.querySelectorAll('.responsive')) {
       this._setSyncScroll(responsive)
     }
@@ -54,11 +56,13 @@ class BRTable {
       this.component.appendChild(headersTag)
     }
   }
-  _setSyncScroll(element) {
+
+  _setSyncScroll (element) {
     element.classList.add('syncscroll')
     element.setAttribute('name', `table-${this._sequence}`)
   }
-  _setHeaderWidth() {
+
+  _setHeaderWidth () {
     for (const clonedHeader of this.component.querySelectorAll('.headers > div')) {
       for (const [index, header] of this.component
         .querySelectorAll('table thead tr th')
@@ -67,7 +71,8 @@ class BRTable {
       }
     }
   }
-  _toogleSearch() {
+
+  _toogleSearch () {
     for (const searchBar of this.component.querySelectorAll('.search-bar')) {
       for (const searchTrigger of this.component.querySelectorAll('.search-trigger')) {
         searchTrigger.addEventListener('click', () => {
@@ -81,7 +86,8 @@ class BRTable {
       }
     }
   }
-  _toogleGrid() {
+
+  _toogleGrid () {
     for (const gridLTrigger of this.component.querySelectorAll('.grid-large-trigger')) {
       gridLTrigger.addEventListener('click', () => {
         this.component.classList.remove('is-grid-small')
@@ -93,13 +99,14 @@ class BRTable {
       })
     }
   }
-  _setClickActions() {
+
+  _setClickActions () {
     const headerCheckbox = this.component.querySelector(".headers [name='check'] [type='checkbox']")
     const tableCheckboxes = this.component.querySelectorAll(
       "tbody [name='check'] [type='checkbox']"
     )
     const selectedBar = this.component.querySelector('.selected-bar')
-    const info_select_all = this.component.querySelector('.selected-bar .info .select-all')
+    const infoSelectAll = this.component.querySelector('.selected-bar .info .select-all')
     if (tableCheckboxes) {
       for (const checkbox of tableCheckboxes) {
         checkbox.addEventListener('click', () => {
@@ -112,13 +119,14 @@ class BRTable {
         this._checkAllTable(selectedBar, tableCheckboxes, headerCheckbox)
       })
     }
-    if (info_select_all) {
-      info_select_all.addEventListener('click', () => {
+    if (infoSelectAll) {
+      infoSelectAll.addEventListener('click', () => {
         this._checkAllTable(selectedBar, tableCheckboxes, headerCheckbox)
       })
     }
   }
-  _setRow(checkbox, check) {
+
+  _setRow (checkbox, check) {
     const tr = checkbox.parentNode.parentNode.parentNode
     if (check) {
       tr.classList.add('is-selected')
@@ -130,25 +138,29 @@ class BRTable {
       checkbox.checked = false
     }
   }
-  _checkRow(checkbox, selectedBar, tableCheckboxes, headerCheckbox) {
+
+  _checkRow (checkbox, selectedBar, tableCheckboxes, headerCheckbox) {
     const check = checkbox.checked
     this._setRow(checkbox, check)
     this._setSelectedBar(check ? 1 : -1, selectedBar, tableCheckboxes, headerCheckbox)
   }
-  _checkAllRows(tableCheckboxes) {
+
+  _checkAllRows (tableCheckboxes) {
     for (const checkbox of tableCheckboxes) {
       this._setRow(checkbox, true)
     }
   }
-  _uncheckAllRows(tableCheckboxes) {
+
+  _uncheckAllRows (tableCheckboxes) {
     for (const checkbox of tableCheckboxes) {
       this._setRow(checkbox, false)
     }
   }
-  _checkAllTable(selectedBar, tableCheckboxes, headerCheckbox) {
+
+  _checkAllTable (selectedBar, tableCheckboxes, headerCheckbox) {
     let count = tableCheckboxes.length
-    const info_count = selectedBar.querySelector('.info .count')
-    const total = parseInt(info_count.innerHTML, 10)
+    const infoCount = selectedBar.querySelector('.info .count')
+    const total = parseInt(infoCount.innerHTML, 10)
     if (total === count) {
       this._uncheckAllRows(tableCheckboxes)
       count = -1 * count
@@ -157,43 +169,45 @@ class BRTable {
     }
     this._setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox)
   }
-  _setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox) {
-    const info_count = selectedBar.querySelector('.info .count')
-    const info_text = selectedBar.querySelector('.info .text')
-    const [mobile_ico] = selectedBar.querySelector('.info .select-all').children
-    const total = count < 2 ? parseInt(info_count.innerHTML, 10) + count : count
+
+  _setSelectedBar (count, selectedBar, tableCheckboxes, headerCheckbox) {
+    const infoCount = selectedBar.querySelector('.info .count')
+    const infoText = selectedBar.querySelector('.info .text')
+    const [mobileIco] = selectedBar.querySelector('.info .select-all').children
+    const total = count < 2 ? parseInt(infoCount.innerHTML, 10) + count : count
     if (total > 0) {
       selectedBar.classList.add('is-active')
-      info_count.innerHTML = total
-      info_text.innerHTML = total > 1 ? 'itens selecionados' : 'item selecionado'
+      infoCount.innerHTML = total
+      infoText.innerHTML = total > 1 ? 'itens selecionados' : 'item selecionado'
       if (headerCheckbox) headerCheckbox.parentNode.classList.add('is-checking')
-      if (mobile_ico) {
-        mobile_ico.classList.add('fa-minus-square')
-        mobile_ico.classList.remove('fa-check-square')
+      if (mobileIco) {
+        mobileIco.classList.add('fa-minus-square')
+        mobileIco.classList.remove('fa-check-square')
       }
       if (total === tableCheckboxes.length) {
         if (headerCheckbox) {
           headerCheckbox.checked = true
           headerCheckbox.parentNode.classList.remove('is-checking')
         }
-        if (mobile_ico) {
-          mobile_ico.classList.remove('fa-minus-square')
-          mobile_ico.classList.add('fa-check-square')
+        if (mobileIco) {
+          mobileIco.classList.remove('fa-minus-square')
+          mobileIco.classList.add('fa-check-square')
         }
       }
     } else {
-      info_count.innerHTML = 0
+      infoCount.innerHTML = 0
       if (headerCheckbox) {
         headerCheckbox.checked = false
         headerCheckbox.parentNode.classList.remove('is-checking')
       }
-      if (mobile_ico) {
-        mobile_ico.classList.remove('fa-check-square')
-        mobile_ico.classList.add('fa-minus-square')
+      if (mobileIco) {
+        mobileIco.classList.remove('fa-check-square')
+        mobileIco.classList.add('fa-minus-square')
       }
       selectedBar.classList.remove('is-active')
     }
   }
+
   /**
    * @fileoverview syncscroll - scroll several areas simultaniously
    * @version 0.0.3
@@ -201,7 +215,7 @@ class BRTable {
    * @license MIT, see http://github.com/asvd/intence
    * @copyright 2015 asvd <heliosframework@gmail.com>
    */
-  static _syncscroll() {
+  static _syncscroll () {
     const scroll = 'scroll'
     const elems = document.getElementsByClassName(`sync${scroll}`)
     const EventListener = 'EventListener'
@@ -210,7 +224,7 @@ class BRTable {
     // clearing existing listeners
     let i, j, el, found, name
     for (name in names) {
-      if (names.hasOwnProperty(name)) {
+      if (Object.prototype.hasOwnProperty.call(names, name)) {
         for (i = 0; i < names[name][length]; i++) {
           names[name][i][`remove${EventListener}`](scroll, names[name][i].syn, 0)
         }
@@ -237,12 +251,13 @@ class BRTable {
       this._elSyn(el, name, scroll, elems, EventListener, length, names)
     }
   }
-  static _elSyn(el, name, scroll, elems, EventListener, length, names) {
+
+  static _elSyn (el, name, scroll, elems, EventListener, length, names) {
     const addEventListener = `add${EventListener}`
     const client = 'client'
     const Height = 'Height'
     const Left = 'Left'
-    const Math_round = Math.round
+    const mathRound = Math.round
     const Top = 'Top'
     const Width = 'Width'
     el[addEventListener](
@@ -261,9 +276,9 @@ class BRTable {
           if (element !== el) {
             if (
               updateX &&
-              Math_round(
+              mathRound(
                 element[scroll + Left] -
-                  (scrollX = element.eX = Math_round(
+                  (scrollX = element.eX = mathRound(
                     xRate * (element[scroll + Width] - element[client + Width])
                   ))
               )
@@ -272,9 +287,9 @@ class BRTable {
             }
             if (
               updateY &&
-              Math_round(
+              mathRound(
                 element[scroll + Top] -
-                  (scrollY = element.eY = Math_round(
+                  (scrollY = element.eY = mathRound(
                     yRate * (element[scroll + Height] - element[client + Height])
                   ))
               )
