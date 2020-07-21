@@ -95,6 +95,7 @@
     "prettier-config-standard": "^1.0.1",
     "pug": "3.0.0",
     "pug-cli": "^1.0.0-alpha6",
+    "pug-loader": "^2.4.0",
     "sass-loader": "8.0.2",
     "standard": "^14.3.4",
     "standard-version": "^8.0.2",
@@ -110,6 +111,7 @@
     "webpack-cli": "^3.3.12",
     "webpack-concat-plugin": "3.0.0",
     "webpack-dev-server": "3.11.0",
+    "webpack-shell-plugin": "^0.5.0",
     "webpack-shell-plugin-next": "^1.1.9"
   },
   "engines": {
