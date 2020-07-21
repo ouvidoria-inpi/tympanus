@@ -7,22 +7,22 @@ append content
   p.h5 Checkbox padrão
   p.label.mb-0 Rótulo
   p.text-down-01 Informações adicionais
-  +checkbox("Opção 1")#checkbox-1
-  +checkbox("Opção 2 selecionada")#checkbox-2(checked)
-  +checkbox("Opção 3")#checkbox-3
+  +checkbox("Opção 1")#checkbox-1(ariaLabel="opção 1")
+  +checkbox("Opção 2 selecionada")#checkbox-2(ariaLabel="opção 2" checked)
+  +checkbox("Opção 3")#checkbox-3(ariaLabel="opção 3")
   .feedback.mt-1
     i.fas.fa-exclamation-triangle
     span  Texto de mensagem
 
   p.h5.mt-5 Listagem horizontal
-  +checkbox("Opção 1")#h-checkbox-1.d-inline
-  +checkbox("Opção 2")#h-checkbox-2.d-inline
-  +checkbox("Opção 3")#h-checkbox-3.d-inline
+  +checkbox("Opção 1")#h-checkbox-1.d-inline(ariaLabel="opção 1")
+  +checkbox("Opção 2")#h-checkbox-2.d-inline(ariaLabel="opção 2")
+  +checkbox("Opção 3")#h-checkbox-3.d-inline(ariaLabel="opção 3")
 
   p.h5.mt-5 Estados e validação
-  +checkbox("desativado")#check-state-disabled(disabled)
-  +checkbox("Inválido")#check-state-invalid(invalid)
-  +checkbox("Válido")#check-state-valid(checked valid)
+  +checkbox("desativado")#check-state-disabled(ariaLabel="desativado" disabled)
+  +checkbox("Inválido")#check-state-invalid(ariaLabel="inválido" invalid)
+  +checkbox("Válido")#check-state-valid(ariaLabel="válido" checked valid)
   .feedback.text-danger.mt-1
     .icon: i.fas.fa-times-circle
     .content Preenchimento Obrigatório

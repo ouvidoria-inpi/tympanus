@@ -40,7 +40,7 @@ append content
   p.h5.mt-5 Lista Complexa
   .row
     .col-sm-6.col-md-4
-      +list
+      +list()
         +list-header("Itens de 1 linha sem separadores")
         +list-item()(link)
           .support
@@ -71,7 +71,7 @@ append content
             .text Texto principal
             .description Texto secundário
           .support
-            +checkbox("")(id="checkbox-1" disabled)
+            +checkbox("")(disabled ariaLabel="descreva o elemento")#checkbox-1
         +list-item.two-lines.divider
           .support
             i.fas.fa-heartbeat
@@ -79,7 +79,7 @@ append content
             .text Texto principal
             .description Texto secundário
           .support
-            +checkbox("")(id="checkbox-2")
+            +checkbox("")(ariaLabel="descreva o elemento")#checkbox-2
         +list-item.two-lines.selected
           .support
             i.fas.fa-heartbeat
@@ -87,7 +87,7 @@ append content
             .text Texto principal
             .description Texto secundário
           .support
-            +checkbox("")(id="checkbox-3" checked)
+            +checkbox("")(checked ariaLabel="descreva o elemento")#checkbox-3
 
     .col-sm-6.col-md-4.mt-5.mt-md-0
       +list
@@ -407,7 +407,7 @@ append content
             .text Texto principal
             .description Texto secundário
           .support
-            +checkbox("")(id="checkbox-condensed-1" disabled)
+            +checkbox("")(ariaLabel="descreva o elemento")#checkbox-condensed-1
         +list-item.two-lines.divider
           .support
             i.fas.fa-heartbeat
@@ -415,7 +415,7 @@ append content
             .text Texto principal
             .description Texto secundário
           .support
-            +checkbox("")(id="checkbox-condensed-2")
+            +checkbox("")(ariaLabel="descreva o elemento")#checkbox-condensed-2
         +list-item.two-lines.selected
           .support
             i.fas.fa-heartbeat
@@ -423,18 +423,17 @@ append content
             .text Texto principal
             .description Texto secundário
           .support
-            +checkbox("")(id="checkbox-condensed-3" checked)
-
+            +checkbox("")(checked ariaLabel="descreva o elemento")#checkbox-condensed-3
   p.h5.mt-5 Exemplo complexo
   +list
     +list-header("Lista de E-mail")
       .actions
-        +button()(circle small)
+        +button()(circle small aria-label="ordenação")
           i.fas.fa-sort-alpha-up
         span.mx-3 |
-        +button()(circle small)
+        +button()(circle small aria-label="busca")
           i.fas.fa-search
-        +button()(circle small)
+        +button()(circle small aria-label="menu secundário")
           i.fas.fa-ellipsis-v
     +list-item()(link).two-lines.divider
       .support: i.fas.fa-envelope-open.fa-lg.text-secondary-05

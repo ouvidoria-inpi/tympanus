@@ -7,23 +7,23 @@ append content
   p.h5 Radio button padrão
   p.label.mb-0 Rótulo
   p.help-text Informações adicionais
-  +radio("opcao-1")#op-1(name="radio")
-  +radio("opcao-2")#op-2(name="radio" checked)
-  +radio("opcao-3")#op-3(name="radio")
-  +radio("opcao-4")#op-4(name="radio")
+  +radio("opcao-1")#op-1(name="radio" ariaLabel="radio")
+  +radio("opcao-2")#op-2(name="radio" ariaLabel="radio" checked)
+  +radio("opcao-3")#op-3(name="radio" ariaLabel="radio")
+  +radio("opcao-4")#op-4(name="radio" ariaLabel="radio")
   .feedback.mt-1
     i.fas.fa-exclamation-triangle
     span  Texto de mensagem
 
   p.h5.mt-5 Listagem horizontal
-  +radio("Opção 1")#h-radio-1.d-inline(name="h-radio")
-  +radio("Opção 2")#h-radio-2.d-inline(name="h-radio")
-  +radio("Opção 3")#h-radio-3.d-inline(name="h-radio")
+  +radio("Opção 1")#h-radio-1.d-inline(name="h-radio" ariaLabel="h-radio")
+  +radio("Opção 2")#h-radio-2.d-inline(name="h-radio" ariaLabel="h-radio")
+  +radio("Opção 3")#h-radio-3.d-inline(name="h-radio" ariaLabel="h-radio")
 
   p.h5.mt-5 Estados e validação
-  +radio("desativado")#check-state-disabled(disabled name="validate-radio")
-  +radio("Inválido")#check-state-invalid(invalid name="validate-radio")
-  +radio("Válido")#check-state-valid(checked valid name="validate-radio")
+  +radio("desativado")#check-state-disabled(disabled name="validate-radio" ariaLabel="validate-radio")
+  +radio("Inválido")#check-state-invalid(invalid name="validate-radio" ariaLabel="validate-radio")
+  +radio("Válido")#check-state-valid(checked valid name="validate-radio" ariaLabel="validate-radio")
   .feedback.text-danger.mt-1
     i.fas.fa-times-circle
     span  Preenchimento Obrigatório
