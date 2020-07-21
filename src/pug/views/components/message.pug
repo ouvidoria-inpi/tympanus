@@ -5,29 +5,29 @@ append vars
 
 append content
   p.h5 Tipos
-  +message()(danger)
+  +message()(danger role="alert")
     strong Data de início do afastamento inválida.
     p A data não pode ser superior à data atual.
-  +message()(success)
+  +message()(success role="alert")
     strong Sucesso.
     span  Seus dados foram alterados conforme preencimento do formulário.
-  +message()(info)
+  +message()(info role="alert")
     strong Informação.
     span  Seus dados só serão salvos após o preenchimento do primeiro campo do formulário.
-  +message()(warning)
+  +message()(warning role="alert")
     strong Atenção.
     span  Em caso de dúvida, não compartilhe sua senha com terceiros. Ligue para a Central de atendimento.
 
   p.h5.mt-5 Mensagens contextuais
-  p.feedback.text-success
+  p.feedback.text-success(role="alert")
     span.icon: i.fas.fa-check-circle.fa-lg
     | Campo correto.
-  .feedback.text-danger
+  .feedback.text-danger(role="alert")
     .icon: i.fas.fa-times-circle.fa-lg
     | O CPF deve conter apenas dígitos.
-  span.feedback.text-info
+  span.feedback.text-info(role="alert")
     span.icon: i.fas.fa-exclamation-circle.fa-lg
     | Os arquivos devem ser no formato PNJ, JPG, PDF e ter no máximo 1GB.
-  .feedback
+  .feedback(role="alert")
     .icon: i.fas.fa-exclamation-triangle.fa-lg
     | A tecla CAPS-LOCK está ativada.
