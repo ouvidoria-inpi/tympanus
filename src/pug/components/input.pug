@@ -14,13 +14,17 @@ mixin input(label="Label")
       class=attributes.class
       placeholder=attributes.placeholder
       disabled=attributes.disabled)
-    if attributes.type == "password" && !attributes.filter
+    if attributes.type == "password"
       button.icon(type='button')
         span.sr-only Mostrar senha
         i.fas.fa-eye
-    if attributes.datepicker && !attributes.filter
+    if attributes.datepicker
       button.icon(type='button' id=attributes.id + "-btn")
         span.sr-only Mostrar calendário
         i.fas.fa-calendar-alt
+    if attributes.select
+      button.icon(type='button' trigger)
+        span.sr-only Mostrar calendário
+        i.fas.fa-angle-down
     if block
       block

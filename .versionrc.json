@@ -1,0 +1,15 @@
+{
+  "header": "# Release Notes DSGOV",
+  "types": [
+    { "type": "feat", "section": "Novidades" },
+    { "type": "fix", "section": "Correções/Alterações" },
+    { "type": "docs", "section": "Documentação" },
+    { "type": "style", "hidden": true },
+    { "type": "refactor", "hidden": true },
+    { "type": "perf", "hidden": true },
+    { "type": "test", "hidden": true },
+    { "type": "chore", "hidden": true },
+    { "type": "revert", "hidden": true },
+    { "type": "ci", "hidden": true }
+  ]
+}

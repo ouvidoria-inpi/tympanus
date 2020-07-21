@@ -1,132 +1,16 @@
 .#{$prefix}select {
   position: relative;
-  label {
-    display: inline-block;
-    padding-bottom: v(spacing-scale-half);
-  }
-  select {
+  .br-card {
     display: none;
-  }
-  // Substituto do select original
-  .select-selected {
-    align-items: center;
-    background: v(color-secondary-01);
-    border: $input-border-width solid $input-border-color;
-    border-radius: $input-radius;
-    color: v(color-secondary-07);
-    display: flex;
-    font-weight: v(font-weight-medium);
-    height: $input-default;
-    justify-content: space-between;
-    padding-left: v(spacing-scale-2x);
-    padding-right: spacing-scale-2x;
-    position: relative;
-    text-align-last: left;
-    width: 100%;
-    span {
-      flex: 1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    [class*='fa-'] {
-      color: v(color-primary-default);
-      font-size: $input-default / 3;
-      margin-left: v(spacing-scale-6x);
-    }
-    &:focus {
-      @include focus();
-      outline: none;
-    }
-    &:focus,
-    &:hover {
-      [class*='fa-'] {
-        color: v(color-primary-lighten-01);
-        margin-left: v(spacing-scale-2x);
-      }
-    }
-    &:disabled {
-      background: v(status-disabled-background);
-      border-color: v(color-secondary-04);
-      [class*='fa-'] {
-        color: v(color-primary-default);
-        opacity: 0.45;
-        margin-left: v(spacing-scale-2x);
-      }
-    }
-  }
-  // Lista de opções
-  .select-items {
-    background: v(color-secondary-01);
-    box-shadow: 0 3px 6px rgba($color-secondary-09, 0.22);
-    left: v(spacing-scale-half);
-    margin-top: 1px;
     position: absolute;
-    right: v(spacing-scale-half);
-    z-index: 1;
-    button {
-      background: v(color-secondary-01);
-      border: 0;
+    top: 64px;
+    width: 100%;
+    z-index: 100;
+    &[expanded] {
       display: block;
-      font-weight: v(font-weight-medium);
-      padding: v(spacing-scale-half) v(spacing-scale-2x);
-      text-align: left;
-      width: 100%;
-      &:hover,
-      &:focus {
-        background: v(color-primary-pastel-02);
-      }
-      &.same-as-selected {
-        background: v(color-primary-lighten-01);
-        color: v(color-secondary-01);
-      }
     }
   }
-  // Esconder elemento
-  .select-hide {
-    display: none;
-  }
-  // Tamanhos
-  @each $size, $value in (medium, $input-medium), (small, $input-small) {
-    &.is-#{$size} {
-      .select-selected {
-        height: $value;
-        [class*='fa-'] {
-          font-size: $value / 3;
-        }
-      }
-    }
-  }
-  // Estados
-  @each $state, $color in (valid, v(color-success)), (invalid, v(color-danger)) {
-    &.is-#{$state} {
-      .select-selected {
-        border-color: $color;
-        box-shadow: 0 0 0 1px $color;
-        outline: none;
-        [class*='fa-'] {
-          color: $color;
-          margin-left: v(spacing-scale-2x);
-        }
-      }
-    }
-  }
-  &.is-#{focus} {
-    input {
-      background: v(status-focused-background)
-        linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
-    }
-  }
-  &.is-#{disabled} {
-    label {
-      opacity: 0.45;
-    }
-    input {
-      background: v(status-disabled-background);
-      border-color: v(color-secondary-04);
-    }
-    .select-selected {
-      color: v(color-secondary-04);
-    }
+  .br-list {
+    cursor: pointer;
   }
 }

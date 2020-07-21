@@ -2,55 +2,28 @@ extends ../../layouts/component
 
 append vars
   - var title = "Select";
+  //- - var i = 0;
 
 append content
-  p.h5 Select padrão
-  .row
-    .col-sm-4
-      +select("Label")(id="normal")
-        +option("Selecione", "0")
-        +option("opção 1 opção 1 opção 1 opção 1 opção 1 opção 1", "1")
-        +option("opção 2", "2")
-        +option("opção 3", "3")
-        +option("opção 4", "4")
-  p.text-down-01 Texto auxiliar ao preenchimento, tem a função de previnir erros.
-
-  p.h5.mt-5 Tamanho pequeno
-  .row
-    .col-sm-4
-      +select("Label")(id="small" class="is-small")
-        +option("Selecione", "0")
-        +option("opção 1", "1")
-        +option("opção 2", "2")
-        +option("opção 3", "3")
-        +option("opção 4", "4")
-
-  p.h5.mt-5 Validação e estados
-  .row
-    .col-sm-4
-      +select("Inválido")(id="invalid" class="is-invalid")
-        +option("Selecione", "0")
-        +option("opção 1", "1")
-        +option("opção 2", "2")
-        +option("opção 3", "3")
-        +option("opção 4", "4")
-      .feedback.text-danger.mt-1
-        .icon: i.fas.fa-times-circle.fa-lg
-        | Selecione 1 opção.
-    .col-sm-4
-      +select("Válido")(id="valid" class="is-valid")
-        +option("Selecione", "0")
-        +option("opção 1", "1")
-        +option("opção 2", "2")
-        +option("opção 3", "3")
-        +option("opção 4", "4")
-      .feedback.text-success.mt-1
-        .icon: i.fas.fa-check-circle.fa-lg
-        | OK.
-    .col-sm-4
-      +select("Desabilitado")(id="disabled" class="is-disabled" disabled)
-        +option("Selecione", "0")
-        +option("opção 1", "1")
-        +option("opção 2", "2")
-        +option("opção 3", "3")
-        +option("opção 4", "4")
+  .row.justify-content-center.mb-5
+    .col
+      +select("Componente Select Simples")
+        +option("Item 1")
+        +option("Item 2")
+        +option("Item 3")
+        +option("Item 4")
+        +option("Item 5")
+        +option("Item 6")
+        +option("Item 7")
+        +option("Item 8")
+  .row.justify-content-center
+    .col
+      +select("Componente Select Múltiplo")(multiple)
+        +option("Item 1")(multiple)
+        +option("Item 2")(multiple)
+        +option("Item 3")(multiple)
+        +option("Item 4")(multiple)
+        +option("Item 5")(multiple)
+        +option("Item 6")(multiple)
+        +option("Item 7")(multiple)
+        +option("Item 8")(multiple)

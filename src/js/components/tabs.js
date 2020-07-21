@@ -1,10 +1,11 @@
 class BRTabs {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this._setBehavior()
   }
-  _setBehavior() {
+
+  _setBehavior () {
     for (const ancor of this.component.querySelectorAll(
       '.tab-nav .tab-item:not([not-tab="true"]) button'
     )) {
@@ -18,7 +19,8 @@ class BRTabs {
       )
     }
   }
-  _switchTab(currentTab) {
+
+  _switchTab (currentTab) {
     for (const tabItem of this.component.querySelectorAll(
       '.tab-nav .tab-item:not([not-tab="true"])'
     )) {
@@ -29,7 +31,8 @@ class BRTabs {
       }
     }
   }
-  _switchContent(currentTab) {
+
+  _switchContent (currentTab) {
     for (const button of currentTab.querySelectorAll('button')) {
       for (const tabPanel of this.component.querySelectorAll('.tab-content .tab-panel')) {
         if (button.getAttribute('data-panel') === tabPanel.getAttribute('id')) {

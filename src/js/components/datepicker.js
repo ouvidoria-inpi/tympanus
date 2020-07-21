@@ -1,7 +1,7 @@
 import datepicker from 'js-datepicker'
 import { throwError } from 'rxjs'
 class BRDatepicker {
-  constructor(name, component, configData) {
+  constructor (name, component, configData) {
     this.name = name
     this.component = component
     // Mensagens de erro padrao
@@ -40,7 +40,7 @@ class BRDatepicker {
       'Setembro',
       'Outubro',
       'Novembro',
-      'Dezembro',
+      'Dezembro'
     ]
     this._customOverlayMonths = [
       'Jan',
@@ -54,7 +54,7 @@ class BRDatepicker {
       'Set',
       'Out',
       'Nov',
-      'Dez',
+      'Dez'
     ]
     this._overlayButtom = 'Confirma'
     this._overlayPlaceholder = 'Digite um ano'
@@ -91,21 +91,23 @@ class BRDatepicker {
       'disableMobile',
       'disableYearOverlay',
       'disabled',
-      'id',
+      'id'
     ]
     for (const inputDate of this.component.querySelectorAll('input')) {
       this.picker = datepicker(inputDate, this._configDatepicker(configData))
     }
     this._setBehavior()
   }
-  _configDatepicker(configData) {
+
+  _configDatepicker (configData) {
     const pickerConfig = {}
     for (const key of this._datepickerProperties) {
       pickerConfig[key] = configData ? configData[key] || this[`_${key}`] : this[`_${key}`]
     }
     return pickerConfig
   }
-  _setBehavior() {
+
+  _setBehavior () {
     for (const datepickerButton of this.component.querySelectorAll('button.icon')) {
       datepickerButton.addEventListener('click', (event) => {
         this._toggleDatepicker(event)
@@ -115,8 +117,9 @@ class BRDatepicker {
       this._maskDate(event)
     })
   }
+
   // Funcao para ativar e/ou desativar o componente
-  _toggleDatepicker(event) {
+  _toggleDatepicker (event) {
     if (!this.component.classList.contains('is-disabled')) {
       event.stopPropagation()
       this.picker.calendarContainer.classList.contains('qs-hidden')
@@ -124,8 +127,9 @@ class BRDatepicker {
         : this.picker.hide()
     }
   }
+
   // Função para mascarar a data no formato dd/mm/yyyy ao digitar no campo
-  _maskDate(event) {
+  _maskDate (event) {
     const date = event.target.value
     if (event.key === 'Enter') {
       this.picker.hide()
@@ -143,8 +147,9 @@ class BRDatepicker {
     }
     event.target.value = v
   }
+
   // Funcao para mudar o foco para o proximo elemento
-  _focusNextElement() {
+  _focusNextElement () {
     const inputs = Array.prototype.slice.call(
       document.querySelectorAll("input:not([disabled]):not([class='qs-overlay-year']), select")
     )
@@ -153,11 +158,12 @@ class BRDatepicker {
     input.focus()
     input.select()
   }
+
   // Funcao para transferir o valor digitado no input para o componente
-  _validDate(instance) {
+  _validDate (instance) {
     const stringDate = instance.el.value
     let range
-    const msg_error = []
+    const msgError = []
     try {
       range = instance.getRange()
     } catch (error) {
@@ -171,60 +177,65 @@ class BRDatepicker {
         if (instance.first) {
           if (range.end) {
             valid = !(date > range.end)
-            if (!valid) msg_error.push(this._ERRO_1)
+            if (!valid) msgError.push(this._ERRO_1)
           }
         } else if (range.start) {
           valid = !(date < range.start)
-          if (!valid) msg_error.push(this._ERRO_2)
+          if (!valid) msgError.push(this._ERRO_2)
         }
       }
       // Validação da data para o minDate e maxDate
       if (instance.minDate && instance.maxDate) {
         valid = !!(date >= instance.minDate && date <= instance.maxDate)
-        if (!valid)
-          msg_error.push(
+        if (!valid) {
+          msgError.push(
             this._ERRO_5 +
               instance.minDate.toLocaleDateString() +
               this._ERRO_5_AND +
               instance.maxDate.toLocaleDateString()
           )
+        }
       } else if (instance.minDate) {
         valid = date >= instance.minDate
-        if (!valid) msg_error.push(this._ERRO_3 + instance.minDate.toLocaleDateString())
+        if (!valid) msgError.push(this._ERRO_3 + instance.minDate.toLocaleDateString())
       } else if (instance.maxDate) {
         valid = date <= instance.maxDate
-        if (!valid) msg_error.push(this._ERRO_4 + instance.maxDate.toLocaleDateString())
+        if (!valid) msgError.push(this._ERRO_4 + instance.maxDate.toLocaleDateString())
       }
       // Muda a data apenas se for valida
-      if (msg_error.length === 0) {
+      if (msgError.length === 0) {
         instance.setDate(date, 1)
         this._showSucess(instance)
       } else {
-        this._showError(instance, msg_error)
+        this._showError(instance, msgError)
       }
     }
-    return msg_error
+    return msgError
   }
+
   // Funcao mostrar os erros no campo de feedback
-  _showError(instance, msg_error) {
+  _showError (instance, msgError) {
     this.component.classList.add('is-invalid')
     this.component.classList.remove('is-valid')
     for (const message of this.component.parentNode.querySelectorAll(
       'div.feedback.is-invalid span'
     )) {
-      ;[message.innerText] = msg_error
+      ;[message.innerText] = msgError
     }
   }
-  _showSucess() {
+
+  _showSucess () {
     this.component.classList.add('is-valid')
     this.component.classList.remove('is-invalid')
   }
+
   // Funcoes para ativar/desativar o componente
-  disableDatepicker() {
+  disableDatepicker () {
     this.component.classList.add('is-disabled')
     this.picker.el.disabled = true
   }
-  enableDatepicker() {
+
+  enableDatepicker () {
     this.component.classList.remove('is-disabled')
     this.picker.el.disabled = false
   }

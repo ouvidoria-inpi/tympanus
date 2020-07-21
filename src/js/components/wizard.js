@@ -1,23 +1,23 @@
 import SwipeEventDispatcher from './swipe'
 class BRWizard {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     // DOM elements
     this.DOMstrings = {
       stepFormPanelClass: 'wizard-panel',
-      //stepFormPanels: document.querySelectorAll('.wizard-panel'),
+      // stepFormPanels: document.querySelectorAll('.wizard-panel'),
       stepFormPanels: this.component.querySelectorAll('.wizard-panel'),
       stepNextBtnClass: 'wizard-btn-next',
       stepPrevBtnClass: 'wizard-btn-prev',
-      //stepsBar: document.querySelector('.wizard-progress'),
+      // stepsBar: document.querySelector('.wizard-progress'),
       stepsBar: this.component.querySelector('.wizard-progress'),
       stepsBarClass: 'wizard-progress',
       stepsBtnClass: 'wizard-progress-btn',
-      //stepsBtns: document.querySelectorAll(`.wizard-progress-btn`),
-      stepsBtns: this.component.querySelectorAll(`.wizard-progress-btn`),
-      //stepsForm: document.querySelector('.wizard-form'),
-      stepsForm: this.component.querySelector('.wizard-form'),
+      // stepsBtns: document.querySelectorAll(`.wizard-progress-btn`),
+      stepsBtns: this.component.querySelectorAll('.wizard-progress-btn'),
+      // stepsForm: document.querySelector('.wizard-form'),
+      stepsForm: this.component.querySelector('.wizard-form')
     }
     // remove class from a set of items
     this.removeAttributes = (elemSet, attrName) => {
@@ -92,7 +92,8 @@ class BRWizard {
     }
     this._setBehavior()
   }
-  _setBehavior() {
+
+  _setBehavior () {
     // STEPS BAR CLICK FUNCTION
     this.DOMstrings.stepsBar.addEventListener('click', (e) => {
       // check if click target is a step button

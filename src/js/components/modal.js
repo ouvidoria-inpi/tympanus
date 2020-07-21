@@ -1,11 +1,12 @@
 import BRScrim from './scrim'
 class BRModal {
-  constructor(name, component) {
+  constructor (name, component) {
     this.name = name
     this.component = component
     this._setBehavior()
   }
-  _setBehavior() {
+
+  _setBehavior () {
     for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
       const scrim = new BRScrim('br-scrim', brScrim)
       for (const button of window.document.querySelectorAll('.br-scrim + button')) {

@@ -1,9 +1,4 @@
 const path = require('path')
-
-const isDEV = process.env.NODE_ENV === 'development'
-
-// Webpack Stuff
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const WebpackShellPluginNext = require('webpack-shell-plugin-next')
@@ -14,42 +9,20 @@ const fs = require('fs')
 const paths = {
   src: path.resolve(__dirname, 'src'),
   assets: path.resolve(__dirname, 'src', 'assets'),
-  fonts: path.resolve(__dirname, 'src', 'assets', 'fonts'),
-  images: path.resolve(__dirname, 'src', 'assets', 'images'),
   dist: path.resolve(__dirname, 'dist'),
-  distjs: path.resolve(__dirname, 'dist', 'js'),
-}
-
-const fileLoader = {
-  loader: 'file-loader',
-  options: {
-    name: '[name].[ext]',
-
-    // Mantém a estrutura de diretórios (mas excluindo-se o 'src')
-    outputPath(filename, absoluteFilePath, absoluteRootPath) {
-      const relativePath = path.relative(absoluteRootPath, absoluteFilePath)
-
-      const outPath = relativePath.split('/')
-
-      // Remove a primeira parte do path, ou seja, 'src'
-      outPath.shift()
-
-      return outPath.join('/')
-    },
-  },
 }
 
 module.exports = {
   mode: 'development',
   entry: {
     dsgov: [
-      path.resolve(`${paths.src}/scss`, 'dsgov.scss'),
-      path.resolve(`${paths.src}/js/`, 'index.js'),
+      path.resolve(`${paths.src}/scss/dsgov.scss`),
+      path.resolve(`${paths.src}/js/index.js`),
     ],
   },
   watch: true,
   output: {
-    filename: './js/[name].js',
+    filename: './js/dsgov.js',
     path: paths.dist,
   },
   devServer: {
@@ -72,8 +45,8 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        loader: [
-          isDEV ? 'style-loader' : MiniCssExtractPlugin.loader,
+        use: [
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'sass-loader',
@@ -86,16 +59,6 @@ module.exports = {
             },
           },
         ],
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)$/,
-        include: [paths.fonts],
-        loader: fileLoader,
-      },
-      {
-        test: /\.(png|svg|jpg|jpg)$/,
-        include: [paths.images],
-        loader: fileLoader,
       },
       {
         test: /\.js$/,
@@ -115,7 +78,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       chunkFilename: '[id].css',
-      ignoreOrder: false, // Enable to remove warnings about conflicting order
+      ignoreOrder: false,
     }),
     new WebpackShellPluginNext({
       onBuildEnd: {
