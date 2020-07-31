@@ -1,2 +1,1 @@
-Tags são elementos compactos que representam uma entrada, atributo ou ação.
-Os Tags permitem aos usuários inserir informações, fazer seleções, filtrar conteúdo ou acionar recursos. Devem aparecer dinamicamente como um grupo de vários elementos interativos. Ao contrário dos botões, que devem ser uma chamada à ação consistente e familiar, que o usuário espera que apareça como a mesma ação na mesma área geral.
+O Tag é um componente interativo que permite aos usuários inserir informações, fazer seleções, filtrar conteúdo, acionar ou desabilitar recursos. Pode aparecer dinamicamente como um grupo de vários elementos interativos como numa lista dinâmica de palavras-chave.
