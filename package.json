@@ -27,9 +27,16 @@
     "lint:js": "standard \"src/js/**/*.js\" --fix",
     "lint:styles": "./node_modules/.bin/stylelint src/scss/**/*.scss",
     "minify:img": "node minify-img.js",
-    "release": "standard-version",
-    "release:rc": "standard-version --prerelease rc",
+    "create:assets": "node ./createassets.js",
+    "pushtags": "git push origin $(git describe --tags $(git rev-list --tags --max-count=1))",
+    "release": "standard-version && npm run pushtags ",
+    "release:rc": "standard-version --prerelease rc && npm run pushtags ",
     "start": "npm-run-all build:webpack:dev & webpack-dev-server --env dev"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "npm publish && npm run create:assets"
+    }
   },
   "husky": {
     "hooks": {
