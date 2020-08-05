@@ -5,13 +5,13 @@ append vars
 
 append content
   p.h5 Tamanho grande
-  +pagination(id="large" class="is-large")
+  +pagination(id="large" class="is-large" ariaLabel="Paginação Grande")
 
   p.h5.mt-5 Tamanho padrão
-  +pagination(id="default")
+  +pagination(id="default" ariaLabel="Paginação Padrão")
 
   p.h5.mt-5 Versão reduzida
-  nav
+  nav(ariaLabel="Paginação Reduzida")
     ul.br-pagination
       li.is-first.is-disabled
         a(href="javascript:void(0)")

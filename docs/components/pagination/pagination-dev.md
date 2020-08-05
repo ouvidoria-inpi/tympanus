@@ -1,7 +1,7 @@
 ## Exemplo básico
 
 ```html
-<nav>
+<nav aria-label="Paginação Padrão">
     <ul class="br-pagination">
         <li class="is-first is-disabled">
             <a href="">
@@ -48,7 +48,7 @@
 ## Exemplo reduzido
 
 ```html
-<nav>
+<nav aria-label="Paginação Reduzida">
     <ul class="br-pagination">
         <li class="is-first">...</li>
         <li class="d-flex d-sm-none">...</li>
@@ -90,7 +90,7 @@ A exibição padrão do componente é centralizada.
 Você poderá modificar o comportamento padrão usando as classes de **Justify content** do Bootstrap [https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content](https://getbootstrap.com/docs/4.3/utilities/flex/#justify-content). Veja no exemplo a seguir:
 
 ```html
-<nav>
+<nav aria-label="Paginação Padrão">
     <ul class="br-pagination justify-content-start">
         ...
     </ul>

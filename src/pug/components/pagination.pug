@@ -4,7 +4,7 @@ mixin pagination
   - let className = attributes.class
   - let componentClass = prefix + "pagination"
   - className = className ? componentClass + " " + className : componentClass
-  nav
+  nav(aria-label=attributes.ariaLabel)
     ul(class=className)
       li.is-first.is-disabled
         a(href="javascript:void(0)")
