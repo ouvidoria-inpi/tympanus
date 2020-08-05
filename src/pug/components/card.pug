@@ -7,8 +7,9 @@ mixin card
   div(
     class=className,
     flipped=flipped,
-    expanded=expanded, 
+    expanded=expanded,
     disabled=disabled,
+    aria-disabled=attributes.ariaDisabled,
     draggable=attributes.draggable)
     if block
       block

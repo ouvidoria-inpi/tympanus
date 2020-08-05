@@ -3,7 +3,7 @@
 ## Como usar
 
 ```html
-<div class="br-card" [draggable="true/false" flipped="on|off" expanded="on|off" ] [disabled]>
+<div class="br-card" [draggable="true/false" flipped="on|off" expanded="on|off" ] aria-disabled="true|false" [disabled]>
     <div class="front">
         <div class="header">...</div>
         <div class="content">...</div>
@@ -32,6 +32,12 @@
 | `.header` | Área de cabeçalho do Card                                   |
 | `.footer` | Área do rodape do Card                                      |
 | `.back`   | Conteúdo a ser visualizado quando o Card for do tipo "flip" |
+
+### Atributos obrigatórios
+
+| Elemento               | Descrição                                                     |
+| ---------------------- | ------------------------------------------------------------- |
+| `aria-disabled="true"` | Para fins de acessibilidade se o card estiver desabilitado    |
 
 ### Atributos opcionais
 
