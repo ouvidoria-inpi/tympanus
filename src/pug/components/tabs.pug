@@ -7,15 +7,15 @@ mixin tabs(counter="false")
     data-counter=attributes.counter)
     if block
       block
-    else 
+    else
       | Você precisa adicionar tab-nav e tab-content
 
 mixin tab-nav()
-  nav.tab-nav
+  nav.tab-nav(aria-label=attributes.ariaLabel)
     ul(id=attributes.id)
       if block
         block
-      else 
+      else
         | Você precisa adicionar tab-item
 
 mixin tab-item(title="aba")

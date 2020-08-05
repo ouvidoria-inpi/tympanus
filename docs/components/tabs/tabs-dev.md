@@ -5,7 +5,7 @@ Nenhuma dependência.
 ## Código básico
 
 ```html
-<nav class="tab-nav">
+<nav class="tab-nav" aria-label="Abas de Navegação Simples">
     <ul>
         <li class="tab-item">
             <button type="button" data-panel="panel-1"><span class="name">Sobre</span></button>
@@ -38,6 +38,7 @@ Este componente é formado pelos seguintes elementos:
 
 -   `br-tabs` : container do componente
 -   `tab-nav` : container da lista de abas
+-   `aria-label` : descrição das abas de navegação para fins de acessibilidade.
 -   `tab-item` : cada aba da lista
 -   `data-panel` : atributo de referência ao painel de conteúdo
 -   `name` : nome da aba
@@ -67,7 +68,7 @@ A lista de abas está dentro de um container de navegação que deve ser escrito
 Exemplo de uso:
 
 ```html
-<nav class="tab-nav">
+<nav class="tab-nav" aria-label="Descrição">
     ...
 </nav>
 ```
@@ -156,7 +157,7 @@ Exemplo de uso:
 
 ```html
 <div class="br-tabs" data-counter="true">
-    <nav class="tab-nav">
+    <nav class="tab-nav" aria-label="Abas de Navegação com Contadores">
         <ul>
             <li class="tab-item" not-tab="true">
                 <span class="name">Refine a sua busca</span>
@@ -217,7 +218,7 @@ Esse elemento não será clicável
 Exemplo de uso:
 
 ```html
-<nav class="tab-nav">
+<nav class="tab-nav" aria-label="Descrição">
     <ul>
         <li class="tab-item" not-tab="true">
             <span class="name">Refine a sua busca</span>
