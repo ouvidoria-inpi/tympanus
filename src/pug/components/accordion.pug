@@ -8,17 +8,16 @@ mixin accordion
     if block
       block
 
-mixin accordion-item(title="Título", className)
-  .item(class=className ? className : ""
-        active=attributes.active)
-    button.header(type="button")
+mixin accordion-item(title="Título")
+  .item(active=attributes.active)
+    button.header(type="button" aria-controls=attributes.id aria-expanded=attributes.active ? "true" : "false")
       span.icon
         if className
-          i.fas.fa-angle-up
+          i.fas.fa-angle-up(role="img" aria-label="contrai o conteúdo do acordião")
         else
-          i.fas.fa-angle-down
+          i.fas.fa-angle-down(role="img" aria-label="expande o conteúdo do acordião")
       span.title=title
-  .content
+  .content(id=attributes.id aria-hidden=attributes.active ? "false" : "true")
     if block
       block
     else
