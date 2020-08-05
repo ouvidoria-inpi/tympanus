@@ -72,14 +72,12 @@ class BRBreadcrumb {
     chevronIcon.classList.add('icon', 'fas', 'fa-chevron-right')
 
     const button = document.createElement('button')
-    button.classList.add('br-button')
+    button.classList.add('br-button', 'circle', 'small')
     button.setAttribute('type', 'button')
-    button.setAttribute('small', '')
-    button.setAttribute('circle', '')
+    button.setAttribute('aria-label', 'Expande o conteúdo do breadcrumb')
 
     const ellipsisIcon = document.createElement('i')
     ellipsisIcon.classList.add('fas', 'fa-ellipsis-h')
-
     crumb.appendChild(chevronIcon)
     button.appendChild(ellipsisIcon)
     crumb.appendChild(button)

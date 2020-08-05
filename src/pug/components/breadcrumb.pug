@@ -1,6 +1,6 @@
 mixin breadcrumb
   - let className = [attributes.class, prefix + "breadcrumb", "pt-3"]
-  div(class=className)
+  div(class=className)&attributes(attributes)
     ul.crumb-list
       li.crumb.home
         a(href="javascript:void(0)")
