@@ -6,7 +6,7 @@ append vars
 append content
   p.h5 Padrão
   +tabs()
-    +tab-nav()
+    +tab-nav(ariaLabel="Abas de Navegação Simples")
       +tab-item(title="Sobre" panel="panel-1")
       +tab-item(title="Todos" panel="panel-2")
       +tab-item(title="Notícias" class="is-active" panel="panel-3")
@@ -29,7 +29,7 @@ append content
 
   p.h5.mt-5 Com Contadores
   +tabs(counter="true")
-    +tab-nav
+    +tab-nav(ariaLabel="Abas de Navegação com Contadores")
       +tab-item(title="Refine a sua busca" count="124" notTab="true")
       +tab-item(title="Todos" panel="panel-7" count="124")
       +tab-item(title="Notícias" class="is-active" panel="panel-8" count="74")
