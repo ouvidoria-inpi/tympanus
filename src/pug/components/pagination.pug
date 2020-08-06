@@ -8,7 +8,7 @@ mixin pagination
     ul(class=className)
       li.is-first.is-disabled
         a(href="javascript:void(0)")
-          i.fas.fa-chevron-left
+          +icon.fa-chevron-left
           span.sr-only primeiro
       li.is-active
         a(href="javascript:void(0)") 1
@@ -25,5 +25,5 @@ mixin pagination
       li: a(href="javascript:void(0)")=pages
       li.is-last
         a(href="javascript:void(0)")
-          i.fas.fa-chevron-right
+          +icon.fa-chevron-right
           span.sr-only último

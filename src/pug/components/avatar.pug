@@ -1,10 +1,11 @@
 mixin avatar
   .br-avatar&attributes(attributes)
     if attributes.change
-      button.change(type="button")
+      button.change(type="button" aria-label="Trocar a imagem")
         if block
           block
-        span.icon.text-primary-default: i.fas.fa-camera
+        span.icon.text-primary-default
+          +icon.fa-camera
     else
       if block
         block

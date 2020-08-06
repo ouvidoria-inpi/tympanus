@@ -7,27 +7,27 @@ mixin menu-principal-content
   nav.folders
     //- Fechar Menu
     .close-menu
-      +button()(circle small)
-        i.fas.fa-times
+      +button.circle.small(aria-label="Fechar Menu Principal")
+        +icon.fa-times
     //- Menu gov.br
     .folder
       a.header.logo()
         .content
           img(src="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/govbr.svg" alt="gov.br")
         .support
-          i.fas.fa-angle-down
+          +icon.fa-angle-down
       ul()
         li
           a.item()
             .content Serviços
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
                 .content Buscar serviços por
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -42,7 +42,7 @@ mixin menu-principal-content
               a.item()
                 .content Serviços por público alvo
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -63,7 +63,7 @@ mixin menu-principal-content
           a.item()
             .content Notícias
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -81,7 +81,7 @@ mixin menu-principal-content
               a.item()
                 .content Cidadania e Assitência Social
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -93,7 +93,7 @@ mixin menu-principal-content
               a.item()
                 .content Economia e Gestão Pública
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -117,7 +117,7 @@ mixin menu-principal-content
               a.item()
                 .content Meio Ambiente
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -138,7 +138,7 @@ mixin menu-principal-content
           a.item()
             .content Navegação
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -159,7 +159,7 @@ mixin menu-principal-content
           a.item()
             .content Guia de Edição de Serviços do gov.br
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -187,13 +187,13 @@ mixin menu-principal-content
       a.header()
         .content Planalto
         .support
-          i.fas.fa-angle-down
+          +icon.fa-angle-down
       ul
         li
           a.item()
             .content Acompanhe o Planalto
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -211,7 +211,7 @@ mixin menu-principal-content
               a.item()
                 .content Pronunciamentos
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -220,7 +220,7 @@ mixin menu-principal-content
               a.item()
                 .content Notas Oficiais
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -232,7 +232,7 @@ mixin menu-principal-content
               a.item()
                 .content Notas e Comunicados
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -247,7 +247,7 @@ mixin menu-principal-content
               a.item(disabled)
                 .content Foto Oficial
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -256,7 +256,7 @@ mixin menu-principal-content
               a.item()
                 .content Área de Imprensa
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -277,7 +277,7 @@ mixin menu-principal-content
           a.item()
             .content Conheça a Presidência
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -289,7 +289,7 @@ mixin menu-principal-content
               a.item()
                 .content Palácios e Residências
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -322,7 +322,7 @@ mixin menu-principal-content
               a.item()
                 .content Acervo
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -343,7 +343,7 @@ mixin menu-principal-content
               a.item()
                 .content Ministros
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -421,7 +421,7 @@ mixin menu-principal-content
           a.item()
             .content Mensagem presidencial
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -439,7 +439,7 @@ mixin menu-principal-content
           a.item()
             .content Vice-Presidência
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -460,7 +460,7 @@ mixin menu-principal-content
               a.item()
                 .content Discursos e Pronunciamentos
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -472,13 +472,13 @@ mixin menu-principal-content
           a.item()
             .content Acesso à Informação
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
                 .content Institucional
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -526,7 +526,7 @@ mixin menu-principal-content
           a.item()
             .content Centrais de Conteúdo
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -541,7 +541,7 @@ mixin menu-principal-content
           a.item()
             .content Fale Conosco
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -555,21 +555,21 @@ mixin menu-principal-content
       .content
         a.item()
           | Órgãos do Governo
-          i.fas.fa-external-link-square-alt
+          +icon.fa-external-link-square-alt
         a.ml-3()
           | Legislação
-          i.fas.fa-external-link-square-alt
+          +icon.fa-external-link-square-alt
     .footer-block
       .title Redes Sociais
       .content
-        +button()(circle)
-          img(src="https://picsum.photos/id/1/200" alt="Redes Sociais")
-        +button()(circle)
-          img(src="https://picsum.photos/id/10/200" alt="Redes Sociais")
-        +button()(circle)
-          img(src="https://picsum.photos/id/1001/200" alt="Redes Sociais")
-        +button()(circle)
-          img(src="https://picsum.photos/id/1002/200" alt="Redes Sociais")
+        a(href="javascript:void(0);").mr-3
+          img.rounded-circle(src="https://picsum.photos/id/1/40" alt="Redes Sociais")
+        a(href="javascript:void(0);").mr-3
+          img.rounded-circle(src="https://picsum.photos/id/10/40" alt="Redes Sociais")
+        a(href="javascript:void(0);").mr-3
+          img.rounded-circle(src="https://picsum.photos/id/1001/40" alt="Redes Sociais")
+        a(href="javascript:void(0);").mr-3
+          img.rounded-circle(src="https://picsum.photos/id/1002/40" alt="Redes Sociais")
 
 mixin menu-auxiliar-content
   nav.folders
@@ -580,7 +580,7 @@ mixin menu-auxiliar-content
           a.item()
             .content Acompanhe o Planalto
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -598,7 +598,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Pronunciamentos
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -607,7 +607,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Notas Oficiais
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -619,7 +619,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Notas e Comunicados
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -634,7 +634,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Foto Oficial
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -643,7 +643,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Área de Imprensa
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -664,7 +664,7 @@ mixin menu-auxiliar-content
           a.item()
             .content Conheça a Presidência
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -676,7 +676,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Palácios e Residências
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -709,7 +709,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Acervo
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -730,7 +730,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Ministros
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -808,7 +808,7 @@ mixin menu-auxiliar-content
           a.item()
             .content Mensagem presidencial
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -826,7 +826,7 @@ mixin menu-auxiliar-content
           a.item()
             .content Vice-Presidência
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -847,7 +847,7 @@ mixin menu-auxiliar-content
               a.item()
                 .content Discursos e Pronunciamentos
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -859,13 +859,13 @@ mixin menu-auxiliar-content
           a.item()
             .content Acesso à Informação
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item(disabled)
                 .content Institucional
                 .support
-                  i.fas.fa-angle-right
+                  +icon.fa-angle-right
               ul
                 li
                   a.item()
@@ -913,7 +913,7 @@ mixin menu-auxiliar-content
           a.item()
             .content Centrais de Conteúdo
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()
@@ -928,7 +928,7 @@ mixin menu-auxiliar-content
           a.item()
             .content Fale Conosco
             .support
-              i.fas.fa-angle-right
+              +icon.fa-angle-right
           ul()
             li
               a.item()

@@ -2,9 +2,7 @@ mixin accordion
   - let className = attributes.class
   - let componentClass = prefix + "accordion"
   - className = className ? componentClass + " " + className : componentClass
-  div(class=className
-      negative=attributes.negative
-      single=attributes.single)
+  div(class=className, negative=attributes.negative, single=attributes.single)
     if block
       block
 
@@ -13,9 +11,9 @@ mixin accordion-item(title="Título")
     button.header(type="button" aria-controls=attributes.id aria-expanded=attributes.active ? "true" : "false")
       span.icon
         if className
-          i.fas.fa-angle-up(role="img" aria-label="contrai o conteúdo do acordião")
+          +icon.fa-angle-up
         else
-          i.fas.fa-angle-down(role="img" aria-label="expande o conteúdo do acordião")
+          +icon.fa-angle-down
       span.title=title
   .content(id=attributes.id aria-hidden=attributes.active ? "false" : "true")
     if block

@@ -9,11 +9,11 @@ append content
     .col-auto
       +badge()(bottom danger)
         .icon
-        .content: i.fas.fa-user-tie.fa-2x.text-primary-default
+        .content: +icon.fa-user-tie.fa-2x.text-primary-default
     .col-auto
       +badge()(bottom success)
         .icon
-        .content: i.fas.fa-user-tie.fa-2x.text-primary-default
+        .content: +icon.fa-user-tie.fa-2x.text-primary-default
     .col-auto
       .d-inline-flex.align-items-center
         +badge()(success)
@@ -21,28 +21,28 @@ append content
           .content
             +avatar
               .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
-  
+
   p.h5.mt-5 Sinalização de status com símbolo
   .row
     .col-auto
       +badge()(bottom warning)
-        .content: i.fas.fa-file.fa-2x
-        .icon: i.fas.fa-exclamation-triangle
+        .content: +icon.fa-file.fa-2x
+        .icon: +icon.fa-exclamation-triangle
     .col-auto
       +badge().ml-3(bottom success)
-        .icon: i.fas.fa-check
-        .content: i.fas.fa-plane-departure.fa-2x
+        .icon: +icon.fa-check
+        .content: +icon.fa-plane-departure.fa-2x
 
   p.h5.mt-5 Contagem
   .row
     .col-auto
       +badge()(danger)
         .icon 5
-        .content: i.fas.fa-car.fa-2x
+        .content: +icon.fa-car.fa-2x
     .col-auto
       +badge()(bottom danger)
         .icon 5
-        .content: i.fas.fa-car.fa-2x
+        .content: +icon.fa-car.fa-2x
     .col-auto
       .d-inline-flex.align-items-center
         +badge()(danger)
@@ -52,5 +52,5 @@ append content
               .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
     .col-auto
       +badge()(danger)
-        .content: i.fas.fa-envelope.fa-2x
+        .content: +icon.fa-envelope.fa-2x
         .icon 999+

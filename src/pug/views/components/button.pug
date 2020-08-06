@@ -6,45 +6,36 @@ append vars
 append content
   p.h5 Ênfase
   div
-    +button()(primary) Botão
-    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
-      +button()(secondary)
-        i.fas.fa-city.mr-1
-        | Botão
-    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
-      +button()(secondary)
-        | Botão
-        i.fas.fa-city.ml-1
-    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
-      +button Botão
+    +button.primary Botão
+    +button.secondary.mt-3.mt-sm-0.ml-sm-3
+      +icon.fa-city.mr-1
+      | Botão
+    +button.mt-3.mt-sm-0.ml-sm-3 Botão
   .mt-3.text-center.text-sm-left
-    +button()(primary circle)
-      i.fas.fa-city
-    +button()(secondary circle).ml-3
-      i.fas.fa-city
-    +button()(circle).ml-3
-      i.fas.fa-city
+    +button.primary.circle(aria-label="Ícone ilustrativo")
+      +icon.fa-city
+    +button.secondary.circle.ml-3(aria-label="Ícone ilustrativo")
+      +icon.fa-city
+    +button.circle.ml-3(aria-label="Ícone ilustrativo")
+      +icon.fa-city
 
   p.h5.mt-5 Densidade
   div
-    +button()(secondary large)
+    +button.secondary.large
       | Baixa
-    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
-      +button()(secondary)
-        | Padrão
-    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
-      +button()(secondary small)
-        | Alta
-    .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3.text-center.text-sm-left
+    +button.secondary.mt-3.mt-sm-0.ml-sm-3
+      | Padrão
+    +button.secondary.small.mt-3.mt-sm-0.ml-sm-3
+      | Alta
   .mt-3.text-center.text-sm-left
-    +button()(secondary circle large)
-      i.fas.fa-city
-    +button()(circle secondary).ml-3
-      i.fas.fa-city
-    +button()(secondary circle small).ml-3
-      i.fas.fa-city
+    +button.secondary.circle.large(aria-label="Ícone ilustrativo")
+      +icon.fa-city
+    +button.circle.secondary.ml-3(aria-label="Ícone ilustrativo")
+      +icon.fa-city
+    +button.secondary.circle.small.ml-3(aria-label="Ícone ilustrativo")
+      +icon.fa-city
 
   p.h5.mt-5 Estados
-  +button()(secondary disabled) Desativado
+  +button.secondary(disabled) Desativado
   .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
-    +button()(primary loading) Carregando
+    +button.primary.loading Carregando

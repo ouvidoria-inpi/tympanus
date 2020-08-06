@@ -18,7 +18,8 @@ mixin footer-list-filler(attributes)
     div(class = col)
       +list-item()(link)
         .content.text-down-01.text-bold.text-uppercase= 'Categoria '+ n
-        .support: i.fas.fa-angle-up
+        .support
+          +icon.fa-angle-up
       +list
         - let i = 0;
         while i <= itens

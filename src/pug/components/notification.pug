@@ -26,11 +26,11 @@ mixin notification-filler
     +tabs()
       +tab-nav()
         +tab-item(title="Configurações" panel="panel-11")
-          i.fas.fa-cog
+          +icon.fa-cog
         +tab-item(title="Notificações" panel="panel-21" class="is-active")
-          i.fas.fa-bell
+          +icon.fa-bell
         +tab-item(title="Mensagens" panel="panel-31" )
-          i.fas.fa-envelope
+          +icon.fa-envelope
       +tab-content
         +tab-pane(id="panel-11")
           p Painel Configurações
@@ -125,11 +125,11 @@ mixin notification-filler
           +list
             +list-header("Lista de Mensagens")
               .actions
-                +button()(circle small)
-                  i.fas.fa-sort-alpha-up
+                +button.circle.small(aria-label="Mudar ordenação")
+                  +icon.fa-sort-alpha-up
                 span.mx-3 |
-                +button()(circle small)
-                  i.fas.fa-search
+                +button.circle.small(aria-label="Buscar")
+                  +icon.fa-search
             +list-item()(link).divider
               div.icon.active
                 i.fa-lg.fas.fa-envelope-open
@@ -210,5 +210,4 @@ mixin notification-filler
                 div.action Ocultar todas as notificações
 
   +notification-footer
-    +button()(secondary small)
-      | Sair
+    +button.secondary.small Sair

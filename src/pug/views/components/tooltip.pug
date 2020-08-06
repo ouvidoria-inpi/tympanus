@@ -11,23 +11,23 @@ append content
           +list-header("Tooltip")
           +list-item()
             .content
-              strong Tipo: 
+              strong Tipo:
               | texto simples
           +list-item()
             .content
-              strong Comportamento: 
+              strong Comportamento:
               | mouseOver
           +list-item()
             .content
-              strong Permanência: 
+              strong Permanência:
               | por evento mouseOver
           +list-item()
             .content
-              strong Direção: 
+              strong Direção:
               | padrão (em cima)
           +list-item()
             .content
-              strong Semântica: 
+              strong Semântica:
               | padrão (informação)
       .col-md-6.text-center
         a(href="javascript:void(0);")
@@ -40,23 +40,23 @@ append content
           +list-header("Tooltip")
           +list-item()
             .content
-              strong Tipo: 
+              strong Tipo:
               | texto auxiliar
           +list-item()
             .content
-              strong Comportamento: 
+              strong Comportamento:
               | mouseOver
           +list-item()
             .content
-              strong Permanência: 
+              strong Permanência:
               | por evento mouseOver
           +list-item()
             .content
-              strong Direção: 
+              strong Direção:
               | em cima, à esquerda, à direita e em baixo
           +list-item()
             .content
-              strong Semântica: 
+              strong Semântica:
               | informação, sucesso, erro e advertência
       .col-md-6.text-center
         div.mb-3
@@ -82,31 +82,31 @@ append content
           +list-header("Tooltip")
           +list-item()
             .content
-              strong Tipo: 
+              strong Tipo:
               | texto com input
           +list-item()
             .content
-              strong Comportamento: 
+              strong Comportamento:
               | onload
           +list-item()
             .content
-              strong Permanência: 
+              strong Permanência:
               | tempo (10s)
           +list-item()
             .content
-              strong Direção: 
+              strong Direção:
               | em baixo
           +list-item()
             .content
-              strong Semântica: 
+              strong Semântica:
               | advertência
       .col-md-6
         +input("Senha (Tooltip no campo - Advertência)")(id="senha" type="password" class="has-icon" placeholder="Digite sua senha de 8 a 11 dígitos")
           button.icon(type='button')
             span.sr-only Mostrar senha
-            i.fas.fa-eye
+            +icon.fa-eye
         +tooltip("O Caps Lock está ligado!")(id="tt6" warning place="bottom" active=true timer="10000")
-            span.subtext Desative antes de digitar    
+          span.subtext Desative antes de digitar
     hr
     .row.align-items-center
       .col-md-6
@@ -114,23 +114,23 @@ append content
           +list-header("PopOver")
           +list-item()
             .content
-              strong Tipo: 
+              strong Tipo:
               | popover simples
           +list-item()
             .content
-              strong Comportamento: 
+              strong Comportamento:
               | mouseOver
           +list-item()
             .content
-              strong Permanência: 
+              strong Permanência:
               | tempo (5s) ou ação direta do usuário
           +list-item()
             .content
-              strong Direção: 
+              strong Direção:
               | em baixo
           +list-item()
             .content
-              strong Semântica: 
+              strong Semântica:
               | sucesso
       .col-md-6.text-center
         a(href="javascript:void(0);").h5 PopOver Simples
@@ -148,33 +148,33 @@ append content
           +list-header("PopOver")
           +list-item()
             .content
-              strong Tipo: 
+              strong Tipo:
               | popover com ícone e botão
           +list-item()
             .content
-              strong Comportamento: 
+              strong Comportamento:
               | mouseOver
           +list-item()
             .content
-              strong Permanência: 
+              strong Permanência:
               | ação direta do usuário
           +list-item()
             .content
-              strong Direção: 
+              strong Direção:
               | à direita (conflito de limite de tela)
           +list-item()
             .content
-              strong Semântica: 
+              strong Semântica:
               | adverência
       .col-md-6.text-center
         a(href="javascript:void(0);").h5 PopOver com ícone e botão- Warning
         +tooltip("Incluído com sucesso!")(id="tt8" warning popover=true place="right")
           +popover-header
-            i.fas.fa-exclamation-triangle.fa-2x
+            +icon.fa-exclamation-triangle.fa-2x
           +popover-body
             span.subtext É recomendado que o cadastro seja atualizado antes de prosseguir.
           +popover-footer
-            +button()(primary)
+            +button.primary
               span Atualizar
     hr
     .row.align-items-center
@@ -183,29 +183,29 @@ append content
           +list-header("PopOver")
           +list-item()
             .content
-              strong Tipo: 
+              strong Tipo:
               | popover com ícone
           +list-item()
             .content
-              strong Comportamento: 
+              strong Comportamento:
               | mouseOver
           +list-item()
             .content
-              strong Permanência: 
+              strong Permanência:
               | tempo (3s) ou ação direta do usuário
           +list-item()
             .content
-              strong Direção: 
+              strong Direção:
               | à esquerda
           +list-item()
             .content
-              strong Semântica: 
+              strong Semântica:
               | erro
       .col-md-6.text-center
         a(href="javascript:void(0);").h5 PopOver com ícone - Erro
         +tooltip()(id="tt9" error popover=true timer="3000" place="left")
           +popover-header
-            i.fas.fa-ban.fa-2x
+            +icon.fa-ban.fa-2x
           +popover-body
             span.subtext Essa ação só é permitida após o preenchimento dos campos no formulário!
     hr
@@ -215,23 +215,23 @@ append content
           +list-header("PopOver")
           +list-item()
             .content
-              strong Tipo: 
+              strong Tipo:
               | popover com imagem
           +list-item()
             .content
-              strong Comportamento: 
+              strong Comportamento:
               | mouseOver
           +list-item()
             .content
-              strong Permanência: 
+              strong Permanência:
               | tempo (4s) ou ação direta do usuário
           +list-item()
             .content
-              strong Direção: 
+              strong Direção:
               | em baixo
           +list-item()
             .content
-              strong Semântica: 
+              strong Semântica:
               | informação
       .col-md-6.text-center
         a(href="javascript:void(0);").h5 PopOver com imagem

@@ -7,11 +7,9 @@ mixin upload
   - let feedbackIcon = attributes.feedbackIcon ? attributes.feedbackIcon : "fa-exclamation-circle"
   - let feedbackText = attributes.feedbackText ? ' ' + attributes.feedbackText : "mensagem de feedback"
 
-  div(
-    class=classComponent,
-  )
+  div(class=classComponent)
     label.upload-label(for=id)
-      i.fas.fa-upload
+      +icon.fa-upload
       span=' ' + label
 
     input.upload-input(
@@ -22,16 +20,16 @@ mixin upload
     )
 
     +button.upload-button(disabled=attributes.disabled)
-      i.fas.fa-upload
+      +icon.fa-upload
       span=' ' + label
 
     if (attributes.disabled)
       .feedback
-        i.fas.fa-exclamation-triangle
+        +icon.fa-exclamation-triangle
         span  Upload desabilitado
     else if (attributes.feedbackType) || (attributes.feedbackIcon) || (attributes.feedbackText)
       .feedback(class=feedbackType)
-        i.fas(class=feedbackIcon)
+        +icon(class=feedbackIcon)
         span=feedbackText
 
     .upload-list

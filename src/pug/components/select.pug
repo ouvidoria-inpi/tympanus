@@ -1,7 +1,6 @@
 mixin select(label="Label")
   - let className = [prefix + "select", attributes.class]
-  div(class=className 
-      multiple=attributes.multiple)
+  div(class=className, multiple=attributes.multiple)
     +input(label)(type="text" select)
     p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
     +card
@@ -17,5 +16,6 @@ mixin select(label="Label")
 mixin option(item="item")
   +list-item()
     if attributes.multiple
-      .support: i.fas.fa-plus-circle.text-primary-default
+      .support
+        +icon.fa-plus-circle.text-primary-default
     .content=item
