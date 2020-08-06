@@ -11,7 +11,7 @@ append content
   +checkbox("Opção 2 selecionada")#checkbox-2(ariaLabel="opção 2" checked)
   +checkbox("Opção 3")#checkbox-3(ariaLabel="opção 3")
   .feedback.mt-1
-    i.fas.fa-exclamation-triangle
+    +icon.fa-exclamation-triangle
     span  Texto de mensagem
 
   p.h5.mt-5 Listagem horizontal
@@ -24,5 +24,5 @@ append content
   +checkbox("Inválido")#check-state-invalid(ariaLabel="inválido" invalid)
   +checkbox("Válido")#check-state-valid(ariaLabel="válido" checked valid)
   .feedback.text-danger.mt-1
-    .icon: i.fas.fa-times-circle
+    .icon: +icon.fa-times-circle
     .content Preenchimento Obrigatório

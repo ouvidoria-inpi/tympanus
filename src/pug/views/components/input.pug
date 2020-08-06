@@ -26,17 +26,17 @@ append content
       +input("CPF")(id="cpf-id2" type="text" placeholder="Digite somente números" valid)
       .mt-1
         .feedback.color-success
-          .icon: i.fas.fa-check-circle
+          .icon: +icon.fa-check-circle
           | CPF válido
     .col-sm-4
       +input("CPF")(id="cpf-id3" type="text" placeholder="Digite somente números" invalid)
       .mt-1
         .feedback.color-danger
-          .icon: i.fas.fa-times-circle
+          .icon: +icon.fa-times-circle
           | CPF inválido
     .col-sm-4
       +input("CPF")(id="cpf-id4" type="text" placeholder="Digite somente números" disabled)
       .mt-1
         .feedback
-          .icon: i.fas.fa-exclamation-triangle
+          .icon: +icon.fa-exclamation-triangle
           | Campo Desabilitado

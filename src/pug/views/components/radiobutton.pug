@@ -12,7 +12,7 @@ append content
   +radio("opcao-3")#op-3(name="radio" ariaLabel="radio")
   +radio("opcao-4")#op-4(name="radio" ariaLabel="radio")
   .feedback.mt-1
-    i.fas.fa-exclamation-triangle
+    +icon.fa-exclamation-triangle
     span  Texto de mensagem
 
   p.h5.mt-5 Listagem horizontal
@@ -25,5 +25,5 @@ append content
   +radio("Inválido")#check-state-invalid(invalid name="validate-radio" ariaLabel="validate-radio")
   +radio("Válido")#check-state-valid(checked valid name="validate-radio" ariaLabel="validate-radio")
   .feedback.text-danger.mt-1
-    i.fas.fa-times-circle
+    +icon.fa-times-circle
     span  Preenchimento Obrigatório

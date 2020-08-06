@@ -13,15 +13,15 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, collapse
         .top-bar
           .title=attributes.title ? attributes.title : title
           .grid-button
-            +button()(circle).grid-small-trigger
-              i.fas.fa-th
+            +button.circle.grid-small-trigger(aria-label="Aplicar densidade alta")
+              +icon.fa-th
           .grid-button
-            +button()(circle).grid-large-trigger
-              i.fas.fa-th-large
+            +button.circle.grid-large-trigger(aria-label="Aplicar densidade baixa")
+              +icon.fa-th-large
           .divisor
           .search-button
-            +button()(circle).search-trigger
-              i.fas.fa-search
+            +button.circle.search-trigger(aria-label="Abrir Busca")
+              +icon.fa-search
         .search-bar
           +input("Buscar").search-input.is-medium.has-icon(
             placeholder="Buscar na tabela",
@@ -29,27 +29,27 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, collapse
           )
             button.icon(type='button')
               span.sr-only Buscar
-              i.fas.fa-search
-          +button()(circle).search-close.ml-1
-            i.fas.fa-times
+              +icon.fa-search
+          +button.circle.search-close.ml-1(aria-label="Fechar busca")
+            +icon.fa-times
         if (attributes.checkbox)
           .selected-bar
             .info
-              +button()(primary).mobile.select-all
-                i.fas.fa-minus-square
+              +button.primary.mobile.select-all
+                +icon.fa-minus-square
               span.count 0
               span.text item selecionado
             .action-button
-              +button()(primary).delete-trigger
+              +button.primary.delete-trigger
                 span Excluir
-                i.fas.fa-trash-alt
+                +icon.fa-trash-alt
             .action-button
-              +button()(primary).download-trigger
+              +button.primary.download-trigger
                 span Download
-                i.fas.fa-download
+                +icon.fa-download
             .action-button.mobile
-              +button()(primary)
-                i.fas.fa-ellipsis-v
+              +button.primary
+                +icon.fa-ellipsis-v
     .responsive
       table
         thead
@@ -94,7 +94,7 @@ mixin table(datatable=false, title='Título da Tabela', checkbox=false, collapse
               span de 3 páginas
               span.divider
             .arrows
-              +button()(circle secondary)
+              +button.circle.secondary(aria-label="Página anterior")
                 i.fa.fa-chevron-left
-              +button()(circle secondary)
+              +button.circle.secondary(aria-label="Página seguinte")
                 i.fa.fa-chevron-right

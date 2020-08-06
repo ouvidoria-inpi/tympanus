@@ -19,3 +19,14 @@
     border-color: v(color-primary-default);
   }
 }
+
+a.#{$prefix}button {
+  line-height: 40px;
+  white-space: nowrap;
+  &.large {
+    line-height: 48px;
+  }
+  &.small {
+    line-height: 32px;
+  }
+}

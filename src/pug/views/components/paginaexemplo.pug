@@ -21,7 +21,7 @@ block template
         +menu
           a.header
             .support
-              i.fas.fa-angle-up
+              +icon.fa-angle-up
             .content Menu Contextual
           +menu-auxiliar-content
       .col.container-main
@@ -45,7 +45,7 @@ block template
               +input("CPF")(id="cpf-id3" type="text" placeholder="Digite somente números" invalid)
               .mt-1
                 .feedback.color-danger
-                  .icon: i.fas.fa-times-circle
+                  .icon: +icon.fa-times-circle
                   | CPF inválido
             .col-sm-4
               p.label.mb-0 Sexo
@@ -82,8 +82,8 @@ block template
               p.text-down-01.mt-1 Texto auxiliar ao preenchimento, tem a função de previnir erros.
           .row.mt-5-text-right
             .col-sm-12
-              +button()(secondary)
-                i.fas.fa-angle-left
+              +button.secondary
+                +icon.fa-angle-left
                 | Cancelar
               .d-inline.ml-3
               .br-scrim.is-foco
@@ -95,11 +95,11 @@ block template
                       .br-modal-body
                         p Deseja finalizar o cadastro?
                       .br-modal-footer.justify-content-end
-                        +button()(secondary small).mx-3 Cancelar
-                        +button()(primary small).mx-3 Confirmar
-              +button()(primary)
+                        +button.secondary.small.mx-3 Cancelar
+                        +button.primary.small.mx-3 Confirmar
+              +button.primary
                 | Cadastrar
-                i.fas.fa-angle-right
+                +icon.fa-angle-right
           +divider
           .row.mt-5
             .col-sm-12
@@ -151,21 +151,21 @@ block template
                       .flex-grow-1
                         p.h5.text-primary-default.mb-0 Maria Amorim
                         span UX Designer
-                    +button()(circle small)
-                      i.fas.fa-ellipsis-v
+                    +button.circle.small(aria-label="Ícone ilustrativo")
+                      +icon.fa-ellipsis-v
                   .content
                     img(src="https://picsum.photos/id/100/1080" alt="Imagem de exemplo")
                     p.mt-3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
                   .footer
                     .text-right
-                      +button()(circle small).expand
-                        i.fas.fa-angle-down
+                      +button.circle.small.expand(aria-label="Expandir o card")
+                        +icon.fa-angle-down
                     .expanded
                       +list.mx-n3
                         +list-header("Items de 3 linhas com separadores")
                         +list-item.three-lines.divider
                           .support
-                            i.fas.fa-heartbeat
+                            +icon.fa-heartbeat
                           .content
                             .subtitle Subtítulo
                             .text Texto Principal
@@ -173,7 +173,7 @@ block template
                           .support meta
                         +list-item.three-lines.divider
                           .support
-                            i.fas.fa-heartbeat
+                            +icon.fa-heartbeat
                           .content
                             .subtitle Subtítulo
                             .text Texto Principal
@@ -181,7 +181,7 @@ block template
                           .support meta
                         +list-item.three-lines
                           .support
-                            i.fas.fa-heartbeat
+                            +icon.fa-heartbeat
                           .content
                             .subtitle Subtítulo
                             .text Texto Principal

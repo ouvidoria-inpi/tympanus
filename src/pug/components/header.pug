@@ -12,8 +12,8 @@ mixin header-default-content
         .sign Ministério da Ciência e Tecnologia, Inovações e Comunicações
       .actions
         .links
-          +button()(circle small)
-            i.fas.fa-ellipsis-v
+          +button.circle.small(aria-label="Abrir Acesso Rápido")
+            +icon.fa-ellipsis-v
           ul
             li.title Acesso Rápido
             li: a(href="javascript:void(0);") Link de acesso 1
@@ -21,32 +21,32 @@ mixin header-default-content
             li: a(href="javascript:void(0);") Link de acesso 3
             li: a(href="javascript:void(0);") Link de acesso 4
         .functions
-          +button()(circle small)
-            i.fas.fa-th
+          +button.circle.small(aria-label="Abrir Funcionalidades do Sistema")
+            +icon.fa-th
           ul
             li.title Funcionalidades do Sistema
             li
-              +button()(circle small)
-                i.fas.fa-chart-bar
+              +button.circle.small
+                +icon.fa-chart-bar
                 span.text Funcionalidade 1
             li
-              +button()(circle small)
-                i.fas.fa-headset
+              +button.circle.small
+                +icon.fa-headset
                 span.text Funcionalidade 2
             li
-              +button()(circle small)
-                i.fas.fa-comment
+              +button.circle.small
+                +icon.fa-comment
                 span.text Funcionalidade 3
             li
-              +button()(circle small)
-                i.fas.fa-adjust
+              +button.circle.small
+                +icon.fa-adjust
                 span.text Funcionalidade 4
         .search-btn
-          +button()(circle small)
-            i.fas.fa-search
+          +button.circle.small(aria-label="Abrir Busca")
+            +icon.fa-search
         .login
-          +button()(small)
-            i.fas.fa-user
+          +button.small
+            +icon.fa-user
             span.ml-1 Entrar
         .avatar
           +badge()(danger)
@@ -54,20 +54,20 @@ mixin header-default-content
             .content
               +avatar
                 .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
-          +button()(small circle)
-            i.fas.fa-angle-down
+          +button.circle.small(aria-label="Abrir Menu de usuário")
+            +icon.fa-angle-down
       .menu
-        +button()(circle small)
-            i.fas.fa-bars
+        +button.circle.small(aria-label="Abrir Menu Principal")
+          +icon.fa-bars
         .title Sistema Nacional de Laboratórios em Nanotecnologias (SisNANO)
         .subtitle Subtítulo do Cabeçalho
       .search
         +input("")( type="text" class="has-icon" placeholder="O que você procura?")
           button.icon(type='button')
             span.icon
-              i.fas.fa-search
-        +button()(circle small).search-close
-            i.fas.fa-times
+              +icon.fa-search
+        +button.circle.small.search-close(aria-label="Fechar Busca")
+          +icon.fa-times
 
 mixin header-base-content
   .flex-container
@@ -76,8 +76,8 @@ mixin header-base-content
       .sign Assinatura Padrão do Cabeçalho
     .actions
       .links
-        +button()(circle small)
-          i.fas.fa-ellipsis-v
+        +button.circle.small(aria-label="Abrir Acesso Rápido")
+          +icon.fa-ellipsis-v
         ul
           li.title Acesso Rápido
           li: a(href="javascript:void(0);") Link de acesso 1
@@ -85,32 +85,32 @@ mixin header-base-content
           li: a(href="javascript:void(0);") Link de acesso 3
           li: a(href="javascript:void(0);") Link de acesso 4
       .functions
-        +button()(circle small)
-          i.fas.fa-th
+        +button.circle.small(aria-label="Abrir Funcionalidades do Sistema")
+          +icon.fa-th
         ul
           li.title Funcionalidades do Sistema
           li
-            +button()(circle small)
-              i.fas.fa-chart-bar
+            +button.circle.small
+              +icon.fa-chart-bar
               span.text Funcionalidade 1
           li
-            +button()(circle small)
-              i.fas.fa-headset
+            +button.circle.small
+              +icon.fa-headset
               span.text Funcionalidade 2
           li
-            +button()(circle small)
-              i.fas.fa-comment
+            +button.circle.small
+              +icon.fa-comment
               span.text Funcionalidade 3
           li
-            +button()(circle small)
-              i.fas.fa-adjust
+            +button.circle.small
+              +icon.fa-adjust
               span.text Funcionalidade 4
       .search-btn
-        +button()(circle small)
-          i.fas.fa-search
+        +button.circle.small(aria-label="Abrir Busca")
+          +icon.fa-search
       .login
-        +button()(small)
-          i.fas.fa-user
+        +button.small
+          +icon.fa-user
           span.ml-1 Entrar
       div.avatar
         +badge()(danger)
@@ -118,19 +118,19 @@ mixin header-base-content
           .content
             +avatar
               .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
-        +button()(small circle)
-          i.fas.fa-angle-down
+        +button.circle.small(aria-label="Abrir Menu de usuário")
+          +icon.fa-angle-down
       +notification()()
         +notification-filler
     .menu
-      +button()(circle small)
-          i.fas.fa-bars
+      +button.circle.small(aria-label="Abrir Menu Principal")
+        +icon.fa-bars
       .title Título Padrão do Cabeçalho
       .subtitle Subtítulo do Cabeçalho
     .search
       +input("")( type="text" class="has-icon" placeholder="O que você procura?")
         button.icon(type='button')
           span.icon
-            i.fas.fa-search
-      +button()(circle small).search-close
-          i.fas.fa-times
+            +icon.fa-search
+      +button.circle.small.search-close(aria-label="Fechar Busca")
+        +icon.fa-times

@@ -10,12 +10,12 @@ append content
       +modal-body
         p Você está sendo redirecionado para a página inicial do sistema
       +modal-footer
-        +button()(secondary small).m-2 Cancelar
-        +button()(primary small).m-2 Retornar
+        +button.secondary.small.m-2 Cancelar
+        +button.primary.small.m-2 Retornar
 
 append content
   .row
-    +button()(secondary).is-large.m-2 Modal com Scrim
+    +button.secondary.large.m-2 Modal com Scrim
   hr
 
 append content
@@ -24,8 +24,8 @@ append content
     +modal-body
       p Você está sendo redirecionado para a página inicial do sistema
     +modal-footer
-      +button()(secondary small).m-2 Cancelar
-      +button()(primary small).m-2 Retornar
+      +button.secondary.small.m-2 Cancelar
+      +button.primary.small.m-2 Retornar
   hr
   +modal
     +modal-header("Retornar para página inicial?")
@@ -33,8 +33,8 @@ append content
     +modal-body
       p Você está sendo redirecionado para a página inicial do sistema
     +modal-footer
-      +button()(secondary small).m-2 Ação 1
-      +button()(primary small).m-2 Ação 2
+      +button.secondary.small.m-2 Ação 1
+      +button.primary.small.m-2 Ação 2
   hr
   +modal
     +modal-header("Título do modal de exemplo com uso de duas linhas, título do modal de exemplo com uso de duas linhas")
@@ -42,8 +42,8 @@ append content
     +modal-body
       p Texto com duas linhas Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     +modal-footer
-      +button()(secondary small).m-2 Ação 1
-      +button()(primary small).m-2 Ação 2
+      +button.secondary.small.m-2 Ação 1
+      +button.primary.small.m-2 Ação 2
   hr
   +modal
     +modal-header("Título do modal de exemplo com uso de uma linha")(class="is-inline")
@@ -51,22 +51,22 @@ append content
     +modal-body
       p Texto com uma linha Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     +modal-footer
-      +button()(secondary small).m-2 Ação 1
-      +button()(primary small).m-2 Ação 2
+      +button.secondary.small.m-2 Ação 1
+      +button.primary.small.m-2 Ação 2
   hr
   +modal(class="is-xsmall")
     +modal-body(class="align-center")
       span.is-loading
       br
     +modal-footer(class="justify-content-around")
-      +button()(secondary small).m-2 Cancelar
+      +button.secondary.small.m-2 Cancelar
   hr
   +modal
     +modal-body
       p Modal de alerta sem título Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     +modal-footer
-      +button()(secondary small).m-2 Ação 1
-      +button()(primary small).m-2 Ação 2
+      +button.secondary.small.m-2 Ação 1
+      +button.primary.small.m-2 Ação 2
   hr
   +modal
     +modal-header("Escolha uma conta")
@@ -78,8 +78,8 @@ append content
         +option("opção 2", "2")
         +option("opção 3", "3")
     +modal-footer
-      +button()(secondary small).m-2 Cancelar
-      +button()(primary small).m-2 Retornar
+      +button.secondary.small.m-2 Cancelar
+      +button.primary.small.m-2 Retornar
   hr
   +modal
     +modal-header("Buscar pelos estados")
@@ -94,8 +94,8 @@ append content
       +checkbox("Distrito Federal(DF)")(id="selecao-df" class="d-block mt-1")
       +checkbox("Espírito Santo(ES)")(id="selecao-es" class="d-block mt-1")
     +modal-footer
-      +button()(secondary small).m-2 Cancelar
-      +button()(primary small).m-2 Retornar
+      +button.secondary.small.m-2 Cancelar
+      +button.primary.small.m-2 Retornar
   hr
   +modal
     +modal-header("Opções de Visualização")
@@ -106,8 +106,8 @@ append content
       +radio("Áudio")(id="op-audio" class="d-block mt-1" name="op")
       +radio("Todas")(id="op-todas" class="d-block mt-1" name="op")
     +modal-footer
-      +button()(secondary small).m-2 Cancelar
-      +button()(primary small).m-2 Retornar
+      +button.secondary.small.m-2 Cancelar
+      +button.primary.small.m-2 Retornar
   hr
   +modal
     +modal-header("Autenticar pelo Gov.br")
@@ -118,11 +118,11 @@ append content
       +input("Usuário")(id="auth-usuario" placeholder="Insira um texto")
       +input("Senha")(id="auth-password" type="password" placeholder="Digite sua senha de 8 a 11 dígitos")
         button.icon(type='button')
-          i.fas.fa-eye
+          +icon.fa-eye
           span.sr-only Mostrar senha
     +modal-footer
-      +button()(secondary small).m-2 Cancelar
-      +button()(primary small).m-2 Retornar
+      +button.secondary.small.m-2 Cancelar
+      +button.primary.small.m-2 Retornar
   hr
   +modal(class="is-large")
     +modal-header("Novo evento")
@@ -146,13 +146,13 @@ append content
           +select("Hora Final")(id="evento-hora-final")
             +option("12:00", "12")
     +modal-footer
-      +button()(secondary small).m-2 Cancelar
-      +button()(primary small).m-2 Entrar
+      +button.secondary.small.m-2 Cancelar
+      +button.primary.small.m-2 Entrar
   hr
   +modal(class="is-scroll")
     +modal-header("Concorda com os termos?")
     +modal-body
       .br-card Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Mauris id gravida nulla. Cras sagittis dapibus felis vitae semper. Donec vel hendrerit ante. Etiam sed blandit nisi. Praesent iaculis, nisl eget rutrum vehicula, lacus tortor feugiat diam, et euismod lacus metus eget nisi. Sed fermentum, nunc nec efficitur pharetra, felis dolor feugiat massa, et semper turpis felis quis ligula. Quisque non metus at risus maximus ultrices. Nam vel massa tellus. Vestibulum lobortis dui et pellentesque porta. Cras rhoncus augue a mauris porttitor, in malesuada metus eleifend. Praesent ac lacinia lorem. Sed cursus nisl ligula, vel ultrices ex pellentesque eu. Curabitur facilisis egestas libero, non pharetra lacus ultricies quis. Mauris non finibus justo, eu varius metus. Donec nec eros semper, consequat turpis id, fermentum dolor.
     +modal-footer
-      +button()(secondary small).m-2 Negar
-      +button()(primary small disabled).m-2 Aceitar
+      +button.secondary.small.m-2 Negar
+      +button.primary.small.m-2(disabled) Aceitar

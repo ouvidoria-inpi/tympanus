@@ -44,29 +44,29 @@ append content
         +list-header("Itens de 1 linha sem separadores")
         +list-item()(link)
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content Texto de uma linha
           .support
-            i.fas.fa-angle-right
+            +icon.fa-angle-right
         +list-item()(link)
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content Texto de uma linha
           .support
-            i.fas.fa-angle-right
+            +icon.fa-angle-right
         +list-item()(link)
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content Texto de uma linha
           .support
-            i.fas.fa-angle-right
+            +icon.fa-angle-right
 
     .col-sm-6.col-md-4.mt-5.mt-sm-0
       +list()(checkable)
         +list-header("Itens de 2 linhas com controles e separadores")
         +list-item.two-lines.divider(disabled)
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .text Texto principal
             .description Texto secundário
@@ -74,7 +74,7 @@ append content
             +checkbox("")(disabled ariaLabel="descreva o elemento")#checkbox-1
         +list-item.two-lines.divider
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .text Texto principal
             .description Texto secundário
@@ -82,7 +82,7 @@ append content
             +checkbox("")(ariaLabel="descreva o elemento")#checkbox-2
         +list-item.two-lines.selected
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .text Texto principal
             .description Texto secundário
@@ -94,7 +94,7 @@ append content
         +list-header("Items de 3 linhas com separadores")
         +list-item.three-lines.divider
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .subtitle Subtítulo
             .text Texto Principal
@@ -102,7 +102,7 @@ append content
           .support meta
         +list-item.three-lines.divider
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .subtitle Subtítulo
             .text Texto Principal
@@ -110,7 +110,7 @@ append content
           .support meta
         +list-item.three-lines
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .subtitle Subtítulo
             .text Texto Principal
@@ -121,9 +121,9 @@ append content
       +list()(collapsible)
         +list-header("Versão com expandir")
         +list-item()(link)
-          .support: i.fas.fa-running
+          .support: +icon.fa-running
           .content Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha
@@ -134,9 +134,9 @@ append content
           +list-item
             .content Texto de uma linha
         +list-item()(link active)
-          .support: i.fas.fa-heartbeat
+          .support: +icon.fa-heartbeat
           .content Texto de uma linha
-          .support: i.fas.fa-angle-up
+          .support: +icon.fa-angle-up
         +list
           +list-item
             .content Texto de uma linha
@@ -147,9 +147,9 @@ append content
           +list-item
             .content Texto de uma linha
         +list-item()(link)
-          .support: i.fas.fa-burn
+          .support: +icon.fa-burn
           .content Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha
@@ -160,9 +160,9 @@ append content
           +list-item
             .content Texto de uma linha
         +list-item()(link)
-          .support: i.fas.fa-globe
+          .support: +icon.fa-globe
           .content Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha
@@ -177,9 +177,9 @@ append content
       +list()(collapsible unique )
         +list-header("Versão com expandir unicamente")
         +list-item()(link)
-          .support: i.fas.fa-running
+          .support: +icon.fa-running
           .content Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha
@@ -190,9 +190,9 @@ append content
           +list-item
             .content Texto de uma linha
         +list-item()(link active)
-          .support: i.fas.fa-heartbeat
+          .support: +icon.fa-heartbeat
           .content Texto de uma linha
-          .support: i.fas.fa-angle-up
+          .support: +icon.fa-angle-up
         +list
           +list-item
             .content Texto de uma linha
@@ -203,9 +203,9 @@ append content
           +list-item
             .content Texto de uma linha
         +list-item()(link)
-          .support: i.fas.fa-burn
+          .support: +icon.fa-burn
           .content Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha
@@ -216,9 +216,9 @@ append content
           +list-item
             .content Texto de uma linha
         +list-item()(link)
-          .support: i.fas.fa-globe
+          .support: +icon.fa-globe
           .content Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha
@@ -233,9 +233,9 @@ append content
       +list()(collapsible unique three-lines)
         +list-header("Versão com expandir unicamente com mais de uma linha ( aceita os atributos: two-lines e three-lines )")
         +list-item()(link)
-          .support: i.fas.fa-running
+          .support: +icon.fa-running
           .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
@@ -246,9 +246,9 @@ append content
           +list-item
             .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
         +list-item()(link active)
-          .support: i.fas.fa-heartbeat
+          .support: +icon.fa-heartbeat
           .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
-          .support: i.fas.fa-angle-up
+          .support: +icon.fa-angle-up
         +list
           +list-item
             .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
@@ -259,9 +259,9 @@ append content
           +list-item
             .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
         +list-item()(link)
-          .support: i.fas.fa-burn
+          .support: +icon.fa-burn
           .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
@@ -272,9 +272,9 @@ append content
           +list-item
             .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
         +list-item()(link)
-          .support: i.fas.fa-globe
+          .support: +icon.fa-globe
           .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas Texto de três linhas
@@ -290,9 +290,9 @@ append content
       +list-header("Versão com expandir unicamente horizontal com mais de uma linha ( padrão com duas linhas )")
       .col
         +list-item()(link)
-          .support: i.fas.fa-running
+          .support: +icon.fa-running
           .content Texto de uma linha Texto de uma linha Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha Texto de uma linha Texto de uma linha
@@ -304,9 +304,9 @@ append content
             .content Texto de uma linha Texto de uma linha Texto de uma linha
       .col
         +list-item()(link active)
-          .support: i.fas.fa-heartbeat
+          .support: +icon.fa-heartbeat
           .content Texto de uma linha Texto de uma linha Texto de uma linha
-          .support: i.fas.fa-angle-up
+          .support: +icon.fa-angle-up
         +list
           +list-item
             .content Texto de uma linha
@@ -318,9 +318,9 @@ append content
             .content Texto de uma linha
       .col
         +list-item()(link)
-          .support: i.fas.fa-burn
+          .support: +icon.fa-burn
           .content Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha Texto de uma linha Texto de uma Texto de uma linha Texto de uma
@@ -332,9 +332,9 @@ append content
             .content Texto de uma linha  Texto de uma linha Texto de uma Texto de uma linha Texto de uma Texto de uma linha Texto de uma Texto de uma linha Texto de uma
       .col
         +list-item()(link)
-          .support: i.fas.fa-globe
+          .support: +icon.fa-globe
           .content Texto de uma linha
-          .support: i.fas.fa-angle-down
+          .support: +icon.fa-angle-down
         +list
           +list-item
             .content Texto de uma linha
@@ -352,29 +352,29 @@ append content
         +list-header("Itens de 1 linha sem separadores")
         +list-item()(link)
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content Texto de uma linha
           .support
-            i.fas.fa-angle-right
+            +icon.fa-angle-right
         +list-item()(link)
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content Texto de uma linha
           .support
-            i.fas.fa-angle-right
+            +icon.fa-angle-right
         +list-item()(link)
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content Texto de uma linha
           .support
-            i.fas.fa-angle-right
+            +icon.fa-angle-right
 
     .col-sm-6.col-md-4.mt-5.mt-sm-0
       +list.condensed
         +list-header("Items de 3 linhas com separadores")
         +list-item.three-lines.divider
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .subtitle Subtítulo
             .text Texto Principal
@@ -382,7 +382,7 @@ append content
           .support meta
         +list-item.three-lines.divider
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .subtitle Subtítulo
             .text Texto Principal
@@ -390,7 +390,7 @@ append content
           .support meta
         +list-item.three-lines
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .subtitle Subtítulo
             .text Texto Principal
@@ -402,7 +402,7 @@ append content
         +list-header("Itens de 2 linhas com controles e separadores")
         +list-item.two-lines.divider(disabled)
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .text Texto principal
             .description Texto secundário
@@ -410,7 +410,7 @@ append content
             +checkbox("")(ariaLabel="descreva o elemento")#checkbox-condensed-1
         +list-item.two-lines.divider
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .text Texto principal
             .description Texto secundário
@@ -418,7 +418,7 @@ append content
             +checkbox("")(ariaLabel="descreva o elemento")#checkbox-condensed-2
         +list-item.two-lines.selected
           .support
-            i.fas.fa-heartbeat
+            +icon.fa-heartbeat
           .content
             .text Texto principal
             .description Texto secundário
@@ -428,15 +428,15 @@ append content
   +list
     +list-header("Lista de E-mail")
       .actions
-        +button()(circle small aria-label="ordenação")
-          i.fas.fa-sort-alpha-up
+        +button.circle.small(aria-label="ordenação")
+          +icon.fa-sort-alpha-up
         span.mx-3 |
-        +button()(circle small aria-label="busca")
-          i.fas.fa-search
-        +button()(circle small aria-label="menu secundário")
-          i.fas.fa-ellipsis-v
+        +button.circle.small(aria-label="busca")
+          +icon.fa-search
+        +button.circle.small(aria-label="menu secundário")
+          +icon.fa-ellipsis-v
     +list-item()(link).two-lines.divider
-      .support: i.fas.fa-envelope-open.fa-lg.text-secondary-05
+      .support: +icon.fa-envelope-open.fa-lg.text-secondary-05
       .content
         .row.align-items-center
           .col-4.col-sm-3.col-lg-2
@@ -446,7 +446,7 @@ append content
             .description IU da web https://alm.serpro/ccm/com/resource/itemName/com.ibm.team.workitem.WorItem/18289068 ID:18289068 Lorem ipsum dolor sit amet consectetur adipisicing elit
       .support 04 de nov
     +list-item()(link).two-lines
-      .support: i.fas.fa-envelope-open.fa-lg.text-secondary-05
+      .support: +icon.fa-envelope-open.fa-lg.text-secondary-05
       .content
         .row.align-items-center
           .col-4.col-sm-3.col-lg-2
@@ -454,11 +454,11 @@ append content
           .col-8.col-sm-9.col-lg-10
             .subtitle Aceitar: Primeira Leitura - 05/11/2019
             .description
-              i.fas.fa-paperclip
+              +icon.fa-paperclip
               |  A Supgp e a Supgd informam que o Siscopweb está instável, fazendo com que algumas ações fiquem com tempo de Lorem ipsum dolor sit amet consectetur adipisicing elit
       .support 04 de nov
     +list-item()(link).two-lines
-      .support: i.fas.fa-envelope.fa-lg.text-primary-default
+      .support: +icon.fa-envelope.fa-lg.text-primary-default
       .content
         .row.align-items-center
           .col-4.col-sm-3.col-lg-2
@@ -468,19 +468,19 @@ append content
             .description A Supgp e a Supgd informam que o Siscopweb está instável, fazendo com que algumas ações fiquem com tempo de Lorem ipsum dolor sit amet consectetur adipisicing elit
       .support seg, 12:34
     +list-item()(link).two-lines.divider
-      .support: i.fas.fa-envelope-open.fa-lg.text-secondary-05
+      .support: +icon.fa-envelope-open.fa-lg.text-secondary-05
       .content
         .row.align-items-center
           .col-4.col-sm-3.col-lg-2
             .subtitle cronogramapg
           .col-8.col-sm-9.col-lg-10
             .subtitle
-              i.fas.fa-level-up-alt
+              +icon.fa-level-up-alt
               |  [SGP] Último dia para programar férias, licença prêmio, alterar a opção de tíquete e validar cartão de Lorem ipsum dolor sit amet consectetur adipisicing elit
             .description Prezado (a), Informamos que hoje é o último dia para que os empregados realizem sua programação de férias (período de Lorem ipsum dolor sit amet consectetur adipisicing elit)
       .support 04 de nov
     +list-item()(link).two-lines
-      .support: i.fas.fa-calendar-check.fa-lg.text-primary-default
+      .support: +icon.fa-calendar-check.fa-lg.text-primary-default
       .content
         .row.align-items-center
           .col-4.col-sm-3.col-lg-2

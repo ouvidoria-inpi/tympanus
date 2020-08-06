@@ -23,8 +23,5 @@ mixin modal-footer
       block
 
 mixin modal-close
-  button.close(
-    type="button"
-    data-dismiss="br-modal"
-    aria-label="Close")
-    i.fas.fa-times
+  button.close(type="button" data-dismiss="br-modal" aria-label="Close")
+    +icon.fa-times

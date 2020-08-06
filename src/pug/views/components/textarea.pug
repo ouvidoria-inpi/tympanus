@@ -15,15 +15,15 @@ append content
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id4" placeholder="Exemplo de textarea válido" rows=5 cols=5 valid)
       .feedback.color-success.mt-1
-        i.fas.fa-check-circle
+        +icon.fa-check-circle
         span Campo correto
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id5" placeholder="Exemplo de textarea inválido" rows=5 cols=5 invalid)
       .feedback.color-danger.mt-1
-        i.fas.fa-times-circle
+        +icon.fa-times-circle
         span Campo inválido
     .col-sm-4
       +textarea("Digite sua mensagem aqui")(id="textarea-id7" placeholder="Exemplo de textarea desabilitado" rows=5 cols=5 disabled)
       .feedback.mt-1
-        i.fas.fa-exclamation-triangle
+        +icon.fa-exclamation-triangle
         span Campo Desabilitado
