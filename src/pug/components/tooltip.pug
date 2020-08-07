@@ -1,11 +1,11 @@
 mixin tooltip(label)
   - let className = attributes.notification ? prefix + "notification" : prefix + "tooltip"
-  div(class=className)&attributes(attributes)
+  div(class=className role="tooltip")&attributes(attributes)
     if (attributes.popover || attributes.notification)
       if block
         block
-    else  
-      span.text=label
+    else
+      span.text(role="tooltip" id=attributes.ariaDescribedby)=label
       if block
         block
   mixin popover-image

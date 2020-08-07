@@ -32,7 +32,7 @@ append content
       .col-md-6.text-center
         a(href="javascript:void(0);")
           img(src="https://picsum.photos/50" alt="Avatar" style="border-radius:50%; width:50px; height:50px; border: 3px solid #ccc;")
-        +tooltip("Texto de Informação!")(id="tt1")
+        +tooltip("Texto de Informação!")
     hr
     .row.align-items-center
       .col-md-6
@@ -61,19 +61,19 @@ append content
       .col-md-6.text-center
         div.mb-3
           a(href="javascript:void(0);").h5 Informação
-          +tooltip("Fulano de Tal da Silva")(id="tt2" info place="top")
+          +tooltip("Fulano de Tal da Silva")(info place="top")
             span.subtext Diretor Presidente
         div.mb-3
           a(href="javascript:void(0);").h5 Sucesso
-          +tooltip("Incluído com Sucesso!")(id="tt3" success place="left")
+          +tooltip("Incluído com Sucesso!")(success place="left")
             span.subtext Protocolo 000.22-11
         div.mb-3
           a(href="javascript:void(0);").h5 Erro
-          +tooltip("Não foi possível logar!")(id="tt4" error place="right")
+          +tooltip("Não foi possível logar!")(error place="right")
             span.subtext Verifique seus dados
         div.mb-3
           a(href="javascript:void(0);").h5 Advertência
-          +tooltip("O Caps Lock está ligado!")(id="tt5" warning place="bottom")
+          +tooltip("O Caps Lock está ligado!")(warning place="bottom")
             span.subtext Desabilite antes de digitar
     hr
     .row.align-items-center
@@ -101,11 +101,11 @@ append content
               strong Semântica:
               | advertência
       .col-md-6
-        +input("Senha (Tooltip no campo - Advertência)")(id="senha" type="password" class="has-icon" placeholder="Digite sua senha de 8 a 11 dígitos")
+        +input("Senha (Tooltip no campo - Advertência)")(type="password" placeholder="Digite sua senha de 8 a 11 dígitos")#senha.has-icon
           button.icon(type='button')
             span.sr-only Mostrar senha
             +icon.fa-eye
-        +tooltip("O Caps Lock está ligado!")(id="tt6" warning place="bottom" active=true timer="10000")
+        +tooltip("O Caps Lock está ligado!")(warning place="bottom" active=true timer="10000")
           span.subtext Desative antes de digitar
     hr
     .row.align-items-center
@@ -134,7 +134,7 @@ append content
               | sucesso
       .col-md-6.text-center
         a(href="javascript:void(0);").h5 PopOver Simples
-        +tooltip("Cadastro Concluído")(id="tt7" success popover=true timer="5000" place="bottom")
+        +tooltip("Cadastro Concluído")(success popover=true timer="5000" place="bottom")
           +popover-header
             span.text Cadastro Concluído!
           +popover-body
@@ -168,7 +168,7 @@ append content
               | adverência
       .col-md-6.text-center
         a(href="javascript:void(0);").h5 PopOver com ícone e botão- Warning
-        +tooltip("Incluído com sucesso!")(id="tt8" warning popover=true place="right")
+        +tooltip("Incluído com sucesso!")(warning popover=true place="right")
           +popover-header
             +icon.fa-exclamation-triangle.fa-2x
           +popover-body
@@ -203,7 +203,7 @@ append content
               | erro
       .col-md-6.text-center
         a(href="javascript:void(0);").h5 PopOver com ícone - Erro
-        +tooltip()(id="tt9" error popover=true timer="3000" place="left")
+        +tooltip()(error popover=true timer="3000" place="left")
           +popover-header
             +icon.fa-ban.fa-2x
           +popover-body
@@ -235,7 +235,7 @@ append content
               | informação
       .col-md-6.text-center
         a(href="javascript:void(0);").h5 PopOver com imagem
-        +tooltip("Incluído com sucesso!")(id="tt10" info popover=true timer="4000" place="bottom")
+        +tooltip("Incluído com sucesso!")(info popover=true timer="4000" place="bottom")
           +popover-image
             img(src="https://picsum.photos/80" alt="Avatar")
           .div
