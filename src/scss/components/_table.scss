@@ -88,7 +88,10 @@ $column-gap: 6px;
             color: v(color-primary-default, $color-primary-default);
           }
           &:hover {
-            background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
+            background-color: v(
+              color-primary-pastel-02,
+              $color-primary-pastel-02
+            );
           }
         }
       }
@@ -254,7 +257,8 @@ $column-gap: 6px;
     tbody {
       display: block;
       tr {
-        box-shadow: 0 3px 6px rgba(v(color-secondary-09, $color-secondary-09), 0.16);
+        box-shadow: 0 3px 6px
+          rgba(v(color-secondary-09, $color-secondary-09), 0.16);
         margin: $column-spacing * 0.5 0;
         padding: $column-spacing * 0.5 0;
         height: auto;
@@ -298,7 +302,6 @@ $column-gap: 6px;
     }
     .footer {
       bottom: 0;
-      position: sticky;
       z-index: 3;
     }
   }
@@ -309,14 +312,17 @@ $column-gap: 6px;
       border-color: transparent;
       padding-left: v(spacing-scale-base);
       padding-right: v(spacing-scale-base);
-      [class*='fa-'] {
+      [class*="fa-"] {
         margin-left: v(spacing-scale-base);
       }
       &:focus {
         box-shadow: none;
       }
       &:hover {
-        border-bottom-color: v(color-primary-lighten-01, $color-primary-lighten-01);
+        border-bottom-color: v(
+          color-primary-lighten-01,
+          $color-primary-lighten-01
+        );
       }
     }
     .select-items {
@@ -379,7 +385,7 @@ $column-gap: 6px;
         &::after {
           background-color: transparent;
           color: v(color-secondary-04, $color-secondary-04);
-          content: '|';
+          content: "|";
           height: auto;
           width: auto;
         }
@@ -438,7 +444,8 @@ $column-gap: 6px;
         display: table-cell;
       }
       td {
-        border-bottom: 1px solid v(color-primary-pastel-01, $color-primary-pastel-01);
+        border-bottom: 1px solid
+          v(color-primary-pastel-01, $color-primary-pastel-01);
         display: table-cell;
       }
       tr {
@@ -507,7 +514,10 @@ $column-gap: 6px;
         tbody {
           tr {
             &.hover {
-              background-color: v(color-primary-pastel-02, $color-primary-pastel-02);
+              background-color: v(
+                color-primary-pastel-02,
+                $color-primary-pastel-02
+              );
             }
           }
         }
