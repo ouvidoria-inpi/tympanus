@@ -1,21 +1,14 @@
 mixin select(label="Label")
-  - let className = [prefix + "select", attributes.class]
-  div(class=className, multiple=attributes.multiple)
-    +input(label)(type="text" select)
-    p.help Texto auxiliar ao preenchimento, tem a função de previnir erros.
-    +card
-      .front
-        .content
-          if attributes.multiple
-            +list.condensed.selected-list.hidden
-            +divider.hidden
-          +list.condensed.options-list
-            if block
-              block
+  - let className = attributes.class
+  - let componentClass = prefix + "select"
+  - className = className ? componentClass + " " + className : componentClass
+  div(class=className)
+    label(for=attributes.id)=label
+    select(id=attributes.id
+      disabled=attributes.disabled)
+      if block
+        block
 
-mixin option(item="item")
-  +list-item()
-    if attributes.multiple
-      .support
-        +icon.fa-plus-circle.text-primary-default
-    .content=item
+mixin option(text="", value="0")
+  option(value=value
+    selected=attributes.selected)=text
