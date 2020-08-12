@@ -51,7 +51,7 @@ append content
               +avatar.mt-1
                 .image: img(src="https://picsum.photos/id/823/400" alt="Avatar")
               .flex-fill.ml-3
-                +textarea("")(id="comments" placeholder="Digite seu comentário")
+                +textarea(aria-label="Digite uma informação se o label estiver vazio" placeholder="Digite seu comentário")#comments
           .footer
             .row.justify-content-end
               .col.col-xs-12.text-right
