@@ -13,15 +13,15 @@ mixin wizard(label="Título", labelClass, collapsed=true, scroll=true, vertical=
     class=className)
     .wizard-progress
       button(class="wizard-progress-btn" type="button" title="Dados Pessoais")
-        span.info Dados Pessoais
+        span.color-info Dados Pessoais
       button(class="wizard-progress-btn" type="button" title="Validar Dados" disabled)
-        span.info Validar Dados
+        span.color-info Validar Dados
       button(class="wizard-progress-btn" type="button" title="Habilitar Cadastro" active)
-        span.info Habilitar Cadastro
+        span.color-info Habilitar Cadastro
       button(class="wizard-progress-btn" type="button" title="Cadastrar Senha")
-        span.info Cadastrar Senha
+        span.color-info Cadastrar Senha
       button(class="wizard-progress-btn" type="button" title="Finalizar Cadastro")
-        span.info Finalizar
+        span.color-info Finalizar
       if ( total > 5 )
         - let n = 6;
         while n <= total
@@ -30,34 +30,34 @@ mixin wizard(label="Título", labelClass, collapsed=true, scroll=true, vertical=
           - n++
     .wizard-form
       .wizard-panel(active)
-        .wizard-panel-content
+        .wizard-panel-content(aria-label="Texto relativo ao passo dados pessoais")
           .h3 Dados Pessoais
           .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .wizard-panel-btn
           +button.primary.wizard-btn-next Avançar
       .wizard-panel
-        .wizard-panel-content
+        .wizard-panel-content(aria-label="Texto relativo ao passo validar dados")
           .h3 Validar Dados
           .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .wizard-panel-btn
           +button.secondary.wizard-btn-prev Voltar
           +button.primary.wizard-btn-next(disabled) Avançar
       .wizard-panel
-        .wizard-panel-content
+        .wizard-panel-content(aria-label="Texto relativo ao passo habilitar cadastro")
           .h3 Habilitar Cadastro
           .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .wizard-panel-btn
           +button.secondary.wizard-btn-prev(disabled) Voltar
           +button.primary.wizard-btn-next Avançar
       .wizard-panel
-        .wizard-panel-content
+        .wizard-panel-content(aria-label="Texto relativo ao passo cadastar senha")
           .h3 Cadastrar Senha
           .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .wizard-panel-btn
           +button.secondary.wizard-btn-prev Voltar
           +button.primary.wizard-btn-next Avançar
       .wizard-panel
-        .wizard-panel-content
+        .wizard-panel-content(aria-label="Texto relativo ao passo finalizar cadastro")
           .h3 Finalizar
           .text Conteúdo aqui - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .wizard-panel-btn
