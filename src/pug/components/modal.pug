@@ -12,9 +12,12 @@ mixin modal-header(title)
       block
 
 mixin modal-body
-  .br-modal-body(class=attributes.class)
-    if block
-      block
+  if attributes.loading
+    .br-modal-body(class=attributes.class loading)
+  else
+    .br-modal-body(class=attributes.class)
+  if block
+    block
 
 mixin modal-footer
   - var className=attributes.class
