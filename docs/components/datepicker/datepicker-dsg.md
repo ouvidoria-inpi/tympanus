@@ -1,11 +1,13 @@
-[version]: # '6.0.0'
+[version]: # (6.0.0)
+
+# _DateTimePicker_
+ _DateTimePicker_ é um componente que auxilia o usuário na seleção de uma data a partir de um calendário e/ou uma hora a partir de um seletor de horas.
 
 ![Exemplo Componente](imagens/diretriz-datetimepicker.png)
 
 ---
 
 ## Uso
-
 O componente _DateTimePicker_ funciona basicamente como seletores de datas e horas. De uma forma geral, o usuário pode selecionar datas e horas por meio do calendário e seletores disponibilizados ou simplesmente digitando diretamente no campo de entrada (_Input_) conforme a máscara sugere. O calendário e o seletor de horas podem ocorrer juntos, ou seja, em um mesmo componente ou em componentes independentes.
 
 ![Exemplo Uso](imagens/uso.png)
@@ -47,10 +49,10 @@ O componente _DateTimePicker_ é dividido em duas partes: _datepicker_ e _timepi
 ## Tipos
 
 Basicamente existem três variações do componente: _DateTimePicker_ (padrão), _Datepicker_ e _Timepicker_:
-
+     
 ### 1- _DateTimePicker_
 
-O _DateTimePicker_ é o componente padrão para escolha conjunta de data e horário.
+O _DateTimePicker_ é o componente padrão para escolha conjunta de data e horário. 
 
 ![Exemplo Tipo](imagens/type-datetimepicker.png)
 
@@ -162,87 +164,80 @@ O componente _DateTimePicker_ for projetado para ser utilizado em qualquer resol
 
 ---
 
-## Design Tokens
+## Design Tokens ##
 
 ### Tipografia
-
-| Name                         | Token Size                | Token Weight              |
-| ---------------------------- | ------------------------- | ------------------------- |
-| Mês/Ano                      | `--font-size-scale-up-01` | `--font-weight-semi-bold` |
-| Dias da Semana               | `--font-size-scale-base`  | `--font-weight-medium`    |
-| Dias                         | `--font-size-scale-base`  | `--font-weight-semi-bold` |
-| Dia Atual                    | `--font-size-scale-base`  | `--font-weight-semi-bold` |
-| Dia Mês anterior/posterior   | `--font-size-scale-base`  | `--font-weight-regular`   |
-| Dia Desabilitados            | `--font-size-scale-base`  | `--font-weight-regular`   |
-| Intervalo Dias (Selected)    | `--font-size-scale-base`  | `--font-weight-semi-bold` |
-| Seletor (Data/Hora)          | `--font-size-scale-up-01` | `--font-weight-semi-bold` |
-| Seletor (Data/Hora Selected) | `--font-size-scale-up-01` | `--font-weight-semi-bold` |
+|Name|Token Size|Token Weight
+|--|--|--|
+|Mês/Ano|`--font-size-scale-up-01`|`--font-weight-semi-bold`|
+|Dias da Semana|`--font-size-scale-base`|`--font-weight-medium`|
+|Dias|`--font-size-scale-base`|`--font-weight-semi-bold`|
+|Dia Atual|`--font-size-scale-base`|`--font-weight-semi-bold`|
+|Dia Mês anterior/posterior|`--font-size-scale-base`|`--font-weight-regular`|
+|Dia Desabilitados|`--font-size-scale-base`|`--font-weight-regular`|
+|Intervalo Dias (Selected)|`--font-size-scale-base`|`--font-weight-semi-bold`|
+|Seletor (Data/Hora)|`--font-size-scale-up-01`|`--font-weight-semi-bold`|
+|Seletor (Data/Hora Selected)|`--font-size-scale-up-01`|`--font-weight-semi-bold`|
 
 ### Cor
-
-| Name                              | Property | Token Color               | Opacity |
-| --------------------------------- | -------- | ------------------------- | ------- |
-| Texto Mês/Ano                     | color    | `--color-primary-default` | -       |
-| Texto Dias da Semana              | color    | `--color-secondary-07`    | -       |
-| Texto Dias                        | color    | `--color-primary-default` | -       |
-| Texto Dias Mês anterior/posterior | color    | `--color-primary-default` | 60%     |
-| Texto Dias Desabilitados          | color    | `--color-secondary-04`    | 45%     |
-| Intervalo (dias selecionados)     | color    | `--color-secondary-09`    | -       |
-| Seletor (Data/Hora)               | color    | `--color-secondary-08`    | -       |
-| Seletor (Data/Hora Selected)      | color    | `--color-primary-default` | -       |
-| Ícone "Selecionar Data"           | color    | `--color-primary-default` | -       |
-| Ícone "Marcar Hora"               | color    | `--color-primary-default` | -       |
-| Botão terciário "Voltar"          | color    | `--color-primary-default` | -       |
-| Botão terciário "Avançar"         | color    | `--color-primary-default` | -       |
-| Botão terciário "Retrair"         | color    | `--color-primary-default` | -       |
-| Botão terciário "Expandir"        | color    | `--color-primary-default` | -       |
+|Name|Property|Token Color|Opacity|
+|--|--|--|--|
+|Texto Mês/Ano|color|`--color-primary-default`|-|
+|Texto Dias da Semana|color|`--color-secondary-07`|-|
+|Texto Dias|color|`--color-primary-default`|-|
+|Texto Dias Mês anterior/posterior|color|`--color-primary-default`|60%|
+|Texto Dias Desabilitados|color|`--color-secondary-04`|45%|
+|Intervalo (dias selecionados)|color|`--color-secondary-09`|-|
+|Seletor (Data/Hora)|color|`--color-secondary-08`|-|
+|Seletor (Data/Hora Selected)|color|`--color-primary-default`|-|
+|Ícone "Selecionar Data"|color|`--color-primary-default`|-|
+|Ícone "Marcar Hora"|color|`--color-primary-default`|-|
+|Botão terciário "Voltar"|color|`--color-primary-default`|-|
+|Botão terciário "Avançar"|color|`--color-primary-default`|-|
+|Botão terciário "Retrair"|color|`--color-primary-default`|-|
+|Botão terciário "Expandir"|color|`--color-primary-default`|-|
 
 ### Iconografia
-
-| Name            | Ícone                           | Token Size          | Class (Font Awesome) |
-| --------------- | ------------------------------- | ------------------- | -------------------- |
-| Selecionar Data | <i class="fas fa-calendar"></i> | `--icone-size-base` | fa-calendar-alt      |
-| Marcar Hora     | <i class="fas fa-clock"></i>    | `--icone-size-base` | fa-clock             |
+|Name|Ícone|Token Size|Class (Font Awesome)|
+|--|--|--|--|
+|Selecionar Data|<i class="fas fa-calendar"></i>|`--icone-size-base`|fa-calendar-alt|
+|Marcar Hora|<i class="fas fa-clock"></i>|`--icone-size-base`|fa-clock|
 
 ### Botões Terciários
-
-| Name    | Ícone                              | Token Size        | Class (Font Awesome) |
-| ------- | ---------------------------------- | ----------------- | -------------------- |
-| Voltar  | <i class="fas fa-angle-left"></i>  | `--icon-size-lg`  | fa-angle-left        |
-| Avançar | <i class="fas fa-angle-right"></i> | `---icon-size-lg` | fa-angle-right       |
-| Retrair | <i class="fas fa-angle-up"></i>    | `---icon-size-lg` | fa-angle-up          |
+|Name|Ícone|Token Size|Class (Font Awesome)|
+|--|--|--|--|
+|Voltar|<i class="fas fa-angle-left"></i>|`--icon-size-lg`|fa-angle-left|
+|Avançar|<i class="fas fa-angle-right"></i>|`---icon-size-lg`|fa-angle-right|
+|Retrair|<i class="fas fa-angle-up"></i>|`---icon-size-lg`|fa-angle-up|
 
 ### Estado
-
-| Name                  | Estado      | Token Status                   | Transparência |
-| --------------------- | ----------- | ------------------------------ | ------------- |
-| Dias (Conteiner)      | Hover       | `--status-hover-background`    | -             |
-| Dia atual (Text)      | Destacado   | `--status-highlight-text`      | -             |
-| Dia atual (Conteiner) | Destacado   | `--status-highlight-overlay`   | -             |
-| Dia atual (Text)      | Selecionado | `--status-selected-text`       | -             |
-| Dia atual (Conteiner) | Selecionado | `--status-selected-background` | -             |
-| Dias intervalo (Text) | \*\*\*      | `--status-selected-text`       | 50%           |
+|Name|Estado|Token Status|Transparência
+|--|--|--|--|
+|Dias (Conteiner)|Hover|`--status-hover-background`|-|
+|Dia atual (Text)|Destacado|`--status-highlight-text`|-|
+|Dia atual (Conteiner)|Destacado|`--status-highlight-overlay`|-|
+|Dia atual (Text)|Selecionado|`--status-selected-text`|-|
+|Dia atual (Conteiner)|Selecionado|`--status-selected-background`|-|
+|Dias  intervalo (Text)|***|`--status-selected-text`|50%|
 
 ### Dimensão
-
-| Name                      | Property | Dimension |
-| ------------------------- | -------- | --------- |
-| _Card_ (_DateTimePicker_) | width    | 304px     |
-| _Card_ (_DateTimePicker_) | height   | auto      |
-| _Card_ (_Datepicker_)     | width    | 304px     |
-| _Card_ (_Datepicker_)     | height   | auto      |
-| _Card_ (_Timepicker_)     | width    | 144px     |
-| _Card_ (_Timepicker_)     | height   | 116px     |
+|Name|Property|Dimension|
+|--|--|--|
+|_Card_ (_DateTimePicker_)|width|304px|
+|_Card_ (_DateTimePicker_)|height|auto|
+|_Card_ (_Datepicker_)|width|304px|
+|_Card_ (_Datepicker_)|height|auto|
+|_Card_ (_Timepicker_)|width|144px|
+|_Card_ (_Timepicker_)|height|116px|
 
 ### Espaçamento
-
-| Name                          | Property | Token Spacing                 |
-| ----------------------------- | -------- | ----------------------------- |
-| Calendário (_DateTimePicker_) | width    | `--spacing-scale-2xh`         |
-| Calendário (_DateTimePicker_) | height   | `--spacing-scale-2xh`         |
-| Seletor (_DateTimePicker_)    | width    | `--spacing-horizontal-center` |
-| Seletor (_DateTimePicker_)    | height   | `--spacing-scale-baseh`       |
-| Calendário (_Datepicker_)     | width    | `--spacing-scale-2xh`         |
-| Calendário (_Datepicker_)     | height   | `--spacing-scale-2xh`         |
-| Seletor (_TimePicker_)        | width    | `--spacing-scale-baseh`       |
-| Seletor (_TimePicker_)        | height   | `--spacing-scale-baseh`       |
+|Name|Property|Token Spacing|
+|--|--|--|
+|Calendário (_DateTimePicker_)|width|`--spacing-scale-2xh`|
+|Calendário (_DateTimePicker_)|height|`--spacing-scale-2xh`|
+|Seletor (_DateTimePicker_)|width|`--spacing-horizontal-center`|
+|Seletor (_DateTimePicker_)|height|`--spacing-scale-baseh`|
+|Calendário (_Datepicker_)|width|`--spacing-scale-2xh`|
+|Calendário (_Datepicker_)|height|`--spacing-scale-2xh`|
+|Seletor (_TimePicker_)|width|`--spacing-scale-baseh`|
+|Seletor (_TimePicker_)|height|`--spacing-scale-baseh`|

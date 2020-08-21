@@ -1,14 +1,34 @@
 extends ../../layouts/component
 
 append vars
-  - var title = "DatePicker";
-
+  - let title = "DatePicker";
 append content
-  p.h5 Versão Simples
-  +datepicker("Data")(id="normal" placeholder="dd/mm/aaaa")
-
-  p.h5.mt-5 Versão Data Inicial / Data Final
-  +datepicker("Data Inicial")(id="date-start" class="range" type="text" placeholder="dd/mm/aaaa")
-  .mt-3
-    +datepicker("Data Final")(id="date-end" class="range" type="text" placeholder="dd/mm/aaaa")
-  
+  p.h5 Datepicker
+  .row
+    .col-sm-12.col-lg-4.col-xl-3
+      p.h5.mt-5.mt-sm-0 Datepicker simples
+      +datepicker("Data Simples")(id="simples-input" type="text" placeholder="dd/mm/aaaa" mode="single")
+      .mt-1
+        .feedback.color-success
+          .icon: i.fas.fa-check-circle
+          | Data válida
+        p.help-text Informações adicionais
+  .mt-5
+  .row
+    .col-sm-12.col-lg-4.col-xl-3
+      p.h5.mt-5.mt-sm-0 Datepicker com intervalo de datas
+      +datepicker("Data Inicial/Final")(id="range-input" type="text" placeholder="dd/mm/aaaa até dd/mm/aaaa" mode="range")
+      .mt-1
+        .feedback.color-danger
+          .icon: i.fas.fa-times-circle
+          | Data inválida
+  .mt-5
+  .row
+    .col-sm-12.col-lg-4.col-xl-3
+      p.h5.mt-5.mt-sm-0 Timepicker
+      +datepicker("Hora/Minutos")(id="timepicker-input" type="text" placeholder="hh:mm" mode="single")
+  .mt-5
+  .row.mb-5
+    .col-sm-12.col-lg-4.col-xl-3
+      p.h5.mt-5.mt-sm-0 Datepicker + Timepicker
+      +datepicker("Data e Hora/Minutos")(id="dateandtime-input" type="text" placeholder="dd/mm/aaaa hh:mm" mode="single")

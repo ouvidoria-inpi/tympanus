@@ -2,21 +2,21 @@ mixin input(label="Label")
   - let className = attributes.class
   - let componentClass = prefix + "input"
   - className = className ? componentClass + " " + className : componentClass
-  - className = attributes.datepicker ? className + " " + "br-datepicker" : className
-  div(class=className, valid=attributes.valid, invalid=attributes.invalid, filter=attributes.filter)
+  div(class=className
+      valid=attributes.valid
+      invalid=attributes.invalid
+      filter=attributes.filter)
     label(for=attributes.id)=label
-    input(id=attributes.id, type=attributes.type ? attributes.type : "text", class=attributes.class, placeholder=attributes.placeholder, disabled=attributes.disabled)
-    if attributes.type == "password"
+    input(
+      id=attributes.id
+      type=attributes.type ? attributes.type : "text"
+      class=attributes.class
+      placeholder=attributes.placeholder
+      disabled=attributes.disabled
+      data-input=attributes.datainput)
+    if attributes.type == "password" && !attributes.filter
       button.icon(type='button')
         span.sr-only Mostrar senha
-        +icon.fa-eye
-    if attributes.datepicker
-      button.icon(type='button', id=attributes.id + "-btn")
-        span.sr-only Mostrar calendário
-        +icon.fa-calendar-alt
-    if attributes.select
-      button.icon(type='button' trigger)
-        span.sr-only Mostrar calendário
-        +icon.fa-angle-down
+        i.fas.fa-eye
     if block
       block

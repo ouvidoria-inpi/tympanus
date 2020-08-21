@@ -1,2 +1,17 @@
 mixin datepicker(label="Label", labelClass)
-  +input(label)(id=attributes.id placeholder=attributes.placeholder class=attributes.class disabled=attributes.disabled datepicker)
+  div(class="br-datepicker"
+      data-mode=attributes.mode
+      data-type=attributes.type)
+    +input(label)(id=attributes.id
+                  placeholder=attributes.placeholder
+                  type=attributes.type
+                  class=attributes.class
+                  disabled=attributes.disabled
+                  datepicker="true"
+                  datainput)
+      button.icon(type='button' id=attributes.id + "-btn" data-toggle)
+        span.sr-only Abrir Timepicker
+        if (attributes.type === "time")
+          i.fas.fa-clock
+        else
+          i.fas.fa-calendar-alt
