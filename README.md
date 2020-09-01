@@ -1,7 +1,5 @@
 # Design System do Governo Federal
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
 Este repositório concentra os componentes, documentações e templates do Design System do Governo Federal.
 
 Como iniciar a criação de um novo trabalho neste repositório:
@@ -14,10 +12,10 @@ git clone git@git.serpro:dsgov/dsgov-dsgov.git
 
 2 - Verifique se o projeto está na branch develop
 
-3 - Entre na pasta do clone e execute os comandos:
+3 - Entre na pasta do clone e execute o comando:
 
 ```node
-npm run init
+npm install
 ```
 
 4 - No Visual Studio code execute o comando (CTRL + P):
