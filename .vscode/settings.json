@@ -1,0 +1,142 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "numso.prettier-standard-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
+  },
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.emptyRules": "warning",
+  "css.lint.important": "warning",
+  "css.validate": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.codeLens": true,
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "markdown": "html",
+    "plaintext": "jade",
+    "vue-html": "html"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "npm",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.showPushSuccessNotification": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.blame.ignoreWhitespace": true,
+  "gitlens.defaultDateStyle": "absolute",
+  "html-css-class-completion.enableEmmetSupport": true,
+  "html-css-class-completion.enableScssFindUsage": true,
+  "html.format.enable": true,
+  "html.format.endWithNewline": true,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.wrapAttributes": "aligned-multiple",
+  "html.format.wrapLineLength": 100,
+  "javascript.format.enable": true,
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "json.format.enable": true,
+  "markdownlint.config": {
+    "MD007": false,
+    "MD024": false,
+    "MD030": false
+  },
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": true,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.packageManager": "npm",
+  "prettier.printWidth": 120,
+  "prettier.proseWrap": "preserve",
+  "prettier.resolveGlobalModules": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.useEditorConfig": true,
+  "prettier.useTabs": false,
+  "scss.lint.emptyRules": "warning",
+  "scss.lint.important": "warning",
+  "scss.validate": true,
+  "search.maintainFileSearchCache": true,
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "todo-tree.highlights.enabled": true,
+  "typescript.autoClosingTags": true,
+  "typescript.check.npmIsInstalled": true,
+  "typescript.format.enable": true,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "typescript.format.insertSpaceAfterTypeAssertion": true,
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "typescript.format.semicolons": "remove",
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.tsserver.log": "verbose",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "xmlTools.enforcePrettySelfClosingTagOnFormat": true
+}
