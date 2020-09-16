@@ -78,22 +78,21 @@ function buildAssetsNexus() {
         console.log('--------------------------------------------------------')
         console.log(`Download do pacote NPM ${semVer} feito com sucesso`)
         console.log('--------------------------------------------------------')
-      }
-      )
-
-      fs.copyFile(
-        'assets/npm-package/dsgov-' + semVer + '.tgz',
-        'assets/npm-package/dsgov-latest.tgz',
-        (err) => {
-          if (err) throw err
-          console.log('--------------------------------------------------------')
-          console.log(`dsgov-latest.tgz gerado com sucesso`)
-          console.log('--------------------------------------------------------')
-        }
+        fs.copyFile(
+          'assets/npm-package/dsgov-' + semVer + '.tgz',
+          'assets/npm-package/dsgov-latest.tgz',
+          (err) => {
+            if (err) throw err
+            console.log('--------------------------------------------------------')
+            console.log('dsgov-latest.tgz gerado com sucesso')
+            console.log('--------------------------------------------------------')
+          }
         )
-      } else {
-        console.log('--------------------------------------------------------')
-        console.log('Pasta DIST não existe. Não foi possível criar assets.')
-        console.log('--------------------------------------------------------')
+      }
+    )
+  } else {
+    console.log('--------------------------------------------------------')
+    console.log('Pasta DIST não existe. Não foi possível criar assets.')
+    console.log('--------------------------------------------------------')
   }
 }
