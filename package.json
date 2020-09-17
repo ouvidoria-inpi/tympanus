@@ -15,7 +15,7 @@
   "author": "SERPRO/DIDES/SUPSE/SESEP",
   "main": "/dist/js/dsgov.js",
   "scripts": {
-    "build": "npm-run-all build:webpack:prod build:hom",
+    "build": "npm-run-all minify:img build:webpack:prod build:hom",
     "build:hom": "webpack --config webpack.proddev.js",
     "build:local": "npm-run-all build:webpack:dev & webpack-dev-server --env prod",
     "build:webpack:dev": "webpack --env dev --progress --profile --colors",
