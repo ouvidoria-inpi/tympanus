@@ -1,6 +1,6 @@
 {
   "name": "@govbr/dsgov",
-  "version": "1.5.0-rc.4",
+  "version": "1.5.0-rc.5",
   "description": "Design System do Governo Federal",
   "keywords": [
     "dsgov",
@@ -35,7 +35,7 @@
   },
   "standard-version": {
     "scripts": {
-      "postbump": "touch teste.txt && git commit -am 'criando release'"
+      "postbump": "touch teste.txt && git add . && npm run lint && git commit -am 'chore: cria release e adiciona assets dessa release' --no-verify"
     }
   },
   "husky": {
