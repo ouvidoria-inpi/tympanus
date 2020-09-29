@@ -1,4 +1,6 @@
 # Release Notes DSGOV
+## [1.5.0-rc.5](https://git.serpro/dsgov/dsgov-dsgov/compare/v1.5.0-rc.2...v1.5.0-rc.5) (2020-09-29)
+
 ## [1.5.0-rc.4](https://git.serpro/dsgov/dsgov-dsgov/compare/v1.5.0-rc.2...v1.5.0-rc.4) (2020-09-29)
 
 ## [1.5.0-rc.3](https://git.serpro/dsgov/dsgov-dsgov/compare/v1.5.0-rc.2...v1.5.0-rc.3) (2020-09-29)
