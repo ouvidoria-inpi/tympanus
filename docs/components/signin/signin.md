@@ -1,0 +1,1 @@
+O _sign-in_ é um botão do tipo "_login social sign-in_". Este componente é utilizado para direcionar o usuário a uma área de confirmação de acesso, que se utiliza, na sua efetivação, de dados préviamente cadastrado do usuário.

@@ -1,0 +1,22 @@
+extends ../../../partial/pug/isolate
+
+block dependencies
+  include ../../avatar/avatar
+  include ../../tag/tag
+
+block content
+  .row
+    .col-auto.mr-5
+      .d-inline-block.mr-1: +tag-status.danger.large
+      .d-inline-block.mr-1: +tag-status.warning.medium
+      .d-inline-block.mr-1: +tag-status.success.small
+    .col-auto
+      .d-inline-block.mr-3
+        +tag-status.danger.large
+        span Offline
+      .d-inline-block.mr-3
+        +tag-status.warning
+        span Ausente
+      .d-inline-block.mr-3
+        +tag-status.success.small
+        span Online

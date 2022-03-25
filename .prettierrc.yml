@@ -1,0 +1,15 @@
+---
+bracketSpacing: true
+endOfLine: auto
+overrides:
+- files:
+  - "**/*.css"
+  - "**/*.scss"
+  - "**/*.html"
+  options:
+    singleQuote: false
+packageManager: npm
+semi: false
+singleQuote: true
+trailingComma: es5
+useEditorConfig: true

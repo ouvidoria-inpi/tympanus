@@ -1,0 +1,134 @@
+extends ../../partial/pug/component
+
+append vars
+  - var title = "Tag";
+
+append content
+  .row
+    .col-md-5
+      p.h4.mt-5 Tag de Interação Dispensável
+      +tag-interaction
+        +icon.fa-car
+        span Label
+        +button.close.inverted.circle(aria-label="Fechar")
+          +icon.fa-times
+      +tag-interaction
+        +icon.fa-car
+        span Label
+        +button.close.inverted.circle(aria-label="Fechar")
+          +icon.fa-times
+    .col-md-5
+      p.h4.mt-5 Tag de Interação Persistente
+      +tag-interaction-select
+        input(id="tag" type="checkbox" aria-label="selecionar tag"  name="car")
+        label(for="tag")
+          +icon.fa-car
+          span Label
+      +tag-interaction-select.selected
+        input(id="tag01" type="checkbox" aria-label="selecionar tag" checked  name="ship")
+        label(for="tag01")
+          +icon.fa-ship
+          span Label
+
+  .row
+    .col-md-6
+      p.h4.mt-5 Tag de Texto
+      +tag-text.support-01
+        +icon.fa-car
+        span Label
+      +tag-text.support-10
+        span Label
+  .row
+    .col-md-5
+      p.h4.mt-5 Tag de Status
+      .row
+        .col-auto.mr-5
+          .d-inline-block.mr-1: +tag-status.danger.large
+          .d-inline-block.mr-1: +tag-status.warning.medium
+          .d-inline-block.mr-1: +tag-status.success.small
+        .col-auto
+          .d-inline-block.mr-3
+            +tag-status.danger.large
+            span Offline
+          .d-inline-block.mr-3
+            +tag-status.warning
+            span Ausente
+          .d-inline-block.mr-3
+            +tag-status.success.small
+            span Online
+    .col-md-3
+      p.h4.mt-5 Tag de Contagem
+      +tag-count.danger
+        span 1
+      +tag-count.danger
+        span 10
+      +tag-count.danger
+        span 130
+      +tag-count.danger
+        span 999+
+        +tooltip("99957")(info place="right")
+
+  .row
+    .col
+      p.h4.mt-5 Tag de Ícone
+      +tag-icon.support-03
+        +icon.fa-car
+      +tag-icon.support-04
+        +icon.fa-search
+      +tag-icon.support-08
+        +icon.fa-user
+
+  .row
+    .col-md-6
+      p.h4.mt-5 Densidades
+      +tag-text.support-03.small.mb-1
+        +icon.fa-car
+        span Alta
+      +tag-text.support-03.medium.mb-1
+        +icon.fa-car
+        span Média
+      +tag-text.support-03.large.mb-1
+        +icon.fa-car
+        span Baixa
+
+  p.h4.mt-5 Distribuição Horizontal e Vertical
+  .row
+    .col-md-auto
+      +tag-interaction
+        +icon.fa-car
+        span Label
+        +button.close.inverted.circle(aria-label="Fechar")
+          +icon.fa-times
+      +tag-interaction
+        +icon.fa-car
+        span Label
+        +button.close.inverted.circle(aria-label="Fechar")
+          +icon.fa-times
+      +tag-interaction
+        +icon.fa-car
+        span Label
+        +button.close.inverted.circle(aria-label="Fechar")
+          +icon.fa-times
+    .col-md-auto.ml-5
+      .mb-half
+        +tag-interaction
+          +icon.fa-car
+          span Label
+          +button.close.inverted.circle(aria-label="Fechar")
+            +icon.fa-times
+      .mb-half
+        +tag-interaction
+          +icon.fa-car
+          span Label
+          +button.close.inverted.circle(aria-label="Fechar")
+            +icon.fa-times
+      .mb-half
+        +tag-interaction
+          +icon.fa-car
+          span Label
+          +button.close.inverted.circle(aria-label="Fechar")
+            +icon.fa-times
+  p.h4.mt-5 Tag de Interação Persistente com Radio
+  .row
+    .col-md-auto
+      +tag-radio

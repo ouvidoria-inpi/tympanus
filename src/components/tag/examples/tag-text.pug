@@ -1,0 +1,12 @@
+extends ../../../partial/pug/isolate
+
+block dependencies
+  include ../tag
+  include ../../../partial/pug/utilities/icon.pug
+
+block content
+  +tag-text.support-01
+    +icon.fa-car
+    span Label
+  +tag-text.support-08
+    span Label

@@ -1,0 +1,1 @@
+O _template base_, modelo _Base_ ou simplesmente _Base_ representa um modelo estrutural de página que define as regras de organização, comportamento e localização dos elementos de _layout_. Define sobre onde e qual tipo de conteúdo deve ser localizado em cada área de apresentação, assim como suas variações em decorrência de adaptação responsiva.

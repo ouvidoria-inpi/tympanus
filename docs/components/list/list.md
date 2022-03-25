@@ -1,0 +1,1 @@
+_Lists_ são estruturas compostas por itens em sequência vertical ou horizontal que podem conter imagens, ícones e elementos interativos. Utilize _lists_ quando precisar organizar conteúdos semelhantes em forma sequencial.

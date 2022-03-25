@@ -1,0 +1,47 @@
+variables:
+  GIT_SSL_NO_VERIFY: 'true'
+
+stages:
+  - build
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - apk add openssh
+    - apk add build-base file nasm autoconf
+    - apk add --upgrade libpng-dev
+    - export CYPRESS_INSTALL_BINARY=https://cdn.cypress.io/desktop/3.8.3/linux-x64/cypress.zip
+    - export NODE_TLS_REJECT_UNAUTHORIZED=0
+    - npm set strict-ssl false
+    - npm install
+    - ls
+    - npm install sass
+    - npm install acorn
+    - cat node_modules/sass/package.json
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+      - dist/
+
+validate_html:
+  stage: test
+  script: npm run lint:html
+
+validate_js:
+  stage: test
+  script: npm run lint:js
+
+validate_styles:
+  stage: test
+  script: npm run lint:styles
+
+# https://gitlab.com/dmoonfire/commitlint-gitlab-ci/
+commit_lint:
+  stage: test
+  script: npx commitlint-gitlab-ci -x @commitlint/config-conventional

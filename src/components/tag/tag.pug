@@ -1,0 +1,50 @@
+mixin tag
+  if attributes['class'].includes('status')
+    span.br-tag&attributes(attributes)
+      if block
+        block
+  else
+    .br-tag&attributes(attributes)
+      if block
+        block
+
+mixin tag-icon
+  +tag.icon&attributes(attributes)
+    if block
+      block
+
+mixin tag-status
+  +tag.status&attributes(attributes)
+
+mixin tag-interaction
+  +tag.interaction&attributes(attributes)
+    if block
+      block
+
+mixin tag-interaction-select
+  +tag.interaction-select&attributes(attributes)
+    if block
+      block
+
+mixin tag-text
+  +tag.text&attributes(attributes)
+    if block
+      block
+
+mixin tag-count
+  +tag.count&attributes(attributes)
+    if block
+      block
+
+mixin tag-radio 
+  +tag-interaction-select
+        input(id="tag-select" type="radio" aria-label="selecionar tag"  name="vehicle" value="car")
+        label(for="tag")
+          +icon.fa-car
+          span Label
+  +tag-interaction-select.selected
+    input(id="tag-select-01" type="radio" aria-label="selecionar tag" checked  name="vehicle" value="ship")
+    label(for="tag01")
+      +icon.fa-ship
+      span Label
+

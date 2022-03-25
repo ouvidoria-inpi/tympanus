@@ -1,0 +1,21 @@
+# Code Owners for a file
+.commitlintrc.yml @oliveira.rafael @marcosalves3
+.czrc @oliveira.rafael @marcosalves3
+.editorconfig @oliveira.rafael @marcosalves3
+.eslintignore @oliveira.rafael @marcosalves3
+.eslintrc.yaml @oliveira.rafael @marcosalves3
+.htmlvalidate.json @oliveira.rafael @marcosalves3
+.prettierignore @oliveira.rafael @marcosalves3
+.prettierrc.yml @oliveira.rafael @marcosalves3
+.stylelintignore @oliveira.rafael @marcosalves3
+.stylelintrc.json @oliveira.rafael @marcosalves3
+CODEOWNERS @oliveira.rafael @marcosalves3
+
+# Code Owners for a directory
+#directoryname/ @username1 @username2
+
+# All group members as Code Owners for a file
+#filename @groupname
+
+# All group members as Code Owners for a directory
+#directoryname/ @groupname

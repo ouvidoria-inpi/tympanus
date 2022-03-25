@@ -1,0 +1,1 @@
+O componente **_skip link_** consiste em _hyperlinks_ internos que auxiliam usuários a navegarem por uma página com o auxílio do teclado sendo extremamente útil ou até mesmo indispensável para aqueles que dependem do teclado para a navegação.
