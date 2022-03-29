@@ -2,27 +2,27 @@
 
 ## Objetivo
 
-O [Design System do Governo Federal Brasileiro](http://dsgov.estaleiro.serpro.gov.br/ 'Design System do Governo Federal Brasileiro') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo Federal.
+O [Design System do Governo Federal](http://dsgov.estaleiro.serpro.gov.br/ 'Design System do Governo Federal') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo Federal.
 
 ## Tecnologias
 
 Esse projeto é desenvolvido usando:
 
-- Javascript
-- [SASS](https://sass-lang.com/ 'SASS')
-- [PUG](https://pugjs.org/ 'PUG')
+1. Javascript
+1. [SASS](https://sass-lang.com/ 'SASS')
+1. [PUG](https://pugjs.org/ 'PUG')
 
-## Como usar nossa biblioteca em seu projeto?
+## Dependências
 
-### Requisitos
-
-Para conseguir usar nossa biblioteca sem problemas temos as seguintes dependências:
+As principais dependências do projeto são:
 
 1. [Font Awesome](https://fontawesome.com/ 'Font Awesome')
 
 1. [Fonte Rawline](https://www.cdnfonts.com/rawline.font/ 'Fonte Rawline')
 
-OBS: Consulte a documentação desses projetos para descobrir como usa-los.
+> O fontawesome e a fonte rawline podem ser importadas de um CDN. Consulte a documentação no site do [Design System do Governo Federal](http://dsgov.estaleiro.serpro.gov.br/ 'Design System do Governo Federal') para mais detalhes.
+>
+## Como usar nossa biblioteca em seu projeto?
 
 ### Instalação da biblioteca
 
@@ -50,17 +50,15 @@ npm run lint
 
 Use nossos canais abaixo para obter tirar suas dúvidas:
 
-- Site do DSGOV.BR <http://dsgov.estaleiro.serpro.gov.br/>
+-   Site do DSGOV.BR <http://dsgov.estaleiro.serpro.gov.br/>
 
-- Web Components (versão estável) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/main>
+-   Web Components (versão estável) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/main>
 
-- Web Components (versão em desenvolvimento\*) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/develop>
+-   Web Components (versão em desenvolvimento\*) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/develop>
 
-- Pelo nosso email <dsgov@serpro.gov.br>
+-   Pelo nosso email <dsgov@serpro.gov.br>
 
-- Usando nosso canal no discord <https://discord.gg/U5GwPfqhUP>
-
-\* Versões em desenvolvimento não são recomendadas para uso em produção
+-   Usando nosso canal no discord <https://discord.gg/U5GwPfqhUP>
 
 ## Como contribuir?
 
