@@ -1,61 +1,79 @@
 # Design System do Governo Federal
 
-## Introdução
+## Objetivo
 
-O Design System do Governo Federal apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo Federal.
+O [Design System do Governo Federal Brasileiro](http://dsgov.estaleiro.serpro.gov.br/ 'Design System do Governo Federal Brasileiro') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo Federal.
 
-## Rodando o projeto
+## Tecnologias
 
-1. Clone o repositório
+Esse projeto é desenvolvido usando:
 
-    ```git
-    git clone https://git.serpro.gov.br/dsgov.br/dsgov.br.git
-    ```
+- Javascript
+- [SASS](https://sass-lang.com/ 'SASS')
+- [PUG](https://pugjs.org/ 'PUG')
 
-1. Entre na branch develop
+## Como usar nossa biblioteca em seu projeto?
 
-    ```git
-    git checkout develop
-    ```
+### Requisitos
 
-1. Entre na pasta do clone e execute o comando:
+Para conseguir usar nossa biblioteca sem problemas temos as seguintes dependências:
 
-    ```node
-    npm install
-    ```
+1. [Font Awesome](https://fontawesome.com/ 'Font Awesome')
 
-1. Para executar o projeto execute o comando
+1. [Fonte Rawline](https://www.cdnfonts.com/rawline.font/ 'Fonte Rawline')
 
-    ```node
-    npm run start
-    ```
+OBS: Consulte a documentação desses projetos para descobrir como usa-los.
 
-1. O projeto vai estar disponível pelo browser no endereço [http://localhost:9000](http://localhost:9000)
+### Instalação da biblioteca
 
-## Contribuindo com o Design System do Governo Federal
+Você pode instalar a nossa biblioteca de Web Components no seu projeto usando:
 
-As contribuições não se limitam a criação de um novo item no Design System, convido vocês a nos apoiar através de feedbacks, evolução nas documentação, divulgação, ferramentas, reporte de bugs, testes, criação de bibliotecas em tecnologias específicas, solicitação de novas necessidades, etc.
+```node
+npm install --save @dsgovbr/dsgovbr
+```
 
-> Antes de abrir uma issue, veja se já não existe uma aberta com a mesma solicitação ou algo relacionado que possa complementar.
+### Como começar
 
-Antes de solicitar um novo item, dúvida ou reportar um erro, primeiramente vocês precisarão se autenticar no [https://git.serpro.gov.br/](https://git.serpro.gov.br/), informando o usuário e senha LDAP corporativo.
+Criamos um [tutorial no nosso site](https://dsgov.estaleiro.serpro.gov.br/introducao/como-comecar 'Como começar?') explicando como começar a utilizar nosso Design System.
 
-Após autenticado pode abrir uma issue conforme necessidade:
+##  Lints
 
--   [Faça uma pergunta](https://git.serpro.gov.br/dsgov.br/dsgov.br-backlogs/blob/master/.gitlab/issue_templates/QUESTION.md)
--   [Relate um Erro](https://git.serpro.gov.br/dsgov.br/dsgov.br-backlogs/blob/master/.gitlab/issue_templates/BUG.md)
--   [Solicite um novo Item](https://git.serpro.gov.br/dsgov.br/dsgov.br-backlogs/blob/master/.gitlab/issue_templates/CONTRIBUTING.md)
+Nesse projeto usamos diversos tipos de lints para automaticamente verificar o código antes de enviar para review. Para executá-los e obter os resultados execute o comando:
 
-OBS: Na abertura de uma issue o gitlab trabalha com a sintaxe Markdown, caso tenham alguma dúvida disponibilizamos alguns links para ajudá-los:
+```node
+npm run lint
+```
 
--   [Editor de markdown Online](https://stackedit.io/app#)
--   [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
--   [Sintaxe básica e formatação](https://help.github.com/pt/github/writing-on-github/basic-writing-and-formatting-syntax)
+## Precisa de ajuda?
 
-### Como os componentes serão priorizados
+> Por favor **não** crie issues para fazer perguntas...
 
-As issues abertas serão analisadas pelo time do DSGOV.BR e priorizada conforme definição abaixo:
+Use nossos canais abaixo para obter tirar suas dúvidas:
 
--   Erro impeditivo
--   Quantidade de pessoas precisando de um mesmo item
--   Possibilidade de reuso
+- Site do DSGOV.BR <http://dsgov.estaleiro.serpro.gov.br/>
+
+- Web Components (versão estável) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/main>
+
+- Web Components (versão em desenvolvimento\*) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/develop>
+
+- Pelo nosso email <dsgov@serpro.gov.br>
+
+- Usando nosso canal no discord <https://discord.gg/U5GwPfqhUP>
+
+\* Versões em desenvolvimento não são recomendadas para uso em produção
+
+## Como contribuir?
+
+Por favor verifique nossos guias de [como contribuir](./CONTRIBUTING.md 'Como contribuir?').
+
+### Commits
+
+Nesse projeto usamos um padrão para branches e commits. Por favor observe a documentação na nossa [wiki](https://dsgov-br.gitlab.io/dsgov.br-wiki/ 'Wiki') para aprender sobre os nossos padrões.
+
+## Créditos
+
+O Design System do Governo Federal é criado pelo [SERPRO](https://www.serpro.gov.br/ 'SERPRO | Serviço Federal de Processamento de Dados') juntamente com a participação da comunidade.
+
+## Licença
+
+Nesse projeto usamos a licença MIT.
