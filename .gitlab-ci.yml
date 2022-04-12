@@ -74,3 +74,8 @@ pages:
   only:
     - main
 
+sast:
+  stage: test
+include:
+- template: Auto-DevOps.gitlab-ci.yml
+
