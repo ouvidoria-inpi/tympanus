@@ -31,6 +31,9 @@ stages:
 
 variables:
   SAST_EXCLUDED_PATHS:  .husky, .storybook, .vscode,  dist, node_modules, package-lock.json, **/*.spec.js, **/*.spec.js.snap'
+  SAST_EXCLUDED_ANALYZERS: bandit, brakeman, flawfinder, gosec, kubesec, nodejs-scan,
+      phpcs-security-audit, pmd-apex, security-code-scan, semgrep, sobelow, spotbugs
+
   SECRET_DETECTION_HISTORIC_SCAN: 'false'
   SECRET_DETECTION_EXCLUDED_PATHS: .husky, .vscode,  dist, node_modules'
 
@@ -89,6 +92,10 @@ pages:
 
 sast:
   stage: test
+  variables:
+    SAST_EXCLUDED_PATHS:  .husky, .storybook, .vscode,  dist, node_modules, package-lock.json, **/*.spec.js, **/*.spec.js.snap'
+    SAST_EXCLUDED_ANALYZERS: bandit, brakeman, flawfinder, gosec, kubesec, nodejs-scan,
+        phpcs-security-audit, pmd-apex, security-code-scan, semgrep, sobelow, spotbugs
 include:
 - template: Auto-DevOps.gitlab-ci.yml
 
