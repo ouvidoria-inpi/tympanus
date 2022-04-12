@@ -11,6 +11,7 @@ stages:
   - test
   - .pre
   - .post
+  - pages
   
 
 
