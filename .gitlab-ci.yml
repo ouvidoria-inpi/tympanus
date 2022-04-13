@@ -89,6 +89,21 @@ pages:
     - npm run start
   only:
     - main
+    - feat/sast-config
+
+publish_npm:
+  stage: pages
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  script:
+    - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+    - npm publish
+  when: manual
+  only:
+    - main
+    - feat/sast-config
 
 sast:
   stage: test
