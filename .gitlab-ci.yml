@@ -111,6 +111,5 @@ sast:
     SAST_EXCLUDED_PATHS:  .husky, .storybook, .vscode,  dist, node_modules, package-lock.json, **/*.spec.js, **/*.spec.js.snap'
     SAST_EXCLUDED_ANALYZERS: bandit, brakeman, flawfinder, gosec, kubesec, nodejs-scan,
         phpcs-security-audit, pmd-apex, security-code-scan, semgrep, sobelow, spotbugs
-include:
-- template: Auto-DevOps.gitlab-ci.yml
+
 
