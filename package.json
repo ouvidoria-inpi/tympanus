@@ -9,8 +9,8 @@
     "system"
   ],
   "homepage": "https://dsgov.estaleiro.serpro.gov.br",
-  "bugs": "https://gitlab.com/dsgov-br/dsgov.br-dev/dsgov.br-dev-core/-/issues",
-  "repository": "gitlab:dsgov-br/dsgov.br-dev/dsgov.br-dev-core",
+  "bugs": "https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/-/issues",
+  "repository": "gitlab:govbr-ds/govbr-ds-dev/govbr-ds-dev-core",
   "license": "MIT",
   "author": "SERPRO (http://serpro.gov.br/)",
   "files": [

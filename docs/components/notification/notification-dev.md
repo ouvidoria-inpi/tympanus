@@ -56,7 +56,7 @@ Usar o seguinte código JavaScript para instanciar a classe `BRNotification`, pa
 ```javascript
 
 const notificationList = []
-for (const dsgov.brNotification of window.document.querySelectorAll(
+for (const govbr-dsNotification of window.document.querySelectorAll(
   '.br-notification'
 )) {
   notificationList.push(new dsgov.BRNotification('br-notification', brNotification))

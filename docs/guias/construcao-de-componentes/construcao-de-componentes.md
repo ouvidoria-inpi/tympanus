@@ -1,8 +1,8 @@
 Faça um fork ou clone do projeto, conforme o exemplo abaixo:
 
 ```bash
-git clone https://git.serpro.gov.br/dsgov.br/dsgov.br.git
-cd dsgov.br
+git clone https://git.serpro.gov.br/govbr-ds/govbr-ds.git
+cd govbr-ds
 npm install
 npm start
 ```
@@ -34,7 +34,7 @@ Basicamente há 4 (quatro) tipos de extensões de arquivos que formam um compone
 Para exemplificar, vamos supor a criação de um `componente-novo`. O componente deve obedecer a seguinte estrutura:
 
 ```text
-design-system/
+govbr-ds-dev-core/
 ├── config.json
 ├── docs/
 │   └── components/
@@ -63,7 +63,7 @@ design-system/
 #### MD
 
 ```text
-design-system/
+govbr-ds-dev-core/
 ├── config.json (incluir o novo componente na lista de componentes)
 └── docs/
     └── components/
@@ -82,7 +82,7 @@ design-system/
    - `componente-novo-dsg.md` - Documentação de design do componente.
    - `imagens/` imagens referenciadas na documentação.
 
-3. Deve ser registrado na lista de componentes no arquivo `design-system/config.json`. Exemplificando:
+3. Deve ser registrado na lista de componentes no arquivo `govbr-ds-dev-core/config.json`. Exemplificando:
 
    ```text
    [
@@ -100,7 +100,7 @@ design-system/
    ]
    ```
 
-4. Também deve ser registrado na lista de componentes no arquivo `design-system/webpack/dsgov.entries.js` com os mixins de reuso. Exemplificando:
+4. Também deve ser registrado na lista de componentes no arquivo `govbr-ds-dev-core/webpack/dsgov.entries.js` com os mixins de reuso. Exemplificando:
 
    ```js
    setComponentPug('componente-novo', ['componente-novo-1', 'componente-novo-2'])
@@ -111,7 +111,7 @@ Após criados os arquivos de documentação e respeitadas as corretas referênci
 #### JS
 
 ```text
-design-system/
+govbr-ds-dev-core/
 └── src/
     └── components/
         └── componente-novo/
@@ -158,7 +158,7 @@ for (const brComponenteNovo of window.document.querySelectorAll(".br-componente-
 #### PUG
 
 ```text
-design-system/
+govbr-ds-dev-core/
 └── src/
     └── components/
         └── componente-novo/
@@ -175,7 +175,7 @@ design-system/
 #### SCSS
 
 ```text
-design-system/
+govbr-ds-dev-core/
 └── src/
     ├── components/
     |   └── componente-novo/
@@ -359,7 +359,7 @@ for (**const** brSimpleButton of window.document.querySelectorAll(
 }
 ```
 
-no arquivo `design-system/webpack/dsgov.entries.js`  deve setar o componente e os exemplos
+no arquivo `govbr-ds-dev-core/webpack/dsgov.entries.js`  deve setar o componente e os exemplos
 
 ```js
 setComponentPug('simple-button', ['componente-novo-1', 'componente-novo-2'])

@@ -52,9 +52,9 @@ Use nossos canais abaixo para obter tirar suas dúvidas:
 
 -   Site do DSGOV.BR <http://dsgov.estaleiro.serpro.gov.br/>
 
--   Web Components (versão estável) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/main>
+-   Web Components (versão estável) <https://govbr-ds.gitlab.io/govbr-ds-webcomponents/main>
 
--   Web Components (versão em desenvolvimento\*) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/develop>
+-   Web Components (versão em desenvolvimento\*) <https://govbr-ds.gitlab.io/govbr-ds-webcomponents/develop>
 
 -   Pelo nosso email <dsgov@serpro.gov.br>
 
@@ -66,7 +66,7 @@ Por favor verifique nossos guias de [como contribuir](./CONTRIBUTING.md 'Como co
 
 ### Commits
 
-Nesse projeto usamos um padrão para branches e commits. Por favor observe a documentação na nossa [wiki](https://dsgov-br.gitlab.io/dsgov.br-wiki/ 'Wiki') para aprender sobre os nossos padrões.
+Nesse projeto usamos um padrão para branches e commits. Por favor observe a documentação na nossa [wiki](https://govbr-ds.gitlab.io/govbr-ds-wiki/ 'Wiki') para aprender sobre os nossos padrões.
 
 ## Créditos
 
