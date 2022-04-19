@@ -8,7 +8,7 @@
     "design",
     "system"
   ],
-  "homepage": "https://dsgov.estaleiro.serpro.gov.br",
+  "homepage": "https://cdngovbr-ds.estaleiro.serpro.gov.br",
   "bugs": "https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/-/issues",
   "repository": "gitlab:govbr-ds/govbr-ds-dev/govbr-ds-dev-core",
   "license": "MIT",

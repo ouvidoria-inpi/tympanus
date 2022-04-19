@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O [Design System do Governo Federal](http://dsgov.estaleiro.serpro.gov.br/ 'Design System do Governo Federal') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo Federal.
+O [Design System do Governo Federal](http://cdngovbr-ds.estaleiro.serpro.gov.br/ 'Design System do Governo Federal') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo Federal.
 
 ## Tecnologias
 
@@ -20,7 +20,7 @@ As principais dependências do projeto são:
 
 1. [Fonte Rawline](https://www.cdnfonts.com/rawline.font/ 'Fonte Rawline')
 
-> O fontawesome e a fonte rawline podem ser importadas de um CDN. Consulte a documentação no site do [Design System do Governo Federal](http://dsgov.estaleiro.serpro.gov.br/ 'Design System do Governo Federal') para mais detalhes.
+> O fontawesome e a fonte rawline podem ser importadas de um CDN. Consulte a documentação no site do [Design System do Governo Federal](http://cdngovbr-ds.estaleiro.serpro.gov.br/ 'Design System do Governo Federal') para mais detalhes.
 >
 ## Como usar nossa biblioteca em seu projeto?
 
@@ -34,7 +34,7 @@ npm install --save @dsgovbr/dsgovbr
 
 ### Como começar
 
-Criamos um [tutorial no nosso site](https://dsgov.estaleiro.serpro.gov.br/introducao/como-comecar 'Como começar?') explicando como começar a utilizar nosso Design System.
+Criamos um [tutorial no nosso site](https://cdngovbr-ds.estaleiro.serpro.gov.br/introducao/como-comecar 'Como começar?') explicando como começar a utilizar nosso Design System.
 
 ##  Lints
 
@@ -50,7 +50,7 @@ npm run lint
 
 Use nossos canais abaixo para obter tirar suas dúvidas:
 
--   Site do DSGOV.BR <http://dsgov.estaleiro.serpro.gov.br/>
+-   Site do DSGOV.BR <http://cdngovbr-ds.estaleiro.serpro.gov.br/>
 
 -   Web Components (versão estável) <https://govbr-ds.gitlab.io/govbr-ds-webcomponents/main>
 

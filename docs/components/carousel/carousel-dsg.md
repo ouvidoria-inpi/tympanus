@@ -135,7 +135,7 @@ Ao contrário do indicador de páginas simples, o indicador de páginas textual 
 
 **Atenção:** tenha em mente que a utilização do indicador de páginas no *carousel* é uma boa prática de usabilidade e sempre que possível deve ser utilizado.
 
-Para mais informações consulte o documento [Componentes > Step](https://dsgov.estaleiro.serpro.gov.br/components/step?tab=designer).
+Para mais informações consulte o documento [Componentes > Step](https://cdngovbr-ds.estaleiro.serpro.gov.br/components/step?tab=designer).
 
 ---
 
@@ -256,33 +256,33 @@ Em ambos os casos o indicador do *step* deve corresponder a cada passo na navega
 
 ### Espaçamentos
 
-|Name|Property|Spacing Scale Token|
-|--|--|:--:|
-|Botões de navegação| `margin-right/left` |`--spacing-scale-default`|
-|Indicador de páginas|`margin-top`|`--spacing-scale-2x`|
+| Name                 | Property            |    Spacing Scale Token    |
+| -------------------- | ------------------- | :-----------------------: |
+| Botões de navegação  | `margin-right/left` | `--spacing-scale-default` |
+| Indicador de páginas | `margin-top`        |   `--spacing-scale-2x`    |
 
 ### Alinhamento
 
-|Name|Property|Spacing Token|
-|--|--|:--:|
-|Botões de navegação| `spacing-vertical` |`--spacing-vertical-center`|
-|Indicador de páginas| `spacing-horizontal` |`--spacing-horizontal-center`|
-|Botões de reprodução| `spacing-vertical` |`--spacing-vertical-center`|
-|Botões de reprodução| `spacing-horizontal` |`--spacing-horizontal-center`|
+| Name                 | Property             |         Spacing Token         |
+| -------------------- | -------------------- | :---------------------------: |
+| Botões de navegação  | `spacing-vertical`   |  `--spacing-vertical-center`  |
+| Indicador de páginas | `spacing-horizontal` | `--spacing-horizontal-center` |
+| Botões de reprodução | `spacing-vertical`   |  `--spacing-vertical-center`  |
+| Botões de reprodução | `spacing-horizontal` | `--spacing-horizontal-center` |
 
 ### Iconografia
 
-|Name|Ícone|Size|Class (Font Awesome)|
-|--|--|--|--|
-|Botão de navegação (página anterior)|<i class="fas fa-angle-left"></i>|`–icon-size-base`|`fa-angle-left`|
-|Botão de navegação (página seguinte)|<i class="fas fa-angle-right"></i>|`–icon-size-base`|`fa-angle-righ`|
-|Botão de reprodução (Pause)|<i class="fas fa-pause"></i>|`–icon-size-base`|`fa-pause`|
-|Botão de reprodução (Play)|<i class="fas fa-play"></i>|`–icon-size-base`|`fa-play`|
+| Name                                 | Ícone                              | Size              | Class (Font Awesome) |
+| ------------------------------------ | ---------------------------------- | ----------------- | -------------------- |
+| Botão de navegação (página anterior) | <i class="fas fa-angle-left"></i>  | `–icon-size-base` | `fa-angle-left`      |
+| Botão de navegação (página seguinte) | <i class="fas fa-angle-right"></i> | `–icon-size-base` | `fa-angle-righ`      |
+| Botão de reprodução (Pause)          | <i class="fas fa-pause"></i>       | `–icon-size-base` | `fa-pause`           |
+| Botão de reprodução (Play)           | <i class="fas fa-play"></i>        | `–icon-size-base` | `fa-play`            |
 
 ### Movimento
 
-|Name|Property|Movimento Token
-|--|--|--|
-|Página|Transição|`slide`|
-|Página|Easing|`--animation-ease-in-out`|
-|Página|Duração|`--duration-fast`|
+| Name   | Property  | Movimento Token           |
+| ------ | --------- | ------------------------- |
+| Página | Transição | `slide`                   |
+| Página | Easing    | `--animation-ease-in-out` |
+| Página | Duração   | `--duration-fast`         |
