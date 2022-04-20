@@ -77,19 +77,7 @@ commit_lint:
   stage: test
   script: npx commitlint-gitlab-ci -x @commitlint/config-conventional
 
-pages:
-  stage: pages
-  artifacts:
-    paths:
-      - public
-    expire_in: 1 week
-  before_script:
-    - mv dist public
-  script:
-    - npm run start
-  only:
-    - main
-    - feat/sast-config
+
 
 publish_npm:
   stage: pages
