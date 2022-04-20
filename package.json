@@ -1,6 +1,6 @@
 {
-  "name": "@dsgovbr/dsgovbr",
-  "version": "2.4.2",
+  "name": "govbr-ds",
+  "version": "3.0.0",
   "description": "Design System do Governo Federal",
   "keywords": [
     "dsgovbr",
@@ -54,7 +54,7 @@
   },
   "lint-staged": {
     "*.{css,scss}": "stylelint --fix",
-    "*.{js,ts}": "eslint -c .eslintrc.yaml --fix"
+    "*.{js,ts}": "eslint -c .eslintrc.yaml --fix ./src/**/*.js"
   },
   "config": {
     "commitizen": {
@@ -127,11 +127,6 @@
     "webpack-dev-server": "^3.11.2",
     "wget-improved": "^3.2.1",
     "yesno": "^0.3.1"
-  },
-  "engines": {
-    "node": ">= 14.15.4",
-    "npm": ">= 6.14.11",
-    "yarn": ">= 1.22.5"
   },
   "engineStrict": true
 }
