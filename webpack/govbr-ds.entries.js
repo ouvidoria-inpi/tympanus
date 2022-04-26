@@ -1,5 +1,5 @@
 /**
- * govbr_ds.entries define as entries da build do Webpack.
+ * govbr-ds.entries define as entries da build do Webpack.
  */
 
 const path = require('path')
@@ -9,10 +9,10 @@ let production = false
 
 const govbr_ds = {
   govbr_ds: [
-    path.resolve(paths.srcSCSS, 'govbr_ds.scss'),
+    path.resolve(paths.srcSCSS, 'govbr-ds.scss'),
 
     path.resolve(paths.srcUtil, 'dropdown', 'dropdown.scss'),
-    path.resolve(paths.srcJSpartial, 'govbr_ds.entry.js'),
+    path.resolve(paths.srcJSpartial, 'govbr-ds.entry.js'),
   ],
   'govbr_ds-base': [
     path.resolve(paths.srcSCSS, 'govbr_ds-base.scss'),
@@ -23,7 +23,7 @@ const govbr_ds = {
     path.resolve(paths.srcSCSS, 'govbr_ds-lite.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
-  'govbr_ds.min': [path.resolve(paths.srcJSpartial, 'govbr_ds.entry.js')],
+  'govbr-ds.min': [path.resolve(paths.srcJSpartial, 'govbr-ds.entry.js')],
 }
 
 /**
@@ -219,7 +219,7 @@ function setUtil(name) {
 }
 
 function setTemplate(name) {
-  // govbr_ds.setAttribute('components/avatar/' + name, pathsEntry(name))
+  // govbr-ds.setAttribute('components/avatar/' + name, pathsEntry(name))
   govbr_ds[`templates/${name}/${name}`] = pathsEntryTemplate(name)
 }
 
