@@ -1,5 +1,5 @@
 /**
- * Loader webpack síncrono para resolução de módulos pug para o dsgov.
+ * Loader webpack síncrono para resolução de módulos pug para o govbr-ds.
  *
  * @see https://webpack.js.org/concepts/#loaders
  * @see https://webpack.js.org/concepts/loaders/
@@ -13,7 +13,7 @@ const loaderUtils = require('loader-utils')
 const validateOptions = require('schema-utils')
 const schema = require('./options.schema.json')
 
-const loaderName = 'dsgov-pug-loader'
+const loaderName = 'govbr-ds-pug-loader'
 
 /**
  * Loader function.

@@ -2,9 +2,9 @@
 
 > Por favor não poste problemas de segurança nos canais abertos, como issues e discord, a menos que seja estritamente necessário.
 
-Nós do time DSGOV.BR, juntamente com a comunidade, levamos segurança muito a sério.
+Nós do time GOVBR-DS, juntamente com a comunidade, levamos segurança muito a sério.
 
-Solicitamos que problemas desse tipo sejam reportados pelo email <dsgov@serpro.gov.br> e que seja incluída a palavra "SEGURANÇA" no assunto para facilitar a classificação.
+Solicitamos que problemas desse tipo sejam reportados pelo email <govbr-ds@serpro.gov.br> e que seja incluída a palavra "SEGURANÇA" no assunto para facilitar a classificação.
 
 Nós agradecemos todo esforço para nos reportar problemas de segurança de maneira responsável e segura. Nós vamos nos esforçar para reconhecer todas as contribuições
 

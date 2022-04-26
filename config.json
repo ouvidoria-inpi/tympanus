@@ -14,12 +14,12 @@
 				},
 				{
 					"id": "prototipando",
-					"label": "Prototipando com o DSGOV",
+					"label": "Prototipando com o GOVBR-DS",
 					"type": "documentation"
 				},
 				{
-					"id": "dsgov-lite",
-					"label": "DSGOV Lite",
+					"id": "govbr-ds-lite",
+					"label": "GOVBR-DS Lite",
 					"type": "documentation"
 				},
 				{
@@ -191,7 +191,7 @@
 				},
 				{
 					"id": "migracao",
-					"label": "Migração da versão 1.x para 2.x do DSGOV",
+					"label": "Migração da versão 1.x para 2.x do GOVBR-DS",
 					"type": "documentation"
 				}
 			],
@@ -1451,7 +1451,7 @@
 							"isNew": true,
 							"label": "UI Kit WEB",
 							"path": "https://serprodrive.serpro.gov.br/s/ARP4gmoRKtwTena",
-							"fileDescription": "uikit-dsgov-web_5.1.1.zip (14MB)",
+							"fileDescription": "uikit-govbr-ds-web_5.1.1.zip (14MB)",
 							"version": "Versão 5.1.1"
 						},
 						{
@@ -1460,7 +1460,7 @@
 							"isNew": true,
 							"label": "UI Kit Figma",
 							"path": "https://serprodrive.serpro.gov.br/s/nFFEGRCBJzatw4Y",
-							"fileDescription": "uikit-dsgov-web-figma_2.2.0.zip (1 MB)",
+							"fileDescription": "uikit-govbr-ds-web-figma_2.2.0.zip (1 MB)",
 							"version": "Versão 2.2.0"
 						},
 						{
@@ -1501,7 +1501,7 @@
 					],
 					"id": "designer",
 					"label": "Designer",
-					"description": "Baixe versões anteriores dos Artefatos de Design do DSGOV.",
+					"description": "Baixe versões anteriores dos Artefatos de Design do GOVBR-DS.",
 					"history": [
 						{
 							"id": "uikitweb",
@@ -1652,7 +1652,7 @@
 					],
 					"id": "modelos",
 					"label": "Modelos",
-					"description": "Baixe versões anteriores dos Modelos de template do DSGOV.",
+					"description": "Baixe versões anteriores dos Modelos de template do GOVBR-DS.",
 					"history": [
 						{
 							"id": "crud",
@@ -1770,8 +1770,8 @@
 							"description": "Utilize código pronto em HTML, CSS e JavaScript.",
 							"image": "assets/imgs/logos-w3c.png",
 							"isNew": true,
-							"label": "Código-fonte DSGOV",
-							"path": "/assets/design-system/assets/source-code/dsgov-latest.zip",
+							"label": "Código-fonte GOVBR-DS",
+							"path": "/assets/design-system/assets/source-code/govbr-ds-latest.zip",
 							"version": "Versão 2.4.2"
 						},
 						{
@@ -1779,7 +1779,7 @@
 							"image": "assets/imgs/logo-npm.png",
 							"isNew": true,
 							"label": "Pacote NPM",
-							"path": "/assets/design-system/assets/npm-package/dsgov-latest.tgz",
+							"path": "/assets/design-system/assets/npm-package/govbr-ds-latest.tgz",
 							"version": "Versão 2.4.2"
 						},
 						{
@@ -1793,44 +1793,44 @@
 					],
 					"id": "developer",
 					"label": "Desenvolvedor",
-					"description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do DSGOV.",
+					"description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do GOVBR-DS.",
 					"history": [
 						{
 							"id": "codigoFonte",
 							"label": "Código Fonte",
 							"versions": [
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.4.1.zip",
+									"path": "/assets/design-system/assets/source-code/govbr-ds-2.4.1.zip",
 									"version": "2.4.1",
 									"data": "10 dez 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.4.0.zip",
+									"path": "/assets/design-system/assets/source-code/govbr-ds-2.4.0.zip",
 									"version": "2.4.0",
 									"data": "02 dez 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.3.0.zip",
+									"path": "/assets/design-system/assets/source-code/govbr-ds-2.3.0.zip",
 									"version": "2.3.0",
 									"data": "05 nov 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.2.2.zip",
+									"path": "/assets/design-system/assets/source-code/govbr-ds-2.2.2.zip",
 									"version": "2.2.2",
 									"data": "05 out 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.2.1.zip",
+									"path": "/assets/design-system/assets/source-code/govbr-ds-2.2.1.zip",
 									"version": "2.2.1",
 									"data": "29 set 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.2.0.zip",
+									"path": "/assets/design-system/assets/source-code/govbr-ds-2.2.0.zip",
 									"version": "2.2.0",
 									"data": "29 set 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.1.0.zip",
+									"path": "/assets/design-system/assets/source-code/govbr-ds-2.1.0.zip",
 									"version": "2.1.0",
 									"data": "16 jul 2021"
 								}
@@ -1841,37 +1841,37 @@
 							"label": "Pacote NPM",
 							"versions": [
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.4.1.tgz",
+									"path": "/assets/design-system/assets/npm-package/govbr-ds-2.4.1.tgz",
 									"version": "2.4.1",
 									"data": "10 dez 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.4.0.tgz",
+									"path": "/assets/design-system/assets/npm-package/govbr-ds-2.4.0.tgz",
 									"version": "2.4.0",
 									"data": "03 dez 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.3.0.tgz",
+									"path": "/assets/design-system/assets/npm-package/govbr-ds-2.3.0.tgz",
 									"version": "2.3.0",
 									"data": "05 nov 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.2.2.tgz",
+									"path": "/assets/design-system/assets/npm-package/govbr-ds-2.2.2.tgz",
 									"version": "2.2.2",
 									"data": "05 out 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.2.1.tgz",
+									"path": "/assets/design-system/assets/npm-package/govbr-ds-2.2.1.tgz",
 									"version": "2.2.1",
 									"data": "29 set 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.2.0.tgz",
+									"path": "/assets/design-system/assets/npm-package/govbr-ds-2.2.0.tgz",
 									"version": "2.2.0",
 									"data": "29 set 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.1.0.tgz",
+									"path": "/assets/design-system/assets/npm-package/govbr-ds-2.1.0.tgz",
 									"version": "2.1.0",
 									"data": "16 jul 2021"
 								}
@@ -1885,8 +1885,8 @@
 		{
 			"ext": ["html"],
 			"hideLabel": true,
-			"id": "colabore-com-o-dsgov",
-			"label": "Colabore com o DSGOV",
+			"id": "colabore-com-o-govbr-ds",
+			"label": "Colabore com o GOVBR-DS",
 			"type": "documentation"
 		},
 		{
@@ -1904,8 +1904,8 @@
 			"type": "documentation"
 		},
 		{
-			"id": "dsgov-1.5.0",
-			"label": "DSGOV v1.5.0 BETA (Obsoleta)",
+			"id": "govbr-ds-1.5.0",
+			"label": "GOVBR-DS v1.5.0 BETA (Obsoleta)",
 			"path": "/v1.5.0/",
 			"target": "_blank",
 			"type": "link"

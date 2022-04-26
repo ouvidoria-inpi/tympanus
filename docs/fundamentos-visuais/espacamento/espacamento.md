@@ -43,7 +43,7 @@ Interfaces digitais do governo devem utilizar as escalas de espaçamentos existe
 
  No DS GOV, o comportamento das dimensões de um objeto é determinada pela regra: `box-sizing: border-box`, ou seja, as propriedades de largura (width) e de altura (height) incluem o tamanho do padding e do border, mas não incluem a margin.
 
-![Box-Model no DS GOV](imagens/boxmodel-dsgov.png)
+![Box-Model no DS GOV](imagens/boxmodel-govbr-ds.png)
 *Comportamento das dimensões do Box-Model utilizado no DS GOV*
 
  Observando somente as propriedades de espaçamento, podemos então categorizá-los dentro do DS Gov em **Interno** e **Externo**.

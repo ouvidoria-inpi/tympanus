@@ -156,7 +156,7 @@
   @include token-color-rgb($yellow-vivid);
 }
 
-// Compatibilidade com versões anteriores do dsgov
+// Compatibilidade com versões anteriores do govbr-ds
 // Criar cores de fundo
 @mixin bg-colors($item, $value) {
   .bg-#{$item} {

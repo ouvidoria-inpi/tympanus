@@ -6,8 +6,8 @@ const TerserPlugin = require('terser-webpack-plugin')
 
 // DSGov Build Stuff
 const paths = require('./webpack/paths')
-const { plugins } = require('./webpack/dsgov.plugins')
-const { entries } = require('./webpack/dsgov.entries')
+const { plugins } = require('./webpack/govbr-ds.plugins')
+const { entries } = require('./webpack/govbr-ds.entries')
 
 // Configuração webpack
 const webpackConfig = (_env, argv) => {
@@ -20,7 +20,7 @@ const webpackConfig = (_env, argv) => {
     output: {
       filename: '[name].js',
       path: paths.dist,
-      library: "dsgov",
+      library: "govbr-ds",
       libraryTarget: 'umd',
       umdNamedDefine: true
     },
@@ -32,7 +32,7 @@ const webpackConfig = (_env, argv) => {
     module: {
       rules: [
         {
-          test: /(?<!dsgov)((?<!min))\.s[ac]ss$/i,
+          test: /(?<!govbr-ds)((?<!min))\.s[ac]ss$/i,
           include: paths.src,
           use: [
             MiniCssExtractPlugin.loader,
@@ -69,7 +69,7 @@ const webpackConfig = (_env, argv) => {
           },
         },
         {
-          test: /(dsgov)\.s[ac]ss$/i,
+          test: /(govbr-ds)\.s[ac]ss$/i,
           include: paths.src,
           use: [
             MiniCssExtractPlugin.loader,
@@ -95,9 +95,9 @@ const webpackConfig = (_env, argv) => {
               options: {
                 name: '[name].html',
                 esModule: false,
-                
-                
-                
+
+
+
 
                 // Mantém a estrutura de diretórios (mas excluindo-se o 'src/pug/views')
                 outputPath: (
@@ -143,7 +143,7 @@ const webpackConfig = (_env, argv) => {
               },
             },
             {
-              loader: path.resolve(paths.webpackLoaders, 'dsgov-pug-loader.js'),
+              loader: path.resolve(paths.webpackLoaders, 'govbr-ds-pug-loader.js'),
               options: {
                 // Se esse loader for usado com o file-loader, utilize 'html'.
                 // Caso seja usado pelo html-webpack-plugin, utilize 'commonjs'.
@@ -191,7 +191,7 @@ const webpackConfig = (_env, argv) => {
             mangle: true,
             output: {
               comments: false,
-              
+
             },
             compress: {
               inline: 1,

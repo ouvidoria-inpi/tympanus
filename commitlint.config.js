@@ -2,7 +2,7 @@ const Configuration = {
   defaultIgnores: true,
   extends: ['@commitlint/config-conventional'],
   formatter: '@commitlint/format',
-  helpUrl: 'https://dsgov-br.gitlab.io/dsgov.br-wiki/git-gitlab/commit',
+  helpUrl: 'https://govbr-ds.gitlab.io/govbr-ds-wiki/git-gitlab/commit',
   ignores: [
     (commit) => {
       return commit === ''

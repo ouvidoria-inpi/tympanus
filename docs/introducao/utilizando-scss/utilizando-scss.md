@@ -1,6 +1,6 @@
 [version]: # '1.0.0'
 
-1. Instalar o dsgov conforme o [como começar](/introducao/como-comecar)
+1. Instalar o govbr-ds conforme o [como começar](/introducao/como-comecar)
 
 2. instalar o dart sass com o comando abaixo
 
@@ -8,12 +8,12 @@
     npm install sass
     ```
 
-#### Exemplo consumindo todos os estilos do DSGOV
+#### Exemplo consumindo todos os estilos do GOVBR-DS
 
-1. Crie o arquivo `style.scss` com import do `dsgov.scss` conforme o exemplo abaixo, se atentar a localização da pasta `node_modules` que pode mudar conforme a organização do projeto
+1. Crie o arquivo `style.scss` com import do `govbr-ds.scss` conforme o exemplo abaixo, se atentar a localização da pasta `node_modules` que pode mudar conforme a organização do projeto
 
     ```text
-    @import "node_modules/@govbr/dsgov/src/dsgov.scss"
+    @import "node_modules/@govbr/govbr-ds/src/govbr-ds.scss"
     ```
 
 1. para compilar o arquivo acima basta rodar o seguinte comando:
@@ -24,13 +24,13 @@
 
 #### Para consumir alguns componentes específicos
 
-1. deverá criar o arquivo ``style.scss`` onde deverá importar o ``dsgov-base.scss`` que se encontra na pasta **src/partial/scss** e os componentes desejados, que podem ser encontrados na pasta **src/components** como exemplo abaixo:
+1. deverá criar o arquivo ``style.scss`` onde deverá importar o ``govbr-ds-base.scss`` que se encontra na pasta **src/partial/scss** e os componentes desejados, que podem ser encontrados na pasta **src/components** como exemplo abaixo:
 
     ```text
-    @import "../node_modules/@govbr/dsgov/src/partial/scss/dsgov-base.scss";
-    @import "../node_modules/@govbr/dsgov/src/components/button/button";
-    @import "../node_modules/@govbr/dsgov/src/components/avatar/avatar";
-    @import "../node_modules/@govbr/dsgov/src/components/card/card";
+    @import "../node_modules/@govbr/govbr-ds/src/partial/scss/govbr-ds-base.scss";
+    @import "../node_modules/@govbr/govbr-ds/src/components/button/button";
+    @import "../node_modules/@govbr/govbr-ds/src/components/avatar/avatar";
+    @import "../node_modules/@govbr/govbr-ds/src/components/card/card";
     ```
 
 1. Para compilar basta rodar o comando abaixo
@@ -39,12 +39,12 @@
     npx sass style.scss dist/style.css 
     ```
 
-#### É possível gerar uma versão compilada dos arquivos scss a partir do diretório de instalação do DSGOV, conforme exemplos a seguir
+#### É possível gerar uma versão compilada dos arquivos scss a partir do diretório de instalação do GOVBR-DS, conforme exemplos a seguir
 
-1. Compilando todos os estilos do DSGOV:
+1. Compilando todos os estilos do GOVBR-DS:
 
     ```text
-    npx sass node_modules/@govbr/dsgov/src/dsgov dist/exemplo.css
+    npx sass node_modules/@govbr/govbr-ds/src/govbr-ds dist/exemplo.css
     ```
 
 1. Compilando um estilo de um arquivo específico:

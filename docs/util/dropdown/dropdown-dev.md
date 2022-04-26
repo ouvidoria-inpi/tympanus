@@ -55,7 +55,7 @@
 **Para cada acionador (trigger)**, instanciar a classe dropdown passando um objeto de configuração.
 
 ```javascript
-import Dropdown from 'dsgov'
+import Dropdown from 'govbr-ds'
 const config = {
   trigger,
   iconToShow: 'fa-chevron-down',

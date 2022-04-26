@@ -24,7 +24,7 @@ A representação do usuário deve estar contida em uma superfície circular. A 
 ![Exemplos de dimensões do avatar.](imagens/superficie.png)
 *Variações da dimensão da superfície do avatar.*
 
-A superfície, nos casos dos avatares icônico e letra, podem assumir quaisquer cores da paletra cromática do DSGOV sendo sugerida a utilização das cores de apoio. Tenha em mente a garantia do contraste entre ícone/letra e superfície.
+A superfície, nos casos dos avatares icônico e letra, podem assumir quaisquer cores da paletra cromática do GOVBR-DS sendo sugerida a utilização das cores de apoio. Tenha em mente a garantia do contraste entre ícone/letra e superfície.
 
 ### 2- Representação do usuário
 

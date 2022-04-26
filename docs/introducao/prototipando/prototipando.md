@@ -4,7 +4,7 @@ Precisa vender um produto, validar requisitos com o cliente, planejar a aparênc
 
 A utilização do protótipo possibilita simular a aparência e funcionalidade do software, permitindo que os clientes, analistas, desenvolvedores e gerentes percebam os requisitos do sistema e possam avaliar, alterar ou aprovar as características mais marcantes na interface.
 
-Os **UI Kits**, pacotes de interface do usuário, contém os componentes e templates do DSGOV. Com eles, você pode editar e planejar a aparência das telas do seu produto, seja um sistema web responsivo, um aplicativo para dispositivos móveis ou um site institucional.
+Os **UI Kits**, pacotes de interface do usuário, contém os componentes e templates do GOVBR-DS. Com eles, você pode editar e planejar a aparência das telas do seu produto, seja um sistema web responsivo, um aplicativo para dispositivos móveis ou um site institucional.
 
 Sendo assim, é possível validar a interface gráfica antes mesmo da implementação e ter a certeza da aparência final do seu produto.
 

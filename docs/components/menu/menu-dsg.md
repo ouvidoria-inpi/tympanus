@@ -103,7 +103,7 @@ Utilize os ícones Expandir/Retrair para acionar o comportamento _collapse_ para
 
 Preze pelas boas práticas de utilização:
 
-- Utilize a família de ícones adotada no DSGOV (_Font Awesome_);
+- Utilize a família de ícones adotada no GOVBR-DS (_Font Awesome_);
 
 - Padronize a utilização de ícones.
 Por exemplo: utilize em todos os itens do mesmo bloco ou em todos os itens do menu.

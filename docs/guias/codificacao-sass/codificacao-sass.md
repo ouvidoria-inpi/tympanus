@@ -1,8 +1,8 @@
-Os estilos em CSS no DSGOV são criados usando o [Sass](https://sass-lang.com/) no formato **scss**.
+Os estilos em CSS no GOVBR-DS são criados usando o [Sass](https://sass-lang.com/) no formato **scss**.
 
 ## Padronização
 
-O DSGOV usa o [stylelint](https://stylelint.io/) para manter o padrão de escrita Sass.
+O GOVBR-DS usa o [stylelint](https://stylelint.io/) para manter o padrão de escrita Sass.
 
 Customizações utilizadas:
 
@@ -29,7 +29,7 @@ Customizações utilizadas:
 }
 ```
 
-Nas situações onde os estilos precisem sobrescrever scss de vendors em conflito com as configurações do dsgov, desabilite temporariamente a regra de acordo com a documentação [Ignoring code](https://stylelint.io/user-guide/ignore-code).
+Nas situações onde os estilos precisem sobrescrever scss de vendors em conflito com as configurações do govbr-ds, desabilite temporariamente a regra de acordo com a documentação [Ignoring code](https://stylelint.io/user-guide/ignore-code).
 
 ## Documentação e comentários
 
@@ -182,9 +182,9 @@ Nela você terá a noção de quantos blocos o arquivo Sass está dividido e pod
 
 ## Bloco tokens
 
-Alguns componentes podem ter tokens para facilitar modificações. Eles podem consumir tanto os tokens do dsgov quanto seus tokens internos.
+Alguns componentes podem ter tokens para facilitar modificações. Eles podem consumir tanto os tokens do govbr-ds quanto seus tokens internos.
 
-No exemplo abaixo existem 6 tokens criados para o componente. Os 2 primeiros consomem tokens de tema do dsgov enquanto que os restantes são internos do próprio componente.
+No exemplo abaixo existem 6 tokens criados para o componente. Os 2 primeiros consomem tokens de tema do govbr-ds enquanto que os restantes são internos do próprio componente.
 
 ```scss
 @mixin component-tokens {

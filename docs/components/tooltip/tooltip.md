@@ -2,8 +2,8 @@
 <div class="icon" aria-label="Componente Obsoleto"><i class="fas fa-exclamation-triangle fa-lg" aria-hidden="true"></i></div>
 <div class="content">
 <p><strong>Componente Obsoleto/Depreciado.</strong></p>
-<p>O uso desse componente é <strong>desencorajado</strong> devido as novas diretrizes do <strong>DSGOV.BR</strong>.</p>
-<p>Resolvemos manter esse componente no formato atual apenas para fins de compatibilidade, mas em versões futuras esse componente será <strong>removido do projeto</strong>. Sendo assim recomendamos que aguardem o lançamento de nova versão do DSGOV.BR com o comportamento que irá substituir esse componente.</p>
+<p>O uso desse componente é <strong>desencorajado</strong> devido as novas diretrizes do <strong>GOVBR-DS</strong>.</p>
+<p>Resolvemos manter esse componente no formato atual apenas para fins de compatibilidade, mas em versões futuras esse componente será <strong>removido do projeto</strong>. Sendo assim recomendamos que aguardem o lançamento de nova versão do GOVBR-DS com o comportamento que irá substituir esse componente.</p>
 </div>
 </div>
 </div>

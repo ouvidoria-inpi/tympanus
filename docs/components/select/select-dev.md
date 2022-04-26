@@ -147,13 +147,13 @@
 
 ### HTML
 
-Incluir o arquivo `dsgov.min.js` no html.
+Incluir o arquivo `govbr-ds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/dsgov/dist/dsgov.min.js"></script>
+<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
 ```
 
-> O arquivo dsgov.min.js expõe um objeto chamado `dsgov` contendo as referências para todas as classes exportadas.
+> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -165,7 +165,7 @@ Usar o seguinte código JavaScript para instanciar a classe `BRSelect`, passando
 ```javascript
 const selectList = []
 for (const brSelect of window.document.querySelectorAll('.br-select')) {
-  selectList.push(new dsgov.BRSelect('br-select', brSelect))
+  selectList.push(new govbr-ds.BRSelect('br-select', brSelect))
 }
 ```
 ### Para Obter as Opções Selecionadas

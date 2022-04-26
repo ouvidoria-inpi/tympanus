@@ -185,7 +185,7 @@ Preferencialmente, utilize o *Button* na versão com densidade alta.
 
 ### 8. Botão de Autenticar
 
-O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](https://dsgov.estaleiro.serpro.gov.br/components/signin?tab=designer)).
+O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](https://www.gov.br/ds/components/signin?tab=designer)).
 
 É apresentado apenas quando o usuário estiver "deslogado". Após o login, ele será substituído pelo Avatar.
 

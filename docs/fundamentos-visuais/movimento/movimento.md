@@ -22,7 +22,7 @@ Utilize movimentos para:
 
 ### Experiência Única
 
-Muitos componentes do DSGOV já trazem incorporados algum tipo de micro animações que devem ser consideradas. No entanto, para as macro animações de interações entre componentes ou entre telas o _design_ deve planejar conforme sua necessidade, seguindo as orientações e sugestões deste documento.
+Muitos componentes do GOVBR-DS já trazem incorporados algum tipo de micro animações que devem ser consideradas. No entanto, para as macro animações de interações entre componentes ou entre telas o _design_ deve planejar conforme sua necessidade, seguindo as orientações e sugestões deste documento.
 
 Tenha sempre em mente o conceito de experiência única do usuário e utilize os parâmetros **efeito**, **_easing_** e **duração** de forma consistente ao longo de todo o projeto.
 
@@ -374,7 +374,7 @@ Duração é o parâmetro que considera o tempo que o movimento ocorre. Ao decid
 
 - **Macro animação:** trata-se de animações mais perceptíveis e que geralmente envolvem maior atenção do usuário e deve ser utilizado de forma bastante cautelosa em elementos de grande extensão e importância no sistema.
 
-Sugerimos a escala de tempo como referência para auxiliar a criação de micro e macro animações no DSGOV:
+Sugerimos a escala de tempo como referência para auxiliar a criação de micro e macro animações no GOVBR-DS:
 
 #### Escala de Tempo
 

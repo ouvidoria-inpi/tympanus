@@ -1,8 +1,8 @@
 Faça um fork ou clone do projeto, conforme o exemplo abaixo:
 
 ```bash
-git clone https://git.serpro.gov.br/dsgov.br/dsgov.br.git
-cd dsgov.br
+git clone https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core.git
+cd govbr-ds-dev-core
 npm install
 npm start
 ```
@@ -100,7 +100,7 @@ design-system/
    ]
    ```
 
-4. Também deve ser registrado na lista de componentes no arquivo `design-system/webpack/dsgov.entries.js` com os mixins de reuso. Exemplificando:
+4. Também deve ser registrado na lista de componentes no arquivo `design-system/webpack/govbr-ds.entries.js` com os mixins de reuso. Exemplificando:
 
    ```js
    setComponentPug('componente-novo', ['componente-novo-1', 'componente-novo-2'])
@@ -359,7 +359,7 @@ for (**const** brSimpleButton of window.document.querySelectorAll(
 }
 ```
 
-no arquivo `design-system/webpack/dsgov.entries.js`  deve setar o componente e os exemplos
+no arquivo `design-system/webpack/govbr-ds.entries.js`  deve setar o componente e os exemplos
 
 ```js
 setComponentPug('simple-button', ['componente-novo-1', 'componente-novo-2'])

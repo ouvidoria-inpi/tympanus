@@ -30,10 +30,10 @@ De forma geral, a ilusão de elevação é algo que funciona melhor quando passa
 
 ## Sombra
 
-A elevação é representada no DSGOV por meio de sombras projetadas com diferentes intensidades de acordo com a elevação em que o elemento se encontra. O uso de sombras auxilia na percepção da altura do elemento em relação a uma determinada superfície.
+A elevação é representada no GOVBR-DS por meio de sombras projetadas com diferentes intensidades de acordo com a elevação em que o elemento se encontra. O uso de sombras auxilia na percepção da altura do elemento em relação a uma determinada superfície.
 
-![Exemplos de sombras utilizadas no DSGOV.](imagens/sombras.png)
-*Exemplos de sombras utlizadas no DSGOV.*
+![Exemplos de sombras utilizadas no GOVBR-DS.](imagens/sombras.png)
+*Exemplos de sombras utlizadas no GOVBR-DS.*
 
 ### Atributos
 
@@ -94,7 +94,7 @@ Define o nível de suavidade da sombra.
 
 #### 4. _Color_ (Cor)
 
-Pode assumir qualquer cor prevista na [paleta de cores](/fundamentos-visuais/cores) do DSGOV.
+Pode assumir qualquer cor prevista na [paleta de cores](/fundamentos-visuais/cores) do GOVBR-DS.
 
 #### 5. _Color Opacity_ (Opacidade da Cor)
 
@@ -104,7 +104,7 @@ Veja os valores possíveis nos atributos de opacidade no [Fundamento de Superfí
 
 ### _Tokens_ e exemplos do uso de sombras
 
-No DSGOV sombras são utilizadas de forma simplificada. Dessa forma, foram criadas _tokens_ de sombras prontas para o uso.
+No GOVBR-DS sombras são utilizadas de forma simplificada. Dessa forma, foram criadas _tokens_ de sombras prontas para o uso.
 
 Visite nossa [página de utilitários](/utilities-css/elevacao) para visualizar todas as possibilidades possíveis de uso de sombras e _tokens_.
 
@@ -268,7 +268,7 @@ Os componentes que se se encontram nesta camada projetam a sombra com a maior in
 | :----: | :-----------------: |
 |   4    | `--z-index-layer-4` |
 
-A seguir, a tabela de camadas resume visualmente o conceito de camadas utilizado no DSGOV:
+A seguir, a tabela de camadas resume visualmente o conceito de camadas utilizado no GOVBR-DS:
 
 ![Tabela de hierarquia de camadas.](imagens/camadas-tabela.png)
 *Tabela de hierarquia de camadas.*

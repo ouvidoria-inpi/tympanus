@@ -1,4 +1,4 @@
-# JSON de configuração para o DSGOV
+# JSON de configuração para o GOVBR-DS
 
 Os itens são renderizados na ordem que aparecem nesse arquivo
 

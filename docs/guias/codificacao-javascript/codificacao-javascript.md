@@ -4,7 +4,7 @@ Esse documento descreve o padrão de codificação para a linguagem **JavaScript
 
 [ECMAScript][1] é uma especificação de linguagem de programação baseada em scripts, padronizada pela [ECMA International][2] na especificação [ECMA-262][3] e [ISO/IEC 16262][4]. A especificação é usada em tecnologias para Internet para a criação de scripts executados no cliente, sendo criada para padronizar a linguagem JavaScript, além permitir outras implementações independentes.
 
-## JavaScript no DSGOV
+## JavaScript no GOVBR-DS
 
 O Design System de Governo utiliza o JavaScript na versão 6 (ES6) para a construção do código JavaScript de seus componentes.
 

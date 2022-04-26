@@ -48,7 +48,7 @@
 **Para cada acionador (trigger)**, instanciar a classe scrim passando um objeto de configuração.
 
 ```javascript
-import Scrim from 'dsgov'
+import Scrim from 'govbr-ds'
 const scrscrim = window.document.querySelector('#btnClose')
 const config = {
   trigger,

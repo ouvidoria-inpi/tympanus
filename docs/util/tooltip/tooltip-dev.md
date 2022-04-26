@@ -50,7 +50,7 @@
 ### Javascript
 
 ```javascript
-import Tooltip from 'dsgov'
+import Tooltip from 'govbr-ds'
  window.document
       .querySelectorAll('[data-tooltip-text]')
       .forEach((TooltipExample) => {

@@ -40,7 +40,7 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 - Uso de novos ícones.
 - Novo comportamento de truncamento nos hiperlinks.
 
-### Modificado 
+### Modificado
 - Alteração nos tamahnos de fontes.
 - Alteração no recurso de truncamento do breadcrumbs.
 - Responsividade.
@@ -49,9 +49,9 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 ## [7.1.1] - 30/04/2020
 ### Modificado
 - Corrigido texto, token e imagens.
-- Ajustando artefato de design com padrões de desenvolvimento do DSGOV.
+- Ajustando artefato de design com padrões de desenvolvimento do GOVBR-DS.
 
 ## [7.1.0] - 02/04/2020
-### Adicionado 
+### Adicionado
 - Nova estrutura de diretriz.
 - Novo tipo de breadcrumbs (mobile) e tokens.
