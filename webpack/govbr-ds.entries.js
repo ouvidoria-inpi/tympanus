@@ -15,12 +15,12 @@ const govbr_ds = {
     path.resolve(paths.srcJSpartial, 'govbr-ds.entry.js'),
   ],
   'govbr_ds-base': [
-    path.resolve(paths.srcSCSS, 'govbr_ds-base.scss'),
+    path.resolve(paths.srcSCSS, 'govbr-ds-base.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
-  'govbr_ds-init': [path.resolve(paths.srcJSpartial, 'govbr_ds-init.js')],
+  'govbr_ds-init': [path.resolve(paths.srcJSpartial, 'govbr-ds-init.js')],
   'govbr_ds-lite': [
-    path.resolve(paths.srcSCSS, 'govbr_ds-lite.scss'),
+    path.resolve(paths.srcSCSS, 'govbr-ds-lite.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
   'govbr-ds.min': [path.resolve(paths.srcJSpartial, 'govbr-ds.entry.js')],
