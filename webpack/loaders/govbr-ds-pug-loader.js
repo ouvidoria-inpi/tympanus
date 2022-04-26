@@ -20,7 +20,7 @@ const loaderName = 'govbr-ds-pug-loader'
  *
  * @param {string} pugTemplate Pug Template for compilation with pug
  */
-function dsgovPugLoader(pugTemplate) {
+function govbr_dsPugLoader(pugTemplate) {
   const options = loaderUtils.getOptions(this)
 
   validateOptions(schema, options, {
@@ -49,4 +49,4 @@ function dsgovPugLoader(pugTemplate) {
   return ''
 }
 
-module.exports = dsgovPugLoader
+module.exports = govbr_dsPugLoader

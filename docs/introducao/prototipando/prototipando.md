@@ -75,6 +75,6 @@ Para o sucesso do seu produto, além de projetar uma boa interface visual, é fu
 
 Seu _feedback_ é bastante valioso e necessário para evolução e aprimoramento dos Ui Kits, assim como para as melhorias nas orientações de uso.
 
-Conte-nos o que achou do material. Caso encontre algum problema ou necessidade não contemplada, ou tenha sugestões de melhorias, entre em contato com a equipe do DSGov.
+Conte-nos o que achou do material. Caso encontre algum problema ou necessidade não contemplada, ou tenha sugestões de melhorias, entre em contato com a equipe do GOVBR-DS.
 
 Compartilhe conosco os protótipos que você produziu, caso tenha dúvidas.

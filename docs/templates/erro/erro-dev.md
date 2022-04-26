@@ -7,7 +7,7 @@
     <div class="row my-5">
         <div class="col imagem-erro">
             <img
-                src="https://cdn-dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-positive.png"
+                src="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/images/logo-positive.png"
                 alt="imagem de erro"
             />
         </div>

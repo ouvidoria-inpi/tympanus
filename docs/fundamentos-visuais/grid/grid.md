@@ -211,7 +211,7 @@ _** margem mínima no comportamento fixo._
 
 ## Responsividade
 
-Responsividade é a forma como se estrutura a interface em diferentes resoluções de tela. O DSGov define diferentes _grids_ e _breakpoints_ para facilitar a aplicação deste conceito de forma prática. Porém, posicionar os elementos dentro de um _grid_ não significa que o seu _layout_ esteja responsivo. Entender como os elementos interagem com a _grid_ responsiva é uma etapa muito importante para promover uma experiência adequada ao usuário em diferentes dispositivos ou situações.
+Responsividade é a forma como se estrutura a interface em diferentes resoluções de tela. O GOVBR-DS define diferentes _grids_ e _breakpoints_ para facilitar a aplicação deste conceito de forma prática. Porém, posicionar os elementos dentro de um _grid_ não significa que o seu _layout_ esteja responsivo. Entender como os elementos interagem com a _grid_ responsiva é uma etapa muito importante para promover uma experiência adequada ao usuário em diferentes dispositivos ou situações.
 
 Pontos importantes quando tratamos de responsividade:
 

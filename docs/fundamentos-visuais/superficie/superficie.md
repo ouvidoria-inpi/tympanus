@@ -246,7 +246,7 @@ A versatilidade de uso de uma superfície _overlay_ é muito grande.
 
 Podemos utilizar todas as propriedades listadas na superfície em conjunto com outros comportamentos para gerar aplicações muito mais ricas, como por exemplo, personalizar a forma da superfície _overlay_ (com a propriedade canto) em conjunto com recursos de animação (_motion_) gerando interações mais dinâmicas para o usuário.
 
-Porém, o uso do _overlay_ deve ser claro e dentro do seu propósito descrito no DSGov, pois o uso indiscriminado pode interferir nas diretrizes.
+Porém, o uso do _overlay_ deve ser claro e dentro do seu propósito descrito no GOVBR-DS, pois o uso indiscriminado pode interferir nas diretrizes.
 
 **Evite** a criação de novos matizes de cores: quando utilizada a superfície _overlay_ "colorida" sobre uma superfície de cor distinta. Essa mistura de cores pode gerar distorções na identidade visual. **Prefira** o uso desse tipo de _overlay_ em situações muito específicas (como feedback de interações executadas pelos usuários), ou em casos mais gerais, tente interferir somente no brilho e/ou na saturação dos elementos.
 

@@ -1,9 +1,9 @@
 {
-  "name": "@dsgovbr/dsgovbr",
+  "name": "@govbr-ds/govbr-ds",
   "version": "2.4.2",
   "description": "Design System do Governo Federal",
   "keywords": [
-    "dsgovbr",
+    "govbr-ds",
     "govbr",
     "design",
     "system"

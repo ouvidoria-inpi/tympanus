@@ -1,7 +1,7 @@
 [version]: # (16.1.3)
 
 ![Exemplo Botão](imagens/button-description.png)
-*Exemplo de botões disponíveis no DSGov.*
+*Exemplo de botões disponíveis no GOVBR-DS.*
 
 Utilize botões quando for necessário realizar ações contendo as seguintes características:
 
@@ -77,7 +77,7 @@ Em algumas situações, a superfície pode ter a opacidade de 0%, desta forma pe
 
 ## Tipos
 
-Existem 2 tipos de botões no DSGov: **Botão Padrão** e o **Botão Circular**.
+Existem 2 tipos de botões no GOVBR-DS: **Botão Padrão** e o **Botão Circular**.
 
 ### 1. Botão Padrão
 
@@ -164,7 +164,7 @@ Abaixo, exemplos de possibilidades de uso desse comportamento (mas não necessar
 
 Para dar maior flexibilidade em composição de tela ou até mesmo refinar o "peso" visual dos botões na tela, é utilizado o recurso da densidade nos botões. O ajuste da densidade consiste em aumentar ou reduzir os espaçamentos internos do botão de forma a deixá-los mais compactos ou mais expandidos em seu formato.
 
-Para isto, o DSGov utiliza três níveis de densidade:
+Para isto, o GOVBR-DS utiliza três níveis de densidade:
 
 - **Densidade baixa:** O botão tem sua altura aumentada.
 - **Densidade padrão:**  É a forma padrão do componente button.

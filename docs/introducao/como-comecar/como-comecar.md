@@ -52,7 +52,7 @@ A seguir temos um exemplo de um template inicial para utilização do GOVBR-DS. 
         <!-- Font Rawline-->
         <link
             rel="stylesheet"
-            href="https://cdn-dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+            href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
         />
         <!-- Font Raleway-->
         <link
@@ -115,7 +115,7 @@ Em **Template Inicial** temos uma importação do arquivo **rawline.css** via CD
 ```html
 <link
     rel="stylesheet"
-    href="https://cdn-dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+    href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
 />
 ```
 

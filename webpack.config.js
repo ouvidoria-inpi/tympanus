@@ -4,7 +4,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
-// DSGov Build Stuff
+// GOVBR-DS Build Stuff
 const paths = require('./webpack/paths')
 const { plugins } = require('./webpack/govbr-ds.plugins')
 const { entries } = require('./webpack/govbr-ds.entries')

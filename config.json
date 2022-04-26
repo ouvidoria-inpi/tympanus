@@ -1512,25 +1512,25 @@
 									"path": "https://serprodrive.serpro.gov.br/s/9GF75So4nZrYapo",
 									"version": "5.1.0",
 									"data": "26 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/G22CwAW4WP6B6oQ",
 									"version": "4.8.0",
 									"data": "11 ago 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/YcnCqAZZGqaKeLR",
 									"version": "4.7.0",
 									"data": "01 jul 2021",
-									"dsgov_version": "2.1.0"
+									"govbr-ds_version": "2.1.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/95QZBA7593LBCpT",
 									"version": "4.4.0",
 									"data": "02 mar 2021",
-									"dsgov_version": "2.0.2"
+									"govbr-ds_version": "2.0.2"
 								}
 							]
 						},
@@ -1542,7 +1542,7 @@
 									"path": "https://serprodrive.serpro.gov.br/s/yybFqo4ewZyHoLd",
 									"version": "Versão 2.0.0",
 									"data": "26 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						},
@@ -1554,31 +1554,31 @@
 									"path": "https://serprodrive.serpro.gov.br/s/ktmsdecdgPa3Dmw",
 									"version": "2.1.1",
 									"data": "26 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/Z7pecTT7Ec2zsYd",
 									"version": "2.0.0",
 									"data": "28 set 2021",
-									"dsgov_version": "2.3.0"
+									"govbr-ds_version": "2.3.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/y23EM6wxy3CpTbW",
 									"version": "1.8.0",
 									"data": "11 ago 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/96N4b6rePJoMfnq",
 									"version": "1.7.0",
 									"data": "01 jul 2021",
-									"dsgov_version": "2.1.0"
+									"govbr-ds_version": "2.1.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/RWEDQ2ocEc52bjM",
 									"version": "1.4.0",
 									"data": "17 nov 2021",
-									"dsgov_version": "2.0.2"
+									"govbr-ds_version": "2.0.2"
 								}
 							]
 						}
@@ -1662,19 +1662,19 @@
                   "path": "https://serprodrive.serpro.gov.br/s/EXs3aNt9dxAQrTi",
                   "version": "4.0.2",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/t8c74CydKnE8KoJ",
 									"version": "4.0.1",
 									"data": "06 out 2021",
-									"dsgov_version": "2.3.0"
+									"govbr-ds_version": "2.3.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/TGnwA2SjtfzNoHz",
 									"version": "4.0.0",
 									"data": "06 set 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								}
 							]
 						},
@@ -1686,13 +1686,13 @@
                   "path": "https://serprodrive.serpro.gov.br/s/KELSj965NGL5Fed",
                   "version": "1.0.1",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/K8Fiiqzkr3nMeEa",
 									"version": "1.0.0",
 									"data": "06 set 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								}
 							]
 						},
@@ -1704,13 +1704,13 @@
                   "path": "https://serprodrive.serpro.gov.br/s/zw2Y8XcGXysAgX3",
                   "version": "1.0.1",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/L664xX235PLFE88",
 									"version": "1.0.0",
 									"data": "06 set 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								}
 							]
 						},
@@ -1722,7 +1722,7 @@
                   "path": "https://serprodrive.serpro.gov.br/s/MzoeyarpLExwtaS",
                   "version": "1.0.0",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						},
@@ -1734,7 +1734,7 @@
                   "path": "https://serprodrive.serpro.gov.br/s/gxQFdGRtJRTBfYR",
                   "version": "1.0.0",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						},
@@ -1746,7 +1746,7 @@
                   "path": "https://serprodrive.serpro.gov.br/s/DFYGi6nP8yXKjYo",
                   "version": "1.0.0",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						},
@@ -1758,7 +1758,7 @@
                   "path": "https://serprodrive.serpro.gov.br/s/nxBG4iwir2qm5Dg",
                   "version": "1.0.0",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						}

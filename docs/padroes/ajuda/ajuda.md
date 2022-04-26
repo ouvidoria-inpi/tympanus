@@ -17,7 +17,7 @@ Quando usar ajuda e comunicação para o usuário:
 
 ### Iconografia
 
-Dentro do imaginário coletivo dos usuários de sistemas, aplicativos, e sítios web, já existe uma forte referência iconográfica que representa um contexto de ajuda, a representação iconográfica do símbolo de interrogação, por exemplo: `question` ou `question-circle`. É importante seguir esta referência dentro do contexto DSGov, desta forma pode-se deixar bem claro aos usuários o acesso à ajuda apenas com o uso de ícone, sem necessidade de textos explicativos adicionais. Evite utilizar outras simbologias que trazem dúvidas ao usuário com relação a informação semântica.  
+Dentro do imaginário coletivo dos usuários de sistemas, aplicativos, e sítios web, já existe uma forte referência iconográfica que representa um contexto de ajuda, a representação iconográfica do símbolo de interrogação, por exemplo: `question` ou `question-circle`. É importante seguir esta referência dentro do contexto GOVBR-DS, desta forma pode-se deixar bem claro aos usuários o acesso à ajuda apenas com o uso de ícone, sem necessidade de textos explicativos adicionais. Evite utilizar outras simbologias que trazem dúvidas ao usuário com relação a informação semântica.  
 
 ![Exemplo de Uso de Ícones](imagens/icons.png)
 *Utilize o `question` ou `question-circle` como iconografia padrão de ajuda*
