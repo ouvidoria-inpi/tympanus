@@ -34,7 +34,7 @@ Basicamente há 4 (quatro) tipos de extensões de arquivos que formam um compone
 Para exemplificar, vamos supor a criação de um `componente-novo`. O componente deve obedecer a seguinte estrutura:
 
 ```text
-design-system/
+govbr-ds-dev-core/
 ├── config.json
 ├── docs/
 │   └── components/
@@ -63,7 +63,7 @@ design-system/
 #### MD
 
 ```text
-design-system/
+govbr-ds-dev-core/
 ├── config.json (incluir o novo componente na lista de componentes)
 └── docs/
     └── components/
@@ -82,7 +82,7 @@ design-system/
    - `componente-novo-dsg.md` - Documentação de design do componente.
    - `imagens/` imagens referenciadas na documentação.
 
-3. Deve ser registrado na lista de componentes no arquivo `design-system/config.json`. Exemplificando:
+3. Deve ser registrado na lista de componentes no arquivo `govbr-ds-dev-core/config.json`. Exemplificando:
 
    ```text
    [
@@ -111,7 +111,7 @@ Após criados os arquivos de documentação e respeitadas as corretas referênci
 #### JS
 
 ```text
-design-system/
+govbr-ds-dev-core/
 └── src/
     └── components/
         └── componente-novo/
@@ -158,7 +158,7 @@ for (const brComponenteNovo of window.document.querySelectorAll(".br-componente-
 #### PUG
 
 ```text
-design-system/
+govbr-ds-dev-core/
 └── src/
     └── components/
         └── componente-novo/
@@ -175,7 +175,7 @@ design-system/
 #### SCSS
 
 ```text
-design-system/
+govbr-ds-dev-core/
 └── src/
     ├── components/
     |   └── componente-novo/
