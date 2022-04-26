@@ -1,5 +1,5 @@
 /**
- * govbr-ds.entries define as entries da build do Webpack.
+ * govbr_ds.entries define as entries da build do Webpack.
  */
 
 const path = require('path')
@@ -7,23 +7,23 @@ const paths = require('./paths')
 const fs = require('fs')
 let production = false
 
-const govbr-ds = {
-  govbr-ds: [
-    path.resolve(paths.srcSCSS, 'govbr-ds.scss'),
+const govbr_ds = {
+  govbr_ds: [
+    path.resolve(paths.srcSCSS, 'govbr_ds.scss'),
 
     path.resolve(paths.srcUtil, 'dropdown', 'dropdown.scss'),
-    path.resolve(paths.srcJSpartial, 'govbr-ds.entry.js'),
+    path.resolve(paths.srcJSpartial, 'govbr_ds.entry.js'),
   ],
-  'govbr-ds-base': [
-    path.resolve(paths.srcSCSS, 'govbr-ds-base.scss'),
+  'govbr_ds-base': [
+    path.resolve(paths.srcSCSS, 'govbr_ds-base.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
-  'govbr-ds-init': [path.resolve(paths.srcJSpartial, 'govbr-ds-init.js')],
-  'govbr-ds-lite': [
-    path.resolve(paths.srcSCSS, 'govbr-ds-lite.scss'),
+  'govbr_ds-init': [path.resolve(paths.srcJSpartial, 'govbr_ds-init.js')],
+  'govbr_ds-lite': [
+    path.resolve(paths.srcSCSS, 'govbr_ds-lite.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
-  'govbr-ds.min': [path.resolve(paths.srcJSpartial, 'govbr-ds.entry.js')],
+  'govbr_ds.min': [path.resolve(paths.srcJSpartial, 'govbr_ds.entry.js')],
 }
 
 /**
@@ -207,31 +207,31 @@ function pathsEntryTemplate(templateName) {
 }
 
 function setComponent(name) {
-  govbr-ds[`components/${name}/${name}`] = pathsEntry(name)
+  govbr_ds[`components/${name}/${name}`] = pathsEntry(name)
 }
 
 function setPages(name) {
-  govbr-ds[`pages/${name}/${name}`] = pathsEntryPages(name)
+  govbr_ds[`pages/${name}/${name}`] = pathsEntryPages(name)
 }
 
 function setUtil(name) {
-  govbr-ds[`utilities-js/${name}/${name}`] = pathsEntryPages(name)
+  govbr_ds[`utilities-js/${name}/${name}`] = pathsEntryPages(name)
 }
 
 function setTemplate(name) {
-  // govbr-ds.setAttribute('components/avatar/' + name, pathsEntry(name))
-  govbr-ds[`templates/${name}/${name}`] = pathsEntryTemplate(name)
+  // govbr_ds.setAttribute('components/avatar/' + name, pathsEntry(name))
+  govbr_ds[`templates/${name}/${name}`] = pathsEntryTemplate(name)
 }
 
 function setTemplates(name, exemplos) {
-  // govbr-ds['components/' + name + '/' + name] = pathsEntry(name)
-  govbr-ds[`templates/${name}/${name}`] = pathsExampleTemplates(name, exemplos)
+  // govbr_ds['components/' + name + '/' + name] = pathsEntry(name)
+  govbr_ds[`templates/${name}/${name}`] = pathsExampleTemplates(name, exemplos)
 }
 
 function setComponentPug(name, exemplos) {
-  govbr-ds[`components/${name}/${name}`] = pathsExamplePug(name, exemplos)
+  govbr_ds[`components/${name}/${name}`] = pathsExamplePug(name, exemplos)
   if (production) {
-    govbr-ds[`components/${name}/${name}.min`] = pathsEntry(name, exemplos)
+    govbr_ds[`components/${name}/${name}.min`] = pathsEntry(name, exemplos)
   }
 }
 
@@ -524,55 +524,55 @@ function entries(argv) {
    * webapck entry dos utilitarios
    */
 
-  govbr-ds['util/arredondamento/arredondamento'] = [
+  govbr_ds['util/arredondamento/arredondamento'] = [
     path.resolve(paths.srcUtil, 'arredondamento', 'examples.pug'),
   ]
 
-  govbr-ds['util/bordas/bordas'] = [
+  govbr_ds['util/bordas/bordas'] = [
     path.resolve(paths.srcUtil, 'bordas', 'examples.pug'),
   ]
 
-  govbr-ds['util/cores/cores'] = [
+  govbr_ds['util/cores/cores'] = [
     path.resolve(paths.srcUtil, 'cores', 'examples.pug'),
   ]
 
-  govbr-ds['util/display/display'] = [
+  govbr_ds['util/display/display'] = [
     path.resolve(paths.srcUtil, 'display', 'examples.pug'),
   ]
 
-  govbr-ds['util/elevacao/elevacao'] = [
+  govbr_ds['util/elevacao/elevacao'] = [
     path.resolve(paths.srcUtil, 'elevacao', 'examples.pug'),
   ]
 
-  govbr-ds['util/espacamento/espacamento'] = [
+  govbr_ds['util/espacamento/espacamento'] = [
     path.resolve(paths.srcUtil, 'espacamento', 'examples.pug'),
   ]
 
-  govbr-ds['util/flexbox/flexbox'] = [
+  govbr_ds['util/flexbox/flexbox'] = [
     path.resolve(paths.srcUtil, 'flexbox', 'examples.pug'),
   ]
 
-  govbr-ds['util/grid/grid'] = [
+  govbr_ds['util/grid/grid'] = [
     path.resolve(paths.srcUtil, 'grid', 'examples.pug'),
   ]
 
-  govbr-ds['util/movimento/movimento'] = [
+  govbr_ds['util/movimento/movimento'] = [
     path.resolve(paths.srcUtil, 'movimento', 'examples.pug'),
   ]
 
-  govbr-ds['util/overflow/overflow'] = [
+  govbr_ds['util/overflow/overflow'] = [
     path.resolve(paths.srcUtil, 'overflow', 'examples.pug'),
   ]
 
-  govbr-ds['util/textos/textos'] = [
+  govbr_ds['util/textos/textos'] = [
     path.resolve(paths.srcUtil, 'textos', 'examples.pug'),
   ]
 
-  govbr-ds['util/tipografia/tipografia'] = [
+  govbr_ds['util/tipografia/tipografia'] = [
     path.resolve(paths.srcUtil, 'tipografia', 'examples.pug'),
   ]
 
-  govbr-ds['util/accordion/accordion'] = [
+  govbr_ds['util/accordion/accordion'] = [
     path.resolve(paths.srcUtil, 'accordion', 'examples.pug'),
     path.resolve(
       paths.srcUtil,
@@ -582,7 +582,7 @@ function entries(argv) {
     ),
   ]
 
-  govbr-ds['util/checkgroup/checkgroup'] = [
+  govbr_ds['util/checkgroup/checkgroup'] = [
     path.resolve(paths.srcUtil, 'checkgroup', 'examples.pug'),
     path.resolve(
       paths.srcUtil,
@@ -598,7 +598,7 @@ function entries(argv) {
     ),
   ]
 
-  govbr-ds['util/collapse/collapse'] = [
+  govbr_ds['util/collapse/collapse'] = [
     path.resolve(paths.srcUtil, 'collapse', 'examples.pug'),
     path.resolve(
       paths.srcUtil,
@@ -608,7 +608,7 @@ function entries(argv) {
     ),
   ]
 
-  govbr-ds['util/dropdown/dropdown'] = [
+  govbr_ds['util/dropdown/dropdown'] = [
     path.resolve(paths.srcUtil, 'dropdown', 'examples.pug'),
     path.resolve(
       paths.srcUtil,
@@ -618,38 +618,38 @@ function entries(argv) {
     ),
   ]
 
-  govbr-ds['util/scrim/scrim'] = [
+  govbr_ds['util/scrim/scrim'] = [
     path.resolve(paths.srcUtil, 'scrim', 'examples.pug'),
     path.resolve(paths.srcUtil, 'scrim', 'examples', 'scrim-behavior.pug'),
   ]
 
-  govbr-ds['util/tooltip/tooltip'] = [
+  govbr_ds['util/tooltip/tooltip'] = [
     path.resolve(paths.srcUtil, 'tooltip', 'examples.pug'),
     path.resolve(paths.srcUtil, 'tooltip', 'examples', 'tooltip-behavior.pug'),
     path.resolve(paths.srcUtil, 'tooltip', 'examples', 'tooltip-simples.pug'),
   ]
 
-  govbr-ds['partial/js/behavior/accordion'] = [
+  govbr_ds['partial/js/behavior/accordion'] = [
     path.resolve(paths.srcJSUtilbehavior, 'accordion.js'),
   ]
-  govbr-ds['partial/js/behavior/collapse'] = [
+  govbr_ds['partial/js/behavior/collapse'] = [
     path.resolve(paths.srcJSUtilbehavior, 'collapse.js'),
   ]
 
-  govbr-ds['partial/js/behavior/checkgroup'] = [
+  govbr_ds['partial/js/behavior/checkgroup'] = [
     path.resolve(paths.srcJSUtilbehavior, 'checkgroup.js'),
   ]
 
-  govbr-ds['partial/js/behavior/dropdown'] = [
+  govbr_ds['partial/js/behavior/dropdown'] = [
     path.resolve(paths.srcJSUtilbehavior, 'dropdown.js'),
   ]
-  govbr-ds['partial/js/behavior/scrim'] = [
+  govbr_ds['partial/js/behavior/scrim'] = [
     path.resolve(paths.srcJSUtilbehavior, 'scrim.js'),
   ]
-  govbr-ds['partial/js/behavior/tooltip'] = [
+  govbr_ds['partial/js/behavior/tooltip'] = [
     path.resolve(paths.srcJSUtilbehavior, 'tooltip.js'),
   ]
-  return govbr-ds
+  return govbr_ds
 }
 
 module.exports = {
