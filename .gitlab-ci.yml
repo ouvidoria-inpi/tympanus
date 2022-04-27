@@ -1,48 +1,151 @@
-variables:
-  GIT_SSL_NO_VERIFY: 'true'
+include:
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/License-Scanning.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
 
 image: node:14-alpine
 
 stages:
   - build
-  - test
+  - gitlab-scans
+  - lints
+  - publish
 
 cache:
   paths:
     - node_modules/
 
-install_dependencies:
-  stage: build
-  script:
-    - apk add openssh
-    - apk add build-base file nasm autoconf
-    - apk add --upgrade libpng-dev
-    - export NODE_TLS_REJECT_UNAUTHORIZED=0
-    - npm set strict-ssl false
-    - npm install
-    - ls
-    - npm install sass
-    - npm install acorn
-    - cat node_modules/sass/package.json
-    - npm run build
+variables:
+  SAST_EXCLUDED_PATHS: spec, test, tests, tmp, .husky, .storybook, .vscode, coverage, dist, node_modules, package-lock.json, **/*.spec.js, **/*.spec.js.snap
+  SECRET_DETECTION_HISTORIC_SCAN: 'false'
+  SECRET_DETECTION_EXCLUDED_PATHS: .husky, .vscode,  dist, node_modules
+
+Install:
+  stage: .pre
   artifacts:
     paths:
-      - node_modules/
-      - dist/
+      - node_modules
+    expire_in: 1 hour
+  script:
+    - rm -rf dist
+    - npm install
+  only:
+    - main
+    - merge_requests
 
-validate_html:
-  stage: test
-  script: npm run lint:html
+dependency_scanning:
+  stage: gitlab-scans
+  script:
+    - echo 'Security/Dependency-Scanning.gitlab-ci.yml'
 
-# validate_js:
+license_scanning:
+  stage: gitlab-scans
+  script:
+    - echo 'Security/License-Scanning.gitlab-ci.yml'
+
+sast:
+  stage: gitlab-scans
+  script:
+    - echo 'Security/SAST.gitlab-ci.yml'
+
+secret_detection:
+  stage: gitlab-scans
+  script:
+    - echo 'Security/Secret-Detection.gitlab-ci.yml'
+
+DS:
+  stage: build
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
+  script:
+    - npm run build
+  only:
+    - main
+    - merge_requests
+
+# Parte para incluir os testes com jest, karma, etc...
+# unit-test:
 #   stage: test
-#   script: npm run lint:js
+#   artifacts:
+#     when: always
+#     paths:
+#       - coverage
+#     reports:
+#       junit:
+#         - clover.xml
+#     expire_in: 1 week
+#   script:
+#     - npm run test:unit
+#   only:
+#     - main
+#     - merge_requests
 
-validate_styles:
-  stage: test
-  script: npm run lint:styles
+# JS:
+#   stage: lints
+#   artifacts:
+#     when: always
+#     paths:
+#       - report-eslint.html
+#     expire_in: 1 week
+#   script:
+#     - npx eslint -c .eslintrc.yaml src/**/*.js --format html --output-file report-eslint.html
+#   only:
+#     - main
+#     - merge_requests
 
-# https://gitlab.com/dmoonfire/commitlint-gitlab-ci/
-commit_lint:
-  stage: test
-  script: npx commitlint-gitlab-ci -x @commitlint/config-conventional
+CSS:
+  stage: lints
+  artifacts:
+    when: always
+    paths:
+      - report-stylelint.txt
+    expire_in: 1 week
+  script:
+    - npx stylelint src/**/*.scss  --formatter verbose --output-file report-stylelint.txt
+  only:
+    - main
+    - merge_requests
+
+HTML:
+  stage: lints
+  artifacts:
+    when: always
+    paths:
+      - report-htmllint.txt
+    expire_in: 1 week
+  script:
+    - npx html-validate --formatter stylish dist/**/*.html > report-htmllint.txt
+  only:
+    - main
+    - merge_requests
+
+Commitlint:
+  stage: lints
+  artifacts:
+    when: always
+    paths:
+      - report-commitlint.txt
+    expire_in: 1 week
+  before_script:
+    - apk --no-cache add git
+  script:
+    - npx commitlint-gitlab-ci -x @commitlint/config-conventional > report-commitlint.txt
+  only:
+    - main
+    - merge_requests
+# Precisa configurar para gerar a versão conforme o standard_version antes de habilitar
+publish_npm:
+  stage: publish
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
+  script:
+    - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+    - npm publish
+  when: manual
+  only:
+    - tags
