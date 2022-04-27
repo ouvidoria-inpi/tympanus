@@ -121,13 +121,15 @@ HTML:
     - main
     - merge_requests
 
-Commits:
+Commitlint:
   stage: lints
   artifacts:
     when: always
     paths:
       - report-commitlint.txt
     expire_in: 1 week
+  before_script:
+    - apk --no-cache add git
   script:
     - npx commitlint-gitlab-ci -x @commitlint/config-conventional > report-commitlint.txt
   only:
