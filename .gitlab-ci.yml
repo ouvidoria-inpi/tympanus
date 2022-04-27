@@ -121,20 +121,23 @@ HTML:
     - main
     - merge_requests
 
-Commitlint:
-  stage: lints
-  artifacts:
-    when: always
-    paths:
-      - report-commitlint.txt
-    expire_in: 1 week
-  before_script:
-    - apk --no-cache add git
-  script:
-    - npx commitlint-gitlab-ci -x @commitlint/config-conventional > report-commitlint.txt
-  only:
-    - main
-    - merge_requests
+# 
+# Commitlint:
+#   stage: lints
+#   artifacts:
+#     when: always
+#     paths:
+#       - report-commitlint.txt
+#     expire_in: 1 week
+#   before_script:
+#     - apk --no-cache add git
+#   script:
+#     - npx commitlint-gitlab-ci -x @commitlint/config-conventional > report-commitlint.txt
+#   only:
+#     - main
+#     - merge_requests
+
+
 # Precisa configurar para gerar a versão conforme o standard_version antes de habilitar
 # publish_npm:
 #   stage: pages
