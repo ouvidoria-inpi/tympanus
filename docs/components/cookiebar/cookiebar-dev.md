@@ -5,7 +5,7 @@
 Para usar o componente Cookiebar é necessário os seguintes artefatos:
 
 - O **HTML Base** do componente
-- O **Arquivo de CSS do GOVBR-DS**
+- O **Arquivo de CSS do Design System GOV.BR**
 - O **Arquivo Javascript** que contém a classe BRCookiebar
 
 ```html

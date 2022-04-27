@@ -334,7 +334,7 @@ Contudo, em alguns casos, existe a necessidade da utilização de tabelas comple
 
 ##  Melhores práticas
 
-Para que as tabelas atendam aos padrões do GOVBR-DS de forma satisfatória  é necessário atentar-se a algumas recomendações:
+Para que as tabelas atendam aos padrões do Design System GOV.BR de forma satisfatória  é necessário atentar-se a algumas recomendações:
 
 - Antes de optar pelo agrupamento de linhas ou colunas nas tabelas, é necessário atentar-se para a possibilidade de simplificação das informações, evitando ao máximo problemas de entendimento devido ao excesso de informações apresentadas.
 - Para uma melhor organização, deve-se optar por fazer separações visuais nítidas com o uso de recursos com bordas destacadas entre os agrupamentos.

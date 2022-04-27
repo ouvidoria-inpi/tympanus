@@ -8,7 +8,7 @@
     npm install sass
     ```
 
-#### Exemplo consumindo todos os estilos do GOVBR-DS
+#### Exemplo consumindo todos os estilos do Design System GOV.BR
 
 1. Crie o arquivo `style.scss` com import do `govbr-ds.scss` conforme o exemplo abaixo, se atentar a localização da pasta `node_modules` que pode mudar conforme a organização do projeto
 
@@ -39,9 +39,9 @@
     npx sass style.scss dist/style.css 
     ```
 
-#### É possível gerar uma versão compilada dos arquivos scss a partir do diretório de instalação do GOVBR-DS, conforme exemplos a seguir
+#### É possível gerar uma versão compilada dos arquivos scss a partir do diretório de instalação do Design System GOV.BR, conforme exemplos a seguir
 
-1. Compilando todos os estilos do GOVBR-DS:
+1. Compilando todos os estilos do Design System GOV.BR:
 
     ```text
     npx sass node_modules/@govbr/govbr-ds/src/govbr-ds dist/exemplo.css

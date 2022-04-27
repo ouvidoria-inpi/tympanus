@@ -1,4 +1,4 @@
-Devido ao grande número de opções de utilitários no GOVBR-DS o tamanho do arquivo govbr-ds.css é grande e pode impactar na performance da solução. Sugerimos o uso do [PurgeCSS](https://purgecss.com/) nas soluções que estejam rodando em **produção**.
+Devido ao grande número de opções de utilitários no Design System GOV.BR o tamanho do arquivo govbr-ds.css é grande e pode impactar na performance da solução. Sugerimos o uso do [PurgeCSS](https://purgecss.com/) nas soluções que estejam rodando em **produção**.
 
 Ele irá remover todo o CSS não usado e, portanto, diminuir o tamanho do arquivo impactando diretamente na performance da solução.
 

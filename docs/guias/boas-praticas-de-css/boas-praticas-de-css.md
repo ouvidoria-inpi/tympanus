@@ -76,7 +76,7 @@ Hoje esse número foi reduzido à 3 principais (Webkit, Blink e Gecko), mas aind
 
 O uso de Reset CSS faz com que todas ou grande parte dos componentes e tags HTML sigam a mesma padronização visual.
 
-No GOVBR-DS usamos o normalize.css customizado. Conheça o normalize.css em <https://necolas.github.io/normalize.css/>.
+No Design System GOV.BR usamos o normalize.css customizado. Conheça o normalize.css em <https://necolas.github.io/normalize.css/>.
 
 ## Arquitetura
 
@@ -86,7 +86,7 @@ Existem várias arquiteturas de organização de código disponíveis na interne
 | --------------------------------------------------- | --------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------- |
 | Base, Layout, Module, State, Theme                  | Atoms, Molecules, Organisms, Templates, Pages | Components, Elements, Variants, Layouts, Helpers | Settings, Tools, Generic, Base, Objects, Components, Trumps |
 
-A base do GOVBR-DS é o Atomic Design.
+A base do Design System GOV.BR é o Atomic Design.
 
 ## Comentários
 
@@ -186,7 +186,7 @@ Os novos editores de texto possuem linters nativos ou disponíveis como extensõ
 -   <https://github.com/gajus/css-lint>
 -   <https://github.com/sasstools/sass-lint>
 
-No GOVBR-DS é usado o linter `stylelint` . Ele pode ser utilizado através do script `npm run lint:styles` .
+No Design System GOV.BR é usado o linter `stylelint` . Ele pode ser utilizado através do script `npm run lint:styles` .
 
 Ele também está configurado como pipeline de desenvolvimento dentro do positório git, ou seja, sempre que um novo código seja inserido/atualizado ele será ativado.
 

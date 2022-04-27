@@ -49,7 +49,7 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 ## [7.1.1] - 30/04/2020
 ### Modificado
 - Corrigido texto, token e imagens.
-- Ajustando artefato de design com padrões de desenvolvimento do GOVBR-DS.
+- Ajustando artefato de design com padrões de desenvolvimento do Design System GOV.BR.
 
 ## [7.1.0] - 02/04/2020
 ### Adicionado

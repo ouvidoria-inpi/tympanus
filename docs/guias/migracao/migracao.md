@@ -7,7 +7,7 @@ Contribuir.
 
 Atualizar a versão do node para v14.15.4
 
-Atualizar o GOVBR-DS para \@govbr/govbr-ds:2.0.0 ou fazer o download da nova
+Atualizar o Design System GOV.BR para \@govbr/govbr-ds:2.0.0 ou fazer o download da nova
 versão na página de downloads
 
 Alterar  a dependencia do font-awesome no html

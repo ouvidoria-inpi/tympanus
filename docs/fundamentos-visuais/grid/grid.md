@@ -18,7 +18,7 @@ As interfaces devem ser adequadas a diferentes tipos de dispositivos. Tendo em v
 
 ### Reutilização e Colaboração
 
-Porventura, poderá haver alguma adaptação específica no sistema de _grids_, _breakpoints_ e padrões de proporção, para atender alguma necessidade em projetos de interface. Sendo assim, faz-se necessário que essas evoluções/adaptações sejam testadas e passem por uma prévia aprovação da equipe de _design_ do GOVBR-DS.
+Porventura, poderá haver alguma adaptação específica no sistema de _grids_, _breakpoints_ e padrões de proporção, para atender alguma necessidade em projetos de interface. Sendo assim, faz-se necessário que essas evoluções/adaptações sejam testadas e passem por uma prévia aprovação da equipe de _design_ do Design System GOV.BR.
 
 ---  
 
@@ -211,7 +211,7 @@ _** margem mínima no comportamento fixo._
 
 ## Responsividade
 
-Responsividade é a forma como se estrutura a interface em diferentes resoluções de tela. O GOVBR-DS define diferentes _grids_ e _breakpoints_ para facilitar a aplicação deste conceito de forma prática. Porém, posicionar os elementos dentro de um _grid_ não significa que o seu _layout_ esteja responsivo. Entender como os elementos interagem com a _grid_ responsiva é uma etapa muito importante para promover uma experiência adequada ao usuário em diferentes dispositivos ou situações.
+Responsividade é a forma como se estrutura a interface em diferentes resoluções de tela. O Design System GOV.BR define diferentes _grids_ e _breakpoints_ para facilitar a aplicação deste conceito de forma prática. Porém, posicionar os elementos dentro de um _grid_ não significa que o seu _layout_ esteja responsivo. Entender como os elementos interagem com a _grid_ responsiva é uma etapa muito importante para promover uma experiência adequada ao usuário em diferentes dispositivos ou situações.
 
 Pontos importantes quando tratamos de responsividade:
 
@@ -250,7 +250,7 @@ Assim como a _grid_, as dimensões dos elementos seguem um comportamento bem par
 ![Largura Estável](imagens/gridres-estavel.png)
 *No exemplo, os elementos estão apenas alinhados (à esquerda) dentro de uma área de 4 colunas. Caso haja mudança na resolução a largura dos elementos não sofrerá nenhuma alteração.*
 
-As informações acima foram focadas na largura por ser um elemento que pode ser influenciado diretamente pela _grid_ responsiva do GOVBR-DS. Porém, tanto a largura quanto a altura podem ser influenciadas também pelos elementos internos de um componente (utilizando-se dos mesmos conceitos).
+As informações acima foram focadas na largura por ser um elemento que pode ser influenciado diretamente pela _grid_ responsiva do Design System GOV.BR. Porém, tanto a largura quanto a altura podem ser influenciadas também pelos elementos internos de um componente (utilizando-se dos mesmos conceitos).
 
 Por isso, sempre que criar um componente, tente responder a seguinte pergunta: "Ela interage com a _grid_ responsiva e/ou com seus elementos internos ou ela é totalmente fixa?"
 

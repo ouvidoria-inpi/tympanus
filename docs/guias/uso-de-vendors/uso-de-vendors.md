@@ -24,7 +24,7 @@ Nos casos em que o próprio vendor nao informe um endereço de CDN é possível 
 
 ## Adicionar no template
 
-Os códigos devem ser carregados sempre antes do GOVBR-DS.
+Os códigos devem ser carregados sempre antes do Design System GOV.BR.
 
 ```html
 <!DOCTYPE html>
@@ -32,13 +32,13 @@ Os códigos devem ser carregados sempre antes do GOVBR-DS.
   <head>
     <!-- CSS do vendor -->
     <link rel="stylesheet" href="path/vendor.min.css">
-    <!-- GOVBR-DS CSS -->
+    <!-- Design System GOV.BR CSS -->
     <link rel="stylesheet" href="path/govbr-ds.min.css">
   </head>
   <body>
     <!-- Scripts do vendor -->
     <script src="path/.min.js"></script>
-    <!-- GOVBR-DS JS -->
+    <!-- Design System GOV.BR JS -->
     <script src="path/govbr-ds.min.js"></script>
   </body>
 </html>

@@ -215,7 +215,7 @@ Consulte o documento do componente *[Message]( <https://www.gov.br/ds/ds/compone
 
 Botões permitem que o usuário execute algum tipo de ação sobre o formulário.
 
-> No GOVBR-DS existe o componente [*Button*](https://www.gov.br/ds/components/button) que pode ser utilizado na maioria das ações dos formulários, e o [*Magic Button*](https://www.gov.br/ds/components/magicbutton) que pode ser usado para fortalecer o início ou encerramento de fluxos relevante de um formulário.
+> No Design System GOV.BR existe o componente [*Button*](https://www.gov.br/ds/components/button) que pode ser utilizado na maioria das ações dos formulários, e o [*Magic Button*](https://www.gov.br/ds/components/magicbutton) que pode ser usado para fortalecer o início ou encerramento de fluxos relevante de um formulário.
 
 Os Botões devem estar posicionados preferencialmente abaixo e à direita do formulário ao qual se referem e devem respeitar as diretrizes de alinhamento e espaçamento previstas para o componente *button*.
 
@@ -286,7 +286,7 @@ Os agrupamentos podem ser apresentados na forma contraída (padrão *collapse*).
 ![Exemplo Collapse](imagens/fieldset-collpase.png)
 *Agrupamentos apresentados em*collapse*com uso de fieldset e legend.*
 
-**Importante**: dentro do GOVBR-DS, o `Fieldset` é usado somente como um elemento semântico dentro de um formulário, não tendo nenhum tipo de estilização visual (delimitação de uma borda visual). Portanto, deve-se utilizar o `legend` para aumentar sua acessibilidade. Nas imagens acima, o uso de bordas no `fieldset` é feito apenas por questões didáticas.
+**Importante**: dentro do Design System GOV.BR, o `Fieldset` é usado somente como um elemento semântico dentro de um formulário, não tendo nenhum tipo de estilização visual (delimitação de uma borda visual). Portanto, deve-se utilizar o `legend` para aumentar sua acessibilidade. Nas imagens acima, o uso de bordas no `fieldset` é feito apenas por questões didáticas.
 
 #### Estilização do *Fieldset*
 

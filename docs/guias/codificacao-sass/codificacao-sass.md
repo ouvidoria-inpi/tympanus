@@ -1,8 +1,8 @@
-Os estilos em CSS no GOVBR-DS são criados usando o [Sass](https://sass-lang.com/) no formato **scss**.
+Os estilos em CSS no Design System GOV.BR são criados usando o [Sass](https://sass-lang.com/) no formato **scss**.
 
 ## Padronização
 
-O GOVBR-DS usa o [stylelint](https://stylelint.io/) para manter o padrão de escrita Sass.
+O Design System GOV.BR usa o [stylelint](https://stylelint.io/) para manter o padrão de escrita Sass.
 
 Customizações utilizadas:
 

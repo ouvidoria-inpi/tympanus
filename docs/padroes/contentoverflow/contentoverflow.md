@@ -31,7 +31,7 @@ Todo o conteúdo deve ser cuidadosamente analisado e revisado. É importante ter
 
 A primeira tarefa a ser realizada é a hierarquização do conteúdo. Deixe de forma nítida e objetiva as **informações essenciais**. As **informações complementares** funcionam como apoio às informações essenciais e podem estar ocultas ou parcialmente ocultas na tela e disponíveis por meio de recursos acionáveis pelo próprio usuário. Por fim, as **informações adicionais** (e menos importantes) podem estar localizadas fora da tela e indicadas por meio _hyperlinks_ e botões.
 
-Apresentamos a seguir algumas técnicas e recursos úteis agrupados de acordo com a hierarquia da informação, a fim de auxiliar a organização do conteúdo dentro dos produtos GOVBR-DS de forma prática e eficiente.
+Apresentamos a seguir algumas técnicas e recursos úteis agrupados de acordo com a hierarquia da informação, a fim de auxiliar a organização do conteúdo dentro dos produtos Design System GOV.BR de forma prática e eficiente.
 
 ## 1. Informações essenciais
 

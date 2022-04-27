@@ -4,7 +4,7 @@ Precisa vender um produto, validar requisitos com o cliente, planejar a aparênc
 
 A utilização do protótipo possibilita simular a aparência e funcionalidade do software, permitindo que os clientes, analistas, desenvolvedores e gerentes percebam os requisitos do sistema e possam avaliar, alterar ou aprovar as características mais marcantes na interface.
 
-Os **UI Kits**, pacotes de interface do usuário, contém os componentes e templates do GOVBR-DS. Com eles, você pode editar e planejar a aparência das telas do seu produto, seja um sistema web responsivo, um aplicativo para dispositivos móveis ou um site institucional.
+Os **UI Kits**, pacotes de interface do usuário, contém os componentes e templates do Design System GOV.BR. Com eles, você pode editar e planejar a aparência das telas do seu produto, seja um sistema web responsivo, um aplicativo para dispositivos móveis ou um site institucional.
 
 Sendo assim, é possível validar a interface gráfica antes mesmo da implementação e ter a certeza da aparência final do seu produto.
 
@@ -75,6 +75,6 @@ Para o sucesso do seu produto, além de projetar uma boa interface visual, é fu
 
 Seu _feedback_ é bastante valioso e necessário para evolução e aprimoramento dos Ui Kits, assim como para as melhorias nas orientações de uso.
 
-Conte-nos o que achou do material. Caso encontre algum problema ou necessidade não contemplada, ou tenha sugestões de melhorias, entre em contato com a equipe do GOVBR-DS.
+Conte-nos o que achou do material. Caso encontre algum problema ou necessidade não contemplada, ou tenha sugestões de melhorias, entre em contato com a equipe do Design System GOV.BR.
 
 Compartilhe conosco os protótipos que você produziu, caso tenha dúvidas.

@@ -104,7 +104,7 @@ Os textos ficam a critério de cada _site_ e podem variar de acordo com a regra 
 
 - Os textos precisam ser construtivos ao **sugerir etapas que o usuário possa seguir para corrigir o problema**.
 
-É possível destacar o texto principal com uso de cores (de preferência cores associadas à imagem utilizada). Lembre sempre de testar os contrastes e garantir a legibilidade e a leiturabilidade. Tenha a atenção para optar por cores previstas na paleta cromática do GOVBR-DS. O uso de tamanhos e estilos dos textos também são livres mas devem obedecer às regras previstas nos Fundamentos.
+É possível destacar o texto principal com uso de cores (de preferência cores associadas à imagem utilizada). Lembre sempre de testar os contrastes e garantir a legibilidade e a leiturabilidade. Tenha a atenção para optar por cores previstas na paleta cromática do Design System GOV.BR. O uso de tamanhos e estilos dos textos também são livres mas devem obedecer às regras previstas nos Fundamentos.
 
 **Atenção:** esteja atento para que o tom e voz do texto utilizado não destoe do _site_, isto é, não exagere no humor se o _site_ possuir um tom mais sério e vice-versa. De fato, essa é uma ótima oportunidade de descontrair um pouco e amenizar o "peso" da frustração do usuário, porém o tom e voz não devem ser drasticamente alterados. Tenha bom senso.
 

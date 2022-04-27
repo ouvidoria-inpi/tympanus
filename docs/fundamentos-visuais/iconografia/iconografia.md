@@ -130,7 +130,7 @@ A versão 5.10.2 possui uma grande variedade de ícones. Foram expostos aqui, ap
 
 No final deste documento, foi incluído as **orientações de uso** de alguns dos ícones e essa tabela deve ser seguida para que haja consistência entre os sistemas do governo.
 
-Atualmente no GOVBR-DS são utilizados 2 estilos disponíveis: **Solid** e a **Brand**.
+Atualmente no Design System GOV.BR são utilizados 2 estilos disponíveis: **Solid** e a **Brand**.
 
 ### Estilo _Solid_
 

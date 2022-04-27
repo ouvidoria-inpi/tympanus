@@ -40,7 +40,7 @@ Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 ## Template Inicial
 
-A seguir temos um exemplo de um template inicial para utilização do GOVBR-DS. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **govbr-ds.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **govbr-ds.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **govbr-ds-init.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **govbr-ds.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **govbr-ds.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **govbr-ds-init.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>
@@ -59,7 +59,7 @@ A seguir temos um exemplo de um template inicial para utilização do GOVBR-DS. 
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap"
         />
-        <!-- GOVBR-DS CSS-->
+        <!-- Design System GOV.BR CSS-->
         <link
             rel="stylesheet"
             href="node_modules\@govbr\govbr-ds\dist\govbr-ds.min.css"
@@ -92,21 +92,21 @@ Essa é a versão init(govbr-ds-init.js) com os componentes já **inicializados*
 
 ## Versão "lite" da folha de estilo
 
-Você poderá usar uma versão "lite" do CSS no lugar da versão completa. No código usado em Template Inicial basta trocar a linha de carregamento do GOVBR-DS pelo exemplo a seguir:
+Você poderá usar uma versão "lite" do CSS no lugar da versão completa. No código usado em Template Inicial basta trocar a linha de carregamento do Design System GOV.BR pelo exemplo a seguir:
 
 ```html
-<!-- GOVBR-DS CSS-->
+<!-- Design System GOV.BR CSS-->
 <link
    rel="stylesheet"
    href="node_modules\@govbr\govbr-ds\dist\govbr-ds-lite.css"
 />
 ```
 
-Visite [GOVBR-DS lite](introducao/govbr-ds-lite) para saber as diferenças.
+Visite [Design System GOV.BR lite](introducao/govbr-ds-lite) para saber as diferenças.
 
 ## Template Base
 
-Um bom ponto de partida para usar o GOVBR-DS é usar um template já com elementos básicos estruturantes da página como Cabeçalho, Menu e Rodapé. [Visite o Template Base](templates/base) na visão **Desenvolvedor** para acessar o código de referência.
+Um bom ponto de partida para usar o Design System GOV.BR é usar um template já com elementos básicos estruturantes da página como Cabeçalho, Menu e Rodapé. [Visite o Template Base](templates/base) na visão **Desenvolvedor** para acessar o código de referência.
 
 ## Servidor CDN
 

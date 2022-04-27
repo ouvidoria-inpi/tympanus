@@ -257,7 +257,7 @@ A _Superfície Flutuante_ é um elemento temporário, logo precisa desaparecer d
 
 ### 8. Acessibilidade
 
-- O padrão _WAI ARIA_ define algumas regras específicas para cada elemento/conteúdo utilizado. O _Dropdown_ do _GOVBR-DS_ é um comportamento genérico que pode ser aplicado a uma variedade de situações e estruturas. Por esse motivo, não será especificado regras de atributos _ARIA_ necessários (a não ser nos componentes do _GOVBR-DS_ que utilizam este comportamento). Os autores terão que incluir por contra própria esses atributos mais específicos, dependo do que for utilizado na sua estrutura _Dropdown_;
+- O padrão _WAI ARIA_ define algumas regras específicas para cada elemento/conteúdo utilizado. O _Dropdown_ do _Design System GOV.BR_ é um comportamento genérico que pode ser aplicado a uma variedade de situações e estruturas. Por esse motivo, não será especificado regras de atributos _ARIA_ necessários (a não ser nos componentes do _Design System GOV.BR_ que utilizam este comportamento). Os autores terão que incluir por contra própria esses atributos mais específicos, dependo do que for utilizado na sua estrutura _Dropdown_;
 
 - No entanto, é importante permitir a navegação entre os elementos interativos em um _Dropdown_ sejam feitos pela tecla `TAB`. Neste caso, utilize o estado `foco` nos elementos durante a navegação;
 

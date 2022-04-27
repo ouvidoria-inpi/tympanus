@@ -50,7 +50,7 @@ npm run lint
 
 Use nossos canais abaixo para obter tirar suas dúvidas:
 
--   Site do GOVBR-DS <https://www.gov.br/ds/>
+-   Site do Design System GOV.BR <https://www.gov.br/ds/>
 
 -   Web Components (versão estável) <https://govbr-ds.gitlab.io/govbr-ds-webcomponents/main>
 

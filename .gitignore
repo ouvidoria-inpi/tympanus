@@ -14,7 +14,7 @@ report-htmllint.txt
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# GOVBR-DS
+# Design System GOV.BR
 cdn
 cypress/screenshots
 sassdoc

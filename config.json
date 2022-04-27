@@ -14,12 +14,12 @@
 				},
 				{
 					"id": "prototipando",
-					"label": "Prototipando com o GOVBR-DS",
+					"label": "Prototipando com o Design System GOV.BR",
 					"type": "documentation"
 				},
 				{
 					"id": "govbr-ds-lite",
-					"label": "GOVBR-DS Lite",
+					"label": "Design System GOV.BR Lite",
 					"type": "documentation"
 				},
 				{
@@ -191,7 +191,7 @@
 				},
 				{
 					"id": "migracao",
-					"label": "Migração da versão 1.x para 2.x do GOVBR-DS",
+					"label": "Migração da versão 1.x para 2.x do Design System GOV.BR",
 					"type": "documentation"
 				}
 			],
@@ -1564,7 +1564,7 @@
 					],
 					"id": "designer",
 					"label": "Designer",
-					"description": "Baixe versões anteriores dos Artefatos de Design do GOVBR-DS.",
+					"description": "Baixe versões anteriores dos Artefatos de Design do Design System GOV.BR.",
 					"history": [
 						{
 							"id": "uikitweb",
@@ -1714,7 +1714,7 @@
 					],
 					"id": "modelos",
 					"label": "Modelos",
-					"description": "Baixe versões anteriores dos Modelos de template do GOVBR-DS.",
+					"description": "Baixe versões anteriores dos Modelos de template do Design System GOV.BR.",
 					"history": [
 						{
 							"id": "crud",
@@ -1832,7 +1832,7 @@
 							"description": "Utilize código pronto em HTML, CSS e JavaScript.",
 							"image": "assets/imgs/logos-w3c.png",
 							"isNew": true,
-							"label": "Código-fonte GOVBR-DS",
+							"label": "Código-fonte Design System GOV.BR",
 							"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-latest.zip",
 							"version": "Versão 2.4.2"
 						},
@@ -1855,7 +1855,7 @@
 					],
 					"id": "developer",
 					"label": "Desenvolvedor",
-					"description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do GOVBR-DS.",
+					"description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do Design System GOV.BR.",
 					"history": [
 						{
 							"id": "codigoFonte",
@@ -1950,7 +1950,7 @@
 			],
 			"hideLabel": true,
 			"id": "colabore-com-o-govbr-ds",
-			"label": "Colabore com o GOVBR-DS",
+			"label": "Colabore com o Design System GOV.BR",
 			"type": "documentation"
 		},
 		{
@@ -1973,7 +1973,7 @@
 		},
 		{
 			"id": "govbr-ds-1.5.0",
-			"label": "GOVBR-DS v1.5.0 BETA (Obsoleta)",
+			"label": "Design System GOV.BR v1.5.0 BETA (Obsoleta)",
 			"path": "/v1.5.0/",
 			"target": "_blank",
 			"type": "link"
