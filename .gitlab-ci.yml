@@ -1,38 +1,11 @@
-include:
-  - template: Security/Dependency-Scanning.gitlab-ci.yml
-  - template: Security/License-Scanning.gitlab-ci.yml
-  - template: Security/SAST.gitlab-ci.yml
-  - template: Security/Secret-Detection.gitlab-ci.yml
+variables:
+  GIT_SSL_NO_VERIFY: 'true'
 
 image: node:14-alpine
 
 stages:
   - build
   - test
-  - .pre
-  - .post
-  - pages
-  - deploy
-  - review
-  - dast
-  - staging
-  - canary
-  - production
-  - incremental rollout 10%
-  - incremental rollout 25%
-  - incremental rollout 50%
-  - incremental rollout 100%
-  - performance
-  - cleanup
-
-  
-
-
-
-variables:
-  SAST_EXCLUDED_PATHS:  .husky, .storybook, .vscode,  dist, node_modules, package-lock.json, **/*.spec.js, **/*.spec.js.snap'
-  SECRET_DETECTION_HISTORIC_SCAN: 'false'
-  SECRET_DETECTION_EXCLUDED_PATHS: .husky, .vscode,  dist, node_modules'
 
 cache:
   paths:
@@ -73,22 +46,3 @@ validate_styles:
 commit_lint:
   stage: test
   script: npx commitlint-gitlab-ci -x @commitlint/config-conventional
-
-pages:
-  stage: pages
-  artifacts:
-    paths:
-      - public
-    expire_in: 1 week
-  before_script:
-    - mv dist public
-  script:
-    - npm run start
-  only:
-    - main
-
-sast:
-  stage: test
-include:
-- template: Auto-DevOps.gitlab-ci.yml
-
