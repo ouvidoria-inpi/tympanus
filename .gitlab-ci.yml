@@ -116,7 +116,7 @@ HTML:
       - report-htmllint.txt
     expire_in: 1 week
   script:
-    - npx html-validate --formatter stylish dist/**/*.html > report-htmllint.txt
+    - npx html-validate --formatter stylish dist/**/*.html 
   only:
     - main
     - merge_requests
