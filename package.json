@@ -53,8 +53,7 @@
     "webpack-dev-server": "webpack-dev-server"
   },
   "lint-staged": {
-    "*.{css,scss}": "stylelint --fix",
-    "*.{js,ts}": "eslint -c .eslintrc.yaml --fix"
+    "*.{css,scss}": "stylelint --fix"
   },
   "config": {
     "commitizen": {

@@ -226,7 +226,7 @@ function readUtilDirectory(typeFolder, typeComponent) {
       'behavior',
       `${splitFilename[0]}.min.js`
     )
-    createMinify(componentDist, componentDistFileMin)
+
     fs.copyFile(
       componentSrcFile,
       componentDist,
@@ -238,6 +238,7 @@ function readUtilDirectory(typeFolder, typeComponent) {
         return ''
       }
     )
+    createMinify(componentSrcFile, componentDistFileMin)
   })
 }
 
