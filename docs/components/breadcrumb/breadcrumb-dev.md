@@ -77,13 +77,13 @@
 
 ### HTML
 
-Incluir o arquivo `dsgov.min.js` no html.
+Incluir o arquivo `govbr-ds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/dsgov/dist/dsgov.min.js"></script>
+<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
 ```
 
-> O arquivo dsgov.min.js expõe um objeto chamado `dsgov` contendo as referências para todas as classes exportadas.
+> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -95,6 +95,6 @@ Usar o seguinte código JavaScript para instanciar a classe `BRBreadcrumb`, pass
 ```javascript
 const breadcrumbList = []
 for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
-  breadcrumbList.push(new dsgov.BRBreadcrumb('br-breadcrumb', brBreadcrumb))
+  breadcrumbList.push(new govbr-ds.BRBreadcrumb('br-breadcrumb', brBreadcrumb))
 }
 ```

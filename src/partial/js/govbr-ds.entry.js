@@ -31,7 +31,7 @@ import Accordion from './behavior/accordion'
 import Checkgroup from './behavior/checkgroup'
 import Collapse from './behavior/collapse'
 import Tooltip from './behavior/tooltip'
-import Behavior from './dsgov.beahavior'
+import Behavior from './govbr-ds.beahavior'
 import { Dropdown, Globals } from './globals-class'
 
 const globals = new Globals()

@@ -1,6 +1,6 @@
 [version]: # (1.0.3)
 
-Espaçamento é a distância entre um elemento a outro, representado por alguma unidade métrica. O espaçamento é um fundamento do design visual que frequentemente cria uma lacuna entre os designers e os desenvolvedores ao projetar uma interface. Para evitar essa situação, o DS Gov cria e detalha termos em um sistema flexível, possibilitando layouts funcionais e consistentes.
+Espaçamento é a distância entre um elemento a outro, representado por alguma unidade métrica. O espaçamento é um fundamento do design visual que frequentemente cria uma lacuna entre os designers e os desenvolvedores ao projetar uma interface. Para evitar essa situação, o Design System GOV.BR cria e detalha termos em um sistema flexível, possibilitando layouts funcionais e consistentes.
 
 ---
 
@@ -8,7 +8,7 @@ Espaçamento é a distância entre um elemento a outro, representado por alguma 
 
 ### Experiência Única
 
-Existem 2 escalas de espaçamento no DS GOV que devem ser respeitadas. Utilizando-se dessas escalas é possível criar layouts flexíveis e, ao mesmo tempo, manter a consistência visual entre diferentes serviços e produtos dentro do DS GOV.
+Existem 2 escalas de espaçamento no Design System GOV.BR que devem ser respeitadas. Utilizando-se dessas escalas é possível criar layouts flexíveis e, ao mesmo tempo, manter a consistência visual entre diferentes serviços e produtos dentro do Design System GOV.BR.
 
 ### Eficiência e Clareza
 
@@ -26,7 +26,7 @@ Os espaços em branco também são importantes para leitura, pois criam áreas d
 
 ### Reutilização e Colaboração
 
-Interfaces digitais do governo devem utilizar as escalas de espaçamentos existentes, além de todas as informações contidas neste documento, sempre que possível. Havendo, entretanto, a necessidade de acrescentar ou editar o documento atual, é necessário validar a nova proposta pela equipe de _design_ do DS GOV.
+Interfaces digitais do governo devem utilizar as escalas de espaçamentos existentes, além de todas as informações contidas neste documento, sempre que possível. Havendo, entretanto, a necessidade de acrescentar ou editar o documento atual, é necessário validar a nova proposta pela equipe de _design_ do Design System GOV.BR.
 
 ---
 
@@ -41,15 +41,15 @@ Interfaces digitais do governo devem utilizar as escalas de espaçamentos existe
 
  Mesmo possuindo comportamentos variados, todos os elementos devem respeitar essas propriedades. Entender seu funcionamento é importante para determinar as dimensões, o espaçamento e a interação do objeto de modo geral.
 
- No DS GOV, o comportamento das dimensões de um objeto é determinada pela regra: `box-sizing: border-box`, ou seja, as propriedades de largura (width) e de altura (height) incluem o tamanho do padding e do border, mas não incluem a margin.
+ No Design System GOV.BR, o comportamento das dimensões de um objeto é determinada pela regra: `box-sizing: border-box`, ou seja, as propriedades de largura (width) e de altura (height) incluem o tamanho do padding e do border, mas não incluem a margin.
 
-![Box-Model no DS GOV](imagens/boxmodel-dsgov.png)
-*Comportamento das dimensões do Box-Model utilizado no DS GOV*
+![Box-Model no Design System GOV.BR](imagens/boxmodel-govbr-ds.png)
+*Comportamento das dimensões do Box-Model utilizado no Design System GOV.BR*
 
- Observando somente as propriedades de espaçamento, podemos então categorizá-los dentro do DS Gov em **Interno** e **Externo**.
+ Observando somente as propriedades de espaçamento, podemos então categorizá-los dentro do Design System GOV.BR em **Interno** e **Externo**.
 
 ![Tipos de Espaçamentos](imagens/interno-externo.png)
-*Tipos de Espaçamento no DS GOV: Interno e Externo*
+*Tipos de Espaçamento no Design System GOV.BR: Interno e Externo*
 
 ### Espaçamento Interno
 
@@ -162,7 +162,7 @@ A escala de espaçamento refere-se aos tipos de espaçamento (interno e  externo
 
 É um método medido em incrementos de 8px ou 4px, criando dois tipos de escala: o de **Layout** e de **Ajuste**.
 
-**Importante**: por padrão, os espaçamentos de qualquer elemento do DS Gov é de 0px, ou seja, não utiliza nenhum tipo de escala.
+**Importante**: por padrão, os espaçamentos de qualquer elemento do Design System GOV.BR é de 0px, ou seja, não utiliza nenhum tipo de escala.
 
 | Spacing Scale Token       | Value     |
 | ------------------------- | --------- |

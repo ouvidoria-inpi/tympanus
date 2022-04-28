@@ -58,7 +58,7 @@ A seguir, pode-se observar algumas orientações que podem auxiliar projetistas 
 
 ### Dimensões e Espaços Internos
 
-Existem duas formas de ajustar a densidade em componentes DSGov: 
+Existem duas formas de ajustar a densidade em componentes Design System GOV.BR: 
 
 - através do ajuste nos espaços internos _(padding)_ ao componente;
 - através do ajuste nas dimensões _(width e/ou height)_ do componente. 

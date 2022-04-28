@@ -14,12 +14,12 @@
 				},
 				{
 					"id": "prototipando",
-					"label": "Prototipando com o DSGOV",
+					"label": "Prototipando com o Design System GOV.BR",
 					"type": "documentation"
 				},
 				{
-					"id": "dsgov-lite",
-					"label": "DSGOV Lite",
+					"id": "govbr-ds-lite",
+					"label": "Design System GOV.BR Lite",
 					"type": "documentation"
 				},
 				{
@@ -102,37 +102,37 @@
 							"description": "Expressa em detalhes os elementos necessários para padronização dos portais. Além disso, contempla layouts possíveis, descrição de itens obrigatórios e variáveis do portal, boas práticas para aplicação de conteúdo editorial e diretrizes para elaboração de conteúdos de vídeos, infográficos e tagueamento.",
 							"image": "assets/imgs/ICONE-MANUAIS.png",
 							"label": "Manual de Diretrizes",
-							"path": "assets/design-system/downloads/GovbrManualdeDiretrizes.pdf"
+							"path": "assets/govbr-ds-dev-core/downloads/GovbrManualdeDiretrizes.pdf"
 						},
 						{
 							"description": "Fornece orientações sobre as etapas e procedimentos do processo de migração, abordando também indicações para o tratamento do acervo de conteúdo.",
 							"image": "assets/imgs/ICONE-MANUAIS.png",
 							"label": " Manual de Migração",
-							"path": "assets/design-system/downloads/GovbrManualdeMigracao.pdf"
+							"path": "assets/govbr-ds-dev-core/downloads/GovbrManualdeMigracao.pdf"
 						},
 						{
 							"description": "Apresenta as ferramentas de administração e publicação de conteúdos dentro do portal gov.br. Inclui também, com base nos pilares da comunicação de governo - informar, monitorar, ouvir, contribuir e evoluir -, proposta de tom de voz e linguagem e recomendações para construção de textos de agenda, notícias e serviços.",
 							"image": "assets/imgs/ICONE-MANUAIS.png",
 							"label": "Manual de Publicação",
-							"path": "assets/design-system/downloads/GovbrManualdePublicacao.pdf"
+							"path": "assets/govbr-ds-dev-core/downloads/GovbrManualdePublicacao.pdf"
 						},
 						{
 							"description": "Apresenta conjunto de ações que podem ser realizadas para que um site se posicione melhor em resultados orgânicos nos motores de buscas e potencialmente obtenha mais acessos.",
 							"image": "assets/imgs/ICONE-MANUAIS.png",
 							"label": "Manual de Search Engine Optimization (SEO)",
-							"path": "assets/design-system/downloads/GovbrManualdeSEO.pdf"
+							"path": "assets/govbr-ds-dev-core/downloads/GovbrManualdeSEO.pdf"
 						},
 						{
 							"description": "Padrões e normas de apresentação da marca gov.br.",
 							"image": "assets/imgs/ICONE-MANUAIS.png",
 							"label": "Manual de uso da marca gov.br",
-							"path": "assets/design-system/downloads/GovbrManualMarca.pdf"
+							"path": "assets/govbr-ds-dev-core/downloads/GovbrManualMarca.pdf"
 						},
 						{
 							"description": "Este guia tem o objetivo de auxiliar gestores de comunicação da administração pública federal, e demais órgãos vinculados ao Governo Federal, no desenvolvimento e divulgação das ações de comunicação dos serviços digitais que envolverem a plataforma gov.br.",
 							"image": "assets/imgs/ICONE-MANUAIS.png",
 							"label": "Guia de Transformação Digital - Ações de Comunicação Social",
-							"path": "assets/design-system/downloads/GovbrManualTransformacaoDigital.pdf"
+							"path": "assets/govbr-ds-dev-core/downloads/GovbrManualTransformacaoDigital.pdf"
 						}
 					],
 					"id": "manuais-orientadores",
@@ -191,7 +191,7 @@
 				},
 				{
 					"id": "migracao",
-					"label": "Migração da versão 1.x para 2.x do DSGOV",
+					"label": "Migração da versão 1.x para 2.x do Design System GOV.BR",
 					"type": "documentation"
 				}
 			],
@@ -287,12 +287,17 @@
 							"path": "examples/avatar-sizes"
 						},
 						{
-              "height": 400,
+							"height": 400,
 							"label": "Avatar com dropdown",
 							"path": "examples/avatar-dropdown"
 						}
 					],
-					"ext": ["md", "html", "css", "js"],
+					"ext": [
+						"md",
+						"html",
+						"css",
+						"js"
+					],
 					"id": "avatar",
 					"label": "Avatar"
 				},
@@ -386,7 +391,11 @@
 							"path": "examples/button-secondary-loading"
 						}
 					],
-					"ext": ["md", "html", "css"],
+					"ext": [
+						"md",
+						"html",
+						"css"
+					],
 					"id": "button",
 					"label": "Button"
 				},
@@ -484,7 +493,12 @@
 							"path": "examples/checkbox-indeterminate"
 						}
 					],
-					"ext": ["md", "html", "css", "js"],
+					"ext": [
+						"md",
+						"html",
+						"css",
+						"js"
+					],
 					"id": "checkbox",
 					"label": "Checkbox"
 				},
@@ -551,7 +565,11 @@
 							"path": "examples/divider-4x"
 						}
 					],
-					"ext": ["md", "html", "css"],
+					"ext": [
+						"md",
+						"html",
+						"css"
+					],
 					"id": "divider",
 					"label": "Divider"
 				},
@@ -702,7 +720,11 @@
 							"path": "examples/loading-sml"
 						}
 					],
-					"ext": ["md", "html", "css"],
+					"ext": [
+						"md",
+						"html",
+						"css"
+					],
 					"id": "loading",
 					"label": "Loading"
 				},
@@ -729,7 +751,11 @@
 							"path": "examples/magicbutton-large"
 						}
 					],
-					"ext": ["md", "html", "css"],
+					"ext": [
+						"md",
+						"html",
+						"css"
+					],
 					"id": "magicbutton",
 					"label": "Magic Button"
 				},
@@ -872,7 +898,11 @@
 							"path": "examples/radio-states"
 						}
 					],
-					"ext": ["md", "html", "css"],
+					"ext": [
+						"md",
+						"html",
+						"css"
+					],
 					"id": "radio",
 					"label": "Radio"
 				},
@@ -907,7 +937,11 @@
 				{
 					"id": "signin",
 					"label": "Sign-in",
-					"ext": ["md", "html", "css"],
+					"ext": [
+						"md",
+						"html",
+						"css"
+					],
 					"examples": [
 						{
 							"label": "Ênfase Primária",
@@ -964,7 +998,11 @@
 				{
 					"id": "skiplink",
 					"label": "Skip Link",
-					"ext": ["md", "html", "css"],
+					"ext": [
+						"md",
+						"html",
+						"css"
+					],
 					"examples": [
 						{
 							"path": "examples/skiplink-simple",
@@ -1041,7 +1079,11 @@
 							"path": "examples/switch-icon"
 						}
 					],
-					"ext": ["md", "html", "css"],
+					"ext": [
+						"md",
+						"html",
+						"css"
+					],
 					"id": "switch",
 					"label": "Switch"
 				},
@@ -1177,7 +1219,7 @@
 				{
 					"examples": [
 						{
-						"height": 495,
+							"height": 495,
 							"label": "Envio de arquivo",
 							"path": "examples/upload-single"
 						},
@@ -1240,13 +1282,19 @@
 							"path": "examples/fluid-push"
 						}
 					],
-					"ext": ["md", "html"],
+					"ext": [
+						"md",
+						"html"
+					],
 					"htmlFilename": "base",
 					"id": "base",
 					"label": "Template Base"
 				},
 				{
-					"ext": ["md", "html"],
+					"ext": [
+						"md",
+						"html"
+					],
 					"htmlFilename": "erro",
 					"id": "erro",
 					"label": "Template Erro"
@@ -1260,7 +1308,10 @@
 			"children": [
 				{
 					"default": false,
-					"ext": ["html", "md"],
+					"ext": [
+						"html",
+						"md"
+					],
 					"id": "accordion",
 					"label": "Accordion",
 					"examples": [
@@ -1273,7 +1324,10 @@
 				},
 				{
 					"default": false,
-					"ext": ["html", "md"],
+					"ext": [
+						"html",
+						"md"
+					],
 					"id": "checkgroup",
 					"label": "Checkgroup",
 					"examples": [
@@ -1298,7 +1352,10 @@
 							"path": "examples/collapse-behavior"
 						}
 					],
-					"ext": ["html", "md"],
+					"ext": [
+						"html",
+						"md"
+					],
 					"id": "collapse",
 					"label": "Collapse"
 				},
@@ -1311,7 +1368,10 @@
 							"path": "examples/dropdown-behavior"
 						}
 					],
-					"ext": ["html", "md"],
+					"ext": [
+						"html",
+						"md"
+					],
 					"id": "dropdown",
 					"label": "Dropdown"
 				},
@@ -1324,7 +1384,10 @@
 							"path": "examples/scrim-behavior"
 						}
 					],
-					"ext": ["html", "md"],
+					"ext": [
+						"html",
+						"md"
+					],
 					"id": "scrim",
 					"label": "Scrim"
 				},
@@ -1430,7 +1493,7 @@
 					"description": "Disciplina a implantação e a gestão do Padrão Digital de Governo dos órgãos e entidades do Poder Executivo federal.",
 					"image": "assets/imgs/ICONE-LEGISLAÇÃO.png",
 					"label": "Padrão Digital de Governo",
-					"path": "assets/design-system/downloads/PORTARIAN540DE8DESETEMBRODE2020DOUImprensaNacional.pdf"
+					"path": "assets/govbr-ds-dev-core/downloads/PORTARIAN540DE8DESETEMBRODE2020DOUImprensaNacional.pdf"
 				}
 			],
 			"id": "legislacao",
@@ -1451,7 +1514,7 @@
 							"isNew": true,
 							"label": "UI Kit WEB",
 							"path": "https://serprodrive.serpro.gov.br/s/ARP4gmoRKtwTena",
-							"fileDescription": "uikit-dsgov-web_5.1.1.zip (14MB)",
+							"fileDescription": "uikit-govbr-ds-web_5.1.1.zip (14MB)",
 							"version": "Versão 5.1.1"
 						},
 						{
@@ -1460,7 +1523,7 @@
 							"isNew": true,
 							"label": "UI Kit Figma",
 							"path": "https://serprodrive.serpro.gov.br/s/nFFEGRCBJzatw4Y",
-							"fileDescription": "uikit-dsgov-web-figma_2.2.0.zip (1 MB)",
+							"fileDescription": "uikit-govbr-ds-web-figma_2.2.0.zip (1 MB)",
 							"version": "Versão 2.2.0"
 						},
 						{
@@ -1501,36 +1564,35 @@
 					],
 					"id": "designer",
 					"label": "Designer",
-					"description": "Baixe versões anteriores dos Artefatos de Design do DSGOV.",
+					"description": "Baixe versões anteriores dos Artefatos de Design do Design System GOV.BR.",
 					"history": [
 						{
 							"id": "uikitweb",
 							"label": "UI KIT WEB",
 							"versions": [
-
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/9GF75So4nZrYapo",
 									"version": "5.1.0",
 									"data": "26 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/G22CwAW4WP6B6oQ",
 									"version": "4.8.0",
 									"data": "11 ago 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/YcnCqAZZGqaKeLR",
 									"version": "4.7.0",
 									"data": "01 jul 2021",
-									"dsgov_version": "2.1.0"
+									"govbr-ds_version": "2.1.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/95QZBA7593LBCpT",
 									"version": "4.4.0",
 									"data": "02 mar 2021",
-									"dsgov_version": "2.0.2"
+									"govbr-ds_version": "2.0.2"
 								}
 							]
 						},
@@ -1542,7 +1604,7 @@
 									"path": "https://serprodrive.serpro.gov.br/s/yybFqo4ewZyHoLd",
 									"version": "Versão 2.0.0",
 									"data": "26 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						},
@@ -1554,31 +1616,31 @@
 									"path": "https://serprodrive.serpro.gov.br/s/ktmsdecdgPa3Dmw",
 									"version": "2.1.1",
 									"data": "26 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/Z7pecTT7Ec2zsYd",
 									"version": "2.0.0",
 									"data": "28 set 2021",
-									"dsgov_version": "2.3.0"
+									"govbr-ds_version": "2.3.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/y23EM6wxy3CpTbW",
 									"version": "1.8.0",
 									"data": "11 ago 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/96N4b6rePJoMfnq",
 									"version": "1.7.0",
 									"data": "01 jul 2021",
-									"dsgov_version": "2.1.0"
+									"govbr-ds_version": "2.1.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/RWEDQ2ocEc52bjM",
 									"version": "1.4.0",
 									"data": "17 nov 2021",
-									"dsgov_version": "2.0.2"
+									"govbr-ds_version": "2.0.2"
 								}
 							]
 						}
@@ -1652,29 +1714,29 @@
 					],
 					"id": "modelos",
 					"label": "Modelos",
-					"description": "Baixe versões anteriores dos Modelos de template do DSGOV.",
+					"description": "Baixe versões anteriores dos Modelos de template do Design System GOV.BR.",
 					"history": [
 						{
 							"id": "crud",
 							"label": "CRUD",
 							"versions": [
 								{
-                  "path": "https://serprodrive.serpro.gov.br/s/EXs3aNt9dxAQrTi",
-                  "version": "4.0.2",
+									"path": "https://serprodrive.serpro.gov.br/s/EXs3aNt9dxAQrTi",
+									"version": "4.0.2",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/t8c74CydKnE8KoJ",
 									"version": "4.0.1",
 									"data": "06 out 2021",
-									"dsgov_version": "2.3.0"
+									"govbr-ds_version": "2.3.0"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/TGnwA2SjtfzNoHz",
 									"version": "4.0.0",
 									"data": "06 set 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								}
 							]
 						},
@@ -1683,16 +1745,16 @@
 							"label": "Relatórios",
 							"versions": [
 								{
-                  "path": "https://serprodrive.serpro.gov.br/s/KELSj965NGL5Fed",
-                  "version": "1.0.1",
+									"path": "https://serprodrive.serpro.gov.br/s/KELSj965NGL5Fed",
+									"version": "1.0.1",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/K8Fiiqzkr3nMeEa",
 									"version": "1.0.0",
 									"data": "06 set 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								}
 							]
 						},
@@ -1701,16 +1763,16 @@
 							"label": "Dashboard",
 							"versions": [
 								{
-                  "path": "https://serprodrive.serpro.gov.br/s/zw2Y8XcGXysAgX3",
-                  "version": "1.0.1",
+									"path": "https://serprodrive.serpro.gov.br/s/zw2Y8XcGXysAgX3",
+									"version": "1.0.1",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/L664xX235PLFE88",
 									"version": "1.0.0",
 									"data": "06 set 2021",
-									"dsgov_version": "2.2.0"
+									"govbr-ds_version": "2.2.0"
 								}
 							]
 						},
@@ -1719,10 +1781,10 @@
 							"label": "Sessão de usuário",
 							"versions": [
 								{
-                  "path": "https://serprodrive.serpro.gov.br/s/MzoeyarpLExwtaS",
-                  "version": "1.0.0",
+									"path": "https://serprodrive.serpro.gov.br/s/MzoeyarpLExwtaS",
+									"version": "1.0.0",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						},
@@ -1731,10 +1793,10 @@
 							"label": "Guia de Recolhimento",
 							"versions": [
 								{
-                  "path": "https://serprodrive.serpro.gov.br/s/gxQFdGRtJRTBfYR",
-                  "version": "1.0.0",
+									"path": "https://serprodrive.serpro.gov.br/s/gxQFdGRtJRTBfYR",
+									"version": "1.0.0",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						},
@@ -1743,10 +1805,10 @@
 							"label": "Base",
 							"versions": [
 								{
-                  "path": "https://serprodrive.serpro.gov.br/s/DFYGi6nP8yXKjYo",
-                  "version": "1.0.0",
+									"path": "https://serprodrive.serpro.gov.br/s/DFYGi6nP8yXKjYo",
+									"version": "1.0.0",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						},
@@ -1755,10 +1817,10 @@
 							"label": "Erro",
 							"versions": [
 								{
-                  "path": "https://serprodrive.serpro.gov.br/s/nxBG4iwir2qm5Dg",
-                  "version": "1.0.0",
+									"path": "https://serprodrive.serpro.gov.br/s/nxBG4iwir2qm5Dg",
+									"version": "1.0.0",
 									"data": "16 nov 2021",
-									"dsgov_version": "2.4.1"
+									"govbr-ds_version": "2.4.1"
 								}
 							]
 						}
@@ -1770,8 +1832,8 @@
 							"description": "Utilize código pronto em HTML, CSS e JavaScript.",
 							"image": "assets/imgs/logos-w3c.png",
 							"isNew": true,
-							"label": "Código-fonte DSGOV",
-							"path": "/assets/design-system/assets/source-code/dsgov-latest.zip",
+							"label": "Código-fonte Design System GOV.BR",
+							"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-latest.zip",
 							"version": "Versão 2.4.2"
 						},
 						{
@@ -1779,7 +1841,7 @@
 							"image": "assets/imgs/logo-npm.png",
 							"isNew": true,
 							"label": "Pacote NPM",
-							"path": "/assets/design-system/assets/npm-package/dsgov-latest.tgz",
+							"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-latest.tgz",
 							"version": "Versão 2.4.2"
 						},
 						{
@@ -1793,44 +1855,44 @@
 					],
 					"id": "developer",
 					"label": "Desenvolvedor",
-					"description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do DSGOV.",
+					"description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do Design System GOV.BR.",
 					"history": [
 						{
 							"id": "codigoFonte",
 							"label": "Código Fonte",
 							"versions": [
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.4.1.zip",
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.1.zip",
 									"version": "2.4.1",
 									"data": "10 dez 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.4.0.zip",
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.0.zip",
 									"version": "2.4.0",
 									"data": "02 dez 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.3.0.zip",
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.3.0.zip",
 									"version": "2.3.0",
 									"data": "05 nov 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.2.2.zip",
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.2.2.zip",
 									"version": "2.2.2",
 									"data": "05 out 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.2.1.zip",
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.2.1.zip",
 									"version": "2.2.1",
 									"data": "29 set 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.2.0.zip",
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.2.0.zip",
 									"version": "2.2.0",
 									"data": "29 set 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/source-code/dsgov-2.1.0.zip",
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.1.0.zip",
 									"version": "2.1.0",
 									"data": "16 jul 2021"
 								}
@@ -1841,37 +1903,37 @@
 							"label": "Pacote NPM",
 							"versions": [
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.4.1.tgz",
+									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.4.1.tgz",
 									"version": "2.4.1",
 									"data": "10 dez 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.4.0.tgz",
+									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.4.0.tgz",
 									"version": "2.4.0",
 									"data": "03 dez 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.3.0.tgz",
+									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.3.0.tgz",
 									"version": "2.3.0",
 									"data": "05 nov 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.2.2.tgz",
+									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.2.2.tgz",
 									"version": "2.2.2",
 									"data": "05 out 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.2.1.tgz",
+									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.2.1.tgz",
 									"version": "2.2.1",
 									"data": "29 set 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.2.0.tgz",
+									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.2.0.tgz",
 									"version": "2.2.0",
 									"data": "29 set 2021"
 								},
 								{
-									"path": "/assets/design-system/assets/npm-package/dsgov-2.1.0.tgz",
+									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.1.0.tgz",
 									"version": "2.1.0",
 									"data": "16 jul 2021"
 								}
@@ -1883,29 +1945,35 @@
 			"type": "downloads"
 		},
 		{
-			"ext": ["html"],
+			"ext": [
+				"html"
+			],
 			"hideLabel": true,
-			"id": "colabore-com-o-dsgov",
-			"label": "Colabore com o DSGOV",
+			"id": "colabore-com-o-govbr-ds",
+			"label": "Colabore com o Design System GOV.BR",
 			"type": "documentation"
 		},
 		{
-			"ext": ["html"],
+			"ext": [
+				"html"
+			],
 			"hideLabel": true,
 			"id": "home",
 			"label": "Página principal",
 			"type": "documentation"
 		},
 		{
-			"ext": ["html"],
+			"ext": [
+				"html"
+			],
 			"hideLabel": true,
 			"id": "o-que-ha-de-novo",
 			"label": "O que há de novo",
 			"type": "documentation"
 		},
 		{
-			"id": "dsgov-1.5.0",
-			"label": "DSGOV v1.5.0 BETA (Obsoleta)",
+			"id": "govbr-ds-1.5.0",
+			"label": "Design System GOV.BR v1.5.0 BETA (Obsoleta)",
 			"path": "/v1.5.0/",
 			"target": "_blank",
 			"type": "link"
@@ -1914,15 +1982,29 @@
 	"defaultTypeConfig": [
 		{
 			"default": true,
-			"ext": ["md"],
-			"forType": ["documentation"]
+			"ext": [
+				"md"
+			],
+			"forType": [
+				"documentation"
+			]
 		},
 		{
 			"default": true,
 			"designer": true,
 			"developer": true,
-			"ext": ["md", "html", "css", "js"],
-			"forType": ["components", "templates", "pages", "util"],
+			"ext": [
+				"md",
+				"html",
+				"css",
+				"js"
+			],
+			"forType": [
+				"components",
+				"templates",
+				"pages",
+				"util"
+			],
 			"htmlFilename": "examples"
 		}
 	]

@@ -325,7 +325,7 @@ Faça sua escolha considerando o seu objetivo, ou seja, o que você pretende mos
 
 ### Quais tecnologias poderão ser utilizadas e como utilizá-las?
 
-Existem diversas opções disponíveis no mercado, desde as mais simples e manuais até softwares online que, automaticamente geram alguns gráficos para você, porém, o DSGov não limita quais tipos de ferramentas deverão ser utilizadas. O DSGov, através desta documentação, busca oferecer diretrizes e regras de boas práticas de uso para que os gráficos sejam consistentes e possam ajudar os usuários no entendimento dos dados propostos.
+Existem diversas opções disponíveis no mercado, desde as mais simples e manuais até softwares online que, automaticamente geram alguns gráficos para você, porém, o Design System GOV.BR não limita quais tipos de ferramentas deverão ser utilizadas. O Design System GOV.BR, através desta documentação, busca oferecer diretrizes e regras de boas práticas de uso para que os gráficos sejam consistentes e possam ajudar os usuários no entendimento dos dados propostos.
 
 ---
 
@@ -504,7 +504,7 @@ Esses problemas tendem a se agravar conforme o número de dados apresentados for
 
 As cores podem ter diversos impactos na apresentação, o que você vai perceber é que muitas vezes vai estar confortável com uma paleta de cores e depois não a quer mais. Mude, veja o que cabe melhor para seu estilo de apresentação e dados.
 
-Para auxiliar na escolha, varie entre as famílias de cores disponíveis no DSGov. Estude sobre a utilização de aplicação de esquemas de cor, utilizando-se do círculo cromático, tais como:
+Para auxiliar na escolha, varie entre as famílias de cores disponíveis no Design System GOV.BR. Estude sobre a utilização de aplicação de esquemas de cor, utilizando-se do círculo cromático, tais como:
 
 - Cores Complementares;
 - Cores Análogas;
@@ -520,7 +520,7 @@ Essas técnicas fazem uso do círculo cromático através de esquemas de cores p
 
 A boa aplicação desses esquemas, tende a ajudar o usuário na escolha das cores de forma consciente. É importante conhecê-los, suas vantagens e desvantagens de uso para uma correta aplicação.
 
-O DSGov disponibiliza uma extensa gama de cores para a utilização em todos os seus gráficos. Estes deverão ser utilizados sempre for que possível. Todas as cores estão disponíveis para uso no [Fundamento Cor](/fundamentos-visuais/cores).
+O Design System GOV.BR disponibiliza uma extensa gama de cores para a utilização em todos os seus gráficos. Estes deverão ser utilizados sempre for que possível. Todas as cores estão disponíveis para uso no [Fundamento Cor](/fundamentos-visuais/cores).
 
 #### 4- Uso de elementos visuais
 
@@ -574,7 +574,7 @@ As recomendações aqui descritas não esgotam todas os detalhes para o desenvol
 
 ## Organizando gráficos
 
-O componente *card* poderá ser utilizado para organizar a apresentação de todos os tipos de gráficos, auxiliando sua consistência e organização em tela. Esta forma de exibição poderá ser utilizado em todos os tipos de interface, mantendo ao máximo a consistência visual definida para o DSGov.
+O componente *card* poderá ser utilizado para organizar a apresentação de todos os tipos de gráficos, auxiliando sua consistência e organização em tela. Esta forma de exibição poderá ser utilizado em todos os tipos de interface, mantendo ao máximo a consistência visual definida para o Design System GOV.BR.
 
 Alguns comportamentos adicionais podem ser utilizados diretamente no *card*, deixando-o muito mais consistente e flexível a novas funcionalidades, tais como:
 

@@ -6,7 +6,7 @@ mixin footer
 mixin footer-logo
   - let type = attributes.inverted ? "positive" : "negative"
   .logo&attributes(attributes)
-    img(src=`https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-${type}.png` alt="Imagem")
+    img(src=`https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/images/logo-${type}.png` alt="Imagem")
 
 mixin footer-list-item
   +item(href="javascript:void(0)")&attributes(attributes)
@@ -59,7 +59,7 @@ mixin footer-bottom-filler
       .col.assigns.text-right
         - let chancela = 0
         while chancela < 2
-          img.ml-4(src=`https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/images/logo-assign-${type}.png` alt="Imagem")
+          img.ml-4(src=`https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/images/logo-assign-${type}.png` alt="Imagem")
           - chancela++
 
 mixin footer-info

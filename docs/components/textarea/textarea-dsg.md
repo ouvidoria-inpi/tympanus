@@ -26,13 +26,13 @@ O _Textarea_ é constituído por:
 
 ### Detalhamento dos itens
 
-Abaixo segue o detalhamento dos itens do _Componente Textarea_. Para maiores informações consulte também a documentação [Padrão de Formulário](https://dsgov.estaleiro.serpro.gov.br/padroes/formulario).
+Abaixo segue o detalhamento dos itens do _Componente Textarea_. Para maiores informações consulte também a documentação [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
 
 #### 1 - Label (Opcional)
 
 Auxiliam o usuário, indicando que tipo de informação deverá ser digitada no _Campo de Texto_. O texto do _Label_ deverá ser curto e objetivo.
 
-Além disso, o _Label_ também tem a função de indicar ao usuário se o **Campo de Texto é obrigatório ou não**. Veja detalhes sobre a indicação de **Campos Obrigatórios/Opcionais** no documento [Padrão de Formulário](https://dsgov.estaleiro.serpro.gov.br/padroes/formulario).
+Além disso, o _Label_ também tem a função de indicar ao usuário se o **Campo de Texto é obrigatório ou não**. Veja detalhes sobre a indicação de **Campos Obrigatórios/Opcionais** no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
 
 ##### Posicionamento do Label
 
@@ -215,7 +215,7 @@ O _Textarea_ poderá ser usado com densidades diferentes. A _Densidade_ tem a ve
 
 O componente _Textarea_ é bem parecido com o componente _input_. Portanto, boa parte dos comportamentos são similares e podem ser "reaproveitados".
 
-Para simplificação, utilize o comportamento Estados da mesma forma como é encontrado no [_Input_](https://dsgov.estaleiro.serpro.gov.br/components/input) (tanto na parte de uso em fundos claros e escuros como nas suas limitações descritas).
+Para simplificação, utilize o comportamento Estados da mesma forma como é encontrado no [_Input_](https://www.gov.br/ds/components/input) (tanto na parte de uso em fundos claros e escuros como nas suas limitações descritas).
 
 ---
 

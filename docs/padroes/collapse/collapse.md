@@ -254,10 +254,10 @@ Também pode-se utilizar a variação da escala de tamanhos tipográficos em ní
 
  Outro recurso bem útil é utilizar cores diferenciadas em blocos de níveis e subníveis.
 
-- deve-se estar atento para utilização das cores dentro do padrão DSGOV;
+- deve-se estar atento para utilização das cores dentro do padrão Design System GOV.BR;
 - utilize gradações de uma única tonalidade. Se optar pelo cinza, use a gradação deste cinza;
-- utilize a lógica de gradação já existente em nosso padrão de cores DSGOV, como por exemplo, a gradação de cinzas presente nos _tokens_ `.color-secondary-xx`, ou as variações `-darken-xx` e `-lighten-xx`;
-- opte por cores neutras ou "sóbrias". Evite utilizar cores muito "vivas" ou "gritantes", mesmo existentes em nosso padrão de cores DSGOV;
+- utilize a lógica de gradação já existente em nosso padrão de cores Design System GOV.BR, como por exemplo, a gradação de cinzas presente nos _tokens_ `.color-secondary-xx`, ou as variações `-darken-xx` e `-lighten-xx`;
+- opte por cores neutras ou "sóbrias". Evite utilizar cores muito "vivas" ou "gritantes", mesmo existentes em nosso padrão de cores Design System GOV.BR;
 
  ![Exemplo de gradação de cores níveis e subníveis](imagens/behavior-hierarchy-4.png)
 *Exemplo de gradação de cores em níveis e subníveis*

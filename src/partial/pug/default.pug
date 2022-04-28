@@ -54,17 +54,17 @@ html(lang="pt-BR")
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
     title= title ? title : "Template padrão"
     // Fonte Rawline
-    link(rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
+    link(rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css")
     // Fonte Raleway
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap")
-    block dsgov-css
+    block govbr-ds-css
       // Design System de Governo
-      link(rel="stylesheet" href=cdnUrl+"dsgov.css")
+      link(rel="stylesheet" href=cdnUrl+"govbr_ds.css")
     // Fontawesome
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css")
     block style
   body(class= templateClass ? `template-${templateClass}` : "")
     block template
-    script(src=cdnUrl+"dsgov-init.js")
+    script(src=cdnUrl+"govbr_ds-init.js")
     block scripts
-    
+

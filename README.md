@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O [Design System do Governo Federal](http://dsgov.estaleiro.serpro.gov.br/ 'Design System do Governo Federal') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo Federal.
+O [Design System do Governo Federal](https://www.gov.br/ds/ 'Design System do Governo Federal') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo Federal.
 
 ## Tecnologias
 
@@ -20,7 +20,7 @@ As principais dependências do projeto são:
 
 1. [Fonte Rawline](https://www.cdnfonts.com/rawline.font/ 'Fonte Rawline')
 
-> O fontawesome e a fonte rawline podem ser importadas de um CDN. Consulte a documentação no site do [Design System do Governo Federal](http://dsgov.estaleiro.serpro.gov.br/ 'Design System do Governo Federal') para mais detalhes.
+> O fontawesome e a fonte rawline podem ser importadas de um CDN. Consulte a documentação no site do [Design System do Governo Federal](https://www.gov.br/ds/ 'Design System do Governo Federal') para mais detalhes.
 >
 ## Como usar nossa biblioteca em seu projeto?
 
@@ -29,12 +29,12 @@ As principais dependências do projeto são:
 Você pode instalar a nossa biblioteca de Web Components no seu projeto usando:
 
 ```node
-npm install --save @dsgovbr/dsgovbr
+npm install --save @govbr-ds/govbr-ds
 ```
 
 ### Como começar
 
-Criamos um [tutorial no nosso site](https://dsgov.estaleiro.serpro.gov.br/introducao/como-comecar 'Como começar?') explicando como começar a utilizar nosso Design System.
+Criamos um [tutorial no nosso site](https://www.gov.br/ds/introducao/como-comecar 'Como começar?') explicando como começar a utilizar nosso Design System.
 
 ##  Lints
 
@@ -50,13 +50,13 @@ npm run lint
 
 Use nossos canais abaixo para obter tirar suas dúvidas:
 
--   Site do DSGOV.BR <http://dsgov.estaleiro.serpro.gov.br/>
+-   Site do Design System GOV.BR <https://www.gov.br/ds/>
 
--   Web Components (versão estável) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/main>
+-   Web Components (versão estável) <https://govbr-ds.gitlab.io/govbr-ds-webcomponents/main>
 
--   Web Components (versão em desenvolvimento\*) <https://dsgov-br.gitlab.io/dsgov.br-webcomponents/develop>
+-   Web Components (versão em desenvolvimento\*) <https://govbr-ds.gitlab.io/govbr-ds-webcomponents/develop>
 
--   Pelo nosso email <dsgov@serpro.gov.br>
+-   Pelo nosso email <govbr-ds@serpro.gov.br>
 
 -   Usando nosso canal no discord <https://discord.gg/U5GwPfqhUP>
 
@@ -66,7 +66,7 @@ Por favor verifique nossos guias de [como contribuir](./CONTRIBUTING.md 'Como co
 
 ### Commits
 
-Nesse projeto usamos um padrão para branches e commits. Por favor observe a documentação na nossa [wiki](https://dsgov-br.gitlab.io/dsgov.br-wiki/ 'Wiki') para aprender sobre os nossos padrões.
+Nesse projeto usamos um padrão para branches e commits. Por favor observe a documentação na nossa [wiki](https://govbr-ds.gitlab.io/govbr-ds-wiki/ 'Wiki') para aprender sobre os nossos padrões.
 
 ## Créditos
 

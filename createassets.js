@@ -7,7 +7,7 @@ const semVer = pjson.version
 const shell = require('shelljs')
 const wget = require('wget-improved')
 
-console.log(`Versão do DSGOV: ${semVer}`)
+console.log(`Versão do GOVBR-DS: ${semVer}`)
 
 buildAssetsSource()
 buildAssetsNexus()
@@ -20,13 +20,13 @@ function buildAssetsSource() {
 
     const archivelatest = new DirArchiver(
       'dist',
-      'assets/source-code/dsgov-latest.zip',
+      'assets/source-code/govbr-ds-latest.zip',
       []
     )
 
     const archiveVersion = new DirArchiver(
       'dist',
-      `assets/source-code/dsgov-${pjson.version}.zip`,
+      `assets/source-code/govbr-ds-${pjson.version}.zip`,
       []
     )
 
@@ -47,8 +47,8 @@ function buildAssetsSource() {
 
 function buildAssetsNexus() {
   if (fs.existsSync('dist')) {
-    const urlNexus = `http://nexus.aic.serpro/repository/npm-private/@govbr/dsgov/-/dsgov-${semVer}.tgz`
-    const output = `assets/npm-package/dsgov-${semVer}.tgz`
+    const urlNexus = `http://nexus.aic.serpro/repository/npm-private/@govbr/govbr-ds/-/govbr-ds-${semVer}.tgz`
+    const output = `assets/npm-package/govbr-ds-${semVer}.tgz`
     const download = wget.download(urlNexus, output, {})
 
     download.on('error', (err) => {
@@ -65,14 +65,14 @@ function buildAssetsNexus() {
       console.log('--------------------------------------------------------')
 
       fs.copyFile(
-        `assets/npm-package/dsgov-${semVer}.tgz`,
-        'assets/npm-package/dsgov-latest.tgz',
+        `assets/npm-package/govbr-ds-${semVer}.tgz`,
+        'assets/npm-package/govbr-ds-latest.tgz',
         (err) => {
           if (err) throw err
           console.log(
             '--------------------------------------------------------'
           )
-          console.log('dsgov-latest.tgz gerado com sucesso')
+          console.log('govbr-ds-latest.tgz gerado com sucesso')
           console.log(
             '--------------------------------------------------------'
           )

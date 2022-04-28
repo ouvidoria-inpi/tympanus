@@ -176,7 +176,7 @@ Durante a fase de lançamento de novidades num sistema ou aplicativo, é comum e
 
 Os indicadores de progresso são formas de mostrar ao usuário as etapas completadas durante o fluxo. Elas também servem como um motivador psicológico, estimulando no usuário o desejo de seguir em frente e concluir a jornada.
 
-No padrão _Onboarding_ do DSGov, o componente _Step_ é utilizado como indicador de progresso, tanto no formato simples como no formato textual.
+No padrão _Onboarding_ do Design System GOV.BR, o componente _Step_ é utilizado como indicador de progresso, tanto no formato simples como no formato textual.
 
   ![Step Simples e Textual](imagens/steps-progress.png)
 *Exemplo de Indicador de progresso com Step Simples ou Textual*

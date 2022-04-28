@@ -312,13 +312,13 @@ Incluir o componente Pagination Contextual no rodapé da Tabela.
 
 ### HTML
 
-Incluir o arquivo `dsgov.min.js` no html.
+Incluir o arquivo `govbr-ds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/dsgov/dist/dsgov.min.js"></script>
+<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
 ```
 
-> O arquivo dsgov.min.js expõe um objeto chamado `dsgov` contendo as referências para todas as classes exportadas.
+> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -332,6 +332,6 @@ const tableList = []
 for (const [index, brTable] of window.document
   .querySelectorAll('.br-table')
   .entries()) {
-  tableList.push(new dsgov.BRTable('br-table', brTable, index))
+  tableList.push(new govbr-ds.BRTable('br-table', brTable, index))
 }
 ```

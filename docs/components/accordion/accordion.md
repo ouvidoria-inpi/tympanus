@@ -4,7 +4,7 @@
     </div>
     <div class="content">
         <p><strong>Componente Obsoleto/Depreciado.</strong></p>
-        <p>O uso desse componente é <strong>desencorajado</strong> devido as novas diretrizes do <strong>DSGOV.BR</strong>.</p>
+        <p>O uso desse componente é <strong>desencorajado</strong> devido as novas diretrizes do <strong>Design System GOV.BR</strong>.</p>
         <p>Utilize o <a href="/util/accordion/">Utilitário JS > Accordion</a> e leia a documentação visual em <a href="/padroes/collapse">Padrões > Collapse</a>.</p>
     </div>
 </div>

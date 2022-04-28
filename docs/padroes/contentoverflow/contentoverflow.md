@@ -31,7 +31,7 @@ Todo o conteúdo deve ser cuidadosamente analisado e revisado. É importante ter
 
 A primeira tarefa a ser realizada é a hierarquização do conteúdo. Deixe de forma nítida e objetiva as **informações essenciais**. As **informações complementares** funcionam como apoio às informações essenciais e podem estar ocultas ou parcialmente ocultas na tela e disponíveis por meio de recursos acionáveis pelo próprio usuário. Por fim, as **informações adicionais** (e menos importantes) podem estar localizadas fora da tela e indicadas por meio _hyperlinks_ e botões.
 
-Apresentamos a seguir algumas técnicas e recursos úteis agrupados de acordo com a hierarquia da informação, a fim de auxiliar a organização do conteúdo dentro dos produtos DSGOV de forma prática e eficiente.
+Apresentamos a seguir algumas técnicas e recursos úteis agrupados de acordo com a hierarquia da informação, a fim de auxiliar a organização do conteúdo dentro dos produtos Design System GOV.BR de forma prática e eficiente.
 
 ## 1. Informações essenciais
 
@@ -56,7 +56,7 @@ Trata-se da rolagem promovida pelos navegadores. Geralmente as pessoas já estã
 
 Alguns componentes podem apresentar uma barra de rolagem interna para melhor organizar o conteúdo. Neste caso, o conteúdo rolante é apenas o interno ao componente e deve rolar sob as margens do mesmo, enquanto a tela continua estática.
 
-Para auxiliar o entendimento do usuário de que há mais informação a ser vista, as margens que ocultam o conteúdo rolante devem elevar a camada em um nível e apresentar a sombra correspondente. Confira o documento do fundamento visual [elevação](https://dsgov.estaleiro.serpro.gov.br/fundamentos-visuais/elevacao) para entender melhor o uso de sombras.
+Para auxiliar o entendimento do usuário de que há mais informação a ser vista, as margens que ocultam o conteúdo rolante devem elevar a camada em um nível e apresentar a sombra correspondente. Confira o documento do fundamento visual [elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao) para entender melhor o uso de sombras.
 
 Uma boa dica para tornar ainda mais intuitiva a ocorrência do conteúdo rolante é deixá-lo com uma parte visível, insinuando que há mais para ser visto. A imagem abaixo ilustra essa técnica.
 
@@ -112,8 +112,8 @@ Dominar a técnica de ocultar conteúdo pode ser uma ótima maneira de organizar
 
 Analise os respectivos documentos para mais detalhes sobre esses comportamentos:
 
-- [_Collapse_](https://dsgov.estaleiro.serpro.gov.br/padroes/collapse);
-- [_Dropdown_](https://dsgov.estaleiro.serpro.gov.br/padroes/dropdown).
+- [_Collapse_](https://www.gov.br/ds/padroes/collapse);
+- [_Dropdown_](https://www.gov.br/ds/padroes/dropdown).
 
 A seguir, analisamos alguns casos mais recorrentes utilizando os comportamentos _collapse_ e _dropdown_:
 
@@ -140,7 +140,7 @@ _Tooltip_ é o componente mais indicado para esses casos. Utilize-o sempre que h
 
 **Atenção:** sempre que um elemento não for facilmente compreendido pelo usuário, use _tooltips_ para melhor descrevê-lo.
 
-Confira todos os detalhes do componente [_tooltip_](https://dsgov.estaleiro.serpro.gov.br/components/tooltip?tab=designer).
+Confira todos os detalhes do componente [_tooltip_](https://www.gov.br/ds/components/tooltip?tab=designer).
 
 Nos casos mais específicos outros elementos podem acomadar as informações complementares.
 
@@ -237,7 +237,7 @@ Modais têm a característica de criar um "intervalo" no fluxo de navegação pr
 
 **Atenção:** tenha em mente que o exagero no uso de modais pois pode se tornar extremamente inconveniente para a navegação. Considere sempre se o conteúdo da modal tem um vínculo estreito com a ação de origem.
 
-Confira o documento [modal](https://dsgov.estaleiro.serpro.gov.br/components/modal?tab=designer) para maiores detalhes desse componente.
+Confira o documento [modal](https://www.gov.br/ds/components/modal?tab=designer) para maiores detalhes desse componente.
 
 ### B- Página interna
 

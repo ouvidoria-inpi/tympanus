@@ -8,22 +8,22 @@ O projeto requer a versão mínima do [node](https://nodejs.org/) >= v14.15.4.
 
 ### Instalar manualmente
 
-1. Faça o [download do Pacote NPM](/assets/design-system/assets/npm-package/dsgov-latest.tgz). Ele está disponível na seção Downloads
+1. Faça o [download do Pacote NPM](/assets/design-system/assets/npm-package/govbr-ds-latest.tgz). Ele está disponível na seção Downloads
 2. **Caso você tenha um projeto em andamento, pule para a etapa 4**, caso contrário crie nova pasta para o seu projeto
 3. Execute o seguinte comando no terminal: `npm init -y`
-4. Coloque o arquivo **dsgov-latest.tgz** na pasta do seu projeto
-5. Execute o seguinte comando no terminal: `npm install dsgov-latest.tgz`
+4. Coloque o arquivo **govbr-ds-latest.tgz** na pasta do seu projeto
+5. Execute o seguinte comando no terminal: `npm install govbr-ds-latest.tgz`
 
 Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 -   **package.json**: configurações do seu projeto
--   **node_modules/@govbr/dsgov**: pasta com os módulos necessários para o funcionamento do Design System
+-   **node_modules/@govbr/govbr-ds**: pasta com os módulos necessários para o funcionamento do Design System
 
 ### Instalar automaticamente com NPM
 
 > Atenção! No momento o pacote está disponível apenas para a rede interna do SERPRO
 
-**Confira sempre a versão referência ao baixar o pacote @govbr/dsgov**.
+**Confira sempre a versão referência ao baixar o pacote @govbr/govbr-ds**.
 
 1. Execute o seguinte comando no terminal:
 
@@ -32,15 +32,15 @@ Serão criados automaticamente os seguintes arquivos em seu projeto:
       npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
     ```
 
-1. Execute o comando **npm install @govbr/dsgov**, exemplo:
+1. Execute o comando **npm install @govbr/govbr-ds**, exemplo:
 
     ```bash
-    npm install @govbr/dsgov
+    npm install @govbr/govbr-ds
     ```
 
 ## Template Inicial
 
-A seguir temos um exemplo de um template inicial para utilização do DSGOV. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **dsgov.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **dsgov.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **dsgov-init.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **govbr-ds.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **govbr-ds.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **govbr-ds-init.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>
@@ -52,17 +52,17 @@ A seguir temos um exemplo de um template inicial para utilização do DSGOV. Cop
         <!-- Font Rawline-->
         <link
             rel="stylesheet"
-            href="https://cdn-dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+            href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
         />
         <!-- Font Raleway-->
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap"
         />
-        <!-- DSGOV CSS-->
+        <!-- Design System GOV.BR CSS-->
         <link
             rel="stylesheet"
-            href="node_modules\@govbr\dsgov\dist\dsgov.min.css"
+            href="node_modules\@govbr\govbr-ds\dist\govbr-ds.min.css"
         />
         <!-- Fontawesome-->
         <link
@@ -75,7 +75,7 @@ A seguir temos um exemplo de um template inicial para utilização do DSGOV. Cop
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script src="node_modules\@govbr\dsgov\dist\dsgov.min.js"></script>
+        <script src="node_modules\@govbr\govbr-ds\dist\govbr-ds.min.js"></script>
     </body>
 </html>
 ```
@@ -84,29 +84,29 @@ A seguir temos um exemplo de um template inicial para utilização do DSGOV. Cop
 
 ## Versão "init" do js
 
-Essa é a versão init(dsgov-init.js) com os componentes já **inicializados** diferente do dsgov.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
+Essa é a versão init(govbr-ds-init.js) com os componentes já **inicializados** diferente do govbr-ds.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
-<script src="node_modules\@govbr\dsgov\dist\dsgov-init.min.js"></script>
+<script src="node_modules\@govbr\govbr-ds\dist\govbr-ds-init.min.js"></script>
 ```
 
 ## Versão "lite" da folha de estilo
 
-Você poderá usar uma versão "lite" do CSS no lugar da versão completa. No código usado em Template Inicial basta trocar a linha de carregamento do DSGOV pelo exemplo a seguir:
+Você poderá usar uma versão "lite" do CSS no lugar da versão completa. No código usado em Template Inicial basta trocar a linha de carregamento do Design System GOV.BR pelo exemplo a seguir:
 
 ```html
-<!-- DSGOV CSS-->
+<!-- Design System GOV.BR CSS-->
 <link
    rel="stylesheet"
-   href="node_modules\@govbr\dsgov\dist\dsgov-lite.css"
+   href="node_modules\@govbr\govbr-ds\dist\govbr-ds-lite.css"
 />
 ```
 
-Visite [DSGOV lite](introducao/dsgov-lite) para saber as diferenças.
+Visite [Design System GOV.BR lite](introducao/govbr-ds-lite) para saber as diferenças.
 
 ## Template Base
 
-Um bom ponto de partida para usar o DSGOV é usar um template já com elementos básicos estruturantes da página como Cabeçalho, Menu e Rodapé. [Visite o Template Base](templates/base) na visão **Desenvolvedor** para acessar o código de referência.
+Um bom ponto de partida para usar o Design System GOV.BR é usar um template já com elementos básicos estruturantes da página como Cabeçalho, Menu e Rodapé. [Visite o Template Base](templates/base) na visão **Desenvolvedor** para acessar o código de referência.
 
 ## Servidor CDN
 
@@ -115,7 +115,7 @@ Em **Template Inicial** temos uma importação do arquivo **rawline.css** via CD
 ```html
 <link
     rel="stylesheet"
-    href="https://cdn-dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+    href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
 />
 ```
 
@@ -141,13 +141,13 @@ Acesse a seção **Componentes** no menu principal e veja a lista de componentes
 
 Cada componente possui sua documentação, código fonte e preview.
 
-### Exemplo de uso da instacialização do componente sem usar **dsgov-init.js**
+### Exemplo de uso da instacialização do componente sem usar **govbr-ds-init.js**
 
 ```javascript
-import  * as dsgov from '@govbr/dsgov/dist/dsgov'
+import  * as govbr-ds from '@govbr/govbr-ds/dist/govbr-ds'
 const breadcrumbList = []
 for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
-  breadcrumbList.push(new dsgov.BRBreadcrumb('br-breadcrumb', brBreadcrumb))
+  breadcrumbList.push(new govbr-ds.BRBreadcrumb('br-breadcrumb', brBreadcrumb))
 }
 ```
 

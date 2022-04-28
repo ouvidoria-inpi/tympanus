@@ -181,7 +181,7 @@ Essa navegação pode ser facilitada por meio de atalhos, tanto no teclado como 
 
 Oferecer um menu oculto (_**skip link**_) com âncoras para as principais áreas da página fornece benefícios para usuários que usam apenas teclado sem prejudicar aqueles que usam o _mouse_ para navegar.
 
-O DSGOV conta com o componente _skip link_ para realizar essa função. Consulte-o para mais detalhes.
+O Design System GOV.BR conta com o componente _skip link_ para realizar essa função. Consulte-o para mais detalhes.
 
 ![Skip link para navegação via teclado](imagens/nav-tab.png)
 *_Skip link_ deve ficar visualmente oculto para aqueles que navegam pelo _mouse_*
