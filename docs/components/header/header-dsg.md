@@ -185,7 +185,7 @@ Preferencialmente, utilize o *Button* na versão com densidade alta.
 
 ### 8. Botão de Autenticar
 
-O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](https://dsgov.estaleiro.serpro.gov.br/components/signin?tab=designer)).
+O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](https://www.gov.br/ds/components/signin?tab=designer)).
 
 É apresentado apenas quando o usuário estiver "deslogado". Após o login, ele será substituído pelo Avatar.
 
@@ -390,131 +390,131 @@ Com a **Busca ativa**, o campo de pesquisa ocupará toda largura do Cabeçalho.
 
 ### Tipografia
 
-|Name|Size|Weight|Outros|
-|--|--|--|--|
-|Título (12 colunas) Padrão|`--font-size-scale-up-03`|`--font-weight-regular`|`text-transform:uppercase;`|
-|Título (12 colunas) Compacto|`--font-size-scale-up-02`|`--font-weight-regular`|`text-transform:uppercase;`|
-|Título (8 colunas) Padrão|`--font-size-scale-up-02`|`--font-weight-regular`|`text-transform:uppercase;`|
-|Título (8 colunas) Compacto|`--font-size-scale-up-01`|`--font-weight-regular`|`text-transform:uppercase;` |
-|Título (4 colunas) Padrão|`--font-size-scale-up-base`|`--font-weight-regular`|`text-transform:uppercase;`|
-|Título (4 colunas) Compacto|`--font-size-scale-up-base`|`--font-weight-regular`|`text-transform:uppercase;`|
-|Texto (Infos Adicionais)|`--font-size-scale-down-01`|`--font-weight-regular`|`text-transform:uppercase;`|
-|*Placeholder* (Busca)|`--font-size-scale-up-01`|`--font-weight-medium`|`text-transform:lowercase;`|
-|Assinatura|`--font-size-scale-base`|`--font-weight-medium`|`text-transform:lowercase;`|
-|Subtítulo (12 colunas)|`--font-size-scale-base`|`--font-weight-medium`|`text-transform:lowercase;`|
-|Subtítulo (8 colunas)|`--font-size-scale-down-01`|`--font-weight-medium`|`text-transform:lowercase;`|
-|Área para Links|`--font-size-scale-down-01`|`--font-weight-semi-bold`|`text-decoration:none;`|
+| Name                         | Size                        | Weight                    | Outros                      |
+| ---------------------------- | --------------------------- | ------------------------- | --------------------------- |
+| Título (12 colunas) Padrão   | `--font-size-scale-up-03`   | `--font-weight-regular`   | `text-transform:uppercase;` |
+| Título (12 colunas) Compacto | `--font-size-scale-up-02`   | `--font-weight-regular`   | `text-transform:uppercase;` |
+| Título (8 colunas) Padrão    | `--font-size-scale-up-02`   | `--font-weight-regular`   | `text-transform:uppercase;` |
+| Título (8 colunas) Compacto  | `--font-size-scale-up-01`   | `--font-weight-regular`   | `text-transform:uppercase;` |
+| Título (4 colunas) Padrão    | `--font-size-scale-up-base` | `--font-weight-regular`   | `text-transform:uppercase;` |
+| Título (4 colunas) Compacto  | `--font-size-scale-up-base` | `--font-weight-regular`   | `text-transform:uppercase;` |
+| Texto (Infos Adicionais)     | `--font-size-scale-down-01` | `--font-weight-regular`   | `text-transform:uppercase;` |
+| *Placeholder* (Busca)        | `--font-size-scale-up-01`   | `--font-weight-medium`    | `text-transform:lowercase;` |
+| Assinatura                   | `--font-size-scale-base`    | `--font-weight-medium`    | `text-transform:lowercase;` |
+| Subtítulo (12 colunas)       | `--font-size-scale-base`    | `--font-weight-medium`    | `text-transform:lowercase;` |
+| Subtítulo (8 colunas)        | `--font-size-scale-down-01` | `--font-weight-medium`    | `text-transform:lowercase;` |
+| Área para Links              | `--font-size-scale-down-01` | `--font-weight-semi-bold` | `text-decoration:none;`     |
 
 ### Iconografia (12 e 8 colunas)
 
-|Name|ícone|Size|Class (Font Awesome)|
-|--|--|--|--|
-|Acessar Menu Principal (Compacto)|<i class="fas fa-bars"></i>|`--icon-size-base`|`fa-bars`|
-|Acessar Menu Principal (Padrão)|<i class="fas fa-bars"></i>|`--icon-size-base`|`fa-bars`|
-|Ícones Funcionalidades|<i class="fas fa-th"></i>|`--icon-size-base`|`fa-th`|
-|Pesquisar Padrão (12 colunas)|<i class="fas fas fa-search"></i>|`--icon-size-base`|`fa-search`|
-|Pesquisar Compacto (12 colunas)|<i class="fas fas fa-search"></i>|`--icon-size-base`|`fa-search`|
-|Pesquisar Padrão (8 colunas)|<i class="fas fas fa-search"></i>|`--icon-size-base`|`fa-search`|
-|Pesquisar Compacto (8 colunas)|<i class="fas fas fa-search"></i>|`--icon-size-base`|`fa-search`|
-|Fechar (Busca)|<i class="fas fas fa-times"></i>|`--icon-size-2x`|`fa-times`|
+| Name                              | ícone                             | Size               | Class (Font Awesome) |
+| --------------------------------- | --------------------------------- | ------------------ | -------------------- |
+| Acessar Menu Principal (Compacto) | <i class="fas fa-bars"></i>       | `--icon-size-base` | `fa-bars`            |
+| Acessar Menu Principal (Padrão)   | <i class="fas fa-bars"></i>       | `--icon-size-base` | `fa-bars`            |
+| Ícones Funcionalidades            | <i class="fas fa-th"></i>         | `--icon-size-base` | `fa-th`              |
+| Pesquisar Padrão (12 colunas)     | <i class="fas fas fa-search"></i> | `--icon-size-base` | `fa-search`          |
+| Pesquisar Compacto (12 colunas)   | <i class="fas fas fa-search"></i> | `--icon-size-base` | `fa-search`          |
+| Pesquisar Padrão (8 colunas)      | <i class="fas fas fa-search"></i> | `--icon-size-base` | `fa-search`          |
+| Pesquisar Compacto (8 colunas)    | <i class="fas fas fa-search"></i> | `--icon-size-base` | `fa-search`          |
+| Fechar (Busca)                    | <i class="fas fas fa-times"></i>  | `--icon-size-2x`   | `fa-times`           |
 
 ### Iconografia (4 colunas)
 
-|Name|ícone|Size|Class (Font Awesome)|
-|--|--|--|--|
-|Acessar Menu Principal (Padrão)|<i class="fas fa-bars"></i>|`--icon-size-base`|`fa-bars`|
-|Acessar Menu Principal (Compacto)|<i class="fas fa-bars"></i>|`--icon-size-base`|`fa-bars`|
-|Ícones Funcionalidades|<i class="fas fa-th"></i>|`--icon-size-base`|`fa-th`|
-|Pesquisar|<i class="fas fas fa-search"></i>|`--icon-size-base`|`fa-search`|
-|Ícone Links|<i class="fas fas fa-ellipsis-v"></i>|`--icon-size-base` |`fa-ellipsis-v`|
-|Fechar (Busca)|<i class="fas fas fa-times"></i>|`--icon-size-base`|`fa-times`|
+| Name                              | ícone                                 | Size               | Class (Font Awesome) |
+| --------------------------------- | ------------------------------------- | ------------------ | -------------------- |
+| Acessar Menu Principal (Padrão)   | <i class="fas fa-bars"></i>           | `--icon-size-base` | `fa-bars`            |
+| Acessar Menu Principal (Compacto) | <i class="fas fa-bars"></i>           | `--icon-size-base` | `fa-bars`            |
+| Ícones Funcionalidades            | <i class="fas fa-th"></i>             | `--icon-size-base` | `fa-th`              |
+| Pesquisar                         | <i class="fas fas fa-search"></i>     | `--icon-size-base` | `fa-search`          |
+| Ícone Links                       | <i class="fas fas fa-ellipsis-v"></i> | `--icon-size-base` | `fa-ellipsis-v`      |
+| Fechar (Busca)                    | <i class="fas fas fa-times"></i>      | `--icon-size-base` | `fa-times`           |
 
 ### Cor
 
-|Name|Property|Color Token|
-|--|--|--|
-|Título|text color|`--pure-100`|
-|Subtítulo|text color|`--gray-70`|
-|Assinatura|text color|`--gray-70`|
-|Links|text color|`--blue-warm-vivid-70`|
-|Todos os ícones|icon|`--blue-warm-vivid-70`|
-|Superfície (*Header*)|Background|`--pure-0`|
-|Busca (Input)|Background|`--gray-2`|
+| Name                  | Property   | Color Token            |
+| --------------------- | ---------- | ---------------------- |
+| Título                | text color | `--pure-100`           |
+| Subtítulo             | text color | `--gray-70`            |
+| Assinatura            | text color | `--gray-70`            |
+| Links                 | text color | `--blue-warm-vivid-70` |
+| Todos os ícones       | icon       | `--blue-warm-vivid-70` |
+| Superfície (*Header*) | Background | `--pure-0`             |
+| Busca (Input)         | Background | `--gray-2`             |
 
 ### Borda
 
-|Name|Style|Width|Color|Side|
-|--|:--:|:--:|:--:|:--:|
-|Busca (Input) |`none`|`--surface-width-none`|-|`top`/`right`/`bottom`/`left`|
+| Name          | Style  |         Width          | Color |             Side              |
+| ------------- | :----: | :--------------------: | :---: | :---------------------------: |
+| Busca (Input) | `none` | `--surface-width-none` |   -   | `top`/`right`/`bottom`/`left` |
 
-|Name|Border-radius|
-|--|:--:|
-|Busca (Input) |`--surface-rounder-md`|
+| Name          |     Border-radius      |
+| ------------- | :--------------------: |
+| Busca (Input) | `--surface-rounder-md` |
 
 ### Dimensão
 
-|Name|Property|Value|
-|--|--|:--:|
-|Busca (Input)|width|`56px`|
-|Logo (Large)|height|`40px`|
-|Logo (Medium)|height|`24px`|
-|Logo (Small)|height|`16px`|
+| Name          | Property | Value  |
+| ------------- | -------- | :----: |
+| Busca (Input) | width    | `56px` |
+| Logo (Large)  | height   | `40px` |
+| Logo (Medium) | height   | `24px` |
+| Logo (Small)  | height   | `16px` |
 
 ### Espaçamento
 
-|Name|Property|Value|
-|--|--|--|
-|Superfície (Densidade Padrão)|padding-top / padding-bottom|`--spacing-scale-2x`|
-|Superfície (Densidade Baixa)|padding-top / padding-bottom|`--spacing-scale-3x`|
-|Superfície (Densidade Alta)|padding-top / padding-bottom|`--spacing-scale-base`|
+| Name                          | Property                     | Value                  |
+| ----------------------------- | ---------------------------- | ---------------------- |
+| Superfície (Densidade Padrão) | padding-top / padding-bottom | `--spacing-scale-2x`   |
+| Superfície (Densidade Baixa)  | padding-top / padding-bottom | `--spacing-scale-3x`   |
+| Superfície (Densidade Alta)   | padding-top / padding-bottom | `--spacing-scale-base` |
 
 ### Espaçamento (Grid 12 colunas)
 
-|Name|Property|Value|
-|--|--|--|
-|Superfície|padding-top|`--spacing-scale-2x`|
-|Superfície|padding-bottom|`--spacing-scale-2x`|
-|Logo|margin-right|`--spacing-scale-2x`|
-|Logo|margin-bottom|`--spacing-scale-2x`|
-|Logo (Header Compacto)|margin-bottom|`--spacing-scale-base`|
-|Assinatura|margin-right|`--spacing-scale-2x`|
-|Assinatura|margin-bottom|`--spacing-scale-2x`|
-|Título (Header Compacto)|margin-right|`--spacing-scale-base`|
-|Assinatura|margin-top|`--spacing-scale-half`|
-|Assinatura (Header Compacto)|margin-right|`--spacing-scale-base`|
-|Botão Menu|margin-right|`--spacing-scale-2x`|
-|Área para Links|align-horizontal|`--spacing-horizontal-right`|
-|Área para Links (Header Compacto)|align-vertical|`--spacing-vertical-center`|
-|Links (Área para Links)|margin-left|`--spacing-scale-2x`|
-|Área Funcionalidades|align-horizontal|`--spacing-horizontal-right`|
-|Área Funcionalidades (Header Compacto)|align-vertical|`--spacing-vertical-center`|
-|Ícones (Área Funcionalidades)|margin-left|`--spacing-scale-base`|
-|Separator|margin-left|`--spacing-scale-base`|
-|Separator|margin-right|`--spacing-scale-base`|
-|Separator (Header Compacto)|align-vertical|`--spacing-vertical-center`|
-|Botão Acesso Gov|align-horizontal|`--spacing-horizontal-right`|
-|Botão Acesso Gov (Header Compacto)|align-vertical|`--spacing-vertical-center`|
-|Botão Acesso Gov|margin-left|`--spacing-scale-3x`|
-|Avatar|align-horizontal|`--spacing-horizontal-right`|
-|Avatar (Header Compacto)|align-vertical|`--spacing-vertical-center`|
-|Avatar|margin-left|`--spacing-scale-3x`|
-|Ícone Busca (Header Compacto)|align-vertical|`--spacing-vertical-center`|
+| Name                                   | Property         | Value                        |
+| -------------------------------------- | ---------------- | ---------------------------- |
+| Superfície                             | padding-top      | `--spacing-scale-2x`         |
+| Superfície                             | padding-bottom   | `--spacing-scale-2x`         |
+| Logo                                   | margin-right     | `--spacing-scale-2x`         |
+| Logo                                   | margin-bottom    | `--spacing-scale-2x`         |
+| Logo (Header Compacto)                 | margin-bottom    | `--spacing-scale-base`       |
+| Assinatura                             | margin-right     | `--spacing-scale-2x`         |
+| Assinatura                             | margin-bottom    | `--spacing-scale-2x`         |
+| Título (Header Compacto)               | margin-right     | `--spacing-scale-base`       |
+| Assinatura                             | margin-top       | `--spacing-scale-half`       |
+| Assinatura (Header Compacto)           | margin-right     | `--spacing-scale-base`       |
+| Botão Menu                             | margin-right     | `--spacing-scale-2x`         |
+| Área para Links                        | align-horizontal | `--spacing-horizontal-right` |
+| Área para Links (Header Compacto)      | align-vertical   | `--spacing-vertical-center`  |
+| Links (Área para Links)                | margin-left      | `--spacing-scale-2x`         |
+| Área Funcionalidades                   | align-horizontal | `--spacing-horizontal-right` |
+| Área Funcionalidades (Header Compacto) | align-vertical   | `--spacing-vertical-center`  |
+| Ícones (Área Funcionalidades)          | margin-left      | `--spacing-scale-base`       |
+| Separator                              | margin-left      | `--spacing-scale-base`       |
+| Separator                              | margin-right     | `--spacing-scale-base`       |
+| Separator (Header Compacto)            | align-vertical   | `--spacing-vertical-center`  |
+| Botão Acesso Gov                       | align-horizontal | `--spacing-horizontal-right` |
+| Botão Acesso Gov (Header Compacto)     | align-vertical   | `--spacing-vertical-center`  |
+| Botão Acesso Gov                       | margin-left      | `--spacing-scale-3x`         |
+| Avatar                                 | align-horizontal | `--spacing-horizontal-right` |
+| Avatar (Header Compacto)               | align-vertical   | `--spacing-vertical-center`  |
+| Avatar                                 | margin-left      | `--spacing-scale-3x`         |
+| Ícone Busca (Header Compacto)          | align-vertical   | `--spacing-vertical-center`  |
 
 ### Espaçamento (4 colunas)
 
-|Name|Property|Value|
-|--|--|--|
-|Container|padding-top|`--spacing-scale-base`|
-|Container|padding-bottom|`--spacing-scale-base`|
-|Separator|margin-left|`--spacing-scale-half`|
-|Separator|margin-right|`--spacing-scale-half`|
-|Avatar|margin-left|`--spacing-scale-2x`|
-|Botão Acesso Gov|margin-left|`--spacing-scale-2x`|
-|Botão Menu|margin-right|`--spacing-scale-half`|
+| Name             | Property       | Value                  |
+| ---------------- | -------------- | ---------------------- |
+| Container        | padding-top    | `--spacing-scale-base` |
+| Container        | padding-bottom | `--spacing-scale-base` |
+| Separator        | margin-left    | `--spacing-scale-half` |
+| Separator        | margin-right   | `--spacing-scale-half` |
+| Avatar           | margin-left    | `--spacing-scale-2x`   |
+| Botão Acesso Gov | margin-left    | `--spacing-scale-2x`   |
+| Botão Menu       | margin-right   | `--spacing-scale-half` |
 
 ### Sombra
 
-|Name|Shadow|
-|:--:|:--:|
-|Superfície|`--surface-shadow-sm`|
-|Superfície (sticky)|`--surface-shadow-xl`|
+|        Name         |        Shadow         |
+| :-----------------: | :-------------------: |
+|     Superfície      | `--surface-shadow-sm` |
+| Superfície (sticky) | `--surface-shadow-xl` |

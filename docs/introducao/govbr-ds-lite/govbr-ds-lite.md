@@ -1,4 +1,4 @@
-Devido ao grande número de classes de Utilitário CSS, esta folha de estilo contém somente o mínimo para o consumo interno do DSGOV.
+Devido ao grande número de classes de Utilitário CSS, esta folha de estilo contém somente o mínimo para o consumo interno do Design System GOV.BR.
 
 A paleta de cores é vasta, porém nem todas são usadas internamente. O mesmo vale para os espaçamentos. Devido a possibilidade de uso e modificação por breakpoints e a grande variadade de valores.
 

@@ -25,7 +25,7 @@ const options_min = {
 }
 
 /**
- * Gera os plugins utilizados na build do DSGov.
+ * Gera os plugins utilizados na build do GOVBR-DS.
  *
  * @param {'production' | 'development' | 'none'} mode Webpack mode
  */

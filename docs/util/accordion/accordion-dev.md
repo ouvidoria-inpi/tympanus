@@ -60,7 +60,7 @@
 **Para cada acionador (trigger)**, instanciar a classe Accordion passando um objeto de configuração.
 
 ```javascript
-import Accordion from 'dsgov'
+import Accordion from 'govbr-ds'
 const config = {
   trigger,
   iconToShow: 'fa-chevron-down',

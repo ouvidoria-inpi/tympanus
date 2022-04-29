@@ -209,13 +209,13 @@ Utilize mensagens contextuais para informar erros que usuário possa cometer no 
 ![Mensagens como auxílio ao usuário](imagens/mensagem.png)
 *Exemplo de uso da mensagem contextual.*
 
-Consulte o documento do componente *[Message]( <https://dsgov.estaleiro.serpro.gov.br/ds/components>)* para mais detalhes.
+Consulte o documento do componente *[Message]( <https://www.gov.br/ds/ds/components>)* para mais detalhes.
 
 ### 3- Botões
 
 Botões permitem que o usuário execute algum tipo de ação sobre o formulário.
 
-> No DSgov existe o componente [*Button*](https://dsgov.estaleiro.serpro.gov.br/components/button) que pode ser utilizado na maioria das ações dos formulários, e o [*Magic Button*](https://dsgov.estaleiro.serpro.gov.br/components/magicbutton) que pode ser usado para fortalecer o início ou encerramento de fluxos relevante de um formulário.
+> No Design System GOV.BR existe o componente [*Button*](https://www.gov.br/ds/components/button) que pode ser utilizado na maioria das ações dos formulários, e o [*Magic Button*](https://www.gov.br/ds/components/magicbutton) que pode ser usado para fortalecer o início ou encerramento de fluxos relevante de um formulário.
 
 Os Botões devem estar posicionados preferencialmente abaixo e à direita do formulário ao qual se referem e devem respeitar as diretrizes de alinhamento e espaçamento previstas para o componente *button*.
 
@@ -240,7 +240,7 @@ Quando a disposição da tela permitir que os botões sejam posicionados apenas 
 
 **Atenção:** evite botões do tipo "Redefinir" e "Limpar Formulário".
 
-Consulte o documento do [componente *button*](<https://dsgov.estaleiro.serpro.gov.br/ds/components/button>) para mais detalhes sobre o seu uso.
+Consulte o documento do [componente *button*](<https://www.gov.br/ds/ds/components/button>) para mais detalhes sobre o seu uso.
   
 ----
 
@@ -286,7 +286,7 @@ Os agrupamentos podem ser apresentados na forma contraída (padrão *collapse*).
 ![Exemplo Collapse](imagens/fieldset-collpase.png)
 *Agrupamentos apresentados em*collapse*com uso de fieldset e legend.*
 
-**Importante**: dentro do DSGov, o `Fieldset` é usado somente como um elemento semântico dentro de um formulário, não tendo nenhum tipo de estilização visual (delimitação de uma borda visual). Portanto, deve-se utilizar o `legend` para aumentar sua acessibilidade. Nas imagens acima, o uso de bordas no `fieldset` é feito apenas por questões didáticas.
+**Importante**: dentro do Design System GOV.BR, o `Fieldset` é usado somente como um elemento semântico dentro de um formulário, não tendo nenhum tipo de estilização visual (delimitação de uma borda visual). Portanto, deve-se utilizar o `legend` para aumentar sua acessibilidade. Nas imagens acima, o uso de bordas no `fieldset` é feito apenas por questões didáticas.
 
 #### Estilização do *Fieldset*
 
@@ -299,7 +299,7 @@ Os agrupamentos podem ser apresentados na forma contraída (padrão *collapse*).
 
 Subagrupamentos são agrupamentos dentro de agrupamentos. Para tornar mais clara e hierarquizada a informação utilize indentação evidente para os subagrupamentos.
 
-Utilize a escala de *layout* definida no fundamento [Espaçamento](https://dsgov.estaleiro.serpro.gov.br/fundamentos-visuais/espacamento) para indentar os subagrupamentos. Utilize um valor que fique claro este comportamento tendo como referência o agrupamento que o contêm.
+Utilize a escala de *layout* definida no fundamento [Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento) para indentar os subagrupamentos. Utilize um valor que fique claro este comportamento tendo como referência o agrupamento que o contêm.
 
 **Atenção:** tenha cautela na utilização de subagrupamentos.  Recomenda-se apenas **um nível** de subagrupamento por agrupamento.
 
@@ -327,12 +327,12 @@ Como regra geral, é recomendado que se utilize:
 - um espaçamento intermediário entre o título e a primeira entrada;
 - um espaçamento menor entre os campos de entrada de dados, texto ou opções.
 
-Esses espaçamentos devem ser constantes para uma mesma função, em toda a tela e em todo o produto. (Veja mais no fundamento [Espaçamento](https://dsgov.estaleiro.serpro.gov.br/ds/fundamentos-visuais/espacamento).)
+Esses espaçamentos devem ser constantes para uma mesma função, em toda a tela e em todo o produto. (Veja mais no fundamento [Espaçamento](https://www.gov.br/ds/ds/fundamentos-visuais/espacamento).)
 
 ![Exemplo de espaçamentos entre as áreas do formulário](imagens/espacamento-form.png)
 *Exemplo de espaçamentos entre as áreas do formulário.*
 
-Consulte o documento  [Fundamentos Visuais > Espaçamento](https://dsgov.estaleiro.serpro.gov.br/fundamentos-visuais/espacamento) para conferir os espaçamentos possíveis.
+Consulte o documento  [Fundamentos Visuais > Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento) para conferir os espaçamentos possíveis.
 
 #### Por *Divider*
 
@@ -347,7 +347,7 @@ Outra possibilidade para se criar agrupamentos é por meio do uso do recurso de 
 
 **Atenção:** o recurso de agrupamentos por cores pode funcionar também para dar destaque a um agrupamento específico.
 
-Para mais informações, consulte o documento [Fundamentos Visuais > Cores](https://dsgov.estaleiro.serpro.gov.br/fundamentos-visuais/cores)
+Para mais informações, consulte o documento [Fundamentos Visuais > Cores](https://www.gov.br/ds/fundamentos-visuais/cores)
 
 ![Agrupamentos com cor de fundo diferente](imagens/cor.png)
 *Agrupando elementos com uma superfície com cor diferente.*

@@ -8,7 +8,7 @@ A aplicação correta da paleta de cores visa trazer consistência ao _Design Sy
 
 ### Experiência Única
 
-A paleta do DSGov é constituída e organizada por cores e famílias de cores, abrangendo dimensões de matizes, brilhos e saturação. Além disso, são estabelecidas finalidades específicas para algumas dessas famílias: **Cores de Superfície**, **Cores de Leitura**, **Cores Interativas** e **Cores de Feedback**. Elas tem o objetivo de preservar a identidade visual e manter a mesma experiência em todos os produtos e sistemas do Governo Federal.
+A paleta do Design System GOV.BR é constituída e organizada por cores e famílias de cores, abrangendo dimensões de matizes, brilhos e saturação. Além disso, são estabelecidas finalidades específicas para algumas dessas famílias: **Cores de Superfície**, **Cores de Leitura**, **Cores Interativas** e **Cores de Feedback**. Elas tem o objetivo de preservar a identidade visual e manter a mesma experiência em todos os produtos e sistemas do Governo Federal.
 
 > **Exemplo:** Nesse sistema, a família **Blue Warm Vivid**, que contém a cor **Blue Warm Vivid 70**, foram as cores selecionadas para representar a identidade do Governo Federal.
 
@@ -48,13 +48,13 @@ Para o _Design System_ foi analisado a relação de contraste entre **a cor apli
 
 Interfaces digitais do governo devem utilizar sempre as cores pré-definidas. Havendo a necessidade de acrescentar uma nova cor à paleta do DS, faz-se necessário que a cor seja testada do ponto de vista de acessibilidade e passe por uma prévia aprovação da equipe de design do DS.
 
-**OBS:** Consulte a acessibilidade das cores usadas no DSGov na **Tabela de Contraste**.
+**OBS:** Consulte a acessibilidade das cores usadas no Design System GOV.BR na **Tabela de Contraste**.
 
 ---
 
 ## Sistema de Cores
 
-O sistema de cores utilizado no DSGov, assim como o modelo de gradação em luminância e _Famílias de Cores_, foram adaptados do modelo de cores do [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/).
+O sistema de cores utilizado no Design System GOV.BR, assim como o modelo de gradação em luminância e _Famílias de Cores_, foram adaptados do modelo de cores do [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/).
 
 ### Cor
 
@@ -64,7 +64,7 @@ O sistema de cores utilizado no DSGov, assim como o modelo de gradação em lumi
 
 É um grupo de cores que têm o mesmo matiz em um círculo cromático. Eles contêm várias cores individuais, diferenciadas pelo brilho ou saturação de cada uma delas. Uma família de cores é normalmente representada por um nome que faz referência a sua matiz, como por exemplo: `Red`, `Blue Warm`, `Green Cool`, etc.
 
-As famílias de cores do DSGov são escolhidas a partir do modelo _HSL_ _(Hue, Saturation, Lightness)_, sistema de cores que utiliza os parâmetros de matiz, saturação e brilho, sendo dispostas em 360º em um círculo cromático. Desta forma, é possível rotular cada família através de sua posição em graus, neste modelo. As cores são selecionadas seguindo a mesma lógica de gradação de luminância em todas as famílias.
+As famílias de cores do Design System GOV.BR são escolhidas a partir do modelo _HSL_ _(Hue, Saturation, Lightness)_, sistema de cores que utiliza os parâmetros de matiz, saturação e brilho, sendo dispostas em 360º em um círculo cromático. Desta forma, é possível rotular cada família através de sua posição em graus, neste modelo. As cores são selecionadas seguindo a mesma lógica de gradação de luminância em todas as famílias.
 
 ### Família de Cores Alternativas
 
@@ -74,9 +74,9 @@ Atualmente temos apenas um círculo cromático alternativo chamado `Vivid`, cria
 
 ### Círculo Cromático
 
-Os círculos cromáticos são uma maneira de exibir as famílias do sistema de cores do DSGov, dispostas em 360° no modelo de cores HSL. Cada família de cores está localizada com sua posição (em graus) neste modelo.
+Os círculos cromáticos são uma maneira de exibir as famílias do sistema de cores do Design System GOV.BR, dispostas em 360° no modelo de cores HSL. Cada família de cores está localizada com sua posição (em graus) neste modelo.
 
-Abaixo é possível observar o padrão das famílias de cores do DSGov dentro de cada círculo cromático.
+Abaixo é possível observar o padrão das famílias de cores do Design System GOV.BR dentro de cada círculo cromático.
 
 ![Sistema HSL - Famílias de Cores](imagens/circle-01.png)
 _Círculo cromático (padrão)_
@@ -89,15 +89,15 @@ Existem algumas famílias que não estão visíveis dentro dos círculos cromát
 - Famílias de Cinza: `Gray`, `Gray-Cool` e `Gray-Warm`.
 - Família Pura: `Pure`
 
-A lista de todas as cores disponíveis podem ser encontradas na **Paleta do DSgov**.
+A lista de todas as cores disponíveis podem ser encontradas na **Paleta do Design System GOV.BR**.
 
 ---
 
 ## Função das Cores
 
-O DSGov estabelece finalidades específicas utilizando as famílias de cores, com o intuito de facilitar a lógica para criação de temas. Em cada função estabelecida, qualquer cor da família especificada poderá ser usada, porém é recomendado utilizar a cor principal ou as alternativas indicadas nas escalas de cores.
+O Design System GOV.BR estabelece finalidades específicas utilizando as famílias de cores, com o intuito de facilitar a lógica para criação de temas. Em cada função estabelecida, qualquer cor da família especificada poderá ser usada, porém é recomendado utilizar a cor principal ou as alternativas indicadas nas escalas de cores.
 
-**Obs:** Em algumas situações, poderá ser observado o uso 2 de famílias para um determinada função e aplicação de fundo. Isso acontece por causa do uso da **Família Pure**, ela funciona como uma "família de apoio" para as demais. Maiores informações veja Paleta do DSGov.
+**Obs:** Em algumas situações, poderá ser observado o uso 2 de famílias para um determinada função e aplicação de fundo. Isso acontece por causa do uso da **Família Pure**, ela funciona como uma "família de apoio" para as demais. Maiores informações veja Paleta do Design System GOV.BR.
 
 ### Cor Principal
 
@@ -129,7 +129,7 @@ As **cores de superfície** são utilizadas como base cromática neutra para com
 
 #### Especificação
 
- De modo geral, as cores de superfície mais utilizadas são as gradações de cinza, presentes na família `Gray` e branco ou preto na família `Pure`. Também pode se utilizar a família `Blue Warm Vivid` para fundos escuros. Elas são usadas como plano de fundo na tela e praticamente em todos os componentes do DSGov.
+ De modo geral, as cores de superfície mais utilizadas são as gradações de cinza, presentes na família `Gray` e branco ou preto na família `Pure`. Também pode se utilizar a família `Blue Warm Vivid` para fundos escuros. Elas são usadas como plano de fundo na tela e praticamente em todos os componentes do Design System GOV.BR.
 
 ##### Fundo Claro
 
@@ -256,13 +256,13 @@ São cores fortemente reconhecidas pela boa parte dos usuários e relacionadas a
 
  ---
 
-## Paleta do DSGov
+## Paleta do Design System GOV.BR
 
-Como dito anteriormente, a paleta do DSGov foi constituída por grupos de famílias, formadas por grupos de cores dentro do círculo cromático (HSL), com um matiz igual ou muito próximo. As famílias alternativas estão descritas com sufixo `Vivid` junto ao nome da família.
+Como dito anteriormente, a paleta do Design System GOV.BR foi constituída por grupos de famílias, formadas por grupos de cores dentro do círculo cromático (HSL), com um matiz igual ou muito próximo. As famílias alternativas estão descritas com sufixo `Vivid` junto ao nome da família.
 
 Os nomes das cores são formados pelo nome da família correspondente, adicionando o fator de luminância ao qual ela pertence, dentro daquela família.
 
-Abaixo estão listadas todas as famílias do DSGov.
+Abaixo estão listadas todas as famílias do Design System GOV.BR.
 
 ### Red
 
@@ -968,7 +968,7 @@ A família `Gray Warm` utiliza cores com mínima saturação dentro de um círcu
 
 ### Pure
 
-Esta família possui uma característica especial, que representa os extremos puros da luminância (branco e preto). Na prática, esta família pode estar presente em qualquer outra família da Paleta DSGov quando ampliada ou reduzida a luminância ao seu extremo, independente do matiz ou saturação. Por tanto, sua identificação como uma família de cores independente tem apenas objetivo didático.
+Esta família possui uma característica especial, que representa os extremos puros da luminância (branco e preto). Na prática, esta família pode estar presente em qualquer outra família da Paleta Design System GOV.BR quando ampliada ou reduzida a luminância ao seu extremo, independente do matiz ou saturação. Por tanto, sua identificação como uma família de cores independente tem apenas objetivo didático.
 
 |              Cor               | Nome da Cor | Luminância |       HSL / Hexadecimal        |    Token     |
 | :----------------------------: | :---------: | :--------: | :----------------------------: | :----------: |
@@ -987,7 +987,7 @@ No **eixo horizontal** temos as principais cores utilizadas para textos e ícone
 
 - **AAA:** passa no nível AAA para texto de qualquer tamanho.
 - **AA:** passa no nível AA para texto de qualquer tamanho e AAA para texto grande (acima de 18pt ou _bold_ acima de 14pt).
-- **x:** Contraste abaixo de 4,5. Não é recomendado no sistema de cores do DSGov.
+- **x:** Contraste abaixo de 4,5. Não é recomendado no sistema de cores do Design System GOV.BR.
 - **(número):** taxa de contraste segundo a WCAG 2.1.
 
 | Superfície/Texto                       | ![#FFFFFF](imagens/FFFFFF.png) #FFFFFF | ![#333333](imagens/333333.png) #333333 | ![#1351B4](imagens/1351B4.png) #1351B4 | ![#C5D4EB](imagens/C5D4EB.png) #C5D4EB |

@@ -129,7 +129,7 @@ new Collapse(config)
 **Para cada acionador (trigger)**, instanciar a classe Collapse passando um objeto de configuração.
 
 ```javascript
-import Collapse from 'dsgov'
+import Collapse from 'govbr-ds'
 const config = {
   trigger,
   iconToShow: 'fa-chevron-down',

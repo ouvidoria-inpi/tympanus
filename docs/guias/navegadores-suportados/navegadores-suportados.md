@@ -1,4 +1,4 @@
-Para melhor compatibilidade com o DSGOV é interessante que utilize a versão mais recente do seu browser.
+Para melhor compatibilidade com o Design System GOV.BR é interessante que utilize a versão mais recente do seu browser.
 
 Os componentes usam comportamentos dinâmicos e se estiver com o Javascript desabilitado o site e os componentes podem não funcionar corretamente.
 
@@ -11,7 +11,7 @@ Esse projeto é compatível com as seguintes versões mínimas dos seguintes bro
 | Firefox   | 67 ou mais recente |
 | Safari    | 11 ou mais recente |
 
-**Não recomendamos o uso do Internet Explorer (qualquer versão) e Edge Legacy. Não garantimos o correto funcionamento do DSGOV nesses browsers ou em versões não listadas acima. Utilize as versões da tabela, dando preferência às versões mais novas.**
+**Não recomendamos o uso do Internet Explorer (qualquer versão) e Edge Legacy. Não garantimos o correto funcionamento do Design System GOV.BR nesses browsers ou em versões não listadas acima. Utilize as versões da tabela, dando preferência às versões mais novas.**
 
 ## Internet Explorer
 

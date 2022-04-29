@@ -28,13 +28,13 @@ O _Input_ é constituído por:
 
 ### Detalhamento dos Itens
 
-Abaixo seguem os detalhamentos dos itens do componente _input_. Para maiores informações consulte também a documentação [Padrão de Formulário](https://dsgov.estaleiro.serpro.gov.br/padroes/formulario), onde são abordados mais detalhes com relação ao uso do componente _input_ em páginas de formulários.
+Abaixo seguem os detalhamentos dos itens do componente _input_. Para maiores informações consulte também a documentação [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario), onde são abordados mais detalhes com relação ao uso do componente _input_ em páginas de formulários.
 
 #### 1- Rótulo/Label (_opcional_)
 
 Auxilia o usuário, indicando o tipo de informação que deve ser digitado no Campo de Texto. O texto do Rótulo deve ser curto e objetivo possível.
 
-Além disso, o Rótulo também tem a função de indicar ao usuário se o **Campo de Texto é obrigatório ou não**. Veja detalhes sobre a indicação de **Campos Obrigatórios/Opcionais** no documento [Padrão de Formulário](https://dsgov.estaleiro.serpro.gov.br/padroes/formulario).
+Além disso, o Rótulo também tem a função de indicar ao usuário se o **Campo de Texto é obrigatório ou não**. Veja detalhes sobre a indicação de **Campos Obrigatórios/Opcionais** no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
 
 ##### Posicionamento do Rótulo
 
@@ -140,7 +140,7 @@ Neste exemplo, os *Campos Telefone*, *UF* e *Senha*, foram posicionados nas linh
 
 #### _Grid_ de 4 colunas
 
-Na _grid_ de 4 colunas, recomenda-se que o _Input_ se estenda por toda largura a da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizado o _input_ com a densidade baixa, com a finalidade de aumentar a área de _touch_. Consulte Comportamento [Densidade](https://dsgov.estaleiro.serpro.gov.br/padroes/densidade) para maiores detalhes.
+Na _grid_ de 4 colunas, recomenda-se que o _Input_ se estenda por toda largura a da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizado o _input_ com a densidade baixa, com a finalidade de aumentar a área de _touch_. Consulte Comportamento [Densidade](https://www.gov.br/ds/padroes/densidade) para maiores detalhes.
 
 ![Input - Grid de 4 colunas](imagens/Input-behavior-responsive-grid-4-cols.png)
 *_Input_ - _grid_ de 4 colunas.*
@@ -259,7 +259,7 @@ Sempre que o dado de entrada requerido possuir um padrão de escrita, recomenda-
 ![Ofereça espaçamentos e separadores entre trechos do texto](imagens/input-mask-05.png)
 *Ofereça espaçamentos e separadores entre trechos do texto*
 
-Veja mais detalhes sobre máscaras no documento [Padrão de Formulário](https://dsgov.estaleiro.serpro.gov.br/padroes/formulario).
+Veja mais detalhes sobre máscaras no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
 
 ### _Autocomplete_
 

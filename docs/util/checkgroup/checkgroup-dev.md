@@ -87,7 +87,7 @@ Para que isso aconteça, deve-se adicionar o atributo `data-parent` no checkbox 
 Em seguida chamar o método setBehavior()
 
 ```javascript
-import Checkgroup from 'dsgov'
+import Checkgroup from 'govbr-ds'
 for (const trigger of component.document.querySelectorAll(
       'input[type="checkbox"][data-parent]'
     )) {

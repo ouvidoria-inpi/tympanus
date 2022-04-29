@@ -1,3 +1,3 @@
 # Contribuindo
 
-Os guias sobre como contribuir para o DSGOV.BR podem ser encontrados na nossa [Wiki](https://dsgov-br.gitlab.io/dsgov.br-wiki/comunidade/contribuindo-com-o-dsgovbr/).
+Os guias sobre como contribuir para o Design System GOV.BR podem ser encontrados na nossa [Wiki](https://govbr-ds.gitlab.io/govbr-ds-wiki/comunidade/contribuindo-com-o-govbr-ds/).

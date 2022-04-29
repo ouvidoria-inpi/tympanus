@@ -5,7 +5,7 @@
 Para usar o componente Cookiebar é necessário os seguintes artefatos:
 
 - O **HTML Base** do componente
-- O **Arquivo de CSS do DSGOV**
+- O **Arquivo de CSS do Design System GOV.BR**
 - O **Arquivo Javascript** que contém a classe BRCookiebar
 
 ```html
@@ -462,13 +462,13 @@ O JSON de Entrada de Dados é um array, em que cada elemento é objeto contendo 
 
 ### HTML
 
-Incluir o arquivo `dsgov.min.js` no html.
+Incluir o arquivo `govbr-ds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/dsgov/dist/dsgov.min.js"></script>
+<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
 ```
 
-> O arquivo dsgov.min.js expõe um objeto chamado `dsgov` contendo as referências para todas as classes exportadas.
+> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
 ### JavaScript
 
 Usar s seguinte código JavaScript para instanciar a classe `BRCookiebar`, passando um objeto com as seguintes propriedades:
@@ -491,7 +491,7 @@ for (const brCookiebar of window.document.querySelectorAll('.br-cookiebar')) {
     mode: 'default',
     callback: callback,
   }
-  cookiebarList.push(new dsgov.BRCookiebar(params))
+  cookiebarList.push(new govbr-ds.BRCookiebar(params))
 ```
 
 ## Função de callback
