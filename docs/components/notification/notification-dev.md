@@ -38,13 +38,13 @@
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -59,6 +59,6 @@ const notificationList = []
 for (const govbr-dsNotification of window.document.querySelectorAll(
   '.br-notification'
 )) {
-  notificationList.push(new govbr-ds.BRNotification('br-notification', brNotification))
+  notificationList.push(new govbrds.BRNotification('br-notification', brNotification))
 }
 ```

@@ -177,13 +177,13 @@ Exemplo de uso do atributo `data-breakpoints`:
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -196,7 +196,7 @@ Usar o seguinte código JavaScript para instanciar a classe `BRMenu`, passando o
 
 const menuList = []
 for (const brMenu of window.document.querySelectorAll('.br-menu')) {
-  menuList.push(new govbr-ds.BRMenu('br-menu', brMenu))
+  menuList.push(new govbrds.BRMenu('br-menu', brMenu))
 }
 
 ```

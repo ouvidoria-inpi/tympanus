@@ -462,13 +462,13 @@ O JSON de Entrada de Dados é um array, em que cada elemento é objeto contendo 
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 ### JavaScript
 
 Usar s seguinte código JavaScript para instanciar a classe `BRCookiebar`, passando um objeto com as seguintes propriedades:
@@ -491,7 +491,7 @@ for (const brCookiebar of window.document.querySelectorAll('.br-cookiebar')) {
     mode: 'default',
     callback: callback,
   }
-  cookiebarList.push(new govbr-ds.BRCookiebar(params))
+  cookiebarList.push(new govbrds.BRCookiebar(params))
 ```
 
 ## Função de callback

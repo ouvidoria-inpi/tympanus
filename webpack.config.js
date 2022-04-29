@@ -6,8 +6,8 @@ const TerserPlugin = require('terser-webpack-plugin')
 
 // GOVBR-DS Build Stuff
 const paths = require('./webpack/paths')
-const { plugins } = require('./webpack/govbr-ds.plugins')
-const { entries } = require('./webpack/govbr-ds.entries')
+const { plugins } = require('./webpack/govbrds.plugins')
+const { entries } = require('./webpack/govbrds.entries')
 
 // Configuração webpack
 const webpackConfig = (_env, argv) => {
@@ -20,7 +20,7 @@ const webpackConfig = (_env, argv) => {
     output: {
       filename: '[name].js',
       path: paths.dist,
-      library: "govbr-ds",
+      library: "govbrds",
       libraryTarget: 'umd',
       umdNamedDefine: true
     },
@@ -32,7 +32,7 @@ const webpackConfig = (_env, argv) => {
     module: {
       rules: [
         {
-          test: /(?<!govbr-ds)((?<!min))\.s[ac]ss$/i,
+          test: /(?<!govbrds)((?<!min))\.s[ac]ss$/i,
           include: paths.src,
           use: [
             MiniCssExtractPlugin.loader,
@@ -69,7 +69,7 @@ const webpackConfig = (_env, argv) => {
           },
         },
         {
-          test: /(govbr-ds)\.s[ac]ss$/i,
+          test: /(govbrds)\.s[ac]ss$/i,
           include: paths.src,
           use: [
             MiniCssExtractPlugin.loader,
@@ -143,7 +143,7 @@ const webpackConfig = (_env, argv) => {
               },
             },
             {
-              loader: path.resolve(paths.webpackLoaders, 'govbr-ds-pug-loader.js'),
+              loader: path.resolve(paths.webpackLoaders, 'govbrds-pug-loader.js'),
               options: {
                 // Se esse loader for usado com o file-loader, utilize 'html'.
                 // Caso seja usado pelo html-webpack-plugin, utilize 'commonjs'.

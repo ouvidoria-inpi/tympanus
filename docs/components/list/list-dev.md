@@ -116,13 +116,13 @@ Na versão horizontal o agrupador e a lista de sub-itens devem ficar dentro do `
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -135,7 +135,7 @@ Usar o seguinte código JavaScript para instanciar a classe `BRList`, passando o
 
 const listList = []
 for (const brList of window.document.querySelectorAll(('.br-list')) {
-  listList.push(new govbr-ds.BRList('br-list', brList))
+  listList.push(new govbrds.BRList('br-list', brList))
 }
 
 ```

@@ -29,7 +29,7 @@ As principais dependências do projeto são:
 Você pode instalar a nossa biblioteca de Web Components no seu projeto usando:
 
 ```node
-npm install --save @govbr-ds/govbr-ds
+npm install --save @govbrds/govbrds
 ```
 
 ### Como começar

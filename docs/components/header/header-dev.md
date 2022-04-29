@@ -121,13 +121,13 @@ A classe `container-lg` força a **Largura Fixa** no _breakpoint desktop_. Alter
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -139,6 +139,6 @@ Usar o seguinte código JavaScript para instanciar a classe `BRHeader`, passando
 ```javascript
 const headerList = []
 for (const brHeader of window.document.querySelectorAll('.br-header')) {
-  headerList.push(new govbr-ds.BRHeader('br-header', brHeader))
+  headerList.push(new govbrds.BRHeader('br-header', brHeader))
 }
 ```
