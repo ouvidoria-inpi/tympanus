@@ -51,13 +51,13 @@ A função uploadTimeout() é um exemplo de que deve ser trocado na produção e
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ### Javascript
 
@@ -77,6 +77,6 @@ function uploadTimeout() {
 }
 
 for (const brUpload of window.document.querySelectorAll('.br-upload')) {
-  uploadList.push(new govbr-ds.BRUpload('br-upload', brUpload, uploadTimeout))
+  uploadList.push(new govbrds.BRUpload('br-upload', brUpload, uploadTimeout))
 }
 ```

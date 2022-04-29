@@ -57,13 +57,13 @@
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ### Javascript
 
@@ -75,6 +75,6 @@ Usar o seguinte código JavaScript para instanciar a classe `brTextArea`, passan
 ```javascript
 const textareaList = []
 for (const brTextArea of window.document.querySelectorAll('.br-textarea')) {
-  textareaList.push(new govbr-ds.BRTextArea('br-textarea', brTextArea))
+  textareaList.push(new govbrds.BRTextArea('br-textarea', brTextArea))
 }
 ```

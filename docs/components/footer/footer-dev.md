@@ -148,13 +148,13 @@ Surgiu da necessidade do componente footer para criar uma lista agrupada de link
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -166,6 +166,6 @@ Usar o seguinte código JavaScript para instanciar a classe `BRFooter`, passando
 ```javascript
 const listFooter = []
 for (const brFooter of window.document.querySelectorAll('.br-footer')) {
-  listFooter.push(new govbr-ds.BRFooter('br-footer', brFooter))
+  listFooter.push(new govbrds.BRFooter('br-footer', brFooter))
 }
 ```

@@ -47,7 +47,7 @@ function buildAssetsSource() {
 
 function buildAssetsNexus() {
   if (fs.existsSync('dist')) {
-    const urlNexus = `http://nexus.aic.serpro/repository/npm-private/@govbr/govbr-ds/-/govbr-ds-${semVer}.tgz`
+    const urlNexus = `http://nexus.aic.serpro/repository/npm-private/@govbr/govbrds/-/govbr-ds-${semVer}.tgz`
     const output = `assets/npm-package/govbr-ds-${semVer}.tgz`
     const download = wget.download(urlNexus, output, {})
 

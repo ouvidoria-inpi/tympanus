@@ -60,13 +60,13 @@ Exemplo usando Tag com interação.
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -80,6 +80,6 @@ Usar o seguinte código JavaScript para instanciar a classe `BRTag`, passando os
 ```javascript
 const tagList = []
 for (const brTag of window.document.querySelectorAll('.br-tag')) {
-  tagList.push(new govbr-ds.BRTag('br-tag', brTag))
+  tagList.push(new govbrds.BRTag('br-tag', brTag))
 }
 ```

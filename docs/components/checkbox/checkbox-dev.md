@@ -43,13 +43,13 @@
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -61,6 +61,6 @@ Usar o seguinte código JavaScript para instanciar a classe `BRCheckbox`, passan
 ```javascript
 const checkboxList = []
 for (const brCheckbox of window.document.querySelectorAll('.br-checkbox')) {
-  checkboxList.push(new govbr-ds.BRCheckbox('br-checkbox', brCheckbox))
+  checkboxList.push(new govbrds.BRCheckbox('br-checkbox', brCheckbox))
 }
 ```

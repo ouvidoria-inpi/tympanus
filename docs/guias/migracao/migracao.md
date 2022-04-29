@@ -7,7 +7,7 @@ Contribuir.
 
 Atualizar a versão do node para v14.15.4
 
-Atualizar o Design System GOV.BR para \@govbr/govbr-ds:2.0.0 ou fazer o download da nova
+Atualizar o Design System GOV.BR para \@govbr/govbrds:2.0.0 ou fazer o download da nova
 versão na página de downloads
 
 Alterar  a dependencia do font-awesome no html
@@ -130,7 +130,7 @@ PARA:
 
 Mudança na arquitetura
 
--   O arquivo govbr-ds.min.js e govbr-ds.min.css ficam na pasta raiz do dist
+-   O arquivo govbrds.min.js e govbrds.min.css ficam na pasta raiz do dist
 
 -   css e js dos componentes ficam na pasta components da pasta dist
 

@@ -1,9 +1,9 @@
 {
-  "name": "@govbr-ds/govbr-ds",
+  "name": "@govbrds/govbrds",
   "version": "2.4.2",
   "description": "Design System do Governo Federal",
   "keywords": [
-    "govbr-ds",
+    "govbrds",
     "govbr",
     "design",
     "system"
@@ -32,7 +32,7 @@
     "commit-assets": "git add . && git commit -m 'chore: cria e commita os assets da v'$npm_package_version''",
     "commit-release": "npm publish && npm run create:assets && git add . && git commit -m 'chore: cria e commita os assets da v'$npm_package_version'' ",
     "create:assets": "node ./createassets.js",
-    "create:build": "node ./govbr-ds.util.js",
+    "create:build": "node ./govbrds.util.js",
     "dev": "npm-run-all --parallel  build:webpack:dev:watch start-live-server",
     "docs:sass": "sassdoc src/ --config .sassdocrc.yaml",
     "lint": "run-s lint:*",

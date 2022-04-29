@@ -52,13 +52,13 @@
 
 ### HTML
 
-Incluir o arquivo `govbr-ds.min.js` no html.
+Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbr-ds/dist/govbr-ds.min.js"></script>
+<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
 ```
 
-> O arquivo govbr-ds.min.js expõe um objeto chamado `govbr-ds` contendo as referências para todas as classes exportadas.
+> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
 
 ### Javascript
 
@@ -70,6 +70,6 @@ Usar o seguinte código JavaScript para instanciar a classe `BRItem`, passando o
 ```javascript
 const itemList = []
 for (const brItem of window.document.querySelectorAll('.br-item')) {
-  itemList.push(new govbr-ds.BRItem('br-item', brItem))
+  itemList.push(new govbrds.BRItem('br-item', brItem))
 }
 ```

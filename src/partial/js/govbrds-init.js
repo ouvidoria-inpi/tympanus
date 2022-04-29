@@ -31,10 +31,11 @@ import Accordion from './behavior/accordion'
 import Checkgroup from './behavior/checkgroup'
 import Collapse from './behavior/collapse'
 import Tooltip from './behavior/tooltip'
-import Behavior from './govbr-ds.beahavior'
+import Behavior from './govbrds.beahavior'
 import { Dropdown, Globals } from './globals-class'
 
 const globals = new Globals()
+globals.initInstanceAll()
 
 const behavior = new Behavior()
 behavior.initInstanceAll()
