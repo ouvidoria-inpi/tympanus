@@ -29,32 +29,32 @@
 
 ### Propriedades obrigatórias
 
-| Atributo               | Tipo   | Valor Padrão | Descrição |
-| ---------------------- | ------ |  ------ | -----------------------------------------------|
-| `br-carousel`          | classe |  | container do componente
-| `carousel-button`      | classe |  | container dos botões de navegação |
-| `br-button carousel-btn-prev terciary circle`    | classe |  | aplicado ao componente button - botão voltar|
-| `br-button carousel-btn-next terciary circle`    | classe |  | aplicado ao componente button - botão avançar|
-| `carousel-stage`       | classe | |container do palco |
-| `carousel-page`        | classe | |container das páginas |
-| `carousel-step`        | classe | |container do component step |
-| `br-step`              | classe | |componente step |
-| `data-type`            | atributo(string) | simple | modificador do step (*simple, text*)|
+| Atributo                                      | Tipo             | Valor Padrão | Descrição                                     |
+| --------------------------------------------- | ---------------- | ------------ | --------------------------------------------- |
+| `br-carousel`                                 | classe           |              | container do componente                       |
+| `carousel-button`                             | classe           |              | container dos botões de navegação             |
+| `br-button carousel-btn-prev terciary circle` | classe           |              | aplicado ao componente button - botão voltar  |
+| `br-button carousel-btn-next terciary circle` | classe           |              | aplicado ao componente button - botão avançar |
+| `carousel-stage`                              | classe           |              | container do palco                            |
+| `carousel-page`                               | classe           |              | container das páginas                         |
+| `carousel-step`                               | classe           |              | container do component step                   |
+| `br-step`                                     | classe           |              | componente step                               |
+| `data-type`                                   | atributo(string) | simple       | modificador do step (*simple, text*)          |
 
 ### Propriedades Adicionais
 
-| Atributo               | Tipo     |  Valor Padrão | Descrição |
-| ---------------------- | -------- |  ------ | ------------------------- |
-| `data-mobile-nav`      | atributo (boolean) | **omitido* | aplicada ao container do componente, define se os botões de navegação serão visualidos no breakpoint mobile|
-| `data-stage`           | atributo(string)   | **omitido* | aplicada ao container do componente, define as variantes do palco (*in, out, hibw, hibh*)   |
-| `data-circular`        | atributo (boolean) | true       | habilita o carousel do tipo circular |
+| Atributo          | Tipo               | Valor Padrão | Descrição                                                                                                   |
+| ----------------- | ------------------ | ------------ | ----------------------------------------------------------------------------------------------------------- |
+| `data-mobile-nav` | atributo (boolean) | **omitido*   | aplicada ao container do componente, define se os botões de navegação serão visualidos no breakpoint mobile |
+| `data-stage`      | atributo(string)   | **omitido*   | aplicada ao container do componente, define as variantes do palco (*in, out, hibw, hibh*)                   |
+| `data-circular`   | atributo (boolean) | true         | habilita o carousel do tipo circular                                                                        |
 
 ## Estados
 
-| Elemento        | Tipo     | Descrição                                                                        |
-| --------------- | -------- | -------------------------------------------------------------------------------- |
-| `active`        | atributo | estado da página atual ("carousel-page") do palco                                     |
-| `disabled`      | atributo | visual do botão de navegação ("br-buton") quando chega aos limites do palco (desabilita a ação do botão) |
+| Elemento   | Tipo     | Descrição                                                                                                |
+| ---------- | -------- | -------------------------------------------------------------------------------------------------------- |
+| `active`   | atributo | estado da página atual ("carousel-page") do palco                                                        |
+| `disabled` | atributo | visual do botão de navegação ("br-buton") quando chega aos limites do palco (desabilita a ação do botão) |
 
 Esses estados podem ser aplicados unicamente nos elementos internos do componente, e são modificados pelo script do componente mediante sua navegação.
 
@@ -67,10 +67,10 @@ Esses estados podem ser aplicados unicamente nos elementos internos do component
 
 ## Próximos Passos
 
-| Nome                   | Documentação de Design  |  Desenvolvimento |
-| ---------------------- | ----------------------- |  --------------- |
-| Reprodução Automática  | Feito                   | Fazendo          |
-| Múltiplas Páginas      | Feito                   | Fazendo          |
+| Nome                  | Documentação de Design | Desenvolvimento |
+| --------------------- | ---------------------- | --------------- |
+| Reprodução Automática | Feito                  | Fazendo         |
+| Múltiplas Páginas     | Feito                  | Fazendo         |
 
 LEGENDA:
 
@@ -90,7 +90,7 @@ LEGENDA:
 Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
 ```
 
 > O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.

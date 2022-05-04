@@ -1,6 +1,6 @@
 {
-  "name": "@govbrds/govbrds",
-  "version": "2.4.2",
+  "name": "@govbr-ds/core",
+  "version": "3.0.0",
   "description": "Design System do Governo Federal",
   "keywords": [
     "govbrds",

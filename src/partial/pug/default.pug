@@ -59,12 +59,12 @@ html(lang="pt-BR")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap")
     block govbrds-css
       // Design System de Governo
-      link(rel="stylesheet" href=cdnUrl+"govbrds.css")
+      link(rel="stylesheet" href=cdnUrl+"core.css")
     // Fontawesome
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css")
     block style
   body(class= templateClass ? `template-${templateClass}` : "")
     block template
-    script(src=cdnUrl+"govbrds-init.js")
+    script(src=cdnUrl+"core-init.js")
     block scripts
 
