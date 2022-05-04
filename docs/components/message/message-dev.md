@@ -44,12 +44,12 @@
 
 ### Configurações Adicionais
 
-| Elemento   | Tipo   | Descrição                 |
-| ---------- | ------ | ------------------------- |
-| `danger` | classe | Aplicar estado de Erro |
-| `success` | classe | Aplicar estado de Sucesso |
-| `info` | classe | Aplicar estado de Informação |
-| `warning` | classe | Aplicar estado de Alerta |
+| Elemento  | Tipo   | Descrição                    |
+| --------- | ------ | ---------------------------- |
+| `danger`  | classe | Aplicar estado de Erro       |
+| `success` | classe | Aplicar estado de Sucesso    |
+| `info`    | classe | Aplicar estado de Informação |
+| `warning` | classe | Aplicar estado de Alerta     |
 
 ## Acessibilidade
 
@@ -67,7 +67,7 @@
 Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
 ```
 
 > O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.

@@ -13,7 +13,7 @@
 1. Crie o arquivo `style.scss` com import do `govbr-ds.scss` conforme o exemplo abaixo, se atentar a localização da pasta `node_modules` que pode mudar conforme a organização do projeto
 
     ```text
-    @import "node_modules/@govbr/govbrds/src/govbr-ds.scss"
+    @import "node_modules/@govbr-ds/core/src/govbr-ds.scss"
     ```
 
 1. para compilar o arquivo acima basta rodar o seguinte comando:
@@ -27,10 +27,10 @@
 1. deverá criar o arquivo ``style.scss`` onde deverá importar o ``govbr-ds-base.scss`` que se encontra na pasta **src/partial/scss** e os componentes desejados, que podem ser encontrados na pasta **src/components** como exemplo abaixo:
 
     ```text
-    @import "../node_modules/@govbr/govbrds/src/partial/scss/govbr-ds-base.scss";
-    @import "../node_modules/@govbr/govbrds/src/components/button/button";
-    @import "../node_modules/@govbr/govbrds/src/components/avatar/avatar";
-    @import "../node_modules/@govbr/govbrds/src/components/card/card";
+    @import "../node_modules/@govbr-ds/core/src/partial/scss/govbr-ds-base.scss";
+    @import "../node_modules/@govbr-ds/core/src/components/button/button";
+    @import "../node_modules/@govbr-ds/core/src/components/avatar/avatar";
+    @import "../node_modules/@govbr-ds/core/src/components/card/card";
     ```
 
 1. Para compilar basta rodar o comando abaixo
@@ -44,7 +44,7 @@
 1. Compilando todos os estilos do Design System GOV.BR:
 
     ```text
-    npx sass node_modules/@govbr/govbrds/src/govbr-ds dist/exemplo.css
+    npx sass node_modules/@govbr-ds/core/src/govbr-ds dist/exemplo.css
     ```
 
 1. Compilando um estilo de um arquivo específico:

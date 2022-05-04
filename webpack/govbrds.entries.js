@@ -8,22 +8,22 @@ const fs = require('fs')
 let production = false
 
 const govbrds = {
-  govbrds: [
+  core: [
     path.resolve(paths.srcSCSS, 'govbrds.scss'),
 
     path.resolve(paths.srcUtil, 'dropdown', 'dropdown.scss'),
     path.resolve(paths.srcJSpartial, 'govbrds.entry.js'),
   ],
-  'govbrds-base': [
+  'core-base': [
     path.resolve(paths.srcSCSS, 'govbrds-base.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
-  'govbrds-init': [path.resolve(paths.srcJSpartial, 'govbrds-init.js')],
-  'govbrds-lite': [
+  'core-init': [path.resolve(paths.srcJSpartial, 'govbrds-init.js')],
+  'core-lite': [
     path.resolve(paths.srcSCSS, 'govbrds-lite.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
-  'govbrds.min': [path.resolve(paths.srcJSpartial, 'govbrds.entry.js')],
+  'core.min': [path.resolve(paths.srcJSpartial, 'govbrds.entry.js')],
 }
 
 /**
