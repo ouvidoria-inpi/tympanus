@@ -17,13 +17,13 @@ O projeto requer a versão mínima do [node](https://nodejs.org/) >= v14.15.4.
 Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 -   **package.json**: configurações do seu projeto
--   **node_modules/@govbr/govbrds**: pasta com os módulos necessários para o funcionamento do Design System
+-   **node_modules/@govbr-ds/core**: pasta com os módulos necessários para o funcionamento do Design System
 
 ### Instalar automaticamente com NPM
 
 > Atenção! No momento o pacote está disponível apenas para a rede interna do SERPRO
 
-**Confira sempre a versão referência ao baixar o pacote @govbr/govbrds**.
+**Confira sempre a versão referência ao baixar o pacote @govbr-ds/core**.
 
 1. Execute o seguinte comando no terminal:
 
@@ -32,15 +32,15 @@ Serão criados automaticamente os seguintes arquivos em seu projeto:
       npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
     ```
 
-1. Execute o comando **npm install @govbr/govbrds**, exemplo:
+1. Execute o comando **npm install @govbr-ds/core**, exemplo:
 
     ```bash
-    npm install @govbr/govbrds
+    npm install @govbr-ds/core
     ```
 
 ## Template Inicial
 
-A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **govbrds.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **govbrds.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **govbr-ds-init.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **govbrds.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **govbrds.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **govbrds-init.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>
@@ -87,7 +87,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
 Essa é a versão init(govbrds-init.js) com os componentes já **inicializados** diferente do govbrds.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
-<script src="node_modules\@govbr\govbr-ds\dist\govbr-ds-init.min.js"></script>
+<script src="node_modules\@govbr\govbr-ds\dist\govbrds-init.min.js"></script>
 ```
 
 ## Versão "lite" da folha de estilo
@@ -144,7 +144,7 @@ Cada componente possui sua documentação, código fonte e preview.
 ### Exemplo de uso da instacialização do componente sem usar **govbrds-init.js**
 
 ```javascript
-import  * as govbr-ds from '@govbr/govbrds/dist/govbr-ds'
+import  * as govbr-ds from '@govbr-ds/core/dist/govbr-ds'
 const breadcrumbList = []
 for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
   breadcrumbList.push(new govbrds.BRBreadcrumb('br-breadcrumb', brBreadcrumb))
