@@ -87,7 +87,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
 Essa é a versão init(core-init.js) com os componentes já **inicializados** diferente do govbrds.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
-<script src="node_modules\@govbr\govbr-ds\dist\govbr-ds-init.min.js"></script>
+<script src="node_modules\@govbr\govbr-ds\dist\govbrds-init.min.js"></script>
 ```
 
 ## Versão "lite" da folha de estilo
