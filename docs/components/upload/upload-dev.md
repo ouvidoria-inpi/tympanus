@@ -54,7 +54,7 @@ A função uploadTimeout() é um exemplo de que deve ser trocado na produção e
 Incluir o arquivo `govbrds.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr/govbrds/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
 ```
 
 > O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
