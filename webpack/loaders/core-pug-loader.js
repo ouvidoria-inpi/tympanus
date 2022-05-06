@@ -1,5 +1,5 @@
 /**
- * Loader webpack síncrono para resolução de módulos pug para o govbrds.
+ * Loader webpack síncrono para resolução de módulos pug para o core.
  *
  * @see https://webpack.js.org/concepts/#loaders
  * @see https://webpack.js.org/concepts/loaders/
@@ -13,14 +13,14 @@ const loaderUtils = require('loader-utils')
 const validateOptions = require('schema-utils')
 const schema = require('./options.schema.json')
 
-const loaderName = 'govbrds-pug-loader'
+const loaderName = 'core-pug-loader'
 
 /**
  * Loader function.
  *
  * @param {string} pugTemplate Pug Template for compilation with pug
  */
-function govbrdsPugLoader(pugTemplate) {
+function corePugLoader(pugTemplate) {
   const options = loaderUtils.getOptions(this)
 
   validateOptions(schema, options, {
@@ -49,4 +49,4 @@ function govbrdsPugLoader(pugTemplate) {
   return ''
 }
 
-module.exports = govbrdsPugLoader
+module.exports = corePugLoader

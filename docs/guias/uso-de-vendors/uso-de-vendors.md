@@ -33,13 +33,13 @@ Os códigos devem ser carregados sempre antes do Design System GOV.BR.
     <!-- CSS do vendor -->
     <link rel="stylesheet" href="path/vendor.min.css">
     <!-- Design System GOV.BR CSS -->
-    <link rel="stylesheet" href="path/govbrds.min.css">
+    <link rel="stylesheet" href="path/core.min.css">
   </head>
   <body>
     <!-- Scripts do vendor -->
     <script src="path/.min.js"></script>
     <!-- Design System GOV.BR JS -->
-    <script src="path/govbrds.min.js"></script>
+    <script src="path/core.min.js"></script>
   </body>
 </html>
 ```

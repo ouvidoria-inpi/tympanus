@@ -110,32 +110,32 @@ Na versão horizontal o agrupador e a lista de sub-itens devem ficar dentro do `
 
 ## Dependências
 
-- [Item](/components/item)
+-   [Item](/components/item)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRList`, passando os seguintes parâmetros:
 
-- Nome da classe (br-list)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-list)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 
 const listList = []
 for (const brList of window.document.querySelectorAll(('.br-list')) {
-  listList.push(new govbrds.BRList('br-list', brList))
+  listList.push(new core.BRList('br-list', brList))
 }
 
 ```

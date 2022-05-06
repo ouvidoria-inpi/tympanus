@@ -298,40 +298,40 @@ Incluir o componente Pagination Contextual no rodapé da Tabela.
 
 ## Dependências
 
-- [Button](/components/button)
-- [Checkbox](/components/checkbox)
-- [Divider](/components/divider)
-- [Input](/components/input)
-- [Item](/components/item)
-- [List](/components/list)
-- [Pagination](/components/pagination)
-- [Radio](/components/radio)
-- [Select](/components/select)
+-   [Button](/components/button)
+-   [Checkbox](/components/checkbox)
+-   [Divider](/components/divider)
+-   [Input](/components/input)
+-   [Item](/components/item)
+-   [List](/components/list)
+-   [Pagination](/components/pagination)
+-   [Radio](/components/radio)
+-   [Select](/components/select)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRTable`, passando os seguintes parâmetros:
 
-- Nome da classe (br-table)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-table)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const tableList = []
 for (const [index, brTable] of window.document
   .querySelectorAll('.br-table')
   .entries()) {
-  tableList.push(new govbrds.BRTable('br-table', brTable, index))
+  tableList.push(new core.BRTable('br-table', brTable, index))
 }
 ```

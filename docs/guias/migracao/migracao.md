@@ -130,7 +130,7 @@ PARA:
 
 Mudança na arquitetura
 
--   O arquivo govbrds.min.js e govbrds.min.css ficam na pasta raiz do dist
+-   O arquivo core.min.js e core.min.css ficam na pasta raiz do dist
 
 -   css e js dos componentes ficam na pasta components da pasta dist
 

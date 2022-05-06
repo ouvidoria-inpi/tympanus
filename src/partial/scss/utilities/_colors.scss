@@ -44,7 +44,7 @@ $states-colors: (
   @include make-border-color($key, $value);
 }
 
-// Compatibilidade com versões anteriores do govbrds
+// Compatibilidade com versões anteriores do Design System
 @each $item, $value in $br-colors {
   @include bg-colors($item, $value);
   @include text-colors($item, $value);

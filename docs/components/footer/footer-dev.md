@@ -139,33 +139,33 @@ Surgiu da necessidade do componente footer para criar uma lista agrupada de link
 
 ## Dependências
 
-- [Button](/components/button)
-- [Divider](/components/divider)
-- [Item](/components/item)
-- [List](/components/list)
+-   [Button](/components/button)
+-   [Divider](/components/divider)
+-   [Item](/components/item)
+-   [List](/components/list)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRFooter`, passando os seguintes parâmetros:
 
-- Nome da classe (br-footer)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-footer)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const listFooter = []
 for (const brFooter of window.document.querySelectorAll('.br-footer')) {
-  listFooter.push(new govbrds.BRFooter('br-footer', brFooter))
+  listFooter.push(new core.BRFooter('br-footer', brFooter))
 }
 ```

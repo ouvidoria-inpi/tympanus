@@ -4,9 +4,9 @@
 
 Para usar o componente Cookiebar é necessário os seguintes artefatos:
 
-- O **HTML Base** do componente
-- O **Arquivo de CSS do Design System GOV.BR**
-- O **Arquivo Javascript** que contém a classe BRCookiebar
+-   O **HTML Base** do componente
+-   O **Arquivo de CSS do Design System GOV.BR**
+-   O **Arquivo Javascript** que contém a classe BRCookiebar
 
 ```html
 <div class="br-cookiebar default d-none" tabindex="-1"></div>
@@ -93,348 +93,348 @@ O JSON de Entrada de Dados é um array, em que cada elemento é objeto contendo 
 
 #### `lang`
 
-- **Descrição**: Define a lingua do respectivo conjunto de dados
-- **Tipo**: String
-- **Uso**: Obrigatório
-- **Observação**: Usado para determinar qual item do array inicial do JSON será usado.
+-   **Descrição**: Define a lingua do respectivo conjunto de dados
+-   **Tipo**: String
+-   **Uso**: Obrigatório
+-   **Observação**: Usado para determinar qual item do array inicial do JSON será usado.
 
 > A tradução do cookiebar é manual, ou seja, o valor dos demais parâmetros do JSON de entrada deverão ser informados na lingua usada
 
 #### `allOptOut`
 
-- **Descrição**: Propriedade que define se o Cookiebar é **optIn** (false) ou **optOut** (true)
-- **Tipo**: Boolean
-- **Uso**: Obrigatório
-- **Observação**: Caso seja **false**, seu valor prevalece sobre as propriedades `groupOptOut` e `cookieOptOut` marcando-as como **false** e sobre as propriedades `selectAll`, `groupSelected` e `cookieSelected` marcando-as como **true**
+-   **Descrição**: Propriedade que define se o Cookiebar é **optIn** (false) ou **optOut** (true)
+-   **Tipo**: Boolean
+-   **Uso**: Obrigatório
+-   **Observação**: Caso seja **false**, seu valor prevalece sobre as propriedades `groupOptOut` e `cookieOptOut` marcando-as como **false** e sobre as propriedades `selectAll`, `groupSelected` e `cookieSelected` marcando-as como **true**
 
 #### `acceptButton`
 
-- **Descrição**: Label do botão primário
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o botão primário terá a label **Aceitar**
+-   **Descrição**: Label do botão primário
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o botão primário terá a label **Aceitar**
 
 #### `optInButton`
 
-- **Descrição**: Label do botão secundário caso a propriedade `allOptOut` seja **false**
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o botão secundário terá a label **Ver Política de Cookies**
+-   **Descrição**: Label do botão secundário caso a propriedade `allOptOut` seja **false**
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o botão secundário terá a label **Ver Política de Cookies**
 
 #### `optOutButton`
 
-- **Descrição**: Label do botão secundário caso a propriedade `allOptOut` seja **true**
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o botão secundário terá a label **Definir Cookies**
+-   **Descrição**: Label do botão secundário caso a propriedade `allOptOut` seja **true**
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o botão secundário terá a label **Definir Cookies**
 
 #### `infoText`
 
-- **Descrição**: Texto que aparece quando o Cookiebar está fechado
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Texto que aparece quando o Cookiebar está fechado
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `mainTitle`
 
-- **Descrição**: Título principal
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Título principal
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `lastUpdate`
 
-- **Descrição**: Informação sobre atualização
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Informar apenas a data no formato string
+-   **Descrição**: Informação sobre atualização
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Informar apenas a data no formato string
 
 #### `entryText`
 
-- **Descrição**: Texto introdutório
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Texto introdutório
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `selectAll`
 
-- **Descrição**: Informa se o checkbox de seleção geral está **true** ou **false**
-- **Tipo**: Boolean
-- **Uso**: Obrigatório
-- **Observação**: Sua seleção afeta as propriedades `groupSelected` e `cookieSelected` marcando-as com o mesmo valor.
+-   **Descrição**: Informa se o checkbox de seleção geral está **true** ou **false**
+-   **Tipo**: Boolean
+-   **Uso**: Obrigatório
+-   **Observação**: Sua seleção afeta as propriedades `groupSelected` e `cookieSelected` marcando-as com o mesmo valor.
 
 > O checkbox de seleção geral pode assumir o estado intermediário, dependendo da seleção dos checkboxes e switches dependentes. Nesse caso, seu valor é **true** e possui o atributo **indeterminate**
 
 #### `allAlertMessage`
 
-- **Descrição**: Mensagem de alerta para todo o cookiebar
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Se estiver presente, o cookiebar apresenta a mensagem quando o checkbox de seleção geral estiver **false** ou **indeterminate**
+-   **Descrição**: Mensagem de alerta para todo o cookiebar
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Se estiver presente, o cookiebar apresenta a mensagem quando o checkbox de seleção geral estiver **false** ou **indeterminate**
 
 #### `closeLabel`
 
-- **Descrição**: Nome usado no atributo aria-label do botão de fechar o cookiebar
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação** Caso não seja utilizado, o atributo aria-label do botão de fechar usará o valor **fechar**
+-   **Descrição**: Nome usado no atributo aria-label do botão de fechar o cookiebar
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação** Caso não seja utilizado, o atributo aria-label do botão de fechar usará o valor **fechar**
 
 #### `lastUpdateLabel`
 
-- **Descrição**: Label para o campo de que informa a data de atualização
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Última atualização**
+-   **Descrição**: Label para o campo de que informa a data de atualização
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Última atualização**
 
 #### `cookieGroupsLabel`
 
-- **Descrição**: Label da área das classes de cookies
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Classes de cookies**
+-   **Descrição**: Label da área das classes de cookies
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Classes de cookies**
 
 #### `selectAllLabel`
 
-- **Descrição**: Label para o checkbox de seleção geral, caso esteja **true** ou contenha o atributo **indeterminate**
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Selecionar tudo**
+-   **Descrição**: Label para o checkbox de seleção geral, caso esteja **true** ou contenha o atributo **indeterminate**
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Selecionar tudo**
 
 #### `unselectAllLabel`
 
-- **Descrição**: Label para o checkbox de seleção geral, caso esteja **false**
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Desselecionar tudo**
+-   **Descrição**: Label para o checkbox de seleção geral, caso esteja **false**
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Desselecionar tudo**
 
 #### `selectAllGroupLabel`
 
-- **Descrição**: Label para o checkbox de seleção da classe (grupo) de cookies, caso esteja **true** ou contenha o atributo **indeterminate**
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Selecionar toda classe**
+-   **Descrição**: Label para o checkbox de seleção da classe (grupo) de cookies, caso esteja **true** ou contenha o atributo **indeterminate**
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Selecionar toda classe**
 
 #### `unselectAllGroupLabel`
 
-- **Descrição**: Label para o checkbox de seleção da classe (grupo) de cookies, caso esteja **false**
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Desselecionar toda classe**
+-   **Descrição**: Label para o checkbox de seleção da classe (grupo) de cookies, caso esteja **false**
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Desselecionar toda classe**
 
 #### `onLabel`
 
-- **Descrição**: Label para o switch de seleção do cookie, caso esteja **true**
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Ligado**
+-   **Descrição**: Label para o switch de seleção do cookie, caso esteja **true**
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Ligado**
 
 #### `offLabel`
 
-- **Descrição**: Label para o swtich de seleção do cookie, caso esjeta **false**
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Desligado**
+-   **Descrição**: Label para o swtich de seleção do cookie, caso esjeta **false**
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Desligado**
 
 #### `alwaysActiveLabel`
 
-- **Descrição**: Label usado caso a classe (grupo) de cookies seja optIn
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Sempre ativo**
+-   **Descrição**: Label usado caso a classe (grupo) de cookies seja optIn
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Sempre ativo**
 
 #### `cookieNameLabel`
 
-- **Descrição**: Label para a propriedade *nome do cookie*
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Cookies**
+-   **Descrição**: Label para a propriedade *nome do cookie*
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Cookies**
 
 #### `expiresLabel`
 
-- **Descrição**: Label para a propriedade *Vencimento*
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Vencimento**
+-   **Descrição**: Label para a propriedade *Vencimento*
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Vencimento**
 
 #### `domainLabel`
 
-- **Descrição**: Label para a propriedade *Domínio*
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Domínio**
+-   **Descrição**: Label para a propriedade *Domínio*
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Domínio**
 
 #### `enterpriseLabel`
 
-- **Descrição**: Label para a propriedade *Empresa*
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Empresa**
+-   **Descrição**: Label para a propriedade *Empresa*
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Empresa**
 
 #### `purposeLabel`
 
-- **Descrição**: Label para a propriedade *Finalidade*
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Finalidade**
+-   **Descrição**: Label para a propriedade *Finalidade*
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Finalidade**
 
 #### `descriptionLabel`
 
-- **Descrição**: Label para a propriedade *Descrição*
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Caso não seja informado, o valor usado será **Descrição**
+-   **Descrição**: Label para a propriedade *Descrição*
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Caso não seja informado, o valor usado será **Descrição**
 
 #### `cookieGroups`
 
-- **Descrição**: Array contendo objetos que agrupam informações sobre uma classe de cookies específica
-- **Tipo**: Array
-- **Uso**: Obrigatório
-- **Observação**: Necessário haver pelo menos um grupo de cookies
+-   **Descrição**: Array contendo objetos que agrupam informações sobre uma classe de cookies específica
+-   **Tipo**: Array
+-   **Uso**: Obrigatório
+-   **Observação**: Necessário haver pelo menos um grupo de cookies
 
 #### `groupId`
 
-- **Descrição**: Identificado do grupo de cookies
-- **Tipo**: String
-- **Uso**: Obrigatório
-- **Observação**: Necessário informa o Id do grupo. O cookiebar **não** gera automaticamente
+-   **Descrição**: Identificado do grupo de cookies
+-   **Tipo**: String
+-   **Uso**: Obrigatório
+-   **Observação**: Necessário informa o Id do grupo. O cookiebar **não** gera automaticamente
 
 #### `groupName`
 
-- **Descrição**: Nome da classe do cookie
-- **Tipo**: String
-- **Uso**: Obrigatório
-- **Observação**: A quantidade de cookies no grupo e quantidade de cookies selecionados são calculados e informados pelo cookiebar
+-   **Descrição**: Nome da classe do cookie
+-   **Tipo**: String
+-   **Uso**: Obrigatório
+-   **Observação**: A quantidade de cookies no grupo e quantidade de cookies selecionados são calculados e informados pelo cookiebar
 
 #### `groupOptOut`
 
-- **Descrição**: Propriedade que define se a classe de cookies é **optIn** (false) ou **optOut** (true)
-- **Tipo**: Boolean
-- **Uso**: Obrigatório
-- **Observação**: Caso seja **false**, seu valor prevalece sobre a propriedade e `cookieOptOut` marcando-a como **false** e sobre as propriedades `groupSelected` e `cookieSelected` marcando-as como **true**
+-   **Descrição**: Propriedade que define se a classe de cookies é **optIn** (false) ou **optOut** (true)
+-   **Tipo**: Boolean
+-   **Uso**: Obrigatório
+-   **Observação**: Caso seja **false**, seu valor prevalece sobre a propriedade e `cookieOptOut` marcando-a como **false** e sobre as propriedades `groupSelected` e `cookieSelected` marcando-as como **true**
 
 #### `groupSelected`
 
-- **Descrição**: Informa se o checkbox de seleção da classe de cookies está **true** ou **false**
-- **Tipo**: Boolean
-- **Uso**: Obrigatório
-- **Observação**: Sua seleção afeta a propriedade `cookieSelected` marcando-a com o mesmo valor.
+-   **Descrição**: Informa se o checkbox de seleção da classe de cookies está **true** ou **false**
+-   **Tipo**: Boolean
+-   **Uso**: Obrigatório
+-   **Observação**: Sua seleção afeta a propriedade `cookieSelected` marcando-a com o mesmo valor.
 
 > O checkbox de seleção da classe de cookies pode assumir o estado intermediário, dependendo da seleção dos switches dependentes. Nesse caso, seu valor é **true** e possui o atributo **indeterminate**
 
 #### `groupText`
 
-- **Descrição**: Descrição da classe de cookies
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Descrição da classe de cookies
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `cookieList`
 
-- **Descrição**: Array contendo objetos que agrupam informações sobre um cookie específico
-- **Tipo**: Array
-- **Uso**: Obrigatório
-- **Observação**: Necessário haver pelo menos um cookie
+-   **Descrição**: Array contendo objetos que agrupam informações sobre um cookie específico
+-   **Tipo**: Array
+-   **Uso**: Obrigatório
+-   **Observação**: Necessário haver pelo menos um cookie
 
 #### `cookieId`
 
-- **Descrição**: Identificado do cookie
-- **Tipo**: String
-- **Uso**: Obrigatório
-- **Observação**: Necessário informa o Id do cookie. O cookiebar **não** gera automaticamente
+-   **Descrição**: Identificado do cookie
+-   **Tipo**: String
+-   **Uso**: Obrigatório
+-   **Observação**: Necessário informa o Id do cookie. O cookiebar **não** gera automaticamente
 
 #### `cookieOptOut`
 
-- **Descrição**: Propriedade que define se o cookie é **optIn** (false) ou **optOut** (true)
-- **Tipo**: Boolean
-- **Uso**: Obrigatório
+-   **Descrição**: Propriedade que define se o cookie é **optIn** (false) ou **optOut** (true)
+-   **Tipo**: Boolean
+-   **Uso**: Obrigatório
 
 #### `cookieSelected`
 
-- **Descrição**: Informa se o switch de seleção do cookie está **true** ou **false**
-- **Tipo**: Boolean
-- **Uso**: Obrigatório
-- **Observação**: Se `cookieOptOut` for **false**, seu valor será o mesmo de `groupSelected`
+-   **Descrição**: Informa se o switch de seleção do cookie está **true** ou **false**
+-   **Tipo**: Boolean
+-   **Uso**: Obrigatório
+-   **Observação**: Se `cookieOptOut` for **false**, seu valor será o mesmo de `groupSelected`
 
 #### `alertMessage`
 
-- **Descrição**: Mensagem de alerta para um cookie específico
-- **Tipo**: String
-- **Uso**: Optativo
-- **Observação**: Se estiver presente, o cookiebar apresenta a mesagem quando o switch do cookie estiver **false**
+-   **Descrição**: Mensagem de alerta para um cookie específico
+-   **Tipo**: String
+-   **Uso**: Optativo
+-   **Observação**: Se estiver presente, o cookiebar apresenta a mesagem quando o switch do cookie estiver **false**
 
 #### `cookieName`
 
-- **Descrição**: Nome do cookie
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Nome do cookie
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `expires`
 
-- **Descrição**: Período de expiração do cookie
-- **Tipo**: String
-- **Uso**: Obrigatótio
+-   **Descrição**: Período de expiração do cookie
+-   **Tipo**: String
+-   **Uso**: Obrigatótio
 
 #### `domain`
 
-- **Descrição**: Domínio relacionado ao cookie
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Domínio relacionado ao cookie
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `entreprise`
 
-- **Descrição**: Nome da empresa
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Nome da empresa
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `purpose`
 
-- **Descrição**: Finalidade do cookie
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Finalidade do cookie
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `description`
 
-- **Descrição**: Descrição do cookie
-- **Tipo**: String
-- **Uso**: Obrigatório
+-   **Descrição**: Descrição do cookie
+-   **Tipo**: String
+-   **Uso**: Obrigatório
 
 #### `noteTitle`
 
-- **Descrição**: Nome do bloco de **aviso sobre os cookies**
-- **Tipo**: String
-- **Uso**: Optativo
+-   **Descrição**: Nome do bloco de **aviso sobre os cookies**
+-   **Tipo**: String
+-   **Uso**: Optativo
 
 #### `noteList`
 
-- **Descrição**: Array contendo objetos que agrupam informações sobre os avisos do cookie
-- **Tipo**: String
-- **Uso**: Optativo
+-   **Descrição**: Array contendo objetos que agrupam informações sobre os avisos do cookie
+-   **Tipo**: String
+-   **Uso**: Optativo
 
 #### `question`
 
-- **Description**: Pergunta
-- **Tipo**: String
-- **Uso**: Obrigatório caso tenha a propriedade `noteList`
+-   **Description**: Pergunta
+-   **Tipo**: String
+-   **Uso**: Obrigatório caso tenha a propriedade `noteList`
 
 #### `answer`
 
-- **Descrição**: Resposta
-- **Tipo**: String
-- **Uso**: Obrigatório caso tenha a propriedade `noteList`
+-   **Descrição**: Resposta
+-   **Tipo**: String
+-   **Uso**: Obrigatório caso tenha a propriedade `noteList`
 
 #### `links`
 
-- **Description**: Array contendo links para mais informações
-- **Tipo**: String
-- **Uso**: Optativo
+-   **Description**: Array contendo links para mais informações
+-   **Tipo**: String
+-   **Uso**: Optativo
 
 #### `name`
 
-- **Descrição**: Rótulo do link
-- **Tipo**: String
-- **Uso**: Obrigatório caso tenha a propriedade `links`
+-   **Descrição**: Rótulo do link
+-   **Tipo**: String
+-   **Uso**: Obrigatório caso tenha a propriedade `links`
 
 #### `url`
 
-- **Descrição**: URL do link
-- **Tipo**: String
-- **Uso**: Obrigatóro caso tenha a propriedade `links`
+-   **Descrição**: URL do link
+-   **Tipo**: String
+-   **Uso**: Obrigatóro caso tenha a propriedade `links`
 
 > Como saída, é gerado um JSON de Saída ao clicar no botão de aceite. O JSON de Saída é usado na função de callback.
 
@@ -462,23 +462,24 @@ O JSON de Entrada de Dados é um array, em que cada elemento é objeto contendo 
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
+
 ### JavaScript
 
 Usar s seguinte código JavaScript para instanciar a classe `BRCookiebar`, passando um objeto com as seguintes propriedades:
 
-- `name` - Nome do componente em minúsculo (br-cookiebar)
-- `component` - Objeto referenciando a raiz do componente DOM
-- `json`- JSON de entrada com dados do cookiebar
-- `lang` - Lingua para filtrar o JSON de entrada
-- `mode` - Mode de renderização do cookibar ('default' | 'open')
-- `callback` - Função de callback chamada no aceite do cookiebar tendo o JSON de saída como argumento
+-   `name` - Nome do componente em minúsculo (br-cookiebar)
+-   `component` - Objeto referenciando a raiz do componente DOM
+-   `json`- JSON de entrada com dados do cookiebar
+-   `lang` - Lingua para filtrar o JSON de entrada
+-   `mode` - Mode de renderização do cookibar ('default' | 'open')
+-   `callback` - Função de callback chamada no aceite do cookiebar tendo o JSON de saída como argumento
 
 ```javascript
 const cookiebarList = []
@@ -491,7 +492,7 @@ for (const brCookiebar of window.document.querySelectorAll('.br-cookiebar')) {
     mode: 'default',
     callback: callback,
   }
-  cookiebarList.push(new govbrds.BRCookiebar(params))
+  cookiebarList.push(new core.BRCookiebar(params))
 ```
 
 ## Função de callback
@@ -508,10 +509,10 @@ BRCookiebar.createCookiebar(json, callback)
 
 ## Dependências
 
-- [Button](/components/button)
-- [Card](/components/card)
-- [Item](/components/item)
-- [List](/components/list)
-- [Message](/components/message)
-- [Modal](/components/radio)
-- [Switch](/components/switch)
+-   [Button](/components/button)
+-   [Card](/components/card)
+-   [Item](/components/item)
+-   [List](/components/list)
+-   [Message](/components/message)
+-   [Modal](/components/radio)
+-   [Switch](/components/switch)
