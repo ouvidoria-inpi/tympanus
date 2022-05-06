@@ -139,7 +139,7 @@ Exemplo de uso:
 
 -   No layout horizontal, quando em um dispositivo móvel (mobile), o texto de descrição do passo (info) será automaticamente mostrado e ocultado ao interagir com a Barra de Botões. Já na versão vertical o mesmo se apresenta ocultado por padrão e deve-se realizar a ação de deslizar (swipe) da esquerda para a direita a fim de visualizá-lo.
 
-- É necessário definir um container (div) encapsulando o componente e com altura definida (height) para que o wizard seja corretamente visualizado. Conforme exemplo a seguir:
+-   É necessário definir um container (div) encapsulando o componente e com altura definida (height) para que o wizard seja corretamente visualizado. Conforme exemplo a seguir:
 
 ```html
 <div class="wizard-sample-1">
@@ -157,30 +157,30 @@ Exemplo de uso:
 
 ## Dependências
 
-- [Button](/components/button)
+-   [Button](/components/button)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ### Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRWizard`, passando os seguintes parâmetros:
 
-- Nome da classe (br-wizard)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-wizard)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const wizardList = []
 for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
-  wizardList.push(new govbrds.BRWizard('br-wizard', brWizard))
+  wizardList.push(new core.BRWizard('br-wizard', brWizard))
 }
 ```

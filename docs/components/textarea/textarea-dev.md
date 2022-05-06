@@ -51,30 +51,30 @@
 
 ## Dependências
 
-- [Message](/components/message)
+-   [Message](/components/message)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ### Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `brTextArea`, passando os seguintes parâmetros:
 
-- Nome da classe (br-textarea)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-textarea)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const textareaList = []
 for (const brTextArea of window.document.querySelectorAll('.br-textarea')) {
-  textareaList.push(new govbrds.BRTextArea('br-textarea', brTextArea))
+  textareaList.push(new core.BRTextArea('br-textarea', brTextArea))
 }
 ```

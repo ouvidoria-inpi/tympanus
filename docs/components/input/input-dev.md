@@ -23,7 +23,7 @@
 </div>
 ```
 
-- Aplicar classe `.input-button` sempre que houver botão interno
+-   Aplicar classe `.input-button` sempre que houver botão interno
 
 ### Input com ícone
 
@@ -39,8 +39,8 @@
 </div>
 ```
 
-- Colocar o ícone em `input-icon`
-- Agrupar ícone e input em `input-group`
+-   Colocar o ícone em `input-icon`
+-   Agrupar ícone e input em `input-group`
 
 ### Input com rótulo lateral
 
@@ -55,9 +55,9 @@
 </div>
 ```
 
-- Aplicar classe `.input-inline` ao componente
-- Colocar o label em `input-label`
-- Agrupar outros elementos em `input-content`
+-   Aplicar classe `.input-inline` ao componente
+-   Colocar o label em `input-label`
+-   Agrupar outros elementos em `input-content`
 
 ### Propriedade obrigatórias
 
@@ -99,31 +99,31 @@
 
 ## Dependências
 
-- [Button](/components/button)
-- [Message](/components/message)
+-   [Button](/components/button)
+-   [Message](/components/message)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRInput`, passando os seguintes parâmetros:
 
-- Nome da classe (br-input)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-input)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const inputList = []
 for (const brInput of window.document.querySelectorAll('.br-input')) {
-  inputList.push(new govbrds.BRInput('br-input', brInput))
+  inputList.push(new core.BRInput('br-input', brInput))
 }
 ```

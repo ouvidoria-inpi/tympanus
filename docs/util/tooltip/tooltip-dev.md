@@ -34,23 +34,23 @@
 
 #### Obrigatórios
 
-| Atributo                                | Tipo     | Descrição                                                 |
-| --------------------------------------- | -------- | --------------------------------------------------------- |
-| `data-tooltip-text="texto do tooltip"`  | atributo | Texto que vai aparecer no tooltip |
+| Atributo                               | Tipo     | Descrição                         |
+| -------------------------------------- | -------- | --------------------------------- |
+| `data-tooltip-text="texto do tooltip"` | atributo | Texto que vai aparecer no tooltip |
 
 ### Atributo no Tooltip com elemento
 
 #### Obrigatórios
 
-| Atributo                                    | Tipo     | Descrição                                                           |
-| ------------------------------------------- | -------- | ------------------------------------------------------------------- |
+| Atributo                               | Tipo     | Descrição                                        |
+| -------------------------------------- | -------- | ------------------------------------------------ |
 | `data-tooltip-target="id do elemento"` | atributo | Indica qual o tooltip em que vai gerar o tooltip |
-| `br-tooltip` | classe | Indica qual o tooltip em que vai gerar o tooltip |
+| `br-tooltip`                           | classe   | Indica qual o tooltip em que vai gerar o tooltip |
 
 ### Javascript
 
 ```javascript
-import Tooltip from 'govbrds'
+import Tooltip from 'core'
  window.document
       .querySelectorAll('[data-tooltip-text]')
       .forEach((TooltipExample) => {

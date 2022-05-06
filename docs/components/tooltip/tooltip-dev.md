@@ -123,32 +123,32 @@ O tooltip fica vinculado ao elemento (tag) declarado na linha/bloco anterior (pa
 
 ## Dependências
 
-- [Popper.js](https://popper.js.org/)
+-   [Popper.js](https://popper.js.org/)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ### Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRTooltip`, passando os seguintes parâmetros:
 
-- Nome da classe (br-tooltip)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-tooltip)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const tooltipList = []
 for (const brTooltip of window.document.querySelectorAll(
   '.br-tooltip:not(.utilities)'
 )) {
-  tooltipList.push(new govbrds.BRTooltip('br-tooltip', brTooltip))
+  tooltipList.push(new core.BRTooltip('br-tooltip', brTooltip))
 }
 ```

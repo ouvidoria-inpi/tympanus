@@ -137,45 +137,46 @@
 
 ## Dependências
 
-- [Button](/components/button)
-- [Checkbox](/components/checkbox)
-- [Input](/components/input)
-- [Item](/components/item)
-- [List](/components/list)
+-   [Button](/components/button)
+-   [Checkbox](/components/checkbox)
+-   [Input](/components/input)
+-   [Item](/components/item)
+-   [List](/components/list)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRSelect`, passando os seguintes parâmetros:
 
-- Nome da classe (br-select)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-select)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const selectList = []
 for (const brSelect of window.document.querySelectorAll('.br-select')) {
-  selectList.push(new govbrds.BRSelect('br-select', brSelect))
+  selectList.push(new core.BRSelect('br-select', brSelect))
 }
 ```
+
 ### Para Obter as Opções Selecionadas
 
 A classe BRSelect oferece duas propriedades para se obter as opções selecionadas
 
-- `selected` - Obtém-se os valores selecionados relativos às `labels` das opções do select
-- `selectedValue` - Obtém-se os valores selecionados relativos ao atributo `value` dos `inputs` das opções do select
+-   `selected` - Obtém-se os valores selecionados relativos às `labels` das opções do select
+-   `selectedValue` - Obtém-se os valores selecionados relativos ao atributo `value` dos `inputs` das opções do select
 
 Ambas as propriedades retoram:
 
-- **Select Simples**: Um único valor selecionado (`string`) ou `undefined` se nenhuma opção foi selecionada
-- **Select Múltiplo**: Um array contendo os valores selecionados (`string`) ou um array vazio se nenhuma opção foi selecionada
+-   **Select Simples**: Um único valor selecionado (`string`) ou `undefined` se nenhuma opção foi selecionada
+-   **Select Múltiplo**: Um array contendo os valores selecionados (`string`) ou um array vazio se nenhuma opção foi selecionada

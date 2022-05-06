@@ -1,10 +1,10 @@
 // import TooltipExample from '../../util/tooltip/tooltip'
-import Scrim from '../../partial/js/behavior/scrim'
-import Tooltip from '../../partial/js/behavior/tooltip'
 import AccordionExample from '../../util/accordion/accordion'
 import CheckgroupExample from '../../util/checkgroup/checkgroup'
 import CollapseExample from '../../util/collapse/collapse'
 import DropdownExample from '../../util/dropdown/dropdown'
+import Scrim from './behavior/scrim'
+import Tooltip from './behavior/tooltip'
 
 export default class Behavior {
   initInstanceAll() {

@@ -1,5 +1,5 @@
 /**
- * govbrds.entries define as entries da build do Webpack.
+ * core.entries define as entries da build do Webpack.
  */
 
 const path = require('path')
@@ -7,23 +7,23 @@ const paths = require('./paths')
 const fs = require('fs')
 let production = false
 
-const govbrds = {
+const core = {
   core: [
-    path.resolve(paths.srcSCSS, 'govbrds.scss'),
+    path.resolve(paths.srcSCSS, 'core.scss'),
 
     path.resolve(paths.srcUtil, 'dropdown', 'dropdown.scss'),
-    path.resolve(paths.srcJSpartial, 'govbrds.entry.js'),
+    path.resolve(paths.srcJSpartial, 'core.entry.js'),
   ],
   'core-base': [
-    path.resolve(paths.srcSCSS, 'govbrds-base.scss'),
+    path.resolve(paths.srcSCSS, 'core-base.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
-  'core-init': [path.resolve(paths.srcJSpartial, 'govbrds-init.js')],
+  'core-init': [path.resolve(paths.srcJSpartial, 'core-init.js')],
   'core-lite': [
-    path.resolve(paths.srcSCSS, 'govbrds-lite.scss'),
+    path.resolve(paths.srcSCSS, 'core-lite.scss'),
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
-  'core.min': [path.resolve(paths.srcJSpartial, 'govbrds.entry.js')],
+  'core.min': [path.resolve(paths.srcJSpartial, 'core.entry.js')],
 }
 
 /**
@@ -207,31 +207,31 @@ function pathsEntryTemplate(templateName) {
 }
 
 function setComponent(name) {
-  govbrds[`components/${name}/${name}`] = pathsEntry(name)
+  core[`components/${name}/${name}`] = pathsEntry(name)
 }
 
 function setPages(name) {
-  govbrds[`pages/${name}/${name}`] = pathsEntryPages(name)
+  core[`pages/${name}/${name}`] = pathsEntryPages(name)
 }
 
 function setUtil(name) {
-  govbrds[`utilities-js/${name}/${name}`] = pathsEntryPages(name)
+  core[`utilities-js/${name}/${name}`] = pathsEntryPages(name)
 }
 
 function setTemplate(name) {
-  // govbrds.setAttribute('components/avatar/' + name, pathsEntry(name))
-  govbrds[`templates/${name}/${name}`] = pathsEntryTemplate(name)
+  // core.setAttribute('components/avatar/' + name, pathsEntry(name))
+  core[`templates/${name}/${name}`] = pathsEntryTemplate(name)
 }
 
 function setTemplates(name, exemplos) {
-  // govbrds['components/' + name + '/' + name] = pathsEntry(name)
-  govbrds[`templates/${name}/${name}`] = pathsExampleTemplates(name, exemplos)
+  // core['components/' + name + '/' + name] = pathsEntry(name)
+  core[`templates/${name}/${name}`] = pathsExampleTemplates(name, exemplos)
 }
 
 function setComponentPug(name, exemplos) {
-  govbrds[`components/${name}/${name}`] = pathsExamplePug(name, exemplos)
+  core[`components/${name}/${name}`] = pathsExamplePug(name, exemplos)
   if (production) {
-    govbrds[`components/${name}/${name}.min`] = pathsEntry(name, exemplos)
+    core[`components/${name}/${name}.min`] = pathsEntry(name, exemplos)
   }
 }
 
@@ -524,55 +524,53 @@ function entries(argv) {
    * webapck entry dos utilitarios
    */
 
-  govbrds['util/arredondamento/arredondamento'] = [
+  core['util/arredondamento/arredondamento'] = [
     path.resolve(paths.srcUtil, 'arredondamento', 'examples.pug'),
   ]
 
-  govbrds['util/bordas/bordas'] = [
+  core['util/bordas/bordas'] = [
     path.resolve(paths.srcUtil, 'bordas', 'examples.pug'),
   ]
 
-  govbrds['util/cores/cores'] = [
+  core['util/cores/cores'] = [
     path.resolve(paths.srcUtil, 'cores', 'examples.pug'),
   ]
 
-  govbrds['util/display/display'] = [
+  core['util/display/display'] = [
     path.resolve(paths.srcUtil, 'display', 'examples.pug'),
   ]
 
-  govbrds['util/elevacao/elevacao'] = [
+  core['util/elevacao/elevacao'] = [
     path.resolve(paths.srcUtil, 'elevacao', 'examples.pug'),
   ]
 
-  govbrds['util/espacamento/espacamento'] = [
+  core['util/espacamento/espacamento'] = [
     path.resolve(paths.srcUtil, 'espacamento', 'examples.pug'),
   ]
 
-  govbrds['util/flexbox/flexbox'] = [
+  core['util/flexbox/flexbox'] = [
     path.resolve(paths.srcUtil, 'flexbox', 'examples.pug'),
   ]
 
-  govbrds['util/grid/grid'] = [
-    path.resolve(paths.srcUtil, 'grid', 'examples.pug'),
-  ]
+  core['util/grid/grid'] = [path.resolve(paths.srcUtil, 'grid', 'examples.pug')]
 
-  govbrds['util/movimento/movimento'] = [
+  core['util/movimento/movimento'] = [
     path.resolve(paths.srcUtil, 'movimento', 'examples.pug'),
   ]
 
-  govbrds['util/overflow/overflow'] = [
+  core['util/overflow/overflow'] = [
     path.resolve(paths.srcUtil, 'overflow', 'examples.pug'),
   ]
 
-  govbrds['util/textos/textos'] = [
+  core['util/textos/textos'] = [
     path.resolve(paths.srcUtil, 'textos', 'examples.pug'),
   ]
 
-  govbrds['util/tipografia/tipografia'] = [
+  core['util/tipografia/tipografia'] = [
     path.resolve(paths.srcUtil, 'tipografia', 'examples.pug'),
   ]
 
-  govbrds['util/accordion/accordion'] = [
+  core['util/accordion/accordion'] = [
     path.resolve(paths.srcUtil, 'accordion', 'examples.pug'),
     path.resolve(
       paths.srcUtil,
@@ -582,7 +580,7 @@ function entries(argv) {
     ),
   ]
 
-  govbrds['util/checkgroup/checkgroup'] = [
+  core['util/checkgroup/checkgroup'] = [
     path.resolve(paths.srcUtil, 'checkgroup', 'examples.pug'),
     path.resolve(
       paths.srcUtil,
@@ -598,7 +596,7 @@ function entries(argv) {
     ),
   ]
 
-  govbrds['util/collapse/collapse'] = [
+  core['util/collapse/collapse'] = [
     path.resolve(paths.srcUtil, 'collapse', 'examples.pug'),
     path.resolve(
       paths.srcUtil,
@@ -608,7 +606,7 @@ function entries(argv) {
     ),
   ]
 
-  govbrds['util/dropdown/dropdown'] = [
+  core['util/dropdown/dropdown'] = [
     path.resolve(paths.srcUtil, 'dropdown', 'examples.pug'),
     path.resolve(
       paths.srcUtil,
@@ -618,38 +616,38 @@ function entries(argv) {
     ),
   ]
 
-  govbrds['util/scrim/scrim'] = [
+  core['util/scrim/scrim'] = [
     path.resolve(paths.srcUtil, 'scrim', 'examples.pug'),
     path.resolve(paths.srcUtil, 'scrim', 'examples', 'scrim-behavior.pug'),
   ]
 
-  govbrds['util/tooltip/tooltip'] = [
+  core['util/tooltip/tooltip'] = [
     path.resolve(paths.srcUtil, 'tooltip', 'examples.pug'),
     path.resolve(paths.srcUtil, 'tooltip', 'examples', 'tooltip-behavior.pug'),
     path.resolve(paths.srcUtil, 'tooltip', 'examples', 'tooltip-simples.pug'),
   ]
 
-  govbrds['partial/js/behavior/accordion'] = [
+  core['partial/js/behavior/accordion'] = [
     path.resolve(paths.srcJSUtilbehavior, 'accordion.js'),
   ]
-  govbrds['partial/js/behavior/collapse'] = [
+  core['partial/js/behavior/collapse'] = [
     path.resolve(paths.srcJSUtilbehavior, 'collapse.js'),
   ]
 
-  govbrds['partial/js/behavior/checkgroup'] = [
+  core['partial/js/behavior/checkgroup'] = [
     path.resolve(paths.srcJSUtilbehavior, 'checkgroup.js'),
   ]
 
-  govbrds['partial/js/behavior/dropdown'] = [
+  core['partial/js/behavior/dropdown'] = [
     path.resolve(paths.srcJSUtilbehavior, 'dropdown.js'),
   ]
-  govbrds['partial/js/behavior/scrim'] = [
+  core['partial/js/behavior/scrim'] = [
     path.resolve(paths.srcJSUtilbehavior, 'scrim.js'),
   ]
-  govbrds['partial/js/behavior/tooltip'] = [
+  core['partial/js/behavior/tooltip'] = [
     path.resolve(paths.srcJSUtilbehavior, 'tooltip.js'),
   ]
-  return govbrds
+  return core
 }
 
 module.exports = {

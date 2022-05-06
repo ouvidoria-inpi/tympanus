@@ -60,10 +60,10 @@ Esses estados podem ser aplicados unicamente nos elementos internos do component
 
 ## Regras especiais
 
-- Ao navegar até os limites do palco o botão de navegação correspondente, anterior ou próximo, é desabilitado
-- No layout móvel por padrão os botões de navegação são ocultados, para ativá-los é necessário usar o atributo *data-mobile-nav*  
-- Na necesidade de se destacar melhor os botões de naveção pode ser usada a classe *secondary* ao invés da *terciary* (padrão)
-- O carousel vem configurado com uma altura mínima de 400px por padrão. Para alterar essa altura modifique o valor da seguinte variável/token CSS: *--carousel-min-height*
+-   Ao navegar até os limites do palco o botão de navegação correspondente, anterior ou próximo, é desabilitado
+-   No layout móvel por padrão os botões de navegação são ocultados, para ativá-los é necessário usar o atributo *data-mobile-nav*  
+-   Na necesidade de se destacar melhor os botões de naveção pode ser usada a classe *secondary* ao invés da *terciary* (padrão)
+-   O carousel vem configurado com uma altura mínima de 400px por padrão. Para alterar essa altura modifique o valor da seguinte variável/token CSS: *--carousel-min-height*
 
 ## Próximos Passos
 
@@ -74,37 +74,37 @@ Esses estados podem ser aplicados unicamente nos elementos internos do component
 
 LEGENDA:
 
-- Não planejado: A necessidade foi identificada, mas ainda não tem data para ser satisfeita.
-- Fazendo: A equipe está trabalhando na necessidade.
-- Feito: Necessidade já é satisfeita.
+-   Não planejado: A necessidade foi identificada, mas ainda não tem data para ser satisfeita.
+-   Fazendo: A equipe está trabalhando na necessidade.
+-   Feito: Necessidade já é satisfeita.
 
 ## Dependências
 
-- [Button](/components/button)
-- [Step](/components/step)
+-   [Button](/components/button)
+-   [Step](/components/step)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRCarousel`, passando os seguintes parâmetros:
 
-- Nome da classe (br-carousel)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-carousel)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const carouselList = []
 for (const brCarousel of window.document.querySelectorAll('.br-carousel')) {
-  carouselList.push(new govbrds.BRCarousel('br-carousel', brCarousel))
+  carouselList.push(new core.BRCarousel('br-carousel', brCarousel))
 }
 ```
