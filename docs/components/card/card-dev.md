@@ -40,13 +40,13 @@
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
@@ -60,6 +60,6 @@ const listCard = []
 for (const [index, brCard] of window.document
   .querySelectorAll('.br-card')
   .entries()) {
-  listCard.push(new govbrds.BRCard('br-card', brCard, index))
+  listCard.push(new core.BRCard('br-card', brCard, index))
 }
 ```

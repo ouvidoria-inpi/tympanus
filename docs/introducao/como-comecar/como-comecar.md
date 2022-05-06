@@ -62,7 +62,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Design System GOV.BR CSS-->
         <link
             rel="stylesheet"
-            href="node_modules\@govbr\govbr-ds\dist\core.min.css"
+            href="node_modules\@govbr-ds\core\dist\core.min.css"
         />
         <!-- Fontawesome-->
         <link
@@ -75,7 +75,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script src="node_modules\@govbr\govbr-ds\dist\core.min.js"></script>
+        <script src="node_modules\@govbr-ds\core\dist\core.min.js"></script>
     </body>
 </html>
 ```
@@ -84,10 +84,10 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
 
 ## Versão "init" do js
 
-Essa é a versão init(core-init.js) com os componentes já **inicializados** diferente do govbrds.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
+Essa é a versão init(core-init.js) com os componentes já **inicializados** diferente do core.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
-<script src="node_modules\@govbr\govbr-ds\dist\govbrds-init.min.js"></script>
+<script src="node_modules\@govbr-ds\core\dist\core-init.min.js"></script>
 ```
 
 ## Versão "lite" da folha de estilo
@@ -98,7 +98,7 @@ Você poderá usar uma versão "lite" do CSS no lugar da versão completa. No c�
 <!-- Design System GOV.BR CSS-->
 <link
    rel="stylesheet"
-   href="node_modules\@govbr\govbr-ds\dist\govbrds-lite.css"
+   href="node_modules\@govbr-ds\core\dist\core-lite.css"
 />
 ```
 

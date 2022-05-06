@@ -24,11 +24,11 @@
 
 #### Opcionais
 
-| Atributo                    | Tipo     | Descrição                                                                               |
-| --------------------------- | -------- | ------------------------------------------------------- |
-| `aria-controls="id-target"` | atributo | Atributo de acessibilidade                              |
-| `aria-expanded="true/false"`| atributo | Atributo de acessibilidade                              |
-| `data-visible="true/false"` | atributo | Atributo de controle de visibilidade em relação ao alvo |
+| Atributo                     | Tipo     | Descrição                                               |
+| ---------------------------- | -------- | ------------------------------------------------------- |
+| `aria-controls="id-target"`  | atributo | Atributo de acessibilidade                              |
+| `aria-expanded="true/false"` | atributo | Atributo de acessibilidade                              |
+| `data-visible="true/false"`  | atributo | Atributo de controle de visibilidade em relação ao alvo |
 
 > Os atributos opcionais do acionador são gerados automaticamente pelo javascript.
 
@@ -42,9 +42,9 @@
 
 #### Opcionais
 
-| Atributo                   | Tipo     | Descrição                         |
-| -------------------------- | -------- | --------------------------------- |
-| `aria-hidden="true/false"` | atributo | Atributo de acessibilidade        |
+| Atributo                   | Tipo     | Descrição                      |
+| -------------------------- | -------- | ------------------------------ |
+| `aria-hidden="true/false"` | atributo | Atributo de acessibilidade     |
 | `hidden`                   | atributo | Atributo que abre/fecha o alvo |
 
 > Os atributos opcionais do alvo são gerados pelo javascript.
@@ -65,9 +65,9 @@ new Collapse(config)
 
 #### Objeto de configuração
 
-| Propriedade  | Tipo    | Descrição                                                        |
+| Propriedade  | Tipo    | Descrição                                                          |
 | ------------ | ------- | ------------------------------------------------------------------ |
-| `trigger`    | Object  | Referência ao elemento (DOM) acionador                                   |
+| `trigger`    | Object  | Referência ao elemento (DOM) acionador                             |
 | `iconToShow` | String  | Classe CSS para o ícone com o significado de "mostrar o conteúdo"  |
 | `iconToHide` | String  | Classe CSS para o ícone com o significado de "esconder o conteúdo" |
 | `useIcons`   | Boolean | Indica se o comportamento usará ou não ícones                      |
@@ -99,11 +99,11 @@ new Collapse(config)
 
 #### Opcionais
 
-| Atributo                    | Tipo     | Descrição                                                                               |
-| --------------------------- | -------- | ------------------------------------------------------- |
-| `aria-controls="id-target"` | atributo | Atributo de acessibilidade                              |
-| `aria-expanded="true/false"`| atributo | Atributo de acessibilidade                              |
-| `data-visible="true/false"` | atributo | Atributo de controle de visibilidade em relação ao alvo |
+| Atributo                     | Tipo     | Descrição                                               |
+| ---------------------------- | -------- | ------------------------------------------------------- |
+| `aria-controls="id-target"`  | atributo | Atributo de acessibilidade                              |
+| `aria-expanded="true/false"` | atributo | Atributo de acessibilidade                              |
+| `data-visible="true/false"`  | atributo | Atributo de controle de visibilidade em relação ao alvo |
 
 > Os atributos opcionais do acionador são gerados automaticamente pelo javascript.
 
@@ -117,9 +117,9 @@ new Collapse(config)
 
 #### Opcionais
 
-| Atributo                   | Tipo     | Descrição                         |
-| -------------------------- | -------- | --------------------------------- |
-| `aria-hidden="true/false"` | atributo | Atributo de acessibilidade        |
+| Atributo                   | Tipo     | Descrição                      |
+| -------------------------- | -------- | ------------------------------ |
+| `aria-hidden="true/false"` | atributo | Atributo de acessibilidade     |
 | `hidden`                   | atributo | Atributo que abre/fecha o alvo |
 
 > Os atributos opcionais do alvo são gerados pelo javascript.
@@ -129,7 +129,7 @@ new Collapse(config)
 **Para cada acionador (trigger)**, instanciar a classe Collapse passando um objeto de configuração.
 
 ```javascript
-import Collapse from 'govbrds'
+import Collapse from 'core'
 const config = {
   trigger,
   iconToShow: 'fa-chevron-down',
@@ -143,9 +143,9 @@ new Collapse(config)
 
 #### Objeto de configuração
 
-| Propriedade  | Tipo    | Descrição                                                        |
+| Propriedade  | Tipo    | Descrição                                                          |
 | ------------ | ------- | ------------------------------------------------------------------ |
-| `trigger`    | Object  | Referência ao elemento (DOM) acionador                                   |
+| `trigger`    | Object  | Referência ao elemento (DOM) acionador                             |
 | `iconToShow` | String  | Classe CSS para o ícone com o significado de "mostrar o conteúdo"  |
 | `iconToHide` | String  | Classe CSS para o ícone com o significado de "esconder o conteúdo" |
 | `useIcons`   | Boolean | Indica se o comportamento usará ou não ícones                      |

@@ -24,9 +24,9 @@
 
 #### Obrigatórios
 
-| Atributo                   | Tipo     | Descrição                                                 |
-| -------------------------- | -------- | --------------------------------------------------------- |
-| `data-parent="tag-group"`  | atributo | Indica que o checkbox é o pai e a tag indentifica o grupo |
+| Atributo                  | Tipo     | Descrição                                                 |
+| ------------------------- | -------- | --------------------------------------------------------- |
+| `data-parent="tag-group"` | atributo | Indica que o checkbox é o pai e a tag indentifica o grupo |
 
 #### Opcionais
 
@@ -87,7 +87,7 @@ Para que isso aconteça, deve-se adicionar o atributo `data-parent` no checkbox 
 Em seguida chamar o método setBehavior()
 
 ```javascript
-import Checkgroup from 'govbrds'
+import Checkgroup from 'core'
 for (const trigger of component.document.querySelectorAll(
       'input[type="checkbox"][data-parent]'
     )) {

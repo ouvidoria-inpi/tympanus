@@ -33,8 +33,8 @@ Esses estados podem ser aplicados unicamente no elemento `step-progress-btn`, e 
 
 ## Regras especiais
 
-- Quando houver a necessidade de se utilizar muitos passos, recomenda-se o uso do atributo `data-scroll`, caso contrário deve-se omitir o atributo pois os botões ajustar-se-ão automaticamente ao tamanho da tela.
-- No layout horizontal com alinhamento a esquerda ou direita, quando em um dispositivo móvel (mobile), o texto de descrição do passo (step-info) será automaticamente ocultado para manter a integridade do layout.
+-   Quando houver a necessidade de se utilizar muitos passos, recomenda-se o uso do atributo `data-scroll`, caso contrário deve-se omitir o atributo pois os botões ajustar-se-ão automaticamente ao tamanho da tela.
+-   No layout horizontal com alinhamento a esquerda ou direita, quando em um dispositivo móvel (mobile), o texto de descrição do passo (step-info) será automaticamente ocultado para manter a integridade do layout.
 
 ## Próximos Passos
 
@@ -46,36 +46,36 @@ Esses estados podem ser aplicados unicamente no elemento `step-progress-btn`, e 
 
 LEGENDA:
 
-- Não planejado: A necessidade foi identificada, mas ainda não tem data para ser satisfeita.
-- Fazendo: A equipe está trabalhando na necessidade.
-- Feito: Necessidade já é satisfeita.
+-   Não planejado: A necessidade foi identificada, mas ainda não tem data para ser satisfeita.
+-   Fazendo: A equipe está trabalhando na necessidade.
+-   Feito: Necessidade já é satisfeita.
 
 ## Dependências
 
-- [Button](/components/button)
+-   [Button](/components/button)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRStep`, passando os seguintes parâmetros:
 
-- Nome da classe (br-step)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-step)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const stepList = []
 for (const brStep of window.document.querySelectorAll('.br-step')) {
-  stepList.push(new govbrds.BRStep('br-step', brStep))
+  stepList.push(new core.BRStep('br-step', brStep))
 }
 ```

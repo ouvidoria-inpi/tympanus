@@ -122,36 +122,36 @@
 
 ## Dependências
 
-- [Button](/components/button)
-- [Divider](/components/divider)
-- [Input](/components/input)
-- [Item](/components/item)
-- [List](/components/list)
-- [Radio](/components/radio)
-- [Select](/components/select)
+-   [Button](/components/button)
+-   [Divider](/components/divider)
+-   [Input](/components/input)
+-   [Item](/components/item)
+-   [List](/components/list)
+-   [Radio](/components/radio)
+-   [Select](/components/select)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRPagination`, passando os seguintes parâmetros:
 
-- Nome da classe (br-pagination)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-pagination)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const paginationList = []
 for (const brPagination of window.document.querySelectorAll('.br-pagination')) {
-  paginationList.push(new govbrds.BRPagination('br-pagination', brPagination))
+  paginationList.push(new core.BRPagination('br-pagination', brPagination))
 }
 ```

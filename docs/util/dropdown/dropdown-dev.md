@@ -21,15 +21,15 @@
 | ------------------------- | -------- | ----------------------------------------------------------------------------------- |
 | `data-toggle="dropdown"`  | atributo | Indica que o elemento é o acionador do comportamento e qual o tipo de comportamento |
 | `data-target="id-target"` | atributo | Indica qual o elemento que é o alvo (aquele que será aberto/fechado)                |
-| `id` | atributo | id do alvo              |
+| `id`                      | atributo | id do alvo                                                                          |
 
 #### Opcionais
 
-| Atributo                    | Tipo     | Descrição                                                                               |
-| --------------------------- | -------- | ------------------------------------------------------- |
-| `aria-controls="id-target"` | atributo | Atributo de acessibilidade                              |
-| `aria-expanded="true/false"`| atributo | Atributo de acessibilidade                              |
-| `data-visible="true/false"` | atributo | Atributo de controle de visibilidade em relação ao alvo |
+| Atributo                     | Tipo     | Descrição                                               |
+| ---------------------------- | -------- | ------------------------------------------------------- |
+| `aria-controls="id-target"`  | atributo | Atributo de acessibilidade                              |
+| `aria-expanded="true/false"` | atributo | Atributo de acessibilidade                              |
+| `data-visible="true/false"`  | atributo | Atributo de controle de visibilidade em relação ao alvo |
 
 > Os atributos opcionais do acionador são gerados automaticamente pelo javascript.
 
@@ -43,9 +43,9 @@
 
 #### Opcionais
 
-| Atributo                   | Tipo     | Descrição                         |
-| -------------------------- | -------- | --------------------------------- |
-| `aria-hidden="true/false"` | atributo | Atributo de acessibilidade        |
+| Atributo                   | Tipo     | Descrição                      |
+| -------------------------- | -------- | ------------------------------ |
+| `aria-hidden="true/false"` | atributo | Atributo de acessibilidade     |
 | `hidden`                   | atributo | Atributo que abre/fecha o alvo |
 
 > Os atributos opcionais do alvo são gerados pelo javascript.
@@ -55,7 +55,7 @@
 **Para cada acionador (trigger)**, instanciar a classe dropdown passando um objeto de configuração.
 
 ```javascript
-import Dropdown from 'govbrds'
+import Dropdown from 'core'
 const config = {
   trigger,
   iconToShow: 'fa-chevron-down',
@@ -70,12 +70,12 @@ new Dropdown(config)
 
 #### Objeto de configuração
 
-| Propriedade  | Tipo    | Descrição                                                        |
+| Propriedade  | Tipo    | Descrição                                                          |
 | ------------ | ------- | ------------------------------------------------------------------ |
-| `trigger`    | Object  | Referência ao elemento (DOM) acionador                                   |
+| `trigger`    | Object  | Referência ao elemento (DOM) acionador                             |
 | `iconToShow` | String  | Classe CSS para o ícone com o significado de "mostrar o conteúdo"  |
 | `iconToHide` | String  | Classe CSS para o ícone com o significado de "esconder o conteúdo" |
 | `useIcons`   | Boolean | Indica se o comportamento usará ou não ícones                      |
-| `target`    | Object  | Referência ao elemento (DOM) alvo                                   |
+| `target`     | Object  | Referência ao elemento (DOM) alvo                                  |
 
 > Os propriedades `iconToShow`, `iconToHide` e `useIcons` possuem, por padrão, os valores `fa-chevron-down`, `fa-chevron-up` e `true`, respectivamente. Por tanto, são **opcionais** no objeto de configuração.

@@ -1,6 +1,6 @@
 ## Dependências
 
-* script `accordion.js`
+*   script `accordion.js`
 
 ## Código básico
 
@@ -22,12 +22,12 @@
 
 O componente é composto dos seguintes elementos:
 
-* `br-accordion` : container do componente;
-* `item` : agrupa o item icone(icon) e título(title);
-* `header` : área do cabeçalho;
-* `icon` : ícone do cabeçalho;
-* `title` : título do cabeçalho;
-* `content` : área do conteúdo.
+*   `br-accordion` : container do componente;
+*   `item` : agrupa o item icone(icon) e título(title);
+*   `header` : área do cabeçalho;
+*   `icon` : ícone do cabeçalho;
+*   `title` : título do cabeçalho;
+*   `content` : área do conteúdo.
 
 ### `br-accordion`
 
@@ -125,26 +125,26 @@ O script `accordion.js` irá fazer a troca automática dos ícones nas situaçõ
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRAccordion`, passando os seguintes parâmetros:
 
-* Nome da classe (br-accordion)
-* Objeto referenciando a raiz do componente DOM
+*   Nome da classe (br-accordion)
+*   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const accordionList = []
 for (const brAccordion of window.document.querySelectorAll('.br-accordion')) {
   accordionList.push(
-    Object.create(new govbrds.BRAccordion('br-accordion', brAccordion))
+    Object.create(new core.BRAccordion('br-accordion', brAccordion))
   )
 }
 ```

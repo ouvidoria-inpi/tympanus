@@ -6,8 +6,8 @@ const TerserPlugin = require('terser-webpack-plugin')
 
 // GOVBR-DS Build Stuff
 const paths = require('./webpack/paths')
-const { plugins } = require('./webpack/govbrds.plugins')
-const { entries } = require('./webpack/govbrds.entries')
+const { plugins } = require('./webpack/core.plugins')
+const { entries } = require('./webpack/core.entries')
 
 // Configuração webpack
 const webpackConfig = (_env, argv) => {
@@ -20,9 +20,9 @@ const webpackConfig = (_env, argv) => {
     output: {
       filename: '[name].js',
       path: paths.dist,
-      library: "govbrds",
+      library: 'core',
       libraryTarget: 'umd',
-      umdNamedDefine: true
+      umdNamedDefine: true,
     },
     resolve: {
       alias: {
@@ -32,7 +32,7 @@ const webpackConfig = (_env, argv) => {
     module: {
       rules: [
         {
-          test: /(?<!govbrds)((?<!min))\.s[ac]ss$/i,
+          test: /(?<!core)((?<!min))\.s[ac]ss$/i,
           include: paths.src,
           use: [
             MiniCssExtractPlugin.loader,
@@ -46,7 +46,8 @@ const webpackConfig = (_env, argv) => {
                   includePaths: [paths.srcComponents],
                   outputStyle: 'expanded',
                 },
-                additionalData: '@use "sass:math";\n @import "../../partial/scss/base";\n ',
+                additionalData:
+                  '@use "sass:math";\n @import "../../partial/scss/base";\n ',
               },
             },
           ],
@@ -69,7 +70,7 @@ const webpackConfig = (_env, argv) => {
           },
         },
         {
-          test: /(govbrds)\.s[ac]ss$/i,
+          test: /(core)\.s[ac]ss$/i,
           include: paths.src,
           use: [
             MiniCssExtractPlugin.loader,
@@ -95,9 +96,6 @@ const webpackConfig = (_env, argv) => {
               options: {
                 name: '[name].html',
                 esModule: false,
-
-
-
 
                 // Mantém a estrutura de diretórios (mas excluindo-se o 'src/pug/views')
                 outputPath: (
@@ -143,14 +141,13 @@ const webpackConfig = (_env, argv) => {
               },
             },
             {
-              loader: path.resolve(paths.webpackLoaders, 'govbrds-pug-loader.js'),
+              loader: path.resolve(paths.webpackLoaders, 'core-pug-loader.js'),
               options: {
                 // Se esse loader for usado com o file-loader, utilize 'html'.
                 // Caso seja usado pelo html-webpack-plugin, utilize 'commonjs'.
                 outputType: 'html',
                 compilerOptions: {
                   pretty: true,
-
                 },
                 locals: {
                   version: '../',
@@ -191,12 +188,11 @@ const webpackConfig = (_env, argv) => {
             mangle: true,
             output: {
               comments: false,
-
             },
             compress: {
               inline: 1,
-              unused: false
-            }
+              unused: false,
+            },
           },
           extractComments: false,
         }),

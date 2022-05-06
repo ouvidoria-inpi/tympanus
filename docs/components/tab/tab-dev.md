@@ -129,24 +129,24 @@
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ### Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRTab`, passando os seguintes parâmetros:
 
-- Nome da classe (br-tab)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-tab)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const abasList = []
 for (const brTab of window.document.querySelectorAll('.br-tab')) {
-  abasList.push(new govbrds.BRTab('br-tab', brTab))
+  abasList.push(new core.BRTab('br-tab', brTab))
 }
 ```

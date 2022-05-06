@@ -104,9 +104,9 @@ O acionador do Menu Contextual deve ser incluído no elemento `.menu-trigger`, p
 
 A lista de itens de menu deve ser organizada usando `<ul>` e `<li>`
 
-1.  O item de menu suporta uso de ícones ilustrativos. Coloque-o dentro do elemento `.icon` **Este elemento é opcional!**
-2.  Os ícones de seta são incluídos automaticamente pelo script do menu
-3.  Para indicar que o menu item da lista está ativo use a classe `.active`
+1. O item de menu suporta uso de ícones ilustrativos. Coloque-o dentro do elemento `.icon` **Este elemento é opcional!**
+2. Os ícones de seta são incluídos automaticamente pelo script do menu
+3. Para indicar que o menu item da lista está ativo use a classe `.active`
 
 ```html
 <div class="menu-item">
@@ -171,32 +171,32 @@ Exemplo de uso do atributo `data-breakpoints`:
 
 ## Dependências
 
-- [Button](/components/button)
+-   [Button](/components/button)
 
 ## Instanciação do Componente
 
 ### HTML
 
-Incluir o arquivo `govbrds.min.js` no html.
+Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/govbrds.min.js"></script>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
-> O arquivo govbrds.min.js expõe um objeto chamado `govbrds` contendo as referências para todas as classes exportadas.
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
 ## Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRMenu`, passando os seguintes parâmetros:
 
-- Nome da classe (br-menu)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-menu)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 
 const menuList = []
 for (const brMenu of window.document.querySelectorAll('.br-menu')) {
-  menuList.push(new govbrds.BRMenu('br-menu', brMenu))
+  menuList.push(new core.BRMenu('br-menu', brMenu))
 }
 
 ```
