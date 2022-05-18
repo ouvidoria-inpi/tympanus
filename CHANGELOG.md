@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.0.0-rc.2 (2022-05-16)
+
+### Correções/Alterações
+
+*   altera link do contributing  ([698855d](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/698855dd3d8185997f9c07ed3f53e8fe214b1467))
+
 ### 3.0.0-rc.1 (2022-05-16)
 
 ### Correções/Alterações
