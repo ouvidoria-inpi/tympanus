@@ -62,7 +62,7 @@ Use nossos canais abaixo para obter tirar suas dúvidas:
 
 ## Como contribuir?
 
-Por favor verifique nossos guias de [como contribuir](./CONTRIBUTING.md 'Como contribuir?').
+Por favor verifique nossos guias de [como contribuir](https://govbr-ds.gitlab.io/govbr-ds-wiki/comunidade/contribuindo-com-o-ds/ 'Como contribuir?').
 
 ### Commits
 
