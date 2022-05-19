@@ -138,8 +138,8 @@ CSS:
 #     - merge_requests
 
 
-# Publica o pacote conforme a tag
-publish_npm:
+# Publica o pacote conforme a tag RC
+publish_npm_rc:
   stage: pages
   artifacts:
     paths:
@@ -147,7 +147,7 @@ publish_npm:
     expire_in: 1 week
   script:
     - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-    - npm publish
+    - npm publish --tags rc
   when: manual
   only:
     - tags
