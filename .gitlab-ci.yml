@@ -138,16 +138,16 @@ CSS:
 #     - merge_requests
 
 
-# Precisa configurar para gerar a versão conforme o standard_version antes de habilitar
-# publish_npm:
-#   stage: pages
-#   artifacts:
-#     paths:
-#       - dist
-#     expire_in: 1 week
-#   script:
-#     - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-#     - npm publish
-#   when: manual
-#   only:
-#     - main
+# Publica o pacote conforme a tag
+publish_npm:
+  stage: pages
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
+  script:
+    - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+    - npm publish
+  when: manual
+  only:
+    - tags
