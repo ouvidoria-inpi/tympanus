@@ -8,6 +8,15 @@
 					"type": "documentation"
 				},
 				{
+					"ext": [
+						"html"
+					],
+					"hideLabel": true,
+					"id": "padrao-minimo",
+					"label": "Padrão Mínimo",
+					"type": "documentation"
+				},
+				{
 					"id": "principios",
 					"label": "Princípios do Design System",
 					"type": "documentation"
@@ -1493,6 +1502,12 @@
 			"type": "documentation"
 		},
 		{
+			"hideLabel": true,
+			"id": "prototipo",
+			"label": "Padrões para Android e IOS",
+			"type": "documentation"
+		},
+		{
 			"files": [
 				{
 					"description": "Disciplina a implantação e a gestão do Padrão Digital de Governo dos órgãos e entidades do Poder Executivo federal.",
@@ -1517,7 +1532,7 @@
 							"description": "Baixe aqui o UI Kit para construção de projetos web Versão para Adobe XD.",
 							"image": "assets/imgs/logo-xd.png",
 							"isNew": true,
-							"label": "UI Kit WEB",
+							"label": "UI Kit WEB Figma",
 							"path": "https://serprodrive.serpro.gov.br/s/ARP4gmoRKtwTena",
 							"fileDescription": "uikit-govbr-ds-web_5.1.1.zip (14MB)",
 							"version": "Versão 5.1.1"
@@ -1535,15 +1550,15 @@
 							"description": "Baixe aqui o UI Kit para construção de projetos mobile em Android.",
 							"image": "assets/imgs/logo-android.png",
 							"label": "UI Kit Android",
-							"path": "https://serprodrive.serpro.gov.br/s/tJ9deTy7rrpGNXL",
-							"version": "Versão 4.0.0"
+							"path": "https://serprodrive.serpro.gov.br/s/kLJfZc9zpfa8jsL",
+							"version": "Versão 4.2.0"
 						},
 						{
 							"description": "Baixe aqui o UI Kit para construção de projetos mobile em IOS.",
 							"image": "assets/imgs/logo-ios.png",
 							"label": "UI Kit iOS",
-							"path": "https://serprodrive.serpro.gov.br/s/s9FTFtG5qPRNPeZ",
-							"version": "Versão 3.0.0"
+							"path": "https://serprodrive.serpro.gov.br/s/CiLWgb77s3tbr69",
+							"version": "Versão 3.1.0"
 						},
 						{
 							"description": "Baixe aqui o UI Kit para construção de wireframes e protótipos.",
@@ -1562,9 +1577,16 @@
 						{
 							"description": "Baixe aqui brushes para texturas das ilustrações.",
 							"image": "assets/imgs/pacote.png",
-							"label": "Pack de Assets de Ilustração",
+							"label": "Pack Ilustração",
 							"path": "https://serprodrive.serpro.gov.br/s/fqpQbTmtmpPM6r4",
 							"version": "Versão 1.0.0"
+						},
+						{
+							"description": "Baixe aqui o Kit para construção de protótipos.",
+							"image": "assets/imgs/pacote.png",
+							"label": "Protótipos",
+							"path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW",
+							"version": "Versão 1.0.1"
 						}
 					],
 					"id": "designer",
@@ -1605,6 +1627,12 @@
 							"id": "uikitios",
 							"label": "UI KIT IOS",
 							"versions": [
+								{
+									"data": "10 dez 2021",
+									"dsgov_version": "2.4.1",
+									"path": "https://serprodrive.serpro.gov.br/s/s9FTFtG5qPRNPeZ",
+									"version": "Versão 3.0.0"
+								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/yybFqo4ewZyHoLd",
 									"version": "Versão 2.0.0",
