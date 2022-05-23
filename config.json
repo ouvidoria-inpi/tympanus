@@ -1829,20 +1829,20 @@
 				{
 					"files": [
 						{
-							"description": "Utilize código pronto em HTML, CSS e JavaScript.",
+							"description": "Repositório dos códigos.",
 							"image": "assets/imgs/logos-w3c.png",
 							"isNew": true,
-							"label": "Código-fonte Design System GOV.BR",
-							"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-latest.zip",
-							"version": "Versão 2.4.2"
+							"label": "Repositório do GOV.BR-DS CORE",
+							"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/archive/v3.0.1-rc/govbr-ds-dev-core-v3.0.1-rc.zip",
+							"version": "Versão 3.0.0-rc"
 						},
 						{
 							"description": "Baixe o pacote NPM para configuração  de seu projeto.",
 							"image": "assets/imgs/logo-npm.png",
 							"isNew": true,
 							"label": "Pacote NPM",
-							"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-latest.tgz",
-							"version": "Versão 2.4.2"
+							"path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.0.0-rc.tgz",
+							"version": "Versão 3.0.0-rc"
 						},
 						{
 							"description": "Baixe o pacote CDN para configuração de seu projeto.",
@@ -1861,6 +1861,11 @@
 							"id": "codigoFonte",
 							"label": "Código Fonte",
 							"versions": [
+								{
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.2.zip",
+									"version": "2.4.1",
+									"data": "10 dez 2021"
+								},
 								{
 									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.1.zip",
 									"version": "2.4.1",
