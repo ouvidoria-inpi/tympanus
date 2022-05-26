@@ -1531,10 +1531,11 @@
 							"description": "Baixe aqui o UI Kit para construção de projetos web Versão para Adobe XD.",
 							"image": "assets/imgs/logo-xd.png",
 							"isNew": true,
-							"label": "UI Kit WEB Figma",
+							"label": "UI Kit WEB XD",
 							"path": "https://serprodrive.serpro.gov.br/s/ARP4gmoRKtwTena",
 							"fileDescription": "uikit-govbr-ds-web_5.1.1.zip (14MB)",
-							"version": "Versão 5.1.1"
+							"version": "Versão 5.1.1",
+							"id": "ui-kit-web-xd-5-1-1"
 						},
 						{
 							"description": "Baixe aqui o UI Kit para construção de projetos web Versão para Figma.",
@@ -1543,140 +1544,54 @@
 							"label": "UI Kit Figma",
 							"path": "https://serprodrive.serpro.gov.br/s/nFFEGRCBJzatw4Y",
 							"fileDescription": "uikit-govbr-ds-web-figma_2.2.0.zip (1 MB)",
-							"version": "Versão 2.2.0"
+							"version": "Versão 2.2.0",
+							"id": "ui-kit-web-figma-2-2-0"
 						},
 						{
 							"description": "Baixe aqui o UI Kit para construção de projetos mobile em Android.",
 							"image": "assets/imgs/logo-android.png",
 							"label": "UI Kit Android",
 							"path": "https://serprodrive.serpro.gov.br/s/kLJfZc9zpfa8jsL",
-							"version": "Versão 4.2.0"
+							"version": "Versão 4.2.0",
+							"id": "ui-kit-android-4-2-0"
 						},
 						{
 							"description": "Baixe aqui o UI Kit para construção de projetos mobile em IOS.",
 							"image": "assets/imgs/logo-ios.png",
 							"label": "UI Kit iOS",
 							"path": "https://serprodrive.serpro.gov.br/s/CiLWgb77s3tbr69",
-							"version": "Versão 3.1.0"
+							"version": "Versão 3.1.0",
+							"id": "ui-kit-ios-3-1-0"
 						},
 						{
-							"description": "Baixe aqui o UI Kit para construção de wireframes e protótipos.",
+							"description": "Baixe aqui o UI Kit para construção de wireframes.",
 							"image": "assets/imgs/wireframe.png",
 							"label": "UI Kit Wireframe",
 							"path": "https://serprodrive.serpro.gov.br/s/JG4XEek8sSftxqW",
-							"version": "Versão 2.0.0"
+							"version": "Versão 2.0.0",
+							"id": "ui-kit-wireframe-2-0-0"
 						},
 						{
 							"description": "Baixe aqui novos modelos de ilustrações.",
 							"image": "assets/imgs/pacote.png",
 							"label": "Packs Ilustração",
 							"path": "https://serprodrive.serpro.gov.br/s/kqcLeMZ5tQiNxrR",
-							"version": "Versão 1.0.0"
+							"version": "Versão 1.0.0",
+							"id": "ilustracao-pack-1-0-0"
 						},
 						{
 							"description": "Baixe aqui brushes para texturas das ilustrações.",
 							"image": "assets/imgs/pacote.png",
 							"label": "Pack Ilustração",
 							"path": "https://serprodrive.serpro.gov.br/s/fqpQbTmtmpPM6r4",
-							"version": "Versão 1.0.0"
-						},
-						{
-							"description": "Baixe aqui o Kit para construção de protótipos.",
-							"image": "assets/imgs/pacote.png",
-							"label": "Protótipos",
-							"path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW",
-							"version": "Versão 1.0.1"
+							"version": "Versão 1.0.0",
+							"id": "ilustracao-assets-1-0-0"
 						}
 					],
 					"id": "designer",
 					"label": "Designer",
 					"description": "Baixe versões anteriores dos Artefatos de Design do Design System GOV.BR.",
-					"history": [
-						{
-							"id": "uikitweb",
-							"label": "UI KIT WEB",
-							"versions": [
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/9GF75So4nZrYapo",
-									"version": "5.1.0",
-									"data": "26 nov 2021",
-									"govbr-ds_version": "2.4.1"
-								},
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/G22CwAW4WP6B6oQ",
-									"version": "4.8.0",
-									"data": "11 ago 2021",
-									"govbr-ds_version": "2.2.0"
-								},
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/YcnCqAZZGqaKeLR",
-									"version": "4.7.0",
-									"data": "01 jul 2021",
-									"govbr-ds_version": "2.1.0"
-								},
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/95QZBA7593LBCpT",
-									"version": "4.4.0",
-									"data": "02 mar 2021",
-									"govbr-ds_version": "2.0.2"
-								}
-							]
-						},
-						{
-							"id": "uikitios",
-							"label": "UI KIT IOS",
-							"versions": [
-								{
-									"data": "10 dez 2021",
-									"dsgov_version": "2.4.1",
-									"path": "https://serprodrive.serpro.gov.br/s/s9FTFtG5qPRNPeZ",
-									"version": "Versão 3.0.0"
-								},
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/yybFqo4ewZyHoLd",
-									"version": "Versão 2.0.0",
-									"data": "26 nov 2021",
-									"govbr-ds_version": "2.4.1"
-								}
-							]
-						},
-						{
-							"id": "uikitfigma",
-							"label": "UI KIT FIGMA",
-							"versions": [
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/ktmsdecdgPa3Dmw",
-									"version": "2.1.1",
-									"data": "26 nov 2021",
-									"govbr-ds_version": "2.4.1"
-								},
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/Z7pecTT7Ec2zsYd",
-									"version": "2.0.0",
-									"data": "28 set 2021",
-									"govbr-ds_version": "2.3.0"
-								},
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/y23EM6wxy3CpTbW",
-									"version": "1.8.0",
-									"data": "11 ago 2021",
-									"govbr-ds_version": "2.2.0"
-								},
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/96N4b6rePJoMfnq",
-									"version": "1.7.0",
-									"data": "01 jul 2021",
-									"govbr-ds_version": "2.1.0"
-								},
-								{
-									"path": "https://serprodrive.serpro.gov.br/s/RWEDQ2ocEc52bjM",
-									"version": "1.4.0",
-									"data": "17 nov 2021",
-									"govbr-ds_version": "2.0.2"
-								}
-							]
-						}
-					]
+					"history": []
 				},
 				{
 					"files": [
@@ -1687,7 +1602,8 @@
 							"label": "CRUD",
 							"path": "https://serprodrive.serpro.gov.br/s/25dawtskHJYED9T",
 							"fileDescription": "crud_4.1.0.zip (13.9MB)",
-							"version": "Versão 4.1.0"
+							"version": "Versão 4.1.0",
+							"id": "modelo-crud-4-1-0"
 						},
 						{
 							"description": "Confira os modelos de Relatórios.",
@@ -1696,7 +1612,8 @@
 							"label": "Relatórios",
 							"path": "https://serprodrive.serpro.gov.br/s/kxZKj3D8dqYMBRi",
 							"fileDescription": "relatorios_1.1.0.zip (15.1MB)",
-							"version": "Versão 1.1.0"
+							"version": "Versão 1.1.0",
+							"id": "modelo-relatorios-1-1-0"
 						},
 						{
 							"description": "Confira os modelos de Dashboard.",
@@ -1705,7 +1622,8 @@
 							"label": "Dashboard",
 							"path": "https://serprodrive.serpro.gov.br/s/sPYa8aHfQGz2sJk",
 							"fileDescription": "dashboard_1.1.0.zip (9MB)",
-							"version": "Versão 1.1.0"
+							"version": "Versão 1.1.0",
+							"id": "modelo-dashboard-1-1-0"
 						},
 						{
 							"description": "Confira os modelos de Sessão do usuário.",
@@ -1714,7 +1632,8 @@
 							"label": "Sessão do usuário",
 							"path": "https://serprodrive.serpro.gov.br/s/My8yYwMGHzLR2YG",
 							"fileDescription": "sessao_1.1.0.zip (9.2MB)",
-							"version": "Versão 1.1.0"
+							"version": "Versão 1.1.0",
+							"id": "modelo-sessao-1-1-0"
 						},
 						{
 							"description": "Confira os modelos de Guia de Recolhimento.",
@@ -1723,7 +1642,8 @@
 							"label": "Guia de Recolhimento",
 							"path": "https://serprodrive.serpro.gov.br/s/N9jTSLo6t36R423",
 							"fileDescription": "guiarecolhimento_1.1.0.zip (4.2MB)",
-							"version": "Versão 1.1.0"
+							"version": "Versão 1.1.0",
+							"id": "modelo-guiarecolhimento-1-1-0"
 						},
 						{
 							"description": "Confira o modelo base.",
@@ -1732,7 +1652,8 @@
 							"label": "Base",
 							"path": "https://serprodrive.serpro.gov.br/s/Z7cW84goLkdAF3X",
 							"fileDescription": "base_3.2.0.zip (3.6MB)",
-							"version": "Versão 3.2.0"
+							"version": "Versão 3.2.0",
+							"id": "modelo-base-3-2-0"
 						},
 						{
 							"description": "Confira os modelo erro.",
@@ -1741,7 +1662,16 @@
 							"label": "Erro",
 							"path": "https://serprodrive.serpro.gov.br/s/SStefferNB5oF5o",
 							"fileDescription": "erro_3.3.0.zip (70.5 MB)",
-							"version": "Versão 3.3.0"
+							"version": "Versão 3.3.0",
+							"id": "modelo-erro-3-3-0"
+						},
+						{
+							"description": "Baixe aqui o Kit para construção de protótipos.",
+							"image": "assets/imgs/xdfigma.png",
+							"label": "Protótipos",
+							"path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW",
+							"version": "Versão 1.0.1",
+							"id": "modelo-prototipo-1-1-0"
 						}
 					],
 					"id": "modelos",
@@ -1865,8 +1795,7 @@
 							"image": "assets/imgs/logos-w3c.png",
 							"isNew": true,
 							"label": "Repositório do GOV.BR-DS CORE",
-							"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/archive/v3.0.1-rc/govbr-ds-dev-core-v3.0.1-rc.zip",
-							"version": "Versão 3.0.0-rc"
+							"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/"
 						},
 						{
 							"description": "Baixe o pacote NPM para configuração  de seu projeto.",
@@ -2015,8 +1944,8 @@
 		},
 		{
 			"id": "govbr-ds-1.5.0",
-			"label": "Design System GOV.BR v1.5.0 BETA (Obsoleta)",
-			"path": "/v1.5.0/",
+			"label": "Design System GOV.BR v2.4.3 BETA (Obsoleta)",
+			"path": "/v243/ds/",
 			"target": "_blank",
 			"type": "link"
 		}
