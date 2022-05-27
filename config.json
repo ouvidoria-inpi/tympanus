@@ -1666,12 +1666,12 @@
 							"id": "modelo-erro-3-3-0"
 						},
 						{
-							"description": "Baixe aqui o Kit para construção de protótipos.",
+							"description": "Exemplos de como manter a consistência visual entre aplicações desktop, web e mobile.",
 							"image": "assets/imgs/xdfigma.png",
-							"label": "Protótipos",
+							"label": "Consistência Visual",
 							"path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW",
 							"version": "Versão 1.0.1",
-							"id": "modelo-prototipo-1-1-0"
+							"id": "modelo-prototipo-1-0-1"
 						}
 					],
 					"id": "modelos",
