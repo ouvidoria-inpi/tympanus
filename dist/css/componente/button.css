@@ -1,0 +1,96 @@
+.br-button {
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  padding: 0 var(--spacing-scale-5x);
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  color: var(--color-primary-default);
+  font-size: var(--font-size-scale-up-01);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+@media (min-width: 575px) {
+  .br-button:not([circle]):not(.circle) {
+    width: auto;
+  }
+}
+
+.br-button[circle], .br-button.circle {
+  border-radius: 50%;
+  padding: 0 !important;
+  width: 40px;
+}
+
+.br-button[large], .br-button.large {
+  height: 48px;
+  padding-left: var(--spacing-scale-6x);
+  padding-right: var(--spacing-scale-6x);
+}
+
+.br-button[large][circle], .br-button[large].circle, .br-button.large[circle], .br-button.large.circle {
+  width: 48px;
+}
+
+.br-button[small], .br-button.small {
+  height: 32px;
+  padding-left: var(--spacing-scale-4x);
+  padding-right: var(--spacing-scale-4x);
+}
+
+.br-button[small][circle], .br-button[small].circle, .br-button.small[circle], .br-button.small.circle {
+  width: 32px;
+}
+
+.br-button .svg-inline--fa,
+.br-button .fa,
+.br-button .fab,
+.br-button .fad,
+.br-button .fal,
+.br-button .far,
+.br-button .fas {
+  --icon-size: var(--icon-size-base);
+}
+
+.br-button:not(:disabled):focus {
+  background: var(--status-focused-background) linear-gradient(var(--status-focused-overlay), var(--status-focused-overlay));
+}
+
+.br-button:not(:disabled):hover {
+  background: var(--status-hover-background);
+}
+
+.br-button:not(:disabled):active {
+  background: var(--status-pressed-background);
+  color: var(--status-pressed-text);
+}
+
+.br-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.br-button.primary:not(:focus):not(:hover):not(:active), .br-button[primary]:not(:focus):not(:hover):not(:active) {
+  background: var(--color-primary-default);
+  color: var(--color-secondary-01);
+}
+
+.br-button.secondary, .br-button[secondary] {
+  border-color: var(--color-primary-default);
+}
+
+a.br-button {
+  line-height: 40px;
+  white-space: nowrap;
+}
+
+a.br-button.large {
+  line-height: 48px;
+}
+
+a.br-button.small {
+  line-height: 32px;
+}

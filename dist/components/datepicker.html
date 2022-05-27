@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DatePicker</title>
+    <!-- Fonte Rawline-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <!-- Fonte Raleway-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap">
+    <!-- Design System de Governo-->
+    <link rel="stylesheet" href="../css/dsgov.css">
+    <!-- Fontawesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <p class="h5">Datepicker</p>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 col-xl-3">
+          <p class="h5 mt-5 mt-sm-0">Datepicker simples</p>
+          <div class="br-datepicker" data-mode="single" data-type="text">
+            <div class="br-input">
+              <label for="simples-input">Data Simples</label>
+              <input id="simples-input" type="text" placeholder="dd/mm/aaaa" data-input>
+              <button class="icon" type="button" id="simples-input-btn" data-toggle><span class="sr-only">Abrir Timepicker</span><i class="fas fa-calendar-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="feedback color-success">
+              <div class="icon"><i class="fas fa-check-circle"></i></div>Data válida
+            </div>
+            <p class="help-text">Informações adicionais</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5"></div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 col-xl-3">
+          <p class="h5 mt-5 mt-sm-0">Datepicker com intervalo de datas</p>
+          <div class="br-datepicker" data-mode="range" data-type="text">
+            <div class="br-input">
+              <label for="range-input">Data Inicial/Final</label>
+              <input id="range-input" type="text" placeholder="dd/mm/aaaa até dd/mm/aaaa" data-input>
+              <button class="icon" type="button" id="range-input-btn" data-toggle><span class="sr-only">Abrir Timepicker</span><i class="fas fa-calendar-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="feedback color-danger">
+              <div class="icon"><i class="fas fa-times-circle"></i></div>Data inválida
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5"></div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 col-xl-3">
+          <p class="h5 mt-5 mt-sm-0">Timepicker</p>
+          <div class="br-datepicker" data-mode="single" data-type="text">
+            <div class="br-input">
+              <label for="timepicker-input">Hora/Minutos</label>
+              <input id="timepicker-input" type="text" placeholder="hh:mm" data-input>
+              <button class="icon" type="button" id="timepicker-input-btn" data-toggle><span class="sr-only">Abrir Timepicker</span><i class="fas fa-calendar-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5"></div>
+      <div class="row mb-5">
+        <div class="col-sm-12 col-lg-4 col-xl-3">
+          <p class="h5 mt-5 mt-sm-0">Datepicker + Timepicker</p>
+          <div class="br-datepicker" data-mode="single" data-type="text">
+            <div class="br-input">
+              <label for="dateandtime-input">Data e Hora/Minutos</label>
+              <input id="dateandtime-input" type="text" placeholder="dd/mm/aaaa hh:mm" data-input>
+              <button class="icon" type="button" id="dateandtime-input-btn" data-toggle><span class="sr-only">Abrir Timepicker</span><i class="fas fa-calendar-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/dsgov.js"></script>
+  </body>
+</html>

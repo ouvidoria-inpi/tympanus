@@ -4,7 +4,7 @@ Precisa vender um produto, validar requisitos com o cliente, planejar a aparênc
 
 A utilização do protótipo possibilita simular a aparência e funcionalidade do software permitindo que os clientes, analistas, desenvolvedores e gerentes percebam os requisitos do sistema para interagir, avaliar, alterar e aprovar as características mais marcantes na interface e nas funções.
 
-Aqui estão disponíveis **UI Kits** (pacotes de interface do usuário) contendo os componentes e templates do DSGOV para que você possa editar e planejar a aparência das telas do seu produto, seja ele um sistema web responsivo, um aplicativo para dispositivos móveis ou um site institucional.
+Aqui estão disponíveis **UI Kits** (pacotes de interface do usuário) contendo os componentes e templates do Design System GOV.BR para que você possa editar e planejar a aparência das telas do seu produto, seja ele um sistema web responsivo, um aplicativo para dispositivos móveis ou um site institucional.
 
 Assim é possível validar visualmente a interface do seu produto antes do seu desenvolvimento, contendo já os estilos para uma aparência de produto final.
 

@@ -154,7 +154,7 @@ Na _Grid_ de 4 colunas, os _Botões_ deverão ocupar toda largura da tela, respe
 
 Para dar maior flexibilidade em composição de tela ou até mesmo refinar o "peso" visual dos _Botões_ na tela, é utilizado o recurso da _Densidade_ nos _Botões_. O ajuste da _Densidade_ consiste em aumentar ou reduzir a altura e os espaçamentos internos do _Botão_ de forma a deixá-los mais compactos ou mais expandidos em seu formato.
 
-Para isto, no DSGov foi utilizado três níveis de _Densidade_: _Densidade Baixa_, _Densidade Alta_ e _Densidade Padrão_.
+Para isto, no Design System GOV.BR foi utilizado três níveis de _Densidade_: _Densidade Baixa_, _Densidade Alta_ e _Densidade Padrão_.
 
 #### A. Densidade Padrão
 

@@ -2,7 +2,7 @@
 
 ### Instalar manualmente
 
-1. Faça o download do pacote NPM do DSGOV na seção [Downloads](/downloads) ou clique [aqui](/assets/design-system/assets/npm-package/dsgov-latest.tgz).
+1. Faça o download do pacote NPM do Design System GOV.BR na seção [Downloads](/downloads) ou clique [aqui](/assets/design-system/assets/npm-package/dsgov-latest.tgz).
 1. Crie uma nova pasta para o seu projeto e coloque o arquivo **dsgov-latest.tgz** dentro dela. Caso já tenha um projeto em andamento coloque o arquivo na pasta raiz do seu projeto.
 1. Entre na pasta que você colocou o arquivo e utilize o seguinte comando para inicializar o node no seu projeto:
 
@@ -70,7 +70,7 @@ Caso tenha acesso à rede do [SERPRO](https://www.serpro.gov.br/), siga os passo
       npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
     ```
 
-1. Instale o pacote do dsgov usando o comanndo:
+1. Instale o pacote do Design System GOV.BR usando o comanndo:
 
     ```bash
     npm install @govbr/dsgov
@@ -97,7 +97,7 @@ A seguir temos um exemplo de um template inicial para utilização do DSGOV. Cop
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap"
         />
-        <!-- DSGOV CSS-->
+        <!-- Design System GOV.BR CSS-->
         <link rel="stylesheet" href="node_modules\@govbr\dsgov\dist\css\dsgov.min.css" />
         <!-- Fontawesome-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>

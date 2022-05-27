@@ -2,7 +2,7 @@
 
 ### Experiência Única
 
-Nesse sistema, a cor primária #1351B4 e suas variantes (no caso do DSGOV as lighten e darken) foram selecionadas como as cores principais para representar a identidade do Governo Federal.
+Nesse sistema, a cor primária #1351B4 e suas variantes (no caso do Design System GOV.BR as lighten e darken) foram selecionadas como as cores principais para representar a identidade do Governo Federal.
 
 ### Eficiência e Clareza
 

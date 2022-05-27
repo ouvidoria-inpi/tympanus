@@ -4,7 +4,7 @@ Utilize os utilitários sempre que possível para não precisar reescrever CSS e
 
 A Grid é a mesma grid Bootstrap, portanto sua forma de uso é a mesma. Os tamanhos de breakpoints, containers e gutters possuem valores diferenciados.
 
-Conversão de breakpoints DSGov para Bootstrap:
+Conversão de breakpoints Design System GOV.BR para Bootstrap:
 
 | Token Breakpoint       | Classe Bootstrap |
 | ---------------------- | ---------------- |
@@ -44,7 +44,7 @@ Use os mixins nativos do Bootstrap quando precisar especificar código por break
 }
 ```
 
-Veja mais informações sobre a Grid DSGov em [Fundamentos Visuais --> Sistema de Grid](ds/fundamentos-visuais/grid).
+Veja mais informações sobre a Grid Design System GOV.BR em [Fundamentos Visuais --> Sistema de Grid](ds/fundamentos-visuais/grid).
 
 ---
 
@@ -61,7 +61,7 @@ Os espaçamentos foram criados com base no utilitário **Spacing** do Bootstrap,
 | **4**: aplica 24px de espaçamento          | **x**: horizontal                                |
 | **5**: aplica 40px de espaçamento          | **y**: vertical                                  |
 
-Estão disponíveis espaçamentos com base nos tokens de espaçamento do DSGov também, veja a tabela abaixo:
+Estão disponíveis espaçamentos com base nos tokens de espaçamento do Design System GOV.BR também, veja a tabela abaixo:
 
 | Variação  | Token aplicado          | Valor aplicado |
 | --------- | ----------------------- | -------------- |

@@ -126,7 +126,7 @@ Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com v
 
 ## Tabela de Estilo Padrão
 
-Utilize a tabela de estilo para determinar a hierarquia dos elementos dentro de uma interface. Os valores listados são referente aos estilos visuais base do DSGOV especificados nos design tokens.
+Utilize a tabela de estilo para determinar a hierarquia dos elementos dentro de uma interface. Os valores listados são referente aos estilos visuais base do Design System GOV.BR especificados nos design tokens.
 
 O valor **line-height** (entrelinhamento) não se refere ao fonte base, e sim ao valor do próprio elemento textual._**Exemplo:** No H1 a line-height é 115% do valor de 2, 986em (--font-size-scale-up-06)._
 

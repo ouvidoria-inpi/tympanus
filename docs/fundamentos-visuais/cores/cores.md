@@ -132,7 +132,7 @@ A seguir a relação de contraste entre a cor que deve ser adotada nos textos e 
 
 A cor de destaque é utilizada para impor alta ênfase em um determinado elemento da interface (como nos botões de “call to action”).
 
-No DSGOV ela só pode ser utilizada em um único elemento ou componente por tela. Podendo ou não ser interativo.
+No Design System GOV.BR ela só pode ser utilizada em um único elemento ou componente por tela. Podendo ou não ser interativo.
 
 |               Exemplo               | Categoria da Cor | Hexadecimal - RGB | Token               |
 | :---------------------------------: | ---------------- | ----------------- | ------------------- |
