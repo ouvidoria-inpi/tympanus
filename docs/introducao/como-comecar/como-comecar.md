@@ -78,7 +78,7 @@ Caso tenha acesso à rede do [SERPRO](https://www.serpro.gov.br/), siga os passo
 
 ## Template inicial
 
-A seguir temos um exemplo de um template inicial para utilização do DSGOV. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **dsgov.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **dsgov.min.js** confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **dsgov.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **dsgov.min.js** confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>

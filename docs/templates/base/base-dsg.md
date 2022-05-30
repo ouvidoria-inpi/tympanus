@@ -1,4 +1,4 @@
-[version]: # '2.0.0'
+[version]: # "2.0.0"
 
 ![Exemplo Template](imagens/template-base-view-1280px.png)
 
@@ -80,7 +80,7 @@ Esta é uma área essencial do _Base_. Aqui será utilizado o _Componente Rodap�
 
 ### Responsividade
 
-O _Base_ possui comportamento responsivo e se adequa a todas as resoluções no DSGOV. Abaixo apresentam-se três exemplos de comportamento se adequando à três situações de uso específico, Desktop, Tablet e Smartphone.
+O _Base_ possui comportamento responsivo e se adequa a todas as resoluções no Design System GOV.BR. Abaixo apresentam-se três exemplos de comportamento se adequando à três situações de uso específico, Desktop, Tablet e Smartphone.
 
 #### A) Desktop (Grid de 12 Colunas)
 

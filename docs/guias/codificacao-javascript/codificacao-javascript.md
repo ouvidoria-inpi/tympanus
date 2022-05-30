@@ -4,7 +4,7 @@ Esse documento descreve o padrão de codificação para a linguagem **JavaScript
 
 [ECMAScript][1] é uma especificação de linguagem de programação baseada em scripts, padronizada pela [ECMA International][2] na especificação [ECMA-262][3] e [ISO/IEC 16262][4]. A especificação é usada em tecnologias para Internet para a criação de scripts executados no cliente, sendo criada para padronizar a linguagem JavaScript, além permitir outras implementações independentes.
 
-## JavaScript no DSGOV
+## JavaScript no Design System GOV.BR
 
 O Design System de Governo utiliza o JavaScript na versão 6 (ES6) para a construção do código JavaScript de seus componentes.
 
@@ -19,23 +19,22 @@ O padrão de codificação JavaScript utiliza-se de um **modelo base para a escr
 O nome das classes começa com o prefixo **BR** em maiúsculo, seguida do nome do componente ou template com a primeira letra em maiúsculo.
 
 ```js
-  class BRInput {
-  }
+class BRInput {}
 ```
 
 Em seguida é declarado o construtor, que tem dois parâmetros obrigatórios: `name` e `component`. Caso o construtor precise receber mais parâmetros, estes devem ser inseridos após esses dois parâmetros obrigatórios.
 
-* `name`: **string** com o nome do componente ou template na nomenclatura de classe
-* `component`: **objeto** contendo a referência ao elemento HTML que representa a raiz do elemento ou template.
+-   `name`: **string** com o nome do componente ou template na nomenclatura de classe
+-   `component`: **objeto** contendo a referência ao elemento HTML que representa a raiz do elemento ou template.
 
 Esses parâmetros passados no construtor devem ser atribuídos às propriedades do objeto, por meio do **this**, que contém a referência ao objeto instanciado.
 
 ```js
 class BRInput {
-  constructor(name, component) {
-    this.name = name;
-    this.component = component;
-  }
+    constructor(name, component) {
+        this.name = name;
+        this.component = component;
+    }
 }
 ```
 
@@ -46,16 +45,15 @@ Contudo, é necessário garantir que replicações do mesmo componente ou templa
 Logo, é necessário "varrer" a página procurando todas as réplicas dos componentes ou templates e, para cada uma delas, instanciar seu respectivo objeto. Mais ainda, é necessário guardar essas referências para poder usá-las depois.
 
 ```js
-const inputList = []
-for (const brInput of window.document.querySelectorAll('.br-input')) {
-  inputList.push(new BRInput('br-input', brInput))
+const inputList = [];
+for (const brInput of window.document.querySelectorAll(".br-input")) {
+    inputList.push(new BRInput("br-input", brInput));
 }
-
 ```
 
 > Esse código de instanciação acima, não faz parte do componente ou template. Ele serve, como a própria descrição diz, para instanciar a classe que representa o componente ou template.
 
-Os métodos de uso interno da classe devem ser escritos com o **underline (_)** no começo do identificador. Isso não garante que serão privados, mas é uma prática adotada na linguagem javascript.
+Os métodos de uso interno da classe devem ser escritos com o **underline (\_)** no começo do identificador. Isso não garante que serão privados, mas é uma prática adotada na linguagem javascript.
 
 ```js
 _changeIcon() {
@@ -63,7 +61,7 @@ _changeIcon() {
 }
 ```
 
-> Para os métodos externos **não usar** o underline (_)
+> Para os métodos externos **não usar** o underline (\_)
 
 ## Regras Validadas pelo ESLint
 
@@ -628,7 +626,7 @@ Esta regra aplica estilo de chaves consistente para blocos.
 
 #### [camelcase](https://eslint.org/docs/rules/camelcase)
 
-Esta regra procura por underscores (_) localizados no código-fonte. Ele ignora os underscores iniciais e finais e apenas verifica aqueles no meio do nome de uma variável. Se o ESLint decidir que a variável é uma constante (todas em maiúsculas), nenhum aviso será lançado. Caso contrário, um aviso será lançado. Esta regra sinaliza apenas definições e atribuições, mas não chamadas de função. No caso de instruções de import do ES6, esta regra visa apenas o nome da variável que será importada para o escopo do módulo local.
+Esta regra procura por underscores (\_) localizados no código-fonte. Ele ignora os underscores iniciais e finais e apenas verifica aqueles no meio do nome de uma variável. Se o ESLint decidir que a variável é uma constante (todas em maiúsculas), nenhum aviso será lançado. Caso contrário, um aviso será lançado. Esta regra sinaliza apenas definições e atribuições, mas não chamadas de função. No caso de instruções de import do ES6, esta regra visa apenas o nome da variável que será importada para o escopo do módulo local.
 
 ```json
 "camelcase": ["error", {
@@ -743,7 +741,7 @@ Esta regra impõe espaçamento consistente entre chaves e valores nas propriedad
 
 #### [keyword-spacing](https://eslint.org/docs/rules/keyword-spacing)
 
-Essa regra aplica espaçamento consistente em torno de palavras-chave e tokens semelhantes a palavras-chave: as (em declarações de módulo), assync (de funções assíncronas), await (de expressões de espera),  break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, from (nas declarações do módulo), function, get (de getters), if, import, in, instanceof, let, new, of (de sentenças for-of), return, set (de setters), static, super, switch, this, throw, try, typeof, var, void, while, with e yield. Essa regra foi projetada com cuidado para não entrar em conflito com outras regras de espaçamento: não se aplica ao espaçamento onde outras regras relatam problemas.
+Essa regra aplica espaçamento consistente em torno de palavras-chave e tokens semelhantes a palavras-chave: as (em declarações de módulo), assync (de funções assíncronas), await (de expressões de espera), break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, from (nas declarações do módulo), function, get (de getters), if, import, in, instanceof, let, new, of (de sentenças for-of), return, set (de setters), static, super, switch, this, throw, try, typeof, var, void, while, with e yield. Essa regra foi projetada com cuidado para não entrar em conflito com outras regras de espaçamento: não se aplica ao espaçamento onde outras regras relatam problemas.
 
 ```json
 "keyword-spacing": ["error", {
@@ -1170,7 +1168,7 @@ Esta regra visa impor um espaçamento consistente entre operadores de rest e spr
 "rest-spread-spacing": ["error", "never"]
 ```
 
-#### [sort-imports](https://eslint.org/docs/rules/sort-imports) 
+#### [sort-imports](https://eslint.org/docs/rules/sort-imports)
 
 Esta regra verifica se todas as importações são classificadas em ordem alfabética tanto pelo nome do módulo quanto pelos seus membros declarados. Ela está tratando "case sensitive" e impõe uma ordem para a importação dos membros, conforme especificado abaixo.
 
@@ -1193,11 +1191,11 @@ Esta regra visa manter a consistência em torno do espaçamento dentro das templ
 
 ## Referências
 
-* [ECMAScript - WikipédiA][1]
-* [ECMA Internacional][2]
-* [ECMA-262][3]
-* [ISO/IEC 16262][4]
-* [ESLint Rules][5]
+-   [ECMAScript - WikipédiA][1]
+-   [ECMA Internacional][2]
+-   [ECMA-262][3]
+-   [ISO/IEC 16262][4]
+-   [ESLint Rules][5]
 
 [1]: https://pt.wikipedia.org/wiki/ECMAScript
 [2]: http://www.ecma-international.org/
