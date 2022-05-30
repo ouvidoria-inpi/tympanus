@@ -1,4 +1,4 @@
-# Release Notes DSGOV
+# Release Notes
 
 ## 1.5.0 (2020-09-01)
 

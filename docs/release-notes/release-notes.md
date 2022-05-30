@@ -46,4 +46,4 @@
 -   Fundamento Grid
 -   Fundamento Iconografia
 -   Fundamento Tipografia
--   Grid usada pelo DSGOV
+-   Grid usada pelo Design System do Governo Federal

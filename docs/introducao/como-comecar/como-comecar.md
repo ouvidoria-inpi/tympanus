@@ -53,7 +53,7 @@
     npm install dsgov-latest.tgz
     ```
 
-    Após a execução completa do comando será criado a pasta **node_modules/@govbr/dsgov**. Essa pasta contém os módulos necessários para o funcinamento do DSGOV.
+    Após a execução completa do comando será criado a pasta **node_modules/@govbr/dsgov**. Essa pasta contém os módulos necessários para o funcinamento do Design System do Governo Federal.
 
     Na pasta **node_modules/@govbr/dsgov/dist** você encontra os arquivos **dsgov.min.js** e **dsgov.min.css** que podem ser utilizados no seu projeto.
 
@@ -98,7 +98,10 @@ A seguir temos um exemplo de um template inicial para utilização do DSGOV. Cop
             href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap"
         />
         <!-- Design System GOV.BR CSS-->
-        <link rel="stylesheet" href="node_modules\@govbr\dsgov\dist\css\dsgov.min.css" />
+        <link
+            rel="stylesheet"
+            href="node_modules\@govbr\dsgov\dist\css\dsgov.min.css"
+        />
         <!-- Fontawesome-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
     </head>
