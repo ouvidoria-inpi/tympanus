@@ -1894,9 +1894,14 @@
 							"label": "Código Fonte",
 							"versions": [
 								{
+									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.3.zip",
+									"version": "2.4.3",
+									"data": "20 abr 2022"
+								},
+								{
 									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.2.zip",
-									"version": "2.4.1",
-									"data": "10 dez 2021"
+									"version": "2.4.2",
+									"data": "02 fev 2022"
 								},
 								{
 									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.1.zip",
