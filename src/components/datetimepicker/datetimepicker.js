@@ -2,12 +2,12 @@ import flatpickr from 'flatpickr'
 const Brazilian = require('flatpickr/dist/l10n/pt').default.pt
 
 class BRDateTimePicker {
-  constructor(name, component) {
+  constructor(name, component, config) {
     this.name = name
     this.component = component
     // localization global
     flatpickr.localize(Brazilian)
-
+    this.config = config
     this._buildDateTimePicker()
   }
 
@@ -38,11 +38,11 @@ class BRDateTimePicker {
         break
     }
 
-    const config = {
+    this.config_native = {
       dateFormat: format,
       disableMobile: 'true',
       enableTime: time,
-      minDate: '2020-01',
+
       minuteIncrement: 1,
       mode: this.component.getAttribute('data-mode'),
       nextArrow:
@@ -54,7 +54,12 @@ class BRDateTimePicker {
       wrap: true,
     }
 
-    flatpickr(this.component, config)
+    console.log(this.config, Object.assign(this.config_native, this.config))
+
+    this.calendar = flatpickr(
+      this.component,
+      Object.assign(this.config_native, this.config)
+    )
   }
 }
 
