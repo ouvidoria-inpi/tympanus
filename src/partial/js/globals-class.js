@@ -96,7 +96,9 @@ export default class Globals {
       '.br-datetimepicker'
     )) {
       datetimepickerList.push(
-        new BRDateTimePicker('br-datetimepicker', brDateTimePicker)
+        new BRDateTimePicker('br-datetimepicker', brDateTimePicker, {
+          minDate: '05/05/2022',
+        })
       )
     }
   }
