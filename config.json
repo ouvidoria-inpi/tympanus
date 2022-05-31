@@ -202,6 +202,11 @@
 					"id": "migracao",
 					"label": "Migração da versão 1.x para 2.x do Design System GOV.BR",
 					"type": "documentation"
+				},
+				{
+					"id": "migracao-2x-3x",
+					"label": "Migração da versão 2.x para 3.x do Design System GOV.BR",
+					"type": "documentation"
 				}
 			],
 			"id": "guias",
