@@ -151,3 +151,17 @@ publish_npm_rc:
   when: manual
   only:
     - tags
+
+# Publica o pacote como latest
+publish_npm:
+  stage: pages
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
+  script:
+    - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+    - npm publish --tags latest
+  when: manual
+  only:
+    - tags

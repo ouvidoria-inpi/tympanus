@@ -15,8 +15,7 @@
   "author": "SERPRO (http://serpro.gov.br/)",
   "files": [
     "dist",
-    "src/**/*.scss",
-    "CONTRIBUTING.md"
+    "src/**/*.scss"
   ],
   "main": "dist/core.js",
   "scripts": {
