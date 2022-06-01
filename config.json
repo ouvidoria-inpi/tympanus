@@ -202,11 +202,6 @@
 					"id": "migracao",
 					"label": "Migração da versão 1.x para 2.x do Design System GOV.BR",
 					"type": "documentation"
-				},
-				{
-					"id": "migracao-2x-3x",
-					"label": "Migração da versão 2.x para 3.x do Design System GOV.BR",
-					"type": "documentation"
 				}
 			],
 			"id": "guias",
@@ -1502,7 +1497,8 @@
 			"type": "documentation"
 		},
 		{
-			"id": "padroes-para-android-e-ios",
+			"hideLabel": true,
+			"id": "prototipo",
 			"label": "Padrões para Android e IOS",
 			"type": "documentation"
 		},
@@ -1520,7 +1516,7 @@
 			"type": "downloads"
 		},
 		{
-			"content": "Baixe os artefatos de Design e Desenvolvimento para o seu projeto!",
+			"content": "Baixe os Modelos de tela e os Artefatos de Design e Desenvolvimento para seu projeto!",
 			"id": "assets",
 			"image": "assets/imgs/download-page.png",
 			"label": "Downloads",
@@ -1528,64 +1524,109 @@
 				{
 					"files": [
 						{
-							"description": "Baixe aqui o UI Kit para construção de projetos web Versão para Adobe XD.",
-							"image": "assets/imgs/logo-xd.png",
-							"isNew": true,
-							"label": "UI Kit WEB XD",
-							"path": "https://serprodrive.serpro.gov.br/s/ARP4gmoRKtwTena",
-							"fileDescription": "uikit-govbr-ds-web_5.1.1.zip (14MB)",
-							"version": "Versão 5.1.1",
-							"id": "ui-kit-web-xd-5-1-1"
+							"label": "UIKit Web",
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Kit com componentes disponíveis para construção de interfaces.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "15.07 MB",
+									"version": "5.2.0",
+									"id": "uikit-web-xd-5.2.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/main/web/uikit-govbrds.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "1.15 MB",
+									"version": "2.3.0",
+									"id": "uikit-web-figma-2.3.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/main/web/uikit-govbrds.fig"
+								}
+							]
 						},
 						{
-							"description": "Baixe aqui o UI Kit para construção de projetos web Versão para Figma.",
-							"image": "assets/imgs/logo-figma.png",
-							"isNew": true,
-							"label": "UI Kit Figma",
-							"path": "https://serprodrive.serpro.gov.br/s/nFFEGRCBJzatw4Y",
-							"fileDescription": "uikit-govbr-ds-web-figma_2.2.0.zip (1 MB)",
-							"version": "Versão 2.2.0",
-							"id": "ui-kit-web-figma-2-2-0"
-						},
-						{
-							"description": "Baixe aqui o UI Kit para construção de projetos mobile em Android.",
-							"image": "assets/imgs/logo-android.png",
-							"label": "UI Kit Android",
-							"path": "https://serprodrive.serpro.gov.br/s/kLJfZc9zpfa8jsL",
-							"version": "Versão 4.2.0",
-							"id": "ui-kit-android-4-2-0"
-						},
-						{
-							"description": "Baixe aqui o UI Kit para construção de projetos mobile em IOS.",
-							"image": "assets/imgs/logo-ios.png",
-							"label": "UI Kit iOS",
-							"path": "https://serprodrive.serpro.gov.br/s/CiLWgb77s3tbr69",
-							"version": "Versão 3.1.0",
-							"id": "ui-kit-ios-3-1-0"
-						},
-						{
-							"description": "Baixe aqui o UI Kit para construção de wireframes.",
+							"label": "UIKit Wireframe",
 							"image": "assets/imgs/wireframe.png",
-							"label": "UI Kit Wireframe",
-							"path": "https://serprodrive.serpro.gov.br/s/JG4XEek8sSftxqW",
-							"version": "Versão 2.0.0",
-							"id": "ui-kit-wireframe-2-0-0"
+							"description": "Kit com componentes disponíveis para construção de wireframes.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "15.17 MB",
+									"version": "2.0.0",
+									"id": "uikit-wireframe-xd-2.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/main/wireframe/uikit-govbrds-wireframe.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "376.20 KB",
+									"version": "2.0.0",
+									"id": "uikit-wireframe-figma-2.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/main/wireframe/uikit-govbrds-wireframe.fig"
+								}
+							]
 						},
 						{
-							"description": "Baixe aqui novos modelos de ilustrações.",
-							"image": "assets/imgs/pacote.png",
-							"label": "Packs Ilustração",
-							"path": "https://serprodrive.serpro.gov.br/s/kqcLeMZ5tQiNxrR",
-							"version": "Versão 1.0.0",
-							"id": "ilustracao-pack-1-0-0"
+							"label": "UIKit Android",
+							"image": "assets/imgs/logo-android.png",
+							"description": "Kit com componentes do Material Design no tema do GOVBR-DS.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "1.33 MB",
+									"version": "4.3.0",
+									"id": "uikit-android-xd-4.3.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/main/material/uikit-govbrds-material.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "468.66 KB",
+									"version": "4.3.0",
+									"id": "uikit-android-figma-4.3.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/main/material/uikit-govbrds-material.fig"
+								}
+							]
 						},
 						{
-							"description": "Baixe aqui brushes para texturas das ilustrações.",
+							"label": "UIKIT iOS",
+							"image": "assets/imgs/logo-ios.png",
+							"description": "Kit com componentes do iOS no tema do GOVBR-DS.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "1.07 MB",
+									"version": "3.2.0",
+									"id": "uikit-ios-xd-3.2.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/main/ios/uikit-govbrds-ios.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "469.36 KB",
+									"version": "3.2.0",
+									"id": "uikit-ios-figma-3.2.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/main/ios/uikit-govbrds-ios.fig"
+								}
+							]
+						},
+						{
+							"label": "Ilustrações",
 							"image": "assets/imgs/pacote.png",
-							"label": "Pack Ilustração",
-							"path": "https://serprodrive.serpro.gov.br/s/fqpQbTmtmpPM6r4",
-							"version": "Versão 1.0.0",
-							"id": "ilustracao-assets-1-0-0"
+							"description": "Diversos exemplos de ilustrações e pincéis para enriquecer seu layout.",
+							"children": [
+								{
+									"label": "Modelos",
+									"size": "174.8 MB",
+									"version": "1.0.0",
+									"id": "ilustracoes-modelos-1.0.0",
+									"path": "https://serprodrive.serpro.gov.br/s/kqcLeMZ5tQiNxrR"
+								},
+								{
+									"label": "Assets",
+									"size": "2.8 MB",
+									"version": "1.0.0",
+									"id": "ilustracoes-assets-1.0.0",
+									"path": "https://serprodrive.serpro.gov.br/s/fqpQbTmtmpPM6r4"
+								}
+							]
 						}
 					],
 					"id": "designer",
@@ -1596,82 +1637,172 @@
 				{
 					"files": [
 						{
-							"description": "Confira os modelos de CRUD.",
-							"image": "assets/imgs/xdfigma.png",
-							"isNew": true,
-							"label": "CRUD",
-							"path": "https://serprodrive.serpro.gov.br/s/25dawtskHJYED9T",
-							"fileDescription": "crud_4.1.0.zip (13.9MB)",
-							"version": "Versão 4.1.0",
-							"id": "modelo-crud-4-1-0"
-						},
-						{
-							"description": "Confira os modelos de Relatórios.",
-							"image": "assets/imgs/xdfigma.png",
-							"isNew": true,
-							"label": "Relatórios",
-							"path": "https://serprodrive.serpro.gov.br/s/kxZKj3D8dqYMBRi",
-							"fileDescription": "relatorios_1.1.0.zip (15.1MB)",
-							"version": "Versão 1.1.0",
-							"id": "modelo-relatorios-1-1-0"
-						},
-						{
-							"description": "Confira os modelos de Dashboard.",
-							"image": "assets/imgs/xdfigma.png",
-							"isNew": true,
-							"label": "Dashboard",
-							"path": "https://serprodrive.serpro.gov.br/s/sPYa8aHfQGz2sJk",
-							"fileDescription": "dashboard_1.1.0.zip (9MB)",
-							"version": "Versão 1.1.0",
-							"id": "modelo-dashboard-1-1-0"
-						},
-						{
-							"description": "Confira os modelos de Sessão do usuário.",
-							"image": "assets/imgs/xdfigma.png",
-							"isNew": true,
-							"label": "Sessão do usuário",
-							"path": "https://serprodrive.serpro.gov.br/s/My8yYwMGHzLR2YG",
-							"fileDescription": "sessao_1.1.0.zip (9.2MB)",
-							"version": "Versão 1.1.0",
-							"id": "modelo-sessao-1-1-0"
-						},
-						{
-							"description": "Confira os modelos de Guia de Recolhimento.",
-							"image": "assets/imgs/xdfigma.png",
-							"isNew": true,
-							"label": "Guia de Recolhimento",
-							"path": "https://serprodrive.serpro.gov.br/s/N9jTSLo6t36R423",
-							"fileDescription": "guiarecolhimento_1.1.0.zip (4.2MB)",
-							"version": "Versão 1.1.0",
-							"id": "modelo-guiarecolhimento-1-1-0"
-						},
-						{
-							"description": "Confira o modelo base.",
-							"image": "assets/imgs/xdfigma.png",
-							"isNew": true,
-							"label": "Base",
-							"path": "https://serprodrive.serpro.gov.br/s/Z7cW84goLkdAF3X",
-							"fileDescription": "base_3.2.0.zip (3.6MB)",
-							"version": "Versão 3.2.0",
-							"id": "modelo-base-3-2-0"
-						},
-						{
-							"description": "Confira os modelo erro.",
-							"image": "assets/imgs/xdfigma.png",
-							"isNew": true,
-							"label": "Erro",
-							"path": "https://serprodrive.serpro.gov.br/s/SStefferNB5oF5o",
-							"fileDescription": "erro_3.3.0.zip (70.5 MB)",
-							"version": "Versão 3.3.0",
-							"id": "modelo-erro-3-3-0"
-						},
-						{
-							"description": "Exemplos de como manter a consistência visual entre aplicações desktop, web e mobile.",
-							"image": "assets/imgs/xdfigma.png",
 							"label": "Consistência Visual",
-							"path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW",
-							"version": "Versão 1.0.1",
-							"id": "modelo-prototipo-1-0-1"
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Exemplos de consistência visual entre aplicações desktop, web e mobile.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "35.9 MB",
+									"version": "1.0.1",
+									"id": "prototipo-xd-1.0.0",
+									"path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW"
+								},
+								{
+									"label": "Figma",
+									"size": "35.9 MB",
+									"version": "1.0.1",
+									"id": "prototipo-figma-1.0.0",
+									"path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW"
+								}
+							]
+						},
+						{
+							"label": "CRUD",
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Telas utilizando as operações básicas em um conjunto de dados.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "12.45 MB",
+									"version": "1.0.0",
+									"id": "crud-xd-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/crud/crud.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "1.72 MB",
+									"version": "1.0.0",
+									"id": "crud-figma-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/crud/crud.fig"
+								}
+							]
+						},
+						{
+							"label": "Relatórios",
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Exemplos de relatórios para impressão para uso no GOVBR-DS.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "14.44 MB",
+									"version": "1.0.0",
+									"id": "relatorios-xd-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/relatorios/relatorios.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "958.90 KB",
+									"version": "1.0.0",
+									"id": "relatorios-figma-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/relatorios/relatorios.fig"
+								}
+							]
+						},
+						{
+							"label": "Dashboard",
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Painéis para visualização de indicadores, alertas, listagens, gráficos entre outros.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "7.73 MB",
+									"version": "1.0.0",
+									"id": "dashboard-xd-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/dashboard/dashboard.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "1.56 MB",
+									"version": "1.0.0",
+									"id": "dashboard-figma-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/dashboard/dashboard.fig"
+								}
+							]
+						},
+						{
+							"label": "Sessão do Usuário",
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Telas com funções de autenticação: logar, tempo de sessão, perfil do usuário entre outros.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "7.87 MB",
+									"version": "1.0.0",
+									"id": "sessao-xd-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/sessao/sessao.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "1.58 MB",
+									"version": "1.0.0",
+									"id": "sessao-figma-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/sessao/sessao.fig"
+								}
+							]
+						},
+						{
+							"label": "Guia de Recolhimento",
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Telas de pagamento utilizando códigos de barra, QRCode, PIX entre outros.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "2.99 MB",
+									"version": "1.0.0",
+									"id": "guiarecolhimento-xd-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/guiarecolhimento/guiarecolhimento.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "1.49 MB",
+									"version": "1.0.0",
+									"id": "guiarecolhimento-figma-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/guiarecolhimento/guiarecolhimento.fig"
+								}
+							]
+						},
+						{
+							"label": "Tela Base",
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Estrutura básica com referência de grids para diferentes resoluções de tela.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "3.42 MB",
+									"version": "1.0.0",
+									"id": "base-xd-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/base/base.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "350.05 KB",
+									"version": "1.0.0",
+									"id": "base-figma-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/base/base.fig"
+								}
+							]
+						},
+						{
+							"label": "Erro",
+							"image": "assets/imgs/xdfigma.png",
+							"description": "Exemplos de telas com a aplicação do padrão Erro.",
+							"children": [
+								{
+									"label": "Adobe XD",
+									"size": "37.81 MB",
+									"version": "1.0.0",
+									"id": "erro-xd-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/erro/erro.xd"
+								},
+								{
+									"label": "Figma",
+									"size": "33.21 MB",
+									"version": "1.0.0",
+									"id": "erro-figma-1.0.0",
+									"path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/main/erro/erro.fig"
+								}
+							]
 						}
 					],
 					"id": "modelos",
@@ -1791,126 +1922,51 @@
 				{
 					"files": [
 						{
-							"description": "Repositório dos códigos.",
+							"label": "Código Fonte",
 							"image": "assets/imgs/logos-w3c.png",
-							"isNew": true,
-							"label": "Repositório do GOV.BR-DS CORE",
-							"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/"
+							"description": "Exemplo de códigos prontos para utilização em HTML, CSS e Java Script.",
+							"children": [
+								{
+									"label": "Baixar Código Fonte",
+									"size": "103.4 MB",
+									"version": "3.0.0",
+									"id": "core-3.0.0",
+									"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/"
+								}
+							]
 						},
 						{
-							"description": "Baixe o pacote NPM para configuração  de seu projeto.",
-							"image": "assets/imgs/logo-npm.png",
-							"isNew": true,
 							"label": "Pacote NPM",
-							"path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.0.0-rc.tgz",
-							"version": "Versão 3.0.0-rc"
+							"image": "assets/imgs/logo-npm.png",
+							"description": "Baixe o pacote NPM para gerenciar pacotes Node.JS.",
+							"children": [
+								{
+									"label": "Baixar Pacote NPM",
+									"size": "2.6 MB",
+									"version": "3.0.0",
+									"id": "core-npm-3.0.0",
+									"path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.0.0-rc.tgz"
+								}
+							]
 						},
 						{
-							"description": "Baixe o pacote CDN para configuração de seu projeto.",
+							"label": "Assets",
 							"image": "assets/imgs/pacote.png",
-							"isNew": false,
-							"label": "Pacote CDN",
-							"path": "https://serprodrive.serpro.gov.br/s/dLZJm9soLLiPzzg",
-							"version": "Versão 2.4.2"
+							"description": "Baixe o pacote imagens e fontes para o seu projeto.",
+							"children": [
+								{
+									"label": "Baixar Assets",
+									"size": "9 MB",
+									"version": "2.4.2",
+									"id": "core-assets-2.4.2",
+									"path": "https://serprodrive.serpro.gov.br/s/dLZJm9soLLiPzzg"
+								}
+							]
 						}
 					],
 					"id": "developer",
 					"label": "Desenvolvedor",
-					"description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do Design System GOV.BR.",
-					"history": [
-						{
-							"id": "codigoFonte",
-							"label": "Código Fonte",
-							"versions": [
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.3.zip",
-									"version": "2.4.3",
-									"data": "20 abr 2022"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.2.zip",
-									"version": "2.4.2",
-									"data": "02 fev 2022"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.1.zip",
-									"version": "2.4.1",
-									"data": "10 dez 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.4.0.zip",
-									"version": "2.4.0",
-									"data": "02 dez 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.3.0.zip",
-									"version": "2.3.0",
-									"data": "05 nov 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.2.2.zip",
-									"version": "2.2.2",
-									"data": "05 out 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.2.1.zip",
-									"version": "2.2.1",
-									"data": "29 set 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.2.0.zip",
-									"version": "2.2.0",
-									"data": "29 set 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-2.1.0.zip",
-									"version": "2.1.0",
-									"data": "16 jul 2021"
-								}
-							]
-						},
-						{
-							"id": "pacoteNpm",
-							"label": "Pacote NPM",
-							"versions": [
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.4.1.tgz",
-									"version": "2.4.1",
-									"data": "10 dez 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.4.0.tgz",
-									"version": "2.4.0",
-									"data": "03 dez 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.3.0.tgz",
-									"version": "2.3.0",
-									"data": "05 nov 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.2.2.tgz",
-									"version": "2.2.2",
-									"data": "05 out 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.2.1.tgz",
-									"version": "2.2.1",
-									"data": "29 set 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.2.0.tgz",
-									"version": "2.2.0",
-									"data": "29 set 2021"
-								},
-								{
-									"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-2.1.0.tgz",
-									"version": "2.1.0",
-									"data": "16 jul 2021"
-								}
-							]
-						}
-					]
+					"description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do Design System GOV.BR."
 				}
 			],
 			"type": "downloads"
