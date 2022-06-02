@@ -16,22 +16,19 @@ class BRDateTimePicker {
 			// Transforma o atributo em um objeto
 			const properties = this.configAttribute.split(',')
 			this.obj = []
-			properties.forEach((element, index, array) => {
+			properties.forEach((element) => {
 				const tup = element.split(':')
-				this.obj[tup[0]] = tup[1].replaceAll("'", '').trim()
+				this.obj[tup[0]] = tup[1].replaceAll("'", '').trim() // eslint-disable-line
+
 				this.saida = this.obj
 			}, this)
+
 			this.config = this.obj
 		} else {
 			this.config = config
 		}
 
 		this._buildDateTimePicker()
-	}
-
-	_converto_to_data(element, index, array) {
-		const tup = element.split(':')
-		this.obj[tup[0]] = tup[1]
 	}
 
 	_buildDateTimePicker() {
@@ -77,7 +74,7 @@ class BRDateTimePicker {
 			wrap: true,
 		}
 		this.config_flatpick = Object.assign(this.config_native, this.config)
-		console.log(this.config)
+
 		this.calendar = flatpickr(
 			this.component,
 			Object.assign(this.config_native, this.config)

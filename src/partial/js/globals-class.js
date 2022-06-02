@@ -35,344 +35,334 @@ import Collapse from './behavior/collapse'
 import Dropdown from './behavior/dropdown'
 
 export default class Globals {
-	initInstanceAll() {
-		this.initInstanceAccordion()
-		this.initInstanceAvatar()
-		this.initInstanceBreadcrumb()
-		this.initInstanceCard()
-		this.initInstanceCarousel()
-		this.initInstanceCheckbox()
-		this.initInstanceCookiebar()
-		this.initInstanceDateTimePicker()
-		this.initInstanceFooter()
-		this.initInstanceInput()
-		this.initInstanceHeader()
-		this.initInstanceItem()
-		this.initInstanceList()
-		this.initInstanceMenu()
-		this.initInstanceMessage()
-		this.initInstanceModal()
-		this.initInstanceNotification()
-		this.initInstancePagination()
-		this.initInstanceScrim()
-		this.initInstanceSelect()
-		this.initInstanceStep()
-		this.initInstanceTable()
-		this.initInstanceTabs()
-		this.initInstanceTextarea()
-		this.initInstanceUpload()
-		this.initInstanceWizard()
-		this.initInstanceTooltip()
-	}
+  initInstanceAll() {
+    this.initInstanceAccordion()
+    this.initInstanceAvatar()
+    this.initInstanceBreadcrumb()
+    this.initInstanceCard()
+    this.initInstanceCarousel()
+    this.initInstanceCheckbox()
+    this.initInstanceCookiebar()
+    this.initInstanceDateTimePicker()
+    this.initInstanceFooter()
+    this.initInstanceInput()
+    this.initInstanceHeader()
+    this.initInstanceItem()
+    this.initInstanceList()
+    this.initInstanceMenu()
+    this.initInstanceMessage()
+    this.initInstanceModal()
+    this.initInstanceNotification()
+    this.initInstancePagination()
+    this.initInstanceScrim()
+    this.initInstanceSelect()
+    this.initInstanceStep()
+    this.initInstanceTable()
+    this.initInstanceTabs()
+    this.initInstanceTextarea()
+    this.initInstanceUpload()
+    this.initInstanceWizard()
+    this.initInstanceTooltip()
+  }
 
-	initInstanceAccordion() {
-		const accordionList = []
-		for (const brAccordion of window.document.querySelectorAll(
-			'.br-accordion'
-		)) {
-			accordionList.push(new BRAccordion('br-accordion', brAccordion))
-		}
-	}
+  initInstanceAccordion() {
+    const accordionList = []
+    for (const brAccordion of window.document.querySelectorAll(
+      '.br-accordion'
+    )) {
+      accordionList.push(new BRAccordion('br-accordion', brAccordion))
+    }
+  }
 
-	initInstanceAvatar() {
-		const avatarList = []
-		for (const brAvatar of window.document.querySelectorAll('.br-avatar')) {
-			avatarList.push(new BRAvatar('br-avatar', brAvatar))
-		}
-	}
+  initInstanceAvatar() {
+    const avatarList = []
+    for (const brAvatar of window.document.querySelectorAll('.br-avatar')) {
+      avatarList.push(new BRAvatar('br-avatar', brAvatar))
+    }
+  }
 
-	initInstanceBreadcrumb() {
-		const breadcrumbList = []
-		for (const brBreadcrumb of window.document.querySelectorAll(
-			'.br-breadcrumb'
-		)) {
-			breadcrumbList.push(new BRBreadcrumb('br-breadcrumb', brBreadcrumb))
-		}
-	}
+  initInstanceBreadcrumb() {
+    const breadcrumbList = []
+    for (const brBreadcrumb of window.document.querySelectorAll(
+      '.br-breadcrumb'
+    )) {
+      breadcrumbList.push(new BRBreadcrumb('br-breadcrumb', brBreadcrumb))
+    }
+  }
 
-	initInstanceDateTimePicker() {
-		const datetimepickerList = []
-		for (const brDateTimePicker of window.document.querySelectorAll(
-			'.br-datetimepicker'
-		)) {
-			datetimepickerList.push(
-				new BRDateTimePicker('br-datetimepicker', brDateTimePicker, {})
-			)
-		}
-	}
+  initInstanceDateTimePicker() {
+    const datetimepickerList = []
+    for (const brDateTimePicker of window.document.querySelectorAll(
+      '.br-datetimepicker'
+    )) {
+      datetimepickerList.push(
+        new BRDateTimePicker('br-datetimepicker', brDateTimePicker, {})
+      )
+    }
+  }
 
-	initInstanceHeader() {
-		const headerList = []
-		for (const brHeader of window.document.querySelectorAll('.br-header')) {
-			headerList.push(new BRHeader('br-header', brHeader))
-		}
-	}
-	initInstanceFooter() {
-		const listFooter = []
-		for (const brFooter of window.document.querySelectorAll('.br-footer')) {
-			listFooter.push(new BRFooter('br-footer', brFooter))
-		}
-	}
+  initInstanceHeader() {
+    const headerList = []
+    for (const brHeader of window.document.querySelectorAll('.br-header')) {
+      headerList.push(new BRHeader('br-header', brHeader))
+    }
+  }
+  initInstanceFooter() {
+    const listFooter = []
+    for (const brFooter of window.document.querySelectorAll('.br-footer')) {
+      listFooter.push(new BRFooter('br-footer', brFooter))
+    }
+  }
 
-	initInstanceInput() {
-		const inputList = []
-		for (const brInput of window.document.querySelectorAll('.br-input')) {
-			inputList.push(new BRInput('br-input', brInput))
-		}
-		for (const brInput of inputList) {
-			brInput.component
-				.querySelectorAll('input.search-autocomplete')
-				.forEach(() => {
-					brInput.setAutocompleteData(inputData)
-				})
-		}
-	}
+  initInstanceInput() {
+    const inputList = []
+    for (const brInput of window.document.querySelectorAll('.br-input')) {
+      inputList.push(new BRInput('br-input', brInput))
+    }
+    for (const brInput of inputList) {
+      brInput.component
+        .querySelectorAll('input.search-autocomplete')
+        .forEach(() => {
+          brInput.setAutocompleteData(inputData)
+        })
+    }
+  }
 
-	initInstanceItem() {
-		const itemList = []
-		for (const brItem of window.document.querySelectorAll('.br-item')) {
-			itemList.push(new BRItem('br-item', brItem))
-		}
-	}
+  initInstanceItem() {
+    const itemList = []
+    for (const brItem of window.document.querySelectorAll('.br-item')) {
+      itemList.push(new BRItem('br-item', brItem))
+    }
+  }
 
-	initInstanceList() {
-		const listList = []
-		for (const brList of window.document.querySelectorAll(
-			'.br-list:not([data-sub])'
-		)) {
-			listList.push(new BRList('br-list', brList))
-		}
-	}
+  initInstanceList() {
+    const listList = []
+    for (const brList of window.document.querySelectorAll(
+      '.br-list:not([data-sub])'
+    )) {
+      listList.push(new BRList('br-list', brList))
+    }
+  }
 
-	initInstanceMenu() {
-		const menuList = []
-		for (const brMenu of window.document.querySelectorAll('.br-menu')) {
-			menuList.push(new BRMenu('br-menu', brMenu))
-		}
-	}
+  initInstanceMenu() {
+    const menuList = []
+    for (const brMenu of window.document.querySelectorAll('.br-menu')) {
+      menuList.push(new BRMenu('br-menu', brMenu))
+    }
+  }
 
-	initInstanceMessage() {
-		const alertList = []
-		for (const brMessage of window.document.querySelectorAll(
-			'.br-message'
-		)) {
-			alertList.push(new BRMessage('br-message', brMessage))
-		}
-	}
+  initInstanceMessage() {
+    const alertList = []
+    for (const brMessage of window.document.querySelectorAll('.br-message')) {
+      alertList.push(new BRMessage('br-message', brMessage))
+    }
+  }
 
-	initInstanceModal() {
-		const modalList = []
-		for (const brModal of window.document.querySelectorAll('.br-modal')) {
-			modalList.push(new BRModal('br-modal', brModal))
-		}
-		for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
-			const scrim = new BRScrim('br-scrim', brScrim)
-			for (const button of window.document.querySelectorAll(
-				'.br-scrim + button'
-			)) {
-				button.addEventListener('click', () => {
-					scrim.showScrim()
-				})
-			}
-		}
-	}
+  initInstanceModal() {
+    const modalList = []
+    for (const brModal of window.document.querySelectorAll('.br-modal')) {
+      modalList.push(new BRModal('br-modal', brModal))
+    }
+    for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
+      const scrim = new BRScrim('br-scrim', brScrim)
+      for (const button of window.document.querySelectorAll(
+        '.br-scrim + button'
+      )) {
+        button.addEventListener('click', () => {
+          scrim.showScrim()
+        })
+      }
+    }
+  }
 
-	initInstanceNotification() {
-		const notificationList = []
-		for (const brNotification of window.document.querySelectorAll(
-			'.br-notification'
-		)) {
-			notificationList.push(
-				new BRNotification('br-notification', brNotification)
-			)
-		}
-	}
+  initInstanceNotification() {
+    const notificationList = []
+    for (const brNotification of window.document.querySelectorAll(
+      '.br-notification'
+    )) {
+      notificationList.push(
+        new BRNotification('br-notification', brNotification)
+      )
+    }
+  }
 
-	initInstancePagination() {
-		const paginationList = []
-		for (const brPagination of window.document.querySelectorAll(
-			'.br-pagination'
-		)) {
-			paginationList.push(new BRPagination('br-pagination', brPagination))
-		}
-	}
+  initInstancePagination() {
+    const paginationList = []
+    for (const brPagination of window.document.querySelectorAll(
+      '.br-pagination'
+    )) {
+      paginationList.push(new BRPagination('br-pagination', brPagination))
+    }
+  }
 
-	initInstanceScrim() {
-		const scrimList = []
-		for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
-			scrimList.push(new BRScrim('br-scrim', brScrim))
-		}
-		for (const buttonBloco1 of window.document.querySelectorAll(
-			'.bloco1 button'
-		)) {
-			buttonBloco1.addEventListener('click', () => {
-				for (const brScrim of scrimList) {
-					brScrim.showScrim()
-				}
-			})
-		}
-	}
+  initInstanceScrim() {
+    const scrimList = []
+    for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
+      scrimList.push(new BRScrim('br-scrim', brScrim))
+    }
+    for (const buttonBloco1 of window.document.querySelectorAll(
+      '.bloco1 button'
+    )) {
+      buttonBloco1.addEventListener('click', () => {
+        for (const brScrim of scrimList) {
+          brScrim.showScrim()
+        }
+      })
+    }
+  }
 
-	initInstanceSelect() {
-		const selectList = []
-		for (const brSelect of window.document.querySelectorAll('.br-select')) {
-			selectList.push(new BRSelect('br-select', brSelect))
-		}
-	}
+  initInstanceSelect() {
+    const selectList = []
+    for (const brSelect of window.document.querySelectorAll('.br-select')) {
+      selectList.push(new BRSelect('br-select', brSelect))
+    }
+  }
 
-	initInstanceTable() {
-		const tableList = []
-		for (const [index, brTable] of window.document
-			.querySelectorAll('.br-table')
-			.entries()) {
-			tableList.push(new BRTable('br-table', brTable, index))
-		}
-	}
+  initInstanceTable() {
+    const tableList = []
+    for (const [index, brTable] of window.document
+      .querySelectorAll('.br-table')
+      .entries()) {
+      tableList.push(new BRTable('br-table', brTable, index))
+    }
+  }
 
-	initInstanceTag() {
-		const tagList = []
-		for (const brTag of window.document.querySelectorAll('.br-tag')) {
-			tagList.push(new BRTag('br-tag', brTag))
-		}
-	}
+  initInstanceTag() {
+    const tagList = []
+    for (const brTag of window.document.querySelectorAll('.br-tag')) {
+      tagList.push(new BRTag('br-tag', brTag))
+    }
+  }
 
-	initInstanceTabs() {
-		const abasList = []
-		for (const brTab of window.document.querySelectorAll('.br-tab')) {
-			abasList.push(new BRTab('br-tab', brTab))
-		}
-	}
+  initInstanceTabs() {
+    const abasList = []
+    for (const brTab of window.document.querySelectorAll('.br-tab')) {
+      abasList.push(new BRTab('br-tab', brTab))
+    }
+  }
 
-	initInstanceTooltip() {
-		const tooltipList = []
-		for (const brTooltip of window.document.querySelectorAll(
-			'.br-tooltip'
-		)) {
-			tooltipList.push(new BRTooltip('br-tooltip', brTooltip))
-		}
-	}
+  initInstanceTooltip() {
+    const tooltipList = []
+    for (const brTooltip of window.document.querySelectorAll('.br-tooltip')) {
+      tooltipList.push(new BRTooltip('br-tooltip', brTooltip))
+    }
+  }
 
-	initInstanceUpload() {
-		const uploadList = []
-		function uploadTimeout() {
-			return new Promise((resolve) => {
-				// Colocar aqui um upload para o servidor e retirar o timeout
-				return setTimeout(resolve, 500)
-			})
-		}
-		for (const brUpload of window.document.querySelectorAll('.br-upload')) {
-			uploadList.push(new BRUpload('br-upload', brUpload, uploadTimeout))
-		}
-	}
+  initInstanceUpload() {
+    const uploadList = []
+    function uploadTimeout() {
+      return new Promise((resolve) => {
+        // Colocar aqui um upload para o servidor e retirar o timeout
+        return setTimeout(resolve, 500)
+      })
+    }
+    for (const brUpload of window.document.querySelectorAll('.br-upload')) {
+      uploadList.push(new BRUpload('br-upload', brUpload, uploadTimeout))
+    }
+  }
 
-	initInstanceStep() {
-		const stepList = []
-		for (const brStep of window.document.querySelectorAll('.br-step')) {
-			stepList.push(new BRStep('br-step', brStep))
-		}
-	}
+  initInstanceStep() {
+    const stepList = []
+    for (const brStep of window.document.querySelectorAll('.br-step')) {
+      stepList.push(new BRStep('br-step', brStep))
+    }
+  }
 
-	initInstanceWizard() {
-		const wizardList = []
-		for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
-			wizardList.push(new BRWizard('br-wizard', brWizard))
-		}
-	}
+  initInstanceWizard() {
+    const wizardList = []
+    for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
+      wizardList.push(new BRWizard('br-wizard', brWizard))
+    }
+  }
 
-	initInstanceCard() {
-		const listCard = []
-		for (const brCard of window.document.querySelectorAll('.br-card')) {
-			listCard.push(new BRCard('br-card', brCard))
-		}
-	}
-	initInstanceCarousel() {
-		const carouselList = []
-		for (const brCarousel of window.document.querySelectorAll(
-			'.br-carousel'
-		)) {
-			carouselList.push(new BRCarousel('br-carousel', brCarousel))
-		}
-	}
+  initInstanceCard() {
+    const listCard = []
+    for (const brCard of window.document.querySelectorAll('.br-card')) {
+      listCard.push(new BRCard('br-card', brCard))
+    }
+  }
+  initInstanceCarousel() {
+    const carouselList = []
+    for (const brCarousel of window.document.querySelectorAll('.br-carousel')) {
+      carouselList.push(new BRCarousel('br-carousel', brCarousel))
+    }
+  }
 
-	initInstanceCheckbox() {
-		const checkboxList = []
-		for (const brCheckbox of window.document.querySelectorAll(
-			'.br-checkbox'
-		)) {
-			checkboxList.push(new BRCheckbox('br-checkbox', brCheckbox))
-		}
-	}
+  initInstanceCheckbox() {
+    const checkboxList = []
+    for (const brCheckbox of window.document.querySelectorAll('.br-checkbox')) {
+      checkboxList.push(new BRCheckbox('br-checkbox', brCheckbox))
+    }
+  }
 
-	initInstanceCookiebar() {
-		/** Exemplo de instanciação de um objeto cookiebar */
-		const cookiebarList = []
-		for (const brCookiebar of window.document.querySelectorAll(
-			'.br-cookiebar'
-		)) {
-			const params = {
-				// callback: (outputJSON) => { console.log(JSON.parse(outputJSON)) console.log(outputJSON) },
-				component: brCookiebar,
-				json: jsonData,
-				lang: 'pt-br',
-				mode: 'default',
-				name: 'br-cookiebar',
-			}
-			// CookiebarData.loadJSON('./data.json', (response) => {
-			//   return (params.json = response)
-			// })
-			cookiebarList.push(new BRCookiebar(params))
-		}
+  initInstanceCookiebar() {
+    /** Exemplo de instanciação de um objeto cookiebar */
+    const cookiebarList = []
+    for (const brCookiebar of window.document.querySelectorAll(
+      '.br-cookiebar'
+    )) {
+      const params = {
+        // callback: (outputJSON) => { console.log(JSON.parse(outputJSON)) console.log(outputJSON) },
+        component: brCookiebar,
+        json: jsonData,
+        lang: 'pt-br',
+        mode: 'default',
+        name: 'br-cookiebar',
+      }
+      // CookiebarData.loadJSON('./data.json', (response) => {
+      //   return (params.json = response)
+      // })
+      cookiebarList.push(new BRCookiebar(params))
+    }
 
-		/** Exemplo de instanciação do cookibar apenas sem necessidade de um HTML base */
-		// BRCookiebar.createCookiebar(jsonData, showOutput)
-	}
+    /** Exemplo de instanciação do cookibar apenas sem necessidade de um HTML base */
+    // BRCookiebar.createCookiebar(jsonData, showOutput)
+  }
 
-	initInstanceTextarea() {
-		const textareaList = []
-		for (const brTextarea of window.document.querySelectorAll(
-			'.br-textarea'
-		)) {
-			textareaList.push(new BRTextarea('br-textarea', brTextarea))
-		}
-	}
-	initInstanceWizard() {
-		const wizardList = []
-		for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
-			wizardList.push(new BRWizard('br-wizard', brWizard))
-		}
-	}
+  initInstanceTextarea() {
+    const textareaList = []
+    for (const brTextarea of window.document.querySelectorAll('.br-textarea')) {
+      textareaList.push(new BRTextarea('br-textarea', brTextarea))
+    }
+  }
+  initInstanceWizard() {
+    const wizardList = []
+    for (const brWizard of window.document.querySelectorAll('.br-wizard')) {
+      wizardList.push(new BRWizard('br-wizard', brWizard))
+    }
+  }
 }
 
 export {
-	Accordion,
-	BRAvatar,
-	Checkgroup,
-	BRAccordion,
-	Dropdown,
-	BRBreadcrumb,
-	Collapse,
-	BRCard,
-	BRCheckbox,
-	BRCookiebar,
-	BRDateTimePicker,
-	BRFooter,
-	BRHeader,
-	BRInput,
-	BRItem,
-	BRList,
-	BRMenu,
-	BRMessage,
-	BRModal,
-	BRNotification,
-	BRPagination,
-	BRScrim,
-	BRSelect,
-	BRTab,
-	BRTable,
-	BRTag,
-	BRTextarea,
-	BRTooltip,
-	BRUpload,
-	BRWizard,
-	Globals,
+  Accordion,
+  BRAvatar,
+  Checkgroup,
+  BRAccordion,
+  Dropdown,
+  BRBreadcrumb,
+  Collapse,
+  BRCard,
+  BRCheckbox,
+  BRCookiebar,
+  BRDateTimePicker,
+  BRFooter,
+  BRHeader,
+  BRInput,
+  BRItem,
+  BRList,
+  BRMenu,
+  BRMessage,
+  BRModal,
+  BRNotification,
+  BRPagination,
+  BRScrim,
+  BRSelect,
+  BRTab,
+  BRTable,
+  BRTag,
+  BRTextarea,
+  BRTooltip,
+  BRUpload,
+  BRWizard,
+  Globals,
 }
