@@ -73,11 +73,11 @@ class BRDateTimePicker {
 			time_24hr: true,
 			wrap: true,
 		}
-		this.config_flatpick = Object.assign(this.config_native, this.config)
+		this.config_flatpick = Object.assign(this.config, this.config_native)
 
 		this.calendar = flatpickr(
 			this.component,
-			Object.assign(this.config_native, this.config)
+			Object.assign(this.config, this.config_native)
 		)
 	}
 }
