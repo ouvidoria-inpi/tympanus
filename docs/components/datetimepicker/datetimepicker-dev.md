@@ -15,6 +15,19 @@
 </div>
 ```
 
+### Datepicker com customização
+
+```html
+<div class="br-datetimepicker" data-mode="single" data-type="text" datetimepicker-config="minDate: '15/04/2022',maxDate: '20/06/2022'">
+  <div class="br-input has-icon">
+    <label for="simples-input">DateTimePicker simples</label>
+    <input class="has-icon" id="simples-input" type="text" placeholder="dd/mm/aaaa" data-input="data-input"/>
+    <button class="br-button circle small" type="button" aria-label="Abrir Timepicker" data-toggle="data-toggle" id="simples-input-btn"><i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+```
+
 ### Datepicker com intervalo de datas
 
 ```html
@@ -68,10 +81,21 @@
 | `data-mode`  | atributo | single ou range              | Modo do data única ou intervalo de data                              |
 | `data-type`  | atributo | text, time ou datetime-local | Tipo datetimepicker, timepicker ou datetimepicker + timepicker       |
 | `data-input` | boolean  | true                         | Indica que o input irá receber o valor selecionado no datetimepicker |
+| `data-input` | boolean  | true                         | Indica que o input irá receber o valor selecionado no datetimepicker |
 
 > **Atenção**! O atributo `data-input` deve ser inserido na tag `<input>`.
 
+### Propriedades opcional
+
+| Atributo                | Tipo     | Valor padrão | Descrição                                                                                |
+| ----------------------- | -------- | ------------ | ---------------------------------------------------------------------------------------- |
+| `datetimepicker-config` | atributo | json         | Json com configurações conforme o [Flatpickr options](https://flatpickr.js.org/options/) |
+
+> **Atenção**! As variáveis **dateFormat,disableMobile, enableTime, minuteIncrement, node, minuteIncrement, nextArrow, noCalendar, prevArrow, time_24hr e wrap** serão sobreescritas com o padrão
+
 ## Dependências
+
+****
 
 -   [Button](/components/button)
 -   [Input](/components/input)
@@ -101,7 +125,7 @@ for (const brDateTimePicker of window.document.querySelectorAll(
   '.br-datetimepicker'
 )) {
   datetimepickerList.push(
-    new core.BRDateTimePicker('br-datetimepicker', brDateTimePicker)
+    new core.BRDateTimePicker('br-datetimepicker', brDateTimePicker,{minDate: '15/04/2022',maxDate: '20/04/2022'}
   )
 }
 ```
