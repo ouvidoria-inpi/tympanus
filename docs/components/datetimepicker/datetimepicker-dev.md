@@ -15,19 +15,6 @@
 </div>
 ```
 
-### Datepicker com config
-
-```html
-<div class="br-datetimepicker" data-mode="single" data-type="text" dataconfig="{minDate: '15/04/2022'}">
-  <div class="br-input has-icon">
-    <label for="simples-input">DateTimePicker simples</label>
-    <input class="has-icon" id="simples-input" type="text" placeholder="dd/mm/aaaa" data-input="data-input"/>
-    <button class="br-button circle small" type="button" aria-label="Abrir Timepicker" data-toggle="data-toggle" id="simples-input-btn"><i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
-```
-
 ### Datepicker com intervalo de datas
 
 ```html
