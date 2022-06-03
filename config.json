@@ -1498,7 +1498,7 @@
 		},
 		{
 			"hideLabel": true,
-			"id": "prototipo",
+			"id": "padroes-para-android-e-ios",
 			"label": "Padrões para Android e IOS",
 			"type": "documentation"
 		},
