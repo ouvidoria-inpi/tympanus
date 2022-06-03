@@ -8,15 +8,6 @@
 					"type": "documentation"
 				},
 				{
-					"ext": [
-						"html"
-					],
-					"hideLabel": true,
-					"id": "padrao-minimo",
-					"label": "Padrão Mínimo",
-					"type": "documentation"
-				},
-				{
 					"id": "principios",
 					"label": "Princípios do Design System",
 					"type": "documentation"
@@ -1531,7 +1522,7 @@
 							"description": "Baixe aqui o UI Kit para construção de projetos web Versão para Adobe XD.",
 							"image": "assets/imgs/logo-xd.png",
 							"isNew": true,
-							"label": "UI Kit WEB Figma",
+							"label": "UI Kit WEB",
 							"path": "https://serprodrive.serpro.gov.br/s/ARP4gmoRKtwTena",
 							"fileDescription": "uikit-govbr-ds-web_5.1.1.zip (14MB)",
 							"version": "Versão 5.1.1"
@@ -1549,15 +1540,15 @@
 							"description": "Baixe aqui o UI Kit para construção de projetos mobile em Android.",
 							"image": "assets/imgs/logo-android.png",
 							"label": "UI Kit Android",
-							"path": "https://serprodrive.serpro.gov.br/s/kLJfZc9zpfa8jsL",
-							"version": "Versão 4.2.0"
+							"path": "https://serprodrive.serpro.gov.br/s/tJ9deTy7rrpGNXL",
+							"version": "Versão 4.0.0"
 						},
 						{
 							"description": "Baixe aqui o UI Kit para construção de projetos mobile em IOS.",
 							"image": "assets/imgs/logo-ios.png",
 							"label": "UI Kit iOS",
-							"path": "https://serprodrive.serpro.gov.br/s/CiLWgb77s3tbr69",
-							"version": "Versão 3.1.0"
+							"path": "https://serprodrive.serpro.gov.br/s/s9FTFtG5qPRNPeZ",
+							"version": "Versão 3.0.0"
 						},
 						{
 							"description": "Baixe aqui o UI Kit para construção de wireframes e protótipos.",
@@ -1576,16 +1567,9 @@
 						{
 							"description": "Baixe aqui brushes para texturas das ilustrações.",
 							"image": "assets/imgs/pacote.png",
-							"label": "Pack Ilustração",
+							"label": "Pack de Assets de Ilustração",
 							"path": "https://serprodrive.serpro.gov.br/s/fqpQbTmtmpPM6r4",
 							"version": "Versão 1.0.0"
-						},
-						{
-							"description": "Baixe aqui o Kit para construção de protótipos.",
-							"image": "assets/imgs/pacote.png",
-							"label": "Protótipos",
-							"path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW",
-							"version": "Versão 1.0.1"
 						}
 					],
 					"id": "designer",
@@ -1626,12 +1610,6 @@
 							"id": "uikitios",
 							"label": "UI KIT IOS",
 							"versions": [
-								{
-									"data": "10 dez 2021",
-									"dsgov_version": "2.4.1",
-									"path": "https://serprodrive.serpro.gov.br/s/s9FTFtG5qPRNPeZ",
-									"version": "Versão 3.0.0"
-								},
 								{
 									"path": "https://serprodrive.serpro.gov.br/s/yybFqo4ewZyHoLd",
 									"version": "Versão 2.0.0",
@@ -1861,20 +1839,20 @@
 				{
 					"files": [
 						{
-							"description": "Repositório dos códigos.",
+							"description": "Utilize código pronto em HTML, CSS e JavaScript.",
 							"image": "assets/imgs/logos-w3c.png",
 							"isNew": true,
-							"label": "Repositório do GOV.BR-DS CORE",
-							"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/archive/v3.0.1-rc/govbr-ds-dev-core-v3.0.1-rc.zip",
-							"version": "Versão 3.0.0-rc"
+							"label": "Código-fonte Design System GOV.BR",
+							"path": "/assets/govbr-ds-dev-core/assets/source-code/govbr-ds-latest.zip",
+							"version": "Versão 2.4.2"
 						},
 						{
 							"description": "Baixe o pacote NPM para configuração  de seu projeto.",
 							"image": "assets/imgs/logo-npm.png",
 							"isNew": true,
 							"label": "Pacote NPM",
-							"path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.0.0-rc.tgz",
-							"version": "Versão 3.0.0-rc"
+							"path": "/assets/govbr-ds-dev-core/assets/npm-package/govbr-ds-latest.tgz",
+							"version": "Versão 2.4.2"
 						},
 						{
 							"description": "Baixe o pacote CDN para configuração de seu projeto.",
