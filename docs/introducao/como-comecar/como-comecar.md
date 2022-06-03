@@ -1,4 +1,24 @@
-[version]: # '2.4.1'
+[version]: # '2.4.3'
+
+Sugerimos a leitura dos [Princípios do Design System](introducao/principios), eles são a base para construção de todos os artefatos disponibilizados e devem ser aplicados também aos produtos que adotem o padrão digital de governo.
+
+**Designer**
+
+Se você é um designer e está começando a adotar o design system, indicamos a leitura dos [fundamentos de design](fundamentos-visuais/cores). Eles auxiliam na tomada de decisões, melhoram a assertividade de seu produto e garante que a solução criada esteja aderente aos padrões existentes.
+
+Disponibilizamos alguns materiais para ajudar a projetar sua interface:
+
+[UiKit Desktop e Web Mobile](https://serprodrive.serpro.gov.br/s/ixkFL2ETYZWaSkN)
+
+[UiKit Android](https://serprodrive.serpro.gov.br/s/kLJfZc9zpfa8jsL)
+
+[UiKit iOS](https://serprodrive.serpro.gov.br/s/CiLWgb77s3tbr69)
+
+Caso tenha dúvida em como aplicar os padrões a um serviço, temos alguns protótipos já aderentes, que podem ser utilizados como referência ou mesmo não ter que iniciar seu trabalho do zero. Dessa forma, você poderá direcionar seu esforço para estratégias de negócio e/ou ux. Confira na área de downloads na [**aba Modelos**](downloads/assets).
+
+Temos uma novidade que acabamos de disponibilizar para download: Protótipos de um caso de uso. Neles exemplificamos como podem ser aplicados os padrões do design system em soluções web, mobile responsivo e aplicativos nativos IOS e Android sem ferir os padrões de cada plataforma, para que entendam as diferenças entre as aplicações. [Confira na área de downloads na **aba Designer**](downloads/assets).
+
+Para saber mais sobre como utilizar os UIKITs, acesse Prototipando com o Design System GOV.BR  (<https://www.gov.br/ds/introducao/prototipando>)
 
 ## Instalação
 
