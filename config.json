@@ -1498,7 +1498,7 @@
 		},
 		{
 			"hideLabel": true,
-			"id": "prototipo",
+			"id": "padroes-para-android-e-ios",
 			"label": "Padrões para Android e IOS",
 			"type": "documentation"
 		},
@@ -1977,7 +1977,7 @@
 			],
 			"hideLabel": true,
 			"id": "colabore-com-o-govbr-ds",
-			"label": "Colabore com o Design System GOV.BR",
+			"label": "Colabore com o Design System",
 			"type": "documentation"
 		},
 		{
@@ -1987,6 +1987,15 @@
 			"hideLabel": true,
 			"id": "home",
 			"label": "Página principal",
+			"type": "documentation"
+		},
+		{
+			"ext": [
+				"html"
+			],
+			"hideLabel": true,
+			"id": "comunidade-govbr-ds",
+			"label": "Comunidade do Design System",
 			"type": "documentation"
 		},
 		{
