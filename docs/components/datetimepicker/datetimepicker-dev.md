@@ -91,7 +91,7 @@
 | ----------------------- | -------- | ------------ | ---------------------------------------------------------------------------------------- |
 | `datetimepicker-config` | atributo | json         | Json com configurações conforme o [Flatpickr options](https://flatpickr.js.org/options/) |
 
-> **Atenção**! As variáveis **dateFormat,disableMobile, enableTime, minuteIncrement, node, minuteIncrement, nextArrow, noCalendar, prevArrow, time_24hr e wrap** serão sobreescritas com o padrão
+> **Atenção**! As variáveis **dateFormat,disableMobile, enableTime, minuteIncrement, node, minuteIncrement, nextArrow, noCalendar, prevArrow, time_24hr e wrap** não estão habilitados para alteração.
 
 ## Dependências
 
