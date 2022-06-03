@@ -29,17 +29,17 @@
           Agora o GOVBR-DS é aberto à comunidade. Ajude tornar o Brasil um país
           mais digital e colaborativo.
         </p>
-        <p class="text-weight-light">
+        <p class="text-up-03 text-weight-light">
           O Design System do Governo Brasileiro (GOVBR-DS) está em constante
           busca de aperfeiçoamento, entretanto nosso time entende que esta
           evolução só pode ser completa com a ajuda de todos.
         </p>
-        <p class="text-weight-light">Veja abaixo como contribuir.</p>
+        <p class="text-up-03 text-weight-light">Veja abaixo como contribuir.</p>
       </div>
     </div>
   </section>
 
-  <section class="bg-gradient mx-n5 text-center p-lg-5 pt-sm-10x">
+  <section class="bg-gradient mx-sm-n5 text-center p-lg-5 pt-sm-10x">
     <style>
       .bg-gradient {
         background: linear-gradient(
@@ -97,13 +97,11 @@
     <div class="row px-5">
       <div class="col-sm-12 col-md-4 mb-4 d-flex">
         <a
-          class="br-card d-flex flex-column flex-fill"
+          class="br-card d-flex flex-column flex-fill hover"
           href="https://govbr-ds.gitlab.io/govbr-ds-wiki/"
         >
           <div class="card-header">
-            <p class="h4 text-primary-default my-0">
-              Wiki - Guias e Orientações
-            </p>
+            <p class="h4 my-0">Wiki - Guias e Orientações</p>
             <p class="text-gray-80 py-1">
               Acesse nosso repositório de conhecimento
             </p>
@@ -125,7 +123,7 @@
           href="https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core"
         >
           <div class="card-header">
-            <p class="h4 text-primary-default my-0">Repositório no GitLab</p>
+            <p class="h4 my-0">Repositório no GitLab</p>
             <p class="text-gray-80 py-1">
               Baixe, instale e utilize nosso código-fonte
             </p>
@@ -147,9 +145,7 @@
           href="https://discord.com/channels/806947332398252062/896382401691918347"
         >
           <div class="card-header">
-            <p class="h4 text-primary-default my-0">
-              Comunique-se pelo Discord
-            </p>
+            <p class="h4 my-0">Comunique-se pelo Discord</p>
             <p class="text-gray-80 py-1">
               Mantenha contato através do nosso canal de comunicação oficial
             </p>
@@ -168,7 +164,7 @@
     </div>
   </section>
 
-  <section class="bg-webc mx-n6 ml-sm-n1">
+  <section class="bg-webc mx-sm-n6 ml-sm-n1">
     <style>
       .bg-webc {
         background: linear-gradient(
@@ -188,10 +184,16 @@
         object-fit: contain;
         width: auto;
       }
+      .img-components-mob {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+        overflow: visible;
+      }
     </style>
     <div class="row px-5 mb-sm-5">
       <div
-        class="col col-lg-6 col-sm-12 text-center text-lg-left px-5 my-lg-10x mt-md-10x mt-sm-5 mb-sm-0"
+        class="col col-lg-6 col-sm-12 text-center text-lg-left px-5 my-lg-10x mt-md-10x mt-10x mb-sm-0"
       >
         <h1 class="text-weight-light">Web Components</h1>
         <p class="text-up-03 text-weight-light mb-5">
@@ -206,9 +208,18 @@
         </a>
       </div>
       <div
-        class="img-components col-lg-6 col-sm-12 pb-md-0 pb-sm-5 d-flex flex-wrap justify-content-center"
+        class="img-components col-lg-6 col-sm-12 pb-md-0 pb-sm-5 d-md-flex d-none flex-wrap justify-content-center"
       >
         <img src="imagens/web-components.png" alt="Imagens Web Components" />
+      </div>
+      <div
+        class="col-lg-3 col-12 d-md-none d-sm-flex my-5 justify-content-center"
+      >
+        <img
+          src="imagens/web-components-mob.png"
+          class="img-components-mob mb-3"
+          alt="Imagem Designer"
+        />
       </div>
       <div class="col-12 my-5 text-center d-lg-none">
         <a
@@ -233,13 +244,22 @@
         );
       }
     </style>
-    <div class="row d-flex align-items-center">
+    <div class="row d-flex align-items-center pt-5">
       <div
-        class="col-lg-3 col-sm-6 col-xs-3 order-lg-1 order-sm-1 order-1 pb-sm-5"
+        class="col-lg-3 col-xs-12 d-md-none d-sm-flex order-xs-1 order-1 my-5 justify-content-center"
+      >
+        <img
+          src="imagens/des-dev.png"
+          class="img-fluid mb-3"
+          alt="Imagem Designer"
+        />
+      </div>
+      <div
+        class="col-lg-3 col-sm-6 d-md-flex d-none col-xs-3 order-lg-1 order-sm-1 order-1 justify-content-end align-self-start"
       >
         <img
           src="imagens/des.png"
-          class="img-fluid pt-sm-10x ml-lg-0 ml-sm-10x"
+          class="img-fluid mb-3"
           alt="Imagem Designer"
         />
       </div>
@@ -263,11 +283,11 @@
       </div>
 
       <div
-        class="col-lg-3 col-sm-6 col-xs-3 order-lg-3 order-sm-2 order-2 pb-sm-5"
+        class="col-lg-3 col-sm-6 d-md-flex d-none col-xs-3 order-lg-3 order-sm-2 order-2 justify-content-start align-self-start"
       >
         <img
           src="imagens/dev.png"
-          class="img-fluid pb-sm-10x mr-lg-0 mr-sm-10x"
+          class="img-fluid mb-3"
           alt="Imagem Desenvolvedor"
         />
       </div>
@@ -276,13 +296,13 @@
 
   <section class="mx-n1 mx-sm-n6 text-center px-1 px-sm-5 py-5">
     <div class="row align-items-center">
-      <div class="col-lg my-10x my-sm-5">
+      <div class="col-lg my-sm-5 my-sm-5">
         <img
           src="imagens/ilustra-colabore.png"
           class="img-fluid"
           alt="Colabore Conosco"
         />
-        <p class="text-up-04 text-weight-medium mb-5">Colabore Conosco</p>
+        <p class="text-up-04 text-weight-medium mb-5 mt-3">Colabore Conosco</p>
         <p class="text-up-02 text-weight-light mb-5">
           Faça parte dessa jornada e nos ajude a aprimorar o GOVBR-DS.
         </p>
@@ -293,13 +313,13 @@
           Colaborar
         </a>
       </div>
-      <div class="col-lg my-10x my-sm-5">
+      <div class="col-lg my-sm-5 my-sm-5">
         <img
           src="imagens/ilustra-feedback.png"
           class="img-fluid"
           alt="Feedback"
         />
-        <p class="text-up-04 text-weight-medium mb-5">Feedback</p>
+        <p class="text-up-04 text-weight-medium mb-5 mt-3">Feedback</p>
         <p class="text-up-02 text-weight-light mb-5">
           O seu feedback é fundamental para o crescimento do GOVBR-DS.
         </p>
@@ -311,13 +331,15 @@
           Registrar o Feedback
         </a>
       </div>
-      <div class="col-lg my-10x my-sm-5">
+      <div class="col-lg my-sm-5 my-sm-5">
         <img
           src="imagens/ilustra-pesquisa.png"
           class="img-fluid"
           alt="Pesquisa de Satisfação"
         />
-        <p class="text-up-04 text-weight-medium mb-5">Pesquisa Analítica</p>
+        <p class="text-up-04 text-weight-medium mb-5 mt-3">
+          Pesquisa Analítica
+        </p>
         <p class="text-up-02 text-weight-light mb-5">
           Estamos realizando um levantamento de serviços que estão adotando o
           GOVBR-DS.
@@ -360,12 +382,14 @@
         <a
           class="br-button secondary circle mb-5"
           href="mailto:govbr-ds@serpro.gov.br"
+          target="_blank"
         >
           <img src="imagens/email.svg" class="img-fluid" alt="'Link de email" />
         </a>
         <a
           class="br-button secondary circle mb-5"
           href="https://discord.com/channels/806947332398252062/896382401691918347"
+          target="_blank"
         >
           <img src="imagens/chat.svg" class="img-fluid" alt="'Link de chat" />
         </a>
