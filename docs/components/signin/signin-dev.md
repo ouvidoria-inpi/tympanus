@@ -40,13 +40,13 @@
 
 ### Propriedades Adicionais
 
-| Atributo | Valor padrão | Descrição                       |
-| -------- | ------------ | ------------------------------- |
-| class    | large        | Aplica densidade baixa          |
-| class    | medium       | Aplica densidade média (padrão) |
-| class    | small        | Aplica densidade alta           |
-| class    | circle       | Aplica sigin tipo icônico       |
-| class    | inverted     | Aplica cor invertida(fundo escuro)|
+| Atributo | Valor padrão | Descrição                          |
+| -------- | ------------ | ---------------------------------- |
+| class    | large        | Aplica densidade baixa             |
+| class    | medium       | Aplica densidade média (padrão)    |
+| class    | small        | Aplica densidade alta              |
+| class    | circle       | Aplica sigin tipo icônico          |
+| class    | inverted     | Aplica cor invertida(fundo escuro) |
 
 ## Acessibilidade
 
@@ -54,6 +54,6 @@
 
 ## Dependências
 
-- [Button](/components/button)
+- [Button](/ds/components/button)
 
 -

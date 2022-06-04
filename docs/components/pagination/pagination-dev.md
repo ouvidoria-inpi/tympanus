@@ -122,13 +122,13 @@
 
 ## Dependências
 
--   [Button](/components/button)
--   [Divider](/components/divider)
--   [Input](/components/input)
--   [Item](/components/item)
--   [List](/components/list)
--   [Radio](/components/radio)
--   [Select](/components/select)
+-   [Button](/ds/components/button)
+-   [Divider](/ds/components/divider)
+-   [Input](/ds/components/input)
+-   [Item](/ds/components/item)
+-   [List](/ds/components/list)
+-   [Radio](/ds/components/radio)
+-   [Select](/ds/components/select)
 
 ## Instanciação do Componente
 

@@ -228,7 +228,7 @@ O menu contextual, quando houver, pode ser fixo ou _sticky_ e e geralmente fica 
 
 Menus podem apresentar muitos itens, ultrapassando a altura da tela do dispositivo (_desktop_, _tablet_ ou _smartphone_).
 
-De acordo com [padrão da diretriz Template Base](/templates/base), a Área de navegação pode existir um barra de rolagem interna para acessar o conteúdo.
+De acordo com [padrão da diretriz Template Base](/ds/templates/base), a Área de navegação pode existir um barra de rolagem interna para acessar o conteúdo.
 
 Porém nos _smartphones_, como a altura do dispositivo geralmente são bem menor, a rolagem deve ocorrer de forma natural, rolando todo conteúdo do menu para cima ou para baixo utilizando a própria rolagem do navegador. Em outras palavras, evite o uso de rolagem interna na grid de 4 colunas!
 
@@ -345,7 +345,7 @@ Para maiores detalhes, consulte Comportamento > Navegação em Subníveis.
 ![Estado Ativo](imagens/menu-behavior-state-active.png)
 *Exemplo de estado ativo do menu.*
 
-Para mais detalhes a respeito das regras de funcionamento dos estados, consulte [Fundamentos Visuais > Estados.](/fundamentos-visuais/estados)
+Para mais detalhes a respeito das regras de funcionamento dos estados, consulte [Fundamentos Visuais > Estados.](/ds/fundamentos-visuais/estados)
 
 ### 7- Densidade
 

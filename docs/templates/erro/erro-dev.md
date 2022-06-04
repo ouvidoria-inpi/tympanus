@@ -77,7 +77,7 @@
 
 ### Elementos obrigatórios
 
-O template de erro usa como base o template padrão [Template Base](/templates/base) para construção de sua anatomia. O template base é a parte que engloba o template de erro. Sendo assim, os elementos do `template erro` ficam na parte interna, região onde fica o contéudo no `template base`.
+O template de erro usa como base o template padrão [Template Base](/ds/templates/base) para construção de sua anatomia. O template base é a parte que engloba o template de erro. Sendo assim, os elementos do `template erro` ficam na parte interna, região onde fica o contéudo no `template base`.
 
 ### Elementos opcionais
 

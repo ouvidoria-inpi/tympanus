@@ -32,7 +32,7 @@ A herança de um estado deve ser respeitada. Quando vários estados ocorrem ao m
 
 ### Acessibilidade
 
-Por tratar-se de representações visuais, os estados devem seguir os princípios de acessibilidade encontrados em [Fundamento Cores](/fundamentos-visuais/cores). O estado **Desabilitado** é uma exceção devido à sua função dentro da interface.
+Por tratar-se de representações visuais, os estados devem seguir os princípios de acessibilidade encontrados em [Fundamento Cores](/ds/fundamentos-visuais/cores). O estado **Desabilitado** é uma exceção devido à sua função dentro da interface.
 
 Dependendo do fundo aplicado, o estado do componente deve ser revisto para atender a todos os princípios estabelecidos dos estados. Caso as especificações contidas no estado forem insuficientes para promover um bom contraste entre fundo e texto/ícone, inverta as cores do elemento. Se mesmo assim não houver um contraste satisfatório, utilize as informações localizadas do Fundamento Cores como guia para atender suas necessidades.
 
@@ -96,7 +96,7 @@ Uma regra simples que pode ser utilizada para determinar se um fundo é claro ou
 
 ### _Overlay_
 
-Alguns estados utilizam o conceito de _Overlay_. Overlay é uma aplicação de camada semi transparente sobre um elemento. Os detalhes estão no [Fundamento Superfície](/fundamentos-visuais/superficie).
+Alguns estados utilizam o conceito de _Overlay_. Overlay é uma aplicação de camada semi transparente sobre um elemento. Os detalhes estão no [Fundamento Superfície](/ds/fundamentos-visuais/superficie).
 
 Dependendo da cor do elemento, a opacidade do Overlay deve ser revista para que o destaque seja notado pelo usuário: o valor da opacidade é inversamente proporcional ao brilho da superfície do elemento (cor de fundo), ou seja, quanto mais claro a cor de fundo, menor será o valor da opacidade necessária para que o usuário perceba o estado. Desta forma, podem existir diferenças nos valores de opacidade entre um fundo claro e escuro.
 
@@ -168,7 +168,7 @@ Quando a ação interativa for relacionada a visitar um determinado conteúdo fo
 
 ### Objetos
 
-Quando criar um objeto interativo, tenha em mente se vale a pena aplicar a cor sobre o fundo ou primeiro plano. O importante é que, para o usuário, esteja claro o estado Interativo. Tenha cuidado com contraste entre o fundo e o primeiro plano, visite sempre o [Fundamento Cores](/fundamentos-visuais/cores) para saber o melhor contraste possível.
+Quando criar um objeto interativo, tenha em mente se vale a pena aplicar a cor sobre o fundo ou primeiro plano. O importante é que, para o usuário, esteja claro o estado Interativo. Tenha cuidado com contraste entre o fundo e o primeiro plano, visite sempre o [Fundamento Cores](/ds/fundamentos-visuais/cores) para saber o melhor contraste possível.
 
 ### _Underline_ vs legibilidade
 
@@ -183,11 +183,11 @@ Para que _hiperlinks_ sejam destacados utilize _underline_. Esse recurso pode se
 ![Estado interativo aplicado à Fundo Claro e Escuro](imagens/interativo.png)
 *Exemplo do estado interativo sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-| Element                                       | Property | Token/Value                 |
-| --------------------------------------------- | -------- | --------------------------- |
-| background/foreground (Sobre um fundo Claro)  | color    | `--blue-warm-vivid-70`   |
-| background/foreground (Sobre um fundo Escuro) | color    | `--blue-warm-20` |
-| text                                          | style    | `underline`                 |
+| Element                                       | Property | Token/Value            |
+| --------------------------------------------- | -------- | ---------------------- |
+| background/foreground (Sobre um fundo Claro)  | color    | `--blue-warm-vivid-70` |
+| background/foreground (Sobre um fundo Escuro) | color    | `--blue-warm-20`       |
+| text                                          | style    | `underline`            |
 
 ---
 
@@ -315,15 +315,15 @@ Como regra geral, utilize este estilo sempre que:
 
 A principal propriedade (visual) que demonstra que um elemento está em foco é uma borda (ou contorno). Essa borda deve ser criada em volta do elemento e deve ter um espaçamento de segurança (para que a borda não se confunda com qualquer outra propriedade do elemento "focado", ou com a herança de outros estados).
 
-Por motivos de legibilidade, a cor aplicada na borda em fundo escuro é diferente. Para maiores informações consultar o [Fundamento Cores](/fundamentos-visuais/cores).
+Por motivos de legibilidade, a cor aplicada na borda em fundo escuro é diferente. Para maiores informações consultar o [Fundamento Cores](/ds/fundamentos-visuais/cores).
 
 ![Estado Foco](imagens/foco.png)
 *Exemplo do estado foco sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
 Para **foco tênue** a borda deve possuir menos ênfase e não há necessidade de um espaçamento de segurança.
 
-| Element                        | Property | Token/Value          |
-| ------------------------------ | -------- | -------------------- |
+| Element                        | Property | Token/Value       |
+| ------------------------------ | -------- | ----------------- |
 | border (Sobre um fundo Claro)  | color    | `--gold-vivid-40` |
 | border (Sobre um fundo Escuro) | color    | `--gold-vivid-20` |
 
@@ -374,12 +374,12 @@ Para distinguir melhor o Estado, a borda do elemento pode ser trabalhada para n�
 ![Estado Ativo](imagens/ativo.png)
 *Exemplos do estado ativo sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|background/foreground/border|color|`--blue-warm-vivid-80`|
-|background/foreground/border|color|`--pure-0`|
-|border|width|`--surface-width-lg`|
-|border|style|`solid`|
+| Element                      | Property | Token/Value            |
+| ---------------------------- | -------- | ---------------------- |
+| background/foreground/border | color    | `--blue-warm-vivid-80` |
+| background/foreground/border | color    | `--pure-0`             |
+| border                       | width    | `--surface-width-lg`   |
+| border                       | style    | `solid`                |
 
 ---
 
@@ -414,10 +414,10 @@ Cor de fundo e um elemento gráfico devem ser utilizados para representar o esta
 ![Estado Selecionado](imagens/selecionado.png)
 *Exemplo do estado selecionado sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|background/foreground|color|`--blue-warm-vivid-50`|
-|icon|class|`fa-check`|
+| Element               | Property | Token/Value            |
+| --------------------- | -------- | ---------------------- |
+| background/foreground | color    | `--blue-warm-vivid-50` |
+| icon                  | class    | `fa-check`             |
 
 ---
 
@@ -447,19 +447,19 @@ O cursor do mouse deve ser alterado para a "mão fechada".
 ![Estado Arrastando](imagens/arrastando.png)
 *Exemplo do estado arrastando sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|border|color|`Cor do Estado Interativo`|
-|border|width|`--surface-width-md`|
-|border|style|`solid`|
-|background|shadow-offset-x|`--surface-offset-none`|
-|background|shadow-offset-y|`--surface-offset-md`|
-|background|shadow-blur|`--surface-blur-lg`|
-|background|shadow-color|`Cor do Estado Interativo`|
-|background|shadow-opacity|`--surface-opacity-sm`|
-|background/foreground|opacity|`--surface-opacity-xl`|
-|background/foreground|rotate|`-5°`|
-|cursor|cursor|`grabbing`|
+| Element               | Property        | Token/Value                |
+| --------------------- | --------------- | -------------------------- |
+| border                | color           | `Cor do Estado Interativo` |
+| border                | width           | `--surface-width-md`       |
+| border                | style           | `solid`                    |
+| background            | shadow-offset-x | `--surface-offset-none`    |
+| background            | shadow-offset-y | `--surface-offset-md`      |
+| background            | shadow-blur     | `--surface-blur-lg`        |
+| background            | shadow-color    | `Cor do Estado Interativo` |
+| background            | shadow-opacity  | `--surface-opacity-sm`     |
+| background/foreground | opacity         | `--surface-opacity-xl`     |
+| background/foreground | rotate          | `-5°`                      |
+| cursor                | cursor          | `grabbing`                 |
 
 ---
 
@@ -487,10 +487,10 @@ Prefira o posicionamento do ícone a esquerda e/ou no topo do elemento. O cursor
 ![Estado Arrastar](imagens/arrastar.png)
 *Exemplo do estado errastar sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|icon|class|`grip-vertical`|
-|cursor|cursor|`grab`|
+| Element | Property | Token/Value     |
+| ------- | -------- | --------------- |
+| icon    | class    | `grip-vertical` |
+| cursor  | cursor   | `grab`          |
 
 ---
 
@@ -510,11 +510,11 @@ O estado _Dropzone_ (ou Área/Zona de Soltura) indica quando uma área está vi�
 ![Dropzone](imagens/dropzone.png)
 *Exemplo do estado dropzone sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|border|color|`Cor do Estado Interativo`|
-|border|width|`--surface-width-sm`|
-|border|style|`dashed`|
+| Element | Property | Token/Value                |
+| ------- | -------- | -------------------------- |
+| border  | color    | `Cor do Estado Interativo` |
+| border  | width    | `--surface-width-sm`       |
+| border  | style    | `dashed`                   |
 
 ---
 
@@ -550,11 +550,11 @@ O cursor do mouse deve ser alterado, adicionando um ícone de "adição" ao curs
 ![Dropzone ativo](imagens/dropzone-ativo.png)
 *Exemplo do estado dropzone ativo sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|background|color|`Cor do Estado Interativo`|
-|background|opacity|`--surface-opacity-sm`|
-|cursor|cursor|`copy`|
+| Element    | Property | Token/Value                |
+| ---------- | -------- | -------------------------- |
+| background | color    | `Cor do Estado Interativo` |
+| background | opacity  | `--surface-opacity-sm`     |
+| cursor     | cursor   | `copy`                     |
 
 ---
 
@@ -576,10 +576,10 @@ Por motivos de legibilidade, a cor em fundos Escuros deve ser alterada.
 ![Estado Visitado](imagens/visitado.png)
 *Exemplo do estado visitado sendo aplicado em um texto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|Text (Sobre um fundo Claro)|color|`--blue-warm-vivid-80`|
-|Text (Sobre um fundo Escuro)|color|`--gray-20`|
+| Element                      | Property | Token/Value            |
+| ---------------------------- | -------- | ---------------------- |
+| Text (Sobre um fundo Claro)  | color    | `--blue-warm-vivid-80` |
+| Text (Sobre um fundo Escuro) | color    | `--gray-20`            |
 
 ---
 
@@ -594,10 +594,10 @@ O Fundamento cor é utilizado como a principal característica para exibir o est
 ![Estado Desligado](imagens/ligado-desligado.png)
 *Exemplo dos estados ligado e desligado sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|background/foreground (Ligado)|color|`--blue-warm-vivid-40`|
-|background/foreground (Desligado)|color|`--gray-40`|
+| Element                           | Property | Token/Value            |
+| --------------------------------- | -------- | ---------------------- |
+| background/foreground (Ligado)    | color    | `--blue-warm-vivid-40` |
+| background/foreground (Desligado) | color    | `--gray-40`            |
 
 ---
 
@@ -614,10 +614,10 @@ A cor **vermelha** e ícone de "X" é o _feedback_ utilizado neste estado.
 ![Exemplo de erro](imagens/erro.png)
 *Exemplo do estado erro sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|background/foreground|color|`--red-vivid-50`|
-|icon|class|`times-circle`|
+| Element               | Property | Token/Value      |
+| --------------------- | -------- | ---------------- |
+| background/foreground | color    | `--red-vivid-50` |
+| icon                  | class    | `times-circle`   |
 
 ---
 
@@ -634,10 +634,10 @@ A cor **amarela** e ícone de "exclamação" é o _feedback_ utilizado neste est
 ![Exemplo de alerta](imagens/alerta.png)
 *Exemplo do estado alerta sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|background/foreground|color|`--yellow-vivid-20`|
-|icon|class|`exclamation-triangle`|
+| Element               | Property | Token/Value            |
+| --------------------- | -------- | ---------------------- |
+| background/foreground | color    | `--yellow-vivid-20`    |
+| icon                  | class    | `exclamation-triangle` |
 
 ---
 
@@ -654,10 +654,10 @@ A cor **verde** e ícone de "check" é o feedback utilizado neste estado.
 ![Exemplo de sucesso](imagens/sucesso.png)
 *Exemplo do estado sucesso sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|background/foreground|color|`--green-cool-vivid-50`|
-|icon|class|`check-circle`|
+| Element               | Property | Token/Value             |
+| --------------------- | -------- | ----------------------- |
+| background/foreground | color    | `--green-cool-vivid-50` |
+| icon                  | class    | `check-circle`          |
 
 ---
 
@@ -676,7 +676,7 @@ A cor **azul** e ícone de "letra i" é o feedback utilizado neste estado.
 ![Exemplo de informação](imagens/informativo.png)
 *Exemplo do estado informativo sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
 
-|Element|Property|Token/Value|
-|---|---|---|
-|background/foreground|color|`--blue-warm-vivid-60`|
-|icon|class|`info-circle`|
+| Element               | Property | Token/Value            |
+| --------------------- | -------- | ---------------------- |
+| background/foreground | color    | `--blue-warm-vivid-60` |
+| icon                  | class    | `info-circle`          |

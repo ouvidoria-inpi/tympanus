@@ -509,10 +509,10 @@ BRCookiebar.createCookiebar(json, callback)
 
 ## Dependências
 
--   [Button](/components/button)
--   [Card](/components/card)
--   [Item](/components/item)
--   [List](/components/list)
--   [Message](/components/message)
--   [Modal](/components/radio)
--   [Switch](/components/switch)
+-   [Button](/ds/components/button)
+-   [Card](/ds/components/card)
+-   [Item](/ds/components/item)
+-   [List](/ds/components/list)
+-   [Message](/ds/components/message)
+-   [Modal](/ds/components/radio)
+-   [Switch](/ds/components/switch)

@@ -157,7 +157,7 @@ Exemplo de uso:
 
 ## Dependências
 
--   [Button](/components/button)
+-   [Button](/ds/components/button)
 
 ## Instanciação do Componente
 

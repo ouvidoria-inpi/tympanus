@@ -28,7 +28,7 @@ A anatomia do Base é dividida por áreas ou regiões onde podemos encontrar com
 
 Esta é uma área essencial e obrigatória no _template base_. Nesta região deve-se utilizar apenas o componente _header_ com suas variações.
 
-Todos os comportamentos e outras regras definidas na [diretriz do _Header_](/components/header) devem ser utilizados dentro do _Base_.
+Todos os comportamentos e outras regras definidas na [diretriz do _Header_](/ds/components/header) devem ser utilizados dentro do _Base_.
 
 ![Área para header completo](imagens/header.png)
 *Exemplo de diversos usos do componente _Header_ dentro do _Base_.*
@@ -54,11 +54,11 @@ Esta é uma área opcional e deve ser utilizado o componente _**Breadcrumb**_ pa
 **Observação:** Em algumas situações, a área para Localização não terá muita utilidade, como por exemplo, em telas iniciais ou em aplicações para celulares.
 
 ![Área de Breadcrumb](imagens/breadcrumb.png)
-*Todos os comportamentos (e outras regras) descritas na [diretriz do _Breadcrumb_](/components/breadcrumb) podem ser utilizadas dentro da Área de Localização.*
+*Todos os comportamentos (e outras regras) descritas na [diretriz do _Breadcrumb_](/ds/components/breadcrumb) podem ser utilizadas dentro da Área de Localização.*
 
 ### 4. Área de navegação (_opcional_)
 
-Esta é uma área opcional. Esta região contém exclusivamente o componente **Menu**, utilizando-se de todas as regras e recomendações descritas em sua [diretriz](/components/menu).
+Esta é uma área opcional. Esta região contém exclusivamente o componente **Menu**, utilizando-se de todas as regras e recomendações descritas em sua [diretriz](/ds/components/menu).
 
 ![Área reservada para o menu](imagens/menu.png)
 *O menu aparece à esquerda da Área de Conteúdo, podendo consumir o espaço  disponível na tela em conjunto com a área de conteúdo.*
@@ -74,7 +74,7 @@ A área de navegação é a única área que pode ter uma barra de rolagem indep
 
 Esta é uma área essencial do _template base_ onde é utilizado o componente _**Footer**_ com suas variações e tipos.
 
-Todos os comportamentos (e demais regras) definidos na [diretriz do Footer](/components/footer) devem ser utilizados dentro do _Base_.
+Todos os comportamentos (e demais regras) definidos na [diretriz do Footer](/ds/components/footer) devem ser utilizados dentro do _Base_.
 
 ![Área de footer no template base](imagens/footer.png)
 *Área de footer no template base.*
@@ -83,7 +83,7 @@ Todos os comportamentos (e demais regras) definidos na [diretriz do Footer](/com
 
 ## Responsividade
 
-O _Base_ pode ter o comportamento de Largura de _Grid_ Fluida ou Fixa, seguindo as recomendações previstas do [Fundamento Grid](/fundamentos-visuais/grid), ou seja, por padrão, a _Grid_ de 8 e 4 colunas o comportamento será fluida, enquanto o de 12 colunas, pode ser tanto fluida como fixa a depender do uso.
+O _Base_ pode ter o comportamento de Largura de _Grid_ Fluida ou Fixa, seguindo as recomendações previstas do [Fundamento Grid](/ds/fundamentos-visuais/grid), ou seja, por padrão, a _Grid_ de 8 e 4 colunas o comportamento será fluida, enquanto o de 12 colunas, pode ser tanto fluida como fixa a depender do uso.
 
 - **Largura Fixo (grid 12 colunas)**: utilizado em conteúdo informativo ou educacional, onde o conteúdo textual não pode sofrer muita alteração estrutural devido a resolução da tela. Exemplos: Portais, Blogs, Landing Pages...
 - **Largura Fluida (grid 12 colunas)**: utilizado quando existe a necessidade de otimizar e aproveitar todos os espaços úteis de uma tela, tais como sistemas e aplicativos desktop por exemplo.
@@ -129,7 +129,7 @@ Podemos simplificar o Menu Flutuante em dois modos:
    ![Menu Flutuante](imagens/tempo-flutuante01.png)
    *Aqui o _Menu_ funciona como um elemento _Dropdown_, seguindo todas as regras específicas para este comportamento.*
 
-2. **Preenchimento**: quando necessita da atenção total do usuário. Neste caso ele pode preencher o espaço disponível da tela além de utilizar um elemento _overlay_ de Foco (veja [fundamento Superfície](/fundamentos-visuais/superficie)), destacando a navegação e deixando claro que os outros elementos da interface ainda não podem ser interagidos enquanto o menu estiver visível.
+2. **Preenchimento**: quando necessita da atenção total do usuário. Neste caso ele pode preencher o espaço disponível da tela além de utilizar um elemento _overlay_ de Foco (veja [fundamento Superfície](/ds/fundamentos-visuais/superficie)), destacando a navegação e deixando claro que os outros elementos da interface ainda não podem ser interagidos enquanto o menu estiver visível.
 
    ![Menu Flutuante](imagens/tempo-flutuante03.png)
    *Quando existe a necessidade de destacar um menu flutuante. Ele utiliza toda a altura útil da tela, além de utilizar uma superfície _overlay_.*

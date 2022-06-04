@@ -19,7 +19,7 @@ Apesar da redução na lista de utilitários, todos os tokens de cores e espaça
 - Red Warm Vivid
 - Yellow Vivid
 
-Exemplos de uso em [Utilitários CSS > Cores](/utilities-css/cores).
+Exemplos de uso em [Utilitários CSS > Cores](/ds/utilities-css/cores).
 
 ## Espaçamentos disponíveis
 
@@ -31,4 +31,4 @@ Exemplos de uso em [Utilitários CSS > Cores](/utilities-css/cores).
 - **5**: 32px
 - **6**: 40px
 
-Exemplos de uso em [Utilitários CSS > Espaçamento](/utilities-css/espacamento).
+Exemplos de uso em [Utilitários CSS > Espaçamento](/ds/utilities-css/espacamento).

@@ -139,10 +139,10 @@ Surgiu da necessidade do componente footer para criar uma lista agrupada de link
 
 ## Dependências
 
--   [Button](/components/button)
--   [Divider](/components/divider)
--   [Item](/components/item)
--   [List](/components/list)
+-   [Button](/ds/components/button)
+-   [Divider](/ds/components/divider)
+-   [Item](/ds/components/item)
+-   [List](/ds/components/list)
 
 ## Instanciação do Componente
 
