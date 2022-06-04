@@ -32,7 +32,7 @@ As interfaces devem cumprir as diferentes necessidades de acessibilidade. Sendo 
 
 Sempre que possível, utilize a tabela de estilo e as cores padrão para texto para manter o conteúdo legível/acessível ao usuário.
 
-Veja [Cores](/fundamentos-visuais/cores/) para maiores detalhes sobre aplicação de cores nos textos.
+Veja [Cores](/ds/fundamentos-visuais/cores/) para maiores detalhes sobre aplicação de cores nos textos.
 
 A semântica deve ser levada em consideração ao se criar as marcações do texto dentro do HTML para que os dispositivos de leitores de tela consigam distinguir os diferentes elementos do texto.
 

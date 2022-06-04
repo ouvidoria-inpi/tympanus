@@ -110,7 +110,7 @@ Na versão horizontal o agrupador e a lista de sub-itens devem ficar dentro do `
 
 ## Dependências
 
--   [Item](/components/item)
+-   [Item](/ds/components/item)
 
 ## Instanciação do Componente
 

@@ -94,19 +94,19 @@ Define o nível de suavidade da sombra.
 
 #### 4. _Color_ (Cor)
 
-Pode assumir qualquer cor prevista na [paleta de cores](/fundamentos-visuais/cores) do Design System GOV.BR.
+Pode assumir qualquer cor prevista na [paleta de cores](/ds/fundamentos-visuais/cores) do Design System GOV.BR.
 
 #### 5. _Color Opacity_ (Opacidade da Cor)
 
 Valor da opacidade da cor utilizada.
 
-Veja os valores possíveis nos atributos de opacidade no [Fundamento de Superfície](/fundamentos-visuais/superficie).
+Veja os valores possíveis nos atributos de opacidade no [Fundamento de Superfície](/ds/fundamentos-visuais/superficie).
 
 ### _Tokens_ e exemplos do uso de sombras
 
 No Design System GOV.BR sombras são utilizadas de forma simplificada. Dessa forma, foram criadas _tokens_ de sombras prontas para o uso.
 
-Visite nossa [página de utilitários](/utilities-css/elevacao) para visualizar todas as possibilidades possíveis de uso de sombras e _tokens_.
+Visite nossa [página de utilitários](/ds/utilities-css/elevacao) para visualizar todas as possibilidades possíveis de uso de sombras e _tokens_.
 
 ---
 

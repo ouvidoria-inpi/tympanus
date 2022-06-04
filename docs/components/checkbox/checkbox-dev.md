@@ -37,7 +37,7 @@
 
 ### Dependências
 
--   [Checkgroup](/util/checkgroup)
+-   [Checkgroup](/ds/util/checkgroup)
 
 ## Instanciação do Componente
 

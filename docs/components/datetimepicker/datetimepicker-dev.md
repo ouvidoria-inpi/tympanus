@@ -97,8 +97,8 @@
 
 ****
 
--   [Button](/components/button)
--   [Input](/components/input)
+-   [Button](/ds/components/button)
+-   [Input](/ds/components/input)
 
 ## Instanciação do Componente
 

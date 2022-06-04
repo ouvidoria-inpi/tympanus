@@ -51,7 +51,7 @@
 
 ## Dependências
 
--   [Message](/components/message)
+-   [Message](/ds/components/message)
 
 ## Instanciação do Componente
 
