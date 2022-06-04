@@ -40,4 +40,4 @@
 
 ## Dependências
 
-- [Button](/components/button)
+- [Button](/ds/components/button)

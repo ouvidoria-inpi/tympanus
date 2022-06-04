@@ -55,7 +55,7 @@ O componente *carousel* é extremamente flexível ao conteúdo que apresenta e d
 Para exibição de imagens com textos é importante estar atento ao contraste e à legibilidade. Verifique questões como cor, tamanho do corpo do texto e contraste com a cor ou imagem de fundo.
 
 ![Exemplo carousel com imagem no conteúdo.](imagens/carousel-contrast.png)
-*Considere utilizar uma superfície*overlay*entre a imagem de fundo e o texto para reforçar o contraste. Consulte o documento [Fundamentos > Movimento](/fundamentos-visuais/movimento) para mais detalhes.*
+*Considere utilizar uma superfície*overlay*entre a imagem de fundo e o texto para reforçar o contraste. Consulte o documento [Fundamentos > Movimento](/ds/fundamentos-visuais/movimento) para mais detalhes.*
 
 ### 2- Botões de Navegação
 
@@ -200,7 +200,7 @@ Deixamos algumas dicas de **boas práticas** para auxiliar na escolha do movimen
 
 - Geralmente ***easing*** do tipo ***easing-in-out*** funciona bem, pois deixa os movimentos de transição das páginas mais naturais e orgânicas;
 
-Para entender melhor os tipos de movimento, consulte o documento  [Fundamentos > Movimento](/fundamentos-visuais/movimento).
+Para entender melhor os tipos de movimento, consulte o documento  [Fundamentos > Movimento](/ds/fundamentos-visuais/movimento).
 
 ### 5- Múltiplas Páginas
 

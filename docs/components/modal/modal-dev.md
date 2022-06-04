@@ -61,9 +61,9 @@
 
 ## Dependências
 
--   [Button](/components/button)
--   [Card](/components/card)
--   [Loading](/components/loading)
+-   [Button](/ds/components/button)
+-   [Card](/ds/components/card)
+-   [Loading](/ds/components/loading)
 
 ## Instanciação do Componente
 

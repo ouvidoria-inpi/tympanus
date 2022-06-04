@@ -68,6 +68,6 @@ A classe `container-lg` força a **Largura Fixa** no _breakpoint desktop_. Alter
 
 O template é compatível com as versões de Menu Principal Flutuante (Offcanvas) e Menu Principal deslocando a página (Push).
 
-Adicione a classe `push` ao componente Menu para este efeito. Veja mais informações na [documentação do componente Menu](/components/menu).
+Adicione a classe `push` ao componente Menu para este efeito. Veja mais informações na [documentação do componente Menu](/ds/components/menu).
 
 > **Atenção**! A condição obrigatória é que ele seja _simbling_ imediato da coluna de conteúdo, caso contrário a versão push não irá funcionar.

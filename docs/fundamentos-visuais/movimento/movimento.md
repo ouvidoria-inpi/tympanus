@@ -126,7 +126,7 @@ Sugestão de uso: quando elementos precisam "sair" da tela após uma ação do u
 
 *Exemplo da transição _fade out_.*
 
-Para mais informações consulte o documento [Fundamentos > Superfície](/fundamentos-visuais/superficie).
+Para mais informações consulte o documento [Fundamentos > Superfície](/ds/fundamentos-visuais/superficie).
 
 #### b) _Color_ (cor)
 
@@ -140,7 +140,7 @@ Sugestão de uso: pode-se utilizar a transição entre cores para chamar a aten�
 
 *Exemplo da transição _color_.*
 
-Para mais informações consulte o documento [Fundamentos > Cores](/fundamentos-visuais/cores) para mais detalhes.
+Para mais informações consulte o documento [Fundamentos > Cores](/ds/fundamentos-visuais/cores) para mais detalhes.
 
 #### c) _Scale_ (dimensão)
 
@@ -154,7 +154,7 @@ Sugestão de uso: é comum usar esta transição para realçar a relevância de 
 
 *Exemplo do efeito _scale_.*
 
-Para mais informação consulte o documento [Fundamentos > Superfície](/fundamentos-visuais/superficie).
+Para mais informação consulte o documento [Fundamentos > Superfície](/ds/fundamentos-visuais/superficie).
 
 ##### _Fill_ (preenchimento)
 
@@ -194,7 +194,7 @@ Sugestão de uso: as transições do eixo Z indicam movimento um nível para cim
 
 *Exemplo da transição _elevation_.*
 
-Os parâmetros relacionados a esta transição estão descritos no documento [Fundamentos > Elevação](/fundamentos-visuais/elevacao).
+Os parâmetros relacionados a esta transição estão descritos no documento [Fundamentos > Elevação](/ds/fundamentos-visuais/elevacao).
 
 #### f) _Rotate_ (rotação)
 
@@ -236,7 +236,7 @@ No eixo Z, por padrão o ponto de ancoragem encontra-se no centro do objeto, mas
 
 *Exemplo da transição _rounded corner_.*
 
-Para mais informações consulte o documento [Fundamentos > Superfície](/fundamentos-visuais/superficie).
+Para mais informações consulte o documento [Fundamentos > Superfície](/ds/fundamentos-visuais/superficie).
 
 #### g) _Corner_ (arredondamento)
 
@@ -248,7 +248,7 @@ Transição utilizada para alterar o grau de arredondamento dos cantos das borda
 
 *Exemplo da transição _rounded corner_.*
 
-Para mais informações consulte o documento [Fundamento Superfície](/fundamentos-visuais/superficie).
+Para mais informações consulte o documento [Fundamento Superfície](/ds/fundamentos-visuais/superficie).
 
 #### h) _Form_ (transformação)
 
@@ -262,7 +262,7 @@ Sugestão de uso: quando for necessário transformar um elemento em outro refor�
 
 *Exemplo da transição _form_.*
 
-Para maiores informações sobre forma consulte o documento [Fundamentos > Superfície](/fundamentos-visuais/superficie).
+Para maiores informações sobre forma consulte o documento [Fundamentos > Superfície](/ds/fundamentos-visuais/superficie).
 
 ---
 

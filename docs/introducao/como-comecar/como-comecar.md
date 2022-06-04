@@ -28,7 +28,7 @@ O projeto requer a versão mínima do [node](https://nodejs.org/) >= v14.15.4.
 
 ### Instalar manualmente
 
-1. Faça o [download do Pacote NPM](/assets/design-system/assets/npm-package/govbr-ds-latest.tgz). Ele está disponível na seção Downloads
+1. Faça o [download do Pacote NPM](/ds/assets/design-system/assets/npm-package/govbr-ds-latest.tgz). Ele está disponível na seção Downloads
 2. **Caso você tenha um projeto em andamento, pule para a etapa 4**, caso contrário crie nova pasta para o seu projeto
 3. Execute o seguinte comando no terminal: `npm init -y`
 4. Coloque o arquivo **govbr-ds-latest.tgz** na pasta do seu projeto
@@ -148,12 +148,12 @@ Para ambiente em produção:
 
 ## Documentação
 
-Para informações mais detalhadas sobre [Cores](/fundamentos-visuais/cores), [Tipografia](/fundamentos-visuais/tipografia), etc acesse o item **Fundamentos Visuais** na navegação principal.
+Para informações mais detalhadas sobre [Cores](/ds/fundamentos-visuais/cores), [Tipografia](/ds/fundamentos-visuais/tipografia), etc acesse o item **Fundamentos Visuais** na navegação principal.
 
 Para uso dos estilos ou criação de novos componentes acesse o item **Guias** na navegação principal:
 
 -   No menu **Utilitários CSS** há utilitários para não precisar reescrever CSS em seu código
--   Em [Construção de Componentes](/guias/construcao-de-componentes) é apresentado um passo a passo de como criar um componente.
+-   Em [Construção de Componentes](/ds/guias/construcao-de-componentes) é apresentado um passo a passo de como criar um componente.
 
 ## Componentes
 

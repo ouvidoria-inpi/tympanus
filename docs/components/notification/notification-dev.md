@@ -28,11 +28,11 @@
 
 ## Dependências
 
--   [Button](/components/button)
--   [Item](/components/item)
--   [List](/components/list)
--   [Tab](/components/tab)
--   [Tag](/components/tag)
+-   [Button](/ds/components/button)
+-   [Item](/ds/components/item)
+-   [List](/ds/components/list)
+-   [Tab](/ds/components/tab)
+-   [Tag](/ds/components/tag)
 
 ## Instanciação do Componente
 

@@ -137,11 +137,11 @@
 
 ## Dependências
 
--   [Button](/components/button)
--   [Checkbox](/components/checkbox)
--   [Input](/components/input)
--   [Item](/components/item)
--   [List](/components/list)
+-   [Button](/ds/components/button)
+-   [Checkbox](/ds/components/checkbox)
+-   [Input](/ds/components/input)
+-   [Item](/ds/components/item)
+-   [List](/ds/components/list)
 
 ## Instanciação do Componente
 

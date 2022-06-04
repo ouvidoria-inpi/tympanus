@@ -118,7 +118,7 @@ Ao especificar as dimensões de um elemento, deve-se utilizar as boas práticas 
 - Quando fixar valores absolutos nas dimensões pode ser importante detalhar a largura e altura máxima/mínima para evitar comportamentos indesejados na _interface_.
 - Ao especificar valores absolutos, deve-se utilizar o incremento **Escala Layout** como base.
 - Caso o elemento utilize a grid como referência na dimensão, é necessário especificar quantas colunas o componente deve utilizar. É importante não esquecer de definir essa especificação em cada _breakpoint_.
-- Nos textos, deve-se trabalhar o conceito de entrelinhamento para controlar melhor os espaços que serão ocupados na interface. Para maiores detalhes veja: [tipografia](/fundamentos-visuais/tipografia).
+- Nos textos, deve-se trabalhar o conceito de entrelinhamento para controlar melhor os espaços que serão ocupados na interface. Para maiores detalhes veja: [tipografia](/ds/fundamentos-visuais/tipografia).
 
 ![Exemplo de Dimensão](imagens/dimensao-exemplo.png)
 *Objetos com dimensões fixas.*

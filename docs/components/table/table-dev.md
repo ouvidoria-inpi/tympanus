@@ -298,15 +298,15 @@ Incluir o componente Pagination Contextual no rodapé da Tabela.
 
 ## Dependências
 
--   [Button](/components/button)
--   [Checkbox](/components/checkbox)
--   [Divider](/components/divider)
--   [Input](/components/input)
--   [Item](/components/item)
--   [List](/components/list)
--   [Pagination](/components/pagination)
--   [Radio](/components/radio)
--   [Select](/components/select)
+-   [Button](/ds/components/button)
+-   [Checkbox](/ds/components/checkbox)
+-   [Divider](/ds/components/divider)
+-   [Input](/ds/components/input)
+-   [Item](/ds/components/item)
+-   [List](/ds/components/list)
+-   [Pagination](/ds/components/pagination)
+-   [Radio](/ds/components/radio)
+-   [Select](/ds/components/select)
 
 ## Instanciação do Componente
 
