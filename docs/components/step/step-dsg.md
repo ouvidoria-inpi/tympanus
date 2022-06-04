@@ -491,7 +491,7 @@ O estado error ocorre sobre o _Indicador_ e o Rótulo quando há a necessidade d
 <tag aria-label="Nome do Rótulo"></tag>
 ```
 
-- fique atento ao contraste de cores utilizado entre o plano de fundo e a cor dos _Rótulos_ ou _Indicadores_. Observe as especificações de contraste no [_Fundamento Cores_](/fundamentos-visuais/cores);
+- fique atento ao contraste de cores utilizado entre o plano de fundo e a cor dos _Rótulos_ ou _Indicadores_. Observe as especificações de contraste no [_Fundamento Cores_](/ds/fundamentos-visuais/cores);
 
  ![Fique atento ao contraste de cores](imagens/accessibility-colour-contrast.png)
 *Fique atento ao contraste de cores nos Rótulos*
@@ -525,100 +525,100 @@ O estado error ocorre sobre o _Indicador_ e o Rótulo quando há a necessidade d
 
 #### Estado Interativo
 
-|Name|Property|Token/Value|
-|--|--|--|
-| Rótulos | color |`--blue-warm-vivid-70`|
-| Rótulos (Fundo Escuro) | color |`--blue-warm-20`|
-| Indicador | color |`--blue-warm-vivid-70`|
-| Indicador | border-color |`--blue-warm-vivid-70`|
-| Indicador | border-style |`solid`|
-| Indicador | border-width |`--surface-width-sm`|
-| Indicador (Fundo Escuro) | color |`--blue-warm-20`|
-| Indicador (Fundo Escuro) | border-color |`--blue-warm-20`|
-| Indicador (Fundo Escuro) | border-style |`solid`|
-| Indicador (Fundo Escuro) | border-width |`--surface-width-sm`|
-| Indicador Simples | background |`--gray-20`|
-| Indicador Simples (Fundo Escuro)| border-color |`--pure-0`|
-| Indicador Simples (Fundo Escuro)| border-style |`solid`|
-| Indicador Simples (Fundo Escuro)| border-width |`--surface-width-sm`|
-| Linha do Tempo | border-color |`--blue-warm-vivid-70`|
-| Linha do Tempo (Fundo Escuro)| border-color |`--pure-0`|
-| Linha do Tempo | border-style |`solid`|
-| Linha do Tempo | border-width |`--surface-width-sm`|
+| Name                             | Property     | Token/Value            |
+| -------------------------------- | ------------ | ---------------------- |
+| Rótulos                          | color        | `--blue-warm-vivid-70` |
+| Rótulos (Fundo Escuro)           | color        | `--blue-warm-20`       |
+| Indicador                        | color        | `--blue-warm-vivid-70` |
+| Indicador                        | border-color | `--blue-warm-vivid-70` |
+| Indicador                        | border-style | `solid`                |
+| Indicador                        | border-width | `--surface-width-sm`   |
+| Indicador (Fundo Escuro)         | color        | `--blue-warm-20`       |
+| Indicador (Fundo Escuro)         | border-color | `--blue-warm-20`       |
+| Indicador (Fundo Escuro)         | border-style | `solid`                |
+| Indicador (Fundo Escuro)         | border-width | `--surface-width-sm`   |
+| Indicador Simples                | background   | `--gray-20`            |
+| Indicador Simples (Fundo Escuro) | border-color | `--pure-0`             |
+| Indicador Simples (Fundo Escuro) | border-style | `solid`                |
+| Indicador Simples (Fundo Escuro) | border-width | `--surface-width-sm`   |
+| Linha do Tempo                   | border-color | `--blue-warm-vivid-70` |
+| Linha do Tempo (Fundo Escuro)    | border-color | `--pure-0`             |
+| Linha do Tempo                   | border-style | `solid`                |
+| Linha do Tempo                   | border-width | `--surface-width-sm`   |
 
 #### Estado Ativo
 
-|Name|Property|Token/Value|
-|--|--|--|
-| Rótulos | color |`--blue-warm-vivid-80`|
-| Rótulos (Fundo Escuro) | color |`--blue-warm-20`|
-| Indicador | color |`--pure-0`|
-| Indicador | border-color |`--pure-0`|
-| Indicador | border-style |`solid`|
-| Indicador | border-width |`--surface-width-sm`|
-| Indicador Simples | background |`--blue-warm-vivid-80`|
-| Indicador Simples (Fundo Escuro)| background |`--pure-0`|
-| Indicador Vazio (Error, Alerta e concluído) | border-color |`--blue-warm-vivid-80`|
-| Indicador Vazio (Error, Alerta e concluído) | border-style |`solid`|
-| Indicador Vazio (Error, Alerta e concluído) | border-width |`--surface-width-lg`|
+| Name                                        | Property     | Token/Value            |
+| ------------------------------------------- | ------------ | ---------------------- |
+| Rótulos                                     | color        | `--blue-warm-vivid-80` |
+| Rótulos (Fundo Escuro)                      | color        | `--blue-warm-20`       |
+| Indicador                                   | color        | `--pure-0`             |
+| Indicador                                   | border-color | `--pure-0`             |
+| Indicador                                   | border-style | `solid`                |
+| Indicador                                   | border-width | `--surface-width-sm`   |
+| Indicador Simples                           | background   | `--blue-warm-vivid-80` |
+| Indicador Simples (Fundo Escuro)            | background   | `--pure-0`             |
+| Indicador Vazio (Error, Alerta e concluído) | border-color | `--blue-warm-vivid-80` |
+| Indicador Vazio (Error, Alerta e concluído) | border-style | `solid`                |
+| Indicador Vazio (Error, Alerta e concluído) | border-width | `--surface-width-lg`   |
 
 #### Estado Concluído
 
-|Name|Property|Token/Value|
-|--|--|--|
-| Rótulos | color |`--green-cool-vivid-50`|
-| Rótulos (Fundo Escuro) | color |`--blue-warm-20`|
+| Name                   | Property | Token/Value             |
+| ---------------------- | -------- | ----------------------- |
+| Rótulos                | color    | `--green-cool-vivid-50` |
+| Rótulos (Fundo Escuro) | color    | `--blue-warm-20`        |
 
 #### Estado Alerta
 
-|Name|Property|Token/Value|
-|--|--|--|
-| Rótulos | color |`--gray-80`|
-| Rótulos (Fundo Escuro) | color |`--blue-warm-20`|
+| Name                   | Property | Token/Value      |
+| ---------------------- | -------- | ---------------- |
+| Rótulos                | color    | `--gray-80`      |
+| Rótulos (Fundo Escuro) | color    | `--blue-warm-20` |
 
 #### Estado Error
 
-|Name|Property|Token/Value|
-|--|--|--|
-| Rótulos | color |`--red-vivid-50`|
-| Rótulos (Fundo Escuro) | color |`--blue-warm-20`|
+| Name                   | Property | Token/Value      |
+| ---------------------- | -------- | ---------------- |
+| Rótulos                | color    | `--red-vivid-50` |
+| Rótulos (Fundo Escuro) | color    | `--blue-warm-20` |
 
 ### Tipografia
 
-|Name|Token Size|Token Weight|
-|--|--|--|
-| Rótulos |`-font-size-scale-up-01`|`--font-weight-medium`|
-| Step Textual |`--font-size-scale-base`|`--font-weight-regular`|
+| Name         | Token Size               | Token Weight            |
+| ------------ | ------------------------ | ----------------------- |
+| Rótulos      | `-font-size-scale-up-01` | `--font-weight-medium`  |
+| Step Textual | `--font-size-scale-base` | `--font-weight-regular` |
 
 ### Iconografia
 
-|Name|Estado|Ícone|Token Size|Class (Font Awesome)|
-|--|--|--|--|--|
-|Indicador Simples|--|<i class="fas fa-circle"></i>|`--icon-size-xs`|`.fa-circle`|
-|Ícone Estado Concluído|--|<i class="fas fa-check"></i>|`--icon-size-base`|`.fa-check`|
-|Ícone Estado Alert|--|<i class="fas fa-exclamation-triangle"></i>|`--icon-size-base`|`.fa-exclamation-triangle`|
-|Ícone Estado Error|--|<i class="fas fa-times"></i>|`--icon-size-base`|`.fa-times`|
+| Name                   | Estado | Ícone                                       | Token Size         | Class (Font Awesome)       |
+| ---------------------- | ------ | ------------------------------------------- | ------------------ | -------------------------- |
+| Indicador Simples      | --     | <i class="fas fa-circle"></i>               | `--icon-size-xs`   | `.fa-circle`               |
+| Ícone Estado Concluído | --     | <i class="fas fa-check"></i>                | `--icon-size-base` | `.fa-check`                |
+| Ícone Estado Alert     | --     | <i class="fas fa-exclamation-triangle"></i> | `--icon-size-base` | `.fa-exclamation-triangle` |
+| Ícone Estado Error     | --     | <i class="fas fa-times"></i>                | `--icon-size-base` | `.fa-times`                |
 
 ### Espaçamentos
 
-|Name|Property|Token/Value|
-|--|--|:--:|
-| Indicador | margin-right |`--spacing-scale-2x`|
-| Indicador | margin-botton |`--spacing-scale-2x`|
-| Indicador (Orientação Vertical)| margin-botton |`--spacing-scale-3x`|
-| Indicador Simples | margin-right |`--spacing-scale-base`|
+| Name                            | Property      |      Token/Value       |
+| ------------------------------- | ------------- | :--------------------: |
+| Indicador                       | margin-right  |  `--spacing-scale-2x`  |
+| Indicador                       | margin-botton |  `--spacing-scale-2x`  |
+| Indicador (Orientação Vertical) | margin-botton |  `--spacing-scale-3x`  |
+| Indicador Simples               | margin-right  | `--spacing-scale-base` |
 
 ### Dimensões
 
-|Name|Property|Token/Value|
-|--|--|:--:|
-| Indicador (Densidade Padrão) | width |`40px`|
-| Indicador (Densidade Padrão) | height |`40px`|
-| Indicador Simples (Densidade Padrão) | width |`8px`|
-| Indicador Simples (Densidade Padrão) | height |`8px`|
-| Indicador (Densidade Baixa) | width |`48px`|
-| Indicador (Densidade Baixa) | height |`48px`|
-| Indicador Simples (Densidade Baixa) | width |`12px`|
-| Indicador Simples (Densidade Baixa) | height |`12px`|
-| Indicador (Densidade Alta) | width |`32px`|
-| Indicador (Densidade Alta) | height |`32px`|
+| Name                                 | Property | Token/Value |
+| ------------------------------------ | -------- | :---------: |
+| Indicador (Densidade Padrão)         | width    |   `40px`    |
+| Indicador (Densidade Padrão)         | height   |   `40px`    |
+| Indicador Simples (Densidade Padrão) | width    |    `8px`    |
+| Indicador Simples (Densidade Padrão) | height   |    `8px`    |
+| Indicador (Densidade Baixa)          | width    |   `48px`    |
+| Indicador (Densidade Baixa)          | height   |   `48px`    |
+| Indicador Simples (Densidade Baixa)  | width    |   `12px`    |
+| Indicador Simples (Densidade Baixa)  | height   |   `12px`    |
+| Indicador (Densidade Alta)           | width    |   `32px`    |
+| Indicador (Densidade Alta)           | height   |   `32px`    |

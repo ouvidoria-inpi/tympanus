@@ -22,7 +22,7 @@ Dentro do imaginário coletivo dos usuários de sistemas, aplicativos, e sítios
 ![Exemplo de Uso de Ícones](imagens/icons.png)
 *Utilize o `question` ou `question-circle` como iconografia padrão de ajuda*
 
-**Importante!** Em situações de ajuda contextual pode-se usar o ícone de informação `info` ou `info-circle` como uma alternativa, pois além ser uma prática bastante comum neste tipo de situação, faz parte o padrão estabelecido na documentação de [Formulários](/padroes/formulario).
+**Importante!** Em situações de ajuda contextual pode-se usar o ícone de informação `info` ou `info-circle` como uma alternativa, pois além ser uma prática bastante comum neste tipo de situação, faz parte o padrão estabelecido na documentação de [Formulários](/ds/padroes/formulario).
 
  ![Forma do Ícone Acionador](imagens/help-context-icon.png)
 *Utilize `info` ou `info-circle` como padrão alternativo para ícone de ajuda contextual*
@@ -55,7 +55,7 @@ A ajuda contextual é uma forma de apresentar ao usuário um fragmento do conte�
 
 ##### Como Usar
 
- 1. **Utilize um acionador _Dropdown_ ou _Collapse_:** Recomenda-se seguir o padrão [_Dropdown_](/padroes/dropdown) ou [_Collapse_](/padroes/collapse) para exibir ou ocultar o conteúdo de ajuda contextual;
+ 1. **Utilize um acionador _Dropdown_ ou _Collapse_:** Recomenda-se seguir o padrão [_Dropdown_](/ds/padroes/dropdown) ou [_Collapse_](/ds/padroes/collapse) para exibir ou ocultar o conteúdo de ajuda contextual;
 
 ![Conteúdo de Ajuda Contextual com Dropdown](imagens/dropdown.png)
 *Exibindo o conteúdo de ajuda contextual com padrão Dropdown*
@@ -100,7 +100,7 @@ Caso seja necessário fazer uma referência à algum conteúdo relacionado ou um
 
 #### Ajuda Não Solicitada
 
-Este recurso é bastante útil quando o usuário interage com o sistema pela primeira vez ou quando o sistema traz alguma novidade decorrente de novas atualizações. Geralmente é exibido em forma de passo a passo, utilizando recursos textuais ou apontando detalhes na interface onde estão presentes as novidades. O [Padrão Onboarding](/padroes/onboarding/) detalha este tipo de situação de forma mais completa.
+Este recurso é bastante útil quando o usuário interage com o sistema pela primeira vez ou quando o sistema traz alguma novidade decorrente de novas atualizações. Geralmente é exibido em forma de passo a passo, utilizando recursos textuais ou apontando detalhes na interface onde estão presentes as novidades. O [Padrão Onboarding](/ds/padroes/onboarding/) detalha este tipo de situação de forma mais completa.
 
 ![Exemplo de Ajuda Não Solicitada](imagens/onboarding.png)
 *Ajuda Não Solicitada seguindo o Padrão de Onboarding*

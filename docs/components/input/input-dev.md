@@ -99,8 +99,8 @@
 
 ## Dependências
 
--   [Button](/components/button)
--   [Message](/components/message)
+-   [Button](/ds/components/button)
+-   [Message](/ds/components/message)
 
 ## Instanciação do Componente
 

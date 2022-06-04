@@ -7,7 +7,7 @@ Em ambientes de produção é recomendado carregar por pacote npm enquanto que e
 
 ## Pacote NPM
 
-Para mais informação sobre como criar seu projeto usando pacotes NPM acesse [Como Começar](/introducao/como-comecar).
+Para mais informação sobre como criar seu projeto usando pacotes NPM acesse [Como Começar](/ds/introducao/como-comecar).
 
 ```bash
 npm i nome-do-vendor --save

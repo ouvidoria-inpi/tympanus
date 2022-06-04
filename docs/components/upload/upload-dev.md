@@ -44,8 +44,8 @@ A função uploadTimeout() é um exemplo de que deve ser trocado na produção e
 
 ## Dependências
 
--   [Button](/components/button)
--   [Message](/components/message)
+-   [Button](/ds/components/button)
+-   [Message](/ds/components/message)
 
 ## Instanciação do Componente
 

@@ -30,7 +30,7 @@ O **nível AA** indica que é necessária uma taxa de contraste de pelo menos **
 
 O **nível AAA** requer uma taxa de contraste de pelo menos **7:1** para texto normal e **4,5:1** para texto grande.
 
-É considerado **texto grande** aquele em que a fonte possui pelo menos 18 pontos (24px, 1,71em, 171% do tamanho padrão da Fonte Base, veja [Tipografia](/fundamentos-visuais/tipografia) para maiores detalhes) ou 14 pontos em negrito (19px, 1,325em, 132,5%), um texto com tamanho abaixo desses valores (tal como 14pt regular) é considerado **texto normal**.
+É considerado **texto grande** aquele em que a fonte possui pelo menos 18 pontos (24px, 1,71em, 171% do tamanho padrão da Fonte Base, veja [Tipografia](/ds/fundamentos-visuais/tipografia) para maiores detalhes) ou 14 pontos em negrito (19px, 1,325em, 132,5%), um texto com tamanho abaixo desses valores (tal como 14pt regular) é considerado **texto normal**.
 
 Elementos gráficos e componentes da interface (como ícones e bordas) seguem as mesmas regras de texto grande.  
 
@@ -123,7 +123,7 @@ Abaixo estão listadas as principais funções das cores, as recomendações de 
 
 **Obs:** Cada função está ligada a um ou mais fundamentos. Procure as documentações relacionadas para maiores detalhes.
 
-### 1. Função Contêiner ([Superfícies](/fundamentos-visuais/superficie))
+### 1. Função Contêiner ([Superfícies](/ds/fundamentos-visuais/superficie))
 
 As **cores de superfície** são utilizadas como base cromática neutra para composição do tema e compõem harmonicamente com as demais cores. São usadas especificamente em planos de fundo nas telas da interface e superfícies de componentes. Também devem proporcionar contraste com o texto e elementos interativos, assim como qualquer outro elemento de comunicação visual na interface, como imagens, ilustrações, ícones, etc.
 
@@ -153,7 +153,7 @@ As **cores de superfície** são utilizadas como base cromática neutra para com
 ![Cor Superfície - Família Blue-Warm-Vivid](imagens/blue-superficie-dark.png)
 *Cor Superfície - Família `Blue Warm Vivid` para Fundos Escuros*
 
-### 2. Função Leitura ([Tipografia](/fundamentos-visuais/tipografia) e [Iconografia](/fundamentos-visuais/iconografia))
+### 2. Função Leitura ([Tipografia](/ds/fundamentos-visuais/tipografia) e [Iconografia](/ds/fundamentos-visuais/iconografia))
 
 São as cores usadas nos elementos que necessitam de legibilidade, como textos e ícones, por exemplo. A função principal dessas cores é proporcionar contraste com a _Cor Superfície_ usada na tela ou elementos. Logo, para toda _Cor Superfície_, existe uma _Cor Leitura_ contrastante.
 
@@ -176,7 +176,7 @@ São as cores usadas nos elementos que necessitam de legibilidade, como textos e
 ![Cor Leitura - Família Pure](imagens/pure-family.png)
 *Cor Leitura - Família `Pure` para Fundos Escuros*
 
-### 3. Função _Feedback_ ([Estados](/fundamentos-visuais/estados))
+### 3. Função _Feedback_ ([Estados](/ds/fundamentos-visuais/estados))
 
 São representações visuais para feedbacks interativos ou informacionais relacionadas aos elementos na interface. Podemos subdividir essa função em dois grupos de estados: **interação** e **avisos**.
 
@@ -212,7 +212,7 @@ Para este tipo de cor, utilizam-se as famílias `Blue Warm` e `Blue Warm Vivid`.
 
 ##### Especificação
 
-São cores fortemente reconhecidas pela boa parte dos usuários e relacionadas a avisos específicos. Consulte o documento [Fundamentos Visuais > Estados](/fundamentos-visuais/estados) para maiores informações.
+São cores fortemente reconhecidas pela boa parte dos usuários e relacionadas a avisos específicos. Consulte o documento [Fundamentos Visuais > Estados](/ds/fundamentos-visuais/estados) para maiores informações.
 
 ###### Feedback Informação
 

@@ -112,10 +112,10 @@ A classe `container-lg` força a **Largura Fixa** no _breakpoint desktop_. Alter
 
 ## Dependências
 
--   [Avatar](/components/avatar)
--   [Button](/components/button)
--   [Input](/components/input)
--   [Sign-in](/components/signin)
+-   [Avatar](/ds/components/avatar)
+-   [Button](/ds/components/button)
+-   [Input](/ds/components/input)
+-   [Sign-in](/ds/components/signin)
 
 ## Instanciação do Componente
 

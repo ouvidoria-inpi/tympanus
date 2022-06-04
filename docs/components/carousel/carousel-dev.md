@@ -80,8 +80,8 @@ LEGENDA:
 
 ## Dependências
 
--   [Button](/components/button)
--   [Step](/components/step)
+-   [Button](/ds/components/button)
+-   [Step](/ds/components/step)
 
 ## Instanciação do Componente
 

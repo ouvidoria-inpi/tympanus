@@ -62,4 +62,4 @@ Este componente faz uso de teclas de atalho. Cada browsers possui sua forma de u
 
 ## Dependências
 
-- [Tag](/components/tag)
+- [Tag](/ds/components/tag)
