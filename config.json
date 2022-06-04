@@ -1931,7 +1931,7 @@
 									"size": "103.4 MB",
 									"version": "3.0.0",
 									"id": "core-3.0.0",
-									"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/"
+									"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/archive/v3.0.0/govbr-ds-dev-core-v3.0.0.zip"
 								}
 							]
 						},
@@ -1945,7 +1945,7 @@
 									"size": "2.6 MB",
 									"version": "3.0.0",
 									"id": "core-npm-3.0.0",
-									"path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.0.0-rc.tgz"
+									"path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.0.0.tgz"
 								}
 							]
 						},
@@ -2008,9 +2008,9 @@
 			"type": "documentation"
 		},
 		{
-			"id": "govbr-ds-1.5.0",
+			"id": "govbr-ds-2.4.3",
 			"label": "Design System GOV.BR v2.4.3 BETA (Obsoleta)",
-			"path": "/v243/ds/",
+			"path": "/ds/v243/",
 			"target": "_blank",
 			"type": "link"
 		}
