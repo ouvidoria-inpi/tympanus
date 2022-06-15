@@ -10,6 +10,7 @@ stages:
   - build
   - gitlab-scans
   - lints
+  - publish-package
 
 cache:
   paths:
@@ -18,7 +19,7 @@ cache:
 variables:
   SAST_EXCLUDED_PATHS: spec, test, tests, tmp, .husky, .storybook, .vscode, coverage, dist, node_modules, package-lock.json, **/*.spec.js, **/*.spec.js.snap
   SECRET_DETECTION_HISTORIC_SCAN: 'false'
-  SECRET_DETECTION_EXCLUDED_PATHS: .husky, .vscode,  dist, node_modules
+  SECRET_DETECTION_EXCLUDED_PATHS: spec, test, tests, tmp, .husky, .vscode, coverage, dist, node_modules
 
 Install:
   stage: .pre
@@ -66,15 +67,18 @@ DS:
     - merge_requests
 
 # Parte para incluir os testes com jest, karma, etc...
-# unit-test:
-#   stage: test
+# Jest:
+#   stage: testing
 #   artifacts:
 #     when: always
 #     paths:
-#       - coverage
+#       - coverage/
 #     reports:
 #       junit:
 #         - clover.xml
+#       coverage_report:
+#         coverage_format: cobertura
+#         path: coverage/cobertura-coverage.xml
 #     expire_in: 1 week
 #   script:
 #     - npm run test:unit
@@ -108,7 +112,7 @@ CSS:
     - main
     - merge_requests
 
-#HTML:
+# HTML:
 #  stage: lints
 #  artifacts:
 #    when: always
@@ -121,33 +125,30 @@ CSS:
 #    - main
 #    - merge_requests
 
-#
-# Commitlint:
-#   stage: lints
-#   artifacts:
-#     when: always
-#     paths:
-#       - report-commitlint.txt
-#     expire_in: 1 week
-#   before_script:
-#     - apk --no-cache add git
-#   script:
-#     - npx commitlint-gitlab-ci -x @commitlint/config-conventional > report-commitlint.txt
-#   only:
-#     - main
-#     - merge_requests
+Commitlint:
+  stage: lints
+  artifacts:
+    when: always
+    paths:
+      - report-commitlint.txt
+    expire_in: 1 week
+  before_script:
+    - apk --no-cache add git
+  script:
+    - npx commitlint-gitlab-ci -x @commitlint/config-conventional > report-commitlint.txt
+  only:
+    - main
+    - merge_requests
 
-
-# Precisa configurar para gerar a versão conforme o standard_version antes de habilitar
-# publish_npm:
-#   stage: pages
-#   artifacts:
-#     paths:
-#       - dist
-#     expire_in: 1 week
-#   script:
-#     - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-#     - npm publish
-#   when: manual
-#   only:
-#     - main
+Core:
+  stage: publish-package
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
+  script:
+    - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+    - npm publish --tags latest
+  when: manual
+  only:
+    - tags
