@@ -52,9 +52,7 @@ Use nossos canais abaixo para obter tirar suas dúvidas:
 
 -   Site do Design System GOV.BR <https://www.gov.br/ds/>
 
--   Web Components (versão estável) <https://govbr-ds.gitlab.io/govbr-ds-webcomponents/main>
-
--   Web Components (versão em desenvolvimento\*) <https://govbr-ds.gitlab.io/govbr-ds-webcomponents/develop>
+-   Web Components (versão estável) <https://govbr-ds.gitlab.io/dev/wbc/govbr-ds-wbc/>
 
 -   Pelo nosso email <govbr-ds@serpro.gov.br>
 
@@ -62,7 +60,7 @@ Use nossos canais abaixo para obter tirar suas dúvidas:
 
 ## Como contribuir?
 
-Por favor verifique nossos guias de [como contribuir](./CONTRIBUTING.md 'Como contribuir?').
+Por favor verifique nossos guias de [como contribuir](https://govbr-ds.gitlab.io/govbr-ds-wiki/comunidade/contribuindo-com-o-ds/ 'Como contribuir?').
 
 ### Commits
 
