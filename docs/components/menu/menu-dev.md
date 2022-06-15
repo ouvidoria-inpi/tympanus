@@ -171,7 +171,7 @@ Exemplo de uso do atributo `data-breakpoints`:
 
 ## Dependências
 
--   [Button](/components/button)
+-   [Button](/ds/components/button)
 
 ## Instanciação do Componente
 

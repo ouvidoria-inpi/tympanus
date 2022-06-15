@@ -110,7 +110,7 @@ Abaixo pode-se observar alguns dos erros mais comuns e como tratá-los:
 | Configuração Necessária |   _"Configure os parâmetros XYZ para visualizar os dados"_   | Forneça ao usuário uma explicação pontual sobre como iniciar a configuração necessária |
 
 #### _Empty States_ x Templates de Erro
-É importante salientar que existem tipos de erros que possuem uma origem além da aplicação, como por exemplo,  erros provenientes do protocolo _HTTP_ _(404, 403, 408, 500 ... entre outros)_. Para este tipo de erro deve-se seguir os padrões especificados na documentação [Template de Erro](/templates/erro?tab=designer).
+É importante salientar que existem tipos de erros que possuem uma origem além da aplicação, como por exemplo,  erros provenientes do protocolo _HTTP_ _(404, 403, 408, 500 ... entre outros)_. Para este tipo de erro deve-se seguir os padrões especificados na documentação [Template de Erro](/ds/templates/erro?tab=designer).
 
 #### Boas Práticas
  - Se houver ações corretivas oriente sobre como executá-las e inclua um link ou botão para acioná-las;
