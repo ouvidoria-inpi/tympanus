@@ -52,7 +52,7 @@ Use nossos canais abaixo para obter tirar suas dúvidas:
 
 -   Site do Design System GOV.BR <https://www.gov.br/ds/>
 
--   Web Components (versão estável) <https://govbr-ds.gitlab.io/dev/wbc/govbr-ds-wbc/>
+-   Web Components <https://govbr-ds.gitlab.io/dev/wbc/govbr-ds-wbc/>
 
 -   Pelo nosso email <govbr-ds@serpro.gov.br>
 
