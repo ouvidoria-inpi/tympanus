@@ -81,7 +81,6 @@
 | `data-mode`  | atributo | single ou range              | Modo do data única ou intervalo de data                              |
 | `data-type`  | atributo | text, time ou datetime-local | Tipo datetimepicker, timepicker ou datetimepicker + timepicker       |
 | `data-input` | boolean  | true                         | Indica que o input irá receber o valor selecionado no datetimepicker |
-| `data-input` | boolean  | true                         | Indica que o input irá receber o valor selecionado no datetimepicker |
 
 > **Atenção**! O atributo `data-input` deve ser inserido na tag `<input>`.
 
