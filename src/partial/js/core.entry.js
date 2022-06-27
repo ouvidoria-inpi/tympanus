@@ -76,4 +76,5 @@ export {
   Tooltip,
   globals,
   behavior,
+  Swipe,
 }
