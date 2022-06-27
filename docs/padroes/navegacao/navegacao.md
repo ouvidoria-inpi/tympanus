@@ -329,5 +329,5 @@ Abaixo pode-se observar algumas combinações mais comumente usadas:
 
 - [Navigation Patterns - Material Design](https://material.io/archive/guidelines/patterns/navigation.html)
 
-- [Step by step navigation - GOV.UK Design System](https://govbr-ds-dev-core.service.gov.uk/patterns/step-by-step-navigation/)
+- [Step by step navigation - GOV.UK Design System](https://design-system.service.gov.uk/patterns/step-by-step-navigation/)
 

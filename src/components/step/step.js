@@ -12,8 +12,8 @@ class BRStep {
     this.activeStepNum = 0
     // DOM elements
     this.DOMstrings = {
-      stepsBar: this.component.querySelector('.step-progress'),
       stepsBarClass: 'step-progress',
+      stepsBar: this.component.querySelector('.step-progress'),
       stepsBtnClass: 'step-progress-btn',
       stepsBtns: this.component.querySelectorAll('.step-progress-btn'),
     }
@@ -52,7 +52,7 @@ class BRStep {
     /** Set all steps before clicked (and clicked too) to active
      * @param {number} num - step number
      */
-    this.setActiveStep = (num) => {
+    this.setActiveStep = function (num) {
       // remove active state from all the state
       this.removeAttributes(this.DOMstrings.stepsBtns, 'active')
       // this.removeAttributes(this.DOMstrings.stepsBtns, 'disabled')
@@ -118,8 +118,8 @@ class BRStep {
     // Set Steps label number
     this.setStepsNum()
     // Set default active step
-    if (this.component.hasAttribute('data-inital')) {
-      this.setStep(this.component.getAttribute('data-inital'))
+    if (this.component.hasAttribute('data-initial')) {
+      this.setStep(this.component.getAttribute('data-initial'))
     } else this.setStep(1)
 
     // set steps buttons grid style if it needs to scroll horizontaly

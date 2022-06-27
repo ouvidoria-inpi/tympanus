@@ -54,12 +54,12 @@ Informação opcional que tem por finalidade complementar as informações apres
 
 Refere-se ao gráfico em si. A definição do tipo de gráfico, sua dimensão e uso de legendas, dependerá dos direcionamentos de cada projeto e da percepção do *designer*. É aconselhável a realização de testes de legibilidade e usabilidade com alguns usuários, para validar o nível de leitura, diagramação e ergonomia informacional dos dados. Tanto para gráficos estáticos quanto para gráficos dinâmicos, onde as informações são constantemente atualizadas.
 
-Caso haja necessidade, o gráfico poderá fazer uso de elementos, ações e recursos de navegação que o auxilie na apresentação das informações, tais como: [tootip](/components/modal?tab=desenvolvedor), [barra de rolagem](/components/modal?tab=desenvolvedor), seletores, links, filtros de dados, além de ações para expandir, aproximar ou afastar sua visualização, etc.
+Caso haja necessidade, o gráfico poderá fazer uso de elementos, ações e recursos de navegação que o auxilie na apresentação das informações, tais como: [tootip](/ds/components/tooltip?tab=desenvolvedor), [barra de rolagem](/ds/padroes/contentoverflow), seletores, links, filtros de dados, além de ações para expandir, aproximar ou afastar sua visualização, etc.
 
 ![Exemplo de Gráfico](imagens/img-grafico.png)
 *Exemplo do uso do tooltip em um gráfico do tipo Mapa Geográfico na área principal.*
 
-Outros recursos igualmente importante e que poderão ser utilizados em gráficos dinâmicos, são os valores definidos no [fundamento movimento](/fundamentos-visuais/movimento), tais como: transições, *easing* e a duração.
+Outros recursos igualmente importante e que poderão ser utilizados em gráficos dinâmicos, são os valores definidos no [fundamento movimento](/ds/fundamentos-visuais/movimento), tais como: transições, *easing* e a duração.
 
 Não existe uma forma única de apresentá-los, geralmente os gráficos podem ser apresentados através dos dados com a utilização de eixos (x,y), legendas, linhas de grade, títulos dos eixos, etc. Sua apresentação e organização dependerá da necessidade ou da limitação da ferramenta utilizada para sua criação e exibição.
 

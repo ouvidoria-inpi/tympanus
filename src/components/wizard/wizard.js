@@ -1,4 +1,4 @@
-import SwipeEventDispatcher from '../swipe/swipe'
+import Swipe from '../../partial/js/behavior/swipe'
 class BRWizard {
   constructor(name, component) {
     this.name = name
@@ -38,7 +38,7 @@ class BRWizard {
       return Array.from(this.DOMstrings.stepsBtns).indexOf(elem)
     }
     // set all steps before clicked (and clicked too) to active
-    this.setActiveStep = (activeStepNum) => {
+    this.setActiveStep = function (activeStepNum) {
       // remove active state from all the state
       this.removeAttributes(this.DOMstrings.stepsBtns, 'active')
       // this.removeAttributes(this.DOMstrings.stepsBtns, 'disabled')
@@ -161,7 +161,7 @@ class BRWizard {
       this.DOMstrings.stepsBar.style.gridTemplateColumns = `repeat(auto-fit, minmax(100px, ${stepsWidth}% ))`
     }
     // Swipe
-    const dispatcher = new SwipeEventDispatcher(this.DOMstrings.stepsBar)
+    const dispatcher = new Swipe(this.DOMstrings.stepsBar)
     if (this.component.hasAttribute('vertical')) {
       dispatcher.on('SWIPE_LEFT', () => {
         this.collapseSteps()

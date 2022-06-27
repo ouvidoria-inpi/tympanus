@@ -1,5 +1,5 @@
 import BRStep from '../step/step'
-import SwipeEventDispatcher from '../swipe/swipe'
+import Swipe from '../../partial/js/behavior/swipe'
 class BRCarousel {
   constructor(name, component) {
     /**
@@ -15,12 +15,12 @@ class BRCarousel {
     this.activeStageNum = 0
     // Elementos DOM
     this.DOMstrings = {
-      carouselNextBtn: this.component.querySelector('.carousel-btn-next'),
-      carouselPages: this.component.querySelectorAll('.carousel-page'),
-      carouselPrevBtn: this.component.querySelector('.carousel-btn-prev'),
       carouselStage: this.component.querySelector('.carousel-stage'),
-      circular: this.component.hasAttribute('data-circular'),
+      carouselPages: this.component.querySelectorAll('.carousel-page'),
+      carouselNextBtn: this.component.querySelector('.carousel-btn-next'),
+      carouselPrevBtn: this.component.querySelector('.carousel-btn-prev'),
       step: this.component.querySelector('.br-step'),
+      circular: this.component.hasAttribute('data-circular'),
     }
     this.step = new BRStep('br-step', this.DOMstrings.step)
     this._setBehavior()
@@ -48,7 +48,7 @@ class BRCarousel {
    * Define o passo ativo
    * @param {number} activeStepNum - número do passo
    */
-  setActiveStep = (activeStepNum) => {
+  setActiveStep(activeStepNum) {
     this.step.setActiveStep(activeStepNum)
   }
 
@@ -159,7 +159,7 @@ class BRCarousel {
     })
 
     // Swipe
-    const dispatcher = new SwipeEventDispatcher(this.DOMstrings.carouselStage)
+    const dispatcher = new Swipe(this.DOMstrings.carouselStage)
     dispatcher.on('SWIPE_LEFT', () => {
       this.shiftPage(1)
     })
