@@ -2,6 +2,7 @@
 
 .br-footer {
   @include footer-configs;
+
   /// Para utilizar em um shadow dom reutiliza os mixins abaixo
   .#{$prefix}list {
     &.horizontal {

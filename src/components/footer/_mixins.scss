@@ -106,19 +106,15 @@
 //  uso máximo de 2 linhas, foram adicionados os
 //  comandos line-height e max-height.
 @mixin footer-item-2linemax {
-  height: 4em;
+  min-height: 4em;
 
   .content {
-    display: box;
     height: auto;
-    -webkit-line-clamp: 2;
     line-height: 16px;
-    max-height: 32px;
-    overflow: hidden;
     padding: 0 var(--spacing-scale-2x);
-    text-overflow: ellipsis;
   }
 }
+
 @mixin footer-social {
   .social-network {
     border: 0;
