@@ -171,20 +171,20 @@ A seguir é apresentado o padrão de codificação HTML utilizado no Design Syst
 1. Omitir **atributos de tipo e linguagem** nas tags `script`
 
     ```html
-    <script src="//script.js">
+    <script src="/script.js">
     ```
 
 1. Omitir **atributos de tipo** na tag `link`
 
     ```html
-    <link rel="stylesheet" href="//style.css" />
+    <link rel="stylesheet" href="/style.css" />
     ```
 
 1. Escrever **estilos e scripts** em seus próprios arquivos
 
     ```html
-    <link rel="stylesheet" href="//style.css">
-    <script src="//script.js">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js">
     ```
 
 ## Referências
