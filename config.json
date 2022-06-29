@@ -138,7 +138,7 @@
 							"path": "assets/govbr-ds-dev-core/downloads/GovbrManualMarca.pdf"
 						},
 						{
-							"description": "Este guia tem o objetivo de auxiliar gestores de comunicação da administração pública federal, e demais órgãos vinculados ao Governo Federal, no desenvolvimento e divulgação das ações de comunicação dos serviços digitais que envolverem a plataforma gov.br.",
+							"description": "Este guia tem o objetivo de auxiliar gestores de comunicação da administração pública federal, e demais órgãos vinculados ao Governo, no desenvolvimento e divulgação das ações de comunicação dos serviços digitais que envolverem a plataforma gov.br.",
 							"image": "assets/imgs/ICONE-MANUAIS.png",
 							"label": "Guia de Transformação Digital - Ações de Comunicação Social",
 							"path": "assets/govbr-ds-dev-core/downloads/GovbrManualTransformacaoDigital.pdf"
@@ -198,7 +198,6 @@
 					"label": "Construção de Componentes",
 					"type": "documentation"
 				},
-
 				{
 					"id": "migracao-2x-3x",
 					"label": "Migração da versão 2.x para 3.x do Design System GOV.BR",
