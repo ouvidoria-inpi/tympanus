@@ -2,24 +2,11 @@
 
 .br-footer {
   @include footer-configs;
-  /// Para utilizar em um shadow dom reutiliza os mixins abaixo
-  .#{$prefix}list {
-    &.horizontal {
-      .#{$prefix}item,
-      .#{$prefix}list .#{$prefix}item {
-        @include footer-item-2linemax;
-      }
-    }
-  }
 
   .br-item {
     &.horizontal {
       .#{$prefix} {
         @include footer-list-hide-suport;
-      }
-
-      .#{$prefix}item {
-        @include footer-item-2linemax;
       }
 
       .col,
