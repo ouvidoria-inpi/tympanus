@@ -127,9 +127,7 @@
       }
 
       .header-sign {
-        display: box;
         display: block;
-        -webkit-line-clamp: 2;
       }
     }
   }
@@ -363,10 +361,7 @@
 
     .header-title {
       color: var(--header-title-color);
-      display: box;
       font-size: var(--header-title-size);
-      -webkit-line-clamp: 2;
-      overflow: hidden;
     }
 
     .header-subtitle {
