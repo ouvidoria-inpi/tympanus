@@ -2,22 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## 3.0.0 (2022-06-04)
-
-### Documentação
-
-*   corrige o manual de diretrizes ([00df878](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/00df878103551331aa30df06c4ef0009e60d663a))
-*   tutorial de migração da v. 2x p/ 3x ([e437d3c](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/e437d3cfd0e293fdda502777f6b396cb7308a8f5))
-
-### Novidades
-
-*   adiciona página de documento de padrão minimo e protótipo ([3babad3](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/3babad3bca8b5a3b7f47f8dc065eefd42cd9a8c6))
-*   Alteração da pagina de download ([7955eca](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/7955eca90e6bae5846c82c62331d146a96efd297))
+## 3.0.1 (2022-06-30)
 
 ### Correções/Alterações
 
-*   ajustes links quebrados ([698855d](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/698855dd3d8185997f9c07ed3f53e8fe214b1467))
-*   **datetimpocker:** adiciona config flatpick no componente ([8c5f3da](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/8c5f3da74899dc3b8999d870786614d877494d98))
-*   **menu:** altera link da versao 2.4.3 ([1ea23a4](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/1ea23a4827df779ae2884d9ca00e3fd42890e32e))
-*   muda nomenclatura govbr-ds para govbrds ([c0de349](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/c0de349e497e0dd1189bd95142fee3dfd67ae1a1))
-*   alterado os navegadores suportados ([25ecdde6](https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/commit/25ecdde639d56252cc4030feb97b14e64b1e614a))
+*   altera a variavel item-padding-x ([7ffaf82](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/7ffaf82efa38c3fe41da132a057f93a0ba2ec1a1))
+*   docs: altera os links para /ds ([a4643aff])(<https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/commit/a4643aff78f13d25e153c37868e74b674144b508>)
+*   **lint scss:** remove display box ([c10a1ca](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/c10a1ca4b07b724790eb3bff392dea8ec9374564))
+*   **list:** corrige checkbox dentro de lista ([17f6052](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/17f60521306bfb42f39836a37f262437113eff8b))
+
+### Documentação
+
+*   **navegadores suportados:** alterado os navegadores suportados ([25ecdde](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/25ecdde639d56252cc4030feb97b14e64b1e614a))
