@@ -1,7 +1,7 @@
 [version]: # (15.2.0)
 
 ![Exemplo de Input](imagens/input-sample.png)
-*Exemplo do componente *input*.*
+*Exemplo do componente*t*.*
 
 Utilize o componente *input* quando:
 
@@ -24,17 +24,17 @@ O *Input* é constituído por:
 7. Texto Auxiliar (*opcional*).
 
 ![Anatomia do Input](imagens/input-anatomy.png)
-*Anatomia do componente  *input*.*
+*Anatomia do componente*
 
 ### Detalhamento dos Itens
 
-Abaixo seguem os detalhamentos dos itens do componente *input*. Para maiores informações consulte também a documentação [Padrão de Formulário](/ds/padroes/formulario), onde são abordados mais detalhes com relação ao uso do componente _input_ em páginas de formulários.
+Abaixo seguem os detalhamentos dos itens do componente *input*. Para maiores informações consulte também a documentação [Padrão de Formulário](/ds/padroes/formulario), onde são abordados mais detalhes com relação ao uso do componente *input* em páginas de formulários.
 
 #### 1- Rótulo/Label (*opcional*)
 
 Auxilia o usuário, indicando o tipo de informação que deve ser digitado no Campo de Texto. O texto do Rótulo deve ser curto e objetivo possível.
 
-Além disso, o Rótulo também tem a função de indicar ao usuário se o **Campo de Texto é obrigatório ou não**. Veja detalhes sobre a indicação de **Campos Obrigatórios/Opcionais** no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
+Além disso, o Rótulo também tem a função de indicar ao usuário se o **Campo de Texto é obrigatório ou não**. Veja detalhes sobre a indicação de **Campos Obrigatórios/Opcionais** no documento [Padrão de Formulário](/ds/padroes/formulario).
 
 ##### Posicionamento do Rótulo
 
@@ -52,11 +52,11 @@ Este é o elemento essencial e obrigatório do componente. Por meio dele o usuá
 É recomendado que os campos de texto tenham um tamanho aproximado do texto de entrada esperado, ou seja, recomenda-se prever o tamanho aproximado, pois é extremamente suscetível a erros quando os usuários não conseguem visualizar a entrada completa. Observe o exemplo abaixo:
 
 ![Tamanho do Input](imagens/input-size.png)
-*Tamanho flexível do *input*.*
+*Tamanho flexível do*t*.*
 
 #### 3- Ícone Ilustrativo (*opcional*)
 
-O componente *input* também prevê o uso de ícone, de forma opcional, como maneira de reforçar a comunicação semântica a respeito do dado de entrada solicitado. Este ícone é apenas representativo e não possui qualquer tipo de interação. Quando utilizado, deve estar posicionado à esquerda dentro do campo de _input_, antes do *placeholder* ou do texto digitado pelo usuário. Observe os exemplos abaixo:
+O componente *input* também prevê o uso de ícone, de forma opcional, como maneira de reforçar a comunicação semântica a respeito do dado de entrada solicitado. Este ícone é apenas representativo e não possui qualquer tipo de interação. Quando utilizado, deve estar posicionado à esquerda dentro do campo de *input*, antes do *placeholder* ou do texto digitado pelo usuário. Observe os exemplos abaixo:
 
 ![Uso de Ícones](imagens/input-icons.png)
 *Utilização de Ícones.*
@@ -73,7 +73,7 @@ Este elemento é opcional e visa auxiliar o usuário sobre ações referentes ao
 Caso o ícone não seja suficiente para o entendimento da ação, pode-se utilizar o *Button* tipo Padrão, mas neste caso, recomendamos **somente o uso do elemento textual** (evitando o auxílio de ícones).
 
 ![Exemplo de Botão Circular](imagens/input-action.png)
-*Caso seja identificado que o usuário não esteja entendendo a ação interna, é possível alterar o tipo do *button*. Esse uso é indicado em casos excepcionais, e deve-se utilizar apenas recursos textuais.*
+*Caso seja identificado que o usuário não esteja entendendo a ação interna, é possível alterar o tipo do*on*. Esse uso é indicado em casos excepcionais, e deve-se utilizar apenas recursos textuais.*
 
 #### 5- *Placeholder* (*opcional*)
 
@@ -84,14 +84,14 @@ Deve trazer informações mais completas que a contida no Rótulo/Label, e desap
 Use o *placeholder* quando o usuário não estiver familiarizado com a entrada solicitada ou com a formatação em questão (por exemplo, DD-MM-AAAA).
 
 ![Exemplo de Placeholder](imagens/input-placeholder.png)
-*Exemplo de *placeholder* para orientação de preenchimento do nome completo.*
+*Exemplo de*eholder*****para orientação de preenchimento do nome completo.*
 
 #### 6- Mensagem (*opcional*)
 
 O componente *Message* é opcional e é utilizado quando há uma necessidade de dar uma mensagem de *feedback* ao usuário. A mensagem pode ter até quatro objetivos diferentes: **Erro**, **Sucesso**, **Alerta** e **Informativo**.
 
 ![Componente Mensagem Erro](imagens/input-behavior-states-danger.png)
-*Uso do componente *message* de erro.*
+*Uso do componente*age*****de erro.*
 
 #### 7- Texto Auxiliar (*opcional*)
 
@@ -109,14 +109,14 @@ O texto auxiliar tem a função de ajudar o usuário com uma informação mais c
 Geralmente utilizado em páginas de formulários, campos de autenticação, ou qualquer outra finalidade que permita entrada de dados de forma padrão.
 
 ![Exemplo de Input Padrão](imagens/input-sample.png)
-*Exemplo de *input* padrão.*
+*Exemplo de*t*****padrão.*
 
 ### *Input* Destaque
 
 Esse tipo permite um destaque maior na interface, geralmente ocupando um grande espaço. É utilizado em situações onde há necessidade de chamar atenção do usuário, como campos de busca.
 
 ![Exemplo de Input Destaque](imagens/input-search.png)
-*Exemplo de *input* destaque.*
+*Exemplo de*t*****destaque.*
 
 ---
 
@@ -140,7 +140,7 @@ Neste exemplo, os *Campos Telefone*, *UF* e *Senha*, foram posicionados nas linh
 
 #### *Grid* de 4 colunas
 
-Na *grid* de 4 colunas, recomenda-se que o *Input* se estenda por toda largura a da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizado o *input* com a densidade baixa, com a finalidade de aumentar a área de *touch*. Consulte Comportamento [Densidade](https://www.gov.br/ds/padroes/densidade) para maiores detalhes.
+Na *grid* de 4 colunas, recomenda-se que o *Input* se estenda por toda largura a da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizado o *input* com a densidade baixa, com a finalidade de aumentar a área de *touch*. Consulte Comportamento [Densidade](/ds/padroes/densidade) para maiores detalhes.
 
 ![Input - Grid de 4 colunas](imagens/Input-behavior-responsive-grid-4-cols.png)
 **Input* - *grid* de 4 colunas.*
@@ -162,7 +162,7 @@ O *input* pode ser utilizado com diferentes densidades. A densidade tem relaçã
 É a situação em que a altura do campo é reduzida. É bastante útil quando for necessário utilizar o campo de entrada de texto dentro de outros componentes ou em espaços menores. Por exemplo, dentro de uma tabela, dentro do cabeçalho do sistema, etc.
 
 ![Densidades do Input](imagens/input-behavior-density.png)
-*Densidades do *input*: A- baixa, B- média e C- alta.*
+*Densidades do*t*: A- baixa, B- média e C- alta.*
 
 ### 3- Estados
 
@@ -218,7 +218,7 @@ Ocorre quando o *input* está desabilitado temporariamente para o preenchimento.
 Este estado ocorre quando o usuário posiciona o *mouse* sobre o campo de texto. O cursor deve mudar para o formato `Text`.
 
 ![Estado Hover](imagens/input-behavior-states-hover.png)
-*Estado *hover* em fundo claro e escuro.*
+*Estado*r*****em fundo claro e escuro.*
 
 #### Estado Foco
 
@@ -252,14 +252,14 @@ Sempre que o dado de entrada requerido possuir um padrão de escrita, recomenda-
 -   Evite dividir o *input* em campos separados sem necessidade, isso aumenta o custo de interação do usuário, além de causar problemas para usuários internacionais, visto que utilizam padrões diferenciados. Por exemplo, o formato do telefone nos EUA é bem diferente do brasileiro: +1 (xxx) xxx-xx-xx.
 
 ![Não divida o Input em Campos Separados](imagens/input-mask-03.png)
-*Não divida o *input* em campos separados sem necessidade.*
+*Não divida o*t*****em campos separados sem necessidade.*
 
 -   A máscara deve oferecer espaçamentos e separadores específicos para cada trecho do número, código ou protocolo digitado. Esta prática oferece ao usuário uma melhor visualização do texto, além de prevenir possíveis erros de digitação.
 
 ![Ofereça espaçamentos e separadores entre trechos do texto](imagens/input-mask-05.png)
 *Ofereça espaçamentos e separadores entre trechos do texto*
 
-Veja mais detalhes sobre máscaras no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
+Veja mais detalhes sobre máscaras no documento [Padrão de Formulário](/ds/padroes/formulario).
 
 ### *Autocomplete*
 
@@ -268,14 +268,14 @@ O *autocomplete* é um recurso bastante útil durante o processo de pesquisa de 
 Por padrão, as sugestões são carregadas dinamicamente em uma lista *dropdown* no momento da digitação.
 
 ![Exemplo de Autocomplete](imagens/input-autocomplete-01.png)
-*Exemplo do recurso de *autocomplete*.*
+*Exemplo do recurso de*complete*.*
 
 Abaixo pode-se observar algumas boas práticas a esse respeito:
 
 -   Recomenda-se que os resultados exibidos dinamicamente no momento da digitação sejam atualizados de forma automática o mais rápido possível ou instantaneamente, de preferência. Quando utilizar o *autocomplete*, deve-se evitar fazer o usuário esperar, mas caso isso ocorra, pode-se utilizar o recurso de *loading* durante o carregamento dos dados;
 
 ![Autocomplete Carregamento](imagens/input-autocomplete-02.png)
-*Deve-se evitar fazer o usuário esperar, porém utilize o recurso de *loading* caso seja necessário*
+*Deve-se evitar fazer o usuário esperar, porém utilize o recurso de*ing*****caso seja necessário*
 
 -   utilize ordem alfabética ao carregar a lista de sugestões;
 
@@ -285,12 +285,12 @@ Abaixo pode-se observar algumas boas práticas a esse respeito:
 -   quando não houver dados de sugestões referentes ao texto digitado, sinalize ao usuário com *feedback* no lugar da lista de sugestões;
 
 ![Autocomplete com Feedback](imagens/input-autocomplete-04.png)
-*Exemplo de *autocomplete* com *feedback*.*
+*Exemplo de*complete*****com*
 
 -   Sempre que possível, associe assuntos relacionados aos termos digitados no campo de pesquisa, isso trará uma experiência mais rica ao usuário durante o processo de pesquisa. É interessante também associar assuntos relacionados nos casos em que não são encontrados termos de sugestões.
 
 ![Autocomplete com Assuntos Relacionados](imagens/input-autocomplete-05.png)
-*Exemplo de *autocomplete* com assuntos relacionados.*
+*Exemplo de*complete*****com assuntos relacionados.*
 
 ---
 

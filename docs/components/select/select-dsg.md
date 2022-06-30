@@ -154,7 +154,7 @@ Para abrir o componente _select_ ou _multiselect_ o usuário poderá clicar em t
 ![Exemplo de abertura dos itens do multiselect.](imagens/select-behaviour-multiselect-click-open.png)
 *Exemplo do comportamento de abertura dos itens do _multiselect_ nos estados interativo à esquerda, estado hover no centro e estado pressionado à direita.*
 
-**Importante:** Não havendo espaço disponível para visualizar a abertura devido aos limites da tela, os itens do "Componente _list_" deverão ser reposicionado em uma outra direção, garantindo uma melhor adequação ao layout apresentado. Para maiores informações consultar o tópico **"Posicionamento"** no documento Padrão [_Dropdown_](https://www.gov.br/ds/padroes/dropdown).
+**Importante:** Não havendo espaço disponível para visualizar a abertura devido aos limites da tela, os itens do "Componente _list_" deverão ser reposicionado em uma outra direção, garantindo uma melhor adequação ao layout apresentado. Para maiores informações consultar o tópico **"Posicionamento"** no documento Padrão [_Dropdown_](/ds/padroes/dropdown).
 
 ### 3. Responsividade
 

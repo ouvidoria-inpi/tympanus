@@ -75,14 +75,14 @@ O uso do elemento ícone no ítem da _tab_ é opcional, tendo como função ser 
 
 Na _web_, o ítem da _tab_ quando apresentado sem os seus respectivos rótulos, ou seja, somente com os ícones, deverá este utilizar o recurso de _tooltip_ para que o usuário tenha acesso ao nome do rótulo.
 
-Sobre o _tooltip_, ver especificações em: (<https://www.gov.br/ds/components/tooltip>)
+Sobre o _tooltip_, ver especificações em: (</ds/components/tooltip>)
 
 ![Anatomia das Tabs](imagens/type-icons.png)
 *Variações do uso de ícone nos Ítens da _Tab_*
 
 ### 6 - Componente _Divider_ (Obrigatório)
 
-Componente padrão. Ver especificações em: (<https://www.gov.br/ds/components/divider>)
+Componente padrão. Ver especificações em: (</ds/components/divider>)
 
 ---
 

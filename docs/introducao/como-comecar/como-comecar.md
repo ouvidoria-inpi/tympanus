@@ -18,7 +18,7 @@ Caso tenha dúvida em como aplicar os padrões a um serviço, temos alguns prot�
 
 Temos uma novidade que acabamos de disponibilizar para download: Protótipos de um caso de uso. Neles exemplificamos como podem ser aplicados os padrões do design system em soluções web, mobile responsivo e aplicativos nativos IOS e Android sem ferir os padrões de cada plataforma, para que entendam as diferenças entre as aplicações. [Confira na área de downloads na **aba Designer**](/ds/downloads/assets).
 
-Para saber mais sobre como utilizar os UIKITs, acesse Prototipando com o Design System GOV.BR  (<https://www.gov.br/ds/introducao/prototipando>)
+Para saber mais sobre como utilizar os UIKITs, acesse Prototipando com o Design System GOV.BR  (</ds/introducao/prototipando>)
 
 ## Instalação
 

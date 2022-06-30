@@ -185,7 +185,7 @@ Preferencialmente, utilize o *Button* na versão com densidade alta.
 
 ### 8. Botão de Autenticar
 
-O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](https://www.gov.br/ds/components/signin?tab=designer)).
+O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](/ds/components/signin?tab=designer)).
 
 É apresentado apenas quando o usuário estiver "deslogado". Após o login, ele será substituído pelo Avatar.
 
@@ -274,9 +274,9 @@ Conforme descrito em [Responsividade](#1-responsividade), o *header* possui um c
 
 Esses espaçamento podem assumir valores pré-definidos para cada tipo de *header* utilizado, podendo ainda sim, ser modificados.
 
-* **Densidade Alta:** utilizada quando se pretende ocupar menos espaço útil na interface.
-* **Densidade Padrão:** Funciona na maioria dos layouts.
-* **Densidade Baixa:** utilizado quando o *header* precisa se destacar dentro da interface.
+*   **Densidade Alta:** utilizada quando se pretende ocupar menos espaço útil na interface.
+*   **Densidade Padrão:** Funciona na maioria dos layouts.
+*   **Densidade Baixa:** utilizado quando o *header* precisa se destacar dentro da interface.
 
 ![Densidades Alta Padrão e Baixa](imagens/header-densidade.png)
 
@@ -294,14 +294,14 @@ Em se tratando de Header do tipo Padrão, a busca funciona como um *input* comum
 
 Ao acionar o ícone de "Lupa", o *Header* recebe um contexto de busca, apresentando as seguintes características:
 
-* Todos os elementos exibidos no Header são ocultados.
-* O *input* preenche todo a largura do Header recebendo o estado *Focus*.
-* Um *Button* circular surge com a ação para "fechar" o *input*.
+*   Todos os elementos exibidos no Header são ocultados.
+*   O *input* preenche todo a largura do Header recebendo o estado *Focus*.
+*   Um *Button* circular surge com a ação para "fechar" o *input*.
 
 Quando *Button* fechar é acionado:
 
-* O *Header* volta para o contexto anterior, voltando todos os elementos que antes eram visíveis.
-* Tanto o *Input* como o *button* desaparecem.
+*   O *Header* volta para o contexto anterior, voltando todos os elementos que antes eram visíveis.
+*   Tanto o *Input* como o *button* desaparecem.
 
 ##### Normal
 

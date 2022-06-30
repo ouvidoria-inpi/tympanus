@@ -2,7 +2,7 @@
 
 ## Orientações de uso do design system em dispositivos móveis
 
-O design system do governo segue [princípios](https://www.gov.br/ds/introducao/principios) e práticas que buscam orientar toda a experiência de uso, através das seguintes diretrizes:
+O design system do governo segue [princípios](/ds/introducao/principios) e práticas que buscam orientar toda a experiência de uso, através das seguintes diretrizes:
 
 -   Experiência Única;
 -   Eficiência e Clareza;
@@ -20,16 +20,16 @@ Os **Fundamentos Visuais** carregam as principais características que definem a
 
 Fazem parte dos fundamentos:
 
--   [Cores](https://www.gov.br/ds/fundamentos-visuais/cores)
--   [Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia)
--   [Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento)
--   [Estados](https://www.gov.br/ds/fundamentos-visuais/estados)
--   [Ilustração](https://www.gov.br/ds/fundamentos-visuais/ilustracao)
--   [Sistema de Grid](https://www.gov.br/ds/fundamentos-visuais/grid)
--   [Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)
--   [Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao)
--   [Movimento](https://www.gov.br/ds/fundamentos-visuais/movimento)
--   [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)
+-   [Cores](/ds/fundamentos-visuais/cores)
+-   [Iconografia](/ds/fundamentos-visuais/iconografia)
+-   [Espaçamento](/ds/fundamentos-visuais/espacamento)
+-   [Estados](/ds/fundamentos-visuais/estados)
+-   [Ilustração](/ds/fundamentos-visuais/ilustracao)
+-   [Sistema de Grid](/ds/fundamentos-visuais/grid)
+-   [Superfície](/ds/fundamentos-visuais/superficie)
+-   [Elevação](/ds/fundamentos-visuais/elevacao)
+-   [Movimento](/ds/fundamentos-visuais/movimento)
+-   [Tipografia](/ds/fundamentos-visuais/tipografia)
 
 ---
 

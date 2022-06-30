@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O [Padrão Digital de Governo](https://www.gov.br/ds/ 'Padrão Digital de Governo') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo.
+O [Padrão Digital de Governo](https://www./ds/ 'Padrão Digital de Governo') apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação dos usuários com os sistemas interativos do Governo.
 
 ## Tecnologias
 
@@ -20,7 +20,7 @@ As principais dependências do projeto são:
 
 1. [Fonte Rawline](https://www.cdnfonts.com/rawline.font/ 'Fonte Rawline')
 
-> O fontawesome e a fonte rawline podem ser importadas de um CDN. Consulte a documentação no site do [Padrão Digital de Governo](https://www.gov.br/ds/ 'Padrão Digital de Governo') para mais detalhes.
+> O fontawesome e a fonte rawline podem ser importadas de um CDN. Consulte a documentação no site do [Padrão Digital de Governo](https://www./ds/ 'Padrão Digital de Governo') para mais detalhes.
 >
 ## Como usar nossa biblioteca em seu projeto?
 
@@ -34,7 +34,7 @@ npm install --save @govbr-ds/core
 
 ### Como começar
 
-Criamos um [tutorial no nosso site](https://www.gov.br/ds/introducao/como-comecar 'Como começar?') explicando como começar a utilizar nosso Design System.
+Criamos um [tutorial no nosso site](https://www./ds/introducao/como-comecar 'Como começar?') explicando como começar a utilizar nosso Design System.
 
 ##  Lints
 
@@ -50,7 +50,7 @@ npm run lint
 
 Use nossos canais abaixo para obter tirar suas dúvidas:
 
--   Site do Design System GOV.BR <https://www.gov.br/ds/>
+-   Site do Design System GOV.BR <https://www./ds/>
 
 -   Web Components <https://govbr-ds.gitlab.io/dev/wbc/govbr-ds-wbc/>
 
