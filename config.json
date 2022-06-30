@@ -1929,9 +1929,9 @@
 								{
 									"label": "Baixar Código Fonte",
 									"size": "103.4 MB",
-									"version": "3.0.0",
-									"id": "core-3.0.0",
-									"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/archive/v3.0.0/govbr-ds-dev-core-v3.0.0.zip"
+									"version": "3.0.1",
+									"id": "core-3.0.1",
+									"path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/archive/v3.0.1/govbr-ds-dev-core-v3.0.1.zip"
 								}
 							]
 						},
@@ -1943,9 +1943,9 @@
 								{
 									"label": "Baixar Pacote NPM",
 									"size": "2.6 MB",
-									"version": "3.0.0",
-									"id": "core-npm-3.0.0",
-									"path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.0.0.tgz"
+									"version": "3.0.1",
+									"id": "core-npm-3.0.1",
+									"path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.0.1.tgz"
 								}
 							]
 						},

@@ -2,7 +2,7 @@
 
 ## Orientações de uso do design system em dispositivos móveis
 
-O design system do governo federal segue [princípios](https://www.gov.br/ds/introducao/principios) e práticas que buscam orientar toda a experiência de uso, através das seguintes diretrizes:
+O design system do governo segue [princípios](https://www.gov.br/ds/introducao/principios) e práticas que buscam orientar toda a experiência de uso, através das seguintes diretrizes:
 
 -   Experiência Única;
 -   Eficiência e Clareza;

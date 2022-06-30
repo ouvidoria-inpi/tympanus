@@ -135,10 +135,7 @@ Ao contrário do indicador de páginas simples, o indicador de páginas textual 
 
 **Atenção:** tenha em mente que a utilização do indicador de páginas no *carousel* é uma boa prática de usabilidade e sempre que possível deve ser utilizado.
 
-Para mais informações consulte o documento [Componentes > Step](https://www.gov.br/ds/components/step?tab=designer).
-
----
-
+Para mais informações consulte o documento [Componentes > Step](components/step?tab=designer
 ## Comportamento
 
 ### 1- Navegação

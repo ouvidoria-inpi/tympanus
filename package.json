@@ -1,6 +1,6 @@
 {
   "name": "@govbr-ds/core",
-  "version": "3.0.0",
+  "version": "3.0.1-rc1",
   "description": "Padrão Digital de Governo",
   "keywords": [
     "core",
@@ -42,7 +42,6 @@
     "lint:styles": "stylelint src/**/*.scss --fix",
     "live-server": "live-server",
     "minify:img": "node minify-img.js",
-    "prepare": "husky install",
     "publish:design-review": "bash designreview.sh",
     "pushtags": "git push origin $(git describe --tags $(git rev-list --tags --max-count=1))",
     "release": "standard-version",

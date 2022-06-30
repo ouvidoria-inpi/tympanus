@@ -2,7 +2,7 @@ Esse documento tem o objetivo de definir boas práticas de construção do códi
 
 ## Modelo de Acessibilidade em Governo Eletrônico - eMAG
 
-O [Modelo de Acessibilidade em Governo Eletrônico -eMAG][1] tem o compromisso de ser o norteador no desenvolvimento e na adaptação de conteúdos digitais do governo federal, garantindo o acesso a todos.
+O [Modelo de Acessibilidade em Governo Eletrônico -eMAG][1] tem o compromisso de ser o norteador no desenvolvimento e na adaptação de conteúdos digitais do governo, garantindo o acesso a todos.
 
 As recomendações do [eMAG][1] permitem que a implementação da acessibilidade digital seja conduzida de forma padronizada, de fácil implementação, coerente com as necessidades brasileiras e em conformidade com os padrões internacionais.
 

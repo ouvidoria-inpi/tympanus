@@ -8,27 +8,27 @@ Apesar da redução na lista de utilitários, todos os tokens de cores e espaça
 
 ## Cores disponíveis
 
-- Blue
-- Blue Warm
-- Blue Warm Vivid
-- Gold Vivid
-- Gray
-- Green Cool Vivid
-- Pure
-- Red Vivid
-- Red Warm Vivid
-- Yellow Vivid
+-   Blue
+-   Blue Warm
+-   Blue Warm Vivid
+-   Gold Vivid
+-   Gray
+-   Green Cool Vivid
+-   Pure
+-   Red Vivid
+-   Red Warm Vivid
+-   Yellow Vivid
 
 Exemplos de uso em [Utilitários CSS > Cores](/ds/utilities-css/cores).
 
 ## Espaçamentos disponíveis
 
-- **0**: 0px
-- **1**: 4px
-- **2**: 8px
-- **3**: 16px
-- **4**: 24px
-- **5**: 32px
-- **6**: 40px
+-   **0**: 0px
+-   **1**: 4px
+-   **2**: 8px
+-   **3**: 16px
+-   **4**: 24px
+-   **5**: 32px
+-   **6**: 40px
 
 Exemplos de uso em [Utilitários CSS > Espaçamento](/ds/utilities-css/espacamento).
