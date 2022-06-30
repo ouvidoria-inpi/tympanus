@@ -60,8 +60,12 @@
 
 @mixin list-checkbox-radio-config {
   --interactive-rgb: var(--rgb-primary-default);
-  --item-padding-x: 0;
-  --item-padding-y: 0;
+  /* Desativo o lint nessas variaveis para manter o calculo em px */
+  /* stylelint-disable */
+  --item-padding-x: 0px;
+  --item-padding-y: 0px;
+  /* stylelint-enable */
+
 
   input {
     &:hover:not(:disabled) {
