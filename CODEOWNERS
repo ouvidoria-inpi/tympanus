@@ -1,15 +1,16 @@
 # Code Owners for a file
-.commitlintrc.yml @oliveira.rafael @marcosalves3
-.czrc @oliveira.rafael @marcosalves3
-.editorconfig @oliveira.rafael @marcosalves3
-.eslintignore @oliveira.rafael @marcosalves3
-.eslintrc.yaml @oliveira.rafael @marcosalves3
-.htmlvalidate.json @oliveira.rafael @marcosalves3
-.prettierignore @oliveira.rafael @marcosalves3
-.prettierrc.yml @oliveira.rafael @marcosalves3
-.stylelintignore @oliveira.rafael @marcosalves3
-.stylelintrc.json @oliveira.rafael @marcosalves3
-CODEOWNERS @oliveira.rafael @marcosalves3
+.commitlintrc.yml @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.czrc @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.editorconfig @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.eslintignore @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.eslintrc.yaml @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.htmlvalidate.json @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.prettierignore @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.prettierrc.yml @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.stylelintignore @oliveira.rafael @marcosalves3 @tiagoalexandreos
+.stylelintrc.json @oliveira.rafael @marcosalves3 @tiagoalexandreos
+package.json @oliveira.rafael @marcosalves3 @tiagoalexandreos
+CODEOWNERS @oliveira.rafael @marcosalves3 @tiagoalexandreos
 
 # Code Owners for a directory
 #directoryname/ @username1 @username2

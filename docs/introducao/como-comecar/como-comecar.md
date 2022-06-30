@@ -1,10 +1,10 @@
 [version]: # '2.4.3'
 
-Sugerimos a leitura dos [Princípios do Design System](introducao/principios), eles são a base para construção de todos os artefatos disponibilizados e devem ser aplicados também aos produtos que adotem o padrão digital de governo.
+Sugerimos a leitura dos [Princípios do Design System](/ds/introducao/principios), eles são a base para construção de todos os artefatos disponibilizados e devem ser aplicados também aos produtos que adotem o padrão digital de governo.
 
 **Designer**
 
-Se você é um designer e está começando a adotar o design system, indicamos a leitura dos [fundamentos de design](fundamentos-visuais/cores). Eles auxiliam na tomada de decisões, melhoram a assertividade de seu produto e garante que a solução criada esteja aderente aos padrões existentes.
+Se você é um designer e está começando a adotar o design system, indicamos a leitura dos [fundamentos de design](/ds/fundamentos-visuais/cores). Eles auxiliam na tomada de decisões, melhoram a assertividade de seu produto e garante que a solução criada esteja aderente aos padrões existentes.
 
 Disponibilizamos alguns materiais para ajudar a projetar sua interface:
 
@@ -14,9 +14,9 @@ Disponibilizamos alguns materiais para ajudar a projetar sua interface:
 
 [UiKit iOS](https://serprodrive.serpro.gov.br/s/CiLWgb77s3tbr69)
 
-Caso tenha dúvida em como aplicar os padrões a um serviço, temos alguns protótipos já aderentes, que podem ser utilizados como referência ou mesmo não ter que iniciar seu trabalho do zero. Dessa forma, você poderá direcionar seu esforço para estratégias de negócio e/ou ux. Confira na área de downloads na [**aba Modelos**](downloads/assets).
+Caso tenha dúvida em como aplicar os padrões a um serviço, temos alguns protótipos já aderentes, que podem ser utilizados como referência ou mesmo não ter que iniciar seu trabalho do zero. Dessa forma, você poderá direcionar seu esforço para estratégias de negócio e/ou ux. Confira na área de downloads na [**aba Modelos**](/ds/downloads/assets).
 
-Temos uma novidade que acabamos de disponibilizar para download: Protótipos de um caso de uso. Neles exemplificamos como podem ser aplicados os padrões do design system em soluções web, mobile responsivo e aplicativos nativos IOS e Android sem ferir os padrões de cada plataforma, para que entendam as diferenças entre as aplicações. [Confira na área de downloads na **aba Designer**](downloads/assets).
+Temos uma novidade que acabamos de disponibilizar para download: Protótipos de um caso de uso. Neles exemplificamos como podem ser aplicados os padrões do design system em soluções web, mobile responsivo e aplicativos nativos IOS e Android sem ferir os padrões de cada plataforma, para que entendam as diferenças entre as aplicações. [Confira na área de downloads na **aba Designer**](/ds/downloads/assets).
 
 Para saber mais sobre como utilizar os UIKITs, acesse Prototipando com o Design System GOV.BR  (<https://www.gov.br/ds/introducao/prototipando>)
 
@@ -60,7 +60,7 @@ Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 ## Template Inicial
 
-A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **core.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **core.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **govbr-ds-init.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **core.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **core.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **core-init.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>
@@ -95,7 +95,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script src="node_modules\@govbr-ds\core\dist\core.min.js"></script>
+        <script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
     </body>
 </html>
 ```
@@ -107,7 +107,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
 Essa é a versão init(core-init.js) com os componentes já **inicializados** diferente do core.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
-<script src="node_modules\@govbr-ds\core\dist\core-init.min.js"></script>
+<script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
 ```
 
 ## Versão "lite" da folha de estilo
@@ -122,11 +122,11 @@ Você poderá usar uma versão "lite" do CSS no lugar da versão completa. No c�
 />
 ```
 
-Visite [Design System GOV.BR lite](introducao/govbr-ds-lite) para saber as diferenças.
+Visite [Design System GOV.BR lite](/ds/introducao/govbr-ds-lite) para saber as diferenças.
 
 ## Template Base
 
-Um bom ponto de partida para usar o Design System GOV.BR é usar um template já com elementos básicos estruturantes da página como Cabeçalho, Menu e Rodapé. [Visite o Template Base](templates/base) na visão **Desenvolvedor** para acessar o código de referência.
+Um bom ponto de partida para usar o Design System GOV.BR é usar um template já com elementos básicos estruturantes da página como Cabeçalho, Menu e Rodapé. [Visite o Template Base](/ds/templates/base) na visão **Desenvolvedor** para acessar o código de referência.
 
 ## Servidor CDN
 

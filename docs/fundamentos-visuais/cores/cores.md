@@ -8,9 +8,9 @@ A aplicação correta da paleta de cores visa trazer consistência ao _Design Sy
 
 ### Experiência Única
 
-A paleta do Design System GOV.BR é constituída e organizada por cores e famílias de cores, abrangendo dimensões de matizes, brilhos e saturação. Além disso, são estabelecidas finalidades específicas para algumas dessas famílias: **Cores de Superfície**, **Cores de Leitura**, **Cores Interativas** e **Cores de Feedback**. Elas tem o objetivo de preservar a identidade visual e manter a mesma experiência em todos os produtos e sistemas do Governo Federal.
+A paleta do Design System GOV.BR é constituída e organizada por cores e famílias de cores, abrangendo dimensões de matizes, brilhos e saturação. Além disso, são estabelecidas finalidades específicas para algumas dessas famílias: **Cores de Superfície**, **Cores de Leitura**, **Cores Interativas** e **Cores de Feedback**. Elas tem o objetivo de preservar a identidade visual e manter a mesma experiência em todos os produtos e sistemas do Governo.
 
-> **Exemplo:** Nesse sistema, a família **Blue Warm Vivid**, que contém a cor **Blue Warm Vivid 70**, foram as cores selecionadas para representar a identidade do Governo Federal.
+> **Exemplo:** Nesse sistema, a família **Blue Warm Vivid**, que contém a cor **Blue Warm Vivid 70**, foram as cores selecionadas para representar a identidade do Governo.
 
 ### Eficiência e Clareza
 
