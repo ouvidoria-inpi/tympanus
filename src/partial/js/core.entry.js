@@ -31,8 +31,9 @@ import Accordion from './behavior/accordion'
 import Checkgroup from './behavior/checkgroup'
 import Collapse from './behavior/collapse'
 import Tooltip from './behavior/tooltip'
-import Behavior from './core.beahavior'
+import Behavior from './core.behavior'
 import { Dropdown, Globals } from './globals-class'
+import Swipe from './behavior/swipe'
 
 const globals = new Globals()
 
@@ -75,4 +76,5 @@ export {
   Tooltip,
   globals,
   behavior,
+  Swipe,
 }

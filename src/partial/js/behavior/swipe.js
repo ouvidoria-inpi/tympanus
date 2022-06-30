@@ -1,4 +1,4 @@
-export class SwipeEventDispatcher {
+export class Swipe {
   constructor(element, options = {}) {
     this.evtMap = {
       SWIPE_DOWN: [],
@@ -57,4 +57,4 @@ export class SwipeEventDispatcher {
     }
   }
 }
-export default SwipeEventDispatcher
+export default Swipe

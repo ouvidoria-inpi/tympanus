@@ -2,9 +2,9 @@
 
 ## _Rawline_
 
-Para a apresentação dos elementos textuais do _Design System_ do Governo Federal, somente uma família de fonte é utilizada: a **_Rawline_**. Sua escolha foi feita devido à diversidade de pesos da fonte que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
+Para a apresentação dos elementos textuais do _Design System_, somente uma família de fonte é utilizada: a **_Rawline_**. Sua escolha foi feita devido à diversidade de pesos da fonte que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
 
-A utilização da _Rawline_ tem como objetivo facilitar o reconhecimento, pelos cidadãos, dos produtos do Governo Federal, juntamente com o padrão de cores e elementos gráficos definidos no _Design System_.
+A utilização da _Rawline_ tem como objetivo facilitar o reconhecimento, pelos cidadãos, dos produtos do Governo, juntamente com o padrão de cores e elementos gráficos definidos no _Design System_.
 
 A _Rawline_ está disponível em <https://www.cdnfonts.com/rawline.font/>
 
@@ -75,7 +75,7 @@ Em um documento com uma definição de 72 dpi (ou 72 ppi ) dentro de um software
 
 Atualmente, uma prática recomendada é permitir que um dispositivo (como navegador _web_) tome as decisões baseadas no tamanho da fonte base. O padrão é que em uma janela com visualização de 96 dpi tenha a fonte base padrão de 16px, mas dificilmente essa regra se aplique em todos os casos (como um _smart watch_).
 
-No _Design System_ do Governo Federal optamos pela fonte base de 14 pixel por considerarmos que esse tamanho seja aplicável na maioria dos dispositivos e situações, porém essa escolha não é definitiva.
+No _Design System_ do Governo optamos pela fonte base de 14 pixel por considerarmos que esse tamanho seja aplicável na maioria dos dispositivos e situações, porém essa escolha não é definitiva.
 
 Definir um tamanho de uma fonte base (juntamente com a referência do uso de unidades "em" ou "rem") facilitará a hierarquia entre os textos, otimizando o efeito cascata (veja escala tipográfica).
 
@@ -85,7 +85,7 @@ Definir um tamanho de uma fonte base (juntamente com a referência do uso de uni
 
 O estabelecimento de uma escala tipográfica é uma forma de determinar tamanhos tipográficos. A escala é importante porque estabelece a hierarquia e melhora a legibilidade criando harmonia e coesão entre os textos.
 
-Existem muitas escalas diferentes, mas dentro do _Design System_ do Governo Federal foi escolhida a escala **_Minor Third_** (1,2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hierarquia de uma interface.
+Existem muitas escalas diferentes, mas dentro do _Design System_ do Governo foi escolhida a escala **_Minor Third_** (1,2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hierarquia de uma interface.
 
 O tamanho **fonte base** é de 14px (1em) e peso da fonte normal (400). A unidade **em** é uma medida relativa que permite que o usuário altere o tamanho de exibição do texto na interface. Com exceção da fonte base, utilize a unidade **em** para todos os outros valores da escala. Assim, caso o valor do tamanho base padrão seja alterado, toda a interface se adapta ao novo valor.
 
@@ -115,8 +115,8 @@ Caso o tamanho não atenda sua interface, utilize um valor diferente para a font
 
 Caso haja necessidade, os valores da escala tipográfica podem ser ampliados, além dos valores demonstrados na tabela acima, crescendo ou reduzindo na mesma proporção **Minor Third (1,2)**. Por exemplo:
 
-- Crescendo: `41,80px`, `50,16px`, `60,19px`, `72,23px`, ...
-- Reduzindo: `8.10px`, `6,75px`, `5,62px`, `4.68px`, ...
+-   Crescendo: `41,80px`, `50,16px`, `60,19px`, `72,23px`, ...
+-   Reduzindo: `8.10px`, `6,75px`, `5,62px`, `4.68px`, ...
 
 Quando reduzir ou ampliar a escala tipográfica, fique atento às questões de legibilidade.
 
@@ -147,7 +147,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### H1
 
 ![Título H1](imagens/h1.png)
-*Exemplo do Estilo H1 com fundo claro e escuro e na Grid de 4 colunas.*
+_Exemplo do Estilo H1 com fundo claro e escuro e na Grid de 4 colunas._
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -169,7 +169,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### H2
 
 ![Título H2](imagens/h2.png)
-*Exemplo do Estilo H2 com fundo claro e escuro e na Grid de 4 colunas.*
+_Exemplo do Estilo H2 com fundo claro e escuro e na Grid de 4 colunas._
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -191,7 +191,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### H3
 
 ![Título H3](imagens/h3.png)
-*Exemplo do Estilo H3 com fundo claro e escuro e na Grid de 4 colunas.*
+_Exemplo do Estilo H3 com fundo claro e escuro e na Grid de 4 colunas._
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -213,7 +213,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### H4
 
 ![Título H4](imagens/h4.png)
-*Exemplo do Estilo H4 com fundo claro e escuro e na Grid de 4 colunas.*
+_Exemplo do Estilo H4 com fundo claro e escuro e na Grid de 4 colunas._
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -236,7 +236,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### H5
 
 ![Título H5](imagens/h5.png)
-*Exemplo do Estilo H5 com fundo claro e escuro e na Grid de 4 colunas.*
+_Exemplo do Estilo H5 com fundo claro e escuro e na Grid de 4 colunas._
 
 | Propriedade    | Token / Valor             |
 | -------------- | ------------------------- |
@@ -260,7 +260,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### H6
 
 ![Título H6](imagens/h6.png)
-*Exemplo do Estilo H6 com fundo claro e escuro e na Grid de 4 colunas.*
+_Exemplo do Estilo H6 com fundo claro e escuro e na Grid de 4 colunas._
 
 | Propriedade    | Token / Valor              |
 | -------------- | -------------------------- |
@@ -283,7 +283,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### P
 
 ![Parágrafo](imagens/paragraph.png)
-*Exemplo do Estilo Parágrafo com fundo claro e escuro e na Grid de 4 colunas.*
+_Exemplo do Estilo Parágrafo com fundo claro e escuro e na Grid de 4 colunas._
 
 | Propriedade   | Token / Valor               |
 | ------------- | --------------------------- |
@@ -303,7 +303,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### Label
 
 ![Label](imagens/label.png)
-*Exemplo do Estilo Label com fundo claro e escuro.*
+_Exemplo do Estilo Label com fundo claro e escuro._
 
 | Propriedade   | Token / Valor               |
 | ------------- | --------------------------- |
@@ -317,7 +317,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### Input
 
 ![Input](imagens/input.png)
-*Exemplo do Estilo Input com fundo claro e escuro.*
+_Exemplo do Estilo Input com fundo claro e escuro._
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -331,7 +331,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### Placeholder
 
 ![Placeholder](imagens/placeholder.png)
-*Exemplo do Estilo Placeholder com fundo claro e escuro.*
+_Exemplo do Estilo Placeholder com fundo claro e escuro._
 
 | Propriedade   | Token / Valor               |
 | ------------- | --------------------------- |
@@ -347,7 +347,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### Legend
 
 ![Legend](imagens/legend.png)
-*Exemplo do Estilo Legend com fundo claro e escuro.*
+_Exemplo do Estilo Legend com fundo claro e escuro._
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -362,7 +362,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### Mark
 
 ![Mark](imagens/mark.png)
-*Exemplo do Estilo Mark.*
+_Exemplo do Estilo Mark._
 
 | Propriedade | Token / Valor         |
 | ----------- | --------------------- |
@@ -372,7 +372,7 @@ Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte b
 ### Code
 
 ![Code](imagens/code.png)
-*Exemplo do Estilo Code no formato Inline e Bloco.*
+_Exemplo do Estilo Code no formato Inline e Bloco._
 
 | Propriedade      | Token / Valor                                |
 | ---------------- | -------------------------------------------- |

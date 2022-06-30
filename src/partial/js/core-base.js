@@ -31,7 +31,8 @@ import Accordion from './behavior/accordion'
 import Checkgroup from './behavior/checkgroup'
 import Collapse from './behavior/collapse'
 import Tooltip from './behavior/tooltip'
-import Behavior from './core.beahavior'
+import Swipe from './behavior/swipe'
+import Behavior from './core.behavior'
 import { Dropdown, Globals } from './globals-class'
 
 // BRCheckbox, BRBreadcrumb
@@ -70,4 +71,5 @@ export {
   BRWizard,
   Globals,
   Tooltip,
+  Swipe,
 }

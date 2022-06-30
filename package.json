@@ -1,7 +1,7 @@
 {
   "name": "@govbr-ds/core",
-  "version": "3.0.0-rc.3",
-  "description": "Design System do Governo Federal",
+  "version": "3.0.0",
+  "description": "Padrão Digital de Governo",
   "keywords": [
     "core",
     "govbr",

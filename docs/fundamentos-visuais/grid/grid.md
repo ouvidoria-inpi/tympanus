@@ -24,7 +24,7 @@ Porventura, poderá haver alguma adaptação específica no sistema de _grids_, 
 
 ## _Breakpoints_
 
-O sistema de _grid_ para o _Design System_ do Governo Federal se adequa a 5 _breakpoints_ de referência, abrangendo resoluções para _mobile_, _tablet_, _desktop_  e resoluções superiores. São elas:
+O sistema de _grid_ para o _Design System_ se adequa a 5 _breakpoints_ de referência, abrangendo resoluções para _mobile_, _tablet_, _desktop_  e resoluções superiores. São elas:
 
 ![Visão Geral dos Breakpoints e Resoluções](imagens/breakpoint-statcounter.png)
 *Visão geral dos _breakpoints_ e resoluções.*

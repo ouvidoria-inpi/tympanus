@@ -33,6 +33,7 @@ import Accordion from './behavior/accordion'
 import Checkgroup from './behavior/checkgroup'
 import Collapse from './behavior/collapse'
 import Dropdown from './behavior/dropdown'
+import Swipe from './behavior/swipe'
 
 export default class Globals {
 	initInstanceAll() {
@@ -375,4 +376,5 @@ export {
 	BRUpload,
 	BRWizard,
 	Globals,
+  Swipe,
 }
