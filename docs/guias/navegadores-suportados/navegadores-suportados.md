@@ -7,9 +7,9 @@ Esse projeto é compatível com as seguintes versões mínimas dos seguintes bro
 | Navegador | Versão             |
 | --------- | ------------------ |
 | Chrome    | 49 ou mais recente |
-| Edge      | 14 ou mais recente |
-| Firefox   | 67 ou mais recente |
-| Safari    | 11 ou mais recente |
+| Edge      | 80 ou mais recente |
+| Firefox   | 80 ou mais recente |
+| Safari    | 15 ou mais recente |
 
 **Não recomendamos o uso do Internet Explorer (qualquer versão) e Edge Legacy. Não garantimos o correto funcionamento do Design System GOV.BR nesses browsers ou em versões não listadas acima. Utilize as versões da tabela, dando preferência às versões mais novas.**
 
