@@ -1,13 +1,4 @@
 <style>
-	section {
-		margin-left: calc(var(--spacing-scale-base) * -1);
-		margin-right: calc(var(--spacing-scale-base) * -1);
-		padding-bottom: var(--spacing-scale-8x);
-		padding-left: var(--spacing-scale-base);
-		padding-right: var(--spacing-scale-base);
-		padding-top: var(--spacing-scale-8x);
-		text-align: center;
-	}
 	.gradient-blue {
 		background-image: linear-gradient(
 			var(--blue-warm-vivid-5),
@@ -32,48 +23,19 @@
 			var(--pure-0)
 		);
 	}
-	.titulo {
-		font-size: var(--font-size-scale-up-05);
-		font-weight: var(--font-weight-regular);
-		margin-bottom: var(--spacing-scale-4x);
-	}
-	.subtitulo {
-		font-size: var(--font-size-scale-up-02);
-		font-weight: var(--font-weight-semi-bold);
-		margin-bottom: var(--spacing-scale-4x);
-	}
-	.paragrafo {
-		font-size: var(--font-size-scale-up-01);
-		font-weight: var(--font-weight-regular);
-		margin-bottom: var(--spacing-scale-4x);
-	}
-	@media (min-width: 576px) {
-		section {
-			margin-left: calc(var(--spacing-scale-5x) * -1);
-			margin-right: calc(var(--spacing-scale-5x) * -1);
-			padding-left: var(--spacing-scale-4x);
-			padding-right: var(--spacing-scale-4x);
-			text-align: left;
-		}
-		.titulo {
-			font-size: var(--font-size-scale-up-06);
-			font-weight: var(--font-weight-light);
-		}
-		.subtitulo {
-			font-size: var(--font-size-scale-up-03);
-			font-weight: var(--font-weight-semi-bold);
-		}
-		.paragrafo {
-			font-size: var(--font-size-scale-up-02);
-			font-weight: var(--font-weight-regular);
-		}
-	}
 </style>
-<section id="home-sobre" class="gradient-blue mt-n4 pb-0">
+<section
+	id="home-sobre"
+	class="gradient-blue text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 mt-n4 pt-8x pb-0"
+>
 	<div class="row">
 		<div class="col-lg mb-8x mb-lg-0">
-			<h1 class="titulo">Primeira vez?</h1>
-			<p class="paragrafo">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+			>
+				Primeira vez?
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5">
 				Entenda como instalar, usar os componentes, templates e a
 				documentação.
 			</p>
@@ -87,8 +49,12 @@
 			</div>
 		</div>
 		<div class="col-lg mb-8x mb-lg-0">
-			<h1 class="titulo">O que há de novo?</h1>
-			<p class="paragrafo">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+			>
+				O que há de novo?
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5">
 				Confira as principais novidades disponíveis na versão atual do
 				Design System.
 			</p>
@@ -101,8 +67,12 @@
 			</div>
 		</div>
 		<div class="col-lg">
-			<h1 class="titulo">Sobre o Design System</h1>
-			<p class="paragrafo">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+			>
+				Sobre o Design System
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5">
 				Unificando a experiência dos cidadãos com o Governo por meio
 				digital.
 			</p>
@@ -130,7 +100,10 @@
 		/>
 	</div>
 </section>
-<section id="home-padrao-minimo" class="gradient-green pb-0">
+<section
+	id="home-padrao-minimo"
+	class="gradient-green text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 pt-8x pb-0"
+>
 	<div class="row">
 		<div class="col-lg order-12 order-lg-0">
 			<div class="d-lg-none mt-8x">
@@ -147,10 +120,12 @@
 			</div>
 		</div>
 		<div class="col-lg">
-			<h1 class="titulo">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+			>
 				Qual é o padrão mínimo para aplicações de governo?
 			</h1>
-			<p class="paragrafo">
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5">
 				Aplicações de governo precisam estar adequados ao Padrão Digital
 				corretamente.
 			</p>
@@ -163,11 +138,18 @@
 		</div>
 	</div>
 </section>
-<section id="home-comunidade" class="gradient-blue">
+<section
+	id="home-comunidade"
+	class="gradient-blue text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x"
+>
 	<div class="row">
 		<div class="col-lg">
-			<h1 class="titulo">Faça parte da nossa comunidade</h1>
-			<p class="paragrafo">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+			>
+				Faça parte da nossa comunidade
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5">
 				Estamos em constante busca de aperfeiçoamento, entretanto nosso
 				time entende que esta evolução só pode ser completa com a ajuda
 				de todos.
@@ -197,11 +179,18 @@
 		</div>
 	</div>
 </section>
-<section id="home-downloads" class="gradient-indigo">
+<section
+	id="home-downloads"
+	class="gradient-indigo text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x"
+>
 	<div class="row">
 		<div class="col-lg">
-			<h1 class="titulo">Downloads</h1>
-			<p class="paragrafo">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+			>
+				Downloads
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5">
 				Baixe os artefatos para Designers e Desenvolvedores e use no seu
 				projeto.
 			</p>
@@ -230,7 +219,10 @@
 		</div>
 	</div>
 </section>
-<section id="home-componentes" class="gradient-blue">
+<section
+	id="home-componentes"
+	class="gradient-blue text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x"
+>
 	<div class="row align-items-center">
 		<div class="col-lg">
 			<div class="d-none d-lg-block text-center">
@@ -242,8 +234,12 @@
 			</div>
 		</div>
 		<div class="col-lg">
-			<h1 class="titulo">Componentes</h1>
-			<p class="paragrafo">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+			>
+				Componentes
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5">
 				Os componentes são um dos principais blocos de construção do
 				sistema de design. Sua reutilização sistemática ajuda a criar
 				consistência visual e funcional entre os produtos.
@@ -263,9 +259,16 @@
 		</div>
 	</div>
 </section>
-<section id="home-explore" class="gradient-orange text-center">
-	<h1 class="titulo">Explore</h1>
-	<p class="subtitulo">
+<section
+	id="home-explore"
+	class="gradient-orange text-center mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x"
+>
+	<h1
+		class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+	>
+		Explore
+	</h1>
+	<p class="text-up-02 text-sm-up-03 text-weight-semi-bold mb-5">
 		Confira outros recursos que oferecemos para tornar a utilização do
 		Design System mais simples e descomplicar o desenvolvimento do seu
 		projeto.
@@ -287,13 +290,16 @@
 				/>
 			</div>
 			<a href="/ds/downloads/manuais-orientadores">
-				<span class="subtitulo">Manuais</span>
+				<span
+					class="text-up-02 text-sm-up-03 text-weight-semi-bold mb-5"
+					>Manuais</span
+				>
 				<span
 					class="bg-primary-default pb-half mx-auto mt-3"
 					style="width: 120px"
 				></span>
 			</a>
-			<p class="paragrafo mt-5">
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5 mt-5">
 				Fornecem orientações sobre migração, publicação, SEO,
 				diretrizes, uso da marca do gov.br e guia de transformação
 				digital.
@@ -315,13 +321,16 @@
 				/>
 			</div>
 			<a href="/ds/fundamentos-visuais/cores">
-				<span class="subtitulo">Fundamentos Visuais</span>
+				<span
+					class="text-up-02 text-sm-up-03 text-weight-semi-bold mb-5"
+					>Fundamentos Visuais</span
+				>
 				<span
 					class="bg-primary-default pb-half mx-auto mt-3"
 					style="width: 120px"
 				></span>
 			</a>
-			<p class="paragrafo mt-5">
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5 mt-5">
 				São usados na padronização, aparência dos componentes e
 				interfaces que seguem a identidade visual do Design System.
 			</p>
@@ -342,13 +351,16 @@
 				/>
 			</div>
 			<a href="/ds/padroes/formulario">
-				<span class="subtitulo">Padrões</span>
+				<span
+					class="text-up-02 text-sm-up-03 text-weight-semi-bold mb-5"
+					>Padrões</span
+				>
 				<span
 					class="bg-primary-default pb-half mx-auto mt-3"
 					style="width: 120px"
 				></span>
 			</a>
-			<p class="paragrafo mt-5">
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5 mt-5">
 				São um conjunto de diretrizes que ajudam o usuário a alcançar um
 				determinado objetivo e garantir a consistência nas interações
 			</p>
@@ -369,13 +381,16 @@
 				/>
 			</div>
 			<a href="/ds/templates/base?tab=desenvolvedor">
-				<span class="subtitulo">Templates</span>
+				<span
+					class="text-up-02 text-sm-up-03 text-weight-semi-bold mb-5"
+					>Templates</span
+				>
 				<span
 					class="bg-primary-default pb-half mx-auto mt-3"
 					style="width: 120px"
 				></span>
 			</a>
-			<p class="paragrafo mt-5">
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5 mt-5">
 				São estruturas predefinidas para serem usadas como modelo na
 				criação de novas interfaces ou projetos.
 			</p>
