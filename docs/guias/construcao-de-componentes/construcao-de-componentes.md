@@ -302,7 +302,7 @@ No arquivo **\_mixins.scss** o seguinte código:
 
 ```
 
-No arquivo **** adicionar os seguintes código
+No arquivo **\_simple-button.scss** adicionar os seguintes código
 
 ```scss
 @import "mixins";
