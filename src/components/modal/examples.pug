@@ -1,0 +1,24 @@
+extends ../../partial/pug/component
+
+append vars
+  - var title = "Modal";
+
+append content
+  p.h4.mt-5 Modal Alerta
+  +modal-alert
+  p.h4.mt-5 Modal Alerta com ícone de fechar
+  +modal-acao
+  p.h4.mt-5 Modal com duas ou mais linhas de título
+  +modal-titulo-linhas
+  p.h4.mt-5 Modal com Temporizador
+  +modal-loading
+  p.h4.mt-5 Modal sem título
+  +modal-sem-titulo
+  p.h4.mt-5 Modal com escolha de opção
+  +modal-options
+  p.h4.mt-5 Modal com entrada de dados
+  +modal-login
+  p.h4.mt-5 Modal com lista de opções
+  +modal-list
+  p.h4.mt-5 Modal com termo de aceite
+  +modal-terms

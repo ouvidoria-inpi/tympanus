@@ -1,0 +1,5 @@
+mixin divider
+  - let componentClass = prefix + 'divider'
+  span(class=componentClass)&attributes(attributes)
+    if block
+      block

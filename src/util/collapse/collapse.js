@@ -1,0 +1,36 @@
+import Collapse from '../../partial/js/behavior/collapse'
+
+/**
+ * Classe para o exemplo do comportamento collapse
+ */
+class CollapseExample {
+  /**
+   * Instancia um exemplo de comportamento collapse
+   * @param {object} element - Elemento DOM que representa um componente contento um comportamento de collapse
+   */
+  constructor(element) {
+    this.element = element
+    this._setBehavior()
+  }
+
+  _setBehavior() {
+    this._setCollapseBehavior()
+  }
+
+  _setCollapseBehavior() {
+    this.element
+      .querySelectorAll('[data-toggle="collapse"]')
+      .forEach((trigger) => {
+        const config = {
+          trigger,
+          iconToShow: 'fa-chevron-down',
+          iconToHide: 'fa-chevron-up',
+          useIcons: true,
+        }
+        const collapse = new Collapse(config)
+        collapse.setBehavior()
+      })
+  }
+}
+
+export default CollapseExample

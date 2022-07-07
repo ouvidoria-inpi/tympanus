@@ -1,0 +1,101 @@
+mixin button
+  - let componentClass = prefix + "button"
+  button.br-button(class=className type="button")&attributes(attributes)
+    if block
+      block
+
+//- button-primary
+mixin btn-pri
+  +button.primary.mt-3.mt-sm-0.ml-sm-3 Primário
+
+//- button-secondary
+mixin btn-sec
+  +button.secondary.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city.mr-1
+    | Secundário
+
+//- button-tertiary
+mixin btn-ter
+  +button.mt-3.mt-sm-0.ml-sm-3 Terciário
+
+//- button-primary-circle
+mixin btn-pri-cir
+  +button.primary.circle.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city
+
+//- button-secondary-circle
+mixin btn-sec-cir
+  +button.secondary.circle.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city
+
+//- button-tertiary-circle
+mixin btn-ter-cir
+  +button.circle.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city
+
+//- button-primary-inverted
+mixin btn-pri-inv
+  +button.primary.inverted.mt-3.mt-sm-0.ml-sm-3 Primário
+
+//- button-secondary-inverted
+mixin btn-sec-inv
+  +button.secondary.inverted.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city.mr-1
+    | Secundário
+
+//- button-tertiary-inverted
+mixin btn-ter-inv
+  +button.inverted.mt-3.mt-sm-0.ml-sm-3 Terciário
+
+//- button-primary-circle-inverted
+mixin btn-pri-cir-inv
+  +button.primary.inverted.circle.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city
+
+//- button-secondary-circle-inverted
+mixin btn-sec-cir-inv
+  +button.secondary.inverted.circle.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city
+
+//- button-tertiary-circle-inverted
+mixin btn-ter-cir-inv
+  +button.inverted.circle.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city
+
+//- button-secondary-block
+mixin btn-sec-blk
+  +button.secondary.block Botão
+
+//- button-secondary-large
+mixin btn-sec-lge
+  +button.secondary.large.mt-3.mt-sm-0.ml-sm-3 Baixa
+
+//- button-secondary-medium
+mixin btn-sec-md
+  +button.secondary.mt-3.mt-sm-0.ml-sm-3 Média
+
+//- button-secondary-small
+mixin btn-sec-ml
+  +button.secondary.small.mt-3.mt-sm-0.ml-sm-3 Alta
+
+//- button-secondary-circle-large
+mixin btn-sec-cir-lge
+  +button.secondary.circle.large.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city
+
+//- button-secondary-circle-small
+mixin btn-sec-cir-ml
+  +button.secondary.circle.small.mt-3.mt-sm-0.ml-sm-3(aria-label="Ícone ilustrativo")
+    +icon.fa-city
+
+//- button-secondary-disabled
+mixin btn-sec-dis
+  +button.primary.mt-3.mt-sm-0.ml-sm-3(disabled) Desativado
+
+//- button-secondary-active
+mixin btn-sec-act
+  +button.primary.active Ativado
+
+//- button-secondary-loading
+mixin btn-sec-load
+  +button.primary.loading Carregando

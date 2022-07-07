@@ -1,0 +1,30 @@
+{
+	"recommendations": [
+		"bierner.color-info",
+		"christian-kohler.npm-intellisense",
+		"coenraads.bracket-pair-colorizer-2",
+		"davidanson.vscode-markdownlint",
+		"dbaeumer.vscode-eslint",
+		"docsmsft.docs-markdown",
+		"eamodio.gitlens",
+		"eg2.vscode-npm-script",
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-rename-tag",
+		"gruntfuggly.todo-tree",
+		"ibm.output-colorizer",
+		"kisstkondoros.vscode-codemetrics",
+		"kisstkondoros.vscode-gutter-preview",
+		"mkaufman.htmlhint",
+		"naumovs.color-highlight",
+		"oderwat.indent-rainbow",
+		"redhat.vscode-yaml",
+		"shd101wyy.markdown-preview-enhanced",
+		"stylelint.vscode-stylelint",
+		"usernamehw.errorlens",
+		"wayou.vscode-todo-highlight",
+		"yzhang.markdown-all-in-one",
+		"mrmlnc.vscode-scss",
+    "editorconfig.editorconfig"
+	]
+}

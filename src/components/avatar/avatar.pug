@@ -1,0 +1,100 @@
+mixin avatar
+  - let className = prefix + 'avatar'
+  span(class=className title=attributes.title ? attributes.title : "Fulano da Silva")&attributes(attributes)
+    if block
+      block
+
+mixin avatar-letra
+  +avatar
+    span.image.letter&attributes(attributes)
+      if block
+        block
+
+mixin avatar-icone
+  +avatar&attributes(attributes)
+    span.image
+      +icon.fa-user
+    if block
+      block
+
+mixin avatar-foto
+  +avatar&attributes(attributes)
+    span.image
+      img(src="https://picsum.photos/id/823/400" alt="Avatar")
+    if block
+      block
+
+mixin avatar-action
+  - let className = prefix + 'avatar-action'
+  button(class=className type="button")&attributes(attributes)
+    if block
+      block
+
+mixin avatar-card
+  +card
+    .front
+      .content
+        .d-flex.align-items-center
+          +avatar-foto
+          .flex-fill.mx-3
+            .text-primary-default.text-up-01 Maria Amorim
+            span UX Designer
+          div
+            +button.circle(aria-label="Ver telefone")
+              +icon.fa-phone
+            +button.circle(aria-label="Enviar comentário")
+              +icon.fa-comment
+
+mixin avatar-message
+  +card
+    .front
+      .content
+        .d-flex
+          +avatar-foto
+          .flex-fill.ml-3
+            +textarea(aria-label="Digite uma informação se o label estiver vazio" placeholder="Digite seu comentário")#comments
+      .footer
+        .row.justify-content-end
+          .col.col-xs-12.text-right
+            +button Cancelar
+            +button.primary Enviar
+
+mixin avatar-change-card
+  +card
+    .front
+      .content
+        .text-center
+          +avatar-action()(data-toggle="avatar" data-target="#avatar-choose" data-visible aria-label="Escolher Avatar")
+            +avatar-icone.large
+        p.h4.mt-5.text-center Clique na imagem acima para trocar sua foto no perfil.
+        +feedback-info Os arquivos devem ser nos formatos PNG ou JPG, e ter no máximo 100MB
+
+mixin avatar-dropdown
+  - let random = `${Math.floor((Math.random() * 100000) + 1)}`
+  - let target = attributes['data-target'] ? attributes['data-target'] : `avatar-menu-${random}`
+  button(class=`${prefix}avatar` type="button" data-toggle="dropdown" data-target=target aria-label="Avatar com dropdown")&attributes(attributes)
+    span.image
+      +icon.fa-user
+    +icon.fa-caret-down
+  +notification()(hidden id=target)
+    +notification-body
+      +list
+        +item.px-5(type="button")
+          +tag-status.small.warning.ml-n4.mr-2
+          span.text-bold Título
+          span.d-block.text-medium.mb-2 25 de out
+          span Nostrud consequat culpa ex mollit aute. Ex ex veniam ea labore laboris duis duis elit. Ex aute dolor enim aute Lorem dolor. Duis labore ad anim culpa.
+        +item.px-5(type="button")
+          +tag-status.small.warning.ml-n4.mr-2
+          span.text-bold Título
+          span.d-block.text-medium.mb-2 24 de out
+          span Labore nulla elit laborum nulla duis. Deserunt ad nulla commodo occaecat nulla proident ea proident aliquip dolore sunt nulla.
+        +item.px-5(type="button")
+          span.text-bold Título
+          span.d-block.text-medium.mb-2 03 de out
+          span Duis qui dolor dolor qui sint consectetur. Ipsum eu dolore ex anim reprehenderit laborum commodo. Labore do ut nulla eiusmod consectetur.
+        +item.px-5(type="button")
+          span.text-bold Título
+          span.d-block.text-medium.mb-2 16 de mai
+          span Sunt velit dolor enim mollit incididunt irure est. Ad ea Lorem culpa quis occaecat sunt in exercitation nisi. Sit laborum laborum dolor culpa ipsum velit.
+

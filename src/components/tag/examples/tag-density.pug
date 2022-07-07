@@ -1,0 +1,16 @@
+extends ../../../partial/pug/isolate
+
+block dependencies
+  include ../tag
+  include ../../../partial/pug/utilities/icon.pug
+
+block content
+  +tag-text.small
+    +icon.fa-car
+    span Label
+  +tag-text.medium
+    +icon.fa-car
+    span Label
+  +tag-text.large
+    +icon.fa-car
+    span Label

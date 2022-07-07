@@ -1,0 +1,18 @@
+extends ../../../partial/pug/isolate
+
+block dependencies
+  include ../tag
+  include ../../button/button
+  include ../../../partial/pug/utilities/icon.pug
+
+block content
+  +tag-interaction
+    +icon.fa-car
+    span Label
+    +button.close.inverted.circle(aria-label="Fechar")
+      +icon.fa-times
+  +tag-interaction
+    +icon.fa-car
+    span Label
+    +button.close.inverted.circle(aria-label="Fechar")
+      +icon.fa-times

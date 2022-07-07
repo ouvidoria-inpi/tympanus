@@ -1,0 +1,18 @@
+extends ../../../partial/pug/isolate
+
+block dependencies
+  include ../avatar
+  include ../../notification/notification.pug
+  include ../../list/list.pug
+  include ../../item/item.pug
+  include ../../tag/tag.pug
+
+block content
+  style.
+    #avatar-dropdown [data-dropdown] {
+      left: 0;
+      right: auto;
+      width: 360px;
+    }
+  #avatar-dropdown.mb-5.d-inline-block
+    +avatar-dropdown

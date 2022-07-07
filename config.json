@@ -1,0 +1,2075 @@
+{
+  "children": [
+    {
+      "children": [
+        {
+          "id": "como-comecar",
+          "label": "Como começar",
+          "type": "documentation"
+        },
+        {
+          "ext": [
+            "html"
+          ],
+          "hideLabel": true,
+          "id": "padrao-minimo",
+          "label": "Padrão Mínimo",
+          "type": "documentation"
+        },
+        {
+          "id": "principios",
+          "label": "Princípios do Design System",
+          "type": "documentation"
+        },
+        {
+          "id": "prototipando",
+          "label": "Prototipando com o Design System ",
+          "type": "documentation"
+        },
+        {
+          "id": "dsgov-lite",
+          "label": "Design System Lite",
+          "type": "documentation"
+        },
+        {
+          "id": "utilizando-scss",
+          "label": "Utilizando SCSS",
+          "type": "documentation"
+        },
+        {
+          "id": "sobre",
+          "label": "Sobre o Design System",
+          "type": "documentation"
+        }
+      ],
+      "id": "introducao",
+      "label": "Introdução",
+      "type": "category"
+    },
+    {
+      "children": [
+        {
+          "id": "cores",
+          "label": "Cores",
+          "type": "documentation"
+        },
+        {
+          "id": "iconografia",
+          "label": "Iconografia",
+          "type": "documentation"
+        },
+        {
+          "id": "espacamento",
+          "label": "Espaçamento",
+          "type": "documentation"
+        },
+        {
+          "id": "estados",
+          "label": "Estados",
+          "type": "documentation"
+        },
+        {
+          "id": "ilustracao",
+          "label": "Ilustração",
+          "type": "documentation"
+        },
+        {
+          "id": "grid",
+          "label": "Sistema de Grid",
+          "type": "documentation"
+        },
+        {
+          "id": "superficie",
+          "label": "Superfície",
+          "type": "documentation"
+        },
+        {
+          "id": "elevacao",
+          "label": "Elevação",
+          "type": "documentation"
+        },
+        {
+          "id": "movimento",
+          "label": "Movimento",
+          "type": "documentation"
+        },
+        {
+          "id": "tipografia",
+          "label": "Tipografia",
+          "type": "documentation"
+        }
+      ],
+      "id": "fundamentos-visuais",
+      "label": "Fundamentos Visuais",
+      "type": "category"
+    },
+    {
+      "children": [
+        {
+          "files": [
+            {
+              "description": "Expressa em detalhes os elementos necessários para padronização dos portais. Além disso, contempla layouts possíveis, descrição de itens obrigatórios e variáveis do portal, boas práticas para aplicação de conteúdo editorial e diretrizes para elaboração de conteúdos de vídeos, infográficos e tagueamento.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": "Manual de Diretrizes",
+              "path": "assets/design-system/downloads/GovbrManualdeDiretrizes.pdf"
+            },
+            {
+              "description": "Fornece orientações sobre as etapas e procedimentos do processo de migração, abordando também indicações para o tratamento do acervo de conteúdo.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": " Manual de Migração",
+              "path": "assets/design-system/downloads/GovbrManualdeMigracao.pdf"
+            },
+            {
+              "description": "Apresenta as ferramentas de administração e publicação de conteúdos dentro do portal gov.br. Inclui também, com base nos pilares da comunicação de governo - informar, monitorar, ouvir, contribuir e evoluir -, proposta de tom de voz e linguagem e recomendações para construção de textos de agenda, notícias e serviços.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": "Manual de Publicação",
+              "path": "assets/design-system/downloads/GovbrManualdePublicacao.pdf"
+            },
+            {
+              "description": "Apresenta conjunto de ações que podem ser realizadas para que um site se posicione melhor em resultados orgânicos nos motores de buscas e potencialmente obtenha mais acessos.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": "Manual de Search Engine Optimization (SEO)",
+              "path": "assets/design-system/downloads/GovbrManualdeSEO.pdf"
+            },
+            {
+              "description": "Padrões e normas de apresentação da marca gov.br.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": "Manual de uso da marca gov.br",
+              "path": "assets/design-system/downloads/GovbrManualMarca.pdf"
+            },
+            {
+              "description": "Este guia tem o objetivo de auxiliar gestores de comunicação da administração pública federal, e demais órgãos vinculados ao Governo, no desenvolvimento e divulgação das ações de comunicação dos serviços digitais que envolverem a plataforma gov.br.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": "Guia de Transformação Digital - Ações de Comunicação Social",
+              "path": "assets/design-system/downloads/GovbrManualTransformacaoDigital.pdf"
+            }
+          ],
+          "id": "manuais-orientadores",
+          "label": "Manuais orientadores",
+          "type": "downloads"
+        },
+        {
+          "id": "boas-praticas-de-css",
+          "label": "Boas práticas de CSS",
+          "type": "documentation"
+        },
+        {
+          "id": "purgecss",
+          "label": "Reduzir arquivo de CSS",
+          "type": "documentation"
+        },
+        {
+          "id": "boas-praticas-de-html",
+          "label": "Boas práticas de HTML",
+          "type": "documentation"
+        },
+        {
+          "id": "acessibilidade-no-codigo-html",
+          "label": "Acessibilidade no Código HTML",
+          "type": "documentation"
+        },
+        {
+          "id": "codificacao-javascript",
+          "label": "Codificação JavaScript",
+          "type": "documentation"
+        },
+        {
+          "id": "codificacao-sass",
+          "label": "Codificação Sass",
+          "type": "documentation"
+        },
+        {
+          "id": "uso-de-vendors",
+          "label": "Uso de Vendors",
+          "type": "documentation"
+        },
+        {
+          "id": "uso-do-wai-aria",
+          "label": "Uso do WAI-ARIA",
+          "type": "documentation"
+        },
+        {
+          "id": "navegadores-suportados",
+          "label": "Navegadores suportados",
+          "type": "documentation"
+        },
+        {
+          "id": "construcao-de-componentes",
+          "label": "Construção de Componentes",
+          "type": "documentation"
+        }
+        
+      ],
+      "id": "guias",
+      "label": "Guias",
+      "type": "category"
+    },
+    {
+      "children": [
+        {
+          "id": "ajuda",
+          "label": "Ajuda e Comunicação",
+          "type": "documentation"
+        },
+        {
+          "id": "densidade",
+          "label": "Densidade",
+          "type": "documentation"
+        },
+        {
+          "id": "contentoverflow",
+          "label": "Content Overflow",
+          "type": "documentation"
+        },
+        {
+          "id": "dropdown",
+          "label": "Dropdown",
+          "type": "documentation"
+        },
+        {
+          "id": "formulario",
+          "label": "Formulário",
+          "type": "documentation"
+        },
+        {
+          "id": "grafico",
+          "label": "Gráfico",
+          "type": "documentation"
+        },
+        {
+          "id": "onboarding",
+          "label": "Onboarding",
+          "type": "documentation"
+        },
+        {
+          "id": "collapse",
+          "label": "Collapse",
+          "type": "documentation"
+        },
+        {
+          "id": "navegacao",
+          "label": "Navegação",
+          "type": "documentation"
+        },
+        {
+          "id": "emptystates",
+          "label": "Empty States",
+          "type": "documentation"
+        }
+      ],
+      "id": "padroes",
+      "label": "Padrões",
+      "type": "category"
+    },
+    {
+      "children": [
+        {
+          "examples": [
+            {
+              "label": "Comportamento padrão",
+              "path": "examples/accordion-default"
+            },
+            {
+              "label": "Comportamento padrão - Escuro",
+              "path": "examples/accordion-default-negative"
+            },
+            {
+              "label": "Único item por vez",
+              "path": "examples/accordion-single"
+            },
+            {
+              "label": "Único item por vez - Escuro",
+              "path": "examples/accordion-single-negative"
+            }
+          ],
+          "id": "accordion",
+          "label": "Accordion"
+        },
+        {
+          "examples": [
+            {
+              "label": "Tipos e densidades",
+              "path": "examples/avatar-sizes"
+            },
+            {
+              "height": 400,
+              "label": "Avatar com dropdown",
+              "path": "examples/avatar-dropdown"
+            }
+          ],
+          "ext": [
+            "md",
+            "html",
+            "css",
+            "js"
+          ],
+          "id": "avatar",
+          "label": "Avatar"
+        },
+        {
+          "examples": [
+            {
+              "height": 250,
+              "label": "Breadcrumb Padrão",
+              "path": "examples/breadcrumb-default"
+            },
+            {
+              "height": 250,
+              "label": "Breadcrumb com truncamento",
+              "path": "examples/breadcrumb-truncate"
+            }
+          ],
+          "id": "breadcrumb",
+          "label": "Breadcrumb"
+        },
+        {
+          "examples": [
+            {
+              "label": "Ênfase",
+              "path": "examples/button-primary"
+            },
+            {
+              "path": "examples/button-secondary"
+            },
+            {
+              "path": "examples/button-tertiary"
+            },
+            {
+              "path": "examples/button-primary-circle"
+            },
+            {
+              "path": "examples/button-secondary-circle"
+            },
+            {
+              "path": "examples/button-tertiary-circle"
+            },
+            {
+              "label": "Fundo escuro",
+              "path": "examples/button-primary-inverted"
+            },
+            {
+              "path": "examples/button-secondary-inverted"
+            },
+            {
+              "path": "examples/button-tertiary-inverted"
+            },
+            {
+              "path": "examples/button-primary-circle-inverted"
+            },
+            {
+              "path": "examples/button-secondary-circle-inverted"
+            },
+            {
+              "path": "examples/button-tertiary-circle-inverted"
+            },
+            {
+              "label": "Botão bloco",
+              "path": "examples/button-secondary-block"
+            },
+            {
+              "label": "Densidade",
+              "path": "examples/button-secondary-large"
+            },
+            {
+              "path": "examples/button-secondary-medium"
+            },
+            {
+              "path": "examples/button-secondary-small"
+            },
+            {
+              "path": "examples/button-secondary-circle-large"
+            },
+            {
+              "path": "examples/button-secondary-circle"
+            },
+            {
+              "path": "examples/button-secondary-circle-small"
+            },
+            {
+              "label": "Estados",
+              "path": "examples/button-secondary-disabled"
+            },
+            {
+              "path": "examples/button-secondary-active"
+            },
+            {
+              "path": "examples/button-secondary-loading"
+            }
+          ],
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
+          "id": "button",
+          "label": "Button"
+        },
+        {
+          "examples": [
+            {
+              "label": "Card simples",
+              "path": "examples/card-simples"
+            },
+            {
+              "label": "Card completo",
+              "path": "examples/card-completo"
+            },
+            {
+              "label": "Card com expansão",
+              "path": "examples/card-expansão"
+            },
+            {
+              "label": "Card desativado",
+              "path": "examples/card-desativado"
+            },
+            {
+              "label": "Card com hover",
+              "path": "examples/card-hover"
+            },
+            {
+              "label": "Card com altura fixa",
+              "path": "examples/card-altura-fixa"
+            }
+          ],
+          "id": "card",
+          "label": "Card"
+        },
+        {
+          "examples": [
+            {
+              "label": "Carousel Padrão (out)",
+              "path": "examples/carousel-padrao"
+            },
+            {
+              "label": "Carousel Circular",
+              "path": "examples/carousel-circular"
+            },
+            {
+              "label": "Carousel Interno (in)",
+              "path": "examples/carousel-in"
+            },
+            {
+              "label": "Carousel Híbrido Horizontal (hibw)",
+              "path": "examples/carousel-hibw"
+            },
+            {
+              "label": "Carousel Híbrido Vertical (hibh)",
+              "path": "examples/carousel-hibh"
+            },
+            {
+              "label": "Carousel com indicador de página textual",
+              "path": "examples/carousel-text"
+            }
+          ],
+          "id": "carousel",
+          "label": "Carousel"
+        },
+        {
+          "examples": [
+            {
+              "height": 300,
+              "label": "Cookiebar",
+              "path": "examples/cookiebar-padrao"
+            }
+          ],
+          "id": "cookiebar",
+          "label": "CookieBar"
+        },
+        {
+          "examples": [
+            {
+              "label": "Exemplo completo",
+              "path": "examples/checkbox-padrao"
+            },
+            {
+              "label": "Listagem horizontal",
+              "path": "examples/checkbox-horizontal"
+            },
+            {
+              "label": "Estados",
+              "path": "examples/checkbox-estados-validacao"
+            },
+            {
+              "label": "Checkbox sem label",
+              "path": "examples/checkbox-no-label"
+            },
+            {
+              "label": "Checkbox com estado intermediário",
+              "path": "examples/checkbox-indeterminate"
+            }
+          ],
+          "ext": [
+            "md",
+            "html",
+            "css",
+            "js"
+          ],
+          "id": "checkbox",
+          "label": "Checkbox"
+        },
+        {
+          "examples": [
+            {
+              "height": 370,
+              "label": "Simples",
+              "path": "examples/datetimepicker-simple"
+            },
+            {
+              "height": 370,
+              "label": "Com intervalo de datas",
+              "path": "examples/datetimepicker-range"
+            },
+            {
+              "height": 230,
+              "label": "Timepicker",
+              "path": "examples/datetimepicker-time"
+            },
+            {
+              "height": 500,
+              "label": "DatePicker + Timepicker",
+              "path": "examples/datetimepicker-dateandtime"
+            }
+          ],
+          "id": "datetimepicker",
+          "label": "DateTimePicker"
+        },
+        {
+          "examples": [
+            {
+              "label": "Horizontal",
+              "path": "examples/divider"
+            },
+            {
+              "path": "examples/divider-inverted"
+            },
+            {
+              "label": "Vertical",
+              "path": "examples/divider-vertical"
+            },
+            {
+              "path": "examples/divider-vertical-inverted"
+            },
+            {
+              "label": "Tracejado Horizontal",
+              "path": "examples/divider-dashed"
+            },
+            {
+              "label": "Tracejado Vertical",
+              "path": "examples/divider-vertical-dashed"
+            },
+            {
+              "label": "Tamanho 2x",
+              "path": "examples/divider-2x"
+            },
+            {
+              "label": "Tamanho 3x",
+              "path": "examples/divider-3x"
+            },
+            {
+              "label": "Tamanho 4x",
+              "path": "examples/divider-4x"
+            }
+          ],
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
+          "id": "divider",
+          "label": "Divider"
+        },
+        {
+          "examples": [
+            {
+              "height": 700,
+              "label": "Tema 1",
+              "path": "examples/footer-default"
+            },
+            {
+              "height": 700,
+              "label": "Tema 2",
+              "path": "examples/footer-inverted"
+            }
+          ],
+          "id": "footer",
+          "label": "Footer"
+        },
+        {
+          "examples": [
+            {
+              "height": 700,
+              "label": "Header padrão",
+              "path": "examples/header"
+            },
+            {
+              "height": 700,
+              "label": "Compacto",
+              "path": "examples/header-compact"
+            },
+            {
+              "height": 700,
+              "label": "Densidades",
+              "path": "examples/header-sizes"
+            }
+          ],
+          "id": "header",
+          "label": "Header"
+        },
+        {
+          "examples": [
+            {
+              "label": "Input padrão",
+              "path": "examples/input-default"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/input-sizes"
+            },
+            {
+              "label": "Input com ícones",
+              "path": "examples/input-icons"
+            },
+            {
+              "label": "Input com botões",
+              "path": "examples/input-buttons"
+            },
+            {
+              "label": "Input com Destaque",
+              "path": "examples/input-highlight"
+            },
+            {
+              "label": "Input com rótulo lateral",
+              "path": "examples/input-inline"
+            },
+            {
+              "label": "Input com validações e estados",
+              "path": "examples/input-states"
+            }
+          ],
+          "id": "input",
+          "label": "Input"
+        },
+        {
+          "examples": [
+            {
+              "label": "Item com elementos interativos",
+              "path": "examples/item-elems-iteractive"
+            },
+            {
+              "label": "Item com seleção",
+              "path": "examples/item-selection-checkbox"
+            },
+            {
+              "path": "examples/item-selection-radio"
+            },
+            {
+              "label": "Item desativado",
+              "path": "examples/item-disabled"
+            }
+          ],
+          "id": "item",
+          "label": "Item"
+        },
+        {
+          "examples": [
+            {
+              "label": "Lista Vertical",
+              "path": "examples/list-vertical-simples"
+            },
+            {
+              "path": "examples/list-simples-selecionaveis"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/list-dense-high"
+            },
+            {
+              "path": "examples/list-dense-medium"
+            },
+            {
+              "path": "examples/list-dense-small"
+            },
+            {
+              "label": "Agrupamentos",
+              "path": "examples/list-group-tag"
+            },
+            {
+              "path": "examples/list-group-divider"
+            },
+            {
+              "path": "examples/list-group-expansion"
+            },
+            {
+              "label": "Lista Horizontal",
+              "path": "examples/list-horizontal-divider"
+            },
+            {
+              "path": "examples/list-horizontal-expansion"
+            }
+          ],
+          "id": "list",
+          "label": "List"
+        },
+        {
+          "examples": [
+            {
+              "label": "Com porcentagem",
+              "path": "examples/loading-progress"
+            },
+            {
+              "label": "Indeterminado médio",
+              "path": "examples/loading-md"
+            },
+            {
+              "label": "Indeterminado pequeno",
+              "path": "examples/loading-sml"
+            }
+          ],
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
+          "id": "loading",
+          "label": "Loading"
+        },
+        {
+          "examples": [
+            {
+              "label": "Texto",
+              "path": "examples/magicbutton-text"
+            },
+            {
+              "label": "Ícone",
+              "path": "examples/magicbutton-icon"
+            },
+            {
+              "label": "Densidade - Alta",
+              "path": "examples/magicbutton-small"
+            },
+            {
+              "label": "Densidade - Média",
+              "path": "examples/magicbutton-medium"
+            },
+            {
+              "label": "Densidade - Baixa",
+              "path": "examples/magicbutton-large"
+            }
+          ],
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
+          "id": "magicbutton",
+          "label": "Magic Button"
+        },
+        {
+          "examples": [
+            {
+              "height": 600,
+              "label": "Menu Principal Flutuando (Off Canvas)",
+              "path": "examples/menu-principal-offcanvas"
+            },
+            {
+              "label": "Menu Principal Empurrando (Push)",
+              "path": "examples/menu-principal-push"
+            },
+            {
+              "height": 600,
+              "label": "Menu Contextual",
+              "path": "examples/menu-contextual",
+              "width": 200
+            },
+            {
+              "label": "Agrupamentos de items",
+              "path": "examples/menu-groupedby"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/menu-sizes"
+            }
+          ],
+          "id": "menu",
+          "label": "Menu"
+        },
+        {
+          "examples": [
+            {
+              "height": 500,
+              "label": "Mensagens",
+              "path": "examples/message-padrao"
+            },
+            {
+              "height": 400,
+              "label": "Feedback",
+              "path": "examples/feedback"
+            }
+          ],
+          "id": "message",
+          "label": "Message"
+        },
+        {
+          "examples": [
+            {
+              "label": "Modal Alerta",
+              "path": "examples/modal-alert"
+            },
+            {
+              "label": "Modal Alerta com ícone de fechar",
+              "path": "examples/modal-acao"
+            },
+            {
+              "label": "Modal com duas ou mais linhas de título",
+              "path": "examples/modal-titulo-linhas"
+            },
+            {
+              "label": "Modal com Temporizador",
+              "path": "examples/modal-loading"
+            },
+            {
+              "label": "Modal sem título",
+              "path": "examples/modal-sem-titulo"
+            },
+            {
+              "label": "Modal com escolha de opção",
+              "path": "examples/modal-options"
+            },
+            {
+              "label": "Modal com entrada de dados",
+              "path": "examples/modal-login"
+            },
+            {
+              "label": "Modal com lista de opções",
+              "path": "examples/modal-list"
+            },
+            {
+              "label": "Modal com termo de aceite",
+              "path": "examples/modal-terms"
+            }
+          ],
+          "id": "modal",
+          "label": "Modal"
+        },
+        {
+          "examples": [
+            {
+              "height": 900,
+              "label": "Notification",
+              "path": "examples/notification-full"
+            }
+          ],
+          "id": "notification",
+          "label": "Notification"
+        },
+        {
+          "examples": [
+            {
+              "label": "Paginação padrão",
+              "path": "examples/pagination-default"
+            },
+            {
+              "label": "Botão Reticências",
+              "path": "examples/pagination-ellipsis"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/pagination-sizes"
+            },
+            {
+              "label": "Tipo Contextual",
+              "path": "examples/pagination-contextual"
+            },
+            {
+              "label": "Em fundo escuro",
+              "path": "examples/pagination-dark"
+            }
+          ],
+          "id": "pagination",
+          "label": "Pagination"
+        },
+        {
+          "examples": [
+            {
+              "label": "Exemplo completo",
+              "path": "examples/radio-default"
+            },
+            {
+              "label": "Listagem horizontal",
+              "path": "examples/radio-inline"
+            },
+            {
+              "label": "Estados",
+              "path": "examples/radio-states"
+            }
+          ],
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
+          "id": "radio",
+          "label": "Radio"
+        },
+        {
+          "examples": [
+            {
+              "height": 300,
+              "label": "Uso Padrão",
+              "path": "examples/scrim-default"
+            },
+            {
+              "path": "examples/scrim-legibilidade"
+            }
+          ],
+          "id": "scrim",
+          "label": "Scrim"
+        },
+        {
+          "examples": [
+            {
+              "label": "Simples",
+              "path": "examples/select-simples"
+            },
+            {
+              "label": "Múltiplo",
+              "path": "examples/select-multiplo"
+            }
+          ],
+          "id": "select",
+          "label": "Select"
+        },
+        {
+          "id": "signin",
+          "label": "Sign-in",
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
+          "examples": [
+            {
+              "label": "Ênfase Primária",
+              "path": "examples/signin-primary"
+            },
+            {
+              "label": "Ênfase  secundária",
+              "path": "examples/signin-secondary"
+            },
+            {
+              "label": "Tipo Icônico Primário",
+              "path": "examples/signin-primary-circle"
+            },
+            {
+              "label": "Ênfase Primária, Secundária e Tipo Icônico com Fundo Escuro",
+              "path": "examples/signin-primary-inverted"
+            },
+            {
+              "path": "examples/signin-secondary-inverted"
+            },
+            {
+              "path": "examples/signin-secondary-circle-inverted"
+            },
+            {
+              "label": "Tipos Interno",
+              "path": "examples/signin-tipo1"
+            },
+            {
+              "label": "Tipos Externo com Texto",
+              "path": "examples/signin-tipo2"
+            },
+            {
+              "label": "Tipos Externo com Imagem",
+              "path": "examples/signin-tipo2-image"
+            },
+            {
+              "label": "Densidade - Alta",
+              "path": "examples/signin-small"
+            },
+            {
+              "label": "Densidade - Média",
+              "path": "examples/signin-medium"
+            },
+            {
+              "label": "Densidade - Baixa",
+              "path": "examples/signin-large"
+            },
+            {
+              "label": "Tipo Bloco",
+              "path": "examples/signin-secondary-block"
+            }
+          ]
+        },
+        {
+          "id": "skiplink",
+          "label": "Skip Link",
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
+          "examples": [
+            {
+              "path": "examples/skiplink-simple",
+              "label": "Tipo Simples"
+            },
+            {
+              "path": "examples/skiplink-full",
+              "label": "Tipo Composto"
+            }
+          ]
+        },
+        {
+          "id": "step",
+          "label": "Step",
+          "examples": [
+            {
+              "path": "examples/step-vertical",
+              "label": "Layout Vertical"
+            },
+            {
+              "path": "examples/step-horizontal",
+              "label": "Layout Horizontal"
+            },
+            {
+              "path": "examples/step-icon",
+              "label": "Step sem rótulo"
+            }
+          ]
+        },
+        {
+          "examples": [
+            {
+              "label": "Switch padrão",
+              "path": "examples/switch-default"
+            },
+            {
+              "label": "Switch Desabilitado",
+              "path": "examples/switch-disabled"
+            },
+            {
+              "label": "Densidade Baixa",
+              "path": "examples/switch-large"
+            },
+            {
+              "label": "Densidade Média (Padrão)",
+              "path": "examples/switch-medium"
+            },
+            {
+              "label": "Densidade Alta",
+              "path": "examples/switch-small"
+            },
+            {
+              "label": "Densidade Switch Com Rótulo(Ligado/Desligado)",
+              "path": "examples/switch-label-onoff"
+            },
+            {
+              "label": "Densidade Com Rótulo(Concordo/Discordo)",
+              "path": "examples/switch-label-terms"
+            },
+            {
+              "label": "Label Alinhado a Esquerda",
+              "path": "examples/switch-left"
+            },
+            {
+              "label": "Label Alinhado a Direita",
+              "path": "examples/switch-right"
+            },
+            {
+              "label": "Label Alinhado ao Topo",
+              "path": "examples/switch-top"
+            },
+            {
+              "label": "Switch Com Ícone",
+              "path": "examples/switch-icon"
+            }
+          ],
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
+          "id": "switch",
+          "label": "Switch"
+        },
+        {
+          "examples": [
+            {
+              "label": "Tabela padrão",
+              "path": "examples/table"
+            },
+            {
+              "label": "Tabela irregular 1",
+              "path": "examples/table-irregular-1"
+            },
+            {
+              "label": "Tabela irregular 2",
+              "path": "examples/table-irregular-2"
+            }
+          ],
+          "id": "table",
+          "label": "Table"
+        },
+        {
+          "examples": [
+            {
+              "label": "Tab simples",
+              "path": "examples/tab-default"
+            },
+            {
+              "label": "Tab com Contadores",
+              "path": "examples/tab-count"
+            },
+            {
+              "label": "Somente Icones",
+              "path": "examples/tab-icons",
+              "height": 170
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/tab-density"
+            },
+            {
+              "label": "Tab em fundo escuro",
+              "path": "examples/tab-inverted"
+            }
+          ],
+          "id": "tab",
+          "label": "Tab"
+        },
+        {
+          "examples": [
+            {
+              "label": "Tag de Interação Dispensável",
+              "path": "examples/tag-interaction"
+            },
+            {
+              "label": "Tag de Interação Persistente com radio",
+              "path": "examples/tag-interaction-radio"
+            },
+            {
+              "label": "Tag de Interação Persistente com checkbox",
+              "path": "examples/tag-interaction-checkbox"
+            },
+            {
+              "label": "Tag de texto",
+              "path": "examples/tag-text"
+            },
+            {
+              "label": "Tag de Status",
+              "path": "examples/tag-status"
+            },
+            {
+              "label": "Tag de Contagem",
+              "path": "examples/tag-count"
+            },
+            {
+              "label": "Tag de Ícone",
+              "path": "examples/tag-icon"
+            }
+          ],
+          "id": "tag",
+          "label": "Tag"
+        },
+        {
+          "examples": [
+            {
+              "label": "Textarea padrão",
+              "path": "examples/textarea-default"
+            },
+            {
+              "label": "Label à esquerda",
+              "path": "examples/textarea-label-left"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/textarea-sizes"
+            },
+            {
+              "label": "Validação e estados",
+              "path": "examples/textarea-states"
+            },
+            {
+              "label": "Em fundo escuro",
+              "path": "examples/textarea-inverted"
+            },
+            {
+              "label": "Com limite e contador de caracteres",
+              "path": "examples/textarea-counter"
+            },
+            {
+              "label": "Sem limite com contador de caracteres",
+              "path": "examples/textarea-counter-no-limit"
+            }
+          ],
+          "id": "textarea",
+          "label": "Textarea"
+        },
+        {
+          "examples": [
+            {
+              "height": 300,
+              "label": "Tooltip",
+              "path": "examples/tooltip-info-top"
+            },
+            {
+              "height": 200,
+              "label": "PopOver",
+              "path": "examples/tooltip-popover"
+            }
+          ],
+          "id": "tooltip",
+          "label": "Tooltip"
+        },
+        {
+          "examples": [
+            {
+              "height": 495,
+              "label": "Envio de arquivo",
+              "path": "examples/upload-single"
+            },
+            {
+              "height": 495,
+              "label": "Envio de arquivo",
+              "path": "examples/upload-multiple"
+            },
+            {
+              "height": 495,
+              "label": "Upload com mensagem de feedback",
+              "path": "examples/upload-feedback"
+            },
+            {
+              "height": 495,
+              "label": "Upload desabilitado",
+              "path": "examples/upload-disabled"
+            }
+          ],
+          "id": "upload",
+          "label": "Upload"
+        },
+        {
+          "examples": [
+            {
+              "label": "Layout Vertical",
+              "path": "examples/wizard-vertical"
+            },
+            {
+              "label": "Layout Horizontal",
+              "path": "examples/wizard-horizontal"
+            }
+          ],
+          "id": "wizard",
+          "label": "Wizard"
+        }
+      ],
+      "id": "components",
+      "label": "Componentes",
+      "type": "category"
+    },
+    {
+      "children": [
+        {
+          "examples": [
+            {
+              "label": "Largura Fixa com Menu flutuante",
+              "path": "examples/base-offcanvas"
+            },
+            {
+              "label": "Largura Fixa com Menu empurrando conteúdo",
+              "path": "examples/base-push"
+            },
+            {
+              "label": "Largura Fluida com Menu flutuante",
+              "path": "examples/fluid-offcanvas"
+            },
+            {
+              "label": "Largura Fluida com Menu empurrando conteúdo",
+              "path": "examples/fluid-push"
+            }
+          ],
+          "ext": [
+            "md",
+            "html"
+          ],
+          "htmlFilename": "base",
+          "id": "base",
+          "label": "Template Base"
+        },
+        {
+          "ext": [
+            "md",
+            "html"
+          ],
+          "htmlFilename": "erro",
+          "id": "erro",
+          "label": "Template Erro"
+        }
+      ],
+      "id": "templates",
+      "label": "Templates",
+      "type": "category"
+    },
+    {
+      "children": [
+        {
+          "default": false,
+          "ext": [
+            "html",
+            "md"
+          ],
+          "id": "accordion",
+          "label": "Accordion",
+          "examples": [
+            {
+              "height": 300,
+              "label": "Exemplo do comportamento accordion",
+              "path": "examples/accordion-behavior"
+            }
+          ]
+        },
+        {
+          "default": false,
+          "ext": [
+            "html",
+            "md"
+          ],
+          "id": "checkgroup",
+          "label": "Checkgroup",
+          "examples": [
+            {
+              "height": 300,
+              "label": "Comportamento checkgroup simples",
+              "path": "examples/checkgroup-behavior"
+            },
+            {
+              "height": 300,
+              "label": "Comportamento checkgroup em cadeia",
+              "path": "examples/checkgroup-behavior-chain"
+            }
+          ]
+        },
+        {
+          "default": false,
+          "examples": [
+            {
+              "height": 300,
+              "label": "Exemplo do comportamento collapse",
+              "path": "examples/collapse-behavior"
+            }
+          ],
+          "ext": [
+            "html",
+            "md"
+          ],
+          "id": "collapse",
+          "label": "Collapse"
+        },
+        {
+          "default": false,
+          "examples": [
+            {
+              "height": 300,
+              "label": "Exemplo do comportamento dropdown",
+              "path": "examples/dropdown-behavior"
+            }
+          ],
+          "ext": [
+            "html",
+            "md"
+          ],
+          "id": "dropdown",
+          "label": "Dropdown"
+        },
+        {
+          "default": false,
+          "examples": [
+            {
+              "height": 300,
+              "label": "Exemplo do comportamento Scrim",
+              "path": "examples/scrim-behavior"
+            }
+          ],
+          "ext": [
+            "html",
+            "md"
+          ],
+          "id": "scrim",
+          "label": "Scrim"
+        },
+        {
+          "default": false,
+          "examples": [
+            {
+              "height": 300,
+              "label": "Exemplo de Tooltip",
+              "path": "examples/tooltip-behavior"
+            },
+            {
+              "height": 300,
+              "label": "Exemplo de Tooltip Simples",
+              "path": "examples/tooltip-simples"
+            }
+          ],
+          "id": "tooltip",
+          "label": "Tooltip"
+        }
+      ],
+      "id": "util",
+      "label": "Utilitários JS",
+      "type": "category"
+    },
+    {
+      "children": [
+        {
+          "id": "tipografia",
+          "label": "Tipografia",
+          "type": "documentation"
+        },
+        {
+          "id": "overflow",
+          "label": "Overflow",
+          "type": "documentation"
+        },
+        {
+          "id": "flexbox",
+          "label": "Flexbox",
+          "type": "documentation"
+        },
+        {
+          "id": "grid",
+          "label": "Grid",
+          "type": "documentation"
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "type": "documentation"
+        },
+        {
+          "id": "espacamento",
+          "label": "Espaçamento",
+          "type": "documentation"
+        },
+        {
+          "id": "cores",
+          "label": "Cores",
+          "type": "documentation"
+        },
+        {
+          "id": "textos",
+          "label": "Textos",
+          "type": "documentation"
+        },
+        {
+          "id": "bordas",
+          "label": "Bordas",
+          "type": "documentation"
+        },
+        {
+          "id": "arredondamento",
+          "label": "Arredondamento",
+          "type": "documentation"
+        },
+        {
+          "id": "elevacao",
+          "label": "Elevação",
+          "type": "documentation"
+        },
+        {
+          "id": "movimento",
+          "label": "Movimento",
+          "type": "documentation"
+        }
+      ],
+      "id": "utilities-css",
+      "label": "Utilitários CSS",
+      "type": "category"
+    },
+    {
+      "hideLabel": true,
+      "id": "release-notes",
+      "label": "Release Notes",
+      "path": "CHANGELOG.md",
+      "type": "documentation"
+    },
+    {
+      "hideLabel": true,
+      "id": "prototipo",
+      "label": "Padrões para Android e IOS",
+      "type": "documentation"
+    },
+    {
+      "files": [
+        {
+          "description": "Disciplina a implantação e a gestão do Padrão Digital de Governo dos órgãos e entidades do Poder Executivo federal.",
+          "image": "assets/imgs/ICONE-LEGISLAÇÃO.png",
+          "label": "Padrão Digital de Governo",
+          "path": "assets/design-system/downloads/PORTARIAN540DE8DESETEMBRODE2020DOUImprensaNacional.pdf"
+        }
+      ],
+      "id": "legislacao",
+      "label": "Legislação",
+      "type": "downloads"
+    },
+    {
+      "content": "Baixe os artefatos de Design e Desenvolvimento para o seu projeto!",
+      "id": "assets",
+      "image": "assets/imgs/download-page.png",
+      "label": "Downloads",
+      "sections": [
+        {
+          "files": [
+            {
+              "description": "Baixe aqui o UI Kit para construção de projetos web Versão para Adobe XD.",
+              "image": "assets/imgs/logo-xd.png",
+              "isNew": true,
+              "label": "UI Kit WEB XD",
+              "path": "https://serprodrive.serpro.gov.br/s/ARP4gmoRKtwTena",
+              "fileDescription": "uikit-dsgov-web_5.1.1.zip (14MB)",
+              "version": "Versão 5.1.1"
+            },
+            {
+              "description": "Baixe aqui o UI Kit para construção de projetos web Versão para Figma.",
+              "image": "assets/imgs/logo-figma.png",
+              "isNew": true,
+              "label": "UI Kit WEB Figma",
+              "path": "https://serprodrive.serpro.gov.br/s/nFFEGRCBJzatw4Y",
+              "fileDescription": "uikit-dsgov-web-figma_2.2.0.zip (1 MB)",
+              "version": "Versão 2.2.0"
+            },
+            {
+              "description": "Baixe aqui o UI Kit para construção de projetos mobile em Android.",
+              "image": "assets/imgs/logo-android.png",
+              "label": "UI Kit Android",
+              "path": "https://serprodrive.serpro.gov.br/s/kLJfZc9zpfa8jsL",
+              "version": "Versão 4.2.0"
+            },
+            {
+              "description": "Baixe aqui o UI Kit para construção de projetos mobile em IOS.",
+              "image": "assets/imgs/logo-ios.png",
+              "isNew": true,
+              "label": "UI Kit iOS",
+              "path": "https://serprodrive.serpro.gov.br/s/CiLWgb77s3tbr69",
+              "version": "Versão 3.1.0"
+            },
+            {
+              "description": "Baixe aqui o UI Kit para construção de wireframes e protótipos.",
+              "image": "assets/imgs/wireframe.png",
+              "label": "UI Kit Wireframe",
+              "path": "https://serprodrive.serpro.gov.br/s/JG4XEek8sSftxqW",
+              "version": "Versão 2.0.0"
+            },
+            {
+              "description": "Baixe aqui novos modelos de ilustrações.",
+              "image": "assets/imgs/pacote.png",
+              "label": "Packs Ilustração",
+              "path": "https://serprodrive.serpro.gov.br/s/kqcLeMZ5tQiNxrR",
+              "version": "Versão 1.0.0"
+            },
+            {
+              "description": "Baixe aqui brushes para texturas das ilustrações.",
+              "image": "assets/imgs/pacote.png",
+              "label": "Pack de Assets de Ilustração",
+              "path": "https://serprodrive.serpro.gov.br/s/fqpQbTmtmpPM6r4",
+              "version": "Versão 1.0.0"
+            },
+            {
+              "description": "Baixe aqui o Kit para construção de protótipos.",
+              "image": "assets/imgs/pacote.png",
+              "label": "Protótipos",
+              "path": "https://serprodrive.serpro.gov.br/s/rSTRcswociWJAtW",
+              "version": "Versão 1.0.1"
+            }
+          ],
+          "id": "designer",
+          "label": "Designer",
+          "description": "Baixe versões anteriores dos Artefatos de Design do Design System GOV.BR .",
+          "history": [
+            {
+              "id": "uikitweb",
+              "label": "UI KIT WEB",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/9GF75So4nZrYapo",
+                  "version": "5.1.0",
+                  "data": "26 nov 2021",
+                  "dsgov_version": "2.4.1"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/G22CwAW4WP6B6oQ",
+                  "version": "4.8.0",
+                  "data": "11 ago 2021",
+                  "dsgov_version": "2.2.0"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/YcnCqAZZGqaKeLR",
+                  "version": "4.7.0",
+                  "data": "01 jul 2021",
+                  "dsgov_version": "2.1.0"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/95QZBA7593LBCpT",
+                  "version": "4.4.0",
+                  "data": "02 mar 2021",
+                  "dsgov_version": "2.0.2"
+                }
+              ]
+            },
+            {
+              "id": "uikitios",
+              "label": "UI KIT IOS",
+              "versions": [
+                {
+                  "data": "10 dez 2021",
+                  "dsgov_version": "2.4.1",
+                  "path": "https://serprodrive.serpro.gov.br/s/s9FTFtG5qPRNPeZ",
+                  "version": "Versão 3.0.0"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/yybFqo4ewZyHoLd",
+                  "version": "Versão 2.0.0",
+                  "data": "26 nov 2021",
+                  "dsgov_version": "2.4.1"
+                }
+              ]
+            },
+            {
+              "id": "uikitandroid",
+              "label": "UI KIT ANDROID",
+              "versions": [
+                {
+                  "data": "10 dez 2021",
+                  "dsgov_version": "2.4.1",
+                  "path": "https://serprodrive.serpro.gov.br/s/tJ9deTy7rrpGNXL",
+                  "version": "Versão 4.0.0"
+                }
+              ]
+            },
+            {
+              "id": "uikitfigma",
+              "label": "UI KIT FIGMA",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/ktmsdecdgPa3Dmw",
+                  "version": "2.1.1",
+                  "data": "26 nov 2021",
+                  "dsgov_version": "2.4.1"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/Z7pecTT7Ec2zsYd",
+                  "version": "2.0.0",
+                  "data": "28 set 2021",
+                  "dsgov_version": "2.3.0"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/y23EM6wxy3CpTbW",
+                  "version": "1.8.0",
+                  "data": "11 ago 2021",
+                  "dsgov_version": "2.2.0"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/96N4b6rePJoMfnq",
+                  "version": "1.7.0",
+                  "data": "01 jul 2021",
+                  "dsgov_version": "2.1.0"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/RWEDQ2ocEc52bjM",
+                  "version": "1.4.0",
+                  "data": "17 nov 2021",
+                  "dsgov_version": "2.0.2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "files": [
+            {
+              "description": "Confira os modelos de CRUD.",
+              "image": "assets/imgs/xdfigma.png",
+              "label": "CRUD",
+              "path": "https://serprodrive.serpro.gov.br/s/25dawtskHJYED9T",
+              "fileDescription": "crud_4.1.0.zip (13.9MB)",
+              "version": "Versão 4.1.0"
+            },
+            {
+              "description": "Confira os modelos de Relatórios.",
+              "image": "assets/imgs/xdfigma.png",
+              "label": "Relatórios",
+              "path": "https://serprodrive.serpro.gov.br/s/kxZKj3D8dqYMBRi",
+              "fileDescription": "relatorios_1.1.0.zip (15.1MB)",
+              "version": "Versão 1.1.0"
+            },
+            {
+              "description": "Confira os modelos de Dashboard.",
+              "image": "assets/imgs/xdfigma.png",
+              "label": "Dashboard",
+              "path": "https://serprodrive.serpro.gov.br/s/sPYa8aHfQGz2sJk",
+              "fileDescription": "dashboard_1.1.0.zip (9MB)",
+              "version": "Versão 1.1.0"
+            },
+            {
+              "description": "Confira os modelos de Sessão do usuário.",
+              "image": "assets/imgs/xdfigma.png",
+              "label": "Sessão do usuário",
+              "path": "https://serprodrive.serpro.gov.br/s/My8yYwMGHzLR2YG",
+              "fileDescription": "sessao_1.1.0.zip (9.2MB)",
+              "version": "Versão 1.1.0"
+            },
+            {
+              "description": "Confira os modelos de Guia de Recolhimento.",
+              "image": "assets/imgs/xdfigma.png",
+              "label": "Guia de Recolhimento",
+              "path": "https://serprodrive.serpro.gov.br/s/N9jTSLo6t36R423",
+              "fileDescription": "guiarecolhimento_1.1.0.zip (4.2MB)",
+              "version": "Versão 1.1.0"
+            },
+            {
+              "description": "Confira o modelo base.",
+              "image": "assets/imgs/xdfigma.png",
+              "label": "Base",
+              "path": "https://serprodrive.serpro.gov.br/s/Z7cW84goLkdAF3X",
+              "fileDescription": "base_3.2.0.zip (3.6MB)",
+              "version": "Versão 3.2.0"
+            },
+            {
+              "description": "Confira os modelo erro.",
+              "image": "assets/imgs/xdfigma.png",
+              "label": "Erro",
+              "path": "https://serprodrive.serpro.gov.br/s/SStefferNB5oF5o",
+              "fileDescription": "erro_3.3.0.zip (70.5 MB)",
+              "version": "Versão 3.3.0"
+            }
+          ],
+          "id": "modelos",
+          "label": "Modelos",
+          "description": "Baixe versões anteriores dos Modelos de template do Design System .",
+          "history": [
+            {
+              "id": "crud",
+              "label": "CRUD",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/EXs3aNt9dxAQrTi",
+                  "version": "4.0.2",
+                  "data": "16 nov 2021",
+                  "dsgov_version": "2.4.1"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/t8c74CydKnE8KoJ",
+                  "version": "4.0.1",
+                  "data": "06 out 2021",
+                  "dsgov_version": "2.3.0"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/TGnwA2SjtfzNoHz",
+                  "version": "4.0.0",
+                  "data": "06 set 2021",
+                  "dsgov_version": "2.2.0"
+                }
+              ]
+            },
+            {
+              "id": "relatorios",
+              "label": "Relatórios",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/KELSj965NGL5Fed",
+                  "version": "1.0.1",
+                  "data": "16 nov 2021",
+                  "dsgov_version": "2.4.1"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/K8Fiiqzkr3nMeEa",
+                  "version": "1.0.0",
+                  "data": "06 set 2021",
+                  "dsgov_version": "2.2.0"
+                }
+              ]
+            },
+            {
+              "id": "dashboard",
+              "label": "Dashboard",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/zw2Y8XcGXysAgX3",
+                  "version": "1.0.1",
+                  "data": "16 nov 2021",
+                  "dsgov_version": "2.4.1"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/L664xX235PLFE88",
+                  "version": "1.0.0",
+                  "data": "06 set 2021",
+                  "dsgov_version": "2.2.0"
+                }
+              ]
+            },
+            {
+              "id": "sessao",
+              "label": "Sessão de usuário",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/MzoeyarpLExwtaS",
+                  "version": "1.0.0",
+                  "data": "16 nov 2021",
+                  "dsgov_version": "2.4.1"
+                }
+              ]
+            },
+            {
+              "id": "recolhimento",
+              "label": "Guia de Recolhimento",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/gxQFdGRtJRTBfYR",
+                  "version": "1.0.0",
+                  "data": "16 nov 2021",
+                  "dsgov_version": "2.4.1"
+                }
+              ]
+            },
+            {
+              "id": "base",
+              "label": "Base",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/DFYGi6nP8yXKjYo",
+                  "version": "1.0.0",
+                  "data": "16 nov 2021",
+                  "dsgov_version": "2.4.1"
+                }
+              ]
+            },
+            {
+              "id": "erro",
+              "label": "Erro",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/nxBG4iwir2qm5Dg",
+                  "version": "1.0.0",
+                  "data": "16 nov 2021",
+                  "dsgov_version": "2.4.1"
+                }
+              ]
+            },
+            {
+              "id": "prototipo-android",
+              "label": "Protótipos Android",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/ixDJP9pL2zM6BGW",
+                  "version": "1.0.0",
+                  "data": "04 abr 2022",
+                  "dsgov_version": "2.4.1"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/KfBL5pQrgdbkDcH",
+                  "version": "1.0.1",
+                  "data": "13 mai 2022",
+                  "dsgov_version": "2.4.1"
+                }
+              ]
+            },
+            {
+              "id": "prototipo-ios",
+              "label": "Protótipos IOS",
+              "versions": [
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/qwk9ekj4E3ScECK",
+                  "version": "1.0.0",
+                  "data": "04 abr 2022",
+                  "dsgov_version": "2.0.1"
+                },
+                {
+                  "path": "https://serprodrive.serpro.gov.br/s/7R8Ser8NTBi6Sjs",
+                  "version": "1.0.1",
+                  "data": "04 abr 2022",
+                  "dsgov_version": "2.4.1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "files": [
+            {
+              "description": "Utilize código pronto em HTML, CSS e JavaScript.",
+              "image": "assets/imgs/logos-w3c.png",
+              "isNew": true,
+              "label": "Código-fonte Design System",
+              "path": "/ds/assets/design-system/assets/source-code/dsgov-latest.zip",
+              "version": "Versão 2.4.4"
+            },
+            {
+              "description": "Baixe o pacote NPM para configuração  de seu projeto.",
+              "image": "assets/imgs/logo-npm.png",
+              "isNew": true,
+              "label": "Pacote NPM",
+              "path": "/ds/assets/design-system/assets/npm-package/dsgov-latest.tgz",
+              "version": "Versão 2.4.4"
+            },
+            {
+              "description": "Baixe o pacote CDN para configuração de seu projeto.",
+              "image": "assets/imgs/pacote.png",
+              "isNew": false,
+              "label": "Pacote CDN",
+              "path": "https://serprodrive.serpro.gov.br/s/dLZJm9soLLiPzzg",
+              "version": "Versão 2.4.4"
+            }
+          ],
+          "id": "developer",
+          "label": "Desenvolvedor",
+          "description": "Baixe versões anteriores dos Artefatos de Desenvolvimento do Design System .",
+          "history": [
+            {
+              "id": "codigoFonte",
+              "label": "Código Fonte",
+              "versions": [
+                {
+                  "path": "/ds/assets/design-system/assets/source-code/dsgov-2.4.2.zip",
+                  "version": "2.4.2",
+                  "data": "10 dez 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/source-code/dsgov-2.4.1.zip",
+                  "version": "2.4.1",
+                  "data": "10 dez 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/source-code/dsgov-2.4.0.zip",
+                  "version": "2.4.0",
+                  "data": "02 dez 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/source-code/dsgov-2.3.0.zip",
+                  "version": "2.3.0",
+                  "data": "05 nov 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/source-code/dsgov-2.2.2.zip",
+                  "version": "2.2.2",
+                  "data": "05 out 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/source-code/dsgov-2.2.1.zip",
+                  "version": "2.2.1",
+                  "data": "29 set 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/source-code/dsgov-2.2.0.zip",
+                  "version": "2.2.0",
+                  "data": "29 set 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/source-code/dsgov-2.1.0.zip",
+                  "version": "2.1.0",
+                  "data": "16 jul 2021"
+                }
+              ]
+            },
+            {
+              "id": "pacoteNpm",
+              "label": "Pacote NPM",
+              "versions": [
+                {
+                  "path": "/ds/assets/design-system/assets/npm-package/dsgov-2.4.1.tgz",
+                  "version": "2.4.1",
+                  "data": "10 dez 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/npm-package/dsgov-2.4.0.tgz",
+                  "version": "2.4.0",
+                  "data": "03 dez 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/npm-package/dsgov-2.3.0.tgz",
+                  "version": "2.3.0",
+                  "data": "05 nov 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/npm-package/dsgov-2.2.2.tgz",
+                  "version": "2.2.2",
+                  "data": "05 out 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/npm-package/dsgov-2.2.1.tgz",
+                  "version": "2.2.1",
+                  "data": "29 set 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/npm-package/dsgov-2.2.0.tgz",
+                  "version": "2.2.0",
+                  "data": "29 set 2021"
+                },
+                {
+                  "path": "/ds/assets/design-system/assets/npm-package/dsgov-2.1.0.tgz",
+                  "version": "2.1.0",
+                  "data": "16 jul 2021"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "type": "downloads"
+    },
+    {
+      "ext": [
+        "html"
+      ],
+      "hideLabel": true,
+      "id": "colabore-com-o-dsgov",
+      "label": "Colabore com o Design System ",
+      "type": "documentation"
+    },
+    {
+      "ext": [
+        "html"
+      ],
+      "hideLabel": true,
+      "id": "home",
+      "label": "Página principal",
+      "type": "documentation"
+    },
+    {
+      "ext": [
+        "html"
+      ],
+      "hideLabel": true,
+      "id": "o-que-ha-de-novo",
+      "label": "O que há de novo",
+      "type": "documentation"
+    }
+  ],
+  "defaultTypeConfig": [
+    {
+      "default": true,
+      "ext": [
+        "md"
+      ],
+      "forType": [
+        "documentation"
+      ]
+    },
+    {
+      "default": true,
+      "designer": true,
+      "developer": true,
+      "ext": [
+        "md",
+        "html",
+        "css",
+        "js"
+      ],
+      "forType": [
+        "components",
+        "templates",
+        "pages",
+        "util"
+      ],
+      "htmlFilename": "examples"
+    }
+  ]
+}

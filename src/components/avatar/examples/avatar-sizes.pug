@@ -1,0 +1,34 @@
+extends ../../../partial/pug/isolate
+
+block dependencies
+  include ../avatar
+
+block content
+  #sizes
+    #icon.mb-3
+      +avatar.mr-3
+        span.image
+          +icon.fa-user
+      +avatar.medium.mr-3
+        span.image
+          +icon.fa-user
+      +avatar.large.mr-3
+        span.image
+          +icon.fa-user
+    #image.mb-3
+      +avatar.mr-3
+        span.image
+          img(src="https://picsum.photos/id/1005/400" alt="Avatar")
+      +avatar.medium.mr-3
+        span.image
+          img(src="https://picsum.photos/id/287/400" alt="Avatar")
+      +avatar.large.mr-3
+        span.image
+          img(src="https://picsum.photos/id/357/400" alt="Avatar")
+    #letter.mb-3
+      +avatar.mr-3
+        span.letter.bg-violet-50.text-pure-0 W
+      +avatar.medium.mr-3
+        span.letter.bg-orange-50.text-pure-0 A
+      +avatar.large.mr-3
+        span.letter.bg-green-50.text-pure-0 H

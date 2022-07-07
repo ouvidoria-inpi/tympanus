@@ -1,0 +1,49 @@
+{
+  "path": "cz-conventional-changelog",
+  "disableScopeLowerCase": true,
+  "disableSubjectLowerCase": true,
+  "maxHeaderWidth": 72,
+  "maxLineWidth": 72,
+  "types": {
+    "feat": {
+      "description": "Nova feature.",
+      "title": "Features"
+    },
+    "docs": {
+      "description": "Somente documentação.",
+      "title": "Documentação"
+    },
+    "fix": {
+      "description": "Correção.",
+      "title": "Correções"
+    },
+    "style": {
+      "description": "Mudanças que não mudam o significado do código (formatação, vírgulas, etc).",
+      "title": "Formatação"
+    },
+    "refactor": {
+      "description": "Mudança de código que não corrige um bug ou adiciona uma feature.",
+      "title": "Refatoração"
+    },
+    "perf": {
+      "description": "Mudança para melhorar performance.",
+      "title": "Performance"
+    },
+    "test": {
+      "description": "Somente testes.",
+      "title": "Testes"
+    },
+    "chore": {
+      "description": "Alterações no sistema de build ou configurações do projeto.",
+      "title": "Build"
+    },
+    "ci": {
+      "description": "Alterações nas configurações de CI.",
+      "title": "CI"
+    },
+    "revert": {
+      "description": "Reverte um código.",
+      "title": "Reversão de Código"
+    }
+  }
+}

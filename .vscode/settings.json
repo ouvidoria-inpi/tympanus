@@ -1,0 +1,49 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true,
+    "source.fixAll.stylelint": false
+  },
+  "editor.codeLens": true,
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "markdown": "html",
+    "plaintext": "pug",
+    "vue-html": "html"
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "npm",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "gitlens.blame.ignoreWhitespace": true,
+  "gitlens.codeLens.authors.enabled": true,
+  "gitlens.codeLens.enabled": true,
+  "gitlens.codeLens.recentChange.enabled": true,
+  "gitlens.defaultDateStyle": "absolute",
+  "html-css-class-completion.enableEmmetSupport": true,
+  "html-css-class-completion.enableScssFindUsage": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdownlint.config": {
+    "MD024": false,
+    "MD030": false,
+    "MD033": false,
+    "MD041": false
+  },
+  "prettier.configPath": ".prettierrc.yaml",
+  "prettier.useEditorConfig": true,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "todo-tree.highlights.enabled": true,
+  "todo-tree.general.tags": ["TODO", "HACK", "FIXME", "BUG", "REFACTOR", "DOC"],
+  "cSpell.enabled": false,
+}

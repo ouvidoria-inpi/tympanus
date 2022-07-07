@@ -1,0 +1,48 @@
+{
+  "header": "# Release Notes",
+  "commitUrlFormat": "https://git.serpro.gov.br/dsgov.br/dsgov.br/commit/{{hash}}",
+  "compareUrlFormat": "https://git.serpro.gov.br/dsgov.br/dsgov.br/compare/{{previousTag}}...{{currentTag}}",
+  "issueUrlFormat": "https://git.serpro.gov.br/dsgov.br/dsgov.br/issues/{{id}}",
+  "types": [
+    {
+      "section": "Novidades",
+      "type": "feat"
+    },
+    {
+      "section": "Correções/Alterações",
+      "type": "fix"
+    },
+    {
+      "section": "Documentação",
+      "type": "docs"
+    },
+    {
+      "hidden": true,
+      "type": "style"
+    },
+    {
+      "hidden": true,
+      "type": "refactor"
+    },
+    {
+      "hidden": true,
+      "type": "perf"
+    },
+    {
+      "hidden": true,
+      "type": "test"
+    },
+    {
+      "hidden": true,
+      "type": "chore"
+    },
+    {
+      "hidden": true,
+      "type": "revert"
+    },
+    {
+      "hidden": true,
+      "type": "ci"
+    }
+  ]
+}

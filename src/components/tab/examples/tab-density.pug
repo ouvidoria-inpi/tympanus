@@ -1,0 +1,14 @@
+extends ../../../partial/pug/isolate
+
+block dependencies
+  include ../tab
+
+block content
+  p.h5 Alta
+  +tabs-padrao-small
+
+  p.h5.mt-5 Padrão
+  +tabs-padrao
+
+  p.h5.mt-5 Baixa
+  +tabs-padrao-large

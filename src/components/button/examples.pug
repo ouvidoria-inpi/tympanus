@@ -1,0 +1,54 @@
+extends ../../partial/pug/component
+
+
+append vars
+  - var title = "Botão";
+
+append content
+
+  p.h4.mt-5 Ênfase
+  div
+    +btn-pri
+    +btn-sec
+    +btn-ter
+  .mt-3
+    +btn-pri-cir
+    +btn-sec-cir
+    +btn-ter-cir
+
+  p.h4.mt-5 Fundo escuro
+  .p-3.bg-primary-darken-02
+    div
+      +btn-pri-inv
+      +btn-sec-inv
+      +btn-ter-inv
+    .mt-3
+      +btn-pri-cir-inv
+      +btn-sec-cir-inv
+      +btn-ter-cir-inv
+
+  p.h4.mt-5 Cores
+  +button.danger danger
+  +button.success success
+  +button.warning warning
+  +button.info info
+
+  p.h4.mt-5 Botão bloco
+  +btn-sec-blk
+
+  p.h4.mt-5 Densidade
+  div
+    +btn-sec-lge
+    +btn-sec-md
+    +btn-sec-ml
+  .mt-3
+    +btn-sec-cir-lge
+    +btn-sec-cir
+    +btn-sec-cir-ml
+
+  p.h4.mt-5 Estados
+  +btn-sec-dis
+  .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
+    +btn-sec-act
+  .mt-3.mt-sm-0.d-sm-inline-block.ml-sm-3
+    +btn-sec-load
