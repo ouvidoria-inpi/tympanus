@@ -18,11 +18,11 @@ class BRAvatar {
   }
 
   _setDropdownBehavior() {
-    if (this.element.dataset.toggle === 'dropdown') {
+    if (this.element.parentElement.dataset.toggle === 'dropdown') {
       const config = {
         iconToHide: 'fa-caret-up',
         iconToShow: 'fa-caret-down',
-        trigger: this.element,
+        trigger: this.element.parentElement,
         useIcons: true,
       }
       const dropdown = new Dropdown(config)

@@ -3,44 +3,35 @@ extends ../../partial/pug/component
 append vars
   - var title = "Avatar";
 
-append style
-  style.
-    #avatar-dropdown [data-dropdown] {
-      left: 0;
-      right: auto;
-      width: 360px;
-    }
-
 append content
   p.h4.mt-5 Tipos e densidades
   #sizes
     #icon.mb-3
       +avatar.mr-3
-        span.image
+        span.content
           +icon.fa-user
       +avatar.medium.mr-3
-        span.image
+        span.content
           +icon.fa-user
       +avatar.large.mr-3
-        span.image
+        span.content
           +icon.fa-user
     #image.mb-3
       +avatar.mr-3
-        span.image
+        span.content
           img(src="https://picsum.photos/id/1005/400" alt="Avatar")
       +avatar.medium.mr-3
-        span.image
+        span.content
           img(src="https://picsum.photos/id/287/400" alt="Avatar")
       +avatar.large.mr-3
-        span.image
+        span.content
           img(src="https://picsum.photos/id/357/400" alt="Avatar")
     #letter.mb-3
       +avatar.mr-3
-        span.letter.bg-violet-50.text-pure-0 W
+        span.content.bg-violet-50.text-pure-0 W
       +avatar.medium.mr-3
-        span.letter.bg-orange-50.text-pure-0 A
+        span.content.bg-orange-50.text-pure-0 A
       +avatar.large.mr-3
-        span.letter.bg-green-50.text-pure-0 H
+        span.content.bg-green-50.text-pure-0 H
   p.h4.mt-5 Avatar com dropdown
-  #avatar-dropdown.mb-5.d-inline-block
-    +avatar-dropdown
+  +avatar-dropdown
