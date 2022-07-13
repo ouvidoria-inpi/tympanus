@@ -22,10 +22,19 @@ O nome das classes começa com o prefixo **BR** em maiúsculo, seguida do nome d
 class BRInput {}
 ```
 
-Em seguida é declarado o construtor, que tem dois parâmetros obrigatórios: `name` e `component`. Caso o construtor precise receber mais parâmetros, estes devem ser inseridos após esses dois parâmetros obrigatórios.
+#### Escrita do construtor
+
+O construtor deve receber os parâmetros necessários para o correto funcionamento do componente ou template. Atualmente é adotado duas formas de se declarar os parâmetros do construtor:
+
+-   Declarando os parâmetros diretamente
+-   Declarando os parâmetros dentro de uma notação de objeto, usado para *destructuring*
+  
+##### Declarando os parâmetros diretamente
+
+Nesse caso adotou-se dois parâmetros obrigatórios: `name` e `component` e, caso o construtor precise receber mais parâmetros, estes devem ser inseridos após esses dois parâmetros obrigatórios.
 
 -   `name`: **string** com o nome do componente ou template na nomenclatura de classe
--   `component`: **objeto** contendo a referência ao elemento HTML que representa a raiz do elemento ou template.
+-   `component`: **objeto** contendo a referência ao elemento DOM que representa a raiz do componente ou template.
 
 Esses parâmetros passados no construtor devem ser atribuídos às propriedades do objeto, por meio do **this**, que contém a referência ao objeto instanciado.
 
@@ -37,6 +46,35 @@ class BRInput {
     }
 }
 ```
+
+##### Declarando os parâmetros para destructuring
+
+Quando houver muitos argumentos opcionais ou uma longa lista de parâmetros, pode-se se utilizar a passagem de argumentos para métodos ou funções por meio do recurso da linguagem chamado *desctructuring assingment* ou *atribuição por desmembramento*.
+
+O *destructuring assignment* é um recurso da liguagem JavaScript que permite atribuir valores às variáveis usando uma sintaxe que imita a sintaxe de array ou objeto literal.
+
+```js
+let [x, y] = [1, 2];        // É o mesmo que x = 1, y = 2
+let {x, y} = {x: 1, y: 2}   // É o mesmo que x = 1, y = 2
+```
+
+Esse recurso pode ser usado na declaração de métodos ou funções e na passagem de argumentos para esses métodos ou funções ao invocá-los. Para isso, deve-se declarar o método ou função usando a sintaxe que imita um array ou objeto literal e deve-se invocá-lo passando um objeto, contendo as propriedades declaradas, como argumento. Segue uma parte do código do BRCookiebar com exemplo.
+
+```js
+export default class BRCookiebar {
+  constructor({ name, component, json, lang, mode = 'default', callback }) {
+    this.name = name
+    this.component = component
+    this.data = new CookiebarData(json, lang)
+    this.templates = new CookiebarTemplates(this.data)
+    this.mode = mode
+    this.callback = callback
+    this._setUp()
+  }
+}
+```
+
+#### Instanciação
 
 Para instanciar o objeto, usa-se o **new**, seguido do nome da classe e os argumentos entre parênteses, que serão passados aos parâmetros do construtor.
 
@@ -53,7 +91,25 @@ for (const brInput of window.document.querySelectorAll(".br-input")) {
 
 > Esse código de instanciação acima, não faz parte do componente ou template. Ele serve, como a própria descrição diz, para instanciar a classe que representa o componente ou template.
 
-Os métodos de uso interno da classe devem ser escritos com o **underline (\_)** no começo do identificador. Isso não garante que serão privados, mas é uma prática adotada na linguagem javascript.
+Caso o construtor da classe tenha sido declarado usando-se a sintaxe para *destructuring*, deve-se passar um objeto um objeto contendo as propriedades declaradas. Por exemplo, para instanciar a classe BRCookiebar acima, usa-se:
+
+```js
+const cookiebarList = []
+for (const brCookiebar of window.document.querySelectorAll('.br-cookiebar')) {
+    const params = {
+        name: 'br-cookiebar',
+        component: brCookiebar,
+        lang: 'pt-br',
+        mode: 'default',
+        json: jsonData,
+        callback: () => {},
+    }
+    cookiebarList.push(new BRCookiebar(params))
+```
+
+#### Métodos privados e públicos
+
+A linguagem JavaScript não possui um mecanismo para garantir que um método é de uso privado. Todos os métodos declarados em uma classe é de uso público. Porém, adota-se como boa prática usar o **underline (\_)** no começo do identificador para simbolizar que aquele método é de uso privado. Isso não garante que serão privados, mas é uma prática adotada na linguagem JavaScript.
 
 ```js
 _changeIcon() {
@@ -66,6 +122,47 @@ _changeIcon() {
 ## Regras Validadas pelo ESLint
 
 As seguintes regras são utilizadas na validação do código javascript pelo validador ESLint. Essas regras estão configuradas no arquivo `.eslintrc.json`
+
+## Uso da Ferramenta JSDOC
+
+A documentação do código JavaScript usa a ferramenta [JSDOC 3](https://jsdoc.app/), que é uma API que gera uma documentação em HTML para os códigos JavaScript documentados seguindo uma sintaxe específica no comentário do código.
+
+### Adicionando Comentários de Documentação no Código
+
+Os comentários reconhecidos pela JSDOC devem ser colocados imadiatamente antes do código sendo comentado. Eles devem começar com a sequência `/**` para serem reconhecidos pelo parser da JSDOC. Comentários começados com uma sequência diferente dessa são ignorados.
+
+A JSDOC possue tags especiais que dão mais informações sobre o que está sendo documentado. A JSDOC usa essas tags para gerar a documentação em HTML e apresentá-la de forma adequada.
+
+```js
+/**
+ * Represents a book.
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
+function Book(title, author) {
+}
+```
+
+> A lista completa das tags suportadas pode ser encontrada na [home page](https://jsdoc.app/index.html#block-tags) da JSDOC 3.
+
+### Gerando a Documentação JavaScript
+
+A JSDOC 3 gera uma página HTML a partir dos códigos fontes comentados. Por padrão a JSDOC usa um template default para gerar a página HTML, mas esse template pode ser customizado.
+
+#### Rodando o Gerador de Documentação
+
+A documentação é gerada usando-se a seguinte linha de comando
+
+```sh
+jsdoc <arquivo.js>
+```
+
+Alternativamente, pode-se usar um arquivo de configuração contendo as opções para a execução do programa jsdoc. O DSGOV utiliza um arquivo de configuração chamado `jsdoc.json` e é executado usando o seguinte script no Node:
+
+```sh
+npm run docs:js
+```
 
 ### Regras para possíveis erros
 
