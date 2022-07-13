@@ -36,6 +36,7 @@
     "create:build": "node ./core.util.js",
     "dev": "npm-run-all --parallel  build:webpack:dev:watch start-live-server",
     "docs:sass": "sassdoc src/ --config .sassdocrc.yaml",
+    "docs:js": "jsdoc -c jsdoc.json",
     "lint": "run-s lint:*",
     "lint:html": "html-validate dist/**/*.html",
     "lint:js": "eslint -c .eslintrc.yaml --fix src/**/*.js",
@@ -63,7 +64,8 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
-    "flatpickr": "^4.6.9"
+    "flatpickr": "^4.6.9",
+    "jsdoc": "^3.6.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
