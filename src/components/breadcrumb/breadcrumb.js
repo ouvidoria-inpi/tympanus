@@ -91,7 +91,7 @@ class BRBreadcrumb {
     span.innerHTML = 'Botão Menu'
 
     const folderIcon = document.createElement('i')
-    folderIcon.classList.add('icon', 'fas', 'fa-folder-plus')
+    folderIcon.classList.add('fas', 'fa-folder-plus')
 
     const chevronIcon = document.createElement('i')
     chevronIcon.classList.add('icon', 'fas', 'fa-chevron-right')
@@ -104,12 +104,12 @@ class BRBreadcrumb {
     crumb.addEventListener('click', () => {
       let card = this.component.querySelector('.br-card')
       if (card) {
-        folderIcon.classList.remove('icon', 'fas', 'fa-folder-minus')
-        folderIcon.classList.add('icon', 'fas', 'fa-folder-plus')
+        folderIcon.classList.remove('fas', 'fa-folder-minus')
+        folderIcon.classList.add('fas', 'fa-folder-plus')
         this.component.querySelector('.br-card').remove()
       } else {
-        folderIcon.classList.remove('icon', 'fas', 'fa-folder-plus')
-        folderIcon.classList.add('icon', 'fas', 'fa-folder-minus')
+        folderIcon.classList.remove('fas', 'fa-folder-plus')
+        folderIcon.classList.add('fas', 'fa-folder-minus')
         card = this._createList()
         this.component.appendChild(card)
       }
@@ -122,34 +122,14 @@ class BRBreadcrumb {
     const card = document.createElement('div')
     card.classList.add('br-card')
 
-    const front = document.createElement('div')
-    front.classList.add('front')
-
-    const content = document.createElement('div')
-    content.classList.add('content')
-
-    const list = document.createElement('div')
-    list.classList.add('br-list')
-
-    card.appendChild(front)
-    front.appendChild(content)
-    content.appendChild(list)
-
     this.component.querySelectorAll('.crumb-list .crumb').forEach((crumb) => {
       if (crumb.classList.contains('d-none')) {
         const item = document.createElement('div')
-        item.classList.add('br-item', 'py-3')
+        item.classList.add('br-item')
 
-        const row = document.createElement('div')
-        row.classList.add('row', 'align-items-center')
-
-        const col = document.createElement('div')
-        col.classList.add('col')
         if (!crumb.classList.contains('home')) {
-          col.appendChild(crumb.querySelector('a').cloneNode(true))
-          row.appendChild(col)
-          item.appendChild(row)
-          list.appendChild(item)
+          item.appendChild(crumb.querySelector('a').cloneNode(true))
+          card.appendChild(item)
         }
       }
     })
