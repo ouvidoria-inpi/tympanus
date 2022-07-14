@@ -129,9 +129,9 @@ A documentação do código JavaScript usa a ferramenta [JSDOC 3](https://jsdoc.
 
 ### Adicionando Comentários de Documentação no Código
 
-Os comentários reconhecidos pela JSDOC devem ser colocados imadiatamente antes do código sendo comentado. Eles devem começar com a sequência `/**` para serem reconhecidos pelo parser da JSDOC. Comentários começados com uma sequência diferente dessa são ignorados.
+Os comentários reconhecidos pela JSDOC devem ser colocados imediatamente antes do código sendo comentado. Eles devem começar com a sequência `/**` para serem reconhecidos pelo analisador (parser) da JSDOC. Comentários começados com uma sequência diferente dessa são ignorados.
 
-A JSDOC possue tags especiais que dão mais informações sobre o que está sendo documentado. A JSDOC usa essas tags para gerar a documentação em HTML e apresentá-la de forma adequada.
+A JSDOC possui tags especiais que dão mais informações sobre o que está sendo documentado. A JSDOC usa essas tags para gerar a documentação em HTML e apresentá-la de forma adequada.
 
 ```js
 /**
@@ -493,7 +493,7 @@ Esta regra visa impedir erros que possam surgir ao usar a propriedade `__iterato
 
 #### [no-lone-blocks](https://eslint.org/docs/rules/no-lone-blocks)
 
-Essa regra visa eliminar blocos desnecessários e potencialmente confusos no nível superior de um script ou dentro de outros blocos.
+Essa regra visa eliminar blocos desnecessários e potencialmente confusos no nível superior de um *script* ou dentro de outros blocos.
 
 ```json
 "no-lone-blocks": "error"
@@ -589,7 +589,7 @@ Esta regra visa eliminar labels não utilizadas.
 
 #### [no-useless-concat](https://eslint.org/docs/rules/no-useless-concat)
 
-Esta regra visa sinalizar a concatenação de 2 literais quando eles podem ser combinados em um único literal. Os literais podem ser cadeias de caracteres ou template literals.
+Esta regra visa sinalizar a concatenação de 2 literais quando eles podem ser combinados em um único literal. Os literais podem ser cadeias de caracteres ou *template literals*.
 
 ```json
 "no-useless-concat": "error"
@@ -597,7 +597,7 @@ Esta regra visa sinalizar a concatenação de 2 literais quando eles podem ser c
 
 #### [no-useless-catch](https://eslint.org/docs/rules/no-useless-catch)
 
-Esta regra reporta catchs que lançam apenas o erro capturado.
+Esta regra reporta *catchs* que lançam apenas o erro capturado.
 
 ```json
 "no-useless-catch": "error"
@@ -621,7 +621,7 @@ Esta regra tem como objetivo relatar declarações de retorno redundantes.
 
 #### [no-with](https://eslint.org/docs/rules/no-with)
 
-Esta regra não permite with statements.
+Esta regra não permite *with statements*.
 
 ```json
 "no-with": "error"
@@ -788,7 +788,7 @@ Essa regra não permite espaços entre o nome da função e o parêntese de aber
 
 #### [implicit-arrow-linebreak](https://eslint.org/docs/rules/implicit-arrow-linebreak)
 
-Esta regra visa impor um local consistente para uma arrow function que contém um returno implícito.
+Esta regra visa impor um local consistente para uma *arrow function* que contém um returno implícito.
 
 ```json
 "implicit-arrow-linebreak": ["error", "beside"]
@@ -838,7 +838,7 @@ Esta regra impõe espaçamento consistente entre chaves e valores nas propriedad
 
 #### [keyword-spacing](https://eslint.org/docs/rules/keyword-spacing)
 
-Essa regra aplica espaçamento consistente em torno de palavras-chave e tokens semelhantes a palavras-chave: as (em declarações de módulo), assync (de funções assíncronas), await (de expressões de espera), break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, from (nas declarações do módulo), function, get (de getters), if, import, in, instanceof, let, new, of (de sentenças for-of), return, set (de setters), static, super, switch, this, throw, try, typeof, var, void, while, with e yield. Essa regra foi projetada com cuidado para não entrar em conflito com outras regras de espaçamento: não se aplica ao espaçamento onde outras regras relatam problemas.
+Essa regra aplica espaçamento consistente em torno de palavras-chave e tokens semelhantes a palavras-chave: as (em declarações de módulo), *assync* (de funções assíncronas), *await* (de expressões de espera), *break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, from* (nas declarações do módulo), *function, get* (de getters), *if, import, in, instanceof, let, new, of* (de sentenças for-of), *return, set* (de setters), *static, super, switch, this, throw, try, typeof, var, void, while, with e yield*. Essa regra foi projetada com cuidado para não entrar em conflito com outras regras de espaçamento: não se aplica ao espaçamento onde outras regras relatam problemas.
 
 ```json
 "keyword-spacing": ["error", {
@@ -859,7 +859,7 @@ Esta regra melhora a legibilidade exigindo linhas entre os membros da classe. El
 
 #### [new-parens](https://eslint.org/docs/rules/new-parens)
 
-Essa regra pode impõe parênteses ao chamar um construtor sem argumentos usando new.
+Essa regra pode impõe parênteses ao chamar um construtor sem argumentos usando *new*.
 
 ```json
 "new-parens": ["error", "always"]
@@ -1052,7 +1052,7 @@ Esta regra impõe consistência em relação aos espaços antes de depois de ope
 
 #### [switch-colon-spacing](https://eslint.org/docs/rules/switch-colon-spacing)
 
-Essa regra controla o espaçamento entre os dois pontos dos cases instruções de switch. Esta regra verifica apenas se os tokens consecutivos existem na mesma linha.
+Essa regra controla o espaçamento entre os dois pontos dos cases instruções de *switch*. Esta regra verifica apenas se os tokens consecutivos existem na mesma linha.
 
 ```json
 "switch-colon-spacing": ["error", {
@@ -1067,7 +1067,7 @@ Essa regra controla o espaçamento entre os dois pontos dos cases instruções d
 
 #### [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style)
 
-Esta regra pode impor ou proibir o uso de chaves ao redor do corpo da arrow function.
+Esta regra pode impor ou proibir o uso de chaves ao redor do corpo da *arrow function*.
 
 ```json
 "arrow-body-style": ["error", "as-needed", {
@@ -1077,7 +1077,7 @@ Esta regra pode impor ou proibir o uso de chaves ao redor do corpo da arrow func
 
 #### [arrow-parens](https://eslint.org/docs/rules/arrow-parens)
 
-Esta regra impõe o uso consistente de parênteses nas arrow functions.
+Esta regra impõe o uso consistente de parênteses nas *arrow functions*.
 
 ```json
 "arrow-parens": ["error", "always"]
@@ -1085,7 +1085,7 @@ Esta regra impõe o uso consistente de parênteses nas arrow functions.
 
 #### [arrow-spacing](https://eslint.org/docs/rules/arrow-spacing)
 
-Esta regra normaliza o estilo do espaçamento antes/depois da seta de uma arrow function (=>).
+Esta regra normaliza o estilo do espaçamento antes/depois da seta de uma *arrow function* (=>).
 
 ```json
 "arrow-spacing": ["error", {
@@ -1096,7 +1096,7 @@ Esta regra normaliza o estilo do espaçamento antes/depois da seta de uma arrow 
 
 #### [constructor-super](https://eslint.org/docs/rules/constructor-super)
 
-Esta regra tem como objetivo sinalizar chamadas super() inválidas/ausentes.
+Esta regra tem como objetivo sinalizar chamadas *super()* inválidas/ausentes.
 
 ```json
 "constructor-super": "error"
@@ -1112,7 +1112,7 @@ Esta regra tem como objetivo sinalizar variáveis modificadoras de declarações
 
 #### [no-confusing-arrow](https://eslint.org/docs/rules/no-confusing-arrow)
 
-Esta regra adverte contra o uso da sintaxe da arrow function em locais onde ela pode ser confundida com um operador de comparação.
+Esta regra adverte contra o uso da sintaxe da *arrow function* em locais onde ela pode ser confundida com um operador de comparação.
 
 ```json
 "no-confusing-arrow": ["error", {
@@ -1122,7 +1122,7 @@ Esta regra adverte contra o uso da sintaxe da arrow function em locais onde ela 
 
 #### [no-const-assign](https://eslint.org/docs/rules/no-const-assign)
 
-Esta regra tem como objetivo sinalizar a modificação de variáveis declaradas usando a palavra-chave const.
+Esta regra tem como objetivo sinalizar a modificação de variáveis declaradas usando a palavra-chave *const*.
 
 ```json
 "no-const-assign": "error"
@@ -1148,7 +1148,7 @@ Esta regra exige que todas as importações de um único módulo existam em uma 
 
 #### [no-this-before-super](https://eslint.org/docs/rules/no-this-before-super)
 
-Esta regra tem como objetivo sinalizar as palavras-chave this/super antes de chamadas a super().
+Esta regra tem como objetivo sinalizar as palavras-chave *this/super* antes de chamadas a *super()*.
 
 ```json
 "no-this-before-super": "error"
@@ -1156,7 +1156,7 @@ Esta regra tem como objetivo sinalizar as palavras-chave this/super antes de cha
 
 #### [no-useless-computed-key](https://eslint.org/docs/rules/no-useless-computed-key)
 
-Esta regra não permite o uso desnecessário de property keys computadas.
+Esta regra não permite o uso desnecessário de *property keys* computadas.
 
 ```json
 "no-useless-computed-key": ["error", {
@@ -1174,7 +1174,7 @@ Essa regra sinaliza construtores de classe que podem ser removidos com seguranç
 
 #### [no-useless-rename](https://eslint.org/docs/rules/no-useless-rename)
 
-Essa regra não permite renomear atribuições de import, export e destructuring para o mesmo nome.
+Essa regra não permite renomear atribuições de *import*, *export* e *destructuring* para o mesmo nome.
 
 ```json
 "no-useless-rename": ["error", {
@@ -1186,7 +1186,7 @@ Essa regra não permite renomear atribuições de import, export e destructuring
 
 #### [prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback)
 
-Esta regra localiza function expressions usadas como retornos de chamada ou argumentos de função. Um erro será produzido para qualquer um que possa ser substituído por uma arrow function sem alterar o resultado.
+Esta regra localiza *function expressions* usadas como retornos de chamada ou argumentos de função. Um erro será produzido para qualquer um que possa ser substituído por uma *arrow function* sem alterar o resultado.
 
 ```json
 "prefer-arrow-callback": [ "error", {
@@ -1197,7 +1197,7 @@ Esta regra localiza function expressions usadas como retornos de chamada ou argu
 
 #### [no-var](https://eslint.org/docs/rules/no-var)
 
-Essa regra visa desestimular o uso de var e incentivar o uso de const ou let.
+Essa regra visa desestimular o uso de var e incentivar o uso de *const* ou *let*.
 
 ```json
 "no-var": "error"
@@ -1205,7 +1205,7 @@ Essa regra visa desestimular o uso de var e incentivar o uso de const ou let.
 
 #### [prefer-const](https://eslint.org/docs/rules/prefer-const)
 
-Essa regra tem como objetivo sinalizar variáveis declaradas usando a palavra-chave let, mas nunca reatribuídas após a atribuição inicial.
+Essa regra tem como objetivo sinalizar variáveis declaradas usando a palavra-chave *let*, mas nunca reatribuídas após a atribuição inicial.
 
 ```json
 "prefer-const": ["error", {
@@ -1216,7 +1216,7 @@ Essa regra tem como objetivo sinalizar variáveis declaradas usando a palavra-ch
 
 #### [prefer-destructuring](https://eslint.org/docs/rules/prefer-destructuring)
 
-Esta regra impõe o uso de destructuring em vez de acessar uma propriedade por meio de uma member expression.
+Esta regra impõe o uso de *destructuring* em vez de acessar uma propriedade por meio de uma *member expression*.
 
 ```json
 "prefer-destructuring": ["error", {
@@ -1243,7 +1243,7 @@ Esta regra tem como objetivo sinalizar o uso de variáveis de argumentos.
 
 #### [prefer-spread](https://eslint.org/docs/rules/prefer-spread)
 
-Esta regra tem como objetivo sinalizar o uso de Function.prototype.apply () em situações em que a sintaxe de propagação poderia ser usada.
+Esta regra tem como objetivo sinalizar o uso de *Function.prototype.apply()* em situações em que a sintaxe de propagação poderia ser usada.
 
 ```json
 "prefer-spread": "error"
@@ -1259,7 +1259,7 @@ Essa regra tem como objetivo sinalizar o uso do operadores + com string. No caso
 
 #### [rest-spread-spacing](https://eslint.org/docs/rules/rest-spread-spacing)
 
-Esta regra visa impor um espaçamento consistente entre operadores de rest e spread e suas expressões.
+Esta regra visa impor um espaçamento consistente entre operadores de *rest* e *spread* e suas expressões.
 
 ```json
 "rest-spread-spacing": ["error", "never"]
@@ -1280,7 +1280,7 @@ Esta regra verifica se todas as importações são classificadas em ordem alfab�
 
 #### [template-curly-spacing](https://eslint.org/docs/rules/template-curly-spacing)
 
-Esta regra visa manter a consistência em torno do espaçamento dentro das template literals
+Esta regra visa manter a consistência em torno do espaçamento dentro das *template literals*
 
 ```json
 "template-curly-spacing": ["error", "never"]
