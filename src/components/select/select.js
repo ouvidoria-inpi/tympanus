@@ -184,9 +184,23 @@ class BRSelect {
           '.br-radio input[type="radio"], .br-checkbox input[type="checkbox"]'
         )) {
           check.click()
+          this._sendEvent()
+
         }
+
       }
     }
+  }
+
+  _sendEvent() {
+
+    let clickEvent = new CustomEvent('onChange', {
+      bubbles: true,
+      detail: this.component
+    });
+
+    this.component.dispatchEvent(clickEvent);
+
   }
 
   _setDefaultSelected() {
@@ -212,6 +226,7 @@ class BRSelect {
   }
 
   _handleClickOnCheck(index, item, event) {
+
     if (!this.multiple) {
       for (const [index2, item2] of this.component
         .querySelectorAll('.br-list .br-item')
@@ -248,6 +263,7 @@ class BRSelect {
         }
       }
     }
+    this._sendEvent()
   }
 
   _setSelectionBehavior() {
