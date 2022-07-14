@@ -1,11 +1,11 @@
 mixin breadcrumb
-  - let className = [attributes.class, prefix + "breadcrumb"]
+  - let className = [prefix + "breadcrumb", attributes.class]
   div(class=className)&attributes(attributes)
     ul.crumb-list
       li.crumb.home
         .br-button.circle
           span.sr-only Página inicial
-          i.icon.fas.fa-home
+          i.fas.fa-home
       if block
         block
 
