@@ -185,22 +185,17 @@ class BRSelect {
         )) {
           check.click()
           this._sendEvent()
-
         }
-
       }
     }
   }
 
   _sendEvent() {
-
-    let clickEvent = new CustomEvent('onChange', {
+    const clickEvent = new CustomEvent('onChange', {
       bubbles: true,
-      detail: this.component
-    });
-
-    this.component.dispatchEvent(clickEvent);
-
+      detail: this.component,
+    })
+    this.component.dispatchEvent(clickEvent)
   }
 
   _setDefaultSelected() {
@@ -226,7 +221,6 @@ class BRSelect {
   }
 
   _handleClickOnCheck(index, item, event) {
-
     if (!this.multiple) {
       for (const [index2, item2] of this.component
         .querySelectorAll('.br-list .br-item')
@@ -334,7 +328,6 @@ class BRSelect {
       }
     }
     if (hasVisible === false) {
-      // debugger
       this._addNotFoundElement()
     }
   }
