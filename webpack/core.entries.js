@@ -265,27 +265,14 @@ function entries(argv) {
   setComponentPug('breadcrumb', ['breadcrumb-default', 'breadcrumb-truncate'])
 
   setComponentPug('button', [
-    'button-primary-circle-inverted',
-    'button-primary-circle',
-    'button-primary-inverted',
-    'button-primary',
-    'button-secondary-active',
-    'button-secondary-block',
-    'button-secondary-circle-inverted',
-    'button-secondary-circle-large',
-    'button-secondary-circle-small',
-    'button-secondary-circle',
-    'button-secondary-disabled',
-    'button-secondary-inverted',
-    'button-secondary-large',
-    'button-secondary-loading',
-    'button-secondary-medium',
-    'button-secondary-small',
-    'button-secondary',
-    'button-tertiary-circle-inverted',
-    'button-tertiary-circle',
-    'button-tertiary-inverted',
-    'button-tertiary',
+    'button-emphasys',
+    'button-emphasys-dark-mode',
+    'button-circle',
+    'button-circle-dark-mode',
+    'button-block',
+    'button-block-dark-mode',
+    'button-densities',
+    'button-status',
   ])
 
   setComponentPug('card', [
