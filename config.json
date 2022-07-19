@@ -314,12 +314,12 @@
           "examples": [
             {
               "height": 250,
-              "label": "Breadcrumb Padrão",
+              "label": "Exemplo padrão",
               "path": "examples/breadcrumb-default"
             },
             {
               "height": 250,
-              "label": "Breadcrumb com truncamento",
+              "label": "Exemplo com truncamento",
               "path": "examples/breadcrumb-truncate"
             }
           ],
