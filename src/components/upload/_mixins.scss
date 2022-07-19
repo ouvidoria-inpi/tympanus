@@ -1,16 +1,10 @@
 @mixin upload-configs {
-  @include upload-tokens;
   @include upload-default;
   @include upload-state;
 }
 
-@mixin upload-tokens {
-  --onboarding-dragging-color: var(--color-danger);
-  --upload-z-index: var(--z-index-layer-0);
-}
-
 @mixin upload-default {
-  z-index: var(--upload-z-index);
+  z-index: var(--z-index-layer-0);
 
   @include media-breakpoint-down(xs) {
     .br-button.upload-button {
@@ -42,7 +36,7 @@
 
   &.dragging {
     .upload-button {
-      background-color: v(color-support-01);
+      background-color: var(--mint-cool-vivid-40);
 
       span,
       svg {
@@ -57,8 +51,12 @@
     width: 100%;
 
     &:active * {
-      color: v(color-primary-pastel-01);
+      color: var(--blue-warm-20);
     }
+  }
+
+  .upload-label{
+    line-height: var(--font-line-height-high);
   }
 
   .upload-button {
@@ -143,16 +141,14 @@
       .feedback.color-#{$state} {
         align-items: center;
         background: $color;
-        color: var(--color-secondary-01) !important;
         display: inline-flex;
         height: 35px;
         margin-bottom: var(--spacing-scale-base);
         padding: 5px;
       }
-      @if ($state == warning) {
-        .feedback.color-warning {
-          color: var(--color-secondary-08) !important;
-        }
+
+      .feedback.color-warning {
+        color: var(--color-secondary-08) !important;
       }
     }
   }
