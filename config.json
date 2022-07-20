@@ -1229,16 +1229,16 @@
           "examples": [
             {
               "height": 180,
-              "label": "Envio de um arquivo",
+              "label": "Envio de 1 arquivo",
               "path": "examples/upload-single"
             },
             {
-              "height": 380,
+              "height": 180,
               "label": "Envio de vários arquivo",
               "path": "examples/upload-multiple"
             },
             {
-              "height": 220,
+              "height": 180,
               "label": "Upload com mensagem de feedback",
               "path": "examples/upload-feedback"
             },
