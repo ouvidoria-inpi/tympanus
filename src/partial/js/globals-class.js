@@ -217,7 +217,12 @@ export default class Globals {
 	initInstanceSelect() {
 		const selectList = []
 		for (const brSelect of window.document.querySelectorAll('.br-select')) {
-			selectList.push(new BRSelect('br-select', brSelect))
+
+			const brselect = new BRSelect('br-select', brSelect)
+			//Exemplo de uso de listener do select
+			brSelect.addEventListener('onChange', function (e) { })
+
+			selectList.push(brselect)
 		}
 	}
 
@@ -376,5 +381,6 @@ export {
 	BRUpload,
 	BRWizard,
 	Globals,
-  Swipe,
+	Swipe,
 }
+
