@@ -33,7 +33,6 @@
   --button-medium: 40px;
   --button-large: 48px;
   --button-size: var(--button-medium);
-  --focus-offset: var(--spacing-scale-half);
 }
 
 @mixin button-default {
@@ -133,6 +132,7 @@
   }
 
   &:not(:disabled) {
+  --focus-offset: var(--spacing-scale-half);
     @include focus;
     @include hover;
     @include active;
