@@ -10,10 +10,10 @@ mixin upload()
     disabled=attributes.disabled)
     if (attributes.multiple)
       label.upload-label(for=id)
-        span='Envio de 1 arquivo'
+        span='Envio de arquivos'
     else
       label.upload-label(for=id)
-        span='Envio de vários arquivos'
+        span='Envio de arquivo'
 
     input.upload-input(
       id=id,
