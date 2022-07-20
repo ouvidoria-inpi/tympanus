@@ -292,12 +292,20 @@
         {
           "examples": [
             {
-              "label": "Tipos e densidades",
-              "path": "examples/avatar-sizes"
+              "label": "Tipo icônico",
+              "path": "examples/avatar-icon"
             },
             {
-              "height": 400,
-              "label": "Avatar com dropdown",
+              "label": "Tipo fotográfico",
+              "path": "examples/avatar-image"
+            },
+            {
+              "label": "Tipo letra",
+              "path": "examples/avatar-letter"
+            },
+            {
+              "height": 300,
+              "label": "Com dropdown",
               "path": "examples/avatar-dropdown"
             }
           ],
