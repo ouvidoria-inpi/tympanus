@@ -255,10 +255,9 @@ function entries(argv) {
   ])
 
   setComponentPug('avatar', [
-    'avatar-foto',
-    'avatar-icone',
-    'avatar-letra',
-    'avatar-sizes',
+    'avatar-icon',
+    'avatar-image',
+    'avatar-letter',
     'avatar-dropdown',
   ])
 
