@@ -1228,22 +1228,22 @@
         {
           "examples": [
             {
-              "height": 495,
-              "label": "Envio de arquivo",
+              "height": 180,
+              "label": "Envio de um arquivo",
               "path": "examples/upload-single"
             },
             {
-              "height": 495,
-              "label": "Envio de arquivo",
+              "height": 380,
+              "label": "Envio de vários arquivo",
               "path": "examples/upload-multiple"
             },
             {
-              "height": 495,
+              "height": 220,
               "label": "Upload com mensagem de feedback",
               "path": "examples/upload-feedback"
             },
             {
-              "height": 495,
+              "height": 180,
               "label": "Upload desabilitado",
               "path": "examples/upload-disabled"
             }
