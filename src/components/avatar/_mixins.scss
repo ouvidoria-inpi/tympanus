@@ -4,13 +4,11 @@
   @include avatar-sizes;
   @include avatar-change;
   @include avatar-dropdown;
+  @include avatar-deprecated;
 }
 
 @mixin avatar-tokens {
-  --avatar-background: var(--blue-10);
-  --avatar-color: var(--blue-warm-20);
   --avatar-size: var(--avatar-small);
-  --avatar-font-weight: var(--font-weight-bold);
   --avatar-icon-size: var(--avatar-icon-small);
   --avatar-text-size: var(--avatar-text-small);
   --avatar-small: 40px;
@@ -35,31 +33,34 @@
   line-height: var(--avatar-size);
   vertical-align: middle;
 
-  .image,
-  .letter {
-    align-items: center;
-    background-color: var(--avatar-background);
-    border-radius: 50%;
-    color: var(--avatar-color);
-    display: inline-flex;
-    font-size: var(--avatar-text-size);
+  .content {
+    @include avatar-content;
+  }
+}
+
+@mixin avatar-content {
+  align-items: center;
+  background-color: var(--blue-10);
+  border-radius: 50%;
+  color: var(--blue-warm-20);
+  display: inline-flex;
+  font-size: var(--avatar-text-size);
+  height: var(--avatar-size);
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: inherit;
+  width: var(--avatar-size);
+
+  img {
     height: var(--avatar-size);
-    justify-content: center;
-    overflow: hidden;
-    text-align: center;
-    text-transform: uppercase;
     vertical-align: inherit;
     width: var(--avatar-size);
-
-    img {
-      height: var(--avatar-size);
-      vertical-align: inherit;
-      width: var(--avatar-size);
-    }
-    @include icon {
-      --icon-size: var(--avatar-icon-size);
-      margin-top: 0.25em;
-    }
+  }
+  @include icon {
+    --icon-size: var(--avatar-icon-size);
+    margin-top: 0.25em;
   }
 }
 
@@ -87,5 +88,13 @@
 @mixin avatar-dropdown {
   &[data-toggle="dropdown"] {
     @include focus;
+  }
+}
+
+@mixin avatar-deprecated {
+  // TODO: Remover na versão 4
+  .image,
+  .letter {
+    @include avatar-content;
   }
 }
