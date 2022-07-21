@@ -411,12 +411,8 @@
         {
           "examples": [
             {
-              "label": "Card simples",
-              "path": "examples/card-simples"
-            },
-            {
-              "label": "Card completo",
-              "path": "examples/card-completo"
+              "label": "Card simples e completo",
+              "path": "examples/card-simples-completo"
             },
             {
               "label": "Card com expansão",
