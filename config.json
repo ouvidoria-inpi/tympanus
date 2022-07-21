@@ -415,7 +415,7 @@
               "path": "examples/card-examples"
             },
             {
-              "label": "Card com expansão",
+              "label": "Card com collapse",
               "path": "examples/card-collapse"
             },
             {
