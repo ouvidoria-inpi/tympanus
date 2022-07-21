@@ -4,13 +4,10 @@ append vars
   - var title = "Card";
 
 append content
-  p.h4.mt-5 Card simples
+  p.h4.mt-5 Card simples e completo
   .row
     .col-sm-6.col-md-4.col-lg-3
       +card-simples
-
-  p.h4.mt-5 Card completo
-  .row
     .col-sm-6.col-md-4.col-lg-3
       +card-completo
 
@@ -23,11 +20,11 @@ append content
   .row
     .col-sm-6.col-md-4.col-lg-3
       +card-desativado
-  .row
-    .col-sm-6.col-md-4.col-lg-3
-      p.h4.mt-5 Card com hover
-      +card-hover
+
+  p.h4.mt-5 Card com hover
+  +card-hover
+
+  p.h5 Card com altura fixa 
   .row.mt-5
     .col-sm-6.col-md-4.col-lg-3
-      p.h5 Card com altura fixa 
       +card-altura-fixa
