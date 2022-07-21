@@ -1,14 +1,15 @@
 mixin card
-  .br-card&attributes(attributes)
+  - let className = prefix + 'card'
+  div(class=className)&attributes(attributes)
     if block
       block
 
-mixin card-simples
+mixin card-example
   +card
     .card-content
       img(src="https://picsum.photos/id/0/500" alt="Imagem de exemplo")
 
-mixin card-completo
+mixin card-full
   +card
     +card-header
     .card-content
@@ -32,37 +33,15 @@ mixin card-hover
         .card-content
           p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
 
-mixin card-altura-fixa
+mixin card-scroll
   +card.h-fixed
     +card-header
-    .card-content(tabindex="0")      
+    .card-content(tabindex="0")
       p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
-      p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.     
+      p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda.
     +card-footer
 
-mixin card-flip
-  +card()(data-flip)
-    #front.front
-      .header
-        .d-flex
-          p.h5 Frente do Card
-          .ml-auto
-            +button.circle(aria-label="Girar o card" data-toggle="flip")
-              +icon.fa-exchange-alt
-      .content
-        p Clique no botão acima para ver o conteúdo de trás do Card.
-    #back.back
-      .header
-        .d-flex
-          div
-            p.h5 Verso do Card
-          .ml-auto
-            +button.circle.inverted(aria-label="Girar o card" data-toggle="flip")
-              +icon.fa-exchange-alt
-      .content
-        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique deleniti id a quam nemo? Illum corrupti accusantium necessitatibus officia laboriosam, velit, ratione nulla sit mollitia tempore a ipsam id adipisci.
-
-mixin card-expansao
+mixin card-collapse
   +card
     +card-header
     .card-content
@@ -94,7 +73,7 @@ mixin card-expansao
               .col
                 p.m-0 Voluptates, iste recusandae.
 
-mixin card-desativado
+mixin card-disabled
   +card.disabled
     +card-header
     .card-content

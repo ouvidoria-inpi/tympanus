@@ -412,15 +412,15 @@
           "examples": [
             {
               "label": "Card simples e completo",
-              "path": "examples/card-simples-completo"
+              "path": "examples/card-examples"
             },
             {
               "label": "Card com expansão",
-              "path": "examples/card-expansao"
+              "path": "examples/card-collapse"
             },
             {
               "label": "Card desativado",
-              "path": "examples/card-desativado"
+              "path": "examples/card-disabled"
             },
             {
               "label": "Card com hover",
@@ -428,7 +428,7 @@
             },
             {
               "label": "Card com altura fixa",
-              "path": "examples/card-altura-fixa"
+              "path": "examples/card-scroll"
             }
           ],
           "id": "card",
