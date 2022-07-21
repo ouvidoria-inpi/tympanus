@@ -329,75 +329,33 @@
         {
           "examples": [
             {
-              "label": "Ênfase",
-              "path": "examples/button-primary"
+              "label": "Ênfases",
+              "path": "examples/button-emphasys"
             },
             {
-              "path": "examples/button-secondary"
+              "path": "examples/button-emphasys-dark-mode"
             },
             {
-              "path": "examples/button-tertiary"
+              "label": "Tipo circular",
+              "path": "examples/button-circle"
             },
             {
-              "path": "examples/button-primary-circle"
+              "path": "examples/button-circle-dark-mode"
             },
             {
-              "path": "examples/button-secondary-circle"
+              "label": "Tipo bloco",
+              "path": "examples/button-block"
             },
             {
-              "path": "examples/button-tertiary-circle"
+              "path": "examples/button-block-dark-mode"
             },
             {
-              "label": "Fundo escuro",
-              "path": "examples/button-primary-inverted"
-            },
-            {
-              "path": "examples/button-secondary-inverted"
-            },
-            {
-              "path": "examples/button-tertiary-inverted"
-            },
-            {
-              "path": "examples/button-primary-circle-inverted"
-            },
-            {
-              "path": "examples/button-secondary-circle-inverted"
-            },
-            {
-              "path": "examples/button-tertiary-circle-inverted"
-            },
-            {
-              "label": "Botão bloco",
-              "path": "examples/button-secondary-block"
-            },
-            {
-              "label": "Densidade",
-              "path": "examples/button-secondary-large"
-            },
-            {
-              "path": "examples/button-secondary-medium"
-            },
-            {
-              "path": "examples/button-secondary-small"
-            },
-            {
-              "path": "examples/button-secondary-circle-large"
-            },
-            {
-              "path": "examples/button-secondary-circle"
-            },
-            {
-              "path": "examples/button-secondary-circle-small"
+              "label": "Densidades",
+              "path": "examples/button-densities"
             },
             {
               "label": "Estados",
-              "path": "examples/button-secondary-disabled"
-            },
-            {
-              "path": "examples/button-secondary-active"
-            },
-            {
-              "path": "examples/button-secondary-loading"
+              "path": "examples/button-status"
             }
           ],
           "ext": [
