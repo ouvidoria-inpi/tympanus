@@ -95,23 +95,41 @@ class BRWizard {
 				}
 			})
 		}
+
+		/**
+		 * Define números dos passos
+		 */
 		this.setStepsNum = () => {
 			this.DOMstrings.stepsBtns.forEach((elem, index) => {
 				elem.setAttribute('step', index + 1)
 			})
 		}
+
+		/**
+		 * Define passo e painel ativo
+		 * @param {number} num - numero do passo
+		 */
 		this.setStep = (num) => {
 			const activeStep =
 				num <= this.DOMstrings.stepsBtns.length ? num - 1 : 0
 			this.setActiveStep(activeStep)
 			this.setActivePanel(activeStep)
 		}
+
+		/**
+		 * Retrai painel de passos
+		 */
 		this.collapseSteps = () => {
 			this.component.setAttribute('collapsed', '')
 		}
+
+		/**
+		 * Expande painel de passos
+		 */
 		this.expandSteps = () => {
 			this.component.removeAttribute('collapsed')
 		}
+
 		this._setBehavior()
 	}
 
@@ -120,9 +138,10 @@ class BRWizard {
 	 * @private
 	 */
 	_setBehavior() {
-		// STEPS BAR CLICK FUNCTION
+		/**
+		 * Mapeia clique na barra de passos
+		 */
 		this.DOMstrings.stepsBar.addEventListener('click', (e) => {
-			// testa se o alvo é um botão de passo
 			const eventTarget = e.target
 			if (
 				!eventTarget.classList.contains(
@@ -132,17 +151,16 @@ class BRWizard {
 				e.target.parentNode.click()
 				return
 			}
-			// get active button step number
 			const activeStep = this.getActiveStep(eventTarget)
-			// set all steps before clicked (and clicked too) to active
 			this.setActiveStep(activeStep)
-			// open active panel
 			this.setActivePanel(activeStep)
 		})
-		// PREV/NEXT BTNS CLICK
+
+		/**
+		 * Mapeia clique nos botões de navegação
+		 */
 		this.DOMstrings.stepsForm.addEventListener('click', (e) => {
 			const eventTarget = e.target
-			// check if we clicked on `PREV` or NEXT` buttons
 			if (
 				!(
 					eventTarget.classList.contains(
@@ -155,7 +173,6 @@ class BRWizard {
 			) {
 				return
 			}
-			// find active panel
 			const activePanel = this.findParent(
 				eventTarget,
 				`${this.DOMstrings.stepFormPanelClass}`
@@ -163,7 +180,6 @@ class BRWizard {
 			let activePanelNum = Array.from(
 				this.DOMstrings.stepFormPanels
 			).indexOf(activePanel)
-			// set active step and active panel onclick
 			if (
 				eventTarget.classList.contains(
 					`${this.DOMstrings.stepPrevBtnClass}`
@@ -178,13 +194,13 @@ class BRWizard {
 			this.setActiveStep(activePanelNum)
 			this.setActivePanel(activePanelNum)
 		})
-		// Set Steps label number
+
 		this.setStepsNum()
-		// Set default active step
+
 		if (this.component.hasAttribute('step')) {
 			this.setStep(this.component.getAttribute('step'))
 		}
-		// set steps buttons grid style if it needs to scroll horizontaly
+
 		if (
 			this.component.hasAttribute('scroll') &&
 			!this.component.hasAttribute('vertical')
@@ -193,7 +209,10 @@ class BRWizard {
 				Math.round(100 / this.DOMstrings.stepsBtns.length) - 0.5
 			this.DOMstrings.stepsBar.style.gridTemplateColumns = `repeat(auto-fit, minmax(100px, ${stepsWidth}% ))`
 		}
-		// Swipe
+
+		/**
+		 * Configura gestos (swipe)
+		 */
 		const dispatcher = new Swipe(this.DOMstrings.stepsBar)
 		if (this.component.hasAttribute('vertical')) {
 			dispatcher.on('SWIPE_LEFT', () => {
