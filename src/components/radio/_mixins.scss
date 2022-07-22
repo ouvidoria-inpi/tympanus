@@ -115,10 +115,6 @@
         );
       }
     }
-    // Disabled
-    &:disabled + label {
-      @include disabled;
-    }
   }
 }
 
