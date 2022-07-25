@@ -2,8 +2,8 @@
 class BRTextArea {
 	/**
 	 * Instancia do objeto
-	 * @property {string} name - Nome do componente em minúsculo
-	 * @property {object} component - Objeto referenciando a raiz do componente DOM
+	 * @param {string} name - Nome do componente em minúsculo
+	 * @param {object} component - Objeto referenciando a raiz do componente DOM
 	 */
 	constructor(name, component) {
 		this.name = name
