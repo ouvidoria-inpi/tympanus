@@ -1,6 +1,6 @@
 import Collapse from '../../partial/js/behavior/collapse'
 
-/** Classe para instanciar um objeto */
+/** Classe para instanciar um objeto BRCard */
 class BRCard {
 	/**
 	 * Instancia do componente
