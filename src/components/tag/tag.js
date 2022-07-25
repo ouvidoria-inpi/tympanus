@@ -1,4 +1,4 @@
-/** Classe para instanciar um objeto*/
+/** Classe para instanciar um objeto BRTag*/
 class BRTag {
 	/**
 	 * Instancia do objeto
