@@ -4,50 +4,43 @@
   @include card-tokens;
   @include card-default;
   @include card-h-fixed;
-  @include card-back;
   @include card-hover;
   @include card-dark-mode;
 }
 
 @mixin card-tokens {
-  --card-background: var(--color-secondary-01);
-  --card-back-background: var(--color-secondary-07);
-  --card-margin: var(--spacing-scale-2x);
   --card-padding: var(--spacing-scale-2x);
-  --card-shadow: var(--surface-shadow-sm);
   --card-height-fixed: 250px;
 }
+
 /// Criar configuração básica
 /// @group Card
 @mixin card-default {
-  background: var(--card-background);
-  box-shadow: var(--card-shadow);
+  background: var(--background);
+  box-shadow: var(--surface-shadow-sm);
   color: var(--color);
-  margin-bottom: var(--card-margin);
+  margin-bottom: var(--spacing-scale-2x);
 
   .card-content,
-  .front .content,
-  .back .content {
+  .front .content {
     padding: var(--card-padding);
-
+    // Remove espaçamento extra de elementos com margem pra baixo
     *:last-child {
       margin-bottom: 0;
     }
   }
 
   .front .header,
-  .back .header,
   .card-header {
     padding: var(--card-padding) var(--card-padding) 0;
   }
 
   .front .footer,
-  .back .footer,
   .card-footer {
     padding: 0 var(--card-padding) var(--card-padding);
   }
 }
-// Card com altura fixa
+
 @mixin card-h-fixed {
   &.h-fixed {
     .card-content {
@@ -57,17 +50,11 @@
     }
 
     .card-footer {
-      padding: var(--card-padding) var(--card-padding);
+      padding-top: var(--card-padding);
     }
   }
 }
 
-@mixin card-back {
-  .back {
-    background: var(--card-back-background);
-    color: var(--color-secondary-01);
-  }
-}
 @mixin card-hover {
   &.hover {
     &:hover {
