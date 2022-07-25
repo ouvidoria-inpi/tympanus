@@ -1,4 +1,4 @@
-/** Classe para instanciar um objeto*/
+/** Classe para instanciar um objeto BRTextArea*/
 class BRTextArea {
 	/**
 	 * Instancia do objeto
