@@ -1,4 +1,6 @@
 import Swipe from '../../partial/js/behavior/swipe'
+
+/** Classe para instanciar um objeto BRWizard*/
 class BRWizard {
 	/**
 	 * Instância do componente
