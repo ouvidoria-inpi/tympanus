@@ -510,14 +510,8 @@
               "path": "examples/divider"
             },
             {
-              "path": "examples/divider-inverted"
-            },
-            {
               "label": "Vertical",
               "path": "examples/divider-vertical"
-            },
-            {
-              "path": "examples/divider-vertical-inverted"
             },
             {
               "label": "Tracejado Horizontal",
@@ -528,16 +522,8 @@
               "path": "examples/divider-vertical-dashed"
             },
             {
-              "label": "Tamanho 2x",
-              "path": "examples/divider-2x"
-            },
-            {
-              "label": "Tamanho 3x",
-              "path": "examples/divider-3x"
-            },
-            {
-              "label": "Tamanho 4x",
-              "path": "examples/divider-4x"
+              "label": "Espessuras",
+              "path": "examples/divider-espessuras"
             }
           ],
           "ext": [
