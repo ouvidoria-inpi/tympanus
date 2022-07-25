@@ -1,5 +1,5 @@
 import BRTooltip from '../../components/tooltip/tooltip'
-/** Classe para instanciar um objeto */
+/** Classe para instanciar um objeto BRUpload */
 class BRUpload {
   /**
    * @param {*} name nome do componente
