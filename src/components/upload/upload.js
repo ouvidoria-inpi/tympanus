@@ -1,7 +1,7 @@
 import BRTooltip from '../../components/tooltip/tooltip'
+/** Classe para instanciar um objeto BRUpload */
 class BRUpload {
   /**
-   *
    * @param {*} name nome do componente
    * @param {*} component componente
    * @param {*} uploadFiles  promisse de status do upload
@@ -19,10 +19,14 @@ class BRUpload {
     this._setBehavior()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setBehavior() {
     if (this._inputElement) {
       const button = document.createElement('button')
-      button.className = 'br-button upload-button'
+      button.className = 'upload-button'
       button.setAttribute('type', 'button')
 
       if (this._inputElement.getAttribute('multiple'))
@@ -66,6 +70,10 @@ class BRUpload {
     this._setDragAndDropBehavior()
   }
 
+  /**
+   * Define comportamento de arrastar(drag) e posicionar(drop)
+   * @private
+   */
   _setDragAndDropBehavior() {
     const uploadButton = this.component.querySelector('.upload-button')
 
@@ -82,6 +90,11 @@ class BRUpload {
     uploadButton.addEventListener('drop', this._handleDrop.bind(this))
   }
 
+  /**
+   * Evita os eventos padrao e propagação de evento
+   * @private
+   * @param {event} event - referencia ao evento
+   */
   _preventDefaults(event) {
     event.preventDefault()
     event.stopPropagation()
@@ -95,6 +108,11 @@ class BRUpload {
     this.component.classList.remove('dragging')
   }
 
+  /**
+   * Ação de posicionar (drop)
+   * @private
+   * @param {event} event - referencia ao evento
+   */
   _handleDrop(event) {
     this.component.classList.remove('dragging')
     const dt = event.dataTransfer
@@ -102,6 +120,11 @@ class BRUpload {
     this._handleFiles(files)
   }
 
+  /**
+   * Testa se o objeto que disparou a ação está desabilitado
+   * @private
+   * @param {event} event - referencia ao evento
+   */
   _isDisabled(event) {
     const isDisabled = event.target.getAttribute('disabled')
     if (isDisabled) {
@@ -111,10 +134,18 @@ class BRUpload {
     }
   }
 
+  /**
+   * Simula ação de clicar no input
+   * @private
+   */
   _clickUpload() {
     this._inputElement.click()
   }
 
+  /**
+   * Limpa mensagem de feedback
+   * @private
+   */
   _removeMessage() {
     for (const message of this.component.querySelectorAll('.feedback')) {
       message.parentNode.removeChild(message)
@@ -122,6 +153,10 @@ class BRUpload {
     }
   }
 
+  /**
+   * Remove mensagem de estado
+   * @private
+   */
   _removeStatus() {
     const remStatus = ['danger', 'warning', 'info', 'success']
     remStatus.forEach((el) => {
@@ -130,6 +165,11 @@ class BRUpload {
     })
   }
 
+  /**
+   * Define mensagem de feedback
+   * @private
+   * @param {string} status - estados: danger / info / success / warning
+   */
   _feedback(status, text) {
     const icone = `<i class="fas fa-times-circle" aria-hidden="true"></i>${text}`
     const dataStatus = `data-${status}`
@@ -160,16 +200,27 @@ class BRUpload {
     this._fileList.before(message)
   }
 
+  /**
+   * Adiciona arquivos a lista
+   * @private
+   * @param {File[]} files - lista de arquivos
+   */
   _concatFiles(files) {
     const newFiles = !files.length
       ? Array.from(this._inputElement.files)
       : Array.from(files)
     this._fileArray = this._fileArray.concat(newFiles)
   }
+
+  /**
+   * Adiciona arquivos a lista
+   * @private
+   * @param {File[]} files - lista de arquivos
+   */
   _handleFiles(files) {
     this._removeMessage()
     if (!this._inputElement.multiple && files.length > 1) {
-      this._feedback('danger', 'É permitido o envio de somente um arquivo.')
+      this._feedback('danger', 'É permitido o envio de somente 1 arquivo.')
     } else if (!this._inputElement.multiple && this._fileArray.length > 0) {
       this._fileArray = []
       this._concatFiles(files)
@@ -184,6 +235,10 @@ class BRUpload {
     }
   }
 
+  /**
+   * Atualiza lista de arquivos eliminando redundâncias
+   * @private
+   */
   _updateFileList() {
     this._removeStatus()
     if (this.component.nextElementSibling === this._textHelp) {
@@ -210,6 +265,10 @@ class BRUpload {
     }
   }
 
+  /**
+   * Mostra mensagem de carregamento
+   * @private
+   */
   uploadLoading() {
     const loading = document.createElement('div')
     const carga = document.createElement('span')
@@ -222,6 +281,11 @@ class BRUpload {
     this._fileList.appendChild(loading)
   }
 
+  /**
+   * Faz upload de arquivo na posição definida
+   * @private
+   * @param {Number} position - numero do ínidice da posição
+   */
   uploadingFile(position) {
     if (this._uploadFiles) {
       this._fileArray[position].requested = true
@@ -232,9 +296,14 @@ class BRUpload {
     }
   }
 
+  /**
+   * Renderiza item na posição definida
+   * @private
+   * @param {Number} position - numero do ínidice da posição
+   */
   _renderItem(position) {
     const li = document.createElement('div')
-    li.className = 'br-item'
+    li.className = 'br-item d-flex'
     this._fileList.appendChild(li)
     li.innerHTML = ''
     const name = document.createElement('div')
@@ -259,7 +328,7 @@ class BRUpload {
     li.appendChild(tooltip)
     info.classList.add('text-primary-default', 'mr-auto')
     const del = document.createElement('div')
-    del.className = 'support'
+    del.className = 'support mr-n2'
     const btndel = document.createElement('button')
     const spanSize = document.createElement('span')
     spanSize.className = 'mr-1'
@@ -287,6 +356,11 @@ class BRUpload {
     }
   }
 
+  /**
+   * Formata tamanho do arquivo
+   * @private
+   * @param {Number} nBytes - quantidade de bytes do arquivo
+   */
   _calcSize(nBytes) {
     let sOutput = ''
     for (
@@ -301,6 +375,12 @@ class BRUpload {
     return sOutput
   }
 
+  /**
+   * Remove arquivo na posição definida
+   * @private
+   * @param {Number} index - numero do ínidice da posição
+   * @param {event} event - evento que disparou a ação
+   */
   _removeFile(index, event) {
     event.stopPropagation()
     event.preventDefault()
@@ -314,6 +394,11 @@ class BRUpload {
     if (!this._inputElement.multiple) this._inputElement.value = ''
   }
 
+  /**
+   * Atualiza arquivos da lista
+   * @private
+   * @param {File[]} files - lista de arquivos
+   */
   _updateFileListItems(files) {
     const fileInput = new ClipboardEvent('').clipboardData || new DataTransfer()
     for (let i = 0, len = files.length; i < len; i++)
