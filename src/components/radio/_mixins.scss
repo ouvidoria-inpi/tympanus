@@ -10,14 +10,11 @@
 }
 
 @mixin radio-tokens {
-  --radio-background: var(--color-secondary-01);
-  --radio-font-weight: var(--font-weight-medium);
   --radio-size: 24px;
   --radio-bullet-size: 16px;
   --radio-bullet-position: calc(
     (var(--radio-size) - var(--radio-bullet-size)) * 0.5
   );
-  --radio-padding: var(--spacing-scale-base);
 }
 @mixin radio-default {
   display: block;
@@ -25,7 +22,7 @@
   & + & {
     margin-top: var(--spacing-scale-base);
   }
-  // Remover o checkbox padrão do navegador
+
   input {
     opacity: 0;
     position: absolute;
@@ -33,13 +30,15 @@
     + label {
       cursor: pointer;
       display: inline-block;
+      margin-bottom: 0; // zerar margem padrão de labels
       min-height: var(--radio-size);
-      padding-left: calc(var(--radio-padding) + var(--radio-size));
+      min-width: var(--radio-size);
+      padding-left: calc(var(--spacing-scale-base) + var(--radio-size));
       position: relative;
 
       &::before {
-        background: var(--radio-background);
-        border: 1px solid v(color-secondary-04);
+        background: var(--background);
+        border: 1px solid var(--border-color);
         border-radius: 50%;
         content: "";
         height: var(--radio-size);
@@ -50,7 +49,6 @@
       }
 
       &:empty {
-        min-height: 20px;
         padding: 0;
 
         &::before {
@@ -60,13 +58,13 @@
     }
   }
 }
+
 @mixin radio-label {
   label {
-    color: var(--text-color);
-    font-size: var(--font-size);
-    font-weight: var(--radio-font-weight);
+    font-weight: var(--font-weight-medium);
   }
 }
+
 @mixin radio-checked {
   input {
     &:checked + label {
@@ -91,6 +89,7 @@
     }
   }
 }
+
 @mixin radio-states {
   input {
     // Inválid
@@ -116,12 +115,9 @@
         );
       }
     }
-    // Disabled
-    &:disabled + label {
-      @include disabled;
-    }
   }
 }
+
 @mixin radio-colors {
   @each $state, $color in (valid, success), (invalid, danger) {
     &.is-#{$state},
@@ -135,6 +131,8 @@
     }
   }
 }
+
+// TODO: Remover na próxima versão
 @mixin radio-sizes {
   // Versão pequena
   &.is-small,

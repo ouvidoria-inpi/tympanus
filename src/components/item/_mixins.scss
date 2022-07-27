@@ -113,9 +113,7 @@
     input {
       + label {
         min-height: calc(var(--radio-size) + var(--item-padding-y) * 2);
-        padding-left: calc(
-          var(--radio-padding) + var(--radio-size) + var(--item-padding-x)
-        );
+        padding-left: calc(var(--spacing-scale-base) + var(--radio-size) + var(--item-padding-x));
 
         &::after {
           left: calc(var(--item-padding-x) + var(--radio-bullet-position));
