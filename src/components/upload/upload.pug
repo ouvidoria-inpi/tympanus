@@ -1,9 +1,8 @@
 mixin upload()
-  - let classComponent = prefix + 'upload'
-  - let className = attributes.class ? classComponent + ' ' + attributes.class : classComponent
+  - let className = prefix + 'upload'
   - let id = attributes.id ? attributes.id : 'upload'
 
-  div(class=classComponent
+  div(class=className
     data-success = attributes.dataSuccess
     data-danger = attributes.dataDanger
     data-warning = attributes.dataWarning
