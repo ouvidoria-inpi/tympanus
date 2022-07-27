@@ -1006,7 +1006,7 @@
         {
           "examples": [
             {
-              "label": "Switch padrão",
+              "label": "Switch Padrão",
               "path": "examples/switch-default"
             },
             {
@@ -1014,36 +1014,16 @@
               "path": "examples/switch-disabled"
             },
             {
-              "label": "Densidade Baixa",
-              "path": "examples/switch-large"
+              "label": "Densidades do Switch",
+              "path": "examples/switch-density"
             },
             {
-              "label": "Densidade Média (Padrão)",
-              "path": "examples/switch-medium"
+              "label": "Switch Com Rótulos",
+              "path": "examples/switch-labels"
             },
             {
-              "label": "Densidade Alta",
-              "path": "examples/switch-small"
-            },
-            {
-              "label": "Densidade Switch Com Rótulo(Ligado/Desligado)",
-              "path": "examples/switch-label-onoff"
-            },
-            {
-              "label": "Densidade Com Rótulo(Concordo/Discordo)",
-              "path": "examples/switch-label-terms"
-            },
-            {
-              "label": "Label Alinhado a Esquerda",
-              "path": "examples/switch-left"
-            },
-            {
-              "label": "Label Alinhado a Direita",
-              "path": "examples/switch-right"
-            },
-            {
-              "label": "Label Alinhado ao Topo",
-              "path": "examples/switch-top"
+              "label": "Alinhamentos do Switch",
+              "path": "examples/switch-alignments"
             },
             {
               "label": "Switch Com Ícone",
