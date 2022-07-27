@@ -2,32 +2,26 @@
 
 ## Como usar
 
-```html
-<div class="br-radio [disabled|invalid|valid] [d-inline-block]" name="grupo">
-    <input id="identificador" type="radio" [disabled] />
-    <label for="identificador">Label do componente</label>
-</div>
-```
+### Propriedades obrigatórias
 
-### Elementos obrigatórios
-
-| Elemento    | Tipo     | Descrição                       |
-| ----------- | -------- | ------------------------------- |
-| `.br-radio` | classe   | Container do componente         |
-| `input`     | tag html | Input do tipo "radio"           |
-| `label`     | tag html | Rótulo do Radio                 |
-| `name`      | atributo | identificador de grupo de Radio |
-
-### Elementos e atributos opcionais
-
-| Elemento          | Tipo   | Descrição                                   |
-| ----------------- | ------ | ------------------------------------------- |
-| `.d-inline-block` | classe | Formata o componente para versão horizontal |
+| Atributo | Tipo   | Valor Padrão | Descrição               |
+| -------- | ------ | ------------ | ----------------------- |
+| class    | string | **br-radio** | Container do componente |
 
 ## Estados
 
-| Elemento   | Tipo     | Descrição                                                         |
-| ---------- | -------- | ----------------------------------------------------------------- |
-| `disabled` | atributo | Desabilita o componente                                           |
-| `invalid`  | atributo | Formata a versão inválida para o componente (usado em validações) |
-| `valid`    | atributo | Formata a versão válida para o componente (usado em validações)   |
+| Estado     | atributo | Valores      |
+| ---------- | -------- | ------------ |
+| Desativado | class    | **disabled** |
+| Inválido   | class    | **invalid**  |
+| Válido     | class    | **valid**    |
+
+## Informações adicionais
+
+### Listagem horizontal
+
+Usar Utilitários CSS [Display](/ds/utilities-css/display) e [Espaçamento](/ds/utilities-css/espacamento) para modificar o componente.
+
+### Radio desativado
+
+Além de adicionar a classe "disabled" ao componente, adicione também o atributo "disabled" na tag html `<input>`.
