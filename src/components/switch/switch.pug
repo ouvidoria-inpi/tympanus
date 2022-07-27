@@ -1,5 +1,5 @@
 mixin switch(label="Label")
-  - let className = attributes.class
+  - let className = [prefix + "switch", attributes.class]
   .br-switch(class=className)
     input( id=attributes.id type="checkbox" aria-label=attributes.ariaLabel checked=attributes.checked disabled=attributes.disabled)
     label(for=attributes.id)=label
