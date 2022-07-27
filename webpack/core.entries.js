@@ -275,13 +275,11 @@ function entries(argv) {
   ])
 
   setComponentPug('card', [
-    'card-completo',
-    'card-desativado',
-    'card-expansao',
-    'card-flip',
-    'card-simples',
+    'card-examples',
+    'card-collapse',
+    'card-disabled',
     'card-hover',
-    'card-altura-fixa',
+    'card-scroll',
   ])
 
   setComponentPug('carousel', [
