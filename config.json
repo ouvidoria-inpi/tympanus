@@ -449,23 +449,23 @@
           "examples": [
             {
               "label": "Exemplo completo",
-              "path": "examples/checkbox-padrao"
+              "path": "examples/checkbox-default"
             },
             {
               "label": "Listagem horizontal",
-              "path": "examples/checkbox-horizontal"
+              "path": "examples/checkbox-inline"
             },
             {
               "label": "Estados",
-              "path": "examples/checkbox-estados-validacao"
+              "path": "examples/checkbox-states"
             },
             {
-              "label": "Checkbox sem label",
-              "path": "examples/checkbox-no-label"
-            },
-            {
-              "label": "Checkbox com estado intermediário",
+              "label": "Estado intermediário",
               "path": "examples/checkbox-indeterminate"
+            },
+            {
+              "label": "Label oculto",
+              "path": "examples/checkbox-no-label"
             }
           ],
           "ext": [
