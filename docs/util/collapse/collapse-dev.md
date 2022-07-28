@@ -130,13 +130,19 @@ new Collapse(config)
 
 ```javascript
 import Collapse from 'core'
-const config = {
-  trigger,
-  iconToShow: 'fa-chevron-down',
-  iconToHide: 'fa-chevron-up',
-  useIcons: true,
-}
-new Collapse(config)
+this.element
+      .querySelectorAll('[data-toggle="collapse"]')
+      .forEach((trigger) => {
+        const config = {
+          iconToHide: 'fa-chevron-up',
+          iconToShow: 'fa-chevron-down',
+          trigger,
+          useIcons: true,
+        }
+        const collapse = new Collapse(config)
+        collapse.setBehavior()
+      })
+
 ```
 
 > link do utilitário [Collapse](assets/collapse.js)

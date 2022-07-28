@@ -12,11 +12,15 @@ class AccordionExample {
     this.element = element
     this._setBehavior()
   }
-
+  /**
+   * Inicia comportamento do exemplo
+   */
   _setBehavior() {
     this._setAccordionBehavior()
   }
-
+  /**
+   * Encontra os data-toggle accordion  e coloca util Accordion
+   */
   _setAccordionBehavior() {
     this.element
       .querySelectorAll('[data-toggle="accordion"]')

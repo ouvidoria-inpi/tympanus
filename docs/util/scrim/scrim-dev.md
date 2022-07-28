@@ -49,13 +49,18 @@
 
 ```javascript
 import Scrim from 'core'
-const scrscrim = window.document.querySelector('#btnClose')
-const config = {
-  trigger,
-  scrscrim,
-}
-scrim = new Scrim(config)
-scrim.showScrim()
+for (const buttonBloco1 of window.document.querySelectorAll(
+      '.scrimutilexemplo button'
+    )) {
+      buttonBloco1.addEventListener('click', () => {
+        const scrscrim = window.document.querySelector('#scrimutilexample')
+        const scrimfoco = new Scrim({
+          closeElement: '#scrimfechar',
+          trigger: scrscrim,
+        })
+        scrimfoco.showScrim()
+      })
+    }
 ```
 
 #### Objeto de configuração

@@ -55,17 +55,21 @@
 **Para cada acionador (trigger)**, instanciar a classe dropdown passando um objeto de configuração.
 
 ```javascript
-import Dropdown from 'core'
-const config = {
-  trigger,
-  iconToShow: 'fa-chevron-down',
-  iconToHide: 'fa-chevron-up',
-  useIcons: true,
-  target
-}
-new Dropdown(config)
+this.element
+   .querySelectorAll('[data-toggle="dropdown"]')
+   .forEach((trigger) => {
+    const config = {
+     iconToHide: 'fa-chevron-up',
+     iconToShow: 'fa-chevron-down',
+     trigger,
+     useIcons: true,
+    }
+    const dropdown = new Dropdown(config)
+    dropdown.setBehavior()
+   })
 ```
 
+> this.element elemento dom onde vai ser instanciado pelo utilitario
 > link do utilitário [Dropdown](<assets/dropdown.js>)
 
 #### Objeto de configuração

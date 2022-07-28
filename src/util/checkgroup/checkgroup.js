@@ -12,10 +12,18 @@ class CheckgroupExample {
     this.element = element
     this._setBehavior()
   }
-
+  /**
+   * Inicia comportamento do exemplo
+   * @private
+   */
   _setBehavior() {
     this._setCheckgroupBehavior()
   }
+
+  /**
+   * Encontra os data-toggle checkbox  com data-parent e coloca util Checkgroup
+   * @private
+   */
 
   _setCheckgroupBehavior() {
     this.element

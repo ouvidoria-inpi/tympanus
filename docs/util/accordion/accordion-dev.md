@@ -60,16 +60,22 @@
 **Para cada acionador (trigger)**, instanciar a classe Accordion passando um objeto de configuração.
 
 ```javascript
-import Accordion from 'core'
-const config = {
-  trigger,
-  iconToShow: 'fa-chevron-down',
-  iconToHide: 'fa-chevron-up',
-  useIcons: true,
-}
-new Accordion(config)
+import Collapse from 'core'
+this.element
+   .querySelectorAll('[data-toggle="accordion"]')
+   .forEach((trigger) => {
+    const config = {
+     iconToHide: 'fa-chevron-up',
+     iconToShow: 'fa-chevron-down',
+     trigger,
+     useIcons: true,
+    }
+    const accordion = new Accordion(config)
+    accordion.setBehavior()
+   })
 ```
 
+> this.element elemento DOM onde vai ser instanciado o utilitario
 > link do utilitário [Accordion](<assets/accordion.js>)
 
 #### Objeto de configuração
