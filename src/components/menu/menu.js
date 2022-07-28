@@ -40,6 +40,10 @@ class BRMenu {
 		})
 	}
 
+	/**
+	 * Define visual do componente
+	 * @private
+	 */
 	_setView() {
 		const template = document.querySelector('body')
 		const menuContextual = document.querySelector('.menu-trigger')
@@ -51,6 +55,10 @@ class BRMenu {
 		}
 	}
 
+	/**
+	 * Define breakpoints do menu
+	 * @private
+	 */
 	_setBreakpoints() {
 		if (!this.component.classList.contains('push') && !this.contextual) {
 			this.component
@@ -59,6 +67,10 @@ class BRMenu {
 		}
 	}
 
+	/**
+	 * Define ações do teclado
+	 * @private
+	 */
 	_setKeyboardBehaviors() {
 		// Fechar com tecla ESC
 		this.component.addEventListener('keyup', (event) => {
@@ -77,6 +89,10 @@ class BRMenu {
 		}
 	}
 
+	/**
+	 * Define comportamentos de abrir/fechar menu
+	 * @private
+	 */
 	_toggleMenu() {
 		const trigger = this.contextual ? this.contextual : this.trigger
 		// Clicar no trigger
@@ -100,6 +116,10 @@ class BRMenu {
 		}
 	}
 
+	/**
+	 * Define visual do menu aberto
+	 * @private
+	 */
 	_openMenu() {
 		this.component.classList.add('active')
 		if (this.component.classList.contains('push')) {
@@ -108,6 +128,10 @@ class BRMenu {
 		this.component.focus()
 	}
 
+	/**
+	 * Define visual do menu fechado
+	 * @private
+	 */
 	_closeMenu() {
 		this.component.classList.remove('active')
 		if (this.component.classList.contains('push')) {
@@ -116,8 +140,11 @@ class BRMenu {
 		this._focusNextElement()
 	}
 
+	/**
+	 * Configura Drop Menu para filho imediato de ".menu-folder"
+	 * @private
+	 */
 	_setDropMenu() {
-		// Configura Drop Menu para filho imediato de ".menu-folder"
 		for (const item of this.component.querySelectorAll(
 			'.menu-folder > a.menu-item'
 		)) {
@@ -130,15 +157,19 @@ class BRMenu {
 		}
 	}
 
+	/**
+	 * Foca no próximo elemento
+	 * @private
+	 */
 	_focusNextElement() {
-		//add all elements we want to include in our selection
+		//lista de elementos que desejamos focar
 		const focussableElements =
 			'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])'
 		if (document.activeElement) {
 			const focussable = Array.prototype.filter.call(
 				document.body.querySelectorAll(focussableElements),
 				(element) => {
-					//check for visibility while always include the current activeElement
+					// testa a visibilidade e inclui o elemento ativo
 					return (
 						element.offsetWidth > 0 ||
 						element.offsetHeight > 0 ||
@@ -154,8 +185,11 @@ class BRMenu {
 		}
 	}
 
+	/**
+	 * Configura Side Menu para quem não for filho imediato de ".menu-folder"
+	 * @private
+	 */
 	_setSideMenu() {
-		// Configura Side Menu para quem não for filho imediato de ".menu-folder"
 		for (const ul of this.component.querySelectorAll('a.menu-item + ul')) {
 			if (!ul.parentNode.classList.contains('menu-folder')) {
 				// Inclui ícone de Side Menu
@@ -168,6 +202,11 @@ class BRMenu {
 		}
 	}
 
+	/**
+	 * Muda estado do Drop Menu - aberto/fechado
+	 * @private
+	 * @param {object} element - referência ao Objeto que fará a ação
+	 */
 	_toggleDropMenu(element) {
 		element.addEventListener('click', () => {
 			// Fecha Drop Menu caso esteja aberto
@@ -181,6 +220,11 @@ class BRMenu {
 		})
 	}
 
+	/**
+	 * Muda estado do Side Menu - aberto/fechado
+	 * @private
+	 * @param {object} element - referência ao Objeto que fará a ação
+	 */
 	_toggleSideMenu(element) {
 		element.addEventListener('click', () => {
 			// Esconde todos os itens
@@ -202,6 +246,11 @@ class BRMenu {
 		})
 	}
 
+	/**
+	 * Fecha Side Menu
+	 * @private
+	 * @param {object} element - referência ao Objeto que fará a ação
+	 */
 	_closeSideMenu(element) {
 		element.parentNode.classList.remove('active')
 		// Verifica se existe Side Menu anterior, caso contrário mostra todos os itens de volta
@@ -211,6 +260,11 @@ class BRMenu {
 		this._showItems(parentFolder)
 	}
 
+	/**
+	 * Esconde os elementos proximos a referencia
+	 * @private
+	 * @param {object} element - referencia ao Objeto que fará a ação
+	 */
 	_hideItems(element) {
 		for (const item of element
 			.closest('.menu-body')
@@ -219,12 +273,23 @@ class BRMenu {
 		}
 	}
 
+	/**
+	 * Mostra os elementos proximos a referencia
+	 * @private
+	 * @param {object} element - referência ao Objeto que fará a ação
+	 */
 	_showItems(element) {
 		for (const item of element.querySelectorAll('.menu-item')) {
 			item.removeAttribute('hidden')
 		}
 	}
 
+	/**
+	 * Cria icone filho a referencia
+	 * @private
+	 * @param {object} element - referência ao Objeto pai
+	 * @param {string} icon - nome da classe font awesome do ícone
+	 */
 	_createIcon(element, icon) {
 		const menuIconContainer = document.createElement('span')
 		menuIconContainer.classList.add('support')
