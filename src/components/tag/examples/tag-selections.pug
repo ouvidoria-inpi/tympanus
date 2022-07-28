@@ -1,0 +1,27 @@
+extends ../../../partial/pug/isolate
+
+block dependencies
+  include ../tag
+  include ../../../partial/pug/utilities/icon.pug
+
+block content
+
+  .row
+    .col-md
+      p
+        label Tag com Seleção Única
+      +tag-radio
+      
+    .col-md
+      p 
+        label Tag com Seleção Múltipla
+      +tag-interaction-select
+        input(id="tag" type="checkbox" aria-label="selecionar tag" tabindex="0")
+        label(for="tag")
+          +icon.fa-car
+          span Label
+      +tag-interaction-select.selected
+        input(id="tag01" type="checkbox" aria-label="selecionar tag" checked tabindex="0")
+        label(for="tag01")
+          +icon.fa-car
+          span Label 
