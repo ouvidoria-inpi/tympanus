@@ -26,8 +26,6 @@
   max-height: var(--wizard-max-height);
   max-width: none;
   min-height: var(--wizard-min-height);
-  overflow-x: auto;
-  overflow-y: auto;
 }
 
 @mixin wizard-progress {
@@ -119,11 +117,17 @@
     }
 
     &:hover:not([disabled])::before {
-      background-image: linear-gradient(rgba(var(--interactive-rgb), var(--hover)), rgba(var(--interactive-rgb), var(--hover)));
+      background-image: linear-gradient(
+        rgba(var(--interactive-rgb), var(--hover)),
+        rgba(var(--interactive-rgb), var(--hover))
+      );
     }
 
     &:active:not([disabled])::before {
-      background-image: linear-gradient(rgba(var(--interactive-rgb), var(--pressed)), rgba(var(--interactive-rgb), var(--pressed)));
+      background-image: linear-gradient(
+        rgba(var(--interactive-rgb), var(--pressed)),
+        rgba(var(--interactive-rgb), var(--pressed))
+      );
     }
 
     &::before {
@@ -143,7 +147,8 @@
       position: absolute;
       top: 0;
       transform: translateX(-50%);
-      transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+      transition: all 0.15s linear 0s,
+        transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
       width: 36px;
       z-index: 3;
     }
@@ -221,7 +226,6 @@
 
       .wizard-form {
         height: auto;
-
       }
 
       .wizard-panel-content {
@@ -351,7 +355,6 @@
       padding: 0 !important;
       position: static;
       width: 100%;
-
     }
 
     .wizard-btn-canc,
@@ -419,8 +422,8 @@
 
     &[scroll] {
       .wizard-progress {
-        overflow-x: hidden;
         overflow-y: auto;
+        @include scrollbar;
 
         .wizard-progress-btn {
           min-height: 100px;
@@ -478,7 +481,6 @@
         transition-duration: 0.25s;
         transition-property: all;
         transition-timing-function: linear;
-
       }
 
       .wizard-panel {
