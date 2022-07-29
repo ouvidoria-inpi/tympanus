@@ -20,7 +20,7 @@ class AccordionExample {
     this._setAccordionBehavior()
   }
   /**
-   * Encontra os data-toggle accordion  e coloca util Accordion
+   * Encontra os data-toggle scrim  e coloca util Scrim
    * @private
    */
   _setAccordionBehavior() {

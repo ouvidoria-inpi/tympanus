@@ -66,3 +66,12 @@ import Tooltip from 'core'
 
     
 ```
+
+#### Objeto de configuração
+
+| Propriedade   | Tipo   | Descrição                                                       |
+| ------------- | ------ | --------------------------------------------------------------- |
+| `activator`   | Object | Referência ao elemento (DOM) acionador                          |
+| `placement`   | String | Local aonde vai ser mostado o tooltip(top, right, left, bottom) |
+| `textTooltip` | String | Texto do tooltip                                                |
+| `type`        | String | Tipo de tooltip(info, warning)                                  |
