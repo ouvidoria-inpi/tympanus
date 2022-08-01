@@ -1,13 +1,13 @@
-[version]: # (1.0.6)
+[version]: # (1.0.7)
 
 Superfície é qualquer forma indivisível que pode conter um ou mais elementos.
 
-![Exemplosde superfície.](imagens/formas.png)
+![Exemplos de superfície.](imagens/formas.png)
 *Exemplos de superfícies.*
 
-Todos os componentes desse _Design System_ utilizam superfícies como base para a criação dos componentes.
+Todos os componentes desse *Design System* utilizam superfícies como base para a criação dos componentes.
 
-**Atenção:** algumas vezes podemos nos referir à superfície com os termos genéricos _**background**_ ou **contêiner**.
+**Atenção:** algumas vezes podemos nos referir à superfície com os termos genéricos *background* ou *container*.
 
 ---
 
@@ -25,7 +25,7 @@ Ao utilizar superfícies na criação de componentes lembre sempre que o objetiv
 
 ### Acessibilidade
 
-Superfícies podem assumir qualquer cor da paleta cromática do _Design System_ mas atenção para o contraste das cores escolhidas. Siga sempre as orientações de boas práticas deste manual.
+Superfícies podem assumir qualquer cor da paleta cromática do *Design System* mas atenção para o contraste das cores escolhidas. Siga sempre as orientações de boas práticas deste manual.
 
 > **Exemplo:** A cor padrão para a superfície é branca por ser neutra e proporcionar um bom contraste com a cor padrão utilizada em textos. Porém, é critério do designer escolher a cor que melhor atenda às necessidades criativas e de usabilidade.
 
@@ -33,24 +33,24 @@ Superfícies podem assumir qualquer cor da paleta cromática do _Design System_ 
 
 As superfícies foram pensadas para oferecer uma variedade de atributos que permitam a criação de diversas formas e possibilidades de uso. Prefira as opções disponibilizadas nesse documento, porém, caso haja necessidade, novos atributos podem ser sugeridos para uma maior personalização da superfície.
 
-----
+---
 
 ## Propriedades
 
 Propriedade da superfície são algumas características variáveis que podem ser manipuladas para criar superfícies personalizadas. São elas: cor, borda, canto, sombra e transparência. A seguir são detalhados cada um deles:
 
-### Cores
+### 1. Cores
 
-A superfície dos elementos pode apresentar qualquer cor prevista na paleta de cores do _Design System_.
+A superfície dos elementos pode apresentar qualquer cor prevista na paleta de cores do *Design System*.
 
 ![Exemplos de algumas cores possíveis para superfícies.](imagens/cor.png)
 *Exemplos de algumas cores possíveis para superfícies.*
 
 **Atenção:** lembre sempre de verificar o contraste entre as cores utilizadas na superfície e nos elementos contidos na superfície.
 
-### Bordas
+### 2. Bordas
 
-As bordas definem os limites de uma superfície e podem funcionar como espécie de separadores entre a superfície e o _background_. Apresentam diferentes tipos e espessuras. É possível também uma superfície não apresentar bordas visíveis.
+As bordas definem os limites de uma superfície e podem funcionar como espécie de separadores entre a superfície e o *background*. Apresentam diferentes tipos e espessuras. É possível também uma superfície não apresentar bordas visíveis.
 
 ![Exemplos de diferentes tipos e espessuras de bordas da superfície.](imagens/bordas.png)
 *Diferentes tipo e espessuras de bordas.*
@@ -59,7 +59,7 @@ Use bordas quando necessitar um maior contraste com a cor do fundo, principalmen
 
 **Cuidado:** o excesso de bordas pode ocasionar um ruído visual e dificuldade de legibilidade.
 
- **Atenção:** nos _softwares_ gráficos as bordas devem estar configurada conforme a imagem a seguir:
+ **Atenção:** nos *softwares* gráficos as bordas devem estar configurada conforme a imagem a seguir:
 
 1. Traçado interno;
 2. Arremate projetado;
@@ -68,9 +68,9 @@ Use bordas quando necessitar um maior contraste com a cor do fundo, principalmen
 ![Exemplo para a configuração de borda no Adobe XD.](imagens/bordas3.png)
 *Exemplo para a configuração de bordas no Adobe XD.*
 
-#### Atributos
+#### Atributos para Bordas
 
-##### 1. _Style_
+##### 1. *Style*
 
 Define o tipo/estilo de borda. Pode ser: `solid` ou `dashed`.
 
@@ -78,38 +78,38 @@ Define o tipo/estilo de borda. Pode ser: `solid` ou `dashed`.
 
 Refere-se à espessura do traço. Temos os seguintes tokens:
 
-|px|Width Token|
-|:--:|:--:|
-|0|`--surface-width-none`|
-|1|`--surface-width-sm`|
-|2|`--surface-width-md`|
-|4|`--surface-width-lg`|
+|  px   |      Width Token       |
+| :---: | :--------------------: |
+|   0   | `--surface-width-none` |
+|   1   |  `--surface-width-sm`  |
+|   2   |  `--surface-width-md`  |
+|   4   |  `--surface-width-lg`  |
 
 ![Possíveis variações de bordas para uma superfície.](imagens/bordas2.png)
  *Variação das bordas possíveis para uma superfície previstas no DS.*
 
-##### 3. _Color_
+##### 3. *Color*
 
-Pode assumir qualquer cor prevista na **paleta de cores** do _Design System_.
+Pode assumir qualquer cor prevista na *paleta de cores* do *Design System*.
 
-##### 4. _Side_
+##### 4. *Side*
 
 Define os lados da superfície que a borda será aplicada. Pode ser: `top`, `right`, `bottom`, `left`, `all`.
 
 #### Tipos de Bordas
 
-|Surface Border Token|Style|Width|Color|
-|:--:|:--:|--|--|
-|`--surface-border-solid-none`|solid|`--surface-width-none`|`--gray-40`|
-|`--surface-border-solid-sm`|solid|`--surface-width-sm`|`--gray-40`|
-|`--surface-border-solid-md`|solid|`--surface-width-md`|`--gray-40`|
-|`--surface-border-solid-lg`|solid|`--surface-width-lg`|`--gray-40`|
-|`--surface-border-dashed-none`|dashed|`--surface-width-none`|`--gray-40`|
-|`--surface-border-dashed-sm`|dashed|`--surface-width-sm`|`--gray-40`|
-|`--surface-border-dashed-md`|dashed|`--surface-width-md`|`--gray-40`|
-|`--surface-border-dashed-lg`|dashed|`--surface-width-lg`|`--gray-40`|
+|      Surface Border Token      | Style  | Width                  | Color       |
+| :----------------------------: | :----: | ---------------------- | ----------- |
+| `--surface-border-solid-none`  | solid  | `--surface-width-none` | `--gray-40` |
+|  `--surface-border-solid-sm`   | solid  | `--surface-width-sm`   | `--gray-40` |
+|  `--surface-border-solid-md`   | solid  | `--surface-width-md`   | `--gray-40` |
+|  `--surface-border-solid-lg`   | solid  | `--surface-width-lg`   | `--gray-40` |
+| `--surface-border-dashed-none` | dashed | `--surface-width-none` | `--gray-40` |
+|  `--surface-border-dashed-sm`  | dashed | `--surface-width-sm`   | `--gray-40` |
+|  `--surface-border-dashed-md`  | dashed | `--surface-width-md`   | `--gray-40` |
+|  `--surface-border-dashed-lg`  | dashed | `--surface-width-lg`   | `--gray-40` |
 
-### Cantos
+### 3. Cantos
 
 As superfícies podem apresentar variações no arredondamento dos cantos das bordas. Podem apresentar desde cantos retos (quadrados) até totalmente arredondados. Esse atributo possibilita a criação de novas formas.
 
@@ -118,67 +118,67 @@ As superfícies podem apresentar variações no arredondamento dos cantos das bo
 
 Use as variações de arredondamento dos cantos para criar novas formas. Geralmente, quanto mais arredondados forem os cantos, mais orgânica é a forma. Use cantos retos para formas que necessitam transmitir solidez e seriedade e formas arredondadas para transmitir ideia de modernidade e informalidade.
 
-#### Atributos
+#### Atributos para Cantos
 
-##### 1. _Rounder_
+##### 1. *Rounder*
 
-Refere-se ao arredondamento das bordas. Temos os seguintes _tokens_:
+Refere-se ao arredondamento das bordas. Temos os seguintes *tokens*:
 
-|px|Rounder Token|
-|:--:|:--:|
-|0|`--surface-rounder-none`|
-|4|`--surface-rounder-sm`|
-|8|`--surface-rounder-md`|
-|16|`--surface-rounder-lg`|
-|altura/2|`--surface-rounder-pill`|
+|    px    |      Rounder Token       |
+| :------: | :----------------------: |
+|    0     | `--surface-rounder-none` |
+|    4     |  `--surface-rounder-sm`  |
+|    8     |  `--surface-rounder-md`  |
+|    16    |  `--surface-rounder-lg`  |
+| altura/2 | `--surface-rounder-pill` |
 
 ![Variações dos arrendondamentos de cantos possíveis para uma superfície.](imagens/cantos2.png)
 *Variação dos arredondamentos de cantos possíveis para uma superfície neste DS.*
 
-Pode-se construir superfícies com formas totalmente redondas utilizando a fórmula para os cantos _pill_ **R=A/2**, onde:
+Pode-se construir superfícies com formas totalmente redondas utilizando a fórmula para os cantos *pill* *R=A/2*, onde:
 
-**R = arredondamento dos cantos;**
-**A = altura da superfície.**
+*R = arredondamento dos cantos;*
+*A = altura da superfície.*
 
 Na figura acima, a superfície circular tem uma altura de 150px, logo o arredondamento é de 75px. Assim, partindo de uma forma quadrada se consegue chegar a uma forma circular.
 
-Esse recurso é muito utilizado para a criação de botões estilo _pill_ (pílula) e _tags_.
+Esse recurso é muito utilizado para a criação de botões estilo *pill* (pílula) e *tags*.
 
-1. Botão _Pill_ (R=24px, A=48px);
+1. Botão *Pill* (R=24px, A=48px);
 
 ![Exemplo de superfície no formato pill.](imagens/cantos3.png)
-*Exemplos de superfícies no formato pílula (_pill_).*
+*Exemplos de superfícies no formato pílula (*pill*).*
 
-##### 2. _Side_
+##### 2. *Side*
 
 Define os lados da superfície que a borda será aplicada podendo ser: `top/right`, `bottom/right`, `bottom/left`, `bottom/right`, `all`.
 
-### Opacidade
+### 4. Opacidade
 
 Opacidade é a propriedade do objeto de reter luz. Quanto mais transparente for a superfície, mais luz passa através dela e mais nitidez é perceptível nos elementos situados atrás. A superfície pode apresentar diferentes níveis de opacidade. Isso é relevante quando é necessário transparecer uma quantidade de informação do elemento que se encontra imediatamente atrás.
 
 ![Exemplo de imagem com variados níveis de opacidade.](imagens/transparencia.png)
 *A imagem 1 mostra uma foto comum. A imagem 2 mostra a mesma foto sobreposta por superfícies com diferentes níveis de opacidade.*
 
-Opacidades podem ainda ser utilizadas para sobrepor imagens ou cores e desta forma conseguir novas tonalidades. Chamamos esse comportamento de **_overlay_**. Mais adiante esse comportamento será melhor detalhado.
+Opacidades podem ainda ser utilizadas para sobrepor imagens ou cores e desta forma conseguir novas tonalidades. Chamamos esse comportamento de *overlay*. Mais adiante esse comportamento será melhor detalhado.
 
-#### Atributos
+#### Atributos para Opacidade
 
-##### 1. _Opacity_
+##### 1. *Opacity*
 
 Define a transparência de uma superfície e é definido por valores entre 0 a 1. Temos os seguintes tokens:
 
-|Value|Opacity Token|
-|:--:|:--:|
-|0|`--surface-opacity-none`|
-|1|`--surface-opacity-default`|
-|0.16|`--surface-opacity-xs`|
-|0.30|`--surface-opacity-sm`|
-|0.45|`--surface-opacity-md`|
-|0.65|`--surface-opacity-lg`|
-|0.85|`--surface-opacity-xl`|
+| Value |        Opacity Token        |
+| :---: | :-------------------------: |
+|   0   |  `--surface-opacity-none`   |
+|   1   | `--surface-opacity-default` |
+| 0.16  |   `--surface-opacity-xs`    |
+| 0.30  |   `--surface-opacity-sm`    |
+| 0.45  |   `--surface-opacity-md`    |
+| 0.65  |   `--surface-opacity-lg`    |
+| 0.85  |   `--surface-opacity-xl`    |
 
-### Elevação
+### 5. Elevação
 
 As superfícies estão localizadas em camadas imaginárias e assim projetam diferentes intensidades de sombra no plano de fundo (camada zero) ou em outra superfície situada em camada imediatamente atrás. Portanto a sombra está relacionada com a elevação da camada em que a superfície se encontra.
 
@@ -189,68 +189,70 @@ Este assunto é tratado de forma mais detalhado em documento específico: Fundam
 
 ---
 
-## Comportamento
+## Comportamentos
 
-### Deslocável
+### 1. Deslocável
 
-As superfícies podem ser arrastadas para outra posição dentro da tela. Esse é um comportamento do estado **arrastado** e é melhor definido no documento de Fundamentos>Estados.
+As superfícies podem ser arrastadas para outra posição dentro da tela. Esse é um comportamento do estado *arrastado* e é melhor definido no documento de Fundamentos>Estados.
 
 ![Etapas que ilustram o deslocamento de uma superfície.](imagens/deslocamento.png)
 *A imagem ilustra as etapas da alteração da posição da superfície escura em uma sequência de superfícies.*
 
-### Dimensionável
+### 2. Dimensionável
 
 As superfícies são estruturas rígidas porém redimensionáveis no plano bidimensional. Alguns componentes podem ter superfícies flexíveis em relação ao conteúdo, isto é, crescem conforme a quantidade de conteúdo em seu interior. Já outros, possuem dimensões fixas e disponibilizam barra de rolagem para dar acesso ao conteúdo que extrapola as dimensões fixas.
 
 ![Exemplo da propriedade de escalabilidade da superfície.](imagens/dimensionavel.png)
 *A imagem ilustra uma superfície sendo redimensionada pelo usuário.*
 
-### _Overlay_
+### 3. *Overlay*
 
-Um _overlay_ (sobreposição) é uma superfície semitransparente sobre um elemento específico ou sobre uma área da tela. _Overlays_ podem ajudar a redirecionar a atenção do usuário, inibir a interação sobre outras áreas/elementos ou retornar feedback visuais para o usuário.
+Um *overlay* (sobreposição) é uma superfície semitransparente sobre um elemento específico ou sobre uma área da tela. *Overlays* podem ajudar a redirecionar a atenção do usuário, inibir a interação sobre outras áreas/elementos ou retornar feedback visuais para o usuário.
 
 Apesar de infinidade de aplicações, ela se destaca em dois usos:
 
 #### 1. Foco
 
-Usado para alterar o foco hierárquico de um elemento (ou uma área) sobre outros, onde um determinado conteúdo precisa de uma grande relevância sobre os demais. Este uso é conhecido em outros lugares como _scrim_.
+Usado para alterar o foco hierárquico de um elemento (ou uma área) sobre outros, onde um determinado conteúdo precisa de uma grande relevância sobre os demais. Este uso é conhecido em outros lugares como *scrim*.
 
-É comum que esse tipo de uso permita inibir as interações de elementos sob a superfície _overlay_.
+É comum que esse tipo de uso permita inibir as interações de elementos sob a superfície *overlay*.
 
 ![Overlay sendo utilizado para focar um elemento modal.](imagens/overlay-foco.png)
-*_Overlay_ sendo utilizado para focar um elemento modal.*
+*Overlay* sendo utilizado para focar um elemento modal.*
 
 ![Overlay sendo utilizado para focar uma área específica da tela.](imagens/overlay-foco2.png)
-*_Overlay_ sendo utilizado para focar uma área específica da tela.*
+*Overlay* sendo utilizado para focar uma área específica da tela.*
 
-|Surface overlay Token|Color|Color Opacity|
-|:--:|--|--|
-|`--surface-overlay-scrim`|`--pure-100`|`--surface-opacity-md`|
+|   Surface overlay Token   | Color        | Color Opacity          |
+| :-----------------------: | ------------ | ---------------------- |
+| `--surface-overlay-scrim` | `--pure-100` | `--surface-opacity-md` |
 
 #### 2. Legibilidade
 
 Usado quando um texto precisa ser aplicado sobre uma superfície e o contraste entre fundo/texto não é suficiente para gerar um contraste acessível;
 
-![Exemplo de como o _overlay_ pode melhorar a leitura de textos sobre fotos.](imagens/text-image.png)
-*1. Imagem com texto (sem _overlay_): pouco contraste para leitura;
-2. Camada _overlay_ com degradê;
-3. Imagem com texto (com _overlay_): maior contraste para leitura.*
+![Exemplo de como o *overlay* pode melhorar a leitura de textos sobre fotos.](imagens/text-image.png)
 
-|Surface overlay Token|Gradient|Angle|Color|Color Opacity|Hint|Color|Color Opacity|Hint|
-|:--:|--|--|--|--|--|--|--|--|
-|`--surface-overlay-text`|`linear-gradient`|`180deg`|`--pure-0`|`--surface-opacity-none`|`0%`|`--pure-100`|`--surface-opacity-default`|`100%`|
+1. Imagem com texto (sem *overlay*): pouco contraste para leitura;
+2. Camada *overlay* com degradê;
+3. Imagem com texto (com *overlay*): maior contraste para leitura.
 
-#### Cuidados ao utilizar um _overlay_
+|  Surface overlay Token   | Gradient          | Angle    | Color      | Color Opacity            | Hint | Color        | Color Opacity               | Hint   |
+| :----------------------: | ----------------- | -------- | ---------- | ------------------------ | ---- | ------------ | --------------------------- | ------ |
+| `--surface-overlay-text` | `linear-gradient` | `180deg` | `--pure-0` | `--surface-opacity-none` | `0%` | `--pure-100` | `--surface-opacity-default` | `100%` |
 
-A versatilidade de uso de uma superfície _overlay_ é muito grande.
+#### Cuidados ao utilizar um *overlay*
 
-Podemos utilizar todas as propriedades listadas na superfície em conjunto com outros comportamentos para gerar aplicações muito mais ricas, como por exemplo, personalizar a forma da superfície _overlay_ (com a propriedade canto) em conjunto com recursos de animação (_motion_) gerando interações mais dinâmicas para o usuário.
+A versatilidade de uso de uma superfície *overlay* é muito grande.
 
-Porém, o uso do _overlay_ deve ser claro e dentro do seu propósito descrito no Design System GOV.BR, pois o uso indiscriminado pode interferir nas diretrizes.
+Podemos utilizar todas as propriedades listadas na superfície em conjunto com outros comportamentos para gerar aplicações muito mais ricas, como por exemplo, personalizar a forma da superfície *overlay* (com a propriedade canto) em conjunto com recursos de animação (*motion*) gerando interações mais dinâmicas para o usuário.
 
-**Evite** a criação de novos matizes de cores: quando utilizada a superfície _overlay_ "colorida" sobre uma superfície de cor distinta. Essa mistura de cores pode gerar distorções na identidade visual. **Prefira** o uso desse tipo de _overlay_ em situações muito específicas (como feedback de interações executadas pelos usuários), ou em casos mais gerais, tente interferir somente no brilho e/ou na saturação dos elementos.
+Porém, o uso do *overlay* deve ser claro e dentro do seu propósito descrito no Design System, pois o uso indiscriminado pode interferir nas diretrizes.
+
+**Atenção:** Evite a criação de novos matizes de cores: quando utilizada a superfície *overlay* "colorida" sobre uma superfície de cor distinta. Essa mistura de cores pode gerar distorções na identidade visual. *Prefira* o uso desse tipo de *overlay* em situações muito específicas (como feedback de interações executadas pelos usuários), ou em casos mais gerais, tente interferir somente no brilho e/ou na saturação dos elementos.
 
 ![Exemplo de como se pode criar uma nova tonalidade utilizando o recurso de overlay.](imagens/overlay.png)
-*1. Superfície _overlay_ "colorida" com opacidade 45%;
+
+1. Superfície *overlay* "colorida" com opacidade 45%;
 2. Superfície com outra cor distinta;
-3. Nova tonalidade de cor gerada pela sobreposição das duas superfícies.*
+3. Nova tonalidade de cor gerada pela sobreposição das duas superfícies.

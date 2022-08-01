@@ -1,6 +1,6 @@
-[version]: # (7.1.4)
+[version]: # (7.1.6)
 
-A aplicação correta da paleta de cores visa trazer consistência ao _Design System_ e contribuir para garantir uma interface unificada e facilmente reconhecível pelos seus usuários. É fundamental que a paleta esteja alinhada aos Princípios do _Design System_ e seja aplicada corretamente na biblioteca de componentes contribuindo para o equilíbrio entre os diversos produtos e sistemas do governo.
+A aplicação correta da paleta de cores visa trazer consistência ao *Design System* e contribuir para garantir uma interface unificada e facilmente reconhecível pelos seus usuários. É fundamental que a paleta esteja alinhada aos Princípios do *Design System* e seja aplicada corretamente na biblioteca de componentes contribuindo para o equilíbrio entre os diversos produtos e sistemas do governo.
 
 ---
 
@@ -8,15 +8,15 @@ A aplicação correta da paleta de cores visa trazer consistência ao _Design Sy
 
 ### Experiência Única
 
-A paleta do Design System GOV.BR é constituída e organizada por cores e famílias de cores, abrangendo dimensões de matizes, brilhos e saturação. Além disso, são estabelecidas finalidades específicas para algumas dessas famílias: **Cores de Superfície**, **Cores de Leitura**, **Cores Interativas** e **Cores de Feedback**. Elas tem o objetivo de preservar a identidade visual e manter a mesma experiência em todos os produtos e sistemas do Governo.
+A paleta do Design System é constituída e organizada por cores e famílias de cores, abrangendo dimensões de matizes, brilhos e saturação. Além disso, são estabelecidas finalidades específicas para algumas dessas famílias: *Cores de Superfície*, *Cores de Leitura*, *Cores Interativas* e *Cores de Feedback*. Elas tem o objetivo de preservar a identidade visual e manter a mesma experiência em todos os produtos e sistemas do Governo Federal.
 
-> **Exemplo:** Nesse sistema, a família **Blue Warm Vivid**, que contém a cor **Blue Warm Vivid 70**, foram as cores selecionadas para representar a identidade do Governo.
+> *Exemplo:* Nesse sistema, a família *Blue Warm Vivid*, que contém a cor *Blue Warm Vivid 70*, foram as cores selecionadas para representar a identidade do Governo Federal.
 
 ### Eficiência e Clareza
 
-A cor deve indicar o estado e hierarquia dos elementos dispostos em uma interface, facilitando o _feedback_ e comunicação entre a interface e o usuário, enquanto se mantêm consistentes ao longo de toda a navegação.
+A cor deve indicar o estado e hierarquia dos elementos dispostos em uma interface, facilitando o *feedback* e comunicação entre a interface e o usuário, enquanto se mantêm consistentes ao longo de toda a navegação.
 
-> **Exemplo:** A cor ajuda a indicar quais elementos são interativos, como eles se relacionam com outros elementos.
+> *Exemplo:* A cor ajuda a indicar quais elementos são interativos, como eles se relacionam com outros elementos.
 
 ### Acessibilidade
 
@@ -26,35 +26,35 @@ A [WCAG 2.1](https://www.w3.org/TR/WCAG20/) (Diretrizes de Acessibilidade para o
 
 O contraste varia entre 1 a 21 (geralmente descritos 1:1 a 21:1).
 
-O **nível AA** indica que é necessária uma taxa de contraste de pelo menos **4,5:1** para que o texto seja considerado normal e tenha boa legibilidade. Para texto grande a taxa de contraste mínimo deve ser de pelo menos **3:1**.
+O *nível AA* indica que é necessária uma taxa de contraste de pelo menos *4,5:1* para que o texto seja considerado normal e tenha boa legibilidade. Para texto grande a taxa de contraste mínimo deve ser de pelo menos *3:1*.
 
-O **nível AAA** requer uma taxa de contraste de pelo menos **7:1** para texto normal e **4,5:1** para texto grande.
+O *nível AAA* requer uma taxa de contraste de pelo menos *7:1* para texto normal e *4,5:1* para texto grande.
 
-É considerado **texto grande** aquele em que a fonte possui pelo menos 18 pontos (24px, 1,71em, 171% do tamanho padrão da Fonte Base, veja [Tipografia](/ds/fundamentos-visuais/tipografia) para maiores detalhes) ou 14 pontos em negrito (19px, 1,325em, 132,5%), um texto com tamanho abaixo desses valores (tal como 14pt regular) é considerado **texto normal**.
+É considerado *texto grande* aquele em que a fonte possui pelo menos 18 pontos (24px, 1,71em, 171% do tamanho padrão da Fonte Base, veja [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) para maiores detalhes) ou 14 pontos em negrito (19px, 1,325em, 132,5%), um texto com tamanho abaixo desses valores (tal como 14pt regular) é considerado *texto normal*.
 
 Elementos gráficos e componentes da interface (como ícones e bordas) seguem as mesmas regras de texto grande.  
 
-O _Design System_ do governo trabalha com nível de conformidade **mínima de AA** (na taxa de contraste **4,5:1**), pois permite uma flexibilidade maior de variações de cores (em relação à conformidade AAA) e atende aos critérios mínimos de contraste proposto pela WCAG 2.1.
+O *Design System* do governo trabalha com nível de conformidade *mínima de AA* (na taxa de contraste *4,5:1*), pois permite uma flexibilidade maior de variações de cores (em relação à conformidade AAA) e atende aos critérios mínimos de contraste proposto pela WCAG 2.1.
 
-_Observação_: algumas cores foram selecionadas para um uso bastante específico, deste modo, elas funcionam no contraste mínimo de 3:1, ou seja, apenas para uso em elementos gráficos (ou texto grande).
+*Observação*: algumas cores foram selecionadas para um uso bastante específico, deste modo, elas funcionam no contraste mínimo de 3:1, ou seja, apenas para uso em elementos gráficos (ou texto grande).
 
-> Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas online <https://contrastchecker.com/> e  <https://webaim.org/resources/contrastchecker/>
+> Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas online [Contrast Checker](https://contrastchecker.com) e [Web AIM Contrast Checker](https://webaim.org/resources/contrastchecker)
 
-Para o _Design System_ foi analisado a relação de contraste entre **a cor aplicada aos textos (2 variações que dependendo do brilho do plano de fundo da interface: claro ou escuro) e as cores que compõem a paleta do DS**.
+Para o *Design System* foi analisado a relação de contraste entre *a cor aplicada aos textos (2 variações que dependendo do brilho do plano de fundo da interface: claro ou escuro) e as cores que compõem a paleta do DS*.
 
-> **Exemplo:** Para o texto em **fundo claro** optou-se pelo uso do cinza **#333333** que possui contraste inferior ao preto, mas suficiente para uma boa leitura na tela. O tom neutro, deixa a composição mais leve, tornando a leitura mais agradável. Para texto em **fundo escuro** optou-se pela cor branca **#FFFFF**.
+> *Exemplo:* Para o texto em *fundo claro* optou-se pelo uso do cinza *#333333* que possui contraste inferior ao preto, mas suficiente para uma boa leitura na tela. O tom neutro, deixa a composição mais leve, tornando a leitura mais agradável. Para texto em *fundo escuro* optou-se pela cor branca *#FFFFF*.
 
 ### Reutilização e Colaboração
 
 Interfaces digitais do governo devem utilizar sempre as cores pré-definidas. Havendo a necessidade de acrescentar uma nova cor à paleta do DS, faz-se necessário que a cor seja testada do ponto de vista de acessibilidade e passe por uma prévia aprovação da equipe de design do DS.
 
-**OBS:** Consulte a acessibilidade das cores usadas no Design System GOV.BR na **Tabela de Contraste**.
+*OBS:* Consulte a acessibilidade das cores usadas no Design System na [Tabela de Contraste](#contrast-table).
 
 ---
 
 ## Sistema de Cores
 
-O sistema de cores utilizado no Design System GOV.BR, assim como o modelo de gradação em luminância e _Famílias de Cores_, foram adaptados do modelo de cores do [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/).
+O sistema de cores utilizado no Design System, assim como o modelo de gradação em luminância e *Famílias de Cores*, foram adaptados do modelo de cores do [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/).
 
 ### Cor
 
@@ -64,54 +64,54 @@ O sistema de cores utilizado no Design System GOV.BR, assim como o modelo de gra
 
 É um grupo de cores que têm o mesmo matiz em um círculo cromático. Eles contêm várias cores individuais, diferenciadas pelo brilho ou saturação de cada uma delas. Uma família de cores é normalmente representada por um nome que faz referência a sua matiz, como por exemplo: `Red`, `Blue Warm`, `Green Cool`, etc.
 
-As famílias de cores do Design System GOV.BR são escolhidas a partir do modelo _HSL_ _(Hue, Saturation, Lightness)_, sistema de cores que utiliza os parâmetros de matiz, saturação e brilho, sendo dispostas em 360º em um círculo cromático. Desta forma, é possível rotular cada família através de sua posição em graus, neste modelo. As cores são selecionadas seguindo a mesma lógica de gradação de luminância em todas as famílias.
+As famílias de cores do Design System são escolhidas a partir do modelo *HSL* *(Hue, Saturation, Lightness)*, sistema de cores que utiliza os parâmetros de matiz, saturação e brilho, sendo dispostas em 360º em um círculo cromático. Desta forma, é possível rotular cada família através de sua posição em graus, neste modelo. As cores são selecionadas seguindo a mesma lógica de gradação de luminância em todas as famílias.
 
 ### Família de Cores Alternativas
 
-Refere-se ao mesmo conceito de _Família de Cores_. Fazem parte de um grupo de cores de um mesmo matiz mas pertencentes a um outro círculo cromático (com característica diferente da família "padrão"). Sua nomenclatura tem a mesma base da _Família de Cores_ adicionando um sufixo.
+Refere-se ao mesmo conceito de *Família de Cores*. Fazem parte de um grupo de cores de um mesmo matiz mas pertencentes a um outro círculo cromático (com característica diferente da família "padrão"). Sua nomenclatura tem a mesma base da *Família de Cores* adicionando um sufixo.
 
 Atualmente temos apenas um círculo cromático alternativo chamado `Vivid`, criando famílias como `Red Vivid`, `Blue Warm Vivid`, `Green Cool Vivid`, etc.
 
 ### Círculo Cromático
 
-Os círculos cromáticos são uma maneira de exibir as famílias do sistema de cores do Design System GOV.BR, dispostas em 360° no modelo de cores HSL. Cada família de cores está localizada com sua posição (em graus) neste modelo.
+Os círculos cromáticos são uma maneira de exibir as famílias do sistema de cores do Design System, dispostas em 360° no modelo de cores HSL. Cada família de cores está localizada com sua posição (em graus) neste modelo.
 
-Abaixo é possível observar o padrão das famílias de cores do Design System GOV.BR dentro de cada círculo cromático.
+Abaixo é possível observar o padrão das famílias de cores do Design System dentro de cada círculo cromático.
 
 ![Sistema HSL - Famílias de Cores](imagens/circle-01.png)
-_Círculo cromático (padrão)_
+*Círculo cromático (padrão)*
 
 ![Sistema HSL - Famílias de Cores Alternativas](imagens/circle-02.png)
-*Círculo cromático _vivid_ (alternativo) -  cores mais saturadas.*
+*Círculo cromático vivid (alternativo) -  cores mais saturadas.*
 
 Existem algumas famílias que não estão visíveis dentro dos círculos cromáticos acima mas que podem ser usados como cores neutras:
 
-- Famílias de Cinza: `Gray`, `Gray-Cool` e `Gray-Warm`.
-- Família Pura: `Pure`
+-   Famílias de Cinza: `Gray`, `Gray-Cool` e `Gray-Warm`.
+-   Família Pura: `Pure`
 
-A lista de todas as cores disponíveis podem ser encontradas na **Paleta do Design System GOV.BR**.
+A lista de todas as cores disponíveis podem ser encontradas na [Paleta do Design System](#paleta-do-govbr-ds).
 
 ---
 
 ## Função das Cores
 
-O Design System GOV.BR estabelece finalidades específicas utilizando as famílias de cores, com o intuito de facilitar a lógica para criação de temas. Em cada função estabelecida, qualquer cor da família especificada poderá ser usada, porém é recomendado utilizar a cor principal ou as alternativas indicadas nas escalas de cores.
+O Design System estabelece finalidades específicas utilizando as famílias de cores, com o intuito de facilitar a lógica para criação de temas. Em cada função estabelecida, qualquer cor da família especificada poderá ser usada, porém é recomendado utilizar a cor principal ou as alternativas indicadas nas escalas de cores.
 
-**Obs:** Em algumas situações, poderá ser observado o uso 2 de famílias para um determinada função e aplicação de fundo. Isso acontece por causa do uso da **Família Pure**, ela funciona como uma "família de apoio" para as demais. Maiores informações veja Paleta do Design System GOV.BR.
+**OBS:** Em algumas situações, poderá ser observado o uso 2 de famílias para um determinada função e aplicação de fundo. Isso acontece por causa do uso da *Família Pure*, ela funciona como uma "família de apoio" para as demais. Maiores informações veja Paleta do Design System.
 
 ### Cor Principal
 
-É a recomendação de uso principal que poderá ser usada para as finalidades estabelecidas. São representadas pela letra **P** e indicadas na _Família de Cores_ da seguinte forma:
+É a recomendação de uso principal que poderá ser usada para as finalidades estabelecidas. São representadas pela letra *P* e indicadas na *Família de Cores* da seguinte forma:
 
 ![Exemplo de Indicação - Cor Principal](imagens/sample-default.png)
-_Exemplo de Indicação - Cor Principal_
+*Exemplo de Indicação - Cor Principal*
 
 ### Cor Alternativa
 
-São alternativas de cores recomendadas que podem ser usadas quando não for possível utilizar a recomendação principal, ou trabalhar com ênfases. São representadas pela letra **A** e indicadas na _Família de Cores_ da seguinte forma:
+São alternativas de cores recomendadas que podem ser usadas quando não for possível utilizar a recomendação principal, ou trabalhar com ênfases. São representadas pela letra *A* e indicadas na *Família de Cores* da seguinte forma:
 
 ![Exemplo de Indicação - Cor Alternativa](imagens/sample-alternative.png)
-_Exemplo de Indicação - Cor Alternativa_
+*Exemplo de Indicação - Cor Alternativa*
 
 ### Fundo Claro Vs Fundo Escuro
 
@@ -121,105 +121,107 @@ Sempre que escolher uma cor (seja a principal ou as alternativas), determine o u
 
 Abaixo estão listadas as principais funções das cores, as recomendações de qual família de cor utilizar, assim como a recomendação da cor principal e das alternativas dentro do tema base.
 
-**Obs:** Cada função está ligada a um ou mais fundamentos. Procure as documentações relacionadas para maiores detalhes.
+**OBS:** Cada função está ligada a um ou mais fundamentos. Procure as documentações relacionadas para maiores detalhes.
 
-### 1. Função Contêiner ([Superfícies](/ds/fundamentos-visuais/superficie))
+### 1. Função *Container* ([Superfícies](/fundamentos-visuais/superficie))
 
-As **cores de superfície** são utilizadas como base cromática neutra para composição do tema e compõem harmonicamente com as demais cores. São usadas especificamente em planos de fundo nas telas da interface e superfícies de componentes. Também devem proporcionar contraste com o texto e elementos interativos, assim como qualquer outro elemento de comunicação visual na interface, como imagens, ilustrações, ícones, etc.
+As *cores de superfície* são utilizadas como base cromática neutra para composição do tema e compõem harmonicamente com as demais cores. São usadas especificamente em planos de fundo nas telas da interface e superfícies de componentes. Também devem proporcionar contraste com o texto e elementos interativos, assim como qualquer outro elemento de comunicação visual na interface, como imagens, ilustrações, ícones, etc.
 
 #### Especificação
 
- De modo geral, as cores de superfície mais utilizadas são as gradações de cinza, presentes na família `Gray` e branco ou preto na família `Pure`. Também pode se utilizar a família `Blue Warm Vivid` para fundos escuros. Elas são usadas como plano de fundo na tela e praticamente em todos os componentes do Design System GOV.BR.
+ De modo geral, as cores de superfície mais utilizadas são as gradações de cinza, presentes na família `Gray` e branco ou preto na família `Pure`. Também pode se utilizar a família `Blue Warm Vivid` para fundos escuros. Elas são usadas como plano de fundo na tela e praticamente em todos os componentes do Design System.
 
 ##### Fundo Claro
 
 | Legenda |  Recomendação   | Hexadecimal |   Token    |
 | :-----: | :-------------: | :---------: | :--------: |
-|  **P**  |  Cor Principal  |  `#ffffff`  | `--pure-0` |
-|  **A**  | Cor Alternativa |  `#f8f8f8`  | `--gray-2` |
+|   *P*   |  Cor Principal  |  `#ffffff`  | `--pure-0` |
+|   *A*   | Cor Alternativa |  `#f8f8f8`  | `--gray-2` |
 
 ![Cor Superfície - Família Pure](imagens/pure-family.png)
 *Cor Superfície - Família `Pure` para Fundos Claros*
 
-![Cor Superfície Alternativa - Escala de Cinza](imagens/gray-superficie-light.png)*Cor Superfície Alternativa - Família `Gray` para Fundos Claros*
+![Cor Superfície Alternativa - Escala de Cinza](imagens/gray-superficie-light.png)
+*Cor Superfície Alternativa - Família `Gray` para Fundos Claros*
 
 ##### Fundo Escuro
 
-| Legenda | Recomendação  | Hexadecimal |         Token          |
-| :-----: | :-----------: | :---------: | :--------------------: |
-|  **P**  | Cor Principal |  `#071D41`  | `--blue-warm-vivid-90` |
-|  **A**  | Cor Principal |  `#0C326F`  | `--blue-warm-vivid-80` |
+| Legenda |  Recomendação   | Hexadecimal |         Token          |
+| :-----: | :-------------: | :---------: | :--------------------: |
+|   *P*   |  Cor Principal  |  `#071D41`  | `--blue-warm-vivid-90` |
+|   *A*   | Cor Alternativa |  `#0C326F`  | `--blue-warm-vivid-80` |
 
 ![Cor Superfície - Família Blue-Warm-Vivid](imagens/blue-superficie-dark.png)
 *Cor Superfície - Família `Blue Warm Vivid` para Fundos Escuros*
 
-### 2. Função Leitura ([Tipografia](/ds/fundamentos-visuais/tipografia) e [Iconografia](/ds/fundamentos-visuais/iconografia))
+### 2. Função Leitura ([Tipografia](/fundamentos-visuais/tipografia) e [Iconografia](/fundamentos-visuais/iconografia))
 
-São as cores usadas nos elementos que necessitam de legibilidade, como textos e ícones, por exemplo. A função principal dessas cores é proporcionar contraste com a _Cor Superfície_ usada na tela ou elementos. Logo, para toda _Cor Superfície_, existe uma _Cor Leitura_ contrastante.
+São as cores usadas nos elementos que necessitam de legibilidade, como textos e ícones, por exemplo. A função principal dessas cores é proporcionar contraste com a *Cor Superfície* usada na tela ou elementos. Logo, para toda *Cor Superfície*, existe uma *Cor Leitura* contrastante.
 
-#### Especificação
+#### Especificação Leitura
 
-##### Fundo Claro
+##### Fundo Claro para Leitura
 
 | Legenda | Recomendação  | Hexadecimal |    Token    |
 | :-----: | :-----------: | :---------: | :---------: |
-|  **P**  | Cor Principal |  `#333333`  | `--gray-80` |
+|   *P*   | Cor Principal |  `#333333`  | `--gray-80` |
 
-![Cor Leitura - Família Gray](imagens/gray-reading-light.png)*Cor Leitura - Família `Gray` para Fundos Claros*
+![Cor Leitura - Família Gray](imagens/gray-reading-light.png)
+*Cor Leitura - Família `Gray` para Fundos Claros*
 
-##### Fundo Escuro
+##### Fundo Escuro para Leitura
 
 | Legenda | Recomendação  | Hexadecimal |   Token    |
 | :-----: | :-----------: | :---------: | :--------: |
-|  **P**  | Cor Principal |  `#ffffff`  | `--pure-0` |
+|   *P*   | Cor Principal |  `#ffffff`  | `--pure-0` |
 
 ![Cor Leitura - Família Pure](imagens/pure-family.png)
 *Cor Leitura - Família `Pure` para Fundos Escuros*
 
-### 3. Função _Feedback_ ([Estados](/ds/fundamentos-visuais/estados))
+### 3. Função *Feedback* ([Estados](/fundamentos-visuais/estados))
 
-São representações visuais para feedbacks interativos ou informacionais relacionadas aos elementos na interface. Podemos subdividir essa função em dois grupos de estados: **interação** e **avisos**.
+São representações visuais para feedbacks interativos ou informacionais relacionadas aos elementos na interface. Podemos subdividir essa função em dois grupos de estados: *interação* e *avisos*.
 
 #### Função Interação
 
 São cores que servem para indicar ao usuário a possibilidade de interação sobre qualquer elemento que a utiliza. É necessário que estas cores se destaquem sobre os outros elementos ou informações textuais na interface.
 
-##### Especificação
+##### Especificação Interação
 
 Para este tipo de cor, utilizam-se as famílias `Blue Warm` e `Blue Warm Vivid`. Abaixo seguem as referências.
 
-###### Fundo Claro
+###### Fundo Claro para Interação
 
 | Legenda | Recomendação  | Hexadecimal |         Token          |
 | :-----: | :-----------: | :---------: | :--------------------: |
-|  **P**  | Cor Principal |  `#1351B4`  | `--blue-warm-vivid-70` |
+|   *P*   | Cor Principal |  `#1351B4`  | `--blue-warm-vivid-70` |
 
 ![Cor Interativa - Família Blue Warm Vivid](imagens/blue-warm-vivid-interactive-light.png)
 *Cor Interativa - Família `Blue Warm Vivid` para Fundos Claros*
 
-###### Fundo Escuro
+###### Fundo Escuro para Interação
 
 | Legenda | Recomendação  | Hexadecimal |      Token       |
 | :-----: | :-----------: | :---------: | :--------------: |
-|  **P**  | Cor Principal |  `#C5D4EB`  | `--blue-warm-20` |
+|   *P*   | Cor Principal |  `#C5D4EB`  | `--blue-warm-20` |
 
 ![Cor Interativa - Família Blue Warm](imagens/blue-warm-interactive-dark.png)
 *Cor Interativa - Família `Blue Warm` para Fundos Escuros*
 
 #### Função de Avisos
 
- As cores de avisos foram escolhidas para serem aplicadas em situações que exijam mais atenção do usuário, como ocorre nas mensagens de _Feedback_ e estados correlacionados.
+ As cores de avisos foram escolhidas para serem aplicadas em situações que exijam mais atenção do usuário, como ocorre nas mensagens de *Feedback* e estados correlacionados.
 
-##### Especificação
+##### Especificação Avisos
 
-São cores fortemente reconhecidas pela boa parte dos usuários e relacionadas a avisos específicos. Consulte o documento [Fundamentos Visuais > Estados](/ds/fundamentos-visuais/estados) para maiores informações.
+São cores fortemente reconhecidas pela boa parte dos usuários e relacionadas a avisos específicos. Consulte o documento [Fundamentos Visuais > Estados](/fundamentos-visuais/estados) para maiores informações.
 
 ###### Feedback Informação
 
 | Legenda |  Recomendação   | Hexadecimal |         Token          |
 | :-----: | :-------------: | :---------: | :--------------------: |
-|  **P**  |  Cor Principal  |  `#155BCB`  | `--blue-warm-vivid-60` |
-|  **A**  | Cor Alternativa |  `#D4E5FF`  | `--blue-warm-vivid-10` |
+|   *P*   |  Cor Principal  |  `#155BCB`  | `--blue-warm-vivid-60` |
+|   *A*   | Cor Alternativa |  `#D4E5FF`  | `--blue-warm-vivid-10` |
 
 ![Cor Feedback Informação - Família Blue Warm Vivid](imagens/feedback-blue-warm-vivid.png)
 *Cor Feedback Informação - Família `Blue Warm Vivid`*
@@ -228,41 +230,41 @@ São cores fortemente reconhecidas pela boa parte dos usuários e relacionadas a
 
 | Legenda |  Recomendação   | Hexadecimal |          Token          |
 | :-----: | :-------------: | :---------: | :---------------------: |
-|  **P**  |  Cor Principal  |  `#168821`  | `--green-cool-vivid-50` |
-|  **A**  | Cor Alternativa |  `#E3F5E1`  | `--green-cool-vivid-5`  |
+|   *P*   |  Cor Principal  |  `#168821`  | `--green-cool-vivid-50` |
+|   *A*   | Cor Alternativa |  `#E3F5E1`  | `--green-cool-vivid-5`  |
 
 ![Cor Feedback Sucesso - Família Green Cool Vivid](imagens/feedback-green-cool-vivid.png)
-*Cor _Feedback_ Sucesso - Família `Green Cool Vivid`*
+*Cor Feedback Sucesso - Família `Green Cool Vivid`*
 
 ###### Feedback Alerta
 
 | Legenda |  Recomendação   | Hexadecimal |        Token        |
 | :-----: | :-------------: | :---------: | :-----------------: |
-|  **P**  |  Cor Principal  |  `#FFCD07`  | `--yellow-vivid-20` |
-|  **A**  | Cor Alternativa |  `#FFF5C2`  | `--yellow-vivid-5`  |
+|   *P*   |  Cor Principal  |  `#FFCD07`  | `--yellow-vivid-20` |
+|   *A*   | Cor Alternativa |  `#FFF5C2`  | `--yellow-vivid-5`  |
 
 ![Cor Feedback Alerta - Família Yellow Vivid](imagens/feedback-yellow-vivid.png)
-*Cor _Feedback_ Alerta - Família `Yellow Vivid`*
+*Cor Feedback Alerta - Família `Yellow Vivid`*
 
 ###### Feedback Erro
 
 | Legenda |  Recomendação   | Hexadecimal |      Token       |
 | :-----: | :-------------: | :---------: | :--------------: |
-|  **P**  |  Cor Principal  |  `#E52207`  | `--red-vivid-50` |
-|  **A**  | Cor Alternativa |  `#FDE0DB`  | `--red-vivid-10` |
+|   *P*   |  Cor Principal  |  `#E52207`  | `--red-vivid-50` |
+|   *A*   | Cor Alternativa |  `#FDE0DB`  | `--red-vivid-10` |
 
 ![Cor Feedback Erro - Família Red Vivid](imagens/feedback-red-vivid.png)
-*Cor _Feedback_ Erro - Família `Red Vivid`*
+*Cor Feedback Erro - Família `Red Vivid`*
 
  ---
 
-## Paleta do Design System GOV.BR
+## Paleta do Design System
 
-Como dito anteriormente, a paleta do Design System GOV.BR foi constituída por grupos de famílias, formadas por grupos de cores dentro do círculo cromático (HSL), com um matiz igual ou muito próximo. As famílias alternativas estão descritas com sufixo `Vivid` junto ao nome da família.
+Como dito anteriormente, a paleta do Design System foi constituída por grupos de famílias, formadas por grupos de cores dentro do círculo cromático (HSL), com um matiz igual ou muito próximo. As famílias alternativas estão descritas com sufixo `Vivid` junto ao nome da família.
 
 Os nomes das cores são formados pelo nome da família correspondente, adicionando o fator de luminância ao qual ela pertence, dentro daquela família.
 
-Abaixo estão listadas todas as famílias do Design System GOV.BR.
+Abaixo estão listadas todas as famílias do Design System.
 
 ### Red
 
@@ -968,7 +970,7 @@ A família `Gray Warm` utiliza cores com mínima saturação dentro de um círcu
 
 ### Pure
 
-Esta família possui uma característica especial, que representa os extremos puros da luminância (branco e preto). Na prática, esta família pode estar presente em qualquer outra família da Paleta Design System GOV.BR quando ampliada ou reduzida a luminância ao seu extremo, independente do matiz ou saturação. Por tanto, sua identificação como uma família de cores independente tem apenas objetivo didático.
+Esta família possui uma característica especial, que representa os extremos puros da luminância (branco e preto). Na prática, esta família pode estar presente em qualquer outra família da Paleta do Design System quando ampliada ou reduzida a luminância ao seu extremo, independente do matiz ou saturação. Por tanto, sua identificação como uma família de cores independente tem apenas objetivo didático.
 
 |              Cor               | Nome da Cor | Luminância |       HSL / Hexadecimal        |    Token     |
 | :----------------------------: | :---------: | :--------: | :----------------------------: | :----------: |
@@ -977,18 +979,18 @@ Esta família possui uma característica especial, que representa os extremos pu
 
 ---
 
-## <a name="contrast-table"></a> Tabela de Contraste
+## Tabela de Contraste
 
 A seguir criamos uma tabela de contrastes com as principais cores das paletas apresentadas acima.
 
-No **eixo horizontal** temos as principais cores utilizadas para textos e ícones e no **eixo vertical**, as principais cores utilizadas para superfícies.
+No *eixo horizontal* temos as principais cores utilizadas para textos e ícones e no *eixo vertical*, as principais cores utilizadas para superfícies.
 
 **Legendas:**
 
-- **AAA:** passa no nível AAA para texto de qualquer tamanho.
-- **AA:** passa no nível AA para texto de qualquer tamanho e AAA para texto grande (acima de 18pt ou _bold_ acima de 14pt).
-- **x:** Contraste abaixo de 4,5. Não é recomendado no sistema de cores do Design System GOV.BR.
-- **(número):** taxa de contraste segundo a WCAG 2.1.
+-   *AAA:* passa no nível AAA para texto de qualquer tamanho.
+-   *AA:* passa no nível AA para texto de qualquer tamanho e AAA para texto grande (acima de 18pt ou *bold* acima de 14pt).
+-   *x:* Contraste abaixo de 4,5. Não é recomendado no sistema de cores do Design System.
+-   *(número):* taxa de contraste segundo a WCAG 2.1.
 
 | Superfície/Texto                       | ![#FFFFFF](imagens/FFFFFF.png) #FFFFFF | ![#333333](imagens/333333.png) #333333 | ![#1351B4](imagens/1351B4.png) #1351B4 | ![#C5D4EB](imagens/C5D4EB.png) #C5D4EB |
 | -------------------------------------- | :------------------------------------: | :------------------------------------: | :------------------------------------: | :------------------------------------: |
@@ -1004,7 +1006,7 @@ No **eixo horizontal** temos as principais cores utilizadas para textos e ícone
 | ![#E52207](imagens/E52207.png) #E52207 |               AA (4,60)                |                   x                    |                   x                    |                   x                    |
 | ![#FDB8AE](imagens/FDB8AE.png) #FDB8AE |                   x                    |               AAA (7,60)               |                   x                    |                   x                    |
 
-Para checar qualquer combinação de cores não apresentadas na tabela, consulte o _site_ [_Contrast Ratio_](https://contrast-ratio.com/#).
+Para checar qualquer combinação de cores não apresentadas na tabela, consulte o *site* [*Contrast Ratio*](https://contrast-ratio.com/#).
 
 ---
 
@@ -1012,15 +1014,15 @@ Para checar qualquer combinação de cores não apresentadas na tabela, consulte
 
 ### Design Systems
 
-- [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/)
-- [Sistema de Cores do Material Design](https://material.io/design/color/the-color-system.html)
-- [Carbon Design System](https://www.carbondesignsystem.com/)
-- [Spectrum - Adobe Design System](https://spectrum.adobe.com/)
+-   [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/)
+-   [Sistema de Cores do Material Design](https://material.io/design/color/the-color-system.html)
+-   [Carbon Design System](https://www.carbondesignsystem.com/)
+-   [Spectrum - Adobe Design System](https://spectrum.adobe.com/)
 
 ### Ferramentas e Utilitários
 
-- [Contrast Ratio](https://contrast-ratio.com/)
-- [Color Relative Luminance Calculator](https://contrastchecker.online/color-relative-luminance-calculator)
-- [Color Kit](https://colorkit.io/shades-tints)
-- [Paletton](https://paletton.com/)
-- [HSL Color Picker](https://hslpicker.com/)
+-   [Contrast Ratio](https://contrast-ratio.com/)
+-   [Color Relative Luminance Calculator](https://contrastchecker.online/color-relative-luminance-calculator)
+-   [Color Kit](https://colorkit.io/shades-tints)
+-   [Paletton](https://paletton.com/)
+-   [HSL Color Picker](https://hslpicker.com/)

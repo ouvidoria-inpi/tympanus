@@ -1,12 +1,10 @@
 [version]: # (7.2.3)
 
-## _Rawline_
+Para a apresentação dos elementos textuais do *Design System* do Governo Federal, somente uma família de fonte é utilizada: a *Rawline*. Sua escolha foi feita devido à diversidade de pesos da fonte que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
 
-Para a apresentação dos elementos textuais do _Design System_, somente uma família de fonte é utilizada: a **_Rawline_**. Sua escolha foi feita devido à diversidade de pesos da fonte que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
+A utilização da *Rawline* tem como objetivo facilitar o reconhecimento, pelos cidadãos, dos produtos do Governo Federal, juntamente com o padrão de cores e elementos gráficos definidos no *Design System*.
 
-A utilização da _Rawline_ tem como objetivo facilitar o reconhecimento, pelos cidadãos, dos produtos do Governo, juntamente com o padrão de cores e elementos gráficos definidos no _Design System_.
-
-A _Rawline_ está disponível em <https://www.cdnfonts.com/rawline.font/>
+A *Rawline* está disponível em <https://www.cdnfonts.com/rawline.font>
 
 ---
 
@@ -14,15 +12,15 @@ A _Rawline_ está disponível em <https://www.cdnfonts.com/rawline.font/>
 
 ### Experiência Única
 
-A variedade de estilos da _Rawline_ torna desnecessária a utilização de outra família tipográfica. Sendo assim, junto com os demais elementos do _Design System_ a tipografia cria um reconhecimento mais rápido pelo usuário, na identificação dos produtos do governo.
+A variedade de estilos da *Rawline* torna desnecessária a utilização de outra família tipográfica. Sendo assim, junto com os demais elementos do *Design System* a tipografia cria um reconhecimento mais rápido pelo usuário, na identificação dos produtos do governo.
 
-Para segurança, recomendamos o uso de **_fallback_** (caso a fonte não seja carregada por algum motivo) a fonte `"Raleway"` e, de forma mais genéricas, as fontes sem serifas: `sans-serif`.
+Para segurança, recomendamos o uso de *fallback* (caso a fonte não seja carregada por algum motivo) a fonte `"Raleway"` e, de forma mais genéricas, as fontes sem serifas: `sans-serif`.
 
 ### Eficiência e Clareza
 
-A diversidade de pesos da _Rawline_ facilita a definição de níveis de hierarquias entre os elementos da tela. Isso torna a leitura mais agradável, e também fica mais claro para o usuário o papel que esses elementos ocupam na tela.
+A diversidade de pesos da *Rawline* facilita a definição de níveis de hierarquias entre os elementos da tela. Isso torna a leitura mais agradável, e também fica mais claro para o usuário o papel que esses elementos ocupam na tela.
 
-As escalas tipográficas foram definidas para manter a harmonia e coesão dentro do texto. Dessa forma, nenhuma fonte deve estar fora da escala definida no DS: **_Minor Third_**. Veja **Escala tipográfica** para maiores detalhes.
+As escalas tipográficas foram definidas para manter a harmonia e coesão dentro do texto. Dessa forma, nenhuma fonte deve estar fora da escala definida no DS: *Minor Third*. Veja *Escala tipográfica* para maiores detalhes.
 
 A **Tabela de Estilo Padrão** foi criada para manter a mesma experiência do usuário na maioria dos dispositivos. Caso seja necessário alterar algum valor, deve-se seguir a escala tipográfica. Além disso, os demais itens da tabela de estilo devem ser revistos mantendo a escala proporcional, ou seja, aumentando ou diminuindo conforme a necessidade.
 
@@ -32,20 +30,20 @@ As interfaces devem cumprir as diferentes necessidades de acessibilidade. Sendo 
 
 Sempre que possível, utilize a tabela de estilo e as cores padrão para texto para manter o conteúdo legível/acessível ao usuário.
 
-Veja [Cores](/ds/fundamentos-visuais/cores/) para maiores detalhes sobre aplicação de cores nos textos.
+Veja [Cores](/fundamentos-visuais/cores/) para maiores detalhes sobre aplicação de cores nos textos.
 
 A semântica deve ser levada em consideração ao se criar as marcações do texto dentro do HTML para que os dispositivos de leitores de tela consigam distinguir os diferentes elementos do texto.
 
 #### Reutilização e Colaboração
 
-Interfaces digitais do governo devem utilizar a família de fonte definida sempre que possível. Havendo, entretanto, a necessidade de acrescentar ou editar a família tipográfica atual, é necessário validar a nova proposta segundo os princípios e pela equipe de _design_ do DS.
+Interfaces digitais do governo devem utilizar a família de fonte definida sempre que possível. Havendo, entretanto, a necessidade de acrescentar ou editar a família tipográfica atual, é necessário validar a nova proposta segundo os princípios e pela equipe de *design* do DS.
 
 ---
 
 ## Estilos da Fonte Rawline
 
 ![Lista de estilo.](imagens/font-styles.png)
-*Estilos da fonte _Rawline_.*
+*Estilos da fonte Rawline.*
 
 | Family  | Token              |
 | ------- | ------------------ |
@@ -53,7 +51,7 @@ Interfaces digitais do governo devem utilizar a família de fonte definida sempr
 
 ### Peso da fonte (Font-Weight)
 
-Utilize os valores abaixo para representar os diferentes estilos da fonte _Rawline_ em uma interface _web_.
+Utilize os valores abaixo para representar os diferentes estilos da fonte *Rawline* em uma interface *web*.
 
 | Font-Weight | Estilo      | Token                       |
 | ----------- | ----------- | --------------------------- |
@@ -71,11 +69,11 @@ Utilize os valores abaixo para representar os diferentes estilos da fonte _Rawli
 
 ## Fonte Base
 
-Em um documento com uma definição de 72 dpi (ou 72 ppi ) dentro de um software gráfico (como _Photoshop_), **pontos = _pixels_**, mas isso não é verdade em um navegador (veja "Tabela de conversão PX, PT, EM e %"). Para uma boa comunicação, sempre indique os tamanhos em _pixels_ para os desenvolvedores da Web que devem converter para **em** ou **rem**.
+Em um documento com uma definição de 72 dpi (ou 72 ppi ) dentro de um software gráfico (como *Photoshop*), *pontos = pixels*, mas isso não é verdade em um navegador (veja "Tabela de conversão PX, PT, EM e %"). Para uma boa comunicação, sempre indique os tamanhos em *pixels* para os desenvolvedores da Web que devem converter para *em* ou *rem*.
 
-Atualmente, uma prática recomendada é permitir que um dispositivo (como navegador _web_) tome as decisões baseadas no tamanho da fonte base. O padrão é que em uma janela com visualização de 96 dpi tenha a fonte base padrão de 16px, mas dificilmente essa regra se aplique em todos os casos (como um _smart watch_).
+Atualmente, uma prática recomendada é permitir que um dispositivo (como navegador *web*) tome as decisões baseadas no tamanho da fonte base. O padrão é que em uma janela com visualização de 96 dpi tenha a fonte base padrão de 16px, mas dificilmente essa regra se aplique em todos os casos (como um *smart watch*).
 
-No _Design System_ do Governo optamos pela fonte base de 14 pixel por considerarmos que esse tamanho seja aplicável na maioria dos dispositivos e situações, porém essa escolha não é definitiva.
+No *Design System* do Governo Federal optamos pela fonte base de 14 pixel por considerarmos que esse tamanho seja aplicável na maioria dos dispositivos e situações, porém essa escolha não é definitiva.
 
 Definir um tamanho de uma fonte base (juntamente com a referência do uso de unidades "em" ou "rem") facilitará a hierarquia entre os textos, otimizando o efeito cascata (veja escala tipográfica).
 
@@ -85,9 +83,9 @@ Definir um tamanho de uma fonte base (juntamente com a referência do uso de uni
 
 O estabelecimento de uma escala tipográfica é uma forma de determinar tamanhos tipográficos. A escala é importante porque estabelece a hierarquia e melhora a legibilidade criando harmonia e coesão entre os textos.
 
-Existem muitas escalas diferentes, mas dentro do _Design System_ do Governo foi escolhida a escala **_Minor Third_** (1,2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hierarquia de uma interface.
+Existem muitas escalas diferentes, mas dentro do *Design System* do Governo Federal foi escolhida a escala *Minor Third* (1,2) já que permitem números que possuem contraste necessário para enriquecer e flexibilizar a hierarquia de uma interface.
 
-O tamanho **fonte base** é de 14px (1em) e peso da fonte normal (400). A unidade **em** é uma medida relativa que permite que o usuário altere o tamanho de exibição do texto na interface. Com exceção da fonte base, utilize a unidade **em** para todos os outros valores da escala. Assim, caso o valor do tamanho base padrão seja alterado, toda a interface se adapta ao novo valor.
+O tamanho *fonte base* é de 14px (1em) e peso da fonte normal (400). A unidade *em* é uma medida relativa que permite que o usuário altere o tamanho de exibição do texto na interface. Com exceção da fonte base, utilize a unidade *em* para todos os outros valores da escala. Assim, caso o valor do tamanho base padrão seja alterado, toda a interface se adapta ao novo valor.
 
 ![Escala Tipográfica](imagens/font-scale.png)
 
@@ -105,7 +103,7 @@ O tamanho **fonte base** é de 14px (1em) e peso da fonte normal (400). A unidad
 | 0.694 | 9.72  | `--font-size-scale-down-02` |
 | 0.579 | 8.10  | `--font-size-scale-down-03` |
 
-**Dica:** utilize alguma calculadora [_Type Scale_](https://type-scale.com/) (como o site [_Modular Scale_](https://www.modularscale.com)) para calcular os tamanhos dentro da escala.
+**Dica:** utilize alguma calculadora [*Type Scale*](https://type-scale.com/) (como o site [*Modular Scale*](https://www.modularscale.com)) para calcular os tamanhos dentro da escala.
 
 Caso o tamanho não atenda sua interface, utilize um valor diferente para a fonte base, porém, a escala deve se manter a mesma (ou seja, com a mesma proporção entre os estilos).
 
@@ -113,7 +111,7 @@ Caso o tamanho não atenda sua interface, utilize um valor diferente para a font
 
 ### Ampliando a Escala Tipográfica
 
-Caso haja necessidade, os valores da escala tipográfica podem ser ampliados, além dos valores demonstrados na tabela acima, crescendo ou reduzindo na mesma proporção **Minor Third (1,2)**. Por exemplo:
+Caso haja necessidade, os valores da escala tipográfica podem ser ampliados, além dos valores demonstrados na tabela acima, crescendo ou reduzindo na mesma proporção *Minor Third (1,2)*. Por exemplo:
 
 -   Crescendo: `41,80px`, `50,16px`, `60,19px`, `72,23px`, ...
 -   Reduzindo: `8.10px`, `6,75px`, `5,62px`, `4.68px`, ...
@@ -122,11 +120,11 @@ Quando reduzir ou ampliar a escala tipográfica, fique atento às questões de l
 
 ---
 
-## _Line-height_ (entrelinha)
+## *Line-height* (entrelinha)
 
-Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com valores em porcentagem ou relativos (como **rem** ou **em**), pois o valor vai depender do tamanho da fonte que ele está sendo aplicado. Por padrão, utilize entrelinha de 1.45 para valores até a fonte base, após isso, utilize o valor de 1,15.
+Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com valores em porcentagem ou relativos (como *rem* ou *em*), pois o valor vai depender do tamanho da fonte que ele está sendo aplicado. Por padrão, utilize entrelinha de 1.45 para valores até a fonte base, após isso, utilize o valor de 1,15.
 
-**Obs:** para trabalhar com softwares que trabalham com unidades em pixel (como Adobe XD), multiplique o valor do tamanho da fonte pelo valor da entrelinha da tabela.  _**Exemplo:** No H1 a line-height é 1.15 do valor de 41.8px (size), logo o valor da final será 48,07px._
+**OBS:** para trabalhar com softwares que trabalham com unidades em pixel (como Adobe XD), multiplique o valor do tamanho da fonte pelo valor da entrelinha da tabela.  *Exemplo:* No H1 a line-height é 1.15 do valor de 41.8px (size), logo o valor da final será 48,07px.*
 
 | Line-Height (em) | Token                      |
 | ---------------- | -------------------------- |
@@ -140,14 +138,14 @@ Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com v
 
 Utilize a tabela de estilo para determinar o visual de cada estilo de tipografia utilizada. Todos os estilos são [elementos nativos do HTML](https://www.w3schools.com/tags/default.asp).
 
-Lembre-se, o valor **_line-height_** (entrelinhamento) não se refere ao fonte base, e sim ao valor final da escala do próprio elemento textual. _**Exemplo:** No H1 a line-height 1.15, ou seja, 115% do valor de 2,986em (`--font-size-scale-up-06`)._
+Lembre-se, o valor *line-height* (entrelinhamento) não se refere ao fonte base, e sim ao valor final da escala do próprio elemento textual. *Exemplo:* No H1 a line-height 1.15, ou seja, 115% do valor de 2,986em (`--font-size-scale-up-06`).*
 
-**Atenção:** As informações apresentadas nas tabelas para **Grid de 4 Colunas** exibem apenas as propriedades que diferem do padrão 12 e 8 colunas.
+**Atenção:** As informações apresentadas nas tabelas para *Grid de 4 Colunas* exibem apenas as propriedades que diferem do padrão 12 e 8 colunas.
 
 ### H1
 
 ![Título H1](imagens/h1.png)
-_Exemplo do Estilo H1 com fundo claro e escuro e na Grid de 4 colunas._
+*Exemplo do Estilo H1 com fundo claro e escuro e na Grid de 4 colunas.*
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -158,7 +156,7 @@ _Exemplo do Estilo H1 com fundo claro e escuro e na Grid de 4 colunas._
 | Color (dark)  | `--pure-0`                |
 | Margin-bottom | `--spacing-scale-4x`      |
 
-#### Grid 4 colunas
+#### H1 para *Grid* de 4 colunas
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -169,7 +167,7 @@ _Exemplo do Estilo H1 com fundo claro e escuro e na Grid de 4 colunas._
 ### H2
 
 ![Título H2](imagens/h2.png)
-_Exemplo do Estilo H2 com fundo claro e escuro e na Grid de 4 colunas._
+*Exemplo do Estilo H2 com fundo claro e escuro e na Grid de 4 colunas.*
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -181,7 +179,7 @@ _Exemplo do Estilo H2 com fundo claro e escuro e na Grid de 4 colunas._
 | Margin-bottom | `--spacing-scale-2xh`     |
 | Margin-top    | `--spacing-scale-3xh`     |
 
-#### Grid 4 colunas
+#### H2 para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor             |
 | ----------- | ------------------------- |
@@ -191,7 +189,7 @@ _Exemplo do Estilo H2 com fundo claro e escuro e na Grid de 4 colunas._
 ### H3
 
 ![Título H3](imagens/h3.png)
-_Exemplo do Estilo H3 com fundo claro e escuro e na Grid de 4 colunas._
+*Exemplo do Estilo H3 com fundo claro e escuro e na Grid de 4 colunas.*
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -203,7 +201,7 @@ _Exemplo do Estilo H3 com fundo claro e escuro e na Grid de 4 colunas._
 | Margin-bottom | `--spacing-scale-2xh`     |
 | Margin-top    | `--spacing-scale-3xh`     |
 
-#### Grid 4 colunas
+#### H3 para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor             |
 | ----------- | ------------------------- |
@@ -213,7 +211,7 @@ _Exemplo do Estilo H3 com fundo claro e escuro e na Grid de 4 colunas._
 ### H4
 
 ![Título H4](imagens/h4.png)
-_Exemplo do Estilo H4 com fundo claro e escuro e na Grid de 4 colunas._
+*Exemplo do Estilo H4 com fundo claro e escuro e na Grid de 4 colunas.*
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -225,7 +223,7 @@ _Exemplo do Estilo H4 com fundo claro e escuro e na Grid de 4 colunas._
 | Margin-bottom | `--spacing-scale-2xh`     |
 | Margin-top    | `--spacing-scale-3xh`     |
 
-#### Grid 4 colunas
+#### H4 para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor             |
 | ----------- | ------------------------- |
@@ -236,7 +234,7 @@ _Exemplo do Estilo H4 com fundo claro e escuro e na Grid de 4 colunas._
 ### H5
 
 ![Título H5](imagens/h5.png)
-_Exemplo do Estilo H5 com fundo claro e escuro e na Grid de 4 colunas._
+*Exemplo do Estilo H5 com fundo claro e escuro e na Grid de 4 colunas.*
 
 | Propriedade    | Token / Valor             |
 | -------------- | ------------------------- |
@@ -249,7 +247,7 @@ _Exemplo do Estilo H5 com fundo claro e escuro e na Grid de 4 colunas._
 | Margin-top     | `--spacing-scale-3xh`     |
 | Text-transform | `uppercase`               |
 
-#### Grid 4 colunas
+#### H5 para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor              |
 | ----------- | -------------------------- |
@@ -260,7 +258,7 @@ _Exemplo do Estilo H5 com fundo claro e escuro e na Grid de 4 colunas._
 ### H6
 
 ![Título H6](imagens/h6.png)
-_Exemplo do Estilo H6 com fundo claro e escuro e na Grid de 4 colunas._
+*Exemplo do Estilo H6 com fundo claro e escuro e na Grid de 4 colunas.*
 
 | Propriedade    | Token / Valor              |
 | -------------- | -------------------------- |
@@ -273,7 +271,7 @@ _Exemplo do Estilo H6 com fundo claro e escuro e na Grid de 4 colunas._
 | Margin-top     | `--spacing-scale-3xh`      |
 | Text-transform | `uppercase`                |
 
-#### Grid 4 colunas
+#### H6 para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor               |
 | ----------- | --------------------------- |
@@ -283,7 +281,7 @@ _Exemplo do Estilo H6 com fundo claro e escuro e na Grid de 4 colunas._
 ### P
 
 ![Parágrafo](imagens/paragraph.png)
-_Exemplo do Estilo Parágrafo com fundo claro e escuro e na Grid de 4 colunas._
+*Exemplo do Estilo Parágrafo com fundo claro e escuro e na Grid de 4 colunas.*
 
 | Propriedade   | Token / Valor               |
 | ------------- | --------------------------- |
@@ -294,7 +292,7 @@ _Exemplo do Estilo Parágrafo com fundo claro e escuro e na Grid de 4 colunas._
 | Color (dark)  | `--pure-0`                  |
 | Margin-bottom | `--spacing-scale-2x`        |
 
-#### Grid 4 colunas
+#### P para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor            |
 | ----------- | ------------------------ |
@@ -303,7 +301,7 @@ _Exemplo do Estilo Parágrafo com fundo claro e escuro e na Grid de 4 colunas._
 ### Label
 
 ![Label](imagens/label.png)
-_Exemplo do Estilo Label com fundo claro e escuro._
+*Exemplo do Estilo Label com fundo claro e escuro.*
 
 | Propriedade   | Token / Valor               |
 | ------------- | --------------------------- |
@@ -317,7 +315,7 @@ _Exemplo do Estilo Label com fundo claro e escuro._
 ### Input
 
 ![Input](imagens/input.png)
-_Exemplo do Estilo Input com fundo claro e escuro._
+*Exemplo do Estilo Input com fundo claro e escuro.*
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -331,7 +329,7 @@ _Exemplo do Estilo Input com fundo claro e escuro._
 ### Placeholder
 
 ![Placeholder](imagens/placeholder.png)
-_Exemplo do Estilo Placeholder com fundo claro e escuro._
+*Exemplo do Estilo Placeholder com fundo claro e escuro.*
 
 | Propriedade   | Token / Valor               |
 | ------------- | --------------------------- |
@@ -347,7 +345,7 @@ _Exemplo do Estilo Placeholder com fundo claro e escuro._
 ### Legend
 
 ![Legend](imagens/legend.png)
-_Exemplo do Estilo Legend com fundo claro e escuro._
+*Exemplo do Estilo Legend com fundo claro e escuro.*
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -362,7 +360,7 @@ _Exemplo do Estilo Legend com fundo claro e escuro._
 ### Mark
 
 ![Mark](imagens/mark.png)
-_Exemplo do Estilo Mark._
+*Exemplo do Estilo Mark.*
 
 | Propriedade | Token / Valor         |
 | ----------- | --------------------- |
@@ -372,7 +370,7 @@ _Exemplo do Estilo Mark._
 ### Code
 
 ![Code](imagens/code.png)
-_Exemplo do Estilo Code no formato Inline e Bloco._
+*Exemplo do Estilo Code no formato Inline e Bloco.*
 
 | Propriedade      | Token / Valor                                |
 | ---------------- | -------------------------------------------- |
@@ -385,18 +383,18 @@ _Exemplo do Estilo Code no formato Inline e Bloco._
 | Padding (Inline) | `--spacing-scale-half`                       |
 | Padding (Bloco)  | `--spacing-scale-2x`                         |
 
-**Observação:** O valor estipulado em _SIZE_ é considerado **padrão** nos elementos de `Legend` `mark` e `code`. O valor padrão é recomendado sempre que utilizar o estilo, porém, ele pode ser alterado caso queira aplicar algum tipo de **hierarquia**.
+**OBS:** O valor estipulado em *SIZE* é considerado *padrão* nos elementos de `Legend` `mark` e `code`. O valor padrão é recomendado sempre que utilizar o estilo, porém, ele pode ser alterado caso queira aplicar algum tipo de *hierarquia*.
 > **Exemplo:** Ter vários `Fieldset`+`Legend` aninhados (ordenadas) criando uma estrutura hierárquica em um formulário, pode ser interessante utilizar um SIZE (dentro da escala) diferenciado para cada `Legend`....
 
 ---
 
-## Unidades de Espaçamento entre caracteres (_Letter Spacing_)
+## Unidades de Espaçamento entre caracteres (*Letter Spacing*)
 
-Em alguns softwares (como da Adobe), o espaçamento de um bloco de texto (_tracking_) e o ajuste de espaço entre caracteres adjacentes (_Kerning_) são medidos em 1/1.000em, uma unidade de medida que é relativa ao tamanho atual da face de tipos. Em uma fonte de 6 pontos, 1em é igual a 6 pontos; em uma fonte de 10 pontos, 1em é igual a 10 pontos. Ou seja, são estritamente proporcionais ao tamanho da face de tipos utilizado.
+Em alguns softwares (como da Adobe), o espaçamento de um bloco de texto (*tracking*) e o ajuste de espaço entre caracteres adjacentes (*Kerning*) são medidos em 1/1.000em, uma unidade de medida que é relativa ao tamanho atual da face de tipos. Em uma fonte de 6 pontos, 1em é igual a 6 pontos; em uma fonte de 10 pontos, 1em é igual a 10 pontos. Ou seja, são estritamente proporcionais ao tamanho da face de tipos utilizado.
 
 Para calcular o valor do espaçamento entre os caracteres utilize o seguinte fórmula:
 
-> _LetterSpacing_(px) = tamanho da fonte(pt ou px) * _tracking_ da Adobe / 1000.
+> *LetterSpacing*(px) = tamanho da fonte(pt ou px) *tracking* da Adobe / 1000.
 
 ---
 

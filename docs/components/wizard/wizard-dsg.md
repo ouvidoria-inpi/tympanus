@@ -1,4 +1,4 @@
-[version]: # (4.2.1)
+[version]: # (4.2.2)
 
 ![Exemplo do componente wizard](imagens/type-horizontal.png)
 *Exemplo do componente wizard.*
@@ -9,32 +9,38 @@ Use *wizards* como um padrão para entrada de informações que devam seguir uma
 
 ## Anatomia
 
-O *Componente Wizard* é constituido pelos seguintes elementos:
+O *Componente Wizard* é constituído pelos seguintes elementos.
 
-1- Painel de etapas;
-2- Componente Step;
-3- Área de Conteúdo;
-4- Barra de Navegação.
+| ID  | Nome               |                              Referência                               | Uso         |
+| --- | ------------------ | :-------------------------------------------------------------------: | ----------- |
+| 1   | Painel de etapas   |                                  ---                                  | Obrigatório |
+| 2   | Componente Step    | [Componente Step](https://www.gov.br/ds/components/step?tab=designer) | Obrigatório |
+| 3   | Área de Conteúdo   |                                  ---                                  | Obrigatório |
+| 4   | Barra de Navegação |                                  ---                                  | Obrigatório |
 
 ![Elementos do componente Wizard](imagens/anatomy.png)
 *Elementos do componente Wizard.*
 
-### 1 - Painel de Etapas
+---
 
-Nesta área são exibidas as etapas do *wizard*. O painel de etapas se estende por toda largura da tela e as etapas devem seguir as orientações e recomendações de boas práticas do _Componente Step_.
+## Detalhamento dos Itens
 
-![Painel de Etapas](imagens/steps-space-1.png)*Painel de Etapas*
+### 1. Painel de Etapas (Obrigatório)
 
-Consulte detalhes em _Componentes > Steps_.
+Nesta área são exibidas as etapas do *wizard*. O painel de etapas se estende por toda largura da tela e as etapas devem seguir as orientações e recomendações de boas práticas do Componente *Step*.
 
-### 2 - Componente _Steps_
+![Painel de Etapas](imagens/steps-space-1.png)
+*Painel de Etapas*
 
-_Steps_ são indicadores de etapas e progresso que auxiliam os usuários durante um fluxo de trabalho, seguindo uma sequência lógica linear, aleatória, numeradas ou não. Consulte detalhes sobre comportamentos e boas práticas dos _Steps_ em _Componentes > Steps_.
+Consulte detalhes em [Componente Step](https://www.gov.br/ds/components/step?tab=designer).
 
+### 2. Componente *Steps* (Obrigatório)
+
+*Steps* são indicadores de etapas e progresso que auxiliam os usuários durante um fluxo de trabalho, seguindo uma sequência lógica linear, aleatória, numeradas ou não. Consulte detalhes sobre comportamentos e boas práticas dos *Steps* em [Componente Step](https://www.gov.br/ds/components/step?tab=designer).
 ![Exemplo de Componente Step](imagens/anatomy-step.png)
 *Exemplo de Componente Step*
 
-### 3 - Área de Conteúdo
+### 3. Área de Conteúdo (Obrigatório)
 
 Esta área reserva o espaço para o conteúdo do *Wizard*. Geralmente são encontrados elementos de formulário, interativos ou informacionais que auxiliarão o usuário realizar sua jornada de tarefas.
 
@@ -44,40 +50,40 @@ Esta área reserva o espaço para o conteúdo do *Wizard*. Geralmente são encon
 ![Exemplo de Conteúdo - Formulário](imagens/anatomy-content-area-02.png)
 *Exemplo de Conteúdo - Formulário*
 
-### 4 - Barra de Navegação
+### 4. Barra de Navegação (Obrigatório)
 
 Na barra de navegação estão disponíveis os botões de *Cancelar*, *Avançar* e *Voltar*. Assim o usuário tem o total controle da navegação no *Wizard*.
 
 ![Barra de Navegação](imagens/navigation-bar.png)
 *Barra de Navegação*
 
-#### A- Botão Cancelar
+#### A. Botão Cancelar
 
-O *Botão Cancelar* deve ser sempre do tipo **terciário**. É utilizado para o usuário cancelar o processo assistente e retornar para a tela imediatamente anterior ao do *Wizard*. É uma boa prática fornecer um aviso que os dados inseridos até aquele ponto serão perdidos clicando no *Botão Cancelar*.
+O *Botão Cancelar* deve ser sempre do tipo *terciário*. É utilizado para o usuário cancelar o processo assistente e retornar para a tela imediatamente anterior ao do *Wizard*. É uma boa prática fornecer um aviso que os dados inseridos até aquele ponto serão perdidos clicando no *Botão Cancelar*.
 
-#### B- Botão Voltar
+#### B. Botão Voltar
 
-O *Botão Voltar* deve ser sempre do tipo **secundário** e serve para o usuário retroceder um passo na sequência de etapas. Na primeira etapa, o *Botão Voltar* não será exibido.
+O *Botão Voltar* deve ser sempre do tipo *secundário* e serve para o usuário retroceder um passo na sequência de etapas. Na primeira etapa, o *Botão Voltar* não será exibido.
 
-**A -** Primeira Etapa: O *Botão Voltar* não será exibido.
-**B -** Etapas Subsequentes: *Botão Voltar* é exibido no *Estado Interativo*.
+*A -* Primeira Etapa: O *Botão Voltar* não será exibido.
+*B -* Etapas Subsequentes: *Botão Voltar* é exibido no *Estado Interativo*.
 
 ![Na primeira etapa o Botão Voltar não será exibido](imagens/behavior-first-step.png)
 *Na primeira etapa o Botão Voltar não será exibido*
 
-#### C- Botão Avançar
+#### C. Botão Avançar
 
-O *Botão Avançar* deve ser sempre do tipo **primário** e serve para o usuário avançar um nível na sequência de etapas. Uma vez atingida a última etapa, o botão apresentado deve ser o de **Concluir** para sinalizar o fim das etapas.
+O *Botão Avançar* deve ser sempre do tipo *primário* e serve para o usuário avançar um nível na sequência de etapas. Uma vez atingida a última etapa, o botão apresentado deve ser o de *Concluir* para sinalizar o fim das etapas.
 
-**A -** Etapas iniciais e intermediárias: *Botão Avançar*;
-**B -** Na última etapa, o rótulo do botão *Avançar* deve ser alterado para *Concluir*.
+*A -* Etapas iniciais e intermediárias: *Botão Avançar*;
+*B -* Na última etapa, o rótulo do botão *Avançar* deve ser alterado para *Concluir*.
 
 ![Na última etapa, o rótulo do botão Avançar deve ser alterado para Concluir](imagens/behavior-last-step.png)
 *Na última etapa, o rótulo do botão Avançar deve ser alterado para Concluir*
 
 #### Barra de Navegação Mobile (Grid de 4 Colunas)
 
-Na versão mobile da _Barra de Navegação_ o _Botão Cancelar_ será substituído por um link e os botões _Avançar_ e _Voltar_ serão substituídos por botões do tipo circular. Além disso, a _Barra de Navegação_ mobile deverá ter um posicionamento fixo na base da área visível da tela.
+Na versão mobile da Barra de Navegação o Botão Cancelar será substituído por um link e os botões Avançar e Voltar serão substituídos por botões do tipo circular. Além disso, a Barra de Navegação mobile deverá ter um posicionamento fixo na base da área visível da tela.
 
 A - Link Cancelar;
 B - Botão Voltar (Circular com Ênfase Secundária);
@@ -96,14 +102,14 @@ D - Botão Concluir (Circular com Ênfase Primária).
 
 O *Wizard* possui dois tipos, o horizontal e o vertical. Não existe uma obrigatoriedade ou restrição para o uso de cada tipo. Estes poderão ser utilizados de acordo com a preferência estética ou funcional, seguindo a necessidade de cada projeto.
 
-### 1- Tipo Horizontal *(Padrão)*
+### 1. Tipo Horizontal (Padrão)
 
 O *Tipo Horizontal* é comumente o mais utilizado e por isso é considerado o padrão.
 
 ![Tipo Horizontal](imagens/type-horizontal.png)
 *Tipo Horizontal*
 
-### 2- Tipo Vertical
+### 2. Tipo Vertical
 
 O *Tipo Vertical*, geralmente menos utilizado, pode ser mais adequado em alguns contextos específicos, se adequando a composição estética ou diagramação do sistema.
 
@@ -112,13 +118,13 @@ O *Tipo Vertical*, geralmente menos utilizado, pode ser mais adequado em alguns 
 
 ---
 
-## Comportamento
+## Comportamentos
 
-### 1 - Responsividade
+### 1. Responsividade
 
 #### Grid de 12 e 8 Colunas
 
-Nas *Grids* de 12 e 8 colunas o _Componente Wizard_ se adequa ocupando todo o espaçamento horizontal permitido pela *Grid*. Observe abaixo:
+Nas *Grids* de 12 e 8 colunas o Componente *Wizard* adequa-se ocupando todo o espaçamento horizontal permitido pela *Grid*. Observe abaixo:
 
 ![Wizard Horizontal - Grid de 12 Colunas](imagens/behavior-horizontal-responsive-grid-12-cols.png)
 *Wizard Horizontal - Grid de 12 Colunas*
@@ -144,9 +150,9 @@ Na *Grid* de 4 colunas o *Componente Wizard* tem o seu formato modificado a fim 
 ![Wizard Vertical - Grid de 4 Colunas](imagens/behavior-vertical-responsive-grid-4-cols.png)
 *Wizard Vertical - Grid de 4 Colunas*
 
-**Atenção:** Neste formato, tanto no *Tipo Horizontal* como no *Tipo Vertical*, o *Componente Wizard* se apresenta ocultando os *Rótulos*. Este exibirá inicialmente apenas os *Botões das Etapas*. Porém o usuário poderá expandir a *Barra de Etapas* e visualizar os *Rótulos*. Veja mais detalhes na *Seção > Comportamentos > Slide*.
+**Atenção:** Neste formato, tanto no *Tipo Horizontal* como no *Tipo Vertical*, o *Componente Wizard* se apresenta ocultando os *Rótulos*. Este exibirá inicialmente apenas os *Botões das Etapas*. Porém o usuário poderá expandir a *Barra de Etapas* e visualizar os *Rótulos*.
 
-### 2 - Slide
+### 2. Slide
 
 Este comportamento tem o objetivo de oferecer ao usuário a opção de exibir e ocultar os *Rótulos* do *Componente Wizard* no formato para *Grid de 4 Colunas*.
 
@@ -154,8 +160,8 @@ Este comportamento tem o objetivo de oferecer ao usuário a opção de exibir e 
 
 No *Tipo Horizontal*, o usuário poderá realizar o *Touch* no ícone `grip-lines`, na parte inferior central do *Painel de Etapas* e deslizar o dedo para baixo, exibindo os *Rótulos* das *Etapas*. Poderá também realizar o movimento contrário para ocultá-los.
 
-**A** - O usuário pode clicar no ícone `grip-lines`
-**B** - e deslizar o _Painel de Etapas_ para baixo.
+*A* - O usuário pode clicar no ícone `grip-lines`
+*B* - e deslizar o Painel de Etapas para baixo.
 
 ![Slide - Wizard Horizontal](imagens/behavior-horizontal-slide.png)
 *Slide - Wizard Horizontal*
@@ -166,17 +172,17 @@ No *Tipo Horizontal*, o usuário poderá realizar o *Touch* no ícone `grip-line
 
 No *Tipo Vertical*, o *Painel de Etapas* se posiciona na parte lateral esquerda da tela. Da mesma forma, o usuário realizará o *Touch* no ícone `grip-lines-vertical`, localizado centralizado verticalmente à direita do *Painel de Etapas*. O usuário deslizará o dedo horizontalmente para direita exibindo os *Rótulos* das *Etapas*. Poderá também realizar o movimento contrário para ocultá-los.
 
-**A** - O usuário pode clicar no ícone `grip-lines-vertical`
-**B** - e deslizar o _Painel de Etapas_ para o lado.
+*A* - O usuário pode clicar no ícone `grip-lines-vertical`
+*B* - e deslizar o Painel de Etapas para o lado.
 
 ![Slide - Wizard Vertical](imagens/behavior-vertical-slide.png)
 *Slide - Wizard Vertical*
 
-**Atenção!** Ao expandir o *Painel de Etapas*, este "empurrará" a _Área de Conteúdo_ e a largura desta será ajustada dinamicamente, assim como a largura da _Barra de Navegação_.
+**Atenção:** Ao expandir o Painel de Etapas, este "empurrará" a Área de Conteúdo e a largura desta será ajustada dinamicamente, assim como a largura da Barra de Navegação.
 
-### 3 - Densidade
+### 3. Densidade
 
-O comportamento de densidade no componente _Wizard_ refere-se aos espaçamentos internos do _Painel de Etapas_, _Área de Conteúdo_ e _Barra de Navegação_. Além destes, também recomenda-se utilizar as densidades dos componentes _Button_ e _Steps_ seguindo a mesma densidade do _Wizard_. Consulte os espaçamentos de densidades dos componentes _Button_ e _Steps_ nas documentações específicas de cada um deles.
+O comportamento de densidade no componente *Wizard* refere-se aos espaçamentos internos do Painel de Etapas,Área de Conteúdo e Barra de Navegação. Além destes, também recomenda-se utilizar as densidades dos componentes *Button* e *Steps* seguindo a mesma densidade do *Wizard*. Consulte os espaçamentos de densidades dos componentes *Button* e *Steps* nas documentações específicas de cada um deles.
 
 #### Baixa Densidade
 
@@ -190,12 +196,13 @@ Utilize *Baixa Densidade* quando o projeto de *layout* permitir mais espaço ou 
 
 #### Densidade Padrão
 
-É a forma comum do *Componente Wizard*. Oferece um espaçamento interno adequado e equilibrabo para vários tipos de projetos.
+É a forma comum do *Componente Wizard*. Oferece um espaçamento interno adequado e equilibrado para vários tipos de projetos.
 
 ![Wizard Horizontal - Densidade Padrão](imagens/behavior-default-density.png)
 *Wizard Horizontal - Densidade Padrão*
 
-![Wizard Vertical - Densidade Padrão](imagens/behavior-vertical-default-density.png)*Wizard Vertical - Densidade Padrão*
+![Wizard Vertical - Densidade Padrão](imagens/behavior-vertical-default-density.png)
+*Wizard Vertical - Densidade Padrão*
 
 #### Alta Densidade
 
@@ -209,9 +216,9 @@ Utilize *Alta Densidade* quando for necessário usar o *Componente Wizard* em es
 
 Consulte especificações de *Densidade* em *Design Tokens*.
 
-### 4 - Scroll
+### 4. Scroll
 
-O _Componente Wizard_ pode ser utilizado com duas formas de rolagem do conteúdo.
+O componente *Wizard* pode ser utilizado com duas formas de rolagem do conteúdo.
 
 #### Rolagem Nativa do Navegador
 
@@ -227,11 +234,11 @@ A - Barra de Rolagem nativa do navegador.
 
 #### Rolagem Interna na Área de Conteúdo
 
-Neste modelo, a _Área de Conteúdo_ possui uma altura fixa e a rolagem ocorre dentro dela com uma barra de rolagem customizada. O _Painel de Etapas_ e a _Barra de Navegação_ permanecem com posicionamento fixo na tela.
+Neste modelo, a Área de Conteúdo possui uma altura fixa e a rolagem ocorre dentro dela com uma barra de rolagem customizada. O Painel de Etapas e a Barra de Navegação permanecem com posicionamento fixo na tela.
 
 A - Barra de Rolagem customizada na Área de Conteúdo;
-B - _Painel de Etapas_ com posicionamento fixo;
-C - _Barra de Navegação_ com posicionamento fixo;
+B - Painel de Etapas com posicionamento fixo;
+C - Barra de Navegação com posicionamento fixo;
 
 ![Wizard Horizontal - Rolagem na Área de Conteúdo](imagens/behavior-scroll-03.png)
 *Wizard Horizontal - Rolagem na Área de Conteúdo*
@@ -241,91 +248,91 @@ C - _Barra de Navegação_ com posicionamento fixo;
 
 ---
 
-## Recomendações e Boas Práticas
+## Melhores Práticas
 
-* *Wizard* é uma ótima opção quando o usuário precisa executar uma tarefa complexa que consiste em várias subtarefas.
+-   *Wizard* é uma ótima opção quando o usuário precisa executar uma tarefa complexa que consiste em várias sub tarefas.
 
-* O *Wizard* deve ser utilizado sempre com o objetivo de seguir uma navegação linear. Caso seja permitido navegar livremente entre as etapas, utilize o *Componente Tab*.
+-   O *Wizard* deve ser utilizado sempre com o objetivo de seguir uma navegação linear. Caso seja permitido navegar livremente entre as etapas, utilize o *Componente Tab*.
 
-* *Wizard* também é eficiente quando o usuário precisa de orientação: o usuário deseja atingir uma meta geral, mas pode não estar familiarizado com as etapas necessárias para atingir a meta.
+-   *Wizard* também é eficiente quando o usuário precisa de orientação: o usuário deseja atingir uma meta geral, mas pode não estar familiarizado com as etapas necessárias para atingir a meta.
 
-* Os *wizards* devem ser rápidos e fáceis. Por esse motivo, é uma boa ideia manter o conteúdo de uma tela, bem como sua navegação, dentro da área visível da tela, evitando assim barras de rolagens.
+-   Os *wizards* devem ser rápidos e fáceis. Por esse motivo, é uma boa ideia manter o conteúdo de uma tela, bem como sua navegação, dentro da área visível da tela, evitando assim barras de rolagens.
 
-* Geralmente as etapas necessárias para atingir uma meta final podem variar devido a decisões tomadas em estágios anteriores. Se não for este o caso, prefira utilizar o componente *Tab*.
+-   Geralmente as etapas necessárias para atingir uma meta final podem variar devido a decisões tomadas em estágios anteriores. Se não for este o caso, prefira utilizar o componente *Tab*.
 
-* Use liguagem simples. Os usuários de um *wizard* não são necessariamente especialistas, por isso deve ser evitado o uso de jargão técnico. A linguagem usada deve ser adaptada ao usuário e não o contrário.
+-   Use linguagem simples. Os usuários de um *wizard* não são necessariamente especialistas, por isso deve ser evitado o uso de jargão técnico. A linguagem usada deve ser adaptada ao usuário e não o contrário.
 
-* É uma boa prática apresentar para o usuário um resumo das opções feitas em todo o assistente na etapa final. Isso permitirá que o usuário revise e verifique os dados inseridos antes de clicar no _Botão Concluir_. No caso de o usuário desejar alterar os dados inseridos, ele deve ser capaz de navegar de volta para etapas anteriores. Se a quantidade de etapas for maior que seis, é uma boa ideia fornecer *links* diretamente para a tela de entrada do dado que deve ser alterado.
+-   É uma boa prática apresentar para o usuário um resumo das opções feitas em todo o assistente na etapa final. Isso permitirá que o usuário revise e verifique os dados inseridos antes de clicar no Botão Concluir. No caso de o usuário desejar alterar os dados inseridos, ele deve ser capaz de navegar de volta para etapas anteriores. Se a quantidade de etapas for maior que seis, é uma boa ideia fornecer *links* diretamente para a tela de entrada do dado que deve ser alterado.
 
 ---
 
-## Especificação
+## Especificações
 
 ### Cores
 
-|Name|Property|Color Token|
-|--|--|--|
-| Painel de etapas | background |`--gray-2`|
-| Painel de etapas Fundo Escuro | background |`--blue-warm-vivid-90`|
-| Área de Conteúdo | background |`--pure-0`|
-| Área de Conteúdo Fundo Escuro | background |`--blue-warm-vivid-90`|
-| Barra de Navegação | background |`--gray-2`|
-| Barra de Navegação Fundo Escuro | background |`--blue-warm-vivid-90`|
-| Rótulos | color |`--blue-warm-vivid-70`|
-| Rótulos Fundo Escuro | color |`--pure-0`|
+| Name                            | Property   | Color Token            |
+| ------------------------------- | ---------- | ---------------------- |
+| Painel de etapas                | background | `--gray-2`             |
+| Painel de etapas Fundo Escuro   | background | `--blue-warm-vivid-90` |
+| Área de Conteúdo                | background | `--pure-0`             |
+| Área de Conteúdo Fundo Escuro   | background | `--blue-warm-vivid-90` |
+| Barra de Navegação              | background | `--gray-2`             |
+| Barra de Navegação Fundo Escuro | background | `--blue-warm-vivid-90` |
+| Rótulos                         | color      | `--blue-warm-vivid-70` |
+| Rótulos Fundo Escuro            | color      | `--pure-0`             |
 
 ### Tipografia
 
-|Name|Size|Weight|
-|--|--|--|
-| Rótulos |`-font-size-scale-up-01`|`--font-weight-medium`|
-| Rótulos Mobile |`--font-size-scale-base`|`--font-weight-medium`|
+| Name           | Size                     | Weight                 |
+| -------------- | ------------------------ | ---------------------- |
+| Rótulos        | `-font-size-scale-up-01` | `--font-weight-medium` |
+| Rótulos Mobile | `--font-size-scale-base` | `--font-weight-medium` |
 
 ### Iconografia
 
-|Name|Ícone|Token Size|Class (Font Awesome)|
-|--|--|--|--|
-| Ícones dos Steps | - |`--icone-size-base`| - |
-| Ícone Slide Horizontal | <i class="grip-lines"></i> |`--icone-size-base`| `grip-lines` |
-| Ícone Slide Vertical | <i class="grip-lines-vertical"></i> |`--icone-size-base`| `grip-lines-vertical` |
+| Name                   | Ícone                               | Token Size          | Class (Font Awesome)  |
+| ---------------------- | ----------------------------------- | ------------------- | --------------------- |
+| Ícones dos Steps       | -                                   | `--icone-size-base` | -                     |
+| Ícone Slide Horizontal | <i class="grip-lines"></i>          | `--icone-size-base` | `grip-lines`          |
+| Ícone Slide Vertical   | <i class="grip-lines-vertical"></i> | `--icone-size-base` | `grip-lines-vertical` |
 
 ### Espaçamentos
 
-|Name|Property|Value|
-|--|--|:--:|
-| Painel de etapas (Densidade Padrão) | padding-top |`--spacing-scale-4x`|
-| Painel de etapas (Densidade Padrão) | padding-bottom |`--spacing-scale-4x`|
-| Painel de etapas (Densidade Padrão) | padding-left |`--spacing-scale-5x`|
-| Painel de etapas (Densidade Padrão) | padding-right |`--spacing-scale-5x`|
-| Painel de etapas (Baixa Densidade) | padding-top |`--spacing-scale-5x`|
-| Painel de etapas (Baixa Densidade) | padding-bottom |`--spacing-scale-5x`|
-| Painel de etapas (Baixa Densidade) | padding-left |`--spacing-scale-6x`|
-| Painel de etapas (Baixa Densidade) | padding-right |`--spacing-scale-6x`|
-| Painel de etapas (Alta Densidade) | padding-top |`--spacing-scale-3x`|
-| Painel de etapas (Alta Densidade) | padding-bottom |`--spacing-scale-3x`|
-| Painel de etapas (Alta Densidade) | padding-left |`--spacing-scale-4x`|
-| Painel de etapas (Alta Densidade) | padding-right |`--spacing-scale-4x`|
-| Área de Conteúdo (Densidade Padrão) | padding-top |`--spacing-scale-5x`|
-| Área de Conteúdo (Densidade Padrão) | padding-bottom |`--spacing-scale-5x`|
-| Área de Conteúdo (Densidade Padrão) | padding-left |`--spacing-scale-5x`|
-| Área de Conteúdo (Densidade Padrão) | padding-right |`--spacing-scale-5x`|
-| Área de Conteúdo (Baixa Densidade) | padding-top |`--spacing-scale-6x`|
-| Área de Conteúdo (Baixa Densidade) | padding-bottom |`--spacing-scale-6x`|
-| Área de Conteúdo (Baixa Densidade) | padding-left |`--spacing-scale-6x`|
-| Área de Conteúdo (Baixa Densidade) | padding-right |`--spacing-scale-6x`|
-| Área de Conteúdo (Alta Densidade) | padding-top |`--spacing-scale-4x`|
-| Área de Conteúdo (Alta Densidade) | padding-bottom |`--spacing-scale-4x`|
-| Área de Conteúdo (Alta Densidade) | padding-left |`--spacing-scale-4x`|
-| Área de Conteúdo (Alta Densidade) | padding-right |`--spacing-scale-4x`|
-| Barra de Navegação (Densidade Padrão) | padding-top |`--spacing-scale-3x`|
-| Barra de Navegação (Densidade Padrão) | padding-bottom |`--spacing-scale-3x`|
-| Barra de Navegação (Densidade Padrão) | padding-left |`--spacing-scale-5x`|
-| Barra de Navegação (Densidade Padrão) | padding-right |`--spacing-scale-5x`|
-| Barra de Navegação (Baixa Densidade) | padding-top |`--spacing-scale-4x`|
-| Barra de Navegação (Baixa Densidade) | padding-bottom |`--spacing-scale-4x`|
-| Barra de Navegação (Baixa Densidade) | padding-left |`--spacing-scale-6x`|
-| Barra de Navegação (Baixa Densidade) | padding-right |`--spacing-scale-6x`|
-| Barra de Navegação (Alta Densidade) | padding-top |`--spacing-scale-2x`|
-| Barra de Navegação (Alta Densidade) | padding-bottom |`--spacing-scale-2x`|
-| Barra de Navegação (Alta Densidade) | padding-left |`--spacing-scale-4x`|
-| Barra de Navegação (Alta Densidade) | padding-right |`--spacing-scale-4x`|
+| Name                                  | Property       |        Value         |
+| ------------------------------------- | -------------- | :------------------: |
+| Painel de etapas (Densidade Padrão)   | padding-top    | `--spacing-scale-4x` |
+| Painel de etapas (Densidade Padrão)   | padding-bottom | `--spacing-scale-4x` |
+| Painel de etapas (Densidade Padrão)   | padding-left   | `--spacing-scale-5x` |
+| Painel de etapas (Densidade Padrão)   | padding-right  | `--spacing-scale-5x` |
+| Painel de etapas (Baixa Densidade)    | padding-top    | `--spacing-scale-5x` |
+| Painel de etapas (Baixa Densidade)    | padding-bottom | `--spacing-scale-5x` |
+| Painel de etapas (Baixa Densidade)    | padding-left   | `--spacing-scale-6x` |
+| Painel de etapas (Baixa Densidade)    | padding-right  | `--spacing-scale-6x` |
+| Painel de etapas (Alta Densidade)     | padding-top    | `--spacing-scale-3x` |
+| Painel de etapas (Alta Densidade)     | padding-bottom | `--spacing-scale-3x` |
+| Painel de etapas (Alta Densidade)     | padding-left   | `--spacing-scale-4x` |
+| Painel de etapas (Alta Densidade)     | padding-right  | `--spacing-scale-4x` |
+| Área de Conteúdo (Densidade Padrão)   | padding-top    | `--spacing-scale-5x` |
+| Área de Conteúdo (Densidade Padrão)   | padding-bottom | `--spacing-scale-5x` |
+| Área de Conteúdo (Densidade Padrão)   | padding-left   | `--spacing-scale-5x` |
+| Área de Conteúdo (Densidade Padrão)   | padding-right  | `--spacing-scale-5x` |
+| Área de Conteúdo (Baixa Densidade)    | padding-top    | `--spacing-scale-6x` |
+| Área de Conteúdo (Baixa Densidade)    | padding-bottom | `--spacing-scale-6x` |
+| Área de Conteúdo (Baixa Densidade)    | padding-left   | `--spacing-scale-6x` |
+| Área de Conteúdo (Baixa Densidade)    | padding-right  | `--spacing-scale-6x` |
+| Área de Conteúdo (Alta Densidade)     | padding-top    | `--spacing-scale-4x` |
+| Área de Conteúdo (Alta Densidade)     | padding-bottom | `--spacing-scale-4x` |
+| Área de Conteúdo (Alta Densidade)     | padding-left   | `--spacing-scale-4x` |
+| Área de Conteúdo (Alta Densidade)     | padding-right  | `--spacing-scale-4x` |
+| Barra de Navegação (Densidade Padrão) | padding-top    | `--spacing-scale-3x` |
+| Barra de Navegação (Densidade Padrão) | padding-bottom | `--spacing-scale-3x` |
+| Barra de Navegação (Densidade Padrão) | padding-left   | `--spacing-scale-5x` |
+| Barra de Navegação (Densidade Padrão) | padding-right  | `--spacing-scale-5x` |
+| Barra de Navegação (Baixa Densidade)  | padding-top    | `--spacing-scale-4x` |
+| Barra de Navegação (Baixa Densidade)  | padding-bottom | `--spacing-scale-4x` |
+| Barra de Navegação (Baixa Densidade)  | padding-left   | `--spacing-scale-6x` |
+| Barra de Navegação (Baixa Densidade)  | padding-right  | `--spacing-scale-6x` |
+| Barra de Navegação (Alta Densidade)   | padding-top    | `--spacing-scale-2x` |
+| Barra de Navegação (Alta Densidade)   | padding-bottom | `--spacing-scale-2x` |
+| Barra de Navegação (Alta Densidade)   | padding-left   | `--spacing-scale-4x` |
+| Barra de Navegação (Alta Densidade)   | padding-right  | `--spacing-scale-4x` |
