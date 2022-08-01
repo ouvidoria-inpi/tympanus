@@ -1,7 +1,14 @@
 import flatpickr from 'flatpickr'
 const Brazilian = require('flatpickr/dist/l10n/pt').default.pt
 
+/** Classe para instanciar um objeto BRDateTimePicker*/
 class BRDateTimePicker {
+	/**
+	 * Instancia do objeto
+	 * @param {string} name - Nome do componente em minúsculo
+	 * @param {object} component - Objeto referenciando a raiz do componente DOM
+	 * @param {string} config - atributo de configuração do componente
+	 */
 	constructor(name, component, config) {
 		this.name = name
 		this.component = component
@@ -31,6 +38,10 @@ class BRDateTimePicker {
 		this._buildDateTimePicker()
 	}
 
+	/**
+	 * Formata o componente e monta instância flatpickr
+	 * @private
+	 */
 	_buildDateTimePicker() {
 		let format = 'd/m/Y'
 		let time = false
