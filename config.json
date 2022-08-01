@@ -377,20 +377,16 @@
         {
           "examples": [
             {
-              "label": "Card simples",
-              "path": "examples/card-simples"
+              "label": "Card simples e completo",
+              "path": "examples/card-examples"
             },
             {
-              "label": "Card completo",
-              "path": "examples/card-completo"
-            },
-            {
-              "label": "Card com expansão",
-              "path": "examples/card-expansao"
+              "label": "Card com collapse",
+              "path": "examples/card-collapse"
             },
             {
               "label": "Card desativado",
-              "path": "examples/card-desativado"
+              "path": "examples/card-disabled"
             },
             {
               "label": "Card com hover",
@@ -398,7 +394,7 @@
             },
             {
               "label": "Card com altura fixa",
-              "path": "examples/card-altura-fixa"
+              "path": "examples/card-scroll"
             }
           ],
           "id": "card",
@@ -1190,22 +1186,22 @@
         {
           "examples": [
             {
-              "height": 495,
-              "label": "Envio de arquivo",
+              "height": 180,
+              "label": "Envio de 1 arquivo",
               "path": "examples/upload-single"
             },
             {
-              "height": 495,
-              "label": "Envio de arquivo",
+              "height": 180,
+              "label": "Envio de vários arquivo",
               "path": "examples/upload-multiple"
             },
             {
-              "height": 495,
+              "height": 180,
               "label": "Upload com mensagem de feedback",
               "path": "examples/upload-feedback"
             },
             {
-              "height": 495,
+              "height": 180,
               "label": "Upload desabilitado",
               "path": "examples/upload-disabled"
             }

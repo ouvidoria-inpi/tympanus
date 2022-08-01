@@ -1,91 +1,45 @@
+// Dependências
+@import "../button/mixins";
+
+// Mixins
 @mixin upload-configs {
   @include upload-tokens;
   @include upload-default;
-  @include upload-state;
+  @include upload-list;
+  @include upload-states;
 }
 
 @mixin upload-tokens {
-  --onboarding-dragging-color: var(--color-danger);
-  --upload-z-index: var(--z-index-layer-0);
 }
 
 @mixin upload-default {
-  z-index: var(--upload-z-index);
-
-  @include media-breakpoint-down(xs) {
-    .br-button.upload-button {
-      height: auto;
-      padding: v(spacing-scale-base) v(spacing-scale-2x);
-      width: 100% !important;
-    }
-
-    .upload-button {
-      span {
-        font-size: v(font-size-scale-down-01);
-        white-space: break-spaces;
-      }
-    }
-
-    .item {
-      flex-wrap: nowrap;
-    }
-
-    .upload-list .support {
-      flex-shrink: 0;
-      margin-right: var(--spacing-scale-base);
-    }
-  }
-
   input {
     display: none;
   }
 
-  &.dragging {
-    .upload-button {
-      background-color: v(color-support-01);
-
-      span,
-      svg {
-        color: var(--interactive);
-        pointer-events: none;
-      }
-    }
-  }
-
-  .br-button.upload-button {
-    max-width: 550px;
-    width: 100%;
-
-    &:active * {
-      color: v(color-primary-pastel-01);
-    }
-  }
-
   .upload-button {
-    border: var(--surface-width-sm) dashed;
-    border-color: var(--interactive);
+    @include button-tokens;
+    @include button-default;
+    border: var(--surface-width-sm) dashed var(--interactive);
     border-radius: var(--surface-rounder-sm);
     display: block;
-    padding-left: v(spacing-scale-2x);
-    padding-right: v(spacing-scale-2x);
+    font-size: var(--font-size-scale-base);
+    font-style: italic;
+    font-weight: var(--font-weight-regular);
+    margin-top: var(--spacing-scale-half);
+    max-width: 550px;
+    min-height: var(--button-size);
+    padding-left: var(--spacing-scale-2x);
+    padding-right: var(--spacing-scale-2x);
     text-align: left;
     width: 100%;
-
-    svg {
-      color: var(--interactive);
-      font-size: v(icon-size-lg);
-      padding-left: var(--spacing-scale-2x);
-    }
-
-    span {
-      color: var(--interactive);
-      font-size: v(font-size-scale-base);
-      font-style: italic;
-      font-weight: v(font-weight-regular);
-      padding-left: v(spacing-scale-half);
+    @include icon {
+      margin-right: var(--spacing-scale-base);
     }
   }
+}
 
+@mixin upload-list {
   .upload-list {
     max-width: 550px;
     position: relative;
@@ -102,58 +56,36 @@
       align-items: center;
       display: flex;
     }
-
-    .cargas {
-      box-sizing: border-box;
-      color: v(color-secondary-08);
-      display: inline-block;
-      left: 54%;
-      position: relative;
-      text-align: right;
-      top: 4px;
-    }
   }
 
   .br-tooltip {
     max-width: 93%;
   }
+}
 
-  .#{$prefix}item {
-    --item-padding: var(--spacing-scale-half) var(--spacing-scale-base)
-      var(--spacing-scale-half) var(--spacing-scale-2x);
-    align-items: center;
-    display: flex;
+@mixin upload-states {
+  .upload-button {
+    @include button-states;
+  }
+  @each $state in success, danger, warning, info {
+    &.#{$state},
+    &[data-#{$state}] {
+      .upload-button {
+        border-color: var(--#{$state});
+      }
+    }
+  }
 
-    &:first-child {
-      margin-top: calc(var(--spacing-scale-half) * 2);
+  &.dragging {
+    .upload-button {
+      background-image: linear-gradient(
+        rgba(var(--interactive-rgb), var(--hover)),
+        rgba(var(--interactive-rgb), var(--hover))
+      );
     }
   }
 }
 
 @mixin upload-state {
-  /*** Estados ***/
-  @each $state, $color in (success, v(success)), (danger, v(danger)),
-    (warning, v(warning)), (info, v(info))
-  {
-    &.#{$state},
-    &[data-#{$state}] {
-      .upload-button {
-        border-color: $color;
-      }
-      .feedback.color-#{$state} {
-        align-items: center;
-        background: $color;
-        color: var(--color-secondary-01) !important;
-        display: inline-flex;
-        height: 35px;
-        margin-bottom: var(--spacing-scale-base);
-        padding: 5px;
-      }
-      @if ($state == warning) {
-        .feedback.color-warning {
-          color: var(--color-secondary-08) !important;
-        }
-      }
-    }
-  }
+  @include upload-states;
 }
