@@ -1,66 +1,35 @@
 [version]: # '2.2.3'
 
-## Como usar
+### Propriedades obrigatórias
 
-```html
-<div class="br-checkbox [disabled|invalid|valid] [d-inline-block]">
-    <input id="identificador" type="checkbox" [disabled] />
-    <label for="identificador">Label do componente</label>
-</div>
-```
+| Atributo | Tipo   | Valor Padrão    | Descrição               |
+| -------- | ------ | --------------- | ----------------------- |
+| class    | string | **br-checkbox** | Container do componente |
 
-### Elementos obrigatórios
+### Propriedades Adicionais
 
-| Elemento       | Tipo   | Descrição                |
-| -------------- | ------ | ------------------------ |
-| `.br-checkbox` | classe | Container do componente  |
-| `input`        | tag    | Input do tipo "checkbox" |
-| `label`        | tag    | Rótulo do Checkbox       |
-
-### Configurações Adicionais
-
-| Elemento          | Tipo   | Descrição                                   |
-| ----------------- | ------ | ------------------------------------------- |
-| `.d-inline-block` | classe | Formata o componente para versão horizontal |
-
-### Configurações obrigatórias
-
--   Ao desativar o componente inclua também o atributo `disabled` no elemento `input`.
+| Atributo | Tipo   | Valor Padrão     | Descrição              |
+| -------- | ------ | ---------------- | ---------------------- |
+| class    | string | **hidden-label** | Esconde texto do label |
 
 ## Estados
 
-| Elemento   | Tipo   | Descrição                                                         |
-| ---------- | ------ | ----------------------------------------------------------------- |
-| `disabled` | classe | Desabilita o componente                                           |
-| `invalid`  | classe | Formata a versão inválida para o componente (usado em validações) |
-| `valid`    | classe | Formata a versão válida para o componente (usado em validações)   |
+| Estado     | atributo | Valores      |
+| ---------- | -------- | ------------ |
+| Desativado | class    | **disabled** |
+| Inválido   | class    | **invalid**  |
+| Válido     | class    | **valid**    |
 
-### Dependências
+## Informações adicionais
 
--   [Checkgroup](/ds/util/checkgroup)
+### Listagem horizontal
 
-## Instanciação do Componente
+Usar Utilitários CSS [Display](/ds/utilities-css/display) e [Espaçamento](/ds/utilities-css/espacamento) para modificar o componente.
 
-### HTML
+### Checkbox desativado
 
-Incluir o arquivo `core.min.js` no html.
+Além de adicionar a classe "disabled" ao componente, adicione também o atributo "disabled" na tag html `<input>`.
 
-```html
-<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
-```
+### Estado intermediário
 
-> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
-
-## Javascript
-
-Usar o seguinte código JavaScript para instanciar a classe `BRCheckbox`, passando os seguintes parâmetros:
-
--   Nome da classe (br-checkbox)
--   Objeto referenciando a raiz do componente DOM
-
-```javascript
-const checkboxList = []
-for (const brCheckbox of window.document.querySelectorAll('.br-checkbox')) {
-  checkboxList.push(new core.BRCheckbox('br-checkbox', brCheckbox))
-}
-```
+Usar Utilitário JS [Checkgroup](/ds/util/checkgroup). Veja exemplo de instanciação do collapse na aba "Javascript" na sessão **Código compartilhado entre exemplos**.
