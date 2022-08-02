@@ -9,17 +9,12 @@
 }
 
 @mixin divider-tokens {
-  --divider-style: solid;
-  --divider-color: var(--divider-light);
-  --divider-padding: var(--spacing-scale-base);
-  --divider-size: 1px;
-  --divider-light: var(--color-secondary-04);
-  --divider-dark: var(--color-secondary-01);
+  --divider-size: var(--surface-width-sm);
 }
 
 @mixin divider-default {
-  border-color: var(--divider-color);
-  border-style: var(--divider-style);
+  border-color: var(--border-color);
+  border-style: solid;
   border-width: 0;
   border-top-width: var(--divider-size);
   display: block;
@@ -34,8 +29,8 @@
 
     &::after,
     &::before {
-      border-color: var(--divider-color);
-      border-style: var(--divider-style);
+      border-color: var(--border-color);
+      border-style: solid;
       border-width: 0;
       border-top-width: var(--divider-size);
       content: "";
@@ -43,11 +38,11 @@
     }
 
     &::after {
-      margin-left: var(--divider-padding);
+      margin-left: var(--spacing-scale-base);
     }
 
     &::before {
-      margin-right: var(--divider-padding);
+      margin-right: var(--spacing-scale-base);
     }
   }
 }
@@ -72,47 +67,22 @@
 }
 
 @mixin divider-inverted {
-  &.inverted {
-    --divider-color: var(--color-secondary-01);
+  &.inverted,
+  &.dark-mode {
+    --border-color: var(--pure-0);
   }
 }
 
 @mixin divider-dashed {
   &.dashed {
-    --divider-style: dashed;
+    border-style: dashed;
   }
 }
 
 @mixin divider-thickness {
-  &.sm {
-    --divider-size: 2px;
-  }
-
-  &.md {
-    --divider-size: 3px;
-  }
-
-  &.lg {
-    --divider-size: 4px;
-  }
-}
-
-@mixin divider-dashed {
-  &.dashed {
-    --divider-style: dashed;
-  }
-}
-
-@mixin divider-thickness {
-  &.sm {
-    --divider-size: 2px;
-  }
-
-  &.md {
-    --divider-size: 3px;
-  }
-
-  &.lg {
-    --divider-size: 4px;
+  @each $thickness in "sm", "md", "lg" {
+    &.#{$thickness} {
+      --divider-size: var(--surface-width-#{$thickness});
+    }
   }
 }
