@@ -182,6 +182,7 @@ class BRTable {
 	/**
 	 * Inicializa a busca
 	 * @private
+	 * @param {object} trigger - Objeto referente ao elemento que dispara a ação
 	 */
 	_searchInit(trigger) {
 		trigger.setAttribute('aria-expanded', 'false')
@@ -190,6 +191,8 @@ class BRTable {
 	/**
 	 * Abre a busca
 	 * @private
+	 * @param {object} trigger - Objeto referente ao elemento que dispara a ação
+	 * @param {object} target - Objeto referente ao alvo da ação
 	 */
 	_searchOpen(trigger, target) {
 		trigger.setAttribute('aria-expanded', 'true')
@@ -201,6 +204,8 @@ class BRTable {
 	/**
 	 * Fecha a busca
 	 * @private
+	 * @param {object} trigger - Objeto referente ao elemento que dispara a ação
+	 * @param {object} target - Objeto referente ao alvo da ação
 	 */
 	_searchClose(trigger, target) {
 		target.querySelector('input').value = ''
