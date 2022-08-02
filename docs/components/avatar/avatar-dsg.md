@@ -10,10 +10,10 @@ Pode ser utilizado também em qualquer situação em que seja necessário repres
 
 ## Anatomia
 
-| ID  | Nome                     |                                Referência                                 | Uso         |
-| --- | ------------------------ | :-----------------------------------------------------------------------: | ----------- |
-| 1   | Superfície circular      | [Superfície]([url](https://www.gov.br/ds/fundamentos-visuais/superficie)) | Obrigatório |
-| 2   | Representação do usuário |                                    ---                                    | Obrigatório |
+| ID  | Nome                     |                             Referência                             | Uso         |
+| --- | ------------------------ | :----------------------------------------------------------------: | ----------- |
+| 1   | Superfície circular      | [Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Representação do usuário |                                ---                                 | Obrigatório |
 
 ![Anatomia do avatar.](imagens/avatar-anatomia.png)
 *Anatomia do avatar.*
@@ -45,9 +45,9 @@ A representação do usuário é como o usuário deseja ser reconhecido digitalm
 
 As representações citadas acima definem os três tipos disponíveis de avatar:
 
--   1. **Icônico**;
--   2. **Fotográfico**;
--   3. **Letra**.
+- 1. **Icônico**;
+- 2. **Fotográfico**;
+- 3. **Letra**.
 
 ### 1. Avatar Icônico
 
