@@ -762,13 +762,11 @@
         {
           "examples": [
             {
-              "height": 500,
-              "label": "Mensagens",
+              "label": "Tipo padrão",
               "path": "examples/message-padrao"
             },
             {
-              "height": 400,
-              "label": "Feedback",
+              "label": "Tipo contextual",
               "path": "examples/feedback"
             }
           ],
