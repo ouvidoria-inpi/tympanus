@@ -1,24 +1,6 @@
-[version]: # "1.0.0"
+[version]: # "1.0.1"
 
 ## Como usar
-
-### HTML (Checkbox Pai)
-
-```html
-<div class="br-checkbox">
-  <input name="name" type="checkbox" aria-label="label" data-parent="tag-group" data-checked-label="label-checked" data-unchecked-label="label-unchecked" checked indeterminate />
-  <label for="name">...</label>
-</div>
-```
-
-### HTML (Checkbox Filho)
-
-```html
-<div class="br-checkbox">
-  <input name="name" type="checkbox" aria-label="label" data-child="tag-group" checked/>
-  <label for="name">...</label>
-</div>
-```
 
 ### Atributos no checkbox pai
 

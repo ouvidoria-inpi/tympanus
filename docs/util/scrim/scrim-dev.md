@@ -2,21 +2,6 @@
 
 ## Como usar
 
-### HTML
-
-```html
-<div id="id-scrim">
-  <div data-toggle="scrim" data-target="id-target" aria-controls="id-target" 
-  ="false" data-visible="false" data-group="id-scrim">
-    ...
-  </div>
-  <div id="id-target" aria-hidden="true" hidden>
-    ...
-  </div>
-  ...
-</div>
-```
-
 ### Atributos no elemento alvo
 
 #### Obrigatórios

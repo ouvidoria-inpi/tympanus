@@ -1,17 +1,6 @@
-[version]: # "1.0.0"
+[version]: # "1.0.1"
 
 ## Como usar
-
-### HTML
-
-```html
-<div data-toggle="dropdown" data-target="id-target" aria-controls="id-target" aria-expanded="false" data-visible="false">
-  ...
-</div>
-<div id="id-target" aria-hidden="true" hidden>
-  ...
-</div>
-```
 
 ### Atributos no elemento acionador
 

@@ -13,11 +13,6 @@
 
 ### HTML (Tooltip Texto)
 
-```html
-<a href="javascript:void(0);" data-tooltip-text="Texto de Informação!">
-</div>
-```
-
 ### HTML (Tooltip Texto)
 
 ```html
