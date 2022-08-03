@@ -1,17 +1,13 @@
-include ../switch
+extends ../../../partial/pug/isolate
 
-.row
-  .col-md
-    p
-      label Alinhamento do Label à Esquerda
-    +switch-left
+block dependencies
+  include ../switch
 
-  .col-md
-    p 
-      label Alinhamento do Label à Direita
-    +switch-right
-
-  .col-md
-    p 
-      label Alinhamento do Label ao Topo
-    +switch-top
+block content
+  .row
+    .col-md
+      +switch-left
+    .col-md.mt-3.mt-md-0
+      +switch-right
+    .col-md.mt-3.mt-md-0
+      +switch-top

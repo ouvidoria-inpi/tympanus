@@ -1,17 +1,13 @@
-include ../switch
+extends ../../../partial/pug/isolate
 
-.row
-  .col-md
-    p
-      label Densidade Alta
-    +switch-small
+block dependencies
+  include ../switch
 
-  .col-md
-    p 
-      label Densidade Média (Padrão)
-    +switch-medium
-
-  .col-md
-    p 
-      label Densidade Baixa
-    +switch-large
+block content
+  .row
+    .col-md
+      +switch-small
+    .col-md.mt-3.mt-md-0
+      +switch-medium
+    .col-md.mt-3.mt-md-0
+      +switch-large

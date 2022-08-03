@@ -1010,24 +1010,20 @@
               "path": "examples/switch-default"
             },
             {
-              "label": "Switch Desabilitado",
-              "path": "examples/switch-disabled"
-            },
-            {
-              "label": "Densidades do Switch",
-              "path": "examples/switch-density"
-            },
-            {
-              "label": "Switch Com Rótulos",
-              "path": "examples/switch-labels"
-            },
-            {
-              "label": "Alinhamentos do Switch",
+              "label": "Alinhamentos",
               "path": "examples/switch-alignments"
             },
             {
-              "label": "Switch Com Ícone",
+              "label": "Com ícone",
               "path": "examples/switch-icon"
+            },
+            {
+              "label": "Com rótulos adicionais",
+              "path": "examples/switch-labels"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/switch-density"
             }
           ],
           "ext": [

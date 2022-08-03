@@ -1,12 +1,11 @@
-include ../switch
+extends ../../../partial/pug/isolate
 
-.row
-  .col-md
-    p
-      label Rótulo (Ligado/Desligado)
-    +switch-label-onoff
+block dependencies
+  include ../switch
 
-  .col-md
-    p 
-      label Rótulo (Concordo/Discordo)
-    +switch-label-terms
+block content
+  .row
+    .col-md
+      +switch-label-onoff
+    .col-md.mt-3.mt-md-0
+      +switch-label-terms
