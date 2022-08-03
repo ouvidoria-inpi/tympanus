@@ -24,6 +24,7 @@ class BRTag {
 			this._setSelection()
 		}
 		this._closeTag()
+		this._dismissTag()
 	}
 
 	/**
@@ -99,19 +100,36 @@ class BRTag {
 	}
 
 	/**
-	 * Define comportamento do botão de fechar
+	 * Define comportamento do botão de fechar usando classe (compatibilidade)
 	 * @private
 	 */
 	_closeTag() {
-		const button = this.component.querySelector('.br-button.close')
+		const closeBtn = this.component.querySelector('.br-button.close')
 
-		if (button) {
-			const brTag = button.closest('.br-tag')
+		if (closeBtn) {
+			const brTag = closeBtn.closest('.br-tag')
 
 			brTag.addEventListener('click', () => {
-				button.closest('.br-tag').remove()
+				closeBtn.closest('.br-tag').remove()
 			})
 		}
+	}
+
+	/**
+	 * Define comportamento do botão de fechar usando data-dismiss
+	 * @private
+	 */
+	_dismissTag() {
+		this.component
+			.querySelectorAll('[data-dismiss]')
+			.forEach((closeBtn) => {
+				closeBtn.addEventListener('click', () => {
+					const target = document.querySelector(
+						`#${closeBtn.getAttribute('data-dismiss')}`
+					)
+					if (target) target.remove()
+				})
+			})
 	}
 }
 
