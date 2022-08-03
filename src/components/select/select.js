@@ -18,7 +18,7 @@ class BRSelect {
   }
   /**
    * Retorna os valores dos elementos selecionados
-   * @returns {array} elementos selecionados
+   * @returns {Array} elementos selecionados
    *
    */
   get selected() {
@@ -26,7 +26,7 @@ class BRSelect {
   }
   /**
    * Retorna os elementos selecionados pelo inputValue
-   * @param {array} elementos selecionados
+   * @param {Array} elementos selecionados
    * @returns
    */
   get selectedValue() {
@@ -35,7 +35,7 @@ class BRSelect {
 
   /**
    * Retorna os elementos options selecionados
-   * @param {array} elementos selecionados
+   * @param {Array} elementos selecionados
    * @returns
    */
   _optionSelected(strOption) {
