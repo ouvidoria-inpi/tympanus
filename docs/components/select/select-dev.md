@@ -163,10 +163,14 @@ Usar o seguinte código JavaScript para instanciar a classe `BRSelect`, passando
 -   Objeto referenciando a raiz do componente DOM
 
 ```javascript
+
 const selectList = []
-for (const brSelect of window.document.querySelectorAll('.br-select')) {
-  selectList.push(new core.BRSelect('br-select', brSelect))
-}
+		for (const brSelect of window.document.querySelectorAll('.br-select')) {
+			const brselect = new BRSelect('br-select', brSelect)
+			//Exemplo de uso de listener do select
+			brSelect.addEventListener('onChange', function (e) { })
+			selectList.push(brselect)
+		}
 ```
 
 ### Para Obter as Opções Selecionadas
@@ -180,3 +184,9 @@ Ambas as propriedades retoram:
 
 -   **Select Simples**: Um único valor selecionado (`string`) ou `undefined` se nenhuma opção foi selecionada
 -   **Select Múltiplo**: Um array contendo os valores selecionados (`string`) ou um array vazio se nenhuma opção foi selecionada
+
+### Evento
+
+Quando o usuário clica em um item é mandado o evento `onChange` que tem o atributo detail com o dom do componente.
+
+
