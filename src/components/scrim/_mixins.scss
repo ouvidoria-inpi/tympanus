@@ -12,11 +12,9 @@
     z-index: 999;
 
     .br-modal {
-      background-color: v(color-secondary-01, $color-secondary-01);
       left: 50%;
       max-height: 90%;
       overflow: auto;
-      padding: var(--spacing-scale-2x);
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -50,7 +48,7 @@
       background: var(--surface-overlay-text);
       bottom: 0;
       left: 0;
-      padding: v(spacing-scale-3x) v(spacing-scale-baseh);
+      padding: var(--spacing-scale-3x) v(spacing-scale-baseh);
       position: absolute;
       width: 100%;
     }
