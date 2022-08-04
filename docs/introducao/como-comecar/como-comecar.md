@@ -45,13 +45,6 @@ Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 **Confira sempre a versão referência ao baixar o pacote @govbr-ds/core**.
 
-1. Execute o seguinte comando no terminal:
-
-    ```bash
-      npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/
-      npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
-    ```
-
 1. Execute o comando **npm install @govbr-ds/core**, exemplo:
 
     ```bash
@@ -60,7 +53,7 @@ Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 ## Template Inicial
 
-A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **core.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **core.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **core-init.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **core.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **core.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>
@@ -95,7 +88,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
+        <script src="node_modules\@govbr-ds\core\dist\core.js"></script>
     </body>
 </html>
 ```
@@ -104,7 +97,8 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
 
 ## Versão "init" do js
 
-Essa é a versão init(core-init.js) com os componentes já **inicializados** diferente do core.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
+Essa é a versão init(core-init.js) com os componentes já **inicializados** diferente do core.js em que precisa que a classe do js seja inicializado, elas poderam ter problema com frameworks e não aconselhamos o seu uso em produção
+. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
 <script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
