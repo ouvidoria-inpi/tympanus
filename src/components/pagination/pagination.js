@@ -108,8 +108,8 @@ class BRPagination {
 
 	/**
 	 * Cria elemento no intervalo
-	 * @private
 	 * @param {string} type - nome do tipo do elmento
+	 * @private
 	 */
 	_createIntervalElement(type) {
 		const interval = document.createElement('li')
@@ -154,8 +154,8 @@ class BRPagination {
 
 	/**
 	 * Cria ação de clique no dropdown
-	 * @private
 	 * @param {object} element - referencia ao objeto DOM
+	 * @private
 	 */
 	_dropdownToggle(element) {
 		element.addEventListener('click', () => {
@@ -174,8 +174,8 @@ class BRPagination {
 
 	/**
 	 * Inicializa elemento de dropdown
-	 * @private
 	 * @param {object} element - referencia ao objeto DOM
+	 * @private
 	 */
 	_dropdownInit(element) {
 		element.parentElement.classList.add('dropdown')
@@ -186,8 +186,8 @@ class BRPagination {
 
 	/**
 	 * Ação de abrir dropdown
-	 * @private
 	 * @param {object} element - referencia ao objeto DOM
+	 * @private
 	 */
 	_dropdownOpen(element) {
 		element.setAttribute('aria-expanded', 'true')
@@ -196,8 +196,8 @@ class BRPagination {
 
 	/**
 	 * Ação de fechar dropdown
-	 * @private
 	 * @param {object} element - referencia ao objeto DOM
+	 * @private
 	 */
 	_dropdownClose(element) {
 		element.setAttribute('aria-expanded', 'false')
@@ -206,8 +206,8 @@ class BRPagination {
 
 	/**
 	 * Define página ativa
-	 * @private
 	 * @param {object} currentPage - referencia ao objeto DOM
+	 * @private
 	 */
 	_selectPage(currentPage) {
 		this.component.querySelectorAll('.page').forEach((page) => {
