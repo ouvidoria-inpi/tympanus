@@ -2,55 +2,28 @@
 
 ## Como usar
 
-```html
-<div class="br-tag text">
-    <i class="fas fa-car" aria-hidden="true"></i>
-    <span>Label</span>
-</div>
-```
-
-Exemplo de Tag  simples
-
-```html
-<div class="br-tag interaction-select selected">
-  <input id="tag-select" type="radio" aria-label="selecionar tag" checked="checked" name="vehicle" value="car"/>
-  <label for="tag01"><i class="fas fa-car" aria-hidden="true"></i><span>Label</span>
-  
-  </label>
-</div>
-```
-
-Exemplo usando Tag com interação.
-
 ### Propriedades obrigatórias
 
-| Elemento | Tipo   | Descrição                          |
-| -------- | ------ | ---------------------------------- |
-| `br-tag` | classe | container do componente            |
-| `text`   | classe | tag do tipo texto(com e sem ícone) |
+| Atributo | Tipo   | Valor Padrão | Descrição               |
+| -------- | ------ | ------------ | ----------------------- |
+| class    | string | **br-tag**   | container do componente |
 
-> O **Botão Circular fechar** precisa de texto alternativo para o ícone de fechamento. Inclua o atributo `aria-label="texto alternativo"` explicando de forma clara qual tag será fechada. Isso devido a questão de acessibilidade para usuários que fazem uso de leitores de tela.
+### Propriedades adicionais
 
-### Configurações Adicionais
+| Atributo | Tipo   | Valor Padrão                       | Descrição                    |
+| -------- | ------ | ---------------------------------- | ---------------------------- |
+| class    | string | **interaction**                    | Tag de Interação Dispensável |
+| class    | string | **interaction-select**             | Tag de Interação Persistente |
+| class    | string | **status**                         | Tag de status                |
+| class    | string | **count**                          | Tag de contagem              |
+| class    | string | **icon**                           | Tag de ícone                 |
+| class    | string | **small**, **medium** ou **large** | Modifica a densidade         |
 
-| Elemento             | Tipo   | Descrição                       |
-| -------------------- | ------ | ------------------------------- |
-| `count`              | classe | tag do tipo contagem            |
-| `icon`               | classe | tag do tipo ícone               |
-| `interaction`        | classe | tag do tipo interação(fechar)   |
-| `interaction-select` | classe | tag do tipo interação(escolha)  |
-| `status`             | classe | tag do tipo status              |
-| `success`            | classe | cor de sucesso na tag status    |
-| `danger`             | classe | cor de perigo na tag status     |
-| `warning`            | classe | cor de atenção na tag status    |
-| `info`               | classe | cor de informação na tag status |
-| `small`              | classe | aplica a densidade alta         |
-| `medium`             | classe | aplica a densidade média        |
-| `large`              | classe | aplica a densidade baixa        |
-| `inverted`           | classe | aplicar em fundos escuros       |
+## Informações adicionais
 
-> **Atenção** As cores de suporte e de apoio são usadas para cor de brackground das Tag(excetuando a tag de Interação). Elas vão do número 01 ao 11 e são usadas através da classe `.support-01` a `.support-11`. Para maiores informações sobre as cores acesse a página **[cores](fundamentos-visuais/cores)** presente na aba `Fundamentos-visuais` no site do Design System.
-> Se necessário trocar as cores dos textos nas tags, usam-se as classes do **[utilitário de texto](utilities-css/textos)** presente na aba `Guias` no site do Design System.
+### Cores
+
+Usar Utilitário CSS [Cores](ds/utilities-css/cores) para modificar cores de texto e fundo para o componente.
 
 ## Dependências
 

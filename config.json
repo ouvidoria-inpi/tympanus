@@ -1110,7 +1110,7 @@
               "path": "examples/tag-interaction"
             },
             {
-              "label": "Tag Seleção",
+              "label": "Tag de Interação Persistente",
               "path": "examples/tag-selections"
             },
             {
@@ -1128,6 +1128,10 @@
             {
               "label": "Tag de Ícone",
               "path": "examples/tag-icon"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/tag-density"
             }
           ],
           "id": "tag",
