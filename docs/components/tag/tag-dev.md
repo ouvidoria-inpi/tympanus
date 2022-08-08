@@ -41,14 +41,12 @@ Incluir o arquivo `core.min.js` no html.
 
 > O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
-## Javascript
+### Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRTag`, passando os seguintes parâmetros:
 
 -   Nome da classe (br-tag)
 -   Objeto referenciando a raiz do componente DOM
-
-## Javascript
 
 ```javascript
 const tagList = []
