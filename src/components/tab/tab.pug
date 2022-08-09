@@ -13,7 +13,8 @@
         | Conteúdo ativo
 
 mixin tab
-  div(class=`${prefix}tab`)&attributes(attributes)
+  - let className = prefix + 'tab'
+  div(class=className)&attributes(attributes)
     if block
       block
 
@@ -135,7 +136,7 @@ mixin tabs-padrao-small
         p Painel Mídias
 
 mixin tabs-padrao-inverted
-  +tab.inverted
+  +tab.dark-mode
     +tab-nav
       +tab-item(title="Sobre" data-panel="panel-1-inverted") Sobre
       +tab-item(title="Todos" data-panel="panel-2-inverted") Todos
