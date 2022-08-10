@@ -1110,15 +1110,11 @@
               "path": "examples/tag-interaction"
             },
             {
-              "label": "Tag de Interação Persistente com radio",
-              "path": "examples/tag-interaction-radio"
+              "label": "Tag de Interação Persistente",
+              "path": "examples/tag-selections"
             },
             {
-              "label": "Tag de Interação Persistente com checkbox",
-              "path": "examples/tag-interaction-checkbox"
-            },
-            {
-              "label": "Tag de texto",
+              "label": "Tag de Texto",
               "path": "examples/tag-text"
             },
             {
@@ -1132,6 +1128,10 @@
             {
               "label": "Tag de Ícone",
               "path": "examples/tag-icon"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/tag-density"
             }
           ],
           "id": "tag",

@@ -458,9 +458,8 @@ function entries(argv) {
     'tag-density',
     'tag-count',
     'tag-icon',
-    'tag-interaction-checkbox',
-    'tag-interaction-radio',
-    'tag-interaction-tag',
+    'tag-selections',
+    'tag-interaction',
     'tag-status',
     'tag-text',
   ])
