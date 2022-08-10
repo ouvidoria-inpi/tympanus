@@ -2,52 +2,58 @@
 
 ## Como usar
 
+### Propriedades obrigatórias
+
+| Atributo | Tipo   | Valor Padrão       | Descrição                           |
+| -------- | ------ | ------------------ | ----------------------------------- |
+| class    | string | **br-menu**        | Container do componente             |
+| class    | string | **menu-container** | Agrupa scrim e painel               |
+| class    | string | **menu-scrim**     | Aplica o efeito de scrim            |
+| class    | string | **menu-panel**     | Agrupa cabeçalho, corpo e rodapé    |
+| class    | string | **menu-header**    | Agrupa o botão de fechar e título   |
+| class    | string | **menu-close**     | Container para botão de fechar menu |
+| class    | string | **menu-title**     | Container para título               |
+| class    | string | **menu-body**      | Agrupa pastas de itens de menu      |
+| class    | string | **menu-folder**    | Pasta com itens de menu             |
+| class    | string | **menu-item**      | Item de menu                        |
+
+### Propriedades Adicionais
+
+| Atributo         | Tipo   | Valor Padrão    | Descrição                           |
+| ---------------- | ------ | --------------- | ----------------------------------- |
+| class            | string | **push**        | Ativa modo "empurra"                |
+| class            | string | **menu-footer** | Container para rodapé do componente |
+| data-breakpoints | string |                 | Modifica breakpoint do componente   |
+
+## Instanciação do Componente
+
+### HTML
+
+Incluir o arquivo `core.min.js` no html.
+
 ```html
-<div class="br-menu" id="identificador">
-    <div class="menu-trigger">...</div>
-    <div class="menu-container">
-        <div class="menu-panel">
-            <header class="menu-header">
-                <div class="menu-close">
-                    <button
-                        class="br-button circle"
-                        type="button"
-                        arial-label="Fechar o menu"
-                        data-dismiss="menu"
-                    >
-                        <i class="fas fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="menu-title">...</div>
-            </header>
-            <nav class="menu-body">
-                <div class="menu-folder">
-                    <a class="menu-item" href="">...</a>
-                    <ul>
-                        <li>
-                            <a class="menu-item" href="">...</a>
-                            <ul>
-                                <li>
-                                    <a class="menu-item" href="">...</a>
-                                </li>
-                                ...
-                            </ul>
-                        </li>
-                        ...
-                    </ul>
-                </div>
-            </nav>
-            <footer class="menu-footer">
-                <div class="menu-logos">...</div>
-                <div class="menu-links">...</div>
-                <div class="menu-social">...</div>
-                <div class="menu-info">...</div>
-            </footer>
-        </div>
-        <div class="menu-scrim" data-dismiss="menu" tabindex="0"></div>
-    </div>
-</div>
+<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
 ```
+
+> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
+
+### Javascript
+
+Usar o seguinte código JavaScript para instanciar a classe `BRMenu`, passando os seguintes parâmetros:
+
+-   Nome da classe (br-menu)
+-   Objeto referenciando a raiz do componente DOM
+
+```javascript
+
+const menuList = []
+for (const brMenu of window.document.querySelectorAll('.br-menu')) {
+  menuList.push(new core.BRMenu('br-menu', brMenu))
+}
+
+```
+
+## Informações adicionais
 
 ### Acionador do Menu Principal
 
@@ -65,14 +71,6 @@ O Menu Principal precisa de um **acionador externo** para abrir. Geralmente esse
 </button>
 ```
 
-### Menu Principal deslocando a página
-
-Incluir a classe `.push` ao componente.
-
-```html
-<div class="br-menu push" id="identificador">...</div>
-```
-
 ### Menu Contextual
 
 O acionador do Menu Contextual deve ser incluído no elemento `.menu-trigger`, portanto não é necessário adicionar um id ao componente.
@@ -86,12 +84,10 @@ O acionador do Menu Contextual deve ser incluído no elemento `.menu-trigger`, p
         </button>
     </div>
     <div class="menu-container">
-        <div class="menu-panel shadow-lg-right px-0 col-lg-2">
+        <div class="menu-panel">
             <nav class="menu-body">
                 <div class="menu-folder">
-                    <div class="menu-item"><span class="content">AGRUPAMENTO 1</span></div>
-                    <ul>
-                        <li><a class="menu-item" href="javascript: void(0)"><span class="content">Item do menu 1</span></a></li>
+                    <div class="menu-item">...</div>
                     ...
                 </div>
             </nav>
@@ -125,45 +121,9 @@ No momento este componente não está compatível com o uso de Divider. Há duas
 1. Agrupar itens dentro de um `menu-folder`
 2. Incluir manualmente a classe `divider` ao `menu-item` que esteja no primeiro nível de navegação
 
-### Propriedades obrigatórias
+### breakpoints
 
-| Atributo       | Tipo  | Descrição                             |
-| -------------- | ----- | ------------------------------------- |
-| br-menu        | class | Container do componente               |
-| menu-container | class | Agrupa scrim e painel                 |
-| menu-scrim     | class | Aplica o efeito de scrim (fecha menu) |
-| menu-panel     | class | Agrupa cabeçalho, corpo e rodapé      |
-| menu-header    | class | Agrupa o botão de fechar e título     |
-| menu-close     | class | Container para botão de fechar menu   |
-| menu-title     | class | Container para título                 |
-| menu-body      | class | Agrupa pastas de itens de menu        |
-| menu-folder    | class | Pasta com itens de menu               |
-| menu-item      | class | Item de menu                          |
-
-### Propriedades Adicionais
-
-| Atributo     | Tipo  | Descrição                                    |
-| ------------ | ----- | -------------------------------------------- |
-| menu-trigger | class | Container do ativador de Menu Auxiliar       |
-| menu-footer  | class | Agrupa logos, links, compartilhamento e info |
-| menu-logos   | class | Container para logos de sistemas             |
-| menu-links   | class | Container para links externos                |
-| menu-social  | class | Container para compartilhamentos externos    |
-| menu-info    | class | Container para informação                    |
-
-### Configurações Adicionais
-
-| Propriedade      | Tipo     | Valor padrão | Descrição                                   |
-| ---------------- | -------- | ------------ | ------------------------------------------- |
-| data-toggle      | atributo | menu         | Abre o Menu Principal                       |
-| data-toggle      | atributo | auxiliary    | Abre o Menu Auxiliar                        |
-| data-target      | atributo | -            | Informar o identificador do Menu Principal  |
-| data-dismiss     | atributo | menu         | Fecha o menu                                |
-| data-breakpoints | atributo | -            | Aplica as classes de breakpoint no Menu (*) |
-
-> **Atenção**! O atributo `data-breakpoint` é opcional. Por padrão serão aplicadas as classes de breakpoint `.col-sm-4` e `.col-lg-3`.
-
-Exemplo de uso do atributo `data-breakpoints`:
+Por padrão serão aplicadas as classes de breakpoint `col-sm-4` e `col-lg-3` no componente, mas podem ser modificados usando o atributo `data-breakpoints`. Exemplo:
 
 ```html
 <div class="br-menu" id="identificador" data-breakpoints="col-sm-4 col-lg-3">...</div>
@@ -172,31 +132,3 @@ Exemplo de uso do atributo `data-breakpoints`:
 ## Dependências
 
 -   [Button](/ds/components/button)
-
-## Instanciação do Componente
-
-### HTML
-
-Incluir o arquivo `core.min.js` no html.
-
-```html
-<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
-```
-
-> O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
-
-## Javascript
-
-Usar o seguinte código JavaScript para instanciar a classe `BRMenu`, passando os seguintes parâmetros:
-
--   Nome da classe (br-menu)
--   Objeto referenciando a raiz do componente DOM
-
-```javascript
-
-const menuList = []
-for (const brMenu of window.document.querySelectorAll('.br-menu')) {
-  menuList.push(new core.BRMenu('br-menu', brMenu))
-}
-
-```
