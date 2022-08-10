@@ -563,17 +563,14 @@
         {
           "examples": [
             {
-              "height": 700,
               "label": "Header padrão",
               "path": "examples/header"
             },
             {
-              "height": 700,
               "label": "Compacto",
               "path": "examples/header-compact"
             },
             {
-              "height": 700,
               "label": "Densidades",
               "path": "examples/header-sizes"
             }
