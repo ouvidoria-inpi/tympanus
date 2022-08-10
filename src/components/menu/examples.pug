@@ -18,8 +18,8 @@ append content
   p.h4.mt-5 Menu Principal
 
   .row
-    +menu-offcanvas#offcanvas
-    +menu-push#push
+    +menu-offcanvas#offcanvas(data-breakpoints="col-sm-6")
+    +menu-push#push(data-breakpoints="col-sm-6")
     .col
       .d-flex.align-items-center
         div
@@ -34,10 +34,18 @@ append content
 
   p.h4.mt-5 Menu Contextual
   p.d-sm-none Clicar no botão "Menu Contextual" ao final da tela
-  +menu-contextual
+  #contextual
+    +menu-contextual.active
 
   p.h4.mt-5 Agrupamento de itens
   +menu-groupedby
 
   p.h4.mt-5 Densidades
   +menu-sizes
+
+append style
+  style.
+    #contextual {
+      min-height: 350px;
+      position: relative;
+    }
