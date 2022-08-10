@@ -19,16 +19,6 @@
 | class    | string | **icon**                           | Tag de ícone                 |
 | class    | string | **small**, **medium** ou **large** | Modifica a densidade         |
 
-## Informações adicionais
-
-### Cores
-
-Usar Utilitário CSS [Cores](ds/utilities-css/cores) para modificar cores de texto e fundo para o componente.
-
-## Dependências
-
--   [Button](/ds/components/button)
-
 ## Instanciação do Componente
 
 ### HTML
@@ -54,3 +44,13 @@ for (const brTag of window.document.querySelectorAll('.br-tag')) {
   tagList.push(new core.BRTag('br-tag', brTag))
 }
 ```
+
+## Informações adicionais
+
+### Cores
+
+Usar Utilitário CSS [Cores](ds/utilities-css/cores) para modificar cores de texto e fundo para o componente.
+
+## Dependências
+
+-   [Button](/ds/components/button)
