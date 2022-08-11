@@ -16,3 +16,13 @@ button.#{$prefix}item {
   @include focus;
   @include hover("color");
 }
+
+// Transforma curso em cursor pointer quando br-item eh data-toggle
+.br-item[data-toggle] {
+  cursor: pointer;
+}
+
+// Corrige a quebra de alinhamento no item quando o mesmo faz parte de uma lista horizontal, devido ao shadow-root.
+:host {
+  @include item-align-horizontal-list;
+}
