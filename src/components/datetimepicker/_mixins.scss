@@ -28,10 +28,8 @@
 
 @mixin flatpicker-tokens {
   --flatpicker-padding: var(--spacing-scale-2x);
-  --datetimepicker-day-font-weight: var(--font-weight-semi-bold);
   --datetimepicker-day-size: 24px;
   --datetimepicker-arrows: 32px;
-  --datetimepicker-zindex: var(--z-index-layer-2);
 }
 
 @mixin flatpicker-default {
@@ -43,7 +41,7 @@
   }
 
   &.open {
-    z-index: var(--datetimepicker-zindex);
+    z-index: var(--z-index-layer-2);
   }
 }
 
@@ -88,7 +86,7 @@
       padding: 0;
 
       .flatpickr-monthDropdown-month {
-        color: var(--color-secondary-08);
+        color: var(--color);
       }
 
       &:hover {
@@ -102,9 +100,9 @@
       width: auto;
 
       input.cur-year {
-        border: var(--surface-width-sm) solid var(--color-secondary-06);
+        border: var(--surface-width-sm) solid var(--border-color);
         border-radius: var(--surface-rounder-sm);
-        color: var(--text-color);
+        color: var(--color);
         font-size: var(--font-size-scale-up-01);
         font-weight: var(--font-weight-semi-bold);
         padding: 0 var(--spacing-scale-base);
@@ -127,7 +125,7 @@
   }
 
   span.flatpickr-weekday {
-    color: var(--text-color);
+    color: var(--color);
     font-size: var(--font-size);
     font-weight: var(--font-weight-medium);
   }
@@ -140,7 +138,7 @@
 
   .flatpickr-day {
     color: var(--interactive);
-    font-weight: var(--datetimepicker-day-font-weight);
+    font-weight: var(--font-weight-semi-bold);
     height: var(--datetimepicker-day-size);
     line-height: var(--font-line-height-medium);
     margin: calc(var(--flatpicker-padding) * 0.25) auto;
@@ -165,14 +163,14 @@
     }
     // Dia hoje
     &.today {
-      background: var(--color-support-11);
+      background: var(--orange-vivid-5);
       border-color: transparent;
-      color: var(--color-support-03);
+      color: var(--red-warm-vivid-50);
     }
     // Dia desativado
     &.flatpickr-disabled {
       @include disabled;
-      color: var(--text-color);
+      color: var(--color);
 
       &:hover {
         background: transparent;
@@ -180,10 +178,15 @@
     }
     // Intervalo de dias
     &.inRange {
-      background: rgba(var(--rgb-primary-lighten-01), 0.5);
+      --interactive-rgb: var(--blue-warm-vivid-50-rgb);
+      --hover: var(--hover-dark);
+      background-image: linear-gradient(
+        rgba(var(--interactive-rgb), var(--hover)),
+        rgba(var(--interactive-rgb), var(--hover))
+      );
       border-color: transparent;
       box-shadow: none;
-      color: var(--color-secondary-01);
+      color: var(--color-dark);
       opacity: 1;
     }
     // Dia selecionado
@@ -192,7 +195,7 @@
     &.endRange {
       background: var(--selected);
       border-color: transparent;
-      color: var(--color-secondary-01);
+      color: var(--color-dark);
       opacity: 1;
     }
   }
@@ -260,7 +263,7 @@
   // Fora do DatePicker
   &.hasTime {
     .flatpickr-time {
-      border-color: var(--color-secondary-04);
+      border-color: var(--border-color);
       height: auto;
     }
 
