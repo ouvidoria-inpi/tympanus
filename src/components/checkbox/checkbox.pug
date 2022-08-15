@@ -22,40 +22,27 @@ mixin checkbox(label)
 mixin checkbox-padrao
   p.label.mb-0 Rótulo
   p.text-down-01 Informações adicionais
-  .mb-1
-    +checkbox("Opção 1")#checkbox-1(ariaLabel="opção 1")
-  .mb-1
-    +checkbox("Opção 2")#checkbox-2(ariaLabel="opção 2" checked)
-  .mb-1
-    +checkbox("Opção 3")#checkbox-3(ariaLabel="opção 3")
-  +feedback-warning
-    | Texto de mensagem
+  +checkbox("Opção 1")#checkbox-1(ariaLabel="opção 1")
+  +checkbox("Opção 2")#checkbox-2(ariaLabel="opção 2" checked)
+  +checkbox("Opção 3")#checkbox-3(ariaLabel="opção 3")
+  .mt-3: +feedback-warning Texto de mensagem
 
 mixin checkbox-horizontal
-  +checkbox("Opção 1")#h-checkbox-1.d-inline(ariaLabel="opção 1")
-  +checkbox("Opção 2")#h-checkbox-2.d-inline(ariaLabel="opção 2")
-  +checkbox("Opção 3")#h-checkbox-3.d-inline(ariaLabel="opção 3")
+  .d-inline-block.mr-5: +checkbox("Opção 1")#h-checkbox-1
+  .d-inline-block.mr-5: +checkbox("Opção 2")#h-checkbox-2
+  .d-inline-block.mr-5: +checkbox("Opção 3")#h-checkbox-3
 
 mixin checkbox-estados-validacao
-  .mb-1
-    +checkbox("desabilitado")#check-state-disabled(ariaLabel="desabilitado" disabled)
-  .mb-1
-    +checkbox("Inválido")#check-state-invalid(ariaLabel="inválido" invalid)
-  .mb-1
-    +checkbox("Válido")#check-state-valid(ariaLabel="válido" checked valid)
-  +feedback-danger
-    | Preenchimento Obrigatório
-
+  +checkbox("Checado")#check-state-checked(checked)
+  +checkbox("Desativado")#check-state-disabled.disabled(disabled)
+  +checkbox("Inválido")#check-state-invalid.invalid
+  +checkbox("Válido")#check-state-valid.valid
 
 mixin checkbox-no-label
   +checkbox("Opção 5")(id=`check-all` value="").hidden-label
 
 mixin checkbox-indeterminate
-  .mb-1
-    +checkbox("Selecionar tudo")#checkbox-ind1(ariaLabel="selecionar tudo" data-parent="check-01" indeterminate checked)
-  .mb-1
-    +checkbox("Opção 1")#checkbox-01(ariaLabel="opção 1" data-child="check-01" checked)
-  .mb-1
-    +checkbox("Opção 2")#checkbox-02(ariaLabel="opção 2" data-child="check-01")
-  .mb-1
-    +checkbox("Opção 3")#checkbox-03(ariaLabel="opção 3" data-child="check-01")
+  +checkbox("Selecionar tudo")#checkbox-ind1(ariaLabel="selecionar tudo" data-parent="check-01" indeterminate checked)
+  +checkbox("Opção 1")#checkbox-01(ariaLabel="opção 1" data-child="check-01" checked)
+  +checkbox("Opção 2")#checkbox-02(ariaLabel="opção 2" data-child="check-01")
+  +checkbox("Opção 3")#checkbox-03(ariaLabel="opção 3" data-child="check-01")
