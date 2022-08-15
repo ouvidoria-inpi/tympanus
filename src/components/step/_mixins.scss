@@ -8,6 +8,7 @@
   @include step-empty;
   @include step-simple;
   @include step-text;
+  @include step-scroll;
   @include step-states;
   @include step-dark;
 }
@@ -30,15 +31,18 @@
 }
 
 @mixin step-default {
+  display: flex;
+
   .step-progress {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    display: flex;
+    flex-grow: 1;
   }
   // Step vertical
   &.vertical {
+    flex-direction: column;
+
     .step-progress {
       flex-direction: column;
-      grid-template-columns: none;
     }
   }
 }
@@ -49,6 +53,7 @@
     background-color: transparent;
     border: 0;
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     min-height: var(--step-size);
     padding: 0;
@@ -70,7 +75,6 @@
   &.vertical {
     .step-progress-btn {
       justify-content: start;
-      min-height: calc(var(--step-size) * 1);
     }
 
     &[data-label="left"] {
@@ -466,6 +470,10 @@
 @mixin step-simple {
   // Step simples
   &[data-type="simple"] {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
     .step-progress {
       align-items: center;
       display: flex;
@@ -473,6 +481,7 @@
     }
 
     .step-progress-btn {
+      flex-grow: 0;
       width: 24px;
 
       &::before {
@@ -500,6 +509,10 @@
 @mixin step-text {
   // Step textual
   &[data-type="text"] {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
     .step-progress {
       align-items: center;
       display: flex;
@@ -532,6 +545,29 @@
       overflow: hidden;
       position: absolute;
       width: 0;
+    }
+  }
+}
+
+@mixin step-scroll {
+  &[scroll],
+  &[data-scroll] {
+    overflow-x: auto;
+    overflow-y: hidden;
+    @include scrollbar;
+
+    .step-progress-btn {
+      min-width: 200px;
+    }
+
+    &.vertical {
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      .step-progress-btn {
+        min-height: 100px;
+        min-width: auto;
+      }
     }
   }
 }
