@@ -367,15 +367,10 @@ function entries(argv) {
   setComponentPug('message', ['feedback', 'message-inverted', 'message-padrao'])
 
   setComponentPug('modal', [
-    'modal-acao',
+    'scrim-behavior',
     'modal-alert',
-    'modal-list',
     'modal-loading',
-    'modal-login',
-    'modal-options',
-    'modal-sem-titulo',
     'modal-terms',
-    'modal-titulo-linhas',
   ])
 
   setComponentPug('notification', ['notification-full'])
