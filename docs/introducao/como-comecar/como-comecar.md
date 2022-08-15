@@ -165,6 +165,36 @@ for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
 }
 ```
 
+## Utilitarios JS
+
+São classes javascript para auxiliar os componentes. para usar deve importar a classe js correspondente ao utilitario, que fica na pasta **@govbr-ds/dist/partial/behavior**, e instanciar ele com os atributos de configuração como no exemplo abaixo:
+
+### Exemplo de uso de utilitario
+
+```javascript
+    import Scrim from '@govbr-ds/dist/partial/behavior/scrim'
+    this.element
+      .querySelectorAll('[data-toggle="accordion"]')
+      .forEach((trigger) => {
+        const config = {
+          iconToHide: 'fa-chevron-up',
+          iconToShow: 'fa-chevron-down',
+          trigger,
+          useIcons: true,
+        }
+        const accordion = new Accordion(config)
+        accordion.setBehavior()
+      })
+  
+
+```
+
+Nesse exemplo precisa indicar this.element como elemento dom
+
+Os utilitarios não são automaticamente inicilizado precisando de um javascript para inicializar eles
+
+Acesse a seção **Utilitarios** no menu principal e veja a lista de componentes disponíveis.
+
 ## Release Notes
 
 Ao final de cada release, disponibilizamos um resumo do que foi alterado desde a última release.
