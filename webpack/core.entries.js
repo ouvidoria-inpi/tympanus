@@ -292,11 +292,11 @@ function entries(argv) {
   ])
 
   setComponentPug('checkbox', [
+    'checkbox-default',
+    'checkbox-inline',
+    'checkbox-states',
     'checkbox-indeterminate',
     'checkbox-no-label',
-    'checkbox-estados-validacao',
-    'checkbox-horizontal',
-    'checkbox-padrao',
   ])
 
   setComponentPug('cookiebar', ['cookiebar-padrao'])
