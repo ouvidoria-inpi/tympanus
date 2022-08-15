@@ -3,13 +3,14 @@ extends ../../../partial/pug/isolate
 block dependencies
   include ../tag
   include ../../tooltip/tooltip
+
 block content
-  +tag-count.danger
+  +tag-count.bg-danger
     span 1
-  +tag-count.danger
+  +tag-count.bg-danger
     span 10
-  +tag-count.danger
+  +tag-count.bg-danger
     span 130
-  +tag-count.danger
+  +tag-count.bg-danger
     span 999+
-    +tooltip("99957")(info place="right")
+    +tooltip("99957")(info place="left")
