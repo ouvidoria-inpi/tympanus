@@ -2,51 +2,25 @@
 
 ## Como usar
 
-### Padrão
+### Propriedades obrigatórias
 
-```html
-<div class="br-item">
-    Conteúdo do item
-</div>
-```
+| Atributo | Tipo   | Valor padrão | Descrição                |
+| -------- | ------ | ------------ | ------------------------ |
+| class    | string | **br-item**  | Container do componente. |
 
-### Item do tipo link
+### Propriedades Adicionais
 
-```html
-<a class="br-item" href="...">
-    Conteúdo do item
-</a>
-```
-
-### Item do tipo button
-
-```html
-<button class="br-item" type="button">
-    Conteúdo do item
-</button>
-```
-
-### Configurações obrigatórias
-
-| Elemento  | Tipo   | Descrição               |
-| --------- | ------ | ----------------------- |
-| `br-item` | classe | Container do componente |
-
-### Configurações Adicionais
-
-| Elemento        | Tipo     | Descrição                                  |
-| --------------- | -------- | ------------------------------------------ |
-| `divider`       | classe   | Aplica separador na borda inferior do Item |
-| `href`          | atributo | Para itens do tipo Link `<a>`              |
-| `type="button"` | atributo | Para itens do tipo Botão `<button>`        |
+| Atributo | Tipo   | Valor padrão | Descrição                                  |
+| -------- | ------ | ------------ | ------------------------------------------ |
+| class    | string | **divider**  | Aplica separador na borda inferior do Item |
 
 ## Estados
 
-| Estado     | Tipo   | Descrição                 |
-| ---------- | ------ | ------------------------- |
-| `active`   | classe | Aplica estilo ativo       |
-| `selected` | classe | Aplica estilo selecionado |
-| `disabled` | classe | Aplica estilo desativado  |
+| Estado      | propriedade  | Valores                   |
+| ----------- | ------------ | ------------------------- |
+| Ativo       | **active**   | Aplica estilo ativo       |
+| Selecionado | **selected** | Aplica estilo selecionado |
+| Desativado  | **disabled** | Aplica estilo desativado  |
 
 ## Instanciação do Componente
 
@@ -64,8 +38,8 @@ Incluir o arquivo `core.min.js` no html.
 
 Usar o seguinte código JavaScript para instanciar a classe `BRItem`, passando os seguintes parâmetros:
 
-- Nome da classe (br-item)
-- Objeto referenciando a raiz do componente DOM
+-   Nome da classe (br-item)
+-   Objeto referenciando a raiz do componente DOM
 
 ```javascript
 const itemList = []
