@@ -173,7 +173,9 @@ São classes javascript para auxiliar os componentes. para usar deve importar a 
 
 ```javascript
     import Scrim from '@govbr-ds/dist/partial/behavior/scrim'
-    this.element
+    element = window.document
+      .querySelectorAll('.collapse-example')
+    element
       .querySelectorAll('[data-toggle="accordion"]')
       .forEach((trigger) => {
         const config = {
@@ -189,9 +191,9 @@ São classes javascript para auxiliar os componentes. para usar deve importar a 
 
 ```
 
-Nesse exemplo precisa indicar this.element como elemento dom
+> Nesse exemplo precisa indicar **element** como elemento dom
 
-Os utilitarios não são automaticamente inicilizado precisando de um javascript para inicializar eles
+> Os utilitarios não são automaticamente inicilizados precisando de uma classe javascript para inicializar eles
 
 Acesse a seção **Utilitarios** no menu principal e veja a lista de componentes disponíveis.
 
