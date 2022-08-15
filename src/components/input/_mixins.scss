@@ -12,18 +12,10 @@
 }
 
 @mixin input-tokens {
-  --input-background: var(--color-secondary-01);
-  --input-border-color: var(--color-secondary-06);
-  --input-border-width: 1px;
-  --input-border-style: solid;
   --input-button-margin: var(--spacing-scale-half);
-  --input-icon-color: var(--color-secondary-06);
-  --input-icon-margin: var(--spacing-scale-baseh);
-  --input-color: var(--color-secondary-08);
   --input-padding: 0 var(--spacing-scale-2x);
   --input-padding-button: var(--spacing-scale-5x);
   --input-padding-icon: var(--spacing-scale-5x);
-  --input-radius: var(--surface-rounder-sm);
   --input-size: var(--input-medium);
   --input-small: 32px;
   --input-medium: 40px;
@@ -198,7 +190,7 @@
       @include hover("color");
 
       &:not(:first-child) {
-        border-top: var(--surface-width-sm) solid var(--color-secondary-04);
+        border-top: var(--surface-width-sm) solid var(--border-color);
       }
     }
   }
