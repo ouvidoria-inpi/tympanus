@@ -1041,11 +1041,10 @@
               "path": "examples/table"
             },
             {
-              "label": "Tabela irregular 1",
+              "label": "Tabelas irregulares",
               "path": "examples/table-irregular-1"
             },
             {
-              "label": "Tabela irregular 2",
               "path": "examples/table-irregular-2"
             }
           ],
