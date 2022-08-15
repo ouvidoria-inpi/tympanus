@@ -776,43 +776,29 @@
         {
           "examples": [
             {
-              "label": "Modal Alerta",
+              "label": "Exemplo de acionamento",
+              "path": "examples/scrim-behavior",
+              "height": 300
+            },
+            {
+              "label": "Modal simples",
               "path": "examples/modal-alert"
             },
             {
-              "label": "Modal Alerta com ícone de fechar",
-              "path": "examples/modal-acao"
-            },
-            {
-              "label": "Modal com duas ou mais linhas de título",
-              "path": "examples/modal-titulo-linhas"
-            },
-            {
-              "label": "Modal com Temporizador",
+              "label": "Modal carregando",
               "path": "examples/modal-loading"
             },
             {
-              "label": "Modal sem título",
-              "path": "examples/modal-sem-titulo"
-            },
-            {
-              "label": "Modal com escolha de opção",
-              "path": "examples/modal-options"
-            },
-            {
-              "label": "Modal com entrada de dados",
-              "path": "examples/modal-login"
-            },
-            {
-              "label": "Modal com lista de opções",
-              "path": "examples/modal-list"
-            },
-            {
-              "label": "Modal com termo de aceite",
+              "label": "Modal com scroll",
               "path": "examples/modal-terms"
             }
           ],
           "id": "modal",
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
           "label": "Modal"
         },
         {
