@@ -13,7 +13,6 @@
 
 @mixin table-tokens {
   --table-padding: var(--spacing-scale-3x);
-  --table-shadow: var(--surface-shadow-sm);
   --table-row-size: var(--table-row-medium);
   --table-row-small: var(--spacing-scale-base);
   --table-row-medium: var(--spacing-scale-2x);
