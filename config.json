@@ -734,18 +734,18 @@
               "path": "examples/menu-principal-push"
             },
             {
-              "height": 600,
-              "label": "Menu Contextual",
-              "path": "examples/menu-contextual",
-              "width": 200
-            },
-            {
               "label": "Agrupamentos de items",
               "path": "examples/menu-groupedby"
             },
             {
               "label": "Densidades",
               "path": "examples/menu-sizes"
+            },
+            {
+              "height": 350,
+              "label": "Menu Contextual",
+              "path": "examples/menu-contextual",
+              "width": 200
             }
           ],
           "id": "menu",
