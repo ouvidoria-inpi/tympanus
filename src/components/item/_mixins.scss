@@ -47,7 +47,7 @@
   }
 
   // Transforma curso em cursor pointer quando br-item eh data-toggle
-  .br-item[data-toggle] {
+  &[data-toggle] {
     cursor: pointer;
   }
 }
