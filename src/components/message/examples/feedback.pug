@@ -3,8 +3,7 @@ extends ../../../partial/pug/isolate
 block dependencies
   include ../message
 
-  p.h5.mt-5 Mensagens contextuais
-  p: +feedback-danger O CPF deve conter apenas dígitos.
-  p: +feedback-success Campo correto.
-  p: +feedback-warning A tecla CAPS-LOCK está ativada.
-  p: +feedback-info Os arquivos devem ser no formato PNG, JPG, PDF e ter no máximo 1GB.
+  .mb-3: +feedback-danger O CPF deve conter apenas dígitos.
+  .mb-3: +feedback-success Campo correto.
+  .mb-3: +feedback-warning A tecla CAPS-LOCK está ativada.
+  .mb-3: +feedback-info Os arquivos devem ser no formato PNG, JPG, PDF e ter no máximo 1GB.
