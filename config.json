@@ -506,34 +506,32 @@
               "path": "examples/divider"
             },
             {
-              "path": "examples/divider-inverted"
+              "path": "examples/divider-dark"
+            },
+            {
+              "label": "Horizontal tracejado",
+              "path": "examples/divider-dashed"
+            },
+            {
+              "path": "examples/divider-dashed-dark"
             },
             {
               "label": "Vertical",
               "path": "examples/divider-vertical"
             },
             {
-              "path": "examples/divider-vertical-inverted"
-            },
-            {
-              "label": "Tracejado Horizontal",
-              "path": "examples/divider-dashed"
-            },
-            {
-              "label": "Tracejado Vertical",
+              "label": "Vertical Tracejado",
               "path": "examples/divider-vertical-dashed"
             },
             {
-              "label": "Tamanho 2x",
-              "path": "examples/divider-2x"
+              "label": "Espessuras",
+              "path": "examples/divider-small"
             },
             {
-              "label": "Tamanho 3x",
-              "path": "examples/divider-3x"
+              "path": "examples/divider-medium"
             },
             {
-              "label": "Tamanho 4x",
-              "path": "examples/divider-4x"
+              "path": "examples/divider-large"
             }
           ],
           "ext": [
