@@ -3,16 +3,15 @@ extends ../../../partial/pug/isolate
 block dependencies
   include ../tag
   include ../../button/button
-  include ../../../partial/pug/utilities/icon.pug
 
 block content
-  +tag-interaction
+  +tag-interaction#interaction01
     +icon.fa-car
     span Label
-    +button.close.inverted.circle(aria-label="Fechar")
+    +button(aria-label="Fechar" data-dismiss="interaction01")
       +icon.fa-times
-  +tag-interaction
+  +tag-interaction#interaction02
     +icon.fa-car
     span Label
-    +button.close.inverted.circle(aria-label="Fechar")
+    +button(aria-label="Fechar" data-dismiss="interaction02")
       +icon.fa-times
