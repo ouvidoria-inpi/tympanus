@@ -14,15 +14,9 @@
 
 @mixin menu-tokens {
   --menu-zindex: var(--z-index-layer-3);
-  --menu-zindex-push: var(--z-index-layer-0);
-  --menu-scrim: var(--surface-overlay-scrim);
-  --menu-background: var(--bg-color);
-  --menu-background-submenu: var(--color-secondary-02);
+  --menu-background-submenu: var(--gray-2);
   --menu-logo: 40px;
-  --menu-title: var(--text-color);
-  --menu-divider: var(--color-secondary-04);
-  --menu-item-background: transparent;
-  --menu-item-color: var(--interactive);
+  --menu-item-ng: var(--menu-item-medium);
   --menu-item-padding: var(--menu-item-medium);
   --menu-item-small: var(--spacing-scale-base);
   --menu-item-medium: var(--spacing-scale-2x);
@@ -41,7 +35,7 @@
   }
 
   .menu-scrim {
-    background: var(--menu-scrim);
+    background: var(--surface-overlay-scrim);
     bottom: 0;
     left: 0;
     right: 0;
@@ -50,8 +44,7 @@
 
   .menu-panel {
     --focus-offset: calc(var(--spacing-scale-half) * -1);
-    background: var(--menu-background);
-    // box-shadow: var(--menu-shadow);
+    background: var(--background);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -90,7 +83,7 @@
 
   .menu-header {
     align-items: center;
-    border-bottom: 1px solid var(--menu-divider);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     padding: var(--spacing-scale-base) var(--spacing-scale-base);
 
@@ -98,7 +91,6 @@
       align-items: center;
       display: flex;
       flex: 1;
-      font-size: var(--menu-title);
       margin-left: var(--spacing-scale-base);
 
       img {
@@ -117,7 +109,7 @@
   // <div class="menu-body">
   //   <div class="folder">
 
-  /* stylelint-disable no-descending-specificity */
+  // stylelint-disable no-descending-specificity
   .menu-body {
     // Resetar estilos
     ul,
@@ -132,7 +124,7 @@
 
     // Aplica separador nos itens de primeiro nível
     > .divider {
-      border-bottom: 1px solid var(--menu-divider);
+      border-bottom: 1px solid var(--border-color);
     }
 
     .menu-folder {
@@ -140,7 +132,7 @@
       > ul {
         > li:last-child {
           > .menu-item {
-            border-bottom: 1px solid var(--menu-divider);
+            border-bottom: 1px solid var(--border-color);
           }
         }
       }
@@ -159,7 +151,7 @@
     // Aplica separador no menu dropdown de primeiro nível
     .drop-menu {
       > .menu-item {
-        border-bottom: 1px solid var(--menu-divider);
+        border-bottom: 1px solid var(--border-color);
       }
 
       &.active {
@@ -179,7 +171,7 @@
       &.active {
         > .menu-item {
           &:not(:hover) {
-            --menu-item-background: var(--menu-background);
+            background-color: var(--background);
           }
 
           .support {
@@ -195,7 +187,7 @@
       }
     }
   }
-  /* stylelint-enable no-descending-specificity */
+  // stylelint-enable no-descending-specificity
 }
 
 @mixin menu-footer {
@@ -208,7 +200,7 @@
 
   .menu-footer {
     .menu-logos {
-      border-bottom: 1px solid var(--menu-divider);
+      border-bottom: 1px solid var(--border-color);
       column-gap: var(--spacing-scale-2x);
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -218,7 +210,7 @@
 
     .menu-links {
       --focus-offset: var(--spacing-scale-half);
-      border-bottom: 1px solid var(--menu-divider);
+      border-bottom: 1px solid var(--border-color);
       padding: var(--spacing-scale-2x) var(--spacing-scale-5x);
 
       a {
@@ -232,7 +224,7 @@
     }
 
     .menu-social {
-      border-bottom: 1px solid var(--menu-divider);
+      border-bottom: 1px solid var(--border-color);
       padding: var(--spacing-scale-base) var(--spacing-scale-5x);
 
       .sharegroup {
@@ -255,7 +247,7 @@
 
   .menu-item {
     --focus-offset: calc(var(--spacing-scale-half) * -1);
-    background: var(--menu-item-background);
+    background: transparent;
     display: flex;
     padding: var(--menu-item-padding) var(--spacing-scale-2x);
 
@@ -269,7 +261,7 @@
   }
 
   a.menu-item {
-    color: var(--menu-item-color);
+    color: var(--interactive);
   }
 }
 
@@ -282,9 +274,9 @@
 
     &.active {
       > .menu-item {
-        --interactive-rgb: var(--rgb-primary-darken-01);
-        --menu-item-color: var(--active);
-        --menu-item-background: var(--menu-background);
+        --interactive: var(--active);
+        --interactive-rgb: var(--active-rgb);
+        background-color: var(--background);
         flex-direction: row-reverse;
         font-weight: var(--font-weight-semi-bold);
 
@@ -329,7 +321,7 @@
       display: none;
     }
     @include media-breakpoint-up(sm) {
-      --menu-zindex: var(--menu-zindex-push);
+      --menu-zindex: var(--z-index-layer-0);
     }
   }
 
@@ -361,6 +353,7 @@
 @mixin menu-contextual {
   // Mobile First
   &.contextual {
+    --menu-zindex: calc(var(--z-index-layer-3) - 10);
     overflow: auto;
 
     .menu-body .menu-folder {
@@ -424,15 +417,20 @@
   @include media-breakpoint-up(md) {
     &.contextual {
       .menu-trigger {
-        display: none;
+        position: absolute;
       }
 
       .menu-scrim {
-        position: static;
+        // position: static;
       }
 
-      .menu-container {
-        display: block;
+      &.active {
+        height: 100%;
+        position: absolute;
+
+        .menu-container {
+          // display: flex;
+        }
       }
     }
   }
@@ -457,12 +455,12 @@
     &:not(:disabled) {
       // Ativo
       &.active {
-        --interactive-rgb: var(--rgb-secondary-01);
-        --menu-item-background: var(--active);
-        --menu-item-color: var(--color-secondary-01);
+        --interactive: var(--color-dark);
+        --interactive-rgb: var(--color-dark-rgb);
+        background-color: var(--active);
 
         &:focus {
-          outline-color: var(--color-support-10);
+          outline-color: var(--focus-color-dark);
         }
       }
 
