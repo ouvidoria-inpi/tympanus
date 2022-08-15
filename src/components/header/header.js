@@ -1,6 +1,12 @@
 import Tooltip from '../../partial/js/behavior/tooltip'
 
+/** Classe para instanciar um objeto BRHeader*/
 class BRHeader {
+  /**
+   * Instancia do objeto
+   * @param {string} name - Nome do componente em minúsculo
+   * @param {object} component - Objeto referenciando a raiz do componente DOM
+   */
   constructor(name, component) {
     this.name = name
     this.component = component
@@ -21,8 +27,11 @@ class BRHeader {
     this._setBehavior()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setBehavior() {
-    this._setLoginBehavior()
     this._setLogoutBehavior()
     this._setSearchBehaviors()
     this._setKeyboardBehaviors()
@@ -30,6 +39,10 @@ class BRHeader {
     this._setSticky()
   }
 
+  /**
+   * Define comportamentos de login
+   * @private
+   */
   _setLoginBehavior() {
     for (const login of this.component.querySelectorAll(
       '[data-trigger="login"]'
@@ -42,6 +55,10 @@ class BRHeader {
     }
   }
 
+  /**
+   * Define comportamentos de logout
+   * @private
+   */
   _setLogoutBehavior() {
     for (const logout of this.component.querySelectorAll(
       '[data-trigger="logout"]'
@@ -58,6 +75,10 @@ class BRHeader {
     }
   }
 
+  /**
+   * Define comportamentos de busca
+   * @private
+   */
   _setSearchBehaviors() {
     // Abrir busca
     if (this.componentSearchTrigger) {
@@ -77,6 +98,10 @@ class BRHeader {
     }
   }
 
+  /**
+   * Define comportamentos do teclado
+   * @private
+   */
   _setKeyboardBehaviors() {
     if (this.componentSearchInput) {
       this.componentSearchInput.addEventListener('keydown', (event) => {
@@ -110,6 +135,11 @@ class BRHeader {
       })
     }
   }
+
+  /**
+   * Visualização da busca
+   * @private
+   */
   _openSearch() {
     if (this.componentSearch) {
       this.componentSearch.classList.add('active')
@@ -117,6 +147,10 @@ class BRHeader {
     }
   }
 
+  /**
+   * Esconde a busca
+   * @private
+   */
   _closeSearch() {
     if (this.componentSearch) {
       this.componentSearch.classList.remove('active')
@@ -125,6 +159,10 @@ class BRHeader {
     }
   }
 
+  /**
+   * Exibe notificação
+   * @param {event} event - referencia ao evento
+   */
   handleEvent(event) {
     const hasNotficiationElemeent = this.component
       .querySelector('.br-notification')
@@ -136,6 +174,10 @@ class BRHeader {
     }
   }
 
+  /**
+   * Define comportamentos do dropdown
+   * @private
+   */
   _setDropdownBehavior() {
     // TODO: Trocar o código abaixo pelo utilitário dropdown
     this.cleaned = false
@@ -182,6 +224,10 @@ class BRHeader {
     })
   }
 
+  /**
+   * Define comportamentos do tooltip
+   * @private
+   */
   _headerTooltip() {
     if (this.TooltipExampleList) {
       this.TooltipExampleList.forEach((tooltipElem) => {
@@ -206,6 +252,11 @@ class BRHeader {
       })
   }
 
+  /**
+   * Limpa referencias do dorpdown
+   * @private
+   * @param {object} ref - Referência ao componente header
+   */
   _cleanDropDownHeaderRef(ref) {
     if (this.cleaned === false) {
       for (const trigger of ref.querySelectorAll('.dropdown.show')) {
@@ -219,10 +270,18 @@ class BRHeader {
     this.cleaned = false
   }
 
+  /**
+   * Limpa referencias do dorpdown
+   * @private
+   */
   _cleanDropDownHeader() {
     this._cleanDropDownHeaderRef(this.component)
   }
 
+  /**
+   * Define modo sticky ao header
+   * @private
+   */
   _setSticky() {
     if (this.component.hasAttribute('data-sticky')) {
       window.onscroll = () => {
@@ -235,8 +294,12 @@ class BRHeader {
     }
   }
 
+  /**
+   * Foca no próximo elmento de ação
+   * @private
+   */
   _nextFocusElement() {
-    //add all elements we want to include in our selection
+    //lista de elementos de ação
     const focussableElements =
       'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])'
     if (document.activeElement) {
