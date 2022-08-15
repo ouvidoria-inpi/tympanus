@@ -616,15 +616,12 @@
         {
           "examples": [
             {
-              "label": "Item com elementos interativos",
+              "label": "Exemplos de itens",
               "path": "examples/item-elems-iteractive"
             },
             {
-              "label": "Item com seleção",
+              "label": "Itens de seleção",
               "path": "examples/item-selection-checkbox"
-            },
-            {
-              "path": "examples/item-selection-radio"
             },
             {
               "label": "Item desativado",
