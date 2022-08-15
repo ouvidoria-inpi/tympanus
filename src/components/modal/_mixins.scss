@@ -1,53 +1,99 @@
 @mixin modal-configs {
   @include modal-token;
   @include modal-default;
-  @include modal-responsive;
+  @include modal-header;
+  @include modal-body;
+  @include modal-footer;
+  @include modal-sizes;
+  @include modal-loading;
+  @include modal-deprecated;
 }
 @mixin modal-token {
-  --modal-z-index: var(--z-index-layer-4);
-  --modal-shadow: var(--surface-shadow-sm);
-  --modal-margin-bottom: var(--spacing-scale-3xh);
-  --modal-padding: var(--spacing-scale-2x);
+  --modal-size: var(--modal-medium);
+  --modal-xsmall: 220px;
+  --modal-small: 300px;
+  --modal-medium: 500px;
+  --modal-large: 640px;
+  --modal-auto: auto;
 }
 
 @mixin modal-default {
-  box-shadow: var(--modal-shadow);
-  z-index: var(--modal-z-index);
+  background: var(--background);
+  box-shadow: var(--surface-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  max-width: var(--modal-size);
+  z-index: var(--z-index-layer-4);
+}
 
+@mixin modal-header {
   &-header {
-    margin-bottom: v(spacing-scale-3xh);
+    font-size: var(--font-size-scale-up-01);
+    font-weight: var(--font-weight-bold);
+    padding: var(--spacing-scale-2x) var(--spacing-scale-2x) 0;
     position: relative;
 
     .close {
       position: absolute;
-      right: 0;
-      top: calc(#{v(spacing-scale-half)} * -1);
+      right: var(--spacing-scale-base);
+      top: var(--spacing-scale-base);
     }
   }
 
-  &-title {
+  .modal-title {
     font-size: var(--font-size-scale-up-01);
     font-weight: var(--font-weight-bold);
-    margin: 0 40px 0 0;
+    margin-right: 40px;
     max-height: calc(var(--font-size-scale-up-01) * 3);
     overflow: hidden;
+    text-overflow: ellipsis;
   }
+}
 
+@mixin modal-body {
   &-body {
-    margin: 0 0 v(spacing-scale-5x);
-  }
+    flex: 1;
+    margin: var(--spacing-scale-3x) 0 var(--spacing-scale-2x);
+    overflow: auto;
+    padding: 0 var(--spacing-scale-2x);
+    @include scrollbar;
 
+    * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@mixin modal-footer {
   &-footer {
     display: flex;
     flex-wrap: wrap;
+    padding: var(--spacing-scale-2x);
   }
+}
 
-  //  Div sombreada e com scroll se necessário para modal de termo de aceite
-  .#{$prefix}card {
-    --card-shadow: none;
-    margin-bottom: 0;
+@mixin modal-sizes {
+  @each $size in "xsmall", "small", "medium", "large", "auto" {
+    &.is-#{$size},
+    &.#{$size} {
+      --modal-size: var(--modal-#{$size});
+    }
   }
+}
 
+@mixin modal-loading {
+  .loading {
+    &.medium {
+      min-height: calc(
+        var(--loading-indetermined-diameter-md) + var(--spacing-scale-2x) * 2
+      );
+    }
+  }
+}
+
+@mixin modal-deprecated {
   .terms {
     border: 0;
     box-shadow: var(--surface-shadow-sm-inset),
@@ -74,9 +120,7 @@
       }
     }
   }
-}
 
-@mixin modal-responsive {
   @include media-breakpoint-down(sm) {
     .terms {
       margin-left: unset !important;
@@ -89,25 +133,9 @@
       }
     }
   }
+}
 
-  @include media-breakpoint-up(sm) {
-    width: auto;
-
-    &.is-xsmall {
-      max-width: 220px;
-    }
-
-    &.is-small {
-      max-width: 300px;
-    }
-
-    &.is-medium {
-      max-width: 500px;
-    }
-
-    &.is-large,
-    &.is-scroll {
-      max-width: 640px;
-    }
-  }
+@mixin modal-responsive {
+  @include modal-sizes;
+  @include modal-deprecated;
 }

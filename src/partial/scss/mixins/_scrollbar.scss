@@ -11,4 +11,10 @@
   &::-webkit-scrollbar-thumb {
     background: var(--gray-30);
   }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: var(--gray-40);
+    }
+  }
 }
