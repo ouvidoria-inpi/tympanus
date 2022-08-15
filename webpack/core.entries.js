@@ -310,14 +310,14 @@ function entries(argv) {
 
   setComponentPug('divider', [
     'divider',
-    'divider-inverted',
-    'divider-vertical',
-    'divider-vertical-inverted',
+    'divider-dark',
     'divider-dashed',
+    'divider-dashed-dark',
+    'divider-vertical',
     'divider-vertical-dashed',
-    'divider-2x',
-    'divider-3x',
-    'divider-4x',
+    'divider-small',
+    'divider-medium',
+    'divider-large',
   ])
 
   setComponentPug('footer', ['footer-default', 'footer-inverted'])
