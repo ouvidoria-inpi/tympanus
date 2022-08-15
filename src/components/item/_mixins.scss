@@ -45,6 +45,11 @@
     content: "";
     display: block;
   }
+
+  // Transforma curso em cursor pointer quando br-item eh data-toggle
+  .br-item[data-toggle] {
+    cursor: pointer;
+  }
 }
 
 // TODO: migrar customização do Select para o mixin abaixo
