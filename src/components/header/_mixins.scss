@@ -11,9 +11,6 @@
 }
 
 @mixin header-tokens {
-  --header-background: var(--color-secondary-01);
-  --header-shadow: var(--surface-shadow-sm);
-
   --header-padding: var(--header-padding-medium);
   --header-padding-small: var(--spacing-scale-base);
   --header-padding-medium: var(--spacing-scale-2x);
@@ -24,13 +21,9 @@
   --header-logo-medium: 24px;
   --header-logo-large: 40px;
 
-  --header-sign-color: var(--color-secondary-07);
-
   --header-title-size: var(--font-size-scale-base);
-  --header-title-color: var(--color-secondary-09);
 
   --header-subtitle-size: var(--font-size-scale-down-01);
-  --header-subtitle-color: var(--color-secondary-07);
 
   --header-logo-desktop-width: 120px;
   --header-logo-desktop-height: 48px;
@@ -38,13 +31,11 @@
   --header-logo-compact-height: 32px;
   --header-logo-mobile-width: 80px;
   --header-logo-mobile-height: 40px;
-
-  --header-sticky-z-index: var(--z-index-layer-2);
 }
 
 @mixin header-default {
-  background: var(--header-background);
-  box-shadow: var(--header-shadow);
+  background: var(--background);
+  box-shadow: var(--surface-shadow-sm);
   display: flex;
   padding: var(--header-padding) 0;
   position: relative;
@@ -94,7 +85,7 @@
     }
 
     .header-sign {
-      color: var(--header-sign-color);
+      color: var(--color);
       display: none;
       font-weight: 500;
       overflow: hidden;
@@ -181,7 +172,7 @@
     .header-links,
     .header-functions {
       .#{$prefix}list {
-        background: var(--header-background);
+        background: var(--background);
         left: -4em;
       }
       .#{$prefix}item {
@@ -270,7 +261,7 @@
       .header-links,
       .header-functions {
         .#{$prefix}list {
-          background: var(--header-background);
+          background: var(--background);
           left: auto;
           right: 0;
         }
@@ -360,12 +351,12 @@
     }
 
     .header-title {
-      color: var(--header-title-color);
+      color: var(--color);
       font-size: var(--header-title-size);
     }
 
     .header-subtitle {
-      color: var(--header-subtitle-color);
+      color: var(--color);
       display: none;
       font-size: var(--header-subtitle-size);
       font-weight: 500;
@@ -417,7 +408,7 @@
   .header-search,
   &.compact .header-search {
     align-items: center;
-    background: var(--header-background);
+    background: var(--background);
     bottom: 0;
     display: none;
     left: 0;
@@ -426,7 +417,6 @@
     right: 0;
     top: 0;
     .#{$prefix}input {
-      --input-size: var(--input-highlight);
       align-items: center;
       display: flex;
       flex: 1;
@@ -439,7 +429,7 @@
         border-color: transparent;
 
         &:not(:focus) {
-          background: var(--color-secondary-02);
+          background: var(--gray-2);
         }
       }
       .icon,
@@ -560,7 +550,7 @@
     position: sticky;
     top: 0;
     transition: all 150ms ease;
-    z-index: var(--header-sticky-z-index);
+    z-index: var(--z-index-layer-2);
 
     .header-logo img,
     .header-actions,
