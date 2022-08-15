@@ -1,27 +1,28 @@
+/** Classe para instanciar um objeto BRStep */
 class BRStep {
   constructor(name, component) {
     /**
-     * Instancia um componente carousel
-     * @param {string} name - Component name
-     * @param {object} component - DOM root Object reference
+     * Instancia do componente
+     * @param {string} name - Nome do componente em minúsculo
+     * @param {object} component - Objeto referenciando a raiz do componente DOM
      * @property {number} activeStepNum - Número do palco ativo
      * @property {array} DOMStrings - instancia dos elementos internos do componente
      */
     this.name = name
     this.component = component
     this.activeStepNum = 0
-    // DOM elements
     this.DOMstrings = {
       stepsBarClass: 'step-progress',
-      stepsBar: this.component.querySelector('.step-progress'),
+      // stepsBar: this.component.querySelector('.step-progress'),
+      stepsBar: this.component,
       stepsBtnClass: 'step-progress-btn',
       stepsBtns: this.component.querySelectorAll('.step-progress-btn'),
     }
 
     /**
-     * Remove class from a set of items
-     * @param {object} elemSet - Elelment's List
-     * @param {string} button - Attribute name
+     * Remove uma classe css de uma lista de elementos
+     * @param {object} elemSet - Lista de elementos
+     * @param {string} button - Nome do atributo
      */
     this.removeAttributes = (elemSet, attrName) => {
       elemSet.forEach((elem) => {
@@ -30,9 +31,10 @@ class BRStep {
     }
 
     /**
-     * Return exect parent node of the element
-     * @param {object} elem - element
-     * @param {string} button - father's class
+     * Retorna o nó pai do elemento com o nome da classe específica
+     * @param {object} elem - Referência ao elemento
+     * @param {string} parentClass - Nome da classe pai
+     * @returns {object} Referência ao elemento pai
      */
     this.findParent = (elem, parentClass) => {
       let currentNode = elem
@@ -42,22 +44,19 @@ class BRStep {
       return currentNode
     }
 
-    /** get active button step number
-     * @param {object} elem - element
+    /** Retorna o número do passo de referencia
+     * @param {object} elem - Referência ao botão de passo
+     * @returns {number} Número do passo
      */
     this.getActiveStep = (elem) => {
       return Array.from(this.DOMstrings.stepsBtns).indexOf(elem)
     }
 
-    /** Set all steps before clicked (and clicked too) to active
-     * @param {number} num - step number
+    /** Define o número do passo de referência como ativo
+     * @param {number} num - numero do passo de referência
      */
     this.setActiveStep = function (num) {
-      // remove active state from all the state
       this.removeAttributes(this.DOMstrings.stepsBtns, 'active')
-      // this.removeAttributes(this.DOMstrings.stepsBtns, 'disabled')
-
-      // set picked items to active
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
         if (index === num) {
           elem.removeAttribute('disabled')
@@ -68,7 +67,7 @@ class BRStep {
     }
 
     /**
-     * Prints numbers labels into steps
+     * Mostra os números dos rótulos dos passos
      */
     this.setStepsNum = () => {
       this.DOMstrings.stepsBtns.forEach((elem, index) => {
@@ -85,7 +84,7 @@ class BRStep {
       })
     }
 
-    /** Filters active step into range
+    /** Testa se o passo está dentro do escopo e o define como ativo
      * @param {number} num - step number
      */
     this.setStep = (num) => {
@@ -97,39 +96,31 @@ class BRStep {
   }
 
   /**
-   * Set component behaviors
+   * Define comportamentos do componente
    * @private
    */
   _setBehavior() {
-    // STEPS BAR CLICK FUNCTION
     this.DOMstrings.stepsBar.addEventListener('click', (e) => {
-      // check if click target is a step button
       const eventTarget = e.target
       if (!eventTarget.classList.contains(`${this.DOMstrings.stepsBtnClass}`)) {
         e.target.parentNode.click()
         return
       }
-      // get active button step number
       const activeStepNum = this.getActiveStep(eventTarget)
-      // set all steps before clicked (and clicked too) to active
       this.setActiveStep(activeStepNum)
     })
 
-    // Set Steps label number
     this.setStepsNum()
-    // Set default active step
     if (this.component.hasAttribute('data-initial')) {
       this.setStep(this.component.getAttribute('data-initial'))
     } else this.setStep(1)
 
-    // set steps buttons grid style if it needs to scroll horizontaly
     if (
       !this.component.classList.contains('vertical') &&
       !this.component.hasAttribute('data-scroll')
     ) {
       const stepsWidth =
         Math.round(100 / this.DOMstrings.stepsBtns.length) - 0.5
-      // this.DOMstrings.stepsBar.style.gridTemplateColumns = `repeat(auto-fit, minmax(100px, ${stepsWidth}% ))`
     }
   }
 }
