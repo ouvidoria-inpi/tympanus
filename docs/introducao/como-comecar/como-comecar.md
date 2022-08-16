@@ -26,22 +26,12 @@ Para saber mais sobre como utilizar os UIKITs, acesse Prototipando com o Design 
 
 O projeto requer a versão mínima do [node](https://nodejs.org/) >= v14.15.4.
 
-### Instalar manualmente
-
-1. Faça o [download do Pacote NPM](/ds/assets/design-system/assets/npm-package/govbr-ds-latest.tgz). Ele está disponível na seção Downloads
-2. **Caso você tenha um projeto em andamento, pule para a etapa 4**, caso contrário crie nova pasta para o seu projeto
-3. Execute o seguinte comando no terminal: `npm init -y`
-4. Coloque o arquivo **govbr-ds-latest.tgz** na pasta do seu projeto
-5. Execute o seguinte comando no terminal: `npm install govbr-ds-latest.tgz`
-
 Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 -   **package.json**: configurações do seu projeto
 -   **node_modules/@govbr-ds/core**: pasta com os módulos necessários para o funcionamento do Design System
 
-### Instalar automaticamente com NPM
-
-> Atenção! No momento o pacote está disponível apenas para a rede interna do SERPRO
+### Instalação com npm
 
 **Confira sempre a versão referência ao baixar o pacote @govbr-ds/core**.
 
@@ -88,16 +78,18 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script src="node_modules\@govbr-ds\core\dist\core.js"></script>
+        <script type="module" src="node_modules\@govbr-ds\core\dist\core.js"></script>
     </body>
 </html>
 ```
 
-> Atenção! Certifique-se que as referências ao `css` e `js` estejam corretas e inseridas devidamentes na pasta do projeto, caso contrário ocorrerá quebra no layout. Muitas vezes, em ambiente de desenvolvimento, pode não haver os arquivos minificados, ou seja, com o posfixo `.min`.
+> **core.js** deve ser importado como um modulo,os componentes não são instancializados, e se utilizar babel ou webpack não precisa colocar na dom e pode ser importado no seu script.
+
+> **Atenção!** Certifique-se que as referências ao `css` e `js` estejam corretas e inseridas devidamentes na pasta do projeto, caso contrário ocorrerá quebra no layout. Muitas vezes, em ambiente de desenvolvimento, pode não haver os arquivos minificados, ou seja, com o posfixo `.min`.
 
 ## Versão "init" do js
 
-Essa é a versão init(core-init.js) com os componentes já **inicializados** diferente do core.js em que precisa que a classe do js seja inicializado, elas poderam ter problema com frameworks e não aconselhamos o seu uso em produção
+Essa é a versão init(core-init.js) com os componentes já **instancializados** diferente do core.js em que precisa que crie um script JS, elas poderam ter problema com frameworks e não aconselhamos o seu uso em produção
 . Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
@@ -155,7 +147,7 @@ Acesse a seção **Componentes** no menu principal e veja a lista de componentes
 
 Cada componente possui sua documentação, código fonte e preview.
 
-### Exemplo de uso da instacialização do componente sem usar **core-init.js**
+### Exemplo de uso da instancialização do componente sem usar **core-init.js**
 
 ```javascript
 import  * as core from '@govbr-ds/core/dist/core'
@@ -165,11 +157,11 @@ for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
 }
 ```
 
-## Utilitarios JS
+## Utilitários JS
 
-São classes javascript para auxiliar os componentes. para usar deve importar a classe js correspondente ao utilitario, que fica na pasta **@govbr-ds/dist/partial/behavior**, e instanciar ele com os atributos de configuração como no exemplo abaixo:
+São classes javascript para auxiliar os componentes. para usar deve importar a classe js correspondente ao utilitário, que fica na pasta **@govbr-ds/dist/partial/behavior**, e instanciar ele com os atributos de configuração como no exemplo abaixo no seu script
 
-### Exemplo de uso de utilitario
+### Exemplo de uso de utilitário
 
 ```javascript
     import Scrim from '@govbr-ds/dist/partial/behavior/scrim'
@@ -193,9 +185,9 @@ São classes javascript para auxiliar os componentes. para usar deve importar a 
 
 > Nesse exemplo precisa indicar **element** como elemento dom
 
-> Os utilitarios não são automaticamente inicilizados precisando de uma classe javascript para inicializar eles
+> Os utilitários não são automaticamente inicializados precisando de uma classe javascript para inicializar eles
 
-Acesse a seção **Utilitarios** no menu principal e veja a lista de componentes disponíveis.
+Acesse a seção **Utilitários** no menu principal e veja a lista de componentes disponíveis.
 
 ## Release Notes
 
