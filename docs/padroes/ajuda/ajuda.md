@@ -8,7 +8,9 @@ O recurso de ajuda é uma maneira de fornecer respostas às dúvidas ou anseios 
 Quando usar ajuda e comunicação para o usuário:
 
 -   Sempre utilize o recurso de ajuda. Além de ser uma heurística fundamental a ser seguida no quesito de usabilidade, nunca se sabe quando o usuário precisará dela;
+
 -   Para usuários novatos, experientes ou especialistas, se possível ofereça ajuda direcionada a cada tipo de usuário em seus diferentes níveis de experiência;
+
 -   Para colher informações relevantes a respeito da usabilidade de seu produto e implementar futuras melhorias nele.
 
 ---
@@ -22,7 +24,7 @@ Dentro do imaginário coletivo dos usuários de sistemas, aplicativos, e sítios
 ![Exemplo de Uso de Ícones](imagens/icons.png)
 *Utilize o `question` ou `question-circle` como iconografia padrão de ajuda*
 
-**Importante:** Em situações de ajuda contextual pode-se usar o ícone de informação `info` ou `info-circle` como uma alternativa, pois além ser uma prática bastante comum neste tipo de situação, faz parte o padrão estabelecido na documentação de [Formulários](https://www.gov.br/ds/padroes/formulario).
+**Importante:** Em situações de ajuda contextual pode-se usar o ícone de informação `info` ou `info-circle` como uma alternativa, pois além de ser uma prática bastante comum neste tipo de situação, faz parte do padrão estabelecido na documentação de [Formulários](https://www.gov.br/ds/padroes/formulario).
 
  ![Forma do Ícone Acionador](imagens/help-context-icon.png)
 *Utilize `info` ou `info-circle` como padrão alternativo para ícone de ajuda contextual*
@@ -57,21 +59,21 @@ A ajuda contextual é uma forma de apresentar ao usuário um fragmento do conte�
 
 -   **1. Utilize um acionador Dropdown ou Collapse:** Recomenda-se seguir o padrão [*Dropdown*](https://www.gov.br/ds/padroes/dropdown) ou [*Collapse*](https://www.gov.br/ds/padroes/collapse) para exibir ou ocultar o conteúdo de ajuda contextual;
 
-![Conteúdo de Ajuda Contextual com Dropdown](imagens/dropdown.png)
-*Exibindo o conteúdo de ajuda contextual com padrão Dropdown*
+    ![Conteúdo de Ajuda Contextual com Dropdown](imagens/dropdown.png)
+    *Exibindo o conteúdo de ajuda contextual com padrão Dropdown*
 
-![Conteúdo de Ajuda Contextual com Collapse](imagens/collapse.png)
-*Exibindo o conteúdo de ajuda contextual com padrão Collapse*
+    ![Conteúdo de Ajuda Contextual com Collapse](imagens/collapse.png)
+    *Exibindo o conteúdo de ajuda contextual com padrão Collapse*
 
 -   **2. Posicionamento:** Posicione o ícone padrão de ajuda próximo ao elemento referência da ajuda.
 
- ![Posicionamento Ajuda Contextual](imagens/help-context-position.png)
-*Posicionamento da Ajuda Contextual - Próximo ao elemento de referência da ajuda contextual*
+    ![Posicionamento Ajuda Contextual](imagens/help-context-position.png)
+    *Posicionamento da Ajuda Contextual - Próximo ao elemento de referência da ajuda contextual*
 
 -   **3. Escrita:** Apresente um texto curto, direto e contextual a respeito da ajuda solicitada;
 
-![Texto de Ajuda Contextual](imagens/help-context-text.png)
-*Exemplo de texto objetivo em ajuda contextual*
+    ![Texto de Ajuda Contextual](imagens/help-context-text.png)
+    *Exemplo de texto objetivo em ajuda contextual*
 
 ##### Uso de Dropdown com Modais e *Tooltips*
 
@@ -93,7 +95,7 @@ Para situações que exijam um conteúdo textual simples, com número de caracte
 
 ##### Acessando mais detalhes
 
-Caso seja necessário fazer uma referência à algum conteúdo relacionado ou um detalhamento maior da ajuda, pode-se usar um *hiperlink* de acesso ao conteúdo de ajuda global. Este deve estar localizado dentro do *Tooltip* ou *Modal* ao final do conteúdo de ajuda contextual.
+Caso seja necessário fazer uma referência a algum conteúdo relacionado ou um detalhamento maior da ajuda, pode-se usar um *hiperlink* de acesso ao conteúdo de ajuda global. Este deve estar localizado dentro do *Tooltip* ou *Modal* ao final do conteúdo de ajuda contextual.
 
 ![Hiperlink de acesso](imagens/help-context-hiperlink.png)
 *Quando necessário, utilize Hiperlink de acesso a mais detalhes*
@@ -113,20 +115,24 @@ De forma geral, os recursos de comunicação são a principal forma pela qual o 
 
 ### Iconografia em Comunicação
 
-Com relação à semântica do ícone de envio de *feedback*, pode-se usar a representação de um balão de comentário como padrão, como `comment` ou `comment-alt`, fazendo referência ao ato de se comunicar unilateralmente. Porém, evite o uso do balão duplo, como `comments-alt` ou `comments`, pois rementem a uma ideia de bate-papo, que não é caso aqui.
+Com relação à semântica do ícone de envio de *feedback*, pode-se usar a representação de um balão de comentário como padrão, como `comment` ou `comment-alt`, fazendo referência ao ato de se comunicar unilateralmente. Porém, evite o uso do balão duplo, como `comments-alt` ou `comments`, pois remetem a uma ideia de bate-papo, que não é o caso aqui.
 
 ![Exemplo de Uso de Ícones em Feedback](imagens/icons-01.png)
 *Utilize `comment` ou `comment-alt` como iconografia padrão para Envio de Feedback*
 
 ### Tipos de *Feedback* do Usuário
 
- O sentimento ou comentário do usuário pode se enquadrar em um dos determinados tipos abaixo:
+O sentimento ou comentário do usuário pode se enquadrar em um dos determinados tipos abaixo:
 
- 1. **Sugestões de Melhoria:** Este tipo comentário é muito comum vindo de usuários frequentes ou especialistas e trazem um conteúdo de grande utilidade para melhorias e evolução do produto;
- 2. **Críticas:** Talvez seja um dos tipos de *feedback* mais comuns. Podem ser críticas negativas ou construtivas, mas as duas situações trazem importantes insumos para análise e futuras atualizações do produto;
- 3. **Elogios:** É um tipo menos comum, porém um bom indicador do nível de satisfação do usuário sobre a qualidade de sua interface ou funcionalidades desenvolvidas;
- 4. **Dúvidas de Uso:** Geralmente este tipo de *feedback* ocorre quando o usuário já tentou de todas as maneiras solucionar sua dúvida dentro do sistema, mas sem sucesso. Pode indicar com clareza o quanto a usabilidade de sua interface pode estar comprometida, ou também pode indicar uma pobreza de detalhes no conteúdo de ajuda de seu produto;
- 5. **Relatos de problemas, erros ou bugs:** Este tipo de *feedback* é bastante útil e necessário dentro do ciclo de vida de um sistema ou aplicativo e fornece insumos para um *backlog* de atualizações futuras.
+1. **Sugestões de Melhoria:** Este tipo comentário é muito comum vindo de usuários frequentes ou especialistas e trazem um conteúdo de grande utilidade para melhorias e evolução do produto;
+
+2. **Críticas:** Talvez seja um dos tipos de *feedback* mais comuns. Podem ser críticas negativas ou construtivas, mas as duas situações trazem importantes insumos para análise e futuras atualizações do produto;
+
+3. **Elogios:** É um tipo menos comum, porém um bom indicador do nível de satisfação do usuário sobre a qualidade de sua interface ou funcionalidades desenvolvidas;
+
+4. **Dúvidas de Uso:** Geralmente este tipo de *feedback* ocorre quando o usuário já tentou de todas as maneiras solucionar sua dúvida dentro do sistema, mas sem sucesso. Pode indicar com clareza o quanto a usabilidade de sua interface pode estar comprometida, ou também pode indicar uma pobreza de detalhes no conteúdo de ajuda de seu produto;
+
+5. **Relatos de problemas, erros ou bugs:** Este tipo de *feedback* é bastante útil e necessário dentro do ciclo de vida de um sistema ou aplicativo e fornece insumos para um *backlog* de atualizações futuras.
 
 ### Como Coletar *Feedback* do Usuário
 
@@ -161,7 +167,7 @@ Consiste em disponibilizar um questionário mais amplo e detalhado, com questõe
 
 #### Escala de Satisfação *(Rating Scales)*
 
-É uma forma mais rápida ou pontual para se obter o nível de satisfação do usuário com relação à algum aspecto da interface ou características funcionais. Consiste numa escala visual, com indicadores de satisfação que variam em gradações entre "Muito Insatisfeito" e "Muito Satisfeito". Pode ser posicionada juntamente com a nova característica a ser avaliada e utilizada de várias formas, como nos exemplos abaixo.
+É uma forma mais rápida ou pontual para se obter o nível de satisfação do usuário com relação a algum aspecto da interface ou características funcionais. Consiste numa escala visual, com indicadores de satisfação que variam em gradações entre "Muito Insatisfeito" e "Muito Satisfeito". Pode ser posicionada juntamente com a nova característica a ser avaliada e utilizada de várias formas, como nos exemplos abaixo.
 
 ![Exemplo de Escala de Satisfação](imagens/rating-scale-01.png)
 *Exemplo de Escala de Satisfação utilizando componente Slider e indicadores de satisfação*

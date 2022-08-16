@@ -82,7 +82,7 @@ Sabemos, por meio de testes, que usuários desaprovam a rolagem horizontal. Esse
 
 Nesses dispositivos a rolagem é entendida como gesto de arrasto vertical ou horizontal. Por apresentar menos espaço na tela, é esperado que haja mais rolagens. Porém, nesses casos, prefira a rolagem da tela ao invés de rolagens internas dos elementos.
 
-É importante lembrar que, em um ambiente móvel, onde os elementos rolam infinitamente, o conteúdo acima da dobra, ou seja, antes da rolagem da tela, pode fazer a diferença. Por isso, é recomendado ter pelo menos parte do conteúdo antes da dobra. Isso mostra aos usuários que há um motivo para rolar a tela, fazendo com que permaneça o desejo em continuar querendo ver o que se produto tem a oferecer.
+É importante lembrar que, em um ambiente móvel, onde os elementos rolam infinitamente, o conteúdo acima da dobra, ou seja, antes da rolagem da tela, pode fazer a diferença. Por isso, é recomendado ter pelo menos parte do conteúdo antes da dobra. Isso mostra aos usuários que há um motivo para rolar a tela, fazendo com que permaneça o desejo em continuar querendo ver o que seu produto tem a oferecer.
 
 **Atenção:** em dispositivos móveis, a barra de rolagem geralmente é dispensável, mas preocupe-se em deixar pistas de que há conteúdo adicional.
 
@@ -117,6 +117,7 @@ Conteúdo oculto é todo aquele que não está originalmente visível e necessit
 Oculte conteúdos quando:
 
 -   não existe relevância ou espaço suficiente para deixá-lo visível na tela;
+
 -   se tratar de informação complementar a um conteúdo já disponível na tela.
 
 Dominar a técnica de ocultar conteúdo pode ser uma ótima maneira de organizar a informação de maneira limpa e consistente tornando o conteúdo mais facilmente consumível. É recomendado recorrer a técnicas de *collapse* e *dropdown* para tratar cada caso específico.
@@ -124,6 +125,7 @@ Dominar a técnica de ocultar conteúdo pode ser uma ótima maneira de organizar
 Analise os respectivos documentos para mais detalhes sobre esses comportamentos:
 
 -   [*Collapse*](https://www.gov.br/ds/padroes/collapse);
+
 -   [*Dropdown*](https://www.gov.br/ds/padroes/dropdown).
 
 A seguir, analisamos alguns casos mais recorrentes utilizando os comportamentos *collapse* e *dropdown*:
@@ -144,6 +146,7 @@ Alguns elementos possuem conteúdo ocultos que podem ser acessados apenas repous
 *Tooltip* é o componente mais indicado para esses casos. Utilize-o sempre que houver necessidade de:
 
 -   agregar mais detalhes informativos a elementos da interface;
+
 -   alguma informação que, em um primeiro momento, não necessita estar visível para o usuário.
 
 ![Apresentação de conteúdo complementar com uso de tooltip.](imagens/tooltip.png)
@@ -218,9 +221,13 @@ Falaremos mais sobre o uso de *tooltip* mais adiante neste documento.
 O truncamento também pode ser aplicado a uma série de elementos que ultrapassem uma determinada área reservada da tela, tais como:
 
 -   *Breadcrumbs*;
+
 -   *Pagination*;
+
 -   *Hyperlink* longo;
+
 -   Parágrafo;
+
 -   Redução de um nome de um item longo (itens de tabelas, por exemplo).
 
 **Atenção:** o truncamento não deve ser utilizado em cabeçalhos de página, títulos, menus, rótulos de botões, mensagens de erro, mensagens de validação ou notificações.
@@ -248,9 +255,9 @@ Se a informação adicional estiver de alguma forma vinculada conteúdo original
 
 Modais têm a característica de criar um "intervalo" no fluxo de navegação principal, e pode trazer um aviso, uma funcionalidade ou formulário extra. Após consumir esse conteúdo, o usuário pode retornar normalmente ao fluxo principal.  
 
-**Atenção:** tenha em mente que o exagero no uso de modais pois pode se tornar extremamente inconveniente para a navegação. Considere sempre se o conteúdo da modal tem um vínculo estreito com a ação de origem.
+**Atenção:** tenha em mente que o exagero no uso de modais pode se tornar extremamente inconveniente para a navegação. Considere sempre se o conteúdo da modal tem um vínculo estreito com a ação de origem.
 
-Confira o documento [modal](https://www.gov.br/ds/components/modal?tab=designer) para maiores detalhes desse componente.
+Confira o documento [modal](https://www.gov.br/ds/components/modal?tab=designer) para maiores detalhes deste componente.
 
 #### B. Página Interna
 

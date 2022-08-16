@@ -55,7 +55,7 @@ Os elementos de hierarquia na navegação são:
 
 ##### B. Pais e Filhos
 
-O nível superior na hierarquia de navegação é chamado de "pai" enquanto que o(s) nível(is) inferiores são chamadas de "filhos". É importante manter sempre presente acesso de navegação entre nível pai e filhos.
+O nível superior na hierarquia de navegação é chamado de "pai" enquanto que o(s) nível(is) inferiores são chamadas de "filhos". É importante manter sempre presente o acesso de navegação entre nível pai e filhos.
 
 ![Pais e Filhos](imagens/pais-filhos.png)
 *Pais e Filhos - Mantenha sempre o acesso entre elementos pais e filhos*
@@ -76,7 +76,7 @@ Os níveis que possuem o mesmo pai são chamados de "irmãos". Geralmente são a
 
 ##### E. Hiperlinks
 
-Os hiperlinks são recursos que permitem os usuários acessar rapidamente os níveis na hierarquia, mesmo que não sejam adjacentes à sua navegação. Seja de pai para filho, irmão para irmão ou qualquer outra localidade desejada. Os hiperlinks cruzados levam os usuários a qualquer lugar dentro do site, sistema ou aplicativo. Já os hiperlinks externos levam os usuários a fontes externas.
+Os hiperlinks são recursos que permitem aos usuários acessar rapidamente os níveis na hierarquia, mesmo que não sejam adjacentes à sua navegação. Seja de pai para filho, irmão para irmão ou qualquer outra localidade desejada. Os hiperlinks cruzados levam os usuários a qualquer lugar dentro do site, sistema ou aplicativo. Já os hiperlinks externos levam os usuários a fontes externas.
 
 ![Hiperlinks](imagens/links.png)
 *Os hiperlinks acessam qualquer localidade dentro ou fora de sua aplicação*
@@ -98,7 +98,9 @@ Os hiperlinks são recursos que permitem os usuários acessar rapidamente os ní
 O ato de se mover por telas ou seções de uma aplicação pode ser realizado por determinados tipos de navegação. E para cada tipo de navegação existem componentes ou comportamentos de navegação mais adequados. São eles:
 
 -   Navegação Lateral;
+
 -   Navegação Progressiva;
+
 -   Navegação Reversa.
 
 ### 1. Navegação Lateral
@@ -124,7 +126,9 @@ Compreende no movimento entre telas ou seções da aplicação de um mesmo níve
 #### Boas Práticas na Navegação Lateral
 
 -   Componentes de navegação lateral que contém os principais níveis de hierarquia devem permanecer sempre visíveis em qualquer tela da aplicação. Desta forma o usuário terá acesso imediato às principais telas do sistema ou aplicativo;
+
 -   Em dispositivos móveis, quando utilizar recursos de *collapse* ou *dropdown* para componentes como *Menu*, reforce a ênfase visual no ícone ou button de acesso deste componente, assim o usuário terá certeza de onde encontrar seu componente principal de navegação;
+
 -   Evite utilizar *Menus*, *Tabs* ou *Lists* com uma quantidade muito extensa de itens. Neste caso, tente organizar sua estrutura principal de navegação de forma inteligente, oferecendo ao usuário o que realmente importa.
 
 ### 2. Navegação Progressiva
@@ -175,7 +179,9 @@ Abaixo pode-se observar alguns componentes mais adequados para *Navegação Prog
 #### Boas Práticas na Navegação Progressiva
 
 -   Em navegações descendentes, utilize recursos visuais como ícones que podem auxiliar o usuário a perceber um acesso a um nível inferior na hierarquia;
+
 -   Para navegações sequenciais, fortaleça a ênfase visual em botões que são responsáveis por guiar o usuário em etapas futuras de uma jornada;
+
 -   Em navegações diretas, mantenha sempre presente nas interfaces outros componentes que auxiliem o usuário retornar ao ponto de partida ou que deixem claro o caminho percorrido;
 
 ### 3. Navegação Reversa
@@ -219,7 +225,9 @@ Componentes mais adequados para *Navegação Reversa*:
 #### Boas Práticas na Navegação Reversa
 
 -   Sempre que possível, retorne o usuário para tela anterior, exibindo-a em seu estado original e posição da barra de rolagem;
+
 -   Forneça ao usuário mensagens claras, caso a tela anterior não esteja mais disponível. Pode-se usar nestes casos os padrões de *Empty State*, *Telas de Erro* ou *Componente Message*;
+
 -   Indique claramente ao usuário o relacionamento entre as telas "pais" e telas "filhas". É importante que o usuário consiga identificar o acesso à tela "pai" facilmente e retroceder na navegação.
 
 ---
@@ -230,7 +238,7 @@ Padrões de navegação são formas de organizar e utilizar um ou mais component
 
 ### Organizando Padrões de Navegação
 
-Os padrões de navegação devem ser aplicados para atender melhor as necessidades dos usuários da aplicação. Geralmente, sistemas ou aplicativos com um modelo de hierarquia muito complexo ou profundo tem requisitos de navegação diferentes de aplicações mais simples com poucas camadas de visualização. É importante estar atento e utilizar os padrões mais adequados para sua interface, sendo possível também combiná-los de forma a obter melhor resultado na usabilidade.
+Os padrões de navegação devem ser aplicados para atender melhor às necessidades dos usuários da aplicação. Geralmente, sistemas ou aplicativos com um modelo de hierarquia muito complexo ou profundo tem requisitos de navegação diferentes de aplicações mais simples com poucas camadas de visualização. É importante estar atento e utilizar os padrões mais adequados para sua interface, sendo possível também combiná-los de forma a obter melhor resultado na usabilidade.
 
 Abaixo seguem alguns padrões que podem ser úteis na estruturação de uma navegação eficiente.
 
@@ -241,11 +249,14 @@ Navegação Embutida é um padrão onde os componentes de navegação fazem part
 Este modelo é recomendado para:
 
 -   aplicativos ou sistemas com poucos níveis hierárquicos;
+
 -   aplicativos que usam na visão primária as tarefas mais comuns ou todas as tarefas;
+
 -   aplicativos ou sistemas que possuem uma forte visualização primária e poucas visualizações alternativas;
+
 -   aplicativos ou sistemas usados com pouca frequência.
 
-  ![Exemplo de Navegação Embutida](imagens/music-app.png)
+![Exemplo de Navegação Embutida](imagens/music-app.png)
 *Exemplo de Navegação Embutida em um App de música - Os controles de navegação funcionam em uma forte visualização primária*
 
 #### 2. Navegação Aninhada
@@ -257,10 +268,12 @@ Geralmente muito comum em estruturas de *Menus* ou *Listas*. Neste caso, recomen
 Este tipo de padrão é adequado para:
 
 -   Modelos de Navegação Lateral;
+
 -   Estruturas de navegação muito profundas ou complexas;
+
 -   Acessar itens de primeiro nível em visualizações não relacionadas.
 
-   ![Exemplo de Navegação Aninhada](imagens/menu-aninhado.png)
+![Exemplo de Navegação Aninhada](imagens/menu-aninhado.png)
 *Exemplo de Navegação Aninhada utilizando agrupamentos de pais e filhos no Menu*
 
 ##### Navegação Aninhada com Collapse ou Dropdown
@@ -270,7 +283,9 @@ O padrão de Navegação Aninhada com Collapse ou Dropdown possui o mesmo objeti
 Desta forma pode-se otimizar melhor os espaços na tela e oferecer maior área de conteúdo visível para o usuário. É bastante útil para:
 
 -   Recursos de responsividade;
+
 -   Aplicações *Mobile*;
+
 -   Aplicações *Desktop* com pouco espaço em tela.
 
 ![Exemplo de Navegação Aninhada com Collapse](imagens/menu-aninhado-collase.png)
@@ -295,33 +310,38 @@ Em dispositivos mobile, com espaços mais restritos, cada bloco em cascata é vi
 
 O padrão de Navegação Gestual é o modelo no qual utiliza-se recursos de toque por parte do usuário durante a navegação na interface, em determinados dispositivos.
 
-A *Navegação Gestual* permite que os usuários utilizem o dedo para deslizar entre os itens de navegação. Geralmente esses itens são irmãos em termos de nível de hierarquia. Esses recursos são mais presentes em aplicações para dispositivos móveis e devem ser considerados ao se projetar este tipo de interface. São mais comumentes utilizados em ações de rolagem vertical da tela, rolagem horizontal em componentes do tipo carrossel, galeria de imagens e ações de *touch* em elementos interativos por exemplo.
+A *Navegação Gestual* permite que os usuários utilizem o dedo para deslizar entre os itens de navegação. Geralmente esses itens são irmãos em termos de nível de hierarquia. Esses recursos são mais presentes em aplicações para dispositivos móveis e devem ser considerados ao se projetar este tipo de interface. São mais comumente utilizados em ações de rolagem vertical da tela, rolagem horizontal em componentes do tipo carrossel, galeria de imagens e ações de *touch* em elementos interativos por exemplo.
 
 A *Navegação Gestual* é recomendada para:
 
 -   Itens relacionados e ordenados naturalmente, como páginas ou elementos em sequência;
+
 -   Visualizações com poucos itens filhos;
+
 -   Visualizações com conteúdos semelhantes.
 
 Os recursos de *Navegação Gestual* mais comuns são:
 
 -   Deslizar horizontalmente (direita e esquerda);
+
 -   Deslizar verticalmente (cima e baixo);
+
 -   Tocar em elementos interativos;
+
 -   Ampliar ou reduzir a visualização da tela (com dois dedos).
 
  Abaixo pode-se observar alguns exemplos de *Navegação Gestual*.
 
- ![Exemplo de Navegação Gestual Horizontal](imagens/gestual-01.png)
+![Exemplo de Navegação Gestual Horizontal](imagens/gestual-01.png)
 *Exemplo de Navegação Gestual Horizontal - O usuário desliza o dedo horizontalmente navegando sobre uma lista de músicas em um aplicativo*
 
- ![Exemplo de Navegação Gestual Vertical](imagens/gestual-02.png)
+![Exemplo de Navegação Gestual Vertical](imagens/gestual-02.png)
 *Exemplo de Navegação Gestual Vertical - O usuário desliza o dedo verticalmente navegando sobre uma lista em um aplicativo*
 
- ![Exemplo de Navegação Gestual com Touch](imagens/gestual-03.png)
+![Exemplo de Navegação Gestual com Touch](imagens/gestual-03.png)
 *Exemplo de Navegação Gestual com Touch - O usuário aciona elementos interativos com o toque*
 
- ![Exemplo de Navegação Gestual com Zoom](imagens/gestual-04.png)
+![Exemplo de Navegação Gestual com Zoom](imagens/gestual-04.png)
 *Exemplo de Navegação Gestual com Zoom - O usuário utiliza dois dedos para ampliar ou reduzir a visualização do elemento ou da tela*
 
 #### 4. Padrões Combinados

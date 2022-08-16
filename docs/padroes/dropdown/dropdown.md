@@ -8,6 +8,7 @@ O padrão *Dropdown* ocorre quando uma superfície flutuante surge sobre a tela,
 Utilize o padrão *Dropdown* quando:
 
 -   existir a necessidade de apresentar informações extras de forma temporária, sem a necessidade de navegar para uma nova tela ou ocupar espaço útil dentro da interface;
+
 -   houver a necessidade de exibir itens de seleção ou múltipla escolha ao usuário de forma contextual e temporária;
 
 Não utilize o padrão *Dropdown*:
@@ -54,8 +55,11 @@ O *Identificador de Estado* é um elemento iconográfico que representa o estado
 O *Identificador de Estado* é representado pelos ícones:
 
 -   A. `caret-down`;
+
 -   B. `caret-up`;
+
 -   C. `caret-right`;
+
 -   D. `caret-left`.
 
 ![Ícones do Identificador de Estado](imagens/anatomy-icons.png)
@@ -66,6 +70,7 @@ O *Identificador de Estado* é representado pelos ícones:
 A *Superfície Flutuante* é o elemento que será exibido ou ocultado na interface através do *Acionador*. Esta deve aparecer flutuando sobre o conteúdo da interface, com ênfase e contraste.
 
 -   A. Superfície Flutuante;
+
 -   B. Conteúdo da Tela.
 
 ![Superfície Flutuante](imagens/anatomy-floating-surface-01.png)
@@ -100,7 +105,9 @@ Para elementos flutuantes, como *Dropdown*, usa-se o padrão de *Elevação* na 
 Apesar de se utilizar a sombra como um elemento obrigatório para destaque da *Superfície Flutuante*, nem sempre seu uso é suficiente para agregar contraste entre a superfície e a tela. Para proporcionar mais ênfase e contraste, é possível utilizar algumas características opcionais provenientes do conceito de *Superfície*, como *Borda*, *Cor* ou *Overlay*. Veja abaixo:
 
 -   **A. Borda**: Outra propriedade opcional da superfície que pode agregar a ideia de elevação;
+
 -   **B. Cor**: Também pode-se adicionar a cor para produzir o contraste na superfície;
+
 -   **C. Overlay**: Pode-se utilizar outros recursos, caso seja prioritário a atenção do usuário. Como por exemplo, o uso de *Overlay* em uma camada inferior ao *Dropdown*.
 
 **Importante:** Note que esses elementos opcionais devem ser usados juntamente com a sombra.
@@ -137,9 +144,13 @@ Porém, é comum que em *Grid* de 4 colunas, os elementos *Dropdown* ocupem 100%
 A *Superfície Flutuante* deve ser posicionada próxima ao *Acionador* ou centralizada na tela, no caso de dispositivos móveis. Por padrão, a *Superfície Flutuante* aparece logo abaixo do *Acionador*. Caso não tenha espaço para exibir o elemento *Dropdown*, este poderá surgir em outras direções (direita, esquerda, acima) opostas ao limite da tela. Observe abaixo.
 
 -   A. Por padrão, a *Superfície Flutuante* abre abaixo do *Acionador*;
+
 -   B. A *Superfície Flutuante* abre abaixo e à direita do *Acionador* próximo ao limite da tela;
+
 -   C. A *Superfície Flutuante* abre abaixo e à esquerda do *Acionador* próximo ao limite da tela;
+
 -   D. A *Superfície Flutuante* abre acima do *Acionador* próximo ao limite da tela;
+
 -   E. Limite visível da tela.
 
 ![Limites da Tela e Posição do Dropdown](imagens/behavior-position.png)
@@ -156,6 +167,7 @@ O *Identificador de Estado* é o elemento iconográfico padrão para representar
 Por padrão, a forma iconográfica utilizada é:
 
 -   A. `caret-down` quando a *Superfície Flutuante* está oculta;
+
 -   B. `caret-up` quando a *Superfície Flutuante* está visível;
 
 ![Comportamento Toggle do Identificador de Estado](imagens/behavior-toggle-icon.png)
@@ -164,6 +176,7 @@ Por padrão, a forma iconográfica utilizada é:
 Em raras situações é possível abrir o elemento *Dropdown* horizontalmente. Neste caso se utiliza a seguinte iconografia:
 
 -   A. `caret-right` quando a *Superfície Flutuante* está oculta e vai abrir horizontalmente;
+
 -   B. `caret-left` quando a *Superfície Flutuante* está visível e vai fechar horizontalmente.
 
    ![Exemplo de Painel Retrátil com Identificador de Estado na Horizontal](imagens/behavior-horizontal-icon.png)
@@ -215,23 +228,23 @@ A *Superfície Flutuante* é um elemento temporário, logo precisa desaparecer d
 
 -   **Acionador**: o próprio elemento que acionou a *Superfície Flutuante* pode ser utilizado para fechá-la. Caso tenha sido acionado por clique ou toque, basta clicar ou tocar novamente no *Acionador* para fechá-la. Se tiver sido acionado por um `hover`, retire o ponteiro do *mouse* sobre o *Acionador*;
 
-![Fechamento pelo Próprio Acionador](imagens/behavior-persistent-state-pressed-01.png)
-*Fechamento pelo Próprio Acionador*
+    ![Fechamento pelo Próprio Acionador](imagens/behavior-persistent-state-pressed-01.png)
+    *Fechamento pelo Próprio Acionador*
 
 -   **Botão Fechar**: o *Botão Fechar* com ícone `times` (x) é a forma mais comum utilizada. Recomenda-se posicionar o ícone na parte superior direita da *Superfície Flutuante*;
 
-![Fechamento pelo Botão Fechar](imagens/behavior-persistent-state-pressed-02.png)
-*Fechamento pelo Botão Fechar*
+    ![Fechamento pelo Botão Fechar](imagens/behavior-persistent-state-pressed-02.png)
+    *Fechamento pelo Botão Fechar*
 
 -   **Clique fora da superfície**: clicando fora da *Superfície Flutuante*, é outra forma bastante usada para fechar elementos *Dropdown*, independentemente se está ou não sobre um *Overlay*;
 
-![Fechamento com clique fora da superfície](imagens/behavior-persistent-state-pressed-03.png)
-*Fechamento com clique fora da superfície*
+    ![Fechamento com clique fora da superfície](imagens/behavior-persistent-state-pressed-03.png)
+    *Fechamento com clique fora da superfície*
 
 -   **Concluir objetivo**: após a conclusão do objetivo para o qual foi solicitado o elemento *Dropdown*. Esse objetivo pode ser por uma escolha/seleção, preenchimento de um formulário ou até finalizando o carregamento de algum conteúdo.
 
-![Fechamento com conclusão de objetivo](imagens/behavior-persistent-state-pressed-04.png)
-*Fechamento com conclusão de objetivo*
+    ![Fechamento com conclusão de objetivo](imagens/behavior-persistent-state-pressed-04.png)
+    *Fechamento com conclusão de objetivo*
 
 **Importante**: Os comportamentos acima podem ser utilizados separadamente, mas a recomendação é que eles sejam utilizados em conjunto, desde que façam sentido no contexto da interface.
 
@@ -239,11 +252,11 @@ A *Superfície Flutuante* é um elemento temporário, logo precisa desaparecer d
 
 -   Em algumas situações, o conteúdo exibido na *Superfície Flutuante* pode ser relativamente grande, como é o caso de alguns painéis de filtros ou painéis retráteis. Neste caso, a recomendação é ter cautela neste tipo de uso. Se o conteúdo for realmente muito extenso a ponto de criar barra de rolagem na área visível da tela, prefira usar hiperlink para uma nova tela;
 
-![Exemplo de Conteúdo em Dropdown](imagens/behavior-content-sample-01.png)
-*Exemplo de Conteúdo em Dropdown*
+    ![Exemplo de Conteúdo em Dropdown](imagens/behavior-content-sample-01.png)
+    *Exemplo de Conteúdo em Dropdown*
 
-![Exemplo de Conteúdo Muito Extenso em Dropdown](imagens/behavior-content-sample-02.png)
-*Exemplo de Conteúdo Muito Extenso em Dropdown - Prefira utilizar hiperlinks para um nova página*
+    ![Exemplo de Conteúdo Muito Extenso em Dropdown](imagens/behavior-content-sample-02.png)
+    *Exemplo de Conteúdo Muito Extenso em Dropdown - Prefira utilizar hiperlinks para um nova página*
 
 -   Recomenda-se utilizar o conteúdo de um *Dropdown* sempre contido (ou parcialmente contido) dentro da *Superfície Flutuante*. Caso contrário, poderá gerar confusão por parte do usuário.
 
@@ -251,11 +264,11 @@ A *Superfície Flutuante* é um elemento temporário, logo precisa desaparecer d
 
 -   Pode haver a necessidade de  múltiplos elementos *Dropdown* aninhados em cascata, porém, utilize com  muita cautela para que o usuário não se perca dentro de diversos níveis. Como padrão, mantenha no máximo 3 níveis de *Dropdown*.
 
-![Exemplo de Boa Prática - Elementos Dropdown Aninhados em cascata](imagens/behavior-multiple-dropdown-01.png)
-*Exemplo de Boa Prática - Elementos Dropdown aninhados em cascata*
+    ![Exemplo de Boa Prática - Elementos Dropdown Aninhados em cascata](imagens/behavior-multiple-dropdown-01.png)
+    *Exemplo de Boa Prática - Elementos Dropdown aninhados em cascata*
 
-![Exemplo de Mau Uso - Elementos Dropdown Aninhados em cascata](imagens/behavior-multiple-dropdown-02.png)
-*Exemplo de Mau Uso - Elementos Dropdown aninhados em cascata*
+    ![Exemplo de Mau Uso - Elementos Dropdown Aninhados em cascata](imagens/behavior-multiple-dropdown-02.png)
+    *Exemplo de Mau Uso - Elementos Dropdown aninhados em cascata*
 
 ### 8. Acessibilidade
 
@@ -263,23 +276,23 @@ A *Superfície Flutuante* é um elemento temporário, logo precisa desaparecer d
 
 -   No entanto, é importante permitir a navegação entre os elementos interativos em um *Dropdown* sejam feitos pela tecla `TAB`. Neste caso, utilize o estado `foco` nos elementos durante a navegação;
 
-![Exemplo de Uso do Teclado para Navegação em Dropdown - Tecla Tab](imagens/behavior-dropdown-keyboard-01.png)
-*Exemplo de Uso do Teclado para Navegação em Dropdown - Tecla Tab*
+    ![Exemplo de Uso do Teclado para Navegação em Dropdown - Tecla Tab](imagens/behavior-dropdown-keyboard-01.png)
+    *Exemplo de Uso do Teclado para Navegação em Dropdown - Tecla Tab*
 
--   e em alguns casos, o uso de `Teclas de Navegação` (cima, baixo, direta, esquerda);
+-   e em alguns casos, o uso de `Teclas de Navegação` (cima, baixo, direita, esquerda);
 
-![Exemplo de Uso do Teclado para Navegação em Dropdown - Teclas de Navegação](imagens/behavior-dropdown-keyboard-02.png)
-*Exemplo de Uso do Teclado para Navegação em Dropdown - Teclas de Navegação*
+    ![Exemplo de Uso do Teclado para Navegação em Dropdown - Teclas de Navegação](imagens/behavior-dropdown-keyboard-02.png)
+    *Exemplo de Uso do Teclado para Navegação em Dropdown - Teclas de Navegação*
 
 -   Em caso de navegação a partir do teclado, o fechamento do *Dropdown* deve ser feito com uso da tecla `ESC`;
 
-  ![Exemplo de Uso do Teclado para Navegação em Dropdown - Fechamento com Tecla Esc](imagens/behavior-dropdown-keyboard-03.png)
-*Exemplo de Uso do Teclado para Navegação em Dropdown - Fechamento com Tecla Esc*
+    ![Exemplo de Uso do Teclado para Navegação em Dropdown - Fechamento com Tecla Esc](imagens/behavior-dropdown-keyboard-03.png)
+    *Exemplo de Uso do Teclado para Navegação em Dropdown - Fechamento com Tecla Esc*
 
 -   Em caso de navegação a partir do teclado, o acionamento pode ser feito com a tecla `Enter` ou `Espaço`.
 
-  ![Exemplo de Uso do Teclado para Navegação em Dropdown - Acionamento com Tecla Enter](imagens/behavior-dropdown-keyboard-04.png)
-*Exemplo de Uso do Teclado para Navegação em Dropdown - Acionamento com Tecla Enter ou Espaço*
+    ![Exemplo de Uso do Teclado para Navegação em Dropdown - Acionamento com Tecla Enter](imagens/behavior-dropdown-keyboard-04.png)
+    *Exemplo de Uso do Teclado para Navegação em Dropdown - Acionamento com Tecla Enter ou Espaço*
 
 ---
 

@@ -5,7 +5,7 @@ Os gráficos são representações visuais de dados e informações numéricas q
 ![Exemplo de Gráfico](imagens/grafico-bolha.png)
  *Exemplo de gráfico*
 
-Utilize gráfico para demonstrar padrões, tendências ou comparar informações qualitativas e quantitativas em um determinado espaço de tempo.
+Utilize gráficos para demonstrar padrões, tendências ou comparar informações qualitativas e quantitativas em um determinado espaço de tempo.
 
 ---
 
@@ -63,7 +63,7 @@ Caso haja necessidade, o gráfico poderá fazer uso de elementos, ações e recu
 ![Exemplo de Gráfico](imagens/img-grafico.png)
 *Exemplo do uso do tooltip em um gráfico do tipo Mapa Geográfico na área principal.*
 
-Outros recursos igualmente importante e que poderão ser utilizados em gráficos dinâmicos, são os valores definidos no [fundamento movimento](/ds/fundamentos-visuais/movimento), tais como: transições, *easing* e a duração.
+Outros recursos igualmente importantes e que poderão ser utilizados em gráficos dinâmicos, são os valores definidos no [fundamento movimento](/ds/fundamentos-visuais/movimento), tais como: transições, *easing* e a duração.
 
 Não existe uma forma única de apresentá-los, geralmente os gráficos podem ser apresentados através dos dados com a utilização de eixos (x,y), legendas, linhas de grade, títulos dos eixos, etc. Sua apresentação e organização dependerá da necessidade ou da limitação da ferramenta utilizada para sua criação e exibição.
 
@@ -73,22 +73,25 @@ A área de rodapé se destina a conter informações textuais sobre o gráfico, 
 
 #### 3.1. Descrição (Opcional)
 
-Visa apresentar um texto descritivo detalhando as informações apesentadas no gráfico, buscando facilitar, desta forma, o entendimento dos dados apresentados para pessoas que possuem algum tipo de deficit de atenção ou que possua alguma dificuldade em interpretar com facilidade as informações apresentadas. Maiores informações na área de Acessibilidade em "Uso de Descrições".
+Visa apresentar um texto descritivo detalhando as informações apresentadas no gráfico, buscando facilitar, desta forma, o entendimento dos dados apresentados para pessoas que possuem algum tipo de déficit de atenção ou que possua alguma dificuldade em interpretar com facilidade as informações apresentadas. Maiores informações na área de Acessibilidade em "Uso de Descrições".
 
 ![Exemplo do uso da descrição do gráfico](imagens/descricao.png)
 *Exemplo do uso da descrição do gráfico.*
 
 #### 3.2. Fonte (Opcional)
 
-É a descrição textual da origem da informação apesentada no gráfico, ou seja, de onde as informações foram retiradas. Mesmo sendo de uso opcional, o ideal é que, sempre que possível, a fonte esteja na Área de Rodapé, próximo ao gráfico que o ilustra, fornecendo informações sobre onde ele foi originalmente publicado.
+É a descrição textual da origem da informação apresentada no gráfico, ou seja, de onde as informações foram retiradas. Mesmo sendo de uso opcional, o ideal é que, sempre que possível, a fonte esteja na Área de Rodapé, próximo ao gráfico que o ilustra, fornecendo informações sobre onde ele foi originalmente publicado.
 
 O ideal, sempre que possível, é obter a permissão do autor(a) dos dados para reproduzi-los.
 
 Caso não seja possível, algumas ações de boas práticas deverão ser tomadas, tais como:
 
 -   Apresentar data, ano, número da tabela;
+
 -   Informar a editora ou local de publicação;
+
 -   Descrever os direitos autorais do titular da informação;
+
 -   Utilizar *link* direto para endereço eletrônico (site), onde o usuário poderá ter acesso aos dados originais ou a informações complementares.
 
 ![Exemplo do uso da fonte de um gráfico](imagens/fonte.png)
@@ -121,9 +124,12 @@ Nos gráficos de colunas, são utilizados retângulos paralelos e verticais com 
 #### Quando usar
 
 -   São especialmente eficazes quando você tem dados que podem ser divididos pelos elementos de uma Dimensão (ex: elementos da Dimensão UF: AC, Al, CE…) bem como destacar diferenças, mostrar tendências, *outliers* e revelar rapidamente os altos e baixos históricos;
+
 -   Também é utilizado quando for preciso exibir a soma ou quantidade agrupada por uma Dimensão de modo a identificar os maiores e os menores valores;
+
 -   O gráfico de barras horizontais, por exemplo, são recomendados para dados em que o texto da dimensão seja longo, evitando assim que o texto do eixo fique ilegível devido ao tamanho;
--   Caso tenha dados positivos e negativos a comparar a utilização deste tipo de gráfico destaca tendências e elementos atípicos.
+
+-   Caso tenha dados positivos e negativos a comparar, a utilização deste tipo de gráfico destaca tendências e elementos atípicos.
 
 #### Quando não usar
 
@@ -132,14 +138,18 @@ Nos gráficos de colunas, são utilizados retângulos paralelos e verticais com 
 #### Boas práticas
 
 -   Mostrar, se possível, o valor de cada coluna ou barra;
+
 -   Sempre que possível, ordenar as colunas ou barras em ordem crescente ou descrente para adicionar uma dimensão extra de informação facilmente identificável pelo usuário;
+
 -   O espaçamento entre as colunas ou barras do gráfico deve ser pelo menos metade do tamanho da barra, isso aumenta a legibilidade;
+
 -   Sempre nomear os eixos para que o usuário seja contextualizado;
+
 -   Evitar usar muitas cores "efeito arco-íris". Usar uma única cor ou alguns tons da mesma cor é uma prática muito melhor. Você pode destacar uma barra em particular se essa for a mensagem que você deseja transmitir;
 
 ### 2. Gráfico de Pizza e Rosca
 
-Também conhecidos como Gráfico Torta ou de Setores, este modelo servem para mostrar um número estático e como as categorias representam parte de um todo. Ele deve representar seus valores em percentuais e a soma de todas as categorias, precisa ser igual a 100%.
+Também conhecidos como Gráfico Torta ou de Setores, este modelo serve para mostrar um número estático e como as categorias representam parte de um todo. Ele deve representar seus valores em percentuais e a soma de todas as categorias, precisa ser igual a 100%.
 
 #### Gráfico de pizza
 
@@ -154,23 +164,33 @@ Também conhecidos como Gráfico Torta ou de Setores, este modelo servem para mo
 #### Quando Usar Gráficos de Pizza e Rosca
 
 -   Um conjunto de dados gráficos de pizza são eficientes para categorizar e comparar um conjunto de dados;
+
 -   Os gráficos de pizza não podem exibir zeros e podem ser confusos ao trabalhar com valores negativos;
+
 -   Use sete ou menos categorias, pois fica cada vez mais fácil perceber o tamanho relativo de cada segmento, ao trabalhar com mais de sete categorias fica mais difícil e não é de forma alguma indicado.
 
 #### Quando não Usar Gráficos de Pizza e Rosca
 
 -   Sempre que possível evite usar este tipo de gráfico, pois o mesmo não é muito  representativo;
+
 -   Se temos um gráfico de pizza com pequenas diferenças entre as fatias, não conseguimos percebê-las muito bem. Desta forma, simplesmente, a informação não será captada. Se usarmos um gráfico de barras ou colunas para a mesma informação, seremos capazes de perceber as menores variações entre os valores;
+
 -   Se os dados forem ordinais ou sequenciais este gráfico não deve ser usado, por exemplo, uma pesquisa em que temos: concordo totalmente, concordo parcialmente, discordo parcialmente e discordo totalmente, representado em um gráfico empilhado mostra diretamente as faixas;
+
 -   Se os dados forem de séries temporais o gráfico de pizza/rosca não mostrará a evolução da série e pode induzir a *insights* errados;
--   Não use vários gráficos de pizza/rosca para comparações, a informação se dificulta a interpretação do usuário, por exemplo, a comparação entre quatro empresas quanto ao percentual de funcionários por gênero, um gráfico de barras ou uma variação do mesmo é mais indicado.
+
+-   Não use vários gráficos de pizza/rosca para comparações, a informação dificulta a interpretação do usuário, por exemplo, a comparação entre quatro empresas quanto ao percentual de funcionários por gênero, um gráfico de barras ou uma variação do mesmo é mais indicado.
 
 #### Boas Práticas para Gráficos de Pizza e Rosca
 
 -   Um motivo para não usar este tipo de gráfico é porque nossos olhos têm mais dificuldade de identificar ângulos e de comparar áreas;
+
 -   Outro motivo para não usar este tipo de gráfico é porque quando, por exemplo, você tem muitas categorias, as que têm valores abaixo de 5% ficam literalmente escondidas;
+
 -   Quando você tem muitas categorias, você precisa de cores para salientar essas diferenças, entretanto é difícil escolher cores de forma eficiente por conta do posicionamento das categorias no gráfico.  Um fato importante: 8% da população masculina é daltônica ou sofre de algum tipo de dificuldade em perceber cores. Você vai arriscar usar um gráfico que depende tanto assim de cores?;
+
 -   Perceber rapidamente a diferença entre valores próximos (ex.: 38% vs 33%) é bem complicado num gráfico de pizza. Faça um teste: remova os *labels* de um gráfico de pizza e tente adivinhar o percentual. E fica pior quando você quer comparar dados de muitas categorias em momentos diferentes;
+
 -   Se tiver que usá-lo use, pelo menos, o gráfico de rosca; o espaço em branco dentro dele pode ser usado para exibir mais informações.
 
 ### 3. Gráfico em Linhas e Áreas
@@ -192,50 +212,68 @@ Também chamado de Gráfico de Segmento, serve para apresentar valores (numéric
 #### Quando Usar Gráficos de Linhas e Áreas
 
 -   Este deve ser utilizado quando as análises forem QUANTITATIVAS, exemplo: Faturamento anual; custo médio mensal; despesas trimestrais, etc.;
+
 -   Na comparação de dados desde que os eixos sigam as mesmas escalas.
 
 #### Quando não Usar Gráficos de Linhas e Áreas
 
 -   Caso tenha mais de um atributo e mais de uma métrica ele ficará muito confuso;
+
 -   Quando seus dados não possuem um intervalo ou período contínuo.
 
 #### Boas Práticas em Gráficos de Linhas e Áreas
 
 -   Ideal para análise ao longo do tempo;
+
 -   Evite usar mais de 3 a 4 linhas por gráfico, pois isso torna o gráfico mais confuso e mais difícil de ler.
 
 ### 4. Histograma
 
 A diferença do histograma para o gráfico de colunas está no fato do primeiro não apresentar espaço entre as barras verticais.
+
 ![Exemplo de uso do tooltip.](imagens/grafico-histograma.png)
 *Exemplo de Gráfico em Histograma.*
 
-**OBS:** Exitem diferentes modelos de gráficos do tipo histograma. São eles: simétricos, assimétricos, desempenho, dois picos, achatado e pico Isolado.
+**OBS:** Existem diferentes modelos de gráficos do tipo histograma. São eles: simétricos, assimétricos, desempenho, dois picos, achatado e pico Isolado.
 
 #### Quando usar Histograma
 
 -   Verificar o número de produto não-conforme;
+
 -   Determinar a dispersão dos valores de medidas em peças;
+
 -   Em processos que necessitam ações corretivas;
+
 -   Para encontrar e mostrar através de gráfico o número de unidade por cada categoria;
+
 -   Para mostrar a simetria de um conjunto de dados;
+
 -   Para mostrar qual o valor mais comum em um conjunto;
+
 -   Para verificar a existência de um ou mais picos no conjunto de valores;
+
 -   Verificar a existência de tendências de alguns valores estarem presentes ou ausentes;
+
 -   Para resumir uma variedade de dados graficamente (população muito grande).
 
 #### Quando não usar Histograma
 
 -   Fica ilegível quando se necessita a comparação de muitas sequências em simultâneo;
+
 -   Quanto maior o tamanho de (n) maior o custo de amostragem e teste;
+
 -   Para um grupo de informações é necessário a confecção de vários gráficos de modo a conseguir uma melhor compreensão dos dados contidos no histograma;
+
 -   Quando é necessário relacionar o tempo com os dados, por exemplo, não sei se todos os dias bons aconteceram na mesma época ou se eles estão dispersos aleatoriamente no processo;
+
 -   Quando há dois picos de alta frequência, sugerimos a separação em dois histogramas.
 
 #### Boas Práticas para Histograma
 
 -   Para uma amostra confiável e significativa tenha pelo menos de 50 a 100 dados;
+
 -   Determine o número de classes, não há uma quantidade certa, porém é preciso um meio-termo, ou seja, não deve ser muito pequeno, para não descaracterizar o histograma, e nem muito grande, para espalhar muito os dados;
+
 -   Procure utilizar uma única cor no histograma, más, caso necessite de algum destaque, utilize entre duas a três cores;
 
 ### 5. Gráfico de Dispersão e Bolhas
@@ -258,10 +296,15 @@ O modelo hipotético seria, portanto, *y = f (x)*.
 Os Diagramas de Dispersão são classificados quanto a relação entre as variáveis, se é negativa, positiva ou nula, e quanto à intensidade da relação entre elas, que pode ser fraca, forte ou perfeita. Dessa forma, você pode se perguntar: o que acontece com determinada variável quando a outra se altera?
 
 -   **Positiva:** quando os pontos se unem em uma linha crescente. Isso quer dizer que, assim que uma variável aumenta, a outra também cresce;
+
 -   **Negativa:** quando os pontos se unem em uma linha decrescente. O que significa que, à medida que uma variável aumenta, a outra diminui;
+
 -   **Nula:** quando os pontos estão bem dispersos e, portanto, indica que não há correlação aparente entre as duas variáveis;
+
 -   **Forte:** quanto menor for a dispersão dos pontos, maior será a correlação entre os dados. Com isso, podemos identificar como forte quando os dados estão bem próximos, altamente concentrados;
+
 -   **Fraca:** quanto maior for a dispersão dos pontos, menor será o grau de correlação entre os dados, ou seja, eles quase não possuem uma correlação;
+
 -   **Perfeita:** quando não há uma grande dispersão entre os pontos, a correlação será total entre os dados, independente da tendência, seja ela positiva ou negativa.
 
 ![Exemplo de diagramas de dispersão](imagens/diagrama-dispersao.png)
@@ -279,46 +322,63 @@ Há uma ligação forte entre os gráficos de dispersão e bolha, mas apesar das
 #### Quando usá-los
 
 -   Para visualizar uma variável com outra e o que acontece se uma alterar;
+
 -   Para verificar se as duas variáveis estão relacionadas, ou se há uma possível relação de causa e efeito;
+
 -   Para visualizar a intensidade do relacionamento entre as duas variáveis, e comparar a relação entre os dois efeitos;
+
 -   Para mostrar as relações entre dois valores numéricos;
+
 -   Para plotar dois grupos de números como uma série de coordenadas X e Y;
+
 -   Para usar em vez de um gráfico de linhas quando desejar alterar a escala do eixo horizontal;
+
 -   Para transformar o eixo horizontal em uma escala logarítmica;
+
 -   Para exibir os dados da planilha que incluem pares ou conjuntos de valores agrupados;
+
 -   Para mostrar padrões em grandes conjuntos de dados, por exemplo, mostrando exceções, clusters e tendências lineares ou não lineares;
+
 -   Para comparar grandes números de pontos de dados sem preocupação com o tempo. Quanto mais dados você incluir em um gráfico de dispersão, melhores serão as comparações que você poderá fazer;
+
 -   Utilize o gráfico de bolhas para comparar e mostrar os relacionamentos entre círculos categorizados, usando posicionamento e proporções.
 
 #### Quando não usá-los
 
 -   Quando só existir uma variável ou mais de uma dimensão.
+
 -   Quando as variáveis não afetam uma a outra.
 
 #### Boas Práticas para Gráficos de Bolhas
 
 -   Os gráficos de bolhas permitem comparar mais dados, mas o número de categorias que você pode “mapear” é limitado. Muitas bolhas em um gráfico podem parecer caóticas. Lembre-se, menos é mais. Mostrar apenas as categorias que são importantes;
+
 -   Bolhas demais podem dificultar a leitura do gráfico, portanto, os gráficos de bolhas têm uma capacidade de tamanho de dados limitada. Isso pode ser um pouco remediado pela interatividade: clicar ou passar o mouse sobre bolhas para exibir informações ocultas, tendo a opção de reorganizar ou filtrar categorias agrupadas;
+
 -   Torne o gráfico mais legível mantendo as bolhas transparentes para tornar visíveis as bolhas "ocultas" e ajudar a detectar o centro de cada círculo;
+
 -   Os tamanhos dos círculos precisam ser desenhados com base na área do círculo, não em seu raio ou diâmetro. Não só o tamanho dos círculos mudará exponencialmente, mas isso levará a interpretações erradas pelo sistema visual humano;
+
 -   Sempre que possível, não utilize cores diversas, mas sim variações de um mesmo tom ou uma faixa de degradê, por exemplo de vermelho a azul, desta forma você conseguirá destacar os extremos e as variações serão pertinentes a esses extremos;
 
 ### 7. Outros Tipos de Gráficos
 
-Além dos gráficos apresentados, existem uma grande variedade de gráficos, todas com características e aplicações próprias. Alguns gráficos podem representar visualmente com eficiência as informações apresentadas, facilitando a interpretação e visualização dos dados. Caso a escolha não tenha sido apropriado, o gráfico pode agir de forma completamente oposta ao desejado. Por isso é muito importante conhecer os principais tipos e suas características de uso. Para mais informações, estamos disponibilizando o arquivo detalhado para download: [Design System para Painéis Analíticos v1.0.0](https://serprodrive.serpro.gov.br/s/AnEwBrA8TwdnGdH) | Formato PDF - 5,17 MB
+Além dos gráficos apresentados, existe uma grande variedade de gráficos, todos com características e aplicações próprias. Alguns gráficos podem representar visualmente com eficiência as informações apresentadas, facilitando a interpretação e visualização dos dados. Caso a escolha não tenha sido apropriada, o gráfico pode agir de forma completamente oposta ao desejado. Por isso é muito importante conhecer os principais tipos e suas características de uso. Para mais informações, estamos disponibilizando o arquivo detalhado para download: [Design System para Painéis Analíticos v1.0.0](https://serprodrive.serpro.gov.br/s/AnEwBrA8TwdnGdH) | Formato PDF - 5,17 MB
 
 ![Exemplo de outros tipos de gráficos.](imagens/outros-graficos.png)
 *Exemplo de outros tipos de gráficos.*
 
 ---
 
-## Como Escolher um Gráfico?
+## Como escolher um Gráfico?
 
 Escolher um gráfico, mesmo entendendo os tipos existentes, pode ser uma tarefa bastante complicada. Entender o seu problema pode ser a chave para a escolha de um gráfico adequado. Neste ponto, alguns fatores devem ser levantados, tais como:
 
 -   Qual informação deseja transmitir através do gráfico?
--   Quantas variáveis, itens ou categorias seu gráfico irá mostrar?;
--   Quem é o público que vai ler os seus gráficos?.
+
+-   Quantas variáveis, itens ou categorias seu gráfico irá mostrar?
+
+-   Quem é o público que vai ler os seus gráficos?
 
 Com estes dados em mente ficará mais fácil chegar no gráfico ideal para o seu projeto.
 
@@ -339,16 +399,20 @@ Existem diversas opções disponíveis no mercado, desde as mais simples e manua
 
 Sua interface deve permitir que todos os usuários possam ter acesso e compreender informações exibidas, independente se possuem ou não alguma limitação. Para gráficos, infográficos ou mapas essa premissa também é verdade.
 
-Experiências equivalentes para todo o seu público deve ser considerada. É preciso fornecer recursos de acesso e compreensão para todos os usuários, em todos os seus dispositivos.
+Experiências equivalentes para todo o seu público devem ser consideradas. É preciso fornecer recursos de acesso e compreensão para todos os usuários, em todos os seus dispositivos.
 
 Em geral, não se deve confiar em apenas uma única maneira de transmitir uma ideia. É necessário adicionar representações redundantes para as informações visuais que são consideradas mais relevantes.
 
 Vejamos alguns exemplos de uso para reflexão:
 
 -   Caso esteja usando cores para destacar informações, pense em como você pode transmitir as mesmas distinções para pessoas que, apesar de serem videntes, não conseguem fazer a identificação adequada de cores (daltonismo);
+
 -   Apresentando tabelas de dados como alternativa para apresentação de gráficos? Pense em como as pessoas com baixa visão, e também como as pessoas totalmente videntes, se beneficiam mais de visualizações nítidas e com um bom contraste;
+
 -   Usando animação? Considere as pessoas com epilepsia, neurotípicas, TDAH ou deficiências cognitivas e disponibilize para eles a opção de controle da animação;
+
 -   Utilizando em sua apresentação metáforas e símbolos? Considere como as pessoas com deficiências cognitivas interpretarão as suas informações;
+
 -   Usando sons? Como sonorização dos dados gráficos, aspectos de textos falados, pense nas pessoas com deficiência auditiva.
 
 Como dito antes, não confie em um único canal de informação para disponibilizar as mensagens visuais mais importantes, a verdadeira acessibilidade significa contar a sua história de dados para todos.
@@ -368,23 +432,26 @@ Imagens mais complexas como gráficos, infográficos ou mapas precisam de descri
 Com as descrições longas, adicione informações descrevendo o *tipo de gráfico*, *tipo de dado* e o *propósito do gráfico*.
 
 -   *Tipo de gráfico:* É útil para que pessoas com visão limitada saibam qual o tipo de gráfico está sendo usado. Isso dá contexto para que se entenda o restante do visual;
-Exemplo: Gráfico de Linha
+    Exemplo: Gráfico de Linha
+
 -   *Tipo de dado:* Qual tipo de dado é apresentado no gráfico? As legendas dos eixos x e y podem ajudar você a descrever isso;
-Exemplo: Número de carros vendidos por mês no último ano.
+    Exemplo: Número de carros vendidos por mês no último ano.
+
 -   *Propósito do gráfico:* Pense por que você está incluindo esse elemento visual. O que ele mostra de significativo.
-Exemplo: Os meses de verão apresentam mais vendas de carros
+    Exemplo: Os meses de verão apresentam mais vendas de carros
 
 Segue abaixo, exemplo de como utilizar uma descrição longa para garantir que um gráfico seja ainda mais acessível:
+
 ![Exemplo de Gráfico com texto descritivo .](imagens/descricao-longa.png)
 *Exemplo de gráfico com o uso da descrição longa.*
 
-Como no exemplo acima, pode se utilizar um hiperlink para a base de dados original, de modo que qualquer usuário possa acessar os dados em seu programa de preferência (Excel, OpenOffice Calc, etc). Essa alternativa permite que pessoas possam clicar em um link para observar melhor os dados e se aprofundar neles. Essa condição provê transparência sobre o seu recurso e permite às pessoas explorar os dados.
+Como no exemplo acima, pode-se utilizar um hiperlink para a base de dados original, de modo que qualquer usuário possa acessar os dados em seu programa de preferência (Excel, OpenOffice Calc, etc). Essa alternativa permite que as pessoas possam clicar em um link para observar melhor os dados e se aprofundar neles. Essa condição provê transparência sobre o seu recurso e permite às pessoas explorar os dados.
 
-Quando utilizar links, mantenha se atendo a associar o link de forma semântica a imagem. No HTML5 os elementos `figure` e `figcaption` podem ser usados ​​para agrupar imagens e vincular semanticamente. Adicionar `role="group"` à imagem mantém a compatibilidade com navegadores da web que não oferecem suporte à semântica nativa do elemento `figure`.
+Quando utilizar links, mantenha-se atendo a associar o link de forma semântica a imagem. No HTML5 os elementos `figure` e `figcaption` podem ser usados ​​para agrupar imagens e vincular semanticamente. Adicionar `role="group"` à imagem mantém a compatibilidade com navegadores da web que não oferecem suporte à semântica nativa do elemento `figure`.
 
 ##### A. Texto alternativo em gráficos
 
-Por padrão, o texto alternativo é inseridos pelo atributo `alt` do código html, permitindo sua transcrição por leitores de telas, transmitindo de forma oral as informações contidas no gráfico, garantido desta forma, que as informações se torne acessíveis.
+Por padrão, o texto alternativo é inserido pelo atributo `alt` do código html, permitindo sua transcrição por leitores de telas, transmitindo de forma oral as informações contidas no gráfico, garantido desta forma, que as informações se tornem acessíveis.
 
 ``` html
 <img src="chart.png" 
@@ -394,7 +461,9 @@ Por padrão, o texto alternativo é inseridos pelo atributo `alt` do código htm
 Recomendações para o uso de textos alternativos em gráficos, infográficos, tabelas e mapas:
 
 -   Adicione textos alternativos focando na informação significativa na imagem;
+
 -   Inclua um texto sucinto e consistente descrevendo o *tipo de gráfico* e o *tipo de dado*;
+
 -   Muitos leitores de tela cortam textos alternativos em 125 caracteres, então mantenha seu texto alternativo o mais enxuto quando for possível.
 
 ##### B. Descrições longas em gráficos
@@ -402,11 +471,12 @@ Recomendações para o uso de textos alternativos em gráficos, infográficos, t
 As descrições longas podem ser utilizadas em conjunto com o texto alternativo. Uma descrição longa em gráfico, infográfico, tabela e mapa apresenta as seguintes vantagens:
 
 -   Compreensão adequada de cada elemento visual por pessoas cegas ou com baixa visão que fazem uso de leitores de tela;
+
 -   Ajuda pessoas com deficiência intelectual, neurotípicos ou pessoas não deficientes que não estão acostumadas a interpretar gráficos, tabelas, infográficos  ou mapas.
 
 O World Wide Web Consortium (W3C), oferece orientações em como descrever textos longos para imagens complexas contendo exemplos para linguagem HTML 5 ([Web Accessibility Tutorials - Complex Images](https://www.w3.org/WAI/tutorials/images/complex/#long-descriptions)).
 
-Em resumo, o texto descritivo pode ser inseridos pelo atributo `longdesc` ou `aria-describedby`.
+Em resumo, o texto descritivo pode ser inserido pelo atributo `longdesc` ou `aria-describedby`.
 
 ``` html
 <img src="chart.png" alt="Gráfico de barras apresentando o percentual dos 5 maiores tributos arrecadados no Brasil em 2018." longdesc="#chart-longdesc">
@@ -422,16 +492,18 @@ Rotule os dados diretamente com legendas diretas ao invés de utilizá-las de fo
 Isso é especialmente útil para usuários daltônicos ou deficientes visuais que podem ter dificuldade em combinar as cores do gráfico com as da legenda. Também diminui o trabalho de varredura para frente e para trás, tentando combinar a legenda com os dados, para os usuários videntes.
 
 ![Exemplo de Gráfico com texto descritivo .](imagens/grafico-acessivel02.png)
-*À esquerda, um gráfico de pizza com três séries representadas com cores parecidas e legendas à parte. Á direita, um gráfico de pizza com três séries representadas com cores parecidas e legendas.*
+*À esquerda, um gráfico de pizza com três séries representadas com cores parecidas e legendas à parte. À direita, um gráfico de pizza com três séries representadas com cores parecidas e legendas.*
 
 #### 3. Uso de cores
 
-Esteja atento ao uso da cores e contrastes. Não dependa apenas da cor para conectar os dados ao seu significado, considerar as pessoas com daltonismo e garanta que exista um contraste de cor adequado, pois nem todo mundo enxerga as cores da mesma maneira, e é preciso levar isso em conta na hora de criar a sua solução para visualizações de dados, como gráficos, tabelas, infográficos e mapas.
+Esteja atento ao uso das cores e contrastes. Não dependa apenas da cor para conectar os dados ao seu significado, considerar as pessoas com daltonismo e garanta que exista um contraste de cor adequado, pois nem todo mundo enxerga as cores da mesma maneira, e é preciso levar isso em conta na hora de criar a sua solução para visualizações de dados, como gráficos, tabelas, infográficos e mapas.
 
 O principal motivo  para isso é que existem diferentes tipos de daltonismo (dificuldade na identificação e distinção de cores):
 
 -   **Protanopia:** Dificuldade de visualizar o espectro "vermelho";
+
 -   **Deuteranopia:** Dificuldade de visualizar o espectro "verde";
+
 -   **Tritanopia:** Dificuldade de visualizar o espectro "azul".
 
 As cores também podem variar de acordo com o modo de acesso a informação visual: como um leitor digital de livros em preto e branco(como um e-Book), uma tela de computador com configuração de cor alterada, ou mesmo uma impressão em preto e branco ou de má qualidade.
@@ -448,17 +520,23 @@ Para deixarmos a visualização da apresentação dos dados visuais mais acessí
 
 Leve em consideração o tamanho dos elementos, fontes e o contexto de seu uso. É importante escolher as cores que tenham contraste suficiente para atender o máximo possível de pessoas, sejam elas deficientes ou não.
 
-Podemos dizer que um contraste entre os elementos de 4,5:1 pode resolver a maioria dos situações, Porém, quando tratamos de assuntos relacionados a problemas visuais (como o daltonismo), seria interessante trabalhar com contraste a partir de 10:1.
+Podemos dizer que um contraste entre os elementos de 4,5:1 pode resolver a maioria das situações, Porém, quando tratamos de assuntos relacionados a problemas visuais (como o daltonismo), seria interessante trabalhar com contraste a partir de 10:1.
 
 Em geral, **devemos evitar combinações** entre:
 
-1- Vermelho e Verde;
-2- Verde e Marrom;
-3- Verde e Azul;
-4- Verde e Cinza;
-5- Verde e Preto;
-6- Azul e Cinza;
-7- Azul e Roxo.
+1. Vermelho e Verde;
+
+2. Verde e Marrom;
+
+3. Verde e Azul;
+
+4. Verde e Cinza;
+
+5. Verde e Preto;
+
+6. Azul e Cinza;
+
+7. Azul e Roxo.
 
 ![Exemplo de combinações de cor que devem ser evitadas](imagens/evitar-cor.png)
 *Exemplo de combinações de cor que devem ser evitadas.*
@@ -475,7 +553,8 @@ Esse erro traz uma atmosfera de desorganização e "confusão visual". Tudo o qu
 
 ###### 3.3. Escolha as cores que se assemelham ao seu significado
 
-Sempre que possível, opte por utilizar cores que sejam facilmente associados, psicologicamente, aos tópicos abordados no gráfico, como por exemplo: Barras azuis representando os oceanos e rios e verdes para representar as florestas e marrom para terra, respectivamente. A exploração dessas associações pode tornar seus gráficos mais eficientes.
+Sempre que possível, opte por utilizar cores que sejam facilmente associadas, psicologicamente, aos tópicos abordados no gráfico, como por exemplo: Barras azuis representando os oceanos e rios e verdes para representar as florestas e marrom para terra, respectivamente. A exploração dessas associações pode tornar seus gráficos mais eficientes.
+
 ![Exemplo do uso de cores em gráficos associando-os com as cores do mundo real](imagens/escolha05.png)
 *Exemplo do uso de cores em gráficos associando-os com as cores do mundo real*
 
@@ -495,6 +574,7 @@ Caso opte por uma cor quente, use-a para dar destaques a elementos que reforçar
 Utilizar uma grande quantidade de variação para uma mesma cor, pode acarretar alguns problemas, tais como:
 
 -   Dificuldade em hierarquizar os dados;
+
 -   Dificuldade em encontrar um bom contraste, tornando as opções de escolha muito limitada.
 
 Esses problemas tendem a se agravar conforme o número de dados apresentados forem aumentando.
@@ -511,10 +591,15 @@ As cores podem ter diversos impactos na apresentação, o que você vai perceber
 Para auxiliar na escolha, varie entre as famílias de cores disponíveis no Design System. Estude sobre a utilização de aplicação de esquemas de cor, utilizando-se do círculo cromático, tais como:
 
 -   Cores Complementares;
+
 -   Cores Análogas;
+
 -   Cores Tríades;
+
 -   Cores Complementares Divididas;
+
 -   Cores Compostas em Tétrades;
+
 -   etc.
 
 ![Exemplo de uso do tooltip.](imagens/cor-opcoes.png)
@@ -524,7 +609,7 @@ Essas técnicas fazem uso do círculo cromático através de esquemas de cores p
 
 A boa aplicação desses esquemas, tende a ajudar o usuário na escolha das cores de forma consciente. É importante conhecê-los, suas vantagens e desvantagens de uso para uma correta aplicação.
 
-O Design System disponibiliza uma extensa gama de cores para a utilização em todos os seus gráficos. Estes deverão ser utilizados sempre for que possível. Todas as cores estão disponíveis para uso no [Fundamento Cor](https://www.gov.br/ds/fundamentos-visuais/cores).
+O Design System disponibiliza uma extensa gama de cores para a utilização em todos os seus gráficos. Estes deverão ser utilizados sempre que possível. Todas as cores estão disponíveis para uso no [Fundamento Cor](https://www.gov.br/ds/fundamentos-visuais/cores).
 
 #### 4. Uso de Elementos Visuais
 
@@ -533,11 +618,11 @@ O Design System disponibiliza uma extensa gama de cores para a utilização em t
 As tabelas são usadas para mostrar informações detalhadas. Se usamos apenas cores, as informações podem se perder. Quando usamos símbolos em tabelas, conseguimos perceber as informações independentemente das cores.
 
 ![Exemplo de Gráfico com texto descritivo .](imagens/grafico-acessivel06.png)
-*Á esquerda,  uma tabela com símbolos em tons de verde, vermelho e amarelo que sinalizam se os valores subiram (seta para cima), caíram (seta para baixo) ou se mantiveram estáveis (sinal de igual). Á direita, uma tabela com círculos em tons de verde, vermelho e amarelo que sinalizam se os valores subiram, caíram ou se mantiveram estáveis.*
+*À esquerda,  uma tabela com símbolos em tons de verde, vermelho e amarelo que sinalizam se os valores subiram (seta para cima), caíram (seta para baixo) ou se mantiveram estáveis (sinal de igual). À direita, uma tabela com círculos em tons de verde, vermelho e amarelo que sinalizam se os valores subiram, caíram ou se mantiveram estáveis.*
 
 ##### Padrões e texturas
 
-Um alternativa às cores pode ser o uso de texturas e padrões, como listras de diferentes posições.
+Uma alternativa às cores pode ser o uso de texturas e padrões, como listras de diferentes posições.
 
 ![Exemplo de Gráfico com texto descritivo .](imagens/grafico-acessivel07.png)
 *À esquerda, um mapa da Europa com regiões destacadas em tons de verde e vermelho, cada uma com padrão de listras em direções opostas. À direita, um mapa da Europa com regiões destacadas em tons de verde e vermelho.*
@@ -554,7 +639,7 @@ Mesmo com legendas diretas, nem sempre é possível perceber a diferença entre 
 Usamos gráficos de linha para mostrar a variação de séries ao longo do tempo. Se distinguimos as séries apenas por cor, as informações podem se perder. Podemos variar os traços e usar formas para facilitar a distinção.
 
 ![Exemplo de Gráfico com texto descritivo](imagens/grafico-acessivel04.png)
-*Á esquerda um gráfico de linhas com três séries representadas por cores parecidas; cada série tem um padrão de traço e formas nos pontos (quadrado, losango, triângulo). Á direita um gráfico de linhas com três séries representadas por cores parecidas e legendas à parte.*
+*Á esquerda um gráfico de linhas com três séries representadas por cores parecidas; cada série tem um padrão de traço e formas nos pontos (quadrado, losango, triângulo). À direita um gráfico de linhas com três séries representadas por cores parecidas e legendas à parte.*
 
 ##### Formas (gráficos de dispersão)
 
@@ -562,15 +647,15 @@ Gráficos de dispersão são usados para mostrar a relação entre variáveis. S
 Podemos usar formas para facilitar a distinção.
 
 ![Exemplo de Gráfico com texto descritivo](imagens/grafico-acessivel05.png)
-*Á esquerda, um gráfico de dispersão com três séries representadas por cores parecidas e formas diferentes (quadrado, losango, triângulo). Á direita, um gráfico de dispersão com três séries representadas por cores parecidas e círculos idênticos.*
+*À esquerda, um gráfico de dispersão com três séries representadas por cores parecidas e formas diferentes (quadrado, losango, triângulo). À direita, um gráfico de dispersão com três séries representadas por cores parecidas e círculos idênticos.*
 
 #### 5. Use um simulador de condições visualização por tipo de deficiência para testes
 
 Para garantir que seus gráficos não estejam apresentando problemas de acessibilidade visual, sempre que possível, que simulem as opte por realizar testes com ferramentas que simulem as condições de visualização por tipo de deficiência para corrigi-los.
 
-Existem várias ferramentas para realização dessa tarefa, no entanto, sugerimos o uso da extensão *NoCoffee* no navegador Google Chrome. Basta escolher o tipo de condição visual  que você quer observar para que as páginas web apresentem as condição  de visualização escolhida. Ele simula condições de baixa visão, catarata, máculas, daltonismos entre outras deficiências visuais.
+Existem várias ferramentas para realização dessa tarefa, no entanto, sugerimos o uso da extensão *NoCoffee* no navegador Google Chrome. Basta escolher o tipo de condição visual  que você quer observar para que as páginas web apresentem as condições de visualização escolhida. Ele simula condições de baixa visão, catarata, máculas, daltonismos entre outras deficiências visuais.
 
-As recomendações aqui descritas não esgotam todas os detalhes para o desenvolvimentos de visualização de dados com Acessibilidade por meio de gráficos, tabelas, Infográficos ou Mapas  no entanto permite aos Designs e Desenvolvedores, quando devidamente observadas, tornar as suas soluções de apresentação visual de dados minimamente Acessíveis.
+As recomendações aqui descritas não esgotam todas os detalhes para o desenvolvimentos de visualização de dados com Acessibilidade por meio de gráficos, tabelas, Infográficos ou Mapas  no entanto permite aos Designers e Desenvolvedores, quando devidamente observadas, tornar as suas soluções de apresentação visual de dados minimamente Acessíveis.
 
 **OBS:** Atualmente existem soluções no mercado que torna a visualização de dados em condições completas de Acessibilidade, permitindo a exploração de gráficos através de navegação por teclado, uso natural com leitores de tela, visualização para pessoas com visão subnormal, comandos de visualização por voz, exportação tátil, sonificação, acessibilidade cognitiva, entre outras funcionalidades.
 
@@ -578,16 +663,19 @@ As recomendações aqui descritas não esgotam todas os detalhes para o desenvol
 
 ## Organizando Gráficos
 
-O componente *card* poderá ser utilizado para organizar a apresentação de todos os tipos de gráficos, auxiliando sua consistência e organização em tela. Esta forma de exibição poderá ser utilizado em todos os tipos de interface, mantendo ao máximo a consistência visual definida para o Design System.
+O componente *card* poderá ser utilizado para organizar a apresentação de todos os tipos de gráficos, auxiliando sua consistência e organização em tela. Esta forma de exibição poderá ser utilizada em todos os tipos de interface, mantendo ao máximo a consistência visual definida para o Design System.
 
 Alguns comportamentos adicionais podem ser utilizados diretamente no *card*, deixando-o muito mais consistente e flexível a novas funcionalidades, tais como:
 
 -   O título e subtítulo do card poderão ser utilizados como título e subtítulo do gráfico, respectivamente;
+
 -   Adição de algum acionador para expansão e retração do *card* e conteúdo;
+
 -   inclusão de componentes para filtragem de dados, comandos que façam a função de ampliar e reduzir os detalhes das informações do gráfico;
+
 -   Uso de legenda para apresentação das fontes de dados e em alguns casos, visando facilitar a acessibilidade e o entendimento das informações. No exemplo abaixo, destacamos a retirada da "Área de Ações" e a adição da informação da fonte dos dados em forma de legenda.
 
-Como descrito em acessibilidade, uma boa prática é fazer uso do texto descritivo, podendo ser adicionado ao *card* para facilitar o entendimento do gráfico e dos dados apresentados para pessoas que possuem alguma forma de deficit de atenção ou alguma dificuldade em interpretar com facilidade as informações apresentadas.
+Como descrito em acessibilidade, uma boa prática é fazer uso do texto descritivo, podendo ser adicionado ao *card* para facilitar o entendimento do gráfico e dos dados apresentados para pessoas que possuem alguma forma de déficit de atenção ou alguma dificuldade em interpretar com facilidade as informações apresentadas.
 
 ![Imagem mostrando as áreas de um Card.](imagens/card.png)
 *Exemplo do uso de gráfico no componente card.*
@@ -610,20 +698,25 @@ Os painéis precisam ser consistentes, organizados e deverão apresentar as info
 A primeira etapa corresponde em definir claramente as motivações para a apresentação dos seus gráficos. Tais como:
 
 -   Qual o seu objetivo?
+
 -   Público-alvo?
+
 -   Qual será o seu diferencial?
 
 Com essas informações, será mais fácil projetar um painel de gráficos organizados e assertivos.
 
 #### 2. Inclua apenas o que for essencial
 
-Todas os métricas apresentadas deverão estar relacionadas ao propósito principal do painel. Se os gráficos exibirem informações desnecessárias, ou seja, não apresentarem apenas o que for útil e essencial, sua compreensão será prejudicada, deixando os dados relevantes mais difíceis de encontrar, não importando como estes estarão organizados.
+Todas as métricas apresentadas deverão estar relacionadas ao propósito principal do painel. Se os gráficos exibirem informações desnecessárias, ou seja, não apresentarem apenas o que for útil e essencial, sua compreensão será prejudicada, deixando os dados relevantes mais difíceis de encontrar, não importando como estes estarão organizados.
 
 Ao adicionar qualquer métrica em seu painel, certificar-se de que:
 
 -   O propósito esteja bem definido;
+
 -   Seja de fácil entendimento;
+
 -   Tenha atualizações constantes;
+
 -   Haja variedade de informações para que o usuário consiga detectar tendências com facilidade.
 
 **OBS:** Caso seja indispensável organizar um conteúdo extenso, provavelmente será necessário a criação de mais de um painel.
@@ -633,7 +726,7 @@ Ao adicionar qualquer métrica em seu painel, certificar-se de que:
 
 #### 3. Crie hierarquia através de tamanho e posicionamento
 
-Use o tamanho e a posição para enfatizar as informações importantes, ajudando a criar padrões e fluxo visual, reduzindo ao máximo a atenção do usuário sobre as métricas que precisarão ser examinados com menos frequência.
+Use o tamanho e a posição para enfatizar as informações importantes, ajudando a criar padrões e fluxo visual, reduzindo ao máximo a atenção do usuário sobre as métricas que precisarão ser examinadas com menos frequência.
 
 Em termos de posicionamento, o canto superior esquerdo do seu painel é o melhor local, pois é onde seus olhos são naturalmente atraídos primeiro.  Não tenha medo do espaço vazio. É melhor sair uma lacuna do que fazer algo maior apenas para preenchê-la.
 
@@ -645,8 +738,11 @@ Em termos de posicionamento, o canto superior esquerdo do seu painel é o melhor
 Sempre que possível, incluía dados complementares dando contexto ao valor apresentado, mostrando como a métrica é acompanhada por um período mais longo. Tais como:
 
 -   Inclua a mesma métrica apresentada no dia anterior;
+
 -   Adicionar um gráfico de linha ou de coluna mostrando como a métrica é acompanhada por um período mais longo;
+
 -   Incluir uma meta e seu progresso atual;
+
 -   Adicionar avisos para quando uma métrica estiver acima ou abaixo de um determinado limite para facilitar a localização de problemas.
 
 ![Exemplo contexto numérico em um painel de dashboard](imagens/dashboard03.png)
@@ -654,7 +750,7 @@ Sempre que possível, incluía dados complementares dando contexto ao valor apre
 
 #### 5. Agrupe as métricas que estejam relacionadas
 
-Posicionar as informações em seu painel de forma logica é essencial. Agrupar por proximidade de métricas relacionando uns com os outros, torna-os mais fáceis de encontrar, além de deixar o design do seu painel mais atraente.
+Posicionar as informações em seu painel de forma lógica é essencial. Agrupar por proximidade de métricas relacionando uns com os outros, torna-os mais fáceis de encontrar, além de deixar o design do seu painel mais atraente.
 
 Existem muitas maneiras diferentes de agrupar, por exemplo: por métrica, produto, marca, campanha, região, equipe ou até mesmo tempo período. Você pode precisar experimentar com quais é o mais apropriado para seu *dashboard*. Atribuir um título aos grupos torna-os mais fáceis de identificar.
 
@@ -675,12 +771,15 @@ Utilize rótulos claros e auto explicativos. Ao mesmo tempo, você deve tentar m
 A utilização de abreviações também podem ser úteis, contanto que seu público possa entendê-los. Por exemplo:
 
 -   “7d” ao invés de "7 dias";
+
 -   Símbolos como "%" podem substituir a palavra "porcentagem" por extenso;
+
 -   Utilizar uma definição mais curta para uma métrica se as pessoas já estiverem familiarizadas com ela.
 
 #### 8. Faça aproximação numérica
 
 Opte por fazer simplificações numéricas, utilizando 3 (três) casas decimais ou aproximando seu valor excedente para o centavo mais próximo. Valores muito extensos criam distrações ao usuário, além disso, incluir muitos detalhes desnecessários podem transformar um pequeno detalhe em um grande problema.
+
 ![Exemplo de dashboard.](imagens/dashboard06.png)
 *Exemplo arredondamento de números em um dashboard.*
 
@@ -688,9 +787,11 @@ Opte por fazer simplificações numéricas, utilizando 3 (três) casas decimais 
 
 Depois de criar seu painel, não o abandone. Obtenha feedback da sua equipe e dos usuários sempre que possível, tentando entender:
 
--   O que eles procuram com mais frequência ou consideram mais útil e por quê?;
--   O que eles nunca olham ou consideram menos útil, e por quê?;
--   Se há algo faltando que eles considerem útil?.
+-   O que eles procuram com mais frequência ou consideram mais útil e por quê?
+
+-   O que eles nunca olham ou consideram menos útil, e por quê?
+
+-   Se há algo faltando que eles considerem útil?
 
 ---
 
@@ -698,7 +799,7 @@ Depois de criar seu painel, não o abandone. Obtenha feedback da sua equipe e do
 
 ### 1. Ação de expandir painel de gráfico (Opcional)
 
-Este recurso tem por finalidade ampliar todas as dimensões do gráfico (Area de Cabeçalho, Área Principal e Área de Rodapé), expandindo sua composição e facilitando sua visualização e entendimento geral dos dados. Este comportamento poderá ser utilizado em: links, botões, ícones, etc. Em alguns casos, a utilização desta funcionalidade será indispensável em situações onde haja uma quantidade excessiva de informação em alguns tipos de gráficos.
+Este recurso tem por finalidade ampliar todas as dimensões do gráfico (Área de Cabeçalho, Área Principal e Área de Rodapé), expandindo sua composição e facilitando sua visualização e entendimento geral dos dados. Este comportamento poderá ser utilizado em: links, botões, ícones, etc. Em alguns casos, a utilização desta funcionalidade será indispensável em situações onde haja uma quantidade excessiva de informação em alguns tipos de gráficos.
 
 Ao acionar essa funcionalidade, automaticamente as informações contidas no gráfico serão expandidas e exibidas de forma ampla em tela. Para facilitar esse comportamento, deve-se recorrer a componentes que o auxiliem nessa tarefa, tais como: *card*, modal, pop-ups, uma nova página, etc.
 
@@ -711,9 +812,9 @@ Devem aparecer, de preferência, alinhados no centro da tela, apresentando o mes
 
 Esta funcionalidade visa ajudar o usuário, ampliando a visualização interna do conteúdo da Área Principal, permitindo que o usuário tenha uma visão mais detalhada das informações, sem alterar suas dimensões externas (altura e largura).
 
-Este recurso, também conhecido como *zoom* é muito utilizado, por exemplo, na utilização de gráficos do tipo "mapa geográfico", onde as informações visuais tendem a ser densas e pequenas.
+Este recurso, também conhecido como *zoom*, é muito utilizado, por exemplo, na utilização de gráficos do tipo "mapa geográfico", onde as informações visuais tendem a ser densas e pequenas.
 
-Entre os vários tipos de componentes que podem ser utilizados para esse objetivo, podemos, por exemplo, associar esta funcionalidade à botões, links, ícones, etc., com a funcionalidade de aproximação ou afastamento na busca de uma melhor visualização das informações.
+Entre os vários tipos de componentes que podem ser utilizados para esse objetivo, podemos, por exemplo, associar esta funcionalidade a botões, links, ícones, etc., com a funcionalidade de aproximação ou afastamento na busca de uma melhor visualização das informações.
 
 ![Gráfico do Card sendo ampliado.](imagens/ampliar.png)
 *Gráfico do Card sendo ampliado.*
@@ -722,14 +823,14 @@ Entre os vários tipos de componentes que podem ser utilizados para esse objetiv
 
 É importante que, em alguns tipos de gráficos, se permita a filtragem das informações, permitindo que o usuário tenha total controle da apresentação dos dados através de um filtro ativo que facilite sua navegação e seu retorno ao estado anterior conforme seu interesse imediato.
 
-Esta funcionalidade, normalmente, está diretamente relacionado ao tipo de gráfico e informação que se possa segmentar e navegar.
+Esta funcionalidade, normalmente, está diretamente relacionada ao tipo de gráfico e informação que se possa segmentar e navegar.
 
 ![Exemplo de filtragem de dados através de um componente select](imagens/filtro.png)
 *Exemplo de filtragem de dados através de um componente select.*
 
 ### 4. Uso do *loading* para gráficos dinâmicos
 
-Caso utilize gráficos dinâmicos, onde as informações são atualizadas em tempo real, sempre que os dados dos gráficos demorarem para atualizar, opte pelo uso do componente *loading* como  resposta temporária de *feedback* do sistema, evitando que o usuário fique em dúvidas quanto a atualização da informação.
+Caso utilize gráficos dinâmicos, onde as informações são atualizadas em tempo real, sempre que os dados dos gráficos demorarem para atualizar, opte pelo uso do componente *loading* como  resposta temporária de *feedback* do sistema, evitando que o usuário fique em dúvidas quanto à atualização da informação.
 
 Para maiores informações acesse: [componente *loading*](/components/loading?tab=desenvolvedor)
 
@@ -740,29 +841,51 @@ Para maiores informações acesse: [componente *loading*](/components/loading?ta
 ### Referências em Gráficos
 
 -   [geckoboard-dashboard-design-guide.pdf](https://serprodrive.serpro.gov.br/s/7DNtygdJcAzASST) | Formato PDF - 1,7 MB
+
 -   [Radiant-Advisors*GoodData*DataVisualizationCompetencyCenter.pdf](https://serprodrive.serpro.gov.br/s/ADccP4T8pCfmznt) | Formato PDF - 1,43 MB
+
 -   [The Ultimate Guide: Data Visualization vs. Storytelling with Data](https://blog.presentation-company.com/data-visualization-vs.-data-storytelling-whats-the-difference)
+
 -   [Color palettes and accessibility features for data visualization](https://medium.com/carbondesign/color-palettes-and-accessibility-features-for-data-visualization-7869f4874fca)
+
 -   [Accessible Color Use and Color Contrast](https://accessibility.oit.ncsu.edu/accessible-color-and-color-contrast/)
+
 -   [Tipos de gráficos: um guia simples para ajudar você a escolher o formato ideal](http://blog.coletum.com/tipos-de-graficos/)
+
 -   [Como aplicar a Teoria das Cores e os 6 Esquemas de Cores](https://temporalcerebral.com.br/como-aplicar-a-harmonia-das-cores-no-design-grafico/)
+
 -   [Use cores personalizadas no gráfico para refletir sua marca e dar vida aos dados da sua pesquisa](https://pt.surveymonkey.com/curiosity/use-cores-personalizadas-no-grafico-para-refletir-sua-marca-e-dar-vida-aos-dados-da-sua-pesquisa/)
+
 -   [Como as cores facilitam o entendimento de um gráfico](https://amplix.net/como-as-cores-facilitam-o-entendimento-de-um-grafico/)
+
 -   [Combinar e escolher cores para o Design Gráfico: Dicas](https://www.elaborata.com.br/blog/2018/06/07/combinar-e-escolher-cores-para-o-design-grafico-dicas/)
+
 -   [5 passos para criar um Diagrama de Dispersão assertivo](https://pt.venngage.com/blog/diagrama-de-dispersao/)
+
 -   [Crie um gráfico de bolha](https://infogram.com/pt/criar/grafico-de-bolhas)
 
 ### Referências em Acessibilidade
 
 -   [Transtorno do Espectro Autista (TEA) e uso de cores e textos](http://talitapagani.com/gaia/g1-recomendacao-1/)
+
 -   [Acessibilidade de visualização de dados: onde estamos agora e o que vem ?](https://medium.com/nightingale/data-visualization-accessibility-where-are-we-now-and-whats-next-b2c9eeac4e8b)
+
 -   [Recomendações e padrões para acessibilidade de SVG](https://www.w3.org/wiki/SVG*Accessibility)
+
 -   [Como seus leitores daltônicos e deficientes visuais veem suas cores - Parte1](https://blog.datawrapper.de/colorblindness-part1/)
+
 -   [Como seus leitores daltônicos e deficientes visuais veem suas cores - Parte2](https://blog.datawrapper.de/colorblindness-part2/)
+
 -   [Como seus leitores daltônicos e deficientes visuais veem suas cores - Parte3](https://blog.datawrapper.de/colorblindness-part3/)
+
 -   [Data visualization for color accessibility](https://uxdesign.cc/data-visualization-for-color-accessibility-8a30ce25d90b)
+
 -   [Charts & Accessibility](https://accessibility.psu.edu/images/charts/)
+
 -   [Como escrever textos alternativos de gráficos](https://medium.com/nightingale/como-escrever-textos-alternativos-de-gr%C3%A1ficos-7a5ead229822)
+
 -   [Acessibilidade: o impacto das cores](https://brasil.uxdesign.cc/acessibilidade-o-impacto-das-cores-bfc0d60420db)
+
 -   [Dez dicas para deixar sua visualização de dados mais acessível](https://medium.com/datavizbr/dez-dicas-para-deixar-sua-visualiza%C3%A7%C3%A3o-de-dados-mais-acess%C3%ADvel-bf884895812d)
+
 -   [Highcharts for Accessibility](https://www.highcharts.com/blog/accessibility/)

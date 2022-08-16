@@ -47,8 +47,11 @@ O *Padrão Collapse* é constituído por:
 O *Acionador de Expansão/Retração* é o elemento interativo responsável por exibir/ocultar a *Área/Conteúdo Expansível*. Este elemento pode ser uma área/superfície, um texto, link, botão, etc. Em resumo, poderá ser qualquer área ou elemento interativo.  Veja os exemplos abaixo:
 
 -   A. Item de uma lista como Acionador;
+
 -   B. Botão circular como Acionador;
+
 -   C. Texto interativo como Acionador;
+
 -   D. Linha de uma tabela como Acionador;
 
 ![Exemplos de Acionadores](imagens/sample-acionador.png)
@@ -63,8 +66,11 @@ O *Identificador de Expansão/Retração* é o elemento iconográfico que repres
 Por padrão, deve-se utilizar a iconografia a seguir:
 
 -   A. Chevron-Down;
+
 -   B. Chevron-Up;
+
 -   C. Chevron-Right;
+
 -   D. Chevron-Left;
 
 ![Iconografia Padrão do Collapse](imagens/anatomy-buttons.png)
@@ -78,13 +84,13 @@ Quando houver a necessidade de uma representação semântica mais forte ou mais
 
 -   Neste caso, está sendo utilizado o ícone `bars` para identificar a expansão do Menu. Aqui o ícone `bars` possui uma semântica mais forte referente ao conteúdo que será expandido/retraído.
 
- ![Exemplos de Outras formas de Iconografia](imagens/anatomy-iconography-3.png)
-*Exemplos de outras formas de Iconografia*
+    ![Exemplos de Outras formas de Iconografia](imagens/anatomy-iconography-3.png)
+    *Exemplos de outras formas de Iconografia*
 
 -   Aqui pode-se observar um exemplo da utilização do ícone `users`, que possui uma semântica mais forte referente ao conteúdo que será expandido.
 
- ![Exemplos de Outras formas de Iconografia](imagens/anatomy-iconography-2.png)
-*Exemplos de outras formas de Iconografia*
+    ![Exemplos de Outras formas de Iconografia](imagens/anatomy-iconography-2.png)
+    *Exemplos de outras formas de Iconografia*
 
 **OBS:** Neste caso, recomenda-se utilizar o mesmo ícone para os estados expandido e retraído, fazendo distinção apenas com o estado utilizado no momento do acionamento, ou seja, se o acionamento foi feito através de `mouseover`, o acionador deverá manter o estado `hover`, caso tenha sido acionado pelo `clique`, o acionador deverá manter o estado `pressed`. No exemplo acima, ao expandir a *Área/Conteúdo Expansível*, o acionador manteve o mesmo ícone e o estado `pressed`.
 
@@ -99,26 +105,27 @@ Por padrão, o *Identificador de Expansão/Retração* deverá ser posicionado �
 
 Em alguns casos excepcionais, o *Identificador de Expansão/Retração* deve se posicionar de outra forma. São situações específicas em cada componente, onde a posição dos ícones/botões de ação já estão determinadas ou quando sua localização à direita é inviável. Veja abaixo alguns exemplos de exceção.
 
--   1. No caso do *Header*, já existe um local definido para utilização do acionador, à esquerda do título. Nesta situação segue-se o padrão estabelecido no *Header*.
+- 1. No caso do *Header*, já existe um local definido para utilização do acionador, à esquerda do título. Nesta situação segue-se o padrão estabelecido no *Header*.
 
-![Identificador de Expansão/Retração posicionado à esquerda no Header](imagens/anatomy-iconography-3.png)
-*Identificador de Expansão/Retração posicionado à esquerda no Header*
+    ![Identificador de Expansão/Retração posicionado à esquerda no Header](imagens/anatomy-iconography-3.png)
+    *Identificador de Expansão/Retração posicionado à esquerda no Header*
 
--   2. No caso do *Button*, também já existe definido um local apropriado para utilização dos ícones, à esquerda do rótulo, ou centralizado no caso do *Button Circular*.
+- 2. No caso do *Button*, também já existe definido um local apropriado para utilização dos ícones, à esquerda do rótulo, ou centralizado no caso do *Button Circular*.
 
-![Exemplo do Identificador de Expansão/Retração no Button](imagens/button.png)
-*Exemplo do Identificador de Expansão/Retração no Button*
+    ![Exemplo do Identificador de Expansão/Retração no Button](imagens/button.png)
+    *Exemplo do Identificador de Expansão/Retração no Button*
 
--   3. A linha da tabela é segmentada por colunas e conteúdos diferenciados. Nesta situação, o *Identificador de Expansão/Retração* torna-se mais evidente no início da linha da tabela. Sua utilização à direita fica comprometida, tendo em vista a possibilidade de outros botões funcionais nesta região.
+- 3. A linha da tabela é segmentada por colunas e conteúdos diferenciados. Nesta situação, o *Identificador de Expansão/Retração* torna-se mais evidente no início da linha da tabela. Sua utilização à direita fica comprometida, tendo em vista a possibilidade de outros botões funcionais nesta região.
 
-![Identificador de Expansão/Retração posicionado à esquerda na linha da tabela](imagens/table.png)
-*Identificador de Expansão/Retração posicionado à esquerda na linha da tabela*
+    ![Identificador de Expansão/Retração posicionado à esquerda na linha da tabela](imagens/table.png)
+    *Identificador de Expansão/Retração posicionado à esquerda na linha da tabela*
 
 #### 3. Área/Conteúdo Expansível (Obrigatório)
 
 A *Área/Conteúdo Expansível* compreende o elemento que será exibido/ocultado e conterá um conteúdo que representa um adicional referente ao tópico exibido no *Acionador*.
 
 -   A. Tópico de conteúdo exibido no *Acionador*;
+
 -   B. *Área/Conteúdo Expansível* referente ao tópico exibido no *Acionador*.
 
 ![Área/Conteúdo Expansível](imagens/anatomy-expandable-surface.png)
@@ -129,7 +136,9 @@ Recomenda-se que a *Área/Conteúdo Expansível* esteja posicionada próximo ao 
 Este elemento poderá conter diversos tipos de conteúdo, como textos, imagens, elementos interativos, até mesmo pequenos blocos de formulários. Veja os exemplos abaixo:
 
 -   A. Área/Conteúdo Expansível com texto;
+
 -   B. Área/Conteúdo Expansível com formulário;
+
 -   C. Área/Conteúdo Expansível com links interativos;
 
 ![Exemplos de Área/Conteúdo Expansível](imagens/sample-expandable-surface.png)
@@ -158,13 +167,13 @@ A área/conteúdo expansível poderá ser dimensionada de duas formas:
 
 -   A. Por padrão, a área/conteúdo expansível crescerá de acordo com seu conteúdo interno;
 
- ![Área/Conteúdo Expansível cresce de acordo com o conteúdo](imagens/behavior-sizing-1.png)
-*Área/Conteúdo Expansível cresce de acordo com o conteúdo*
+    ![Área/Conteúdo Expansível cresce de acordo com o conteúdo](imagens/behavior-sizing-1.png)
+    *Área/Conteúdo Expansível cresce de acordo com o conteúdo*
 
 -   B. Tendo em vista a necessidade de cada projeto, pode-se utilizar uma altura fixa para *Área/Conteúdo Expansível*. Esta altura poderá ser definida livremente, desde que a área do conteúdo interno tenha uma visualização razoável. Para esta situação, deve-se utilizar a Barra de Rolagem;
 
- ![Área/Conteúdo Expansível com tamanho fixo e barra de rolagem](imagens/behavior-sizing-2.png)
-*Área/Conteúdo Expansível com tamanho fixo e barra de rolagem*
+    ![Área/Conteúdo Expansível com tamanho fixo e barra de rolagem](imagens/behavior-sizing-2.png)
+    *Área/Conteúdo Expansível com tamanho fixo e barra de rolagem*
 
 **Atenção:** É importante observar as boas práticas na utilização de barras de rolagem. Deve-se evitar uma rolagem muito extensa dentro de uma área de visualização muito pequena.
 
@@ -212,17 +221,20 @@ O *Padrão Collapse* é muito útil para se construir estruturas hierárquicas, 
 Utilize indentação para tornar mais evidentes os blocos de níveis e subníveis.  
 
 -   defina o valor do incremento com base na *Escala de Espaçamento - Layout*. Pode-se utilizar `2x`, `3x` ou `4x` o valor de incremento da escala, ou até mais;
+
 -   quanto maior o valor de incremento escolhido, mais evidente torna-se a indentação;
+
 -   o valor do incremento escolhido deve ser no mínimo, `2x` o valor do incremento da escala, ou seja, no mínimo `16px`. Um valor mais baixo torna a indentação muito sutil e não será útil para o propósito em questão;
+
 -   o valor incrementado terá sempre como referência de início o item pai.
 
-   Observe o exemplo abaixo:
+Observe o exemplo abaixo:
 
-   A. X = Duas vezes o valor do incremento da *Escala de Espaçamento Layout*;
+A. X = Duas vezes o valor do incremento da *Escala de Espaçamento Layout*;
 
-   B. Y = Três vezes o valor do incremento da *Escala de Espaçamento Layout*.
+B. Y = Três vezes o valor do incremento da *Escala de Espaçamento Layout*.
 
- ![Indentação em subníveis](imagens/behavior-hierarchy-1.png)
+![Indentação em subníveis](imagens/behavior-hierarchy-1.png)
 *Indentação em subníveis*
 
 #### Pesos Tipográficos
@@ -230,12 +242,14 @@ Utilize indentação para tornar mais evidentes os blocos de níveis e subnívei
  Utilize escala de pesos tipográficos *(Font-Weight)* diferenciados nos textos de tópicos em níveis e subníveis:
 
 -   Como a ideia aqui é utilizar apenas variações de `bold`, evite utilizar outros estilos como `itálico`, `sublinhado`, etc.
+
 -   As especificações de pesos podem variar de componente para componente, dependendo das restrições ou regras em cada um deles;
+
 -   O uso deste recurso só é recomendado até dois ou três subníveis, pois além disto, torna-se inviável utilizar uma escala de pesos ao extremo (`Black` à `ExtraLight`), tanto por questões de limitação da escala, quanto por questões de estética;
 
-   Observe o exemplo abaixo:
+Observe o exemplo abaixo:
 
-  ![Pesos Diferenciados](imagens/behavior-hierarchy-2.png)
+![Pesos Diferenciados](imagens/behavior-hierarchy-2.png)
 *Peso diferenciado em nível e subnível*
 
 #### Escalas Tipográficas
@@ -246,12 +260,12 @@ Também pode-se utilizar a variação da escala de tamanhos tipográficos em ní
 
 -   utilize a lógica crescente ou decrescente de tamanhos, porém mantenha a consistência padronizando esta lógica em seu projeto.
 
-  Observe o exemplo a seguir:
+Observe o exemplo a seguir:
 
-  A - Lógica decrescente;
-  B - Lógica crescente.
+A - Lógica decrescente;
+B - Lógica crescente.
 
-  ![Escala de Tamanhos Tipográficos em níveis e subníveis](imagens/behavior-hierarchy-3.png)
+![Escala de Tamanhos Tipográficos em níveis e subníveis](imagens/behavior-hierarchy-3.png)
 *Escala de Tamanhos Tipográficos em níveis e subníveis*
 
 #### Background
@@ -259,23 +273,27 @@ Também pode-se utilizar a variação da escala de tamanhos tipográficos em ní
  Outro recurso bem útil é utilizar cores diferenciadas em blocos de níveis e subníveis.
 
 -   deve-se estar atento para utilização das cores dentro do padrão do Design System;
+
 -   utilize gradações de uma única tonalidade. Se optar pelo cinza, use a gradação deste cinza;
+
 -   utilize a lógica de gradação já existente em nosso padrão de cores do Design System, como por exemplo, a gradação de cinzas presente nos *tokens* `.color-secondary-xx`, ou as variações `-darken-xx` e `-lighten-xx`;
+
 -   opte por cores neutras ou "sóbrias". Evite utilizar cores muito "vivas" ou "gritantes", mesmo existentes em nosso padrão de cores;
 
- ![Exemplo de gradação de cores níveis e subníveis](imagens/behavior-hierarchy-4.png)
+![Exemplo de gradação de cores níveis e subníveis](imagens/behavior-hierarchy-4.png)
 *Exemplo de gradação de cores em níveis e subníveis*
 
 #### Recursos Combinados
 
-Se a utilização de alguns dos recursos apresentados acima não for suficiente para tornar claro os blocos de níveis e subníveis, pode-se usar a combinação de mais de um deles. Fique atento às boas práticas e o bom senso neste caso.
+Se a utilização de alguns dos recursos apresentados acima não for suficiente para tornar claro os blocos de níveis e subníveis, pode-se usar a combinação de mais de um deles. Fique atento às boas práticas e ao bom senso neste caso.
 
 -   não é recomendado utilizar todos os recursos ao mesmo tempo, opte por dois ou três deles no máximo;
+
 -   mantenha a consistência utilizando a mesma lógica de combinação em estruturas semelhantes;
 
- Veja abaixo um exemplo de combinação:
+Veja abaixo um exemplo de combinação:
 
-  ![Exemplo de recursos combinados - Indentação, Cores e Escala Tipográfica](imagens/behavior-hierarchy-6.png)
+![Exemplo de recursos combinados - Indentação, Cores e Escala Tipográfica](imagens/behavior-hierarchy-6.png)
 *Exemplo de recursos combinados - Indentação, Cores e Escala Tipográfica*
 
 #### Navegação
@@ -284,13 +302,13 @@ Se a utilização de alguns dos recursos apresentados acima não for suficiente 
 
 -   Em vez de utilizar estruturas hierárquicas muito extensas, opte por utilizar outras formas de organizar a informação, como link para outra página ou janela.
 
- ![Exemplo de link no último subitem para uma nova janela](imagens/behavior-hierarchy-5.png)
-*Exemplo de link no último subitem para uma janela modal*
+    ![Exemplo de link no último subitem para uma nova janela](imagens/behavior-hierarchy-5.png)
+    *Exemplo de link no último subitem para uma janela modal*
 
 -   Em estruturas de árvore, utilize o identificador ao lado esquerdo do texto/rótulo, pois é o local padronizado para este tipo de estrutura. Evite utilizar outros tipos de ícone, pois podem confundir o usuário, além de poluir a estrutura em árvore.
 
- ![Exemplo de Árvore - Como usar os ícones](imagens/anatomy-tree-2.png)
-*Exemplo de Árvore - Como usar os ícones*
+    ![Exemplo de Árvore - Como usar os ícones](imagens/anatomy-tree-2.png)
+    *Exemplo de Árvore - Como usar os ícones*
 
 ### 5. Combinando Múltiplos Elementos *Collapse*
 
@@ -317,13 +335,13 @@ Neste situação, o usuário poderá expandir vários elementos e fechá-los qua
 
 Utilize este modelo quando houver necessidade do usuário consultar ou comparar informações presentes em vários blocos expandidos.
 
- Observe o exemplo abaixo:
+Observe o exemplo abaixo:
 
 -   A. O usuário expande o elemento desejado;
 
 -   B. Ao clicar em outro elemento, o conteúdo deste também será exibido, não interferindo nos demais elementos.
 
- ![Expandindo Vários Elementos](imagens/behavior-multiple-2.png)
+![Expandindo Vários Elementos](imagens/behavior-multiple-2.png)
 *Expandindo Vários Elementos*
 
 ---

@@ -10,7 +10,9 @@ São situações que ocorrem dentro de uma aplicação nas quais não há dados 
 Utilize *Empty States* para:
 
 -   Informar e orientar o usuário durante uma situação de ausência de dados inesperada dentro do sistema ou aplicativo;
+
 -   Tornar claro para o usuário o que exatamente está ocorrendo e como contornar este problema;
+
 -   Reforçar uma boa impressão sobre seu produto: empty states oferecem uma imagem mais humana e amigável da interface, fortalecendo a empatia e melhorando o aprendizado do usuário.
 
  ---
@@ -57,7 +59,7 @@ Nesta área utiliza-se elementos interativos, como *Buttons* ou *Hiperlinks*. Es
 
 ### 1. Ausência de Dados
 
-É o tipo mais básico e comum de *Empty State*. Deve informa ao usuário que tipo de dado estará disponível na tela ou elemento quando os dados forem inseridos. Também deve orientar o usuário a respeito do próximo passo caso o usuário queira preencher o espaço vazio.
+É o tipo mais básico e comum de *Empty State*. Deve informar ao usuário que tipo de dado estará disponível na tela ou elemento quando os dados forem inseridos. Também deve orientar o usuário a respeito do próximo passo caso o usuário queira preencher o espaço vazio.
 
 ![Exemplo de Ausência de Dados](imagens/sample-no-data.png)
 *Exemplo de Ausência de Dados em Galeria de Imagens*
@@ -101,6 +103,7 @@ Abaixo pode-se observar alguns dos erros mais comuns e como tratá-los:
 |   Ação não suportada    |          *"O arquivo não é compatível para upload"*          | Deixe claro ao usuário quais tipos de arquivos são suportados                          |
 |  Problema de Permissão  |   *"O usuário não tem permissão para visualizar os dados"*   | Oriente sobre as etapas necessárias para solicitar o acesso                            |
 | Configuração Necessária |   *"Configure os parâmetros XYZ para visualizar os dados"*   | Forneça ao usuário uma explicação pontual sobre como iniciar a configuração necessária |
+
 *As mensagens descritas acima são apenas exemplificativas.*
 
 #### *Empty States* x Templates de Erro
@@ -184,6 +187,7 @@ Use *Empty States* substituindo os elementos que deveriam aparecer. Por exemplo,
 Aqui segue-se as mesmas regras e orientações descritas em espaços menores:
 
 -   Utilize imagens relacionadas ao conteúdo;
+
 -   Mantenha a proporção entre ilustração, espaço e conteúdo;
 
 ##### Arranjos Diferenciados
@@ -191,6 +195,7 @@ Aqui segue-se as mesmas regras e orientações descritas em espaços menores:
 Com espaços mais amplos, existe maior flexibilidade para composição de um layout em *Empty States*. Utilize arranjos diferenciados entre imagem e texto da seguinte forma:
 
 -   Para imagens horizontais ou amplas, posicione-as acima do texto;
+
 -   Para imagens verticais é mais adequado mantê-las à esquerda do bloco textual.
 
 ![Empty States Alinhamento e Arranjos](imagens/empty-state-layout.png)
@@ -203,6 +208,7 @@ As ilustrações utilizadas em *Empty States* devem possuir o objetivo meramente
 A *WCAG* orienta:
 
 -   Utilize a tag `alt=""` (vazia) em imagens decorativas;
+
 -   Evite utilizar a tag `role="presentation"` para imagens decorativas, pois ainda é um atributo pouco reconhecido pelos principais navegadores do mercado;
 
 ---
@@ -212,30 +218,47 @@ A *WCAG* orienta:
 **1. Orientações Gerais:**
 
 -   **Seja claro e direto:** Mantenha uma relação clara entre a situação que esta ocorrendo e o conteúdo apresentado ao usuário;
+
 -   **Evite conteúdos extensos:** Muito conteúdo não é necessariamente a melhor solução. Essa prática implica em maior tempo de leitura e aprendizado pelo usuário. A informação deve ser absorvida de forma rápida pelo leitor.
--   **Eduque os usuários:** *Empty States* são uma ótima oportunidade para ensinar seus usuários utilizarem seu produto. Utilize a mensagem para orientar tomadas de decisão do usuário, não apenas para informá-lo sobre o ocorrido;
+
+-   **Eduque os usuários:** *Empty States* são uma ótima oportunidade para ensinar seus usuários a utilizarem seu produto. Utilize a mensagem para orientar tomadas de decisão do usuário, não apenas para informá-lo sobre o ocorrido;
+
 -   **Mantenha a consistência:** Situações semelhantes em *Empty States* devem possuir o mesmo padrão na ilustração e informação textual;
+
 -   **Agrade o usuário:** Fortaleça um laço de empatia com seu público-alvo e reforce uma boa impressão sobre seu produto, utilizando uma comunicação humana e amigável nas ilustrações e mensagens textuais.
 
 **2. Melhores Práticas em Ausência de Dados:**
 
 -   Utilize este tipo em situações simples ou em recursos menos prioritários, quando a quantidade de informação a ser exibida for pequena;
+
 -   Não use termos técnicos ou desconhecidos pelo usuário;
+
 -   Use poucas palavras para que o usuário entenda e atue de forma rápida;
+
 -   Ofereça opções de soluções ao usuário. Evite deixá-lo num beco sem saída.
+
 -   Caso haja ação a ser tomada pelo usuário, inclua um botão ou link para tal e oriente o usuário sobre o que fazer;
+
 -   Não induza o usuário a resolver vários problemas. Oriente sobre o ponto mais importante a ser resolvido;
+
 -   Seja claro sobre qual tipo de dado será exibido quando a informação for inserida;
+
 -   Seja contextual. Não relacione conteúdos de outras áreas da aplicação;
 
 **3. Melhores Práticas em Gerenciamento de Erros:**
 
 -   Se houver ações corretivas oriente sobre como executá-las e inclua um link ou botão para acioná-las;
+
 -   Use linguajar claro e conciso;
+
 -   Evite linguagem petulante, respeite o usuário;
+
 -   Seja contextual. Evite usar conteúdo relacionados a outras situações;
+
 -   Utilize ilustrações adequadas ao contexto do erro;
+
 -   Ofereça opções de soluções ao usuário;
+
 -   Caso haja várias etapas a seguir, conduza o usuário à etapa inicial.
 
 ---

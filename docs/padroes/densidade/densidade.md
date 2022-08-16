@@ -8,15 +8,21 @@ Densidade é a especificação dos espaçamentos vazios que compõem a tela ou o
 Utilize Densidade para:
 
 -   otimizar a visualização de grandes quantidades de informação em tela, como grandes listas ou tabelas extensas;
+
 -   otimizar a diagramação de elementos em espaços reduzidos, como dispositivos móveis, por exemplo;
+
 -   otimizar espaços em componentes que são utilizados dentro de outros componentes, como por exemplo, um botão dentro de uma linha de tabela;
+
 -   tornar mais amplos os espaços em tela e reduzir a sobrecarga de informação;
+
 -   focalizar a atenção do usuário em elementos ou componentes na tela. Por exemplo, um campo de texto ou botão que precisa de maior destaque;
 
 Não utilize Densidade:
 
 -   reduzindo os espaços muito restritos de leitura de informação, de forma a dificultar a legibilidade;
+
 -   reduzindo os espaços muito restritos em elementos interativos, de forma a dificultar o acionamento pelo usuário;
+
 -   reduzindo espaços em elementos que precisam de destaque em tela;
 
 ---
@@ -61,6 +67,7 @@ A seguir, pode-se observar algumas orientações que podem auxiliar projetistas 
 Existem duas formas de ajustar a densidade em componentes do Design System:
 
 -   através do ajuste nos espaços internos *(padding)* ao componente;
+
 -   através do ajuste nas dimensões *(width e/ou height)* do componente.
 
 #### Espaços Internos
@@ -116,21 +123,25 @@ Para evitar o desconforto visual, e proporcionar melhor legibilidade, mantenha a
 Em elementos interativos, existe uma necessidade de maior área de toque na superfície desses elementos. Portanto, mantenha uma densidade de no mínimo `24px` na superfície de elementos interativos que necessitam de interação através do cursor do *mouse*, e `40px` na superfície de elementos interativos que necessitam de interação através de toque/*touch*. Caso não seja possível manter os elementos nestas dimensões, mantenha a área mínima de ação ultrapassando suas dimensões. Observe abaixo.
 
 ![Exemplo Área Mínima de Ação](imagens/minimum-area-02.png)
-*A - Área Mínima de densidade em superfície para uso com cursor do mouse;
-B - Área Mínima de densidade em superfície para uso com toque/touch;*
+*A - Área Mínima de densidade em superfície para uso com cursor do mouse;*
+*B - Área Mínima de densidade em superfície para uso com toque/touch;*
 
 ![Exemplo Área Mínima de Ação](imagens/minimum-area-03.png)
-*C - Área de Ação ultrapassando as dimensões da superfície para uso com cursor do mouse;
-D - Área de Ação ultrapassando as dimensões da superfície para uso com toque/touch;*
+*C - Área de Ação ultrapassando as dimensões da superfície para uso com cursor do mouse;*
+*D - Área de Ação ultrapassando as dimensões da superfície para uso com toque/touch;*
 
 ---
 
 ## Melhores Práticas
 
 -   **Dimensões e espaçamentos apenas:** Não altere outras características do componente que não sejam relevantes para o ajuste da densidade;
+
 -   **Mantenha a consistência:** Mantenha os alinhamentos e diagramações internas ao componente em seu formato original, ao ajustar a densidade;
+
 -   **Mantenha a coerência:** Quando utilizar vários componentes semelhantes, próximos uns aos outros, mantenha o mesmo tipo de densidade neles, sempre que possível;
+
 -   **Mantenha o destaque:** Não aumente a densidade em componentes que pedem a atenção o usuário, como alertas ou mensagens que necessitam de destaque;
+
 -   **Não dificulte a experiência do usuário:** Evite utilizar densidade alta em elementos que necessitam de uma interação frequente ou de rápida leitura;
 
 ---

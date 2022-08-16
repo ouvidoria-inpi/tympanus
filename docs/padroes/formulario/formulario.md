@@ -8,11 +8,17 @@ Formulário é um grupo de controles de entrada relacionados que permite que os 
 Usa-se formulários para que usuários:
 
 -   façam cadastros;
+
 -   inscrevam-se em eventos;
+
 -   registrem-se em serviços;
+
 -   configurem opções;
+
 -   façam pesquisas;
+
 -   Compre produtos;
+
 -   enviem respostas.
 
 ----
@@ -25,7 +31,7 @@ Geralmente os formulários são compostos pelos seguintes elementos:
 
 Os títulos e subtítulos do formulário são textos que descrevem o objetivo do formulário e devem ter o maior tamanho de texto entre todos os elementos do formulário.
 
-Se o formulário for o único elemento da página o título do formulário deve ser o próprio título da página. O título também pode ser seguido por um subtítulo que ajuda a descrevê-lo.
+Se o formulário for o único elemento da página, o título do formulário deve ser o próprio título da página. O título também pode ser seguido por um subtítulo que ajuda a descrevê-lo.
 
 Faça com que títulos e subtítulos sejam os mais breves e específicos possíveis. Pode-se adicionar um subtítulo com uma breve descrição se necessário.
 
@@ -41,11 +47,17 @@ Os componentes de entrada de dados permitem que o usuário faça registros no fo
 Entre os componentes de entrada de dados mais usuais estão:
 
 -   *Input*;
+
 -   *Textarea*;
+
 -   *Checkbox*;
+
 -   *Radio*;
+
 -   *Switch*;
+
 -   *Select*;
+
 -   *Upload*.
 
 Os componentes de entrada de dados são estruturados por pelos seguintes elementos:
@@ -60,11 +72,17 @@ São textos breves que acompanham os campos de entrada de dados e especificam o 
 Para boas práticas na elaboração dos rótulos:
 
 -   Utilize rótulos concisos e que auxiliem os usuários a entender quais informações estão sendo solicitadas.
+
 -   Considere apenas a letra inicial da sentença maiúscula.
+
 -   Embora possam ser formatados de maneira diferente, todos os componentes de entrada precisam de rótulos.
+
 -   Mantenha os rótulos sempre visíveis e precisos. Nunca os substitua por *placeholders* ou elementos que se desloquem pela página.
+
 -   Seja sucinto: utilize o mínimo de termos possíveis para transmitir a mensagem de forma clara.
+
 -   Mantenha a consistência: se optar pelos dois pontos ":" no final do rótulo mantenha esse padrão em todos os formulários do sistema.
+
 -   Posicione os rótulos sempre próximos aos campos que os descrevem. Nos componentes de entrada de texto (*input*, *textarea*, etc.), é recomendável que os rótulos estejam localizados na parte superior do campo.
 
 ![Distância dos Rótulos](imagens/rotulos-coluna.png)
@@ -97,26 +115,37 @@ As entradas de dados permitem que os usuários insiram textos, arquivos ou um co
 Siga as recomendações:
 
 -   O primeiro campo de entrada obrigatório do formulário deve receber o estado de foco.
+
 -   Quando pertinente, utilize o comportamento "*autocomplete*" para auxiliar o preenchimento dos campos de entrada.
+
 -   A largura dos campos de entrada não deve ser alterada conforme o tamanho do texto inserido. Caso o texto de entrada seja muito longo, considere técnicas de truncamento.
+
 -   Os campos de entrada de texto devem sugerir um tamanho compatível com a entrada esperada. O usuário fica extremamente suscetível a erros quando não consegue ver sua entrada completa.
+
 -   Caso um campo só possa ser inserido um tipo de informação, pode ser importante limitar ou utilizar campos voltados ao assunto da entrada. Por exemplo, um campo voltado a entrada de números poderia ficar indisponível qualquer caractere que não seja número, como letras e alguns caracteres especiais.
 
 ![Tamanho dos campos adequado ao conteúdo](imagens/tamanho-campos.png)
-*Campos muito grande ou pequeno em relação a previsão de entrada de dados, podem gerar problemas para o usuário durante o preenchimento.*
+*Campos muito grandes ou pequenos em relação a previsão de entrada de dados, podem gerar problemas para o usuário durante o preenchimento.*
 
 ##### Senhas
 
 As senhas permitem autenticar usuários em uma determinada interface, muitas vezes concedendo privilégios específicos e permitindo acesso a informações personalizadas.
 
 -   Disponibilize componentes de anonimização de senhas. É recomendável utilizar uma alternativa para que o usuário visualize e oculte o conteúdo durante o preenchimento.
--   Durante a definição de uma senha, sempre confirme a senha que será cadastrada com um outro campo similar e mostre o usuário que existe um erro entre duas senhas caso exista algum problema durante o processo.
+
+-   Durante a definição de uma senha, sempre confirme a senha que será cadastrada com um outro campo similar e mostre ao usuário que existe um erro entre duas senhas caso exista algum problema durante o processo.
+
 -   Oriente o usuário que sua senha ou chave é segura. Adicione um feedback visual e textual com níveis de segurança como *Baixa*, *Média* e *Alta*. Não deixe de dar dicas para criar senha com segurança alta, tais como:
     -   Ter pelo menos seis a oito caracteres;
+
     -   Incluir números, letras maiúsculas e minúsculas e caracteres especiais;
+
     -   Não conter seu nome de usuário, nome real ou da empresa, ou uma palavra completa;
+
     -   Ser bastante diferente das senhas anteriores;
+
 -   Sempre forneça a opção de alterar ou recuperar a senha. Essas opções devem estar visíveis e de fácil acesso para o usuário.
+
 -   Caso o usuário tenha mais de uma opção para se autenticar em uma interface (certificado digital, senha...), agrupe as opções de forma simples e compreensível para o usuário.
 
 ![Preenchimento automático](imagens/senha.png)
@@ -127,11 +156,15 @@ As senhas permitem autenticar usuários em uma determinada interface, muitas vez
 Há situações em que dados de entrada já enviados para o servidor precisam ser editados ou retificados. Nestes casos, informe claramente essa funcionalidade para o usuário.
 
 -   Insira um elemento identificador (ícone, texto, etc.) próximo à informação editável que deixe claro que a informação pode ser editada.
+
 -   O acionador é o elemento interativo que executa a ação editável. Pode ser o próprio identificador ou outro elemento adicional.
+
 -   Forneça possibilidades para cancelar e salvar as alterações.
 
 ![Edição](imagens/edicao-linear-exemplos.png)
-*1- Caso alguns campos possam ser editáveis, é importante informar quais podem ser editáveis, caso todos sejam editáveis não é necessário indicar. 2- Pode-se utilizar o próprio indicador para acionar a edição de forma individual, ou ter um acionador "global". 3- Quando estiver no modo edição, é sempre importante dar a opção de salvar ou cancelar a edição.*
+*1- Caso alguns campos possam ser editáveis, é importante informar quais podem ser editáveis, caso todos sejam editáveis não é necessário indicar.*
+*2- Pode-se utilizar o próprio indicador para acionar a edição de forma individual, ou ter um acionador "global".*
+*3- Quando estiver no modo edição, é sempre importante dar a opção de salvar ou cancelar a edição.*
 
 **Atenção:** o acionador deve ser compatível com a informação a ser editada; isto é, *select* para casos de dados pré-determinados, *input*, para casos de textos livres e assim por diante.
 
@@ -142,9 +175,13 @@ Caso tenha muitos dados para serem editados (ou com possibilidade de edição), 
 Insira elementos auxiliares que facilitem o usuário a preencher corretamente os campos de entrada de dados, como:
 
 1. *Placeholder*;
+
 1. Máscara;
+
 1. Texto auxiliar;
+
 1. Ícone Ajuda;
+
 1. Mensagem contextual.
 
 ![Placeholder como auxílio ao usuário](imagens/preenchimento.png)
@@ -169,7 +206,7 @@ Considere utilizar *placeholders* quando o usuário não estiver familiarizado c
 
 ##### 2. Máscara
 
-Sempre que o dado de entrada requerido possuir um padrão de escrita, recomenda-se utilizar máscaras de formatação. Geralmente estes tipos de dados, são números, códigos, protocolos ou textos com tamanho padronizado e podem vir acompanhados de caracteres específicos, como pontos, parêntesis ou caracteres especiais.
+Sempre que o dado de entrada requerido possuir um padrão de escrita, recomenda-se utilizar máscaras de formatação. Geralmente estes tipos de dados, são números, códigos, protocolos ou textos com tamanho padronizado e podem vir acompanhados de caracteres específicos, como pontos, parênteses ou caracteres especiais.
 Sendo assim, a utilização de máscaras auxilia o usuário na digitação e padronização do texto de entrada.
 
 Fique atento para as seguintes dicas:
@@ -196,7 +233,7 @@ Utilize texto auxiliar com a finalidade de prevenir erros.
 Utilize o ícone Ajuda somente para os casos que a informação complementar não precisa estar visível em um primeiro momento.
 Costuma ser utilizado para esclarecer questões legais ou para justificar a coleta de determinados dados.
 
-Para acionar esse componente deve ser utilizado um botão de ênfase terciária com um ícone ou texto indicando sua finalidade, posicionado na mesma linha á direita a uma unidade de espaçamento mínimo do rótulo do campo a ser preenchido.
+Para acionar esse componente deve ser utilizado um botão de ênfase terciária com um ícone ou texto indicando sua finalidade, posicionado na mesma linha à direita a uma unidade de espaçamento mínimo do rótulo do campo a ser preenchido.
 
 ![Tooltip de ajuda](imagens/ajuda.png)
 *Exemplo do uso do ícone de ajuda.*
@@ -205,7 +242,7 @@ Para acionar esse componente deve ser utilizado um botão de ênfase terciária 
 
 ##### 5. Mensagem Contextual
 
-Utilize mensagens contextuais para informar erros que usuário possa cometer no preenchimento do formulário ou para chamar a atenção do usuário em relação ao dado inserido.
+Utilize mensagens contextuais para informar erros que o usuário possa cometer no preenchimento do formulário ou para chamar a atenção do usuário em relação ao dado inserido.
 
 ![Mensagens como auxílio ao usuário](imagens/mensagem.png)
 *Exemplo de uso da mensagem contextual.*
@@ -216,7 +253,7 @@ Consulte o documento do componente *[Message](https://www.gov.br/ds/components/m
 
 Botões permitem que o usuário execute algum tipo de ação sobre o formulário.
 
-> No Design System existe o componente [*Button*](https://www.gov.br/ds/components/button?tab=designer) que pode ser utilizado na maioria das ações dos formulários, e o [*Magic Button*](https://www.gov.br/ds/components/magicbutton?tab=designer) que pode ser usado para fortalecer o início ou encerramento de fluxos relevante de um formulário.
+> No Design System existe o componente [*Button*](https://www.gov.br/ds/components/button?tab=designer) que pode ser utilizado na maioria das ações dos formulários, e o [*Magic Button*](https://www.gov.br/ds/components/magicbutton?tab=designer) que pode ser usado para fortalecer o início ou encerramento de fluxos relevantes de um formulário.
 
 Os Botões devem estar posicionados preferencialmente abaixo e à direita do formulário ao qual se referem e devem respeitar as diretrizes de alinhamento e espaçamento previstas para o componente *button*.
 
@@ -225,11 +262,13 @@ Os Botões devem estar posicionados preferencialmente abaixo e à direita do for
 
 Formulários podem exigir botões com até três ênfases:
 
-1. Use *ênfase primária* para ações mais importante do formulário como, por exemplo, "Incluir Registro" ou "Enviar Formulário".
+1. Use *ênfase primária* para ações mais importantes do formulário como, por exemplo, "Incluir Registro" ou "Enviar Formulário".
+
 1. Use *ênfase secundária* para ações secundárias como "Cancelar" ou "Salvar Rascunho".
+
 1. Use *ênfase terciária* para ações menos importantes, como "Exibir Informações Adicionais" ou "Documentos Acessórios".
   
-Quando utilizar mais de um botão, o elemento com ênfase primária deve estar necessariamente posicionado à direita dos botões de ênfase secundária e estes sempre mais à direita dos botões de ênfase terciária. Estes podem alinhados à esquerda do formulário.
+Quando utilizar mais de um botão, o elemento com ênfase primária deve estar necessariamente posicionado à direita dos botões de ênfase secundária e estes sempre mais à direita dos botões de ênfase terciária. Estes podem ser alinhados à esquerda do formulário.
 
 ![Hierarquia de botões](imagens/botoes-hierarquia.png)
 *Ordem da hierarquia das ênfases: primária (1), secundária (2) e terciária (3).*
@@ -300,7 +339,7 @@ Os agrupamentos podem ser apresentados na forma contraída (padrão *collapse*).
 
 Subagrupamentos são agrupamentos dentro de agrupamentos. Para tornar mais clara e hierarquizada a informação utilize indentação evidente para os subagrupamentos.
 
-Utilize a escala de *layout* definida no fundamento [Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento) para identar os subagrupamentos. Utilize um valor que fique claro este comportamento tendo como referência o agrupamento que o contêm.
+Utilize a escala de *layout* definida no fundamento [Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento) para indentar os subagrupamentos. Utilize um valor que fique claro este comportamento tendo como referência o agrupamento que o contém.
 
 **Atenção:** tenha cautela na utilização de subagrupamentos.  Recomenda-se apenas *um nível* de subagrupamento por agrupamento.
 
@@ -325,7 +364,9 @@ Os espaços em branco também são importantes para leitura, pois criam espaços
 Como regra geral, é recomendado que se utilize:
 
 -   um espaço maior entre os agrupamentos assim como um maior afastamento entre a última entrada e os *buttons*.
+
 -   um espaçamento intermediário entre o título e a primeira entrada;
+
 -   um espaçamento menor entre os campos de entrada de dados, texto ou opções.
 
 Esses espaçamentos devem ser constantes para uma mesma função, em toda a tela e em todo o produto. (Veja mais no fundamento [Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento).)
@@ -371,12 +412,19 @@ Tenha em mente que todas as recomendações descritas acima são baseadas em boa
 Respeite a Lei Geral de Proteção de Dados e outros regulamentos de privacidade, solicitando o mínimo de informações absolutamente necessárias.
 
 -   Todo dado, para ser coletado pelo formulário, precisa ter uma finalidade clara. Isso significa que a coleta precisa ter um propósito conhecido e informado, e não subentendido ou meramente genérico para armazenamento e uso futuro.
+
 -   Exiba sempre explicações sobre o motivo da coleta dos dados, principalmente dados pessoais e sensíveis.
+
 -   Nos campos de entrada opcionais deixe claro qual o benefício que será oferecido para quem preenchê-los.
+
 -   Organize ou agrupe o conteúdo e sua apresentação para facilitar a compreensão do usuário de acordo com seu perfil.
+
 -   Exiba os campos de opção de consentimento sem marcação prévia.
+
 -   Sempre que possível dê a opção ao usuário de optar como seus dados serão utilizados.
+
 -   Ofereça explicações de como o usuário pode retirar seu consentimento, quando for o caso.
+
 -   Disponibilize recursos de anonimização de senhas e dados pessoais sensíveis.
 
 ![Exemplo de utilização de Ajuda, Mensagens e  Placeholders para adequação do formulário à LGPD descrito no texto acima](imagens/lgpd.png)
@@ -409,19 +457,23 @@ Caso o componente não esteja preparado para gerar um *feedback* relacionado ao 
 ## Melhores Práticas
 
 -   Todos os campos de entrada dos formulários devem obedecer às regras de acessibilidade da [WCAG](https://guia-wcag.com/).
+
 -   Verifique se os usuários conseguem inserir os dados em resoluções de tela menores.
+
 -   Garanta que usuários que utilizam o teclado ou outras formas de tecnologia assistiva consigam navegar pelos campos de entrada de dados do formulário corretamente.
+
 -   Esteja atento aos gerenciadores de senhas e aos recursos do *browser* que preenchem dados para os usuários.
+
 -   Procure elaborar formulários curtos e objetivos. Elimine campos desnecessários, evite solicitar informações que podem ser adquiridas de outra maneira, coletadas posteriormente ou simplesmente omitidas. Se preciso exiba progressivamente informações adicionais.
 
-![Organização do conteúdo](imagens/estrutura.png)
-*Exemplo de organização do conteúdo utilizando agrupamentos e iconografia.*
+    ![Organização do conteúdo](imagens/estrutura.png)
+    *Exemplo de organização do conteúdo utilizando agrupamentos e iconografia.*
 
-![Exemplo de Informações Adicionais](imagens/info-add.png)
-*Exemplo de uso de Informações Adicionais.*
+    ![Exemplo de Informações Adicionais](imagens/info-add.png)
+    *Exemplo de uso de Informações Adicionais.*
 
-![Exemplo de Informações progressiva](imagens/wizard.png)
-*Exemplo de formulário com exibição progressiva.*
+    ![Exemplo de Informações progressiva](imagens/wizard.png)
+    *Exemplo de formulário com exibição progressiva.*
 
 -   As recomendações desta diretriz devem funcionar para todos os dispositivos nos quais os formulários serão disponibilizados (*desktop*, *mobile*, etc.).
 
@@ -429,8 +481,8 @@ Caso o componente não esteja preparado para gerar um *feedback* relacionado ao 
 
 -   Informe qualquer situação em que o usuário tenha que aguardar o sistema processar um comando, realizar verificações ou carregar dados. Utilize os componentes *loading* ou mesmo o componente *message* para informar a situação geral do sistema.
 
-![Exemplo do Componente Loading](imagens/loading.png)
-*Exemplo do Componente Loading*
+    ![Exemplo do Componente Loading](imagens/loading.png)
+    *Exemplo do Componente Loading*
 
 ----
 
@@ -439,5 +491,7 @@ Caso o componente não esteja preparado para gerar um *feedback* relacionado ao 
 Caso deseje se aprofundar mais no assunto, consulte os *sites* abaixo que foram utilizados como referência para a criação desse documento.
 
 -   Website Forms Usability: [Top 10 Recommendations, By Kathryn Whitenton from Nielsen Norman Group on May 1, 2016](https://www.nngroup.com/articles/web-form-design/) - online em 29 de julho de 2020.
+
 -   Web Accessibility Tutorials Guidance on how to create websites that meet WCAG - [Forms Concepts, Eric Eggert e Shadi Abou-Zahra on 27 July 2019 (first published September 2014)](https://www.w3.org/WAI/tutorials/forms/) - online em 29 de julho de 2020.
+
 -   [UX Center](https://serprogovbr.sharepoint.com/sites/UXCenter)
