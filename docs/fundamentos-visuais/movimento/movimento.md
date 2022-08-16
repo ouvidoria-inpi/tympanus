@@ -45,13 +45,16 @@ Os movimentos foram pensados para oferecer uma variedade de atributos que permit
 Esteja atento aos seguintes pilares:
 
 -   **Compreensível:** qualquer usuário pode entender;
+
 -   **Robusto:** pode ser utilizável em qualquer plataforma ou tecnologia assistiva;
+
 -   **Operável:** qualquer usuário pode utilizar;
+
 -   **Perceptível:** qualquer usuário pode perceber.
 
-As pessoas de um modo geral experimentam a Internet de várias maneiras e formas. Elas vêm o design visual em uma tela e usam periféricos ou telas sensíveis ao toque para agir com um sistema sem terem maiores dificuldade no uso, ou seja, para elas os sistemas da *web* são perceptíveis, compreensíveis, operáveis e robustos naturalmente. Entretanto, para as pessoas que possuem limitações físicas, biológicas ou intelectuais, como por exemplo cegos ou com problemas de visão, audição/fala, neuro típicas, que têm distúrbios vestibulares ou dificuldades de compreensão espacial entre outras naturezas restritivas, precisam de recursos de tecnologias assistivas para interagir com um sistema *web* e também que os sites acessados possuam recursos de acessibilidade.
+As pessoas de um modo geral experimentam a Internet de várias maneiras e formas. Elas vêm o design visual em uma tela e usam periféricos ou telas sensíveis ao toque para agir com um sistema sem terem maiores dificuldades no uso, ou seja, para elas os sistemas da *web* são perceptíveis, compreensíveis, operáveis e robustos naturalmente. Entretanto, para as pessoas que possuem limitações físicas, biológicas ou intelectuais, como por exemplo cegos ou com problemas de visão, audição/fala, neurotípicas, que têm distúrbios vestibulares ou dificuldades de compreensão espacial entre outras naturezas restritivas, precisam de recursos de tecnologias assistivas para interagir com um sistema *web* e também que os sites acessados possuam recursos de acessibilidade.
 Onde a maioria das pessoas acha fácil utilizar um ambiente *web*, para essas pessoas com limitações, pode ser muito desafiador ou mesmo impossível fazer uso da internet se os *sites* visitados não atenderem as recomendações mundiais de acessibilidade da [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) [(W3C)](https://www.w3.org/).
-*Motion design* não é um recurso decorativo, ao contrário, é um recurso técnico poderoso que favorece positivamente a experiência do usuário. Portanto cada vez mais é utilizado no design de soluções para info produtos da *web*. No entanto, o *motion design* por adicionar uma camada de complexidade à solução, traz impactos na acessibilidade que necessitam ser observados e tratados durante a sua concepção e elaboração.
+*Motion design* não é um recurso decorativo, ao contrário, é um recurso técnico poderoso que favorece positivamente a experiência do usuário. Portanto, cada vez mais é utilizado no design de soluções para infoprodutos da *web*. No entanto, o *motion design* por adicionar uma camada de complexidade à solução, traz impactos na acessibilidade que necessitam ser observados e tratados durante a sua concepção e elaboração.
 
 Esteja atento a algumas dicas:
 
@@ -69,11 +72,11 @@ Esteja atento a algumas dicas:
 
 -   Movimentos que surgem na tela de maneira abrupta podem causar confusão e sobrecarga cognitiva em um usuário.
 
-  **Motivação principal:** pessoas com deficit de atenção (TDAH), neuro típicas ou com limitações intelectuais podem não perceber ou se esforçar muito para descobrir o que ocorreu na tela se o movimento se comportar de  maneira drástica ou rápida demais não sendo perceptível ou compreensível para eles.
+  **Motivação principal:** pessoas com déficit de atenção (TDAH), neuro típicas ou com limitações intelectuais podem não perceber ou se esforçar muito para descobrir o que ocorreu na tela se o movimento se comportar de  maneira drástica ou rápida demais não sendo perceptível ou compreensível para eles.
 
 -   Forneça alternativas para as transições de estados da interface. Considere, sempre que possível, o uso de interação de movimentos simplificados ou reduzidos para celulares de *tablets*. Certifique-se de que haja sempre uma maneira de comunicar mensagens semelhantes estaticamente sem grandes impactos e acessíveis.
 
--   Opte, sempre que possível, pelas definições dos componentes nativos pois estes permitem aproveitar os recursos de acessibilidade previamente integrados.
+-   Opte, sempre que possível, pelas definições dos componentes nativos, pois estes permitem aproveitar os recursos de acessibilidade previamente integrados.
 
 -   Disponibilize, quando for o caso,  controles da animação ou opção ativar/desativar.
 
@@ -84,7 +87,9 @@ Esteja atento a algumas dicas:
 Para criar um movimento devemos considerar três propriedades:
 
 -   Transição;
+
 -   *Easing*;
+
 -   Tempo.
 
 **Atenção:** o objetivo da animação normalmente ditará o tipo de animação ou transição. Além disso, lembre-se da frequência com que os usuários encontrarão a animação: quanto mais frequente, mais sutil e mais curta você desejará que ela seja.
@@ -157,7 +162,7 @@ Trabalha a variação da escala de um objeto criando transições entre as dimen
 
 *Exemplo do efeito scale.*
 
-Para mais informação consulte o documento [Fundamentos > Superfície](/ds/fundamentos-visuais/superficie).
+Para mais informações consulte o documento [Fundamentos > Superfície](/ds/fundamentos-visuais/superficie).
 
 ##### *Fill* (preenchimento)
 
@@ -302,12 +307,12 @@ Esse tipo de movimento é como uma bola chutada que vai lentamente buscando o re
 #### c) *Ease-In-Out*
 
 Inicia com movimento acelerado, atinge o movimento normal e termina com movimento desacelerado.
-Esse tipo de movimento é semelhante a um carro acelerando e desacelerando e, se usado com consciência, podem proporcionar um efeito mais dramático do que apenas o *ease-out*.
+Esse tipo de movimento é semelhante a um carro acelerando e desacelerando e, se usado com consciência, pode proporcionar um efeito mais dramático do que apenas o *ease-out*.
 
 ![Tipos de macro interações.](imagens/grafico-ease-in-out.png)
 *Imagem exemplificando o desenho da trajetória de deslocamento em ease-in-out.*
 
-**Atenção:** evite criar animações longa demais devido à lentidão do início do *ease-in* na animação. O intervalo de 0,30-0,50 segundos é geralmente adequado, mas o valor exato depende muito do seu projeto específico. Desta forma, início lento, meio rápido e término lento resultarão em maior contraste da animação, o que pode ser bastante satisfatório para o usuário.
+**Atenção:** evite criar animações longas demais devido à lentidão do início do *ease-in* na animação. O intervalo de 0,30-0,50 segundos é geralmente adequado, mas o valor exato depende muito do seu projeto específico. Desta forma, início lento, meio rápido e término lento resultarão em maior contraste da animação, o que pode ser bastante satisfatório para o usuário.
 
 |   Easing    |       Easing Token        |
 | :---------: | :-----------------------: |

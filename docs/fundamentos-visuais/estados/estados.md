@@ -5,7 +5,9 @@ Estados são representações visuais para *feedbacks* interativos ou informacio
 Utilize os estados para comunicar visualmente:
 
 -   O tipo de interação que pode ser realizada;
+
 -   Uma resposta baseada em uma ação realizado pelo usuário;
+
 -   Uma categoria de aviso (erro, sucesso, alerta ou informativa).
 
 ---
@@ -41,10 +43,15 @@ Em alguns casos pode ser necessário aumentar as dimensões do fundo  para melho
 Usuários interagem com a interface de diversas maneiras. Ao projetar um componente, considere o uso de diferentes dispositivos de entrada tais como:
 
 -   *Mouse*
+
 -   Tela sensível ao toque
+
 -   teclado
+
 -   Voz
+
 -   Controle de vídeo game
+
 -   Leitores de Tela (como sintetizadores de voz, *Display* Braille)
 
 ### Reutilização e colaboração
@@ -72,7 +79,8 @@ Segue algumas definições importantes aplicadas nos estados no *Design System* 
 ### Fundo vs primeiro plano
 
 -   *Fundo* (*background*): área que envolve um texto, ou a superfície de um objeto.
--   *Primeiro Plano* (*foreground*): texto ou todos os elemento que estão contidos na superfície do objeto que sofreu o Estado (textos, ícones, outros componentes...)
+
+-   *Primeiro Plano* (*foreground*): texto ou todos os elementos que estão contidos na superfície do objeto que sofreu o Estado (textos, ícones, outros componentes...)
 
 O entendimento entre o que é o Fundo e o Primeiro Plano varia de acordo com a referência, ou seja, *qual elemento está sendo aplicado o estado*.
 
@@ -119,18 +127,31 @@ Existem 2 grupos de estados:
 São grupos de Estados voltados a algum tipo de interação por parte do usuário. Alguns deles podem estar aplicados diretamente na interface, mas podem ser alterados de acordo com a interação do usuário seja por *mouse*, toque, voz....
 
 -   *Interativo*: comunica que um componente ou elemento é interativo.
+
 -   *Desabilitado*: comunica que um componente ou elemento está temporariamente indisponível para interação.
+
 -   *Hover*: comunica que o cursor está sobre um componente ou elemento interativo.
+
 -   *Pressionado*: comunica que um componente ou elemento interativo está sendo pressionado via teclado, por um clique ou toque.
+
 -   *Foco*: comunica quando o usuário destaca um componente ou elemento interativo, utilizando-se de um método de entrada como teclado, *mouse*, toque ou voz.
+
 -   *Ativo*: comunica qual elemento está ativo dentro de um conjunto de escolhas, iniciado ou não pelo usuário.
+
 -   *Selecionado*: comunica uma escolha do usuário.
+
 -   *Arrastando*: comunica quando um usuário move um componente ou elemento.
+
 -   *Arrastar*: comunica que um componente ou elemento pode ser arrastado.
+
 -   *DropZone*: comunica a área propícia onde um componente ou elemento pode ser movido no Arrastando.
+
 -   *Dropzone* Ativo*: comunica a área onde um componente ou elemento com estado Arrastando será movido.
+
 -   *Visitado*: comunica que um texto interativo (*hiperlink*) foi acessado pelo usuário.
+
 -   *Ligado*: comunica a opção "ligado" na alternância entre o estado Desligado.
+
 -   *Desligado*: comunica a opção "desligado" na alternância entre o estado Ligado.
 
 ### 2. Aviso
@@ -138,15 +159,20 @@ São grupos de Estados voltados a algum tipo de interação por parte do usuári
 São estados caracterizados por uma cor (e suas variações) e um ícone a fim de fornecer uma experiência universal para os usuários quando for necessário transmitir alguma informação importante dentro da interface.
 
 -   *Erro*: Informa aos usuários sobre um erro ou falha crítica.
+
 -   *Alerta*: Informa aos usuários sobre ações indesejáveis ​​ou da possibilidade de gerar resultados inesperados.
+
 -   *Sucesso*: Confirma se uma tarefa foi concluída conforme o esperado.
+
 -   *Informativo*: Fornece informações adicionais aos usuários que podem não estar vinculados à sua ação ou tarefa atual.
 
 ### Observações
 
 -   Podem existir Estados, não listados aqui, específicos em um componente. Neste caso, devem ser detalhados na sua respectiva documentação.
+
 -   O "Estado Padrão" se trata da ausência de um estado ou de algum *feedback*. Por não existir nenhuma regra especial, não existe um detalhamento sobre este "Estado".
--   A escolha das cores dos estados obedecem a algumas recomendações e boas práticas pré-estabelecidas. Para maiores informações consultar a documentação sobre a criação de Temas.
+
+-   A escolha das cores dos estados obedece a algumas recomendações e boas práticas pré-estabelecidas. Para maiores informações consultar a documentação sobre a criação de Temas.
 
 ---
 
@@ -197,7 +223,7 @@ O estado desabilitado comunica que um componente ou elemento está temporariamen
 
 Elementos desabilitados não precisam ser rígidos sobre as conformidade de acessibilidade no quesito contraste visual, e características visuais que destaquem o elemento devem ser retiradas ou amenizadas, como é o caso das sombras por exemplo.
 
-Elementos desabilitados não sofre herança com qualquer outro estado (a não ser o Interativo, veja em especificação).
+Elementos desabilitados não sofrem herança com qualquer outro estado (a não ser o Interativo, veja em especificação).
 
 ### Evitar Estado Desabilitado
 
@@ -207,13 +233,16 @@ Caso o elemento não possa ser "habilitado" por alguma ação do usuário, a rec
 Alguns outros componentes e elementos, por causa do seu comportamento, é preferível não exibi-los na interface:
 
 -   Componentes de Navegação (Menu, *Tabs*, etc.)
+
 -   Modal
+
 -   *Tooltip*
+
 -   *Magic Button*
 
 ### Especificação para Estado Desabilitado
 
-O estado Desabilitado deve ter baixa ênfase ou ser amenizado dentro de uma interface. Ele é exibido com um valor específico de opacidade, podendo manter a herança com o estado interativo, ou seja, o visual do Estado Interativo. O cursor do *mouse* deve ser alterado para a símbolo de não permitido: "círculo com traço diagonal".
+O estado Desabilitado deve ter baixa ênfase ou ser amenizado dentro de uma interface. Ele é exibido com um valor específico de opacidade, podendo manter a herança com o estado interativo, ou seja, o visual do Estado Interativo. O cursor do *mouse* deve ser alterado para o símbolo de não permitido: "círculo com traço diagonal".
 
 ![Estado Desabilitado](imagens/desabilitado.png)
 *Exemplo do estado desabilitado sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
@@ -233,8 +262,11 @@ O Estado *hover* acontece quando o usuário mantém o cursor do *mouse* sobre um
 ### Cuidados para Estado *Hover*
 
 -   Só pode existir um elemento com *hover* por vez na tela.
+
 -   Se por um evento de *hover* executar um *dropdown*, o estilo do *hover* pode se manter no elemento até que o comportamento *dropdown* seja retirado.
+
 -   Elementos desabilitados não podem receber *hover* .
+
 -   O *feedback* visual deve ser feito no objeto que está em *hover*.
 
 ### Especificação para Estado *Hover*
@@ -262,9 +294,13 @@ Quando um elemento interativo recebe um toque iniciado pelo usuário, seja ela p
 ### Cuidados para Estado Pressionado
 
 -   Só pode existir um elemento com pressionado por vez na tela.
+
 -   Se por um evento de pressionado executar um *dropdown*, o estilo do Pressionado pode se manter no elemento até que o comportamento *dropdown* seja retirado.
+
 -   Elementos desabilitados não podem receber Pressionado .
+
 -   O *feedback* visual deve ser feito no objeto que está em estado Pressionado.
+
 -   Após o estado Pressionado, o elemento pode também receber o estado Foco (veja  detalhes no estado Foco).
 
 ### Especificação para Estado Pressionado
@@ -301,15 +337,20 @@ Alguns elementos, geralmente quando existe entrada de dados (como um *input* por
 Como regra geral, utilize este estilo sempre que:
 
 -   Um elemento receber foco de forma *indireta*, ou seja, por reação a algum outro Estado ou comportamento.
+
 -   Quando o "foco padrão" tiver uma ênfase muito maior do que deveria, *interferindo negativamente* na experiência do usuário.
 
 ### Cuidados para Foco
 
 -   Só pode existir um elemento com foco por vez na tela.
+
 -   Só pode existir 1 tipo de Foco por elemento.
+
 -   Elementos desabilitados não podem receber foco.
+
 -   Por padrão, o foco "normal" deve ser aplicado. O foco tênue só será utilizado quando especificado na diretriz.
--   Por padrão, a ação de "clicar/tocar" em um elemento não deve gerar foco visual. Entretanto, o foco por outras vias (como teclado ou entrada de voz) ainda devem existir. O Foco via "clique/toque" só será utilizado quando especificado na diretriz do elemento.
+
+-   Por padrão, a ação de "clicar/tocar" em um elemento não deve gerar foco visual. Entretanto, o foco por outras vias (como teclado ou entrada de voz) ainda deve existir. O Foco via "clique/toque" só será utilizado quando especificado na diretriz do elemento.
 
 ### Especificação para Foco
 
@@ -351,7 +392,9 @@ O estado ativo indica qual item, *de um conjunto de opções*, está sendo visua
 ### Cuidados para Estado Ativo
 
 -   Dentro de um único conjunto de opções, apenas um estado Ativo pode estar presente de cada vez.
+
 -   Elementos desabilitados não podem receber Ativo.
+
 -   Não utilize em componentes que possam existir vários itens Ativos ao mesmo tempo, como em listagens com expansão.
 
 ### Estado ativo vs selecionado
@@ -359,13 +402,14 @@ O estado ativo indica qual item, *de um conjunto de opções*, está sendo visua
 Se a própria definição dos estado não for clara para diferenciar um estado do outro, podemos resumir o embate com o seguinte comportamento:
 
 -   *Ativo*: a ação geralmente é executada imediatamente após a escolha (exibir um conteúdo, mudar o tipo de alinhamento de texto...). Apenas um item pode ser ativado por vez.
+
 -   *Selecionado*: a ação é executada posteriormente e, geralmente, com auxílio de uma outra ação ou componente (selecionar os itens e depois acionar um botão deletar...). Posso ter a possibilidade de escolher um ou mais itens.
 
 ### Especificação para Estado Ativo
 
 O estado deve ter uma alta ênfase entre os demais elementos do seu conjunto mas uma média ênfase entre os outros elementos em uma interface.
 
-O Fundamento cor é utilizada como a principal característica para exibir o estado de Ativo. São duas cores que devem ser utilizadas para gerar o máximo de contraste possível entre elas, trabalhando entre o Fundo e o Primeiro Plano.
+O Fundamento cor é utilizado como a principal característica para exibir o estado de Ativo. São duas cores que devem ser utilizadas para gerar o máximo de contraste possível entre elas, trabalhando entre o Fundo e o Primeiro Plano.
 
 Para distinguir melhor o Estado, a borda do elemento pode ser trabalhada para não depender somente da cor para gerar o *feedback* do estado Ativo.
 
@@ -392,6 +436,7 @@ Um estado selecionado indica a seleção de opções pelo usuário usando um dos
 Se a própria definição dos estado não for clara para diferenciar um estado do outro, podemos resumir o embate com o seguinte comportamento:
 
 -   *Ativo*: a ação geralmente é executada imediatamente após a escolha (exibir um conteúdo, mudar o tipo de alinhamento de texto...). Apenas um item pode ser ativado por vez.
+
 -   *Selecionado*: a ação é executada posteriormente e, geralmente, com auxílio de uma outra ação ou componente (selecionar os itens e depois acionar um botão deletar...). Posso ter a possibilidade de escolher um ou mais itens.
 
 ### Evitar estado selecionado
@@ -399,10 +444,15 @@ Se a própria definição dos estado não for clara para diferenciar um estado d
 O estado Selecionado não pode ser aplicado nos seguintes componentes:
 
 -   Componentes de Navegação (Menu, Abas...)
+
 -   Modal
+
 -   *Tooltip*
+
 -   *Button*
+
 -   *Message*
+
 -   *Divider*
 
 ### Especificação para Estado Selecionado
@@ -428,8 +478,11 @@ O estado arrastando ocorre quando um usuário move um elemento ou componente, se
 ### Cuidados para Estado Arrastando
 
 -   Só pode existir um elemento com Arrastando por vez na tela.
+
 -   Quando vários elementos precisarem ser arrastados, deve existir uma solução que agrupe (visualmente) todos os elementos em uma única solução.
+
 -   Elementos desabilitados não podem receber Arrastando.
+
 -   Arrastando não sofre herança do estado Pressionado.
 
 ### Estado arrastando vs arrastar
@@ -470,6 +523,7 @@ Um estado arrastar indica quando um elemento pode ser arrastado, se movimentando
 ### Cuidados para Estado Arrastar
 
 -   O *feedback* Arrastar é somente para objetos que possam ser movimentados (com o evento de "agarrar"), não incluindo, por exemplo, elementos redimensionáveis (neste caso, outras características de respostas devem ser estudadas).
+
 -   Elementos desabilitados não podem receber Arrastar (veja Especificação maiores detalhes).
 
 ### Estado arrastar vs arrastando
@@ -482,7 +536,7 @@ Podemos utilizar ícone e o cursor para trazer o *feedback* necessário, mesmo q
 
 No *Design System* escolhemos o ícone de  "6 círculos" e o cursor do *mouse* "mão totalmente aberta" como elementos que simbolizam este estado Arrastar.
 
-Prefira o posicionamento do ícone a esquerda e/ou no topo do elemento. O cursor estilizado deve ser exibido somente quando o mesmo estiver posicionado sobre o elemento. Em elemento desabilitados o cursor não sofre mudança.
+Prefira o posicionamento do ícone à esquerda e/ou no topo do elemento. O cursor estilizado deve ser exibido somente quando o mesmo estiver posicionado sobre o elemento. Em elementos desabilitados o cursor não sofre mudança.
 
 ![Estado Arrastar](imagens/arrastar.png)
 *Exemplo do estado arrastar sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
@@ -501,6 +555,7 @@ O estado *Dropzone* (ou Área/Zona de Soltura) indica quando uma área está vi�
 ### Cuidados para *Dropzone*
 
 -   A área/zona de "soltura" do elemento pode ser maior, *mas não menor*, do que a área visível/exibida na tela. Utilize o estado *Dropzone* Ativo (veja adiante) para gerar uma resposta clara para o usuário.
+
 -   O Estado pode ser persistente, ou seja, sempre está visível enquanto o comportamento de mover/arrastar estiver presente.
 
 ### Especificação para *Dropzone*
@@ -524,7 +579,8 @@ O estado *Dropzone* Ativo (ou Área/Zona de Soltura Ativa) indica a área/zona q
 
 ### Cuidados para *Dropzone* Ativo
 
--   Só pode existir um área com *dropzone* ativo por vez na tela.
+-   Só pode existir uma área com *dropzone* ativo por vez na tela.
+
 -   Elementos desabilitados não podem receber *dropzone* ativo.
 
 ### Estado *dropzone* ativo vs *dropzone*
@@ -565,6 +621,7 @@ O estado acontece quando o conteúdo acessado, referente ao *hiperlink*, já foi
 ### Cuidados para Estado Visitado
 
 -   Utilize o estado com cuidado, pois essa informação pode violar a privacidade do usuário e revelar informações de identificação pessoal em  situações sensíveis.
+
 -   Só utilize dentro de contexto de *hiperlinks*.
 
 ### Especificação para Visitado
@@ -589,7 +646,7 @@ Apesar de serem Estados diferentes, o estado ligado e desligado estão unidos na
 
 ### Especificação para Ligado e Desligado
 
-O Fundamento cor é utilizado como a principal característica para exibir o estado Ligado e o Desligado. A cor entre os estados deve ser possuir um contraste alto, deixando claro a diferença entre eles.
+O Fundamento cor é utilizado como a principal característica para exibir o estado Ligado e o Desligado. A cor entre os estados deve possuir um contraste alto, deixando claro a diferença entre eles.
 
 ![Estado Desligado](imagens/ligado-desligado.png)
 *Exemplo dos estados ligado e desligado sendo aplicado em um texto e um objeto, tanto no fundo claro como no escuro.*
@@ -605,7 +662,7 @@ O Fundamento cor é utilizado como a principal característica para exibir o est
 
 O estado informa sobre um erro ou falha crítica existente na interface ou por alguma ação realizada pelo usuário.
 
-Importante que o estado persista até até que seja resolvido o erro.
+Importante que o estado persista até que seja resolvido o erro.
 
 ### Especificação para Estado Erro
 
@@ -667,7 +724,7 @@ O estado fornece informações adicionais aos usuários que podem não estar vin
 
 Pode persistir, dependendo do conteúdo, mas não requer ações adicionais. Pode ser dispensado automaticamente.
 
-O estado informativo pode ser confundido com algum elemento de ajuda (que pode se representado pela iconografia de uma "interrogação"). De fato, um pode substituir o outro. O importante é manter a consistência visual e sempre que possível, preferir utilizar o estado informativo, com a iconografia e a cor padrão.
+O estado informativo pode ser confundido com algum elemento de ajuda (que pode ser representado pela iconografia de uma "interrogação"). De fato, um pode substituir o outro. O importante é manter a consistência visual e sempre que possível, preferir utilizar o estado informativo, com a iconografia e a cor padrão.
 
 ### Especificação para Estado Informativo
 

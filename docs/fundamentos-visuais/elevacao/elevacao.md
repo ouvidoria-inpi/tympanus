@@ -144,10 +144,15 @@ Todos os *layouts* têm uma camada base, sobre a qual todas as demais ficarão a
 É nesta camada que geralmente se encontra a maior parte do conteúdo, como:
 
 -   *Componentes de formulário:* *input*, *checkbox*, *radio*, *textarea*, *switch*, *upload*, etc.;
+
 -   *Componentes de ação:* buttons, *links*, *sign-in*, *tag* interativa, etc.;
+
 -   *Elementos não-interativos:* texto, ícone, ilustração, *divider*, *tag* não interativa, etc.;
+
 -   *Elementos informativos:* *table*, *breadcrumb*, *list*, *pagination*, message, *loading* etc.;
+
 -   *Elementos de navegação:* tabs, *wizard*, etc.;
+
 -   *Componentes estruturantes:*  *footer*, menu contextual, etc.
 
 Os componentes que se encontram nesta camada *não projetam sombras*.
@@ -172,13 +177,16 @@ A camada 1e se encontra um nível acima da camada zero. Nessa camada podemos enc
 São os casos dos:
 
 -   *Header*;
+
 -   Menu fixo;
+
 -   *Card*;
+
 -   *Magic button*.
 
 **Atenção:** o comportamento *content overflow* deve se encontrar nesta camada. Veja detalhes mais adiante.
 
-Os componentes que se se encontram nesta camada projetam uma sombra suave que auxiliam na sua relevância.
+Os componentes que se encontram nesta camada projetam uma sombra suave que auxiliam na sua relevância.
 
 ![Exemplo de objeto na camada 1.](imagens/camada-1.png)
 *Exemplo de objeto na camada 1.*
@@ -202,7 +210,7 @@ São os casos dos:
 
 -   *DateTimePicker*, *notification*, *select*, etc.
 
-Os componentes que se se encontram nesta camada projetam uma sombra mais pronunciada.
+Os componentes que se encontram nesta camada projetam uma sombra mais pronunciada.
 
 ![Exemplo de objeto na camada 2.](imagens/camada-2.png)
 *Exemplo de objeto na camada 2.*
@@ -225,10 +233,12 @@ A camada 3 é exclusiva para componentes de *navegação principal quando possui
 São os casos dos:
 
 -   Menu flutuante;
+
 -   *Sticky header*;
+
 -   *Sticky footer*, etc.
 
-Os componentes que se se encontram nesta camada projetam uma sombra ainda mais pronunciada.
+Os componentes que se encontram nesta camada projetam uma sombra ainda mais pronunciada.
 
 ![Exemplo de objeto na camada 3.](imagens/camada-3.png)
 *Exemplo de objeto na camada 3.*
@@ -252,7 +262,7 @@ São os casos dos:
 
 -   *Loading* (quando houver superfície), *tooltip*, modal, *cookieBar*, etc.;
 
-Os componentes que se se encontram nesta camada projetam a sombra com a maior intensidade possível.
+Os componentes que se encontram nesta camada projetam a sombra com a maior intensidade possível.
 
 ![Exemplo de objeto na camada 4.](imagens/camada-4.png)
 *Exemplo de objeto na camada 4.*

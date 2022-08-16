@@ -14,7 +14,7 @@ A *Rawline* está disponível em <https://www.cdnfonts.com/rawline.font>
 
 A variedade de estilos da *Rawline* torna desnecessária a utilização de outra família tipográfica. Sendo assim, junto com os demais elementos do *Design System* a tipografia cria um reconhecimento mais rápido pelo usuário, na identificação dos produtos do governo.
 
-Para segurança, recomendamos o uso de *fallback* (caso a fonte não seja carregada por algum motivo) a fonte `"Raleway"` e, de forma mais genéricas, as fontes sem serifas: `sans-serif`.
+Para segurança, recomendamos o uso de *fallback* (caso a fonte não seja carregada por algum motivo) a fonte `"Raleway"` e, de forma mais genérica, as fontes sem serifas: `sans-serif`.
 
 ### Eficiência e Clareza
 
@@ -71,7 +71,7 @@ Utilize os valores abaixo para representar os diferentes estilos da fonte *Rawli
 
 Em um documento com uma definição de 72 dpi (ou 72 ppi ) dentro de um software gráfico (como *Photoshop*), *pontos = pixels*, mas isso não é verdade em um navegador (veja "Tabela de conversão PX, PT, EM e %"). Para uma boa comunicação, sempre indique os tamanhos em *pixels* para os desenvolvedores da Web que devem converter para *em* ou *rem*.
 
-Atualmente, uma prática recomendada é permitir que um dispositivo (como navegador *web*) tome as decisões baseadas no tamanho da fonte base. O padrão é que em uma janela com visualização de 96 dpi tenha a fonte base padrão de 16px, mas dificilmente essa regra se aplique em todos os casos (como um *smart watch*).
+Atualmente, uma prática recomendada é permitir que um dispositivo (como navegador *web*) tome as decisões baseadas no tamanho da fonte base. O padrão é que em uma janela com visualização de 96 dpi tenha a fonte base padrão de 16px, mas dificilmente essa regra se aplica em todos os casos (como um *smart watch*).
 
 No *Design System* do Governo Federal optamos pela fonte base de 14 pixel por considerarmos que esse tamanho seja aplicável na maioria dos dispositivos e situações, porém essa escolha não é definitiva.
 
@@ -114,6 +114,7 @@ Caso o tamanho não atenda sua interface, utilize um valor diferente para a font
 Caso haja necessidade, os valores da escala tipográfica podem ser ampliados, além dos valores demonstrados na tabela acima, crescendo ou reduzindo na mesma proporção *Minor Third (1,2)*. Por exemplo:
 
 -   Crescendo: `41,80px`, `50,16px`, `60,19px`, `72,23px`, ...
+
 -   Reduzindo: `8.10px`, `6,75px`, `5,62px`, `4.68px`, ...
 
 Quando reduzir ou ampliar a escala tipográfica, fique atento às questões de legibilidade.
@@ -124,7 +125,7 @@ Quando reduzir ou ampliar a escala tipográfica, fique atento às questões de l
 
 Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com valores em porcentagem ou relativos (como *rem* ou *em*), pois o valor vai depender do tamanho da fonte que ele está sendo aplicado. Por padrão, utilize entrelinha de 1.45 para valores até a fonte base, após isso, utilize o valor de 1,15.
 
-**OBS:** para trabalhar com softwares que trabalham com unidades em pixel (como Adobe XD), multiplique o valor do tamanho da fonte pelo valor da entrelinha da tabela.  *Exemplo:* No H1 a line-height é 1.15 do valor de 41.8px (size), logo o valor da final será 48,07px.*
+**OBS:** para trabalhar com softwares que trabalham com unidades em pixel (como Adobe XD), multiplique o valor do tamanho da fonte pelo valor da entrelinha da tabela.  *Exemplo:* No H1 a line-height é 1.15 do valor de 41.8px (size), logo o valor final será 48,07px.*
 
 | Line-Height (em) | Token                      |
 | ---------------- | -------------------------- |
@@ -138,7 +139,7 @@ Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com v
 
 Utilize a tabela de estilo para determinar o visual de cada estilo de tipografia utilizada. Todos os estilos são [elementos nativos do HTML](https://www.w3schools.com/tags/default.asp).
 
-Lembre-se, o valor *line-height* (entrelinhamento) não se refere ao fonte base, e sim ao valor final da escala do próprio elemento textual. *Exemplo:* No H1 a line-height 1.15, ou seja, 115% do valor de 2,986em (`--font-size-scale-up-06`).*
+Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base, e sim ao valor final da escala do próprio elemento textual. *Exemplo:* No H1 a line-height 1.15, ou seja, 115% do valor de 2,986em (`--font-size-scale-up-06`).*
 
 **Atenção:** As informações apresentadas nas tabelas para *Grid de 4 Colunas* exibem apenas as propriedades que diferem do padrão 12 e 8 colunas.
 

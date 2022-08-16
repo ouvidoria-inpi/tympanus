@@ -53,7 +53,7 @@ A superfície dos elementos pode apresentar qualquer cor prevista na paleta de c
 As bordas definem os limites de uma superfície e podem funcionar como espécie de separadores entre a superfície e o *background*. Apresentam diferentes tipos e espessuras. É possível também uma superfície não apresentar bordas visíveis.
 
 ![Exemplos de diferentes tipos e espessuras de bordas da superfície.](imagens/bordas.png)
-*Diferentes tipo e espessuras de bordas.*
+*Diferentes tipos e espessuras de bordas.*
 
 Use bordas quando necessitar um maior contraste com a cor do fundo, principalmente nos casos em que os componentes são brancos ou com cores claras e precisam se destacar.
 
@@ -62,7 +62,9 @@ Use bordas quando necessitar um maior contraste com a cor do fundo, principalmen
  **Atenção:** nos *softwares* gráficos as bordas devem estar configurada conforme a imagem a seguir:
 
 1. Traçado interno;
+
 2. Arremate projetado;
+
 3. Junção de mitra.
 
 ![Exemplo para a configuração de borda no Adobe XD.](imagens/bordas3.png)
@@ -86,7 +88,7 @@ Refere-se à espessura do traço. Temos os seguintes tokens:
 |   4   |  `--surface-width-lg`  |
 
 ![Possíveis variações de bordas para uma superfície.](imagens/bordas2.png)
- *Variação das bordas possíveis para uma superfície previstas no DS.*
+ *Variação das bordas possíveis para uma superfície prevista no DS.*
 
 ##### 3. *Color*
 
@@ -234,7 +236,9 @@ Usado quando um texto precisa ser aplicado sobre uma superfície e o contraste e
 ![Exemplo de como o *overlay* pode melhorar a leitura de textos sobre fotos.](imagens/text-image.png)
 
 1. Imagem com texto (sem *overlay*): pouco contraste para leitura;
+
 2. Camada *overlay* com degradê;
+
 3. Imagem com texto (com *overlay*): maior contraste para leitura.
 
 |  Surface overlay Token   | Gradient          | Angle    | Color      | Color Opacity            | Hint | Color        | Color Opacity               | Hint   |
@@ -254,5 +258,7 @@ Porém, o uso do *overlay* deve ser claro e dentro do seu propósito descrito no
 ![Exemplo de como se pode criar uma nova tonalidade utilizando o recurso de overlay.](imagens/overlay.png)
 
 1. Superfície *overlay* "colorida" com opacidade 45%;
+
 2. Superfície com outra cor distinta;
+
 3. Nova tonalidade de cor gerada pela sobreposição das duas superfícies.

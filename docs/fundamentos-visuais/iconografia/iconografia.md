@@ -10,7 +10,7 @@ Os ícones são representações gráficas que podem simbolizar uma ação, comu
 
 Além da diversidade, foi considerado que o *Font Awesome* traria uma padronização visual dos ícones bastante importante no processo de reconhecimento e memorização pelos usuários. Optou-se pelo uso dos *estilos solid* (*style prefix*: `fas`) e a *brand* (*style prefix*: `fab`). Então as características gráficas, como preenchimento, peso visual devem ser preservadas no momento de construção de novos ícones.
 
-Espera-se por tanto, que o padrão gráfico dos ícones por ser utilizado em vários sistemas do governo federal, passe a exercer um papel importante no reconhecimento dos usuários, no que diz respeito a interfaces governamentais.
+Espera-se portanto, que o padrão gráfico dos ícones por ser utilizado em vários sistemas do governo federal, passe a exercer um papel importante no reconhecimento dos usuários, no que diz respeito a interfaces governamentais.
 
 Sendo assim, é imprescindível que o designer e o desenvolvedor priorizem a utilização dos ícones, como demonstrado na *Tabela de Orientações de Uso*. É fundamental atribuir os significados recomendados na tabela, evitando duplo sentido e facilitando o reconhecimento e memorização por parte do usuário.
 
@@ -61,8 +61,10 @@ São aqueles usados para transmitir um significado, ao invés de apenas servir d
 Se os ícones tiverem significado semântico, é preciso adicionar manualmente algumas coisas para que ele seja acessado apropriadamente:
 
 -   Atributo `aria-hidden`.
+
 -   Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado
 para ocultar visualmente o elemento, mantendo-o acessível a tecnologias assistivas.
+
 -   Atributo `title` no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
 
 ``` html
@@ -101,9 +103,11 @@ Obter a acessibilidade correta pode ser difícil, por isso, o *Font Awesome* sim
 
 Se o ícone possuir significado semântico, coloque um atributo `title=“meaning”`.  A acessibilidade automática cuida do resto, adicionando o seguinte:
 
-• Função ARIA adequada ( `role=“img”` )
-• Tag `title` com um atributo `id` adequado
-• Atributo `aria-labelledby`e conecte-o a uma tag `title`
+-   Função ARIA adequada ( `role=“img”` )
+
+-   Tag `title` com um atributo `id` adequado
+
+-   Atributo `aria-labelledby`e conecte-o a uma tag `title`
 
 ``` html
 <i title="Magic is included!" class="fas fa-magic"></i>
@@ -126,7 +130,7 @@ Interfaces digitais do governo devem ser reutilizáveis devido à diversidade de
 
 [Font Awesome](https://fontawesome.com/) É um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi criado por *Dave Gandy* para uso com o *Twitter Bootstrap* e mais tarde foi incorporado no *BootstrapCDN*.
 
-A versão 5.10.2 possui uma grande variedade de ícones. Foram expostos aqui, apenas alguns, para que seja constatado sua variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos que foram aqui apresentados, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode-se desenhar um novo, desde que, seja mantido o padrão visual já definido e passe posteriormente pela validação da equipe de *Design*.
+A versão 5.10.2 possui uma grande variedade de ícones. Foram expostos aqui apenas alguns, para que seja constatado sua variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos que foram aqui apresentados, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode-se desenhar um novo, desde que, seja mantido o padrão visual já definido e passe posteriormente pela validação da equipe de *Design*.
 
 No final deste documento, foi incluído as *orientações de uso* de alguns dos ícones e essa tabela deve ser seguida para que haja consistência entre os sistemas do governo.
 

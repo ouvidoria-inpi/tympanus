@@ -8,7 +8,7 @@ A aplicação correta da paleta de cores visa trazer consistência ao *Design Sy
 
 ### Experiência Única
 
-A paleta do Design System é constituída e organizada por cores e famílias de cores, abrangendo dimensões de matizes, brilhos e saturação. Além disso, são estabelecidas finalidades específicas para algumas dessas famílias: *Cores de Superfície*, *Cores de Leitura*, *Cores Interativas* e *Cores de Feedback*. Elas tem o objetivo de preservar a identidade visual e manter a mesma experiência em todos os produtos e sistemas do Governo Federal.
+A paleta do Design System é constituída e organizada por cores e famílias de cores, abrangendo dimensões de matizes, brilhos e saturação. Além disso, são estabelecidas finalidades específicas para algumas dessas famílias: *Cores de Superfície*, *Cores de Leitura*, *Cores Interativas* e *Cores de Feedback*. Elas têm o objetivo de preservar a identidade visual e manter a mesma experiência em todos os produtos e sistemas do Governo Federal.
 
 > *Exemplo:* Nesse sistema, a família *Blue Warm Vivid*, que contém a cor *Blue Warm Vivid 70*, foram as cores selecionadas para representar a identidade do Governo Federal.
 
@@ -40,7 +40,7 @@ O *Design System* do governo trabalha com nível de conformidade *mínima de AA*
 
 > Para testar a acessibilidade das cores foram utilizadas as seguintes ferramentas online [Contrast Checker](https://contrastchecker.com) e [Web AIM Contrast Checker](https://webaim.org/resources/contrastchecker)
 
-Para o *Design System* foi analisado a relação de contraste entre *a cor aplicada aos textos (2 variações que dependendo do brilho do plano de fundo da interface: claro ou escuro) e as cores que compõem a paleta do DS*.
+Para o *Design System* foi analisada a relação de contraste entre *a cor aplicada aos textos (2 variações que dependendo do brilho do plano de fundo da interface: claro ou escuro) e as cores que compõem a paleta do DS*.
 
 > *Exemplo:* Para o texto em *fundo claro* optou-se pelo uso do cinza *#333333* que possui contraste inferior ao preto, mas suficiente para uma boa leitura na tela. O tom neutro, deixa a composição mais leve, tornando a leitura mais agradável. Para texto em *fundo escuro* optou-se pela cor branca *#FFFFF*.
 
@@ -87,6 +87,7 @@ Abaixo é possível observar o padrão das famílias de cores do Design System d
 Existem algumas famílias que não estão visíveis dentro dos círculos cromáticos acima mas que podem ser usados como cores neutras:
 
 -   Famílias de Cinza: `Gray`, `Gray-Cool` e `Gray-Warm`.
+
 -   Família Pura: `Pure`
 
 A lista de todas as cores disponíveis podem ser encontradas na [Paleta do Design System](#paleta-do-govbr-ds).
@@ -97,7 +98,7 @@ A lista de todas as cores disponíveis podem ser encontradas na [Paleta do Desig
 
 O Design System estabelece finalidades específicas utilizando as famílias de cores, com o intuito de facilitar a lógica para criação de temas. Em cada função estabelecida, qualquer cor da família especificada poderá ser usada, porém é recomendado utilizar a cor principal ou as alternativas indicadas nas escalas de cores.
 
-**OBS:** Em algumas situações, poderá ser observado o uso 2 de famílias para um determinada função e aplicação de fundo. Isso acontece por causa do uso da *Família Pure*, ela funciona como uma "família de apoio" para as demais. Maiores informações veja Paleta do Design System.
+**OBS:** Em algumas situações, poderá ser observado o uso de duas famílias para um determinada função e aplicação de fundo. Isso acontece por causa do uso da *Família Pure*, ela funciona como uma "família de apoio" para as demais. Maiores informações veja Paleta do Design System.
 
 ### Cor Principal
 
@@ -988,8 +989,11 @@ No *eixo horizontal* temos as principais cores utilizadas para textos e ícones 
 **Legendas:**
 
 -   *AAA:* passa no nível AAA para texto de qualquer tamanho.
+
 -   *AA:* passa no nível AA para texto de qualquer tamanho e AAA para texto grande (acima de 18pt ou *bold* acima de 14pt).
+
 -   *x:* Contraste abaixo de 4,5. Não é recomendado no sistema de cores do Design System.
+
 -   *(número):* taxa de contraste segundo a WCAG 2.1.
 
 | Superfície/Texto                       | ![#FFFFFF](imagens/FFFFFF.png) #FFFFFF | ![#333333](imagens/333333.png) #333333 | ![#1351B4](imagens/1351B4.png) #1351B4 | ![#C5D4EB](imagens/C5D4EB.png) #C5D4EB |
@@ -1015,14 +1019,21 @@ Para checar qualquer combinação de cores não apresentadas na tabela, consulte
 ### Design Systems
 
 -   [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/)
+
 -   [Sistema de Cores do Material Design](https://material.io/design/color/the-color-system.html)
+
 -   [Carbon Design System](https://www.carbondesignsystem.com/)
+
 -   [Spectrum - Adobe Design System](https://spectrum.adobe.com/)
 
 ### Ferramentas e Utilitários
 
 -   [Contrast Ratio](https://contrast-ratio.com/)
+
 -   [Color Relative Luminance Calculator](https://contrastchecker.online/color-relative-luminance-calculator)
+
 -   [Color Kit](https://colorkit.io/shades-tints)
+
 -   [Paletton](https://paletton.com/)
+
 -   [HSL Color Picker](https://hslpicker.com/)

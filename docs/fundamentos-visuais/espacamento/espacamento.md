@@ -18,7 +18,7 @@ Os métodos de espaços usados no elemento devem ser claros.
 
 ### Acessibilidade
 
-Utilizar espaços entre os elementos é a melhor forma de proporcionar uma boa legibilidade e organização do conteúdo. No design existe um termo chamado de espaço em branco que ajudam neste contexto.
+Utilizar espaços entre os elementos é a melhor forma de proporcionar uma boa legibilidade e organização do conteúdo. No design existe um termo chamado de espaço em branco que ajuda neste contexto.
 
 Os espaços em branco (*white space* ou *negative space*) são recursos visuais que ajudam a tornar um *layout* mais agradável. Criam hierarquias informacionais (dando foco no que for mais importante) e criam relacionamento entre os elementos. Aplicando distância entre os não semelhantes e a proximidade entre os semelhantes.
 
@@ -53,7 +53,7 @@ Interfaces digitais do governo devem utilizar as escalas de espaçamentos existe
 
 ### Espaçamento Interno
 
-É frequentemente usado para criar espaços de respiro, facilitando a legibilidade de uma informação, além da endentação de textos e qualquer elemento contido em outro.
+É frequentemente usado para criar espaços de respiro, facilitando a legibilidade de uma informação, além da indentação de textos e qualquer elemento contido em outro.
 
 A propriedade `padding` define a área de espaçamento interno nos quatro lados do elemento. Podendo também ser descrito de forma separada: `padding-top` (cima), `padding-right` (direita), `padding-bottom` (baixo), e `padding-left` (esquerda).
 
@@ -77,7 +77,7 @@ Da mesma forma como acontece nas definições da Grid, nos elementos também pod
 
 Por padrão, os espaços devem ser respeitados, a não ser que seja detalhado o contrário na documentação do componente.
 
-Ao criar um componente, deve ser especificado se existe o comportamento de "sangria" (para os espaços internos de outros componentes, por exemplo) e deve-se verifique também, se o componente pai permite esse comportamento.
+Ao criar um componente, deve ser especificado se existe o comportamento de "sangria" (para os espaços internos de outros componentes, por exemplo) e deve-se verificar também, se o componente pai permite esse comportamento.
 
 ![Sangria](imagens/sangria.png)
 *Elementos "sangrando" dentro de um componente*
@@ -108,16 +108,20 @@ Dificilmente é encontrado um único método isolado no elemento. O mais comum �
 
 ### Dimensão
 
-As dimensões referem-se à largura e altura dos elementos. Os componentes descrevem a sua altura ou largura (seja por valores absolutos ou relativos), ou às vezes apenas estão atrelados as colunas de uma grid.
+As dimensões referem-se à largura e altura dos elementos. Os componentes descrevem a sua altura ou largura (seja por valores absolutos ou relativos), ou às vezes apenas estão atrelados às colunas de uma grid.
 
 Neste método, o espaçamento interno do elemento pode variar fazendo com que métodos fixos (como de escala) não façam muito sentido.
 
 Ao especificar as dimensões de um elemento, deve-se utilizar as boas práticas descritas abaixo:
 
 -   Evitar fixar valores absolutos nas dimensões dos componentes quando ele for constituído por vários elementos internos. É preferível adicionar regras aos elementos filhos para controlar as dimensões do pai.
+
 -   Quando fixar valores absolutos nas dimensões pode ser importante detalhar a largura e altura máxima/mínima para evitar comportamentos indesejados na *interface*.
+
 -   Ao especificar valores absolutos, deve-se utilizar o incremento *Escala Layout* como base.
+
 -   Caso o elemento utilize a grid como referência na dimensão, é necessário especificar quantas colunas o componente deve utilizar. É importante não esquecer de definir essa especificação em cada *breakpoint*.
+
 -   Nos textos, deve-se trabalhar o conceito de entrelinhamento para controlar melhor os espaços que serão ocupados na interface. Para maiores detalhes veja [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia).
 
 ![Exemplo de Dimensão](imagens/dimensao-exemplo.png)
@@ -151,7 +155,7 @@ São 2 tipos de alinhamento, cada um com 3 propriedades possíveis e que, em con
 | `--spacing-horizontal-center` | Center      |
 | `--spacing-horizontal-right`  | Right       |
 
-Por padrão, as os alinhamentos são `--spacing-vertical-top` e `--spacing-horizontal-left`.
+Por padrão, os alinhamentos são `--spacing-vertical-top` e `--spacing-horizontal-left`.
 
 ### Escala
 
@@ -172,7 +176,7 @@ A escala de espaçamento refere-se aos tipos de espaçamento (interno e  externo
 
 Escala base para os componentes e templates. Possui o incremento base de 8px.
 
-É utilizada para posicionar e hierarquizar componentes em uma interface, criar áreas de  respiro e de proteção, entre outros. Ela é escala mais utilizada pela sua flexibilidade, pois permite o uso em *qualquer tipo de elemento*, além de criar posicionamentos mais perceptíveis.
+É utilizada para posicionar e hierarquizar componentes em uma interface, criar áreas de  respiro e de proteção, entre outros. Ela é a escala mais utilizada pela sua flexibilidade, pois permite o uso em *qualquer tipo de elemento*, além de criar posicionamentos mais perceptíveis.
 
 ![Escala Layout](imagens/escala-layout.png)
 *Escala Layout*

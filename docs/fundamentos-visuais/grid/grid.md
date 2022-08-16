@@ -48,7 +48,9 @@ O sistema de *grid* para o *Design System* do Governo Federal adequa-se a cinco 
 Existem 3 tipos de *grid*:
 
 -   *4 Colunas*;
+
 -   *8 Colunas*;
+
 -   *12 Colunas*.
 
 Cada uma delas deve ser utilizada em um determinado *breakpoint*.
@@ -62,7 +64,7 @@ O conteúdo deve ser reorganizado em *4 colunas* respeitando a margem de *8px* n
 Recomenda-se o uso do comportamento de *grid* fluida. Evite o uso do comportamento fixo para esta *grid*.
 
 | *Property*   | *Value*               |
-| ------------ | --------------------- |  |
+| ------------ | --------------------- |
 | *max-width*  | até 559px             |
 | *gutter*     | 16px                  |
 | *columns*    | 4                     |
@@ -70,6 +72,7 @@ Recomenda-se o uso do comportamento de *grid* fluida. Evite o uso do comportamen
 | *breakpoint* | *Smartphone Portrait* |
 
 -   Para comportamento fluido o valor sempre será 100%;
+
 -   Margem mínima no comportamento fixo.
 
 ![Grid 4 colunas](imagens/grid-04colunas.png)
@@ -84,7 +87,7 @@ Essa *grid* pode ser utilizada em dois *breakpoints* distintos. Um voltado para 
 Recomenda-se o uso do comportamento de *grid* fluido. Utilize o comportamento fixo com cautela (geralmente em *tablet landscape*).
 
 | *Property*   | *Value*                                                                                            |
-| ------------ | -------------------------------------------------------------------------------------------------- |  |
+| ------------ | -------------------------------------------------------------------------------------------------- |
 | *max-width*  | de 496px até 911px (*tablet* e *smartphone landscape*) ou de 912px até 1199px (*tablet landscape*) |
 | *gutter*     | 24px                                                                                               |
 | *columns*    | 8                                                                                                  |
@@ -92,6 +95,7 @@ Recomenda-se o uso do comportamento de *grid* fluido. Utilize o comportamento fi
 | *breakpoint* | *Smartphone Landscape / Tablet Portrait ou Tablet Landscape*                                       |
 
 -   Para comportamento fluido o valor sempre será 100%;
+
 -   Margem mínima no comportamento fixo.
 
 ![Grid 8 colunas](imagens/grid-08colunas.png)
@@ -112,10 +116,11 @@ O espaçamento das colunas é de *24 pixels*.
 A recomendação do uso de *grid* fluida ou fixa é variável pois depende do tipo de conteúdo utilizado:
 
 -   **Grid fluida**: é recomendada para sistemas ou situações em que é preciso aproveitar a maior parte do espaço útil da tela do dispositivo.
+
 -   **Grid fixa**: recomenda-se para portais ou conteúdos informativos (como *sites* de notícia) em que o conteúdo não deve sofrer muita distorção, mantendo a leitura consistente.
 
 | *Property*   | *Value*              |
-| ------------ | -------------------- |  |
+| ------------ | -------------------- |
 | *max-width*  | de 1200px até 1519px |
 | *gutter*     | 24px                 |
 | *columns*    | 12                   |
@@ -123,6 +128,7 @@ A recomendação do uso de *grid* fluida ou fixa é variável pois depende do ti
 | *breakpoint* | *Desktop*            |
 
 -   Para comportamento fluido o valor sempre será 100%;
+
 -   Margem mínima no comportamento fixo.
 
 ![Grid 12 colunas](imagens/grid-12colunas.png)
@@ -137,7 +143,7 @@ Recomenda-se o uso da *grid* fixa. Por possuir uma área útil extensa pode caus
 Utilize o comportamento fluido com cautela.
 
 | *Property*   | *Value*            |
-| ------------ | ------------------ |  |
+| ------------ | ------------------ |
 | *max-width*  | a partir de 1520px |
 | *gutter*     | 40px               |
 | *columns*    | 12                 |
@@ -145,6 +151,7 @@ Utilize o comportamento fluido com cautela.
 | *breakpoint* | *TV*               |
 
 -   Para comportamento fluido o valor sempre será 100%;
+
 -   Margem mínima no comportamento fixo.
 
 ![Grid 12 colunas](imagens/grid-12colunas.png)
@@ -210,8 +217,11 @@ Responsividade é a forma como se estrutura a interface em diferentes resoluçõ
 Pontos importantes quando tratamos de responsividade:
 
 1. **Breakpoint Vs Dispositivo**: apesar de ser uma correlação, o uso de uma determinada resolução não significa que o usuário esteja com o dispositivo X ou Y. Eventualmente pode ter sido alterado o espaço útil do navegador em um *desktop* ou apenas o modo paisagem/retrato em um *tablet* (girando o dispositivo). A interface deve funcionar independentemente do dispositivo; principalmente os elementos interativos (seja por toque ou clique).
+
 2. **Navegação**: a navegação deve ser revista em cada *breakpoint* utilizado. Baixas resoluções muitas vezes requerem uma área de interação ou textos maiores. Componentes voltados à navegação devem ser sempre validados.
+
 3. **Clique Vs Toque**: em resoluções mais baixas o uso de interação por toque é mais comum e o contrário também é verdade. Trabalhe melhor essa questão quando adaptar o *layout* a diferentes *grids*. Utilize o ponto forte de cada interação, como uso de "gestos" para criar interfaces voltadas ao toque, por exemplo. Não esqueça que focar em um modo de interação não significa esquecer o outro.
+
 4. **Testar**: a melhor maneira de garantir uma boa experiência é testando a interface na maior quantidade possível de cenários diferentes. Realize uma bateria de testes considerando todos os cenários levantados anteriormente. Valide sua interface a cada *breakpoint*.
 
 #### Entendendo uma *grid* responsiva
@@ -267,7 +277,7 @@ Tenha em mente que, em uma mesma interface, pode existir grupos de elementos est
 
 Objetos temporários são elementos ou regiões que surgem temporariamente. Podem ser ocultados ou visualizados ao interagir com um item da interface. Podem ser categorizados em *flutuantes* ou *persistentes*.
 
-**Observação**: é importante que o elemento temporário esteja localizado próxima da área de conteúdo (`Max-width`) ou no limite do tamanho mínimo da margem da *grid* principalmente quando utilizadas *grids* fixas que podem possuir margens muito extensas.
+**Observação**: é importante que o elemento temporário esteja localizado próxima da área de conteúdo (`Max-width`) ou no limite do tamanho mínimo da margem da *grid*, principalmente quando utilizadas *grids* fixas que podem possuir margens muito extensas.
 
 #### Flutuantes
 
