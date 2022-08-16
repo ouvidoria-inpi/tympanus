@@ -28,7 +28,7 @@ Para construir um *card* é necessária uma superfície branca com sombra e uma 
 
 ### 1. Superfície (Obrigatório)
 
-São formas indivisíveis que podem conter um ou mais elementos definidas que apresentam informações em detalhes sobre algo. Nele, você pode dispor suas informações como desejar, com links, imagens e outros elementos.
+São formas indivisíveis que podem conter um ou mais elementos definidos que apresentam informações em detalhes sobre algo. Nele, você pode dispor suas informações como desejar, com links, imagens e outros elementos.
 
 ### 2. Área (Obrigatório)
 
@@ -54,7 +54,7 @@ A seguir, são apresentadas algumas regras para orientação na criação dos *c
 
 ### 1. Blocos formatados
 
-A fim de facilitar a criação dos *cards*, o *Design System* já disponibiliza blocos pré-formatados das três áreas que compõe um *card* (título, conteúdo e ação). Fica muito fácil juntar as partes e montar um *card* do zero sem se preocupar com regras de diagramação.
+A fim de facilitar a criação dos *cards*, o *Design System* já disponibiliza blocos pré-formatados das três áreas que compõem um *card* (título, conteúdo e ação). Fica muito fácil juntar as partes e montar um *card* do zero sem se preocupar com regras de diagramação.
 
 ![Exemplo regra construção.](imagens/regra-construcao.png)
 *Exemplo de construção de um card a partir de blocos isolados.*
@@ -70,7 +70,7 @@ A fim de facilitar a criação dos *cards*, o *Design System* já disponibiliza 
 
 ### 2. Margens
 
-Os componentes dentro dos *cards* devem respeitar as margens definida nos *tokens* entre cada um dos lados da superfície. Na imagem abaixo podemos perceber que a área branca é a área em que os componentes estão contidos.
+Os componentes dentro dos *cards* devem respeitar as margens definidas nos *tokens* entre cada um dos lados da superfície. Na imagem abaixo podemos perceber que a área branca é a área em que os componentes estão contidos.
 
 ![Exemplo de margens em um card.](imagens/margens.png)
 *Exemplo de margens em um card.*
@@ -94,6 +94,7 @@ Os *cards* devem possuir ainda uma **área de respiro**, isto é, o espaço mín
 As dimensões da **área de conteúdo** do *card* podem ter dois comportamentos distintos, conforme a necessidade do *layout*:
 
 -   Flexível;
+
 -   Fixa.
 
 #### Fixa

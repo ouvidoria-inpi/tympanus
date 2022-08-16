@@ -6,6 +6,7 @@
 Utilize o *Textarea* quando:
 
 -   Houver a necessidade de inserir dados de forma textual através de um sistema ou aplicação;
+
 -   A informação textual requerida for relativamente longa, exigindo múltiplas linhas de texto.
 
 ---
@@ -133,7 +134,7 @@ Na Grid de 4 colunas, o *Textarea* deverá se estender por toda largura da tela,
 
 ### 2. Redimensionamento
 
-Através do *Ícone de Redimensionamento*, o *Textarea* poderá ser re-ajustado tanto na horizontal quanto na vertical ou em ambas as dimensões simultaneamente. Observe os exemplos abaixo:
+Através do *Ícone de Redimensionamento*, o *Textarea* poderá ser reajustado tanto na horizontal quanto na vertical ou em ambas as dimensões simultaneamente. Observe os exemplos abaixo:
 
 ![Redimensionamento Horizontal](imagens/resize-horizontal.png)
 *Redimensionamento Horizontal*
@@ -172,7 +173,7 @@ O *Componente Textarea* possui o comportamento de contagem de caracteres. Este c
 
 Compreende em definir uma quantidade máxima de caracteres e através do *Texto Auxiliar* a quantidade restante de caracteres será atualizada dinamicamente enquanto o usuário digitar. Veja o exemplo abaixo:
 
-1 - O usuário ainda não começou digitar no campo de texto. O *Texto Auxiliar* informa ao usuário o limite máximo de caracteres permitidos.
+1 - O usuário ainda não começou a digitar no campo de texto. O *Texto Auxiliar* informa ao usuário o limite máximo de caracteres permitidos.
 
 2 - O usuário está digitando o texto. A informação de caracteres restantes é atualizada dinamicamente no *Texto Auxiliar*.
 

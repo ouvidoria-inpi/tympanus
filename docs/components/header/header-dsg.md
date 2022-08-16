@@ -46,13 +46,15 @@ Utilize o *Header* quando necessitar identificar o nome do site/sistema, agrupar
 Existem três tamanhos para a logo. Cada um usado para um nível ênfase determinado:
 
 1. **Large**: maior ênfase
+
 2. **Medium**: média ênfase
+
 3. **Small**: baixa ênfase
 
 ![Tamanhos Logo](imagens/header-anatomy-4.png)
 *Tamanhos das Logos*
 
-**OBS:** Logos (imagens) são limitadas pela a altura. É recomendada que a largura tenha, no máximo, 4x a dimensão da altura (ênfase) escolhida.
+**OBS:** Logos (imagens) são limitadas pela altura. É recomendada que a largura tenha, no máximo, 4x a dimensão da altura (ênfase) escolhida.
 
 **Large**: Usado quando temos espaço disponível e queremos dar maior destaque para marca do sistema/site. Comum no *Header* Padrão (Grid de 12 e 8 colunas);
 
@@ -106,7 +108,7 @@ Ele é o único elemento obrigatório dentro do *Header*, porém, é possível u
 
 ##### Tamanho da Fonte
 
-O tamanho da tipografia no título do Header muda conforme se adéqua às diferentes resoluções e Grids. Essas mudanças ocorrem nas mudanças de *Breakpoints*.
+O tamanho da tipografia no título do Header muda conforme se adequa às diferentes resoluções e Grids. Essas mudanças ocorrem nas mudanças de *Breakpoints*.
 
 ![Exemplo Header - Diferentes Grids](imagens/header-behaviour-title-default.png)
 *Diferentes tamanhos para tipografia em cada grid*
@@ -185,7 +187,7 @@ Preferencialmente, utilize o *Sign-in* na versão com densidade alta.
 
 ### 9. Avatar do Usuário (Opcional)
 
-O Avatar do Usuário é um elemento opcional que consiste em uma imagem (ou ícone, caso o usuário não tenho escolhido uma foto para representá-lo no ambiente virtual) e dá acesso a algumas ferramentas úteis à configuração do usuário e notificações do sistema. *Este elemento só será apresentado quando o usuário estiver autenticado* no ambiente. A opção de *Logout* ou *Sair* ficará disponível no elemento *Dropdown* após o clique/toque no *Componente Avatar*.
+O Avatar do Usuário é um elemento opcional que consiste em uma imagem (ou ícone, caso o usuário não tenha escolhido uma foto para representá-lo no ambiente virtual) e dá acesso a algumas ferramentas úteis à configuração do usuário e notificações do sistema. *Este elemento só será apresentado quando o usuário estiver autenticado* no ambiente. A opção de *Logout* ou *Sair* ficará disponível no elemento *Dropdown* após o clique/toque no *Componente Avatar*.
 
 ![Avatar Usuário](imagens/header-anatomy-9.png)
 *Avatar Usuário*
@@ -199,7 +201,7 @@ Há disponível um documento com maiores detalhes do componente Avatar. Por favo
 
 Através deste *Input* o usuário poderá realizar pesquisa no Site/Sistema por palavra-chave. Este elemento é opcional e deve ser usado de acordo com a necessidade de cada Site/Sistema.
 
-O *Input* foi estilizado para se adaptador as características de um *header*. O detalhe desse novos estilos estão descritos na área de *Especificação*.
+O *Input* foi estilizado para se adaptar às características de um *header*. O detalhe desse novos estilos estão descritos na área de *Especificação*.
 
 Abaixo seguem os exemplos de visualização da Busca no Header para diferentes *breakpoints*.
 
@@ -226,7 +228,7 @@ O usuário deverá clicar sobre o ícone `th` e uma **Lista Dropdown** aparecer�
 
 ### 12. Superfície (Obrigatório)
 
-A superfície foi utilizada para agrupar melhor todos os elementos que compõem o componente *Header*. Ela não possui um altura fixa (somente um espaçamento interno padrão), sendo flexível, se ajustando conforme a distribuição dos elementos internos.
+A superfície foi utilizada para agrupar melhor todos os elementos que compõem o componente *Header*. Ela não possui uma altura fixa (somente um espaçamento interno padrão), sendo flexível, se ajustando conforme a distribuição dos elementos internos.
 
 ### 13. Separadores (Obrigatório)
 
@@ -238,7 +240,7 @@ Também são recomendados para serem utilizados em imagens (como a Logo), sempre
 
 ## Tipos
 
-É possível criar infinidades diferentes de *headers* que atendam diferentes necessidades. Esses "tipos" dependem de como se deseja configurar os elementos que estão previstos neste componente (veja [Detalhe dos Elementos](#detalhe-dos-elementos)).
+É possível criar infinidades diferentes de *headers* que atendem diferentes necessidades. Esses "tipos" dependem de como se deseja configurar os elementos que estão previstos neste componente (veja **Detalhe dos Elementos**).
 
 Recomendamos duas configurações que podem atender a maioria das situações: *Padrão* e *Compacto*.
 
@@ -292,12 +294,14 @@ O componente *Header* deve se comportar de forma fluida em relação à resoluç
 
 ### 2. Densidade
 
-Conforme descrito em [Responsividade](#1-responsividade), o *header* possui um comportamento fluido em relação a grid utilizada, além de utilizar o conceito de sangria na grid. Por tanto, por padrão, o *header* só possui um espaçamento superior e inferior.
+Conforme descrito em **Responsividade**, o *header* possui um comportamento fluido em relação a grid utilizada, além de utilizar o conceito de sangria na grid. Por tanto, por padrão, o *header* só possui um espaçamento superior e inferior.
 
 Esses espaçamento podem assumir valores pré-definidos para cada tipo de *header* utilizado, podendo ainda sim, ser modificados:
 
 -   **Densidade Alta:** utilizada quando se pretende ocupar menos espaço útil na interface.
+
 -   **Densidade Padrão:** Funciona na maioria dos layouts.
+
 -   **Densidade Baixa:** utilizado quando o *header* precisa se destacar dentro da interface.
 
 ![Densidades Alta Padrão e Baixa](imagens/header-densidade.png)
@@ -319,12 +323,15 @@ Em se tratando de Header do tipo Padrão, a busca funciona como um *input* comum
 Ao acionar o ícone de "Lupa", o *Header* recebe um contexto de busca, apresentando as seguintes características:
 
 -   Todos os elementos exibidos no Header são ocultados;
+
 -   O *input* preenche todo a largura do Header recebendo o estado *Focus*;
+
 -   Um *Button* circular surge com a ação para "fechar" o *input*;
 
 Quando *Button* fechar é acionado:
 
 -   O *Header* volta para o contexto anterior, voltando todos os elementos que antes eram visíveis;
+
 -   Tanto o *Input* como o *button* desaparecem.
 
 ##### Normal
@@ -401,7 +408,7 @@ Em resumo, ele assume as características de um *header* compacto.
 ![Sticky Header rolagem](imagens/header-behavior-sticky-header-2.png)
 *Sticky Header rolagem*
 
-Neste formato, quando a *busca é acionada*, esta assume o formato mostrado abaixo, ocupando toda largura do cabeçalho.
+Neste formato, quando a *busca é acionada*, esta assume o formato mostrado abaixo, ocupando toda a largura do cabeçalho.
 
 ![Sticky Header Busca Acionada](imagens/header-behavior-sticky-header-3.png)
 *Sticky Header Busca Acionada*
@@ -416,12 +423,12 @@ Neste formato, quando a *busca é acionada*, esta assume o formato mostrado abai
 ![Header Compacto rolagem - Sticky Header](imagens/header-compact-behavior-sticky-header-2.png)
 *Header Compacto rolagem - Sticky Header*
 
-Com a *Busca ativa*, o campo de pesquisa ocupará toda largura do Cabeçalho.
+Com a *Busca ativa*, o campo de pesquisa ocupará toda a largura do Cabeçalho.
 
 ![Header Compacto rolagem - Sticky Header - Busca ativa](imagens/header-compact-behavior-sticky-header-3.png)
 *Header Compacto rolagem - Sticky Header - Busca ativa*
 
-**Atenção:** sempre que o *header* estiver com o comportamento *sticky* deverá necessariamente utilizar o recurso de sombra, pois o componente passar a pertencer à *camada 3*. Consulte o documento Fundamento > Elevação para entender melhor o conceito de camadas.
+**Atenção:** sempre que o *header* estiver com o comportamento *sticky* deverá necessariamente utilizar o recurso de sombra, pois o componente passa a pertencer à *camada 3*. Consulte o documento Fundamento > Elevação para entender melhor o conceito de camadas.
 
 ---
 

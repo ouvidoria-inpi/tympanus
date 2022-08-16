@@ -5,16 +5,16 @@
 
 Trata-se de um componente obrigatório  em *sites* e aplicativos que fazem a coleta de qualquer dado do usuário e deve ser utilizado na tela inicial ficando sempre visível, até que o usuário dê o consentimento ou revogue o tratamento dos dados.
 
-[Confira o texto oficial da lei nº 13.709/18](http://www.planalto.gov.br/ccivil*03/*ato2015-2018/2018/lei/L13709.htm)
+[Confira o texto oficial da lei nº 13.709/18](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm)
 
 ![Gráfico extraído do portal do Serpro representando os principais pontos tratados pela lei nº 13.709/18. ](imagens/infografico.jpg)
-*Infográfico com resumo dos pontos mais importantes da lei nº 13.709/18, extraído do [Portal do Serpro](https://serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd)*
+*Infográfico com resumo dos pontos mais importantes da lei nº 13.709/18, extraído do Portal do Serpro*
 
 ---
 
 ## Tom e voz
 
-Apesar de tratar de um tema bastante técnico procure ser o mais claro e objetivo possível. Utilize vocabulário e termos simples e de fácil entendimento por leigos. Lembre-se que seu usuário não é obrigado a compreender expressões específicas restritas a áreas técnicas.
+Apesar de tratar de um tema bastante técnico, procure ser o mais claro e objetivo possível. Utilize vocabulário e termos simples e de fácil entendimento por leigos. Lembre-se que seu usuário não é obrigado a compreender expressões específicas restritas a áreas técnicas.
 
 ---
 
@@ -23,6 +23,7 @@ Apesar de tratar de um tema bastante técnico procure ser o mais claro e objetiv
 Tenha em mente que o *cookieBar* é um componente único, no entanto, para facilitar a explicação este guia o divide em duas etapas:
 
 -   **CookieBar default**: etapa em que o usuário se encontra na tela inicial;
+
 -   **CookieBar aberto**: etapa em que o usuário interage com o botão "Definir Cookies" ou "Ver Política de Cookies".
 
 | ID  | Nome                                                           |                                  Referência                                   | Uso         |
@@ -112,7 +113,7 @@ Pensando em toda complexidade e cenários existentes, o componente foi desenvolv
 
 1- É recomendável sempre que possível a utilização do padrão *opt out*. Nesse caso o *cookieBar* deve apresentar os botões: **Definir Cookies** e **Aceitar**.
 
--   Ao acionar o botão *Aceitar*, o usuário informa ao sistema que aceita a configuração padrão de *cookies* pré-definida pelo sistema. O *cookieBar* é então recolhido com um movimento para baixo (micro interação) e o usuário está pronto para navegar pelo *site*.
+-   Ao acionar o botão *Aceitar*, o usuário informa ao sistema que aceita a configuração padrão de *cookies* predefinida pelo sistema. O *cookieBar* é então recolhido com um movimento para baixo (micro interação) e o usuário está pronto para navegar pelo *site*.
 
 -   Ao acionar o botão *"Definir Cookies"* o usuário é levado à etapa *cookieBar* aberto e tem a possibilidade de configurar os *cookies* conforme o seu desejo, além de ter acesso às informações técnicas a respeito dos *cookies* utilizados pelo sistema.
 
@@ -130,7 +131,7 @@ O  **cookieBar na etapa default** deve ser disponibilizado sempre no primeiro ac
 
 O *cookieBar default* só é apresentado no primeiro acesso do usuário e só pode ser fechado se o usuário aceitar os termos definidos pelo texto apresentado. A partir de então os dados são armazenados pelo sistema e o *cookieBar* não estará mais disponível ao usuário. Caso o usuário deseje redefinir os *cookies* poderá fazê-lo por meio de um item de menu localizado no *header* do *site*/aplicativo (ou outro local de destaque).
 
-**Atenção:** quando o componente *cookieBar default* é apresentado, o conteúdo da tela pode estar bloqueado. Esse comportamento é opcional é varia de acordo com cada regra de negócio. Quando estiver bloqueado, utilize uma camada de superfície transparente (*scrim*) para demonstrar que não é possível navegar enquanto não houver a concordância com a política de *cookies* apresentada pelo *cookieBar default*.
+**Atenção:** quando o componente *cookieBar default* é apresentado, o conteúdo da tela pode estar bloqueado. Esse comportamento é opcional e varia de acordo com cada regra de negócio. Quando estiver bloqueado, utilize uma camada de superfície transparente (*scrim*) para demonstrar que não é possível navegar enquanto não houver a concordância com a política de *cookies* apresentada pelo *cookieBar default*.
 
 ![Exemplo da tela inicial com conteúdo bloqueado pelo scrim e com cookieBar default](imagens/scrim.png)
 *Exemplo da tela inicial com conteúdo bloqueado (scrim) pelo cookieBar default*
@@ -146,16 +147,16 @@ Esta etapa deve apresentar tudo o que o usuário necessita para entender como ca
 
 #### Classes
 
-Quando houver grupos de *cookies* que apresentem algum tipo de relação entre si eles poderão ser agrupados em *classes*. Cada classe exibe entre parênteses a quantidade de *cookies* que contem. Para expandir uma classe e ter acesso a cada um dos *cookies* basta clicar na seta correspondente à classe desejada.
+Quando houver grupos de *cookies* que apresentem algum tipo de relação entre si eles poderão ser agrupados em *classes*. Cada classe exibe entre parênteses a quantidade de *cookies* que contém. Para expandir uma classe e ter acesso a cada um dos *cookies* basta clicar na seta correspondente à classe desejada.
 
 **Atenção:** agrupar os *cookies* por afinidades é uma boa maneira de organizar o conteúdo mas cada produto pode estruturar a informação da forma que achar mais apropriada.
 
-A figura 1 ilustra o caso em que só é permitida ao usuário a seleção de *checkbox* para toda a classes. Já na figura 2 é possível selecionar cada *cookie* individualmente por meio de *switches*.
+A figura 1 ilustra o caso em que só é permitida ao usuário a seleção de *checkbox* para toda as classes. Já na figura 2 é possível selecionar cada *cookie* individualmente por meio de *switches*.
 
 ![Esta imagem apresenta duas figuras: a figura um ilustra o caso em que ao usuário só é permitida a seleção de cookies por classes. Já na figura dois é possível selecionar cada cookie individualmente.](imagens/switches.png)
 *Exemplos das possibilidades de uso dos switches*
 
-**Atenção:** geralmente o usuário ativa/desativa a classe de *cookies*, mas também é possível definir *cookies* individualmente, conforme a necessidade de cada caso. Há também a possibilidade de o usuário selecionar/desselecionar todas as classes por meio de um *checkbox* localizado no *header* da lista de *cookies*. Entre parêntese é possível informar ao usuário quantos *cookies* foram selecionados em relação ao total.
+**Atenção:** geralmente o usuário ativa/desativa a classe de *cookies*, mas também é possível definir *cookies* individualmente, conforme a necessidade de cada caso. Há também a possibilidade de o usuário selecionar/desselecionar todas as classes por meio de um *checkbox* localizado no *header* da lista de *cookies*. Entre parênteses é possível informar ao usuário quantos *cookies* foram selecionados em relação ao total.
 
 ![Exemplo de uso de seleção de checkbox no modo intermediário.](imagens/checkbox.png)
 *Exemplos das possibilidades de uso dos checkboxes apresentando a possibilidade do checkbox em um modo intermediário e a informação da quantidade de cookies selecionados*
@@ -181,7 +182,7 @@ O último item da lista é o **Aviso sobre cookies**. Nesse item o usuário enco
 ![Exemplo da tela de conteúdo com o item informações rápida sobre assuntos gerais aberto.](imagens/lgpd-cookies-aviso.png)
 *Exemplo de informações rápida sobre assuntos gerais*
 
-**Atenção:** o padrão de pergunta-respostas é amplamente aceito na internet por ser uma forma rápida e objetiva de transmitir informação e por isso é bastante recomendável. Porém, o conteudista é sempre livre para criar o conteúdo da maneira que for mais interessante para seu negócio.
+**Atenção:** o padrão de perguntas-respostas é amplamente aceito na internet por ser uma forma rápida e objetiva de transmitir informação e por isso é bastante recomendável. Porém, o conteudista é sempre livre para criar o conteúdo da maneira que for mais interessante para seu negócio.
 
 #### Botão fechar
 
@@ -192,14 +193,14 @@ A qualquer momento, independentemente de haver definido os *cookies* ou não, é
 
 **Atenção:** lembre-se que ao fechar o *cookieBar* sem aceitar a política de *cookie* o usuário poderá ter uma navegação comprometida (ou mesmo bloqueada, dependendo do caso) e ainda assim seus dados poderão ser gravados. **Deixe essa informação de forma explícita no texto da área de conteúdo do cookieBar default.**
 
-É interessante que o sistema apesente uma mensagem ao usuário informando que os *cookies* não foram efetivamente salvos e que caso tenha sido feita algumas seleções, elas serão perdidas. Além disso, é de bom tom informar ao usuário como é possível retornar ao *cookieBar* para configurar ou reconfigurar os *cookies*.
+É interessante que o sistema apresente uma mensagem ao usuário informando que os *cookies* não foram efetivamente salvos e que caso tenham sido feitas algumas seleções, elas serão perdidas. Além disso, é de bom tom informar ao usuário como é possível retornar ao *cookieBar* para configurar ou reconfigurar os *cookies*.
 
 ![Exemplo de mensagem global do sistema informando que os cookies não foram salvos.](imagens/mensagem.png)
 *Exemplo de mensagem global do sistema alertando ao usuário que um os cookies selecionados não foram salvos*
 
 ### 4. Mensagens
 
-Caso o usuário desabilite um *cookie* essencial que comprometa a experiência de navegação um aviso deve ser apresentado e desta forma o usuário poderá decidir se manterá a sua escolha.
+Caso o usuário desabilite um *cookie* essencial que comprometa a experiência de navegação, um aviso deve ser apresentado e desta forma o usuário poderá decidir se manterá a sua escolha.
 Esta mensagem deve ser exibida logo abaixo do *checkbox* ou *switch* correspondente ao clique do usuário, de acordo com as imagens a seguir:
 
 ![Exemplo de mensagem ao desabilitar um cookie essencial para a performance do site/aplicativo no nível global.](imagens/lgpd-message.png)
@@ -215,7 +216,7 @@ Esta mensagem deve ser exibida logo abaixo do *checkbox* ou *switch* corresponde
 
 ### 5. Responsividade
 
-Tudo o que é mencionado sobre o uso do *cookieBar* neste documento deve ser considerado para todas as resoluções. O componente *cookieBar* e todo o conteúdo devem se adaptar à qualquer resolução. A seguir, é ilustrado como exemplo os *layouts* deste componente na resolução de quatro colunas:
+Tudo o que é mencionado sobre o uso do *cookieBar* neste documento deve ser considerado para todas as resoluções. O componente *cookieBar* e todo o conteúdo devem se adaptar a qualquer resolução. A seguir, é ilustrado como exemplo os *layouts* deste componente na resolução de quatro colunas:
 
 ![Exemplo de fluxo de telas mostrando como fica aplicação do componente cookieBar em resolução de quatro colunas.](imagens/lgpd-mobile.png)
 *Exemplo de aplicação do componente cookieBar em resolução de quatro colunas*
@@ -236,7 +237,7 @@ Tudo o que é mencionado sobre o uso do *cookieBar* neste documento deve ser con
 
 -   É interessante pensar na possibilidade de oferecer suporte para o usuário entrar em contato caso necessite tirar algum tipo de dúvida.
 
--   Caso haja uma alteração na política de *cookies* após o usuário já houver definido as suas escolhas, o *cookieBar* deverá ser apresentado novamente com o texto explicando o motivo a solicitação de nova ação por parte do usuário. Todo o procedimento é idêntico ao já explicado neste documento.
+-   Caso haja uma alteração na política de *cookies* após o usuário já houver definido as suas escolhas, o *cookieBar* deverá ser apresentado novamente com o texto explicando o motivo da solicitação de nova ação por parte do usuário. Todo o procedimento é idêntico ao já explicado neste documento.
 
 ---
 

@@ -6,7 +6,9 @@
 Utilize o componente *input* quando:
 
 -   houver a necessidade de inserir ou enviar dados de forma textual por meio de um sistema ou aplicação;
+
 -   houver a necessidade de realizar uma requisição de busca ou pesquisa por meio de um sistema ou aplicação com o uso de palavra-chave;
+
 -   a informação textual requerida for relativamente curta e objetiva.
 
 ---
@@ -42,10 +44,11 @@ Além disso, o Rótulo também tem a função de indicar ao usuário se o *Campo
 
 #### Posicionamento do rótulo
 
-Por padrão o rotulo é posicionado no tipo do campo de texto, mas caso haja necessidade, pode ser utilizado à esquerda-centralizado do campo de texto.
+Por padrão o rótulo é posicionado no tipo do campo de texto, mas caso haja necessidade, pode ser utilizado à esquerda-centralizado do campo de texto.
 
 ![Posicionamento do rótulo](imagens/input-label.png)
-*A - Posicionamento padrão do rótulo. B - Posicionamento alternativo, à esquerda do Campo de Texto.*
+*A - Posicionamento padrão do rótulo.*
+*B - Posicionamento alternativo, à esquerda do Campo de Texto.*
 
 **Atenção:** ao optar por um tipo de posicionamento, recomenda-se que todos os campos na página sigam o mesmo posicionamento, seja no topo ou na lateral do campo.
 
@@ -69,7 +72,7 @@ O componente *input* também prevê o uso de ícone, de forma opcional, como man
 
 ### 4. Ação interna (Opcional)
 
-Este elemento é opcional e visa auxiliar o usuário sobre ações referentes ao campo de entrada de texto. Por padrão é utilizado um *Button* de enfase terciária do tipo circular sempre com densidade alta, e o ícone deve representar a ação a ser realizada na interação.
+Este elemento é opcional e visa auxiliar o usuário sobre ações referentes ao campo de entrada de texto. Por padrão é utilizado um *Button* de ênfase terciária do tipo circular sempre com densidade alta, e o ícone deve representar a ação a ser realizada na interação.
 
 ![Exemplo de Botão Circular](imagens/input-icon.png)
 *Exemplo da ação visualizar/ocultar senha no campo de entrada.*
@@ -144,7 +147,7 @@ Neste exemplo, os *Campos Telefone*, *UF* e *Senha*, foram posicionados nas linh
 
 #### *Grid* de 4 colunas
 
-Na *grid* de 4 colunas, recomenda-se que o *Input* se estenda por toda largura a da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizado o *input* com a densidade baixa, com a finalidade de aumentar a área de *touch*. Consulte Comportamento [Densidade](https://www.gov.br/ds/padroes/densidade) para maiores detalhes.
+Na *grid* de 4 colunas, recomenda-se que o *Input* se estenda por toda largura a da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizado o *input* com densidade baixa, com a finalidade de aumentar a área de *touch*. Consulte Comportamento [Densidade](https://www.gov.br/ds/padroes/densidade) para maiores detalhes.
 
 ![Input - Grid de 4 colunas](imagens/Input-behavior-responsive-grid-4-cols.png)
 *Input - grid de 4 colunas.*
@@ -205,7 +208,7 @@ Esse estado ocorre quando há a necessidade de passar informação neutra ao usu
 
 #### Estado aviso - Alerta
 
-Esse estado ocorre quando há a necessidade de alertar o usuário a respeito de aspectos que envolvam o *input*.
+Esse estado ocorre quando há a necessidade de alertar o usuário a respeito de aspectos que envolvem o *input*.
 
 ![Estado Alerta](imagens/input-behavior-states-alert.png)
 *Estado alerta em fundo claro e escuro.*
@@ -236,7 +239,10 @@ Umas das interações para receber foco é por meio de clique/toque. Por tanto, 
 Veja abaixo um exemplo de interações no componente:
 
 ![Estado Foco](imagens/behavior-state-foco.png)
-*A- Exibe o estado padrão (sem nenhuma interação). B- O cursor fica sobre o componente, exibindo o estado hover. C- Mostra o componente com estado foco após interação de um clique. Neste momento já é possível a entrada de dados no campo e o fundo do campo input não tem mais a necessidade do estado hover. D- Mesmo com estado foco é possível interagir com outros elementos do componente.*
+*A- Exibe o estado padrão (sem nenhuma interação).*
+*B- O cursor fica sobre o componente, exibindo o estado hover.*
+*C- Mostra o componente com estado foco após interação de um clique. Neste momento já é possível a entrada de dados no campo e o fundo do campo input não tem mais a necessidade do estado hover.*
+*D- Mesmo com o estado foco é possível interagir com outros elementos do componente.*
 
 ---
 
@@ -253,6 +259,7 @@ Sempre que o dado de entrada requerido possuir um padrão de escrita, recomenda-
 *Exemplo de máscara - CPF.*
 
 -   É recomendável que a máscara funcione dinamicamente no momento da digitação e também ao "colar" o texto no campo *input*;
+
 -   Evite dividir o *input* em campos separados sem necessidade, isso aumenta o custo de interação do usuário, além de causar problemas para usuários internacionais, visto que utilizam padrões diferenciados. Por exemplo, o formato do telefone nos EUA é bem diferente do brasileiro: +1 (xxx) xxx-xx-xx.
 
 ![Não divida o Input em Campos Separados](imagens/input-mask-03.png)
@@ -278,23 +285,23 @@ Abaixo pode-se observar algumas boas práticas a esse respeito:
 
 -   Recomenda-se que os resultados exibidos dinamicamente no momento da digitação sejam atualizados de forma automática o mais rápido possível ou instantaneamente, de preferência. Quando utilizar o *autocomplete*, deve-se evitar fazer o usuário esperar, mas caso isso ocorra, pode-se utilizar o recurso de *loading* durante o carregamento dos dados;
 
-![Autocomplete Carregamento](imagens/input-autocomplete-02.png)
-*Deve-se evitar fazer o usuário esperar, porém utilize o recurso de loading caso seja necessário*
+    ![Autocomplete Carregamento](imagens/input-autocomplete-02.png)
+    *Deve-se evitar fazer o usuário esperar, porém utilize o recurso de loading caso seja necessário*
 
 -   utilize ordem alfabética ao carregar a lista de sugestões;
 
-![Autocomplete Ordem Alfabética](imagens/input-autocomplete-03.png)
-*Utilize ordem alfabética nas sugestões de resultado.*
+    ![Autocomplete Ordem Alfabética](imagens/input-autocomplete-03.png)
+    *Utilize ordem alfabética nas sugestões de resultado.*
 
 -   Quando não houver dados de sugestões referentes ao texto digitado, sinalize ao usuário com *feedback* no lugar da lista de sugestões;
 
-![Autocomplete com Feedback](imagens/input-autocomplete-04.png)
-*Exemplo de autocomplete com feedback.*
+    ![Autocomplete com Feedback](imagens/input-autocomplete-04.png)
+    *Exemplo de autocomplete com feedback.*
 
 -   Sempre que possível, associe assuntos relacionados aos termos digitados no campo de pesquisa, isso trará uma experiência mais rica ao usuário durante o processo de pesquisa. É interessante também associar assuntos relacionados nos casos em que não são encontrados termos de sugestões.
 
-![Autocomplete com Assuntos Relacionados](imagens/input-autocomplete-05.png)
-*Exemplo de autocomplete com assuntos relacionados.*
+    ![Autocomplete com Assuntos Relacionados](imagens/input-autocomplete-05.png)
+    *Exemplo de autocomplete com assuntos relacionados.*
 
 ---
 

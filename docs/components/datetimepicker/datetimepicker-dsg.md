@@ -56,14 +56,14 @@ O *DateTimePicker* é o componente padrão para escolha conjunta de data e horá
 
 ### 2. *Datepicker*
 
-O componente *datepicker* está disponível de maneira independente, isto é, um componente apenas para o calendário. O funcionamento é o mesmo já descrito anteriormente porém, ao usuário é permitido selecionar somente datas.
+O componente *datepicker* está disponível de maneira independente, isto é, um componente apenas para o calendário. O funcionamento é o mesmo já descrito anteriormente, porém, ao usuário é permitido selecionar somente datas.
 
 ![Tipo DatePicker](imagens/type-datepicker.png)
-*Exemplo do componente do tipo Ditepicker*
+*Exemplo do componente do tipo Datepicker*
 
 ### 3. *Timepicker*
 
-O componente *timepicker* também está disponível de maneira independente, isto é, um componente apenas para o seletor de horas e minutos. O funcionamento é o mesmo já descrito anteriormente porém, ao usuário é permitido selecionar somente horários.
+O componente *timepicker* também está disponível de maneira independente, isto é, um componente apenas para o seletor de horas e minutos. O funcionamento é o mesmo já descrito anteriormente, porém, ao usuário é permitido selecionar somente horários.
 
 ![Tipo TimePicker](imagens/type-timepicker.png)
 *Exemplo do componente do tipo Timepicker*
@@ -92,7 +92,9 @@ O *DateTimePicker* poderá exibir a data atual em destaque para facilitar a iden
 O usuário pode navegar linearmente pelo calendário por meio das setas de navegação. Também é possível selecionar o mês desejado por meio de um seletor nativo do componente ( *select* ) e o ano por meio de digitação no campo *input* apropriado.
 
 1. Setas de navegação linear;
+
 2. Combo *select* para escolha do mês;
+
 3. Combo *input* para escolha do ano.
 
 ![Exemplo Tipo](imagens/type-datetimepicker-nav.png)
@@ -103,6 +105,7 @@ O usuário pode navegar linearmente pelo calendário por meio das setas de naveg
 É possível utilizar o *datepicker*, para criar uma entrada conjunta de data inicial e data final. Uma vez selecionadas as datas inicial e final, o intervalo de dias entre as datas selecionadas ficará em destaque. No exemplo abaixo, o intervalo entre os dias 8 e 12 de fevereiro está destacado.
 
 1. Data inicial selecionada;
+
 2. Data final selecionada e destacado todos os dias compreendidos neste intervalo.
 
 ![Exemplo Comportamento](imagens/datepicker-interval.png)
@@ -163,9 +166,10 @@ O estado desabilitado ocorre nas datas que por qualquer motivo não podem ser se
 
 ### 5. Intervalo
 
-O estado intervalo ocorre apenas nos calendários em que a seleção de duas datas (data inicial e final) é permitida e tem por finalidade destacar os dias compreendidos nesse intervalo.
+O estado intervalo ocorre apenas nos calendários em que a seleção de duas datas (data inicial e final) é permitida e tem por finalidade destacar os dias compreendidos neste intervalo.
 
 1. Data inicial e final selecionada;
+
 2. Intervalo de dias entre a data inicial e final.
 
 ![Exemplo Comportamento intervalo](imagens/estado-interval.png)

@@ -9,12 +9,15 @@
 Utilize *Steps* quando:
 
 -   houver necessidade de construir fluxos de navegação com etapas sequenciais;
+
 -   houver necessidade de sinalizar ao usuário uma ideia de progressão durante uma jornada: etapas concluídas, não concluídas e etapas em andamento;
+
 -   houver necessidade de sinalizar ao usuário o tamanho do fluxo que este deverá percorrer.
 
 Não utilize *Steps*:
 
 -   quando não houver necessidade de sinalizar ao usuário uma sequência de progressão, linear ou não. Neste caso utilize *Menus* ou *Tabs*.
+
 -   quando as etapas não possuem relação entre si. É importante que o uso de *Steps* esteja diretamente relacionado com a ideia de se completar um fluxo, tarefa ou jornada.
 
 ---
@@ -52,8 +55,11 @@ O *Indicador* é o elemento que definirá os estados de cada etapa, além de ser
 É um modelo que transmite ao usuário uma informação semântica através dos ícones e deverá ser utilizado com cautela. Abaixo seguem algumas dicas:
 
 -   certifique-se de que o ícone utilizado transmita uma ideia bastante clara ao usuário da ação ou etapa que representa;
+
 -   não utilize este modelo quando o número de etapas for muito extenso;
+
 -   recomenda-se fortemente a utilização de rótulos como apoio à informação transmitida;
+
 -   se possível, numere as etapas nos rótulos.
 
 ![Indicador Informação Iconográfica](imagens/anatomy-step-buttons-icons.png)
@@ -90,31 +96,36 @@ O *Rótulo* é a informação textual que acompanha o *Indicador*, sua utilizaç
 
 -   Centralizado abaixo do *Indicador*. É a forma mais utilizada e por tanto o modelo de posicionamento padrão para o *Rótulo*. O texto do *Rótulo* deve possuir alinhamento centralizado;
 
-![Rótulo Centralizado abaixo do Indicador](imagens/behaviour-position-label-01.png)
-*Rótulo Centralizado abaixo do Indicador (Padrão)*
+    ![Rótulo Centralizado abaixo do Indicador](imagens/behaviour-position-label-01.png)
+    *Rótulo Centralizado abaixo do Indicador (Padrão)*
 
 -   Centralizado acima do *Indicador*, como posicionamento alternativo. O texto do *Rótulo* deve possuir alinhamento centralizado;
 
-![Rótulo Centralizado acima do Indicador](imagens/behaviour-position-label-03.png)
-*Rótulo Centralizado acima do Indicador (Alternativo)*
+    ![Rótulo Centralizado acima do Indicador](imagens/behaviour-position-label-03.png)
+    *Rótulo Centralizado acima do Indicador (Alternativo)*
 
 -   À direita do *Indicador*, como forma de posicionamento alternativo. Neste caso, o texto do *Rótulo* deve possuir alinhamento à esquerda;
 
-![Rótulo à direita do Indicador](imagens/behaviour-position-label-02.png)
-*Rótulo à direita do Indicador (Alternativo)*
+    ![Rótulo à direita do Indicador](imagens/behaviour-position-label-02.png)
+    *Rótulo à direita do Indicador (Alternativo)*
 
 -   À esquerda do *Indicador*, como posicionamento alternativo. Neste caso, o texto do *Rótulo* deve possuir alinhamento à direita.
 
-![Rótulo à esquerda do Indicador](imagens/behaviour-position-label-04.png)
-*Rótulo à esquerda do Indicador (Alternativo)*
+    ![Rótulo à esquerda do Indicador](imagens/behaviour-position-label-04.png)
+    *Rótulo à esquerda do Indicador (Alternativo)*
 
-É importante estar atendo a algumas boas práticas:
+É importante estar atento a algumas boas práticas:
 
 -   o ideal é que se utilize apenas uma palavra no rótulo;
+
 -   caso haja necessidade, utilize duas ou três palavras, no máximo;
+
 -   use um texto claro, direto e objetivo;
+
 -   mantenha a consistência optando por apenas um dos modelos em seu projeto, não utilize mais de um tipo;
+
 -   no caso do posicionamento do *Rótulo* à direita ou à esquerda do *Indicador*, fique atento às restrições de espaço. Estes tipos de posicionamento necessitam de mais espaço horizontal e são mais adequados em resoluções *Desktop* (*Grid* de 12 colunas);
+
 -   na ausência do *Rótulo*, recomenda-se utilizar o *Componente Tooltip* para auxiliar o usuário em seu entendimento.
 
 ##### Rótulo no Tipo *Step Textual*
@@ -133,7 +144,7 @@ A linha do tempo servirá para dar sentido semântico ao fluxo que deve ser segu
 
 ##### Linha do Tempo com *Indicadores* Ocultos
 
-A linha do tempo também tem a função de indicar se existem mais *Indicadores* ocultos. Quando isto ocorrer, a linha do tempo deverá "sangrar" até os limites da tela, indicando que há mais etapas antes ou depois das etapas visíveis na tela. Além disto, deve-se utilizar sombras nas laterais do *Painel de Etapas*, nos lados onde houver etapas ocultas. Observe o exemplo abaixo:
+A linha do tempo também tem a função de indicar se existem mais *Indicadores* ocultos. Quando isto ocorrer, a linha do tempo deverá "sangrar" até os limites da tela, indicando que há mais etapas antes ou depois das etapas visíveis na tela. Além disso, deve-se utilizar sombras nas laterais do *Painel de Etapas*, nos lados onde houver etapas ocultas. Observe o exemplo abaixo:
 
 ![Exemplo de Linha do Tempo com Indicadores Ocultos](imagens/anatomy-time-line-02.png)
 *Exemplo de Linha do Tempo com Indicadores Ocultos*
@@ -144,20 +155,22 @@ A linha do tempo também tem a função de indicar se existem mais *Indicadores*
 
 ### 1. Step Complexo
 
-Este tipo é bastante utilizado em *Wizard (Assistentes)* e auxiliam o usuário durante o fluxo ou jornada de alguma tarefa específica.
+Este tipo é bastante utilizado em *Wizard (Assistentes)* e auxilia o usuário durante o fluxo ou jornada de alguma tarefa específica.
 
 ![Exemplo de Step Complexo](imagens/sample-01.png)
 *Exemplo de Step Complexo*
 
 ### 2. Step Simples
 
-É um modelo bastante resumido e otimizado para utilização dentro de outros componentes. É mais comumente utilizado em *Carrosséis de Imagens*, *Cards*, *Janelas Modais*, entre outros. Este modelo geralmente é utilizado juntamente com outros controles de navegação, como por exemplo, botão para avançar e recuar. O funcionamento destes controles de navegação dependem do componente que contém os *Steps*. Observe o exemplo abaixo.
+É um modelo bastante resumido e otimizado para utilização dentro de outros componentes. É mais comumente utilizado em *Carrosséis de Imagens*, *Cards*, *Janelas Modais*, entre outros. Este modelo geralmente é utilizado juntamente com outros controles de navegação, como por exemplo, botão para avançar e recuar. O funcionamento desses controles de navegação dependem do componente que contém os *Steps*. Observe o exemplo abaixo.
 
 ![Exemplo de Step Simples](imagens/sample-02.png)
 *Exemplo de Utilização do Step Simples - Os controles de navegação fazem parte do Carrossel no exemplo*
 
 -   Evite utilizar um número elevado de etapas no *Step Simples*, pois resulta em problemas de diagramação e usabilidade.
+
 -   recomenda-se utilizar de 4 a 5 etapas neste caso;
+
 -   caso necessite de mais etapas, utilize o *Step Textual*.
 
 ![Uso do Step Simples](imagens/type-simple-step-samples.png)
@@ -174,8 +187,8 @@ Observe o exemplo abaixo:
 
 -   Utilize o *Step Textual* quando houver necessidade de um número elevado de etapas;
 
-![Uso do Step Textual](imagens/type-simple-text-step-samples.png)
-*Uso do Step Textual*
+    ![Uso do Step Textual](imagens/type-simple-text-step-samples.png)
+    *Uso do Step Textual*
 
 ---
 
@@ -265,7 +278,7 @@ Já nas *Grids* de 8 e 4 colunas, recomenda-se utilizar a orientação vertical,
 
 #### Responsividade do *Step Simples* e *Step Textual*
 
-Estes dois tipos de *Steps*, tendo em vista sua forma compactada, não são influenciados pela resolução da tela, logo não possuem características responsivas. Geralmente estão localizados dentro de outros componentes. Neste caso, apenas os componentes que os contém é que possuem suas próprias características responsivas. Neste caso, o *Step Simples* e *Step Textual* devem se manter centralizados ao componente que fazem parte. Veja os exemplos abaixo:
+Estes dois tipos de *Steps*, tendo em vista sua forma compactada, não são influenciados pela resolução da tela, logo não possuem características responsivas. Geralmente estão localizados dentro de outros componentes. Neste caso, apenas os componentes que os contém possuem suas próprias características responsivas. Neste caso, o *Step Simples* e *Step Textual* devem se manter centralizados ao componente que fazem parte. Veja os exemplos abaixo:
 
  ![Carrossel com Step Simples e Step Textual - Grid de 12 Colunas](imagens/behaviour-simple-step-grid-12-cols.png)
 *Carrossel com Step Simples e Step Textual - Grid de 12 Colunas*
@@ -330,7 +343,7 @@ Utilize densidade alta quando houver necessidade de economizar espaço em tela, 
 
 #### Densidade Média (Padrão)
 
-A densidade média ou padrão é forma comum do *Step Complexo* e do *Step Simples*.
+A densidade média ou padrão é a forma comum do *Step Complexo* e do *Step Simples*.
 
  ![Densidade Média (Padrão)](imagens/behaviour-density-default.png)
 *Densidade Média (Padrão) do Step Complexo*
@@ -354,26 +367,26 @@ No *Step Complexo*, é possível sinalizar ao usuário erros ou pendências ocor
 
 -   Quando ocorrer alguma pendência referente à tarefa realizada em alguma etapa do fluxo, comunique através da *Tag* no *Estado Alert* no *Indicador* e *Rótulo*.
 
- ![Estado Alert](imagens/behaviour-alert.png)
-*Estado Alert*
+    ![Estado Alert](imagens/behaviour-alert.png)
+    *Estado Alert*
 
 -   Da mesma forma, caso ocorra algum erro ou impedimento na tarefa executada em alguma etapa, comunique ao usuário através da *Tag* no *Estado Error* no *Indicador* e *Rótulo*;
 
- ![Estado Error](imagens/behaviour-error.png)
-*Estado Error*
+    ![Estado Error](imagens/behaviour-error.png)
+    *Estado Error*
 
 -   Quando a tarefa é finalizada em uma determinada etapa, utilize a *Tag* com o estado concluído no *Indicador* e *Rótulo*.
 
- ![Estado Concluído](imagens/behaviour-concluded.png)
-*Estado Concluído*
+    ![Estado Concluído](imagens/behaviour-concluded.png)
+    *Estado Concluído*
 
 -   Recomenda-se utilizar também o *Componente Tooltip* para exibir o detalhamento da pendência. Utilize o *Tooltip* com a interação `mouseover` e detalhe em poucas palavras qual erro ou pendência precisa ser sanada pelo usuário. Observe os exemplos abaixo:
 
- ![Uso do Tooltip com Estado Alert](imagens/behaviour-alert-01.png)
-*Uso do Tooltip com Estado Alert*
+    ![Uso do Tooltip com Estado Alert](imagens/behaviour-alert-01.png)
+    *Uso do Tooltip com Estado Alert*
 
- ![Uso do Tooltip com Estado Error](imagens/behaviour-error-01.png)
-*Uso do Tooltip com Estado Error*
+    ![Uso do Tooltip com Estado Error](imagens/behaviour-error-01.png)
+    *Uso do Tooltip com Estado Error*
 
 #### Alertas e Erros com o *Indicador Vazio*
 
@@ -414,10 +427,10 @@ Utilize o estado interativo sobre os elementos nos quais o usuário irá interag
  ![Estado Interativo](imagens/behaviour-state-interative.png)
 *Estado Interativo*
 
--   Durante a progressão não linear, as etapas não visitadas podem apresentar-se no estado interativo, pois o acesso a essas etapas não dependem da conclusão das anteriores.
+-   Durante a progressão não linear, as etapas não visitadas podem apresentar-se no estado interativo, pois o acesso a essas etapas não depende da conclusão das anteriores.
 
-  ![Etapas Não Visitadas - Estado Interativo](imagens/anatomy-step-buttons-no-visited-interactive.png)
-*Etapas Não Visitadas - Estado Interativo*
+    ![Etapas Não Visitadas - Estado Interativo](imagens/anatomy-step-buttons-no-visited-interactive.png)
+    *Etapas Não Visitadas - Estado Interativo*
 
 #### Estado Hover
 
@@ -442,8 +455,8 @@ O estado desabilitado ocorre nas etapas não visitadas ou inoperantes.
 
 -   quando o acesso a etapas não visitadas depender da conclusão das anteriores, ou seja na progressão linear, utilize o estado desabilitado.
 
-![Indicador Etapa Não Visitada](imagens/anatomy-step-buttons-no-visited-disabled.png)
-*Indicador de Etapa Não Visitada Desabilitado - depende da conclusão das etapas anteriores*
+    ![Indicador Etapa Não Visitada](imagens/anatomy-step-buttons-no-visited-disabled.png)
+    *Indicador de Etapa Não Visitada Desabilitado - depende da conclusão das etapas anteriores*
 
 #### Estado Pressionado
 
@@ -491,35 +504,35 @@ O estado error ocorre sobre o *Indicador* e o Rótulo quando há a necessidade d
 
 -   quando utilizar *Indicadores* sem *Rótulo*, utilize sempre recursos de `aria-labels` no código *HTML*, trazendo a informação da ação e permitindo a possibilidade de leitores de tela;
 
-``` html
-<tag aria-label="Nome do Rótulo"></tag>
-```
+    ``` html
+    <tag aria-label="Nome do Rótulo"></tag>
+    ```
 
 -   fique atento ao contraste de cores utilizado entre o plano de fundo e a cor dos *Rótulos* ou *Indicadores*. Observe as especificações de contraste no [*Fundamento Cores*](https://www.gov.br/ds/fundamentos-visuais/cores);
 
- ![Fique atento ao contraste de cores](imagens/accessibility-colour-contrast.png)
-*Fique atento ao contraste de cores nos Rótulos*
+    ![Fique atento ao contraste de cores](imagens/accessibility-colour-contrast.png)
+    *Fique atento ao contraste de cores nos Rótulos*
 
- ![Fique atento ao contraste de cores](imagens/accessibility-colour-contrast-02.png)
-*Fique atento ao contraste de cores no Indicador Simples*
+    ![Fique atento ao contraste de cores](imagens/accessibility-colour-contrast-02.png)
+    *Fique atento ao contraste de cores no Indicador Simples*
 
--   evite utilizar *Indicador Simples* como a ÚNICA de forma interativa de navegação. Sua forma reduzida dificulta a interação do usuário através do *mouse* ou *touch*; Se for o caso, utilize-o apenas como um elemento de apoio para navegação, acompanhado de um elemento de navegação principal;
+-   evite utilizar o *Indicador Simples* como a ÚNICA de forma interativa de navegação. Sua forma reduzida dificulta a interação do usuário através do *mouse* ou *touch*; Se for o caso, utilize-o apenas como um elemento de apoio para navegação, acompanhado de um elemento de navegação principal;
 
- ![Evite interação no Indicador Simples](imagens/accessibility-simple-step-button.png)
-*Evite utilizar o Indicador Simples como a ÚNICA de forma interativa de navegação*
+    ![Evite interação no Indicador Simples](imagens/accessibility-simple-step-button.png)
+    *Evite utilizar o Indicador Simples como a ÚNICA de forma interativa de navegação*
 
 -   ofereça controles de navegação ao usuário sempre que utilizar o *Step Simples* e o *Step Textual*. Estes controles devem fazer parte do componente que os contém e seu funcionamento depende exclusivamente da característica deste componente;
 
- ![Controles de Navegação no Step Simples](imagens/type-simple-step-controls-samples.png)
-*Controles de Navegação no Step Simples*
+    ![Controles de Navegação no Step Simples](imagens/type-simple-step-controls-samples.png)
+    *Controles de Navegação no Step Simples*
 
- ![Controles de Navegação no Step Textual](imagens/type-simple-text-step-control-samples.png)
-*Controles de Navegação no Step Textual*
+    ![Controles de Navegação no Step Textual](imagens/type-simple-text-step-control-samples.png)
+    *Controles de Navegação no Step Textual*
 
 -   em caso de *Steps* que funcionem em *loop* automático, ofereça ao usuário controles de interação que permitam pausar ou retomar a animação.
 
-![Exemplo de controles de interação](imagens/type-simple-step-controls.png)
-*Exemplo de controles de interação*
+    ![Exemplo de controles de interação](imagens/type-simple-step-controls.png)
+    *Exemplo de controles de interação*
 
 ---
 

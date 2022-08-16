@@ -36,7 +36,9 @@ A superfície, nos casos dos avatares icônico e letra, podem assumir quaisquer 
 A representação do usuário é como o usuário deseja ser reconhecido digitalmente. Há três maneiras de fazer isso:
 
 -   Por um ícone do sistema;
+
 -   Por uma foto escolhida pelo usuário;
+
 -   Por um texto com a inicial do usuário.
 
 ---
@@ -45,9 +47,11 @@ A representação do usuário é como o usuário deseja ser reconhecido digitalm
 
 As representações citadas acima definem os três tipos disponíveis de avatar:
 
-- 1. **Icônico**;
-- 2. **Fotográfico**;
-- 3. **Letra**.
+1. **Icônico**;
+
+2. **Fotográfico**;
+
+3. **Letra**.
 
 ### 1. Avatar Icônico
 

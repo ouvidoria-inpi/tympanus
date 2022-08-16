@@ -91,7 +91,7 @@ Nos casos em que o nome do arquivo seja maior que o espaço destinado a ele, dev
 Veja a imagem a seguir:
 
 ![Esta imagem apresenta exemplos de nomes de aquivos muito grandes e por isso, truncados.](imagens/upload-truncamento.png)
-*Nomes dos arquivos são truncados quando forem maiores que o espaço disponível.*
+*Os nomes dos arquivos são truncados quando forem maiores que o espaço disponível.*
 
 **Atenção:** é recomendável o uso de *tooltips* para apresentar ao usuário o texto completo que foi truncado.
 
@@ -117,7 +117,7 @@ Nesse caso, o usuário não conseguirá selecionar mais de um arquivo para ser e
 
 ### 6. Resolução de 4 colunas
 
-Em resoluções maiores que 4 colunas o componente *Upload* não sofre qualquer transformação, mas ao se atingir a resolução de 4 colunas o componente *Upload* terá sua largura adequada para esta resolução de tela.
+Em resoluções maiores que 4 colunas o componente *Upload* não sofrerá qualquer transformação, mas ao se atingir a resolução de 4 colunas o componente *Upload* terá sua largura adequada para esta resolução de tela.
 
 ![A imagem mostra o componente upload com a largura ajustada para uma resolução de quatro colunas.](imagens/upload-anatomia-upload-4colunas.png)
 *Largura do componente upload sendo ajustada.*
@@ -125,7 +125,7 @@ Em resoluções maiores que 4 colunas o componente *Upload* não sofre qualquer 
 ![A imagem ilustra o comportamento do componente upload em responsividades de oito e quatro colunas.](imagens/upload-comportamento-responsividade.png)
 *Comparação da aplicação do upload em diferentes Grids.*
 
-Nestes tipos de dispositivos, não há o recurso de arrastar arquivo, portanto, a única forma do usuário enviar arquivos é por meio do clique no componente *upload* (ou toque, nos casos de dispositivos *mobile*).
+Nestes tipos de dispositivos, não há o recurso de arrastar arquivos, portanto, a única forma do usuário enviar arquivos é por meio do clique no componente *upload* (ou toque, nos casos de dispositivos *mobile*).
 
 ---
 

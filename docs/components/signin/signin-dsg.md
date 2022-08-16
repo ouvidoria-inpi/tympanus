@@ -8,8 +8,11 @@ Utilizado quando se deseja saber quem é o usuário ativo para fornecer conteúd
 Quando utilizar:
 
 -   Quando existir a necessidade de restringir o acesso a determinado conteúdo;
+
 -   Quando houver a necessidade de controlar quais usuários têm acesso a um determinado conteúdo;
+
 -   Quando houver informações contextuais a serem apresentadas ao usuário. O contexto pode depender da geografia, fuso horário, idade, interesses ou mesmo das interações anteriores do usuário com o *site* (amigos adicionados, conteúdo enviado etc.);
+
 -   Para proteger as informações do usuário.
 
 O uso desse recurso visa facilitar o acesso por parte dos usuários que possuem um cadastro prévio em seu banco de dados, facilitando seu acesso em outros *websites* e sistemas. Atualmente essa funcionalidade é muito utilizada, por exemplo, como *login* de acesso rápido, fazendo uso das informações de perfis já cadastrados nas redes sociais.
@@ -20,7 +23,7 @@ O uso desse recurso visa facilitar o acesso por parte dos usuários que possuem 
 
 ## Anatomia
 
-O *sign-in* é composto basicamente por ícone ou imagem e *label*. É importante notar que os elementos que o compõe, geralmente se repete nas versões e variações de tamanho, podendo assumir outras formas dependendo do tipo escolhido ou da resolução da tela.
+O *sign-in* é composto basicamente por ícone ou imagem e *label*. É importante notar que os elementos que o compõe, geralmente se repetem nas versões e variações de tamanho, podendo assumir outras formas dependendo do tipo escolhido ou da resolução da tela.
 
 Segue a estrutura básica da anatomia:
 
@@ -55,7 +58,8 @@ Os textos utilizados no *label* devem seguir os valores de fonte, tamanho, espes
 
 Naturalmente as palavras usadas nos rótulos farão a largura dos *sign-ins* variar bastante de tamanho. O ideal é que sejam utilizadas até três palavras no máximo. Opte por rótulos concisos e diretos.
 
-1. Deve-se evitar o uso excessivo de palavras no rotulo;
+1. Deve-se evitar o uso excessivo de palavras no rótulo;
+
 2. Nunca utilizar quebra de linhas nos rótulos do *sign-in*.
 
 ![Exemplo do uso de rótulos no componente sign-in.](imagens/signin-label.png)
@@ -73,7 +77,9 @@ A área da imagem é destinada à utilização de uma assinatura ou logo institu
 **Atenção:** as dimensões da assinatura institucional que será utilizada na área da imagem devem seguir as seguintes restrições:
 
 1. A largura escolhida precisa ter valor múltiplo 4px e 8px;
+
 2. A altura não pode ultrapassar a altura da caixa de texto do rótulo (*label*) já definidas na área de *tokens*;
+
 3. Na imagem, é recomendada que a altura utilizada para o logo institucional não ultrapasse 20px. Se possível, mantenha a largura da imagem com valores múltiplos de 4px.
 
 #### 4. Superfície (Obrigatório)
@@ -138,7 +144,7 @@ A imagem abaixo ilustra as possibilidades de aplicação em relação ao fundo:
 
 ### 3. Bloco
 
-Assim como os *buttons*, o componente *sign-in* padrões pode utilizar o comportamento bloco para alterar sua largura, ocupando todo o espaço disponível na superfície (seja dentro de outro componente, como o *header* ou de determinado lugar da *grid*).
+Assim como os *buttons*, o componente *sign-in* pode utilizar o comportamento bloco para alterar sua largura, ocupando todo o espaço disponível na superfície (seja dentro de outro componente, como o *header* ou de determinado lugar da *grid*).
 
 Neste comportamento, o *sign-in* “empurra” qualquer outro elemento existente para outro espaço disponível.
 
@@ -158,20 +164,31 @@ Visando reduzir possíveis obstáculos na utilização do componente *sign-in* e
 ### *Sign-in Web* - Autenticação Inicial
 
 -   Mantenha o *sign-in* sempre próximo aos *inputs* de entrada de texto nas opções de cadastro, mesmo quando utilizado em conjunto com outros métodos de *logins* alternativos, como *logins* de redes sociais, por exemplo.
+
 -   É importante sempre deixar disponíveis as opções de acesso às dúvidas frequentes, de criação de cadastro e de recuperação de *login* e senha.
+
 -   Toda vez que o componente *sign-in* for acessado, o sistema deve oferecer imediatamente alguma forma de *feedback* de interação, melhorando a experiência do usuário e dando-lhe algum tipo de retorno do sistema.
+
 -   É importante certificar-se de que os usuários possam navegar e interagir pela(s) página(s) de acesso do *sign-in* utilizando apenas o teclado. Use as marcações apropriadas para designar a região de *login* e permitir que os leitores de tela "pulem" diretamente para os campos de entrada.
+
 -   Apresente, sempre que possível, opções variadas de cadastro e acesso, tais como: validação facial; validação via impressão digital; número de CPF e senha; dados de acesso via *Internet Banking*; certificado digital de Pessoas Físicas ou Jurídicas e Certificado Digital em Nuvem.
 
 ### *Sign-in Mobile* - Autenticação Inicial (Usuário Anônimo)
 
 -   Garanta informações textuais concisas, tanto para o *label* quanto para a tela, além de apresentar uma linguagem de fácil compreensão, reduzindo a carga cognitiva e facilitando ao máximo a compreensão das ações a serem tomadas pelo usuário.
--   Em suas dimensões, a largura do componente deve  sempre se ajustar a *grid* de 4 colunas, como mostrado no tópico "responsividade˜.
+
+-   Em suas dimensões, a largura do componente deve  sempre se ajustar a *grid* de 4 colunas, como mostrado no tópico "responsividade".
+
 -   Uma forma de otimizar a interação é colocar o *sign-in* no meio ou na parte de baixo da tela, em uma área de fácil acesso aos dedos dos usuários, minimizando o esforço para executar esta ação e deixando o processo mais fluido, independentemente de fazê-lo com a mão direita ou esquerda.
+
 -   O *sign-in* deve estar na sua versão de baixa densidade, atendendo ao problema da falta de acuracidade das mãos, pois possui uma maior área de toque, reduzindo as chances de erro do usuário.
+
 -   Mantenha o *sign-in* sempre próximo dos campos de *input* de entrada de texto nas opções de cadastro, mesmo quando utilizado em conjunto com outros métodos *logins* alternativos, como *logins* de redes sociais, por exemplo.
+
 -   É importante sempre disponibilizar as opções de acesso às dúvidas frequentes, de criação de cadastro e de recuperação de *login* e senha.
+
 -   Toda vez que o componente *sign-in* for acessado, o sistema deve oferecer alguma forma de *feedback* de interação apropriada imediatamente, melhorando a experiência do usuário e dando-lhe algum tipo de retorno do sistema.
+
 -   Apresente, sempre que possível, opções variadas de cadastro e acesso, tais como: validação facial; validação via impressão digital; número de CPF e Senha; dados de acesso via Internet Banking; certificado digital de Pessoas Físicas ou Jurídicas e Certificado Digital em Nuvem.
 
 Todos esses pontos são importantes na busca de clareza e facilidade de uso.

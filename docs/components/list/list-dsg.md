@@ -28,6 +28,7 @@
 Apesar de possuir uma altura padrão, seu *container* pode sofrer alteração na altura quando botões são adicionados.
 
 1. **Header** com altura padrão;
+
 2. **Header** com altura alterada pela inserção de botões.
 
 ![Exemplo de altura do header alterado pela inserção de botões.](imagens/titulos.png)
@@ -41,7 +42,9 @@ De uma forma geral, um item pode ser criado contendo uma infinidade de component
 São sugeridas três áreas distintas:
 
 1. **Suporte Visual** (*opcional*): exibe os recursos visuais (geralmente ícones, avatares e mídias);
+
 2. **Área Principal**: exibe o conteúdo principal (geralmente textual);
+
 3. **Suporte Complementar** (*opcional*): exibe os metadados, elementos interativos (geralmente botões e *links*) e informações que complementam o conteúdo principal.
 
 Pode-se utilizar as três áreas sugeridas em conjunto ou isoladamente. É permitida ainda a criação de novas áreas ou utilizar qualquer uma delas isoladamente. No entanto, esteja atento em manter a formatação e consistência dentro de uma mesma *list*.
@@ -66,7 +69,9 @@ Na ilustração seguinte podemos observar diferentes alturas dos itens de acordo
 A área principal suporta o conteúdo principal da *list* que geralmente é representado por textos. Podemos organizar o texto pensando na hierarquia da informação e para isso é recomendado utilizar as sugestões abaixo:
 
 1. **Subtítulo**: texto opcional que possui a maior ênfase entre os textos. Deve ser usado somente quando há necessidade de ter um conteúdo com ênfase maior que o texto principal. É sugerido o uso de letras maiúsculas;
+
 2. **Texto Principal**: texto obrigatório, onde o conteúdo principal da *list* será exibido;
+
 3. **Texto Secundário**: texto opcional que possui a menor ênfase entre os textos.
 
 ![Hierarquia dos textos de um item de list.](imagens/item-textos.png)
@@ -76,7 +81,7 @@ A área principal suporta o conteúdo principal da *list* que geralmente é repr
 
 #### Recurso Visual ou Complementar
 
-Recursos visuais ou complementar são representados por ícones, imagens, avatares, botões e elementos interativos em geral. São exibidos nas áreas de suporte (visual/complementar) do item.
+Recursos visuais ou complementares são representados por ícones, imagens, avatares, botões e elementos interativos em geral. São exibidos nas áreas de suporte (visual/complementar) do item.
 
  ![Exemplos de possibilidades de uso de recursos visuais/interativos em uma list.](imagens/recursos-1.png)
 *Exemplos de possibilidades de uso dos recursos visuais/interativos em uma list representados em azul*
@@ -102,7 +107,7 @@ Recursos complementares são quaisquer componentes interativos, metadados ou inf
 Reflita sempre se o uso de determinado recurso complementar é necessário e faz sentido dentro de uma *list*.
 
 ![Exemplo de uso de recursos complementares dentro do componente list.](imagens/controles.png)
-*Exemplo de uso do componente check box dentro do componente list*
+*Exemplo de uso do componente checkbox dentro do componente list*
 
 ##### Metadados
 
@@ -119,7 +124,7 @@ Quando existir, é recomendado que fique localizado na área de *suporte complem
 
 ### 4. *Dividers* e Espaçamento (Opcional)
 
-*Dividers* são recursos opcionais que auxiliam visualmente a percepção do final do item de uma *list* favorecendo a distinção dos seus itens. Quando presentes, devem, estar localizados sempre abaixo da borda inferior de cada item, quando se tratar de uma *list* vertical ou após a borda direita, no caso de *lists* horizontais. *Dividers* podem ser utilizados também como agrupadores.
+*Dividers* são recursos opcionais que auxiliam visualmente a percepção do final do item de uma *list* favorecendo a distinção dos seus itens. Quando presentes, devem estar localizados sempre abaixo da borda inferior de cada item, quando se tratar de uma *list* vertical ou após a borda direita, no caso de *lists* horizontais. *Dividers* podem ser utilizados também como agrupadores.
 
 *Lists* podem ser criadas com diferentes espaçamentos entre seus itens e esta decisão deve ser direcionada pelo *layout* e tomada com equilíbrio e bom senso.
 
@@ -135,13 +140,13 @@ Quando existir, é recomendado que fique localizado na área de *suporte complem
 
 -   Não é permitido variar o espaçamento dos itens dentro de uma mesma *list*.
 
-![Exemplo do correto uso de espaçamento nas lists.](imagens/espacamento-2.png)
-*Exemplo do correto uso de espaçamentos nas lists*
+    ![Exemplo do correto uso de espaçamento nas lists.](imagens/espacamento-2.png)
+    *Exemplo do correto uso de espaçamentos nas lists*
 
 -   A leitura de uma *list* com grande quantidade de conteúdo pode ficar confusa. *Dividers* podem auxiliar a separação dos itens e tornar a *list* mais estruturada. Tenha sempre bom senso no uso dos *dividers*.
 
-![Exemplo do bom uso de dividers em uma lista. Use-os com cautela.](imagens/separadores-boaspraticas.png)
-*Use dividers em lists com moderação e bom senso*
+    ![Exemplo do bom uso de dividers em uma lista. Use-os com cautela.](imagens/separadores-boaspraticas.png)
+    *Use dividers em lists com moderação e bom senso*
 
 ---
 
@@ -212,7 +217,9 @@ Quando uma tela é redimensionada, a largura da área principal de um item sofre
 Os itens podem exibir ou esconder conteúdos de diversos tipos, empurrando ou puxando verticalmente os demais conteúdos da *list*. Esta é uma boa maneira de organizar hierarquicamente conteúdos, deixando oculto o que é menos importante.
 
 1. Rótulo expandido;
+
 2. Itens de sub-nível;
+
 3. Botão de acionamento do recurso de expansão.
 
 ![Anatomia do comportamento de expansão de list.](imagens/collapse.png)
@@ -235,10 +242,15 @@ Em *list* horizontais o comportamento de expansão funciona da mesma forma. O ex
 Itens também podem ser deslocados entre diferentes *lists*. A sequência de imagens abaixo ilustra os passos desse comportamento:
 
 1. Item escolhido para ser removido da *list*;
+
 2. *List* que receberá um novo item deslocado da primeira lista;
+
 3. A primeira *list* tem um item removido;
+
 4. Item sendo arrastado;
+
 5. Primeira *list* sem seu item de origem;
+
 6. Segunda *list* com um item inserido.
 
 ![Passo 1: escolha do item a ser movido para outra list.](imagens/ordenacao-2.png)

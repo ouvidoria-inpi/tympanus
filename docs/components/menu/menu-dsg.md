@@ -86,10 +86,12 @@ Este elemento é condicionado à  necessidade de uso de subitens.
 São também formados pelo componente item e possuem algumas distinções em relação aos itens de 1º nível a fim de garantir contraste visual entre os dois níveis de itens do menu:
 
 -   São utilizados com uma indentação maior;
+
 -   Apresentam cor de fundo diferenciada;
+
 -   Não deve utilizar o componente *divider* para separá-los.
 
-Quando um item de 2º nível apresentar subitens, um ícone de seta deve ser utilizado à direta e nestes casos levam o usuário para um painel com os itens filhos.
+Quando um item de 2º nível apresentar subitens, um ícone de seta deve ser utilizado à direita e nestes casos levam o usuário para um painel com os itens filhos.
 
 ![item do Menu](imagens/menu-anatomy-item-types–2.png)
 *Item do menu de 2º nível.*
@@ -162,7 +164,7 @@ O menu principal deve ser fácil de ser acessado de qualquer página do *site*/s
 
 ### 2. Menu Contextual
 
-O menu contextual ou secundário, é utilizado de forma auxiliar ao principal. Geralmente é aplicado para navegações de páginas internas ou itens relacionados (âncoras). É menos relevante e por isso costuma ser uma versão simplificada do menu principal.
+O menu contextual ou secundário, é utilizado de forma auxiliar ao principal. Geralmente é aplicado para navegação de páginas internas ou itens relacionados (âncoras). É menos relevante e por isso costuma ser uma versão simplificada do menu principal.
 
 ![Menu Auxiliar](imagens/menu-type-auxiliary.png)
 *Exemplo de menu contextual.*
@@ -171,7 +173,7 @@ O menu contextual se encontra na *camada zero* de elevação e portanto não apr
 
 **Atenção:** Por ser uma versão "enxuta" do menu principal, evite subníveis e excesso de elementos. Menus contextuais devem ser simples e diretos portanto, quanto menos elementos, melhor performance apresentará.
 
-Tenha em mente que ambos os menus (principal e contextual) funcionam de modo independente. Evite, portanto, dispor *links* comuns nos dois menus. Deixe bem claro para o usuário o nível de navegação que cada menu oferece.
+Tenha em mente que ambos os menus (principal e contextual) funcionam de modo independente. Evite, portanto, dispor de *links* comuns nos dois menus. Deixe bem claro para o usuário o nível de navegação que cada menu oferece.
 
 ---
 
@@ -182,6 +184,7 @@ Tenha em mente que ambos os menus (principal e contextual) funcionam de modo ind
 O menu principal pode se comportar de duas maneiras distintas na tela:
 
 -   Flutuando;
+
 -   Fixo.
 
 #### Flutuando
@@ -201,7 +204,7 @@ Para fechar o menu, basta clicar novamente no mesmo elemento acionador, no ícon
 
 O menu principal é acionado por meio de um elemento acionador localizado no cabeçalho e é aberto na lateral da página sem sobrepor o conteúdo. O conteúdo da página é então deslocado para direita
 
-Neste caso, não há sobreposição de camadas porém, pelo fato de ser considerado um elemento relevante deve ser apresentado na *camada 1* de elevação e por isso apresenta sombra suave.
+Neste caso, não há sobreposição de camadas, porém, pelo fato de ser considerado um elemento relevante deve ser apresentado na *camada 1* de elevação e por isso apresenta sombra suave.
 
 Veja mais detalhes no documento [Fundamentos Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao).
 
@@ -212,7 +215,7 @@ Para fechar o menu, basta clicar no no elemento acionador, que deve ter o ícone
 
 #### Menu contextual
 
-O menu contextual, quando houver, pode ser fixo ou *sticky* e e geralmente fica posicionado no extremo direito da tela para não competir com o menu principal. Geralmente não há a possibilidade do usuário abri-lo ou fechá-lo.
+O menu contextual, quando houver, pode ser fixo ou *sticky* e geralmente fica posicionado no extremo direito da tela para não competir com o menu principal. Geralmente não há a possibilidade do usuário abri-lo ou fechá-lo.
 
 ![Posição do Menu Contextual](imagens/menu-behavior-open-position-3.png)
 *Comportamento do menu contextual.*
@@ -223,7 +226,7 @@ Menus podem apresentar muitos itens, ultrapassando a altura da tela do dispositi
 
 De acordo com [padrão da diretriz Template Base](https://www.gov.br/ds/templates/base?tab=designer), a Área de navegação pode existir um barra de rolagem interna para acessar o conteúdo.
 
-Porém nos *smartphones*, como a altura do dispositivo geralmente são bem menor, a rolagem deve ocorrer de forma natural, rolando todo conteúdo do menu para cima ou para baixo utilizando a própria rolagem do navegador. Em outras palavras, evite o uso de rolagem interna na grid de 4 colunas!
+Porém nos *smartphones*, como a altura do dispositivo geralmente é bem menor, a rolagem deve ocorrer de forma natural, rolando todo conteúdo do menu para cima ou para baixo utilizando a própria rolagem do navegador. Em outras palavras, evite o uso de rolagem interna na grid de 4 colunas!
 
 ![Comportamento Scroll](imagens/menu-behavior-scroll.png)
 *Comportamento de rolagem do menu.*
@@ -235,7 +238,9 @@ Agrupamentos de itens podem ser utilizados tanto no menu principal quanto no men
 Há três formas de agrupar:
 
 -   Agrupamento por expansão;
+
 -   Agrupamento por rótulos;
+
 -   Agrupamento por *dividers*.
 
 #### Agrupamento por expansão
@@ -259,7 +264,7 @@ Os itens do menu são separados pelos componentes *dividers*.
 
 Realce a existência de subníveis ocultos utilizando ícones de seta.
 
-Clicando nos itens agrupadores, o menu desliza para baixo e apresenta os subitens de 1º nível. O mesmo ocorre do 1º para o 2º nível. Para retornar os níveis basta realizar o processo inverso.
+Clicando nos itens agrupadores, o menu desliza para baixo e apresenta os subitens de 1º nível. O mesmo ocorrendo do 1º para o 2º nível. Para retornar aos níveis basta realizar o processo inverso.
 
 ![Navegação em subníveis](imagens/menu-anatomy-item-types-4.png)
 *Exemplo de navegação entre 1º e o 2º nível.*
@@ -373,7 +378,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 
 -   Considere utilizar o recurso de busca juntamente com o menu. Ofereça outras maneiras de o usuário buscar o conteúdo desejado.
 
--   Por regra geral o menu contextual funciona independentemente do menu principal e geralmente é utilizado na navegação interna de telas com grande quantidade de conteúdo. Desta forma, evite o uso de itens que apontam para outras telas ou para informações externas ao *site*. Reserve essa função ao o menu principal.
+-   Por regra geral o menu contextual funciona independentemente do menu principal e geralmente é utilizado na navegação interna de telas com grande quantidade de conteúdo. Desta forma, evite o uso de itens que apontam para outras telas ou para informações externas ao *site*. Reserve essa função ao menu principal.
 O menu contextual pode estar localizado em qualquer área da página, mas lembre-se de garantir a consistência do *layout*. Geralmente é aplicado na lateral direita da tela de modo fixo ou flutuante.
 
 ![Menu Auxiliar](imagens/menu-behavior-open-position-3.png)

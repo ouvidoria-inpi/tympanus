@@ -37,6 +37,7 @@ Consulte detalhes em [Componente Step](https://www.gov.br/ds/components/step?tab
 ### 2. Componente *Steps* (Obrigatório)
 
 *Steps* são indicadores de etapas e progresso que auxiliam os usuários durante um fluxo de trabalho, seguindo uma sequência lógica linear, aleatória, numeradas ou não. Consulte detalhes sobre comportamentos e boas práticas dos *Steps* em [Componente Step](https://www.gov.br/ds/components/step?tab=designer).
+
 ![Exemplo de Componente Step](imagens/anatomy-step.png)
 *Exemplo de Componente Step*
 

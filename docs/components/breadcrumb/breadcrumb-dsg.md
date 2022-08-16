@@ -37,7 +37,7 @@ Nos casos das resoluções de 4 colunas (dispositivos móveis), deve-se necessar
 ![Exemplo de breadcrumb no formato especial para uso em resolução de quatro colunas.](imagens/especial.png)
 *Exemplo do componente breadcrumb especial para resoluções de quatro colunas.*
 
-Também é permitido utilizar o *breadcrumb* especial no lugar do padrão. Esta decisão deve ser tomada de acordo com o planejamento de arquitetura do produto mas, uma vez tomada a decisão, jamais poderá reverte-la em um mesmo produto.
+Também é permitido utilizar o *breadcrumb* especial no lugar do padrão. Esta decisão deve ser tomada de acordo com o planejamento de arquitetura do produto mas, uma vez tomada a decisão, jamais poderá revertê-la em um mesmo produto.
 
 ---
 
@@ -48,7 +48,9 @@ Também é permitido utilizar o *breadcrumb* especial no lugar do padrão. Esta 
 A seguir, as recomendações de uso em cada tipo de *grid* que podem ser utilizados na maioria dos casos:
 
 1. **Grid de 12 colunas:** prefira o **tipo padrão**;
+
 2. **Grid de 8 colunas:** prefira o **tipo padrão** em conjunto com o comportamento de **truncamento** ou o tipo especial;
+
 3. **Grid de 4 colunas:** prefira o **tipo especial**;
 
 ![Exemplos de comportamentos dos breadcrumbs de acordo com as grids.](imagens/responsividade.png)
@@ -104,8 +106,11 @@ Este recurso pode ser usado também nos nomes dos *links* que estiverem dentro d
 
 *   *Breadcrumbs* podem trazer uma série de benefícios para os usuários, como:
     *   Dar a usuário um meio secundário de navegação em um *website*;
+
     *   Ao invés de usar o botão “Voltar” do navegador ou a navegação principal do site para voltar à página de nível superior, os usuários podem usar o *breadcrumb* para realizar a mesma ação com um menor número de cliques;
+
     *   Geralmente os *breadcrumbs* são em sentido horizontal e de estilo “*clean*” ocupando pouquíssimo espaço na página. A vantagem é que eles têm pouco ou nenhum impacto negativo em termos de sobrecarga de conteúdo;
+
     *   *Breadcrumbs* podem ser uma ótima maneira de atrair visitantes pela primeira vez para examinar um *website* depois de ter visto a página de destino. Por exemplo, digamos que um usuário chega a uma página através de uma pesquisa no *Google*, vendo um *breadcrumb*, este pode “seduzir” o visitante para as páginas de nível superior para visualizar os tópicos relacionados ao seu interesse. Isso reduz a Taxa de rejeição (*bounce rate*) do *website*.
 
 ---

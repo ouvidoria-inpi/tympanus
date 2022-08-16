@@ -3,12 +3,14 @@
 ![Exemplo de Modal](imagens/diretriz.png)
 *Exemplo do componente modal*
 
-Use modais quando houver necessidade de obter a atenção imediata do usuário para uma interrupção no fluxo de navegação de foma proposital.
+Use modais quando houver necessidade de obter a atenção imediata do usuário para uma interrupção no fluxo de navegação de forma proposital.
 
 Por exemplo:
 
 *   Para informar sobre erros que impedem o fluxo normal de uma interface;
+
 *   Para informações críticas que requerem uma escolha, decisão ou reconhecimento específico do usuário;
+
 *   Para fornecer entrada de dados sem a perda contextual de uma tela.
 
 ---
@@ -31,7 +33,7 @@ Modais devem manter uma comunicação direta nas informações e dedicadas à co
 | 6   | Superfície *overlay*     | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Opcional    |
 
 ![Anatomia da Modal](imagens/anatomy.png)
-*Elementos que compõe uma modal*
+*Elementos que compõem uma modal*
 
 ---
 
@@ -112,7 +114,9 @@ Veja o documento de superfície para mais informações a respeito do *overlay*.
 Há três Tipos de modais:
 
 *   Modal de Alerta;
+
 *   Modal de Opção;
+
 *   Modal de Entrada.
 
 A escolha vai depender da tarefa que o usuário deve realizar.
@@ -124,17 +128,15 @@ Interrompe o usuário com informações, detalhes ou ações urgentes.
 ![Modal de Alerta](imagens/modal-alerta.png)
 *Exemplos de modal de alerta*
 
-Não se deve utilizar rótulos de ação que não indique claramente a ação realizada. Por exemplo: "Cancelar" e "Excluir" indicam melhor a ação do que "Não" e "Sim".
+Não se deve utilizar rótulos de ação que não indiquem claramente a ação realizada. Por exemplo: "Cancelar" e "Excluir" indicam melhor a ação do que "Não" e "Sim".
 Na modal do tipo alerta o título é opcional.
 
-Maneiras de fechar (cancelar):
-
-*   Clicando em um dos botões propostos.
+Maneiras de fechar (cancelar): **Clicando em um dos botões propostos**.
 
 ### 2. Modal de Opção
 
 Oferece opções de escolha para o usuário, podendo ser apresentado por uma lista ou por algum componente de seleção (dependendo da finalidade da tarefa).
-O uso de Título é altamente recomendável.
+O uso do Título é altamente recomendável.
 
 #### 2.1. Por Lista
 
@@ -149,12 +151,14 @@ Este tipo de modal não possui botões.
 Maneiras de fechar (cancelar):
 
 *   Clicando no botão terciário no topo (à direita) da janela da modal;
+
 *   Clicando em qualquer área da tela fora da janela da modal;
+
 *   Automaticamente após o usuário concluir a tarefa.
 
 #### 2.2. Por Seleção
 
-Exige que o usuário confirme uma das opção apresentadas antes que seja submetida, permitindo a possibilidade de alterar a escolha. Uma vez confirmada, a ação será executada.
+Exige que o usuário confirme uma das opções apresentadas antes que seja submetida, permitindo a possibilidade de alterar a escolha. Uma vez confirmada, a ação será executada.
 
 ![Modal De Opção Por Seleção](imagens/modal-selecao.png)
 *Exemplos de modal de opção por seleção*
@@ -164,7 +168,9 @@ As ações de confirmação e negação são obrigatórias.
 Maneiras de fechar a modal (cancelar):
 
 *   Clicando no botão secundário;
+
 *   Clicando no botão terciário no topo (à direita) da janela da modal;
+
 *   Clicando em qualquer área da tela fora da janela da modal.
 
 ### 3. Modal de Entrada
@@ -177,7 +183,9 @@ Contém ações que requerem uma série de tarefas para serem concluídas tais c
 Maneiras de fechar (cancelar):
 
 *   Clicando no botão secundário;
+
 *   Clicando no botão terciário no topo (à direita) da janela da modal;
+
 *   Clicando em qualquer área da tela fora da janela da modal.
 
 **Atenção:** Uma boa recomendação é que a ação para confirmação deva estar desativada até que todos os campos obrigatórios estejam preenchidos.
@@ -197,9 +205,9 @@ A modal deve manter o foco total do usuário até que uma ação seja tomada. N�
 
 Deve ser centralizado na tela do dispositivo ou pode ser exibido próximo ao elemento que "solicitou/disparou" a modal.
 
-### 3. *Scroll bar* (Barra de rolagem)
+### 3. *Scrollbar* (Barra de rolagem)
 
-Evite o máximo possível *scroll bar* (barra de rolagem) na modal. Quando necessária, o título deve ficar fixo no topo e os botões na parte inferior. Isso garante que o conteúdo permaneça sempre visível com o título e os botões durante a rolagem.
+Evite o máximo possível *scrollbar* (barra de rolagem) na modal. Quando necessário, o título deve ficar fixo no topo e os botões na parte inferior. Isso garante que o conteúdo permaneça sempre visível com o título e os botões durante a rolagem.
 
 É recomendável a utilização do efeito de sombra na divisão entre o título e os botões sempre que existir conteúdo oculto.
 
@@ -214,7 +222,7 @@ Botões de Conhecimento e/ou de Confirmação podem estar desativados até que o
 
 Comportamento que pode ser aplicado em uma modal, geralmente no tipo alerta, fazendo com que o fechamento seja feito de forma automatizada (após alguns segundos), sem a necessidade de interação do usuário.
 
-Esse tipo de modal só pode ser utilizada em situações onde o conteúdo perde sentido após um determinado período, tal como o componente *loading*.
+Esse tipo de modal só pode ser utilizado em situações onde o conteúdo perde sentido após um determinado período, tal como o componente *loading*.
 
 O usuário deve ser capaz de cancelar modal a qualquer momento, por isso o botão de ação de negação é obrigatório.
 

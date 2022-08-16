@@ -6,6 +6,7 @@
 Utilize as *Tabs* quando:
 
 *   Existir informação disponível em excesso, por página, e houver a necessidade de organizá-la em partes menores, ou seja, Categorias ou Seções;
+
 *   For necessário melhorar a usabilidade e organização de conteúdos em tela.
 
 ---
@@ -111,9 +112,9 @@ O componente item, quando apresentado com ícone e label, mudará sua disposiç�
 
 ### 2. Navegação por *Swipe*
 
-A navegação por *swipe* é uma funcionalidade muito utilizada em dispositivos móveis e é destinado a solucionar problemas de dimensão e responsividade.
+A navegação por *swipe* é uma funcionalidade muito utilizada em dispositivos móveis e é destinada a solucionar problemas de dimensão e responsividade.
 
-É recomendável utilizar essa forma de navegação quando a quantidade de abas exceder a largura da tela ou dispositivo. Nesse caso, ao clicar e arrastar as abas para a direita, todas as *tabs* se deslocarão para esquerda, exibindo as que estiverem ocultas. O mesmo poderá ser feito em sentido contrário. Observe abaixo:
+É recomendável utilizar essa forma de navegação quando a quantidade de abas exceder a largura da tela ou dispositivo. Nesse caso, ao clicar e arrastar as abas para a direita, todas as *tabs* se deslocarão para a esquerda, exibindo as que estiverem ocultas. O mesmo poderá ser feito em sentido contrário. Observe abaixo:
 
 A - O Componente *Tabs* se adéqua perfeitamente à tela com espaço excedente;
 
@@ -129,7 +130,7 @@ C - Quando o usuário fizer o movimento de *swipe* ou arrasto no sentido contrá
 ![Navegação Swipe à esquerda](imagens/behavior-swipe-2.png)
 *Comportamento swipe à esquerda*
 
-Optou-se pelo uso de "sombras" nas laterais onde as *tabs* estiverem ocultas, facilitando ao usuário, o entendimento da necessidade de se utilizar o recuso de navegação por *swipe* para exibir o conteúdo parcialmente oculto.
+Optou-se pelo uso de "sombras" nas laterais onde as *tabs* estiverem ocultas, facilitando ao usuário, o entendimento da necessidade de se utilizar o recurso de navegação por *swipe* para exibir o conteúdo parcialmente oculto.
 
 #### Controle *Swipe* via Teclado
 
@@ -145,6 +146,7 @@ Os Itens de *Tabs* devem, por padrão, manter o alinhamento à esquerda na Super
 *Alinhamento*
 
 A - Rótulo centralizado no Item de *Tab*;
+
 B - Itens de *Tab* alinhados à esquerda na Superfície de *Tab*.
 
 ### 4. Densidade
@@ -165,7 +167,7 @@ Utilize Baixa Densidade quando o projeto de layout permitir mais espaço ou quan
 
 #### C. Alta Densidade
 
-Utilize Alta Densidade quando for necessário utiliza-lo em espaços mais restritos, ou dentro de outros elementos.
+Utilize Alta Densidade quando for necessário utilizá-lo em espaços mais restritos, ou dentro de outros elementos.
 ![Tab em Alta Densidade](imagens/behavior-density-high.png)
 *Tab em alta densidade*
 
@@ -177,7 +179,7 @@ Utilize Alta Densidade quando for necessário utiliza-lo em espaços mais restri
 
 Seguindo os Princípios Gerais e Boas Práticas de *Design* e Usabilidade, é recomendado que *não* se utilize o Componente *Tabs* dentro de outro Componente *Tabs*. Isto deve-se ao fato de que, quando isto ocorre, o usuário poderá ter sua experiência de navegação confundida, além de aumentar sua sobrecarga cognitiva.
 
-Logo, quando for necessário definir uma nova divisão de categorias em um dos Itens de *Tab*, deve-se recorrer a outro Componente que propicie esta sub-divisão, como, por exemplo, o Componente *List*. Veja os exemplos abaixo:
+Logo, quando for necessário definir uma nova divisão de categorias em um dos Itens de *Tab*, deve-se recorrer a outro Componente que propicie esta subdivisão, como, por exemplo, o Componente *List*. Veja os exemplos abaixo:
 
 ![Tabs dentro de Tabs](imagens/behavior-tab-inside-tab.png)
 *Utilize o componente list dentro de Tab, em vez de Tabs dentro de Tabs*

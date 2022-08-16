@@ -6,7 +6,7 @@
 Os itens são componentes projetados para servirem de apoio a outros componentes como *lists*, menus, etc, servindo de matéria prima para a montagem desses componentes mais complexos. Devem ser utilizados quando se pretende apresentar conteúdos que devem ser visualizados de forma repetida e ordenada, facilitando desta forma a leitura.
 
 ![Exemplo uso do componente item.](imagens/uso.png)
-*Itens servem como apoio para a criação de outros componente mais complexos.*
+*Itens servem como apoio para a criação de outros componentes mais complexos.*
 
 ---
 
@@ -32,6 +32,7 @@ Para construir um item é necessário uma superfície, uma área com no mínimo 
 A superfície de um item é a área onde são colocados os componentes. A diagramação dos componentes dentro dessa área é livre porém deve-se levar em conta as características de cada componente.
 
 1. Superfície;
+
 2. Área de conteúdo: qualquer componente é aceitável, exceto botões primários e componentes relacionados à navegação, como: carrossel, *pagination*, *tab*, menu, etc.
 
 ![Exemplo da estrutura de um item.](imagens/areas.png)
@@ -46,7 +47,7 @@ A seguir, alguns exemplos de possíveis combinações de componentes dentro da �
 
 ## Regras para criação de itens
 
-Como já dito anteriormente, itens são componentes básicos para a utilização em outros componentes mais complexos. Um item isolado não faz muito sentido mas quando é utilizado em conjunto repetido com outros itens pode ser muito útil e flexível.
+Como já dito anteriormente, itens são componentes básicos para a utilização em outros componentes mais complexos. Um item isolado não faz muito sentido, mas quando é utilizado em conjunto repetido com outros itens pode ser muito útil e flexível.
 A seguir, apresentamos algumas características do componente item.
 
 ### 1. Largura
@@ -56,7 +57,7 @@ Os itens são flexíveis e por isso não possuem dimensões fixas. No entanto, �
 ![Exemplo larguras de itens.](imagens/larguras.png)
 *Exemplo de larguras de itens.*
 
-As alturas dos itens podem ser variáveis entre si porém, isso acarreta uma perda da leitura "escaneada". Portanto, use este recurso com cautela.
+As alturas dos itens podem ser variáveis entre si, porém, isso acarreta uma perda da leitura "escaneada". Portanto, use este recurso com cautela.
 
 ![Exemplo de itens com diferentes alturas.](imagens/alturas.png)
 *Exemplo de uso de itens com alturas variáveis.*
@@ -79,7 +80,7 @@ Os itens podem ser alinhados tanto horizontalmente quanto verticalmente e podem 
 
 Os componentes dentro dos itens devem respeitar as margens internas (*padding*) entre cada um dos lados da superfície, conforme definido no documento de Fundamentos. Somente elementos de mídias (como fotos e ilustrações) podem quando necessário "sangrar".
 
-**Atenção:** para saber mais sobre "sangria" consultar o documento Fundamentos/Espaçamento.
+**Atenção:** para saber mais sobre "sangria" consulte o documento Fundamentos/Espaçamento.
 
 ---
 
@@ -103,7 +104,7 @@ Um item pode pode conter elementos interativos. Neste caso, apenas estes element
 
 ### 3. Seleção
 
-Um item pode ser selecionável. Quando o usuário clicar em em um item selecionável ele assume o estado selecionado.
+Um item pode ser selecionável. Quando o usuário clicar em um item selecionável ele assume o estado selecionado.
 
 ![behavior-selecionado](imagens/behavior-selecionado.png)
 *Estado Selecionado*

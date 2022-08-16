@@ -62,6 +62,7 @@ A caixa de opção é composta pelo container (1) e pelo ícone de suporte visua
 #### (2) Ícone de suporte visual interativo
 
 -   O Ícone de suporte visual é um elemento que ficará dentro da área do container e deve ser utilizado para identificar o estado do item radio como selecionado ou não selecionado a depender do seu estado.
+
 -   Deve estar dentro da área do container
 
 ### 2. Item de opção (Obrigatório)
@@ -78,9 +79,13 @@ A caixa de opção é composta pelo container (1) e pelo ícone de suporte visua
 #### (2) Texto descritivo
 
 -   Para proporcionar um maior conforto visual ao usuário, o texto descritivo deve se posicionar sempre à direita do container respeitando o espaçamento lateral da caixa de opção.
+
 -   Texto que descreve a opção a ser selecionada. Pode ser suprimido dependendo da aplicação, como por exemplo em tabelas.
+
 -   Deve-se manter uma coerência entre as larguras dos itens evitando um texto descritivo com mais de sete palavras.
+
 -   Os textos descritivos deverão ser escritos com sua primeira letra em maiúsculo e o restante em minúsculo. Ex.: Selecione a opção 01.
+
 -   Evitar escrever com todas as letras em maiúsculo (ALL CAPS) ou com todas as primeiras letras das palavras em maiúsculo (Camel Case).
 
 ### 3. Cabeçalho de opções (Opcional)
@@ -93,15 +98,21 @@ O cabeçalho de opções é composto pelo rótulo (1) e caso necessário, texto 
 #### (1) Rótulo
 
 -   Quando o componente é apresentado em uma lista e opções devem ser precedidos de um rótulo que descreva a informação que o usuário deve selecionar.
+
 -   O rótulo deve se posicionar no topo do componente alinhado à esquerda.
+
 -   Deverá ser escrito com sua primeira letra em maiúsculo e o restante em minúsculo. Ex.: Selecione a opção 01.
+
 -   Evitar escrever com todas as letras em maiúsculo (ALL CAPS) ou com todas as primeiras letras das palavras em maiúsculo (Camel Case).
 
 #### (2) Informações Adicionais
 
 -   É possível adicionar um texto auxiliar ao rótulo para facilitar o seu entendimento.
+
 -   Este texto deve se posicionar logo abaixo do componente rótulo, sem espaçamentos e alinhado à esquerda.
+
 -   Deverá ser escrito com sua primeira letra em maiúsculo e o restante em minúsculo. Ex.: Selecione a opção 01.
+
 -   Evitar escrever com todas as letras em maiúsculo (ALL CAPS) ou com todas as primeiras letras das palavras em maiúsculo (Camel Case).
 
 ### 4. Lista de opções (Obrigatório)
@@ -130,50 +141,50 @@ Deve se posicionar abaixo do último item da lista de opções, alinhado à esqu
 
 -   Estado padrão do componente. Indica que o usuário não respondeu ou não optou pela opção da lista.
 
-![Default](imagens/radio-estado-default.png)
-*Estado Default*
+    ![Default](imagens/radio-estado-default.png)
+    *Estado Default*
 
 #### Hover
 
 -   Estado que indica quando o usuário posiciona o ponteiro do mouse sobre a área do componente (1). Pode não fazer sentido em dispositivos em que não se utiliza o mouse como recurso.
 
-![Estado hover](imagens/radio-estado-hover.png)
-*Estado Hover*
+    ![Estado hover](imagens/radio-estado-hover.png)
+    *Estado Hover*
 
 #### Selected
 
 -   Estado que indica que o usuário selecionou um item. Pode ser acionado pressionando a tecla espaço quando o foco está no componente, pelo clique do mouse ou toque na tela na região do componente (incluindo seu texto descritivo, quando houver), ou outra ação que corresponda ao item desejado pelo usuário com a fala, por exemplo.
 
-![Estado selecionado](imagens/radio-estado-selected.png)
-*Estado Selecionado*
+    ![Estado selecionado](imagens/radio-estado-selected.png)
+    *Estado Selecionado*
 
 #### Focused
 
 -   Estado que indica que o item da lista de opções está destacado, usando um método de entrada como a tecla "Tab" do teclado, por exemplo. Este estado é de extrema importância para garantir a acessibilidade do componente na interface.
 
-![Estado focused](imagens/radio-estado-focused.png)
-*Estado Foco*
+    ![Estado focused](imagens/radio-estado-focused.png)
+    *Estado Foco*
 
 #### Invalid
 
 -   Estado indicativo de que a opção não é válida. Pode ser aplicado quando a opção selecionada em um questionário está incorreta, ou o preenchimento de ao menos uma opção é obrigatório.
 
-![Estado invalido](imagens/radio-estado-invalid.png)
-*Estado Inválido*
+    ![Estado invalido](imagens/radio-estado-invalid.png)
+    *Estado Inválido*
 
 #### Valid
 
 -   Estado indicativo de que a opção é válida. Pode ser aplicado quando a opção selecionada em um questionário está correta, por exemplo.
 
-![Estado valido](imagens/radio-estado-valid.png)
-*Estado Válido*
+    ![Estado valido](imagens/radio-estado-valid.png)
+    *Estado Válido*
 
 #### Disabled
 
 -   Estado que indica que a opção não está disponível para ser selecionada.
 
-![Estado disabled](imagens/radio-estado-disabled.png)
-*Estado Desabilitado*
+    ![Estado disabled](imagens/radio-estado-disabled.png)
+    *Estado Desabilitado*
 
 ### 2. Espaçamento e Alinhamento
 
@@ -185,15 +196,15 @@ Deve se posicionar abaixo do último item da lista de opções, alinhado à esqu
 
 -   O texto descritivo deve se posicionar sempre à direita a (2) da caixa de opção como indicado acima. Deve manter um espaçamento inferior dos elementos abaixo (3).
 
-![Espaçamento caixa](imagens/radio-caixa-opcao-espacamento.png)
-*Espaçamento da caixa de opção e texto descritivo*
+    ![Espaçamento caixa](imagens/radio-caixa-opcao-espacamento.png)
+    *Espaçamento da caixa de opção e texto descritivo*
 
 #### Item de opção
 
 -   Cada item do Radio, composto pela caixa de opção à esquerda e seu texto descritivo à direita, deve manter uma distância à direita (4), abaixo (3) e acima (1) entre este e o próximo componente.
 
-![Espaçamento item](imagens/radio-item-opcao-espacamento.png)
-*Espaçamento da caixa de opção e texto descritivo*
+    ![Espaçamento item](imagens/radio-item-opcao-espacamento.png)
+    *Espaçamento da caixa de opção e texto descritivo*
 
 #### Cabeçalho de opções
 
@@ -202,7 +213,9 @@ Deve se posicionar abaixo do último item da lista de opções, alinhado à esqu
 #### Mensagens de feedback contextual
 
 -   Deve ser o elemento mais abaixo na lista de opções do componente.
+
 -   Deve manter o espaçamento superior do último item da lista de opções (2).
+
 -   Deverá haver apenas uma mensagem para todo o conjunto da lista de opções.
 
 ![Espaçamento Cabeçalho Mensagem ](imagens/radio-lista-opcao-espacamento.png)
@@ -210,7 +223,7 @@ Deve se posicionar abaixo do último item da lista de opções, alinhado à esqu
 
 #### Disposição vertical
 
--   No caso de listas verticais com textos descritivos de alturas diferentes ou que ultrapassem um linha de conteúdo deve-se manter o espaçamento inferior (3) para garantir a distinção dos itens pelo usuário.
+-   No caso de listas verticais com textos descritivos de alturas diferentes ou que ultrapassem uma linha de conteúdo deve-se manter o espaçamento inferior (3) para garantir a distinção dos itens pelo usuário.
 
 -   Não há limite de altura ou linhas de texto para os itens de opção.
 

@@ -78,9 +78,13 @@ O botão terciário deve manter o seu comportamento dentro do componente e funci
 Encontramos cinco tipos de componentes *tag*:
 
 1. *Tag* de interação;
+
 2. *Tag* de texto;
+
 3. *Tag* de *status*;
+
 4. *Tag* de contagem;
+
 5. *Tag* de ícone.
 
 ### 1. *Tag* de Interação
@@ -128,7 +132,7 @@ A imagem a seguir ilustra alguns dos mais frequentes usos da *tag* de texto:
 
 ### 3. *Tag* de *Status*
 
-*Tags* de *status* basicamente informa o *status* de um elemento. É flexível podendo ser utilizado com *label* ou apenas a superfície circular. Neste caso, a informação é transmitida unicamente por meio de cores.
+*Tags* de *status* basicamente informam o *status* de um elemento. É flexível podendo ser utilizado com *label* ou apenas a superfície circular. Neste caso, a informação é transmitida unicamente por meio de cores.
 
 ![Exemplos de tag de status com e sem label.](imagens/tag-status.png)
 *Exemplo de tag de status com e sem uso de label*
@@ -176,7 +180,7 @@ Por ser visual, a *tag* de ícone é mais sintética e direta. Por isso, escolha
 
 Geralmente é utilizada a cor azul padrão para o *background* da superfície do componente *tag de interação* porque esta é a cor que indica que um elemento é interativo. Para os demais tipos de *tags* sugerimos utilizar a paleta de cores de apoio do *Design System*. Esteja sempre atento para garantir legibilidade e coerência semântica na escolha das cores.
 
-**Atenção:** não exagere na variedade de cores pois isso pode desviar a atenção do usuário do foco principal da tela.
+**Atenção:** não exagere na variedade de cores, pois isso pode desviar a atenção do usuário do foco principal da tela.
 
 ### 2. Estados
 

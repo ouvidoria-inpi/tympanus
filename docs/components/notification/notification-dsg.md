@@ -35,7 +35,7 @@ Utilize *notification* para agrupar e informar o usuário sobre eventos e inform
 
 ### 1. Área do Usuário (Opcional)
 
-Esta área é formada por informações pessoais, tais como do nome e o e-mail do usuário. A apresentação dessas informações são importantes principalmente quando forem acessadas por meio do componente avatar.
+Esta área é formada por informações pessoais, tais como nome e e-mail do usuário. A apresentação dessas informações são importantes principalmente quando forem acessadas por meio do componente avatar.
 
 ![Área do Usuário](imagens/guide-user.png)
 *Área destinada aos dados do usuário*
@@ -84,8 +84,11 @@ O componente *Item* é a base onde será criada a formatação do conteúdo rela
 As informações apresentadas podem variar de acordo com a necessidade de cada projeto. Para exemplificar, apresentamos uma diagramação onde o componente *item* apresenta as seguintes informações:
 
 -   **Componente Tag de Status**: Pode-se utilizar o componente *tag* para marcar visualmente qual *item* da notificação é novo ou que ainda não foi lido.
+
 -   **Título da Notificação**: Principal identificação para a chamada do *item* do *notification*.
+
 -   **Informação Cronológica**: Serve para localizar as informações da notificação cronologicamente.
+
 -   **Conteúdo**: Esse bloco serve para informar o conteúdo total ou parcial de uma determinada informação.
 
 ![Exemplo Anatomia](imagens/guide-itens.png)
@@ -147,7 +150,7 @@ Seguem as recomendações de uso para cada categoria de *Grid*.
 
 #### Grid de 4 Colunas
 
-O componente ocupará toda disponível da tela. A altura terá o tamanho total do conteúdo disponível no *notification*.
+O componente ocupará toda a tela. A altura terá o tamanho total do conteúdo disponível no *notification*.
 
 ![Notification na grid de 4 colunas](imagens/responsividade-4colunas.png)
 *Comportamento do notification em Grid para 4 colunas*

@@ -35,7 +35,9 @@ O *tooltip* é composto pelos seguintes elementos:
 O balão flutuante é o elemento essencial que contém todo conteúdo informativo do *tooltip* e possui as seguintes  características:
 
 -   Posicionamento dinâmico;
+
 -   Visibilidade dinâmica;
+
 -   Flutua sobre todos os outros elementos da tela.
 
 Este também pode ser apresentado com configurações de cores diferenciadas dependendo do contexto.
@@ -103,7 +105,7 @@ Geralmente são utilizados para explicar um ícone ou uma ação relacionada ao 
 
 ### 2. *Popover*
 
-São *tooltips* que ficam visíveis na tela até serem fechados pelo usuário. Por isso apresentam sempre um botão para fechá-lo.
+São *tooltips* que ficam visíveis na tela até serem fechados pelo usuário. Por isso apresenta sempre um botão para fechá-lo.
 
 Podem ser acionados por meio de clique ou já serem apresentados automaticamente pelo sistema.
 
@@ -130,10 +132,11 @@ O comportamento responsivo do componente *tooltip* é invariável, com relação
 
 #### *Grids* de 4 Colunas
 
-No *grid* de 4 colunas, o *tooltip* também não sofre alterações sobre sua aparência ou dimensões, porém existem restrições a respeito do seu acionamento. Por não haver evento *mouse over* em dispositivos móveis, o *tooltip* terá seu acionamento restrito apenas ao clique ou foco. Observe abaixo:
+No *grid* de 4 colunas, o *tooltip* também não sofre alterações sobre sua aparência ou dimensões, porém existem restrições a respeito do seu acionamento. Por não haver evento *mouseover* em dispositivos móveis, o *tooltip* terá seu acionamento restrito apenas ao clique ou foco. Observe abaixo:
 
--   1- Acionamento por clique;
--   2- Acionamento por foco.
+1. Acionamento por clique;
+
+2. Acionamento por foco.
 
 ![Grid de 4 colunas.](imagens/tooltip-behavior-responsive-grid-4-cols-start.png)
 *Grid de 4 colunas - acionamento restrito ao clique, foco ou automático*
@@ -156,13 +159,13 @@ A posição do *tooltip* em relação ao elemento varia conforme a posição e o
 
 Acompanhe a seguir:
 
--   1- Caso o elemento esteja próximo ao topo da tela, o *tooltip* deve estar posicionado abaixo do elemento;
+1. Caso o elemento esteja próximo ao topo da tela, o *tooltip* deve estar posicionado abaixo do elemento;
 
--   2- Caso o elemento esteja próximo à base da tela, o *tooltip* deve estar posicionado acima do elemento;
+2. Caso o elemento esteja próximo à base da tela, o *tooltip* deve estar posicionado acima do elemento;
 
--   3- Caso o elemento esteja próximo à lateral esquerda da tela, o *tooltip* deve estar posicionado à direita do elemento;
+3. Caso o elemento esteja próximo à lateral esquerda da tela, o *tooltip* deve estar posicionado à direita do elemento;
 
--   4- Caso o elemento esteja próximo à lateral direita da tela, o *tooltip* deve estar posicionado à esquerda do elemento.
+4. Caso o elemento esteja próximo à lateral direita da tela, o *tooltip* deve estar posicionado à esquerda do elemento.
 
 ![Posicionamento e limites da tela.](imagens/tooltip-behavior-directions.png)
 *Posicionamento e limites da tela*
@@ -171,13 +174,13 @@ Acompanhe a seguir:
 
 O *tooltip* pode ser configurado para ser acionado por meio dos seguintes eventos:
 
--   1- *Mouse over*: quando o usuário passa o ponteiro do *mouse* sobre o elemento. Use somente no tipo padrão;
+1. *Mouseover*: quando o usuário passa o ponteiro do *mouse* sobre o elemento. Use somente no tipo padrão;
 
--   2- Clique: quando o usuário clicar no elemento. Use somente no tipo *popover*;
+2. Clique: quando o usuário clicar no elemento. Use somente no tipo *popover*;
 
--   3- *Foco:* quando o estado foco for acionado no elemento. Use em todos os tipos.;
+3. *Foco:* quando o estado foco for acionado no elemento. Use em todos os tipos.;
 
--   4- Automaticamente: quando for programado pelo sistema para ser mostrado em determinada situação, independentemente de ação do usuário. Use somente no tipo *popover*.
+4. Automaticamente: quando for programado pelo sistema para ser mostrado em determinada situação, independentemente de ação do usuário. Use somente no tipo *popover*.
 
 ![Possibilidades de acionamento do tooltip.](imagens/tooltip-behavior-start.png)
 *Possibilidade de acionamento do tooltip*
@@ -186,11 +189,11 @@ O *tooltip* pode ser configurado para ser acionado por meio dos seguintes evento
 
 O *tooltip* pode ser configurado para ser ocultado por meio dos seguintes eventos:
 
--   A- *Mouse out*: quando o usuário retirar o ponteiro do *mouse* de cima do elemento;
+A - *Mouseout*: quando o usuário retirar o ponteiro do *mouse* de cima do elemento;
 
--   B- *Clique*: ao clicar no *button* fechar ou clicar em qualquer área da tela fora do *tooltip*;
+B - *Clique*: ao clicar no *button* fechar ou clicar em qualquer área da tela fora do *tooltip*;
 
--   C- *Por tempo determinado:* quando for programado para ser ocultado após um tempo predefinido pelo sistema.
+C - *Por tempo determinado:* quando for programado para ser ocultado após um tempo predefinido pelo sistema.
 
 ![Fechamentos do tooltip.](imagens/tooltip-behavior-hide.png)
 *Fechamentos do tooltip*
@@ -199,8 +202,9 @@ O *tooltip* pode ser configurado para ser ocultado por meio dos seguintes evento
 
 A largura do *tooltip* cresce conforme aumenta o conteúdo. No entanto, esteja atento às boas práticas e procure utilizar um conteúdo textual curto e objetivo.
 
--   1- Largura mínima do *tooltip*: corresponde a um conteúdo de texto informativo de 12 caracteres;
--   2- Largura ajustável ao texto.
+1. Largura mínima do *tooltip*: corresponde a um conteúdo de texto informativo de 12 caracteres;
+
+2. Largura ajustável ao texto.
 
 ![Largura do tooltip.](imagens/tooltip-behavior-text-size.png)
 *Largura do tooltip*
@@ -257,13 +261,13 @@ Coloque *tooltips* apenas em elementos HTML que são, tradicionalmente, focávei
 
 Apesar de elementos HTML genéricos (como "*spam*") poderem se tornar focáveis, isso vai criar potenciais tabulações irritantes e confusas, em elementos não interativos para usuários de teclado. Além disso, a maioria das tecnologias assistivas, atualmente, não reconhecem o *tooltip*, nesta situação.
 
-Além do mais, não dependa só no evento *hover* como acionador para seu *tooltip*, já que isso vai fazer com que seus *tooltips* sejam impossíveis de serem acionados por usuários de teclado.
+Além do mais, não dependa só do evento *hover* como acionador para seu *tooltip*, já que isso vai fazer com que seus *tooltips* sejam impossíveis de serem acionados por usuários de teclado.
 
 ---
 
 ## Melhores Práticas
 
--   Use *tooltips*  somente quando necessário pois o uso excessivo deste recurso pode ser irritante para a experiência do usuário.
+-   Use *tooltips*  somente quando necessário pois o uso excessivo desse recurso pode ser irritante para a experiência do usuário.
 
 -   *Tooltips* podem ser uma forma útil de introduzir os usuários a novas e importantes funcionalidades, mas quando o usuário aprender a usar essa funcionalidade, esse *tooltip* deve desaparecer.
 

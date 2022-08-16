@@ -6,10 +6,15 @@
 Utilize botões quando for necessário realizar ações contendo as seguintes características:
 
 -   Reconhecimento imediato de uma ação interativa.
+
 -   Ações que precisam de ênfases diversificadas.
+
 -   Promover maior destaque das ações.
--   Possibilidade de utilizar tanto elemento visuais como textuais de forma consistentes.
+
+-   Possibilidade de utilizar tanto elementos visuais como textuais de forma consistentes.
+
 -   Uso de *feedbacks* visuais variados e objetivos.
+
 -   Gerar uma ou mais opções de escolha.
 
 **Importante:** Os botões devem ser usados conforme a necessidade de interação do usuário com a interface. Sendo assim, ao se projetar uma interface deve-se planejar o posicionamento dos botões de forma estratégica, prevendo a eficiência na comunicação e levando o olhar do usuário ao local desejado. Também é necessário definir o grau de importância e hierarquia das ações através do uso correto dos tipos de botões.
@@ -66,7 +71,7 @@ O tom e voz utilizado no rótulo é, essencialmente, como ele vai comunicar a su
 Quando houver a necessidade da criação de um botão, é esperado que este informe qual a sua ação, reduzindo ao máximo falsas expectativas e dúvidas aos usuários.
 
 Recomenda-se, sempre que possível, a utilização de verbos de **ação no infinitivo**.
-Ex.: “Entrar” , Cancelar”, “Cadastrar”, “Anexar”, etc.
+Ex.: "Entrar" , "Cancelar", "Cadastrar", "Anexar", etc.
 
 #### 3. Superfície (Obrigatório)
 
@@ -156,8 +161,11 @@ Em dispositivos por toque, seu uso é altamente recomendado por facilitar o aces
 **Atenção:**
 
 -   Somente os botões tipo padrão possuem esse comportamento,
+
 -   Pode ser utilizado em outros tipos de *grid*, porém, de forma cautelosa.
+
 -   Pode ser utilizado em conjunto com qualquer tipo de densidade ou ênfase.
+
 -   Pode existir, na mesma tela, botões sem ou com o comportamento bloco.
 
 Abaixo, exemplos de possibilidades de uso desse comportamento (mas não necessariamente boas práticas de uso).
@@ -169,12 +177,14 @@ Abaixo, exemplos de possibilidades de uso desse comportamento (mas não necessar
 
 ### 2. Densidade
 
-Para dar maior flexibilidade em composição de tela ou até mesmo refinar o "peso" visual dos botões na tela, é utilizado o recurso da densidade nos botões. O ajuste da densidade consiste em aumentar ou reduzir os espaçamentos internos do botão de forma a deixá-los mais compactos ou mais expandidos em seu formato.
+Para dar maior flexibilidade à composição de tela ou até mesmo refinar o "peso" visual dos botões na tela, é utilizado o recurso da densidade nos botões. O ajuste da densidade consiste em aumentar ou reduzir os espaçamentos internos do botão de forma a deixá-los mais compactos ou mais expandidos em seu formato.
 
 Para isto, o Design System utiliza três níveis de densidade:
 
 -   **Densidade baixa:** O botão tem sua altura aumentada.
+
 -   **Densidade padrão:**  É a forma padrão do componente button.
+
 -   **Densidade alta:** O botão tem sua altura reduzida.
 
 ![Exemplo de densidades botão.](imagens/button-behaviour-density.png)
@@ -191,7 +201,7 @@ Consulte as informações dos valores dos espaçamentos e alturas na seção *De
 
 ### 3. Posicionamento
 
-Tendo em vista a utilização das diferentes ênfases nos botões com o intuito de manter uma hierarquia visual na interface, é necessário posicioná-los de forma coerente em relação ao grau de importância de cada um dessas ênfases.
+Tendo em vista a utilização das diferentes ênfases nos botões com o intuito de manter uma hierarquia visual na interface, é necessário posicioná-los de forma coerente em relação ao grau de importância de cada uma dessas ênfases.
 
 Deve-se seguir o seguinte princípio: a **ênfase de maior relevância** deverá vir sempre à **direita**.
 
@@ -233,7 +243,7 @@ Neste comportamento, após o clique do usuário no botão, o rótulo ou ícone a
 
 ### 6. Área de Proteção
 
-Quando o botão estiver próximo a algum outro componente, mantenha um espaçamento mínimo para que a o botão seja notado na tela e que sua área de interação não se confunda com as de outros componentes.
+Quando o botão estiver próximo a algum outro componente, mantenha um espaçamento mínimo para que ele seja notado na tela e que sua área de interação não se confunda com as de outros componentes.
 
 ![Área de proteção no botão.](imagens/button-spacing.png)
 *Exemplos área de proteção no botão*

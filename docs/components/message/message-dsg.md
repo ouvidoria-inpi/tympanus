@@ -28,7 +28,7 @@ O *Message* é composto pelos seguintes elementos:
 
 #### 1. Superfície do *Message* (Obrigatório)
 
-A Superfície do *Message* é o elemento do *Componente Message* que agrupará todos os outros elementos que o compõe e que estão previamente listadas na anatomia. A Superfície do *Message* tem a função de definir semanticamente o tipo de mensagem está sendo transmitida, além de destacar a mensagem sobre todos os outros elementos da *interface*.
+A Superfície do *Message* é o elemento do *Componente Message* que agrupará todos os outros elementos que o compõe e que estão previamente listados na anatomia. A Superfície do *Message* tem a função de definir semanticamente o tipo de mensagem que está sendo transmitida, além de destacar a mensagem sobre todos os outros elementos da *interface*.
 
 Logo, a Superfície do *Message* pode ser apresentada em diferentes cores, com funções semânticas. Veja mais detalhes em [Fundamento Estados](https://www.gov.br/ds/fundamentos-visuais/estados).
 
@@ -64,7 +64,7 @@ B - Ícone de ação *Fechar*
 
 #### 3. Título do Message (Opcional)
 
-O Título do *Message* é um elemento opcional e serve dar destaque à mensagem textual. É utilizado logo no início do texto ou acima dele. Geralmente se utiliza uma palavra ou pequena frase de efeito, resumindo a ideia da descrição textual.
+O Título do *Message* é um elemento opcional e serve para dar destaque à mensagem textual. É utilizado logo no início do texto ou acima dele. Geralmente se utiliza uma palavra ou pequena frase de efeito, resumindo a ideia da descrição textual.
 
 O Título do *Message* pode ser posicionado:
 
@@ -114,7 +114,7 @@ A Mensagem Tipo Padrão é utilizada quando há a necessidade de oferecer ao usu
 
 ### 2. Mensagem Tipo Contextual
 
-A **Mensagem Tipo Contextual** é utilizada quando o *feedback* está relacionado a algum elemento ou componente dentro de uma tela ou seção. Refere-se diretamente à ação do usuário sobre algum **Componente**.
+A **Mensagem Tipo Contextual** é utilizada quando o *feedback* está relacionado a algum elemento ou componente dentro de uma tela ou seção. Refere-se diretamente à ação do usuário sobre algum **componente**.
 
 ![Mensagem Tipo Contextual](imagens/message-type-context.png)
 *Mensagem Tipo Contextual*
@@ -170,14 +170,14 @@ Existem duas formas de posicionamento para as *mensagens do tipo padrão*. Dever
 
 #### Mensagem para uso global
 
-A informação deste tipo de notificação, deve, de forma geral, ser uma resposta à funcionalidade de toda a página ou sistema e deverá ser apresentado entre o cabeçalho e o componente *breadcrumb*, se estendendo até o limite da sua largura. Neste tipo de posicionamento, a superfície do *Message* deverá se estender, sangrando a área da *Grid*, enquanto seu conteúdo interno deverá respeitar as margens da área útil. Como exemplificado abaixo:
+A informação deste tipo de notificação, deve, de forma geral, ser uma resposta à funcionalidade de toda a página ou sistema e deverá ser apresentada entre o cabeçalho e o componente *breadcrumb*, se estendendo até o limite da sua largura. Neste tipo de posicionamento, a superfície do *Message* deverá se estender, sangrando a área da *Grid*, enquanto seu conteúdo interno deverá respeitar as margens da área útil. Como exemplificado abaixo:
 
 ![Exemplo de posicionamento da notificação para uso global](imagens/message-behavior-position01.png)
 *Exemplo de posicionamento da notificação para uso global*
 
 #### Mensagem para uso direcionado
 
-A notificação para uso direcionado deve ser uma resposta do sistema relacionado-o a uma funcionalidade específica ou local, que não impacte em todo conteúdo da página. Sempre que possível, recomenda-se posicionar a mensagem próximo ao elemento ao qual a mensagem se refere.
+A notificação para uso direcionado deve ser uma resposta do sistema relacionando-o a uma funcionalidade específica ou local, que não impacte em todo conteúdo da página. Sempre que possível, recomenda-se posicionar a mensagem próximo ao elemento ao qual a mensagem se refere.
 
 No exemplo abaixo, a informação de sucesso está diretamente relacionada a uma ação realizada em um dos itens do componente *tab*.
 
@@ -224,18 +224,18 @@ Deve ser usado quando o objetivo da mensagem for transmitir um alerta de erro po
 
 -   Deve-se evitar situações iguais à representada na imagem do exemplo 'F'. Onde a *Mensagem Contextual* cresce com mais de uma linha.
 
- ![Quebra de Linha](imagens/message-behavior-break-line.png)
-*Quebra de Linha*
+    ![Quebra de Linha](imagens/message-behavior-break-line.png)
+    *Quebra de Linha*
 
 -   Deve-se evitar o uso de múltiplas *Mensagens do Tipo Padrão*. Quando for necessário dar ênfase a vários elementos em tela, utilize a *Mensagem do Tipo Contextual*. Observe abaixo:
 
- ![Forma de uso das Mensagens](imagens/message-behavior-multiple-messages.png)
-*À direita exemplo do uso recomendável com as mensagens contextuais e à esquerda o exemplo do uso não recomendável com múltiplas mensagens*
+    ![Forma de uso das Mensagens](imagens/message-behavior-multiple-messages.png)
+    *À direita exemplo do uso recomendável com as mensagens contextuais e à esquerda o exemplo do uso não recomendável com múltiplas mensagens*
 
 -   Quando houver a necessidade de apresentar informações adicionais relacionadas a mensagem de erro do sistema, a descrição principal deverá ser apresentada por um estilo tipográfico (padrão) enquanto as informações complementares deverão ser apresentados em uma formatação diferente.
 
-![Mensagem de erro do sistema com informações complementares em itálico](imagens/message-danger-cod.png)
-*Na mensagem acima, foi utilizado o texto regular para o detalhamento do erro, e as informações complementares (como código e data) em itálico*
+    ![Mensagem de erro do sistema com informações complementares em itálico](imagens/message-danger-cod.png)
+    *Na mensagem acima, foi utilizado o texto regular para o detalhamento do erro, e as informações complementares (como código e data) em itálico*
 
 ---
 

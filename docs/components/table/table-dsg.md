@@ -57,6 +57,7 @@ A barra contextual tem a função de exibir informações, ou ações contextuai
 A barra contextual pode conter:
 
 1. *Texto Contextual*
+
 2. *Itens de Ação Contextual*
 
 ![Barra Contextual](imagens/anatomy-contextual-bar.png)
@@ -73,7 +74,7 @@ O *header* da tabela é um elemento obrigatório, pois descreve o tipo de conte�
 
 ###### Tom e Voz
 
-O nome da coluna, texto que descreve o tipo de conteúdo exibido, deve ser conciso de modo a comunicar a sua mensagem de maneira mais eficiente possível. Estes textos não devem ser extensos (preferencialmente com quantidade de caracteres menor que os dados referentes).
+O nome da coluna, texto que descreve o tipo de conteúdo exibido, deve ser conciso de modo a comunicar a sua mensagem da maneira mais eficiente possível. Estes textos não devem ser extensos (preferencialmente com quantidade de caracteres menor que os dados referentes).
 
 > *Dica*: faça uma lista de palavras-chave e depois escolha as mais relevantes para sua necessidade.
 
@@ -84,7 +85,9 @@ O nome da coluna, texto que descreve o tipo de conteúdo exibido, deve ser conci
 As linhas são elementos obrigatórios e apresentam os dados ou informações organizadas por colunas. Podem também conter funcionalidades para manipulação destes dados. Observe abaixo:
 
 1. *Dados ou Elementos Interativos*
+
 2. *Ação Expandir/Retrair*
+
 3. *Seleção de Linhas*
 
 ![Elementos da Linha da Tabela](imagens/anatomy-lines.png)
@@ -95,8 +98,11 @@ As linhas são elementos obrigatórios e apresentam os dados ou informações or
 Os dados de uma linha podem conter:
 
 *   Ícones
+
 *   *Links*
+
 *   Textos
+
 *   Componentes de formulários (*checkbox*, *text*, *radio*, *select*...)
 
 #### Estado *Hover* em tabelas sem interatividade (opcional)
@@ -155,6 +161,7 @@ Na *Grid* de 4 colunas, tendo em vista a característica bastante horizontal da 
 ##### Sugestão de usabilidade em *grids* de 4 Colunas
 
 Sempre que possível, opte pela utilização dos recursos de busca e paginação, visando garantir uma melhor usabilidade, principalmente em *layouts* reduzidos.
+
 ![Exemplo de recursos para melhorar a usabilidade](imagens/acessibility.png)
 *Exemplo de recursos para melhorar a usabilidade*
 
@@ -177,7 +184,7 @@ O comportamento de rolagem visa solucionar problemas de exibição de conteúdos
 
 #### Rolagem vertical
 
-Na rolagem vertical, a barra de título, o *Header da Table* e a barra de paginação permanecem fixas enquanto a rolagem ocorrerá apenas nas linhas da tabela. A barra de rolagem deverá ser posicionado na extrema direita da tabela entre o *Header da Table* e a barra de paginação.
+Na rolagem vertical, a barra de título, o *Header da Table* e a barra de paginação permanecem fixas enquanto a rolagem ocorre apenas nas linhas da tabela. A barra de rolagem deverá ser posicionada na extrema direita da tabela entre o *Header da Table* e a barra de paginação.
 
 ![Rolagem Vertical](imagens/behavior-scroll-1.png)
 *Rolagem Vertical*
@@ -189,7 +196,8 @@ A rolagem horizontal visa solucionar a exibição de uma tabela com muitas colun
 ![Rolagem Horizontal](imagens/behavior-scroll-2.png)
 *Rolagem Horizontal*
 
-Em *layouts* muito pequenos como em dispositivos móveis (*Grid* de 4 colunas), o uso de barras de rolagem simples, também deverão ser utilizados considerando todo o conteúdo da tabela.
+Em *layouts* muito pequenos como em dispositivos móveis (*Grid* de 4 colunas), o uso de barras de rolagem simples também deverão ser utilizados considerando todo o conteúdo da tabela.
+
 ![Exemplo de tabela em telas reduzidas com rolagem horizontal](imagens/horizontal-scroll.png)
 *Exemplo de tabela em telas reduzidas com rolagem horizontal*
 
@@ -207,7 +215,7 @@ A expansão da linha ocorre quando o usuário clicar sobre o botão `Chevron-Dow
 
 Observe que o conteúdo exibido após a expansão da linha é marcado com uma sombra, fazendo diferenciação de hierarquia.
 
-**Atenção:** O conteúdo que será expandido internamente em cada linha, deve ser diagramado com cautela. O excesso de informação e elementos interativos podem confundir o usuário, atrapalhando a leitura e o entendimento dos dados encontrados na tabela. Evite componentes como: tabela, *card*, ou qualquer outro componente complexo responsável por organizar, ordenar informações em excesso. O uso mais comum de apresentar estes dados adicionais seria por uso de listas.
+**Atenção:** O conteúdo que será expandido internamente em cada linha, deve ser diagramado com cautela. O excesso de informação e elementos interativos podem confundir o usuário, atrapalhando a leitura e o entendimento dos dados encontrados na tabela. Evite componentes como: tabela, *card*, ou qualquer outro componente complexo responsável por organizar e ordenar informações em excesso. O uso mais comum de apresentar estes dados adicionais seria por uso de listas.
 
 ### 4. Seleção de linhas
 
@@ -306,12 +314,17 @@ Sempre que possível opte pela utilização de tabelas simples, pois, múltiplos
 
 ### 9. Ordenação
 
-O comportamento de ordenação tem a utilidade de organizar o conteúdo das colunas exibidas na tabela à partir de uma lógica de visualização, ou seja: ordem crescente ou decrescente. Para ordenar a visualização da tabela, o usuário poderá clicar em qualquer área da célula do *header* que esteja com o texto no seu estado interativo. A cada novo *click* o ícone e a cor do estado mudará, garantindo um *feedback* visual e indicando o tipo de ordenação utilizado na coluna.
+O comportamento de ordenação tem a utilidade de organizar o conteúdo das colunas exibidas na tabela a partir de uma lógica de visualização, ou seja: ordem crescente ou decrescente. Para ordenar a visualização da tabela, o usuário poderá clicar em qualquer área da célula do *header* que esteja com o texto no seu estado interativo. A cada novo clique o ícone e a cor do estado mudará, garantindo um *feedback* visual e indicando o tipo de ordenação utilizado na coluna.
 
-Após clicar no *header* de uma coluna que esteja no estado interativo, sua celular mudará para o estado ordenado, indicando que houve uma mudança na ordenação da coluna. Ver sequência e estados de acionamentos abaixo:
+Após clicar no *header* de uma coluna que esteja no estado interativo, seu celular mudará para o estado ordenado, indicando que houve uma mudança na ordenação da coluna. Ver sequência e estados de acionamentos abaixo:
 
 ![Ordenação](imagens/behavior-state-change.png)
-*A - Exemplo de tabela sem ordenação definida; B - Após contato com a seta do mouse o estado do header mudará o hover; C - Exemplo do header da tabela sendo clicado; D - Após clique, os dados da coluna serão ordenado no modo crescente, com o ícone indicando o sentido e o header será apresentado no estado ordenado; E - No instante de um novo clique, o header da tabela apresentará novamente o estado pressionado; F - Após novo acionamento, os dados serão re-ordenados no modo decrescente, o estado do header será apresentado novamente no estado ordenado, porém com o sentido do ícone invertido indicando a nova ordenação.*
+*A - Exemplo de tabela sem ordenação definida;*
+*B - Após contato com a seta do mouse o estado do header mudará o hover;*
+*C - Exemplo do header da tabela sendo clicado;*
+*D - Após clique, os dados da coluna serão ordenado no modo crescente, com o ícone indicando o sentido e o header será apresentado no estado ordenado;*
+*E - No instante de um novo clique, o header da tabela apresentará novamente o estado pressionado;*
+*F - Após novo acionamento, os dados serão reordenados no modo decrescente, o estado do header será apresentado novamente no estado ordenado, porém com o sentido do ícone invertido indicando a nova ordenação.*
 
 **Atenção:** Na ordenação, o usuário só poderá selecionar um parâmetro por vez (Sem ordenação, Crescente ou Decrescente).
 
@@ -320,13 +333,14 @@ Após clicar no *header* de uma coluna que esteja no estado interativo, sua celu
 O header da tabela poderá ser apresentado, de forma opcional, de duas maneiras distintas. Ver exemplo abaixo:
 
 ![Possibilidade de Ordenação](imagens/behavior-interactive-rows.png)
-*A - Células não interativas, sem a funcionalidade de ordenação; B - Células interativas que permitem a funcionalidade de ordenação.*
+*A - Células não interativas, sem a funcionalidade de ordenação;*
+*B - Células interativas que permitem a funcionalidade de ordenação.*
 
 Desta maneira, o usuário poderá ser apresentando a funcionalidade de ordenação, através de uma representação interativa ou *feedback* visual (B) ou sem o estado interativo, onde não será possível ordenar o conteúdo da coluna da tabela (A).
 
 #### Ordenação em tabelas complexas
 
-O comportamento de ordenação em tabelas complexas poderá ser utilizado apenas nas colunas mais próxima às linhas, não podendo ser aplicado em colunas que agrupem outras colunas. Ver exemplos abaixo:
+O comportamento de ordenação em tabelas complexas poderá ser utilizado apenas nas colunas mais próximas às linhas, não podendo ser aplicado em colunas que agrupem outras colunas. Ver exemplos abaixo:
 
 ![Ordenação](imagens/behavior-group-sort.png)
 *Ordenação em tabelas complexas*
@@ -336,7 +350,10 @@ O comportamento de ordenação em tabelas complexas poderá ser utilizado apenas
 Para indicar qual coluna está ordenada, será exibido um ícone com seta para baixo (decrescente) ou para cima (crescente) ao lado do nome da coluna. A ausência de setas ou uso de seta dupla (com estado *hover*) significa que a coluna está com ordenação padrão. Observe a seguir:
 
 ![Ícones de Ordenação](imagens/behavior-sort-3.png)
-*A - Ordenação Padrão; B - Ordenação Padrão (*hover*); C - Ordenado Crescente; D - Ordenado Decrescente*
+*A - Ordenação Padrão;*
+*B - Ordenação Padrão (*hover*);*
+*C - Ordenação Crescente;*
+*D - Ordenação Decrescente*
 
 ---
 
@@ -345,9 +362,13 @@ Para indicar qual coluna está ordenada, será exibido um ícone com seta para b
 Para que as tabelas atendam aos padrões do Design System de forma satisfatória é necessário atentar-se a algumas recomendações:
 
 *   Antes de optar pelo agrupamento de linhas ou colunas nas tabelas, é necessário atentar-se para a possibilidade de simplificação das informações, evitando ao máximo problemas de entendimento devido ao excesso de informações apresentadas.
+
 *   Para uma melhor organização, deve-se optar por fazer separações visuais nítidas com o uso de recursos com bordas destacadas entre os agrupamentos.
+
 *   Evite o uso de colunas com células vazias.
-*   Sempre que uma ordenação estiver sendo feita, a coluna estiver selecionada deverá ser apresentada com o estado ativo e com ícone visível.
+
+*   Sempre que uma ordenação estiver sendo feita, a coluna selecionada deverá ser apresentada com o estado ativo e com ícone visível.
+
 *   Quando o cabeçalho da tabela não disponibilizar a funcionalidade de ordenação, o rótulo utilizado não deverá ser apresentado na cor do seu estado interativo.
 
 **OBS:** Essas recomendações visam beneficiar não somente as pessoas que possuem necessidades especiais, como também busca facilitar o entendimento para os demais usuários.

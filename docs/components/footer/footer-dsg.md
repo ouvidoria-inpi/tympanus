@@ -66,14 +66,14 @@ Esta área é destinada à utilização a logo do sistema ou portal, respeitando
 
 #### 2, 3, 4, e 5. Área Mapa do *Site*
 
-O mapa do *site* é formado pela junção de vários componentes *list*. Cada *list* deverá está inserido na *grid* utilizando 2, 3, 4, 8 ou 12 colunas, respeitando as definições de espaçamento e alinhamento propostos, mantendo uma melhor organização quanto à responsividade.
+O mapa do *site* é formado pela junção de vários componentes *list*. Cada *list* deve estar inserido na *grid* utilizando 2, 3, 4, 8 ou 12 colunas, respeitando as definições de espaçamento e alinhamento propostos, mantendo uma melhor organização quanto à responsividade.
 
 **Atenção:** caso o mapa do *site* apresentado esteja muito extenso, correndo o risco de se tornar pesado e difícil de usar, será necessária a criação de um mapa completo do *site* em uma página separada e vinculá-lo ao *footer*, que é geralmente onde os usuários esperam encontrar essa informação.
 
 ![Exemplo de list usada de duas em duas colunas.](imagens/footer-sitemap.png)
 *Exemplo de list usada de 2 em 2 colunas*
 
-**Atenção:**  o componente *list*, em todos os itens que o compõe, possui a altura definida como comportamento de densidade.
+**Atenção:**  o componente *list*, em todos os itens que o compõem, possui a altura definida como comportamento de densidade.
 
 ##### Mapa do *Site* - adição de novas *Lists*
 
@@ -84,7 +84,7 @@ Sempre que houver a necessidade de adicionar novas *lists*, estas deverão ser o
 
 ##### Comportamento de expansão de *list*
 
-O mapa do *site*  quando utilizados em *layouts* com 4 e 8 colunas deve ser apresentado como *lists* no "comportamento *list* expandir", devida à limitação de espaço.
+O mapa do *site*  quando utilizado em *layouts* com 4 e 8 colunas deve ser apresentado como *lists* no "comportamento *list* expandir", devida à limitação de espaço.
 
 Para o *footer* o "comportamento *list* expandir" transforma as categorias das *lists* em *lists* do *layout* 12 colunas em *lists* expansíveis com ação *collapse*. Cada categoria da *list*, quando acionada, apresentará em seu interior os itens da *list* que a compõe.
 

@@ -3,7 +3,7 @@
 ![Exemplo Loading](imagens/loading-types.png)
 *Exemplo de Loading*
 
-Utilizado com o objetivo de proporcionar *feedback* ao usuário durante algum processamento do sistema. Como, por exemplo, em envio de formulários, *upload* de arquivos, carregamento de dados entre outras requisições síncronas e assíncronas ao servidor.
+Utilizado com o objetivo de proporcionar *feedback* ao usuário durante algum processamento do sistema. Como, por exemplo, envio de formulários, *upload* de arquivos, carregamento de dados entre outras requisições síncronas e assíncronas ao servidor.
 
 ---
 

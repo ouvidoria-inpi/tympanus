@@ -17,13 +17,13 @@ O componente pode ser utilizado sem o texto descritivo para identificar a seleç
 
 ## Tom e voz
 
--   Deve-se utilizar o componente para opções em que a resposta seja sim ou não. Ex.: Lembrar senha?.
+-   Deve-se utilizar o componente para opções em que a resposta seja sim ou não. Ex.: Lembrar senha?
 
 -   Quando a resposta for ligado ou desligado (Ex.: Componente habilitado.) pode-se utilizar o componente *switch* como alternativa.
 
 -   Recomenda-se que o texto do rótulo e o texto descritivo sejam breves, claros e diretos. Utilizar os verbos sempre na terceira pessoa do imperativo afirmativo. Ex.: Selecione os estados contidos no projeto.
 
--   Dar preferência ao uso do componente em uma coluna, porém pode-se dispor de mais de uma coluna se houver extrema necessidade. Nesse caso, é recomendado manter a mesma largura em todas os itens da mesma coluna e a mesma altura dos itens da mesma linha da lista.
+-   Dar preferência ao uso do componente em uma coluna, porém pode-se dispor de mais de uma coluna se houver extrema necessidade. Nesse caso, é recomendado manter a mesma largura em todos os itens da mesma coluna e a mesma altura dos itens da mesma linha da lista.
 
 -   Deve-se manter uma coerência entre as larguras dos itens evitando uma largura de linha com mais de 10 palavras ou 56 caracteres em média.
 
@@ -51,16 +51,17 @@ O componente pode ser utilizado sem o texto descritivo para identificar a seleç
 A caixa de opção é composta pelo *container* e pelo ícone de suporte visual interativo que indicará o estado do componente como selecionado ou válido. Pode ser utilizado de forma independente como em células de tabelas, por exemplo.
 
 1. *Container*;
+
 2. Ícone de suporte visual.
 
 ![Exemplo caixa de opção.](imagens/checkbox-caixa-opcao.png)
 *Exemplo de caixa de opção.*
 
-#### 1. *Container*
+#### *Container*
 
 O *container* do *checkbox* parte de um quadrado com os cantos levemente arredondados.
 
-#### 2. Ícone de suporte visual interativo
+#### Ícone de suporte visual interativo
 
 O Ícone de suporte visual é um elemento que se encontra dentro da área do *container* e deve ser utilizado para identificar o estado do item *checkbox* como selecionado ou válido a depender do seu estado.
 
@@ -69,15 +70,20 @@ O Ícone de suporte visual é um elemento que se encontra dentro da área do *co
 É composto pela caixa de opção à esquerda e o texto descritivo sempre à direita. Este item deve ter uma largura mínima e máxima (ver design tokens).
 
 1. Caixa de opção;
+
 2. Texto descritivo (opcional).
 
 ![Exemplo item de opção.](imagens/checkbox-item-opcao.png)
 *Exemplo de item de opção.*
 
--   Para proporcionar um maior conforto visual ao usuário o texto descritivo deve se posicionar sempre à direita do *container* respeitando o espaçamento lateral da caixa de opção.
+-   Para proporcionar um maior conforto visual ao usuário, o texto descritivo deve se posicionar sempre à direita do *container* respeitando o espaçamento lateral da caixa de opção.
+
 -   O texto que descreve a opção a ser selecionada pode ser suprimido dependendo da aplicação, como por exemplo em tabelas.
+
 -   Deve-se manter uma coerência entre as larguras dos itens evitando um texto descritivo com mais de sete palavras.
+
 -   Os textos descritivos deverão ser escritos com sua primeira letra em maiúsculo e o restante em minúsculo. Ex.: Selecione a opção 01.
+
 -   Evitar escrever com todas as letras em maiúsculo (*ALL CAPS*) ou com todas as primeiras letras das palavras em maiúsculo (*Camel Case*).
 
 ### 3. Cabeçalho de opções (Opcional)
@@ -85,23 +91,30 @@ O Ícone de suporte visual é um elemento que se encontra dentro da área do *co
 O cabeçalho de opções é composto pelo rótulo e caso necessário, texto auxiliar. Deve ser o item mais ao topo da lista de opções. Não há restrição de largura ou altura para este item.
 
 1. Rótulo;
+
 2. Texto auxiliar.
 
 ![Exemplo item de cabeçalho.](imagens/checkbox-cabecalho-opcoes.png)
 *Exemplo de cabeçalho.*
 
-#### 1. Rótulo (opcional)
+#### Rótulo (opcional)
 
 -   Quando o componente é apresentado em uma lista e opções devem ser precedidos de um rótulo que descreva a informação que o usuário deve selecionar.
+
 -   O rótulo deve estar posicionado no topo do componente alinhado à esquerda.
+
 -   O rótulo deve ser escrito com sua primeira letra em maiúsculo e o restante em minúsculo. Ex.: Selecione a opção 01.
+
 -   Evitar escrever com todas as letras em maiúsculo (*ALL CAPS*) ou com todas as primeiras letras das palavras em maiúsculo (*Camel Case*).
 
-#### 2. Informações Adicionais (opcional)
+#### Informações Adicionais (opcional)
 
 -   É possível adicionar um texto auxiliar ao rótulo para facilitar o seu entendimento.
+
 -   Este texto deve estar posicionado logo abaixo do componente rótulo, sem espaçamentos e alinhado à esquerda.
+
 -   Deve ser escrito com sua primeira letra em maiúsculo e o restante em minúsculo. Ex.: Selecione a opção 01.
+
 -   Evitar escrever com todas as letras em maiúsculo (*ALL CAPS*) ou com todas as primeiras letras das palavras em maiúsculo (*Camel Case*).
 
 ### 4. Lista de Opções (Obrigatório)
@@ -151,15 +164,17 @@ Estado que indica que o usuário posicionou o ponteiro do *mouse* sobre a área 
 Este estado indica que o usuário selecionou um item. Pode ser acionado:
 
 1. Pressionando a tecla espaço quando o foco estiver no componente;
+
 2. Pelo clique do *mouse* ou toque na tela na região do componente (incluindo seu texto descritivo, quando houver);
-3. Ou por meio de outra ação que corresponda ao item desejado pelo usuário como por exemplo recursos de voz.
+
+3. Ou por meio de outra ação que corresponda ao item desejado pelo usuário, como por exemplo recursos de voz.
 
 ![Exemplo do checkbox no estado selecionado.](imagens/checkbox-estado-selected.png)
 *Exemplo do checkbox no estado selecionado.*
 
 #### Estado Foco
 
-Este estado indica que o item da lista de opções está destacado, so ser usado o método de entrada por teclado (tecla "Tab", por exemplo). Este estado é de extrema importância para garantir a acessibilidade do componente na interface.
+Este estado indica que o item da lista de opções está destacado, só será usado o método de entrada por teclado (tecla "Tab", por exemplo). Este estado é de extrema importância para garantir a acessibilidade do componente na interface.
 
 ![Exemplo do checkbox no estado foco.](imagens/checkbox-estado-focused.png)
 *Exemplo do checkbox no estado foco.*
@@ -194,22 +209,22 @@ Este estado é utilizado quando ocorre a "seleção em lote", ou seja, quando al
 
 Funciona da seguinte forma:
 
--   **1** - Caso o usuário clique no *Checkbox Principal* no *Estado Não Selecionado*, o *Checkbox Principal* assumirá o *Estado Selecionado* e realizará a seleção de todos os itens que estão vinculados a ele.
+1. Caso o usuário clique no *Checkbox Principal* no *Estado Não Selecionado*, o *Checkbox Principal* assumirá o *Estado Selecionado* e realizará a seleção de todos os itens que estão vinculados a ele.
 
 ![Selecionando o CheckBox Principal](imagens/checkbox-estado-intermediary-1.png)
 *Selecionando o CheckBox Principal*
 
--   **2** - Caso o usuário clique no *Checkbox Principal* no *Estado Selecionado*, o *Checkbox Principal* assumirá o *Estado Não Selecionado* e removerá a seleção de todos os itens que estão vinculados a ele.
+2. Caso o usuário clique no *Checkbox Principal* no *Estado Selecionado*, o *Checkbox Principal* assumirá o *Estado Não Selecionado* e removerá a seleção de todos os itens que estão vinculados a ele.
 
 ![Desselecionando o CheckBox Principal](imagens/checkbox-estado-intermediary-2.png)
 *Desselecionando o CheckBox Principal*
 
--   **3** - Caso o usuário selecione alguns itens que estejam vinculados ao *CheckBox Principal*, porém não selecione todos eles, o *CheckBox Principal* assumirá o *Estado Intermediário*.
+3. Caso o usuário selecione alguns itens que estejam vinculados ao *CheckBox Principal*, porém não selecione todos eles, o *CheckBox Principal* assumirá o *Estado Intermediário*.
 
 ![Estado Intermediário](imagens/checkbox-estado-intermediary-3.png)
 *Estado Intermediário*
 
--   **4** - Caso o usuário clique no *Checkbox Principal* no *Estado Intermediário*, o *Checkbox Principal* assumirá o *Estado Selecionado* e realizará a seleção de todos os itens vinculados a ele.
+4. Caso o usuário clique no *Checkbox Principal* no *Estado Intermediário*, o *Checkbox Principal* assumirá o *Estado Selecionado* e realizará a seleção de todos os itens vinculados a ele.
 
 ![Clicando no CheckBox com Estado Intermediário](imagens/checkbox-estado-intermediary-4.png)
 *Clicando no CheckBox com Estado Intermediário*
@@ -263,7 +278,7 @@ Deve ser o elemento mais abaixo de todos na lista de opções do componente. Dev
 
 No caso de *checkbox* com disposição vertical com texto descritivo de alturas diferentes ou que ultrapassem uma linha de conteúdo deve-se manter o espaçamento inferior (3) para garantir a distinção dos itens pelo usuário.
 
-Não há limite de altura ou linhas de texto para os item de opção.
+Não há limite de altura ou linhas de texto para item de opção.
 
 Para itens de opção com larguras diferentes a lista de opções deve seguir as dimensões do maior item.
 

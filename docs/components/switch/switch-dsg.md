@@ -3,7 +3,7 @@
 ![Exemplo de componente switch.](imagens/diretriz.png)
 *Exemplo do componente switch.*
 
-Utilize *switches* para ajudar usuários a atualizar preferências, configurações e outros tipos de informação que envolvam uma escolha entre duas seleções e os resultados são eficazes e visíveis imediatamente não havendo necessidade de o usuário clicar em um botão de envio.
+Utilize *switches* para ajudar usuários a atualizar preferências, configurações e outros tipos de informação que envolvam uma escolha entre duas seleções e os resultados são eficazes e visíveis imediatamente, não havendo necessidade de o usuário clicar em um botão de envio.
 
 ---
 
@@ -35,7 +35,7 @@ O *label* pode estar localizado à esquerda, à direita ou acima do *switch* e a
 
 ### 2. *Container* (Obrigatório)
 
-*Container* é o espaço que contem a chave de alternância e limita as duas posições aceitáveis para a escolha do usuário.
+*Container* é o espaço que contém a chave de alternância e limita as duas posições aceitáveis para a escolha do usuário.
 
 ### 3. Chave de alternância (Obrigatório)
 
@@ -43,7 +43,7 @@ Chave de alternância é simplesmente o sinalizador que alterna as posições li
 
 ### 4. Rótulo (Opcional)
 
-Rótulo são itens opcionais que ajudam a esclarecer as duas possibilidades de escolha do usuário. É recomendável usar rótulos quando for necessário dar maior visibilidade das opções disponíveis.
+Rótulo são itens opcionais que ajudam a esclarecer as duas possibilidades de escolha do usuário. É recomendável usar rótulos quando for necessário dar maior visibilidade às opções disponíveis.
 
 Rótulos favorecem a usabilidade, pois auxiliam no entendimento da posição em que a chave se encontra.
 
@@ -75,7 +75,7 @@ O componente *switch* pode ser interativo em toda a área compreendida pelo elem
 ![exemplo de áreas interativas do componente switch.](imagens/interatividade.png)
 *A interatividade do componente switch ocorre tanto na área compreendida pelo container como pelo label correspondente.*
 
-*Atenção:* nos casos em que o label e o *container* não estejam próximos apenas o *container* deverá ser interativo.
+**Atenção:** nos casos em que o label e o *container* não estejam próximos apenas o *container* deverá ser interativo.
 
 ![Exemplo de situação em que apenas o *container* deve ser interativo.](imagens/interatividade-2.png)
 *Neste exemplo apenas o container é interativo.*
@@ -99,8 +99,8 @@ A seguir apresentamos uma tabela com outros possíveis estados para o componente
 ### 4. Agrupamento
 
 O componente *switch*, funciona basicamente como um interruptor de alternância, permitindo aos usuários ligar ou desligar as opções apresentadas. No entanto, quando utilizados de forma agrupada, deverão vir associados a um componente *checkbox* principal, permitindo ao usuário selecionar e desselecionar todas, além de ter o *feedback* relacionado ao estado intermediário. Para maiores informações consultar "Estado Intermediário" na documentação do componente checkbox.
-![Exemplo de switches agrupados em uma lista associado a um checkbox principal](imagens/switches-agrupados.png)
-*Exemplo de switches agrupados em uma lista associado a um checkbox principal.*
+![Exemplo de switches agrupados em uma lista associada a um checkbox principal](imagens/switches-agrupados.png)
+*Exemplo de switches agrupados em uma lista associada a um checkbox principal.*
 
 ### 5. Responsividade
 
@@ -137,7 +137,7 @@ Não há nenhum comportamento especial previsto para o componente *switch* quand
 ![Exemplos de uso correto e incorreto de rótulos no switch.](imagens/rotulo-3.png)
 *Use os rótulos sempre em pares.*
 
-*Atenção:* quando utilizar rótulos prefira alinhar o componente reservando espaço pelo rótulo de maior extensão. desta forma, evita-se o deslocamento do componente quando for alterada a chave de alternância.
+**Atenção:** quando utilizar rótulos prefira alinhar o componente reservando espaço pelo rótulo de maior extensão, desta forma, evita-se o deslocamento do componente quando for alterada a chave de alternância.
 
 ![Exemplos de uso correto de alinhamento dos rótulos.](imagens/rotulo-alinhamento.png)
 *Exemplos de boas práticas no alinhamento dos rótulos.*

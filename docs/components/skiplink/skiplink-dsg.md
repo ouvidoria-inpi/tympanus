@@ -68,7 +68,7 @@ Como só é apresentado um item por vez, é recomendável acrescentar no *label*
 
 ### 2. Composto
 
-O tipo composto, ao contrário do tipo simples, apresenta simultaneamente todas a opções da lista.
+O tipo composto, ao contrário do tipo simples, apresenta simultaneamente todas as opções da lista.
 
 Utilize no máximo quatro itens. Se houver necessidade de uma quantidade maior é recomendável utilizar o tipo simples descrito anteriormente.
 
@@ -81,7 +81,7 @@ O tipo composto apresenta apenas a altura fixa. As larguras variam de acordo com
 
 ## Comportamentos
 
-Algumas pessoas utilizam a tecla *TAB* para navegação por *hyperlinks* e elementos de formulário em uma página *web*. Incluir o componente *skip link* oferece aos usuários uma opção de ignorar os *hyperlinks* de navegação de nível superior (menu principal) e saltar para o conteúdo principal ou qualquer outra seção de seu interesse no *site*. Portanto, é muito útil para aqueles que preferem utilizar o teclado como forma padrão de navegação, além de indispensáveis para aqueles que possuem algum tipo de deficiência visual sendo dependentes de leitor de telas.
+Algumas pessoas utilizam a tecla *TAB* para navegação por *hyperlinks* e elementos de formulário em uma página *web*. Incluir o componente *skip link* oferece aos usuários uma opção de ignorar os *hyperlinks* de navegação de nível superior (menu principal) e saltar para o conteúdo principal ou qualquer outra seção de seu interesse no *site*. Portanto, é muito útil para aqueles que preferem utilizar o teclado como forma padrão de navegação, além de indispensáveis para aqueles que possuem algum tipo de deficiência visual, sendo dependentes de leitor de telas.
 
 O componente *skip link* se encontra visualmente oculto até que a tecla *TAB* seja pressionada e, então, é disponibilizado para que o usuário possa navegar pelos seus itens via teclado, indo diretamente para a seção de seu interesse. Ao sair do *skip link* ele deve voltar ao estado oculto.
 

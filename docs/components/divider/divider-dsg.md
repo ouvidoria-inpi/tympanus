@@ -3,13 +3,13 @@
 ![Exemplo do componente divider.](imagens/diretriz.png)
 *Exemplo do componente divider*
 
-Utilize divide quando precisar separar na tela seções de conteúdo ou quando os espaços em branco não forem suficientes para indicar a separação dos elementos ou sessões.
+Utilize Divider quando precisar separar na tela seções de conteúdo ou quando os espaços em branco não forem suficientes para indicar a separação dos elementos ou sessões.
 
 ---
 
 ## Anatomia
 
-O *divider* composto pela borda de uma superfície formando uma linha reta.
+O *divider* é composto pela borda de uma superfície formando uma linha reta.
 
 | ID  | Nome  |                                  Referência                                   | Uso         |
 | --- | ----- | :---------------------------------------------------------------------------: | ----------- |
@@ -79,33 +79,33 @@ O *divider* deve ser usado como elemento estético representando uma quebra visu
 
 -   Os *dividers* devem ser usados quando os elementos não puderem ser separados por distanciamento (espaços vazios).
 
-![Estilos diferentes.](imagens/uso-correto-muito-espacamento.png)
-*Uso correto! O espaçamento já caracteriza a separação dos elementos*
+    ![Estilos diferentes.](imagens/uso-correto-muito-espacamento.png)
+    *Uso correto! O espaçamento já caracteriza a separação dos elementos*
 
-![Estilos diferentes.](imagens/uso-errado-muito-espacamento.png)
-*Uso não recomendado! Como o espaçamento já caracteriza a separação dos elementos não há necessidade de um divider*
+    ![Estilos diferentes.](imagens/uso-errado-muito-espacamento.png)
+    *Uso não recomendado! Como o espaçamento já caracteriza a separação dos elementos não há necessidade de um divider*
 
-![Estilos diferentes.](imagens/uso-correto-pouco-espacamento.png)
-*Uso correto! Como o espaçamento é insuficiente, o espaçamento indica a separação entre os elementos*
+    ![Estilos diferentes.](imagens/uso-correto-pouco-espacamento.png)
+    *Uso correto! Como o espaçamento é insuficiente, o espaçamento indica a separação entre os elementos*
 
 -   Utilize o *divider* apenas para separar na tela seções de conteúdo.
 
 -   Os *dividers* devem ser visíveis em um *layout*, porém não devem "destoar" chamando mais atenção que o próprio conteúdo.
 
-![Uso errado do componente divider vertical.](imagens/exemplo-errado-vertical.png)
-*Uso errado do componente divider vertical*
+    ![Uso errado do componente divider vertical.](imagens/exemplo-errado-vertical.png)
+    *Uso errado do componente divider vertical*
 
 -   Não utilize *dividers* para circundar um item. Prefira bordas.
 
 -   Opte por utilizá-los para criar agrupamentos em vez de itens separados.
 
-![Prefira os dividers para separar blocos de conteúdo e não elementos separadamente.](imagens/divider-list.png)
-*Na imagem da esquerda o divider é utilizado para separar grupos de conteúdo, isso torna o layout mais limpo e simplificado. Na imagem da direita ele é usado de forma errada, separando cada um dos subitens, tornando o layout confuso e poluído*
+    ![Prefira os dividers para separar blocos de conteúdo e não elementos separadamente.](imagens/divider-list.png)
+    *Na imagem da esquerda o divider é utilizado para separar grupos de conteúdo, isso torna o layout mais limpo e simplificado. Na imagem da direita ele é usado de forma errada, separando cada um dos subitens, tornando o layout confuso e poluído*
 
 -   O componente *divider* pode "sangrar" (ausência de margens) quando utilizado dentro de outro componente.
 
-![Exemplo ilustrando o comportamento de "sangria" do divider.](imagens/divider-bleed.png)
-*O componente divider pode "sangrar" no componente em que está contido. Essa é uma opção de estilo do designer na criação do layout e não possui necessariamente uma regra*
+    ![Exemplo ilustrando o comportamento de "sangria" do divider.](imagens/divider-bleed.png)
+    *O componente divider pode "sangrar" no componente em que está contido. Essa é uma opção de estilo do designer na criação do layout e não possui necessariamente uma regra*
 
 ---
 

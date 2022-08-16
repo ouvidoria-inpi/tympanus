@@ -10,6 +10,7 @@ A função do componente *select* é coletar informações fornecidas pelo usuá
 ## Tom e voz
 
 -   Ordene os itens de forma lógica para facilitar a visualização das opções pelo usuário (Ex: ordem alfabética, cronológica, etc.).
+
 -   Se possível torne padrão a opção mais escolhida pelos usuários.
 
 ---
@@ -33,14 +34,14 @@ A função do componente *select* é coletar informações fornecidas pelo usuá
 
 ### 1. Componente *Input* (Obrigatório)
 
-É o campo de entrada de texto onde o usuário poderá digitar o texto do item escolhido ou selecionar através do *mouse*. Ao clicar no componente *input*, este assumirá seu estado foco e o cursor ficará ativo em seu interior habilitando a funcionalidade de filtro de pesquisa por *autocomplete*.
+É o campo de entrada de texto onde o usuário poderá digitar o texto do item escolhido ou selecionar através do *mouse*. Ao clicar no componente *input*, este assumirá seu estado foco e o cursor ficará ativo em seu interior, habilitando a funcionalidade de filtro de pesquisa por *autocomplete*.
 
 ![Detalhamento do input do componente select.](imagens/select-input.png)
 *Detalhamento da seleção pelo input do filtro de pesquisa por autocomplete.*
 
 ### 2. Componente *Button* (Obrigatório)
 
-É um botão terciário que tem a função de acionar a exibição ou ocultação da lista *dropdown*, apresentando um *feedback* visual através da alternância em seu ícone interno, através de um comportamento de *toggle*. Este botão deve estar posicionado na extremidade direita ao componente *input*. Para maiores informações consultar o documento Padrão *Dropdown*.
+É um botão terciário que tem a função de acionar a exibição ou ocultação da lista *dropdown*, apresentando um *feedback* visual através da alternância em seu ícone interno, através de um comportamento de *toggle*. Este botão deve estar posicionado na extremidade direita do componente *input*. Para maiores informações consultar o documento Padrão *Dropdown*.
 
 ![Detalhe botão terciário.](imagens/select-button-circle.png)
 *Detalhe do uso do botão terciário para abrir/fechar a lista dropdown.*
@@ -92,6 +93,7 @@ O uso do ícone *search* é por padrão exibido nos componentes *select* e *mult
 O componente pode ser do tipo:
 
 -   *Select*;
+
 -   *Multiselect*.
 
 ### 1. Tipo *select*
@@ -119,7 +121,9 @@ Ao selecionar os itens no componente *select* e *multiselect*, o usuário terá 
 #### Seleção de itens no *select*
 
 1. O *placeholder* exibe a informação inicial;
+
 2. O usuário seleciona o item;
+
 3. O campo de entrada exibe a opção selecionada.
 
 ![Exemplo do comportamento de seleção de um item do select.](imagens/select-placeholder.png)
@@ -128,8 +132,11 @@ Ao selecionar os itens no componente *select* e *multiselect*, o usuário terá 
 #### Seleção de itens no *multiselect*
 
 1. O *placeholder* exibe a informação inicial;
+
 2. O usuário seleciona os itens;
+
 3. O campo de entrada exibe as opções selecionadas em tempo real;
+
 4. O campo de entrada exibe as opções escolhidas.
 
 ![Exemplo do comportamento de seleção de vários itens do multiselect.](imagens/select-placeholder-multiselect.png)
@@ -139,13 +146,14 @@ Ao selecionar os itens no componente *select* e *multiselect*, o usuário terá 
 
 #### Seleção de todos os itens no *multiselect*
 
-O usuário poderá selecionar ou desselecionar todos os itens da lista ao mesmo tempo. Esta opção é disponível no primeiro item da lista de forma destacada.
+O usuário poderá selecionar ou desselecionar todos os itens da lista ao mesmo tempo. Esta opção está disponível no primeiro item da lista de forma destacada.
 
 Ao clicar no *checkbox* deste primeiro item, todos os itens da lista serão selecionados. Caso o usuário desmarque o *checkbox* do primeiro item, todos os itens da lista serão desselecionados.
 
-O rótulo deste item alternará entre "Selecionar Todos" e "Desselecionar Todos" conforme o usuário marque ou desmarque o primeiro item da lista. Observe o exemplo abaixo:
+O rótulo deste item alterna entre "Selecionar Todos" e "Desselecionar Todos" conforme o usuário marque ou desmarque o primeiro item da lista. Observe o exemplo abaixo:
 
 1. Os itens estão todos desselecionados;
+
 2. A lista foi totalmente selecionada através do primeiro item da lista.
 
 ![Exemplo do comportamento de seleção de todos os itens no multiselect.](imagens/select-behaviour-selected-all.png)
@@ -161,7 +169,7 @@ Para abrir o componente *select* ou *multiselect* o usuário poderá clicar em t
 ![Exemplo de abertura dos itens do multiselect.](imagens/select-behaviour-multiselect-click-open.png)
 *Exemplo do comportamento de abertura dos itens do multiselect nos estados interativo à esquerda, estado hover no centro e estado pressionado à direita.*
 
-**Importante:** Não havendo espaço disponível para visualizar a abertura devido aos limites da tela, os itens do "Componente *list*" deverão ser reposicionado em uma outra direção, garantindo uma melhor adequação ao layout apresentado. Para maiores informações consultar o tópico *"Posicionamento"* no documento Padrão [*Dropdown*](https://www.gov.br/ds/padroes/dropdown).
+**Importante:** Não havendo espaço disponível para visualizar a abertura devido aos limites da tela, os itens do "Componente *list*" deverão ser reposicionados em uma outra direção, garantindo uma melhor adequação ao layout apresentado. Para maiores informações consultar o tópico *"Posicionamento"* no documento Padrão [*Dropdown*](https://www.gov.br/ds/padroes/dropdown).
 
 ### 3. Responsividade
 
@@ -232,7 +240,7 @@ Os componentes *select* e *multiselect* têm as larguras ajustadas conforme o co
 Sempre que possível, deve-se evitar que a largura do *select* seja muito reduzida, dificultando a leitura e entendimento das informações. Recomendamos que a largura mínima não seja inferior a 64px.
 
 ![Exemplos de larguras mínimas recomendáveis e não recomendáveis.](imagens/select-behavior-size-1.png)
-*Exemplos de larguras mínimas recomendáveis à esquerda, onde os textos estão bem ajustados e à direita exemplos selects com parte dos seus textos ocultados.*
+*Exemplos de larguras mínimas recomendáveis à esquerda, onde os textos estão bem ajustados e à direita exemplos selects com parte dos seus textos ocultos.*
 
 **OBS:** Em situações onde os textos do input ou dos itens do select forem muito extensos, estes deverão ser diagramados como informado no tópico **"Comportamento"**, seção **"Ajustes textuais no select"**.
 
@@ -245,6 +253,7 @@ Não há obrigatoriedade para definição de uma largura máxima. Recomendamos q
 A altura máxima para o *select* e *multiselect* é correspondente à quantidade de itens em cada um:
 
 -   *Select*: dez itens;
+
 -   *Multiselect*: nove itens.
 
 Quando a quantidade de itens for superior, deverá ser utilizada uma barra de rolagem para visualização dos demais itens. Por exemplo, se o *select* possuir cem itens, ficarão visíveis apenas dez, e o restante será visível apenas por meio de rolagem.
@@ -258,15 +267,15 @@ Quando a quantidade de itens for superior, deverá ser utilizada uma barra de ro
 
 Sempre que a largura da área do campo de entrada for menor que o texto principal do item selecionado, deve-se seguir as seguintes recomendações:
 
-1. Quando o item selecionado tiver um texto extenso e maior que a largura da área do campo de entrada do input, as últimas letras ou palavras poderão ser ocultadas, exibindo no final do campo o símbolo de *"reticências" (...)*, indicando que existe mais palavras excedentes. **OBS:** O texto completo poderá ser exibido através do uso de *tooltip*.
+1. Quando o item selecionado tiver um texto extenso e maior que a largura da área do campo de entrada do input, as últimas letras ou palavras poderão ser ocultadas, exibindo no final do campo o símbolo de *"reticências" (...)*, indicando que existem mais palavras excedentes. **OBS:** O texto completo poderá ser exibido através do uso de *tooltip*.
 ![Exemplos de ajustes textuais no campo de entrada do input.](imagens/select-behavior-text-size01.png)
 *Exemplos de ajustes textuais no campo de entrada do input.*
 
-2. Quando houver mais de um item selecionado, as informações apresentadas no campo de entrada deverá conter o texto do primeiro item selecionado,  o sinal de *"mais" (+)* acrescido do *"somatório dos itens restantes entre parênteses ( )"*. Ex.: texto do primeiro item + (nº de itens restantes).
+2. Quando houver mais de um item selecionado, as informações apresentadas no campo de entrada deverão conter o texto do primeiro item selecionado,  o sinal de *"mais" (+)* acrescido do *"somatório dos itens restantes entre parênteses ( )"*. Ex.: texto do primeiro item + (nº de itens restantes).
 ![Exemplos de ajustes textuais no campo de entrada do input.](imagens/select-behavior-text-size02.png)
 *Exemplos de ajustes textuais no campo de entrada do input.*
 
-3. Em situações em que, além da extensão dos textos, houver mais de um item selecionado, as informações exibidas na área do campo do input agrupará as boas práticas descritas no tópico 1 e 2. Ver exemplo abaixo:
+3. Em situações em que, além da extensão dos textos, houver mais de um item selecionado, as informações exibidas na área do campo do input agrupam as boas práticas descritas no tópico 1 e 2. Ver exemplo abaixo:
 ![Exemplos de ajustes textuais no campo de entrada do input.](imagens/select-behavior-text-size03.png)
 *Exemplos de ajustes textuais no campo de entrada do input.*
 
@@ -276,10 +285,10 @@ Quando o texto dos itens for maior que a largura do componente, poderá ocorrer 
 
 1. Texto excedendo a largura do item.
 
-![Exemplos de largura máxima do select e do multiselect.](imagens/select-behavior-size-2.png)
-*Exemplos de largura máxima do select e do multiselect.*
+    ![Exemplos de largura máxima do select e do multiselect.](imagens/select-behavior-size-2.png)
+    *Exemplos de largura máxima do select e do multiselect.*
 
-**Atenção:** de modo geral, deve-se prezar pelo uso de textos curtos e objetivos no *select* e no *multiselect*. Quando for de extrema necessidade, utiliza-se a quebra de linha dentro o item.
+**Atenção:** de modo geral, deve-se prezar pelo uso de textos curtos e objetivos no *select* e no *multiselect*. Quando for de extrema necessidade, utiliza-se a quebra de linha dentro do item.
 
 ### 7. *Feedback* após pesquisa
 
@@ -292,6 +301,7 @@ Quando o usuário optar por utilizar a função de pesquisa e não for localizad
 Para facilitar o processo de encontrar os itens na lista, tanto o *select* quanto o *multiselect* possuem a função de filtro, permitindo  que o usuário digite o texto no campo *input* e, de forma dinâmica, atualizando  a lista *dropdown* apenas com os itens que possuem os mesmo caracteres que estão sendo digitados naquele momento. Observe o exemplo abaixo:
 
 1. A lista contém diversas palavras;
+
 2. O usuário digita o início de uma palavra à sua escolha e a lista será atualizada conforme o texto digitado.
 
 ![Exemplo de comportamento de filtragem de itens em um select.](imagens/select-behaviour-filter1.png)

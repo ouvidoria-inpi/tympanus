@@ -31,7 +31,7 @@ O *magic button* possui uma superfície de apoio. Esta superfície pode ser ente
 
 -   Garante contraste e destaque visual em qualquer cor de *background*.
 
--   Possui sombra para indicar que o componente se encontra elevado em relação ao fundo proporcionando mais destaque.
+-   Possui sombra para indicar que o componente se encontra elevado em relação ao fundo, proporcionando mais destaque.
 
 -   A superfície de apoio funciona como área de proteção quando o *magic button* tiver o comportamento flutuante.
 
@@ -39,7 +39,7 @@ O *magic button* possui uma superfície de apoio. Esta superfície pode ser ente
 
 Trata-se da superfície interna do componente e funciona da mesma maneira que a do *button*.
 
--   É apenas permitida superfície no formato redondo ou pílula.
+-   É apenas permitida a superfície no formato redondo ou pílula.
 
 -   A única cor possível para a superfície é a indicada pela paleta *highlight*.
 
@@ -51,7 +51,7 @@ Utilize estratégicas de "*call-to-action*" para elaborar o texto do *label*. In
 
 #### 4. Ícone (Obrigatório)
 
-Tenha cautela ao escolher o ícone que utilizará no *magic button* redondo. Dê preferência a ícones já popularmente consagrados e reconhecido pelas pessoas em geral.
+Tenha cautela ao escolher o ícone que utilizará no *magic button* redondo. Dê preferência a ícones já popularmente consagrados e reconhecidos pelas pessoas em geral.
 
 ![Exemplos de como escolher ícones. A imagem mostra como uma boa prática ícones de carrinho de compra, sino, e câmera fotográfica. Exemplos ruins são ícones de uma folha, um cubo e uma bandeira.](imagens/icone.png)
 *Exemplos de boas e más escolhas de ícones.*
@@ -67,8 +67,9 @@ Tenha cautela ao escolher o ícone que utilizará no *magic button* redondo. Dê
 
 Estão previstos dois tipos de *magic buttons*:
 
-1 - Formato pílula;
-2 - Formato redondo.
+1. Formato pílula;
+
+2. Formato redondo.
 
 ![Exemplos de magic button sem e com ícone.](imagens/tipos.png)
 *Exemplos de uso de ícone no magic button.*
@@ -142,7 +143,7 @@ Os estados possíveis para o *magic button* são: *hover*, *pressionado* e *foco
 
 Em larguras de quatro colunas, utilize o *magic button* no formato pílula ocupando toda a largura disponível da tela.
 
-O formato redondo flutuante funciona muito bem em aplicativos móveis, devida à escassez de espaço na tela.
+O formato redondo flutuante funciona muito bem em aplicativos móveis, devido à escassez de espaço na tela.
 
 ![Exemplos de uso do componente magic button em responsividade de quatro colunas.](imagens/responsividade.png)
 *Exemplos de uso do componente magic button em responsividade de quatro colunas.*

@@ -6,6 +6,7 @@
 Utilize o *Pagination* quando:
 
 -   O volume de dados carregados na tela for bastante extenso e houver a necessidade de organizá-lo em partes menores, ou seja, *Páginas Sequenciais*;
+
 -   Melhorar a usabilidade e organização de conteúdos em listas.
 
 ---
@@ -71,7 +72,7 @@ Este módulo é opcional e sua função é mostrar ao usuário o intervalo de p�
 
 Este módulo também é opcional e sua função é oferecer ao usuário um atalho para acessar qualquer página. É exibido o número da página ativa e se o usuário clicar nele abrirá uma lista do componente *select* com todas as páginas restantes. Se a lista trouxer muitas páginas, deve-se utilizar a *Barra de Rolagem*. É bastante útil e evita obrigar o usuário navegar página por página até encontrar a desejada.
 
-Por padrão, a barra de rolagem, deverá ser acionada quando existir uma lista acima de 4 itens a serem apresentados. No entanto, esse valor poderá ser personalizado de acordo com as necessidades visuais e técnicas do projeto.
+Por padrão, a barra de rolagem deverá ser acionada quando existir uma lista acima de 4 itens a serem apresentados. No entanto, esse valor poderá ser personalizado de acordo com as necessidades visuais e técnicas do projeto.
 
 ![Módulo de Atalho](imagens/anatomy-module-shortcut.png)
 *Módulo de Atalho*
@@ -108,7 +109,7 @@ Neste tipo, apenas as *Setas de Navegação* são obrigatórias, os demais eleme
 
 ### 1. Responsividade
 
-A *Paginação Padrão* permanecerá centralizada às *Grids* de 12, 8 e 4 *Colunas*. Na *Grid* de 4 colunas recomenda-se utilizar a *Paginação* com *Densidade Baixa* com a finalidade de proporcionar maior área de *Touch*.
+A *Paginação Padrão* permanecerá centralizada nas *Grids* de 12, 8 e 4 *Colunas*. Na *Grid* de 4 colunas recomenda-se utilizar a *Paginação* com *Densidade Baixa* com a finalidade de proporcionar maior área de *Touch*.
 
 ![Pagination Padrão - Grid de 12 colunas](imagens/behavior-responsive-grid-12-cols-default.png)
 *Pagination Padrão - Grid de 12 colunas*
@@ -195,14 +196,16 @@ O número de *Identificadores de Páginas* utilizados no *Componente Pagination*
 ![Número de Páginas Customizável](imagens/behavior-number-pages.png)
 *Número de Páginas Customizável*
 
-**Atenção:** Quando houver a necessidade de utilizar o botão de reticências em um Componente *Pagination*, para um tamanho mínimo recomenda-se, limitar os Identificadores de Páginas a quatro no total.
+**Atenção:** Quando houver a necessidade de utilizar o botão de reticências em um Componente *Pagination*, para um tamanho mínimo recomenda-se limitar os Identificadores de Páginas a quatro no total.
 
 ### 5. Uso do Botão Reticências
 
 O *Botão Reticências* poderá ser utilizado:
 
 -   No Início - logo após a primeira página;
+
 -   No Final - imediatamente antes da última página;
+
 -   Em ambas situações.
 
 #### Botão Reticências no Início
@@ -233,7 +236,7 @@ Para acessar as páginas ocultas basta clicar no botão e acessá-las através d
 
 #### Navegando por Páginas Subsequentes
 
-Ao selecionar uma página subsequente à página ativa, o *Componente Pagination* mantém sua configuração original, alterando apenas o número de página ativa. Veja a seguir:
+Ao selecionar uma página subsequente à página ativa, o *Componente Pagination* mantém sua configuração original, alterando apenas o número da página ativa. Veja a seguir:
 
 ![Navegando no Pagination - Páginas Subsequentes](imagens/behaviour-ellipsis-6.png)
 *Navegando no Pagination - Páginas Subsequentes*
