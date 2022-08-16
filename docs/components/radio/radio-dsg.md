@@ -50,16 +50,16 @@ O *Radio* é constituído por:
 
 ### 1. Caixa de Opção (Obrigatório)
 
-A caixa de opção é composta pelo container (1) e pelo ícone de suporte visual interativo (2) que indicará o estado do componente como selecionado ou válido. Pode ser utilizado de forma independente como em células de tabelas, por exemplo.
+A caixa de opção é composta pelo container (A) e pelo ícone de suporte visual interativo (B) que indicará o estado do componente como selecionado ou válido. Pode ser utilizado de forma independente como em células de tabelas, por exemplo.
 
 ![Exemplo caixa opção](imagens/radio-caixa-opcao.png)
 *Caixa de opção do componente Radio*
 
-#### (1) Container
+#### A. Container
 
 -   O container do *Radio* parte de um círculo opaco que deverá conter o ícone de suporte interativo.
 
-#### (2) Ícone de suporte visual interativo
+#### B. Ícone de suporte visual interativo
 
 -   O Ícone de suporte visual é um elemento que ficará dentro da área do container e deve ser utilizado para identificar o estado do item radio como selecionado ou não selecionado a depender do seu estado.
 
@@ -67,16 +67,16 @@ A caixa de opção é composta pelo container (1) e pelo ícone de suporte visua
 
 ### 2. Item de opção (Obrigatório)
 
-É composto pela caixa de opção (1) à esquerda e o texto descritivo (2) sempre à sua direita. Este item deve ter uma largura mínima e máxima (ver design tokens).
+É composto pela caixa de opção (A) à esquerda e o texto descritivo (B) sempre à sua direita. Este item deve ter uma largura mínima e máxima (ver design tokens).
 
 ![Exemplo item opção](imagens/radio-item-opcao.png)
 *Item de opção do componente Radio*
 
-#### (1) Caixa de opção
+#### A. Caixa de opção
 
 -   O container do *Radio* no estado selecionado.
   
-#### (2) Texto descritivo
+#### B. Texto descritivo
 
 -   Para proporcionar um maior conforto visual ao usuário, o texto descritivo deve se posicionar sempre à direita do container respeitando o espaçamento lateral da caixa de opção.
 
@@ -90,12 +90,12 @@ A caixa de opção é composta pelo container (1) e pelo ícone de suporte visua
 
 ### 3. Cabeçalho de opções (Opcional)
 
-O cabeçalho de opções é composto pelo rótulo (1) e caso necessário, texto auxiliar (2). Deve ser o item mais ao topo da lista de opções. Não há restrição de largura ou altura para este item.
+O cabeçalho de opções é composto pelo rótulo (A) e caso necessário, texto auxiliar (B). Deve ser o item mais ao topo da lista de opções. Não há restrição de largura ou altura para este item.
 
 ![Exemplo Cabeçalho Opções](imagens/radio-cabecalho-opcoes.png)
 *Exemplo Cabeçalho de Opções*
 
-#### (1) Rótulo
+#### A. Rótulo
 
 -   Quando o componente é apresentado em uma lista e opções devem ser precedidos de um rótulo que descreva a informação que o usuário deve selecionar.
 
@@ -105,7 +105,7 @@ O cabeçalho de opções é composto pelo rótulo (1) e caso necessário, texto 
 
 -   Evitar escrever com todas as letras em maiúsculo (ALL CAPS) ou com todas as primeiras letras das palavras em maiúsculo (Camel Case).
 
-#### (2) Informações Adicionais
+#### B. Informações Adicionais
 
 -   É possível adicionar um texto auxiliar ao rótulo para facilitar o seu entendimento.
 
@@ -117,7 +117,7 @@ O cabeçalho de opções é composto pelo rótulo (1) e caso necessário, texto 
 
 ### 4. Lista de opções (Obrigatório)
 
-A lista de opções é o conjunto formado por itens de opções (1).
+A lista de opções é o conjunto formado por itens de opções (A).
 Quando esta lista possuir mais de um item é recomendado que seja precedida de um cabeçalho de opções.
 
 ![Exemplo lista de opção](imagens/radio-lista-opcoes.png)
