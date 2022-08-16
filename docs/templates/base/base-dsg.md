@@ -90,6 +90,7 @@ Todos os comportamentos (e demais regras) definidos na [diretriz do Footer](http
 O *Base* pode ter o comportamento de Largura de *Grid* Fluida ou Fixa, seguindo as recomendações previstas do [Fundamento Grid](https://www.gov.br/ds/fundamentos-visuais/grid), ou seja, por padrão, a *Grid* de 8 e 4 colunas o comportamento será fluida, enquanto o de 12 colunas, pode ser tanto fluida como fixa a depender do uso.
 
 -   **Largura Fixo (grid 12 colunas)**: utilizado em conteúdo informativo ou educacional, onde o conteúdo textual não pode sofrer muita alteração estrutural devido a resolução da tela. Exemplos: Portais, Blogs, Landing Pages...
+
 -   **Largura Fluida (grid 12 colunas)**: utilizado quando existe a necessidade de otimizar e aproveitar todos os espaços úteis de uma tela, tais como sistemas e aplicativos desktop por exemplo.
 
 ![Base em 4 Colunas](imagens/res-4colunas.png)
@@ -99,10 +100,10 @@ O *Base* pode ter o comportamento de Largura de *Grid* Fluida ou Fixa, seguindo 
 *Na grid de 8 colunas o comportamento padrão é Fluido.*
 
 ![Base em 12 Colunas Fluida](imagens/res-12colunas-fluido.png)
-*Grid* de 12 colunas com comportamento Fluido.*
+*Grid de 12 colunas com comportamento Fluido.*
 
 ![Base em 12 Colunas Fixa](imagens/res-12colunas-fixo.png)
-*Grid* de 12 colunas com comportamento Fixo.*
+*Grid de 12 colunas com comportamento Fixo.*
 
 **OBS:** o comportamento padrão deve ser entendido como uma recomendação que consiga resolver a maioria das situações. Porém, entendemos que em alguns momentos, dependendo do contexto do projeto, outros comportamentos podem fazer mais sentido.
 
@@ -128,12 +129,12 @@ Por estar flutuando, pode ser necessário atualizar alguns atributos visuais (co
 
 Podemos simplificar o Menu Flutuante em dois modos:
 
- **1. Comum**: Ele aparece como um elemento *dropdown* comum.
+**1. Comum**: Ele aparece como um elemento *dropdown* comum.
 
 ![Menu Flutuante](imagens/tempo-flutuante01.png)
 *Aqui o Menu funciona como um elemento Dropdown, seguindo todas as regras específicas para este comportamento.*
 
- **2. Preenchimento**: quando necessita da atenção total do usuário. Neste caso ele pode preencher o espaço disponível da tela além de utilizar um elemento *overlay* de Foco (veja [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)), destacando a navegação e deixando claro que os outros elementos da interface ainda não podem ser interagidos enquanto o menu estiver visível.
+**2. Preenchimento**: quando necessita da atenção total do usuário. Neste caso ele pode preencher o espaço disponível da tela além de utilizar um elemento *overlay* de Foco (veja [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)), destacando a navegação e deixando claro que os outros elementos da interface ainda não podem ser interagidos enquanto o menu estiver visível.
 
 ![Menu Flutuante](imagens/tempo-flutuante03.png)
 *Quando existe a necessidade de destacar um menu flutuante. Ele utiliza toda a altura útil da tela, além de utilizar uma superfície overlay.*
@@ -175,9 +176,11 @@ Tornar a navegação acessível é uma das principais preocupações a ter em me
 
 Para tornar o "teclado acessível", é importante permitir que os usuários:
 
-1- Acompanhem onde está o foco do teclado (ver documento Estados);
-2- Naveguem para todos os elementos interativos;
-3- Ignorem a navegação se houver muitos *links*.
+1. Acompanhem onde está o foco do teclado (ver documento Estados);
+
+2. Naveguem para todos os elementos interativos;
+
+3. Ignorem a navegação se houver muitos *links*.
 
 Uma das armadilhas da tabulação ao longo do *layout* de uma página é que inúmeros elementos interativos devem ser navegados de modo a chegar ao conteúdo desejado. Em algumas páginas, isso significa que os usuários podem ter que passar por inúmeros *links* (e elementos interativos) para enfim chegar ao conteúdo principal, o que pode ser difícil, irritante e demorado.
 
@@ -188,12 +191,12 @@ Oferecer um menu oculto ([skip link](https://www.gov.br/ds/components/skiplink?t
 O Design System conta com o componente *skip link* para realizar essa função. Consulte-o para mais detalhes.
 
 ![Skip link para navegação via teclado](imagens/nav-tab.png)
-*Skip link* deve ficar visualmente oculto para aqueles que navegam pelo *mouse*
+*Skip link deve ficar visualmente oculto para aqueles que navegam pelo mouse*
 
 Crie âncoras que façam o usuário acessar tanto o conteúdo principal como um menu de navegação principal e áreas de suporte ao usuário (como ajuda, acessibilidade, busca...).
 
 ![Skip link com várias opções de âncoras](imagens/nav-tab-mult.png)
-*Skip link* com várias opções de âncoras.*
+*Skip link com várias opções de âncoras.*
 
 ---
 

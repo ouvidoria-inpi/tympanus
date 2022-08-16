@@ -11,7 +11,7 @@ O *template* Erro utiliza a mesma estrutura do "*template* base", com as seguint
 
 1. A criação de algumas recomendações e mudanças de configuração nas áreas do *header* e do *footer*;
 
-2. A Área do conteúdo foi dividido em duas subáreas: área informativa e área de suporte.
+2. A Área do conteúdo foi dividida em duas subáreas: área informativa e área de suporte.
 
 | ID  | Nome             |                                Referência                                 | Uso         |
 | --- | ---------------- | :-----------------------------------------------------------------------: | ----------- |
@@ -37,7 +37,7 @@ O *template* Erro utiliza a mesma estrutura do "*template* base", com as seguint
 
 ### B. Área do Conteúdo (Obrigatório)
 
-Para facilitar a organização do conteúdo na tela a área de conteúdo pode ser dividida em duas subareas: área informativa e área de suporte.
+Para facilitar a organização do conteúdo na tela, a área de conteúdo pode ser dividida em duas subáreas: área informativa e área de suporte.
 
 ### C. Área Informativa (Obrigatório)
 
@@ -46,8 +46,11 @@ Assim como definido nas heurísticas de Jakob Nielsen sobre prevenção de erros
 Os conteúdos e componentes apresentados na área informativa não são estáticos, podendo variar de acordo com a necessidade do sistema e do usuário.
 
 1. Texto principal;
+
 2. Texto secundário;
+
 3. Texto de apoio (*opcional*);
+
 4. Imagem (*opcional*).
 
 ![Área informativa.](imagens/anatomia2.png)
@@ -58,13 +61,15 @@ Os conteúdos e componentes apresentados na área informativa não são estátic
 É recomendável dividir hierarquicamente o texto em no máximo três níveis:
 
 -   Texto principal;
+
 -   Texto secundário;
+
 -   Texto de apoio (*opcional*).
 
 ![Exemplo dos níveis hierárquicos dos textos.](imagens/textos.png)
 *Exemplos dos três níveis hierárquicos de textos para a tela de erro.*
 
--   Utilize o *texto de principal* como um título, informando ao usuário que algo deu errado na navegação. Seja claro e objetivo e sempre que necessário use linguagem leve e descontraída;
+-   Utilize o *texto principal* como um título, informando ao usuário que algo deu errado na navegação. Seja claro e objetivo e sempre que necessário use linguagem leve e descontraída;
 
 -   Utilize o *texto secundário* para complementar a informação trazida pelo texto principal. Sempre que possível passe uma mensagem otimista;
 
@@ -80,7 +85,7 @@ A estrutura de texto exemplificada acima é apenas uma sugestão, sendo assim, f
 
 -   Os textos precisam ser construtivos ao *sugerir etapas que o usuário possa seguir para corrigir o problema*.
 
-É possível destacar o texto principal com uso de cores (de preferência cores associadas à imagem utilizada). Lembre sempre de testar os contrastes e garantir a legibilidade. Tenha a atenção para optar por cores previstas na paleta cromática do Design System. O uso de tamanhos e estilos dos textos também são livres mas devem obedecer às regras previstas nos Fundamentos.
+É possível destacar o texto principal com uso de cores (de preferência cores associadas à imagem utilizada). Lembre sempre de testar os contrastes e garantir a legibilidade. Tenha a atenção para optar por cores previstas na paleta cromática do Design System. O uso de tamanhos e estilos dos textos também são livres, mas devem obedecer às regras previstas nos Fundamentos.
 
 **Atenção:** esteja atento para que o tom e voz do texto utilizado não destoe do *site*, isto é, não exagere no humor se o *site* possuir um tom mais sério e vice-versa. De fato, essa é uma ótima oportunidade de descontrair um pouco e amenizar o "peso" da frustração do usuário, porém o tom e voz não devem ser drasticamente alterados. Tenha bom senso.
 
@@ -98,6 +103,7 @@ Tanto ilustrações como fotos podem ser utilizadas como imagem a fim de apoiare
 Os conteúdos e componentes apresentados na área de suporte são opcionais podendo variar de acordo com a necessidade do sistema e do usuário. Essa área auxilia e propõe novas ações a serem tomadas pelo usuário.
 
 1. *Search* (opcional);
+
 2. *Buttons* (opcional).
 
 ![Área de suporte.](imagens/anatomia3.png)
@@ -151,17 +157,22 @@ As principais causas são:
 A seguir é apresentado como curiosidade exemplos de outros tipos de erros de navegação que o usuário pode encontrar:
 
 -   400: **Bad Request** ou Requisição Inválida;
+
 -   401: **Authorization Required** ou Não autorizado;
+
 -   403: **Forbidden** ou Proibido;
+
 -   408: **Request Time-Out** ou Tempo de solicitação esgotado;
+
 -   410: **Gone**;
+
 -   500: **Internal Server Error** ou Erro interno do servidor;
 
 Os códigos (XXX) servem para transmitir informações para o usuário e, também, para os administradores do *site*.
 Em cada página de erro que vemos há um código HTTP de três dígitos que foi enviado pelo servidor *web*. O primeiro dígito informa a classe do código. As classes 1XX (informa), 2XX (indica sucesso) e 3XX (indica redirecionamento da página) não são páginas de erros e normalmente o usuário não tem contato com eles.
 Geralmente, as classes de erros que o usuário tem contato são as 4XX (representam erros causados pelo usuário) e 5XX (indicam problemas no servidor do *site*).
 
-A lista de erros é muito grande e não é objetivo desse documento detalhá-lo, mas caso deseje se aprofundar no tema consulte: [Códigos de status de respostas HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
+A lista de erros é muito grande e não é objetivo deste documento detalhá-lo, mas caso deseje se aprofundar no tema consulte: [Códigos de status de respostas HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
 
 ---
 
