@@ -81,12 +81,7 @@ mixin header-login
       +sign-in.small(data-trigger="login")
         +icon.fa-user
         span.d-sm-inline Entrar
-    .header-avatar.d-none
-      .avatar.dropdown
-        +avatar-image
-        +button.circle.small(aria-label="Abrir Menu de usuário" data-toggle="dropdown")
-          +icon.fa-angle-down
-        +notification-full
+    .header-avatar
 
 mixin header-sticky(title="Título do Header")
   +header()(data-sticky)

@@ -8,6 +8,7 @@
 a.#{$prefix}item {
   color: var(--interactive);
   @include hover;
+  @include active;
 }
 
 button.#{$prefix}item {
@@ -15,4 +16,5 @@ button.#{$prefix}item {
   color: var(--color);
   @include focus;
   @include hover("color");
+  @include active("color");
 }

@@ -58,8 +58,6 @@
 
 @mixin list-checkbox-radio-config {
   --interactive-rgb: var(--rgb-primary-default);
-  --item-padding-x: 0;
-  --item-padding-y: 0;
 
   input {
     &:hover:not(:disabled) {
