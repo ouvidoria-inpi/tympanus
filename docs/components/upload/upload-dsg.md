@@ -1,109 +1,111 @@
-[version]: # (7.2.7)
+[version]: # (7.2.8)
 
 ![Imagem ilustra o componente upload.](imagens/upload-diretriz.png)
- *Exemplo do componente _Upload_.*
+ *Exemplo do componente Upload.*
 
-O componente _Upload_ é geralmente usado dentro de formulários, mas pode eventualmente ser também utilizado como um componente isolado.
+O componente *Upload* é geralmente usado dentro de formulários, mas pode eventualmente ser também utilizado como um componente isolado.
 
 ---
 
 ## Tom e voz
 
-O texto do _placeholder_ e o ícone ilustrativo (fa-upload) são únicos e não podem ser alterados. Já o texto do _label_ deve ser claro, objetivo e informativo seguindo o seguinte padrão: "Envio de arquivos", "Envio de vídeos", "Envio de imagens", "Envio de documentos" e assim por diante. Se houver algum motivo especial que justifique a alteração desse padrão a equipe de design responsável pelo _Design System_ deverá ser consultada.
+O texto do *placeholder* e o ícone ilustrativo (fa-upload) são únicos e não podem ser alterados. Já o texto do *label* deve ser claro, objetivo e informativo seguindo o seguinte padrão: "Envio de arquivos", "Envio de vídeos", "Envio de imagens", "Envio de documentos" e assim por diante. Se houver algum motivo especial que justifique a alteração desse padrão a equipe de design responsável pelo *Design System* deverá ser consultada.
 
 ---
 
 ## Anatomia
 
-A seguir é ilustrada a relação de componentes utilizados na construção do componente _upload_:
+A seguir é ilustrada a relação de componentes utilizados na construção do componente *upload*.
 
-1. _Label_ ou rótulo;
-2. Superfície (Área de Transferência);
-3. Ícone Subir Arquivo/_Upload_;
-4. _Placeholder_;
-5. _Message_;
-6. _List_;
-7. Texto auxiliar;
-8. _Loading_.
+| ID  | Nome                               |                                   Referência                                    | Uso         |
+| --- | ---------------------------------- | :-----------------------------------------------------------------------------: | ----------- |
+| 1   | *Label* ou rótulo                  |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 2   | Superfície (Área de Transferência) |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 3   | Ícone Subir Arquivo/*Upload*       | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 4   | *Placeholder*                      |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 5   | *Message*                          |   [Componente Message](https://www.gov.br/ds/components/message?tab=designer)   | Opcional    |
+| 6   | *List*                             |      [Componente List](https://www.gov.br/ds/components/list?tab=designer)      | Opcional    |
+| 7   | Texto auxiliar                     |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 8   | *Loading*                          |   [Componente Loading](https://www.gov.br/ds/components/loading?tab=designer)   | Opcional    |
 
 ![Imagem de anatomia do componente upload.](imagens/upload-anatomia-upload.png)
- *Anatomia do _Upload_.*
+ *Anatomia do Upload.*
 
 ![Imagem que ilustra o uso do componente loading junto com o componente upload.](imagens/upload-anatomia-upload-loading.png)
- *Anatomia do componente _upload_ com componente _Loading_.*
+ *Anatomia do componente upload com componente Loading.*
 
 ---
 
 ## Comportamentos
 
-### 1- Adição de Arquivos
+### 1. Adição de Arquivos
 
-O componente _upload_ serve para o usuário enviar arquivos solicitados pelo sistema e isto pode ser realizado de duas maneiras distintas:
+O componente *upload* serve para o usuário enviar arquivos solicitados pelo sistema e isto pode ser realizado de duas maneiras distintas:
 
 1. Clicando no componente para acessar a janela de arquivos do sistema operacional;
 
 2. Arrastando os arquivos diretamente para a superfície (área de transferência) do componente.
 
-Neste último caso, a cor da borda do componente muda para verde quando o usuário arrasta o _mouse_ (_dragging_) com os arquivos selecionados corretamente para a área tracejada. Veja a figura a seguir:
+Neste último caso, a cor da borda do componente muda para verde quando o usuário arrasta o *mouse* (*dragging*) com os arquivos selecionados corretamente para a área tracejada. Veja a figura a seguir:
 
 ![Imagem ilustrando a mudança da cor do componente para verde, ao se transferir arquivos para a área de transferência.](imagens/upload_transferencia.png)
- *Uso do estado _Dropzone_.*
+ *Uso do estado Dropzone.*
 
-Se o usuário soltar os arquivos na área correta (ou se ele clicar na área tracejada e selecionar os arquivos desejados) o processo de transferência se inicia e o ícone de _loading_ é mostrado durante o tempo de transferência dos arquivos.
+Se o usuário soltar os arquivos na área correta (ou se ele clicar na área tracejada e selecionar os arquivos desejados) o processo de transferência se inicia e o ícone de *loading* é mostrado durante o tempo de transferência dos arquivos.
 
 ![A imagem ilustra o processo de transferência de três arquivos.](imagens/upload_loading.png)
- *Três arquivos estão sendo transferidos e mostrado um _Loading_ por arquivo.*
+ *Três arquivos estão sendo transferidos e mostrado um Loading por arquivo.*
 
-Após a conclusão da transferência, uma lista com os nomes dos arquivos e seus respectivos tamanhos é disponibilizada logo abaixo do componente _upload_.
+Após a conclusão da transferência, uma lista com os nomes dos arquivos e seus respectivos tamanhos é disponibilizada logo abaixo do componente *upload*.
 
 ![A imagem mostra uma lista de aquivos transferidos. Para cada aquivos é mostrado o nome, o tamanho do arquivo e um ícone de lixeira para excluí-lo.](imagens/upload_arquivos_enviados.png)
-*Lista de arquivos adicionados no _upload_.*
+*Lista de arquivos adicionados no upload.*
 
-**Atenção:** a lista permite que o usuário possa excluir os arquivos que desejar antes que sejam submetidos para o servidor. O usuário pode ainda clicar no nome do arquivo para abrí-lo no seu sistema operacional.
+**Atenção:** a lista permite que o usuário possa excluir os arquivos que desejar antes que sejam submetidos para o servidor. O usuário pode ainda clicar no nome do arquivo para abri-lo no seu sistema operacional.
 
-### 2- Selecionar ou Arrastar arquivos
+### 2. Selecionar ou Arrastar arquivos
 
-O componente _upload_ deve disponibilizar o recurso de arrastar arquivos. Esta funcionalidade deve ser informada ao usuário na mensagem abaixo do campo.
+O componente *upload* deve disponibilizar o recurso de arrastar arquivos. Esta funcionalidade deve ser informada ao usuário na mensagem abaixo do campo.
 
-![Exemplo do uso do texto auxiliar para informar ao usuário quando o componente aceita que os arquivos possm ser arrastados para a área de transferência.](imagens/upload-comportamento-label.png)
+![Exemplo do uso do texto auxiliar para informar ao usuário quando o componente aceita que os arquivos possam ser arrastados para a área de transferência.](imagens/upload-comportamento-label.png)
 *Exemplo de uso do texto auxiliar.*
 
-### 3- Mensagem de erro
+### 3. Mensagem de erro
 
 Nos casos em que os arquivos não atendam aos requisitos desejados uma mensagem de erro é apresentada ao usuário.
 
 ![Exemplo do uso do componente message.](imagens/upload_mensagem.png)
-*Uso do componente _message_ no _upload_.*
+*Uso do componente message no upload.*
 
 Se o usuário mover ou selecionar vários arquivos e um deles não estiver de acordo com o requisito, uma mensagem de erro é apresentada para este arquivo. Os arquivos que estiverem válidos serão aceitos normalmente.
 
 ![Exemplo de arquivo recusado pelo componente upload. Uma mensagem de erro é apresentada ao usuário.](imagens/upload_mensagem-1.png)
 *Mensagem de erro para um arquivo específico.*
 
-**Atenção:** qualquer tipo de erro como: formato inválido, tamanho excessivo, envio não concluído, etc, deverá ser tratado com _feedbacks_ de mensagens do sistema (consultar diretrizes desse componente).
+**Atenção:** qualquer tipo de erro como: formato inválido, tamanho excessivo, envio não concluído, etc, deverá ser tratado com *feedbacks* de mensagens do sistema (consultar diretrizes desse componente).
 
-### 4- Truncamento de texto
+### 4. Truncamento de texto
 
 Nos casos em que o nome do arquivo seja maior que o espaço destinado a ele, deve-se truncar a parte do nome que exceda o espaço definido.
 
 Veja a imagem a seguir:
 
 ![Esta imagem apresenta exemplos de nomes de aquivos muito grandes e por isso, truncados.](imagens/upload-truncamento.png)
-*Nomes dos arquivos são truncados quando forem maiores que o espaço disponível.*
+*Os nomes dos arquivos são truncados quando forem maiores que o espaço disponível.*
 
-**Atenção:** é recomendável o uso de **_tooltips_** para apresentar ao usuário o texto completo que foi truncado.
+**Atenção:** é recomendável o uso de *tooltips* para apresentar ao usuário o texto completo que foi truncado.
 
 ![Esta imagem apresenta um exemplo de uso de tooltip para mostrar ao usuário o nome completo do arquivo truncado.](imagens/upload-truncamento-tooltip.png)
-*Use o componente _tooltip_ para mostrar o nome completo do arquivo truncado.*
+*Use o componente tooltip para mostrar o nome completo do arquivo truncado.*
 
 ### 5. Envio de 1 arquivo
 
-Se o _site_/sistema permitir o envio de apenas um único arquivo, o _label_ do componente deverá ser alterado para **"Envio de arquivo"** e o _placeholder_ para **"Selecione o arquivo"** (ou variações).
+Se o *site*/sistema permitir o envio de apenas um único arquivo, o *label* do componente deverá ser alterado para *"Envio de arquivo"* e o *placeholder* para *"Selecione o arquivo"* (ou variações).
 
 ![Esta imagem ilustra a mudança do texto do placeholder para quando se é permitido o envio de apenas um arquivo para upload.](imagens/upload-comportamento-umarquivo.png)
-*Textos do _label_ e _placeholder_ alterados.*
+*Textos do label e placeholder alterados.*
 
-Nesse caso, o usuário não conseguirá selecionar mais de um arquivo para ser enviado. Se arrastar mais de um arquivo, o componente não aceitará a ação e retornará uma mensagem ao usuário deixando claro que só será permitido realizar _upload_ de um único arquivo.
+Nesse caso, o usuário não conseguirá selecionar mais de um arquivo para ser enviado. Se arrastar mais de um arquivo, o componente não aceitará a ação e retornará uma mensagem ao usuário deixando claro que só será permitido realizar *upload* de um único arquivo.
 
 ![Imagem coom exemplo de mensagem de erro.](imagens/upload_mensagem-2.png)
 *Exemplo de erro.*
@@ -115,70 +117,70 @@ Nesse caso, o usuário não conseguirá selecionar mais de um arquivo para ser e
 
 ### 6. Resolução de 4 colunas
 
-Em resoluções maiores que 4 colunas o componente _Upload_ não sofre qualquer transformação, mas ao se atingir a resolução de 4 colunas o componente _Upload_ terá sua largura adequada para esta resolução de tela.
+Em resoluções maiores que 4 colunas o componente *Upload* não sofrerá qualquer transformação, mas ao se atingir a resolução de 4 colunas o componente *Upload* terá sua largura adequada para esta resolução de tela.
 
 ![A imagem mostra o componente upload com a largura ajustada para uma resolução de quatro colunas.](imagens/upload-anatomia-upload-4colunas.png)
-*Largura do componente _upload_ sendo ajustada.*
+*Largura do componente upload sendo ajustada.*
 
 ![A imagem ilustra o comportamento do componente upload em responsividades de oito e quatro colunas.](imagens/upload-comportamento-responsividade.png)
-*Comparação da aplicação do _upload_ em diferentes Grids.*
+*Comparação da aplicação do upload em diferentes Grids.*
 
-Nestes tipos de dispositivos, não há o recurso de arrastar arquivo, portanto, a única forma do usuário enviar arquivos é por meio do clique no componente _upload_ (ou toque, nos casos de dispositivos _mobile_).
+Nestes tipos de dispositivos, não há o recurso de arrastar arquivos, portanto, a única forma do usuário enviar arquivos é por meio do clique no componente *upload* (ou toque, nos casos de dispositivos *mobile*).
 
 ---
 
-## Especificação
+## Especificações
 
 ### Tipografia
 
-|Name|Size Token|Weight Token|Text-transform|Outros Estilos
-|--|--|--|--|--|
-|_Label_|`--font-size-scale-base`|`--font-weight-semi-bold`|uppercase|-
-|_Placeholder_|`--font-size-scale-base`|`--font-weight-regular`|uppercase|`font-style:` italic
+| Name          | Size Token               | Weight Token              | Text-transform | Outros Estilos       |
+| ------------- | ------------------------ | ------------------------- | -------------- | -------------------- |
+| *Label*       | `--font-size-scale-base` | `--font-weight-semi-bold` | uppercase      | -                    |
+| *Placeholder* | `--font-size-scale-base` | `--font-weight-regular`   | uppercase      | `font-style:` italic |
 
 ### Iconografia
 
-|Name|ícone|Size Token|Class (Font Awesome)|
-|--|--|--|--|
-|Ícone Upload|<i class="fas fa-upload"></i>|`--icon-size-lg`|fa-upload|
-|Ícone Excluir|<i class="fas fa-trash-alt"></i>|`--icon-size-sm`|fa-trash-alt|
+| Name          | ícone                            | Size Token       | Class (Font Awesome) |
+| ------------- | -------------------------------- | ---------------- | -------------------- |
+| Ícone Upload  | <i class="fas fa-upload"></i>    | `--icon-size-lg` | fa-upload            |
+| Ícone Excluir | <i class="fas fa-trash-alt"></i> | `--icon-size-sm` | fa-trash-alt         |
 
 ### Cor
 
-|Name|Property|Color Token|
-|--|--|--|
-|_Label_|text color|`--gray-80`|
-|_Placeholder_|text color|`--blue-warm-vivid-70`|
-|Ícone Upload|icon|`--blue-warm-vivid-70`|
-|Ícone Excluir|icon|`--blue-warm-vivid-70`|
-|_Contêiner_|conteiner|`--pure-0`|
-|_Contêiner_ (borda)|conteiner|`--blue-warm-vivid-70`|
-|_Contêiner_ (borda-sucesso)|conteiner|`--green-cool-vivid-50`|
+| Name                        | Property         | Color Token             |
+| --------------------------- | ---------------- | ----------------------- |
+| *Label*                     | text color       | `--gray-80`             |
+| *Placeholder*               | text color       | `--blue-warm-vivid-70`  |
+| Ícone Upload                | icon             | `--blue-warm-vivid-70`  |
+| Ícone Excluir               | icon             | `--blue-warm-vivid-70`  |
+| *container*                 | background-color | `--pure-0`              |
+| *container* (borda)         | background-color | `--blue-warm-vivid-70`  |
+| *container* (borda-sucesso) | background-color | `--green-cool-vivid-50` |
 
 ### Dimensões
 
-|Name|Property|Value|
-|--|--|--|
-|Superfície|width|550px|
+| Name       | Property | Value |
+| ---------- | -------- | ----- |
+| Superfície | width    | 550px |
 
 ### Espaçamento
 
-|Name|Property|Value|
-|--|--|--|
-|Superfície|padding-left / padding-right|`--spacing-scale-2x`|
-|Superfície|padding-top / padding-bottom|`--spacing-scale-base`|
-|Superfície|margin-bottom|`--spacing-scale-base`|
-|Message|margin-bottom|`--spacing-scale-base`|
-|Texto Auxiliar|margin-bottom|`--spacing-scale-base`|
-|Ícone Upload|margin-right|`--spacing-scale-2x`|
-|_Placeholder_|margin-left|`--spacing-scale-half`|
-|_Loading_|margin-top|`--spacing-scale-base`|
+| Name           | Property                     | Value                  |
+| -------------- | ---------------------------- | ---------------------- |
+| Superfície     | padding-left / padding-right | `--spacing-scale-2x`   |
+| Superfície     | padding-top / padding-bottom | `--spacing-scale-base` |
+| Superfície     | margin-bottom                | `--spacing-scale-base` |
+| Message        | margin-bottom                | `--spacing-scale-base` |
+| Texto Auxiliar | margin-bottom                | `--spacing-scale-base` |
+| Ícone Upload   | margin-right                 | `--spacing-scale-2x`   |
+| *Placeholder*  | margin-left                  | `--spacing-scale-half` |
+| *Loading*      | margin-top                   | `--spacing-scale-base` |
 
 ### Superfície
 
-|Name|Property|Value|
-|--|--|--|
-|Superfície|border|`--surface-border-dashed-sm`|
+| Name       | Property | Value                        |
+| ---------- | -------- | ---------------------------- |
+| Superfície | border   | `--surface-border-dashed-sm` |
 
 ![Imagem com algumas medidas para ajudar os desenvolvedores.](imagens/upload-detalhamento.png)
 *Imagem de apoio para a especificação.*

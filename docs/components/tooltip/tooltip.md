@@ -16,4 +16,4 @@
 </div>
 </div>
 
-São alertas flutuantes que proporcionam _feedback_ do sistema ao usuário, informando sobre algum aspecto da interface.
+São alertas flutuantes que proporcionam ao usuário um *feedback* do sistema, informando sobre algum aspecto da interface que mereça maior atenção.

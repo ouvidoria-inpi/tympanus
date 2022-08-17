@@ -1,9 +1,5 @@
 [version]: # (1.1.12)
 
-# *Header* (Cabeçalho)
-
-O componente *Header* é o principal elemento de uma página, onde podem ser agrupados componentes predefinidos que tem como finalidade auxiliar o usuário no acesso ou mesmo execução das funcionalidades principais site/sistema.
-
 Utilize o *Header* quando necessitar identificar o nome do site/sistema, agrupar os elementos de navegação, de funcionalidades e de suporte ao usuário.
 
 ![Exemplo Header](imagens/header-anatomy-type-default.png)
@@ -13,19 +9,21 @@ Utilize o *Header* quando necessitar identificar o nome do site/sistema, agrupar
 
 ## Anatomia
 
- 1. Logo
- 2. Assinatura
- 3. Título
- 4. Subtítulo
- 5. Botão Menu
- 6. Área para Links
- 7. Área para Funcionalidades
- 8. Botão de Autenticar
- 9. Avatar do Usuário
-10. Busca
-11. Lista Dropdown
-12. Superfície
-13. Separadores
+| ID  | Nome                      |                                   Referência                                    | Uso         |
+| --- | ------------------------- | :-----------------------------------------------------------------------------: | ----------- |
+| 1   | Logo                      |                                       ---                                       | Opcional    |
+| 2   | Assinatura                |                                       ---                                       | Opcional    |
+| 3   | Título                    |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Obrigatório |
+| 4   | Subtítulo                 |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 5   | Botão Menu                |    [Componente Button](https://www.gov.br/ds/components/button?tab=designer)    | Opcional    |
+| 6   | Área para Links           |                                       ---                                       | Opcional    |
+| 7   | Área para Funcionalidades | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 8   | Botão Autenticar          |   [Componente Sign-In](https://www.gov.br/ds/components/signin?tab=designer)    | Opcional    |
+| 9   | Avatar do Usuário         |    [Componente Avatar](https://www.gov.br/ds/components/avatar?tab=designer)    | Opcional    |
+| 10  | Campo de Busca            |     [Componente Input](https://www.gov.br/ds/components/input?tab=designer)     | Opcional    |
+| 11  | Lista Dropdown            |            [Padrão Dropdown](https://www.gov.br/ds/padroes/dropdown)            | Opcional    |
+| 12  | Superfície                |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 13  | Separadores               |   [Componente Divider](https://www.gov.br/ds/components/divider?tab=designer)   | Obrigatório |
 
 ![Anatomia Header Padrão](imagens/header-anatomy-1.png)
 *Anatomia do Header Padrão*
@@ -41,63 +39,49 @@ Utilize o *Header* quando necessitar identificar o nome do site/sistema, agrupar
 
 ---
 
-## Tipos
+## Detalhamento dos Itens
 
-É possível criar infinidades diferentes de *headers* que atendam diferentes necessidades. Esses "tipos" dependem de como se deseja configurar os elementos que estão previstos neste componente (veja [Detalhe dos Elementos](#detalhe-dos-elementos)).
-
-Recomendamos duas configurações que podem atender a maioria das situações: **Padrão** e **Compacto**.
-
-### Header Padrão
-
-Este tipo de *header* é utilizado quando se pretende exibir uma quantidade maior de informações e também quando for necessário dar mais ênfase a marca do site/sistema. Geralmente é mais utilizado em sites ou portais de notícias, mas não é uma exclusividade deste tipo.
-
-![Header Padrão](imagens/header-anatomy-type-default.png)
-
-### Header Compacto
-
-O tipo Compacto é mais utilizado quando as informações a serem exibidas forem mais sucintas ou seja necessário dar mais espaço visível à área de conteúdo. Muito utilizado em sistemas, porém não obrigatório.
-
-![Header Compacto](imagens/header-anatomy-type-compact.png)
-
-**Atenção:** por padrão o *header* se encontra na **camada 1** por ser um elemento com relevância e desta forma apresenta sombra suave. Consulte o documento Fundamentos > Elevação para mais detalhes.
-
----
-
-## Detalhe dos Elementos
-
-### 1. Logo
+### 1. Logo (Opcional)
 
 Existem três tamanhos para a logo. Cada um usado para um nível ênfase determinado:
 
-1. ***Large***: maior ênfase
-2. ***Medium***: média ênfase
-3. ***Small***: baixa ênfase
+1. **Large**: maior ênfase
+
+2. **Medium**: média ênfase
+
+3. **Small**: baixa ênfase
 
 ![Tamanhos Logo](imagens/header-anatomy-4.png)
+*Tamanhos das Logos*
 
-**Observação:** Logos (imagens) são limitadas pela a altura. É recomendada que a largura tenha, no máximo, 4x a dimensão da altura (ênfase) escolhida.
+**OBS:** Logos (imagens) são limitadas pela altura. É recomendada que a largura tenha, no máximo, 4x a dimensão da altura (ênfase) escolhida.
 
-***Large***: Usado quando temos espaço disponível e queremos dar maior destaque para marca do sistema/site. Comum no *Header* Padrão (Grid de 12 e 8 colunas);
+**Large**: Usado quando temos espaço disponível e queremos dar maior destaque para marca do sistema/site. Comum no *Header* Padrão (Grid de 12 e 8 colunas);
 
 ![Header Padrão - Logo Large](imagens/header-anatomy-type-default.png)
+*Header Padrão - Logo Large*
 
-***Medium***: Usado quando não temos tanto espaço disponível, mas mesmo assim queremos dar destaques para a marca. Comum em versão mobile (Grid de 4 colunas);
+**Medium**: Usado quando não temos tanto espaço disponível, mas mesmo assim queremos dar destaques para a marca. Comum em versão mobile (Grid de 4 colunas);
 
 ![Exemplo Logo Medium](imagens/header-anatomy-logo-medium.png)
+*Header - Logo Medium*
 
-***Small***: Usado quando a marca não necessita de tanto destaque em relação a outros elementos, ou temos um espaço muito menor na tela. Comum nos *Headers* do tipo Compacto (Grid de 12 e 8 colunas) e em comportamentos de **Sticky Headers**.
+**Small**: Usado quando a marca não necessita de tanto destaque em relação a outros elementos, ou temos um espaço muito menor na tela. Comum nos *Headers* do tipo Compacto (Grid de 12 e 8 colunas) e em comportamentos de *Sticky Headers*.
 
 ![Header Compacto - Logo Small](imagens/header-anatomy-type-compact.png)
+*Header Compacto - Logo Small*
 
-A logo é um elemento **opcional** como demonstrado nos exemplos abaixo:
+A logo é um elemento *opcional* como demonstrado nos exemplos abaixo:
 
 ![Header Compacto - Logo Small](imagens/header-anatomy-compact-logo.png)
+*Header Compacto - Logo Small*
 
 ![Header Compacto - Sem Logo](imagens/header-anatomy-compact-no-logo.png)
+*Header Compacto - Sem Logo*
 
-**Observação:** Recomendamos a utilização do Separador sempre que utilizar algum outro elemento posicionado lado a lado com a Logo, como a Assinatura por exemplo. Isso pode facilitar a leitura e trazer um maior equilíbrio visual dentro do *Header*.
+**OBS:** Recomendamos a utilização do Separador sempre que utilizar algum outro elemento posicionado lado a lado com a Logo, como a Assinatura por exemplo. Isso pode facilitar a leitura e trazer um maior equilíbrio visual dentro do *Header*.
 
-### 2. Assinatura
+### 2. Assinatura (Opcional)
 
 A assinatura serve para identificar uma subcategoria ou descrição relacionada à marca. Descreve uma categoria superior ao título do cabeçalho. Fica localizada ao lado da logo/marca. É um elemento opcional.
 
@@ -107,83 +91,90 @@ A assinatura serve para identificar uma subcategoria ou descrição relacionada 
 ![Header Sem Assinatura](imagens/header-anatomy-type-no-signature.png)
 *Header sem a assinatura*
 
-**Atenção:** recomendamos que a assinatura **permaneça oculta** em variações **mobile** (Grid de 4 colunas) e no **comportamento do Sticky Header**, como observa-se no exemplo abaixo:
+**Atenção:** recomendamos que a assinatura *permaneça oculta* em variações *mobile* (Grid de 4 colunas) e no *comportamento do Sticky Header*, como observa-se no exemplo abaixo:
 
 ![Exemplos Header](imagens/header-anatomy-signature-1.png)
+*Exemplos de Header com e sem assinatura*
 
-### 3. Título
+### 3. Título (Obrigatório)
 
 No *Header* deve sempre existir um título que identifique o site, sistema ou aplicativo. Em alguns dispositivos (como celulares), o título pode identificar a página atual.
 
 Ele é o único elemento obrigatório dentro do *Header*, porém, é possível utilizar um texto ou outro elemento para substituí-lo.
 
-**Observação**: Caso não queira utilizar o Título Textual, utilize o elemento Logo. Podendo ser posicionamento no mesmo local que ficaria o texto.
+**OBS**: Caso não queira utilizar o título textual, utilize o elemento Logo. Podendo ser posicionamento no mesmo local que ficaria o texto.
 
 #### Comportamentos no formato Textual
 
 ##### Tamanho da Fonte
 
-O tamanho da tipografia no título do Header muda conforme se adéqua às diferentes resoluções e Grids. Essas mudanças ocorrem nas mudanças de *Breakpoints*.
+O tamanho da tipografia no título do Header muda conforme se adequa às diferentes resoluções e Grids. Essas mudanças ocorrem nas mudanças de *Breakpoints*.
 
 ![Exemplo Header - Diferentes Grids](imagens/header-behaviour-title-default.png)
+*Diferentes tamanhos para tipografia em cada grid*
 
-**OBS:** Consulte os tamanhos das fontes tipográficas na seção ***Design Tokens > Tipografia***.
+**OBS:** Consulte os tamanhos das fontes tipográficas na seção *Design Tokens > Tipografia*.
 
 ##### Quantidade de Caracteres
 
-O título do Header poderá variar bastante na quantidade de caracteres. Tendo em vista este aspecto essencial, o Header poderá suportar **no máximo até duas linhas de caracteres**, não podendo ultrapassar este limite. Em casos extremos e raros, quando o título ultrapassar a quantidade de caracteres superior a duas linhas, este deverá ser **truncado e adicionado três pontinhos (...)** ao seu final. Observe os exemplos abaixo:
+O título do Header poderá variar bastante na quantidade de caracteres. Tendo em vista este aspecto essencial, o Header poderá suportar *no máximo até duas linhas de caracteres*, não podendo ultrapassar este limite. Em casos extremos e raros, quando o título ultrapassar a quantidade de caracteres superior a duas linhas, este deverá ser *truncado e adicionado três pontinhos (...)* ao seu final. Observe os exemplos abaixo:
 
 ![Exemplos Títulos Duas Linhas](imagens/header-behavior-tilte.png)
 *No exemplo acima, na versão para celulares, ocorreu o truncamento do título.*
 
 É importante salientar que quando o Título cresce para duas linhas a altura do *header* acompanha o crescimento na vertical.
 
-O mesmo comportamento ocorre com a **versão Compacta do Header**.
+O mesmo comportamento ocorre com a *versão Compacta do Header*.
 
 ![Títulos Versão Compacta](imagens/header-compact-behavior-tilte.png)
+*Títulos Versão Compacta*
 
-O mesmo comportamento ocorre quando o **Título** vem acompanhado do **Subtítulo**. Veja abaixo:
+O mesmo comportamento ocorre quando o *Título* vem acompanhado do *Subtítulo*. Veja abaixo:
 
 ![Header Compacto Título e Sub-Título](imagens/header-compact-behavior-tilte-subtitle.png)
+*Header Compacto Título e Sub-Título*
 
-**OBS:** Consulte na seção ***Design Tokens > Dimensões***, as mudanças na altura do Header em decorrência do número de linhas.
+**OBS:** Consulte na seção *Design Tokens > Dimensões*, as mudanças na altura do Header em decorrência do número de linhas.
 
-### 4. Subtítulo
+### 4. Subtítulo (Opcional)
 
 Serve para reforçar a identificação de uma categoria associada ao título da página, ou descrição do mesmo. Fica localizado logo abaixo do título principal do cabeçalho. É um elemento opcional.
 
 Observe abaixo a utilização do *Subtítulo do Header* em diferentes Grids.
 
 ![Exemplo Subtítulo - Diferentes Grids](imagens/header-compact-anatomy-subtitle.png)
+*Exemplo Subtítulo - Diferentes Grids*
 
-É importante notar que o Subtítulo **permanece obrigatoriamente oculto** nas **versões mobile** (Grid de 4 Colunas).
+É importante notar que o Subtítulo *permanece obrigatoriamente oculto* nas *versões mobile* (Grid de 4 Colunas).
 
-### 5. Botão Menu
+### 5. Botão Menu (Opcional)
 
 Elemento opcional utilizado para interagir com o componente Menu (para exibir, esconder, retrair ou outro comportamento possível).
 
 ![Botão Menu](imagens/header-anatomy-5.png)
 *Button usado para acessar o Menu*
 
-### 6. Área para Links
+### 6. Área para Links (Opcional)
 
 Trata-se de links opcionais de apoio. Devem ser usados apenas quando fizerem parte do contexto ou tema tratado no Site/Sistema. Neste caso, apontarão para sítios ou sistemas externos.
 
-Quando a quantidade de links não couber no espaço horizontal em decorrência do tamanho do título, número de links, ou resolução da tela, estes devem ser acessados através da **Lista Dropdown**. Veja o exemplo abaixo com suas variações:
+Quando a quantidade de links não couber no espaço horizontal em decorrência do tamanho do título, número de links, ou resolução da tela, estes devem ser acessados através da *Lista Dropdown*. Veja o exemplo abaixo com suas variações:
 
 ![Área Links](imagens/header-anatomy-links-area.png)
+*Área para Links*
 
-### 7. Área para Funcionalidades
+### 7. Área para Funcionalidades (Opcional)
 
 São itens opcionais e devem ser utilizados quando houver necessidades específicas em cada Site/Sistema.
 
-Quando a quantidade de ícones não couber no espaço horizontal em decorrência do tamanho do título, número de funcionalidades, ou resolução da tela, estes devem ser acessados através da **Lista Dropdown**.
+Quando a quantidade de ícones não couber no espaço horizontal em decorrência do tamanho do título, número de funcionalidades, ou resolução da tela, estes devem ser acessados através da *Lista Dropdown*.
 
 Preferencialmente, utilize o *Button* na versão com densidade alta.
 
 ![Área Funcionalidades](imagens/header-anatomy-functions-area.png)
+*Área para Funcionalidades*
 
-### 8. Botão de Autenticar
+### 8. Botão de Autenticar (Opcional)
 
 O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](https://www.gov.br/ds/components/signin?tab=designer)).
 
@@ -192,55 +183,82 @@ O Botão de Autenticar é opcional e fica localizado no canto direito do *Header
 Preferencialmente, utilize o *Sign-in* na versão com densidade alta.
 
 ![Botão Autenticar](imagens/header-anatomy-8.png)
+*Botão Autenticar*
 
-### 9. Avatar do Usuário
+### 9. Avatar do Usuário (Opcional)
 
-O Avatar do Usuário é um elemento opcional que consiste em uma imagem (ou ícone, caso o usuário não tenho escolhido uma foto para representá-lo no ambiente virtual) e dá acesso a algumas ferramentas úteis à configuração do usuário e notificações do sistema. **Este elemento só será apresentado quando o usuário estiver autenticado** no ambiente. A opção de *Logout* ou *Sair* ficará disponível no elemento *Dropdown* após o clique/toque no **Componente Avatar**.
+O Avatar do Usuário é um elemento opcional que consiste em uma imagem (ou ícone, caso o usuário não tenha escolhido uma foto para representá-lo no ambiente virtual) e dá acesso a algumas ferramentas úteis à configuração do usuário e notificações do sistema. *Este elemento só será apresentado quando o usuário estiver autenticado* no ambiente. A opção de *Logout* ou *Sair* ficará disponível no elemento *Dropdown* após o clique/toque no *Componente Avatar*.
 
 ![Avatar Usuário](imagens/header-anatomy-9.png)
+*Avatar Usuário*
 
 ![Avatar Usuário Dropdown](imagens/header-anatomy-15.png)
 *1- Dropdown; 2- Dropdown Mobile.*
 
 Há disponível um documento com maiores detalhes do componente Avatar. Por favor consulte-o para mais detalhes.
 
-### 10. Busca
+### 10. Busca (Opcional)
 
 Através deste *Input* o usuário poderá realizar pesquisa no Site/Sistema por palavra-chave. Este elemento é opcional e deve ser usado de acordo com a necessidade de cada Site/Sistema.
 
-O *Input* foi estilizado para se adaptador as características de um *header*. O detalhe desse novos estilos estão descritos na área de *Especificação*.
+O *Input* foi estilizado para se adaptar às características de um *header*. O detalhe desse novos estilos estão descritos na área de *Especificação*.
 
 Abaixo seguem os exemplos de visualização da Busca no Header para diferentes *breakpoints*.
 
 ![Exemplo Busca](imagens/header-anatomy-10.png)
+*Exemplo Busca*
 
-### 11. Lista *Dropdown*
+### 11. Lista *Dropdown* (Opcional)
 
 A lista *dropdown* é utilizada na área para Links e para Funcionalidades.
 
 #### Área para Links
 
-O usuário deverá clicar sobre o ícone `ellipsis-v` e uma **Lista *Dropdown*** aparecerá flutuando sobre o conteúdo. Este elemento corresponde ao **Componente *List***. Observe o modelo abaixo:
+O usuário deverá clicar sobre o ícone `ellipsis-v` e uma **Lista Dropdown** aparecerá flutuando sobre o conteúdo. Este elemento corresponde ao **Componente List**. Observe o modelo abaixo:
 
 ![Área Links](imagens/header-anatomy-13.png)
 *1- Dropdown; 2- Dropdown Mobile.*
 
 #### Área para Funcionalidades
 
-O usuário deverá clicar sobre o ícone `th` e uma **Lista *Dropdown*** aparecerá flutuando sobre o conteúdo. Este elemento corresponde ao **Componente List**. Observe o modelo abaixo:
+O usuário deverá clicar sobre o ícone `th` e uma **Lista Dropdown** aparecerá flutuando sobre o conteúdo. Este elemento corresponde ao **Componente List**. Observe o modelo abaixo:
 
 ![Área Funcionalidades](imagens/header-anatomy-14.png)
 *1- Dropdown; 2- Dropdown Mobile.*
 
-### 12. Superfície
+### 12. Superfície (Obrigatório)
 
-A superfície foi utilizada para agrupar melhor todos os elementos que compõem o componente *Header*. Ela não possui um altura fixa (somente um espaçamento interno padrão), sendo flexível, se ajustando conforme a distribuição dos elementos internos.
+A superfície foi utilizada para agrupar melhor todos os elementos que compõem o componente *Header*. Ela não possui uma altura fixa (somente um espaçamento interno padrão), sendo flexível, se ajustando conforme a distribuição dos elementos internos.
 
-### 13. Separadores
+### 13. Separadores (Obrigatório)
 
 No *Header* utilizamos os separadores para agruparmos a área para Links, área para Funcionalidades e a Ação de busca (quando ele está no formato de botão).
 
 Também são recomendados para serem utilizados em imagens (como a Logo), sempre que existir outro elemento alinhado horizontalmente.
+
+---
+
+## Tipos
+
+É possível criar infinidades diferentes de *headers* que atendem diferentes necessidades. Esses "tipos" dependem de como se deseja configurar os elementos que estão previstos neste componente (veja **Detalhe dos Elementos**).
+
+Recomendamos duas configurações que podem atender a maioria das situações: *Padrão* e *Compacto*.
+
+### 1. Header Padrão
+
+Este tipo de *header* é utilizado quando se pretende exibir uma quantidade maior de informações e também quando for necessário dar mais ênfase a marca do site/sistema. Geralmente é mais utilizado em sites ou portais de notícias, mas não é uma exclusividade deste tipo.
+
+![Header Padrão](imagens/header-anatomy-type-default.png)
+*Header Padrão*
+
+### 2. Header Compacto
+
+O tipo Compacto é mais utilizado quando as informações a serem exibidas forem mais sucintas ou seja necessário dar mais espaço visível à área de conteúdo. Muito utilizado em sistemas, porém não obrigatório.
+
+![Header Compacto](imagens/header-anatomy-type-compact.png)
+*Header Compacto*
+
+**Atenção:** por padrão o *header* se encontra na *camada 1* por ser um elemento com relevância e desta forma apresenta sombra suave. Consulte o documento Fundamentos > Elevação para mais detalhes.
 
 ---
 
@@ -250,35 +268,44 @@ Também são recomendados para serem utilizados em imagens (como a Logo), sempre
 
 O componente *Header* deve se comportar de forma fluida em relação à resolução de tela utilizada. A seguir ilustramos os *Headers* para cada *Grid* disponível.
 
-**Observação:** A superfície do *Header* sempre sangra na Grid (ocupando todo o espaço da margem), independente de qual Grid seja utilizada.
+**OBS:** A superfície do *Header* sempre sangra na Grid (ocupando todo o espaço da margem), independente de qual Grid seja utilizada.
 
 #### Header Padrão
 
 ![Header Padrão 12 colunas](imagens/header-behavior-responsive-1280px.png)
+*Header Padrão 12 colunas*
 
 ![Header Padrão 8 colunas](imagens/header-behavior-responsive-768px.png)
+*Header Padrão 8 colunas*
 
 ![Header Padrão 4 colunas](imagens/header-behavior-responsive-320px.png)
+*Header Padrão 4 colunas*
 
 #### Header Compacto
 
 ![Header Compacto 12 colunas](imagens/header-compact-behavior-responsive-1280px.png)
+*Header Compacto 12 colunas*
 
 ![Header Compacto 8 colunas](imagens/header-compact-behavior-responsive-768px.png)
+*Header Compacto 8 colunas*
 
 ![Header Compacto 4 colunas](imagens/header-compact-behavior-responsive-320px.png)
+*Header Compacto 4 colunas*
 
 ### 2. Densidade
 
-Conforme descrito em [Responsividade](#1-responsividade), o *header* possui um comportamento fluido em relação a grid utilizada, além de utilizar o conceito de sangria na grid. Por tanto, por padrão, o *header* só possui um espaçamento superior e inferior.
+Conforme descrito em **Responsividade**, o *header* possui um comportamento fluido em relação a grid utilizada, além de utilizar o conceito de sangria na grid. Por tanto, por padrão, o *header* só possui um espaçamento superior e inferior.
 
-Esses espaçamento podem assumir valores pré-definidos para cada tipo de *header* utilizado, podendo ainda sim, ser modificados.
+Esses espaçamento podem assumir valores pré-definidos para cada tipo de *header* utilizado, podendo ainda sim, ser modificados:
 
-* **Densidade Alta:** utilizada quando se pretende ocupar menos espaço útil na interface.
-* **Densidade Padrão:** Funciona na maioria dos layouts.
-* **Densidade Baixa:** utilizado quando o *header* precisa se destacar dentro da interface.
+-   **Densidade Alta:** utilizada quando se pretende ocupar menos espaço útil na interface.
+
+-   **Densidade Padrão:** Funciona na maioria dos layouts.
+
+-   **Densidade Baixa:** utilizado quando o *header* precisa se destacar dentro da interface.
 
 ![Densidades Alta Padrão e Baixa](imagens/header-densidade.png)
+*Densidades Alta Padrão e Baixa*
 
 ### 3. Busca
 
@@ -289,41 +316,52 @@ O comportamento da busca varia conforme o tipo de *Header* e a *grid* utilizada.
 Em se tratando de Header do tipo Padrão, a busca funciona como um *input* comum.
 
 ![Input de Busca 12 colunas](imagens/header-behavior-search-active-1280px.png)
+*Input de Busca 12 colunas*
 
 #### Demais Grids (8 e 4 Colunas) e variações do Header (Padrão e Compacto)
 
 Ao acionar o ícone de "Lupa", o *Header* recebe um contexto de busca, apresentando as seguintes características:
 
-* Todos os elementos exibidos no Header são ocultados.
-* O *input* preenche todo a largura do Header recebendo o estado *Focus*.
-* Um *Button* circular surge com a ação para "fechar" o *input*.
+-   Todos os elementos exibidos no Header são ocultados;
+
+-   O *input* preenche todo a largura do Header recebendo o estado *Focus*;
+
+-   Um *Button* circular surge com a ação para "fechar" o *input*;
 
 Quando *Button* fechar é acionado:
 
-* O *Header* volta para o contexto anterior, voltando todos os elementos que antes eram visíveis.
-* Tanto o *Input* como o *button* desaparecem.
+-   O *Header* volta para o contexto anterior, voltando todos os elementos que antes eram visíveis;
+
+-   Tanto o *Input* como o *button* desaparecem.
 
 ##### Normal
 
 ![Input de Busca 8 colunas](imagens/header-behavior-search-active-768px.png)
+*Input de Busca 8 colunas*
 
 ![Input de Busca 4 colunas](imagens/header-behavior-search-active-320px.png)
+*Input de Busca 4 colunas*
 
 ##### Compacto
 
 ![Input de Busca 12 colunas](imagens/header-compact-behavior-search-active-1280px.png)
+*Input de Busca 12 colunas*
 
 ![Input de Busca 8 colunas](imagens/header-compact-behavior-search-active-768px.png)
+*Input de Busca 8 colunas*
 
 ![Input de Busca 4 colunas](imagens/header-compact-behavior-search-active-320px.png)
+*Input de Busca 4 colunas*
 
 ### 4. Logado e Não Logado
 
-Basicamente a diferença entre as duas variações é a substituição do ***Botão Acesso GovBr*** pelo componente ***Avatar*** que indica que o usuário está logado.
+Basicamente a diferença entre as duas variações é a substituição do **Botão Acesso GovBr** pelo componente *Avatar* que indica que o usuário está logado.
 
 ![Header Deslogado](imagens/header-anatomy-logout.png)
+*Header Deslogado*
 
 ![Header Logado](imagens/header-anatomy-login.png)
+*Header Logado*
 
 ### 5. *Dropdown*
 
@@ -332,21 +370,23 @@ A Lista Dropdown aparecerá flutuando sobre o cabeçalho logo abaixo do seu bot�
 #### *Dropdown* - *Desktop* e *Tablet* (*Grid* de 12 e 8 colunas)
 
 ![Dropdown Grid 12 e 8 colunas](imagens/header-compact-behavior-dropdown-1.png)
+*Dropdown Grid 12 e 8 colunas*
 
 #### *Dropdown* - *Smartphone* (*Grid* de 4 colunas)
 
 ![Dropdown Grid 4 colunas](imagens/header-compact-behavior-dropdown-2.png)
+*Dropdown Grid 4 colunas*
 
 Na versão para *Smartphone* (Grid de 4 colunas) a Lista *Dropdown* terá o mesmo comportamento. Desta vez, com o evento *Touch*, a Lista aparecerá com uma formatação apropriada para *mobile*, como mostra o exemplo acima, ocupando toda largura do dispositivo e flutuando sobre o conteúdo da tela. Para fechá-la, basta acionar com um *touch* no mesmo botão.
 
-**Importante!** Nos botões *Acionadores Dropdown*, é opcional a utilização do identificador *Dropdown*. Este posiciona-se à direita do *Acionador* e centralizado verticalmente. Consulte mais detalhes em *Padrões > Dropdown*.
+**Importante:** Nos botões *Acionadores Dropdown*, é opcional a utilização do identificador *Dropdown*. Este posiciona-se à direita do *Acionador* e centralizado verticalmente. Consulte mais detalhes em *Padrões > Dropdown*.
 
 ![Exemplos de Botões Acionadores Dropdown](imagens/header-behaviour-trigger.png)
 *Exemplos de Botões Acionadores Dropdown - O uso do Identificador é opcional*
 
 ### 6. *Sticky Header*
 
-O comportamento *Sticky Header* ocorre quando o usuário faz a rolagem da página para cima. Neste momento, o *header* **fixa no topo** da área visível da página enquanto o conteúdo continua rolando por baixo dele.
+O comportamento *Sticky Header* ocorre quando o usuário faz a rolagem da página para cima. Neste momento, o *header* *fixa no topo* da área visível da página enquanto o conteúdo continua rolando por baixo dele.
 
 Ao rolar a página para baixo, e chegando na posição de topo inicial, o *header* volta a assumir seu comportamento normal.
 
@@ -358,35 +398,41 @@ Abaixo seguem alguns exemplos do funcionamento do *Sticky Header* nas versões *
 
 #### *Sticky Header* - Padrão
 
-Quando o cabeçalho assume o comportamento *Sticky Header*, seu formato é **otimizado** e **resumido**, **ocultando a assinatura do cabeçalho**, **reposicionando a *Busca***, e consequentemente, reduzindo a altura do mesmo.
+Quando o cabeçalho assume o comportamento *Sticky Header*, seu formato é **otimizado** e **resumido**, **ocultando a assinatura do cabeçalho**, **reposicionando a busca**, e consequentemente, reduzindo a altura do mesmo.
 
 Em resumo, ele assume as características de um *header* compacto.
 
 ![Sticky Header sem rolagem](imagens/header-behavior-sticky-header-1.png)
+*Sticky Header sem rolagem*
 
 ![Sticky Header rolagem](imagens/header-behavior-sticky-header-2.png)
+*Sticky Header rolagem*
 
-Neste formato, quando a **busca é acionada**, esta assume o formato mostrado abaixo, ocupando toda largura do cabeçalho.
+Neste formato, quando a *busca é acionada*, esta assume o formato mostrado abaixo, ocupando toda a largura do cabeçalho.
 
 ![Sticky Header Busca Acionada](imagens/header-behavior-sticky-header-3.png)
+*Sticky Header Busca Acionada*
 
 #### Sticky Header - Compacto
 
 **A única diferença** é que na versão Compacta o *Header* **não muda de formato**, tendo em vista que esta versão já é bastante otimizada. Logo, todos os elementos do *Header* na versão Compacta permanecerão do mesmo jeito com o *Sticky Header* ativo.
 
 ![Header Compacto sem rolagem](imagens/header-compact-behavior-sticky-header.png)
+*Header Compacto sem rolagem*
 
 ![Header Compacto rolagem - Sticky Header](imagens/header-compact-behavior-sticky-header-2.png)
+*Header Compacto rolagem - Sticky Header*
 
-Com a **Busca ativa**, o campo de pesquisa ocupará toda largura do Cabeçalho.
+Com a *Busca ativa*, o campo de pesquisa ocupará toda a largura do Cabeçalho.
 
 ![Header Compacto rolagem - Sticky Header - Busca ativa](imagens/header-compact-behavior-sticky-header-3.png)
+*Header Compacto rolagem - Sticky Header - Busca ativa*
 
-**Atenção:** sempre que o *header* estiver com o comportamento *sticky* deverá necessariamente utilizar o recurso de sombra, pois o componente passar a pertencer à **camada 3**. Consulte o documento Fundamento > Elevação para entender melhor o conceito de camadas.
+**Atenção:** sempre que o *header* estiver com o comportamento *sticky* deverá necessariamente utilizar o recurso de sombra, pois o componente passa a pertencer à *camada 3*. Consulte o documento Fundamento > Elevação para entender melhor o conceito de camadas.
 
 ---
 
-## Especificação
+## Especificações
 
 ### Tipografia
 

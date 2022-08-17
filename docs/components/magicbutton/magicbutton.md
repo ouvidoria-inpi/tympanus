@@ -1,1 +1,1 @@
-O componente _Magic Button_ é um botão com grande apelo visual.
+O componente *Magic Button* é um botão com grande apelo visual.

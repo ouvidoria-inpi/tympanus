@@ -3,76 +3,81 @@
 ![Exemplo de Textarea](imagens/behavior-states-interactive.png)
 *Exemplo de Textarea*
 
-Utilize o _Textarea_ quando:
+Utilize o *Textarea* quando:
 
-- Houver a necessidade de inserir dados de forma textual através de um sistema ou aplicação;
-- A informação textual requerida for relativamente longa, exigindo múltiplas linhas de texto.
+-   Houver a necessidade de inserir dados de forma textual através de um sistema ou aplicação;
+
+-   A informação textual requerida for relativamente longa, exigindo múltiplas linhas de texto.
 
 ---
 
 ## Anatomia
 
-O _Textarea_ é constituído por:
+O *Textarea* é constituído por:
 
-1 - _Label_ (Opcional)
-2 - Campo de Entrada de Texto (Obrigatório)
-3 - Ícone de Redimensionamento (Obrigatório)
-4 - _Placeholder_ (Opcional)
-5 - Mensagem (Opcional)
-6 - Texto Auxiliar (Opcional)
+| ID  | Nome                       |                                   Referência                                    | Uso         |
+| --- | -------------------------- | :-----------------------------------------------------------------------------: | ----------- |
+| 1   | *Label*                    |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 2   | Campo de Entrada de Texto  |                                       ---                                       | Obrigatório |
+| 3   | Ícone de Redimensionamento | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| 4   | *Placeholder*              |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 5   | Mensagem                   |   [Componente Message](https://www.gov.br/ds/components/message?tab=designer)   | Opcional    |
+| 6   | Texto Auxiliar             |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
 
 ![Anatomia do Textarea](imagens/anatomy.png)
 *Anatomia do Textarea*
 
-### Detalhamento dos itens
+---
 
-Abaixo segue o detalhamento dos itens do _Componente Textarea_. Para maiores informações consulte também a documentação [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
+### Detalhamento dos Itens
 
-#### 1 - Label (Opcional)
+Abaixo segue o detalhamento dos itens do *Componente Textarea*. Para maiores informações consulte também a documentação [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
 
-Auxiliam o usuário, indicando que tipo de informação deverá ser digitada no _Campo de Texto_. O texto do _Label_ deverá ser curto e objetivo.
+#### 1. Label (Opcional)
 
-Além disso, o _Label_ também tem a função de indicar ao usuário se o **Campo de Texto é obrigatório ou não**. Veja detalhes sobre a indicação de **Campos Obrigatórios/Opcionais** no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
+Auxiliam o usuário, indicando que tipo de informação deverá ser digitada no *Campo de Texto*. O texto do *Label* deverá ser curto e objetivo.
+
+Além disso, o *Label* também tem a função de indicar ao usuário se o *Campo de Texto é obrigatório ou não*. Veja detalhes sobre a indicação de *Campos Obrigatórios/Opcionais* no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
 
 ##### Posicionamento do Label
 
-A - O _Label_ posiciona-se por padrão no topo do _Campo de Texto_.
+A - O *Label* posiciona-se por padrão no topo do *Campo de Texto*.
 
-B - Caso haja necessidade, há um posicionamento alternativo, à esquerda do _Campo de Texto_, alinhado ao topo. Observe abaixo:
+B - Caso haja necessidade, há um posicionamento alternativo, à esquerda do *Campo de Texto*, alinhado ao topo. Observe abaixo:
 
 ![Posições para o Label](imagens/label.png)
 *Posições para o Label*
 
-**Atenção:** ao optar por um tipo de posicionamento, recomenda-se que todos os campos na página sigam o mesmo posicionamento, seja no topo ou na lateral do _Campo_.
+**Atenção:** ao optar por um tipo de posicionamento, recomenda-se que todos os campos na página sigam o mesmo posicionamento, seja no topo ou na lateral do *Campo*.
 
-#### 2 - Campo de Entrada de Texto (Obrigatório)
+#### 2. Campo de Entrada de Texto (Obrigatório)
 
 Este é o elemento essencial e obrigatório do componente. Através dele o usuário poderá inserir múltiplas linhas de texto.
 
-É recomendado que o campo _Textarea_ tenha um tamanho aproximado ao texto de entrada esperado, ou seja, recomenda-se prever este tamanho aproximado, dependendo da quantidade de caracteres esperada.  Observe o exemplo abaixo:
+É recomendado que o campo *Textarea* tenha um tamanho aproximado ao texto de entrada esperado, ou seja, recomenda-se prever este tamanho aproximado, dependendo da quantidade de caracteres esperada.  Observe o exemplo abaixo:
 
 ![Tamanho do Textarea](imagens/size.png)
 *Tamanho do Textarea*
 
-#### 3 - Ícone de Redimensionamento (Obrigatório)
+#### 3. Ícone de Redimensionamento (Obrigatório)
 
-Este é um elemento padrão do próprio html, que tem como funcionalidade redimensionar o componente _Textarea_. É posicionado na parte inferior direita do _Textarea_ e o redimensionamento poderá ser feito tanto na horizontal quanto na vertical. Para mais detalhes consulte _Comportamento > Redimensionamento_.
+Este é um elemento padrão do próprio html, que tem como funcionalidade redimensionar o componente *Textarea*. É posicionado na parte inferior direita do *Textarea* e o redimensionamento poderá ser feito tanto na horizontal quanto na vertical. Para mais detalhes consulte *Comportamento > Redimensionamento*.
 
 ![Exemplo de Ícone de Redimensionamento](imagens/icon.png)
 *Exemplo de Ícone de Redimensionamento*
 
-#### 4 - _Placeholder_ (Opcional)
+#### 4. *Placeholder* (Opcional)
 
-O _placeholder_ tem a função de auxiliar o usuário em como preencher os dados solicitados. Obrigatoriamente deverá trazer uma informação mais completa que a contida no _Label/Label_. Ele desaparecerá logo ao iniciar a digitação no campo de entrada de texto. E retornar no caso de exclusão da informação.
+O *placeholder* tem a função de auxiliar o usuário em como preencher os dados solicitados. Obrigatoriamente deverá trazer uma informação mais completa que a contida no *Label/Label*. Ele desaparecerá logo ao iniciar a digitação no campo de entrada de texto. E retornar no caso de exclusão da informação.
 
-Use o _Placeholder_ quando o usuário não estiver familiarizado com a entrada solicitada ou a formatação estiver em questão (por exemplo, AAAA-MM-DD).
+Use o *Placeholder* quando o usuário não estiver familiarizado com a entrada solicitada ou a formatação estiver em questão (por exemplo, AAAA-MM-DD).
 
 ![Exemplo de Placeholder](imagens/placeholder.png)
 *Exemplo de Placeholder*
 
-#### 5 - Mensagem (Opcional)
+#### 5. Mensagem (Opcional)
 
-O Componente _Message_ é utilizado quando há necessidade de dar uma mensagem de _feedback_ ao usuário. A mensagem pode ter até quatro objetivos diferentes: _Erro_, _Sucesso_, _Alerta_ e _Informativo_. Observe os exemplos abaixo:
+O Componente *Message* é utilizado quando há necessidade de dar uma mensagem de *feedback* ao usuário. A mensagem pode ter até quatro objetivos diferentes: *Erro*, *Sucesso*, *Alerta* e *Informativo*. Observe os exemplos abaixo:
 
 ![Componente Mensagem Erro](imagens/behavior-states-danger.png)
 *Componente Mensagem Erro*
@@ -86,24 +91,24 @@ O Componente _Message_ é utilizado quando há necessidade de dar uma mensagem d
 ![Componente Mensagem Informativa](imagens/behavior-states-info.png)
 *Componente Mensagem Informativa*
 
-#### 6 - Texto Auxiliar (Opcional)
+#### 6. Texto Auxiliar (Opcional)
 
-O _Texto Auxiliar_ é opcional e tem a função de ajudar o usuário no preenchimento do texto, acrescentando alguma informação mais detalhada. É bastante útil quando a informação no _Label_ e _Placeholder_ não são suficientes.
+O *Texto Auxiliar* é opcional e tem a função de ajudar o usuário no preenchimento do texto, acrescentando alguma informação mais detalhada. É bastante útil quando a informação no *Label* e *Placeholder* não são suficientes.
 
 ![Exemplo de Texto Auxiliar](imagens/text.png)
 *Exemplo de Texto Auxiliar*
 
 ---
 
-## Comportamento
+## Comportamentos
 
-### 1 - Responsividade
+### 1. Responsividade
 
 #### Grid de 12 e 8 Colunas
 
-Na Grid de 12 e 8 colunas o _Textarea_ terá seu tamanho ajustado a um tamanho aproximado da entrada de texto esperada. Poderá variar conforme à necessidade.
+Na Grid de 12 e 8 colunas o *Textarea* terá seu tamanho ajustado a um tamanho aproximado da entrada de texto esperada. Poderá variar conforme à necessidade.
 
-Ao reduzir a resolução da tela o _Textarea_ poderá ter dois comportamentos esperados:
+Ao reduzir a resolução da tela o *Textarea* poderá ter dois comportamentos esperados:
 
 1 - Adequa-se a nova largura de tela, quebrando linha e ocupando toda horizontal
 
@@ -122,14 +127,14 @@ Observe abaixo:
 
 #### Grid de 4 Colunas
 
-Na Grid de 4 colunas, o _Textarea_ deverá se estender por toda largura da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizada uma altura razoável para melhor visualização por parte do usuário.
+Na Grid de 4 colunas, o *Textarea* deverá se estender por toda largura da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizada uma altura razoável para melhor visualização por parte do usuário.
 
 ![Textarea - Grid de 4 colunas](imagens/behavior-responsive-grid-4-cols.png)
 *Textarea - Grid de 4 colunas*
 
-### 2 - Redimensionamento
+### 2. Redimensionamento
 
-Através do _Ícone de Redimensionamento_, o _Textarea_ poderá ser re-ajustado tanto na horizontal quanto na vertical ou em ambas as dimensões simultaneamente. Observe os exemplos abaixo:
+Através do *Ícone de Redimensionamento*, o *Textarea* poderá ser reajustado tanto na horizontal quanto na vertical ou em ambas as dimensões simultaneamente. Observe os exemplos abaixo:
 
 ![Redimensionamento Horizontal](imagens/resize-horizontal.png)
 *Redimensionamento Horizontal*
@@ -142,84 +147,84 @@ Através do _Ícone de Redimensionamento_, o _Textarea_ poderá ser re-ajustado 
 
 #### Tamanho Fixo Opcional
 
-O redimensionamento do _Textarea_ é um comportamento opcional, este poderá ser configurado para permanecer com o tamanho fixo na tela. Neste caso, o _Ícone de Redimensionamento_ não será exibido.
+O redimensionamento do *Textarea* é um comportamento opcional, este poderá ser configurado para permanecer com o tamanho fixo na tela. Neste caso, o *Ícone de Redimensionamento* não será exibido.
 
 ![Textarea com Tamanho Fixo](imagens/fix-size.png)
 *Textarea com Tamanho Fixo*
 
 #### Tamanho Fixo Obrigatório - Mobile
 
-Em dispositivos móveis, _Grid de 4 Colunas_, o tamanho do _Textarea_ deve permanecer fixo, ocupando toda largura disponível, devido ao espaço reduzido para realizar o redimensionamento.
+Em dispositivos móveis, *Grid de 4 Colunas*, o tamanho do *Textarea* deve permanecer fixo, ocupando toda largura disponível, devido ao espaço reduzido para realizar o redimensionamento.
 
-### 3 - Barra de Rolagem
+### 3. Barra de Rolagem
 
-Quando o número de caracteres ultrapassa a altura do _Textarea_, este deverá apresentar uma barra de rolagem. Observe abaixo:
+Quando o número de caracteres ultrapassa a altura do *Textarea*, este deverá apresentar uma barra de rolagem. Observe abaixo:
 
 ![Textarea com Barra de Rolagem](imagens/scroll.png)
 *Textarea com Barra de Rolagem*
 
-**Atenção:** a _Barra de Rolagem_ será o elemento nativo renderizado pelo _Navegador_.
+**Atenção:** a *Barra de Rolagem* será o elemento nativo renderizado pelo *Navegador*.
 
-### 4 - Contagem de Caracteres (Opcional)
+### 4. Contagem de Caracteres (Opcional)
 
-O _Componente Textarea_ possui o comportamento de contagem de caracteres. Este comportamento é opcional e funciona de duas formas. Observe abaixo:
+O *Componente Textarea* possui o comportamento de contagem de caracteres. Este comportamento é opcional e funciona de duas formas. Observe abaixo:
 
-#### 1 - Preenchimento com limite máximo
+#### A. Preenchimento com limite máximo
 
-Compreende em definir uma quantidade máxima de caracteres e através do _Texto Auxiliar_ a quantidade restante de caracteres será atualizada dinamicamente enquanto o usuário digitar. Veja o exemplo abaixo:
+Compreende em definir uma quantidade máxima de caracteres e através do *Texto Auxiliar* a quantidade restante de caracteres será atualizada dinamicamente enquanto o usuário digitar. Veja o exemplo abaixo:
 
-1 - O usuário ainda não começou digitar no campo de texto. O _Texto Auxiliar_ informa ao usuário o limite máximo de caracteres permitidos.
+1 - O usuário ainda não começou a digitar no campo de texto. O *Texto Auxiliar* informa ao usuário o limite máximo de caracteres permitidos.
 
-2 - O usuário está digitando o texto. A informação de caracteres restantes é atualizada dinamicamente no _Texto Auxiliar_.
+2 - O usuário está digitando o texto. A informação de caracteres restantes é atualizada dinamicamente no *Texto Auxiliar*.
 
-3 - O usuário atinge o limite máximo de caracteres permitido. O _Textarea_ bloqueia o acesso à digitação e o _Texto Auxiliar_ informa que não restam mais caracteres a serem preenchidos.
+3 - O usuário atinge o limite máximo de caracteres permitido. O *Textarea* bloqueia o acesso à digitação e o *Texto Auxiliar* informa que não restam mais caracteres a serem preenchidos.
 
 ![Contagem de Caracteres com limite](imagens/behavior-count-limit.png)
 *Contagem de Caracteres com limite*
 
-#### 2 - Preenchimento sem limite máximo de caractere
+#### B. Preenchimento sem limite máximo de caractere
 
 Nesta situação o contador de caracteres indica a quantidade que já foi digitada apenas como informação ao usuário. Neste tipo, não há limitação da quantidade de caracteres digitada. Observe abaixo:
 
-1 - O usuário ainda não começou a digitar e o _Texto Auxiliar_ informa que não foi digitado qualquer caractere.
+1 - O usuário ainda não começou a digitar e o *Texto Auxiliar* informa que não foi digitado qualquer caractere.
 
-2 - O usuário está digitando e o _Texto Auxiliar_ vai sendo atualizado dinamicamente informando a quantidade de caracteres digitada.
+2 - O usuário está digitando e o *Texto Auxiliar* vai sendo atualizado dinamicamente informando a quantidade de caracteres digitada.
 
-3 - Enquanto o usuário continuar digitando a informação será atualizada no _Texto Auxiliar_. Neste caso não há limite máximo de caracteres.
+3 - Enquanto o usuário continuar digitando a informação será atualizada no *Texto Auxiliar*. Neste caso não há limite máximo de caracteres.
 
 ![Contagem de Caracteres sem limite](imagens/behavior-count.png)
 *Contagem de Caracteres sem limite*
 
-### 5 - Densidade
+### 5. Densidade
 
-O _Textarea_ poderá ser usado com densidades diferentes. A _Densidade_ tem a ver com o espaço interno oferecido no _Campo de Entrada de Texto_. Consulte os espaçamentos em _Design > Tokens_.
+O *Textarea* poderá ser usado com densidades diferentes. A *Densidade* tem a ver com o espaço interno oferecido no *Campo de Entrada de Texto*. Consulte os espaçamentos em *Design > Tokens*.
 
-#### A - Densidade Baixa
+#### A. Densidade Baixa
 
-É bastante útil quando for necessária uma área de 'respiro' maior ou quando for mais adequado ao projeto de _layout_.
+É bastante útil quando for necessária uma área de 'respiro' maior ou quando for mais adequado ao projeto de *layout*.
 ![Densidade do Textarea](imagens/behavior-density-low.png)
 
-#### B - Densidade Média
+#### B. Densidade Média
 
-É a densidade comum utilizada nos campos de entrada de texto. Geralmente utilizada, na maioria dos casos, em resoluções para _Tablet_ e _Desktop_.
+É a densidade comum utilizada nos campos de entrada de texto. Geralmente utilizada, na maioria dos casos, em resoluções para *Tablet* e *Desktop*.
 ![Densidade do Textarea](imagens/behavior-density-medium.png)
 
-#### C - Densidade Alta
+#### C. Densidade Alta
 
 É a situação onde o espaçamento interno do campo é bastante reduzido.
 
 ![Densidade do Textarea](imagens/behavior-density-high.png)
 *Densidade do Textarea*
 
-### 6 - Estados
+### 6. Estados
 
-O componente _Textarea_ é bem parecido com o componente _input_. Portanto, boa parte dos comportamentos são similares e podem ser "reaproveitados".
+O componente *Textarea* é bem parecido com o componente *input*. Portanto, boa parte dos comportamentos são similares e podem ser "reaproveitados".
 
-Para simplificação, utilize o comportamento Estados da mesma forma como é encontrado no [_Input_](https://www.gov.br/ds/components/input) (tanto na parte de uso em fundos claros e escuros como nas suas limitações descritas).
+Para simplificação, utilize o comportamento Estados da mesma forma como é encontrado no [*Input*](https://www.gov.br/ds/components/input?tab=designer) (tanto na parte de uso em fundos claros e escuros como nas suas limitações descritas).
 
 ---
 
-## Especificação
+## Especificações
 
 ### Cores
 
