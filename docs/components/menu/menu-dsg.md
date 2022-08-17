@@ -3,7 +3,7 @@
 ![Menu Principal e Auxiliar](imagens/menu-types.png)
 *Exemplo de menu de navegação principal e menu de navegação contextual.*
 
-O menu de navegação deve ser utilizado com o objetivo de oferecer acesso a todas as áreas ou páginas do _site_/sistema. Esse acesso é feito por meio de _links_ categorizados em seções e subseções definidos pela arquitetura da informação.
+O menu de navegação deve ser utilizado com o objetivo de oferecer acesso a todas as áreas ou páginas do *site*/sistema. Esse acesso é feito por meio de *links* categorizados em seções e subseções definidos pela arquitetura da informação.
 
 ---
 
@@ -17,48 +17,52 @@ Seguindo as boas práticas de design e usabilidade, o tom e voz utilizado no men
 
 O menu é constituído por:
 
-1- Ícone de acionamento;
-2- Superfície _scrim_ (_condicional_);
-3- Cabeçalho do menu (_opcional_);
-4- Botão Fechar (_opcional_);
-5- Item de 1º nível;
-6- Item de 2º nível (_condicional_);
-7- Ícone Expandir/Retrair (_condicional_);
-8- Ícone representativo do item (opcional);
-9- Ícone Acessar Subitens (_condicional_);
-10- Componente _divider_ (_condicional_);
-11- Painel do menu;
-12- Rodapé do menu (_opcional_).
+| ID  | Nome                         |                              Referência                               | Uso         |
+| --- | ---------------------------- | :-------------------------------------------------------------------: | ----------- |
+| 1   | Ícone de acionamento         |    [Button](https://www.gov.br/ds/components/button?tab=designer)     | Opcional    |
+| 2   | Superfície *scrim*           |                                  ---                                  | Condicional |
+| 3   | Cabeçalho do menu            |    [Header](https://www.gov.br/ds/components/header?tab=designer)     | Opcional    |
+| 4   | Botão Fechar                 |    [Button](https://www.gov.br/ds/components/button?tab=designer)     | Opcional    |
+| 5   | Item de 1º nível             |      [Item](https://www.gov.br/ds/components/item?tab=designer)       | Opcional    |
+| 6   | Item de 2º nível             |      [Item](https://www.gov.br/ds/components/item?tab=designer)       | Condicional |
+| 7   | Ícone Expandir/Retrair       |    [Button](https://www.gov.br/ds/components/button?tab=designer)     | Condicional |
+| 8   | Ícone representativo do item | [Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia)  | Opcional    |
+| 9   | Ícone Acessar Subitens       |    [Button](https://www.gov.br/ds/components/button?tab=designer)     | Condicional |
+| 10  | Componente *divider*         | [Divider](https://www.gov.br/ds/components/divider?tab=desenvolvedor) | Condicional |
+| 11  | Painel do menu               |                                  ---                                  | Obrigatório |
+| 12  | Rodapé do menu               |    [Footer](https://www.gov.br/ds/components/footer?tab=designer)     | Opcional    |
 
 ![Anatomia do Menu](imagens/menu-anatomy.png)
 *Anatomia do menu.*
 
-### Detalhamento dos itens
+---
 
-#### 1- Ícone de acionamento
+## Detalhamento dos Itens
 
-A partir deste ícone/botão o usuário pode acionar o menu e ter acesso aos _links_ para navegação.
+### 1. Ícone de acionamento (Opcional)
 
-#### 2- Superfície _scrim_ (_condicional_)
+A partir deste ícone/botão o usuário pode acionar o menu e ter acesso aos *links* para navegação.
 
-Este elemento serve para adicionar contraste entre o componente menu e o conteúdo da tela ao fundo, direcionando a atenção do usuário ao conteúdo do menu. Neste contexto, será utilizado a superfície _scrim_.
+### 2. Superfície *scrim* (Condicional)
+
+Este elemento serve para adicionar contraste entre o componente menu e o conteúdo da tela ao fundo, direcionando a atenção do usuário ao conteúdo do menu. Neste contexto, será utilizado a superfície *scrim*.
 
 Este elemento é condicional porque só será apresentado com o primeiro tipo de abertura do menu principal, quando este se apresenta sobre a tela cobrindo o conteúdo.
 
 Veja mais informações sobre modos de abertura do menu em: Comportamentos > Acionamento/Fechamento.
 
-**Atenção:** nesse caso, o menu passará a ocupar a **camada 3** na hierarquia de elevação e apresentará a sombra correspondente a essa camada.
+**Atenção:** nesse caso, o menu passará a ocupar a *camada 3* na hierarquia de elevação e apresentará a sombra correspondente a essa camada.
 
-Veja mais detalhes no documento Fundamentos > Elevação.
+Veja mais detalhes no documento [Fundamentos Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao).
 
-#### 3- Cabeçalho do menu (_opcional_)
+### 3. Cabeçalho do menu (Opcional)
 
-Identifica o _site_ ou sistema. Seu uso é opcional e pode ser utilizado com o logo, o título ou algum elemento que identifique o _site_ ou o menu.  
+Identifica o *site* ou sistema. Seu uso é opcional e pode ser utilizado com o logo, o título ou algum elemento que identifique o *site* ou o menu.  
 
 ![Anatomia do Cabeçalho do Menu](imagens/menu-anatomy-header.png)
 *Possibilidades de aplicação do cabeçalho do menu.*
 
-#### 4- Botão Fechar (_opcional_)
+### 4. Botão Fechar (Opcional)
 
 Este elemento está localizado no cabeçalho do menu e seu uso é opcional, visto que é possível optar pelo fechamento com um clique em qualquer área da tela fora do menu.
 É recomendado, porém, oferecer as duas opções de fechamento do menu concomitantemente: botão Fechar e clique fora do menu.
@@ -68,50 +72,52 @@ Este elemento está localizado no cabeçalho do menu e seu uso é opcional, vist
 
 **Atenção:** em alguns casos, o menu pode ser fixo na tela e não oferecer a possibilidade de fechamento e abertura.
 
-#### 5- Itens de 1º nível
+### 5. Itens de 1º nível (Opcional)
 
 São formados pelo componente item e utilizados essencialmente para  possibilitar a navegação pelo menu. Os itens de primeiro nível podem funcionar como itens agrupadores ou como itens de navegação. Quando utilizado como agrupador, use o ícone Expandir/Retrair à direita para reforçar a existência de subitens. Garanta que a área de interação seja em toda a área do item.
 
 ![item do Menu](imagens/menu-anatomy-item-types–1.png)
 *Itens do menu com agrupamento e simples.*
 
-#### 6- Item de 2º nível (_condicional_)
+### 6. Item de 2º nível (Condicional)
 
 Este elemento é condicionado à  necessidade de uso de subitens.
 
 São também formados pelo componente item e possuem algumas distinções em relação aos itens de 1º nível a fim de garantir contraste visual entre os dois níveis de itens do menu:
 
-- São utilizados com uma indentação maior;
-- Apresentam cor de fundo diferenciada;
-- Não deve utilizar o componente _divider_ para separá-los.
+-   São utilizados com uma indentação maior;
 
-Quando um item de 2º nível apresentar subitens, um ícone de seta deve ser utilizado à direta e nestes casos levam o usuário para um painel com os itens filhos.
+-   Apresentam cor de fundo diferenciada;
+
+-   Não deve utilizar o componente *divider* para separá-los.
+
+Quando um item de 2º nível apresentar subitens, um ícone de seta deve ser utilizado à direita e nestes casos levam o usuário para um painel com os itens filhos.
 
 ![item do Menu](imagens/menu-anatomy-item-types–2.png)
 *Item do menu de 2º nível.*
 
-#### 7- Ícone Expandir/Retrair (_condicional_)
+### 7. Ícone Expandir/Retrair (Condicional)
 
-Utilize os ícones Expandir/Retrair para acionar o comportamento _collapse_ para acionameto dos subníveis.
+Utilize os ícones Expandir/Retrair para acionar o comportamento *collapse* para acionamento dos subníveis.
 
 ![Ícone Expandir/Retrair](imagens/menu-anatomy-item-types-4.png)
 *Uso do ícone Expandir/Retrair.*
 
-#### 8- Ícones representativos (_opcional_)
+### 8. Ícones representativos (Opcional)
 
-Ícones representativos do item é um elemento opcional e pode ser usado para dar ênfase visual aos _links_ de navegação, reforçando a semântica do texto.
+Ícones representativos do item é um elemento opcional e pode ser usado para dar ênfase visual aos *links* de navegação, reforçando a semântica do texto.
 
 Preze pelas boas práticas de utilização:
 
-- Utilize a família de ícones adotada no Design System GOV.BR (_Font Awesome_);
+-   Utilize a família de ícones adotada no Design System (*Font Awesome*);
 
-- Padronize a utilização de ícones.
+-   Padronize a utilização de ícones.
 Por exemplo: utilize em todos os itens do mesmo bloco ou em todos os itens do menu.
 
 ![Ícones do Menu](imagens/menu-anatomy-itens-icons.png)
 *Padronize o uso dos ícones no menu.*
 
-#### 9- Ícone Acessar Subitens (_condicional_)
+### 9. Ícone Acessar Subitens (Condicional)
 
 Este elemento é condicionado à existência de subitens no 2º nível do menu.
 Os itens filhos devem ser apresentados em um painel separado.
@@ -121,22 +127,22 @@ Veja mais detalhes em Comportamento > 2º nível.
 ![Subníveis do Menu](imagens/menu-anatomy-item-types–5.png)
 *Subníveis do 2º nível do menu.*
 
-#### 10- Componente _divider_ (_condicional_)
+### 10. Componente *divider* (Condicional)
 
-O componente _divider_ deve ser utilizado apenas no 1º nível do menu. Os itens de 2º nível não utilizam _dividers_.
+O componente *divider* deve ser utilizado apenas no 1º nível do menu. Os itens de 2º nível não utilizam *dividers*.
 
-![Componente _Divider](imagens/menu-anatomy-divider.png)
-*Uso do componente _divider_.*
+![Componente *Divider](imagens/menu-anatomy-divider.png)
+*Uso do componente divider.*
 
-#### 11- Painel do menu
+### 11. Painel do menu (Obrigatório)
 
-O painel é utilizado como superfície de suporte para os itens do menu. Quando acionado, abrirá flutuando e deslizando lateralmente da esquerda para direita. Opcionalmente, pode ocorrer com a utilização do elemento _scrim_ ocupando toda a área da tela.
+O painel é utilizado como superfície de suporte para os itens do menu. Quando acionado, abrirá flutuando e deslizando lateralmente da esquerda para direita. Opcionalmente, pode ocorrer com a utilização do elemento *scrim* ocupando toda a área da tela.
 
 O painel pode conter também outros elementos auxiliares.
 
-#### 12- Rodapé do menu (_opcional_)
+### 12. Rodapé do menu (Opcional)
 
-Está posicionado na parte inferior do painel do menu e contém algumas áreas de apoio, como _links_ para acesso a _sites_ externos, mídias sociais, informações adicionais, etc.
+Está posicionado na parte inferior do painel do menu e contém algumas áreas de apoio, como *links* para acesso a *sites* externos, mídias sociais, informações adicionais, etc.
 
 ![Rodapé do Menu](imagens/menu-anatomy-footer.png)
 *Possíveis usos do rodapé do menu.*
@@ -147,57 +153,47 @@ Está posicionado na parte inferior do painel do menu e contém algumas áreas d
 
 ## Tipos
 
-### 1- Menu Principal
+### 1. Menu Principal
 
-Por meio do menu principal o usuário tem acesso a todos os _links_ para as páginas do _site_/sistema.
+Por meio do menu principal o usuário tem acesso a todos os *links* para as páginas do *site*/sistema.
 
-O menu principal deve ser fácil de ser acessado de qualquer página do _site_/sistema.
+O menu principal deve ser fácil de ser acessado de qualquer página do *site*/sistema.
 
 ![Menu Principal](imagens/menu-type-main.png)
 *Exemplo de menu principal.*
 
-### 2- Menu Contextual
+### 2. Menu Contextual
 
-O menu contextual ou secundário, é utilizado de forma auxiliar ao principal. Geralmente é aplicado para navegações de páginas internas ou itens relacionados (âncoras). É menos relevante e por isso costuma ser uma versão simplificada do menu principal.
+O menu contextual ou secundário, é utilizado de forma auxiliar ao principal. Geralmente é aplicado para navegação de páginas internas ou itens relacionados (âncoras). É menos relevante e por isso costuma ser uma versão simplificada do menu principal.
 
 ![Menu Auxiliar](imagens/menu-type-auxiliary.png)
 *Exemplo de menu contextual.*
 
-O menu contextual se encontra na **camada zero** de elevação e portanto não apresenta sombra.
+O menu contextual se encontra na *camada zero* de elevação e portanto não apresenta sombra.
 
 **Atenção:** Por ser uma versão "enxuta" do menu principal, evite subníveis e excesso de elementos. Menus contextuais devem ser simples e diretos portanto, quanto menos elementos, melhor performance apresentará.
 
-### Coexistência do Menu Principal e Menu Contextual
-
-Por regra geral o menu contextual funciona independentemente do menu principal e geralmente é utilizado na navegação interna de telas com grande quantidade de conteúdo. Desta forma, evite o uso de itens que apontam para outras telas ou para informações externas ao _site_. Reserve essa função ao o menu principal.
-
-O menu contextual pode estar localizado em qualquer área da página, mas lembre-se de garantir a consistência do _layout_. Geralmente é aplicado na lateral direita da tela de modo fixo ou flutuante.
-
-![Menu Auxiliar](imagens/menu-behavior-open-position-3.png)
-*Exemplo de localização do menu contextual.*
-
-**Atenção:** tenha em mente que ambos os menus (principal e contextual) funcionam de modo independente. Evite, portanto, dispor _links_ comuns nos dois menus. Deixe bem claro para o usuário o nível de navegação que cada menu oferece.
-
-Ver mais detalhes em _Comportamento > Acionamento_.
+Tenha em mente que ambos os menus (principal e contextual) funcionam de modo independente. Evite, portanto, dispor de *links* comuns nos dois menus. Deixe bem claro para o usuário o nível de navegação que cada menu oferece.
 
 ---
 
-## Comportamento
+## Comportamentos
 
-### 1- Localização
+### 1. Localização
 
 O menu principal pode se comportar de duas maneiras distintas na tela:
 
-- Flutuando;
-- Fixo.
+-   Flutuando;
+
+-   Fixo.
 
 #### Flutuando
 
-O menu é aberto por meio de um elemento acionador localizado no cabeçalho do _site_/sistema e aparece flutuando sobre o conteúdo da tela. Este comportamento do menu principal deve estar associado ao elemento _scrim_, que "bloqueia" o acesso ao conteúdo da tela enquanto o menu estiver aberto.
+O menu é aberto por meio de um elemento acionador localizado no cabeçalho do *site*/sistema e aparece flutuando sobre o conteúdo da tela. Este comportamento do menu principal deve estar associado ao elemento *scrim*, que "bloqueia" o acesso ao conteúdo da tela enquanto o menu estiver aberto.
 
-Neste caso, o menu deverá se encontrar na **camada 3** na hierarquia de elevação e apresenta a sombra correspondente a essa camada.
+Neste caso, o menu deverá se encontrar na *camada 3* na hierarquia de elevação e apresenta a sombra correspondente a essa camada.
 
-Veja mais detalhes no documento Fundamentos > Elevação.
+Veja mais detalhes no documento [Fundamentos Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao).
 
 Para fechar o menu, basta clicar novamente no mesmo elemento acionador, no ícone fechar no cabeçalho do menu ou em qualquer área da tela fora do menu.
 
@@ -208,42 +204,44 @@ Para fechar o menu, basta clicar novamente no mesmo elemento acionador, no ícon
 
 O menu principal é acionado por meio de um elemento acionador localizado no cabeçalho e é aberto na lateral da página sem sobrepor o conteúdo. O conteúdo da página é então deslocado para direita
 
-Neste caso, não há sobreposição de camadas porém, pelo fato de ser considerado um elemento relevante deve ser apresentado na **camada 1** de elevação e por isso apresenta sombra suave.
+Neste caso, não há sobreposição de camadas, porém, pelo fato de ser considerado um elemento relevante deve ser apresentado na *camada 1* de elevação e por isso apresenta sombra suave.
 
-Veja mais detalhes no documento Fundamentos > Elevação.
+Veja mais detalhes no documento [Fundamentos Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao).
 
 Para fechar o menu, basta clicar no no elemento acionador, que deve ter o ícone alterado para "fechar".
 
 ![2º Modo de Acionamento](imagens/menu-behavior-open-position-2.png)
 *Comportamento do menu principal fixo.*
 
-##### Menu contextual
+#### Menu contextual
 
-O menu contextual, quando houver, pode ser fixo ou _sticky_ e e geralmente fica posicionado no extremo direito da tela para não competir com o menu principal. Geralmente não há a possibilidade do usuário abri-lo ou fechá-lo.
+O menu contextual, quando houver, pode ser fixo ou *sticky* e geralmente fica posicionado no extremo direito da tela para não competir com o menu principal. Geralmente não há a possibilidade do usuário abri-lo ou fechá-lo.
 
 ![Posição do Menu Contextual](imagens/menu-behavior-open-position-3.png)
 *Comportamento do menu contextual.*
 
-### 2- Rolagem
+### 2. Rolagem
 
-Menus podem apresentar muitos itens, ultrapassando a altura da tela do dispositivo (_desktop_, _tablet_ ou _smartphone_).
+Menus podem apresentar muitos itens, ultrapassando a altura da tela do dispositivo (*desktop*, *tablet* ou *smartphone*).
 
-De acordo com [padrão da diretriz Template Base](/ds/templates/base), a Área de navegação pode existir um barra de rolagem interna para acessar o conteúdo.
+De acordo com [padrão da diretriz Template Base](https://www.gov.br/ds/templates/base?tab=designer), a Área de navegação pode existir um barra de rolagem interna para acessar o conteúdo.
 
-Porém nos _smartphones_, como a altura do dispositivo geralmente são bem menor, a rolagem deve ocorrer de forma natural, rolando todo conteúdo do menu para cima ou para baixo utilizando a própria rolagem do navegador. Em outras palavras, evite o uso de rolagem interna na grid de 4 colunas!
+Porém nos *smartphones*, como a altura do dispositivo geralmente é bem menor, a rolagem deve ocorrer de forma natural, rolando todo conteúdo do menu para cima ou para baixo utilizando a própria rolagem do navegador. Em outras palavras, evite o uso de rolagem interna na grid de 4 colunas!
 
 ![Comportamento Scroll](imagens/menu-behavior-scroll.png)
 *Comportamento de rolagem do menu.*
 
-### 3- Agrupamento de itens
+### 3. Agrupamento de itens
 
 Agrupamentos de itens podem ser utilizados tanto no menu principal quanto no menu contextual.
 
 Há três formas de agrupar:
 
-- Agrupamento por expansão;  
-- Agrupamento por rótulos;
-- Agrupamento por _dividers_.
+-   Agrupamento por expansão;
+
+-   Agrupamento por rótulos;
+
+-   Agrupamento por *dividers*.
 
 #### Agrupamento por expansão
 
@@ -253,20 +251,20 @@ O usuário pode expandir ou retrair os blocos de agrupamento para acessar os sub
 
 Os blocos de agrupamento são classificados por rótulos e não há a ação de expansão/retração dos subitens.
 
-#### Agrupamento por _dividers_
+#### Agrupamento por *dividers*
 
-Os itens do menu são separados pelos componentes _dividers_.
+Os itens do menu são separados pelos componentes *dividers*.
 
 ![Formas de Agrupamento](imagens/menu-behavior-group.png)
 *Possibilidades de agrupamento dos itens do menu.*
 
-**Atenção:** evite utilizar agrupamentos no meu contextual. Caso seja realmente necessário, prefira os agrupamentos por rótulos ou por _dividers_.
+**Atenção:** evite utilizar agrupamentos no meu contextual. Caso seja realmente necessário, prefira os agrupamentos por rótulos ou por *dividers*.
 
-### 4- Navegação em subníveis
+### 4. Navegação em subníveis
 
 Realce a existência de subníveis ocultos utilizando ícones de seta.
 
-Clicando nos itens agrupadores, o menu desliza para baixo e apresenta os subitens de 1º nível. O mesmo ocorre do 1º para o 2º nível. Para retornar os níveis basta realizar o processo inverso.
+Clicando nos itens agrupadores, o menu desliza para baixo e apresenta os subitens de 1º nível. O mesmo ocorrendo do 1º para o 2º nível. Para retornar aos níveis basta realizar o processo inverso.
 
 ![Navegação em subníveis](imagens/menu-anatomy-item-types-4.png)
 *Exemplo de navegação entre 1º e o 2º nível.*
@@ -278,57 +276,55 @@ Pode haver subníveis dentro de subníveis e o comportamento de navegação é s
 
 **Atenção:** se o menu for fechado e aberto em seguida, apresente o 1º nível de itens.
 
-### 5- Responsividade
+### 5. Responsividade
 
-Tendo em vista a variedade de resoluções e dispositivos existentes, não é possível determinar uma largura fixa para o componente menu. Sendo assim, a largura deve ser ajustada à _grid_ para cada _layout_, respeitando os diversos tamanhos de dispositivos.
+Tendo em vista a variedade de resoluções e dispositivos existentes, não é possível determinar uma largura fixa para o componente menu. Sendo assim, a largura deve ser ajustada à *grid* para cada *layout*, respeitando os diversos tamanhos de dispositivos.
 
-#### _Grid_ de 12 colunas
+#### *Grid* de 12 colunas
 
-Em _grids_ de 12 colunas o menu principal e o menu contextual podem ocorrer conjuntamente sem problemas.
+Em *grids* de 12 colunas o menu principal e o menu contextual podem ocorrer conjuntamente sem problemas.
 
 ![Grid de 12 Colunas](imagens/menu-behavior-responsive-grid-12-col.png)
-*Exemplo de _grid_ de 12 colunas.*
+*Exemplo de grid de 12 colunas.*
 
-#### _Grid_ de 8 colunas
+#### *Grid* de 8 colunas
 
-Em _grids_ de 8 colunas o menu contextual deve mudar de comportamento e ocupar uma barra inferior _dropdown_. Maiores detalhes são expostos na explicação da _grid_ de 4 colunas.
+Em *grids* de 8 colunas o menu contextual deve mudar de comportamento e ocupar uma barra inferior *dropdown*. Maiores detalhes são expostos na explicação da *grid* de 4 colunas.
 
 ![Grid de 8 Colunas](imagens/menu-behavior-responsive-grid-8-col.png)
-*Exemplo de _grid_ de 8 colunas.*
+*Exemplo de grid de 8 colunas.*
 
-#### _Grid_ de 4 colunas
+#### *Grid* de 4 colunas
 
-##### Menu principal
+#### Menu principal
 
-Em dispositivos smartphones o menu principal assumirá a largura completa da tela ocupando todas as colunas da _grid_.
+Em dispositivos smartphones o menu principal assumirá a largura completa da tela ocupando todas as colunas da *grid*.
 
 ![Grid de 4 Colunas](imagens/menu-behavior-responsive-grid-4-col.png)
-*Exemplo de _grid_ de 4 colunas para o menu principal.*
+*Exemplo de grid de 4 colunas para o menu principal.*
 
 **Atenção:** no menu principal flutuante, por se tratar de um elemento dropdown, não há necessidade de adequação à grid, pois são elementos flutuantes e não recebem influência da mesma. Porém, é importante definir um percentual da dimensão deste conteúdo. Recomenda-se que a largura do menu ocupe de 25% a 35% da área visível da tela, enquanto que em grids de 4 colunas a ocupação deve ser de 100% da área visível.
 
-##### Menu contextual
+#### Menu grid 4 colunas contextual
 
-Na _grid_ de 4 colunas há uma adaptação substancial no menu contextual que é apresentado como uma barra na base da área visível da tela. Ao ser acionado, o menu contextual expande de baixo para cima e ocupa parte da tela que é preenchida pelo componente _scrim_, reforçando a ênfase no menu.
+Na *grid* de 4 colunas há uma adaptação substancial no menu contextual que é apresentado como uma barra na base da área visível da tela. Ao ser acionado, o menu contextual expande de baixo para cima e ocupa parte da tela que é preenchida pelo componente *scrim*, reforçando a ênfase no menu.
 
 **Atenção:** ao rolar a tela, a barra do menu contextual permanece fixa na base da área visível da tela.
 
-Para maiores detalhes, consulte Comportamento > Navegação em Subníveis.
-
 ![Grid de 4 Colunas para o Menu Auxiliar](imagens/menu-behavior-responsive-grid-4-col-1.png)
-*Exemplo de _grid_ de 4 colunas para o menu contextual.*
+*Exemplo de grid de 4 colunas para o menu contextual.*
 
-### 6- Estados
+### 6. Estados
 
 #### Estado interativo
 
 ![Estado Interativo](imagens/menu-behavior-state-interactive.png)
 *Exemplo de estado interativo do menu.*
 
-#### Estado _hover_
+#### Estado *hover*
 
 ![Estado Hover](imagens/menu-behavior-state-hover.png)
-*Exemplo de estado _hover_ do menu.*
+*Exemplo de estado hover do menu.*
 
 #### Estado foco
 
@@ -345,17 +341,17 @@ Para maiores detalhes, consulte Comportamento > Navegação em Subníveis.
 ![Estado Ativo](imagens/menu-behavior-state-active.png)
 *Exemplo de estado ativo do menu.*
 
-Para mais detalhes a respeito das regras de funcionamento dos estados, consulte [Fundamentos Visuais > Estados.](/ds/fundamentos-visuais/estados)
+Para mais detalhes a respeito das regras de funcionamento dos estados, consulte [Fundamentos Visuais > Estados.](https://www.gov.br/ds/fundamentos-visuais/estados)
 
-### 7- Densidade
+### 7. Densidade
 
 O menu pode ser implementado em três densidades, que se referem ao nível de espaçamento interno nos itens:
 
-- **Densidade alta:** os itens têm o espaçamento interno mais condensado. Este tipo de densidade é útil quando há a necessidade de otimizar o espaço vertical.
+-   **Densidade alta:** os itens têm o espaçamento interno mais condensado. Este tipo de densidade é útil quando há a necessidade de otimizar o espaço vertical.
 
-- **Densidade média:** é a densidade padrão dos itens do menu. Neste modo há maior equilíbrio entre economia de espaço e separação de elementos.
+-   **Densidade média:** é a densidade padrão dos itens do menu. Neste modo há maior equilíbrio entre economia de espaço e separação de elementos.
 
-- **Densidade baixa:** oferece maior espaçamento interno possível. É recomendado o uso em dispositivos móveis, pois é necessário um espaço maior nos elementos para a interação com os dedos (_touch_).
+-   **Densidade baixa:** oferece maior espaçamento interno possível. É recomendado o uso em dispositivos móveis, pois é necessário um espaço maior nos elementos para a interação com os dedos (*touch*).
 
 ![Tipos de Densidade](imagens/menu-behaviour-density.png)
 *Tipos de densidade para o menu principal e para o menu contextual.*
@@ -364,38 +360,44 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 
 ## Melhores Práticas
 
-- Não use menus ou ícones de menu minúsculos em telas com resolução grande. Os menus não devem ser ocultados quando houver muito espaço para exibi-los.
+-   Não use menus ou ícones de menu minúsculos em telas com resolução grande. Os menus não devem ser ocultados quando houver muito espaço para exibi-los.
 
-- Os usuários esperam encontrar elementos da interface onde já os viram antes em outros _sites_ ou aplicativos (por exemplo, barra esquerda, parte superior da tela). Faça com que essas expectativas trabalhem a seu favor, posicionando seus menus onde as pessoas esperam encontrá-los.
+-   Os usuários esperam encontrar elementos da interface onde já os viram antes em outros *sites* ou aplicativos (por exemplo, barra esquerda, parte superior da tela). Faça com que essas expectativas trabalhem a seu favor, posicionando seus menus onde as pessoas esperam encontrá-los.
 
-- Faça os _links_ do menu parecerem interativos. Os usuários podem nem perceber que é um menu se as opções não parecerem clicáveis ​​(ou tocáveis).
+-   Faça os *links* do menu parecerem interativos. Os usuários podem nem perceber que é um menu se as opções não parecerem clicáveis ​​(ou tocáveis).
 
-- Teste sempre seu menu com o usuário final e valide se a arquitetura de informação utilizada faz sentido.
+-   Teste sempre seu menu com o usuário final e valide se a arquitetura de informação utilizada faz sentido.
 
-- Use o estado ativo para indicar aos usuários "onde" a tela atualmente visível está localizada nas opções do menu. “Onde estou?” é uma das perguntas fundamentais que os usuários precisam responder para navegar com sucesso. Os usuários contam com dicas visuais de menus (e outros elementos de navegação, como _breadcrumbs_) para responder a essa pergunta crítica. Deixar de indicar a localização atual é provavelmente o erro mais comum que vemos nos menus de sites. Ironicamente, esses menus têm a maior necessidade de orientar os usuários, já que os visitantes muitas vezes não entram pela página inicial.
+-   Use o estado ativo para indicar aos usuários "onde" a tela atualmente visível está localizada nas opções do menu. “Onde estou?” é uma das perguntas fundamentais que os usuários precisam responder para navegar com sucesso. Os usuários contam com dicas visuais de menus (e outros elementos de navegação, como *breadcrumbs*) para responder a essa pergunta crítica. Deixar de indicar a localização atual é provavelmente o erro mais comum que vemos nos menus de sites. Ironicamente, esses menus têm a maior necessidade de orientar os usuários, já que os visitantes muitas vezes não entram pela página inicial.
 
-- Use rótulos de _link_ compreensíveis. Descubra o que os usuários estão procurando e use rótulos de agrupamentos familiares e relevantes. Use uma terminologia que descreva claramente o conteúdo e os recursos.
+-   Use rótulos de *link* compreensíveis. Descubra o que os usuários estão procurando e use rótulos de agrupamentos familiares e relevantes. Use uma terminologia que descreva claramente o conteúdo e os recursos.
 
-- Se as pessoas desejam frequentemente comparar produtos relacionados ou concluir várias tarefas em uma única seção, torne essas páginas próximas visíveis com um menu de navegação contextual, em vez de forçá-las a "pular" para cima e para baixo na hierarquia do menu principal.
+-   Se as pessoas desejam frequentemente comparar produtos relacionados ou concluir várias tarefas em uma única seção, torne essas páginas próximas visíveis com um menu de navegação contextual, em vez de forçá-las a "pular" para cima e para baixo na hierarquia do menu principal.
 
-- Dê a opção para o usuário decidir deixar o menu fixo na tela (principalmente em _sites_ com conteúdo muito extenso) ou retraí-lo (para um melhor aproveitamento da leitura do conteúdo).
+-   Dê a opção para o usuário decidir deixar o menu fixo na tela (principalmente em *sites* com conteúdo muito extenso) ou retraí-lo (para um melhor aproveitamento da leitura do conteúdo).
 
-- Considere utilizar o recurso de busca juntamente com o menu. Ofereça outras maneiras de o usuário buscar o conteúdo desejado.
+-   Considere utilizar o recurso de busca juntamente com o menu. Ofereça outras maneiras de o usuário buscar o conteúdo desejado.
+
+-   Por regra geral o menu contextual funciona independentemente do menu principal e geralmente é utilizado na navegação interna de telas com grande quantidade de conteúdo. Desta forma, evite o uso de itens que apontam para outras telas ou para informações externas ao *site*. Reserve essa função ao menu principal.
+O menu contextual pode estar localizado em qualquer área da página, mas lembre-se de garantir a consistência do *layout*. Geralmente é aplicado na lateral direita da tela de modo fixo ou flutuante.
+
+![Menu Auxiliar](imagens/menu-behavior-open-position-3.png)
+*Exemplo de localização do menu contextual.*
 
 ---
 
-## Especificação
+## Especificações
 
 ### Cores
 
-##### Painel
+#### Painel
 
 | Name             | Property   | Color Token |
 | ---------------- | ---------- | ----------- |
 | Painel flutuante | background | `--pure-0`  |
 | Painel fixo      | background | `--pure-0`  |
 
-##### Cabeçalho do menu
+#### Cabeçalho do menu
 
 | Name                    | Property   | Color Token            |
 | ----------------------- | ---------- | ---------------------- |
@@ -403,7 +405,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 | Cor do título           | color      | `--gray-80`            |
 | Cor do ícone Fechar     | color      | `--blue-warm-vivid-70` |
 
-##### Item 1º nível
+#### Item 1º nível
 
 | Name                 | Property   | Color Token            |
 | -------------------- | ---------- | ---------------------- |
@@ -412,7 +414,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 | Ícone representativo | color      | `--gray-40`            |
 | Ícone ação           | color      | `--blue-warm-vivid-70` |
 
-##### Item 2º nível
+#### Item 2º nível
 
 | Name                           | Property   | Color Token            |
 | ------------------------------ | ---------- | ---------------------- |
@@ -423,7 +425,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 | Ícone representativo           | color      | `--gray-40`            |
 | Ícone ação                     | color      | `--blue-warm-vivid-70` |
 
-##### Rodapé do menu
+#### Rodapé do menu
 
 | Name                 | Property         | Color Token            |
 | -------------------- | ---------------- | ---------------------- |
@@ -434,7 +436,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 
 ### Iconografia
 
-##### Cabeçalho do menu
+#### Cabeçalho menu
 
 | Name           | ícone                               | Size               | Class (Font Awesome) |
 | -------------- | ----------------------------------- | ------------------ | -------------------- |
@@ -442,7 +444,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 | Ícone Retrair  | <i class="fas fa-chevron-up"></i>   | `--icon-size-base` | `fa-chevron-up`      |
 | Ícone Fechar   | <i class="fas fa-times"></i>        | `--icon-size-base` | `fa-times`           |
 
-##### Item do menu (1º e 2º níveis)
+#### Item do menu (1º e 2º níveis)
 
 | Name              | ícone                               | Size               | Class (Font Awesome) |
 | ----------------- | ----------------------------------- | ------------------ | -------------------- |
@@ -451,7 +453,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 | Acionar subnível  | <i class="fas fa-angle-right"></i>  | `--icon-size-base` | `fa-angle-right`     |
 | Retornar subnível | <i class="fas fa-angle-left"></i>   | `--icon-size-base` | `fa-angle-left`      |
 
-##### Rodapé do menu
+#### Rodapé menu
 
 | Name               | ícone                                           | Size             | Class (Font Awesome)          |
 | ------------------ | ----------------------------------------------- | ---------------- | ----------------------------- |
@@ -459,20 +461,20 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 
 ### Tipografia
 
-##### Cabeçalho do menu
+#### Cabeçalho  menu
 
 | Name               | Size                     | Weight                  |
 | ------------------ | ------------------------ | ----------------------- |
 | Texto do cabeçalho | `--font-size-scale-base` | `--font-weight-regular` |
 
-##### Item do menu
+#### Item do menu
 
 | Name                      | Size                     | Weight                    |
 | ------------------------- | ------------------------ | ------------------------- |
 | Texto do item             | `--font-size-scale-base` | `--font-weight-regular`   |
 | Texto do item em destaque | `--font-size-scale-base` | `--font-weight-semi-bold` |
 
-##### Rodapé do menu
+#### Rodapé  menu
 
 | Name             | Size                     | Weight                    |
 | ---------------- | ------------------------ | ------------------------- |
@@ -492,7 +494,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 
 ### Espaçamentos
 
-##### Menu tamanho padrão
+#### Menu tamanho padrão
 
 | Name              | Property       |         Value         |
 | ----------------- | -------------- | :-------------------: |
@@ -505,7 +507,7 @@ O menu pode ser implementado em três densidades, que se referem ao nível de es
 | Rodapé            | padding-top    | `--spacing-scale-3xh` |
 | Rodapé            | padding-bottom | `--spacing-scale-4x`  |
 
-##### Menu largura mínima (320px)
+#### Menu largura mínima (320px)
 
 | Name              | Property       |         Value          |
 | ----------------- | -------------- | :--------------------: |
