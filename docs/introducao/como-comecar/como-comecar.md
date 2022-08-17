@@ -78,12 +78,12 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script type="module" src="node_modules\@govbr-ds\core\dist\core.js"></script>
+        <script type="module" src="node_modules\@govbr-ds\core\dist\core.min.js"></script>
     </body>
 </html>
 ```
 
-> **core.js** deve ser importado como um modulo,os componentes não são instancializados, e se utilizar babel ou webpack não precisa colocar na dom e pode ser importado no seu script.
+> **core.js** deve ser importado como um modulo, os componentes não são instancializados, e se utilizar babel ou webpack não precisa colocar na dom e pode ser importado no seu script.
 
 > **Atenção!** Certifique-se que as referências ao `css` e `js` estejam corretas e inseridas devidamentes na pasta do projeto, caso contrário ocorrerá quebra no layout. Muitas vezes, em ambiente de desenvolvimento, pode não haver os arquivos minificados, ou seja, com o posfixo `.min`.
 
@@ -159,7 +159,7 @@ for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
 
 ## Utilitários JS
 
-São classes javascript para auxiliar os componentes. para usar deve importar a classe js correspondente ao utilitário, que fica na pasta **@govbr-ds/dist/partial/behavior**, e instanciar ele com os atributos de configuração como no exemplo abaixo no seu script
+São classes javascript para auxiliar os componentes. para usar deve importar a classe js correspondente ao utilitário, que fica na pasta **@govbr-ds/dist/partial/behavior**, e instanciar ele com os atributos de configuração como no exemplo abaixo no seu script.
 
 ### Exemplo de uso de utilitário
 
