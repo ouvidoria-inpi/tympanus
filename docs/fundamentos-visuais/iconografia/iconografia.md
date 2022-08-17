@@ -1,6 +1,6 @@
 [version]: # (6.3.0)
 
-Os ícones são representações gráficas que podem simbolizar uma ação, comunicar ao usuário possibilidades de mudança de estados entre os elementos de uma interface ou apenas ser uma representação gráfica de uma ação ou informação textual. No caso do _Design System_, foi escolhida a coleção de ícones **"_Font Awesome_"** (versão 5.10.2) por possuir uma boa variedade de ícones com _layout_ simples, sintético e amigável.
+Os ícones são representações gráficas que podem simbolizar uma ação, comunicar ao usuário possibilidades de mudança de estados entre os elementos de uma interface ou apenas ser uma representação gráfica de uma ação ou informação textual. No caso do *Design System*, foi escolhida a coleção de ícones *"*Font Awesome*"* (versão 5.10.2) por possuir uma boa variedade de ícones com *layout* simples, sintético e amigável.
 
 ---
 
@@ -8,31 +8,31 @@ Os ícones são representações gráficas que podem simbolizar uma ação, comu
 
 ### Experiência Única
 
-Além da diversidade, foi considerado que o _Font Awesome_ traria uma padronização visual dos ícones bastante importante no processo de reconhecimento e memorização pelos usuários. Optou-se pelo uso dos **estilos solid** (_style prefix_: `fas`) e a **brand** (_style prefix_: `fab`). Então as características gráficas, como preenchimento, peso visual devem ser preservadas no momento de construção de novos ícones.
+Além da diversidade, foi considerado que o *Font Awesome* traria uma padronização visual dos ícones bastante importante no processo de reconhecimento e memorização pelos usuários. Optou-se pelo uso dos *estilos solid* (*style prefix*: `fas`) e a *brand* (*style prefix*: `fab`). Então as características gráficas, como preenchimento, peso visual devem ser preservadas no momento de construção de novos ícones.
 
-Espera-se por tanto, que o padrão gráfico dos ícones por ser utilizado em vários sistemas do governo federal, passe a exercer um papel importante no reconhecimento dos usuários, no que diz respeito a interfaces governamentais.
+Espera-se portanto, que o padrão gráfico dos ícones por ser utilizado em vários sistemas do governo federal, passe a exercer um papel importante no reconhecimento dos usuários, no que diz respeito a interfaces governamentais.
 
-Sendo assim, é imprescindível que o designer e o desenvolvedor priorizem a utilização dos ícones, como demonstrado na **Tabela de Orientações de Uso**. É fundamental atribuir os significados recomendados na tabela, evitando duplo sentido e facilitando o reconhecimento e memorização por parte do usuário.
+Sendo assim, é imprescindível que o designer e o desenvolvedor priorizem a utilização dos ícones, como demonstrado na *Tabela de Orientações de Uso*. É fundamental atribuir os significados recomendados na tabela, evitando duplo sentido e facilitando o reconhecimento e memorização por parte do usuário.
 
 ### Eficiência e Clareza
 
-Os ícones do _Font Awesome_ possuem um desenho sintético, porém de fácil compreensão, e devem exercer o papel de auxiliar o usuário na execução de uma ação ou na representação de um serviço.  É fundamental que a escolha do ícone para representar uma ideia, ação, ou serviço considere a experiência do usuário e esteja sempre alinhada ao contexto cultural do Brasil, para que seja de fácil reconhecimento público.
+Os ícones do *Font Awesome* possuem um desenho sintético, porém de fácil compreensão, e devem exercer o papel de auxiliar o usuário na execução de uma ação ou na representação de um serviço.  É fundamental que a escolha do ícone para representar uma ideia, ação, ou serviço considere a experiência do usuário e esteja sempre alinhada ao contexto cultural do Brasil, para que seja de fácil reconhecimento público.
 
-Para uma melhor legibilidade é recomendado que quando possível um _label_ ou _hint_ apareça ao lado do ícone reforçando a ideia a que foi atribuído.
+Para uma melhor legibilidade é recomendado que quando possível um *label* ou *hint* apareça ao lado do ícone reforçando a ideia a que foi atribuído.
 
 Quando utilizado como um elemento de ação (seja um hiperlink, um botão ou qualquer outro elemento interativo) é importante que o ícone represente a ação a ser executada.
 
 ### Acessibilidade
 
-Os ícones podem transmitir todos os tipos de informações significativas, por isso é importante que eles alcancem a maior quantidade possível de pessoas. Para que isso aconteça, o _Font Awesome_ categoriza seus ícones em dois tipos: **decorativos** e **semânticos**.
+Os ícones podem transmitir todos os tipos de informações significativas, por isso é importante que eles alcancem a maior quantidade possível de pessoas. Para que isso aconteça, o *Font Awesome* categoriza seus ícones em dois tipos: *decorativos* e *semânticos*.
 
-A [acessibilidade](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility) para _webfonts_ exige um pouco mais de trabalho, pois o método _Webfont_ com CSS não pode adicionar atributos ou elementos ao seu HTML.
+A [acessibilidade](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility) para *webfonts* exige um pouco mais de trabalho, pois o método *Webfont* com CSS não pode adicionar atributos ou elementos ao seu HTML.
 
-Ao usar ícones em sua interface do usuário, existem técnicas manuais e formas de ajudar a tecnologia assistencial a ignorar ou entender melhor o _Font Awesome_.
+Ao usar ícones em sua interface do usuário, existem técnicas manuais e formas de ajudar a tecnologia assistencial a ignorar ou entender melhor o *Font Awesome*.
 
-#### 1 | Ícones Decorativos
+#### 1. Ícones Decorativos
 
-São usados apenas para reforço visual ou de _branding_. Se forem removidos da página, os usuários ainda entenderiam e poderiam utilizar a página.
+São usados apenas para reforço visual ou de *branding*. Se forem removidos da página, os usuários ainda entenderiam e poderiam utilizar a página.
 
 Se os ícones são puramente decorativos é necessário adicionar manualmente um atributo `aria-hidden` a cada um deles para que sejam acessíveis.
 
@@ -40,13 +40,13 @@ Se os ícones são puramente decorativos é necessário adicionar manualmente um
 <i class="fas fa-camera-retro" aria-hidden></i>
 ```
 
-##### SVG com JavaScript
+##### SVG com JavaScript - Ícones Decorativos
 
 ``` html
 <i class="fas fa-camera-retro"></i>
 ```
 
-A acessibilidade do _Font Awesome_ adiciona automaticamente `aria-hidden=true` e `role=“img”` aos seus atributos SVG _in-line_, para que seus ícones estejam adequadamente acessíveis.
+A acessibilidade do *Font Awesome* adiciona automaticamente `aria-hidden=true` e `role=“img”` aos seus atributos SVG *in-line*, para que seus ícones estejam adequadamente acessíveis.
 
 ``` html
 <svg class="svg-inline--fa fa-camera-retro fa-w-16" aria-hidden="true" data-fa-i2svg="" data-prefix="fas" data-icon="camera-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -54,16 +54,18 @@ A acessibilidade do _Font Awesome_ adiciona automaticamente `aria-hidden=true` e
 </svg>
 ```
 
-#### 2 | Ícones Semânticos
+#### 2. Ícones Semânticos
 
-São aqueles usados para transmitir um significado, ao invés de apenas servir de decoração. Isso inclui ícones sem texto ao lado deles usando como controle interativo (botões, elementos de formulário, _toggles_…).
+São aqueles usados para transmitir um significado, ao invés de apenas servir de decoração. Isso inclui ícones sem texto ao lado deles usando como controle interativo (botões, elementos de formulário, *toggles*…).
 
 Se os ícones tiverem significado semântico, é preciso adicionar manualmente algumas coisas para que ele seja acessado apropriadamente:
 
-- Atributo `aria-hidden`.
-- Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado
+-   Atributo `aria-hidden`.
+
+-   Forneça uma alternativa de texto dentro de um elemento `<span>` (ou similar). Inclua também o CSS apropriado
 para ocultar visualmente o elemento, mantendo-o acessível a tecnologias assistivas.
-- Atributo `title` no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
+
+-   Atributo `title` no ícone para fornecer uma dica de ferramenta para usuários com visão e que utilizam o mouse.
 
 ``` html
 <i aria-hidden class="fas fa-car" title="Time to destination by car"></i>
@@ -75,7 +77,7 @@ No caso de elementos interativos focalizáveis, existem várias opções para in
 
 Como, por exemplo, adicionando o atributo `aria-label` com uma descrição de texto ao próprio elemento interativo será suficiente para fornecer um nome alternativo acessível.
 
-Se você precisar fornecer uma dica visual (_tooltip_) em um _mouseover/focus_, recomendamos usar o atributo `title` ou uma solução de _tooltip_ personalizado.
+Se você precisar fornecer uma dica visual (*tooltip*) em um *mouseover/focus*, recomendamos usar o atributo `title` ou uma solução de *tooltip* personalizado.
 
 ``` html
 <a href="path/to/shopping/cart" aria-label="View 3 items in your shopping cart">
@@ -95,15 +97,17 @@ Se você precisar fornecer uma dica visual (_tooltip_) em um _mouseover/focus_, 
 </a>
 ```
 
-##### SVG com JavaScript
+##### SVG com JavaScript - Ícones Semânticos
 
-Obter a acessibilidade correta pode ser difícil, por isso, o _Font Awesome_ simplifica o processo com o recurso de acessibilidade automática. Usando um pouco de JS, adicionando elementos e atributos no HTML de suporte para que os ícones fiquem acessíveis ao público mais amplo possível.
+Obter a acessibilidade correta pode ser difícil, por isso, o *Font Awesome* simplifica o processo com o recurso de acessibilidade automática. Usando um pouco de JS, adicionando elementos e atributos no HTML de suporte para que os ícones fiquem acessíveis ao público mais amplo possível.
 
 Se o ícone possuir significado semântico, coloque um atributo `title=“meaning”`.  A acessibilidade automática cuida do resto, adicionando o seguinte:
 
-- Função ARIA adequada ( `role=“img”` )
-- Tag `title` com um atributo `id` adequado
-- Atributo `aria-labelledby`e conecte-o a uma tag `title`
+-   Função ARIA adequada ( `role=“img”` )
+
+-   Tag `title` com um atributo `id` adequado
+
+-   Atributo `aria-labelledby`e conecte-o a uma tag `title`
 
 ``` html
 <i title="Magic is included!" class="fas fa-magic"></i>
@@ -118,59 +122,61 @@ Se o ícone possuir significado semântico, coloque um atributo `title=“meanin
 
 ### Reutilização e Colaboração
 
-Interfaces digitais do governo devem ser reutilizáveis devido à diversidade de serviços disponíveis, sendo assim, o uso do _Font Awesome_ facilita esse reuso, por ser mais fácil de implementar. Caso haja necessidade podem ser incluídos novos ícones, porém é necessário consultar a tabela de orientações de uso, para verificar se a funcionalidade já foi atribuída a algum ícone. É interessante que haja um trabalho em conjunto de criação e validação entre a equipe que vai propor novos ícones e a equipe de _design_ para que sejam preservadas as características do padrão gráfico do _Design System_.
+Interfaces digitais do governo devem ser reutilizáveis devido à diversidade de serviços disponíveis, sendo assim, o uso do *Font Awesome* facilita esse reuso, por ser mais fácil de implementar. Caso haja necessidade podem ser incluídos novos ícones, porém é necessário consultar a tabela de orientações de uso, para verificar se a funcionalidade já foi atribuída a algum ícone. É interessante que haja um trabalho em conjunto de criação e validação entre a equipe que vai propor novos ícones e a equipe de *design* para que sejam preservadas as características do padrão gráfico do *Design System*.
 
 ---
 
 ## Font Awesome
 
-[Font Awesome](https://fontawesome.com/) É um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi criado por Dave Gandy para uso com o Twitter Bootstrap e mais tarde foi incorporado no BootstrapCDN.
+[Font Awesome](https://fontawesome.com/) É um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Foi criado por *Dave Gandy* para uso com o *Twitter Bootstrap* e mais tarde foi incorporado no *BootstrapCDN*.
 
-A versão 5.10.2 possui uma grande variedade de ícones. Foram expostos aqui, apenas alguns, para que seja constatado sua variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos que foram aqui apresentados, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode-se desenhar um novo, desde que, seja mantido o padrão visual já definido e passe posteriormente pela validação da equipe de _Design_.
+A versão 5.10.2 possui uma grande variedade de ícones. Foram expostos aqui apenas alguns, para que seja constatado sua variedade. Caso haja alguma funcionalidade, que não seja facilmente representada pelos que foram aqui apresentados, deve-se primeiro procurar uma opção dentro dos demais disponíveis na família de ícones e caso não haja, pode-se desenhar um novo, desde que, seja mantido o padrão visual já definido e passe posteriormente pela validação da equipe de *Design*.
 
-No final deste documento, foi incluído as **orientações de uso** de alguns dos ícones e essa tabela deve ser seguida para que haja consistência entre os sistemas do governo.
+No final deste documento, foi incluído as *orientações de uso* de alguns dos ícones e essa tabela deve ser seguida para que haja consistência entre os sistemas do governo.
 
-Atualmente no Design System GOV.BR são utilizados 2 estilos disponíveis: **Solid** e a **Brand**.
+Atualmente no *Design System* são utilizados 2 estilos disponíveis: *Solid* e a *Brand*.
 
-### Estilo _Solid_
+### Estilo *Solid*
 
 Estilo padrão. Pode ser utilizado em todas as situações que necessitam do uso de ícones.
 
 ![Exemplo FontAwesome Solid](imagens/fontawesome.png)
 *Alguns ícones da Font Awesome Solid*
 
-### Estilo _Brand_
+### Estilo *Brand*
 
 Estilo muito parecido ao Solid, porém, são limitados, pois, são voltados para representações das marcas atuais no mercado, inclusive das redes-sociais.
 
 ![Exemplo FontAwesome Brand](imagens/fontawesome-brand.png)
 *Alguns ícones da Font Awesome Brand*
 
-Caso não encontre o ícone adequado nesta biblioteca (ou nos estilos mencionados acima), utilize as instruções descritas em **Ícones Personalizados**.
+Caso não encontre o ícone adequado nesta biblioteca (ou nos estilos mencionados acima), utilize as instruções descritas em *Ícones Personalizados*.
 
 ---
 
 ## Ícones Personalizados
 
-Em algumas situações, a família _Font Awesome_ pode não suprir todas as necessidades de uma interface. Nestas situações, pode-se criar ícones para representar as ações específicas de uma aplicação. Essa criação poderá ser feita tanto por técnicas de transformação (utilizando os próprios ícones da família) tal como o [Layering](https://fontawesome.com/v5.9.0/how-to-use/on-the-web/styling/layering); como na criação do zero de algum novo ícone. Independente da forma utilizada, deve-se seguir todas as características visuais de construção já padronizadas do _Font Awesome Solid_.
+Em algumas situações, a família *Font Awesome* pode não suprir todas as necessidades de uma interface. Nestas situações, pode-se criar ícones para representar as ações específicas de uma aplicação. Essa criação poderá ser feita tanto por técnicas de transformação (utilizando os próprios ícones da família) tal como o [Layering](https://fontawesome.com/v5.9.0/how-to-use/on-the-web/styling/layering); como na criação do zero de algum novo ícone. Independente da forma utilizada, deve-se seguir todas as características visuais de construção já padronizadas do *Font Awesome Solid*.
 
 Veja alguns ícones criados abaixo utilizando alguns desses modos:
 
 ![Imagem do Ícone de Certificado Digital e do NEOID](imagens/icones-criados.png)
 *Exemplo de ícones personalizados*
 
+---
+
 ## Anatomia e Comportamento
 
 ### Grid do Font Awesome
 
-Os ícones do _Font Awesome_ foram determinados em uma grid de 20x16px. Então, caso haja necessidade de criar ícones, deve-se seguir a mesma grid para que sejam conservadas as proporções e características estéticas dos mesmos.
+Os ícones do *Font Awesome* foram determinados em uma grid de 20x16px. Então, caso haja necessidade de criar ícones, deve-se seguir a mesma grid para que sejam conservadas as proporções e características estéticas dos mesmos.
 
 ![Grid Font Awesome](imagens/grid-fontawesome.png)
 *Grid utilizado para criação de ícones personalizados baseados no Font Awesome*
 
-### Tamanho Padrão no _Design System_
+### Tamanho Padrão no *Design System*
 
-O tamanho base para os ícones possui o valor de corpo **16px**. Seguindo os seguintes _design tokens_ e escala na propriedade `font-size`:
+O tamanho base para os ícones possui o valor de corpo *16px*. Seguindo os seguintes *design tokens* e escala na propriedade `font-size`:
 
 | Token Icon Size  | Value         |
 | ---------------- | ------------- |
@@ -188,7 +194,7 @@ O tamanho base para os ícones possui o valor de corpo **16px**. Seguindo os seg
 | --icon-size-9x   | 9em (144px)   |
 | --icon-size-10x  | 10em (160px)  |
 
-Utilizando os _Design Tokens_ nas classes pré-definidas das escalas do Font Awesome, temos as seguintes aplicações:
+Utilizando os *Design Tokens* nas classes pré-definidas das escalas do Font Awesome, temos as seguintes aplicações:
 
 | Class  | Token Icon Size  |
 | ------ | ---------------- |
@@ -209,7 +215,7 @@ Utilizando os _Design Tokens_ nas classes pré-definidas das escalas do Font Awe
 ### Área Mínima de Interação
 
 Os ícones interativos devem possuir uma área mínima de interação (mesmo nos casos onde o tamanho do ícone seja menor que da área mínima) de modo a facilitar a interação do ícone por parte do usuário.
-A área mínima de interação serve também como espaço útil do ícone para contagem de espaçamento entre um elemento e outro. Existem 2 tipos de área mínima de interação: **Área de Clique** e **Área de Toque**.
+A área mínima de interação serve também como espaço útil do ícone para contagem de espaçamento entre um elemento e outro. Existem 2 tipos de área mínima de interação: *Área de Clique* e *Área de Toque*.
 
 #### Área de Clique
 
@@ -229,13 +235,13 @@ A área de toque deve ser de 48x48px, garantindo que a experiência do usuário 
 
 ---
 
-## Orientação de Uso
+## Orientações de Uso
 
-As principais funcionalidades dos sistemas do governo foram mapeadas e atribuídas a cada uma delas um símbolo representativo - os ícones da versão sólida do _FontAwesome_. É fundamental que os desenvolvedores e _designers_ utilizem os ícones abaixo com mesma ação que lhe foi atribuída, isso garante que cada sistema acessado pelo cidadão utilize a mesma linguagem e significado, tornando mais rápida a experiência e o reconhecimento do público ao acessar as funcionalidades dos diversos sistemas do governo federal.
+As principais funcionalidades dos sistemas do governo foram mapeadas e atribuídas a cada uma delas um símbolo representativo - os ícones da versão sólida do *FontAwesome*. É fundamental que os desenvolvedores e *designers* utilizem os ícones abaixo com mesma ação que lhe foi atribuída, isso garante que cada sistema acessado pelo cidadão utilize a mesma linguagem e significado, tornando mais rápida a experiência e o reconhecimento do público ao acessar as funcionalidades dos diversos sistemas do governo federal.
 
 **Observação:** Lembre-se que quando utilizado para representar uma ação, o ícone deve corresponder a ação que será executada ao interagir com o elemento. Quando utilizado junto com um elemento não interativo, ele pode representar outras situações, como por exemplo algum tipo de estado.
 
-| Ícone                                       | Ação                                    |  Classe (_Font Awesome_)  |
+| Ícone                                       | Ação                                    |  Classe (*Font Awesome*)  |
 | ------------------------------------------- | --------------------------------------- | :-----------------------: |
 | <i class="fas fa-search"></i>               | Pesquisar                               |        `fa-search`        |
 | <i class="fas fa-eye"></i>                  | Visualizar                              |         `fa-eye`          |
