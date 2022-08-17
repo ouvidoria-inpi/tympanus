@@ -2,29 +2,17 @@
 
 ## Como usar
 
-```html
-<div class="br-notification">
-    <div class="notification-header">...</div>
-    <div class="notification-body">
-        <div class="br-tabs">
-            <nav class="tab-nav">...<div>
-            <div class="tab-content">...</div>
-        </div>
-    </div>
-</div>
-```
+### Propriedades obrigatórias
 
-### Configurações obrigatórias
+| Atributo | Tipo   | Valor padrão        | Descrição               |
+| -------- | ------ | ------------------- | ----------------------- |
+| class    | string | **br-notification** | Container do componente |
 
-| Elemento          | Tipo   | Descrição               |
-| ----------------- | ------ | ----------------------- |
-| `br-notification` | classe | Container do componente |
+### Propriedades adicionais
 
-### Elementos opcionais
-
-| Elemento              | Descrição                |
-| --------------------- | ------------------------ |
-| `notification-header` | Cabeçalho da notificação |
+| Atributo | Tipo   | Valor Padrão            | Descrição                |
+| -------- | ------ | ----------------------- | ------------------------ |
+| class    | string | **notification-header** | Cabeçalho da notificação |
 
 ## Dependências
 

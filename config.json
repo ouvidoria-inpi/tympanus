@@ -797,7 +797,7 @@
           "examples": [
             {
               "height": 900,
-              "label": "Notification",
+              "label": "Exemplo",
               "path": "examples/notification-full"
             }
           ],
