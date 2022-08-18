@@ -1,5 +1,5 @@
 mixin avatar
-  - let className = [prefix + "avatar", attributes.class]
+  - let className = prefix + "avatar"
   - let title = attributes.title ? attributes.title : "Fulano da Silva"
   span(class=className title=title)&attributes(attributes)
     if block
@@ -20,11 +20,6 @@ mixin avatar-image
       block
 
 mixin avatar-dropdown
-  style.
-    #avatar-dropdown-trigger {
-      height: auto;
-      padding: var(--spacing-scale-base);
-    }
   div
     +sign-in#avatar-dropdown-trigger(data-toggle="dropdown" data-target="avatar-menu" aria-label="Avatar com dropdown")
       +avatar

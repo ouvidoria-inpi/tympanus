@@ -6,7 +6,7 @@ block dependencies
   include ../../divider/divider
 
 block content
-  .exemplo(style="max-width: 500px;")
+  .exemplo
     +item
       .row.align-items-center
         .col-auto
@@ -21,3 +21,9 @@ block content
     +divider
     +item(type="button")
       | Item botão
+
+append style
+  style.
+    .exemplo {
+      max-width: 500px;
+    }
