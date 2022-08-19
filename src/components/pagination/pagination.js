@@ -25,6 +25,7 @@ class BRPagination {
    * Define visual do componente
    * @private
    */
+  // eslint-disable-next-line complexity
   _setLayout() {
     const ul = this.component.querySelector('ul')
     const pages = this.component.querySelectorAll('.page')

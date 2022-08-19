@@ -64,10 +64,10 @@ class BRCard {
         input.setAttribute('disabled', 'disabled')
       }
       for (const select of selects) {
-        input.setAttribute('disabled', 'disabled')
+        select.setAttribute('disabled', 'disabled')
       }
       for (const textarea of textareas) {
-        input.setAttribute('disabled', 'disabled')
+        textarea.setAttribute('disabled', 'disabled')
       }
     }
   }

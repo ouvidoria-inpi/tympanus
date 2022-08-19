@@ -123,7 +123,7 @@ class BRTooltip {
         placement: this.placement,
       })
 
-      const style = window.getComputedStyle(this.component)
+      // const style = window.getComputedStyle(this.component)
     }
   }
 

@@ -42,7 +42,7 @@ class BRTab {
         ancor.classList.add('tab-nav-right')
       }
 
-      ancor.onscroll = (event) => {
+      ancor.onscroll = () => {
         this.positionScroll(ancor)
 
         if (this.navigationLeft <= 0) {
@@ -186,7 +186,7 @@ class BRTab {
    */
   positionQuery(target, direction, query) {
     let contComponent = 0
-    const contComponentActive = 0
+    // const contComponentActive = 0
     let contComponentFocus = 0
     const tabItems2 = target.parentElement.parentElement.querySelectorAll(query)
     for (const component of tabItems2) {

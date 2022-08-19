@@ -34,7 +34,7 @@ class BRTextArea {
    * @private
    */
   _setKeyup() {
-    this.component.addEventListener('keyup', (event) => {
+    this.component.addEventListener('keyup', () => {
       const characterCount = this.component.querySelector('textarea').textLength
       if (characterCount <= this.maximum && !this.characters) {
         this.limit.innerHTML = ''

@@ -34,7 +34,7 @@ class BRTag {
   _setSelection() {
     const label = this.component.querySelector('label')
     const input = this.component.querySelector('input')
-    const tagRadio = input.getAttribute('type') === 'radio' ? true : false
+    // const tagRadio = input.getAttribute('type') === 'radio' ? true : false
 
     label.addEventListener('click', (event) => {
       this._toggleSelection(input, event)

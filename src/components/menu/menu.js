@@ -45,7 +45,7 @@ class BRMenu {
   _setView() {
     const template = document.querySelector('body')
     const menuContextual = document.querySelector('.menu-trigger')
-    const panel = document.querySelector('.menu-panel')
+    // const panel = document.querySelector('.menu-panel')
     if (menuContextual && window.innerWidth < 992) {
       template.classList.add('mb-5')
     } else {
