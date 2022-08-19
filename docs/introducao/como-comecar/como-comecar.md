@@ -87,14 +87,6 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
 
 > **Atenção!** Certifique-se que as referências ao `css` e `js` estejam corretas e inseridas devidamentes na pasta do projeto, caso contrário ocorrerá quebra no layout. Muitas vezes, em ambiente de desenvolvimento, pode não haver os arquivos minificados, ou seja, com o posfixo `.min`.
 
-## Versão "init" do js
-
-Essa é a versão init(core-init.js) com os componentes já **instancializados** diferente do core.js em que precisa que crie um script JS, elas poderam ter problema com frameworks e não aconselhamos o seu uso em produção
-. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
-
-```html
-<script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
-```
 
 ## Versão "lite" da folha de estilo
 
@@ -188,6 +180,17 @@ São classes javascript para auxiliar os componentes. para usar deve importar a 
 > Os utilitários não são automaticamente inicializados precisando de uma classe javascript para inicializar eles
 
 Acesse a seção **Utilitários** no menu principal e veja a lista de componentes disponíveis.
+
+
+## Versão "init" do js
+
+Essa é a versão init(core-init.js) com os componentes já **instancializados** diferente do core.js em que precisa que crie um script JS,  poderam ter problema com frameworks e não aconselhamos o seu uso em produção
+. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
+
+```html
+<script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
+```
+
 
 ## Release Notes
 
