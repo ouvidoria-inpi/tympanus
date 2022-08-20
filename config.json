@@ -26,7 +26,7 @@
             "html"
           ],
           "hideLabel": true,
-          "id": "padrao-minimo",
+          "id": "minimo",
           "label": "Padrão Mínimo",
           "type": "documentation"
         },
@@ -35,7 +35,7 @@
             "html"
           ],
           "hideLabel": true,
-          "id": "o-que-ha-de-novo",
+          "id": "novidades",
           "label": "O que há de novo",
           "type": "documentation"
         },
@@ -44,7 +44,7 @@
             "html"
           ],
           "hideLabel": true,
-          "id": "comunidade-govbr-ds",
+          "id": "comunidade",
           "label": "Comunidade do Design System",
           "type": "documentation"
         }
@@ -56,23 +56,33 @@
     {
       "children": [
         {
-          "id": "como-comecar",
+          "id": "instalacao",
           "label": "Guia de Instalação",
           "type": "documentation"
         },
         {
           "id": "prototipando",
-          "label": "Prototipando com o Design System GOV.BR",
+          "label": "Prototipando com o Design System",
           "type": "documentation"
         },
         {
-          "id": "utilizando-scss",
-          "label": "Utilizando SCSS",
+          "id": "sass",
+          "label": "Utilizando o Sass",
           "type": "documentation"
         },
         {
-          "id": "govbr-ds-lite",
-          "label": "Design System GOV.BR Lite",
+          "id": "purgecss",
+          "label": "Reduzir arquivo de CSS",
+          "type": "documentation"
+        },
+        {
+          "id": "lite",
+          "label": "Versão Lite",
+          "type": "documentation"
+        },
+        {
+          "id": "uso-de-vendors",
+          "label": "Uso de Vendors",
           "type": "documentation"
         }
       ],
@@ -1889,11 +1899,6 @@
           "type": "documentation"
         },
         {
-          "id": "purgecss",
-          "label": "Reduzir arquivo de CSS",
-          "type": "documentation"
-        },
-        {
           "id": "boas-praticas-de-html",
           "label": "Boas práticas de HTML",
           "type": "documentation"
@@ -1911,11 +1916,6 @@
         {
           "id": "codificacao-sass",
           "label": "Codificação Sass",
-          "type": "documentation"
-        },
-        {
-          "id": "uso-de-vendors",
-          "label": "Uso de Vendors",
           "type": "documentation"
         },
         {
@@ -1967,7 +1967,7 @@
         },
         {
           "id": "govbr-ds-2.4.3",
-          "label": "Design System GOV.BR v2.4.3 BETA (Obsoleta)",
+          "label": "Versão 2.4.3 (Obsoleta)",
           "path": "/ds/v243/",
           "target": "_blank",
           "type": "link"
