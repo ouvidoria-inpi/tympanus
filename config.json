@@ -26,7 +26,7 @@
             "html"
           ],
           "hideLabel": true,
-          "id": "minimo",
+          "id": "padrao-minimo",
           "label": "Padrão Mínimo",
           "type": "documentation"
         },
@@ -35,7 +35,7 @@
             "html"
           ],
           "hideLabel": true,
-          "id": "novidades",
+          "id": "o-que-ha-de-novo",
           "label": "O que há de novo",
           "type": "documentation"
         },
@@ -66,7 +66,7 @@
           "type": "documentation"
         },
         {
-          "id": "sass",
+          "id": "utilizando-sass",
           "label": "Utilizando o Sass",
           "type": "documentation"
         },
@@ -76,17 +76,17 @@
           "type": "documentation"
         },
         {
-          "id": "lite",
+          "id": "versao-lite",
           "label": "Versão Lite",
           "type": "documentation"
         },
         {
-          "id": "uso-de-vendors",
+          "id": "vendors",
           "label": "Uso de Vendors",
           "type": "documentation"
         }
       ],
-      "id": "como-comecar-category",
+      "id": "como-comecar",
       "label": "Como começar",
       "type": "category"
     },
@@ -658,7 +658,7 @@
               "type": "documentation"
             }
           ],
-          "id": "design-category",
+          "id": "design",
           "label": "Design",
           "type": "category"
         },
@@ -666,12 +666,12 @@
           "children": [
             {
               "hideLabel": true,
-              "id": "padroes-para-android-e-ios",
+              "id": "android-e-ios",
               "label": "Padrões para Android e IOS",
               "type": "documentation"
             }
           ],
-          "id": "mobile-category",
+          "id": "mobile",
           "label": "Desenvolvimento Mobile",
           "type": "category"
         }
