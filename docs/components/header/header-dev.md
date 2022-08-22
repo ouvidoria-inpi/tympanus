@@ -2,120 +2,35 @@
 
 ## Como usar
 
-```html
-<div class="br-header">
-    <div class="container-lg">
-        <div class="header-top">
-            <div class="header-logo">
-                <img src="url-da-logo" alt="logo" />
-                <div class="sign">...</div>
-            </div>
-            <div class="header-actions">
-                <div class="header-links dropdown">...</div>
-                <div class="header-functions dropdown">...</div>
-                <div class="header-search-trigger">
-                    <button
-                        class="br-button circle"
-                        type="button"
-                        aria-label="Abrir Busca"
-                        data-toggle="search"
-                        data-target=".header-search"
-                    >
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="header-login">
-                    <div class="header-sign-in">...</div>
-                    <div class="header-avatar">...</div>
-                </div>
-            </div>
-        </div>
-        <div class="header-bottom">
-            <div class="header-menu">
-                <div class="header-menu-trigger">...</div>
-                <div class="header-info">
-                    <div class="header-title">...</div>
-                    <div class="header-subtitle">...</div>
-                </div>
-            </div>
-            <div class="header-search">
-                <div class="br-input has-icon">
-                    <label for="searchbox">Texto da pesquisa</label>
-                    <input
-                        class="has-icon"
-                        id="searchbox"
-                        type="text"
-                        placeholder="O que você procura?"
-                    />
-                    <button class="icon" type="button" aria-label="Pesquisar">
-                        <span class="icon">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <button
-                    class="br-button circle search-close"
-                    type="button"
-                    aria-label="Fechar Busca"
-                    data-dismiss="search"
-                >
-                    <i class="fas fa-times" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-```
-
-### Versão com Largura Fluida
-
-A classe `container-lg` força a **Largura Fixa** no _breakpoint desktop_. Altere essa classe para `container-fluid` para usar a **Largura Fluida**.
-
 ### Propriedades obrigatórias
 
-| Atributo      | Tipo  | Descrição                                                 |
-| ------------- | ----- | --------------------------------------------------------- |
-| br-header     | class | Container do componente                                   |
-| header-bottom | class | Agrupador de menu, título, subtítulo e busca              |
-| header-menu   | class | Container acionador do menu principal, título e subtítulo |
-| header-title  | class | Título                                                    |
+| Atributo | Tipo   | Valor Padrão      | Descrição                                                 |
+| -------- | ------ | ----------------- | --------------------------------------------------------- |
+| class    | string | **br-header**     | Container do componente                                   |
+| class    | string | **header-bottom** | Agrupador de menu, título, subtítulo e busca              |
+| class    | string | **header-menu**   | Container acionador do menu principal, título e subtítulo |
+| class    | string | **header-title**  | Título                                                    |
 
 ### Propriedades adicionais
 
-| Atributo              | Tipo  | Descrição                                                         |
-| --------------------- | ----- | ----------------------------------------------------------------- |
-| header-top            | class | Agrupador de logo, links, funcionalidades e login                 |
-| header-logo           | class | Container do logo                                                 |
-| header-sign           | class | Assinatura                                                        |
-| header-actions        | class | Container para links, funcionalidades, acionador de busca e login |
-| header-links          | class | Lista de links                                                    |
-| header-functions      | class | Lista de funcionalidades                                          |
-| header-search-trigger | class | Acionador de busca (breakpoints menores e modo sticky)            |
-| header-login          | class | Container para botão sign-in e avatar                             |
-| header-sign-in        | class | Container para botão **Sign-in**                                  |
-| header-avatar         | class | Container para **Avatar**                                         |
-| header-menu-trigger   | class | Container para **Menu**                                           |
-| header-subtitle       | class | Subtítulo                                                         |
-| header-search         | class | Container para busca                                              |
-
-**Sign-in**, **Avatar** e **Menu** possuem documentação de uso a parte.
-
-### Configurações  Adicionais
-
-| Atributo    | Tipo     | Descrição                       |
-| ----------- | -------- | ------------------------------- |
-| large       | class    | Aplica densidade baixa          |
-| medium      | class    | Aplica densidade média (padrão) |
-| small       | class    | Aplica densidade alta           |
-| compact     | class    | Aplica modo compacto            |
-| data-sticky | atributo | Aplica modo sticky              |
-
-## Dependências
-
--   [Avatar](/ds/components/avatar)
--   [Button](/ds/components/button)
--   [Input](/ds/components/input)
--   [Sign-in](/ds/components/signin)
+| Atributo    | Tipo    | Valor Padrão                       | Descrição                                                         |
+| ----------- | ------- | ---------------------------------- | ----------------------------------------------------------------- |
+| class       | string  | **header-top**                     | Agrupador de logo, links, funcionalidades e login                 |
+| class       | string  | **header-logo**                    | Container do logo                                                 |
+| class       | string  | **header-sign**                    | Assinatura                                                        |
+| class       | string  | **header-actions**                 | Container para links, funcionalidades, acionador de busca e login |
+| class       | string  | **header-links**                   | Lista de links                                                    |
+| class       | string  | **header-functions**               | Lista de funcionalidades                                          |
+| class       | string  | **header-search-trigger**          | Acionador de busca (breakpoints menores e modo sticky)            |
+| class       | string  | **header-login**                   | Container para botão sign-in e avatar                             |
+| class       | string  | **header-sign-in**                 | Container para botão **Sign-in**                                  |
+| class       | string  | **header-avatar**                  | Container para **Avatar**                                         |
+| class       | string  | **header-menu-trigger**            | Container para **Menu**                                           |
+| class       | string  | **header-subtitle**                | Subtítulo                                                         |
+| class       | string  | **header-search**                  | Container para busca                                              |
+| class       | string  | **large**, **medium** ou **small** | Modifica densidade                                                |
+| class       | string  | **compact**                        | Aplica modo compacto                                              |
+| data-sticky | boolean |                                    | Aplica modo sticky                                                |
 
 ## Instanciação do Componente
 
@@ -129,7 +44,7 @@ Incluir o arquivo `core.min.js` no html.
 
 > O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
-## Javascript
+### Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRHeader`, passando os seguintes parâmetros:
 
@@ -142,3 +57,14 @@ for (const brHeader of window.document.querySelectorAll('.br-header')) {
   headerList.push(new core.BRHeader('br-header', brHeader))
 }
 ```
+
+## Informações adicionais
+
+### Versão com Largura Fluida
+
+A classe `container-lg` força a **Largura Fixa** no _breakpoint desktop_. Altere essa classe para `container-fluid` para usar a **Largura Fluida**.
+
+## Dependências
+
+-   [Button](/ds/components/button)
+-   [Input](/ds/components/input)

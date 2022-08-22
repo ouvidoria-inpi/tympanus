@@ -292,11 +292,11 @@ function entries(argv) {
   ])
 
   setComponentPug('checkbox', [
+    'checkbox-default',
+    'checkbox-inline',
+    'checkbox-states',
     'checkbox-indeterminate',
     'checkbox-no-label',
-    'checkbox-estados-validacao',
-    'checkbox-horizontal',
-    'checkbox-padrao',
   ])
 
   setComponentPug('cookiebar', ['cookiebar-padrao'])
@@ -310,14 +310,14 @@ function entries(argv) {
 
   setComponentPug('divider', [
     'divider',
-    'divider-inverted',
-    'divider-vertical',
-    'divider-vertical-inverted',
+    'divider-dark',
     'divider-dashed',
+    'divider-dashed-dark',
+    'divider-vertical',
     'divider-vertical-dashed',
-    'divider-2x',
-    'divider-3x',
-    'divider-4x',
+    'divider-small',
+    'divider-medium',
+    'divider-large',
   ])
 
   setComponentPug('footer', ['footer-default', 'footer-inverted'])
@@ -367,15 +367,10 @@ function entries(argv) {
   setComponentPug('message', ['feedback', 'message-inverted', 'message-padrao'])
 
   setComponentPug('modal', [
-    'modal-acao',
+    'scrim-behavior',
     'modal-alert',
-    'modal-list',
     'modal-loading',
-    'modal-login',
-    'modal-options',
-    'modal-sem-titulo',
     'modal-terms',
-    'modal-titulo-linhas',
   ])
 
   setComponentPug('notification', ['notification-full'])
@@ -458,9 +453,8 @@ function entries(argv) {
     'tag-density',
     'tag-count',
     'tag-icon',
-    'tag-interaction-checkbox',
-    'tag-interaction-radio',
-    'tag-interaction-tag',
+    'tag-selections',
+    'tag-interaction',
     'tag-status',
     'tag-text',
   ])

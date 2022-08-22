@@ -445,23 +445,23 @@
           "examples": [
             {
               "label": "Exemplo completo",
-              "path": "examples/checkbox-padrao"
+              "path": "examples/checkbox-default"
             },
             {
               "label": "Listagem horizontal",
-              "path": "examples/checkbox-horizontal"
+              "path": "examples/checkbox-inline"
             },
             {
               "label": "Estados",
-              "path": "examples/checkbox-estados-validacao"
+              "path": "examples/checkbox-states"
             },
             {
-              "label": "Checkbox sem label",
-              "path": "examples/checkbox-no-label"
-            },
-            {
-              "label": "Checkbox com estado intermediário",
+              "label": "Estado intermediário",
               "path": "examples/checkbox-indeterminate"
+            },
+            {
+              "label": "Label oculto",
+              "path": "examples/checkbox-no-label"
             }
           ],
           "ext": [
@@ -506,34 +506,32 @@
               "path": "examples/divider"
             },
             {
-              "path": "examples/divider-inverted"
+              "path": "examples/divider-dark"
+            },
+            {
+              "label": "Horizontal tracejado",
+              "path": "examples/divider-dashed"
+            },
+            {
+              "path": "examples/divider-dashed-dark"
             },
             {
               "label": "Vertical",
               "path": "examples/divider-vertical"
             },
             {
-              "path": "examples/divider-vertical-inverted"
-            },
-            {
-              "label": "Tracejado Horizontal",
-              "path": "examples/divider-dashed"
-            },
-            {
-              "label": "Tracejado Vertical",
+              "label": "Vertical Tracejado",
               "path": "examples/divider-vertical-dashed"
             },
             {
-              "label": "Tamanho 2x",
-              "path": "examples/divider-2x"
+              "label": "Espessuras",
+              "path": "examples/divider-small"
             },
             {
-              "label": "Tamanho 3x",
-              "path": "examples/divider-3x"
+              "path": "examples/divider-medium"
             },
             {
-              "label": "Tamanho 4x",
-              "path": "examples/divider-4x"
+              "path": "examples/divider-large"
             }
           ],
           "ext": [
@@ -563,17 +561,14 @@
         {
           "examples": [
             {
-              "height": 700,
               "label": "Header padrão",
               "path": "examples/header"
             },
             {
-              "height": 700,
               "label": "Compacto",
               "path": "examples/header-compact"
             },
             {
-              "height": 700,
               "label": "Densidades",
               "path": "examples/header-sizes"
             }
@@ -618,15 +613,12 @@
         {
           "examples": [
             {
-              "label": "Item com elementos interativos",
+              "label": "Exemplos de itens",
               "path": "examples/item-elems-iteractive"
             },
             {
-              "label": "Item com seleção",
+              "label": "Itens de seleção",
               "path": "examples/item-selection-checkbox"
-            },
-            {
-              "path": "examples/item-selection-radio"
             },
             {
               "label": "Item desativado",
@@ -742,18 +734,18 @@
               "path": "examples/menu-principal-push"
             },
             {
-              "height": 600,
-              "label": "Menu Contextual",
-              "path": "examples/menu-contextual",
-              "width": 200
-            },
-            {
               "label": "Agrupamentos de items",
               "path": "examples/menu-groupedby"
             },
             {
               "label": "Densidades",
               "path": "examples/menu-sizes"
+            },
+            {
+              "height": 350,
+              "label": "Menu Contextual",
+              "path": "examples/menu-contextual",
+              "width": 200
             }
           ],
           "id": "menu",
@@ -762,13 +754,11 @@
         {
           "examples": [
             {
-              "height": 500,
-              "label": "Mensagens",
+              "label": "Tipo padrão",
               "path": "examples/message-padrao"
             },
             {
-              "height": 400,
-              "label": "Feedback",
+              "label": "Tipo contextual",
               "path": "examples/feedback"
             }
           ],
@@ -778,50 +768,36 @@
         {
           "examples": [
             {
-              "label": "Modal Alerta",
+              "label": "Exemplo de acionamento",
+              "path": "examples/scrim-behavior",
+              "height": 300
+            },
+            {
+              "label": "Modal simples",
               "path": "examples/modal-alert"
             },
             {
-              "label": "Modal Alerta com ícone de fechar",
-              "path": "examples/modal-acao"
-            },
-            {
-              "label": "Modal com duas ou mais linhas de título",
-              "path": "examples/modal-titulo-linhas"
-            },
-            {
-              "label": "Modal com Temporizador",
+              "label": "Modal carregando",
               "path": "examples/modal-loading"
             },
             {
-              "label": "Modal sem título",
-              "path": "examples/modal-sem-titulo"
-            },
-            {
-              "label": "Modal com escolha de opção",
-              "path": "examples/modal-options"
-            },
-            {
-              "label": "Modal com entrada de dados",
-              "path": "examples/modal-login"
-            },
-            {
-              "label": "Modal com lista de opções",
-              "path": "examples/modal-list"
-            },
-            {
-              "label": "Modal com termo de aceite",
+              "label": "Modal com scroll",
               "path": "examples/modal-terms"
             }
           ],
           "id": "modal",
+          "ext": [
+            "md",
+            "html",
+            "css"
+          ],
           "label": "Modal"
         },
         {
           "examples": [
             {
               "height": 900,
-              "label": "Notification",
+              "label": "Exemplo",
               "path": "examples/notification-full"
             }
           ],
@@ -1065,11 +1041,10 @@
               "path": "examples/table"
             },
             {
-              "label": "Tabela irregular 1",
+              "label": "Tabelas irregulares",
               "path": "examples/table-irregular-1"
             },
             {
-              "label": "Tabela irregular 2",
               "path": "examples/table-irregular-2"
             }
           ],
@@ -1110,15 +1085,11 @@
               "path": "examples/tag-interaction"
             },
             {
-              "label": "Tag de Interação Persistente com radio",
-              "path": "examples/tag-interaction-radio"
+              "label": "Tag de Interação Persistente",
+              "path": "examples/tag-selections"
             },
             {
-              "label": "Tag de Interação Persistente com checkbox",
-              "path": "examples/tag-interaction-checkbox"
-            },
-            {
-              "label": "Tag de texto",
+              "label": "Tag de Texto",
               "path": "examples/tag-text"
             },
             {
@@ -1132,6 +1103,10 @@
             {
               "label": "Tag de Ícone",
               "path": "examples/tag-icon"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/tag-density"
             }
           ],
           "id": "tag",

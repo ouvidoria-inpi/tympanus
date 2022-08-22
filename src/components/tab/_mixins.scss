@@ -8,10 +8,6 @@
 }
 
 @mixin tab-tokens {
-  --interactive-rgb: var(--color-rgb);
-  --tab-font-size: var(--font-size-scale-up-02);
-  --tab-font-weight: var(--font-weight-medium);
-  --tab-active-border: var(--surface-width-lg) solid var(--active);
   --tab-padding: var(--spacing-scale-3x);
   --tab-size: var(--tab-medium);
   --tab-large: var(--spacing-scale-3x);
@@ -50,8 +46,6 @@
 
     button,
     a {
-      --font-size: var(--tab-font-size);
-      --font-weight: var(--tab-font-weight);
       --focus-offset: calc(var(--spacing-scale-half) * -1);
       @include focus;
       @include hover("color");
@@ -60,8 +54,8 @@
       border-bottom: 4px solid transparent;
       color: var(--color);
       display: inline-block;
-      font-size: var(--font-size);
-      font-weight: var(--font-weight);
+      font-size: var(--font-size-scale-up-02);
+      font-weight: var(--font-weight-medium);
       line-height: 1;
       padding: var(--tab-size) var(--tab-padding);
       text-align: center;

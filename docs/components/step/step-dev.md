@@ -1,58 +1,31 @@
 <!-- [version]: # (1.0.0) -->
 
+## Como usar
+
 ### Propriedades obrigatórias
 
-| Atributo            | Tipo   | Valor Padrão | Descrição                                                    |
-| ------------------- | ------ | ------------ | ------------------------------------------------------------ |
-| `br-step`           | classe |              | container do componente                                      |
-| `vertical`          | classe |              | aplicada ao container do componente, define a sua orientação |
-| `step-progress`     | classe |              | container dos botões numerados de passos                     |
-| `step-progress-btn` | classe |              | classe para os botões numerados de passos                    |
-| `step-info`         | classe |              | tag interna do botão de passo contendo sua descrição         |
+| Atributo | Tipo   | Valor Padrão          | Descrição               |
+| -------- | ------ | --------------------- | ----------------------- |
+| class    | string | **br-step**           | Container do componente |
+| class    | string | **step-progress-btn** | Cada etapa              |
 
-### Propriedades Adicionais
+### Propriedades adicionais
 
-| Atributo       | Tipo               | Valor Padrão | Descrição                                                                                                                                                                      |
-| -------------- | ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `data-initial` | atributo (inteiro) | 1            | número do passo que será selecionado por padrão                                                                                                                                |
-| `data-type`    | atributo(string)   | **omitido*   | aplicada ao container do componente, define suas variantes: Indicador vazio, Simples e Textual (*void, simple, text*)                                                          |
-| `data-label`   | atributo (string)  | bottom       | define o posicionamento dos rótulos (*top, bottom, left, right*)                                                                                                               |
-| `data-alert`   | atributo(string)   | info         | usado no container `step-progress-button` para indicar o tipo de alerta a ser visualizado  (*success, warning, info, danger*)                                                  |
-| `step-alert`   | classe             | **omitido*   | container dos ícones de alertas, erros, info e concluído                                                                                                                       |
-| `step-icon`    | classe             | **omitido*   | classe da tag <i> que representa a informação iconográfica do botão. Deve ser aninhada dentro do `step-progress-button`                                                        |
-| `data-scroll`  | atributo           | **omitido*   | determina se haverá um rolagem horizontal caso a quantidade de botões em tela ultrapasse a área visivel. Quando omitido os botões tentarão se encaixar na área visível da tela |
+| Atributo     | Tipo    | Valor Padrão                                  | Descrição                          |
+| ------------ | ------- | --------------------------------------------- | ---------------------------------- |
+| data-type    | string  | **void**, **simple** ou **text**              | Define o tipo do componente        |
+| data-label   | string  | **left**, **right**,<br>**top** ou **bottom** | Posiciona o rótulo da etapa        |
+| data-initial | number  | 1                                             | Número da etapa ativada por padrão |
+| data-scroll  | boolean | **false** ou **true**                         | Ativa barra de rolagem nas etapas  |
 
-## Estados
+### Estados
 
-| Elemento   | Tipo     | Descrição                                                                        |
-| ---------- | -------- | -------------------------------------------------------------------------------- |
-| `active`   | atributo | visual do botão de passos para a etapa atual                                     |
-| `disabled` | atributo | visual do botão de passos para a etapa desabilitada (desabilita a ação do botão) |
+<!-- Propriedades que são relacionadas ao estado do componente devem ficar nessa seção e não nas de cima -->
 
-Esses estados podem ser aplicados unicamente no elemento `step-progress-btn`, e são modificados pelo script do componente mediante sua navegação.
-
-## Regras especiais
-
--   Quando houver a necessidade de se utilizar muitos passos, recomenda-se o uso do atributo `data-scroll`, caso contrário deve-se omitir o atributo pois os botões ajustar-se-ão automaticamente ao tamanho da tela.
--   No layout horizontal com alinhamento a esquerda ou direita, quando em um dispositivo móvel (mobile), o texto de descrição do passo (step-info) será automaticamente ocultado para manter a integridade do layout.
-
-## Próximos Passos
-
-| Nome                      | Documentação de Design | Desenvolvimento |
-| ------------------------- | ---------------------- | --------------- |
-| Densidades                | Feito                  | Fazendo         |
-| Fundo Escuro              | Feito                  | Fazendo         |
-| Interação com Componentes | Fazendo                | Fazendo         |
-
-LEGENDA:
-
--   Não planejado: A necessidade foi identificada, mas ainda não tem data para ser satisfeita.
--   Fazendo: A equipe está trabalhando na necessidade.
--   Feito: Necessidade já é satisfeita.
-
-## Dependências
-
--   [Button](/ds/components/button)
+| Estado     | atributo     | Valores |
+| ---------- | ------------ | ------- |
+| Desativado | **disabled** |         |
+| Ativado    | **active**   |         |
 
 ## Instanciação do Componente
 
@@ -66,7 +39,7 @@ Incluir o arquivo `core.min.js` no html.
 
 > O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
 
-## Javascript
+### Javascript
 
 Usar o seguinte código JavaScript para instanciar a classe `BRStep`, passando os seguintes parâmetros:
 
@@ -79,3 +52,17 @@ for (const brStep of window.document.querySelectorAll('.br-step')) {
   stepList.push(new core.BRStep('br-step', brStep))
 }
 ```
+
+## Informações adicionais
+
+### Rolagem
+
+As etapas ocupam toda a largura/altura disponível do contexto por padrão. Caso precisar definir uma largura ou altura fixa use o atributo `data-scroll` para ativar rolagem.
+
+### Comportamento em celular/tablet
+
+Nos alinhamentos de rótulo à esquerda ou direita apenas o número irá ficar visível para manter a integridade do layout.
+
+## Dependências
+
+-   [Button](/ds/components/button)
