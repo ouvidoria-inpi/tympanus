@@ -11,19 +11,7 @@
 
 ## Como usar
 
-### HTML (Tooltip Texto)
 
-### HTML (Tooltip Texto)
-
-```html
-
-  <a class="h5" href="javascript:void(0);" data-tooltip-target="#example-tooltip">Informação</a>
-              <div class="br-tooltip" id="example-tooltip" role="tooltip" data-toggle="tooltip" info="info" place="top">
-                <span class="text" role="tooltip">Fulano de Tal da Silva</span>
-                <span class="subtext">Diretor Presidente</span>
-              </div>
-
-```
 
 ### Atributos no Tooltip Texto
 

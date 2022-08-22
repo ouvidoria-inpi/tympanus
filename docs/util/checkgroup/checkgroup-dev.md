@@ -8,7 +8,7 @@
 
 | Atributo                  | Tipo     | Descrição                                                 |
 | ------------------------- | -------- | --------------------------------------------------------- |
-| `data-parent="tag-group"` | atributo | Indica que o checkbox é o pai e a tag indentifica o grupo |
+| `data-parent="tag-group"` | atributo | Indica que o checkbox é o pai e a tag identifica o grupo |
 
 #### Opcionais
 
@@ -79,4 +79,4 @@ this.element
     
 ```
 
-> this.element elemento DOM onde vai ser instanciado o utilitario
+> **this.element**: elemento DOM onde vai ser instanciado o utilitário

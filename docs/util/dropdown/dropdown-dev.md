@@ -58,7 +58,7 @@ this.element
    })
 ```
 
-> this.element elemento dom onde vai ser instanciado pelo utilitario
+> **this.element**: elemento DOM onde vai ser instanciado o utilitário
 > link do utilitário [Dropdown](<assets/dropdown.js>)
 
 #### Objeto de configuração
@@ -71,4 +71,4 @@ this.element
 | `useIcons`   | Boolean | Indica se o comportamento usará ou não ícones                      |
 | `target`     | Object  | Referência ao elemento (DOM) alvo                                  |
 
-> Os propriedades `iconToShow`, `iconToHide` e `useIcons` possuem, por padrão, os valores `fa-chevron-down`, `fa-chevron-up` e `true`, respectivamente. Por tanto, são **opcionais** no objeto de configuração.
+> As propriedades `iconToShow`, `iconToHide` e `useIcons` possuem, por padrão, os valores `fa-chevron-down`, `fa-chevron-up` e `true`, respectivamente. Por tanto, são **opcionais** no objeto de configuração.
