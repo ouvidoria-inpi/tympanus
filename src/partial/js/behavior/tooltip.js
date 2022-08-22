@@ -51,9 +51,9 @@ class Tooltip {
     this._create()
     this._setBehavior()
   }
-/**
- * Instancializa o behavior
- */
+  /**
+   * Instancializa o behavior
+   */
   _setBehavior() {
     // Ação de abrir padrao ao entrar no ativador
     if (this.activator) {
@@ -169,10 +169,10 @@ class Tooltip {
       })
     }
   }
-/**
- * Mostra o tooltip e define o timeout se tiver
- * @param {object} event  evento javascript
- */
+  /**
+   * Mostra o tooltip e define o timeout se tiver
+   * @param {object} event  evento javascript
+   */
   _show(event) {
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
@@ -190,20 +190,20 @@ class Tooltip {
       )
     }
   }
-/**
- * Esconde o componente
- * @private
- */
+  /**
+   * Esconde o componente
+   * @private
+   */
   _hide(event, component) {
     component.removeAttribute('data-show')
     component.style.zIndex = -1
     component.style.visibility = 'hidden'
     clearTimeout(component.closeTimer)
   }
-/**
- * Cria o laytout do tooltip
- * @private
- */
+  /**
+   * Cria o laytout do tooltip
+   * @private
+   */
   _setLayout() {
     // Cria a setinha que aponta para o item que criou o tooltip
     const arrow = document.createElement('div')
@@ -224,10 +224,10 @@ class Tooltip {
       this.component.appendChild(close)
     }
   }
-/**
- * Muda icone da seta
- * @private
- */
+  /**
+   * Muda icone da seta
+   * @private
+   */
   _toggleActivatorIcon() {
     const icon = this.activator.querySelector('button svg')
     if (icon) {
@@ -236,10 +236,10 @@ class Tooltip {
     }
     this.activator.toggleAttribute('active')
   }
-/**
- * corrige a posição dp tooltip depois de ativado
- * @private
- */
+  /**
+   * corrige a posição dp tooltip depois de ativado
+   * @private
+   */
   _fixPosition() {
     if (this.notification) {
       setTimeout(() => {
