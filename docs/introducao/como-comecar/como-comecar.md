@@ -26,31 +26,14 @@ Para saber mais sobre como utilizar os UIKITs, acesse Prototipando com o Design 
 
 O projeto requer a versão mínima do [node](https://nodejs.org/) >= v14.15.4.
 
-### Instalar manualmente
-
-1. Faça o [download do Pacote NPM](/ds/assets/design-system/assets/npm-package/govbr-ds-latest.tgz). Ele está disponível na seção Downloads
-2. **Caso você tenha um projeto em andamento, pule para a etapa 4**, caso contrário crie nova pasta para o seu projeto
-3. Execute o seguinte comando no terminal: `npm init -y`
-4. Coloque o arquivo **govbr-ds-latest.tgz** na pasta do seu projeto
-5. Execute o seguinte comando no terminal: `npm install govbr-ds-latest.tgz`
-
 Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 -   **package.json**: configurações do seu projeto
 -   **node_modules/@govbr-ds/core**: pasta com os módulos necessários para o funcionamento do Design System
 
-### Instalar automaticamente com NPM
-
-> Atenção! No momento o pacote está disponível apenas para a rede interna do SERPRO
+### Instalação com npm
 
 **Confira sempre a versão referência ao baixar o pacote @govbr-ds/core**.
-
-1. Execute o seguinte comando no terminal:
-
-    ```bash
-      npm set @serpro:registry=http://nexus.aic.serpro/repository/npm-private/
-      npm set @govbr:registry=http://nexus.aic.serpro/repository/npm-private/
-    ```
 
 1. Execute o comando **npm install @govbr-ds/core**, exemplo:
 
@@ -60,7 +43,7 @@ Serão criados automaticamente os seguintes arquivos em seu projeto:
 
 ## Template Inicial
 
-A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **core.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **core.min.js**, se precisar usar uma biblioteca JS já inicializada utilize **core-init.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
+A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **core.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **core.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
 <!DOCTYPE html>
@@ -95,20 +78,15 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
+        <script type="module" src="node_modules\@govbr-ds\core\dist\core.min.js"></script>
     </body>
 </html>
 ```
 
-> Atenção! Certifique-se que as referências ao `css` e `js` estejam corretas e inseridas devidamentes na pasta do projeto, caso contrário ocorrerá quebra no layout. Muitas vezes, em ambiente de desenvolvimento, pode não haver os arquivos minificados, ou seja, com o posfixo `.min`.
+> **core.js** deve ser importado como um modulo, os componentes não são instancializados, e se utilizar babel ou webpack não precisa colocar na dom e pode ser importado no seu script.
 
-## Versão "init" do js
+> **Atenção!** Certifique-se que as referências ao `css` e `js` estejam corretas e inseridas devidamentes na pasta do projeto, caso contrário ocorrerá quebra no layout. Muitas vezes, em ambiente de desenvolvimento, pode não haver os arquivos minificados, ou seja, com o posfixo `.min`.
 
-Essa é a versão init(core-init.js) com os componentes já **inicializados** diferente do core.js em que precisa que a classe do js seja inicializado. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
-
-```html
-<script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
-```
 
 ## Versão "lite" da folha de estilo
 
@@ -161,7 +139,7 @@ Acesse a seção **Componentes** no menu principal e veja a lista de componentes
 
 Cada componente possui sua documentação, código fonte e preview.
 
-### Exemplo de uso da instacialização do componente sem usar **core-init.js**
+### Exemplo de uso da instancialização do componente
 
 ```javascript
 import  * as core from '@govbr-ds/core/dist/core'
@@ -170,6 +148,44 @@ for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
   breadcrumbList.push(new core.BRBreadcrumb('br-breadcrumb', brBreadcrumb))
 }
 ```
+
+## Utilitários JS
+
+São classes javascript para auxiliar os componentes. para usar deve importar a classe js correspondente ao utilitário, que fica na pasta **@govbr-ds/dist/partial/behavior**, e instanciar ele com os atributos de configuração como no exemplo abaixo no seu script.
+
+### Exemplo de uso de utilitário
+
+```javascript
+import Scrim from '@govbr-ds/dist/partial/behavior/scrim'
+element = window.document.querySelectorAll('.collapse-example')
+element.querySelectorAll('[data-toggle="accordion"]')
+    .forEach((trigger) => {
+    const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+    }
+    const accordion = new Accordion(config)
+    accordion.setBehavior()
+})
+```
+
+> Nesse exemplo precisa indicar **element** como elemento dom
+
+> Os utilitários não são automaticamente inicializados precisando de uma classe javascript para inicializar eles
+
+Acesse a seção **Utilitários** no menu principal e veja a lista de componentes disponíveis.
+
+
+## Versão "init" do js
+
+Essa é a versão init(core-init.js) com os componentes já **instancializados** diferente do core.js em que precisa que crie um script JS,  poderam ter problema com frameworks e não aconselhamos o seu uso em produção. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
+
+```html
+<script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
+```
+
 
 ## Release Notes
 
