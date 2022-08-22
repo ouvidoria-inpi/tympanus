@@ -1,5 +1,5 @@
-import BRStep from '../step/step'
 import Swipe from '../../partial/js/behavior/swipe'
+import BRStep from '../step/step'
 class BRCarousel {
   constructor(name, component) {
     /**
@@ -15,12 +15,12 @@ class BRCarousel {
     this.activeStageNum = 0
     // Elementos DOM
     this.DOMstrings = {
-      carouselStage: this.component.querySelector('.carousel-stage'),
-      carouselPages: this.component.querySelectorAll('.carousel-page'),
       carouselNextBtn: this.component.querySelector('.carousel-btn-next'),
+      carouselPages: this.component.querySelectorAll('.carousel-page'),
       carouselPrevBtn: this.component.querySelector('.carousel-btn-prev'),
-      step: this.component.querySelector('.br-step'),
+      carouselStage: this.component.querySelector('.carousel-stage'),
       circular: this.component.hasAttribute('data-circular'),
+      step: this.component.querySelector('.br-step'),
     }
     this.step = new BRStep('br-step', this.DOMstrings.step)
     this._setBehavior()
@@ -146,15 +146,15 @@ class BRCarousel {
    * @private
    */
   _setBehavior() {
-    this.DOMstrings.carouselNextBtn.addEventListener('click', (e) => {
+    this.DOMstrings.carouselNextBtn.addEventListener('click', () => {
       this.shiftPage(1)
     })
 
-    this.DOMstrings.carouselPrevBtn.addEventListener('click', (e) => {
+    this.DOMstrings.carouselPrevBtn.addEventListener('click', () => {
       this.shiftPage(-1)
     })
 
-    this.DOMstrings.step.addEventListener('click', (e) => {
+    this.DOMstrings.step.addEventListener('click', () => {
       this.setActiveStage(this.step.activeStepNum)
     })
 

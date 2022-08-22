@@ -10,7 +10,7 @@ class BRTooltip {
     this.notification = component.classList.contains('br-notification')
     this.timer = component.getAttribute('timer')
 
-    this.active = component.hasAttribute('active')
+    // this.active = component.hasAttribute('active')
     this.placement = positions.includes(place)
       ? place
       : this.notification
@@ -123,7 +123,7 @@ class BRTooltip {
         placement: this.placement,
       })
 
-      const style = window.getComputedStyle(this.component)
+      // const style = window.getComputedStyle(this.component)
     }
   }
 

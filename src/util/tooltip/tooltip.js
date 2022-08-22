@@ -28,7 +28,8 @@ class TooltipExample {
         textTooltip: 'teste',
         timer,
       }
-      const tooltip = new Tooltip(config)
+      // const tooltip = new Tooltip(config)
+      new Tooltip(config)
     })
   }
 }

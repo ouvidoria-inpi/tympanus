@@ -32,7 +32,7 @@ class BRScrim {
       )
 
       for (const buttonComponent of allComp) {
-        buttonComponent.addEventListener('click', (event) => {
+        buttonComponent.addEventListener('click', () => {
           this.component.classList.remove('active')
         })
       }
@@ -49,7 +49,7 @@ class BRScrim {
     }
   }
 }
-const scrimList = []
+// const scrimList = []
 export default BRScrim
 for (const buttonBloco1 of window.document.querySelectorAll(
   '.scrimexemplo button'
