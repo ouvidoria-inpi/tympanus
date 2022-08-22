@@ -139,7 +139,7 @@ Acesse a seção **Componentes** no menu principal e veja a lista de componentes
 
 Cada componente possui sua documentação, código fonte e preview.
 
-### Exemplo de uso da instancialização do componente sem usar **core-init.js**
+### Exemplo de uso da instancialização do componente
 
 ```javascript
 import  * as core from '@govbr-ds/core/dist/core'
@@ -156,23 +156,20 @@ São classes javascript para auxiliar os componentes. para usar deve importar a 
 ### Exemplo de uso de utilitário
 
 ```javascript
-    import Scrim from '@govbr-ds/dist/partial/behavior/scrim'
-    element = window.document
-      .querySelectorAll('.collapse-example')
-    element
-      .querySelectorAll('[data-toggle="accordion"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const accordion = new Accordion(config)
-        accordion.setBehavior()
-      })
-  
+import Scrim from '@govbr-ds/dist/partial/behavior/scrim'
 
+element = window.document.querySelectorAll('.collapse-example')
+element.querySelectorAll('[data-toggle="accordion"]')
+    .forEach((trigger) => {
+    const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+    }
+    const accordion = new Accordion(config)
+    accordion.setBehavior()
+})
 ```
 
 > Nesse exemplo precisa indicar **element** como elemento dom
@@ -184,8 +181,7 @@ Acesse a seção **Utilitários** no menu principal e veja a lista de componente
 
 ## Versão "init" do js
 
-Essa é a versão init(core-init.js) com os componentes já **instancializados** diferente do core.js em que precisa que crie um script JS,  poderam ter problema com frameworks e não aconselhamos o seu uso em produção
-. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
+Essa é a versão init(core-init.js) com os componentes já **instancializados** diferente do core.js em que precisa que crie um script JS,  poderam ter problema com frameworks e não aconselhamos o seu uso em produção. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
 <script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
