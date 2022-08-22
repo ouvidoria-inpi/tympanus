@@ -157,7 +157,6 @@ São classes javascript para auxiliar os componentes. para usar deve importar a 
 
 ```javascript
 import Scrim from '@govbr-ds/dist/partial/behavior/scrim'
-
 element = window.document.querySelectorAll('.collapse-example')
 element.querySelectorAll('[data-toggle="accordion"]')
     .forEach((trigger) => {
