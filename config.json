@@ -1904,7 +1904,7 @@
           "type": "documentation"
         },
         {
-          "id": "acessibilidade-no-codigo-html",
+          "id": "acessibilidade-html",
           "label": "Acessibilidade no Código HTML",
           "type": "documentation"
         },
@@ -1919,7 +1919,7 @@
           "type": "documentation"
         },
         {
-          "id": "uso-do-wai-aria",
+          "id": "wai-aria",
           "label": "Uso do WAI-ARIA",
           "type": "documentation"
         },
@@ -1973,7 +1973,7 @@
           "type": "link"
         }
       ],
-      "id": "historico-category",
+      "id": "historico",
       "label": "Histórico de Versões",
       "type": "category"
     }
