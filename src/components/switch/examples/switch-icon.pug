@@ -1,4 +1,7 @@
-include ../switch
-include ../../../partial/pug/utilities/icon.pug
+extends ../../../partial/pug/isolate
 
-+switch-icon
+block dependencies
+  include ../switch
+
+block content
+  +switch-icon

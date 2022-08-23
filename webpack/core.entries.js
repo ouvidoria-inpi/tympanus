@@ -429,14 +429,9 @@ function entries(argv) {
     'switch-default',
     'switch-disabled',
     'switch-icon',
-    'switch-label-onoff',
-    'switch-label-terms',
-    'switch-large',
-    'switch-left',
-    'switch-medium',
-    'switch-right',
-    'switch-small',
-    'switch-top',
+    'switch-labels',
+    'switch-alignments',
+    'switch-density',
   ])
 
   setComponentPug('tab', [
