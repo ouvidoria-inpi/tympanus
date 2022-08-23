@@ -5,9 +5,9 @@ class Tooltip {
    * Instancia um comportamento Tooltip
    * @param {object} - Objeto de configuração inicial para destructuring
    * @property {object} activator - Elemento DOM que representa o acionador do comportmento tooltip
-   * @property {string} place - Local onde vai aparecer o tooltip
+   * @property {string} place -Local onde vai aparecer o tooltip ('top', 'right', 'bottom', 'left')
    * @property {string} timer - Tempo em que vai aparecer o tooltip
-   * @property {string} placement - Local onde vai aparecer o tooltip
+   * @property {string} type - Tipo de tooltip (info, warning)
    */
   // eslint-disable-next-line complexity
   constructor({
@@ -16,7 +16,6 @@ class Tooltip {
     place = 'top',
     timer,
     active,
-    placement = 'top',
     textTooltip,
     type = 'info',
   }) {
@@ -38,6 +37,8 @@ class Tooltip {
       ? this.component.getAttribute('timer')
       : timer
     this.active = this.component.hasAttribute('active')
+      ? this.component.hasAttribute('active')
+      : active
     this.placement = positions.includes(place)
       ? place
       : this.notification
@@ -50,7 +51,9 @@ class Tooltip {
     this._create()
     this._setBehavior()
   }
-
+  /**
+   * Instancializa o behavior
+   */
   _setBehavior() {
     // Ação de abrir padrao ao entrar no ativador
     if (this.activator) {
@@ -100,7 +103,11 @@ class Tooltip {
     return text_tooltip
   }
 
-  /* Cria a instancia do popper*/
+  /**
+   * Cria a instancia do tooltip
+   * @private
+   */
+
   _create() {
     this._setLayout()
 
@@ -162,7 +169,10 @@ class Tooltip {
       })
     }
   }
-
+  /**
+   * Mostra o tooltip e define o timeout se tiver
+   * @param {object} event  evento javascript
+   */
   _show(event) {
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
@@ -182,6 +192,7 @@ class Tooltip {
   }
   /**
    * Esconde o componente
+   * @private
    */
   _hide(event, component) {
     component.removeAttribute('data-show')
@@ -189,7 +200,10 @@ class Tooltip {
     component.style.visibility = 'hidden'
     clearTimeout(component.closeTimer)
   }
-
+  /**
+   * Cria o laytout do tooltip
+   * @private
+   */
   _setLayout() {
     // Cria a setinha que aponta para o item que criou o tooltip
     const arrow = document.createElement('div')
@@ -210,7 +224,10 @@ class Tooltip {
       this.component.appendChild(close)
     }
   }
-
+  /**
+   * Muda icone da seta
+   * @private
+   */
   _toggleActivatorIcon() {
     const icon = this.activator.querySelector('button svg')
     if (icon) {
@@ -219,7 +236,10 @@ class Tooltip {
     }
     this.activator.toggleAttribute('active')
   }
-
+  /**
+   * corrige a posição dp tooltip depois de ativado
+   * @private
+   */
   _fixPosition() {
     if (this.notification) {
       setTimeout(() => {

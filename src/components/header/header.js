@@ -208,7 +208,7 @@ class BRHeader {
 
           // Evita que o componente feche o drop ao navegar pelo teclado
           const next = this._nextFocusElement()
-          next.addEventListener('focus', (event) => {
+          next.addEventListener('focus', () => {
             clearTimeout(hideDrop)
           })
         }
@@ -219,7 +219,7 @@ class BRHeader {
       // Faz o drop fechar ao clicar fora
       // eslint-disable-next-line no-loop-func
     }
-    this.menuTrigger.addEventListener('focus', (event) => {
+    this.menuTrigger.addEventListener('focus', () => {
       this._cleanDropDownHeader()
     })
   }
