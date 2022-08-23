@@ -2,19 +2,7 @@
 
 ## Como usar
 
-### HTML
 
-```html
-<div id="id-accordion">
-  <div data-toggle="accordion" data-target="id-target" aria-controls="id-target" aria-expanded="false" data-visible="false" data-group="id-accordion">
-    ...
-  </div>
-  <div id="id-target" aria-hidden="true" hidden>
-    ...
-  </div>
-  ...
-</div>
-```
 
 ### Atributos no elemento acionador
 
@@ -60,16 +48,22 @@
 **Para cada acionador (trigger)**, instanciar a classe Accordion passando um objeto de configuração.
 
 ```javascript
-import Accordion from 'core'
-const config = {
-  trigger,
-  iconToShow: 'fa-chevron-down',
-  iconToHide: 'fa-chevron-up',
-  useIcons: true,
-}
-new Accordion(config)
+import Collapse from 'core'
+this.element
+   .querySelectorAll('[data-toggle="accordion"]')
+   .forEach((trigger) => {
+    const config = {
+     iconToHide: 'fa-chevron-up',
+     iconToShow: 'fa-chevron-down',
+     trigger,
+     useIcons: true,
+    }
+    const accordion = new Accordion(config)
+    accordion.setBehavior()
+   })
 ```
 
+> **this.element** elemento DOM onde vai ser instanciado o utilitário
 > link do utilitário [Accordion](<assets/accordion.js>)
 
 #### Objeto de configuração
@@ -81,4 +75,4 @@ new Accordion(config)
 | `iconToHide` | String  | Classe CSS para o ícone com o significado de "esconder o conteúdo" |
 | `useIcons`   | Boolean | Indica se o comportamento usará ou não ícones                      |
 
-> Os propriedades `iconToShow`, `iconToHide` e `useIcons` possuem, por padrão, os valores `fa-chevron-down`, `fa-chevron-up` e `true`, respectivamente. Por tanto, são **opcionais** no objeto de configuração.
+> As propriedades `iconToShow`, `iconToHide` e `useIcons` possuem, por padrão, os valores `fa-chevron-down`, `fa-chevron-up` e `true`, respectivamente. Por tanto, são **opcionais** no objeto de configuração.
