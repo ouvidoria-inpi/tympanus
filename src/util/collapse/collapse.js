@@ -12,11 +12,17 @@ class CollapseExample {
     this.element = element
     this._setBehavior()
   }
-
+  /**
+   * Instancia o utilitario
+   * @private
+   */
   _setBehavior() {
     this._setCollapseBehavior()
   }
-
+  /**
+   * Instancia o utilitario no data-toggle collapse
+   * @private
+   */
   _setCollapseBehavior() {
     this.element
       .querySelectorAll('[data-toggle="collapse"]')

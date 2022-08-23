@@ -1256,7 +1256,8 @@
           "default": false,
           "ext": [
             "html",
-            "md"
+            "md",
+            "js"
           ],
           "id": "accordion",
           "label": "Accordion",
@@ -1272,7 +1273,8 @@
           "default": false,
           "ext": [
             "html",
-            "md"
+            "md",
+            "js"
           ],
           "id": "checkgroup",
           "label": "Checkgroup",
@@ -1300,7 +1302,8 @@
           ],
           "ext": [
             "html",
-            "md"
+            "md",
+            "js"
           ],
           "id": "collapse",
           "label": "Collapse"
@@ -1316,7 +1319,8 @@
           ],
           "ext": [
             "html",
-            "md"
+            "md",
+            "js"
           ],
           "id": "dropdown",
           "label": "Dropdown"
@@ -1332,7 +1336,8 @@
           ],
           "ext": [
             "html",
-            "md"
+            "md",
+            "js"
           ],
           "id": "scrim",
           "label": "Scrim"
@@ -1350,6 +1355,11 @@
               "label": "Exemplo de Tooltip Simples",
               "path": "examples/tooltip-simples"
             }
+          ],
+          "ext": [
+            "html",
+            "md",
+            "js"
           ],
           "id": "tooltip",
           "label": "Tooltip"
