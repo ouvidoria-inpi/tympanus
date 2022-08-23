@@ -10,8 +10,6 @@
 }
 
 @mixin switch-tokens {
-  --switch-radius: 100em;
-  --switch-padding: 16px;
   --switch-height: var(--switch-height-medium);
   --switch-width: var(--switch-width-medium);
   --switch-toggle-size: var(--switch-toggle-medium);
@@ -54,7 +52,7 @@
       &::before {
         background: var(--background-light);
         border: 1px solid var(--border-color);
-        border-radius: var(--switch-radius);
+        border-radius: 100em;
         content: "";
         height: var(--switch-height);
         position: absolute;
@@ -83,7 +81,7 @@
 @mixin switch-directions {
   input {
     + label {
-      padding-right: calc(var(--switch-padding) + var(--switch-width));
+      padding-right: calc(var(--spacing-scale-2x) + var(--switch-width));
 
       &:empty {
         padding-right: var(--switch-width);
@@ -108,7 +106,7 @@
   &.right {
     input {
       + label {
-        padding-left: calc(var(--switch-width) + var(--switch-padding));
+        padding-left: calc(var(--spacing-scale-2x) + var(--switch-width));
         padding-right: 0;
 
         &::before {
@@ -224,10 +222,6 @@
     &::before {
       @include focus-soft;
     }
-  }
-
-  input:disabled + label {
-    @include disabled;
   }
 
   input:hover:not([disabled]):checked + label {

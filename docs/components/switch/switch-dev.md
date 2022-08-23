@@ -2,40 +2,31 @@
 
 ## Como usar
 
-```html
-<div class="br-switch medium">
-    <input id="switch-01" type="checkbox" checked>
-    <label for="switch-01">Label</label>
-</div>
-```
+### Propriedades obrigatórias
 
-### Configurações obrigatórias
+| Atributo | Tipo   | Valor padrão  | Descrição               |
+| -------- | ------ | ------------- | ----------------------- |
+| class    | string | **br-switch** | Container do componente |
 
-| Elemento          | Tipo     | Descrição                      |
-| ----------------- | -------- | ------------------------------ |
-| `br-switch`       | classe   | Container do componente        |
-| `type="checkbox"` | atributo | Tipo obrigatório para checkbox |
-| `input`           | tag      | Conteúdo do componente         |
-| `label`           | tag      | Rótulo do componente           |
+### Propriedades Adicionais
 
-### Configurações Adicionais
-
-| Elemento        | Tipo     | Descrição                                 |
-| --------------- | -------- | ----------------------------------------- |
-| `icon`          | classe   | Usado para switch com ícone               |
-| `small`         | classe   | Aplica a Densidade Alta                   |
-| `medium`        | classe   | Aplica a Densidade Média                  |
-| `large`         | classe   | Aplica a Densidade Baixa                  |
-| `switch-data`   | classe   | Usado para rótulos adicionais             |
-| `data-enabled`  | atributo | Usado para habilitar o rótulo adicional   |
-| `data-disabled` | atributo | Usado para desabilitar o rótulo adicional |
-
-**Atenção**!
-A densidade do switch padrão é a média, utilizando a classe `medium`.
+| Atributo | Tipo   | Valor Padrão                        | Descrição                                              |
+| -------- | ------ | ----------------------------------- | ------------------------------------------------------ |
+| class    | string | **right** ou **top**                | Modifica alinhamento do label                          |
+| class    | string | **icon**                            | Adiciona ícone na chave de alternância (switch toggle) |
+| class    | string | **small**, **medium**, ou **large** | Modifica densidade do componente                       |
 
 ## Estados
 
-| Estado     | Tipo     | Descrição                   |
-| ---------- | -------- | --------------------------- |
-| `checked`  | atributo | Padrão habilitado no switch |
-| `disabled` | atributo | Desativa o componente       |
+| Estado     | atributo | Valores      |
+| ---------- | -------- | ------------ |
+| Desativado | class    | **disabled** |
+
+## Informações adicionais
+
+### Switch com rótulos adicionais
+
+Para o rótulo adiciona use a classe `switch-data`. Os textos de ligado e desligado devem ficar em atributos data-*:
+
+-   **data-enabled**: é mostrado quando o componente está "ligado"
+-   **data-disabled**: é mostrado quando o componente está "desligado"
