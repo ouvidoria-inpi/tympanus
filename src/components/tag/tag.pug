@@ -34,10 +34,10 @@ mixin tag-count
 
 mixin tag-radio
   +tag-interaction-select
-        input(id="tag-select-01" type="radio" aria-label="selecionar tag"  name="vehicle" value="car")
-        label(for="tag-select-01")
-          +icon.fa-car
-          span Label
+    input(id="tag-select-01" type="radio" aria-label="selecionar tag"  name="vehicle" value="car")
+    label(for="tag-select-01")
+      +icon.fa-car
+      span Label
   +tag-interaction-select.selected.ml-3
     input(id="tag-select-02" type="radio" aria-label="selecionar tag" checked  name="vehicle" value="ship")
     label(for="tag-select-02")

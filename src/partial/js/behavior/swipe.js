@@ -1,5 +1,5 @@
 export class Swipe {
-  constructor(element, options = {}) {
+  constructor(element) {
     this.evtMap = {
       SWIPE_DOWN: [],
       SWIPE_LEFT: [],

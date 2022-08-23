@@ -383,10 +383,11 @@ export default class BRCookiebar {
    * @private
    */
   _getParentElementByClass(element, className) {
-    while (!element.classList.contains(className)) {
-      element = element.parentNode
+    parent = element.parentNode
+    while (!parent.classList.contains(className)) {
+      parent = parent.parentNode
     }
-    return element
+    return parent
   }
 
   /**

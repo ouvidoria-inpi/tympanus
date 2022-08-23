@@ -1,5 +1,5 @@
 @mixin list-configs {
-  @include list-tokens;
+  // @include list-tokens;
   @include list-default;
   @include list-item;
   // Lista dentro de lista
@@ -8,8 +8,8 @@
   @include list-data-lines;
 }
 
-@mixin list-tokens {
-}
+// @mixin list-tokens {
+// }
 
 // Item da lista complexa
 // É formado por: [support] content [support]

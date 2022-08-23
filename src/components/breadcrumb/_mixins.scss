@@ -1,13 +1,13 @@
 @mixin breadcrumb-configs {
-  @include breadcrumb-tokens;
+  // @include breadcrumb-tokens;
   @include breadcrumb-default;
   @include breadcrumb-list;
   @include breadcrumb-crumb;
   @include breadcrumb-card;
 }
 
-@mixin breadcrumb-tokens {
-}
+// @mixin breadcrumb-tokens {
+// }
 
 @mixin breadcrumb-default {
   display: inline-grid;
