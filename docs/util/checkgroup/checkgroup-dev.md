@@ -1,24 +1,6 @@
-[version]: # "1.0.0"
+[version]: # "1.0.1"
 
 ## Como usar
-
-### HTML (Checkbox Pai)
-
-```html
-<div class="br-checkbox">
-  <input name="name" type="checkbox" aria-label="label" data-parent="tag-group" data-checked-label="label-checked" data-unchecked-label="label-unchecked" checked indeterminate />
-  <label for="name">...</label>
-</div>
-```
-
-### HTML (Checkbox Filho)
-
-```html
-<div class="br-checkbox">
-  <input name="name" type="checkbox" aria-label="label" data-child="tag-group" checked/>
-  <label for="name">...</label>
-</div>
-```
 
 ### Atributos no checkbox pai
 
@@ -26,7 +8,7 @@
 
 | Atributo                  | Tipo     | Descrição                                                 |
 | ------------------------- | -------- | --------------------------------------------------------- |
-| `data-parent="tag-group"` | atributo | Indica que o checkbox é o pai e a tag indentifica o grupo |
+| `data-parent="tag-group"` | atributo | Indica que o checkbox é o pai e a tag identifica o grupo |
 
 #### Opcionais
 
@@ -88,11 +70,13 @@ Em seguida chamar o método setBehavior()
 
 ```javascript
 import Checkgroup from 'core'
-for (const trigger of component.document.querySelectorAll(
-      'input[type="checkbox"][data-parent]'
-    )) {
-      const checkgroup = new Checkgroup(trigger)
-      checkgroup.setBehavior()
-    }
+this.element
+      .querySelectorAll('input[type="checkbox"][data-parent]')
+      .forEach((trigger) => {
+        const checkgroup = new Checkgroup(trigger)
+        checkgroup.setBehavior()
+      })
     
 ```
+
+> **this.element**: elemento DOM onde vai ser instanciado o utilitário

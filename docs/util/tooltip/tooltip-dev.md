@@ -1,34 +1,10 @@
 [version]: # "1.0.0"
 
-<div class="br-message info" role="alert">
-<div class="icon" aria-label="Informação"><i class="fas fa-info-circle fa-lg" aria-hidden="true"></i></div>
-<div class="content">
-<p><strong>Dependência externa.</strong></p>
-<p>Este componente usa o vendor <a href="https://popper.js.org/">Popper</a>. Em caso de dúvidas leia a documentação de <a href="/ds/guias/uso-de-vendors">Uso de Vendors</a>.</p>
-</div>
-</div>
-</div>
+
 
 ## Como usar
 
-### HTML (Tooltip Texto)
 
-```html
-<a href="javascript:void(0);" data-tooltip-text="Texto de Informação!">
-</div>
-```
-
-### HTML (Tooltip Texto)
-
-```html
-
-  <a class="h5" href="javascript:void(0);" data-tooltip-target="#example-tooltip">Informação</a>
-              <div class="br-tooltip" id="example-tooltip" role="tooltip" data-toggle="tooltip" info="info" place="top">
-                <span class="text" role="tooltip">Fulano de Tal da Silva</span>
-                <span class="subtext">Diretor Presidente</span>
-              </div>
-
-```
 
 ### Atributos no Tooltip Texto
 
@@ -66,3 +42,12 @@ import Tooltip from 'core'
 
     
 ```
+
+#### Objeto de configuração
+
+| Propriedade   | Tipo   | Descrição                                                       |
+| ------------- | ------ | --------------------------------------------------------------- |
+| `activator`   | Object | Referência ao elemento (DOM) acionador                          |
+| `placement`   | String | Local aonde vai ser mostado o tooltip(top, right, left, bottom) |
+| `textTooltip` | String | Texto do tooltip                                                |
+| `type`        | String | Tipo de tooltip(info, warning)                                  |
