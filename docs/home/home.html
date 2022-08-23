@@ -1,32 +1,47 @@
 <style>
-	.gradient-blue {
+	section {
+		min-height: 394px;
+	}
+	#home-padrao-minimo img,
+	#home-downloads img,
+	#home-componentes img {
+		min-height: 330px;
+	}
+	/* BACKGROUNDS */
+	.bg-gradient-blue-vivid {
+		background-image: linear-gradient(var(--blue-vivid-5), var(--pure-0));
+	}
+	.bg-gradient-mint-cool {
 		background-image: linear-gradient(
-			var(--blue-warm-vivid-5),
+			to bottom,
+			var(--mint-cool-5),
 			var(--pure-0)
 		);
 	}
-	.gradient-green {
+	.bg-gradient-indigo-cool-vivid {
 		background-image: linear-gradient(
-			var(--green-cool-vivid-5),
+			to bottom,
+			var(--indigo-cool-vivid-5),
 			var(--pure-0)
 		);
 	}
-	.gradient-indigo {
-		background-image: linear-gradient(
-			var(--indigo-warm-vivid-5),
-			var(--pure-0)
-		);
+	@media (max-width: 1280px) {
+		section div {
+			text-align: center;
+		}
 	}
-	.gradient-orange {
-		background-image: linear-gradient(
-			var(--orange-warm-vivid-5),
-			var(--pure-0)
-		);
+	@media (max-width: 576px) {
+		#home-padrao-minimo img,
+		#home-downloads img,
+		#home-componentes img {
+			min-height: auto;
+		}
 	}
+	/* ///// */
 </style>
 <section
 	id="home-sobre"
-	class="gradient-blue text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 mt-n4 pt-8x pb-0"
+	class="bg-gradient-blue-vivid text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 mt-n4 pt-8x pb-0 px-lg-8x"
 >
 	<div class="row">
 		<div class="col-lg mb-8x mb-lg-0">
@@ -92,7 +107,7 @@
 			alt="Pessoas comentando o design system"
 		/>
 	</div>
-	<div class="d-none d-lg-block mt-8x text-right">
+	<div class="d-none d-lg-block text-right">
 		<img
 			src="imagens/ilustra-destaque.png"
 			class="img-fluid"
@@ -102,7 +117,7 @@
 </section>
 <section
 	id="home-padrao-minimo"
-	class="gradient-green text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 pt-8x pb-0"
+	class="bg-gradient-mint-cool text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 pt-8x pb-0 px-lg-8x"
 >
 	<div class="row">
 		<div class="col-lg order-12 order-lg-0">
@@ -140,12 +155,12 @@
 </section>
 <section
 	id="home-comunidade"
-	class="gradient-blue text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x"
+	class="bg-gradient-indigo-cool-vivid text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-2x px-lg-8x"
 >
 	<div class="row">
 		<div class="col-lg">
 			<h1
-				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mt-6x mb-5"
 			>
 				Faça parte da nossa comunidade
 			</h1>
@@ -181,7 +196,7 @@
 </section>
 <section
 	id="home-downloads"
-	class="gradient-indigo text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x"
+	class="bg-gradient-mint-cool text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x px-lg-8x"
 >
 	<div class="row">
 		<div class="col-lg">
@@ -221,7 +236,7 @@
 </section>
 <section
 	id="home-componentes"
-	class="gradient-blue text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x"
+	class="bg-gradient-indigo-cool-vivid text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x px-lg-8x"
 >
 	<div class="row align-items-center">
 		<div class="col-lg">
@@ -261,7 +276,7 @@
 </section>
 <section
 	id="home-explore"
-	class="gradient-orange text-center mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x"
+	class="bg-gradient-mint-cool text-center mx-n2 mx-sm-n6 px-2 px-sm-5 py-8x px-lg-8x"
 >
 	<h1
 		class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-5"
