@@ -125,10 +125,10 @@ Quando esta lista possuir mais de um item é recomendado que seja precedida de u
 
 ### 5. Mensagens de feedback contextual (Opcional)
 
-O componente mensagem pode ser utilizado para enviar mensagens informativas, de alerta, de erro ou validação (feedback contextual) devem ser o mais sucintas possível, de preferência não ultrapassando uma linha da mesma largura do campo de texto além de seguir suas diretrizes de componente.
+O componente mensagem pode ser utilizado para enviar mensagens informativas, de alerta, de erro (A) ou validação (feedback contextual) devem ser o mais sucintas possível, de preferência não ultrapassando uma linha da mesma largura do campo de texto além de seguir suas diretrizes de componente.
 Deve se posicionar abaixo do último item da lista de opções, alinhado à esquerda e respeitando uma margem superior de acordo com suas diretrizes.
 
-![Exemplo item opcao](imagens/radio-mensagem.png)
+![Exemplo item opção](imagens/radio-mensagem.png)
 *Mensagem de feedback contextual*
 
 ---
