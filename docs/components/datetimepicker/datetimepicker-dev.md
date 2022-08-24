@@ -2,102 +2,19 @@
 
 ## Como usar
 
-### Datepicker padrão
-
-```html
-<div class="br-datetimepicker" data-mode="single" data-type="text">
-  <div class="br-input has-icon">
-    <label for="simples-input">DateTimePicker simples</label>
-    <input class="has-icon" id="simples-input" type="text" placeholder="dd/mm/aaaa" data-input="data-input"/>
-    <button class="br-button circle small" type="button" aria-label="Abrir Timepicker" data-toggle="data-toggle" id="simples-input-btn"><i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
-```
-
-### Datepicker com customização
-
-```html
-<div class="br-datetimepicker" data-mode="single" data-type="text" datetimepicker-config="minDate: '15/04/2022',maxDate: '20/06/2022'">
-  <div class="br-input has-icon">
-    <label for="simples-input">DateTimePicker simples</label>
-    <input class="has-icon" id="simples-input" type="text" placeholder="dd/mm/aaaa" data-input="data-input"/>
-    <button class="br-button circle small" type="button" aria-label="Abrir Timepicker" data-toggle="data-toggle" id="simples-input-btn"><i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
-```
-
-### Datepicker com intervalo de datas
-
-```html
-<div class="br-datetimepicker" data-mode="range" data-type="text">
-  <div class="br-input has-icon">
-    <label for="range-input">DateTimePicker com intervalo de datas</label>
-    <input class="has-icon" id="range-input" type="text" placeholder="dd/mm/aaaa até dd/mm/aaaa" data-input="data-input"/>
-    <button class="br-button circle small" type="button" aria-label="Abrir Timepicker" data-toggle="data-toggle" id="range-input-btn"><i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
-```
-
-### Timepicker
-
-```html
-<div class="br-datetimepicker" data-mode="single" data-type="time">
-  <div class="br-input has-icon">
-    <label for="timepicker-input">Timepicker</label>
-    <input class="has-icon" id="timepicker-input" type="time" placeholder="hh:mm" data-input="data-input"/>
-    <button class="br-button circle small" type="button" aria-label="Abrir Timepicker" data-toggle="data-toggle" id="timepicker-input-btn"><i class="fas fa-clock" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
-```
-
-### Datepicker + Timepicker
-
-```html
-<div class="br-datetimepicker" data-mode="single" data-type="datetime-local">
-  <div class="br-input has-icon">
-    <label for="dateandtime-input">DatePicker + Timepicker</label>
-    <input class="has-icon" id="dateandtime-input" type="datetime-local" placeholder="dd/mm/aaaa hh:mm" data-input="data-input"/>
-    <button class="br-button circle small" type="button" aria-label="Abrir Timepicker" data-toggle="data-toggle" id="dateandtime-input-btn"><i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
-```
-
-### Elementos obrigatórios
-
-| Elemento             | Tipo   | Descrição                     |
-| -------------------- | ------ | ----------------------------- |
-| `.br-datetimepicker` | classe | Container do componente       |
-| `.br-input`          | classe | Container do componente input |
-
 ### Propriedades obrigatórias
 
-| Atributo     | Tipo     | Valor padrão                 | Descrição                                                            |
-| ------------ | -------- | ---------------------------- | -------------------------------------------------------------------- |
-| `data-mode`  | atributo | single ou range              | Modo do data única ou intervalo de data                              |
-| `data-type`  | atributo | text, time ou datetime-local | Tipo datetimepicker, timepicker ou datetimepicker + timepicker       |
-| `data-input` | boolean  | true                         | Indica que o input irá receber o valor selecionado no datetimepicker |
+| Atributo | Tipo   | Valor Padrão          | Descrição               |
+| -------- | ------ | --------------------- | ----------------------- |
+| class    | string | **br-datetimepicker** | Container do componente |
 
-> **Atenção**! O atributo `data-input` deve ser inserido na tag `<input>`.
+### Propriedades adicionais
 
-### Propriedades opcional
-
-| Atributo                | Tipo     | Valor padrão | Descrição                                                                                |
-| ----------------------- | -------- | ------------ | ---------------------------------------------------------------------------------------- |
-| `datetimepicker-config` | atributo | json         | Json com configurações conforme o [Flatpickr options](https://flatpickr.js.org/options/) |
-
-> **Atenção**! As variáveis **dateFormat,disableMobile, enableTime, minuteIncrement, node, minuteIncrement, nextArrow, noCalendar, prevArrow, time_24hr e wrap** não estão habilitados para alteração.
-
-## Dependências
-
-****
-
--   [Button](/ds/components/button)
--   [Input](/ds/components/input)
+| Atributo   | Tipo    | Valor Padrão                             | Descrição                                                            |
+| ---------- | ------- | ---------------------------------------- | -------------------------------------------------------------------- |
+| data-mode  | string  | **single** ou **range**                  | Modo do data única ou intervalo de data                              |
+| data-type  | string  | **text**, **time** ou **datetime-local** | Tipo datetimepicker, timepicker ou datetimepicker + timepicker       |
+| data-input | boolean | **true**                                 | Indica que o input irá receber o valor selecionado no datetimepicker |
 
 ## Instanciação do Componente
 
@@ -128,3 +45,14 @@ for (const brDateTimePicker of window.document.querySelectorAll(
   )
 }
 ```
+
+## Informações adicionais
+
+-   O atributo `data-input` deve ser inserido na tag `<input>`.
+-   O atributo `datetimepicker-config` pode ser usado conforme o [Flatpickr options](https://flatpickr.js.org/options/)
+-   As variáveis **dateFormat,disableMobile, enableTime, minuteIncrement, node, minuteIncrement, nextArrow, noCalendar, prevArrow, time_24hr e wrap** não estão habilitados para alteração.
+
+## Dependências
+
+-   [Button](/ds/components/button)
+-   [Input](/ds/components/input)
