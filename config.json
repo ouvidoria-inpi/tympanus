@@ -1730,7 +1730,7 @@
               "type": "documentation"
             }
           ],
-          "id": "css-category",
+          "id": "css",
           "label": "CSS",
           "type": "category"
         },
@@ -1738,12 +1738,14 @@
           "children": [
             {
               "default": false,
+              "designer": false,
               "ext": [
                 "html",
                 "md"
               ],
               "id": "accordion",
               "label": "Accordion",
+              "type": "util",
               "examples": [
                 {
                   "height": 300,
@@ -1754,12 +1756,14 @@
             },
             {
               "default": false,
+              "designer": false,
               "ext": [
                 "html",
                 "md"
               ],
               "id": "checkgroup",
               "label": "Checkgroup",
+              "type": "util",
               "examples": [
                 {
                   "height": 300,
@@ -1774,7 +1778,6 @@
               ]
             },
             {
-              "default": false,
               "examples": [
                 {
                   "height": 300,
@@ -1782,15 +1785,17 @@
                   "path": "examples/collapse-behavior"
                 }
               ],
+              "default": false,
+              "designer": false,
               "ext": [
                 "html",
                 "md"
               ],
               "id": "collapse",
-              "label": "Collapse"
+              "label": "Collapse",
+              "type": "util"
             },
             {
-              "default": false,
               "examples": [
                 {
                   "height": 300,
@@ -1798,15 +1803,17 @@
                   "path": "examples/dropdown-behavior"
                 }
               ],
+              "default": false,
+              "designer": false,
               "ext": [
                 "html",
                 "md"
               ],
               "id": "dropdown",
-              "label": "Dropdown"
+              "label": "Dropdown",
+              "type": "util"
             },
             {
-              "default": false,
               "examples": [
                 {
                   "height": 300,
@@ -1814,15 +1821,17 @@
                   "path": "examples/scrim-behavior"
                 }
               ],
+              "default": false,
+              "designer": false,
               "ext": [
                 "html",
                 "md"
               ],
               "id": "scrim",
-              "label": "Scrim"
+              "label": "Scrim",
+              "type": "util"
             },
             {
-              "default": false,
               "examples": [
                 {
                   "height": 300,
@@ -1835,16 +1844,19 @@
                   "path": "examples/tooltip-simples"
                 }
               ],
+              "default": false,
+              "designer": false,
               "id": "tooltip",
-              "label": "Tooltip"
+              "label": "Tooltip",
+              "type": "util"
             }
           ],
-          "id": "js-category",
+          "id": "js",
           "label": "JS",
           "type": "category"
         }
       ],
-      "id": "utilitario-category",
+      "id": "utilitarios",
       "label": "Utilitários",
       "type": "category"
     },
