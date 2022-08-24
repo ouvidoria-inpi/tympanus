@@ -2,59 +2,21 @@
 
 ## Como usar
 
-### Mensagem padrão
+### Propriedades obrigatórias
 
-```html
-<div class="br-message danger" role="alert">
-    <div class="icon" aria-label="informações erradas">
-        <i class="fas fa-times-circle fa-lg" aria-hidden="true"></i>
-    </div>
-    <div class="content">
-        <strong>Data de início do afastamento inválida.</strong>
-        <p>A data não pode ser superior à data atual.</p>
-    </div>
-    <div class="close">
-        <button
-            class="br-button circle small"
-            type="button"
-            aria-label="Fechar"
-        >
-            <i class="fas fa-times" aria-hidden="true"></i>
-        </button>
-    </div>
-</div>
-```
+| Atributo | Tipo   | Valor Padrão   | Descrição                      |
+| -------- | ------ | -------------- | ------------------------------ |
+| class    | string | **br-message** | Container para Tipo Padrão     |
+| class    | string | **feedback**   | Container para Tipo Contextual |
 
-### Mensagem contextual
+### Propriedades adicionais
 
-```html
-<span class="feedback danger" role="alert">
-    <i class="fas fa-times-circle" aria-hidden="true"></i>
-    O CPF deve conter apenas dígitos.
-</span>
-```
-
-### Configurações obrigatórias
-
-| Elemento       | Tipo      | Descrição                             |
-| -------------- | --------- | ------------------------------------- |
-| `br-message`   | classe    | Container para Mensagem padrão        |
-| `feedback`     | classe    | Container para Mensagem Contextual    |
-| `role="alert"` | attributo | Mantém a acessibilidade do componente |
-
-### Configurações Adicionais
-
-| Elemento  | Tipo   | Descrição                    |
-| --------- | ------ | ---------------------------- |
-| `danger`  | classe | Aplicar estado de Erro       |
-| `success` | classe | Aplicar estado de Sucesso    |
-| `info`    | classe | Aplicar estado de Informação |
-| `warning` | classe | Aplicar estado de Alerta     |
-
-## Acessibilidade
-
--   Ícones decorativos precisam ter o atributo `aria-hidden="true"`
--   Para os elementos que possuam somente ícone como conteúdo use o atributo `aria-label` manter a acessibilidade.
+| Atributo | Tipo   | Valor Padrão | Descrição               |
+| -------- | ------ | ------------ | ----------------------- |
+| class    | string | **danger**   | Mensagens de Erro       |
+| class    | string | **success**  | Mensagens de Sucesso    |
+| class    | string | **info**     | Mensagens de Informação |
+| class    | string | **warning**  | Mensagens de Alerta     |
 
 ## Dependências
 

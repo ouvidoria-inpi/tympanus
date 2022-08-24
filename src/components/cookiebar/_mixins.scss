@@ -115,29 +115,6 @@
     }
   }
 
-  .br-item {
-    .br-checkbox {
-      input {
-        + label:not(:empty) {
-          padding-left: calc(var(--checkbox-padding) + var(--checkbox-size));
-        }
-
-        &:checked {
-          + label::after {
-            left: 8px;
-            top: 4px;
-          }
-
-          &[indeterminate] {
-            + label::after {
-              top: 2px;
-            }
-          }
-        }
-      }
-    }
-  }
-
   .row {
     float: none;
     width: auto;
@@ -256,20 +233,8 @@
     }
 
     &.selected {
-      background-color: v(color-secondary-01);
-      color: v(color-secondary-08);
-
-      .br-checkbox {
-        input + label {
-          color: v(color-secondary-08) !important;
-        }
-      }
-
-      .feedback {
-        &.warning {
-          color: v(color-secondary-08);
-        }
-      }
+      @include light-mode;
+      background-color: var(--background);
     }
 
     .br-button {

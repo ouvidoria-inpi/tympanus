@@ -3,14 +3,14 @@
 
 // Mixins
 @mixin upload-configs {
-  @include upload-tokens;
+  // @include upload-tokens;
   @include upload-default;
   @include upload-list;
   @include upload-states;
 }
 
-@mixin upload-tokens {
-}
+// @mixin upload-tokens {
+// }
 
 @mixin upload-default {
   input {

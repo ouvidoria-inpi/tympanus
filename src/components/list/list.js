@@ -30,9 +30,9 @@ class BRList {
     // data-toggle="data-toggle"
     // debugger
 
-    this.component.querySelectorAll('.br-list').forEach((trigger) => {
-      // trigger.style.display = 'none'
-    })
+    // this.component.querySelectorAll('.br-list').forEach((trigger) => {
+    //   // trigger.style.display = 'none'
+    // })
     this.component
       .querySelectorAll('[data-toggle="collapse"]')
       .forEach((trigger) => {

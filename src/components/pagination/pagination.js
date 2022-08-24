@@ -1,4 +1,10 @@
+/** Classe para instanciar um objeto BRPagination*/
 class BRPagination {
+  /**
+   * Instancia do objeto
+   * @param {string} name - Nome do componente em minúsculo
+   * @param {object} component - Objeto referenciando a raiz do componente DOM
+   */
   constructor(name, component) {
     this.name = name
     this.component = component
@@ -6,11 +12,20 @@ class BRPagination {
     this._setBehaviors()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setBehaviors() {
     this._setActive()
     this._dropdownBehavior()
   }
 
+  /**
+   * Define visual do componente
+   * @private
+   */
+  // eslint-disable-next-line complexity
   _setLayout() {
     const ul = this.component.querySelector('ul')
     const pages = this.component.querySelectorAll('.page')
@@ -85,6 +100,11 @@ class BRPagination {
     }
   }
 
+  /**
+   * Cria elemento no intervalo
+   * @param {string} type - nome do tipo do elmento
+   * @private
+   */
   _createIntervalElement(type) {
     const interval = document.createElement('li')
     interval.setAttribute(`data-${type}-interval`, '')
@@ -101,6 +121,10 @@ class BRPagination {
     return interval
   }
 
+  /**
+   * Cria ação de clique na página
+   * @private
+   */
   _setActive() {
     for (const page of this.component.querySelectorAll('.page')) {
       page.addEventListener('click', (event) => {
@@ -109,6 +133,10 @@ class BRPagination {
     }
   }
 
+  /**
+   * Cria comportamentos do dropdown
+   * @private
+   */
   _dropdownBehavior() {
     for (const dropdown of this.component.querySelectorAll(
       '[data-toggle="dropdown"]'
@@ -118,6 +146,11 @@ class BRPagination {
     }
   }
 
+  /**
+   * Cria ação de clique no dropdown
+   * @param {object} element - referencia ao objeto DOM
+   * @private
+   */
   _dropdownToggle(element) {
     element.addEventListener('click', () => {
       if (element.getAttribute('aria-expanded') === 'false') {
@@ -133,6 +166,11 @@ class BRPagination {
     })
   }
 
+  /**
+   * Inicializa elemento de dropdown
+   * @param {object} element - referencia ao objeto DOM
+   * @private
+   */
   _dropdownInit(element) {
     element.parentElement.classList.add('dropdown')
     element.nextElementSibling.setAttribute('role', 'menu')
@@ -140,16 +178,31 @@ class BRPagination {
     this._dropdownClose(element)
   }
 
+  /**
+   * Ação de abrir dropdown
+   * @param {object} element - referencia ao objeto DOM
+   * @private
+   */
   _dropdownOpen(element) {
     element.setAttribute('aria-expanded', 'true')
     element.nextElementSibling.removeAttribute('hidden')
   }
 
+  /**
+   * Ação de fechar dropdown
+   * @param {object} element - referencia ao objeto DOM
+   * @private
+   */
   _dropdownClose(element) {
     element.setAttribute('aria-expanded', 'false')
     element.nextElementSibling.setAttribute('hidden', '')
   }
 
+  /**
+   * Define página ativa
+   * @param {object} currentPage - referencia ao objeto DOM
+   * @private
+   */
   _selectPage(currentPage) {
     this.component.querySelectorAll('.page').forEach((page) => {
       page.classList.remove('active')

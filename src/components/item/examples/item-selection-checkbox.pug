@@ -3,6 +3,15 @@ extends ../../../partial/pug/isolate
 block dependencies
   include ../item
   include ../../checkbox/checkbox
+  include ../../radio/radio
 
 block content
-  +item-selection-checkbox
+  .exemplo
+    +item-selection-checkbox
+    +item-selection-radio
+
+append style
+  style.
+    .exemplo {
+      max-width: 500px;
+    }

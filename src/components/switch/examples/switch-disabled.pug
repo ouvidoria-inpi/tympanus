@@ -1,3 +1,7 @@
-include ../switch
+extends ../../../partial/pug/isolate
 
-+switch-disabled
+block dependencies
+  include ../switch
+
+block content
+  +switch-disabled

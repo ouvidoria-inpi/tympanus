@@ -4,35 +4,42 @@
 *Exemplo de avatares.*
 
 Use avatar quando houver necessidade de representar visualmente um usuário no ambiente virtual, como acontece quando o usuário realiza *login*.
-
 Pode ser utilizado também em qualquer situação em que seja necessário representar graficamente o usuário como em *chats* ou mensagens específicas.
 
 ---
 
 ## Anatomia
 
-1. Superfície circular;
-2. Representação do usuário.
+| ID  | Nome                     |                             Referência                             | Uso         |
+| --- | ------------------------ | :----------------------------------------------------------------: | ----------- |
+| 1   | Superfície circular      | [Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Representação do usuário |                                ---                                 | Obrigatório |
 
 ![Anatomia do avatar.](imagens/avatar-anatomia.png)
 *Anatomia do avatar.*
 
-### 1- Superfície circular
+---
+
+## Detalhamento dos Itens
+
+### 1. Superfície circular (Obrigatório)
 
 A representação do usuário deve estar contida em uma superfície circular. A dimensão da superfície pode variar em uma escala de três dimensões que será melhor detalhado adiante.
 
 ![Exemplos de dimensões do avatar.](imagens/superficie.png)
 *Variações da dimensão da superfície do avatar.*
 
-A superfície, nos casos dos avatares icônico e letra, podem assumir quaisquer cores da paletra cromática do Design System GOV.BR sendo sugerida a utilização das cores de apoio. Tenha em mente a garantia do contraste entre ícone/letra e superfície.
+A superfície, nos casos dos avatares icônico e letra, podem assumir quaisquer cores da paleta cromática do Design System sendo sugerida a utilização das cores de apoio. Tenha em mente a garantia do contraste entre ícone/letra e superfície.
 
-### 2- Representação do usuário
+### 2. Representação do usuário (Obrigatório)
 
 A representação do usuário é como o usuário deseja ser reconhecido digitalmente. Há três maneiras de fazer isso:
 
-- Por um ícone do sistema;
-- Por uma foto escolhida pelo usuário;
-- Por um texto com a inicial do usuário.
+-   Por um ícone do sistema;
+
+-   Por uma foto escolhida pelo usuário;
+
+-   Por um texto com a inicial do usuário.
 
 ---
 
@@ -41,7 +48,9 @@ A representação do usuário é como o usuário deseja ser reconhecido digitalm
 As representações citadas acima definem os três tipos disponíveis de avatar:
 
 1. **Icônico**;
+
 2. **Fotográfico**;
+
 3. **Letra**.
 
 ### 1. Avatar Icônico
@@ -73,22 +82,24 @@ A qualquer momento o usuário poderá alterar este avatar por qualquer um dos de
 
 ---
 
-## Comportamento
+## Comportamentos
 
-### 1- Densidades
+### 1. Densidades
 
 Existem três densidades de avatar:
 
-- **Densidade alta**: facilmente incorporado em uma lista de contatos e cenários repetitivos semelhantes;
-- **Densidade média**: apropriado para menus personalizados e visualizações;
-- **Densidade baixa**: adequado para páginas de perfil.
+-   **Densidade alta**: facilmente incorporado em uma lista de contatos e cenários repetitivos semelhantes;
+
+-   **Densidade média**: apropriado para menus personalizados e visualizações;
+
+-   **Densidade baixa**: adequado para páginas de perfil.
 
 ![Exemplos de densidades do avatar.](imagens/avatar-scale.png)
 *Exemplos de densidades do avatar.*
 
 **Atenção:** Apesar das sugestões de uso citados acima, o designer ou desenvolvedor deve contar com bom senso ao optar pela dimensão que melhor se adapta ao *layout* planejado.
 
-### 2- Acionador *Dropdown*
+### 2. Acionador *Dropdown*
 
 Em algumas situações o *Avatar* pode ser utilizado como acionador *Dropdown*, geralmente quando há a necessidade de exibir algum detalhamento ou informação adicional a respeito do usuário representado neste. O usuário pode interagir sobre o *Avatar* com um `clique` ou `mouseover`, exibindo um elemento *Dropdown*. Observe o exemplo abaixo.
 
@@ -104,11 +115,11 @@ Em algumas situações o *Avatar* pode ser utilizado como acionador *Dropdown*, 
 
 ## Melhores Práticas
 
-- Dê a liberdade para o usuário escolher o avatar que melhor o representa e facilite o fluxo para a troca de imagem.
+-   Dê a liberdade para o usuário escolher o avatar que melhor o representa e facilite o fluxo para a troca de imagem.
 
-- Quando não houver a foto pessoal o usuário poderá optar entre uma imagem neutra de um ícone de usuário ou a sua inicial.
+-   Quando não houver a foto pessoal o usuário poderá optar entre uma imagem neutra de um ícone de usuário ou a sua inicial.
 
-- Uma boa idéia é associar o avatar ao uso de *tooltip* para mostrar o nome completo e/ou outras informações do perfil que sejam relevantes.
+-   Uma boa ideia é associar o avatar ao uso de *tooltip* para mostrar o nome completo e/ou outras informações do perfil que sejam relevantes.
 
 ---
 
@@ -118,9 +129,9 @@ Em algumas situações o *Avatar* pode ser utilizado como acionador *Dropdown*, 
 
 | Name              | Property     | Token/Value |
 | ----------------- | ------------ | ----------- |
-| Superficie small  | width/height | `40px`      |
-| Superficie medium | width/height | `100px`     |
-| Superficie Large  | width/height | `160px`     |
+| Superfície small  | width/height | `40px`      |
+| Superfície medium | width/height | `100px`     |
+| Superfície Large  | width/height | `160px`     |
 
 ## Tipografia
 

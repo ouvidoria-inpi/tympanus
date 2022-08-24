@@ -63,17 +63,15 @@ mixin menu-push
       .menu-scrim(data-dismiss="menu" tabindex="0")
 
 mixin menu-contextual
-  +menu.contextual
+  +menu.contextual.active
     .menu-trigger
       +button.primary.block.py-4(data-toggle="contextual")
         span.mr-1 Menu Contextual
         +icon.fa-angle-up.ml-5
     .menu-container
-      .menu-panel.shadow-lg-right.px-0.col-lg-2
+      .menu-panel
         nav.menu-body
           .menu-folder
-            .menu-item
-              span.content AGRUPAMENTO 1
             ul
               li
                 a.menu-item(href="javascript: void(0)")
@@ -84,18 +82,6 @@ mixin menu-contextual
               li
                 a.menu-item(href="javascript: void(0)")
                   span.content Item do menu 1
-            .menu-item
-              span.content AGRUPAMENTO 2
-            ul
-              li
-                a.menu-item(href="javascript: void(0)")
-                  span.content Item do menu 2
-              li
-                a.menu-item(href="javascript: void(0)")
-                  span.content Item do menu 2
-              li
-                a.menu-item(href="javascript: void(0)")
-                  span.content Item do menu 2
       .menu-scrim(data-dismiss="menu" tabindex="0")
 
 mixin menu-groupedby-label

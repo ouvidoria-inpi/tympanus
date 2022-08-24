@@ -1,3 +1,6 @@
+/**
+ * Dados para popular o input de exemplo
+ * @constant {string[]} */
 const inputData = [
   'Afeganistão',
   'África do Sul',

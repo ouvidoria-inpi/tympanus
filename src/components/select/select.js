@@ -1,4 +1,14 @@
+/**
+ * Classe do componente BRSelect
+ */
+
 class BRSelect {
+  /**
+   * Instancia o componente
+   * @property {string} name - Nome do componente em minúsculo
+   * @property {object} component - Objeto referenciando a raiz do componente DOM
+   */
+
   constructor(name, component) {
     this.name = name
     this.component = component
@@ -6,15 +16,28 @@ class BRSelect {
     this._setOptionsList()
     this._setBehavior()
   }
-
+  /**
+   * Retorna os valores dos elementos selecionados
+   * @returns {Object[]} elementos selecionados
+   *
+   */
   get selected() {
     return this._optionSelected('value')
   }
-
+  /**
+   * Retorna os elementos selecionados pelo inputValue
+   * @param {Object[]} elementos selecionados
+   * @returns
+   */
   get selectedValue() {
     return this._optionSelected('inputValue')
   }
 
+  /**
+   * Retorna os elementos options selecionados
+   * @param {Object[]} elementos selecionados
+   * @returns
+   */
   _optionSelected(strOption) {
     let selected = []
     for (const [index, option] of this.optionsList.entries()) {
@@ -32,6 +55,10 @@ class BRSelect {
     return selected
   }
 
+  /**
+   * Remove elementos com disbled
+   * @private
+   */
   _removeNotFoundElement() {
     const list = this.component.querySelector('.br-list')
     // debugger
@@ -40,6 +67,10 @@ class BRSelect {
     }
   }
 
+  /**
+   * Coloca o texto Item não encontrado no select
+   * @private
+   */
   _addNotFoundElement() {
     const tag = document.createElement('div')
     tag.classList.add('br-item')
@@ -48,6 +79,10 @@ class BRSelect {
     const list = this.component.querySelector('.br-list')
     list.appendChild(tag)
   }
+  /**
+   * Cria listagem de elementos do select
+   * @private
+   */
   _setOptionsList() {
     this.optionsList = []
     for (const item of this.component.querySelectorAll('.br-list .br-item')) {
@@ -66,19 +101,29 @@ class BRSelect {
       }
     }
   }
-
+  /**
+   * Reseta estado da lista
+   * @private
+   */
   resetOptionsList() {
     this._unsetSelectionBehavior()
     this._setOptionsList()
     this._setSelectionBehavior()
   }
-
+  /**
+   * Define o comportamento do componente
+   * @private
+   */
   _setBehavior() {
     this._setDropdownBehavior()
     this._setKeyboardBehavior()
     this._setSelectionBehavior()
     this._setFilterBehavior()
   }
+  /**
+   * Define o comportamento de dropdown
+   * @private
+   */
 
   _setDropdownBehavior() {
     for (const input of this.component.querySelectorAll(
@@ -108,6 +153,10 @@ class BRSelect {
       }
     })
   }
+  /**
+   * Define o comportamento de teclado
+   * @private
+   */
 
   _setKeyboardBehavior() {
     for (const input of this.component.querySelectorAll(
@@ -120,6 +169,10 @@ class BRSelect {
       list.addEventListener('keydown', this._handleKeydownOnList.bind(this))
     }
   }
+  /**
+   * Retira o comportamento de teclado
+   * @private
+   */
 
   _unsetKeyboardBehavior() {
     for (const input of this.component.querySelectorAll(
@@ -133,6 +186,11 @@ class BRSelect {
     }
   }
 
+  /**
+   * Verifica a navegação
+   * @param {object} event evento que foi ativado
+   * @private
+   */
   _handleKeydownOnInput(event) {
     //Close Select
     if (event.shiftKey && event.key === 'Tab') {
@@ -152,6 +210,10 @@ class BRSelect {
       }
     }
   }
+  /**
+   * Define comportamentos de teclado na lista
+   * @private
+   */
 
   _handleKeydownOnList(event) {
     event.preventDefault()
@@ -176,7 +238,10 @@ class BRSelect {
         break
     }
   }
-
+  /**
+   * Define comportamentos de teclado no option
+   * @private
+   */
   _setKeyClickOnOption(list) {
     for (const [index, item] of list.querySelectorAll('.br-item').entries()) {
       if (this.optionsList[index].focus) {
@@ -184,11 +249,28 @@ class BRSelect {
           '.br-radio input[type="radio"], .br-checkbox input[type="checkbox"]'
         )) {
           check.click()
+          this._sendEvent()
         }
       }
     }
   }
 
+  /**
+   * Envia o evento onchange
+   * @private
+   */
+  _sendEvent() {
+    const clickEvent = new CustomEvent('onChange', {
+      bubbles: true,
+      detail: this.component,
+    })
+    this.component.dispatchEvent(clickEvent)
+  }
+
+  /**
+   * preseleciona o elemento apartir da classe css .selected
+   * @private
+   */
   _setDefaultSelected() {
     const selectedItems = this.component.querySelectorAll('.br-list .selected')
 
@@ -200,6 +282,11 @@ class BRSelect {
     }
   }
 
+  /**
+   * Retorna posição do elemento no select
+   * @param {element} component elemento que vai ser pesquisado
+   * @returns {integer} valor da posição
+   */
   _positionSelected(component) {
     for (const [index, componente] of this.component
       .querySelectorAll('.br-list .br-item')
@@ -210,7 +297,13 @@ class BRSelect {
     }
     return 0
   }
-
+  /**
+   * Desfine comportamento do clique no checkbox
+   * @param {int} index
+   * @param {object} item -  Objeto do item clicado
+   * @param {object} event  -  Objeto do evento do clique
+   * @private
+   */
   _handleClickOnCheck(index, item, event) {
     if (!this.multiple) {
       for (const [index2, item2] of this.component
@@ -248,8 +341,12 @@ class BRSelect {
         }
       }
     }
+    this._sendEvent()
   }
-
+  /**
+   * Define comportamentos na seleção
+   * @private
+   */
   _setSelectionBehavior() {
     this.selectionHandler = []
     this._setDefaultSelected()
@@ -267,13 +364,19 @@ class BRSelect {
       }
     }
   }
-
+  /**
+   * retira comportamento  de clique na seleção
+   * @private
+   */
   _unsetSelectionBehavior() {
     this.selectionHandler.forEach((item) => {
       item.element.removeEventListener('click', item.handler, false)
     })
   }
-
+  /**
+   * Define comportamentos no filtro do input
+   * @private
+   */
   _setFilterBehavior() {
     for (const input of this.component.querySelectorAll(
       '.br-input input[type="text"]'
@@ -294,7 +397,10 @@ class BRSelect {
       })
     }
   }
-
+  /**
+   * Define filtro no list
+   * @private
+   */
   _filter(value) {
     let hasVisible = false
     for (const [index, item] of this.component
@@ -318,11 +424,13 @@ class BRSelect {
       }
     }
     if (hasVisible === false) {
-      // debugger
       this._addNotFoundElement()
     }
   }
-
+  /**
+   * Define atributo checked com click
+   * @private
+   */
   _setAttribute() {
     for (const item2 of this.component.querySelectorAll('.br-list .br-item')) {
       for (const check2 of item2.querySelectorAll(
@@ -334,6 +442,13 @@ class BRSelect {
       }
     }
   }
+
+  /**
+   * Seleciona o elemento e retira checked dos outros elementos
+   * @param {integer} index Posição do elemento na lista
+   * @param {*} item elemento em que vai ser selecionado
+   * @private
+   */
   _setSelected(index, item) {
     item.classList.add('selected')
     for (const check of item.querySelectorAll('.br-radio, .br-checkbox')) {
@@ -347,6 +462,12 @@ class BRSelect {
     this._setInput()
   }
 
+  /**
+   * Retira o estado selecionado do elemento
+   * @param {integer} index Posição do elemento na lista
+   * @param {*} item elemento em que vai ser desselecionado
+   * @private
+   */
   _removeSelected(index, item) {
     item.classList.remove('selected')
     for (const check of item.querySelectorAll('.br-radio, .br-checkbox')) {
@@ -359,7 +480,10 @@ class BRSelect {
       this._setInput()
     }
   }
-
+  /**
+   * Determina o input
+   * @private
+   */
   _setInput() {
     for (const input of this.component.querySelectorAll(
       '.br-input input[type="text"]'
@@ -375,7 +499,11 @@ class BRSelect {
       }
     }
   }
-
+  /**
+   * Retorna elemento posterior ao focado
+   * @returns {object}
+   * @private
+   */
   // eslint-disable-next-line complexity
   _getNextItem() {
     const list = this.component.querySelectorAll('.br-list .br-item')
@@ -411,7 +539,11 @@ class BRSelect {
     }
     return ''
   }
-
+  /**
+   * Retorna elemento anterior ao focado
+   * @returns {object}
+   * @private
+   */
   _getPreviousItem() {
     const list = this.component.querySelectorAll('.br-list .br-item')
     let iFocused
@@ -434,7 +566,10 @@ class BRSelect {
       return list[iVisible]
     }
   }
-
+  /**
+   * Reseta valor do input
+   * @private
+   */
   _resetInput() {
     for (const input of this.component.querySelectorAll(
       '.br-input input[type="text"]'
@@ -442,12 +577,19 @@ class BRSelect {
       input.value = ''
     }
   }
-
+  /**
+   * Reseta o focus dos elementos
+   * @private
+   */
   _resetFocus() {
     for (const option of this.optionsList) {
       option.focus = false
     }
   }
+  /**
+   * Reseta o focus dos elementos visiveis
+   * @private
+   */
 
   _resetVisible() {
     const list = this.component.querySelectorAll('.br-list .br-item')
@@ -456,7 +598,10 @@ class BRSelect {
       list[index].classList.remove('d-none')
     }
   }
-
+  /**
+   * Abre o select aberto
+   * @private
+   */
   _openSelect() {
     for (const list of this.component.querySelectorAll('.br-list')) {
       list.setAttribute('expanded', '')
@@ -469,7 +614,10 @@ class BRSelect {
     }
     this._resetInput()
   }
-
+  /**
+   * Fecha o select aberto
+   * @private
+   */
   _closeSelect() {
     for (const list of this.component.querySelectorAll('.br-list')) {
       list.removeAttribute('expanded')

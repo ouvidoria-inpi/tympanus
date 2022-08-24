@@ -1,10 +1,21 @@
+/** Classe para instanciar um objeto BRTab*/
+
 class BRTab {
+  /**
+   * Instancia do objeto
+   * @param {string} name - Nome do componente em minúsculo
+   * @param {object} component - Objeto referenciando a raiz do componente DOM
+   */
   constructor(name, component) {
     this.name = name
     this.component = component
     this._setBehavior()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setBehavior() {
     for (const ancor of this.component.querySelectorAll('.tab-nav')) {
       this.height = ancor.clientHeight
@@ -23,7 +34,7 @@ class BRTab {
       ancor.style.setProperty('--height-nav', `${this.height}px`)
       ancor.style.setProperty('--right-gradient-nav', `${this.leftPosition}px`)
 
-      this.positionScroll(ancor, this.component)
+      this.positionScroll(ancor)
 
       this.navigationRight = this.navigationRight + 4
 
@@ -31,8 +42,8 @@ class BRTab {
         ancor.classList.add('tab-nav-right')
       }
 
-      ancor.onscroll = (event) => {
-        this.positionScroll(ancor, this.component)
+      ancor.onscroll = () => {
+        this.positionScroll(ancor)
 
         if (this.navigationLeft <= 0) {
           ancor.classList.add('tab-nav-left')
@@ -61,14 +72,17 @@ class BRTab {
       )
       ancor.addEventListener('keyup', (e) => {
         e.preventDefault()
-        this.positionKeyboard(e, this)
+        this.positionKeyboard(e)
       })
     }
     this.tabitems = this.component.querySelectorAll('tab-item')
   }
 
-  positionKeyboard(event, componentTab) {
-    // event.preventDefault()
+  /**
+   * Mapeia as teclas pressionadas
+   * @param {event} event - evento que disparou a ação
+   */
+  positionKeyboard(event) {
     const keys = {
       end: 35,
       home: 36,
@@ -83,7 +97,6 @@ class BRTab {
     switch (key) {
       case keys.end:
         event.preventDefault()
-        // Activate last tab
         this.clean()
         this._switchTab(this.tabitems[this.tabitems.length - 1])
         this._switchContent(this.tabitems[this.tabitems.length - 1])
@@ -97,8 +110,6 @@ class BRTab {
         this.tabitems[0].focus()
         event.stopPropagation()
         break
-      // Up and down are in keydown
-      // because we need to prevent page scroll >:)
       case keys.left:
         event.preventDefault()
         this.position(event.target, -1)
@@ -124,6 +135,11 @@ class BRTab {
     }
   }
 
+  /**
+   * Define o deslocamento da posição ativa
+   * @property {object} target - referencia ao objeto DOM
+   * @property {number} direction - incremento à posição
+   */
   positionActive(target, direction) {
     let contComponent = 0
     let contComponentActive = 0
@@ -153,13 +169,24 @@ class BRTab {
     }
   }
 
+  /**
+   * Define o deslocamento da posição ativa do tab-item interno
+   * @property {object} target - referencia ao objeto DOM
+   * @property {number} direction - incremento à posição
+   */
   position(target, direction) {
     this.positionQuery(target, direction, '.tab-item')
   }
 
+  /**
+   * Define o deslocamento da posição ativa do elemento referenciado
+   * @property {object} target - referencia ao objeto DOM
+   * @property {number} direction - incremento à posição
+   * @property {string} query - string de referencia
+   */
   positionQuery(target, direction, query) {
     let contComponent = 0
-    const contComponentActive = 0
+    // const contComponentActive = 0
     let contComponentFocus = 0
     const tabItems2 = target.parentElement.parentElement.querySelectorAll(query)
     for (const component of tabItems2) {
@@ -181,6 +208,10 @@ class BRTab {
     }
   }
 
+  /**
+   * Define a posição ativa do elemento referenciado
+   * @property {object} target - referencia ao objeto DOM
+   */
   setPosition(target) {
     let contComponent = 0
     let contComponentActive = 0
@@ -198,13 +229,13 @@ class BRTab {
     }
     if (tabItems2.length > contComponentActive && contComponentActive >= 0) {
       this.clean()
-
       this._switchContent(tabItems2[contComponentActive])
-
-      // x[0].focus()
     }
   }
 
+  /**
+   * Reinicia estados
+   */
   clean() {
     for (const ancor of event.currentTarget.parentElement.querySelectorAll(
       'button'
@@ -221,7 +252,11 @@ class BRTab {
     }
   }
 
-  positionScroll(ancor, component) {
+  /**
+   * Realiza rolagem até a âncora
+   * @property {object} ancor - referencia ao objeto DOM
+   */
+  positionScroll(ancor) {
     this.navItems = ancor.querySelectorAll('.tab-item')
     this.lastItempos = Math.ceil(
       this.navItems[this.navItems.length - 1].getBoundingClientRect().right
@@ -231,6 +266,11 @@ class BRTab {
     )
     this.navigationRight = Math.floor(ancor.getBoundingClientRect().right)
   }
+
+  /**
+   * Muda para a aba referenciada
+   * @property {object} currentTab - referencia ao objeto DOM
+   */
   _switchTab(currentTab) {
     for (const tabItem of this.component.querySelectorAll(
       '.tab-nav .tab-item:not([not-tab="true"])'
@@ -244,6 +284,10 @@ class BRTab {
     }
   }
 
+  /**
+   * Muda para o conteudo da aba referenciada
+   * @property {object} currentTab - referencia ao objeto DOM
+   */
   _switchContent(currentTab) {
     for (const button of currentTab.querySelectorAll('button')) {
       for (const tabPanel of this.component.querySelectorAll(

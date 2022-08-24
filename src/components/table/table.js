@@ -1,8 +1,15 @@
 import Collapse from '../../partial/js/behavior/collapse'
 import Dropdown from '../../partial/js/behavior/dropdown'
 
+/** Classe para instanciar um objeto BRTable*/
 /* eslint-disable complexity */
 class BRTable {
+  /**
+   * Instancia do objeto
+   * @param {string} name - Nome do componente em minúsculo
+   * @param {object} component - Objeto referenciando a raiz do componente DOM
+   * @param {number} sequence - 'índice do componente para sobreposição'
+   */
   constructor(name, component, sequence) {
     this.name = name
     this.component = component
@@ -12,9 +19,12 @@ class BRTable {
     this._setBehaviors()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setBehaviors() {
     this._makeResponsiveTable()
-    this._headerBehavior()
     this._setHeaderWidth()
     this._searchBehavior()
     this._dropdownBehavior()
@@ -24,6 +34,10 @@ class BRTable {
     this._getBRHeaderHeight()
   }
 
+  /**
+   * Configura a altura do cabeçalho
+   * @private
+   */
   _getBRHeaderHeight() {
     const BRHeader = document.querySelector('.br-header')
     if (BRHeader) {
@@ -33,6 +47,10 @@ class BRTable {
     }
   }
 
+  /**
+   * Configura reponsividade da tabela
+   * @private
+   */
   _makeResponsiveTable() {
     const responsiveClass = 'responsive'
     if (!this.component.querySelector(`.${responsiveClass}`)) {
@@ -43,25 +61,12 @@ class BRTable {
     }
   }
 
-  _headerBehavior() {
-    // this._hideThead()
-
-    window.addEventListener('resize', () => {
-      // this._hideThead()
-    })
-
-    for (const responsive of this.component.querySelectorAll('.responsive')) {
-      if (window.innerWidth > 575) {
-        // this._setSyncScroll(responsive)
-      }
-    }
-
-    // this._cloneHeaders()
-  }
-
+  /**
+   * Configura rolagem
+   * @private
+   */
   _makeScroller() {
     const scrollerTag = document.createElement('div')
-    // this._setSyncScroll(scrollerTag)
     scrollerTag.classList.add('scroller')
     for (const header of this._table.querySelectorAll('thead tr th')) {
       const clonedHeader = document.createElement('div')
@@ -82,27 +87,10 @@ class BRTable {
     return scrollerTag
   }
 
-  _cloneHeaders() {
-    const headersTag = document.createElement('div')
-    headersTag.classList.add('headers')
-    headersTag.style.top = `${this._header.offsetHeight}px`
-    headersTag.appendChild(this._makeScroller())
-    this._header.after(headersTag)
-  }
-
-  _hideThead() {
-    this._table.style.marginTop = `-${
-      this._table.querySelector('thead').offsetHeight
-    }px`
-  }
-
-  _setSyncScroll(element) {
-    element.classList.add('syncscroll')
-    element.setAttribute('name', `table-${this._sequence}`)
-    element.setAttribute('style', 'overflow-y: hidden')
-    // element.setAttribute('tabindex', 0)
-  }
-
+  /**
+   * Configura largura do cabeçalho
+   * @private
+   */
   _setHeaderWidth() {
     for (const clonedHeader of this.component.querySelectorAll(
       '.headers > div'
@@ -114,6 +102,11 @@ class BRTable {
       }
     }
   }
+
+  /**
+   * Configura coportamento do dropdown
+   * @private
+   */
   _dropdownBehavior() {
     this.component
       .querySelectorAll('[data-toggle="dropdown"]')
@@ -129,6 +122,10 @@ class BRTable {
       })
   }
 
+  /**
+   * Configura comportamento de colapsar
+   * @private
+   */
   _collpaseBehavior() {
     this.component
       .querySelectorAll('[data-toggle="collapse"]')
@@ -144,6 +141,10 @@ class BRTable {
       })
   }
 
+  /**
+   * Configura comportamento da busca
+   * @private
+   */
   _searchBehavior() {
     if (this.component.dataset.search) {
       const trigger = this.component.querySelector('[data-toggle="search"]')
@@ -170,10 +171,21 @@ class BRTable {
     }
   }
 
+  /**
+   * Inicializa a busca
+   * @private
+   * @param {object} trigger - Objeto referente ao elemento que dispara a ação
+   */
   _searchInit(trigger) {
     trigger.setAttribute('aria-expanded', 'false')
   }
 
+  /**
+   * Abre a busca
+   * @private
+   * @param {object} trigger - Objeto referente ao elemento que dispara a ação
+   * @param {object} target - Objeto referente ao alvo da ação
+   */
   _searchOpen(trigger, target) {
     trigger.setAttribute('aria-expanded', 'true')
     target.classList.add('show')
@@ -181,6 +193,12 @@ class BRTable {
     target.querySelector('input').focus()
   }
 
+  /**
+   * Fecha a busca
+   * @private
+   * @param {object} trigger - Objeto referente ao elemento que dispara a ação
+   * @param {object} target - Objeto referente ao alvo da ação
+   */
   _searchClose(trigger, target) {
     target.querySelector('input').value = ''
     target.classList.remove('show')
@@ -189,13 +207,16 @@ class BRTable {
     trigger.setAttribute('aria-expanded', 'false')
   }
 
+  /**
+   * Configura densidades
+   * @private
+   */
   _densityBehavior() {
     const desityTriggers = this.component.querySelectorAll('[data-density]')
     for (const desityTrigger of desityTriggers) {
       desityTrigger.addEventListener('click', () => {
         this.component.classList.remove('small', 'medium', 'large')
         this.component.classList.add(desityTrigger.dataset.density)
-        // this._hideThead()
         this._dropdownClose(
           desityTrigger
             .closest('.dropdown')
@@ -205,6 +226,10 @@ class BRTable {
     }
   }
 
+  /**
+   * Configura ações de clique
+   * @private
+   */
   _setClickActions() {
     const headerCheckbox = this.component.querySelector(
       '.headers [type="checkbox"]'
@@ -237,6 +262,12 @@ class BRTable {
     }
   }
 
+  /**
+   * Configura seleção da linha
+   * @private
+   * @param {object} checkbox - Objeto referente ao checkbox
+   * @param {boolean} check - define se a linha deve ser selecionada
+   */
   _setRow(checkbox, check) {
     const tr = checkbox.parentNode.parentNode.parentNode
     if (check) {
@@ -250,6 +281,14 @@ class BRTable {
     }
   }
 
+  /**
+   * Configura seleção da linha
+   * @private
+   * @param {object} checkbox - Objeto referente ao checkbox
+   * @param {object} selectedBar - Objeto referente a barra contextual
+   * @param {object} tableCheckboxes - Objeto referente a lista de checkboxes
+   * @param {object} headerCheckbox - Objeto referente ao checkbox do header
+   */
   _checkRow(checkbox, selectedBar, tableCheckboxes, headerCheckbox) {
     const check = checkbox.checked
     this._setRow(checkbox, check)
@@ -261,18 +300,35 @@ class BRTable {
     )
   }
 
+  /**
+   * Seleciona todas as linhas
+   * @private
+   * @param {object} tableCheckboxes - Objeto referente a lista de checkboxes
+   */
   _checkAllRows(tableCheckboxes) {
     for (const checkbox of tableCheckboxes) {
       this._setRow(checkbox, true)
     }
   }
 
+  /**
+   * Desseleciona todas as linhas
+   * @private
+   * @param {object} tableCheckboxes - Objeto referente a lista de checkboxes
+   */
   _uncheckAllRows(tableCheckboxes) {
     for (const checkbox of tableCheckboxes) {
       this._setRow(checkbox, false)
     }
   }
 
+  /**
+   * Seleciona toda a tabela
+   * @private
+   * @param {object} selectedBar - Objeto referente a barra contextual
+   * @param {object} tableCheckboxes - Objeto referente a lista de checkboxes
+   * @param {object} headerCheckbox - Objeto referente ao checkbox do header
+   */
   _checkAllTable(selectedBar, tableCheckboxes, headerCheckbox) {
     let count = tableCheckboxes.length
     const infoCount = selectedBar.querySelector('.info .count')
@@ -286,6 +342,14 @@ class BRTable {
     this._setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox)
   }
 
+  /**
+   * Define visualização dos itens selecionados na barra contextual
+   * @private
+   * @param {number} count - número de itens selecionados
+   * @param {object} selectedBar - Objeto referente a barra contextual
+   * @param {object} tableCheckboxes - Objeto referente a lista de checkboxes
+   * @param {object} headerCheckbox - Objeto referente ao checkbox do header
+   */
   _setSelectedBar(count, selectedBar, tableCheckboxes, headerCheckbox) {
     const infoCount = selectedBar.querySelector('.info .count')
     const infoText = selectedBar.querySelector('.info .text')
@@ -309,109 +373,6 @@ class BRTable {
       }
       selectedBar.classList.remove('show')
     }
-  }
-
-  /**
-   * @fileoverview syncscroll - scroll several areas simultaniously
-   * @version 0.0.3
-   *
-   * @license MIT, see http://github.com/asvd/intence
-   * @copyright 2015 asvd <heliosframework@gmail.com>
-   */
-  // static _syncscroll() {
-  //   const scroll = 'scroll'
-  //   const elems = document.getElementsByClassName(`sync${scroll}`)
-  //   const EventListener = 'EventListener'
-  //   const length = 'length'
-  //   const names = {}
-  //   // clearing existing listeners
-  //   let i, j, el, found, name
-  //   for (name in names) {
-  //     if (Object.prototype.hasOwnProperty.call(names, name)) {
-  //       for (i = 0; i < names[name][length]; i++) {
-  //         names[name][i][`remove${EventListener}`](
-  //           scroll,
-  //           names[name][i].syn,
-  //           0
-  //         )
-  //       }
-  //     }
-  //   }
-  //   // setting-up the new listeners
-  //   for (i = 0; i < elems[length]; i++) {
-  //     found = j = 0
-  //     el = elems[i]
-  //     if (!(name = el.getAttribute('name'))) {
-  //       // name attribute is not set
-  //       continue
-  //     }
-  //     el = el[`${scroll}er`] || el // needed for intence
-  //     // searching for existing entry in array of names;
-  //     // searching for the element in that entry
-  //     for (; j < (names[name] = names[name] || [])[length]; j++) {
-  //       found |= names[name][j] === el
-  //     }
-  //     if (!found) {
-  //       names[name].push(el)
-  //     }
-  //     el.eX = el.eY = 0
-  //     this._elSyn(el, name, scroll, elems, EventListener, length, names)
-  //   }
-  // }
-
-  static _elSyn(el, name, scroll, elems, EventListener, length, names) {
-    const addEventListener = `add${EventListener}`
-    const client = 'client'
-    const Height = 'Height'
-    const Left = 'Left'
-    const mathRound = Math.round
-    const Top = 'Top'
-    const Width = 'Width'
-    el[addEventListener](
-      scroll,
-      () => {
-        const otherElems = names[name]
-        let scrollX = el[scroll + Left]
-        let scrollY = el[scroll + Top]
-        const xRate = scrollX / (el[scroll + Width] - el[client + Width])
-        const yRate = scrollY / (el[scroll + Height] - el[client + Height])
-        const updateX = scrollX !== el.eX
-        const updateY = scrollY !== el.eY
-        el.eX = scrollX
-        el.eY = scrollY
-        otherElems.forEach((element) => {
-          if (element !== el) {
-            if (
-              updateX &&
-              mathRound(
-                element[scroll + Left] -
-                  (scrollX = element.eX =
-                    mathRound(
-                      xRate *
-                        (element[scroll + Width] - element[client + Width])
-                    ))
-              )
-            ) {
-              element[scroll + Left] = scrollX
-            }
-            if (
-              updateY &&
-              mathRound(
-                element[scroll + Top] -
-                  (scrollY = element.eY =
-                    mathRound(
-                      yRate *
-                        (element[scroll + Height] - element[client + Height])
-                    ))
-              )
-            ) {
-              element[scroll + Top] = scrollY
-            }
-          }
-        })
-      },
-      0
-    )
   }
 }
 

@@ -8,20 +8,16 @@
 }
 
 @mixin item-tokens {
-  --item-font-weight: var(--font-weight);
   --item-padding-x: var(--spacing-scale-2x);
   --item-padding-y: var(--spacing-scale-base);
   --item-padding: var(--item-padding-y) var(--item-padding-x);
-  --focus-offset: calc(var(--spacing-scale-half) * -1);
-  --item-display: block;
-  --item-align-items: center;
 }
 
 @mixin item-default {
   border: 0;
   color: var(--color);
-  display: var(--item-display);
-  font-weight: var(--item-font-weight);
+  display: block;
+  font-weight: var(--font-weight);
   padding: var(--item-padding);
   text-align: left;
   width: 100%;
@@ -32,8 +28,8 @@
 
     .col,
     [class*="col-"] {
-      padding-left: v(spacing-scale-base);
-      padding-right: v(spacing-scale-base);
+      padding-left: var(--spacing-scale-base);
+      padding-right: var(--spacing-scale-base);
     }
   }
   // Fix para floats internos
@@ -182,9 +178,8 @@
 
 @mixin item-center {
 
-  --item-display: flex;
-  --item-display-active-background: transparent;
-  align-items: var(--item-align-items);
+  align-items: center;
+  display: flex;
 
   .content {
     flex: 1;

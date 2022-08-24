@@ -1,4 +1,10 @@
+/** Classe para instanciar um objeto BRInput*/
 class BRInput {
+  /**
+   * Instancia do objeto
+   * @param {string} name - Nome do componente em minúsculo
+   * @param {object} component - Objeto referenciando a raiz do componente DOM
+   */
   constructor(name, component) {
     this.name = name
     this.component = component
@@ -6,11 +12,19 @@ class BRInput {
     this._setBehavior()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setBehavior() {
     this._setPasswordViewBehavior()
     this._setAutocompleteBehavior()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setPasswordViewBehavior() {
     for (const inputPassword of this.component.querySelectorAll(
       'input[type="password"]'
@@ -31,6 +45,11 @@ class BRInput {
     }
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   * @param {event} event - referência ao elemento que dispara a ação
+   */
   _toggleShowPassword(event) {
     for (const icon of event.currentTarget.querySelectorAll('.fas')) {
       if (icon.classList.contains('fa-eye')) {
@@ -53,6 +72,10 @@ class BRInput {
     }
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setAutocompleteBehavior() {
     for (const inputAutocomplete of this.component.querySelectorAll(
       'input.search-autocomplete'
@@ -75,6 +98,11 @@ class BRInput {
     }
   }
 
+  /**
+   * Monta os items de busca para o elemento input
+   * @private
+   * @param {object} element - referencia ao elemento input
+   */
   _buildSearchItems(element) {
     const searchList = window.document.createElement('div')
     searchList.setAttribute('class', 'search-items')
@@ -112,6 +140,10 @@ class BRInput {
     }
   }
 
+  /**
+   * Limpa elementos da busca
+   * @private
+   */
   _clearSearchItems() {
     for (const searchItems of this.component.querySelectorAll(
       '.search-items'
@@ -123,6 +155,11 @@ class BRInput {
     }
   }
 
+  /**
+   * Define comportamentos do teclado
+   * @private
+   * @param {event} event - referência ao elemento que dispara a ação do teclado
+   */
   _handleArrowKeys(event) {
     switch (event.keyCode) {
       case 13:
@@ -164,6 +201,10 @@ class BRInput {
     }
   }
 
+  /**
+   * Muda o foco do item de busca
+   * @private
+   */
   _switchFocus() {
     for (const searchItems of this.component.querySelectorAll(
       '.search-items'
@@ -181,6 +222,11 @@ class BRInput {
     }
   }
 
+  /**
+   * Preenche lista de dados
+   * @private
+   * @param {string[]} dataList - Lista de dados
+   */
   setAutocompleteData(dataList) {
     this.dataList = dataList
   }

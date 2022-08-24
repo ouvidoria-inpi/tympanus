@@ -7,12 +7,6 @@
 }
 
 @mixin textarea-tokens {
-  --textarea-background: var(--color-secondary-01);
-  --textarea-color: var(--color-secondary-07);
-  --textarea-border: var(--color-secondary-06);
-  --textarea-font-weight: var(--font-weight-medium);
-  --textarea-text-size: var(--font-size-scale-up-01);
-  --textarea-border-radius: 6px;
   --textarea-padding: var(--textarea-medium);
   --textarea-small: var(--spacing-scale-base);
   --textarea-medium: var(--spacing-scale-baseh);
@@ -22,12 +16,16 @@
 @mixin textarea-dark-mode {
   &.inverted,
   &.dark-mode {
-    @include dark-mode;
+    &,
+    label {
+      --color: var(--color-dark);
+      --focus-color: var(--focus-color-dark);
+    }
   }
 }
 
 @mixin textarea-default {
-  color: var(--text-color);
+  color: var(--color);
 
   label {
     display: inline-block;
@@ -35,19 +33,15 @@
   }
 
   textarea {
-    background: var(--textarea-background);
-    border: 1px solid var(--textarea-border);
-    border-radius: var(--textarea-border-radius);
-    color: var(--textarea-color);
+    background: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--color);
     display: block;
-    font-size: var(--textarea-text-size);
-    font-weight: var(--textarea-font-weight);
+    font-size: var(--font-size-scale-up-01);
+    font-weight: var(--font-weight-medium);
     padding: var(--textarea-padding);
     width: 100%;
-
-    &::placeholder {
-      color: var(--textarea-color);
-    }
   }
 }
 
@@ -56,7 +50,7 @@
     &.#{$color},
     &[data-#{$color}] {
       textarea {
-        --textarea-border: var(--#{$color});
+        border-color: var(--#{$color});
         border-width: 2px;
       }
     }

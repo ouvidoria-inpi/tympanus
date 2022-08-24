@@ -1,4 +1,10 @@
+/** Classe para instanciar um objeto BRTextArea*/
 class BRTextArea {
+  /**
+   * Instancia do objeto
+   * @param {string} name - Nome do componente em minúsculo
+   * @param {object} component - Objeto referenciando a raiz do componente DOM
+   */
   constructor(name, component) {
     this.name = name
     this.component = component
@@ -6,6 +12,10 @@ class BRTextArea {
     this._setKeyup()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setBehavior() {
     this.limit = this.component.querySelector('.limit')
     this.current = this.component.querySelector('.current')
@@ -19,8 +29,12 @@ class BRTextArea {
     this.currentValue = this.component.querySelector('.current')
   }
 
+  /**
+   * Define ações do teclado
+   * @private
+   */
   _setKeyup() {
-    this.component.addEventListener('keyup', (event) => {
+    this.component.addEventListener('keyup', () => {
       const characterCount = this.component.querySelector('textarea').textLength
       if (characterCount <= this.maximum && !this.characters) {
         this.limit.innerHTML = ''

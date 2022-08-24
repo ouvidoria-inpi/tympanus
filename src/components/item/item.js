@@ -1,15 +1,30 @@
+/** Classe para instanciar um objeto BRItem*/
+
 class BRItem {
+  /**
+   * Instancia do objeto
+   * @param {string} name - Nome do componente em minúsculo
+   * @param {object} component - Objeto referenciando a raiz do componente DOM
+   */
   constructor(name, component) {
     this.name = name
     this.component = component
     this._setBehavior()
   }
 
+  /**
+   * Define comportamentos do componente
+   * @private
+   */
   _setBehavior() {
     this._setCheckboxSelection()
     this._setRadioSelection()
   }
 
+  /**
+   * Define comportamentos do checkbox
+   * @private
+   */
   _setCheckboxSelection() {
     for (const checkbox of this.component.querySelectorAll(
       '.br-checkbox input[type="checkbox"]'
@@ -27,6 +42,10 @@ class BRItem {
     }
   }
 
+  /**
+   * Define comportamentos do radio
+   * @private
+   */
   _setRadioSelection() {
     for (const radio of this.component.querySelectorAll(
       '.br-radio input[type="radio"]'
