@@ -206,16 +206,21 @@ class BRMenu {
    * @param {object} element - referência ao Objeto que fará a ação
    */
   _toggleDropMenu(element) {
-    element.addEventListener('click', () => {
-      // Fecha Drop Menu caso esteja aberto
-      if (element.parentNode.classList.contains('active')) {
-        element.parentNode.classList.remove('active')
-        return
-      }
+    // Verifica se o elemento já possui click listener através de um atributo especial
+    if (!element.hasAttribute('data-click-listener')) {
+      element.addEventListener('click', () => {
+        // Fecha Drop Menu caso esteja aberto
+        if (element.parentNode.classList.contains('active')) {
+          element.parentNode.classList.remove('active')
+          return
+        }
 
-      // Abre Drop Menu
-      element.parentNode.classList.add('active')
-    })
+        // Abre Drop Menu
+        element.parentNode.classList.add('active')
+      })
+      // Adiciona atributo especial para indicar que o elemento já possui click listener
+      element.setAttribute('data-click-listener', 'true')
+    }
   }
 
   /**
@@ -224,24 +229,29 @@ class BRMenu {
    * @param {object} element - referência ao Objeto que fará a ação
    */
   _toggleSideMenu(element) {
-    element.addEventListener('click', () => {
-      // Esconde todos os itens
-      this._hideItems(element)
+    // Verifica se o elemento já possui click listener através de um atributo especial
+    if (!element.hasAttribute('data-click-listener')) {
+      element.addEventListener('click', () => {
+        // Esconde todos os itens
+        this._hideItems(element)
 
-      // Mostra itens do Side Menu ativo
-      this._showItems(element.parentNode)
+        // Mostra itens do Side Menu ativo
+        this._showItems(element.parentNode)
 
-      // Fecha Side Menu caso esteja aberto
-      if (element.parentNode.classList.contains('active')) {
-        this._closeSideMenu(element)
+        // Fecha Side Menu caso esteja aberto
+        if (element.parentNode.classList.contains('active')) {
+          this._closeSideMenu(element)
+          element.focus()
+          return
+        }
+
+        // Abre Side Menu
+        element.parentNode.classList.add('active')
         element.focus()
-        return
-      }
-
-      // Abre Side Menu
-      element.parentNode.classList.add('active')
-      element.focus()
-    })
+      })
+      // Adiciona atributo especial para indicar que o elemento já possui click listener
+      element.setAttribute('data-click-listener', 'true')
+    }
   }
 
   /**
@@ -289,16 +299,19 @@ class BRMenu {
    * @param {string} icon - nome da classe font awesome do ícone
    */
   _createIcon(element, icon) {
-    const menuIconContainer = document.createElement('span')
-    menuIconContainer.classList.add('support')
+    // Verifica se já existe container para o ícone
+    if (!element.querySelectorAll('span.support').length) {
+      const menuIconContainer = document.createElement('span')
+      menuIconContainer.classList.add('support')
 
-    const menuIcon = document.createElement('i')
-    menuIcon.classList.add('fas')
-    menuIcon.classList.add(icon)
-    menuIcon.setAttribute('aria-hidden', 'true')
+      const menuIcon = document.createElement('i')
+      menuIcon.classList.add('fas')
+      menuIcon.classList.add(icon)
+      menuIcon.setAttribute('aria-hidden', 'true')
 
-    menuIconContainer.appendChild(menuIcon)
-    element.appendChild(menuIconContainer)
+      menuIconContainer.appendChild(menuIcon)
+      element.appendChild(menuIconContainer)
+    }
   }
 }
 
