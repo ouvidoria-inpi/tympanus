@@ -1,4 +1,10 @@
 <style>
+	section {
+		min-height: 450px;
+	}
+	.img-components-mob {
+		width: 100%;
+	}
 	#faca-parte {
 		position: relative;
 	}
@@ -9,31 +15,32 @@
 		height: 40%;
 		width: 40%;
 	}
-	.bg-gradient {
+	/* BACKGROUNDS */
+	.bg-gradient-blue-vivid {
+		background-image: linear-gradient(var(--blue-vivid-5), var(--pure-0));
+	}
+	.bg-gradient-mint-cool {
 		background-image: linear-gradient(
-			to right,
-			var(--blue-warm-vivid-5),
+			to bottom right,
+			var(--mint-cool-5),
 			var(--pure-0)
 		);
 	}
-	.bg-webc {
+	.bg-gradient-cyan-vivid {
 		background: linear-gradient(
-			97.96deg,
-			var(--pure-0) 0%,
-			var(--cyan-vivid-10) 37.1%,
-			var(--cyan-vivid-20) 62.22%
+			to bottom right,
+			var(--pure-0),
+			var(--cyan-vivid-5),
+			var(--cyan-vivid-20)
 		);
 	}
-	.bg-contribua {
-		background: linear-gradient(
-			302.17deg,
-			#d5fbf3 -38.29%,
-			rgba(213, 251, 243, 0) 84.15%
+	.bg-gradient-indigo-cool-vivid {
+		background-image: linear-gradient(
+			var(--pure-0),
+			var(--indigo-cool-vivid-5)
 		);
 	}
-	.bg-contato {
-		background: linear-gradient(var(--pure-0), var(--blue-warm-vivid-5));
-	}
+	/* ///// */
 	.br-card {
 		position: relative;
 		text-decoration: none !important;
@@ -41,38 +48,38 @@
 	.card-content > * {
 		min-height: 140px;
 	}
+	@media (max-width: 1280px) {
+		.bg-contato div {
+			text-align: center;
+		}
+	}
 	@media (min-width: 992px) {
 		.img-globe {
 			top: 100px;
 			height: auto;
 			width: auto;
 		}
-		.bg-gradient {
-			background-image: linear-gradient(
-				var(--blue-warm-vivid-5),
-				var(--pure-0)
-			);
+	}
+	@media (min-width: 576px) {
+		.img-wc-mobile {
+			display: none;
 		}
-		.bg-webc {
-			background: linear-gradient(
-				96.28deg,
-				var(--pure-0) 21.47%,
-				var(--cyan-vivid-10) 80.25%,
-				var(--cyan-vivid-20) 94.52%
-			);
+		.img-wc {
+			display: block;
 		}
-		.bg-contato {
-			background: linear-gradient(
-				to top,
-				var(--pure-0),
-				var(--blue-warm-vivid-5)
-			);
+	}
+	@media (max-width: 576px) {
+		.img-wc-mobile {
+			display: block;
+		}
+		.img-wc {
+			display: none;
 		}
 	}
 </style>
 <section
 	id="faca-parte"
-	class="text-center mx-n2 mx-sm-n6 px-2 px-sm-5 pb-3 pb-lg-8x"
+	class="text-center mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
 >
 	<div class="img-globe">
 		<img src="imagens/globe.png" alt="Destaque grande" />
@@ -95,7 +102,9 @@
 		Veja abaixo como contribuir.
 	</p>
 </section>
-<section class="bg-gradient mx-n2 mx-sm-n6 px-2 px-sm-5 py-4 py-lg-8x">
+<section
+	class="bg-gradient-blue-vivid mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
+>
 	<div class="text-center">
 		<h1
 			class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light"
@@ -114,6 +123,7 @@
 			<a
 				class="br-card d-flex flex-column flex-fill hover"
 				href="https://govbr-ds.gitlab.io/govbr-ds-wiki/"
+				target="_blank"
 			>
 				<div class="card-header">
 					<p class="text-up-02 text-weight-bold my-0">
@@ -139,7 +149,7 @@
 					</div>
 				</div>
 			</a>
-			<p class="text-base mb-6 mb-lg-0">
+			<p class="text-up-01 mb-6 mb-lg-0">
 				Aqui você poderá encontrar orientações, checklists, guias,
 				referências e todo tipo informação útil para o desenvolvimento
 				do projeto.
@@ -149,6 +159,7 @@
 			<a
 				class="br-card d-flex flex-column flex-fill hover"
 				href="https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core"
+				target="_blank"
 			>
 				<div class="card-header">
 					<p class="text-up-02 text-weight-bold my-0">
@@ -170,7 +181,7 @@
 					</div>
 				</div>
 			</a>
-			<p class="text-base mb-6 mb-lg-0">
+			<p class="text-up-01 mb-6 mb-lg-0">
 				Acesse as orientações sobre como clonar, instalar e utilizar o
 				projeto.
 			</p>
@@ -179,6 +190,7 @@
 			<a
 				class="br-card d-flex flex-column flex-fill hover"
 				href="https://discord.com/channels/806947332398252062/896382401691918347"
+				target="_blank"
 			>
 				<div class="card-header">
 					<p class="text-up-02 text-weight-bold my-0">
@@ -201,7 +213,7 @@
 					</div>
 				</div>
 			</a>
-			<p class="text-base mb-6 mb-lg-0">
+			<p class="text-up-01 mb-6 mb-lg-0">
 				Por meio deste canal, você poderá tirar dúvidas, sugerir
 				melhorias, buscar orientações ou fornecer qualquer outro tipo de
 				feedback.
@@ -209,7 +221,9 @@
 		</div>
 	</div>
 </section>
-<section class="bg-webc mx-n2 mx-sm-n6 px-2 px-sm-5 py-4">
+<section
+	class="bg-gradient-cyan-vivid mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
+>
 	<div class="row">
 		<div class="col-lg-6 d-flex justify-content-center align-items-center">
 			<div class="text-center">
@@ -224,15 +238,17 @@
 					tecnologias.
 				</p>
 				<a
-					class="br-button auto-sm block d-sm-none d-lg-inline-flex secondary mb-5 d-none"
+					class="br-button block d-inline-flex auto-sm secondary mb-5"
 					href="https://gitlab.com/govbr-ds/dev/wbc/govbr-ds-wbc"
+					target="_blank"
 				>
+					<i class="fas fa-cubes mr-1" aria-hidden="true"></i>
 					Entenda Mais
 				</a>
 			</div>
 		</div>
 		<div class="col-lg-6">
-			<div class="d-none d-lg-block">
+			<div class="img-wc text-center">
 				<img
 					src="imagens/web-components.png"
 					alt="Imagens Web Components"
@@ -240,7 +256,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="d-lg-none text-center">
+	<div class="img-wc-mobile text-center">
 		<div class="mx-n2">
 			<img
 				src="imagens/web-components-mob.png"
@@ -248,16 +264,12 @@
 				alt="Imagem Designer"
 			/>
 		</div>
-		<a
-			class="br-button auto-sm block secondary"
-			href="https://gitlab.com/govbr-ds/dev/wbc/govbr-ds-wbc"
-		>
-			Entenda Mais
-		</a>
 	</div>
 </section>
-<section class="bg-contribua mx-n2 mx-sm-n6 px-2 px-sm-5 pb-5 py-lg-8x">
-	<div class="row d-flex align-items-center pt-5">
+<section
+	class="bg-gradient-mint-cool mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
+>
+	<div class="row d-flex align-items-center text-center">
 		<div
 			class="col-lg-3 col-xs-12 d-md-none d-sm-flex order-xs-1 order-1 my-5 justify-content-center"
 		>
@@ -285,14 +297,16 @@
 			>
 				Contribua com Soluções de Design e Front-end
 			</h1>
-			<p class="text-up-01 text-sm-up-02 text-weight-regular">
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-6">
 				Aquela solução de design ou funcionalidade que atendeu bem seu
 				projeto, pode servir como um modelo para todos.
 			</p>
 			<a
 				class="br-button auto-sm block secondary"
 				href="https://govbr-ds.gitlab.io/govbr-ds-wiki/comunidade/contribuindo-com-o-ds/"
+				target="_blank"
 			>
+				<i class="fas fa-code-branch mr-1" aria-hidden="true"></i>
 				Veja como
 			</a>
 		</div>
@@ -308,29 +322,74 @@
 		</div>
 	</div>
 </section>
-<section class="text-center mx-n2 mx-sm-n6 px-2 py-8x px-sm-5 py-lg-8x">
-	<div class="row">
+
+<section
+	class="bg-gradient-indigo-cool-vivid mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
+>
+	<div class="box-colabore row text-center align-items-center">
 		<div class="col-lg">
 			<img
-				src="imagens/ilustra-colabore.png"
-				class="img-fluid"
-				alt="Colabore Conosco"
+				width="400px"
+				src="imagens/juntos.png"
+				class="img-fluid mb-3"
+				alt="Imagem representando colaboração"
 			/>
-			<p class="text-up-02 text-sm-up-03 text-weight-semi-bold mt-4">
-				Colabore Conosco
-			</p>
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light"
+			>
+				Colabore com o Design System
+			</h1>
 			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-6">
-				Faça parte dessa jornada e
-				<br />
-				ajude-nos a evoluir.
+				O time acredita que para um produto crescer de forma consistente
+				e alinhada com seus usuários é preciso estar aberto a
+				comentários, sugestões e críticas. Ninguém melhor que você para
+				nos dizer como podemos realizar entregas mais eficientes. Por
+				isso, gostaríamos de ouvir o que você tem para nos contar e
+				juntos fazermos um Design System para todos. Qualquer feedback é
+				importante para nós, pois só assim podemos saber onde estamos
+				errando e acertando, desta forma aprimorarmos nossas entregas.
 			</p>
 			<a
 				class="br-button auto-sm block secondary mb-5"
 				href="https://forms.office.com/r/WJRJR8kEsQ"
+				target="_blank"
+				aria-label="Colaborar com o GOVBR-DS"
 			>
+				<i class="fas fa-hands-helping mr-1" aria-hidden="true"></i>
 				Colaborar
 			</a>
 		</div>
+		<div class="col-lg">
+			<p class="text-lg-up-03 text-up-01 my-5 pt-6">
+				Gostaríamos de saber coisas do tipo:
+			</p>
+			<div class="p-3 p-lg-5">
+				<p class="text-lg-up-02 text-up-01 mb-3">
+					- Quais componentes você gostaria de encontrar nas próximas
+					versões do Design System?
+				</p>
+				<p class="text-lg-up-02 text-up-01 mb-3">
+					- O que podemos fazer para melhorar os componentes que já
+					oferecemos?
+				</p>
+				<p class="text-lg-up-02 text-up-01 mb-3">
+					- Como o Design System pode ser mais fácil e objetivo?
+				</p>
+				<p class="text-lg-up-02 text-up-01 mb-0">
+					- O que fazer para estarmos ainda mais próximos de você?
+				</p>
+			</div>
+			<p class="text-lg-up-03 text-up-01 my-5">
+				Enfim, tudo o que pode ser melhorado nos interessa.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section
+	class="bg-gradient-mint-cool text-center mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
+>
+	<div class="row">
 		<div class="col-lg">
 			<img
 				src="imagens/ilustra-feedback.png"
@@ -375,11 +434,11 @@
 	</div>
 </section>
 <section
-	class="bg-contato text-center mx-n2 mx-sm-n6 mb-n5 mb-lg-0 px-2 px-sm-5 py-6"
+	class="bg-contato text-center mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-10x px-lg-8x"
 >
 	<div class="row">
 		<div
-			class="col-lg-4 col-sm-12 order-lg-1 order-sm-2 order-2 text-md-right text-sm-center"
+			class="col-lg-4 col-sm-12 order-lg-1 order-sm-2 order-2 text-lg-right text-sm-center"
 		>
 			<img
 				src="imagens/contato.png"
@@ -388,14 +447,14 @@
 			/>
 		</div>
 		<div
-			class="col-lg-6 col-sm-12 col-xs-6 text-md-left text-sm-center order-lg-2 order-sm-1 order-1"
+			class="col-lg-6 col-sm-12 col-xs-6 text-lg-left text-sm-center order-lg-2 order-sm-1 order-1"
 		>
 			<h1
 				class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light"
 			>
 				Entre em Contato Conosco
 			</h1>
-			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-5">
+			<p class="text-up-01 text-sm-up-02 text-weight-regular mb-6">
 				Envie-nos um email ou acesse nosso canal no Discord, estamos
 				dispostos a te atender.
 			</p>
