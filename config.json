@@ -1913,15 +1913,6 @@
         "html"
       ],
       "hideLabel": true,
-      "id": "colabore-com-o-govbr-ds",
-      "label": "Colabore com o Design System",
-      "type": "documentation"
-    },
-    {
-      "ext": [
-        "html"
-      ],
-      "hideLabel": true,
       "id": "home",
       "label": "Página principal",
       "type": "documentation"
