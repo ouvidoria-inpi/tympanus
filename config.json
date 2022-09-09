@@ -142,6 +142,24 @@
               "image": "assets/imgs/ICONE-MANUAIS.png",
               "label": "Guia de Transformação Digital - Ações de Comunicação Social",
               "path": "assets/govbr-ds-dev-core/downloads/GovbrManualTransformacaoDigital.pdf"
+            },
+            {
+              "description": "O objetivo deste documento é guiar a construção de painéis analíticos no Serpro a fim de que estes possam seguir um padrão visual, garantindo que nas soluções sejam aplicadas as melhores práticas e dentro de determinados padrões.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": "Design System para Painéis Analíticos v1.0.0",
+              "path": "assets/govbr-ds-dev-core/downloads/DesignSystemparaPaineisAnaliticosv1-0-0.pdf"
+            },
+            {
+              "description": "Você não precisa ser um designer para criar um painel que comunique claramente seus principais objetivos e métricas. Se você está apenas começando ou tem um painel que precisa ser repensado, nossa lista de verificação de design de painel ajudará você a alcançar os resultados que procura.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": "Geckoboard Dashboard Design Guide",
+              "path": "assets/govbr-ds-dev-core/downloads/geckoboard-dashboard-design-guide.pdf"
+            },
+            {
+              "description": "A visualização de dados oferece uma tremenda oportunidade de obter insights de dados e entender visualmente informações complexas.",
+              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "label": "Radiant Advisors Good Data Data Visualization Competency Center",
+              "path": "assets/govbr-ds-dev-core/downloads/Radiant-Advisors_GoodData_DataVisualizationCompetencyCenter.pdf"
             }
           ],
           "id": "manuais-orientadores",

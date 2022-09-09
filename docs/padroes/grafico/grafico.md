@@ -362,7 +362,7 @@ Há uma ligação forte entre os gráficos de dispersão e bolha, mas apesar das
 
 ### 7. Outros Tipos de Gráficos
 
-Além dos gráficos apresentados, existe uma grande variedade de gráficos, todos com características e aplicações próprias. Alguns gráficos podem representar visualmente com eficiência as informações apresentadas, facilitando a interpretação e visualização dos dados. Caso a escolha não tenha sido apropriada, o gráfico pode agir de forma completamente oposta ao desejado. Por isso é muito importante conhecer os principais tipos e suas características de uso. Para mais informações, estamos disponibilizando o arquivo detalhado para download: [Design System para Painéis Analíticos v1.0.0](https://serprodrive.serpro.gov.br/s/AnEwBrA8TwdnGdH) | Formato PDF - 5,17 MB
+Além dos gráficos apresentados, existe uma grande variedade de gráficos, todos com características e aplicações próprias. Alguns gráficos podem representar visualmente com eficiência as informações apresentadas, facilitando a interpretação e visualização dos dados. Caso a escolha não tenha sido apropriada, o gráfico pode agir de forma completamente oposta ao desejado. Por isso é muito importante conhecer os principais tipos e suas características de uso. Para mais informações, estamos disponibilizando o arquivo detalhado para download: [Design System para Painéis Analíticos v1.0.0](/ds/downloads/manuais-orientadores) | Formato PDF - 5,17 MB
 
 ![Exemplo de outros tipos de gráficos.](imagens/outros-graficos.png)
 *Exemplo de outros tipos de gráficos.*
@@ -839,9 +839,9 @@ Para maiores informações acesse: [componente *loading*](/ds/components/loading
 
 ### Referências em Gráficos
 
--   [geckoboard-dashboard-design-guide.pdf](https://serprodrive.serpro.gov.br/s/7DNtygdJcAzASST) | Formato PDF - 1,7 MB
+-   [geckoboard-dashboard-design-guide.pdf](/ds/downloads/manuais-orientadores) | Formato PDF - 1,7 MB
 
--   [Radiant-Advisors*GoodData*DataVisualizationCompetencyCenter.pdf](https://serprodrive.serpro.gov.br/s/ADccP4T8pCfmznt) | Formato PDF - 1,43 MB
+-   [Radiant-Advisors*GoodData*DataVisualizationCompetencyCenter.pdf](/ds/downloads/manuais-orientadores) | Formato PDF - 1,43 MB
 
 -   [The Ultimate Guide: Data Visualization vs. Storytelling with Data](https://blog.presentation-company.com/data-visualization-vs.-data-storytelling-whats-the-difference)
 
