@@ -60,7 +60,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Design System GOV.BR CSS-->
         <link
             rel="stylesheet"
-            href="node_modules\@govbr-ds\core\dist\core.min.css"
+            href="node_modules/@govbr-ds/core/dist/core.min.css"
         />
         <!-- Fontawesome-->
         <link
@@ -74,7 +74,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script type="module" src="node_modules\@govbr-ds\core\dist\core.min.js"></script>
+        <script type="module" src="node_modules/@govbr-ds/core/dist/core.min.js"></script>
     </body>
 </html>
 ```
