@@ -1,3 +1,9 @@
+@mixin cookiebar-modal {
+  .#{$prefix}modal {
+    --modal-size: var(--modal-auto);
+  }
+}
+
 // TODO: Remover customizações internas de outros componentes
 @mixin cookiebar-configs {
   --cookiebar-shadow: var(--surface-shadow-lg-up);
