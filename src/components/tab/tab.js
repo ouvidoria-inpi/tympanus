@@ -101,6 +101,7 @@ class BRTab {
     const key = event.keyCode
     this.tabitems = this.component.querySelectorAll('.tab-item')
     this.buttons = this.component.querySelectorAll('button')
+   
     switch (key) {
       case keys.end:
         event.preventDefault()
@@ -136,6 +137,7 @@ class BRTab {
         event.preventDefault()
         this.hiddenTooltips()
         event.target.click()
+        
         event.stopPropagation()
         break
       default:
@@ -145,8 +147,9 @@ class BRTab {
 
   /**
    *  Esconde todos tooltip 
+   *  
    */
-  _hiddenTooltips(){
+  hiddenTooltips(){
     const tooltips = document.querySelectorAll('.br-tooltip')
     
     tooltips.forEach(element => {
