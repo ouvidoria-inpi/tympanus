@@ -24,7 +24,7 @@
 Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
+<script src="node_modules/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
 > O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.

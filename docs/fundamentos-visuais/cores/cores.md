@@ -1,4 +1,3 @@
-[version]: # (7.1.6)
 
 A aplicação correta da paleta de cores visa trazer consistência ao *Design System* e contribuir para garantir uma interface unificada e facilmente reconhecível pelos seus usuários. É fundamental que a paleta esteja alinhada aos Princípios do *Design System* e seja aplicada corretamente na biblioteca de componentes contribuindo para o equilíbrio entre os diversos produtos e sistemas do governo.
 
@@ -48,7 +47,7 @@ Para o *Design System* foi analisada a relação de contraste entre *a cor aplic
 
 Interfaces digitais do governo devem utilizar sempre as cores pré-definidas. Havendo a necessidade de acrescentar uma nova cor à paleta do DS, faz-se necessário que a cor seja testada do ponto de vista de acessibilidade e passe por uma prévia aprovação da equipe de design do DS.
 
-*OBS:* Consulte a acessibilidade das cores usadas no Design System na [Tabela de Contraste](#contrast-table).
+*OBS:* Consulte a acessibilidade das cores usadas no Design System na [Tabela de Contraste](/ds/fundamentos-visuais/cores#contrast-table).
 
 ---
 
@@ -90,7 +89,7 @@ Existem algumas famílias que não estão visíveis dentro dos círculos cromát
 
 -   Família Pura: `Pure`
 
-A lista de todas as cores disponíveis podem ser encontradas na [Paleta do Design System](#paleta-do-govbr-ds).
+A lista de todas as cores disponíveis pode ser encontradas na [Paleta do Design System](/ds/fundamentos-visuais/cores#paleta-do-govbr-ds).
 
 ---
 
@@ -124,7 +123,7 @@ Abaixo estão listadas as principais funções das cores, as recomendações de 
 
 **OBS:** Cada função está ligada a um ou mais fundamentos. Procure as documentações relacionadas para maiores detalhes.
 
-### 1. Função *Container* ([Superfícies](/fundamentos-visuais/superficie))
+### 1. Função *Container* ([Superfícies](/ds/fundamentos-visuais/superficie))
 
 As *cores de superfície* são utilizadas como base cromática neutra para composição do tema e compõem harmonicamente com as demais cores. São usadas especificamente em planos de fundo nas telas da interface e superfícies de componentes. Também devem proporcionar contraste com o texto e elementos interativos, assim como qualquer outro elemento de comunicação visual na interface, como imagens, ilustrações, ícones, etc.
 
@@ -155,7 +154,7 @@ As *cores de superfície* são utilizadas como base cromática neutra para compo
 ![Cor Superfície - Família Blue-Warm-Vivid](imagens/blue-superficie-dark.png)
 *Cor Superfície - Família `Blue Warm Vivid` para Fundos Escuros*
 
-### 2. Função Leitura ([Tipografia](/fundamentos-visuais/tipografia) e [Iconografia](/fundamentos-visuais/iconografia))
+### 2. Função Leitura ([Tipografia](/ds/fundamentos-visuais/tipografia) e [Iconografia](/ds/fundamentos-visuais/iconografia))
 
 São as cores usadas nos elementos que necessitam de legibilidade, como textos e ícones, por exemplo. A função principal dessas cores é proporcionar contraste com a *Cor Superfície* usada na tela ou elementos. Logo, para toda *Cor Superfície*, existe uma *Cor Leitura* contrastante.
 
@@ -179,7 +178,7 @@ São as cores usadas nos elementos que necessitam de legibilidade, como textos e
 ![Cor Leitura - Família Pure](imagens/pure-family.png)
 *Cor Leitura - Família `Pure` para Fundos Escuros*
 
-### 3. Função *Feedback* ([Estados](/fundamentos-visuais/estados))
+### 3. Função *Feedback* ([Estados](/ds/fundamentos-visuais/estados))
 
 São representações visuais para feedbacks interativos ou informacionais relacionadas aos elementos na interface. Podemos subdividir essa função em dois grupos de estados: *interação* e *avisos*.
 
@@ -215,7 +214,7 @@ Para este tipo de cor, utilizam-se as famílias `Blue Warm` e `Blue Warm Vivid`.
 
 ##### Especificação Avisos
 
-São cores fortemente reconhecidas pela boa parte dos usuários e relacionadas a avisos específicos. Consulte o documento [Fundamentos Visuais > Estados](/fundamentos-visuais/estados) para maiores informações.
+São cores fortemente reconhecidas pela boa parte dos usuários e relacionadas a avisos específicos. Consulte o documento [Fundamentos Visuais > Estados](/ds/fundamentos-visuais/estados) para maiores informações.
 
 ###### Feedback Informação
 
@@ -1030,7 +1029,7 @@ Para checar qualquer combinação de cores não apresentadas na tabela, consulte
 
 -   [Contrast Ratio](https://contrast-ratio.com/)
 
--   [Color Relative Luminance Calculator](https://contrastchecker.online/color-relative-luminance-calculator)
+-   [Color Relative Luminance Calculator](https://www.leserlich.info/werkzeuge/kontrastrechner/index-en.php)
 
 -   [Color Kit](https://colorkit.io/shades-tints)
 

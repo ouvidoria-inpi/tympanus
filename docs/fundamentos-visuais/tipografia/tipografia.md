@@ -1,4 +1,3 @@
-[version]: # (7.2.3)
 
 Para a apresentação dos elementos textuais do *Design System* do Governo Federal, somente uma família de fonte é utilizada: a *Rawline*. Sua escolha foi feita devido à diversidade de pesos da fonte que facilita o uso e a criação de hierarquias entre os textos, bem como a compreensão dos elementos da tela.
 
@@ -30,7 +29,7 @@ As interfaces devem cumprir as diferentes necessidades de acessibilidade. Sendo 
 
 Sempre que possível, utilize a tabela de estilo e as cores padrão para texto para manter o conteúdo legível/acessível ao usuário.
 
-Veja [Cores](/fundamentos-visuais/cores/) para maiores detalhes sobre aplicação de cores nos textos.
+Veja [Cores](https://www.gov.br/ds/fundamentos-visuais/cores) para maiores detalhes sobre aplicação de cores nos textos.
 
 A semântica deve ser levada em consideração ao se criar as marcações do texto dentro do HTML para que os dispositivos de leitores de tela consigam distinguir os diferentes elementos do texto.
 

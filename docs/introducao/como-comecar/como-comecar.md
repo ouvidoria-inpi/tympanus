@@ -1,24 +1,19 @@
-[version]: # '2.4.3'
 
 Sugerimos a leitura dos [Princípios do Design System](/ds/introducao/principios), eles são a base para construção de todos os artefatos disponibilizados e devem ser aplicados também aos produtos que adotem o padrão digital de governo.
 
 **Designer**
 
-Se você é um designer e está começando a adotar o design system, indicamos a leitura dos [fundamentos de design](/ds/fundamentos-visuais/cores). Eles auxiliam na tomada de decisões, melhoram a assertividade de seu produto e garante que a solução criada esteja aderente aos padrões existentes.
+Se você é um designer e está começando a adotar o design system, indicamos a leitura dos [Fundamentos Visuais](/ds/fundamentos-visuais/cores). Eles auxiliam na tomada de decisões, melhoram a assertividade de seu produto e garante que a solução criada esteja aderente aos padrões existentes.
 
 Disponibilizamos alguns materiais para ajudar a projetar sua interface:
 
-[UiKit Desktop e Web Mobile](https://serprodrive.serpro.gov.br/s/ixkFL2ETYZWaSkN)
-
-[UiKit Android](https://serprodrive.serpro.gov.br/s/kLJfZc9zpfa8jsL)
-
-[UiKit iOS](https://serprodrive.serpro.gov.br/s/CiLWgb77s3tbr69)
+[Downloads](/ds/downloads/assets)
 
 Caso tenha dúvida em como aplicar os padrões a um serviço, temos alguns protótipos já aderentes, que podem ser utilizados como referência ou mesmo não ter que iniciar seu trabalho do zero. Dessa forma, você poderá direcionar seu esforço para estratégias de negócio e/ou ux. Confira na área de downloads na [**aba Modelos**](/ds/downloads/assets).
 
-Temos uma novidade que acabamos de disponibilizar para download: Protótipos de um caso de uso. Neles exemplificamos como podem ser aplicados os padrões do design system em soluções web, mobile responsivo e aplicativos nativos IOS e Android sem ferir os padrões de cada plataforma, para que entendam as diferenças entre as aplicações. [Confira na área de downloads na **aba Designer**](/ds/downloads/assets).
+<!-- Temos uma novidade que acabamos de disponibilizar para download: Protótipos de um caso de uso. Neles exemplificamos como podem ser aplicados os padrões do design system em soluções web, mobile responsivo e aplicativos nativos IOS e Android sem ferir os padrões de cada plataforma, para que entendam as diferenças entre as aplicações. [Confira na área de downloads na **aba Designer**](/ds/downloads/assets). -->
 
-Para saber mais sobre como utilizar os UIKITs, acesse Prototipando com o Design System GOV.BR  (<https://www.gov.br/ds/introducao/prototipando>)
+Para saber mais sobre como utilizar os UIKITs, acesse [**Prototipando com o Design System GOV.BR**](/ds/introducao/prototipando)
 
 ## Instalação
 
@@ -65,28 +60,28 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Design System GOV.BR CSS-->
         <link
             rel="stylesheet"
-            href="node_modules\@govbr-ds\core\dist\core.min.css"
+            href="node_modules/@govbr-ds/core/dist/core.min.css"
         />
         <!-- Fontawesome-->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
         />
+        <title>Padrão Digital de Governo</title>
     </head>
 
     <body>
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script type="module" src="node_modules\@govbr-ds\core\dist\core.min.js"></script>
+        <script type="module" src="node_modules/@govbr-ds/core/dist/core.min.js"></script>
     </body>
 </html>
 ```
 
-> **core.js** deve ser importado como um modulo, os componentes não são instancializados, e se utilizar babel ou webpack não precisa colocar na dom e pode ser importado no seu script.
+**core.js** deve ser importado como módulo. Não são criadas instâncias para componentes. Procure criar e referenciar instâncias para utilização na DOM. Esse procedimento não é necessário se utilizar babel ou webpack. Nesse caso, é possível ser importado diretamente do seu script.
 
 > **Atenção!** Certifique-se que as referências ao `css` e `js` estejam corretas e inseridas devidamentes na pasta do projeto, caso contrário ocorrerá quebra no layout. Muitas vezes, em ambiente de desenvolvimento, pode não haver os arquivos minificados, ou seja, com o posfixo `.min`.
-
 
 ## Versão "lite" da folha de estilo
 
@@ -121,7 +116,7 @@ No momento o Servidor CDN possui capacidade suficiente para suprir apenas o dese
 
 Para ambiente em produção:
 
--   Faça o [download do Pacote CDN](https://serprodrive.serpro.gov.br/s/dLZJm9soLLiPzzg) para usar os assets de fonte e imagens em produção. Ele está disponível na seção Downloads
+-   Faça o [download dos Assets](/ds/downloads/assets) Na Aba **Desenvolvedor > Assets** para usar os assets de fonte e imagens em produção. Ele está disponível na seção Downloads
 -   Troque as referências de CDN para os arquivos locais de CSS e JS
 
 ## Documentação
@@ -139,10 +134,10 @@ Acesse a seção **Componentes** no menu principal e veja a lista de componentes
 
 Cada componente possui sua documentação, código fonte e preview.
 
-### Exemplo de uso da instancialização do componente
+### Exemplo de uso da instância do componente
 
 ```javascript
-import  * as core from '@govbr-ds/core/dist/core'
+import * as core from '@govbr-ds/core/dist/core'
 const breadcrumbList = []
 for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
   breadcrumbList.push(new core.BRBreadcrumb('br-breadcrumb', brBreadcrumb))
@@ -151,7 +146,7 @@ for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
 
 ## Utilitários JS
 
-São classes javascript para auxiliar os componentes. para usar deve importar a classe js correspondente ao utilitário, que fica na pasta **@govbr-ds/dist/partial/behavior**, e instanciar ele com os atributos de configuração como no exemplo abaixo no seu script.
+São classes javascript para auxiliar os componentes. Para seu uso, deve-se importar a classe js correspondente ao utilitário que fica na pasta **@govbr-ds/dist/partial/behavior**, e instanciá-la no seu script, com os atributos de configuração, conforme exemplo abaixo:
 
 ### Exemplo de uso de utilitário
 
@@ -173,19 +168,17 @@ element.querySelectorAll('[data-toggle="accordion"]')
 
 > Nesse exemplo precisa indicar **element** como elemento dom
 
-> Os utilitários não são automaticamente inicializados precisando de uma classe javascript para inicializar eles
+> Os utilitários não são automaticamente inicializados precisando de uma classe javascript para inicializá-los
 
 Acesse a seção **Utilitários** no menu principal e veja a lista de componentes disponíveis.
 
-
 ## Versão "init" do js
 
-Essa é a versão init(core-init.js) com os componentes já **instancializados** diferente do core.js em que precisa que crie um script JS,  poderam ter problema com frameworks e não aconselhamos o seu uso em produção. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
+Essa é a versão init(core-init.js) com os componentes já **instanciados** diferente do core.js em que precisa que se crie um script JS, poderá ter problema com frameworks e não aconselhamos o seu uso em produção. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
 
 ```html
-<script src="node_modules\@govbr-ds\core\dist\core-init.js"></script>
+<script src="node_modules/@govbr-ds/core/dist/core-init.js"></script>
 ```
-
 
 ## Release Notes
 

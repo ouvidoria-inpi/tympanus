@@ -1,4 +1,3 @@
-[version]: # (1.0.4)
 
 Elevação é um aspecto importante na organização do *layout* pois permite que o usuário entenda a relação hierárquica entre diferentes elementos na tela.
 
@@ -106,7 +105,7 @@ Veja os valores possíveis nos atributos de opacidade no [Fundamento de Superfí
 
 No Design System, sombras são utilizadas de forma simplificada. Dessa forma, foram criadas *tokens* de sombras prontas para o uso.
 
-Visite nossa [página de utilitários](/guias/utilitarios-css#sombras) para visualizar todas as possibilidades possíveis de uso de sombras e *tokens*.
+Visite nossa [página de utilitários](/ds/utilities-css/elevacao) para visualizar todas as possibilidades possíveis de uso de sombras e *tokens*.
 
 ---
 

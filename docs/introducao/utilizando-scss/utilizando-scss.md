@@ -1,6 +1,5 @@
-[version]: # '1.0.0'
 
-1. Instalar o govbr-ds conforme o [como começar](/ds/introducao/como-comecar)
+1. Instalar o GOVBR-DS conforme o [como começar](/ds/introducao/como-comecar)
 
 2. instalar o dart sass com o comando abaixo
 
