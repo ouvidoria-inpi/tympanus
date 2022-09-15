@@ -1,247 +1,289 @@
-<div class="text-up-02">
-	<div class="text-lg-center">
-		<h1 class="text-primary-darken-01 text-lg-up-07">
-			Um pacote com novos componentes, padrões, templates e muitas
-			novidades para facilitar o seu dia a dia.
-		</h1>
-		<p class="text-primary-darken-01 text-lg-up-06 mb-5">
-			Confira os principais destaques desta versão
-		</p>
-	</div>
+<style>
+	body {
+		overflow-x: hidden !important;
+	}
+	section {
+		min-height: 400px;
+	}
+	.version {
+		color: var(--orange-vivid-50);
+	}
+	.block-introducao {
+		background: url(imagens/introducao-2.png) no-repeat right -10px;
+	}
+	.block-navegacao {
+		background: url(imagens/navegacao-2.png) no-repeat left center;
+	}
+	.block-tutorial-1 {
+		background: url(imagens/tutorial-bg-1.png) no-repeat left center;
+	}
+	.block-tutorial-2 {
+		min-height: 400px;
+		background: url(imagens/tutorial-bg-2.png) no-repeat right center;
+	}
+	.block-correcoes {
+		min-height: 400px;
+		background: url(imagens/correcoes.png) repeat-x left 180px;
+	}
+	.block-img {
+		display: flex;
+	}
+	.block-img img {
+		width: 100%;
+		align-self: flex-end;
+	}
+	/* BACKGROUNDS */
+	.bg-gradient-gray {
+		background-image: linear-gradient(var(--pure-0), var(--gray-cool-5));
+	}
+	.bg-gradient-blue-vivid {
+		background-image: linear-gradient(var(--blue-vivid-5), var(--pure-0));
+	}
+	.bg-gradient-mint-cool {
+		background-image: linear-gradient(
+			to bottom right,
+			var(--pure-0),
+			var(--mint-cool-5)
+		);
+	}
+	.bg-gradient-cyan-vivid {
+		background: linear-gradient(
+			to right,
+			var(--cyan-vivid-20),
+			var(--cyan-vivid-5),
+			var(--pure-0)
+		);
+	}
+	.bg-gradient-indigo-cool-vivid {
+		background-image: linear-gradient(
+			var(--indigo-cool-vivid-5),
+			var(--pure-0)
+		);
+	}
+	.bg-gradient-gold-vivid {
+		background-image: linear-gradient(
+			to bottom right,
+			var(--gold-vivid-10),
+			var(--pure-0)
+		);
+	}
+	/* ///// */
+	@media (max-width: 992px) {
+		section,
+		section.text-right {
+			text-align: center !important;
+		}
+		.block-img {
+			display: block;
+		}
+		.block-img img {
+			width: 50%;
+			margin-bottom: 40px;
+		}
+		img {
+			margin-bottom: 40px;
+		}
+		.block-first {
+			position: absolute;
+			margin: 0 auto;
+		}
+		.block-end {
+			margin-top: 380px;
+		}
+		.block-introducao,
+		.block-navegacao {
+			background: none;
+		}
+	}
+	@media (max-width: 576px) {
+		.block-tutorial-1 {
+			background: url(imagens/tutorial-bg-1.png) no-repeat -180px center;
+		}
+		.block-tutorial-2 {
+			background: url(imagens/tutorial-bg-2.png) no-repeat 130px center;
+		}
+		.block-img img {
+			width: 90%;
+		}
+	}
+</style>
 
-	<div class="row mb-5">
-		<div class="col-lg-6 col-md-6 col-sm-12 mb-5">
-			<h3 class="mb-5 mt-0 text-lg-up-04">Componentes:</h3>
-			<p class="mb-5">
-				Atualize e obtenha os componentes como novas melhorias em design
-				e código.
-			</p>
-			<ul class="pl-4">
-				<li>
-					<a
-						href="/ds/components/carousel"
-						alt="Link para o componente Carousel"
-					>
-						Carousel
-					</a>
-				</li>
-				<li>
-					<a
-						href="/ds/components/signin"
-						alt="Link para o componente Sign-in"
-					>
-						Sign In
-					</a>
-				</li>
-				<li>
-					<a
-						href="/ds/components/skiplink"
-						alt="Link para o componente Skiplink"
-					>
-						Skip link
-					</a>
-				</li>
-				<li>
-					<a
-						href="/ds/components/step"
-						alt="Link para o componente Step"
-					>
-						Step
-					</a>
-				</li>
-				<li>
-					<a
-						href="/ds/components/table"
-						alt="Link para o componente table"
-					>
-						Table
-					</a>
-				</li>
-				<li>e muito mais...</li>
-			</ul>
+<!-- INTRODUÇÃO -->
+<section class="bg-gradient-gray mx-n2 mx-sm-n6">
+	<div class="block-introducao row">
+		<div class="col-md-4 block-img">
+			<img
+				src="imagens/introducao-1.png"
+				class="img-fluid"
+				alt="Imagem o que há de novo?"
+			/>
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 align-self-center">
-			<img src="imagens/novos_componentes.png" alt="Componentes" />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-lg-6 col-md-6 col-sm-12 align-self-center mb-5">
-			<img src="imagens/template.png" alt="Templates" />
-		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12">
-			<h3 class="text-ls-up-04 mb-5">Padrões e Templates:</h3>
-			<p class="mb-5">
-				Tenha em mãos as novas atualizações para os templates, padrões,
-				fundamentos e novos assets disponíveis na área de download.
-				Confira abaixo o que mudou:
-			</p>
-			<ul class="pl-4">
-				<li>
-					<a href="/ds/padroes/ajuda" alt="padrão ajuda"
-						>Ajuda e Comunicação</a
-					>
-				</li>
-				<li>
-					<a href="/ds/padroes/navegacao" alt="padrão navegacao"
-						>Navegação</a
-					>
-				</li>
-				<li>
-					<a
-						href="/ds/downloads/assets"
-						alt="modelo guia de recolhimento"
-						>Guia de Recolhimento (aba modelo)</a
-					>
-				</li>
-				<li>
-					<a href="/ds/downloads/assets" alt="modelo base"
-						>Base (aba modelo)</a
-					>
-				</li>
-				<li>
-					<a href="/ds/downloads/assets" alt="modelo erro"
-						>Erro (aba modelo)</a
-					>
-				</li>
-				<li>
-					<a
-						href="/ds/downloads/assets"
-						alt="modelo sessão do usuário"
-						>Sessão do Usuário (aba modelo)</a
-					>
-				</li>
-				<li>
-					<a
-						href="/ds/fundamentos-visuais/tipografia"
-						alt="tipografia"
-						>Tipografia</a
-					>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="text-lg-center">
-		<h2 class="text-primary-darken-01 text-lg-up-06 mx-lg-10x mb-5">
-			Um pacote com novos componentes, padrões, templates, Modelos e
-			muitas novidades para facilitar o seu dia a dia
-		</h2>
-
-		<p class="text-ls-up-04 mb-5">
-			UIKITs variados para o software de sua preferência.
-		</p>
-
-		<p class="text-ls-up-04 mb-5">
-			Modelos como: <strong>Crud, Dashboard e relatório</strong>, foram
-			disponibilizados para o software Adobe XD e podem ser encontrados na
-			área de
-			<a href="/ds/downloads/assets" alt="downloads">downloads</a> .
-		</p>
-
-		<p class="text-ls-up-04 mb-5">
-			Agora é possível consumir os arquivos de estilos no formato
-			<strong>scss</strong> a partir do pacote <strong>npm</strong>, o que
-			torna ainda mais dinâmico o consumo do Design System, no pacote
-			existem diversos tokens, mixins e utilitários que podem acelerar o
-			desenvolvimento do seu projeto, confira a documentação
-			<a href="/ds/introducao/utilizando-scss" alt="utilizando scss"
-				>Utilizando SCSS</a
-			>.
-		</p>
-
-		<p class="mx-lg-10x mb-5">
-			Agora, você tem mais opções para trabalhar com nossos UIKITs.
-			Disponibilizamos para o <strong>Adobe XD</strong> uma versão do
-			UIKIT para dispositivos <strong>mobile</strong> uma versão em
-			<strong>wireframe</strong> além de um novo UIKIT compatível com o
-			<strong>Figma</strong>.
-		</p>
-	</div>
-
-	<div class="my-5">
-		<img src="imagens/uikits1.png" alt="Downloads" />
-	</div>
-
-	<div class="text-lg-center">
-		<div class="text-center mb-5">
-			<a
-				class="br-button primary"
-				aria-label="Acessar área de Downloads"
-				href="/ds/downloads/assets"
+		<div class="col-md-8 px-2 py-5 px-md-5 py-md-5 px-lg-8x py-lg-8x">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6"
 			>
-				Área de Downloads
+				O que há de novo?
+			</h1>
+			<p class="version text-up-04 text-sm-up-05 text-weight-bold">
+				Versão 3+
+			</p>
+			<p class="text-up-02 text-sm-up-03 text-weight-semi-bold mb-6">
+				Abertura à comunidade, padrão mínimo, e outras melhorias que vão
+				facilitar o desenvolvimento do seu projeto.
+			</p>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular">
+				Confira abaixo os destaques desta revisão.
+			</p>
+		</div>
+	</div>
+</section>
+
+<!-- COMUNIDADE -->
+<section
+	class="text-right bg-gradient-cyan-vivid mx-n2 mx-sm-n6 px-2 py-5 px-md-5 py-md-5 px-lg-8x py-lg-8x"
+>
+	<div class="row">
+		<div class="col-md-8 block-end">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6 mt-md-6x mt-lg-8x"
+			>
+				Design System aberto à Comunidade
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular">
+				Agora o Design System está aberto à comunidade. Acesse nosso
+				repositório no GitLab. Tenha em mãos um manual completo de
+				orientações em nossa Wiki. Participe do canal oficial de
+				discussão no Discord.
+			</p>
+			<a
+				class="br-button block d-inline-flex auto-sm secondary mb-5"
+				href="/ds/comunidade-govbr-ds"
+			>
+				<i class="fas fa-code-branch mr-1" aria-hidden="true"></i>
+				Veja como
 			</a>
 		</div>
-
-		<h3 class="text-primary-darken-01 text-lg-up-06 mb-5">
-			Correções e Melhorias Gerais
-		</h3>
-
-		<p class="text-lg-up-04 mb-5">
-			Realizamos ainda várias correções e melhorias nos demais componentes
-			deixando-os mais flexíveis e fáceis de usar, confira o que mudou:
-		</p>
-
-		<div class="my-5">
-			<img src="imagens/melhorias.png" alt="Melhorias" />
+		<div class="col-md-4 block-first">
+			<img
+				src="imagens/comunidade.png"
+				class="img-fluid"
+				alt="Imagem comunidade"
+			/>
 		</div>
+	</div>
+</section>
 
-		<div class="text-center mb-5">
+<!-- PADRÃO MÍNIMO -->
+<section
+	class="bg-gradient-mint-cool mx-n2 mx-sm-n6 px-2 py-5 px-md-5 py-md-5 px-lg-8x py-lg-8x"
+>
+	<div class="row">
+		<div class="col-md-4">
+			<img
+				src="imagens/padrao-minimo.png"
+				class="img-fluid"
+				alt="Imagem padrão mínimo"
+			/>
+		</div>
+		<div class="col-md-8">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6 mt-md-6x mt-lg-8x"
+			>
+				Padrão Mínimo
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular">
+				Elaboramos um guia completo com as orientações básicas
+				necessárias para adequar seu projeto aos padrões do Design
+				System do Governo Federal.
+			</p>
 			<a
-				class="br-button secondary"
-				aria-label="Acessar Release Notes"
+				class="br-button block d-inline-flex auto-sm secondary mb-5"
+				href="/ds/introducao/padrao-minimo"
+			>
+				<i class="fas fa-award mr-1" aria-hidden="true"></i>
+				Consulte o Padrão Mínimo
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- TUTORIAL -->
+<section class="text-center bg-gradient-indigo-cool-vivid mx-n2 mx-sm-n6">
+	<div class="row block-tutorial-1">
+		<div
+			class="col-12 block-tutorial-2 px-2 py-5 px-md-5 py-md-5 px-lg-8x py-lg-8x"
+		>
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6 mt-md-6x mt-lg-8x"
+			>
+				Tutorial de Migração da Versão 2x para 3x
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular">
+				Desenvolvemos um guia que facilitará a migração da versão 2.4.3
+				para a versão 3.0.0 do Design System. Lá você encontrará
+				aspectos relevantes como: dependências requeridas,
+				instanciações, componentes compatíveis e novas nomenclaturas.
+			</p>
+			<a
+				class="br-button block d-inline-flex auto-sm secondary mb-5"
+				href="/ds/guias/migracao-2x-3x"
+			>
+				<i class="fas fa-hiking mr-1" aria-hidden="true"></i>
+				Acesse aqui
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- NAVEGAÇÃO -->
+<section class="bg-gradient-gold-vivid mx-n2 mx-sm-n6">
+	<div class="row">
+		<div
+			class="block-navegacao col-md-8 px-2 py-5 px-md-5 py-md-5 px-lg-8x py-lg-8x"
+		>
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6 mt-md-6x mt-lg-8x"
+			>
+				Melhorias na Navegação do Site
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular">
+				Reorganizamos a arquitetura do menu a fim de oferecer uma
+				experiência mais agradável.
+			</p>
+		</div>
+		<div class="block-img col-md-4">
+			<img
+				src="imagens/navegacao-1.png"
+				class="img-fluid"
+				alt="Imagem menu"
+			/>
+		</div>
+	</div>
+</section>
+
+<!-- CORREÇÕES -->
+<section class="text-center bg-gradient-indigo-cool-vivid mx-n2 mx-sm-n6">
+	<div class="row">
+		<div
+			class="block-correcoes col-12 px-2 py-5 px-md-5 py-md-5 px-lg-8x py-lg-8x"
+		>
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6 mt-md-6x mt-lg-8x"
+			>
+				Correções e Melhorias Gerais
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular">
+				Realizamos várias correções em nossas documentações e
+				componentes tornando-os mais fáceis de usar. Confira o que
+				mudou.
+			</p>
+			<a
+				class="br-button block d-inline-flex auto-sm secondary mb-5"
 				href="/ds/release-notes"
 			>
+				<i class="fas fa-star mr-1" aria-hidden="true"></i>
 				Release Notes
 			</a>
 		</div>
-
-		<h3 class="text-primary-darken-01 text-lg-up-06 mb-5">
-			Colabore Conosco
-		</h3>
-
-		<p class="text-lg-up-04 mb-5">
-			A equipe está sempre buscando aprimorar o
-			<strong>Design System</strong>
-		</p>
-
-		<p class="mb-5">E você pode também fazer parte disso.</p>
-
-		<p class="mb-5">
-			Colabore com o
-			<strong>Design System</strong> enviando <strong>sugestões</strong>,
-			<strong>comentários</strong> e
-			<strong>críticas</strong>
-			para nossa equipe e nos ajude a oferecer um produto cada vez mais
-			personalizado e útil para você.
-		</p>
-
-		<div class="row justify-content-center text-center">
-			<div class="col-md-3 col-sm-5 mb-5">
-				<a
-					class="br-button primary"
-					aria-label="Enviar e-mail"
-					href="mailto:govbr-ds@serpro.gov.br"
-					target="_blank"
-				>
-					Nosso email
-				</a>
-			</div>
-			<div class="col-md-3 col-sm-5 mb-5">
-				<a
-					class="br-button secondary"
-					aria-label="Endereço do chat.serpro"
-					href="https://chat.serpro.gov.br/channel/govbr-ds"
-					target="_blank"
-				>
-					Serpro Chat
-				</a>
-			</div>
-		</div>
 	</div>
-
-	<!-- <div class="mt-5">
-		<img src="imagens/juntos.png" alt="Vamos contribuir com o GOVBR-DS juntos!" />
-	</div> -->
-</div>
+</section>
