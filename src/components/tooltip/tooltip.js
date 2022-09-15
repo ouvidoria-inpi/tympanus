@@ -90,39 +90,50 @@ class BRTooltip {
         strategy: 'fixed',
       })
     } else {
-      const ac = this.activator.getBoundingClientRect()
-      const tt = this.component.getBoundingClientRect()
-      const bw = document.body.clientWidth
-      if (this.placement === 'right') {
-        this.placement =
-          ac.x + ac.width + tt.width > bw ? 'top' : this.placement
-      }
-      if (this.placement === 'left') {
-        this.placement = ac.x - tt.width > 0 ? this.placement : 'top'
+      
+
+      let ac = ""
+      let tt =""
+      if(this.activator.hasOwnProperty("getBoundingClientRect")){
+        ac =this.activator.getBoundingClientRect()
       }
 
-      this.popperInstance = createPopper(this.activator, this.component, {
-        modifiers: [
-          {
-            name: 'offset',
-            options: {
-              offset: [0, 8],
-            },
-          },
-          {
-            name: 'preventOverflow',
-            options: {
-              altAxis: true, // false by default
-              // boundary: 'body',
-              mainAxis: true, // true by default
-              // rootBoundary: 'document',
-              tether: false, // true by default
-            },
-          },
-        ],
-        placement: this.placement,
-      })
+      if(this.activator.hasOwnProperty("getBoundingClientRect")){
+        tt = this.component.getBoundingClientRect()
+      }
+      
+      
+        const bw = document.body.clientWidth
+        if (this.placement === 'right') {
+          this.placement =
+            ac.x + ac.width + tt.width > bw ? 'top' : this.placement
+        }
+        if (this.placement === 'left') {
+          this.placement = ac.x - tt.width > 0 ? this.placement : 'top'
+        
 
+        this.popperInstance = createPopper(this.activator, this.component, {
+          modifiers: [
+            {
+              name: 'offset',
+              options: {
+                offset: [0, 8],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                altAxis: true, // false by default
+                // boundary: 'body',
+                mainAxis: true, // true by default
+                // rootBoundary: 'document',
+                tether: false, // true by default
+              },
+            },
+          ],
+          placement: this.placement,
+        })
+      }
       // const style = window.getComputedStyle(this.component)
     }
   }
