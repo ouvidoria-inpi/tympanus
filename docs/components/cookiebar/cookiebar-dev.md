@@ -499,7 +499,14 @@ for (const brCookiebar of window.document.querySelectorAll('.br-cookiebar')) {
 
 ## Função de callback
 
-A função de callback é chamada ao clicar no botão de aceite e recebe como parâmetro o **JSON de Saída**.
+A função de callback é chamada ao clicar no botão de aceite e recebe como parâmetro o **JSON de Saída**. Ela é responsável por tratar a regra de negócio do cookiebar.
+
+```javascript
+function callback(jsonSaida) {
+    // Implementar o tratamento dos cookeis segundo as regras de negócio.
+    console.log(jsonSaida)
+}
+```
 
 ## Uso Alternativo
 
