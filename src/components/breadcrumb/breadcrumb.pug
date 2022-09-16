@@ -3,7 +3,7 @@ mixin breadcrumb
   div(class=className)&attributes(attributes)
     ul.crumb-list
       li.crumb.home
-        .br-button.circle
+        a(href="javascript:void(0)").br-button.circle
           span.sr-only Página inicial
           i.fas.fa-home
       if block
