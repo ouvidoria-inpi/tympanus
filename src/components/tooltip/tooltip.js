@@ -90,8 +90,20 @@ class BRTooltip {
         strategy: 'fixed',
       })
     } else {
-      const ac = this.activator.getBoundingClientRect()
-      const tt = this.component.getBoundingClientRect()
+
+      
+      let ac = new DOMRect()
+      let  tt = new DOMRect()
+
+      if (this.activator.hasOwnProperty('getBoundingClientRect')) {
+        ac = this.activator.getBoundingClientRect()
+      }
+      if (this.activator.hasOwnProperty('getBoundingClientRect')) {
+        ac = this.activator.getBoundingClientRect()
+      }else{
+        return
+      }
+      
       const bw = document.body.clientWidth
       if (this.placement === 'right') {
         this.placement =

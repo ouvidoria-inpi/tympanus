@@ -1,9 +1,9 @@
-import Accordion from '../../partial/js/behavior/accordion'
+import Scrim from '../../partial/js/behavior/scrim'
 
 /**
  * Classe para o exemplo do comportamento accordion
  */
-class AccordionExample {
+class ScrimExample {
   /**
    * Instancia um exemplo de comportamento accordion
    * @param {object} element - Elemento DOM que representa um componente contento um comportamento de accordion
@@ -12,25 +12,38 @@ class AccordionExample {
     this.element = element
     this._setBehavior()
   }
-
+  /**
+   * Inicia comportamento do exemplo
+   * @private
+   */
   _setBehavior() {
-    this._setAccordionBehavior()
+    this._setScrimBehavior()
+  }
+  /**
+   * Encontra o componentes .scrimutilexemplo button  e coloca no evento de click o scrim
+   * @private
+   */
+  _setScrimBehavior() {
+    for (const buttonBloco1 of window.document.querySelectorAll(
+      '.scrimutilexemplo button'
+    )) {
+      buttonBloco1.addEventListener('click', () => {
+        this.openScrimExample()
+      })
+    }
   }
 
-  _setAccordionBehavior() {
-    this.element
-      .querySelectorAll('[data-toggle="accordion"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const accordion = new Accordion(config)
-        accordion.setBehavior()
-      })
+  /**
+   * Abre o scrim de id scrimutilexample
+   */
+  openScrimExample() {
+    const scrscrim = window.document.querySelector('#scrimutilexample')
+    const scrimfoco = new Scrim({
+      closeElement: '#scrimfechar',
+      trigger: scrscrim,
+    })
+    scrimfoco.showScrim()
   }
 }
 
-export default AccordionExample
+export default ScrimExample

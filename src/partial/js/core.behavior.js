@@ -100,7 +100,8 @@ export default class Behavior {
           placement: 'top',
           type: 'warning',
         }
-        const tooltip = new Tooltip(config)
+        // const tooltip = new Tooltip(config)
+        new Tooltip(config)
       })
     })
   }

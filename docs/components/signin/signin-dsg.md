@@ -1,5 +1,3 @@
-[version]: # (1.1.1)
-
 ![Exemplo componente sign-in.](imagens/anatomy-1.png)
 *Exemplo do componente sign-in nas versões principal e alternativa*
 

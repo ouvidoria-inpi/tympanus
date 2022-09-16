@@ -1,17 +1,6 @@
-[version]: # "1.0.0"
+[version]: # "1.0.1"
 
 ## Como usar
-
-### HTML
-
-```html
-<div data-toggle="dropdown" data-target="id-target" aria-controls="id-target" aria-expanded="false" data-visible="false">
-  ...
-</div>
-<div id="id-target" aria-hidden="true" hidden>
-  ...
-</div>
-```
 
 ### Atributos no elemento acionador
 
@@ -55,17 +44,21 @@
 **Para cada acionador (trigger)**, instanciar a classe dropdown passando um objeto de configuração.
 
 ```javascript
-import Dropdown from 'core'
-const config = {
-  trigger,
-  iconToShow: 'fa-chevron-down',
-  iconToHide: 'fa-chevron-up',
-  useIcons: true,
-  target
-}
-new Dropdown(config)
+this.element
+   .querySelectorAll('[data-toggle="dropdown"]')
+   .forEach((trigger) => {
+    const config = {
+     iconToHide: 'fa-chevron-up',
+     iconToShow: 'fa-chevron-down',
+     trigger,
+     useIcons: true,
+    }
+    const dropdown = new Dropdown(config)
+    dropdown.setBehavior()
+   })
 ```
 
+> **this.element**: elemento DOM onde vai ser instanciado o utilitário
 > link do utilitário [Dropdown](<assets/dropdown.js>)
 
 #### Objeto de configuração
@@ -78,4 +71,4 @@ new Dropdown(config)
 | `useIcons`   | Boolean | Indica se o comportamento usará ou não ícones                      |
 | `target`     | Object  | Referência ao elemento (DOM) alvo                                  |
 
-> Os propriedades `iconToShow`, `iconToHide` e `useIcons` possuem, por padrão, os valores `fa-chevron-down`, `fa-chevron-up` e `true`, respectivamente. Por tanto, são **opcionais** no objeto de configuração.
+> As propriedades `iconToShow`, `iconToHide` e `useIcons` possuem, por padrão, os valores `fa-chevron-down`, `fa-chevron-up` e `true`, respectivamente. Por tanto, são **opcionais** no objeto de configuração.

@@ -12,10 +12,18 @@ class TooltipExample {
     this.element = element
     this._setBehavior()
   }
-
+  /**
+   * Inicia comportamento do exemplo
+   * @private
+   */
   _setBehavior() {
     this._settooltipBehavior()
   }
+
+  /**
+   * Encontra os data-tooltip-text  e coloca util Tooltip
+   * @private
+   */
 
   _settooltipBehavior() {
     this.element.querySelectorAll('[data-tooltip-text]').forEach((trigger) => {
@@ -28,7 +36,8 @@ class TooltipExample {
         textTooltip: 'teste',
         timer,
       }
-      const tooltip = new Tooltip(config)
+      // const tooltip = new Tooltip(config)
+      new Tooltip(config)
     })
   }
 }

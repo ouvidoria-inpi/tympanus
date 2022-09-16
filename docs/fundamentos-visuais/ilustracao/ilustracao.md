@@ -1,4 +1,3 @@
-[version]: # (1.0.4)
 
 Ilustração é uma imagem que comunica um estado de forma mais amigável. As ilustrações ajudam a transmitir ideias simples ou complexas de maneira objetiva. Eles devem ser significativas e refletir o contexto e o estado emocional do usuário.
 
@@ -218,9 +217,9 @@ Usando a ferramenta Pincel (*Brush*), faça alguns movimentos na área que desej
 ![pincel](imagens/illustration-anatomy-texture-2.png)
 *Em áreas localizadas realçamos o volume dos objetos destacando luz e sombra.*
 
-Utilize nossos [pincéis/brushes (Formato AI, 32 KB)](https://serprodrive.serpro.gov.br/s/fqpQbTmtmpPM6r4) para facilitar a construção das texturas.
+Utilize diversos exemplos de ilustrações e pincéis para enriquecer seu layout  e facilitar a construção das texturas [Downloads/Ilustrações](/ds/downloads/assets).
 
-Veja o [tutorial (youtube)](https://www.youtube.com/watch?v=xwNInJssbPU) <i class="fas fa-external-link-alt"></i> para entender melhor o uso dessa técnica.
+Veja o [tutorial (youtube)](https://www.youtube.com/watch?v=xwNInJssbPU) para entender melhor o uso dessa técnica.
 
 ### 8. Padrões ou *Patterns* (Opcional)
 

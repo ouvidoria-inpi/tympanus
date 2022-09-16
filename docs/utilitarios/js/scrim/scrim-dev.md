@@ -2,21 +2,6 @@
 
 ## Como usar
 
-### HTML
-
-```html
-<div id="id-scrim">
-  <div data-toggle="scrim" data-target="id-target" aria-controls="id-target" 
-  ="false" data-visible="false" data-group="id-scrim">
-    ...
-  </div>
-  <div id="id-target" aria-hidden="true" hidden>
-    ...
-  </div>
-  ...
-</div>
-```
-
 ### Atributos no elemento alvo
 
 #### Obrigatórios
@@ -49,13 +34,18 @@
 
 ```javascript
 import Scrim from 'core'
-const scrscrim = window.document.querySelector('#btnClose')
-const config = {
-  trigger,
-  scrscrim,
-}
-scrim = new Scrim(config)
-scrim.showScrim()
+for (const buttonBloco1 of window.document.querySelectorAll(
+      '.scrimutilexemplo button'
+    )) {
+      buttonBloco1.addEventListener('click', () => {
+        const scrscrim = window.document.querySelector('#scrimutilexample')
+        const scrimfoco = new Scrim({
+          closeElement: '#scrimfechar',
+          trigger: scrscrim,
+        })
+        scrimfoco.showScrim()
+      })
+    }
 ```
 
 #### Objeto de configuração

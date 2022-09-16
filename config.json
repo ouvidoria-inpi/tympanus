@@ -1397,48 +1397,24 @@
         {
           "examples": [
             {
-              "label": "Switch padrão",
+              "label": "Switch Padrão",
               "path": "examples/switch-default"
             },
             {
-              "label": "Switch Desabilitado",
-              "path": "examples/switch-disabled"
+              "label": "Alinhamentos",
+              "path": "examples/switch-alignments"
             },
             {
-              "label": "Densidade Baixa",
-              "path": "examples/switch-large"
-            },
-            {
-              "label": "Densidade Média (Padrão)",
-              "path": "examples/switch-medium"
-            },
-            {
-              "label": "Densidade Alta",
-              "path": "examples/switch-small"
-            },
-            {
-              "label": "Densidade Switch Com Rótulo(Ligado/Desligado)",
-              "path": "examples/switch-label-onoff"
-            },
-            {
-              "label": "Densidade Com Rótulo(Concordo/Discordo)",
-              "path": "examples/switch-label-terms"
-            },
-            {
-              "label": "Label Alinhado a Esquerda",
-              "path": "examples/switch-left"
-            },
-            {
-              "label": "Label Alinhado a Direita",
-              "path": "examples/switch-right"
-            },
-            {
-              "label": "Label Alinhado ao Topo",
-              "path": "examples/switch-top"
-            },
-            {
-              "label": "Switch Com Ícone",
+              "label": "Com ícone",
               "path": "examples/switch-icon"
+            },
+            {
+              "label": "Com rótulos adicionais",
+              "path": "examples/switch-labels"
+            },
+            {
+              "label": "Densidades",
+              "path": "examples/switch-density"
             }
           ],
           "ext": [

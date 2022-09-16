@@ -12,9 +12,9 @@ class BRStep {
     this.component = component
     this.activeStepNum = 0
     this.DOMstrings = {
-      stepsBarClass: 'step-progress',
       // stepsBar: this.component.querySelector('.step-progress'),
       stepsBar: this.component,
+      stepsBarClass: 'step-progress',
       stepsBtnClass: 'step-progress-btn',
       stepsBtns: this.component.querySelectorAll('.step-progress-btn'),
     }
@@ -119,8 +119,7 @@ class BRStep {
       !this.component.classList.contains('vertical') &&
       !this.component.hasAttribute('data-scroll')
     ) {
-      const stepsWidth =
-        Math.round(100 / this.DOMstrings.stepsBtns.length) - 0.5
+      // const stepsWidth = Math.round(100 / this.DOMstrings.stepsBtns.length) - 0.5
     }
   }
 }

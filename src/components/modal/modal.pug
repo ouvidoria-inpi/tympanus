@@ -89,7 +89,7 @@ mixin modal-login
       +modal-close
     +modal-body
       +select("Domínio da autenticação")(id="auth-dominio")
-        +option("GOV.BR", Math.floor(Math.random() * 1000))
+        +option("GOV.BR", 'opt-' + Math.floor(Math.random() * 1000))
       .mt-3: +input("Usuário")(id="auth-usuario" placeholder="Insira um texto")
       .mt-3: +input-password
     +modal-footer.justify-content-center

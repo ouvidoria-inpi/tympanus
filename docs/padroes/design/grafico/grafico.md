@@ -1,4 +1,3 @@
-[version]: # (1.0.1)
 
 Os gráficos são representações visuais de dados e informações numéricas que servem para facilitar sua visualização, bem como para torná-los mais claros e informativos.
 
@@ -58,7 +57,7 @@ Informação opcional que tem por finalidade complementar as informações apres
 
 Refere-se ao gráfico em si. A definição do tipo de gráfico, sua dimensão e uso de legendas, dependerá dos direcionamentos de cada projeto e da percepção do *designer*. É aconselhável a realização de testes de legibilidade e usabilidade com alguns usuários, para validar o nível de leitura, diagramação e ergonomia informacional dos dados. Tanto para gráficos estáticos quanto para gráficos dinâmicos, onde as informações são constantemente atualizadas.
 
-Caso haja necessidade, o gráfico poderá fazer uso de elementos, ações e recursos de navegação que o auxilie na apresentação das informações, tais como: [tootip](/ds/components/modal?tab=desenvolvedor), [barra de rolagem](/ds/components/modal?tab=desenvolvedor), seletores, links, filtros de dados, além de ações para expandir, aproximar ou afastar sua visualização, etc.
+Caso haja necessidade, o gráfico poderá fazer uso de elementos, ações e recursos de navegação que o auxilie na apresentação das informações, tais como: [tootip](/ds/components/tooltip?tab=designer), barra de rolagem, seletores, links, filtros de dados, além de ações para expandir, aproximar ou afastar sua visualização, etc.
 
 ![Exemplo de Gráfico](imagens/img-grafico.png)
 *Exemplo do uso do tooltip em um gráfico do tipo Mapa Geográfico na área principal.*
@@ -363,7 +362,7 @@ Há uma ligação forte entre os gráficos de dispersão e bolha, mas apesar das
 
 ### 7. Outros Tipos de Gráficos
 
-Além dos gráficos apresentados, existe uma grande variedade de gráficos, todos com características e aplicações próprias. Alguns gráficos podem representar visualmente com eficiência as informações apresentadas, facilitando a interpretação e visualização dos dados. Caso a escolha não tenha sido apropriada, o gráfico pode agir de forma completamente oposta ao desejado. Por isso é muito importante conhecer os principais tipos e suas características de uso. Para mais informações, estamos disponibilizando o arquivo detalhado para download: [Design System para Painéis Analíticos v1.0.0](https://serprodrive.serpro.gov.br/s/AnEwBrA8TwdnGdH) | Formato PDF - 5,17 MB
+Além dos gráficos apresentados, existe uma grande variedade de gráficos, todos com características e aplicações próprias. Alguns gráficos podem representar visualmente com eficiência as informações apresentadas, facilitando a interpretação e visualização dos dados. Caso a escolha não tenha sido apropriada, o gráfico pode agir de forma completamente oposta ao desejado. Por isso é muito importante conhecer os principais tipos e suas características de uso. Para mais informações, estamos disponibilizando o arquivo detalhado para download: [Design System para Painéis Analíticos v1.0.0](/ds/downloads/manuais-orientadores) | Formato PDF - 5,17 MB
 
 ![Exemplo de outros tipos de gráficos.](imagens/outros-graficos.png)
 *Exemplo de outros tipos de gráficos.*
@@ -514,7 +513,7 @@ Por isso, é importante buscar estratégias que facilitem o entendimento de noss
 
 É importante deixar claro que a cor não é imprescindível. Não devemos confiar unicamente na cor para passar alguma informação importante. Utilize ícones, texto e até mesmo textura para deixar uma informação clara, veja o tópico "5- Uso de Elementos Visuais" para maiores informações.
 
-Para deixarmos a visualização da apresentação dos dados visuais mais acessível, utilize as paletas de cores encontradas no nosso [Fundamento Visual Cores](/fundamentos-visuais/cores) e observe as seguintes orientações:
+Para deixarmos a visualização da apresentação dos dados visuais mais acessível, utilize as paletas de cores encontradas no nosso [Fundamento Visual Cores](/ds/fundamentos-visuais/cores) e observe as seguintes orientações:
 
 ###### 3.1. Garanta um bom contraste entre cores e elementos
 
@@ -832,7 +831,7 @@ Esta funcionalidade, normalmente, está diretamente relacionada ao tipo de gráf
 
 Caso utilize gráficos dinâmicos, onde as informações são atualizadas em tempo real, sempre que os dados dos gráficos demorarem para atualizar, opte pelo uso do componente *loading* como  resposta temporária de *feedback* do sistema, evitando que o usuário fique em dúvidas quanto à atualização da informação.
 
-Para maiores informações acesse: [componente *loading*](/components/loading?tab=desenvolvedor)
+Para maiores informações acesse: [componente *loading*](/ds/components/loading?tab=desenvolvedor)
 
 ---
 
@@ -840,9 +839,9 @@ Para maiores informações acesse: [componente *loading*](/components/loading?ta
 
 ### Referências em Gráficos
 
--   [geckoboard-dashboard-design-guide.pdf](https://serprodrive.serpro.gov.br/s/7DNtygdJcAzASST) | Formato PDF - 1,7 MB
+-   [geckoboard-dashboard-design-guide.pdf](/ds/downloads/manuais-orientadores) | Formato PDF - 1,7 MB
 
--   [Radiant-Advisors*GoodData*DataVisualizationCompetencyCenter.pdf](https://serprodrive.serpro.gov.br/s/ADccP4T8pCfmznt) | Formato PDF - 1,43 MB
+-   [Radiant-Advisors*GoodData*DataVisualizationCompetencyCenter.pdf](/ds/downloads/manuais-orientadores) | Formato PDF - 1,43 MB
 
 -   [The Ultimate Guide: Data Visualization vs. Storytelling with Data](https://blog.presentation-company.com/data-visualization-vs.-data-storytelling-whats-the-difference)
 
@@ -854,7 +853,7 @@ Para maiores informações acesse: [componente *loading*](/components/loading?ta
 
 -   [Como aplicar a Teoria das Cores e os 6 Esquemas de Cores](https://temporalcerebral.com.br/como-aplicar-a-harmonia-das-cores-no-design-grafico/)
 
--   [Use cores personalizadas no gráfico para refletir sua marca e dar vida aos dados da sua pesquisa](https://pt.surveymonkey.com/curiosity/use-cores-personalizadas-no-grafico-para-refletir-sua-marca-e-dar-vida-aos-dados-da-sua-pesquisa/)
+-   [Use cores personalizadas em gráficos para refletir sua marca e dar vida aos seus dados](https://pt.surveymonkey.com/curiosity/use-custom-chart-colors-to-reflect-your-brand-and-bring-your-survey-data-to-life/)
 
 -   [Como as cores facilitam o entendimento de um gráfico](https://amplix.net/como-as-cores-facilitam-o-entendimento-de-um-grafico/)
 

@@ -118,6 +118,15 @@
 @mixin footer-social {
   .social-network {
     border: 0;
+
+    a:hover {
+      background-image: none;
+    }
+
+    img {
+      max-height: var(--footer-assigns-height);
+      max-width: var(--footer-assigns-height);
+    }
   }
 
   .assigns {
