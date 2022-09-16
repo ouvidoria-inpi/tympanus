@@ -10,7 +10,7 @@ class BRTooltip {
     this.notification = component.classList.contains('br-notification')
     this.timer = component.getAttribute('timer')
 
-    // this.active = component.hasAttribute('active')
+    this.active = component.hasAttribute('active')
     this.placement = positions.includes(place)
       ? place
       : this.notification
@@ -90,8 +90,20 @@ class BRTooltip {
         strategy: 'fixed',
       })
     } else {
-      const ac = this.activator.getBoundingClientRect()
-      const tt = this.component.getBoundingClientRect()
+
+      
+      let ac = new DOMRect()
+      let  tt = new DOMRect()
+
+      if (this.activator.hasOwnProperty('getBoundingClientRect')) {
+        ac = this.activator.getBoundingClientRect()
+      }
+      if (this.activator.hasOwnProperty('getBoundingClientRect')) {
+        ac = this.activator.getBoundingClientRect()
+      }else{
+        return
+      }
+      
       const bw = document.body.clientWidth
       if (this.placement === 'right') {
         this.placement =
@@ -123,7 +135,7 @@ class BRTooltip {
         placement: this.placement,
       })
 
-      // const style = window.getComputedStyle(this.component)
+      const style = window.getComputedStyle(this.component)
     }
   }
 
