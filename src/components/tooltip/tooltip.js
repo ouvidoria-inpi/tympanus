@@ -90,20 +90,18 @@ class BRTooltip {
         strategy: 'fixed',
       })
     } else {
-
-      
       let ac = new DOMRect()
-      let  tt = new DOMRect()
+      const tt = new DOMRect()
 
       if (this.activator.hasOwnProperty('getBoundingClientRect')) {
         ac = this.activator.getBoundingClientRect()
       }
       if (this.activator.hasOwnProperty('getBoundingClientRect')) {
         ac = this.activator.getBoundingClientRect()
-      }else{
+      } else {
         return
       }
-      
+
       const bw = document.body.clientWidth
       if (this.placement === 'right') {
         this.placement =
@@ -134,8 +132,6 @@ class BRTooltip {
         ],
         placement: this.placement,
       })
-
-      const style = window.getComputedStyle(this.component)
     }
   }
 
