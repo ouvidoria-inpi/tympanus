@@ -1,4 +1,3 @@
-[version]: # "1.0.1"
 
 ## Como usar
 
@@ -6,8 +5,8 @@
 
 #### Obrigatórios
 
-| Atributo                  | Tipo     | Descrição                                                 |
-| ------------------------- | -------- | --------------------------------------------------------- |
+| Atributo                  | Tipo     | Descrição                                                |
+| ------------------------- | -------- | -------------------------------------------------------- |
 | `data-parent="tag-group"` | atributo | Indica que o checkbox é o pai e a tag identifica o grupo |
 
 #### Opcionais
@@ -69,11 +68,10 @@ Para que isso aconteça, deve-se adicionar o atributo `data-parent` no checkbox 
 Em seguida chamar o método setBehavior()
 
 ```javascript
-import Checkgroup from 'core'
 this.element
       .querySelectorAll('input[type="checkbox"][data-parent]')
       .forEach((trigger) => {
-        const checkgroup = new Checkgroup(trigger)
+        const checkgroup = new core.Checkgroup(trigger)
         checkgroup.setBehavior()
       })
     
