@@ -74,7 +74,7 @@ A seguir temos um exemplo de um template inicial para utilização do Design Sys
         <!-- Conteúdo-->
 
         <!-- Scripts de componentes -->
-        <script type="module" src="node_modules/@govbr-ds/core/dist/core.min.js"></script>
+        <script type="module" src="<node_modules></node_modules>/@govbr-ds/core/dist/core.min.js"></script>
     </body>
 </html>
 ```
@@ -137,7 +137,7 @@ Cada componente possui sua documentação, código fonte e preview.
 ### Exemplo de uso da instância do componente
 
 ```javascript
-import * as core from '@govbr-ds/core/dist/core'
+
 const breadcrumbList = []
 for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
   breadcrumbList.push(new core.BRBreadcrumb('br-breadcrumb', brBreadcrumb))
@@ -151,7 +151,7 @@ São classes javascript para auxiliar os componentes. Para seu uso, deve-se impo
 ### Exemplo de uso de utilitário
 
 ```javascript
-import Scrim from '@govbr-ds/dist/partial/behavior/scrim'
+
 element = window.document.querySelectorAll('.collapse-example')
 element.querySelectorAll('[data-toggle="accordion"]')
     .forEach((trigger) => {
@@ -161,7 +161,7 @@ element.querySelectorAll('[data-toggle="accordion"]')
         trigger,
         useIcons: true,
     }
-    const accordion = new Accordion(config)
+    const accordion = new core.Accordion(config)
     accordion.setBehavior()
 })
 ```
@@ -172,13 +172,6 @@ element.querySelectorAll('[data-toggle="accordion"]')
 
 Acesse a seção **Utilitários** no menu principal e veja a lista de componentes disponíveis.
 
-## Versão "init" do js
-
-Essa é a versão init(core-init.js) com os componentes já **instanciados** diferente do core.js em que precisa que se crie um script JS, poderá ter problema com frameworks e não aconselhamos o seu uso em produção. Bastando trocar a linha de carregamento do javascript pelo exemplo a seguir:
-
-```html
-<script src="node_modules/@govbr-ds/core/dist/core-init.js"></script>
-```
 
 ## Release Notes
 
