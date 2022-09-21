@@ -23,7 +23,7 @@
 	}
 	.block-correcoes {
 		min-height: 400px;
-		background: url(imagens/correcoes.png) repeat-x left 180px;
+		background: url(imagens/correcoes.png) repeat-x left 120px;
 	}
 	.block-img {
 		display: flex;
@@ -90,6 +90,9 @@
 		.block-end {
 			margin-top: 380px;
 		}
+		.block-end-dev {
+			margin-top: 320px;
+		}
 		.block-introducao,
 		.block-navegacao {
 			background: none;
@@ -125,14 +128,14 @@
 				O que há de novo?
 			</h1>
 			<p class="version text-up-04 text-sm-up-05 text-weight-bold">
-				Versão 3+
+				Versão 3.1
 			</p>
 			<p class="text-up-02 text-sm-up-03 text-weight-semi-bold mb-6">
 				Abertura à comunidade, padrão mínimo, e outras melhorias que vão
 				facilitar o desenvolvimento do seu projeto.
 			</p>
 			<p class="text-up-01 text-sm-up-02 text-weight-regular">
-				Confira abaixo os destaques desta revisão.
+				Confira abaixo os destaques desta nova versão.
 			</p>
 		</div>
 	</div>
@@ -159,8 +162,8 @@
 				class="br-button block d-inline-flex auto-sm secondary mb-5"
 				href="/ds/comunidade-govbr-ds"
 			>
-				<i class="fas fa-code-branch mr-1" aria-hidden="true"></i>
-				Veja como
+				<i class="fas fa-users mr-1" aria-hidden="true"></i>
+				Participe da Comunidade
 			</a>
 		</div>
 		<div class="col-md-4 block-first">
@@ -219,17 +222,17 @@
 				Tutorial de Migração da Versão 2x para 3x
 			</h1>
 			<p class="text-up-01 text-sm-up-02 text-weight-regular">
-				Desenvolvemos um guia que facilitará a migração da versão 2.4.3
-				para a versão 3.0.0 do Design System. Lá você encontrará
-				aspectos relevantes como: dependências requeridas,
-				instanciações, componentes compatíveis e novas nomenclaturas.
+				Desenvolvemos um guia que facilitará a migração da versão 2 para
+				a versão 3 do Design System. Lá você encontrará aspectos
+				relevantes como: dependências requeridas, instanciações,
+				componentes compatíveis e novas nomenclaturas.
 			</p>
 			<a
 				class="br-button block d-inline-flex auto-sm secondary mb-5"
 				href="/ds/guias/migracao-2x-3x"
 			>
-				<i class="fas fa-hiking mr-1" aria-hidden="true"></i>
-				Acesse aqui
+				<i class="fas fa-file mr-1" aria-hidden="true"></i>
+				Acesse o Tutorial
 			</a>
 		</div>
 	</div>
@@ -261,6 +264,41 @@
 	</div>
 </section>
 
+<!-- ROTEIRO -->
+<section
+	class="text-right bg-gradient-cyan-vivid mx-n2 mx-sm-n6 px-2 py-5 px-md-5 py-md-5 px-lg-8x py-lg-8x"
+>
+	<div class="row">
+		<div class="col-md-8 block-end-dev">
+			<h1
+				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6 mt-md-6x mt-lg-8x"
+			>
+				Roteiro de Uso do Design System
+			</h1>
+			<p class="text-up-01 text-sm-up-02 text-weight-regular">
+				Elaboramos um passo a passo na Wiki para simplificar
+				<br />
+				a implementação de layouts pelos desenvolvedores.
+			</p>
+			<a
+				class="br-button block d-inline-flex auto-sm secondary mb-5"
+				href="https://govbr-ds.gitlab.io/govbr-ds-wiki/desenvolvimento/guias/roteiro/"
+				target="_blank"
+			>
+				<i class="fas fa-code mr-1" aria-hidden="true"></i>
+				Confira o Roteiro
+			</a>
+		</div>
+		<div class="col-md-4 block-first">
+			<img
+				src="imagens/img-dev.png"
+				class="img-fluid"
+				alt="Imagem Desenvolvedor"
+			/>
+		</div>
+	</div>
+</section>
+
 <!-- CORREÇÕES -->
 <section class="text-center bg-gradient-indigo-cool-vivid mx-n2 mx-sm-n6">
 	<div class="row">
@@ -268,20 +306,22 @@
 			class="block-correcoes col-12 px-2 py-5 px-md-5 py-md-5 px-lg-8x py-lg-8x"
 		>
 			<h1
-				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6 mt-md-6x mt-lg-8x"
+				class="text-up-05 text-sm-up-06 text-weight-light text-sm-weight-light mb-6 mt-md-2 mt-lg-2"
 			>
 				Correções e Melhorias Gerais
 			</h1>
 			<p class="text-up-01 text-sm-up-02 text-weight-regular">
 				Realizamos várias correções em nossas documentações e
-				componentes tornando-os mais fáceis de usar. Confira o que
-				mudou.
+				componentes tornando-os mais fáceis de usar;<br />
+				Passamos a adotar ferramenta JSDOCs para documentação dos
+				arquivos javascripts.<br /><br />
+				Confira em detalhes tudo o que mudou:
 			</p>
 			<a
 				class="br-button block d-inline-flex auto-sm secondary mb-5"
 				href="/ds/release-notes"
 			>
-				<i class="fas fa-star mr-1" aria-hidden="true"></i>
+				<i class="fas fa-list mr-1" aria-hidden="true"></i>
 				Release Notes
 			</a>
 		</div>
