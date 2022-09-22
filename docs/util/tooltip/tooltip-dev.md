@@ -26,7 +26,7 @@
 ### Javascript
 
 ```javascript
-import Tooltip from 'core'
+
  window.document
       .querySelectorAll('[data-tooltip-text]')
       .forEach((TooltipExample) => {
@@ -37,7 +37,7 @@ import Tooltip from 'core'
           textTooltip: texttooltip,
         }
 
-        TooltipExampleList.push(new Tooltip(config))
+        TooltipExampleList.push(new core.Tooltip(config))
       })
 
     

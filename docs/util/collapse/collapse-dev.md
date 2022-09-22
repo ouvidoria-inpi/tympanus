@@ -43,7 +43,7 @@
 **Para cada acionador (trigger)**, instanciar a classe Collapse passando um objeto de configuração.
 
 ```javascript
-import Collapse from 'core'
+
 this.element
       .querySelectorAll('[data-toggle="collapse"]')
       .forEach((trigger) => {
@@ -53,7 +53,7 @@ this.element
           trigger,
           useIcons: true,
         }
-        const collapse = new Collapse(config)
+        const collapse = new core.Collapse(config)
         collapse.setBehavior()
       })
 

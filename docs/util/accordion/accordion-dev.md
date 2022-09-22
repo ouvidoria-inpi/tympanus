@@ -48,7 +48,7 @@
 **Para cada acionador (trigger)**, instanciar a classe Accordion passando um objeto de configuração.
 
 ```javascript
-import Collapse from 'core'
+
 this.element
    .querySelectorAll('[data-toggle="accordion"]')
    .forEach((trigger) => {
@@ -58,7 +58,7 @@ this.element
      trigger,
      useIcons: true,
     }
-    const accordion = new Accordion(config)
+    const accordion = new core.Accordion(config)
     accordion.setBehavior()
    })
 ```

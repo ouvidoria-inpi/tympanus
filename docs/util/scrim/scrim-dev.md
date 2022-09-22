@@ -33,13 +33,13 @@
 **Para cada acionador (trigger)**, instanciar a classe scrim passando um objeto de configuração.
 
 ```javascript
-import Scrim from 'core'
+
 for (const buttonBloco1 of window.document.querySelectorAll(
       '.scrimutilexemplo button'
     )) {
       buttonBloco1.addEventListener('click', () => {
         const scrscrim = window.document.querySelector('#scrimutilexample')
-        const scrimfoco = new Scrim({
+        const scrimfoco = new core.Scrim({
           closeElement: '#scrimfechar',
           trigger: scrscrim,
         })
