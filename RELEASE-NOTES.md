@@ -1,6 +1,8 @@
 # Release Notes
 
-Acesse o histórico das versões publicadas e a lista de mudanças realizadas em cada uma delas, nos repositórios abaixo:
+Acesse o histórico das versões publicadas e a lista de mudanças realizadas em cada uma delas, nos repositórios abaixo.
+
+---
 
 ## Repositórios de Design
 
@@ -9,6 +11,8 @@ Acesse o histórico das versões publicadas e a lista de mudanças realizadas em
 -   [Padrões Modelos](https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/releases)
 
 -   [UI-Kits](https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/releases)
+
+---
 
 ## Repositórios de Desenvolvimento
 
