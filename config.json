@@ -109,55 +109,55 @@
           "files": [
             {
               "description": "Expressa em detalhes os elementos necessários para padronização dos portais. Além disso, contempla layouts possíveis, descrição de itens obrigatórios e variáveis do portal, boas práticas para aplicação de conteúdo editorial e diretrizes para elaboração de conteúdos de vídeos, infográficos e tagueamento.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": "Manual de Diretrizes",
               "path": "assets/govbr-ds-dev-core/downloads/GovbrManualdeDiretrizes.pdf"
             },
             {
               "description": "Fornece orientações sobre as etapas e procedimentos do processo de migração, abordando também indicações para o tratamento do acervo de conteúdo.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": " Manual de Migração",
               "path": "assets/govbr-ds-dev-core/downloads/GovbrManualdeMigracao.pdf"
             },
             {
               "description": "Apresenta as ferramentas de administração e publicação de conteúdos dentro do portal gov.br. Inclui também, com base nos pilares da comunicação de governo - informar, monitorar, ouvir, contribuir e evoluir -, proposta de tom de voz e linguagem e recomendações para construção de textos de agenda, notícias e serviços.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": "Manual de Publicação",
               "path": "assets/govbr-ds-dev-core/downloads/GovbrManualdePublicacao.pdf"
             },
             {
               "description": "Apresenta conjunto de ações que podem ser realizadas para que um site se posicione melhor em resultados orgânicos nos motores de buscas e potencialmente obtenha mais acessos.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": "Manual de Search Engine Optimization (SEO)",
               "path": "assets/govbr-ds-dev-core/downloads/GovbrManualdeSEO.pdf"
             },
             {
               "description": "Padrões e normas de apresentação da marca gov.br.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": "Manual de uso da marca gov.br",
               "path": "assets/govbr-ds-dev-core/downloads/GovbrManualMarca.pdf"
             },
             {
               "description": "Este guia tem o objetivo de auxiliar gestores de comunicação da administração pública federal, e demais órgãos vinculados ao Governo, no desenvolvimento e divulgação das ações de comunicação dos serviços digitais que envolverem a plataforma gov.br.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": "Guia de Transformação Digital - Ações de Comunicação Social",
               "path": "assets/govbr-ds-dev-core/downloads/GovbrManualTransformacaoDigital.pdf"
             },
             {
               "description": "O objetivo deste documento é guiar a construção de painéis analíticos no Serpro a fim de que estes possam seguir um padrão visual, garantindo que nas soluções sejam aplicadas as melhores práticas e dentro de determinados padrões.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": "Design System para Painéis Analíticos v1.0.0",
               "path": "assets/govbr-ds-dev-core/downloads/DesignSystemparaPaineisAnaliticosv1-0-0.pdf"
             },
             {
               "description": "Você não precisa ser um designer para criar um painel que comunique claramente seus principais objetivos e métricas. Se você está apenas começando ou tem um painel que precisa ser repensado, nossa lista de verificação de design de painel ajudará você a alcançar os resultados que procura.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": "Geckoboard Dashboard Design Guide",
               "path": "assets/govbr-ds-dev-core/downloads/geckoboard-dashboard-design-guide.pdf"
             },
             {
               "description": "A visualização de dados oferece uma tremenda oportunidade de obter insights de dados e entender visualmente informações complexas.",
-              "image": "assets/imgs/ICONE-MANUAIS.png",
+              "image": "assets/imgs/icone-manuais.png",
               "label": "Radiant Advisors Good Data Data Visualization Competency Center",
               "path": "assets/govbr-ds-dev-core/downloads/Radiant-Advisors_GoodData_DataVisualizationCompetencyCenter.pdf"
             }
@@ -1447,7 +1447,7 @@
       "files": [
         {
           "description": "Disciplina a implantação e a gestão do Padrão Digital de Governo dos órgãos e entidades do Poder Executivo federal.",
-          "image": "assets/imgs/ICONE-LEGISLAÇÃO.png",
+          "image": "assets/imgs/icone-legislacao.png",
           "label": "Padrão Digital de Governo",
           "path": "assets/govbr-ds-dev-core/downloads/PORTARIAN540DE8DESETEMBRODE2020DOUImprensaNacional.pdf"
         }
