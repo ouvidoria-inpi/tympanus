@@ -1434,7 +1434,7 @@
       "hideLabel": true,
       "id": "release-notes",
       "label": "Release Notes",
-      "path": "CHANGELOG.md",
+      "path": "RELEASE-NOTES.md",
       "type": "documentation"
     },
     {
