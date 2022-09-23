@@ -75,12 +75,9 @@ class BRTab {
         this.positionKeyboard(e)
       })
 
-
-      ancor.addEventListener('blur', (e) => {
+      ancor.addEventListener('blur', () => {
         this.hiddenTooltips()
       })
-
-      
     }
     this.tabitems = this.component.querySelectorAll('tab-item')
   }
@@ -101,7 +98,7 @@ class BRTab {
     const key = event.keyCode
     this.tabitems = this.component.querySelectorAll('.tab-item')
     this.buttons = this.component.querySelectorAll('button')
-   
+
     switch (key) {
       case keys.end:
         event.preventDefault()
@@ -137,7 +134,7 @@ class BRTab {
         event.preventDefault()
         this.hiddenTooltips()
         event.target.click()
-        
+
         event.stopPropagation()
         break
       default:
@@ -146,17 +143,17 @@ class BRTab {
   }
 
   /**
-   *  Esconde todos tooltip 
-   *  
+   *  Esconde todos tooltip
+   *
    */
-  hiddenTooltips(){
+  hiddenTooltips() {
     const tooltips = document.querySelectorAll('.br-tooltip')
-    
-    tooltips.forEach(element => {
-      element.hidden=true;
-      element.style.visbility ="hidden";
-      element.removeAttribute("data-show")
-    });
+
+    tooltips.forEach((element) => {
+      element.hidden = true
+      element.style.visbility = 'hidden'
+      element.removeAttribute('data-show')
+    })
   }
 
   /**
