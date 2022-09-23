@@ -1935,7 +1935,7 @@
       "files": [
         {
           "description": "Disciplina a implantação e a gestão do Padrão Digital de Governo dos órgãos e entidades do Poder Executivo federal.",
-          "image": "assets/imgs/ICONE-LEGISLAÇÃO.png",
+          "image": "assets/imgs/icone-legislacao.png",
           "label": "Padrão Digital de Governo",
           "path": "assets/govbr-ds-dev-core/downloads/PORTARIAN540DE8DESETEMBRODE2020DOUImprensaNacional.pdf"
         }
@@ -1950,7 +1950,7 @@
           "hideLabel": true,
           "id": "release-notes",
           "label": "Release Notes",
-          "path": "CHANGELOG.md",
+          "path": "RELEASE-NOTES.md",
           "type": "documentation"
         },
         {
