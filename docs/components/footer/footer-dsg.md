@@ -1,4 +1,3 @@
-[version]: # (1.0.6)
 
 ![Exemplo do componente footer.](imagens/footer-type-standard.png)
 *Exemplo do componente footer*
@@ -21,21 +20,21 @@ O *footer* é composto por vários elementos visuais e componentes organizados e
 
 A seguir, apresentamos os elementos e componentes mais utilizados no *footer*:
 
-| ID  | Nome                                |                                   Referência                                    | Uso         |
-| --- | ----------------------------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Logo principal                      |                                       ---                                       | Obrigatório |
-| 2   | Mapa do Site                        |                                       ---                                       | Opcional    |
-| 3   | *container* Mapa do Site            |                                       ---                                       | Opcional    |
-| 4   | Ícone "expandir"                    | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
-| 5   | Ícone "retrair"                     | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
-| 6   | Título "Redes Sociais"              |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 7   | Botão "Rede Social"                 |    [Componente Button](https://www.gov.br/ds/components/button?tab=designer)    | Opcional    |
-| 8   | Logo assinatura                     |                                       ---                                       | Opcional    |
-| 9   | *container* informações legais      |                                       ---                                       | Opcional    |
-| 10  | Texto informações legais            |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 11  | Texto informações legais - destaque |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 12  | *container* *footer*                |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 13  | Componente *divider*                |   [Componente Divider](https://www.gov.br/ds/components/divider?tab=designer)   | Obrigatório |
+| ID  | Nome                                |                          Referência                           | Uso         |
+| --- | ----------------------------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Logo principal                      |                              ---                              | Obrigatório |
+| 2   | Mapa do Site                        |                              ---                              | Opcional    |
+| 3   | *container* Mapa do Site            |                              ---                              | Opcional    |
+| 4   | Ícone "expandir"                    | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| 5   | Ícone "retrair"                     | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| 6   | Título "Redes Sociais"              |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 7   | Botão "Rede Social"                 |    [Componente Button](/ds/components/button?tab=designer)    | Opcional    |
+| 8   | Logo assinatura                     |                              ---                              | Opcional    |
+| 9   | *container* informações legais      |                              ---                              | Opcional    |
+| 10  | Texto informações legais            |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 11  | Texto informações legais - destaque |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 12  | *container* *footer*                |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 13  | Componente *divider*                |   [Componente Divider](/ds/components/divider?tab=designer)   | Obrigatório |
 
 ![Anatomia do componente footer em grid de doze colunas.](imagens/footer-anatomy-1.png)
 *Anatomia do componente footer em grid de 12 colunas*

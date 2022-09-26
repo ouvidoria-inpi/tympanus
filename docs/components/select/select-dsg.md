@@ -1,4 +1,3 @@
- [version]: # (6.0.9)
 
 ![Exemplo Componente Select](imagens/select-sample.png)
 *Exemplo do componente select*
@@ -17,13 +16,13 @@ A função do componente *select* é coletar informações fornecidas pelo usuá
 
 ## Anatomia
 
-| ID  | Nome                |                              Referência                              | Uso         |
-| --- | ------------------- | :------------------------------------------------------------------: | ----------- |
-| 1   | Componente *input*  |     [Input](https://www.gov.br/ds/components/input?tab=designer)     | Obrigatório |
-| 2   | Componente *button* |    [Button](https://www.gov.br/ds/components/button?tab=designer)    | Obrigatório |
-| 3   | Componente *list*   |      [List](https://www.gov.br/ds/components/list?tab=designer)      | Obrigatório |
-| 4   | Modos de seleção    |     [Estados](https://www.gov.br/ds/fundamentos-visuais/estados)     | Obrigatório |
-| 5   | Ícone *search*      | [Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
+| ID  | Nome                |                     Referência                     | Uso         |
+| --- | ------------------- | :------------------------------------------------: | ----------- |
+| 1   | Componente *input*  |     [Input](/ds/components/input?tab=designer)     | Obrigatório |
+| 2   | Componente *button* |    [Button](/ds/components/button?tab=designer)    | Obrigatório |
+| 3   | Componente *list*   |      [List](/ds/components/list?tab=designer)      | Obrigatório |
+| 4   | Modos de seleção    |     [Estados](/ds/fundamentos-visuais/estados)     | Obrigatório |
+| 5   | Ícone *search*      | [Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
 
 ![Anatomia](imagens/select-anatomy.png)
 *Anatomia do componente select.*
@@ -169,7 +168,7 @@ Para abrir o componente *select* ou *multiselect* o usuário poderá clicar em t
 ![Exemplo de abertura dos itens do multiselect.](imagens/select-behaviour-multiselect-click-open.png)
 *Exemplo do comportamento de abertura dos itens do multiselect nos estados interativo à esquerda, estado hover no centro e estado pressionado à direita.*
 
-**Importante:** Não havendo espaço disponível para visualizar a abertura devido aos limites da tela, os itens do "Componente *list*" deverão ser reposicionados em uma outra direção, garantindo uma melhor adequação ao layout apresentado. Para maiores informações consultar o tópico *"Posicionamento"* no documento Padrão [*Dropdown*](https://www.gov.br/ds/padroes/dropdown).
+**Importante:** Não havendo espaço disponível para visualizar a abertura devido aos limites da tela, os itens do "Componente *list*" deverão ser reposicionados em uma outra direção, garantindo uma melhor adequação ao layout apresentado. Para maiores informações consultar o tópico *"Posicionamento"* no documento Padrão [*Dropdown*](/ds/padroes/design/dropdown).
 
 ### 3. Responsividade
 

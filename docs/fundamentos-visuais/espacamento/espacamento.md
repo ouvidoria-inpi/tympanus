@@ -1,4 +1,3 @@
-[version]: # (1.0.3)
 
 Espaçamento é a distância entre um elemento a outro, representado por alguma unidade métrica. O espaçamento é um fundamento do design visual que frequentemente cria uma lacuna entre os designers e os desenvolvedores ao projetar uma interface. Para evitar essa situação, o Design System cria e detalha termos em um sistema flexível, possibilitando layouts funcionais e consistentes.
 
@@ -122,7 +121,7 @@ Ao especificar as dimensões de um elemento, deve-se utilizar as boas práticas 
 
 -   Caso o elemento utilize a grid como referência na dimensão, é necessário especificar quantas colunas o componente deve utilizar. É importante não esquecer de definir essa especificação em cada *breakpoint*.
 
--   Nos textos, deve-se trabalhar o conceito de entrelinhamento para controlar melhor os espaços que serão ocupados na interface. Para maiores detalhes veja [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia).
+-   Nos textos, deve-se trabalhar o conceito de entrelinhamento para controlar melhor os espaços que serão ocupados na interface. Para maiores detalhes veja [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia).
 
 ![Exemplo de Dimensão](imagens/dimensao-exemplo.png)
 *Objetos com dimensões fixas.*

@@ -12,16 +12,16 @@ Utilize gráficos para demonstrar padrões, tendências ou comparar informaçõe
 
 Geralmente os gráficos são compostos pelas seguintes áreas:
 
-| ID  | Nome              |                                  Referência                                   | Uso         |
-| --- | ----------------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Área de Cabeçalho | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 1.1 | Título            | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 1.2 | Subtítulo         | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 2   | Área Principal    |                                      ---                                      | Obrigatório |
-| 2.1 | Dados Gráficos    |                                      ---                                      | Obrigatório |
-| 3   | Área de Rodapé    |                                      ---                                      | Opcional    |
-| 3.1 | Descrição         |                                      ---                                      | Opcional    |
-| 3.2 | Fonte             |                                      ---                                      | Opcional    |
+| ID  | Nome              |                         Referência                          | Uso         |
+| --- | ----------------- | :---------------------------------------------------------: | ----------- |
+| 1   | Área de Cabeçalho | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 1.1 | Título            | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 1.2 | Subtítulo         | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 2   | Área Principal    |                             ---                             | Obrigatório |
+| 2.1 | Dados Gráficos    |                             ---                             | Obrigatório |
+| 3   | Área de Rodapé    |                             ---                             | Opcional    |
+| 3.1 | Descrição         |                             ---                             | Opcional    |
+| 3.2 | Fonte             |                             ---                             | Opcional    |
 
 ![Anatomia do gráfico](imagens/anatomia.png)
 *Anatomia do gráfico.*
@@ -608,7 +608,7 @@ Essas técnicas fazem uso do círculo cromático através de esquemas de cores p
 
 A boa aplicação desses esquemas, tende a ajudar o usuário na escolha das cores de forma consciente. É importante conhecê-los, suas vantagens e desvantagens de uso para uma correta aplicação.
 
-O Design System disponibiliza uma extensa gama de cores para a utilização em todos os seus gráficos. Estes deverão ser utilizados sempre que possível. Todas as cores estão disponíveis para uso no [Fundamento Cor](https://www.gov.br/ds/fundamentos-visuais/cores).
+O Design System disponibiliza uma extensa gama de cores para a utilização em todos os seus gráficos. Estes deverão ser utilizados sempre que possível. Todas as cores estão disponíveis para uso no [Fundamento Cor](/ds/fundamentos-visuais/cores).
 
 #### 4. Uso de Elementos Visuais
 

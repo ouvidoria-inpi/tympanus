@@ -1,4 +1,3 @@
-[version]: # (1.2.1)
 
 ![Exemplo do componente divider.](imagens/diretriz.png)
 *Exemplo do componente divider*
@@ -11,9 +10,9 @@ Utilize Divider quando precisar separar na tela seções de conteúdo ou quando 
 
 O *divider* é composto pela borda de uma superfície formando uma linha reta.
 
-| ID  | Nome  |                                  Referência                                   | Uso         |
-| --- | ----- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Borda | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
+| ID  | Nome  |                         Referência                          | Uso         |
+| --- | ----- | :---------------------------------------------------------: | ----------- |
+| 1   | Borda | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
 
 ![Exemplo do componente divider.](imagens/anatomia.png)
 *Exemplo do componente divider*

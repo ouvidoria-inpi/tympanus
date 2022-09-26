@@ -1,4 +1,3 @@
-[version]: # (2.0.4)
 
 Formulário é um grupo de controles de entrada relacionados que permite que os usuários forneçam dados ou configurem opções. Os formulários podem ser simples ou complexos e podem ser apresentados como páginas dedicadas, painéis laterais ou diálogos, dependendo do caso de uso e da situação.
 
@@ -35,7 +34,7 @@ Se o formulário for o único elemento da página, o título do formulário deve
 
 Faça com que títulos e subtítulos sejam os mais breves e específicos possíveis. Pode-se adicionar um subtítulo com uma breve descrição se necessário.
 
-Os subtítulos devem complementar a informação do título, descrever o objetivo do formulário e/ou oferecer alguma informação relevante ao usuário. As diretrizes sobre o corpo do texto e peso estão descritas em [Fundamentos > Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia).
+Os subtítulos devem complementar a informação do título, descrever o objetivo do formulário e/ou oferecer alguma informação relevante ao usuário. As diretrizes sobre o corpo do texto e peso estão descritas em [Fundamentos > Tipografia](/ds/fundamentos-visuais/tipografia).
 
 ![Utilize títulos para as seções](imagens/titulos.png)
 *Utilize títulos e subtítulos com ênfase bem diferenciada dos demais textos do formulário.*
@@ -247,13 +246,13 @@ Utilize mensagens contextuais para informar erros que o usuário possa cometer n
 ![Mensagens como auxílio ao usuário](imagens/mensagem.png)
 *Exemplo de uso da mensagem contextual.*
 
-Consulte o documento do componente *[Message](https://www.gov.br/ds/components/message?tab=designer)* para mais detalhes.
+Consulte o documento do componente *[Message](/ds/components/message?tab=designer)* para mais detalhes.
 
 ### 3. Botões
 
 Botões permitem que o usuário execute algum tipo de ação sobre o formulário.
 
-> No Design System existe o componente [*Button*](https://www.gov.br/ds/components/button?tab=designer) que pode ser utilizado na maioria das ações dos formulários, e o [*Magic Button*](https://www.gov.br/ds/components/magicbutton?tab=designer) que pode ser usado para fortalecer o início ou encerramento de fluxos relevantes de um formulário.
+> No Design System existe o componente [*Button*](/ds/components/button?tab=designer) que pode ser utilizado na maioria das ações dos formulários, e o [*Magic Button*](/ds/components/magicbutton?tab=designer) que pode ser usado para fortalecer o início ou encerramento de fluxos relevantes de um formulário.
 
 Os Botões devem estar posicionados preferencialmente abaixo e à direita do formulário ao qual se referem e devem respeitar as diretrizes de alinhamento e espaçamento previstas para o componente *button*.
 
@@ -264,9 +263,9 @@ Formulários podem exigir botões com até três ênfases:
 
 1. Use *ênfase primária* para ações mais importantes do formulário como, por exemplo, "Incluir Registro" ou "Enviar Formulário".
 
-1. Use *ênfase secundária* para ações secundárias como "Cancelar" ou "Salvar Rascunho".
+2. Use *ênfase secundária* para ações secundárias como "Cancelar" ou "Salvar Rascunho".
 
-1. Use *ênfase terciária* para ações menos importantes, como "Exibir Informações Adicionais" ou "Documentos Acessórios".
+3. Use *ênfase terciária* para ações menos importantes, como "Exibir Informações Adicionais" ou "Documentos Acessórios".
   
 Quando utilizar mais de um botão, o elemento com ênfase primária deve estar necessariamente posicionado à direita dos botões de ênfase secundária e estes sempre mais à direita dos botões de ênfase terciária. Estes podem ser alinhados à esquerda do formulário.
 
@@ -280,7 +279,7 @@ Quando a disposição da tela permitir que os botões sejam posicionados apenas 
 
 **Atenção:** evite botões do tipo "Redefinir" e "Limpar Formulário".
 
-Consulte o documento do [Componente Button](https://www.gov.br/ds/components/button?tab=designer) para mais detalhes sobre o seu uso.
+Consulte o documento do [Componente Button](/ds/components/button?tab=designer) para mais detalhes sobre o seu uso.
   
 ----
 
@@ -339,7 +338,7 @@ Os agrupamentos podem ser apresentados na forma contraída (padrão *collapse*).
 
 Subagrupamentos são agrupamentos dentro de agrupamentos. Para tornar mais clara e hierarquizada a informação utilize indentação evidente para os subagrupamentos.
 
-Utilize a escala de *layout* definida no fundamento [Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento) para indentar os subagrupamentos. Utilize um valor que fique claro este comportamento tendo como referência o agrupamento que o contém.
+Utilize a escala de *layout* definida no fundamento [Espaçamento](/ds/fundamentos-visuais/espacamento) para indentar os subagrupamentos. Utilize um valor que fique claro este comportamento tendo como referência o agrupamento que o contém.
 
 **Atenção:** tenha cautela na utilização de subagrupamentos.  Recomenda-se apenas *um nível* de subagrupamento por agrupamento.
 
@@ -369,12 +368,12 @@ Como regra geral, é recomendado que se utilize:
 
 -   um espaçamento menor entre os campos de entrada de dados, texto ou opções.
 
-Esses espaçamentos devem ser constantes para uma mesma função, em toda a tela e em todo o produto. (Veja mais no fundamento [Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento).)
+Esses espaçamentos devem ser constantes para uma mesma função, em toda a tela e em todo o produto. (Veja mais no fundamento [Espaçamento](/ds/fundamentos-visuais/espacamento).)
 
 ![Exemplo de espaçamentos entre as áreas do formulário](imagens/espacamento-form.png)
 *Exemplo de espaçamentos entre as áreas do formulário.*
 
-Consulte o documento  [Fundamentos Visuais > Espaçamento](https://www.gov.br/ds/fundamentos-visuais/espacamento) para conferir os espaçamentos possíveis.
+Consulte o documento  [Fundamentos Visuais > Espaçamento](/ds/fundamentos-visuais/espacamento) para conferir os espaçamentos possíveis.
 
 #### Por *Divider*
 
@@ -389,7 +388,7 @@ Outra possibilidade para se criar agrupamentos é por meio do uso do recurso de 
 
 **Atenção:** o recurso de agrupamentos por cores pode funcionar também para dar destaque a um agrupamento específico.
 
-Para mais informações, consulte o documento [Fundamentos Visuais > Cores](https://www.gov.br/ds/fundamentos-visuais/cores)
+Para mais informações, consulte o documento [Fundamentos Visuais > Cores](/ds/fundamentos-visuais/cores)
 
 ![Agrupamentos com cor de fundo diferente](imagens/cor.png)
 *Agrupando elementos com uma superfície com cor diferente.*

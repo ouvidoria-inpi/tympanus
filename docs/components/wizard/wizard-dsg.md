@@ -1,4 +1,3 @@
-[version]: # (4.2.2)
 
 ![Exemplo do componente wizard](imagens/type-horizontal.png)
 *Exemplo do componente wizard.*
@@ -11,12 +10,12 @@ Use *wizards* como um padrão para entrada de informações que devam seguir uma
 
 O *Componente Wizard* é constituído pelos seguintes elementos.
 
-| ID  | Nome               |                              Referência                               | Uso         |
-| --- | ------------------ | :-------------------------------------------------------------------: | ----------- |
-| 1   | Painel de etapas   |                                  ---                                  | Obrigatório |
-| 2   | Componente Step    | [Componente Step](https://www.gov.br/ds/components/step?tab=designer) | Obrigatório |
-| 3   | Área de Conteúdo   |                                  ---                                  | Obrigatório |
-| 4   | Barra de Navegação |                                  ---                                  | Obrigatório |
+| ID  | Nome               |                     Referência                      | Uso         |
+| --- | ------------------ | :-------------------------------------------------: | ----------- |
+| 1   | Painel de etapas   |                         ---                         | Obrigatório |
+| 2   | Componente Step    | [Componente Step](/ds/components/step?tab=designer) | Obrigatório |
+| 3   | Área de Conteúdo   |                         ---                         | Obrigatório |
+| 4   | Barra de Navegação |                         ---                         | Obrigatório |
 
 ![Elementos do componente Wizard](imagens/anatomy.png)
 *Elementos do componente Wizard.*
@@ -32,11 +31,11 @@ Nesta área são exibidas as etapas do *wizard*. O painel de etapas se estende p
 ![Painel de Etapas](imagens/steps-space-1.png)
 *Painel de Etapas*
 
-Consulte detalhes em [Componente Step](https://www.gov.br/ds/components/step?tab=designer).
+Consulte detalhes em [Componente Step](/ds/components/step?tab=designer).
 
 ### 2. Componente *Steps* (Obrigatório)
 
-*Steps* são indicadores de etapas e progresso que auxiliam os usuários durante um fluxo de trabalho, seguindo uma sequência lógica linear, aleatória, numeradas ou não. Consulte detalhes sobre comportamentos e boas práticas dos *Steps* em [Componente Step](https://www.gov.br/ds/components/step?tab=designer).
+*Steps* são indicadores de etapas e progresso que auxiliam os usuários durante um fluxo de trabalho, seguindo uma sequência lógica linear, aleatória, numeradas ou não. Consulte detalhes sobre comportamentos e boas práticas dos *Steps* em [Componente Step](/ds/components/step?tab=designer).
 
 ![Exemplo de Componente Step](imagens/anatomy-step.png)
 *Exemplo de Componente Step*

@@ -1,4 +1,3 @@
-[version]: # (16.1.3)
 
 ![Exemplo Botão](imagens/button-description.png)
 *Exemplo de botões disponíveis no Design System*
@@ -23,11 +22,11 @@ Utilize botões quando for necessário realizar ações contendo as seguintes ca
 
 ## Anatomia
 
-| ID  | Nome       |                                   Referência                                    | Uso         |
-| --- | ---------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Ícone      | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
-| 2   | Rótulo     |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Obrigatório |
-| 3   | Superfície |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| ID  | Nome       |                          Referência                           | Uso         |
+| --- | ---------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Ícone      | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 2   | Rótulo     |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Obrigatório |
+| 3   | Superfície |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
 
 ![Exemplo Anatomia](imagens/button-anatomy.png)
 *Anatomia completa do componente button*
