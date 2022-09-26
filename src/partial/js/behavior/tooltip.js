@@ -94,11 +94,8 @@ class Tooltip {
     text_tooltip.classList.add('br-tooltip')
     text_tooltip.classList.add('sample')
     if (this.activator) {
-      // this.activator.parentElement.parentElement.parentElement.appendChild(
-      // text_tooltip
-      // )
+      this.activator.appendChild(text_tooltip)
     }
-    document.body.appendChild(text_tooltip)
 
     return text_tooltip
   }
