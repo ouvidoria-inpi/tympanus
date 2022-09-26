@@ -1,4 +1,3 @@
-[version]: # (3.0.5)
 
 ![Exemplo do componente list horizontal e vertical.](imagens/diretriz.png)
 *Exemplo dos componentes list vertical e list horizontal*
@@ -7,13 +6,13 @@
 
 ## Anatomia
 
-| ID  | Nome       |                                  Referência                                   | Uso         |
-| --- | ---------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | *Header*   |   [Componente Header](https://www.gov.br/ds/components/header?tab=designer)   | Opcional    |
-| 2   | Item       |     [Componente Item](https://www.gov.br/ds/components/item?tab=designer)     | Obrigatório |
-| 3   | Rótulo     | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 4   | *Divider*  |  [Componente Divider](https://www.gov.br/ds/components/divider?tab=designer)  | Opcional    |
-| 5   | Superfície | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
+| ID  | Nome       |                         Referência                          | Uso         |
+| --- | ---------- | :---------------------------------------------------------: | ----------- |
+| 1   | *Header*   |   [Componente Header](/ds/components/header?tab=designer)   | Opcional    |
+| 2   | Item       |     [Componente Item](/ds/components/item?tab=designer)     | Obrigatório |
+| 3   | Rótulo     | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 4   | *Divider*  |  [Componente Divider](/ds/components/divider?tab=designer)  | Opcional    |
+| 5   | Superfície | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
 
 ![Anatomia do componente list.](imagens/anatomia.png)
 *Anatomia do componente list*

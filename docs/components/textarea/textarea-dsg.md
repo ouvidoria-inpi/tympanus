@@ -1,4 +1,3 @@
-[version]: # (2.1.0)
 
 ![Exemplo de Textarea](imagens/behavior-states-interactive.png)
 *Exemplo de Textarea*
@@ -15,14 +14,14 @@ Utilize o *Textarea* quando:
 
 O *Textarea* é constituído por:
 
-| ID  | Nome                       |                                   Referência                                    | Uso         |
-| --- | -------------------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | *Label*                    |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 2   | Campo de Entrada de Texto  |                                       ---                                       | Obrigatório |
-| 3   | Ícone de Redimensionamento | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
-| 4   | *Placeholder*              |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 5   | Mensagem                   |   [Componente Message](https://www.gov.br/ds/components/message?tab=designer)   | Opcional    |
-| 6   | Texto Auxiliar             |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| ID  | Nome                       |                          Referência                           | Uso         |
+| --- | -------------------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | *Label*                    |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 2   | Campo de Entrada de Texto  |                              ---                              | Obrigatório |
+| 3   | Ícone de Redimensionamento | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| 4   | *Placeholder*              |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 5   | Mensagem                   |   [Componente Message](/ds/components/message?tab=designer)   | Opcional    |
+| 6   | Texto Auxiliar             |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
 
 ![Anatomia do Textarea](imagens/anatomy.png)
 *Anatomia do Textarea*
@@ -31,13 +30,13 @@ O *Textarea* é constituído por:
 
 ### Detalhamento dos Itens
 
-Abaixo segue o detalhamento dos itens do *Componente Textarea*. Para maiores informações consulte também a documentação [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
+Abaixo segue o detalhamento dos itens do *Componente Textarea*. Para maiores informações consulte também a documentação [Padrão de Formulário](/ds/padroes/design/formulario).
 
 #### 1. Label (Opcional)
 
 Auxiliam o usuário, indicando que tipo de informação deverá ser digitada no *Campo de Texto*. O texto do *Label* deverá ser curto e objetivo.
 
-Além disso, o *Label* também tem a função de indicar ao usuário se o *Campo de Texto é obrigatório ou não*. Veja detalhes sobre a indicação de *Campos Obrigatórios/Opcionais* no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
+Além disso, o *Label* também tem a função de indicar ao usuário se o *Campo de Texto é obrigatório ou não*. Veja detalhes sobre a indicação de *Campos Obrigatórios/Opcionais* no documento [Padrão de Formulário](/ds/padroes/design/formulario).
 
 ##### Posicionamento do Label
 
@@ -220,7 +219,7 @@ O *Textarea* poderá ser usado com densidades diferentes. A *Densidade* tem a ve
 
 O componente *Textarea* é bem parecido com o componente *input*. Portanto, boa parte dos comportamentos são similares e podem ser "reaproveitados".
 
-Para simplificação, utilize o comportamento Estados da mesma forma como é encontrado no [*Input*](https://www.gov.br/ds/components/input?tab=designer) (tanto na parte de uso em fundos claros e escuros como nas suas limitações descritas).
+Para simplificação, utilize o comportamento Estados da mesma forma como é encontrado no [*Input*](/ds/components/input?tab=designer) (tanto na parte de uso em fundos claros e escuros como nas suas limitações descritas).
 
 ---
 

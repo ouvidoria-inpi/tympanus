@@ -1,4 +1,3 @@
-[version]: # (1.0.1)
 
 São situações que ocorrem dentro de uma aplicação nas quais não há dados a serem exibidos para o usuário. Geralmente são visualizados quando um usuário interage pela primeira vez no sistema, quando os dados foram excluídos ou simplesmente esses dados não estão mais disponíveis.
 
@@ -21,12 +20,12 @@ Utilize *Empty States* para:
 
 A anatomia do padrão *Empty States* é composta pelos seguintes elementos:
 
-| ID  | Nome                  |                                  Referência                                   | Uso         |
-| --- | --------------------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Imagem                |                                      ---                                      | Opcional    |
-| 2   | Título                | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Obrigatório |
-| 3   | Corpo da Mensagem     | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Obrigatório |
-| 4   | Elementos Interativos |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Opcional    |
+| ID  | Nome                  |                         Referência                          | Uso         |
+| --- | --------------------- | :---------------------------------------------------------: | ----------- |
+| 1   | Imagem                |                             ---                             | Opcional    |
+| 2   | Título                | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Obrigatório |
+| 3   | Corpo da Mensagem     | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Obrigatório |
+| 4   | Elementos Interativos |   [Componente Button](/ds/components/button?tab=designer)   | Opcional    |
 
 ![Anatomia do Empty State](imagens/anatomy.png)
 *Anatomia do Empty State*
@@ -108,7 +107,7 @@ Abaixo pode-se observar alguns dos erros mais comuns e como tratá-los:
 
 #### *Empty States* x Templates de Erro
 
-É importante salientar que existem tipos de erros que possuem uma origem além da aplicação, como por exemplo,  erros provenientes do protocolo *HTTP* *(404, 403, 408, 500 ... entre outros)*. Para este tipo de erro deve-se seguir os padrões especificados na documentação [Template de Erro](https://www.gov.br/ds/templates/erro?tab=designer).
+É importante salientar que existem tipos de erros que possuem uma origem além da aplicação, como por exemplo,  erros provenientes do protocolo *HTTP* *(404, 403, 408, 500 ... entre outros)*. Para este tipo de erro deve-se seguir os padrões especificados na documentação [Template de Erro](/ds/templates/erro?tab=designer).
 
 ---
 

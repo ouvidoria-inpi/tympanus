@@ -1,4 +1,3 @@
-[version]: # (2.0.1)
 
 Consiste em um padrão para guiar o usuário durante um tutorial, apresentação ou processo de aprendizado simples.
 
@@ -39,11 +38,11 @@ Dependendo do contexto e conteúdo a ser demonstrado, o tom e voz pode variar ba
 
 O *Onboarding* é constituído por:
 
-| ID  | Nome                  |                                  Referência                                   | Uso         |
-| --- | --------------------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Componente *Tooltip*  |  [Componente Tooltip](https://www.gov.br/ds/components/tooltip?tab=designer)  | Obrigatório |
-| 2   | Componente *Carousel* | [Componente Carousel](https://www.gov.br/ds/components/carousel?tab=designer) | Obrigatório |
-| 2   | Superfície *Overlay*  | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
+| ID  | Nome                  |                         Referência                          | Uso         |
+| --- | --------------------- | :---------------------------------------------------------: | ----------- |
+| 1   | Componente *Tooltip*  |  [Componente Tooltip](/ds/components/tooltip?tab=designer)  | Obrigatório |
+| 2   | Componente *Carousel* | [Componente Carousel](/ds/components/carousel?tab=designer) | Obrigatório |
+| 2   | Superfície *Overlay*  | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
 
 ![Anatomia do Onboarding](imagens/anatomy.png)
 *Anatomia do Onboarding*

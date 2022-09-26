@@ -1,4 +1,3 @@
-[Version]: # (2.1.4)
 
 ![Exemplo de Modal](imagens/diretriz.png)
 *Exemplo do componente modal*
@@ -23,14 +22,14 @@ Modais devem manter uma comunicação direta nas informações e dedicadas à co
 
 ## Anatomia
 
-| ID  | Nome                     |                                  Referência                                   | Uso         |
-| --- | ------------------------ | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Superfície               | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
-| 2   | Título                   | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 3   | Conteúdo                 |                                      ---                                      | Obrigatório |
-| 4   | Botões                   |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Obrigatório |
-| 5   | Botão terciário cancelar |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Opcional    |
-| 6   | Superfície *overlay*     | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Opcional    |
+| ID  | Nome                     |                         Referência                          | Uso         |
+| --- | ------------------------ | :---------------------------------------------------------: | ----------- |
+| 1   | Superfície               | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Título                   | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 3   | Conteúdo                 |                             ---                             | Obrigatório |
+| 4   | Botões                   |   [Componente Button](/ds/components/button?tab=designer)   | Obrigatório |
+| 5   | Botão terciário cancelar |   [Componente Button](/ds/components/button?tab=designer)   | Opcional    |
+| 6   | Superfície *overlay*     | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Opcional    |
 
 ![Anatomia da Modal](imagens/anatomy.png)
 *Elementos que compõem uma modal*

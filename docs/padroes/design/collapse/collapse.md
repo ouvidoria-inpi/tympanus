@@ -1,4 +1,3 @@
-[version]: # (1.0.1)
 
 O *Padrão Collapse* compreende um modelo para exibir ou ocultar determinado conteúdo em tela, "empurrando" ou "puxando" os elementos adjacentes na interface.
 
@@ -29,11 +28,11 @@ Quando não usar o *Padrão Collapse*:
 
 O *Padrão Collapse* é constituído por:
 
-| ID  | Nome                               |                                   Referência                                    | Uso         |
-| --- | ---------------------------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Acionador de Expansão/Retração     |                                       ---                                       | Obrigatório |
-| 2   | Identificador de Expansão/Retração | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
-| 3   | Área/Conteúdo Expansível           |                                       ---                                       | Obrigatório |
+| ID  | Nome                               |                          Referência                           | Uso         |
+| --- | ---------------------------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Acionador de Expansão/Retração     |                              ---                              | Obrigatório |
+| 2   | Identificador de Expansão/Retração | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| 3   | Área/Conteúdo Expansível           |                              ---                              | Obrigatório |
 
 ![Anatomia do Padrão Collapse](imagens/anatomy.png)
 *Anatomia do Padrão Collapse*
@@ -105,17 +104,17 @@ Por padrão, o *Identificador de Expansão/Retração* deverá ser posicionado �
 
 Em alguns casos excepcionais, o *Identificador de Expansão/Retração* deve se posicionar de outra forma. São situações específicas em cada componente, onde a posição dos ícones/botões de ação já estão determinadas ou quando sua localização à direita é inviável. Veja abaixo alguns exemplos de exceção.
 
-- 1. No caso do *Header*, já existe um local definido para utilização do acionador, à esquerda do título. Nesta situação segue-se o padrão estabelecido no *Header*.
+-   1. No caso do *Header*, já existe um local definido para utilização do acionador, à esquerda do título. Nesta situação segue-se o padrão estabelecido no *Header*.
 
     ![Identificador de Expansão/Retração posicionado à esquerda no Header](imagens/anatomy-iconography-3.png)
     *Identificador de Expansão/Retração posicionado à esquerda no Header*
 
-- 2. No caso do *Button*, também já existe definido um local apropriado para utilização dos ícones, à esquerda do rótulo, ou centralizado no caso do *Button Circular*.
+-   2. No caso do *Button*, também já existe definido um local apropriado para utilização dos ícones, à esquerda do rótulo, ou centralizado no caso do *Button Circular*.
 
     ![Exemplo do Identificador de Expansão/Retração no Button](imagens/button.png)
     *Exemplo do Identificador de Expansão/Retração no Button*
 
-- 3. A linha da tabela é segmentada por colunas e conteúdos diferenciados. Nesta situação, o *Identificador de Expansão/Retração* torna-se mais evidente no início da linha da tabela. Sua utilização à direita fica comprometida, tendo em vista a possibilidade de outros botões funcionais nesta região.
+-   3. A linha da tabela é segmentada por colunas e conteúdos diferenciados. Nesta situação, o *Identificador de Expansão/Retração* torna-se mais evidente no início da linha da tabela. Sua utilização à direita fica comprometida, tendo em vista a possibilidade de outros botões funcionais nesta região.
 
     ![Identificador de Expansão/Retração posicionado à esquerda na linha da tabela](imagens/table.png)
     *Identificador de Expansão/Retração posicionado à esquerda na linha da tabela*

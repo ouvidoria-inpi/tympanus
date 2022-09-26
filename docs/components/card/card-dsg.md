@@ -1,4 +1,3 @@
-[version]: # (5.1.7)
 
 ![Exemplo do componente card.](imagens/diretriz.png)
 *Exemplo do componente card.*
@@ -14,10 +13,10 @@ Os *cards* devem ser fáceis de verificar informações relevantes e acionáveis
 
 Para construir um *card* é necessária uma superfície branca com sombra e uma área com no mínimo um conteúdo contido.
 
-| ID  | Nome       |                             Referência                             | Uso         |
-| --- | ---------- | :----------------------------------------------------------------: | ----------- |
-| 1   | Superfície | [Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
-| 2   | Área       |                                ---                                 | Obrigatório |
+| ID  | Nome       |                    Referência                    | Uso         |
+| --- | ---------- | :----------------------------------------------: | ----------- |
+| 1   | Superfície | [Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Área       |                       ---                        | Obrigatório |
 
 ![Exemplo anatomia do componente card.](imagens/anatomy.png)
 *Anatomia do componente card.*

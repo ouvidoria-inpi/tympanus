@@ -1,4 +1,3 @@
-[version]: # (1.0.4)
 
 ![Exemplos de magic button.](imagens/diretriz.png)
 *Exemplos do componente magic button.*
@@ -9,12 +8,12 @@ Use o *magic button* para iniciar/encerrar fluxos relevantes ou induzir usuário
 
 ## Anatomia
 
-| ID  | Nome                |                                   Referência                                    | Uso         |
-| --- | ------------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Superfície de apoio |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 2   | Superfície          |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 3   | *Label*             |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Obrigatório |
-| 4   | Ícone               | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| ID  | Nome                |                          Referência                           | Uso         |
+| --- | ------------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Superfície de apoio |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 2   | Superfície          |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 3   | *Label*             |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Obrigatório |
+| 4   | Ícone               | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Obrigatório |
 
 ![Anatomia do magic button.](imagens/anatomia.png)
 *Anatomia do componente magic button.*

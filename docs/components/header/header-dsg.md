@@ -1,4 +1,3 @@
-[version]: # (1.1.12)
 
 Utilize o *Header* quando necessitar identificar o nome do site/sistema, agrupar os elementos de navegação, de funcionalidades e de suporte ao usuário.
 
@@ -9,21 +8,21 @@ Utilize o *Header* quando necessitar identificar o nome do site/sistema, agrupar
 
 ## Anatomia
 
-| ID  | Nome                      |                                   Referência                                    | Uso         |
-| --- | ------------------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Logo                      |                                       ---                                       | Opcional    |
-| 2   | Assinatura                |                                       ---                                       | Opcional    |
-| 3   | Título                    |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Obrigatório |
-| 4   | Subtítulo                 |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 5   | Botão Menu                |    [Componente Button](https://www.gov.br/ds/components/button?tab=designer)    | Opcional    |
-| 6   | Área para Links           |                                       ---                                       | Opcional    |
-| 7   | Área para Funcionalidades | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
-| 8   | Botão Autenticar          |   [Componente Sign-In](https://www.gov.br/ds/components/signin?tab=designer)    | Opcional    |
-| 9   | Avatar do Usuário         |    [Componente Avatar](https://www.gov.br/ds/components/avatar?tab=designer)    | Opcional    |
-| 10  | Campo de Busca            |     [Componente Input](https://www.gov.br/ds/components/input?tab=designer)     | Opcional    |
-| 11  | Lista Dropdown            |            [Padrão Dropdown](https://www.gov.br/ds/padroes/dropdown)            | Opcional    |
-| 12  | Superfície                |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 13  | Separadores               |   [Componente Divider](https://www.gov.br/ds/components/divider?tab=designer)   | Obrigatório |
+| ID  | Nome                      |                          Referência                           | Uso         |
+| --- | ------------------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Logo                      |                              ---                              | Opcional    |
+| 2   | Assinatura                |                              ---                              | Opcional    |
+| 3   | Título                    |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Obrigatório |
+| 4   | Subtítulo                 |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 5   | Botão Menu                |    [Componente Button](/ds/components/button?tab=designer)    | Opcional    |
+| 6   | Área para Links           |                              ---                              | Opcional    |
+| 7   | Área para Funcionalidades | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 8   | Botão Autenticar          |   [Componente Sign-In](/ds/components/signin?tab=designer)    | Opcional    |
+| 9   | Avatar do Usuário         |    [Componente Avatar](/ds/components/avatar?tab=designer)    | Opcional    |
+| 10  | Campo de Busca            |     [Componente Input](/ds/components/input?tab=designer)     | Opcional    |
+| 11  | Lista Dropdown            |        [Padrão Dropdown](/ds/padroes/design/dropdown)         | Opcional    |
+| 12  | Superfície                |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 13  | Separadores               |   [Componente Divider](/ds/components/divider?tab=designer)   | Obrigatório |
 
 ![Anatomia Header Padrão](imagens/header-anatomy-1.png)
 *Anatomia do Header Padrão*
@@ -176,7 +175,7 @@ Preferencialmente, utilize o *Button* na versão com densidade alta.
 
 ### 8. Botão de Autenticar (Opcional)
 
-O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](https://www.gov.br/ds/components/signin?tab=designer)).
+O Botão de Autenticar é opcional e fica localizado no canto direito do *Header* e através dele o usuário poderá realizar os passos de autenticação no ambiente GovBr ou no sistema relacionado ([veja Sign-in](/ds/components/signin?tab=designer)).
 
 É apresentado apenas quando o usuário estiver "deslogado". Após o login, ele será substituído pelo Avatar.
 

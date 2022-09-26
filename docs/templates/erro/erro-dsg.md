@@ -1,4 +1,3 @@
-[version]: # (3.3.0)
 
 ![Exemplo de template de erro do tipo 404.](imagens/tela-erro.png)
 *Exemplo de template de erro do tipo erro 404 - Página Não Encontrada.*
@@ -13,13 +12,13 @@ O *template* Erro utiliza a mesma estrutura do "*template* base", com as seguint
 
 2. A Área do conteúdo foi dividida em duas subáreas: área informativa e área de suporte.
 
-| ID  | Nome             |                                Referência                                 | Uso         |
-| --- | ---------------- | :-----------------------------------------------------------------------: | ----------- |
-| A   | Área do *Header* | [Componente Header](https://www.gov.br/ds/components/header?tab=designer) | Obrigatório |
-| B   | Área do Conteúdo |                                    ---                                    | Obrigatório |
-| C   | Área Informativa |                                    ---                                    | Obrigatório |
-| D   | Área de Suporte  |                                    ---                                    | Opcional    |
-| E   | Área do *Footer* | [Componente Footer](https://www.gov.br/ds/components/footer?tab=designer) | Obrigatório |
+| ID  | Nome             |                       Referência                        | Uso         |
+| --- | ---------------- | :-----------------------------------------------------: | ----------- |
+| A   | Área do *Header* | [Componente Header](/ds/components/header?tab=designer) | Obrigatório |
+| B   | Área do Conteúdo |                           ---                           | Obrigatório |
+| C   | Área Informativa |                           ---                           | Obrigatório |
+| D   | Área de Suporte  |                           ---                           | Opcional    |
+| E   | Área do *Footer* | [Componente Footer](/ds/components/footer?tab=designer) | Obrigatório |
 
 ![Áreas de uma típica tela de erro.](imagens/anatomia.png)
 *Áreas de uma típica tela de erro.*
