@@ -13,7 +13,7 @@ Caso tenha dúvida em como aplicar os padrões a um serviço, temos alguns prot�
 
 <!-- Temos uma novidade que acabamos de disponibilizar para download: Protótipos de um caso de uso. Neles exemplificamos como podem ser aplicados os padrões do design system em soluções web, mobile responsivo e aplicativos nativos IOS e Android sem ferir os padrões de cada plataforma, para que entendam as diferenças entre as aplicações. [Confira na área de downloads na **aba Designer**](/ds/downloads/assets). -->
 
-Para saber mais sobre como utilizar os UIKITs, acesse [**Prototipando com o Design System GOV.BR**](/ds/introducao/prototipando)
+Para saber mais sobre como utilizar os UIKITs, acesse [**Prototipando com o Design System GOV.BR**](/ds/como-comecar/prototipando)
 
 ## Instalação
 
@@ -95,7 +95,7 @@ Você poderá usar uma versão "lite" do CSS no lugar da versão completa. No c�
 />
 ```
 
-Visite [Design System GOV.BR lite](/ds/introducao/govbr-ds-lite) para saber as diferenças.
+Visite [Design System GOV.BR lite](/ds/como-comecar/versao-lite) para saber as diferenças.
 
 ## Template Base
 
@@ -171,7 +171,6 @@ element.querySelectorAll('[data-toggle="accordion"]')
 > Os utilitários não são automaticamente inicializados precisando de uma classe javascript para inicializá-los
 
 Acesse a seção **Utilitários** no menu principal e veja a lista de componentes disponíveis.
-
 
 ## Release Notes
 
