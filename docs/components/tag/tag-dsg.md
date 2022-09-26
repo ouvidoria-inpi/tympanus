@@ -1,4 +1,3 @@
-[version]: # (8.1.5)
 
 ![Exemplos de tipos de tags.](imagens/diretriz.png)
 *Exemplos de tipos do componente tag*
@@ -19,12 +18,12 @@ Devem ter um relacionamento claro e útil com o conteúdo ou tarefa aos quais es
 
 ## Anatomia
 
-| ID  | Nome            |                                   Referência                                    | Uso         |
-| --- | --------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Superfície      |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 2   | Ícone           | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
-| 3   | *Label*         |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 4   | Botão Terciário |    [Componente Button](https://www.gov.br/ds/components/button?tab=designer)    | Opcional    |
+| ID  | Nome            |                          Referência                           | Uso         |
+| --- | --------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Superfície      |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 2   | Ícone           | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 3   | *Label*         |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 4   | Botão Terciário |    [Componente Button](/ds/components/button?tab=designer)    | Opcional    |
 
 ![Anatomia dos tipos de tags.](imagens/anatomia.png)
 *Anatomia do componente tag*

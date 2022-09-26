@@ -1,4 +1,3 @@
-[version]: # (1.0.3)
 
 ![Exemplo do componente item.](imagens/diretriz.png)
 *Exemplo do componente item.*
@@ -14,11 +13,11 @@ Os itens são componentes projetados para servirem de apoio a outros componentes
 
 Para construir um item é necessário uma superfície, uma área com no mínimo um conteúdo contido e opcionalmente um separador na extremidade inferior da superfície.
 
-| ID  | Nome             |                                  Referência                                   | Uso         |
-| --- | ---------------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Superfície       | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
-| 2   | Área de conteúdo |                                      ---                                      | Obrigatório |
-| 3   | Divider          |  [Componente Divider](https://www.gov.br/ds/components/divider?tab=designer)  | Opcional    |
+| ID  | Nome             |                         Referência                          | Uso         |
+| --- | ---------------- | :---------------------------------------------------------: | ----------- |
+| 1   | Superfície       | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Área de conteúdo |                             ---                             | Obrigatório |
+| 3   | Divider          |  [Componente Divider](/ds/components/divider?tab=designer)  | Opcional    |
 
 ![Anatomia do componente item.](imagens/anatomia.png)
 *Anatomia do componente item.*

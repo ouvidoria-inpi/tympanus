@@ -1,4 +1,3 @@
-[version]: # (1.0.1)
 
 O padrão *Dropdown* ocorre quando uma superfície flutuante surge sobre a tela, de forma temporária, a partir de um elemento acionador. Esta superfície pode conter informações adicionais com características voltadas para coleta de dados, seleção de opções ou apenas texto informativo.
 
@@ -23,11 +22,11 @@ Não utilize o padrão *Dropdown*:
 
 ## Anatomia
 
-| ID  | Nome                    |                                   Referência                                    | Uso         |
-| --- | ----------------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Acionador               |                                                                                 | Obrigatório |
-| 2   | Identificador de Estado | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
-| 3   | Superfície Flutuante    |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| ID  | Nome                    |                          Referência                           | Uso         |
+| --- | ----------------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Acionador               |                                                               | Obrigatório |
+| 2   | Identificador de Estado | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| 3   | Superfície Flutuante    |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
 
 ![Anatomia do Dropdown](imagens/anatomy.png)
 *Anatomia do Dropdown*
@@ -100,7 +99,7 @@ Para elementos flutuantes, como *Dropdown*, usa-se o padrão de *Elevação* na 
 ![Exemplo de Sombras em Diferentes Intensidades](imagens/sombras.png)
 *Exemplo de Sombras em Diferentes Intensidades e Dropdown na Camada 2 de Elevação*
 
-**OBS:** Consulte mais detalhes em [Fundamentos > Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao).
+**OBS:** Consulte mais detalhes em [Fundamentos > Elevação](/ds/fundamentos-visuais/elevacao).
 
 Apesar de se utilizar a sombra como um elemento obrigatório para destaque da *Superfície Flutuante*, nem sempre seu uso é suficiente para agregar contraste entre a superfície e a tela. Para proporcionar mais ênfase e contraste, é possível utilizar algumas características opcionais provenientes do conceito de *Superfície*, como *Borda*, *Cor* ou *Overlay*. Veja abaixo:
 

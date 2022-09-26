@@ -1,4 +1,3 @@
-[version]: # (1.0.1)
 
 Também conhecido como *Densidade Informacional*, são recursos ou técnicas para otimizar a organização do conteúdo na tela exibindo ou ocultando partes do mesmo conforme a prioridade da informação.
 
@@ -61,7 +60,7 @@ Trata-se da rolagem promovida pelos navegadores. Geralmente as pessoas já estã
 
 Alguns componentes podem apresentar uma barra de rolagem interna para melhor organizar o conteúdo. Neste caso, o conteúdo rolante é apenas o interno ao componente e deve rolar sob as margens do mesmo, enquanto a tela continua estática.
 
-Para auxiliar o entendimento do usuário de que há mais informação a ser vista, as margens que ocultam o conteúdo rolante devem elevar a camada em um nível e apresentar a sombra correspondente. Confira o documento do fundamento visual [elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao) para entender melhor o uso de sombras.
+Para auxiliar o entendimento do usuário de que há mais informação a ser vista, as margens que ocultam o conteúdo rolante devem elevar a camada em um nível e apresentar a sombra correspondente. Confira o documento do fundamento visual [elevação](/ds/fundamentos-visuais/elevacao) para entender melhor o uso de sombras.
 
 Uma boa dica para tornar ainda mais intuitiva a ocorrência do conteúdo rolante é deixá-lo com uma parte visível, insinuando que há mais para ser visto. A imagem abaixo ilustra essa técnica.
 
@@ -124,9 +123,9 @@ Dominar a técnica de ocultar conteúdo pode ser uma ótima maneira de organizar
 
 Analise os respectivos documentos para mais detalhes sobre esses comportamentos:
 
--   [*Collapse*](https://www.gov.br/ds/padroes/collapse);
+-   [*Collapse*](/ds/padroes/design/collapse);
 
--   [*Dropdown*](https://www.gov.br/ds/padroes/dropdown).
+-   [*Dropdown*](/ds/padroes/design/dropdown).
 
 A seguir, analisamos alguns casos mais recorrentes utilizando os comportamentos *collapse* e *dropdown*:
 
@@ -154,7 +153,7 @@ Alguns elementos possuem conteúdo ocultos que podem ser acessados apenas repous
 
 **Atenção:** sempre que um elemento não for facilmente compreendido pelo usuário, use *tooltips* para melhor descrevê-lo.
 
-Confira todos os detalhes do componente [*tooltip*](https://www.gov.br/ds/components/tooltip?tab=designer).
+Confira todos os detalhes do componente [*tooltip*](/ds/components/tooltip?tab=designer).
 
 Nos casos mais específicos outros elementos podem acomodar as informações complementares.
 
@@ -257,7 +256,7 @@ Modais têm a característica de criar um "intervalo" no fluxo de navegação pr
 
 **Atenção:** tenha em mente que o exagero no uso de modais pode se tornar extremamente inconveniente para a navegação. Considere sempre se o conteúdo da modal tem um vínculo estreito com a ação de origem.
 
-Confira o documento [modal](https://www.gov.br/ds/components/modal?tab=designer) para maiores detalhes deste componente.
+Confira o documento [modal](/ds/components/modal?tab=designer) para maiores detalhes deste componente.
 
 #### B. Página Interna
 

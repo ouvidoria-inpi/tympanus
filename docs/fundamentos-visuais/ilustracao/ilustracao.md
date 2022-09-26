@@ -20,16 +20,16 @@ As ilustrações podem:
 
 A Ilustração é constituída por:
 
-| ID  | Nome                  |                            Referência                             | Uso         |
-| --- | --------------------- | :---------------------------------------------------------------: | ----------- |
-| 1   | Elementos de fundo    |                                ---                                | Obrigatório |
-| 2   | Luz e sombra          |                                ---                                | Obrigatório |
-| 3   | Personagem            |                                ---                                | Opcional    |
-| 4   | *Spot* ou objetos     |                                ---                                | Obrigatório |
-| 5   | Cor                   | [Fundamento Cor](https://www.gov.br/ds/fundamentos-visuais/cores) | Opcional    |
-| 6   | Linha de Contorno     |                                ---                                | Opcional    |
-| 7   | Textura               |                                ---                                | Opcional    |
-| 8   | Padrões ou *Patterns* |                                ---                                | Opcional    |
+| ID  | Nome                  |                   Referência                    | Uso         |
+| --- | --------------------- | :---------------------------------------------: | ----------- |
+| 1   | Elementos de fundo    |                       ---                       | Obrigatório |
+| 2   | Luz e sombra          |                       ---                       | Obrigatório |
+| 3   | Personagem            |                       ---                       | Opcional    |
+| 4   | *Spot* ou objetos     |                       ---                       | Obrigatório |
+| 5   | Cor                   | [Fundamento Cor](/ds/fundamentos-visuais/cores) | Opcional    |
+| 6   | Linha de Contorno     |                       ---                       | Opcional    |
+| 7   | Textura               |                       ---                       | Opcional    |
+| 8   | Padrões ou *Patterns* |                       ---                       | Opcional    |
 
 ![Ilustração anatomia](imagens/illustration-anatomy.png)
 *Elementos que compõem uma ilustração.*

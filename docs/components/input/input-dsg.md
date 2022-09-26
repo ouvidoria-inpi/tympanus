@@ -1,4 +1,3 @@
-[version]: # (15.2.0)
 
 ![Exemplo de Input](imagens/input-sample.png)
 *Exemplo do componente input.*
@@ -17,15 +16,15 @@ Utilize o componente *input* quando:
 
 O *Input* é constituído por:
 
-| ID  | Nome                      |                              Referência                              | Uso         |
-| --- | ------------------------- | :------------------------------------------------------------------: | ----------- |
-| 1   | Rótulo/Label              |  [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 2   | Campo de Entrada de Texto |                                 ---                                  | Obrigatório |
-| 3   | Ícone Ilustrativo         | [Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
-| 4   | Ação interna              |    [Button](https://www.gov.br/ds/components/button?tab=designer)    | Opcional    |
-| 5   | Placeholder               |  [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 6   | Mensagem                  |   [Message](https://www.gov.br/ds/components/message?tab=designer)   | Opcional    |
-| 7   | Texto Auxiliar            |  [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| ID  | Nome                      |                     Referência                     | Uso         |
+| --- | ------------------------- | :------------------------------------------------: | ----------- |
+| 1   | Rótulo/Label              |  [Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 2   | Campo de Entrada de Texto |                        ---                         | Obrigatório |
+| 3   | Ícone Ilustrativo         | [Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 4   | Ação interna              |    [Button](/ds/components/button?tab=designer)    | Opcional    |
+| 5   | Placeholder               |  [Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 6   | Mensagem                  |   [Message](/ds/components/message?tab=designer)   | Opcional    |
+| 7   | Texto Auxiliar            |  [Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
 
 ![Anatomia do Input](imagens/input-anatomy.png)
 *Anatomia do componente  input.*
@@ -34,13 +33,13 @@ O *Input* é constituído por:
 
 ## Detalhamento dos itens
 
-Abaixo seguem os detalhamentos dos itens do componente *input*. Para maiores informações consulte também a documentação [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario), onde são abordados mais detalhes com relação ao uso do componente *input* em páginas de formulários.
+Abaixo seguem os detalhamentos dos itens do componente *input*. Para maiores informações consulte também a documentação [Padrão de Formulário](/ds/padroes/design/formulario), onde são abordados mais detalhes com relação ao uso do componente *input* em páginas de formulários.
 
 ### 1. Rótulo/Label (Opcional)
 
 Auxilia o usuário, indicando o tipo de informação que deve ser digitado no Campo de Texto. O texto do Rótulo deve ser curto e objetivo possível.
 
-Além disso, o Rótulo também tem a função de indicar ao usuário se o *Campo de Texto é obrigatório ou não*. Veja detalhes sobre a indicação de *Campos Obrigatórios/Opcionais* no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
+Além disso, o Rótulo também tem a função de indicar ao usuário se o *Campo de Texto é obrigatório ou não*. Veja detalhes sobre a indicação de *Campos Obrigatórios/Opcionais* no documento [Padrão de Formulário](/ds/padroes/design/formulario).
 
 #### Posicionamento do rótulo
 
@@ -147,7 +146,7 @@ Neste exemplo, os *Campos Telefone*, *UF* e *Senha*, foram posicionados nas linh
 
 #### *Grid* de 4 colunas
 
-Na *grid* de 4 colunas, recomenda-se que o *Input* se estenda por toda largura a da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizado o *input* com densidade baixa, com a finalidade de aumentar a área de *touch*. Consulte Comportamento [Densidade](https://www.gov.br/ds/padroes/densidade) para maiores detalhes.
+Na *grid* de 4 colunas, recomenda-se que o *Input* se estenda por toda largura a da tela, proporcionando mais espaço para o usuário digitar o texto solicitado. Também deverá ser utilizado o *input* com densidade baixa, com a finalidade de aumentar a área de *touch*. Consulte Comportamento [Densidade](/ds/padroes/design/densidade) para maiores detalhes.
 
 ![Input - Grid de 4 colunas](imagens/Input-behavior-responsive-grid-4-cols.png)
 *Input - grid de 4 colunas.*
@@ -270,7 +269,7 @@ A máscara deve oferecer espaçamentos e separadores específicos para cada trec
 ![Ofereça espaçamentos e separadores entre trechos do texto](imagens/input-mask-05.png)
 *Ofereça espaçamentos e separadores entre trechos do texto*
 
-Veja mais detalhes sobre máscaras no documento [Padrão de Formulário](https://www.gov.br/ds/padroes/formulario).
+Veja mais detalhes sobre máscaras no documento [Padrão de Formulário](/ds/padroes/design/formulario).
 
 ### *Autocomplete*
 
