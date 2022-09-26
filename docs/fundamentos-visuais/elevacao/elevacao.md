@@ -105,7 +105,7 @@ Veja os valores possíveis nos atributos de opacidade no [Fundamento de Superfí
 
 No Design System, sombras são utilizadas de forma simplificada. Dessa forma, foram criadas *tokens* de sombras prontas para o uso.
 
-Visite nossa [página de utilitários](/ds/utilities-css/elevacao) para visualizar todas as possibilidades possíveis de uso de sombras e *tokens*.
+Visite nossa [página de utilitários](/ds/utilitarios/css/elevacao) para visualizar todas as possibilidades possíveis de uso de sombras e *tokens*.
 
 ---
 

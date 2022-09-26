@@ -23,7 +23,7 @@
 
 ### Listagem horizontal
 
-Usar Utilitários CSS [Display](/ds/utilities-css/display) e [Espaçamento](/ds/utilities-css/espacamento) para modificar o componente.
+Usar Utilitários CSS [Display](ds/utilitarios/css/display) e [Espaçamento](ds/utilitarios/css/espacamento) para modificar o componente.
 
 ### Checkbox desativado
 
