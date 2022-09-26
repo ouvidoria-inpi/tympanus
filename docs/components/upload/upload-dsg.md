@@ -1,4 +1,3 @@
-[version]: # (7.2.8)
 
 ![Imagem ilustra o componente upload.](imagens/upload-diretriz.png)
  *Exemplo do componente Upload.*
@@ -17,16 +16,16 @@ O texto do *placeholder* e o ícone ilustrativo (fa-upload) são únicos e não 
 
 A seguir é ilustrada a relação de componentes utilizados na construção do componente *upload*.
 
-| ID  | Nome                               |                                   Referência                                    | Uso         |
-| --- | ---------------------------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | *Label* ou rótulo                  |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 2   | Superfície (Área de Transferência) |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 3   | Ícone Subir Arquivo/*Upload*       | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
-| 4   | *Placeholder*                      |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 5   | *Message*                          |   [Componente Message](https://www.gov.br/ds/components/message?tab=designer)   | Opcional    |
-| 6   | *List*                             |      [Componente List](https://www.gov.br/ds/components/list?tab=designer)      | Opcional    |
-| 7   | Texto auxiliar                     |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 8   | *Loading*                          |   [Componente Loading](https://www.gov.br/ds/components/loading?tab=designer)   | Opcional    |
+| ID  | Nome                               |                          Referência                           | Uso         |
+| --- | ---------------------------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | *Label* ou rótulo                  |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 2   | Superfície (Área de Transferência) |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 3   | Ícone Subir Arquivo/*Upload*       | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 4   | *Placeholder*                      |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 5   | *Message*                          |   [Componente Message](/ds/components/message?tab=designer)   | Opcional    |
+| 6   | *List*                             |      [Componente List](/ds/components/list?tab=designer)      | Opcional    |
+| 7   | Texto auxiliar                     |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 8   | *Loading*                          |   [Componente Loading](/ds/components/loading?tab=designer)   | Opcional    |
 
 ![Imagem de anatomia do componente upload.](imagens/upload-anatomia-upload.png)
  *Anatomia do Upload.*

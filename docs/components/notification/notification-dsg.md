@@ -1,4 +1,3 @@
-[version]: # (1.1.4)
 
 ![Componente Notification](imagens/notification.png)
 *Exemplo componente notification*
@@ -17,14 +16,14 @@ Utilize *notification* para agrupar e informar o usuário sobre eventos e inform
 
  O componente *notification* é composto pelos seguintes elementos:
 
- | ID  | Nome               |                                  Referência                                   | Uso         |
- | --- | ------------------ | :---------------------------------------------------------------------------: | ----------- |
- | 1   | Área do Usuário    |                                      ---                                      | Opcional    |
- | 2   | Botão Fechar       |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Opcional    |
- | 3   | Componente *Tab*   |      [Componente Tab](https://www.gov.br/ds/components/tab?tab=designer)      | Opcional    |
- | 4   | Componente Item    |     [Componente Item](https://www.gov.br/ds/components/item?tab=designer)     | Obrigatório |
- | 5   | Componente Divider |  [Componente Divider](https://www.gov.br/ds/components/divider?tab=designer)  | Obrigatório |
- | 6   | Superfície         | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
+ | ID  | Nome               |                         Referência                          | Uso         |
+ | --- | ------------------ | :---------------------------------------------------------: | ----------- |
+ | 1   | Área do Usuário    |                             ---                             | Opcional    |
+ | 2   | Botão Fechar       |   [Componente Button](/ds/components/button?tab=designer)   | Opcional    |
+ | 3   | Componente *Tab*   |      [Componente Tab](/ds/components/tab?tab=designer)      | Opcional    |
+ | 4   | Componente Item    |     [Componente Item](/ds/components/item?tab=designer)     | Obrigatório |
+ | 5   | Componente Divider |  [Componente Divider](/ds/components/divider?tab=designer)  | Obrigatório |
+ | 6   | Superfície         | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
 
  ![Anatomia do notification](imagens/anatomia.png)
  *Detalhes dos principais elementos que formam o notification*
@@ -126,7 +125,7 @@ Tendo em vista que o *Notification* é um elemento *Dropdown* (Elemento Flutuant
 ![Exemplo de Acionador do Notification](imagens/behavior-trigger.png)
 *Exemplo de Acionador do Notification - Avatar com Badge indicando a existência de notificação*
 
-Consulte mais detalhes em [Padrões Dropdown](https://www.gov.br/ds/padroes/dropdown).
+Consulte mais detalhes em [Padrões Dropdown](/ds/padroes/design/dropdown).
 
 ### 2. Responsividade
 

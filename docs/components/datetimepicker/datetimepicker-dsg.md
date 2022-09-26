@@ -1,4 +1,3 @@
-[version]: # (6.0.9)
 
 ![Exemplo Componente](imagens/diretriz-datetimepicker.png)
 *Exemplo do componente DateTimePicker*
@@ -17,20 +16,20 @@ Por padrão defina domingo como primeiro dia da semana.
 
 O componente *DateTimePicker* é dividido em duas partes: *datepicker* e *timepicker* e podem ser utilizados em conjunto ou de forma independente.
 
-| ID  | Nome                                                  |                               Referência                                | Uso         |
-| --- | ----------------------------------------------------- | :---------------------------------------------------------------------: | ----------- |
-| 1   | Campo de entrada (*Input*)                            | [Componente Input](https://www.gov.br/ds/components/input?tab=designer) | Obrigatório |
-| 2   | Mês e ano atuais e ícones de navegação entre os meses |                                   ---                                   | Obrigatório |
-| 3   | Dias da semana                                        |                                   ---                                   | Obrigatório |
-| 4   | Dia atual em destaque                                 |                                   ---                                   | Opcional    |
-| 5   | Dia selecionado                                       | [Fundamento Estados](https://www.gov.br/ds/fundamentos-visuais/estados) | Obrigatório |
-| 6   | *Hover*                                               | [Fundamento Estados](https://www.gov.br/ds/fundamentos-visuais/estados) | Obrigatório |
-| 7   | *Card* que contém o componente                        |  [Componente Card](https://www.gov.br/ds/components/card?tab=designer)  | Obrigatório |
-| 8   | Seletor de horas                                      |                                   ---                                   | Obrigatório |
-| 9   | Dias (mês anterior/posterior)                         |                                   ---                                   | Obrigatório |
-| 10  | Datas inicial e final selecionadas                    |                                   ---                                   | Obrigatório |
-| 11  | Intervalo de dias em destaque                         |                                   ---                                   | Obrigatório |
-| 12  | Dias desabilitados                                    |                                   ---                                   | Obrigatório |
+| ID  | Nome                                                  |                      Referência                       | Uso         |
+| --- | ----------------------------------------------------- | :---------------------------------------------------: | ----------- |
+| 1   | Campo de entrada (*Input*)                            | [Componente Input](/ds/components/input?tab=designer) | Obrigatório |
+| 2   | Mês e ano atuais e ícones de navegação entre os meses |                          ---                          | Obrigatório |
+| 3   | Dias da semana                                        |                          ---                          | Obrigatório |
+| 4   | Dia atual em destaque                                 |                          ---                          | Opcional    |
+| 5   | Dia selecionado                                       | [Fundamento Estados](/ds/fundamentos-visuais/estados) | Obrigatório |
+| 6   | *Hover*                                               | [Fundamento Estados](/ds/fundamentos-visuais/estados) | Obrigatório |
+| 7   | *Card* que contém o componente                        |  [Componente Card](/ds/components/card?tab=designer)  | Obrigatório |
+| 8   | Seletor de horas                                      |                          ---                          | Obrigatório |
+| 9   | Dias (mês anterior/posterior)                         |                          ---                          | Obrigatório |
+| 10  | Datas inicial e final selecionadas                    |                          ---                          | Obrigatório |
+| 11  | Intervalo de dias em destaque                         |                          ---                          | Obrigatório |
+| 12  | Dias desabilitados                                    |                          ---                          | Obrigatório |
 
 ![Anatomia do componente DateTimePicker](imagens/anatomy-1.png)
 *Anatomia do componente DateTimePicker*

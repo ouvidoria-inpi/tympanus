@@ -1,4 +1,3 @@
-[version]: # (2.1.7)
 
 ![Exemplo do componente cookieBar.](imagens/diretriz-lgpd-optout.png)
 *Exemplo do componente cookieBar*
@@ -26,32 +25,32 @@ Tenha em mente que o *cookieBar* é um componente único, no entanto, para facil
 
 -   **CookieBar aberto**: etapa em que o usuário interage com o botão "Definir Cookies" ou "Ver Política de Cookies".
 
-| ID  | Nome                                                           |                                  Referência                                   | Uso         |
-| --- | -------------------------------------------------------------- | :---------------------------------------------------------------------------: | ----------- |
-| A   | Área de conteúdo global                                        |                                      ---                                      | Obrigatório |
-| B   | Área de conteúdo introdutório                                  |                                      ---                                      | Obrigatório |
-| C   | Área de conteúdo principal                                     |                                      ---                                      | Obrigatório |
-| D   | Área de conteúdo complementar                                  |                                      ---                                      | Opcional    |
-| E   | Área de ação                                                   |                                      ---                                      | Opcional    |
-| 1   | Superfície                                                     | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
-| 2   | Botão primário                                                 |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Obrigatório |
-| 3   | Botão secundário                                               |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Obrigatório |
-| 4   | Superfície *scrim*                                             | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Opcional    |
-| 5   | Título principal                                               | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Obrigatório |
-| 6   | Informação sobre atualização                                   |                                      ---                                      | Obrigatório |
-| 7   | Texto introdutório                                             |                                      ---                                      | Obrigatório |
-| 8   | Botão terciário fechar                                         |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Obrigatório |
-| 9   | Título da lista de classes de *cookies*                        | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Obrigatório |
-| 10  | Nome da classe do *cookie*                                     |                                      ---                                      | Obrigatório |
-| 11  | Descrição da classe do *cookie*                                |                                      ---                                      | Obrigatório |
-| 12  | *Checkbox* para ativação/desativação de todos os *cookies*     | [Componente Checkbox](https://www.gov.br/ds/components/checkbox?tab=designer) | Obrigatório |
-| 13  | Botão terciário para abertura/fechamento da classe do *cookie* |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Obrigatório |
-| 14  | Aviso *opt in*                                                 |                                      ---                                      | Obrigatório |
-| 15  | *Checkboxes* para ativação/desativação de classes de *cookies* | [Componente Checkbox](https://www.gov.br/ds/components/checkbox?tab=designer) | Obrigatório |
-| 16  | *Card*                                                         |     [Componente Card](https://www.gov.br/ds/components/card?tab=designer)     | Obrigatório |
-| 17  | *Switch* para ativação/desativação de *cookie* específico      |   [Componente Switch](https://www.gov.br/ds/components/switch?tab=designer)   | Obrigatório |
-| 18  | Mensagem do sistema                                            |  [Componente Message](https://www.gov.br/ds/components/message?tab=designer)  | Obrigatório |
-| 19  | *Link* para mais informações                                   |    [Fundamento Estados](https://www.gov.br/ds/fundamentos-visuais/estados)    | Obrigatório |
+| ID  | Nome                                                           |                         Referência                          | Uso         |
+| --- | -------------------------------------------------------------- | :---------------------------------------------------------: | ----------- |
+| A   | Área de conteúdo global                                        |                             ---                             | Obrigatório |
+| B   | Área de conteúdo introdutório                                  |                             ---                             | Obrigatório |
+| C   | Área de conteúdo principal                                     |                             ---                             | Obrigatório |
+| D   | Área de conteúdo complementar                                  |                             ---                             | Opcional    |
+| E   | Área de ação                                                   |                             ---                             | Opcional    |
+| 1   | Superfície                                                     | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Botão primário                                                 |   [Componente Button](/ds/components/button?tab=designer)   | Obrigatório |
+| 3   | Botão secundário                                               |   [Componente Button](/ds/components/button?tab=designer)   | Obrigatório |
+| 4   | Superfície *scrim*                                             | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Opcional    |
+| 5   | Título principal                                               | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Obrigatório |
+| 6   | Informação sobre atualização                                   |                             ---                             | Obrigatório |
+| 7   | Texto introdutório                                             |                             ---                             | Obrigatório |
+| 8   | Botão terciário fechar                                         |   [Componente Button](/ds/components/button?tab=designer)   | Obrigatório |
+| 9   | Título da lista de classes de *cookies*                        | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Obrigatório |
+| 10  | Nome da classe do *cookie*                                     |                             ---                             | Obrigatório |
+| 11  | Descrição da classe do *cookie*                                |                             ---                             | Obrigatório |
+| 12  | *Checkbox* para ativação/desativação de todos os *cookies*     | [Componente Checkbox](/ds/components/checkbox?tab=designer) | Obrigatório |
+| 13  | Botão terciário para abertura/fechamento da classe do *cookie* |   [Componente Button](/ds/components/button?tab=designer)   | Obrigatório |
+| 14  | Aviso *opt in*                                                 |                             ---                             | Obrigatório |
+| 15  | *Checkboxes* para ativação/desativação de classes de *cookies* | [Componente Checkbox](/ds/components/checkbox?tab=designer) | Obrigatório |
+| 16  | *Card*                                                         |     [Componente Card](/ds/components/card?tab=designer)     | Obrigatório |
+| 17  | *Switch* para ativação/desativação de *cookie* específico      |   [Componente Switch](/ds/components/switch?tab=designer)   | Obrigatório |
+| 18  | Mensagem do sistema                                            |  [Componente Message](/ds/components/message?tab=designer)  | Obrigatório |
+| 19  | *Link* para mais informações                                   |    [Fundamento Estados](/ds/fundamentos-visuais/estados)    | Obrigatório |
 
 ![Anatomia da etapa cookiebar default.](imagens/anatomia-cookiebar-default.png)
 *Anatomia da etapa cookieBar default*

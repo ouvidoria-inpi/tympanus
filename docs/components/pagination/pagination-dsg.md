@@ -1,4 +1,3 @@
-[version]: # (10.0.5)
 
 ![Exemplo de Pagination](imagens/type-default.png)
 *Exemplo de Pagination*
@@ -15,14 +14,14 @@ Utilize o *Pagination* quando:
 
 O *Pagination* contém os componentes: *Botão Circular*, *Lista* e *Separadores*, além de outros elementos específicos, e é organizado nos seguintes módulos:
 
-| ID  | Nome                       |                             Referência                             | Uso         |
-| --- | -------------------------- | :----------------------------------------------------------------: | ----------- |
-| 1   | Setas de Navegação         |   [Button](https://www.gov.br/ds/components/button?tab=designer)   | Obrigatório |
-| 2   | Identificadores de Páginas |   [Button](https://www.gov.br/ds/components/button?tab=designer)   | Obrigatório |
-| 3   | Botão Reticências          |   [Button](https://www.gov.br/ds/components/button?tab=designer)   | Opcional    |
-| 4   | Módulo de Exibição         |   [Select](https://www.gov.br/ds/components/select?tab=designer)   | Opcional    |
-| 5   | Módulo de Informação       | [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 6   | Módulo de Atalho           |   [Select](https://www.gov.br/ds/components/select?tab=designer)   | Opcional    |
+| ID  | Nome                       |                    Referência                    | Uso         |
+| --- | -------------------------- | :----------------------------------------------: | ----------- |
+| 1   | Setas de Navegação         |   [Button](/ds/components/button?tab=designer)   | Obrigatório |
+| 2   | Identificadores de Páginas |   [Button](/ds/components/button?tab=designer)   | Obrigatório |
+| 3   | Botão Reticências          |   [Button](/ds/components/button?tab=designer)   | Opcional    |
+| 4   | Módulo de Exibição         |   [Select](/ds/components/select?tab=designer)   | Opcional    |
+| 5   | Módulo de Informação       | [Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 6   | Módulo de Atalho           |   [Select](/ds/components/select?tab=designer)   | Opcional    |
 
 ![Anatomia do Pagination](imagens/anatomy.png)
 *Anatomia do Pagination*

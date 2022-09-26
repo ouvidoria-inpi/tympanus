@@ -1,4 +1,3 @@
-[version]: # (2.2.0)
 
 ![Exemplo de tooltip.](imagens/tooltip-sample.png)
 *Exemplo de tooltip*
@@ -15,13 +14,13 @@ Utilize *tooltip* quando:
 
 O *tooltip* é composto pelos seguintes elementos:
 
-| ID  | Nome            |                                  Referência                                   | Uso         |
-| --- | --------------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Balão Flutuante | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
-| 2   | Seta Direcional |                                      ---                                      | Obrigatório |
-| 3   | Título          | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 4   | Conteúdo        |                                      ---                                      | Obrigatório |
-| 5   | Botão Fechar    |                                      ---                                      | Opcional    |
+| ID  | Nome            |                         Referência                          | Uso         |
+| --- | --------------- | :---------------------------------------------------------: | ----------- |
+| 1   | Balão Flutuante | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Seta Direcional |                             ---                             | Obrigatório |
+| 3   | Título          | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 4   | Conteúdo        |                             ---                             | Obrigatório |
+| 5   | Botão Fechar    |                             ---                             | Opcional    |
 
 ![Anatomia do tooltip.](imagens/tooltip-anatomy.png)
 *Anatomia do tooltip*
@@ -47,7 +46,7 @@ Este também pode ser apresentado com configurações de cores diferenciadas dep
 
 **Atenção:** por ser um elemento flutuante e se encontrar na camada 4 de elevação, o *tooltip* deve sempre apresentar sombras.
 
-Consulte o documento de [Fundamentos Visuais > Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao) para mais detalhes.
+Consulte o documento de [Fundamentos Visuais > Elevação](/ds/fundamentos-visuais/elevacao) para mais detalhes.
 
 #### 2. Seta Direcional (Obrigatório)
 

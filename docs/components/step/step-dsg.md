@@ -1,4 +1,3 @@
-[version]: # (1.1.2)
 
 ![Exemplo de Step Complexo](imagens/sample-01.png)
 *Exemplo de Step Complexo*
@@ -26,11 +25,11 @@ Não utilize *Steps*:
 
 O *Componente Step* é constituido por:
 
-| ID  | Nome           |                                  Referência                                   | Uso         |
-| --- | -------------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Indicador      |                                      ---                                      | Obrigatório |
-| 2   | Rótulos        | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 3   | Linha do Tempo |                                      ---                                      | Obrigatório |
+| ID  | Nome           |                         Referência                          | Uso         |
+| --- | -------------- | :---------------------------------------------------------: | ----------- |
+| 1   | Indicador      |                             ---                             | Obrigatório |
+| 2   | Rótulos        | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 3   | Linha do Tempo |                             ---                             | Obrigatório |
 
 ![Anatomia do Step](imagens/anatomy.png)
 *Anatomia do Step*
@@ -508,7 +507,7 @@ O estado error ocorre sobre o *Indicador* e o Rótulo quando há a necessidade d
     <tag aria-label="Nome do Rótulo"></tag>
     ```
 
--   fique atento ao contraste de cores utilizado entre o plano de fundo e a cor dos *Rótulos* ou *Indicadores*. Observe as especificações de contraste no [*Fundamento Cores*](https://www.gov.br/ds/fundamentos-visuais/cores);
+-   fique atento ao contraste de cores utilizado entre o plano de fundo e a cor dos *Rótulos* ou *Indicadores*. Observe as especificações de contraste no [*Fundamento Cores*](/ds/fundamentos-visuais/cores);
 
     ![Fique atento ao contraste de cores](imagens/accessibility-colour-contrast.png)
     *Fique atento ao contraste de cores nos Rótulos*

@@ -1,4 +1,3 @@
-[version]: # (1.1.1)
 
 ![Exemplo de componente switch.](imagens/diretriz.png)
 *Exemplo do componente switch.*
@@ -9,13 +8,13 @@ Utilize *switches* para ajudar usuários a atualizar preferências, configuraç�
 
 ## Anatomia
 
-| ID  | Nome                 |                              Referência                              | Uso         |
-| --- | -------------------- | :------------------------------------------------------------------: | ----------- |
-| 1   | *Label*              |  [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 2   | *container*          |  [Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 3   | Chave de alternância |                                 ---                                  | Obrigatório |
-| 4   | Rótulo               |  [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 5   | Ícone                | [Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
+| ID  | Nome                 |                     Referência                     | Uso         |
+| --- | -------------------- | :------------------------------------------------: | ----------- |
+| 1   | *Label*              |  [Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 2   | *container*          |  [Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 3   | Chave de alternância |                        ---                         | Obrigatório |
+| 4   | Rótulo               |  [Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 5   | Ícone                | [Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
 
 ![Anatomia do componente switch.](imagens/anatomia.png)
 *Anatomia do componente switch.*

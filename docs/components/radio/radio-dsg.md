@@ -32,13 +32,13 @@ Deve-se manter uma coerência entre as larguras dos itens evitando uma largura d
 
 O *Radio* é constituído por:
 
-| ID  | Nome                              |                             Referência                             | Uso         |
-| --- | --------------------------------- | :----------------------------------------------------------------: | ----------- |
-| 1   | Caixa de opção                    |                                ---                                 | Obrigatório |
-| 2   | Item de opção                     |     [Item](https://www.gov.br/ds/components/item?tab=designer)     | Obrigatório |
-| 3   | Cabeçalho de opções               | [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 4   | Lista de opções                   |     [List](https://www.gov.br/ds/components/list?tab=designer)     | Obrigatório |
-| 5   | Mensagem de *feedback* contextual |  [Message](https://www.gov.br/ds/components/message?tab=designer)  | Opcional    |
+| ID  | Nome                              |                    Referência                    | Uso         |
+| --- | --------------------------------- | :----------------------------------------------: | ----------- |
+| 1   | Caixa de opção                    |                       ---                        | Obrigatório |
+| 2   | Item de opção                     |     [Item](/ds/components/item?tab=designer)     | Obrigatório |
+| 3   | Cabeçalho de opções               | [Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 4   | Lista de opções                   |     [List](/ds/components/list?tab=designer)     | Obrigatório |
+| 5   | Mensagem de *feedback* contextual |  [Message](/ds/components/message?tab=designer)  | Opcional    |
 
 ![Exemplo Estrutura](imagens/radio-estrutura.png)
 *Anatomia do componente Radio*

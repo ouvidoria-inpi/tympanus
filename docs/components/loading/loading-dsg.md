@@ -1,4 +1,3 @@
-[Version]: # (1.0.7)
 
 ![Exemplo Loading](imagens/loading-types.png)
 *Exemplo de Loading*
@@ -11,17 +10,17 @@ Utilizado com o objetivo de proporcionar *feedback* ao usuário durante algum pr
 
 O *loading* é constituído por:
 
-| ID  | Nome                         |                                  Referência                                   | Uso         |
-| --- | ---------------------------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Círculo dinâmico contínuo    |                                      ---                                      | Obrigatório |
-| 2   | Rótulo                       | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 3   | Superfície 1                 | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Opcional    |
-| 4   | Círculo Base                 |                                      ---                                      | Obrigatório |
-| 5   | Rótulo Percentual            | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Obrigatório |
-| 6   | Superfície 2                 | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Opcional    |
-| 7   | Círculo dinâmico progressivo |                                      ---                                      | Obrigatório |
-| 8   | Botão Cancelar               |   [Componente Button](https://www.gov.br/ds/components/button?tab=designer)   | Opcional    |
-| 9   | Superfície *scrim*           | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Opcional    |
+| ID  | Nome                         |                         Referência                          | Uso         |
+| --- | ---------------------------- | :---------------------------------------------------------: | ----------- |
+| 1   | Círculo dinâmico contínuo    |                             ---                             | Obrigatório |
+| 2   | Rótulo                       | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 3   | Superfície 1                 | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Opcional    |
+| 4   | Círculo Base                 |                             ---                             | Obrigatório |
+| 5   | Rótulo Percentual            | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Obrigatório |
+| 6   | Superfície 2                 | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Opcional    |
+| 7   | Círculo dinâmico progressivo |                             ---                             | Obrigatório |
+| 8   | Botão Cancelar               |   [Componente Button](/ds/components/button?tab=designer)   | Opcional    |
+| 9   | Superfície *scrim*           | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Opcional    |
 
 ![Exemplo Anatomia](imagens/loading-anatomy-1.png)
 *Exemplo de loading indeterminado*

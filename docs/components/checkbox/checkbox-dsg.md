@@ -1,4 +1,3 @@
-[version]: # (2.2.3)
 
 ![Exemplo do componente checkbox.](imagens/checkbox-exemplo.png)
 *Exemplo do componente checkbox.*
@@ -31,13 +30,13 @@ O componente pode ser utilizado sem o texto descritivo para identificar a seleç
 
 ## Anatomia
 
-| ID  | Nome                              |                             Referência                             | Uso         |
-| --- | --------------------------------- | :----------------------------------------------------------------: | ----------- |
-| 1   | Caixa de opção                    |                                ---                                 | Obrigatório |
-| 2   | Item de opção                     |     [Item](https://www.gov.br/ds/components/item?tab=designer)     | Obrigatório |
-| 3   | Cabeçalho de opções               | [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 4   | Lista de opções                   |     [List](https://www.gov.br/ds/components/list?tab=designer)     | Obrigatório |
-| 5   | Mensagem de *feedback* contextual |  [Message](https://www.gov.br/ds/components/message?tab=designer)  | Opcional    |
+| ID  | Nome                              |                    Referência                    | Uso         |
+| --- | --------------------------------- | :----------------------------------------------: | ----------- |
+| 1   | Caixa de opção                    |                       ---                        | Obrigatório |
+| 2   | Item de opção                     |     [Item](/ds/components/item?tab=designer)     | Obrigatório |
+| 3   | Cabeçalho de opções               | [Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 4   | Lista de opções                   |     [List](/ds/components/list?tab=designer)     | Obrigatório |
+| 5   | Mensagem de *feedback* contextual |  [Message](/ds/components/message?tab=designer)  | Opcional    |
 
 ![Anatomia do checkbox.](imagens/checkbox-estrutura.png)
 *Anatomia do componente checkbox*
