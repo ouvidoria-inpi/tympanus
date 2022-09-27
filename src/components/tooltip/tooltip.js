@@ -52,17 +52,12 @@ class BRTooltip {
         })
       })
     }
-    // Abre os elementos que devem aparecer já ativos
-    // if (this.active) {
-    //   this._show(event)
-    // }
+   
   }
 
   _create() {
     this._setLayout()
 
-    // if (typeof this.activator.getBoundingClientRect === 'undefined') {
-    // }
 
     // Cria a instancia do popper
     if (this.notification) {
@@ -93,14 +88,12 @@ class BRTooltip {
       let ac = new DOMRect()
       const tt = new DOMRect()
 
-      if (this.activator.hasOwnProperty('getBoundingClientRect')) {
+      
+      
+      
+      // if (this.activator.hasOwnProperty('getBoundingClientRect')) {
         ac = this.activator.getBoundingClientRect()
-      }
-      if (this.activator.hasOwnProperty('getBoundingClientRect')) {
-        ac = this.activator.getBoundingClientRect()
-      } else {
-        return
-      }
+      
 
       const bw = document.body.clientWidth
       if (this.placement === 'right') {
