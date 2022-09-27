@@ -1,4 +1,7 @@
 
+
+
+
 Sugerimos a leitura dos [Princípios do Design System](/ds/introducao/principios), eles são a base para construção de todos os artefatos disponibilizados e devem ser aplicados também aos produtos que adotem o padrão digital de governo.
 
 **Designer**
@@ -112,7 +115,15 @@ Em **Template Inicial** temos uma importação do arquivo **rawline.css** via CD
 />
 ```
 
-No momento o Servidor CDN possui capacidade suficiente para suprir apenas o desenvolvimento do projeto, não possuindo garantia de estabilidade suficiente para projetos em produção.
+<div class="br-message warning" role="alert">
+    <div class="icon" aria-label="Componente Obsoleto">
+        <i class="fas fa-exclamation-triangle fa-lg" aria-hidden="true"></i>
+    </div>
+    <div class="content">
+        <p><strong>No momento o Servidor CDN possui capacidade suficiente para suprir apenas o desenvolvimento do projeto, não possuindo garantia de estabilidade suficiente para projetos em produção.</strong></p>
+        <p></p>
+    </div>
+</div>
 
 Para ambiente em produção:
 
