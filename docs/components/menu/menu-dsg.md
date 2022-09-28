@@ -1,4 +1,3 @@
-[version]: # (1.3.0)
 
 ![Menu Principal e Auxiliar](imagens/menu-types.png)
 *Exemplo de menu de navegação principal e menu de navegação contextual.*
@@ -17,20 +16,20 @@ Seguindo as boas práticas de design e usabilidade, o tom e voz utilizado no men
 
 O menu é constituído por:
 
-| ID  | Nome                         |                              Referência                               | Uso         |
-| --- | ---------------------------- | :-------------------------------------------------------------------: | ----------- |
-| 1   | Ícone de acionamento         |    [Button](https://www.gov.br/ds/components/button?tab=designer)     | Opcional    |
-| 2   | Superfície *scrim*           |                                  ---                                  | Condicional |
-| 3   | Cabeçalho do menu            |    [Header](https://www.gov.br/ds/components/header?tab=designer)     | Opcional    |
-| 4   | Botão Fechar                 |    [Button](https://www.gov.br/ds/components/button?tab=designer)     | Opcional    |
-| 5   | Item de 1º nível             |      [Item](https://www.gov.br/ds/components/item?tab=designer)       | Opcional    |
-| 6   | Item de 2º nível             |      [Item](https://www.gov.br/ds/components/item?tab=designer)       | Condicional |
-| 7   | Ícone Expandir/Retrair       |    [Button](https://www.gov.br/ds/components/button?tab=designer)     | Condicional |
-| 8   | Ícone representativo do item | [Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia)  | Opcional    |
-| 9   | Ícone Acessar Subitens       |    [Button](https://www.gov.br/ds/components/button?tab=designer)     | Condicional |
-| 10  | Componente *divider*         | [Divider](https://www.gov.br/ds/components/divider?tab=desenvolvedor) | Condicional |
-| 11  | Painel do menu               |                                  ---                                  | Obrigatório |
-| 12  | Rodapé do menu               |    [Footer](https://www.gov.br/ds/components/footer?tab=designer)     | Opcional    |
+| ID  | Nome                         |                     Referência                      | Uso         |
+| --- | ---------------------------- | :-------------------------------------------------: | ----------- |
+| 1   | Ícone de acionamento         |    [Button](/ds/components/button?tab=designer)     | Opcional    |
+| 2   | Superfície *scrim*           |                         ---                         | Condicional |
+| 3   | Cabeçalho do menu            |    [Header](/ds/components/header?tab=designer)     | Opcional    |
+| 4   | Botão Fechar                 |    [Button](/ds/components/button?tab=designer)     | Opcional    |
+| 5   | Item de 1º nível             |      [Item](/ds/components/item?tab=designer)       | Opcional    |
+| 6   | Item de 2º nível             |      [Item](/ds/components/item?tab=designer)       | Condicional |
+| 7   | Ícone Expandir/Retrair       |    [Button](/ds/components/button?tab=designer)     | Condicional |
+| 8   | Ícone representativo do item | [Iconografia](/ds/fundamentos-visuais/iconografia)  | Opcional    |
+| 9   | Ícone Acessar Subitens       |    [Button](/ds/components/button?tab=designer)     | Condicional |
+| 10  | Componente *divider*         | [Divider](/ds/components/divider?tab=desenvolvedor) | Condicional |
+| 11  | Painel do menu               |                         ---                         | Obrigatório |
+| 12  | Rodapé do menu               |    [Footer](/ds/components/footer?tab=designer)     | Opcional    |
 
 ![Anatomia do Menu](imagens/menu-anatomy.png)
 *Anatomia do menu.*
@@ -53,7 +52,7 @@ Veja mais informações sobre modos de abertura do menu em: Comportamentos > Aci
 
 **Atenção:** nesse caso, o menu passará a ocupar a *camada 3* na hierarquia de elevação e apresentará a sombra correspondente a essa camada.
 
-Veja mais detalhes no documento [Fundamentos Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao).
+Veja mais detalhes no documento [Fundamentos Elevação](/ds/fundamentos-visuais/elevacao).
 
 ### 3. Cabeçalho do menu (Opcional)
 
@@ -193,7 +192,7 @@ O menu é aberto por meio de um elemento acionador localizado no cabeçalho do *
 
 Neste caso, o menu deverá se encontrar na *camada 3* na hierarquia de elevação e apresenta a sombra correspondente a essa camada.
 
-Veja mais detalhes no documento [Fundamentos Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao).
+Veja mais detalhes no documento [Fundamentos Elevação](/ds/fundamentos-visuais/elevacao).
 
 Para fechar o menu, basta clicar novamente no mesmo elemento acionador, no ícone fechar no cabeçalho do menu ou em qualquer área da tela fora do menu.
 
@@ -206,7 +205,7 @@ O menu principal é acionado por meio de um elemento acionador localizado no cab
 
 Neste caso, não há sobreposição de camadas, porém, pelo fato de ser considerado um elemento relevante deve ser apresentado na *camada 1* de elevação e por isso apresenta sombra suave.
 
-Veja mais detalhes no documento [Fundamentos Elevação](https://www.gov.br/ds/fundamentos-visuais/elevacao).
+Veja mais detalhes no documento [Fundamentos Elevação](/ds/fundamentos-visuais/elevacao).
 
 Para fechar o menu, basta clicar no no elemento acionador, que deve ter o ícone alterado para "fechar".
 
@@ -224,7 +223,7 @@ O menu contextual, quando houver, pode ser fixo ou *sticky* e geralmente fica po
 
 Menus podem apresentar muitos itens, ultrapassando a altura da tela do dispositivo (*desktop*, *tablet* ou *smartphone*).
 
-De acordo com [padrão da diretriz Template Base](https://www.gov.br/ds/templates/base?tab=designer), a Área de navegação pode existir um barra de rolagem interna para acessar o conteúdo.
+De acordo com [padrão da diretriz Template Base](/ds/templates/base?tab=designer), a Área de navegação pode existir um barra de rolagem interna para acessar o conteúdo.
 
 Porém nos *smartphones*, como a altura do dispositivo geralmente é bem menor, a rolagem deve ocorrer de forma natural, rolando todo conteúdo do menu para cima ou para baixo utilizando a própria rolagem do navegador. Em outras palavras, evite o uso de rolagem interna na grid de 4 colunas!
 
@@ -341,7 +340,7 @@ Na *grid* de 4 colunas há uma adaptação substancial no menu contextual que é
 ![Estado Ativo](imagens/menu-behavior-state-active.png)
 *Exemplo de estado ativo do menu.*
 
-Para mais detalhes a respeito das regras de funcionamento dos estados, consulte [Fundamentos Visuais > Estados.](https://www.gov.br/ds/fundamentos-visuais/estados)
+Para mais detalhes a respeito das regras de funcionamento dos estados, consulte [Fundamentos Visuais > Estados.](/ds/fundamentos-visuais/estados)
 
 ### 7. Densidade
 

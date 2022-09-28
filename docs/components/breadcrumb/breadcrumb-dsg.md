@@ -1,4 +1,3 @@
-[version]: # (7.2.6)
 
 ![Exemplo do componente breadcrumb](imagens/diretriz.png)
 *Exemplo do componente breadcrumb.*
@@ -9,12 +8,12 @@ Use *breadcrumb* para melhorar o SEO e para facilitar a identificação de onde 
 
 ## Anatomia
 
-| ID  | Nome                   |                              Referência                              | Uso         |
-| --- | ---------------------- | :------------------------------------------------------------------: | ----------- |
-| 1   | Botão                  |    [Button](https://www.gov.br/ds/components/button?tab=designer)    | Obrigatório |
-| 2   | Separador              | [Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
-| 3   | Link                   |     [Estados](https://www.gov.br/ds/fundamentos-visuais/estados)     | Obrigatório |
-| 4   | Título da página atual |  [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Obrigatório |
+| ID  | Nome                   |                     Referência                     | Uso         |
+| --- | ---------------------- | :------------------------------------------------: | ----------- |
+| 1   | Botão                  |    [Button](/ds/components/button?tab=designer)    | Obrigatório |
+| 2   | Separador              | [Iconografia](/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| 3   | Link                   |     [Estados](/ds/fundamentos-visuais/estados)     | Obrigatório |
+| 4   | Título da página atual |  [Tipografia](/ds/fundamentos-visuais/tipografia)  | Obrigatório |
 
 ![Anatomia do breadcrumb](imagens/anatomy.png)
 *Anatomia do componente breadcrumb.*

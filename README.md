@@ -56,7 +56,7 @@ Use nossos canais abaixo para obter tirar suas dúvidas:
 
 -   Pelo nosso email <govbr-ds@serpro.gov.br>
 
--   Usando nosso canal no discord <https://discord.gg/U5GwPfqhUP>
+-   Usando nosso canal no discord <https://discord.gg/NkaVZERAT7>
 
 ## Como contribuir?
 

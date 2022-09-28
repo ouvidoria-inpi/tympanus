@@ -1,4 +1,3 @@
-[version]: # (1.1.1)
 
 ## Como usar
 
@@ -50,10 +49,8 @@
 
 ## Acessibilidade
 
-- Signin do tipo icônico necessita do atributo `aria-label="nome descritivo do assunto a que se refere o ícone"` e do atributo  `aria-hidden="true"`
+-   Signin do tipo icônico necessita do atributo `aria-label="nome descritivo do assunto a que se refere o ícone"` e do atributo  `aria-hidden="true"`
 
 ## Dependências
 
-- [Button](/ds/components/button)
-
--
+-   [Button](/ds/components/button)

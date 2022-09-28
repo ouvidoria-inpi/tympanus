@@ -20,7 +20,7 @@
 
 ### Tipo Letra
 
-Usar [Utilitários CSS > Cores](/ds/utilities-css/cores) para alterar cor de fundo e texto.
+Usar [Utilitários CSS > Cores](/ds/utilitarios/css/cores) para alterar cor de fundo e texto.
 
 ### Versão com dropdown
 

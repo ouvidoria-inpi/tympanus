@@ -1,132 +1,44 @@
-[version]: # '6.0.8'
 
 ## Como usar
 
-### Select Simples
 
-```html
-<div class="br-select">
- <div class="br-input">
-  <label for="select-simple">Select Simples</label>
-  <input id="select-simple" type="text" placeholder="Selecione o item" />
-  <button
-   class="br-button circle small"
-   type="button"
-   tabindex="-1"
-   data-trigger
-  >
-   <span class="sr-only">Exibir lista</span
-   ><i class="fas fa-angle-down"></i>
-  </button>
- </div>
- <div class="br-list" tabindex="0">
-  <div class="br-item divider" tabindex="-1">
-   <div class="br-radio">
-    <input id="rb0" type="radio" name="opcao" value="opcao1" />
-    <label for="rb0">Opção 1</label>
-   </div>
-  </div>
-  <div class="br-item divider" tabindex="-1">
-   <div class="br-radio">
-    <input id="rb1" type="radio" name="opcao" value="opcao2" />
-    <label for="rb1">Opção 2</label>
-   </div>
-  </div>
-  <div class="br-item divider" tabindex="-1">
-   <div class="br-radio">
-    <input id="rb2" type="radio" name="opcao" value="opcao3" />
-    <label for="rb2">Opção 3</label>
-   </div>
-  </div>
- </div>
- <div class="feedback">Texto auxiliar Função de previnir erros.</div>
-</div>
-```
 
-### Select Múltiplo
+### Propriedades obrigatórias
 
-```html
-<div class="br-select" data-multiple>
- <div class="br-input">
-  <label for="select-multtiple">Select Múltiplo</label>
-  <input
-   id="select-multtiple"
-   type="text"
-   placeholder="Selecione os itens"
-  />
-  <button
-   class="br-button circle small"
-   type="button"
-   tabindex="-1"
-   data-trigger
-  >
-   <span class="sr-only">Exibir lista</span>
-   <i class="fas fa-angle-down"></i>
-  </button>
- </div>
- <div class="br-list" tabindex="0">
-  <div class="br-item highlighted divider" data-all tabindex="-1">
-   <div class="br-checkbox">
-    <input id="cb" type="checkbox" />
-    <label for="cb">Selecionar todos</label>
-   </div>
-  </div>
-  <div class="br-item divider" tabindex="-1">
-   <div class="br-checkbox">
-    <input id="cb0" type="checkbox" name="opcao1" />
-    <label for="cb0">Opção 1</label>
-   </div>
-  </div>
-  <div class="br-item divider" tabindex="-1">
-   <div class="br-checkbox">
-    <input id="cb1" type="checkbox" name="opcao2" />
-    <label for="cb1">Opção 2</label>
-   </div>
-  </div>
-  <div class="br-item divider" tabindex="-1">
-   <div class="br-checkbox">
-    <input id="cb2" type="checkbox" name="opcao4" />
-    <label for="cb2">Opção 3</label>
-   </div>
-  </div>
- </div>
-</div>
-<div class="feedback">Texto auxiliar Função de previnir erros.</div>
-```
+| Atributo | Tipo     | Valor Padrão    | Descrição                                     |
+| -------- | ---------| --------------- | --------------------------------------------- |
+| class    |  string  | **br-select**     | Container do componente Select                |
+| class    |  string  | **br-input**      | Container do componente Input                 |
+| class    |  string  | **br-button**     | Container do componente Button                |
+| class    |  string  | **br-list**       | Container do componente List                  |
+| class    |  string  | **br-item**       | Container do componente Item                  |
+| class    |  string  | **br-checkbox**   | Container do componente br-checkbox (apenas no Select Múltiplo) |
+| class    |  string  | **highlighted**   |  Aplica o estado destacado                    |
+| class    |  string  | **circle**        |  Aplica o Tipo Circular.                      |
+| class    |  string  | **small**         |  Aplica a Densidade Alta                      |
+| atributo |  string  | **trigger**       | Configura o button como gatilho de abertura da lista de itens   |
+| atributo |  string  | **all**           | Seta a opção Selecionar todos                                   |
+| atributo |  string  | **name**          | Deve ser inseridos nos inputs radio e checkbox                  |
+| atributo |  string  | **value**         | Deve ser inseridos nos inputs radio e checkbox                  |
 
-### Configurações obrigatórias
 
-| Atributo      | Tipo     | Descrição                                                       |
-| ------------- | -------- | --------------------------------------------------------------- |
-| `br-select`   | classe   | Container do componente Select                                  |
-| `br-input`    | classe   | Container do componente Input                                   |
-| `br-button`   | classe   | Container do componente Button                                  |
-| `br-list`     | classe   | Container do componente List                                    |
-| `br-item`     | classe   | Container do componente Item                                    |
-| `br-checkbox` | classe   | Container do componente br-checkbox (apenas no Select Múltiplo) |
-| `highlighted` | classe   | Aplica o estado destacado                                       |
-| `circle`      | classe   | Aplica o Tipo Circular.                                         |
-| `small`       | classe   | Aplica a Densidade Alta                                         |
-| `trigger`     | atributo | Configura o button como gatilho de abertura da lista de itens   |
-| `all`         | atributo | Seta a opção Selecionar todos                                   |
-| `name`        | atributo | Deve ser inseridos nos inputs radio e checkbox                  |
-| `value`       | atributo | Deve ser inseridos nos inputs radio e checkbox                  |
 
-**Os input tipo `checkbox` e `radio` ,que nesse componente são utilizada para selecionar itens,seguem o padrão do w3c de formulário**
+### Propriedades Adicionais
 
-### Configurações Adicionais
-
-| Elemento   | Tipo               | Descrição                                     |
-| ---------- | ------------------ | --------------------------------------------- |
-| `divider`  | classe ou atributo | Aplica Separador nos Itens do Select Múltiplo |
-| `feedback` | classe             | Mensagem auxiliar de feedback                 |
+| Atributo | Tipo     | Valor Padrão    | Descrição                                     |
+| -------- | -------- | --------------- | --------------------------------------------- |
+|  classs  |  string  |  **divider**      | Aplica Separador nos Itens do Select Múltiplo |
+|  classs  |  string  |  **feedback**     | Mensagem auxiliar de feedback                 |
 
 ## Estados
 
-| Estado     | Tipo     | Descrição                                              |
-| ---------- | -------- | ------------------------------------------------------ |
-| `checked`  | atributo | Aplica estado selecionado nos Items do Select Múltiplo |
-| `expanded` | atrubuto | Aplica o estado expandido na lista de items do Select  |
+| Estado            | atributo   | Valores          | 
+| ----------------- | ---------- | ---------------- |
+| Select Múltiplo   | `checked`  |                  |
+| Select expandido  | `expanded` |                  |
+
+
+
 
 ## Próximos passos
 
@@ -150,7 +62,7 @@
 Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
+<script src="node_modules/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
 > O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
@@ -165,13 +77,19 @@ Usar o seguinte código JavaScript para instanciar a classe `BRSelect`, passando
 ```javascript
 
 const selectList = []
-		for (const brSelect of window.document.querySelectorAll('.br-select')) {
-			const brselect = new BRSelect('br-select', brSelect)
-			//Exemplo de uso de listener do select
-			brSelect.addEventListener('onChange', function (e) { })
-			selectList.push(brselect)
-		}
+for (const brSelect of window.document.querySelectorAll('.br-select')) {
+	const brselect = new core.BRSelect('br-select', brSelect)
+	//Exemplo de uso de listener do select
+	brSelect.addEventListener('onChange', function (e) { })
+	selectList.push(brselect)
+}
 ```
+
+
+## Informações adicionais
+
+**Os input tipo **checkbox** e **radio** ,que nesse componente são utilizada para selecionar itens,seguem o padrão do w3c de formulário**
+
 
 ### Para Obter as Opções Selecionadas
 
@@ -188,5 +106,3 @@ Ambas as propriedades retoram:
 ### Evento
 
 Quando o usuário clica em um item é mandado o evento `onChange` que tem o atributo detail com o dom do componente.
-
-

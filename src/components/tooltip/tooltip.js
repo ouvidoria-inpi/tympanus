@@ -10,7 +10,7 @@ class BRTooltip {
     this.notification = component.classList.contains('br-notification')
     this.timer = component.getAttribute('timer')
 
-    // this.active = component.hasAttribute('active')
+    this.active = component.hasAttribute('active')
     this.placement = positions.includes(place)
       ? place
       : this.notification
@@ -52,17 +52,12 @@ class BRTooltip {
         })
       })
     }
-    // Abre os elementos que devem aparecer já ativos
-    // if (this.active) {
-    //   this._show(event)
-    // }
+   
   }
 
   _create() {
     this._setLayout()
 
-    // if (typeof this.activator.getBoundingClientRect === 'undefined') {
-    // }
 
     // Cria a instancia do popper
     if (this.notification) {
@@ -90,8 +85,16 @@ class BRTooltip {
         strategy: 'fixed',
       })
     } else {
-      const ac = this.activator.getBoundingClientRect()
-      const tt = this.component.getBoundingClientRect()
+      let ac = new DOMRect()
+      const tt = new DOMRect()
+
+      
+      
+      
+      // if (this.activator.hasOwnProperty('getBoundingClientRect')) {
+        ac = this.activator.getBoundingClientRect()
+      
+
       const bw = document.body.clientWidth
       if (this.placement === 'right') {
         this.placement =
@@ -122,8 +125,6 @@ class BRTooltip {
         ],
         placement: this.placement,
       })
-
-      // const style = window.getComputedStyle(this.component)
     }
   }
 

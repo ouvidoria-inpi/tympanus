@@ -1,4 +1,3 @@
-[Version]: # (6.2.5)
 
 ![Exemplo de *Tab*](imagens/type-default.png)
 *Exemplo de Tab*
@@ -15,14 +14,14 @@ Utilize as *Tabs* quando:
 
 As *Tabs* são compostas pelos seguintes elementos:
 
-| ID  | Nome                 |                              Referência                              | Uso         |
-| --- | -------------------- | :------------------------------------------------------------------: | ----------- |
-| 1   | Item da *Tab*        |      [Item](https://www.gov.br/ds/components/item?tab=designer)      | Obrigatório |
-| 2   | Rótulo da *Tab*      |  [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 3   | Superfície da *Tab*  |  [Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 4   | Rótulo Contador      |  [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 5   | Ícone                | [Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
-| 6   | Componente *Divider* |   [Divider](https://www.gov.br/ds/components/divider?tab=designer)   | Obrigatório |
+| ID  | Nome                 |                     Referência                     | Uso         |
+| --- | -------------------- | :------------------------------------------------: | ----------- |
+| 1   | Item da *Tab*        |      [Item](/ds/components/item?tab=designer)      | Obrigatório |
+| 2   | Rótulo da *Tab*      |  [Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 3   | Superfície da *Tab*  |  [Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 4   | Rótulo Contador      |  [Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 5   | Ícone                | [Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 6   | Componente *Divider* |   [Divider](/ds/components/divider?tab=designer)   | Obrigatório |
 
 ![Anatomia das Tabs](imagens/anatomy.png)
 *Anatomia das Tabs*
@@ -80,14 +79,14 @@ O uso do elemento ícone no item da *tab* é opcional, tendo como função ser u
 
 Na *web*, o item da *tab* quando apresentado sem os seus respectivos rótulos, ou seja, somente com os ícones, deverá este utilizar o recurso de *tooltip* para que o usuário tenha acesso ao nome do rótulo.
 
-Consulte especificações em [Tooltip](https://www.gov.br/ds/components/tooltip?tab=designer).
+Consulte especificações em [Tooltip](/ds/components/tooltip?tab=designer).
 
 ![Anatomia das Tabs](imagens/type-icons.png)
 *Variações do uso de ícone nos itens da Tab*
 
 #### 6. Componente *Divider* (Obrigatório)
 
-Componente padrão. Ver especificações em [Componente Divider](https://www.gov.br/ds/components/divider?tab=designer).
+Componente padrão. Ver especificações em [Componente Divider](/ds/components/divider?tab=designer).
 
 ---
 

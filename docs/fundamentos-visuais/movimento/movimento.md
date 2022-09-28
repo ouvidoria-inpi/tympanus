@@ -1,4 +1,3 @@
-[version]: # (1.0.1)
 
 Movimento é qualquer macro ou micro animação que altera os atributos visuais de um objeto na tela durante um tempo determinado podendo ocorrer de forma automática, por meio de uma interação ou pelo controle do usuário.
 
@@ -134,7 +133,7 @@ Ao contrário da transição *fade in* o efeito *fade out* sugere que um objeto 
 
 *Exemplo da transição fade out.*
 
-Para mais informações consulte o documento [Fundamentos > Superfície](/ds/fundamentos-visuais/cores).
+Para mais informações consulte o documento [Fundamentos > Superfície](/ds/fundamentos-visuais/superficie).
 
 #### b) *Color* (cor)
 
@@ -202,7 +201,7 @@ Refere-se às mudanças aplicadas a valores no eixo Z. Por padrão, reflete na i
 
 *Exemplo da transição elevation.*
 
-Os parâmetros relacionados a esta transição estão descritos no documento [Fundamentos > Elevação](/ds/fundamentos-visuais/elevação).
+Os parâmetros relacionados a esta transição estão descritos no documento [Fundamentos > Elevação](/ds/fundamentos-visuais/elevacao).
 
 #### f) *Rotate* (rotação)
 
@@ -213,13 +212,13 @@ A ancoragem pode ser um ponto específico ou um dos seguintes eixos: X, Y ou Z.
 Seus valores podem variar de 0º a 360º.
 
 <video controls width="320" height="240" controls type="video/mp4">
-<source src="videos/rotate*x.mp4" type="video/mp4">
+<source src="videos/rotate_x.mp4" type="video/mp4">
 </video>
 
 *Exemplo da transição rotate no eixo X, muito utilizado para simular o efeito de levantar uma página.*
 
 <video controls width="320" height="240" controls type="video/mp4">
-<source src="videos/rotate*y.mp4" type="video/mp4">
+<source src="videos/rotate_y.mp4" type="video/mp4">
 </video>
 
 *Exemplo da transição rotate no eixo Y, muito utilizada para simular o efeito de virar página.*
@@ -227,13 +226,13 @@ Seus valores podem variar de 0º a 360º.
 No eixo Z, por padrão o ponto de ancoragem encontra-se no centro do objeto, mas é possível deslocá-lo de posição, caso seja necessário.
 
 <video controls width="320" height="240" controls type="video/mp4">
-<source src="videos/rotate*z1.mp4" type="video/mp4">
+<source src="videos/rotate_z1.mp4" type="video/mp4">
 </video>
 
 *Exemplo da transição rotate no eixo Z com o ponto de ancoragem no centro, muito utilizado para simular o efeito de girar um objeto.*
 
 <video controls width="320" height="240" controls type="video/mp4">
-<source src="videos/rotate*z2.mp4" type="video/mp4">
+<source src="videos/rotate_z2.mp4" type="video/mp4">
 </video>
 
 *Exemplo da transição rotate no eixo Z com o ponto de ancoragem no canto inferior direito do objeto.*

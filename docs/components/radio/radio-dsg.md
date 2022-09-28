@@ -1,4 +1,3 @@
-[version]: # (6.1.3)
 
 ![Exemplo Componente](imagens/radio-exemplo.png)
 *Componente Radio*
@@ -33,13 +32,13 @@ Deve-se manter uma coerência entre as larguras dos itens evitando uma largura d
 
 O *Radio* é constituído por:
 
-| ID  | Nome                              |                             Referência                             | Uso         |
-| --- | --------------------------------- | :----------------------------------------------------------------: | ----------- |
-| 1   | Caixa de opção                    |                                ---                                 | Obrigatório |
-| 2   | Item de opção                     |     [Item](https://www.gov.br/ds/components/item?tab=designer)     | Obrigatório |
-| 3   | Cabeçalho de opções               | [Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Opcional    |
-| 4   | Lista de opções                   |     [List](https://www.gov.br/ds/components/list?tab=designer)     | Obrigatório |
-| 5   | Mensagem de *feedback* contextual |  [Message](https://www.gov.br/ds/components/message?tab=designer)  | Opcional    |
+| ID  | Nome                              |                    Referência                    | Uso         |
+| --- | --------------------------------- | :----------------------------------------------: | ----------- |
+| 1   | Caixa de opção                    |                       ---                        | Obrigatório |
+| 2   | Item de opção                     |     [Item](/ds/components/item?tab=designer)     | Obrigatório |
+| 3   | Cabeçalho de opções               | [Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
+| 4   | Lista de opções                   |     [List](/ds/components/list?tab=designer)     | Obrigatório |
+| 5   | Mensagem de *feedback* contextual |  [Message](/ds/components/message?tab=designer)  | Opcional    |
 
 ![Exemplo Estrutura](imagens/radio-estrutura.png)
 *Anatomia do componente Radio*
@@ -57,7 +56,7 @@ A caixa de opção é composta pelo container (A) e pelo ícone de suporte visua
 
 #### A. Container
 
--   O container do *Radio* parte de um círculo opaco que deverá conter o ícone de suporte interativo.
+O container do *Radio* parte de um círculo opaco que deverá conter o ícone de suporte interativo.
 
 #### B. Ícone de suporte visual interativo
 
@@ -74,7 +73,7 @@ A caixa de opção é composta pelo container (A) e pelo ícone de suporte visua
 
 #### A. Caixa de opção
 
--   O container do *Radio* no estado selecionado.
+O container do *Radio* no estado selecionado.
   
 #### B. Texto descritivo
 
@@ -139,76 +138,76 @@ Deve se posicionar abaixo do último item da lista de opções, alinhado à esqu
 
 #### Não selecionado (Estado padrão)
 
--   Estado padrão do componente. Indica que o usuário não respondeu ou não optou pela opção da lista.
+Estado padrão do componente. Indica que o usuário não respondeu ou não optou pela opção da lista.
 
-    ![Default](imagens/radio-estado-default.png)
-    *Estado Default*
+![Default](imagens/radio-estado-default.png)
+*Estado Default*
 
 #### Hover
 
--   Estado que indica quando o usuário posiciona o ponteiro do mouse sobre a área do componente (1). Pode não fazer sentido em dispositivos em que não se utiliza o mouse como recurso.
+Estado que indica quando o usuário posiciona o ponteiro do mouse sobre a área do componente (1). Pode não fazer sentido em dispositivos em que não se utiliza o mouse como recurso.
 
-    ![Estado hover](imagens/radio-estado-hover.png)
-    *Estado Hover*
+![Estado hover](imagens/radio-estado-hover.png)
+*Estado Hover*
 
 #### Selected
 
--   Estado que indica que o usuário selecionou um item. Pode ser acionado pressionando a tecla espaço quando o foco está no componente, pelo clique do mouse ou toque na tela na região do componente (incluindo seu texto descritivo, quando houver), ou outra ação que corresponda ao item desejado pelo usuário com a fala, por exemplo.
+Estado que indica que o usuário selecionou um item. Pode ser acionado pressionando a tecla espaço quando o foco está no componente, pelo clique do mouse ou toque na tela na região do componente (incluindo seu texto descritivo, quando houver), ou outra ação que corresponda ao item desejado pelo usuário com a fala, por exemplo.
 
-    ![Estado selecionado](imagens/radio-estado-selected.png)
-    *Estado Selecionado*
+![Estado selecionado](imagens/radio-estado-selected.png)
+*Estado Selecionado*
 
 #### Focused
 
--   Estado que indica que o item da lista de opções está destacado, usando um método de entrada como a tecla "Tab" do teclado, por exemplo. Este estado é de extrema importância para garantir a acessibilidade do componente na interface.
+Estado que indica que o item da lista de opções está destacado, usando um método de entrada como a tecla "Tab" do teclado, por exemplo. Este estado é de extrema importância para garantir a acessibilidade do componente na interface.
 
-    ![Estado focused](imagens/radio-estado-focused.png)
-    *Estado Foco*
+![Estado focused](imagens/radio-estado-focused.png)
+*Estado Foco*
 
 #### Invalid
 
--   Estado indicativo de que a opção não é válida. Pode ser aplicado quando a opção selecionada em um questionário está incorreta, ou o preenchimento de ao menos uma opção é obrigatório.
+Estado indicativo de que a opção não é válida. Pode ser aplicado quando a opção selecionada em um questionário está incorreta, ou o preenchimento de ao menos uma opção é obrigatório.
 
-    ![Estado invalido](imagens/radio-estado-invalid.png)
-    *Estado Inválido*
+![Estado invalido](imagens/radio-estado-invalid.png)
+*Estado Inválido*
 
 #### Valid
 
--   Estado indicativo de que a opção é válida. Pode ser aplicado quando a opção selecionada em um questionário está correta, por exemplo.
+Estado indicativo de que a opção é válida. Pode ser aplicado quando a opção selecionada em um questionário está correta, por exemplo.
 
-    ![Estado valido](imagens/radio-estado-valid.png)
-    *Estado Válido*
+![Estado valido](imagens/radio-estado-valid.png)
+*Estado Válido*
 
 #### Disabled
 
--   Estado que indica que a opção não está disponível para ser selecionada.
+Estado que indica que a opção não está disponível para ser selecionada.
 
-    ![Estado disabled](imagens/radio-estado-disabled.png)
-    *Estado Desabilitado*
+![Estado disabled](imagens/radio-estado-disabled.png)
+*Estado Desabilitado*
 
 ### 2. Espaçamento e Alinhamento
 
 #### Caixa de opção
 
--   A caixa de opção do item do Radio deve manter uma distância superior e inferior (1) e um espaçamento lateral direito (2) de qualquer outro elemento.
+A caixa de opção do item do Radio deve manter uma distância superior e inferior (1) e um espaçamento lateral direito (2) de qualquer outro elemento.
 
 #### Texto descritivo
 
--   O texto descritivo deve se posicionar sempre à direita a (2) da caixa de opção como indicado acima. Deve manter um espaçamento inferior dos elementos abaixo (3).
+O texto descritivo deve se posicionar sempre à direita a (2) da caixa de opção como indicado acima. Deve manter um espaçamento inferior dos elementos abaixo (3).
 
-    ![Espaçamento caixa](imagens/radio-caixa-opcao-espacamento.png)
-    *Espaçamento da caixa de opção e texto descritivo*
+![Espaçamento caixa](imagens/radio-caixa-opcao-espacamento.png)
+*Espaçamento da caixa de opção e texto descritivo*
 
 #### Item de opção
 
--   Cada item do Radio, composto pela caixa de opção à esquerda e seu texto descritivo à direita, deve manter uma distância à direita (4), abaixo (3) e acima (1) entre este e o próximo componente.
+Cada item do Radio, composto pela caixa de opção à esquerda e seu texto descritivo à direita, deve manter uma distância à direita (4), abaixo (3) e acima (1) entre este e o próximo componente.
 
-    ![Espaçamento item](imagens/radio-item-opcao-espacamento.png)
-    *Espaçamento da caixa de opção e texto descritivo*
+![Espaçamento item](imagens/radio-item-opcao-espacamento.png)
+*Espaçamento da caixa de opção e texto descritivo*
 
 #### Cabeçalho de opções
 
--   O Rótulo e o texto auxiliar devem estar ao topo do agrupamento, devem se posicionar um logo abaixo do outro não havendo espaçamento além do já previsto em suas diretrizes e um espaçamento inferior a partir do último dos dois elementos (Rótulo ou texto auxiliar).
+O Rótulo e o texto auxiliar devem estar ao topo do agrupamento, devem se posicionar um logo abaixo do outro não havendo espaçamento além do já previsto em suas diretrizes e um espaçamento inferior a partir do último dos dois elementos (Rótulo ou texto auxiliar).
 
 #### Mensagens de feedback contextual
 

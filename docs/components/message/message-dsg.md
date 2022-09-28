@@ -1,4 +1,3 @@
-[Version]: # (11.2.0)
 
 ![Exemplo de Message](imagens/message-sample.png)
 *Exemplo de Message*
@@ -11,13 +10,13 @@ Utilize o *Message* quando houver a necessidade de transmitir qualquer informaç
 
 O *Message* é composto pelos seguintes elementos:
 
-| ID  | Nome                  |                                   Referência                                    | Uso         |
-| --- | --------------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Superfície do Message |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
-| 2   | Ícones                | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Opcional    |
-| 3   | Título do Message     |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Opcional    |
-| 4   | Mensagem              |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Obrigatório |
-| 5   | Botão Fechar          |    [Componente Button](https://www.gov.br/ds/components/button?tab=designer)    | Opcional    |
+| ID  | Nome                  |                          Referência                           | Uso         |
+| --- | --------------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Superfície do Message |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| 2   | Ícones                | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Opcional    |
+| 3   | Título do Message     |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Opcional    |
+| 4   | Mensagem              |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Obrigatório |
+| 5   | Botão Fechar          |    [Componente Button](/ds/components/button?tab=designer)    | Opcional    |
 
 ![Anatomia do Message](imagens/message-anatomy.png)
 *Anatomia do Message*
@@ -30,7 +29,7 @@ O *Message* é composto pelos seguintes elementos:
 
 A Superfície do *Message* é o elemento do *Componente Message* que agrupará todos os outros elementos que o compõe e que estão previamente listados na anatomia. A Superfície do *Message* tem a função de definir semanticamente o tipo de mensagem que está sendo transmitida, além de destacar a mensagem sobre todos os outros elementos da *interface*.
 
-Logo, a Superfície do *Message* pode ser apresentada em diferentes cores, com funções semânticas. Veja mais detalhes em [Fundamento Estados](https://www.gov.br/ds/fundamentos-visuais/estados).
+Logo, a Superfície do *Message* pode ser apresentada em diferentes cores, com funções semânticas. Veja mais detalhes em [Fundamento Estados](/ds/fundamentos-visuais/estados).
 
 ![Superfície do Message](imagens/message-container.png)
 *Superfície do Message*
