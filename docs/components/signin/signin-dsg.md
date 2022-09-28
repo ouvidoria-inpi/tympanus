@@ -1,5 +1,3 @@
-[version]: # (1.1.1)
-
 ![Exemplo componente sign-in.](imagens/anatomy-1.png)
 *Exemplo do componente sign-in nas versões principal e alternativa*
 
@@ -27,12 +25,12 @@ O *sign-in* é composto basicamente por ícone ou imagem e *label*. É important
 
 Segue a estrutura básica da anatomia:
 
-| ID  | Nome          |                                   Referência                                    | Uso         |
-| --- | ------------- | :-----------------------------------------------------------------------------: | ----------- |
-| 1   | Ícone usuário | [Fundamento Iconografia](https://www.gov.br/ds/fundamentos-visuais/iconografia) | Obrigatório |
-| 2   | Rótulo        |  [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia)  | Obrigatório |
-| 3   | Imagem        |                                       ---                                       | Opcional    |
-| 4   | Superfície    |  [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)  | Obrigatório |
+| ID  | Nome          |                          Referência                           | Uso         |
+| --- | ------------- | :-----------------------------------------------------------: | ----------- |
+| 1   | Ícone usuário | [Fundamento Iconografia](/ds/fundamentos-visuais/iconografia) | Obrigatório |
+| 2   | Rótulo        |  [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia)  | Obrigatório |
+| 3   | Imagem        |                              ---                              | Opcional    |
+| 4   | Superfície    |  [Fundamento Superfície](/ds/fundamentos-visuais/superficie)  | Obrigatório |
 
 ![Anatomia do componente sign-in.](imagens/anatomy-2.png)
 *Anatomia do componente sign-in*

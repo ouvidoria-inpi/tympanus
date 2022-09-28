@@ -1,4 +1,3 @@
-[version]: # (3.2.0)
 
 ![Exemplo de Template Base](imagens/preview.png)
 *Exemplo de tela contendo elementos dentro do modelo Base.*
@@ -11,13 +10,13 @@ O *template base* deve ser utilizado como ponto de partida para construção de 
 
 A anatomia do Base é dividida por áreas ou regiões onde podemos encontrar componentes específicos ou tipos de conteúdo. Cada região possui suas regras que devem ser seguidas ao longo da navegação da interface.
 
-| ID  | Nome                |                                    Referência                                     | Uso         |
-| --- | ------------------- | :-------------------------------------------------------------------------------: | ----------- |
-| 1   | Área de Cabeçalho   |     [Componente Header](https://www.gov.br/ds/components/header?tab=designer)     | Obrigatório |
-| 2   | Área de Conteúdo    |                                        ---                                        | Obrigatório |
-| 3   | Área de Localização | [Componente Breadcrumb](https://www.gov.br/ds/components/breadcrumb?tab=designer) | Opcional    |
-| 4   | Área de Navegação   |       [Componente Menu](https://www.gov.br/ds/components/menu?tab=designer)       | Opcional    |
-| 5   | Área de Rodapé      |     [Componente Footer](https://www.gov.br/ds/components/footer?tab=designer)     | Obrigatório |
+| ID  | Nome                |                           Referência                            | Uso         |
+| --- | ------------------- | :-------------------------------------------------------------: | ----------- |
+| 1   | Área de Cabeçalho   |     [Componente Header](/ds/components/header?tab=designer)     | Obrigatório |
+| 2   | Área de Conteúdo    |                               ---                               | Obrigatório |
+| 3   | Área de Localização | [Componente Breadcrumb](/ds/components/breadcrumb?tab=designer) | Opcional    |
+| 4   | Área de Navegação   |       [Componente Menu](/ds/components/menu?tab=designer)       | Opcional    |
+| 5   | Área de Rodapé      |     [Componente Footer](/ds/components/footer?tab=designer)     | Obrigatório |
 
 ![Imagem Anatomia](imagens/anatomia.png)
 *Divisões das áreas do Template Base.*
@@ -30,7 +29,7 @@ A anatomia do Base é dividida por áreas ou regiões onde podemos encontrar com
 
 Esta é uma área essencial e obrigatória no *template base*. Nesta região deve-se utilizar apenas o componente *header* com suas variações.
 
-Todos os comportamentos e outras regras definidas na [diretriz do *Header*](https://www.gov.br/ds/components/header?tab=designer) devem ser utilizados dentro do *Base*.
+Todos os comportamentos e outras regras definidas na [diretriz do *Header*](/ds/components/header?tab=designer) devem ser utilizados dentro do *Base*.
 
 ![Área para header completo](imagens/header.png)
 *Exemplo de diversos usos do componente Header dentro do Base.*
@@ -56,11 +55,11 @@ Esta é uma área opcional e deve ser utilizado o componente *Breadcrumb* para a
 **OBS:** Em algumas situações, a área para Localização não terá muita utilidade, como por exemplo, em telas iniciais ou em aplicações para celulares.
 
 ![Área de Breadcrumb](imagens/breadcrumb.png)
-*Todos os comportamentos (e outras regras) descritas na [diretriz do *Breadcrumb*](https://www.gov.br/ds/components/breadcrumb?tab=designer) podem ser utilizadas dentro da Área de Localização.*
+*Todos os comportamentos (e outras regras) descritas na [diretriz do *Breadcrumb*](/ds/components/breadcrumb?tab=designer) podem ser utilizadas dentro da Área de Localização.*
 
 ### 4. Área de Navegação (Opcional)
 
-Esta é uma área opcional. Esta região contém exclusivamente o componente *Menu*, utilizando-se de todas as regras e recomendações descritas em sua [diretriz](https://www.gov.br/ds/components/menu?tab=designer).
+Esta é uma área opcional. Esta região contém exclusivamente o componente *Menu*, utilizando-se de todas as regras e recomendações descritas em sua [diretriz](/ds/components/menu?tab=designer).
 
 ![Área reservada para o menu](imagens/menu.png)
 *O menu aparece à esquerda da Área de Conteúdo, podendo consumir o espaço  disponível na tela em conjunto com a área de conteúdo.*
@@ -76,7 +75,7 @@ A área de navegação é a única área que pode ter uma barra de rolagem indep
 
 Esta é uma área essencial do *template base* onde é utilizado o componente *Footer* com suas variações e tipos.
 
-Todos os comportamentos (e demais regras) definidos na [diretriz do Footer](https://www.gov.br/ds/components/footer?tab=designer) devem ser utilizados dentro do *Base*.
+Todos os comportamentos (e demais regras) definidos na [diretriz do Footer](/ds/components/footer?tab=designer) devem ser utilizados dentro do *Base*.
 
 ![Área de footer no template base](imagens/footer.png)
 *Área de footer no template base.*
@@ -87,7 +86,7 @@ Todos os comportamentos (e demais regras) definidos na [diretriz do Footer](http
 
 ### 1. Responsividade
 
-O *Base* pode ter o comportamento de Largura de *Grid* Fluida ou Fixa, seguindo as recomendações previstas do [Fundamento Grid](https://www.gov.br/ds/fundamentos-visuais/grid), ou seja, por padrão, a *Grid* de 8 e 4 colunas o comportamento será fluida, enquanto o de 12 colunas, pode ser tanto fluida como fixa a depender do uso.
+O *Base* pode ter o comportamento de Largura de *Grid* Fluida ou Fixa, seguindo as recomendações previstas do [Fundamento Grid](/ds/fundamentos-visuais/grid), ou seja, por padrão, a *Grid* de 8 e 4 colunas o comportamento será fluida, enquanto o de 12 colunas, pode ser tanto fluida como fixa a depender do uso.
 
 -   **Largura Fixo (grid 12 colunas)**: utilizado em conteúdo informativo ou educacional, onde o conteúdo textual não pode sofrer muita alteração estrutural devido a resolução da tela. Exemplos: Portais, Blogs, Landing Pages...
 
@@ -134,7 +133,7 @@ Podemos simplificar o Menu Flutuante em dois modos:
 ![Menu Flutuante](imagens/tempo-flutuante01.png)
 *Aqui o Menu funciona como um elemento Dropdown, seguindo todas as regras específicas para este comportamento.*
 
-**2. Preenchimento**: quando necessita da atenção total do usuário. Neste caso ele pode preencher o espaço disponível da tela além de utilizar um elemento *overlay* de Foco (veja [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie)), destacando a navegação e deixando claro que os outros elementos da interface ainda não podem ser interagidos enquanto o menu estiver visível.
+**2. Preenchimento**: quando necessita da atenção total do usuário. Neste caso ele pode preencher o espaço disponível da tela além de utilizar um elemento *overlay* de Foco (veja [Fundamento Superfície](/ds/fundamentos-visuais/superficie)), destacando a navegação e deixando claro que os outros elementos da interface ainda não podem ser interagidos enquanto o menu estiver visível.
 
 ![Menu Flutuante](imagens/tempo-flutuante03.png)
 *Quando existe a necessidade de destacar um menu flutuante. Ele utiliza toda a altura útil da tela, além de utilizar uma superfície overlay.*
@@ -186,7 +185,7 @@ Uma das armadilhas da tabulação ao longo do *layout* de uma página é que in�
 
 Essa navegação pode ser facilitada por meio de atalhos, tanto no teclado como por âncoras para o conteúdo desejado.
 
-Oferecer um menu oculto ([skip link](https://www.gov.br/ds/components/skiplink?tab=designer)) com âncoras para as principais áreas da página fornece benefícios para usuários que usam apenas teclado sem prejudicar aqueles que usam o *mouse* para navegar.
+Oferecer um menu oculto ([skip link](/ds/components/skiplink?tab=designer)) com âncoras para as principais áreas da página fornece benefícios para usuários que usam apenas teclado sem prejudicar aqueles que usam o *mouse* para navegar.
 
 O Design System conta com o componente *skip link* para realizar essa função. Consulte-o para mais detalhes.
 

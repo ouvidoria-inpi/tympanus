@@ -18,9 +18,10 @@ class Tooltip {
     active,
     textTooltip,
     type = 'info',
+    onActivator = false
   }) {
     const text_tooltip = textTooltip ? textTooltip : component
-
+    this.onActivator = onActivator 
     this.activator = activator
     this.component = component
       ? component
@@ -82,7 +83,8 @@ class Tooltip {
   }
   /**
    * Seta o conteudo do tooltip
-   * @param {*} contentText
+   * @param {*} contentText conteudo do texto do tooltip
+   * @param {*} type tipo de tooltip
    * @returns  - retorna o objeto com tooltip
    */
   _setContent(contentText, type) {
@@ -92,9 +94,12 @@ class Tooltip {
     text_tooltip.setAttribute(type, type)
     text_tooltip.innerText = `${contentText}`
     text_tooltip.classList.add('br-tooltip')
+    //TODO: Retirar sample 
     text_tooltip.classList.add('sample')
-    if (this.activator) {
+    if (this.activator && this.onActivator) {
       this.activator.appendChild(text_tooltip)
+    }else{
+      document.body.appendChild(text_tooltip)
     }
 
     return text_tooltip

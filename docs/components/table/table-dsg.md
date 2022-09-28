@@ -1,4 +1,3 @@
-[version]: # (5.3.0)
 
 ![Exemplo de Tabela](imagens/type.png)
 *Exemplo de Table*
@@ -11,14 +10,14 @@ Utilize a *Table* quando houver necessidade de organizar as informações de uma
 
 A *Table* é estruturada em:
 
-| ID  | Nome               |                            Referência                            | Uso         |
-| --- | ------------------ | :--------------------------------------------------------------: | ----------- |
-| 1   | Barra de Título    |    [Item](https://www.gov.br/ds/components/item?tab=designer)    | Opcional    |
-| 2   | Barra Contextual   |    [Item](https://www.gov.br/ds/components/item?tab=designer)    | Opcional    |
-| 3   | *Header* da Tabela |  [Header](https://www.gov.br/ds/components/header?tab=designer)  | Obrigatório |
-| 4   | Linhas             | [Divider](https://www.gov.br/ds/components/divider?tab=designer) | Obrigatório |
-| 5   | Barra de Paginação |  [Footer](https://www.gov.br/ds/components/footer?tab=designer)  | Opcional    |
-| 6   | Colunas            | [Divider](https://www.gov.br/ds/components/divider?tab=designer) | Obrigatório |
+| ID  | Nome               |                   Referência                   | Uso         |
+| --- | ------------------ | :--------------------------------------------: | ----------- |
+| 1   | Barra de Título    |    [Item](/ds/components/item?tab=designer)    | Opcional    |
+| 2   | Barra Contextual   |    [Item](/ds/components/item?tab=designer)    | Opcional    |
+| 3   | *Header* da Tabela |  [Header](/ds/components/header?tab=designer)  | Obrigatório |
+| 4   | Linhas             | [Divider](/ds/components/divider?tab=designer) | Obrigatório |
+| 5   | Barra de Paginação |  [Footer](/ds/components/footer?tab=designer)  | Opcional    |
+| 6   | Colunas            | [Divider](/ds/components/divider?tab=designer) | Obrigatório |
 
 ![Exemplo de Tabela](imagens/anatomy.png)
 *Exemplo de Table*

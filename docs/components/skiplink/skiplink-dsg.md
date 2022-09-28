@@ -1,4 +1,3 @@
-[version]: # (1.0.1)
 
 ![Exemplo de skip link.](imagens/skiplink.png)
 *Exemplo de skip links*
@@ -17,12 +16,12 @@ Utilize *labels* com textos curtos e diretos.
 
 O *skip link* é composto pelos seguintes elementos:
 
-| ID  | Nome       |                                  Referência                                   | Uso         |
-| --- | ---------- | :---------------------------------------------------------------------------: | ----------- |
-| 1   | Superfície | [Fundamento Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
-| 2   | Item       |     [Componente Item](https://www.gov.br/ds/components/item?tab=designer)     | Obrigatório |
-| 3   | *Tag*      |      [Componente Tag](https://www.gov.br/ds/components/tag?tab=designer)      | Opcional    |
-| 4   | Rótulo     | [Fundamento Tipografia](https://www.gov.br/ds/fundamentos-visuais/tipografia) | Obrigatório |
+| ID  | Nome       |                         Referência                          | Uso         |
+| --- | ---------- | :---------------------------------------------------------: | ----------- |
+| 1   | Superfície | [Fundamento Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Item       |     [Componente Item](/ds/components/item?tab=designer)     | Obrigatório |
+| 3   | *Tag*      |      [Componente Tag](/ds/components/tag?tab=designer)      | Opcional    |
+| 4   | Rótulo     | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Obrigatório |
 
 ![Anatomia do skip link.](imagens/anatomy.png)
 *Anatomia do skip link*

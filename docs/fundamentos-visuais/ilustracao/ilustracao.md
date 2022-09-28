@@ -1,4 +1,3 @@
-[version]: # (1.0.4)
 
 Ilustração é uma imagem que comunica um estado de forma mais amigável. As ilustrações ajudam a transmitir ideias simples ou complexas de maneira objetiva. Eles devem ser significativas e refletir o contexto e o estado emocional do usuário.
 
@@ -21,16 +20,16 @@ As ilustrações podem:
 
 A Ilustração é constituída por:
 
-| ID  | Nome                  |                            Referência                             | Uso         |
-| --- | --------------------- | :---------------------------------------------------------------: | ----------- |
-| 1   | Elementos de fundo    |                                ---                                | Obrigatório |
-| 2   | Luz e sombra          |                                ---                                | Obrigatório |
-| 3   | Personagem            |                                ---                                | Opcional    |
-| 4   | *Spot* ou objetos     |                                ---                                | Obrigatório |
-| 5   | Cor                   | [Fundamento Cor](https://www.gov.br/ds/fundamentos-visuais/cores) | Opcional    |
-| 6   | Linha de Contorno     |                                ---                                | Opcional    |
-| 7   | Textura               |                                ---                                | Opcional    |
-| 8   | Padrões ou *Patterns* |                                ---                                | Opcional    |
+| ID  | Nome                  |                   Referência                    | Uso         |
+| --- | --------------------- | :---------------------------------------------: | ----------- |
+| 1   | Elementos de fundo    |                       ---                       | Obrigatório |
+| 2   | Luz e sombra          |                       ---                       | Obrigatório |
+| 3   | Personagem            |                       ---                       | Opcional    |
+| 4   | *Spot* ou objetos     |                       ---                       | Obrigatório |
+| 5   | Cor                   | [Fundamento Cor](/ds/fundamentos-visuais/cores) | Opcional    |
+| 6   | Linha de Contorno     |                       ---                       | Opcional    |
+| 7   | Textura               |                       ---                       | Opcional    |
+| 8   | Padrões ou *Patterns* |                       ---                       | Opcional    |
 
 ![Ilustração anatomia](imagens/illustration-anatomy.png)
 *Elementos que compõem uma ilustração.*
@@ -218,9 +217,9 @@ Usando a ferramenta Pincel (*Brush*), faça alguns movimentos na área que desej
 ![pincel](imagens/illustration-anatomy-texture-2.png)
 *Em áreas localizadas realçamos o volume dos objetos destacando luz e sombra.*
 
-Utilize nossos [pincéis/brushes (Formato AI, 32 KB)](https://serprodrive.serpro.gov.br/s/fqpQbTmtmpPM6r4) para facilitar a construção das texturas.
+Utilize diversos exemplos de ilustrações e pincéis para enriquecer seu layout  e facilitar a construção das texturas [Downloads/Ilustrações](/ds/downloads/assets).
 
-Veja o [tutorial (youtube)](https://www.youtube.com/watch?v=xwNInJssbPU) <i class="fas fa-external-link-alt"></i> para entender melhor o uso dessa técnica.
+Veja o [tutorial (youtube)](https://www.youtube.com/watch?v=xwNInJssbPU) para entender melhor o uso dessa técnica.
 
 ### 8. Padrões ou *Patterns* (Opcional)
 

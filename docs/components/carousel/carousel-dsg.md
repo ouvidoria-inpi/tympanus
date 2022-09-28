@@ -1,4 +1,3 @@
-[version]: # (1.0.1)
 
 ![Exemplo Carousel.](imagens/carousel.png)
 *Exemplo do componente Carousel*
@@ -11,12 +10,12 @@ Use o *Carousel* quando houver uma sequência de itens para exibir e um espaço 
 
 O *Carousel* é composto por:
 
-| ID  | Nome                     |                                Referência                                 | Uso         |
-| --- | ------------------------ | :-----------------------------------------------------------------------: | ----------- |
-| 1   | Palco (área de conteúdo) |                                    ---                                    | Obrigatório |
-| 2   | Botões de navegação      | [Componente Button](https://www.gov.br/ds/components/button?tab=designer) | Obrigatório |
-| 3   | Botões de reprodução     | [Componente Button](https://www.gov.br/ds/components/button?tab=designer) | Opcional    |
-| 4   | Indicador de páginas     |   [Componente Step](https://www.gov.br/ds/components/step?tab=designer)   | Obrigatório |
+| ID  | Nome                     |                       Referência                        | Uso         |
+| --- | ------------------------ | :-----------------------------------------------------: | ----------- |
+| 1   | Palco (área de conteúdo) |                           ---                           | Obrigatório |
+| 2   | Botões de navegação      | [Componente Button](/ds/components/button?tab=designer) | Obrigatório |
+| 3   | Botões de reprodução     | [Componente Button](/ds/components/button?tab=designer) | Opcional    |
+| 4   | Indicador de páginas     |   [Componente Step](/ds/components/step?tab=designer)   | Obrigatório |
 
 ![Anatomia do componente Carousel.](imagens/carousel-anatomy.png)
 *Anatomia do componente Carousel*
@@ -54,7 +53,7 @@ O componente *Carousel* é extremamente flexível ao conteúdo que apresenta e d
 Para exibição de imagens com textos é importante estar atento ao contraste e à legibilidade. Verifique questões como cor, tamanho do corpo do texto e contraste com a cor ou imagem de fundo.
 
 ![Exemplo Carousel com imagem no conteúdo.](imagens/carousel-contrast.png)
-*Considere utilizar uma superfície overlay entre a imagem de fundo e o texto para reforçar o contraste. Consulte o documento [Fundamentos > Movimento](/fundamentos-visuais/movimento) para mais detalhes*
+*Considere utilizar uma superfície overlay entre a imagem de fundo e o texto para reforçar o contraste. Consulte o documento [Fundamentos > Movimento](/ds/fundamentos-visuais/movimento) para mais detalhes*
 
 ### 2. Botões de Navegação (Obrigatório)
 
@@ -136,7 +135,7 @@ Ao contrário do indicador de páginas simples, o indicador de páginas textual 
 
 **Atenção:** tenha em mente que a utilização do indicador de páginas no *Carousel* é uma boa prática de usabilidade e sempre que possível deve ser utilizado.
 
-Para mais informações consulte o documento [Componentes > Step](https://www.gov.br/ds/components/step?tab=designer).
+Para mais informações consulte o documento [Componentes > Step](/ds/components/step?tab=designer).
 
 ---
 
@@ -200,7 +199,7 @@ Deixamos algumas dicas de *boas práticas* para auxiliar na escolha do movimento
 
 -   Geralmente *easing* do tipo *easing-in-out* funciona bem, pois deixa os movimentos de transição das páginas mais naturais e orgânicas;
 
-Para entender melhor os tipos de movimento, consulte o documento  [Fundamentos > Movimento](/fundamentos-visuais/movimento).
+Para entender melhor os tipos de movimento, consulte o documento  [Fundamentos > Movimento](/ds/fundamentos-visuais/movimento).
 
 ### 5. Múltiplas Páginas
 

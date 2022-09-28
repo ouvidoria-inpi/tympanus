@@ -1,4 +1,3 @@
-[version]: # (2.0.2)
 
 ![Exemplos de avatares.](imagens/avatar-diretriz.png)
 *Exemplo de avatares.*
@@ -10,10 +9,10 @@ Pode ser utilizado também em qualquer situação em que seja necessário repres
 
 ## Anatomia
 
-| ID  | Nome                     |                             Referência                             | Uso         |
-| --- | ------------------------ | :----------------------------------------------------------------: | ----------- |
-| 1   | Superfície circular      | [Superfície](https://www.gov.br/ds/fundamentos-visuais/superficie) | Obrigatório |
-| 2   | Representação do usuário |                                ---                                 | Obrigatório |
+| ID  | Nome                     |                    Referência                    | Uso         |
+| --- | ------------------------ | :----------------------------------------------: | ----------- |
+| 1   | Superfície circular      | [Superfície](/ds/fundamentos-visuais/superficie) | Obrigatório |
+| 2   | Representação do usuário |                       ---                        | Obrigatório |
 
 ![Anatomia do avatar.](imagens/avatar-anatomia.png)
 *Anatomia do avatar.*

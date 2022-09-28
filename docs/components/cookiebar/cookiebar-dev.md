@@ -1,4 +1,3 @@
-[version]: # (2.1.6)
 
 ## Como usar
 
@@ -17,7 +16,7 @@ Para usar o componente Cookiebar é necessário os seguintes artefatos:
 ## JSON de Entrada de Dados
 
 ```json
-[
+"[
   {
     "lang": "",
     "allOptOut": true,
@@ -84,7 +83,7 @@ Para usar o componente Cookiebar é necessário os seguintes artefatos:
       }
     ]
   }
-]
+]"
 ```
 
 ### Propriedades do JSON de Entrada de Dados
@@ -465,7 +464,7 @@ O JSON de Entrada de Dados é um array, em que cada elemento é objeto contendo 
 Incluir o arquivo `core.min.js` no html.
 
 ```html
-<script src="<node_modules>/@govbr-ds/core/dist/core.min.js"></script>
+<script src="node_modules/@govbr-ds/core/dist/core.min.js"></script>
 ```
 
 > O arquivo core.min.js expõe um objeto chamado `core` contendo as referências para todas as classes exportadas.
@@ -476,13 +475,16 @@ Usar s seguinte código JavaScript para instanciar a classe `BRCookiebar`, passa
 
 -   `name` - Nome do componente em minúsculo (br-cookiebar)
 -   `component` - Objeto referenciando a raiz do componente DOM
--   `json`- JSON de entrada com dados do cookiebar
+-   `json`- JSON de entrada com dados do cookiebar no formato string
 -   `lang` - Lingua para filtrar o JSON de entrada
 -   `mode` - Mode de renderização do cookibar ('default' | 'open')
 -   `callback` - Função de callback chamada no aceite do cookiebar tendo o JSON de saída como argumento
 
 ```javascript
 const cookiebarList = []
+
+// É necessário informar o json de entrada no formato string e, também, uma funçao de callback.
+
 for (const brCookiebar of window.document.querySelectorAll('.br-cookiebar')) {
   const params = {
     name: 'br-cookiebar',
@@ -497,7 +499,14 @@ for (const brCookiebar of window.document.querySelectorAll('.br-cookiebar')) {
 
 ## Função de callback
 
-A função de callback é chamada ao clicar no botão de aceite e recebe como parâmetro o **JSON de Saída**
+A função de callback é chamada ao clicar no botão de aceite e recebe como parâmetro o **JSON de Saída**. Ela é responsável por tratar a regra de negócio do cookiebar.
+
+```javascript
+function callback(jsonSaida) {
+    // Implementar o tratamento dos cookeis segundo as regras de negócio.
+    console.log(jsonSaida)
+}
+```
 
 ## Uso Alternativo
 
