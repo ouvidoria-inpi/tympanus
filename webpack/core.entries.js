@@ -24,6 +24,8 @@ const core = {
     path.resolve(paths.srcJSpartial, 'globals-class.js'),
   ],
   'core.min': [path.resolve(paths.srcJSpartial, 'core.entry.js')],
+  'core-init.min': [path.resolve(paths.srcJSpartial, 'core-init.js')],
+  
 }
 
 /**
