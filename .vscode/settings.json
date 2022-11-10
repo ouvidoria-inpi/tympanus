@@ -1,106 +1,83 @@
 {
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
-  "[properties]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "cSpell.enabled": false,
-  "cSpell.enableFiletypes": ["markdown", "plaintext", "yaml"],
-  "cSpell.language": "pt-BR,en-US",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true,
-    "source.organizeImports": true
-  },
-  "editor.codeLens": true,
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "editor.trimAutoWhitespace": true,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "markdown": "html",
-    "plaintext": "pug",
-    "vue-html": "html"
-  },
-  "eslint.alwaysShowStatus": true,
-  "eslint.packageManager": "npm",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "gitlens.blame.ignoreWhitespace": true,
-  "gitlens.codeLens.authors.enabled": true,
-  "gitlens.codeLens.enabled": true,
-  "gitlens.codeLens.recentChange.enabled": true,
-  "gitlens.defaultDateStyle": "absolute",
-  "javascript.referencesCodeLens.enabled": true,
-  "javascript.suggest.autoImports": true,
-  "javascript.suggest.completeFunctionCalls": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "markdownlint.config": {
-    "MD007": {
-      "indent": 4
-    },
-    "MD013": false,
-    "MD024": false,
-    "MD030": {
-      "ul_multi": 1,
-      "ul_single": 1
-    },
-    "MD033": false,
-    "MD041": false
-  },
-  "markdownShortcuts.bullets.marker": "-",
-  "markdownShortcuts.italics.marker": "*",
-  "path-intellisense.autoSlashAfterDirectory": true,
-  "prettier.arrowParens": "always",
-  "prettier.bracketSpacing": true,
-  "prettier.configPath": ".prettierrc.yml",
-  "prettier.jsxBracketSameLine": false,
-  "prettier.jsxSingleQuote": true,
-  "prettier.printWidth": 120,
-  "prettier.proseWrap": "preserve",
-  "prettier.resolveGlobalModules": true,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
-  "prettier.useEditorConfig": true,
-  "prettier.useTabs": false,
-  "prettier.withNodeModules": false,
-  "todo-tree.general.tags": [
-    "TODO",
-    "HACK",
-    "FIXME",
-    "BUG",
-    "REFACTOR",
-    "DOC",
-    "ADD"
-  ],
-  "todo-tree.highlights.enabled": true,
-  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)"
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
+	},
+	"cSpell.enabled": false,
+	"cSpell.enableFiletypes": ["markdown", "plaintext", "yaml"],
+	"cSpell.language": "pt-BR,en-US",
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true,
+		"source.organizeImports": true
+	},
+	"editor.codeLens": true,
+	"editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"editor.trimAutoWhitespace": true,
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"markdown": "html",
+		"plaintext": "pug",
+		"vue-html": "html"
+	},
+	"eslint.alwaysShowStatus": true,
+	"eslint.packageManager": "npm",
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"gitlens.blame.ignoreWhitespace": true,
+	"gitlens.codeLens.authors.enabled": true,
+	"gitlens.codeLens.enabled": true,
+	"gitlens.codeLens.recentChange.enabled": true,
+	"gitlens.defaultDateStyle": "absolute",
+	"javascript.referencesCodeLens.enabled": true,
+	"javascript.suggest.autoImports": true,
+	"javascript.suggest.completeFunctionCalls": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"markdownlint.config": {
+		"MD007": {
+			"indent": 4
+		},
+		"MD013": false,
+		"MD024": false,
+		"MD030": {
+			"ul_multi": 1,
+			"ul_single": 1
+		},
+		"MD033": false,
+		"MD041": false
+	},
+	"markdownShortcuts.bullets.marker": "-",
+	"markdownShortcuts.italics.marker": "*",
+	"path-intellisense.autoSlashAfterDirectory": true,
+	"prettier.configPath": ".prettierrc.yml",
+	"prettier.printWidth": 120,
+	"prettier.withNodeModules": false,
+	"todo-tree.general.tags": [
+		"TODO",
+		"HACK",
+		"FIXME",
+		"BUG",
+		"REFACTOR",
+		"DOC",
+		"ADD"
+	],
+	"todo-tree.highlights.enabled": true,
+	"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)"
 }
