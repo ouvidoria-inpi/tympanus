@@ -232,11 +232,11 @@ O componente *DateTimePicker* for projetado para ser utilizado em qualquer resol
 
 ### Botões Terciários
 
-| Name    | Ícone                              | Token Size        | Class (Font Awesome) |
-| ------- | ---------------------------------- | ----------------- | -------------------- |
-| Voltar  | <i class="fas fa-angle-left"></i>  | `--icon-size-lg`  | fa-angle-left        |
-| Avançar | <i class="fas fa-angle-right"></i> | `---icon-size-lg` | fa-angle-right       |
-| Retrair | <i class="fas fa-angle-up"></i>    | `---icon-size-lg` | fa-angle-up          |
+| Name    | Ícone                                | Token Size        | Class (Font Awesome) |
+| ------- | ------------------------------------ | ----------------- | -------------------- |
+| Voltar  | <i class="fas fa-chevron-left"></i>  | `--icon-size-lg`  | fa-chevron-left      |
+| Avançar | <i class="fas fa-chevron-right"></i> | `---icon-size-lg` | fa-chevron-right     |
+| Retrair | <i class="fas fa-chevron-up"></i>    | `---icon-size-lg` | fa-chevron-up        |
 
 ### Dimensão
 

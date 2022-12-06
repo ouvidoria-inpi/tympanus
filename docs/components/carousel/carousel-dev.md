@@ -6,7 +6,7 @@
   <div class="br-carousel">
     <div class="carousel-button">
       <button class="br-button carousel-btn-prev terciary circle" type="button" aria-label="Anterior" aria-controls="null" disabled>
-        <i class="fas fa-angle-left" aria-hidden="true"> </i>
+        <i class="fas fa-chevron-left" aria-hidden="true"> </i>
       </button>
     </div>
     <div class="carousel-stage">
@@ -16,7 +16,7 @@
     </div>
     <div class="carousel-button">
       <button class="br-button carousel-btn-next terciary circle" type="button" aria-label="Próximo" aria-controls="null">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
       </button>
     </div>
     <div class="carousel-step">

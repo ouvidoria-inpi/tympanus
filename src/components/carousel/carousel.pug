@@ -10,7 +10,7 @@ mixin carousel(type="simple", stage="in", nav="on")
         )
         .carousel-button
           +button.carousel-btn-prev.terciary.circle(aria-label="Anterior")
-            +icon.fa-angle-left
+            +icon.fa-chevron-left
         .carousel-stage
           .carousel-page(active)
             .carousel-content.bg-blue-10
@@ -29,7 +29,7 @@ mixin carousel(type="simple", stage="in", nav="on")
               .h3.carousel-title Página 5
         .carousel-button
           +button.carousel-btn-next.terciary.circle(aria-label="Próximo")
-            +icon.fa-angle-right
+            +icon.fa-chevron-right
         .carousel-step
           +step(scroll=false, vertical=false,  total=5, initial=1, type=attributes.type)
 
