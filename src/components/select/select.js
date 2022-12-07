@@ -115,6 +115,7 @@ class BRSelect {
    * @private
    */
   _setBehavior() {
+    this._setSearchIcon()
     this._setDropdownBehavior()
     this._setKeyboardBehavior()
     this._setSelectionBehavior()
@@ -631,6 +632,29 @@ class BRSelect {
     this._setInput()
     this._resetFocus()
     this._resetVisible()
+  }
+  /**
+   * Adiciona ícone de busca
+   * @private
+   */
+  _setSearchIcon() {
+    const brInput = this.component.querySelector('.br-input')
+    const dropButton = this.component.querySelector('[data-trigger]')
+    // Ícone de busca
+    const searchIcon = document.createElement('i')
+    searchIcon.classList.add('fas', 'fa-search')
+    searchIcon.setAttribute('aria-hidden', 'true')
+    // Container para o ícone
+    const inputIcon = document.createElement('div')
+    inputIcon.classList.add('input-icon')
+    inputIcon.appendChild(searchIcon)
+    // Estrutura para input com ícone
+    const inputGroup = document.createElement('div')
+    inputGroup.classList.add("input-group")
+    inputGroup.appendChild(inputIcon)
+    inputGroup.appendChild(brInput.querySelector('input'))
+    brInput.appendChild(inputGroup)
+    brInput.appendChild(dropButton)
   }
 }
 
