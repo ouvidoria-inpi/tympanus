@@ -10,6 +10,7 @@
   @include footer-social;
   @include footer-info;
 }
+
 @mixin footer-tokens {
   --footer-logo-height: 48px;
   --footer-logo-width: 180px;
@@ -17,39 +18,46 @@
   --footer-assigns-height: 46px;
   --footer-assigns-width: 180px;
 }
+
 @mixin footer-default {
   background: var(--background);
   border-top: 1px solid var(--border-color);
   color: var(--color);
   display: block;
 }
+
 @mixin footer-dark {
   --background: var(--background-dark);
   @include dark-mode;
+
   .#{$prefix}item {
     @include dark-mode;
   }
 }
+
 @mixin footer-light {
   &[inverted],
   &.inverted {
     --background: var(--background-light);
     @include light-mode;
+
     .#{$prefix}item {
       @include light-mode;
     }
   }
 }
+
 @mixin footer-logo {
   .logo {
     padding: var(--footer-logo-padding);
 
     img {
       max-height: var(--footer-logo-height);
-      max-width: var(--footer-logo-widht);
+      max-width: var(--footer-logo-width);
     }
   }
 }
+
 @mixin footer-list {
   .#{$prefix}list {
     @include footer-list-config;
@@ -64,6 +72,7 @@
     .header {
       width: 100%;
     }
+
     //  Para ser compatível com outros navegadores no
     //  uso máximo de 2 linhas, foram adicionados os
     //  comandos line-height e max-height.
@@ -72,6 +81,7 @@
     [class*="col-"] {
       flex-grow: 0;
       padding: 0;
+
       @include media-breakpoint-down(sm) {
         flex-basis: 100% !important;
         max-width: 100%;
@@ -79,6 +89,7 @@
     }
   }
 }
+
 @mixin footer-item-hide-suport {
   @include media-breakpoint-up(md) {
     .support:last-child {
@@ -93,6 +104,7 @@
 }
 
 @mixin footer-list-hide-suport {
+
   // evita collapse no breakpoint
   @include media-breakpoint-up(md) {
     // .#{$prefix}list {
@@ -136,6 +148,7 @@
     }
   }
 }
+
 @mixin footer-info {
   @include media-breakpoint-up(md) {
     .info {
