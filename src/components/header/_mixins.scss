@@ -53,6 +53,7 @@
     justify-content: space-between;
     margin-top: var(--header-padding-small);
   }
+
   // Tablet
   @include media-breakpoint-up(sm) {
     --header-padding: var(--header-padding-medium);
@@ -60,7 +61,10 @@
 }
 
 @mixin header-sizes {
-  @each $size in "small", "medium", "large" {
+
+  @each $size in "small",
+  "medium",
+  "large" {
     &.#{$size} {
       --header-padding: var(--header-padding-#{$size});
     }
@@ -68,15 +72,17 @@
 }
 
 @mixin header-logo {
+
   // Mobile
   .header-logo {
     align-items: center;
     display: flex;
     flex: 1;
     float: left;
+    gap: var(--spacing-scale-2x);
 
-    img {
-      margin-right: var(--spacing-scale-base);
+    img,
+    svg {
       max-height: var(--header-logo-size);
     }
 
@@ -107,6 +113,7 @@
       }
     }
   }
+
   // Tablet
   @include media-breakpoint-up(sm) {
     .header-logo {
@@ -125,6 +132,7 @@
 }
 
 @mixin header-actions {
+
   // Mobile
   .header-actions {
     align-items: center;
@@ -137,11 +145,13 @@
           display: block;
           z-index: var(--z-index-layer-1);
         }
+
         .#{$prefix}button.active {
           @include icon {
             transform: rotate(180deg);
           }
         }
+
         .#{$prefix}notification {
           display: block;
           right: -16px;
@@ -175,6 +185,7 @@
         background: var(--background);
         left: -4em;
       }
+
       .#{$prefix}item {
         white-space: nowrap;
       }
@@ -203,6 +214,7 @@
           }
         }
       }
+
       .#{$prefix}item {
         padding: 0;
       }
@@ -255,6 +267,7 @@
       }
     }
   }
+
   // Tablet
   @include media-breakpoint-up(sm) {
     .header-actions {
@@ -265,12 +278,14 @@
           left: auto;
           right: 0;
         }
+
         .#{$prefix}notification {
           width: 100vw;
         }
       }
     }
   }
+
   // Desktop
   @include media-breakpoint-up(lg) {
     .header-actions {
@@ -279,6 +294,7 @@
         [data-toggle="dropdown"] {
           display: none;
         }
+
         .#{$prefix}list {
           box-shadow: none;
           display: flex;
@@ -289,6 +305,7 @@
             display: none;
           }
         }
+
         .#{$prefix}item {
           --focus-offset: var(--spacing-scale-half);
           --interactive-rgb: var(--interactive-light-rgb);
@@ -300,6 +317,7 @@
             margin-right: var(--spacing-scale-3x);
           }
         }
+
         .#{$prefix}notification {
           width: 50vw;
         }
@@ -308,6 +326,7 @@
       .header-functions {
         .#{$prefix}list {
           margin-right: 0;
+
           .#{$prefix}button {
             --button-size: var(--button-small);
             border-radius: 50%;
@@ -321,6 +340,7 @@
             }
           }
         }
+
         .#{$prefix}item {
           margin-right: var(--spacing-scale-base);
 
@@ -338,6 +358,7 @@
 }
 
 @mixin header-menu {
+
   // Mobile
   .header-menu {
     align-items: center;
@@ -345,7 +366,7 @@
     flex: 1;
 
     .header-menu-trigger {
-      + .header-info {
+      +.header-info {
         margin-left: var(--spacing-scale-2x);
       }
     }
@@ -371,6 +392,7 @@
       }
     }
   }
+
   // Tablet
   @include media-breakpoint-up(sm) {
     .header-menu {
@@ -390,6 +412,7 @@
       }
     }
   }
+
   // Desktop
   @include media-breakpoint-up(lg) {
     .header-menu {
@@ -404,6 +427,7 @@
 }
 
 @mixin header-search {
+
   // Mobile
   .header-search,
   &.compact .header-search {
@@ -416,6 +440,7 @@
     position: absolute;
     right: 0;
     top: 0;
+
     .#{$prefix}input {
       align-items: center;
       display: flex;
@@ -432,6 +457,7 @@
           background: var(--gray-2);
         }
       }
+
       .icon,
       .#{$prefix}button {
         --focus-offset: 0;
@@ -460,6 +486,7 @@
       display: none;
     }
   }
+
   // Desktop
   @include media-breakpoint-up(lg) {
     .header-search {
@@ -473,6 +500,7 @@
         }
       }
     }
+
     .#{$prefix}input {
       min-width: 385px;
     }
@@ -495,6 +523,7 @@
         display: block;
       }
     }
+
     // Tablet
     @include media-breakpoint-up(sm) {
       .container-lg {
@@ -536,6 +565,7 @@
         }
       }
     }
+
     // Desktop
     @include media-breakpoint-up(lg) {
       .header-menu {
