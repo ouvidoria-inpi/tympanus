@@ -123,7 +123,7 @@ Os itens filhos devem ser apresentados em um painel separado.
 
 Veja mais detalhes em Comportamento > 2º nível.
 
-![Subníveis do Menu](imagens/menu-anatomy-item-types–5.png)
+![Subníveis do Menu](imagens/menu-behavior-second-level.png)
 *Subníveis do 2º nível do menu.*
 
 ### 10. Componente *divider* (Condicional)
@@ -410,7 +410,7 @@ O menu contextual pode estar localizado em qualquer área da página, mas lembre
 | -------------------- | ---------- | ---------------------- |
 | Background do item   | background | `--pure-0`             |
 | Cor do texto         | color      | `--blue-warm-vivid-70` |
-| Ícone representativo | color      | `--gray-40`            |
+| Ícone representativo | color      | `--blue-warm-vivid-70` |
 | Ícone ação           | color      | `--blue-warm-vivid-70` |
 
 #### Item 2º nível
@@ -421,7 +421,7 @@ O menu contextual pode estar localizado em qualquer área da página, mas lembre
 | Background do item em destaque | background | `--gray-2`             |
 | Cor do Texto                   | color      | `--blue-warm-vivid-70` |
 | Cor do Texto em destaque       | color      | `--blue-warm-vivid-80` |
-| Ícone representativo           | color      | `--gray-40`            |
+| Ícone representativo           | color      | `--blue-warm-vivid-70` |
 | Ícone ação                     | color      | `--blue-warm-vivid-70` |
 
 #### Rodapé do menu
