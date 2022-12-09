@@ -3,6 +3,7 @@
 @import "../checkbox/mixins";
 
 .#{$prefix}list {
+  background: var(--pure-0);
   @include list-configs;
 
   // Mixins abaixo podem ser usados no shadow dom

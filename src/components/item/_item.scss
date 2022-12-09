@@ -1,6 +1,7 @@
 @import "mixins";
 
 .#{$prefix}item {
+  background: var(--pure-0);
   @include item-configs;
 }
 
