@@ -1,16 +1,21 @@
-include:
-  - template: Security/Dependency-Scanning.gitlab-ci.yml
-  - template: Security/License-Scanning.gitlab-ci.yml
-  - template: Security/SAST.gitlab-ci.yml
-  - template: Security/Secret-Detection.gitlab-ci.yml
+# include:
+# - template: Security/Dependency-Scanning.gitlab-ci.yml
+# - template: Security/License-Scanning.gitlab-ci.yml
+# - template: Security/SAST.gitlab-ci.yml
+# - template: Security/Secret-Detection.gitlab-ci.yml
+# - template: Security/Container-Scanning.gitlab-ci.yml
+# - template: Security/DAST.gitlab-ci.yml
+# - template: Code-Quality.gitlab-ci.yml
 
 image: node:14-alpine
 
 stages:
-  - build
-  - gitlab-scans
-  - lints
-  - publish-package
+  - Iniciar release
+  - Dependências
+  # - Build
+  # - Validações Gitlab
+  # - Qualidade
+  - Release
 
 cache:
   paths:
@@ -18,137 +23,178 @@ cache:
 
 variables:
   SAST_EXCLUDED_PATHS: spec, test, tests, tmp, .husky, .storybook, .vscode, coverage, dist, node_modules, package-lock.json, **/*.spec.js, **/*.spec.js.snap
-  SECRET_DETECTION_HISTORIC_SCAN: 'false'
-  SECRET_DETECTION_EXCLUDED_PATHS: spec, test, tests, tmp, .husky, .vscode, coverage, dist, node_modules
+  SECRET_DETECTION_HISTORIC_SCAN: "false"
+  SECRET_DETECTION_EXCLUDED_PATHS: spec, test, tests, tmp, .husky, .vscode, coverage, dist, node_modules,
+  SECURE_LOG_LEVEL: error
 
-Install:
-  stage: .pre
+Iniciar:
+  stage: Iniciar release
+  environment:
+    name: production
+  when: manual
+  allow_failure: false
+  script:
+    - echo 'Iniciando pipeline.'
+  only:
+    - main
+    - next
+    - next-major
+    - /^[0-9]+(\.([0-9]|x))+$/
+    - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
+    - /(rc|beta|alpha)$/
+
+Instalar dependências:
+  stage: Dependências
+  allow_failure: false
   artifacts:
     paths:
       - node_modules
-    expire_in: 1 hour
+    expire_in: 1 day
   script:
+    - apk --no-cache add git
     - rm -rf dist
     - npm install
   only:
     - main
+    - next
+    - next-major
     - merge_requests
+    - /^[0-9]+(\.([0-9]|x))+$/
+    - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
+    - /(rc|beta|alpha)$/
 
-dependency_scanning:
-  stage: gitlab-scans
-  script:
-    - echo 'Security/Dependency-Scanning.gitlab-ci.yml'
+# DS:
+#   stage: Build
+#   artifacts:
+#     paths:
+#       - dist
+#     expire_in: 1 week
+#   script:
+#     - npm run build
+#   only:
+#     - main
+#     - next
+#     - next-major
+#     - merge_requests
+#     - /^[0-9]+(\.([0-9]|x))+$/
+#     - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
+#     - /(rc|beta|alpha)$/
 
-license_scanning:
-  stage: gitlab-scans
-  script:
-    - echo 'Security/License-Scanning.gitlab-ci.yml'
+# dependency_scanning:
+#   stage: Validações Gitlab
+#   needs: ["DS"]
+#   allow_failure: false
+#   script:
+#     - echo 'Security/Dependency-Scanning.gitlab-ci.yml'
 
-sast:
-  stage: gitlab-scans
-  script:
-    - echo 'Security/SAST.gitlab-ci.yml'
+# license_scanning:
+#   stage: Validações Gitlab
+#   needs: ["DS"]
+#   allow_failure: false
+#   script:
+#     - echo 'Security/License-Scanning.gitlab-ci.yml'
 
-secret_detection:
-  stage: gitlab-scans
-  script:
-    - echo 'Security/Secret-Detection.gitlab-ci.yml'
+# sast:
+#   stage: Validações Gitlab
+#   needs: ["DS"]
+#   allow_failure: false
+#   script:
+#     - echo 'Security/SAST.gitlab-ci.yml'
 
-DS:
-  stage: build
+# dast:
+#   stage: Validações Gitlab
+#   needs: ["DS"]
+#   allow_failure: false
+#   script:
+#     - echo 'Security/DAST.gitlab-ci.yml'
+
+# container_scanning:
+#   stage: Validações Gitlab
+#   needs: ["DS"]
+#   allow_failure: false
+#   script:
+#     - echo 'Security/Container-Scanning.gitlab-ci.yml'
+
+# code_quality:
+#   stage: Validações Gitlab
+#   needs: ["DS"]
+#   allow_failure: false
+#   artifacts:
+#     paths: [gl-code-quality-report.json]
+#   script:
+#     - echo 'VCode-Quality.gitlab-ci.yml'
+
+# Code Quality HTML:
+#   extends: code_quality
+#   stage: Validações Gitlab
+#   needs: ["DS"]
+#   allow_failure: false
+#   variables:
+#     REPORT_FORMAT: html
+#   artifacts:
+#     paths: [gl-code-quality-report.html]
+#   script:
+#     - echo 'VCode-Quality.gitlab-ci.yml'
+
+# secret_detection:
+#   stage: Validações Gitlab
+#   needs: ["DS"]
+#   allow_failure: false
+#   script:
+#     - echo 'Security/Secret-Detection.gitlab-ci.yml'
+
+# CSS:
+#   stage: Qualidade
+#   artifacts:
+#     when: always
+#     paths:
+#       - report-stylelint.txt
+#     expire_in: 1 week
+#   script:
+#     - npx stylelint src/**/*.scss  --formatter verbose --output-file report-stylelint.txt
+#   only:
+#     - main
+#     - merge_requests
+
+# Commits:
+#   stage: Qualidade
+#   needs: ["DS"]
+#   allow_failure: false
+#   artifacts:
+#     when: always
+#     paths:
+#       - report-commitlint.txt
+#     expire_in: 1 week
+#   before_script:
+#     - apk --no-cache add git
+#   script:
+#     - npx commitlint-gitlab-ci -x @govbr-ds/commit-config > report-commitlint.txt
+#   only:
+#     - main
+#     - next
+#     - next-major
+#     - merge_requests
+#     - /^[0-9]+(\.([0-9]|x))+$/
+#     - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
+#     - /(rc|beta|alpha)$/
+
+Semantic Release:
+  stage: Release
+  environment:
+    name: production
   artifacts:
     paths:
       - dist
-    expire_in: 1 week
-  script:
-    - npm run build
-  only:
-    - main
-    - merge_requests
-
-# Parte para incluir os testes com jest, karma, etc...
-# Jest:
-#   stage: testing
-#   artifacts:
-#     when: always
-#     paths:
-#       - coverage/
-#     reports:
-#       junit:
-#         - clover.xml
-#       coverage_report:
-#         coverage_format: cobertura
-#         path: coverage/cobertura-coverage.xml
-#     expire_in: 1 week
-#   script:
-#     - npm run test:unit
-#   only:
-#     - main
-#     - merge_requests
-
-# JS:
-#   stage: lints
-#   artifacts:
-#     when: always
-#     paths:
-#       - report-eslint.html
-#     expire_in: 1 week
-#   script:
-#     - npx eslint -c .eslintrc.yaml src/**/*.js --format html --output-file report-eslint.html
-#   only:
-#     - main
-#     - merge_requests
-
-CSS:
-  stage: lints
-  artifacts:
-    when: always
-    paths:
-      - report-stylelint.txt
-    expire_in: 1 week
-  script:
-    - npx stylelint src/**/*.scss  --formatter verbose --output-file report-stylelint.txt
-  only:
-    - main
-    - merge_requests
-
-# HTML:
-#  stage: lints
-#  artifacts:
-#    when: always
-#    paths:
-#      - report-htmllint.txt
-#    expire_in: 1 week
-#  script:
-#    - npx html-validate --formatter stylish dist/**/*.html
-#  only:
-#    - main
-#    - merge_requests
-
-Commitlint:
-  stage: lints
-  artifacts:
-    when: always
-    paths:
-      - report-commitlint.txt
     expire_in: 1 week
   before_script:
-    - apk --no-cache add git
+    - apk --no-cache add git zip
   script:
-    - npx commitlint-gitlab-ci -x @commitlint/config-conventional > report-commitlint.txt
+    - echo "https://gitlab.com/$CI_PROJECT_DIR/"
+    - npx semantic-release
   only:
     - main
-    - merge_requests
-
-Core:
-  stage: publish-package
-  artifacts:
-    paths:
-      - dist
-    expire_in: 1 week
-  script:
-    - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-    - npm publish --tags latest
-  when: manual
-  only:
-    - tags
+    - next
+    - next-major
+    - /^[0-9]+(\.([0-9]|x))+$/
+    - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
+    - /(rc|beta|alpha)$/
