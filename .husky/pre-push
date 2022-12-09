@@ -1,5 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-# TODO: Incluir testes criados antes de enviar o push
-# npm test
