@@ -1,20 +1,20 @@
-# include:
-# - template: Security/Dependency-Scanning.gitlab-ci.yml
-# - template: Security/License-Scanning.gitlab-ci.yml
-# - template: Security/SAST.gitlab-ci.yml
-# - template: Security/Secret-Detection.gitlab-ci.yml
-# - template: Security/Container-Scanning.gitlab-ci.yml
-# - template: Security/DAST.gitlab-ci.yml
-# - template: Code-Quality.gitlab-ci.yml
+include:
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/License-Scanning.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+  - template: Security/Container-Scanning.gitlab-ci.yml
+  - template: Security/DAST.gitlab-ci.yml
+  - template: Code-Quality.gitlab-ci.yml
 
-image: node:14-alpine
+image: node:16-alpine
 
 stages:
   - Iniciar release
   - Dependências
-  # - Build
-  # - Validações Gitlab
-  # - Qualidade
+  - Build
+  - Validações Gitlab
+  - Qualidade
   - Release
 
 cache:
@@ -63,120 +63,131 @@ Instalar dependências:
     - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
     - /(rc|beta|alpha)$/
 
-# DS:
-#   stage: Build
-#   artifacts:
-#     paths:
-#       - dist
-#     expire_in: 1 week
-#   script:
-#     - npm run build
-#   only:
-#     - main
-#     - next
-#     - next-major
-#     - merge_requests
-#     - /^[0-9]+(\.([0-9]|x))+$/
-#     - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
-#     - /(rc|beta|alpha)$/
+DS:
+  stage: Build
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
+  script:
+    - npm run build
+  only:
+    - main
+    - next
+    - next-major
+    - merge_requests
+    - /^[0-9]+(\.([0-9]|x))+$/
+    - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
+    - /(rc|beta|alpha)$/
 
-# dependency_scanning:
-#   stage: Validações Gitlab
-#   needs: ["DS"]
-#   allow_failure: false
-#   script:
-#     - echo 'Security/Dependency-Scanning.gitlab-ci.yml'
+dependency_scanning:
+  stage: Validações Gitlab
+  needs: ["DS"]
+  allow_failure: false
+  script:
+    - echo 'Security/Dependency-Scanning.gitlab-ci.yml'
 
-# license_scanning:
-#   stage: Validações Gitlab
-#   needs: ["DS"]
-#   allow_failure: false
-#   script:
-#     - echo 'Security/License-Scanning.gitlab-ci.yml'
+license_scanning:
+  stage: Validações Gitlab
+  needs: ["DS"]
+  allow_failure: false
+  script:
+    - echo 'Security/License-Scanning.gitlab-ci.yml'
 
-# sast:
-#   stage: Validações Gitlab
-#   needs: ["DS"]
-#   allow_failure: false
-#   script:
-#     - echo 'Security/SAST.gitlab-ci.yml'
+sast:
+  stage: Validações Gitlab
+  needs: ["DS"]
+  allow_failure: false
+  script:
+    - echo 'Security/SAST.gitlab-ci.yml'
 
-# dast:
-#   stage: Validações Gitlab
-#   needs: ["DS"]
-#   allow_failure: false
-#   script:
-#     - echo 'Security/DAST.gitlab-ci.yml'
+dast:
+  stage: Validações Gitlab
+  needs: ["DS"]
+  allow_failure: false
+  script:
+    - echo 'Security/DAST.gitlab-ci.yml'
 
-# container_scanning:
-#   stage: Validações Gitlab
-#   needs: ["DS"]
-#   allow_failure: false
-#   script:
-#     - echo 'Security/Container-Scanning.gitlab-ci.yml'
+container_scanning:
+  stage: Validações Gitlab
+  needs: ["DS"]
+  allow_failure: false
+  script:
+    - echo 'Security/Container-Scanning.gitlab-ci.yml'
 
-# code_quality:
-#   stage: Validações Gitlab
-#   needs: ["DS"]
-#   allow_failure: false
-#   artifacts:
-#     paths: [gl-code-quality-report.json]
-#   script:
-#     - echo 'VCode-Quality.gitlab-ci.yml'
+code_quality:
+  stage: Validações Gitlab
+  needs: ["DS"]
+  allow_failure: false
+  artifacts:
+    paths: [gl-code-quality-report.json]
+  script:
+    - echo 'VCode-Quality.gitlab-ci.yml'
 
-# Code Quality HTML:
-#   extends: code_quality
-#   stage: Validações Gitlab
-#   needs: ["DS"]
-#   allow_failure: false
-#   variables:
-#     REPORT_FORMAT: html
-#   artifacts:
-#     paths: [gl-code-quality-report.html]
-#   script:
-#     - echo 'VCode-Quality.gitlab-ci.yml'
+Code Quality HTML:
+  extends: code_quality
+  stage: Validações Gitlab
+  needs: ["DS"]
+  allow_failure: false
+  variables:
+    REPORT_FORMAT: html
+  artifacts:
+    paths: [gl-code-quality-report.html]
+  script:
+    - echo 'VCode-Quality.gitlab-ci.yml'
 
-# secret_detection:
-#   stage: Validações Gitlab
-#   needs: ["DS"]
-#   allow_failure: false
-#   script:
-#     - echo 'Security/Secret-Detection.gitlab-ci.yml'
+secret_detection:
+  stage: Validações Gitlab
+  needs: ["DS"]
+  allow_failure: false
+  script:
+    - echo 'Security/Secret-Detection.gitlab-ci.yml'
 
-# CSS:
-#   stage: Qualidade
-#   artifacts:
-#     when: always
-#     paths:
-#       - report-stylelint.txt
-#     expire_in: 1 week
-#   script:
-#     - npx stylelint src/**/*.scss  --formatter verbose --output-file report-stylelint.txt
-#   only:
-#     - main
-#     - merge_requests
+CSS:
+  stage: Qualidade
+  artifacts:
+    when: always
+    paths:
+      - report-stylelint.txt
+    expire_in: 1 week
+  script:
+    - npx stylelint src/**/*.scss  --formatter verbose --output-file report-stylelint.txt
+  only:
+    - main
+    - merge_requests
 
-# Commits:
-#   stage: Qualidade
-#   needs: ["DS"]
-#   allow_failure: false
-#   artifacts:
-#     when: always
-#     paths:
-#       - report-commitlint.txt
-#     expire_in: 1 week
-#   before_script:
-#     - apk --no-cache add git
-#   script:
-#     - npx commitlint-gitlab-ci -x @govbr-ds/commit-config > report-commitlint.txt
-#   only:
-#     - main
-#     - next
-#     - next-major
-#     - merge_requests
-#     - /^[0-9]+(\.([0-9]|x))+$/
-#     - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
-#     - /(rc|beta|alpha)$/
+Commits:
+  stage: Qualidade
+  needs: ["DS"]
+  allow_failure: false
+  artifacts:
+    when: always
+    paths:
+      - report-commitlint.txt
+    expire_in: 1 week
+  before_script:
+    - apk --no-cache add git
+  script:
+    - if [ "${CI_BUILD_BEFORE_SHA}" = "0000000000000000000000000000000000000000" ]; then
+      echo "commitlint from HEAD^"
+      npx commitlint -x @govbr-ds/commit-config -f HEAD^ > report-commitlint.txt
+      else
+      echo "commitlint from ${CI_BUILD_BEFORE_SHA}"
+      br=`git branch -r --contains ${CI_BUILD_BEFORE_SHA}`
+      if [ ! -n $br ]; then
+      npx commitlint -x @govbr-ds/commit-config -f HEAD^ > report-commitlint.txt
+      else
+      npx commitlint -x @govbr-ds/commit-config -f "${CI_BUILD_BEFORE_SHA}" > report-commitlint.txt
+      fi
+      fi
+  only:
+    - main
+    - next
+    - next-major
+    - merge_requests
+    - /^[0-9]+(\.([0-9]|x))+$/
+    - /^[0-9]+(\.([0-9]|x))+(-(rc|beta|alpha))?$/
+    - /(rc|beta|alpha)$/
 
 Semantic Release:
   stage: Release

@@ -1,4 +1,4 @@
-const sharedConfig = require("@govbr-ds/release-config")
+const sharedConfig = require('@govbr-ds/release-config')
 
 module.exports = {
   branches: [...sharedConfig.branches],
@@ -6,31 +6,39 @@ module.exports = {
     sharedConfig.plugins.commitAnalyzer,
     sharedConfig.plugins.releaseNotes,
     sharedConfig.plugins.changelog,
-    sharedConfig.plugins.gitlab,
     [
-      "@semantic-release/npm",
+      '@semantic-release/exec',
       {
-        npmPublish: false,
+        generateNotesCmd: './config.sh ${nextRelease.version}',
       },
     ],
-    sharedConfig.plugins.git,
+    '@semantic-release/npm',
     [
-      "semantic-release-discord",
+      '@semantic-release/git',
+      {
+        assets: ['package.json', 'CHANGELOG.md', 'config.json'],
+        message:
+          'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+      },
+    ],
+    sharedConfig.plugins.gitlab,
+    [
+      'semantic-release-discord',
       {
         notifyOnFail: false,
         onSuccessTemplate: {
-          thread_name: "GOVBR-DS ($package_name) v$npm_package_version",
           content:
-            "A versão v$npm_package_version do GOVBR-DS ($package_name) já está disponível no NPMJS! :partying_face:\n\nPara conhecer melhor as novidades:\n\n:book: [Página de releases]($repo_url/-/releases 'Releases')\n\n:computer: [Repositório no Gitlab]($repo_url)\n\nDeseja contribuir com o Design System? Consulte a nossa [wiki](https://govbr-ds.gitlab.io/govbr-ds-wiki/ 'Wiki GOVBR-DS') para mais detalhes.",
+            'A versão v$npm_package_version do nosso pacote $package_name já está disponível no [NPMJS](https://www.npmjs.com/package/$package_name \'Acessar página do pacote NPM\')! :partying_face: \n\n Para conhecer melhor as novidades: \n\n :book: [Página de releases]($repo_url/-/releases "Releases") \n\n :computer: [Repositório no Gitlab]($repo_url) \n\n Deseja contribuir com o Design System? Consulte a nossa [wiki](https://govbr-ds.gitlab.io/govbr-ds-wiki/ "Wiki GOVBR-DS") para mais detalhes.',
           embeds: [
             {
               color: 16736031,
-              description: "$release_notes",
-              title: "RELEASE NOTES",
-              url: "$repo_url/-/releases/$npm_package_version",
+              description: '$release_notes',
+              title: 'RELEASE NOTES',
+              url: '$repo_url/-/releases/v$npm_package_version',
             },
           ],
-          username: "GOVBR-DS - Core v$npm_package_version",
+          threadName: 'GOVBR-DS - Core v$npm_package_version',
+          username: 'GOVBR-DS',
         },
       },
     ],
