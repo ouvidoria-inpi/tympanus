@@ -18,8 +18,10 @@ module.exports = {
       "semantic-release-discord",
       {
         notifyOnFail: false,
+        thread_name: "GOVBR-DS ($package_name) v$npm_package_version",
+        threadName: "BBBB",
         onSuccessTemplate: {
-          thread_name: "GOVBR-DS ($package_name) v$npm_package_version",
+          threadName: "AAAAA",
           content:
             "A versão v$npm_package_version do GOVBR-DS ($package_name) já está disponível no NPMJS! :partying_face:\n\nPara conhecer melhor as novidades:\n\n:book: [Página de releases]($repo_url/-/releases 'Releases')\n\n:computer: [Repositório no Gitlab]($repo_url)\n\nDeseja contribuir com o Design System? Consulte a nossa [wiki](https://govbr-ds.gitlab.io/govbr-ds-wiki/ 'Wiki GOVBR-DS') para mais detalhes.",
           embeds: [
