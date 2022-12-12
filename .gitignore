@@ -83,3 +83,6 @@ Thumbs.db
 .eslintcache
 
 report.html
+report-commitlint.txt
+
+jsdoc
