@@ -6,7 +6,6 @@ overrides:
       - "**/*.css"
       - "**/*.scss"
       - "**/*.html"
-      - "release.config.js"
     options:
       singleQuote: false
 packageManager: npm
