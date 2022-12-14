@@ -10,6 +10,15 @@
   @include pagination-sizes;
   @include pagination-contextual;
   @include pagination-dark-mode;
+  @include pagination-select-fix;
+}
+
+@mixin pagination-select-fix {
+  .input-group {
+    .input-icon {
+      display: none;
+    }
+  }
 }
 
 @mixin pagination-tokens {
