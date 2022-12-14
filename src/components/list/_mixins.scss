@@ -17,10 +17,6 @@
   .#{$prefix}item {
     @include list-item-config;
   }
-  .#{$prefix}checkbox,
-  .#{$prefix}radio {
-    @include list-checkbox-radio-config;
-  }
 }
 
 @mixin list-item-config {
