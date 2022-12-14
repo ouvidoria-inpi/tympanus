@@ -73,4 +73,4 @@ const checkboxList = []
 
 ### Dependências
 
-Mais detalhes sobre o estado intermediário, pode ser obtido consultando o Utilitário JS [Checkgroup](/ds/util/checkgroup).
+Mais detalhes sobre o estado intermediário, pode ser obtido consultando o Utilitário JS [Checkgroup](utilitarios/js/checkgroup).
