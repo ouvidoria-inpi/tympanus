@@ -271,12 +271,12 @@ Em ambos os casos o indicador do *step* deve corresponder a cada passo na navega
 
 ### Iconografia
 
-| Name                                 | Ícone                              | Size              | Class (Font Awesome) |
-| ------------------------------------ | ---------------------------------- | ----------------- | -------------------- |
-| Botão de navegação (página anterior) | <i class="fas fa-angle-left"></i>  | `–icon-size-base` | `fa-angle-left`      |
-| Botão de navegação (página seguinte) | <i class="fas fa-angle-right"></i> | `–icon-size-base` | `fa-angle-righ`      |
-| Botão de reprodução (Pause)          | <i class="fas fa-pause"></i>       | `–icon-size-base` | `fa-pause`           |
-| Botão de reprodução (Play)           | <i class="fas fa-play"></i>        | `–icon-size-base` | `fa-play`            |
+| Name                                 | Ícone                                | Size              | Class (Font Awesome) |
+| ------------------------------------ | ------------------------------------ | ----------------- | -------------------- |
+| Botão de navegação (página anterior) | <i class="fas fa-chevron-left"></i>  | `–icon-size-base` | `fa-chevron-left`    |
+| Botão de navegação (página seguinte) | <i class="fas fa-chevron-right"></i> | `–icon-size-base` | `fa-chevron-righ`    |
+| Botão de reprodução (Pause)          | <i class="fas fa-pause"></i>         | `–icon-size-base` | `fa-pause`           |
+| Botão de reprodução (Play)           | <i class="fas fa-play"></i>          | `–icon-size-base` | `fa-play`            |
 
 ### Movimento
 

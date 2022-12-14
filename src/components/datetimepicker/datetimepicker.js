@@ -75,12 +75,13 @@ class BRDateTimePicker {
 
       mode: this.component.getAttribute('data-mode'),
       nextArrow:
-        '<button class="br-button circle small" type="button"><i class="fas fa-angle-right"></i></button>',
+        '<button class="br-button circle small" type="button"><i class="fas fa-chevron-right"></i></button>',
       noCalendar: noCalendar,
       prevArrow:
-        '<button class="br-button circle small" type="button"><i class="fas fas fa-angle-left"></i></button>',
+        '<button class="br-button circle small" type="button"><i class="fas fas fa-chevron-left"></i></button>',
       time_24hr: true,
       wrap: true,
+      
     }
     this.config_flatpick = Object.assign(this.config, this.config_native)
 
@@ -88,6 +89,17 @@ class BRDateTimePicker {
       this.component,
       Object.assign(this.config, this.config_native)
     )
+
+    
+
+    this.calendar.config.onOpen.push(function() {
+      document.querySelectorAll(".arrowUp").forEach(function(element){
+        element.classList.add("fas", "fa-chevron-up");
+      });
+      document.querySelectorAll(".arrowDown").forEach(function(element){
+        element.classList.add("fas", "fa-chevron-down");
+      });
+     } );
   }
 }
 
