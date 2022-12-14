@@ -1,4 +1,4 @@
-As classes a seguir funcionam apenas em elementos com display "flex" ou "inline-flex". O [utilitário de display](utilities-css/display) informa como transformar o display para essa finalidade.
+As classes a seguir funcionam apenas em elementos com display "flex" ou "inline-flex". O [utilitário de display](utilitarios/css/display) informa como transformar o display para essa finalidade.
 
 A linha da Grid `.row` usa display "flex", portanto você poderá usar as classes de flexbox nela também.
 
