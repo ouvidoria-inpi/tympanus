@@ -60,7 +60,7 @@ mixin list-simples-selecionaveis
           | ITEM
           | Texto principal
         .col-auto
-          +checkbox('')#check-01(ariaLabel="selecione")
+          +checkbox('')#check-01.hidden-label(ariaLabel="selecione")
     +item(role="listitem")
       .row.align-items-center
         .col-auto
@@ -69,7 +69,7 @@ mixin list-simples-selecionaveis
           | ITEM
           | Texto principal
         .col-auto
-          +checkbox('')#check-02(ariaLabel="selecione")
+          +checkbox('')#check-02.hidden-label(ariaLabel="selecione")
     +item(role="listitem")
       .row.align-items-center
         .col-auto
@@ -78,7 +78,7 @@ mixin list-simples-selecionaveis
           | ITEM
           | Texto principal
         .col-auto
-          +checkbox('')#check-03(ariaLabel="selecione")
+          +checkbox('')#check-03.hidden-label(ariaLabel="selecione")
 
 mixin list-dense-high
   +list(role="list")
