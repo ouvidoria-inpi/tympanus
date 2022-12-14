@@ -56,32 +56,34 @@
 
   .#{$prefix}checkbox,
   .#{$prefix}radio {
-    margin-bottom: calc(var(--item-padding-y) * -1);
-    margin-left: calc(var(--item-padding-x) * -1);
-    margin-right: calc(var(--item-padding-x) * -1);
-    margin-top: calc(var(--item-padding-y) * -1);
+    &:not(.hidden-label) {
+      margin-bottom: calc(var(--item-padding-y) * -1);
+      margin-left: calc(var(--item-padding-x) * -1);
+      margin-right: calc(var(--item-padding-x) * -1);
+      margin-top: calc(var(--item-padding-y) * -1);
 
-    input {
-      +label {
-        padding-bottom: var(--item-padding-y);
-        padding-top: var(--item-padding-y);
-        top: 1px;
-        width: 100%;
-
-        &::before {
-          left: var(--item-padding-x);
-          top: calc(var(--item-padding-y) - 1px);
-        }
-
-        &:empty {
-          left: 0;
+      input {
+        +label {
+          padding-bottom: var(--item-padding-y);
+          padding-top: var(--item-padding-y);
           top: 1px;
-        }
-      }
+          width: 100%;
 
-      &:hover:not(:disabled) {
-        +label::before {
-          background-image: none;
+          &::before {
+            left: var(--item-padding-x);
+            top: calc(var(--item-padding-y) - 1px);
+          }
+
+          &:empty {
+            left: 0;
+            top: 1px;
+          }
+        }
+
+        &:hover:not(:disabled) {
+          +label::before {
+            background-image: none;
+          }
         }
       }
     }
