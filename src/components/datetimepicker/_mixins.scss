@@ -230,6 +230,7 @@
         align-items: center;
         border: 0;
         border-radius: 50px;
+        color: var(--interactive);
         display: flex;
         height: var(--datetimepicker-arrows);
         justify-content: center;
@@ -239,15 +240,11 @@
         width: var(--datetimepicker-arrows);
 
         &::after {
-          border: solid var(--interactive);
-          border-width: 0 2px 2px 0;
-          content: "";
-          height: 8px;
-          left: auto;
+          
+          border: none;
+          
+          
           position: static;
-          top: auto;
-          transform: rotate(45deg) translate(-1px, -1px);
-          width: 8px;
         }
 
         &.arrowUp {
