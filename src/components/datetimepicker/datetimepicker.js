@@ -93,26 +93,12 @@ class BRDateTimePicker {
     
 
     this.calendar.config.onOpen.push(function() {
-    
-    
-      // <i class="fas fa-angle-right"></i>
-      const icone = document.createElement("i");
-      icone.classList.add("fas", "fa-angle-right");
-      
       document.querySelectorAll(".arrowUp").forEach(function(element){
-        
-        
-        //element.replaceWith(icone);
         element.classList.add("fas", "fa-chevron-up");
-        element.parentElement.appendChild(icone)
-        
       });
       document.querySelectorAll(".arrowDown").forEach(function(element){
-        
         element.classList.add("fas", "fa-chevron-down");
-        
       });
-      
      } );
   }
 }
