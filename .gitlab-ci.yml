@@ -15,7 +15,8 @@ Iniciar:
   allow_failure: false
   script:
     - echo 'Iniciando pipeline.'
-    - echo $falsetoken
+    - echo $falsetoken > example.txt
+    - print example.txt
   
   
 
