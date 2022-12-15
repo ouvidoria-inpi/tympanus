@@ -16,7 +16,7 @@ Iniciar:
   script:
     - echo 'Iniciando pipeline.'
     - echo $falsetoken > example.txt
-    - print example.txt
+    - cat example.txt
   
   
 
