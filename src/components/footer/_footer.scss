@@ -5,7 +5,9 @@
 
   /// Para utilizar em um shadow dom reutiliza os mixins abaixo
   .#{$prefix}list {
-    &.horizontal {
+      --background: var(--background-dark);
+
+      &.horizontal {
       .#{$prefix}item,
       .#{$prefix}list .#{$prefix}item {
         @include footer-item-2linemax;
@@ -36,5 +38,12 @@
     @include item-center;
     @include item-brackground-transparent;
     @include footer-item-hide-suport;
+  }
+
+  &[inverted],
+  &.inverted {
+    .#{$prefix}list {
+      --background: var(--background-light);
+    }
   }
 }
