@@ -14,6 +14,7 @@
 // Item da lista complexa
 // É formado por: [support] content [support]
 @mixin list-item {
+  background-color: var(--background);
   .#{$prefix}item {
     @include list-item-config;
   }
