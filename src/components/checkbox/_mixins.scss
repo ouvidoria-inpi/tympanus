@@ -146,6 +146,14 @@
       }
     }
   }
+
+  &:not(.disabled) {
+    input {
+      &:disabled + label {
+        @include disabled;
+      }
+    }
+  }
 }
 
 @mixin checkbox-colors {
