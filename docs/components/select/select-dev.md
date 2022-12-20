@@ -1,8 +1,6 @@
 
 ## Como usar
 
-
-
 ### Propriedades obrigatórias
 
 | Atributo | Tipo     | Valor Padrão    | Descrição                                     |
@@ -21,8 +19,6 @@
 | atributo |  string  | **name**          | Deve ser inseridos nos inputs radio e checkbox                  |
 | atributo |  string  | **value**         | Deve ser inseridos nos inputs radio e checkbox                  |
 
-
-
 ### Propriedades Adicionais
 
 | Atributo | Tipo     | Valor Padrão    | Descrição                                     |
@@ -32,13 +28,10 @@
 
 ## Estados
 
-| Estado            | atributo   | Valores          | 
+| Estado            | atributo   | Valores          |
 | ----------------- | ---------- | ---------------- |
 | Select Múltiplo   | `checked`  |                  |
 | Select expandido  | `expanded` |                  |
-
-
-
 
 ## Próximos passos
 
@@ -73,23 +66,35 @@ Usar o seguinte código JavaScript para instanciar a classe `BRSelect`, passando
 
 -   Nome da classe (br-select)
 -   Objeto referenciando a raiz do componente DOM
+-   (Opcional) String contendo código HTML para dar o feedback de busca não encontrada. Caso não seja passada, será usado um código padrão.
+
+> **Importante!** A tag wrapper do "elemento not-found" precisa conter as classe `br-item` e `not-found`
 
 ```javascript
 
 const selectList = []
+const notFoundElement = `
+ <div class="br-item not-found">
+  <div class="container">
+   <div class="row">
+    <div class="col">
+     <p><strong>Ops!</strong> Não encontramos o que você está procurando!</p>
+    </div>
+   </div>
+  </div>
+ </div>
+`
 for (const brSelect of window.document.querySelectorAll('.br-select')) {
-	const brselect = new core.BRSelect('br-select', brSelect)
-	//Exemplo de uso de listener do select
-	brSelect.addEventListener('onChange', function (e) { })
-	selectList.push(brselect)
+ const brselect = new core.BRSelect('br-select', brSelect, notFoundElement)
+ //Exemplo de uso de listener do select
+ brSelect.addEventListener('onChange', function (e) { })
+ selectList.push(brselect)
 }
 ```
 
-
 ## Informações adicionais
 
-**Os input tipo **checkbox** e **radio** ,que nesse componente são utilizada para selecionar itens,seguem o padrão do w3c de formulário**
-
+**Os input tipo**checkbox**e**radio**,que nesse componente são utilizada para selecionar itens,seguem o padrão do w3c de formulário**
 
 ### Para Obter as Opções Selecionadas
 
