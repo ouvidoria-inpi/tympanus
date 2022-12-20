@@ -293,7 +293,7 @@ O componente *Header* deve se comportar de forma fluida em relação à resoluç
 
 ### 2. Densidade
 
-Conforme descrito em [Responsividade](#1-responsividade), o *header* possui um comportamento fluido em relação a grid utilizada, além de utilizar o conceito de sangria na grid. Por tanto, por padrão, o *header* só possui um espaçamento superior e inferior.
+Conforme descrito em **Responsividade**, o *header* possui um comportamento fluido em relação a grid utilizada, além de utilizar o conceito de sangria na grid. Por tanto, por padrão, o *header* só possui um espaçamento superior e inferior.
 
 Esses espaçamento podem assumir valores pré-definidos para cada tipo de *header* utilizado, podendo ainda sim, ser modificados:
 
