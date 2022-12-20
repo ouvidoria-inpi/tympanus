@@ -81,42 +81,36 @@ DS:
 
 dependency_scanning:
   stage: Validações Gitlab
-  needs: ["DS"]
   allow_failure: false
   script:
     - echo 'Security/Dependency-Scanning.gitlab-ci.yml'
 
 license_scanning:
   stage: Validações Gitlab
-  needs: ["DS"]
   allow_failure: false
   script:
     - echo 'Security/License-Scanning.gitlab-ci.yml'
 
 sast:
   stage: Validações Gitlab
-  needs: ["DS"]
   allow_failure: false
   script:
     - echo 'Security/SAST.gitlab-ci.yml'
 
 dast:
   stage: Validações Gitlab
-  needs: ["DS"]
   allow_failure: false
   script:
     - echo 'Security/DAST.gitlab-ci.yml'
 
 container_scanning:
   stage: Validações Gitlab
-  needs: ["DS"]
   allow_failure: false
   script:
     - echo 'Security/Container-Scanning.gitlab-ci.yml'
 
 code_quality:
   stage: Validações Gitlab
-  needs: ["DS"]
   allow_failure: false
   artifacts:
     paths: [gl-code-quality-report.json]
@@ -126,7 +120,6 @@ code_quality:
 Code Quality HTML:
   extends: code_quality
   stage: Validações Gitlab
-  needs: ["DS"]
   allow_failure: false
   variables:
     REPORT_FORMAT: html
@@ -137,7 +130,6 @@ Code Quality HTML:
 
 secret_detection:
   stage: Validações Gitlab
-  needs: ["DS"]
   allow_failure: false
   script:
     - echo 'Security/Secret-Detection.gitlab-ci.yml'
