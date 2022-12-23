@@ -239,7 +239,7 @@ Também são recomendados para serem utilizados em imagens (como a Logo), sempre
 
 ## Tipos
 
-É possível criar infinidades diferentes de *headers* que atendam diferentes necessidades. Esses "tipos" dependem de como se deseja configurar os elementos que estão previstos neste componente (veja [Detalhe dos Elementos](#detalhe-dos-elementos)).
+É possível criar infinidades diferentes de *headers* que atendam diferentes necessidades. Esses "tipos" dependem de como se deseja configurar os elementos que estão previstos neste componente.
 
 Recomendamos duas configurações que podem atender a maioria das situações: *Padrão* e *Compacto*.
 
@@ -297,9 +297,9 @@ Conforme descrito em **Responsividade**, o *header* possui um comportamento flui
 
 Esses espaçamento podem assumir valores pré-definidos para cada tipo de *header* utilizado, podendo ainda sim, ser modificados:
 
-- **Densidade Alta:** utilizada quando se pretende ocupar menos espaço útil na interface.
-- **Densidade Padrão:** Funciona na maioria dos layouts.
-- **Densidade Baixa:** utilizado quando o *header* precisa se destacar dentro da interface.
+-   **Densidade Alta:** utilizada quando se pretende ocupar menos espaço útil na interface.
+-   **Densidade Padrão:** Funciona na maioria dos layouts.
+-   **Densidade Baixa:** utilizado quando o *header* precisa se destacar dentro da interface.
 
 ![Densidades Alta Padrão e Baixa](imagens/header-densidade.png)
 *Densidades Alta Padrão e Baixa*
@@ -319,14 +319,14 @@ Em se tratando de Header do tipo Padrão, a busca funciona como um *input* comum
 
 Ao acionar o ícone de "Lupa", o *Header* recebe um contexto de busca, apresentando as seguintes características:
 
-- Todos os elementos exibidos no Header são ocultados;
-- O *input* preenche todo a largura do Header recebendo o estado *Focus*;
-- Um *Button* circular surge com a ação para "fechar" o *input*;
+-   Todos os elementos exibidos no Header são ocultados;
+-   O *input* preenche todo a largura do Header recebendo o estado *Focus*;
+-   Um *Button* circular surge com a ação para "fechar" o *input*;
 
 Quando *Button* fechar é acionado:
 
-- O *Header* volta para o contexto anterior, voltando todos os elementos que antes eram visíveis;
-- Tanto o *Input* como o *button* desaparecem.
+-   O *Header* volta para o contexto anterior, voltando todos os elementos que antes eram visíveis;
+-   Tanto o *Input* como o *button* desaparecem.
 
 ##### Normal
 
