@@ -25,21 +25,17 @@ mixin menu-footer
       a(href="javascript: void(0)")
         span.mr-1 Link externo 2
         +icon.fa-external-link-square-alt
-    .menu-social
-      .text-semi-bold.mb-1 Redes Sociais
-      .sharegroup
-        .share
-          a.br-button.circle(href="javascript: void(0)" aria-label="Compartilhar por Facebook")
-            i.fab.fa-facebook-f(aria-hidden="true")
-        .share
-          a.br-button.circle(href="javascript: void(0)" aria-label="Compartilhar por Twitter")
-            i.fab.fa-twitter(aria-hidden="true")
-        .share
-          a.br-button.circle(href="javascript: void(0)" aria-label="Compartilhar por Linkedin")
-            i.fab.fa-linkedin-in(aria-hidden="true")
-        .share
-          a.br-button.circle(href="javascript: void(0)" aria-label="Compartilhar por Whatsapp")
-            i.fab.fa-whatsapp(aria-hidden="true")
+    .social-network
+      .social-network-title Redes Sociais
+      .d-flex
+        a.br-button.circle(href="javascript: void(0)" aria-label="Compartilhar por Facebook")
+          i.fab.fa-facebook-f(aria-hidden="true")
+        a.br-button.circle(href="javascript: void(0)" aria-label="Compartilhar por Twitter")
+          i.fab.fa-twitter(aria-hidden="true")
+        a.br-button.circle(href="javascript: void(0)" aria-label="Compartilhar por Linkedin")
+          i.fab.fa-linkedin-in(aria-hidden="true")
+        a.br-button.circle(href="javascript: void(0)" aria-label="Compartilhar por Whatsapp")
+          i.fab.fa-whatsapp(aria-hidden="true")
     .menu-info
       .text-center.text-down-01
         | Todo o conteúdo deste site está publicado sob a licença <strong>Creative Commons Atribuição-SemDerivações 3.0</strong>
@@ -260,4 +256,3 @@ mixin menu-sizes
         .menu-container.position-static
           .menu-panel.h-auto.position-static.shadow-lg-right
             +menu-groupedby-dropdown
-

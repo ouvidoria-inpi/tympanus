@@ -131,6 +131,13 @@
   .social-network {
     border: 0;
 
+    .social-network-title {
+      font-size: var(--font-size-scale-up-01);
+      font-weight: var(--font-weight-extra-bold);
+      margin-bottom: var(--spacing-scale-2x);
+      text-transform: uppercase;      
+    }
+        
     a:hover {
       background-image: none;
     }

@@ -233,11 +233,12 @@
       }
     }
 
-    .menu-social {
+    .social-network {
       padding: var(--spacing-scale-base) var(--spacing-scale-5x);
 
-      .sharegroup {
-        display: flex;
+      .social-network-title {
+        font-weight: var(--font-weight-semi-bold);
+        margin-bottom: var(--spacing-scale-half);        
       }
     }
 
