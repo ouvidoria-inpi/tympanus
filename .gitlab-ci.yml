@@ -1,142 +1,75 @@
 include:
-  - template: Security/Dependency-Scanning.gitlab-ci.yml
   - template: Security/License-Scanning.gitlab-ci.yml
-  - template: Security/SAST.gitlab-ci.yml
-  - template: Security/Secret-Detection.gitlab-ci.yml
-  - template: Security/Container-Scanning.gitlab-ci.yml
-  - template: Security/DAST.gitlab-ci.yml
+  - template: Verify/Browser-Performance.gitlab-ci.yml
+  - template: Verify/Accessibility.gitlab-ci.yml
   - template: Code-Quality.gitlab-ci.yml
 
 image: node:16-alpine
 
 stages:
-  - Iniciar release
   - Dependências
-  - Build
-  - Validações Gitlab
+  - test
+  - performance
+  - accessibility
   - Qualidade
+  - Build
+  - Pages
   - Release
 
 cache:
   paths:
     - node_modules/
 
-variables:
-  SAST_EXCLUDED_PATHS: spec, test, tests, tmp, .husky, .storybook, .vscode, coverage, dist, node_modules, package-lock.json, **/*.spec.js, **/*.spec.js.snap
-  SECRET_DETECTION_HISTORIC_SCAN: "false"
-  SECRET_DETECTION_EXCLUDED_PATHS: spec, test, tests, tmp, .husky, .vscode, coverage, dist, node_modules,
-  SECURE_LOG_LEVEL: error
-
-Iniciar:
-  stage: Iniciar release
-  environment:
-    name: production
-  when: manual
-  allow_failure: false
-  script:
-    - echo 'Iniciando pipeline.'
-  only:
-    - main
-    - next
-    - next-major
-    - /\d.(\d|x).(\d|x)(-alpha)?$/
-    - /alpha$/
-
 Instalar dependências:
   stage: Dependências
-  allow_failure: false
   artifacts:
     paths:
       - node_modules
-    expire_in: 1 day
+    expire_in: 1 hour
   script:
     - apk --no-cache add git
-    - rm -rf dist
     - npm install
-  only:
-    - main
-    - next
-    - next-major
-    - merge_requests
-    - /\d.(\d|x).(\d|x)(-alpha)?$/
-    - /alpha$/
-
-DS:
-  stage: Build
-  allow_failure: false
-  needs: ["Instalar dependências"]
-  artifacts:
-    paths:
-      - dist
-    expire_in: 1 week
-  script:
-    - npm run build
-  only:
-    - main
-    - next
-    - next-major
-    - merge_requests
-    - /\d.(\d|x).(\d|x)(-alpha)?$/
-    - /alpha$/
-
-dependency_scanning:
-  stage: Validações Gitlab
-  allow_failure: false
-  script:
-    - echo 'Security/Dependency-Scanning.gitlab-ci.yml'
 
 license_scanning:
-  stage: Validações Gitlab
-  allow_failure: false
-  script:
-    - echo 'Security/License-Scanning.gitlab-ci.yml'
+  artifacts:
+    paths: [gl-license-management-report.json]
+    reports:
+      license_scanning: gl-license-management-report.json
+    expire_in: 1 week
+    expose_as: "Licenses"
 
-sast:
-  stage: Validações Gitlab
-  allow_failure: false
-  script:
-    - echo 'Security/SAST.gitlab-ci.yml'
-
-dast:
-  stage: Validações Gitlab
-  allow_failure: false
-  script:
-    - echo 'Security/DAST.gitlab-ci.yml'
-
-container_scanning:
-  stage: Validações Gitlab
-  allow_failure: false
-  script:
-    - echo 'Security/Container-Scanning.gitlab-ci.yml'
+a11y:
+  variables:
+    a11y_urls: https://govbr-ds.gitlab.io/dev/wbc/govbr-ds-wbc
+  artifacts:
+    paths: [reports/gl-accessibility.json]
+    expire_in: 1 week
+    expose_as: "A11Y"
 
 code_quality:
-  stage: Validações Gitlab
-  allow_failure: false
-  artifacts:
-    paths: [gl-code-quality-report.json]
-  script:
-    - echo 'VCode-Quality.gitlab-ci.yml'
-
-Code Quality HTML:
-  extends: code_quality
-  stage: Validações Gitlab
-  allow_failure: false
   variables:
     REPORT_FORMAT: html
   artifacts:
     paths: [gl-code-quality-report.html]
-  script:
-    - echo 'VCode-Quality.gitlab-ci.yml'
+    expire_in: 1 week
+    expose_as: "Code Quality"
+  rules:
+    - if: $CODE_QUALITY_DISABLED
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_TAG
 
-secret_detection:
-  stage: Validações Gitlab
-  allow_failure: false
-  script:
-    - echo 'Security/Secret-Detection.gitlab-ci.yml'
+browser_performance:
+  variables:
+    URL: https://govbr-ds.gitlab.io/dev/wbc/govbr-ds-wbc/
+  artifacts:
+    paths: ["sitespeed-results/"]
+    expire_in: 1 week
+    expose_as: "Browser Performance"
 
 CSS:
   stage: Qualidade
-  needs: ["DS"]
   artifacts:
     when: always
     paths:
@@ -144,14 +77,9 @@ CSS:
     expire_in: 1 week
   script:
     - npx stylelint src/**/*.scss  --formatter verbose --output-file report-stylelint.txt
-  only:
-    - main
-    - merge_requests
 
 Commits:
   stage: Qualidade
-  needs: ["DS"]
-  allow_failure: false
   artifacts:
     when: always
     paths:
@@ -173,16 +101,39 @@ Commits:
           npx commitlint -x @govbr-ds/commit-config -f "${CI_BUILD_BEFORE_SHA}" > report-commitlint.txt
         fi
       fi
+
+DS:
+  stage: Build
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
+  script:
+    - npm run build
   only:
     - main
     - next
-    - next-major
     - merge_requests
     - /\d.(\d|x).(\d|x)(-alpha)?$/
     - /alpha$/
 
+pages:
+  stage: Pages
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+    expose_as: "Build"
+  script:
+    - rm -rf public
+    - npm run build
+    - mv dist public
+  only:
+    - main
+
 Semantic Release:
   stage: Release
+  when: manual
   environment:
     name: production
   artifacts:
@@ -196,6 +147,5 @@ Semantic Release:
   only:
     - main
     - next
-    - next-major
     - /\d.(\d|x).(\d|x)(-alpha)?$/
     - /alpha$/
