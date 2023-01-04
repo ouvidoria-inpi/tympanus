@@ -1,4 +1,3 @@
-[version]: # (6.0.9)
 
 ## Como usar
 
@@ -46,11 +45,26 @@ for (const brDateTimePicker of window.document.querySelectorAll(
 }
 ```
 
+Exemplo código javascript para mudar o idioma do datepicker passando parâmetro com objeto de idioma flatpickr.
+
+```javascript
+const datetimepickerList = []
+for (const brDateTimePicker of window.document.querySelectorAll(
+  '.br-datetimepicker'
+)) {
+  const Spain = require('flatpickr/dist/l10n/es').default.es
+  datetimepickerList.push(
+    new BRDateTimePicker('br-datetimepicker', brDateTimePicker, {}, Spain)
+  )
+}
+```
+
 ## Informações adicionais
 
 -   O atributo `data-input` deve ser inserido na tag `<input>`.
 -   O atributo `datetimepicker-config` pode ser usado conforme o [Flatpickr options](https://flatpickr.js.org/options/)
 -   As variáveis **dateFormat,disableMobile, enableTime, minuteIncrement, node, minuteIncrement, nextArrow, noCalendar, prevArrow, time_24hr e wrap** não estão habilitados para alteração.
+-   O formato de data e hora é o **dia/mês/ano hora:minuto**
 
 ## Dependências
 
