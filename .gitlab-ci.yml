@@ -38,14 +38,6 @@ license_scanning:
     expire_in: 1 week
     expose_as: "Licenses"
 
-a11y:
-  variables:
-    a11y_urls: https://govbr-ds.gitlab.io/dev/wbc/govbr-ds-wbc
-  artifacts:
-    paths: [reports/gl-accessibility.json]
-    expire_in: 1 week
-    expose_as: "A11Y"
-
 code_quality:
   variables:
     REPORT_FORMAT: html
