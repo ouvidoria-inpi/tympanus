@@ -142,7 +142,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 
 **Atenção:** As informações apresentadas nas tabelas para *Grid de 4 Colunas* exibem apenas as propriedades que diferem do padrão 12 e 8 colunas.
 
-### H1
+### Título (H1)
 
 ![Título H1](imagens/h1.png)
 *Exemplo do Estilo H1 com fundo claro e escuro e na Grid de 4 colunas.*
@@ -156,7 +156,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Color (dark)  | `--pure-0`                |
 | Margin-bottom | `--spacing-scale-4x`      |
 
-#### H1 para *Grid* de 4 colunas
+#### Título (H1) para *Grid* de 4 colunas
 
 | Propriedade   | Token / Valor             |
 | ------------- | ------------------------- |
@@ -164,7 +164,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Weight        | `--font-weight-medium`    |
 | Margin-bottom | `--spacing-scale-2xh`     |
 
-### H2
+### Título (H2)
 
 ![Título H2](imagens/h2.png)
 *Exemplo do Estilo H2 com fundo claro e escuro e na Grid de 4 colunas.*
@@ -179,14 +179,14 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Margin-bottom | `--spacing-scale-2xh`     |
 | Margin-top    | `--spacing-scale-3xh`     |
 
-#### H2 para *Grid* de 4 colunas
+#### Título (H2) para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor             |
 | ----------- | ------------------------- |
 | Size        | `--font-size-scale-up-03` |
 | Weight      | `--font-weight-semi-bold` |
 
-### H3
+### Título (H3)
 
 ![Título H3](imagens/h3.png)
 *Exemplo do Estilo H3 com fundo claro e escuro e na Grid de 4 colunas.*
@@ -201,14 +201,14 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Margin-bottom | `--spacing-scale-2xh`     |
 | Margin-top    | `--spacing-scale-3xh`     |
 
-#### H3 para *Grid* de 4 colunas
+#### Título (H3) para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor             |
 | ----------- | ------------------------- |
 | Size        | `--font-size-scale-up-02` |
 | Weight      | `--font-weight-bold`      |
 
-### H4
+### Título (H4)
 
 ![Título H4](imagens/h4.png)
 *Exemplo do Estilo H4 com fundo claro e escuro e na Grid de 4 colunas.*
@@ -223,7 +223,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Margin-bottom | `--spacing-scale-2xh`     |
 | Margin-top    | `--spacing-scale-3xh`     |
 
-#### H4 para *Grid* de 4 colunas
+#### Título (H4) para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor             |
 | ----------- | ------------------------- |
@@ -231,7 +231,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Weight      | `--font-weight-bold`      |
 | Margin-top  | `--spacing-scale-2x`      |
 
-### H5
+### Título (H5)
 
 ![Título H5](imagens/h5.png)
 *Exemplo do Estilo H5 com fundo claro e escuro e na Grid de 4 colunas.*
@@ -247,7 +247,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Margin-top     | `--spacing-scale-3xh`     |
 | Text-transform | `uppercase`               |
 
-#### H5 para *Grid* de 4 colunas
+#### Título (H5) para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor              |
 | ----------- | -------------------------- |
@@ -255,7 +255,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Weight      | `--font-weight-extra-bold` |
 | Margin-top  | `--spacing-scale-2x`       |
 
-### H6
+### Título (H6)
 
 ![Título H6](imagens/h6.png)
 *Exemplo do Estilo H6 com fundo claro e escuro e na Grid de 4 colunas.*
@@ -271,14 +271,14 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Margin-top     | `--spacing-scale-3xh`      |
 | Text-transform | `uppercase`                |
 
-#### H6 para *Grid* de 4 colunas
+#### Título (H6) para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor               |
 | ----------- | --------------------------- |
 | Size        | `--font-size-scale-down-01` |
 | Margin-top  | `--spacing-scale-2x`        |
 
-### P
+### Parágrafo (P)
 
 ![Parágrafo](imagens/paragraph.png)
 *Exemplo do Estilo Parágrafo com fundo claro e escuro e na Grid de 4 colunas.*
@@ -292,13 +292,13 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Color (dark)  | `--pure-0`                  |
 | Margin-bottom | `--spacing-scale-2x`        |
 
-#### P para *Grid* de 4 colunas
+#### Parágrafo (P) para *Grid* de 4 colunas
 
 | Propriedade | Token / Valor            |
 | ----------- | ------------------------ |
 | Size        | `--font-size-scale-base` |
 
-### Label
+### Rótulo (Label)
 
 ![Label](imagens/label.png)
 *Exemplo do Estilo Label com fundo claro e escuro.*
@@ -312,7 +312,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Color (dark)  | `--pure-0`                  |
 | Margin-bottom | `--spacing-scale-half`      |
 
-### Input
+### Campo de Entrada de Texto (Input)
 
 ![Input](imagens/input.png)
 *Exemplo do Estilo Input com fundo claro e escuro.*
@@ -326,7 +326,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Color (dark)  | `--pure-0`                |
 | Margin-bottom | `--spacing-scale-half`    |
 
-### Placeholder
+### Descrição em Campo de Texto (Placeholder)
 
 ![Placeholder](imagens/placeholder.png)
 *Exemplo do Estilo Placeholder com fundo claro e escuro.*
@@ -342,7 +342,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Margin-bottom | `--spacing-scale-half`      |
 | Margin-top    | `--spacing-scale-half`      |
 
-### Legend
+### Legendas (Legend)
 
 ![Legend](imagens/legend.png)
 *Exemplo do Estilo Legend com fundo claro e escuro.*
@@ -357,7 +357,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Margin-bottom | `--spacing-scale-2x`      |
 | Margin-top    | `--spacing-scale-2x`      |
 
-### Mark
+### Marcação de Texto (Mark)
 
 ![Mark](imagens/mark.png)
 *Exemplo do Estilo Mark.*
@@ -367,7 +367,7 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 | Color       | `--gray-80`           |
 | Background  | `--red-warm-vivid-10` |
 
-### Code
+### Bloco de código (Code)
 
 ![Code](imagens/code.png)
 *Exemplo do Estilo Code no formato Inline e Bloco.*
@@ -385,6 +385,33 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 
 **OBS:** O valor estipulado em *SIZE* é considerado *padrão* nos elementos de `Legend` `mark` e `code`. O valor padrão é recomendado sempre que utilizar o estilo, porém, ele pode ser alterado caso queira aplicar algum tipo de *hierarquia*.
 > **Exemplo:** Ter vários `Fieldset`+`Legend` aninhados (ordenadas) criando uma estrutura hierárquica em um formulário, pode ser interessante utilizar um SIZE (dentro da escala) diferenciado para cada `Legend`....
+
+### Listas (UL, OL, DL)
+
+-   **Não ordenada (UL):** utilizado para agrupar um conjunto de itens relacionados sem nenhuma ordem particular.
+
+![Lista Não Ordenada](imagens/list-unordered.png)
+*Exemplo de Lista Não Ordenada em fundo claro e escuro*
+
+-   **Ordenada (OL):** usada para agrupar um conjunto de itens relacionados a uma ordem específica.
+
+![Lista Ordenada](imagens/list-orderly.png)
+*Exemplo de Lista Ordenada em fundo claro e escuro*
+
+-   **Lista com Definições (DL):** usada para exibir termos e explicações dos termos.
+
+![Lista com Definições](imagens/list-definitions.png)
+*Exemplo de Lista com Definições em fundo claro e escuro*
+
+| Propriedade   | Token / Valor               |
+| ------------- | --------------------------- |
+| Size          | `--font-size-scale-up-01`   |
+| Weight        | `--font-weight-regular`     |
+| Line-height   | `--font-line-height-medium` |
+| Color         | `--gray-80`                 |
+| Color (dark)  | `--pure-0`                  |
+| Margin-bottom (item) | `--spacing-scale-base`        |
+| Margin-bottom (lista completa) | `--spacing-scale-2x`        |
 
 ---
 
