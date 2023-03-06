@@ -10,7 +10,7 @@
   --cookiebar-layer: var(--z-index-layer-4);
   bottom: 0;
   box-shadow: var(--cookiebar-shadow);
-  color: v(color-secondary-08);
+  color: var(--color);
   cursor: default;
   font-family: inherit;
   font-size: v(font-size-scale-up-01);
@@ -219,7 +219,6 @@
   .group-name,
   .cookies-checked,
   .group-size {
-    color: var(--color-primary-default);
     cursor: pointer;
   }
 
@@ -242,10 +241,6 @@
       @include light-mode;
       background-color: var(--background);
     }
-
-    .br-button {
-      color: v(color-primary-default);
-    }
   }
 
   .group-info,
@@ -264,7 +259,7 @@
   }
 
   .always-active {
-    color: v(color-highlight);
+    color: var(--success);
     font-weight: v(font-weight-semi-bold);
   }
 
@@ -285,7 +280,7 @@
   }
 
   .actions {
-    border-top: 1px solid v(color-secondary-05);
+    border-top: 1px solid var(--border-color);
     padding-left: v(spacing-scale-3x);
     padding-right: v(spacing-scale-2xh);
     padding-top: v(spacing-scale-3x);

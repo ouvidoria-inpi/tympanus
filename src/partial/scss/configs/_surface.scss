@@ -12,14 +12,14 @@ $widths: (
 );
 
 // Bordas
-$border-solid-none: var(--surface-width-none) solid var(--color-secondary-06);
-$border-solid-sm: var(--surface-width-sm) solid var(--color-secondary-06);
-$border-solid-md: var(--surface-width-md) solid var(--color-secondary-06);
-$border-solid-lg: var(--surface-width-lg) solid var(--color-secondary-06);
-$border-dashed-none: var(--surface-width-none) dashed var(--color-secondary-06);
-$border-dashed-sm: var(--surface-width-sm) dashed var(--color-secondary-06);
-$border-dashed-md: var(--surface-width-md) dashed var(--color-secondary-06);
-$border-dashed-lg: var(--surface-width-lg) dashed var(--color-secondary-06);
+$border-solid-none: var(--surface-width-none) solid var(--border-color);
+$border-solid-sm: var(--surface-width-sm) solid var(--border-color);
+$border-solid-md: var(--surface-width-md) solid var(--border-color);
+$border-solid-lg: var(--surface-width-lg) solid var(--border-color);
+$border-dashed-none: var(--surface-width-none) dashed var(--border-color);
+$border-dashed-sm: var(--surface-width-sm) dashed var(--border-color);
+$border-dashed-md: var(--surface-width-md) dashed var(--border-color);
+$border-dashed-lg: var(--surface-width-lg) dashed var(--border-color);
 
 $borders: (
   border-solid-none: $border-solid-none,
@@ -48,8 +48,8 @@ $rounders: (
 );
 
 // Scrim Foco
-$overlay-scrim: rgba(var(--rgb-secondary-09), var(--surface-opacity-md));
+$overlay-scrim: rgba(0, 0, 0, var(--surface-opacity-md));
 
 // Scrim Legibilidade
-$overlay-text: linear-gradient(rgba(var(--rgb-secondary-01), var(--surface-opacity-none)),
-rgba(var(--rgb-secondary-09), var(--surface-opacity-default)));
+$overlay-text: linear-gradient(rgba(var(--pure-100-rgb), var(--surface-opacity-none)),
+rgba(var(--pure-100-rgb), var(--surface-opacity-default)));

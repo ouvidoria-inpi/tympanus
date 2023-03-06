@@ -4,7 +4,7 @@ append vars
   - var title = "Utilitário de Flexbox";
 
 mixin parent(name, children = 3)
-  .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold=`.${name}`
+  .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold=`.${name}`
   .d-flex.border-solid-sm.mt-1(class=attributes.height ? `height-${attributes.height} ${name}` : name)
     - i = 1
     while i <= children
@@ -16,7 +16,7 @@ mixin order(...names)
     - i = 1
     each name in names
       .m-half.border-dashed-sm.p-1(class=name)
-        .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold=`.${name}`
+        .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold=`.${name}`
         p.mt-3=`children ${i}`
         - i++
 
@@ -24,7 +24,7 @@ mixin align-self(name)
   .d-flex.border-solid-sm.mt-1.height-120(class=name)
     .m-half.border-dashed-sm.p-1 children 1
     .m-half.border-dashed-sm.p-1(class=name)
-      .d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold=`.${name}`
+      .d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold=`.${name}`
     .m-half.border-dashed-sm.p-1 children 3
 
 append style
@@ -64,53 +64,53 @@ append content
 
   .d-flex.border-solid-sm.mt-1
     .m-half.border-dashed-sm.p-1.flex-fill
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-fill
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-fill
       p.mt-3 Children 1
     .m-half.border-dashed-sm.p-1.flex-fill
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-fill
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-fill
       p.mt-3 Children 2
     .m-half.border-dashed-sm.p-1.flex-fill
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-fill
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-fill
       p.mt-3 Children 3
 
   .d-flex.border-solid-sm.mt-1
     .m-half.border-dashed-sm.p-1.flex-grow-1
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-grow-1
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-grow-1
       p.mt-3 Children 1
     .m-half.border-dashed-sm.p-1.flex-fill
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-fill
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-fill
       p.mt-3 Children 2
     .m-half.border-dashed-sm.p-1.flex-fill
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-fill
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-fill
       p.mt-3 Children 3
 
   .d-flex.border-solid-sm.mt-1
     .m-half.border-dashed-sm.p-1.flex-shrink-1
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-shrink-1
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-shrink-1
       p.mt-3 Children 1
     .m-half.border-dashed-sm.p-1.flex-fill
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-fill
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-fill
       p.mt-3 Children 2
     .m-half.border-dashed-sm.p-1.flex-fill
-      .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-fill
+      .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-fill
       p.mt-3 Children 3
 
   p.h4.mt-5 Wrap
-  .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-wrap
+  .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-wrap
   .col-6.col-sm-5.col-md-4.col-lg-3.col-xl-1
     .d-flex.border-solid-sm.mt-1.flex-wrap
       .m-half.border-dashed-sm.p-1.text-nowrap children 1
       .m-half.border-dashed-sm.p-1.text-nowrap children 2
       .m-half.border-dashed-sm.p-1.text-nowrap children 3
       .m-half.border-dashed-sm.p-1.text-nowrap children 4
-  .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-nowrap
+  .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-nowrap
   .col-6.col-sm-5.col-md-4.col-lg-3.col-xl-1
     .d-flex.border-solid-sm.mt-1.flex-nowrap
       .m-half.border-dashed-sm.p-1.text-nowrap children 1
       .m-half.border-dashed-sm.p-1.text-nowrap children 2
       .m-half.border-dashed-sm.p-1.text-nowrap children 3
       .m-half.border-dashed-sm.p-1.text-nowrap children 4
-  .mt-3.d-inline-block.bg-support-02.px-half.rounder-sm.text-weight-bold .flex-wrap-reverse
+  .mt-3.d-inline-block.bg-yellow-vivid-10.px-half.rounder-sm.text-weight-bold .flex-wrap-reverse
   .col-6.col-sm-5.col-md-4.col-lg-3.col-xl-1
     .d-flex.border-solid-sm.mt-1.flex-wrap-reverse
       .m-half.border-dashed-sm.p-1.text-nowrap children 1

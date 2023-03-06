@@ -116,7 +116,7 @@
 
     &:hover {
       &::-webkit-scrollbar-thumb {
-        background: v(color-secondary-07);
+        background: var(--gray-70);
       }
     }
   }

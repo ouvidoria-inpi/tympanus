@@ -53,20 +53,6 @@
   }
 }
 
-@mixin list-checkbox-radio-config {
-  --interactive-rgb: var(--rgb-primary-default);
-
-  input {
-    &:hover:not(:disabled) {
-      + label::before {
-        background-image: linear-gradient(
-          rgba(var(--interactive-rgb), var(--hover)),
-          rgba(var(--interactive-rgb), var(--hover))
-        );
-      }
-    }
-  }
-}
 // Lista dentro de outra lista
 @mixin list-in-list {
   & & {

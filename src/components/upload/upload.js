@@ -326,7 +326,7 @@ class BRUpload {
     li.appendChild(info)
     li.appendChild(name)
     li.appendChild(tooltip)
-    info.classList.add('text-primary-default', 'mr-auto')
+    info.classList.add('text-interactive', 'mr-auto')
     const del = document.createElement('div')
     del.className = 'support mr-n2'
     const btndel = document.createElement('button')

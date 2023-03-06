@@ -1,7 +1,7 @@
 // TODO: Verificar se os estados hover e focus estão funcionando
 @mixin input-box {
   --input-background: var(--bg-color);
-  --input-border-color: var(--color-secondary-06);
+  --input-border-color: var(--border-color);
   --input-border-width: 1px;
   --input-border-style: solid;
   --input-padding: 0 var(--spacing-scale-half);
@@ -50,7 +50,7 @@
       .feedback.color-#{$color} {
         align-items: center;
         background: $color;
-        color: var(--color-secondary-01) !important;
+        color: var(--color-dark) !important;
         display: inline-flex;
         height: 35px;
         margin-bottom: var(--spacing-scale-base);
@@ -58,7 +58,7 @@
       }
       @if ($color == warning) {
         .feedback.color-warning {
-          color: var(--color-secondary-08) !important;
+          color: var(--color) !important;
         }
       }
     }

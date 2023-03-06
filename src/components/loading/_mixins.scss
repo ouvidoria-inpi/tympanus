@@ -19,7 +19,7 @@
   $rotation-increment: 1.8;
   $stroke: 5px;
 
-  background-color: v(color-secondary-04);
+  background-color: var(--border-color);
   border-radius: 50%;
   height: var(--loading-diameter);
   width: var(--loading-diameter);
@@ -43,7 +43,7 @@
 
   &::after {
     $diameter: $diameter - $stroke * 2;
-    background: v(color-secondary-01);
+    background: var(--background);
     border-radius: 50%;
     color: var(--interactive);
     content: attr(data-progress) "%";
@@ -108,9 +108,9 @@
 
       &.primary {
         &::after {
-          border-bottom-color: v(color-secondary-01);
-          border-left-color: v(color-secondary-01);
-          border-top-color: v(color-secondary-01);
+          border-bottom-color: var(--background);
+          border-left-color: var(--background);
+          border-top-color: var(--background);
         }
       }
 

@@ -1,9 +1,9 @@
 @mixin tooltip-configs {
   align-items: flex-start;
-  background: v(color-info, $color-info);
+  background: var(--info);
   border-radius: 4px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  color: v(color-secondary-01, $color-secondary-01);
+  color: var(--color-dark);
   display: flex !important;
   flex-wrap: wrap;
   // font-size: v(font-size-scale-base, $font-size-scale-base);
@@ -51,36 +51,36 @@
   }
 
   &[success] {
-    background: v(color-success, $color-success);
+    background: var(--success);
 
     .arrow {
-      border-color: v(color-success, $color-success);
+      border-color: var(--success);
     }
   }
 
   &[error] {
-    background: v(color-danger, $color-danger);
+    background: var(--danger);
 
     .arrow {
-      border-color: v(color-danger, $color-danger);
+      border-color: var(--danger);
     }
   }
 
   &[warning] {
-    background: v(color-warning, $color-warning);
-    color: v(color-secondary-08, $color-secondary-08);
+    background: var(--warning);
+    color: var(--color);
 
     .arrow {
-      border-color: v(color-warning, $color-warning);
+      border-color: var(--warning);
     }
   }
 
   &[info],
   & {
-    background: v(color-info, $color-info);
+    background: var(--info);
 
     .arrow {
-      border-color: v(color-info, $color-info);
+      border-color: var(--info);
     }
   }
 
@@ -150,7 +150,7 @@
   }
 
   .popover-image {
-    border: 3px solid v(color-secondary-01, $color-secondary-01);
+    border: 3px solid var(--color-dark);
     height: auto;
     margin-left: -10px;
     max-height: 120px;

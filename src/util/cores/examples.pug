@@ -1,5 +1,8 @@
 extends ../../partial/pug/component
 
+append core-css
+  link(rel="stylesheet" href="https://govbr-ds.gitlab.io/prototipos/mvp-cores/css/tokens.css")
+
 append vars
   - var title = "Utilitário de Cores";
 
@@ -51,20 +54,3 @@ append content
   +apply-color('red', 'red-vivid', 'red-cool', 'red-warm', 'red-cool-vivid', 'red-warm-vivid')
   +apply-color('violet', 'violet-vivid', 'violet-warm', 'violet-warm-vivid')
   +apply-color('yellow', 'yellow-vivid')
-
-  p.h4.mt-5 Cores antigas
-
-  p.my-3 Primário
-  +old-colors('primary-pastel-02', 'primary-pastel-01', 'primary-lighten-02', 'primary-lighten-01', 'primary-default', 'primary-darken-01', 'primary-darken-02')
-
-  p.my-3 Secundário
-  +old-colors('secondary-01', 'secondary-02', 'secondary-03', 'secondary-04', 'secondary-05', 'secondary-06', 'secondary-07', 'secondary-08', 'secondary-09')
-
-  p.my-3 Highlight
-  +old-colors('highlight')
-
-  p.my-3 Estados
-  +old-colors('warning', 'success', 'danger', 'info')
-
-  p.my-3 Apoio
-  +old-colors('support-01', 'support-02', 'support-03', 'support-04', 'support-05', 'support-06', 'support-07', 'support-08', 'support-09', 'support-10', 'support-11')

@@ -12,13 +12,13 @@
             />
         </div>
         <div class="col erro-text">
-            <div class="text-support-03">
-                <p class="text-up-06 text-semi-bold my-3">
+            <div class="">
+                <p class="text-red-warm-vivid-50 text-up-06 text-semi-bold my-3">
                     Estamos constrangidos em te ver por aqui
                 </p>
             </div>
-            <div class="text-secondary-06">
-                <p class="text-up-03 text-medium my-3">
+            <div class="">
+                <p class="text-gray-40 text-up-03 text-medium my-3">
                     Mas, podemos ajudá-lo a encontrar o que está procurando de
                     outra forma
                 </p>

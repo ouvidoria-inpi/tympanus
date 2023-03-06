@@ -202,14 +202,14 @@ export class CookiebarTemplates {
    * @orivate
    */
   _setGroupName(groupData) {
-    return `<span class="group-name" title="Expandir">${
+    return `<span class="group-name text-interactive" title="Expandir">${
       groupData.groupName
     }</span>
-              <span class="cookies-checked" title="Expandir">(${
+              <span class="cookies-checked text-interactive" title="Expandir">(${
                 groupData.groupOptOut
                   ? `${this.data.getCookiesCheckedAmount(groupData)} de `
                   : ''
-              }</span><span class="group-size" title="Expandir">${this.data.getCookiesAmount(
+              }</span><span class="group-size text-interactive" title="Expandir">${this.data.getCookiesAmount(
       groupData
     )})</span>`
   }
