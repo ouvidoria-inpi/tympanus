@@ -1,9 +1,9 @@
 .#{$prefix}accordion {
   background: v(bg-color);
-  border-top: 1px solid v(color-secondary-04);
+  border-top: 1px solid var(--border-color);
 
   .item {
-    border-bottom: 1px solid v(color-secondary-04);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
 
@@ -15,7 +15,7 @@
       }
 
       + .content {
-        border-bottom: 1px solid v(color-secondary-04);
+        border-bottom: 1px solid var(--border-color);
         display: block;
       }
     }

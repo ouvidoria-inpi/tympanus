@@ -69,13 +69,13 @@ A tabela abaixo representa a **largura máxima** para cada classe de container d
 Containers separados para cada bloco de conteúdo
 
 ```html
-<div class="bg-support-01">
+<div class="bg-mint-cool-vivid-40">
   <div class="container-lg">Bloco A</div>
 </div>
-<div class="bg-support-02">
+<div class="bg-yellow-vivid-10">
   <div class="container-lg">Bloco B</div>
 </div>
-<div class="bg-support-03">
+<div class="bg-red-warm-vivid-50">
   <div class="container-lg">
     <div>Bloco C</div>
     <div>Bloco D</div>

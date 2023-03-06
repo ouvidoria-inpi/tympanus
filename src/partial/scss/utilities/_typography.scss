@@ -189,8 +189,8 @@ ol {
 
 // Blockquotes
 blockquote {
-  background-color: var(--color-secondary-02);
-  border-left: 4px solid $color-highlight;
+  background-color: var(--background-alternative);
+  border-left: 4px solid var(--success);
   font-style: italic;
   margin: var(--spacing-scale-2x) 0;
   padding: var(--spacing-scale-2x);

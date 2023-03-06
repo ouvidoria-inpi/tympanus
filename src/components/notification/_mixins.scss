@@ -82,7 +82,7 @@
       .tab-content {
         overflow-y: auto;
         .#{$prefix}item {
-          --interactive-rgb: var(--rgb-secondary-08);
+          --interactive-rgb: var(--color-rgb);
           --item-color: var(--text-color);
           padding: var(--notification-padding);
           position: relative;
