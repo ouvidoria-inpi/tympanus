@@ -126,7 +126,7 @@
 
   span.flatpickr-weekday {
     color: var(--color);
-    font-size: var(--font-size);
+    font-size: var(--font-size-scale-base);
     font-weight: var(--font-weight-medium);
   }
   // Dias
@@ -240,10 +240,10 @@
         width: var(--datetimepicker-arrows);
 
         &::after {
-          
+
           border: none;
-          
-          
+
+
           position: static;
         }
 

@@ -12,7 +12,6 @@
 @mixin dark-mode {
   --color: var(--color-dark);
   --color-rgb: var(--color-dark-rgb);
-  --text-color: var(--color);
   --interactive: var(--interactive-dark);
   --interactive-rgb: var(--interactive-dark-rgb);
   --visited: var(--visited-dark);
@@ -24,7 +23,6 @@
 @mixin light-mode {
   --color: var(--color-light);
   --color-rgb: var(--color-light-rgb);
-  --text-color: var(--color);
   --interactive: var(--interactive-light);
   --interactive-rgb: var(--interactive-light-rgb);
   --visited: var(--visited-light);

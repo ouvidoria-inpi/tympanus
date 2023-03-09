@@ -78,15 +78,15 @@
       }
 
       .results {
-        --font-weight: var(--font-weight-semi-bold);
         color: var(--active);
+        font-weight: var(--font-weight-semi-bold);
       }
     }
   }
 
   .results {
     display: flex;
-    font-weight: var(--font-weight);
+    font-weight: var(--font-weight-regular);
     justify-content: center;
     margin-top: var(--spacing-scale-2x);
     position: absolute;
@@ -110,7 +110,7 @@
 @mixin tab-content {
   .tab-content {
     .tab-panel {
-      color: var(--text-color);
+      color: var(--color);
       display: none;
 
       &.is-active,

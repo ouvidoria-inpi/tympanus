@@ -83,7 +83,7 @@
         overflow-y: auto;
         .#{$prefix}item {
           --interactive-rgb: var(--color-rgb);
-          --item-color: var(--text-color);
+          --item-color: var(--color);
           padding: var(--notification-padding);
           position: relative;
           white-space: normal;

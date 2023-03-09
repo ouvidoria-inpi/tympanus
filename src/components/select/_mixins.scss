@@ -24,7 +24,7 @@
 // TODO: mover a customização abaixo para o List
 @mixin select-list {
   .#{$prefix}list {
-    background: var(--bg-color);
+    background: var(--background);
     box-shadow: var(--select-shadow);
     display: none;
     margin-top: -2px;
@@ -83,7 +83,7 @@
     .#{$prefix}radio {
       input {
         + label {
-          color: var(--text-color);
+          color: var(--color);
           display: block;
           height: auto;
           min-height: 0;
@@ -141,7 +141,7 @@
           );
 
           label {
-            color: var(--text-color);
+            color: var(--color);
           }
         }
       }
