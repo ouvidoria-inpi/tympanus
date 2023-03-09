@@ -13,7 +13,7 @@
   color: var(--color);
   cursor: default;
   font-family: inherit;
-  font-size: v(font-size-scale-up-01);
+  font-size: var(--font-size-scale-up-01);
   left: 0;
   outline: none;
   position: fixed;
@@ -24,22 +24,22 @@
     .actions {
       .br-button {
         &.secondary {
-          margin-right: v(spacing-scale-5x);
+          margin-right: var(--spacing-scale-5x);
         }
       }
     }
   }
   @include media-breakpoint-down(xs) {
-    font-size: v(font-size-scale-down-01);
+    font-size: var(--font-size-scale-down-01);
 
     .actions {
       .br-button {
         &.primary {
-          margin-bottom: v(spacing-scale-2xh);
+          margin-bottom: var(--spacing-scale-2xh);
         }
 
         &.secondary {
-          margin-bottom: v(spacing-scale-2xh);
+          margin-bottom: var(--spacing-scale-2xh);
           margin-right: 0;
         }
       }
@@ -51,35 +51,35 @@
           margin-bottom: 0;
 
           p {
-            font-size: v(font-size-scale-up-02);
+            font-size: var(--font-size-scale-up-02);
           }
         }
 
         .last-update {
-          font-size: v(font-size-scale-down-01);
+          font-size: var(--font-size-scale-down-01);
         }
       }
     }
 
     .group-description {
-      font-size: v(font-size-scale-down-01);
+      font-size: var(--font-size-scale-down-01);
     }
 
     .br-switch {
       label {
-        font-size: v(font-size-scale-down-01);
+        font-size: var(--font-size-scale-down-01);
       }
 
       .switch-data {
         &::before {
-          font-size: v(font-size-scale-down-01);
+          font-size: var(--font-size-scale-down-01);
         }
       }
     }
 
     .group-name,
     .group-size {
-      font-size: v(font-size-scale-down-01);
+      font-size: var(--font-size-scale-down-01);
     }
   }
 
@@ -139,12 +139,12 @@
 
   .info-text {
     display: none;
-    line-height: v(font-lineheight-medium);
+    line-height: var(--font-lineheight-medium);
   }
 
   .br-modal-header {
     .br-modal-title {
-      font-size: v(font-size-scale-up-06);
+      font-size: var(--font-size-scale-up-06);
       margin-bottom: 0;
       margin-right: 0;
       max-height: unset;
@@ -152,7 +152,7 @@
     }
 
     .close {
-      margin-top: v(spacing-scale-base);
+      margin-top: var(--spacing-scale-base);
       opacity: 1;
 
       &:hover::after {
@@ -168,12 +168,12 @@
     }
 
     .last-update {
-      font-size: v(font-size-scale-base);
-      font-weight: v(font-weight-semi-bold);
+      font-size: var(--font-size-scale-base);
+      font-weight: var(--font-weight-semi-bold);
 
       span {
         display: inline-block;
-        margin-left: v(spacing-scale-half);
+        margin-left: var(--spacing-scale-half);
       }
     }
   }
@@ -248,19 +248,19 @@
     .br-switch {
       margin-bottom: var(--spacing-scale-2x);
       margin-top: var(--spacing-scale-2x);
-      padding: v(spacing-scale-half);
+      padding: var(--spacing-scale-half);
       width: 120px;
     }
 
     .fixed-width {
-      padding-left: v(spacing-scale-base);
+      padding-left: var(--spacing-scale-base);
       width: 100px;
     }
   }
 
   .always-active {
     color: var(--success);
-    font-weight: v(font-weight-semi-bold);
+    font-weight: var(--font-weight-semi-bold);
   }
 
   .cookie-info {
@@ -269,25 +269,25 @@
     }
 
     .cookie-term {
-      font-weight: v(font-weight-semi-bold);
+      font-weight: var(--font-weight-semi-bold);
     }
   }
 
   .notes {
     p:first-child {
-      font-weight: v(font-weight-semi-bold);
+      font-weight: var(--font-weight-semi-bold);
     }
   }
 
   .actions {
     border-top: 1px solid var(--border-color);
-    padding-left: v(spacing-scale-3x);
-    padding-right: v(spacing-scale-2xh);
-    padding-top: v(spacing-scale-3x);
+    padding-left: var(--spacing-scale-3x);
+    padding-right: var(--spacing-scale-2xh);
+    padding-top: var(--spacing-scale-3x);
   }
 
   .complementary-content {
-    padding: v(spacing-scale-base) 0;
+    padding: var(--spacing-scale-base) 0;
   }
 
   [class^="container"] {

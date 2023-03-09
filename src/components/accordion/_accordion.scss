@@ -1,5 +1,5 @@
 .#{$prefix}accordion {
-  background: v(bg-color);
+  background: var(--bg-color);
   border-top: 1px solid var(--border-color);
 
   .item {
@@ -11,7 +11,7 @@
       border-bottom: 0;
 
       .header {
-        font-weight: v(font-weight-semi-bold);
+        font-weight: var(--font-weight-semi-bold);
       }
 
       + .content {
@@ -23,20 +23,20 @@
 
   .header {
     --bg-color: transparent;
-    background: v(bg-color);
+    background: var(--bg-color);
     border: 0;
     color: var(--interactive);
     display: flex;
-    font-size: v(font-size-scale-up-01);
+    font-size: var(--font-size-scale-up-01);
     justify-content: space-between;
     outline: none;
-    padding: v(spacing-scale-2x) 0;
+    padding: var(--spacing-scale-2x) 0;
     text-align: left;
     text-decoration: none;
     width: 100%;
 
     .icon {
-      margin: 0 v(spacing-scale-2x) 0 v(spacing-scale-baseh);
+      margin: 0 var(--spacing-scale-2x) 0 var(--spacing-scale-baseh);
     }
 
     .title {
@@ -48,11 +48,11 @@
   }
 
   .content {
-    color: v(text-color);
+    color: var(--text-color);
     display: none;
-    font-size: v(font-size-scale-base);
-    margin: 0 v(spacing-scale-base);
-    padding: v(spacing-scale-base) v(spacing-scale-8x) v(spacing-scale-2x);
+    font-size: var(--font-size-scale-base);
+    margin: 0 var(--spacing-scale-base);
+    padding: var(--spacing-scale-base) var(--spacing-scale-8x) var(--spacing-scale-2x);
 
     * {
       &:last-child {

@@ -9,7 +9,7 @@
         content: "•";
         display: inline-block;
         opacity: 0.65;
-        padding-right: v(spacing-scale-base);
+        padding-right: var(--spacing-scale-base);
         position: absolute;
         transform: scale(3) translate(-2px, -1px);
       }
@@ -21,22 +21,22 @@
     margin: 0;
 
     li {
-      padding: v(spacing-scale-base) 0;
+      padding: var(--spacing-scale-base) 0;
     }
 
     ul,
     ol {
-      margin: v(spacing-scale-base) 0 calc(#{v(spacing-scale-base)} * -1);
+      margin: var(--spacing-scale-base) 0 calc(var(--spacing-scale-base) * -1);
     }
   }
   // Estilo base para lista de definição
   dt {
-    font-weight: v(font-weight-semi-bold);
-    padding: v(spacing-scale-base) 0;
+    font-weight: var(--font-weight-semi-bold);
+    padding: var(--spacing-scale-base) 0;
   }
 
   dd {
     font-style: italic;
-    padding: v(spacing-scale-base) 0;
+    padding: var(--spacing-scale-base) 0;
   }
 }

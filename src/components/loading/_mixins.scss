@@ -47,8 +47,8 @@
     border-radius: 50%;
     color: var(--interactive);
     content: attr(data-progress) "%";
-    font-size: v(font-size-scale-up-02);
-    font-weight: v(font-weight-semi-bold);
+    font-size: var(--font-size-scale-up-02);
+    font-weight: var(--font-weight-semi-bold);
     height: $diameter;
     line-height: $diameter;
     margin: $stroke;

@@ -6,14 +6,12 @@
   color: var(--color-dark);
   display: flex !important;
   flex-wrap: wrap;
-  // font-size: v(font-size-scale-base, $font-size-scale-base);
-  // font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
-  font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
-  font-weight: v(font-weight-medium, $font-weight-medium);
+  font-size: var(--font-size-scale-down-01);
+  font-weight: var(--font-weight-medium);
   justify-content: flex-start;
   max-width: 240px;
   opacity: 0;
-  padding: v(spacing-scale-2x);
+  padding: var(--spacing-scale-2x);
   position: absolute !important;
   visibility: hidden;
   z-index: 999;
@@ -114,8 +112,8 @@
     border-left-style: solid;
     border-left-width: 8px;
     border-top: 8px solid transparent;
-    margin-top: calc(#{v(spacing-scale-base)} * -1);
-    right: calc(#{v(spacing-scale-base)} * -1);
+    margin-top: calc(var(--spacing-scale-base) * -1);
+    right: calc(var(--spacing-scale-base) * -1);
   }
 
   &[data-popper-placement^="right"] > .arrow {
@@ -123,8 +121,8 @@
     border-right-style: solid;
     border-right-width: 8px;
     border-top: 8px solid transparent;
-    left: calc(#{v(spacing-scale-base)} * -1);
-    margin-top: calc(#{v(spacing-scale-base)} * -1);
+    left: calc(var(--spacing-scale-base) * -1);
+    margin-top: calc(var(--spacing-scale-base) * -1);
   }
 
   .text,
@@ -136,7 +134,7 @@
   }
 
   .popover-header {
-    font-size: v(font-size-scale-base, $font-size-scale-base);
+    font-size: var(--font-size-scale-base);
     margin-bottom: 1em;
     min-width: 180px;
     text-align: center;
@@ -144,7 +142,7 @@
 
     .fas,
     .svg-inline--fa {
-      font-size: v(font-size-scale-up-06, $font-size-scale-up-06);
+      font-size: var(--font-size-scale-up-06);
       text-align: center;
     }
   }
@@ -170,7 +168,7 @@
   }
 
   .popover-body {
-    font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
+    font-size: var(--font-size-scale-down-01);
     margin-bottom: 1em;
     min-width: 180px;
     width: 100%;
@@ -185,7 +183,7 @@
     width: 65%;
 
     div {
-      padding-left: v(spacing-scale-base);
+      padding-left: var(--spacing-scale-base);
       text-align: left;
     }
   }
@@ -199,26 +197,26 @@
     width: 65%;
 
     div {
-      padding-left: v(spacing-scale-base);
+      padding-left: var(--spacing-scale-base);
       text-align: left;
     }
   }
 
   .popover-footer {
-    font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
+    font-size: var(--font-size-scale-down-01);
     min-width: 180px;
     text-align: center;
     width: 100%;
   }
 
   .text {
-    font-size: v(font-size-scale-base, $font-size-scale-base);
-    font-weight: v(font-weight-semi-bold, $font-weight-semi-bold);
+    font-size: var(--font-size-scale-base);
+    font-weight: var(--font-weight-semi-bold);
   }
 
   .subtext {
-    font-size: v(font-size-scale-down-01, $font-size-scale-down-01);
-    font-weight: v(font-weight-medium, $font-weight-medium);
+    font-size: var(--font-size-scale-down-01);
+    font-weight: var(--font-weight-medium);
   }
 
   .link {

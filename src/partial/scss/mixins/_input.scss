@@ -31,7 +31,7 @@
   }
 
   &.has-icon {
-    padding-right: v(spacing-scale-5x);
+    padding-right: var(--spacing-scale-5x);
   }
 
   &[type="password"]::-ms-reveal,
