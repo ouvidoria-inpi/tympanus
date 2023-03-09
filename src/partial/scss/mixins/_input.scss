@@ -1,6 +1,6 @@
 // TODO: Verificar se os estados hover e focus estão funcionando
 @mixin input-box {
-  --input-background: var(--bg-color);
+  --input-background: var(--background);
   --input-border-color: var(--border-color);
   --input-border-width: 1px;
   --input-border-style: solid;
@@ -14,7 +14,7 @@
   border: var(--input-border-width) var(--input-border-style)
     var(--input-border-color);
   border-radius: var(--input-radius);
-  color: var(--text-color);
+  color: var(--color);
   display: block;
   font-size: var(--font-size-scale-up-01);
   font-weight: var(--font-weight-medium);

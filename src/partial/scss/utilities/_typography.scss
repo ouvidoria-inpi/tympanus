@@ -1,23 +1,13 @@
 // Texto padrão
 body {
-  --bg-color: var(--background);
-  --bg-color-rgb: var(--background-rgb);
-  --bg-color-hsl: var(--background-hsl);
-  --font-size: var(--font-size-scale-base);
-  --font-weight: var(--font-weight-regular);
-  --link-color: var(--interactive);
-  --link-color-rgb: var(--interactive-rgb);
-  --link-color-hsl: var(--interactive-hsl);
-  --line-height: var(--font-line-height-medium);
-  --text-color: var(--color);
-  --text-color-rgb: var(--color-rgb);
-  --text-color-hsl: var(--color-hsl);
-  background: var(--bg-color);
-  color: var(--text-color);
+  background: var(--background);
+  color: var(--color);
+  display: grid;
   font-family: var(--font-family-base);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-medium);
+  margin: 0;
 }
 
 // Parágrafos
