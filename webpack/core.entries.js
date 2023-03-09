@@ -21,7 +21,7 @@ const core = {
   'core-init': [path.resolve(paths.srcJSpartial, 'core-init.js')],
   'core-lite': [
     path.resolve(paths.srcSCSS, 'core-lite.scss'),
-    path.resolve(paths.srcJSpartial, 'globals-class.js'),
+    path.resolve(paths.srcJSpartial, 'core.entry.js'),
   ],
   'core.min': [path.resolve(paths.srcJSpartial, 'core.entry.js')],
   'core-init.min': [path.resolve(paths.srcJSpartial, 'core-init.js')],
