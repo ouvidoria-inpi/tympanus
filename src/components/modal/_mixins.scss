@@ -98,11 +98,11 @@
     border: 0;
     box-shadow: var(--surface-shadow-sm-inset),
       var(--surface-shadow-sm-inset-up);
-    font-size: v(font-size-scale-base);
+    font-size: var(--font-size-scale-base);
     height: 216px;
     margin-bottom: var(--spacing-scale-2x);
-    margin-left: calc(#{v(spacing-scale-2x)} * -1);
-    margin-right: calc(#{v(spacing-scale-2x)} * -1);
+    margin-left: calc(var(--spacing-scale-2x) * -1);
+    margin-right: calc(var(--spacing-scale-2x) * -1);
     overflow: auto;
     padding: var(--spacing-scale-2x);
     resize: none;

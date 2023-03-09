@@ -63,12 +63,12 @@
 
 @mixin list-header {
   .header {
-    align-items: v(spacing-vertical-center);
+    align-items: var(--spacing-vertical-center);
     display: flex;
-    font-size: v(font-size-scale-base);
-    font-weight: v(font-weight-bold);
+    font-size: var(--font-size-scale-base);
+    font-weight: var(--font-weight-bold);
     justify-content: space-between;
-    padding: v(spacing-scale-base) v(spacing-scale-2x);
+    padding: var(--spacing-scale-base) var(--spacing-scale-2x);
   }
 }
 
@@ -140,7 +140,7 @@
 @mixin lista-data-lines-content {
   height: auto;
   overflow: hidden;
-  padding: 0 v(spacing-scale-2x);
+  padding: 0 var(--spacing-scale-2x);
   text-overflow: unset;
   white-space: initial;
 }
