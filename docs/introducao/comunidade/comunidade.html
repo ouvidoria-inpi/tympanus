@@ -5,15 +5,21 @@
 	.img-components-mob {
 		width: 100%;
 	}
-	.img-globe {
-		position: absolute;
-		left: 0;
-		top: 200px;
-		height: 40%;
-		width: 40%;
-		z-index: -1;
+	.contribua,
+	.bg-contato{
+		display: flex;
+		align-items: center;
 	}
 	/* BACKGROUNDS */
+	#faca-parte{
+		background: transparent url(imagens/globe.png) no-repeat 0 center;
+	}
+	.bg-indigo-vivid-80{
+		background: var(--indigo-cool-vivid-80)
+	}
+	.bg-indigo-cool-vivid-60{
+		background: var(--indigo-cool-vivid-60)
+	}
 	.bg-gradient-blue-vivid {
 		background-image: linear-gradient(var(--blue-vivid-5), var(--pure-0));
 	}
@@ -50,13 +56,6 @@
 			text-align: center;
 		}
 	}
-	@media (min-width: 992px) {
-		.img-globe {
-			top: 100px;
-			height: auto;
-			width: auto;
-		}
-	}
 	@media (min-width: 576px) {
 		.img-wc-mobile {
 			display: none;
@@ -78,9 +77,6 @@
 	id="faca-parte"
 	class="text-center mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
 >
-	<div class="img-globe">
-		<img src="imagens/globe.png" alt="Destaque grande" />
-	</div>
 	<h1
 		class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light mb-6"
 	>
@@ -264,7 +260,7 @@
 	</div>
 </section>
 <section
-	class="bg-gradient-mint-cool mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
+	class="contribua bg-gradient-mint-cool mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
 >
 	<div class="row d-flex align-items-center text-center">
 		<div
