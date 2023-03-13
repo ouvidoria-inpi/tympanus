@@ -2,7 +2,6 @@
   @include item-tokens;
   @include item-default;
   @include item-checkbox;
-  @include item-colors;
   @include item-states;
   @include item-toggle;
   @include item-datatoggle-list;
@@ -19,7 +18,7 @@
   border: 0;
   color: var(--color);
   display: block;
-  font-weight: var(--font-weight);
+  font-weight: var(--font-weight-regular);
   padding: var(--item-padding);
   text-align: left;
   width: 100%;
@@ -136,14 +135,6 @@
           }
         }
       }
-    }
-  }
-}
-
-@mixin item-colors {
-  @each $key in map-keys($br-colors) {
-    &.#{$key} {
-      @include colorize($key);
     }
   }
 }

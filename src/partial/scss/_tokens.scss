@@ -1,66 +1,49 @@
 :root {
-  // Novas cores
-  @include family-blue;
-  @include family-cyan;
-  @include family-gold;
-  @include family-gray;
-  @include family-green;
-  @include family-indigo;
-  @include family-magenta;
-  @include family-mint;
-  @include family-orange;
-  @include family-pure;
-  @include family-red;
-  @include family-violet;
-  @include family-yellow;
   // Superfície
   --background: var(--background-light);
-  --background-rgb: var(--background-light-rgb);
-  --background-light: var(--pure-0);
-  --background-light-rgb: var(--pure-0-rgb);
-  --background-alternative: var(--gray-5);
-  --background-alternative-rgb: var(--gray-5-rgb);
-  --background-dark: var(--blue-warm-vivid-90);
+  --background-light: var(--theme-surface-main-base);
+  --background-alternative: var(--theme-surface-main-alternative);
+  --background-dark: var(--theme-surface-contrast-base);
   --background-dark-rgb: var(--blue-warm-vivid-90-rgb);
   // Bordas
-  --border-color: var(--gray-20);
-  --border-color-alternative: var(--gray-40);
+  --border-color: var(--theme-border-main-base);
+  --border-color-alternative: var(--theme-border-main-alternative);
   --border-style: solid;
   --border-width: var(--surface-width-sm);
   // Leitura
   --color: var(--color-light);
   --color-rgb: var(--color-light-rgb);
-  --color-light: var(--gray-80);
-  --color-light-rgb: var(--gray-80-rgb);
-  --color-dark: var(--pure-0);
-  --color-dark-rgb: var(--pure-0-rgb);
+  --color-light: var(--theme-read-main-base);
+  --color-light-rgb: var(--theme-read-main-base-rgb);
+  --color-dark: var(--theme-read-contrast-base);
+  --color-dark-rgb: var(--theme-read-contrast-base-rgb);
   // Interativa
   --interactive: var(--interactive-light);
   --interactive-rgb: var(--interactive-light-rgb);
-  --interactive-light: var(--blue-warm-vivid-70);
-  --interactive-light-rgb: var(--blue-warm-vivid-70-rgb);
-  --interactive-dark: var(--blue-warm-20);
-  --interactive-dark-rgb: var(--blue-warm-20-rgb);
-  --interactive-alternative: var(--green-cool-vivid-50);
-  --interactive-alternative-rgb: var(--green-cool-vivid-50-rgb);
+  --interactive-light: var(--theme-interactive-main);
+  --interactive-light-rgb: var(--theme-interactive-main-rgb);
+  --interactive-dark: var(--theme-interactive-contrast);
+  --interactive-dark-rgb: var(--theme-interactive-contrast-rgb);
+  --interactive-alternative: var(--theme-interactive-cta);
+  --interactive-alternative-rgb: var(--theme-interactive-cta-rgb);
   // Feedback Informação
-  --info: var(--blue-warm-vivid-60);
-  --info-alternative: var(--blue-warm-vivid-10);
+  --info: var(--color-blue-warm-vivid-60);
+  --info-alternative: var(--color-blue-warm-vivid-10);
   --info-rgb: var(--blue-warm-vivid-60-rgb);
   --info-alternative-rgb: var(--blue-warm-vivid-10-rgb);
   // Feedback Sucesso
-  --success: var(--green-cool-vivid-50);
-  --success-alternative: var(--green-cool-vivid-5);
+  --success: var(--color-green-cool-vivid-50);
+  --success-alternative: var(--color-green-cool-vivid-5);
   --success-rgb: var(--green-cool-vivid-50-rgb);
   --success-alternative-rgb: var(--green-cool-vivid-5-rgb);
   // Feedback Alerta
-  --warning: var(--yellow-vivid-20);
-  --warning-alternative: var(--yellow-vivid-5);
+  --warning: var(--color-yellow-vivid-20);
+  --warning-alternative: var(--color-yellow-vivid-5);
   --warning-rgb: var(--yellow-vivid-20-rgb);
   --warning-alternative-rgb: var(--yellow-vivid-5-rgb);
   // Feedback Erro
-  --danger: var(--red-vivid-50);
-  --danger-alternative: var(--red-vivid-10);
+  --danger: var(--color-red-vivid-50);
+  --danger-alternative: var(--color-red-vivid-10);
   --danger-rgb: var(--red-vivid-50-rgb);
   --danger-alternative-rgb: var(--red-vivid-20-rgb);
   // Fonte Family
@@ -69,8 +52,8 @@
   --surface-overlay-text: #{$overlay-text};
   // Estados
   --visited: var(--visited-light);
-  --visited-light: var(--blue-warm-vivid-80);
-  --visited-dark: var(--gray-20);
+  --visited-light: var(--color-blue-warm-vivid-80);
+  --visited-dark: var(--color-gray-20);
   --disabled: var(--surface-opacity-md);
   --hover: var(--hover-light);
   --hover-light: var(--surface-opacity-xs);
@@ -88,17 +71,18 @@
   );
   --focus-style: dashed;
   --focus-color: var(--focus-color-light);
-  --focus-color-light: var(--gold-vivid-40);
-  --focus-color-dark: var(--gold-vivid-20);
+  --focus-color-light: var(--color-gold-vivid-40);
+  --focus-color-dark: var(--color-gold-vivid-20);
   --focus: var(--focus-color);
   --focus-offset: var(--spacing-scale-half);
   --focus-width: var(--surface-width-lg);
-  --active: var(--blue-warm-vivid-80);
-  --active-rgb: var(--blue-warm-vivid-80-rgb);
-  --selected: var(--blue-warm-vivid-50);
-  --on: var(--blue-warm-vivid-40);
+  --active: var(--theme-activated-main);
+  --active-read: var(--theme-read-contrast-base);
+  --active-rgb: var(--theme-activated-main-rgb);
+  --selected: var(--color-blue-warm-vivid-50);
+  --on: var(--color-blue-warm-vivid-40);
   --on-rgb: var(--blue-warm-vivid-40-rgb);
-  --off: var(--gray-20);
+  --off: var(--color-gray-20);
   --off-rgb: var(--gray-20-rgb);
   --ondrag-border-color: var(--interactive);
   --ondrag-border-width: var(--surface-width-md);
@@ -125,8 +109,6 @@
   --z-index-layer-2: 2000;
   --z-index-layer-3: 3000;
   --z-index-layer-4: 4000;
-  // Cor hexadecimal
-  @include tokens($br-colors, "color-");
   // Iconografia
   @include tokens($tokens-icons);
   // Superfície
@@ -156,8 +138,4 @@
   @include tokens($tokens-alinhamento);
   // Espaçamento
   @include tokens($tokens-spacing);
-  // Cor rgb
-  @each $key, $value in $br-colors {
-    --rgb-#{$key}: #{get-rgb($value)};
-  }
 }

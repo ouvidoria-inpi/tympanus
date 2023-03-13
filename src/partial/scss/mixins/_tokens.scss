@@ -10,10 +10,3 @@
     --#{$key}: #{$value};
   }
 }
-
-// Retorna token de cor no formato rgb
-@mixin token-color-rgb($map) {
-  @each $key, $value in $map {
-    --#{$key}-rgb: #{get-rgb($value)};
-  }
-}

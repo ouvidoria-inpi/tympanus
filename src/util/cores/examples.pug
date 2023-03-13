@@ -6,13 +6,6 @@ append core-css
 append vars
   - var title = "Utilitário de Cores";
 
-mixin old-colors(...colors)
-  each color in colors
-    div
-      .p-1.d-inline-block.m-1(class=`bg-${color}`)=`bg-${color}`
-      .p-1.d-inline-block.m-1.border-solid-sm(class=`border-${color}`)=`border-${color}`
-      .p-1.d-inline-block.m-1(class=`text-${color}`)=`text-${color}`
-
 mixin exemplos(color, ...iterations)
   p.h4.mt-5.text-capitalize=color
   each key in iterations
@@ -21,12 +14,18 @@ mixin exemplos(color, ...iterations)
       .p-1.d-inline-block.m-1.border-solid-sm(class=`border-${color}-${key}`)=`border-${color}-${key}`
       .p-1.d-inline-block.m-1(class=`text-${color}-${key}`)=`text-${color}-${key}`
 
-mixin states
-  each color in ['interactive', 'danger', 'warning', 'success', 'info']
+mixin states(...colors)
+  each color in colors
     div
       .p-1.d-inline-block.m-1(class=`bg-${color}`)=`bg-${color}`
       .p-1.d-inline-block.m-1.border-solid-sm(class=`border-${color}`)=`border-${color}`
       .p-1.d-inline-block.m-1(class=`text-${color}`)=`text-${color}`
+
+mixin theme(...colors)
+  each color in colors
+    div
+      .p-1.d-inline-block.m-1.border-solid-sm(class=`bg-${color}`)=`bg-${color}`
+      .p-1.d-inline-block.m-1.border-solid-sm(class=`text-${color}`)=`text-${color}`
 
 mixin apply-color(...colors)
   each color in colors
@@ -38,8 +37,16 @@ mixin apply-color(...colors)
       default: +exemplos(color, 90, 80, 70, 60, 50, 40, 20, 10, 5)
 
 append content
+  p.h4.mt-5 Tema
+  +theme('main-base', 'main-alternative', 'contrast-base', 'contrast-alternative')
+  .p-1.d-inline-block.m-1.border-solid-sm(class=`border-color-base`)=`border-base`
+  .p-1.d-inline-block.m-1.border-solid-sm(class=`border-color-alternative`)=`border-alternative`
+
+  p.h4.mt-5 Interativo
+  +states('interactive-main', 'interactive-contrast', 'interactive-cta')
+
   p.h4.mt-5 Estados
-  +states
+  +states('success', 'alert', 'error')
 
   +apply-color('pure')
   +apply-color('gray', 'gray-cool', 'gray-warm')
