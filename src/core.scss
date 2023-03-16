@@ -1,7 +1,7 @@
-// Base do core
+// Carrega a base do core
 @import "partial/scss/core-base";
 
-/// Componentes
+// Carrega a lista de componentes
 @import "components/accordion/accordion";
 @import "components/avatar/avatar";
 @import "components/breadcrumb/breadcrumb";

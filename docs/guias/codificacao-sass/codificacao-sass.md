@@ -59,20 +59,20 @@ Ao criar uma nova function ou mixim use os exemplos a seguir.
 ### function
 
 ```scss
-/// Retorna o RGB de uma variável em hexadecimal
-/// @group 02
-/// @param {Variable} $hex - Variável Sass no formato Hexadecimal
-/// @example scss - Criar variável Sass no formato RGB
-///  $color-primary-default: #1351b4;
-///  $rgb-primary-default: get-rgb($color-primary-default);
-/// @example scss - Criar tokens no formato RGB
-///  @mixin token-color-rgb($map) {
-///    @each $key, $value in $map {
-///      --#{$key}-rgb: #{get-rgb($value)};
-///    }
+/// Mixin para criar cor de TEXTO.
+/// @group cores
+/// @param {String} $class-name - Nome para compor classe de css
+/// @param {String} $token-name - Token de cor
+/// @example
+///  @include text-color("pure-0", "color-pure-0");
+///
+///  .text-pure-0 {
+///    background: var(--color-pure-0) !important;
 ///  }
-@function get-rgb($var) {
-  @return red($var), green($var), blue($var);
+@mixin text-color($class-name, $token-name) {
+  .text-#{$class-name} {
+    color: var(--#{$token-name}) !important;
+  }
 }
 ```
 

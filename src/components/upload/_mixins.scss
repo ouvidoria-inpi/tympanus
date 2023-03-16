@@ -1,16 +1,12 @@
-// Dependências
+// Carregar as depencências
 @import "../button/mixins";
 
-// Mixins
+// Configurações do componente
 @mixin upload-configs {
-  // @include upload-tokens;
   @include upload-default;
   @include upload-list;
   @include upload-states;
 }
-
-// @mixin upload-tokens {
-// }
 
 @mixin upload-default {
   input {

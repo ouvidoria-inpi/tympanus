@@ -1,15 +1,15 @@
 // Dependência para calcular divisão
 @use "sass:math";
 
-/// Aplica os estilos **a partir** do breakpoint informado
-/// @group 02
-/// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
-/// @example scss - Aplicar estilos em **lg** e **xl**
-///  .#{$prefix}cookiebar {
-///    @include media-breakpoint-up(lg) {
-///      ...
-///    }
-///  }
+// Aplica os estilos **a partir** do breakpoint informado
+// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
+// @example
+//  Aplicar estilos em **lg** e **xl**:
+//  .#{$prefix}cookiebar {
+//    @include media-breakpoint-up(lg) {
+//      ...
+//    }
+//  }
 @mixin media-breakpoint-up($breakpoint) {
   $size: map-get($breakpoints, $breakpoint);
   @media (min-width: $size) {
@@ -17,15 +17,15 @@
   }
 }
 
-/// Aplica os estilos **até** o breakpoint informado
-/// @group 02
-/// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
-/// @example scss - Aplicar estilos em **xs**, **sm** e **md**
-///  .#{$prefix}cookiebar {
-///    @include media-breakpoint-down(md) {
-///      ...
-///    }
-///  }
+// Aplica os estilos **até** o breakpoint informado
+// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
+// @example
+//  Aplicar estilos em **xs**, **sm** e **md**:
+//  .#{$prefix}cookiebar {
+//    @include media-breakpoint-down(md) {
+//      ...
+//    }
+//  }
 @mixin media-breakpoint-down($breakpoint) {
   $value: map-get($breakpoints, next-breakpoint($breakpoint)) - 1px;
   @media (max-width: $value) {
@@ -33,11 +33,10 @@
   }
 }
 
-/// Cria containers e linhas da Grid
-/// @group 03
-/// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
-/// @example scss - Uso prático
-///  @include make-grid(lg);
+// Cria containers e linhas da Grid
+// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
+// @example
+//  @include make-grid(lg);
 @mixin make-grid($breakpoint) {
   $breakpoint-name: map-get($breakpoints-name, $breakpoint);
   $breakpoint-width: map-get($breakpoints, $breakpoint);
@@ -100,14 +99,15 @@
   }
 }
 
-/// Cria as colunas da Grid.
-/// @group 03
-/// @param {Number} $columns - **Usar**: 4, 8 ou 12
-/// @param {String} $breakpoint [null] - **Usar**: xs, sm, md, lg ou xl **(Opcional)**
-/// @example scss - Criar classes até 4 colunas
-///  @include make-columns(4);
-/// @example scss - Criar classes até 8 colunas para breakpoint **sm**
-///  @include make-columns(8, "sm");
+// Cria as colunas da Grid.
+// @param {Number} $columns - **Usar**: 4, 8 ou 12
+// @param {String} $breakpoint [null] - **Usar**: xs, sm, md, lg ou xl **(Opcional)**
+// @example
+//  Criar classes até 4 colunas:
+//  @include make-columns(4);
+//
+//  Criar classes até 8 colunas para breakpoint **sm**:
+//  @include make-columns(8, "sm");
 @mixin make-columns($columns, $breakpoint: null) {
   .col#{if($breakpoint, "-#{$breakpoint}", "")} {
     flex: 1 0 0%;

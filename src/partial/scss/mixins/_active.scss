@@ -1,8 +1,8 @@
-/// Aplica active: feedback ao clicar no elemento
-/// @example scss - Uso prático
-///  a {
-///    @include active;
-///  }
+// Aplica active: feedback ao clicar no elemento
+// @example
+//  a {
+//    @include active;
+//  }
 @mixin active($color: "interactive") {
   &:not(:disabled) {
     &:active {

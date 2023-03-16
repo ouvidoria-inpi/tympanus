@@ -1,5 +1,4 @@
-/// Carregar blocos internos
-/// @group Card
+// Configurações do componente
 @mixin card-configs {
   @include card-tokens;
   @include card-default;
@@ -13,8 +12,6 @@
   --card-height-fixed: 250px;
 }
 
-/// Criar configuração básica
-/// @group Card
 @mixin card-default {
   background: var(--background);
   box-shadow: var(--surface-shadow-sm);

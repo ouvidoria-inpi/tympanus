@@ -1,17 +1,18 @@
-/// Cria as classes de espaçamento para a propriedade informada.
-/// @group 03
-/// @param {String} $property - **Usar**: margin ou padding
-/// @param {String} $breakpoint [null] - **Usar**: xs, sm, md, lg ou xl **(Opcional)**
-/// @example scss - Criar margens e paddings
-///  @include make-spacing("margin");
-///  @include make-spacing("padding");
-/// @example scss - Criar margens e paddings por breakpoint
-///  @each $breakpoint in "sm", "md", "lg", "xl" {
-///    @include media-breakpoint-up($breakpoint) {
-///      @include make-spacing("margin", $breakpoint);
-///      @include make-spacing("padding", $breakpoint);
-///    }
-///  }
+// Cria as classes de espaçamento para a propriedade informada.
+// @param {String} $property - **Usar**: margin ou padding
+// @param {String} $breakpoint [null] - **Usar**: xs, sm, md, lg ou xl **(Opcional)**
+// @example
+//  Criar margens e paddings:
+//  @include make-spacing("margin");
+//  @include make-spacing("padding");
+//
+//  Criar margens e paddings por breakpoint
+//  @each $breakpoint in "sm", "md", "lg", "xl" {
+//    @include media-breakpoint-up($breakpoint) {
+//      @include make-spacing("margin", $breakpoint);
+//      @include make-spacing("padding", $breakpoint);
+//    }
+//  }
 @mixin make-spacing($property, $breakpoint: null) {
   @if $enable-lite == true {
     @include spacing-directions($property, $spacers-lite, $breakpoint);
@@ -28,13 +29,12 @@
   }
 }
 
-/// Cria direções e orientações para o utilitário de espaçamento
-/// @group 04
-/// @param {String} $property - **Usar**: margin ou padding
-/// @param {Map} $map - Mapa de espaçamentos
-/// @param {String} $breakpoint [null] - **Usar**: xs, sm, md, lg ou xl **(Opcional)**
-/// @example scss - Uso prático
-///  @include spacing-directions("padding", $spacers-manual);
+// Cria direções e orientações para o utilitário de espaçamento
+// @param {String} $property - **Usar**: margin ou padding
+// @param {Map} $map - Mapa de espaçamentos
+// @param {String} $breakpoint [null] - **Usar**: xs, sm, md, lg ou xl **(Opcional)**
+// @example
+//  @include spacing-directions("padding", $spacers-manual);
 @mixin spacing-directions($property, $map, $breakpoint) {
   $directions: "top", "right", "bottom", "left";
   $property-shortcut: str-slice($property, 1, 1);

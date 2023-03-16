@@ -1,15 +1,39 @@
-/// Aplica hover: feedback ao colocar o cursor no elemento
-/// @param {String} $color ["interactive"] - Cor do hover **(Opcional)**
-/// @example scss - Uso prático
+/// Aplica o estado hover.
+///
+/// O hover utiliza técnica de gradiente para aplicar uma cor superfície de acordo com a cor de leitura informada.
+///
+/// Caso o token de leitura do componente seja uma referência a outro token então deve-se informar o token final, exemplo se `theme-activated-read-main` aponta para `theme-read-contrast-base` então deve usar o mixin passando `theme-read-contrast-base` como parâmetro.
+/// @group Estados
+/// @param {String} $read-token ["interactive"] - **Opcional!** Token de leitura
+/// @example
 ///  a {
 ///    @include hover;
 ///  }
-@mixin hover($color: "interactive") {
+///  a:not(:disabled):hover {
+///    background-image: linear-gradient(
+///      rgba(var(--interactive-rgb), var(--hover)),
+///      rgba(var(--interactive-rgb), var(--hover))
+///    );
+///  }
+///
+///  // O token "theme-interactive-read-main" aponta para "theme-read-contrast-base"
+///  .br-button.primary {
+///    --button-background: var(--theme-interactive-main);
+///    --button-color: var(--theme-interactive-read-main);
+///    @include hover("theme-read-contrast-base");
+///  }
+///  .br-button.primary:not(:disabled):hover {
+///    background-image: linear-gradient(
+///      rgba(var(--theme-read-contrast-base-rgb), var(--hover)),
+///      rgba(var(--theme-read-contrast-base-rgb), var(--hover))
+///    );
+///  }
+@mixin hover($read-token: "interactive") {
   &:not(:disabled) {
     &:hover {
       background-image: linear-gradient(
-        rgba(var(--#{$color}-rgb), var(--hover)),
-        rgba(var(--#{$color}-rgb), var(--hover))
+        rgba(var(--#{$read-token}-rgb), var(--hover)),
+        rgba(var(--#{$read-token}-rgb), var(--hover))
       );
     }
   }
