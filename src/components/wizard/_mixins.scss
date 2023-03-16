@@ -10,7 +10,15 @@
   @include wizard-progress-collapsed;
   @include wizard-form;
   @include wizard-vertical;
-  @include wizard-dark-mode;
+}
+
+@mixin wizard-configs-main {
+  @include main-mode;
+  @include wizard-configs;
+}
+
+@mixin wizard-configs-contrast {
+  @include contrast-mode;
 }
 
 @mixin wizard-tokens {
@@ -19,6 +27,8 @@
 }
 
 @mixin wizard-default {
+  background-color: var(--background);
+  color: var(--color);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -184,7 +194,7 @@
       &::before {
         background-color: var(--active);
         border: 2px solid var(--background-light);
-        color: var(--background-light);
+        color: var(--active-read);
         font-weight: var(--font-weight-bold, $font-weight-bold);
       }
     }
@@ -507,36 +517,6 @@
           max-width: calc(100% - 60px);
           min-width: calc(100% - 60px);
         }
-      }
-    }
-  }
-}
-
-@mixin wizard-dark-mode {
-  &.inverted,
-  &.dark-mode {
-    @include dark-mode;
-    @include button-dark-mode;
-
-    .wizard-progress {
-      background-color: transparent;
-    }
-
-    .wizard-progress-btn {
-      &[active] {
-        color: var(--color);
-
-        &::before {
-          --interactive-rgb: var(--active-rgb);
-          background-color: var(--color);
-          color: var(--active);
-        }
-      }
-    }
-
-    .wizard-panel {
-      .wizard-panel-btn {
-        background-color: transparent;
       }
     }
   }

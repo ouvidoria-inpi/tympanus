@@ -1,9 +1,30 @@
 @import "mixins";
 
+// Cor default
 .#{$prefix}button {
 	@include button-configs;
 }
 
+// Cor contrast
+.dark-mode,
+.contrast-mode {
+  .#{$prefix}button,
+  &.#{$prefix}button {
+    @include button-configs-contrast;
+  }
+}
+// Aplica contrast mode automático no componente
+// TODO: Automatizar essa configuração ou fazer de outro jeito
+.bg-contrast-base,
+.bg-contrast-alternative,
+.bg-interactive-main,
+.bg-interactive-cta {
+  .#{$prefix}button {
+    @include button-configs-contrast;
+  }
+}
+
+// Aplicado na tag <a>
 a.#{$prefix}button {
 	font-weight: var(--font-weight-semi-bold);
 	text-decoration: none !important;

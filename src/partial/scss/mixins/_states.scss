@@ -31,3 +31,72 @@
   --focus-color: var(--focus-color-light);
   --focus: var(--focus-color);
 }
+
+// ###############################################################################
+
+/// Configura variáveis globais para **main mode**.
+///
+/// Esta é a configuração padrão do tema. As variáveis globais usam os tokens de cor "main" em suas respectivas funções de superfície, leitura e estados.
+///
+/// Por tratar-se de uma configuração padrão, esse mixin é usado poucas vezes.
+/// @group Tema
+/// @example
+///  :root {
+///    @include main-mode;
+///  }
+///  :root {
+///    --background: var(--theme-surface-main-base);
+///    --background-alternative: var(--theme-surface-main-alternative);
+///    --color: var(--theme-surface-read-main-base);
+///    --color-alternative: var(--theme-surface-read-main-alternative);
+///    --hover: var(--opacity-30);
+///    --interactive: var(--theme-interactive-main);
+///    --interactive-rgb: var(--theme-interactive-main-rgb);
+///    --active: var(--theme-activated-main);
+///    --active-read: var(--theme-read-contrast-base);
+///  }
+@mixin main-mode {
+  --background: var(--theme-surface-main-base);
+  --background-alternative: var(--theme-surface-main-alternative);
+  --color: var(--theme-surface-read-main-base);
+  --color-alternative: var(--theme-surface-read-main-alternative);
+  --hover: var(--opacity-30);
+  --interactive: var(--theme-interactive-main);
+  --interactive-rgb: var(--theme-interactive-main-rgb);
+  --active: var(--theme-activated-main);
+  --active-read: var(--theme-read-contrast-base);
+}
+
+/// Configura variáveis globais para **contrast mode**.
+///
+/// Esta é a configuração de contraste do tema. As variáveis globais usam os tokens de cor "contrast" em suas respectivas funções de superfície, leitura e estados.
+/// @group Tema
+/// @example
+///  .contrast-mode {
+///    .#{$prefix}wizard,
+///    &.#{$prefix}wizard {
+///      @include contrast-mode;
+///    }
+///  }
+///  .contrast-mode .br-wizard,
+///  .contrast-mode.br-wizard {
+///    --background: var(--theme-surface-contrast-base);
+///    --background-alternative: var(--theme-surface-contrast-alternative);
+///    --color: var(--theme-surface-read-contrast-base);
+///    --hover: var(--opacity-20);
+///    --interactive: var(--theme-interactive-contrast);
+///    --interactive-rgb: var(--theme-interactive-contrast-rgb);
+///    --active: var(--theme-activated-contrast);
+///    --active-read: var(--theme-activated-read-contrast);
+///  }
+@mixin contrast-mode {
+  --background: var(--theme-surface-contrast-base);
+  --background-alternative: var(--theme-surface-contrast-alternative);
+  --color: var(--theme-surface-read-contrast-base);
+  --color-alternative: var(--theme-surface-read-contrast-alternative);
+  --hover: var(--opacity-20);
+  --interactive: var(--theme-interactive-contrast);
+  --interactive-rgb: var(--theme-interactive-contrast-rgb);
+  --active: var(--theme-activated-contrast);
+  --active-read: var(--theme-activated-read-contrast);
+}

@@ -7,8 +7,13 @@
   @include button-emphasis;
   @include button-colors;
   @include button-states;
+}
+
+@mixin button-configs-contrast {
+  @include contrast-mode;
   @include button-dark;
 }
+
 
 @mixin button-magicbutton {
   --focus-offset: calc(
@@ -27,7 +32,8 @@
 }
 
 @mixin button-tokens {
-  --button-radius: 100em;
+  --button-background: transparent;
+  --button-color: var(--theme-interactive-main);
   --button-xsmall: 24px;
   --button-small: 32px;
   --button-medium: 40px;
@@ -37,10 +43,12 @@
 
 @mixin button-default {
   align-items: center;
-  background-color: transparent;
-  border: 0;
-  border-radius: var(--button-radius);
-  color: var(--interactive);
+  background-color: var(--button-background);
+  border-color: var(--button-color);
+  border-radius: var(--rounder-pill);
+  border-style: solid;
+  border-width: 0;
+  color: var(--button-color);
   cursor: pointer;
   display: inline-flex;
   font-size: var(--font-size-scale-up-01);
@@ -93,71 +101,66 @@
 }
 
 @mixin button-emphasis {
-  &.primary,
-  &[primary],
-  &.is-primary {
-    --interactive-rgb: var(--color-dark-rgb);
-    background-color: var(--interactive-light);
-    color: var(--color-dark);
+  &.primary {
+    --button-background: var(--theme-interactive-main);
+    --button-color: var(--theme-interactive-read-main);
+    @include hover("theme-read-contrast-base");
   }
 
-  &.secondary,
-  &[secondary],
-  &.is-secondary {
-    background-color: var(--background-light);
-    border: 1px solid var(--interactive);
+  &.secondary {
+    border-width: 1px;
   }
 }
 
 @mixin button-colors {
-  @each $color in "danger", "success", "warning", "info" {
-    &.#{$color},
-    &[#{$color}],
-    &.is-#{$color} {
-      background-color: var(--#{$color});
-      @if $color != "warning" {
-        --interactive-rgb: var(--color-dark-rgb);
-        color: var(--color-dark);
-      } @else {
-        --interactive-rgb: var(--color-light-rgb);
-        color: var(--color-light);
-      }
-    }
+  &.success {
+    --button-background: var(--theme-success-main);
+    --button-color: var(--theme-success-read-main);
+    @include hover("theme-success-read-main");
+  }
+
+  &.alert {
+    --button-background: var(--theme-alert-main);
+    --button-color: var(--theme-alert-read-main);
+    @include hover("theme-alert-read-main");
+  }
+
+  &.error {
+    --button-background: var(--theme-error-main);
+    --button-color: var(--theme-error-read-main);
+    @include hover("theme-error-read-main");
   }
 }
 
 @mixin button-states {
+  @include hover;
+
   &:disabled {
     cursor: not-allowed;
   }
 
   &:not(:disabled) {
-  --focus-offset: var(--spacing-scale-half);
+    --focus-offset: var(--spacing-scale-half);
     @include focus;
-    @include hover;
     @include active;
   }
 
-  &.active,
-  &.is-active,
-  &[active] {
-    --hover: var(--hover-dark);
-    background-color: var(--active);
-    color: var(--color-dark);
+  &.active {
+    --button-background: var(--theme-activated-main);
+    --button-color: var(--theme-activated-read-main);
+    @include hover("theme-read-contrast-base");
   }
 
-  &.loading,
-  &[loading],
-  &.is-loading {
+  &.loading {
     &::after {
       border-color: var(--interactive) var(--interactive) transparent;
       border-style: solid;
     }
 
     &.primary,
-    &.danger,
     &.success,
-    &.info {
+    &.alert,
+    &.error {
       &::after {
         border-color: var(--background) var(--background) transparent;
       }
@@ -166,51 +169,18 @@
 }
 
 @mixin button-dark {
-  &.inverted,
-  &.is-inverted,
-  &[inverted],
-  &.dark-mode {
-    @include dark-mode;
-    color: var(--interactive-dark);
+  --button-color: var(--theme-interactive-contrast);
+  @include hover("theme-interactive-contrast");
 
-    &.primary,
-    &[primary],
-    &.is-primary {
-      --interactive-rgb: var(--background-dark-rgb);
-      background-color: var(--interactive-dark);
-      color: var(--background-dark);
-    }
-
-    &.secondary,
-    &[secondary],
-    &.is-secondary {
-      background-color: var(--background-dark);
-    }
-
-    &.active {
-      --hover: var(--hover-light);
-      --interactive-rgb: var(--active-rgb);
-      background-color: var(--background-light);
-      color: var(--active);
-    }
+  &.primary {
+    --button-background: var(--theme-interactive-contrast);
+    --button-color: var(--theme-interactive-read-contrast);
+    @include hover("theme-read-main-base");
   }
-}
 
-@mixin button-dark-mode {
-  .#{$prefix}button {
-    &.primary,
-    &[primary],
-    &.is-primary {
-      @include light-mode;
-      --interactive-rgb: var(--background-dark-rgb);
-      background-color: var(--interactive-dark);
-      color: var(--background-dark);
-    }
-
-    &.secondary,
-    &[secondary],
-    &.is-secondary {
-      background-color: var(--background-dark);
-    }
+  &.active {
+    --button-background: var(--theme-activated-contrast);
+    --button-color: var(--theme-activated-read-contrast);
+    @include hover("theme-activated-main");
   }
 }

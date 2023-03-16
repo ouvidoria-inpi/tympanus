@@ -1,5 +1,25 @@
 @import "mixins";
 
+// Cor default
 .#{$prefix}wizard {
   @include wizard-configs;
+}
+
+// Cor contrast
+.dark-mode,
+.contrast-mode {
+  .#{$prefix}wizard,
+  &.#{$prefix}wizard {
+    @include wizard-configs-contrast;
+  }
+}
+// Aplica contrast mode automático no componente
+// TODO: Automatizar essa configuração ou fazer de outro jeito
+.bg-contrast-base,
+.bg-contrast-alternative,
+.bg-interactive-main,
+.bg-interactive-cta {
+  .#{$prefix}wizard {
+    @include wizard-configs-contrast;
+  }
 }
