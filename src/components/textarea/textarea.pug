@@ -88,12 +88,12 @@ mixin textarea-success
 
 mixin textarea-danger
   +textarea("Label")(id="textarea-danger" placeholder="Exemplo de textarea com erro" rows=5 cols=5).danger
-    +feedback-danger
+    +feedback-error
       span Campo com erro
 
 mixin textarea-warning
   +textarea("Label")(id="textarea-alerta" placeholder="Exemplo de textarea com alerta" rows=5 cols=5).warning
-    +feedback-warning
+    +feedback-alert
       span Campo com alerta
 
 mixin textarea-info
@@ -103,7 +103,7 @@ mixin textarea-info
 
 mixin textarea-disabled
   +textarea("Label")(id="textarea-id7" placeholder="Exemplo de textarea desabilitado" rows=5 cols=5 disabled)
-    +feedback-warning
+    +feedback-alert
       span Campo desabilitado
 
 mixin textarea-maxlength

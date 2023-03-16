@@ -4,11 +4,11 @@ mixin message
     if block
       block
     .close
-      +button.circle.small(aria-label="Fechar")
+      +button.circle.small(aria-label="Fechar")&attributes(attributes)
         +icon.fa-times
 
-mixin message-danger
-  +message.danger&attributes(attributes)
+mixin message-error
+  +message.error&attributes(attributes)
     .icon
       +icon.fa-times-circle.fa-lg(aria-hidden="true")
     .content
@@ -23,8 +23,8 @@ mixin message-success
       span.message-title Sucesso.
       span.message-body  Seus dados foram alterados conforme preencimento do formulário.
 
-mixin message-warning
-  +message.warning&attributes(attributes)
+mixin message-alert
+  +message.alert&attributes(attributes)
     .icon
       +icon.fa-exclamation-triangle.fa-lg(aria-hidden="true")
     .content
@@ -44,8 +44,8 @@ mixin feedback
     if block
       block
 
-mixin feedback-danger
-  +feedback.danger&attributes(attributes)
+mixin feedback-error
+  +feedback.error&attributes(attributes)
     +icon.fa-times-circle
     if block
       block
@@ -56,8 +56,8 @@ mixin feedback-success
     if block
       block
 
-mixin feedback-warning
-  +feedback.warning&attributes(attributes)
+mixin feedback-alert
+  +feedback.alert&attributes(attributes)
     +icon.fa-exclamation-triangle
     if block
       block

@@ -126,7 +126,7 @@ mixin input-danger
     type="text"
     placeholder="Digite somente números"
     class=attributes.class).danger
-    +feedback-danger
+    +feedback-error
       | Mensagem de Erro
 
 mixin input-info
@@ -142,7 +142,7 @@ mixin input-warning
     type="text"
     placeholder="Digite somente números"
     class=attributes.class).warning
-    +feedback-warning
+    +feedback-alert
       | Mensagem de alerta
 
 mixin input-disabled
@@ -150,5 +150,5 @@ mixin input-disabled
     type="text"
     placeholder="Digite somente números"
     disabled)
-    +feedback-warning
+    +feedback-alert
       | Campo Desabilitado

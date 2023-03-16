@@ -32,7 +32,7 @@ mixin select-simples
     each val, index in options
       +option(val, "rb" + index , 'estados-simples')
     +option("Exterior", "rb" + 27, 'estados-simples')
-  +feedback-warning
+  +feedback-alert
     | Texto auxiliar Função de prevenir erros.
 
 mixin select-simples-checked
@@ -40,7 +40,7 @@ mixin select-simples-checked
     each val, index in options
       +option(val, "rbs" + index , 'estados-checked')
     +option("Exterior", "rbs" + 27 , 'estados-checked ')(checked)
-  +feedback-warning
+  +feedback-alert
     | Texto auxiliar Função de prevenir erros.
 
 mixin select-multiplo
@@ -48,7 +48,7 @@ mixin select-multiplo
     +option("Selecionar todos", "cb")(multiple highlighted all name="estados-multiplos")
     each val, index in options
       +option(val, "cbs" + index)(multiple)
-  +feedback-warning
+  +feedback-alert
     | Texto auxiliar Função de prevenir erros.
 
 mixin select-multiplo-checked
@@ -71,5 +71,5 @@ mixin select-multiplo-checked
     +option("Canada", "canada" + 15)(multiple)
     +option("México", "mexico" + 16)(multiple)
     +option("Costa Rica", "costa-rica" + 17)(multiple)
-  +feedback-warning
+  +feedback-alert
     | Texto auxiliar Função de prevenir erros.

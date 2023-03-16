@@ -7,13 +7,13 @@ append content
   p.h4.mt-5 Mensagens padrão
   .row
     .col-sm.pt-3
-      +message-danger
       +message-success
-      +message-info
-      +message-warning
+      +message-alert
+      +message-error
+      //- +message-info
 
   p.h4.mt-5 Mensagens contextuais
-  p: +feedback-danger O CPF deve conter apenas dígitos.
+  p: +feedback-error O CPF deve conter apenas dígitos.
   p: +feedback-success Campo correto.
-  p: +feedback-warning A tecla CAPS-LOCK está ativada.
-  p: +feedback-info Os arquivos devem ser no formato PNG, JPG, PDF e ter no máximo 1GB.
+  p: +feedback-alert A tecla CAPS-LOCK está ativada.
+  //- p: +feedback-info Os arquivos devem ser no formato PNG, JPG, PDF e ter no máximo 1GB.
