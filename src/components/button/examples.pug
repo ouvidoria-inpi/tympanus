@@ -14,7 +14,7 @@ append content
         +button-secondary.mr-3 Secundário
         +button Terciário
     .col-md
-      .p-3.bg-gray-60
+      .p-3.bg-contrast-base
         +button-primary.dark-mode.mr-3 Primário
         +button-secondary.dark-mode.mr-3 Secundário
         +button.dark-mode Terciário
@@ -29,7 +29,7 @@ append content
         +button-circle(aria-label="Ícone ilustrativo")
           +icon.fa-city
     .col-md
-      .p-3.bg-gray-60
+      .p-3.bg-contrast-base
         +button-circle-primary.dark-mode.mr-3(aria-label="Ícone ilustrativo")
           +icon.fa-city
         +button-circle-secondary.dark-mode.mr-3(aria-label="Ícone ilustrativo")
@@ -44,10 +44,26 @@ append content
         +button-block-secondary.mb-3 Secundário
         +button-block Terciário
     .col-md
-      .p-3.bg-gray-60
+      .p-3.bg-contrast-base
         +button-block-primary.dark-mode.mb-3 Primário
         +button-block-secondary.dark-mode.mb-3 Secundário
         +button-block.dark-mode Terciário
+  p.h4.mt-5 Estados
+  .row
+    .col-md
+      .p-3
+        +button-primary.mr-3(disabled) Desativado
+        +button-primary.active.mr-3 Ativado
+        +button-primary.loading Carregando
+    .col-md
+      .p-3.bg-contrast-base
+        +button-primary.dark-mode.mr-3(disabled) Desativado
+        +button-primary.dark-mode.active.mr-3 Ativado
+        +button-primary.dark-mode.loading Carregando
+  p.h4.mt-5 Cores
+  .p-3
+    each color in ["success", "alert", "error"]
+      +button.mr-3(class=color)=color
   p.h4.mt-5 Densidades
   .p-3
     +button-secondary.large.mr-3 Baixa densidade
@@ -60,8 +76,3 @@ append content
       +icon.fa-city
     +button-circle-secondary.small(aria-label="Ícone ilustrativo")
       +icon.fa-city
-  p.h4.mt-5 Estados
-  .p-3
-    +button-primary.mr-3(disabled) Desativado
-    +button-primary.active.mr-3 Ativado
-    +button-primary.loading Carregando
