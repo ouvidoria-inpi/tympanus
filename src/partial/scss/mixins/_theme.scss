@@ -1,0 +1,108 @@
+
+/// Cria utilitários de superfície do tema.
+///
+/// São aplicados a cor de superfície e leitura ao mesmo tempo.
+/// @group Tema
+/// @example
+///  @include theme-surface-colors;
+///  .bg-main-base {
+///    background: var(--theme-surface-main-base);
+///    color: var(--theme-surface-read-main-base);
+///  }
+///  ...
+@mixin theme-surface-colors {
+  @each $class-name in $theme-surface-colors {
+    $token-name: "theme-surface-#{$class-name}";
+    $read-token-name: "theme-surface-read-#{$class-name}";
+    @include surface-color($class-name, $token-name, $read-token-name);
+  }
+}
+
+/// Cria utilitários de leitura do tema.
+/// @group Tema
+/// @example
+///  @include theme-read-colors;
+///  .text-main-base {
+///    color: var(--theme-read-main-base);
+///  }
+///  ...
+@mixin theme-read-colors {
+  @each $class-name in $theme-read-colors {
+    $token-name: "theme-read-#{$class-name}";
+    @include read-color($class-name, $token-name);
+  }
+}
+
+/// Cria utilitários de borda do tema.
+/// @group Tema
+/// @example
+///  @include theme-border-colors;
+///  .border-base {
+///    border-color: var(--theme-border-main-base);
+///  }
+///  ...
+@mixin theme-border-colors {
+  @each $class-name in $theme-border-colors {
+    $token-name: "theme-border-main-#{$class-name}";
+    @include border-color($class-name, $token-name);
+  }
+}
+
+/// Cria utilitários de cores de interativas do tema.
+///
+/// Eles podem ser usadas em superfície, leitura ou borda.
+///
+/// Quando for usada como utilitário de superfície a respectiva cor de leitura também é aplicada.
+/// @group Tema
+/// @example
+///  @include theme-interactive-colors;
+///  .bg-interactive-main {
+///    background-color: var(--theme-interactive-main);
+///    color: var(--theme-interactive-read-main);
+///  }
+///  .text-interactive-main {
+///    color: var(--theme-interactive-main);
+///  }
+///  .border-interactive-main {
+///    border-color: var(--theme-interactive-main);
+///  }
+///  ...
+@mixin theme-interactive-colors {
+  @each $type in $theme-interactive-colors {
+    $class-name: "interactive-#{$type}";
+    $token-name: "theme-interactive-#{$type}";
+    $read-token-name: "theme-interactive-read-#{$type}";
+    @include surface-color($class-name, $token-name, $read-token-name);
+    @include read-color($class-name, $token-name);
+    @include border-color($class-name, $token-name);
+  }
+}
+
+/// Cria utilitários de cores de aviso do tema.
+///
+/// Eles podem ser usadas em superfície, leitura ou borda.
+///
+/// Quando for usada como utilitário de superfície a respectiva cor de leitura também é aplicada.
+/// @group Tema
+/// @example
+///  @include theme-feedback-colors;
+///  .bg-success {
+///    background-color: var(--theme-success-main);
+///    color: var(--theme-success-read-main);
+///  }
+///  .text-success {
+///    color: var(--theme-success-main);
+///  }
+///  .border-success {
+///    border-color: var(--theme-success-main);
+///  }
+///  ...
+@mixin theme-feedback-colors {
+  @each $class-name in $theme-feedback-colors {
+    $token-name: "theme-#{$class-name}-main";
+    $read-token-name: "theme-#{$class-name}-read-main";
+    @include surface-color($class-name, $token-name, $read-token-name);
+    @include read-color($class-name, $token-name);
+    @include border-color($class-name, $token-name);
+  }
+}

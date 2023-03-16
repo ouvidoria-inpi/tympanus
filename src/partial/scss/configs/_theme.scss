@@ -1,0 +1,108 @@
+/// Define a lista de cores de superfície do tema.
+///
+/// **Atenção!** Os nomes da lista serão usados para gerar as classes de utilitário de cor, e não necessariamente deve ser igual ao token original.
+///
+/// Existem 4 tokens para a função de superfície:
+///
+/// - "theme-surface-main-base"
+/// - "theme-surface-main-alternative"
+/// - "theme-surface-contrast-base"
+/// - "theme-surface-contrast-alternative"
+///
+/// Quando um token de superfície usar uma cor de luminância 50 pra cima deve ativar o "contrast mode".
+/// Isso pode variar de acordo com o tema e é configurado na variável `$theme-contrast-mode-on`.
+/// @group Tema
+/// @type List
+$theme-surface-colors: "main-base", "main-alternative", "contrast-base",
+  "contrast-alternative" !default;
+
+/// Define a lista de cores de leitura do tema.
+///
+/// **Atenção!** Os nomes da lista serão usados para gerar as classes de utilitário de cor, e não necessariamente deve ser igual ao token original.
+///
+/// Existem 4 tokens para a função de leitura:
+///
+/// - "theme-read-main-base"
+/// - "theme-read-main-alternative"
+/// - "theme-read-contrast-base"
+/// - "theme-read-contrast-alternative"
+///
+/// Para cada cor de leitura é criado uma versão em RGB pela ferramenta "style dictionary" de forma automática com o sufixo "-rgb". Exemplos:
+///
+/// - "theme-read-main-base**-rgb**"
+/// - "theme-read-main-alternative**-rgb**"
+/// - "theme-read-contrast-base**-rgb**"
+/// - "ttheme-read-contrast-alternative**-rgb**"
+///
+/// Esses versões em rgb são usadas para aplicar o estado hover.
+/// @group Tema
+/// @type List
+$theme-read-colors: "main-base", "main-alternative", "contrast-base",
+  "contrast-alternative" !default;
+
+/// Define a lista de cores de borda do tema.
+///
+/// **Atenção!** Os nomes da lista serão usados para gerar as classes de utilitário de cor, e não necessariamente deve ser igual ao token original.
+///
+/// Existem 2 tokens para cor de borda:
+///
+/// - theme-border-main-base
+/// - theme-border-main-alternative
+/// @group Tema
+/// @type List
+$theme-border-colors: "base", "alternative" !default;
+
+/// Define a lista de cores interativas do tema.
+///
+/// **Atenção!** Os nomes da lista serão usados para gerar as classes de utilitário de cor, e não necessariamente deve ser igual ao token original.
+///
+/// Existem 3 tokens para a função interativa:
+///
+/// - "theme-interactive-main"
+/// - "theme-interactive-contrast"
+/// - "theme-interactive-cta"
+///
+/// Para cada cor interativa é criado uma versão em RGB pela ferramenta "style dictionary" de forma automática com o sufixo "-rgb". Exemplos:
+///
+/// - "theme-interactive-main**-rgb**"
+/// - "theme-interactive-contrast**-rgb**"
+/// - "theme-interactive-cta**-rgb**"
+///
+/// Esses versões em rgb são usadas para aplicar o estado hover.
+/// @group Tema
+/// @type List
+$theme-interactive-colors: "main", "contrast", "cta" !default;
+
+/// Define a lista de cores de feedback do tema.
+///
+/// **Atenção!** Os nomes da lista serão usados para gerar as classes de utilitário de cor, e não necessariamente deve ser igual ao token original.
+///
+/// Existem 3 tokens para a função de feedback:
+///
+/// - "theme-success-main"
+/// - "theme-alert-main"
+/// - "theme-error-main"
+///
+/// Para cada cor interativa é criado uma versão em RGB pela ferramenta "style dictionary" de forma automática com o sufixo "-rgb". Exemplos:
+///
+/// - "theme-success-main**-rgb**"
+/// - "theme-alert-main**-rgb**"
+/// - "theme-error-main**-rgb**"
+///
+/// Esses versões em rgb são usadas para aplicar o estado hover.
+/// @group Tema
+/// @type List
+$theme-feedback-colors: "success", "alert", "error" !default;
+
+/// Define a lista de tokens que ativam o **contrast mode**.
+///
+/// Esse modo modifica os tokens globais de superfície, letura e estado para usar o valor de contraste definido no tema.
+///
+/// **Atenção!** Os nomes da lista serão usados para checar se o token deve ou não ativar o **contrast mode**, portanto devem ser usados nomes originais dos tokens.
+///
+/// Quando algum dos tokens da listagem é usado como superfície então a cor de leitura e estados são modificados para usar a versão contrast.
+/// @group Tema
+/// @type List
+$theme-contrast-mode-on: "theme-surface-contrast-base",
+  "theme-surface-contrast-alternative", "theme-interactive-main",
+  "theme-interactive-cta";

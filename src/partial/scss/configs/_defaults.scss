@@ -1,17 +1,22 @@
-// Habilita versão lite
+/// Prefixo usado nos componentes.
+///
+/// Por padrão os componentes são gerados usando a nomenclatura "br-componente", mas isso pode ser modificado alterando o valor dessa variável.
+/// @group Configuração
+/// @type String
+/// @example
+///  .#{$prefix}avatar {
+///    ...
+///  }
+$prefix: "br-" !default;
+
+/// Habilita versão "lite".
+///
+/// A lista de cores é definida na variável `$colors-lite`.
+/// @group Configuração
+/// @type Boolean
+/// @example
+///  $enable-lite: true;
+///  @import "base";
+///  @import "tokens";
+///  ...
 $enable-lite: false !default;
-
-// Prefixo de uso nos componentes
-$prefix: "br-";
-
-// Bordas
-$input-border-width: 1px;
-
-// Arredondamentos
-$input-radius: var(--surface-rounder-sm);
-$button-radius: 8px;
-
-// Tamanhos
-$input-default: 40px;
-$input-medium: 40px;
-$input-small: 32px;
