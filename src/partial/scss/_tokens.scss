@@ -56,8 +56,8 @@
   --visited-dark: var(--color-gray-20);
   --disabled: var(--surface-opacity-md);
   --hover: var(--hover-light);
-  --hover-light: var(--surface-opacity-xs);
-  --hover-dark: var(--surface-opacity-sm);
+  --hover-light: var(--opacity-30);
+  --hover-dark: var(--opacity-20);
   --hover-effect: linear-gradient(
     rgba(var(--interactive-rgb), var(--hover)),
     rgba(var(--interactive-rgb), var(--hover))
@@ -138,4 +138,5 @@
   @include tokens($tokens-alinhamento);
   // Espaçamento
   @include tokens($tokens-spacing);
+  @include main-mode;
 }
