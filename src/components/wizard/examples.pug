@@ -1,6 +1,5 @@
 extends ../../partial/pug/component
 
-
 append vars
   - var title = "Wizard";
 
@@ -8,6 +7,15 @@ append content
   p.h4.mt-5 Layout Vertical 1
   .wizard-sample-1
     +wizard-vertical
+
+  .wizard-sample-1
+    +wizard-vertical.dark-mode
+
+  .bg-contrast-base.p-5
+    p Texto dentro do fundo de contraste.
+
+    .wizard-sample-1
+      +wizard-vertical
 
   p.h4.mt-5 Layout Horizontal
   .wizard-sample-2
