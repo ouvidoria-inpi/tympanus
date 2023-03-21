@@ -254,14 +254,6 @@ Utilize o estado Erro quando o objetivo da mensagem for transmitir a ocorrência
 
 **Atenção:** não confie apenas nas cores para transmitir uma mensagem. Utilize o título do *tooltip* para reforçar que se trata de um *tooltip* de erro, alerta ou sucesso.
 
-### 8. Acessibilidade
-
-Coloque *tooltips* apenas em elementos HTML que são, tradicionalmente, focáveis com teclado e interativos (como *hyperlinks* e campos de formulário).
-
-Apesar de elementos HTML genéricos (como "*spam*") poderem se tornar focáveis, isso vai criar potenciais tabulações irritantes e confusas, em elementos não interativos para usuários de teclado. Além disso, a maioria das tecnologias assistivas, atualmente, não reconhecem o *tooltip*, nesta situação.
-
-Além do mais, não dependa só do evento *hover* como acionador para seu *tooltip*, já que isso vai fazer com que seus *tooltips* sejam impossíveis de serem acionados por usuários de teclado.
-
 ---
 
 ## Melhores Práticas

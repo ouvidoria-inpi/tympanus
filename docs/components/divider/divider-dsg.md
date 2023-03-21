@@ -52,15 +52,11 @@ Alterne as cores do componente nos casos em que o fundo tenha a cor igual ou par
 
 *Dividers* são elementos neutros e não interativos. Em hipótese alguma devem se comportar com estados.
 
-### 4. Acessibilidade
-
-O *divider* deve ser usado como elemento estético representando uma quebra visual entre seções e grupos de conteúdo. Não deve ser interpretado por leitores de tela.
-
-### 5. Responsividade
+### 4. Responsividade
 
 *Dividers* são estruturas flexíveis e se adaptam perfeitamente à largura da tela. Por isso, ele pode ser usado sem prejuízo em qualquer resolução.
 
-### 6. Estilos e Espessuras
+### 5. Estilos e Espessuras
 
 *Dividers* podem apresentar estilos e espessuras diferentes seguindo sempre as diretrizes de superfície do Design System.
 
