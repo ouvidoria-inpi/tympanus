@@ -88,7 +88,7 @@ O atalho *CTRL+TAB* permite que a navegação seja feita no sentido oposto.
 
 **Atenção:** sempre que possível, divida as áreas mais importantes de seu *site* em blocos de informações que façam sentido, por exemplo: menu principal, conteúdo, rodapé, etc. O *skip link* deve dirigir o usuário para cada um desses blocos de informação.
 
-### 1. Estados
+### Estados
 
 O componente *skip link* apresenta os seguintes estados:
 
@@ -96,18 +96,6 @@ O componente *skip link* apresenta os seguintes estados:
 *Possíveis estados do skip link*
 
 **Atenção:** jamais utilize o estado desabilitado no componente *skip link*.
-
-### 2. Teclas de atalho
-
-Para padronizar a acessibilidade de todos os produtos do Governo é interessante seguir a mesma padronização de tecla de atalho para acessar os *hiperlinks* do componente *skip link*. Recomenda-se utilizar o padrão abaixo:
-
-Tecla alt+1 = Conteúdo
-Tecla alt+2 = Menu
-Tecla alt+3 = Busca (se houver)
-Tecla alt+4 = Rodapé
-Tecla Home = Acionar o *skip link* a qualquer momento.
-
-**Atenção:** é possível criar outras possibilidades de atalho, mas é fundamental que os atalhos descritos acima sejam mantidos.
 
 ---
 

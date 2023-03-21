@@ -497,44 +497,6 @@ O estado error ocorre sobre o *Indicador* e o Rótulo quando há a necessidade d
 
 ---
 
-## Melhores Práticas
-
-É importante observar algumas boas práticas no quesito acessibilidade. Veja abaixo:
-
--   quando utilizar *Indicadores* sem *Rótulo*, utilize sempre recursos de `aria-labels` no código *HTML*, trazendo a informação da ação e permitindo a possibilidade de leitores de tela;
-
-    ``` html
-    <tag aria-label="Nome do Rótulo"></tag>
-    ```
-
--   fique atento ao contraste de cores utilizado entre o plano de fundo e a cor dos *Rótulos* ou *Indicadores*. Observe as especificações de contraste no [*Fundamento Cores*](/ds/fundamentos-visuais/cores);
-
-    ![Fique atento ao contraste de cores](imagens/accessibility-colour-contrast.png)
-    *Fique atento ao contraste de cores nos Rótulos*
-
-    ![Fique atento ao contraste de cores](imagens/accessibility-colour-contrast-02.png)
-    *Fique atento ao contraste de cores no Indicador Simples*
-
--   evite utilizar o *Indicador Simples* como a ÚNICA de forma interativa de navegação. Sua forma reduzida dificulta a interação do usuário através do *mouse* ou *touch*; Se for o caso, utilize-o apenas como um elemento de apoio para navegação, acompanhado de um elemento de navegação principal;
-
-    ![Evite interação no Indicador Simples](imagens/accessibility-simple-step-button.png)
-    *Evite utilizar o Indicador Simples como a ÚNICA de forma interativa de navegação*
-
--   ofereça controles de navegação ao usuário sempre que utilizar o *Step Simples* e o *Step Textual*. Estes controles devem fazer parte do componente que os contém e seu funcionamento depende exclusivamente da característica deste componente;
-
-    ![Controles de Navegação no Step Simples](imagens/type-simple-step-controls-samples.png)
-    *Controles de Navegação no Step Simples*
-
-    ![Controles de Navegação no Step Textual](imagens/type-simple-text-step-control-samples.png)
-    *Controles de Navegação no Step Textual*
-
--   em caso de *Steps* que funcionem em *loop* automático, ofereça ao usuário controles de interação que permitam pausar ou retomar a animação.
-
-    ![Exemplo de controles de interação](imagens/type-simple-step-controls.png)
-    *Exemplo de controles de interação*
-
----
-
 ## Especificações
 
 ### Cores
