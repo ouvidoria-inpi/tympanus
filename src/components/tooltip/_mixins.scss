@@ -114,7 +114,6 @@
     border-left-style: solid;
     border-left-width: 8px;
     border-top: 8px solid transparent;
-    margin-top: calc(#{v(spacing-scale-base)} * -1);
     right: calc(#{v(spacing-scale-base)} * -1);
   }
 
@@ -124,7 +123,6 @@
     border-right-width: 8px;
     border-top: 8px solid transparent;
     left: calc(#{v(spacing-scale-base)} * -1);
-    margin-top: calc(#{v(spacing-scale-base)} * -1);
   }
 
   .text,

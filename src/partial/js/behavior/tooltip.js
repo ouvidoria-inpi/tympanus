@@ -3,13 +3,16 @@ import { createPopper } from '@popperjs/core'
 class Tooltip {
   /**
    * Instancia um comportamento Tooltip
-   * @param {object} - Objeto de configuração inicial para destructuring
+   * @param {object} - Objeto de configuração inicial para tooltip
+   * @property {object} component - Elemento DOM do tooltip (opcional se tiver o textTooltip)
    * @property {object} activator - Elemento DOM que representa o acionador do comportmento tooltip
    * @property {string} place -Local onde vai aparecer o tooltip ('top', 'right', 'bottom', 'left')
-   * @property {string} timer - Tempo em que vai aparecer o tooltip
-   * @property {string} type - Tipo de tooltip (info, warning)
+   * @property {string} timer - Tempo em que vai aparecer o tooltip em milisegunto (opcional)
+   * @property {string} textTooltip - Texto que vai ser mostrado quando não estiver instaciado o atributo component
+   * @property {string} type - Tipo de tooltip (info, warning) padrão info
+   * @property {boolean} onActivator - Adiciona o tooltip dentro do elemento ativador padrão false
    */
-  // eslint-disable-next-line complexity
+  
   constructor({
     component,
     activator,
@@ -20,6 +23,7 @@ class Tooltip {
     type = 'info',
     onActivator = false
   }) {
+    
     const text_tooltip = textTooltip ? textTooltip : component
     this.onActivator = onActivator 
     this.activator = activator
@@ -30,7 +34,7 @@ class Tooltip {
     this.place =
       this.component.getAttribute('place') === null
         ? this.component.getAttribute('place')
-        : 'top'
+        : place
     const positions = ['top', 'right', 'bottom', 'left']
     this.popover = this.component.hasAttribute('popover')
     this.notification = this.component.classList.contains('br-notification')
@@ -43,8 +47,8 @@ class Tooltip {
     this.placement = positions.includes(place)
       ? place
       : this.notification
-      ? 'bottom'
-      : 'top'
+
+      
     this.popperInstance = null
     this.showEvents = ['mouseenter', 'click', 'focus']
     this.hideEvents = ['mouseleave', 'blur']
@@ -65,7 +69,7 @@ class Tooltip {
       })
     }
     // Adiciona ação de fechar ao botao do popover
-    // if (this.popover || this.notification) {
+    
     if (this.popover) {
       const closeBtn = this.component.querySelector('.close')
       closeBtn.addEventListener('click', (event) => {
@@ -82,7 +86,7 @@ class Tooltip {
     }
   }
   /**
-   * Seta o conteudo do tooltip
+   * Inclui o conteudo do tooltip
    * @param {*} contentText conteudo do texto do tooltip
    * @param {*} type tipo de tooltip
    * @returns  - retorna o objeto com tooltip
@@ -94,7 +98,7 @@ class Tooltip {
     text_tooltip.setAttribute(type, type)
     text_tooltip.innerText = `${contentText}`
     text_tooltip.classList.add('br-tooltip')
-    //TODO: Retirar sample 
+    //TODO: Retirar sample que utiliza não conflita com tooltip componente que está sendo depreciado
     text_tooltip.classList.add('sample')
     if (this.activator && this.onActivator) {
       this.activator.appendChild(text_tooltip)
@@ -106,7 +110,7 @@ class Tooltip {
   }
 
   /**
-   * Cria a instancia do tooltip
+   * Cria a instancia do popper
    * @private
    */
 
@@ -128,26 +132,19 @@ class Tooltip {
             options: {
               altAxis: false, // false by default
               mainAxis: true, // true by default
+              
             },
           },
+          {name: 'flip',options: {fallbackPlacements: ['top', 'right'],},},
         ],
         // placement: this.placement,
         placement: 'bottom',
         strategy: 'fixed',
       })
     } else {
-      const ac = this.activator.getBoundingClientRect()
-      const tt = this.component.getBoundingClientRect()
-      const bw = document.body.clientWidth
-
-      if (this.placement === 'right') {
-        this.placement =
-          ac.x + ac.width + tt.width > bw ? 'top' : this.placement
-      }
-      if (this.placement === 'left') {
-        this.placement = ac.x - tt.width > 0 ? this.placement : 'top'
-      }
-
+      
+    
+      
       this.popperInstance = createPopper(this.activator, this.component, {
         modifiers: [
           {
@@ -159,13 +156,13 @@ class Tooltip {
           {
             name: 'preventOverflow',
             options: {
-              altAxis: true, // false by default
-              // boundary: 'body',
-              mainAxis: true, // true by default
-              // rootBoundary: 'document',
-              tether: false, // true by default
+              altAxis: true, 
+              mainAxis: true, 
+              
+              
             },
           },
+          {name: 'flip',options: {fallbackPlacements: ['top', 'right'],},},
         ],
         placement: this.placement,
       })
@@ -176,13 +173,15 @@ class Tooltip {
    * @param {object} event  evento javascript
    */
   _show(event) {
+    
     this.component.style.display = 'unset'
     this.component.setAttribute('data-show', '')
     this.component.style.zIndex = 9999
-    this._fixPosition()
+    this.popperInstance.update()
     // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
     this.component.style.visibility = 'visible'
     if (this.timer) {
+      console.log("timer",this.timer)
       clearTimeout(this.closeTimer)
       this.closeTimer = setTimeout(
         this._hide,
@@ -192,6 +191,9 @@ class Tooltip {
       )
     }
   }
+
+  
+
   /**
    * Esconde o componente
    * @private
@@ -238,27 +240,9 @@ class Tooltip {
     }
     this.activator.toggleAttribute('active')
   }
-  /**
-   * corrige a posição dp tooltip depois de ativado
-   * @private
-   */
-  _fixPosition() {
-    if (this.notification) {
-      setTimeout(() => {
-        const ac = this.activator.getBoundingClientRect()
-
-        this.component.style = `position: fixed !important; top: ${
-          ac.top + ac.height + 10
-        }px !important; left: auto; right: 8px; display: unset; bottom: auto;`
-        this.component.querySelector(
-          '.arrow'
-        ).style = `position: absolute; left: auto; right: ${
-          document.body.clientWidth - ac.right + ac.width / 5
-        }px !important;`
-      }, 100)
-    }
-    // debugger
-  }
+  
+  
 }
 
 export default Tooltip
+

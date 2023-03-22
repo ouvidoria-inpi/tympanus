@@ -25,8 +25,8 @@ mixin tab-nav
         block
 
 mixin tab-item
-  li.tab-item(class=attributes.class title=attributes.title data-tooltip-text=attributes["tooltip-text"] )
-    button(type="button" aria-label=attributes["aria-label"] data-target=attributes["data-target"] data-panel=attributes["data-panel"])
+  li.tab-item(class=attributes.class title=attributes.title  )
+    button(type="button" aria-label=attributes["aria-label"] data-target=attributes["data-target"] data-panel=attributes["data-panel"] data-tooltip-text=attributes["tooltip-text"])
       span.name
         if block
           block

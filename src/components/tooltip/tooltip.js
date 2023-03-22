@@ -9,13 +9,13 @@ class BRTooltip {
     this.popover = component.hasAttribute('popover')
     this.notification = component.classList.contains('br-notification')
     this.timer = component.getAttribute('timer')
-
+    let positionNotification = this.notification
+    ? 'bottom'
+    : 'top'
     this.active = component.hasAttribute('active')
     this.placement = positions.includes(place)
       ? place
-      : this.notification
-      ? 'bottom'
-      : 'top'
+      : positionNotification
     this.popperInstance = null
     this.showEvents = ['mouseenter', 'click', 'focus']
     this.hideEvents = ['mouseleave', 'blur']
@@ -74,14 +74,14 @@ class BRTooltip {
           {
             name: 'preventOverflow',
             options: {
-              altAxis: false, // false by default
-              mainAxis: true, // true by default
-              // rootBoundary: 'body',
+              altAxis: false, 
+              mainAxis: true, 
+              
             },
           },
         ],
-        // placement: this.placement,
-        placement: 'bottom',
+        placement: this.placement,
+        
         strategy: 'fixed',
       })
     } else {
@@ -91,7 +91,7 @@ class BRTooltip {
       
       
       
-      // if (this.activator.hasOwnProperty('getBoundingClientRect')) {
+     
         ac = this.activator.getBoundingClientRect()
       
 
@@ -115,11 +115,9 @@ class BRTooltip {
           {
             name: 'preventOverflow',
             options: {
-              altAxis: true, // false by default
-              // boundary: 'body',
-              mainAxis: true, // true by default
-              // rootBoundary: 'document',
-              tether: false, // true by default
+              altAxis: true, 
+              mainAxis: true,
+              tether: false, 
             },
           },
         ],
@@ -133,11 +131,13 @@ class BRTooltip {
     this.component.setAttribute('data-show', '')
     this.component.style.zIndex = 99
     this._fixPosition()
+    
     // Importante pois "display: none" conflitua com a instancia do componente e precisa ser setado aqui já que pelo css ativa o efeito fade no primeiro carregamento
 
     this.component.style.visibility = 'visible'
     if (this.timer) {
       clearTimeout(this.closeTimer)
+      console.log("Timer",this.timer)
       this.closeTimer = setTimeout(
         this._hide,
         this.timer,

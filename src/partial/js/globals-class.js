@@ -6,12 +6,12 @@ import BRCard from '../../components/card/card'
 import BRCarousel from '../../components/carousel/carousel'
 import BRCheckbox from '../../components/checkbox/checkbox'
 import BRCookiebar from '../../components/cookiebar/cookiebar'
-import jsonData from '../../components/cookiebar/jsonData' // dados para instanciação do cookiebar
+import jsonData from '../../components/cookiebar/jsonData'; // dados para instanciação do cookiebar
 import BRDateTimePicker from '../../components/datetimepicker/datetimepicker'
 import BRFooter from '../../components/footer/footer'
 import BRHeader from '../../components/header/header'
 import BRInput from '../../components/input/input'
-import inputData from '../../components/input/input-data' // Dados para o autocomplete do input
+import inputData from '../../components/input/input-data'; // Dados para o autocomplete do input
 import BRItem from '../../components/item/item'
 import BRList from '../../components/list/list'
 import BRMenu from '../../components/menu/menu'
