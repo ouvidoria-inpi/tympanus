@@ -549,6 +549,14 @@
     {
       "children": [
         {
+          "ext": [
+            "html"
+          ],
+          "id": "visao-geral",
+          "label": "Fundamentos Visuais",
+          "type": "documentation"
+        },
+        {
           "id": "cores",
           "label": "Cores",
           "type": "documentation"
@@ -607,6 +615,14 @@
       "children": [
         {
           "children": [
+            {
+              "ext": [
+                "html"
+              ],
+              "id": "visao-geral",
+              "label": "Padrões de Design",
+              "type": "documentation"
+            },
             {
               "id": "ajuda",
               "label": "Ajuda e Comunicação",
@@ -674,6 +690,25 @@
           "id": "mobile",
           "label": "Desenvolvimento Mobile",
           "type": "category"
+        },
+        {
+          "children": [
+            {
+              "hideLabel": true,
+              "id": "principios-writing",
+              "label": "Princípios de UX Writing",
+              "type": "documentation"
+            },
+            {
+              "hideLabel": true,
+              "id": "microcopy",
+              "label": "Microcopy",
+              "type": "documentation"
+            }
+          ],
+          "id": "writing",
+          "label": "Writing",
+          "type": "category"
         }
       ],
       "id": "padroes",
@@ -682,6 +717,14 @@
     },
     {
       "children": [
+        {
+          "ext": [
+            "html"
+          ],
+          "id": "visao-geral",
+          "label": "Componentes",
+          "type": "documentation"
+        },
         {
           "examples": [
             {
@@ -1601,6 +1644,14 @@
     {
       "children": [
         {
+          "ext": [
+            "html"
+          ],
+          "id": "visao-geral",
+          "label": "Templates",
+          "type": "documentation"
+        },
+        {
           "examples": [
             {
               "label": "Largura Fixa com Menu flutuante",
@@ -1643,6 +1694,14 @@
     },
     {
       "children": [
+        {
+          "ext": [
+            "html"
+          ],
+          "id": "visao-geral",
+          "label": "Utilitários",
+          "type": "documentation"
+        },
         {
           "children": [
             {
@@ -1838,6 +1897,14 @@
     },
     {
       "children": [
+        {
+          "ext": [
+            "html"
+          ],
+          "id": "visao-geral",
+          "label": "Guias e Boas Práticas",
+          "type": "documentation"
+        },
         {
           "files": [
             {

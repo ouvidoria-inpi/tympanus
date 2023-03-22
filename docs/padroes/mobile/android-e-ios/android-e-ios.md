@@ -1,4 +1,5 @@
-[version]: # (1.0.0)
+
+# Padrões para Android e IOS
 
 ## Orientações de uso do design system em dispositivos móveis
 
