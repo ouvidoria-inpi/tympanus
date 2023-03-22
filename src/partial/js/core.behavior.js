@@ -1,10 +1,16 @@
+/**
+ * Classe que instancia os exemplos de uso dos utilitários
+ */
+
 // import TooltipExample from '../../util/tooltip/tooltip'
 import AccordionExample from '../../util/accordion/accordion'
 import CheckgroupExample from '../../util/checkgroup/checkgroup'
 import CollapseExample from '../../util/collapse/collapse'
 import DropdownExample from '../../util/dropdown/dropdown'
 import Scrim from './behavior/scrim'
-import Tooltip from './behavior/tooltip'
+// import Tooltip from './behavior/tooltip'
+// import Tooltip from './behavior/tooltip'
+import TooltipExample from '../../util/tooltip/tooltip'
 
 export default class Behavior {
   initInstanceAll() {
@@ -67,42 +73,8 @@ export default class Behavior {
     }
   }
   _initInstanceTooltipExample() {
-    const TooltipExampleList = []
-
-    window.document
-      .querySelectorAll('[data-tooltip-text]:not(.notification-tooltip)')
-      .forEach((TooltipExample) => {
-        const texttooltip = TooltipExample.getAttribute('data-tooltip-text')
-        const config = {
-          activator: TooltipExample,
-          placement: 'top',
-          textTooltip: texttooltip,
-        }
-
-        TooltipExampleList.push(new Tooltip(config))
-      })
-
-    document.querySelectorAll('[data-tooltip-target]').forEach((trigger) => {
-      const targets = document.querySelectorAll(
-        trigger.getAttribute('data-tooltip-target')
-      )
-
-      targets.forEach((target) => {
-        const place =
-          target.getAttribute('place') !== null
-            ? target.getAttribute('place')
-            : 'top'
-
-        const config = {
-          activator: trigger,
-          component: target,
-          place: place,
-          placement: 'top',
-          type: 'warning',
-        }
-        // const tooltip = new Tooltip(config)
-        new Tooltip(config)
-      })
-    })
+    const x = new TooltipExample()
+    x.run()
+    
   }
 }

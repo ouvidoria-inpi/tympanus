@@ -1,7 +1,7 @@
 import Tooltip from '../../partial/js/behavior/tooltip'
 
 /**
- * Classe para o exemplo do comportamento tooltip
+ * Classe de exemplo do comportamento tooltip
  */
 class TooltipExample {
   /**
@@ -10,14 +10,14 @@ class TooltipExample {
    */
   constructor(element) {
     this.element = element
-    this._setBehavior()
+    
   }
   /**
    * Inicia comportamento do exemplo
    * @private
    */
   _setBehavior() {
-    this._settooltipBehavior()
+    
   }
 
   /**
@@ -25,19 +25,43 @@ class TooltipExample {
    * @private
    */
 
-  _settooltipBehavior() {
-    this.element.querySelectorAll('[data-tooltip-text]').forEach((trigger) => {
-      const config = {
-        activator: trigger,
-        active,
-        component,
-        place: 'top',
-        placement: 'top',
-        textTooltip: 'teste',
-        timer,
-      }
-      // const tooltip = new Tooltip(config)
-      new Tooltip(config)
+  run() {
+    const TooltipExampleList = []
+
+    window.document
+      .querySelectorAll('[data-tooltip-text]:not(.notification-tooltip)')
+      .forEach((TooltipExample) => {
+        const texttooltip = TooltipExample.getAttribute('data-tooltip-text')
+        const config = {
+          activator: TooltipExample,
+          place: 'left',
+          textTooltip: texttooltip,
+          
+        }
+        TooltipExampleList.push(new Tooltip(config))
+      })
+
+    document.querySelectorAll('[data-tooltip-target]').forEach((trigger) => {
+      const targets = document.querySelectorAll(
+        trigger.getAttribute('data-tooltip-target')
+      )
+
+      targets.forEach((target) => {
+        const place =
+          target.getAttribute('place') !== null
+            ? target.getAttribute('place')
+            : 'left'
+
+        const config = {
+          activator: trigger,
+          component: target,
+          place: place,
+          type: 'warning',
+          
+        }
+        // const tooltip = new Tooltip(config)
+        new Tooltip(config)
+      })
     })
   }
 }
