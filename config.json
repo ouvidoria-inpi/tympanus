@@ -91,6 +91,15 @@
       "type": "category"
     },
     {
+      "ext": [
+        "md"
+      ],
+      "hideLabel": true,
+      "id": "acessibilidade",
+      "label": "Acessibilidade",
+      "type": "documentation"
+    },
+    {
       "content": "Baixe os Modelos de tela e os Artefatos de Design e Desenvolvimento para seu projeto!",
       "id": "assets",
       "image": "assets/imgs/download-page.png",
@@ -1980,6 +1989,7 @@
       "default": true,
       "designer": true,
       "developer": true,
+      "accessibility": true,
       "ext": [
         "md",
         "html",
