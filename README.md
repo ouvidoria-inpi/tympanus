@@ -60,11 +60,11 @@ Use nossos canais abaixo para obter tirar suas dúvidas:
 
 ## Como contribuir?
 
-Por favor verifique nossos guias de [como contribuir](https://govbr-ds.gitlab.io/govbr-ds-wiki/comunidade/contribuindo-com-o-ds/ 'Como contribuir?').
+Por favor verifique nossos guias de [como contribuir](https://gov.br/ds/wiki/comunidade/contribuindo-com-o-ds/ 'Como contribuir?').
 
 ### Commits
 
-Nesse projeto usamos um padrão para branches e commits. Por favor observe a documentação na nossa [wiki](https://govbr-ds.gitlab.io/govbr-ds-wiki/ 'Wiki') para aprender sobre os nossos padrões.
+Nesse projeto usamos um padrão para branches e commits. Por favor observe a documentação na nossa [wiki](https://gov.br/ds/wiki/ 'Wiki') para aprender sobre os nossos padrões.
 
 ## Créditos
 
