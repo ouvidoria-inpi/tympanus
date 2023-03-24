@@ -162,7 +162,7 @@ class Tooltip {
               
             },
           },
-          {name: 'flip',options: {fallbackPlacements: ['top', 'right'],},},
+          {name: 'flip',options: {fallbackPlacements: ['top', 'right',"bottom","left"],},},
         ],
         placement: this.placement,
       })
