@@ -9,6 +9,18 @@
   @include table-footer;
   @include table-density;
   @include table-dark-mode;
+  @include table-no-hover
+}
+
+@mixin table-no-hover{
+  &.no-hover{
+    &:hover {
+      td{      
+        background: none;
+      }
+    }
+    
+  }
 }
 
 @mixin table-tokens {
@@ -37,6 +49,8 @@
   .column-checkbox {
     width: 24px;
   }
+
+  
 }
 
 @mixin table-header {
