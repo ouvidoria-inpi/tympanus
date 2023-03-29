@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## [3.3.0-alpha.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.2.0...v3.3.0-alpha.1) (29/03/2023)
+
+
+### :memo: Documentação
+
+* **comunidades:** correção de icones ([71b253f](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/71b253f0e1a3735c1c19ee6bf65a3d917ca23db3)), closes [#22](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/22) [#22](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/22) [#22](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/22)
+* **acessibilidade:** inclui documentacao de acessibilidade nos componentes ([cb2ae22](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/cb2ae22ab7e60bd671b1850006fc7b4dc6fe2fb9)), closes [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#548](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/548) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#554](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/554) [#468](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/468)
+* **tipografia:** inclui listas simples na documentação ([cba5e48](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/cba5e48044223f596e9be71f68cfc15212fefa38))
+* **acessibilidade:** remove conteúdo de acessibilidade repetido ([cd6b5bf](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/cd6b5bfc4bd518df68fcb15eebf429d81ddca860)), closes [#557](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/557)
+
+
+### :sparkles: Novidades
+
+* atualiza links da wiki ([210e0b1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/210e0b195b65ec303e1e5a78d08861b62bfe5cee))
+* **tela introdução:** implementa site e páginas de introdução ([1139f65](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/1139f65d5f2719f3b2138f3d7b791e93a6971708)), closes [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#480](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/480)
+
+
+### :bug: Correções
+
+* **datetimepicker:** adiciona input manual com máscara ([b3174aa](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/b3174aaba94690396e64ee7d1a02b868b8073a17))
+* **table:** adiciona o classe no-hover para desativar hover ([175e406](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/175e4068042c29728a2381addd81c0c53aa17596))
+
 ## [3.2.0](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.1.0...v3.2.0) (28/12/2022)
 
 
