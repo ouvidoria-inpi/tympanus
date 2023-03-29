@@ -1,4 +1,3 @@
-[version]: # (5.2.1)
 
 ## Como usar
 
@@ -16,6 +15,7 @@
 | data-search    | boolean |                                    | Necessário para busca             |
 | data-selection | boolean |                                    | Necessário para seleção de linhas |
 | data-toogle    | boolean |                                    | Necessário para expansão de linha |
+| class          | string  | **no-hover**                       | Desativa no hover de linha        |
 
 ## Instanciação do Componente
 
