@@ -1,7 +1,4 @@
 
-
-
-
 Sugerimos a leitura dos [Princípios do Design System](/ds/introducao/principios), eles são a base para construção de todos os artefatos disponibilizados e devem ser aplicados também aos produtos que adotem o padrão digital de governo.
 
 **Designer**
@@ -22,7 +19,7 @@ Para saber mais sobre como utilizar os UIKITs, acesse [**Prototipando com o Desi
 
 ### Requisitos
 
-O projeto requer a versão mínima do [node](https://nodejs.org/) >= v14.15.4.
+O projeto requer a versão mínima do [node](https://nodejs.org/) >= v18.13.0
 
 Serão criados automaticamente os seguintes arquivos em seu projeto:
 
