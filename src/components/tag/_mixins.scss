@@ -147,10 +147,22 @@
           );
         }
       }
+
+      &:active {
+        + label {
+          --hover: var(--hover-light);
+          --interactive-rgb: var(--active-rgb);
+          background-color: var(--background-light);
+          background-image: linear-gradient(rgba(var(--interactive-rgb), var(--pressed)), rgba(var(--interactive-rgb), var(--pressed)));
+          color: var(--color-dark);
+          
+        }
+      }
     }
 
     &.selected {
       label {
+        background-color: var(--selected);
         padding-right: var(--spacing-scale-4xh);
       }
     }
