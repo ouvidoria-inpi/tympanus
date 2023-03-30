@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [3.3.0-alpha.2](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.3.0-alpha.1...v3.3.0-alpha.2) (30/03/2023)
+
+
+### :bug: Correções
+
+* **tag:** adiciona estado selecionado e pressionado(active) na tag de interação persistente ([dc4e962](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/dc4e962986ef8944eade001c319bf413e5032df6))
+* ajusta hierarquia do menu padroes/visao geral ([01360c7](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/01360c7e397aa673fc983a32944a201aec288228))
+
 ## [3.3.0-alpha.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.2.0...v3.3.0-alpha.1) (29/03/2023)
 
 
