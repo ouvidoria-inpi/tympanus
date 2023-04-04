@@ -59,7 +59,6 @@
     --tag-small: var(--spacing-scale-4x);
     --tag-medium: var(--spacing-scale-5x);
     --tag-large: var(--spacing-scale-5xh);
-    cursor: pointer;
     font-size: var(--font-size-scale-up-01);
   }
 
@@ -150,12 +149,11 @@
 
       &:active {
         + label {
-          --hover: var(--hover-light);
-          --interactive-rgb: var(--active-rgb);
-          background-color: var(--background-light);
-          background-image: linear-gradient(rgba(var(--interactive-rgb), var(--pressed)), rgba(var(--interactive-rgb), var(--pressed)));
+          background-image: linear-gradient(
+            rgba(var(--interactive-rgb), var(--pressed)),
+            rgba(var(--interactive-rgb), var(--pressed))
+          );
           color: var(--color-dark);
-          
         }
       }
     }
@@ -165,6 +163,12 @@
         background-color: var(--selected);
         padding-right: var(--spacing-scale-4xh);
       }
+    }
+  }
+
+  &.disabled {
+    input {
+      cursor: not-allowed;
     }
   }
 }

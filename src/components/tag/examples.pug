@@ -32,7 +32,11 @@ append content
     label(for="tag02")
       +icon.fa-ship
       span Label
-
+  +tag-interaction-select.selected.disabled
+    input(id="tag02" type="checkbox" checked)
+    label(for="tag02")
+      +icon.fa-ship
+      span Tag Desativado
   p.h4.mt-5 Tag com Seleção Única
   +tag-interaction-select
     input(id="tag03" type="radio" name="vehicle")
