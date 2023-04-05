@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## [3.3.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.3.0...v3.3.1) (05/04/2023)
+
+
+### :bug: Correções
+
+* **tag:** adiciona estado de disabled e altera cor quando pressionada ([b33f043](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/b33f043a86bdbacab945ca51446e7a7f735d7cae))
+
+
+### :wastebasket: Depreciado
+
+* **menu:** as classes css .menu-social e .sharegroup serão retiradas na proxima versão ([ecf0d69](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/ecf0d699dc77268468d345528677ba66a1eac899))
+
 ## [3.3.0](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.2.0...v3.3.0) (03/04/2023)
 
 

@@ -117,14 +117,14 @@
                   "size": "15.07 MB",
                   "version": "5.2.0",
                   "id": "uikit-web-xd-5.2.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.0/web/uikit-govbrds.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.1/web/uikit-govbrds.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "1.15 MB",
                   "version": "2.3.0",
                   "id": "uikit-web-figma-2.3.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.0/web/uikit-govbrds.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.1/web/uikit-govbrds.fig"
                 }
               ]
             },
@@ -138,14 +138,14 @@
                   "size": "15.17 MB",
                   "version": "2.0.0",
                   "id": "uikit-wireframe-xd-2.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.0/wireframe/uikit-govbrds-wireframe.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.1/wireframe/uikit-govbrds-wireframe.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "376.20 KB",
                   "version": "2.0.0",
                   "id": "uikit-wireframe-figma-2.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.0/wireframe/uikit-govbrds-wireframe.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.1/wireframe/uikit-govbrds-wireframe.fig"
                 }
               ]
             },
@@ -159,14 +159,14 @@
                   "size": "1.33 MB",
                   "version": "4.3.0",
                   "id": "uikit-android-xd-4.3.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.0/material/uikit-govbrds-material.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.1/material/uikit-govbrds-material.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "468.66 KB",
                   "version": "4.3.0",
                   "id": "uikit-android-figma-4.3.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.0/material/uikit-govbrds-material.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.1/material/uikit-govbrds-material.fig"
                 }
               ]
             },
@@ -178,16 +178,16 @@
                 {
                   "label": "Adobe XD",
                   "size": "1.07 MB",
-                  "version": "3.3.0",
-                  "id": "uikit-ios-xd-3.3.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.0/ios/uikit-govbrds-ios.xd"
+                  "version": "3.3.1",
+                  "id": "uikit-ios-xd-3.3.1",
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.1/ios/uikit-govbrds-ios.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "469.36 KB",
-                  "version": "3.3.0",
-                  "id": "uikit-ios-figma-3.3.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.0/ios/uikit-govbrds-ios.fig"
+                  "version": "3.3.1",
+                  "id": "uikit-ios-figma-3.3.1",
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-uikits/-/raw/v3.3.1/ios/uikit-govbrds-ios.fig"
                 }
               ]
             },
@@ -230,14 +230,14 @@
                   "size": "13.69 MB",
                   "version": "1.0.1",
                   "id": "prototipo-xd-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/consistenciavisual/consistenciavisual.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/consistenciavisual/consistenciavisual.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "8.61 MB",
                   "version": "1.0.1",
                   "id": "prototipo-figma-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/consistenciavisual/consistenciavisual.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/consistenciavisual/consistenciavisual.fig"
                 }
               ]
             },
@@ -251,14 +251,14 @@
                   "size": "12.45 MB",
                   "version": "1.0.0",
                   "id": "crud-xd-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/crud/crud.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/crud/crud.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "1.72 MB",
                   "version": "1.0.0",
                   "id": "crud-figma-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/crud/crud.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/crud/crud.fig"
                 }
               ]
             },
@@ -272,14 +272,14 @@
                   "size": "14.44 MB",
                   "version": "1.0.0",
                   "id": "relatorios-xd-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/relatorios/relatorios.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/relatorios/relatorios.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "958.90 KB",
                   "version": "1.0.0",
                   "id": "relatorios-figma-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/relatorios/relatorios.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/relatorios/relatorios.fig"
                 }
               ]
             },
@@ -293,14 +293,14 @@
                   "size": "7.73 MB",
                   "version": "1.0.0",
                   "id": "dashboard-xd-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/dashboard/dashboard.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/dashboard/dashboard.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "1.56 MB",
                   "version": "1.0.0",
                   "id": "dashboard-figma-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/dashboard/dashboard.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/dashboard/dashboard.fig"
                 }
               ]
             },
@@ -314,14 +314,14 @@
                   "size": "7.87 MB",
                   "version": "1.0.0",
                   "id": "sessao-xd-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/sessao/sessao.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/sessao/sessao.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "1.58 MB",
                   "version": "1.0.0",
                   "id": "sessao-figma-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/sessao/sessao.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/sessao/sessao.fig"
                 }
               ]
             },
@@ -335,14 +335,14 @@
                   "size": "2.99 MB",
                   "version": "1.0.0",
                   "id": "guiarecolhimento-xd-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/guiarecolhimento/guiarecolhimento.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/guiarecolhimento/guiarecolhimento.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "1.49 MB",
                   "version": "1.0.0",
                   "id": "guiarecolhimento-figma-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/guiarecolhimento/guiarecolhimento.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/guiarecolhimento/guiarecolhimento.fig"
                 }
               ]
             },
@@ -356,14 +356,14 @@
                   "size": "3.42 MB",
                   "version": "1.0.0",
                   "id": "base-xd-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/base/base.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/base/base.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "350.05 KB",
                   "version": "1.0.0",
                   "id": "base-figma-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/base/base.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/base/base.fig"
                 }
               ]
             },
@@ -377,14 +377,14 @@
                   "size": "37.81 MB",
                   "version": "1.0.0",
                   "id": "erro-xd-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/erro/erro.xd"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/erro/erro.xd"
                 },
                 {
                   "label": "Figma",
                   "size": "33.21 MB",
                   "version": "1.0.0",
                   "id": "erro-figma-1.0.0",
-                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.0/erro/erro.fig"
+                  "path": "https://gitlab.com/govbr-ds/design/govbr-ds-design-padroes-modelos/-/raw/v3.3.1/erro/erro.fig"
                 }
               ]
             }
@@ -513,9 +513,9 @@
                 {
                   "label": "Baixar Código Fonte",
                   "size": "103.4 MB",
-                  "version": "3.3.0",
-                  "id": "core-3.3.0",
-                  "path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/archive/v3.3.0/govbr-ds-dev-core-v3.3.0.zip"
+                  "version": "3.3.1",
+                  "id": "core-3.3.1",
+                  "path": "https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/archive/v3.3.1/govbr-ds-dev-core-v3.3.1.zip"
                 }
               ]
             },
@@ -527,9 +527,9 @@
                 {
                   "label": "Baixar Pacote NPM",
                   "size": "2.6 MB",
-                  "version": "3.3.0",
-                  "id": "core-npm-3.3.0",
-                  "path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.3.0.tgz"
+                  "version": "3.3.1",
+                  "id": "core-npm-3.3.1",
+                  "path": "https://registry.npmjs.org/@govbr-ds/core/-/core-3.3.1.tgz"
                 }
               ]
             },
