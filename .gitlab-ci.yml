@@ -77,22 +77,15 @@ Commits:
     paths:
       - report-commitlint.txt
     expire_in: 1 week
+    expose_as: "Commitlint Report"
   before_script:
     - apk --no-cache add git
+    - npm i -g @govbr-ds/commit-config commitlint-gitlab-ci
   script:
-    - >
-      if [ "${CI_BUILD_BEFORE_SHA}" = "0000000000000000000000000000000000000000" ]; then
-        echo "commitlint from HEAD^"
-        npx commitlint -x @govbr-ds/commit-config -f HEAD^ > report-commitlint.txt
-      else
-        echo "commitlint from ${CI_BUILD_BEFORE_SHA}"
-        br=`git branch -r --contains ${CI_BUILD_BEFORE_SHA}`
-        if [ ! -n $br ]; then
-          npx commitlint -x @govbr-ds/commit-config -f HEAD^ > report-commitlint.txt
-        else
-          npx commitlint -x @govbr-ds/commit-config -f "${CI_BUILD_BEFORE_SHA}" > report-commitlint.txt
-        fi
-      fi
+    - commitlint-gitlab-ci -x @govbr-ds/commit-config > report-commitlint.txt
+  only:
+    - main
+    - merge_requests
 
 DS:
   stage: Build
