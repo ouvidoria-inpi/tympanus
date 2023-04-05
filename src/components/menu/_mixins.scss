@@ -24,7 +24,6 @@
 }
 
 @mixin menu-default {
-
   // A base é aplicado no seguinte html:
   // <div class="br-menu">
   //   <div class="menu-trigger">
@@ -97,7 +96,7 @@
       img {
         max-height: var(--menu-logo);
 
-        +* {
+        + * {
           margin-left: var(--spacing-scale-base);
         }
       }
@@ -112,7 +111,6 @@
 
   // stylelint-disable no-descending-specificity
   .menu-body {
-
     // Resetar estilos
     ul,
     li {
@@ -125,24 +123,23 @@
     }
 
     // Aplica separador nos itens de primeiro nível
-    >.divider {
+    > .divider {
       border-bottom: 1px solid var(--border-color);
     }
 
     .menu-folder {
-
       // Aplica separador entre pastas
-      >ul {
-        >li:last-child {
-          >.menu-item {
+      > ul {
+        > li:last-child {
+          > .menu-item {
             border-bottom: 1px solid var(--border-color);
           }
         }
       }
 
       // Cor de fundo para nível 2
-      >.menu-item {
-        +ul {
+      > .menu-item {
+        + ul {
           background: var(--menu-background-submenu);
 
           .menu-item {
@@ -154,12 +151,12 @@
 
     // Aplica separador no menu dropdown de primeiro nível
     .drop-menu {
-      >.menu-item {
+      > .menu-item {
         border-bottom: 1px solid var(--border-color);
       }
 
       &.active {
-        >.menu-item {
+        > .menu-item {
           border-bottom: 0;
         }
       }
@@ -167,13 +164,13 @@
 
     // Estilo padrão para menu dropdown e side menu
     .drop-menu {
-      >ul {
+      > ul {
         background: var(--menu-background-submenu);
         display: none;
       }
 
       &.active {
-        >.menu-item {
+        > .menu-item {
           &:not(:hover) {
             background-color: var(--background);
           }
@@ -185,7 +182,7 @@
           }
         }
 
-        >ul {
+        > ul {
           display: block;
         }
       }
@@ -204,9 +201,8 @@
   //   <div class="menu-info">
 
   .menu-footer {
-
     // Adiciona borda automaticamente entre as sessões
-    >*:not(:last-child) {
+    > *:not(:last-child) {
       border-bottom: 1px solid var(--border-color);
     }
 
@@ -232,13 +228,18 @@
         @include hover;
       }
     }
-
-    .social-network {
+    // FIXME: .menu-social e .sharegroup estão depreciados serão retirados na proxima versão
+    .social-network,
+    .menu-social {
       padding: var(--spacing-scale-base) var(--spacing-scale-5x);
 
       .social-network-title {
         font-weight: var(--font-weight-semi-bold);
-        margin-bottom: var(--spacing-scale-half);        
+        margin-bottom: var(--spacing-scale-half);
+      }
+
+      .sharegroup {
+        display: flex;
       }
     }
 
@@ -277,13 +278,13 @@
 
 @mixin menu-side-menu {
   .side-menu {
-    >ul {
+    > ul {
       background: var(--menu-background-submenu);
       display: none;
     }
 
     &.active {
-      >.menu-item {
+      > .menu-item {
         --interactive: var(--active);
         --interactive-rgb: var(--active-rgb);
         background-color: var(--background);
@@ -303,7 +304,7 @@
         }
       }
 
-      >ul {
+      > ul {
         display: block;
       }
 
@@ -315,10 +316,7 @@
 }
 
 @mixin menu-items-sizes {
-
-  @each $size in "small",
-  "medium",
-  "large" {
+  @each $size in "small", "medium", "large" {
     &.#{$size} {
       .menu-item {
         --menu-item-padding: var(--menu-item-#{$size});
@@ -328,7 +326,6 @@
 }
 
 @mixin menu-push {
-
   // Mobile First
   &.push {
     .menu-trigger,
@@ -367,18 +364,17 @@
 }
 
 @mixin menu-contextual {
-
   // Mobile First
   &.contextual {
     --menu-zindex: calc(var(--z-index-layer-3) - 10);
     overflow: auto;
 
     .menu-body .menu-folder {
-      >.menu-item+ul .menu-item {
+      > .menu-item + ul .menu-item {
         padding-left: var(--spacing-scale-2x);
       }
 
-      >ul>li:last-child>.menu-item {
+      > ul > li:last-child > .menu-item {
         border-bottom: 0;
       }
     }
@@ -456,10 +452,8 @@
 }
 
 @mixin menu-states {
-
   // Aplicáveis para item texto e link
   .menu-item {
-
     // Escondido
     &[hidden] {
       display: none;
@@ -474,7 +468,6 @@
   // Aplicável somente para links
   a.menu-item {
     &:not(:disabled) {
-
       // Ativo
       &.active {
         --interactive: var(--color-dark);
