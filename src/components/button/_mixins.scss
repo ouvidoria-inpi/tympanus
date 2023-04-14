@@ -201,8 +201,7 @@
     &.primary,
     &[primary],
     &.is-primary {
-      @include light-mode;
-      --interactive-rgb: var(--background-dark-rgb);
+      @include light-mode($interactive-rgb: "background-dark-rgb");
       background-color: var(--interactive-dark);
       color: var(--background-dark);
     }

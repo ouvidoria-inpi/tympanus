@@ -25,9 +25,8 @@
     right: 0;
   }
   .#{$prefix}item {
-    @include light-mode;
+    @include light-mode($interactive-rgb: "color-rgb");
     --item-padding-y: var(--spacing-scale-2x);
-    --interactive-rgb: var(--color-rgb);
     background-color: var(--background-light);
     color: var(--color);
 

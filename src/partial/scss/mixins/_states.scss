@@ -9,27 +9,49 @@
 }
 
 // Dark mode
-@mixin dark-mode {
-  --color: var(--color-dark);
-  --color-rgb: var(--color-dark-rgb);
-  --text-color: var(--color);
-  --interactive: var(--interactive-dark);
-  --interactive-rgb: var(--interactive-dark-rgb);
-  --visited: var(--visited-dark);
-  --hover: var(--hover-dark);
-  --pressed: var(--pressed-dark);
-  --focus-color: var(--focus-color-dark);
-  --focus: var(--focus-color);
+@mixin dark-mode(
+  $color: "color-dark",
+  $color-rgb: "color-dark-rgb",
+  $text-color: $color,
+  $interactive: "interactive-dark",
+  $interactive-rgb: "interactive-dark-rgb",
+  $visited: "visited-dark",
+  $hover: "hover-dark",
+  $pressed: "pressed-dark",
+  $focus-color: "focus-color-dark",
+  $focus: $focus-color
+) {
+  --color: var(--#{$color});
+  --color-rgb: var(--#{$color-rgb});
+  --text-color: var(--#{$text-color});
+  --interactive: var(--#{$interactive});
+  --interactive-rgb: var(--#{$interactive-rgb});
+  --visited: var(--#{$visited});
+  --hover: var(--#{$hover});
+  --pressed: var(--#{$pressed});
+  --focus-color: var(--#{$focus-color});
+  --focus: var(--#{$focus});
 }
-@mixin light-mode {
-  --color: var(--color-light);
-  --color-rgb: var(--color-light-rgb);
-  --text-color: var(--color);
-  --interactive: var(--interactive-light);
-  --interactive-rgb: var(--interactive-light-rgb);
-  --visited: var(--visited-light);
-  --hover: var(--hover-light);
-  --pressed: var(--pressed-light);
-  --focus-color: var(--focus-color-light);
-  --focus: var(--focus-color);
+@mixin light-mode(
+  $color: "color-light",
+  $color-rgb: "color-light-rgb",
+  $text-color: $color,
+  $interactive: "interactive-light",
+  $interactive-rgb: "interactive-light-rgb",
+  $visited: "visited-light",
+  $hover: "hover-light",
+  $pressed: "pressed-light",
+  $focus-color: "focus-color-light",
+  $focus: $focus-color
+) {
+  --color: var(--#{$color});
+  --color-rgb: var(--#{$color-rgb});
+  --text-color: var(--#{$text-color});
+  --interactive: var(--#{$interactive});
+  --interactive-rgb: var(--#{$interactive-rgb});
+  --visited: var(--#{$visited});
+  --hover: var(--#{$hover});
+  --pressed: var(--#{$pressed});
+  --focus-color: var(--#{$focus-color});
+  --focus: var(--#{$focus});
 }
