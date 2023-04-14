@@ -169,8 +169,7 @@
     @include dark-mode;
 
     &.active {
-      @include light-mode;
-      --interactive-rgb: var(--active-rgb);
+      @include light-mode($interactive-rgb: "active-rgb");
       background-color: var(--background-light);
       color: var(--active);
     }

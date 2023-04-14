@@ -40,7 +40,7 @@
   @include token-color($cyan);
   @include token-color($cyan-vivid);
   @include token-color-rgb($cyan);
-  @include token-color($cyan-vivid);
+  @include token-color-rgb($cyan-vivid);
 }
 // Cores gold
 @mixin family-gold {
