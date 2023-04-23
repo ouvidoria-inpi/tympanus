@@ -76,7 +76,7 @@ rules:
     - endOfLine: auto
       semi: false
       singleQuote: true
-  sort-keys: error
+  sort-keys: off
   template-curly-spacing: 2
   vars-on-top: 2
   default-case-last: 2
