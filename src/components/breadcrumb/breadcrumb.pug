@@ -1,39 +1,28 @@
-mixin breadcrumb
-  - let className = [prefix + "breadcrumb", attributes.class]
+mixin breadcrumb (props={})
+  - let className = ["br-breadcrumb", attributes.class]
   div(class=className)&attributes(attributes)
     ul.crumb-list
       li.crumb.home
-        a(href="javascript:void(0)").br-button.circle
+        a(href="/").br-button.circle
           span.sr-only Página inicial
           i.fas.fa-home
-      if block
-        block
+      each crumb, index in props.crumbs
+        +crumb(crumb.label, crumb.href)(dataActive=(index === props.crumbs.length -1 ? 'active' : false))
 
-mixin crumb(name="crumb")
+mixin crumb(label, href)
   - className = ["crumb", attributes.class]
   li(class=className data-active=attributes.dataActive)
     i.icon.fas.fa-chevron-right
     if attributes.dataActive
-      span=name
+      span=label
     else
-      a(href="javascript:void(0)")=name
-      if block
-        block
+      a(href=href)=label
 
-
-mixin breadcrumb-default
-  +breadcrumb
-    +crumb("Página Ancestral 01")
-    +crumb("Página Ancestral 02")
-    +crumb("Página Ancestral 03")
-    +crumb("Página atual")(dataActive="active")
-
-mixin breadcrumb-truncate
-  +breadcrumb
-    +crumb("Página Ancestral 01")
-    +crumb("Página Ancestral 02")
-    +crumb("Página Ancestral 03")
-    +crumb("Página Ancestral Com Título Grande")
-      +tooltip("Página Ancestral Com Título Grande")(info place="top")
-    +crumb("Página atual")(dataActive="active")
-
+//- - mixin breadcrumb-truncate
+//-   +breadcrumb
+//-     +crumb("Página Ancestral 01")
+//-     +crumb("Página Ancestral 02")
+//-     +crumb("Página Ancestral 03")
+//-     +crumb("Página Ancestral Com Título Grande")
+//-       +tooltip("Página Ancestral Com Título Grande")(info place="top")
+//-     +crumb("Página atual")(dataActive="active")

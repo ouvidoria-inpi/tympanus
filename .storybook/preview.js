@@ -1,4 +1,17 @@
+import '../dist/core.css'
+import dsTheme from './dsTheme'
+
 export const parameters = {
+  layout: 'centered',
+  docs: {
+    theme: dsTheme,
+  },
+  backgrounds: {
+    values: [
+      { name: 'light', value: '#fff' },
+      { name: 'dark', value: '#333' },
+    ],
+  },
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
@@ -6,28 +19,36 @@ export const parameters = {
       date: /Date$/,
     },
     expanded: true,
-    sort: 'requiredFirst',
+    sort: 'alphabetical',
   },
   previewTabs: {
     canvas: {
-      title: 'Visualização do componente',
+      title: 'Preview do componente',
+    },
+    'storybook/docs/panel': {
+      hidden: true,
     },
   },
-  // options: {
-  //   storySort: {
-  //     order: ['Introdução', 'Suporte e Feedback', 'Eventos Emitidos pelos Componentes', 'CHANGELOG', 'Components'],
-  //   },
-  //   enableShortcuts: false,
-  // },
   html: {
     removeEmptyComments: true,
-    removeComments: /^\s*remove me\s*$/,
     highlighter: {
       showLineNumbers: true,
-      wrapLines: false,
     },
-    transform: (code) => {
-      return code.replace(/(?:_nghost|ng-reflect).*?="[\S\s]*?"/g, '')
+    prettier: {
+      tabWidth: 2,
+      useTabs: false,
+      htmlWhitespaceSensitivity: 'strict',
     },
   },
 }
+
+export const decorators = [
+  (story) => {
+    // REFACTOR: Conseguimos fazer o init direto aqui sem necessidade de importar o core-init.js?
+    return `
+      ${story()}
+      <script src="./core.min.js"></script>
+      <script src="./core-init.min.js"></script>
+      `
+  },
+]

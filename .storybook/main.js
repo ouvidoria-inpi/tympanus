@@ -4,8 +4,19 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
+    {
+      // https://storybook.js.org/addons/storypug
+      name: 'storypug',
+      options: {
+        babel: true, //use babel-loader
+        loaderOptions: {
+          root: 'src/components', // use src components as the pug root inclusion path
+        },
+      },
+    },
   ],
+  // Define as pastas que serão disponibilizadas na URL
+  staticDirs: ['../dist'],
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.scss$/,
@@ -16,8 +27,12 @@ module.exports = {
   },
   core: {
     builder: 'webpack5',
+    disableTelemetry: true,
   },
   features: {
     postcss: false,
+    modernInlineRender: true,
+    buildStoriesJson: true,
+    storyStoreV7: true,
   },
 }

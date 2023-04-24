@@ -2,7 +2,7 @@ import { create } from '@storybook/theming'
 
 export default create({
   base: 'light',
-  brandTitle: 'Web Components - GOVBR-DS',
+  brandTitle: 'GOVBR-DS',
   brandUrl: '/',
   brandImage: 'https://www.gov.br/ds/assets/img/govbr-logo.png',
   brandTarget: '_self',
