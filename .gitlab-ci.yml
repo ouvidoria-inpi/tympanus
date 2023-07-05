@@ -7,7 +7,7 @@ include:
 image: node:18-alpine
 
 stages:
-  - Dependências
+  - dependencia
   - test
   - performance
   - accessibility
@@ -20,8 +20,8 @@ cache:
   paths:
     - node_modules/
 
-Instalar dependências:
-  stage: Dependências
+dependencia:
+  stage: dependencia
   artifacts:
     paths:
       - node_modules
