@@ -298,4 +298,10 @@
   [class^="container"] {
     --grid-margin: 0;
   }
+
+  .#{$prefix}checkbox {
+    &:not(.hidden-label) {
+      --item-padding-y: 1px;
+    }
+  }
 }
