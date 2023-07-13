@@ -8,7 +8,7 @@
 
 | ID  | Nome       |                         Referência                          | Uso         |
 | --- | ---------- | :---------------------------------------------------------: | ----------- |
-| 1   | *Header*   |   [Componente Header](/ds/components/header?tab=designer)   | Opcional    |
+| 1   | *Header*   |   ---   | Opcional    |
 | 2   | Item       |     [Componente Item](/ds/components/item?tab=designer)     | Obrigatório |
 | 3   | Rótulo     | [Fundamento Tipografia](/ds/fundamentos-visuais/tipografia) | Opcional    |
 | 4   | *Divider*  |  [Componente Divider](/ds/components/divider?tab=designer)  | Opcional    |
