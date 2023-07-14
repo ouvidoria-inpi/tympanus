@@ -25,9 +25,26 @@
 			var(--pure-0)
 		);
 	}
+	.bg-gradient-cyan-vivid {
+		background: linear-gradient(
+			to bottom right,
+			var(--pure-0),
+			var(--cyan-vivid-5),
+			var(--cyan-vivid-20)
+		);
+	}
+
 	@media (max-width: 1280px) {
 		section div {
 			text-align: center;
+		}
+	}
+	@media (min-width: 576px) {
+		.img-wc-mobile {
+			display: none;
+		}
+		.img-wc {
+			display: block;
 		}
 	}
 	@media (max-width: 576px) {
@@ -35,6 +52,12 @@
 		#home-downloads img,
 		#home-componentes img {
 			min-height: auto;
+		}
+		.img-wc-mobile {
+			display: block;
+		}
+		.img-wc {
+			display: none;
 		}
 	}
 	/* ///// */
@@ -115,6 +138,52 @@
 		/>
 	</div>
 </section>
+
+<section
+	class="bg-gradient-cyan-vivid mx-n2 mx-sm-n6 px-2 px-sm-5 py-5 py-lg-8x px-lg-8x"
+>
+	<div class="row">
+		<div class="col-lg-6 d-flex justify-content-center align-items-center">
+			<div class="text-center">
+				<h1
+					class="text-up-05 text-sm-up-06 text-weight-regular text-sm-weight-light"
+				>
+					Web Components
+				</h1>
+				<p class="text-up-01 text-sm-up-02 text-weight-regular mb-6">
+					Seja um dos primeiros a utilizar nossa biblioteca de componentes
+					projetados para serem utilizados em diversas tecnologias,
+					como <b>Angular</b>, <b>React</b> e <b>Vue JS</b>.
+				</p>
+				<a
+					class="br-button block d-inline-flex auto-sm secondary mb-5"
+					href="https://gitlab.com/govbr-ds/dev/wbc/govbr-ds-wbc"
+					target="_blank"
+				>
+					Conheça os Web Components
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="img-wc text-center">
+				<img
+					src="imagens/web-components.png"
+					alt="Imagens Web Components"
+				/>
+			</div>
+		</div>
+	</div>
+	<div class="img-wc-mobile text-center">
+		<div class="mx-n2">
+			<img
+				src="imagens/web-components-mob.png"
+				class="img-components-mob mb-3"
+				alt="Imagem Designer"
+			/>
+		</div>
+	</div>
+</section>
+
 <section
 	id="home-padrao-minimo"
 	class="bg-gradient-mint-cool text-center text-sm-left mx-n2 mx-sm-n6 px-2 px-sm-5 pt-8x pb-0 px-lg-8x"
