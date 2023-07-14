@@ -210,9 +210,9 @@ Não há nenhum comportamento especial previsto para o componente *switch* quand
 | Chave de alternância (alta)  | <i class="fas fa-circle"></i> |  `--icon-size-sm`  |     `fa-circle`      |
 | Chave de alternância (média) | <i class="fas fa-circle"></i> |  `--icon-size-lg`  |     `fa-circle`      |
 | Chave de alternância (baixa) | <i class="fas fa-circle"></i> |  `--icon-size-2x`  |     `fa-circle`      |
-| Ícone off (alta)             | <i class="fas fa-circle"></i> |  `--icon-size-xs`  |      `fa-times`      |
-| Ícone off (média)            | <i class="fas fa-circle"></i> |  `--icon-size-sm`  |      `fa-times`      |
-| Ícone off (baixa)            | <i class="fas fa-circle"></i> | `--icon-size-base` |      `fa-times`      |
-| Ícone on (alta)              | <i class="fas fa-circle"></i> |  `--icon-size-xs`  |      `fa-check`      |
-| Ícone on (média)             | <i class="fas fa-circle"></i> |  `--icon-size-sm`  |      `fa-check`      |
-| Ícone on (baixa)             | <i class="fas fa-circle"></i> | `--icon-size-base` |      `fa-check`      |
+| Ícone off (alta)             | <i class="fas fa-times-circle"></i> |  `--icon-size-xs`  |      `fa-times-circle`      |
+| Ícone off (média)            | <i class="fas fa-times-circle"></i> |  `--icon-size-sm`  |      `fa-times-circle`      |
+| Ícone off (baixa)            | <i class="fas fa-times-circle"></i> | `--icon-size-base` |      `fa-times-circle`      |
+| Ícone on (alta)              | <i class="fas fa-check-circle"></i> |  `--icon-size-xs`  |      `fa-check-circle`      |
+| Ícone on (média)             | <i class="fas fa-check-circle"></i> |  `--icon-size-sm`  |      `fa-check-circle`      |
+| Ícone on (baixa)             | <i class="fas fa-check-circle"></i> | `--icon-size-base` |      `fa-check-circle`      |
