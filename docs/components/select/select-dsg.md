@@ -291,7 +291,7 @@ Quando o texto dos itens for maior que a largura do componente, poderá ocorrer 
 
 ### 7. *Feedback* após pesquisa
 
-Quando o usuário optar por utilizar a função de pesquisa e não for localizado o item procurado, o componente *input* deverá exibir, logo abaixo, uma mensagem de *feedback* do tipo "Empty State", onde será apresentando uma sugestão ou resposta visual para a informação pesquisada. Ver exemplo abaixo:
+Quando o usuário optar por utilizar a função de pesquisa e não for localizado o item procurado, o componente *input* deverá exibir, logo abaixo, uma mensagem de *feedback* do tipo "Empty State", onde será apresentada uma sugestão ou resposta visual para a informação pesquisada. Ver exemplo abaixo:
 ![Exemplo de mensagem de feedback do tipo empty state](imagens/select-feedback-search.png)
 *Exemplo de mensagem de feedback do tipo empty state.*
 
