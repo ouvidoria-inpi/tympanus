@@ -73,8 +73,7 @@ export default class Behavior {
     }
   }
   _initInstanceTooltipExample() {
-    const x = new TooltipExample()
-    x.run()
-    
+    const tooltipExample = new TooltipExample()
+    tooltipExample.run()
   }
 }

@@ -10,14 +10,13 @@ class TooltipExample {
    */
   constructor(element) {
     this.element = element
-    
   }
   /**
    * Inicia comportamento do exemplo
    * @private
    */
   _setBehavior() {
-    
+    this.TooltipExampleList = []
   }
 
   /**
@@ -26,7 +25,7 @@ class TooltipExample {
    */
 
   run() {
-    const TooltipExampleList = []
+    this.TooltipExampleList = []
 
     window.document
       .querySelectorAll('[data-tooltip-text]:not(.notification-tooltip)')
@@ -34,11 +33,10 @@ class TooltipExample {
         const texttooltip = TooltipExample.getAttribute('data-tooltip-text')
         const config = {
           activator: TooltipExample,
-          place: 'left',
+          place: 'top',
           textTooltip: texttooltip,
-          
         }
-        TooltipExampleList.push(new Tooltip(config))
+        this.TooltipExampleList.push(new Tooltip(config))
       })
 
     document.querySelectorAll('[data-tooltip-target]').forEach((trigger) => {
@@ -57,7 +55,6 @@ class TooltipExample {
           component: target,
           place: place,
           type: 'warning',
-          
         }
         // const tooltip = new Tooltip(config)
         new Tooltip(config)
