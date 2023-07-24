@@ -246,24 +246,35 @@ class BRDateTimePicker {
     this.config_native = {
       allowInput: true,
       dateFormat: format,
-      disableMobile: 'true',
       enableTime: time,
       minuteIncrement: 1,
+      wrap: true,
+    }
+    /**
+     * Sobreescreve com os atributos visuais necessarios
+     */
 
+    this.config_min_flat = {
+      disableMobile: 'true',
       mode: this.component.getAttribute('data-mode'),
       nextArrow:
         '<button class="br-button circle small" type="button"><i class="fas fa-chevron-right"></i></button>',
       noCalendar: noCalendar,
       prevArrow:
         '<button class="br-button circle small" type="button"><i class="fas fas fa-chevron-left"></i></button>',
-      time_24hr: true,
+
       wrap: true,
     }
-    this.config_flatpick = Object.assign(this.config, this.config_native)
+
+    this.config_flatpick = Object.assign(this.config_native, this.config)
+    this.config_flatpick = Object.assign(
+      this.config_flatpick,
+      this.config_min_flat
+    )
 
     this.calendar = flatpickr(
       this.component,
-      Object.assign(this.config, this.config_native)
+      Object.assign(this.config_native, this.config)
     )
 
     this.calendar.config.onOpen.push(() => {
