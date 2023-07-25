@@ -521,25 +521,143 @@ class BRSelect {
    */
   mountSelectedValues(input) {
     const GAP = 0.4
-    let amount = 1
-    let value = this.selected.toString().replaceAll(',', ', ')
+    this.amountE = this.amountE > 0 ? this.amountE : 0
+    const amount = this.amountE
+    const value = this.selected.toString().replaceAll(',', ', ')
     const tempSpan = document.createElement('span')
     tempSpan.innerHTML = value
     document.querySelector('body').insertAdjacentElement('beforeend', tempSpan)
-
-    while (tempSpan.offsetWidth > input.offsetWidth - input.offsetWidth * GAP) {
-      value = this.selected
-        .slice(0, this.selected.length - amount)
-        .toString()
-        .replaceAll(',', ', ')
-        .concat(` + (${amount})`)
-      tempSpan.innerHTML = value
-      amount++
-    }
-    input.value = value
-
+    const maxCharacterCount = this.getMaxCharacterCountBeforeOverflow(input)
+    this.amountE = amount
+    input.title = this.selected.toString().replaceAll(',', ', ')
+    const ct = this.encontrarPosicaoPorTamanho(
+      this.selected,
+      maxCharacterCount - 6
+    )
+    input.value = ct
     tempSpan.remove()
   }
+  /**
+   * Obtém o tamanho em pixels de um valor de texto.
+   *
+   * @param {string} value - O valor de texto para o qual se deseja obter o tamanho em pixels.
+   * @returns {number} O tamanho em pixels do valor de texto.
+   */
+  getPixelSize(value) {
+    const span = document.createElement('span')
+    span.style.visibility = 'hidden'
+    span.style.position = 'absolute'
+    span.style.left = '-9999px'
+    span.style.top = '-9999px'
+    span.style.whiteSpace = 'nowrap'
+    span.textContent = value
+
+    document.body.appendChild(span)
+    const size = span.getBoundingClientRect().width
+    document.body.removeChild(span)
+
+    return size
+  }
+  /**
+   * Retorna uma string contendo elementos de um array até o limite de caracteres especificado.
+   * Se houver elementos truncados, a quantidade de elementos truncados é indicada no final da string.
+   *
+   * @param {Array<string>} array - O array de elementos.
+   * @param {number} maxCharacterCount - O limite máximo de caracteres permitidos na string resultante.
+   * @returns {string} - A string contendo os elementos até o limite de caracteres, com indicação de elementos truncados, se houver.
+   */
+  encontrarPosicaoPorTamanho(array, maxCharacterCount) {
+    let account = 0
+    let value = ''
+    let acountVisible = 0
+    let posUltimoArray = 0
+
+    for (const element of array) {
+      const posicaoArray = array.indexOf(element)
+      account++
+      if (element.length >= maxCharacterCount && array.length === 1) {
+        return `${element.substring(0, maxCharacterCount)}... `
+      }
+
+      if (value.length >= maxCharacterCount) {
+        value += `${element}, `
+        value = `${value.substring(0, maxCharacterCount)}...`
+        acountVisible = acountVisible === 0 ? 1 : acountVisible
+        let contOverflow = posicaoArray - acountVisible
+        contOverflow =
+          acountVisible === 0 ? array.length - 1 : array.length - acountVisible
+        posUltimoArray = contOverflow
+      } else {
+        const tmpValue = posicaoArray > 0 ? `, ${element}` : `${element}`
+        value += `${tmpValue}`
+        acountVisible++
+      }
+    }
+    value = posUltimoArray <= 0 ? `${value}` : `${value} + (${posUltimoArray})`
+    return value
+  }
+
+  /**
+   * Retorna a quantidade máxima de caracteres de um elemento de input antes do overflow.
+   *
+   * @param {HTMLElement} input - O elemento de input.
+   * @returns {number} A quantidade máxima de caracteres antes do overflow.
+   */
+  getMaxCharacterCountBeforeOverflow(input) {
+    const style = window.getComputedStyle(input)
+    const padding =
+      parseFloat(style.paddingLeft) + parseFloat(style.paddingRight)
+    const border =
+      parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth)
+    const availableWidth = input.clientWidth - padding - border
+    const averageCharacterWidth = this.getAverageCharacterWidth(input)
+
+    return Math.floor(availableWidth / averageCharacterWidth)
+  }
+
+  /**
+   * Retorna a largura média de um caractere dentro de um elemento de input.
+   *
+   * @param {HTMLElement} input - O elemento de input.
+   * @returns {number} A largura média de um caractere.
+   */
+  getAverageCharacterWidth(input) {
+    const tempSpan = document.createElement('span')
+    tempSpan.style.visibility = 'hidden'
+    tempSpan.style.position = 'absolute'
+    tempSpan.style.whiteSpace = 'nowrap'
+    tempSpan.textContent = 'X'
+
+    document.body.appendChild(tempSpan)
+    const averageWidth = tempSpan.offsetWidth
+    document.body.removeChild(tempSpan)
+
+    return averageWidth
+  }
+
+  /**
+   * Filtra um array removendo elementos que ultrapassem o tamanho do input. Adiciona "..." aos elementos truncados.
+   *
+   * @param {Array} array - O array a ser filtrado.
+   * @param {HTMLElement} input - O elemento de input usado como referência para o tamanho máximo.
+   * @returns {Array} O array filtrado.
+   */
+  filterArrayByInputSize(array, input) {
+    const maxLength = getMaxCharacterCountBeforeOverflow(input)
+    const filteredArray = array.filter((element) => {
+      const elementText = element.toString()
+      if (getPixelSize(elementText) <= input.offsetWidth) {
+        return true
+      } else {
+        const truncatedText = `${elementText.substring(0, maxLength - 3)}...`
+        input.value = truncatedText
+        return false
+      }
+    })
+
+    return filteredArray
+  }
+
   /**
    * Retorna elemento posterior ao focado
    * @returns {object}

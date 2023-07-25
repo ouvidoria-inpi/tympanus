@@ -9,6 +9,7 @@ mixin select(label="Label")
       placeholder=attributes.placeholder ? attributes.placeholder : placeholder
       select
     )
+    
     +list()(tabindex="0")
       if block
         block
@@ -71,5 +72,6 @@ mixin select-multiplo-checked
     +option("Canada", "canada" + 15)(multiple)
     +option("México", "mexico" + 16)(multiple)
     +option("Costa Rica", "costa-rica" + 17)(multiple)
+    
   +feedback-warning
     | Texto auxiliar Função de prevenir erros.
