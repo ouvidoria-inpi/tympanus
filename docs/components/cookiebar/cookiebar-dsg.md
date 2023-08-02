@@ -276,24 +276,24 @@ Tudo o que é mencionado sobre o uso do *cookieBar* neste documento deve ser con
 
 ### Tipografia
 
-| Name                                        | Property    |        Token/Value         |
-| ------------------------------------------- | ----------- | :------------------------: |
-| Text (cookieBar default)                    | size        |  `––font-size-scale-base`  |
-| Text (cookieBar default)                    | font-weight |  `--font-weight-regular`   |
-| Text (cookieBar default)                    | line-height | `-–font-lineheight-medium` |
-| Text título (cookBar aberto)                | size        | `--font-size-scale-up-06`  |
-| Text título (cookieBar default)             | font-weight |  `--font-weight-regular`   |
-| Text última atualização (cookBar aberto)    | size        | `--font-size-scale-up-01`  |
-| Text última atualização (cookieBar default) | font-weight | `--font-weight-semi-bold`  |
-| Text conteúdo (cookBar aberto)              | size        |  `--font-size-scale-base`  |
-| Text conteúdo (cookieBar default)           | font-weight |  `--font-weight-regular`   |
-| Text (Sempre ativo)                         | size        |  `––font-size-scale-base`  |
-| Text (Sempre ativo)                         | font-weight | `--font-weight-semi-bold`  |
-| Text (Sempre ativo)                         | color       |    `--color-highlight`     |
-| Text col. esquerda (card)                   | size        |  `--font-size-scale-base`  |
-| Text col. esquerda (card)                   | font-weight | `--font-weight-semi-bold`  |
-| Text col. direita (card)                    | size        | `--font-size-scale-up-01`  |
-| Text col. direita (card)                    | font-weight |  `--font-weight-regular`   |
+| Name                                        | Property    |         Token/Value         |
+| ------------------------------------------- | ----------- | :-------------------------: |
+| Text (cookieBar default)                    | size        |  `––font-size-scale-base`   |
+| Text (cookieBar default)                    | font-weight |   `--font-weight-regular`   |
+| Text (cookieBar default)                    | line-height | `-–font-line-height-medium` |
+| Text título (cookBar aberto)                | size        |  `--font-size-scale-up-06`  |
+| Text título (cookieBar default)             | font-weight |   `--font-weight-regular`   |
+| Text última atualização (cookBar aberto)    | size        |  `--font-size-scale-up-01`  |
+| Text última atualização (cookieBar default) | font-weight |  `--font-weight-semi-bold`  |
+| Text conteúdo (cookBar aberto)              | size        |  `--font-size-scale-base`   |
+| Text conteúdo (cookieBar default)           | font-weight |   `--font-weight-regular`   |
+| Text (Sempre ativo)                         | size        |  `––font-size-scale-base`   |
+| Text (Sempre ativo)                         | font-weight |  `--font-weight-semi-bold`  |
+| Text (Sempre ativo)                         | color       |     `--color-highlight`     |
+| Text col. esquerda (card)                   | size        |  `--font-size-scale-base`   |
+| Text col. esquerda (card)                   | font-weight |  `--font-weight-semi-bold`  |
+| Text col. direita (card)                    | size        |  `--font-size-scale-up-01`  |
+| Text col. direita (card)                    | font-weight |   `--font-weight-regular`   |
 
 ### Sombra
 

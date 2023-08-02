@@ -126,11 +126,11 @@ Para utilizar corretamente o valor do entrelinhamento é preciso trabalhar com v
 
 **OBS:** para trabalhar com softwares que trabalham com unidades em pixel (como Adobe XD), multiplique o valor do tamanho da fonte pelo valor da entrelinha da tabela.  *Exemplo:* No H1 a line-height é 1.15 do valor de 41.8px (size), logo o valor final será 48,07px.*
 
-| Line-Height (em) | Token                      |
-| ---------------- | -------------------------- |
-| 1.15             | `--font-lineheight-low`    |
-| 1.45             | `--font-lineheight-medium` |
-| 1.85             | `--font-lineheight-high`   |
+| Line-Height (em) | Token                       |
+| ---------------- | --------------------------- |
+| 1.15             | `--font-line-height-low`    |
+| 1.45             | `--font-line-height-medium` |
+| 1.85             | `--font-line-height-high`   |
 
 ---
 
@@ -403,14 +403,14 @@ Lembre-se, o valor *line-height* (entrelinhamento) não se refere à fonte base,
 ![Lista com Definições](imagens/list-definitions.png)
 *Exemplo de Lista com Definições em fundo claro e escuro*
 
-| Propriedade   | Token / Valor               |
-| ------------- | --------------------------- |
-| Size          | `--font-size-scale-up-01`   |
-| Weight        | `--font-weight-regular`     |
-| Line-height   | `--font-line-height-medium` |
-| Color         | `--gray-80`                 |
-| Color (dark)  | `--pure-0`                  |
-| Margin-bottom (item) | `--spacing-scale-base`        |
+| Propriedade                    | Token / Valor               |
+| ------------------------------ | --------------------------- |
+| Size                           | `--font-size-scale-up-01`   |
+| Weight                         | `--font-weight-regular`     |
+| Line-height                    | `--font-line-height-medium` |
+| Color                          | `--gray-80`                 |
+| Color (dark)                   | `--pure-0`                  |
+| Margin-bottom (item)           | `--spacing-scale-base`      |
 | Margin-bottom (lista completa) | `--spacing-scale-2x`        |
 
 ---

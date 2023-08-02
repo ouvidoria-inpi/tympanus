@@ -21,9 +21,7 @@
       text-overflow: ellipsis;
 
       &::after {
-        background-color: white;
         bottom: 0;
-        content: " mais texto";
         padding: 0 5px;
         position: absolute;
         right: 0;
