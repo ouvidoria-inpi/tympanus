@@ -281,7 +281,7 @@ export class CookiebarTemplates {
                                   <span>${this.labels.setCookieEnterpriseLabel()}</span>
                                 </div>
                                 <div class="col-12 col-sm mb-1 cookie-data">
-                                  <span>${cookieData.entreprise}</span>
+                                  <span>${cookieData.enterprise}</span>
                                 </div>
                               </div>
                               <div class="row">

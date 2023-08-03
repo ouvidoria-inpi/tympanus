@@ -44,7 +44,7 @@ const jsonData = `[
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
-            "entreprise": "Serpro",
+            "enterprise": "Serpro",
             "purpose": "Autorização",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
           },
@@ -56,7 +56,7 @@ const jsonData = `[
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
-            "entreprise": "Serpro",
+            "enterprise": "Serpro",
             "purpose": "Autorização",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
           }
@@ -78,7 +78,7 @@ const jsonData = `[
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
-            "entreprise": "Serpro",
+            "enterprise": "Serpro",
             "purpose": "Autorização",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
           },
@@ -89,7 +89,7 @@ const jsonData = `[
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
-            "entreprise": "Serpro",
+            "enterprise": "Serpro",
             "purpose": "Autorização",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
           }
@@ -111,7 +111,7 @@ const jsonData = `[
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
-            "entreprise": "Serpro",
+            "enterprise": "Serpro",
             "purpose": "Autorização",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
           },
@@ -122,7 +122,7 @@ const jsonData = `[
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
-            "entreprise": "Serpro",
+            "enterprise": "Serpro",
             "purpose": "Autorização",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
           }

@@ -62,7 +62,7 @@ Para usar o componente Cookiebar é necessário os seguintes artefatos:
             "cookieName": "",
             "expires": "",
             "domain": "s",
-            "entreprise": "",
+            "enterprise": "",
             "purpose": "",
             "description": ""
           },
@@ -375,7 +375,7 @@ O JSON de Entrada de Dados é um array, em que cada elemento é objeto contendo 
 -   **Tipo**: String
 -   **Uso**: Obrigatório
 
-#### `entreprise`
+#### `enterprise`
 
 -   **Descrição**: Nome da empresa
 -   **Tipo**: String
