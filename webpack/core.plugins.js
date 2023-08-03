@@ -78,8 +78,40 @@ function productionPlugins(argv) {
 
   return plugins
 }
+function deleteOnlyCssUtil() {
+  const utilSrcFile = path.resolve(paths.src, 'util')
+  fs.readdirSync(utilSrcFile).forEach((file) => {
+    const fileEmptyJS = path.resolve(paths.dist, 'util', file, `${file}.js`)
+    const fileEmptyJSMap = path.resolve(
+      paths.dist,
+      'util',
+      file,
+      `${file}.js.map`
+    )
+    const fileEmptyJSMin = path.resolve(
+      paths.dist,
+      'util',
+      file,
+      `${file}.min.js`
+    )
+    const fileSRCJS = path.resolve(paths.src, 'util', file, `${file}.js`)
+
+    if (fs.existsSync(fileEmptyJS) && !fs.existsSync(fileSRCJS)) {
+      deleteJSempty(fileEmptyJS)
+      deleteJSempty(fileEmptyJSMap)
+      deleteJSempty(fileEmptyJSMin)
+    }
+  })
+}
+
+function deleteJSempty(jsempty) {
+  if (fs.existsSync(jsempty)) {
+    fs.unlinkSync(jsempty)
+  }
+}
 
 function minififyComponentsUTils() {
+  deleteOnlyCssUtil()
   readUtilDirectory(paths.srcJSUtilbehavior, 'behavior')
   readDirectory(paths.srcComponents, 'components')
 }
@@ -87,9 +119,11 @@ function minififyComponentsUTils() {
 function devPlugins(argv) {
   // identifica se a build foi disparada pelo webpack-dev-server.
   // Caso não tenha sido, adicione ao index.html do servidor de desenvolvimento
-  // um link para a página de análise de bundle, gerada pelo BundleAnalyzerPlugin
+  // um link para a página de análise de bundle, gerada pelo BundleAnalyzerPlugin, se for executado no ambiente de desenvolvimento
   // (que atualmente só funciona com build gerando os artefatos em arquivos no filesystem)
+
   const isDevServer = process.env.WEBPACK_DEV_SERVER === 'true'
+  const isDevBundleAnalyzer = argv.env.BUNDLEANALYZER === 'true' ? true : false
 
   const plugins = [
     // Extrai o css que não vai ser minificado
@@ -97,6 +131,7 @@ function devPlugins(argv) {
       filename: '[name].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
+    // Gera a pagina do index
     new HTMLWebpackPlugin({
       template: path.resolve(paths.src, 'index.html'),
       favicon: path.resolve(paths.src, 'favicon.ico'),
@@ -104,19 +139,6 @@ function devPlugins(argv) {
       isDevServer,
     }),
 
-    // {
-    //   apply: (compiler) => {
-    //     compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-    //       exec(
-    //         '<path to your post-build script here>',
-    //         (err, stdout, stderr) => {
-    //           if (stdout) process.stdout.write(stdout)
-    //           if (stderr) process.stderr.write(stderr)
-    //         }
-    //       )
-    //     })
-    //   },
-    // },
     new AfterBuildPlugin(minififyComponentsUTils),
   ]
 
@@ -126,7 +148,7 @@ function devPlugins(argv) {
 
   // BundleAnalyzerPlugin só funciona com builds no filesystem. Ou seja, não é
   // compatível com a build em memória do webpack-dev-server.
-  if (!isDevServer) {
+  if (isDevBundleAnalyzer) {
     plugins.push(
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',

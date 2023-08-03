@@ -87,3 +87,6 @@ report-commitlint.txt
 
 jsdoc
 public
+
+dist/report.html
+report.html
