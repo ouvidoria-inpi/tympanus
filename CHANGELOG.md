@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## [3.4.0](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.3.1...v3.4.0) (03/08/2023)
+
+
+### ✨ Novidades
+
+* Altera posição do config do datetimepicker ([ba28dda](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/ba28dda7ed9e8445e43c22072e16287460e162da))
+* **web components:** inclui chamada na home para os webcomponents ([896a4f6](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/896a4f6c7b425b06ccaa97bf23e49b16f075e77f))
+
+
+### 📚 Documentação
+
+* **table:** altera as imagens do componente e correção gramatical ([8b20636](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/8b2063676cb0eaba7dfffd17cdb6084fbb1ba7b8))
+* atualiza url da wiki ([6de343d](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/6de343d5ddb4f844781451e850a0e68df7e1cf88))
+* **switch:** corrige referencias dos icones on e off ([2ab8c09](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/2ab8c09593d58ac7cb7a8dcfddc3959dc1f6beac))
+* **switch:** corrige referencias dos icones on e off ([6163a4f](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/6163a4f3e035751a77b3320a917d2cdedb130cd5))
+* **list:** remove referencia errada sobre header ([e06652f](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/e06652ffa00ec5cb6d69248d3a852217a79edac7))
+
+
+### 🪲 Correções
+
+* **emptystate:** ajusta as imagens das diretrizes ([0c7b1ae](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/0c7b1ae613ff0a12da96875d60ae6404f756bd68))
+* ajusta margins da home ([bab14bd](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/bab14bd9fccbadcd704e2c29bfe613fb97c773cc))
+* altera a build removendo js e report.html ([ac5b501](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/ac5b501c686b1e72413e12a0041fbd58a3ccb55d))
+* cookiebar-checkbox ([6c39760](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/6c397609d84dd43b3c3dc50c1b395191173b90b3))
+* correção de reticencia quando tem overflow no select ([d69d0c7](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/d69d0c72684a2eed64eda9e0527e47118e62b2ff)), closes [govbr-ds/govbr-ds-backlogs#497](https://gitlab.com/govbr-ds/govbr-ds-backlogs/issues/497)
+* **header:** correção do dropdown quando fecha ele no mobile ([0968c17](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/0968c1789455c610aa9680d7532c9cfd7ee21bc5))
+* **tipografia:** correção do nome do token font-line-height ([098d977](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/098d977a90d7848ea9a75745fe8c3734127f22c4))
+* correção nomeclatura do pipeline ([dff8719](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/dff87198d0590c077fc31021621faca48138e1f7))
+* **cookiebar:** corrige erro de inglês  na palavra enterprise ([286bfd9](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/286bfd9917cad0047cab0490b0a89c1374a5acb4))
+* **tooltip:** corrige o tooltip que retorna erro no console do browser ([7a0bb43](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/7a0bb437ec24b52f8796b0b42ab105036aeafd9a))
+* **select:** retira o termo "ops!" da mensagem de empty-state padrão ([0baa6de](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/0baa6de1c59d3f6d0599c168c31592ac79a4e937))
+
 ## [3.3.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.3.0...v3.3.1) (05/04/2023)
 
 
