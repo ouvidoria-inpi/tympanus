@@ -1,0 +1,21 @@
+// Cria as classes de displays
+@each $display in $displays {
+  .d-#{$display} {
+    display: #{$display} !important;
+  }
+}
+
+// Aplicação por breakpoints
+@each $breakpoint in map-keys($breakpoints) {
+  @if $breakpoint != "mobile" {
+    @include media-breakpoint($breakpoint) {
+      $breakpoint-abbr: map-get($breakpoints-abbr, $breakpoint);
+
+      @each $display in $displays {
+        .d-#{$breakpoint-abbr}-#{$display} {
+          display: #{$display} !important;
+        }
+      }
+    }
+  }
+}

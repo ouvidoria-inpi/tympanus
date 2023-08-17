@@ -1,0 +1,111 @@
+// Cria utilitários de superfície do tema.
+@mixin make-theme-surfaces {
+  @each $key, $value in $theme-surfaces {
+    $read: map-get($theme-reads, $key);
+
+    @include surface-color($key, $value);
+  }
+}
+
+// Cria utilitários de leitura do tema.
+@mixin make-theme-reads {
+  @each $key, $value in $theme-reads {
+    @include read-color($key, $value);
+  }
+}
+
+// Cria utilitários de borda do tema.
+@mixin make-theme-borders {
+  @each $key, $value in $theme-borders {
+    @include border-color($key, $value);
+  }
+}
+
+// Cria utilitários de cores interativas do tema.
+@mixin make-theme-interactives {
+  @each $key, $value in $theme-interactive {
+    $read: map-get($theme-interactive-reads, $key);
+
+    @include surface-color($key, $value);
+    @include read-color($key, $value);
+    @include border-color($key, $value);
+  }
+}
+
+// Cria utilitários de cores de aviso do tema.
+@mixin make-theme-feedbacks {
+  @each $key, $value in $theme-feedback {
+    $read: map-get($theme-feedback-reads, $key);
+
+    @include surface-color($key, $value, $read);
+    @include read-color($key, $value);
+    @include border-color($key, $value);
+  }
+}
+
+/// Modifica as variáveis globais de estado para a **versão de contraste**.
+/// @example
+///  .br-button.primary {
+///    ...
+///    @include states-contrast-mode;
+///  }
+///
+///  .br-button.primary {
+///    ...
+///    --hover: var(--theme-hover-opacity-contrast);
+///    --pressed: var(--theme-pressed-opacity-contrast);
+///    --focus: var(--theme-focus-contrast);
+///    --active: var(--theme-activated-contrast);
+///    --active-read: var(--theme-activated-read-contrast);
+///    --elevation-opacity: var(--elevation-opacity-contrast);
+///  }
+@mixin states-contrast-mode($focus: null) {
+  --hover: var(--theme-hover-opacity-contrast);
+  --pressed: var(--theme-pressed-opacity-contrast);
+
+  @if $focus {
+    --focus: var(--theme-focus-contrast);
+  }
+
+  --active: var(--theme-activated-contrast);
+  --active-read: var(--theme-activated-read-contrast);
+  --elevation-opacity: var(--elevation-opacity-contrast);
+}
+
+/// Modifica as variáveis globais de tema para a **versão de contraste**.
+/// @example
+///  .bg-contrast-base {
+///    @include contrast-mode;
+///    background-color: var(--theme-surface-contrast-base);
+///  }
+///
+///  .bg-contrast-base {
+///    --background-alternative: var(--theme-surface-contrast-alternative);
+///    --read: var(--theme-surface-read-contrast-base);
+///    --read-alternative: var(--theme-surface-read-contrast-alternative);
+///    --interactive: var(--theme-interactive-contrast);
+///    --interactive-rgb: var(--theme-interactive-contrast-rgb);
+///    --color: var(--read);
+///    --hover: var(--theme-hover-opacity-contrast);
+///    --pressed: var(--theme-pressed-opacity-contrast);
+///    --focus: var(--theme-focus-contrast);
+///    --active: var(--theme-activated-contrast);
+///    --active-read: var(--theme-activated-read-contrast);
+///    --elevation-opacity: var(--elevation-opacity-contrast);
+///    background-color: var(--theme-surface-contrast-base);
+///  }
+@mixin contrast-mode {
+  // Variáveis de tema
+  --background-alternative: var(--theme-surface-contrast-alternative);
+  --border: var(--theme-border-contrast-base);
+  --border-alternative: var(--theme-border-contrast-alternative);
+  --read: var(--theme-surface-read-contrast-base);
+  --read-alternative: var(--theme-surface-read-contrast-alternative);
+  --interactive: var(--theme-interactive-contrast);
+  --interactive-hover: var(--theme-hover-contrast);
+  --interactive-pressed: var(--theme-pressed-contrast);
+  --color: var(--read);
+
+  // Variáveis de Estado
+  @include states-contrast-mode($focus: true);
+}

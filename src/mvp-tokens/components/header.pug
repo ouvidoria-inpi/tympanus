@@ -1,0 +1,13 @@
++header#header
+  div(class=containerType)
+    .header-bottom
+      +header-menu
+        .header-menu-trigger
+          +button.circle.small#navigation(aria-label="Menu" data-toggle="menu" data-target="#menu")
+            +icon.fa-bars
+        .header-info
+          a(href=`${baseUrl}/`).header-title=headerTitle
+          if headerSubtitle
+            .header-subtitle=headerSubtitle
+      +header-search
+        include theme-selector.pug

@@ -1,0 +1,39 @@
+// Carrega todas as dependências
+@import "../config";
+
+// Gira ícone
+.toggle-icon {
+  display: inline-flex;
+
+  @include motion-effect("rotation", "transform");
+}
+
+// Esconde collapse por padrão. Ele ficará visível por js
+.collapse {
+  height: 0;
+  overflow: hidden;
+
+  @include motion-effect("sliding", "height");
+}
+
+// Esconde dropdown por padrão. Ele ficará visível por js
+.dropdown {
+  display: block;
+  position: relative;
+
+  &-body {
+    background-color: var(--theme-surface-main-base);
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    white-space: nowrap;
+
+    @include elevation-layer(3);
+    @include motion-effect("sliding", "max-height, visibility");
+
+    &.show {
+      visibility: visible;
+    }
+  }
+}

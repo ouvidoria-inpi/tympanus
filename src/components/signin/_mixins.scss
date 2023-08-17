@@ -1,28 +1,101 @@
 @mixin signin-configs {
-  @include signin-tokens;
-  @include signin-default;
-  @include signin-dark;
-}
+  // Tokens do componente
+  --button-background: var(--theme-surface-main-alternative);
+  --button-border: transparent;
+  --color: var(--interactive);
+  --button-radius: var(--rounder-full);
+  --button-high-density: 32px;
+  --button-default-density: 40px;
+  --button-low-density: 48px;
+  --button-density: var(--button-default-density);
 
-@mixin signin-tokens {
-  --background: var(--gray-2);
-  --sign-in-img: 20px;
-}
+  // Configuração padrão
+  background-color: var(--button-background);
+  border-color: currentcolor;
+  border-radius: var(--button-radius);
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  display: inline-flex;
+  height: var(--button-density);
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 var(--spacing-sm);
+  place-items: center;
+  position: relative;
+  text-decoration: none !important;
+  vertical-align: middle;
 
-@mixin signin-default {
-  background-color: var(--background);
-  padding: 0 var(--spacing-scale-2x);
+  // Overlay
+  > .overlay {
+    background-color: currentcolor;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
 
-  img {
-    max-height: var(--sign-in-img);
+    @include motion-effect("fading", "opacity");
   }
-}
 
-@mixin signin-dark {
-  &.inverted,
-  &.is-inverted,
-  &[inverted],
-  &.dark-mode {
-    --background: var(--background-dark);
+  // Conteúdo
+  > .content {
+    display: flex;
+    font-size: var(--font-size-scale-up-01);
+    font-weight: var(--font-weight-semi-bold);
+    gap: var(--spacing-xs);
+    place-items: center;
+  }
+
+  // Enfases
+  &.primary {
+    --button-background: var(--theme-interactive-main);
+    --color: var(--theme-interactive-read-main);
+
+    @include states-contrast-mode;
+  }
+
+  &.secondary {
+    border-width: 1px;
+  }
+
+  // Tipo circular
+  &.circle {
+    border-radius: var(--rounder-full);
+    padding: 0;
+    width: var(--button-density);
+  }
+
+  // Densidades
+  @each $density in $densities {
+    &.density-#{$density} {
+      --button-density: var(--button-#{$density}-density);
+    }
+  }
+
+  // Estado Focus
+  @include focus;
+
+  // Estado Hover
+  &:hover:not(.disabled):not([disabled]) > .overlay {
+    opacity: var(--hover);
+  }
+
+  // Estado Pressed
+  @include pressed;
+
+  // Estado Ativado
+  &.active {
+    --button-background: var(--theme-activated-main);
+    --color: var(--theme-activated-read-main);
+  }
+
+  // Estado Desativado
+  &.disabled {
+    cursor: not-allowed;
+    opacity: var(--disabled);
+
+    * {
+      pointer-events: none;
+    }
   }
 }

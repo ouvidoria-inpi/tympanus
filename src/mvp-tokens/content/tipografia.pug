@@ -1,0 +1,276 @@
+extend ../templates/page.pug
+
+append vars
+  - title = 'Tipografia padrão do Design System'
+
+block page
+  h2.h1 &lt;h1&gt;Sobre o Design System&lt;/h1&gt;
+
+  p &lt;p&gt;O &lt;a&gt;<a href="https://gov.br/ds/" target="_blank">Padrão Digital de Governo</a>&lt;/a&gt; apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação com os sistemas interativos.&lt;/p&gt;
+
+  h2 &lt;h2&gt;Por que unificar a experiência dos cidadãos brasileiros quando estão em contato com o Governo por meio digital?&lt;/h2&gt;
+
+  span &lt;ol&gt;
+  ol
+    li &lt;li&gt;A proposta surgiu a partir do sentimento comum acerca da necessidade de oferecer uma experiência única ao cidadão que se relaciona com o governo para acessar produtos e serviços públicos.&lt;/li&gt;
+    li &lt;li&gt;A iniciativa potencializa a eficiência e a eficácia dos usuários na utilização de interfaces para acesso aos serviços e aos sistemas de Governo, possibilitando uma única curva de aprendizado e garantindo a previsibilidade na utilização dos diferentes sistemas.&lt;/li&gt;
+  p &lt;/ol&gt;
+
+  p Exemplo de &lt;code&gt;<code>código</code>&lt;/code&gt; de um &lt;mark&gt;<mark>componente</mark>&lt;/mark&gt;:
+
+  span &lt;pre&gt;&lt;code&gt;
+  pre
+    code.
+      &lt;div class="p-3"&gt;
+        &lt;button class="br-button primary mr-3" type="button"&gt;Primário&lt;/button&gt;
+        &lt;button class="br-button secondary mr-3" type="button"&gt;Secundário&lt;/button&gt;
+        &lt;button class="br-button" type="button"&gt;Terciário&lt;/button&gt;
+      &lt;/div&gt;
+  p &lt;/code&gt;&lt;/pre&gt;
+
+  h3 &lt;h3&gt;Histórico&lt;/h3&gt;
+
+  span &lt;ul&gt;
+  ul
+    li &lt;li&gt;O projeto atual se refere a uma evolução do trabalho desenvolvido para a construção da Identidade Digital de Governo (IDG) e da IDG de Serviços, iniciativas que buscavam padronizar os portais dos órgãos públicos federais e alinhar as informações para otimizar a comunicação e simplificar as interfaces de oferta de informações para o cidadão.&lt;/li&gt;
+    li &lt;li&gt;O diferencial dessa versão está na possibilidade de realizar download de templates, códigos e componentes, propiciando o reaproveitamento de diferentes elementos necessários ao desenvolvimento de interfaces. Com isso, amplia-se a eficiência e a produtividade de desenvolvedores e designers, além de facilitar o desenvolvimento alinhado à experiência única do cidadão.&lt;/li&gt;
+    li &lt;li&gt;Diante dessa visão, o Governo desenvolveu um Design System que tem como objetivo guiar todos os responsáveis pela construção de interfaces interativas orientadas à experiência única do usuário, considerando a acessibilidade e a usabilidade dos sistemas.&lt;/li&gt;
+    li &lt;li&gt;A iniciativa foi desenvolvida no âmbito do Projeto de Unificação de Canais Digitais do Governo, que envolveu a participação da Secretaria de Governo Digital do Ministério da Economia (SGD), a Secretaria Especial de Modernização do Estado (SEME), a Secretaria Especial de Comunicação Social da Presidência da República (SECOM) e o Serviço Federal de Processamento de Dados (SERPRO).&lt;/li&gt;
+  p &lt;/ul&gt;
+
+  h4 &lt;h4&gt;Afinal, o que é Design System?&lt;/h4&gt;
+
+  span &lt;blockquote&gt;
+  blockquote
+    | Um Design System não é um projeto, é um produto que serve produtos
+    cite &lt;cite&gt;– [Natan curtis]&lt;/cite&gt;
+  p &lt;/blockquote&gt;
+
+  p Este é um documento vivo com diversos componentes e propriedades de um produto ou serviço para facilitar a comunicação com os diversos times.
+
+  p Isso beneficia tanto o resultado que se almeja alcançar com o software como a comunicação, as pessoas, os negócios e as empresas.
+
+  p A ideia é que esse produto seja utilizado para consulta, para se tomar decisões, para novas features, novas interfaces e novas propriedades dos produtos do governo.
+
+  h5 &lt;h5&gt;Formulário&lt;/h5&gt;
+
+  span &lt;form&gt;
+  form
+    span &lt;fieldset&gt;
+    fieldset
+      legend &lt;legend&gt;Inputs&lt;/legend&gt;
+
+      label(for="label") Label
+      input(type="text" id="label" placeholder="Placeholder")
+
+      label(for="input") Preenchido
+      input(type="text" id="input" placeholder="Placeholder" value="Input")
+
+      label(for="data") Data
+      input(type="date" id="data")
+
+      label(for="email") Email
+      input(type="email" id="email")
+    p &lt;/fieldset&gt;
+
+    fieldset
+      legend Selects
+
+      label(for="select") Select
+      select(id="select")
+        option(value="") Selecione
+        option(value="volvo") Volvo
+        option(value="saab") Saab
+        option(value="mercedes") Mercedes
+        option(value="audi") Audi
+
+      label(for="selectgroup") Select group
+      select(id="selectgroup")
+        option(value="") Selecione
+        optgroup(label="Swedish Cars")
+          option(value="volvo") Volvo
+          option(value="saab") Saab
+        optgroup(label="German Cars")
+          option(value="mercedes") Mercedes
+          option(value="audi") Audi
+    fieldset
+      legend Seletores
+
+      input(type="radio" id="html" name="fav_language" value="HTML")
+      label(for="html") HTML
+      input(type="radio" id="css" name="fav_language" value="CSS")
+      label(for="css") CSS
+      input(type="radio" id="javascript" name="fav_language" value="JavaScript")
+      label(for="javascript") JavaScript
+
+      br
+      br
+
+      input(type="checkbox" id="vehicle1" name="vehicle1" value="Bike")
+      label(for="vehicle1") I have a bike
+      input(type="checkbox" id="vehicle2" name="vehicle2" value="Car")
+      label(for="vehicle2") I have a car
+      input(type="checkbox" id="vehicle3" name="vehicle3" value="Boat")
+      label(for="vehicle3") I have a boat
+
+      br
+      br
+
+    fieldset
+      legend Envios
+
+      input(type="reset" value="Reset")
+      input(type="submit" value="Submit")
+      button Button
+  p &lt;/form&gt;
+
+  h6 &lt;h6&gt;O Design System&lt;/h6&gt;
+
+  p
+    img(src="https://www.gov.br/ds/assets/govbr-ds-dev-core/docs/introducao/sobre/imagens/imagens_ds.png" alt="Ilustração do design system")
+
+  p Alguns elementos definidos para compor o Design System - Família Tipográfica, Paleta de Cores, Padronização de Botões e Logotipo.
+
+  p Como Design System oficial de Governo, ele atende a uma ampla gama de designers e desenvolvedores que criam produtos e experiências digitais. Os objetivos do sistema incluem melhorar a consistência e a qualidade da interface, tornando o processo de design e desenvolvimento mais eficiente e focado, estabelecendo um vocabulário compartilhado entre designer e desenvolvedor, fornecendo orientação clara e identificável sobre as melhores práticas de design e desenvolvimento.
+
+  span &lt;table&gt;
+  .overflow-auto
+    table
+      caption &lt;caption&gt;Aqui está um exemplo de caption da tabela&lt;/caption&gt;
+      tr
+        th Tipografia
+        th Aplicação automática?
+        th Utilitário CSS
+        th Cor
+        th Tamanho (Desktop)
+        th Peso
+        th Espaçamentos (Desktop)
+      tr
+        td Parágrafo
+        td sim
+        td -
+        td -
+        td
+          code font-size-scale-base
+        td
+          code font-weight-regular
+        td
+          | Margin pra baixo: 
+          code spacing-sm
+      tr
+        td Link
+        td sim
+        td -
+        td
+          code theme-interactive-main
+        td -
+        td -
+        td -
+      tr
+        td Título 1
+        td sim
+        td
+          code h1
+        td -
+        td
+          code font-size-scale-up-06
+          |  (<code>font-size-scale-up-08</code>)
+        td
+          code font-weight-light
+        td
+          | Margin pra baixo: 
+          code spacing-md
+          |  (<code>spacing-xxl</code>)
+      tr
+        td Título 2
+        td sim
+        td
+          code h2
+        td -
+        td
+          code font-size-scale-up-05
+          |  (<code>font-size-scale-up-07</code>)
+        td
+          code font-weight-regular
+        td
+          | Margin pra baixo: 
+          code spacing-md
+          |  | Margin pra cima: 
+          code spacing-lg
+      tr
+        td Título 3
+        td sim
+        td
+          code h3
+        td -
+        td
+          code font-size-scale-up-04
+          |  (<code>font-size-scale-up-05</code>)
+        td
+          code font-weight-medium
+        td
+          | Margin pra baixo: 
+          code spacing-md
+          |  | Margin pra cima: 
+          code spacing-lg
+      tr
+        td Título 4
+        td sim
+        td
+          code h4
+        td -
+        td
+          code font-size-scale-up-03
+          |  (<code>font-size-scale-up-04</code>)
+        td
+          code font-weight-semi-bold
+        td
+          | Margin pra baixo: 
+          code spacing-md
+          |  | Margin pra cima: 
+          code spacing-sm
+          |  (<code>spacing-xl</code>)
+      tr
+        td Título 5
+        td sim
+        td
+          code h5
+        td -
+        td
+          code font-size-scale-up-02
+        td
+          code font-weight-bold
+        td
+          | Margin pra baixo: 
+          code spacing-sm
+          |  | Margin pra cima: 
+          code spacing-sm
+          |  (<code>spacing-xl</code>)
+      tr
+        td Título 6
+        td sim
+        td
+          code h6
+        td -
+        td
+          code font-size-scale-up-01
+        td
+          code font-weight-extra-bold
+        td
+          | Margin pra baixo: 
+          code spacing-sm
+          |  | Margin pra cima: 
+          code spacing-sm
+          |  (<code>spacing-xl</code>)
+      tr
+        td Label
+        td não
+        td
+          code label
+        td -
+        td
+          code font-size-scale-down-01
+        td
+          code font-weight-semi-bold
+        td -
+  p &lt;/table&gt;

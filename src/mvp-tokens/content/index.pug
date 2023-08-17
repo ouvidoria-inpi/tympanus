@@ -1,0 +1,149 @@
+extend ../templates/page.pug
+
+block page
+  section#servicos
+    div(class=containerType)
+      h1.text-center Serviços para você
+      .row
+        .col-sm
+          .text-center
+            +icon.fa-hand-point-right
+            span.ml-2 Recomendados
+        .col-sm
+          .text-center
+            +icon.fa-fire
+            span.ml-2 Serviços mais acessados do govbr
+        .col-sm
+          .text-center
+            +icon.fa-star
+            span.ml-2 Serviços em destaque do govbr
+      .row.mt-3
+        .col-sm.d-flex
+          +card.flex-fill
+            +list
+              +item(href="https://www.gov.br/pt-br/servicos/obter-isencao-do-imposto-de-renda-por-doencas-previstas-na-legislacao-tributaria").d-flex.align-items-baseline
+                +icon.fa-hand-holding-usd.text-main-alternative
+                .ml-2 Solicitar isenção do Imposto de Renda
+              +divider
+              +item(href="https://www.gov.br/pt-br/servicos/obter-isencao-de-impostos-para-comprar-carro").d-flex.align-items-baseline
+                +icon.fa-university.text-main-alternative
+                .ml-2 Obter isenção de impostos para comprar carro
+              +divider
+              +item(href="https://www.gov.br/pt-br/servicos/obter-restituicao-ressarcimento-ou-reembolso-de-tributos-federais").d-flex.align-items-baseline
+                +icon.fa-university.text-main-alternative
+                .ml-2 Obter restituição de tributos federais
+        .col-sm.d-flex
+          +card.flex-fill
+            +list
+              +item(href="https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas").d-flex.align-items-baseline
+                span.text-main-alternative 1.
+                .ml-2 Consultar CPF
+              +divider
+              +item(href="https://www.gov.br/pt-br/servicos/receber-o-abono-salarial").d-flex.align-items-baseline
+                span.text-main-alternative 2.
+                .ml-2 Receber o Abono Salarial
+              +divider
+              +item(href="https://www.gov.br/pt-br/servicos/consultar-restituicao-de-imposto-de-renda").d-flex.align-items-baseline
+                span.text-main-alternative 3.
+                .ml-2 Consultar restituição do Imposto de Renda
+        .col-sm.d-flex
+          +card.flex-fill
+            +list
+              +item(href="https://www.gov.br/pt-br/servicos/fazer-o-exame-nacional-para-certificacao-de-competencias-de-jovens-e-adultos")
+                .mb-2.text-down-02.text-main-alternative Educação e Pesquisa
+                | Fazer o ENCCEJA (Encceja)
+              +divider
+              +item(href="https://www.gov.br/pt-br/servicos/solicitar-adesao-ao-projeto-mais-medicos-e-ao-programa-medicos-pelo-brasil")
+                .mb-2.text-down-02.text-main-alternative Saúde e Vigilância Sanitária
+                | Aderir ao Mais Médicos e ao Médicos pelo Brasil
+              +divider
+              +item(href="https://www.gov.br/pt-br/servicos/obter-extrato-de-informacoes-do-beneficio")
+                .mb-2.text-down-02.text-main-alternative Trabalho, Emprego e Previdência
+                | Emitir Extrato de Informações do Benefício
+
+  //- section#carrossel.mt-9
+  //-   .container-fluid
+  //-     .row
+  //-       .col-sm-12
+  //-         .br-carousel
+  //-           .carousel-button
+  //-             +button.carousel-btn-prev.circle(aria-label="Anterior")
+  //-               +icon.fa-chevron-left
+  //-           .carousel-stage
+  //-             .carousel-page(active)
+  //-               .carousel-content.bg-blue-10
+  //-                 .h3.carousel-title Página 1
+  //-             .carousel-page
+  //-               .carousel-content.bg-violet-warm-10
+  //-                 .h3.carousel-title Página 2
+  //-             .carousel-page
+  //-               .carousel-content.bg-yellow-5
+  //-                 .h3.carousel-title Página 3
+  //-             .carousel-page
+  //-               .carousel-content.bg-green-cool-10
+  //-                 .h3.carousel-title Página 4
+  //-             .carousel-page
+  //-               .carousel-content.bg-orange-vivid-10
+  //-                 .h3.carousel-title Página 5
+  //-           .carousel-button
+  //-             +button.carousel-btn-next.circle(aria-label="Próximo")
+  //-               +icon.fa-chevron-right
+  //-           .carousel-step
+  //-             .br-step(data-initial="1" data-type="simple")
+  //-               .step-progress
+  //-                 button.step-progress-btn(type="button")
+  //-                   span.step-info Exemplo de Rótulo 1
+  //-                 button.step-progress-btn(type="button")
+  //-                   span.step-info Exemplo de Rótulo 2
+  //-                 button.step-progress-btn(type="button")
+  //-                   span.step-info Exemplo de Rótulo 3
+  //-                 button.step-progress-btn(type="button")
+  //-                   span.step-info Exemplo de Rótulo 4
+  //-                 button.step-progress-btn(type="button")
+  //-                   span.step-info Exemplo de Rótulo 5
+
+  section#conheca.mt-9
+    div(class=containerType)
+      .py-6.text-center
+        h2 Conheça a Secom
+
+        .row.justify-content-center
+          .col-sm-3
+            +card(href="javascript: void(0);").py-9
+              .p-3: +icon.fa-tasks.fa-2x
+              p Competências
+          .col-sm-3
+            +card(href="javascript: void(0);").py-9
+              .p-3: +icon.fa-project-diagram.fa-2x
+              p Estrutura Organizacional
+
+  section#agenda.mt-9
+    .bg-contrast-base.text-center.py-6
+      div(class=containerType)
+        h2.mb-9 Agenda do ministro Paulo Pimenta
+        +button.secondary.dark-mode Agenda completa
+
+  section#canais.mt-9
+    div(class=containerType)
+      .py-6.text-center
+        h2.mb-0 Canais de Atendimento
+
+        p Você pode fazer mais manifestações nos seguintes canais
+
+        .row.mt-6
+          .col-sm
+            +card.py-9.bg-main-alternative(href="https://falabr.cgu.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=1&orgaoDestinatario=26")
+              .text-interactive-main.p-3: +icon.fa-bullhorn.fa-2x
+              p Denúncia
+          .col-sm
+            +card.py-9.bg-main-alternative(href="https://falabr.cgu.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=5&orgaoDestinatario=26")
+              .text-interactive-main.p-3: +icon.fa-comments.fa-2x
+              p Solicitação
+          .col-sm
+            +card.py-9.bg-main-alternative(href="https://falabr.cgu.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=3&orgaoDestinatario=26")
+              .text-interactive-main.p-3: +icon.fa-thumbs-up.fa-2x
+              p Elogios
+          .col-sm
+            +card.py-9.bg-main-alternative(href="https://falabr.cgu.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=4&orgaoDestinatario=26")
+              .text-interactive-main.p-3: +icon.fa-thumbs-down.fa-2x
+              p Reclamações

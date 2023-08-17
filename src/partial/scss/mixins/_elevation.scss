@@ -1,7 +1,17 @@
-@mixin layers {
-  @each $layer in map-keys($layers) {
-    .#{$layer} {
-      z-index: var(--z-index-#{$layer});
-    }
-  }
+/// Aplica a camada informada para o elemento. **Sombra e z-index** serão modificados.
+/// @param {Number} $number - Número da camada: 0, 1, 2, 3 ou 4
+/// @example
+///  .dropdown {
+///    ...
+///    @include elevation-layer(3);
+///  }
+///
+///  .dropdown {
+///    ...
+///    box-shadow: var(--elevation-sdwp-level3) rgb(0 0 0/var(--elevation-opacity)), var(--elevation-sdwo-level3) rgb(0 0 0/var(--elevation-opacity));
+///    z-index: var(--z-index-03);
+///  }
+@mixin elevation-layer($number) {
+  box-shadow: map-get($layers, #{$number});
+  z-index: var(--z-index-0#{$number});
 }

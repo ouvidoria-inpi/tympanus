@@ -1,0 +1,117 @@
+extend ../templates/page.pug
+
+append vars
+  //- - title = 'Serviços'
+  - containerType = 'container-lg'
+
+block header
+  +header#header
+    div(class=containerType)
+      .header-bottom
+        +header-menu
+          .header-menu-trigger
+            +button.circle.small#navigation(aria-label="Menu" data-toggle="menu" data-target="#menu")
+              +icon.fa-bars
+          .header-info
+            a(href=`${baseUrl}/`).header-title Nome do Sistema
+
+block base-menu
+
+block base-aside
+
+block footer
+  +footer#footer.bg-contrast-base
+    div(class=containerType)
+      +footer-copyright
+        .py-4.text-down-02.text-center O Padrão Digital de Governo utiliza as licenças <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal</a> e <a href="https://mit-license.org/" target="_blank">MIT</a>.
+
+block sangria
+  +menu#menu
+    +menu-header
+      span Nome do Sistema
+    +menu-body
+      +list
+        +item.d-flex.gap-5(href=`${baseUrl}/`)
+          +icon.fa-home
+          span Página inicial
+        +divider
+        +item.d-flex.gap-5(href=`${baseUrl}/exemplo.html`)
+          +icon.fa-eye
+          span Exemplo
+        +divider
+
+  //- figure.mb-6(style="position: relative;")
+    picture
+      source(media="(min-width:1600px)" srcset="https://picsum.photos/id/10/2600/300")
+      source(media="(min-width:1280px)" srcset="https://picsum.photos/id/20/1600/300")
+      source(media="(min-width:990px)" srcset="https://picsum.photos/id/30/1280/300")
+      source(media="(min-width:576px)" srcset="https://picsum.photos/id/40/990/300")
+      img(src="https://picsum.photos/id/50/600/400" alt="Imagem aleatória")
+    figcaption.overlay-text
+      div(class=containerType)
+        div(style="position: absolute; bottom: 0;")
+          p.h4 Título da imagem
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+
+  div(class=containerType)
+    picture(style="position: relative;")
+      source(media="(min-width:1600px)" srcset="https://picsum.photos/id/10/2600/300")
+      source(media="(min-width:1280px)" srcset="https://picsum.photos/id/20/1600/300")
+      source(media="(min-width:990px)" srcset="https://picsum.photos/id/30/1280/300")
+      source(media="(min-width:576px)" srcset="https://picsum.photos/id/40/990/300")
+      img(src="https://picsum.photos/id/50/600/400" alt="Imagem aleatória")
+    figcaption.overlay-text
+      .p-4
+        p.h4 Título da imagem
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+
+    //- form(style="position: relative;")
+      .overlay-scrim
+      fieldset
+        legend Endereço
+        
+        .mb-5
+          label(for="estado") Estado
+          input#estado(type="text" value="Distrito Federal")
+
+        .mb-5
+          .bg-main-base.p-2(style="position: relative;")
+            label(for="cidade") Cidade
+            input#cidade(type="text")
+            span.ml-3.text-error.text-weight-medium Informe a cidade!
+
+        .mb-5
+          label(for="bairro") Bairro
+          input#bairro(type="text" value="Setor Noroeste")
+
+    //- section.my-6
+      .row
+        .col-6.col-md-3.pb-4
+          +card.bg-main-alternative.px-0(href="#")
+            .text-center Denúncia
+        .col-6.col-md-3.pb-4
+          +card.bg-main-alternative.px-0(href="#")
+            .text-center Solicitação
+        .col-6.col-md-3.pb-4
+          +card.bg-main-alternative.px-0(href="#")
+            .text-center Elogios
+        .col-6.col-md-3.pb-4
+          +card.bg-main-alternative.px-0(href="#")
+            .text-center Reclamações
+
+  //- section.bg-contrast-base.py-6
+    div(class=containerType)
+      h1 Seção 1
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolorum perferendis possimus tempore voluptatem dolor debitis accusantium, veniam praesentium facere nobis ipsum ut unde nihil, commodi voluptatibus ab magni autem?
+
+  //- section.bg-main-alternative.py-6
+    div(class=containerType)
+      h1 Seção 2
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, aperiam quo tempore in, illo consequuntur hic voluptas quis, dignissimos doloribus atque vitae? Fugiat facilis fuga quibusdam. Nesciunt reprehenderit animi excepturi!
+
+  //- section.py-6
+    div(class=containerType)
+      h1 Seção 3
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nobis aut, praesentium magnam incidunt, consectetur ut, cumque minima vitae tenetur fugiat eius quam placeat facere. Necessitatibus totam error aperiam minima?
+
+block page

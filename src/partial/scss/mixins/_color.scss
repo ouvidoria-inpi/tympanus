@@ -1,0 +1,110 @@
+/// Cria um utilitário de cor de superfície. Opcionalmente, pode-se definir uma cor de leitura.
+///
+/// Caso a classe esteja listada na variável `automatic-contrast-mode`, a **versão de contraste** será aplicada.
+/// @param {String} $class-name - Nome usado para compor classe CSS
+/// @param {String} $surface-token - Token de superfície
+/// @param {String} $read-token [null] - **Opcional!** Token de leitura
+/// @example
+///  @include surface-color("pure-0", "color-pure-0");
+///  .bg-pure-0 {
+///    background-color: var(--color-pure-0);
+///  }
+///
+///  @include surface-color("success", "theme-success-main", "theme-success-read-main");
+///  .bg-success {
+///    background-color: var(--theme-success-main);
+///    color: var(--theme-success-read-main);
+///  }
+///
+///  // A superfície a seguir está configurada em $automatic-contrast-mode
+///  @include surface-color("contrast-base", "theme-surface-contrast-base");
+///  .bg-contrast-base {
+///    --background: var(--theme-surface-contrast-base);
+///    --background-alternative: var(--theme-surface-contrast-alternative);
+///    --read: var(--theme-surface-read-contrast-base);
+///    --read-alternative: var(--theme-surface-read-contrast-alternative);
+///    --interactive: var(--theme-interactive-contrast);
+///    --interactive-rgb: var(--theme-interactive-contrast-rgb);
+///    --color: var(--read);
+///    --hover: var(--theme-hover-opacity-contrast);
+///    --pressed: var(--theme-pressed-opacity-contrast);
+///    --focus: var(--theme-focus-contrast);
+///    --active: var(--theme-activated-contrast);
+///    --active-read: var(--theme-activated-read-contrast);
+///    --elevation-opacity: var(--elevation-opacity-contrast);
+///    background-color: var(--theme-surface-contrast-base);
+///  }
+@mixin surface-color($class-name, $surface-token, $read-token: null) {
+  .bg-#{$class-name} {
+    --background: #{$surface-token};
+
+    @if index($automatic-contrast-mode, $class-name) {
+      @include contrast-mode;
+    }
+
+    background-color: #{$surface-token};
+
+    @if $read-token {
+      color: #{$read-token};
+    }
+  }
+}
+
+/// Cria um utilitário de cor de leitura.
+/// @param {String} $class-name - Nome usado para compor classe CSS
+/// @param {String} $read-token - Token de leitura
+/// @example
+///  @include read-color("pure-0", "color-pure-0");
+///  .text-pure-0 {
+///    color: var(--color-pure-0);
+///  }
+@mixin read-color($class-name, $read-token) {
+  .text-#{$class-name} {
+    --color: #{$read-token};
+
+    color: #{$read-token};
+  }
+}
+
+/// Cria um utilitário de cor de borda.
+/// @param {String} $class-name - Nome usado para compor classe CSS
+/// @param {String} $border-token - Token de borda
+/// @example
+///  @include border-color("pure-0", "color-pure-0");
+///  .border-pure-0 {
+///    border-color: var(--color-pure-0);
+///  }
+@mixin border-color($class-name, $border-token) {
+  .border-#{$class-name} {
+    border-color: #{$border-token};
+  }
+}
+
+// Cria utilitários de superfície, leitura e borda para as cores.
+@mixin utility-colors {
+  @if $enable-lite != true {
+    @each $key, $value in $colors {
+      @include surface-color($key, $value);
+      @include read-color($key, $value);
+      @include border-color($key, $value);
+    }
+  } @else {
+    @each $color in $colors-lite {
+      // Devido à luminância das cores possuir os seguintes valores:
+      // - 1 a 5 para gray
+      // - 5 a 90 para cores não vivids
+      // - 5 a 80 para vivids
+      // - 0 e 100 para pure
+      // É mais fácil fazer um loop de 0 a 100 e verificar se eles existem no map $colors
+      @for $i from 0 through 100 {
+        @each $key, $value in $colors {
+          @if map-has-key($colors, "#{$color}-#{$i}") {
+            @include surface-color($key, $value);
+            @include read-color($key, $value);
+            @include border-color($key, $value);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,126 +1,106 @@
-// Dependência para calcular divisão
-@use "sass:math";
-
-/// Aplica os estilos **a partir** do breakpoint informado
-/// @group 02
-/// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
-/// @example scss - Aplicar estilos em **lg** e **xl**
-///  .#{$prefix}cookiebar {
-///    @include media-breakpoint-up(lg) {
-///      ...
+/// Aplica uma media query para o breakpoint informado.
+/// @param {String} $breakpoint - Opção de breakpoint: mobile, portrait, tablet, desktop ou desktop-large
+/// @example
+///  @include media-breakpoint("desktop") {
+///    h4 {
+///      font-size: var(--font-size-up04);
 ///    }
 ///  }
-@mixin media-breakpoint-up($breakpoint) {
-  $size: map-get($breakpoints, $breakpoint);
-  @media (min-width: $size) {
+///
+///  @media (min-width: 1280px) {
+///    h4 {
+///      font-size: var(--font-size-up04);
+///    }
+///  }
+@mixin media-breakpoint($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }
 }
 
-/// Aplica os estilos **até** o breakpoint informado
-/// @group 02
-/// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
-/// @example scss - Aplicar estilos em **xs**, **sm** e **md**
-///  .#{$prefix}cookiebar {
-///    @include media-breakpoint-down(md) {
-///      ...
-///    }
-///  }
-@mixin media-breakpoint-down($breakpoint) {
-  $value: map-get($breakpoints, next-breakpoint($breakpoint)) - 1px;
-  @media (max-width: $value) {
-    @content;
+@mixin make-colums($breakpoint: null) {
+  $breakpoint: if($breakpoint, "-#{$breakpoint}", "");
+
+  @for $i from 1 through 12 {
+    .col#{$breakpoint}-#{$i} {
+      flex-basis: calc($i / 12 * 100%);
+      max-width: calc($i / 12 * 100%);
+    }
   }
 }
 
-/// Cria containers e linhas da Grid
-/// @group 03
-/// @param {String} $breakpoint - **Usar**: xs, sm, md, lg ou xl
-/// @example scss - Uso prático
-///  @include make-grid(lg);
 @mixin make-grid($breakpoint) {
-  $breakpoint-name: map-get($breakpoints-name, $breakpoint);
-  $breakpoint-width: map-get($breakpoints, $breakpoint);
-  @media (min-width: $breakpoint-width) {
+  $breakpoint-abbr: map-get($breakpoints-abbr, $breakpoint);
+  .col-#{$breakpoint-abbr} {
+    flex: 1 0 0%;
+    min-width: calc(1 / 12 * 100%);
+  }
+
+  .col-#{$breakpoint-abbr}-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  @include make-colums($breakpoint-abbr);
+
+  .row {
+    --grid-gutter: var(--grid-#{$breakpoint}-gutter);
+
+    // Aplica densidades
+    @each $density in $densities {
+      &.density-#{$density} {
+        --grid-gutter: var(--grid-#{$breakpoint}-gutter-#{$density}-density);
+      }
+    }
+  }
+
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-fluid {
+    --grid-margin: var(--grid-#{$breakpoint}-margin);
+
+    // Aplica densidades
+    @each $density in $densities {
+      &.density-#{$density} {
+        --grid-margin: var(--grid-#{$breakpoint}-margin-#{$density}-density);
+      }
+    }
+  }
+
+  @if $breakpoint == "portrait" {
+    .container,
+    .container-sm {
+      --grid-breakpoint: var(--breakpoint-portrait);
+    }
+  }
+
+  @if $breakpoint == "tablet" {
+    .container,
+    .container-sm,
+    .container-md {
+      --grid-breakpoint: var(--breakpoint-tablet);
+    }
+  }
+
+  @if $breakpoint == "desktop" {
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg {
+      --grid-breakpoint: var(--breakpoint-desktop);
+    }
+  }
+
+  @if $breakpoint == "desktop-large" {
     .container,
     .container-sm,
     .container-md,
     .container-lg,
-    .container-xl,
-    .container-fluid {
-      --grid-margin: var(--grid-#{$breakpoint-name}-margin);
-    }
-
-    .row {
-      --grid-gutter: var(--grid-#{$breakpoint-name}-gutter);
-    }
-    @if $breakpoint == "sm" {
-      .container,
-      .container-sm {
-        --grid-maxwidth: calc(
-          var(--grid-breakpoint-#{$breakpoint}) -
-            var(--grid-#{$breakpoint-name}-margin)
-        );
-      }
-    }
-    @if $breakpoint == "md" {
-      .container,
-      .container-sm,
-      .container-md {
-        --grid-maxwidth: calc(
-          var(--grid-breakpoint-#{$breakpoint}) -
-            var(--grid-#{$breakpoint-name}-margin)
-        );
-      }
-    }
-    @if $breakpoint == "lg" {
-      .container,
-      .container-sm,
-      .container-md,
-      .container-lg {
-        --grid-maxwidth: calc(
-          var(--grid-breakpoint-#{$breakpoint}) -
-            var(--grid-#{$breakpoint-name}-margin)
-        );
-      }
-    }
-    @if $breakpoint == "xl" {
-      .container,
-      .container-sm,
-      .container-md,
-      .container-lg,
-      .container-xl {
-        --grid-maxwidth: calc(
-          var(--grid-breakpoint-#{$breakpoint}) -
-            var(--grid-#{$breakpoint-name}-margin)
-        );
-      }
-    }
-    @include make-columns($grid-desktop-columns, $breakpoint);
-  }
-}
-
-/// Cria as colunas da Grid.
-/// @group 03
-/// @param {Number} $columns - **Usar**: 4, 8 ou 12
-/// @param {String} $breakpoint [null] - **Usar**: xs, sm, md, lg ou xl **(Opcional)**
-/// @example scss - Criar classes até 4 colunas
-///  @include make-columns(4);
-/// @example scss - Criar classes até 8 colunas para breakpoint **sm**
-///  @include make-columns(8, "sm");
-@mixin make-columns($columns, $breakpoint: null) {
-  .col#{if($breakpoint, "-#{$breakpoint}", "")} {
-    flex: 1 0 0%;
-    min-width: math.div(1, $columns) * 100%;
-  }
-  .col#{if($breakpoint, "-#{$breakpoint}", "")}-auto {
-    flex: 0 0 auto;
-    width: auto;
-  }
-  @for $i from 1 through $columns {
-    .col#{if($breakpoint, "-#{$breakpoint}", "")}-#{$i} {
-      flex-basis: math.div($i, $columns) * 100%;
-      max-width: math.div($i, $columns) * 100%;
+    .container-xl {
+      --grid-breakpoint: var(--breakpoint-desktop-large);
     }
   }
 }

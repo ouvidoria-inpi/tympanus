@@ -1,0 +1,159 @@
+
+// Direção
+@each $direction in $flex-directions {
+  .flex-#{$direction} {
+    flex-direction: $direction !important;
+  }
+}
+
+// Justify content
+@each $key, $value in $justify-content {
+  .justify-content-#{$key} {
+    justify-content: #{$value} !important;
+  }
+}
+
+// Align items
+@each $key, $value in $align-items {
+  .align-items-#{$key} {
+    align-items: #{$value} !important;
+  }
+}
+
+// Align self
+@each $key, $value in $align-self {
+  .align-self-#{$key} {
+    align-self: #{$value} !important;
+  }
+}
+
+// Fill
+.flex-fill {
+  flex: $flex-fill !important;
+}
+
+// Grow
+@each $value in 1, 0 {
+  .flex-grow-#{$value} {
+    flex-grow: #{$value} !important;
+  }
+}
+
+// Shrink
+@each $value in 1, 0 {
+  .flex-shrink-#{$value} {
+    flex-shrink: #{$value} !important;
+  }
+}
+
+// Wrap
+@each $wrap in $wraps {
+  .flex-#{$wrap} {
+    flex-wrap: #{$wrap} !important;
+  }
+}
+
+// Order
+@for $i from 0 through 12 {
+  .order-#{$i} {
+    order: $i !important;
+  }
+}
+
+// Align content
+@each $key, $value in $align-content {
+  .align-content-#{$key} {
+    align-content: #{$value} !important;
+  }
+}
+
+// Gap
+@each $key, $value in $spacings {
+  .gap-#{$key} {
+    gap: #{$value};
+  }
+}
+
+// Com breakpoints
+@each $breakpoint in map-keys($breakpoints) {
+  @if $breakpoint != "mobile" {
+    @include media-breakpoint($breakpoint) {
+      $breakpoint-abbr: map-get($breakpoints-abbr, $breakpoint);
+
+      // Direção
+      @each $direction in $flex-directions {
+        .flex-#{$breakpoint-abbr}-#{$direction} {
+          flex-direction: $direction !important;
+        }
+      }
+
+      // Justify content
+      @each $key, $value in $justify-content {
+        .justify-content-#{$breakpoint-abbr}-#{$key} {
+          justify-content: #{$value} !important;
+        }
+      }
+
+      // Align items
+      @each $key, $value in $align-items {
+        .align-items-#{$breakpoint-abbr}-#{$key} {
+          align-items: #{$value} !important;
+        }
+      }
+
+      // Align self
+      @each $key, $value in $align-self {
+        .align-self-#{$breakpoint-abbr}-#{$key} {
+          align-self: #{$value} !important;
+        }
+      }
+
+      // Fill
+      .flex-#{$breakpoint-abbr}-fill {
+        flex: $flex-fill !important;
+      }
+
+      // Grow
+      @each $value in 1, 0 {
+        .flex-grow-#{$breakpoint-abbr}-#{$value} {
+          flex-grow: #{$value} !important;
+        }
+      }
+
+      // Shrink
+      @each $value in 1, 0 {
+        .flex-shrink-#{$breakpoint-abbr}-#{$value} {
+          flex-shrink: #{$value} !important;
+        }
+      }
+
+      // Wrap
+      @each $wrap in $wraps {
+        .flex-#{$breakpoint-abbr}-#{$wrap} {
+          flex-wrap: $wrap !important;
+        }
+      }
+
+      // Order
+      @for $i from 0 through 12 {
+        .order-#{$breakpoint-abbr}-#{$i} {
+          order: $i !important;
+        }
+      }
+
+      // Align content
+      @each $key, $value in $align-content {
+        .align-content-#{$breakpoint-abbr}-#{$key} {
+          align-content: #{$value} !important;
+        }
+      }
+
+      // Gap
+      @each $key, $value in $spacings {
+        .gap-#{$breakpoint-abbr}-#{$key} {
+          gap: #{$value};
+        }
+      }
+    }
+  }
+}

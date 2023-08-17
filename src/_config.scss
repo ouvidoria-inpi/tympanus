@@ -1,0 +1,26 @@
+// Carregar tokens
+@import "tokens/tokens";
+
+// Carregar variáveis e maps
+@import "partial/scss/configs/color";
+@import "partial/scss/configs/default";
+@import "partial/scss/configs/display";
+@import "partial/scss/configs/elevation";
+@import "partial/scss/configs/flexbox";
+@import "partial/scss/configs/grid";
+@import "partial/scss/configs/motion";
+@import "partial/scss/configs/spacing";
+@import "partial/scss/configs/surface";
+@import "partial/scss/configs/text";
+@import "partial/scss/configs/theme";
+
+// Carregar mixins
+@import "partial/scss/mixins/color";
+@import "partial/scss/mixins/elevation";
+@import "partial/scss/mixins/focus";
+@import "partial/scss/mixins/grid";
+@import "partial/scss/mixins/hover";
+@import "partial/scss/mixins/motion";
+@import "partial/scss/mixins/pressed";
+@import "partial/scss/mixins/spacing";
+@import "partial/scss/mixins/theme";

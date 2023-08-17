@@ -1,0 +1,178 @@
+extend ../../templates/page.pug
+
+append vars
+  - title = 'Utilitários de Grid'
+  - breadcrumbs  = 'Utilitários'
+  - const columns = 12
+  - let column = 0
+
+block container
+  div(class=containerType)
+    .row
+      //- Bloco do menu
+      #base-menu.col-auto.pt-5
+        include ../../components/menu.pug
+
+      //- Bloco do conteúdo
+      #base-content.col.pb-9
+        block breadcrumb
+          if breadcrumbs
+            - const dict = breadcrumbs.split('/');
+            +breadcrumb.pt-5
+              each crumb in dict
+                +crumb=crumb
+
+        main#content
+          if title
+            h1=title
+
+          section.mb-7
+            div(class=containerType)
+              h2 Column
+              .row
+                .col-4
+                  .bg-green-10.text-center: .overflow-auto: .py-2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                .col-auto
+                  .bg-red-10.py-2.text-center Coluna automática
+                .col
+                  .bg-blue-10: .overflow-auto: .py-2.text-center aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+              .row.mt-9
+                .col-4
+                  .bg-green-10.py-2.text-center Coluna predefinida 4
+                .col-auto
+                  .bg-red-10.py-2.text-center Coluna automática
+                .col
+                  .bg-blue-10.py-2.text-center Coluna proporcional
+
+              p.text-up-02.mt-9 Predefinidas:
+              - column = 1
+              while column <= columns
+                .row.mb-1
+                  div(class="col-" + column)
+                    .bg-green-10.py-1.pl-1
+                      | col-#{column}
+                - column++
+
+              p.text-up-02.mt-9 Automáticas:
+              .row.mb-5
+                .col-auto
+                  .bg-red-10.py-1 abs,
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor,
+                .col-auto
+                  .bg-red-10.py-1 sit amet consectetur adipisicing elit.
+                .col-auto
+                  .bg-red-10.py-1 Tempore sint nemo odio molestias laudantium quaerat at distinctio sed?
+                .col-auto
+                  .bg-red-10: .overflow-auto: .py-1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+              p.text-up-02.mt-9 Proporcionais:
+              each exemplo in [4, 8, 12]
+                p.text-weight-bold #{exemplo} colunas
+                  .row.mb-5
+                    - column = 1
+                    while column <= exemplo
+                      div(class="col")
+                        .bg-blue-10.py-2.text-center col
+                      - column++
+
+          section.mb-7
+            div(class=containerType)
+              h2 Alinhamento da Row 
+              p.text-up-02.mt-9 Esquerda (padrão):
+              .row
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+
+              p.text-up-02.mt-9 Centralizado:
+              .row.justify-content-center
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+
+              p.text-up-02.mt-9 Direita:
+              .row.justify-content-end
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+                .col-auto
+                  .bg-red-10.py-1 Lorem ipsum dolor
+
+          section
+            div(class=containerType)
+              h2 Densidades dos gutters
+              p.text-up-02.mt-3 Alta densidade:
+              .row.density-high
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+              p.text-up-02.mt-3 Padrão:
+              .row
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+              p.text-up-02.mt-3 Baixa densidade:
+              .row.density-low
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+                .col
+                  .bg-blue-10.py-2.text-center col
+
+
+      //- Bloco de conteúdos acessórios
+      #base-aside.col-auto
+        block aside
+
+  section.mb-7
+    div(class=containerType)
+      h2 Containers
+      p.text-up-02.mt-3 Fixo:
+    .bg-interactive-main
+      .container
+        .bg-interactive-contrast.p-5
+
+    div(class=containerType)
+      p.text-up-02.mt-3 Fluído:
+    .bg-interactive-main
+      .container-fluid
+        .bg-interactive-contrast.p-5
+
+  section.mb-7
+    div(class=containerType)
+      h2 Densidades das margens
+      p.text-up-02.mt-3 Alta densidade:
+    .bg-interactive-main.mb-5
+      .container.density-high
+        .bg-interactive-contrast.p-5
+    div(class=containerType)
+      p.text-up-02.mt-3 Padrão:
+    .bg-interactive-main.mb-5
+      .container
+        .bg-interactive-contrast.p-5
+    div(class=containerType)
+      p.text-up-02.mt-3 Baixa densidade:
+    .bg-interactive-main.mb-5
+      .container.density-low
+        .bg-interactive-contrast.p-5

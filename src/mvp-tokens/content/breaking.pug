@@ -1,0 +1,585 @@
+extend ../templates/page.pug
+
+append vars
+  - title = 'Breaking Changes'
+
+block page
+  section.mb-7
+    h2 Regras Gerais
+    ol
+      li Os componentes continuam usando prefixo <code>br-</code>, por exemplo <code>br-input</code>
+      li Os elementos internos do componente são nomeados da seguinte forma: <strong>nome do componente + nome do bloco</strong><br>
+        ul
+          li: code input-box
+          li: code input-icon
+          li: code input-body
+          li: code input-action
+      li Os componentes que tiverem <strong>Hover</strong> terão o elemento <code>overlay</code>
+      li Alguns componentes que tiverem o elemento <strong>overlay</strong> poderão ter o conteúdo dentro do elemento <code>content</code>
+
+  section.mb-7
+    h2 Lista de componentes
+
+    p.text-up-02 Breadcrumb:
+    ol
+      li Usa a tag <code>&lt;ul&gt;</code> ao invés da tag <code>&lt;div&gt;</code>
+      li Remoção do elemento <code>.crumb-list</code>
+      li Elemento <code>.crumb</code> mudou para <code>.breadcrumb-item</code>
+      li <strong>Crumb Home</strong> não precisa ser diferenciado com classe <code>.home</code>
+      li Último crumb não precisa ter atributo <code>data-active="active"</code>
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-breadcrumb") Comparação dos códigos
+    .collapse#comparacao-breadcrumb
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-breadcrumb"&gt;
+                &lt;ul class="crumb-list"&gt;
+                  &lt;li class="crumb home"&gt;
+                    &lt;a class="br-button circle" href=""&gt;...&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class="crumb"&gt;
+                    &lt;i class="icon fas fa-chevron-right"&gt;&lt;/i&gt;
+                    &lt;a href=""&gt;Página Ancestral&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class="crumb" data-active="active"&gt;
+                    &lt;i class="icon fas fa-chevron-right"&gt;&lt;/i&gt;
+                    &lt;span&gt;Página atual&lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;ul class="br-breadcrumb"&gt;
+                &lt;li class="breadcrumb-item"&gt;
+                  &lt;a class="br-button circle" href=""&gt;...&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="breadcrumb-item"&gt;
+                  &lt;span class="breadcrumb-divider"&gt;
+                    &lt;i class="fas fa-chevron-right" aria-hidden="true"&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  &lt;a href=""&gt;Página Ancestral&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="breadcrumb-item"&gt;
+                  &lt;span class="breadcrumb-divider"&gt;
+                    &lt;i class="fas fa-chevron-right" aria-hidden="true"&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  Página atual
+                &lt;/li&gt;
+              &lt;/ul&gt;
+
+    p.text-up-02.mt-9 Button:
+    ol
+      li Inclusão do elemento <code>overlay</code>
+      li O conteúdo fica dentro do elemento <code>content</code>
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-button") Comparação dos códigos
+    .collapse#comparacao-button
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;button class="br-button" type="button"&gt;Texto&lt;/button&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;button class="br-button" type="button"&gt;
+                &lt;span class="overlay"&gt;&lt;/span&gt;
+                &lt;span class="content"&gt;Texto&lt;/span&gt;
+              &lt;/button&gt;
+
+    p.text-up-02.mt-9 Card:
+    ol
+      li Remoção dos elementos <code>card-header</code>, <code>card-content</code> e <code>card-footer</code>
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-card") Comparação dos códigos
+    .collapse#comparacao-card
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-card"&gt;
+                &lt;div class="card-content"&gt;Conteúdo&lt;/div&gt;
+              &lt;/div&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;div class="br-card"&gt;Conteúdo&lt;/div&gt;
+
+    p.text-up-02.mt-9 Checkbox:
+    ol
+      li Inclusão do elemento <code>overlay</code>
+      li O conteúdo fica dentro do elemento <code>content</code>
+    
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-checkbox") Comparação dos códigos
+    .collapse#comparacao-checkbox
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-checkbox"&gt;
+                &lt;input id="checkbox" type="checkbox"/&gt;
+                &lt;label for="checkbox"&gt;Opção 1&lt;/label&gt;
+              &lt;/div&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;div class="br-checkbox"&gt;
+                &lt;input id="checkbox" type="checkbox"/&gt;
+                &lt;label for="checkbox"&gt;
+                  &lt;span class="overlay"&gt;&lt;/span&gt;
+                  &lt;span class="content"&gt;opção 1&lt;/span&gt;
+                &lt;/label&gt;
+              &lt;/div&gt;
+
+    p.text-up-02.mt-9 Footer:
+    ol
+      li O padrão é a versão do tema. Para aplicar a versão de constraste basta adicionar a classe <code>.bg-contrast-base</code>
+      li O elemento <code>logo</code> mudou para <code>footer-logo</code>
+      li A lista de mapa do site foi movida para <code>footer-sitemap</code>
+      li O elemento <code>social-network</code> mudou para <code>footer-social-network</code>
+      li O elemento <code>info</code> mudou para <code>footer-copyright</code>
+  
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-footer") Comparação dos códigos
+    .collapse#comparacao-footer
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;footer class="br-footer"&gt;
+                &lt;div class="container-lg"&gt;
+                  &lt;div class="logo"&gt;...&lt;/div&gt;
+                  &lt;div class="br-list horizontal" data-toggle="data-toggle" data-sub="data-sub"&gt;
+                    &lt;div class="col-2"&gt;
+                      &lt;a class="br-item header" href=""&gt;...&lt;/a&gt;
+                      &lt;div class="br-list"&gt;
+                        &lt;span class="br-divider d-md-none"&gt;&lt;/span&gt;
+                        &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                        &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                        &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-2"&gt;
+                      &lt;a class="br-item header" href=""&gt;...&lt;/a&gt;
+                      &lt;div class="br-list"&gt;
+                        &lt;span class="br-divider d-md-none"&gt;&lt;/span&gt;
+                        &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                        &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                        &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="d-none d-sm-block"&gt;
+                    &lt;div class="row align-items-end justify-content-between py-5"&gt;
+                      &lt;div class="col"&gt;
+                        &lt;div class="social-network"&gt;...&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class="br-divider my-3"&gt;&lt;/span&gt;
+                &lt;div class="container-lg"&gt;
+                  &lt;div class="info"&gt;...&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/footer&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;footer class="br-footer bg-contrast-base"&gt;
+                &lt;div class="container-lg"&gt;
+                  &lt;div class="footer-logo"&gt;...&lt;/div&gt;
+                  &lt;div class="footer-sitemap"&gt;
+                    &lt;div class="br-list"&gt;
+                      &lt;div class="br-item"&gt;...&lt;/div&gt;
+                      &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                      &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                      &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="br-list"&gt;
+                      &lt;div class="br-item"&gt;...&lt;/div&gt;
+                      &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                      &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                      &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="footer-social-network"&gt;...&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class="br-divider"&gt;&lt;/span&gt;
+                &lt;div class="container-lg"&gt;
+                  &lt;div class="footer-copyright"&gt;...&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/footer&gt;
+
+    p.text-up-02.mt-9 Header:
+    p Os elementos internos do componente não foram modificados, porém os componentes atômicos como Button, Input, etc estão usando os novos códigos.
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-header") Comparação dos códigos
+    .collapse#comparacao-header
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;header class="br-header"&gt;
+                &lt;div class="container-lg"&gt;
+                  &lt;div class="header-top"&gt;
+                    &lt;div class="header-logo"&gt;
+                      &lt;img src="" alt="logo"/&gt;
+                      &lt;span class="br-divider vertical"&gt;&lt;/span&gt;
+                      &lt;div class="header-sign"&gt;Assinatura&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="header-actions"&gt;
+                      &lt;div class="header-links"&gt;...&lt;/div&gt;
+                      &lt;span class="br-divider vertical mx-half mx-sm-1"&gt;&lt;/span&gt;
+                      &lt;div class="header-functions"&gt;...&lt;/div&gt;
+                      &lt;div class="header-search-trigger"&gt;...&lt;/div&gt;
+                      &lt;div class="header-login"&gt;
+                        &lt;div class="header-sign-in"&gt;...&lt;/div&gt;
+                        &lt;div class="header-avatar"&gt;...&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="header-bottom"&gt;
+                    &lt;div class="header-menu"&gt;
+                      &lt;div class="header-menu-trigger"&gt;...&lt;/div&gt;
+                      &lt;div class="header-info"&gt;
+                        &lt;div class="header-title"&gt;Título do Header&lt;/div&gt;
+                        &lt;div class="header-subtitle"&gt;Subtítulo do Header&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="header-search"&gt;...&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/header&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;header class="br-header"&gt;
+                &lt;div class="container-lg"&gt;
+                  &lt;div class="header-top"&gt;
+                    &lt;div class="header-logo"&gt;
+                      &lt;img src="" alt="logo"/&gt;
+                      &lt;div class="header-sign"&gt;Assinatura&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="header-actions"&gt;
+                      &lt;div class="header-links"&gt;...&lt;/div&gt;
+                      &lt;span class="br-divider vertical mx-3 mx-lg-5"&gt;&lt;/span&gt;
+                      &lt;div class="header-functions"&gt;...&lt;/div&gt;
+                      &lt;div class="header-search-trigger"&gt;...&lt;/div&gt;
+                      &lt;div class="header-login"&gt;
+                        &lt;div class="header-sign-in"&gt;...&lt;/div&gt;
+                        &lt;div class="header-avatar"&gt;...&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="header-bottom"&gt;
+                    &lt;div class="header-menu"&gt;
+                      &lt;div class="header-menu-trigger"&gt;...&lt;/div&gt;
+                      &lt;div class="header-info"&gt;
+                        &lt;a class="header-title" href=""&gt;Título do Header&lt;/a&gt;
+                        &lt;div class="header-subtitle"&gt;Subtítulo do Header&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="header-search"&gt;...&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/header&gt;
+
+    p.text-up-02.mt-9 Input:
+    ol
+      li Inclusão do elemento <code>input-box</code> para posicionar ícones, input e botão de ação
+      li O input interno foi movido para <code>input-body</code>
+      li Inclusão do elemento <code>overlay</code> após o input interno
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-input") Comparação dos códigos
+    .collapse#comparacao-input
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-input"&gt;
+                &lt;label for="input"&gt;Label / Rótulo&lt;/label&gt;
+                &lt;input id="input" type="text" placeholder="Placeholder"/&gt;
+              &lt;/div&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;div class="br-input"&gt;
+                &lt;label for="input"&gt;Label/Rótulo&lt;/label&gt;
+                &lt;div class="input-box"&gt;
+                  &lt;div class="input-body"&gt;
+                    &lt;input id="input" type="text" placeholder="Placeholder"/&gt;
+                    &lt;div class="overlay"&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+    p.text-up-02.mt-9 Item:
+    p Não houve mudança nos elementos internos do Item, porém ele não é mais usado nas opções de seleção do componente Select.
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-item") Comparação dos códigos
+    .collapse#comparacao-item
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-item"&gt;...&lt;/div&gt;
+              &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+              &lt;button class="br-item" type="button"&gt;...&lt;/button&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;div class="br-item"&gt;...&lt;/div&gt;
+              &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+              &lt;button class="br-item" type="button"&gt;...&lt;/button&gt;
+
+    p.text-up-02.mt-9 List:
+    ol
+      li Remoção do elemento <code>header</code>. Usar um componente Item e formatar como desejar.
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-list") Comparação dos códigos
+    .collapse#comparacao-list
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-list" role="list"&gt;
+                &lt;div class="header"&gt;...&lt;/div&gt;
+                &lt;span class="br-divider"&gt;&lt;/span&gt;
+                &lt;a class="br-item" role="listitem" href=""&gt;...&lt;/a&gt;
+                &lt;a class="br-item" role="listitem" href=""&gt;...&lt;/a&gt;
+                &lt;a class="br-item" role="listitem" href=""&gt;...&lt;/a&gt;
+              &lt;/div&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;div class="br-list"&gt;
+                &lt;div class="br-item"&gt;...&lt;/div&gt;
+                &lt;span class="br-divider"&gt;&lt;/span&gt;
+                &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+              &lt;/div&gt;
+
+    p.text-up-02.mt-9 Menu:
+    ol
+      li O elemento <code>menu-title</code> mudou para <code>menu-logo</code>
+      li A lista de pastas <code>menu-folder</code> mudou para <code>br-item</code> acionando o comportamento Collapse
+      li As linhas divisoras são colocadas manualmente usando o componente <code>br-divider</code>
+      li O elemento <code>menu-item</code> mudou para <code>br-item</code>
+      li O elemento <code>social-network</code> mudou para <code>menu-networks</code>
+      li O elemento <code>menu-info</code> mudou para <code>menu-copyright</code> (mantém a nomenclatura adotada no Footer)
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-menu") Comparação dos códigos
+    .collapse#comparacao-menu
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-menu"&gt;
+                &lt;div class="menu-container"&gt;
+                  &lt;div class="menu-panel"&gt;
+                    &lt;div class="menu-header"&gt;
+                      &lt;div class="menu-title"&gt;...&lt;/div&gt;
+                      &lt;div class="menu-close"&gt;...&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;nav class="menu-body"&gt;
+                      &lt;a class="menu-item divider" href=""&gt;...&lt;/a&gt;
+                      &lt;a class="menu-item divider" href=""&gt;...&lt;/a&gt;
+                      &lt;div class="menu-folder"&gt;
+                        &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;
+                            &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                            &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                            &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                            &lt;ul&gt;
+                              &lt;li&gt;
+                                &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                                &lt;ul&gt;
+                                  &lt;li&gt;
+                                    &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a class="menu-item" href=""&gt;...&lt;/a&gt;
+                                  &lt;/li&gt;
+                                &lt;/ul&gt;
+                              &lt;/li&gt;
+                            &lt;/ul&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/nav&gt;
+                    &lt;div class="menu-footer"&gt;
+                      &lt;div class="menu-logos"&gt;...&lt;/div&gt;
+                      &lt;div class="menu-links"&gt;...&lt;/div&gt;
+                      &lt;div class="social-network"&gt;...&lt;/div&gt;
+                      &lt;div class="menu-info"&gt;...&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="menu-scrim" data-dismiss="menu" tabindex="0"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;div class="br-menu"&gt;
+                &lt;div class="menu-container"&gt;
+                  &lt;div class="menu-panel"&gt;
+                    &lt;div class="menu-header"&gt;
+                      &lt;div class="menu-title"&gt;...&lt;/div&gt;
+                      &lt;div class="menu-close"&gt;...&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;nav class="menu-body"&gt;
+                      &lt;div class="br-list"&gt;
+                        &lt;a class="br-item d-flex gap-3" href=""&gt;...&lt;/a&gt;
+                        &lt;span class="br-divider"&gt;&lt;/span&gt;
+                        &lt;a class="br-item d-flex gap-3" href=""&gt;...&lt;/a&gt;
+                        &lt;span class="br-divider"&gt;&lt;/span&gt;
+                        &lt;button class="br-item d-flex gap-3" type="button" data-toggle="collapse" data-target="#menu-componentes"&gt;...&lt;/button&gt;
+                        &lt;div class="br-list collapse" id="menu-componentes"&gt;
+                          &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                          &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                          &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;span class="br-divider"&gt;&lt;/span&gt;
+                        &lt;button class="br-item d-flex gap-3" type="button" data-toggle="collapse" data-target="#menu-utilitarios"&gt;...&lt;/button&gt;
+                        &lt;div class="br-list collapse" id="menu-utilitarios"&gt;
+                          &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                          &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                          &lt;a class="br-item" href=""&gt;...&lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/nav&gt;
+                    &lt;div class="menu-footer"&gt;
+                      &lt;div class="menu-logos"&gt;...&lt;/div&gt;
+                      &lt;div class="menu-links"&gt;...&lt;/div&gt;
+                      &lt;div class="menu-networks"&gt;...&lt;/div&gt;
+                      &lt;div class="menu-copyright"&gt;...&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="menu-scrim" tabindex="0"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+    p.text-up-02.mt-9 Radio:
+    ol
+      li Inclusão do elemento <code>overlay</code>
+      li O conteúdo fica dentro do elemento <code>content</code>
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-radio") Comparação dos códigos
+    .collapse#comparacao-radio
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-radio"&gt;
+                &lt;input id="op-1" type="radio" name="radio" value="op-1"/&gt;
+                &lt;label for="op-1"&gt;opcao-1&lt;/label&gt;
+              &lt;/div&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;div class="br-radio"&gt;
+                &lt;input id="radio" type="radio" name="h-radio"/&gt;
+                &lt;label for="radio"&gt;
+                  &lt;span class="overlay"&gt;&lt;/span&gt;
+                  &lt;span class="content"&gt;opcao-1&lt;/span&gt;
+                &lt;/label&gt;
+              &lt;/div&gt;
+
+    p.text-up-02.mt-9 Select:
+    ol
+      li O componente Input foi movido para <code>select-input</code>
+      li O componente List mudou para <code>select-list</code>
+      li Inclusão do elemento <code>select-overflow</code> para limitar a lista de opções
+      li O componente Item mudou para o componente Checkbox ou Radio na versão item
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-select") Comparação dos códigos
+    .collapse#comparacao-select
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;div class="br-select"&gt;
+                &lt;div class="br-input"&gt;...&lt;/div&gt;
+                &lt;div class="br-list" tabindex="0"&gt;
+                  &lt;div class="br-item" tabindex="-1"&gt;
+                    &lt;div class="br-radio"&gt;...&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="br-item" tabindex="-1"&gt;
+                    &lt;div class="br-radio"&gt;...&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="br-item" tabindex="-1"&gt;
+                    &lt;div class="br-radio"&gt;...&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;div class="br-select"&gt;
+                &lt;div class="select-input"&gt;
+                  &lt;div class="br-input"&gt;...&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="select-list"&gt;
+                  &lt;div class="select-overflow"&gt;
+                    &lt;div class="br-radio item"&gt;...&lt;/div&gt;
+                    &lt;div class="br-radio item"&gt;...&lt;/div&gt;
+                    &lt;div class="br-radio item"&gt;...&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+    p.text-up-02.mt-9 Sign-in:
+    ol
+      li Inclusão do elemento <code>overlay</code>
+      li O conteúdo fica dentro do elemento <code>content</code>
+
+    +button.secondary(data-toggle="collapse" data-target="#comparacao-signin") Comparação dos códigos
+    .collapse#comparacao-signin
+      .row.pt-5
+        .col-md
+          pre
+            code.
+              &lt;button class="br-sign-in" type="button"&gt;
+                &lt;i class="fas fa-user" aria-hidden="true"&gt;&lt;/i&gt;
+                Entrar
+              &lt;/button&gt;
+
+        .col-md
+          pre
+            code.
+              &lt;button class="br-sign-in primary" type="button"&gt;
+                &lt;span class="overlay"&gt;&lt;/span&gt;
+                &lt;span class="content"&gt;
+                  &lt;i class="fas fa-user" aria-hidden="true"&gt;&lt;/i&gt;
+                  &lt;span class="d-none d-lg-inline"&gt;Entrar&lt;/span&gt;
+                &lt;/span&gt;
+              &lt;/button&gt;

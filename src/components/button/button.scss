@@ -1,0 +1,13 @@
+// Carrega todas as dependências
+@import "../../config";
+
+// Carrega os mixins
+@import "mixins";
+
+.#{$prefix}button {
+  @include button-configs;
+}
+
+div.#{$prefix}button {
+  @include button-input;
+}

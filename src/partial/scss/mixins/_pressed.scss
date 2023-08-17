@@ -1,0 +1,5 @@
+@mixin pressed {
+  &:active {
+    --hover: var(--pressed);
+  }
+}

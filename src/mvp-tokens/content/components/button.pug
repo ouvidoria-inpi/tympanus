@@ -1,0 +1,83 @@
+extend ../../templates/page.pug
+
+append vars
+  - title = 'Componente Button'
+  - breadcrumbs  = 'Componentes'
+
+block page
+  section.mb-7
+    h2 Tipos
+    .row
+      .col-md
+        p.text-up-02 Padrão:
+        .d-flex.gap-1
+          +button botão
+          +button(value="input button")
+          +button(href="javascript: void(0)") link
+
+      .col-md
+        p.text-up-02 Circular:
+        .d-flex.gap-1
+          +button.circle: +icon.fa-link
+          +button.circle(href="javascript: void(0)"): +icon.fa-code
+
+  section.mb-7
+    h2 Ênfases
+    .row
+      .col-md
+        p.text-up-02 Primária:
+        .d-flex.gap-1
+          +button.primary botão
+          +button.primary(value="input button")
+          +button.primary(href="https://gov.br/ds/" target="_blank") link
+
+      .col-md
+        p.text-up-02 Secundária:
+        .d-flex.gap-1
+          +button.secondary botão
+          +button.secondary(value="input button")
+          +button.secondary(href="javascript: void(0)") link
+
+  section.mb-7
+    h2 Comportamento de bloco
+    p Container: <code>d-flex</code>
+    p Botões: <code>flex-fill</code>
+    .d-flex.gap-1
+      +button.flex-fill(href="javascript: void(0)") link
+      +button.primary.flex-fill(href="javascript: void(0)") link
+      +button.secondary.flex-fill(href="javascript: void(0)") link
+
+  section.mb-7
+    h2 Densidades
+    .row
+      .col-md
+        p.text-up-02 Alta densidade:
+        .d-flex.gap-1
+          +button.secondary.density-high botão
+          +button.secondary.circle.density-high: +icon.fa-home
+    
+      .col-md
+        p.text-up-02 Baixa densidade:
+        .d-flex.gap-1
+          +button.secondary.density-low botão
+          +button.secondary.circle.density-low: +icon.fa-home
+
+  section.mb-7
+    h2 Opcionais
+    .row
+      .col-md
+        p.text-up-02 Texto e ícone:
+        .d-flex.gap-1
+          +button.secondary
+            +icon.fa-code
+            | botão
+          +button.primary(href="javascript: void(0)")
+            | link
+            +icon.fa-link
+
+      .col-md
+        p.text-up-02 Cores de aviso:
+        .d-flex.gap-1
+          +button.success success
+          +button.alert alert
+          +button.error error

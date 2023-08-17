@@ -1,0 +1,47 @@
+extend ../../templates/page.pug
+
+append vars
+  - title = 'Componente Item e List'
+  - breadcrumbs  = 'Componentes'
+
+block page
+  section.mb-7
+    h2 Itens diversos:
+    +list
+      +item
+        p Item com link interno: <a href="http://gov.br/ds/">Design System</a>
+      +divider
+      +item
+        p Item com link imagem interna:
+        img(src="https://picsum.photos/200/100", alt="Imagem aleatória de exemplo.")
+      +divider
+      +item
+        p Conteúdo interno acionando comportamentos:
+        .d-flex.justify-content-between
+          +button.secondary.density-high(data-toggle="collapse" data-target="#item-collapse") Abrir collapse
+          +dropdown
+            +button.secondary.density-high(data-toggle="dropdown" data-target="#item-dropdown") Abrir dropdown
+            +dropdown-body#item-dropdown
+              .p-3
+                img(src="https://picsum.photos/200/100", alt="Imagem aleatória de exemplo.")
+        .collapse#item-collapse
+          .p-3.bg-main-alternative
+            img(src="https://picsum.photos/200/100", alt="Imagem aleatória de exemplo.")
+            
+  section.mb-7
+    h2 Itens interativos
+    +list
+      +item(href="https://gov.br" target="_blank")
+        span.mr-2 Gov.br
+        +icon.fa-external-link-alt
+      +divider
+      +dropdown
+        +item(class="d-flex gap-4" type="button" data-toggle="dropdown" data-target="#interactive-dropdown" data-icon-placement="left") Abrir dropdown
+        +dropdown-body#interactive-dropdown
+          .p-3.text-center
+            img(src="https://picsum.photos/200/100", alt="Imagem aleatória de exemplo.")
+      +divider
+      +item(class="d-flex gap-4" type="button" data-toggle="collapse" data-target="#interactive-collapse" data-icon-placement="left") Abrir collapse
+      .collapse#interactive-collapse
+        .p-3.bg-main-alternative
+          img(src="https://picsum.photos/200/100", alt="Imagem aleatória de exemplo.")

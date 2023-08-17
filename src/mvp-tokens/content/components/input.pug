@@ -1,0 +1,97 @@
+extend ../../templates/page.pug
+
+append vars
+  - title = 'Componente Input'
+  - breadcrumbs  = 'Componentes'
+
+block page
+  section.mb-7
+    h2 Tipos
+    .row
+      .col-md
+        p.text-up-02.mb-6 Padrão:
+        +input
+
+      .col-md
+        p.text-up-02.mb-6 Destaque:
+        +input.highlight
+
+  section.mb-7
+    h2 Densidades
+    .row
+      .col-md
+        p.text-up-02.mb-6 Alta densidade:
+        +input(density="density-high")
+
+      .col-md
+        p.text-up-02.mb-6 Baixa densidade:
+        +input(density="density-low")
+
+  section.mb-7
+    h2 Opcionais
+    .row
+      .col-md
+        p.text-up-02.mb-6 Com ícone:
+        +input("Nome de usuário", "fa-user")
+
+      .col-md
+        p.text-up-02.mb-6 Com botão de ação:
+        +input("Senha")(id="input-password" type="password")
+          +input-action
+            +button.circle.density-high(arial-label="Mostrar senha")
+              +icon.fa-eye-slash
+        script.
+          const inputPassword = document.querySelector('#input-password');
+          const inputPasswordInput = inputPassword.querySelector('.input-body input');
+          const inputPasswordAction = inputPassword.querySelector('.input-action button');
+
+          inputPasswordAction.addEventListener('click', () =>{
+            let icon = inputPasswordAction.querySelector('.fas');
+            inputPasswordAction.querySelector('.fas').classList.toggle('fa-eye-slash', 'fa-eye')
+            if (inputPasswordInput.type === 'password') {
+              inputPasswordInput.type = 'text';
+              icon.classList.remove('fa-eye-slash')
+              icon.classList.add('fa-eye')
+            }
+            else {
+              inputPasswordInput.type = 'password';
+              icon.classList.remove('fa-eye')
+              icon.classList.add('fa-eye-slash')
+            }
+          })
+
+      .col-md
+        p.text-up-02.mb-6 Com ícone e botão:
+        +input("Pesquisar", "fa-search")(id="input-search" placeholder="O que você procura?" type="search")
+          +input-action
+            +button.circle.density-high(arial-label="Apagar pesquisa")
+              +icon.fa-eraser
+        script.
+          const inputSearch = document.querySelector('#input-search');
+          const inputSearchInput = inputSearch.querySelector('.input-body input');
+          const inputSearchAction = inputSearch.querySelector('.input-action button');
+
+          inputSearchAction.addEventListener('click', () =>{
+            inputSearchInput.value= ''
+          })
+
+    .row.mt-9
+      .col-md
+        p.text-up-02.mb-6 Sem label:
+        +input("Input padrão")(labeless)
+
+      .col-md
+        p.text-up-02.mb-6 Label inline:
+        +input.inline
+
+  section.mb-7
+    h2 Tamanhos automáticos
+    p Inputs: <code>d-inline-block</code>
+    .row
+      .col-md-auto
+        +input("CPF").d-inline-block(placeholder="11 números..." size="11" maxlength="11")
+
+      .col-md-auto
+        +input("DDD").d-inline-block(placeholder="XX" size="2" maxlength="2")
+        +input("Telefone").d-inline-block(placeholder="8 números..." size="8" maxlength="8")
+        +input("Celular").d-inline-block(placeholder="9 números..." size="9" maxlength="9")

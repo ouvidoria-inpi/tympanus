@@ -1,0 +1,70 @@
+
+// Tamanhos
+@each $key, $value in $text-sizes {
+  .text-#{$key} {
+    font-size: #{$value};
+  }
+}
+
+// Pesos
+@each $key, $value in $text-weights {
+  .text-weight-#{$key} {
+    font-weight: #{$value};
+  }
+}
+
+// Alinhamentos
+@each $decoration in $text-aligns {
+  .text-#{$decoration} {
+    text-align: #{$decoration};
+  }
+}
+
+// Decorações
+@each $decoration in $text-decorations {
+  .text-#{$decoration} {
+    text-decoration: #{$decoration};
+  }
+}
+
+// Transformação
+@each $transform in $text-transforms {
+  .text-#{$transform} {
+    text-transform: #{$transform};
+  }
+}
+
+// Wraps
+.text-wrap {
+  white-space: normal;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+// Aplicação por breakpoints
+@each $breakpoint in map-keys($breakpoints) {
+  @if $breakpoint != "mobile" {
+    @include media-breakpoint($breakpoint) {
+      $breakpoint-abbr: map-get($breakpoints-abbr, $breakpoint);
+
+      @each $decoration in $text-aligns {
+        .text-#{$breakpoint-abbr}-#{$decoration} {
+          text-align: #{$decoration};
+        }
+      }
+    }
+  }
+}

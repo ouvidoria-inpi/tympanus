@@ -1,0 +1,58 @@
+extend ../../templates/page.pug
+
+append vars
+  - title = 'Componente Select'
+  - breadcrumbs  = 'Componentes'
+
+block page
+  section.mb-7
+    h2 Tipos
+    .row
+      .col-md
+        p.text-up-02.mb-6 Padrão:
+        +select
+          +option-radio("Light")(name="select" value="light" checked)
+          +option-radio("Dark")(name="select" value="dark")
+          +option-radio("Outubro Rosa")(name="select" value="outubro")
+
+      .col-md
+        p.text-up-02.mb-6 Multiselect:
+        +select
+          +option-checkbox("Selecionar todos")(name="select-icon" value="light")
+          +option-checkbox("Light")(name="select-icon" value="light" checked)
+          +option-checkbox("Dark")(name="select-icon" value="dark" checked)
+          +option-checkbox("Outubro Rosa")(name="select-icon" value="outubro")
+
+  section.mb-7
+    h2 Densidades
+    .row
+      .col-md
+        p.text-up-02.mb-6 Alta densidade:
+        +select(density="density-high")
+          +option-radio("Light")(name="select" value="light" checked)
+          +option-radio("Dark")(name="select" value="dark")
+          +option-radio("Outubro Rosa")(name="select" value="outubro")
+
+      .col-md
+        p.text-up-02.mb-6 Baixa densidade:
+        +select(density="density-low")
+          +option-radio("Light")(name="select" value="light" checked)
+          +option-radio("Dark")(name="select" value="dark")
+          +option-radio("Outubro Rosa")(name="select" value="outubro")
+
+  section.mb-7
+    h2 Opcionais
+    .row
+      .col-md
+        p.text-up-02.mb-6 Com ícone:
+        +select(undefined, 'fa-search')
+          +option-radio("Light")(name="select" value="light" checked)
+          +option-radio("Dark")(name="select" value="dark")
+          +option-radio("Outubro Rosa")(name="select" value="outubro")
+
+      .col-md
+        p.text-up-02.mb-6 Tamanho automático:
+        +select.d-inline-block(undefined, 'fa-search')
+          +option-radio("Light")(name="select" value="light" checked)
+          +option-radio("Dark")(name="select" value="dark")
+          +option-radio("Outubro Rosa")(name="select" value="outubro")

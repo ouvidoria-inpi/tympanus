@@ -1,215 +1,145 @@
 @mixin button-configs {
-  @include button-tokens;
-  @include button-default;
-  @include button-block;
-  @include button-circle;
-  @include button-sizes;
-  @include button-emphasis;
-  @include button-colors;
-  @include button-states;
-  @include button-dark;
-}
+  // Tokens do componente
+  --button-background: transparent;
+  --button-border: transparent;
+  --color: var(--interactive);
+  --button-radius: var(--rounder-full);
+  --button-high-density: 32px;
+  --button-default-density: 40px;
+  --button-low-density: 48px;
+  --button-density: var(--button-default-density);
 
-@mixin button-magicbutton {
-  --focus-offset: calc(
-    (var(--magic-support-size) - var(--magic-size)) * 0.5 + 4px
-  );
-  --button-size: var(--magic-size);
-  background-color: var(--interactive-alternative);
-  color: var(--color-dark);
-  font-size: var(--font-size-scale-up-02);
-  font-weight: var(--font-weight-semi-bold);
-
-  &:not(:disabled) {
-    @include hover("color-dark");
-    @include active("color-dark");
-  }
-}
-
-@mixin button-tokens {
-  --button-radius: 100em;
-  --button-xsmall: 24px;
-  --button-small: 32px;
-  --button-medium: 40px;
-  --button-large: 48px;
-  --button-size: var(--button-medium);
-}
-
-@mixin button-default {
-  align-items: center;
-  background-color: transparent;
-  border: 0;
+  // Configuração padrão
+  background-color: var(--button-background);
+  border-color: currentcolor;
   border-radius: var(--button-radius);
-  color: var(--interactive);
+  border-style: solid;
+  border-width: 0;
   cursor: pointer;
   display: inline-flex;
-  font-size: var(--font-size-scale-up-01);
-  font-weight: var(--font-weight-semi-bold);
-  height: var(--button-size);
+  height: var(--button-density);
   justify-content: center;
+  margin: 0;
   overflow: hidden;
-  padding: 0 var(--spacing-scale-3x);
+  padding: 0 var(--spacing-sm);
+  place-items: center;
   position: relative;
-  text-align: center;
+  text-decoration: none !important;
   vertical-align: middle;
-  white-space: nowrap;
-  width: auto;
-}
 
-@mixin button-block {
-  &.block {
-    width: 100%;
-  }
-  @each $breakpoint in "sm", "md", "lg", "xl" {
-    @include media-breakpoint-up(#{$breakpoint}) {
-      &.block-#{$breakpoint} {
-        width: 100%;
-      }
-      &.auto-#{$breakpoint} {
-        width: auto;
-      }
-    }
-  }
-}
+  // Overlay
+  > .overlay {
+    background-color: currentcolor;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
 
-@mixin button-circle {
-  &.circle,
-  &[circle],
-  &.is-circle {
-    border-radius: 50%;
+    @include motion-effect("fading", "opacity");
+  }
+
+  // Conteúdo
+  > .content {
+    display: flex;
+    font-size: var(--font-size-scale-up-01);
+    font-weight: var(--font-weight-semi-bold);
+    gap: var(--spacing-xs);
+    place-items: center;
+  }
+
+  // Enfases
+  &.primary {
+    --button-background: var(--theme-interactive-main);
+    --color: var(--theme-interactive-read-main);
+
+    @include states-contrast-mode;
+  }
+
+  &.secondary {
+    border-width: 1px;
+  }
+
+  // Tipo circular
+  &.circle {
+    border-radius: var(--rounder-full);
     padding: 0;
-    width: var(--button-size);
+    width: var(--button-density);
   }
-}
 
-@mixin button-sizes {
-  @each $size in "xsmall", "small", "medium", "large" {
-    &.#{$size},
-    &[#{$size}],
-    &.is-#{$size} {
-      --button-size: var(--button-#{$size});
+  // Cores
+  &.success {
+    --button-background: var(--theme-success-main);
+    --color: var(--theme-success-read-main);
+
+    @include states-contrast-mode;
+  }
+
+  &.alert {
+    --button-background: var(--theme-alert-main);
+    --color: var(--theme-alert-read-main);
+  }
+
+  &.error {
+    --button-background: var(--theme-error-main);
+    --color: var(--theme-error-read-main);
+
+    @include states-contrast-mode;
+  }
+
+  // Densidades
+  @each $density in $densities {
+    &.density-#{$density} {
+      --button-density: var(--button-#{$density}-density);
     }
   }
-}
 
-@mixin button-emphasis {
-  &.primary,
-  &[primary],
-  &.is-primary {
-    --interactive-rgb: var(--color-dark-rgb);
-    background-color: var(--interactive-light);
-    color: var(--color-dark);
+  // Estado Focus
+  @include focus;
+
+  // Estado Hover
+  &:hover:not(.disabled):not([disabled]) > .overlay {
+    opacity: var(--hover);
   }
 
-  &.secondary,
-  &[secondary],
-  &.is-secondary {
-    background-color: var(--background-light);
-    border: 1px solid var(--interactive);
-  }
-}
+  // Estado Pressed
+  @include pressed;
 
-@mixin button-colors {
-  @each $color in "danger", "success", "warning", "info" {
-    &.#{$color},
-    &[#{$color}],
-    &.is-#{$color} {
-      background-color: var(--#{$color});
-      @if $color != "warning" {
-        --interactive-rgb: var(--color-dark-rgb);
-        color: var(--color-dark);
-      } @else {
-        --interactive-rgb: var(--color-light-rgb);
-        color: var(--color-light);
-      }
-    }
+  // Estado Ativado
+  &.active {
+    --button-background: var(--theme-activated-main);
+    --color: var(--theme-activated-read-main);
   }
-}
 
-@mixin button-states {
-  &:disabled {
+  // Estado Desativado
+  &.disabled {
     cursor: not-allowed;
-  }
+    opacity: var(--disabled);
 
-  &:not(:disabled) {
-  --focus-offset: var(--spacing-scale-half);
-    @include focus;
-    @include hover;
-    @include active;
-  }
-
-  &.active,
-  &.is-active,
-  &[active] {
-    --hover: var(--hover-dark);
-    background-color: var(--active);
-    color: var(--color-dark);
-  }
-
-  &.loading,
-  &[loading],
-  &.is-loading {
-    &::after {
-      border-color: var(--interactive) var(--interactive) transparent;
-      border-style: solid;
-    }
-
-    &.primary,
-    &.danger,
-    &.success,
-    &.info {
-      &::after {
-        border-color: var(--background) var(--background) transparent;
-      }
+    * {
+      pointer-events: none;
     }
   }
 }
 
-@mixin button-dark {
-  &.inverted,
-  &.is-inverted,
-  &[inverted],
-  &.dark-mode {
-    @include dark-mode;
-    color: var(--interactive-dark);
+@mixin button-input {
+  // Sobrescreve estilos de input padrão
+  input {
+    --color: currentcolor;
 
-    &.primary,
-    &[primary],
-    &.is-primary {
-      --interactive-rgb: var(--background-dark-rgb);
-      background-color: var(--interactive-dark);
-      color: var(--background-dark);
-    }
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: var(--font-size-scale-up-01);
+    font-weight: var(--font-weight-semi-bold);
+    margin: 0;
+    padding: 0;
 
-    &.secondary,
-    &[secondary],
-    &.is-secondary {
-      background-color: var(--background-dark);
-    }
-
-    &.active {
-      --hover: var(--hover-light);
-      --interactive-rgb: var(--active-rgb);
-      background-color: var(--background-light);
-      color: var(--active);
+    &:focus {
+      outline: none;
     }
   }
-}
 
-@mixin button-dark-mode {
-  .#{$prefix}button {
-    &.primary,
-    &[primary],
-    &.is-primary {
-      @include light-mode($interactive-rgb: "background-dark-rgb");
-      background-color: var(--interactive-dark);
-      color: var(--background-dark);
-    }
-
-    &.secondary,
-    &[secondary],
-    &.is-secondary {
-      background-color: var(--background-dark);
-    }
+  // Estado Focus
+  &:focus-within {
+    @include focus-style;
   }
 }

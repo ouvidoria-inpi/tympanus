@@ -1,0 +1,96 @@
+
+.border {
+  border-style: solid;
+  border-width: var(--border-width-sm);
+
+  // Cria as espessuras da borda
+  @each $key, $value in $border-widths {
+    &-width-#{$key} {
+      border-width: #{$value};
+    }
+  }
+
+  // Cria os estilos da borda
+  @each $style in $border-styles {
+    &-#{$style} {
+      border-style: #{$style};
+    }
+  }
+}
+
+.rounder {
+  @each $key, $value in $rounders {
+    &-#{$key} {
+      border-radius: #{$value};
+    }
+  }
+
+  // Aplica arredondamento por direção
+  @each $key, $value in $rounders {
+    @each $side in "top", "right", "bottom", left {
+      &-#{$side}-#{$key} {
+        @if $side == "top" {
+          border-top-left-radius: #{$value};
+          border-top-right-radius: #{$value};
+        }
+
+        @if $side == "right" {
+          border-bottom-right-radius: #{$value};
+          border-top-right-radius: #{$value};
+        }
+
+        @if $side == "bottom" {
+          border-bottom-left-radius: #{$value};
+          border-bottom-right-radius: #{$value};
+        }
+
+        @if $side == "left" {
+          border-bottom-left-radius: #{$value};
+          border-top-left-radius: #{$value};
+        }
+      }
+    }
+  }
+
+  // Aplica arredondamento por canto
+  @each $key, $value in $rounders {
+    @each $direction in "top", "bottom" {
+      @each $side in "left", "right" {
+        &-#{$direction}-#{$side}-#{$key} {
+          border-#{$direction}-#{$side}-radius: #{$value};
+        }
+      }
+    }
+  }
+}
+
+.overflow {
+  @each $overflow in $overflows {
+    &-#{$overflow} {
+      overflow: #{$overflow};
+    }
+  }
+}
+
+.opacity {
+  @each $key, $value in $opacities {
+    &-#{$key} {
+      opacity: #{$value};
+    }
+  }
+}
+
+.overlay-scrim {
+  background: var(--overlay-scrim);
+  inset: 0;
+  position: absolute;
+}
+
+.overlay-text {
+  @include contrast-mode;
+
+  // align-content: end;
+  background: var(--overlay-read);
+  inset: 0;
+  position: absolute;
+}

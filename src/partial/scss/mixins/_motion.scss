@@ -1,7 +1,23 @@
-@mixin durations {
-  @each $duration in map-keys($durations) {
-    .#{$duration} {
-      animation-duration: var(--duration-#{$duration});
-    }
-  }
+/// Aplica o efeito de motion informado aplicando transição nas propriedades.
+/// @param {String} $motion-name - Nome do efeito: sliding, fading, zooming ou rotation
+/// @param {String} $property ["all"] - Nome da propriedade. Usar vírgula para usar mais de uma propriedade
+/// @param {String} $motion-easing ["ease"] - Nome da atenuação: ease, ease-in, ease-out, ease-in-out ou linear
+/// @example
+///  .collapse {
+///    height: 0;
+///    overflow: hidden;
+///    @include motion-effect("sliding", "height");
+///  }
+///
+///  .collapse {
+///    height: 0;
+///    overflow: hidden;
+///    transition-duration: var(--duration-sm);
+///    transition-property: height;
+///    transition-timing-function: var(--easing-ease);
+///  }
+@mixin motion-effect($motion-name, $property: "all", $motion-easing: "ease") {
+  transition-duration: map-get($motion-durations, #{$motion-name});
+  transition-property: #{$property};
+  transition-timing-function: var(--easing-#{$motion-easing});
 }

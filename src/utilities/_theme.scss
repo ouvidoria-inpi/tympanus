@@ -1,0 +1,17 @@
+// Carrega todas as dependências
+@import "../config";
+
+// Cria cores de superfícies do tema
+@include make-theme-surfaces;
+
+// Cria cores de leitura do tema
+@include make-theme-reads;
+
+// Cria cores de bordas do tema
+@include make-theme-borders;
+
+// Cria cores interativas do tema
+@include make-theme-interactives;
+
+// Cria cores de aviso do tema
+@include make-theme-feedbacks;

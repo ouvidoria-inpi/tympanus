@@ -1,0 +1,60 @@
+// Mapa de superfície do tema.
+$theme-surfaces: (
+  "main-base": var(--theme-surface-main-base),
+  "main-alternative": var(--theme-surface-main-alternative),
+  "contrast-base": var(--theme-surface-contrast-base),
+  "contrast-alternative": var(--theme-surface-contrast-alternative),
+) !default;
+
+// Mapa de cores de leitura do tema.
+$theme-reads: (
+  "main-base": var(--theme-read-main-base),
+  "main-alternative": var(--theme-read-main-alternative),
+  "contrast-base": var(--theme-read-contrast-base),
+  "contrast-alternative": var(--theme-read-contrast-alternative),
+) !default;
+
+// Mapa de cores de borda do tema.
+$theme-borders: (
+  "main-base": var(--theme-border-main-base),
+  "main-alternative": var(--theme-border-main-alternative),
+  "contrast-base": var(--theme-border-contrast-base),
+  "contrast-alternative": var(--theme-border-contrast-alternative),
+) !default;
+
+// Mapa de cores interativas do tema.
+$theme-interactive: (
+  "interactive-main": var(--theme-interactive-main),
+  "interactive-contrast": var(--theme-interactive-contrast),
+  "interactive-cta": var(--theme-interactive-cta),
+) !default;
+
+// Mapa de cores de leitura interativas do tema.
+$theme-interactive-reads: (
+  "interactive-main": var(--theme-interactive-read-main),
+  "interactive-contrast": var(--theme-interactive-read-contrast),
+  "interactive-cta": var(--theme-interactive-read-cta),
+) !default;
+
+// Mapa de cores de feedback do tema.
+$theme-feedback: (
+  "success": var(--theme-success-main),
+  "alert": var(--theme-alert-main),
+  "error": var(--theme-error-main),
+) !default;
+
+// Mapa de cores de leitura de feedback do tema.
+$theme-feedback-reads: (
+  "success": var(--theme-success-read-main),
+  "alert": var(--theme-alert-read-main),
+  "error": var(--theme-error-read-main),
+) !default;
+
+/// Lista de classes que modificam os "tokens globais de tema" para aplicar a **versão de contraste**.
+///
+/// @type List
+$automatic-contrast-mode: "contrast-base", "contrast-alternative",
+  "interactive-main", "interactive-cta", "success", "error" !default;
+
+// Lista de classes que modificam o **token global de superfície** para aplicar a superfície alternativa.
+$automatic-alternative-mode: "main-alternative", "contrast-alternative" !default;

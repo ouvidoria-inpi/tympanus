@@ -1,0 +1,84 @@
+extend ../../templates/page.pug
+
+append vars
+  - title = 'Utilitários de Tema e Cor'
+  - breadcrumbs  = 'Utilitários'
+  - const colors = ["red", "orange", "gold", "yellow", "green", "mint", "cyan", "blue", "indigo", "violet", "magenta"]
+  - const colorsCools = ["red-cool", "green-cool", "mint-cool", "blue-cool", "indigo-cool"]
+  - const colorsWarms = ["red-warm", "orange-warm", "green-warm", "blue-warm", "indigo-warm", "violet-warm"]
+  - const luminances = ["5", "10", "20", "30", "40", "50", "60", "70", "80", "90"]
+  - const luminancesVivids = ["5", "10", "20", "30", "40", "50", "60", "70", "80"]
+
+mixin surfaces(colors, luminances)
+  each color in colors
+    .row.mb-1
+      each luminance in luminances
+        .col-1(class=`bg-${color}-${luminance}`)
+          .p-3=`bg-${color}-${luminance}`
+    .row.mb-5
+      each luminance in luminancesVivids
+        .col-1(class=`bg-${color}-vivid-${luminance}`)
+          .p-3=`bg-${color}-vivid-${luminance}`
+
+mixin text(colors, luminances)
+  each color in colors
+    .row.mb-1
+      each luminance in luminances
+        .col-1.background
+          .p-3(class=`text-${color}-${luminance}`)=`text-${color}-${luminance}`
+    .row.mb-5
+      each luminance in luminancesVivids
+        .col-1.background
+          .p-3(class=`text-${color}-vivid-${luminance}`)=`text-${color}-vivid-${luminance}`
+
+mixin border(colors, luminances)
+  each color in colors
+    .row.mb-1
+      each luminance in luminances
+        .col-1
+          .border.p-1(class=`border-${color}-${luminance}`)=`border-${color}-${luminance}`
+    .row.mb-5
+      each luminance in luminancesVivids
+        .col-1
+          .border.p-1(class=`border-${color}-vivid-${luminance}`)=`border-${color}-vivid-${luminance}`
+
+block page
+  section.mb-7
+    h2 Tema
+    .row
+      .col-md
+        p.text-up-02.mb-6 Cor de fundo:
+        .p-3.bg-main-base bg-main-base
+        .p-3.bg-main-alternative bg-main-alternative
+        .p-3.bg-contrast-base bg-contrast-base
+        .p-3.bg-contrast-alternative bg-contrast-alternative
+        .p-3.bg-success bg-success
+        .p-3.bg-alert bg-alert
+        .p-3.bg-error bg-error
+
+      .col-md
+        p.text-up-02.mb-6 Cor de texto:
+        .p-3.text-main-base text-main-base
+        .p-3.text-main-alternative text-main-alternative
+        .p-3.text-contrast-base.bg-violet-40 text-contrast-base
+        .p-3.text-contrast-alternative.bg-violet-40 text-contrast-alternative
+        .p-3.text-success text-success
+        .p-3.text-alert text-alert
+        .p-3.text-error text-error
+
+  section.mb-7
+    h2 Cor
+    p.text-up-02.mb-6 Cor de fundo:
+    +surfaces(colors, luminances)
+    +surfaces(colorsCools, luminances)
+    +surfaces(colorsWarms, luminances)
+
+    p.text-up-02.mb-6 Cor de texto:
+    +text(colors, luminances)
+    +text(colorsCools, luminances)
+    +text(colorsWarms, luminances)
+
+    p.text-up-02.mb-6 Cor de borda:
+    +border(colors, luminances)
+    +border(colorsCools, luminances)
+    +border(colorsWarms, luminances)

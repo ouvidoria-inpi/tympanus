@@ -1,20 +1,17 @@
 {
   "extends": [
-    "stylelint-config-sass-guidelines",
-    "stylelint-config-prettier"
+    "stylelint-config-standard-scss"
   ],
-  "defaultSeverity": "warning",
+  "plugins": [
+    "stylelint-order"
+  ],
   "rules": {
-    "max-nesting-depth": null,
-    "order/order": [
-      [
-        "custom-properties",
-        "dollar-variables",
-        "declarations",
-        "rules"
-      ]
-    ],
-    "selector-max-compound-selectors": null,
-    "selector-no-qualifying-type": null
+    "color-hex-length": "long",
+    "alpha-value-notation": "number",
+    "selector-not-notation": "simple",
+    "order/properties-alphabetical-order": true,
+    "scss/no-global-function-names": null,
+    "color-function-notation": "legacy",
+    "no-descending-specificity": null
   }
 }

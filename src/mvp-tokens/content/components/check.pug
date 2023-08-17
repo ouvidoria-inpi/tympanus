@@ -1,0 +1,76 @@
+extend ../../templates/page.pug
+
+append vars
+  - title = 'Componente Checkbox e Radio'
+  - breadcrumbs  = 'Componentes'
+
+block page
+  section.mb-7
+    h2 Direção
+    p.text-up-02 Horizontal:
+
+    .row.mb-9
+      .col-md
+        .row
+          .col-auto
+            +checkbox("Lorem ipsum dolor sit")
+          .col-auto
+            +checkbox("checkbox 2")
+          .col-auto
+            +checkbox("checkbox 3")
+
+      .col-md
+        .row
+          .col-auto
+            +radio("Lorem ipsum dolor sit")(name="h-radio") 
+          .col-auto
+            +radio("checkbox 2")(name="h-radio")
+          .col-auto
+            +radio("checkbox 3")(name="h-radio")
+
+    p.text-up-02 Vertical:
+    p Container: <code>flex-column</code>
+    .row
+      .col-md
+        .d-flex.gap-1.flex-column
+          +checkbox("Lorem ipsum dolor sit")
+          +checkbox("checkbox 2")
+          +checkbox("checkbox 3")
+
+      .col-md
+        .d-flex.gap-1.flex-column
+          +radio("Lorem ipsum dolor sit")(name="v-radio") 
+          +radio("checkbox 2")(name="v-radio")
+          +radio("checkbox 3")(name="v-radio")
+
+  section.mb-7
+    h2 Opcional
+    p.text-up-02 Sem label:
+
+    .row
+      .col-md
+        .d-flex.gap-1
+          +checkbox("checkbox labeless")(labeless)
+          +checkbox("checkbox labeless")(labeless)
+          +checkbox("checkbox labeless")(labeless)
+
+      .col-md
+        .d-flex.gap-1
+          +radio("checkbox labeless")(labeless name="labeless-radio")
+          +radio("checkbox labeless")(labeless name="labeless-radio")
+          +radio("checkbox labeless")(labeless name="labeless-radio")
+
+  section.mb-7
+    h2 Especial
+    p.text-up-02 Item checável:
+
+    .row.mb-9
+      .col-md
+        +option-checkbox("Checkbox 1")(value="checkbox1")
+        +option-checkbox("Checkbox 2")(value="checkbox2")
+        +option-checkbox("Checkbox 3")(value="checkbox3")
+
+      .col-md
+        +option-radio("Radio 1")(value="radio1" name="option-radio")
+        +option-radio("Radio 2")(value="radio2" name="option-radio")
+        +option-radio("Radio 3")(value="radio3" name="option-radio")

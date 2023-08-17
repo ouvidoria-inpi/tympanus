@@ -1,0 +1,44 @@
+block vars
+  //- Configuração do ambiente
+  - const baseUrl = 'http://localhost:5501/dist'
+
+  //- Configuração do Header
+  - const headerLogo = 'fa-image'
+  - const headerTitle = 'MVP Tokens v4'
+  - const headerSignature = 'Assinatura'
+
+  //- Configuração da Grid
+  - let containerType = 'container-lg'
+
+  //- Configuração dos prefixos dos componentes
+  - const prefix = 'br-'
+
+  //- Configurações de páginas
+  - let title = ''
+  - let path = '/'
+
+block mixins
+  include ../partials/mixins.pug
+
+doctype html
+html(lang='pt-br')
+  head
+    //- Conteúdo do head
+    include ../partials/head.pug
+  body.template-base
+    //- Carrega Header
+    block header
+      include ../components/header.pug
+
+    //- Bloco de exemplo de sangria
+    block sangria
+
+    //- Bloco do conteúdo principal
+    block container
+
+    //- Carrega Footer
+    block footer
+      include ../components/footer.pug
+
+    //- Carrega scripts javascript
+    include ../partials/scripts.pug

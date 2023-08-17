@@ -1,16 +1,16 @@
-/// Aplica hover: feedback ao colocar o cursor no elemento
-/// @param {String} $color ["interactive"] - Cor do hover **(Opcional)**
-/// @example scss - Uso prático
-///  a {
-///    @include hover;
-///  }
-@mixin hover($color: "interactive") {
-  &:not(:disabled) {
-    &:hover {
-      background-image: linear-gradient(
-        rgba(var(--#{$color}-rgb), var(--hover)),
-        rgba(var(--#{$color}-rgb), var(--hover))
-      );
+@mixin hover($component: "") {
+  .#{$component}-overlay {
+    background-color: currentcolor;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+
+    @include motion-effect("fading", "opacity");
+  }
+
+  &:hover {
+    .#{$component}-overlay {
+      opacity: var(--hover);
     }
   }
 }

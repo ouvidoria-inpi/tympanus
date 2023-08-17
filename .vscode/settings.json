@@ -60,5 +60,6 @@
     "[x]"
   ],
   "todo-tree.highlights.enabled": true,
-  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)"
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "liveServer.settings.port": 5501
 }

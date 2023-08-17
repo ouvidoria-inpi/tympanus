@@ -1,0 +1,15 @@
+// Camada 0
+.layer-0 {
+  box-shadow: none;
+  position: relative;
+  z-index: var(--z-index-zero);
+}
+
+// Camadas de 1 a 4
+@each $key, $value in $layers {
+  .layer-#{$key} {
+    box-shadow: #{$value};
+    position: relative;
+    z-index: var(--z-index-0#{$key});
+  }
+}

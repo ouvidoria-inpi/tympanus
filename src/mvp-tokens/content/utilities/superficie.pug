@@ -1,0 +1,124 @@
+extend ../../templates/page.pug
+
+append vars
+  - title = 'Utilitários de Superfície'
+  - breadcrumbs  = 'Utilitários'
+
+block page
+  section.mb-7
+    h2 Bordas
+    p.text-up-02.mb-6 Estilo:
+    .row.mb-9
+      .col-6.col-sm-3
+        p <code>border</code>
+        .p-5.border
+      .col-6.col-sm-3
+        p <code>border</code> <code>border-dashed</code>
+        .p-5.border.border-dashed
+
+    p.text-up-02.mb-6 Espessura:
+    .row.mb-9
+      .col-md
+        p <code>border</code>
+        .p-5.border
+      .col-md
+        p <code>border</code> <code>border-width-md</code>
+        .p-5.border.border-width-md
+      .col-md
+        p <code>border</code> <code>border-width-lg</code>
+        .p-5.border.border-width-lg
+      .col-md
+        p <code>border</code> <code>border-width-xl</code>
+        .p-5.border.border-width-xl
+
+  section.mb-7
+    h2 Cantos
+    .row.mb-9
+      .col-md
+        p <code>rounder-sm</code>
+        .p-9.rounder-sm.bg-orange-10
+      .col-md
+        p <code>rounder-md</code>
+        .p-9.rounder-md.bg-orange-10
+      .col-md
+        p <code>rounder-lg</code>
+        .p-9.rounder-lg.bg-orange-10
+      .col-md
+        p <code>rounder-full</code>
+        .p-9.rounder-full.bg-orange-10
+    .row
+      .col-md
+        p <code>rounder-lg</code> <code>rounder-bottom-none</code>
+        .p-9.rounder-lg.rounder-bottom-none.bg-orange-10
+      .col-md
+        p <code>rounder-full</code> <code>rounder-bottom-left-none</code>
+        .p-9.rounder-full.rounder-bottom-left-none.bg-orange-10
+      .col-md
+        p <code>rounder-full</code> <code>rounder-right-none</code>
+        .p-9.rounder-full.rounder-right-none.bg-orange-10
+
+  section.mb-7
+    h2 Overflow
+    .row
+      .col-md
+        p <code>overflow-auto</code>
+        .text-nowrap.text-center.p-5.overflow-auto.bg-orange-10(style="width: 200px;")
+          .h1.m-0 Super Ultra Header
+      .col-md
+        p <code>overflow-hidden</code>
+        .text-nowrap.text-center.p-5.overflow-hidden.bg-orange-10(style="width: 200px;")
+          .h1.m-0 Super Ultra Header
+      .col-md
+        p <code>overflow-visible</code>
+        .text-nowrap.text-center.p-5.overflow-visible.bg-orange-10(style="width: 200px; margin-right: 180px;")
+          .h1.m-0 Super Ultra Header
+
+  section.mb-7
+    h2 Opacidade
+    .row
+      each opacity in ["none", "xxxs", "xxs", "xs", "sm", "md", "lg", "xl", "xxl", "xxxl", "full"]
+        .col-6.col-md-3.mb-9
+          p: code=`opacity-${opacity}`
+          .p-9.bg-cyan-10(class=`opacity-${opacity}`) texto
+
+
+  section.mb-7
+    h2 Overlay
+    p.text-up-02.mb-6 Foco:
+
+    .row
+      .col-4
+        form(style="position: relative;")
+          .overlay-scrim(style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;")
+          fieldset
+            legend Endereço
+            
+            .mb-5
+              label(for="estado") Estado
+              input#estado(type="text" value="Distrito Federal")
+
+            .mb-5(style="position: relative;")
+              .bg-main-base(style="position: absolute; top: -8px; bottom: -8px; left: -8px; right: -8px;")
+              div(style="position: relative;")
+                label(for="cidade") Cidade
+                input#cidade(type="text")
+                span.ml-3.text-error.text-weight-medium Informe a cidade!
+
+            .mb-5
+              label(for="bairro") Bairro
+              input#bairro(type="text" value="Setor Noroeste")
+
+    p.text-up-02.mb-6 Legibilidade:
+
+    figure(style="position: relative;")
+      img(src="https://picsum.photos/800/600", alt="Imagem ilustrativa")
+      figcaption.overlay-text
+        .p-9(style="position: absolute; bottom: 0;")
+          .h3 LIBERDADE DE IMPRENSA
+          p Paulo Pimenta anuncia que Polícia Civil do DF irá averiguar agressões a jornalistas Paulo Pimenta anuncia que Polícia Civil do DF irá averiguar agressões a jornalistas
+
+append styles
+  style.
+    .opacitybg {
+      background: linear-gradient(to right, var(--color-red-50), var(--color-green-50));
+    }

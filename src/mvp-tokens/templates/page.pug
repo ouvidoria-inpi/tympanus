@@ -1,0 +1,30 @@
+extend default.pug
+
+block container
+  #base-grid
+    div(class=containerType)
+      .row
+        //- Bloco do menu
+        block base-menu
+          #base-menu.col-auto
+            include ../components/menu.pug
+
+        //- Bloco do conteúdo
+        block base-content
+          #base-content.col
+            block breadcrumb
+              if breadcrumbs
+                - const dict = breadcrumbs.split('/');
+                +breadcrumb.pt-5
+                  each crumb in dict
+                    +crumb=crumb
+
+            main#content
+              if title
+                h1=title
+              block page
+
+        //- Bloco de conteúdos acessórios
+        block base-aside
+          #base-aside.col-auto
+            block aside

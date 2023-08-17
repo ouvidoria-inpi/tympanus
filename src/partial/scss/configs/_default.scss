@@ -1,0 +1,23 @@
+/// Prefixo utilizado nos componentes.
+///
+/// @type String
+/// @example
+///  $prefix: "br-";
+///  .#{$prefix}avatar {
+///    ...
+///  }
+///
+///  .br-avatar {
+///    ...
+///  }
+$prefix: "br-" !default;
+
+/// Habilita a **versão lite**. A lista de cores é definida na variável `colors-lite`.
+/// @type Boolean
+/// @example
+///  $enable-lite: true;
+///  @import "configs";
+///  @import "default";
+///  @import "utilities";
+///  ...
+$enable-lite: false !default;

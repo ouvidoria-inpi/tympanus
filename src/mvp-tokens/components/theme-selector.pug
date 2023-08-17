@@ -1,0 +1,42 @@
+//- <div class="br-select" id="theme-selector">
+//-   <div class="br-input">
+//-     <label class="sr-only" for="temas">Label</label>
+//-     <div class="input-group">
+//-       <div class="input-icon">
+//-         <i class="fas fa-search" aria-hidden="true"></i>
+//-       </div>
+//-       <input id="temas" type="text" placeholder="Alterar o tema" class="">
+//-     </div>
+//-     <button class="br-button" type="button" aria-label="Exibir lista" data-trigger="data-trigger">
+//-       <i class="fas fa-caret-down fa-angle-up" aria-hidden="true"></i>
+//-     </button>
+//-   </div>
+//-   <div class="br-list">
+//-     <div class="br-item selected">
+//-       <div class="br-radio">
+//-         <input id="tema-light" type="radio" name="page-theme" value="light" checked="">
+//-         <label for="tema-light">Light</label>
+//-       </div>
+//-     </div>
+//-     <div class="br-item">
+//-       <div class="br-radio">
+//-         <input id="tema-dark" type="radio" name="page-theme" value="dark">
+//-         <label for="tema-dark">Dark</label>
+//-       </div>
+//-     </div>
+//-     <div class="br-item">
+//-       <div class="br-radio">
+//-         <input id="tema-outubro-rosa" type="radio" name="page-theme" value="outubro-rosa">
+//-         <label for="tema-outubro-rosa">Outubro rosa</label>
+//-       </div>
+//-     </div>
+//-   </div>
+//- </div>
+
++select("Escolha um tema")(id="theme-selector" placeholder="Alterar o tema" labeless)
+  +option-radio("Light").selected(name="theme" value="light" checked)
+  +option-radio("Dark")(name="theme" value="dark")
+  +option-radio("Outubro Rosa")(name="theme" value="outubro-rosa")
+  //- +option-radio("Natal")(name="theme" value="natal")
+  //- +option-radio("Aniversário")(name="theme" value="aniversario")
+  //- +option-radio("10 anos")(name="theme" value="dez-anos")

@@ -1,0 +1,9 @@
+// Carrega todas as dependências
+@import "../../config";
+
+// Carrega os mixins
+@import "mixins";
+
+.#{$prefix}select {
+  @include select-configs;
+}

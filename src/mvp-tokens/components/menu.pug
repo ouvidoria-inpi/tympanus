@@ -1,0 +1,57 @@
+block menu-component
+  +menu#menu
+    +menu-header
+      +icon.fa-image
+      span=headerTitle
+    +menu-body
+      +list
+        +item.d-flex.gap-5(href=`${baseUrl}/`)
+          +icon.fa-home
+          span Página inicial
+        +divider
+        +item.d-flex.gap-5(href=`${baseUrl}/exemplo.html`)
+          +icon.fa-eye
+          span Exemplo
+        +divider
+        +item.d-flex.gap-5(href=`${baseUrl}/breaking.html`)
+          +icon.fa-exclamation-triangle
+          span Breaking Changes
+        +divider
+        +item.d-flex.gap-5(href=`${baseUrl}/tipografia.html`)
+          +icon.fa-font
+          span Tipografia padrão
+        +divider
+        +item.d-flex.gap-5(type="button" data-toggle="collapse" data-target="#menu-componentes")
+          +icon.fa-cubes
+          span Componentes
+        +list#menu-componentes.collapse
+          +item(href=`${baseUrl}/components/button.html`)
+            span Button
+          +item(href=`${baseUrl}/components/check.html`)
+            span Checkbox e Radio
+          +item(href=`${baseUrl}/components/input.html`)
+            span Input
+          +item(href=`${baseUrl}/components/item.html`)
+            span Item e List
+          +item(href=`${baseUrl}/components/select.html`)
+            span Select
+        +divider
+        +item.d-flex.gap-5(type="button" data-toggle="collapse" data-target="#menu-utilitarios")
+          +icon.fa-wrench
+          span Utilitários
+        +list#menu-utilitarios.collapse
+          +item(href=`${baseUrl}/utilities/cor.html`)
+            span Tema e Cor
+          +item(href=`${baseUrl}/utilities/grid.html`)
+            span Grid
+          +item(href=`${baseUrl}/utilities/superficie.html`)
+            span Superfície
+    .menu-footer
+      .menu-links
+        +list
+          +item.d-flex.gap-2(href="https://gov.br/ds/" target="_blank")
+            span Site do Design System
+            +icon.fa-external-link-alt
+          +item.d-flex.gap-2(href=`${baseUrl}/sassdoc` target="_blank")
+            span SassDoc
+            +icon.fa-external-link-alt
