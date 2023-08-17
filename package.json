@@ -56,7 +56,8 @@
     "scss-prefix": "postcss --config postcss.config.js --replace \"dist/css/**/*.css\"",
     "pug": "pug src/mvp-tokens/content --out dist/mvp-tokens -P",
     "pug-dev": "pug src/mvp-tokens/content --out dist/mvp-tokens -P -w",
-    "tokens": "node ./tokens/style-dictionary.js"
+    "tokens": "node ./tokens/style-dictionary.js",
+    "start:mvp-tokens": "npm run tokens && npm run scss && npm run pug && live-server ./dist/mvp-tokens/index.html --watch"
   },
   "lint-staged": {
     "*.{css,scss}": "stylelint --fix"
