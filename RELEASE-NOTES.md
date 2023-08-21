@@ -16,7 +16,7 @@ Acesse o histórico das versões publicadas e a lista de mudanças realizadas em
 
 ## Repositórios de Desenvolvimento
 
--   [Core](https://gitlab.com/govbr-ds/dev/govbr-ds-dev-core/-/releases)
+-   [Core](https://gitlab.com/govbr-ds/ds/dev/govbr-ds-dev-core/-/releases)
   
 -   [Web Components](https://gitlab.com/govbr-ds/dev/wbc/govbr-ds-wbc/-/releases)
 
