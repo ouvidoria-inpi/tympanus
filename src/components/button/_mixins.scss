@@ -132,7 +132,7 @@
   }
 
   &:not(:disabled) {
-  --focus-offset: var(--spacing-scale-half);
+    --focus-offset: var(--spacing-scale-half);
     @include focus;
     @include hover;
     @include active;
@@ -146,10 +146,19 @@
     color: var(--color-dark);
   }
 
-  &.loading,
-  &[loading],
-  &.is-loading {
-    &::after {
+  &.loading {
+    color: transparent;
+    cursor: progress;
+    min-height: var(--button-size);
+    width: auto;
+
+    &:not(:disabled) {
+      &:hover {
+        background-image: none;
+      }
+    }
+
+    &::before {
       border-color: var(--interactive) var(--interactive) transparent;
       border-style: solid;
     }
@@ -158,7 +167,7 @@
     &.danger,
     &.success,
     &.info {
-      &::after {
+      &::before {
         border-color: var(--background) var(--background) transparent;
       }
     }
