@@ -66,7 +66,7 @@ class BRDateTimePicker {
       const len = elm.value.length
 
       if (len !== 1 || len !== 3) {
-        if (e.keyCode == 47) {
+        if (e.keyCode === 47) {
           e.preventDefault()
         }
       }
@@ -94,7 +94,7 @@ class BRDateTimePicker {
       const len = elm.value.length
 
       if (len !== 1 || len !== 3) {
-        if (e.keyCode == 47) {
+        if (e.keyCode === 47) {
           e.preventDefault()
         }
       }

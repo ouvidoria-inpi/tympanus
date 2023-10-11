@@ -164,7 +164,6 @@ class BRHeader {
    * @param {event} event - referencia ao evento
    */
   handleEvent(event) {
-    
     const notificationElement = this.component.querySelector('.br-notification')
 
     if (notificationElement && !notificationElement.contains(event.target)) {
