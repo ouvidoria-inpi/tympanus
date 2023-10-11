@@ -30,8 +30,9 @@ import BRWizard from '../../components/wizard/wizard'
 import Accordion from './behavior/accordion'
 import Checkgroup from './behavior/checkgroup'
 import Collapse from './behavior/collapse'
-import Tooltip from './behavior/tooltip'
+import Scrim from './behavior/scrim'
 import Swipe from './behavior/swipe'
+import Tooltip from './behavior/tooltip'
 import Behavior from './core.behavior'
 import { Dropdown, Globals } from './globals-class'
 
@@ -72,4 +73,5 @@ export {
   Globals,
   Tooltip,
   Swipe,
+  Scrim,
 }

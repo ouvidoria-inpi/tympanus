@@ -520,7 +520,6 @@ class BRSelect {
    * @param {object} input Referencia o elemento input do select
    */
   mountSelectedValues(input) {
-    const GAP = 0.4
     this.amountE = this.amountE > 0 ? this.amountE : 0
     const amount = this.amountE
     const value = this.selected.toString().replaceAll(',', ', ')
@@ -574,7 +573,7 @@ class BRSelect {
 
     for (const element of array) {
       const posicaoArray = array.indexOf(element)
-      account++
+      account += 1
       if (element.length >= maxCharacterCount && array.length === 1) {
         return `${element.substring(0, maxCharacterCount)}... `
       }
@@ -590,7 +589,7 @@ class BRSelect {
       } else {
         const tmpValue = posicaoArray > 0 ? `, ${element}` : `${element}`
         value += `${tmpValue}`
-        acountVisible++
+        acountVisible += 1
       }
     }
     value = posUltimoArray <= 0 ? `${value}` : `${value} + (${posUltimoArray})`

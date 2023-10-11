@@ -33,6 +33,7 @@ import Accordion from './behavior/accordion'
 import Checkgroup from './behavior/checkgroup'
 import Collapse from './behavior/collapse'
 import Dropdown from './behavior/dropdown'
+import Scrim from './behavior/scrim'
 import Swipe from './behavior/swipe'
 
 export default class Globals {
@@ -371,4 +372,5 @@ export {
   BRWizard,
   Globals,
   Swipe,
+  Scrim,
 }
