@@ -6,12 +6,6 @@ module.exports = {
     sharedConfig.plugins.commitAnalyzer,
     sharedConfig.plugins.releaseNotes,
     sharedConfig.plugins.changelog,
-    [
-      '@semantic-release/exec',
-      {
-        generateNotesCmd: './config.sh ${nextRelease.version}',
-      },
-    ],
     '@semantic-release/npm',
     [
       '@semantic-release/git',
