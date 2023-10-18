@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [3.4.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.4.0...v3.4.1) (18/10/2023)
+
+
+### 🪲 CORREÇÕES
+
+* **scrim:** agora é possível usar o comportamento ([8a040e5](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/8a040e55ed351402153f38212ddc5a5ae62a9092))
+* **loading:** corrige CSS que afetava outros elementos nas soluções ([9f8b605](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/9f8b605de44b74da87945d563f57484a11d9f7eb)), closes [#71](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/71)
+
 ## [3.4.0](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.3.1...v3.4.0) (03/08/2023)
 
 
