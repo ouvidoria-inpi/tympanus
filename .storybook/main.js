@@ -3,7 +3,19 @@ module.exports = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        actions: true,
+      },
+    },
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        transcludeMarkdown: true,
+      },
+    },
+    '@whitespace/storybook-addon-html',
     {
       // https://storybook.js.org/addons/storypug
       name: 'storypug',
@@ -34,5 +46,6 @@ module.exports = {
     modernInlineRender: true,
     buildStoriesJson: true,
     storyStoreV7: true,
+    previewMdx2: true,
   },
 }

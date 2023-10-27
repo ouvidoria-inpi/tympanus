@@ -1,5 +1,3 @@
-import button from './button.pug'
-
 /**
  * Usa o mixin PUG do componente para gerar o HTML final
  * @param {*} props propriedades que serão enviadas para o PUG
@@ -18,21 +16,25 @@ const createButton = (props) => {
   if (props.densidade) classesToAdd.push(props.densidade)
   if (props.estado) classesToAdd.push(props.estado)
 
-  return button({ contents, props, classesToAdd })
+  return `<button class="br-button ${classesToAdd.join(
+    ' '
+  )}" type="button">${contents}</button>`
+  // return (<button class=`br-button ${classesToAdd.join()}` type="button">${contents}</button>)
 }
 
 // https://storybook.js.org/docs/html/writing-stories/introduction
 export default {
   title: 'Componentes/Button',
+  tags: ['autodocs'],
   argTypes: {
     label: {
       name: 'Label',
       control: 'text',
       description: 'Texto de dentro do botão',
     },
-    // TODO: Como disponibilizar os eventos? Como anexar ao html gerado pelo pug?
-    onClick: {
-      action: 'onClick',
+    onclick: {
+      action: 'clicked',
+      description: 'Evento de clique no botão',
       table: {
         category: 'Eventos',
       },
@@ -104,6 +106,11 @@ export default {
       },
     },
   },
+  parameters: {
+    actions: {
+      handles: ['click', 'mouseleave'],
+    },
+  },
 }
 
 const Template = (args) => {
@@ -126,6 +133,9 @@ PRIMARY.args = {
   ...DEFAULT_OPTIONS,
   label: 'Botão Primário',
   enfase: 'Primário',
+  onClick: {
+    action: 'clicked',
+  },
 }
 
 export const SECONDARY = Template.bind()

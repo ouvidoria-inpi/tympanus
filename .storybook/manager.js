@@ -3,6 +3,13 @@ import dsTheme from './dsTheme'
 
 addons.setConfig({
   theme: dsTheme,
+  showPanel: true,
+  panelPosition: 'bottom',
+  previewTabs: {
+    canvas: {
+      title: 'Visualizar',
+    },
+  },
 })
 
 // setTimeout(() => {

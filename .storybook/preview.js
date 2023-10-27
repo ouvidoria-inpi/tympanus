@@ -1,15 +1,15 @@
-import '../dist/core.css'
+import '../src/core.scss'
 import dsTheme from './dsTheme'
 
 export const parameters = {
-  layout: 'centered',
   docs: {
     theme: dsTheme,
   },
   backgrounds: {
     values: [
-      { name: 'light', value: '#fff' },
-      { name: 'dark', value: '#333' },
+      { name: 'Claro', value: '#fff' },
+      { name: 'Escuro', value: '#333' },
+      { name: 'Invertido', value: '#071D41' },
     ],
   },
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -21,14 +21,14 @@ export const parameters = {
     expanded: true,
     sort: 'alphabetical',
   },
-  previewTabs: {
-    canvas: {
-      title: 'Preview do componente',
-    },
-    'storybook/docs/panel': {
-      hidden: true,
-    },
-  },
+  // previewTabs: {
+  //   canvas: {
+  //     title: 'Preview do componente',
+  //   },
+  //   'storybook/docs/panel': {
+  //     hidden: true,
+  //   },
+  // },
   html: {
     removeEmptyComments: true,
     highlighter: {
