@@ -38,6 +38,11 @@
       top: 0;
     }
   }
+
+  & .#{$prefix}tag {
+    background: var(--interactive);
+  }
+
 }
 
 @mixin skiplink-full {
