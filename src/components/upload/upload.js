@@ -351,12 +351,12 @@ class BRUpload {
     li.appendChild(del)
     this._fileArray[position].nowait = true
     const tooltipList = []
-    for (const brTooltip of window.document.querySelectorAll('.br-tooltip')) {
+    for (const brTooltip of this.component.querySelectorAll('.br-tooltip')) {
       tooltipList.push(new BRTooltip('br-tooltip', brTooltip))
     }
   }
 
-  /**
+  /**this.component.querySelector(".br-tooltip")
    * Formata tamanho do arquivo
    * @private
    * @param {Number} nBytes - quantidade de bytes do arquivo
