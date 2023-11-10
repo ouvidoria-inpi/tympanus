@@ -341,8 +341,16 @@
   // Tablet
   @include media-breakpoint-up(sm) {
     &.push {
-      .menu-header {
+      .menu-header, .menu-footer {
         display: none;
+      }
+
+      .menu-header[data-visible="true"] {
+        display: flex;
+      }
+
+      .menu-footer[data-visible="true"] {
+        display: block;
       }
 
       .menu-panel {
