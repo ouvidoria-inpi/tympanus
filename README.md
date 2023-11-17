@@ -73,3 +73,5 @@ O Design System  é criado pelo [SERPRO](https://www.serpro.gov.br/ 'Acesse a p�
 ## Licença
 
 Nesse projeto usamos a licença MIT.
+
+This project is tested with [BrowserStack](https://www.browserstack.com/).
