@@ -290,14 +290,14 @@ class BRSelect {
    * @private
    */
   _setDefaultSelected() {
-    const selectedItems = this.component.querySelectorAll('.br-list .selected')
-
-    const iterable = typeof selectedItems[Symbol.iterator]
-    if (selectedItems !== null && iterable === 'function') {
-      for (const item of selectedItems) {
+    this.component.querySelectorAll('.br-list .br-item').forEach((item) => {
+      const itemIsSelected =
+        item.classList.contains('selected') ||
+        item.querySelector('input').hasAttribute('checked')
+      if (itemIsSelected) {
         this._setSelected(this._positionSelected(item), item)
       }
-    }
+    })
   }
 
   /**
