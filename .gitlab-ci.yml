@@ -19,6 +19,7 @@ stages:
 cache:
   paths:
     - node_modules/
+    - public
 
 dependencia:
   stage: dependencia
@@ -102,7 +103,7 @@ DS:
     - /\d.(\d|x).(\d|x)(-alpha)?$/
     - /alpha$/
 
-pages:
+pagesmain:
   stage: Pages
   artifacts:
     paths:
@@ -115,6 +116,31 @@ pages:
     - mv dist public
   only:
     - main
+
+
+
+
+pages:
+  stage: Pages
+  script:
+    - mkdir -p tmp
+    - echo "$CI_COMMIT_REF_NAME"
+    - echo "$CI_COMMIT_REF_NAME" > tmp/index.html
+    - mkdir -p public
+    - mkdir -p public/$CI_COMMIT_REF_NAME/
+    - npm install
+    - npm run build
+    - cp dist/* public/$CI_COMMIT_REF_NAME/ -R
+    - ls public/$CI_COMMIT_REF_NAME/
+  artifacts:
+    name: "$CI_COMMIT_REF_NAME"
+    paths:
+      - public
+    expire_in: 5 days
+  only:
+    - merge_requests
+
+
 
 Semantic Release:
   stage: Release
