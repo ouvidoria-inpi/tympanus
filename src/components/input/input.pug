@@ -10,9 +10,10 @@ mixin input(label="Label / Rótulo")
     //- Ícone
     +input-icon(label)(icon = attributes.icon
       id = attributes.id
-      type = attributes.type
+      type = attributes.type      
       class = attributes.class
       placeholder = attributes.placeholder
+      ariadescribedby = attributes.ariadescribedby
       disabled = attributes.disabled
       data-input = attributes.datainput)
     //- Input de busca
@@ -21,7 +22,7 @@ mixin input(label="Label / Rótulo")
         +icon.fa-search
     //- Input password
     if attributes.type == "password"
-      +button(aria-label="Mostrar senha")
+      +button(aria-label="Exibir senha" role="switch" aria-checked="false")
         +icon.fa-eye
     //- Dentro de select
     if attributes.select
@@ -40,6 +41,7 @@ mixin input-inline(label="Label / Rótulo")
         type = attributes.type
         class = attributes.class
         placeholder = attributes.placeholder
+        aria-describedby = attributes.ariadescribedby
         disabled = attributes.disabled
         data-input = attributes.datainput)
       if block
@@ -54,6 +56,7 @@ mixin input-icon(label)
         type = attributes.type ? attributes.type : "text"
         class = attributes.class
         placeholder = attributes.placeholder ? attributes.placeholder : "Placeholder"
+        aria-describedby = attributes.ariadescribedby
         disabled = attributes.disabled
         data-input = attributes.dataInfo ? attributes.dataInfo : attributes["data-input"])
   //- Sem ícone
@@ -62,6 +65,7 @@ mixin input-icon(label)
       id = attributes.id
       type = attributes.type ? attributes.type : "text"
       placeholder = attributes.placeholder ? attributes.placeholder : "Placeholder"
+      aria-describedby = attributes.ariadescribedby
       disabled = attributes.disabled
       data-input = attributes["data-input"])
 
@@ -116,40 +120,45 @@ mixin input-highlight(label)
 
 mixin input-success
   +input()(id = attributes.id ? attributes.id : "input-success"
-    type="text"
+    type="text"        
     placeholder="Digite somente números"
+    ariadescribedby="success"
     class=attributes.class).success
-    +feedback-success
+    +feedback-success(id="success")
       | Mensagem de Sucesso
 
 mixin input-danger
   +input()(id = attributes.id ? attributes.id : "input-danger"
-    type="text"
+    type="text"    
     placeholder="Digite somente números"
+    ariadescribedby="danger"
     class=attributes.class).danger
-    +feedback-danger
+    +feedback-danger(id="danger")
       | Mensagem de Erro
 
 mixin input-info
   +input()(id = attributes.id ? attributes.id : "input-info"
-    type="text"
+    type="text"    
     placeholder="Digite somente números"
+    ariadescribedby="info"
     class=attributes.class).info
-    +feedback-info
+    +feedback-info(id="info")
       | Mensagem informativa
 
 mixin input-warning
   +input()(id = attributes.id ? attributes.id : "input-warning"
-    type="text"
+    type="text"    
     placeholder="Digite somente números"
+    ariadescribedby="warning"
     class=attributes.class).warning
-    +feedback-warning
+    +feedback-warning(id="warning")
       | Mensagem de alerta
 
 mixin input-disabled
   +input()(id = attributes.id ? attributes.id : "input-disabled"
-    type="text"
+    type="text"    
     placeholder="Digite somente números"
+    ariadescribedby="warning-des"
     disabled)
-    +feedback-warning
+    +feedback-warning(id="warning-des")
       | Campo Desabilitado
