@@ -56,6 +56,7 @@ export default class Collapse {
       `${this.trigger.getAttribute('data-target')}`
     )
     this._checkBreakpoint()
+     this.trigger.setAttribute('tabindex', '0');
   }
 
   /**
@@ -76,12 +77,37 @@ export default class Collapse {
       if (this.target.hasAttribute('hidden')) {
         this.trigger.setAttribute('data-visible', false)
         this.trigger.setAttribute('aria-expanded', false)
+        this.trigger.setAttribute('aria-label', 'recolhido')
+
       } else {
         this.trigger.setAttribute('data-visible', true)
         this.trigger.setAttribute('aria-expanded', true)
+        this.trigger.setAttribute('aria-label', 'expandido')
+
       }
     }
   }
+
+/**
+   * Handler para o evento de tecla pressionada (keydown) no acionador
+   * @param {object} event - Objeto do tipo Event
+   * @private
+   */
+_handleTriggerKeyPress(event) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    this._handleTriggerClickBehavior();
+  }
+}
+
+
+/**
+ * Configura o estado de visualização do comportamento collapse
+ * @private
+ */
+_setVisibilityStatus() {
+  this._setTriggerVisibilityStatus();
+  this._setTargetVisibilityStatus();
+}
 
   /**
    * Trata o estado de visualização do alvo
@@ -157,10 +183,8 @@ export default class Collapse {
    * @public
    */
   setBehavior() {
-    this.trigger.addEventListener(
-      'click',
-      this._handleTriggerClickBehavior.bind(this)
-    )
+    this.trigger.addEventListener('click',this._handleTriggerClickBehavior.bind(this))
+    this.trigger.addEventListener('keydown', this._handleTriggerKeyPress.bind(this));
   }
 
   /**
