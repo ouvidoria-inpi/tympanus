@@ -126,6 +126,7 @@ class BRSelect {
     this._unsetSelectionBehavior()
     this._setOptionsList()
     this._setSelectionBehavior()
+    this._setAria()
   }
   /**
    * Define o comportamento do componente
@@ -137,6 +138,7 @@ class BRSelect {
     this._setKeyboardBehavior()
     this._setSelectionBehavior()
     this._setFilterBehavior()
+    this._prepareComponent()
   }
   /**
    * Define o comportamento de dropdown
@@ -148,6 +150,9 @@ class BRSelect {
       '.br-input input[type="text"]'
     )) {
       input.addEventListener('focus', () => {
+        this._resetFocus()
+      })
+      input.addEventListener('click', () => {
         this._openSelect()
         this._resetFocus()
       })
@@ -187,6 +192,29 @@ class BRSelect {
       list.addEventListener('keydown', this._handleKeydownOnList.bind(this))
     }
   }
+
+  _prepareComponent() {
+    const inputElement = this.component.querySelector('.br-input')
+    const buttonElement = this.component.querySelector('.br-input .br-button')
+    const listElement = this.component.querySelector('.br-list')
+    listElement.setAttribute('id', `list-${Math.floor(Math.random() * 10000)}`)
+    listElement.setAttribute('role', 'listbox')
+    listElement.setAttribute('tabindex', '-1')
+    listElement.setAttribute('aria-label', 'Lista de Opções')
+    inputElement.setAttribute('role', 'combobox')
+    inputElement.setAttribute('aria-expanded', false)
+    inputElement.setAttribute('aria-controls', `${listElement.id}`)
+    inputElement.setAttribute('aria-autocomplete', 'list')
+    buttonElement.setAttribute('aria-controls', `${listElement.id}`)
+    buttonElement.setAttribute('aria-expanded', false)
+    buttonElement.setAttribute('aria-label', 'Exibir lista')
+    this.component.querySelectorAll('.br-list .br-item').forEach((item) => {
+      item.setAttribute('role', 'option')
+    })
+    if (this.multiple) {
+      inputElement.setAttribute('aria-multiselectable', true)
+    }
+  }
   /**
    * Retira o comportamento de teclado
    * @private
@@ -210,22 +238,30 @@ class BRSelect {
    * @private
    */
   _handleKeydownOnInput(event) {
-    //Close Select
-    if (event.shiftKey && event.key === 'Tab') {
-      this._closeSelect()
-      this._resetFocus()
-    }
-    if (event.key === 'Tab' && !event.shiftKey) {
-      event.target.parentNode.querySelector('.br-button').focus()
-    }
-    if (event.keyCode === 40) {
-      event.preventDefault()
-      for (const list of this.component.querySelectorAll('.br-list')) {
-        list.focus()
-        if (list === document.activeElement) {
-          this._getNextItem().focus()
-        }
-      }
+    switch (event.key) {
+      case 'Tab':
+        this._closeSelect()
+        this._resetFocus()
+        break
+      case 'ArrowDown':
+        event.preventDefault()
+        this._openSelect()
+        this._getNextItem().focus()
+        break
+      case 'ArrowUp':
+        event.preventDefault()
+        this._openSelect()
+        this._getPreviousItem().focus()
+        break
+      case 'Escape':
+        this._closeSelect()
+        break
+      case 'Enter':
+        this.component.querySelector('.br-list').hasAttribute('expanded')
+          ? this._closeSelect()
+          : this._openSelect()
+        break
+      default:
     }
   }
   /**
@@ -235,21 +271,29 @@ class BRSelect {
 
   _handleKeydownOnList(event) {
     event.preventDefault()
-    switch (event.keyCode) {
-      case 9:
+    switch (event.key) {
+      case 'Tab':
         this._closeSelect()
         this._resetFocus()
         break
-      case 27:
+      case 'Escape':
+        for (const input of this.component.querySelectorAll(
+          '.br-input input[type="text"]'
+        )) {
+          input.focus()
+        }
         this._closeSelect()
         break
-      case 32:
+      case 'Enter':
         this._setKeyClickOnOption(event.currentTarget)
         break
-      case 38:
+      case ' ':
+        this._setKeyClickOnOption(event.currentTarget)
+        break
+      case 'ArrowUp':
         this._getPreviousItem().focus()
         break
-      case 40:
+      case 'ArrowDown':
         this._getNextItem().focus()
         break
       default:
@@ -396,10 +440,16 @@ class BRSelect {
    * @private
    */
   _setFilterBehavior() {
+    const list = this.component.querySelector('.br-list')
     for (const input of this.component.querySelectorAll(
       '.br-input input[type="text"]'
     )) {
       input.addEventListener('input', (event) => {
+        if (!list.hasAttribute('expanded')) {
+          const { value } = event.currentTarget
+          this._openSelect()
+          event.currentTarget.value = value
+        }
         let allHidden = true
         this._filter(event.currentTarget.value)
         for (const option of this.optionsList) {
@@ -469,6 +519,7 @@ class BRSelect {
    */
   _setSelected(index, item) {
     item.classList.add('selected')
+    item.setAttribute('aria-selected', true)
     for (const check of item.querySelectorAll('.br-radio, .br-checkbox')) {
       for (const input of check.querySelectorAll(
         'input[type="radio"], input[type="checkbox"]'
@@ -488,6 +539,7 @@ class BRSelect {
    */
   _removeSelected(index, item) {
     item.classList.remove('selected')
+    item.removeAttribute('aria-selected')
     for (const check of item.querySelectorAll('.br-radio, .br-checkbox')) {
       for (const input of check.querySelectorAll(
         'input[type="radio"], input[type="checkbox"'
@@ -682,9 +734,9 @@ class BRSelect {
       }
     }
     if (iFocused === this.optionsList.length) {
-      for (const [index, option] of this.optionsList.entries()) {
-        if (option.visible) {
-          option.focus = true
+      for (let index = 0; index < this.optionsList.length; index++) {
+        if (this.optionsList[index].visible) {
+          this.optionsList[index].focus = true
           return list[index]
         }
       }
@@ -716,13 +768,21 @@ class BRSelect {
         break
       }
     }
-    if (iFocused === 0) {
+    if (iFocused === this.optionsList.length) {
+      for (let index = this.optionsList.length - 1; index >= 0; index--) {
+        if (this.optionsList[index].visible) {
+          this.optionsList[index].focus = true
+          return list[index]
+        }
+      }
+    } else if (iFocused === 0) {
       return list[iFocused]
     } else {
       this.optionsList[iFocused].focus = false
       this.optionsList[iVisible].focus = true
       return list[iVisible]
     }
+    return ''
   }
   /**
    * Reseta valor do input
@@ -761,6 +821,8 @@ class BRSelect {
    * @private
    */
   _openSelect() {
+    const inputElement = this.component.querySelector('.br-input')
+    const buttonElement = this.component.querySelector('.br-input .br-button')
     for (const list of this.component.querySelectorAll('.br-list')) {
       list.setAttribute('expanded', '')
     }
@@ -770,6 +832,9 @@ class BRSelect {
       icon.classList.remove('fa-angle-down')
       icon.classList.add('fa-angle-up')
     }
+    inputElement.setAttribute('aria-expanded', true)
+    buttonElement.setAttribute('aria-expanded', true)
+    buttonElement.setAttribute('aria-label', 'Ocultar lista')
     this._resetInput()
   }
   /**
@@ -777,6 +842,8 @@ class BRSelect {
    * @private
    */
   _closeSelect() {
+    const inputElement = this.component.querySelector('.br-input')
+    const buttonElement = this.component.querySelector('.br-input .br-button')
     for (const list of this.component.querySelectorAll('.br-list')) {
       list.removeAttribute('expanded')
     }
@@ -786,6 +853,9 @@ class BRSelect {
       icon.classList.remove('fa-angle-up')
       icon.classList.add('fa-angle-down')
     }
+    inputElement.setAttribute('aria-expanded', false)
+    buttonElement.setAttribute('aria-expanded', false)
+    buttonElement.setAttribute('aria-label', 'Exibir lista')
     this._setInput()
     this._resetFocus()
     this._resetVisible()
@@ -812,6 +882,15 @@ class BRSelect {
     inputGroup.appendChild(brInput.querySelector('input'))
     brInput.appendChild(inputGroup)
     brInput.appendChild(dropButton)
+  }
+
+  _setAria() {
+    const inputElement = this.component.querySelector('.br-input')
+    const listElement = this.component.querySelector('.br-list')
+    inputElement.setAttribute('role', 'combobox')
+    inputElement.setAttribute('aria-expanded', false)
+    inputElement.setAttribute('aria-controls', `${listElement.id}`)
+    listElement.setAttribute('role', 'listbox')
   }
 }
 
