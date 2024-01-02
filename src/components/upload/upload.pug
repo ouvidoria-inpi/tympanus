@@ -19,6 +19,9 @@ mixin upload()
       id=id,
       type="file",
       multiple=attributes.multiple,
+      disabled=attributes.disabled,
+      aria-hidden=attributes.aria-hidden
+      aria-label="enviar arquivo"
     )
 
     .upload-list
@@ -35,4 +38,4 @@ mixin upload-feedback
   +feedback-danger.mt-1 Os arquivos devem ser no formato PNG ou JPG e ter no máximo 100MB.
 
 mixin upload-disabled
-  +upload()(id="disabled" disabled)
+  +upload()(id="disabled" disabled="disabled" aria-hidden="true")
