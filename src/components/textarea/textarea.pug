@@ -38,10 +38,10 @@ mixin textarea-counter(label)
       data-info = attributes.dataInfo)
     if label
       label(for=attributes.id)=label
-      textarea(id=attributes.id placeholder=attributes.placeholder disabled=attributes.disabled aria-label=attributes.ariaLabel maxlength = attributes.maxlength)
+      textarea(id=attributes.id  aria-controls="limitmax" placeholder=attributes.placeholder disabled=attributes.disabled aria-label=attributes.ariaLabel maxlength = attributes.maxlength)
       div.text-base.mt-1
-        span.limit Limite máximo de <strong>#{attributes.maxlength ? attributes.maxlength : 300}</strong> caracteres
-        span.current
+        span.limit(aria-live="polite") Limite máximo de <strong>#{attributes.maxlength ? attributes.maxlength : 300}</strong> caracteres
+        span.current(aria-live="polite" role="status")#limitmax
     if block
       block
 
@@ -56,7 +56,7 @@ mixin textarea-counter-no-limit(label)
       label(for=attributes.id)=label
       textarea(id=attributes.id placeholder=attributes.placeholder disabled=attributes.disabled aria-label=attributes.ariaLabel)
       div.text-base.mt-1
-        span.characters <strong>0</strong> caracteres digitados
+        span.characters(aria-live="assertive") <strong>0</strong> caracteres digitados
     if block
       block
 
