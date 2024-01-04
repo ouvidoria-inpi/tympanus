@@ -1,0 +1,162 @@
+extends ../../partial/pug/component
+
+append vars
+  - var title = "Tag";
+
+append content
+  p.h4.mt-5 Tag de Interação Dispensável
+  +tag-interaction
+    +icon.fa-car
+    span Label
+    +button.close.inverted.circle(aria-label="Fechar")
+      +icon.fa-times
+  +tag-interaction#interaction01
+    +icon.fa-car
+    span Label
+    +button(aria-label="Fechar" data-dismiss="interaction01")
+      +icon.fa-times
+  +tag-interaction#interaction02
+    +icon.fa-car
+    span Label
+    +button(aria-label="Fechar" data-dismiss="interaction02")
+      +icon.fa-times
+
+  p.h4.mt-5 Tag com Seleção Múltipla
+  +tag-interaction-select
+    input(id="tag01" type="checkbox")
+    label(for="tag01")
+      +icon.fa-car
+      span Label
+  +tag-interaction-select.selected
+    input(id="tag02" type="checkbox" checked)
+    label(for="tag02")
+      +icon.fa-ship
+      span Label
+  +tag-interaction-select.selected.disabled
+    input(id="tag02" type="checkbox" checked)
+    label(for="tag02")
+      +icon.fa-ship
+      span Tag Desativado
+  p.h4.mt-5 Tag com Seleção Única
+  +tag-interaction-select
+    input(id="tag03" type="radio" name="vehicle")
+    label(for="tag03")
+      +icon.fa-car
+      span Label
+  +tag-interaction-select.selected
+    input(id="tag04" type="radio" checked name="vehicle")
+    label(for="tag04")
+      +icon.fa-ship
+      span Label
+
+  p.h4.mt-5 Tag de Texto
+  +tag-text.bg-mint-cool-vivid-40
+    +icon.fa-car
+    span Label
+  +tag-text.bg-violet-warm-vivid-70
+    span Label
+
+  p.h4.mt-5 Tag de Status
+  .d-flex.align-items-center
+    +tag-status.bg-danger.large
+    +tag-status.bg-warning.medium
+    +tag-status.bg-success.small
+  .d-flex.align-items-center.mt-1
+    .d-inline-flex.align-items-center.mr-3
+      +tag-status.bg-danger.large
+      span.ml-1 Offline
+    .d-inline-flex.align-items-center.mr-3
+      +tag-status.bg-warning
+      span.ml-1 Ausente
+    .d-inline-flex.align-items-center.mr-3
+      +tag-status.bg-success.small
+      span.ml-1 Online
+
+  p.h4.mt-5 Tag de Contagem
+  +tag-count.bg-danger
+    span 1
+  +tag-count.bg-danger
+    span 10
+  +tag-count.bg-danger
+    span 130
+  +tag-count.bg-danger
+    span 999+
+  +tooltip("99957")(info place="right")
+
+  p.h4.mt-5 Tag de Ícone
+  +tag-icon.bg-magenta-vivid-50
+    +icon.fa-car
+  +tag-icon.bg-orange-50
+    +icon.fa-search
+  +tag-icon.bg-violet-warm-vivid-70
+    +icon.fa-user
+
+  p.h4.mt-5 Densidades
+  +tag-text.bg-orange-vivid-40.small
+    span Alta
+  +tag-text.bg-green-warm-vivid-40.medium
+    span Padrão
+  +tag-text.bg-indigo-warm-vivid-50.large
+    span Baixa
+  .mt-1
+  +tag-interaction.small
+    +icon.fa-car
+    span Label
+    +button(aria-label="Fechar")
+      +icon.fa-times
+  +tag-interaction.medium
+    +icon.fa-car
+    span Label
+    +button(aria-label="Fechar")
+      +icon.fa-times
+  +tag-interaction.large
+    +icon.fa-car
+    span Label
+    +button(aria-label="Fechar")
+      +icon.fa-times
+  .mt-1
+  +tag-interaction-select.small
+    input(id="tag05" type="checkbox")
+    label(for="tag05")
+      +icon.fa-car
+      span Label
+  +tag-interaction-select.medium
+    input(id="tag06" type="checkbox")
+    label(for="tag06")
+      +icon.fa-car
+      span Label
+  +tag-interaction-select.large
+    input(id="tag07" type="checkbox")
+    label(for="tag07")
+      +icon.fa-car
+      span Label
+  .mt-1
+  +tag-interaction-select.small
+    input(id="tag08" type="radio" name="radio-sizes")
+    label(for="tag08")
+      +icon.fa-car
+      span Label
+  +tag-interaction-select.medium
+    input(id="tag09" type="radio" name="radio-sizes")
+    label(for="tag09")
+      +icon.fa-car
+      span Label
+  +tag-interaction-select.large
+    input(id="tag10" type="radio" name="radio-sizes")
+    label(for="tag10")
+      +icon.fa-car
+      span Label
+  .mt-1
+  +tag-count.bg-danger.small
+    span 1
+  +tag-count.bg-danger.medium
+    span 1
+  +tag-count.bg-danger.large
+    span 1
+  .mt-1
+  +tag-icon.bg-magenta-vivid-50.small
+    +icon.fa-car
+  +tag-icon.bg-magenta-vivid-50.medium
+    +icon.fa-car
+  +tag-icon.bg-magenta-vivid-50.large
+    +icon.fa-car

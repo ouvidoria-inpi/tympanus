@@ -1,0 +1,984 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Utilitários/Grid" />
+Compreender e seguir diretrizes de desenvolvimento é crucial para garantir consistência
+e refletir o compromisso governamental com acessibilidade e usabilidade. Explore
+exemplos práticos, códigos e boas práticas para implementar esses fundamentos em
+seus projetos.
+
+## Como implementar
+
+- Utilize o conceito **_mobile-first_**, isto é, projete pensando primeiramente em resoluções menores;
+
+- O fundamento **_Grid_** formada por **3 elementos**:
+
+  - **_Container_**;
+  - **_Row_**;
+  - **_Column_**.
+
+> [Utilitários de _grid_](/fundamentos)
+> Consulte os utilitários de _grid_ para maiores informações.
+
+Cada um dos elementos possui seus próprios utilitários, como descritos a seguir.
+
+### 1- Elemento _Container_
+
+- No desenvolvimento, _containers_ fazem a função das _grids_;
+
+- O conteúdo é **ajustado automaticamente** para cada _breakpoint_;
+
+- A **largura máxima** varia de acordo com o comportamento e densidade aplicada.
+
+A tabela a seguir resume as funções dos utilitários utilizados no elemento _Container_:
+
+| Utilitário                                                      | Descrição                                                           | Comportamento |
+|-----------------------------------------------------------------|---------------------------------------------------------------------|---------------|
+| `.container-fluid`                                              | Largura máxima de 100%                                              | **Fluido**    |
+| `.container`                                                    | Largura máxima definida por _breakpoint_                            | **Fixo**      |
+| `.container-sm` `.container-md` `.container-lg` `.container-xl` | Inicialmente **fluido** Muda para **fixo** no _breakpoint_ definido | **Hibrido**   |
+
+
+
+> $moral-da-historia
+>
+> - Use _container_ para criar **_templates_**;
+> - Conteúdos com "sangria" dependem da regra do _template_;
+> - Construa vários _templates_ para aumentar a variedade de telas;
+> - É possível utilizar **utilitário de densidade** no _container_.
+
+> $va-mais-longe
+>
+> - **"Sangrias"** podem ser utilizadas livremente nas telas;
+> - Não podem ser aplicadas dentro do _Container_. Neste caso, vários templates devem ser criados.
+>   Por exemplo:
+>   **_Home Page_**: _header_, _footer_, _hero image_, _cards_, "seções coloridas".
+>   **Página de Seção:** _header_, _footer_, visão geral com superfície alternativa, _cards_.
+>   **Página Padrão:** _header_, _footer_, conteúdo principal na _grid_.
+
+#### Exemplo de _template_ de Home Page
+
+Confira o código abaixo:
+
+```html
+<!-- Header fora da Grid -->
+<header class="br-header">
+  <!-- Conteúdo interno alinhado à Grid híbrida -->
+  <div class="container-lg">
+    <div class="header-bottom">
+      <div class="header-menu">
+        <div class="header-menu-trigger">
+          <button
+            class="br-button circle small"
+            type="button"
+            id="navigation"
+            aria-label="Menu"
+            data-toggle="menu"
+            data-target="#menu"
+          >
+            <span class="overlay"></span>
+            <span class="content">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="header-info">
+          <a class="header-title" href="#">Nome do Sistema</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Menu de navegação -->
+<div class="br-menu" id="menu">
+  <div class="menu-container">
+    <div class="menu-panel">
+      <div class="menu-header">
+        <div class="menu-title">
+          <span>Nome do Sistema</span>
+        </div>
+        <div class="menu-close">
+          <button class="br-button circle" type="button" data-dismiss="menu">
+            <span class="overlay"></span>
+            <span class="content">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+      <nav class="menu-body">
+        <div class="br-list">
+          <a class="br-item d-flex gap-5" href="#">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Página inicial</span>
+          </a>
+          <span class="br-divider"></span>
+          <a class="br-item d-flex gap-5" href="#">
+            <i class="fas fa-eye" aria-hidden="true"></i>
+            <span>Exemplo</span>
+          </a>
+          <span class="br-divider"></span>
+        </div>
+      </nav>
+    </div>
+    <div class="menu-scrim" tabindex="0"></div>
+  </div>
+</div>
+
+<!-- Imagem de destaque fora da Grid -->
+<figure class="mb-8">
+  <picture>
+    <source
+      media="(min-width:1600px)"
+      srcset="https://picsum.photos/id/10/2600/300"
+    />
+    <source
+      media="(min-width:1280px)"
+      srcset="https://picsum.photos/id/20/1600/300"
+    />
+    <source
+      media="(min-width:990px)"
+      srcset="https://picsum.photos/id/30/1280/300"
+    />
+    <source
+      media="(min-width:576px)"
+      srcset="https://picsum.photos/id/40/990/300"
+    />
+    <img src="https://picsum.photos/id/50/600/400" alt="Imagem aleatória" />
+  </picture>
+  <figcaption class="overlay-text">
+    <!-- Conteúdo interno alinhado à Grid híbrida -->
+    <div class="container-lg">
+      <p class="h4">Título da imagem</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+  </figcaption>
+</figure>
+
+<!-- Cards alinhados à Grid híbrida -->
+<div class="container-lg mb-4">
+  <!--
+    Comportamentos:
+    - Celular: 2 colunas;
+    - Desktop: 4 colunas.
+  -->
+  <div class="row">
+    <div class="col-6 col-md-3 pb-4">
+      <a class="br-card bg-main-alternative px-0" href="#">
+        <div class="text-center">Denúncia</div>
+      </a>
+    </div>
+    <div class="col-6 col-md-3 pb-4">
+      <a class="br-card bg-main-alternative px-0" href="#">
+        <div class="text-center">Solicitação</div>
+      </a>
+    </div>
+    <div class="col-6 col-md-3 pb-4">
+      <a class="br-card bg-main-alternative px-0" href="#">
+        <div class="text-center">Elogios</div>
+      </a>
+    </div>
+    <div class="col-6 col-md-3 pb-4">
+      <a class="br-card bg-main-alternative px-0" href="#">
+        <div class="text-center">Reclamações</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Seções coloridas com "sangria" -->
+<section class="bg-contrast-base py-4 py-md-6">
+  <div class="container-lg">
+    <h1>Seção 1</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolorum
+      perferendis possimus tempore voluptatem dolor debitis accusantium, veniam
+      praesentium facere nobis ipsum ut unde nihil, commodi voluptatibus ab
+      magni autem?
+    </p>
+  </div>
+</section>
+<section class="bg-main-alternative py-4 py-md-6">
+  <div class="container-lg">
+    <h1>Seção 2</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, aperiam
+      quo tempore in, illo consequuntur hic voluptas quis, dignissimos doloribus
+      atque vitae? Fugiat facilis fuga quibusdam. Nesciunt reprehenderit animi
+      excepturi!
+    </p>
+  </div>
+</section>
+<section class="py-4 py-md-6">
+  <div class="container-lg">
+    <h1>Seção 3</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nobis aut,
+      praesentium magnam incidunt, consectetur ut, cumque minima vitae tenetur
+      fugiat eius quam placeat facere. Necessitatibus totam error aperiam
+      minima?
+    </p>
+  </div>
+</section>
+
+<!-- Footer fora da Grid -->
+<footer class="br-footer bg-contrast-base" id="footer">
+  <div class="container-lg">
+    <div class="footer-copyright">
+      <div class="py-4 text-down-02 text-center">
+        O Padrão Digital de Governo utiliza as licenças
+        <a href="#" target="_blank">CC0 1.0 Universal</a> e
+        <a href="#" target="_blank">MIT</a>.
+      </div>
+    </div>
+  </div>
+</footer>
+```
+
+#### Exemplo de _template_ de Página de Seção
+
+Confira o código abaixo:
+
+```html
+<!-- Header fora da Grid -->
+<header class="br-header">
+  <!-- Conteúdo interno alinhado à Grid híbrida -->
+  <div class="container-lg">
+    <div class="header-bottom">
+      <div class="header-menu">
+        <div class="header-menu-trigger">
+          <button
+            class="br-button circle small"
+            type="button"
+            id="navigation"
+            aria-label="Menu"
+            data-toggle="menu"
+            data-target="#menu"
+          >
+            <span class="overlay"></span>
+            <span class="content">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="header-info">
+          <a class="header-title" href="#">Nome do Sistema</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Menu de navegação -->
+<div class="br-menu" id="menu">
+  <div class="menu-container">
+    <div class="menu-panel">
+      <div class="menu-header">
+        <div class="menu-title">
+          <span>Nome do Sistema</span>
+        </div>
+        <div class="menu-close">
+          <button class="br-button circle" type="button" data-dismiss="menu">
+            <span class="overlay"></span>
+            <span class="content">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+      <nav class="menu-body">
+        <div class="br-list">
+          <a class="br-item d-flex gap-5" href="#">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Página inicial</span>
+          </a>
+          <span class="br-divider"></span>
+          <a class="br-item d-flex gap-5" href="#">
+            <i class="fas fa-eye" aria-hidden="true"></i>
+            <span>Exemplo</span>
+          </a>
+          <span class="br-divider"></span>
+        </div>
+      </nav>
+    </div>
+    <div class="menu-scrim" tabindex="0"></div>
+  </div>
+</div>
+
+<div class="container-lg">
+  <h1>Componentes</h1>
+  <!-- Descrição com superfície alternativa -->
+  <section class="bg-main-alternative p-4 mb-8">
+    <p><strong>VISÃO GERAL</strong></p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, aperiam
+      quo tempore in, illo consequuntur hic voluptas quis, dignissimos doloribus
+      atque vitae? Fugiat facilis fuga quibusdam. Nesciunt reprehenderit animi
+      excepturi!
+    </p>
+  </section>
+
+  <!-- Cards alinhados à Grid híbrida -->
+  <div class="row">
+    <!--
+    Comportamentos:
+    - Celular: 2 colunas;
+    - Tablet: 3 colunas;
+    - Desktop: 4 colunas.
+  -->
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Breadcrumb</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=1"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Button</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=2"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Card</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=3"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Carousel</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=4"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Checkbox</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=5"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer fora da Grid -->
+<footer class="br-footer bg-contrast-base" id="footer">
+  <div class="container-lg">
+    <div class="footer-copyright">
+      <div class="py-4 text-down-02 text-center">
+        O Padrão Digital de Governo utiliza as licenças
+        <a href="#" target="_blank">CC0 1.0 Universal</a> e
+        <a href="#" target="_blank">MIT</a>.
+      </div>
+    </div>
+  </div>
+</footer>
+```
+
+#### Exemplo de _template_ de Página Padrão
+
+Confira o código abaixo:
+
+```html
+<!-- Header fora da Grid -->
+<header class="br-header">
+  <!-- Conteúdo interno alinhado à Grid híbrida -->
+  <div class="container-lg">
+    <div class="header-bottom">
+      <div class="header-menu">
+        <div class="header-menu-trigger">
+          <button
+            class="br-button circle small"
+            type="button"
+            id="navigation"
+            aria-label="Menu"
+            data-toggle="menu"
+            data-target="#menu"
+          >
+            <span class="overlay"></span>
+            <span class="content">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="header-info">
+          <a class="header-title" href="#">Nome do Sistema</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Menu de navegação -->
+<div class="br-menu" id="menu">
+  <div class="menu-container">
+    <div class="menu-panel">
+      <div class="menu-header">
+        <div class="menu-title">
+          <span>Nome do Sistema</span>
+        </div>
+        <div class="menu-close">
+          <button class="br-button circle" type="button" data-dismiss="menu">
+            <span class="overlay"></span>
+            <span class="content">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+      <nav class="menu-body">
+        <div class="br-list">
+          <a class="br-item d-flex gap-5" href="#">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Página inicial</span>
+          </a>
+          <span class="br-divider"></span>
+          <a class="br-item d-flex gap-5" href="#">
+            <i class="fas fa-eye" aria-hidden="true"></i>
+            <span>Exemplo</span>
+          </a>
+          <span class="br-divider"></span>
+        </div>
+      </nav>
+    </div>
+    <div class="menu-scrim" tabindex="0"></div>
+  </div>
+</div>
+
+<!-- Conteúdo alinhado à Grid híbrida -->
+<div class="container-lg">
+  <h1>Título da página</h1>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quibusdam eos
+    similique voluptatum quia optio amet. Cupiditate tempora ex officiis
+    provident expedita sit animi, ratione asperiores blanditiis iusto, quos
+    similique!
+  </p>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+    doloremque dignissimos sit corporis itaque praesentium, fuga magnam ad
+    tempora magni nemo minima facere, dolorem, excepturi laudantium modi
+    assumenda quod adipisci?
+  </p>
+</div>
+
+<!-- Footer fora da Grid -->
+<footer class="br-footer bg-contrast-base" id="footer">
+  <div class="container-lg">
+    <div class="footer-copyright">
+      <div class="py-4 text-down-02 text-center">
+        O Padrão Digital de Governo utiliza as licenças
+        <a href="#" target="_blank">CC0 1.0 Universal</a> e
+        <a href="#" target="_blank">MIT</a>.
+      </div>
+    </div>
+  </div>
+</footer>
+```
+
+> [Fundamentos](/fundamentos)
+> Para entender esses exemplos mais a fundo, consulte as diretrizes de Fundamentos Visuais do Design System.
+
+> [Componentes](/componentes)
+> Para entender esses exemplos mais a fundo, consulte as diretrizes de Componentes do Design System.
+
+### 2- Elemento _Row_
+
+O elemento _Row_ define o **agrupamento** das colunas.
+
+A tabela a seguir resume as funções dos utilitários utilizados no elemento _Row_:
+
+| Utilitário | Modificador               | Alinhamento |
+|------------|---------------------------|-------------|
+| `.row`     | `.justify-content-start`  | **Início**  |
+| `.row`     | `.justify-content-center` | **Meio**    |
+| `.row`     | `.justify-content-end`    | **Fim**     |
+
+> $moral-da-historia
+>
+> - Use _container_ para criar **_templates_**;
+> - Utilize **_Row_** como filho **direto** ou **indireto** do _container_;
+> - O **alinhamento** da _row_ **não** funciona com colunas proporcionais;
+> - É possível ter uma _row_ para uma única _column_, caso esteja utilizando **_lowcode_** ou deseje **limitar conteúdo**;
+> - É possível utilizar o conceito de **_nesting_** (encaixe) dentro de uma _column_;
+> - É possível utilizar **utilitário de densidade** na _row_.
+
+#### Exemplo de alinhamento de _Row_
+
+Confira o código abaixo:
+
+```html
+<!-- Container do template -->
+<div class="container-lg">
+  <!--
+    Comportamentos:
+    - Celular: Colunas alinhados no meio
+    - Tablet: Colunas alinhados no fim (direita)
+    - Desktop: Colunas alinhados no início (esquerda)
+  -->
+  <div
+    class="row justify-content-center justify-content-md-end justify-content-lg-start"
+  >
+    <div class="col-4">
+      <div class="br-card">
+        <img
+          src="https://picsum.photos/600/200?random=1"
+          alt="Imagem aleatória"
+        />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="br-card">
+        <img
+          src="https://picsum.photos/600/200?random=2"
+          alt="Imagem aleatória"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+> [Grid](/fundamentos/grid)
+> Para entender esses exemplos mais a fundo, consulte a diretriz do Fundamentos _Grid_.
+
+#### Exemplo de aumento da densidade dos _gutters_ entre os _cards_ da Página de Seção
+
+Confira o código abaixo:
+
+```html
+<!-- Container do template -->
+<div class="container-lg">
+  <!--
+    Comportamentos:
+    - Celular: Colunas alinhados no meio
+    - Tablet: Colunas alinhados no fim (direita)
+    - Desktop: Colunas alinhados no início (esquerda)
+  -->
+  <div
+    class="row justify-content-center justify-content-md-end justify-content-lg-start"
+  >
+    <div class="col-4">
+      <div class="br-card">
+        <img
+          src="https://picsum.photos/600/200?random=1"
+          alt="Imagem aleatória"
+        />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="br-card">
+        <img
+          src="https://picsum.photos/600/200?random=2"
+          alt="Imagem aleatória"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+> [Fundamentos](/fundamentos)
+> Para entender esses exemplos mais a fundo, consulte as diretrizes de Fundamentos Visuais do Design System.
+
+> [Card](/componentes/card)
+> Para entender esses exemplos mais a fundo, consulte a diretriz do componente _Card_.
+
+#### Exemplo de _Nesting_
+
+Confira o código abaixo:
+
+```html
+<div class="container-lg">
+  <!--
+    Comportamentos:
+    - Celular: Regional e Telefone são mostrados lado a lado
+    - Tablet: Endereço e CEP são mostrados lado a lado
+    - Desktop: Dados cadastrais e Dados funcionais são divididos em colunas.
+  -->
+  <div class="row">
+    <div class="col-lg">
+      <fieldset>
+        <legend>Dados Cadastrais</legend>
+
+        <!-- Nome -->
+        <div class="br-input mb-4">
+          <label for="nome">Nome</label>
+          <div class="input-box">
+            <div class="input-body">
+              <input id="nome" type="text" placeholder="Nome completo" />
+              <div class="overlay"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Endereço e CEP ocupam a mesma linha em tablet -->
+        <div class="row">
+          <div class="col-12 col-md">
+            <div class="br-input mb-4">
+              <label for="endereco">Endereço</label>
+              <div class="input-box">
+                <div class="input-body">
+                  <input
+                    id="endereco"
+                    type="number"
+                    placeholder="Endereço completo"
+                  />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="br-input d-inline-block mb-4">
+              <label for="cep">CEP</label>
+              <div class="input-box">
+                <div class="input-body">
+                  <input
+                    id="cep"
+                    type="text"
+                    size="8"
+                    maxlength="8"
+                    placeholder="Sem traço"
+                  />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="col-lg">
+      <fieldset>
+        <legend>Dados Funcionais</legend>
+
+        <!-- Cargo -->
+        <div class="br-input mb-4">
+          <label for="cargo">Cargo</label>
+          <div class="input-box">
+            <div class="input-body">
+              <input
+                id="cargo"
+                type="text"
+                placeholder="Analista/técnico e função"
+              />
+              <div class="overlay"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regional e Telefone ocupam a mesma linha -->
+        <div class="row">
+          <div class="col-auto">
+            <div class="br-input d-inline-block mb-4">
+              <label for="regional">Regional</label>
+              <div class="input-box">
+                <div class="input-body">
+                  <input
+                    id="regional"
+                    type="text"
+                    size="2"
+                    maxlength="2"
+                    placeholder="UF"
+                  />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="br-input d-inline-block mb-4">
+              <label for="telefone">Telefone</label>
+              <div class="input-box">
+                <div class="input-body">
+                  <input
+                    id="telefone"
+                    type="tel"
+                    size="13"
+                    maxlength="13"
+                    placeholder="Com DDD"
+                  />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+```
+
+> [Fundamentos](/fundamentos)
+> Para entender esses exemplos mais a fundo, consulte as diretrizes de Fundamentos Visuais do Design System.
+
+> [Input](/componentes/input)
+> Para entender esses exemplos mais a fundo, consulte a diretriz do componente _Input_.
+
+### 3- Elemento _Column_
+
+O elemento **_Column_** é responsável pelo conteúdo dividido ou com dimensão limitada.
+
+A tabela a seguir resume as funções dos utilitários utilizados no elemento _Column_:
+
+| Utilitário                                                                  | Descrição                                                                                          | Tamanho          |
+|-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------|
+| `.col-*`, `.col-sm-*`, `.col-md-*`, `.col-lg-*`, `.col-xl-*`                | Cada coluna representa uma fração da fórmula `(tamanho da coluna / 12) * 100%`                     | **Predefinido**  |
+| `.col-auto`, `.col-sm-auto`, `.col-md-auto`, `.col-lg-auto`, `.col-xl-auto` | A coluna terá o tamanho do conteúdo interno                                                        | **Automático**   |
+| `.col`, `.col-sm`, `.col-md`, `.col-lg`, `.col-xl`                          | A coluna ocupará a área disponível de uma "linha". Novas colunas serão divididas proporcionalmente | **Proporcional** |
+
+> $moral-da-historia
+>
+> - Utilize _column_ como filho direto da _row_;
+> - O asterisco (\*) usado no **tamanho predefinido varia de 1 a 12**;
+> - Certos conteúdos, como tabelas e vídeos, podem causar quebra de _layout_ dentro das colunas. Nesse caso, utilize o utilitário `.overflow-auto`, conforme mostrado nos exemplos;
+> - Uma _row_ pode conter colunas com as 3 configurações de tamanho simultaneamente;
+> - Dependendo do tamanho e/ou quantidade de colunas, elas podem ser deslocadas para baixo, criando novas "linhas" dentro da _row_. Nesse caso, utilize utilitários de **espaçamento** para melhorar a legibilidade.
+
+#### Exemplo de quantidade de colunas por _breakpoint_
+
+Confira o código abaixo:
+
+```html
+<div class="container-lg">
+  <div class="row">
+    <!--
+      Comportamentos:
+      - Celular: 2 colunas;
+      - Tablet: 3 colunas;
+      - Desktop: 4 colunas.
+    -->
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Breadcrumb</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=1"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Button</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=2"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Card</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=3"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Carousel</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=4"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 pb-4">
+      <a class="br-card text-main-base" href="#">
+        <p><strong>Checkbox</strong></p>
+        <p>
+          <img
+            src="https://picsum.photos/600/200?random=5"
+            alt="Imagem aleatória"
+          />
+        </p>
+        <p class="text-down-01">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+```
+
+> [Fundamentos](/fundamentos)
+> Para entender esses exemplos mais a fundo, consulte as diretrizes de Fundamentos Visuais do Design System.
+
+> [Card](/componentes/card)
+> Para entender esses exemplos mais a fundo, consulte a diretriz do componente _Card_.
+
+#### Exemplo de _input_ mudando a dimensão nos _breakpoints_
+
+Confira o código abaixo:
+
+```html
+<div class="container-lg">
+  <div class="row">
+    <!--
+      Comportamentos:
+      - Celular: 100% da linha;
+      - Tablet: 83.33% da linha;
+      - Desktop: 58.33% da linha.
+     -->
+    <div class="col-md-10 col-lg-7">
+      <div class="br-input mb-4">
+        <label for="nome">Nome</label>
+        <div class="input-box">
+          <div class="input-body">
+            <input id="nome" type="text" placeholder="Nome completo" />
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+> [Fundamentos](/fundamentos)
+> Para entender esses exemplos mais a fundo, consulte as diretrizes de Fundamentos Visuais do Design System.
+
+> [Input](/componentes/input)
+> Para entender esses exemplos mais a fundo, consulte a diretriz do componente _Input_.
+
+#### Exemplo de coluna com previsão de rolagem do conteúdo
+
+Confira o código abaixo:
+
+
+{/* <Playground code="export default () => <h1>Hello</h1>;"} /> */}
+
+```html
+<div class="container-lg">
+  <div class="row">
+    <!-- Card com tamanho predefinido 3 para tablet e superiores -->
+    <div class="col-md-3">
+      <div class="br-card">
+        <img src="https://picsum.photos/400/400" alt="Imagem aleatória" />
+      </div>
+    </div>
+
+    <!-- A tabela terá rolagem e não irá quebrar o layout -->
+    <div class="col-md">
+      <div class="overflow-auto">
+        <table>
+          <tr>
+            <th>Título</th>
+            <th>Título</th>
+            <th>Título</th>
+            <th>Título</th>
+            <th>Título</th>
+            <th>Título</th>
+            <th>Título</th>
+            <th>Título</th>
+          </tr>
+          <tr>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+            <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</td>
+            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+> [Fundamentos](/fundamentos)
+> Para entender esses exemplos mais a fundo, consulte as diretrizes de Fundamentos Visuais do Design System.
+
+> [Card](/componentes/card)
+> Para entender esses exemplos mais a fundo, consulte a diretriz do componente _Card_.
+
+---
+
+<blockquote>
+
+**AVALIAR SE HÁ NECESSIDADE DESSE CONTEÚDO**
+
+## Comparativo entre detalhamento e implementação
+
+A tabela abaixo ajuda a compreender a diferença entre alguns conceitos do ponto de vista de design e desenvolvimento.
+
+
+
+| Termo         | *Design*                                                                                                 | Implementação                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ***Grid***    | É uma referência para construir *layouts*.  Cada *breakpoint* deve ser construído em uma *grid* específica. | O ***container*** faz essa função. O conteúdo é ajustado automaticamente por *breakpoint*.                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ***Row***     | É usada de forma abstrata.Cada *grid* tem um limite máximo de colunas por "linha".               | É obrigatório para agrupar colunas.Dependendo do código, uma *row* se transforma em várias "linhas".                                                                                                                                                                                                                                                                                                                                                                                 |
+| ***Column***  | Apenas encaixa o conteúdo na *grid*.                                                                     | Pode limitar a dimensão do conteúdo e ser modificado por *breakpoint*. É influenciado pelo alinhamento da *row*.                                                                                                                                                                                                                                                                                                                                                                                |
+| **"Sangria"** | Pode ser utilizado livremente nas telas.                                                                     | **Não pode ser aplicado dentro de um *Container***. Neste caso, vários templates devem ser criados. Exemplos:- ***Home page***: *header*, *footer*, *hero image*, cards, "seções coloridas";- **Página de seção**: *header*, *footer*, visão geral com superfície alternativa, cards;- **Página padrão**: *header*, *footer*, conteúdo principal na *grid*. |
+| **"Margens"** | É o espaço de respiro nos cantos da *grid* que pode aplicar "sangria" de imagens ou cor de superfície.   | É aplicado automaticamente no *container*. Não permite "sangrias".
+| ***Gutters*** | É o espaço de respiro entre colunas.| É aplicado automaticamente na *row*.
+
+
+</blockquote>

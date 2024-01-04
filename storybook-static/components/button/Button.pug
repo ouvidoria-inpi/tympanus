@@ -1,0 +1,12 @@
+mixin button(props={})
+  - let className = 'br-button'
+  button(class=`
+    ${className}
+    ${props.emphasis ? props.emphasis : ''}
+    ${props.isDarkMode ? props.isDarkMode : ''}
+    ${props.isCircle ? props.isCircle : ''}
+    ${props.isBlock ? props.isBlock : ''}
+    ${props.density ? props.density : ''}
+    ${props.state ? props.state : ''}
+  `, type='button')
+    | !{props.content}
