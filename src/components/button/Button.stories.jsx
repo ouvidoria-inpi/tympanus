@@ -3,10 +3,15 @@ import { buttonTemplate } from './Button.js'
 
 export default {
   title: 'Componentes/Button',
+<<<<<<< Updated upstream
 
   parameters: {
     layout: 'centered',
     // badges: [BADGE.DEPRECATED, BADGE.OBSOLETE, 'customizada'],
+=======
+  parameters: {
+    layout: 'centered',
+>>>>>>> Stashed changes
   },
   tags: ['autodocs'],
   argTypes: {
@@ -37,7 +42,7 @@ export default {
         false: null,
       },
     },
-    isRound: {
+    isCircle: {
       name: 'Circular',
       control: 'boolean',
       table: { defaultValue: { summary: false }, category: 'Tipos' },
@@ -55,7 +60,7 @@ export default {
         true: 'block',
         false: null,
       },
-      if: { arg: 'isRound', truthy: false },
+      if: { arg: 'isCircle', truthy: false },
     },
     density: {
       name: 'Densidade',
@@ -81,13 +86,14 @@ export default {
       table: { defaultValue: { summary: 'Nenhum' } },
     },
     onclick: {
-      control: null,
+      control: {
+        type: null,
+      },
       description: 'Evento de clique',
       table: {
         category: 'Eventos',
-        defaultValue: { summary: 'onclick="callback()"' },
         type: {
-          summary: 'Event',
+          summary: 'summary',
         },
       },
     },
@@ -100,7 +106,7 @@ Primary.args = {
   emphasis: 'Primária',
   content: 'Ênfase primária',
   isDarkMode: false,
-  isRound: false,
+  isCircle: false,
   isBlock: false,
   density: 'Média',
   state: 'Nenhum',
@@ -129,7 +135,11 @@ Circle.args = {
   ...Primary.args,
   content: '<i class="fas fa-city" aria-hidden="true"></i>',
   emphasis: 'Primária',
+<<<<<<< Updated upstream
   isRound: true,
+=======
+  isCircle: true,
+>>>>>>> Stashed changes
 }
 
 export const Block = buttonTemplate.bind({})

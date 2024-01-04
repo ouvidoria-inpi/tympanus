@@ -6,6 +6,7 @@ import renderToHTML from './renderToHTML'
 
 const preview = {
   parameters: {
+<<<<<<< Updated upstream
     options: {
       storySort: {
         order: ['Leia-me', 'Notas de versão', '*', 'Componentes'],
@@ -23,13 +24,51 @@ const preview = {
       light: { ...themes.normal, appBg: '#FFF' },
       current: 'dark',
     },
+=======
+    actions: { argTypesRegex: '^on[A-Z].*' },
+>>>>>>> Stashed changes
     backgrounds: {
       values: [
         { name: 'Invertido', value: '#071D41' },
         { name: 'Claro', value: '#fff' },
       ],
     },
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    badgesConfig: {
+      deprecated: {
+        title: 'DEPRECIADA',
+        tooltip: {
+          title: 'Componente DEPRECIADO',
+          tooltip: 'Recomende esse componente para seus inimigos...',
+          links: [
+            { title: 'Leia mais no nosso site', href: 'http://gov.br/ds' },
+            {
+              title: 'Feedback?! Vlw',
+              onClick: () => {
+                alert('Obrigado!')
+              },
+            },
+          ],
+        },
+        styles: {
+          backgroundColor: 'red',
+          borderColor: 'yellow',
+          color: 'yellow',
+        },
+      },
+      obsolete: {
+        title: 'OBSOLETA',
+        tooltip: 'Recomende esse componente para seus inimigos...',
+      },
+      customizada: {
+        styles: {
+          backgroundColor: '#018786',
+          borderColor: '#018786',
+          color: '#FFF',
+        },
+        title: 'Marcolino',
+        tooltip: 'Aumente minha FCT...',
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -37,6 +76,11 @@ const preview = {
       },
       expanded: true,
       sort: 'requiredFirst',
+    },
+    darkMode: {
+      current: 'light',
+      dark: { ...themes.dark, appBg: '#333', background: '#333' },
+      light: { ...themes.normal, appBg: '#fff' },
     },
     docs: {
       theme: dsTheme,
@@ -50,6 +94,8 @@ const preview = {
       prettier: {
         tabWidth: 4,
         useTabs: false,
+        removeComments: /^\s*remove me\s*$/,
+        removeEmptyComments: true,
         htmlWhitespaceSensitivity: 'css',
         removeComments: /^\s*remove me\s*$/,
         removeEmptyComments: true,
@@ -89,6 +135,11 @@ const preview = {
         },
         title: 'Marcolino',
         tooltip: 'Aumente minha FCT...',
+      },
+    },
+    options: {
+      storySort: {
+        order: ['Leia-me', 'Notas de versão', '*', 'Componentes'],
       },
     },
   },

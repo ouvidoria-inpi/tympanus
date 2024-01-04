@@ -32,7 +32,10 @@
     "@babel/preset-react": "^7.23.3",
     "@geometricpanda/storybook-addon-badges": "^2.0.0",
     "@storybook/addon-a11y": "^7.6.7",
+<<<<<<< Updated upstream
     "@storybook/addon-designs": "^7.0.7",
+=======
+>>>>>>> Stashed changes
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
     "@storybook/addon-links": "^7.6.7",
@@ -46,7 +49,10 @@
     "@whitespace/storybook-addon-html": "^5.1.6",
     "css-loader": "^6.8.1",
     "focus-visible": "^5.2.0",
+<<<<<<< Updated upstream
     "html-webpack-plugin": "^5.6.0",
+=======
+>>>>>>> Stashed changes
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
