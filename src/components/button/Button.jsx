@@ -26,10 +26,9 @@ export const Button = ({
         density !== null ? density : '',
         state !== null ? state : '',
       ].join(' ')}
-      dangerouslySetInnerHTML={contentIsHTML ? { __html: content } : null}
       onClick={onclick}
     >
-      {!contentIsHTML ? content : null}
+      dangerouslySetInnerHTML={contentIsHTML ? { __html: content } : content}
     </button>
   )
 }

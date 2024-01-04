@@ -1,15 +1,8 @@
 /** @type { import('@storybook/react').Preview } */
-import {
-  Controls,
-  Description,
-  Primary,
-  Stories,
-  Subtitle,
-  Title,
-} from '@storybook/blocks'
-import React from 'react'
+import { themes } from '@storybook/theming'
 import '../src/core.scss'
 import dsTheme from './dsTheme'
+import renderToHTML from './renderToHTML'
 
 const preview = {
   parameters: {
@@ -25,11 +18,15 @@ const preview = {
       },
       canvas: { title: 'Code', hidden: false },
     },
+    darkMode: {
+      dark: { ...themes.dark, appBg: '#333', background: '#333' },
+      light: { ...themes.normal, appBg: '#FFF' },
+      current: 'dark',
+    },
     backgrounds: {
       values: [
-        { name: 'Claro', value: '#fff' },
-        { name: 'Escuro', value: '#333' },
         { name: 'Invertido', value: '#071D41' },
+        { name: 'Claro', value: '#fff' },
       ],
     },
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -44,17 +41,9 @@ const preview = {
     docs: {
       theme: dsTheme,
       toc: true,
+      transformSource: (src, storyContext) =>
+        renderToHTML(storyContext.storyFn),
       // canvas: { sourceState: 'none' },
-      page: () => (
-        <>
-          <Title />
-          <Subtitle />
-          <Description />
-          <Primary />
-          <Controls />
-          <Stories />
-        </>
-      ),
     },
     html: {
       removeEmptyComments: true,
@@ -62,6 +51,44 @@ const preview = {
         tabWidth: 4,
         useTabs: false,
         htmlWhitespaceSensitivity: 'css',
+        removeComments: /^\s*remove me\s*$/,
+        removeEmptyComments: true,
+      },
+    },
+    badgesConfig: {
+      deprecated: {
+        title: 'DEPRECIADA',
+        tooltip: {
+          title: 'Componente DEPRECIADO',
+          tooltip: 'Recomende esse componente para seus inimigos...',
+          links: [
+            { title: 'Leia mais no nosso site', href: 'http://gov.br/ds' },
+            {
+              title: 'Feedback?! Vlw',
+              onClick: () => {
+                alert('Obrigado!')
+              },
+            },
+          ],
+        },
+        styles: {
+          backgroundColor: 'red',
+          borderColor: 'yellow',
+          color: 'yellow',
+        },
+      },
+      obsolete: {
+        title: 'OBSOLETA',
+        tooltip: 'Recomende esse componente para seus inimigos...',
+      },
+      customizada: {
+        styles: {
+          backgroundColor: '#018786',
+          borderColor: '#018786',
+          color: '#FFF',
+        },
+        title: 'Marcolino',
+        tooltip: 'Aumente minha FCT...',
       },
     },
   },

@@ -1,6 +1,9 @@
 import React from 'react'
+import { isHTML } from '../../storybook/htmlUtils'
 
 export const buttonTemplate = (args) => {
+  const contentIsHTML = isHTML(args.content)
+
   const classes = ['br-button']
 
   if (args.emphasis) {
@@ -14,8 +17,12 @@ export const buttonTemplate = (args) => {
   if (args.state) classes.push(args.state)
 
   return (
-    <button id="button" className={classes.join(' ')} type="button">
-      {args.content}
+    <button id="button" class={classes.join(' ')} type="button">
+      {contentIsHTML ? (
+        <div dangerouslySetInnerHTML={{ __html: args.content }} />
+      ) : (
+        args.content
+      )}
     </button>
   )
 }

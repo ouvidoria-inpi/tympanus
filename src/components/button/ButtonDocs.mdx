@@ -1,0 +1,36 @@
+import { Meta, Primary, Controls, Story,Title, Subtitle, Description, Source,  Stories } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+<Title />
+<Subtitle />
+<Description />
+A button is ...
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Stories
+
+### Primary
+
+A button can be of primary importance.
+
+<Story of={ButtonStories.Primary} />
+<Source of={ButtonStories.Primary} language="js" />
+<Story of={ButtonStories.Circle} />
+<Source of={ButtonStories.Circle} language="js" code={`const thisIsCustomSource = true;
+if (isSyntaxHighlighted) {
+  console.log('syntax highlighting is working');
+}`}/>
+
+A button can be of secondary importance.
+
+<Story of={ButtonStories.Secondary} />
+
+{/* ... */}
+
+<Stories />

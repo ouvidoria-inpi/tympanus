@@ -9,8 +9,12 @@ const config = {
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
     '@whitespace/storybook-addon-html',
+    '@storybook/addon-interactions',
+    'storybook-dark-mode',
+    '@storybook/addon-designs',
+    '@storybook/addon-a11y',
+    '@geometricpanda/storybook-addon-badges',
   ],
-  staticDirs: ['../dist'],
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.scss$/,
