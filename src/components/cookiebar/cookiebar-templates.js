@@ -491,6 +491,7 @@ export class CookiebarTemplates {
                 type="checkbox"
                 ${cookieData.cookieSelected ? 'checked' : ''}
                 tabindex="-1"
+                role="switch"
                 data-child="${`check-group-${groupIndex}`}"
               />
               <label
