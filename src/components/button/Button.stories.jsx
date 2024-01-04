@@ -1,9 +1,13 @@
 import { action } from '@storybook/addon-actions'
-import { Button } from './Button'
+// import { Button } from './Button'
+import { buttonTemplate } from './Button.js'
 
 export default {
   title: 'Componentes/Button',
-  component: Button,
+  // component: Button,
+  // render: ({ label, ...args }) => {
+  //   return Button({ label, ...args })
+  // },
   parameters: {
     layout: 'centered',
     // componentSubtitle: 'Compasdasdasdonent',
@@ -96,108 +100,120 @@ export default {
   },
 }
 
-export const Primary = {
-  name: 'Ênfase Primária',
-  storyDescription: 'teste de subtitle',
-  args: {
-    emphasis: 'Primária',
-    content: 'Ênfase primária',
-    isDarkMode: false,
-    isRound: false,
-    isBlock: false,
-    density: 'Média',
-    state: 'Nenhum',
-    onclick: action('Evento onclick'),
-  },
+export const Primary = buttonTemplate.bind({})
+Primary.args = {
+  emphasis: 'Primária',
+  content: 'Ênfase primária',
+  isDarkMode: false,
+  isRound: false,
+  isBlock: false,
+  density: 'Média',
+  state: 'Nenhum',
+  onclick: action('Evento onclick'),
 }
 
-export const Secondary = {
-  name: 'Ênfase Secundária',
-  args: {
-    ...Primary.args,
-    emphasis: 'Secundária',
-    content: 'Ênfase secundária',
-  },
-}
+// export const Primary = {
+//   name: 'Ênfase Primária',
+//   storyDescription: 'teste de subtitle',
+//   args: {
+//     emphasis: 'Primária',
+//     content: 'Ênfase primária',
+//     isDarkMode: false,
+//     isRound: false,
+//     isBlock: false,
+//     density: 'Média',
+//     state: 'Nenhum',
+//     onclick: action('Evento onclick'),
+//   },
+// }
 
-export const Tertiary = {
-  name: 'Ênfase Terciária',
-  args: {
-    ...Primary.args,
-    emphasis: 'Terciária',
-    content: 'Ênfase Terciária',
-  },
-}
+// export const Secondary = {
+//   name: 'Ênfase Secundária',
+//   args: {
+//     ...Primary.args,
+//     emphasis: 'Secundária',
+//     content: 'Ênfase secundária',
+//   },
+// }
 
-export const Circle = {
-  name: 'Tipo Circular',
-  args: {
-    ...Primary.args,
-    content: '<i class="fas fa-city" aria-hidden="true"></i>',
-    emphasis: 'Primária',
-    isRound: true,
-  },
-}
+// export const Tertiary = {
+//   name: 'Ênfase Terciária',
+//   args: {
+//     ...Primary.args,
+//     emphasis: 'Terciária',
+//     content: 'Ênfase Terciária',
+//   },
+// }
 
-export const Block = {
-  name: 'Tipo Bloco',
-  args: {
-    ...Primary.args,
-    content: 'Botão Bloco',
-    isBlock: true,
-  },
-}
+// export const Circle = {
+//   name: 'Tipo Circular',
+//   args: {
+//     ...Primary.args,
+//     content: '<i class="fas fa-city" aria-hidden="true"></i>',
+//     emphasis: 'Primária',
+//     isRound: true,
+//   },
+// }
 
-export const DensitySmall = {
-  name: 'Densidade Alta',
-  args: {
-    ...Primary.args,
-    content: 'Densidade Alta ',
-    density: 'small',
-  },
-}
+// export const Block = {
+//   name: 'Tipo Bloco',
+//   args: {
+//     ...Primary.args,
+//     content: 'Botão Bloco',
+//     isBlock: true,
+//   },
+// }
 
-export const DensityMedium = {
-  name: 'Densidade Média',
-  args: {
-    ...Primary.args,
-    content: 'Densidade Média ',
-    density: 'medium',
-  },
-}
+// export const DensitySmall = {
+//   name: 'Densidade Alta',
+//   args: {
+//     ...Primary.args,
+//     content: 'Densidade Alta ',
+//     density: 'small',
+//   },
+// }
 
-export const DensityLarge = {
-  name: 'Densidade Baixa',
-  args: {
-    ...Primary.args,
-    content: 'Densidade Baixa ',
-    density: 'large',
-  },
-}
+// export const DensityMedium = {
+//   name: 'Densidade Média',
+//   args: {
+//     ...Primary.args,
+//     content: 'Densidade Média ',
+//     density: 'medium',
+//   },
+// }
 
-export const StateDisabled = {
-  name: 'Desativado',
-  args: {
-    ...Primary.args,
-    content: 'Desativado ',
-    state: 'Desativado',
-  },
-}
+// export const DensityLarge = {
+//   name: 'Densidade Baixa',
+//   args: {
+//     ...Primary.args,
+//     content: 'Densidade Baixa ',
+//     density: 'large',
+//   },
+// }
 
-export const StateActive = {
-  name: 'Ativo',
-  args: {
-    ...Primary.args,
-    content: 'Ativado',
-    state: 'Ativado',
-  },
-}
+// export const StateDisabled = {
+//   name: 'Desativado',
+//   args: {
+//     ...Primary.args,
+//     content: 'Desativado ',
+//     state: 'Desativado',
+//   },
+// }
 
-export const StateLoading = {
-  name: 'Progresso',
-  args: {
-    ...Primary.args,
-    content: 'Progresso',
-    state: 'Loading',
-  },
-}
+// export const StateActive = {
+//   name: 'Ativo',
+//   args: {
+//     ...Primary.args,
+//     content: 'Ativado',
+//     state: 'Ativado',
+//   },
+// }
+
+// export const StateLoading = {
+//   name: 'Progresso',
+//   args: {
+//     ...Primary.args,
+//     content: 'Progresso',
+//     state: 'Loading',
+//   },
+// }

@@ -10,7 +10,7 @@ parserOptions:
   sourceType: module
   babelOptions:
     presets:
-     "@babel/preset-react"
+      - "@babel/preset-react"
   ecmaFeatures:
     jsx: true
 env:
