@@ -1,7 +1,7 @@
 mixin switch(label="Label")
   - let className = [prefix + "switch", attributes.class]
-  div(class=className)
-    input( id=attributes.id type="checkbox" aria-label=attributes.ariaLabel checked=attributes.checked disabled=attributes.disabled)
+  div(class=className role="presentation")
+    input( id=attributes.id type="checkbox" name=attributes.id  checked=attributes.checked disabled=attributes.disabled   role="switch")
     label(for=attributes.id)=label
     if block
       block
