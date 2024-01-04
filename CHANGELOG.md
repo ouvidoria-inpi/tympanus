@@ -3,7 +3,7 @@
 ## [3.4.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.4.0...v3.4.1) (18/10/2023)
 
 
-### 🪲 CORREÇÕES
+### 🐛 CORREÇÕES
 
 * **scrim:** agora é possível usar o comportamento ([8a040e5](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/8a040e55ed351402153f38212ddc5a5ae62a9092))
 * **loading:** corrige CSS que afetava outros elementos nas soluções ([9f8b605](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/9f8b605de44b74da87945d563f57484a11d9f7eb)), closes [#71](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/71)
@@ -26,7 +26,7 @@
 * **list:** remove referencia errada sobre header ([e06652f](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/e06652ffa00ec5cb6d69248d3a852217a79edac7))
 
 
-### 🪲 Correções
+### 🐛 Correções
 
 * **emptystate:** ajusta as imagens das diretrizes ([0c7b1ae](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/0c7b1ae613ff0a12da96875d60ae6404f756bd68))
 * ajusta margins da home ([bab14bd](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/bab14bd9fccbadcd704e2c29bfe613fb97c773cc))
@@ -43,25 +43,25 @@
 ## [3.3.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.3.0...v3.3.1) (05/04/2023)
 
 
-### :bug: Correções
+### 🐛 Correções
 
 * **tag:** adiciona estado de disabled e altera cor quando pressionada ([b33f043](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/b33f043a86bdbacab945ca51446e7a7f735d7cae))
 
 
-### :wastebasket: Depreciado
+### 👎 Depreciado
 
 * **menu:** as classes css .menu-social e .sharegroup serão retiradas na proxima versão ([ecf0d69](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/ecf0d699dc77268468d345528677ba66a1eac899))
 
 ## [3.3.0](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.2.0...v3.3.0) (03/04/2023)
 
 
-### :sparkles: Novidades
+### ✨ Novidades
 
 * atualiza links da wiki ([210e0b1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/210e0b195b65ec303e1e5a78d08861b62bfe5cee))
 * **tela introdução:** implementa site e páginas de introdução ([1139f65](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/1139f65d5f2719f3b2138f3d7b791e93a6971708)), closes [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#474](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/474) [#480](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/480)
 
 
-### :memo: Documentação
+### 📚 Documentação
 
 * **oque ha de novo:** atualiza pagina oque ha de novo com novas atualizações ([4a1bddc](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/4a1bddccdf8800d70c48423dc54fdb170da136f1))
 * **comunidades:** correção de icones ([71b253f](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/71b253f0e1a3735c1c19ee6bf65a3d917ca23db3)), closes [#22](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/22) [#22](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/22) [#22](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/22)
@@ -70,7 +70,7 @@
 * **acessibilidade:** remove conteúdo de acessibilidade repetido ([cd6b5bf](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/cd6b5bfc4bd518df68fcb15eebf429d81ddca860)), closes [#557](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/557)
 
 
-### :bug: Correções
+### 🐛 Correções
 
 * **tag:** adiciona estado selecionado e pressionado(active) na tag de interação persistente ([dc4e962](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/dc4e962986ef8944eade001c319bf413e5032df6))
 * **datetimepicker:** adiciona input manual com máscara ([b3174aa](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/b3174aaba94690396e64ee7d1a02b868b8073a17))
@@ -82,19 +82,19 @@
 ## [3.2.0](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.1.0...v3.2.0) (28/12/2022)
 
 
-### :sparkles: Novidades
+### ✨ Novidades
 
 * **select:** adiciona icone de busca ([45a8ae4](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/45a8ae48866164981dab937cee552322806ce871))
 
 
-### :memo: Documentação
+### 📚 Documentação
 
 * **header:** insere exemplos de links no titulo header ([ecf00c1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/ecf00c118719343f465189d2535c0509bcf47bf1)), closes [#516](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/516)
 * **header:** remove link de ancora na diretriz ([a6d4195](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/a6d419567819413f90d27f1fd34585b200d74ec9)), closes [#516](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/516)
 * **header:** remove link de ancora ([edefd85](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/edefd85f3f2ec524b5907c6351847c47cd6722bb)), closes [#516](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/516)
 
 
-### :bug: Correções
+### 🐛 Correções
 
 * **Carousel Menu Datetimepicker:** altera o icone angle para chevron ([365ee16](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/365ee16d333d50d4ce0459b5be58942ccc869c3f))
 * **datepicker:** altera o icone up and down ([740c594](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/740c59442fde8243b971441f4a24c4ef5f6a0859))

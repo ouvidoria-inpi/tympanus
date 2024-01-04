@@ -8,6 +8,9 @@ parser: "@babel/eslint-parser"
 parserOptions:
   ecmaVersion: 2018
   sourceType: module
+  babelOptions:
+    presets:
+     "@babel/preset-react"
   ecmaFeatures:
     jsx: true
 env:
@@ -76,7 +79,6 @@ rules:
     - endOfLine: auto
       semi: false
       singleQuote: true
-  sort-keys: error
   template-curly-spacing: 2
   vars-on-top: 2
   default-case-last: 2
