@@ -18,14 +18,6 @@ export const buttonTemplate = (args) => {
 
   // TODO: resolver problema com html sendo passado por parametros. Exemplo no circulo
   return (
-<<<<<<< Updated upstream
-    <button id="button" class={classes.join(' ')} type="button">
-      {contentIsHTML ? (
-        <div dangerouslySetInnerHTML={{ __html: args.content }} />
-      ) : (
-        args.content
-      )}
-=======
     <button
       id="button"
       className={classes.join(' ')}
@@ -33,7 +25,6 @@ export const buttonTemplate = (args) => {
       onClick={args.onclick}
     >
       {args.content}
->>>>>>> Stashed changes
     </button>
   )
 }

@@ -6,27 +6,7 @@ import renderToHTML from './renderToHTML'
 
 const preview = {
   parameters: {
-<<<<<<< Updated upstream
-    options: {
-      storySort: {
-        order: ['Leia-me', 'Notas de versão', '*', 'Componentes'],
-      },
-    },
-    previewTabs: {
-      'storybook/docs/panel': {
-        index: -1,
-        title: 'Documentation',
-      },
-      canvas: { title: 'Code', hidden: false },
-    },
-    darkMode: {
-      dark: { ...themes.dark, appBg: '#333', background: '#333' },
-      light: { ...themes.normal, appBg: '#FFF' },
-      current: 'dark',
-    },
-=======
     actions: { argTypesRegex: '^on[A-Z].*' },
->>>>>>> Stashed changes
     backgrounds: {
       values: [
         { name: 'Invertido', value: '#071D41' },

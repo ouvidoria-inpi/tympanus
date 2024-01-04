@@ -10,16 +10,9 @@ const config = {
     '@storybook/addon-interactions',
     '@whitespace/storybook-addon-html',
     '@storybook/addon-interactions',
-<<<<<<< Updated upstream
-    'storybook-dark-mode',
-    '@storybook/addon-designs',
-    '@storybook/addon-a11y',
-    '@geometricpanda/storybook-addon-badges',
-=======
     '@storybook/addon-a11y',
     '@geometricpanda/storybook-addon-badges',
     'storybook-dark-mode',
->>>>>>> Stashed changes
   ],
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({

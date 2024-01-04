@@ -3,15 +3,8 @@ import { buttonTemplate } from './Button.js'
 
 export default {
   title: 'Componentes/Button',
-<<<<<<< Updated upstream
-
   parameters: {
     layout: 'centered',
-    // badges: [BADGE.DEPRECATED, BADGE.OBSOLETE, 'customizada'],
-=======
-  parameters: {
-    layout: 'centered',
->>>>>>> Stashed changes
   },
   tags: ['autodocs'],
   argTypes: {
