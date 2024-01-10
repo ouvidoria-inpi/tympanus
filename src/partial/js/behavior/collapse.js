@@ -78,7 +78,6 @@ export default class Collapse {
         this.trigger.setAttribute('data-visible', false)
         this.trigger.setAttribute('aria-expanded', false)
         this.trigger.setAttribute('aria-label', 'recolhido')
-
       } else {
         this.trigger.setAttribute('data-visible', true)
         this.trigger.setAttribute('aria-expanded', true)
@@ -90,13 +89,10 @@ export default class Collapse {
 
 /**
    * Handler para o evento de tecla pressionada (keydown) no acionador
-   * @param {object} event - Objeto do tipo Event
    * @private
    */
-_handleTriggerKeyPress(event) {
-  if (event.key === 'Enter' || event.key === ' ') {
+_handleTriggerKeyPress() {
     this._handleTriggerClickBehavior();
-  }
 }
 
 
@@ -183,8 +179,17 @@ _setVisibilityStatus() {
    * @public
    */
   setBehavior() {
-    this.trigger.addEventListener('click',this._handleTriggerClickBehavior.bind(this))
-    this.trigger.addEventListener('keydown', this._handleTriggerKeyPress.bind(this));
+    this.trigger.addEventListener('click',(event)=>{
+      if(event.type === 'click'){
+        this._handleTriggerClickBehavior()
+      }
+    })
+    this.trigger.addEventListener('keydown',(event)=>{
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault()
+        this._handleTriggerKeyPress()
+      }
+    });
   }
 
   /**
