@@ -97,25 +97,28 @@
 }
 
 @mixin loading-sizes {
-  // O tamanho padrão é o pequeno
-  height: var(--loading-size);
-  width: var(--loading-size);
+  // Não aplica a regra no componente Button
+  &:not(.#{$prefix}button) {
+    // O tamanho padrão é o pequeno
+    height: var(--loading-size);
+    width: var(--loading-size);
 
-  // Aplica o tamanho médio
-  &.medium {
-    --loading-size: var(--loading-indetermined-diameter-md);
+    // Aplica o tamanho médio
+    &.medium {
+      --loading-size: var(--loading-indetermined-diameter-md);
 
-    &::before {
-      border-width: 4px;
+      &::before {
+        border-width: 4px;
+      }
     }
-  }
 
-  // Aplica o tamanho com progressão
-  &[data-progress] {
-    --loading-size: var(--loading-diameter);
+    // Aplica o tamanho com progressão
+    &[data-progress] {
+      --loading-size: var(--loading-diameter);
 
-    &::before {
-      border-width: var(--loading-stroke);
+      &::before {
+        border-width: var(--loading-stroke);
+      }
     }
   }
 }
