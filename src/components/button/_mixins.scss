@@ -147,10 +147,8 @@
   }
 
   &.loading {
-    color: transparent;
+    color: transparent !important;
     cursor: progress;
-    min-height: var(--button-size);
-    width: auto;
 
     &:not(:disabled) {
       &:hover {
