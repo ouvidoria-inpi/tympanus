@@ -15,6 +15,11 @@ class BRDateTimePicker {
     this.component = component
     this.language = language
 
+    this.component.querySelectorAll('.br-button').forEach((elem) => {
+      elem.setAttribute('aria-hidden', 'true')
+      elem.setAttribute('tab-index', '-1')
+    })
+
     this.component.addEventListener('blur', () => {
       if (!isNaN(new Date(this.component.value))) {
         fp.setDate(this.component.value)
@@ -255,6 +260,7 @@ class BRDateTimePicker {
      */
 
     this.config_min_flat = {
+      clickOpens: false,
       disableMobile: 'true',
       mode: this.component.getAttribute('data-mode'),
       nextArrow:
@@ -278,6 +284,23 @@ class BRDateTimePicker {
     )
 
     this.calendar.config.onOpen.push(() => {
+      if (this.config_flatpick.allowInput) {
+        this.component.querySelectorAll('.br-button').forEach((elem) => {
+          elem.setAttribute('aria-hidden', 'true')
+          elem.setAttribute('tab-index', '-1')
+        })
+      } else {
+        this.component
+          .querySelectorAll('.flatpickr-calendar')
+          .forEach((elem) => {
+            console.log(elem)
+
+            elem.setAttribute('tab-index', '-1')
+          })
+      }
+      document.querySelectorAll('.flatpickr-day').forEach((element) => {
+        element.setAttribute('tabindex', '1')
+      })
       document.querySelectorAll('.arrowUp').forEach((element) => {
         element.classList.add('fas', 'fa-chevron-up')
       })
