@@ -60,6 +60,7 @@ DS:
       - dist
     expire_in: 1 week
   script:
+    - npm install
     - npm run build
   only:
     - main
@@ -77,6 +78,7 @@ pagesmain:
     expose_as: "Build"
   script:
     - rm -rf public
+    - npm install
     - npm run build
     - mv dist public
   only:
