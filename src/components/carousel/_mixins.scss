@@ -11,6 +11,7 @@
   @include carousel-types;
   @include carousel-mobile;
   @include carousel-dark-mode;
+  @include carousel-states;
 }
 
 @mixin carousel-tokens {
@@ -61,6 +62,17 @@
         font-size: var(--carousel-buton-icon-size);
       }
     }
+  }
+}
+
+@mixin carousel-states {
+  .carousel-page[active]:focus,
+  .carousel-page[active]:focus-visible,
+  .carousel-page[active]:focus-within {
+    outline-color: var(--focus);
+    outline-offset: var(--focus-offset);
+    outline-style: var(--focus-style);
+    outline-width: var(--focus-width);
   }
 }
 

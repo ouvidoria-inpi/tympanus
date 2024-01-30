@@ -4,16 +4,15 @@ mixin step(labelClass, vertical=false, total = 4, initial = 1, scroll=true, posi
   - initial = attributes.initial ? attributes.initial : 1
   - orientation = attributes.orientation ? attributes.orientation : "horizontal"
   - role = attributes.role ? attributes.role : "listbox"
-  nav(    
+  nav(
     id=attributes.id
     data-initial=initial
     data-label=attributes.position
     data-scroll=attributes.scroll
     data-type=attributes.type
     class=componentClass
-    role=role,
-    aria-orientation = orientation)
-    .step-progress
+    role="none")
+    .step-progress(role=role aria-orientation = orientation aria-label="Lista de Opções")
       - let n = 1;
       while n <= total
         if ( n == total && attributes.type == "false")
@@ -37,7 +36,7 @@ mixin step-icon(labelClass, vertical=false,  initial = 1, scroll=true, position=
   - initial = attributes.initial ? attributes.initial : 1
   - className = className ? componentClass + " " + className : componentClass
   - orientation = attributes.orientation ? attributes.orientation : "horizontal"
-  - role = attributes.role ? attributes.role : "listbox"  
+  - role = attributes.role ? attributes.role : "listbox"
   nav(
     id=attributes.id
     data-initial=initial
@@ -45,9 +44,8 @@ mixin step-icon(labelClass, vertical=false,  initial = 1, scroll=true, position=
     data-scroll=attributes.scroll
     data-type=attributes.type
     class=componentClass
-    role=role,
-    aria-orientation = orientation)
-    .step-progress
+    role="none")
+    .step-progress(role=role aria-orientation = orientation aria-label="Lista de Opções")
         if attributes['tooltip-text']
           button(role="option" aria-posinset="1" aria-setsize="4" class="step-progress-btn" type="button" data-tooltip-text="Acesse sua Conta" )
             span.step-info Acesse sua Conta
@@ -80,7 +78,7 @@ mixin step-alert(labelClass, vertical=false,  initial = 2, scroll=true, position
   - initial = attributes.initial ? attributes.initial : 1
   - className = className ? componentClass + " " + className : componentClass
   - orientation = attributes.orientation ? attributes.orientation : "horizontal"
-  - role = attributes.role ? attributes.role : "listbox"    
+  - role = attributes.role ? attributes.role : "listbox"
   nav(
     id=attributes.id
     data-initial=initial
@@ -88,9 +86,8 @@ mixin step-alert(labelClass, vertical=false,  initial = 2, scroll=true, position
     data-scroll=attributes.scroll
     data-type=attributes.type
     class=componentClass
-    role=role,
-    aria-orientation = orientation)
-    .step-progress
+    role="none")
+    .step-progress(role=role aria-orientation = orientation aria-label="Lista de Opções")
         if attributes['tooltip-text']
           button(role="option" aria-posinset="1" aria-setsize="4" class="step-progress-btn" type="button" data-tooltip-text="Acesse sua Conta" data-alert="success" )
             span.step-info Acesse sua Conta
