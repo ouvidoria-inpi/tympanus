@@ -5,13 +5,13 @@ block dependencies
   include ../../../components/button/button
 
 block content
-  #scrimutilexample.br-scrim-util.foco(data-scrim="true")
-    .br-modal
-      .br-modal-header Modal com scrim
+  #scrimutilexamplemodal.br-scrim-util.foco(data-scrim="true" )
+    .br-modal(aria-labelledby="titulomodalexemplo")
+      .br-modal-header#titulomodalexemplo Modal com scrim
       .br-modal-body
         p Exemplo utilizando o componente scrim com FOCO
       .br-modal-footer.justify-content-center
-        +button#scrimfechar.secondary(data-dismiss="scrimexample") Cancelar
+        +button.secondary(data-dismiss="true") Cancelar
         +button.primary.mt-3.mt-sm-0.ml-sm-3 Retornar
-  .scrimutilexemplo
-    +button.primary Abrir modal
+  .scrimutilexamplemodal
+    +button#buttonactivatemodal.primary Testar o Modal com o Scrim
