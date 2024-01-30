@@ -178,8 +178,7 @@ class BRUpload {
     message.classList.add('feedback', status, 'mt-1')
     message.setAttribute('role', 'alert')
     message.setAttribute('aria-live', 'assertive')
-    message.setAttribute('aria-label', 'TESTE TESTE')
-    console.log('gerado mensagem')
+    message.setAttribute('aria-label', text)
     switch (status) {
       case 'danger':
         message.innerHTML = icone
