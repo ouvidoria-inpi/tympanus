@@ -18,7 +18,11 @@ class BRMenu {
     this.dismiss = this.component.querySelectorAll('[data-dismiss="menu"]')
     this.scrim = this.component.querySelector('.menu-scrim')
     this.componentFolders = this.component.querySelectorAll('.menu-folder')
+    this.componentSiders = this.component.querySelectorAll('.side-menu')
     this.componentItems = this.component.querySelectorAll('.menu-item')
+    this.elementOpenMenu = HTMLElement
+    this.inSubmenu = false
+    this.triggerParent = HTMLElement
     this._setBehavior()
   }
 
@@ -33,6 +37,7 @@ class BRMenu {
     this._setKeyboardBehaviors()
     this._setBreakpoints()
     this._setView()
+    this._addARIAAttributes()
     window.addEventListener('resize', () => {
       this._setView()
     })
@@ -71,19 +76,89 @@ class BRMenu {
    */
   _setKeyboardBehaviors() {
     // Fechar com tecla ESC
-    this.component.addEventListener('keyup', (event) => {
-      switch (event.code) {
+    this.component.addEventListener('keydown', (event) => {
+      // Código da tecla
+
+      const keyCode = event.code
+      switch (keyCode) {
         case 'Escape':
-          this._closeMenu()
+          event.preventDefault()
+
+          if (this.trigger) {
+            this._closeMenu()
+          }
+
+          break
+        case 'ArrowDown':
+          event.preventDefault()
+          this._navigateToNextElment(event.target, 1)
+          break
+        case 'ArrowUp':
+          event.preventDefault()
+          this._navigateToNextElment(event.target, -1)
+          break
         default:
           break
       }
     })
     // Fechar com Tab fora do menu
     if (this.scrim) {
-      this.scrim.addEventListener('keyup', () => {
-        return this._closeMenu()
-      })
+      // this.scrim.addEventListener('keyup', () => {
+      //   return this._closeMenu()
+      // })
+    }
+  }
+
+  /**
+   * Navega para o próximo elemento na lista com base em um operador.
+   *
+   * @param {HTMLElement} element - O elemento de referência a partir do qual a navegação será realizada.
+   * @param {number} operator - Um operador numérico que indica a direção da navegação.
+   *                             Um valor positivo indica a navegação para baixo, enquanto um valor negativo
+   *                             indica a navegação para cima.
+   */
+  _navigateToNextElment(element, operator) {
+    // Obtém o contêiner pai com base na hierarquia
+    const parentFolder = element.parentNode.closest('.side-menu.active')
+      ? element.parentNode.closest('.side-menu.active')
+      : element.closest('.br-menu')
+    // Obtém todos os elementos irmãos relacionados ao elemento de referência dentro do contêiner pai
+    const elementSiblings =
+      parentFolder.classList.contains('br-menu') ||
+      parentFolder.classList.contains('menu-body')
+        ? parentFolder.querySelectorAll(
+            '.menu-body > .menu-item, .menu-body > .menu-folder > .menu-item,.menu-body > .menu-folder.active > .side-menu.active, .menu-body > .menu-folder.active > ul > li > .menu-item'
+          )
+        : parentFolder.querySelectorAll(
+            '.side-menu.active > .menu-item,.side-menu.active > ul > li > .menu-item'
+          )
+    // Determina a posição do elemento de referência na lista de elementos irmãos
+    const posicao = Array.from(elementSiblings).findIndex((el) => {
+      return el === element
+    })
+
+    // Calcula a nova posição na lista com base no operador
+    const soma = posicao + operator
+
+    // Foca no próximo elemento na lista, ajustando para o início ou o final da lista se necessário
+    if (soma >= 0 && soma < elementSiblings.length) {
+      const nextElement = elementSiblings[soma]
+
+      if (
+        nextElement.getAttribute('role') === 'group' ||
+        nextElement.getAttribute('role') === 'tree'
+      ) {
+        const nextSibling = elementSiblings[soma + operator]
+        nextSibling.focus()
+      } else {
+        nextElement.focus()
+      }
+    } else {
+      // Se a nova posição estiver fora dos limites, foca no primeiro ou no último elemento da lista, dependendo do operador
+      const lastIndex = elementSiblings.length - 1
+      const targetElement = operator === 1 ? 0 : lastIndex
+      const target = elementSiblings[targetElement]
+      target.focus()
     }
   }
 
@@ -95,15 +170,29 @@ class BRMenu {
     const trigger = this.contextual ? this.contextual : this.trigger
     // Clicar no trigger
     if (trigger) {
+      trigger.addEventListener('keydown', (event) => {
+        if (event.code === 'Enter' || event.code === 'Space') {
+          event.preventDefault() // Impede o comportamento padrão do botão Enter ou Space
+          // Fechar Menu caso esteja aberto
+          if (this.component.classList.contains('active')) {
+            this._closeMenu()
+          } else {
+            // Abre Menu
+            this._openMenu()
+
+            this._focusOnFirstVisibleItem()
+          }
+        }
+      })
+
       trigger.addEventListener('click', () => {
         // Fechar Menu caso esteja aberto
         if (this.component.classList.contains('active')) {
           this._closeMenu()
-          return
+        } else {
+          this._openMenu()
+          this._focusOnFirstVisibleItem()
         }
-        // Abre Menu
-        this._openMenu()
-        this._focusNextElement()
       })
     }
     // Clicar no dismiss
@@ -115,15 +204,42 @@ class BRMenu {
   }
 
   /**
+   *  Focar no primeiro item de nível 1 visível
+   * @private
+   */
+  _focusOnFirstVisibleItem() {
+    const activeMenu = this.component.querySelector(
+      '.menu-body .menu-item:not([hidden]):not(.inactive)'
+    )
+    if (activeMenu) {
+      activeMenu.focus()
+      activeMenu.scrollIntoView({ block: 'nearest' }) // Foca e traz para a visualização se necessário
+      return
+    }
+
+    const firstVisibleItem = this.component.querySelector(
+      '.menu-body > .menu-item:not([hidden]):not(.inactive)'
+    )
+
+    if (firstVisibleItem) {
+      firstVisibleItem.focus()
+      firstVisibleItem.scrollIntoView({ block: 'nearest' }) // Foca e traz para a visualização se necessário
+    }
+  }
+
+  /**
    * Define visual do menu aberto
    * @private
    */
   _openMenu() {
+    this.elementOpenMenu = document.activeElement
     this.component.classList.add('active')
+    this.component.setAttribute('aria-expanded', 'true')
+    this.elementOpenMenu.setAttribute('aria-expanded', 'true')
+
     if (this.component.classList.contains('push')) {
       this.component.classList.add(...this.breakpoints, 'px-0')
     }
-    this.component.focus()
   }
 
   /**
@@ -135,7 +251,11 @@ class BRMenu {
     if (this.component.classList.contains('push')) {
       this.component.classList.remove(...this.breakpoints, 'px-0')
     }
-    this._focusNextElement()
+    if (this.elementOpenMenu) {
+      this.elementOpenMenu.setAttribute('aria-expanded', 'false')
+    }
+    this.elementOpenMenu.focus()
+    // }
   }
 
   /**
@@ -150,8 +270,10 @@ class BRMenu {
       this._createIcon(item, 'fa-chevron-down')
       // Configura como Drop Menu
       item.parentNode.classList.add('drop-menu')
+      //Configura aria indicando que submenu está fechado
+      item.setAttribute('aria-expanded', 'false')
       // Inicializa Drop Menu
-      this._toggleDropMenu(item)
+      this._handleMenuInteraction(item)
     }
   }
 
@@ -165,7 +287,7 @@ class BRMenu {
       'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])'
     if (document.activeElement) {
       const focussable = Array.prototype.filter.call(
-        document.body.querySelectorAll(focussableElements),
+        this.component.querySelectorAll(focussableElements),
         (element) => {
           // testa a visibilidade e inclui o elemento ativo
           return (
@@ -176,10 +298,8 @@ class BRMenu {
         }
       )
       const index = focussable.indexOf(document.activeElement)
-      if (index > -1) {
-        const nextElement = focussable[index + 1] || focussable[0]
-        nextElement.focus()
-      }
+      const nextElement = focussable[index + 1] || focussable[0]
+      nextElement.focus()
     }
   }
 
@@ -194,9 +314,44 @@ class BRMenu {
         this._createIcon(ul.previousElementSibling, 'fa-angle-right')
         // Configura como Side Menu
         ul.parentNode.classList.add('side-menu')
+        ul.parentNode.setAttribute('role', 'none')
         // Inicializa Side Menu
-        this._toggleSideMenu(ul.previousElementSibling)
+        this._handleSideMenuInteraction(ul.previousElementSibling)
       }
+    }
+  }
+
+  /**
+   * Gerencia eventos de cliques e interações por teclado no menu - tecla espaço
+   * @private
+   * @param {object} element - referência ao Objeto que fará a ação
+   */
+  _handleMenuInteraction(element) {
+    if (!element.hasAttribute('data-click-listener')) {
+      element.addEventListener('click', () => {
+        this._toggleDropMenu(element)
+      })
+
+      element.addEventListener('keydown', (event) => {
+        const menuFolder = element.closest('.menu-folder')
+        const menuItem = menuFolder.querySelector('a.menu-item')
+
+        if (menuFolder) {
+          if (event.key === ' ' || event.key === 'Spacebar') {
+            if (menuItem && menuItem.classList.contains('focus-visible')) {
+              event.preventDefault()
+              this._toggleDropMenu(element)
+            }
+          }
+          if (event.key === '2') {
+            // event.preventDefault()
+
+            this._toggleDropMenu(element)
+          }
+        }
+      })
+
+      element.setAttribute('data-click-listener', 'true')
     }
   }
 
@@ -206,19 +361,81 @@ class BRMenu {
    * @param {object} element - referência ao Objeto que fará a ação
    */
   _toggleDropMenu(element) {
+    if (element.parentNode.classList.contains('active')) {
+      // this.inSubmenu = false
+      this._closeMenuElement(element)
+    } else {
+      element.parentNode.classList.add('active')
+      element.setAttribute('aria-expanded', 'true')
+
+      this.inSubmenu = true
+      element.parentElement
+        .querySelectorAll('ul li ul a')
+        .forEach((menuItem) => {
+          this.triggerParent = menuItem.parentElement
+          menuItem.addEventListener('keydown', (event) => {
+            const { parentElement } = menuItem.parentElement
+            const keyCode = event.code
+
+            switch (keyCode) {
+              case 'Escape':
+                event.preventDefault()
+                this._backMenu(parentElement)
+                break
+              case 'Backspace':
+                event.preventDefault()
+                this._backMenu(parentElement)
+                break
+              case 'ArrowLeft':
+                event.preventDefault()
+                this._backMenu(parentElement)
+                break
+              default:
+                break
+            }
+          })
+        })
+    }
+  }
+
+  _backMenu(parentElement) {
+    //
+
+    parentElement.parentElement.querySelector('[data-click-listener]').click()
+  }
+
+  _closeMenuElement(element) {
+    element.parentNode.classList.remove('active')
+    element.setAttribute('aria-expanded', 'false')
+  }
+
+  /**
+   * Gerencia eventos de cliques e interações por teclado no Side Menu - tecla espaço
+   * @private
+   * @param {object} element - referência ao Objeto que fará a ação
+   */
+  _handleSideMenuInteraction(element) {
     // Verifica se o elemento já possui click listener através de um atributo especial
     if (!element.hasAttribute('data-click-listener')) {
       element.addEventListener('click', () => {
-        // Fecha Drop Menu caso esteja aberto
-        if (element.parentNode.classList.contains('active')) {
-          element.parentNode.classList.remove('active')
-          return
-        }
-
-        // Abre Drop Menu
-        element.parentNode.classList.add('active')
+        this.inSubmenu = false
+        this._toggleSideMenu(element)
       })
-      // Adiciona atributo especial para indicar que o elemento já possui click listener
+
+      element.addEventListener('keydown', (event) => {
+        const sideMenu = element.closest('.side-menu')
+        const menuItem = sideMenu.querySelector('a.menu-item')
+
+        if (sideMenu) {
+          if (event.key === ' ' || event.key === 'Spacebar') {
+            if (menuItem && menuItem.classList.contains('focus-visible')) {
+              event.preventDefault()
+              this._toggleSideMenu(element)
+            }
+          }
+        }
+      })
+
       element.setAttribute('data-click-listener', 'true')
     }
   }
@@ -229,28 +446,29 @@ class BRMenu {
    * @param {object} element - referência ao Objeto que fará a ação
    */
   _toggleSideMenu(element) {
-    // Verifica se o elemento já possui click listener através de um atributo especial
-    if (!element.hasAttribute('data-click-listener')) {
-      element.addEventListener('click', () => {
-        // Esconde todos os itens
-        this._hideItems(element)
+    this._hideItems(element)
 
-        // Mostra itens do Side Menu ativo
-        this._showItems(element.parentNode)
+    // Mostra itens do Side Menu ativo
+    element.setAttribute('aria-expanded', 'true')
+    this._showItems(element.parentNode)
 
-        // Fecha Side Menu caso esteja aberto
-        if (element.parentNode.classList.contains('active')) {
-          this._closeSideMenu(element)
-          element.focus()
-          return
-        }
+    // Fecha Side Menu caso esteja aberto
+    if (element.parentNode.classList.contains('active')) {
+      this._closeSideMenu(element)
+      element.focus()
+      return
+    }
 
-        // Abre Side Menu
-        element.parentNode.classList.add('active')
-        element.focus()
-      })
-      // Adiciona atributo especial para indicar que o elemento já possui click listener
-      element.setAttribute('data-click-listener', 'true')
+    // Abre Side Menu
+    element.parentNode.classList.add('active')
+
+    // Foca no primeiro item do Side Menu
+    const submenu = element.nextElementSibling
+    if (submenu) {
+      const firstMenuItem = submenu.querySelector('.menu-item')
+      if (firstMenuItem) {
+        firstMenuItem.focus()
+      }
     }
   }
 
@@ -261,6 +479,7 @@ class BRMenu {
    */
   _closeSideMenu(element) {
     element.parentNode.classList.remove('active')
+    element.setAttribute('aria-expanded', 'false')
     // Verifica se existe Side Menu anterior, caso contrário mostra todos os itens de volta
     const parentFolder = element.parentNode.closest('.side-menu.active')
       ? element.parentNode.closest('.side-menu.active')
@@ -311,6 +530,80 @@ class BRMenu {
 
       menuIconContainer.appendChild(menuIcon)
       element.appendChild(menuIconContainer)
+    }
+  }
+
+  /**
+   * Adiciona atributos role=menu e role=menuitem com base na hierarquia dos elementos
+   * @private
+   */
+  _addARIAAttributes() {
+    // Adiciona atributo role="menubar" à classe .menu-body
+    const menuBody = this.component.querySelector('.menu-body')
+    // menuBody.setAttribute('role', 'menubar')
+    menuBody.setAttribute('role', 'tree')
+    if (this.contextual) {
+      menuBody.setAttribute('role', 'menubar')
+    }
+
+    // Adiciona atributo role="group" nos elementos .menu-item que são filhos de .menu-folder e não são drop-down
+    const nonDropdownItems = this.component.querySelectorAll(
+      '.menu-folder:not(.drop-menu) > .menu-item'
+    )
+    nonDropdownItems.forEach((item) => {
+      item.setAttribute('role', 'tree')
+      if (this.contextual) {
+        item.setAttribute('role', 'menubar')
+      }
+    })
+
+    // Adiciona atributo role="menuitem" somente aos elementos <a> com a classe .menu-item que não têm .menu-folder como pai
+    const menuItems = this.component.querySelectorAll(
+      '.menu-folder.drop-menu > a.menu-item, li > a.menu-item'
+    )
+    menuItems.forEach((item) => {
+      item.setAttribute('role', 'treeitem')
+      if (this.contextual) {
+        item.setAttribute('role', 'menuitem')
+      }
+    })
+
+    // Adiciona atributo role="menu" e aria-label nos elementos <ul> que são filhos de .side-menu
+    const sideMenuLists = this.component.querySelectorAll('.side-menu > ul')
+    sideMenuLists.forEach((list) => {
+      const menuItem = list.parentNode.querySelector('.menu-item .content')
+      const menuItemText = menuItem.textContent.trim()
+
+      list.setAttribute('role', 'group')
+      list.setAttribute('aria-label', menuItemText)
+    })
+
+    // Adiciona atributo role="menu" e aria-label nos elementos <ul> que são filhos de .menu-folder
+    const menuFolderLists = this.component.querySelectorAll('.menu-folder > ul')
+    menuFolderLists.forEach((list) => {
+      const menuItem = list.parentNode.querySelector('.menu-item .content')
+      const menuItemText = menuItem.textContent.trim()
+      list.setAttribute('role', 'tree')
+      if (this.contextual) {
+        list.setAttribute('role', 'menubar')
+      }
+      list.setAttribute('aria-label', menuItemText)
+    })
+
+    const sideMenuItems = this.component.querySelectorAll(
+      'li.side-menu > .menu-item'
+    )
+    for (const submenu of sideMenuItems) {
+      submenu.setAttribute('aria-haspopup', 'true')
+      submenu.setAttribute('aria-expanded', 'false')
+    }
+
+    const folderMenuItems = this.component.querySelectorAll(
+      '.menu-folder.drop-menu > .menu-item'
+    )
+    for (const submenu of folderMenuItems) {
+      submenu.setAttribute('aria-haspopup', 'true')
+      submenu.setAttribute('aria-expanded', 'false')
     }
   }
 }

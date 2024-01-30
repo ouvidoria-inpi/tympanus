@@ -27,7 +27,7 @@ Instalar dependências:
     expire_in: 1 hour
   script:
     - apk --no-cache add git
-    - npm i
+    - npm install
 
 CSS:
   stage: Qualidade

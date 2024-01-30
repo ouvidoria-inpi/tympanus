@@ -61,21 +61,21 @@ mixin menu-push
 mixin menu-contextual
   +menu.contextual.active
     .menu-trigger
-      +button.primary.block.py-4(data-toggle="contextual")
+      +button.primary.block.py-4(data-toggle="contextual" aria-expanded=true)
         span.mr-1 Menu Contextual
         +icon.fa-chevron-up.ml-5
     .menu-container
       .menu-panel
         nav.menu-body
-          .menu-folder
+          .menu-folder.active
             ul
-              li
+              li(role="none")
                 a.menu-item(href="javascript: void(0)")
                   span.content Item do menu 1
-              li
+              li(role="none")
                 a.menu-item(href="javascript: void(0)")
                   span.content Item do menu 1
-              li
+              li(role="none")
                 a.menu-item(href="javascript: void(0)")
                   span.content Item do menu 1
       .menu-scrim(data-dismiss="menu" tabindex="0")
@@ -84,142 +84,142 @@ mixin menu-groupedby-label
   nav.menu-body
     - let folder = 1
     while folder <= 3
-      .menu-folder
+      .menu-folder.active
         .menu-item
           span.icon: +icon.fa-bell
-          span.content Nível 1
+          span.content Camada 1
         ul
           li
             a.menu-item(href="javascript: void(0)")
               span.icon: +icon.fa-heart
-              span.content Nível 2
+              span.content Camada 2
           li
-            a.menu-item(href="javascript: void(0)")
+            a.menu-item(href="javascript: void(0)" aria-expanded="false")
               span.icon: +icon.fa-address-book
-              span.content Nível 2
+              span.content Camada 2
             ul
               li
                 a.menu-item(href="javascript: void(0)")
                   span.icon: +icon.fa-book
-                  span.content= `Nível 3`
+                  span.content= `Camada 3`
               li
                 a.menu-item(href="javascript: void(0)")
                   span.icon: +icon.fa-tree
-                  span.content= `Nível 3`
+                  span.content= `Camada 3`
                 ul
                   li
                     a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
+                      span.content Camada 4
                   li
                     a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
+                      span.content Camada 4
                   li
                     a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
+                      span.content Camada 4
               li
                 a.menu-item(href="javascript: void(0)")
                   span.icon: +icon.fa-moon
-                  span.content Nível 3
+                  span.content Camada 3
           li
             a.menu-item(href="javascript: void(0)")
               span.icon: +icon.fa-archive
-              span.content Nível 2
+              span.content Camada 2
       - folder++
 
 mixin menu-groupedby-divider
   nav.menu-body
     - let folder = 1
     while folder <= 3
-      .menu-folder
+      .menu-folder.active
         ul
-          li
+          li(role="treeitem")
             a.menu-item(href="javascript: void(0)")
               span.icon: +icon.fa-heart
-              span.content Nível 2
-          li
+              span.content Camada 2
+          li(role="treeitem")
             a.menu-item(href="javascript: void(0)")
               span.icon: +icon.fa-address-book
-              span.content Nível 2
-            ul
-              li
+              span.content Camada 2
+            ul(role="group")
+              li(role="treeitem")
                 a.menu-item(href="javascript: void(0)")
                   span.icon: +icon.fa-book
-                  span.content= `Nível 3`
-              li
+                  span.content= `Camada 3`
+              li(role="treeitem")
                 a.menu-item(href="javascript: void(0)")
                   span.icon: +icon.fa-tree
-                  span.content= `Nível 3`
-                ul
-                  li
+                  span.content= `Camada 3`
+                ul(role="group")
+                  li(role="treeitem")
                     a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
-                  li
+                      span.content Camada 4
+                  li(role="treeitem")
                     a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
-                  li
+                      span.content Camada 4
+                  li(role="treeitem")
                     a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
+                      span.content Camada 4
               li
                 a.menu-item(href="javascript: void(0)")
                   span.icon: +icon.fa-moon
-                  span.content Nível 3
+                  span.content Camada 3
           li
             a.menu-item(href="javascript: void(0)")
               span.icon: +icon.fa-archive
-              span.content Nível 2
+              span.content Camada 2
       - folder++
 
 mixin menu-groupedby-dropdown
-  nav.menu-body
+  nav.menu-body(role="tree")
     - let folder = 1
     while folder <= 3
       .menu-folder
-        a.menu-item(href="javascript: void(0)")
+        a.menu-item(href="javascript: void(0)"  role="treeitem")
           span.icon: +icon.fa-bell
-          span.content Nível 1
+          span.content Camada 1
         ul
           li
-            a.menu-item(href="javascript: void(0)")
+            a.menu-item(href="javascript: void(0)" role="treeitem")
               span.icon: +icon.fa-heart
-              span.content Nível 2
+              span.content Camada 2
           li
-            a.menu-item(href="javascript: void(0)")
+            a.menu-item(href="javascript: void(0)" role="treeitem")
               span.icon: +icon.fa-address-book
-              span.content Nível 2
+              span.content Camada 2
             ul
               li
-                a.menu-item(href="javascript: void(0)")
+                a.menu-item(href="javascript: void(0)" role="treeitem")
                   span.icon: +icon.fa-book
-                  span.content= `Nível 3`
+                  span.content= `Camada 3`
               li
-                a.menu-item(href="javascript: void(0)")
+                a.menu-item(href="javascript: void(0)" role="treeitem")
                   span.icon: +icon.fa-tree
-                  span.content= `Nível 3`
+                  span.content= `Camada 3`
                 ul
                   li
-                    a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
+                    a.menu-item(href="javascript: void(0)" role="treeitem")
+                      span.content Camada 4
                   li
-                    a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
+                    a.menu-item(href="javascript: void(0)" role="treeitem")
+                      span.content Camada 4
                   li
-                    a.menu-item(href="javascript: void(0)")
-                      span.content Nível 4
+                    a.menu-item(href="javascript: void(0)" role="treeitem")
+                      span.content Camada 4
               li
                 a.menu-item(href="javascript: void(0)")
                   span.icon: +icon.fa-moon
-                  span.content Nível 3
+                  span.content Camada 3
           li
             a.menu-item(href="javascript: void(0)")
               span.icon: +icon.fa-archive
-              span.content Nível 2
+              span.content Camada 2
       - folder++
-    a.menu-item.divider(href="javascript: void(0)")
+    a.menu-item.divider(href="javascript: void(0)" role="treeitem")
       span.icon: +icon.fa-bell
-      span.content Item de nível 1
-    a.menu-item.divider(href="javascript: void(0)")
+      span.content Item de Camada 1
+    a.menu-item.divider(href="javascript: void(0)" role="treeitem")
       span.icon: +icon.fa-bell
-      span.content Item de nível 1
+      span.content Item de Camada 1
 
 mixin menu-groupedby
   .row
