@@ -4,7 +4,7 @@ include:
   - template: Jobs/Secret-Detection.latest.gitlab-ci.yml
   - template: Jobs/SAST.latest.gitlab-ci.yml
 
-image: node:18.18.2-alpine
+image: node:20.11-alpine
 
 cache:
   paths:
