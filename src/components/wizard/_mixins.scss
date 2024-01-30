@@ -294,6 +294,12 @@
     padding: var(--spacing-scale-base) var(--spacing-scale-2x);
     @include scrollbar;
 
+    &:focus,
+    &:focus-visible,
+    &.focus-visible {
+    @include focus-soft;
+    }
+
     > :last-child {
       margin-bottom: 0;
     }
