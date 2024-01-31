@@ -56,7 +56,7 @@ export default class Collapse {
       `${this.trigger.getAttribute('data-target')}`
     )
     this._checkBreakpoint()
-     this.trigger.setAttribute('tabindex', '0');
+    this.trigger.setAttribute('tabindex', '0')
   }
 
   /**
@@ -77,33 +77,29 @@ export default class Collapse {
       if (this.target.hasAttribute('hidden')) {
         this.trigger.setAttribute('data-visible', false)
         this.trigger.setAttribute('aria-expanded', false)
-        this.trigger.setAttribute('aria-label', 'recolhido')
       } else {
         this.trigger.setAttribute('data-visible', true)
         this.trigger.setAttribute('aria-expanded', true)
-        this.trigger.setAttribute('aria-label', 'expandido')
-
       }
     }
   }
 
-/**
+  /**
    * Handler para o evento de tecla pressionada (keydown) no acionador
    * @private
    */
-_handleTriggerKeyPress() {
-    this._handleTriggerClickBehavior();
-}
+  _handleTriggerKeyPress() {
+    this._handleTriggerClickBehavior()
+  }
 
-
-/**
- * Configura o estado de visualização do comportamento collapse
- * @private
- */
-_setVisibilityStatus() {
-  this._setTriggerVisibilityStatus();
-  this._setTargetVisibilityStatus();
-}
+  /**
+   * Configura o estado de visualização do comportamento collapse
+   * @private
+   */
+  _setVisibilityStatus() {
+    this._setTriggerVisibilityStatus()
+    this._setTargetVisibilityStatus()
+  }
 
   /**
    * Trata o estado de visualização do alvo
@@ -115,6 +111,7 @@ _setVisibilityStatus() {
         this.target.setAttribute('aria-hidden', true)
       } else {
         this.target.setAttribute('aria-hidden', false)
+        this._focusOnFirstItem(this.target)
       }
     }
   }
@@ -149,10 +146,45 @@ _setVisibilityStatus() {
   _toggleVisibility() {
     if (this.target) {
       this.target.hasAttribute('hidden')
-        ? this.target.removeAttribute('hidden')
-        : this.target.setAttribute('hidden', '')
+        ? this._showTarget()
+        : this._hideTarget()
+    }
+  }
 
-      this._setVisibilityStatus()
+  /**
+   * Exibe o target
+   * @private
+   */
+  _showTarget() {
+    this.target.removeAttribute('hidden')
+    this._setVisibilityStatus()
+    this._focusOnFirstItem(this.target)
+  }
+
+  /**
+   * Oculta o target
+   * @private
+   */
+  _hideTarget() {
+    this.target.setAttribute('hidden', '')
+    this._setVisibilityStatus()
+  }
+
+  /**
+   * focar no primeiro elemento ao expandir
+   * @private
+   */
+  _focusOnFirstItem(target) {
+    const focusableElements = target.querySelectorAll(
+      'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])'
+    )
+
+    const firstItem = Array.from(focusableElements).find((element) => {
+      return !element.hasAttribute('hidden')
+    })
+
+    if (firstItem) {
+      firstItem.scrollIntoView({ block: 'nearest' }) // Foca e traz para a visualização se necessário
     }
   }
 
@@ -179,17 +211,25 @@ _setVisibilityStatus() {
    * @public
    */
   setBehavior() {
-    this.trigger.addEventListener('click',(event)=>{
-      if(event.type === 'click'){
+    this.trigger.addEventListener('click', (event) => {
+      if (event.type === 'click') {
         this._handleTriggerClickBehavior()
       }
     })
-    this.trigger.addEventListener('keydown',(event)=>{
+    this.trigger.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault()
         this._handleTriggerKeyPress()
       }
-    });
+    })
+
+    this.target.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !this.target.hasAttribute('hidden')) {
+        event.preventDefault()
+        this._hideTarget()
+        this.trigger.focus()
+      }
+    })
   }
 
   /**
