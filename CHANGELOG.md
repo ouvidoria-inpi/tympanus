@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## [3.5.0](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.4.1...v3.5.0) (30/01/2024)
+
+
+### ✨ NOVIDADES
+
+* **select:** adiciona opção de seleção default por meio do atributo checked ([a19d6a5](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/a19d6a5fbc7aa6dcb83635bef02d2a96515a7f86)), closes [#105](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/105)
+* **select:** adiciona tratamento de acessibilidade ([664ff1b](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/664ff1b2b481ccb45a523e832c176ea3aa9e990e))
+
+
+### 🐛 CORREÇÕES
+
+* (breadcrumbs-a11y) ajusta acessibilidade ([20011da](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/20011da1b134c0b316e17770a46d00adcf5f9d2d)), closes [#78](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/78)
+* (input-a11y) ajusta acessibilidade ([5ca0c8d](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/5ca0c8dc5b3c4ac09497a7590f097b2004a420d0))
+* (list-a11y) ajusta acessibilidade ([26afe77](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/26afe77d0bb3a8370a5a1e5c06c2eda4bae460ac)), closes [#81](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/81)
+* (notification a11y) ajusta acessibilidade ([d0035f9](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/d0035f9897e77ecb149dd46990a4359a047faedf)), closes [#99](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/99)
+* (step-a11y) ajusta acessibilidade ([002f849](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/002f84910c19cdac3f05e415ae7558f502d01689)), closes [#106](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/106)
+* (tag-a11y) ajusta acessibilidade ([310e55d](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/310e55dd1df4c4cfc92c3649f1cf09e3a428ecb1)), closes [#98](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/98)
+* **avatar:** corrige problemas de acessibilidade no componente ([8ebb638](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/8ebb6389bc58a1537a8fa9896991ec181324e816)), closes [#76](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/76)
+* **button:** altera superfície dos exemplos escuros, fixes 77 ([ccfda69](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/ccfda6978e3f4b16af86580369ea6e82b9ef3619)), closes [#77](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/77)
+* **card:** ajuste no texto do botao de expandir e recolher para melhorias de acessibilidade ([7f9aac6](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/7f9aac6a67805d674e0604770a7d238e4203e91a)), closes [#85](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/85)
+* **carousel:** inclusao de atributos para tratar erro de acessibilidade ao navegar pelo teclado ([f73d92a](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/f73d92a907621872e644832be622e25b132602c8)), closes [#79](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/79)
+* **colapse:** correcao conflito da tecla space com o click do mouse ([1783aec](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/1783aecf1f88bf6b9db52e7688f96e94dd67f95e))
+* corrige a cor da tag ([2ff4004](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/2ff400443c63db24e1fd7d15851f8a7c24830768))
+* corrige espaçamentos do Footer ([df8a23c](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/df8a23c069e243cff499a8a996e98ad62f549a85))
+* corrige visibilidade do header/footer no menu ([df1db23](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/df1db23547a6210a02f8426df85da517b28ea7e3))
+* corrigir a cor da borda no textarea ([d33f3ff](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/d33f3ff9c2c76022855c58eca6b8e655b1beedbf)), closes [govbr-ds/govbr-ds-backlogs#599](https://gitlab.com/govbr-ds/govbr-ds-backlogs/issues/599)
+* **datepicker:**  ajuste de acessibilidade ([720a0dd](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/720a0dd1535f2e0223924c66a2be188d2a2d4aac))
+* **foote:** adiciona atributos roles para acessibilidade do componente footer ([5496f61](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/5496f6155ab035a5cd2ae562719daa2cafd79098)), closes [#91](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/91)
+* **loading:** corrige acessibilidade e upload do a11y ([4a6690a](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/4a6690a242693a39ef2b38711347eee40a1be573))
+* **loading:** corrige estado loading no componente Button ([8b4313f](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/8b4313f7665ea4484d0afcaa85f7bc95fe950170)), closes [#120](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/120)
+* **menu:** corrige problemas de acessibilidade no componente ([0ac06fa](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/0ac06fa4df82ce05a2819cd87910ca141a7ef30e)), closes [#96](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/96)
+* **message:** correção de acessibilidade ([003738d](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/003738d45906a29e51b5e0c07a58bfcdd515e090)), closes [#109](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/109)
+* **scrim:** incluida funcionalidade de travar a navegacao via tab e o esc para desativar o scrim ([89c5385](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/89c53851669750c44f599fe9fca34a48a5d65b52)), closes [#97](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/97)
+* **skiplink:** melhoria de acessibilidade  para informar a quantidade de itens ([3f733c4](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/3f733c4c4a0e671479013283a2e604dc9b6a94d2)), closes [#90](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/90)
+* **switch:** melhoria de acessibilidade, adiciona semantica de switch para o componente ([b334e88](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/b334e887f44bb7b6203914c1e159e43a5b3eff80)), closes [#87](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/87)
+* **tab:** adiciona correção de acessibilidade para o componente tab ([fb6a8c1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/fb6a8c10f4c7b46f83d7488b5b96a6281997f56e)), closes [#89](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/89)
+* **textbox a11y:** ajusta acessiblidade ([4592730](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/45927305dc4ecff356b3236b7090ea2f661ef439))
+* **upload-a11y:** corrige o texto do feedback do upload ([2b8bf35](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/2b8bf35086a26ab2da6b8160fa4b46277189340a))
+* **upload:** corrige a instancialização do tooltip ([bd8a3bd](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/bd8a3bdc81e5e8960d44c64a80b753feb91eab5b))
+* **utilitarios:** correcao de acessibilidade dos utilitarios accordion e collapse ([715738d](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/715738d4f25a6a51b468a56b501484909abee7db)), closes [#73](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/73) [#75](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/75)
+* **wizard-a11y:** correçao de acessibilidade ([5d99e3e](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/5d99e3e5c12a2580f046b3b3ac062bc388d0001c)), closes [#107](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/107)
+
 ## [3.4.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.4.0...v3.4.1) (18/10/2023)
 
 
