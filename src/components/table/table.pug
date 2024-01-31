@@ -13,13 +13,11 @@ mixin table
         +table-density(random)
         if attributes["data-search"]
           .search-trigger
-            +button.circle(data-toggle="search" aria-label="Abrir busca")
+            +button#button-input-search.circle(data-toggle="search" aria-label="Abrir busca" aria-controls=`table-searchbox-${random}`)
               +icon.fa-search
       if attributes["data-search"]
         .search-bar
-          +input("Buscar")(placeholder="Buscar na tabela" id=`table-searchbox-${random}`)
-            +button.circle(aria-label="Buscar")
-              +icon.fa-search
+          +input("Buscar na tabela")(type="search" role="searchbox" placeholder="Buscar na tabela" id=`table-searchbox-${random}` ariaLabel="Buscar na tabela" ariaLabelledby="button-input-search")
           +button.circle(data-dismiss="search" aria-label="Fechar busca")
             +icon.fa-times
       if attributes["data-selection"]
@@ -28,13 +26,13 @@ mixin table
             span.count 0
             span.text item selecionado
           .actions-trigger.text-nowrap
-            +button.circle.inverted(data-toggle="dropdown" data-target=`target02-${random}` aria-label="Ver mais opções")
+            +button#button-dropdown-selection.circle.inverted(data-toggle="dropdown" data-target=`target02-${random}` aria-controls=`target02-${random}` aria-label="Ver mais opções de ação" aria-haspopup="true")
               +icon.fa-ellipsis-v
-            +list(id=`target02-${random}` hidden)
-              +item(type="button" data-toggle="")
+            +list(id=`target02-${random}` role="menu" aria-labelledby="button-dropdown-selection"  hidden)
+              +item(type="button", data-toggle="", role="menuitem")
                 | Ação 1
               +divider
-              +item(type="button")
+              +item(type="button", role="menuitem")
                 | Ação 2
     if attributes["data-random"]
       table
@@ -42,7 +40,7 @@ mixin table
         thead
           tr
             if attributes["data-collapse"]
-              th(scope="col").column-collapse
+              td(scope="col" aria-hidden="true").column-collapse
             if attributes["data-selection"]
               th(scope="col").column-checkbox
                 +checkbox("Selecionar todas as linhas")(id=`check-all-${random}` ariaLabel="Selecionar tudo" data-parent=`check-01-${random}` ).hidden-label
@@ -57,7 +55,7 @@ mixin table
             tr
               if attributes["data-collapse"]
                 td
-                  +button.circle.small(aria-label="Expandir/Retrair Rótulo 01" data-toggle="collapse" data-target=`collapse-${row}-${column}-${random}`)
+                  +button.circle.small(id=`button-line-${row}-${random}` aria-label="Expandir/Retrair Rótulo 01" data-toggle="collapse" data-target=`collapse-${row}-${column}-${random}` aria-describedby=`collapse-${row}-${column}-${random}`)
                     +icon.fa-chevron-down
               if attributes["data-selection"]
                 td
@@ -80,16 +78,16 @@ mixin table
 
 mixin table-density(random)
   .actions-trigger.text-nowrap
-    +button.circle(title="Ver mais opções" data-toggle="dropdown" data-target=`target01-${random}` aria-label="Ver mais opções")
+    +button#button-dropdown-density.circle(title="Ver mais opções" data-toggle="dropdown" data-target=`target01-${random}` aria-label="Definir densidade da tabela" aria-haspopup="true" aria-live="polite")
       +icon.fa-ellipsis-v
-    +list(id=`target01-${random}` hidden)
-      +item(type="button" data-density="small")
+    +list(id=`target01-${random}`, role="menu", aria-labelledby="button-dropdown-density", hidden)
+      +item(type="button" data-density="small" role="menuitem")
         | Densidade alta
       +divider
-      +item(type="button" data-density="medium")
+      +item(type="button" data-density="medium" role="menuitem")
         | Densidade média
       +divider
-      +item(type="button" data-density="large")
+      +item(type="button" data-density="large" role="menuitem")
         | Densidade baixa
 
 mixin table-collapse-content(row, column, random)
@@ -108,6 +106,7 @@ mixin table-example
 mixin table-irregular-1
   +table(title="Tabela irregular 1")&attributes(attributes)
     table
+      <colgroup span="3"></colgroup>
       thead
         tr
           th.border-bottom(scope="col") Poster name
@@ -146,6 +145,9 @@ mixin table-irregular-1
 mixin table-irregular-2
   +table(title="Tabela irregular 2")&attributes(attributes)
     table
+      <col>
+      <colgroup span="2"></colgroup>
+      <colgroup span="3"></colgroup>
       thead
         tr
           th.border-right(rowspan="2" scope="rowgroup") Name
