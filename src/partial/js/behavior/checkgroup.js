@@ -176,7 +176,6 @@ export default class Checkgroup {
       this.parent.checked = false
     } else {
       this.parent.setAttribute('indeterminate', '')
-      this.parent.indeterminate = true
       this.parent.checked = true
     }
   }
