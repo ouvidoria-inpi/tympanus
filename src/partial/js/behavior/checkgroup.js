@@ -90,6 +90,7 @@ export default class Checkgroup {
   _setIndeterminateStateOnClick() {
     if (this.parent.hasAttribute('indeterminate')) {
       this.parent.removeAttribute('indeterminate')
+      this.parent.indeterminate = false
       this.parent.checked = true
     }
   }
@@ -118,6 +119,7 @@ export default class Checkgroup {
         child.hasAttribute('indeterminate')
       ) {
         child.removeAttribute('indeterminate')
+        child.indeterminate = false
         child.checked = this.parent.checked
         child.dispatchEvent(new Event('change'))
       }
@@ -166,12 +168,15 @@ export default class Checkgroup {
   _setIndeterminateStateOnChildChange() {
     if (this._isAllChildrenChecked()) {
       this.parent.removeAttribute('indeterminate')
+      this.parent.indeterminate = false
       this.parent.checked = true
     } else if (this._isAllChildrenUnchecked()) {
       this.parent.removeAttribute('indeterminate')
+      this.parent.indeterminate = false
       this.parent.checked = false
     } else {
       this.parent.setAttribute('indeterminate', '')
+      this.parent.indeterminate = true
       this.parent.checked = true
     }
   }
@@ -185,7 +190,7 @@ export default class Checkgroup {
   _isAllChildrenChecked() {
     let allChildChecked = true
     this.children.forEach((child) => {
-      if (!child.checked || child.hasAttribute('indeterminate')) {
+      if (!child.checked || child.indeterminate) {
         allChildChecked = false
       }
     })
@@ -213,7 +218,7 @@ export default class Checkgroup {
    * @private
    */
   _setParentCheckboxLabel() {
-    if (this.parent.checked && !this.parent.hasAttribute('indeterminate')) {
+    if (this.parent.checked && !this.parent.indeterminate) {
       this.parent.nextElementSibling.innerHTML = this.uncheckedLabel
       this.parent.setAttribute('aria-label', this.uncheckedLabel)
     } else {
