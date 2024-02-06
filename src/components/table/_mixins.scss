@@ -13,13 +13,13 @@
 }
 
 @mixin table-no-hover{
-  &.no-hover{
-    &:hover {
-      td{      
+  &.no-hover {
+    & td:not(.column-collapse):hover {
+      td{
         background: none;
       }
     }
-    
+
   }
 }
 
@@ -42,14 +42,19 @@
     overflow: auto;
   }
 
-  .column-collapse {
-    width: 40px;
+  tr:hover td.column-collapse {
+    background-color: var(--background-alternative);
+    background-image: none;
   }
+
+  .column-collapse {
+    background-color: var(--background-alternative);
+    width: 40px;
+  }  
 
   .column-checkbox {
     width: 24px;
   }
-
   
 }
 
@@ -59,7 +64,8 @@
 
     &.show {
       .top-bar {
-        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
       }
     }
   }
@@ -253,8 +259,9 @@
     @include dark-mode;
     @include pagination-dark-mode;
 
-    th {
+    th, td.column-collapse, tr:hover td.column-collapse {
       background-color: var(--background-dark);
     }
+
   }
 }

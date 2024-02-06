@@ -38,17 +38,17 @@ mixin notification-full
           +tab-pane(id=attributes.id ? `${attributes.id}-1` : `notification-panel-1-${id}`)
             +list
               +item()(type="button")
-                +icon.fa-heartbeat
+                +icon.fa-heartbeat.mr-2
                 | Link de Acesso
               +item()(type="button")
-                +icon.fa-heartbeat
+                +icon.fa-heartbeat.mr-2
                 | Link de Acesso
               +item()(type="button")
-                +icon.fa-heartbeat
+                +icon.fa-heartbeat.mr-2
                 | Link de Acesso
           +tab-pane(id=attributes.id ? `${attributes.id}-2` : `notification-panel-2-${id}`).active
             +list
-              +item()(type="button")
+              +item()(type="button" role="contentinfo" aria-label="Especificar aqui a mensagem de alerta a ser informado pelo leitor de tela")
                 +tag-status.small.warning
                 span.text-bold Título
                 span.text-medium.mb-2 25 de out
@@ -57,7 +57,7 @@ mixin notification-full
                 span.text-bold Título
                 span.text-medium.mb-2 24 de out
                 span Labore nulla elit laborum nulla duis. Deserunt ad nulla commodo occaecat nulla proident ea proident aliquip dolore sunt nulla. Do sit eu consectetur quis culpa. Eiusmod minim irure sint nulla incididunt occaecat ipsum mollit in ut. Minim adipisicing veniam adipisicing velit nostrud duis consectetur aute nulla deserunt culpa aliquip.
-              +item()(type="button")
+              +item()(type="button" role="contentinfo" aria-label="Escrever aqui a mensagem de alerta que será informada pelo leitor de tela")
                 +tag-status.small.warning
                 span.text-bold Título
                 span.text-medium.mb-2 03 de out

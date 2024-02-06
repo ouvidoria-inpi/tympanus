@@ -9,6 +9,7 @@
   display: inline-grid;
   font-size: var(--font-size-scale-down-01);
   font-weight: var(--font-weight-medium);
+  min-height: var(--spacing-scale-7x);
   position: relative;
 }
 
@@ -16,8 +17,7 @@
   .crumb {
     align-items: center;
     display: flex;
-    height: var(--spacing-scale-5x);
-    margin: auto 0 auto -5px;
+    height: var(--spacing-scale-5x);    
 
     .icon {
       color: var(--border-color);
@@ -25,10 +25,9 @@
       margin-right: -6px;
     }
 
-    a {
+    a {      
       max-width: 180px;
-      overflow: hidden;
-      padding: 0 6px;
+      overflow: hidden;      
       text-decoration: none;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -37,17 +36,29 @@
     &:last-child {
       span {
         font-weight: var(--font-weight-medium);
-        padding: 0 0 0 var(--spacing-scale-base);
-        white-space: nowrap;
+        margin: 0 var(--spacing-scale-2x) 0 var(--spacing-scale-base);        
+        white-space: nowrap;        
       }
     }
+
+    &[data-active="active"] {
+      span {
+        &:focus,
+        &:focus-visible,
+        &.focus-visible {
+          @include focus;
+        }
+      }
+    }
+  }
+  .crumb a:not(.#{$prefix}button) {
+    margin: 0 var(--spacing-scale-base);
   }
 
   .home,
   .menu-mobil {
     --focus-offset: calc(var(--spacing-scale-half) * -1);
-    margin-left: 0;
-    margin-right: -3px;
+    margin: 0 var(--spacing-scale-base) 0 0;
   }
   @include media-breakpoint-down(sm) {
     .crumb a:not(.#{$prefix}button) {
@@ -75,7 +86,7 @@
     margin: 0;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0;
+    padding: 0 0 0 var(--spacing-scale-base);
   }
 }
 

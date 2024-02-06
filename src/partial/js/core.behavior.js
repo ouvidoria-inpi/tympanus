@@ -2,14 +2,11 @@
  * Classe que instancia os exemplos de uso dos utilitários
  */
 
-// import TooltipExample from '../../util/tooltip/tooltip'
 import AccordionExample from '../../util/accordion/accordion'
 import CheckgroupExample from '../../util/checkgroup/checkgroup'
 import CollapseExample from '../../util/collapse/collapse'
 import DropdownExample from '../../util/dropdown/dropdown'
-import Scrim from './behavior/scrim'
-// import Tooltip from './behavior/tooltip'
-// import Tooltip from './behavior/tooltip'
+import ScrimExample from '../../util/scrim/scrim'
 import TooltipExample from '../../util/tooltip/tooltip'
 
 export default class Behavior {
@@ -59,18 +56,9 @@ export default class Behavior {
   }
 
   _initInstanceScrimExample() {
-    for (const buttonBloco1 of window.document.querySelectorAll(
-      '.scrimutilexemplo button'
-    )) {
-      buttonBloco1.addEventListener('click', () => {
-        const scrscrim = window.document.querySelector('#scrimutilexample')
-        const scrimfoco = new Scrim({
-          closeElement: '#scrimfechar',
-          trigger: scrscrim,
-        })
-        scrimfoco.showScrim()
-      })
-    }
+    const initializeScrim = [{'trigger_open_scrim':'#idbuttonscrimutil','scrimid':'#scrimutilexample'},
+    {'trigger_open_scrim':'#idbuttonscrimutil1','trigger_close_scrim':'#scrimfechar','scrimid':'#scrimutilfocobig'},]
+    const scrimExample = new ScrimExample({arrayConfigScrim:initializeScrim})
   }
   _initInstanceTooltipExample() {
     const tooltipExample = new TooltipExample()

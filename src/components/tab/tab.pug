@@ -26,7 +26,12 @@ mixin tab-nav
 
 mixin tab-item
   li.tab-item(class=attributes.class title=attributes.title  )
-    button(type="button" aria-label=attributes["aria-label"] data-target=attributes["data-target"] data-panel=attributes["data-panel"] data-tooltip-text=attributes["tooltip-text"])
+    button(
+      type="button" 
+      data-target=attributes["data-target"] 
+      aria-label=attributes["aria-label"] 
+      data-panel=attributes["data-panel"] 
+      data-tooltip-text=attributes["tooltip-text"])
       span.name
         if block
           block
@@ -46,18 +51,18 @@ mixin tab-pane
 mixin tabs-padrao
   +tab
     +tab-nav
-      +tab-item(data-panel="panel-1") Sobre
+      +tab-item(data-panel="panel-1").active Sobre
       +tab-item(data-panel="panel-2") Todos
-      +tab-item(data-panel="panel-3").active Notícias
+      +tab-item(data-panel="panel-3") Notícias
       +tab-item(data-panel="panel-4") Serviços
       +tab-item(data-panel="panel-5") Aplicativos
       +tab-item(data-panel="panel-6") Mídias
     +tab-content
-      +tab-pane#panel-1
+      +tab-pane#panel-1.active
         p Painel Sobre
       +tab-pane#panel-2
         p Painel Todos
-      +tab-pane#panel-3.active
+      +tab-pane#panel-3
         p Painel Noticias
       +tab-pane#panel-4
         p Painel Serviços
@@ -69,18 +74,18 @@ mixin tabs-padrao
 mixin tabs-padrao-medium
   +tab.medium
     +tab-nav
-      +tab-item(title="Sobre" data-panel="panel-1")
+      +tab-item(title="Sobre" data-panel="panel-1").active
       +tab-item(title="Todos" data-panel="panel-2")
-      +tab-item(title="Notícias" data-panel="panel-3").active
+      +tab-item(title="Notícias" data-panel="panel-3")
       +tab-item(title="Serviços" data-panel="panel-4")
       +tab-item(title="Aplicativos" data-panel="panel-5")
       +tab-item(title="Mídias" data-panel="panel-6")
     +tab-content
-      +tab-pane#panel-1-large
+      +tab-pane#panel-1-large.active
         p Painel Sobre
       +tab-pane#panel-2-large
         p Painel Todos
-      +tab-pane#panel-3-large.active
+      +tab-pane#panel-3-large
         p Painel Noticias
       +tab-pane#panel-4-large
         p Painel Serviços
@@ -92,18 +97,18 @@ mixin tabs-padrao-medium
 mixin tabs-padrao-large
   +tab.large
     +tab-nav
-      +tab-item(title="Sobre" data-panel="large-panel-1") Sobre
+      +tab-item(title="Sobre" data-panel="large-panel-1").active Sobre
       +tab-item(title="Todos" data-panel="large-panel-2") Todos
-      +tab-item(title="Notícias" data-panel="large-panel-3").active Notícias
+      +tab-item(title="Notícias" data-panel="large-panel-3") Notícias
       +tab-item(title="Serviços" data-panel="large-panel-4") Serviços
       +tab-item(title="Aplicativos" data-panel="large-panel-5") Aplicativos
       +tab-item(title="Mídias" data-panel="large-panel-6") Mídias
     +tab-content
-      +tab-pane#large-panel-1
+      +tab-pane#large-panel-1.active
         p Painel Sobre
       +tab-pane#large-panel-2
         p Painel Todos
-      +tab-pane#large-panel-3.active
+      +tab-pane#large-panel-3
         p Painel Noticias
       +tab-pane#large-panel-4
         p Painel Serviços
@@ -115,18 +120,18 @@ mixin tabs-padrao-large
 mixin tabs-padrao-small
   +tab.small
     +tab-nav
-      +tab-item(title="Sobre" data-panel="panel-1-small") Sobre
+      +tab-item(title="Sobre" data-panel="panel-1-small").active Sobre
       +tab-item(title="Todos" data-panel="panel-2-small") Todos
-      +tab-item(title="Notícias" data-panel="panel-3-small").active Notícias
+      +tab-item(title="Notícias" data-panel="panel-3-small") Notícias
       +tab-item(title="Serviços" data-panel="panel-4-small") Serviços
       +tab-item(title="Aplicativos" data-panel="panel-5-small") Aplicativos
       +tab-item(title="Mídias" data-panel="panel-6-small") Mídias
     +tab-content
-      +tab-pane#panel-1-small
+      +tab-pane#panel-1-small.active
         p Painel Sobre
       +tab-pane#panel-2-small
         p Painel Todos
-      +tab-pane#panel-3-small.active
+      +tab-pane#panel-3-small
         p Painel Noticias
       +tab-pane#panel-4-small
         p Painel Serviços
@@ -138,18 +143,18 @@ mixin tabs-padrao-small
 mixin tabs-padrao-inverted
   +tab.dark-mode
     +tab-nav
-      +tab-item(title="Sobre" data-panel="panel-1-inverted") Sobre
+      +tab-item(title="Sobre" data-panel="panel-1-inverted").active Sobre
       +tab-item(title="Todos" data-panel="panel-2-inverted") Todos
-      +tab-item(title="Notícias" data-panel="panel-3-inverted").active Notícias
+      +tab-item(title="Notícias" data-panel="panel-3-inverted") Notícias
       +tab-item(title="Serviços" data-panel="panel-4-inverted") Serviços
       +tab-item(title="Aplicativos" data-panel="panel-5-inverted") Aplicativos
       +tab-item(title="Mídias" data-panel="panel-6-inverted") Mídias
     +tab-content
-      +tab-pane#panel-1-inverted
+      +tab-pane#panel-1-inverted.active
         p Painel Sobre
       +tab-pane#panel-2-inverted
         p Painel Todos
-      +tab-pane#panel-3-inverted.active
+      +tab-pane#panel-3-inverted
         p Painel Noticias
       +tab-pane#panel-4-inverted
         p Painel Serviços
@@ -161,14 +166,14 @@ mixin tabs-padrao-inverted
 mixin tabs-contadores
   +tab(data-counter="true")&attributes(attributes)
     +tab-nav
-      +tab-item(title="Todos" data-panel="panel-7-count" data-count="124") Todos
-      +tab-item(title="Notícias" class="is-active" data-panel="panel-8-count" data-count="74") Notícias
+      +tab-item(title="Todos" class="is-active" data-panel="panel-7-count" data-count="124") Todos
+      +tab-item(title="Notícias" data-panel="panel-8-count" data-count="74") Notícias
       +tab-item(title="Serviços" data-panel="panel-9-count" data-count="16") Serviços
       +tab-item(title="Aplicativos" data-panel="panel-10-count" data-count="12") Aplicativos
     +tab-content
-      +tab-pane#panel-7-count
+      +tab-pane#panel-7-count.active
         p Painel Todos
-      +tab-pane#panel-8-count.active
+      +tab-pane#panel-8-count
         p Painel Notícias
       +tab-pane#panel-9-count
         p Painel Serviços
@@ -178,7 +183,7 @@ mixin tabs-contadores
 mixin tabs-icones
   +tab
     +tab-nav
-      +tab-item(data-panel="panel-1-icon")
+      +tab-item(data-panel="panel-1-icon").active
         span.d-flex.flex-column.flex-sm-row
           span.icon.mb-1.mb-sm-0.mr-sm-1: +icon.fa-image
           span.name ITEM
@@ -186,7 +191,7 @@ mixin tabs-icones
         span.d-flex.flex-column.flex-sm-row
           span.icon.mb-1.mb-sm-0.mr-sm-1: +icon.fa-image
           span.name TODOS
-      +tab-item(data-panel="panel-3-icon").active
+      +tab-item(data-panel="panel-3-icon")
         span.d-flex.flex-column.flex-sm-row
           span.icon.mb-1.mb-sm-0.mr-sm-1: +icon.fa-image
           span.name Notícias
@@ -203,11 +208,11 @@ mixin tabs-icones
           span.icon.mb-1.mb-sm-0.mr-sm-1: +icon.fa-image.fa-1x
           span.name Mídias
     +tab-content
-      +tab-pane#panel-1-icon
+      +tab-pane#panel-1-icon.active
         p Painel Sobre
       +tab-pane#panel-2-icon
         p Painel Todos
-      +tab-pane#panel-3-icon.active
+      +tab-pane#panel-3-icon
         p Painel Noticias
       +tab-pane#panel-4-icon
         p Painel Serviços
@@ -219,24 +224,24 @@ mixin tabs-icones
 mixin tabs-icons
   +tab
     +tab-nav
-      +tab-item(data-panel2="panel-1-icons" tooltip-text="sobre" aria-label="Sobre3")
+      +tab-item(aria-label='Exemplo de tab com ícone' data-panel="panel-1-icons" tooltip-text="sobre").active
         +icon.fa-image
-      +tab-item(data-panel="panel-2-icons" tooltip-text="Todos" aria-label="Todos")
+      +tab-item(aria-label='Exemplo de tab com ícone' data-panel="panel-2-icons" tooltip-text="Todos")
         +icon.fa-image
-      +tab-item(data-panel="panel-3-icons" tooltip-text="Notícias"  aria-label="Notícias").active
+      +tab-item(aria-label='Exemplo de tab com ícone' data-panel="panel-3-icons" tooltip-text="Notícias")
         +icon.fa-image
-      +tab-item(data-panel="panel-4-icons" tooltip-text="Serviços" aria-label="Serviços")
+      +tab-item(aria-label='Exemplo de tab com ícone' data-panel="panel-4-icons" tooltip-text="Serviços")
         +icon.fa-image
-      +tab-item(data-panel="panel-5-icons" tooltip-text="Aplicativos" aria-label="Aplicativos")
+      +tab-item(aria-label='Exemplo de tab com ícone' data-panel="panel-5-icons" tooltip-text="Aplicativos")
         +icon.fa-image
-      +tab-item(data-panel="panel-6-icons" tooltip-text="Mídias" aria-label="Mídias")
+      +tab-item(aria-label='Exemplo de tab com ícone' data-panel="panel-6-icons" tooltip-text="Mídias")
         +icon.fa-image
     +tab-content
-      +tab-pane#panel-1-icons
+      +tab-pane#panel-1-icons.active
         p Painel Sobre
       +tab-pane#panel-2-icons
         p Painel Todos
-      +tab-pane#panel-3-icons.active
+      +tab-pane#panel-3-icons
         p Painel Noticias
       +tab-pane#panel-4-icons
         p Painel Serviços

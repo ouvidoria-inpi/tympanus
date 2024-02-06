@@ -1,15 +1,15 @@
 import Scrim from '../../partial/js/behavior/scrim'
 
 /**
- * Classe para o exemplo do comportamento accordion
+ * Classe para o exemplo do comportamento Scrim
  */
 class ScrimExample {
   /**
-   * Instancia um exemplo de comportamento accordion
-   * @param {object} element - Elemento DOM que representa um componente contento um comportamento de accordion
+   * Instancia um exemplo de comportamento Scrim
+   * scrimToInitialize array de id_or_classe_acionador:id_or_classe_scrim para inicializar
    */
-  constructor(element) {
-    this.element = element
+  constructor({arrayConfigScrim=[]}) {
+    this.arrayConfigScrim = arrayConfigScrim
     this._setBehavior()
   }
   /**
@@ -20,27 +20,32 @@ class ScrimExample {
     this._setScrimBehavior()
   }
   /**
-   * Encontra o componentes .scrimutilexemplo button  e coloca no evento de click o scrim
+   * Encontra o componentes .scrimutilsample button  e coloca no evento de click o scrim
    * @private
    */
   _setScrimBehavior() {
-    for (const buttonBloco1 of window.document.querySelectorAll(
-      '.scrimutilexemplo button'
-    )) {
-      buttonBloco1.addEventListener('click', () => {
-        this.openScrimExample()
-      })
-    }
+    this.arrayConfigScrim.forEach((item) => {
+      for (const buttonActionScrim of window.document.querySelectorAll(
+        item.trigger_open_scrim
+      )) {
+        buttonActionScrim.addEventListener('click', () => {
+          this.openScrimExample(item)
+        })
+      }
+    })
+
   }
 
   /**
    * Abre o scrim de id scrimutilexample
    */
-  openScrimExample() {
-    const scrscrim = window.document.querySelector('#scrimutilexample')
+  openScrimExample(item) {
+    const scrscrim = window.document.querySelector(item.scrimid)
     const scrimfoco = new Scrim({
-      closeElement: '#scrimfechar',
+      closeElement: item.trigger_close_scrim,
       trigger: scrscrim,
+      escEnable:true,
+      limitTabKey:true
     })
     scrimfoco.showScrim()
   }

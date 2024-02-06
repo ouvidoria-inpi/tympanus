@@ -7,24 +7,24 @@ mixin carousel(type="simple", stage="in", nav="on")
         data-stage=attributes.stage
         data-mobile-nav=attributes.nav
         data-circular=attributes.circular
-        )
+        aria-label="Carrossel de Exemplo" aria-roledescription="carousel")
         .carousel-button
           +button.carousel-btn-prev.terciary.circle(aria-label="Anterior")
             +icon.fa-chevron-left
         .carousel-stage
-          .carousel-page(active)
+          .carousel-page(active role='group' aria-roledescription="slide" aria-live="polite")
             .carousel-content.bg-blue-10
               .h3.carousel-title Página 1
-          .carousel-page
+          .carousel-page(role='group' aria-roledescription="slide" aria-live="polite")
             .carousel-content.bg-violet-warm-10
               .h3.carousel-title Página 2
-          .carousel-page
+          .carousel-page(role='group' aria-roledescription="slide" aria-live="polite")
             .carousel-content.bg-yellow-5
               .h3.carousel-title Página 3
-          .carousel-page
+          .carousel-page(role='group' aria-roledescription="slide" aria-live="polite")
             .carousel-content.bg-green-cool-10
               .h3.carousel-title Página 4
-          .carousel-page
+          .carousel-page(role='group' aria-roledescription="slide" aria-live="polite")
             .carousel-content.bg-orange-vivid-10
               .h3.carousel-title Página 5
         .carousel-button

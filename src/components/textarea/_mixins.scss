@@ -21,6 +21,10 @@
       --color: var(--color-dark);
       --focus-color: var(--focus-color-dark);
     }
+
+    textarea {
+      color: var(--color-light)
+    }
   }
 }
 
@@ -34,7 +38,7 @@
 
   textarea {
     background: var(--background-light);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color-alternative);
     border-radius: 6px;
     color: var(--color);
     display: block;
