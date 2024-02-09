@@ -14,6 +14,7 @@ export default class Checkgroup {
    */
   constructor(trigger) {
     this.parent = trigger
+    this.parent.indeterminate = this.parent.hasAttribute('indeterminate')
     // this.checkedLabel = trigger.dataset.checkedLabel
     // this.uncheckedLabel = trigger.dataset.uncheckedLabel
     this.children = this._setChildren(trigger.dataset.parent)
