@@ -79,8 +79,6 @@
       font-size: v(font-size-scale-base);
       font-weight: v(font-weight-medium);
       min-height: v(spacing-scale-3x);
-      // padding: v(spacing-scale-half) v(spacing-scale-4x) v(spacing-scale-base)
-      // v(spacing-scale-4x);
       position: relative;
 
       &::before {
@@ -99,7 +97,7 @@
       }
     }
 
-    &[indeterminate] {
+    &[indeterminate], &:indeterminate {
       color: $color-d;
 
       + label {
@@ -109,21 +107,24 @@
         }
       }
     }
+
     // Checado
-    &:checked + label::after {
-      border: solid v(color-primary-lighten-01);
-      border-width: 0 3px 3px 0;
-      content: "";
-      height: v(icon-size-sm);
-      left: 8px;
-      position: absolute;
-      top: 4px;
-      transform: rotate(45deg);
-      width: 8px;
+    &:checked, &:indeterminate {
+      + label::after {
+          border: solid v(color-primary-lighten-01);
+          border-width: 0 3px 3px 0;
+          content: "";
+          height: v(icon-size-sm);
+          left: 8px;
+          position: absolute;
+          top: 4px;
+          transform: rotate(45deg);
+          width: 8px;
+      }
     }
 
-    &:checked {
-      &[indeterminate] + label::after {
+    &:checked[indeterminate], &:indeterminate {
+      + label::after {
         border-color: v(color-secondary-01);
         border-width: 0 0 3px;
         top: 2px;
@@ -165,16 +166,18 @@
         border-width: 0 2px 2px 0;
         height: v(icon-size-sm);
         left: 7px;
-        top: 6px;
+        top: 4px;
         width: 6px;
       }
 
-      &:checked {
-        &[indeterminate] + label::after {
+      &:checked[indeterminate], &:indeterminate {
+        + label::after {
           border-color: v(color-secondary-01);
           border-width: 0 0 3px;
-          top: 2px;
+          left: 7px;
+          top: 1px;
           transform: none;
+          width: 6px;
         }
       }
     }
@@ -204,12 +207,6 @@
         // Checado
         &:checked + label::before {
           border-color: $color;
-        }
-
-        &:checked + label::after {
-          @if ($state == "valid") {
-            //border-color: $color;
-          }
         }
       }
     }

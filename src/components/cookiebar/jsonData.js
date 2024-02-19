@@ -10,8 +10,8 @@ const jsonData = `[
     "lastUpdate": "01/02/2021",
     "entryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus aspernatur neque culpa nisi alias. Voluptatem dicta nihil magnam, cumque voluptatum animi distinctio molestias recusandae ipsam, sapiente unde error repellendus quibusdam?",
     "selectAll": false,
-    "allAlertMessage": "Ao desativar essa opção, sua navegação ficará comprometida",
-    "closeLabel": "fechar",
+    "allAlertMessage": "Ao desativar qualquer Cookie, sua navegação poderá ser comprometida",
+    "closeLabel": "fechar tela de seleção de cookies",
     "lastUpdateLabel": "Última atualização",
     "cookieGroupsLabel": "Classes de cookies",
     "selectAllLabel": "Selecionar tudo",
@@ -34,7 +34,7 @@ const jsonData = `[
         "groupOptOut": false,
         "groupSelected": false,
         "groupAlertMessage": "Alerta group 0",
-        "groupText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum delectus fuga omnis, placeat harum id aliquam, blanditiis consectetur est cupiditate ipsam alias vitae veritatis beatae, aperiam totam assumenda. Sed, modi!",
+        "groupText": "Descrição do Grupo de Cookies.",
         "cookieList": [
           {
             "cookieId": "necessario-1",
@@ -46,7 +46,7 @@ const jsonData = `[
             "domain": "serpro.gov.br",
             "enterprise": "Serpro",
             "purpose": "Autorização",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
+            "description": "Descrição do Cookie"
           },
           {
             "cookieId": "necessario-2",
@@ -58,7 +58,7 @@ const jsonData = `[
             "domain": "serpro.gov.br",
             "enterprise": "Serpro",
             "purpose": "Autorização",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
+            "description": "Descrição do Cookie"
           }
         ]
       },
@@ -67,23 +67,23 @@ const jsonData = `[
         "groupName": "Desempenho, funcionamento, marketing e personalização",
         "groupOptOut": true,
         "groupSelected": true,
-        "groupAlertMessage": "Alerta group 1",
-        "groupText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum delectus fuga omnis, placeat harum id aliquam, blanditiis consectetur est cupiditate ipsam alias vitae veritatis beatae, aperiam totam assumenda. Sed, modi!",
+        "groupAlertMessage": "Ao desativar um Cookie do grupo Desempenho, o desempenho do site pode ser comprometido.",
+        "groupText": "Descrição do Grupo de Cookies.",
         "cookieList": [
           {
             "cookieId": "desempenho-2",
             "cookieOptOut": true,
             "cookieSelected": false,
-            "alertMessage": "Alerta group 1 - cookie 1",
+            "alertMessage": "Ao desativar o Cookie desempenho 2, o desempenho do site pode ser comprometido.",
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
             "enterprise": "Serpro",
             "purpose": "Autorização",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
+            "description": "Descrição do Cookie"
           },
           {
-            "cookieId": "desempenho-2",
+            "cookieId": "desempenho-3",
             "cookieOptOut": true,
             "cookieSelected": false,
             "cookieName": "optimizelyEndUserId",
@@ -91,7 +91,7 @@ const jsonData = `[
             "domain": "serpro.gov.br",
             "enterprise": "Serpro",
             "purpose": "Autorização",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
+            "description": "Descrição do Cookie"
           }
         ]
       },
@@ -100,31 +100,32 @@ const jsonData = `[
         "groupName": "Experiência do site",
         "groupOptOut": true,
         "groupSelected": false,
-        "groupAlertMessage": "Ao desativar essa opção, sua navegação ficará comprometida",
-        "groupText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum delectus fuga omnis, placeat harum id aliquam, blanditiis consectetur est cupiditate ipsam alias vitae veritatis beatae, aperiam totam assumenda. Sed, modi!",
+        "groupAlertMessage": "Ao desativar algum Cookie do Grupo Experiência do site, sua navegação ficará comprometida.",
+        "groupText": "Descrição do Grupo de Cookies.",
         "cookieList": [
           {
             "cookieId": "experiencia-1",
-            "cookieOptOut": false,
+            "cookieOptOut": true,
             "cookieSelected": false,
-            "alertMessage": "Alerta group 2 - cookie 0",
+            "alertMessage": "Ao desativar o Cookie experiencia-1, sua navegação ficará comprometida.",
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
             "enterprise": "Serpro",
             "purpose": "Autorização",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
+            "description": "Descrição do Cookie"
           },
           {
             "cookieId": "experiencia-2",
             "cookieOptOut": true,
             "cookieSelected": false,
+            "alertMessage": "Ao desativar o Cookie experiencia-1, sua navegação ficará comprometida.",
             "cookieName": "optimizelyEndUserId",
             "expires": "30 minutos",
             "domain": "serpro.gov.br",
             "enterprise": "Serpro",
             "purpose": "Autorização",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam inventore fuga consectetur minus accusantium sapiente, distinctio dolorum illum, doloremque rem deleniti recusandae quod rerum quidem amet? Unde, laudantium cum."
+            "description": "Descrição do Cookie"
           }
         ]
       }
