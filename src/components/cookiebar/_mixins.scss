@@ -181,6 +181,7 @@
   .br-modal-body {
     flex: 1;
     margin: 0;
+    overflow: unset;
 
     &:focus {
       outline: none;

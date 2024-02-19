@@ -55,8 +55,8 @@
     @include hover("color");
   }
 
-  .#{$prefix}checkbox,
-  .#{$prefix}radio {
+  & > .#{$prefix}checkbox,
+  & > .#{$prefix}radio {
     &:not(.hidden-label) {
       margin-bottom: calc(var(--item-padding-y) * -1);
       margin-left: calc(var(--item-padding-x) * -1);
@@ -90,8 +90,8 @@
     }
   }
 
-  .#{$prefix}checkbox {
-    input {
+  & > .#{$prefix}checkbox {
+    input:not(:indeterminate) {
       +label {
         min-height: calc(var(--checkbox-size) + var(--item-padding-y) * 2);
 

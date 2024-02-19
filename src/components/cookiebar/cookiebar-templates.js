@@ -22,7 +22,7 @@ export class CookiebarTemplates {
                 <div class="container-fluid p-1 p-2xh">
                   <div class="wrapper p-2xh">
                     ${this._setIntroductoryContentArea()}
-                    <div class="br-modal-body">
+                    <div id="info-t" class="br-modal-body">
                       ${this._setInfoText()}
                       ${this._setMainContentArea()}
                       ${this._setComplementaryContentArea()}
@@ -168,7 +168,7 @@ export class CookiebarTemplates {
                                 }
                               </div>
                               <div class="col col-sm-auto align-self-center order-2 order-sm-3">
-                                ${this._setGroupButton()}
+                                ${this._setGroupButton(groupData.groupName)}
                               </div>
                               <div class="col-12 col-sm-12 order-3 order-sm-4 text-sm-right message mt-1 mb-1">
                                 ${this.setGroupAlertMessage(groupData)}
@@ -320,7 +320,7 @@ export class CookiebarTemplates {
                     ${this.data.noteTitle}</span>
                 </div>
                 <div class="col-auto">
-                  ${this._setGroupButton()}
+                  ${this._setGroupButton(this.data.noteTitle)}
                 </div>
               </div>
             </div>
@@ -413,11 +413,12 @@ export class CookiebarTemplates {
 
   /**
    * Cria um template para botão de abrir/fechar do brupo de cookies
+   * @param {object} groupData - Objeto com dados de 1 grupo de cookies
    * @returns {string} - Elemento DOM que representa o botão de abrir/fechar do grupo de cookies
    * @private
    */
-  _setGroupButton() {
-    return `<button class="br-button circle small float-right" type="button" title="Expandir" aria-label="Expandir">
+  _setGroupButton(groupName) {
+    return `<button class="br-button circle small float-right" type="button" aria-label="Expandir grupo de Cookies ${groupName}">
               <i class="fas fa-angle-down" aria-hidden="true"></i>
             </button>`
   }
@@ -432,11 +433,10 @@ export class CookiebarTemplates {
               <input
                 id="check-all"
                 name="check-all"
-                type="checkbox"
+                type="checkbox"                
                 aria-label="${this.labels.setCheckAllLabel()}"
                 ${this.data.selectAll ? 'checked' : ''}
                 ${this.data.allIndeterminated ? 'indeterminate' : ''}
-                tabindex="0"
                 data-parent="check-all"
                 data-checked-label="${this.labels.setSelectAllLabel()}"
                 data-unchecked-label="${this.labels.setUnselectAllLabel()}"
@@ -459,11 +459,10 @@ export class CookiebarTemplates {
               <input
                 id="${`check-group-${groupIndex}`}"
                 name="${`check-group-${groupIndex}`}"
-                type="checkbox"
+                type="checkbox"                
                 aria-label="${this.labels.setCheckGroupLabel(groupData)}"
                 ${groupData.groupSelected ? 'checked' : ''}
                 ${groupData.groupIndeterminated ? 'indeterminate' : ''}
-                tabindex="0"
                 data-child="check-all"
                 data-parent="${`check-group-${groupIndex}`}"
                 data-checked-label="${this.labels.setSelectAllGroupLabel()}"
@@ -489,9 +488,8 @@ export class CookiebarTemplates {
                 id="${`check-cookie-${groupIndex}-${cookieIndex}`}"
                 name="${`check-cookie-${groupIndex}-${cookieIndex}`}"
                 type="checkbox"
-                ${cookieData.cookieSelected ? 'checked' : ''}
-                tabindex="-1"
                 role="switch"
+                ${cookieData.cookieSelected ? 'checked' : ''}
                 data-child="${`check-group-${groupIndex}`}"
               />
               <label
@@ -519,7 +517,7 @@ export class CookiebarTemplates {
     return this.data.allAlertMessage
       ? `<span class="feedback warning ${
           !this.data.selectAll || this.data.allIndeterminated ? '' : 'd-none'
-        }" role="alert">
+        }" role="alert" aria-live="polite">
                 <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
                 ${this.data.allAlertMessage}
               </span>`
@@ -538,7 +536,7 @@ export class CookiebarTemplates {
           !groupData.groupSelected || groupData.groupIndeterminated
             ? ''
             : 'd-none'
-        }" role="alert">
+        }" role="alert" aria-live="polite">
           <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
           ${groupData.groupAlertMessage}
         </span>`
@@ -555,7 +553,7 @@ export class CookiebarTemplates {
     return cookieData.alertMessage
       ? `<span class="feedback warning ${
           !cookieData.cookieSelected ? '' : 'd-none'
-        }" role="alert">
+        }" role="alert" aria-live="polite">
           <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
           ${cookieData.alertMessage}
         </span>`
