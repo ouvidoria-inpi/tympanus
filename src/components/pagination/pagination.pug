@@ -1,6 +1,6 @@
 mixin pagination
   - let className = prefix + "pagination"
-  nav(class=className aria-label="Paginação de resultados")&attributes(attributes)
+  nav(class=className aria-label="paginação" )&attributes(attributes)
     if block
       block
 
@@ -8,11 +8,12 @@ mixin pagination-pages
   - let pageNumber = 1
   +pagination()(data-total="5")&attributes(attributes)
     ul
-      li
-        +button.circle(data-previous-page aria-label="Página anterior"): +icon.fa-angle-left
+      li()
+        +button.circle(data-previous-page aria-label="Voltar página"): +icon.fa-angle-left
       while pageNumber <= attributes["data-total"]
         li
           a.page(
+            aria-label="Página " + pageNumber
             href="javascript:void(0)"
             class=[pageNumber == 1 ? "active" : ""]
             )=pageNumber++
@@ -30,94 +31,119 @@ mixin pagination-large
 
 mixin pagination-ellipsis-start
   - let total = 10
-  - let current = 9
+  - let current = 1
   - let page = 1
   - let visibles = 3
   +pagination()(data-total=total data-current=current)&attributes(attributes)
     ul
-      li
-        +button.circle(data-previous-page aria-label="Página anterior"): +icon.fa-angle-left
+      li()
+        +button.circle(data-previous-page aria-label="Voltar página"): +icon.fa-angle-left
       li
         a.page(
           href="javascript:void(0)"
           class=[page == current ? "active" : ""]
+          aria-label="Página "+page
           )=page++
       li.pagination-ellipsis
-        +button.circle(data-toggle="dropdown" aria-label="Abrir listagem"): +icon.fa-ellipsis-h
-        +list
+        +button.circle(data-toggle="dropdown" aria-label="Abrir ou fechar a lista de paginação"): +icon.fa-ellipsis-h
+        +list(role="menu")
           while page <= total - visibles
-            +item(href="javascript:void(0)")=page++
+            +item(href="javascript:void(0)" 
+             aria-label="Página  " + page
+             role="menuitem"
+             )=page++
       while page <= total
         li
           a.page(
             href="javascript:void(0)"
             class=[page == current ? "active" : ""]
+            aria-label="Página  " + page
+            
             )=page++
       li
-        +button.circle(data-next-page aria-label="Página seguinte"): +icon.fa-angle-right
+        +button.circle(data-next-page aria-label="Proxima página"): +icon.fa-angle-right
 
 mixin pagination-ellipsis-double
   - let total = 20
-  - let current = 13
+  - let current = 1
   - let page = 1
-  - let visibles = 2
+  - let visibles = 3
   +pagination.d-none.d-sm-flex(data-total=total data-current=current)&attributes(attributes)
     ul
-      li
-        +button.circle(data-previous-page aria-label="Página anterior"): +icon.fa-angle-left
+      li()
+        +button.circle(data-previous-page aria-label="   página"): +icon.fa-angle-left
       li
         a.page(
           href="javascript:void(0)"
           class=[page == current ? "active" : ""]
+           aria-label="Página  " + page
           )=page++
       li.pagination-ellipsis
-        +button.circle(data-toggle="dropdown" aria-label="Abrir listagem"): +icon.fa-ellipsis-h
-        +list
-          while page < (current - visibles)
-            +item(href="javascript:void(0)")=page++
-      while page <= (current + visibles)
+        +button.circle(data-toggle="dropdown" aria-label="Abrir ou fechar a lista de paginação"): +icon.fa-ellipsis-h
+        +list(role="menu")
+          while page < 10
+            +item(
+            href="javascript:void(0)"
+            role="menuitem"
+            )=page++
+      - let qtd = page + visibles
+      while page < qtd
         li
           a.page(
             href="javascript:void(0)"
             class=[page == current ? "active" : ""]
+            aria-label="Página  " + page
+            
             )=page++
       li.pagination-ellipsis
-        +button.circle(data-toggle="dropdown" aria-label="Abrir listagem"): +icon.fa-ellipsis-h
-        +list
+        +button.circle(data-toggle="dropdown" aria-label="Abrir ou fechar a lista de paginação"): +icon.fa-ellipsis-h
+        +list(role="menu")
           while page <= total - 1
-            +item(href="javascript:void(0)")=page++
+            +item(href="javascript:void(0)" 
+            role="menuitem"
+            )=page++
       li
         a.page(
           href="javascript:void(0)"
           class=[page == current ? "active" : ""]
+          
+          
           )=page++
       li
         +button.circle(data-next-page aria-label="Página seguinte"): +icon.fa-angle-right
 
 mixin pagination-ellipsis-end
   - let total = 10
-  - let current = 2
+  - let current = 1
   - let page = 1
   - let visibles = 4
   +pagination()(data-total=total data-current=current)&attributes(attributes)
     ul
       li
-        +button.circle(data-previous-page aria-label="Página anterior"): +icon.fa-angle-left
+        +button.circle(data-previous-page aria-label="Voltar página"): +icon.fa-angle-left
       while page <= visibles
         li
           a.page(
             href="javascript:void(0)"
             class=[page == current ? "active" : ""]
+             aria-label=" página "+page
+            
             )=page++
       li.pagination-ellipsis
-        +button.circle(data-toggle="dropdown" aria-label="Abrir listagem"): +icon.fa-ellipsis-h
-        +list
+        +button.circle(data-toggle="dropdown" aria-label="Abrir ou fechar a lista de paginação"): +icon.fa-ellipsis-h
+        +list(role="menu")
           while page <= total - 1
-            +item(href="javascript:void(0)")=page++
+            +item(
+              href="javascript:void(0)" 
+              aria-label=" página "+page
+              role="menuitem"
+              )=page++
       li
         a.page(
           href="javascript:void(0)"
           class=[page == current ? "active" : ""]
+          aria-label=" página "+page
+          
           )=page++
       li
         +button.circle(data-next-page aria-label="Página seguinte"): +icon.fa-angle-right
@@ -125,7 +151,7 @@ mixin pagination-ellipsis-end
 mixin pagination-arrows
   .pagination-arrows&attributes(attributes)
     +button.circle(aria-label="Voltar página"): +icon.fa-angle-left
-    +button.circle(aria-label="Avançar página"): +icon.fa-angle-right
+    +button.circle(aria-label="Página seguinte"): +icon.fa-angle-right
 
 mixin pagination-go-to-page(total, perPage)
   - let random = `${Math.floor((Math.random() * 100000) + 1)}`
@@ -144,9 +170,9 @@ mixin pagination-per-page
   - let random = `${Math.floor((Math.random() * 100000) + 1)}`
   .pagination-per-page&attributes(attributes)
     +select("Exibir")(id=`per-page-selection-random-${random}` placeholder=" ")
-      +option("10", `per-page-10-random-${random}`, `per-page-random-${random}`)(checked)
-      +option("20", `per-page-20-random-${random}`, `per-page-random-${random}`)
-      +option("30", `per-page-30-random-${random}`, `per-page-random-${random}`)
+      +option("10", `per-page-10-random-${random}`, `per-page-random-${random}`)(checked )
+      +option("20", `per-page-20-random-${random}`, `per-page-random-${random}`)()
+      +option("30", `per-page-30-random-${random}`, `per-page-random-${random}`)()
 
 mixin pagination-information(total, current, perPage)
   .pagination-information.d-none.d-sm-flex&attributes(attributes)
