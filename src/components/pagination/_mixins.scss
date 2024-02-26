@@ -51,6 +51,20 @@
 }
 
 @mixin pagination-page {
+  &.dark-mode {
+    .page {
+      color: var(--color-dark);
+    }
+
+    .br-select {
+      .br-item {
+        label {
+          color: var(--color-dark);
+        }
+      }
+    }
+  }
+
   .page {
     @include hover;
     align-items: center;
