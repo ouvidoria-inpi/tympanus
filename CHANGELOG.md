@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [3.5.1](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.5.0...v3.5.1) (26/02/2024)
+
+
+### 🐛 CORREÇÕES
+
+* **cookiebar a11y:** adapta o cookiebar para o leitor de tela ([f6fc360](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/f6fc360ed7cffb284c24f43d245a9e6ee41606cd)), closes [#80](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/80)
+* **pagination-a11y:** correção de acessibilidade do componente ([8741e44](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/8741e44f77b71ecbb4baa76fb71ad227ab37fdb3)), closes [#101](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/101)
+* **table:** corrige problemas de acessibilidade no componente ([1a26038](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/commit/1a26038bc970acacfe4e92a01a768388764b52eb)), closes [#111](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/issues/111)
+
 ## [3.5.0](https://gitlab.com/govbr-ds/govbr-ds-dev/govbr-ds-dev-core/compare/v3.4.1...v3.5.0) (30/01/2024)
 
 
