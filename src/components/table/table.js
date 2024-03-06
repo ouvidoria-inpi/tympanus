@@ -92,12 +92,8 @@ class BRTable {
    * @private
    */
   _setHeaderWidth() {
-    for (const clonedHeader of this.component.querySelectorAll(
-      '.headers > div'
-    )) {
-      for (const [index, header] of this.component
-        .querySelectorAll('table thead tr th')
-        .entries()) {
+    for (const clonedHeader of this.component.querySelectorAll('.headers > div')) {
+      for (const [index, header] of this.component.querySelectorAll('table thead tr th').entries()) {
         clonedHeader.children[index].style.flex = `1 0 ${header.offsetWidth}px`
       }
     }
@@ -108,18 +104,16 @@ class BRTable {
    * @private
    */
   _dropdownBehavior() {
-    this.component
-      .querySelectorAll('[data-toggle="dropdown"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const dropdown = new Dropdown(config)
-        dropdown.setBehavior()
-      })
+    this.component.querySelectorAll('[data-toggle="dropdown"]').forEach((trigger) => {
+      const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+      }
+      const dropdown = new Dropdown(config)
+      dropdown.setBehavior()
+    })
   }
 
   /**
@@ -127,18 +121,16 @@ class BRTable {
    * @private
    */
   _collpaseBehavior() {
-    this.component
-      .querySelectorAll('[data-toggle="collapse"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const collapse = new Collapse(config)
-        collapse.setBehavior()
-      })
+    this.component.querySelectorAll('[data-toggle="collapse"]').forEach((trigger) => {
+      const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+      }
+      const collapse = new Collapse(config)
+      collapse.setBehavior()
+    })
   }
 
   /**
@@ -217,11 +209,7 @@ class BRTable {
       desityTrigger.addEventListener('click', () => {
         this.component.classList.remove('small', 'medium', 'large')
         this.component.classList.add(desityTrigger.dataset.density)
-        this._dropdownClose(
-          desityTrigger
-            .closest('.dropdown')
-            .querySelector('[data-toggle="dropdown"]')
-        )
+        this._dropdownClose(desityTrigger.closest('.dropdown').querySelector('[data-toggle="dropdown"]'))
       })
     }
   }
@@ -231,25 +219,15 @@ class BRTable {
    * @private
    */
   _setClickActions() {
-    const headerCheckbox = this.component.querySelector(
-      '.headers [type="checkbox"]'
-    )
-    const tableCheckboxes = this.component.querySelectorAll(
-      'tbody [type="checkbox"]'
-    )
+    const headerCheckbox = this.component.querySelector('.headers [type="checkbox"]')
+    const tableCheckboxes = this.component.querySelectorAll('tbody [type="checkbox"]')
     const selectedBar = this.component.querySelector('.selected-bar')
-    const checkAlls = this.component.querySelectorAll(
-      '[data-toggle="check-all"]'
-    )
+    const checkAlls = this.component.querySelectorAll('[data-toggle="check-all"]')
     for (const checkAll of checkAlls) {
       checkAll.addEventListener('click', () => {
         this._checkAllTable(selectedBar, tableCheckboxes, headerCheckbox)
         if (checkAll.parentElement.classList.contains('br-list')) {
-          this._dropdownClose(
-            checkAll
-              .closest('.dropdown')
-              .querySelector('[data-toggle="dropdown"]')
-          )
+          this._dropdownClose(checkAll.closest('.dropdown').querySelector('[data-toggle="dropdown"]'))
         }
       })
     }
@@ -292,12 +270,7 @@ class BRTable {
   _checkRow(checkbox, selectedBar, tableCheckboxes, headerCheckbox) {
     const check = checkbox.checked
     this._setRow(checkbox, check)
-    this._setSelectedBar(
-      check ? 1 : -1,
-      selectedBar,
-      tableCheckboxes,
-      headerCheckbox
-    )
+    this._setSelectedBar(check ? 1 : -1, selectedBar, tableCheckboxes, headerCheckbox)
   }
 
   /**

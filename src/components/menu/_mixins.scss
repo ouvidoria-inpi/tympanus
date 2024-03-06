@@ -341,7 +341,8 @@
   // Tablet
   @include media-breakpoint-up(sm) {
     &.push {
-      .menu-header, .menu-footer {
+      .menu-header,
+      .menu-footer {
         display: none;
       }
 

@@ -34,8 +34,8 @@ class BRTag {
   _setSelection() {
     const input = this.component.querySelector('input')
     input.addEventListener('change', (event) => {
-        this._toggleSelection(input, event)
-      })
+      this._toggleSelection(input, event)
+    })
   }
 
   /**
@@ -46,9 +46,7 @@ class BRTag {
   _toggleRadio(input) {
     if (this.component.querySelector('[type="radio"')) {
       const nameTag = input.getAttribute('name')
-      for (const tagRadio of window.document.querySelectorAll(
-        `[name=${nameTag}]`
-      )) {
+      for (const tagRadio of window.document.querySelectorAll(`[name=${nameTag}]`)) {
         this._removeCheck(tagRadio)
       }
     }
@@ -114,9 +112,7 @@ class BRTag {
   _dismissTag() {
     this.component.querySelectorAll('[data-dismiss]').forEach((closeBtn) => {
       closeBtn.addEventListener('click', () => {
-        const target = document.querySelector(
-          `#${closeBtn.getAttribute('data-dismiss')}`
-        )
+        const target = document.querySelector(`#${closeBtn.getAttribute('data-dismiss')}`)
         if (target) target.remove()
       })
     })

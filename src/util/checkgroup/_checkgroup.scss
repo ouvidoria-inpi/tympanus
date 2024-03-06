@@ -58,8 +58,10 @@
     //hover
     &:hover:not(:disabled) {
       + label::before {
-        background-image: linear-gradient(rgba(var(--interactive-rgb), var(--hover)),
-        rgba(var(--interactive-rgb), var(--hover)));
+        background-image: linear-gradient(
+          rgba(var(--interactive-rgb), var(--hover)),
+          rgba(var(--interactive-rgb), var(--hover))
+        );
       }
     }
 
@@ -97,7 +99,8 @@
       }
     }
 
-    &[indeterminate], &:indeterminate {
+    &[indeterminate],
+    &:indeterminate {
       color: $color-d;
 
       + label {
@@ -109,21 +112,23 @@
     }
 
     // Checado
-    &:checked, &:indeterminate {
+    &:checked,
+    &:indeterminate {
       + label::after {
-          border: solid v(color-primary-lighten-01);
-          border-width: 0 3px 3px 0;
-          content: "";
-          height: v(icon-size-sm);
-          left: 8px;
-          position: absolute;
-          top: 4px;
-          transform: rotate(45deg);
-          width: 8px;
+        border: solid v(color-primary-lighten-01);
+        border-width: 0 3px 3px 0;
+        content: "";
+        height: v(icon-size-sm);
+        left: 8px;
+        position: absolute;
+        top: 4px;
+        transform: rotate(45deg);
+        width: 8px;
       }
     }
 
-    &:checked[indeterminate], &:indeterminate {
+    &:checked[indeterminate],
+    &:indeterminate {
       + label::after {
         border-color: v(color-secondary-01);
         border-width: 0 0 3px;
@@ -170,7 +175,8 @@
         width: 6px;
       }
 
-      &:checked[indeterminate], &:indeterminate {
+      &:checked[indeterminate],
+      &:indeterminate {
         + label::after {
           border-color: v(color-secondary-01);
           border-width: 0 0 3px;

@@ -56,11 +56,7 @@ export class CookiebarTemplates {
     return `<div class="br-list main-content">
               ${this._setMainContentHeader()}
               ${this._setCookieGroups()}
-              ${
-                this.data.noteList && this.data.noteList.length
-                  ? this._setNotifications()
-                  : ''
-              }
+              ${this.data.noteList && this.data.noteList.length ? this._setNotifications() : ''}
             </div>`
   }
 
@@ -100,9 +96,7 @@ export class CookiebarTemplates {
    * @private
    */
   _setLastUpdate() {
-    return `<p class="last-update">${this.labels.setLastUpdateLabel()}: <span>${
-      this.data.lastUpdate
-    }</span></p>`
+    return `<p class="last-update">${this.labels.setLastUpdateLabel()}: <span>${this.data.lastUpdate}</span></p>`
   }
 
   /**
@@ -176,9 +170,7 @@ export class CookiebarTemplates {
                             </div>
                             <div class="row">
                               <div class="col">
-                                <p class="group-description">${this._setGroupDescription(
-                                  groupData
-                                )}</p>
+                                <p class="group-description">${this._setGroupDescription(groupData)}</p>
                               </div>
                             </div>
                           </div>
@@ -202,16 +194,10 @@ export class CookiebarTemplates {
    * @orivate
    */
   _setGroupName(groupData) {
-    return `<span class="group-name" title="Expandir">${
-      groupData.groupName
-    }</span>
+    return `<span class="group-name" title="Expandir">${groupData.groupName}</span>
               <span class="cookies-checked" title="Expandir">(${
-                groupData.groupOptOut
-                  ? `${this.data.getCookiesCheckedAmount(groupData)} de `
-                  : ''
-              }</span><span class="group-size" title="Expandir">${this.data.getCookiesAmount(
-      groupData
-    )})</span>`
+                groupData.groupOptOut ? `${this.data.getCookiesCheckedAmount(groupData)} de ` : ''
+              }</span><span class="group-size" title="Expandir">${this.data.getCookiesAmount(groupData)})</span>`
   }
 
   /**
@@ -240,11 +226,7 @@ export class CookiebarTemplates {
                                 <div class="col-12 text-right">
                                   ${
                                     cookieData.cookieOptOut
-                                      ? this._setCheckCookie(
-                                          groupIndex,
-                                          cookieData,
-                                          cookieIndex
-                                        )
+                                      ? this._setCheckCookie(groupIndex, cookieData, cookieIndex)
                                       : ''
                                   }
                                 </div>
@@ -533,9 +515,7 @@ export class CookiebarTemplates {
   setGroupAlertMessage(groupData) {
     return groupData.groupAlertMessage
       ? `<span class="feedback warning ${
-          !groupData.groupSelected || groupData.groupIndeterminated
-            ? ''
-            : 'd-none'
+          !groupData.groupSelected || groupData.groupIndeterminated ? '' : 'd-none'
         }" role="alert" aria-live="polite">
           <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
           ${groupData.groupAlertMessage}
@@ -551,9 +531,7 @@ export class CookiebarTemplates {
    */
   setCookieAlertMessage(cookieData) {
     return cookieData.alertMessage
-      ? `<span class="feedback warning ${
-          !cookieData.cookieSelected ? '' : 'd-none'
-        }" role="alert" aria-live="polite">
+      ? `<span class="feedback warning ${!cookieData.cookieSelected ? '' : 'd-none'}" role="alert" aria-live="polite">
           <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
           ${cookieData.alertMessage}
         </span>`

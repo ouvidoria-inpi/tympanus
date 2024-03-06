@@ -88,10 +88,7 @@
         }
 
         + label {
-          padding-left: calc(
-            var(--checkbox-padding) + var(--checkbox-size) +
-              var(--item-padding-x)
-          );
+          padding-left: calc(var(--checkbox-padding) + var(--checkbox-size) + var(--item-padding-x));
         }
       }
     }

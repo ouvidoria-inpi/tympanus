@@ -76,10 +76,7 @@ class BRStep {
         const img = elem.querySelector('.step-icon')
         const text = this.component.getAttribute('data-type') === 'text'
         if (text) {
-          elem.setAttribute(
-            'step-num',
-            `${index + 1}/${this.DOMstrings.stepsBtns.length}`
-          )
+          elem.setAttribute('step-num', `${index + 1}/${this.DOMstrings.stepsBtns.length}`)
         } else if (img) {
           elem.setAttribute('step-num', '')
         } else elem.setAttribute('step-num', index + 1)
@@ -117,10 +114,7 @@ class BRStep {
       this.setStep(this.component.getAttribute('data-initial'))
     } else this.setStep(1)
 
-    if (
-      !this.component.classList.contains('vertical') &&
-      !this.component.hasAttribute('data-scroll')
-    ) {
+    if (!this.component.classList.contains('vertical') && !this.component.hasAttribute('data-scroll')) {
       // const stepsWidth = Math.round(100 / this.DOMstrings.stepsBtns.length) - 0.5
     }
   }

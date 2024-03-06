@@ -16,9 +16,7 @@ class BRAlert {
    * @private
    */
   _setBehavior() {
-    for (const button of this.component.querySelectorAll(
-      '.br-message .close'
-    )) {
+    for (const button of this.component.querySelectorAll('.br-message .close')) {
       button.addEventListener('click', () => {
         this._dismiss(this.component)
       })

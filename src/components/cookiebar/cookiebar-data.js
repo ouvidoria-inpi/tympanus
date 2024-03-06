@@ -40,18 +40,11 @@ export class CookiebarData {
     this.selectAll = !this.allOptOut ? true : this.selectAll
     this.cookieGroups.forEach((groupData) => {
       groupData.groupOptOut = !this.allOptOut ? false : groupData.groupOptOut
-      groupData.groupSelected =
-        this.selectAll || !groupData.groupOptOut
-          ? true
-          : groupData.groupSelected
+      groupData.groupSelected = this.selectAll || !groupData.groupOptOut ? true : groupData.groupSelected
       groupData.cookieList.forEach((cookieData) => {
-        cookieData.cookieOptOut = !groupData.groupOptOut
-          ? false
-          : cookieData.cookieOptOut
+        cookieData.cookieOptOut = !groupData.groupOptOut ? false : cookieData.cookieOptOut
         cookieData.cookieSelected =
-          groupData.groupSelected || !cookieData.cookieOptOut
-            ? groupData.groupSelected
-            : cookieData.cookieSelected
+          groupData.groupSelected || !cookieData.cookieOptOut ? groupData.groupSelected : cookieData.cookieSelected
       })
     })
     this._setIndeterminateState()
@@ -76,9 +69,7 @@ export class CookiebarData {
       let allUnchecked = true
 
       groupData.cookieList.forEach((cookieData) => {
-        cookieData.cookieSelected
-          ? (allUnchecked = false)
-          : (allChecked = false)
+        cookieData.cookieSelected ? (allUnchecked = false) : (allChecked = false)
       })
 
       groupData.groupSelected = allChecked ? true : allUnchecked ? false : true
@@ -103,11 +94,7 @@ export class CookiebarData {
     })
 
     this.selectAll = allChecked ? true : allUnchecked ? false : true
-    this.allIndeterminated = indeterminated
-      ? true
-      : allChecked || allUnchecked
-      ? false
-      : true
+    this.allIndeterminated = indeterminated ? true : allChecked || allUnchecked ? false : true
   }
 
   /**

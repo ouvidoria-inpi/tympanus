@@ -52,10 +52,7 @@ export default class BRCookiebar {
     this.component.setAttribute('role', 'dialog')
     this.component.setAttribute('aria-modal', true)
     this.component.setAttribute('aria-describedby', 'info-t')
-    this.component.setAttribute(
-      'aria-label',
-      'Componente para definição de Cookies'
-    )
+    this.component.setAttribute('aria-label', 'Componente para definição de Cookies')
   }
 
   /**
@@ -104,20 +101,18 @@ export default class BRCookiebar {
    * @private
    */
   _setPoliticsButtonBehavior() {
-    this.component
-      .querySelectorAll(selectors.POLITICS_BUTTON)
-      .forEach((politicsButton) => {
-        // Expande o cookiebar
-        politicsButton.addEventListener('click', () => {
-          politicsButton.classList.add('d-none')
-          this.component.classList.remove('default')
-          this.component.focus()
-          document.body.style.overflowY = 'hidden'
-          this._setOpenView()
-        })
-
-        this._setActionButtonResponsive(politicsButton)
+    this.component.querySelectorAll(selectors.POLITICS_BUTTON).forEach((politicsButton) => {
+      // Expande o cookiebar
+      politicsButton.addEventListener('click', () => {
+        politicsButton.classList.add('d-none')
+        this.component.classList.remove('default')
+        this.component.focus()
+        document.body.style.overflowY = 'hidden'
+        this._setOpenView()
       })
+
+      this._setActionButtonResponsive(politicsButton)
+    })
   }
 
   /**
@@ -125,27 +120,23 @@ export default class BRCookiebar {
    * @orivate
    */
   _setCloseButtonBehavior() {
-    this.component
-      .querySelectorAll(selectors.CLOSE_BUTTON)
-      .forEach((closeButton) => {
-        // encolhe o cookiebar (volta ao cookiebar default)
-        closeButton.addEventListener('click', () => {
-          this.component.classList.add('default')
-          switch (this.mode) {
-            case 'open':
-              this._hideCookiebar()
-            // this._resetCookiebar()
-            default:
-          }
+    this.component.querySelectorAll(selectors.CLOSE_BUTTON).forEach((closeButton) => {
+      // encolhe o cookiebar (volta ao cookiebar default)
+      closeButton.addEventListener('click', () => {
+        this.component.classList.add('default')
+        switch (this.mode) {
+          case 'open':
+            this._hideCookiebar()
+          // this._resetCookiebar()
+          default:
+        }
 
-          this.component
-            .querySelector(selectors.POLITICS_BUTTON)
-            .classList.remove('d-none')
-          document.body.style.overflowY = 'auto'
+        this.component.querySelector(selectors.POLITICS_BUTTON).classList.remove('d-none')
+        document.body.style.overflowY = 'auto'
 
-          this._setDefaultView()
-        })
+        this._setDefaultView()
       })
+    })
   }
 
   /**
@@ -157,11 +148,9 @@ export default class BRCookiebar {
       if (!this.component.classList.contains('default')) {
         this._setOpenView()
       }
-      this.component
-        .querySelectorAll(selectors.ACTION_BUTTONS)
-        .forEach((button) => {
-          this._setActionButtonResponsive(button)
-        })
+      this.component.querySelectorAll(selectors.ACTION_BUTTONS).forEach((button) => {
+        this._setActionButtonResponsive(button)
+      })
     })
   }
 
@@ -189,10 +178,7 @@ export default class BRCookiebar {
         `${`${selectors.GROUP_BUTTON}, ${selectors.GROUP_NAME}, ${selectors.COOKIES_CHECKED}, ${selectors.GROUP_SIZE}`}`
       )
       .forEach((clickable) => {
-        clickable.addEventListener(
-          'click',
-          this._handleToggleGroupClick.bind(this)
-        )
+        clickable.addEventListener('click', this._handleToggleGroupClick.bind(this))
       })
   }
 
@@ -203,41 +189,24 @@ export default class BRCookiebar {
    * @private
    */
   _handleToggleGroupClick(event) {
-    const element = this._getParentElementByClass(
-      event.currentTarget,
-      'br-item'
-    )
+    const element = this._getParentElementByClass(event.currentTarget, 'br-item')
 
     if (element.classList.contains('open')) {
       element.classList.remove('open')
-      element.nextElementSibling
-        .querySelectorAll(selectors.BR_SWITCH)
-        .forEach((check) => {
-          check.setAttribute('tabindex', -1)
-        })
+      element.nextElementSibling.querySelectorAll(selectors.BR_SWITCH).forEach((check) => {
+        check.setAttribute('tabindex', -1)
+      })
 
-      this._setGroupAttributes(
-        element,
-        `Expandir o grupo de Cookies ${
-          element.querySelector('.group-name').innerText
-        }`
-      )
+      this._setGroupAttributes(element, `Expandir o grupo de Cookies ${element.querySelector('.group-name').innerText}`)
 
       this._toggleIcon(element, 'fa-angle-up', 'fa-angle-down')
     } else {
       element.classList.add('open')
-      element.nextElementSibling
-        .querySelectorAll(selectors.BR_SWITCH)
-        .forEach((check) => {
-          check.setAttribute('tabindex', 0)
-        })
+      element.nextElementSibling.querySelectorAll(selectors.BR_SWITCH).forEach((check) => {
+        check.setAttribute('tabindex', 0)
+      })
 
-      this._setGroupAttributes(
-        element,
-        `Retrair o grupo de Cookies ${
-          element.querySelector('.group-name').innerText
-        }`
-      )
+      this._setGroupAttributes(element, `Retrair o grupo de Cookies ${element.querySelector('.group-name').innerText}`)
 
       this._toggleIcon(element, 'fa-angle-down', 'fa-angle-up')
       this._scrollUp(element)
@@ -249,12 +218,10 @@ export default class BRCookiebar {
    * @private
    */
   _setCheckboxBehavior() {
-    this.component
-      .querySelectorAll(selectors.PARENT_CHECKBOX)
-      .forEach((trigger) => {
-        this.checkgroupBehavior = new Checkgroup(trigger)
-        this.checkgroupBehavior.setBehavior()
-      })
+    this.component.querySelectorAll(selectors.PARENT_CHECKBOX).forEach((trigger) => {
+      this.checkgroupBehavior = new Checkgroup(trigger)
+      this.checkgroupBehavior.setBehavior()
+    })
   }
 
   /**
@@ -282,11 +249,7 @@ export default class BRCookiebar {
         this._setCheckgroupBehavior(event.currentTarget, segment[2])
         break
       case 'cookie':
-        this._setCheckCookieBehavior(
-          event.currentTarget,
-          segment[2],
-          segment[3]
-        )
+        this._setCheckCookieBehavior(event.currentTarget, segment[2], segment[3])
         break
       default:
     }
@@ -299,9 +262,7 @@ export default class BRCookiebar {
    */
   _setCheckAllBehavior(checkbox) {
     this.data.selectAll = checkbox.checked
-    this.data.allIndeterminated = checkbox.hasAttribute('indeterminate')
-      ? true
-      : false
+    this.data.allIndeterminated = checkbox.hasAttribute('indeterminate') ? true : false
     this._displayBroadAlertMessage()
   }
 
@@ -313,16 +274,13 @@ export default class BRCookiebar {
    */
   _setCheckgroupBehavior(checkbox, groupIndex) {
     this.data.cookieGroups[groupIndex].groupSelected = checkbox.checked
-    this.data.cookieGroups[groupIndex].groupIndeterminated =
-    checkbox.hasAttribute('indeterminate') ? true : false
-    this.data.cookieGroups[groupIndex].cookieList.forEach(
-      (cookieData, cookieIndex) => {
-        if (!cookieData.cookieOptOut) {
-          cookieData.cookieSelected = checkbox.checked
-          this._displayCookieAlertMessage(groupIndex, cookieIndex)
-        }
+    this.data.cookieGroups[groupIndex].groupIndeterminated = checkbox.hasAttribute('indeterminate') ? true : false
+    this.data.cookieGroups[groupIndex].cookieList.forEach((cookieData, cookieIndex) => {
+      if (!cookieData.cookieOptOut) {
+        cookieData.cookieSelected = checkbox.checked
+        this._displayCookieAlertMessage(groupIndex, cookieIndex)
       }
-    )
+    })
     this._displayGroupAlertMessage(groupIndex)
   }
 
@@ -334,8 +292,7 @@ export default class BRCookiebar {
    * @private
    */
   _setCheckCookieBehavior(checkbox, groupIndex, cookieIndex) {
-    this.data.cookieGroups[groupIndex].cookieList[cookieIndex].cookieSelected =
-      checkbox.checked
+    this.data.cookieGroups[groupIndex].cookieList[cookieIndex].cookieSelected = checkbox.checked
     this._displayCookieAlertMessage(groupIndex, cookieIndex)
   }
 
@@ -344,18 +301,13 @@ export default class BRCookiebar {
    * @private
    */
   _displayBroadAlertMessage() {
-    this.component
-      .querySelectorAll(selectors.BROAD_ALERT)
-      .forEach((broadAlert) => {
-        if (
-          this.data.allAlertMessage &&
-          (!this.data.selectAll || this.data.allIndeterminated)
-        ) {
-          broadAlert.classList.remove('d-none')
-        } else {
-          broadAlert.classList.add('d-none')
-        }
-      })
+    this.component.querySelectorAll(selectors.BROAD_ALERT).forEach((broadAlert) => {
+      if (this.data.allAlertMessage && (!this.data.selectAll || this.data.allIndeterminated)) {
+        broadAlert.classList.remove('d-none')
+      } else {
+        broadAlert.classList.add('d-none')
+      }
+    })
   }
 
   /**
@@ -364,14 +316,11 @@ export default class BRCookiebar {
    * @private
    */
   _displayGroupAlertMessage(groupIndex) {
-    const group = this.component.querySelectorAll(selectors.GROUP_INFO)[
-      groupIndex
-    ]
+    const group = this.component.querySelectorAll(selectors.GROUP_INFO)[groupIndex]
     group.querySelectorAll(selectors.GROUP_ALERT).forEach((groupAlert) => {
       if (
         this.data.cookieGroups[groupIndex].groupAlertMessage &&
-        (!this.data.cookieGroups[groupIndex].groupSelected ||
-          this.data.cookieGroups[groupIndex].groupIndeterminated)
+        (!this.data.cookieGroups[groupIndex].groupSelected || this.data.cookieGroups[groupIndex].groupIndeterminated)
       ) {
         groupAlert.classList.remove('d-none')
       } else {
@@ -386,18 +335,12 @@ export default class BRCookiebar {
    * @param {number} cookieIndex - Índice do cookie dentro do grupo
    */
   _displayCookieAlertMessage(groupIndex, cookieIndex) {
-    const group = this.component.querySelectorAll(selectors.GROUP_INFO)[
-      groupIndex
-    ]
-    const cookie = group.nextElementSibling.querySelectorAll(
-      selectors.COOKIE_CARD
-    )[cookieIndex]
+    const group = this.component.querySelectorAll(selectors.GROUP_INFO)[groupIndex]
+    const cookie = group.nextElementSibling.querySelectorAll(selectors.COOKIE_CARD)[cookieIndex]
     cookie.querySelectorAll(selectors.COOKIE_ALERT).forEach((cookieAlert) => {
       if (
-        this.data.cookieGroups[groupIndex].cookieList[cookieIndex]
-          .alertMessage &&
-        !this.data.cookieGroups[groupIndex].cookieList[cookieIndex]
-          .cookieSelected
+        this.data.cookieGroups[groupIndex].cookieList[cookieIndex].alertMessage &&
+        !this.data.cookieGroups[groupIndex].cookieList[cookieIndex].cookieSelected
       ) {
         cookieAlert.classList.remove('d-none')
       } else {
@@ -479,11 +422,9 @@ export default class BRCookiebar {
     switch (this.mode) {
       case 'open':
         this.component.classList.remove('default')
-        this.component
-          .querySelectorAll(selectors.POLITICS_BUTTON)
-          .forEach((button) => {
-            button.classList.add('d-none')
-          })
+        this.component.querySelectorAll(selectors.POLITICS_BUTTON).forEach((button) => {
+          button.classList.add('d-none')
+        })
         document.body.style.overflowY = 'hidden'
         this._setOpenView()
       default:
@@ -504,17 +445,10 @@ export default class BRCookiebar {
    */
   _setOpenView() {
     const wrapper = this.component.querySelector(selectors.WRAPPER)
-    const containerFluid = this.component.querySelector(
-      selectors.CONTAINER_FLUID
-    )
+    const containerFluid = this.component.querySelector(selectors.CONTAINER_FLUID)
     const modalFooter = this.component.querySelector(selectors.MODAL_FOOTER)
-    const padding = window
-      .getComputedStyle(containerFluid, null)
-      .getPropertyValue('padding-top')
-      .match(/\d+/)
-    const height = `${
-      window.innerHeight - padding * 2 - modalFooter.offsetHeight
-    }px`
+    const padding = window.getComputedStyle(containerFluid, null).getPropertyValue('padding-top').match(/\d+/)
+    const height = `${window.innerHeight - padding * 2 - modalFooter.offsetHeight}px`
     wrapper.style.height = height
   }
 
@@ -533,9 +467,7 @@ export default class BRCookiebar {
    */
   _setOutputJSON() {
     this.output = {}
-    this.output.selectAll = this.data.allIndeterminated
-      ? 'indeterminated'
-      : this.data.selectAll
+    this.output.selectAll = this.data.allIndeterminated ? 'indeterminated' : this.data.selectAll
     this.output.cookieGroups = []
     this.data.cookieGroups.forEach((groupData) => {
       const cookies = []
@@ -548,9 +480,7 @@ export default class BRCookiebar {
       this.output.cookieGroups.push({
         cookieList: cookies,
         groupId: groupData.groupId,
-        groupSelected: groupData.groupIndeterminated
-          ? 'indeterminated'
-          : groupData.groupSelected,
+        groupSelected: groupData.groupIndeterminated ? 'indeterminated' : groupData.groupSelected,
       })
     })
     return JSON.stringify(this.output)

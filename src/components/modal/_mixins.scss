@@ -87,9 +87,7 @@
 @mixin modal-loading {
   .loading {
     &.medium {
-      min-height: calc(
-        var(--loading-indetermined-diameter-md) + var(--spacing-scale-2x) * 2
-      );
+      min-height: calc(var(--loading-indetermined-diameter-md) + var(--spacing-scale-2x) * 2);
     }
   }
 }
@@ -97,8 +95,7 @@
 @mixin modal-deprecated {
   .terms {
     border: 0;
-    box-shadow: var(--surface-shadow-sm-inset),
-      var(--surface-shadow-sm-inset-up);
+    box-shadow: var(--surface-shadow-sm-inset), var(--surface-shadow-sm-inset-up);
     font-size: v(font-size-scale-base);
     height: 216px;
     margin-bottom: var(--spacing-scale-2x);

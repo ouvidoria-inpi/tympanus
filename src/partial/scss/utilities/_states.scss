@@ -1,7 +1,6 @@
 // Destacado
 .highlight {
-  background: v(status-highlight-background)
-    linear-gradient(v(status-highlight-overlay), v(status-highlight-overlay));
+  background: v(status-highlight-background) linear-gradient(v(status-highlight-overlay), v(status-highlight-overlay));
   color: v(status-highlight-text);
   padding: 0 v(spacing-scale-half);
 }

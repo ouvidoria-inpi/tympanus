@@ -13,9 +13,7 @@ Podem ser modificadas as seguintes propriedades:
 Exemplo de uso:
 
 ```html
-<p class="text-up-01 text-lg-up-06 text-center text-lg-left">
-    Texto de tamanho e alinhamento variável por breakpoint
-</p>
+<p class="text-up-01 text-lg-up-06 text-center text-lg-left">Texto de tamanho e alinhamento variável por breakpoint</p>
 ```
 
 ## Alinhamento

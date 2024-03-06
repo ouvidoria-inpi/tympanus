@@ -82,18 +82,8 @@ function deleteOnlyCssUtil() {
   const utilSrcFile = path.resolve(paths.src, 'util')
   fs.readdirSync(utilSrcFile).forEach((file) => {
     const fileEmptyJS = path.resolve(paths.dist, 'util', file, `${file}.js`)
-    const fileEmptyJSMap = path.resolve(
-      paths.dist,
-      'util',
-      file,
-      `${file}.js.map`
-    )
-    const fileEmptyJSMin = path.resolve(
-      paths.dist,
-      'util',
-      file,
-      `${file}.min.js`
-    )
+    const fileEmptyJSMap = path.resolve(paths.dist, 'util', file, `${file}.js.map`)
+    const fileEmptyJSMin = path.resolve(paths.dist, 'util', file, `${file}.min.js`)
     const fileSRCJS = path.resolve(paths.src, 'util', file, `${file}.js`)
 
     if (fs.existsSync(fileEmptyJS) && !fs.existsSync(fileSRCJS)) {
@@ -175,18 +165,8 @@ function readDirectory(typeFolder, typeComponent) {
     componentFile = path.resolve(typeFolder, file, `${file}.js`)
 
     componentDist = path.resolve(paths.dist, typeComponent, file)
-    componentDistFile = path.resolve(
-      paths.dist,
-      typeComponent,
-      file,
-      `${file}.js`
-    )
-    componentDistFileMin = path.resolve(
-      paths.dist,
-      typeComponent,
-      file,
-      `${file}.min.js`
-    )
+    componentDistFile = path.resolve(paths.dist, typeComponent, file, `${file}.js`)
+    componentDistFileMin = path.resolve(paths.dist, typeComponent, file, `${file}.min.js`)
     componentFileCss = path.resolve(componentDist, `${file}.min.min.css`)
     componentFileCssMap = path.resolve(componentDist, `${file}.min.min.css.map`)
 
@@ -200,11 +180,7 @@ function readDirectory(typeFolder, typeComponent) {
 
     if (fs.existsSync(componentFile)) {
       if (fs.existsSync(componentDist)) {
-        fs.copyFileSync(
-          componentFile,
-          componentDistFile,
-          fs.constants.COPYFILE_FICLONE_FORC
-        )
+        fs.copyFileSync(componentFile, componentDistFile, fs.constants.COPYFILE_FICLONE_FORC)
         createMinify(componentDistFile, componentDistFileMin)
       }
     } else {
@@ -233,33 +209,16 @@ function readUtilDirectory(typeFolder, typeComponent) {
     const splitFilename = file.split('.')
     componentDist = path.resolve(paths.dist, 'partial', 'js', 'behavior', file)
     componentDistFile = path.resolve(paths.dist, 'partial', 'js', 'behavior')
-    componentSrcFile = path.resolve(
-      paths.src,
-      'partial',
-      'js',
-      'behavior',
-      `${file}`
-    )
+    componentSrcFile = path.resolve(paths.src, 'partial', 'js', 'behavior', `${file}`)
 
-    componentDistFileMin = path.resolve(
-      paths.dist,
-      'partial',
-      'js',
-      'behavior',
-      `${splitFilename[0]}.min.js`
-    )
+    componentDistFileMin = path.resolve(paths.dist, 'partial', 'js', 'behavior', `${splitFilename[0]}.min.js`)
 
-    fs.copyFile(
-      componentSrcFile,
-      componentDist,
-      fs.constants.COPYFILE_FICLONE_FORC,
-      (err) => {
-        if (err) {
-          return ''
-        }
+    fs.copyFile(componentSrcFile, componentDist, fs.constants.COPYFILE_FICLONE_FORC, (err) => {
+      if (err) {
         return ''
       }
-    )
+      return ''
+    })
     createMinify(componentSrcFile, componentDistFileMin)
   })
 }

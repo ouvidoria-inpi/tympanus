@@ -252,10 +252,7 @@ tr {
 
   &:hover {
     td {
-      background-image: linear-gradient(
-        rgba(var(--color-rgb), var(--hover)),
-        rgba(var(--color-rgb), var(--hover))
-      );
+      background-image: linear-gradient(rgba(var(--color-rgb), var(--hover)), rgba(var(--color-rgb), var(--hover)));
     }
   }
 }
@@ -263,8 +260,7 @@ tr {
 tbody {
   th,
   td {
-    border-bottom: var(--table-border-width) var(--table-border-style)
-      var(--table-border-color);
+    border-bottom: var(--table-border-width) var(--table-border-style) var(--table-border-color);
   }
 }
 

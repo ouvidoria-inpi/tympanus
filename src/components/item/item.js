@@ -26,9 +26,7 @@ class BRItem {
    * @private
    */
   _setCheckboxSelection() {
-    for (const checkbox of this.component.querySelectorAll(
-      '.br-checkbox input[type="checkbox"]'
-    )) {
+    for (const checkbox of this.component.querySelectorAll('.br-checkbox input[type="checkbox"]')) {
       if (checkbox.checked) {
         this.component.classList.add('selected')
       }
@@ -47,20 +45,14 @@ class BRItem {
    * @private
    */
   _setRadioSelection() {
-    for (const radio of this.component.querySelectorAll(
-      '.br-radio input[type="radio"]'
-    )) {
+    for (const radio of this.component.querySelectorAll('.br-radio input[type="radio"]')) {
       if (radio.checked) {
         radio.setAttribute('checked', '')
         this.component.classList.add('selected')
       }
       radio.addEventListener('click', (event) => {
-        for (const item of this.component.parentElement.querySelectorAll(
-          '.br-item'
-        )) {
-          for (const radioItem of item.querySelectorAll(
-            '.br-radio input[type="radio"]'
-          )) {
+        for (const item of this.component.parentElement.querySelectorAll('.br-item')) {
+          for (const radioItem of item.querySelectorAll('.br-radio input[type="radio"]')) {
             if (radioItem === event.currentTarget) {
               radioItem.setAttribute('checked', '')
               item.classList.add('selected')

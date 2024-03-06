@@ -13,16 +13,7 @@ class Tooltip {
    * @property {boolean} onActivator - Adiciona o tooltip dentro do elemento ativador padrão false
    */
 
-  constructor({
-    component,
-    activator,
-    place = 'top',
-    timer,
-    active,
-    textTooltip,
-    type = 'info',
-    onActivator = false,
-  }) {
+  constructor({ component, activator, place = 'top', timer, active, textTooltip, type = 'info', onActivator = false }) {
     const text_tooltip = textTooltip ? textTooltip : component
 
     if (typeof text_tooltip === 'undefined') {
@@ -30,23 +21,14 @@ class Tooltip {
     }
     this.onActivator = onActivator
     this.activator = activator
-    this.component = component
-      ? component
-      : this._setContent(text_tooltip, type)
+    this.component = component ? component : this._setContent(text_tooltip, type)
 
-    this.place =
-      this.component.getAttribute('place') === null
-        ? this.component.getAttribute('place')
-        : place
+    this.place = this.component.getAttribute('place') === null ? this.component.getAttribute('place') : place
     const positions = ['top', 'right', 'bottom', 'left']
     this.popover = this.component.hasAttribute('popover')
     this.notification = this.component.classList.contains('br-notification')
-    this.timer = this.component.getAttribute('timer')
-      ? this.component.getAttribute('timer')
-      : timer
-    this.active = this.component.hasAttribute('active')
-      ? this.component.hasAttribute('active')
-      : active
+    this.timer = this.component.getAttribute('timer') ? this.component.getAttribute('timer') : timer
+    this.active = this.component.hasAttribute('active') ? this.component.hasAttribute('active') : active
     this.placement = positions.includes(place) ? place : this.notification
 
     this.popperInstance = null
@@ -178,12 +160,7 @@ class Tooltip {
     this.component.style.visibility = 'visible'
     if (this.timer) {
       clearTimeout(this.closeTimer)
-      this.closeTimer = setTimeout(
-        this._hide,
-        this.timer,
-        event,
-        this.component
-      )
+      this.closeTimer = setTimeout(this._hide, this.timer, event, this.component)
     }
   }
 

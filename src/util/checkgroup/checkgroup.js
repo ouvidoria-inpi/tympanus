@@ -26,12 +26,10 @@ class CheckgroupExample {
    */
 
   _setCheckgroupBehavior() {
-    this.element
-      .querySelectorAll('input[type="checkbox"][data-parent]')
-      .forEach((trigger) => {
-        const checkgroup = new Checkgroup(trigger)
-        checkgroup.setBehavior()
-      })
+    this.element.querySelectorAll('input[type="checkbox"][data-parent]').forEach((trigger) => {
+      const checkgroup = new Checkgroup(trigger)
+      checkgroup.setBehavior()
+    })
   }
 }
 

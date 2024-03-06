@@ -15,12 +15,7 @@ export default class Dropdown extends Collapse {
    * @property {string} iconToHide - Classe que representa o ícone para esconder o conteúdo (padrão: fa-chevron-up)
    * @property {boolean} useIcons - true: com ícone | false: sem ícone (padrão: true)
    */
-  constructor({
-    trigger,
-    iconToShow = 'fa-chevron-down',
-    iconToHide = 'fa-chevron-up',
-    useIcons = true,
-  }) {
+  constructor({ trigger, iconToShow = 'fa-chevron-down', iconToHide = 'fa-chevron-up', useIcons = true }) {
     super({ iconToHide, iconToShow, trigger, useIcons })
   }
 
@@ -32,7 +27,7 @@ export default class Dropdown extends Collapse {
   _setUp() {
     super._setUp()
     this._hideDropdown()
-    this._initializeDropdownItems();
+    this._initializeDropdownItems()
   }
 
   /**
@@ -78,36 +73,35 @@ export default class Dropdown extends Collapse {
   }
 
   /**
- * Para itens pertencentes a dropdown do tipo menuitem, permite
- * o uso das teclas de seta para cima e para baixo do teclado.
- * @private
- */
+   * Para itens pertencentes a dropdown do tipo menuitem, permite
+   * o uso das teclas de seta para cima e para baixo do teclado.
+   * @private
+   */
   _initializeDropdownItems() {
-    this.dropdownItems = Array.from(this.target.querySelectorAll('[role="menuitem"]'));
+    this.dropdownItems = Array.from(this.target.querySelectorAll('[role="menuitem"]'))
     this.dropdownItems.forEach((item) => {
       item.addEventListener('keydown', (event) => {
-        const key = event.key;
-        const currentIndex = this.dropdownItems.indexOf(item);
-        const lastIndex = this.dropdownItems.length - 1;
+        const key = event.key
+        const currentIndex = this.dropdownItems.indexOf(item)
+        const lastIndex = this.dropdownItems.length - 1
 
         switch (key) {
           case 'ArrowUp':
-            event.preventDefault();
-            const prevIndex = (currentIndex - 1 + this.dropdownItems.length) % this.dropdownItems.length;
-            this.dropdownItems[prevIndex].focus();
-            break;
+            event.preventDefault()
+            const prevIndex = (currentIndex - 1 + this.dropdownItems.length) % this.dropdownItems.length
+            this.dropdownItems[prevIndex].focus()
+            break
           case 'ArrowDown':
-            event.preventDefault();
-            const nextIndex = (currentIndex + 1) % this.dropdownItems.length;
-            this.dropdownItems[nextIndex].focus();
-            break;
+            event.preventDefault()
+            const nextIndex = (currentIndex + 1) % this.dropdownItems.length
+            this.dropdownItems[nextIndex].focus()
+            break
           default:
-            break;
+            break
         }
-      });
-    });
+      })
+    })
   }
-
 
   /**
    * Handler para o evento de click no acionador do comportamento dropdown

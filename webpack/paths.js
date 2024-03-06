@@ -15,33 +15,15 @@ const paths = {
   srcJS: path.resolve(projectRootDir, 'src', 'js'),
   srcJSpartial: path.resolve(projectRootDir, 'src', 'partial', 'js'),
   srcJSComponents: path.resolve(projectRootDir, 'src', 'js', 'components'),
-  srcJSUtilbehavior: path.resolve(
-    projectRootDir,
-    'src',
-    'partial',
-    'js',
-    'behavior'
-  ),
+  srcJSUtilbehavior: path.resolve(projectRootDir, 'src', 'partial', 'js', 'behavior'),
   srcComponents: path.resolve(projectRootDir, 'src', 'components'),
   srcTemplates: path.resolve(projectRootDir, 'src', 'templates'),
   srcPages: path.resolve(projectRootDir, 'src', 'pages'),
   srcPartial: path.resolve(projectRootDir, 'src', 'partial'),
   srcUtil: path.resolve(projectRootDir, 'src', 'util'),
   srcPugViews: path.resolve(projectRootDir, 'src', 'pug', 'views'),
-  srcPugViewsComponents: path.resolve(
-    projectRootDir,
-    'src',
-    'pug',
-    'views',
-    'components'
-  ),
-  srcPugViewsTemplates: path.resolve(
-    projectRootDir,
-    'src',
-    'pug',
-    'views',
-    'templates'
-  ),
+  srcPugViewsComponents: path.resolve(projectRootDir, 'src', 'pug', 'views', 'components'),
+  srcPugViewsTemplates: path.resolve(projectRootDir, 'src', 'pug', 'views', 'templates'),
   srcSCSS: path.resolve(projectRootDir, 'src', 'partial', 'scss'),
   srcSCSSComponents: path.resolve(projectRootDir, 'src', 'scss', 'components'),
   dist: path.resolve(projectRootDir, 'dist'),

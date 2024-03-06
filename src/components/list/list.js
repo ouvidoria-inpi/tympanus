@@ -33,18 +33,16 @@ class BRList {
     // this.component.querySelectorAll('.br-list').forEach((trigger) => {
     //   // trigger.style.display = 'none'
     // })
-    this.component
-      .querySelectorAll('[data-toggle="collapse"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const collapse = new Collapse(config)
-        collapse.setBehavior()
-      })
+    this.component.querySelectorAll('[data-toggle="collapse"]').forEach((trigger) => {
+      const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+      }
+      const collapse = new Collapse(config)
+      collapse.setBehavior()
+    })
   }
 }
 export default BRList

@@ -90,7 +90,6 @@ class BRCarousel {
     this.disabledBtns()
   }
 
-
   /**
    * Desabilita os botões se o carousel não for circular
    */
@@ -98,21 +97,18 @@ class BRCarousel {
     // Disables Carousel Buttons
     if (!this.DOMstrings.circular) {
       if (this.activeStageNum === 0) {
-        if(this.DOMstrings.carouselNextBtn){
-          if(document.activeElement==this.DOMstrings.carouselPrevBtn)this.DOMstrings.carouselNextBtn.focus()
+        if (this.DOMstrings.carouselNextBtn) {
+          if (document.activeElement == this.DOMstrings.carouselPrevBtn) this.DOMstrings.carouselNextBtn.focus()
           this.DOMstrings.carouselPrevBtn.setAttribute('disabled', '')
         }
-
-
       } else {
         this.DOMstrings.carouselPrevBtn.removeAttribute('disabled')
       }
       if (this.activeStageNum === this.DOMstrings.carouselPages.length - 1) {
-        if(this.DOMstrings.carouselNextBtn){
-          if(document.activeElement==this.DOMstrings.carouselNextBtn)this.DOMstrings.carouselPrevBtn.focus()
+        if (this.DOMstrings.carouselNextBtn) {
+          if (document.activeElement == this.DOMstrings.carouselNextBtn) this.DOMstrings.carouselPrevBtn.focus()
           this.DOMstrings.carouselNextBtn.setAttribute('disabled', '')
         }
-
       } else {
         this.DOMstrings.carouselNextBtn.removeAttribute('disabled')
       }
@@ -127,23 +123,19 @@ class BRCarousel {
     //find active stage
     const activeStage = this.getActiveStage()
     const PanelsSize = this.DOMstrings.carouselPages.length - 1
-    let activeStageNum = Array.from(this.DOMstrings.carouselPages).indexOf(
-      activeStage
-    )
+    let activeStageNum = Array.from(this.DOMstrings.carouselPages).indexOf(activeStage)
     // set active step and active stage onclick
     if (num < 0) {
       // Volta o slide
       if (this.DOMstrings.circular) {
-        activeStageNum =
-          activeStageNum === 0 ? PanelsSize : (activeStageNum -= 1)
+        activeStageNum = activeStageNum === 0 ? PanelsSize : (activeStageNum -= 1)
       } else {
         activeStageNum -= activeStageNum === 0 ? 0 : 1
       }
     } else {
       // Passar p/ frente o slide
       if (this.DOMstrings.circular) {
-        activeStageNum =
-          activeStageNum === PanelsSize ? 0 : (activeStageNum += 1)
+        activeStageNum = activeStageNum === PanelsSize ? 0 : (activeStageNum += 1)
       } else {
         activeStageNum += activeStageNum === PanelsSize ? 0 : 1
       }

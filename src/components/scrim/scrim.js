@@ -27,9 +27,7 @@ class BRScrim {
         }
       })
 
-      const allComp = this.component.querySelectorAll(
-        `[data-dismiss=${this.component.id}]`
-      )
+      const allComp = this.component.querySelectorAll(`[data-dismiss=${this.component.id}]`)
 
       for (const buttonComponent of allComp) {
         buttonComponent.addEventListener('click', () => {
@@ -51,9 +49,7 @@ class BRScrim {
 }
 // const scrimList = []
 export default BRScrim
-for (const buttonBloco1 of window.document.querySelectorAll(
-  '.scrimexemplo button'
-)) {
+for (const buttonBloco1 of window.document.querySelectorAll('.scrimexemplo button')) {
   buttonBloco1.addEventListener('click', () => {
     const scrscrim = window.document.querySelector('#scrimexample')
     const scrimfoco = new BRScrim('br-scrim', scrscrim)
@@ -63,9 +59,7 @@ for (const buttonBloco1 of window.document.querySelectorAll(
 /**
  * Exemplo de scrim com muito texto
  */
-for (const scrimexamplebig of window.document.querySelectorAll(
-  '#scrimexemplo-big'
-)) {
+for (const scrimexamplebig of window.document.querySelectorAll('#scrimexemplo-big')) {
   scrimexamplebig.addEventListener('click', () => {
     const scrscrim = window.document.querySelector('#scrimfocobig')
     const scrimfoco = new BRScrim('br-scrim', scrscrim)

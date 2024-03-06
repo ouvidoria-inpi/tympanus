@@ -91,10 +91,7 @@ class BRSelect {
       </div>
     `
     const list = this.component.querySelector('.br-list')
-    list.insertAdjacentHTML(
-      'beforeend',
-      this.notFound ? this.notFound : notFoundElement
-    )
+    list.insertAdjacentHTML('beforeend', this.notFound ? this.notFound : notFoundElement)
   }
   /**
    * Cria listagem de elementos do select
@@ -103,9 +100,7 @@ class BRSelect {
   _setOptionsList() {
     this.optionsList = []
     for (const item of this.component.querySelectorAll('.br-list .br-item')) {
-      for (const input of item.querySelectorAll(
-        '.br-radio input, .br-checkbox input'
-      )) {
+      for (const input of item.querySelectorAll('.br-radio input, .br-checkbox input')) {
         const option = {
           element: item,
           focus: false,
@@ -146,9 +141,7 @@ class BRSelect {
    */
 
   _setDropdownBehavior() {
-    for (const input of this.component.querySelectorAll(
-      '.br-input input[type="text"]'
-    )) {
+    for (const input of this.component.querySelectorAll('.br-input input[type="text"]')) {
       input.addEventListener('focus', () => {
         this._resetFocus()
       })
@@ -157,9 +150,7 @@ class BRSelect {
         this._resetFocus()
       })
     }
-    for (const trigger of this.component.querySelectorAll(
-      '.br-input .br-button[data-trigger]'
-    )) {
+    for (const trigger of this.component.querySelectorAll('.br-input .br-button[data-trigger]')) {
       trigger.addEventListener('click', () => {
         for (const list of this.component.querySelectorAll('.br-list')) {
           if (list.hasAttribute('expanded')) {
@@ -182,9 +173,7 @@ class BRSelect {
    */
 
   _setKeyboardBehavior() {
-    for (const input of this.component.querySelectorAll(
-      '.br-input input[type="text"]'
-    )) {
+    for (const input of this.component.querySelectorAll('.br-input input[type="text"]')) {
       input.addEventListener('keydown', this._handleKeydownOnInput.bind(this))
     }
     for (const list of this.component.querySelectorAll('.br-list')) {
@@ -221,9 +210,7 @@ class BRSelect {
    */
 
   _unsetKeyboardBehavior() {
-    for (const input of this.component.querySelectorAll(
-      '.br-input input[type="text"]'
-    )) {
+    for (const input of this.component.querySelectorAll('.br-input input[type="text"]')) {
       input.removeEventListener('keydown', this._handleKeydownOnInput, false)
     }
     for (const list of this.component.querySelectorAll('.br-list')) {
@@ -257,9 +244,7 @@ class BRSelect {
         this._closeSelect()
         break
       case 'Enter':
-        this.component.querySelector('.br-list').hasAttribute('expanded')
-          ? this._closeSelect()
-          : this._openSelect()
+        this.component.querySelector('.br-list').hasAttribute('expanded') ? this._closeSelect() : this._openSelect()
         break
       default:
     }
@@ -277,9 +262,7 @@ class BRSelect {
         this._resetFocus()
         break
       case 'Escape':
-        for (const input of this.component.querySelectorAll(
-          '.br-input input[type="text"]'
-        )) {
+        for (const input of this.component.querySelectorAll('.br-input input[type="text"]')) {
           input.focus()
         }
         this._closeSelect()
@@ -335,9 +318,7 @@ class BRSelect {
    */
   _setDefaultSelected() {
     this.component.querySelectorAll('.br-list .br-item').forEach((item) => {
-      const itemIsSelected =
-        item.classList.contains('selected') ||
-        item.querySelector('input').hasAttribute('checked')
+      const itemIsSelected = item.classList.contains('selected') || item.querySelector('input').hasAttribute('checked')
       if (itemIsSelected) {
         this._setSelected(this._positionSelected(item), item)
       }
@@ -350,9 +331,7 @@ class BRSelect {
    * @returns {integer} valor da posição
    */
   _positionSelected(component) {
-    for (const [index, componente] of this.component
-      .querySelectorAll('.br-list .br-item')
-      .entries()) {
+    for (const [index, componente] of this.component.querySelectorAll('.br-list .br-item').entries()) {
       if (componente === component) {
         return index
       }
@@ -368,9 +347,7 @@ class BRSelect {
    */
   _handleClickOnCheck(index, item, event) {
     if (!this.multiple) {
-      for (const [index2, item2] of this.component
-        .querySelectorAll('.br-list .br-item')
-        .entries()) {
+      for (const [index2, item2] of this.component.querySelectorAll('.br-list .br-item').entries()) {
         this._removeSelected(index2, item2)
       }
       this._setSelected(index, item)
@@ -381,19 +358,13 @@ class BRSelect {
       this._setSelected(index, item)
     }
     if (item.hasAttribute('data-all')) {
-      for (const check of item.querySelectorAll(
-        '.br-checkbox input[type="checkbox"]'
-      )) {
+      for (const check of item.querySelectorAll('.br-checkbox input[type="checkbox"]')) {
         if (!check.hasAttribute('checked')) {
           this._setAttribute()
           item.querySelectorAll('label')[0].innerText = 'Selecionar Todos'
         } else {
-          for (const item2 of this.component.querySelectorAll(
-            '.br-list .br-item'
-          )) {
-            for (const check2 of item2.querySelectorAll(
-              '.br-checkbox input[type="checkbox"]'
-            )) {
+          for (const item2 of this.component.querySelectorAll('.br-list .br-item')) {
+            for (const check2 of item2.querySelectorAll('.br-checkbox input[type="checkbox"]')) {
               if (!check2.hasAttribute('checked')) {
                 check2.click()
               }
@@ -412,12 +383,8 @@ class BRSelect {
   _setSelectionBehavior() {
     this.selectionHandler = []
     this._setDefaultSelected()
-    for (const [index, item] of this.component
-      .querySelectorAll('.br-list .br-item')
-      .entries()) {
-      for (const check of item.querySelectorAll(
-        '.br-radio input[type="radio"], .br-checkbox input[type="checkbox"]'
-      )) {
+    for (const [index, item] of this.component.querySelectorAll('.br-list .br-item').entries()) {
+      for (const check of item.querySelectorAll('.br-radio input[type="radio"], .br-checkbox input[type="checkbox"]')) {
         this.selectionHandler.push({
           element: check,
           handler: this._handleClickOnCheck.bind(this, index, item),
@@ -441,9 +408,7 @@ class BRSelect {
    */
   _setFilterBehavior() {
     const list = this.component.querySelector('.br-list')
-    for (const input of this.component.querySelectorAll(
-      '.br-input input[type="text"]'
-    )) {
+    for (const input of this.component.querySelectorAll('.br-input input[type="text"]')) {
       input.addEventListener('input', (event) => {
         if (!list.hasAttribute('expanded')) {
           const { value } = event.currentTarget
@@ -471,18 +436,12 @@ class BRSelect {
    */
   _filter(value) {
     let hasVisible = false
-    for (const [index, item] of this.component
-      .querySelectorAll('.br-list .br-item')
-      .entries()) {
+    for (const [index, item] of this.component.querySelectorAll('.br-list .br-item').entries()) {
       this._removeNotFoundElement()
       if (!this.optionsList[index]) {
         continue
       }
-      if (
-        this.optionsList[index].value
-          .toUpperCase()
-          .indexOf(value.toUpperCase()) === -1
-      ) {
+      if (this.optionsList[index].value.toUpperCase().indexOf(value.toUpperCase()) === -1) {
         item.classList.add('d-none')
         this.optionsList[index].visible = false
       } else {
@@ -501,9 +460,7 @@ class BRSelect {
    */
   _setAttribute() {
     for (const item2 of this.component.querySelectorAll('.br-list .br-item')) {
-      for (const check2 of item2.querySelectorAll(
-        '.br-checkbox input[type="checkbox"]'
-      )) {
+      for (const check2 of item2.querySelectorAll('.br-checkbox input[type="checkbox"]')) {
         if (check2.hasAttribute('checked')) {
           check2.click()
         }
@@ -521,9 +478,7 @@ class BRSelect {
     item.classList.add('selected')
     item.setAttribute('aria-selected', true)
     for (const check of item.querySelectorAll('.br-radio, .br-checkbox')) {
-      for (const input of check.querySelectorAll(
-        'input[type="radio"], input[type="checkbox"]'
-      )) {
+      for (const input of check.querySelectorAll('input[type="radio"], input[type="checkbox"]')) {
         input.setAttribute('checked', '')
       }
     }
@@ -541,9 +496,7 @@ class BRSelect {
     item.classList.remove('selected')
     item.removeAttribute('aria-selected')
     for (const check of item.querySelectorAll('.br-radio, .br-checkbox')) {
-      for (const input of check.querySelectorAll(
-        'input[type="radio"], input[type="checkbox"'
-      )) {
+      for (const input of check.querySelectorAll('input[type="radio"], input[type="checkbox"')) {
         input.removeAttribute('checked')
       }
       this.optionsList[index].selected = false
@@ -555,9 +508,7 @@ class BRSelect {
    * @private
    */
   _setInput() {
-    for (const input of this.component.querySelectorAll(
-      '.br-input input[type="text"]'
-    )) {
+    for (const input of this.component.querySelectorAll('.br-input input[type="text"]')) {
       if (!this.multiple) {
         input.value = this.selected
       } else if (this.selected.length === 0) {
@@ -581,10 +532,7 @@ class BRSelect {
     const maxCharacterCount = this.getMaxCharacterCountBeforeOverflow(input)
     this.amountE = amount
     input.title = this.selected.toString().replaceAll(',', ', ')
-    const ct = this.encontrarPosicaoPorTamanho(
-      this.selected,
-      maxCharacterCount - 6
-    )
+    const ct = this.encontrarPosicaoPorTamanho(this.selected, maxCharacterCount - 6)
     input.value = ct
     tempSpan.remove()
   }
@@ -635,8 +583,7 @@ class BRSelect {
         value = `${value.substring(0, maxCharacterCount)}...`
         acountVisible = acountVisible === 0 ? 1 : acountVisible
         let contOverflow = posicaoArray - acountVisible
-        contOverflow =
-          acountVisible === 0 ? array.length - 1 : array.length - acountVisible
+        contOverflow = acountVisible === 0 ? array.length - 1 : array.length - acountVisible
         posUltimoArray = contOverflow
       } else {
         const tmpValue = posicaoArray > 0 ? `, ${element}` : `${element}`
@@ -656,10 +603,8 @@ class BRSelect {
    */
   getMaxCharacterCountBeforeOverflow(input) {
     const style = window.getComputedStyle(input)
-    const padding =
-      parseFloat(style.paddingLeft) + parseFloat(style.paddingRight)
-    const border =
-      parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth)
+    const padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight)
+    const border = parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth)
     const availableWidth = input.clientWidth - padding - border
     const averageCharacterWidth = this.getAverageCharacterWidth(input)
 
@@ -721,11 +666,7 @@ class BRSelect {
     let iVisible
     for (iFocused = 0; iFocused < this.optionsList.length; iFocused++) {
       if (this.optionsList[iFocused].focus) {
-        for (
-          iVisible = iFocused + 1;
-          iVisible < this.optionsList.length;
-          iVisible++
-        ) {
+        for (iVisible = iFocused + 1; iVisible < this.optionsList.length; iVisible++) {
           if (this.optionsList[iVisible].visible) {
             break
           }
@@ -789,9 +730,7 @@ class BRSelect {
    * @private
    */
   _resetInput() {
-    for (const input of this.component.querySelectorAll(
-      '.br-input input[type="text"]'
-    )) {
+    for (const input of this.component.querySelectorAll('.br-input input[type="text"]')) {
       input.value = ''
     }
   }
@@ -826,9 +765,7 @@ class BRSelect {
     for (const list of this.component.querySelectorAll('.br-list')) {
       list.setAttribute('expanded', '')
     }
-    for (const icon of this.component.querySelectorAll(
-      '.br-input .br-button i'
-    )) {
+    for (const icon of this.component.querySelectorAll('.br-input .br-button i')) {
       icon.classList.remove('fa-angle-down')
       icon.classList.add('fa-angle-up')
     }
@@ -847,9 +784,7 @@ class BRSelect {
     for (const list of this.component.querySelectorAll('.br-list')) {
       list.removeAttribute('expanded')
     }
-    for (const icon of this.component.querySelectorAll(
-      '.br-input .br-button i'
-    )) {
+    for (const icon of this.component.querySelectorAll('.br-input .br-button i')) {
       icon.classList.remove('fa-angle-up')
       icon.classList.add('fa-angle-down')
     }

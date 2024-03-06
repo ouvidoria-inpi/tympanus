@@ -35,22 +35,13 @@ class BRPagination {
   _setDefaultPaginationKeybordBehavior() {
     this.component.querySelectorAll('li *:first-child').forEach((element) => {
       element.addEventListener('keydown', (event) => {
-        if (
-          event.key === 'ArrowLeft' &&
-          !element.hasAttribute('data-previous-page')
-        ) {
+        if (event.key === 'ArrowLeft' && !element.hasAttribute('data-previous-page')) {
           element.parentElement.previousElementSibling.children[0].focus()
         }
-        if (
-          event.key === 'ArrowRight' &&
-          !element.hasAttribute('data-next-page')
-        ) {
+        if (event.key === 'ArrowRight' && !element.hasAttribute('data-next-page')) {
           element.parentElement.nextElementSibling.children[0].focus()
         }
-        if (
-          event.key === 'ArrowDown' &&
-          element.nextElementSibling?.classList.contains('br-list')
-        ) {
+        if (event.key === 'ArrowDown' && element.nextElementSibling?.classList.contains('br-list')) {
           element.nextElementSibling.children[0].focus()
         }
       })
@@ -58,15 +49,13 @@ class BRPagination {
   }
 
   _setContextualPaginationKeyboardBehavior() {
-    this.component
-      .querySelectorAll('.pagination-per-page .br-list')
-      .forEach((element) => {
-        element.addEventListener('keydown', (event) => {
-          if (event.key === 'Escape') {
-            event.currentTarget.parentElement.focus()
-          }
-        })
+    this.component.querySelectorAll('.pagination-per-page .br-list').forEach((element) => {
+      element.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          event.currentTarget.parentElement.focus()
+        }
       })
+    })
   }
 
   /**
@@ -105,10 +94,7 @@ class BRPagination {
           pages[page].classList.add('d-none')
         }
         if (!ul.querySelector('[data-next-interval]')) {
-          ul.insertBefore(
-            this._createIntervalElement('next'),
-            ul.children[ul.children.length - 2]
-          )
+          ul.insertBefore(this._createIntervalElement('next'), ul.children[ul.children.length - 2])
         }
       }
       if (this.currentPage >= 6 && this.currentPage < pages.length - 4) {
@@ -116,19 +102,13 @@ class BRPagination {
           pages[page].classList.add('d-none')
         }
         if (!ul.querySelector('[data-previous-interval]')) {
-          ul.insertBefore(
-            this._createIntervalElement('previous'),
-            ul.children[2]
-          )
+          ul.insertBefore(this._createIntervalElement('previous'), ul.children[2])
         }
         for (let page = this.currentPage + 2; page < pages.length - 1; page++) {
           pages[page].classList.add('d-none')
         }
         if (!ul.querySelector('[data-next-interval]')) {
-          ul.insertBefore(
-            this._createIntervalElement('next'),
-            ul.children[ul.children.length - 2]
-          )
+          ul.insertBefore(this._createIntervalElement('next'), ul.children[ul.children.length - 2])
         }
       }
       if (this.currentPage >= pages.length - 4) {
@@ -139,10 +119,7 @@ class BRPagination {
           pages[page].classList.add('d-none')
         }
         if (!ul.querySelector('[data-previous-interval]')) {
-          ul.insertBefore(
-            this._createIntervalElement('previous'),
-            ul.children[2]
-          )
+          ul.insertBefore(this._createIntervalElement('previous'), ul.children[2])
         }
       }
     }
@@ -186,9 +163,7 @@ class BRPagination {
       })
     }
     // debugger
-    for (const page of this.component.querySelectorAll(
-      '.pagination-ellipsis .br-item'
-    )) {
+    for (const page of this.component.querySelectorAll('.pagination-ellipsis .br-item')) {
       page.addEventListener('click', (event) => {
         this._selectPage(event.currentTarget)
       })
@@ -208,8 +183,7 @@ class BRPagination {
           switch (key) {
             case 'ArrowUp':
               event.preventDefault()
-              const prevIndex =
-                (currentIndex - 1 + dropdownItems.length) % dropdownItems.length
+              const prevIndex = (currentIndex - 1 + dropdownItems.length) % dropdownItems.length
               dropdownItems[prevIndex].focus()
               break
             case 'ArrowDown':
@@ -230,9 +204,7 @@ class BRPagination {
    * @private
    */
   _dropdownBehavior() {
-    for (const dropdown of this.component.querySelectorAll(
-      '[data-toggle="dropdown"]'
-    )) {
+    for (const dropdown of this.component.querySelectorAll('[data-toggle="dropdown"]')) {
       this._dropdownInit(dropdown)
       this._dropdownToggle(dropdown)
     }
@@ -336,14 +308,12 @@ class BRPagination {
 
   _adaptSelectAccessibility() {
     window.addEventListener('load', () => {
-      this.component
-        .querySelectorAll('.pagination-per-page .br-select .br-list')
-        .forEach((element) => {
-          element.setAttribute('role', 'menu')
-          element.querySelectorAll('.br-item').forEach((item) => {
-            item.setAttribute('role', 'menuitem')
-          })
+      this.component.querySelectorAll('.pagination-per-page .br-select .br-list').forEach((element) => {
+        element.setAttribute('role', 'menu')
+        element.querySelectorAll('.br-item').forEach((item) => {
+          item.setAttribute('role', 'menuitem')
         })
+      })
     })
   }
 }

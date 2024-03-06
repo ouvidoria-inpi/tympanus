@@ -31,8 +31,7 @@ class BRNotification {
    * @property {object} action - Referência ao Objeto que dispara a ação
    */
   _hideAllNotifications(action) {
-    const notifications =
-      action.parentNode.parentNode.parentNode.querySelectorAll('.br-item')
+    const notifications = action.parentNode.parentNode.parentNode.querySelectorAll('.br-item')
     notifications.forEach((notification) => {
       notification.setAttribute('hidden', '')
     })
@@ -43,9 +42,7 @@ class BRNotification {
    * @private
    */
   _setBehavior() {
-    for (const button of this.component.querySelectorAll(
-      '.br-notification .close'
-    )) {
+    for (const button of this.component.querySelectorAll('.br-notification .close')) {
       button.addEventListener('click', () => {
         this._dismiss(this.component)
       })
@@ -60,51 +57,43 @@ class BRNotification {
   _notificationTooltip() {
     const TooltipExampleList = []
 
-    window.document
-      .querySelectorAll(':not(.br-header) .notification-tooltip')
-      .forEach((TooltipNotification) => {
-        const elementTooltip = TooltipNotification.querySelector(
-          '[data-tooltip-text]'
-        )
+    window.document.querySelectorAll(':not(.br-header) .notification-tooltip').forEach((TooltipNotification) => {
+      const elementTooltip = TooltipNotification.querySelector('[data-tooltip-text]')
 
-        let texttooltip = ''
-        // Verifica se existe atributo data-tooltip-text
-        if (elementTooltip) {
-          texttooltip = elementTooltip.getAttribute('data-tooltip-text')
+      let texttooltip = ''
+      // Verifica se existe atributo data-tooltip-text
+      if (elementTooltip) {
+        texttooltip = elementTooltip.getAttribute('data-tooltip-text')
 
-          if (texttooltip === null) {
-            return
-          }
-
-          if (typeof texttooltip === 'undefined') {
-            return
-          }
-
-          if (texttooltip.trim() === '') {
-            return
-          }
-        } else {
+        if (texttooltip === null) {
           return
         }
 
-        const config = {
-          activator: TooltipNotification,
-          placement: 'top',
-          textTooltip: texttooltip,
+        if (typeof texttooltip === 'undefined') {
+          return
         }
-        for (
-          parent = TooltipNotification.parentNode;
-          parent;
-          parent = parent.parentNode
-        ) {
-          if (parent.classList)
-            if (parent.classList.contains('header-avatar')) {
-              return
-            }
+
+        if (texttooltip.trim() === '') {
+          return
         }
-        TooltipExampleList.push(new Tooltip(config))
+      } else {
         return
-      })
+      }
+
+      const config = {
+        activator: TooltipNotification,
+        placement: 'top',
+        textTooltip: texttooltip,
+      }
+      for (parent = TooltipNotification.parentNode; parent; parent = parent.parentNode) {
+        if (parent.classList)
+          if (parent.classList.contains('header-avatar')) {
+            return
+          }
+      }
+      TooltipExampleList.push(new Tooltip(config))
+      return
+    })
   }
 
   /**

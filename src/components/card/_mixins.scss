@@ -58,10 +58,7 @@
 @mixin card-hover {
   &.hover {
     &:hover {
-      background-image: linear-gradient(
-        rgba(var(--color-rgb), var(--hover)),
-        rgba(var(--color-rgb), var(--hover))
-      );
+      background-image: linear-gradient(rgba(var(--color-rgb), var(--hover)), rgba(var(--color-rgb), var(--hover)));
     }
   }
 }

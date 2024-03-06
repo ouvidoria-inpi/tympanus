@@ -26,13 +26,9 @@ class BRInput {
    * @private
    */
   _setPasswordViewBehavior() {
-    for (const inputPassword of this.component.querySelectorAll(
-      'input[type="password"]'
-    )) {
+    for (const inputPassword of this.component.querySelectorAll('input[type="password"]')) {
       if (!inputPassword.disabled) {
-        for (const buttonIcon of inputPassword.parentNode.querySelectorAll(
-          '.br-button'
-        )) {
+        for (const buttonIcon of inputPassword.parentNode.querySelectorAll('.br-button')) {
           buttonIcon.addEventListener(
             'click',
             (event) => {
@@ -55,29 +51,21 @@ class BRInput {
       if (icon.classList.contains('fa-eye')) {
         icon.classList.remove('fa-eye')
         icon.classList.add('fa-eye-slash')
-        for (const input of this.component.querySelectorAll(
-          'input[type="password"]'
-        )) {
+        for (const input of this.component.querySelectorAll('input[type="password"]')) {
           input.setAttribute('type', 'text')
         }
-        for (const button of this.component.querySelectorAll(
-          'button[aria-label="Exibir senha"]'
-        )) {
+        for (const button of this.component.querySelectorAll('button[aria-label="Exibir senha"]')) {
           button.setAttribute('aria-checked', 'true')
-        }        
+        }
       } else if (icon.classList.contains('fa-eye-slash')) {
         icon.classList.remove('fa-eye-slash')
         icon.classList.add('fa-eye')
-        for (const input of this.component.querySelectorAll(
-          'input[type="text"]'
-        )) {
+        for (const input of this.component.querySelectorAll('input[type="text"]')) {
           input.setAttribute('type', 'password')
         }
-        for (const button of this.component.querySelectorAll(
-          'button[aria-label="Exibir senha"]'
-        )) {
+        for (const button of this.component.querySelectorAll('button[aria-label="Exibir senha"]')) {
           button.setAttribute('aria-checked', 'false')
-        }        
+        }
       }
     }
   }
@@ -87,9 +75,7 @@ class BRInput {
    * @private
    */
   _setAutocompleteBehavior() {
-    for (const inputAutocomplete of this.component.querySelectorAll(
-      'input.search-autocomplete'
-    )) {
+    for (const inputAutocomplete of this.component.querySelectorAll('input.search-autocomplete')) {
       inputAutocomplete.addEventListener(
         'input',
         (event) => {
@@ -119,23 +105,15 @@ class BRInput {
     this.component.appendChild(searchList)
     if (element.value !== '') {
       for (const data of this.dataList) {
-        if (
-          data.substr(0, element.value.length).toUpperCase() ===
-          element.value.toUpperCase()
-        ) {
+        if (data.substr(0, element.value.length).toUpperCase() === element.value.toUpperCase()) {
           const item = window.document.createElement('div')
-          item.innerHTML = `<strong>${data.substr(
-            0,
-            element.value.length
-          )}</strong>`
+          item.innerHTML = `<strong>${data.substr(0, element.value.length)}</strong>`
           item.innerHTML += data.substr(element.value.length)
           item.innerHTML += `<input type="hidden" value="${data}">`
           item.addEventListener(
             'click',
             (event) => {
-              for (const input of event.currentTarget.querySelectorAll(
-                'input[type="hidden"]'
-              )) {
+              for (const input of event.currentTarget.querySelectorAll('input[type="hidden"]')) {
                 element.value = input.value
               }
               this._clearSearchItems()
@@ -155,9 +133,7 @@ class BRInput {
    * @private
    */
   _clearSearchItems() {
-    for (const searchItems of this.component.querySelectorAll(
-      '.search-items'
-    )) {
+    for (const searchItems of this.component.querySelectorAll('.search-items')) {
       for (const item of searchItems.querySelectorAll('div')) {
         searchItems.removeChild(item)
       }
@@ -175,12 +151,8 @@ class BRInput {
       case 13:
         if (this._currentFocus > -1) {
           event.preventDefault()
-          for (const searchItems of this.component.querySelectorAll(
-            '.search-items'
-          )) {
-            for (const itemActive of searchItems.querySelectorAll(
-              'div.is-active'
-            )) {
+          for (const searchItems of this.component.querySelectorAll('.search-items')) {
+            for (const itemActive of searchItems.querySelectorAll('div.is-active')) {
               itemActive.click()
             }
           }
@@ -194,13 +166,8 @@ class BRInput {
         this._switchFocus()
         break
       case 40:
-        for (const searchItems of this.component.querySelectorAll(
-          '.search-items'
-        )) {
-          if (
-            this._currentFocus <
-            searchItems.querySelectorAll('div').length - 1
-          ) {
+        for (const searchItems of this.component.querySelectorAll('.search-items')) {
+          if (this._currentFocus < searchItems.querySelectorAll('div').length - 1) {
             this._currentFocus += 1
           }
         }
@@ -216,12 +183,8 @@ class BRInput {
    * @private
    */
   _switchFocus() {
-    for (const searchItems of this.component.querySelectorAll(
-      '.search-items'
-    )) {
-      for (const [index, item] of searchItems
-        .querySelectorAll('div')
-        .entries()) {
+    for (const searchItems of this.component.querySelectorAll('.search-items')) {
+      for (const [index, item] of searchItems.querySelectorAll('div').entries()) {
         if (index === this._currentFocus) {
           item.classList.add('is-active')
         }

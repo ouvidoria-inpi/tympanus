@@ -26,12 +26,10 @@ class BRCheckbox {
    * @private
    */
   _setCheckgroupBehavior() {
-    this.component
-      .querySelectorAll('input[type="checkbox"][data-parent]')
-      .forEach((trigger) => {
-        const checkgroup = new Checkgroup(trigger)
-        checkgroup.setBehavior()
-      })
+    this.component.querySelectorAll('input[type="checkbox"][data-parent]').forEach((trigger) => {
+      const checkgroup = new Checkgroup(trigger)
+      checkgroup.setBehavior()
+    })
   }
 }
 

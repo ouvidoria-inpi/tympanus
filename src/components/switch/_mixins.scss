@@ -222,37 +222,25 @@
 
   input:hover:not([disabled]):checked + label {
     &::before {
-      background-image: linear-gradient(
-        rgba(var(--on-rgb), var(--hover)),
-        rgba(var(--on-rgb), var(--hover))
-      );
+      background-image: linear-gradient(rgba(var(--on-rgb), var(--hover)), rgba(var(--on-rgb), var(--hover)));
     }
   }
 
   input:hover:not([disabled]):not(:checked) + label {
     &::before {
-      background-image: linear-gradient(
-        rgba(var(--off-rgb), var(--hover)),
-        rgba(var(--off-rgb), var(--hover))
-      );
+      background-image: linear-gradient(rgba(var(--off-rgb), var(--hover)), rgba(var(--off-rgb), var(--hover)));
     }
   }
 
   input:active:not([disabled]):checked + label {
     &::before {
-      background-image: linear-gradient(
-        rgba(var(--on-rgb), var(--pressed)),
-        rgba(var(--on-rgb), var(--pressed))
-      );
+      background-image: linear-gradient(rgba(var(--on-rgb), var(--pressed)), rgba(var(--on-rgb), var(--pressed)));
     }
   }
 
   input:active:not([disabled]):not(:checked) + label {
     &::before {
-      background-image: linear-gradient(
-        rgba(var(--off-rgb), var(--pressed)),
-        rgba(var(--off-rgb), var(--pressed))
-      );
+      background-image: linear-gradient(rgba(var(--off-rgb), var(--pressed)), rgba(var(--off-rgb), var(--pressed)));
     }
   }
 }

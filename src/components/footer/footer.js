@@ -30,24 +30,18 @@ class BRFooter {
 
     window.onresize = function () {
       if (window.matchMedia('(min-width: 992px)').matches) {
-        window.document
-          .querySelectorAll('.br-footer .br-list:not(.horizontal)')
-          .forEach((trigger) => {
-            trigger.style.display = 'block'
-          })
+        window.document.querySelectorAll('.br-footer .br-list:not(.horizontal)').forEach((trigger) => {
+          trigger.style.display = 'block'
+        })
       } else {
-        window.document
-          .querySelectorAll('.br-footer .br-list:not(.horizontal)')
-          .forEach((trigger) => {
-            trigger.style.display = 'none'
-          })
+        window.document.querySelectorAll('.br-footer .br-list:not(.horizontal)').forEach((trigger) => {
+          trigger.style.display = 'none'
+        })
 
-        window.document
-          .querySelectorAll('.br-footer i')
-          .forEach((iconComponent) => {
-            iconComponent.classList.remove('fa-angle-up')
-            iconComponent.classList.add('fa-angle-down')
-          })
+        window.document.querySelectorAll('.br-footer i').forEach((iconComponent) => {
+          iconComponent.classList.remove('fa-angle-up')
+          iconComponent.classList.add('fa-angle-down')
+        })
       }
     }
   }
@@ -95,24 +89,17 @@ class BRFooter {
   _showList(e) {
     parent = e.target.parentElement
 
-    parent = parent.classList.contains('col-2')
-      ? e.target.parentElement
-      : e.target.parentElement.parentElement
-    parent = parent.classList.contains('col-2')
-      ? parent
-      : e.target.parentElement.parentElement.parentElement
+    parent = parent.classList.contains('col-2') ? e.target.parentElement : e.target.parentElement.parentElement
+    parent = parent.classList.contains('col-2') ? parent : e.target.parentElement.parentElement.parentElement
     // debugger
     this._closeAllColumns(parent)
 
     parent.querySelectorAll('.br-list ').forEach((trigger) => {
-      trigger.style.display =
-        trigger.style.display === 'block' ? 'none' : 'block'
+      trigger.style.display = trigger.style.display === 'block' ? 'none' : 'block'
 
       const iconComponent = parent.querySelector('i')
 
-      trigger.style.display === 'block'
-        ? this._iconAngleUP(iconComponent)
-        : this._iconAngleDOWN(iconComponent)
+      trigger.style.display === 'block' ? this._iconAngleUP(iconComponent) : this._iconAngleDOWN(iconComponent)
 
       this._setAriaAttributes(trigger, e)
     })
@@ -122,18 +109,14 @@ class BRFooter {
    * Fecha todas colunas do Footer
    */
   _closeAllColumns(target) {
-    this.component
-      .querySelectorAll('.br-list:not(.horizontal)')
-      .forEach((trigger) => {
-        if (target !== trigger.parentElement) {
-          trigger.style.display = 'none'
-          this.component
-            .querySelectorAll('.header i')
-            .forEach((iconComponent) => {
-              this._iconAngleDOWN(iconComponent)
-            })
-        }
-      })
+    this.component.querySelectorAll('.br-list:not(.horizontal)').forEach((trigger) => {
+      if (target !== trigger.parentElement) {
+        trigger.style.display = 'none'
+        this.component.querySelectorAll('.header i').forEach((iconComponent) => {
+          this._iconAngleDOWN(iconComponent)
+        })
+      }
+    })
   }
 
   /**
@@ -173,10 +156,7 @@ class BRFooter {
       parentElement.setAttribute('id', listId)
       parentElement.setAttribute('data-visible', isBlock)
       parentElement.setAttribute('aria-expanded', isBlock)
-      parentElement.setAttribute(
-        'aria-label',
-        isBlock ? 'expandido' : 'recolhido'
-      )
+      parentElement.setAttribute('aria-label', isBlock ? 'expandido' : 'recolhido')
       parentElement.setAttribute('aria-controls', listId)
       parentElement.setAttribute('data-group', 'group1')
       parentElement.setAttribute('data-target', listId)

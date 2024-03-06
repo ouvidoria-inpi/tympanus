@@ -11,19 +11,11 @@ class BRHeader {
     this.name = name
     this.component = component
     this.componentSearch = this.component.querySelector('.header-search')
-    this.componentSearchInput = this.component.querySelector(
-      '.header-search input'
-    )
-    this.componentSearchTrigger = this.component.querySelector(
-      '[data-toggle="search"]'
-    )
-    this.componentSearchDismiss = this.component.querySelector(
-      '[data-dismiss="search"]'
-    )
+    this.componentSearchInput = this.component.querySelector('.header-search input')
+    this.componentSearchTrigger = this.component.querySelector('[data-toggle="search"]')
+    this.componentSearchDismiss = this.component.querySelector('[data-dismiss="search"]')
     this.hideDrop = null
-    this.menuTrigger = this.component.querySelector(
-      '[data-target="#main-navigation"]'
-    )
+    this.menuTrigger = this.component.querySelector('[data-target="#main-navigation"]')
     this._setBehavior()
   }
 
@@ -44,9 +36,7 @@ class BRHeader {
    * @private
    */
   _setLoginBehavior() {
-    for (const login of this.component.querySelectorAll(
-      '[data-trigger="login"]'
-    )) {
+    for (const login of this.component.querySelectorAll('[data-trigger="login"]')) {
       login.addEventListener('click', () => {
         const loginParent = login.closest('.header-login')
         loginParent.querySelector('.header-sign-in').classList.add('d-none')
@@ -60,15 +50,11 @@ class BRHeader {
    * @private
    */
   _setLogoutBehavior() {
-    for (const logout of this.component.querySelectorAll(
-      '[data-trigger="logout"]'
-    )) {
+    for (const logout of this.component.querySelectorAll('[data-trigger="logout"]')) {
       logout.addEventListener('click', () => {
         const logoutParent = logout.closest('.header-login')
         logoutParent.querySelector('.avatar').classList.remove('show')
-        logoutParent
-          .querySelector('[data-toggle="dropdown"]')
-          .classList.remove('active')
+        logoutParent.querySelector('[data-toggle="dropdown"]').classList.remove('active')
         logoutParent.querySelector('.header-sign-in').classList.remove('d-none')
         logoutParent.querySelector('.header-avatar').classList.add('d-none')
       })
@@ -115,9 +101,7 @@ class BRHeader {
         }
       })
     }
-    for (const trigger of this.component.querySelectorAll(
-      '.dropdown [data-toggle="dropdown"]'
-    )) {
+    for (const trigger of this.component.querySelectorAll('.dropdown [data-toggle="dropdown"]')) {
       trigger.addEventListener('keydown', (event) => {
         switch (event.keyCode) {
           // Tecla ESC
@@ -183,9 +167,7 @@ class BRHeader {
     let hideDrop
     this.activateTr = 'teste'
 
-    for (const trigger of this.component.querySelectorAll(
-      '.dropdown [data-toggle="dropdown"]'
-    )) {
+    for (const trigger of this.component.querySelectorAll('.dropdown [data-toggle="dropdown"]')) {
       // eslint-disable-next-line no-loop-func
       trigger.addEventListener('click', (event) => {
         this._headerTooltip()
@@ -236,19 +218,17 @@ class BRHeader {
     }
     this.TooltipExampleList = []
 
-    this.component
-      .querySelectorAll('.notification-tooltip')
-      .forEach((TooltipExample) => {
-        const texttooltip = TooltipExample.getAttribute('data-tooltip-text')
-        const config = {
-          activator: TooltipExample,
-          placement: 'top',
-          textTooltip: texttooltip,
-        }
-        const x = new Tooltip(config)
+    this.component.querySelectorAll('.notification-tooltip').forEach((TooltipExample) => {
+      const texttooltip = TooltipExample.getAttribute('data-tooltip-text')
+      const config = {
+        activator: TooltipExample,
+        placement: 'top',
+        textTooltip: texttooltip,
+      }
+      const x = new Tooltip(config)
 
-        this.TooltipExampleList.push(x)
-      })
+      this.TooltipExampleList.push(x)
+    })
   }
 
   /**
@@ -302,17 +282,10 @@ class BRHeader {
     const focussableElements =
       'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])'
     if (document.activeElement) {
-      const focussable = Array.prototype.filter.call(
-        document.body.querySelectorAll(focussableElements),
-        (element) => {
-          //check for visibility while always include the current activeElement
-          return (
-            element.offsetWidth > 0 ||
-            element.offsetHeight > 0 ||
-            element === document.activeElement
-          )
-        }
-      )
+      const focussable = Array.prototype.filter.call(document.body.querySelectorAll(focussableElements), (element) => {
+        //check for visibility while always include the current activeElement
+        return element.offsetWidth > 0 || element.offsetHeight > 0 || element === document.activeElement
+      })
       const index = focussable.indexOf(document.activeElement)
       if (index > -1) {
         const nextElement = focussable[index + 1] || focussable[0]

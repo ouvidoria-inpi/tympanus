@@ -46,8 +46,7 @@ const webpackConfig = (_env, argv) => {
                   includePaths: [paths.srcComponents],
                   outputStyle: 'expanded',
                 },
-                additionalData:
-                  '@use "sass:math";\n @import "../../partial/scss/base";\n ',
+                additionalData: '@use "sass:math";\n @import "../../partial/scss/base";\n ',
               },
             },
           ],
@@ -59,10 +58,7 @@ const webpackConfig = (_env, argv) => {
           options: {
             name: '[name].json',
             outputPath: (filename, absoluteSourceModuleFilePath, rootPath) => {
-              const relativePath = path.relative(
-                rootPath,
-                absoluteSourceModuleFilePath
-              )
+              const relativePath = path.relative(rootPath, absoluteSourceModuleFilePath)
               const outPath = relativePath.split(path.sep)
               outPath.shift() // src
               return outPath.join(path.sep)
@@ -98,15 +94,8 @@ const webpackConfig = (_env, argv) => {
                 esModule: false,
 
                 // Mantém a estrutura de diretórios (mas excluindo-se o 'src/pug/views')
-                outputPath: (
-                  filename,
-                  absoluteSourceModuleFilePath,
-                  rootPath
-                ) => {
-                  const relativePath = path.relative(
-                    rootPath,
-                    absoluteSourceModuleFilePath
-                  )
+                outputPath: (filename, absoluteSourceModuleFilePath, rootPath) => {
+                  const relativePath = path.relative(rootPath, absoluteSourceModuleFilePath)
                   const outPath = relativePath.split(path.sep)
                   let isExample = false
                   let nameExample = ''

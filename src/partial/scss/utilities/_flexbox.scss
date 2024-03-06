@@ -13,7 +13,7 @@ $justify-content: (
   "center": center,
   "between": space-between,
   "around": space-around,
-  "evenly": space-evenly
+  "evenly": space-evenly,
 );
 @each $key, $value in $justify-content {
   .justify-content-#{$key} {

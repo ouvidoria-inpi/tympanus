@@ -59,9 +59,7 @@ class BRTab {
       }
     }
 
-    for (const ancor of this.component.querySelectorAll(
-      '.tab-nav .tab-item:not([not-tab="true"]) button'
-    )) {
+    for (const ancor of this.component.querySelectorAll('.tab-nav .tab-item:not([not-tab="true"]) button')) {
       ancor.addEventListener(
         'click',
         (event) => {
@@ -166,21 +164,14 @@ class BRTab {
     let contComponent = 0
     let contComponentActive = 0
 
-    const tabItems2 =
-      target.parentElement.parentElement.querySelectorAll('.tab-item')
+    const tabItems2 = target.parentElement.parentElement.querySelectorAll('.tab-item')
     for (const component of tabItems2) {
-      if (
-        component.classList.contains('is-active') ||
-        component.classList.contains('active')
-      ) {
+      if (component.classList.contains('is-active') || component.classList.contains('active')) {
         contComponentActive = contComponent
       }
       contComponent += 1
     }
-    if (
-      tabItems2.length > contComponentActive + direction &&
-      contComponentActive + direction >= 0
-    ) {
+    if (tabItems2.length > contComponentActive + direction && contComponentActive + direction >= 0) {
       this._switchTab(tabItems2[contComponentActive + direction])
       tabItems2[contComponentActive + direction].focus()
       let x = ''
@@ -218,14 +209,9 @@ class BRTab {
       contComponent += 1
     }
     tabItems2[contComponentFocus + direction].querySelector('button').focus()
-    if (
-      tabItems2.length > contComponentFocus + direction &&
-      contComponentFocus + direction >= 0
-    ) {
+    if (tabItems2.length > contComponentFocus + direction && contComponentFocus + direction >= 0) {
       if (tabItems2[contComponentFocus + direction].querySelector('button')) {
-        tabItems2[contComponentFocus + direction]
-          .querySelector('button')
-          .focus()
+        tabItems2[contComponentFocus + direction].querySelector('button').focus()
       }
     }
   }
@@ -238,13 +224,9 @@ class BRTab {
     let contComponent = 0
     let contComponentActive = 0
 
-    const tabItems2 =
-      target.parentElement.parentElement.querySelectorAll('.tab-item')
+    const tabItems2 = target.parentElement.parentElement.querySelectorAll('.tab-item')
     for (const component of tabItems2) {
-      if (
-        component.classList.contains('is-active') ||
-        component.classList.contains('active')
-      ) {
+      if (component.classList.contains('is-active') || component.classList.contains('active')) {
         contComponentActive = contComponent
       }
       contComponent += 1
@@ -259,16 +241,12 @@ class BRTab {
    * Reinicia estados
    */
   clean() {
-    for (const ancor of event.currentTarget.parentElement.querySelectorAll(
-      'button'
-    )) {
+    for (const ancor of event.currentTarget.parentElement.querySelectorAll('button')) {
       ancor.classList.remove('focus-visible')
       ancor.classList.remove('is-active')
       ancor.classList.remove('active')
     }
-    for (const ancor of event.currentTarget.parentElement.querySelectorAll(
-      'tab-item'
-    )) {
+    for (const ancor of event.currentTarget.parentElement.querySelectorAll('tab-item')) {
       ancor.classList.remove('is-active')
       ancor.classList.remove('active')
     }
@@ -280,12 +258,8 @@ class BRTab {
    */
   positionScroll(ancor) {
     this.navItems = ancor.querySelectorAll('.tab-item')
-    this.lastItempos = Math.ceil(
-      this.navItems[this.navItems.length - 1].getBoundingClientRect().right
-    )
-    this.navigationLeft = Math.floor(
-      this.navItems[0].getBoundingClientRect().left
-    )
+    this.lastItempos = Math.ceil(this.navItems[this.navItems.length - 1].getBoundingClientRect().right)
+    this.navigationLeft = Math.floor(this.navItems[0].getBoundingClientRect().left)
     this.navigationRight = Math.floor(ancor.getBoundingClientRect().right)
   }
 
@@ -294,9 +268,7 @@ class BRTab {
    * @property {object} currentTab - referencia ao objeto DOM
    */
   _switchTab(currentTab) {
-    for (const tabItem of this.component.querySelectorAll(
-      '.tab-nav .tab-item:not([not-tab="true"])'
-    )) {
+    for (const tabItem of this.component.querySelectorAll('.tab-nav .tab-item:not([not-tab="true"])')) {
       if (tabItem === currentTab) {
         tabItem.classList.add('active')
         this._selectTab(tabItem, true)
@@ -323,9 +295,7 @@ class BRTab {
    */
   _switchContent(currentTab) {
     for (const button of currentTab.querySelectorAll('button')) {
-      for (const tabPanel of this.component.querySelectorAll(
-        '.tab-content .tab-panel'
-      )) {
+      for (const tabPanel of this.component.querySelectorAll('.tab-content .tab-panel')) {
         if (
           button.getAttribute('data-panel') === tabPanel.getAttribute('id') ||
           button.getAttribute('data-target') === tabPanel.getAttribute('id')

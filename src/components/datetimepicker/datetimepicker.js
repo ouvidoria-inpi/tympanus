@@ -29,8 +29,7 @@ class BRDateTimePicker {
     this.component.addEventListener('keyup', () => {
       if (!isNaN(new Date(this.component.value))) {
         // if the cursor is at the end of the edit and we have a full sized date, allow the date to immediately change, otherwise just move to the correct month without actually changing it
-        if (this.component.selectionStart >= 10)
-          fp.setDate(this.component.value)
+        if (this.component.selectionStart >= 10) fp.setDate(this.component.value)
         else fp.jumpToDate(this.component.value)
       }
     })
@@ -263,8 +262,7 @@ class BRDateTimePicker {
       clickOpens: false,
       disableMobile: 'true',
       mode: this.component.getAttribute('data-mode'),
-      nextArrow:
-        '<button class="br-button circle small" type="button"><i class="fas fa-chevron-right"></i></button>',
+      nextArrow: '<button class="br-button circle small" type="button"><i class="fas fa-chevron-right"></i></button>',
       noCalendar: noCalendar,
       prevArrow:
         '<button class="br-button circle small" type="button"><i class="fas fas fa-chevron-left"></i></button>',
@@ -273,15 +271,9 @@ class BRDateTimePicker {
     }
 
     this.config_flatpick = Object.assign(this.config_native, this.config)
-    this.config_flatpick = Object.assign(
-      this.config_flatpick,
-      this.config_min_flat
-    )
+    this.config_flatpick = Object.assign(this.config_flatpick, this.config_min_flat)
 
-    this.calendar = flatpickr(
-      this.component,
-      Object.assign(this.config_native, this.config)
-    )
+    this.calendar = flatpickr(this.component, Object.assign(this.config_native, this.config))
 
     this.calendar.config.onOpen.push(() => {
       if (this.config_flatpick.allowInput) {
@@ -290,13 +282,11 @@ class BRDateTimePicker {
           elem.setAttribute('tab-index', '-1')
         })
       } else {
-        this.component
-          .querySelectorAll('.flatpickr-calendar')
-          .forEach((elem) => {
-            console.log(elem)
+        this.component.querySelectorAll('.flatpickr-calendar').forEach((elem) => {
+          console.log(elem)
 
-            elem.setAttribute('tab-index', '-1')
-          })
+          elem.setAttribute('tab-index', '-1')
+        })
       }
       document.querySelectorAll('.flatpickr-day').forEach((element) => {
         element.setAttribute('tabindex', '1')

@@ -27,28 +27,21 @@ class TooltipExample {
   run() {
     this.TooltipExampleList = []
 
-    window.document
-      .querySelectorAll('[data-tooltip-text]:not(.notification-tooltip)')
-      .forEach((TooltipExample) => {
-        const texttooltip = TooltipExample.getAttribute('data-tooltip-text')
-        const config = {
-          activator: TooltipExample,
-          place: 'top',
-          textTooltip: texttooltip,
-        }
-        this.TooltipExampleList.push(new Tooltip(config))
-      })
+    window.document.querySelectorAll('[data-tooltip-text]:not(.notification-tooltip)').forEach((TooltipExample) => {
+      const texttooltip = TooltipExample.getAttribute('data-tooltip-text')
+      const config = {
+        activator: TooltipExample,
+        place: 'top',
+        textTooltip: texttooltip,
+      }
+      this.TooltipExampleList.push(new Tooltip(config))
+    })
 
     document.querySelectorAll('[data-tooltip-target]').forEach((trigger) => {
-      const targets = document.querySelectorAll(
-        trigger.getAttribute('data-tooltip-target')
-      )
+      const targets = document.querySelectorAll(trigger.getAttribute('data-tooltip-target'))
 
       targets.forEach((target) => {
-        const place =
-          target.getAttribute('place') !== null
-            ? target.getAttribute('place')
-            : 'left'
+        const place = target.getAttribute('place') !== null ? target.getAttribute('place') : 'left'
 
         const config = {
           activator: trigger,

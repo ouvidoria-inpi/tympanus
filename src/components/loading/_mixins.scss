@@ -55,12 +55,7 @@
       &-fill {
         backface-visibility: hidden;
         border-radius: 50%;
-        clip: rect(
-          0,
-          var(--loading-diameter),
-          var(--loading-diameter),
-          calc(var(--loading-diameter) * 0.5)
-        );
+        clip: rect(0, var(--loading-diameter), var(--loading-diameter), calc(var(--loading-diameter) * 0.5));
         height: var(--loading-diameter);
         overflow: hidden;
         position: absolute;
@@ -69,12 +64,7 @@
 
       &-fill {
         background: var(--interactive);
-        clip: rect(
-          0,
-          calc(var(--loading-diameter) * 0.5),
-          var(--loading-diameter),
-          0
-        );
+        clip: rect(0, calc(var(--loading-diameter) * 0.5), var(--loading-diameter), 0);
       }
     }
   }

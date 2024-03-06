@@ -240,9 +240,7 @@
 }
 
 @mixin tag-colors {
-  @each $color
-    in ("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11")
-  {
+  @each $color in ("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11") {
     &.support-#{$color} {
       --tag-background: var(--color-support-#{$color});
     }

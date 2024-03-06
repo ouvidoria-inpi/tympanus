@@ -12,9 +12,7 @@
 @mixin radio-tokens {
   --radio-size: 24px;
   --radio-bullet-size: 16px;
-  --radio-bullet-position: calc(
-    (var(--radio-size) - var(--radio-bullet-size)) * 0.5
-  );
+  --radio-bullet-position: calc((var(--radio-size) - var(--radio-bullet-size)) * 0.5);
 }
 @mixin radio-default {
   display: block;

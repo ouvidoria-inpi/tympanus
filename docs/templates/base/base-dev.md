@@ -1,7 +1,7 @@
 ## Como usar
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     ...
@@ -36,7 +36,7 @@
 </html>
 ```
 
-> **Atenção**! A classe `template-base` aplica os estilos do Template. Ela pode ser usada dentro de algum *wrapper* (como no exemplo acima) ou dentro da tag `<body>`.
+> **Atenção**! A classe `template-base` aplica os estilos do Template. Ela pode ser usada dentro de algum _wrapper_ (como no exemplo acima) ou dentro da tag `<body>`.
 
 ### Atalhos de Teclado
 
@@ -52,7 +52,7 @@ Os valores usados em `href` nos Atalhos de teclado precisam apontar para Ids exi
 
 ### Versão com Largura Fluida
 
-A classe `container-lg` força a **Largura Fixa** no *breakpoint desktop*. Altere essa classe para `container-fluid` para usar a **Largura Fluida**. Veja onde é usada:
+A classe `container-lg` força a **Largura Fixa** no _breakpoint desktop_. Altere essa classe para `container-fluid` para usar a **Largura Fluida**. Veja onde é usada:
 
 - Dentro do componente **Header**
 - Dentro do bloco **&lt;main&gt;**
@@ -64,4 +64,4 @@ O template é compatível com as versões de Menu Principal Flutuante (Offcanvas
 
 Adicione a classe `push` ao componente Menu para este efeito. Veja mais informações na [documentação do componente Menu](/ds/components/menu).
 
-> **Atenção**! A condição obrigatória é que ele seja *simbling* imediato da coluna de conteúdo, caso contrário a versão push não irá funcionar.
+> **Atenção**! A condição obrigatória é que ele seja _simbling_ imediato da coluna de conteúdo, caso contrário a versão push não irá funcionar.

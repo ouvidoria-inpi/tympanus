@@ -46,7 +46,7 @@ Commits:
     paths:
       - report-commitlint.txt
     expire_in: 1 week
-    expose_as: 'Commitlint Report'
+    expose_as: "Commitlint Report"
   before_script:
     - apk --no-cache add git
     - npm i -g @govbr-ds/commit-config commitlint-gitlab-ci

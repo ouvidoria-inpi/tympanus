@@ -9,17 +9,16 @@
   @include table-footer;
   @include table-density;
   @include table-dark-mode;
-  @include table-no-hover
+  @include table-no-hover;
 }
 
-@mixin table-no-hover{
+@mixin table-no-hover {
   &.no-hover {
     & td:not(.column-collapse):hover {
-      td{
+      td {
         background: none;
       }
     }
-
   }
 }
 
@@ -50,12 +49,11 @@
   .column-collapse {
     background-color: var(--background-alternative);
     width: 40px;
-  }  
+  }
 
   .column-checkbox {
     width: 24px;
   }
-  
 }
 
 @mixin table-header {
@@ -79,8 +77,7 @@
   .top-bar {
     align-items: center;
     display: flex;
-    padding: var(--spacing-scale-base) var(--spacing-scale-2x)
-      var(--spacing-scale-base) var(--table-padding);
+    padding: var(--spacing-scale-base) var(--spacing-scale-2x) var(--spacing-scale-base) var(--table-padding);
 
     .title,
     .table-title {
@@ -228,8 +225,7 @@
   // Mobile
   .footer,
   .table-footer {
-    padding: var(--spacing-scale-base) var(--spacing-scale-2x)
-      var(--spacing-scale-base) var(--table-padding);
+    padding: var(--spacing-scale-base) var(--spacing-scale-2x) var(--spacing-scale-base) var(--table-padding);
     .#{$prefix}input {
       .#{$prefix}button {
         transform: rotate(180deg);
@@ -259,9 +255,10 @@
     @include dark-mode;
     @include pagination-dark-mode;
 
-    th, td.column-collapse, tr:hover td.column-collapse {
+    th,
+    td.column-collapse,
+    tr:hover td.column-collapse {
       background-color: var(--background-dark);
     }
-
   }
 }

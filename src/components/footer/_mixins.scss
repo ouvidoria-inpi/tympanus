@@ -114,7 +114,6 @@
 }
 
 @mixin footer-list-hide-suport {
-
   // evita collapse no breakpoint
   @include media-breakpoint-up(md) {
     // .#{$prefix}list {
@@ -145,7 +144,7 @@
       font-size: var(--font-size-scale-up-01);
       font-weight: var(--font-weight-extra-bold);
       margin-bottom: var(--spacing-scale-3x);
-      text-transform: uppercase;      
+      text-transform: uppercase;
     }
 
     a:not(:last-of-type) {
@@ -159,7 +158,7 @@
     img {
       max-height: var(--footer-assigns-height);
       max-width: var(--footer-assigns-height);
-    }    
+    }
   }
 
   .assigns {
@@ -170,10 +169,10 @@
   }
 }
 
-@mixin footer-info {  
-    .info {
-      text-align: center;
-    }
+@mixin footer-info {
+  .info {
+    text-align: center;
+  }
 }
 
 /* ----------------------------------------------------------------------- */

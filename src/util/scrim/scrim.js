@@ -8,7 +8,7 @@ class ScrimExample {
    * Instancia um exemplo de comportamento Scrim
    * scrimToInitialize array de id_or_classe_acionador:id_or_classe_scrim para inicializar
    */
-  constructor({arrayConfigScrim=[]}) {
+  constructor({ arrayConfigScrim = [] }) {
     this.arrayConfigScrim = arrayConfigScrim
     this._setBehavior()
   }
@@ -25,15 +25,12 @@ class ScrimExample {
    */
   _setScrimBehavior() {
     this.arrayConfigScrim.forEach((item) => {
-      for (const buttonActionScrim of window.document.querySelectorAll(
-        item.trigger_open_scrim
-      )) {
+      for (const buttonActionScrim of window.document.querySelectorAll(item.trigger_open_scrim)) {
         buttonActionScrim.addEventListener('click', () => {
           this.openScrimExample(item)
         })
       }
     })
-
   }
 
   /**
@@ -44,8 +41,8 @@ class ScrimExample {
     const scrimfoco = new Scrim({
       closeElement: item.trigger_close_scrim,
       trigger: scrscrim,
-      escEnable:true,
-      limitTabKey:true
+      escEnable: true,
+      limitTabKey: true,
     })
     scrimfoco.showScrim()
   }

@@ -64,9 +64,7 @@ class BRMenu {
    */
   _setBreakpoints() {
     if (!this.component.classList.contains('push') && !this.contextual) {
-      this.component
-        .querySelector('.menu-panel')
-        .classList.add(...this.breakpoints)
+      this.component.querySelector('.menu-panel').classList.add(...this.breakpoints)
     }
   }
 
@@ -124,14 +122,11 @@ class BRMenu {
       : element.closest('.br-menu')
     // Obtém todos os elementos irmãos relacionados ao elemento de referência dentro do contêiner pai
     const elementSiblings =
-      parentFolder.classList.contains('br-menu') ||
-      parentFolder.classList.contains('menu-body')
+      parentFolder.classList.contains('br-menu') || parentFolder.classList.contains('menu-body')
         ? parentFolder.querySelectorAll(
             '.menu-body > .menu-item, .menu-body > .menu-folder > .menu-item,.menu-body > .menu-folder.active > .side-menu.active, .menu-body > .menu-folder.active > ul > li > .menu-item'
           )
-        : parentFolder.querySelectorAll(
-            '.side-menu.active > .menu-item,.side-menu.active > ul > li > .menu-item'
-          )
+        : parentFolder.querySelectorAll('.side-menu.active > .menu-item,.side-menu.active > ul > li > .menu-item')
     // Determina a posição do elemento de referência na lista de elementos irmãos
     const posicao = Array.from(elementSiblings).findIndex((el) => {
       return el === element
@@ -144,10 +139,7 @@ class BRMenu {
     if (soma >= 0 && soma < elementSiblings.length) {
       const nextElement = elementSiblings[soma]
 
-      if (
-        nextElement.getAttribute('role') === 'group' ||
-        nextElement.getAttribute('role') === 'tree'
-      ) {
+      if (nextElement.getAttribute('role') === 'group' || nextElement.getAttribute('role') === 'tree') {
         const nextSibling = elementSiblings[soma + operator]
         nextSibling.focus()
       } else {
@@ -208,18 +200,14 @@ class BRMenu {
    * @private
    */
   _focusOnFirstVisibleItem() {
-    const activeMenu = this.component.querySelector(
-      '.menu-body .menu-item:not([hidden]):not(.inactive)'
-    )
+    const activeMenu = this.component.querySelector('.menu-body .menu-item:not([hidden]):not(.inactive)')
     if (activeMenu) {
       activeMenu.focus()
       activeMenu.scrollIntoView({ block: 'nearest' }) // Foca e traz para a visualização se necessário
       return
     }
 
-    const firstVisibleItem = this.component.querySelector(
-      '.menu-body > .menu-item:not([hidden]):not(.inactive)'
-    )
+    const firstVisibleItem = this.component.querySelector('.menu-body > .menu-item:not([hidden]):not(.inactive)')
 
     if (firstVisibleItem) {
       firstVisibleItem.focus()
@@ -263,9 +251,7 @@ class BRMenu {
    * @private
    */
   _setDropMenu() {
-    for (const item of this.component.querySelectorAll(
-      '.menu-folder > a.menu-item'
-    )) {
+    for (const item of this.component.querySelectorAll('.menu-folder > a.menu-item')) {
       // Inclui ícone de Drop Menu
       this._createIcon(item, 'fa-chevron-down')
       // Configura como Drop Menu
@@ -286,17 +272,10 @@ class BRMenu {
     const focussableElements =
       'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])'
     if (document.activeElement) {
-      const focussable = Array.prototype.filter.call(
-        this.component.querySelectorAll(focussableElements),
-        (element) => {
-          // testa a visibilidade e inclui o elemento ativo
-          return (
-            element.offsetWidth > 0 ||
-            element.offsetHeight > 0 ||
-            element === document.activeElement
-          )
-        }
-      )
+      const focussable = Array.prototype.filter.call(this.component.querySelectorAll(focussableElements), (element) => {
+        // testa a visibilidade e inclui o elemento ativo
+        return element.offsetWidth > 0 || element.offsetHeight > 0 || element === document.activeElement
+      })
       const index = focussable.indexOf(document.activeElement)
       const nextElement = focussable[index + 1] || focussable[0]
       nextElement.focus()
@@ -369,32 +348,30 @@ class BRMenu {
       element.setAttribute('aria-expanded', 'true')
 
       this.inSubmenu = true
-      element.parentElement
-        .querySelectorAll('ul li ul a')
-        .forEach((menuItem) => {
-          this.triggerParent = menuItem.parentElement
-          menuItem.addEventListener('keydown', (event) => {
-            const { parentElement } = menuItem.parentElement
-            const keyCode = event.code
+      element.parentElement.querySelectorAll('ul li ul a').forEach((menuItem) => {
+        this.triggerParent = menuItem.parentElement
+        menuItem.addEventListener('keydown', (event) => {
+          const { parentElement } = menuItem.parentElement
+          const keyCode = event.code
 
-            switch (keyCode) {
-              case 'Escape':
-                event.preventDefault()
-                this._backMenu(parentElement)
-                break
-              case 'Backspace':
-                event.preventDefault()
-                this._backMenu(parentElement)
-                break
-              case 'ArrowLeft':
-                event.preventDefault()
-                this._backMenu(parentElement)
-                break
-              default:
-                break
-            }
-          })
+          switch (keyCode) {
+            case 'Escape':
+              event.preventDefault()
+              this._backMenu(parentElement)
+              break
+            case 'Backspace':
+              event.preventDefault()
+              this._backMenu(parentElement)
+              break
+            case 'ArrowLeft':
+              event.preventDefault()
+              this._backMenu(parentElement)
+              break
+            default:
+              break
+          }
         })
+      })
     }
   }
 
@@ -493,9 +470,7 @@ class BRMenu {
    * @param {object} element - referencia ao Objeto que fará a ação
    */
   _hideItems(element) {
-    for (const item of element
-      .closest('.menu-body')
-      .querySelectorAll('.menu-item')) {
+    for (const item of element.closest('.menu-body').querySelectorAll('.menu-item')) {
       item.setAttribute('hidden', '')
     }
   }
@@ -547,9 +522,7 @@ class BRMenu {
     }
 
     // Adiciona atributo role="group" nos elementos .menu-item que são filhos de .menu-folder e não são drop-down
-    const nonDropdownItems = this.component.querySelectorAll(
-      '.menu-folder:not(.drop-menu) > .menu-item'
-    )
+    const nonDropdownItems = this.component.querySelectorAll('.menu-folder:not(.drop-menu) > .menu-item')
     nonDropdownItems.forEach((item) => {
       item.setAttribute('role', 'tree')
       if (this.contextual) {
@@ -558,9 +531,7 @@ class BRMenu {
     })
 
     // Adiciona atributo role="menuitem" somente aos elementos <a> com a classe .menu-item que não têm .menu-folder como pai
-    const menuItems = this.component.querySelectorAll(
-      '.menu-folder.drop-menu > a.menu-item, li > a.menu-item'
-    )
+    const menuItems = this.component.querySelectorAll('.menu-folder.drop-menu > a.menu-item, li > a.menu-item')
     menuItems.forEach((item) => {
       item.setAttribute('role', 'treeitem')
       if (this.contextual) {
@@ -590,17 +561,13 @@ class BRMenu {
       list.setAttribute('aria-label', menuItemText)
     })
 
-    const sideMenuItems = this.component.querySelectorAll(
-      'li.side-menu > .menu-item'
-    )
+    const sideMenuItems = this.component.querySelectorAll('li.side-menu > .menu-item')
     for (const submenu of sideMenuItems) {
       submenu.setAttribute('aria-haspopup', 'true')
       submenu.setAttribute('aria-expanded', 'false')
     }
 
-    const folderMenuItems = this.component.querySelectorAll(
-      '.menu-folder.drop-menu > .menu-item'
-    )
+    const folderMenuItems = this.component.querySelectorAll('.menu-folder.drop-menu > .menu-item')
     for (const submenu of folderMenuItems) {
       submenu.setAttribute('aria-haspopup', 'true')
       submenu.setAttribute('aria-expanded', 'false')

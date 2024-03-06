@@ -34,8 +34,7 @@
 @mixin magic-button {
   .#{$prefix}button {
     background-color: var(--green-cool-vivid-50);
-    border: var(--gray-5) solid
-      calc((var(--magic-support-size) - var(--magic-size)) * 0.5);
+    border: var(--gray-5) solid calc((var(--magic-support-size) - var(--magic-size)) * 0.5);
     box-shadow: var(--surface-shadow-md);
     color: var(--color-dark);
     font-size: var(--font-size-scale-up-02);

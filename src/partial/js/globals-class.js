@@ -69,9 +69,7 @@ export default class Globals {
 
   initInstanceAccordion() {
     const accordionList = []
-    for (const brAccordion of window.document.querySelectorAll(
-      '.br-accordion'
-    )) {
+    for (const brAccordion of window.document.querySelectorAll('.br-accordion')) {
       accordionList.push(new BRAccordion('br-accordion', brAccordion))
     }
   }
@@ -85,21 +83,15 @@ export default class Globals {
 
   initInstanceBreadcrumb() {
     const breadcrumbList = []
-    for (const brBreadcrumb of window.document.querySelectorAll(
-      '.br-breadcrumb'
-    )) {
+    for (const brBreadcrumb of window.document.querySelectorAll('.br-breadcrumb')) {
       breadcrumbList.push(new BRBreadcrumb('br-breadcrumb', brBreadcrumb))
     }
   }
 
   initInstanceDateTimePicker() {
     const datetimepickerList = []
-    for (const brDateTimePicker of window.document.querySelectorAll(
-      '.br-datetimepicker'
-    )) {
-      datetimepickerList.push(
-        new BRDateTimePicker('br-datetimepicker', brDateTimePicker, {})
-      )
+    for (const brDateTimePicker of window.document.querySelectorAll('.br-datetimepicker')) {
+      datetimepickerList.push(new BRDateTimePicker('br-datetimepicker', brDateTimePicker, {}))
     }
   }
 
@@ -122,11 +114,9 @@ export default class Globals {
       inputList.push(new BRInput('br-input', brInput))
     }
     for (const brInput of inputList) {
-      brInput.component
-        .querySelectorAll('input.search-autocomplete')
-        .forEach(() => {
-          brInput.setAutocompleteData(inputData)
-        })
+      brInput.component.querySelectorAll('input.search-autocomplete').forEach(() => {
+        brInput.setAutocompleteData(inputData)
+      })
     }
   }
 
@@ -139,9 +129,7 @@ export default class Globals {
 
   initInstanceList() {
     const listList = []
-    for (const brList of window.document.querySelectorAll(
-      '.br-list:not([data-sub])'
-    )) {
+    for (const brList of window.document.querySelectorAll('.br-list:not([data-sub])')) {
       listList.push(new BRList('br-list', brList))
     }
   }
@@ -162,36 +150,30 @@ export default class Globals {
 
   initInstanceModal() {
     const buttonActivateModalScrim = window.document.querySelector('#buttonactivatemodal')
-    if(buttonActivateModalScrim){
-    const scrscrim = window.document.querySelector('#scrimutilexamplemodal')
+    if (buttonActivateModalScrim) {
+      const scrscrim = window.document.querySelector('#scrimutilexamplemodal')
 
-    const scrimfoco = new Scrim({
-      trigger: scrscrim,
-      escEnable:true,
-      limitTabKey:true
-    })
-    buttonActivateModalScrim.addEventListener('click',(event)=>{
-      scrimfoco.showScrim()
-    })
-  }
+      const scrimfoco = new Scrim({
+        trigger: scrscrim,
+        escEnable: true,
+        limitTabKey: true,
+      })
+      buttonActivateModalScrim.addEventListener('click', (event) => {
+        scrimfoco.showScrim()
+      })
+    }
   }
 
   initInstanceNotification() {
     const notificationList = []
-    for (const brNotification of window.document.querySelectorAll(
-      '.br-notification'
-    )) {
-      notificationList.push(
-        new BRNotification('br-notification', brNotification)
-      )
+    for (const brNotification of window.document.querySelectorAll('.br-notification')) {
+      notificationList.push(new BRNotification('br-notification', brNotification))
     }
   }
 
   initInstancePagination() {
     const paginationList = []
-    for (const brPagination of window.document.querySelectorAll(
-      '.br-pagination'
-    )) {
+    for (const brPagination of window.document.querySelectorAll('.br-pagination')) {
       paginationList.push(new BRPagination('br-pagination', brPagination))
     }
   }
@@ -201,9 +183,7 @@ export default class Globals {
     for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
       scrimList.push(new BRScrim('br-scrim', brScrim))
     }
-    for (const buttonBloco1 of window.document.querySelectorAll(
-      '.bloco1 button'
-    )) {
+    for (const buttonBloco1 of window.document.querySelectorAll('.bloco1 button')) {
       buttonBloco1.addEventListener('click', () => {
         for (const brScrim of scrimList) {
           brScrim.showScrim()
@@ -225,9 +205,7 @@ export default class Globals {
 
   initInstanceTable() {
     const tableList = []
-    for (const [index, brTable] of window.document
-      .querySelectorAll('.br-table')
-      .entries()) {
+    for (const [index, brTable] of window.document.querySelectorAll('.br-table').entries()) {
       tableList.push(new BRTable('br-table', brTable, index))
     }
   }
@@ -303,9 +281,7 @@ export default class Globals {
   initInstanceCookiebar() {
     /** Exemplo de instanciação de um objeto cookiebar */
     const cookiebarList = []
-    for (const brCookiebar of window.document.querySelectorAll(
-      '.br-cookiebar'
-    )) {
+    for (const brCookiebar of window.document.querySelectorAll('.br-cookiebar')) {
       const params = {
         // callback: (outputJSON) => { console.log(JSON.parse(outputJSON)) console.log(outputJSON) },
         component: brCookiebar,

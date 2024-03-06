@@ -32,18 +32,16 @@ class BRCard {
    * @private
    */
   _collpaseBehavior() {
-    this.component
-      .querySelectorAll('[data-toggle="collapse"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const collapse = new Collapse(config)
-        collapse.setBehavior()
-      })
+    this.component.querySelectorAll('[data-toggle="collapse"]').forEach((trigger) => {
+      const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+      }
+      const collapse = new Collapse(config)
+      collapse.setBehavior()
+    })
   }
 
   /**
@@ -101,10 +99,7 @@ class BRCard {
     }
     this.component.addEventListener('dragstart', (event) => {
       event.stopPropagation()
-      event.dataTransfer.setData(
-        'text/plain',
-        this.component.getAttribute('id')
-      )
+      event.dataTransfer.setData('text/plain', this.component.getAttribute('id'))
       event.dropEffect = 'move'
     })
   }

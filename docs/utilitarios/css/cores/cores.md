@@ -4,7 +4,7 @@ As classes de cores foram criadas de acordo com o [Fundamento Cores](fundamentos
 - Para aplicar **cor de texto** use o prefixo `text-*`
 - Para aplicar **cor de borda** use o prefixo `border-*`
 
-Substitua o asterísco (*) pela cor desejada.
+Substitua o asterísco (\*) pela cor desejada.
 
 **Atenção**! A classe de cor de borda só deve ser aplicado em elementos que possuam borda.
 
@@ -14,9 +14,7 @@ Exemplo de uso:
 <!-- Aplica cor de fundo violet-60 -->
 <div class="bg-violet-60">
   <!-- Aplica cor de texto violet-10 -->
-    <p class="text-violet-10">
-      Conteúdo
-    </p>
+  <p class="text-violet-10">Conteúdo</p>
 </div>
 ```
 
@@ -36,8 +34,6 @@ Exemplo de uso:
 <!-- Aplica cor de fundo danger -->
 <div class="bg-danger">
   <!-- Aplica cor de texto pure-0 -->
-    <p class="text-pure-0">
-      Conteúdo
-    </p>
+  <p class="text-pure-0">Conteúdo</p>
 </div>
 ```

@@ -27,7 +27,7 @@ Nos casos em que o próprio vendor nao informe um endereço de CDN é possível 
 Os códigos devem ser carregados sempre antes do Design System GOV.BR.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <!-- CSS do vendor -->

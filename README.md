@@ -21,7 +21,7 @@ As principais dependências do projeto são:
 1. [Fonte Rawline](https://www.cdnfonts.com/rawline.font/ 'Acesse para realizar o download da Fonte Rawline')
 
 > O fontawesome e a fonte rawline podem ser importadas de um CDN. Consulte a documentação no site do [Padrão Digital de Governo](https://www.gov.br/ds/ 'Acesse o site do Padrão Digital de Governo') para mais detalhes.
->
+
 ## Como usar nossa biblioteca em seu projeto?
 
 ### Instalação da biblioteca
@@ -50,13 +50,11 @@ npm run lint
 
 Use nossos canais abaixo para obter tirar suas dúvidas:
 
--   Site do Design System GOV.BR <https://www.gov.br/ds/>
+- Site do Design System GOV.BR <https://www.gov.br/ds/>
 
--   Web Components <https://gitlab.com/govbr-ds/wbc/govbr-ds-wbc/>
+- Web Components <https://gitlab.com/govbr-ds/wbc/govbr-ds-wbc/>
 
--   Pelo nosso email <govbr-ds@serpro.gov.br>
-
--   Usando nosso canal no discord <https://discord.gg/NkaVZERAT7>
+- Usando nosso canal no discord <https://discord.gg/NkaVZERAT7>
 
 ## Como contribuir?
 
@@ -68,7 +66,7 @@ Nesse projeto usamos um padrão para branches e commits. Por favor observe a doc
 
 ## Créditos
 
-O Design System  é criado pelo [SERPRO](https://www.serpro.gov.br/ 'Acesse a página do SERPRO | Serviço Federal de Processamento de Dados') juntamente com a participação da comunidade.
+O Design System é criado pelo [SERPRO](https://www.serpro.gov.br/ 'Acesse a página do SERPRO | Serviço Federal de Processamento de Dados') juntamente com a participação da comunidade.
 
 ## Licença
 

@@ -8,12 +8,7 @@ export default class Collapse {
    * @property {string} iconToHide - Classe que representa o ícone para esconder o conteúdo (padrão: fa-chevron-up)
    * @property {boolean} useIcons - true: com ícone | false: sem ícone (padrão: true)
    */
-  constructor({
-    trigger,
-    iconToShow = 'fa-chevron-down',
-    iconToHide = 'fa-chevron-up',
-    useIcons = true,
-  }) {
+  constructor({ trigger, iconToShow = 'fa-chevron-down', iconToHide = 'fa-chevron-up', useIcons = true }) {
     this.trigger = trigger
     this.useIcons = useIcons
     this.breakpoint = trigger.getAttribute('data-breakpoint')
@@ -28,9 +23,7 @@ export default class Collapse {
    * @private
    */
   _setTarget() {
-    this.target = document.querySelector(
-      `#${this.trigger.getAttribute('data-target')}`
-    )
+    this.target = document.querySelector(`#${this.trigger.getAttribute('data-target')}`)
   }
 
   // TODO: Melhorar a solução
@@ -51,10 +44,7 @@ export default class Collapse {
     if (this.useIcons) {
       this._toggleIcon()
     }
-    this.trigger.setAttribute(
-      'aria-controls',
-      `${this.trigger.getAttribute('data-target')}`
-    )
+    this.trigger.setAttribute('aria-controls', `${this.trigger.getAttribute('data-target')}`)
     this._checkBreakpoint()
     this.trigger.setAttribute('tabindex', '0')
   }
@@ -145,9 +135,7 @@ export default class Collapse {
    */
   _toggleVisibility() {
     if (this.target) {
-      this.target.hasAttribute('hidden')
-        ? this._showTarget()
-        : this._hideTarget()
+      this.target.hasAttribute('hidden') ? this._showTarget() : this._hideTarget()
     }
   }
 
@@ -196,12 +184,8 @@ export default class Collapse {
   _toggleIcon() {
     this.trigger.querySelectorAll('i.fas').forEach((icon) => {
       if (this.target) {
-        icon.classList.remove(
-          this.target.hasAttribute('hidden') ? this.iconToHide : this.iconToShow
-        )
-        icon.classList.add(
-          this.target.hasAttribute('hidden') ? this.iconToShow : this.iconToHide
-        )
+        icon.classList.remove(this.target.hasAttribute('hidden') ? this.iconToHide : this.iconToShow)
+        icon.classList.add(this.target.hasAttribute('hidden') ? this.iconToShow : this.iconToHide)
       }
     })
   }

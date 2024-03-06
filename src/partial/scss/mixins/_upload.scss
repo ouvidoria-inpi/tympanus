@@ -113,8 +113,9 @@
 
 @mixin upload-state {
   /*** Estados ***/
-  @each $state, $color in (success, v(color-success)), (danger, v(color-danger)),
-    (warning, v(color-warning)), (info, v(color-info)) {
+  @each $state, $color in (success, v(color-success)), (danger, v(color-danger)), (warning, v(color-warning)),
+    (info, v(color-info))
+  {
     &.#{$state},
     &[data-#{$state}] {
       .upload-button {

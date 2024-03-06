@@ -24,18 +24,16 @@ class CollapseExample {
    * @private
    */
   _setCollapseBehavior() {
-    this.element
-      .querySelectorAll('[data-toggle="collapse"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const collapse = new Collapse(config)
-        collapse.setBehavior()
-      })
+    this.element.querySelectorAll('[data-toggle="collapse"]').forEach((trigger) => {
+      const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+      }
+      const collapse = new Collapse(config)
+      collapse.setBehavior()
+    })
   }
 }
 

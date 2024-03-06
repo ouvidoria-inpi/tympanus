@@ -188,19 +188,13 @@
   &[data-stage="out"],
   & {
     .carousel-button {
-      height: calc(
-        #{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)}
-      );
+      height: calc(#{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)});
     }
 
     .carousel-stage {
-      height: calc(
-        #{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)}
-      );
+      height: calc(#{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)});
       left: 50px;
-      width: calc(
-        #{var(--carousel-full-size)} - #{var(--carousel-button-fix-width)}
-      );
+      width: calc(#{var(--carousel-full-size)} - #{var(--carousel-button-fix-width)});
     }
   }
 
@@ -212,17 +206,13 @@
     .carousel-stage {
       height: var(--carousel-full-size);
       left: 50px;
-      width: calc(
-        #{var(--carousel-full-size)} - #{var(--carousel-button-fix-width)}
-      );
+      width: calc(#{var(--carousel-full-size)} - #{var(--carousel-button-fix-width)});
     }
   }
 
   &[data-stage="hibw"] {
     .carousel-button {
-      height: calc(
-        #{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)}
-      );
+      height: calc(#{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)});
 
       .carousel-btn-next,
       .carousel-btn-prev {
@@ -234,9 +224,7 @@
     }
 
     .carousel-stage {
-      height: calc(
-        #{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)}
-      );
+      height: calc(#{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)});
       left: 0;
       width: var(--carousel-full-size);
     }
@@ -249,9 +237,7 @@
     width: var(--carousel-full-size);
 
     .carousel-button {
-      height: calc(
-        #{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)}
-      );
+      height: calc(#{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)});
 
       .carousel-btn-next,
       .carousel-btn-prev {
@@ -273,9 +259,7 @@
     }
 
     .carousel-stage {
-      height: calc(
-        #{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)}
-      );
+      height: calc(#{var(--carousel-full-size)} - #{var(--carousel-button-fix-height)});
       left: 0;
       width: var(--carousel-full-size);
     }

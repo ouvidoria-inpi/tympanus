@@ -61,10 +61,7 @@
 }
 
 @mixin header-sizes {
-
-  @each $size in "small",
-  "medium",
-  "large" {
+  @each $size in "small", "medium", "large" {
     &.#{$size} {
       --header-padding: var(--header-padding-#{$size});
     }
@@ -72,7 +69,6 @@
 }
 
 @mixin header-logo {
-
   // Mobile
   .header-logo {
     align-items: center;
@@ -132,7 +128,6 @@
 }
 
 @mixin header-actions {
-
   // Mobile
   .header-actions {
     align-items: center;
@@ -358,7 +353,6 @@
 }
 
 @mixin header-menu {
-
   // Mobile
   .header-menu {
     align-items: center;
@@ -366,7 +360,7 @@
     flex: 1;
 
     .header-menu-trigger {
-      +.header-info {
+      + .header-info {
         margin-left: var(--spacing-scale-2x);
       }
     }
@@ -427,7 +421,6 @@
 }
 
 @mixin header-search {
-
   // Mobile
   .header-search,
   &.compact .header-search {

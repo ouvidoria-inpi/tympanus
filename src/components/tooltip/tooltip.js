@@ -85,8 +85,7 @@ class BRTooltip {
 
       const bw = document.body.clientWidth
       if (this.placement === 'right') {
-        this.placement =
-          ac.x + ac.width + tt.width > bw ? 'top' : this.placement
+        this.placement = ac.x + ac.width + tt.width > bw ? 'top' : this.placement
       }
       if (this.placement === 'left') {
         this.placement = ac.x - tt.width > 0 ? this.placement : 'top'
@@ -126,12 +125,7 @@ class BRTooltip {
     if (this.timer) {
       clearTimeout(this.closeTimer)
 
-      this.closeTimer = setTimeout(
-        this._hide,
-        this.timer,
-        event,
-        this.component
-      )
+      this.closeTimer = setTimeout(this._hide, this.timer, event, this.component)
     }
   }
 
@@ -179,9 +173,7 @@ class BRTooltip {
         this.component.style = `position: fixed !important; top: ${
           ac.top + ac.height + 10
         }px !important; left: auto; right: 8px; display: unset; bottom: auto;`
-        this.component.querySelector(
-          '.arrow'
-        ).style = `position: absolute; left: auto; right: ${
+        this.component.querySelector('.arrow').style = `position: absolute; left: auto; right: ${
           document.body.clientWidth - ac.right + ac.width / 5
         }px !important;`
       }, 10)

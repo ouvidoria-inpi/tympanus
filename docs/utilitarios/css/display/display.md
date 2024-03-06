@@ -13,11 +13,7 @@ Informe o breakpoint de aplicação do display usando o formato `d-breakpoint-di
 
 ```html
 <!-- display inline para qualquer breakpoint -->
-<div class="p-inline">
-  Conteúdo
-</div>
+<div class="p-inline">Conteúdo</div>
 <!-- display muda conforme breakpoint -->
-<div class="d-none d-sm-block d-lg-flex">
-  Conteúdo
-</div>
+<div class="d-none d-sm-block d-lg-flex">Conteúdo</div>
 ```

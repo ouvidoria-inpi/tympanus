@@ -74,7 +74,8 @@
 
 @mixin checkbox-checked {
   input {
-    &:checked, &:indeterminate {
+    &:checked,
+    &:indeterminate {
       & + label::after {
         border: solid var(--selected);
         border-width: 0 3px 3px 0;
@@ -91,7 +92,8 @@
 }
 
 @mixin checkbox-indeterminate {
-  input[indeterminate], input:indeterminate {
+  input[indeterminate],
+  input:indeterminate {
     + label {
       &::before {
         --interactive-rgb: var(--color-rgb);
@@ -106,7 +108,8 @@
       }
     }
 
-    &:checked + label, + label {
+    &:checked + label,
+    + label {
       &::after {
         border-color: var(--background-light);
         border-width: 0 0 3px;
@@ -198,7 +201,7 @@
         width: var(--spacing-scale-2xh);
       }
       // Checado
-      &:checked { 
+      &:checked {
         + label::after {
           border-width: 0 2px 2px 0;
           height: var(--icon-size-sm);
@@ -207,8 +210,9 @@
           width: 6px;
         }
       }
-      
-      &[indeterminate], &:indeterminate {
+
+      &[indeterminate],
+      &:indeterminate {
         + label::after {
           border-color: var(--background-light);
           border-width: 0 0 3px;

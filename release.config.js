@@ -1,11 +1,11 @@
-const sharedConfig = require('@govbr-ds/release-config')
+const { branches, commitAnalyzer, releaseNotesGenerator, changelog, gitlab } = require('@govbr-ds/release-config')
 
 module.exports = {
-  branches: [...sharedConfig.branches],
+  branches: branches,
   plugins: [
-    sharedConfig.plugins.commitAnalyzer,
-    sharedConfig.plugins.releaseNotes,
-    sharedConfig.plugins.changelog,
+    commitAnalyzer,
+    releaseNotesGenerator,
+    changelog,
     '@semantic-release/npm',
     [
       '@semantic-release/git',
@@ -15,7 +15,7 @@ module.exports = {
           'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}\n\nEsse commit foi gerado automaticamente durante o processo de release',
       },
     ],
-    sharedConfig.plugins.gitlab,
+    gitlab,
     [
       'semantic-release-discord',
       {

@@ -30,11 +30,8 @@ class BRUpload {
       button.setAttribute('type', 'button')
       button.setAttribute('aria-hidden', 'true')
       if (this._inputElement.getAttribute('multiple'))
-        button.innerHTML =
-          '<i class="fas fa-upload" aria-hidden="true"></i><span>Selecione o(s) arquivo(s)</span>'
-      else
-        button.innerHTML =
-          '<i class="fas fa-upload" aria-hidden="true"></i><span>Selecione o arquivo</span>'
+        button.innerHTML = '<i class="fas fa-upload" aria-hidden="true"></i><span>Selecione o(s) arquivo(s)</span>'
+      else button.innerHTML = '<i class="fas fa-upload" aria-hidden="true"></i><span>Selecione o arquivo</span>'
 
       this.component.append(this._label)
       this.component.append(this._inputElement)
@@ -53,8 +50,7 @@ class BRUpload {
         const message = document.createElement('span')
         message.classList.add('feedback', 'warning', 'mt-1')
         message.setAttribute('role', 'alert')
-        message.innerHTML =
-          '<i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Upload desabilitado'
+        message.innerHTML = '<i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Upload desabilitado'
         this.component.after(message)
       }
 
@@ -161,8 +157,7 @@ class BRUpload {
   _removeStatus() {
     const remStatus = ['danger', 'warning', 'info', 'success']
     remStatus.forEach((el) => {
-      if (this.component.dataset.hasOwnProperty(el))
-        this.component.removeAttribute(`data-${el}`)
+      if (this.component.dataset.hasOwnProperty(el)) this.component.removeAttribute(`data-${el}`)
     })
   }
 
@@ -190,10 +185,7 @@ class BRUpload {
         message.innerHTML = icone.replace('fa-times-circle', 'fa-check-circle')
         break
       case 'warning':
-        message.innerHTML = icone.replace(
-          'fa-times-circle',
-          'fa-exclamation-triangle'
-        )
+        message.innerHTML = icone.replace('fa-times-circle', 'fa-exclamation-triangle')
         break
       default:
         message.innerHTML = ''
@@ -209,9 +201,7 @@ class BRUpload {
    * @param {File[]} files - lista de arquivos
    */
   _concatFiles(files) {
-    const newFiles = !files.length
-      ? Array.from(this._inputElement.files)
-      : Array.from(files)
+    const newFiles = !files.length ? Array.from(this._inputElement.files) : Array.from(files)
     this._fileArray = this._fileArray.concat(newFiles)
   }
 
@@ -228,10 +218,7 @@ class BRUpload {
       this._fileArray = []
       this._concatFiles(files)
       this._updateFileList()
-      this._feedback(
-        'warning',
-        'O arquivo enviado anteriormente foi substituído'
-      )
+      this._feedback('warning', 'O arquivo enviado anteriormente foi substituído')
     } else {
       this._concatFiles(files)
       this._updateFileList()
@@ -345,10 +332,7 @@ class BRUpload {
     btndel.type = 'button'
     btndel.setAttribute('circle', '')
 
-    btndel.setAttribute(
-      'aria-label',
-      'apagar arquivo' + this._fileArray[position].name
-    )
+    btndel.setAttribute('aria-label', 'apagar arquivo' + this._fileArray[position].name)
     btndel.addEventListener(
       'click',
       (event) => {
@@ -381,9 +365,7 @@ class BRUpload {
   _calcSize(nBytes) {
     let sOutput = ''
     for (
-      let aMultiples = ['KB', 'MB', 'GB', 'TB'],
-        nMultiple = 0,
-        nApprox = nBytes / 1024;
+      let aMultiples = ['KB', 'MB', 'GB', 'TB'], nMultiple = 0, nApprox = nBytes / 1024;
       nApprox > 1;
       nApprox /= 1024, nMultiple++
     ) {
@@ -406,8 +388,7 @@ class BRUpload {
     this._fileArray.splice(index, 1)
     this._updateFileList()
 
-    if (this._inputElement.multiple)
-      this._inputElement.files = this._updateFileListItems(this._fileArray)
+    if (this._inputElement.multiple) this._inputElement.files = this._updateFileListItems(this._fileArray)
     if (!this._inputElement.multiple) this._inputElement.value = ''
   }
 
@@ -418,8 +399,7 @@ class BRUpload {
    */
   _updateFileListItems(files) {
     const fileInput = new ClipboardEvent('').clipboardData || new DataTransfer()
-    for (let i = 0, len = files.length; i < len; i++)
-      fileInput.items.add(files[i])
+    for (let i = 0, len = files.length; i < len; i++) fileInput.items.add(files[i])
     return fileInput.files
   }
 }

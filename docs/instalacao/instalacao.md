@@ -40,7 +40,7 @@ Serão criados automaticamente os seguintes arquivos em seu projeto:
 A seguir temos um exemplo de um template inicial para utilização do Design System GOV.BR. Copie o template para um arquivo html e confira se os caminhos dos arquivos **rawline.css** e **core.min.css** estão corretos. Antes de **`</body>`** temos a chamada para o arquivo **core.min.js**, confira se o caminho está correto de acordo com as pastas do seu projeto.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />

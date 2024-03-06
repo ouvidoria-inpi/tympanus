@@ -57,20 +57,14 @@
     @if $breakpoint == "sm" {
       .container,
       .container-sm {
-        --grid-maxwidth: calc(
-          var(--grid-breakpoint-#{$breakpoint}) -
-            var(--grid-#{$breakpoint-name}-margin)
-        );
+        --grid-maxwidth: calc(var(--grid-breakpoint-#{$breakpoint}) - var(--grid-#{$breakpoint-name}-margin));
       }
     }
     @if $breakpoint == "md" {
       .container,
       .container-sm,
       .container-md {
-        --grid-maxwidth: calc(
-          var(--grid-breakpoint-#{$breakpoint}) -
-            var(--grid-#{$breakpoint-name}-margin)
-        );
+        --grid-maxwidth: calc(var(--grid-breakpoint-#{$breakpoint}) - var(--grid-#{$breakpoint-name}-margin));
       }
     }
     @if $breakpoint == "lg" {
@@ -78,10 +72,7 @@
       .container-sm,
       .container-md,
       .container-lg {
-        --grid-maxwidth: calc(
-          var(--grid-breakpoint-#{$breakpoint}) -
-            var(--grid-#{$breakpoint-name}-margin)
-        );
+        --grid-maxwidth: calc(var(--grid-breakpoint-#{$breakpoint}) - var(--grid-#{$breakpoint-name}-margin));
       }
     }
     @if $breakpoint == "xl" {
@@ -90,10 +81,7 @@
       .container-md,
       .container-lg,
       .container-xl {
-        --grid-maxwidth: calc(
-          var(--grid-breakpoint-#{$breakpoint}) -
-            var(--grid-#{$breakpoint-name}-margin)
-        );
+        --grid-maxwidth: calc(var(--grid-breakpoint-#{$breakpoint}) - var(--grid-#{$breakpoint-name}-margin));
       }
     }
     @include make-columns($grid-desktop-columns, $breakpoint);

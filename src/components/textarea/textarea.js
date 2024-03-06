@@ -20,9 +20,7 @@ class BRTextArea {
     this.limit = this.component.querySelector('.limit')
     this.current = this.component.querySelector('.current')
     if (this.component.querySelector('textarea') !== null) {
-      this.maximum = this.component
-        .querySelector('textarea')
-        .getAttribute('maxlength')
+      this.maximum = this.component.querySelector('textarea').getAttribute('maxlength')
     }
 
     this.characters = this.component.querySelector('.characters')

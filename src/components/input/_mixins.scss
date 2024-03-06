@@ -125,12 +125,7 @@
     .#{$prefix}button.circle {
       float: right;
       margin-right: var(--spacing-scale-half);
-      margin-top: calc(
-        (
-            var(--button-size) + var(--spacing-scale-half) +
-              var(--spacing-scale-half)
-          ) * -1
-      );
+      margin-top: calc((var(--button-size) + var(--spacing-scale-half) + var(--spacing-scale-half)) * -1);
       transform: translateY(0);
     }
 

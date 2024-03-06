@@ -23,18 +23,16 @@ class DropdownExample {
    * Encontra os data-toggle dropdown  e coloca util Dropdown
    */
   _setDropdownBehavior() {
-    this.element
-      .querySelectorAll('[data-toggle="dropdown"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const dropdown = new Dropdown(config)
-        dropdown.setBehavior()
-      })
+    this.element.querySelectorAll('[data-toggle="dropdown"]').forEach((trigger) => {
+      const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+      }
+      const dropdown = new Dropdown(config)
+      dropdown.setBehavior()
+    })
   }
 }
 

@@ -21,44 +21,45 @@ export default class Behavior {
 
   _initInstanceCollapseExample() {
     const collapseExampleList = []
-    window.document
-      .querySelectorAll('.collapse-example')
-      .forEach((collapseExample) => {
-        collapseExampleList.push(new CollapseExample(collapseExample))
-      })
+    window.document.querySelectorAll('.collapse-example').forEach((collapseExample) => {
+      collapseExampleList.push(new CollapseExample(collapseExample))
+    })
   }
 
   _initInstanceAccordionExample() {
     const accordionExampleList = []
-    window.document
-      .querySelectorAll('.accordion-example')
-      .forEach((accordionExample) => {
-        accordionExampleList.push(new AccordionExample(accordionExample))
-      })
+    window.document.querySelectorAll('.accordion-example').forEach((accordionExample) => {
+      accordionExampleList.push(new AccordionExample(accordionExample))
+    })
   }
 
   _initInstanceCheckGroupExemple() {
     const checkgroupExampleList = []
-    window.document
-      .querySelectorAll('.checkgroup-example')
-      .forEach((checkgroupExample) => {
-        checkgroupExampleList.push(new CheckgroupExample(checkgroupExample))
-      })
+    window.document.querySelectorAll('.checkgroup-example').forEach((checkgroupExample) => {
+      checkgroupExampleList.push(new CheckgroupExample(checkgroupExample))
+    })
   }
 
   _initInstanceDropdownExample() {
     const dropdownExampleList = []
-    window.document
-      .querySelectorAll('.dropdown-example')
-      .forEach((dropdownExample) => {
-        dropdownExampleList.push(new DropdownExample(dropdownExample))
-      })
+    window.document.querySelectorAll('.dropdown-example').forEach((dropdownExample) => {
+      dropdownExampleList.push(new DropdownExample(dropdownExample))
+    })
   }
 
   _initInstanceScrimExample() {
-    const initializeScrim = [{'trigger_open_scrim':'#idbuttonscrimutil','scrimid':'#scrimutilexample'},
-    {'trigger_open_scrim':'#idbuttonscrimutil1','trigger_close_scrim':'#scrimfechar','scrimid':'#scrimutilfocobig'},]
-    const scrimExample = new ScrimExample({arrayConfigScrim:initializeScrim})
+    const initializeScrim = [
+      {
+        trigger_open_scrim: '#idbuttonscrimutil',
+        scrimid: '#scrimutilexample',
+      },
+      {
+        trigger_open_scrim: '#idbuttonscrimutil1',
+        trigger_close_scrim: '#scrimfechar',
+        scrimid: '#scrimutilfocobig',
+      },
+    ]
+    const scrimExample = new ScrimExample({ arrayConfigScrim: initializeScrim })
   }
   _initInstanceTooltipExample() {
     const tooltipExample = new TooltipExample()

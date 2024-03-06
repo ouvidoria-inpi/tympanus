@@ -98,10 +98,7 @@
   &[data-counter="true"] {
     .tab-nav {
       ul {
-        margin-bottom: calc(
-          var(--spacing-scale-2x) + var(--font-size-scale-up-02) +
-            var(--spacing-scale-base)
-        );
+        margin-bottom: calc(var(--spacing-scale-2x) + var(--font-size-scale-up-02) + var(--spacing-scale-base));
       }
     }
   }
@@ -146,7 +143,9 @@
     opacity: 1;
     pointer-events: none;
     position: absolute;
-    transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition:
+      opacity 0.3s 0s,
+      visibility 0s 0s;
     visibility: visible;
     width: 3%;
     z-index: var(--z-index-layer-0);
@@ -165,7 +164,9 @@
     opacity: 1;
     pointer-events: none;
     position: absolute;
-    transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition:
+      opacity 0.3s 0s,
+      visibility 0s 0s;
 
     visibility: visible;
     width: 3%;

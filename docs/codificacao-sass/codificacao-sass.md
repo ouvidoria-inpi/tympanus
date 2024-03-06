@@ -8,21 +8,11 @@ Customizações utilizadas:
 
 ```json
 {
-  "extends": [
-    "stylelint-config-sass-guidelines",
-    "stylelint-config-prettier"
-  ],
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-prettier"],
   "defaultSeverity": "warning",
   "rules": {
     "max-nesting-depth": null,
-    "order/order": [
-      [
-        "custom-properties",
-        "dollar-variables",
-        "declarations",
-        "rules"
-      ]
-    ],
+    "order/order": [["custom-properties", "dollar-variables", "declarations", "rules"]],
     "selector-max-compound-selectors": null,
     "selector-no-qualifying-type": null
   }
@@ -45,11 +35,11 @@ Cada documentação é classificada por grupo específico conforme configurado n
 ```yaml
 dest: ./sassdoc
 groups:
-  "01": Configurações globais
-  "02": Uso genérico
-  "03": Utilitários
-  "04": Uso específico
-  "05": Obsoleto
+  '01': Configurações globais
+  '02': Uso genérico
+  '03': Utilitários
+  '04': Uso específico
+  '05': Obsoleto
 ```
 
 ## Functions e Mixins
@@ -158,7 +148,7 @@ Arquivo `_mixins.scss`:
 Arquivo `_componente.scss`:
 
 ```scss
-@include "mixins";
+@include 'mixins';
 
 .#{$prefix}component {
   @include component-configs;

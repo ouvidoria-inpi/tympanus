@@ -22,18 +22,16 @@ class AccordionExample {
    * Encontra os data-toggle accordion  e coloca util Accordion
    */
   _setAccordionBehavior() {
-    this.element
-      .querySelectorAll('[data-toggle="accordion"]')
-      .forEach((trigger) => {
-        const config = {
-          iconToHide: 'fa-chevron-up',
-          iconToShow: 'fa-chevron-down',
-          trigger,
-          useIcons: true,
-        }
-        const accordion = new Accordion(config)
-        accordion.setBehavior()
-      })
+    this.element.querySelectorAll('[data-toggle="accordion"]').forEach((trigger) => {
+      const config = {
+        iconToHide: 'fa-chevron-up',
+        iconToShow: 'fa-chevron-down',
+        trigger,
+        useIcons: true,
+      }
+      const accordion = new Accordion(config)
+      accordion.setBehavior()
+    })
   }
 }
 

@@ -27,10 +27,7 @@ export default class Checkgroup {
    * @public
    */
   get checkedLabel() {
-    return (
-      this.parent.dataset.checkedLabel ||
-      this.parent.nextElementSibling.innerText
-    )
+    return this.parent.dataset.checkedLabel || this.parent.nextElementSibling.innerText
   }
 
   /**
@@ -40,10 +37,7 @@ export default class Checkgroup {
    * @public
    */
   get uncheckedLabel() {
-    return (
-      this.parent.dataset.uncheckedLabel ||
-      this.parent.nextElementSibling.innerText
-    )
+    return this.parent.dataset.uncheckedLabel || this.parent.nextElementSibling.innerText
   }
 
   /**
@@ -115,10 +109,7 @@ export default class Checkgroup {
    */
   _changeChildState() {
     this.children.forEach((child) => {
-      if (
-        child.checked !== this.parent.checked ||
-        child.hasAttribute('indeterminate')
-      ) {
+      if (child.checked !== this.parent.checked || child.hasAttribute('indeterminate')) {
         child.removeAttribute('indeterminate')
         child.indeterminate = false
         child.checked = this.parent.checked

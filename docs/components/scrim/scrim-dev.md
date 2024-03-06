@@ -50,23 +50,19 @@ Exemplo de uso:
 
 ```html
 <div class="br-scrim foco" onclick="off()" id="exemploscrim">
-    <div class="br-modal medium" >
-        <div class="br-modal-dialog">
-            <div class="br-modal-content">
-                <div class="br-modal-body">
-                    <p>Conteúdo</p>
-                </div>
-                <div class="br-modal-footer justify-content-end">
-                    <button class="br-button small" type="button" data-dismiss="exemploscrim" secondary>
-                        Ação 1
-                    </button>
-                    <button class="br-button small" type="button" primary>
-                        Ação 2
-                    </button>
-                </div>
-            </div>
+  <div class="br-modal medium">
+    <div class="br-modal-dialog">
+      <div class="br-modal-content">
+        <div class="br-modal-body">
+          <p>Conteúdo</p>
         </div>
+        <div class="br-modal-footer justify-content-end">
+          <button class="br-button small" type="button" data-dismiss="exemploscrim" secondary>Ação 1</button>
+          <button class="br-button small" type="button" primary>Ação 2</button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 ```
 
@@ -80,9 +76,9 @@ Exemplo de uso:
 
 ```html
 <div class="br-scrim legibilidade">
-    <div class="img">
-        <div class="scrim-text">Texto</div>
-    </div>
+  <div class="img">
+    <div class="scrim-text">Texto</div>
+  </div>
 </div>
 ```
 
@@ -97,9 +93,7 @@ A tag com a classe `br-scrim inibicao` , responsável por realizar o correto pos
 Exemplo de uso:
 
 ```html
-<div class="br-scrim inibicao">
-    Com Scrim Inibição
-</div>
+<div class="br-scrim inibicao">Com Scrim Inibição</div>
 ```
 
 ---
@@ -113,8 +107,8 @@ O scrim do tipo `foco` por padrão possui seu estado inativo. Para definir que e
 **Exemplo**:
 
 ```html
-scrim = document.getElementsByClassName("foco")[0]; function on() {
-scrim.classList.add("active"); } function off() { scrim.classList.remove("active"); }
+scrim = document.getElementsByClassName("foco")[0]; function on() { scrim.classList.add("active"); } function off() {
+scrim.classList.remove("active"); }
 ```
 
 ---

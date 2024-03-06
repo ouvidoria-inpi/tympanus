@@ -14,15 +14,9 @@ const core = {
     path.resolve(paths.srcUtil, 'dropdown', 'dropdown.scss'),
     path.resolve(paths.srcJSpartial, 'core.entry.js'),
   ],
-  'core-base': [
-    path.resolve(paths.srcSCSS, 'core-base.scss'),
-    path.resolve(paths.srcJSpartial, 'globals-class.js'),
-  ],
+  'core-base': [path.resolve(paths.srcSCSS, 'core-base.scss'), path.resolve(paths.srcJSpartial, 'globals-class.js')],
   'core-init': [path.resolve(paths.srcJSpartial, 'core-init.js')],
-  'core-lite': [
-    path.resolve(paths.srcSCSS, 'core-lite.scss'),
-    path.resolve(paths.srcJSpartial, 'core.entry.js'),
-  ],
+  'core-lite': [path.resolve(paths.srcSCSS, 'core-lite.scss'), path.resolve(paths.srcJSpartial, 'core.entry.js')],
   'core.min': [path.resolve(paths.srcJSpartial, 'core.entry.js')],
   'core-init.min': [path.resolve(paths.srcJSpartial, 'core-init.js')],
 }
@@ -32,37 +26,21 @@ const core = {
  */
 function pathsEntry(componentName) {
   const listCompoenent = []
-  const jsFile = path.resolve(
-    paths.srcComponents,
-    componentName,
-    `${componentName}.js`
-  )
+  const jsFile = path.resolve(paths.srcComponents, componentName, `${componentName}.js`)
   if (fs.existsSync(jsFile)) {
     listCompoenent.push(jsFile)
   }
 
-  const cssFile = path.resolve(
-    paths.srcComponents,
-    componentName,
-    `_${componentName}.scss`
-  )
+  const cssFile = path.resolve(paths.srcComponents, componentName, `_${componentName}.scss`)
   if (fs.existsSync(cssFile)) {
     listCompoenent.push(cssFile)
   }
-  const pugFile = path.resolve(
-    paths.srcComponents,
-    componentName,
-    'examples.pug'
-  )
+  const pugFile = path.resolve(paths.srcComponents, componentName, 'examples.pug')
   if (fs.existsSync(pugFile)) {
     listCompoenent.push(pugFile)
   }
   // Inserido examples json
-  let jsonFile = path.resolve(
-    paths.srcComponents,
-    componentName,
-    'example1.json'
-  )
+  let jsonFile = path.resolve(paths.srcComponents, componentName, 'example1.json')
 
   if (fs.existsSync(jsonFile)) {
     listCompoenent.push(jsonFile)
@@ -81,39 +59,22 @@ function pathsEntry(componentName) {
  */
 function pathsExamplePug(componentName, exampleArray) {
   const listCompoenent = []
-  const jsFile = path.resolve(
-    paths.srcComponents,
-    componentName,
-    `${componentName}.js`
-  )
+  const jsFile = path.resolve(paths.srcComponents, componentName, `${componentName}.js`)
   if (fs.existsSync(jsFile)) {
     listCompoenent.push(jsFile)
   }
 
-  const cssFile = path.resolve(
-    paths.srcComponents,
-    componentName,
-    `_${componentName}.scss`
-  )
+  const cssFile = path.resolve(paths.srcComponents, componentName, `_${componentName}.scss`)
   if (fs.existsSync(cssFile)) {
     listCompoenent.push(cssFile)
   }
 
-  const pugFile = path.resolve(
-    paths.srcComponents,
-    componentName,
-    'examples.pug'
-  )
+  const pugFile = path.resolve(paths.srcComponents, componentName, 'examples.pug')
   if (fs.existsSync(pugFile)) {
     listCompoenent.push(pugFile)
   }
   exampleArray.forEach((examplename) => {
-    const pugFileExample = path.resolve(
-      paths.srcComponents,
-      componentName,
-      'examples',
-      `${examplename}.pug`
-    )
+    const pugFileExample = path.resolve(paths.srcComponents, componentName, 'examples', `${examplename}.pug`)
     if (fs.existsSync(pugFileExample)) {
       listCompoenent.push(pugFileExample)
     }
@@ -124,21 +85,12 @@ function pathsExamplePug(componentName, exampleArray) {
 function pathsExampleTemplates(componentName, exampleArray) {
   const listCompoenent = []
 
-  const pugFile = path.resolve(
-    paths.srcTemplates,
-    componentName,
-    `${componentName}.pug`
-  )
+  const pugFile = path.resolve(paths.srcTemplates, componentName, `${componentName}.pug`)
   if (fs.existsSync(pugFile)) {
     listCompoenent.push(pugFile)
   }
   exampleArray.forEach((examplename) => {
-    const pugFileExample = path.resolve(
-      paths.srcTemplates,
-      componentName,
-      'examples',
-      `${examplename}.pug`
-    )
+    const pugFileExample = path.resolve(paths.srcTemplates, componentName, 'examples', `${examplename}.pug`)
     if (fs.existsSync(pugFileExample)) {
       listCompoenent.push(pugFileExample)
     }
@@ -178,28 +130,16 @@ function pathsEntryPages(pagesName) {
 
 function pathsEntryTemplate(templateName) {
   const listCompoenent = []
-  const jsFile = path.resolve(
-    paths.srcTemplates,
-    templateName,
-    `${templateName}.js`
-  )
+  const jsFile = path.resolve(paths.srcTemplates, templateName, `${templateName}.js`)
   if (fs.existsSync(jsFile)) {
     listCompoenent.push(jsFile)
   }
 
-  const cssFile = path.resolve(
-    paths.srcTemplates,
-    templateName,
-    `_${templateName}.scss`
-  )
+  const cssFile = path.resolve(paths.srcTemplates, templateName, `_${templateName}.scss`)
   if (fs.existsSync(cssFile)) {
     listCompoenent.push(cssFile)
   }
-  const pugFile = path.resolve(
-    paths.srcTemplates,
-    templateName,
-    `${templateName}.pug`
-  )
+  const pugFile = path.resolve(paths.srcTemplates, templateName, `${templateName}.pug`)
   if (fs.existsSync(pugFile)) {
     listCompoenent.push(pugFile)
   }
@@ -255,12 +195,7 @@ function entries(argv) {
     'accordion-single',
   ])
 
-  setComponentPug('avatar', [
-    'avatar-icon',
-    'avatar-image',
-    'avatar-letter',
-    'avatar-dropdown',
-  ])
+  setComponentPug('avatar', ['avatar-icon', 'avatar-image', 'avatar-letter', 'avatar-dropdown'])
 
   setComponentPug('breadcrumb', ['breadcrumb-default', 'breadcrumb-truncate'])
 
@@ -275,13 +210,7 @@ function entries(argv) {
     'button-status',
   ])
 
-  setComponentPug('card', [
-    'card-examples',
-    'card-collapse',
-    'card-disabled',
-    'card-hover',
-    'card-scroll',
-  ])
+  setComponentPug('card', ['card-examples', 'card-collapse', 'card-disabled', 'card-hover', 'card-scroll'])
 
   setComponentPug('carousel', [
     'carousel-padrao',
@@ -335,12 +264,7 @@ function entries(argv) {
     'input-states',
   ])
 
-  setComponentPug('item', [
-    'item-disabled',
-    'item-elems-iteractive',
-    'item-selection-checkbox',
-    'item-selection-radio',
-  ])
+  setComponentPug('item', ['item-disabled', 'item-elems-iteractive', 'item-selection-checkbox', 'item-selection-radio'])
 
   setComponentPug('list', [
     'list-dense-high',
@@ -367,12 +291,7 @@ function entries(argv) {
 
   setComponentPug('message', ['feedback', 'message-inverted', 'message-padrao'])
 
-  setComponentPug('modal', [
-    'scrim-behavior',
-    'modal-alert',
-    'modal-loading',
-    'modal-terms',
-  ])
+  setComponentPug('modal', ['scrim-behavior', 'modal-alert', 'modal-loading', 'modal-terms'])
 
   setComponentPug('notification', ['notification-full'])
 
@@ -435,13 +354,7 @@ function entries(argv) {
     'switch-density',
   ])
 
-  setComponentPug('tab', [
-    'tab-default',
-    'tab-count',
-    'tab-icons',
-    'tab-density',
-    'tab-inverted',
-  ])
+  setComponentPug('tab', ['tab-default', 'tab-count', 'tab-icons', 'tab-density', 'tab-inverted'])
 
   setComponentPug('table', ['table', 'table-irregular-1', 'table-irregular-2'])
 
@@ -477,117 +390,60 @@ function entries(argv) {
     'tooltip-warning-bottom',
   ])
 
-  setComponentPug('upload', [
-    'upload-disabled',
-    'upload-feedback',
-    'upload-multiple',
-    'upload-single',
-  ])
+  setComponentPug('upload', ['upload-disabled', 'upload-feedback', 'upload-multiple', 'upload-single'])
 
   setComponentPug('wizard', ['wizard-horizontal', 'wizard-vertical'])
 
-  setTemplates('base', [
-    'base-offcanvas',
-    'base-push',
-    'fluid-offcanvas',
-    'fluid-push',
-  ])
+  setTemplates('base', ['base-offcanvas', 'base-push', 'fluid-offcanvas', 'fluid-push'])
 
   setTemplate('erro')
   /**
    * webapck entry dos utilitarios
    */
 
-  core['util/arredondamento/arredondamento'] = [
-    path.resolve(paths.srcUtil, 'arredondamento', 'examples.pug'),
-  ]
+  core['util/arredondamento/arredondamento'] = [path.resolve(paths.srcUtil, 'arredondamento', 'examples.pug')]
 
-  core['util/bordas/bordas'] = [
-    path.resolve(paths.srcUtil, 'bordas', 'examples.pug'),
-  ]
+  core['util/bordas/bordas'] = [path.resolve(paths.srcUtil, 'bordas', 'examples.pug')]
 
-  core['util/cores/cores'] = [
-    path.resolve(paths.srcUtil, 'cores', 'examples.pug'),
-  ]
+  core['util/cores/cores'] = [path.resolve(paths.srcUtil, 'cores', 'examples.pug')]
 
-  core['util/display/display'] = [
-    path.resolve(paths.srcUtil, 'display', 'examples.pug'),
-  ]
+  core['util/display/display'] = [path.resolve(paths.srcUtil, 'display', 'examples.pug')]
 
-  core['util/elevacao/elevacao'] = [
-    path.resolve(paths.srcUtil, 'elevacao', 'examples.pug'),
-  ]
+  core['util/elevacao/elevacao'] = [path.resolve(paths.srcUtil, 'elevacao', 'examples.pug')]
 
-  core['util/espacamento/espacamento'] = [
-    path.resolve(paths.srcUtil, 'espacamento', 'examples.pug'),
-  ]
+  core['util/espacamento/espacamento'] = [path.resolve(paths.srcUtil, 'espacamento', 'examples.pug')]
 
-  core['util/flexbox/flexbox'] = [
-    path.resolve(paths.srcUtil, 'flexbox', 'examples.pug'),
-  ]
+  core['util/flexbox/flexbox'] = [path.resolve(paths.srcUtil, 'flexbox', 'examples.pug')]
 
   core['util/grid/grid'] = [path.resolve(paths.srcUtil, 'grid', 'examples.pug')]
 
-  core['util/movimento/movimento'] = [
-    path.resolve(paths.srcUtil, 'movimento', 'examples.pug'),
-  ]
+  core['util/movimento/movimento'] = [path.resolve(paths.srcUtil, 'movimento', 'examples.pug')]
 
-  core['util/overflow/overflow'] = [
-    path.resolve(paths.srcUtil, 'overflow', 'examples.pug'),
-  ]
+  core['util/overflow/overflow'] = [path.resolve(paths.srcUtil, 'overflow', 'examples.pug')]
 
-  core['util/textos/textos'] = [
-    path.resolve(paths.srcUtil, 'textos', 'examples.pug'),
-  ]
+  core['util/textos/textos'] = [path.resolve(paths.srcUtil, 'textos', 'examples.pug')]
 
-  core['util/tipografia/tipografia'] = [
-    path.resolve(paths.srcUtil, 'tipografia', 'examples.pug'),
-  ]
+  core['util/tipografia/tipografia'] = [path.resolve(paths.srcUtil, 'tipografia', 'examples.pug')]
 
   core['util/accordion/accordion'] = [
     path.resolve(paths.srcUtil, 'accordion', 'examples.pug'),
-    path.resolve(
-      paths.srcUtil,
-      'accordion',
-      'examples',
-      'accordion-behavior.pug'
-    ),
+    path.resolve(paths.srcUtil, 'accordion', 'examples', 'accordion-behavior.pug'),
   ]
 
   core['util/checkgroup/checkgroup'] = [
     path.resolve(paths.srcUtil, 'checkgroup', 'examples.pug'),
-    path.resolve(
-      paths.srcUtil,
-      'checkgroup',
-      'examples',
-      'checkgroup-behavior.pug'
-    ),
-    path.resolve(
-      paths.srcUtil,
-      'checkgroup',
-      'examples',
-      'checkgroup-behavior-chain.pug'
-    ),
+    path.resolve(paths.srcUtil, 'checkgroup', 'examples', 'checkgroup-behavior.pug'),
+    path.resolve(paths.srcUtil, 'checkgroup', 'examples', 'checkgroup-behavior-chain.pug'),
   ]
 
   core['util/collapse/collapse'] = [
     path.resolve(paths.srcUtil, 'collapse', 'examples.pug'),
-    path.resolve(
-      paths.srcUtil,
-      'collapse',
-      'examples',
-      'collapse-behavior.pug'
-    ),
+    path.resolve(paths.srcUtil, 'collapse', 'examples', 'collapse-behavior.pug'),
   ]
 
   core['util/dropdown/dropdown'] = [
     path.resolve(paths.srcUtil, 'dropdown', 'examples.pug'),
-    path.resolve(
-      paths.srcUtil,
-      'dropdown',
-      'examples',
-      'dropdown-behavior.pug'
-    ),
+    path.resolve(paths.srcUtil, 'dropdown', 'examples', 'dropdown-behavior.pug'),
   ]
 
   core['util/scrim/scrim'] = [
@@ -601,26 +457,14 @@ function entries(argv) {
     path.resolve(paths.srcUtil, 'tooltip', 'examples', 'tooltip-simples.pug'),
   ]
 
-  core['partial/js/behavior/accordion'] = [
-    path.resolve(paths.srcJSUtilbehavior, 'accordion.js'),
-  ]
-  core['partial/js/behavior/collapse'] = [
-    path.resolve(paths.srcJSUtilbehavior, 'collapse.js'),
-  ]
+  core['partial/js/behavior/accordion'] = [path.resolve(paths.srcJSUtilbehavior, 'accordion.js')]
+  core['partial/js/behavior/collapse'] = [path.resolve(paths.srcJSUtilbehavior, 'collapse.js')]
 
-  core['partial/js/behavior/checkgroup'] = [
-    path.resolve(paths.srcJSUtilbehavior, 'checkgroup.js'),
-  ]
+  core['partial/js/behavior/checkgroup'] = [path.resolve(paths.srcJSUtilbehavior, 'checkgroup.js')]
 
-  core['partial/js/behavior/dropdown'] = [
-    path.resolve(paths.srcJSUtilbehavior, 'dropdown.js'),
-  ]
-  core['partial/js/behavior/scrim'] = [
-    path.resolve(paths.srcJSUtilbehavior, 'scrim.js'),
-  ]
-  core['partial/js/behavior/tooltip'] = [
-    path.resolve(paths.srcJSUtilbehavior, 'tooltip.js'),
-  ]
+  core['partial/js/behavior/dropdown'] = [path.resolve(paths.srcJSUtilbehavior, 'dropdown.js')]
+  core['partial/js/behavior/scrim'] = [path.resolve(paths.srcJSUtilbehavior, 'scrim.js')]
+  core['partial/js/behavior/tooltip'] = [path.resolve(paths.srcJSUtilbehavior, 'tooltip.js')]
   return core
 }
 

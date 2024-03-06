@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "html-validate:recommended",
-    "html-validate:a17y"
-  ],
+  "extends": ["html-validate:recommended", "html-validate:a17y"],
   "root": true,
   "rules": {
     "aria-label-misuse": "error",

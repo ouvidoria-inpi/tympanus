@@ -20,9 +20,7 @@ class BRModal {
   _setBehavior() {
     for (const brScrim of window.document.querySelectorAll('.br-scrim')) {
       const scrim = new BRScrim('br-scrim', brScrim)
-      for (const button of window.document.querySelectorAll(
-        '.br-scrim + button'
-      )) {
+      for (const button of window.document.querySelectorAll('.br-scrim + button')) {
         button.addEventListener('click', () => {
           scrim.showScrim()
         })

@@ -11,9 +11,7 @@
 }
 
 @mixin button-magicbutton {
-  --focus-offset: calc(
-    (var(--magic-support-size) - var(--magic-size)) * 0.5 + 4px
-  );
+  --focus-offset: calc((var(--magic-support-size) - var(--magic-size)) * 0.5 + 4px);
   --button-size: var(--magic-size);
   background-color: var(--interactive-alternative);
   color: var(--color-dark);
