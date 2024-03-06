@@ -27,7 +27,7 @@ class BRInput {}
 O construtor deve receber os parâmetros necessários para o correto funcionamento do componente ou template. Atualmente é adotado duas formas de se declarar os parâmetros do construtor:
 
 - Declarando os parâmetros diretamente
-- Declarando os parâmetros dentro de uma notação de objeto, usado para _destructuring_
+- Declarando os parâmetros dentro de uma notação de objeto, usado para *destructuring*
 
 ##### Declarando os parâmetros diretamente
 
@@ -49,9 +49,9 @@ class BRInput {
 
 ##### Declarando os parâmetros para destructuring
 
-Quando houver muitos argumentos opcionais ou uma longa lista de parâmetros, pode-se se utilizar a passagem de argumentos para métodos ou funções por meio do recurso da linguagem chamado _desctructuring assingment_ ou _atribuição por desmembramento_.
+Quando houver muitos argumentos opcionais ou uma longa lista de parâmetros, pode-se se utilizar a passagem de argumentos para métodos ou funções por meio do recurso da linguagem chamado *desctructuring assingment* ou *atribuição por desmembramento*.
 
-O _destructuring assignment_ é um recurso da liguagem JavaScript que permite atribuir valores às variáveis usando uma sintaxe que imita a sintaxe de array ou objeto literal.
+O *destructuring assignment* é um recurso da liguagem JavaScript que permite atribuir valores às variáveis usando uma sintaxe que imita a sintaxe de array ou objeto literal.
 
 ```js
 let [x, y] = [1, 2] // É o mesmo que x = 1, y = 2
@@ -91,7 +91,7 @@ for (const brInput of window.document.querySelectorAll('.br-input')) {
 
 > Esse código de instanciação acima, não faz parte do componente ou template. Ele serve, como a própria descrição diz, para instanciar a classe que representa o componente ou template.
 
-Caso o construtor da classe tenha sido declarado usando-se a sintaxe para _destructuring_, deve-se passar um objeto um objeto contendo as propriedades declaradas. Por exemplo, para instanciar a classe BRCookiebar acima, usa-se:
+Caso o construtor da classe tenha sido declarado usando-se a sintaxe para *destructuring*, deve-se passar um objeto um objeto contendo as propriedades declaradas. Por exemplo, para instanciar a classe BRCookiebar acima, usa-se:
 
 ```js
 const cookiebarList = []
@@ -492,7 +492,7 @@ Esta regra visa impedir erros que possam surgir ao usar a propriedade `__iterato
 
 #### [no-lone-blocks](https://eslint.org/docs/rules/no-lone-blocks)
 
-Essa regra visa eliminar blocos desnecessários e potencialmente confusos no nível superior de um _script_ ou dentro de outros blocos.
+Essa regra visa eliminar blocos desnecessários e potencialmente confusos no nível superior de um *script* ou dentro de outros blocos.
 
 ```json
 "no-lone-blocks": "error"
@@ -588,7 +588,7 @@ Esta regra visa eliminar labels não utilizadas.
 
 #### [no-useless-concat](https://eslint.org/docs/rules/no-useless-concat)
 
-Esta regra visa sinalizar a concatenação de 2 literais quando eles podem ser combinados em um único literal. Os literais podem ser cadeias de caracteres ou _template literals_.
+Esta regra visa sinalizar a concatenação de 2 literais quando eles podem ser combinados em um único literal. Os literais podem ser cadeias de caracteres ou *template literals*.
 
 ```json
 "no-useless-concat": "error"
@@ -596,7 +596,7 @@ Esta regra visa sinalizar a concatenação de 2 literais quando eles podem ser c
 
 #### [no-useless-catch](https://eslint.org/docs/rules/no-useless-catch)
 
-Esta regra reporta _catchs_ que lançam apenas o erro capturado.
+Esta regra reporta *catchs* que lançam apenas o erro capturado.
 
 ```json
 "no-useless-catch": "error"
@@ -620,7 +620,7 @@ Esta regra tem como objetivo relatar declarações de retorno redundantes.
 
 #### [no-with](https://eslint.org/docs/rules/no-with)
 
-Esta regra não permite _with statements_.
+Esta regra não permite *with statements*.
 
 ```json
 "no-with": "error"
@@ -787,7 +787,7 @@ Essa regra não permite espaços entre o nome da função e o parêntese de aber
 
 #### [implicit-arrow-linebreak](https://eslint.org/docs/rules/implicit-arrow-linebreak)
 
-Esta regra visa impor um local consistente para uma _arrow function_ que contém um returno implícito.
+Esta regra visa impor um local consistente para uma *arrow function* que contém um returno implícito.
 
 ```json
 "implicit-arrow-linebreak": ["error", "beside"]
@@ -837,7 +837,7 @@ Esta regra impõe espaçamento consistente entre chaves e valores nas propriedad
 
 #### [keyword-spacing](https://eslint.org/docs/rules/keyword-spacing)
 
-Essa regra aplica espaçamento consistente em torno de palavras-chave e tokens semelhantes a palavras-chave: as (em declarações de módulo), _assync_ (de funções assíncronas), _await_ (de expressões de espera), _break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, from_ (nas declarações do módulo), _function, get_ (de getters), _if, import, in, instanceof, let, new, of_ (de sentenças for-of), _return, set_ (de setters), _static, super, switch, this, throw, try, typeof, var, void, while, with e yield_. Essa regra foi projetada com cuidado para não entrar em conflito com outras regras de espaçamento: não se aplica ao espaçamento onde outras regras relatam problemas.
+Essa regra aplica espaçamento consistente em torno de palavras-chave e tokens semelhantes a palavras-chave: as (em declarações de módulo), *assync* (de funções assíncronas), *await* (de expressões de espera), *break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, from* (nas declarações do módulo), *function, get* (de getters), *if, import, in, instanceof, let, new, of* (de sentenças for-of), *return, set* (de setters), *static, super, switch, this, throw, try, typeof, var, void, while, with e yield*. Essa regra foi projetada com cuidado para não entrar em conflito com outras regras de espaçamento: não se aplica ao espaçamento onde outras regras relatam problemas.
 
 ```json
 "keyword-spacing": ["error", {
@@ -858,7 +858,7 @@ Esta regra melhora a legibilidade exigindo linhas entre os membros da classe. El
 
 #### [new-parens](https://eslint.org/docs/rules/new-parens)
 
-Essa regra pode impõe parênteses ao chamar um construtor sem argumentos usando _new_.
+Essa regra pode impõe parênteses ao chamar um construtor sem argumentos usando *new*.
 
 ```json
 "new-parens": ["error", "always"]
@@ -1051,7 +1051,7 @@ Esta regra impõe consistência em relação aos espaços antes de depois de ope
 
 #### [switch-colon-spacing](https://eslint.org/docs/rules/switch-colon-spacing)
 
-Essa regra controla o espaçamento entre os dois pontos dos cases instruções de _switch_. Esta regra verifica apenas se os tokens consecutivos existem na mesma linha.
+Essa regra controla o espaçamento entre os dois pontos dos cases instruções de *switch*. Esta regra verifica apenas se os tokens consecutivos existem na mesma linha.
 
 ```json
 "switch-colon-spacing": ["error", {
@@ -1066,7 +1066,7 @@ Essa regra controla o espaçamento entre os dois pontos dos cases instruções d
 
 #### [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style)
 
-Esta regra pode impor ou proibir o uso de chaves ao redor do corpo da _arrow function_.
+Esta regra pode impor ou proibir o uso de chaves ao redor do corpo da *arrow function*.
 
 ```json
 "arrow-body-style": ["error", "as-needed", {
@@ -1076,7 +1076,7 @@ Esta regra pode impor ou proibir o uso de chaves ao redor do corpo da _arrow fun
 
 #### [arrow-parens](https://eslint.org/docs/rules/arrow-parens)
 
-Esta regra impõe o uso consistente de parênteses nas _arrow functions_.
+Esta regra impõe o uso consistente de parênteses nas *arrow functions*.
 
 ```json
 "arrow-parens": ["error", "always"]
@@ -1084,7 +1084,7 @@ Esta regra impõe o uso consistente de parênteses nas _arrow functions_.
 
 #### [arrow-spacing](https://eslint.org/docs/rules/arrow-spacing)
 
-Esta regra normaliza o estilo do espaçamento antes/depois da seta de uma _arrow function_ (=>).
+Esta regra normaliza o estilo do espaçamento antes/depois da seta de uma *arrow function* (=>).
 
 ```json
 "arrow-spacing": ["error", {
@@ -1095,7 +1095,7 @@ Esta regra normaliza o estilo do espaçamento antes/depois da seta de uma _arrow
 
 #### [constructor-super](https://eslint.org/docs/rules/constructor-super)
 
-Esta regra tem como objetivo sinalizar chamadas _super()_ inválidas/ausentes.
+Esta regra tem como objetivo sinalizar chamadas *super()* inválidas/ausentes.
 
 ```json
 "constructor-super": "error"
@@ -1111,7 +1111,7 @@ Esta regra tem como objetivo sinalizar variáveis modificadoras de declarações
 
 #### [no-confusing-arrow](https://eslint.org/docs/rules/no-confusing-arrow)
 
-Esta regra adverte contra o uso da sintaxe da _arrow function_ em locais onde ela pode ser confundida com um operador de comparação.
+Esta regra adverte contra o uso da sintaxe da *arrow function* em locais onde ela pode ser confundida com um operador de comparação.
 
 ```json
 "no-confusing-arrow": ["error", {
@@ -1121,7 +1121,7 @@ Esta regra adverte contra o uso da sintaxe da _arrow function_ em locais onde el
 
 #### [no-const-assign](https://eslint.org/docs/rules/no-const-assign)
 
-Esta regra tem como objetivo sinalizar a modificação de variáveis declaradas usando a palavra-chave _const_.
+Esta regra tem como objetivo sinalizar a modificação de variáveis declaradas usando a palavra-chave *const*.
 
 ```json
 "no-const-assign": "error"
@@ -1147,7 +1147,7 @@ Esta regra exige que todas as importações de um único módulo existam em uma 
 
 #### [no-this-before-super](https://eslint.org/docs/rules/no-this-before-super)
 
-Esta regra tem como objetivo sinalizar as palavras-chave _this/super_ antes de chamadas a _super()_.
+Esta regra tem como objetivo sinalizar as palavras-chave *this/super* antes de chamadas a *super()*.
 
 ```json
 "no-this-before-super": "error"
@@ -1155,7 +1155,7 @@ Esta regra tem como objetivo sinalizar as palavras-chave _this/super_ antes de c
 
 #### [no-useless-computed-key](https://eslint.org/docs/rules/no-useless-computed-key)
 
-Esta regra não permite o uso desnecessário de _property keys_ computadas.
+Esta regra não permite o uso desnecessário de *property keys* computadas.
 
 ```json
 "no-useless-computed-key": ["error", {
@@ -1173,7 +1173,7 @@ Essa regra sinaliza construtores de classe que podem ser removidos com seguranç
 
 #### [no-useless-rename](https://eslint.org/docs/rules/no-useless-rename)
 
-Essa regra não permite renomear atribuições de _import_, _export_ e _destructuring_ para o mesmo nome.
+Essa regra não permite renomear atribuições de *import*, *export* e *destructuring* para o mesmo nome.
 
 ```json
 "no-useless-rename": ["error", {
@@ -1185,7 +1185,7 @@ Essa regra não permite renomear atribuições de _import_, _export_ e _destruct
 
 #### [prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback)
 
-Esta regra localiza _function expressions_ usadas como retornos de chamada ou argumentos de função. Um erro será produzido para qualquer um que possa ser substituído por uma _arrow function_ sem alterar o resultado.
+Esta regra localiza *function expressions* usadas como retornos de chamada ou argumentos de função. Um erro será produzido para qualquer um que possa ser substituído por uma *arrow function* sem alterar o resultado.
 
 ```json
 "prefer-arrow-callback": [ "error", {
@@ -1196,7 +1196,7 @@ Esta regra localiza _function expressions_ usadas como retornos de chamada ou ar
 
 #### [no-var](https://eslint.org/docs/rules/no-var)
 
-Essa regra visa desestimular o uso de var e incentivar o uso de _const_ ou _let_.
+Essa regra visa desestimular o uso de var e incentivar o uso de *const* ou *let*.
 
 ```json
 "no-var": "error"
@@ -1204,7 +1204,7 @@ Essa regra visa desestimular o uso de var e incentivar o uso de _const_ ou _let_
 
 #### [prefer-const](https://eslint.org/docs/rules/prefer-const)
 
-Essa regra tem como objetivo sinalizar variáveis declaradas usando a palavra-chave _let_, mas nunca reatribuídas após a atribuição inicial.
+Essa regra tem como objetivo sinalizar variáveis declaradas usando a palavra-chave *let*, mas nunca reatribuídas após a atribuição inicial.
 
 ```json
 "prefer-const": ["error", {
@@ -1215,7 +1215,7 @@ Essa regra tem como objetivo sinalizar variáveis declaradas usando a palavra-ch
 
 #### [prefer-destructuring](https://eslint.org/docs/rules/prefer-destructuring)
 
-Esta regra impõe o uso de _destructuring_ em vez de acessar uma propriedade por meio de uma _member expression_.
+Esta regra impõe o uso de *destructuring* em vez de acessar uma propriedade por meio de uma *member expression*.
 
 ```json
 "prefer-destructuring": ["error", {
@@ -1242,7 +1242,7 @@ Esta regra tem como objetivo sinalizar o uso de variáveis de argumentos.
 
 #### [prefer-spread](https://eslint.org/docs/rules/prefer-spread)
 
-Esta regra tem como objetivo sinalizar o uso de _Function.prototype.apply()_ em situações em que a sintaxe de propagação poderia ser usada.
+Esta regra tem como objetivo sinalizar o uso de *Function.prototype.apply()* em situações em que a sintaxe de propagação poderia ser usada.
 
 ```json
 "prefer-spread": "error"
@@ -1258,7 +1258,7 @@ Essa regra tem como objetivo sinalizar o uso do operadores + com string. No caso
 
 #### [rest-spread-spacing](https://eslint.org/docs/rules/rest-spread-spacing)
 
-Esta regra visa impor um espaçamento consistente entre operadores de _rest_ e _spread_ e suas expressões.
+Esta regra visa impor um espaçamento consistente entre operadores de *rest* e *spread* e suas expressões.
 
 ```json
 "rest-spread-spacing": ["error", "never"]
@@ -1279,7 +1279,7 @@ Esta regra verifica se todas as importações são classificadas em ordem alfab�
 
 #### [template-curly-spacing](https://eslint.org/docs/rules/template-curly-spacing)
 
-Esta regra visa manter a consistência em torno do espaçamento dentro das _template literals_
+Esta regra visa manter a consistência em torno do espaçamento dentro das *template literals*
 
 ```json
 "template-curly-spacing": ["error", "never"]
