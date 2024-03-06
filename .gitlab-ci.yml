@@ -40,8 +40,10 @@ Markdown:
       - report-markdownlint.txt
     expire_in: 1 week
     expose_as: "Markdownlint Report"
+  before_script:
+    - npm i -g markdownlint-cli
   script:
-    - npx markdownlint '**/*.md' -o report-markdownlint.txt
+    - markdownlint '**/*.md' -o report-markdownlint.txt
   rules:
     - when: always
 
