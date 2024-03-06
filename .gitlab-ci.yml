@@ -1,9 +1,3 @@
-include:
-  - template: Code-Quality.gitlab-ci.yml
-  - template: Jobs/Dependency-Scanning.latest.gitlab-ci.yml
-  - template: Jobs/Secret-Detection.latest.gitlab-ci.yml
-  - template: Jobs/SAST.latest.gitlab-ci.yml
-
 image: node:20.11-alpine
 
 cache:
@@ -14,7 +8,6 @@ cache:
 stages:
   - Dependências
   - Qualidade
-  - test
   - Build
   - Pages
   - Release
@@ -39,6 +32,19 @@ CSS:
   script:
     - npx stylelint src/**/*.scss  --formatter verbose --output-file report-stylelint.txt
 
+Markdown:
+  stage: Qualidade
+  artifacts:
+    when: always
+    paths:
+      - report-markdownlint.txt
+    expire_in: 1 week
+    expose_as: "Markdownlint Report"
+  script:
+    - npx markdownlint '**/*.md' -o report-markdownlint.txt
+  rules:
+    - when: always
+
 Commits:
   stage: Qualidade
   artifacts:
@@ -47,11 +53,10 @@ Commits:
       - report-commitlint.txt
     expire_in: 1 week
     expose_as: "Commitlint Report"
-  before_script:
-    - apk --no-cache add git
-    - npm i -g @govbr-ds/commit-config commitlint-gitlab-ci
   script:
-    - commitlint-gitlab-ci -x @govbr-ds/commit-config > report-commitlint.txt
+    - npx commitlint-gitlab-ci -x @govbr-ds/commitlint-config > report-commitlint.txt
+  rules:
+    - when: always
 
 DS:
   stage: Build
