@@ -21,6 +21,8 @@ Instalar dependências:
   script:
     - apk --no-cache add git
     - npm install
+  rules:
+    - when: always
 
 CSS:
   stage: Qualidade
