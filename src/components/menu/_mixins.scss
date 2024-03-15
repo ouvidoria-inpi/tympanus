@@ -441,20 +441,17 @@
   @include media-breakpoint-up(md) {
     &.contextual {
       .menu-trigger {
+        display: none;
         position: absolute;
       }
 
-      .menu-scrim {
-        // position: static;
+      .menu-container {
+        display: block;
       }
 
       &.active {
         height: 100%;
         position: absolute;
-
-        .menu-container {
-          // display: flex;
-        }
       }
     }
   }

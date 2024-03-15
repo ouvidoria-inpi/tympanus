@@ -59,15 +59,17 @@ mixin menu-push
       .menu-scrim(data-dismiss="menu" tabindex="0")
 
 mixin menu-contextual
-  +menu.contextual.active
-    .menu-trigger
+  +menu.contextual
+    .menu-trigger.d-sm-none
       +button.primary.block.py-4(data-toggle="contextual" aria-expanded=true)
         span.mr-1 Menu Contextual
         +icon.fa-chevron-up.ml-5
-    .menu-container
-      .menu-panel
+    .menu-container.d-sm-block
+      .menu-panel.col-sm-3
         nav.menu-body
-          .menu-folder.active
+          .menu-folder
+            .menu-item
+              span.content AGRUPAMENTO 1
             ul
               li(role="none")
                 a.menu-item(href="javascript: void(0)")
@@ -78,6 +80,18 @@ mixin menu-contextual
               li(role="none")
                 a.menu-item(href="javascript: void(0)")
                   span.content Item do menu 1
+            .menu-item
+              span.content AGRUPAMENTO 2
+            ul
+              li
+                a.menu-item(href="javascript: void(0)")
+                  span.content Item do menu 2
+              li
+                a.menu-item(href="javascript: void(0)")
+                  span.content Item do menu 2
+              li
+                a.menu-item(href="javascript: void(0)")
+                  span.content Item do menu 2
       .menu-scrim(data-dismiss="menu" tabindex="0")
 
 mixin menu-groupedby-label
