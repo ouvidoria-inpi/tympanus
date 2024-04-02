@@ -18,8 +18,8 @@
 
 ### Versão vertical
 
-A versão vertical só funciona caso o componente seja usado dentro de um elemento com [Flexbox](ds/utilitarios/css/flexbox).
+A versão vertical só funciona caso o componente seja usado dentro de um elemento com [Flexbox](/utilitarios/css/flexbox).
 
 ### Espaçamentos
 
-Usar Utilitários CSS [Espaçamento](ds/utilitarios/css/espacamento) para modificar o componente.
+Usar Utilitários CSS [Espaçamento](/utilitarios/css/espacamento) para modificar o componente.
