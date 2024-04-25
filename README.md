@@ -1,3 +1,5 @@
+![Biblioteca de componentes compatível com a versão 3.5.1 do ds](https://img.shields.io/badge/vers%C3%A3o%203.5.1%20do%20ds-blue?style=for-the-badge&label=Biblioteca%20de%20componentes%20%20compat%C3%ADvel%20com%20a&labelColor=%23333&color=%230C326F&link=https%3A%2F%2Fwww.gov.br%2Fds)
+
 # Padrão Digital de Governo
 
 ## Objetivo
