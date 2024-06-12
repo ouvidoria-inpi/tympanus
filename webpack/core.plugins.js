@@ -8,7 +8,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const AfterBuildPlugin = require('@fiverr/afterbuild-webpack-plugin')
 const fs = require('fs')
-const shell = require('shelljs')
 const { IgnorePlugin } = require('webpack')
 // const fsPromises = require('fsPromises')
 // import * as fsPromises from 'fs/promises'

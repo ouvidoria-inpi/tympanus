@@ -223,7 +223,6 @@ class BRMenu {
     this.elementOpenMenu = document.activeElement
     this.component.classList.add('active')
     this.component.setAttribute('aria-expanded', 'true')
-    this.elementOpenMenu.setAttribute('aria-expanded', 'true')
 
     if (this.component.classList.contains('push')) {
       this.component.classList.add(...this.breakpoints, 'px-0')
@@ -239,11 +238,6 @@ class BRMenu {
     if (this.component.classList.contains('push')) {
       this.component.classList.remove(...this.breakpoints, 'px-0')
     }
-    if (this.elementOpenMenu) {
-      this.elementOpenMenu.setAttribute('aria-expanded', 'false')
-    }
-    this.elementOpenMenu.focus()
-    // }
   }
 
   /**
