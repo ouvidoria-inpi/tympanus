@@ -83,15 +83,6 @@ export default class Collapse {
   }
 
   /**
-   * Configura o estado de visualização do comportamento collapse
-   * @private
-   */
-  _setVisibilityStatus() {
-    this._setTriggerVisibilityStatus()
-    this._setTargetVisibilityStatus()
-  }
-
-  /**
    * Trata o estado de visualização do alvo
    * @private
    */
